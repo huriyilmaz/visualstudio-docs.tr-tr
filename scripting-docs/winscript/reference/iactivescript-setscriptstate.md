@@ -42,7 +42,7 @@ HRESULT SetScriptState(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|Dönüş Değeri|Açıklama|  
+|Dönüş Değeri|Anlamı|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_FAIL`|Betik altyapısı, başlatılmış duruma geri geçişi desteklemez. Konağın bu komut dosyası altyapısını atıp aynı etkiyi elde etmek için yeni bir betik altyapısı oluşturması, başlatması ve yüklemesi gerekir.|  
@@ -54,8 +54,8 @@ HRESULT SetScriptState(
  Scripting Engine durumları hakkında daha fazla bilgi için [Windows komut dosyası altyapılarının](../../winscript/windows-script-engines.md) komut dosyası altyapısı durumları bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IActiveScript:: Clone](../../winscript/reference/iactivescript-clone.md)    
- [IActiveScript:: GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)    
- [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)    
- [IActiveScriptParse::P arseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)    
+ [IActiveScript:: Clone](../../winscript/reference/iactivescript-clone.md)   
+ [IActiveScript:: GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)   
+ [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)   
+ [IActiveScriptParse::P arseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)   
  [IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md)

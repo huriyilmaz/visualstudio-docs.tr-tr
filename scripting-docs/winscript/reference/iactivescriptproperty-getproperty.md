@@ -50,30 +50,30 @@ HRESULT GetProperty(
  `pvarValue`  
  Özelliğin değeri.  
   
- @No__t_0 için izin verilen değerler aşağıdaki tabloda açıklanmıştır.  
+ `dwProperty` için izin verilen değerler aşağıdaki tabloda açıklanmıştır.  
   
-|Sabit|Değer|Açıklama|  
+|Sabit|Değer|Anlamı|  
 |--------------|-----------|-------------|  
 |SCRIPTPROP_INTEGERMODE|0x00003000|Betik altyapısını kayan nokta modu yerine tamsayı modunda bölmeye zorlar.|  
 |SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|Betik altyapısının dize karşılaştırma işlevinin değiştirilmesine izin verir.|  
 |SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION|0x70000002|Betik motoruna genel nesneye katkıda bulunmak için başka bir betik altyapısı bulunmadığını bildirir.|  
-|SCRIPTPROP_INVOKEVERSIONING|0x00004000|@No__t_0 betik altyapısını desteklenecek bir dil özellikleri kümesi seçmesini zorlar. @No__t_0 Scripting Engine tarafından desteklenen varsayılan dil özellikleri kümesi, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısının 5,7 sürümünde görünen dil özelliği kümesiyle eşdeğerdir.|  
+|SCRIPTPROP_INVOKEVERSIONING|0x00004000|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısını desteklenecek bir dil özellikleri kümesi seçmesini zorlar. [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] Scripting Engine tarafından desteklenen varsayılan dil özellikleri kümesi, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısının 5,7 sürümünde görünen dil özelliği kümesiyle eşdeğerdir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|Dönüş Değeri|Açıklama|  
+|Dönüş Değeri|Anlamı|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_INVALIDARG`|Bağımsız değişken geçerli değil.|  
 |`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ana bilgisayar, genel nesneye katkıda bulunmak için başka bir komut dosyası altyapısı bulunmadığını belirten bir betik altyapısını bilgilendirmek için SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION özelliğini kullanabilir. Örneğin, Internet Explorer [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] altyapısını, işlenen sayfanın yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betikler içerdiğini bildirebilir. Bu nedenle, yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] motoru genel nesne penceresine yeni özellikler ekleyebilir ve aynı yapmak için bir Visual Basic Scripting Edition (VBScript) altyapısı yoktur. Motor bu bayrağı yok sayabilir veya genel nesneye eklenen yeni üyelerin yönetimini iyileştirmek için kullanabilir.  
+ Ana bilgisayar, genel nesneye katkıda bulunmak için başka bir betik altyapısı bulunmadığını belirten bir betik altyapısını bilgilendirmek için SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION özelliğini kullanabilir. Örneğin, Internet Explorer [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] altyapısını, işlenen sayfanın yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betikler içerdiğini bildirebilir. Bu nedenle, yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] motoru genel nesne penceresine yeni özellikler ekleyebilir ve aynı yapmak için bir Visual Basic Scripting Edition (VBScript) altyapısı yoktur. Motor bu bayrağı yok sayabilir veya genel nesneye eklenen yeni üyelerin yönetimini iyileştirmek için kullanabilir.  
   
  Konak, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısı başlatıldığında desteklenecek dil özellikleri kümesini seçmek için SCRIPTPROP_INVOKEVERSIONING özelliğini kullanabilir. Bu özellik 1 (SCRIPTLANGUAGEVERSION_5_7) olarak ayarlandıysa, kullanılabilir dil özellikleri [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısının sürüm 5,7 ' de gösterilenler ile aynıdır. 2 (SCRIPTLANGUAGEVERSION_5_8) olarak ayarlandıysa, sürüm 5,8 ' de eklenen özelliklere ek olarak, sürüm 5,7 ' de görünen özellikler de mevcuttur. Varsayılan olarak, bu özellik 0 (SCRIPTLANGUAGEVERSION_DEFAULT) olarak ayarlanır ve ana bilgisayar farklı bir varsayılan davranışı desteklemediği takdirde sürüm 5,7 ' de görünen dil özelliği kümesine eşdeğerdir. Örneğin, Internet Explorer 8, Internet Explorer 8 için belge modu "Internet Explorer 8 Standartları" modundayken varsayılan olarak sürüm 5,8 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı tarafından desteklenen [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dil özelliklerine sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Belge uyumluluğunu tanımlama](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))    
- [Iactivescriptproperty](../../winscript/reference/iactivescriptproperty.md)    
+ [Belge uyumluluğunu tanımlama](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))   
+ [Iactivescriptproperty](../../winscript/reference/iactivescriptproperty.md)   
  [Sürüm Bilgileri](../../javascript/reference/javascript-version-information.md)

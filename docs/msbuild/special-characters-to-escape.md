@@ -24,9 +24,9 @@ ms.lasthandoff: 09/28/2019
 ms.locfileid: "71481961"
 ---
 # <a name="special-characters-to-escape"></a>Kaçış için özel karakterler
-Özel karakterler yalnızca kullanıldıkları bağlamda özel anlam içeriyorsa kaçışmalıdır. Örneğin, yıldız işareti (*) yalnızca bir öğe tanımının "Içerme" ve "hariç tutma" özniteliklerinde veya <xref:Microsoft.Build.Tasks.CreateItem> ' a yapılan çağrıda özel bir karakterdir. Diğer tüm durumlarda, yıldız işareti sabit bir yıldız işareti olarak değerlendirilir. Proje dosyalarında herhangi bir yerde yıldız işaretleri gerekmez, ancak bunu yapmak zarar vermez.
+Özel karakterler yalnızca kullanıldıkları bağlamda özel anlam içeriyorsa kaçışmalıdır. Örneğin, yıldız işareti (*) yalnızca bir öğe tanımının "Içerme" ve "hariç tutma" özniteliklerinde veya <xref:Microsoft.Build.Tasks.CreateItem>çağrısında özel bir karakterdir. Diğer tüm durumlarda, yıldız işareti sabit bir yıldız işareti olarak değerlendirilir. Proje dosyalarında herhangi bir yerde yıldız işaretleri gerekmez, ancak bunu yapmak zarar vermez.
 
- @No__t-1xx >, ASCII karakterinin onaltılı değerini temsil ettiğinde özel karakteri yerine% \<XX > gösterimini kullanın. Örneğin, bir yıldız işareti (*) sabit karakter olarak kullanmak için `%2A` değerini kullanın.
+ Özel karakterin yerine%\<xx > gösterimini kullanın; burada \<xx >, ASCII karakterinin onaltılı değerini temsil eder. Örneğin, bir yıldız işareti (*) sabit karakter olarak kullanmak için `%2A`değerini kullanın.
 
  Kaçış için özel karakterlerin tam listesi aşağıdadır:
 
@@ -42,8 +42,8 @@ ms.locfileid: "71481961"
 |*|Bir öğenin Içerme/hariç tutma bölümünde bir dosya belirtimini açıklayan bir joker karakter olan yıldız işareti.|
 
 > [!NOTE]
-> Bazı senaryolarda, `Exec` görevinde kullanırken olduğu gibi çift tırnak (") karakterlerini kaçış gerekebilir.
+> Bazı senaryolarda, `Exec` bir görevde kullanırken olduğu gibi çift tırnak (") karakterlerini kaçış gerekebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: MSBuild @ no__t-0 ' da kaçış özel karakterleri
+- [Nasıl yapılır: MSBuild 'de özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

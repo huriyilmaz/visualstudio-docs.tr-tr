@@ -45,6 +45,6 @@ ms.locfileid: "72572373"
   - **for/in** döngüsü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Continue ifadesine devam et](../../javascript/reference/continue-statement-javascript.md)    
- [Program Flow   denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
+ [Continue ifadesine devam et](../../javascript/reference/continue-statement-javascript.md)   
+ [Program Flow  denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
  [Komut Dosyalarınızda Sorun Giderme](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

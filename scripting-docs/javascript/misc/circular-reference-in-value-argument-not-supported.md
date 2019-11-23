@@ -23,14 +23,14 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572342"
 ---
 # <a name="circular-reference-in-value-argument-not-supported"></a>Değer bağımsız değişkeninde döngüsel başvuru desteklenmez
-Geçerli olmayan bir değerle `JSON.stringify` çağırma girişiminde bulunuldu. @No__t_0 bağımsız değişkeni, bir dizi veya nesne, döngüsel bir başvuru içerir.  
+Geçerli olmayan bir değerle `JSON.stringify` çağırma girişiminde bulunuldu. `value` bağımsız değişkeni, bir dizi veya nesne, döngüsel bir başvuru içerir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 - Bağımsız değişkenden döngüsel başvuruyu kaldırın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekteki kod bir çalışma zamanı hatasına neden olur çünkü `john` `mary` bir başvuruya sahiptir ve `mary` `john` bir başvuruya sahiptir. döngüsel başvuruyu kaldırmak için, `brother` özelliği `mary` nesnesinden veya `john` nesnesinden `sister` özelliğinden kaldırın ya da ayarını kaldırın.  
+ Bu örnekteki kod bir çalışma zamanı hatasına neden olur çünkü `john` `mary` bir başvuruya sahiptir ve `mary` `john`bir başvuruya sahiptir. döngüsel başvuruyu kaldırmak için, `brother` özelliği `mary` nesnesinden veya `john` nesnesinden `sister` özelliğinden kaldırın ya da ayarını kaldırın.  
   
 ```JavaScript  
 var john = new Object();  
@@ -43,6 +43,6 @@ var error = JSON.stringify(john);
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [JSON nesnesi](../../javascript/reference/json-object-javascript.md)    
- [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)    
+ [JSON nesnesi](../../javascript/reference/json-object-javascript.md)   
+ [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript Çalışma zamanı Hataları](../../javascript/reference/javascript-run-time-errors.md)

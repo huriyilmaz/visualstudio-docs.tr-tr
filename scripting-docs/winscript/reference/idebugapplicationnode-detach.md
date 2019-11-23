@@ -37,7 +37,7 @@ HRESULT Detach();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -47,5 +47,5 @@ HRESULT Detach();
  Bu yöntem, bu uygulama düğümünü proje ağacından kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplicationNode:: Attach](../../winscript/reference/idebugapplicationnode-attach.md)    
+ [IDebugApplicationNode:: Attach](../../winscript/reference/idebugapplicationnode-attach.md)   
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

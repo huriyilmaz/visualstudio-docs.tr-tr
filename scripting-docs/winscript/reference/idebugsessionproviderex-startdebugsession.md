@@ -42,7 +42,7 @@ HRESULT StartDebugSession(
  'ndaki True, bir sorguyu gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,5 +52,5 @@ HRESULT StartDebugSession(
  Bu yöntem, belirtilen uygulamayla bir hata ayıklama oturumu başlatır. Hata ayıklayıcı, bu çağrıdan döndürmeden önce `IRemoteDebugApplication::ConnectDebugger` çağırmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugsessionproviderex arabirimi](../../winscript/reference/idebugsessionproviderex-interface.md)    
+ [Idebugsessionproviderex arabirimi](../../winscript/reference/idebugsessionproviderex-interface.md)   
  [IRemoteDebugApplication::ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)

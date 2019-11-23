@@ -40,15 +40,15 @@ HRESULT SetDebugDocumentHost(
  'ndaki Hata ayıklama belgesi Konağı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 arabirimi akıllı ana bilgisayar söz dizimi renklendirme, ertelenmiş metin getirme ve yeni oluşturulan belge bağlamları için nesneleri denetlemeye döndürme için kullanılır.  
+ `IDebugDocumentHost` arabirimi akıllı ana bilgisayar söz dizimi renklendirme, ertelenmiş metin getirme ve yeni oluşturulan belge bağlamları için nesneleri denetlemeye döndürme için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
  [IDebugDocumentHost Arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)

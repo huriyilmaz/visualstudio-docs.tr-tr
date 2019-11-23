@@ -29,6 +29,6 @@ Bağımsız değişken olarak bir dizi sağlamadınız. Bu hata yalnızca **func
 - İkinci bağımsız değişken olarak bir `Array` ya da bir **bağımsız değişken** nesnesi belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)    
- [Apply Yöntemi (işlev)](../../javascript/reference/apply-method-function-javascript.md)    
+ [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)   
+ [Apply Yöntemi (işlev)](../../javascript/reference/apply-method-function-javascript.md)   
  [İşlevler](../../javascript/functions-javascript.md)

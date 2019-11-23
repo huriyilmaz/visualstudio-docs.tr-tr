@@ -40,7 +40,7 @@ HRESULT RemoveApplication(
  'ndaki Uygulama, uygulama listesine eklendiğinde `IProcessDebugManager::AddApplication` tarafından belirtilen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT RemoveApplication(
  Bu yöntem, çalışan uygulama listesinden bir uygulamayı kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iprocessdebugmanager:: Addadpplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)    
+ [Iprocessdebugmanager:: Addadpplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)   
  [IProcessDebugManager Arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)

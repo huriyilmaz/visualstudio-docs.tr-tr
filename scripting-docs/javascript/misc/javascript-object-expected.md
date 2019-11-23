@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573800"
 ---
 # <a name="javascript-object-expected"></a>JavaScript nesne bekleniyor
-@No__t_0 olmayan bir nesneyi, bir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesnesi bekleyen yerleşik bir işleve geçirmeye çalıştınız. Çeşitli yerleşik işlevler, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] tanımlanmış nesneleri (konak tarafından tanımlanan nesnelerle veya bir denetim gibi harici bir bileşen) gerektirir.  
+[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] olmayan bir nesneyi, bir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesnesi bekleyen yerleşik bir işleve geçirmeye çalıştınız. Çeşitli yerleşik işlevler, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] tanımlanmış nesneleri (konak tarafından tanımlanan nesnelerle veya bir denetim gibi harici bir bileşen) gerektirir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 - Parametre olarak geçirdiğiniz nesnenin doğru türde olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Nesneler ve diziler](../../javascript/objects-and-arrays-javascript.md)    
+ [Nesneler ve diziler](../../javascript/objects-and-arrays-javascript.md)   
  [Dizileri Kullanma](../../javascript/advanced/using-arrays-javascript.md)

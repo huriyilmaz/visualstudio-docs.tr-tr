@@ -48,18 +48,18 @@ HRESULT SetTextAttributes(
  'ndaki Metin aralığı için kaynak metin öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Metin belgeye eklenmeden önce metin aralığında `SetTextAttributes` çağırmak hatadır. Belgeye metin eklemek için `AddDBCSText`, `AddUnicodeText` veya `AddDeferredText` yöntemlerini çağırın.  
+ Metin belgeye eklenmeden önce metin aralığında `SetTextAttributes` çağırmak hatadır. Belgeye metin eklemek için `AddDBCSText`, `AddUnicodeText`veya `AddDeferredText` yöntemlerini çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
- [Idebugbelgethelper:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
- [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
- [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
+ [Idebugbelgethelper:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+ [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

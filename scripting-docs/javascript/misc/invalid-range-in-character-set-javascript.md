@@ -34,5 +34,5 @@ var notGood = /[z-a]/;  // An invalid character range - z does not come before a
 - Normal ifade karakter kümesini oluşturmak için yalnızca tek karakterler kullanın ve doğru sırada olduklarından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
  [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

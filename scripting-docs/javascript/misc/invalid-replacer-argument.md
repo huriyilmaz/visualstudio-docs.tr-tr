@@ -23,11 +23,11 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573804"
 ---
 # <a name="invalid-replacer-argument"></a>Geçersiz değiştirici bağımsız değişken
-Geçerli olmayan bir bağımsız değişkenle `JSON.stringify` çağırma girişiminde bulunuldu. @No__t_0 bağımsız değişkeni bir işlev veya dizi olmalıdır.  
+Geçerli olmayan bir bağımsız değişkenle `JSON.stringify` çağırma girişiminde bulunuldu. `replacer` bağımsız değişkeni bir işlev veya dizi olmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- @No__t_0 bağımsız değişkenini bir işlev veya dizi olarak değiştirin.  
+- `replacer` bağımsız değişkenini bir işlev veya dizi olarak değiştirin.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekteki kod, `memberfilter` bir işlev veya dizi yerine bir nesne olduğundan, bir çalışma zamanı hatasına neden olur.  
@@ -45,6 +45,6 @@ var jsontext = JSON.stringify(contact, memberfilter, "\t");
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [JSON nesnesi](../../javascript/reference/json-object-javascript.md)    
- [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)    
+ [JSON nesnesi](../../javascript/reference/json-object-javascript.md)   
+ [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript Çalışma zamanı Hataları](../../javascript/reference/javascript-run-time-errors.md)

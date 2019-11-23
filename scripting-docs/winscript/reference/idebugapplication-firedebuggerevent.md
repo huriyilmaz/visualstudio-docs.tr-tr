@@ -44,7 +44,7 @@ HRESULT FireDebuggerEvent(
  'ndaki Hata ayıklayıcıya geçirilecek bir olay nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -59,5 +59,5 @@ HRESULT FireDebuggerEvent(
  Bu yöntem `IApplicationDebugger::onDebuggerEvent` çağırmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
  [IApplicationDebugger::onDebuggerEvent](../../winscript/reference/iapplicationdebugger-ondebuggerevent.md)

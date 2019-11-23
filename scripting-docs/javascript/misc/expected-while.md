@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72575910"
 ---
 # <a name="expected-while"></a>Beklenen 'while'
-@No__t_0 koşulu bir `do...while` döngüsüne dahil etmedi. **Do** ifadesinin kod bloğunun sonunda karşılık gelen bir `while` testi olmalıdır.  
+`while` koşulu bir `do...while` döngüsüne dahil etmedi. **Do** ifadesinin kod bloğunun sonunda karşılık gelen bir `while` testi olmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 - Kapanış küme ayracından sonra `while` test ifadesini ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [while ifadesinin](../../javascript/reference/while-statement-javascript.md)    
+ [while ifadesinin](../../javascript/reference/while-statement-javascript.md)   
  [Program Akışı Denetimi](../../javascript/controlling-program-flow-javascript.md)

@@ -43,16 +43,16 @@ HRESULT SynchronousCallIntoThread(
  'ndaki Çağrılacak nesne.  
   
  `dwParam1`  
- 'ndaki @No__t_0 metoduna geçirilecek ilk parametre.  
+ 'ndaki `IDebugThreadCall::ThreadCallHandler` metoduna geçirilecek ilk parametre.  
   
  `dwParam2`  
- 'ndaki @No__t_0 metoduna geçirilecek ikinci parametre.  
+ 'ndaki `IDebugThreadCall::ThreadCallHandler` metoduna geçirilecek ikinci parametre.  
   
  `dwParam3`  
- 'ndaki @No__t_0 metoduna geçirilecek üçüncü parametre.  
+ 'ndaki `IDebugThreadCall::ThreadCallHandler` metoduna geçirilecek üçüncü parametre.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -62,5 +62,5 @@ HRESULT SynchronousCallIntoThread(
  Bu yöntem, çağıranın hata ayıklayıcı iş parçacığında kod çalıştırmasına yönelik bir mekanizma sağlar. Dil motorları ve konaklar, genellikle bu yöntemi tek iş parçacıklı uygulamalarının üzerine serbest iş parçacıklı nesneler uygulamak için kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugapplicationthread arabirimi](../../winscript/reference/idebugapplicationthread-interface.md)    
+ [Idebugapplicationthread arabirimi](../../winscript/reference/idebugapplicationthread-interface.md)   
  [IDebugThreadCall Arabirimi](../../winscript/reference/idebugthreadcall-interface.md)

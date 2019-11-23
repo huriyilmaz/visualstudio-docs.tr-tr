@@ -41,10 +41,10 @@ HRESULT CanHandleException(
  'ndaki Özel durum işleyici bulunmazsa bildirilecek bilgileri içeren `EXCEPINFO` yapısına yönelik işaretçi.  
   
  `pvar`  
- 'ndaki Bir `throw` ifadesiyle oluşturulan değer gibi özel durumla ilişkili bir değer. Bu parametre `NULL` olabilir.  
+ 'ndaki Bir `throw` ifadesiyle oluşturulan değer gibi özel durumla ilişkili bir değer. Bu parametre `NULL`olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,8 +52,8 @@ HRESULT CanHandleException(
 |`E_FAIL`|Çağıran özel durumu işleyemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 çağrısı veya benzer bir yöntem, bir özel durumla sonuçlandığında, komut dosyası altyapısı komut dosyasının çağrı zincirinde `ICanHandleException` arabirimini destekleyen ve özel durumu işleyebileceğini belirten bir arayan arar. Hiçbir çağıran özel durumu işleyememesi durumunda, komut dosyası motoru durur.  
+ `IDispatchEx::InvokeEx`çağrısı veya benzer bir yöntem, bir özel durumla sonuçlandığında, komut dosyası altyapısı komut dosyasının çağrı zincirinde `ICanHandleException` arabirimini destekleyen ve özel durumu işleyebileceğini belirten bir arayan arar. Hiçbir çağıran özel durumu işleyememesi durumunda, komut dosyası motoru durur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Itiphandleexception arabirimi](../../winscript/reference/icanhandleexception-interface.md)    
+ [Itiphandleexception arabirimi](../../winscript/reference/icanhandleexception-interface.md)   
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)

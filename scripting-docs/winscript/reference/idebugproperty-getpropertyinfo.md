@@ -39,7 +39,7 @@ HRESULT GetPropertyInfo (
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- 'ndaki @No__t_1 yapısında doldurulacak alanları belirleyen `DBGPROP_INFO_FLAGS` sabitlerini belirtir.  
+ 'ndaki `DebugPropertyInfo` yapısında doldurulacak alanları belirleyen `DBGPROP_INFO_FLAGS` sabitlerini belirtir.  
   
  `nRadix`  
  'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak Radix.  
@@ -48,9 +48,9 @@ HRESULT GetPropertyInfo (
  dışı Özelliği tanımlayan `DebugPropertyInfo` yapısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

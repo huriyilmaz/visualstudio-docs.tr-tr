@@ -46,7 +46,7 @@ typedef enum {
 |PROFILER_SCRIPT_TYPE_DOM|Internet Explorer 'ın Belge Nesne Modeli (DOM) çağrısı (örneğin, `document.getElementById` yöntemine bir çağrı) belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Etkin komut dosyası profil oluşturucu sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)    
- [Iactivescriptprofilercallback:: Scriptderlenen](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)    
- [Iactivescriptprofilercallback2:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)    
+ [Etkin komut dosyası profil oluşturucu sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
+ [Iactivescriptprofilercallback:: Scriptderlenen](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)   
+ [Iactivescriptprofilercallback2:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)   
  [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)

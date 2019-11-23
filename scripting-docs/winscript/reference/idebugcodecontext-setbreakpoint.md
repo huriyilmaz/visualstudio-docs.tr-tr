@@ -40,7 +40,7 @@ HRESULT SetBreakPoint(
  'ndaki Bu kod bağlamı için kesme noktası durumunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT SetBreakPoint(
  Bu yöntem, bu kod bağlamındaki bir kesme noktasını ayarlar veya temizler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugcodecontext arabirimi](../../winscript/reference/idebugcodecontext-interface.md)    
+ [Idebugcodecontext arabirimi](../../winscript/reference/idebugcodecontext-interface.md)   
  [BREAKPOINT_STATE Sabit Listesi](../../winscript/reference/breakpoint-state-enumeration.md)

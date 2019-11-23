@@ -56,7 +56,7 @@ HRESULT HandleRuntimeError(
  dışı Altyapının `IActiveScriptSite::OnScriptError` yöntemini çağırması gerekiyorsa `TRUE` bayrak.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -69,8 +69,8 @@ HRESULT HandleRuntimeError(
 > Çalışma zamanı hatasında, dil motoru, yığın çerçevelerini numaralandırma veya ifadeleri değerlendirme gibi görevleri yapmak için iş parçacığı tarafından çağrılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
- [Iactivescripterrordebug arabirimi](../../winscript/reference/iactivescripterrordebug-interface.md)    
- [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md)    
- [Breakresumeaction numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+ [Iactivescripterrordebug arabirimi](../../winscript/reference/iactivescripterrordebug-interface.md)   
+ [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md)   
+ [Breakresumeaction numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)   
  [ERRORRESUMEACTION Sabit Listesi](../../winscript/reference/errorresumeaction-enumeration.md)

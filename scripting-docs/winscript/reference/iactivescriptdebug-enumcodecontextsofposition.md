@@ -40,7 +40,7 @@ HRESULT EnumCodeContextsOfPosition(
   
 #### <a name="parameters"></a>Parametreler  
  `dwSourceContext`  
- 'ndaki @No__t_0 veya `IActiveScriptParse::AddScriptlet` için belirtilen kaynak bağlamı.  
+ 'ndaki `IActiveScriptParse::ParseScriptText` veya `IActiveScriptParse::AddScriptlet`için belirtilen kaynak bağlamı.  
   
  `uCharacterOffset`  
  'ndaki Betik metninin başlangıcına göre karakter boşluğu.  
@@ -52,7 +52,7 @@ HRESULT EnumCodeContextsOfPosition(
  dışı Belirtilen aralıktaki kod bağlamlarının numaralandırıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -62,5 +62,5 @@ HRESULT EnumCodeContextsOfPosition(
  Akıllı konaklar, `IDebugDocumentContext::EnumCodeContexts` metodunu atamak için bu yöntemi kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptdebug arabirimi](../../winscript/reference/iactivescriptdebug-interface.md)    
+ [Iactivescriptdebug arabirimi](../../winscript/reference/iactivescriptdebug-interface.md)   
  [IDebugDocumentContext::EnumCodeContexts](../../winscript/reference/idebugdocumentcontext-enumcodecontexts.md)

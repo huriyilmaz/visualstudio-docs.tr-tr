@@ -40,16 +40,16 @@ HRESULT RemoveStackFrameSniffer(
  'ndaki Yığın çerçevesi Numaralandırıcı sağlayıcısı eklendiğinde `AddStackFrameSniffer` yöntemi tarafından döndürülen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 yöntemi bu uygulamadan bir yığın çerçeve Numaralandırıcı sağlayıcısını kaldırır.  
+ `RemoveStackFrameSniffer` yöntemi bu uygulamadan bir yığın çerçeve Numaralandırıcı sağlayıcısını kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication:: AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)    
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [IDebugApplication:: AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)   
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
  [IDebugStackFrameSniffer Arabirimi](../../winscript/reference/idebugstackframesniffer-interface.md)

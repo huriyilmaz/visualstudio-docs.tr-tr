@@ -34,5 +34,5 @@ interface IActiveScriptProfilerCallback3 : IActiveScriptProfilerCallback2
 |[IActiveScriptProfilerCallback3::SetWebWorkerId Metodu](../../winscript/reference/iactivescriptprofilercallback3-setwebworkerid-method.md)|Profil oluşturucuyu, bu profil oluşturma oturumunda kullanılacak çalışan KIMLIĞI hakkında bilgilendirir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercallback arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)    
+ [Iactivescriptprofilercallback arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)   
  [IActiveScriptProfilerCallback2 Arabirimi](../../winscript/reference/iactivescriptprofilercallback2-interface.md)

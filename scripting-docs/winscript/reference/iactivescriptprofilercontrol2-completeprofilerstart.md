@@ -35,7 +35,7 @@ HRESULT CompleteProfilerStart();
 ## <a name="return-value"></a>Dönüş Değeri  
  HRESULT döndürür. Olası değerler aşağıdaki gibidir:  
   
-|Dönüş değeri|Açıklama|  
+|Dönüş değeri|Anlamı|  
 |------------------|-------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
 |`E_FAIL`|Profil oluşturma başlatılamıyor.|  
@@ -44,8 +44,8 @@ HRESULT CompleteProfilerStart();
 |`E_OUTOFMEMORY`|Bellek dışı bir durum nedeniyle çağrı yığını alınamıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 çağırmak, çağrı yığınında bulunan işlevlerin olaylarının gönderilmesini sağlar. Bu yöntem, geçerli sekmede bulunan herhangi bir betik altyapısında profil oluşturma başladıktan sonra çağrılmalıdır. Yöntemi herhangi bir betik altyapısı için çağrılabilir.  
+ `IActiveScriptProfilerControl2::CompleteProfilerStart` çağırmak, çağrı yığınında bulunan işlevlerin olaylarının gönderilmesini sağlar. Bu yöntem, geçerli sekmede bulunan herhangi bir betik altyapısında profil oluşturma başladıktan sonra çağrılmalıdır. Yöntemi herhangi bir betik altyapısı için çağrılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercontrol2::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)    
+ [Iactivescriptprofilercontrol2::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)   
  [IActiveScriptProfilerControl2 Arabirimi](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

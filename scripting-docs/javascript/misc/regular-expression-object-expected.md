@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573698"
 ---
 # <a name="regular-expression-object-expected"></a>Normal ifade nesnesi bekleniyor
-@No__t_2 dışında bir türün nesnesi üzerinde **RegExp. prototype. ToString** veya **RegExp. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `RegExp` türünde olması gerekir.  
+`RegExp`dışında bir türün nesnesi üzerinde **RegExp. prototype. ToString** veya **RegExp. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `RegExp`türünde olması gerekir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca `RegExp` türündeki nesnelerde **RegExp. prototype. ToString** veya **RegExp. prototype.** bir yöntemi çağırın.  
+- Yalnızca `RegExp`türündeki nesnelerde **RegExp. prototype. ToString** veya **RegExp. prototype.** bir yöntemi çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
  [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

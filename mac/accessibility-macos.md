@@ -20,7 +20,7 @@ macOS, kullanıcıların değişen yetenekler konusunda yardımcı olacak çok s
 
 Mac için Visual Studio, yardımcı teknolojiler için destek varsayılan olarak kapalıdır. Erişilebilirlik desteğini etkinleştirmek için:
 
-1. **Visual Studio (menü)**  > **tercihleri**@no__t **-3 '** e gidin ve **Erişilebilirlik**' i seçin.
+1. **Visual Studio 'ya gidin (menü)**  > **Tercihler** > **ve** **Erişilebilirlik**' i seçin.
 
 1. **Erişilebilirliği etkinleştir** onay kutusunu seçin.
 

@@ -62,6 +62,6 @@ HRESULT AddTypeLib(
  Bu yöntem, tür kitaplığını yüklemek için `LoadTypeLib` çağırır. Başarılı olduğunda, bu yöntem tür bilgilerini eklemek için `IActiveScriptAuthor::AddNamedItem` çağırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
- [Iactivescriptauthor:: Addnamedidıtem](../../winscript/reference/iactivescriptauthor-addnameditem.md)    
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
+ [Iactivescriptauthor:: Addnamedidıtem](../../winscript/reference/iactivescriptauthor-addnameditem.md)   
  [LoadTypeLib](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelib)

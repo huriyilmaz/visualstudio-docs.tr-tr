@@ -44,7 +44,7 @@ HRESULT GetName(
  dışı Adı içeren dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -55,5 +55,5 @@ HRESULT GetName(
  Bu yöntem, belirtilen belge adını döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumentınfo arabirimi](../../winscript/reference/idebugdocumentinfo-interface.md)    
+ [Idebugdocumentınfo arabirimi](../../winscript/reference/idebugdocumentinfo-interface.md)   
  [DOCUMENTNAMETYPE Sabit Listesi](../../winscript/reference/documentnametype-enumeration.md)

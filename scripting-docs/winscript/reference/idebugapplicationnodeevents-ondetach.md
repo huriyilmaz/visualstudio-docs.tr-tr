@@ -37,7 +37,7 @@ HRESULT onDetach();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -46,9 +46,9 @@ HRESULT onDetach();
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, hata ayıklama uygulama düğümü nesnesinin bir üst düğümden ayrılmışsa belirten bir olayı işler.  
   
- @No__t_0 arabiriminin uygulayıcıları bu olayı yükseltir.  
+ `IDebugApplicationNode` arabiriminin uygulayıcıları bu olayı yükseltir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)    
- [Idebugapplicationnodeevents:: onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)    
+ [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
+ [Idebugapplicationnodeevents:: onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)   
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

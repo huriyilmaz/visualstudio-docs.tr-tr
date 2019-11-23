@@ -35,17 +35,17 @@ typedef DWORD SCRIPTTHREADID;
   
 ## <a name="constants"></a>Sabitler  
   
-|Sabit|Değer|Açıklama|  
+|Sabit|Değer|Anlamı|  
 |--------------|-----------|-------------|  
 |SCRIPTTHREADID_CURRENT|0xFFFFFFFD|Yürütülmekte olan iş parçacığı.|  
 |SCRIPTTHREADID_BASE|0xFFFFFFFE|Temel iş parçacığı; diğer bir deyişle, komut dosyası altyapısının örneklendiği iş parçacığı.|  
 |SCRIPTTHREADID_ALL|Ffffffff|Tüm iş parçacıkları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 türü `IActiveScript::GetCurrentScriptThreadID`, `IActiveScript::GetScriptThreadID`, `IActiveScript::GetScriptThreadState` ve `IActiveScript::InterruptScriptThread` tarafından kullanılır, ancak sabitler yalnızca `IActiveScript::GetScriptThreadState` ve `IActiveScript::InterruptScriptThread` tarafından kullanılabilir.  
+ `SCRIPTTHREADID` türü `IActiveScript::GetCurrentScriptThreadID`, `IActiveScript::GetScriptThreadID`, `IActiveScript::GetScriptThreadState`ve `IActiveScript::InterruptScriptThread`tarafından kullanılır, ancak sabitler yalnızca `IActiveScript::GetScriptThreadState` ve `IActiveScript::InterruptScriptThread`tarafından kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IActiveScript:: GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)    
- [IActiveScript:: Getscriptthreadıd](../../winscript/reference/iactivescript-getscriptthreadid.md)    
- [IActiveScript:: GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)    
+ [IActiveScript:: GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)   
+ [IActiveScript:: Getscriptthreadıd](../../winscript/reference/iactivescript-getscriptthreadid.md)   
+ [IActiveScript:: GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)   
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

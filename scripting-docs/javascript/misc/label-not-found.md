@@ -31,7 +31,7 @@ Varolmayan bir etikete başvuru yaptınız. Etiketler kod bloklarını işaretle
 - Geçerli kapsamda tanımlanmış olan etiketlere tüm etiket başvurularının yapıldığından emin olun (buna ileri tanımları dahildir).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)    
- [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)    
- [Break ekstresi](../../javascript/reference/break-statement-javascript.md)    
+ [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)   
+ [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)   
+ [Break ekstresi](../../javascript/reference/break-statement-javascript.md)   
  [continue Deyimi](../../javascript/reference/continue-statement-javascript.md)

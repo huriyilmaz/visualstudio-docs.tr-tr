@@ -65,5 +65,5 @@ HRESULT GetEventHandler(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

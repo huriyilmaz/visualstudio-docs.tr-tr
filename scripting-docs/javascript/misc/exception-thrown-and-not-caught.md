@@ -33,6 +33,6 @@ Kodunuzda bir `throw` ifadesini eklemiş olursunuz, ancak bir **TRY** bloğu iç
 - Özel durum yeniden oluşturulursa, başka bir karşılık gelen catch ifadesinin bulunduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Hata nesnesi](../../javascript/reference/error-object-javascript.md)    
- [throw deyimleri](../../javascript/reference/throw-statement-javascript.md)    
+ [Hata nesnesi](../../javascript/reference/error-object-javascript.md)   
+ [throw deyimleri](../../javascript/reference/throw-statement-javascript.md)   
  [try...catch...finally Deyimi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

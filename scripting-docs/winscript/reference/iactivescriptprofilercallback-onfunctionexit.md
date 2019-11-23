@@ -44,8 +44,8 @@ HRESULT OnFunctionExit(
  Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DOM çağrıları için, komut dosyası altyapısı `IActiveScriptProfilerCallback::OnFunctionExit` yerine [ıactivescriptprofilercallback2:: OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md) öğesini çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
+ DOM çağrıları için, komut dosyası altyapısı `IActiveScriptProfilerCallback::OnFunctionExit`yerine [ıactivescriptprofilercallback2:: OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md) öğesini çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercallback:: OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)    
+ [Iactivescriptprofilercallback:: OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)   
  [IActiveScriptProfilerCallback Arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)

@@ -40,15 +40,15 @@ HRESULT SetDefaultTextAttr(
  Varsayılan kaynak metin öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan öznitelikler bu yöntem tarafından değiştirilmediği takdirde, bir betik bloğu dışındaki metnin varsayılan öznitelikleri SOURCETEXT_ATTR_NONSOURCE ' dir. Kullanıcı arabirimi bu bilgileri betik blokları dışındaki metni salt okunurdur olarak işaretlemek için kullanabilir.  
+ Varsayılan öznitelikler bu yöntem tarafından değiştirilmediği takdirde, bir betik bloğu dışındaki metnin varsayılan öznitelikleri SOURCETEXT_ATTR_NONSOURCE. Kullanıcı arabirimi bu bilgileri betik blokları dışındaki metni salt okunurdur olarak işaretlemek için kullanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

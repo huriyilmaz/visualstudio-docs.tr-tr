@@ -29,7 +29,7 @@ Yeni bir etiket oluşturdunuz, ancak var olan bir etiketin adı verdi. Etiketler
 - Programlarınızda kullandığınız tüm etiketlerin kendi kapsamları dahilinde benzersiz olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)    
- [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)    
- [Break ekstresi](../../javascript/reference/break-statement-javascript.md)    
+ [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)   
+ [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)   
+ [Break ekstresi](../../javascript/reference/break-statement-javascript.md)   
  [continue Deyimi](../../javascript/reference/continue-statement-javascript.md)

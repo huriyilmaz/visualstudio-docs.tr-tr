@@ -24,7 +24,7 @@ Visual Studio, Python, [UnitTest](https://docs.python.org/3/library/unittest.htm
 * **UnitTest** çerçevesi için, projenin kök dizini test bulma için kullanılır. Bu konum ve testlerin belirlenmesi için metin deseninin, **Test** sekmesinde Kullanıcı tarafından belirtilen değerler için değiştirilmesi de değiştirilebilir.
 * **Pytest** çerçevesi için, test konumu ve dosya adı desenleri gibi test seçenekleri standart pytest. ini yapılandırma dosyası kullanılarak belirtilir. Daha fazla bilgi için [pytest başvuru belgelerine](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) bakın.
 
-Çerçeve seçiminizi ve ayarlarını kaydettikten sonra test bulma işlemi Test Gezgini 'nde başlatılır. Test Gezgini penceresi zaten açık değilse, araç çubuğuna gidin ve **test** > **Test Gezgini**' ni seçin.
+Çerçeve seçiminizi ve ayarlarını kaydettikten sonra test bulma işlemi Test Gezgini 'nde başlatılır. Test Gezgini penceresi zaten açık değilse, araç çubuğuna gidin ve **test > test** **Gezgini**' ni seçin.
 
 ## <a name="configure-testing-for-python-without-a-project"></a>Proje olmadan Python için testi yapılandırma
 Visual Studio, Python kodu içeren [bir klasör açarak](../../quickstart-05-python-visual-studio-open-folder.md) mevcut Python kodunu bir proje olmadan çalıştırmanıza ve test etmenize olanak tanır. Bu koşullarda, testi yapılandırmak için bir **PythonSettings. JSON** dosyası kullanmanız gerekir. 
@@ -64,21 +64,21 @@ Visual Studio, Python kodu içeren [bir klasör açarak](../../quickstart-05-pyt
 
 1. Belirtilen çerçeve için test bulmayı başlatmak üzere değişikliklerinizi PythonSettings. JSON dosyasına kaydedin. 
    > [!Note]
-   > Test Gezgini penceresi zaten açık olan **CTRL** +  R Ise **, bir** de bulmayı tetikler.
+   > Test Gezgini penceresi zaten **CTRL** + R 'ye açık Ise **, bir** de bulmayı tetikler.
 
 ## <a name="discover-and-view-tests"></a>Testleri görüntülemek ve keşfedin
 
-Varsayılan olarak, Visual Studio **UnitTest** ve **pytest** testlerini adları `test` ile başlayan yöntemler olarak tanımlar. Test bulmayı görmek için aşağıdakileri yapın:
+Varsayılan olarak, Visual Studio **UnitTest** ve **pytest** testlerini adları `test`ile başlayan yöntemler olarak tanımlar. Test bulmayı görmek için aşağıdakileri yapın:
 
 1. Bir [Python projesi](../../managing-python-projects-in-visual-studio.md)açın.
 
 1. Proje Visual Studio 'Ya yüklendikten sonra, Çözüm Gezgini ' de projenize sağ tıklayın ve Özellikler **Test** sekmesinden **UnitTest** veya **pytest** çerçevesini seçin.
    > [!Note]
-   > Pytest çerçevesini kullanırsanız, standart pytest. ini yapılandırma dosyasını kullanarak test konumu ve dosya adı desenleri belirtebilirsiniz. Varsayılan olarak, çalışma alanı/proje klasörü, `test_*py` ve `*_test.py` bir düzeniyle kullanılır. Daha fazla bilgi için [pytest başvuru belgelerine](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) bakın.
+   > Pytest çerçevesini kullanırsanız, standart pytest. ini yapılandırma dosyasını kullanarak test konumu ve dosya adı desenleri belirtebilirsiniz. Varsayılan olarak, çalışma alanı/proje klasörü, `test_*py` ve `*_test.py`bir düzeniyle kullanılır. Daha fazla bilgi için [pytest başvuru belgelerine](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) bakın.
 
-1. Framework seçildikten sonra projeye tekrar sağ tıklayın ve  > **Yeni öğe** **Ekle**' yi seçin ve ardından **Ekle**' ye tıklayarak **Python birim testi** ' ni seçin.
+1. Framework seçildikten sonra projeye tekrar sağ tıklayın ve > **Yeni öğe** **Ekle** ' yi seçin ve ardından **Ekle**' **yi seçin.**
 
-1. Bu eylem, standart `unittest` modülünü içeri aktaran, `unittest.TestCase` ' den bir test sınıfı türetilen ve betiği doğrudan çalıştırırsanız `unittest.main()` ' i çağıran kodla bir *test_1. Kopyala* dosyası oluşturur:
+1. Bu eylem, standart `unittest` modülünü içeri aktaran, `unittest.TestCase`bir test sınıfı türetilen ve betiği doğrudan çalıştırırsanız `unittest.main()` çağıran bir *test_1.* bir dosya oluşturur:
 
     ```python
     import unittest
@@ -91,7 +91,7 @@ Varsayılan olarak, Visual Studio **UnitTest** ve **pytest** testlerini adları 
         unittest.main()
     ```
 
-1. Gerekirse dosyayı kaydedin, sonra **test @no__t-** 2**Test Gezgini** menü komutuyla **Test Gezgini** ' ni açın.
+1. Gerekirse dosyayı **kaydedin ve test > test** **Gezgini** menü komutuyla **Test Gezgini** ' ni açın.
 
 1. **Test Gezgini** projeniz için testleri arar ve aşağıda gösterildiği gibi görüntüler. Bir testi çift kaynak dosyası açılır.
 
@@ -103,7 +103,7 @@ Varsayılan olarak, Visual Studio **UnitTest** ve **pytest** testlerini adları 
 
 1. Bir metin de girebilirsiniz **arama** testleri adına göre filtrelemek için alan.
 
-@No__t-0 modülü ve test yazma hakkında daha fazla bilgi için bkz. [python 2,7 belgeleri](https://docs.python.org/2/library/unittest.html) veya [Python 3,7 belgeleri](https://docs.python.org/3/library/unittest.html) (Python.org).
+`unittest` modülü ve test yazma hakkında daha fazla bilgi için bkz. [python 2,7 belgeleri](https://docs.python.org/2/library/unittest.html) veya [Python 3,7 belgeleri](https://docs.python.org/3/library/unittest.html) (Python.org).
 
 ## <a name="run-tests"></a>Testleri çalıştırma
 
@@ -130,7 +130,7 @@ Arka planda testleri çalıştırmak ve **Test Gezgini** tamamladıkça güncell
 Birim testleri parçaları kod olduğundan, herhangi bir kod gibi hatalar tabidir ve bazen bir hata ayıklayıcıda çalıştırılması gerekir. Hata ayıklayıcıda kesme noktaları ayarlayın, değişkenleri inceleyebilir ve kodunuz içinde adım adım. Visual Studio tanılama araçları için birim testleri de sağlar.
 
 > [!Note]
-> Varsayılan olarak, test hata ayıklaması ptvsd 4 hata ayıklayıcısını kullanır. Bunun yerine ptvsd 3 kullanmak istiyorsanız, **araçlar** > **seçenekleri** > **Python** > **hata ayıklaması**üzerinde **eski hata ayıklayıcı kullan** seçeneğini belirleyebilirsiniz. 
+> Varsayılan olarak, test hata ayıklaması ptvsd 4 hata ayıklayıcısını kullanır. Bunun yerine ptvsd 3 kullanmak isterseniz, **araçlar** > **Seçenekler** ' de **eski hata ayıklayıcı kullan** seçeneğini seçerek **Python** > **hata ayıklama** > . 
 
 Hata Ayıklamayı Başlat, kodunuzda ilk bir kesme noktası ayarlayın ve ardından test (veya bir seçim) sağ **Test Gezgini** seçip **seçilen Testlerde Hata Ayıkla**. Uygulama kodu için yaptığınız gibi visual Studio Python hata ayıklayıcıyı başlatır.
 

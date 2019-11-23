@@ -44,7 +44,7 @@ HRESULT onInsertText(
  'ndaki Eklenmiş olan karakterlerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT onInsertText(
  Bu yöntem genellikle, bir Web tarayıcısı gibi aşamalı olarak içerik yükleyen bir ana bilgisayar tarafından çağırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumenttextevents arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)    
+ [Idebugdocumenttextevents arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)   
  [IDebugDocumentTextEvents::onRemoveText](../../winscript/reference/idebugdocumenttextevents-onremovetext.md)

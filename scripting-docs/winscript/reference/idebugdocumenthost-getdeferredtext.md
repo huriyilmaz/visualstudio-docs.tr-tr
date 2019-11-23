@@ -56,7 +56,7 @@ HRESULT GetDeferredText(
  'ndaki Döndürülecek en fazla karakter sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -64,12 +64,12 @@ HRESULT GetDeferredText(
 |`E_NOTIMPL`|Yöntem uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, ana bilgisayar `IDebugDocumentHelper::AddDeferredText` çağırmadığından `E_NOTIMPL` döndürebilir.  
+ Bu yöntem, ana bilgisayar `IDebugDocumentHelper::AddDeferredText`çağırmadığından `E_NOTIMPL`döndürebilir.  
   
 > [!NOTE]
 > Bu yöntem, özgün belgedeki metni döndürür. Ana bilgisayar, belgedeki düzenlemeleri veya diğer değişiklikleri takip etmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethost arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)    
- [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+ [Idebugbelgethost arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)   
+ [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

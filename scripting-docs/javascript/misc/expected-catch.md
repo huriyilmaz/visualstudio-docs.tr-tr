@@ -31,5 +31,5 @@ ms.locfileid: "72573433"
 - **Catch** bloğu yerine **finally** bloğu kullanmayı deneyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [deneyin... yakala... finally ekstresi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)    
+ [deneyin... yakala... finally ekstresi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
  [Hata Nesnesi](../../javascript/reference/error-object-javascript.md)

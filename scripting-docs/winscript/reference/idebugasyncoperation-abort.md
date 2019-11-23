@@ -37,7 +37,7 @@ HRESULT Abort();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -48,6 +48,6 @@ HRESULT Abort();
  Bu yöntem genellikle, yanıt vermeyen bir işlemi iptal etmek için hata ayıklayıcı iş parçacığı içinden çağırılır. Bu yöntem, `IDebugSyncOperation` nesnesindeki `InProgressAbort` yönteminin çağrılmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)    
- [Ihata ayıklama Gasyncoperation:: Start](../../winscript/reference/idebugasyncoperation-start.md)    
+ [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)   
+ [Ihata ayıklama Gasyncoperation:: Start](../../winscript/reference/idebugasyncoperation-start.md)   
  [IDebugSyncOperation::InProgressAbort](../../winscript/reference/idebugsyncoperation-inprogressabort.md)

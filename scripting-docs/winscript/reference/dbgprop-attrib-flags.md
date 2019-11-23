@@ -27,7 +27,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572602"
 ---
 # <a name="dbgprop_attrib_flags"></a>DBGPROP_ATTRIB_FLAGS
-@No__t_0 için çeşitli öznitelikleri açıklar. @No__t_0 yapısının üyesi.  
+`IDebugProperty`için çeşitli öznitelikleri açıklar. `DebugPropertyInfo` yapısının üyesi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,7 +59,7 @@ DBGPROP_ATTRIB_NO_ATTRIB  =0x00000000,
  Öznitelik olmadığını gösterir.  
   
  DBGPROP_ATTRIB_VALUE_IS_INVALID  
- @No__t_0 değerinin geçerli olmadığını gösterir.  
+ `DebugPropertyInfo::bstrValue` değerinin geçerli olmadığını gösterir.  
   
  DBGPROP_ATTRIB_VALUE_IS_EXPANDABLE  
  Başvurunun veya özelliğin alt öğe olduğunu gösterir.  
@@ -110,5 +110,5 @@ DBGPROP_ATTRIB_NO_ATTRIB  =0x00000000,
  Bu bayraklar bir nesnenin alt öğelerini filtrelemek için de kullanılır. Değerler bit düzeyinde OR ile birleştirilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

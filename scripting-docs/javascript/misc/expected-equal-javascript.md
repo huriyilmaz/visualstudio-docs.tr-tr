@@ -33,5 +33,5 @@ Koşullu derleme deyimleriyle kullanılacak bir değişken oluşturmaya çalış
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)    
+ [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Koşullu Derleme Değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)

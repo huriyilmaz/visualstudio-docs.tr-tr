@@ -37,8 +37,8 @@ Koşullu derleme değişkenini, önce koşullu derlemeyi açmadan kullanmaya ça
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)    
- [Koşullu derleme değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)    
- [@cc_on deyimin](../../javascript/reference/at-cc-on-statement-javascript.md)    
- [@if deyimin](../../javascript/reference/at-if-statement-javascript.md)    
+ [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
+ [Koşullu derleme değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
+ [@cc_on deyimin](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [@if deyimin](../../javascript/reference/at-if-statement-javascript.md)   
  [@set Deyimi](../../javascript/reference/at-set-statement-javascript.md)

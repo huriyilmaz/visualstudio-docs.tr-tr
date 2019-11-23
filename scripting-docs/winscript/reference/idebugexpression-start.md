@@ -37,10 +37,10 @@ HRESULT Start(
   
 #### <a name="parameters"></a>Parametreler  
  `pdecb`  
- 'ndaki İfade değerlendirmesinin ne zaman tamamlandığını belirten geri çağırma. Bu parametre `NULL`, hiçbir olay tetiklenerek istemci, `QueryIsComplete` kullanarak ifade durumunu yoklamalıdır.  
+ 'ndaki İfade değerlendirmesinin ne zaman tamamlandığını belirten geri çağırma. Bu parametre `NULL`, hiçbir olay tetiklenerek istemci, `QueryIsComplete`kullanarak ifade durumunu yoklamalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT Start(
  Bu yöntem, ifadenin değerlendirmesini başlatır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugexpression:: Abort](../../winscript/reference/idebugexpression-abort.md)    
+ [Idebugexpression:: Abort](../../winscript/reference/idebugexpression-abort.md)   
  [IDebugExpression Arabirimi](../../winscript/reference/idebugexpression-interface.md)

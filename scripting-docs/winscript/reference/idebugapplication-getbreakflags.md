@@ -44,7 +44,7 @@ HRESULT GetBreakFlags(
  dışı Çalışmakta olan iş parçacığı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT GetBreakFlags(
  Bu yöntem, uygulamanın geçerli kesme bayraklarını döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
  [APPBREAKFLAGS Sabit Listesi](../../winscript/reference/appbreakflags-enumeration.md)

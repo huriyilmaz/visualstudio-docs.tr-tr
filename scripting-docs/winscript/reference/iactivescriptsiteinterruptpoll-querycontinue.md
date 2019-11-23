@@ -37,7 +37,7 @@ HRESULT QueryContinue();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -45,10 +45,10 @@ HRESULT QueryContinue();
 |`S_FALSE`|Çağrı başarılı ve ana bilgisayar, betiğin sonlanmasına istek.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 yönteminin dönüş değeri `S_OK` olmadığı müddetçe barındırılan betiğin sonlandırılması gerekir. @No__t_0 dönüş değeri konağın, betiğin sonlandırdığını açıkça istemesi gerektiğini gösterir.  
+ `QueryContinue` yönteminin dönüş değeri `S_OK`olmadığı müddetçe barındırılan betiğin sonlandırılması gerekir. `S_FALSE` dönüş değeri konağın, betiğin sonlandırdığını açıkça istemesi gerektiğini gösterir.  
   
  Çok iş parçacıklı bir konak, bir betiği sonlandırmak için `IActiveScript::InterruptScriptThread` yöntemini kullanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptsiteınterruptpoll arabirimi](../../winscript/reference/iactivescriptsiteinterruptpoll-interface.md)    
+ [Iactivescriptsiteınterruptpoll arabirimi](../../winscript/reference/iactivescriptsiteinterruptpoll-interface.md)   
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

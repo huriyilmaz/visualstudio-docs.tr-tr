@@ -32,5 +32,5 @@ Bir kapanış tırnak işareti ile dize sabitinizi sonlandırmadınız. Dize sab
 - Dizenin sonuna kapanış tırnak işaretini ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Dize nesnesi](../../javascript/reference/string-object-javascript.md)    
+ [Dize nesnesi](../../javascript/reference/string-object-javascript.md)   
  [toString Metodu (Nesne)](../../javascript/reference/tostring-method-object-javascript.md)

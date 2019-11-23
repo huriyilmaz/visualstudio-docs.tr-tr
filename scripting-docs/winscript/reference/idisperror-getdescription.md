@@ -40,7 +40,7 @@ HRESULT GetDescription(
  dışı Hatanın kısa bir açıklamasını içeren dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -53,5 +53,5 @@ HRESULT GetDescription(
 > Bu yöntem uygulanmadı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idağılım ROR arabirimi](../../winscript/reference/idisperror-interface.md)    
+ [Idağılım ROR arabirimi](../../winscript/reference/idisperror-interface.md)   
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)

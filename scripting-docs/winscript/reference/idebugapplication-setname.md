@@ -40,7 +40,7 @@ HRESULT SetName(
  'ndaki Uygulamanın adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,5 +52,5 @@ HRESULT SetName(
  Bu yöntem, `IProcessDebugManager::AddApplication` yöntemi çağrılmadan önce çağrılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

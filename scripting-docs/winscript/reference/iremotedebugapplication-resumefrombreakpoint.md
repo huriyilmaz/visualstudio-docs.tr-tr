@@ -48,7 +48,7 @@ HRESULT ResumeFromBreakPoint(
  'ndaki Bir hata nedeniyle uygulamanın durdurulduğu durumda gerçekleştirilecek eylem.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -58,6 +58,6 @@ HRESULT ResumeFromBreakPoint(
  Bu yöntem, şu anda bir kesme noktasında olan bir uygulamayı devam ettirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)    
- [Breakresumeaction numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)    
+ [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)   
+ [Breakresumeaction numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)   
  [ERRORRESUMEACTION Sabit Listesi](../../winscript/reference/errorresumeaction-enumeration.md)

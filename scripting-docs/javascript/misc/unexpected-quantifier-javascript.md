@@ -48,5 +48,5 @@ Normal ifade arama düzeniniz oluştururken, geçersiz yineleme faktörüyle bir
 - Arama deseninin öğesi yalnızca geçerli yineleme faktörleri içerdiğinden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
  [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

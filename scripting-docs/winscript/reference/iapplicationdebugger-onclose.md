@@ -37,15 +37,15 @@ HRESULT onClose();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 çağrıldığında bu yöntem çağrılır.  
+ `IDebugApplication::Close` çağrıldığında bu yöntem çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
  [IDebugApplication::Close](../../winscript/reference/idebugapplication-close.md)

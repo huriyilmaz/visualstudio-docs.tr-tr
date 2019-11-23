@@ -48,7 +48,7 @@ HRESULT DeleteMemberByDispID(
 |`S_FALSE`|Üye var, ancak silinemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye silinirse, DISPID 'nin `GetNextDispID` için geçerli kalması gerekir.  
+ Üye silinirse, DISPID 'nin `GetNextDispID`için geçerli kalması gerekir.  
   
  Verilen ada sahip bir üye silinirse ve daha sonra aynı ada sahip bir üye yeniden oluşturulduğunda, DISPID aynı olmalıdır. (Yalnızca büyük/küçük harfe göre farklılık gösteren üye adları, nesneye bağımlıdır.)  
   
@@ -65,6 +65,6 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)    
- [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)    
+ [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)   
+ [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

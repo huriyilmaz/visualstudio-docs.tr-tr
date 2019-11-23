@@ -26,9 +26,9 @@ Bir switch ifadesinin içinde **Default** ifadesini birden çok kez kullanmaya �
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- @No__t_1 deyiminizden tüm ek **varsayılan** Case deyimlerini kaldırın (Switch deyiminizde en çok bir varsayılan Case deyimi kullanın).  
+- `switch` deyiminizden tüm ek **varsayılan** Case deyimlerini kaldırın (Switch deyiminizde en çok bir varsayılan Case deyimi kullanın).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)    
- [Program Flow   denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
+ [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)   
+ [Program Flow  denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
  [JavaScript Ayrılmış Sözcükler](../../javascript/reference/javascript-reserved-words.md)

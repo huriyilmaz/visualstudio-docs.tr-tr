@@ -46,16 +46,16 @@ HRESULT EnumMembers (
  'ndaki Herhangi bir sayısal bilgiyi yorumlamak için kullanılan Radix.  
   
  `refiid`  
- 'ndaki Bu IID, Numaralandırıcı filtrelemeye yönelik olarak geçirilir. IID, `IDebugPropertyEnumType_All` devraldığı `IDebugPropertyEnumType` arabirimlerinden biridir.  
+ 'ndaki Bu IID, Numaralandırıcı filtrelemeye yönelik olarak geçirilir. IID, `IDebugPropertyEnumType_All`devraldığı `IDebugPropertyEnumType` arabirimlerinden biridir.  
   
  `ppEnum`  
  dışı Üye özelliklerini numaralandırır `IEnumDebugPropertyInfo` arabirimini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
- [IDebugPropertyEnumType_All arabirimi](../../winscript/reference/idebugpropertyenumtype-all-interface.md)    
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
+ [IDebugPropertyEnumType_All arabirimi](../../winscript/reference/idebugpropertyenumtype-all-interface.md)   
  [IEnumDebugPropertyInfo Arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)

@@ -40,15 +40,15 @@ HRESULT Attach(
  'ndaki Bu belgenin ekleneceği belge ağacı. NULL olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu belgeyi üst öğe olarak `pddhParent` kullanarak belge ağacına ekler. @No__t_0 `NULL`, bu belge üst düzey belge olacaktır.  
+ Bu yöntem, bu belgeyi üst öğe olarak `pddhParent` kullanarak belge ağacına ekler. `pddhParent` `NULL`, bu belge üst düzey belge olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper::D etach](../../winscript/reference/idebugdocumenthelper-detach.md)    
+ [Idebugbelgethelper::D etach](../../winscript/reference/idebugdocumenthelper-detach.md)   
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

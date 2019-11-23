@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572892"
 ---
 # <a name="date-object-expected"></a>Tarih nesnesi bekleniyor
-@No__t_2 dışında bir türün nesnesi üzerinde **date. prototype. ToString** veya **date. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `Date` türünde olması gerekir. Örneğin:  
+`Date`dışında bir türün nesnesi üzerinde **date. prototype. ToString** veya **date. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `Date`türünde olması gerekir. Örneğin:  
   
 ```JavaScript  
 var o = new Object;  
@@ -32,9 +32,9 @@ o.f();
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- @No__t_2 türündeki nesnelerde yalnızca **date. prototype. ToString** veya **date. prototype.** bir yöntemi çağırın.  
+- `Date`türündeki nesnelerde yalnızca **date. prototype. ToString** veya **date. prototype.** bir yöntemi çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Tarih nesnesi](../../javascript/reference/date-object-javascript.md)    
- [getdate metodu (Tarih)](../../javascript/reference/getdate-method-date-javascript.md)    
+ [Tarih nesnesi](../../javascript/reference/date-object-javascript.md)   
+ [getdate metodu (Tarih)](../../javascript/reference/getdate-method-date-javascript.md)   
  [İç Nesneler](../../javascript/intrinsic-objects-javascript.md)

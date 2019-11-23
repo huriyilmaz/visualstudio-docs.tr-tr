@@ -40,7 +40,7 @@ HRESULT StartDebugSession(
  'ndaki Hata ayıklama uygulamasını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT StartDebugSession(
  Bu yöntem, belirtilen uygulamayla bir hata ayıklama oturumu başlatır. Hata ayıklayıcı, bu çağrıdan döndürmeden önce `IRemoteDebugApplication::ConnectDebugger` çağırmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugsessionprovider arabirimi](../../winscript/reference/idebugsessionprovider-interface.md)    
+ [Idebugsessionprovider arabirimi](../../winscript/reference/idebugsessionprovider-interface.md)   
  [IRemoteDebugApplication::ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)

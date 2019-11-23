@@ -33,5 +33,5 @@ Bu nesne için mevcut olmayan bir özellik veya yöntem belirttiniz. Tüm nesnel
 - Daha fazla bilgi için nesnenin belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)    
+ [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)   
  [JavaScript Nesneleri](../../javascript/reference/javascript-objects.md)

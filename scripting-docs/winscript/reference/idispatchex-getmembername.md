@@ -75,6 +75,6 @@ HRESULT hr;
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)    
- [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)    
+ [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)   
+ [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

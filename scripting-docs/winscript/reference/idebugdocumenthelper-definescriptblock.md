@@ -56,7 +56,7 @@ HRESULT DefineScriptBlock(
  dışı Betik bloğunun kaynak bağlamı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -67,9 +67,9 @@ HRESULT DefineScriptBlock(
   
  Betik altyapısı, betik bloğundaki tüm sözdizimi renklendirmesinin ve kod bağlamı aramalarının sorumluluğundadır.  
   
- @No__t_0 yöntemi, metin eklendikten sonra (örneğin, `IDebugDocumentHelper::AddDBCSText` yöntemi kullanılarak), ancak betik bloğu ayrıştırıldıktan önce (örneğin, `IActiveScriptParse ::ParseScriptText` yöntemi kullanılarak) çağrılmalıdır.  
+ `DefineScriptBlock` yöntemi, metin eklendikten sonra (örneğin, `IDebugDocumentHelper::AddDBCSText` yöntemi kullanılarak), ancak betik bloğu ayrıştırıldıktan önce (örneğin, `IActiveScriptParse ::ParseScriptText` yöntemi kullanılarak) çağrılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
- [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
+ [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)

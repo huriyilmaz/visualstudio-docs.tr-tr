@@ -21,7 +21,7 @@ ms.lasthandoff: 10/28/2019
 ms.locfileid: "72985283"
 ---
 # <a name="iremotedebugapplication110getmainthread"></a>IRemoteDebugApplication110::GetMainThread
-[SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)çağıran konaklar için ana iş parçacığını döndürür, aksı takdirde E_FAIL döndürür.  
+[SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)çağıran konaklar için ana iş parçacığını döndürür, aksi takdirde E_FAIL döndürür.  
   
 > [!IMPORTANT]
 > [IRemoteDebugApplication ARABIRIMI](../../winscript/reference/iremotedebugapplication-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
@@ -37,5 +37,5 @@ HRESULT GetMainThread([out] IRemoteDebugApplicationThread **ppThread);
  dışı Ana [ıremotedebugapplicationthread arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)    
+ [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)   
  [IRemoteDebugApplication110 Arabirimi](../../winscript/reference/iremotedebugapplication110-interface.md)

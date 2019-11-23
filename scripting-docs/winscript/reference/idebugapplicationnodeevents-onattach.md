@@ -40,7 +40,7 @@ HRESULT onAttach(
  'ndaki Bu düğümün üst öğesi olan hata ayıklama uygulaması düğümü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -49,9 +49,9 @@ HRESULT onAttach(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, hata ayıklama uygulama düğümü nesnesinin bir üst düğüme eklendiği belirten bir olayı işler.  
   
- @No__t_0 arabiriminin uygulayıcıları bu olayı yükseltir.  
+ `IDebugApplicationNode` arabiriminin uygulayıcıları bu olayı yükseltir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)    
- [Idebugapplicationnodeevents:: onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)    
+ [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
+ [Idebugapplicationnodeevents:: onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)   
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

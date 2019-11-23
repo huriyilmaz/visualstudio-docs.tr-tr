@@ -40,7 +40,7 @@ HRESULT Start(
  Bu işlemden durum olaylarını alan geri çağırma arabirimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -48,10 +48,10 @@ HRESULT Start(
 |`E_UNEXPECTED`|Bir işlem zaten bekliyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, `IDebugSyncOperation::GetTargetThread` alınan iş parçacığında `IDebugSyncOperation::Execute` zaman uyumsuz olarak çağrılmasına neden olur. Bu yöntem yalnızca hata ayıklayıcı iş parçacığı içinden çağrılmalıdır; Aksi takdirde, işlem tamamlanana kadar dönemeyecektir.  
+ Bu yöntem, `IDebugSyncOperation::GetTargetThread`alınan iş parçacığında `IDebugSyncOperation::Execute` zaman uyumsuz olarak çağrılmasına neden olur. Bu yöntem yalnızca hata ayıklayıcı iş parçacığı içinden çağrılmalıdır; Aksi takdirde, işlem tamamlanana kadar dönemeyecektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ihata ayıklama Gasyncoperation:: Abort](../../winscript/reference/idebugasyncoperation-abort.md)    
- [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)    
- [Idebugsyncoperation:: Execute](../../winscript/reference/idebugsyncoperation-execute.md)    
+ [Ihata ayıklama Gasyncoperation:: Abort](../../winscript/reference/idebugasyncoperation-abort.md)   
+ [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)   
+ [Idebugsyncoperation:: Execute](../../winscript/reference/idebugsyncoperation-execute.md)   
  [IDebugSyncOperation::GetTargetThread](../../winscript/reference/idebugsyncoperation-gettargetthread.md)

@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573598"
 ---
 # <a name="iscriptnodecreatechildhandler"></a>IScriptNode::CreateChildHandler
-Bir `IScriptNode` alt örneği olarak bir kod oluşturma yöntemi ekler.  
+Bir `IScriptNode`alt örneği olarak bir kod oluşturma yöntemi ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,7 +52,7 @@ HRESULT CreateChildHandler(
  [in, size_is (`cpszNames`)] Konaktaki tam adı taşıyan tanımlayıcıların listesi.  
   
  `cpszNames`  
- 'ndaki @No__t_0 parametresindeki tanımlayıcıların sayısı.  
+ 'ndaki `prgpszNames` parametresindeki tanımlayıcıların sayısı.  
   
  `pszEvent`  
  'ndaki Kod oluşturma yöntemi ile ilişkili olay adını tanımlayan arabellek adresi.  
@@ -68,7 +68,7 @@ HRESULT CreateChildHandler(
  'ndaki Bir işlev nesnesi için tür bilgileri.  
   
  `iMethodSignature`  
- 'ndaki @No__t_0 parametresindeki işlevin dizini.  
+ 'ndaki `ITypeInfo``ptiSignature` parametresindeki işlevin dizini.  
   
  `isn`  
  'ndaki Üst öğe içindeki alt öğenin dizini.  
@@ -90,5 +90,5 @@ HRESULT CreateChildHandler(
  Bir kod oluşturma yöntemi olay işleyicisini belirtir. Bu yöntem, bir Web sayfasını temsil eden bir `IScriptNode` nesnesi tarafından çağrılırsa bir kod oluşturma yöntemi oluşturur. Bu yöntem, diğer arabirimler tarafından çağrılırsa başarılı olmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Icriptnode arabirimi](../../winscript/reference/iscriptnode-interface.md)    
+ [Icriptnode arabirimi](../../winscript/reference/iscriptnode-interface.md)   
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

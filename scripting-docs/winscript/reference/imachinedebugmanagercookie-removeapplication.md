@@ -44,7 +44,7 @@ HRESULT RemoveApplication(
  'ndaki Uygulama uygulama listesine eklendiğinde belirtilen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,6 +54,6 @@ HRESULT RemoveApplication(
  Bu yöntem, `IProcessDebugManager::RemoveApplication` her çağrıldığında işlem hata ayıklama Yöneticisi tarafından çağırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Imachinedebugmanagercookie:: Addadpplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)    
- [Imachinedebugmanagercookie arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md)    
+ [Imachinedebugmanagercookie:: Addadpplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)   
+ [Imachinedebugmanagercookie arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

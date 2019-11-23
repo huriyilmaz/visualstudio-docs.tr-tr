@@ -44,7 +44,7 @@ HRESULT Advise(
  dışı Bu bağlantıyı benzersiz bir şekilde tanımlayan döndürülen belirtecin işaretçisi. Çağıran, `ISimpleConnectionPoint::Unadvise` yöntemine geçirerek bağlantıyı silmek için bu belirteci daha sonra kullanır. Bağlantı başarıyla kurulmazsa, bu değer sıfırdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT Advise(
  Bu yöntem, basit bağlantı noktası nesnesi ile istemci havuzu arasında bir bağlantı kurar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iımpliconnectionpoint arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)    
+ [Iımpliconnectionpoint arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)   
  [ISimpleConnectionPoint::Unadvise](../../winscript/reference/isimpleconnectionpoint-unadvise.md)

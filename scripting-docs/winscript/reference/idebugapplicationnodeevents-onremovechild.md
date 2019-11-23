@@ -40,7 +40,7 @@ HRESULT onRemoveChild(
  'ndaki Kaldırılan alt uygulama düğümü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -49,9 +49,9 @@ HRESULT onRemoveChild(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, bir alt düğüm bir hata ayıklama uygulama düğümü nesnesinden kaldırıldığında olayını işler.  
   
- @No__t_0 arabiriminin uygulayıcıları bu olayı yükseltir.  
+ `IDebugApplicationNode` arabiriminin uygulayıcıları bu olayı yükseltir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)    
- [Idebugapplicationnodeevents:: onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)    
+ [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
+ [Idebugapplicationnodeevents:: onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)   
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

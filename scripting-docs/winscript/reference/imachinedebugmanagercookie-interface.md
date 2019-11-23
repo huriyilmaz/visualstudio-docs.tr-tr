@@ -21,13 +21,13 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573879"
 ---
 # <a name="imachinedebugmanagercookie-interface"></a>IMachineDebugManagerCookie Arabirimi
-@No__t_0 arabirimine benzer şekilde, `IMachineDebugManagerCookie` arabirimi hata ayıklama tanımlama bilgilerini destekler.  
+`IMachineDebugManager` arabirimine benzer şekilde, `IMachineDebugManagerCookie` arabirimi hata ayıklama tanımlama bilgilerini destekler.  
   
  Bu arabirim (`IDebugCookie` arabirimi ile birlikte), komut dosyalarının hata ayıklayıcının Bu betiklerin izlenmesini gerektirmeksizin bir betik hata ayıklayıcısı işleminde çalışmasına izin verir.  
   
  Betik hata ayıklayıcısı Işlem hata ayıklama yöneticisinde `IDebugCookie::SetDebugCookie` yöntemini çağırır (PDM). Daha sonra, PDM bu tanımlama bilgisini, `IMachineDebugManagerCookie` arabiriminin yöntemlerini kullanarak makine hata ayıklama Yöneticisi 'ne (MDM) veya makineye bir betik uygulaması ekleme veya kaldırma isteği ile birlikte gönderir. MDM daha sonra değişikliğin her hata ayıklayıcısını, bu tanımlama bilgisine sahip olanlar hariç bilgilendirir.  
   
- @No__t_0 devralınan yöntemlere ek olarak, `IMachineDebugManagerCookie` arabirimi aşağıdaki yöntemleri sunar.  
+ `IUnknown`devralınan yöntemlere ek olarak, `IMachineDebugManagerCookie` arabirimi aşağıdaki yöntemleri sunar.  
   
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
@@ -38,5 +38,5 @@ ms.locfileid: "72573879"
 |[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|Çalışan uygulama listesinden bir uygulamayı kaldırır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)    
+ [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)   
  [IDebugCookie Arabirimi](../../winscript/reference/idebugcookie-interface.md)

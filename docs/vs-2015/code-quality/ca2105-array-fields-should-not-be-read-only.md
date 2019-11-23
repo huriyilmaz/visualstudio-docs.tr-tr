@@ -36,7 +36,7 @@ ms.locfileid: "72666020"
  Bir diziyi tutan ortak veya korumalı bir alan salt okunurdur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Dizi içeren bir alana `readonly` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `ReadOnly`) değiştiricisini uyguladığınızda, alan farklı bir diziye başvuracak şekilde değiştirilemez. Bir dizinin öğeleri salt okunur bir alanda depolanmış olsa bile değiştirilebilir. Herkese açık bir şekilde erişilebilen salt yazılır bir dizinin öğelerine dayalı işlemler yapan veya kararları veren kod, açıktan yararlanılır bir güvenlik açığı içerebilir.
+ Dizi içeren bir alana `readonly` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]`ReadOnly`) değiştiricisini uyguladığınızda, alan farklı bir diziye başvuracak şekilde değiştirilemez. Bir dizinin öğeleri salt okunur bir alanda depolanmış olsa bile değiştirilebilir. Herkese açık bir şekilde erişilebilen salt yazılır bir dizinin öğelerine dayalı işlemler yapan veya kararları veren kod, açıktan yararlanılır bir güvenlik açığı içerebilir.
 
  Ortak bir alana sahip olmanın CA1051 tasarım kuralını da ihlal ettiğini unutmayın [: görünür örnek alanlarını bildirme](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
 
@@ -53,7 +53,7 @@ ms.locfileid: "72666020"
  Bu kuraldan bir uyarının dışlanmasını kesinlikle önerilmez. Neredeyse bir salt okuma alanının içeriğinin önemli olmadığı neredeyse hiçbir senaryo meydana gelir. Bu durumda senaryonuz varsa iletiyi dışlamak yerine `readonly` değiştiricisini kaldırın.
 
 ## <a name="example"></a>Örnek
- Bu örnek, bu kuralı ihlal eden tehlikeleri gösterir. İlk bölüm, güvenli olmayan iki alan (`grades` ve `privateGrades`) içeren `MyClassWithReadOnlyArrayField` türünde bir örnek kitaplık gösterir. Alan `grades` geneldir ve bu nedenle herhangi bir çağırana karşı savunmasız olur. @No__t_0 alan özeldir, ancak `GetPrivateGrades` yöntemi tarafından çağıranlara döndürüldüğünden güvenlik açığı devam etmektedir. @No__t_0 alanı, `GetSecurePrivateGrades` yöntemi tarafından güvenli bir şekilde sunulur. İyi tasarım uygulamalarını izlemek için özel olarak bildirilmiştir. İkinci bölüm `grades` ve `privateGrades` üyelerinde depolanan değerleri değiştiren kodu gösterir.
+ Bu örnek, bu kuralı ihlal eden tehlikeleri gösterir. İlk bölüm, güvenli olmayan iki alan (`grades` ve `privateGrades`) içeren `MyClassWithReadOnlyArrayField`türü olan bir örnek kitaplık gösterir. Alan `grades` geneldir ve bu nedenle herhangi bir çağırana karşı savunmasız olur. `privateGrades` alan özeldir, ancak `GetPrivateGrades` yöntemi tarafından çağıranlara döndürüldüğünden güvenlik açığı devam etmektedir. `securePrivateGrades` alanı, `GetSecurePrivateGrades` yöntemi tarafından güvenli bir şekilde sunulur. İyi tasarım uygulamalarını izlemek için özel olarak bildirilmiştir. İkinci bölüm `grades` ve `privateGrades` üyelerinde depolanan değerleri değiştiren kodu gösterir.
 
  Örnek sınıf kitaplığı aşağıdaki örnekte görünür.
 
@@ -66,7 +66,7 @@ ms.locfileid: "72666020"
 
  Bu örnekteki çıktı:
 
- **Değişiklik yapmadan önce: Notlar: 90, 90, 90 özel notlar: 90, 90, 90 Secure notlar, 90, 90, 90** 
+ **Değişiklik yapmadan önce: Notlar: 90, 90, 90 özel notlar: 90, 90, 90 Secure notlar, 90, 90, 90**
 **değiştirildikten sonra: Notlar: 90, 555, 90 özel notlar: 90, 555, 90 güvenli notlar, 90, 90, 90**
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Array?displayProperty=fullName><xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
+ <xref:System.Array?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

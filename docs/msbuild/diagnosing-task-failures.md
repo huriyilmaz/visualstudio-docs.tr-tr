@@ -23,19 +23,19 @@ ms.locfileid: "71720800"
 ---
 # <a name="diagnosing-task-failures"></a>Görev başarısızlıklarını tanılama
 
-<xref:Microsoft.Build.Utilities.ToolTask> – türetilmiş @no__t bir sınıf, görev daha belirli bir hata günlüğe oturum açmadığından sıfır dışı çıkış kodu döndüren bir araç işlemi çalıştırdığında-0 ' dır.
+`MSB6006`, <xref:Microsoft.Build.Utilities.ToolTask>türetilen bir sınıf, görev daha belirli bir hatayla oturum açmadığından sıfır dışı çıkış kodu döndüren bir araç işlemi çalıştırdığında yayılır.
 
 ## <a name="identifying-the-failing-task"></a>Hatalı görevi tanımlama
 
 Bir görev hatasıyla karşılaştığınızda, ilk adım başarısız olan görevi tanımlamaktır.
 
-Hatanın metni, araç adını (görevin <xref:Microsoft.Build.Utilities.ToolTask.ToolName> veya yürütülebilir dosyanın adı tarafından sağlanmış kolay bir ad) ve sayısal çıkış kodunu belirtir. Örneğin,
+Hatanın metni, araç adını (görevin <xref:Microsoft.Build.Utilities.ToolTask.ToolName> ya da yürütülebilir dosyanın adı tarafından sağlanmış kolay bir ad) ve sayısal çıkış kodunu belirtir. Örneğin,
 
 ```text
 error MSB6006: "custom tool" exited with code 1.
 ```
 
-Araç adı `custom tool` ' dır ve çıkış kodu `1` ' dir.
+Araç adı `custom tool` ve çıkış kodu `1`.
 
 ### <a name="command-line-builds"></a>Komut satırı derlemeleri
 
@@ -49,11 +49,11 @@ Build FAILED.
   S:\MSB6006_demo\MSB6006_demo.csproj(19,5): error MSB6006: "custom tool" exited with code 1.
 ```
 
-Bu sonuç, projenin `S:\MSB6006_demo\MSB6006_demo.csproj` projesinde `InvokeToolTask` adlı hedefte `S:\MSB6006_demo\MSB6006_demo.csproj` dosyasında tanımlanan bir görevde hata oluştuğunu gösterir.
+Bu sonuç, proje `S:\MSB6006_demo\MSB6006_demo.csproj``InvokeToolTask`adında bir hedefte, `S:\MSB6006_demo\MSB6006_demo.csproj`dosyanın 19. satırında tanımlanan bir görevde hata oluştuğunu gösterir.
 
 ### <a name="in-visual-studio"></a>Visual Studio 'da
 
-Aynı bilgiler, `Project`, `File` ve `Line` sütunlarındaki Visual Studio hata listesinde bulunur.
+Aynı bilgiler, `Project`, `File`ve `Line`sütunlarındaki Visual Studio hata listesinde bulunur.
 
 ## <a name="finding-more-failure-information"></a>Daha fazla hata bilgisi bulma
 

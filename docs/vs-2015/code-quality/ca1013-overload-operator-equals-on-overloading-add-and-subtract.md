@@ -33,14 +33,14 @@ ms.locfileid: "72663208"
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
 |CheckId|CA1013|
-|Kategori|Microsoft. Design|
+|Kategori|Microsoft.Design|
 |Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
  Bir genel ya da korumalı tür eşitlik imlecini uygulamadan ekleme ya da çıkarma işleçlerini uygular.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir türün örnekleri toplama ve çıkarma gibi işlemler kullanılarak birleştirilebilmesi için, aynı bileşen değerlerine sahip olan her iki örnek için `true` döndürmek üzere her zaman eşitlik tanımlamanız gerekir.
+ Bir türün örnekleri toplama ve çıkarma gibi işlemler kullanılarak birleştirilebilmesi için, aynı anayent değerlerine sahip olan her iki örnek için `true` döndürmek üzere neredeyse her zaman eşitlik tanımlamanız gerekir.
 
  Eşitlik işlecinin aşırı yüklenmiş bir uygulamasında varsayılan eşitlik işlecini kullanamazsınız. Bunun yapılması, yığın taşmasına neden olur. Eşitlik işlecini uygulamak için uygulamanızdaki Object. Equals yöntemini kullanın. Aşağıdaki örnekte bakın.
 
@@ -65,7 +65,7 @@ return left.Equals(right);
  Eşitlik işlecinin varsayılan uygulanması tür için doğru davranışı sağlıyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale getirir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden bir türü (`BadAddableType`) tanımlar. Bu tür, eşitlik için aynı alan değerlerinin test `true` ' a sahip iki örnek oluşturmak için eşitlik işlecini uygulamalıdır. Tür `GoodAddableType` düzeltilen uygulamayı gösterir. Bu türün aynı zamanda eşitsizlik işlecini uyguladığını ve diğer kuralları karşılamak için <xref:System.Object.Equals%2A> geçersiz kılmalarını unutmayın. Ayrıca, tüm uygulama <xref:System.Object.GetHashCode%2A> de uygular.
+ Aşağıdaki örnek, bu kuralı ihlal eden bir türü (`BadAddableType`) tanımlar. Bu tür, eşitlik için aynı alan değerlerinin test `true` olan iki örneği oluşturmak için eşitlik işlecini uygulamalıdır. Tür `GoodAddableType` düzeltilen uygulamayı gösterir. Bu türün aynı zamanda eşitsizlik işlecini uyguladığını ve diğer kuralları karşılamak için <xref:System.Object.Equals%2A> geçersiz kılmalarını unutmayın. Ayrıca, tüm uygulama <xref:System.Object.GetHashCode%2A>de uygular.
 
  [!code-csharp[FxCop.Design.AddAndSubtract#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AddAndSubtract/cs/FxCop.Design.AddAndSubtract.cs#1)]
 
@@ -76,7 +76,10 @@ return left.Equals(right);
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **Hatalı tür: {2,2} {2,2} eşit mi? **@No__t_3**iyi tür yok: {3,3} {3,3} eşit mi? Evet** 
-**iyi tür: {3,3} 0 = =?   Evet** 1**yanlış tür: 3 4 eşittir mi? **@No__t_15**iyi tür yok: 7 8 = =?   Hayır**
+ **Hatalı tür: {2,2} {2,2} eşit mi? **
+**iyi tür yok: {3,3} {3,3} eşit mi? Evet**
+**iyi tür: {3,3} {3,3} = =?   Evet**
+**yanlış tür: {2,2} {9,9} eşittir mi? **
+**iyi tür yok: {3,3} {9,9} = =?   Hayır**
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Eşitlik İşleçleri](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

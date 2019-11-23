@@ -31,5 +31,5 @@ Bir betik çalışırken profil oluşturmayı başlatma veya durdurma olanağın
 |[IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)|Profil oluşturucuyu, tüm uygulanabilir komut dosyası altyapılarında profil oluşturmayı durduramayacağız bildirir. Bu, profil oluşturmayı durdurduğunuzda [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] çalışıyorsa, tüm çağrı yığınını elde etmenizi sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercontrol arabirimi](../../winscript/reference/iactivescriptprofilercontrol-interface.md)    
+ [Iactivescriptprofilercontrol arabirimi](../../winscript/reference/iactivescriptprofilercontrol-interface.md)   
  [Etkin Betik Profil Oluşturucu Arabirimleri](../../winscript/reference/active-script-profiler-interfaces.md)

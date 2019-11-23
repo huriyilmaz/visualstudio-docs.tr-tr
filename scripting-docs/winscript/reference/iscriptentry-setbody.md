@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72575375"
 ---
 # <a name="iscriptentrysetbody"></a>IScriptEntry::SetBody
-@No__t_0 betik bloğunun gövdesinde bulunan metni veya bir `IScriptScriptlet` kod oluşturma yöntemi belirler.  
+`IScriptEntry` betik bloğunun gövdesinde bulunan metni veya bir `IScriptScriptlet` kod oluşturma yöntemi belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,9 +39,9 @@ HRESULT SetBody(
  `psz`  
  'ndaki Bir `IScriptEntry` betik bloğunda, `psz` komut dosyası etiketlerinin içine alınmış metindir.  
   
- @No__t_0 işlev bloğu için, `psz` işlev gövdesidir.  
+ `IScriptEntry` işlev bloğu için, `psz` işlev gövdesidir.  
   
- @No__t_0 nesnesi (`IScriptEntry` türeten türetilmiş) için, `psz`, kod oluşturma yöntemi 'in betik metintir.  
+ `IScriptScriptlet` nesnesi (`IScriptEntry`türeten türetilmiş) için, `psz`, kod oluşturma yöntemi 'in betik metintir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -53,5 +53,5 @@ HRESULT SetBody(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)

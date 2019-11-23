@@ -33,7 +33,7 @@ ms.locfileid: "72661438"
 |Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir yöntem veya Oluşturucu, <xref:System.IFormatProvider?displayProperty=fullName> parametresini kabul eden aşırı yüklemeleri olan bir veya daha fazla üyeyi çağırır ve yöntem veya Oluşturucu <xref:System.IFormatProvider> parametresini alan aşırı yüklemeyi çağırmaz. Bu kural, <xref:System.IFormatProvider> parametresini yoksayarak ve aşağıdaki yöntemleri ek olarak belgelenen [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yöntemlerine yapılan çağrıları yoksayar:
+ Bir yöntem veya Oluşturucu, bir <xref:System.IFormatProvider?displayProperty=fullName> parametresi kabul eden aşırı yüklemeleri olan bir veya daha fazla üyeyi çağırır ve yöntem veya Oluşturucu <xref:System.IFormatProvider> parametresini alan aşırı yüklemeyi çağırmaz. Bu kural, <xref:System.IFormatProvider> parametresini yoksayarak ve aşağıdaki yöntemleri ek olarak belgelenen [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yöntemlerine yapılan çağrıları yoksayar:
 
 - <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
 
@@ -50,7 +50,7 @@ ms.locfileid: "72661438"
 
 - Değerin hedefini belirtmediğinizde, veri tüketicisinin veya sağlayıcının kültürü belirtmesini sağlayabilirsiniz.
 
-  @No__t_0, yalnızca <xref:System.Resources.ResourceManager?displayProperty=fullName> sınıfının bir örneğini kullanarak yerelleştirilmiş kaynakları almak için kullanılır.
+  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>, yalnızca <xref:System.Resources.ResourceManager?displayProperty=fullName> sınıfının bir örneğini kullanarak yerelleştirilmiş kaynakları almak için kullanılır.
 
   Aşırı yüklenmiş üyenin varsayılan davranışı gereksinimlerinize uygun olsa da, kodunuzun kendi kendine belgelenmesi ve daha kolay tutulması için kültüre özgü aşırı yüklemeyi açıkça çağırmak daha iyidir.
 
@@ -61,18 +61,18 @@ ms.locfileid: "72661438"
  Varsayılan kültür/biçim sağlayıcının doğru seçim olması ve kodun bakımınızın önemli bir geliştirme önceliği olmaması durumunda bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `BadMethod` Bu kuralın iki ihlaline neden olur. `GoodMethod`, sabit kültürü <xref:System.String.Compare%2A> geçirerek ilk ihlayi düzeltir ve `string3` kullanıcıya görüntülenmediği için geçerli kültürü <xref:System.String.ToLower%2A> geçirerek ikinci ihlalin düzeltmesini düzeltir.
+ Aşağıdaki örnekte `BadMethod`, bu kuralın iki ihlaline neden olur. `GoodMethod`, sabit kültürü <xref:System.String.Compare%2A>geçirerek ilk ihlayi düzeltir ve `string3` kullanıcıya görüntülenmediği için geçerli kültürü <xref:System.String.ToLower%2A> geçirerek ikinci ihlalin düzeltmesini düzeltir.
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, <xref:System.DateTime> türü tarafından seçilen varsayılan <xref:System.IFormatProvider> ' da geçerli kültürün etkisini gösterir.
+ Aşağıdaki örnek, geçerli kültürün <xref:System.DateTime> türü tarafından seçilen varsayılan <xref:System.IFormatProvider> etkisini gösterir.
 
  [!code-csharp[FxCop.Globalization.IFormatProvider#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.IFormatProvider/cs/FxCop.Globalization.IFormatProvider.cs#1)]
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **6/4/1900 12:15:12 PM** 
+ **6/4/1900 12:15:12 PM**
 **06/04/1900 12:15:12**
 ## <a name="related-rules"></a>İlgili kurallar
  [CA1304: CultureInfo belirtin](../code-quality/ca1304-specify-cultureinfo.md)

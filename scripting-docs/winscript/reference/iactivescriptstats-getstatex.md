@@ -48,7 +48,7 @@ HRESULT GetStatEx(
  dışı İstatistiği temsil eden 64 bit işaretsiz tamsayının düşük 32 biti.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -62,5 +62,5 @@ HRESULT GetStatEx(
 > Bu yöntem şu anda uygulanmadı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptstats:: GetStat](../../winscript/reference/iactivescriptstats-getstat.md)    
+ [Iactivescriptstats:: GetStat](../../winscript/reference/iactivescriptstats-getstat.md)   
  [IActiveScriptStats Arabirimi](../../winscript/reference/iactivescriptstats-interface.md)

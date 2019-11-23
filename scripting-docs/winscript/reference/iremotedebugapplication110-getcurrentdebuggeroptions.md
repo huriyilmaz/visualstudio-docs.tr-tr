@@ -37,5 +37,5 @@ HRESULT GetCurrentDebuggerOptions([out] enum SCRIPT_DEBUGGER_OPTIONS* pCurrentOp
  dışı Geçerli seçenekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)    
+ [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)   
  [IRemoteDebugApplication110 Arabirimi](../../winscript/reference/iremotedebugapplication110-interface.md)

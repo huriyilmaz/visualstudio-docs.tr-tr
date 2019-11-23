@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572546"
 ---
 # <a name="undefined-identifier"></a>Tanımlanmamış tanımlayıcı
-@No__t_0 derleyicisinin tanımadığı tanımlayıcıyı kullanmaya çalıştınız. Tanımsız değer, her kullandığınızda döndürülür:  
+[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] derleyicisinin tanımadığı tanımlayıcıyı kullanmaya çalıştınız. Tanımsız değer, her kullandığınızda döndürülür:  
   
 - var olmayan bir değişken,  
   
@@ -35,5 +35,5 @@ ms.locfileid: "72572546"
 - Değişkeni bir **var** ifadesiyle bildirin (`var` x içinde olduğu gibi).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Değişkenler](../../javascript/variables-javascript.md)    
+ [Değişkenler](../../javascript/variables-javascript.md)   
  [Değişken Kapsam](../../javascript/advanced/variable-scope-javascript.md)

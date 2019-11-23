@@ -40,7 +40,7 @@ HRESULT GetApplication(
  dışı Betik sitesiyle ilişkili hata ayıklama uygulaması nesnesine yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -48,8 +48,8 @@ HRESULT GetApplication(
 |`E_NOTIMPL`|Konak, hata ayıklamayı doğrudan desteklemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 yöntemi, bir akıllı ana bilgisayarın her bir Betiğin ait olduğu uygulama nesnesini tanımlamak için bir yol sağlar. Komut dosyası motorları bu yöntemi, sahip olduğu uygulamaları almak için çağırmayı denemelidir ve bu başarısız olursa `IProcessDebugManager::GetDefaultApplication`.  
+ `GetApplication` yöntemi, bir akıllı ana bilgisayarın her bir Betiğin ait olduğu uygulama nesnesini tanımlamak için bir yol sağlar. Komut dosyası motorları bu yöntemi, sahip olduğu uygulamaları almak için çağırmayı denemelidir ve bu başarısız olursa `IProcessDebugManager::GetDefaultApplication`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptsitedebug arabirimi](../../winscript/reference/iactivescriptsitedebug-interface.md)    
+ [Iactivescriptsitedebug arabirimi](../../winscript/reference/iactivescriptsitedebug-interface.md)   
  [IProcessDebugManager::GetDefaultApplication](../../winscript/reference/iprocessdebugmanager-getdefaultapplication.md)

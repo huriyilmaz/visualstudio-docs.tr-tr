@@ -40,7 +40,7 @@ HRESULT DebugOutput(
  'ndaki Hata ayıklayıcıda görüntülenecek dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,5 +52,5 @@ HRESULT DebugOutput(
  Bu yöntem `IApplicationDebugger::onDebugOutput` çağırmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
  [IApplicationDebugger::onDebugOutput](../../winscript/reference/iapplicationdebugger-ondebugoutput.md)

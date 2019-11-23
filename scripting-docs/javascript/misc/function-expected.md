@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576587"
 ---
 # <a name="function-expected"></a>İşlev bekleniyor
-@No__t_1 nesnesi olmayan bir nesne üzerindeki **işlev prototipi** yöntemlerinden birini çağırmaya çalıştınız ya da bir işlev çağrısı bağlamında bir nesne kullandınız. Örneğin, aşağıdaki kod bu hatayı üretir çünkü **örnek** bir işlev değildir.  
+`Function` nesnesi olmayan bir nesne üzerindeki **işlev prototipi** yöntemlerinden birini çağırmaya çalıştınız ya da bir işlev çağrısı bağlamında bir nesne kullandınız. Örneğin, aşağıdaki kod bu hatayı üretir çünkü **örnek** bir işlev değildir.  
   
 ```JavaScript  
 var example = new Object();  // Create a new object called "example".  
@@ -36,5 +36,5 @@ var x = example();           // Try and call example as if it were a function.
 - Yalnızca işlevleri çağırmak için `()` işlev çağrısı işlecini kullandığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)   
  [prototype Özelliği (Nesne)](../../javascript/reference/prototype-property-object-javascript.md)

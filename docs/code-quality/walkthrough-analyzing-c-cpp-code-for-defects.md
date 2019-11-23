@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: C/C++ Kodunda Hata Olup Olmadığını Analiz Etme'
+title: 'İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72018345"
 ---
-# <a name="walkthrough-analyzing-cc-code-for-defects"></a>İzlenecek yol: C/C++ Kodunda Hata Olup Olmadığını Analiz Etme
+# <a name="walkthrough-analyzing-cc-code-for-defects"></a>İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme
 
 Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası kod kusurları için c/Code 'un nasıl çözümlendiğini gösterir.
 
@@ -35,7 +35,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 ### <a name="to-run-code-defect-analysis-on-native-code"></a>Yerel kodda kod hatası analizini çalıştırmak için
 
-1. Tanıtım çözümünü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ' da açın.
+1. Tanıtım çözümünü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]açın.
 
      Demo çözümü artık **Çözüm Gezgini**doldurur.
 
@@ -61,13 +61,13 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 1. **Görünüm** menüsünde **hata listesi**' a tıklayın.
 
-     @No__t-0 ' da seçtiğiniz geliştirici profiline bağlı olarak, **Görünüm** menüsünde **diğer pencereleri** işaret etmeniz ve ardından **hata listesi**' e tıklamanız gerekebilir.
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' de seçtiğiniz geliştirici profiline bağlı olarak, **Görünüm** menüsünde **diğer pencereler** ' i işaret etmeniz ve ardından **hata listesi**' e tıklamanız gerekebilir.
 
 2. **Hata listesi**, aşağıdaki uyarıya çift tıklayın:
 
-     Uyarı C6230: Anlamsal olarak farklı türler arasında örtük atama: Boole bağlamında HRESULT kullanılıyor.
+     Uyarı C6230: anlamsal olarak farklı türler arasında örtük atama: Boole bağlamında HRESULT kullanılıyor.
 
-     Kod Düzenleyicisi `bool ProcessDomain()` işlevindeki uyarıya neden olan satırı görüntüler. Bu uyarı, Boole sonucunun beklenen bir ' if ' bildiriminde bir HRESULT kullanıldığını gösterir.
+     Kod Düzenleyicisi, `bool ProcessDomain()`işlevindeki uyarıya neden olan satırı görüntüler. Bu uyarı, Boole sonucunun beklenen bir ' if ' bildiriminde bir HRESULT kullanıldığını gösterir.
 
 3. BAŞARıLı makroyu kullanarak bu uyarıyı düzeltin. Kodunuz aşağıdaki koda benzemelidir:
 
@@ -77,7 +77,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 4. **Hata listesi**, aşağıdaki uyarıya çift tıklayın:
 
-     Uyarı C6282: Yanlış işleç: test bağlamında sabit 'e atama. Was = = amaçlıdır mi?
+     Uyarı C6282: yanlış işleç: test bağlamında sabite atama. Was = = amaçlıdır mi?
 
 5. Bu uyarıyı, eşitlik için test ederek düzeltin. Kodunuz aşağıdaki koda benzemelidir:
 
@@ -97,7 +97,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
      **Hata listesi**, C6001 artık hata olarak görüntülenir.
 
-3. @No__t-1 ' i ve `j` ' **hata listesi** başlatarak, kalan iki C6001 hatasını düzeltin.
+3. `i` başlatarak ve 0 ' a `j` **hata listesi** kalan iki C6001 hatasını düzeltin.
 
 4. Codekusurları projesini yeniden derleyin.
 
@@ -119,7 +119,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 6. **Hata listesi**, aşağıdaki uyarıya çift tıklayın:
 
-     Uyarı C6011: ' NewNode ' NULL işaretçisine başvuruluyor.
+     Uyarı C6011: ' newNode ' NULL işaretçisinin başvurusunu kaldırma.
 
      Bu uyarı, çağıran tarafından döndürülen değeri denetlemek için hata olduğunu gösterir. Bu durumda, bir **AllocateNode** çağrısı null değer döndürebilir (AllocateNode için işlev bildirimi için bkz. ek açıklamalar. h üstbilgi dosyası).
 
@@ -142,7 +142,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 ### <a name="to-use-source-code-annotation"></a>Kaynak kodu ek açıklamasını kullanmak için
 
-1. Aşağıdaki örnekte gösterildiği gibi, ön ve post koşullarını kullanarak `AddTail` işlevinin biçimsel parametrelerini ve dönüş değerini not edin:
+1. Aşağıdaki örnekte gösterildiği gibi, ön ve post koşullarını kullanarak `AddTail` işlevin biçimsel parametrelerini ve dönüş değerini not edin:
 
    ```cpp
    [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
@@ -156,7 +156,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 3. **Hata listesi**, aşağıdaki uyarıya çift tıklayın:
 
-     Uyarı C6011: ' Node ' NULL işaretçisine başvuruluyor.
+     Uyarı C6011: ' node ' NULL işaretçisinin başvurusunu kaldırma.
 
      Bu uyarı, işleve geçirilen düğümün null olabileceğini ve uyarının oluşturulduğu satır numarasını belirtir.
 
@@ -178,4 +178,5 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[İzlenecek yol: Kod kusurları için yönetilen kodu analiz etme @ no__t-0 @ no__t-1 ve[CC++ için kod analizi](../code-quality/code-analysis-for-c-cpp-overview.md)
+[Izlenecek yol: kod kusurları Için yönetilen kodu analiz](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+, [C/C++ için kod analizi](../code-quality/code-analysis-for-c-cpp-overview.md)

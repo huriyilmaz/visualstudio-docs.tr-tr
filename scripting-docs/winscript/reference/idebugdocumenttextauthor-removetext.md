@@ -44,7 +44,7 @@ HRESULT RemoveText(
  'ndaki Kaldırılacak karakter sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT RemoveText(
  Bu yöntem belgedeki metni kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumenttextauthor arabirimi](../../winscript/reference/idebugdocumenttextauthor-interface.md)    
+ [Idebugdocumenttextauthor arabirimi](../../winscript/reference/idebugdocumenttextauthor-interface.md)   
  [IDebugDocumentTextAuthor::InsertText](../../winscript/reference/idebugdocumenttextauthor-inserttext.md)

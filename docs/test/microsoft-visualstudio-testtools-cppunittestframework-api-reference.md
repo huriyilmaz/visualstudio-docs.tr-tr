@@ -18,7 +18,7 @@ ms.locfileid: "71720508"
 
 Bu konu, `Microsoft::VisualStudio::CppUnitTestFramework` ad alanının ortak üyelerini listeler. Microsoft yerel birim testi çerçevesini C++ temel alan birim testlerini yazmak Için bu API 'leri kullanın. Konunun sonunda bir [kullanım örneği](#example) vardır.
 
-Üst bilgi ve LIB dosyaları *\<Visual Studio yükleme klasörü > \VC\Auxiliary\VS\UnitTest*' nin altında bulunur.
+Üst bilgi ve LIB dosyaları, *> \VC\Auxiliary\VS\UnitTest\<Visual Studio yükleme klasörü*altında bulunur.
 
 Üst bilgi ve LIB yolları yerel bir test projesinde otomatik olarak yapılandırılır.
 
@@ -102,7 +102,7 @@ Bu konu, `Microsoft::VisualStudio::CppUnitTestFramework` ad alanının ortak üy
 TEST_CLASS(className)
 ```
 
-Test yöntemleri içeren her sınıf için gereklidir. *ClassName* bir test sınıfı olarak tanımlar. `TEST_CLASS`, namescape kapsamında bildirilmelidir.
+Test yöntemleri içeren her sınıf için gereklidir. *ClassName* bir test sınıfı olarak tanımlar. `TEST_CLASS`, namescape Scope 'ta bildirilmelidir.
 
 ```cpp
 TEST_METHOD(methodName)
@@ -111,7 +111,7 @@ TEST_METHOD(methodName)
 }
 ```
 
-*MethodName* öğesini bir test yöntemi olarak tanımlar. `TEST_METHOD`, metodun sınıfının kapsamında bildirilmelidir.
+*MethodName* öğesini bir test yöntemi olarak tanımlar. `TEST_METHOD`, yöntemin sınıfının kapsamında bildirilmelidir.
 
 ### <a name="Initialize_and_cleanup"></a>Başlatma ve Temizleme
 
@@ -183,9 +183,9 @@ BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
 END_TEST_METHOD_ATTRIBUTE()
 ```
 
-Bir veya daha fazla `TEST_METHOD_ATTRIBUTE` makrosu ile tanımlanan öznitelikleri *Testmethodname*test yöntemine ekler.
+Bir veya daha fazla `TEST_METHOD_ATTRIBUTE` makrolarıyla tanımlanan öznitelikleri *Testmethodname*test yöntemine ekler.
 
-@No__t-0 *makrosu, ÖznitelikAdı ve* *AttributeValue*değeri olan bir özniteliği tanımlar.
+`TEST_METHOD_ATTRIBUTE` makrosu, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
 
 #### <a name="test_class_attributes"></a>Test sınıfı öznitelikleri
 
@@ -196,9 +196,9 @@ BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
 END_TEST_CLASS_ATTRIBUTE()
 ```
 
-*TestClassName*test sınıfına bir veya daha fazla `TEST_CLASS_ATTRIBUTE` makrosu ile tanımlanmış öznitelikleri ekler.
+*TestClassName*test sınıfına bir veya daha fazla `TEST_CLASS_ATTRIBUTE` makrolarıyla tanımlanan öznitelikleri ekler.
 
-@No__t-0 *makrosu, ÖznitelikAdı ve* *AttributeValue*değeri olan bir özniteliği tanımlar.
+`TEST_CLASS_ATTRIBUTE` makrosu, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
 
 #### <a name="test_module_attributes"></a>Test modülü öznitelikleri
 
@@ -209,43 +209,43 @@ BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
 END_TEST_MODULE_ATTRIBUTE()
 ```
 
-*TestModuleName*test modülüne bir veya daha fazla `TEST_MODULE_ATTRIBUTE` makrosu ile tanımlanmış öznitelikleri ekler.
+*TestModuleName*test modülüne bir veya daha fazla `TEST_MODULE_ATTRIBUTE` makrolarıyla tanımlanan öznitelikleri ekler.
 
-@No__t-0 *makrosu, ÖznitelikAdı ve* *AttributeValue*değeri olan bir özniteliği tanımlar.
+`TEST_MODULE_ATTRIBUTE` makrosu, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
 
 #### <a name="pre_defined_attributes"></a>Önceden tanımlanmış öznitelikler
 
-Önceden tanımlanmış bu öznitelik makroları, yaygın durumlar için kolaylık olarak sağlanır. Yukarıda açıklanan @no__t (0) makrosunun yerine kullanılabilir.
+Önceden tanımlanmış bu öznitelik makroları, yaygın durumlar için kolaylık olarak sağlanır. Yukarıda açıklanan makro `TEST_METHOD_ATTRIBUTE` yerine kullanılabilir.
 
 ```cpp
 TEST_OWNER(ownerAlias)
 ```
 
-@No__t-1 adı ve *ownerAlias*özniteliği değeri olan `TEST_METHOD_ATTRIBUTE` tanımlar.
+Adı `Owner` ve *ownerAlias*özniteliği değeri olan bir `TEST_METHOD_ATTRIBUTE` tanımlar.
 
 ```cpp
 TEST_DESCRIPTION(description)
 ```
 
-@No__t-1 adı ve *Açıklama*özniteliği değeri olan `TEST_METHOD_ATTRIBUTE` tanımlar.
+Adı `Description` ve *Açıklama*özniteliği değeri olan bir `TEST_METHOD_ATTRIBUTE` tanımlar.
 
 ```cpp
 TEST_PRIORITY(priority)
 ```
 
-@No__t-1 adı ve *Priority*'nin öznitelik değeri ile `TEST_METHOD_ATTRIBUTE` tanımlar.
+Ad `Priority` ve *Öncelik*değeri olan bir `TEST_METHOD_ATTRIBUTE` tanımlar.
 
 ```cpp
 TEST_WORKITEM(workitem)
 ```
 
-@No__t-1 adı ve *WorkItem*'ın öznitelik değeri ile `TEST_METHOD_ATTRIBUTE` tanımlar.
+Name `WorkItem` ve *WorkItem*özniteliği değeri olan bir `TEST_METHOD_ATTRIBUTE` tanımlar.
 
 ```cpp
 TEST_IGNORE()
 ```
 
-@No__t-1 adı ve `true` özniteliği değeri ile 0 @no__t tanımlar.
+Ad `Ignore` ve `true`öznitelik değeri ile bir `TEST_METHOD_ATTRIBUTE` tanımlar.
 
 ## <a name="cppUnitTestAssert_h"></a>CppUnitTestAssert. h
 

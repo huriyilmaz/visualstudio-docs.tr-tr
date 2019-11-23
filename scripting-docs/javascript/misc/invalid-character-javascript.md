@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576579"
 ---
 # <a name="invalid-character-javascript"></a>Geçersiz karakter (JavaScript)
-@No__t_0 derleyicisi tarafından geçerli olarak tanınmayan bir karakter (veya karakterler) kullanarak bir tanımlayıcı meydana gelir. Geçerli karakterler aşağıdaki kuralları kullanır:  
+[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] derleyicisi tarafından geçerli olarak tanınmayan bir karakter (veya karakterler) kullanarak bir tanımlayıcı meydana gelir. Geçerli karakterler aşağıdaki kuralları kullanır:  
   
 - İlk karakter bir ASCII harfi (büyük veya küçük harf) veya alt çizgi (_) olmalıdır.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "72576579"
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- @No__t_0 dil tanımının parçası olmayan karakterler kullanmaktan kaçının.  
+- [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dil tanımının parçası olmayan karakterler kullanmaktan kaçının.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Değişkenler](../../javascript/variables-javascript.md)    
- [Özel karakterler](../../javascript/advanced/special-characters-javascript.md)    
+ [Değişkenler](../../javascript/variables-javascript.md)   
+ [Özel karakterler](../../javascript/advanced/special-characters-javascript.md)   
  [Veri Türleri](../../javascript/data-types-javascript.md)

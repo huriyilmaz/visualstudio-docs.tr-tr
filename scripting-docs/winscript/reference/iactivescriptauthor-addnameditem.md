@@ -66,5 +66,5 @@ HRESULT AddNamedItem(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
  [IActiveScriptAuthor::RemoveNamedItem](../../winscript/reference/iactivescriptauthor-removenameditem.md)

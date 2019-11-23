@@ -34,11 +34,11 @@ HRESULT SetDebuggerOptions(        [in] enum SCRIPT_DEBUGGER_OPTIONS mask,      
   
 #### <a name="parameters"></a>Parametreler  
  `mask`  
- [SCRIPT_DEBUGGER_OPTIONS sabit listesi](../../winscript/reference/script-debugger-options-enumeration.md) maskesi.  
+ [SCRIPT_DEBUGGER_OPTIONS numaralandırma](../../winscript/reference/script-debugger-options-enumeration.md) maskesi.  
   
  `value`  
- [SCRIPT_DEBUGGER_OPTIONS sabit listesi](../../winscript/reference/script-debugger-options-enumeration.md) değeri.  
+ [SCRIPT_DEBUGGER_OPTIONS numaralandırma](../../winscript/reference/script-debugger-options-enumeration.md) değeri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)    
+ [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)   
  [IRemoteDebugApplication110 Arabirimi](../../winscript/reference/iremotedebugapplication110-interface.md)

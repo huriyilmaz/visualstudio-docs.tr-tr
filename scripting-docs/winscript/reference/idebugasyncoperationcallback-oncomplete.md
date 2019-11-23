@@ -37,7 +37,7 @@ HRESULT onComplete();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -47,5 +47,5 @@ HRESULT onComplete();
  Bu yöntem bir `IDebugAsyncOperation` nesnesinden kullanılabilir bir sonuç olduğunu bildirir. Olay, hata ayıklayıcı iş parçacığında ateşlenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ihata ayıklama Gasyncoperationcallback arabirimi](../../winscript/reference/idebugasyncoperationcallback-interface.md)    
+ [Ihata ayıklama Gasyncoperationcallback arabirimi](../../winscript/reference/idebugasyncoperationcallback-interface.md)   
  [IDebugAsyncOperation Arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)

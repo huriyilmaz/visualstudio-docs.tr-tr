@@ -44,7 +44,7 @@ HRESULT HandleBreakPoint(
  dışı Hata ayıklayıcı uygulamayı sürdürür gerçekleştirilecek eylem.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -59,7 +59,7 @@ HRESULT HandleBreakPoint(
  Bu yöntem `IApplicationDebugger::onHandleBreakPoint` çağırmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
- [Iapplicationdebugger:: onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)    
- [Breakreason numaralandırması](../../winscript/reference/breakreason-enumeration.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+ [Iapplicationdebugger:: onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)   
+ [Breakreason numaralandırması](../../winscript/reference/breakreason-enumeration.md)   
  [BREAKRESUMEACTION Sabit Listesi](../../winscript/reference/breakresumeaction-enumeration.md)

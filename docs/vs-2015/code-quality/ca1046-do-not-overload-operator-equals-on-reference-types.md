@@ -29,7 +29,7 @@ ms.locfileid: "72661093"
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
-|Kategori|Microsoft. Design|
+|Kategori|Microsoft.Design|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -56,8 +56,10 @@ ms.locfileid: "72661093"
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **a = yeni (2, 2) ve b = yeni (2, 2) eşittir mi? @No__t_1** **c ve a eşit değildir mi? Evet** 
-**b ve a = =? **@No__t_5**c ve a yok = =? Evet**
+ **a = yeni (2, 2) ve b = yeni (2, 2) eşittir mi?
+** **c ve a eşit değildir mi? Evet**
+**b ve a = =? **
+**c ve a yok = =? Evet**
 ## <a name="related-rules"></a>İlgili kurallar
  [CA1013: Eşittir işlecini ekleme ve çıkarmayı aşırı yükleyerek aşırı yükleyin](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 

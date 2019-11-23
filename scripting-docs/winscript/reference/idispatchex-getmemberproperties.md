@@ -44,7 +44,7 @@ HRESULT GetMemberProperties(
  `grfdexFetch`  
  Alınacak özellikleri belirler. Bu, `pgrfdex` ve/veya aşağıdaki değerlerin bir birleşimi olarak listelenen değerlerin bir birleşimi olabilir:  
   
-|Değer|Açıklama|  
+|Değer|Anlamı|  
 |-----------|-------------|  
 |grfdexPropCanAll|FdexPropCanGet, fdexPropCanPut, fdexPropCanPutRef, fdexPropCanCall, Fdexpropcanyapýve fdexPropCanSourceEvents ' i birleştirir.|  
 |grfdexPropCannotAll|FdexPropCannotGet, fdexPropCannotPut, fdexPropCannotPutRef, fdexPropCannotCall, Fdexpropcannotyapýsý ve fdexPropCannotSourceEvents ' i birleştirir.|  
@@ -54,7 +54,7 @@ HRESULT GetMemberProperties(
  `pgrfdex`  
  İstenen özellikleri alan `DWORD` adresi. Bu, aşağıdaki değerlerin bir birleşimi olabilir:  
   
-|Değer|Açıklama|  
+|Değer|Anlamı|  
 |-----------|-------------|  
 |fdexPropCanGet|Üye DISPATCH_PROPERTYGET kullanılarak elde edilebilir.|  
 |fdexPropCannotGet|Üye DISPATCH_PROPERTYGET kullanılarak elde edilemez.|  
@@ -65,7 +65,7 @@ HRESULT GetMemberProperties(
 |fdexPropNoSideEffects|Üyenin yan etkileri yok. Örneğin, hata ayıklayıcı hata ayıklamakta olan betiğin durumunu değiştirmeden bu üyeyi güvenle alabilir/ayarlayabilir/çağırabilir.|  
 |fdexPropDynamicType|Üye dinamiktir ve nesnenin ömrü boyunca değişebilir.|  
 |fdexPropCanCall|Üye, DISPATCH_METHOD kullanarak bir yöntem olarak çağrılabilir.|  
-|fdexPropCannotCall|Üye, DISPATCH_METHOD kullanarak bir yöntem olarak çağrılamaz.|  
+|fdexPropCannotCall|Üye, DISPATCH_METHOD kullanan bir yöntem olarak çağrılamaz.|  
 |Fdexpropcanyapı|Üye, DISPATCH_CONSTRUCT kullanarak bir Oluşturucu olarak çağrılabilir.|  
 |Fdexpropcannotyapýsý|Üye, DISPATCH_CONSTRUCT kullanan bir Oluşturucu olarak çağrılamaz.|  
 |fdexPropCanSourceEvents|Üye etkinlikleri tetikedebilir.|  
@@ -97,6 +97,6 @@ BSTR bstrName;
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)    
- [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)    
+ [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)   
+ [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

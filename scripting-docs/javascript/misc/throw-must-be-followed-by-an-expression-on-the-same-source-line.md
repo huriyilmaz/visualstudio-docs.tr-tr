@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572756"
 ---
 # <a name="throw-must-be-followed-by-an-expression-on-the-same-source-line"></a>Throw ardından aynı kaynak satırdaki bir ifade gelmelidir
-@No__t_0 anahtar sözcüğünü kullandınız, ancak aynı kaynak satırdaki bir ifadeyle izmedi. @No__t_0 deyimi iki bölümden oluşur: `throw` anahtar sözcüğü ve sonra oluşturulacak ifade. Örneğin:  
+`throw` anahtar sözcüğünü kullandınız, ancak aynı kaynak satırdaki bir ifadeyle izmedi. `throw` deyimi iki bölümden oluşur: `throw` anahtar sözcüğü ve sonra oluşturulacak ifade. Örneğin:  
   
 ```JavaScript  
 if (denominator == 0) {  
@@ -34,9 +34,9 @@ if (denominator == 0) {
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- @No__t_0 anahtar sözcüğünün ve oluşturulacak ifadenin aynı satırda göründüğünden emin olun.  
+- `throw` anahtar sözcüğünün ve oluşturulacak ifadenin aynı satırda göründüğünden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Hata nesnesi](../../javascript/reference/error-object-javascript.md)    
- [throw deyimleri](../../javascript/reference/throw-statement-javascript.md)    
+ [Hata nesnesi](../../javascript/reference/error-object-javascript.md)   
+ [throw deyimleri](../../javascript/reference/throw-statement-javascript.md)   
  [try...catch...finally Deyimi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

@@ -29,8 +29,8 @@ Normal ifade yakalama, onaylama veya Grup oluşturmaya çalıştınız, ancak ka
 - En sağdaki kapanış parantezleri ekleyin.  
   
     > [!NOTE]
-    > Tek bir parantezle eşleştirmek istiyorsanız, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] tarafından özel bir karakter olarak yorumlanmaması için ters eğik çizgi ile (-\\ kaçış.  
+    > Tek bir parantezle eşleştirmek istiyorsanız, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]tarafından özel bir karakter olarak yorumlanmaması için ters eğik çizgi ile (-\\kaçış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
  [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

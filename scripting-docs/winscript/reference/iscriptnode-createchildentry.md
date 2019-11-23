@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573612"
 ---
 # <a name="iscriptnode-createchildentry"></a>IScriptNode:: CreateChildEntry
-Bir `IScriptEntry` alt örneği ekler.  
+Bir `IScriptEntry`alt örneği ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -61,7 +61,7 @@ HRESULT CreateChildEntry(
   
  Bir işlev nesnesini temsil eden `IScriptEntry` nesneler için, bu yöntem başarısız olur.  
   
- @No__t_0 nesneler için bu yöntem başarısız olur.  
+ `IScriptScriptlet` nesneler için bu yöntem başarısız olur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -71,8 +71,8 @@ HRESULT CreateChildEntry(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 arabirimi bir Web sayfasını veya öğelerini temsil eder. @No__t_0 arabirimi (`IScriptNode` türetilen), bir betik bloğunu veya bir işlev nesnesini temsil eder. @No__t_0 arabirimi (`IScriptEntry` türetilen) bir olay işleyicisini temsil eder.  
+ `IScriptNode` arabirimi bir Web sayfasını veya öğelerini temsil eder. `IScriptEntry` arabirimi (`IScriptNode`türetilen), bir betik bloğunu veya bir işlev nesnesini temsil eder. `IScriptScriptlet` arabirimi (`IScriptEntry`türetilen) bir olay işleyicisini temsil eder.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Icriptnode arabirimi](../../winscript/reference/iscriptnode-interface.md)    
+ [Icriptnode arabirimi](../../winscript/reference/iscriptnode-interface.md)   
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

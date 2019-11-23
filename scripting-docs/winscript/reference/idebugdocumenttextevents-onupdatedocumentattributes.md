@@ -40,7 +40,7 @@ HRESULT onUpdateDocumentAttributes(
  'ndaki Yeni belge öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT onUpdateDocumentAttributes(
  Bu yöntem, belge özniteliklerinin değiştiğini gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumenttextevents arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)    
+ [Idebugdocumenttextevents arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)   
  [TEXT_DOC_ATTR Sabitleri](../../winscript/reference/text-doc-attr-constants.md)

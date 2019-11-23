@@ -37,5 +37,5 @@ Yanlış biçimlendirilmiş bir URI 'yi (Tekdüzen Kaynak tanımlayıcısı) ç�
 - Yalnızca geçerli URI 'Leri çözmeye çalışırken emin olun. Normal [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dizelerinin kodunu çözemezsiniz, çünkü geçersiz karakterler içeriyor olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [decodeURI işlevi](../../javascript/reference/decodeuri-function-javascript.md)    
+ [decodeURI işlevi](../../javascript/reference/decodeuri-function-javascript.md)   
  [decodeURIComponent İşlevi](../../javascript/reference/decodeuricomponent-function-javascript.md)

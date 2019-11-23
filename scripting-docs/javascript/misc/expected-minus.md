@@ -29,5 +29,5 @@ Normal ifade sabit değeri oluşturmaya çalıştınız, ancak eğik çizgilerin
 - Normal ifadenin sonunu işaretlemek için bir sonlandırma eğik çizgisi ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
  [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

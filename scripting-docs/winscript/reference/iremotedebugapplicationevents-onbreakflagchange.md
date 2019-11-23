@@ -44,7 +44,7 @@ HRESULT OnBreakFlagChange(
  'ndaki Çalışmakta olan iş parçacığı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT OnBreakFlagChange(
  Bu yöntem, kesme bayrağı değiştiğinde olayı işler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iremotedebugapplicationevents arabirimi](../../winscript/reference/iremotedebugapplicationevents-interface.md)    
+ [Iremotedebugapplicationevents arabirimi](../../winscript/reference/iremotedebugapplicationevents-interface.md)   
  [APPBREAKFLAGS Sabit Listesi](../../winscript/reference/appbreakflags-enumeration.md)

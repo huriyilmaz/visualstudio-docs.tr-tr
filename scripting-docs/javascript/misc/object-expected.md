@@ -22,15 +22,15 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573730"
 ---
 # <a name="object-expected"></a>Nesne bekleniyor
-@No__t_0 dışında bir türün nesnesi üzerinde bir yöntemi veya özelliği çağırmaya çalıştınız ya da bir `Object` gerektiğinde `Object` dışında bir türün bağımsız değişkenini geçirtiniz.  
+`Object`dışında bir türün nesnesi üzerinde bir yöntemi veya özelliği çağırmaya çalıştınız ya da bir `Object` gerektiğinde `Object` dışında bir türün bağımsız değişkenini geçirtiniz.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca `Object` türündeki nesnelerde yöntemi veya özelliği çağırın.  
+- Yalnızca `Object`türündeki nesnelerde yöntemi veya özelliği çağırın.  
   
-- Nesne olmayan bir bağımsız değişken için hata oluşursa, `Object` türünde bir nesne geçirin.  
+- Nesne olmayan bir bağımsız değişken için hata oluşursa, `Object`türünde bir nesne geçirin.  
   
-- @No__t_0 türünde bir nesne yerine tanımsız veya null başvurusunun döndürülüp çağrılmadığını denetleyin.  
+- `Object`türünde bir nesne yerine tanımsız veya null başvurusunun döndürülüp çağrılmadığını denetleyin.  
   
      Örneğin, aşağıdaki kodda myVar öğesinde bu hatayı alırsanız:  
   
@@ -47,5 +47,5 @@ ms.locfileid: "72573730"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)    
+ [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)   
  [Nesneler ve Diziler](../../javascript/objects-and-arrays-javascript.md)

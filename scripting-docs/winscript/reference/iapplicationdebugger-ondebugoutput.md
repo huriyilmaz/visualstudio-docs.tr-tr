@@ -40,7 +40,7 @@ HRESULT onDebugOutput(
  'ndaki Hata ayıklayıcıda görüntülenecek dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -49,8 +49,8 @@ HRESULT onDebugOutput(
 ## <a name="remarks"></a>Açıklamalar  
  Hata ayıklayıcı genellikle `pstr` bir çıkış penceresinde görüntüler.  
   
- @No__t_0 çağrıldığında bu yöntem çağrılır.  
+ `IDebugApplication::DebugOutput` çağrıldığında bu yöntem çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
  [IDebugApplication::DebugOutput](../../winscript/reference/idebugapplication-debugoutput.md)

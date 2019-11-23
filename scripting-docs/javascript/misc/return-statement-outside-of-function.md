@@ -22,16 +22,16 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573696"
 ---
 # <a name="return-statement-outside-of-function"></a>'return' deyimi işlev dışı
-Kodunuzun genel kapsamında bir `return` ifadesini kullandınız. @No__t_0 deyimin yalnızca bir işlevin gövdesinde görünmesi gerekir.  
+Kodunuzun genel kapsamında bir `return` ifadesini kullandınız. `return` deyimin yalnızca bir işlevin gövdesinde görünmesi gerekir.  
   
- @No__t_0 işleci ile bir işlevi çağırmak bir ifadedir. Tüm ifadelerde değerler vardır; `return` deyimleri, bir işlev tarafından döndürülen değeri belirtmek için kullanılır. Genel form:  
+ `()` işleci ile bir işlevi çağırmak bir ifadedir. Tüm ifadelerde değerler vardır; `return` deyimleri, bir işlev tarafından döndürülen değeri belirtmek için kullanılır. Genel form:  
   
 ```js
   
 return [ expression ];  
 ```  
   
- @No__t_0 deyimi yürütüldüğünde, *ifade* değerlendirilir ve işlevin değeri olarak döndürülür. İfade yoksa, **tanımsız** döndürülür.  
+ `return` deyimi yürütüldüğünde, *ifade* değerlendirilir ve işlevin değeri olarak döndürülür. İfade yoksa, **tanımsız** döndürülür.  
   
  İşlev gövdesinde hala kalan başka deyimler olsa bile, işlevin yürütülmesi `return` deyimi yürütüldüğünde duraklar. Bu kuralın istisnası, **Return** ifadesinin bir **TRY** bloğunda oluşması ve buna karşılık gelen bir **finally** bloğunun olması durumunda, **finally** bloğundaki kod, işlev döndürmeden önce yürütülür.  
   
@@ -39,9 +39,9 @@ return [ expression ];
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- @No__t_0 ifadesini, kodunuzun ana gövdesinden kaldırın (genel kapsam).  
+- `return` ifadesini, kodunuzun ana gövdesinden kaldırın (genel kapsam).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [return ifadesinin](../../javascript/reference/return-statement-javascript.md)    
- [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
+ [return ifadesinin](../../javascript/reference/return-statement-javascript.md)   
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)   
  [caller Özelliği (İşlev)](../../javascript/reference/caller-property-function-javascript.md)

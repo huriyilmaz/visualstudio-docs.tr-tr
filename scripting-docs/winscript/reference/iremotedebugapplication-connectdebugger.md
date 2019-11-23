@@ -40,7 +40,7 @@ HRESULT ConnectDebugger(
  'ndaki Bu uygulamaya iliştirilecek hata ayıklayıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -51,5 +51,5 @@ HRESULT ConnectDebugger(
  Bir uygulama aynı anda yalnızca bir hata ayıklayıcı bağlı olabilir. Bir hata ayıklayıcı zaten bağlıysa, bu yöntem başarısız olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IRemoteDebugApplication:: GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)    
+ [IRemoteDebugApplication:: GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)   
  [IRemoteDebugApplication Arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)

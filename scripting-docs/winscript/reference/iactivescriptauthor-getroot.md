@@ -49,5 +49,5 @@ HRESULT GetRoot(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

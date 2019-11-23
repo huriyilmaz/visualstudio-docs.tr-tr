@@ -45,11 +45,11 @@ HRESULT RemoveNamedItem(
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`S_FALSE`|@No__t_0 nesnesi, betik yazma altyapısının ad alanında yok.|  
+|`S_FALSE`|`NamedItem` nesnesi, betik yazma altyapısının ad alanında yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  [IActiveScript:: Addnamedidıtem](../../winscript/reference/iactivescript-addnameditem.md) , `NamedItem` nesnesini betik yazma altyapısının ad alanına eklemek için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
  [IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)

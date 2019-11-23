@@ -45,10 +45,10 @@ HRESULT onHandleBreakPoint(
  'ndaki Kesme noktasının nedeni.  
   
  `pError`  
- 'ndaki @No__t_0 değeri BREAKREASON_ERROR olduğunda, çalışma zamanı hata bilgileri.  
+ 'ndaki `br` değeri BREAKREASON_ERROR olduğunda, çalışma zamanı hata bilgileri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -57,10 +57,10 @@ HRESULT onHandleBreakPoint(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, bir kesme noktası isabet edildiğinde ve `IDebugApplication::HandleBreakPoint` çağrıldığında çağrılır.  
   
- Hata ayıklayıcı IDE `IRemoteDebugApplication::ResumeFromBreakPoint` çağırana kadar uygulama askıya alınır.  
+ Hata ayıklayıcı IDE `IRemoteDebugApplication::ResumeFromBreakPoint`çağırana kadar uygulama askıya alınır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
- [IDebugApplication:: HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)    
- [IRemoteDebugApplication:: ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)    
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
+ [IDebugApplication:: HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)   
+ [IRemoteDebugApplication:: ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)   
  [BREAKREASON Sabit Listesi](../../winscript/reference/breakreason-enumeration.md)

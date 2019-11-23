@@ -40,8 +40,8 @@ HRESULT GetCount (
  dışı Numaralandırıcı içindeki `ExtendedDebugPropertyInfo` yapılarının sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ienumdebugextendedpropertyınfo arabirimi](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)    
+ [Ienumdebugextendedpropertyınfo arabirimi](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   
  [ExtendedDebugPropertyInfo Yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

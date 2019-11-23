@@ -43,7 +43,7 @@ HRESULT GetStat(
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
-|SCRIPTSTAT_STATEMENT_COUNT|1\.|Betiğin başlatılmasından veya istatistiklerin sıfırlanmasından bu yana yürütülen deyimlerin sayısını döndürün.|  
+|SCRIPTSTAT_STATEMENT_COUNT|1|Betiğin başlatılmasından veya istatistiklerin sıfırlanmasından bu yana yürütülen deyimlerin sayısını döndürün.|  
   
  `pluHi`  
  dışı İstatistiği temsil eden 64 bit işaretsiz tamsayının yüksek 32 bitleri.  
@@ -52,7 +52,7 @@ HRESULT GetStat(
  dışı İstatistiği temsil eden 64 bit işaretsiz tamsayının düşük 32 biti.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler şunlardır, ancak aşağıdaki tablodaki değerlerle sınırlı değildir.  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler şunlardır, ancak aşağıdaki tablodaki değerlerle sınırlı değildir.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -62,5 +62,5 @@ HRESULT GetStat(
  Bu yöntem, standart betik istatistikleriyle birini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptstats:: GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)    
+ [Iactivescriptstats:: GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)   
  [IActiveScriptStats Arabirimi](../../winscript/reference/iactivescriptstats-interface.md)

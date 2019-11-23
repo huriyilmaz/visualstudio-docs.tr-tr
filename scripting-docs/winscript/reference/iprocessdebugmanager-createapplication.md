@@ -40,7 +40,7 @@ HRESULT CreateApplication(
  dışı Bu uygulama için hata ayıklama uygulaması nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT CreateApplication(
  Bu yöntem tarafından oluşturulan nesne bir ada sahip değil ve çalışan uygulama listesine eklenmedi. Hata ayıklama uygulamasını uygulama listesine eklemek için `IProcessDebugManager::AddApplication` kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iprocessdebugmanager arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)    
+ [Iprocessdebugmanager arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)   
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

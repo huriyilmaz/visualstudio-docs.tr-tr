@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576859"
 ---
 # <a name="idebugdocumenthelperinit"></a>IDebugDocumentHelper::Init
-@No__t_0 yöntemi bir hata ayıklama belgesi yardımcısını bir ad ve başlangıç öznitelikleri ile başlatır.  
+`Init` yöntemi bir hata ayıklama belgesi yardımcısını bir ad ve başlangıç öznitelikleri ile başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,7 +52,7 @@ HRESULT Init(
  'ndaki Metin belgesi özniteliklerini belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -61,9 +61,9 @@ HRESULT Init(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem bir hata ayıklama belgesi yardımcısını bir ad ve başlangıç öznitelikleri ile başlatır.  
   
- @No__t_0 çağrılana kadar bu belge ağaçta görünmez.  
+ `IDebugDocumentHelper::Attach` çağrılana kadar bu belge ağaçta görünmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper:: Attach](../../winscript/reference/idebugdocumenthelper-attach.md)    
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
+ [Idebugbelgethelper:: Attach](../../winscript/reference/idebugdocumenthelper-attach.md)   
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
  [TEXT_DOC_ATTR Sabitleri](../../winscript/reference/text-doc-attr-constants.md)

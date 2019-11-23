@@ -52,7 +52,7 @@ HRESULT CreatePropertyBrowser(
  dışı Özellik tarayıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -62,6 +62,6 @@ HRESULT CreatePropertyBrowser(
  Bu yöntem, bir DEĞIŞKEN kaydırılan bir özellik tarayıcısı döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ihata ayıklama Ghelper:: CreatePropertyBrowserEx](../../winscript/reference/idebughelper-createpropertybrowserex.md)    
- [Ihata ayıklama Ghelper arabirimi](../../winscript/reference/idebughelper-interface.md)    
+ [Ihata ayıklama Ghelper:: CreatePropertyBrowserEx](../../winscript/reference/idebughelper-createpropertybrowserex.md)   
+ [Ihata ayıklama Ghelper arabirimi](../../winscript/reference/idebughelper-interface.md)   
  [IDebugProperty Arabirimi](../../winscript/reference/idebugproperty-interface.md)

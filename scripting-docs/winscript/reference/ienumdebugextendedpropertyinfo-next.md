@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72574266"
 ---
 # <a name="ienumdebugextendedpropertyinfonext"></a>IEnumDebugExtendedPropertyInfo::Next
-Sabit Listesi dizisinde belirtilen sayıda `ExtendedDebugPropertyInfo` yapısını alır.  
+Sabit Listesi dizisinde belirtilen sayıda`ExtendedDebugPropertyInfo` yapısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,17 +39,17 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- 'ndaki Alınacak `ExtendedDebugPropertyInfo`structures sayısı.  
+ 'ndaki Alınacak `ExtendedDebugPropertyInfo`yapısı sayısı.  
   
  `rgelt`  
- dışı @No__t_0 yapıların bir dizisi alındı.  
+ dışı `ExtendedDebugPropertyInfo` yapıların bir dizisi alındı.  
   
  `pceltFetched`  
  dışı Gerçekten alınan `ExtendedDebugPropertyInfo` yapı sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ienumdebugextendedpropertyınfo arabirimi](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)    
+ [Ienumdebugextendedpropertyınfo arabirimi](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   
  [ExtendedDebugPropertyInfo Yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

@@ -40,7 +40,7 @@ HRESULT GetDocumentAttributes(
  dışı Belgenin metin öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT GetDocumentAttributes(
  Bu yöntem, belgenin özniteliklerini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)    
+ [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)   
  [TEXT_DOC_ATTR Sabitleri](../../winscript/reference/text-doc-attr-constants.md)

@@ -47,7 +47,7 @@ HRESULT GetScriptletTextAttributes(
  'ndaki Kod oluşturma yöntemi metnindeki karakterlerin sayısı.  
   
  `pstrDelimiter`  
- 'ndaki Son kod oluşturma yöntemi sınırlayıcısı adresi. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle iki tek tırnak işareti (' ') gibi bir sınırlayıcı kullanır, bu da kod oluşturma yöntemi sonunu algılar. Bu parametre, ana bilgisayarın kullandığı sınırlayıcıyı belirtir ve betik altyapısının bazı koşullu temel bir ön işleme sağlamasına izin verir (örneğin, tek tırnak işaretini ['] sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirme). Betik altyapısının bu bilgileri kullanması tam olarak nasıl (ve ne olursa) komut dosyası altyapısına bağlıdır. Konak, kod oluşturma yöntemi sonunu işaretlemek için bir sınırlayıcı kullanmadığından bu parametreyi NULL olarak ayarlayın.  
+ 'ndaki Son kod oluşturma yöntemi sınırlayıcısı adresi. `pstrCode` metin akışından ayrıştırıldığında, ana bilgisayar genellikle iki tek tırnak işareti (' ') gibi bir sınırlayıcı kullanır, bu da kod oluşturma yöntemi sonunu algılar. Bu parametre, ana bilgisayarın kullandığı sınırlayıcıyı belirtir ve betik altyapısının bazı koşullu temel bir ön işleme sağlamasına izin verir (örneğin, tek tırnak işaretini ['] sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirme). Betik altyapısının bu bilgileri kullanması tam olarak nasıl (ve ne olursa) komut dosyası altyapısına bağlıdır. Konak, kod oluşturma yöntemi sonunu işaretlemek için bir sınırlayıcı kullanmadığından bu parametreyi NULL olarak ayarlayın.  
   
  `dwFlags`  
  'ndaki Kod oluşturma yöntemi ile ilişkili bayraklar. Şu değerlerin bir birleşimi olabilir:  
@@ -55,27 +55,27 @@ HRESULT GetScriptletTextAttributes(
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
 |GETATTRTYPE_DEPSCAN|0x0001|Tanımlayıcıların ve nokta işleçlerinin sırasıyla SOURCETEXT_ATTR_IDENTIFIER ve SOURCETEXT_ATTR_MEMBERLOOKUP bayraklarıyla tanımlanması gerektiğini gösterir.|  
-|GETATTRFLAG_THIS|0x0100|Geçerli nesne tanımlayıcısının SOURCETEXT_ATTR_THIS bayrağıyla tanımlanması gerektiğini gösterir.|  
+|GETATTRFLAG_THIS|0x0100|Geçerli nesne için tanımlayıcının SOURCETEXT_ATTR_THIS bayrağıyla tanımlanması gerektiğini gösterir.|  
 |GETATTRFLAG_HUMANTEXT|0x8000|Dize içeriği ve Açıklama metninin SOURCETEXT_ATTR_HUMANTEXT bayrağıyla tanımlanması gerektiğini gösterir.|  
   
  `pattr`  
  [in, out] Döndürülen öznitelikleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 arabirimini uygulayan bir akıllı ana bilgisayar, `IDebugDocumentText::GetText` yöntemine yapılan çağrıları devretmek için bu yöntemi kullanabilir.  
+ `IDebugDocumentText` arabirimini uygulayan bir akıllı ana bilgisayar, `IDebugDocumentText::GetText` yöntemine yapılan çağrıları devretmek için bu yöntemi kullanabilir.  
   
  Bu çağrı, scriptto ifadesi olması ve bir komut dosyası bloğundan farklı bir sözdizimine sahip olabileceği için sağlanır. Aynı söz dizimine sahip olmaları durumunda, bu yöntemin uygulanması `GetScriptTextAttributes` yönteminin uygulanmasıyla aynı olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptdebug arabirimi](../../winscript/reference/iactivescriptdebug-interface.md)    
- [Iactivescriptdebug:: GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)    
- [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)    
- [Idebugdocumenttext:: GetText](../../winscript/reference/idebugdocumenttext-gettext.md)    
+ [Iactivescriptdebug arabirimi](../../winscript/reference/iactivescriptdebug-interface.md)   
+ [Iactivescriptdebug:: GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)   
+ [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)   
+ [Idebugdocumenttext:: GetText](../../winscript/reference/idebugdocumenttext-gettext.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

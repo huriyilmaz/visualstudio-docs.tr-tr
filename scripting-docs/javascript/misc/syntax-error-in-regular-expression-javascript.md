@@ -29,6 +29,6 @@ Arama dizeniz yapısı [!INCLUDE[javascript](../../javascript/includes/javascrip
 - Normal ifade arama dizinizin yapısının [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] normal ifade sözdizimine uyduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
- [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
+ [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
  [compile Metodu (Normal İfade)](../../javascript/reference/compile-method-regular-expression-javascript.md)

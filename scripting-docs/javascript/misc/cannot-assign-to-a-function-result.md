@@ -43,6 +43,6 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
- [JavaScript kod   yazma](../../javascript/writing-javascript-code.md)  
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)   
+ [JavaScript kod  yazma](../../javascript/writing-javascript-code.md)  
  [İşlevler](../../javascript/functions-javascript.md)

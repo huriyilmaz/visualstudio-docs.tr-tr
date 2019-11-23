@@ -47,7 +47,7 @@ HRESULT GetScriptTextAttributes(
  'ndaki Betik bloğu metnindeki karakterlerin sayısı.  
   
  `pstrDelimiter`  
- 'ndaki Son betik blok sınırlayıcısı adresi. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle iki tek tırnak işareti (' ') gibi bir sınırlayıcı kullanır ve komut dosyası bloğunun sonunu algılar. Bu parametre, ana bilgisayarın kullandığı sınırlayıcıyı belirtir ve betik altyapısının bazı koşullu temel bir ön işleme sağlamasına izin verir (örneğin, tek tırnak işaretini ['] sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirme). Betik altyapısının bu bilgileri kullanması tam olarak nasıl (ve ne olursa) komut dosyası altyapısına bağlıdır. Konak, betik bloğunun sonunu işaretlemek için bir sınırlayıcı kullanmadığından bu parametreyi NULL olarak ayarlayın.  
+ 'ndaki Son betik blok sınırlayıcısı adresi. `pstrCode` metin akışından ayrıştırıldığında, ana bilgisayar genellikle iki tek tırnak işareti (' ') gibi bir sınırlayıcı kullanır ve komut dosyası bloğunun sonunu algılar. Bu parametre, ana bilgisayarın kullandığı sınırlayıcıyı belirtir ve betik altyapısının bazı koşullu temel bir ön işleme sağlamasına izin verir (örneğin, tek tırnak işaretini ['] sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirme). Betik altyapısının bu bilgileri kullanması tam olarak nasıl (ve ne olursa) komut dosyası altyapısına bağlıdır. Konak, betik bloğunun sonunu işaretlemek için bir sınırlayıcı kullanmadığından bu parametreyi NULL olarak ayarlayın.  
   
  `dwFlags`  
  'ndaki Betik bloğu ile ilişkili bayraklar. Şu değerlerin bir birleşimi olabilir:  
@@ -55,14 +55,14 @@ HRESULT GetScriptTextAttributes(
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
 |GETATTRTYPE_DEPSCAN|0x0001|Tanımlayıcıların ve nokta işleçlerinin sırasıyla SOURCETEXT_ATTR_IDENTIFIER ve SOURCETEXT_ATTR_MEMBERLOOKUP bayraklarıyla tanımlanması gerektiğini gösterir.|  
-|GETATTRFLAG_THIS|0x0100|Geçerli nesne tanımlayıcısının SOURCETEXT_ATTR_THIS bayrağıyla tanımlanması gerektiğini gösterir.|  
+|GETATTRFLAG_THIS|0x0100|Geçerli nesne için tanımlayıcının SOURCETEXT_ATTR_THIS bayrağıyla tanımlanması gerektiğini gösterir.|  
 |GETATTRFLAG_HUMANTEXT|0x8000|Dize içeriği ve Açıklama metninin SOURCETEXT_ATTR_HUMANTEXT bayrağıyla tanımlanması gerektiğini gösterir.|  
   
  `pattr`  
  [in, out] Döndürülen öznitelikleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -70,8 +70,8 @@ HRESULT GetScriptTextAttributes(
 |`E_NOTIMPL`|Konak yalnızca varsayılan öznitelikleri kullanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belge metninin rastgele bir bloğunun metin özniteliklerini döndürür. Ana bilgisayarların `E_NOTIMPL` döndürmesi kabul edilebilir, bu durumda varsayılan öznitelikler kullanılır.  
+ Bu yöntem, belge metninin rastgele bir bloğunun metin özniteliklerini döndürür. Ana bilgisayarların `E_NOTIMPL`döndürmesi kabul edilebilir, bu durumda varsayılan öznitelikler kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethost arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)    
+ [Idebugbelgethost arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

@@ -19,7 +19,7 @@ Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörül
 Visual Studio Enterprise aboneler, her abone için en fazla beş uygulama için SAÇıLMASı için tek aylık ücretsiz bir abonelik alabilir.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)oturum açın.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
 2. "Araçlar" kategorisindeki atama vurgusu avantajı kutucuğunu bulun ve **kodu al**' a tıklayın.
 

@@ -29,5 +29,5 @@ Bir dizi öğesine başvuru yaptınız, ancak sağ köşeli ayracı içermiyordu
 - Dizi öğesine başvuran ifadeye sağ köşeli ayracı ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)    
+ [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)   
  [Dizi Nesnesi](../../javascript/reference/array-object-javascript.md)

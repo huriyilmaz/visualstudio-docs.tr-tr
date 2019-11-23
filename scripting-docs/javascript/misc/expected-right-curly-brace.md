@@ -29,5 +29,5 @@ ms.locfileid: "72577556"
 - İşlevin, döngünün, bloğun veya nesne başlatıcısının bitiğini işaretleyen sağ ayraç ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)   
  [Program Akışı Denetimi](../../javascript/controlling-program-flow-javascript.md)

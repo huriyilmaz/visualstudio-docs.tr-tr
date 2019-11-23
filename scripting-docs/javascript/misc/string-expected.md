@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573681"
 ---
 # <a name="string-expected"></a>Dize bekleniyor
-@No__t_2 dışında bir türün nesnesi üzerinde **String. prototype. ToString** veya **String. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `String` türünde olması gerekir.  
+`String`dışında bir türün nesnesi üzerinde **String. prototype. ToString** veya **String. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `String`türünde olması gerekir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca `String` türündeki nesnelerde **String. prototype. ToString** veya **String. prototype.** bir yöntemi çağırın.  
+- Yalnızca `String`türündeki nesnelerde **String. prototype. ToString** veya **String. prototype.** bir yöntemi çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Dize nesnesi](../../javascript/reference/string-object-javascript.md)    
+ [Dize nesnesi](../../javascript/reference/string-object-javascript.md)   
  [toString Metodu (Nesne)](../../javascript/reference/tostring-method-object-javascript.md)

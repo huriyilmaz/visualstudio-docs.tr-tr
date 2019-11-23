@@ -37,7 +37,7 @@ HRESULT Abort();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -47,5 +47,5 @@ HRESULT Abort();
  Bu yöntem, en erken fırsatta bir ifade değerlendirmesini sonlandırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugexpression arabirimi](../../winscript/reference/idebugexpression-interface.md)    
+ [Idebugexpression arabirimi](../../winscript/reference/idebugexpression-interface.md)   
  [IDebugExpression::Start](../../winscript/reference/idebugexpression-start.md)

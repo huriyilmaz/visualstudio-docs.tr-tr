@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72574597"
 ---
 # <a name="function-does-not-have-a-valid-prototype-object"></a>İşlevin geçerli bir prototip nesnesi yok
-Bir nesnenin belirli bir işlev sınıfından türetilmişse, ancak nesnenin `prototype` özelliğini `null` ya da bir dış nesne türü (her ikisi de geçerli [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesneleri) olarak yeniden tanımladıysanız, **instanceof** öğesini kullanmaya çalıştınız. Dış nesne, ana bilgisayar nesne modelinden (örneğin, Internet Explorer 'ın belgesi veya pencere nesnesi) veya harici bir COM nesnesinden bir nesne olabilir.  
+Bir nesnenin belirli bir işlev sınıfından türetilmişse, ancak nesnenin `prototype` özelliğini `null`ya da bir dış nesne türü (her ikisi de geçerli [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesneleri) olarak yeniden tanımladıysanız, **instanceof** öğesini kullanmaya çalıştınız. Dış nesne, ana bilgisayar nesne modelinden (örneğin, Internet Explorer 'ın belgesi veya pencere nesnesi) veya harici bir COM nesnesinden bir nesne olabilir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 - İşlevin `prototype` özelliğinin geçerli bir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesnesine başvurduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)   
  [prototype Özelliği (Nesne)](../../javascript/reference/prototype-property-object-javascript.md)

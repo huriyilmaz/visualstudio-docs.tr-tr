@@ -44,7 +44,7 @@ HRESULT CreateAsyncDebugOperation(
  dışı Zaman uyumsuz hata ayıklama işlemi nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,6 +54,6 @@ HRESULT CreateAsyncDebugOperation(
  Bu yöntem, dil altyapılarının, hata ayıklayıcı iş parçacığı ile açıkça eşitlemeden ifadeleri zaman uyumsuz olarak değerlendirmesini sağlar. Daha fazla bilgi için bkz. [ıdebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md) ve [ıdebugger gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
- [Idebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+ [Idebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)   
  [IDebugAsyncOperation Arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)

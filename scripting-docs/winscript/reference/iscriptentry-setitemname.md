@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72575365"
 ---
 # <a name="iscriptentrysetitemname"></a>IScriptEntry::SetItemName
-@No__t_0 nesnesini tanımlayan öğe adını ayarlar.  
+`IScriptEntry` nesnesini tanımlayan öğe adını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,10 +48,10 @@ HRESULT SetItemName(
 |`E_FAIL`|Yöntem başarılı olmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 nesneler için, bu yöntem `S_OK` döndürür.  
+ `IScriptEntry` nesneler için, bu yöntem `S_OK`döndürür.  
   
- @No__t_0 nesneler için (`IScriptEntry` türeten), bu yöntem `E_FAIL` döndürür. @No__t_0 nesneler için, öğe adı [ıactivescriptauthor:: AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) tarafından ayarlanır ve değiştirilemez.  
+ `IScriptScriptlet` nesneler için (`IScriptEntry`türeten), bu yöntem `E_FAIL`döndürür. `IScriptScriptlet` nesneler için, öğe adı [ıactivescriptauthor:: AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) tarafından ayarlanır ve değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)

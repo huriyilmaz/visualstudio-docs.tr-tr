@@ -48,7 +48,7 @@ HRESULT Next(
  dışı Numaralandırıcı tarafından getirilen parçaların gerçek sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -58,5 +58,5 @@ HRESULT Next(
  Bu yöntem, numaralandırma dizisinde belirtilen sayıda segment alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ienumdebugstackframes arabirimi](../../winscript/reference/ienumdebugstackframes-interface.md)    
+ [Ienumdebugstackframes arabirimi](../../winscript/reference/ienumdebugstackframes-interface.md)   
  [DebugStackFrameDescriptor Yapısı](../../winscript/reference/debugstackframedescriptor-structure.md)

@@ -44,7 +44,7 @@ HRESULT GetResultAsDebugProperty(
  dışı İfadenin hata ayıklama özelliği.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,10 +52,10 @@ HRESULT GetResultAsDebugProperty(
 |`E_PENDING`|İşlem hala beklemede.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, `IDebugProperty` olarak ifade değerlendirmesinin sonucunu ve işlem `HRESULT` döndürür.  
+ Bu yöntem, `IDebugProperty` olarak ifade değerlendirmesinin sonucunu ve işlem `HRESULT`döndürür.  
   
  Bu yöntem `S_OK` döndürür ve `Abort` işlemi iptal ettiğinde `E_ABORT` `phrResult` döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugexpression arabirimi](../../winscript/reference/idebugexpression-interface.md)    
+ [Idebugexpression arabirimi](../../winscript/reference/idebugexpression-interface.md)   
  [IDebugExpression::Abort](../../winscript/reference/idebugexpression-abort.md)

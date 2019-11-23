@@ -37,9 +37,9 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
   
 |Üye|Değer|Açıklama|  
 |------------|-----------|-----------------|  
-|APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|Dil altyapısı, BREAKREASON_DEBUGGER_BLOCK ile tüm iş parçacıkları üzerinde hemen kesintiye uğramalıdır.|  
-|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|Dil altyapısının doğrudan BREAKREASON_DEBUGGER_HALT ile kesintiye uğramalıdır.|  
-|APPBREAKFLAG_STEP|0x00010000|Dil altyapısının, BREAKREASON_STEP ile Adımlama iş parçacığında hemen kesintiye uğramalıdır.|  
+|APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|Dil altyapısının BREAKREASON_DEBUGGER_BLOCK tüm iş parçacıkları üzerinde hemen kesintiye uğramalıdır.|  
+|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|Dil altyapısının BREAKREASON_DEBUGGER_HALT hemen kesintiye uğramalıdır.|  
+|APPBREAKFLAG_STEP|0x00010000|Dil altyapısının BREAKREASON_STEP ile Adımlama iş parçacığında hemen kesintiye uğramalıdır.|  
 |APPBREAKFLAG_NESTED|0x00020000|Uygulama, bir kesme noktasında iç içe Yürütmeyle yapılır.|  
 |APPBREAKFLAG_STEPTYPE_SOURCE|0x00000000|Hata ayıklayıcı kaynak düzeyinde adımlanıyor.|  
 |APPBREAKFLAG_STEPTYPE_BYTECODE|0x00100000|Hata ayıklayıcı, bayt kodu düzeyinde adımlanıyor.|  
@@ -51,5 +51,5 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
  Bazı bayraklar, dil altyapılarının bir sonraki fırsatta kesilmesini gerektiğini belirtir, ancak diğer bayraklar hata ayıklayıcının atlama modunu belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Etkin betik hata ayıklayıcısı sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)    
+ [Etkin betik hata ayıklayıcısı sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)   
  [BREAKREASON Sabit Listesi](../../winscript/reference/breakreason-enumeration.md)

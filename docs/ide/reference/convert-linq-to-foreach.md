@@ -25,21 +25,21 @@ Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-## <a name="how-to-use-it"></a>Nasıl kullanılır
+## <a name="how-to-use-it"></a>Kullanımı
 
-1. @No__t_0 başlayarak LINQ sorgusunun tamamını seçin.
+1. `from`başlayarak LINQ sorgusunun tamamını seçin.
 
    > [!NOTE]
    > Bu yeniden düzenleme, yalnızca sorgu söz dizimi ile ifade edilen LINQ sorgularını dönüştürmek için kullanılabilir ve Yöntem sözdizimi değildir.
 
-1. **Ctrl** + tuşuna basın **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![screwdriver simgesine ](../media/screwdriver-icon.png) simgesine tıklayın.
+1. Tuşuna **Ctrl**+ **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![screwsürücü simgesine](../media/screwdriver-icon.png) simgesine tıklayın.
 
    ![LINQ to foreach hızlı eylemler menüsünü Dönüştür](media/convert-linq-to-foreach.png)
 
 1. **' Foreach ' olarak Dönüştür**' ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
 
 > [!NOTE]
-> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, `foreach` döngüsünün yineleme değişkeni için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar**  > **Seçenekler** altında makine düzeyinde yapılandırılır  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0**genel**  **2 @no__t_ 14var ' tercihleri**veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
+> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, `foreach` döngüsünün yineleme değişkeni için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar** > **Seçenekler** > **metin Düzenleyicisi** **C#**  > **kod stili** > **genel** >  **\'var olan tercihleri** > veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

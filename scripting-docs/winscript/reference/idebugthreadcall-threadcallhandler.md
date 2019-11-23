@@ -48,7 +48,7 @@ HRESULT ThreadCallHandler(
  'ndaki Üçüncü parametre.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -58,6 +58,6 @@ HRESULT ThreadCallHandler(
  Bu yöntem, hata ayıklayıcı iş parçacığında kod çalıştırma çağrılarını işler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugthreadcall arabirimi](../../winscript/reference/idebugthreadcall-interface.md)    
- [IDebugApplication:: SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)    
+ [Idebugthreadcall arabirimi](../../winscript/reference/idebugthreadcall-interface.md)   
+ [IDebugApplication:: SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)   
  [IDebugApplicationThread::SynchronousCallIntoThread](../../winscript/reference/idebugapplicationthread-synchronouscallintothread.md)

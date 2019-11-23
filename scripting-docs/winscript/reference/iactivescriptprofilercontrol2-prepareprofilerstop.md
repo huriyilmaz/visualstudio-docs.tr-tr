@@ -35,7 +35,7 @@ HRESULT PrepareProfilerStop();
 ## <a name="return-value"></a>Dönüş Değeri  
  HRESULT döndürür. Olası değerler aşağıdaki gibidir:  
   
-|Dönüş değeri|Açıklama|  
+|Dönüş değeri|Anlamı|  
 |------------------|-------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
 |`E_FAIL`|Profil oluşturma başlatılamadı.|  
@@ -43,8 +43,8 @@ HRESULT PrepareProfilerStop();
 |`ACTIVPROF_E_PROFILER_ABSENT`|Profil oluşturma etkin değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 çağırmak, Çağrı yığınındaki işlevler için olayların gönderilmesini sağlar. Bu yöntem, geçerli sekmede bulunan herhangi bir betik altyapısında profil oluşturmayı durdurmadan önce çağrılmalıdır. Yöntemi herhangi bir betik altyapısı için çağrılabilir.  
+ `IActiveScriptProfilerControl2::PrepareProfilerStop` çağırmak, Çağrı yığınındaki işlevler için olayların gönderilmesini sağlar. Bu yöntem, geçerli sekmede bulunan herhangi bir betik altyapısında profil oluşturmayı durdurmadan önce çağrılmalıdır. Yöntemi herhangi bir betik altyapısı için çağrılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercontrol2:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)    
+ [Iactivescriptprofilercontrol2:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)   
  [IActiveScriptProfilerControl2 Arabirimi](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

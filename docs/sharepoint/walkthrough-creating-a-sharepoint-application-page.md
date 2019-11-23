@@ -37,7 +37,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - Desteklenen Windows ve SharePoint sürümleri.
 
@@ -45,7 +45,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 İlk olarak, **boş bir SharePoint projesi**oluşturun. Daha sonra, bu projeye bir **uygulama sayfası** öğesi eklersiniz.
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
+1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
 2. **Yeni proje** iletişim kutusunu açın, kullanmak istediğiniz dilin altındaki **Office/SharePoint** düğümünü genişletin ve **SharePoint çözümleri** düğümünü seçin.
 
@@ -61,7 +61,7 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 1. **Çözüm Gezgini**, **MySharePointProject** projesini seçin.
 
-2. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
+2. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **uygulama sayfasını (yalnızca Grup çözümü** şablonu) seçin.
 
@@ -73,7 +73,7 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için bir tasarımcı kullanmanıza olanak sağlar. Bu tasarımcı, Visual Web Developer 'da kullanılan tasarlayıcıdır. Tasarımcı **kaynak** görünümüne bir etiket, radyo düğmesi listesi ve tablo ekleyin ve ardından, herhangi bir standart ASP.NET sayfası tasarlarken yaptığınız gibi özellikleri ayarlayın.
 
-1. Menü çubuğunda **görünüm**  > **araç kutusu**' nu seçin.
+1. Menü çubuğunda **görünüm** > **araç kutusu**' nu seçin.
 
 2. **Araç kutusunun**standart düğümünde aşağıdaki adımlardan birini gerçekleştirin:
 
@@ -153,5 +153,5 @@ Aşağıdaki konulardan Visual Web Tasarımcısı 'nı kullanarak SharePoint say
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Nasıl yapılır: bir uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md)
-[uygulama _layouts sayfa türü](/previous-versions/office/aa979604(v=office.14))
+[Nasıl yapılır: uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md) [_layouts sayfa türü](/previous-versions/office/aa979604(v=office.14))
+

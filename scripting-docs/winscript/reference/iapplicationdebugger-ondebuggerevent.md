@@ -41,10 +41,10 @@ HRESULT onDebuggerEvent(
  'ndaki Nesne için arabirim tanımlayıcısı.  
   
  `punk`  
- 'ndaki @No__t_0 tarafından tanımlanan arabirimi uygulayan olay nesnesi.  
+ 'ndaki `riid`tarafından tanımlanan arabirimi uygulayan olay nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,12 +52,12 @@ HRESULT onDebuggerEvent(
 |`E_NOTIMPL`|Yöntem şu anda uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 semantiği tamamen uygulama/hata ayıklayıcı tanımlı değildir.  
+ `IUnknown` semantiği tamamen uygulama/hata ayıklayıcı tanımlı değildir.  
   
  Bu yöntem, hata ayıklayıcı modelinin özel uzantılarına izin verir; Şu anda uygulanmadı.  
   
- @No__t_0 çağrıldığında bu yöntem çağrılır.  
+ `IDebugApplication::FireDebuggerEvent` çağrıldığında bu yöntem çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
  [IDebugApplication::FireDebuggerEvent](../../winscript/reference/idebugapplication-firedebuggerevent.md)

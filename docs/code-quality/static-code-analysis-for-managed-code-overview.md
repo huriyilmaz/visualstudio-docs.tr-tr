@@ -26,15 +26,15 @@ Yönetilen kod için kod analizi, yönetilen derlemeleri analiz eder ve derlemel
 Analiz Aracı, bir analiz sırasında uyarı iletileri olarak gerçekleştirdiği denetimleri temsil eder. Uyarı iletileri ilgili programlama ve tasarım sorunlarını belirler ve mümkünse sorunun nasıl düzeltileceğini gösteren bilgileri sağlar.
 
 > [!NOTE]
-> Eski analiz (Statik kod analizi) Visual Studio 'daki .NET Core ve .NET Standard projelerinde desteklenmez. MSBuild 'in bir parçası olarak bir .NET Core veya .NET Standard projesi üzerinde kod analizi çalıştırırsanız, **error şuna benzer bir hata görürsünüz: CA0055 : @No__t -0sizin. dll > için platform tanımlanamadı** . .NET Core veya .NET Standard projelerindeki kodu çözümlemek için, bunun yerine [kod Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kullanın.
+> Eski analiz (Statik kod analizi) Visual Studio 'daki .NET Core ve .NET Standard projelerinde desteklenmez. MSBuild 'in bir parçası olarak bir .NET Core veya .NET Standard projesi üzerinde kod analizi çalıştırırsanız, hataya benzer bir hata görürsünüz: **CA0055:. dll > \<platform tanımlanamıyor**. .NET Core veya .NET Standard projelerindeki kodu çözümlemek için, bunun yerine [kod Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kullanın.
 
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (tümleşik geliştirme ortamı) Tümleştirmesi
 
 Kod analizini, projenizde el ile veya otomatik olarak çalıştırabilirsiniz.
 
-Her proje oluşturduğunuzda Kod analizini çalıştırmak için projenin **Kod Analizi** Özellik sayfasında seçeneğini belirleyin. Daha fazla bilgi için [nasıl yapılır: Otomatik Kod analizini etkinleştirin ve devre dışı bırakın @ no__t-0.
+Her proje oluşturduğunuzda Kod analizini çalıştırmak için projenin **Kod Analizi** Özellik sayfasında seçeneğini belirleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Otomatik Kod analizini etkinleştirme ve devre dışı bırakma](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
-Kod analizini bir projede el ile çalıştırmak için, menü çubuğundan **çözümle** > **kod analizini Çalıştır** >  **> \< projesinde kod analizini**Çalıştır ' ı seçin.
+Kod analizini bir projede el ile çalıştırmak için, menü çubuğundan **çözümle** > **kod analizini Çalıştır** > Kod analizini çalıştır ' ı seçin **\<Proje >** .
 
 ## <a name="rule-sets"></a>Kural kümeleri
 
@@ -44,7 +44,7 @@ Yönetilen kod için kod analizi kuralları [kural kümelerinde](../code-quality
 
 Genellikle, bir uyarının uygulanamaz olduğunu göstermek yararlıdır. Bu, geliştiriciye ve kodu daha sonra gözden geçirebilecek diğer kişilere, bir uyarının araştırılması ve sonra gizlenmiş ya da yok sayılmasına bildirir.
 
-Uyarıları kaynak bölümünde gizleme özel öznitelikler aracılığıyla uygulanır. Bir uyarıyı gizlemek için aşağıdaki örnekte gösterildiği gibi, kaynak koda `SuppressMessage` özniteliğini ekleyin:
+Uyarıları kaynak bölümünde gizleme özel öznitelikler aracılığıyla uygulanır. Bir uyarıyı gizlemek için aşağıdaki örnekte gösterildiği gibi, öznitelik `SuppressMessage` özniteliği kaynak koda ekleyin:
 
 ```csharp
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]
@@ -59,7 +59,7 @@ Daha fazla bilgi için bkz. [uyarıları gösterme](../code-quality/in-source-su
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, @no__t **analiz et**' i seçerek (1.**Kod analizini Çalıştır ve etkin sorunları Gizle**) tümünü gizleyebilirsiniz.
+> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, **Kod analizini çalıştır > Çalıştır ' ı ve etkin sorunları Gizle**' yi seçerek bunların hepsini gizleyebilirsiniz.
 >
 > ![Visual Studio 'da Kod analizini çalıştırma ve sorunları gösterme](media/suppress-active-issues.png)
 
@@ -68,7 +68,7 @@ Daha fazla bilgi için bkz. [uyarıları gösterme](../code-quality/in-source-su
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız,  >  oluşturmayı **Çözümle**' yi**ve etkin sorunları Gizle**' yi seçerek bunların hepsini gizleyebilirsiniz.
+> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, > derlemeyi **Çözümle** **ve etkin sorunları Gizle**' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
 
 ::: moniker-end
 
@@ -90,4 +90,4 @@ Yapı işleminin bir parçası olarak çözümleme aracını çalıştırmak iç
 
 - [.NET Compiler Platform tabanlı çözümleyiciler için genel bakış](../code-quality/roslyn-analyzers-overview.md)
 - [Kod Analizi Kurallarını Gruplandırmak için Kural Kümeleri Kullanma](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
-- [Nasıl yapılır: Otomatik Kod analizini etkinleştirme ve devre dışı bırakma @ no__t-0
+- [Nasıl Yapılır: Otomatik Kod Çözümlemesini Etkinleştirme ve Devre Dışı Bırakma](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

@@ -37,7 +37,7 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- dışı @No__t_0 betik bloğu tarafından temsil edilen nesnenin adı. Bir girdi tek bir nesneyi temsil ediyorsa NULL döndürülür.  
+ dışı `IScriptEntry` betik bloğu tarafından temsil edilen nesnenin adı. Bir girdi tek bir nesneyi temsil ediyorsa NULL döndürülür.  
   
  Alt girişler tek bir işlev nesnesini temsil eder.  
   
@@ -51,5 +51,5 @@ HRESULT GetName(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptNode:: CreateChildEntry](../../winscript/reference/iscriptnode-createchildentry.md)

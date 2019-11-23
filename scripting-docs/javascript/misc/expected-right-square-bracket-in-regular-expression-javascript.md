@@ -29,8 +29,8 @@ Normal ifade eşleşmesi için bir karakter sınıfı oluşturmaya çalıştın�
 - Sağ köşeli ayracı normal ifadeye ekleyin.  
   
     > [!NOTE]
-    > Tek bir köşeli ayracı eşleştirmek istiyorsanız, bir ters eğik çizgi ile kaçış-\\ [-Bu nedenle [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] tarafından özel bir karakter olarak yorumlanmaz.  
+    > Tek bir köşeli ayracı eşleştirmek istiyorsanız, bir ters eğik çizgi ile kaçış-\\[-Bu nedenle [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]tarafından özel bir karakter olarak yorumlanmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
  [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

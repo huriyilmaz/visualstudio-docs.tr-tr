@@ -36,7 +36,7 @@ HRESULT OnFunctionEnterByName(
  'ndaki Betik altyapısının yürütecağı işlevin adı.  
   
  `scriptType`  
- 'ndaki İşlevin türü. Geçerli değerlerin açıklamaları için bkz. [PROFILER_SCRIPT_TYPE Enumeration](../../winscript/reference/profiler-script-type-enumeration.md).  
+ 'ndaki İşlevin türü. Geçerli değerlerin açıklamaları için bkz. [PROFILER_SCRIPT_TYPE numaralandırması](../../winscript/reference/profiler-script-type-enumeration.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
@@ -45,5 +45,5 @@ HRESULT OnFunctionEnterByName(
  DOM çağrıları için, betik altyapısı [ıactivescriptprofilercallback:: OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)' ı çağırmak yerine bu yöntemi çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercallback2:: OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)    
+ [Iactivescriptprofilercallback2:: OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)   
  [IActiveScriptProfilerCallback2 Arabirimi](../../winscript/reference/iactivescriptprofilercallback2-interface.md)

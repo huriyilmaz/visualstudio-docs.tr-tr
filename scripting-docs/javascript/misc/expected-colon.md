@@ -29,5 +29,5 @@ ms.locfileid: "72573411"
 - İkinci ve üçüncü işlenenler arasına bir iki nokta üst üste ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Koşullu (Üçlü) işleç (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)    
- [işleçler](../../javascript/operators-javascript.md)
+ [Koşullu (Üçlü) işleç (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)   
+ [İşleçler](../../javascript/operators-javascript.md)

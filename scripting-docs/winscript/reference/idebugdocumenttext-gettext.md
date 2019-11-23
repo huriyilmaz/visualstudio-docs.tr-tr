@@ -56,7 +56,7 @@ HRESULT GetText(
  'ndaki Karakter konum aralığındaki karakter sayısı. Döndürülecek en fazla karakter sayısını da belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -66,5 +66,5 @@ HRESULT GetText(
  Bu yöntem, karakterleri ve/veya karakter konumu aralığı ile ilişkili karakter özniteliklerini alır. Karakter konumu aralığı, bir karakter konumu ve karakter sayısı ile belirtilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)    
+ [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

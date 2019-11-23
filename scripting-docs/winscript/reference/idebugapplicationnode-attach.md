@@ -40,15 +40,15 @@ HRESULT Attach(
  'ndaki Bu uygulama düğümünün ekleneceği proje ağacı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu uygulama düğümünü üst öğe olarak `pdanParent` kullanarak proje ağacına ekler. @No__t_0 `NULL`, bu uygulama düğümü en üst düzey düğüm olacaktır.  
+ Bu yöntem, bu uygulama düğümünü üst öğe olarak `pdanParent` kullanarak proje ağacına ekler. `pdanParent` `NULL`, bu uygulama düğümü en üst düzey düğüm olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplicationNode::D etach](../../winscript/reference/idebugapplicationnode-detach.md)    
+ [IDebugApplicationNode::D etach](../../winscript/reference/idebugapplicationnode-detach.md)   
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

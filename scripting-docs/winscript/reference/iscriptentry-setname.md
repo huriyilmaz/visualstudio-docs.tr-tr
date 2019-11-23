@@ -37,7 +37,7 @@ HRESULT SetName(
   
 #### <a name="parameters"></a>Parametreler  
  `psz`  
- 'ndaki @No__t_0 nesnesinin yeni adı.  
+ 'ndaki `IScriptEntry` nesnesinin yeni adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -49,5 +49,5 @@ HRESULT SetName(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)

@@ -44,8 +44,8 @@ HRESULT OnFunctionEnter(
  Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DOM çağrıları için, komut dosyası altyapısı `IActiveScriptProfilerCallback::OnFunctionEnter` yerine [ıactivescriptprofilercallback2:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md) öğesini çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
+ DOM çağrıları için, komut dosyası altyapısı `IActiveScriptProfilerCallback::OnFunctionEnter`yerine [ıactivescriptprofilercallback2:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md) öğesini çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptprofilercallback:: OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)    
+ [Iactivescriptprofilercallback:: OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)   
  [IActiveScriptProfilerCallback Arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)

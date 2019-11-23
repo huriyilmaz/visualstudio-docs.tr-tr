@@ -29,5 +29,5 @@ ms.locfileid: "72573751"
 - Yalnızca **Number**türündeki nesnelerde **. prototype. ToString** veya **Number. prototype.** bir yöntemi çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Sayı nesnesi](../../javascript/reference/number-object-javascript.md)    
+ [Sayı nesnesi](../../javascript/reference/number-object-javascript.md)   
  [number Özelliği (Hata)](../../javascript/reference/number-property-error-javascript.md)

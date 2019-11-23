@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72289711"
 ---
-# <a name="step-6-work-with-git"></a>6\. Adım: Git ile çalışma
+# <a name="step-6-work-with-git"></a>6\. adım: Git ile çalışma
 
-**Önceki adım: @No__t-1 [' i yükleyip Python ortamınızı yönetin](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
+**Önceki adımda: [paketleri yükleyin ve Python ortamınızı yönetme](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
 Visual Studio, GitHub ve Azure depoları gibi hizmetleri yerel Git depoları ve uzak depolar ile doğrudan tümleştirme sağlar. Bir depo kopyalama, değişiklikleri yaptıktan ve dalların yönetiminin tümleştirmeyi içerir.
 
@@ -32,7 +32,7 @@ Bu makalede, var olan bir proje için yerel bir Git deposu oluşturma ve kendini
 
     ![Visual Studio penceresine Git denetimde üzerine gelindiğinde ek bilgiler görüntülenir.](media/working-with-git-01.png)
 
-1. Yeni bir depo oluşturun veya Git denetimleri seçin, Visual Studio açılır **Takım Gezgini** penceresi. (İle dilediğiniz zaman penceresini açabilirsiniz **görünümü** > **Takım Gezgini** menü komutu.) Açılan listeyi kullanarak arasında geçiş yapmak için üç ana bölme, penceresine sahip **Takım Gezgini** başlığı. **Eşitleme** yayımlama işlemleri sağlayan bölmesinde de seçmeniz halinde görünür **anında iletme** denetimi (yukarı ok simgesi):
+1. Yeni bir depo oluşturun veya Git denetimleri seçin, Visual Studio açılır **Takım Gezgini** penceresi. (Pencereyi dilediğiniz zaman > **görüntüle** **Takım Gezgini** menü komutuyla açabilirsiniz.) Pencerede, **Takım Gezgini** üstbilgisindeki açılan pencereyi kullanma arasında geçiş yaptığınız üç ana bölme bulunur. **Eşitleme** yayımlama işlemleri sağlayan bölmesinde de seçmeniz halinde görünür **anında iletme** denetimi (yukarı ok simgesi):
 
     ![Yerel bir depo oluşturduktan sonra Visual Studio Takım Gezgini](media/working-with-git-02.png)
 
@@ -54,7 +54,7 @@ Bu makalede, var olan bir proje için yerel bir Git deposu oluşturma ve kendini
 
 ## <a name="go-deeper"></a>Daha ayrıntılı şekilde inceleyin
 
-Uzak bir git deposundan bir proje oluşturmaya yönelik kısa bir anlatım için bkz. [Hızlı başlangıç: Visual Studio @ no__t-0 ' da Python kodu deposunu kopyalayın.
+Uzak bir Git deposundan proje oluşturma kısa kılavuzu için bkz [hızlı başlangıç: Python kodu Visual Studio'da bir depoyu kopyalamak](quickstart-03-python-in-visual-studio-project-from-repository.md).
 
 Çekme istekleri, yeniden Temellendirme ve tek tek seçme değişiklikleri dallar arasındaki kod gözden geçirme, birleştirme çakışmalarını işleme dahil olmak üzere daha kapsamlı bir öğretici için bkz. [Azure depoları ve Git ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart).
 

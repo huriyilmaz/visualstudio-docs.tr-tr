@@ -38,13 +38,13 @@ HRESULT GetResult(
   
 #### <a name="parameters"></a>Parametreler  
  `phrResult`  
- dışı İşlem tamamlandıysanız, `phrResult` `IDebugSyncOperation::Execute` dönüş değeridir.  
+ dışı İşlem tamamlandıysanız, `phrResult` `IDebugSyncOperation::Execute`dönüş değeridir.  
   
  `ppunkResult`  
  dışı İşlem tamamlandıysanız, `ppunkResult` işlem tarafından döndürülen nesne parametresidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,8 +52,8 @@ HRESULT GetResult(
 |`E_PENDING`|İşlem tamamlanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem tamamlanırsa, bu yöntem `IDebugSyncOperation::Execute` `HRESULT` ve nesne parametresini döndürür.  
+ İşlem tamamlanırsa, bu yöntem `IDebugSyncOperation::Execute``HRESULT` ve nesne parametresini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)    
+ [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)   
  [IDebugSyncOperation::Execute](../../winscript/reference/idebugsyncoperation-execute.md)

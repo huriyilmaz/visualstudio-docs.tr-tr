@@ -40,8 +40,8 @@ HRESULT Skip(
  'ndaki Atlanacak numaralandırma dizisindeki `DebugPropertyInfo` yapılarının sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`. @No__t_0 döndürür ve `celt`, Numaralandırıcının sonundaki öğe sayısından büyükse, geçerli öğe işaretçisini numaralandırmanın sonuna ayarlar.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`. `S_FALSE` döndürür ve `celt`, Numaralandırıcının sonundaki öğe sayısından büyükse, geçerli öğe işaretçisini numaralandırmanın sonuna ayarlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ienumdebugpropertyınfo arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)    
+ [Ienumdebugpropertyınfo arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

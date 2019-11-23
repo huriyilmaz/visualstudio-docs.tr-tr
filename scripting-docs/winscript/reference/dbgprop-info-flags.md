@@ -27,7 +27,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572585"
 ---
 # <a name="dbgprop_info_flags"></a>DBGPROP_INFO_FLAGS
-@No__t_0 alanlarını belirtmek için kullanılır  
+`DebugPropertyInfo` alanlarını belirtmek için kullanılır  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,26 +45,26 @@ enum {
   
 ## <a name="members"></a>Üyeler  
  DBGPROP_INFO_NAME  
- @No__t_0 alanını başlatır.  
+ `bstrName` alanını başlatır.  
   
  DBGPROP_INFO_TYPE  
- @No__t_0 alanını başlatır.  
+ `bstrType` alanını başlatır.  
   
  DBGPROP_INFO_VALUE  
- @No__t_0 alanını başlatır.  
+ `bstrValue` alanını başlatır.  
   
  DBGPROP_INFO_FULLNAME  
- @No__t_0 alanını başlatır.  
+ `bstrFullName` alanını başlatır.  
   
  DBGPROP_INFO_ATTRIBUTES  
- @No__t_0 alanını başlatır.  
+ `dwAttrib` alanını başlatır.  
   
  DBGPROP_INFO_DEBUGPROP  
- @No__t_1 arabirimi içeren `pDebugProp` alanını başlatır.  
+ `IDebugProperty` arabirimi içeren `pDebugProp` alanını başlatır.  
   
  DBGPROP_INFO_AUTOEXPAND  
  Değer alanının, varsa, bu nesne türü için otomatik genişletilmiş değeri içermesi gerektiğini belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)    
+ [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)   
  [IDebugProperty Arabirimi](../../winscript/reference/idebugproperty-interface.md)

@@ -44,7 +44,7 @@ HRESULT AddApplication(
  dışı Machine Debug Manager 'dan uygulamayı kaldırmak için kullanılan tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT AddApplication(
  Bu yöntem, makine hata ayıklama yöneticisinde çalışan uygulama listesine bir uygulama ekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iprocessdebugmanager arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)    
+ [Iprocessdebugmanager arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)   
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

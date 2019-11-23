@@ -39,17 +39,17 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- 'ndaki Alınacak `DebugPropertyInfo`structures sayısı.  
+ 'ndaki Alınacak `DebugPropertyInfo`yapısı sayısı.  
   
  `rgelt`  
- dışı @No__t_0 yapıların bir dizisi alındı.  
+ dışı `DebugPropertyInfo` yapıların bir dizisi alındı.  
   
  `pceltFetched`  
  dışı Gerçekten alınan `DebugPropertyInfo` yapılarının sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ienumdebugpropertyınfo arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)    
+ [Ienumdebugpropertyınfo arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

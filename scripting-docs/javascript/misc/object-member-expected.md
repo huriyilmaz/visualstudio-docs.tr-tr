@@ -29,5 +29,5 @@ Bir nesnenin veri üyesinde bir işlem gerçekleştirmeye çalıştınız, ancak
 - Veri üyesinin adını doğru yazdığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)    
+ [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)   
  [Nesneler ve Diziler](../../javascript/objects-and-arrays-javascript.md)

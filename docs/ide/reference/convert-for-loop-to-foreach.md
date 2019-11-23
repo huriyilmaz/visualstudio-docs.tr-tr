@@ -39,11 +39,11 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Kodunuzu basitleştirmek ve Başlatıcı, koşul ve yineleyici bölümlerindeki mantık hatalarının olasılığını azaltmak istiyorsunuz.
 
-### <a name="how-to-use-it"></a>Nasıl kullanılır
+### <a name="how-to-use-it"></a>Kullanımı
 
 1. Giriş işaretini `for` anahtar sözcüğüne yerleştirin.
 
-1. **Ctrl** + tuşuna basın **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwdriver simgesine ](../media/screwdriver-icon.png) simgesine tıklayın.
+1. Tuşuna **Ctrl**+ **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwsürücü simgesine](../media/screwdriver-icon.png) simgesine tıklayın.
 
    ![Foreach menüsüne Dönüştür](media/convert-to-foreach.png)
 
@@ -67,11 +67,11 @@ Bu yeniden düzenleme için geçerlidir:
 
 - [Çok boyutlu bir dizide yineleme](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) yapılır ve dizi öğeleri üzerinde daha fazla denetim istiyorsunuz.
 
-### <a name="how-to-use-it"></a>Nasıl kullanılır
+### <a name="how-to-use-it"></a>Kullanımı
 
 1. Giriş işaretini `foreach` veya `For Each` anahtar sözcüğüne yerleştirin.
 
-1. **Ctrl** + tuşuna basın **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwdriver simgesine ](../media/screwdriver-icon.png) simgesine tıklayın.
+1. Tuşuna **Ctrl**+ **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwsürücü simgesine](../media/screwdriver-icon.png) simgesine tıklayın.
 
    ![Menüye Dönüştür](media/convert-to-for.png)
 
@@ -80,7 +80,7 @@ Bu yeniden düzenleme için geçerlidir:
 1. Yeniden düzenleme yeni bir yineleme sayısı değişkeni tanıtıldığı için, düzenleyicinin sağ üst köşesinde **Yeniden Adlandır** kutusu görünür. Değişken için farklı bir ad seçmek istiyorsanız, yazın ve **ENTER tuşuna basın** veya **Yeniden Adlandır** kutusuna **Uygula** ' yı seçin. Yeni bir ad seçmek istemiyorsanız, **ESC** tuşuna basın veya **Yeniden Adlandır** kutusunu kapatmak için **Uygula** ' yı seçin.
 
 > [!NOTE]
-> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar**  > **Seçenekler** altında makine düzeyinde yapılandırılır  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0**genel**  **2 @no__t_ 14var ' tercihleri**veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
+> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar** > **Seçenekler** > **metin Düzenleyicisi** **C#**  > **kod stili** > **genel** >  **\'var olan tercihleri** > veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -44,7 +44,7 @@ HRESULT AddDeferredText(
  'ndaki Metnin başlangıç konumunu temsil eden ana bilgisayar tanımlı tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,15 +52,15 @@ HRESULT AddDeferredText(
 |`E_FAIL`|Yöntem başarısız oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, ana bilgisayarın, gerek duyuluncaya kadar eklenecek karakterleri sağlamayı erteetmesine izin verir. böylece, yardım 'ın doğru bildirimler ve boyut bilgileri oluşturmasına izin verir. @No__t_0 parametresi, ana bilgisayar tarafından tanımlanan ve metnin başlangıç konumunu temsil eden bir tanımlama bilgisidir. @No__t_0 sonraki çağrıların bu tanımlama bilgisini sağlaması gerekir. Örneğin, DBCS 'deki metni temsil eden bir konakta, tanımlama bilgisi bir bayt kayması olabilir.  
+ Bu yöntem, ana bilgisayarın, gerek duyuluncaya kadar eklenecek karakterleri sağlamayı erteetmesine izin verir. böylece, yardım 'ın doğru bildirimler ve boyut bilgileri oluşturmasına izin verir. `dwTextStartCookie` parametresi, ana bilgisayar tarafından tanımlanan ve metnin başlangıç konumunu temsil eden bir tanımlama bilgisidir. `IDebugDocumentText::GetText` sonraki çağrıların bu tanımlama bilgisini sağlaması gerekir. Örneğin, DBCS 'deki metni temsil eden bir konakta, tanımlama bilgisi bir bayt kayması olabilir.  
   
- @No__t_0 tek bir çağrının, `AddDeferredText` birden çok çağrıdan karakter alabilirim olduğu varsayılır. Yardımcı sınıflar aynı zamanda aynı gecikmeli karakter aralığını birden çok kez sorabilir.  
+ `IDebugDocumentText::GetText` tek bir çağrının, `AddDeferredText`birden çok çağrıdan karakter alabilirim olduğu varsayılır. Yardımcı sınıflar aynı zamanda aynı gecikmeli karakter aralığını birden çok kez sorabilir.  
   
 > [!NOTE]
-> @No__t_0 çağrıları, `AddUnicodeText` veya `AddDBCSText` çağrılarında karışık olmamalıdır. Bu durumda `E_FAIL` döndürülür.  
+> `AddDeferredText` çağrıları, `AddUnicodeText` veya `AddDBCSText`çağrılarında karışık olmamalıdır. Bu durumda `E_FAIL` döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
- [Idebugbelgethelper:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
- [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
+ [Idebugbelgethelper:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)

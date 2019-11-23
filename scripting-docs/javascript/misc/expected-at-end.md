@@ -1,5 +1,5 @@
 ---
-title: "' @No__t_0 ' bekleniyor | Microsoft Docs"
+title: "'@end' bekleniyor | Microsoft Docs"
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -21,13 +21,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573449"
 ---
-# <a name="expected-end"></a>' @No__t_0end ' bekleniyor
-Koşullu koda derlenmiş bir kod bloğu oluşturmaya çalıştınız, ancak sonunda <strong>@end</strong> ifadesini içermiyordu. [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] deyimleri, bir <strong>@if/ @end</strong> bloğunda yer alarak koşullu olarak derlenebilir.  
+# <a name="expected-end"></a>'\@End ' bekleniyor
+Koşullu koda derlenmiş bir kod bloğu oluşturmaya çalıştınız, ancak sonunda <strong>@end</strong> ifadesini içermiyordu. [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] deyimleri, bir <strong>@if/@end</strong> bloğunda yer alarak koşullu olarak derlenebilir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 - Karşılık gelen <strong>@end</strong> ifadesini ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)    
+ [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Koşullu Derleme Değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)

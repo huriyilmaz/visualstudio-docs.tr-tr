@@ -40,15 +40,15 @@ HRESULT RemoveGlobalExpressionContextProvider(
  'ndaki Genel bağlam sağlayıcısı eklendiğinde `AddGlobalExpressionContextProvider` yöntemi tarafından döndürülen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 yöntemi, bu uygulamadan bir genel ifade bağlam sağlayıcısını kaldırır.  
+ `RemoveGlobalExpressionContextProvider` yöntemi, bu uygulamadan bir genel ifade bağlam sağlayıcısını kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IDebugApplication:: AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)    
+ [IDebugApplication:: AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)   
  [IDebugApplication Arabirimi](../../winscript/reference/idebugapplication-interface.md)

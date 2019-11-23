@@ -44,17 +44,17 @@ HRESULT GetScriptTextAttributes(
  [in, size_is (`cch`)] Betik bloğunun metni. Bu dize, null olarak sonlandırılmış olması gerekmez.  
   
  `cch`  
- 'ndaki @No__t_0 ve `pattr` parametreleri için kullanılan boyut.  
+ 'ndaki `pszCode` ve `pattr` parametreleri için kullanılan boyut.  
   
  `pszDelimiter`  
- 'ndaki Komut dosyası sınırlayıcısından oluşan adres. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve bu kod oluşturma yöntemi sonunu algılar. Betik bloğunun sonunu tanımlamak için sınırlayıcı yoksa bu parametreyi NULL olarak ayarlayın.  
+ 'ndaki Komut dosyası sınırlayıcısından oluşan adres. `pszCode` metin akışından ayrıştırıldığında, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve bu kod oluşturma yöntemi sonunu algılar. Betik bloğunun sonunu tanımlamak için sınırlayıcı yoksa bu parametreyi NULL olarak ayarlayın.  
   
  `dwFlags`  
  'ndaki Betik bloğunun metin öznitelikleriyle ilişkili bayraklar. Aşağıdaki değerlerin bir birleşimi olabilir:  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER özniteliğine sahip tanımlayıcıları ve SOURCETEXT_ATTR_MEMBERLOOKUP özniteliğine sahip nokta işleçlerini belirler.|  
+|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER özniteliğine sahip tanımlayıcıları ve SOURCETEXT_ATTR_MEMBERLOOKUP özniteliğine sahip nokta işleçlerini tanımla.|  
 |GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS özniteliğine sahip geçerli nesneyi belirler.|  
 |GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT özniteliğine sahip dize içeriğini ve açıklama metnini belirler.|  
   
@@ -71,5 +71,5 @@ HRESULT GetScriptTextAttributes(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

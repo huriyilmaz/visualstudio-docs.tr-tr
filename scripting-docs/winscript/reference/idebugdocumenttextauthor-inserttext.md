@@ -48,7 +48,7 @@ HRESULT InsertText(
  'ndaki Eklenecek karakterleri içeren bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -58,5 +58,5 @@ HRESULT InsertText(
  Bu yöntem belgeye yeni metin ekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugdocumenttextauthor arabirimi](../../winscript/reference/idebugdocumenttextauthor-interface.md)    
+ [Idebugdocumenttextauthor arabirimi](../../winscript/reference/idebugdocumenttextauthor-interface.md)   
  [IDebugDocumentTextAuthor::RemoveText](../../winscript/reference/idebugdocumenttextauthor-removetext.md)

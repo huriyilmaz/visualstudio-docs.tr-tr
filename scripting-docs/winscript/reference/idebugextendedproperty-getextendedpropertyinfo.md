@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576386"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
-Daha basit `IDebugProperty` daha fazla bilgi olan genişletilmiş bir özellik için genişletilmiş bilgileri getirir.  
+Daha basit `IDebugProperty`daha fazla bilgi olan genişletilmiş bir özellik için genişletilmiş bilgileri getirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ HRESULT GetExtendedPropertyInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `dwFieldSpec`  
- 'ndaki @No__t_0 yapısında doldurulacak alanları belirleyen EX_DBGPROP_INFO_FLAGS sabitlerini belirtir.  
+ 'ndaki `ExtendedDebugPropertyInfo` yapısında doldurulacak alanları belirleyen EX_DBGPROP_INFO_FLAGS sabitlerini belirtir.  
   
  `nRadix`  
  'ndaki Herhangi bir sayısal bilgiyi yorumlamak için kullanılan Radix.  
@@ -48,9 +48,9 @@ HRESULT GetExtendedPropertyInfo(
  dışı Özelliği tanımlayan `ExtendedDebugPropertyInfo` yapısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)    
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
+ [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)   
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
  [ExtendedDebugPropertyInfo Yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

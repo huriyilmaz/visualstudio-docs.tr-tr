@@ -40,7 +40,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 ```
 
 > [!NOTE]
-> Özellikler ve öğelerin aksine, bir `TaskName` için geçerli olan *ilk* `UsingTask` öğesi kullanılacaktır; görevleri geçersiz kılmak için, mevcut bir @no__t *önce* yeni bir tanımlamanız gerekir.
+> Özellikler ve öğelerin aksine, bir `TaskName` için geçerli olan *ilk* `UsingTask` öğesi kullanılacaktır; görevleri geçersiz kılmak için, mevcut bir `UsingTask` *önce* yeni bir tanımlamanız gerekir.
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
@@ -49,9 +49,9 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`AssemblyName`|@No__t-0 özniteliği veya `AssemblyFile` özniteliği gereklidir.<br /><br /> Yüklenecek derlemenin adı. @No__t-0 özniteliği kesin adlı derlemeleri kabul eder, ancak güçlü adlandırma gerekli değildir. Bu özniteliğin kullanılması, .NET 'teki <xref:System.Reflection.Assembly.Load%2A> yöntemi kullanılarak bir derlemeyi yüklemeye eşdeğerdir.<br /><br /> @No__t-0 özniteliği kullanılırsa bu özniteliği kullanamazsınız.|
-|`AssemblyFile`|@No__t-0 ya da `AssemblyFile` özniteliği gereklidir.<br /><br /> Derlemenin dosya yolu. Bu öznitelik, tam yolları veya göreli yolları kabul eder. Göreli yollar, `UsingTask` öğesinin bildirildiği proje dosyasının veya hedef dosyanın dizinine göre belirlenir. Bu özniteliğin kullanılması, .NET 'teki <xref:System.Reflection.Assembly.LoadFrom%2A> yöntemi kullanılarak bir derlemeyi yüklemeye eşdeğerdir.<br /><br /> @No__t-0 özniteliği kullanılırsa bu özniteliği kullanamazsınız.|
-|`TaskFactory`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen `Task` adının örneklerini oluşturmaktan sorumlu derleme içindeki sınıfı belirtir.  Kullanıcı, görev fabrikasının görevi oluşturmak için aldığı ve kullandığı bir alt öğe olarak bir @no__t da belirtebilir. @No__t-0 ' ın içeriği, görev fabrikasına özeldir.|
+|`AssemblyName`|`AssemblyName` özniteliği ya da `AssemblyFile` özniteliği gereklidir.<br /><br /> Yüklenecek derlemenin adı. `AssemblyName` özniteliği kesin adlandırılmış derlemeler kabul eder, ancak güçlü adlandırma gerekli değildir. Bu özniteliğin kullanılması, .NET 'teki <xref:System.Reflection.Assembly.Load%2A> yöntemi kullanılarak bir derlemeyi yüklemeye eşdeğerdir.<br /><br /> `AssemblyFile` özniteliği kullanılırsa bu özniteliği kullanamazsınız.|
+|`AssemblyFile`|`AssemblyName` ya da `AssemblyFile` özniteliği gereklidir.<br /><br /> Derlemenin dosya yolu. Bu öznitelik, tam yolları veya göreli yolları kabul eder. Göreli yollar, `UsingTask` öğesinin bildirildiği proje dosyasının veya hedef dosyanın dizinine göre belirlenir. Bu özniteliğin kullanılması, .NET 'teki <xref:System.Reflection.Assembly.LoadFrom%2A> yöntemi kullanılarak bir derlemeyi yüklemeye eşdeğerdir.<br /><br /> `AssemblyName` özniteliği kullanılırsa bu özniteliği kullanamazsınız.|
+|`TaskFactory`|İsteğe bağlı öznitelik.<br /><br /> Derlemede, belirtilen `Task` adının örneklerini oluşturmaktan sorumlu sınıfı belirtir.  Kullanıcı, görev fabrikasının görevi oluşturmak için aldığı ve kullandığı bir alt öğe olarak bir `TaskBody` da belirtebilir. `TaskBody` içeriği, görev fabrikasına özeldir.|
 |`TaskName`|Gerekli öznitelik.<br /><br /> Bir derlemeden başvurulacak görevin adı. Belirsizlikleri mümkünse, bu öznitelik her zaman tam ad alanları belirtmelidir. Belirsizlikleri varsa, MSBuild rastgele bir eşleşme seçer ve bu beklenmedik sonuçlara neden olabilir.|
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 
@@ -59,20 +59,20 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Belirtilen `TaskFactory` tarafından oluşturulan görevde görüntülenen parametre kümesi.|
-|[Görev](../msbuild/task-element-msbuild.md)|Görevin bir örneğini oluşturmak için `TaskFactory` ' a geçirilen veriler.|
+|[ParameterGroup](../msbuild/parametergroup-element.md)|Belirtilen `TaskFactory`tarafından oluşturulan görevde görüntülenen parametre kümesi.|
+|[Görev](../msbuild/task-element-msbuild.md)|Görevin bir örneğini oluşturmak için `TaskFactory` geçirilen veriler.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | @No__t-0 proje dosyasının gerekli kök öğesi. |
+| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
- Ortam değişkenlerine, komut satırı özelliklerine, proje düzeyi özelliklerine ve proje düzeyi öğelere, proje dosyasında doğrudan veya içeri aktarılan bir proje dosyası aracılığıyla dahil edilen `UsingTask` öğelerinde başvurulabilir. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
+ Ortam değişkenlerine, komut satırı özelliklerine, proje düzeyi özelliklerine ve proje düzeyi öğelere, doğrudan veya içeri aktarılan bir proje dosyası aracılığıyla proje dosyasında içerilen `UsingTask` öğelerinde başvurulabilir. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
 > [!NOTE]
-> @No__t-0 öğesi, MSBuild altyapısına genel olarak kaydedilen *. Tasks* dosyalarından birinden geliyorsa, proje düzeyi Özellikler ve öğelerin hiçbir anlamı yoktur. Proje düzeyi değerleri MSBuild 'e Global değildir.
+> `UsingTask` öğe, MSBuild altyapısına genel olarak kaydedilen *. Tasks* dosyalarından birinden geliyorsa, proje düzeyi Özellikler ve öğelerin hiçbir anlamı yoktur. Proje düzeyi değerleri MSBuild 'e Global değildir.
 
  MSBuild 4,0 ' de, görevler kullanılarak *. overridetask* dosyaları yüklenebilir.
 

@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72575847"
 ---
 # <a name="ex_dbgprop_info_flags"></a>EX_DBGPROP_INFO_FLAGS
-@No__t_0 alanlarını belirtmek için kullanılır.  
+`ExtendedDebugPropertyInfo` alanlarını belirtmek için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,11 +50,11 @@ enum {
  Özelliğin değerini başlatır.  
   
  EX_DBGPROP_INFO_LOCKBYTES  
- @No__t_0 alanını başlatır.  
+ `plb` alanını başlatır.  
   
  EX_DBGPROP_INFO_DEBUGEXTPROP  
- @No__t_1 arabirimi içeren `pDebugExtProp` alanını başlatır.  
+ `IDebugExtendedProperty` arabirimi içeren `pDebugExtProp` alanını başlatır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Extendeddebugpropertyınfo yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)    
+ [Extendeddebugpropertyınfo yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)   
  [IDebugExtendedProperty Arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)

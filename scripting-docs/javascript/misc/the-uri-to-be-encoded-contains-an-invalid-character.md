@@ -33,5 +33,5 @@ Bir dizeyi URI (Tekdüzen Kaynak tanımlayıcısı) olarak kodlamaya çalıştı
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [encodeURI işlevi](../../javascript/reference/encodeuri-function-javascript.md)    
+ [encodeURI işlevi](../../javascript/reference/encodeuri-function-javascript.md)   
  [encodeURIComponent İşlevi](../../javascript/reference/encodeuricomponent-function-javascript.md)

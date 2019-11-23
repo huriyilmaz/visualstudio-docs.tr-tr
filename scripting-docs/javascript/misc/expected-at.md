@@ -21,8 +21,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576506"
 ---
-# <a name="expected-"></a>' @No__t_0 ' bekleniyor
-@No__t_0 deyimini kullanarak koşullu derleme deyimleriyle kullanılacak bir değişken oluşturmaya çalıştınız, ancak değişken adından önce bir " **@** " işareti yerleştirmedi.  
+# <a name="expected-"></a>'\@' bekleniyor
+`@set` deyimini kullanarak koşullu derleme deyimleriyle kullanılacak bir değişken oluşturmaya çalıştınız, ancak değişken adından önce bir " **@** " işareti yerleştirmedi.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -33,6 +33,6 @@ ms.locfileid: "72576506"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [@set deyimin](../../javascript/reference/at-set-statement-javascript.md)    
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)    
+ [@set deyimin](../../javascript/reference/at-set-statement-javascript.md)   
+ [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Koşullu Derleme Değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)

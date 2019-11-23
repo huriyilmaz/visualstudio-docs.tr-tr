@@ -65,7 +65,7 @@ HRESULT GetInfoFromContext(
 |SCRIPT_CMPL_PARAMLIST|0x0004|Yöntem parametre listesini çağırın.|  
 |SCRIPT_CMPL_GLOBALLIST|0x0008|Genel liste.|  
   
- SCRIPT_CMPL_GLOBALLIST türü, diğer tamamlama öğeleriyle OR işleci kullanılarak birleştirilebilecek bir varsayılan tamamlama öğesi olarak değerlendirilir. Betik yazma altyapısı öncelikle diğer tamamlanma listesi öğeleri için tür bilgilerini doldurmayı dener. Bu başarısız olursa, motor SCRIPT_CMPL_GLOBALLIST için de doldurulur.  
+ SCRIPT_CMPL_GLOBALLIST türü, diğer tamamlama öğeleriyle OR işleci kullanılarak birleştirilebilecek bir varsayılan tamamlama öğesi olarak değerlendirilir. Betik yazma altyapısı öncelikle diğer tamamlanma listesi öğeleri için tür bilgilerini doldurmayı dener. Başarısız olursa, motor SCRIPT_CMPL_GLOBALLIST için doldurulur.  
   
  `pdwListTypesProvided`  
  dışı Belirtilen liste türü.  
@@ -103,5 +103,5 @@ HRESULT GetInfoFromContext(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [IProvideMultipleClassInfo arabirimi](/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)    
+ [IProvideMultipleClassInfo arabirimi](/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)   
  [IActiveScriptAuthor Arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)

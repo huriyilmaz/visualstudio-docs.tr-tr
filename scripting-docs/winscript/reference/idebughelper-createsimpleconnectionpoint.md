@@ -41,10 +41,10 @@ HRESULT CreateSimpleConnectionPoint(
  'ndaki Sarılacağı `IDispatch` nesnesi.  
   
  `ppscp`  
- dışı @No__t_0 sarmalayan olay arabirimi.  
+ dışı `pdisp`sarmalayan olay arabirimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT CreateSimpleConnectionPoint(
  Verilen `IDispatch` sarmalayan bir olay arabirimini döndürür (bkz. [ıempınconnectionpoint arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Ihata ayıklama Ghelper arabirimi](../../winscript/reference/idebughelper-interface.md)    
+ [Ihata ayıklama Ghelper arabirimi](../../winscript/reference/idebughelper-interface.md)   
  [ISimpleConnectionPoint Arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)

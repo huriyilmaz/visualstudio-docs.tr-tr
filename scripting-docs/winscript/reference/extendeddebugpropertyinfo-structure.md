@@ -66,7 +66,7 @@ typedef struct ExtendedDebugPropertyInfo{
  Hata ayıklama özelliği özniteliklerinin bayraklarını belirten bir sabit listesi.  
   
  `pDebugProp`  
- Bu `ExtendedDebugPropertyInfo` karşılık gelen nesne `IDebugProperty`.  
+ Bu `ExtendedDebugPropertyInfo`karşılık gelen nesne `IDebugProperty`.  
   
  `nDISPID`  
  Dağıtım kimliği.  
@@ -81,11 +81,11 @@ typedef struct ExtendedDebugPropertyInfo{
  Özellik değerinin gerçek veri baytları.  
   
  `pDebugExtProp`  
- Bu `ExtendedDebugPropertyInfo` karşılık gelen nesne `IDebugExtendedProperty`.  
+ Bu `ExtendedDebugPropertyInfo`karşılık gelen nesne `IDebugExtendedProperty`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)    
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
- [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)    
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
+ [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)   
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
+ [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)   
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

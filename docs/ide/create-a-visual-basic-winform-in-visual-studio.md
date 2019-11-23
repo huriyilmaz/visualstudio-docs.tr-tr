@@ -47,7 +47,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 1. Visual Studio 2017'yi açın.
 
-1. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+1. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
 1. İçinde **yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic**ve ardından **Windows Masaüstü**. Orta bölmede seçin **Windows Forms uygulaması (.NET Framework)** . Dosya adı `HelloWorld`.
 
@@ -100,7 +100,7 @@ Visual Basic projesi şablonu seçin ve dosyanızın adı sonra Visual Studio si
 
      ![Araç araç kutusu penceresini açmak için tıklayın](../ide/media/vb-toolbox-toolwindow.png)
 
-     (Görmüyorsanız **araç kutusu** çıkış seçeneği açabilirsiniz, menü çubuğundan. Bunu yapmak için  > **araç kutusunu** **görüntüleyin**. Veya basın **Ctrl**+**Alt**+**X**.)
+     (Görmüyorsanız **araç kutusu** çıkış seçeneği açabilirsiniz, menü çubuğundan. Bunu yapmak için > **araç kutusunu** **görüntüleyin** . Veya basın **Ctrl**+**Alt**+**X**.)
 
 1. Tıklayın **PIN** simgesini yerleştirmek için **araç kutusu** penceresi.
 
@@ -110,7 +110,7 @@ Visual Basic projesi şablonu seçin ve dosyanızın adı sonra Visual Studio si
 
      ![Forma bir düğme ekleyin](../ide/media/vb-add-a-button-to-form1.png)
 
-1. **Özellikler** penceresinin **Görünüm** bölümünde (veya **Fonts** bölümünde) `Click this` yazın ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinin **Görünüm** bölümünde (veya **Fonts** bölümünde) `Click this`yazın ve ardından **ENTER**tuşuna basın.
 
      ![Düğmeyi form üzerinde metin ekleme](../ide/media/vb-button-control-text.png)
 
@@ -129,7 +129,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, metni göndermek için
 
 1. Seçin **etiket** denetimi **araç kutusu** pencere, form üzerine sürükleyin ve altındaki açılan **tıklatın** düğmesi.
 
-1. **Özellikler** penceresinin **Tasarım** bölümünde veya **(DataBindings)** bölümünde, **Label1** adını `lblHelloWorld` olarak değiştirin ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinin **Tasarım** bölümünde veya **(DataBindings)** bölümünde, **Label1** adını `lblHelloWorld`olarak değiştirin ve ardından **ENTER**tuşuna basın.
 
 ### <a name="add-code-to-the-form"></a>Forma kod ekleyin
 
@@ -141,7 +141,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, metni göndermek için
 
      ![Forma kod ekleyin](../ide/media/vb-add-code-to-the-form.png)
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırın
+## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
 1. Tıklayın **Başlat** uygulamayı çalıştırmak için düğme.
 
@@ -160,7 +160,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, metni göndermek için
 Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 > [!div class="nextstepaction"]
-> [Öğretici: Resim görüntüleyici oluşturma @ no__t-0
+> [Öğretici: resim görüntüleyici oluşturma](tutorial-1-create-a-picture-viewer.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

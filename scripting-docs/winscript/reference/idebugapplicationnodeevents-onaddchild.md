@@ -40,7 +40,7 @@ HRESULT onAddChild(
  'ndaki Eklenen alt hata ayıklama uygulama düğümü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -49,9 +49,9 @@ HRESULT onAddChild(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, bir alt düğüm bir hata ayıklama uygulama düğümü nesnesine eklendiğinde olayı işler.  
   
- @No__t_0 arabiriminin uygulayıcıları bu olayı yükseltir  
+ `IDebugApplicationNode` arabiriminin uygulayıcıları bu olayı yükseltir  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)    
- [Idebugapplicationnodeevents:: onRemoveChild](../../winscript/reference/idebugapplicationnodeevents-onremovechild.md)    
+ [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
+ [Idebugapplicationnodeevents:: onRemoveChild](../../winscript/reference/idebugapplicationnodeevents-onremovechild.md)   
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

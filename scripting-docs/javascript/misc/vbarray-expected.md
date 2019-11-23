@@ -35,5 +35,5 @@ new VBArray(safeArray);
 - **VBArray** yapıcısına yalnızca **VBArray** nesneleri geçirdiğinizden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [VBArray nesnesi](../../javascript/reference/vbarray-object-javascript.md)    
+ [VBArray nesnesi](../../javascript/reference/vbarray-object-javascript.md)   
  [Dizileri Kullanma](../../javascript/advanced/using-arrays-javascript.md)

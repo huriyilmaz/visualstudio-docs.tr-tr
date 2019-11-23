@@ -64,6 +64,6 @@ typedef struct DebugPropertyInfo{
  Bu `DebugPropertyInfo` yapısındaki bilgiler tarafından açıklanan `IDebugProperty`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

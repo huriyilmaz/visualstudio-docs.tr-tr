@@ -40,7 +40,7 @@ HRESULT AddDBCSText(
  'ndaki Metni içeren, null ile sonlandırılmış bir dize işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -51,9 +51,9 @@ HRESULT AddDBCSText(
  Bu yöntem `IDebugDocumentTextEvents` bildirimleri oluşturur.  
   
 > [!NOTE]
-> @No__t_0 çağrıldıktan sonra bu yöntem çağrılırsa, `E_FAIL` döndürülür.  
+> `IDebugDocumentHelper::AddDeferredText` çağrıldıktan sonra bu yöntem çağrılırsa, `E_FAIL` döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
- [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)   
+ [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [IDebugDocumentTextEvents Arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)

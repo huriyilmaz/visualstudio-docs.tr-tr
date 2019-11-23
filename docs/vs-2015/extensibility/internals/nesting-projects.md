@@ -23,25 +23,25 @@ ms.locfileid: "68180428"
 # <a name="nesting-projects"></a>Projeleri İç İçe Geçirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-VS paketinizi kullanan kurumsal uygulama geliştiricileri, içindeki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] *proje iç içe geçme*kullanarak benzer proje türlerini kolayca gruplandırabilir. Örneğin, kurumsal şablon proje, projeleri kategoriler halinde gruplamak için iç içe geçmiş projeleri kullanır. İş façlade projeleri, Web UI projeleri vb. bir kategoride birlikte gruplandırılır.  
+VS paketinizi kullanan kurumsal uygulama geliştiricileri, *proje iç içe geçme*kullanarak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] benzer proje türlerini kolayca gruplandırabilirsiniz. Örneğin, kurumsal şablon proje, projeleri kategoriler halinde gruplamak için iç içe geçmiş projeleri kullanır. İş façlade projeleri, Web UI projeleri vb. bir kategoride birlikte gruplandırılır.  
   
  Bu senaryoda, geliştirici program aracılığıyla sınırları sağlayabilse de, geliştiricinin her bir üst projenin altına iç içe geçirebilmesine rağmen proje sayısı için bir sınır yoktur. Bu gruplandırma türü de özyinelemeli hale getirilebilir. Bu durumda, bir alt proje ile aynı türdeki projelerin alt öğesi olmak üzere alt öğesi olmak üzere alt öğe altında iç içe yerleştirilenebilir.  
   
- İçe geçmiş proje iç parçası [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]değildir. İç içe geçme ve alt proje iç içe geçme özelliğini etkinleştirmek için kodu yazmanız gerekir. Üst proje, özel bir VSPackage veya proje türü oluşturup, proje iç içe geçirilmesi için gerekli kodu içeren kendi GUID 'sine sahip oluşturulup kaydedilir.  
+ Proje iç içe geçme [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]iç parçası değil. İç içe geçme ve alt proje iç içe geçme özelliğini etkinleştirmek için kodu yazmanız gerekir. Üst proje, özel bir VSPackage veya proje türü oluşturup, proje iç içe geçirilmesi için gerekli kodu içeren kendi GUID 'sine sahip oluşturulup kaydedilir.  
   
  Yuvalanmış projelerin bir örneğini C# örnek. Iç içe proje örneğinde bulabilirsiniz.  
   
 ## <a name="nested-projects-example"></a>İç içe projeler örneği  
- ![Iç Içe projeler çözümü](../../extensibility/internals/media/vsnestedprojects.gif "Vsnestedprojects")  
+ ![Iç Içe projeler çözümü](../../extensibility/internals/media/vsnestedprojects.gif "vsnestedprojects")  
 İç içe projeler örneği  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Iç Içe Projeler uygulama](../../extensibility/internals/how-to-implement-nested-projects.md)   
- [Iç Içe projeleri kaldırma ve yeniden yükleme konuları](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)   
- [Iç Içe projeler için sihirbaz desteği](../../extensibility/internals/wizard-support-for-nested-projects.md)   
+ [Iç Içe projeleri kaldırma ve yeniden yükleme](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md) Ile ilgili hususlar   
+ [Iç Içe projeler Için sihirbaz desteği](../../extensibility/internals/wizard-support-for-nested-projects.md)   
  [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)   
- [Iç Içe projeler için komut Işlemeyi uygulama](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)   
- [Iç Içe projeler için AddItem Iletişim kutusunu filtreleme](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)   
- [Yapılacaklar listesi: Yeni proje türleri oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [Iç Içe projeler Için komut Işlemeyi uygulama](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)   
+ [Iç Içe projeler Için AddItem Iletişim kutusunu filtreleme](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)   
+ [Denetim listesi: yeni proje türleri oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [Bağlam parametreleri](../../extensibility/internals/context-parameters.md)   
  [Sihirbaz (.Vsz) Dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)

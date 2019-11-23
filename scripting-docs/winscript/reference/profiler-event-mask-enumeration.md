@@ -51,6 +51,6 @@ typedef enum {
 |PROFILER_EVENT_MASK_TRACE_ALL_WITH_DOM|DOM 'a çağrılar da dahil olmak üzere tüm işlevleri profiller.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Etkin komut dosyası profil oluşturucu sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)    
- [Iactivescriptprofilercontrol:: SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)    
+ [Etkin komut dosyası profil oluşturucu sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
+ [Iactivescriptprofilercontrol:: SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)   
  [IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)

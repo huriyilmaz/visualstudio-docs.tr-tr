@@ -35,6 +35,6 @@ break labelname;
 - **Break** anahtar sözcüğünün kapsayan bir döngü veya switch ifadesinin içinde göründüğünden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Break ekstresi](../../javascript/reference/break-statement-javascript.md)    
- [Program Flow   denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
+ [Break ekstresi](../../javascript/reference/break-statement-javascript.md)   
+ [Program Flow  denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
  [Komut Dosyalarınızda Sorun Giderme](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

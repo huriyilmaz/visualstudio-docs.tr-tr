@@ -1,5 +1,5 @@
 ---
-title: "Hızlı Başlangıç: Visual Studio 'Yu kullanarak ilk Node. js uygulamanızı oluşturun"
+title: "Hızlı başlangıç: ilk Node. js uygulamanızı oluşturmak için Visual Studio 'Yu kullanma"
 description: Bu hızlı başlangıçta, Visual Studio 'da bir Node. js uygulaması oluşturacaksınız
 ms.date: 06/27/2018
 ms.technology: vs-javascript
@@ -20,7 +20,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70180335"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Hızlı Başlangıç: Visual Studio 'Yu kullanarak ilk Node. js uygulamanızı oluşturun
+# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Hızlı başlangıç: ilk Node. js uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
 Bu 5-10 dakikalık bir Visual Studio tümleşik geliştirme ortamına (IDE) giriş yaparken basit bir Node. js web uygulaması oluşturacaksınız.
 
@@ -29,13 +29,13 @@ Bu 5-10 dakikalık bir Visual Studio tümleşik geliştirme ortamına (IDE) giri
 * Visual Studio yüklü ve Node. js geliştirme iş yüküne sahip olmanız gerekir.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2019 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar** > **ve Özellikler al.** .. ' a giderek Visual Studio yükleyicisi açılır. Seçin **Node.js geliştirme** iş yükü, ardından **Değiştir**.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Seçin **Node.js geliştirme** iş yükü, ardından **Değiştir**.
 
     ![Node.js iş yükü VS yükleyicisi](../ide/media/quickstart-nodejs-workload.png)
 
@@ -81,19 +81,19 @@ Bu 5-10 dakikalık bir Visual Studio tümleşik geliştirme ortamına (IDE) giri
 
    ![Node. js komut istemi](../ide/media/quickstart-nodejs-command-prompt.png)
 
-1. Düzenleyicideki *Server. js* dosyasında (sol bölme), `http.createServer` ardından **F12** tuşuna basın veya bağlam (sağ tıklama) menüsünde **Tanıma Git** ' i seçin. Bu komut sizi *Dizin. d. TS*içindeki `createServer` işlevin tanımına götürür.
+1. Düzenleyicideki *Server. js* dosyasında (sol bölme) `http.createServer` ve ardından **F12** tuşuna basın veya bağlam (sağ tıklama) menüsünde **Tanıma Git** ' i seçin. Bu komut sizi *Index. d. TS*içindeki `createServer` işlevinin tanımına götürür.
 
    ![Tanım bağlam menüsüne git](../ide/media/quickstart-nodejs-gotodefinition.png)
 
-1. *Server. js*' ye geri dönün, sonra imlecinizi bu kod `res.end('Hello World\n');`satırındaki dizenin sonuna koyun ve şuna benzer şekilde değiştirin:
+1. *Server. js*' ye geri dönün, sonra imlecinizi bu kod satırındaki dizenin sonuna yerleştirin, `res.end('Hello World\n');`ve aşağıdaki gibi görünmesi için değiştirin:
 
     `res.end('Hello World\n' + res.connection.`
 
-    `connection.`Burada, IntelliSense kod girişini otomatik olarak tamamlamaya yönelik seçenekler sağlar.
+    `connection.`yazdığınızda, IntelliSense kod girişini otomatik olarak tamamlamaya yönelik seçenekler sağlar.
 
    ![IntelliSense otomatik tamamlamayı](../ide/media/quickstart-nodejs-intellisense.png)
 
-1. **Localport**öğesini seçin ve ardından şunu `);` yazarak ifadeyi şöyle olacak şekilde doldurun:
+1. **Localport**öğesini seçin ve ardından `);` yazarak ifadeyi şöyle olacak şekilde doldurun:
 
     `res.end('Hello World\n' + res.connection.localPort);`
 

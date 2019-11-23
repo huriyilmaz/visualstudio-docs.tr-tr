@@ -37,15 +37,15 @@ HRESULT onComplete();
  Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT`döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, ifade değerlendirmesi tamamlandığında çağrılır. @No__t_0 yöntemi bu olay işleyicisinin içinden çağrılabilir.  
+ Bu yöntem, ifade değerlendirmesi tamamlandığında çağrılır. `IDebugExpression::GetResultAsString` yöntemi bu olay işleyicisinin içinden çağrılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugexpressioncallback arabirimi](../../winscript/reference/idebugexpressioncallback-interface.md)    
+ [Idebugexpressioncallback arabirimi](../../winscript/reference/idebugexpressioncallback-interface.md)   
  [IDebugExpression::GetResultAsString](../../winscript/reference/idebugexpression-getresultasstring.md)

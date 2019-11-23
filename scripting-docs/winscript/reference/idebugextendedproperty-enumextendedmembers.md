@@ -48,9 +48,9 @@ HRESULT EnumExtendedMembers(
  dışı Üye özelliklerini numaralandırır `IEnumDebugExtendedPropertyInfo` arabirimini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
+ Geçerli bir `HRESULT`döndürür, genellikle `S_OK`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)    
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
+ [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)   
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
  [ExtendedDebugPropertyInfo Yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

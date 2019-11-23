@@ -47,7 +47,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 1. Visual Studio 2017'yi açın.
 
-1. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+1. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
 1. Sol bölmedeki **Yeni proje** iletişim kutusunda, **görsel C#** ' i genişletin ve ardından **Windows Masaüstü**' ne tıklayın. Orta bölmede seçin **Windows Forms uygulaması (.NET Framework)** . Dosya adı `HelloWorld`.
 
@@ -100,7 +100,7 @@ C# Proje şablonunuzu seçtikten ve dosyanızı adınızla, Visual Studio sizin 
 
      ![Araç kutusu penceresini açmak için araç kutusunu seçin](../ide/media/csharp-toolbox-toolwindow.png)
 
-     (Görmüyorsanız **araç kutusu** çıkış seçeneği açabilirsiniz, menü çubuğundan. Bunu yapmak için  > **araç kutusunu** **görüntüleyin**. Veya basın **Ctrl**+**Alt**+**X**.)
+     (Görmüyorsanız **araç kutusu** çıkış seçeneği açabilirsiniz, menü çubuğundan. Bunu yapmak için > **araç kutusunu** **görüntüleyin** . Veya basın **Ctrl**+**Alt**+**X**.)
 
 1. **Araç kutusu** penceresini sabitlemek için **raptiye** simgesini seçin.
 
@@ -110,11 +110,11 @@ C# Proje şablonunuzu seçtikten ve dosyanızı adınızla, Visual Studio sizin 
 
      ![Forma bir düğme ekleyin](../ide/media/csharp-add-button-form1.png)
 
-1. **Özellikler** penceresinde, **metin**bulun, **button1** ' den adı `Click this` olarak değiştirin ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinde, **metin**bulun, **button1** ' den adı `Click this`değiştirin ve ardından **ENTER**tuşuna basın.
 
      ![Düğmeyi form üzerinde metin ekleme](../ide/media/vb-button-control-text.png)
 
-     (Görmüyorsanız **özellikleri** penceresinde açabilirsiniz, menü çubuğundan. Bunu yapmak için  > **Özellikler penceresini** **görüntüle**' yi seçin. Veya basın **F4**.)
+     (Görmüyorsanız **özellikleri** penceresinde açabilirsiniz, menü çubuğundan. Bunu yapmak için > **Özellikler penceresini** **görüntüle** ' yi seçin. Veya basın **F4**.)
 
 1. İçinde **tasarım** bölümünü **özellikleri** penceresinde adını değiştirmek **Button1** için `btnClickThis`ve tuşuna **Enter**.
 
@@ -129,7 +129,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, metni göndermek için
 
 1. Seçin **etiket** denetimi **araç kutusu** pencere, form üzerine sürükleyin ve altındaki açılan **tıklatın** düğmesi.
 
-1. **Özellikler** penceresinin **Tasarım** bölümünde veya **(DataBindings)** bölümünde, **Label1** adını `lblHelloWorld` olarak değiştirin ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinin **Tasarım** bölümünde veya **(DataBindings)** bölümünde, **Label1** adını `lblHelloWorld`olarak değiştirin ve ardından **ENTER**tuşuna basın.
 
 ### <a name="add-code-to-the-form"></a>Forma kod ekleyin
 
@@ -160,7 +160,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, metni göndermek için
 Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 > [!div class="nextstepaction"]
-> [Öğretici: Resim görüntüleyici oluşturma @ no__t-0
+> [Öğretici: resim görüntüleyici oluşturma](tutorial-1-create-a-picture-viewer.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
