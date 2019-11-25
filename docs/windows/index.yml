@@ -1,44 +1,44 @@
 ### YamlMime:Hub
 title: Visual Studio belgeleri
-summary: Platformlarınızın ve cihazlarınızın tercih ettiğiniz dilde uygulamaları, hizmetleri ve araçları geliştirmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
+summary: Learn how to use Visual Studio to develop applications, services, and tools in the language of your choice, for your platforms and devices.
 brand: visual-studio
 metadata:
-  title: Visual Studio belgeleri | Microsoft Docs
+  title: Visual Studio documentation | Microsoft Docs
   titleSuffix: ''
-  description: Herhangi bir platform veya cihaz için seçtiğiniz dilde uygulama, hizmet ve araç geliştirmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
+  description: Learn how to use Visual Studio to develop applications, services, and tools in the language of your choice, for any platform or device.
   ms.topic: hub-page
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 905fd0b3f9ad37125ae8cccd5dab30f0517d16a1
-  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
+  ms.openlocfilehash: 2b2fffb32ba16111449c2876769e70d9c687b976
+  ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/15/2019
-  ms.locfileid: "74119732"
+  ms.lasthandoff: 11/25/2019
+  ms.locfileid: "74474010"
 highlightedContent:
   items:
-  - title: Kurulum ve yükleme
+  - title: Setup and installation
     itemType: download
     url: /visualstudio/install/install-visual-studio
-  - title: Visual Studio IDE 'ye hoş geldiniz
+  - title: Welcome to the Visual Studio IDE
     itemType: overview
     url: /visualstudio/ide/visual-studio-ide
   - title: Visual Studio 2019’daki yenilikler
     itemType: get-started
     url: /visualstudio/ide/whats-new-visual-studio-2019
-  - title: Geliştirme becerilerinizi geliştirin
+  - title: Improve your development skills
     itemType: learn
     url: /learn/
 conceptualContent:
   title: Kullanmaya başlayın
   items:
-  - title: Visual Studio 'Yu nasıl kullanacağınızı öğrenin
+  - title: Learn how to use Visual Studio
     links:
-    - text: Kılavuzlu tura başla
+    - text: Start a guided tour
       url: ../ide/visual-studio-ide.md
       itemType: overview
-    - text: Depodan kod açma
+    - text: Open code from a repo
       url: ../get-started/tutorial-open-project-from-repo.md
       itemType: tutorial
     - text: Kodu yazma ve düzenleme
@@ -50,10 +50,10 @@ conceptualContent:
     - text: Kodunuzda hata ayıklama
       itemType: tutorial
       url: ../debugger/debugger-feature-tour.md
-    - text: Kodunuzu test etme
+    - text: Test your code
       itemType: tutorial
       url: ../test/getting-started-with-unit-testing.md
-    - text: Verilere yerel olarak veya bulutta erişin
+    - text: Access data locally or in the cloud
       itemType: tutorial
       url: ../data-tools/create-a-sql-database-by-using-a-designer.md
   - title: Öğreticiyi izleyin
@@ -78,19 +78,19 @@ conceptualContent:
       itemType: get-started
   - title: Uygulama oluşturun
     links:
-    - text: Windows masaüstü uygulaması
+    - text: Windows desktop app
       itemType: tutorial
       url: /visualstudio/ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic
-    - text: Evrensel Windows uygulaması
+    - text: Universal Windows app
       itemType: tutorial
       url: /visualstudio/get-started/csharp/tutorial-uwp
-    - text: Mobil uygulama
+    - text: Mobile app
       itemType: overview
       url: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-    - text: Unity oyunu
+    - text: Unity game
       itemType: tutorial
       url: /visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity
-    - text: ASP.NET Core Web uygulaması
+    - text: Web app with ASP.NET Core
       itemType: quickstart
       url: /aspnet/core/tutorials/razor-pages/razor-pages-start
 tools:
@@ -125,48 +125,48 @@ additionalContent:
   - title: Görevler
     items:
     - title: Geliştirme
-      summary: Kod düzenleyicisini kullanarak kodunuzu yazın ve yönetin.
+      summary: Write and manage your code using the code editor.
       url: ../ide/index-writing-code.yml
     - title: Yapı
-      summary: Kaynak kodunuzu derleyin ve oluşturun.
+      summary: Compile and build your source code.
       url: ../ide/compiling-and-building-in-visual-studio.md
     - title: Hata ayıklama
-      summary: Kodunuzda hataları araştırın ve onarın.
+      summary: Investigate and fix bugs in your code.
       url: ../debugger/index.yml
     - title: Test
-      summary: Projeleriniz üzerinde testler çalıştırın.
+      summary: Run tests on your projects.
       url: ../test/improve-code-quality.md
     - title: Dağıt
-      summary: Web Dağıtımı, InstallShield, NuGet, sürekli tümleştirme ve daha fazlasını kullanarak uygulamalarınızı ve kodunuzu paylaşabilirsiniz.
+      summary: Share your apps and code by using Web Deploy, InstallShield, NuGet, Continuous Integration, and more.
       url: ../deployment/index.yml
     - title: Sürüm denetimi
       summary: Git ve TFVC gibi sürüm denetimi teknolojilerini kullanarak kod paylaşın.
       url: /azure/devops/repos/index
     - title: DevOps
-      summary: Uygulamalarınızı bulutta sürekli olarak derleyin ve serbest bırakın ve Azure DevOps Services çevik uygulamalar uygulayın.
+      summary: Continuously build and release your apps in the cloud, and implement Agile practices with Azure DevOps Services.
       url: /azure/devops
-    - title: Ölçüm performansı
-      summary: Tanılama araçlarını kullanarak performans sorunlarını belirleyin ve kod performansını iyileştirin.
+    - title: Measure performance
+      summary: Identify bottlenecks and optimize code performance by using diagnostic tools.
       url: ../profiling/index.yml
-    - title: Genişletmeyi
-      summary: Geliştirme deneyiminizi geliştirmek için Visual Studio IDE 'ye kendi işlevselliklerinizi ekleyin.
+    - title: Extend
+      summary: Add your own functionality to the Visual Studio IDE to improve your development experience.
       url: ../extensibility/index.md
     - title: Veri
-      summary: Herhangi bir veritabanına veya hizmete ve herhangi bir yere (yerel veya bulut) bağlanan veri uygulamaları oluşturun.
+      summary: Create data apps that connect to any database or service, and anywhere—local or cloud.
       url: ../data-tools/accessing-data-in-visual-studio.md
     - title: İşbirliği
-      summary: Ortak ve gerçek zamanlı bir ortamda paylaşma, düzenleme ve hata ayıklama kodu.
+      summary: Share, edit, and debug code in a collaborative, real-time environment.
       url: /visualstudio/liveshare/
-    - title: Kapsayıcılarla geliştirme
-      summary: Modüler bileşenleri yalıtmak ve ölçeklenebilirliği geliştirmek için kapsayıcıları kullanın.
+    - title: Develop with Docker containers
+      summary: Use Docker containers to isolate modular components and improve scalability.
       url: ../containers/index.yml
   - title: İş yükleri
     items:
-    - title: Web ve bulut
+    - title: Web and cloud
       links:
-      - text: Web geliştirme
+      - text: Web development
         url: /aspnet/
-      - text: Azure geliştirme ve yönetimi
+      - text: Azure development and management
         url: /visualstudio/azure
       - text: Python
         url: /visualstudio/python
@@ -174,37 +174,37 @@ additionalContent:
         url: /visualstudio/javascript
       - text: Veri depolama ve işleme
         url: ../data-tools/index.md
-      - text: Veri bilimi
+      - text: Data science
         url: ../python/data-science-and-analytical-applications-workload.md
-      - text: Office/SharePoint geliştirme
+      - text: Office/Sharepoint development
         url: https://developer.microsoft.com/office/docs
     - title: Windows
       links:
-      - text: .NET masaüstü geliştirme
+      - text: .NET Desktop development
         url: /dotnet/framework/develop-client-apps
-      - text: Evrensel Windows platformu geliştirme
+      - text: Universal Windows platform development
         url: ../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: İle Windows geliştirmeC++
+      - text: Windows development with C++
         url: /cpp/windows/desktop-applications-visual-cpp
-    - title: Mobil ve oyun
+    - title: Mobile and gaming
       links:
-      - text: .NET ile mobil geliştirme (Xamarin)
+      - text: Mobile development with .NET (Xamarin)
         url: /xamarin/
-      - text: Unity ile oyun geliştirme
+      - text: Game development with Unity
         url: ../cross-platform/visual-studio-tools-for-unity.md
-      - text: JavaScript ile mobil geliştirme
+      - text: Mobile development with JavaScript
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (Yalnızca Visual Studio 2017 ve 2015)
-      - text: İle mobil geliştirmeC++
+        note: (Visual Studio 2017 and 2015 only)
+      - text: Mobile development with C++
         url: /visualstudio/cross-platform/
-      - text: İle oyun geliştirmeC++
+      - text: Game development with C++
         url: /windows/uwp/gaming/e2e
-    - title: Diğer araç kümeleri
+    - title: Other toolsets
       links:
       - text: Visual Studio uzantısı geliştirme
         url: ../extensibility/index.md
-      - text: İle Linux geliştirmeC++
+      - text: Linux development with C++
         url: /cpp/linux/
-      - text: .NET Core platformlar arası geliştirme
+      - text: .NET Core cross-platform development
         url: /dotnet/core/
-  footer: '[Bloglar](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [sorun raporlama](../ide/talk-to-us.md) - [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+  footer: '[Blogs](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Issue Reporting](../ide/talk-to-us.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)'
