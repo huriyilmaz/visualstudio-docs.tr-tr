@@ -43,10 +43,10 @@ Her bir hedef bilgisayar [Minimum yükleme gereksinimlerini](https://visualstudi
 |Kurulum durumu|Yeniden başlatma gerekli değil|Yeniden başlatma gerekiyor|Açıklama|  
 |------------------|--------------------------|----------------------|-----------------|  
 |Başarılı|0x00000000 [0]|0x00000bc2 [3010]|Yükleme başarılı.|  
-|Blok|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Raporlanacak tek blok "yeniden başlatma bekleniyor" ise, döndürülen değer eksik-yeniden başlatma gerekli değeridir (0x80048bc7).|  
+|Engelle|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Raporlanacak tek blok "yeniden başlatma bekleniyor" ise, döndürülen değer eksik-yeniden başlatma gerekli değeridir (0x80048bc7).|  
 |İptal|0x00000642 [1602]|0x80048642 [-2147187134]|Yeniden başlatma değeri döndürüldüğünde, dönüş kodu 1602 ' dir.|  
 |Tamamlanmamış-yeniden başlatma gerekiyor|Yok|0x80048bc7 [-2147185721]|Yüklemenin devam edebilmesi için yeniden başlatma gerekiyor.|  
-|Hataları|0x00000643 [1603]|0x80048643 [-2147187133]|Yeniden başlatma değeri döndürüldüğünde, dönüş kodu 1603 ' dir.|  
+|Hata|0x00000643 [1603]|0x80048643 [-2147187133]|Yeniden başlatma değeri döndürüldüğünde, dönüş kodu 1603 ' dir.|  
   
 ## <a name="interactive-administrator-installer"></a>Etkileşimli yönetici yükleyicisi  
  Visual Studio yüklemesinin üstünde etkileşimli bir yükleyici oluşturuyorsanız, ilerlemeyi Visual Studio yükleyicisinden görüntüleyebilirsiniz. Visual Studio 2015 yükleyicisi, "yakma" olarak da bilinen açık kaynaklı Windows Installer XML (WiX) Chainer teknolojisine kurulmuştur. Yazma teknolojisi iki iletişim protokolünü destekler: yakma ve netfx4. Kısa bir başvuru için, lütfen [wixtoolset.org](https://wixtoolset.org/)adresindeki ExePackage öğesinin belgelerindeki protokol özniteliğinin açıklamasına bakın. Bu protokol özniteliğinin WiX açık kaynaklı uygulamasının incelenmesi, tümleştirme için gerekli olabilir.  
@@ -60,7 +60,7 @@ Her bir hedef bilgisayar [Minimum yükleme gereksinimlerini](https://visualstudi
 
 Varsayılan olarak, Visual Studio yüklemesini müşteri geri bildirim sağlar. Visual Studio 'Yu, her bir bilgisayarda müşteri geri bildirimini devre dışı bırakmak için, aşağıdaki kayıt defteri anahtarının değerini "0" dizesiyle değiştirerek yapılandırabilirsiniz:  
   
-**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SQM**  
+**\SOFTWARE\Policies\Microsoft\VisualStudio\SQM HKEY_LOCAL_MACHINE**  
 **OptIn**  
   
 (Örneğin, HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\VisualStudio\SQM OPI = "0") olarak değiştirin  

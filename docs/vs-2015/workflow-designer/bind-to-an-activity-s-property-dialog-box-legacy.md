@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301013"
 ---
 # <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>Etkinlik&#39;özelliği özelliğine bağlama iletişim kutusu (eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**etkinliğin özelliği Için bağlama** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**etkinliğin özelliği Için bağlama** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
 
  Dependency özelliğinin örnek türü, başka bir etkinliğin ortak özelliğine veya olayına bağlanabilir. Etkinlik bağlama hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerini kullanma](https://go.microsoft.com/fwlink?LinkID=65007).
 

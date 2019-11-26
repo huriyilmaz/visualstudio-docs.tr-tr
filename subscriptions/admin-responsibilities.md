@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/20/2019
 ms.topic: conceptual
 description: Abonelik yöneticilerinin sorumlulukları hakkında bilgi edinin.
-ms.openlocfilehash: eb5a557d19aafdd36ccf175ec4fc37e482091f80
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 5ebdc3cb2448815ee5193020808c51630c5f1c17
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415619"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491523"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Yönetici sorumluluklarına genel bakış
 Yönetici olarak, kuruluşunuz için abonelikleri yönetebilirsiniz.  Yönetici rolü Ayrıca, aboneliklerin lisans koşullarına uygun olarak yönetildiğinden emin olmak için sorumlulukları taşır. Bu makalede, yönetici rolünün sorumlulukları, avantajları ve sınırlamaları özetlenmektedir.
@@ -39,5 +39,5 @@ Visual Studio abonelikleri, geliştirme ekibi üyelerinin diğer yazılımları 
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Üretim öncesi ortam envanteri](admin-inventory.md)
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
-- [Kullanıcı atamalarını ve işlem emirlerini izleme](assignments-orders.md)
+- [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın

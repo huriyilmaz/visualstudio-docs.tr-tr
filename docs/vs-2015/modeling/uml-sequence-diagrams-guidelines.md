@@ -123,7 +123,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Bir iletiyi yaşam çizgisinde yukarı veya aşağı sürükleyin. Başka iletilerin üzerine veya bir yürütme bloğunun içine veya dışına sürükleyebilirsiniz.
 
-     \- veya -
+     \- veya-
 
 - İleti konumlarını ayarlamak için iletiye tıklayın ve **yukarı ok** ve **aşağı ok** tuşlarını kullanın. İletilerin sırasını değiştirmek için **SHIFT + yukarı ok** ve **SHIFT + aşağı ok** tuşlarını kullanın.
 
@@ -165,7 +165,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 2. Etkileşimi pakete sürükleyin.
 
-     \- veya -
+     \- veya-
 
      Etkileşime sağ tıklayın ve ardından **Kes**' e tıklayın. Pakete sağ tıklayın ve ardından **Yapıştır**' a tıklayın.
 
@@ -274,7 +274,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - UML Model Gezgini 'nden bir sınıf, bileşen veya arabirimi sıralı diyagram üzerine sürükleyin.
 
-   \- veya -
+   \- veya-
 
   1. İlgili diyagramda sınıf, bileşen veya arabirime sağ tıklayın ve ardından **yaşam çizgisi oluştur**' a tıklayın.
 
@@ -323,7 +323,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
          Sınıf veya arabirim sınıf diyagramında görüntülenir.
 
-         \- veya -
+         \- veya-
 
     3. Yeni arabirimi **UML Model Gezgini** ' nden bileşen diyagramında bir bileşene veya bağlantı noktasına sürükleyin.
 
@@ -349,7 +349,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 3. Etkileşim kullanımıyla ilgili ada çift tıklayın ve bu diyagramda yeniden kullanılabilir sıranın etkisini tanımlayacak şekilde yeniden adlandırın.
 
-     \- veya -
+     \- veya-
 
      Parametresi ile bir işlev çağrısı gibi bir ad yazın.
 
@@ -357,7 +357,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
      Yeni sıralı diyagram oluşturmak için **yeni dizi oluştur** 'a tıklayın
 
-     \- veya -
+     \- veya-
 
      Var olan bir diyagrama bağlamak için **sıralama bağlantısı** ' na tıklayın.
 
@@ -384,7 +384,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Etkileşim kullanımına çift tıklayın.
 
-     \- veya -
+     \- veya-
 
      Etkileşim kullanımına sağ tıklayın ve ardından **Diziye Git ' e**tıklayın.
 

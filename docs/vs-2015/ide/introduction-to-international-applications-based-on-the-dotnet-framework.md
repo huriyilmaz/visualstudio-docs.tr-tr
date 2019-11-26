@@ -49,5 +49,5 @@ ms.locfileid: "74291371"
  Yerelleştirilmiş bir uygulama yürütüldüğünde, görünümü iki kültür değeri tarafından belirlenir. ( *Kültür* , kullanıcının dili, ortamı ve kültürel kuralları ile ilgili Kullanıcı tercihi bilgileri kümesidir.) UI kültürü ayarı hangi kaynakların yükleneceğini belirler. UI kültürü, Web. config dosyaları ve sayfa yönergeleri içinde `UICulture` olarak ve Visual Basic ya da görsel C# kodda <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> olarak ayarlanır. Kültür ayarı Tarih, sayı, para birimi vb. gibi değerlerin biçimlendirilmesini belirler. Kültür, Web. config dosyaları ve sayfa yönergeleri içinde `Culture` olarak ayarlanır, Visual Basic veya görsel C# kodda <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Globalization> <xref:System.Resources>
+ <xref:System.Globalization><xref:System.Resources>
  Uygulamalar [güvenlik ve yerelleştirilmiş uydu derlemelerini](../ide/security-and-localized-satellite-assemblies.md) [Genelleştirme ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)

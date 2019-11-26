@@ -94,7 +94,7 @@ namespace Company.MusicLib
 ```
 
 ## <a name="using-events-to-make-undoable-adjustments-in-the-store"></a>Depoda geri alınamaz ayarlamalar yapmak için olayları kullanma
- Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
+ Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
  Ancak, kullanıcının ek güncelleştirmeleri özgün olaydan ayrı olarak geri almak istiyorsanız, depoya ek güncelleştirmeler yapmak için bir olay işleyicisi kullanabilirsiniz. Örneğin, küçük harf karakterlerinin albüm başlıkları için normal kural olduğunu varsayalım. Kullanıcı büyük harfe yazıldıktan sonra başlığı küçük harfe düzelten bir mağaza olay işleyicisi yazabilirsiniz. Ancak Kullanıcı, geri al komutunu kullanarak, büyük harf karakterlerini geri yükleyerek düzeltmeyi iptal edebilir. İkinci bir geri alma kullanıcının değişikliğini kaldırır.
 

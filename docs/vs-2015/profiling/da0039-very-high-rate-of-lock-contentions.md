@@ -27,7 +27,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [DA0039: çok yüksek oranda
   
 |||  
 |-|-|  
-|Kural kimliği|DA0039|  
+|Kural Kimliği|DA0039|  
 |Kategori|.NET Framework kullanımı|  
 |Profil oluşturma yöntemleri|Aşağıdakine<br /><br /> İzleme<br /><br /> .NET belleği|  
 |İleti|Çok yüksek oranda .NET kilit çekişmeleri meydana geldiğini belirtir. Lütfen eşzamanlılık profilini çalıştırarak bu kilit çakışmasının nedenini araştırın.|  
@@ -35,7 +35,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [DA0039: çok yüksek oranda
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütme sırasında aşırı yüksek bir kilit çekişmesinin gerçekleştiğini gösterir. Çekişmenin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

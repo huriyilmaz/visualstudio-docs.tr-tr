@@ -19,7 +19,7 @@ ms.locfileid: "74299869"
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Eğitmen 2: Zamanlı Matematik Testi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu öğreticide, bir sınavın belirli bir süre içinde dört rastgele aritmetik sorunu yanıtlaması gereken bir test oluşturacaksınız. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide, bir sınavın belirli bir süre içinde dört rastgele aritmetik sorunu yanıtlaması gereken bir test oluşturacaksınız. Aşağıdakileri nasıl yapacağınızı öğrenirsiniz:
 
 - `Random` sınıfını kullanarak rastgele sayılar üretin.
 

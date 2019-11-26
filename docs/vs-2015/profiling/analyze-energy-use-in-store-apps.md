@@ -92,7 +92,7 @@ if (performance && performance.mark) {
 2. **Enerji tüketimini** seçin ve ardından **Başlat**' ı seçin.  
   
     > [!NOTE]
-    > **Enerji tüketimi** profil oluşturucuyu başlattığınızda, VsEtwCollector. exe ' yi çalıştırmak için izninizi ısteyen bir **Kullanıcı hesabı denetim** penceresi görebilirsiniz. Seçin **Evet**.  
+    > **Enerji tüketimi** profil oluşturucuyu başlattığınızda, VsEtwCollector. exe ' yi çalıştırmak için izninizi ısteyen bir **Kullanıcı hesabı denetim** penceresi görebilirsiniz. **Evet**' i seçin.  
   
 3. Veri toplamak için uygulamanızda alıştırma yapın.  
   

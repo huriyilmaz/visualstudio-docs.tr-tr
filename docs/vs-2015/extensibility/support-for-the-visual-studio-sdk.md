@@ -40,7 +40,7 @@ Visual Studio tümleşik geliştirme ortamının (IDE) nasıl genişletileceği 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Market  
  [Visual Studio Market](https://marketplace.visualstudio.com/) , uzantıların ve örnek kodun yer aldığı yerdir. Visual Studio ile üretkenliğinizi ve Kullanıcı deneyiminizi geliştiren araçları, VSPackages ve Managed Extensibility Framework (MEF) ve diğer örnek türlerini nasıl kullanacağınızı gösteren örnek uygulamalar bulabilirsiniz.  
   
-### <a name="codeplex"></a>Yapan  
+### <a name="codeplex"></a>Codeplex  
  [CodePlex](https://go.microsoft.com/fwlink/?LinkId=76627) , Microsoft açık kaynaklı proje barındırma web sitesidir. CodePlex kullanarak yeni projeler oluşturabilir, paylaşabilir, mevcut projelere katkıda bulunabilir ya da sitedeki uygulamaları kullanabilir ve geri bildirim sağlayabilirsiniz. [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] önceki sürümleriyle birlikte dahil edilen tüm PowerToys (ve belgeleri) artık CodePlex üzerinde kullanıma sunulmuştur.  
   
 ## <a name="included-support"></a>Dahil edilen destek  

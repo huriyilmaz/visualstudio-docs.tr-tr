@@ -21,7 +21,7 @@ ms.locfileid: "74298155"
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>Görselleştirme ve SDK Modelleme için Desteklenen Visual Studio Sürümleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İle desteklenen Visual Studio sürümleri listesi aşağıda verilmiştir [!INCLUDE[dsl](../includes/dsl-md.md)] geliştirme ve dağıtım ortamlarda. Bu sürümler hakkında daha fazla bilgi için bkz: Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=75628).
+Aşağıda, yazma ve dağıtım ortamlarında [!INCLUDE[dsl](../includes/dsl-md.md)] tarafından desteklenen Visual Studio sürümleri listelenmiştir. Bu sürümler hakkında daha fazla bilgi için Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=75628)' ne bakın.
 
 ## <a name="authoring-edition"></a>Geliştirme sürümü
  Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
@@ -33,7 +33,7 @@ ms.locfileid: "74298155"
 |Visual Studio Görselleştirme ve modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
 ## <a name="deployment-editions"></a>Dağıtım sürümleri
- [!INCLUDE[dsl](../includes/dsl-md.md)] derleme etki alanına özgü diller dağıtmak için aşağıdaki yapılandırmaları destekler:
+ [!INCLUDE[dsl](../includes/dsl-md.md)], oluşturduğunuz alana özgü dilleri dağıtmak için aşağıdaki konfigürasyonları destekler:
 
 - Visual Studio Enterprise
 
@@ -44,7 +44,7 @@ ms.locfileid: "74298155"
 - Visual Studio Kabuğu (yalıtılmış mod) yeniden dağıtılabilir paketi yeniden dağıtılabilir paketi
 
 > [!NOTE]
-> Bir DSL Kabuk ürünü üzerinde çalıştırılan mümkün hale getirmek için ayarlamanız gerekir **desteklenen VS Edition** uzantı bildirim alanındaki. Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+> Bir DSL 'yi bir kabuk ürününde çalışabilecek hale getirmek için, uzantı bildiriminde **desteklenen vs Edition** alanını ayarlamanız gerekir. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

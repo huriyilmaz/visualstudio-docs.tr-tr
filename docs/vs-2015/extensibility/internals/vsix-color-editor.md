@@ -65,9 +65,9 @@ Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel ren
   
    Bazı yaygın durum adları şunlardır:  
   
-- Etkin  
+- Active  
   
-- Olmadan  
+- Etkin değil  
   
 - Gelme olayından  
   
@@ -190,7 +190,7 @@ namespace MyCustomColors
 ## <a name="notes"></a>Notlar  
  Bu araç, önceden var olan Visual Studio temaları için özel renkler oluşturmak veya özel bir Visual Studio temasının renklerini düzenlemede kullanılmak üzere tasarlanmıştır. Tüm özel Visual Studio temaları oluşturmak için Visual Studio uzantıları Galerisi ' nden [Visual Studio Color teması Düzenleyicisi uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2015ColorThemeEditor) indirin.  
   
-## <a name="sample-output"></a>Örnek Çıktı  
+## <a name="sample-output"></a>Örnek Çıkış  
  **XML renk çıkışı**  
   
  Araç tarafından oluşturulan. xml dosyası şuna benzer olacaktır:  

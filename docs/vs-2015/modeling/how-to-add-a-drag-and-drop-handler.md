@@ -170,9 +170,9 @@ using System.Linq;
 
 1. Kaynak DSL 'yi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] model veri yolu tarafından erişilebilir hale getirme:
 
-    1. Henüz yüklenmemişse, Visual Studio Model veri yolu uzantısını indirip yükleyin. Daha fazla bilgi için [Görselleştirme ve modelleme SDK'sı](https://go.microsoft.com/fwlink/?LinkID=185579).
+    1. Henüz yüklenmemişse, Visual Studio Model veri yolu uzantısını indirip yükleyin. Daha fazla bilgi için bkz. [görselleştirme ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=185579).
 
-    2. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve ardından **etkinleştirme Modelbus**. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  {1&gt;Tamam&lt;1} düğmesini tıklatın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
+    2. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**'a tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
 
     3. **Tüm Şablonları Dönüştür** ' e tıklayın ve çözümü yeniden oluşturun.
 

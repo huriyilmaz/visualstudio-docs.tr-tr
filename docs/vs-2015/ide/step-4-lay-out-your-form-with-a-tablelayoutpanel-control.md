@@ -75,7 +75,7 @@ Bu adımda formunuza bir `TableLayoutPanel` denetimi eklersiniz. TableLayoutPane
 
 11. Pencerenin üst kısmındaki **göster** açılan listesinden **Satırlar**' ı seçin. **Row1** değerini yüzde 90 ve **Row2** olarak ayarlayın.
 
-12. Seçin **Tamam** düğmesi. TableLayoutPanel, artık büyük bir üst satıra, küçük bir alt satıra, küçük bir sol sütuna ve büyük bir sağ sütuna sahip olmalıdır. TableLayoutPanel içindeki satırları ve sütunları formda tableLayoutPanel1 seçerek ve sonra satır ve sütun kenarlıklarını sürükleyerek yeniden boyutlandırabilirsiniz.
+12. **Tamam** düğmesini seçin. TableLayoutPanel, artık büyük bir üst satıra, küçük bir alt satıra, küçük bir sol sütuna ve büyük bir sağ sütuna sahip olmalıdır. TableLayoutPanel içindeki satırları ve sütunları formda tableLayoutPanel1 seçerek ve sonra satır ve sütun kenarlıklarını sürükleyerek yeniden boyutlandırabilirsiniz.
 
      Yeniden ![boyutlandırılmış TableLayoutPanel Ile Form1](../ide/media/vs-formafterlayoutpanel.png "VS_FormAfterLayoutPanel") Yeniden boyutlandırılmış TableLayoutPanel ile Form1
 

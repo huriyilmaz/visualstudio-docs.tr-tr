@@ -36,7 +36,7 @@ Visual Studio, yazılımınızın kullanıcıların gereksinimleriyle ve sistemi
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Kategori**|**Köprü**|
+|**Alan**|**Köprü**|
 |------------------|---------------|
 |**Videolar**|![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: Doug yedi: Visual Studio 2010 ile kod anlama ve sistem tasarımı](https://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: katman diyagramı kullanarak uygulama mimarisi](https://go.microsoft.com/fwlink/?LinkID=201117) oluşturma<br /><br /> ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo ") [: nasıl yapılır serisi: Katman diyagramlarını kullanarak kodu doğrulama](https://go.microsoft.com/fwlink/?LinkID=214405)|
 |**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|

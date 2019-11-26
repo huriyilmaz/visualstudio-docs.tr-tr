@@ -25,7 +25,7 @@ Visual Studio Enterprise için kodlanmış UI testleri için desteklenen yapıla
 > [!NOTE]
 > Kodlanmış kullanıcı arabirimi test işlemi, test altındaki uygulama ile aynı ayrıcalıklara sahip olmalıdır.
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 

@@ -82,7 +82,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
 1. Araç kutusunda **bileşen** ' e tıklayın ve ardından diyagramın boş bir kısmına tıklayın.
 
-     \- veya -
+     \- veya-
 
      Varolan bileşeni kopyalayıp yapıştırın.
 
@@ -188,13 +188,13 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
          **UML Model Gezgini**'nde yeni bir bileşen oluşturulur. Bu, yeni parçanın türüdür.
 
-         \- veya -
+         \- veya-
 
          Varolan bileşeni UML Model Gezgini'nden ana bileşen üzerine sürükleyin.
 
          Yeni parça (3) ana bileşenin içinde görünür. Türü UML Model Gezgini'nden sürüklediğiniz bileşendir.
 
-         \- veya -
+         \- veya-
 
          Diyagramda veya UML Model Gezgini ' nde bir bileşene sağ tıklayın ve ardından **Kopyala**' ya tıklayın.
 
@@ -206,7 +206,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
     3. Yeni parçaya sağlanan ve gerekli arabirimleri (4, 5) ekleyebilirsiniz. **Belirtilen arabirime** veya **gerekli arabirim** aracına tıklayın ve ardından bölümüne tıklayın.
 
-         \- veya -
+         \- veya-
 
          **UML Model Gezgini** ' nden varolan bir arabirimi bölümüne sürükleyin.
 

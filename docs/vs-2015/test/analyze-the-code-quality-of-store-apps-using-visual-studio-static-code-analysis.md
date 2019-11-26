@@ -35,5 +35,5 @@ Visual Studio kod analizi aracı, kodunuz için bir dizi yaygın hataları ve pr
 
 |||
 |-|-|
-|[MSDN Kitaplığı'nda kod çözümleme](https://go.microsoft.com/fwlink/?LinkID=227580)|Kod Analizi Visual Studio Ultimate, Visual Studio Premium ve Visual Studio Professional'ı kullanma hakkında daha fazla bilgi bulabilirsiniz.|
+|[MSDN Kitaplığı 'nda kod analizi](https://go.microsoft.com/fwlink/?LinkID=227580)|Kod Analizi Visual Studio Ultimate, Visual Studio Premium ve Visual Studio Professional'ı kullanma hakkında daha fazla bilgi bulabilirsiniz.|
 |[MSDN Kod Analizi ekip blogu](https://go.microsoft.com/fwlink/?LinkId=227200)|Teknik incelemeler ve Kod Analizi ekip blogunda örnekleri dahil olmak üzere daha fazla bilgi bulabilirsiniz.|

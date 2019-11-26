@@ -31,7 +31,7 @@ Kural kimliği | DA0023 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma sırasında toplanan sistem performansı verileri, atık toplamada harcanan sürenin toplam uygulama işleme süresi ile karşılaştırıldığında önemli olduğunu gösterir.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

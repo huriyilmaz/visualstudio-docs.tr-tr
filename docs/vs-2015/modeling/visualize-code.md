@@ -48,7 +48,7 @@ Visual Studio 'da görselleştirme ve modelleme araçlarını kullanarak mevcut 
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Kategori**|**Köprü**|
+|**Alan**|**Köprü**|
 |------------------|---------------|
 |**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
 |**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|

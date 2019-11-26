@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
 description: Ön üretim envanterleri gerçekleştirmek için Yöneticiler hakkında bilgi edinin responsibilty
-ms.openlocfilehash: d400e216d81601583dc08f66f1a6a185cbe41b91
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 97a7a95354cd4d5d85581830830705bc328f2311
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68423096"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491705"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Üretim öncesi ortam envanteri
 Visual Studio abonelikleri, cihazları yerine kullanıcıları sayarak varlık yönetimini basitleştirir.
@@ -33,5 +33,5 @@ Visual Studio yöneticileri **, adlandırılmış bireylere**Visual Studio abone
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Yönetici sorumlulukları](admin-responsibilities.md)
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
-- [Kullanıcı atamalarını ve işlem emirlerini izleme](assignments-orders.md)
+- [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın

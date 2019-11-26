@@ -22,7 +22,7 @@ ms.locfileid: "74300627"
 # <a name="what39s-new-in-profiling-tools"></a>Profil Oluşturma Araçları&#39;yenilikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2015 güncelleştirme 1'hata ayıklama ve tanılama konusunda yeni olan her şey hakkında bilgi için [Visual Studio 2015 güncelleştirme 1 sürüm notları](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  
+Visual Studio 2015 güncelleştirme 1 hata ayıklama ve tanılama 'daki yenilikler hakkında daha fazla bilgi için bkz. [Visual studio 2015 güncelleştirme 1 sürüm notları](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  
   
  Visual Studio 2015 hata ayıklama ve tanılama 'daki yenilikler hakkında daha fazla bilgi için bkz. [Visual studio 2015 Sürüm notları](https://www.visualstudio.com/news/vs2015-vs#Debug).  
   

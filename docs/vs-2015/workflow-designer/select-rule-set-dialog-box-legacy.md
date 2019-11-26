@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301443"
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>Kural Kümesi Seç İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kural kümesi seçme** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kural kümesi seçme** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
 
  **Kural kümesi Seç** iletişim kutusu, bir [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) etkinliğiyle kullanabileceğiniz bir kural kümesi seçmek için kullanılır. **Kural kümesi Seç** iletişim kutusuna erişme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir PolicyActivity kural kümesi oluşturma (eski)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
 
@@ -32,7 +32,7 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kur
 |**Yeni...**|Yeni bir kural koşulu oluşturmak için [kural kümesi Düzenleyicisi Iletişim kutusunu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) açmak için tıklayın.|
 |**Düzenle...**|Seçili kural koşulunu düzenlemek için [kural kümesi Düzenleyicisi Iletişim kutusunu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) açmak için tıklayın.|
 |**Yeniden adlandır...**|Seçili kural kümesini yeniden adlandırmak için kullanılan bir iletişim kutusu açmak için tıklayın.|
-|**Delete**|Seçili kural kümesini silmek için tıklayın.|
+|**Sil**|Seçili kural kümesini silmek için tıklayın.|
 |**Kural kümesi önizlemesi**|Seçili kural kümesindeki kuralları görüntüler.|
 |**Tamam**|Seçilen kural kümesini **PolicyActivity** etkinliğine atamak için tıklayın.|
 

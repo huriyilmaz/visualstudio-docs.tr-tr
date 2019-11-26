@@ -130,7 +130,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
-1. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
 
 2. **Yüklü uzantıları**genişletin.
 

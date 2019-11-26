@@ -55,7 +55,7 @@ Rolü **yalnızca bağlantıya yaymak**Için rolün **yayan Copy** özelliğini 
  **Öğeleri kopyalayıp yapıştırarak hızla çoğaltın.** Normal olarak, yeni kopyaladığınız öğe hala seçilidir ve aynı öğe türünü üzerine yapıştıramazsınız.
 Etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve birleştirme Işlemini üst sınıfa ilet olarak ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
 
- \- veya -
+ \- veya-
 
  `ClipboardCommandSet.ProcessOnPasteCommand()`geçersiz kılarak öğeleri yapıştırmadan önce diyagramı seçin. Bu kodu DslPackage projesindeki özel bir dosyaya ekleyin:
 
@@ -80,7 +80,7 @@ partial class MyDslClipboardCommandSet
  **Kullanıcı seçili bir hedefi üzerine yapıştırdığı zaman ek bağlantılar oluştur.** Örneğin, bir açıklama kutusu bir öğeye yapıştırıldığında aralarında bir bağlantı yapılır.
 Hedef etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve bağlantı ekleyerek birleştirme işlemini işleyecek şekilde ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
 
- \- veya -
+ \- veya-
 
  Temel yöntemi çağırdıktan sonra ek bağlantılar oluşturmak için `ClipboardCommandSet.ProcessOnPasteCommand()` geçersiz kılın.
 

@@ -113,7 +113,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 - Örnekte gösterildiği gibi, araç kutusu simgesi için `<bmp fileName="…"/>` ve diğer öğeler için `<value>string</value>`.
 
-  \- veya -
+  \- veya-
 
 - `<resource fileName="Resources.dll"`
 
@@ -129,7 +129,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 |---------------|-------------|
 |displayName|Araç kutusu öğesinin adı.|
 |tabName|Öğenin görünmesi gereken araç kutusu sekmesi. Bu tür diyagram için normal sekmenin adını ya da ayrı bir adı belirtebilirsiniz.|
-|görüntü|Yüksekliği 16 ve 16 bit renk derinliğine sahip olması gereken bit eşlem ( **. bmp**) dosyasının konumu.|
+|image|Yüksekliği 16 ve 16 bit renk derinliğine sahip olması gereken bit eşlem ( **. bmp**) dosyasının konumu.|
 |f1Keyword|Yardım konusunu bulan anahtar sözcük.|
 |ipucuna|Bu araç için araç ipucu.|
 
@@ -151,7 +151,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 3. Mevcut bir Visual Studio uzantısı projesi açın.
 
-     \- veya -
+     \- veya-
 
      Yeni bir Visual Studio uzantısı projesi tanımlayın.
 

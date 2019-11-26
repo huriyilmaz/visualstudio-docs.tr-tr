@@ -47,7 +47,7 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 
 #### <a name="to-create-a-unit-test-project-for-a-windows-store-app"></a>Bir Windows Mağazası uygulaması için birim testi projesi oluşturmak için
 
-1. Gelen **dosya** menüsünde seçin **yeni proje**.
+1. **Dosya** menüsünden **Yeni proje**' yi seçin.
 
      Yeni proje iletişim kutusu görüntülenir.
 
@@ -60,9 +60,9 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 
 4. Seçim Projeyi **konum** metin kutusuna girerek oluşturmak istediğiniz yolu değiştirin veya **Araştır** düğmesini seçin.
 
-5. (İsteğe bağlı) İçinde **çözüm** ad metin kutusunda, çözümünüz için kullanmak istediğiniz ismi girin.
+5. Seçim **Çözüm** adı metin kutusuna çözümünüz için kullanmak istediğiniz adı girin.
 
-6. Bırakın **çözüm için dizin oluştur** seçeneği seçili ve seçin **Tamam** düğmesi.
+6. **Çözüm için dizin oluştur** seçeneğini seçili bırakın ve **Tamam** düğmesini seçin.
 
      ![Özel birim testi kitaplığı](../test/media/unit-test-win8-1.png "Unit_Test_Win8_1")
 
@@ -81,7 +81,7 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 
 2. Bildirim tasarımcısında **yetenekler** sekmesini seçin.
 
-3. Listenin altında **özellikleri**, birim sınamanız ve kod gereken yetenekleri seçin sahip sınamanız. Örneğin, **Internet** birim testi ve test ettiği kodun onay kutusu İnternet'e erişme özelliği olması gerekir.
+3. **Özellikleri**altındaki listede, birim testiniz için gereken özellikleri ve test eden kodu seçin. Örneğin, birim testinin ihtiyacı varsa ve test edilmiş kodun internet 'e erişme yeteneğine sahip olması gerekiyorsa **Internet** onay kutusunu seçin.
 
     > [!NOTE]
     > Seçtiğiniz yetenekler yalnızca [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] birim testinin düzgün çalışması için gerekli olan özellikleri içermelidir. Bu özelliklerde, test edilen [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamasının bir parçası olmayan ve genellikle test altındaki [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]uygulaması için belirtilen yeteneklerin bir alt kümesi olması gereken özellikleri içermesi gerekmez.
@@ -102,11 +102,11 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 
 #### <a name="to-build-the-solution-and-run-the-unit-test-using-test-explorer"></a>Çözümü derleyin ve Test Gezgini'ni kullanarak birim testini çalıştırmak için
 
-1. Üzerinde **Test** menüsünde seçin **Windows**ve ardından **Test Gezgini**.
+1. **Test** menüsünde **Windows**' u ve ardından **Test Gezgini**' ni seçin.
 
      Test Gezgini, testiniz listelenmeden görüntülenir.
 
-2. Gelen **derleme** menüsünde seçin **Çözümü Derle**.
+2. **Build** menüsünde **Build Solution**öğesini seçin.
 
      Birim testiniz artık listelenir.
 
@@ -119,16 +119,16 @@ Visual Studio, birim testi yönetilen [!INCLUDE[win8_appname_long](../includes/w
 3. Test Gezgini ' nde, oluşturduğunuz birim testini seçin.
 
     > [!TIP]
-    > Test Gezgini kaynak koda bir bağlantı yanındaki sağlar **kaynak:** .
+    > Test Gezgini, **Kaynak:** ' ın yanında kaynak koda bir bağlantı sağlar.
 
-4. Seçin **çalıştırması**.
+4. **Tümünü Çalıştır**' ı seçin.
 
      ![Birim testi Gezgini &#45; çalışma birimi testi](../test/media/unit-test-win8-unittestexplorer-contextmenurun.png "Unit_Test_Win8_UnitTestExplorer_ContextMenuRun")
 
     > [!TIP]
-    > Explorer'da listelenen bir veya daha fazla birim testleri seçebilir ve ardından sağ tıklatın ve seçin **seçili Testleri Çalıştır**.
+    > Gezgin 'de listelenen bir veya daha fazla birim testi seçebilir ve sağ tıklayıp **Seçili Testleri Çalıştır**' ı seçebilirsiniz.
     >
-    >  Ayrıca, seçebileceğiniz **seçilen Testlerde Hata Ayıkla**, **açık Test**ve **özellikleri** seçeneği.
+    >  Ayrıca, **Seçili testlerin hatalarını ayıklamayı**, **testi açmayı**ve **Özellikler** seçeneğini kullanmayı seçebilirsiniz.
     >
     >  ![Birim test Gezgini &#45; UNI test bağlam menüsü](../test/media/unit-test-win8-unittestexplorer-contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")
 

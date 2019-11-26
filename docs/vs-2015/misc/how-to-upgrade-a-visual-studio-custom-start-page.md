@@ -18,13 +18,13 @@ ms.locfileid: "74293370"
 Visual Studio 2010 yükseltebilir veya Visual Studio 2012 özel başlangıç sayfasına Visual Studio 2015 için aşağıda listelenen adımları izleyin.
 
 > [!WARNING]
-> Bu yordamda yükseltilmiş özel başlangıç sayfası ile oluşturulan hesaptır [özel başlangıç sayfası](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomStartPageProjectTemplate) şablonunda Visual Studio Galerisi. Başlangıç sayfanızı yükseltilmesi gereken diğer özelliklerini olabilir.
+> Bu yordamda yükseltilen özel başlangıç sayfası, Visual Studio galerisindeki [özel başlangıç sayfası](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomStartPageProjectTemplate) şablonuyla oluşturulmuş olan bir şablondur. Başlangıç sayfanızı yükseltilmesi gereken diğer özelliklerini olabilir.
 
 ### <a name="to-upgrade-a-custom-start-page-to-visual-studio-2015"></a>Özel başlangıç sayfası, Visual Studio 2015'e yükseltmek için
 
-1. Visual Studio 2015 ve Visual Studio 2015 SDK yüklü olduğundan emin olun. VSSDK dan indirebileceğiniz [Microsoft Visual Studio 2013 SDK'sı](https://my.visualstudio.com/Downloads?pid=1436).
+1. Visual Studio 2015 ve Visual Studio 2015 SDK yüklü olduğundan emin olun. VSSDK 'yi [Microsoft Visual Studio 2013 SDK](https://my.visualstudio.com/Downloads?pid=1436)'dan indirebilirsiniz.
 
-2. Özel şablon projenizi açın. Yükseltilecek projedir bildiren bir ileti görürsünüz. Tıklayın **Tamam** ve yükseltmenin tamamlanması için bekleyin.
+2. Özel şablon projenizi açın. Yükseltilecek projedir bildiren bir ileti görürsünüz. **Tamam** ' a tıklayın ve yükseltmenin tamamlanmasını bekleyin.
 
 3. Başlangıç sayfası proje hem denetimi projesi için proje özelliklerinde, hedef Framework'ü en az olduğundan emin olun. .NET Framework 4.5.
 
@@ -52,4 +52,4 @@ Visual Studio 2010 yükseltebilir veya Visual Studio 2012 özel başlangıç say
         xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
         ```
 
-7. MyControl.xaml açın ve ad alanı başvurusu `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"` için `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"` .
+7. MyControl. xaml ' yi açın ve ad alanı başvurusunu `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"` `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"` değiştirin.

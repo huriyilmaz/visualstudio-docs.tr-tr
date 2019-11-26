@@ -73,7 +73,7 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="common-tasks"></a>Ortak Görevler
 
-|**Konu**|**Görev**|
+|**İlerde**|**Görevinin**|
 |---------------|--------------|
 |[UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Modeller oluşturun** ve diyagramlar ekleyin.|
 |[UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)|Modeli düzenlemek için **diyagramlar çizin** .|
@@ -85,7 +85,7 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="related-tasks"></a>İlgili görevler
 
-|**Konu**|**Görev**|
+|**İlerde**|**Görevinin**|
 |---------------|--------------|
 |[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve katman diyagramları oluşturun.|
 |[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|
@@ -96,6 +96,6 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Kategori**|**Köprü**|
+|**Alan**|**Köprü**|
 |------------------|---------------|
 |**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|

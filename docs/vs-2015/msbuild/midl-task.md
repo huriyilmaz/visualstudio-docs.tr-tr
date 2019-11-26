@@ -90,11 +90,11 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**İmza**|**/Char imzalandı**|  
     |**İşaretlenmemiş**|**/Char işaretsiz**|  
-    |**Ascii**|**/Char ascii7**|  
+    |**ASCII**|**/Char ascii7**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/char** seçeneğine bakın.  
   
@@ -114,11 +114,11 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**Yok.**|**/hata yok**|  
+    |**Seçim**|**/hata yok**|  
     |**EnableCustom**|**/Error**|  
-    |**Tümü**|**/Error tümü**|  
+    |**Bütün**|**/Error tümü**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error** seçeneğine bakın.  
   
@@ -146,7 +146,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Daha fazla bilgi için, MIDL. exe için komut satırı yardımı 'nda ( **/?** ) **/Error numaralandırma** seçeneğine bakın.  
   
-- **ErrorCheckRefPointers**  
+- **Errorcheckrefişaretçiler**  
   
      İsteğe bağlı **Boolean** parametresi.  
   
@@ -170,10 +170,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**Yok.**|**/Client yok**|  
-    |**Stub**|**/Client saplama**|  
+    |**Seçim**|**/Client yok**|  
+    |**Saplama**|**/Client saplama**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Client** seçeneğine bakın.  
   
@@ -185,10 +185,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**Yok.**|**/Server hiçbiri**|  
-    |**Stub**|**/Server saplama**|  
+    |**Seçim**|**/Server hiçbiri**|  
+    |**Saplama**|**/Server saplama**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/Server** seçeneğine bakın.  
   
@@ -216,7 +216,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/h** veya **/Header** seçeneğine bakın.  
   
-- **IgnoreStandardIncludePath**  
+- **Ignorestandardincludepath**  
   
      İsteğe bağlı **Boolean** parametresi.  
   
@@ -224,7 +224,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/no_def_idir** seçeneğine bakın.  
   
-- **InterfaceIdentifierFileName**  
+- **Interfaceıdentifierfilename**  
   
      İsteğe bağlı **dize** parametresi.  
   
@@ -288,7 +288,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/sstub** seçeneğine bakın. Ayrıca bkz. bu tablodaki **ClientStubFile** parametresi.  
   
-- **Kaynak**  
+- **Kaynaktaki**  
   
      Gerekli `ITaskItem[]` parametresi.  
   
@@ -302,13 +302,13 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**NotSet**|*\<yok >*|  
-    |**1**|**/Zp1**|  
-    |**2**|**/Zp2**|  
-    |**4**|**/Zp4**|  
-    |**8**|**/Zp8**|  
+    |**1**|**/ZP1**|  
+    |**iki**|**/ZP2**|  
+    |**4**|**/ZP4**|  
+    |**240**|**/ZP8**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/ZP** seçeneğine bakın. **/ZP** seçeneği, **/Pack** seçeneğine ve eski **/ALIGN** seçeneğine eşdeğerdir.  
   
@@ -336,10 +336,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**NotSet**|*\<yok >*|  
-    |**Win32**|**/env Win32**|  
+    |**Win**|**/env Win32**|  
     |**Itanium**|**/env IA64**|  
     |**X64**|**/env x64**|  
   
@@ -359,10 +359,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**NewFormat**|**/newtlb**|  
-    |**OldFormat**|**/oldtlb**|  
+    |**Eskibiçim**|**/oldtlb**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/newtlb** ve **/oldtlb** seçeneklerine bakın.  
   
@@ -408,12 +408,12 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Value|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**0**|**/W0**|  
     |**1**|**/W1**|  
-    |**2**|**/W2**|  
-    |**3**|**/W3**|  
+    |**iki**|**/W2**|  
+    |**03**|**/W3**|  
     |**4**|**/W4**|  
   
      Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/w** seçeneğine bakın. Ayrıca bkz. bu tablodaki **warnaserror** parametresi.  

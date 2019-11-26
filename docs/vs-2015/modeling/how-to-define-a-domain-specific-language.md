@@ -105,7 +105,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
  Araçlarla denemeler yapın. Öğeler oluşturun ve bunları bağlayın.
 
- Deneysel örneği kapatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneğini kapatın.
 
 > [!NOTE]
 > DSL 'yi değiştirdiğinizde, örnek test dosyasında artık şekilleri göremezsiniz. Bununla birlikte, yeni öğeler de oluşturabilirsiniz.
@@ -611,7 +611,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 ## <a name="trouble"></a>Sorunu
  Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları Extensibililty forumundan](https://go.microsoft.com/fwlink/?LinkId=186074)daha fazla öneri bulabilirsiniz.
 
-|Gidermek|Öneri|
+|Sorun|Öneri|
 |-------------|----------------|
 |DSL tanımı dosyasında yaptığım değişikliklerin etkisi yoktur.|Çözüm Gezgini yukarıdaki araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın ve ardından çözümü yeniden derleyin.|
 |Şekiller, özellik değeri yerine bir dekoratörün adını gösterir.|Dekoratör eşlemesini ayarlayın. DSL tanımı diyagramında, alan sınıfı ve şekil sınıfı arasındaki gri çizgi olan diyagram öğe haritasına tıklayın.<br /><br /> **DSL ayrıntıları** penceresini açın. Bunu göremiyorsanız, Görünüm menüsünde **diğer pencereler**' in üzerine gelin ve **DSL ayrıntıları**' na tıklayın.<br /><br /> **Dekoratör haritaları** sekmesine tıklayın. dekoratörün adını seçin. Yanındaki kutunun işaretli olduğundan emin olun. **Görüntü özelliği**altında, bir etki alanı özelliğinin adını seçin.<br /><br /> Daha fazla bilgi için bkz. [diyagramdaki şekiller](#shapes).|

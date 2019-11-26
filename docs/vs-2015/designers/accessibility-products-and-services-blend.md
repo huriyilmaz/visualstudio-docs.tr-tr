@@ -30,35 +30,35 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 - "Daha fazla bilgi için"
 
 > [!NOTE]
-> Bu bölümdeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için de geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik sitesini](https://go.microsoft.com/fwlink/?LinkID=75069) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca dahil olmak üzere diğer dillerde mevcuttur.
+> Bu bölümdeki bilgiler yalnızca Microsoft ürünlerini ABD'de lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik sitesini](https://go.microsoft.com/fwlink/?LinkID=75069) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgeniz için uygun olup olmadığını bulmak amacıyla yan kuruluşa başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.
 
 ## <a name="accessibility-features-of-windows"></a>Windows'un erişilebilirlik Özellikleri
- Windows işletim sistemi, klavyede yazma veya fare kullanma güçlüğü olan, görme engelli veya görme kapasitesi düşük, işitme engelli ya da işitme zorluğu olan bireyler için faydalı çok sayıda yerleşik erişilebilirlik özelliği içerir. Özellikler kurulum sırasında yüklenir. Bu özellikler hakkında daha fazla bilgi için bkz. Windows ve [Microsoft Erişilebilirlik sitesindeki](https://go.microsoft.com/fwlink/?LinkID=75069)yardım.
+ Windows işletim sistemi, klavyede yazma veya fare kullanma güçlüğü olan, görme engelli veya görme kapasitesi düşük, işitme engelli ya da işitme zorluğu olan bireyler için faydalı çok sayıda yerleşik erişilebilirlik özelliği içerir. Özellikler Kurulum sırasında yüklenir. Bu özellikler hakkında daha fazla bilgi için bkz. Windows ve [Microsoft Erişilebilirlik sitesindeki](https://go.microsoft.com/fwlink/?LinkID=75069)yardım.
 
 ### <a name="free-step-by-step-tutorials"></a>Ücretsiz adım adım öğreticiler
- Microsoft, bilgisayarınızda erişilebilirlik seçeneklerini ve ayarlarını ayarlamaya yönelik ayrıntılı yordamlar sağlayan bir dizi adım adım öğreticilik sunmaktadır. Bu bilgiler, fareyi, klavyeyi veya her ikisinin birleşimini nasıl kullanacağınızı öğrenmek için yan yana bir biçimde sunulmaktadır.
+ Microsoft, bilgisayarınızda erişilebilirlik seçeneklerini ve ayarlarını ayarlamanız için ayrıntılı yordamlar sağlayan adım adım eğitim serileri sunar. Bu bilgiler fareyi, klavyeyi veya her ikisinin birleşimini nasıl kullanabileceğinizi öğrenebilmeniz için yan yana sunulur.
 
  Microsoft ürünlerine yönelik adım adım öğreticiler bulmak için bkz. [Microsoft erişilebilirlik sitesi](https://go.microsoft.com/fwlink/?LinkID=75069).
 
 ### <a name="assistive-technology-products-for-windows"></a>Windows için yardımcı teknoloji ürünleri
- Bilgisayarların engelliler için kullanımı daha kolay hale getirmek için çok çeşitli yardımcı teknoloji ürünleri mevcuttur. Windows üzerinde çalışan yardımcı teknoloji ürünlerinin kataloğunu [Microsoft Erişilebilirlik sitesinde](https://go.microsoft.com/fwlink/?LinkID=75069)arayabilirsiniz.
+ Engelliler için bilgisayar kullanımını daha kolay hale getirmek için çok çeşitli yardımcı teknolojik ürün kullanılabilir. Windows üzerinde çalışan yardımcı teknoloji ürünlerinin kataloğunu [Microsoft Erişilebilirlik sitesinde](https://go.microsoft.com/fwlink/?LinkID=75069)arayabilirsiniz.
 
- Yardımcı teknoloji kullanıyorsanız, olası uyumluluk sorunlarını denetlemek için yazılımınızı veya donanımınızı yükseltmeden önce yardımcı teknoloji satıcınızla iletişime geçerek emin olun.
+ Yardımcı teknoloji kullanıyorsanız, yazılımınızı veya donanımınızı yükseltmeden önce olası uyumluluk sorunlarına karşı yardımcı teknoloji satıcınızla iletişime geçin.
 
 ## <a name="documentation-in-alternative-formats"></a>Alternatif biçimlerdeki belgeler
- Yazdırılmış malzemeleri okurken veya işlerken güçlük çekiyorsanız, birçok Microsoft ürününe yönelik belgeleri daha erişilebilir biçimlerde elde edebilirsiniz. [Microsoft Erişilebilirlik sitesinde](https://go.microsoft.com/fwlink/?LinkID=75069)erişilebilir ürün belgelerinin dizinini görüntüleyebilirsiniz.
+ Yazdırılan malzemelerin okunmasında veya yönetilmesinde zorluk yaşıyorsanız, bir Microsoft ürününe yönelik belgeleri daha erişilebilir bir biçimde edinebilirsiniz. [Microsoft Erişilebilirlik sitesinde](https://go.microsoft.com/fwlink/?LinkID=75069)erişilebilir ürün belgelerinin dizinini görüntüleyebilirsiniz.
 
- Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB & D) için daha fazla Microsoft yayını elde edebilirsiniz. RFB & D bu belgeleri dağıtım hizmetinin kayıtlı ve uygun üyelerine dağıtır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının kullanılabilirliği hakkında daha fazla bilgi için, şu kişiye başvurun:
+ Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB&D) sitesinde ek Microsoft yayınları bulabilirsiniz. RFB&D bu belgeleri kendi dağıtım hizmetine kayıtlı ve uygun üyelerine dağıtmaktadır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
 
  **Önemli ölçüde öğrenme**
 
- 20 Roszel yol
+ 20 Roszel Road
 
  Princeton, NJ 08540
 
- Birleşik Devletler içinden telefon numarası: (800) 221-4792
+ ABD içinden aranabilecek telefon numarası: (800) 221-4792
 
- Birleşik Devletler ve Kanada dışında telefon numarası: (609) 452-0606
+ ABD ve Kanada dışı için telefon numarası: (609) 452-0606
 
  Faks: (609) 987-8116
 
@@ -69,11 +69,11 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 ## <a name="customer-service-for-people-with-hearing-impairments"></a>İşitme Engelli kişiler için müşteri hizmetleri
  İşitme engelliyseniz veya işitme zorluğu çekiyorsanız, bir metin telefonu (TTY/TDD) hizmeti aracılığıyla Microsoft ürün ve müşteri hizmetlerine tam erişim mümkündür:
 
- Müşteri Hizmetleri için, tatiller hariç Pazartesi 'den Cuma 'Ya kadar Pasifik saati (800) 5:30 6:30 892-5234 ' de Microsoft Sales Information Center 'a başvurun.
+ Müşteri hizmetleri için, tatiller hariç Pazartesi - Cuma 6:30 ve 17:30 (Pasifik Saati) saatleri arasında (800) 892-5234 no'lu telefondan Microsoft Sales Information Center'a başvurun.
 
- Birleşik Devletler teknik yardım için, Microsoft Ürün Destek Hizmetleri 'ne (800) 6:00 6:00 892-5234 ile Pasifik saati, Pazartesi ile Cuma arası (tatiller hariç). Kanada 'da, tatiller hariç Pazartesi 'den Cuma 'Ya kadar Doğu saati (905) 568-9641 ile 8:00 8:00
+ ABD'de teknik yardım için, tatiller hariç Pazartesi - Cuma 6:00 ve 18:00 (Pasifik Saati) saatleri arasında (800) 892-5234 no'lu telefondan Microsoft Ürün Destek Hizmetleri'ne başvurun. Kanada'da, tatiller hariç Pazartesi - Cuma 8:00 AM ve 8:00 PM (Doğu Amerika Saati) saatleri arasında (905) 568-9641 no'lu telefonu arayın.
 
- Microsoft Desteği hizmetler, hizmetin kullanıldığı sırada fiyatlara, koşullara ve koşullara tabidir.
+ Microsoft Destek Hizmetleri hizmetin kullanıldığı andaki ücretlendirmeye, hüküm ve koşullara tabidir.
 
 ## <a name="for-more-information"></a>Daha fazla bilgi için
  Bilgisayarlar için erişilebilir teknolojinin Engelli kişilerin yaşamlarını iyileştirmeye nasıl yardımcı olduğu hakkında daha fazla bilgi için bkz. [Microsoft erişilebilirlik sitesi](https://go.microsoft.com/fwlink/?LinkID=75069).

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 10/13/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 6f120bae88a7d613873a9d350e411842904e700e
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: 341e21d3411afdd8402d223b455f60bcf39a4a40
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099597"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491659"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerine kod Dergisi dahildir
 
@@ -39,7 +39,7 @@ CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Şu adımları izlemeni
       > ![CODE Magazine abonelik ayrıntıları](_img/vs-code-magazine/vs-code-magazine-details.png "Abonelik ayrıntıları ve fiyat")
 6. Ardından, abone bilgilerinizi ve bir teslim adresini sağlamanız gerekir.  (Teslim adresi, karşılama, teklif seçimi ve dijital erişim süreçlerini desteklediğinden, dijital abonelikler için bile gereklidir.)
 7. Birleşik Devletler dışında yaşıyorsanız ve yazdırılmış bir dergi aboneliği almayı seçerseniz, Sevkiyat maliyetlerini kapsayacak bir fatura adresi ve ödeme bilgileri sağlamanız istenebilir. 
-8. Onay kutusuna tıklayarak HTML newletter kodunu kullanabilirsiniz.
+8. Onay kutusuna tıklayarak HTML bültene kod göndermeyi tercih edebilirsiniz.
    > [!div class="mx-imgBorder"]
    > ![CODE Magazine abone bilgileri](_img/vs-code-magazine/vs-code-magazine-subscriber-info.png "Abone bilgileri ve teslim adresi")
 9. Aboneliğinizi tamamladıktan sonra **siparişi yerleştir** ' e tıklayın.  

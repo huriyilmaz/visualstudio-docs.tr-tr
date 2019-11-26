@@ -236,7 +236,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
       </ItemGroup>
     ```
 
-14. Değişikliklerinizi kaydedin.
+14. Yaptığınız değişiklikleri kaydedin.
 
 15. . Csproj veya. vbproj dosyasını kapatın.
 
@@ -317,7 +317,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-6. Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
+6. Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
 
 7. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
@@ -723,7 +723,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 9. \<AppxManifest > öğesi içeren \<ItemGroup > öğesini bulun. Include özniteliği: Packages. config olarak ayarlanmış bir \<None > öğesi varsa, silin. Ayrıca, Include özniteliğiyle birlikte \<None > öğesi ekleyin ve değerini: Project. JSON olarak ayarlayın.
 
-10. Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
+10. Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
 
 11. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
@@ -737,7 +737,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
         ```
 
-    2. Değişikliklerinizi kaydedin.
+    2. Yaptığınız değişiklikleri kaydedin.
 
 14. Önceki adımda sildiğiniz paketleri eklemek için NuGet yöneticisini kullanın. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](https://docs.microsoft.com/nuget/) sürüm 3 ' ü kullanmadır.
 
@@ -794,7 +794,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 5. .NET Native etkinleştirmek için \<EnableDotNetNativeCompatibleProfile > öğesini ve \<Usedotnetnativetoolzincirine > öğesini güncelleştirmeniz gerekir, ancak C++ şablonlarda .NET Native etkin değildir.
 
-     Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
+     Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
 
 6. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
@@ -806,7 +806,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
         ```
 
-    2. Değişikliklerinizi kaydedin.
+    2. Yaptığınız değişiklikleri kaydedin.
 
          Artık uygulamanızı kodleyebilir, oluşturabilir ve hata ayıklayabilirsiniz.
 

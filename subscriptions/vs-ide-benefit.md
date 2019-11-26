@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/14/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil edilen Visual Studio IDE 'yi indirme ve yükleme hakkında bilgi edinin.
-ms.openlocfilehash: 74f7de0272130f88c683dcabefaecccf1554ab12
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: fd140dfe1853e6799a960fd8e251a566954bf143
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099636"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491595"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
 
@@ -41,9 +41,9 @@ IDE 'yi indirmek için:
    > [!div class="mx-imgBorder"]
    > Visual Studio Enterprise ![özelleştirme](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
 
-10. **Yükle**'ye tıklatın.
+10. **Yükle**'ye tıklayın.
 
-11. Yükleme tamamlandığında, yüklemeyi değiştirme veya Visual Studio 'Yu başlatma seçeneğine sahip olacaksınız.  Başlamak için **Başlat** ' a tıklayın.  Birden çok sürüm yüklüyse, bunlar listelenecektir.
+11. Yükleme tamamlandığında, yüklemeyi değiştirme veya Visual Studio 'Yu başlatma seçeneğine sahip olacaksınız.  Başlamak için **Başlat** ' a tıklayın.  Birden çok sürüm yüklüyse, bunlar listelenir.
     > [!div class="mx-imgBorder"]
     > ![başlatma Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png)
 

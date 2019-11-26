@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74302765"
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>Kural Kümesi Düzenleyicisi İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kural kümesi Düzenleyicisi** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kural kümesi Düzenleyicisi** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
 
  **Kural kümesi Düzenleyicisi** iletişim kutusu, bir. Rules dosyasına serileştirilmiş olan [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) kural kümelerini oluşturmak ve değiştirmek için kullanılır.
 
@@ -38,10 +38,10 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**kur
 |Arabirim Öğesi|Açıklama|
 |----------------|-----------------|
 |**Kural Ekle**|Kural kümesine yeni bir kural tanımı ekler.|
-|**Delete**|Seçili kuralı kural kümesinden siler.|
+|**Sil**|Seçili kuralı kural kümesinden siler.|
 |**İlerek**|Kural kümesiyle hangi türde bir iletme zincirin kullanılacağını belirtir. Kullanılabilir seçenekler şunlardır:<br /><br /> Tüm ileri zincirleme mekanizmaların kullanılacağını belirten **tam zincirleme**-   : örtük, yöntem Attributing ve bir **Update** işlevi kullanılarak açık.<br />herhangi bir iletme zincirin kullanılacağını belirten -   **sıralı**.<br />Yalnızca **güncelleştirme** eylemlerinde ileri zincirleme yapmayı belirten **yalnızca açık güncelleştirme**-   .<br /><br /> İleri zincirleme hakkında daha fazla bilgi için bkz. [PolicyActivity etkinliğini kullanma](https://go.microsoft.com/fwlink?LinkID=65004).|
 |**Ad**|Kural kümesi listesi sütun başlığı. Kuralların listesini ada göre sıralamak için tıklayın.|
-|**Öncelik**|Kural kümesi listesi sütun başlığı. Kuralların listesini önceliğe göre sıralamak için tıklayın.|
+|**Priority**|Kural kümesi listesi sütun başlığı. Kuralların listesini önceliğe göre sıralamak için tıklayın.|
 |**Yeniden değerlendirme**|Kural kümesi listesi sütun başlığı. Kural listesini yeniden değerleme türüne göre sıralamak için tıklayın.|
 |**Kural önizlemesi**|Kural kümesi listesi sütun başlığı. Kural listesini bir kuralın koşulunun ve eylemlerinin önizlemesine göre sıralamak için tıklayın.|
 |**Ada**|Kural adını girin.|

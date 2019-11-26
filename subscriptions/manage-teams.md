@@ -5,13 +5,13 @@ ms.author: lank
 manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
-description: Büyük ekipler ve dış yükleniciler için abonelikleri yönetmek üzere yöneticiler ' responsibilty hakkında bilgi edinin.
-ms.openlocfilehash: 91e507358084bcb878d2a9afc7aad4fe4a2b869c
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+description: Yöneticilerin büyük ekipler ve dış yükleniciler için abonelikleri yönetme sorumluluğu hakkında bilgi edinin.
+ms.openlocfilehash: 975db18e207f52db8e9d37aa190f9085d4069163
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493341"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491699"
 ---
 # <a name="large-teams-and-external-contractors"></a>Büyük takımlar ve dış yükleniciler
 Visual Studio abonelikleri yöneticileri, Visual Studio lisanslı yazılımlarla etkileşim kuran her bir kullanıcının kendi Visual Studio aboneliğiyle uygun şekilde lisanslanmasını sağlamaktan sorumludur.
@@ -37,5 +37,5 @@ Dış yükleniciler, lisansları Visual Studio lisanslı ortamınızdan devreye 
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Yönetici sorumlulukları](admin-responsibilities.md)
 - [Üretim öncesi ortam envanteri](admin-inventory.md)
-- [Kullanıcı atamalarını ve işlem emirlerini izleme](assignments-orders.md)
+- [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın

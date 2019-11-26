@@ -19,7 +19,7 @@ ms.locfileid: "74292542"
 # <a name="run-unit-tests-on-uml-extensions"></a>UML genişletmelerinde birim testleri çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı olmak için birim testleri yazmanızı ve bunları düzenli bir yapı sürecinin bir parçası olarak gerçekleştirmenizi öneririz. Daha fazla bilgi için [Birim Test kodunuzu](../test/unit-test-your-code.md). Visual Studio modelleme uzantıları için testleri ayarlamak üzere bazı önemli bilgi parçalarına ihtiyacınız vardır. Özet:
+Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı olmak için birim testleri yazmanızı ve bunları düzenli bir yapı sürecinin bir parçası olarak gerçekleştirmenizi öneririz. Daha fazla bilgi için bkz. [birim testi kodunuz](../test/unit-test-your-code.md). Visual Studio modelleme uzantıları için testleri ayarlamak üzere bazı önemli bilgi parçalarına ihtiyacınız vardır. Özet:
 
 - [VSıX uzantıları için birim testi ayarlama](#Host)
 
@@ -57,7 +57,7 @@ Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı
 
     1. **UML uzantı projesi.** Genellikle bunu komutu, hareketi veya doğrulama projesi şablonlarını kullanarak oluşturursunuz. Örneğin, bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
-    2. **Bir birim test projesi.** Daha fazla bilgi için [Birim Test kodunuzu](../test/unit-test-your-code.md).
+    2. **Bir birim test projesi.** Daha fazla bilgi için bkz. [birim testi kodunuz](../test/unit-test-your-code.md).
 
 2. UML modelleme projesi içeren bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturun. Bu çözümü testlerinizin ilk durumu olarak kullanacaksınız. UML uzantısını ve birim testlerini yazdığınız çözümden ayrı olmalıdır. Daha fazla bilgi için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
@@ -84,13 +84,13 @@ Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı
 
     - **Microsoft. VisualStudio. mimari Turetools. Extensibility. dll**
 
-    - **Microsoft.VisualStudio.ComponentModelHost.dll**
+    - **Microsoft. VisualStudio. ComponentModelHost. dll**
 
     - **Microsoft. VisualStudio. QualityTools. UnitTestFramework. dll**
 
     - **Microsoft. VisualStudio. Uml. Interfaces. dll**
 
-    - **Microsoft.VSSDK.TestHostFramework.dll**
+    - **Microsoft. VSSDK. TestHostFramework. dll**
 
 6. Başlangıç yöntemleri de dahil olmak üzere her test yöntemine `[HostType("VS IDE")]` özniteliği öneki.
 

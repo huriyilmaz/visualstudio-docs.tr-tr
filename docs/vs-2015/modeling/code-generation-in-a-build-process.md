@@ -67,7 +67,7 @@ Düzenlemeden sonra **yeniden yükle**' yi seçin.
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- veya -
+\- veya-
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 

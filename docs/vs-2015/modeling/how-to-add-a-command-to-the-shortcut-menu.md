@@ -335,7 +335,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 ## <a name="troubleshooting"></a>Sorun giderme
  **Komut menüde görünmüyor:**
 
-- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 - Deneysel örneklerinizin bu DSL için doğru dosya adı uzantısına sahip olduğundan emin olun. Dosya adı uzantısını denetlemek için, Visual Studio 'nun ana örneğinde DslDefinition. dsl dosyasını açın. Ardından DSL Gezgini ' nde düzenleyici düğümüne sağ tıklayın ve ardından Özellikler ' e tıklayın. Özellikler penceresi FileExtension özelliğini inceleyin.
 

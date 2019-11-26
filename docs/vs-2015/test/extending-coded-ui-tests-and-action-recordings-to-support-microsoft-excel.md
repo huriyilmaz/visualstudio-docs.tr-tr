@@ -20,7 +20,7 @@ ms.locfileid: "74302569"
 
 Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli kullanıcı arabirimini desteklemiyor olabilir. Örneğin, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] bir elektronik tablo için hemen kodlanmış UI testi veya eylem kaydı oluşturamazsınız. Ancak, kodlanmış UI test çerçevesinin genişletilebilirliğine katılarak, kodlanmış UI test çerçevesi için kendi uzantınızı oluşturabilirsiniz. Aşağıdaki konu, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]için kodlanmış UI testleri ve eylem kayıtları oluşturmayı desteklemek üzere Framework 'ü genişletmeye yönelik bir örnek vermektedir. Desteklenen platformlar hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri ve eylem kayıtları Için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 

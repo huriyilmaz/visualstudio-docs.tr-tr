@@ -51,7 +51,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 ## <a name="common-tasks"></a>Ortak Görevler
  Kullanıcıların gereksinimlerinin birkaç farklı görünümünü oluşturabilirsiniz.  Her görünüm belirli bir bilgi türü sağlar.  Bu görünümleri oluşturduğunuzda sıklıkla bir tane diğerine taşımak en iyisidir. Herhangi bir görünümden başlayabilirsiniz.
 
-|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Bölüm|
+|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Section|
 |-------------------------|-----------------------------------------------|-------------|
 |Kullanım örneği diyagramı|Sistemi kim ve bununla ne yaptığını kullanır.|[Sisteminizin nasıl kullanıldığını açıklama](#UseCases)|
 |Kavramsal sınıf diyagramı|Gereksinimleri anlatmak için kullanılan türlerin sözlüğü; Sistem arabiriminde görünen türler.|[Gereksinimleri tanımlamak için kullanılan terimleri tanımlama](#RequirementsClasses)|
@@ -87,7 +87,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
   Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |--------------------|----------|
 |Kullanım örnekleri oluşturma hakkında daha ayrıntılı bilgi|[UML Kullanım Durumu Diyagramları: Yönergeler](../modeling/uml-use-case-diagrams-guidelines.md)|
 |Kullanım durumu diyagramındaki öğeler|[UML Kullanım Durumu Diyagramları: Başvuru](../modeling/uml-use-case-diagrams-reference.md)|
@@ -132,7 +132,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
   Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |--------------------|----------|
 |Gereksinim sınıfları bulma hakkında daha ayrıntılı bilgi|[UML Sınıf Diyagramları: Yönergeler](../modeling/uml-class-diagrams-guidelines.md)|
 |Kavramsal sınıf diyagramındaki öğeler|[UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)|
@@ -155,7 +155,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
  Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |--------------------|----------|
 |Statik iş kurallarını bulma ve kaydetme hakkında daha ayrıntılı bilgi|[UML Sınıf Diyagramları: Yönergeler](../modeling/uml-class-diagrams-guidelines.md)|
 |Kavramsal sınıf diyagramındaki öğeler|[UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)|
@@ -180,7 +180,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
   Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |--------------------|----------|
 |Kullanım örneklerine ek belgeler iliştirme|[Kullanım örneğini belgelere ve diyagramlara bağlama](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |Hizmet gereksinimlerinin kalitesi ile ilgili kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
@@ -200,7 +200,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
  Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |--------------------|----------|
 |İş iş akışlarının nasıl tanımlanacağı hakkında daha fazla bilgi|[UML Etkinlik Diyagramları: Yönergeler](../modeling/uml-activity-diagrams-guidelines.md)|
 |Etkinlik diyagramındaki öğeler|[UML Etkinlik Diyagramları: Başvuru](../modeling/uml-activity-diagrams-reference.md)|
@@ -217,7 +217,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 
  Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |--------------------|----------|
 |Etkileşimlerin nasıl tanımlanacağı hakkında daha fazla bilgi|[UML Sıralı Diyagramlar: Yönergeler](../modeling/uml-sequence-diagrams-guidelines.md)|
 |Sıralı diyagramdaki öğeler|[UML Sıralı Diyagramlar: Başvuru](../modeling/uml-sequence-diagrams-reference.md)|

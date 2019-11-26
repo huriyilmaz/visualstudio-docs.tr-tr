@@ -65,7 +65,7 @@ Bu konuda, Windows Evrensel uygulamaları için kullanılabilen bir performans a
   
 3. **Kullanılabilir araçlar**' dan **HTML UI yanıtlama hızı**' nı seçin ve ardından **Başlat**' ı seçin.  
   
-4. UI yanıtlama hızı profil oluşturucuyu başlattığınızda, bir kullanıcı hesabı denetim penceresi Visual Studio ETW Collector. exe ' yi çalıştırmak için izninizi isteyebilir. Seçin **Evet**.  
+4. UI yanıtlama hızı profil oluşturucuyu başlattığınızda, bir kullanıcı hesabı denetim penceresi Visual Studio ETW Collector. exe ' yi çalıştırmak için izninizi isteyebilir. **Evet**' i seçin.  
   
      İlgili performans senaryosunu test etmek için uygulamayla etkileşime geçin. Ayrıntılı bir iş akışı için bkz. [UI yanıtlama hızı sorununu yalıtma](#Workflow) ve [bir görsel işleme sorununu yalıtma](#IsolateVisualThroughput).  
   
@@ -336,15 +336,15 @@ if (performance.mark && performance.measure) {
 |HTML Ayrıştırma|Yükleniyor|Yeni HTML içeriğine rastlandı ve içeriği düğümlere ayrıştırmak ve içeriği DOM ağacına eklemek için bir girişimde bulunuldu.|  
 |HTTP isteği|Yükleniyor|DOM 'da uzak bir kaynak bulundu veya bir HTTP isteği ile sonuçlanan bir XMLHttpRequest oluşturuldu.|  
 |Yansımalı indirme|Yükleniyor|Kaynakların sonraki HTTP isteklerinin hızla zamanlanabilmesi için sayfanın HTML içeriği gerekli kaynaklar için arandı.|  
-|Animasyon çerçevesi geri çağırma işlevi|Betik Oluşturma|Tarayıcı başka bir çerçeve işlemeye gidiyor ve bu, uygulama tarafından sağlanmış bir geri çağırma işlevi tetikledi.|  
-|DOM olayı|Betik Oluşturma|DOM olayı gerçekleşti ve yürütüldü.<br /><br /> DOM olayı için `DOMContentLoaded` veya `click`gibi `context` özelliği parantez içinde gösterilir.|  
-|Olay dinleyicisi|Betik Oluşturma|Bir olay dinleyicisi çağrıldı ve yürütüldü.|  
-|Medya sorgusu dinleyicisi|Betik Oluşturma|Kayıtlı bir medya sorgusu geçersiz kılındı ve bu, ilişkili dinleyicisinin yürütülmesine neden oldu.|  
-|Mutasyon gözlemcisi|Betik Oluşturma|Bir veya daha fazla gözlemlenen DOM öğesi değiştirilmiştir ve bu da bir değiştirici ile ilgili geri aramanın yürütülmesine neden olur.|  
-|Betik değerlendirmesi|Betik Oluşturma|DOM 'da yeni bir BETIK öğesi bulundu ve betiği ayrıştırmak ve yürütmek için bir girişimde bulunuldu.|  
-|Zamanlayıcı|Betik Oluşturma|Zamanlanmış bir zamanlayıcı süresi geçti ve bu, ilişkili geri çağırma işlevinin yürütülmesine neden oldu.|  
-|Zaman uyumsuz geri çağırma işlevini Windows Çalışma Zamanı|Betik Oluşturma|Bir `Promise` geri çağırma işlevi tetikleyen zaman uyumsuz bir işlem Windows Çalışma Zamanı nesnesi tarafından tamamlandı.|  
-|Windows Çalışma Zamanı olayı|Betik Oluşturma|Bir Windows Çalışma Zamanı nesnesinde gerçekleşen bir olay kayıtlı bir dinleyiciyi tetikledi.|  
+|Animasyon çerçevesi geri çağırma işlevi|Komut Dosyaları|Tarayıcı başka bir çerçeve işlemeye gidiyor ve bu, uygulama tarafından sağlanmış bir geri çağırma işlevi tetikledi.|  
+|DOM olayı|Komut Dosyaları|DOM olayı gerçekleşti ve yürütüldü.<br /><br /> DOM olayı için `DOMContentLoaded` veya `click`gibi `context` özelliği parantez içinde gösterilir.|  
+|Olay dinleyicisi|Komut Dosyaları|Bir olay dinleyicisi çağrıldı ve yürütüldü.|  
+|Medya sorgusu dinleyicisi|Komut Dosyaları|Kayıtlı bir medya sorgusu geçersiz kılındı ve bu, ilişkili dinleyicisinin yürütülmesine neden oldu.|  
+|Mutasyon gözlemcisi|Komut Dosyaları|Bir veya daha fazla gözlemlenen DOM öğesi değiştirilmiştir ve bu da bir değiştirici ile ilgili geri aramanın yürütülmesine neden olur.|  
+|Betik değerlendirmesi|Komut Dosyaları|DOM 'da yeni bir BETIK öğesi bulundu ve betiği ayrıştırmak ve yürütmek için bir girişimde bulunuldu.|  
+|Zamanlayıcı|Komut Dosyaları|Zamanlanmış bir zamanlayıcı süresi geçti ve bu, ilişkili geri çağırma işlevinin yürütülmesine neden oldu.|  
+|Zaman uyumsuz geri çağırma işlevini Windows Çalışma Zamanı|Komut Dosyaları|Bir `Promise` geri çağırma işlevi tetikleyen zaman uyumsuz bir işlem Windows Çalışma Zamanı nesnesi tarafından tamamlandı.|  
+|Windows Çalışma Zamanı olayı|Komut Dosyaları|Bir Windows Çalışma Zamanı nesnesinde gerçekleşen bir olay kayıtlı bir dinleyiciyi tetikledi.|  
 |Atık toplama|GC|Artık kullanımda olmayan nesneler için bellek toplanırken harcanan zaman.|  
 |CSS hesaplama|Stil oluşturma|DOM 'da, etkilenen tüm öğelerin stil özelliklerinin yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|  
 |Düzen|Stil oluşturma|DOM 'da, etkilenen tüm öğelerin boyutunun ve/veya konumunun yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|  

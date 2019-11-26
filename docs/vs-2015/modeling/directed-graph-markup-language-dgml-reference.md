@@ -98,7 +98,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 
    `Label`-düğümün görünen adı.
 
-   Stil öznitelikleri. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Stil öznitelikleri. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category`-bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
@@ -163,7 +163,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 
    `Label`-bağlantının görünen adı
 
-   Stil öznitelikleri. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Stil öznitelikleri. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category`-bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
@@ -220,7 +220,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 
    Bu öğe için örneğinde, `FailedTest` kategorisi `PassedTest` kategorisinden `Stroke` özniteliğini devralır. [Dgml dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)bölümünde "Hiyerarşik kategoriler oluşturmak için" bölümüne bakın.
 
-   Kategoriler Ayrıca, bir haritada görüntülendiklerinde düğümlerin ve bağlantıların görünümünü denetleyen bazı temel şablon davranışlarını de sağlar. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategoriler Ayrıca, bir haritada görüntülendiklerinde düğümlerin ve bağlantıların görünümünü denetleyen bazı temel şablon davranışlarını de sağlar. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Örnek:
 

@@ -44,13 +44,13 @@ ms.locfileid: "74301408"
 
    1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-   2. **Yeni Proje** iletişim kutusu görünür.
+   2. **Yeni proje** iletişim kutusu görüntülenir.
 
    3. **Proje türleri**altında **diğer proje türleri** düğümünü genişletin ve **genişletilebilirlik**' e tıklayın.
 
    4. **Alana özgü dil Tasarımcısı**' ye tıklayın.
 
-   5. **Ad** kutusuna çözüm için bir ad yazın. {1&gt;Tamam&lt;1} düğmesini tıklatın.
+   5. **Ad** kutusuna çözüm için bir ad yazın. **Tamam**'a tıklayın.
 
        **Alana özgü dil Tasarımcısı Sihirbazı** görüntülenir.
 
@@ -100,11 +100,11 @@ Yeni bir dosya uzantısı yazın.
 
 - Farklı bir dosya uzantısı yazın.
 
-     \- veya -
+     \- veya-
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deneysel örneği sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
 
-     \- veya -
+     \- veya-
 
 - Bu dosya uzantısını kullanan bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı bilgisayarınızda tamamen yüklüyse, kaldırın. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın.
 

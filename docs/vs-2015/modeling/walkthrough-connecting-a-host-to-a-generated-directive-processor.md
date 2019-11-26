@@ -65,12 +65,12 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
 
      Etki alanına özgü dil çözümü oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+2. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
 
    > [!IMPORTANT]
    > Bu adım yönerge işlemcisini oluşturur ve anahtar kayıt defterine ekler.
 
-3. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
+3. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
 
     İkinci bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği açılır.
 
@@ -227,9 +227,9 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
             }
     ```
 
-7. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
+7. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
 
-8. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+8. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
 
 ## <a name="testing-the-custom-host-with-the-directive-processor"></a>Özel Konağı yönerge Işlemcisi ile test etme
  Özel metin şablonu konağını test etmek için, önce oluşturulan yönerge işlemcisini çağıran bir metin şablonu yazmanız gerekir. Ardından Özel Konağı çalıştırın, metin şablonunun adını geçirin ve yönergesinin doğru şekilde işlendiğini doğrulayın.

@@ -20,15 +20,15 @@ ms.locfileid: "74299925"
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsiniz. Daha fazla genel bilgi için bkz: [Visual Studio'daki klavye kısayollarını](default-keyboard-shortcuts-in-visual-studio.md). Visual Studio erişilebilirlik için en iyi duruma getirme hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md).
+Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsiniz. Daha fazla genel bilgi için bkz. [Visual Studio 'Da klavye kısayolları](default-keyboard-shortcuts-in-visual-studio.md). Visual Studio 'Yu erişilebilirlik için iyileştirme hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md).
 
-- [Pencere Yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowMgmt)
+- [Pencere yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowMgmt)
 
 - [Pencere kısayolları](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowShortcuts)
 
 - [Visual Studio arama](../ide/tips-and-tricks-for-visual-studio.md#BKMK_Search)
 
-- [Düzenleyici bulma](../ide/tips-and-tricks-for-visual-studio.md#BKMK_EditorFind)
+- [Düzenleyiciyi bul](../ide/tips-and-tricks-for-visual-studio.md#BKMK_EditorFind)
 
 - [Kod Düzenleyicisi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_CodeEditor)
 
@@ -38,7 +38,7 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 
 - [Uygulama yaşam döngüsü yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="BKMK_WindowMgmt"></a> Pencere Yönetimi
+## <a name="BKMK_WindowMgmt"></a>Pencere yönetimi
 
 |||
 |-|-|
@@ -49,7 +49,7 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 |Açık dosya listesini göster|Ctrl + Alt + Aşağı|
 |Tüm kayan Windows Göster|Ctrl+Shift+M|
 
-## <a name="BKMK_WindowShortcuts"></a> Pencere kısayolları
+## <a name="BKMK_WindowShortcuts"></a>Pencere kısayolları
 
 |||
 |-|-|
@@ -59,17 +59,17 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 |Yeni örnek Başlat|Win + Shift + n|
 |Windows arasında geçiş yapma|Win+n|
 
-## <a name="BKMK_Search"></a> Visual Studio arama
+## <a name="BKMK_Search"></a>Visual Studio arama
 
 |||
 |-|-|
 |Çözüm Gezgini araması|Ctrl+;|
 |Herhangi bir araç penceresine arama kutusuna odak Yerleştir|Alt +' araç penceresi odağa sahip olduğunda|
 |Hızlı Başlat|Ctrl+Q|
-|Kapsam sonuçlarını Hızlı Başlat|- @opt Seçenekleri<br />- @cmd Komutları<br />- @mru En son kullanılan<br />- @doc Açık belgeler|
+|Kapsam sonuçlarını Hızlı Başlat|-@opt seçenekleri<br />-@cmd komutları<br />-@mru en son kullanılan<br />-@doc açık belgeler|
 |Araçlar seçeneklerinde arayın|Ctrl + E|
 
-## <a name="BKMK_EditorFind"></a> Düzenleyici bulma
+## <a name="BKMK_EditorFind"></a>Düzenleyiciyi bul
 
 |||
 |-|-|
@@ -84,7 +84,7 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 |Dosyalarda Bul|Ctrl+Shift+F|
 |Dosyalarda Değiştir|Ctrl+Shift+H|
 
-## <a name="BKMK_CodeEditor"></a> Kod Düzenleyicisi
+## <a name="BKMK_CodeEditor"></a>Kod Düzenleyicisi
 
 |||
 |-|-|
@@ -100,7 +100,7 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 |Tanıma Git yığını|CTRL + SHIFT + 8 (geri), Ctrl + SHIFT + 7 (İleri)|
 |Vurgulanan başvurulara gidin|CTRL + SHIFT + Yukarı (önceki), Ctrl + SHIFT + Aşağı (sonraki)|
 |Düzenleyici yakınlaştırma|CTRL + üst karakter + > (içeri), Ctrl + Shift + < (dışarı)|
-|Blok Seçimi|Alt tuşunu basılı tutup fareyi, SHIFT + Alt + ok tuşları sürükleyin|
+|Blok seçimi|Alt tuşunu basılı tutup fareyi, SHIFT + Alt + ok tuşları sürükleyin|
 |Satırı Yukarı/Aşağı Taşı|Alt + Yukarı / Alt + Aşağı Ok|
 |Tanıma göz at|Alt+F12|
 |Özet tanım penceresini kapatın|Esc|
@@ -109,7 +109,7 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 |Birden fazla gözlem sonuçları arasında gezinin|F8ve Shift+F8|
 |Kod Düzenleyicisi penceresi ve Özet tanım penceresi arasında geçiş yapma|Shift+Esc|
 
-## <a name="BKMK_Toolbars"></a> Araç çubukları
+## <a name="BKMK_Toolbars"></a>Çubuklarındaki
 
 |||
 |-|-|
@@ -137,12 +137,12 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 |Komut penceresi temizleme arabelleği|> cls|
 |Komut penceresi yazdırma değeri|? varname|
 
-## <a name="BKMK_ALM"></a> Uygulama yaşam döngüsü yönetimi
+## <a name="BKMK_ALM"></a>Uygulama yaşam döngüsü yönetimi
 
-Bkz: [klavye kısayolları: Visual Studio Online, TFS web portalı ve Takım Gezgini](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
+Bkz. [klavye kısayolları: Visual Studio Online, TFS web portalı ve Takım Gezgini](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
-- [Visual Studio ipuçları ve püf noktaları blogu](https://blogs.msdn.microsoft.com/zainnab/)
-- [Visual Studio araç kutusu Channel 9](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox)
+- [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/)
+- [Visual Studio Ipuçları ve püf noktaları](https://blogs.msdn.microsoft.com/zainnab/)
+- [Channel 9 üzerinde Visual Studio araç kutusu](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox)

@@ -43,7 +43,7 @@ Visual Studio artık, bazıları hata ayıklayıcı ile veya olmayan bir dizi pe
   
 1. Hata ayıklamak istediğiniz projeyi açın, ardından hata **Ayıkla/hata ayıklamayı Başlat** **(ya da** araç çubuğundan veya **F5**' i Başlat) seçeneğine tıklayın.  
   
-2. **Tanılama araçları** penceresi görünür otomatik olarak, bunu devre dışı bırakmış sürece. Pencereyi yeniden getirmek için **Hata Ayıkla/Windows/tanılama araçları göster**' e tıklayın.  
+2. **Tanılama araçları** penceresi devre dışı bırakılmadığı takdirde otomatik olarak görünür. Pencereyi yeniden getirmek için **Hata Ayıkla/Windows/tanılama araçları göster**' e tıklayın.  
   
 3. İçin veri toplamak istediğiniz senaryoları çalıştırın.  
   

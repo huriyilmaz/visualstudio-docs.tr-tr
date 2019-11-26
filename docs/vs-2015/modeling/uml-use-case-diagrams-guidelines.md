@@ -420,7 +420,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 3. İçeriğini ayarlamak için mevcut kullanım çalışmalarını alt sistem içine veya dışına sürükleyin.
 
-   \- veya -
+   \- veya-
 
    Doğrudan bir alt sistemde yeni bir kullanım durumu oluşturmak için, araç kutusunda **kullanım örneği** ' ne tıklayın ve ardından alt sistem içine tıklayın.
 

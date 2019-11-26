@@ -63,15 +63,15 @@ UML model öğesine açıklama eklemek ve özelleştirilmiş özellikler sağlam
 
     - Bir UML sınıf diyagramında, bir öğe için araca tıklayın ve sonra diyagramdaki paketin içine tıklayın.
 
-         \- veya -
+         \- veya-
 
     - UML Model Gezgini ' nde pakete sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından bir öğe türüne tıklayın.
 
-         \- veya -
+         \- veya-
 
     - UML Model Gezgini ' nde, varolan bir öğeyi pakete sürükleyin.
 
-         \- veya -
+         \- veya-
 
     - Bir diyagramı pakete bağlayın ve sonra diyagram içinde öğeleri oluşturun.
 

@@ -29,7 +29,7 @@ Visual Studio, derleyiciler, diller, çalışma zamanları, ortamlar ve diğer k
 |[.NET 3,5](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=net%20framework%203.5&Filter=FilterNO)|.NET 3.5 SDK<br /><br /> Windows Identity Foundation|  
 |[.NET 4,5](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=net%20framework%204.5&Filter=FilterNO)|.NET 4.5 SDK|  
 |[.NET 4.5.1](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=.NET%20Framework%204.5.1&Filter=FilterNO)|.NET 4.5.1 MT Pack (Klasik)<br /><br /> .NET 4.5.1 Çoklu Sürüm Desteği Paketi (Mağaza)<br /><br /> .NET 4.5.1 OOB MSU<br /><br /> .NET 4.5.1 Redist<br /><br /> .NET 4.5.1 Yeniden Dağıtılabilir Dil Paketleri<br /><br /> .NET 4.5.1 SDK|  
-|[ASP.NET Web Yığını](https://go.microsoft.com/fwlink/?LinkId=328918)|ASP.NET MVC 4<br /><br /> ASP.NET MVC 5<br /><br /> ASP.NET Web API<br /><br /> ASP.NET Web API 2<br /><br /> ASP.NET Web Sayfaları 2<br /><br /> ASP.NET Web Sayfaları 3|  
+|[ASP.NET Web Yığını](https://go.microsoft.com/fwlink/?LinkId=328918)|ASP.NET MVC 4<br /><br /> ASP.NET MVC 5<br /><br /> ASP.NET Web API<br /><br /> ASP.NET Web API 2<br /><br /> ASP.NET Web Pages 2<br /><br /> ASP.NET Web Sayfaları 3|  
 |[Entity Framework 6](https://go.microsoft.com/fwlink/?LinkId=328950)|Entity Framework 6|  
 |[Exchange 2013](https://go.microsoft.com/fwlink/?LinkId=328950)|Exchange Web Hizmetleri|  
 |[Microsoft OWIN](https://go.microsoft.com/fwlink/?LinkId=328951)|Microsoft OWIN|  

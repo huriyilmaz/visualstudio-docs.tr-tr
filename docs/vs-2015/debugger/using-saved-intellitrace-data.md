@@ -36,7 +36,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
   
 - Şu kaynaklardan birinden bir. iTrace dosyası:  
   
-    |**Kaynak**|**Bakýn**|  
+    |**Kaynaktaki**|**Bakýn**|  
     |----------------|-------------|  
     |Visual Studio Enterprise (Professional veya Community Edition) bir IntelliTrace oturumu|[IntelliTrace Özellikleri](../debugger/intellitrace-features.md)|  
     |Microsoft Test Yöneticisi bir test oturumu. Bu, bir. iTrace dosyasını Team Foundation Server iş öğesine ekler.|[El ile testlerde daha fazla tanılama verisi toplayın](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)|  
@@ -55,13 +55,13 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
   
 - Visual Studio dışında. iTrace dosyasına çift tıklayın veya dosyayı Visual Studio içinde açın.  
   
-     \- veya -  
+     \- veya-  
   
 - . İTrace dosyası Team Foundation Server iş öğesine eklenmişse, iş öğesinde şu adımları izleyin:  
   
   - **Tüm bağlantılar**altında. iTrace dosyasını bulun. Açın.  
 
-    \- veya -  
+    \- veya-  
 
   - Yeniden **üretme adımları**altında **IntelliTrace** bağlantısını seçin.  
   
@@ -141,9 +141,9 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
   
      Artık kaydedilen diğer değerleri, çağrı yığınını gözden geçirebilir veya diğer kayıtlı olaylar, ilgili kod ve bu noktalarda kaydedilmiş değerler [arasında "zamanda" geriye veya ileri doğru gitmek](../debugger/intellitrace.md)için **IntelliTrace** penceresini kullanabilirsiniz.  
   
-    |**Sütun**|**Şunu gösterir**|  
+    |**Sütunuyla**|**Şunu gösterir**|  
     |----------------|-------------------|  
-    |**Tür**|Özel durumun .NET türü|  
+    |**Türüyle**|Özel durumun .NET türü|  
     |Gruplandırılabilen özel durumlar veya Gruplandırılmamış özel durumlar için **ileti** Için **en yeni ileti**|Özel durum tarafından girilen ileti|  
     |Gruplanmış özel durum **sayısı**|Özel durumun kaç kez oluşturulduğu|  
     |Gruplandırılmamış özel durumlar için **Iş parçacığı kimliği**|Özel durumu oluşturan iş parçacığının KIMLIĞI|  
@@ -189,11 +189,11 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
   
     |**IntelliTrace alanı**|**SharePoint ULS alanı**|  
     |----------------------------|------------------------------|  
-    |**Kimlik**|**Even**|  
-    |**Düzey**|**Düzey**|  
+    |**Numarasını**|**Even**|  
+    |**Düzeyde**|**Düzeyde**|  
     |**Kategori Kimliği**|**Kategori Kimliği**|  
-    |**Kategori**|**Kategori**|  
-    |**Alan**|**Ürünüyle**|  
+    |**Alan**|**Alan**|  
+    |**Alandır**|**Ürünüyle**|  
     |**Output**|**İleti**|  
     |**Bağıntı kimliği**|**Bağıntı kimliği**|  
   
@@ -222,11 +222,11 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
   
    Kullanıcının oluşturduğu iş parçacığı verileri, bir sunucunun oluşturduğu ve IIS tarafından barındırılan Web uygulamaları için yönettiği iş parçacıklarından daha faydalı olabilir.  
   
-|**Sütun**|**Şunu gösterir**|  
+|**Sütunuyla**|**Şunu gösterir**|  
 |----------------|-------------------|  
-|**ID**|İş parçacığı KIMLIK numarası|  
+|**NUMARASıNı**|İş parçacığı KIMLIK numarası|  
 |**Ad**|İş parçacığı adı. Adlandırılmamış iş parçacıkları "\<ad yok >" olarak görüntülenir.|  
-|**Başlangıç saati**|İş parçacığının oluşturulduğu zaman|  
+|**Başlangıç zamanı**|İş parçacığının oluşturulduğu zaman|  
 |**Bitiş zamanı**|İş parçacığının tamamlandığı zaman|  
   
 ### <a name="TestData"></a>Test verileri  
@@ -242,7 +242,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
   
      Test verileri mevcut olduğunda, IntelliTrace test çalıştırmasını gerçekleştirmek için kullanılan ilişkili Team Foundation Server derlemesini çözümlemeye çalışır. Yapı bulunursa, uygulamanın ilişkili sembolleri otomatik olarak çözümlenir.  
   
-|**Alan**|**Şunu gösterir**|  
+|**Alanla**|**Şunu gösterir**|  
 |---------------|-------------------|  
 |**Test oturumu**|Kaydedilen test oturumları. Genellikle yalnızca bir tane vardır. Test verileri el ile araştırmacı test kullanılarak oluşturulduysa bu liste boştur.|  
 |**Test çalışması**|Seçili test oturumundan test çalışmaları. Test verileri el ile araştırmacı test kullanılarak oluşturulduysa bu liste boştur.|  
@@ -254,7 +254,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 ### <a name="Modules"></a>Modüler  
  Bu bölümde, hedef işlemin yüklendiği modüller gösterilmektedir. Modüller yüklendikleri sırada görüntülenir.  
   
-|**Sütun**|**Şunu gösterir**|  
+|**Sütunuyla**|**Şunu gösterir**|  
 |----------------|-------------------|  
 |**Modül adı**|Modül dosyası adı|  
 |**Modül yolu**|Modülün yüklendiği disk konumu|  
@@ -270,7 +270,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
  [IntelliTrace](../debugger/intellitrace.md)  
   
 #### <a name="forums"></a>Forumlar  
- [Visual Studio Debugger](https://go.microsoft.com/fwlink/?LinkId=262263)  
+ [Visual Studio hata ayıklayıcısı](https://go.microsoft.com/fwlink/?LinkId=262263)  
   
 #### <a name="guidance"></a>Rehber  
  [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 6: test araç kutusu](https://go.microsoft.com/fwlink/?LinkID=255203)

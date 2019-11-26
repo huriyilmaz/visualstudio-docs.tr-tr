@@ -105,7 +105,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 4. Bu izlenecek yol için `exampleXml.xml`dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
 
-   .
+   ..
 
 ### <a name="add-a-test-code-file"></a>Test kodu dosyası Ekle
  Projenize bir C# dosya ekleyin ve yazabilmesi istediğiniz kodun bir örneğini yazın. Örneğin:

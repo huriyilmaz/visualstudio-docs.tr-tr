@@ -50,16 +50,16 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **İşle**  
  Olayları işle  
   
- **iş parçacığı**  
+ **Zincirinin**  
  İş parçacığı olayları  
   
  **Görüntü**  
  Görüntü yükleme ve kaldırma olayları  
   
- **Disk**  
+ **Dis**  
  Disk g/ç olayları  
   
- **Dosya**  
+ **Dosyasýný**  
  Dosya g/ç olayları  
   
  **Hardfault**  
@@ -68,7 +68,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Pagefault**  
  Geçici sayfa hataları  
   
- **Ağ**  
+ **Network**  
  Ağ olayları  
   
  **Defteri**  

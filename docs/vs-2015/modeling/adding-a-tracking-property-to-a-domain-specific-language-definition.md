@@ -722,9 +722,9 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 #### <a name="to-exercise-the-language"></a>Dili uygulamak için
 
-1. Üzerinde **derleme** menüsünde tıklatın **çözümü yeniden derle**.
+1. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın.
 
-2. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
+2. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
 
      [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] deneysel derlemesi, boş bir test dosyası içeren **hata ayıklama** çözümünü açar.
 
@@ -760,5 +760,5 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
  Birden fazla izleme özelliği kullanmayı veya birden fazla DSL 'de izleme özellikleri uygulamayı planlıyorsanız, her izleme özelliğini desteklemek için ortak kodu oluşturmak üzere bir metin şablonu oluşturabilirsiniz. Metin şablonları hakkında daha fazla bilgi için bkz. [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor> <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
+ <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor><xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
  [Etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md) [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md) [izlenecek yol: etki alanına özgü dil tanımını özelleştirme](../misc/walkthrough-customizing-the-domain-specific-language-definition.md)

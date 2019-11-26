@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301464"
 ---
 # <a name="select-condition-dialog-box-legacy"></a>Koşul Seç İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**koşul seçme** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**koşul seçme** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
 
  **Koşul Seç** iletişim kutusu, bir etkinliğin koşul özelliğine atanacak bildirime dayalı bir kural koşulu seçmek için kullanılır. Bu kural koşulları, aşağıdaki Windows Workflow Foundation hazır etkinlikler üzerinde özellikler olarak sunulur:
 
@@ -42,7 +42,7 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]**ko�
 |**Yeni...**|Yeni bir kural koşulu oluşturmak için [kural koşulu Düzenleyicisi Iletişim kutusunu (eski)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) açmak için tıklayın.|
 |**Düzenle...**|Seçili kural koşulunu düzenlemek için [kural koşulu Düzenleyicisi Iletişim kutusunu (eski)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) açmak için tıklayın.|
 |**Yeniden adlandır...**|Seçili kural koşulunu yeniden adlandırmak için kullanılan bir iletişim kutusu açmak için tıklayın.|
-|**Delete**|Seçili kural koşulunu silmek için tıklayın.|
+|**Sil**|Seçili kural koşulunu silmek için tıklayın.|
 |**Koşul Önizleme**|Seçili kural koşulunun koşul ifadesini görüntüler.|
 |**Tamam**|Seçili kural koşulunu Etkinliğin koşuluna atamak için tıklayın.|
 

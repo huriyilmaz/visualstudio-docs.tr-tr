@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: XAML tools documentation
-summary: Visual Studio provides multiple tools to help you create XAML-based apps. These include the XAML editor and designer as well as debugging features.
+title: XAML araçları belgeleri
+summary: Visual Studio, XAML tabanlı uygulamalar oluşturmanıza yardımcı olmak için birden çok araç sağlar. Bunlara XAML Düzenleyicisi ve tasarımcı ve hata ayıklama özellikleri de dahildir.
 metadata:
-  title: XAML tools documentation
-  description: Navigate to different pages that help you learn how to use XAML tools in Visual Studio.
+  title: XAML araçları belgeleri
+  description: Visual Studio 'da XAML araçlarını nasıl kullanacağınızı öğrenmenize yardımcı olan farklı sayfalara gidin.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-designers
   ms.topic: landing-page
@@ -12,24 +12,24 @@ metadata:
   ms.date: 10/10/2019
   ms.openlocfilehash: 45f9459ff4778b58ae3d553a03b2e5c1773614b6
   ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 11/22/2019
   ms.locfileid: "74316409"
 landingContent:
-- title: Learn about XAML
+- title: XAML hakkında bilgi edinin
   linkLists:
   - linkListType: overview
     links:
     - text: XAML'ye genel bakış
       url: xaml-overview.md
-- title: Use XAML Designer
+- title: XAML Tasarımcısı kullan
   linkLists:
   - linkListType: overview
     links:
     - text: Visual Studio ve Blend’de XAML tasarlama
       url: designing-xaml-in-visual-studio.md
-    - text: About XAML Designer
+    - text: XAML Tasarımcısı hakkında
       url: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
 - title: XAML hatalarını ayıklama
   linkLists:
@@ -37,7 +37,7 @@ landingContent:
     links:
     - text: XAML kodu çalıştırarak yazma ve hata ayıklama
       url: xaml-hot-reload.md
-    - text: Inspect XAML properties
+    - text: XAML özelliklerini incele
       url: inspect-xaml-properties-while-debugging.md
     - text: WPF uygulamalarında hata ayıklama
       url: ../debugger/debugging-wpf.md
@@ -45,7 +45,7 @@ landingContent:
       url: ../debugger/debugging-windows-store-and-windows-universal-apps.md
     - text: Blend'de XAML hatalarını ayıklama
       url: debug-xaml-in-blend.md
-- title: Develop WPF apps
+- title: WPF uygulamaları geliştirme
   linkLists:
   - linkListType: overview
     links:
@@ -53,15 +53,15 @@ landingContent:
       url: ../designers/introduction-to-wpf.md
   - linkListType: get-started
     links:
-    - text: Get started with WPF in Visual Studio
+    - text: Visual Studio 'da WPF ile çalışmaya başlama
       url: ../designers/getting-started-with-wpf.md
-- title: Develop UWP apps
+- title: UWP uygulamaları geliştirme
   linkLists:
   - linkListType: overview
     links:
-    - text: UWP overview
+    - text: UWP genel bakış
       url: /windows/uwp/get-started/
   - linkListType: get-started
     links:
-    - text: Get started with UWP in Visual Studio
+    - text: Visual Studio 'da UWP ile çalışmaya başlama
       url: /windows/uwp/get-started/get-set-up

@@ -21,7 +21,7 @@ ms.locfileid: "74300590"
 
 Azure 'da bir Python web sitesi oluşturmaya hemen başlayın.  
   
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6).  
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)izleyebilirsiniz.  
   
  Yeni proje ile Başlat... iletişim kutusu ve Python projeleri altında şişe Web projesi ' ni seçin.  Bu [şişe](http://bottlepy.org/docs/dev/index.html) şablonu, [önyükleme çerçevesini](https://getbootstrap.com/)temel alan bir başlatıcı sitedir.  Projeyi oluştururken, Visual Studio bir sanal ortama bağımlılıklar (Bu durumda şişe) yüklemenizi ister.  Bir Azure Web sitesine dağıtmakta olduğunuzdan, sitenizin işlemi için gerekli bitleri dağıtmak üzere bir sanal ortama bağımlılıkları eklemeniz gerekir.  Ayrıca, ortamınızı Python 2,7 veya 3,4 32 bit temelinde temel almanız gerekir.  Projeyi oluşturduktan sonra, sitenizi yerel olarak çalıştırmaya başlamak için F5 ' e basın.  
   
@@ -31,8 +31,8 @@ Azure 'da bir Python web sitesi oluşturmaya hemen başlayın.
   
  Basit Web siteleri kolaydır, ancak Azure 'daki daha önemli Web uygulamaları hakkında daha fazla bilgi için, bu kanaldaki diğer kişilere (Başlarken veya derinlemesine bakış videonun sağ üst köşesinde bulunan bağlantı) ve aşağıdaki [gibi ayrıntılı bilgiler](https://www.youtube.com/watch?v=WG3pGmoo8nE&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=10) için bkz.  
   
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6).  
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)izleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Wiki belgeleri](https://github.com/Microsoft/PTVS/wiki/Web-Project)   
- [PTVS kullanmaya başlama ve kapsamlı videolar alma](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [PTV 'Leri kullanmaya başlama ve derinlemesine bakış videoları](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

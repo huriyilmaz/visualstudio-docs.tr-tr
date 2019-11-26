@@ -93,9 +93,9 @@ Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak i�
 |Filtre denetimi|Açıklama|  
 |--------------------|-----------------|  
 |**İşle**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanan tüm süreçler bu açılan listeye dahil edilir. Bu açılan bu açılan işlemle ilişkili renk, iş parçacığının etkinliğinin aşağıdaki zaman çizelgeleriyle olan rengidir.|  
-|**iş parçacığı**|İlgilendiğiniz iş parçacığı KIMLIĞI. Çok iş parçacıklı bir uygulamada, bu, ilgilendiğiniz işleme ait olan belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçilen iş parçacığıyla ilişkili olaylar her bir zaman çizelgesinde vurgulanır.|  
+|**Zincirinin**|İlgilendiğiniz iş parçacığı KIMLIĞI. Çok iş parçacıklı bir uygulamada, bu, ilgilendiğiniz işleme ait olan belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçilen iş parçacığıyla ilişkili olaylar her bir zaman çizelgesinde vurgulanır.|  
 |**Görüntülenme**|Yenileme hızına görüntülenen ekran numarası **Note:** bazı sürücüler birden çok fiziksel ekranı tek, büyük bir sanal görüntü olarak sunacak şekilde yapılandırılabilir. Makinede birden çok görüntü eklenmiş olsa bile, yalnızca bir ekran listelendiğini görebilirsiniz.|  
-|**Filtre**|İlgilendiğiniz anahtar sözcükler. Raporun alt bölümündeki olaylar yalnızca tüm veya kısmen bir anahtar sözcükle eşleşen olanları içerir. Birden çok anahtar sözcüğü noktalı virgülle ayırarak belirtebilirsiniz (;).|  
+|**Filtreyle**|İlgilendiğiniz anahtar sözcükler. Raporun alt bölümündeki olaylar yalnızca tüm veya kısmen bir anahtar sözcükle eşleşen olanları içerir. Birden çok anahtar sözcüğü noktalı virgülle ayırarak belirtebilirsiniz (;).|  
 |**Hiyerarşi sıralaması**|Kullanıcı işaretçileri aracılığıyla tanımlanan (--) olay hiyerarşilerinin korunup korunmadığını veya yoksayıldığını belirten bir onay kutusu.|  
   
  GPU kullanımı raporunun alt bölümündeki olayların listesi, her bir olayın ayrıntılarını görüntüler.  

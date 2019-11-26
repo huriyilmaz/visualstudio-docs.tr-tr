@@ -25,7 +25,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 ### <a name="to-create-a-windows-forms-application-project"></a>Windows Forms uygulama projesi oluşturmak için
 
-1. Menü çubuğunda, **dosya**, **yeni**, **proje**. İletişim kutusu şöyle görünmelidir.
+1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin. İletişim kutusu şöyle görünmelidir.
 
      ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png "Newprojectdialogbelirtme çizgileri") Yeni proje iletişim kutusu
 

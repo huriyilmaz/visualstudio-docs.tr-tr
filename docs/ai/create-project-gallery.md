@@ -1,7 +1,7 @@
 ---
-title: Proje oluşturma
-description: create project using sample from azure machine learning gallery
-keywords: ai, visual studio, azure machine learning
+title: Proje oluştur
+description: Azure Machine Learning galerisinden örnek kullanarak proje oluşturma
+keywords: AI, Visual Studio, Azure Machine Learning
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -16,47 +16,47 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188578"
 ---
-# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Create an AI project from the Azure Machine Learning Gallery in Visual Studio
+# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio 'da Azure Machine Learning galerisinden bir AI projesi oluşturma
 
-Azure Machine Learning is integrated with Visual Studio Tools for AI. You can use it to submit machine learning jobs to remote compute targets like Azure virtual machines, Spark clusters, and more. 
+Azure Machine Learning Visual Studio Tools for AI tümleşiktir. Azure sanal makineleri, Spark kümeleri ve daha fazlası gibi uzak işlem hedeflerine makine öğrenimi işleri göndermek için bu işlemi kullanabilirsiniz. 
 
-Once you've [installed Visual Studio Tools for AI](installation.md), it's easy to create a new Python project using pre-made recipes in the Azure Machine Learning Sample Gallery.
+[Visual Studio Tools for AI](installation.md)yükledikten sonra, Azure Machine Learning örnek galerisinde önceden hazırlanmış yemek tariflerini kullanarak yeni bir Python projesi oluşturmak kolaydır.
 
 > [!NOTE]
-> Azure Machine Learning Workbench must be installed. To install it please see the [Azure Machine Learning installation quickstart](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation)
+> Azure Machine Learning Workbench yüklü olmalıdır. Yüklemek için lütfen [Azure Machine Learning yükleme hızlı başlangıç](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation) bölümüne bakın
 
-1. Launch Visual Studio. Open the **Server Explorer** by opening the **AI Tools** menu and choosing **Select Cluster**
+1. Visual Studio'yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
 
-    ![Cluster chooser](media/create-project-gallery/select-cluster.png)
+    ![Küme Seçicisi](media/create-project-gallery/select-cluster.png)
 
-2. Sign in to your Azure Machine Learning subscription by right-clicking the **Azure Machine Learning** node in the Server Explorer then select **Login** and follow the directions.
+2. Sunucu Gezgini **Azure Machine Learning** düğümüne sağ tıklayarak Azure Machine Learning aboneliğinizde oturum açın ve **oturum aç** ' ı seçin ve yönergeleri izleyin.
 
-    ![login](media/create-project-gallery/azureml-login.png)
+    ![LOGIN](media/create-project-gallery/azureml-login.png)
 
-3. Select **AI Tools > Azure Machine Learning Sample Gallery**.
+3. **Örnek galerisi > AI araçları**' nı Azure Machine Learning seçin.
 
-    ![Sample gallery](media/create-project-gallery/gallery.png)
+    ![Örnek Galerisi](media/create-project-gallery/gallery.png)
 
-4. For this Quickstart, select the "**MNIST using TensorFlow**" sample and click **Install**. Provide the following:
+4. Bu hızlı başlangıç için, "**TensorFlow kullanarak Mnist**" örneğini seçin ve ardından **Install**' a tıklayın. Aşağıdakileri sağlayın:
 
-   - **Resource Group**: Azure resource group where your metadata will be stored
-   - **Account**: Azure Machine Learning experimentation Account
-   - **Workspace**: Azure Machine Learning workspace
-   - **Project Type**: The machine learning framework. In this case choose **TensorFlow**
-   - **Add to Solution**: determines whether to add to your current Visual Studio Solution or a create and open a new solution
-   - **Project Path**: Location to save the code
-   - **Project Name**: Type **TensorFlowMNIST**
+   - **Kaynak grubu**: meta verilerlerinizin depolanacağı Azure Kaynak grubu
+   - **Hesap**: Azure Machine Learning deneme hesabı
+   - **Çalışma alanı**: Azure Machine Learning çalışma alanı
+   - **Proje türü**: Machine Learning çerçevesi. Bu durumda **TensorFlow** ' ı seçin.
+   - **Çözüme Ekle**: geçerli Visual Studio çözümünüze mi yoksa yeni bir çözüm oluşturma ve açma için mi ekleneceğini belirler
+   - **Proje yolu**: kodun kaydedileceği konum
+   - **Proje adı**: tür **Tensorflowmnist**
 
-   ![Resulting project when using the Python Application template](media/create-project-gallery/new-AzureSampleProject.png)
+   ![Python uygulama şablonu kullanılırken ortaya çıkan proje](media/create-project-gallery/new-AzureSampleProject.png)
 
-5. Visual Studio creates the project file (a `.pyproj` file on disk) along with other files defined in the sample. With the "MNIST" template, the project contains several files.
+5. Visual Studio, örnek içinde tanımlanan diğer dosyalarla birlikte proje dosyasını (diskte bir `.pyproj` dosyası) oluşturur. "MNIST" şablonuyla, proje birkaç dosya içerir.
 
-    ![mnist](media/create-project-gallery/azml-mnist.png)
+    ![mnıst veritabanını kullanacaksınız](media/create-project-gallery/azml-mnist.png)
 
-6. Submit the job to Azure Machine Learning.
+6. İşi Azure Machine Learning gönder.
 
-    ![mnist](media/create-project-gallery/submit-azml.png)
+    ![mnıst veritabanını kullanacaksınız](media/create-project-gallery/submit-azml.png)
 
-7. Run in a Docker container or on your local machine
+7. Bir Docker kapsayıcısında veya yerel makinenizde çalıştırın
 
-    ![mnist](media/create-project-gallery/azml-local.png)
+    ![mnıst veritabanını kullanacaksınız](media/create-project-gallery/azml-local.png)

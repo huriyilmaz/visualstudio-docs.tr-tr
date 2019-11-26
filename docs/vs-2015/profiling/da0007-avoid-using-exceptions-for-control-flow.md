@@ -32,7 +32,7 @@ Kural kimliği | DA0007 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma verilerinde yüksek oranda .NET Framework özel durum işleyicileri çağrıldı. Oluşturulan özel durumların sayısını azaltmak için diğer denetim akışı mantığını kullanmayı göz önünde bulundurun.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

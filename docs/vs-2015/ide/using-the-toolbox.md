@@ -50,11 +50,11 @@ Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirs
 
 - **Öğeyi yeniden adlandır** -seçili öğeyi yeniden adlandırır.
 
-- **Tümünü Göster** -tüm olası denetimleri (geçerli Tasarımcı için geçerli olanları değil) gösterir.
+- **Tümünü göster** -tüm olası denetimleri gösterir (yalnızca geçerli Tasarımcı için geçerli olanları değil).
 
-- **Liste görünümü** -denetimleri dikey listesini gösterir. Denetimleri yatay olarak işaretlenmemişse, görünür.
+- **Liste görünümü** -denetimleri dikey bir listede gösterir. Denetimleri yatay olarak işaretlenmemişse, görünür.
 
-- **Seç öğeleri** -açılır **araç kutusu öğelerini Seç** iletişim kutusunda görünen öğeler belirtebilirsiniz böylece **araç kutusu**. Göstermek veya seçerek ya da onay kutusunu temizleyerek bir öğeyi gizler.
+- **Öğeleri seç** - **araç**kutusunda görünen öğeleri belirleyebilmeniz Için **araç kutusu öğelerini Seç** iletişim kutusunu açar. Göstermek veya seçerek ya da onay kutusunu temizleyerek bir öğeyi gizler.
 
 - **Öğeleri alfabetik olarak Sırala** -öğeleri ada göre sıralar.
 
@@ -62,9 +62,9 @@ Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirs
 
 - **Sekme Ekle** -yeni bir araç kutusu sekmesi ekler.
 
-- **Yukarı Taşı** -seçili öğeyi yukarı taşır.
+- **Yukarı taşı** -seçili öğeyi yukarı taşır.
 
-- **Aşağı Taşı** -seçili öğeyi aşağı taşır.
+- **Aşağı taşı** -seçili öğeyi aşağı taşır.
 
 ## <a name="creating-and-distributing-custom-toolbox-controls"></a>Özel araç kutusu denetimleri oluşturma ve dağıtma
  Visual Basic veya görselde C#özel bir araç kutusu denetimi oluşturabilirsiniz ve [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) ya da [Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)dayalı bir proje şablonuyla başlayabilirsiniz. Daha sonra denetiminizi, [araç kutusu denetimleri yükleyicisi](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)' ni kullanarak takım mateklarına dağıtabilir veya Web 'de yayımlayabilirsiniz.

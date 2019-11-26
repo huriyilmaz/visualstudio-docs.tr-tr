@@ -77,7 +77,7 @@ partition.SetLocks(Locks.Delete);
 
   Bir bölüm veya mağaza üzerinde kilit ayarlayamazsınız ve aynı zamanda tek bir öğe üzerindeki kilidi devre dışı bırakın.
 
-|Değer|`IsLocked(Value)` true ise anlamı|
+|Value|`IsLocked(Value)` true ise anlamı|
 |-----------|------------------------------------------|
 |Yok.|Kısıtlama yoktur.|
 |Özellik|Öğelerin etki alanı özellikleri değiştirilemez. Bu, bir ilişkide bir etki alanı sınıfının rolü tarafından oluşturulan özellikler için geçerlidir.|

@@ -184,7 +184,7 @@ private void WriteSquareLine(int i)
 
 ## <a name="using-external-definitions"></a>Dış tanımları kullanma
 
-### <a name="assemblies"></a>Bütünleştirilmiş kodlar
+### <a name="assemblies"></a>Derlemeler
  Şablonunuzun kod blokları, System. dll gibi en sık kullanılan .NET derlemeleri tanımlanmış türleri kullanabilir. Ayrıca, diğer .NET derlemelerine veya kendi derlemelerinize başvurabilirsiniz. Bir yol adı veya bir derlemenin tanımlayıcı adını sağlayabilirsiniz:
 
 ```
@@ -203,7 +203,7 @@ private void WriteSquareLine(int i)
 
  Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
 
-### <a name="namespaces"></a>Ad Alanları
+### <a name="namespaces"></a>{1&gt;Ad Alanları&lt;1}
  İçeri aktarma yönergesi, içindeki C# `using` yan tümcesiyle veya Visual Basic `imports` yan tümcesinde aynıdır. Tam nitelikli bir ad kullanmadan kodunuzdaki türlere başvurabileceğiniz bir kod sağlar:
 
 ```

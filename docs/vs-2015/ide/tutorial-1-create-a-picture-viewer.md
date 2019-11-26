@@ -19,7 +19,7 @@ ms.locfileid: "74299908"
 # <a name="tutorial-1-create-a-picture-viewer"></a>Eğitmen 1: Resim Görüntüleyici Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüleyen bir program oluşturacaksınız. Formunuza düğmeler ve resim kutuları gibi denetimleri nasıl sürükleyeceğinizi, özelliklerini ayarlamanıza ve formu düzgün şekilde yeniden boyutlandırmak için kapsayıcıları nasıl kullanacağınızı öğreneceksiniz. Ayrıca kod yazmaya başlayın. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüleyen bir program oluşturacaksınız. Formunuza düğmeler ve resim kutuları gibi denetimleri nasıl sürükleyeceğinizi, özelliklerini ayarlamanıza ve formu düzgün şekilde yeniden boyutlandırmak için kapsayıcıları nasıl kullanacağınızı öğreneceksiniz. Ayrıca kod yazmaya başlayın. Aşağıdakileri nasıl yapacağınızı öğrenirsiniz:
 
 - Yeni bir proje oluşturun.
 

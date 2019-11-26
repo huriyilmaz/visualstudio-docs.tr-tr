@@ -256,7 +256,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
 visibility attribute-name : Type
 ```
 
- \- veya -
+ \- veya-
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -346,7 +346,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - **Toplama**. Bu, bağlayıcının bir ucunda elmas şeklinde görünür. Bunu, toplama rolündeki örneklerin diğerlerinin örneklerini içerdiğini veya onlara sahip olduğunu göstermek için kullanabilirsiniz.
 
-- {1&gt;Gezinebilir&lt;1}. Yalnızca tek bir rol için true ise, gezinebilir yönde bir ok görünür. Bunu, yazılımda bağlantıların ve veritabanı ilişkilerinin gezinebilirliğini göstermek için kullanabilirsiniz.
+- **Gezinilebilir**. Yalnızca tek bir rol için true ise, gezinebilir yönde bir ok görünür. Bunu, yazılımda bağlantıların ve veritabanı ilişkilerinin gezinebilirliğini göstermek için kullanabilirsiniz.
 
   Bu ve diğer özelliklerin tam ayrıntıları için bkz. [UML sınıf diyagramlarındaki Ilişkilerin özellikleri](../modeling/properties-of-associations-on-uml-class-diagrams.md).
 
@@ -367,7 +367,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - Özel bir tür ve genel bir tür arasındaki *Genelleştirme* ilişkisi
 
-   \- veya -
+   \- veya-
 
 - Bir sınıf ve uyguladığı bir arabirim arasındaki *gerçekleştirme* ilişkisi.
 
@@ -422,7 +422,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     **Şablon parametresi koleksiyon Düzenleyicisi** iletişim kutusu görüntülenir.
 
-4. Seçin **ekleme**.
+4. **Ekle**' yi seçin.
 
 5. Şablon türü için Name özelliğini bir parametre adı olarak ayarlayın, örneğin, `Key`.
 

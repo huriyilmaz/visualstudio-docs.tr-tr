@@ -73,7 +73,7 @@ Bir öğenin, araç kutusundan veya bir yapıştırma ya da taşıma işleminde 
 > [!NOTE]
 > Özel birleştirme kodu yazarsanız, bu, yalnızca bu EMD kullanılarak gerçekleştirilen birleştirmeleri etkiler. Aynı nesne türünü birleştirmek için veya EMD 'yi kullanmadan bu nesneleri oluşturan başka özel kod varsa, özel birleştirme kodunuzun etkilenmemesi gerekir.
 >
-> Yeni bir öğenin veya yeni ilişkinin her zaman özel kodunuz tarafından işlendiğinden emin olmak istiyorsanız, ekleme ilişkisinde bir `AddRule` tanımlamayı ve öğenin etki alanı sınıfında bir `DeleteRule` tanımlamayı göz önünde bulundurun. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
+> Yeni bir öğenin veya yeni ilişkinin her zaman özel kodunuz tarafından işlendiğinden emin olmak istiyorsanız, ekleme ilişkisinde bir `AddRule` tanımlamayı ve öğenin etki alanı sınıfında bir `DeleteRule` tanımlamayı göz önünde bulundurun. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
 ## <a name="example-defining-an-emd-without-custom-code"></a>Örnek: özel kod olmadan EMD tanımlama
  Aşağıdaki örnek, kullanıcıların araç kutusundan varolan bir şekle sürükleyerek bir öğe ve bağlayıcıyı aynı anda oluşturmalarına olanak sağlar. Örnek DSL tanımına bir EMD ekler. Bu değişiklikten önce, kullanıcılar, araçları diyagrama sürükleyebilir, ancak mevcut şekillerin üzerine sürükleyebilirler.
@@ -214,7 +214,7 @@ Bir öğenin, araç kutusundan veya bir yapıştırma ya da taşıma işleminde 
 
 2. `MergeRelate` yöntemini ve isteğe bağlı olarak `MergeDisconnect` yöntemini geçersiz kılın. Bunu yapmak için, etki alanı sınıfının **Double türetilmiş** özelliğini oluştur ' u ayarlamanız gerekir. Kodunuz, temel sınıfta oluşturulan birleştirme kodunu çağırabilir. Birleştirme gerçekleştirildikten sonra ek işlemler gerçekleştirmek istiyorsanız bu seçeneği kullanın.
 
-   Bu yaklaşımlar yalnızca bu EMD kullanılarak gerçekleştirilen birleştirmeleri etkiler. Birleştirilmiş öğenin oluşturulabileceği tüm yolları etkilemek istiyorsanız, ekleme ilişkisinde bir `AddRule` ve birleştirilmiş etki alanı sınıfında bir `DeleteRule` tanımlamak bir alternatif olur. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
+   Bu yaklaşımlar yalnızca bu EMD kullanılarak gerçekleştirilen birleştirmeleri etkiler. Birleştirilmiş öğenin oluşturulabileceği tüm yolları etkilemek istiyorsanız, ekleme ilişkisinde bir `AddRule` ve birleştirilmiş etki alanı sınıfında bir `DeleteRule` tanımlamak bir alternatif olur. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
 #### <a name="to-override-mergerelate"></a>Mergeregeç 'i geçersiz kılmak için
 
@@ -273,7 +273,7 @@ Bir öğenin, araç kutusundan veya bir yapıştırma ya da taşıma işleminde 
 
 4. Yöntemleri kısmi bir sınıf tanımına ayrı bir kod dosyasında yazın. Daha önce inceettiğiniz örneklerde ihtiyacınız olanları önermelisiniz.
 
-   Özel birleştirme kodu doğrudan nesne ve ilişki oluşturan kodu etkilemez ve diğer kullanıcıları etkilemez. Ek değişikliklerinizin, öğenin oluşturulma şeklinden bağımsız olarak uygulandığından emin olmak için, bunun yerine bir `AddRule` ve `DeleteRule` yazmayı düşünün. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
+   Özel birleştirme kodu doğrudan nesne ve ilişki oluşturan kodu etkilemez ve diğer kullanıcıları etkilemez. Ek değişikliklerinizin, öğenin oluşturulma şeklinden bağımsız olarak uygulandığından emin olmak için, bunun yerine bir `AddRule` ve `DeleteRule` yazmayı düşünün. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
 ## <a name="redirecting-a-merge-operation"></a>Birleştirme Işlemini yeniden yönlendirme
  İleri birleştirme yönergesi birleştirme işleminin hedefini yeniden yönlendirir. Genellikle, yeni hedef ilk hedefin gömme üst öğesidir.
@@ -304,7 +304,7 @@ Bir öğenin, araç kutusundan veya bir yapıştırma ya da taşıma işleminde 
 
      Yeni yol şuna benzemelidir:
 
-     **ComponentHasPorts.Component/!Component**
+     **ComponentHasPorts. Component/! bileşeni**
 
 9. Çözümü kaydedin ve sonra **Çözüm Gezgini** araç çubuğunda en sağdaki düğmeye tıklayarak şablonları dönüştürün.
 

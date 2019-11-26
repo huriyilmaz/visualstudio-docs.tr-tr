@@ -105,7 +105,7 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 
 5. **Varlıklar** sayfasında, profili açıklayan bir satır ekleyin:
 
-   - **Yeni**’ye tıklayın. **Yeni varlık Ekle** iletişim kutusundaki alanları aşağıdaki gibi ayarlayın.
+   - **Yeni**'yi tıklatın. **Yeni varlık Ekle** iletişim kutusundaki alanları aşağıdaki gibi ayarlayın.
 
    - **Türü** `Microsoft.VisualStudio.UmlProfile` olarak ayarla
 
@@ -349,7 +349,7 @@ Profilinizi bir paket veya modelde seçmeniz gerekir. Stereotipler daha sonra pa
 
 3. Sözdiziminin burada açıklandığı gibi olduğundan ve _sürücüde_gösterildiği gibi **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** .
 
-4. Hatalı uzantıyı kaldırın. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+4. Hatalı uzantıyı kaldırın. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
 
    - Uzantı görünmezse bir sonraki öğeye bakın.
 

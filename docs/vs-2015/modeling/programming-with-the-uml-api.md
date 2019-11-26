@@ -51,9 +51,9 @@ Visual Studio 'nun UML API 'SI, UML modellerini ve diyagramlarını oluşturmak,
 ## <a name="the-api-assemblies"></a>API derlemeleri
  Bu tablo, UML araçları için genişletilebilirlik sağlayan derlemeleri ve kullanmanız önerilen ad alanlarını özetler.
 
-|Derleme|Ad Alanları|Erişim sağlar:|
+|Derleme|{1&gt;Ad Alanları&lt;1}|Erişim sağlar:|
 |--------------|----------------|-------------------------|
-|Microsoft.VisualStudio.Uml.Interfaces|Bütün|UML türleri.|
+|Microsoft.VisualStudio.Uml.Interfaces|(Tümü)|UML türleri.|
 |Microsoft. VisualStudio. mimari Turetools. Extensibility|Microsoft. VisualStudio. mimari Turetools. Extensibility. Uml|[Oluşturma yöntemleri](../modeling/create-elements-and-relationships-in-uml-models.md)|
 ||Microsoft. VisualStudio. mimari Turetools. Extensibility. Presentation|[Diyagramlar ve şekiller](../modeling/display-a-uml-model-on-diagrams.md)|
 ||Microsoft. VisualStudio. mimari Turetools. Extensibility|[Modelleme projesi](../modeling/read-a-uml-model-in-program-code.md)|

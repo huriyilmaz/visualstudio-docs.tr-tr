@@ -75,7 +75,7 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
 1. Kod parçacıkları Yöneticisi 'Ni kullanarak Visual Studio yüklemenize kendi kod parçacıklarını ekleyebilirsiniz. Kod parçacıkları yöneticisini açın (**Araçlar/kod parçacıkları Yöneticisi**).
 
-2. **Al** düğmesine tıklayın.
+2. **İçeri aktar** düğmesine tıklayın.
 
 3. Kod parçacığını önceki yordamda kaydettiğiniz konuma gidin, seçin ve **Aç**' a tıklayın.
 

@@ -58,7 +58,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     ![DSL oluştur iletişim kutusu](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-4. **Ad** kutusuna **FamilyTree**yazın. {1&gt;Tamam&lt;1} düğmesini tıklatın.
+4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'a tıklayın.
 
     **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
 
@@ -114,7 +114,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, **Çözüm Gezgini** **Test** adlı model dosyasını açın.
 
-    \- veya -
+    \- veya-
 
     Hata ayıklama projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **öğe**' ye tıklayın. **Öğe Ekle** iletişim kutusunda, DSL 'nizin dosya türünü seçin.
 
@@ -164,7 +164,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-    \- veya -
+    \- veya-
 
     Yeniden oluşturmak istediğiniz şablonlara sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
@@ -383,7 +383,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
  Aynı yordamı kullanarak DSL 'yi kendi bilgisayarınıza yükleyebilirsiniz. bu sayede [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneğini kullanmanız gerekmez.
 
- Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+ Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 ## <a name="Reset"></a>Eski deneysel DSLs 'ler kaldırılıyor
  Artık istemediğiniz deneysel DSLs 'Leri oluşturduysanız, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Deneysel örneğini sıfırlayarak bunları bilgisayarınızdan kaldırabilirsiniz.

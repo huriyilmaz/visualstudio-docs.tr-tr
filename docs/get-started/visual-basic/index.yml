@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Visual Studio tutorials | Visual Basic
-summary: Create Visual Basic apps with Visual Studio.
+title: Visual Studio öğreticileri | Visual Basic
+summary: Visual Studio ile Visual Basic uygulamalar oluşturun.
 metadata:
-  title: Visual Basic development with Visual Studio
-  description: Create Visual Basic apps by using Visual Studio.
+  title: Visual Studio ile Visual Basic geliştirme
+  description: Visual Studio 'Yu kullanarak Visual Basic uygulamalar oluşturun.
   ms.custom: seodec18
   ms.topic: landing-page
   ms.date: 11/19/2019
@@ -16,42 +16,42 @@ metadata:
   - VB
   ms.openlocfilehash: 3462f85ea571e163617c6c5f315a28c98342acab
   ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 11/19/2019
   ms.locfileid: "74188611"
 landingContent:
-- title: Kullanmaya başlayın
+- title: başlarken
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Visual Studio'yu yükleme
+    - text: Visual Studio Yükle
       url: ../../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Start a guided tour
+    - text: Kılavuzlu tura başla
       url: visual-studio-ide.md
   - linkListType: quickstart
     links:
-    - text: Create a "Hello World" console app
+    - text: "\"Merhaba Dünya\" konsol uygulaması oluşturma"
       url: ../../ide/quickstart-visual-basic-console.md
-- title: Create Visual Basic apps
+- title: Visual Basic uygulamalar oluşturma
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Konsol uygulaması oluşturma
+    - text: Bir konsol uygulaması oluşturma
       url: tutorial-console.md
-    - text: Create a Windows Desktop app
+    - text: Windows masaüstü uygulaması oluşturma
       url: tutorial-wpf.md
     - text: Windows Forms uygulaması oluşturma
       url: ../../ide/create-a-visual-basic-winform-in-visual-studio.md
-    - text: Learn about the Visual Basic language
+    - text: Visual Basic dili hakkında bilgi edinin
       url: /dotnet/visual-basic/developing-apps/programming/
 - title: Visual Studio'yu öğrenin
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Open code from a repo
+    - text: Depodan kod açma
       url: ../tutorial-open-project-from-repo.md
     - text: Kodu yazma ve düzenleme
       url: tutorial-editor.md
@@ -59,7 +59,7 @@ landingContent:
       url: ../../ide/compiling-and-building-in-visual-studio.md
     - text: Kodunuzda hata ayıklama
       url: ../csharp/tutorial-debugger.md
-    - text: Test your code
+    - text: Kodunuzu test etme
       url: ../../test/getting-started-with-unit-testing.md
   - linkListType: how-to-guide
     links:

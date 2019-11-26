@@ -33,7 +33,7 @@ ms.locfileid: "74300421"
   
 2. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**' ın altında, tercih ettiğiniz programlama dilinin düğümüne tıklayın ve ardından **genişletilebilirlik**' e tıklayın. Proje türleri listesinde **Windows Forms araç kutusu denetimi**' ni seçin.  
   
-3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. {1&gt;Tamam&lt;1} düğmesini tıklatın.  
+3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. **Tamam**'a tıklayın.  
   
      Visual Studio, bir kullanıcı denetimi, denetimin **araç kutusuna**yerleştirilecek bir öznitelik ve dağıtım IÇIN bir VSIX bildirimi içeren bir çözüm oluşturur.  
   

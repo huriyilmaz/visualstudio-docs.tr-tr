@@ -130,7 +130,7 @@ Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirm
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Kategori**|**Köprü**|
+|**Alan**|**Köprü**|
 |------------------|---------------|
 |**Videolar**|![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo") [: nasıl yapılır videoları: UML modellerini ve diyagramlarını oluşturma ve kullanma (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: Visual STUDIO 2010 ile UML](https://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![video MSDN bağlantısı](../data-tools/media/playvideo.gif "PlayVideo ") [nasıl yapılır: UML araçları ve genişletilebilirliği (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkID=214467)|
 |**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|

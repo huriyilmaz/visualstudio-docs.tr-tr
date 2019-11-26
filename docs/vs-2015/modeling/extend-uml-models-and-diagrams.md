@@ -32,7 +32,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
  Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://go.microsoft.com/fwlink/?LinkId=214467).
 
-## <a name="Requirements"></a> Gereksinimleri
+## <a name="Requirements"></a>Gereklilik
 
 - [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
@@ -85,7 +85,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
  Daha fazla bilgi için bkz. [UML modellerini diğer modeller ve araçlarla tümleştirme](../modeling/integrate-uml-models-with-other-models-and-tools.md).
 
-## <a name="generation"></a>Mesinden
+## <a name="generation"></a>Nesil
  Bir modelden program kodu, betikler, konfigürasyonlar, belgeler, yeni modeller veya diğer yapıtlar oluşturabilirsiniz.
 
  Fabrikam 'ın tasarlayan Bagaj sistemlerinde, program kodunun büyük bölümü bir projeden sonrakine aynı olur. Ana değişken en önemli değeri, Havaalanı çevresindeki bagaj akışının planlayıcıdır. Tasarım ekibinin ilk birkaç projesi deneyimiyle karşılaşdıktan sonra, araç geliştiricileri Bagaj akış modelinden, değişken program kodunun ve Kullanıcı belgeleri gibi diğer dosyaların çoğunun oluşturduğu bir şablon oluşturur. Bu, her yeni proje için geliştirme süresini ve hata oranını önemli ölçüde azaltır.
@@ -111,7 +111,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Kategori**|**Köprü**|
+|**Alan**|**Köprü**|
 |------------------|---------------|
 |**Videolar**|![video MSDN bağlantısı-](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: VISUAL Studio ile UML](https://go.microsoft.com/fwlink/?LinkId=199957)|
 |**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|

@@ -1,5 +1,5 @@
 ---
-title: Remote Debugger Port Assignments | Microsoft Docs
+title: Uzaktan hata ayıklayıcı bağlantı noktası atamaları | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2018
 ms.topic: reference
@@ -17,59 +17,59 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74239451"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
-The Visual Studio Remote Debugger can run as an application or as a background service. When it runs as an application, it uses a port that is assigned by default as follows:
+Visual Studio Uzaktan Hata Ayıklayıcı, bir uygulama veya arka plan hizmeti olarak çalıştırılabilir. Uygulama olarak çalıştırıldığında, varsayılan olarak aşağıdaki şekilde atanmış bir bağlantı noktası kullanır:
 ::: moniker range=">=vs-2019"
-- Visual Studio 2019: 4024
+- Visual Studio 2019:4024
 ::: moniker-end
-- Visual Studio 2017: 4022
+- Visual Studio 2017:4022
 
-- Visual Studio 2015: 4020
+- Visual Studio 2015:4020
 
-- Visual Studio 2013: 4018
+- Visual Studio 2013:4018
 
-- Visual Studio 2012: 4016
+- Visual Studio 2012:4016
 
-In other words, the number of the port assigned to the remote debugger is incremented by 2 for each release. You can set a different port number of you like. We will explain how to set port numbers in a later section.
+Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının numarası, her sürüm için 2 ile artırılır. Dilediğiniz farklı bir bağlantı noktası numarası belirleyebilirsiniz. Daha sonraki bir bölümde bağlantı noktası numaralarının nasıl ayarlanacağını açıklayacağız.
 
-## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>The Remote Debugger Port on 32-bit Operating Systems
+## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>32 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası
 
 ::: moniker range=">=vs-2019"
- TCP 4024 (in Visual Studio 2019) is the main port, and is required for all scenarios. You can configure this from either the command line or the remote debugger window.
+ TCP 4024 (Visual Studio 2019 ' de) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
 ::: moniker-end
 ::: moniker range="vs-2017"
- TCP 4022 (in Visual Studio 2017) is the main port, and is required for all scenarios. You can configure this from either the command line or the remote debugger window.
+ TCP 4022 (Visual Studio 2017 ' de) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
 ::: moniker-end
 
- In the remote debugger window, click **Tools > Options**, and set the TCP/IP port number.
+ Uzaktan hata ayıklayıcı penceresinde **araçlar > seçenekler**' e tıklayın ve TCP/IP bağlantı noktası numarasını ayarlayın.
 
- On the command line, start the remote debugger with the **/port** switch: **msvsmon /port \<port number>** .
+ Komut satırında, uzaktan hata ayıklayıcıyı **/Port** anahtarıyla başlatın: **msvsmon/Port \<bağlantı noktası numarası >** .
 
- You can find all the remote debugger command line switches in the remote debugging help (press **F1** or click **Help > Usage** in the remote debugger window).
+ Uzaktan hata ayıklama yardımında tüm uzaktan hata ayıklayıcı komut satırı anahtarlarını bulabilir (uzaktan hata ayıklayıcı penceresinde **F1** ' e basın veya **Yardım > yardım** ' a tıklayabilirsiniz).
 
-## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>The Remote Debugger Port on 64-bit Operating Systems
+## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>64 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası
 ::: moniker range=">=vs-2019"
- When the 64-bit version of the remote debugger is started, it uses the main port (4024) by default.  If you debug a 32-bit process, the 64-bit version of the remote debugger starts a 32-bit version of the remote debugger on port 4025 (the main port number incremented by 1). If you run the 32-bit remote debugger, it uses 4024, and 4025 is not used.
+ Uzaktan hata ayıklayıcının 64 bit sürümü başlatıldığında, varsayılan olarak ana bağlantı noktasını (4024) kullanır.  32 bitlik bir işlemde hata ayıklaması yaparsanız, uzaktan hata ayıklayıcı 'nın 64 bit sürümü, bağlantı noktası 4025 (1 ile artırılan ana bağlantı noktası numarası) üzerinde uzaktan hata ayıklayıcı 'nın 32 bit sürümünü başlatır. 32 bitlik uzaktan hata ayıklayıcıyı çalıştırırsanız, 4024 kullanır ve 4025 kullanılmaz.
 ::: moniker-end
 ::: moniker range="vs-2017"
- When the 64-bit version of the remote debugger is started, it uses the main port (4022) by default.  If you debug a 32-bit process, the 64-bit version of the remote debugger starts a 32-bit version of the remote debugger on port 4023 (the main port number incremented by 1). If you run the 32-bit remote debugger, it uses 4022, and 4023 is not used.
+ Uzaktan hata ayıklayıcının 64 bit sürümü başlatıldığında, varsayılan olarak ana bağlantı noktasını (4022) kullanır.  32 bitlik bir işlemde hata ayıklaması yaparsanız, uzaktan hata ayıklayıcı 'nın 64 bit sürümü, bağlantı noktası 4023 (1 ile artırılan ana bağlantı noktası numarası) üzerinde uzaktan hata ayıklayıcı 'nın 32 bit sürümünü başlatır. 32 bitlik uzaktan hata ayıklayıcıyı çalıştırırsanız, 4022 kullanır ve 4023 kullanılmaz.
 :::moniker-end
 
- This port is configurable from the command line: **Msvsmon /wow64port \<port number>** .
+ Bu bağlantı noktası komut satırından yapılandırılabilir: **msvsmon/wow64port \<bağlantı noktası numarası >** .
 
-## <a name="the-discovery-port"></a>The Discovery Port
- UDP 3702 is used for finding running instances of the remote debugger on the network (for example, the **Find** dialog in the **Attach to Process** dialog). It is used only for discovering a machine running the remote debugger, so it is  optional if you have some other way of knowing the machine name or IP address of the target computer. This is a standard port for discovery, so the port number cannot be configured.
+## <a name="the-discovery-port"></a>Bulma bağlantı noktası
+ UDP 3702, ağda uzaktan hata ayıklayıcının çalışan örneklerini bulmak için kullanılır (örneğin, **Işleme İliştir** Iletişim kutusunda **bul** iletişim kutusu). Yalnızca uzaktan hata ayıklayıcıyı çalıştıran bir makineyi bulmak için kullanılır; bu nedenle, hedef bilgisayarın makine adını veya IP adresini bilmenin başka bir yolu varsa bu isteğe bağlıdır. Bu, bulma için standart bir bağlantı noktasıdır, bu nedenle bağlantı noktası numarası yapılandırılamaz.
 
- If you do not want to enable discovery, you can start msvsmon from the command line with discovery disabled:  **Msvsmon /nodiscovery**.
+ Bulmayı etkinleştirmek istemiyorsanız, msvsmon 'yi bulma devre dışı: **msvsmon/nodiscovery**ile komut satırından başlatabilirsiniz.
 
-## <a name="remote-debugger-ports-on-azure"></a>Remote Debugger Ports on Azure
- The following ports are used by the remote debugger on Azure. The ports on the cloud service are mapped to the ports on the individual VM. All ports are TCP.
+## <a name="remote-debugger-ports-on-azure"></a>Azure 'da uzaktan hata ayıklayıcı bağlantı noktaları
+ Aşağıdaki bağlantı noktaları, Azure 'da uzaktan hata ayıklayıcı tarafından kullanılır. Bulut hizmetindeki bağlantı noktaları, tek bir VM 'deki bağlantı noktalarıyla eşleştirilir. Tüm bağlantı noktaları TCP ' dir.
 
-|Connection|Port on Cloud Service|Port on VM|
+|Bağlantı|Bulut hizmetindeki bağlantı noktası|VM 'deki bağlantı noktası|
 |-|-|-|
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector|30400|30398|
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder|31400|31398|
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarderx86|31401|31399|
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload|32400|32398|
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. Connector|30400|30398|
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. Iletici|31400|31398|
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. Forwarderx86|31401|31399|
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. FileUpload|32400|32398|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

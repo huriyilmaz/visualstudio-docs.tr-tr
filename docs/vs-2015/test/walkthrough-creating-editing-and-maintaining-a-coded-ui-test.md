@@ -29,7 +29,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' yi seçin.
 
-     **Yeni Proje** iletişim kutusu görünür.
+     **Yeni proje** iletişim kutusu görüntülenir.
 
 2. **Yüklü** bölmesinde, **C#görsel**' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -41,7 +41,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 6. Projeyi kaydetmek için bir klasör seçin. **Konum** metin kutusuna klasörün adını yazın.
 
-7. Seçin **Tamam**.
+7. **Tamam ' ı**seçin.
 
      Visual Studio için WPF Tasarımcısı açılır ve projenin MainWindow öğesini görüntüler.
 
@@ -133,7 +133,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 5. Orta bölmede, **KODLANMıŞ UI testi proje** şablonunu seçin.
 
-6. Seçin **Tamam**.
+6. **Tamam ' ı**seçin.
 
      Çözüm Gezgini, **CodedUITestProject1** adlı yenı kodlanmış UI test projesi çözümünüze eklenir.
 
@@ -215,7 +215,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 7. Kodlanmış UI Test Düzenleyicisi araç çubuğundaki **kodu taşı** düğmesini seçin.
 
-8. Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntem UIMap.uitest dosyasından UIMap.cs dosyasına taşınması için ve artık kodlanmış UI Test Düzenleyicisi'ni kullanarak yöntemi düzenlemenin mümkün olmayacağı konusunda uyarır. Seçin **Evet**.
+8. Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntem UIMap.uitest dosyasından UIMap.cs dosyasına taşınması için ve artık kodlanmış UI Test Düzenleyicisi'ni kullanarak yöntemi düzenlemenin mümkün olmayacağı konusunda uyarır. **Evet**' i seçin.
 
      Test yöntemi UIMap.uitest dosyasından kaldırılır ve artık UI Eylemler bölmesinde görüntülenmez. Taşınan test dosyasını düzenlemek için Çözüm Gezgini'nden UIMap.cs dosyasını açın.
 

@@ -59,18 +59,18 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
   
 ## <a name="analyze-the-cpu-usage-report"></a>CPU kullanımı raporunu analiz etme  
   
-### <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU kullanımı çağrı ağacı  
+### <a name="BKMK_The_CPU_Usage_call_tree"></a>CPU kullanımı çağrı ağacı  
  Çağrı ağacı bilgilerini anlamak için `GetMaxNumberButton_Click` segmentini yeniden seçin ve çağrı ağacı ayrıntılarına bakın.  
   
-#### <a name="BKMK_Call_tree_structure"></a> Çağrı ağacı yapısı  
+#### <a name="BKMK_Call_tree_structure"></a>Çağrı ağacı yapısı  
  ![GetMaxNumberButton&#95;çağrı ağacı öğesine tıklayın](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |||  
 |-|-|  
 |![1. adım](../profiling/media/procguid-1.png "ProcGuid_1")|CPU kullanımı çağrı ağaçları en üst düzey düğüm sözde düğümüdür|  
-|![2. adım](../profiling/media/procguid-2.png "ProcGuid_2")|Çoğu uygulama, zaman **harici kodu Göster** seçeneği devre dışıdır, ikinci düzey düğüm bir **[harici kod]** başlatır ve durdurur, uygulamanın sistem ve framework kodu içeren bir düğüm UI çizer iş parçacığı zamanlama denetler ve uygulamayı diğer alt düzey hizmetler sağlar.|  
+|![2. adım](../profiling/media/procguid-2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içeren bir **[Dış kod]** düğümüdür, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|  
 |![3. adım](../profiling/media/procguid-3.png "ProcGuid_3")|İkinci düzey düğümünün alt öğeleri, kullanıcı kodu yöntemleri ve çağrılan veya framework kodu ve ikinci düzey sistem tarafından oluşturulan zaman uyumsuz yordamlarını verilmiştir.|  
-|![4. adım](../profiling/media/procguid-4.png "ProcGuid_4")|Bir yöntemin alt düğümleri yalnızca üst yöntem çağrıları için veri içerir. Zaman **harici kodu Göster** olduğundan devre dışı, uygulama yöntemlerini de içerebilir bir **[harici kod]** düğümü.|  
+|![4. adım](../profiling/media/procguid-4.png "ProcGuid_4")|Bir yöntemin alt düğümleri yalnızca üst yöntem çağrıları için veri içerir. **Dış kodu göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış kod]** düğümü de içerebilir.|  
   
 #### <a name="BKMK_External_Code"></a>Dış kod  
  Dış kod, System ve Framework bileşenlerinde yazdığınız kod tarafından yürütülen işlevlerdir. Dış kod Başlat ve uygulamayı durdurun, UI çizme, iş parçacığı oluşturma denetleyen ve uygulama diğer alt düzey hizmetler sağlayan işlevler içerir. Çoğu durumda, harici kod ile ilgilenmezsiniz ve bu nedenle CPU kullanımı çağrı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[harici kod]** düğümüne toplar.  
@@ -110,6 +110,6 @@ Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan
   
 - `MainPage::GetMaxNumberAsyncButton_Click` çok az; görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.  
   
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` zamanlama ve çağrısını sarmalamak 48 görevleri başlatmak için gereken etkinlik gösterir `GetNumberAsync`.  
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`, `GetNumberAsync`çağrısını sarması gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir.  
   
 - `MainPage::<GetNumberAsync>b__b`, `GetNumber`çağıran görevlerin etkinliğini gösterir.

@@ -6,17 +6,17 @@ manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için Yöneticiler ' responsibilty hakkında bilgi edinin.
-ms.openlocfilehash: ab2a19fc94be27e8eaf90290b50820d58e919297
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 4c23994de1eb1a24982bd0554e838691b34b8025
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68423090"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491609"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamasını ve işlem emirlerini izleme
 Visual Studio abonelikleri yöneticilerinin, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki ana hatlarıyla belirtilen zamanlamada yapılan kullanımlar için Visual Studio kullanımını ve işlem emirlerini izlemesi beklenmektedir. Yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
 
-## <a name="maximum-usage"></a>En yüksek kullanım
+## <a name="maximum-usage"></a>En fazla kullanım
 **Şirketinizin Visual Studio abonelikleri satın alma yükümlülüğü, şu durumlarda hemen yürürlüğe girer:**
 - Bir kullanıcıya bir lisans atanır **veya**
 - Bir Kullanıcı Visual Studio yazılımıyla etkileşime girer.
@@ -28,7 +28,7 @@ Satın alma yükümlülüğünüz, kullanıcılara atadığınız maksimum abone
 - Özgün atamanın zamanından bu yana 90 gün geçtikten sonra Visual Studio abonelikleri yöneticileri, abonelikleri bir aboneden diğerine yeniden atayabilir. 
     > [!NOTE]
     > En yüksek kullanım düzeyini yapay önlemek için, önce mevcut aboneliği kaldırarak ve sonra yenisini ekleyerek bunu her zaman yapın. 
-- Kuruluşunuzun maximumusage 'ı izlemenize yardımcı olmak için, Visual Studio [abonelikleri yönetim portalında](https://manage.visualstudio.com)bir [en büyük kullanım](maximum-usage.md) raporu bulunur. 
+- Kuruluşunuzun en yüksek kullanım kullanımını izlemenize yardımcı olması için, Visual Studio [abonelikleri yönetim portalında](https://manage.visualstudio.com)bir [en büyük kullanım](maximum-usage.md) raporu bulunur. 
 
 ## <a name="cloud-subscriptions-open-license-or-open-value"></a>Bulut abonelikleri, açık lisans veya açık değer
 Microsoft Bulut abonelikler, lisans açma veya açık değer gibi bir program aracılığıyla abonelik atama yapabilirsiniz. Bu durumda, kullanıcıların (çalışanlar veya harici yükleniciler) Visual Studio lisanslı yazılımlarla etkileşime başlayacağı ay boyunca ek kullanıcılar için siparişinizi işlemelidir.

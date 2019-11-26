@@ -43,7 +43,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
    Kodu farklı bir mimariye taşıdığınız zaman iş gerektiren kodu veya bağımlılıkları bulun.
 
-  **Gereksinimler**
+  **Requirements**
 
 - Visual Studio
 
@@ -153,7 +153,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   **Hata listesi** penceresindeki doğrulama hatalarını yönetmek için bu görevleri kullanın:
 
-|**To**|**Bu adımları izleyin**|
+|**Hedef**|**Bu adımları izleyin**|
 |------------|----------------------------|
 |Doğrulama sırasında seçili hataları gizleme|Seçilen bir veya birden çok hataya sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **hataları Gizle**' ye tıklayın.<br /><br /> Gizlenen hatalar üstü çizili biçimde görünür. Doğrulamayı daha sonra çalıştırdığınızda bu hatalar görünmez.<br /><br /> Gizlenen hatalar, ilgili katman diyagramı dosyası için .gizlenenler dosyasında izlenir.|
 |Seçili hataların gizlenmesini durdurma|Seçili gizlenen hata veya hatalara sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından hataları gizlemeyi **Durdur**' a tıklayın.<br /><br /> Doğrulamayı daha sonra çalıştırdığınızda seçili gizlenen hatalar görünecektir.|
@@ -171,7 +171,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
- \- veya -
+ \- veya-
 
 1. **Çözüm Gezgini**, katman diyagramını veya diyagramlarını içeren modelleme projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -197,7 +197,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
    Doğrulama hataları hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors). [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]hakkında daha fazla bilgi için bkz.:
 
-- [Uygulamayı oluşturun](/azure/devops/pipelines/index)
+- [Uygulamayı oluşturma](/azure/devops/pipelines/index)
 
 - [Yapı işleminiz için varsayılan şablonu kullanın](https://msdn.microsoft.com/library/43930b12-c21b-4599-a980-2995e3d16e31)
 
@@ -210,7 +210,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 ## <a name="TroubleshootingValidation"></a>Katman doğrulama sorunlarını giderme
  Aşağıdaki tabloda katman doğrulama sorunları ve bunların çözümü açıklanmaktadır. Bu sorunlar, kod ve tasarım arasındaki çakışmalarla sonuçlanan hatalardan ayrılır. Bu hatalar hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors).
 
-|**Konuda**|**Olası neden**|**Çözümleme**|
+|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
 |---------------|------------------------|--------------------|
 |Doğrulama hataları beklendiği gibi gerçekleşmez.|Doğrulama Çözüm Gezgini'ndeki diğer katman diyagramlarından kopyalanmış ve aynı modelleme projesinde bulunan katman diyagramlarında işe yaramaz. Bu şekilde kopyalanan katman diyagramları, orijinal katman diyagramıyla aynı başvuruları içerir.|Modelleme projesine yeni bir katman diyagramı ekleyin.<br /><br /> Öğeleri kaynak katmanı diyagramından yeni diyagrama kopyalayın.|
 
@@ -225,7 +225,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu hataların anlamı açıklanmakta ve bunları çözmek veya yönetmek için yapabilecekleriniz önerilmektedir.
 
-|**Söz dizimi**|**Açıklama**|
+|**Sözdizimi**|**Açıklama**|
 |----------------|---------------------|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* katman diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem**gibi *ArtifactN*türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Bir ad alanının adı.|

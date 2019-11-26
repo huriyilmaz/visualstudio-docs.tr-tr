@@ -20,7 +20,7 @@ ms.locfileid: "74298011"
 
 Kodlanmış UI testlerini bir SharePoint uygulamasına dahil etmek, Kullanıcı arabirimi denetimleri de dahil olmak üzere tüm uygulamanın düzgün çalıştığını doğrulamanızı sağlar. Kodlanmış UI testleri, Kullanıcı arabirimindeki değerleri ve mantığı da doğrulayabilir.
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 

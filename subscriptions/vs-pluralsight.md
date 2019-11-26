@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 7db7858b95ca0b78ea54cebc394c3d57de53305a
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 26e9227fbd3852e4e9115e06e2882fe6358831a3
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74161963"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491295"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -62,8 +62,8 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
 |         GitHub Enterprise ile Visual Studio Professional          | VL  |   3 ay    | Evet<sup>2</sup> |
 |              Visual Studio Test Professional (Standart)              |    VL, perakende     |   3 ay    | Evet<sup>2</sup>  |
 |                      MSDN Platformları (Standart)                       |    VL, perakende     |   3 ay    | Evet<sup>2</sup>  |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Yok |       Yok       |
-|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Yok |       Yok       |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Yok |       NA       |
+|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Yok |       NA       |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services Geliştirici, mct Software & Service, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD), Microsoft iş ortağı ağı (MPN), FTE, Imagine.*
@@ -78,7 +78,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresi
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
 ### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>S: Visual Studio Enterprise aboneliğim var, ancak avantajlar sayfasında Pluralalm kutucuğunu görmüyorum. Ne oldu?
-Y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneliğinizin uygun olup olmadığını görmek için [uygunluk tablosu](#eligibility) tablosuna bakın.
+Y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneliğinizin uygun olup olmadığını görmek için [uygunluk tablosuna](#eligibility) bakın.
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: özelleştirilmiş bir öğrenme çalma listelerine veya kanala erişimim var mı?
 Y: Evet, Visual Studio abonesi olarak, uzman eğitim avantajınız kapsamında uzman kanallara erişim elde edersiniz. Bu kanallar, Microsoft uzmanları tarafından özel olarak kaldırılmıştır ve .net, Azure, DevOps ve Mobility alanlarında öğrenmeye yöneliktir. Pluralalsel giriş sayfanızda bu kanallara erişim elde etmek için Visual Studio abonelik portalınız [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) göz alıcı avantajınızı etkinleştirin.

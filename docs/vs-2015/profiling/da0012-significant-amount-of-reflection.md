@@ -30,7 +30,7 @@ Kural kimliği | DA0012 |
 | İleti | Yansımayı aşırı kullanıyor olabilirsiniz. Bu, pahalı bir işlemdir. |  
 | Kural türü | Uyarı |  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  InvokeMember ve GetMember gibi System. Reflection yöntemlerine veya MemberInvoke gibi Yöntem türlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Mümkün olduğunda, bu yöntemleri bağımlı derlemelerin yöntemlerine erken bağlama ile değiştirmeyi göz önünde bulundurun.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

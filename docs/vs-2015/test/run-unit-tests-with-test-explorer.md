@@ -23,7 +23,7 @@ ms.locfileid: "74302110"
 Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini çalıştırmak, testleri kategoriler halinde gruplamak, test listesini filtrelemek ve testlerin çalma listelerini oluşturmak, kaydetmek ve çalıştırmak için test Gezgini 'ni kullanın. Ayrıca, testlerin hatalarını ayıklayabilir ve test performansını ve kod kapsamını çözümleyebilirsiniz.
 
 ## <a name="BKMK_Contents"></a>Dekiler
- [Birim test çerçeveler ve test projeleri](#BKMK_Unit_test_frameworks_and_test_projects)
+ [Birim test çerçeveleri ve test projeleri](#BKMK_Unit_test_frameworks_and_test_projects)
 
  [Testleri test Gezgini 'nde Çalıştır](#BKMK_Run_tests_in_Test_Explorer)
 
@@ -37,7 +37,7 @@ Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini �
 
  [Dış kaynaklar](#BKMK_External_resources)
 
-## <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> Birim test çerçeveler ve test projeleri
+## <a name="BKMK_Unit_test_frameworks_and_test_projects"></a>Birim test çerçeveleri ve test projeleri
  Visual Studio hem yönetilen hem de yerel kod için Microsoft birim testi çerçeveleri içerir. Ancak, test Gezgini, test Gezgini bağdaştırıcısı uygulayan herhangi bir birim test çerçevesini de çalıştırabilir. Üçüncü taraf birim testi çerçevelerini yükleme hakkında daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçeveleri yükleme](../test/install-third-party-unit-test-frameworks.md)
 
  Test Gezgini, bir çözümde birden çok test projesini ve üretim kodu projelerin bir parçası olan test sınıflarından testleri çalıştırabilirsiniz. Test projeleri, farklı birim testi çerçeveleri kullanabilir. Test edilen kod .NET Framework için yazıldığında, test projesi, hedef kodun dilinden bağımsız olarak, .NET Framework de hedefleyen herhangi bir dilde yazılabilir. Yerel C/C++ kod projeleri, bir C++ birim test çerçevesi kullanılarak test edilmelidir.
@@ -47,11 +47,11 @@ Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini �
 ## <a name="BKMK_Run_tests_in_Test_Explorer"></a>Testleri test Gezgini 'nde Çalıştır
  [Testleri](#BKMK_Run_tests) **&#124;** Çalıştır [her derlemeden sonra Testleri Çalıştır](#BKMK_Run_tests_after_every_build)
 
- Test projesi oluşturduğunuzda, testler Test Gezgini'nde görünür. Test Gezgini görünür değilse seçin **Test** Visual Studio menüsünde **Windows**ve ardından **Test Gezgini**.
+ Test projesi oluşturduğunuzda, testler Test Gezgini'nde görünür. Test Gezgini görünür değilse, Visual Studio menüsünden **Test** ' i seçin, **Windows**' u ve ardından **Test Gezgini**' ni seçin.
 
  ![Birim test Gezgini](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
 
- Çalıştırma, yazma ve testlerinizi yeniden çalıştırın, Test Gezgini sonuçları varsayılan gruplarında görüntüler **başarısız testler**, **başarılı testler**, **Atlanan testler** ve  **Testleri Çalıştır**. Test Gezgini'nin testlerinizi gruplandırma şeklini değiştirebilirsiniz.
+ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, test Gezgini sonuçları **başarısız testler**, **başarılı**testler, **Atlanan** testler ve **çalıştırma**testleri için varsayılan gruplar halinde görüntüler. Test Gezgini'nin testlerinizi gruplandırma şeklini değiştirebilirsiniz.
 
  Test Gezgini araç çubuğundan testleri bulma, düzenleme ve çalıştırma işinin çoğunu yapabilirsiniz.
 
@@ -62,9 +62,9 @@ Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini �
 ### <a name="BKMK_Run_tests"></a>Testleri Çalıştır
  Tüm testler, Çözümdeki tüm testleri bir grup veya seçtiğiniz test kümesini çalıştırabilirsiniz. Aşağıdakilerden birini yapın:
 
-- Bir çözümdeki tüm testleri çalıştırmak için tercih **tümünü Çalıştır**.
+- Bir Çözümdeki tüm testleri çalıştırmak için **Tümünü Çalıştır**' ı seçin.
 
-- Varsayılan bir grupta tüm testleri çalıştırmak için tercih **Çalıştır...**  ve sonra menüde grubu seçin.
+- Varsayılan bir gruptaki tüm testleri çalıştırmak için **Çalıştır...** öğesini seçin ve ardından menüdeki grubu seçin.
 
 - Çalıştırmak istediğiniz bireysel testleri seçin, seçili bir test için bağlam menüsünü açın ve ardından **Seçili Testleri Çalıştır**' ı seçin.
 
@@ -88,7 +88,7 @@ Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini �
 ## <a name="BKMK_View_test_results"></a>Test sonuçlarını görüntüle
  [Test ayrıntılarını](#BKMK_View_test_details) **&#124;** görüntüleme [test yönteminin kaynak kodunu görüntüleme](#BKMK_View_the_source_code_of_a_test_method)
 
- Test Gezgini çalıştırma, yazma ve testlerinizi yeniden çalıştırın gibi sonuçları gruplarında görüntüler. **başarısız testler**, **başarılı testler**, **Atlanan testler** ve **çalıştırma Testleri**. Test Gezgini görüntüler altındaki ayrıntılar bölmesi test özeti çalıştırın.
+ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, test Gezgini sonuçları **başarısız testler**, **başarılı**testler, **Atlanan testler** ve **çalıştırma testleri**gruplarında görüntüler. Test Gezgini görüntüler altındaki ayrıntılar bölmesi test özeti çalıştırın.
 
 ### <a name="BKMK_View_test_details"></a>Test ayrıntılarını görüntüle
  Tek bir testin ayrıntılarını görüntülemek için testi seçin.
@@ -130,10 +130,10 @@ Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini �
 
 |Grup|Açıklama|
 |-----------|-----------------|
-|**Süresi**|Yürütme zamanına göre test grupları: **hızlı**, **Orta**ve **yavaş**.|
+|**Sürenin**|Yürütme zamanına göre test grupları: **hızlı**, **Orta**ve **yavaş**.|
 |**Sonucu**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Tanımladığınız kategori/değer çiftlerine göre test grupları. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
-|{1&gt;Proje (Project)&lt;1}|Projeler adına göre test grupları.|
+|**Proje**|Projeler adına göre test grupları.|
 
  ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön
 
@@ -153,7 +153,7 @@ Visual Studio veya üçüncü taraf birim testi projelerinden birim testlerini �
 
  **İçin Microsoft birim testi çerçevesindeki niteliklerC++**
 
- Ayırt edici nitelik tanımlamak için `TEST_METHOD_ATTRIBUTE` makrosu. Örneğin, adlı bir ayırt edici nitelik tanımlamak için `TEST_MY_TRAIT`:
+ Bir nitelik tanımlamak için `TEST_METHOD_ATTRIBUTE` makrosunu kullanın. Örneğin, `TEST_MY_TRAIT`adlı bir nitelik tanımlamak için:
 
 ```cpp
 #define TEST_MY_TRAIT(traitValue) TEST_METHOD_ATTRIBUTE(L"MyTrait", traitValue)
@@ -206,7 +206,7 @@ TEST_METHOD(Method1)
 |Leyicisini|Açıklama|
 |---------------|-----------------|
 |**Nitelik**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
-|{1&gt;Proje (Project)&lt;1}|Test projesi adlarını eşleşmeler için arar.|
+|**Proje**|Test projesi adlarını eşleşmeler için arar.|
 |**Hata Iletisi**|Eşleşmeler için başarısız Onaylamalar tarafından döndürülen Kullanıcı tanımlı hata iletilerini arar.|
 |**Dosya yolu**|Test kaynak dosyalarının tam dosya adını eşleşmeler için arar.|
 |**Tam nitelikli ad**|Test ad alanlarının, sınıfların ve yöntemlerin tam dosya adını eşleşmeler için arar.|
@@ -257,7 +257,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 
 2. Test Gezgini ' nde, test yöntemlerini seçin ve bağlam menüsünde **Seçili testlerin hatalarını ayıkla** ' yı seçin.
 
-   Hata ayıklayıcısı hakkında daha fazla bilgi için bkz. [Visual Studio'da hata ayıklama](../debugger/debugging-in-visual-studio.md).
+   Hata ayıklayıcı hakkında daha fazla bilgi için bkz. [Visual Studio 'Da hata ayıklama](../debugger/debugging-in-visual-studio.md).
 
    ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön
 

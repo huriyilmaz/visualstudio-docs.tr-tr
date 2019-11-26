@@ -45,13 +45,13 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCo
 |------------|-----------------|----------------|-------------------|  
 |Sorgu|Koleksiyonun başlatılıp başlatılmayacağını döndürür.|Yok.|koleksiyon başlamaya hazırsanız 0.<br /><br /> 1 koleksiyon zaten devam ediyorsa.<br /><br /> 2 koleksiyon devam etmiyor, ancak bir veya daha fazla gerekli [ETW](https://msdn.microsoft.com/library/ac99a063-e2d2-40cc-b659-d23c2f783f92) oturumu zaten etkin.|  
 |Başlat|Belirtilen işlemi eşzamanlılık görselleştiricisi altında çalıştırır.|Yürütülebilir dosyanın yolu.|çalışma başarılı olursa 0.<br /><br /> 1 hedef uygulama başlatılamadığından çalıştırma başarısız olduysa.<br /><br /> Bu, CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için yeterli izinlere sahip olduğu için, çalıştırma başarısız olursa 13.|  
-|İliştir|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|  
+|Kullanıma aç|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|  
 |Ayır|Koleksiyonu durduruyor.|Yok.|Bu, kesilmesi başarılı olursa 0 ' dır.<br /><br /> 1 Şu anda devam eden bir dağıtım başarısız olduğu için çıkarılabilir işlem başarısız oldu.<br /><br /> 2, koleksiyon durdurulamadığından gönderilemedi.|  
 |Çözümle|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|  
 |LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca başlatma komutu için geçerlidir.|Uygulamanın komut satırı bağımsız değişkenleri.|Yok.|  
 |OutDir|İzleme dosyalarının kaydedileceği dizini belirtir. Başlatma ve Iliştirme komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|  
 |Process|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|  
-|Config|Koleksiyon ayarlarının varsayılanlar dışında olmasını istiyorsanız, yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|  
+|Yapılandırma|Koleksiyon ayarlarının varsayılanlar dışında olmasını istiyorsanız, yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|  
   
 ## <a name="customizing-configuration-settings"></a>Yapılandırma ayarlarını özelleştirme  
  İzlemeleri toplamak için CVCollectionCmd kullanırsanız ve koleksiyon ayarlarını özelleştirmek istiyorsanız, bunları belirtmek için bir yapılandırma dosyası kullanın.  
@@ -66,7 +66,7 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCo
   
 |Etiket|Açıklama|Değerler|  
 |---------|-----------------|------------|  
-|Config|Genel yapılandırma dosyasını kaldırır.|Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion|  
+|Yapılandırma|Genel yapılandırma dosyasını kaldırır.|Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion|  
 |MajorVersion|Yapılandırma dosyasının ana sürümünü belirtir.|[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projeleri için 1 olmalıdır. 1 değilse, yardımcı program çalışmaz.|  
 |MinorVersion|Yapılandırma dosyasının ikincil sürümünü belirtir.|[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projeleri için 0 olmalıdır. 0 değilse, yardımcı program çalışmaz.|  
 |Includeenvsymbolpath|Ortam sembol yolunun (_NT_SYMBOL_PATH) kullanılıp kullanılmayacağını belirleyen bir değer ayarlar.|-True<br />-False|  

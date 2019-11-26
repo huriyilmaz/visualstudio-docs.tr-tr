@@ -24,7 +24,7 @@ ms.locfileid: "74302639"
 
 Kodlanmış UI Testi Düzenleyicisi, kodlanmış UI testlerinizi kolayca değiştirmenize olanak sağlar. Kodlanmış UI test düzenleyicisini kullanarak, test yöntemlerinizin ve UI eylemlerinin özelliklerini bulabilir, görüntüleyebilir ve düzenleyebilirsiniz. Bunlara ek olarak, ilgili denetimlerini görüntülemek ve düzenlemek için UI denetim haritasını kullanabilirsiniz.
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 
@@ -118,7 +118,7 @@ Kodlanmış UI Testi Düzenleyicisi, kodlanmış UI testlerinizi kolayca değiş
  *Başka ne bilmem gerekir?*
  **Önemli sorunlar**
 
-- ![Uyarı simgesi](../test/media/caution.gif "dikkatli") **uyarısı:** bir yöntemi bölemeseniz, mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerekir, bu kullanıcı Arabirimi eylemlerini hala eklemek istiyorsanız, oluşturmak üzere olduğunuz yeni yöntemi de çağırabilirsiniz. Bir yöntemi böldüğünüz zaman bir Microsoft Visual Studio iletişim kutusu görüntülenir. Ayrıca, oluşturmak üzere olduğunuz yeni yöntemi çağırmak için mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerektiğini uyarır. Seçin **Evet**.
+- ![Uyarı simgesi](../test/media/caution.gif "dikkatli") **uyarısı:** bir yöntemi bölemeseniz, mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerekir, bu kullanıcı Arabirimi eylemlerini hala eklemek istiyorsanız, oluşturmak üzere olduğunuz yeni yöntemi de çağırabilirsiniz. Bir yöntemi böldüğünüz zaman bir Microsoft Visual Studio iletişim kutusu görüntülenir. Ayrıca, oluşturmak üzere olduğunuz yeni yöntemi çağırmak için mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerektiğini uyarır. **Evet**' i seçin.
 
   **Uçları**
 
@@ -130,7 +130,7 @@ Kodlanmış UI Testi Düzenleyicisi, kodlanmış UI testlerinizi kolayca değiş
 
    Yeni test yönteminin kısayol menüsünü açın ve **Yeniden Adlandır**' ı seçin.
 
-   Microsoft Visual Studio iletişim kutusu görüntülenir. Yönteme başvuran tüm kodları değiştirmeniz gerektiğini uyarır. Seçin **Evet**.
+   Microsoft Visual Studio iletişim kutusu görüntülenir. Yönteme başvuran tüm kodları değiştirmeniz gerektiğini uyarır. **Evet**' i seçin.
 
 ## <a name="CodedUITestEditor_MoveMethods"></a>Özelleştirmeyi kolaylaştırmak için bir test yöntemini UIMap dosyasına taşıyın
  Kodlanmış UI testinizde test yöntemlerinizin birinin özel kod gerektirdiğini belirlerseniz, UIMap.cs veya Umap. vb dosyasına taşımanız gerekir. Aksi takdirde, kodlanmış UI testi yeniden derlendiğinde kodunuzun üzerine yazılır. Yöntemi taşıyamazsınız, test her yeniden derlenilişinde özel kodunuzun üzerine yazılır.
@@ -142,7 +142,7 @@ Kodlanmış UI Testi Düzenleyicisi, kodlanmış UI testlerinizi kolayca değiş
  *Başka ne bilmem gerekir?*
  **Önemli sorunlar**
 
-- ![Uyarı simgesi](../test/media/caution.gif "dikkatli") **uyarısı:** bir yöntemi taşıdıktan sonra, kodlanmış UI test düzenleyicisini kullanarak artık düzenleyemezsiniz. Özel kodunuzu eklemeli ve Kod Düzenleyicisi'ni kullanarak korumalısınız. Bir yöntemi taşıdığınızda bir Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntemin Umap. UITest dosyasından UIMap.cs veya Umap. vb dosyasına taşınacağını ve artık kodlanmış UI test düzenleyicisini kullanarak yöntemi düzenleyemeyeceksiniz. Seçin **Evet**.
+- ![Uyarı simgesi](../test/media/caution.gif "dikkatli") **uyarısı:** bir yöntemi taşıdıktan sonra, kodlanmış UI test düzenleyicisini kullanarak artık düzenleyemezsiniz. Özel kodunuzu eklemeli ve Kod Düzenleyicisi'ni kullanarak korumalısınız. Bir yöntemi taşıdığınızda bir Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntemin Umap. UITest dosyasından UIMap.cs veya Umap. vb dosyasına taşınacağını ve artık kodlanmış UI test düzenleyicisini kullanarak yöntemi düzenleyemeyeceksiniz. **Evet**' i seçin.
 
   **Uçları**
 

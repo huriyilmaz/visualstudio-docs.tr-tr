@@ -28,7 +28,7 @@ Proje kodunuzun ne oranda aslında birim testleri gibi kodlanmış testler taraf
 
  ![Renklendirme ile kod kapsamı sonuçları](../test/media/codecoverage1.png "CodeCoverage1")
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 
@@ -271,7 +271,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
      Windows **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio**, **Visual Studio Araçları** **Geliştirici komut istemi**' ı seçin.
 
-2. Çalıştır:
+2. Çalıştırın:
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 

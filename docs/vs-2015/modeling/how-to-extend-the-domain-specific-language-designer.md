@@ -71,7 +71,7 @@ Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantı
 
  Uzantıları ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
 
-1. VSIX projenizde depo VSIX yükleme dosyasını bulmak\\*\*\\\*.vsix
+1. VSIX projenizde VSIX yükleme dosyasını, bin\\*\\\*. VSIX ' de bulun.
 
 2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini 'nde (veya dosya Gezgini) çift tıklayın.
 

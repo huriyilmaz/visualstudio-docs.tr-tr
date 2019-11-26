@@ -24,7 +24,7 @@ Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visua
 > [!NOTE]
 > Desteklenen diğer Windows sürümleri (Windows 7, Windows Server 2008 R2) için performans araçları değişmemiştir.  
   
-## <a name="BKMK_In_this_topic"></a> Bu konudaki  
+## <a name="BKMK_In_this_topic"></a>Bu konuda  
  [Visual Studio IDE 'den Windows Mağazası uygulamaları üzerinde veri toplama](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Visual Studio IDE 'den Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalarda veri toplama](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -74,7 +74,7 @@ Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visua
   
 - [Windows Mağazası uygulamalarında Visual C++, visual C#ve Visual Basic Code için performans verilerini çözümleme](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
-  [Bu konudaki](#BKMK_In_this_topic)  
+  [Bu konuda](#BKMK_In_this_topic)  
   
 ## <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a>Visual Studio IDE 'den Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalarda veri toplama  
  İzleme yöntemini kullanarak profil oluşturma, Windows 8 için değişmemiştir.  

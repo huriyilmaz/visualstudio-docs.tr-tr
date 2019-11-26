@@ -19,7 +19,7 @@ ms.locfileid: "74299857"
 # <a name="tutorial-3-create-a-matching-game"></a>Öğretici 3: eşleşen oyun oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu öğreticide, oyuncunun gizli simge çiftlerini eşleştirmesi gereken bir eşleştirme oyunu oluşturuyorsunuz. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide, oyuncunun gizli simge çiftlerini eşleştirmesi gereken bir eşleştirme oyunu oluşturuyorsunuz. Aşağıdakileri nasıl yapacağınızı öğrenirsiniz:
 
 - Simgeleri gibi nesneleri bir `List` nesnesinde depolayın.
 

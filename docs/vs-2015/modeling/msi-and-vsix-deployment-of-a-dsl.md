@@ -64,7 +64,7 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 
    Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
 
-   *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**
+   *LocalAppData* **\Microsoft\visualstudio\10.0\Extensions**
 
 ## <a name="msi"></a>MSI içinde DSL dağıtma
  DSL 'niz için bir MSI (Windows Installer) dosyası tanımlayarak, kullanıcıların Windows Gezgini 'nden DSL dosyalarını açmasına izin verebilirsiniz. Ayrıca, dosya adı uzantınızla bir simge ve kısa açıklama ilişkilendirebilirsiniz. Buna ek olarak, MSI DSL dosyalarını doğrulamak için kullanılabilen bir XSD 'yi de yükleyebilir. İsterseniz, diğer bileşenleri MSI 'ye aynı anda yüklenecek şekilde ekleyebilirsiniz.
@@ -93,7 +93,7 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 
        - Açıklama
 
-       - Version
+       - Sürüm
 
    - **Düzenleyici** düğümüne tıklayın ve Özellikler penceresi **simgesine**tıklayın. Değeri **Dslpackage\resources**içindeki **File. ico** gibi bir simge dosyasına başvuracak şekilde ayarlayın.
 

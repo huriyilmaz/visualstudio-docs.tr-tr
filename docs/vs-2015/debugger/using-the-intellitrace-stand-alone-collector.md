@@ -32,7 +32,7 @@ ms.locfileid: "74297120"
 >
 > Aracıyı **izleyici** modunda çalıştırarak, IntelliTrace verilerinde performansla ilgili olayları toplayabilirsiniz. **İzleyici** modunun, **Izleme** modundan veya **IntelliTrace tek başına toplayıcısından**daha az performans etkisi vardır. Microsoft Monitoring Agent, yüklendiğinde hedef sistemin ortamını değiştirir. Bkz. [Microsoft Monitoring Agent kullanımı](../debugger/using-the-microsoft-monitoring-agent.md).
 
- **Gereksinimler**
+ **Requirements**
 
 - .NET Framework 3,5, 4 veya 4,5
 
@@ -91,13 +91,13 @@ ms.locfileid: "74297120"
 
      3. IntelliTraceCollector. exe dosyasını çalıştırın. Bu, IntelliTraceCollection. cab dosyasını ayıklar.
 
-        \- veya -
+        \- veya-
 
    - **Visual Studio yükleme klasörü**:
 
      1. IntelliTraceCollection. cab dosyasını şu klasörden kopyalayın:
 
-          **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
+          **.. \Microsoft Visual Studio 12.0 \ Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
      2. IntelliTraceCollection. cab dosyasını toplayıcı dizinine yerleştirin, örneğin: **C:\IntelliTraceCollector**
 
@@ -120,7 +120,7 @@ ms.locfileid: "74297120"
 
 2. Sunucu yöneticisine toplayıcı dizinine tam izinler vermek için Windows **ıccacls** komutunu kullanın. Örneğin:
 
-     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
+     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\yönetimtorıd >* `":F`
 
 3. Bir Web uygulaması veya SharePoint uygulaması için veri toplamak için:
 
@@ -128,7 +128,7 @@ ms.locfileid: "74297120"
 
          Örneğin:
 
-         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
+         `icacls "C:\IntelliTraceCollector" /grant "` *\<etkialanı \ Kullanıcı kimliği >* `":F`
 
     2. Web uygulaması veya SharePoint uygulaması için uygulama havuzuna Toplayıcı dizini için okuma ve yürütme izinleri verin.
 
@@ -156,9 +156,9 @@ ms.locfileid: "74297120"
 
         2. Aşağıdaki adımlardan birini seçin:
 
-            - 64 bit işletim sistemlerinde, **Windows PowerShell**için kısayol menüsünü açın. Seçin **yönetici olarak çalıştır**.
+            - 64 bit işletim sistemlerinde, **Windows PowerShell**için kısayol menüsünü açın. **Yönetici olarak çalıştır**' ı seçin.
 
-            - 32 bit işletim sistemlerinde, **Windows PowerShell (x86)** için kısayol menüsünü açın. Seçin **yönetici olarak çalıştır**.
+            - 32 bit işletim sistemlerinde, **Windows PowerShell (x86)** için kısayol menüsünü açın. **Yönetici olarak çalıştır**' ı seçin.
 
     2. PowerShell komut penceresinde, **Microsoft. VisualStudio. IntelliTrace. PowerShell. dll dosyasını**içeri aktarmak için **Import-Module** komutunu kullanın.
 
@@ -206,7 +206,7 @@ ms.locfileid: "74297120"
 
      5. **Seçilecek nesne adlarını girin** kutusunda, Web uygulaması veya SharePoint uygulaması için uygulama havuzunu ekleyin.
 
-     6. Adı çözümlemek için **adları denetle** ' yi seçin. Seçin **Tamam**.
+     6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı**seçin.
 
      7. Uygulama havuzunun **tam denetime**sahip olduğundan emin olun.
 
@@ -227,7 +227,7 @@ ms.locfileid: "74297120"
     |-|-|
     |*ApplicationPool*|Uygulamanızın çalıştırıldığı uygulama havuzunun adı|
     |*PathToCollectionPlan*|Toplayıcı için ayarları yapılandıran bir. xml dosyası olan bir koleksiyon planının yolu.<br /><br /> Toplayıcıyla birlikte gelen bir plan belirtebilirsiniz. Aşağıdaki planlar Web uygulamaları ve SharePoint uygulamaları için çalışır:<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     Özel durumlar, veritabanı çağrıları ve Web sunucusu istekleri dahil olmak üzere yalnızca IntelliTrace olaylarını ve SharePoint olaylarını toplar.<br />-collection_plan. ASP. NET. Trace. xml<br />     İşlev çağrılarını ve collection_plan. ASP. NET. default. xml dosyasındaki tüm verileri toplar. Bu plan ayrıntılı analiz için uygundur, ancak uygulamanızı collection_plan. ASP. NET. default. xml ' den daha uzun sürebilir.<br /><br /> Uygulamanızı yavaşlatmayı önlemek için, bu planları özelleştirin veya kendi planınızı oluşturun. Güvenlik için, tüm özel planları toplayıcı dosyalarıyla aynı güvenli konuma yerleştirin. Bkz. [IntelliTrace koleksiyon planları oluşturma ve özelleştirme](https://go.microsoft.com/fwlink/?LinkId=227871) ve [uygulamamı yavaşlatmadan en çok veriyi edinme nasıl yaparım?.](#Minimizing) **Note:**  Varsayılan olarak,. iTrace dosyasının en büyük boyutu 100 MB 'tır. . İTrace dosyası bu sınıra ulaştığında, toplayıcı yeni girişler için alan oluşturmak üzere dosyanın en eski girdilerini siler. Bu sınırı değiştirmek için, koleksiyon planının `MaximumLogFileSize` özniteliğini düzenleyin. <br /><br /> *Bu koleksiyon planlarının yerelleştirilmiş sürümlerini nereden bulabilirim?*<br /><br /> Yerelleştirilmiş planları toplayıcı alt klasörlerinde bulabilirsiniz.|
-    |*FullPathToITraceFileDirectory*|. İTrace dosya dizininin tam yolu. **Güvenlik notno:**  Tam yolu belirtin, göreli bir yol değil.|
+    |*Fullpathtoitkcefiledirectory*|. İTrace dosya dizininin tam yolu. **Güvenlik notno:**  Tam yolu belirtin, göreli bir yol değil.|
 
      Toplayıcı uygulama havuzuna iliştirir ve veri toplamaya başlar.
 
@@ -256,7 +256,7 @@ ms.locfileid: "74297120"
 
 1. Uygulamanızı başlatmak ve verileri aynı anda toplamak için şu sözdizimini kullanın:
 
-     *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
+     *\<FullPathToIntelliTraceCollectorExecutable >* `\IntelliTraceSC.exe launch /cp:` *\<pathtocollectionplan >* `/f:` *\<Fullpathtoitkcefiledirectoryandfilename >* *\<pathtoappyürütülebilirfileandfilename >*
 
      Örneğin, **MyApp**adlı bir uygulamadan veri toplamak için:
 
@@ -266,7 +266,7 @@ ms.locfileid: "74297120"
     |-|-|
     |*FullPathToIntelliTraceCollectorExecutable*|Collector yürütülebilirinin tam yolu, ıntellitracesc. exe|
     |*PathToCollectionPlan*|Toplayıcı için ayarları yapılandıran bir. xml dosyası olan bir koleksiyon planının yolu.<br /><br /> Toplayıcıyla birlikte gelen bir plan belirtebilirsiniz. Aşağıdaki planlar yönetilen uygulamalar için çalışır:<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     Yalnızca özel durumlar, veritabanı çağrıları ve Web sunucusu istekleri dahil olmak üzere IntelliTrace olaylarını toplar.<br />-collection_plan. ASP. NET. Trace. xml<br />     İşlev çağrılarını ve collection_plan. ASP. NET. default. xml dosyasındaki tüm verileri toplar. Bu plan ayrıntılı analiz için uygundur, ancak uygulamanızı collection_plan. ASP. NET. default. xml ' den daha uzun sürebilir.<br /><br /> Uygulamanızı yavaşlatmayı önlemek için, bu planları özelleştirin veya kendi planınızı oluşturun. Güvenlik için, tüm özel planları toplayıcı dosyalarıyla aynı güvenli konuma yerleştirin. Bkz. [IntelliTrace koleksiyon planları oluşturma ve özelleştirme](https://go.microsoft.com/fwlink/?LinkId=227871) ve [uygulamamı yavaşlatmadan en çok veriyi edinme nasıl yaparım?.](#Minimizing) **Note:**  Varsayılan olarak,. iTrace dosyasının en büyük boyutu 100 MB 'tır. . İTrace dosyası bu sınıra ulaştığında, toplayıcı yeni girişler için alan oluşturmak üzere dosyanın en eski girdilerini siler. Bu sınırı değiştirmek için, koleksiyon planının `MaximumLogFileSize` özniteliğini düzenleyin. <br /><br /> *Bu koleksiyon planlarının yerelleştirilmiş sürümlerini nereden bulabilirim?*<br /><br /> Yerelleştirilmiş planları toplayıcı alt klasörlerinde bulabilirsiniz.|
-    |*FullPathToITraceFileDirectoryAndFileName*|. İTrace dosya dizininin tam yolu ve. iTrace dosya adı. **iTrace** uzantısı. **Güvenlik notno:**  Tam yolu belirtin, göreli bir yol değil.|
+    |*Fullpathtoitkcefiledirectoryanddosya adı*|. İTrace dosya dizininin tam yolu ve. iTrace dosya adı. **iTrace** uzantısı. **Güvenlik notno:**  Tam yolu belirtin, göreli bir yol değil.|
     |*PathToAppExecutableFileAndFileName*|Yönetilen uygulamanızın yolu ve dosya adı|
 
 2. Uygulamadan çıkmadan veri toplamayı durdurun.
@@ -400,7 +400,7 @@ ms.locfileid: "74297120"
  [Visual Studio ALM + TFS blogu](https://go.microsoft.com/fwlink/?LinkID=201340)
 
 ### <a name="forums"></a>Forumlar
- [Visual Studio Debugger](https://go.microsoft.com/fwlink/?LinkId=262263)
+ [Visual Studio hata ayıklayıcısı](https://go.microsoft.com/fwlink/?LinkId=262263)
 
 ### <a name="videos"></a>Videolar
  [Channel 9 videosu: IntelliTrace verilerini toplama ve analiz etme](https://go.microsoft.com/fwlink/?LinkID=251851)

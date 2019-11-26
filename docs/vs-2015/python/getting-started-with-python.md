@@ -60,7 +60,7 @@ Aşağıdaki kaynaklar başlamanıza yardımcı olur:
 
 - [Yükleme kılavuzu](https://github.com/Microsoft/PTVS/wiki/PTVS-Installation)    
 - [Başlarken ve derin videoları öğrenin](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
-- Yükleme ve özellikleri Tanıtımı (27 dk.)]( https://www.youtube.com/watch?v=JNNAOypc6Ek)  
+- Yükleme ve Özellikler tanıtımı (27 dk)] (https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [Belgeler](https://github.com/Microsoft/PTVS/wiki)  
 
 Visual Studio 'Nun mevcut olmadığı, Python kullanarak tek başına yürütülebilir bir dosya oluşturma, aslında katıştırılmış Python yorumlayıcı içeren bir program anlamına gelir. Ancak, [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)' de açıklandığı gibi, Python topluluğu 'nda bunu yapmak için çeşitli araçlar vardır. Cpyıthon Ayrıca, [cpıthon 'un eklenebilir ZIP dosyası kullanılarak](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)blog gönderisine göre yerel bir uygulama içine katıştırılmakta da desteklenir.

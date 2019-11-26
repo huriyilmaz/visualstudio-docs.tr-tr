@@ -70,7 +70,7 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
      ![Yeni proje iletişim kutusu, Visual Basic örneği](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
-4. Seçin **Tamam** düğmesi.
+4. **Tamam** düğmesini seçin.
 
 ## <a name="BKMK_CreateBuildConfig"></a>Özel derleme yapılandırması oluşturma
 
@@ -96,7 +96,7 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
     ![Yeni çözüm platformu Iletişim kutusu](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
 
-6. Seçin **Tamam** düğmesi.
+6. **Tamam** düğmesini seçin.
 
    Etkin çözüm yapılandırması, etkin çözüm platformunun x64 olarak ayarlandığı test olacak şekilde değiştirilmiştir.
 
@@ -237,7 +237,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
     ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
 
-2. Seçin **derleme** sayfası.
+2. **Yapı** sayfasını seçin.
 
 3. **Yapılandırma** listesinde **yayın**' ı seçin.
 

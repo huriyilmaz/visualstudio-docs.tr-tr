@@ -151,7 +151,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
      Visual Studio `AdventureWorksSalesEditor` projesini çözüme ekler.
 
-5. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
+5. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
      **Veri kaynakları** penceresi açılır.
 
@@ -161,7 +161,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 7. Sihirbazın **veri kaynağı türünü seçin** sayfasında **hizmet**' i seçin ve ardından **İleri**' ye tıklayın.
 
-8. {1&gt;Hizmet Başvurusu Ekle&lt;1} iletişim kutusunda {2&gt;Keşfedin&lt;2}'e tıklayın.
+8. **Hizmet başvurusu Ekle** Iletişim kutusunda **bul**' a tıklayın.
 
      Visual Studio kullanılabilir hizmetler için geçerli çözümü arar ve **Hizmetler** kutusundaki kullanılabilir hizmetler listesine `AdventureWorksService.svc` ekler.
 

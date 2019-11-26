@@ -27,7 +27,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [DA0038: yüksek hız kilitl
   
 |||  
 |-|-|  
-|Kural kimliği|DA0038|  
+|Kural Kimliği|DA0038|  
 |Kategori|.NET Framework kullanımı|  
 |Profil oluşturma yöntemi|Aşağıdakine<br /><br /> İzleme<br /><br /> .NET belleği|  
 |İleti|Yüksek oranda .NET kilit çekişmeleri meydana geldiğini belirtir. Lütfen eşzamanlılık profilini çalıştırarak bu kilit çakışmasının nedenini araştırın.|  
@@ -35,7 +35,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [DA0038: yüksek hız kilitl
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütmesi sırasında önemli ölçüde yüksek bir kilit çekişmesinin gerçekleştiğini gösterir. Çekişmelerin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

@@ -93,7 +93,7 @@ Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş s
 
 - **UML Model Gezgini**' nde aktiviteyi bir pakete sürükleyin.
 
-     \- veya -
+     \- veya-
 
 - **UML Model Gezgini**'nde etkinliğe sağ tıklayın ve **Kes**' e tıklayın. Sonra pakete sağ tıklayıp **Yapıştır**' a tıklayın.
 
@@ -408,7 +408,7 @@ Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş s
 
 1. Dönüşüm veya seçim akışının açıkladığı yeni bir etkinlik diyagramı oluşturun.
 
-   - **Çözüm Gezgini**, projenize sağ tıklayın, **Ekle**' nin üzerine gelin, **Yeni öğe**' ye tıklayın ve ardından **etkinlik diyagramı**' na tıklayın. Diyagrama dönüşüm veya seçim akışı için uygun bir ad verin. **Ekle**'ye tıklayın.
+   - **Çözüm Gezgini**, projenize sağ tıklayın, **Ekle**' nin üzerine gelin, **Yeni öğe**' ye tıklayın ve ardından **etkinlik diyagramı**' na tıklayın. Diyagrama dönüşüm veya seçim akışı için uygun bir ad verin. **Ekle**'yi tıklatın.
 
 2. Yeni diyagramda:
 

@@ -19,7 +19,7 @@ ms.locfileid: "74298366"
 # <a name="memory-usage"></a>Bellek Kullanımı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile hata ayıklarken bellek sızıntılarını ve verimsiz belleği bulun. Bir veya daha fazla atmanız bellek kullanımı aracı sağlar *anlık görüntüleri* yönetilen ve yerel bellek yığın. .NET, yerel veya karma mod (.NET ve yerel) uygulamaları, anlık toplayabilirsiniz.  
+Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile hata ayıklarken bellek sızıntılarını ve verimsiz belleği bulun. Bellek kullanımı aracı, yönetilen ve yerel bellek yığınının bir veya daha fazla *anlık görüntüsünü* almanızı sağlar. .NET, yerel veya karma mod (.NET ve yerel) uygulamaları, anlık toplayabilirsiniz.  
   
 - Nesne türlerinin bellek kullanımı üzerindeki göreli etkisini anlamak ve uygulamanızda belleği verimsiz kullanan kodu bulmak için tek bir anlık görüntüyü anailz edebilirsiniz.  
   
@@ -29,12 +29,12 @@ Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile ha
   
   ![DiagnosticTools&#45;güncelleştirme 1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-güncelleştirme 1")  
   
-  Her zaman bellek anlık görüntüleri toplama rağmen **bellek kullanımı** aracı, performans sorunlarını araştırma sırasında uygulamanızın nasıl yürütür denetlemek için Visual Studio hata ayıklayıcısını kullanabilirsiniz. Kesme noktaları, Adımlama, tümünü Kes ve diğer hata ayıklayıcı eylemlerini performans araştırmalarınıza en uygun olan kod yollarında odaklanmanıza yardımcı olabilir. Uygulamanız çalışırken bu eylemlerin gerçekleştirilmesi, sizi ilgilenmeyen koddan paraziti ortadan kaldırır ve bir sorunu tanılamak için gereken süreyi önemli ölçüde azaltabilir.  
+  Bellek **kullanım** aracında istediğiniz zaman bellek anlık görüntülerini toplayabilmenize karşın, performans sorunlarını araştırırken uygulamanızın nasıl yürütüldüğünü denetlemek Için Visual Studio hata ayıklayıcısını kullanabilirsiniz. Kesme noktaları, Adımlama, tümünü Kes ve diğer hata ayıklayıcı eylemlerini performans araştırmalarınıza en uygun olan kod yollarında odaklanmanıza yardımcı olabilir. Uygulamanız çalışırken bu eylemlerin gerçekleştirilmesi, sizi ilgilenmeyen koddan paraziti ortadan kaldırır ve bir sorunu tanılamak için gereken süreyi önemli ölçüde azaltabilir.  
   
   Hata ayıklayıcının dışında bellek Aracı'nı kullanabilirsiniz. [Hata ayıklama olmadan bellek kullanımını](https://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0)görün.  
   
 > [!NOTE]
-> **Özel ayırıcı desteği** yerel bellek profili Oluşturucu çalışır ayırma toplayarak [ETW](https://msdn.microsoft.com/library/windows/desktop/bb968803\(v=vs.85\).aspx) sırasında çalışma zamanı tarafından yayınlanan olay verileri.  Böylece ayırma verilerini yakalanabilir ayırıcılar CRT ve Windows SDK'sı kaynak düzeyinde ek açıklama eklenen.  Kendi ayırıcılarınızı yazıyorsanız, yeni ayrılan yığın belleğine yönelik bir işaretçi döndüren işlevlerden farklı olarak, myMalloc için bu örnekte görüldüğü gibi [__declspec](https://msdn.microsoft.com/library/832db681-e8e1-41ca-b78c-cd9d265cdb87)(ayırıcı) ile birlikte kullanılabilir.  
+> **Özel ayırıcı desteği** Yerel bellek Oluşturucu, çalışma zamanı sırasında tarafından yayılan ayırma [ETW](https://msdn.microsoft.com/library/windows/desktop/bb968803\(v=vs.85\).aspx) olay verileri toplanarak işe yarar.  Böylece ayırma verilerini yakalanabilir ayırıcılar CRT ve Windows SDK'sı kaynak düzeyinde ek açıklama eklenen.  Kendi ayırıcılarınızı yazıyorsanız, yeni ayrılan yığın belleğine yönelik bir işaretçi döndüren işlevlerden farklı olarak, myMalloc için bu örnekte görüldüğü gibi [__declspec](https://msdn.microsoft.com/library/832db681-e8e1-41ca-b78c-cd9d265cdb87)(ayırıcı) ile birlikte kullanılabilir.  
 >   
 > `__declspec(allocator) void* myMalloc(size_t size)`  
   
@@ -83,11 +83,11 @@ Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile ha
   
  ![Hata ayıklayıcı yönetilen tür &#45; ile köke rapor yolları](../profiling/media/dbgdiag-mem-managedtypesreport-pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
   
- Üst bölme sayısı ve türleri boyutu türü tarafından başvurulan tüm nesnelerin boyutu da dahil olmak üzere anlık görüntünün gösterir (**kapsamlı boyut**).  
+ Üstteki bölmede, tür tarafından başvurulan tüm nesnelerin boyutu da dahil olmak üzere anlık görüntüdeki türlerin sayısı ve boyutu gösterilir (**kapsamlı boyut**).  
   
- **Kök yolları** alt bölme ağacında üst bölmede seçtiğiniz türüne başvuran nesneleri görüntüler. Yalnızca son türü başvurduğu yayınlandığında .NET Framework atık toplayıcı nesne için bellek temizler.  
+ Alt bölmedeki **kök ağacın yolları** , üst bölmede seçilen türe başvuran nesneleri görüntüler. Yalnızca son türü başvurduğu yayınlandığında .NET Framework atık toplayıcı nesne için bellek temizler.  
   
- **Başvurulan türleri** üst bölmede seçilen tür tarafından tutulan başvuru ağacı görüntüler.  
+ **Başvurulan türler** ağacı, üst bölmede seçilen tür tarafından tutulan başvuruları görüntüler.  
   
  ![Yönetilen eferenced Types rapor görünümü](../profiling/media/dbgdiag-mem-managedtypesreport-referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
   
@@ -95,36 +95,36 @@ Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile ha
   
  ![Örnek görünümü](../profiling/media/dbgdiag-mem-managedtypesreport-instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
   
- **Örnekleri** görünümü seçili nesnenin örneklerini üst bölmede anlık görüntüler. Kök ve başvurulan nesneler bölmesine yönelik yollar seçili örneğe ve seçili Örneğin başvurduğu türlere başvuran nesneleri görüntüler. Hata ayıklayıcı anlık görüntünün alındığı noktada durdurulduğunda, bir araç ipucunda nesnenin değerlerini göstermek için değer hücresinin üzerine gelin.  
+ **Örnekler** görünümü, alt görüntüdeki seçili nesnenin örneklerini üst bölmede görüntüler. Kök ve başvurulan nesneler bölmesine yönelik yollar seçili örneğe ve seçili Örneğin başvurduğu türlere başvuran nesneleri görüntüler. Hata ayıklayıcı anlık görüntünün alındığı noktada durdurulduğunda, bir araç ipucunda nesnenin değerlerini göstermek için değer hücresinin üzerine gelin.  
   
 ### <a name="native-type-reports"></a>Yerel tür raporları  
  **Tanılama araçları** penceresinin bellek kullanımı Özet tablosunda **Yerel ayırmaların** veya **yerel yığın boyutu** hücresinin geçerli bağlantısını seçin.  
   
  ![Yerel tür görünümü](../profiling/media/dbgdiag-mem-native-typesview.png "DBGDIAG_MEM_Native_TypesView")  
   
- **Türler görünümü** sayısı ve boyutu türleri anlık görüntüler.  
+ **Türler görünümü** anlık görüntüdeki türlerin sayısını ve boyutunu görüntüler.  
   
 - Seçilen bir türün nesneleri hakkındaki bilgileri göstermek için örnekler simgesini (![nesne türü sütunundaki örnek simgesi](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")) seçin.  
   
-     **Örnekleri** Görünüm Seçili türünün her örneğinin görüntüler. Görüntüler oluşturma örneğinde sonuçlanan çağrı yığınını örneği seçerek **ayırma çağrı yığını** bölmesi.  
+     **Örnekler** görünümü seçili türün her örneğini görüntüler. Örnek seçildiğinde, **ayırma çağrı yığını** bölmesinde örneğin oluşturulmasına neden olan çağrı yığını görüntülenir.  
   
      ![Örnek görünümü](../profiling/media/dbgdiag-mem-native-instances.png "DBGDIAG_MEM_Native_Instances")  
   
-- Seçin **yığınlar görünümü** içinde **görünüm modu** seçili türü için ayırma yığını görmek için listenin.  
+- Seçili türe ait ayırma yığınını görmek için, **görünüm modu** listesinde **yığınlar görünümü** ' ne tıklayın.  
   
      ![Yığınlar görünümü](../profiling/media/dbgdiag-mem-native-stacksview.png "DBGDIAG_MEM_Native_StacksView")  
   
 ### <a name="change-diff-reports"></a>Değiştir (fark) raporları  
   
-- Özet tablosunu hücrede değiştir bağlantısını seçin **bellek kullanımı** sekmesinde **tanılama araçları** penceresi.  
+- **Tanılama araçları** penceresindeki **bellek kullanımı** sekmesinin Özet tablosunun Özet tablosunun bir hücresinde bağlantıyı değiştir ' i seçin.  
   
    ![Bir değişiklik &#40;dif&#41;f raporu seçin](../profiling/media/dbgdiag-mem-choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
-- Anlık görüntüde seçin **Karşılaştırılacak** yönetilen veya yerel bir rapor listesi.  
+- Yönetilen veya yerel raporun **Karşılaştırılacak** listesinde bir anlık görüntü seçin.  
   
    ![Karşılaştırılacak listeden bir anlık görüntü seçin](../profiling/media/dbgdiag-mem-choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
-  Değişiklik raporu sütunları ekler (ile işaretlenen **(fark)** ) temel anlık görüntü değeri ile karşılaştırma anlık görüntü arasındaki fark gösteren temel bir rapor. Yerel bir tür görünümü fark raporu şöyle görünebilir:  
+  Değişiklik raporu, temel anlık görüntü değeri ve karşılaştırma anlık görüntüsü arasındaki farkı gösteren temel rapora sütunlar ( **(fark)** ile işaretlenir) ekler. Yerel bir tür görünümü fark raporu şöyle görünebilir:  
   
   ![Yerel türler fark veiw](../profiling/media/dbgdiag-mem-native-typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   

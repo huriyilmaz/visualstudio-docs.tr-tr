@@ -30,7 +30,7 @@ Kural kimliği | DA0006 |
 | İleti | Değer türlerinde Equals ve eşitlik işlecini geçersiz kılın. |  
 | Messge türü | Uyarı |  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Eşittir yöntemine veya bir ortak değer türünün eşitlik işleçlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Daha verimli bir yöntem uygulamayı düşünün.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

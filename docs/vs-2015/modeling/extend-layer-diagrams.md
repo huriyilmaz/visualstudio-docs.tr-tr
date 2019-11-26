@@ -34,7 +34,7 @@ Katman diyagramları oluşturup güncelleştirmek ve Visual Studio 'daki katman 
 
 - [Katman diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)
 
-## <a name="prereqs"></a> Gereksinimleri
+## <a name="prereqs"></a>Gereklilik
  Katman uzantılarınızı geliştirmek istediğiniz bilgisayarda aşağıdakilerin yüklü olması gerekir:
 
 - Visual Studio

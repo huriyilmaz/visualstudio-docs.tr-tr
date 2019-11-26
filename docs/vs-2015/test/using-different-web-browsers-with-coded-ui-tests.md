@@ -20,7 +20,7 @@ ms.locfileid: "74297956"
 
 Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak testlerinizi kaydederek sınamayı otomatikleştirebilirsiniz. Bu web uygulamaları için Internet Explorer veya başka tarayıcı türleri kullanarak testinizi özelleştirebilir ve geri oynatabilirsiniz.
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 
@@ -113,7 +113,7 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
 - ![İpucu](../test/media/tip.png "İpucu") Çıktıyı, kodlanmış UI günlüklerinde ekran görüntülerini içerecek şekilde yapılandırabilirsiniz. Bunu yapmak için bazı yapılandırma ayarlarını QTAgent32.exe.config dosyasında ayarlamanız gerekir. Varsayılan olarak, bu dosya aşağıdaki konuma yüklenir:
 
-   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
+   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\ıde**
 
    Aşağıdaki değerleri ayarlayın:
 

@@ -140,7 +140,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
    - **CTRL** tuşuna basın ve bitişi taşıyın.
 
-     \- veya -
+     \- veya-
 
    - Bağlayıcıya sağ tıklayın ve ardından **yeniden bağlan**' a tıklayın.
 
@@ -158,11 +158,11 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Fare tekerleğini döndürürken **CTRL** tuşuna basın ve basılı tutun.
 
-     \- veya -
+     \- veya-
 
 - **CTRL + SHIFT**tuşlarına basın ve basılı tutun, ardından sol veya sağ fare düğmesine tıklayın.
 
-     \- veya -
+     \- veya-
 
 - **Mimari tasarımcıları** araç çubuğunda artı işaretine ( **+** ) veya eksi işaretine ( **-** ) tıklayın veya bir yakınlaştırma düzeyi seçin.
 
@@ -173,7 +173,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 1. **CTRL + F**tuşlarına basın.
 
-     \- veya -
+     \- veya-
 
      **Düzenle** menüsünde **Bul ve Değiştir**' ın üzerine gelin ve **hızlı bul**' a tıklayın.
 
@@ -282,7 +282,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Diyagramdaki öğesine sağ tıklayın ve ardından **diyagramdan kaldır**' a tıklayın.
 
-  \- veya -
+  \- veya-
 
 - Diyagramdaki öğesine tıklayın ve ardından **Delete** tuşuna basın.
 

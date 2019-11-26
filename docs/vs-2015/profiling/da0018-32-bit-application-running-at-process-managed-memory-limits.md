@@ -31,7 +31,7 @@ Kural kimliği | DA0018 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma işlemi sırasında toplanan sistem verileri, .NET Framework bellek yığınlarının, yönetilen yığınlardaki 32 bitlik bir işlemde ulaşabileceği en büyük boyutu approached gösterir. Bu en büyük boyut, varsayılan değerdir. Özel baytlar için ayrılabilecek işlem adres alanının Toplam miktarına bağlıdır. Bildirilen değer, profili oluşturulmuş işlem etkinken Heap 'ler için gözlenen en yüksek değerdir. .NET bellek profili oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün ve yönetilen kaynakların uygulama tarafından kullanımını en iyi duruma getirme işlemini yapın.  
   
  Yönetilen yığınlardaki boyut varsayılan sınıra yaklaşımında, otomatik atık toplama işleminin daha sık çağrılması gerekebilir. Bu, bellek yönetiminin ek yükünü artırır.  

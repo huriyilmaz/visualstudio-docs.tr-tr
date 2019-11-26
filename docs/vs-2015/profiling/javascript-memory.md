@@ -98,7 +98,7 @@ JavaScript bellek Çözümleyicisi, bellek kullanımını anlamanıza ve JavaScr
   
 4. **Kullanılabilir araçlar**' dan **JavaScript belleği** onay kutusunu seçin ve ardından **Başlat**' ı seçin.  
   
-5. Bellek Çözümleyicisi 'ni başlattığınızda, bir kullanıcı hesabı denetim penceresi Visual Studio ETW Collector. exe ' yi çalıştırmak için izninizi isteyebilir. Seçin **Evet**.  
+5. Bellek Çözümleyicisi 'ni başlattığınızda, bir kullanıcı hesabı denetim penceresi Visual Studio ETW Collector. exe ' yi çalıştırmak için izninizi isteyebilir. **Evet**' i seçin.  
   
      İlgili bellek kullanımı senaryolarını test etmek ve aşağıdaki bölümlerde açıklandığı gibi bellek grafiğini görüntülemek için uygulamayla etkileşime geçin.  
   
@@ -257,7 +257,7 @@ JavaScript bellek Çözümleyicisi, bellek kullanımını anlamanıza ve JavaScr
   
 - **Yazın**. Nesne türü (örneğin, HTML bağlantı öğesi veya div öğesi).  
   
-- **Boyutu**. Başvurulan nesnelerin boyutunu içermeyen nesne boyutu.  
+- **Boyut**. Başvurulan nesnelerin boyutunu içermeyen nesne boyutu.  
   
 - **Korunan boyut**. Nesne boyutu ve diğer üst öğeleri olmayan tüm alt nesnelerin boyutu. Pratik amaçlar için, bu, nesne tarafından tutulan bellek miktarıdır, bu yüzden, belirtilen bellek miktarını geri kazanmak için nesneyi silerseniz.  
   

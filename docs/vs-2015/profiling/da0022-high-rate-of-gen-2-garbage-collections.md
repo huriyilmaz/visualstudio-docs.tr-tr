@@ -31,7 +31,7 @@ Kural kimliği | DA0022 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma sırasında toplanan sistem performansı verileri, 1. nesil atık koleksiyonlara kıyasla bellek for.NET Framework nesnelerinin önemli bir oranının 2. nesil atık toplama işleminde geri kazanıldığını gösterir.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

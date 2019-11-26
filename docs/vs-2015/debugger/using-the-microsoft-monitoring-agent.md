@@ -57,7 +57,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 3. İndirdiğiniz yürütebilen dosyayı çalıştırarak yükleme sihirbazını başlatın.  
   
-4. IntelliTrace günlüklerini depolamak için web sunucunuzda güvenli bir dizin oluşturun; örneğin, **C:\IntelliTraceLogs**.  
+4. IntelliTrace günlüklerini depolamak için Web sunucunuzda güvenli bir dizin oluşturun, örneğin, **C:\IntelliTraceLogs**.  
   
      Bu dizini izlemeye başlamadan önce oluşturduğunuzdan emin olun. Uygulamanızı yavaşlatmayı önlemek için, yerel bir yüksek hızlı diskte çok etkin olmayan bir konum seçin.  
   
@@ -84,7 +84,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 - Windows **ıccacls** komutuyla izinleri ayarlamak için:  
   
-  - {1&gt;DefaultAppPool&lt;1} uygulama havuzundaki bir web uygulaması için:  
+  - **DefaultAppPool** uygulama havuzundaki bir Web uygulaması için:  
   
      `icacls "C:\IntelliTraceLogs" /grant "IIS APPPOOL\DefaultAppPool":RX`  
   
@@ -96,24 +96,24 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 - Windows Gezgini (veya dosya Gezgini) ile izinleri ayarlamak için:  
   
-  1. IntelliTrace günlük dizini için **Özellikler**'i açın.  
+  1. IntelliTrace günlük dizini için **özellikleri** açın.  
   
   2. **Güvenlik** sekmesinde **Düzenle**, **Ekle**' yi seçin.  
   
-  3. {1&gt;Bu nesne türünü seç&lt;1} kutusunda {2&gt;Yerleşik güvenlik esasları&lt;2} seçeneğinin göründüğünden emin olun. Bu yoksa eklemek için **nesne türleri** ' ni seçin.  
+  3. **Bu nesne türünü seç** kutusunda **yerleşik güvenlik sorumlularının** göründüğünden emin olun. Bu yoksa eklemek için **nesne türleri** ' ni seçin.  
   
   4. **Bu konumdan** yerel bilgisayarınızın göründüğünden emin olun. Orada yoksa, değiştirmek için **konumlar** ' ı seçin.  
   
-  5. {1&gt;Seçilecek nesne adlarını girin&lt;1} kutusunda, web uygulaması ya da SharePoint uygulaması için uygulama havuzunu ekleyin.  
+  5. **Seçilecek nesne adlarını girin** kutusunda, Web uygulaması veya SharePoint uygulaması için uygulama havuzunu ekleyin.  
   
-  6. Adı çözümlemek için **adları denetle** ' yi seçin. Seçin **Tamam**.  
+  6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı**seçin.  
   
-  7. Uygulama havuzunun **Okuma ve yürütme** izinlerine sahip olduğundan emin olun.  
+  7. Uygulama havuzunun **okuma & yürütme** izinlerine sahip olduğundan emin olun.  
   
 ## <a name="MonitorEvents"></a>2. Adım: uygulamanızı izlemeye başlama  
  Uygulamanızı izlemeye başlamak için Windows PowerShell [Start-WebApplicationMonitoring](https://go.microsoft.com/fwlink/?LinkID=313686) komutunu kullanın. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).  
   
-1. Web sunucunuzda yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.  
+1. Web sunucunuzda, yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.  
   
      ![Windows PowerShell 'i yönetici olarak açın](../debugger/media/ffr-powershellrunadmin.png "FFR_PowerShellRunAdmin")  
   
@@ -242,7 +242,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **Checkpoint-WebApplicationMonitoring** *"\<ııswebsitename >\\< iiswebappname\>"*  
   
-    \- veya -  
+    \- veya-  
   
     **Checkpoint-WebApplicationMonitoring "IIS: \ sites** *\\< ııswebsitename\>\\< iiswebappname\>"*  
   
@@ -272,7 +272,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **Stop-WebApplicationMonitoring** *"\<ııswebsitename >\\< iiswebappname\>"*  
   
-    \- veya -  
+    \- veya-  
   
     **Stop-WebApplicationMonitoring "IIS: \ sites** *\\< ııswebsitename\>\\< iiswebappname\>"*  
   
@@ -284,7 +284,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **PS C:\\> Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**  
   
-    \- veya -  
+    \- veya-  
   
     **PS C:\\> Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**  
   

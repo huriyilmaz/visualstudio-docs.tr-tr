@@ -32,7 +32,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 - Northwind veritabanındaki Customers tablosunu temsil eden bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturun.
 
-- Oluşturma bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
+- [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]oluşturun.
 
 - Bir istemci uygulaması oluşturun ve [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]bir başvuru ekleyin.
 

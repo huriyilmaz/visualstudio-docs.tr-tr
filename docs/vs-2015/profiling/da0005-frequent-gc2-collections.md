@@ -30,7 +30,7 @@ Kural kimliği | DA0005 |
 | İleti | Nesnelerinizin birçoğu 2. nesil atık toplamada toplanıyor. |  
 | İleti türü | Uyarı |  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  2\. nesil atık toplamada yüksek sayıda .NET bellek nesnesi geri kazanılır.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

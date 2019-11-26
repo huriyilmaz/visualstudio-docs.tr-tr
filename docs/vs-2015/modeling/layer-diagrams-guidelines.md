@@ -96,7 +96,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="EditArchitecture"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, katman diyagramını düzenlemek üzere aşağıdaki adımları kullanın. Ayrıca, kod yapısını genişletmeden önce geliştirmek için bazı yeniden düzenleme değişiklikleri yapmayı düşünebilirsiniz. Bkz. [kodun yapısını geliştirme](#Improving).
 
-|**To**|**Bu adımları gerçekleştirin**|
+|**Hedef**|**Bu adımları gerçekleştirin**|
 |------------|-----------------------------|
 |Olmaması gereken bir bağımlılığı silme|Bağımlılığa tıklayın ve ardından **Delete**tuşuna basın.|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|

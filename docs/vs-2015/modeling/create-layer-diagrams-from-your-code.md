@@ -64,7 +64,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
  Bağlı bir öğenin doğrulamayı destekleyip desteklemediğini görmek için **Katman Gezgini** ' ni açın ve öğenin **doğrulamayı destekler** özelliğini inceleyin. Bkz. [yapıtlara bağlantıları yönetme](#Managing).
 
-|**To**|**Bu adımları izleyin**|
+|**Hedef**|**Bu adımları izleyin**|
 |------------|----------------------------|
 |Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki katman diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları katman diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak**olarak ayarlayın.</li></ol>|
 |Seçilen tüm yapılar için tek bir katman oluşturma|Tüm yapıları aynı anda katman diyagramına sürükleyin.<br /><br /> Katman diyagramda görünür ve tüm yapılara bağlıdır.|
@@ -94,7 +94,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 2. Bu bağlantıları yönetmek için aşağıdaki görevleri kullanın.
 
-|**To**|**Katman Gezgini 'nde**|
+|**Hedef**|**Katman Gezgini 'nde**|
 |------------|---------------------------|
 |Katman ve yapı arasındaki bağlantıyı silme|Yapıt bağlantısının kısayol menüsünü açın ve **Sil**' i seçin.|
 |Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> veya<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. katman diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
@@ -115,7 +115,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 ## <a name="EditDependencies"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya hedeflenen mimaride yapmayı planladığınız değişiklikleri açıklamak için katman diyagramını düzenleyin:
 
-|**To**|**Bu adımları gerçekleştirin**|
+|**Hedef**|**Bu adımları gerçekleştirin**|
 |------------|-----------------------------|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.|

@@ -28,13 +28,13 @@ Visual Studio ile ilgili en son belgeler için bkz. [DA0001: birleştirmeleri I�
   
 |||  
 |-|-|  
-|Kural kimliği|DA0001|  
+|Kural Kimliği|DA0001|  
 |Kategori|.NET Framework kullanımı|  
 |Profil oluşturma yöntemleri|Aşağıdakine<br /><br /> İzleme|  
 |İleti|Dize birleştirmeleri için StringBuilder kullanmayı düşünün|  
 |İleti türü|Uyarı|  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  System. String. Concat çağrısı, profil oluşturma verilerinin önemli bir orandır. Birden çok kesimden dizeler oluşturmak için <xref:System.Text.StringBuilder> sınıfını kullanmayı düşünün.  
   
 ## <a name="rule-description"></a>Kural Tanımı  
