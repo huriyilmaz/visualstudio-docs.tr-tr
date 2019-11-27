@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 036ad2171c3b117049635247a980cd0f8411d887
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
-ms.translationtype: HT
+ms.openlocfilehash: ce064209ca96abda1f9e44825fa869c2ba250a32
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297559"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538979"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Hangi&#39;Visual Studio 2015'te yeni s
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Visual Studio 2015, tümleşik bir geliştirici üretkenliği araçları, bulut 
 
 Bu sayfada Visual Studio 2013'ün ilk olarak sunulan özelliklerini Visual Studio 2013 güncelleştirmelerden biri dahil olmak üzere RTM,'den beri yenidir en önemli özelliklerinden bazıları vurgular. Visual Studio 2015 ' deki yeniliklerin tüm listesi için bkz. [sürüm notları](https://www.visualstudio.com/news/vs2015-vs).
 
-Visual Studio ALM 'deki pek çok geliştirme ve yeni özellik hakkında daha fazla bilgi edinmek için bkz. [TFS 2015](/tfs/server/whats-new?view=vsts#tfs-2015-rtm)yenilikleri.
+Visual Studio ALM 'deki pek çok geliştirme ve yeni özellik hakkında daha fazla bilgi edinmek için bkz. [TFS 2015](/azure/devops/server/whats-new#tfs-2015)yenilikleri.
 
 ## <a name="a-new-setup-experience"></a>Yeni bir kurulum deneyimi
  [!INCLUDE[downloadvs](./includes/downloadvs-md.md)]
@@ -176,7 +176,7 @@ Aşağıdaki yeni veya geliştirilmiş kodunuz üzerinde farklı türde tanılam
 
  ![Visual Studio özel düzen menü öğesi](./ide/media/vs2015-customlayout.png "VS2015_CustomLayout")
 
-### <a name="notification-hub"></a>Bildirim hub'ı
+### <a name="notification-hub"></a>Bildirim Hub'ı
  Bildirim hub'ı için kullanıcı Arabirimi hızlı tarama kolaylaştırmak üzere basitleştirilmiştir. Performans sorunlarını, işleme sorunlarını ve kilitlenmeleri de dahil olmak üzere ek bildirim türlerini eklenmiştir ve gösteren bir bildirimini durdurmak için Visual Studio artık söyleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio bildirimleri](./ide/visual-studio-notifications.md).
 
 ### <a name="codelens-find-what-happened-to-your-code-enterprise-and-professional-editions-only"></a>CodeLens: kodunuzu (yalnızca Enterprise ve Professional sürümleri) ne olduğunu Bul
