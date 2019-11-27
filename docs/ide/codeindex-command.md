@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 378a5965f8ca9e9cc2d1c7214180e99f080d7873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bec6c997a73d0b163ec0857ddd3a3380f26793bf
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72630954"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538526"
 ---
 # <a name="codeindex-command"></a>CodeIndex komutu
 
@@ -52,8 +52,8 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |**/Listlargefiles [/fileCount:** `FileCount` **/minboyut:** `MinSize`]|KB cinsinden belirtilen boyutu aşan belirtilen dosya sayısını gösterir. Daha sonra bu dosyaları dizin oluşturma işleminden dışlamak için **/IgnoreList** seçeneğini kullanabilirsiniz.|
 |**/Reındexall**|Önceden dizinli verileri temizleyin ve Dizin oluşturmayı yeniden başlatın.|
 |**/Destroyıcodeındex [/noPrompt]**|Kod dizinini silin ve tüm dizinli verileri kaldırın. **/Noprompt** seçeneğini kullanırsanız onay gerektirmez.|
-|**/temporaryDataSizeLimit**: [görüntüleme &#124; < `SizeInGBs` > &#124; devre dışı]|Değişiklik kümelerini işlerken CodeLens 'in ne kadar geçici veri oluşturduğunu denetleyin. Varsayılan sınır 2 GB 'dir.<br /><br /> -   **görünümü**: geçerli boyut sınırını gösterir.<br />-    `SizeInGBs`: boyut sınırını değiştirme.<br />-   **devre dışı**: boyut sınırını kaldırın.<br /><br /> Bu sınır, CodeLens yeni bir değişiklik kümesini işleyerek denetlenir. Geçici veriler bu sınırı aşarsa, CodeLens, yenilerini değil, geçmiş değişiklik kümelerini işlemeyi duraklatacaktır. CodeLens, veriler temizlendikten ve bu sınırın altına düştüğünde işlemeyi yeniden başlatacak. Temizleme, günde bir kez otomatik olarak çalıştırılır. Bu, temizleme çalışmaya başlamadan geçici verilerin bu sınırı aşabileceği anlamına gelir.|
-|**/ındexgeçmişini**: [tüm &#124; < &#124; `NumberOfMonths` > görüntüleme]|Değişiklik geçmişinizin ne kadar süreyle dizine alınacağını denetleyin. Bu, ne kadar geçmiş CodeLens 'in size gösterdiği geçmişi etkiler. Varsayılan sınır 12 aydır. Bu, CodeLens 'in yalnızca son 12 aydan değişiklik geçmişinizi gösterdiği anlamına gelir.<br /><br /> -   **görünümü**: geçerli ay sayısını gösterir.<br />-   **All**: tüm değişiklik geçmişini dizine çevirin.<br />-    `NumberOfMonths`: değişiklik geçmişine dizin eklemek için kullanılan ayların sayısını değiştirin.|
+|**/temporaryDataSizeLimit**: [görüntüleme &#124; <`SizeInGBs`> &#124; devre dışı]|Değişiklik kümelerini işlerken CodeLens 'in ne kadar geçici veri oluşturduğunu denetleyin. Varsayılan sınır 2 GB 'dir.<br /><br /> -   **görünümü**: geçerli boyut sınırını gösterir.<br />-   `SizeInGBs`: boyut sınırını değiştirme.<br />-   **devre dışı**: boyut sınırını kaldırın.<br /><br /> Bu sınır, CodeLens yeni bir değişiklik kümesini işleyerek denetlenir. Geçici veriler bu sınırı aşarsa, CodeLens, yenilerini değil, geçmiş değişiklik kümelerini işlemeyi duraklatacaktır. CodeLens, veriler temizlendikten ve bu sınırın altına düştüğünde işlemeyi yeniden başlatacak. Temizleme, günde bir kez otomatik olarak çalıştırılır. Bu, temizleme çalışmaya başlamadan geçici verilerin bu sınırı aşabileceği anlamına gelir.|
+|**/ındexgeçmişini**: [tüm &#124; < &#124;`NumberOfMonths`> görüntüleme]|Değişiklik geçmişinizin ne kadar süreyle dizine alınacağını denetleyin. Bu, ne kadar geçmiş CodeLens 'in size gösterdiği geçmişi etkiler. Varsayılan sınır 12 aydır. Bu, CodeLens 'in yalnızca son 12 aydan değişiklik geçmişinizi gösterdiği anlamına gelir.<br /><br /> -   **görünümü**: geçerli ay sayısını gösterir.<br />-   **All**: tüm değişiklik geçmişini dizine çevirin.<br />-   `NumberOfMonths`: değişiklik geçmişine dizin eklemek için kullanılan ayların sayısını değiştirin.|
 |**/CollectionName:** `CollectionName`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun adını belirtir. **/CollectionId**kullanmıyorsanız gereklidir.|
 |**/CollectionId:** `CollectionId`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun kimlik numarasını belirtir. **/CollectionName**kullanmıyorsanız gereklidir.|
 
@@ -125,4 +125,4 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CodeLens ile kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md)
-- [TFSConfig ile sunucu yapılandırmasını yönetme](/tfs/server/ref/command-line/tfsconfig-cmd)
+- [TFSConfig ile sunucu yapılandırmasını yönetme](/azure/devops/server/command-line/tfsconfig-cmd)

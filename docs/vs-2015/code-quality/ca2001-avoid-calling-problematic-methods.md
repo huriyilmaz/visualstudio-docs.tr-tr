@@ -32,7 +32,7 @@ ms.locfileid: "74298482"
 |Kategori|Microsoft. güvenilirliği|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir üye olası tehlikeli ya da sorunlu yöntemi çağırır.
 
 ## <a name="rule-description"></a>Kural Tanımı

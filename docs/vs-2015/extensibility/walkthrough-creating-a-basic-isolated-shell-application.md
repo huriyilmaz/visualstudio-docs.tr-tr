@@ -25,7 +25,7 @@ ms.locfileid: "74291268"
 Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğunu, yardım hakkında araç penceresini özelleştirmeyi ve yalıtılmış Kabuğu yükleyen bir kurulum programı oluşturmayı gösterir.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md). Yalıtılmış Kabuğu dağıtmak için, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketini de kullanmanız gerekir.  
+ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md). Yalıtılmış Kabuğu dağıtmak için, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketini de kullanmanız gerekir.  
   
 ## <a name="creating-an-isolated-shell-solution"></a>Yalıtılmış Kabuk çözümü oluşturma  
  Bu bölümde, yalıtılmış bir kabuk çözümü oluşturmak için Visual Studio Kabuğu yalıtılmış proje şablonunun nasıl kullanılacağı gösterilmektedir. Çözüm aşağıdaki projeleri içerir:  
@@ -216,7 +216,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
     7. Splash. bmp  
   
-5. **Proje çıktıları Ekle** düğmesine tıklayın ve **MyVSShellStub/birincil çıkış**ekleyin. {1&gt;Tamam&lt;1} düğmesini tıklatın.  
+5. **Proje çıktıları Ekle** düğmesine tıklayın ve **MyVSShellStub/birincil çıkış**ekleyin. **Tamam**'a tıklayın.  
   
 6. Sol bölmede, **hedef bilgisayar**altında **fabrikam musıc DÜZENLEYICISI [INSTALLDİR]** düğümüne sağ tıklayın ve **Uzantılar**adlı **Yeni bir klasör** ekleyin.  
   
@@ -248,7 +248,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 18. **Ne bulmak istiyorsunuz?** bölmesinde, açılan listeden **kayıt defteri girişi** ' ni seçin ve **İleri**' ye tıklayın.  
   
-19. **Nasıl aramak istiyorsunuz?** bölmesinde kayıt defteri kökü olarak **HKEY_LOCAL_MACHINE** ' yi seçin. 64 bit sistemler için **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** veya 32-bit sistemler için **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** girin ve kayıt defteri değeri olarak **Install** yazın. **İleri**'ye tıklayın.  
+19. **Nasıl aramak istiyorsunuz?** bölmesinde kayıt defteri kökü olarak **HKEY_LOCAL_MACHINE** ' yi seçin. 64 bit sistemler için **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** veya 32-bit sistemler için **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** girin ve kayıt defteri değeri olarak **Install** yazın. **İleri**’ye tıklayın.  
   
 20. Bu **değerle ne yapmak istiyorsunuz?** bölmesine, **Bu ürünün yüklenmesi için Visual Studio 2015 yalıtılmış Kabuk yeniden dağıtılabilir gereklidir.** görüntülenecek metin ve **son**' a tıklayın.  
   

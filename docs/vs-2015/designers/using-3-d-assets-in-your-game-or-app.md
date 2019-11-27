@@ -45,7 +45,7 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
     |3-b modeller|**MeshContentTask (. targets,. props)**|
     |Gölgelendiriciler|**ShaderGraphContentTask (. targets,. props)**|
 
-3. Seçin **Tamam** düğmesi.
+3. **Tamam** düğmesini seçin.
 
 ## <a name="including-assets-in-your-build"></a>Derlemenize varlıklar ekleme
  Artık projeniz, kullanmak istediğiniz farklı 3-b varlık türlerini öğrendiğinden, bir sonraki adım, hangi dosyaların 3-b varlık olduğunu ve hangi tür varlıkların olduğunu söyleyecektir.
@@ -61,7 +61,7 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
    > [!IMPORTANT]
    > Varsayılan olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birçok görüntü dosyası türünün, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]yerleşik **görüntü** öğesi türü kullanılarak kategorize olması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her bir görüntünün **öğe türü** özelliğini değiştirmeniz gerekir. 3-b modeller ve Visual gölgelendirici grafik için diğer içerik ardışık düzen kaynak dosyalarının doğru **öğe türü**için varsayılan türleri.
 
-4. Seçin **Tamam** düğmesi.
+4. **Tamam** düğmesini seçin.
 
    Üç içerik ardışık düzen öğe türü ve bunların ilişkili kaynak ve çıkış dosyası türleri aşağıda verilmiştir.
 
@@ -82,7 +82,7 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
 
 3. **Yapılandırma özellikleri**altında, içerik ardışık düzeni düğümünü seçin — örneğin, doku ve görüntü varlıkları Için **görüntü içeriği işlem hattı** — ve sonra özellik kılavuzunda, özellikleri uygun değerlere ayarlayın. Örneğin, derleme zamanında bir doku varlığı için mı haritaları oluşturmak için, **MIPS oluştur** özelliğini **Evet**olarak ayarlayın.
 
-4. Seçin **Tamam** düğmesi.
+4. **Tamam** düğmesini seçin.
 
 ### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık düzen yapılandırması
  Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen aracını kullandığınızda, dokuyu çeşitli yollarla sıkıştırabilir, MıP düzeylerinin derleme zamanında oluşturulup oluşturulmayacağını belirtebilir ve çıkış dosyasının adını değiştirebilirsiniz.

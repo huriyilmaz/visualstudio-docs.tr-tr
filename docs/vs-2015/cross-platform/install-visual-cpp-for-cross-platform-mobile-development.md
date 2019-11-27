@@ -29,7 +29,7 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
  [İOS  için araçları yükler](#InstallForiOS)  
  [Bağımlılıkları el ile yükler veya güncelleştirir](#ThirdParty)  
   
-## <a name="Requirements"></a> Gereksinimleri  
+## <a name="Requirements"></a>Gereklilik  
   
 - Yükleme gereksinimleri için bkz. [Visual Studio 2015 sistem gereksinimleri](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs).  
   

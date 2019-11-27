@@ -439,12 +439,12 @@ some F# code
 |Özellik:|**CollapsibleArea**|
 |Kullanırsınız|Genişlet içerik denetimi metnini Genişlet|
 |**Öğe**|**Değer**|
-|ExpandText|Expand|
-|CollapseText|Genişletmek|
+|ExpandText|Genişlet|
+|CollapseText|Daralt|
 |Özellik:|**CodeSnippet**|
 |Kullanırsınız|Kod parçacığı denetim metni.  Note: "bölünmez" boşluk ile kod parçacığı içeriği, boşluk olarak değiştirilecek.|
 |**Öğe**|**Değer**|
-|CopyToClipboard|Panoya kopyala|
+|CopyToClipboard|Panoya Kopyala|
 |ViewColorizedText|Renklendirilmiş görüntüleme|
 |CombinedVBTabDisplayLanguage|Visual Basic (örnek)|
 |VBDeclaration|Bildirim|
@@ -510,7 +510,7 @@ some F# code
 |Homepagenobooksyüklü|Bilgisayarınızda içerik bulunamadı.|
 |HomePageHelpSettings|Yardım Içeriği ayarları|
 |HomePageHelpSettingsText|\<p > geçerli ayarınız yerel yardımdır. Yardım Görüntüleyicisi bilgisayarınıza yüklediğiniz içeriği görüntüler.\<br/> yardım içeriklerinizi değiştirmek Için, Visual Studio menü çubuğunda \<span Style = "{0}" > Yardım ' ı seçin, yardım tercihi\</span > belirleyin.\<br/>\</p >|
-|Karşılık|'LıK|
+|Karşılık|MB|
 
  **marka. js**
 
@@ -555,7 +555,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**Dosya**|**Kullanma**|**Görünen Içerik kaynağı**|
+|**Dosyasýný**|**Kullanırsınız**|**Görünen Içerik kaynağı**|
 |giriş sayfası. htm|Bu, şu anda yüklü olan içeriği görüntüleyen ve kullanıcıya içerik hakkında sunmanız gereken diğer tüm iletileri gösteren bir sayfasıdır.  Bu dosya, "Microsoft.Help.Id" content = "-1" ek meta veri özniteliğine sahiptir ve bu içeriği TOC yerel içeriğinin üst kısmına koyar.||
 ||< META_HOME_PAGE_TITLE_ADD/>|Marka. xml, etiket \<HomePageTitle >|
 ||< HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Marka. xml, etiket \<Homepagetanıtımı >|
@@ -590,7 +590,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**Dosya**|**Kullanma**|**Örnekler**|
+|**Dosyasýný**|**Kullanırsınız**|**Örnekler**|
 |Clear. gif|Daraltılabilir alanı işlemek için kullanılır||
 |footer_slice. gif|Alt bilgi sunumu||
 |info_icon. gif|Bilgiler görüntülenirken kullanılır|Sorumluluk reddi|
@@ -690,7 +690,7 @@ some F# code
 
  Bu izlenecek yol, yardım içeriğinin bir Visual Studio Kabuğu uygulamasına nasıl ekleneceğini ve sonra nasıl dağıtılacağını göstermektedir.
 
- **Gereksinimler**
+ **Requirements**
 
 1. [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]
 

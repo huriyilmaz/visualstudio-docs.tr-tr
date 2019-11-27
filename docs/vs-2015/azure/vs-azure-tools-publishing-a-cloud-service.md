@@ -47,7 +47,7 @@ Azure uygulamanızı yayımladığınızda, aşağıdaki görevlerden birini yap
 
    b. **Paket Azure uygulaması** iletişim kutusunda, paket oluşturmak istediğiniz hizmet yapılandırmasını seçin ve ardından yapı yapılandırmasını seçin.
 
-   c. Seçim Yayımladıktan sonra bulut hizmeti için Uzak Masaüstü 'Nü açmak üzere **tüm roller Için uzak masaüstünü etkinleştir**' i seçin ve ardından Uzak Masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için [Visual Studio kullanarak Azure Cloud Services'ta bir rol için Uzak Masaüstü Bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Seçim Yayımladıktan sonra bulut hizmeti için Uzak Masaüstü 'Nü açmak üzere **tüm roller Için uzak masaüstünü etkinleştir**' i seçin ve ardından Uzak Masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Yayımladıktan sonra bulut hizmetinizde hata ayıklamak istiyorsanız, uzaktan hata ayıklamayı **tüm roller Için etkinleştir**' i seçerek açın.
 

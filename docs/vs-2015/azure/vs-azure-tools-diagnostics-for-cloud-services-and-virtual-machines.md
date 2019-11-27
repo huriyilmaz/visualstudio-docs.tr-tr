@@ -69,7 +69,7 @@ Visual Studio 'da, dağıtımdan önce hizmet öykünücüsünde hizmeti çalı�
 ### <a name="to-turn-on-diagnostics-in-visual-studio-before-deployment"></a>Dağıtımdan önce Visual Studio 'da tanılamayı açmak için
 
 1. Rolün kısayol menüsünde, **Özellikler**' i seçin. Rolün **Özellikler** Iletişim kutusunda **yapılandırma** sekmesini seçin.
-2. İçinde **tanılama** bölümünde, emin **tanılamayı etkinleştir** onay kutusu seçilidir.
+2. **Tanılama** bölümünde, **tanılamayı etkinleştir** onay kutusunun seçili olduğundan emin olun.
 
     ![Tanılamayı etkinleştir seçeneğine erişin](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796660.png)
 3. Tanılama verilerine yönelik depolama hesabı belirtmek için üç nokta (...) düğmesini seçin.
@@ -189,12 +189,12 @@ Olaylar, belirttiğiniz olay kaynaklarından ve olay bildirimlerinden yakalanır
 
 ETW çerçevesi, [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) ad alanındaki sınıflar aracılığıyla ASP.net desteklenir. Standart [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) sınıflarını devralan ve genişleten Microsoft. WindowsAzure. Diagnostics ad alanı, Azure ortamında bir günlük oluşturma çerçevesi olarak [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) kullanımını mümkün kılar. Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi yapın](https://msdn.microsoft.com/magazine/ff714589.aspx) ve [Azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirin](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
-### <a name="crash-dumps"></a>Kilitlenme dökümleri
+### <a name="crash-dumps"></a>Kilitlenme bilgi dökümleri
 Bir rol örneğinin çöktüğü hakkında bilgi yakalamak için **kilitlenme dökümlerinin aktarımını etkinleştir** onay kutusunu seçin. (ASP.NET çoğu özel durumu işleyeceğinden, bu genellikle yalnızca çalışan rolleri için yararlıdır.) Kilitlenme dökümlerinde ayrılan depolama alanı yüzdesini artırmak veya azaltmak için **Dizin kotası (%)** değerini değiştirin. Kilitlenme dökümlerinin depolandığı depolama kapsayıcısını değiştirebilir ve **tam** ya da **mini** döküm yakalamak isteyip istemediğinizi seçebilirsiniz.
 
 Şu anda izlenmekte olan süreçler bir sonraki ekran görüntüsünde listelenmiştir. Yakalamak istediğiniz işlemlerin onay kutularını seçin. Listeye başka bir işlem eklemek için işlem adını girip **Işlem Ekle**' yi seçin.
 
-![Kilitlenme dökümleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
+![Kilitlenme bilgi dökümleri](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
 Daha fazla bilgi için bkz. [Microsoft Azure 'da günlüğe kaydetme ve izleme denetimi alma](https://msdn.microsoft.com/magazine/ff714589.aspx) ve [Bölüm 4: özel günlük bileşenleri ve Azure Tanılama 1,3 değişiklikleri Microsoft Azure tanılama](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
 
@@ -225,7 +225,7 @@ Bir bulut hizmeti veya sanal makine için tanılama verilerini topladıktan sonr
    | Performans sayaçları |Sanal makinede bulunan herhangi bir performans sayacı üzerinde veri toplayabilirsiniz. İşletim sistemi, bellek kullanımı ve işlemci zamanı gibi birçok istatistiği içeren performans sayaçlarını sağlar. |WADPerformanceCountersTable |
    | Altyapı günlükleri |Tanılama altyapısının kendisinden oluşturulan Günlükler. |WADDiagnosticInfrastructureLogsTable |
    | IIS günlükleri |Web isteklerini kaydeden Günlükler. Bulut hizmetiniz önemli miktarda trafik alırsa, bu Günlükler uzun olabilir. Bu verileri yalnızca ihtiyacınız olduğunda toplamak ve depolamak iyi bir fikirdir. |Başarısız-istek günlüklerini, bu dağıtım, rol ve örnek için bir yol altında wad-IIS-failedreqlogs altında bulunan BLOB kapsayıcısında bulabilirsiniz. Tüm günlükleri wad-IIS-LogFiles altında bulabilirsiniz. Her bir dosyanın girişleri Waddizinler tablosunda yapılır. |
-   | Kilitlenme dökümleri |Bulut hizmetinizin işleminin (genellikle bir çalışan rolü) ikili görüntülerini sağlar. |WAD-Crush-blob kapsayıcısı dökümünü alır |
+   | Kilitlenme bilgi dökümleri |Bulut hizmetinizin işleminin (genellikle bir çalışan rolü) ikili görüntülerini sağlar. |WAD-Crush-blob kapsayıcısı dökümünü alır |
    | Özel günlük dosyaları |Önceden tanımlamış olduğunuz verilerin günlükleri. |Depolama hesabınızdaki özel günlük dosyalarının konumunu kod içinde belirtebilirsiniz. Örneğin, özel bir blob kapsayıcısı belirtebilirsiniz. |
 4. Herhangi bir türün verileri kesilmişse, bu veri türü için arabelleği artırmayı deneyebilir veya sanal makineden depolama hesabınıza veri aktarımları arasındaki aralığı kısaltaştırın.
 5. Seçim Genel depolama maliyetlerini azaltmak için depolama hesabından verileri her zaman temizleyin.
@@ -238,7 +238,7 @@ Bir bulut hizmeti veya sanal makine için tanılama verilerini topladıktan sonr
 
     **Tanılama Özeti** iletişim kutusu görüntülenir.
 
-    ![Azure sanal makine tanılama Özeti](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796667.png)
+    ![Azure sanal makinesi tanılama özeti](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796667.png)
 
     En son veriler gösterilmemişse, aktarım süresinin geçmesini beklemeniz gerekebilir.
 

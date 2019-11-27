@@ -61,7 +61,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
   
 10. **Kimlik doğrulama yöntemleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-11. **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
+11. **Özellikler** iletişim kutusunu kapatmak için **Tamam**’a tıklayın.  
   
 12. **Internet Information Services** penceresini kapatın.  
   

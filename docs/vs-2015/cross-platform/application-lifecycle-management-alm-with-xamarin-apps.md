@@ -67,7 +67,7 @@ Xamarin, .net ve Visual Studio kullanarak C#Android, IOS ve Windows 'u hedefleye
 |[Kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md)|Evet|Uygulamanın çalışma zamanına kadar çözümlenmediği platforma özgü sınırlar haricinde.|  
 |[Uygulamalarınızda hata ayıklamak için kod haritalarını kullanma](../modeling/use-code-maps-to-debug-your-applications.md)|Evet||  
   
-## <a name="build"></a>Derleme  
+## <a name="build"></a>{1&gt;Yapı (Build)&lt;1}  
  Başvuru bağlantısı:  **[derleme](/azure/devops/pipelines/index)**  
   
 |Özellik|Xamarin ile desteklenir|Ek açıklamalar|  
@@ -78,7 +78,7 @@ Xamarin, .net ve Visual Studio kullanarak C#Android, IOS ve Windows 'u hedefleye
 |Ön ve son betiklerle derleme tanımları|Evet||  
 |Geçitli iadeler dahil sürekli tümleştirme|Evet|TFVC için geçitli iadeler, yalnızca git, iadeler yerine bir çekme isteği modelinde çalışmaktadır.|  
   
-## <a name="testing"></a>Sınama  
+## <a name="testing"></a>Test Etme  
  Başvuru bağlantısı:  **[uygulamayı test etme](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)**  
   
 |Özellik|Xamarin ile desteklenir|Ek açıklamalar|  

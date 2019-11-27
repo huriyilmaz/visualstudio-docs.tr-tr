@@ -41,7 +41,7 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
 - [Destek kaynakları](#Support)  
   
 ## <a name="Installing"></a>Yükleme ve kaldırma  
- Yüklemenin  
+ Yükleniyor  
   
  Android için Visual Studio öykünücüsü, Visual Studio 'da bulunan platformlar arası araçların bir bileşenidir ve platformlar arası mobil geliştirme, ortak araçlar ve yazılım geliştirme setleri ' ni seçtiğinizde özel bir Visual Studio Kurulumu sırasında yüklenir. ve ardından Android için Visual Studio öykünücüsü.  
   
@@ -103,7 +103,7 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
   
 - Parlaklığı. Öykünücünün parlaklık düzeyini değiştirmek, cihazın ekranınızda görünme biçimini görsel olarak etkilemez.  
   
-## <a name="Support"></a> Destek kaynakları  
+## <a name="Support"></a>Destek kaynakları  
  Ana bilgisayarınızın sistem gereksinimlerini karşıladığından ve bu sorun giderme Kılavuzu'nda ele alınmayan bir sorunla karşılaşırsanız varsa:  
   
 - [Android-Emulator](https://stackoverflow.com/questions/tagged/android-emulator) ve Visual-Studio etiketini kullanarak StackOverflow 'de soru sorun.  

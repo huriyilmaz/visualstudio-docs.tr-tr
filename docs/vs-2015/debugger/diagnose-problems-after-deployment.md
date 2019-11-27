@@ -230,7 +230,7 @@ IntelliTrace kullanarak dağıtımdan sonra ASP.NET Web uygulamanızdaki sorunla
   
      ![Hata ayıklarken çağrı yığınını eşleyin](../debugger/media/ffr-itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")  
   
-### <a name="FAQ"></a> SORU- CEVAP  
+### <a name="FAQ"></a>soru-cevap &  
   
 #### <a name="WhyInclude"></a>S: neden projem, kaynak denetimi, derleme ve sembolle ilgili bilgileri benim yayınmla içersin?  
  Visual Studio, hata ayıklamaya çalıştığınız sürümün eşleşen çözümünü ve kaynağını bulmak için bu bilgileri kullanır. IntelliTrace günlüğünü açtıktan ve hata ayıklamayı başlatacak bir olay seçtikten sonra, Visual Studio, olayın gerçekleştiği Kodu bulmak ve göstermek için sembolleri kullanır. Daha sonra, kaydedilen değerlere bakabilir ve kodunuzun yürütülmesi sırasında iletme veya geriye doğru taşıyabilirsiniz.  

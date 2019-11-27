@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build Incrementally | Microsoft Docs'
+title: 'Nasıl yapılır: artımlı olarak derleme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,15 +19,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74316479"
 ---
-# <a name="how-to-build-incrementally"></a>How to: Build incrementally
-When you build a large project, it is important that previously built components that are still up-to-date are not rebuilt. If all targets are built every time, each build will take a long time to complete. To enable incremental builds (builds in which only those targets that have not been built before or targets that are out of date, are rebuilt), the [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target. However, there must be a one-to-one mapping between inputs and outputs. You can use transforms to enable targets to identify this direct mapping. For more information on transforms, see [Transforms](../msbuild/msbuild-transforms.md).
+# <a name="how-to-build-incrementally"></a>Nasıl yapılır: Artımlı derleme
+Büyük bir proje oluşturduğunuzda, daha önce, hala güncel olan bileşenlerin önceden oluşturulmaması önemlidir. Tüm hedefler her seferinde derlenmişse, her derleme tamamlanması uzun sürer. Artımlı derlemeleri etkinleştirmek için (yalnızca önceden oluşturulmamış olan hedefleri veya güncel olmayan hedefleri yeniden oluşturur), [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]), giriş dosyalarının zaman damgalarına çıkış dosyalarının zaman damgalarına göre karşılaştırabilir ve bir hedefi atlayıp atlaya, derlemeyi veya kısmen yeniden oluşturmayı belirleyebilirsiniz. Ancak, girişler ve çıktılar arasında bire bir eşleme olmalıdır. Bu doğrudan eşlemeyi belirlemek için hedefleri etkinleştirmek üzere dönüşümleri kullanabilirsiniz. Dönüşümler hakkında daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
 
-## <a name="specify-inputs-and-outputs"></a>Specify inputs and outputs
-A target can be built incrementally if the inputs and outputs are specified in the project file.
+## <a name="specify-inputs-and-outputs"></a>Girişleri ve çıkışları belirtin
+Girdiler ve çıktılar proje dosyasında belirtilmişse bir hedef artımlı olarak oluşturulabilir.
 
-#### <a name="to-specify-inputs-and-outputs-for-a-target"></a>To specify inputs and outputs for a target
+#### <a name="to-specify-inputs-and-outputs-for-a-target"></a>Bir hedefin girişlerini ve çıkışlarını belirtmek için
 
-- Use the `Inputs` and `Outputs` attributes of the `Target` element. Örneğin:
+- `Target` öğesinin `Inputs` ve `Outputs` özniteliklerini kullanın. Örneğin:
 
   ```xml
   <Target Name="Build"
@@ -35,7 +35,7 @@ A target can be built incrementally if the inputs and outputs are specified in t
       Outputs="hello.exe">
   ```
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target. In the following example, if any file in the `@(CSFile)` item list is newer than the *hello.exe* file, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] will run the target; otherwise it will be skipped:
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], giriş dosyalarının zaman damgalarını, çıkış dosyalarının zaman damgalarına göre karşılaştırabilir ve bir hedefi atlayıp atlaya, derlemeyi veya kısmen yeniden derlemeyi belirleyebilirsiniz. Aşağıdaki örnekte, `@(CSFile)` öğesi listesindeki herhangi bir dosya *Hello. exe* dosyasından daha yeniyse, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] hedef çalışacaktır; Aksi takdirde, atlanacak:
 
 ```xml
 <Target Name="Build"
@@ -48,26 +48,26 @@ A target can be built incrementally if the inputs and outputs are specified in t
 </Target>
 ```
 
-When inputs and outputs are specified in a target, either each output can map to only one input or there can be no direct mapping between the outputs and inputs. In the previous [Csc task](../msbuild/csc-task.md), for example, the output, *hello.exe*, cannot be mapped to any single input - it depends on all of them.
+Bir hedefte giriş ve çıkış belirtildiğinde her bir çıktı yalnızca bir girişle eşlenir ya da çıktılar ve girişler arasında doğrudan eşleme olmaz. Önceki [CSC görevinde](../msbuild/csc-task.md), örneğin, *Hello. exe*çıkışı tek bir giriş ile eşlenemez; bunların tümüne bağlıdır.
 
 > [!NOTE]
-> A target in which there is no direct mapping between the inputs and outputs will always build more often than a target in which each output can map to only one input because [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] cannot determine which outputs need to be rebuilt if some of the inputs have changed.
+> Girişler ve çıktılar arasında doğrudan eşleme olmayan bir hedef, her zaman bir girişin bir kısmı değiştiyse [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] hangi çıktıların yeniden oluşturulması gerektiğini belirleyemediği için her zaman her çıktının yalnızca bir giriş ile eşleşebileceği bir hedeften daha fazla bilgi oluşturur.
 
-Tasks in which you can identify a direct mapping between the outputs and inputs, such as the [LC task](../msbuild/lc-task.md), are most suitable for incremental builds, unlike tasks such as [Csc](../msbuild/csc-task.md) and [Vbc](../msbuild/vbc-task.md), which produce one output assembly from a number of inputs.
+Örneğin, [LC görevi](../msbuild/lc-task.md)gibi çıktılar ve girişler arasında doğrudan eşlemeyi tanımlayabilmeniz gereken görevler, bir dizi girişin bir çıkış derlemesini üreten [CSC](../msbuild/csc-task.md) ve [vbc](../msbuild/vbc-task.md)gibi görevlerden farklı olarak Artımlı derlemeler için uygundur.
 
 ## <a name="example"></a>Örnek
-The following example uses a project that builds Help files for a hypothetical Help system. The project works by converting source *.txt* files into intermediate *.content* files, which then are combined with XML metadata files to produce the final *.help* file used by the Help system. The project uses the following hypothetical tasks:
+Aşağıdaki örnek, bir kuramsal yardım sistemi için yardım dosyaları oluşturan bir proje kullanır. Proje, kaynak *. txt* dosyalarını, daha sonra, yardım sistemi tarafından kullanılan son *. help* dosyasını oluşturmak üzere XML meta veri dosyalarıyla birlikte bulunan ara *. Content* dosyalarına dönüştürerek işe yarar. Proje aşağıdaki kuramsal görevleri kullanır:
 
-- `GenerateContentFiles`: Converts *.txt* files into *.content* files.
+- `GenerateContentFiles`: *. txt* dosyalarını *. Content* dosyalarına dönüştürür.
 
-- `BuildHelp`: Combines *.content* files and XML metadata files to build the final *.help* file.
+- `BuildHelp`: son *. help* dosyasını derlemek için *. Content* dosyalarını ve xml meta veri dosyalarını birleştirir.
 
-The project uses transforms to create a one-to-one mapping between inputs and outputs in the `GenerateContentFiles` task. For more information, see [Transforms](../msbuild/msbuild-transforms.md). Also, the `Output` element is set to automatically use the outputs from the `GenerateContentFiles` task as the inputs for the `BuildHelp` task.
+Proje, `GenerateContentFiles` görevindeki girişler ve çıktılar arasında bire bir eşleme oluşturmak için dönüşümler kullanır. Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md). Ayrıca, `Output` öğesi, `BuildHelp` görevin girişleri olarak `GenerateContentFiles` görevindeki çıktıları otomatik olarak kullanacak şekilde ayarlanır.
 
-This project file contains both the `Convert` and `Build` targets. The `GenerateContentFiles` and `BuildHelp` tasks are placed in the `Convert` and `Build` targets respectively so that each target can be built incrementally. By using the `Output` element, the outputs of the `GenerateContentFiles` task are placed in the `ContentFile` item list, where they can be used as inputs for the `BuildHelp` task. Using the `Output` element in this way automatically provides the outputs from one task as the inputs for another task so that you do not have to list the individual items or item lists manually in each task.
+Bu proje dosyası hem `Convert` hem de `Build` hedeflerini içerir. `GenerateContentFiles` ve `BuildHelp` görevleri, her hedefin artımlı olarak oluşturulması için sırasıyla `Convert` ve `Build` hedeflerine yerleştirilir. `Output` öğesini kullanarak, `GenerateContentFiles` görevinin çıktıları `ContentFile` öğe listesine yerleştirilir ve burada `BuildHelp` görevi için giriş olarak kullanılabilirler. `Output` öğesinin bu şekilde kullanılması, her bir görevde ayrı ayrı öğeleri veya öğe listelerini el ile listelemebilmeniz için bir görevden alınan çıktıları otomatik olarak başka bir görevin girişleri olarak sağlar.
 
 > [!NOTE]
-> Although the `GenerateContentFiles` target can build incrementally, all outputs from that target always are required as inputs for the `BuildHelp` target. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] automatically provides all the outputs from one target as inputs for another target when you use the `Output` element.
+> `GenerateContentFiles` hedefi artımlı olarak derleyebilir olsa da, bu hedefin tüm çıkışları her zaman `BuildHelp` hedefinin girdileri olarak gereklidir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], `Output` öğesini kullandığınızda bir hedeften gelen tüm çıktıları otomatik olarak başka bir hedef için giriş olarak sağlar.
 
 ```xml
 <Project DefaultTargets="Build"
@@ -103,7 +103,7 @@ This project file contains both the `Convert` and `Build` targets. The `Generate
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hedefler](../msbuild/msbuild-targets.md)
-- [Target element (MSBuild)](../msbuild/target-element-msbuild.md)
+- [Target öğesi (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Dönüşümler](../msbuild/msbuild-transforms.md)
-- [Csc task](../msbuild/csc-task.md)
-- [Vbc task](../msbuild/vbc-task.md)
+- [Csc görevi](../msbuild/csc-task.md)
+- [Vbc görevi](../msbuild/vbc-task.md)

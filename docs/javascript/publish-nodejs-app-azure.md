@@ -1,6 +1,6 @@
 ---
 title: Linux App Service’e bir Node.js uygulaması yayımlama
-description: You can publish Node.js applications created in Visual Studio to Linux App Service on Azure
+description: Azure 'da Visual Studio 'da oluşturulan Node. js uygulamalarını Linux App Service yayımlayabilirsiniz
 ms.date: 11/22/2019
 ms.topic: tutorial
 ms.devlang: javascript
@@ -18,143 +18,143 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74474021"
 ---
-# <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Publish a Node.js application to Azure (Linux App Service)
+# <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Bir Node. js uygulamasını Azure 'da yayımlama (Linux App Service)
 
-This tutorial walks you through the task of creating a simple Node.js application and publishing it to Azure.
+Bu öğreticide, basit bir Node. js uygulaması oluşturma ve Azure 'da yayımlama görevi gösterilmektedir.
 
-When publishing a Node.js application to Azure, there are several options. These include Azure App Service, a VM running an OS of your choosing, Azure Container Service (AKS) for management with Kubernetes, a Container Instance using Docker, and more. For more details on each of these options, see [Compute](https://azure.microsoft.com/product-categories/compute/).
+Bir Node. js uygulamasını Azure 'a yayımlarken birkaç seçenek vardır. Bunlar arasında Azure App Service, Kubernetes ile yönetim için Azure Container Service (AKS) bir VM çalıştıran bir VM, Docker kullanan bir kapsayıcı örneği ve daha fazlası bulunur. Bu seçeneklerin her biri hakkında daha fazla bilgi için bkz. [COMPUTE](https://azure.microsoft.com/product-categories/compute/).
 
-For this tutorial, you deploy the app to [Linux App Service](/azure/app-service/containers/app-service-linux-intro).
-Linux App Service deploys a Linux Docker container to run the Node.js application (as opposed to the Windows App Service, which runs Node.js apps behind IIS on Windows).
+Bu öğretici için, uygulamayı [Linux App Service](/azure/app-service/containers/app-service-linux-intro)'ye dağıtırsınız.
+Linux App Service, Node. js uygulamasını çalıştırmak için bir Linux Docker kapsayıcısı dağıtır (Windows üzerinde IIS 'nin arkasındaki Node. js uygulamalarını çalıştıran Windows App Service aksine).
 
-This tutorial shows how to create a Node.js application starting from a template installed with the Node.js Tools for Visual Studio, push the code to a repository on GitHub, and then provision an Azure App Service via the Azure web portal so that you can deploy from the GitHub repository. To use the command-line to provision the Azure App Service and push the code from a local Git repository, see [Create Node.js App](/azure/app-service/containers/quickstart-nodejs).
+Bu öğreticide, Visual Studio için Node.js Araçları yüklenen bir şablondan başlayan bir Node. js uygulaması oluşturma, kodu GitHub 'daki bir depoya gönderme ve sonra Azure Web portalı aracılığıyla bir Azure App Service sağlama GitHub deposu. Azure App Service sağlamak ve kodu yerel bir git deposundan göndermek için komut satırını kullanmak için bkz. [Node. js uygulaması oluşturma](/azure/app-service/containers/quickstart-nodejs).
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
-> * Create a GitHub repository for the code
-> * Create a Linux App Service on Azure
-> * Deploy to Linux
+> * Kod için bir GitHub deposu oluşturun
+> * Azure 'da Linux App Service oluşturma
+> * Linux 'a dağıtma
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-* You must have Visual Studio installed and the Node.js development workload.
+* Visual Studio yüklü ve Node. js geliştirme iş yüküne sahip olmanız gerekir.
 
     ::: moniker range=">=vs-2019"
-    If you haven't already installed Visual Studio 2019, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/) page to install it for free.
+    Visual Studio 2019 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    If you haven't already installed Visual Studio 2017, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/) page to install it for free.
+    Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
 
-    If you need to install the workload but already have Visual Studio, go to **Tools** > **Get Tools and Features...** , which opens the Visual Studio Installer. Choose the **Node.js development** workload, then choose **Modify**.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
-    ![Node.js workload in VS Installer](../ide/media/quickstart-nodejs-workload.png)
+    ![Node.js iş yükü VS yükleyicisi](../ide/media/quickstart-nodejs-workload.png)
 
-* You must have the Node.js runtime installed.
+* Node.js çalışma zamanı yüklü olması gerekir.
 
-    If you don't have it installed, install the LTS version from the [Node.js](https://nodejs.org/en/download/) website. In general, Visual Studio automatically detects the installed Node.js runtime. If it does not detect an installed runtime, you can configure your project to reference the installed runtime in the properties page (after you create a project, right-click the project node and choose **Properties**).
+    Yüklü değilse, [Node. js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yükleyebilirsiniz. Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayıp **Özellikler**' i seçin).
 
-## <a name="create-a-nodejs-project-to-run-in-azure"></a>Create a Node.js project to run in Azure
+## <a name="create-a-nodejs-project-to-run-in-azure"></a>Azure 'da çalıştırmak için bir Node. js projesi oluşturma
 
 1. Visual Studio'yu açın.
 
-1. Create a new TypeScript Express app.
+1. Yeni bir TypeScript Express uygulaması oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Press **Esc** to close the start window. Type **Ctrl + Q** to open the search box, type **Node.js**, then choose **Create new Basic Azure Node.js Express 4 application** (TypeScript). In the dialog box that appears, choose **Create**.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve ardından **Yeni temel Azure Node. js Express 4 uygulaması** (TypeScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    From the top menu bar, choose **File** > **New** > **Project**. In the left pane of the **New Project** dialog box, expand **TypeScript**, then choose **Node.js**. In the middle pane, choose **Basic Azure Node.js Express 4 application**, then choose **OK**.
+    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde **TypeScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede, **temel Azure Node. js Express 4 uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
 
-    ![Create a new TypeScript Express app](../javascript/media/azure-ts-express-app.png)
+    ![Yeni bir TypeScript Express uygulaması oluşturun](../javascript/media/azure-ts-express-app.png)
     ::: moniker-end
-    If you don't see the **Basic Azure Node.js Express 4 application** project template, you must add the **Node.js development** workload. For detailed instructions, see the [Prerequisites](#prerequisites).
+    **Temel Azure Node. js Express 4 uygulama** projesi şablonunu görmüyorsanız **Node. js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
-    Visual Studio creates the project and opens it in Solution Explorer (right pane).
+    Visual Studio projeyi oluşturur ve Çözüm Gezgini (sağ bölme) içinde açar.
 
-1. Press **F5** to build and run the app, and make sure that everything is running as expected.
+1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın ve her şeyin beklendiği gibi çalıştığından emin olun.
 
-1. Select **File** > **Add to source control** to create a local Git repository for the project.
+1. Proje için yerel bir git deposu oluşturmak üzere **dosya** > **kaynak denetimine Ekle** ' yi seçin.
 
-    At this point, a Node.js app using the Express framework and written in TypeScript is working and checked in to local source control.
+    Bu noktada, Express çerçevesini kullanan ve TypeScript 'te yazılan bir Node. js uygulaması çalışıyor ve yerel kaynak denetimine iade edildi.
 
-1. Edit the project as desired before proceeding to the next steps.
+1. Sonraki adımlara geçmeden önce projeyi istediğiniz gibi düzenleyin.
 
-## <a name="push-code-from-visual-studio-to-github"></a>Push code from Visual Studio to GitHub
+## <a name="push-code-from-visual-studio-to-github"></a>Visual Studio 'dan GitHub 'a kod gönderme
 
-To set up GitHub for Visual Studio:
+Visual Studio için GitHub 'ı ayarlamak için:
 
-1. Make sure the [GitHub Extension for Visual Studio](https://visualstudio.github.com/) is installed and enabled using the menu item **Tools** > **Extensions and Updates**.
+1. [Visual Studio Için GitHub uzantısının](https://visualstudio.github.com/) , **uzantılar ve güncelleştirmeler** > menü öğesi **araçları** kullanılarak yüklendiğinden ve etkinleştirildiğinden emin olun.
 
-2. From the menu select **View** > **Other Windows** > **GitHub**.
+2. Menüden **görünüm** > **diğer pencereler** > **GitHub**' ı seçin.
 
-    The GitHub window opens.
+    GitHub penceresi açılır.
 
-3. If you don't see the **Get Started** button in the GitHub window, click **File** > **Add to Source Control** and wait for the UI to update.
+3. GitHub penceresinde **Başlarken** düğmesini görmüyorsanız **Dosya** > **kaynak denetimine Ekle** ' ye tıklayın ve Kullanıcı arabiriminin güncelleştirilmesini bekleyin.
 
-    ![Open the GitHub window](../javascript/media/azure-github-get-started.png)
+    ![GitHub penceresini açın](../javascript/media/azure-github-get-started.png)
 
-4. Click **Get started**.
+4. **Başlarken**' e tıklayın.
 
-    If you are already connected to GitHub, the toolbox appears similar to the following illustration.
+    Zaten GitHub 'a bağlıysanız, araç kutusu aşağıdaki çizime benzer şekilde görünür.
 
-    ![GitHub repo settings](../javascript/media/azure-github-publish.png)
+    ![GitHub depo ayarları](../javascript/media/azure-github-publish.png)
 
-5. Complete the fields for the new repository to publish, and then click **Publish**.
+5. Yayımlanacak yeni deponun alanlarını tamamlayıp **Yayımla**' ya tıklayın.
 
-    After a few moments, a banner stating "Repository created successfully"  appears.
+    Birkaç dakika sonra, "depo başarıyla oluşturuldu" belirten bir başlık görüntülenir.
 
-    In the next section, you learn how to publish from this repository to an Azure App Service on Linux.
+    Sonraki bölümde, bu depodan Linux üzerinde bir Azure App Service nasıl yayımlayacağınızı öğreneceksiniz.
 
-## <a name="create-a-linux-app-service-in-azure"></a>Create a Linux App Service in Azure
+## <a name="create-a-linux-app-service-in-azure"></a>Azure 'da Linux App Service oluşturma
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. [Azure Portal](https://portal.azure.com)oturum açın.
 
-2. Select **App Services** from the list of services on the left, and then click **Add**.
+2. Sol taraftaki hizmetler listesinden **uygulama hizmetleri** ' ni seçin ve ardından **Ekle**' ye tıklayın.
 
-3. If required, create a new Resource Group and App Service plan to host the new app.
+3. Gerekirse, yeni bir kaynak grubu oluşturun ve yeni uygulamayı barındırmak için plan App Service.
 
-4. Make sure to set the **OS** to **Linux**, and set **Runtime Stack** to the required Node.js version, as shown in the illustration.
+4. **Işletim sistemini** **Linux**'a ayarladığınızdan emin olun ve **çalışma zamanı yığınını** çizimde gösterildiği gibi gerekli Node. js sürümüne ayarlayın.
 
-    ![Create a Linux App Service](../javascript/media/azure-create-appservice-annotated.png)
+    ![Linux App Service oluşturma](../javascript/media/azure-create-appservice-annotated.png)
 
-5. Click **Create** to create the App Service.
+5. App Service oluşturmak için **Oluştur** ' a tıklayın.
 
-    It may take a few minutes to deploy.
+    Dağıtım birkaç dakika sürebilir.
 
-6. After it is deployed, go to the **Application settings** section, and add a setting with a name of `SCM_SCRIPT_GENERATOR_ARGS` and a value of `--node`.
+6. Dağıtıldıktan sonra, **uygulama ayarları** bölümüne gidin ve `SCM_SCRIPT_GENERATOR_ARGS` adı ve `--node`değeri olan bir ayar ekleyin.
 
-    ![Application settings](../javascript/media/azure-script-generator-args.png)
+    ![Uygulama ayarları](../javascript/media/azure-script-generator-args.png)
 
     > [!WARNING]
-    > The App Service deployment process uses a set of heuristics to determine which type of application to try and run. If a .*sln* file is detected in the deployed content, it will assume an MSBuild based project is being deployed. The setting added above overrides this logic and specifies explicitly that this is a Node.js application. Without this setting, the Node.js application will fail to deploy if the .*sln* file is part of the repository being deployed to the App Service.
+    > App Service dağıtım işlemi, deneyebileceğiniz ve çalıştırılacak uygulama türünü belirleyen bir buluşsal yöntem kümesi kullanır. Bir. dağıtılan içerikte *bir dosya dosyası* algılanırsa, MSBuild tabanlı bir projenin dağıtılmakta olduğunu varsayacaktır. Yukarıda eklenen ayar bu mantığı geçersiz kılar ve açıkça bunun bir Node. js uygulaması olduğunu belirtir. Bu ayar olmadan, Node. js uygulaması,. *sln* dosyası, App Service dağıtılan deponun bir parçasıdır.
 
-7. Under **Application settings**, add another setting with a name of `WEBSITE_NODE_DEFAULT_VERSION` and a value of `8.9.0`.
+7. **Uygulama ayarları**' nın altında, adı `WEBSITE_NODE_DEFAULT_VERSION` ve `8.9.0`değeri olan başka bir ayar ekleyin.
 
-8. After it is deployed, open the App Service and select **Deployment options**.
+8. Dağıtıldıktan sonra, App Service açın ve **dağıtım seçenekleri**' ni seçin.
 
-    ![Deployment options](../javascript/media/azure-deployment-options.png)
+    ![Dağıtım seçenekleri](../javascript/media/azure-deployment-options.png)
 
-9. Click **Choose source**, and then choose **GitHub**, and then configure any required permissions.
+9. **Kaynak Seç**' e tıklayın ve ardından **GitHub**' ı seçin ve ardından gerekli izinleri yapılandırın.
 
-    ![GitHub permissions](../javascript/media/azure-choose-source.png)
+    ![GitHub izinleri](../javascript/media/azure-choose-source.png)
 
-10. Select the repository and branch to publish, and then select **OK**.
+10. Yayımlanacak depoyu ve dalı seçin ve ardından **Tamam**' ı seçin.
 
     ![Linux App Service’e yayımlama](../javascript/media/azure-repo-and-branch.png)
 
-    The **deployment options** page appears while syncing.
+    **Dağıtım seçenekleri** sayfası eşitleme sırasında görüntülenir.
 
-    ![Deploying and syncing with GitHub](../javascript/media/azure-deployment-options-sync.png)
+    ![GitHub ile dağıtma ve eşitleme](../javascript/media/azure-deployment-options-sync.png)
 
-    Once it is finished syncing, a check mark will appear.
+    Eşitleme tamamlandıktan sonra bir onay işareti görünür.
 
-    The site is now running the Node.js application from the GitHub repository, and it is accessible at the URL created for the Azure App Service (by default the name given to the Azure App Service followed by ".azurewebsites.net").
+    Site artık GitHub deposundan Node. js uygulamasını çalıştırıyor ve Azure App Service için oluşturulan URL 'den (varsayılan olarak, ". azurewebsites.net" tarafından izlenen Azure App Service verilen ad) erişilebilir.
 
-## <a name="modify-your-app-and-push-changes"></a>Modify your app and push changes
+## <a name="modify-your-app-and-push-changes"></a>Uygulamanızı değiştirin ve değişiklikleri gönderin
 
-1. Add the code shown here in *app.ts* after the line `app.use('/users', users);`. This adds a REST API at the URL */api*.
+1. Burada gösterilen kodu, satır `app.use('/users', users);`sonra *app. TS* ' de ekleyin. Bu, */API*URL 'sinde bir REST API ekler.
 
     ```typescript
     app.use('/api', (req, res, next) => {
@@ -162,27 +162,27 @@ To set up GitHub for Visual Studio:
     });
     ```
 
-2. Build the code and test it locally, then check it in and push to GitHub.
+2. Kodu derleyin ve yerel olarak test edin, sonra iade edin ve GitHub 'a gönderin.
 
-    In the Azure portal, it takes a few moments to detect changes in the GitHub repo, and then a new sync of the deployment starts. This looks similar to the following illustration.
+    Azure portal, GitHub deposunda yapılan değişiklikleri algılamak birkaç dakika sürer ve ardından dağıtımın yeni bir eşitlemesi başlar. Bu, aşağıdaki resme benzer şekilde görünür.
 
-    ![Modify and sync](../javascript/media/azure-changes-detected.png)
+    ![Değiştir ve Eşitle](../javascript/media/azure-changes-detected.png)
 
-3. Once deployment is complete, navigate to the public site and append */api* to the URL. The JSON response gets returned.
+3. Dağıtım tamamlandıktan sonra ortak siteye gidin ve URL 'ye */API* ekleyin. JSON yanıtı döndürülür.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-* If the node.exe process dies (that is, an unhandled exception occurs), the container restarts.
-* When the container starts up, it runs through various heuristics to figure out how to start the Node.js process. Details of the implementation can be seen at [generateStartupCommand.js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js).
-* You can connect to the running container via SSH for investigations. This is easily done using the Azure portal. Select the App Service, and scroll down the list of tools until reaching **SSH** under the **Development Tools** section.
-* To aid in troubleshooting, go to the **Diagnostics logs** settings for the App Service, and change the **Docker Container logging** setting from **Off** to **File System**. Logs are created in the container under */home/LogFiles/* _docker.log*, and can be accessed on the box using SSH or FTP(S).
-* A custom domain name may be assigned to the site, rather than the *.azurewebsites.net URL assigned by default. For more details, see the topic [Map Custom Domain](/azure/app-service/app-service-web-tutorial-custom-domain).
-* Deploying to a staging site for further testing before moving into production is a best practice. For details on how to configure this, see the topic [Create staging environments](/azure/app-service/web-sites-staged-publishing).
-* See the [App Service on Linux FAQ](/azure/app-service/containers/app-service-linux-faq) for more commonly asked questions.
+* Node. exe işlemi (yani, işlenmeyen bir özel durum oluşursa), kapsayıcı yeniden başlatılır.
+* Kapsayıcı başladığında, Node. js işlemini nasıl başlatacağınızı anlamak için çeşitli buluşsal yöntemler aracılığıyla çalışır. Uygulamanın ayrıntıları [Generatestartupcommand. js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js)' de görülebilir.
+* Araştırmalar için SSH aracılığıyla çalışan kapsayıcıya bağlanabilirsiniz. Bu, Azure portal kullanılarak kolayca yapılır. App Service seçin ve **geliştirme araçları** bölümü altında **SSH** 'ye ulaşıncaya kadar araç listesini aşağı kaydırın.
+* Sorun gidermeye yardımcı olmak için, App Service için **tanılama günlükleri** ayarlarına gidin ve **Docker kapsayıcı günlüğü** ayarını **dosya sistemine**çevirin. Günlükler */Home/LogFiles/* _docker. log * altındaki kapsayıcıda oluşturulur ve SSH veya FTP kullanılarak kutudan erişilebilir.
+* Varsayılan olarak atanmış *. azurewebsites.net URL 'SI yerine siteye özel bir etki alanı adı atanabilir. Daha ayrıntılı bilgi için bkz. [özel etki alanı eşleme](/azure/app-service/app-service-web-tutorial-custom-domain)konusu.
+* Üretime geçmeden önce daha fazla test için bir hazırlama sitesine dağıtım en iyi uygulamadır. Bunun nasıl yapılandırılacağı hakkında ayrıntılı bilgi için, [hazırlama ortamları oluşturma](/azure/app-service/web-sites-staged-publishing)konusuna bakın.
+* Daha sık sorulan sorular için [Linux 'ta App Service](/azure/app-service/containers/app-service-linux-faq) bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-In this tutorial, you learned how create a Linux App Service and deploy a Node.js application to the service. You may want to learn more about Linux App Service.
+Bu öğreticide, bir Linux App Service oluşturmayı ve bir Node. js uygulamasını hizmete dağıtmayı öğrendiniz. Linux App Service hakkında daha fazla bilgi edinmek isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Linux App Service](/azure/app-service/containers/app-service-linux-intro)

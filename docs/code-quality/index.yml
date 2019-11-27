@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Code analysis in Visual Studio
-summary: Visual Studio provides several different tools to analyze and improve code quality.
+title: Visual Studio 'da kod analizi
+summary: Visual Studio, kod kalitesini çözümlemek ve geliştirmek için birkaç farklı araç sağlar.
 metadata:
-  title: Code analyzers
-  description: Learn how Visual Studio can help you analyze code quality.
+  title: Kod Çözümleyicileri
+  description: Visual Studio 'Nun kod kalitesini analiz etmenize nasıl yardımcı olabileceğini öğrenin.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
@@ -12,26 +12,26 @@ metadata:
   ms.date: 10/15/2019
   ms.openlocfilehash: 45be3779e7ed8a625d9029c8eb03a69374c43ae8
   ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 11/22/2019
   ms.locfileid: "74316364"
 landingContent:
-- title: Analyze C and C++ code
+- title: C ve C++ kodu çözümle
   linkLists:
   - linkListType: overview
     links:
-    - text: Analyze C and C++ code
+    - text: C ve C++ kodu çözümle
       url: code-analysis-for-c-cpp-overview.md
   - linkListType: reference
     links:
-    - text: C++ code analysis warnings
+    - text: C++Kod Analizi uyarıları
       url: code-analysis-for-c-cpp-warnings.md
-- title: Analyze managed code quality
+- title: Yönetilen kod kalitesini analiz etme
   linkLists:
   - linkListType: overview
     links:
-    - text: Source analysis
+    - text: Kaynak Analizi
       url: roslyn-analyzers-overview.md
     - text: Eski analiz
       url: static-code-analysis-for-managed-code-overview.md
@@ -45,15 +45,15 @@ landingContent:
       url: install-fxcop-analyzers.md
   - linkListType: reference
     links:
-    - text: Managed code analysis warnings
+    - text: Yönetilen kod analizi uyarıları
       url: code-analysis-for-managed-code-warnings.md
-- title: Analyze managed code style
+- title: Yönetilen kod stilini çözümle
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Analyze code style
+    - text: Kod stilini çözümle
       url: ../ide/create-portable-custom-editor-options.md
-- title: Measure code complexity
+- title: Ölçüm kodu karmaşıklığı
   linkLists:
   - linkListType: concept
     links:

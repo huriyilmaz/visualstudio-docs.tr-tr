@@ -28,7 +28,7 @@ Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gö
  Bu özellikler, Visual Studio 2015 güncelleştirme 1 RC yüklemesinde bulunabilir.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="browsingnavigation"></a>Göz atma/gezinme
  **Yeni veritabanı altyapısını etkinleştir** Bu, **Tanıma Git** ve **tüm başvuruları bul**gibi işlemler için veritabanı popülasyonu otomatik olarak hızlandırmalı ve tüm veritabanı işlemlerini daha hızlı (doğrulukta hiçbir kayıp olmadan) hale getirir. (Değişiklikleri uygulamak için çözümünüzü kapatıp yeniden açmanız yeterlidir; Visual Studio 'Yu yeniden başlatmanız gerekmez.)
@@ -41,7 +41,7 @@ Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gö
 
  **Imza değiştirmeyi etkinleştir** Bir işlevin parametrelerini ekleyin, yeniden sıralayın ve silin ve değişiklikleri tüm çağrı sitelerine yayın. Bu özelliğe erişmek için, işlevin herhangi bir kullanımına sağ tıklayın ve **hızlı eylemler**' i seçin ya da CTRL + nokta [CTRL +.] varsayılan kısayoluna basın.
 
-## <a name="text-editor"></a>Metin Düzenleyici
+## <a name="text-editor"></a>{1&gt;Metin Düzenleyici&lt;1}
  **Kapsamları genişletmeyi etkinleştir** Etkinleştirilirse, metin düzenleyicisine ' {' yazarak seçili metni küme ayraçları ile çevreleyin.
 
  **Önceliği genişletmeyi etkinleştir** Etkinleştirilirse, metin düzenleyicisine ' (' yazarak seçili metni parantezlerle çevrelemeyi seçebilirsiniz.

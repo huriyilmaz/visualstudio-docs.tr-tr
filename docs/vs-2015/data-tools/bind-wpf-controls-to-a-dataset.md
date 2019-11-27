@@ -57,7 +57,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 - WPF veri bağlama. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211).
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
  Yeni bir WPF projesi oluşturun. Projede ürün kayıtları görüntülenir.
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
@@ -79,7 +79,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 #### <a name="to-create-a-dataset"></a>Bir veri kümesi oluşturmak için
 
-1. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
+1. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
      **Veri kaynakları** penceresi açılır.
 

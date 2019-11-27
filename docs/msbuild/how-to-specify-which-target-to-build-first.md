@@ -1,5 +1,5 @@
 ---
-title: 'How to: Specify Which Target to Build First | Microsoft Docs'
+title: 'Nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,59 +19,59 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74316503"
 ---
-# <a name="how-to-specify-which-target-to-build-first"></a>How to: Specify which target to build first
-A project file can contain one or more `Target` elements that define how the project is built. The [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) engine builds the first project it finds, and any dependencies, unless the project file contains a `DefaultTargets` attribute, an `InitialTargets` attribute, or a target is specified at the command line using the **-target** switch.
+# <a name="how-to-specify-which-target-to-build-first"></a>Nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme
+Proje dosyası, projenin nasıl oluşturulduğunu tanımlayan bir veya daha fazla `Target` öğesi içerebilir. [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) altyapısı, bulduğu ilk projeyi ve herhangi bir bağımlılığı, proje dosyası bir `DefaultTargets` özniteliği içermiyorsa, bir `InitialTargets` özniteliği veya **hedef anahtar kullanılarak** komut satırında belirtilir.
 
-## <a name="use-the-initialtargets-attribute"></a>Use the InitialTargets attribute
- The `InitialTargets` attribute of the `Project` element specifies a target that will run first, even if targets are specified on the command line or in the `DefaultTargets` attribute.
+## <a name="use-the-initialtargets-attribute"></a>InitialTargets özniteliğini kullanma
+ `Project` öğesinin `InitialTargets` özniteliği, hedefler komut satırında veya `DefaultTargets` özniteliğinde belirtilmiş olsa bile önce çalıştırılacak hedefi belirtir.
 
-#### <a name="to-specify-one-initial-target"></a>To specify one initial target
+#### <a name="to-specify-one-initial-target"></a>Bir başlangıç hedefi belirtmek için
 
-- Specify the default target in the `InitialTargets` attribute of the `Project` element. Örneğin:
+- `Project` öğesinin `InitialTargets` özniteliğinde varsayılan hedefi belirtin. Örneğin:
 
    `<Project InitialTargets="Clean">`
 
-  You can specify more than one initial target in the `InitialTargets` attribute by listing the targets in order, and using a semicolon to separate each target. The targets in the list will be run sequentially.
+  Hedefleri sırayla listeleyerek `InitialTargets` özniteliğinde birden fazla başlangıç hedefi belirtebilir ve her hedefi ayırmak için noktalı virgül kullanabilirsiniz. Listedeki hedefler sırayla çalıştırılır.
 
-#### <a name="to-specify-more-than-one-initial-target"></a>To specify more than one initial target
+#### <a name="to-specify-more-than-one-initial-target"></a>Birden fazla ilk hedef belirtmek için
 
-- List the initial targets, separated by semicolons, in the `InitialTargets` attribute of the `Project` element. For example, to run the `Clean` target and then the `Compile` target, type:
+- `Project` öğesinin `InitialTargets` özniteliğinde, noktalı virgülle ayırarak ilk hedefleri listeleyin. Örneğin, `Clean` hedefini ve sonra `Compile` hedefini çalıştırmak için şunu yazın:
 
      `<Project InitialTargets="Clean;Compile">`
 
-## <a name="use-the-defaulttargets-attribute"></a>Use the DefaultTargets attribute
- The `DefaultTargets` attribute of the `Project` element specifies which target or targets are built if a target is not specified explicitly on the command line. If targets are specified in both the `InitialTargets` and `DefaultTargets` attributes and no target is specified on the command line, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] runs the targets specified in the `InitialTargets` attribute followed by the targets specified in the `DefaultTargets` attribute.
+## <a name="use-the-defaulttargets-attribute"></a>DefaultTargets özniteliğini kullanma
+ `Project` öğesinin `DefaultTargets` özniteliği, bir hedef açıkça komut satırında belirtilmemişse, hangi hedefin veya hedeflerin derlenmediğini belirtir. Hedefler hem `InitialTargets` hem de `DefaultTargets` özniteliklerde belirtilirse ve komut satırında hiçbir hedef belirtilmemişse, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] `InitialTargets` özniteliğinde belirtilen hedefleri ve ardından `DefaultTargets` özniteliğinde belirtilen hedefleri çalıştırır.
 
-#### <a name="to-specify-one-default-target"></a>To specify one default target
+#### <a name="to-specify-one-default-target"></a>Bir varsayılan hedef belirtmek için
 
-- Specify the default target in the `DefaultTargets` attribute of the `Project` element. Örneğin:
+- `Project` öğesinin `DefaultTargets` özniteliğinde varsayılan hedefi belirtin. Örneğin:
 
    `<Project DefaultTargets="Compile">`
 
-  You can specify more than one default target in the `DefaultTargets` attribute by listing the targets in order, and using a semicolon to separate each target. The targets in the list will be run sequentially.
+  Hedefleri sırayla listeleyerek `DefaultTargets` özniteliğinde birden fazla varsayılan hedef belirtebilir ve her hedefi ayırmak için noktalı virgül kullanabilirsiniz. Listedeki hedefler sırayla çalıştırılır.
 
-#### <a name="to-specify-more-than-one-default-target"></a>To specify more than one default target
+#### <a name="to-specify-more-than-one-default-target"></a>Birden fazla varsayılan hedef belirtmek için
 
-- List the default targets, separated by semicolons, in the `DefaultTargets` attribute of the `Project` element. For example, to run the `Clean` target and then the `Compile` target, type:
+- `Project` öğesinin `DefaultTargets` özniteliğinde, noktalı virgülle ayırarak varsayılan hedefleri listeleyin. Örneğin, `Clean` hedefini ve sonra `Compile` hedefini çalıştırmak için şunu yazın:
 
      `<Project DefaultTargets="Clean;Compile">`
 
-## <a name="use-the--target-switch"></a>Use the -target Switch
- If a default target is not defined in the project file, or if you do not want to use that default target, you can use the command line switch **-target** to specify a different target. The target or targets specified with the **-target** switch are run instead of the targets specified by the `DefaultTargets` attribute. Targets specified in the `InitialTargets` attribute always run first.
+## <a name="use-the--target-switch"></a>-Target anahtarını kullanma
+ Proje dosyasında varsayılan bir hedef tanımlanmamışsa veya bu varsayılan hedefi kullanmak istemiyorsanız, farklı bir hedef belirtmek için anahtar **-hedef** komut satırını kullanabilirsiniz. **-Target** anahtarıyla belirtilen hedef veya hedefler, `DefaultTargets` özniteliği tarafından belirtilen hedefler yerine çalıştırılır. `InitialTargets` özniteliğinde belirtilen hedefler her zaman önce çalıştırılır.
 
-#### <a name="to-use-a-target-other-than-the-default-target-first"></a>To use a target other than the default target first
+#### <a name="to-use-a-target-other-than-the-default-target-first"></a>Önce varsayılan hedeften farklı bir hedef kullanmak için
 
-- Specify the target as the first target using the **-target** command line switch. Örneğin:
+- Hedefi, **-target** komut satırı anahtarını kullanarak ilk hedef olarak belirtin. Örneğin:
 
      `msbuild file.proj -target:Clean`
 
-#### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>To use several targets other than the default targets first
+#### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>Önce varsayılan hedefleri dışında birkaç hedefi kullanmak için
 
-- List the targets, separated by semicolons or commas, using the **-target** command line switch. Örneğin:
+- Hedefleri, **-target** komut satırı anahtarını kullanarak noktalı virgül veya virgülle ayırarak listeleyin. Örneğin:
 
      `msbuild <file name>.proj -t:Clean;Compile`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [MSBuild](../msbuild/msbuild.md)
 - [Hedefler](../msbuild/msbuild-targets.md)
-- [How to: Clean a build](../msbuild/how-to-clean-a-build.md)
+- [Nasıl yapılır: derlemeyi Temizleme](../msbuild/how-to-clean-a-build.md)

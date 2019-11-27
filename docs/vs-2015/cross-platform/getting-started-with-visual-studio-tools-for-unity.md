@@ -29,7 +29,7 @@ Bu bölümde, Visual Studio ile çalışmak için Unity için Visual Studio Ara�
   
 - **Visual Studio 'Nun Visual** Studio Community, Professional, Premium veya Enterprise gibi uzantıları destekleyen bir sürümü. Visual Studio Community 'yi ücretsiz olarak indirebilirsiniz.  
   
-     {2&gt;Visual Studio Community’yi İndirin&lt;2}  
+     [Visual Studio Community 'yi indirin](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
 - **Unity** sürüm 4.0.0 veya üzeri; Unity için Visual Studio Araçları sürüm 2,1 veya üzeri için yerleşik desteğin avantajlarından faydalanmak için **Unity** sürüm 5.2.0 veya üzeri.  
   

@@ -21,24 +21,24 @@ ms.locfileid: "74296840"
 # <a name="visual-studio-samples"></a>Visual Studio Örnekleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Örnekleri bulabilirsiniz [MSDN Kod Galerisi](https://go.microsoft.com/fwlink/?LinkID=127810) Web sitesi.
+Visual Studio örneklerini [MSDN Kod Galerisi](https://go.microsoft.com/fwlink/?LinkID=127810) Web sitesinde bulabilirsiniz.
 
- Kullanabileceğiniz **yeni proje** örneklere göz atmak için iletişim kutusu. (Menü çubuğunda, iletişim kutusunu açmak için seçin **dosya**, **yeni**, **proje**.)
+ Örneklere gözatabilmeniz için **Yeni proje** iletişim kutusunu kullanabilirsiniz. (İletişim kutusunu açmak için, menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.)
 
 ## <a name="finding-samples"></a>Örnek bulma
  Örnekler için aranacak diğer yerlerden bazıları aşağıda verilmiştir.
 
 |Alan|Açıklama|
 |----------|-----------------|
-|[Windows Geliştirici Merkezi örnekleri](https://go.microsoft.com/fwlink/?LinkID=255278)|Nasıl geliştirileceğini gösterir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamalar.|
-|[.NET framework örnekleri](https://msdn.microsoft.com/177055f8-4a1f-43e7-aee6-995c196079b1)|Çeşitli yönlerini gösteren [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] C# ve Visual Basic.|
-|[C# örnekleri](https://docs.microsoft.com/samples/browse/?languages=csharp)|C# farklı özelliklerin nasıl kullanılacağını gösterir.|
+|[Windows Geliştirici Merkezi örnekleri](https://go.microsoft.com/fwlink/?LinkID=255278)|[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamalarının nasıl geliştirileceği gösterilmektedir.|
+|[.NET Framework örnekleri](https://msdn.microsoft.com/177055f8-4a1f-43e7-aee6-995c196079b1)|C# Ve Visual Basic [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] çeşitli yönlerini gösterir.|
+|[C#Lerinizi](https://docs.microsoft.com/samples/browse/?languages=csharp)|C# farklı özelliklerin nasıl kullanılacağını gösterir.|
 |[Visual Basic örnekleri](https://docs.microsoft.com/samples/browse/?languages=vb)|Visual Basic farklı özelliklerin nasıl kullanılacağını gösterir.|
 |[F# Örnekleri](https://docs.microsoft.com/samples/browse/?languages=fsharp)|Farklı özelliklerini kullanmayı gösterir F#.|
 |[JavaScript örnekleri](https://docs.microsoft.com/samples/browse/?languages=javascript)|JavaScript'te farklı özelliklerini kullanma işlemi gösterilmektedir.|
-|[C++ örnekleri](https://docs.microsoft.com/samples/browse/?languages=cpp)|C++'ta farklı özelliklerini kullanma işlemi gösterilmektedir.|
+|[C++Lerinizi](https://docs.microsoft.com/samples/browse/?languages=cpp)|C++'ta farklı özelliklerini kullanma işlemi gösterilmektedir.|
 |[DirectX örnekleri](https://docs.microsoft.com/samples/browse/?products=xbox)|DirectX'in kullanılacağını gösterir.|
-|[Office Geliştirme Örnekleri](https://docs.microsoft.com/samples/browse/?products=office)|Visual Studio'da Office geliştirme araçlarını kullanma işlemi gösterilmektedir. En geçerli örnekler için bkz. [MSDN geliştirici örnekleri: kod aracılığıyla öğrenin](https://go.microsoft.com/fwlink/?LinkID=248199).|
+|[Office Geliştirme Örnekleri](https://docs.microsoft.com/samples/browse/?products=office)|Visual Studio'da Office geliştirme araçlarını kullanma işlemi gösterilmektedir. En güncel örnekler için bkz. [MSDN geliştirici örnekleri: kod aracılığıyla öğrenme](https://go.microsoft.com/fwlink/?LinkID=248199).|
 |[VSSDK örnekleri](https://aka.ms/vs2015sdksamples)|Visual Studio'nun nasıl genişletileceğini gösterir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

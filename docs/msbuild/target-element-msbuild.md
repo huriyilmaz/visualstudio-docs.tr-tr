@@ -1,5 +1,5 @@
 ---
-title: Hedef öğe (MSBuild) | Microsoft Docs
+title: Target öğesi (MSBuild) | Microsoft Docs
 ms.date: 06/13/2019
 ms.topic: reference
 f1_keywords:
@@ -18,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b9910a677f5442e10c62a0623043033edd899c3
-ms.sourcegitcommit: dd3c8cbf56c7d7f82f6d8818211d45847ab3fcfc
+ms.openlocfilehash: e1748064482e13eba95e9aa83e9cb04c93b8066f
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141182"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491624"
 ---
-# <a name="target-element-msbuild"></a>Hedef öğe (MSBuild)
-İçin görevler kümesini içeren [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ardışık olarak yürütmek için.
+# <a name="target-element-msbuild"></a>Target öğesi (MSBuild)
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sırayla yürütebilmesi için bir görev kümesi içerir.
 
- \<Proje > \<hedef >
+ \<Proje > \<hedefi >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,7 +41,7 @@ ms.locfileid: "67141182"
         BeforeTargets="Targets"
         AfterTargets="Targets"
         DependsOnTargets="DependentTarget"
-        Condition="'String A' == 'String B'">
+        Condition="'String A' == 'String B'"
         Label="Label">
     <Task>... </Task>
     <PropertyGroup>... </PropertyGroup>
@@ -58,50 +58,50 @@ ms.locfileid: "67141182"
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`Name`|Gerekli öznitelik.<br /><br /> Hedefin adı.|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. İçin değerlendirilen koşul yoksa `false`, hedef hedefi ya da ayarlanmış olan tüm aracıların gövdesini yürütmez `DependsOnTargets` özniteliği. Koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
-|`Inputs`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefin giriş oluşturan dosyalar. Birden çok dosya noktalı virgül ile ayrılır. Damgaları Çıkıştaki dosyaların zaman damgaları Çıkıştaki dosyaların zaman ile karşılaştırıldığında `Outputs` belirlemek için olup olmadığını `Target` güncel. Daha fazla bilgi için [artımlı derlemeleri](../msbuild/incremental-builds.md), [nasıl yapılır: Artımlı olarak derleme](../msbuild/how-to-build-incrementally.md), ve [dönüştüren](../msbuild/msbuild-transforms.md).|
-|`Outputs`|İsteğe bağlı öznitelik.<br /><br /> Form bu hedefe çıkarır dosyalar. Birden çok dosya noktalı virgül ile ayrılır. Damgaları Çıkıştaki dosyaların zaman damgaları Çıkıştaki dosyaların zaman ile karşılaştırıldığında `Inputs` belirlemek için olup olmadığını `Target` güncel. Daha fazla bilgi için [artımlı derlemeleri](../msbuild/incremental-builds.md), [nasıl yapılır: Artımlı olarak derleme](../msbuild/how-to-build-incrementally.md), ve [dönüştüren](../msbuild/msbuild-transforms.md).|
-|`Returns`|İsteğe bağlı öznitelik.<br /><br /> Bu hedef, örneğin, MSBuild görevleri çağıran görevler için kullanılabilir hale getirilir öğeleri kümesi. Birden çok hedefe, noktalı virgül ile ayrılır. Hedef dosya yoksa `Returns` öznitelikler yerine bu amaç için kullanılan çıkış öznitelikleri.|
-|`KeepDuplicateOutputs`|İsteğe bağlı Boolean özniteliği.<br /><br /> Varsa `true`, birden fazla başvuru aynı öğe hedef olarak kaydedilir.  Varsayılan olarak, bu özniteliktir `false`.|
-|`BeforeTargets`|İsteğe bağlı öznitelik.<br /><br /> Hedef adları noktalı virgülle ayrılmış listesi.  Bu seçenek belirtildiğinde, bu hedefe belirtilen hedef veya hedefleri önce çalışması gerektiğini belirtir. Bu, doğrudan değiştirmeden hedefleri var olan bir dizi genişletme proje yazarı olanak tanır. Daha fazla bilgi için [hedef derleme sırası](../msbuild/target-build-order.md).|
-|`AfterTargets`|İsteğe bağlı öznitelik.<br /><br /> Hedef adları noktalı virgülle ayrılmış listesi. Bu seçenek belirtildiğinde, bu hedefe belirtilen hedef veya hedefleri sonra çalışması gerektiğini belirtir. Bu, doğrudan değiştirmeden hedefleri var olan bir dizi genişletme proje yazarı olanak tanır. Daha fazla bilgi için [hedef derleme sırası](../msbuild/target-build-order.md).|
-|`DependsOnTargets`|İsteğe bağlı öznitelik.<br /><br /> Bu hedef yürütülebilmesi yürütülmelidir hedefleri veya üst düzey bağımlılık analizi ortaya çıkabilir. Birden çok hedefe, noktalı virgül ile ayrılır.|
-|`Label`|İsteğe bağlı öznitelik.<br /><br /> Kimliğinizi belirlemek veya sistem ve kullanıcı öğelerini siparişi tanımlayıcısı.|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Koşul `false`olarak değerlendirilirse hedef, hedefin gövdesini veya `DependsOnTargets` özniteliğinde ayarlanan tüm hedefleri yürütmez. Koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Inputs`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefte girdileri oluşturan dosyalar. Birden çok dosya noktalı virgülle ayrılır. `Target` güncel olup olmadığını anlamak için, dosyaların zaman damgaları `Outputs` içindeki dosyaların zaman damgalarına göre karşılaştırılır. Daha fazla bilgi için bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md), [nasıl yapılır: artımlı](../msbuild/how-to-build-incrementally.md)ve [dönüşümler](../msbuild/msbuild-transforms.md)oluşturma.|
+|`Outputs`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefte çıktı oluşturan dosyalar. Birden çok dosya noktalı virgülle ayrılır. `Target` güncel olup olmadığını anlamak için, dosyaların zaman damgaları `Inputs` içindeki dosyaların zaman damgalarına göre karşılaştırılır. Daha fazla bilgi için bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md), [nasıl yapılır: artımlı](../msbuild/how-to-build-incrementally.md)ve [dönüşümler](../msbuild/msbuild-transforms.md)oluşturma.|
+|`Returns`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefi çağıran görevler için kullanılabilir hale getirilen öğelerin kümesi, örneğin MSBuild görevleri. Birden çok hedef noktalı virgülle ayrılır. Dosyadaki hedeflerin `Returns` özniteliği yoksa, bu amaçla çıkış öznitelikleri kullanılır.|
+|`KeepDuplicateOutputs`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`, hedefin dönüşteki aynı öğeye birden fazla başvuru kaydedilir.  Varsayılan olarak, bu öznitelik `false`.|
+|`BeforeTargets`|İsteğe bağlı öznitelik.<br /><br /> Hedef adların noktalı virgülle ayrılmış listesi.  Belirtildiğinde, bu hedefin belirtilen hedeften veya hedeflerden önce çalışması gerektiğini gösterir. Bu, proje yazarının varolan bir hedef kümesini doğrudan değiştirmeden genişletmesine imkan tanır. Daha fazla bilgi için bkz. [hedef derleme sırası](../msbuild/target-build-order.md).|
+|`AfterTargets`|İsteğe bağlı öznitelik.<br /><br /> Hedef adların noktalı virgülle ayrılmış listesi. Belirtildiğinde, bu hedefin belirtilen hedeften veya hedeflerden sonra çalıştırılması gerektiğini gösterir. Bu, proje yazarının varolan bir hedef kümesini doğrudan değiştirmeden genişletmesine imkan tanır. Daha fazla bilgi için bkz. [hedef derleme sırası](../msbuild/target-build-order.md).|
+|`DependsOnTargets`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefin yürütülebilmesi veya en üst düzey bağımlılık Analizi gerçekleşebilmesi için yürütülmesi gereken hedefler. Birden çok hedef noktalı virgülle ayrılır.|
+|`Label`|İsteğe bağlı öznitelik.<br /><br /> Sistem ve Kullanıcı öğelerini tanımlayan veya sırabilen bir tanımlayıcı.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 | Öğe | Açıklama |
 | - | - |
-| [Görev](../msbuild/task-element-msbuild.md) | Oluşturur ve yürütür örneği bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görev. Bir hedef olarak sıfır veya daha fazla görev olabilir. |
-| [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Kullanıcı tanımlı bir dizi içeren `Property` öğeleri. .NET Framework 3.5 başlayan bir `Target` öğesi içerebilir `PropertyGroup` öğeleri. |
-| [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Kullanıcı tanımlı bir dizi içeren `Item` öğeleri. .NET Framework 3.5 başlayan bir `Target` öğesi içerebilir `ItemGroup` öğeleri. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md). |
-| [OnError](../msbuild/onerror-element-msbuild.md) | Neden olursa yürütülmek üzere bir veya daha fazla hedef `ContinueOnError` özniteliktir ErrorAndStop (veya `false`) için başarısız bir görev. Sıfır veya daha fazla olabilir `OnError` hedef öğelerinde. Varsa `OnError` öğeler, bunlar içerisinde son öğe olmalıdır `Target` öğesi.<br /><br /> Hakkında bilgi için `ContinueOnError` özniteliği için bkz: [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). |
+| [Görevinin](../msbuild/task-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevin örneğini oluşturur ve yürütür. Hedefte sıfır veya daha fazla görev olabilir. |
+| [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Kullanıcı tanımlı `Property` öğeleri kümesi içerir. .NET Framework 3,5 ' den başlayarak `Target` bir öğe `PropertyGroup` öğeleri içerebilir. |
+| [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Kullanıcı tanımlı `Item` öğeleri kümesi içerir. .NET Framework 3,5 ' den başlayarak `Target` bir öğe `ItemGroup` öğeleri içerebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md). |
+| [OnError](../msbuild/onerror-element-msbuild.md) | Başarısız bir görevin `ContinueOnError` özniteliği Errportadstop (veya `false`) ise, bir veya daha fazla hedefin yürütülmesine neden olur. Bir hedefte sıfır veya daha fazla `OnError` öğe olabilir. `OnError` öğeler varsa, bu öğelerin `Target` öğesindeki son öğeler olması gerekir.<br /><br /> `ContinueOnError` özniteliği hakkında daha fazla bilgi için bkz. [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | Gerekli kök öğesi bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyası. |
+| [Proje](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
- İlk hedef yürütmek için çalışma zamanında belirtilir. Hedefleri diğer hedefler üzerinde bağımlılıkları olabilir. Örneğin, dağıtım için hedef derleme hedefi bağlıdır. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Altyapısı bağımlılıkları göründükleri içinde sırayla yürütür `DependsOnTargets` soldan sağa doğru öznitelik. Daha fazla bilgi için [hedefleri](../msbuild/msbuild-targets.md).
+ Yürütülecek ilk hedef çalışma zamanında belirtilir. Hedeflerin diğer hedeflere bağımlılıkları olabilir. Örneğin, dağıtım hedefi, derleme için bir hedefe bağlıdır. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısı, bağımlılıkları `DependsOnTargets` özniteliğinde göründükleri sırada (soldan sağa) yürütür. Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md).
 
- MSBuild, içeri aktarma sırası bağlı ve belirli bir hedef son tanımı `Name` kullanılan tanımı bir özniteliktir.
+ MSBuild içeri aktarma-sipariş bağımlıdır ve belirli bir `Name` özniteliğiyle bir hedefin son tanımı kullanılan tanımdır.
 
- Birden fazla hedef üzerinde bağımlılık sahip olsa bile, bir hedef yalnızca bir derleme sırasında bir kez yürütülür.
+ Bir hedef, birden fazla hedefin buna bağımlılığı olsa bile, bir derleme sırasında yalnızca bir kez yürütülür.
 
- Bir hedef çünkü atladıysanız, `Condition` özniteliği değerlendirilen `false`, yapı içinde çağrılması durumunda hala yürütülebilecek ve kendi `Condition` özniteliğine hesaplar için `true` o zaman.
+ `Condition` özniteliği `false`olarak değerlendirildiğinden bir hedef atlanırsa, hala derlemede çağrılırsa çalıştırılabilir ve `Condition` özniteliği o anda `true` olarak değerlendirilir.
 
- MSBuild 4 önce `Target` belirtilen tüm öğeler döndürülen `Outputs` özniteliği.  Bunu yapmak için derleme görevleri daha sonra bunları istenen durumlarda bu öğeleri kaydetmek MSBuild vardı. Çağıranlar gerektirecek çıkışları hedefleri olan belirtmek mümkün olduğundan tüm öğeleri tüm MSBuild birikmiş `Outputs` tüm çağrılan `Target`s. Bu sorunları çok sayıda olan derlemeler için ölçeklendirme adayı öğelerini çıktı.
+ MSBuild 4 ' ten önce, `Target` `Outputs` özniteliğinde belirtilen herhangi bir öğeyi döndürdü.  Bunu yapmak için, MSBuild 'in bu öğeleri, daha sonra yapı içinde talep eden görevlere kaydı gerekiyordu. Çağıranların gerektirdiği hangi hedeflerin çıkış olduğunu belirtmenin bir yolu olmadığından, tüm çağrılan `Target`s üzerinde tüm `Outputs` MSBuild birikmiş tüm öğeleri. Bu, çok sayıda çıkış öğesi olan derlemeler için ölçeklendirme sorunlarına yol açabilir.
 
- Kullanıcı belirtiyorsa bir `Returns` herhangi `Target` öğesinde bir proje, ardından yalnızca `Target`sahip s bir `Returns` özniteliği öğelerden kaydedin.
+ Kullanıcı bir projedeki herhangi bir `Target` öğesinde bir `Returns` belirtiyorsa, bu öğeleri yalnızca bir `Returns` özniteliğine sahip olan `Target`ler kaydeder.
 
- A `Target` her ikisi de içerebilir bir `Outputs` özniteliği ve `Returns` özniteliği.  `Outputs` ile kullanılan `Inputs` hedefin güncel olup olmadığını belirlemek için. `Returns`, varsa, değerini geçersiz kılar `Outputs` hangi öğelerin arayanlara döndürülen belirlemek için.  Varsa `Returns` ardından yoksa `Outputs` daha önce açıklanan durumda arayanlara dışında kullanılabilir hale getirilir.
+ `Target`, hem `Outputs` özniteliği hem de `Returns` özniteliği içerebilir.  `Outputs`, hedefin güncel olup olmadığını belirlemede `Inputs` ile birlikte kullanılır. varsa `Returns`, çağıranlara hangi öğelerin döndürüldüğünü belirleyen `Outputs` değerini geçersiz kılar.  `Returns` yoksa, daha önce açıklanan durum dışında çağıranlar için `Outputs` kullanılabilir hale getirilir.
 
- MSBuild 4 önce herhangi bir zamanda bir `Target` aynı öğede birden fazla başvuru dahil, `Outputs`, yinelenen öğeleri kaydedilmesi. Çok büyük sayıda çıktıları ve birçok proje bağımlılıkları olan oluşturur, bu çok miktarda bellek yinelenen öğeleri herhangi bir kullanımı olmadığı için boşa için neden olur. Zaman `KeepDuplicateOutputs` özniteliği `true`, bu yinelemeler kaydedilir.
+ MSBuild 4 ' den önce, bir `Target` `Outputs`aynı öğeye birden fazla başvuru eklendiğinde, bu yinelenen öğeler kaydedilir. Çok sayıda çıkış ve birçok proje bağımlılığı bulunan çok büyük derlemelerde, yinelenen öğeler hiçbir kullanım olmadığından büyük miktarda bellek harcanmasına neden olur. `KeepDuplicateOutputs` özniteliği `true`olarak ayarlandığında, bu yinelemeler kaydedilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örnekte gösterildiği bir `Target` yürüten öğesi `Csc` görev.
+ Aşağıdaki kod örneği, `Csc` görevini yürüten bir `Target` öğesini gösterir.
 
 ```xml
 <Target Name="Compile" DependsOnTargets="Resources" Returns="$(TargetPath)">

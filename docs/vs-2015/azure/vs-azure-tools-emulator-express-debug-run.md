@@ -25,7 +25,7 @@ Azure SDK 2,3 veya sonraki sürümlerde bir Azure projesi oluşturduğunuzda, ö
 
 1. Oluşturun veya bir Azure bulut hizmeti projesini Visual Studio'da açın.
 
-1. İçinde **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden seçin **özellikleri**.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
 
 1. Projeler Özellikler sayfasında, **Web** sekmesini seçin.
 

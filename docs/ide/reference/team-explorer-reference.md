@@ -5,107 +5,107 @@ ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: 6a7c1e9d0f5e8b8ef48a033d58038818d2d620e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b1a956579b527de9df9d24bd09dda6ae48eff961
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945098"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538570"
 ---
 # <a name="team-explorer-reference"></a>Team Explorer başvurusu
 
-Bu makalede, çeşitli işlevler hakkında Azure DevOps makalelerin bağlantıları sağlanmaktadır **Takım Gezgini**.
+Bu makale, **Takım Gezgini**çeşitli Işlevler hakkında Azure DevOps makalelerine bağlantılar sağlar.
 
-Kullanım **Takım Gezgini** kod çabalarınızı diğer takım üyeleri projeyi geliştirmek ve siz, ekibiniz veya projeleriniz için atanan işi yönetmek için koordine etmek için araç penceresi. **Takım Gezgini** Git ve GitHub depoları, Team Foundation sürüm denetimi (TFVC) depolar ve barındırılan projeler için Visual Studio bağlayan [Azure DevOps Hizmetleri](/azure/devops/user-guide/what-is-azure-devops-services) veya bir şirket içi [Azure DevOps sunucu](/tfs/index) (eski adıyla TFS da bilinir). Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
+Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işleri yönetmek için, **Takım Gezgini** araç penceresini diğer takım üyeleriyle koordine etmek için kullanın. **Takım Gezgini** , Visual Studio 'yu git ve GitHub depoları, Team Foundation sürüm denetimi (TFVC) depoları ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi [Azure DevOps Server](/azure/devops/index-all) (eski adıyla TFS) barındırılan projelere bağlar. Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
 
 ## <a name="home-page"></a>Giriş sayfası
 
-Çalıştırdıktan sonra [projeye bağlanmanız](../connect-team-project.md) içinde **Takım Gezgini**, aşağıdaki bağlantıları kullanılabilir **proje** bölümü:
+**Takım Gezgini** [bir projeye](../connect-team-project.md) bağlandıktan sonra, **Proje** bölümünde aşağıdaki bağlantılar kullanılabilir hale gelir:
 
 - [Depoyu Kopyala](/azure/devops/repos/git/clone)
 - [Web portalı](/azure/devops/project/navigation/index)
-- [Görev Panosu](/azure/devops/boards/sprints/task-board)
+- [Görev panosu](/azure/devops/boards/sprints/task-board)
 
-**Giriş** sayfa olup bağlandınız bağlı olarak farklı işlevlere sahip bir [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) veya [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview) depo.
+**Giriş** sayfası, bir [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) veya [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview) deposuna bağlı olmanıza bağlı olarak farklı işlevlere sahiptir.
 
 > [!TIP]
-> İki sürüm denetim sistemleri bir karşılaştırması için bkz: [(Azure DevOps) projeniz için doğru sürüm denetimini seçin](/azure/devops/repos/tfvc/comparison-git-tfvc).
+> İki sürüm denetim sisteminin karşılaştırması için bkz. [projeniz için doğru sürüm denetimini seçme (Azure DevOps)](/azure/devops/repos/tfvc/comparison-git-tfvc).
 
-| **Giriş** Git sayfası | **Giriş** TFVC sayfası |
+| Git ile **ana** sayfa | TFVC ile **ana** sayfa |
 | - | - |
-| ![Visual Studio 2019 Git ile Takım Gezgini giriş sayfası](media/team-explorer-reference/team-explorer-git.png) | ![Visual Studio'da TFVC Takım Gezgini giriş sayfası](media/team-explorer-reference/team-explorer-tfvc.png) |
+| ![Visual Studio 2019 Git ile Takım Gezgini giriş sayfası](media/team-explorer-reference/team-explorer-git.png) | ![Visual Studio 'da TFVC ile ana sayfa Takım Gezgini](media/team-explorer-reference/team-explorer-tfvc.png) |
 
 ## <a name="changes-page-git"></a>Değişiklikler sayfası (Git)
 
-Bkz: [çalışmayı işlemelerle kaydetme](/azure/devops/repos/git/commits).
+Bkz. [yürütmelerle Iş kaydetme](/azure/devops/repos/git/commits).
 
 ## <a name="branches-page-git"></a>Dallar sayfası (Git)
 
-Bkz: [dallarda iş oluşturma](/azure/devops/repos/git/branches).
+Bkz. [dallarda Iş oluşturma](/azure/devops/repos/git/branches).
 
 ## <a name="pull-requests-page-git"></a>Çekme istekleri sayfasına (Git)
 
-Bkz: [çekme isteklerine sahip kodu İnceleme](/azure/devops/repos/git/pullrequest).
+Bkz. [çekme istekleri ile kodu gözden geçirme](/azure/devops/repos/git/pullrequest).
 
 ## <a name="sync-page-git"></a>Eşitleme sayfasına (Git)
 
-Bkz: [getirme ve çekme ile kodu güncelleştirme](/azure/devops/repos/git/pulling).
+Bkz. [Fetch ve pull Ile güncelleştirme kodu](/azure/devops/repos/git/pulling).
 
 ## <a name="tags-page-git"></a>Etiketler sayfasını (Git)
 
-Bkz: [Git etiketleri ile çalışma](/azure/devops/repos/git/git-tags).
+Bkz. [Git etiketleriyle çalışma](/azure/devops/repos/git/git-tags).
 
 ## <a name="my-work-page-tfvc"></a>Çalışma sayfam (TFVC)
 
-Bkz: [askıya alma/sürdürme iş](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets) ve [kod incelemesi](/azure/devops/repos/tfvc/day-life-alm-developer-suspend-work-fix-bug-conduct-code-review).
+Bkz. [askıya alma/sürdürülme](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets) ve [Kod İnceleme](/azure/devops/repos/tfvc/day-life-alm-developer-suspend-work-fix-bug-conduct-code-review).
 
 ## <a name="pending-changes-page-tfvc"></a>Bekleyen değişiklikler sayfası (TFVC)
 
-Bkz: [bekleyen değişiklikleri yönetme](/azure/devops/repos/tfvc/develop-code-manage-pending-changes), [raf kümelerini Bul](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets), ve [çakışmaları](/azure/devops/repos/tfvc/resolve-team-foundation-version-control-conflicts).
+Bkz. [bekleyen değişiklikleri yönetme](/azure/devops/repos/tfvc/develop-code-manage-pending-changes), [raf kümeleri bulma](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets)ve [çakışmaları çözme](/azure/devops/repos/tfvc/resolve-team-foundation-version-control-conflicts).
 
 ## <a name="source-control-explorer-page-tfvc"></a>Kaynak Denetim Gezgini sayfa (TFVC)
 
-Bkz: [Ekle/görünüm dosya ve klasörleri](/azure/devops/repos/tfvc/add-files-server).
+Bkz. [dosya ve klasör ekleme/görüntüleme](/azure/devops/repos/tfvc/add-files-server).
 
 ## <a name="work-items-page"></a>İş Öğelerim sayfası
 
-**İş öğeleri** sayfa görmenizi sağlar [iş öğesi](/azure/devops/boards/work-items/about-work-items) sorgular. Bkz.
+**Iş öğeleri** sayfası, [çalışma öğesi](/azure/devops/boards/work-items/about-work-items) sorgularını görmenizi sağlar. Bkz.
 
-- [İş öğesi ekleme](/azure/devops/boards/backlogs/add-work-items)
-- [Listelemek ve sorguları yönetmek için sorgu Düzenleyicisi'ni kullanın](/azure/devops/boards/queries/using-queries)
-- [Sorgu klasörlerini düzenleyin ve sorgu izinlerini ayarlayın](/azure/devops/boards/queries/set-query-permissions)
-- [Excel'de sorgu Aç](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel)
-- [Projede sorgu açın](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
-- [Outlook'u kullanarak e-posta sorgu sonuçları listesi](/azure/devops/boards/queries/share-plans)
-- [Excel'de sorgudan raporlar oluşturma](/azure/devops/report/excel/create-status-and-trend-excel-reports) (yalnızca TFS)
+- [İş öğeleri ekle](/azure/devops/boards/backlogs/add-work-items)
+- [Sorguları listelemek ve yönetmek için sorgu düzenleyicisini kullanma](/azure/devops/boards/queries/using-queries)
+- [Sorgu klasörlerini düzenleme ve sorgu izinlerini ayarlama](/azure/devops/boards/queries/set-query-permissions)
+- [Sorguyu Excel 'de aç](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel)
+- [Sorguyu projede aç](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
+- [Outlook kullanarak e-posta sorgu sonuçları listesi](/azure/devops/boards/queries/share-plans)
+- [Excel 'de sorgudan rapor oluşturma](/azure/devops/report/excel/create-status-and-trend-excel-reports) (yalnızca TFS)
 
 ::: moniker range=">= vs-2019"
 
 > [!NOTE]
-> Yeni bir [iş öğelerini deneyimi](/azure/devops/boards/work-items/set-work-item-experience-vs) Visual Studio 2019 içinde. Visual Studio 2019 içinde iş öğelerini görüntüleme hakkında daha fazla bilgi için bkz: [görünümü ve iş öğelerini eklemek](/azure/devops/boards/work-items/view-add-work-items).
+> Visual Studio 2019 ' de yeni bir [Iş öğeleri deneyimi](/azure/devops/boards/work-items/set-work-item-experience-vs) vardır. Visual Studio 2019 ' de iş öğelerini görüntüleme hakkında daha fazla bilgi için bkz. [çalışma öğelerini görüntüleme ve ekleme](/azure/devops/boards/work-items/view-add-work-items).
 
 ::: moniker-end
 
 ## <a name="builds-page"></a>Yapılar sayfasında
 
-**Yapılar** sayfa sağlar, bkz: derleme tanımları proje için.
+**Yapılar** sayfası, proje için yapı tanımlarını görmenizi sağlar.
 
 Bkz.
 
-- [Derleme işlem hattı oluşturma](/azure/devops/pipelines/tasks/index)
-- [Derlemeleri görüntüle ve Yönet](/azure/devops/pipelines/overview)
-- [Yapı sırasını yönetin](/azure/devops/pipelines/agents/pools-queues)
-- [Visual Studio için sürekli teslim (CD) araçlarını yükleme](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#install-continuous-delivery-cd-tools-for-visual-studio-2017)
-- [Yapılandırma ve uygulamanız için sürekli teslim (CD) yürütme](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#configure-and-execute-continuous-delivery-cd-for-your-app)
+- [Derleme işlem hatları oluşturma](/azure/devops/pipelines/tasks/index)
+- [Yapıları görüntüleme ve yönetme](/azure/devops/pipelines/overview)
+- [Derleme kuyruğunu yönetme](/azure/devops/pipelines/agents/pools-queues)
+- [Visual Studio için sürekli teslim (CD) araçları 'nı yükler](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#install-continuous-delivery-cd-tools-for-visual-studio-2017)
+- [Uygulamanız için sürekli teslimi (CD) yapılandırma ve yürütme](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#configure-and-execute-continuous-delivery-cd-for-your-app)
 
 ## <a name="settings-page"></a>Ayarları sayfası
 
-**Ayarları** sayfa bir proje veya proje koleksiyonu için yönetimsel özellikleri yapılandırmanıza olanak sağlar. Aşağıdaki makalelere bakın:
+**Ayarlar** sayfası, bir proje ya da proje koleksiyonu için yönetim özelliklerini yapılandırmanıza olanak tanır. Aşağıdaki makalelere bakın:
 
-| Proje | Proje koleksiyonu | Diğer |
+| {1&gt;Proje (Project)&lt;1} | Proje koleksiyonu | Diğer |
 | - | - | - |
-| [Güvenliği, grup üyeliği](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Güvenlik, kaynak denetimi (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[İş öğesi alanları](/azure/devops/organizations/settings/set-area-paths)<br/>[İş öğesi yinelemeleri](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Portal ayarları](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Proje Uyarıları](/azure/devops/notifications/howto-manage-team-notifications) | [Güvenliği, grup üyeliği](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Kaynak denetimi (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[İşlem Şablonu Yöneticisi](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Git genel ayarlar](/azure/devops/repos/git/git-config)<br/>[Git deposu ayarları](/azure/devops/repos/git/git-config) |
+| [Güvenlik, Grup üyeliği](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Güvenlik, kaynak denetimi (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[Çalışma öğesi alanı](/azure/devops/organizations/settings/set-area-paths)<br/>[Çalışma öğesi yinelemeleri](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Portal Ayarları](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Proje uyarıları](/azure/devops/notifications/howto-manage-team-notifications) | [Güvenlik, Grup üyeliği](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Kaynak denetimi (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[İşlem şablonu Yöneticisi](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Git genel ayarları](/azure/devops/repos/git/git-config)<br/>[Git deposu ayarları](/azure/devops/repos/git/git-config) |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Takım Gezgini'nde projelerine bağlanma](../../ide/connect-team-project.md)
+- [Takım Gezgini projelere bağlanma](../../ide/connect-team-project.md)

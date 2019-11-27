@@ -29,7 +29,7 @@ ms.locfileid: "74300819"
 
 Visual Studio görüntü kitaplığı, Microsoft Visual Studio, Microsoft Windows, Office sistemi ve diğer Microsoft yazılımlarında görünen uygulama görüntülerini içerir. Bu 1000'den fazla görüntü kümesi Microsoft yazılımıyla görsel olarak tutarlı olan uygulamalar oluşturmak için kullanılabilir.
 
- [Visual Studio görüntü kitaplığı'nı indirin](https://go.microsoft.com/fwlink/p/?LinkId=275090)
+ [Visual Studio Görüntü Kitaplığı 'nı indirin](https://go.microsoft.com/fwlink/p/?LinkId=275090)
 
  Görüntü kitaplığı beş kategoriye ayrılır: ortak öğeler, Eylemler, ek açıklamalar, simgeler ve nesneler. Benioku dosyaları ortak öğeler ve simge türleri için PDF biçiminde dahil edilir. Bunlar, bu görüntüler, uygun şekilde uygulamalarınızda kullanma hakkında bilgi içerir.
 

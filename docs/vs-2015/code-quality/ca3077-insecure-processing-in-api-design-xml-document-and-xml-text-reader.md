@@ -25,7 +25,7 @@ ms.locfileid: "74300466"
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  XMLDocument ve XMLTextReader 'dan türetilmiş bir API tasarlarken, <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>olması gerekir.  Dış varlık kaynaklarının başvurulması veya çözümlenmesi veya XML 'deki güvenli olmayan değerlerin ayarlanması sırasında güvenli olmayan DTDProcessing örnekleri kullanmak bilgilerin açığa çıkmasına neden olabilir.
 
 ## <a name="rule-description"></a>Kural Tanımı

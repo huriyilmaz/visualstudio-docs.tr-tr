@@ -45,7 +45,7 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
   
 ### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe  
   
-|                           Değer                           |                Açıklama                |
+|                           Value                           |                Açıklama                |
 |-----------------------------------------------------------|-------------------------------------------|
 | http://schemas.openformats.org/package/2006/content-types | İçerik türleri şemasının konumu. |
   
@@ -74,7 +74,7 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 |vsixmanifest|metin/XML|  
 |htm veya HTML|metin/html|  
 |biçimindeki|Uygulama/RTF|  
-|belgesini|uygulama/PDF|  
+|pdf|uygulama/PDF|  
 |gif|resim/GIF|  
 |jpg veya JPEG|resim/jpg|  
 |dosyalarında|resim/TIFF|  

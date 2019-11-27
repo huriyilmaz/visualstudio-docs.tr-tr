@@ -25,7 +25,7 @@ ms.locfileid: "74300970"
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Güvenli olmayan <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> örnekleri kullanırsanız veya dış varlık kaynaklarına başvuru yaparsanız, ayrıştırıcı güvenilmeyen girişi kabul edebilir ve duyarlı bilgileri saldırganlar 'e açığa çıkarabilir.
 
 ## <a name="rule-description"></a>Kural Tanımı

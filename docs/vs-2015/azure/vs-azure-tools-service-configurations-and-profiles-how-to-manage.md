@@ -19,7 +19,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74298040"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Hizmet yapılandırmalarını ve profillerini yönetme
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Bir bulut hizmeti yayımladığınızda, Visual Studio yapılandırma bilgilerini iki tür yapılandırma dosyasında depolar: hizmet yapılandırmaları ve profiller. Hizmet yapılandırma (. cscfg dosyaları) bir Azure bulut hizmeti için dağıtım ortamları için depolama ayarları. Azure, bulut hizmetlerinizi yönetirken bu yapılandırma dosyalarını kullanır. Diğer yandan, profiller (. azurePubxml dosyaları), bulut hizmetleri için yayımlama ayarlarını depolar. Bu ayarlar, Yayımlama Sihirbazı 'nı kullanırken seçtiğiniz ayarların bir kaydıdır ve Visual Studio tarafından yerel olarak kullanılır. Bu konu, her iki yapılandırma dosyası türüyle nasıl çalışılacağını açıklamaktadır.
 
 ## <a name="service-configurations"></a>Hizmet yapılandırması
@@ -27,7 +27,7 @@ Dağıtım ortamlarınızın her biri için kullanmak üzere birden çok hizmet 
 
 Gereksinimlerinize göre bu hizmet yapılandırmasını ekleyebilir, silebilir, yeniden adlandırabilir ve değiştirebilirsiniz. Aşağıdaki çizimde gösterildiği gibi, bu hizmet yapılandırmalarının Visual Studio 'dan yönetebilirsiniz.
 
-![Hizmet yapılandırmasını yönetme](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
+![Hizmet Yapılandırmalarını Yönet](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
 
 Ayrıca rolün özellik sayfalarındaki **konfigürasyonları Yönet** iletişim kutusunu da açabilirsiniz. Azure projenizde bir rolün özelliklerini açmak için, bu rolün kısayol menüsünü açın ve **Özellikler**' i seçin. **Ayarlar** sekmesinde, **hizmet yapılandırması** listesini genişletin ve ardından **Yönet** ' i seçerek **yapılandırmaları Yönet** iletişim kutusunu açın.
 
@@ -45,7 +45,7 @@ Ayrıca rolün özellik sayfalarındaki **konfigürasyonları Yönet** iletişim
    
     **Hizmet yapılandırmasını Yönet** iletişim kutusu görüntülenir.
 2. Bir hizmet yapılandırmasını silmek için, **ad** listesinden silmek istediğiniz yapılandırmayı seçin ve ardından **Kaldır**' ı seçin. Bu yapılandırmayı silmek istediğinizi doğrulayan bir iletişim kutusu görünür.
-3. **Sil**’i seçin.
+3. **Sil**' i seçin.
    
      Hizmet yapılandırma dosyası Çözüm Gezgini Azure projesinden kaldırılır.
 

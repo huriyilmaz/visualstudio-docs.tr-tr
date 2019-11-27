@@ -19,7 +19,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74290988"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Visual Studio **Tablo Tasarımcısı**görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](https://go.microsoft.com/fwlink/p/?LinkId=400447)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
 
 WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://go.microsoft.com/fwlink/p/?LinkId=214805) (OData) temel alır. Filtre sistemi sorgu seçeneği ( **$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://go.microsoft.com/fwlink/p/?LinkId=214806).
@@ -35,7 +35,7 @@ Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
 | lt |Küçüktür |Fiyat lt 20 |
 | Le |Küçük veya eşittir |Fiyat Le 100 |
 | Savaşı |Eşit değildir |Şehir ne ' Londra ' |
-| and |Ve |Fiyat Le 200 ve fiyat gt 3,5 |
+| ve |Ve |Fiyat Le 200 ve fiyat gt 3,5 |
 | veya |Veya |Fiyat Le 3,5 veya fiyat gt 200 |
 | not |değil |ıısavailable yok |
 

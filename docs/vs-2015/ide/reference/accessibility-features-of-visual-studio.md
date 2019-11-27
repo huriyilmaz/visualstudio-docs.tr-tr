@@ -35,7 +35,7 @@ Erişilebilirlik özelliklerine ve yardımcı programları Windows ek olarak aş
 - Yöntem ve parametreler için otomatik tamamlama
 
 > [!IMPORTANT]
-> Bu bölümdeki bilgiler, yalnızca Microsoft ürünlerini ABD'de lisans kullanıcılar için geçerlidir. Bu ürünü birleşik Devletler'in dışında alınan yazılım paketinizle birlikte gelen yan kuruluşu olan bilgi kartını kullanabilirsiniz ya da ziyaret edebilirsiniz [bize sayfa for Microsoft Support](https://support.microsoft.com/contactus/) tıklatıp  **Microsoft ofisleri dünya çapındaki bulmak** bağlantısını (sayfanın altına). Bu sayfa telefon numaralarının listesini sağlar ve adresleri Microsoft Destek Hizmetleri. Olup, bu bölümde açıklanan ürün ve hizmetlerin türlerini Bölgenizde kullanılabilir olduğunu öğrenmek için temsilcinize başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca dahil olmak üzere diğer dillerde mevcuttur.
+> Bu bölümdeki bilgiler, yalnızca Microsoft ürünlerini ABD'de lisans kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgileri kartını kullanabilir veya [Microsoft desteği Için bize Iletişim kurun sayfasına](https://support.microsoft.com/contactus/) (sayfanın alt kısmına yakın bir yerde) tıklayabilirsiniz. Bu sayfa telefon numaralarının listesini sağlar ve adresleri Microsoft Destek Hizmetleri. Olup, bu bölümde açıklanan ürün ve hizmetlerin türlerini Bölgenizde kullanılabilir olduğunu öğrenmek için temsilcinize başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.
 
  Daha fazla bilgi için aşağıdaki konulara bakın:
 

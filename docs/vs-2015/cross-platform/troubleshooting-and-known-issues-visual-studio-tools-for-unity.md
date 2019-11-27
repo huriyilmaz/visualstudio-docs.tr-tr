@@ -60,9 +60,9 @@ Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio A
   
 1. Visual Studio'nun yeni bir örneğini açın.  
   
-2. İşleme İliştir'iletişim kutusunda açın. Yeni Visual Studio örneğinde ana menüsündeki seçin **hata ayıklama**, **iliştirme**.  
+2. İşleme İliştir'iletişim kutusunda açın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **İşleme İliştir**' i seçin.  
   
-3. Hata ayıklayıcı, Visual Studio dondurulmuş örneğine ekleyin. İçinde **iliştirme** iletişim kutusunda, Visual Studio'dan dondurulmuş örneğini seçin **kullanılabilir işlemler** tablosuna ve sonra seçin **iliştirme** düğmesi.  
+3. Hata ayıklayıcı, Visual Studio dondurulmuş örneğine ekleyin. **Işleme İliştir** iletişim kutusunda, **kullanılabilir Işlemler** tablosundan Visual Studio 'nun dondurulmuş örneğini seçin ve **Ekle** düğmesini seçin.  
   
 4. Hata ayıklayıcı duraklatın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **Tümünü kes** ' i seçin veya **Ctrl + Alt + Break**tuşlarına basın.  
   
@@ -72,6 +72,6 @@ Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio A
    Debug.ListCallStack /AllThreads /ShowExternalCode  
    ```  
   
-    Yapmanız gerekebilecek **komut** pencere ilk görünür. Visual Studio'da ana menüde seçin **görünümü**, **diğer Windows**, **komut penceresi**.  
+    Önce **komut** penceresini görünür yapmanız gerekebilir. Visual Studio 'da, ana menüden **Görünüm**, **diğer pencereler**, **komut penceresi**' ni seçin.  
   
-6. Son olarak, iş parçacığı-dökümü gönderme [ vstusp@microsoft.com ](mailto:vstusp@microsoft.com), ne zaman yapmakta olduğunuz açıklaması ile birlikte Visual Studio dondurulmuş hale geldi.
+6. Son olarak, iş parçacığı dökümünü [vstusp@microsoft.com](mailto:vstusp@microsoft.com), Visual Studio dondurulmuş hale geldiğinde ne yaptığınızın bir açıklamasıyla birlikte gönderin.

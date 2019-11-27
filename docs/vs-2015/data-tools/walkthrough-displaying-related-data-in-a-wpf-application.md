@@ -73,7 +73,7 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
 6. **Ad** kutusuna `AdventureWorksOrdersViewer`yazın.
 
-7. {1&gt;Tamam&lt;1} düğmesini tıklatın.
+7. **Tamam**'a tıklayın.
 
      Visual Studio `AdventureWorksOrdersViewer` projesi oluşturur.
 

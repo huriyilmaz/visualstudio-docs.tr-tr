@@ -105,7 +105,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||  
 |-|-|  
 |**Subelement**|**Tanım**|  
-|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|  
+|{1&gt;İçeri Aktar&lt;1}|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|  
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|  
 |Kimlik|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|  
 |Dize|Sembol rastgele bir dize değerini temsil eder|  
@@ -151,7 +151,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |Kimlik|Istenir Görüntü adının KIMLIK kısmı|  
 |Allowcolorınversion|[İsteğe bağlı, varsayılan doğru] Görüntünün, koyu bir arka planda kullanıldığında, renkleri program aracılığıyla ters çevrimeyeceğini gösterir.|  
 
- **Kaynak**  
+ **Kaynaktaki**  
 
  \<Source > öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.  
 
@@ -164,7 +164,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Öznitelik** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Tanım**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|      kullanılmamışsa      |                                                                                                                                                                                                                                                                                                               Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu                                                                                                                                                                                                                                                                                                               |
+|      Uri      |                                                                                                                                                                                                                                                                                                               Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu                                                                                                                                                                                                                                                                                                               |
 |  Arka Plan   | Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> <em>Koyu:</em> Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir. |
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
@@ -173,7 +173,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 ||||  
 |-|-|-|  
 |**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|  
-|\<boyutu >|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|  
+|\<boyutu >|Value|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|  
 |\<SizeRange >|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|  
 |\<boyutlar >|Width, Height|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|  
 |\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|  
@@ -187,7 +187,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||  
 |-|-|  
 |**Öznitelik**|**Tanım**|  
-|Tür|Istenir Yerel kaynağın türü, XAML veya PNG|  
+|Type|Istenir Yerel kaynağın türü, XAML veya PNG|  
 |Kimlik|Istenir Yerel kaynağın tamsayı KIMLIĞI bölümü|  
 
  **'I**  
@@ -962,7 +962,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |Glyphanahtar sözcüğü||Intellisenseanahtar sözcüğü|  
     |Glyphınformation||StatusInformation|  
     |GlyphReference||ClassMethodReference|  
-    |Glyphözyineleme||Yinelenme|  
+    |Glyphözyineleme||{1&gt;Yineleme&lt;1}|  
     |Glyphxmlıtıtem||Etiket|  
     |Glyphjkeskinproject||DocumentCollection|  
     |Glyphjnetdocument||Belge|  

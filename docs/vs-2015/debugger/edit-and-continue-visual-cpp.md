@@ -41,7 +41,7 @@ Visual C++ projelerinde Düzenle ve devam et ' i kullanabilirsiniz. Düzenle ve 
 ## <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a>Düzenle ve devam et 'i etkinleştir veya devre dışı bırak  
  Geçerli hata ayıklama oturumu sırasında uygulanmasını istemediğiniz kodda düzenleme yapıyorsanız otomatik Düzenle ve devam et çağrısını devre dışı bırakmak isteyebilirsiniz. Ayrıca otomatik düzenlemeyi yeniden etkinleştirip devam edebilirsiniz.  
   
-1. Üzerinde **Araçları** menüsünde seçin **seçenekleri**.  
+1. **Araçlar** menüsünde **Seçenekler**' i seçin.  
   
 2. **Seçenekler** iletişim kutusunda, **hata ayıklama/genel**' i seçin.  
   

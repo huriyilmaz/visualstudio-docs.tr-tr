@@ -26,7 +26,7 @@ InstallShield Limited Edition 'ı kullanarak bir kurulum dosyası oluşturabilir
   
 ### <a name="to-enable-installshield-limited-edition"></a>InstallShield Limited Edition 'ı etkinleştirmek için  
   
-1. Menü çubuğunda, **dosya**, **yeni**, **proje**.  
+1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.  
   
 2. **Yeni proje** iletişim kutusunda, **diğer proje türleri** düğümünü genişletin ve ardından **Kurulum ve dağıtım** düğümünü seçin.  
   

@@ -110,7 +110,7 @@ Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, dur
  [Active Directory hesapları altında çalışan IntelliTrace tek başına toplayıcı ve uygulama havuzları](https://devblogs.microsoft.com/devops/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts/)  
   
 ## <a name="forums"></a>Forumlar  
- [Visual Studio Debugger](https://go.microsoft.com/fwlink/?LinkId=262263)  
+ [Visual Studio hata ayıklayıcısı](https://go.microsoft.com/fwlink/?LinkId=262263)  
   
 ## <a name="videos"></a>Videolar  
  [IntelliTrace deneyimi](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)  

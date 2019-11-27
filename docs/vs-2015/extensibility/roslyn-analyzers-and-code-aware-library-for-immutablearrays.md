@@ -102,7 +102,7 @@ Bir sözdizimi düğümü için kayıt yaptırın ve yalnızca nesne oluşturma 
 internal const string Category = "Naming";
 ```
 
-Değişiklik `"Naming"` için `"API Guidance"`.
+`"Naming"` `"API Guidance"`olarak değiştirin.
 
 Daha sonra **Çözüm Gezgini**kullanarak projenizde resources. resx dosyasını bulun ve açın. Çözümleyici, başlık vb. için bir açıklama koyabilirsiniz. Bunların tümünün değerini şimdilik `“Don’t use ImmutableArray<T> constructor”` değiştirebilirsiniz. String biçimlendirme bağımsız değişkenlerini dizeniz ({0}, {1}, vb.) koyabilirsiniz ve daha sonra `Diagnostic.Create()`çağırdığınızda, geçirilecek bağımsız değişkenlerin params dizisini sağlayabilirsiniz.
 

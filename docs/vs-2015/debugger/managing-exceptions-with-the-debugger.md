@@ -150,7 +150,7 @@ Bir özel durum bir program yürütüldüğü sırada gerçekleşen bir hata dur
   
 3. Bu ayarı belirli bir özel durum için (özel durum seçin, sağ tıklayın ve **Kullanıcı kodunda yakalandığınızda devam et**/Kaldır ' ı seçin) veya tüm özel durumlar kategorisi için (örneğin, tüm ortak dil çalışma zamanı özel durumları) değiştirebilirsiniz.  
   
-   Örneğin, ASP.NET Web uygulamaları özel durumları bir HTTP 500 durum koduna dönüştürerek işler ([ASP.NET API 'de özel durum işleme](https://docs.microsoft.com/aspnet/web-api/overview/error-handling/exception-handling)) ve özel durumun kaynağını belirlemenize yardımcı olabilir. Aşağıdaki örnekte, kullanıcı kodu çağrıda `String.Format()` oluşturan bir <xref:System.FormatException>. Yürütme aşağıdaki gibi ayırır:  
+   Örneğin, ASP.NET Web uygulamaları özel durumları bir HTTP 500 durum koduna dönüştürerek işler ([ASP.NET API 'de özel durum işleme](https://docs.microsoft.com/aspnet/web-api/overview/error-handling/exception-handling)) ve özel durumun kaynağını belirlemenize yardımcı olabilir. Aşağıdaki örnekte, Kullanıcı kodu <xref:System.FormatException>oluşturan `String.Format()` bir çağrı yapar. Yürütme aşağıdaki gibi ayırır:  
   
    ![Kullanıcı&#45;tarafından açılmamış özel durum üzerinde kesintiler](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
@@ -166,7 +166,7 @@ Bir özel durum bir program yürütüldüğü sırada gerçekleşen bir hata dur
   
  Özel durum ayarları çözümün. suo dosyasında kalıcı hale getirilir, bu nedenle belirli bir çözüme uygulanır. Belirli özel durum ayarlarını çözümler genelinde yeniden kullanamazsınız. Bu noktada, yalnızca eklenen özel durumlar kalıcıdır; Silinen özel durumlar değildir. Diğer bir deyişle, bir özel durum ekleyebilir, çözümü kapatıp yeniden açabilirsiniz ve özel durum hala orada olur. Ancak, bir özel durum silin ve çözümü Kapat/yeniden, özel durum yeniden görünür.  
   
- **Özel durum ayarları** penceresi, C# ancak Visual Basic'de genel özel durum türlerini destekler. Özel durumlar gibi kesmek `MyNamespace.GenericException<T>`, özel durum olarak eklemelisiniz **MyNamespace.GenericException'1**. Diğer bir deyişle, şöyle bir özel durum oluşturduysanız:  
+ **Özel durum ayarları** penceresi, ' de genel özel C# durum türlerini destekler, ancak Visual Basic. `MyNamespace.GenericException<T>`gibi özel durumları kesmek için, özel durumu **MyNamespace. GenericException ' 1**olarak eklemeniz gerekir. Diğer bir deyişle, şöyle bir özel durum oluşturduysanız:  
   
 ```csharp  
 public class GenericException<T> : Exception  

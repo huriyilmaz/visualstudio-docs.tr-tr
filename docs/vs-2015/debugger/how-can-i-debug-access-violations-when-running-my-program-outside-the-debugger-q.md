@@ -34,10 +34,10 @@ Sorun açıklaması
  Kendi programımı Visual Studio ortamında düzgün çalışıyor, ancak bu tek başına Windows işletim sistemiyle birlikte çalıştırabilir, erişim ihlali üretir. Bu sorunu nasıl hata ayıklaması yapabilirsiniz?  
   
 ## <a name="solution"></a>Çözüm  
- Ayarlama [Just-ın-time hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) seçenek ve erişim ihlali gerçekleşene kadar tek başına programınızı çalıştırın. Ardından **erişim ihlali** iletişim kutusu, tıklayabilirsiniz **iptal** hata ayıklayıcıyı başlatmak için.  
+ [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) seçeneğini ayarlayın ve erişim ihlali gerçekleşene kadar programınızı tek başına çalıştırın. Ardından, **erişim ihlali** iletişim kutusunda, hata ayıklayıcıyı başlatmak için **iptal** ' e tıklayabilirsiniz.  
   
  Ayrıca, "genel koruma (GP) hatasının nerede oluştuğunu bulma" başlıklı Bilgi Bankası makalesine bakın. Bilgi Bankası makalelerini MSDN Kitaplığı CD 'sinde veya [http://support.microsoft.com/](https://support.microsoft.com/)arayarak bulabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yerel kod hata ayıklaması SSS](../debugger/debugging-native-code-faqs.md)   
+ [Yerel kod sss  hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)  
  [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

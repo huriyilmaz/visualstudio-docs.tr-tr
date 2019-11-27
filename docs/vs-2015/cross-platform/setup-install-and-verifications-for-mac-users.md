@@ -6,12 +6,12 @@ ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 14da8fab1b3190d77951298ac7d1a130c85f6135
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 703ee752a9f16f0abc5e4813707890a6d17947af
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297710"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538934"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac kullanıcıları için kurulum, yükleme ve doğrulamalar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
 3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
   
-4. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Windows bilgisayarında Visual Studio 'dan iOS ve Mac ile çalışabilmek [için XMA kullanarak Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com) yönergelerini izleyin.  
+4. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Windows bilgisayarında Visual Studio 'dan iOS ve Mac ile çalışabilmek [için XMA kullanarak Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com) yönergelerini izleyin.  
   
 ## <a name="windows"></a>Paralells içinde Windows kurulumu (Visual Studio ve Xamarin)  
   
@@ -75,7 +75,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
     > [!NOTE]
     > Daha önceki Xamarin lisanslarıyla ilgili sorunlardan kaçınmak için Xamarin 'i 4.0.3.214 veya üzeri bir sürüme güncelleştirdiğinizden emin olun.  Güncelleştirmeleri denetlemeye çalışırsanız ve Microsoft derleme araçları hakkında bir hata görürseniz, [Xamarin 'in forumlarındaki](https://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015)iş parçacığına bakın.
   
-6. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Visual Studio 'dan iOS ile çalışabilmek [için XMA (Xamarin.com) kullanarak Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) yönergelerini izleyin.  
+6. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Visual Studio 'dan iOS ile çalışabilmek [için XMA (Xamarin.com) kullanarak Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac) yönergelerini izleyin.  
   
 ## <a name="verify"></a>Ortamınızı doğrulayın  
  Yükleyiciler tamamlandığında, her şeyin Xamarin geliştirmeyi deneymeye hazırlandığını doğrulamak için birkaç dakikanızı ayırın.  
@@ -97,7 +97,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
 4. [Simülatör belgelerindeki hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) yoluyla iOS benzeticisinde hata ayıklamayı doğrulayın (Xamarin.com).  
   
-### <a name="visual-studio"></a>Visual Studio  
+### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}  
  İlk olarak, Xamarin belgelerinin doğru sürümünü görmeniz için sağ üst köşede **Visual Studio** 'nun seçili olduğundan emin olun, ancak  
   
  ![Xamarin.com üzerinde doğru belgeleri görmek için Visual Studio 'Yu seçme](../cross-platform/media/crossplat-xamarin-mac-2.png "Çapraz Splat Xamarin Mac 2")  
@@ -116,7 +116,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
    **iOS**  
   
-4. Mac 'nizin ağda kullanılabilir olduğundan ve Visual Studio ile eşlenmiş olduğundan, [XMA kullanarak Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com) bölümünde açıklandığı gibi.  
+4. Mac 'nizin ağda kullanılabilir olduğundan ve Visual Studio ile eşlenmiş olduğundan, [XMA kullanarak Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com) bölümünde açıklandığı gibi.  
   
 5. [IOS oluşturma](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) yönergelerini Izleyerek bir iOS projesi oluşturmayı doğrulayın.  
   

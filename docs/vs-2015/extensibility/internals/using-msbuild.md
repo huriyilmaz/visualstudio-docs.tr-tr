@@ -44,7 +44,7 @@ MSBuild, oluşturulacak proje öğelerini tam olarak tanımlayan proje dosyalar�
   
  Projeye özgü MPF sınıfları aşağıdaki gibidir:  
   
-|örneği|Uygulama|  
+|Sınıf|Uygulama|  
 |-----------|--------------------|  
 |`Microsoft.VisualStudio.Package.ProjectNode`|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents>|  
 |`Microsoft.VisualStudio.Package.ProjectFactory`|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>|  

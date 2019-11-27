@@ -27,7 +27,7 @@ ms.locfileid: "74316447"
 
 Aşağıdaki tabloda, Visual Studio 2019 için derleme numaraları ve sürüm tarihleri listelenmektedir.
 
-| **Sürüm**| **Kanal** | **Yayın tarihi** | **Derleme sürümü** |
+| **Sürüm**| **Kanalla** | **Yayın tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
 | 16.4.0 | Önizleme 6 | 21 Kasım 2019 | 16.4.29519.161 |
 | 16.3.10 | Sürüm | 20 Kasım 2019 | 16.3.29519.87 |
@@ -112,7 +112,7 @@ Aşağıdaki tabloda, Visual Studio 2019 için derleme numaraları ve sürüm ta
 
 Aşağıdaki tabloda, Visual Studio 2017 için derleme numaraları ve yayın tarihleri tarihe listeler.
 
-| **Sürüm**| **Kanal** | **Yayın tarihi** | **Derleme sürümü** |
+| **Sürüm**| **Kanalla** | **Yayın tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
 | 15.9.17 | Sürüm | 15 Ekim 2019 | 15.9.28307.905 |
 | 15.9.16 | Sürüm | 10 Eylül 2019 | 15.9.28307.858 |

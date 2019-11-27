@@ -110,7 +110,7 @@ XAML Tasarımcısı, bir *Şekil* tam olarak beklediğiniz şeydir. Örneğin: d
 |-|-|-|-|
 |![](../designers/media/b1-1.png "B1_1")|Birleştirme öncesi iki şekil|![](../designers/media/b1-4.png "B1_4")|Kesiştir|
 |![](../designers/media/b1-2.png "B1_2")|Birleştir|![](../designers/media/b1-5.png "B1_5")|Örtüşmeyi Dışla|
-|![](../designers/media/b1-3.png "B1_3")|Sayısına|![](../designers/media/b1-6.png "B1_6")|Çıkarma|
+|![](../designers/media/b1-3.png "B1_3")|Sayısına|![](../designers/media/b1-6.png "B1_6")|Çıkar|
 
  **Kısa bir video izleyin:** yollarla çalışan ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") [: yolları birleştirin](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 

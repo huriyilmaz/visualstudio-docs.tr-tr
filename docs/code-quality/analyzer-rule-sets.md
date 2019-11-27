@@ -10,16 +10,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d40e88f123f397cfc77fe44757c2f72305390302
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a2cf385aaf24db2172a61ddbe7ecf77dcbe40f3c
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606545"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74537778"
 ---
 # <a name="enable-a-category-of-rules"></a>Kural kategorisini etkinleştirme
 
-Çözümleyici paketleri, güvenlik veya tasarım kuralları gibi bir kural kategorisini etkinleştirmeyi hızlı ve kolay hale getirmek için önceden tanımlanmış [Editorconfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) ve [kural kümesi](using-rule-sets-to-group-code-analysis-rules.md) dosyalarını içerebilir. [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet çözümleyici paketi, her iki kural kümesini (sürüm 2.6.2 Critical 'den başlayarak) ve editorconfig dosyalarını (sürüm 'nın 2.9.5 sürümüyle ' den başlayarak) içerir. Belirli bir kural kategorisini etkinleştirerek, hedeflenen sorunları ve belirli koşulları belirleyebilirsiniz.
+Çözümleyici paketleri, güvenlik veya tasarım kuralları gibi bir kural kategorisini etkinleştirmeyi hızlı ve kolay hale getirmek için önceden tanımlanmış [Editorconfig](use-roslyn-analyzers.md#rule-severity) ve [kural kümesi](using-rule-sets-to-group-code-analysis-rules.md) dosyalarını içerebilir. [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet çözümleyici paketi, her iki kural kümesini (sürüm 2.6.2 Critical 'den başlayarak) ve editorconfig dosyalarını (sürüm 'nın 2.9.5 sürümüyle ' den başlayarak) içerir. Belirli bir kural kategorisini etkinleştirerek, hedeflenen sorunları ve belirli koşulları belirleyebilirsiniz.
 
 > [!NOTE]
 > Visual Studio 2019 sürüm 16,3 ' den başlayarak, çözümleyici kurallarını etkinleştirmek ve bir EditorConfig dosyası kullanarak önem derecesi ayarlamak desteklenir.
@@ -31,7 +31,7 @@ FxCop Çözümleyicisi NuGet paketi aşağıdaki kural kategorileri için önced
 - Tasarlama
 - Belgeler
 - Genelleştirme
-- Birlikte Çalışabilirlik
+- Birlikte çalışabilirlik
 - Bakım
 - Adlandırma
 - Performans
@@ -53,13 +53,13 @@ Bu kural kategorilerinin her biri bir EditorConfig veya kural kümesi dosyasına
 
 ## <a name="predefined-editorconfig-files"></a>Önceden tanımlanmış EditorConfig dosyaları
 
-Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketinin önceden tanımlanmış EditorConfig dosyaları *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \editorconfig dosyasında bulunur* dizin. Örneğin, tüm güvenlik kurallarını etkinleştirmek için EditorConfig dosyası *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \editorconfig\SecurityRulesEnabled \\ konumunda bulunur. editorconfig*.
+Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketinin önceden tanımlanmış EditorConfig dosyaları, *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürüm\>\editorconfig* dizininde bulunur. Örneğin, tüm güvenlik kurallarını etkinleştirmek için EditorConfig dosyası *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<version\>\editorconfig\SecurityRulesEnabled\\. editorconfig*konumunda bulunur.
 
 Seçilen. editorconfig dosyasını projenizin kök dizinine kopyalayın.
 
 ## <a name="predefined-rule-sets"></a>Önceden tanımlanmış kural kümeleri
 
-Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış kural kümesi dosyaları *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \rulesets* konumunda bulunur dizinden. Örneğin, tüm güvenlik kurallarını etkinleştirmek için kural kümesi dosyası *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \Rulesets\securityrulesenabled. RuleSet*konumunda bulunur.
+Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış kural kümesi dosyaları, *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürüm\>\rulesets* dizininde bulunur. Örneğin, tüm güvenlik kurallarını etkinleştirmek için kural kümesi dosyası *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürümü\>\Rulesets\securityrulesenabled.exe*' konumunda bulunur.
 
 Bir veya daha fazla kural kümesini kopyalayın ve Visual Studio projenizi içeren dizine veya doğrudan **Çözüm Gezgini**yapıştırın.
 

@@ -32,7 +32,7 @@ ms.locfileid: "74295950"
 |Kategori|Microsoft.Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  İstisna atılmasını beklemeyen yöntem bir istisna atar.
 
 ## <a name="rule-description"></a>Kural Tanımı
