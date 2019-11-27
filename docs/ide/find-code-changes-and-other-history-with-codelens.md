@@ -120,7 +120,7 @@ Pencerenin alt kısmındaki dosya düzeyi göstergelerinde bir dosyanın tamamı
 
 Bir değişiklik hakkında daha fazla bilgi edinmek için bu öğeye sağ tıklayın. TFVC veya git kullanıyor olmanıza bağlı olarak, dosyanın sürümlerini karşılaştırma, ayrıntıları görüntüleme ve değişiklik kümesini izleme, dosyanın seçili sürümünü edinme ve bu değişikliğin yazarından e-posta ile ilgili seçenekler vardır. Bu ayrıntıların bazıları **Takım Gezgini**görüntülenir.
 
-Ayrıca, kodunuzun zaman içinde kimin tarafından değiştirildiğini de görebilirsiniz. Bu, takımınızın değişiklikleri kalıpları bulmasına ve etkilerini değerlendirmenize yardımcı olabilir.
+Ayrıca, kodunuzun zaman içinde kimin tarafından değiştirildiğini de görebilirsiniz. Bu, takımınızın değişikliklerinde desenleri bulmanıza ve etkilerini değerlendirmenize yardımcı olabilir.
 
 ![CodeLens: grafik olarak kod değişikliği geçmişine bakın](../ide/media/codelens.png)
 
@@ -246,7 +246,7 @@ Göstergeleri seçmek için klavyeyi kullanmak üzere, ilgili sayı tuşlarını
 > [!NOTE]
 > **İncelemeler** göstergesini seçmek için, sol ve sağ ok tuşlarını kullanırken gezinmek için **alt** tuşunu basılı tutun.
 
-## <a name="q--a"></a>Soru - Yanıt
+## <a name="q--a"></a>soru-cevap &
 
 ### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>S: CodeLens 'i kapatmak veya açmak Nasıl yaparım? veya hangi göstergeleri görmek istediğinizi seçin.
 

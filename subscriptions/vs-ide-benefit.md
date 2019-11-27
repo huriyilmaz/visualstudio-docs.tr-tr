@@ -41,7 +41,7 @@ IDE 'yi indirmek için:
    > [!div class="mx-imgBorder"]
    > Visual Studio Enterprise ![özelleştirme](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
 
-10. **Yükle**'ye tıklayın.
+10. **Yükle**'ye tıklatın.
 
 11. Yükleme tamamlandığında, yüklemeyi değiştirme veya Visual Studio 'Yu başlatma seçeneğine sahip olacaksınız.  Başlamak için **Başlat** ' a tıklayın.  Birden çok sürüm yüklüyse, bunlar listelenir.
     > [!div class="mx-imgBorder"]
@@ -66,7 +66,7 @@ IDE 'yi indirmek için:
 | Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Evet          |
 | GitHub Enterprise ile Visual Studio Professional | VL   | Kullanılabilir              |  Evet          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Evet         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  YOK          |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, Imagine, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD).  Dışlar: MCT Software & Hizmetleri.*
 

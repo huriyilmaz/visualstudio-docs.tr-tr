@@ -1,5 +1,5 @@
 ---
-title: Team Explorer başvurusu
+title: Takım Gezgini başvurusu
 ms.date: 12/04/2018
 ms.topic: reference
 ms.author: kaelli
@@ -12,7 +12,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/26/2019
 ms.locfileid: "74538570"
 ---
-# <a name="team-explorer-reference"></a>Team Explorer başvurusu
+# <a name="team-explorer-reference"></a>Takım Gezgini başvurusu
 
 Bu makale, **Takım Gezgini**çeşitli Işlevler hakkında Azure DevOps makalelerine bağlantılar sağlar.
 
@@ -33,25 +33,25 @@ Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işler
 
 | Git ile **ana** sayfa | TFVC ile **ana** sayfa |
 | - | - |
-| ![Visual Studio 2019 Git ile Takım Gezgini giriş sayfası](media/team-explorer-reference/team-explorer-git.png) | ![Visual Studio 'da TFVC ile ana sayfa Takım Gezgini](media/team-explorer-reference/team-explorer-tfvc.png) |
+| ![Visual Studio 'da git ile Takım Gezgini giriş sayfası 2019](media/team-explorer-reference/team-explorer-git.png) | ![Visual Studio 'da TFVC ile ana sayfa Takım Gezgini](media/team-explorer-reference/team-explorer-tfvc.png) |
 
-## <a name="changes-page-git"></a>Değişiklikler sayfası (Git)
+## <a name="changes-page-git"></a>Değişiklikler sayfası (git)
 
 Bkz. [yürütmelerle Iş kaydetme](/azure/devops/repos/git/commits).
 
-## <a name="branches-page-git"></a>Dallar sayfası (Git)
+## <a name="branches-page-git"></a>Dallar sayfası (git)
 
 Bkz. [dallarda Iş oluşturma](/azure/devops/repos/git/branches).
 
-## <a name="pull-requests-page-git"></a>Çekme istekleri sayfasına (Git)
+## <a name="pull-requests-page-git"></a>Çekme Istekleri sayfası (git)
 
 Bkz. [çekme istekleri ile kodu gözden geçirme](/azure/devops/repos/git/pullrequest).
 
-## <a name="sync-page-git"></a>Eşitleme sayfasına (Git)
+## <a name="sync-page-git"></a>Eşitleme sayfası (git)
 
 Bkz. [Fetch ve pull Ile güncelleştirme kodu](/azure/devops/repos/git/pulling).
 
-## <a name="tags-page-git"></a>Etiketler sayfasını (Git)
+## <a name="tags-page-git"></a>Etiketler sayfası (git)
 
 Bkz. [Git etiketleriyle çalışma](/azure/devops/repos/git/git-tags).
 
@@ -63,11 +63,11 @@ Bkz. [askıya alma/sürdürülme](/azure/devops/repos/tfvc/suspend-your-work-man
 
 Bkz. [bekleyen değişiklikleri yönetme](/azure/devops/repos/tfvc/develop-code-manage-pending-changes), [raf kümeleri bulma](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets)ve [çakışmaları çözme](/azure/devops/repos/tfvc/resolve-team-foundation-version-control-conflicts).
 
-## <a name="source-control-explorer-page-tfvc"></a>Kaynak Denetim Gezgini sayfa (TFVC)
+## <a name="source-control-explorer-page-tfvc"></a>Kaynak Denetim Gezgini sayfası (TFVC)
 
 Bkz. [dosya ve klasör ekleme/görüntüleme](/azure/devops/repos/tfvc/add-files-server).
 
-## <a name="work-items-page"></a>İş Öğelerim sayfası
+## <a name="work-items-page"></a>İş öğeleri sayfası
 
 **Iş öğeleri** sayfası, [çalışma öğesi](/azure/devops/boards/work-items/about-work-items) sorgularını görmenizi sağlar. Bkz.
 
@@ -86,7 +86,7 @@ Bkz. [dosya ve klasör ekleme/görüntüleme](/azure/devops/repos/tfvc/add-files
 
 ::: moniker-end
 
-## <a name="builds-page"></a>Yapılar sayfasında
+## <a name="builds-page"></a>Yapılar sayfası
 
 **Yapılar** sayfası, proje için yapı tanımlarını görmenizi sağlar.
 
@@ -98,7 +98,7 @@ Bkz.
 - [Visual Studio için sürekli teslim (CD) araçları 'nı yükler](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#install-continuous-delivery-cd-tools-for-visual-studio-2017)
 - [Uygulamanız için sürekli teslimi (CD) yapılandırma ve yürütme](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#configure-and-execute-continuous-delivery-cd-for-your-app)
 
-## <a name="settings-page"></a>Ayarları sayfası
+## <a name="settings-page"></a>Ayarlar sayfası
 
 **Ayarlar** sayfası, bir proje ya da proje koleksiyonu için yönetim özelliklerini yapılandırmanıza olanak tanır. Aşağıdaki makalelere bakın:
 

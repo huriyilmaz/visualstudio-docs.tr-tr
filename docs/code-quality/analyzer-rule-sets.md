@@ -31,7 +31,7 @@ FxCop Çözümleyicisi NuGet paketi aşağıdaki kural kategorileri için önced
 - Tasarlama
 - Belgeler
 - Genelleştirme
-- Birlikte çalışabilirlik
+- Birlikte Çalışabilirlik
 - Bakım
 - Adlandırma
 - Performans

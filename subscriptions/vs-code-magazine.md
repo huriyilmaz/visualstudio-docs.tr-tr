@@ -54,7 +54,7 @@ Abonelik siparişinizi tamamladıktan sonra, aldığınız sorunları görmek i�
 | GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  Hayır          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Hayır          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Hayır          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | Yok |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | YOK |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, BizSpark, Imagine Premium.  Dışlar: Microsoft İş Ortağı Ağı (MPN), en değerli profesyonel (MVP), bölgesel Müdürü (RD), MCT yazılım & Hizmetleri Geliştirici, MCT yazılım & Hizmetleri, Imagine.*
 

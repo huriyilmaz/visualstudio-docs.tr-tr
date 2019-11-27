@@ -35,20 +35,20 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 7. Yayımcının görünen adını oluşturun.  Bu, müşterilerinizin uygulamalarınız, eklentiler ve hizmetlerinize ilişkin göreceği benzersiz addır.
 8. İletişim bilgilerinizi ve tercih edilen e-posta dilinizi girip **İleri**' ye tıklayın.
 9. Parolanızı doğrulamanız istenebilir.  Girin ve **oturum aç**' a tıklayın.
-10. Kayıt – ödeme sayfasında, daha önce kopyaladığınız kodu promosyon kodu alanına yapıştırın.  Sayfa, *ödeme gerekmediğini*göstermek için güncelleştirilecek.  **İleri**’ye tıklayın.
+10. Kayıt – ödeme sayfasında, daha önce kopyaladığınız kodu promosyon kodu alanına yapıştırın.  Sayfa, *ödeme gerekmediğini*göstermek için güncelleştirilecek.  **İleri**'ye tıklayın.
 11. Hesap bilgilerinizi gözden geçirin, uygulama geliştirici sözleşmesini gözden geçirin ve hüküm ve koşulları kabul edip etmenizin kabul edildiğini göstermek için onay kutusuna tıklayın.  Ardından **son**' a tıklayın.
 12. Windows Geliştirici hesabınızı kullanmaya başlamak için **panoya git** ' e tıklayın!
 
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Evet|
-| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Dahil       |  Evet|
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Evet|
-| GitHub Enterprise ile Visual Studio Professional | VL                                        | Dahil                                                            |Evet|
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                            |  NA|
-| MSDN Platformları (Standart)                                          | VL, perakende                                              |  Yok                                            |  NA|
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Yok                                                           |NA|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Verilen       |  Evet|
+| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Verilen       |  Evet|
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Verilen                                                            |Evet|
+| GitHub Enterprise ile Visual Studio Professional | VL                                        | Verilen                                                            |Evet|
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                            |  Yok|
+| MSDN Platformları (Standart)                                          | VL, perakende                                              |  Yok                                            |  Yok|
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Yok                                                           |Yok|
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıM (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services geliştiricisi. Dışlar: Microsoft İş Ortağı Ağı (MPN), Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD), MCT yazılım & Hizmetleri.*

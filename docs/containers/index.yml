@@ -2,7 +2,7 @@
 title: Visual Studio’da Kapsayıcı Araçları
 metadata:
   title: Docker kapsayıcı geliştirme araçları belgeleri
-  description: 'Oluşturmayı ve kapsayıcı tabanlı uygulamalar ve hizmetler yönetmeyi öğrenin. Belgeler, kod örneği, öğreticiler ve daha fazlasını edinin.'
+  description: 'Kapsayıcı tabanlı uygulama ve hizmetler oluşturmayı ve yönetmeyi öğrenin. Belgeler, kod örneği, öğreticiler ve daha fazlasını edinin.'
   author: ghogen
   manager: jillfra
   ms.prod: visual-studio-windows
@@ -17,7 +17,7 @@ landingContent:
         links:
           - text: Visual Studio 'da kapsayıcı araçları
             url: overview.md
-  - title: başlarken
+  - title: Kullanmaya başlayın
     linkLists:
       - linkListType: quickstart
         links:

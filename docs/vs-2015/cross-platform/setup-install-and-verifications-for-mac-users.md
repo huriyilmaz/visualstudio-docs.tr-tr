@@ -91,7 +91,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
 2. Android Player ile Android Player 'da hata ayıklamayı doğrulamak [> Xamarin Studio belgeleriyle tümleştirme](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio) (Xamarin.com).  
   
-   **iOS**  
+   **Android**  
   
 3. [IOS oluşturma](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) yönergelerini Izleyerek bir iOS projesi oluşturmayı doğrulayın.  
   
@@ -114,7 +114,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
 3. Visual Studio 'dan Mac 'inizde yüklü olan öykünücüsüne bağlanabildiğini doğrulayın.  Bunun sonucunda, Xamarin Player 'ı Visual Studio içinden hata ayıklama için seçebileceğiniz Öykünücüler listesinde görecaksınız.  Bunu yapmak için, [Visual Studio 'yu Xamarin Android Player bağlama](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) yönergelerini izleyin (Xamarin.com).  
   
-   **iOS**  
+   **Android**  
   
 4. Mac 'nizin ağda kullanılabilir olduğundan ve Visual Studio ile eşlenmiş olduğundan, [XMA kullanarak Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com) bölümünde açıklandığı gibi.  
   

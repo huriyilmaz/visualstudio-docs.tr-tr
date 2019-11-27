@@ -40,5 +40,5 @@ Daha önce yapmadıysanız, Visual Studio aboneliğinizden en iyi şekilde yarar
 - [Azure](vs-azure.md)
 - [Azure DevOps](vs-azure-devops.md)
 
-Bu avantajlar ve daha fazlası https://my.visualstudio.com/benefits' de bulunabilir.
+Bu avantajlar ve daha fazlası https://my.visualstudio.com/benefits ' de bulunabilir.
 

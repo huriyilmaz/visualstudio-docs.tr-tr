@@ -62,8 +62,8 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
 |         GitHub Enterprise ile Visual Studio Professional          | VL  |   3 ay    | Evet<sup>2</sup> |
 |              Visual Studio Test Professional (Standart)              |    VL, perakende     |   3 ay    | Evet<sup>2</sup>  |
 |                      MSDN Platformları (Standart)                       |    VL, perakende     |   3 ay    | Evet<sup>2</sup>  |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Yok |       NA       |
-|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Yok |       NA       |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Yok |       Yok       |
+|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Yok |       Yok       |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services Geliştirici, mct Software & Service, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD), Microsoft iş ortağı ağı (MPN), FTE, Imagine.*
