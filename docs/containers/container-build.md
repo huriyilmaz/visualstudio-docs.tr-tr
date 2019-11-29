@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 6b96f23bc7bcd7e6d970025b23f89f572d07daf1
-ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
-ms.translationtype: HT
+ms.openlocfilehash: a2f837ba264a12391786f584cf2698e19250fb2e
+ms.sourcegitcommit: 6336c387388707da94a91060dc3f34d4cfdc0a7b
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74473995"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74549949"
 ---
 # <a name="build-and-debug-containerized-apps-using-visual-studio-or-the-command-line"></a>Visual Studio veya komut satırı kullanarak Kapsayıcılı uygulamalar derleme ve hata ayıklama
 
@@ -60,27 +60,9 @@ ENTRYPOINT ["dotnet", "WebApplication43.dll"]
 
 Son aşama `base`' den yeniden başlar ve yayımlanan çıktıyı son görüntüye kopyalamak için `COPY --from=publish` ekler. Bu işlem, `sdk` görüntüde bulunan tüm derleme araçlarını içermesi gerekmiyorsa nihai görüntünün çok daha küçük olmasını mümkün kılar.
 
-## <a name="faster-builds-for-the-debug-configuration"></a>Hata ayıklama yapılandırması için daha hızlı yapılar
-
-Visual Studio 'nun Kapsayıcılı projelere yönelik yapı sürecinin performansına yardımcı olan birkaç iyileştirmesi vardır. Kapsayıcılı uygulamalar için derleme işlemi, Dockerfile içinde özetlenen adımları takip etmek kadar basit değildir. Kapsayıcıda derleme, yerel makinede oluşturmaktan çok daha yavaştır.  Bu nedenle, **hata ayıklama** yapılandırmasında derleme yaparken, Visual Studio projelerinizi gerçekten yerel makinede oluşturur ve ardından çıkış klasörünü birim bağlama kullanarak kapsayıcınıza paylaşır. Bu iyileştirme etkin olan bir yapıya *hızlı* mod oluşturma denir.
-
-**Hızlı** modda, Visual Studio, Docker 'ın yalnızca `base` aşamasını oluşturmasını söyleyen bir bağımsız değişkenle `docker build` çağırır.  Visual Studio, Dockerfile içeriğiyle ilgili olarak işlemin geri kalanını işler. Bu nedenle, kapsayıcı ortamını özelleştirmek veya ek bağımlılıklar yüklemek gibi Dockerfile 'ı değiştirdiğinizde, değişikliklerinizi ilk aşamada koymanız gerekir.  Dockerfile 'ın `build`, `publish`veya `final` aşamalarına yerleştirilmiş özel adımlar yürütülmez.
-
-Bu performans iyileştirmesi yalnızca **hata ayıklama** yapılandırmasında derleme yaparken oluşur. **Yayın** yapılandırmasında, yapı, Dockerfile içinde belirtildiği gibi kapsayıcıda oluşur.
-
-Dockerfile tarafından belirtildiği gibi performans iyileştirmesini ve derlemeyi devre dışı bırakmak istiyorsanız, proje dosyasında şu şekilde **Containerdevelopmentmode** özelliğini **normal** olarak ayarlayın:
-
-```xml
-<PropertyGroup>
-   <ContainerDevelopmentMode>Regular</ContainerDevelopmentMode>
-</PropertyGroup>
-```
-
-Performans iyileştirmesini geri yüklemek için, özelliği proje dosyasından kaldırın.
-
 ## <a name="building-from-the-command-line"></a>Komut satırından oluşturma
 
-`docker build` veya `MSBuild`, komut satırından oluşturmak için kullanabilirsiniz.
+Visual Studio dışında derlemek istiyorsanız, komut satırından oluşturmak için `docker build` veya `MSBuild` kullanabilirsiniz.
 
 ### <a name="docker-build"></a>Docker derlemesi
 
@@ -100,7 +82,7 @@ Tek Docker kapsayıcı projesi için bir görüntü oluşturmak üzere, MSBuild 
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
 ```
 
-Visual Studio IDE 'den Çözümünüzü oluştururken **Çıkış** penceresinde gördüklerinize benzer bir çıktı görürsünüz. Her zaman `/p:Configuration=Release`kullanın, Visual Studio 'Nun çok aşamalı derleme iyileştirmesini kullandığı durumlarda, **hata ayıklama** yapılandırmasını oluştururken sonuçlar beklendiği gibi olmayabilir.
+Visual Studio IDE 'den Çözümünüzü oluştururken **Çıkış** penceresinde gördüklerinize benzer bir çıktı görürsünüz. Her zaman `/p:Configuration=Release`kullanın, Visual Studio 'Nun çok aşamalı derleme iyileştirmesini kullandığı durumlarda, **hata ayıklama** yapılandırmasını oluştururken sonuçlar beklendiği gibi olmayabilir. Bkz. [hata ayıklama](#debugging).
 
 Docker Compose projesi kullanıyorsanız, görüntüleri derlemek için komutunu kullanın:
 
@@ -110,7 +92,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 
 ## <a name="project-warmup"></a>Proje ısınma
 
-Bunlar, sonraki çalıştırmanın (**F5** veya **CTRL**+**F5**) performansını artırmak amacıyla bir proje için Docker profili seçildiğinde (yani, bir proje yüklendiğinde veya Docker desteği eklendiğinde) gerçekleşen bir adım dizisidir. Bu, **araçlar** > **Seçenekler** > **kapsayıcı araçları**altında yapılandırılabilir. Arka planda çalışan görevler şunlardır:
+*Proje ısınma* , bir proje için Docker profili seçildiğinde (yani bir proje yüklendiğinde veya Docker desteği eklendiğinde) sonraki çalıştırmanın performansını artırmak için (**F5** veya **CTRL**+**F5**) oluşan bir dizi adımdan oluşur. Bu, **araçlar** > **Seçenekler** > **kapsayıcı araçları**altında yapılandırılabilir. Arka planda çalışan görevler şunlardır:
 
 - Docker Desktop ' ın yüklü olduğundan ve çalıştığından emin olun.
 - Docker Desktop ' ın, projeyle aynı işletim sistemine ayarlandığından emin olun.
@@ -162,6 +144,22 @@ Kapsayıcılarda ASP.NET Core uygulamalarla SSL kullanma hakkında daha fazla bi
 
 ## <a name="debugging"></a>Hata Ayıklama
 
+**Hata ayıklama** yapılandırmasında oluştururken, Visual Studio 'nun Kapsayıcılı projelere yönelik yapı sürecinin performansına yardımcı olan birkaç iyileştirmesi vardır. Kapsayıcılı uygulamalar için derleme işlemi, Dockerfile içinde özetlenen adımları takip etmek kadar basit değildir. Kapsayıcıda derleme, yerel makinede oluşturmaktan çok daha yavaştır.  Bu nedenle, **hata ayıklama** yapılandırmasında derleme yaparken, Visual Studio projelerinizi gerçekten yerel makinede oluşturur ve ardından çıkış klasörünü birim bağlama kullanarak kapsayıcınıza paylaşır. Bu iyileştirme etkin olan bir yapıya *hızlı* mod oluşturma denir.
+
+**Hızlı** modda, Visual Studio, Docker 'ın yalnızca `base` aşamasını oluşturmasını söyleyen bir bağımsız değişkenle `docker build` çağırır.  Visual Studio, Dockerfile içeriğiyle ilgili olarak işlemin geri kalanını işler. Bu nedenle, kapsayıcı ortamını özelleştirmek veya ek bağımlılıklar yüklemek gibi Dockerfile 'ı değiştirdiğinizde, değişikliklerinizi ilk aşamada koymanız gerekir.  Dockerfile 'ın `build`, `publish`veya `final` aşamalarına yerleştirilmiş özel adımlar yürütülmez.
+
+Bu performans iyileştirmesi yalnızca **hata ayıklama** yapılandırmasında derleme yaparken oluşur. **Yayın** yapılandırmasında, yapı, Dockerfile içinde belirtildiği gibi kapsayıcıda oluşur.
+
+Dockerfile tarafından belirtildiği gibi performans iyileştirmesini ve derlemeyi devre dışı bırakmak istiyorsanız, proje dosyasında şu şekilde **Containerdevelopmentmode** özelliğini **normal** olarak ayarlayın:
+
+```xml
+<PropertyGroup>
+   <ContainerDevelopmentMode>Regular</ContainerDevelopmentMode>
+</PropertyGroup>
+```
+
+Performans iyileştirmesini geri yüklemek için, özelliği proje dosyasından kaldırın.
+
  Hata ayıklamayı başlattığınızda (**F5**), mümkünse daha önce başlatılmış bir kapsayıcı yeniden kullanılır. Önceki kapsayıcıyı yeniden kullanmak istemiyorsanız, Visual Studio 'Nun yeni bir kapsayıcı kullanmasını zorlamak için Visual Studio 'da **yeniden oluşturma** veya **Temizleme** komutlarını kullanabilirsiniz.
 
 Hata ayıklayıcıyı çalıştırma işlemi proje ve kapsayıcı işletim sisteminin türüne bağlıdır:
@@ -182,9 +180,8 @@ Visual Studio, proje türüne ve kapsayıcı işletim sistemine bağlı olarak �
 |-|-|
 | **Linux kapsayıcıları** | Giriş noktası, kapsayıcının çalışır durumda tutulması için sonsuz bir bekleme olan `tail -f /dev/null`. Uygulama hata ayıklayıcı aracılığıyla başlatıldığında, uygulamayı çalıştırmanın (yani, `dotnet webapp.dll`) sorumlu olan hata ayıklayıcısıdır. Hata ayıklama olmadan başlatılmışsa, araç, uygulamayı çalıştırmak için bir `docker exec -i {containerId} dotnet webapp.dll` çalıştırır.|
 | **Windows kapsayıcıları**| Giriş noktası, hata ayıklayıcıyı çalıştıran `C:\remote_debugger\x64\msvsmon.exe /noauth /anyuser /silent /nostatus` benzer bir şeydir, bu nedenle bağlantıları dinler. Aynı durum, hata ayıklayıcının uygulamayı çalıştırması ve hata ayıklama olmadan başlatıldığında bir `docker exec` komutu için geçerlidir. .NET Framework Web uygulamaları için giriş noktası, `ServiceMonitor`, komuta eklendiği biraz farklıdır.|
-  
-> [!NOTE]
-> Kapsayıcı giriş noktası yalnızca Docker-Compose projelerinde değiştirilebilir, tek Kapsayıcılı projelerde kullanılamaz.
+
+Kapsayıcı giriş noktası yalnızca Docker-Compose projelerinde değiştirilebilir, tek Kapsayıcılı projelerde kullanılamaz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
