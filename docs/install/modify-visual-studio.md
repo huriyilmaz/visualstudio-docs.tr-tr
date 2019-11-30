@@ -1,7 +1,7 @@
 ---
 title: Visual Studio’yu değiştirme
 titleSuffix: ''
-description: Visual Studio, adım adım değiştirme hakkında bilgi edinin.
+description: Visual Studio 'Yu nasıl değiştireceğinizi adım adım öğrenin.
 ms.custom: H1Hack27Feb2017,seodec18
 ms.date: 08/23/2019
 ms.topic: conceptual
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: a97db7e6b81eb9e807902d1b9bd0ea8ee6efa55e
-ms.sourcegitcommit: 0bd63f3bc429ae059b9df6e45c6b8dcae6152940
+ms.openlocfilehash: 628d8fe5d8374d0cb203e6953f63bd63d77d0c58
+ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026486"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74566993"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>İş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme
 
@@ -35,60 +35,70 @@ Visual Studio 'Yu, istediğinizde yalnızca istediğiniz şeyi içerecek şekild
 
 ::: moniker range="vs-2017"
 
-Sadece biz bunu daha da kolaylaştırdık gerçekleştirmek istediğiniz görevleri eşleştirmek için Visual Studio kişiselleştirmek için Ayrıca, Visual Studio, çok özelleştirmek daha kolay hale getirdik. Bunu yapmak için yeni Visual Studio Yükleyicisi'ni başlatın ve istediğiniz değişiklikleri yapın.
+Visual Studio 'yu, gerçekleştirmek istediğiniz görevlerle eşleşecek şekilde kişiselleştirmek için de daha kolay hale getirdik. Ayrıca, Visual Studio 'yu de özelleştirmeyi daha kolay hale getirdik. Bunu yapmak için yeni Visual Studio Yükleyicisi başlatın ve istediğiniz değişiklikleri yapın.
 
 ::: moniker-end
 
-İşte nasıl.
+İşte.
 
 >[!IMPORTANT]
->Yüklemek, güncelleştirmek veya Visual Studio değiştirmek için yönetici izinleri olan bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](../ide/user-permissions-and-visual-studio.md).
+>Visual Studio 'Yu yüklemek, güncelleştirmek ya da değiştirmek için yönetici izinlerine sahip bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](../ide/user-permissions-and-visual-studio.md).
 
 ## <a name="modify-workloads"></a>İş yüklerini değiştirme
 
- [Iş yükleri](https://visualstudio.microsoft.com/vs/visual-studio-workloads/) , kullanmakta olduğunuz programlama dili veya platformu için gereken özellikleri içerir. Bunu yapmak istediğiniz zaman, istediğiniz iş destekler, böylece Visual Studio değiştirmek için iş yüklerini kullanın.
-
->[!NOTE]
-> Aşağıdaki yordamda bir internet bağlantınız olduğunu varsaymaktadır.
->
-> Daha önce oluşturulmuş bir Visual Studio [yüklemesinin](create-an-offline-installation-of-visual-studio.md) nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [Visual Studio 'nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md) sayfası ve [ağ tabanlı Visual Studio için denetim güncelleştirmeleri dağıtımlar](controlling-updates-to-visual-studio-deployments.md) sayfası.
-
 ::: moniker range="vs-2017"
 
-1. Bilgisayarınızda Visual Studio yükleyicisi bulun.
-
-     Örneğin, Windows 10 çalıştıran bir bilgisayarda seçin **Başlat**ve harfi kaydırın **V**, olarak listelenen burada **Visual Studio yükleyicisi**.
-
-     ![Visual Studio yükleyicisi](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio yükleyicisi bulunamıyor")
-
-     >[!TIP]
-     >Bazı bilgisayarlarda, Visual Studio yükleyicisi harfi altında listelenebilir **"M"** olarak **Microsoft Visual Studio yükleyicisi**.<br/><br/> Alternatif olarak, Visual Studio yükleyicisi şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
-
-1. ' A tıklayın veya yükleyiciyi başlatmak için dokunun ve ardından **Değiştir**.
-
-     ![Başlatma veya Visual Studio'yu değiştirme](media/modify-visual-studio.png "değiştirmek, Visual Studio 2017")
-
-     Bekleyen bir güncelleştirme varsa, Değiştir düğmesine içinde farklı bir yerdir. Bu şekilde, Visual Studio, güncelleştirmeden Bunu yapmak seçmelidir değiştirebilirsiniz. Tıklayın **daha fazla**ve ardından **Değiştir**.
-
-     ![Visual Studio'yu değiştirme veya güncelleştirme](media/modify-or-update-visual-studio.png "güncelleştirme veya Visual Studio 2017 değiştirme")
-
-1. Gelen **iş yükleri** ekran seçin veya yüklemek veya kaldırmak istediğiniz iş yüklerini seçimini kaldırın.
-
-    ![Visual Studio 2017 Kurulum iletişim](media/vs2017-modify-workloads.PNG "Visual Studio 2017'de bir iş yükünü seçin")
-
-1. Seçin **Değiştir** yeniden.
-
-1. Yeni iş yükleri ve bileşenler yüklendikten sonra seçin **başlatma**.
+ [Iş yükleri](https://visualstudio.microsoft.com/vs/support/selecting-workloads-visual-studio-2017/) , kullanmakta olduğunuz programlama dili veya platformu için gereken özellikleri içerir. İş yüklerini kullanarak Visual Studio 'Yu, yapmak istediğiniz çalışmayı, yapmak istediğiniz işi destekleyecek şekilde değiştirin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Bilgisayarınızda Visual Studio yükleyicisi bulun.
+ İş yükleri, kullanmakta olduğunuz programlama dili veya platformu için gereken özellikleri içerir. İş yüklerini kullanarak Visual Studio 'Yu, yapmak istediğiniz çalışmayı, yapmak istediğiniz işi destekleyecek şekilde değiştirin.
 
-     Örneğin, Windows 10 çalıştıran bir bilgisayarda seçin **Başlat**ve harfi kaydırın **V**, olarak listelenen burada **Visual Studio yükleyicisi**.
+::: moniker-end
 
-     ![Visual Studio yükleyicisi Windows 'Tan açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio yükleyicisi açın")
+>[!NOTE]
+> Aşağıdaki yordamda bir internet bağlantınız olduğunu varsaymaktadır.
+>
+> Daha önce oluşturulmuş bir Visual Studio [yüklemesinin](create-an-offline-installation-of-visual-studio.md) nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [Visual Studio 'nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md) sayfası ve [ağ tabanlı Visual Studio dağıtımları için güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
+
+::: moniker range="vs-2017"
+
+1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
+
+     Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+
+     ![Visual Studio Yükleyicisi](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio yükleyicisini bulun")
+
+     >[!TIP]
+     >Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi**olarak **"d"** harfi altında listelenmiş olabilir.<br/><br/> Alternatif olarak, Visual Studio Yükleyicisi şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+
+1. Yükleyiciyi başlatmak için tıklayın veya dokunun ve ardından **Değiştir**' i seçin.
+
+     ![Visual Studio 'Yu başlatma veya değiştirme](media/modify-visual-studio.png "Visual Studio 2017 'yi değiştirme")
+
+     Bekleyen bir güncelleştirmeniz varsa Değiştir düğmesi farklı bir yerdir. Bu şekilde, Visual Studio 'Yu güncelleştirme olmadan değiştirebilirsiniz, bunu yapmanız gerekir. **Daha fazla**' ya tıklayın ve ardından **Değiştir**' i seçin.
+
+     ![Visual Studio 'Yu güncelleştirme veya değiştirme](media/modify-or-update-visual-studio.png "Visual Studio 2017 'yi güncelleştirme veya değiştirme")
+
+1. **Iş yükleri** ekranından, yüklemek veya kaldırmak istediğiniz iş yüklerini seçin veya seçimini kaldırın.
+
+    ![Visual Studio 2017 kurulum Iletişim kutusu](media/vs2017-modify-workloads.PNG "Visual Studio 2017 'de iş yükü seçme")
+
+1. Yeniden **Değiştir** ' i seçin.
+
+1. Yeni iş yükleri ve bileşenler yüklendikten sonra **Başlat**' ı seçin.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
+
+     Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+
+     ![Visual Studio Yükleyicisi Windows 'tan açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisi açın")
 
      > [!NOTE]
      > Aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
@@ -99,7 +109,7 @@ Sadece biz bunu daha da kolaylaştırdık gerçekleştirmek istediğiniz görevl
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü bulun ve ardından **Değiştir**' i seçin.
 
-     ![Visual Studio 'Yu güncelleştirme veya değiştirme](media/vs-2019/vs-installer-modify.png "Visual Studio 2019 'Yi güncelleştirme veya değiştirme")
+     ![Visual Studio 'Yu güncelleştirme veya değiştirme](media/vs-2019/vs-installer-modify.png "Visual Studio 2019 'yi güncelleştirme veya değiştirme")
 
 1. **Iş yükleri** sekmesinde, yüklemek veya kaldırmak istediğiniz iş yüklerini seçin veya seçimini kaldırın.
 
@@ -117,18 +127,17 @@ Sadece biz bunu daha da kolaylaştırdık gerçekleştirmek istediğiniz görevl
 
 ::: moniker-end
 
-## <a name="modify-individual-components"></a>Tek tek bileşenler değiştirme
+## <a name="modify-individual-components"></a>Ayrı bileşenleri Değiştir
 
-Visual Studio yüklemenizi özelleştirmek için [iş yüklerini](https://visualstudio.microsoft.com/vs/visual-studio-workloads/) yüklemek istemiyorsanız, Visual Studio yükleyicisi **bireysel bileşenler** sekmesini seçin, istediğiniz öğeleri seçin ve ardından istemleri izleyin.
+Visual Studio yüklemenizi özelleştirmek için iş yüklerini yüklemek istemiyorsanız, Visual Studio Yükleyicisi **bireysel bileşenler** sekmesini seçin, istediğiniz öğeleri seçin ve ardından istemleri izleyin.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio iş yükleri hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)
 * [Visual Studio iş yükünün & bileşen kimliklerinin listesi](workload-and-component-ids.md)
 * [Visual Studio’yu güncelleştirme](update-visual-studio.md)
 * [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
 * [Bakım temeliyle Visual Studio 'Yu güncelleştirme](update-servicing-baseline.md)
-* [Ağ tabanlı Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
+* [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
 * [Visual Studio'yu kaldırma](uninstall-visual-studio.md)
