@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 824b928c9f89b98f9026059b824fce84969bf69a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 69b4f38ae43bacd5324b30a3970047b39c32fe99
+ms.sourcegitcommit: 669fc9e397476d7a1d2cda5999710d415f7d6e4f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189107"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74688855"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio 'da C/C++ için birim testleri yazma
 
@@ -79,7 +79,7 @@ Test kodunuzun test edilecek projedeki işlevlere erişmesini sağlamak için, t
 
 ### <a name="link-to-object-or-library-files"></a>Nesne veya kitaplık dosyalarına bağlantı
 
-Test kodu test etmek istediğiniz işlevleri dışa aktarmazsa, output. obj veya. lib dosyalarını test projesinin bağımlılıklarına ekleyebilirsiniz. [Testleri nesne veya kitaplık dosyalarına bağlamak için](how-to-use-microsoft-test-framework-for-cpp.md)bkz.
+Test kodu test etmek istediğiniz işlevleri dışa aktarmazsa, output. obj veya. lib dosyalarını test projesinin bağımlılıklarına ekleyebilirsiniz. [Testleri nesne veya kitaplık dosyalarına bağlamak için](/visualstudio/test/how-to-use-microsoft-test-framework-for-cpp#same_project)bkz.
 
 ### <a name="add-include-directives-for-header-files"></a>Üst bilgi dosyaları için #include yönergeleri ekleme
 
@@ -87,20 +87,20 @@ Ardından, birim testi *. cpp* dosyanızda, test etmek istediğiniz türleri ve 
 
 ![İçerme yönergeleri ekleme](media/cpp-add-includes-test-project.png)
 
-Kaynak dosyadaki her bir Include deyimindeki tam yolu yazmak zorunda kalmamak için, **Proje** > **Özellikler** > **C/C++**  > **genel** > **Ek ekleme ' ye gerekli klasörleri ekleyebilirsiniz Dizinler**.
+Kaynak dosyadaki her bir Include deyimindeki tam yolu yazmak zorunda kalmamak için, > **Özellikler** > **C++ C/**  > **genel** > **ek içerme dizinleri** **' ne** gerekli klasörleri ekleyebilirsiniz.
 
 ### <a name="write-test-methods"></a>Yazma testi yöntemleri
 
 > [!NOTE]
 > Bu bölümde, C/C++Için Microsoft birim testi çerçevesi sözdizimi gösterilmektedir. Burada belgelenmiştir: [Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). Google Test belgeler için bkz. [Google test öncü](https://github.com/google/googletest/blob/master/googletest/docs/primer.md). Boost. test için bkz. [Boost test Kitaplığı: birim test çerçevesi](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html).
 
-Test projenizdeki *. cpp* dosyası, test kodunun nasıl yazılacağını gösteren bir örnek olarak, sizin için tanımlanan bir saplama sınıfına ve yöntemine sahiptir. İmzaların TEST_CLASS ve TEST_METHOD makrolarını kullandığına dikkat edin. Bu, yöntemleri **Test Gezgini** penceresinden bulunabilir hale getirir.
+Test projenizdeki *. cpp* dosyası, test kodunun nasıl yazılacağını gösteren bir örnek olarak, sizin için tanımlanan bir saplama sınıfına ve yöntemine sahiptir. İmzaların, yöntemleri **Test Gezgini** penceresinden bulunabilir hale getirmek için TEST_CLASS ve TEST_METHOD makrolarını kullandığına dikkat edin.
 
 ![İçerme yönergeleri ekleme](media/cpp-write-test-methods.png)
 
 TEST_CLASS ve TEST_METHOD, [Microsoft yerel test çerçevesinin](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)bir parçasıdır. **Test Gezgini** , diğer desteklenen çerçeveler içindeki test yöntemlerini benzer bir şekilde bulur.
 
-Bir TEST_METHOD, void döndürür. Bir test sonucu oluşturmak için, gerçek sonuçları beklenerek test etmek üzere `Assert` sınıfındaki statik yöntemleri kullanın. Aşağıdaki örnekte, `MyClass` `std::string`alan bir oluşturucuya sahip olduğunu varsayalım. Oluşturucunun sınıfı şu şekilde beklendiği gibi başlattığında, test edebilirsiniz:
+TEST_METHOD void döndürür. Bir test sonucu oluşturmak için, gerçek sonuçları beklenerek test etmek üzere `Assert` sınıfındaki statik yöntemleri kullanın. Aşağıdaki örnekte, `MyClass` `std::string`alan bir oluşturucuya sahip olduğunu varsayalım. Oluşturucunun sınıfı şu şekilde beklendiği gibi başlattığında, test edebilirsiniz:
 
 ```cpp
 TEST_METHOD(TestClassInit)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Komut satırından sembol dosyası konumlarını belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: komut satırından sembol dosyası konumlarını belirtme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa067bb-e8bf-4081-aff0-cfbcf65934a0
@@ -8,55 +8,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa265a3b7ebde80f7398f0c5972d5265533890f0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5e35c21306d2e90cdf55d3d18972fd21c702b300
+ms.sourcegitcommit: 669fc9e397476d7a1d2cda5999710d415f7d6e4f
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433466"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74688847"
 ---
-# <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Nasıl yapılır: Komut satırından sembol dosyası konumlarını belirtme
-İşlev adları ve satır numaraları gibi sembol bilgilerini görüntülemek için VSPerfReport komut satırı aracı sembol erişim gerektirir (. *pdb*) profili oluşturulan bileşenleri ve Windows sistem dosyalarını dosya. Bir bileşen derlendiğinde sembol dosyaları oluşturulur. Daha fazla bilgi için [VSPerfReport](../profiling/vsperfreport.md). VSPerfReport sembol dosyaları için aşağıdaki konumlar otomatik olarak arar:
+# <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Nasıl yapılır: komut satırından sembol dosyası konumlarını belirtme
+İşlev adları ve satır numaraları gibi simge bilgilerini göstermek için, VSPerfReport komut satırı aracının simgeye erişimi olması gerekir (. *pdb*) profili oluşturulmuş bileşenlerin ve Windows sistem dosyalarının dosyalarını. Sembol dosyaları bir bileşen derlendiğinde oluşturulur. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md). VSPerfReport sembol dosyaları için aşağıdaki konumları otomatik olarak arar:
 
-- Belirtilen yollar **/symbolpath** seçeneği veya **_NT_SYMBOL_PATH** ortam değişkeni.
+- **/SymbolPath** seçeneğinde veya **_NT_SYMBOL_PATH** ortam değişkeninde belirtilen yollar.
 
-- Burada bir bileşen derlenen tam yerel yolu.
+- Bir bileşenin derlendiği tam yerel yol.
 
-- Profil oluşturma verilerini içeren dizine (. *Vsp* veya. *vsps*) dosyası.
+- Profil oluşturma verilerini içeren dizin (. *VSP* veya. *vsps*) dosyasýný.
 
-  Microsoft sağlar. *pdb* çok ürünlerin, çevrimiçi bir sembol sunucusunda dosyaları. Raporlama için kullanmakta olduğunuz bilgisayarın Internet'e bağlıysa, VSPerfReport otomatik olarak sembol bilgilerini arama ve dosyalarını yerel depoya kaydetmek için çevrimiçi bir sembol sunucusuna bağlanır.
+  Microsoft, sağlar. bir sembol sunucusunda, ürünlerinin birçoğu için *pdb* dosyaları. Raporlama için kullandığınız bilgisayar Internet 'e bağlıysa, VSPerfReport sembol bilgilerini otomatik olarak aramak ve dosyaları yerel bir depoya kaydetmek için çevrimiçi sembol sunucusuna bağlanır.
 
-  Sembol dosyaları ve Microsoft sembol sunucusunun depolama konumu aşağıdaki yöntemlerle belirtebilirsiniz:
+  Sembol dosyalarının ve Microsoft sembol sunucusu deposunun konumunu aşağıdaki yollarla belirtebilirsiniz:
 
-- Ayarlama **_NT_SYMBOL_PATH** ortam değişkeni.
+- **_NT_SYMBOL_PATH** ortam değişkenini ayarlayın.
 
-- Ekleme **/symbolpath** VSPerfReport komut satırı seçeneği.
+- VSPerfReport komut satırına **/SymbolPath** seçeneğini ekleyin.
 
-  Bu yöntemlerin her ikisi de kullanabilirsiniz.
+  Bu yöntemlerin her ikisini de kullanabilirsiniz.
 
 > [!NOTE]
-> Varsa [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Windows simge dosyaları büyük olasılıkla belirtilmedi için zaten bir konuma yerel bilgisayarda yüklü. Daha fazla bilgi için [nasıl yapılır: Windows sembol bilgilerini başvuru](../profiling/how-to-reference-windows-symbol-information.md). Hala VSPerfReport konumu ve bu konunun ilerleyen bölümlerinde açıklandığı sunucusu kullanmak için yapılandırmanız gerekir.
+> Yerel bilgisayarda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklüyse, büyük olasılıkla Windows sembol dosyaları için bir konum belirtilmiş olmalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md). Yine de bu konunun ilerleyen kısımlarında açıklandığı gibi, konum ve sunucuyu kullanmak için VSPerfReport 'ı yapılandırmanız gerekir.
 
-## <a name="specify-windows-symbol-files"></a>Windows sembol dosyalarını belirtin
+## <a name="specify-windows-symbol-files"></a>Windows sembol dosyalarını belirt
 
 #### <a name="to-configure-the-use-of-the-windows-symbol-server"></a>Windows sembol sunucusu kullanımını yapılandırmak için
 
-1. Gerekirse, sembol dosyaları yerel olarak depolamak için bir dizin oluşturun.
+1. Gerekirse, sembol dosyalarını yerel olarak depolamak için bir dizin oluşturun.
 
-2. Ayarlamak için aşağıdaki sözdizimini kullanın **_NT_SYMBOL_PATH** ortam değişkeni veya VSPerfReport/symbolpath seçeneği:
+2. **_NT_SYMBOL_PATH** ortam değişkenini veya VSPerfReport/SymbolPath seçeneğini ayarlamak için aşağıdaki sözdizimini kullanın:
 
-    **SRV\\** * *LocalStore* **\*http://msdl.microsoft.com/downloads/symbols**
+    **srv\\** * *localstore* **\*http://msdl.microsoft.com/download/symbols**
 
-    Burada *LocalStore* oluşturduğunuz yerel bir dizin yolu.
+    Burada *LocalStore* , oluşturduğunuz yerel dizinin yoludur.
 
-## <a name="specify-component-symbol-files"></a>Bileşen sembol dosyaları belirtin
- Profil oluşturma araçları arar. *pdb* bileşenler veya profil oluşturma veri dosyasını içeren klasöre depolanan özgün konumlarına profilinde istediğiniz bileşenlerin dosyaları. Bir veya daha fazla yol ekleyerek aramak için diğer konumlar belirtebilirsiniz **_NT_SYMBOL_PATH** veya **/symbolpath** seçeneği. Ayrı yollarının noktalı virgülle ayırın.
+## <a name="specify-component-symbol-files"></a>Bileşen sembol dosyalarını belirt
+ Profil Oluşturma Araçları arar. içinde veya profil oluşturma veri dosyasını içeren klasörde depolanan özgün konumlarında profil uygulamak istediğiniz bileşenlerin *pdb* dosyaları. **_NT_SYMBOL_PATH** veya **/SymbolPath** seçeneğine bir veya daha fazla yol ekleyerek arama yapmak için başka konumlar belirleyebilirsiniz. Yolları noktalı virgülle ayırın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki komut satırı kümeleri **_NT_SYMBOL_PATH** ortam değişkenini Windows sembol sunucusu ve yerel dizine **C:\Symbols**.
+ Aşağıdaki komut satırı, **_NT_SYMBOL_PATH** ortam değişkenini Windows sembol sunucusuna ve yerel dizini **c:\symbols**olarak ayarlar.
 
- **set  _NT_SYMBOL_PATH=srv\*C:\symbols\*http://msdl.microsoft.com/downloads/symbols**
+ **_NT_SYMBOL_PATH = SRV\*C:\symbols\*ayarlama http://msdl.microsoft.com/download/symbols**
 
- VSPerfReport komut satırını ekler *C:\Projects\Symbols* dizin kullanılarak arama yoluna **/symbolpath** seçeneği.
+ Aşağıdaki VSPerfReport komut satırı, **/SymbolPath** seçeneğini kullanarak *c:\projelersymbols* dizinini arama yoluna ekler.
 
- **VSPerfReport**  *MyApp* **.exe /SymbolPath:C:\Projects\Symbols /summary:all**
+ **VSPerfReport**  *MyApp* **. exe/SymbolPath: c:\projelerteksymbols/Summary: ALL**
