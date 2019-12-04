@@ -36,7 +36,7 @@
           href: container-tools-configure.md
     - name: Kavramlar
       items:
-        - name: Kapsayıcılı uygulamalar oluşturma
+        - name: Visual Studio’nun kapsayıcılı uygulama oluşturma şekli
           href: container-build.md
     - name: Sorun giderme
       href: troubleshooting-docker-errors.md

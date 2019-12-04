@@ -6,19 +6,20 @@ ms.assetid: b9fcb9c3-7903-478c-9b7c-dbd94092fcba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8087f620f457f1e88ee6dc9ffff90f5c8747e50d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 06de982643a08e1af88073dde0fb0a9abc029900
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62552820"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779460"
 ---
 # <a name="crosssession"></a>CrossSession
-*VSPerfCmd.exe* **CrossSession** seçeneği herhangi bir konsol oturumundan verileri toplamak profil oluşturucu sağlar. **CrossSession** seçeneği kullanılmalıdır **Başlat** seçeneği.
+*VSPerfCmd. exe* **CrossSession** seçeneği, profil oluşturucunun herhangi bir konsol oturumundan veri toplamasını sağlar. **CrossSession** seçeneği **Start** seçeneğiyle birlikte kullanılmalıdır.
 
- Kısaltması kullanabileceğiniz **CS** yerine **CrossSession**.
+ **CrossSession**yerine **CS** kısaltması kullanabilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,17 +30,17 @@ VSPerfCmd.exe /Start:Method /CrossSession [Options]
 #### <a name="parameters"></a>Parametreler
  Yok.
 
-## <a name="valid-options"></a>Geçerli seçenekler şunlardır:
- Başka bir oturumda oluşturmayı etkinleştirmek için **CrossSession** seçeneği belirtilmelidir **Başlat** seçeneği. **CrossSession** de birinde belirtilmelidir sonraki **VSPerfCmd ekleme** ve **ayırma** komutları.
+## <a name="valid-options"></a>Geçerli seçenekler
+ Başka bir oturumda profil oluşturmayı etkinleştirmek için, **CrossSession** seçeneğinin **Start** seçeneğiyle belirtilmesi gerekir. **CrossSession** , sonraki **VSPerfCmd Attach** ve **Detach** komutlarında de belirtilmelidir.
 
- **Başlat:** `Method` **Başlat** seçeneği belirtilen profil oluşturma metodu için profil oluşturucuyu başlatır.
+ **Başlat:** **Başlat** seçeneği `Method` profil oluşturucuyu belirtilen profil oluşturma yöntemine başlatır.
 
- **Ekleme:** _PID_[**,**_PID_] belirtilen işlemler için profil oluşturma başlar.
+ **Attach:** _PID_[ **,** _pid_] belirtilen işlemlerin profilini oluşturmaya başlıyor.
 
- **Ayırma**[**:**_PID_[,_PID_]] belirtilen işlemler profil oluşturmayı durdurur.
+ **Detach**[ **:** _PID_[,_pid_]] belirtilen işlemlerin profilini oluşturmayı durduruyor.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, **CrossSession** seçeneği, başka bir konsol oturumu başlatılmasından bir uygulamaya eklemek için kullanılır.
+ Bu örnekte, **CrossSession** seçeneği, başka bir konsol oturumunda başlatılan bir uygulamaya eklemek için kullanılır.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /CrossSession
@@ -48,6 +49,6 @@ VSPerfCmd.exe /Attach:12345 /CS
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Bağımsız uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil hizmetler](../profiling/command-line-profiling-of-services.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)
