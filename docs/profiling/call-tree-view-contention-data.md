@@ -1,5 +1,5 @@
 ---
-title: Çağrı ağacı görünümü - çakışma verileri | Microsoft Docs
+title: Çağrı ağacı görünümü-çekişme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,54 +8,55 @@ ms.assetid: 9bd4bde2-2ca3-446c-9ccc-7421522e03ae
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 969945260ee453e84ae2aeec0f28559ca11933a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e91e231f72b006d2020c8b4d5d96c7e24fa1dd9c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777017"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779785"
 ---
-# <a name="call-tree-view---contention-data"></a>Çağrı ağacı görünümü - çakışma verileri
-Çağrı ağacı görünümü, profili oluşturulan uygulamada geçiş işlev yürütme yollarını görüntüler. Ağacının kökü, uygulama veya bileşen giriş noktasıdır. Her işlev düğümü adlı tüm İşlevler, işlev engellendi sayısı ve diğer iş parçacıkları veya işlemlerdeki sahip bir kaynak için contending çünkü işlevi engellenen süreyi listeler.
+# <a name="call-tree-view---contention-data"></a>Çağrı ağacı görünümü-çakışma verileri
+Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri, işlevin engellenme sayısını ve diğer iş parçacıkları veya süreçlerine sahip bir kaynak için devam ettiğinden işlevin engellendiğini belirten süreyi listeler.
 
- Çağrı ağacı görünümü çağrı ağacında üst işlev tarafından çağrılan işlev örnekleri için değerler. Yüzde değerleri, profil oluşturma çalıştırmasını çakışması toplam sayısı işlev örneği değerine karşılaştırılmasıyla hesaplanır.
+ Çağrı ağacı görünümündeki değerler, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerine yöneliktir. Yüzde değerleri, işlev örneği değeri, profil oluşturma çalıştırmasında toplam çekişmeler sayısıyla karşılaştırılarak hesaplanır.
 
-## <a name="highlight-the-execution-hot-path"></a>Yürütme etkin yolu vurgulayın
- Çağrı ağacı görünümü genişletebilir ve işlem ya da çoğu Çekişme oluşturulan işlev yürütme yolunu vurgulayın.
+## <a name="highlight-the-execution-hot-path"></a>Yürütme etkin yolunu Vurgula
+ Çağrı ağacı görünümü, en fazla çekişmeleri oluşturan işlemin veya işlevin yürütme yolunu genişletebilir ve vurgulayabilir.
 
-- En etkin yol görüntülemek için işlem ya da işlev sağ tıklayın ve ardından **etkin yolu Genişlet**.
+- En etkin yolu göstermek için, işlem veya işleve sağ tıklayın ve ardından **etkin yolu genişlet**' e tıklayın.
 
-## <a name="set-the-call-tree-root-node"></a>Çağrı ağacı kök düğüm kümesi
- Profil oluşturma çalıştırmasını her işlem, bir kök düğüm olarak görünür. Çağrı ağacı görünümü başlangıç düğümünün ayarlamak için başlangıç düğümü olarak ayarlayın ve ardından istediğiniz düğümü **kümesi kök**.
+## <a name="set-the-call-tree-root-node"></a>Çağrı ağacı kök düğümünü ayarla
+ Profil oluşturma çalıştırmasında her işlem kök düğüm olarak görünür. Çağrı ağacı görünümünün başlangıç düğümünü ayarlamak için, başlangıç düğümü olarak ayarlamak istediğiniz düğüme sağ tıklayın ve ardından **kökü ayarla**' ya tıklayın.
 
- Kök düğümü ayarladığınızda, Seçili düğüme alt ağacı dışında görünümünden diğer tüm girişleri kaldırın. Kök düğümü özgün düğüme geri sıfırlamak için çağrı ağacı Görünümü'nde sağ tıklayın ve ardından **sıfırlama kök**.
+ Kök düğümü ayarladığınızda, seçtiğiniz düğümün alt ağacı hariç diğer tüm girişleri görünümden ortadan kaldırabilirsiniz. Kök düğümü özgün düğüme geri sıfırlamak için çağrı ağacı görünümüne sağ tıklayın ve ardından **kökü Sıfırla**' ya tıklayın.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı engellenme süresi**|Bu yürütme yolunu Bu işlevde örneklerini profil oluşturma çalışmasında çalıştırılması engellenen zaman. Süresi alt işlevlerin işlev tarafından çağrılmış engellenme süresi içermez.|
-|**Dışlamalı engellenme süresi yüzdesi**|Dışlamalı engellenme süresi için bu yürütme yolunu Bu işlevde, profil oluşturma çalışması içindeki tüm engellenme süresinin yüzdesi.|
-|**Dışlamalı Çekişmeler**|Bu yürütme yolunu Bu işlevde örneklerinde oluştu çekişmelerin sayısı. Sayı, alt işlevlerin işlev tarafından çağırılan Çekişme içermez.|
-|**Dışlamalı Çekişme yüzdesi**|Dışlamalı Çekişme çağrı ağacında üst işlev tarafından çağrılan örnekleri bu işlevin olan tüm profil oluşturma çalıştırmasını çakışması yüzdesi.|
+|**Dışlamalı engellenme süresi**|Bu yürütme yolundaki bu işlevin örneklerinin, profil oluşturma çalıştırmasında yürütülmesi engellenmiş olduğu zaman. Süre, işlev tarafından çağrılan alt işlevlerin engellenme süresini içermez.|
+|**Dışlamalı engellenme süresi yüzdesi**|Bu yürütme yolundaki bu işlev için özel olarak engellenme süresi olan profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
+|**Dışlamalı çekişmeler**|Bu işlevin bu yürütme yolundaki örneklerinde gerçekleşen çekişmeler sayısı. Bu sayı, işlev tarafından çağrılan alt işlevlerin çekişmelerini içermez.|
+|**Dışlamalı çekişmeler yüzdesi**|Bu işlevin çağrı ağacındaki üst işlev tarafından çağrılan örneklerinin Dışlamalar olan, profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
 |**İşlev adresi**|İşlevin adresi.|
-|**İşlev adı**|İşlev tam adı.|
-|**Kapsamlı engellenme süresi**|Bu yürütme yolunu Bu işlevde örneklerini profil oluşturma çalışmasında çalıştırılması engellenen toplam zaman. İşlev tarafından çağrılan alt işlevlerin engellenme süresi geçen süreyi de içerir.|
-|**Kapsamlı engellenme süresi yüzdesi**|Profil çalıştıran tüm engellenme süresinin yüzdesi bu yürütme yolunu Bu işlevde örnekleri için kapsamlı engellenme süresi oldu.|
-|**Kapsamlı Çekişmeler**|Bu yürütme yolunu Bu işlevde örneklerini engellenen çekişmelerin toplam sayısı. Sayı, alt işlevlerin işlev tarafından çağırılan Çekişme içerir.|
-|**Kapsamlı Çekişme yüzdesi**|Profil çalıştıran tüm çekişmelerin yüzdesi bu yürütme yolunu bu işlevdeki örneklerin kapsamlı çekişmeler yoktu.|
-|**Düzey**|İşlev çağrısı ağacında düzeyi. Yalnızca VSReport komut satırı raporlarda. Daha fazla bilgi için bkz [VSPerfReport](../profiling/vsperfreport.md).|
-|**İşlevin satır numarası**|Satır numarası kaynak dosyada bu işlevin başlangıcı.|
-|**Modül adı**|İşlevi içeren modül adı.|
-|**Modül yolu**|İşlevi içeren modül yolu.|
-|**İşlem kimliği**|İşlem, profil oluşturma çalışması Kimliğine (PID).|
+|**İşlev adı**|İşlevin tam adı.|
+|**Kapsamlı engellenme süresi**|Bu yürütme yolundaki bu işlevin örneklerinin profil oluşturma çalıştırmasında yürütülmesi engellenmiş toplam süre. Süre, işlev tarafından çağrılan alt işlevlerin engellenme süresini içerir.|
+|**Kapsamlı engellenme süresi%**|Bu yürütme yolundaki bu işlevin örnekleri için kapsamlı engellenme süresi olan profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
+|**Kapsamlı çekişmeler**|Bu yürütme yolundaki bu işlevin örneklerinin engellediği toplam çekişmeler sayısı. Bu sayı, işlev tarafından çağrılan alt işlevlerin çekişmelerini içerir.|
+|**Kapsamlı çekişmeler yüzdesi**|Bu yürütme yolundaki bu işlevin örneklerinin dahil olduğu, profil oluşturma çalıştırmasının tüm çekişmelerinin yüzdesi.|
+|**Düzeyde**|Çağrı ağacındaki işlevin düzeyi. Yalnızca VSReport komut satırı raporlarında. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**Modül adı**|İşlevi içeren modülün adı.|
+|**Modül yolu**|İşlevi içeren modülün yolu.|
+|**İşlem KIMLIĞI**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|İşlemin adı.|
-|**Kaynak dosyası**|Bu işlevin tanımını içeren kaynak dosya.|
+|**Kaynak dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
 - [Çağrı ağacı görünümü](../profiling/call-tree-view.md)
-- [Çağrı ağacı görünümü - izleme](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
-- [Çağrı ağacı görünümü - örnekleme](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
+- [Çağrı ağacı görünümü-izleme](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
+- [Çağrı ağacı görünümü-örnekleme](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
 - [Çağrı ağacı görünümü](../profiling/call-tree-view-instrumentation-data.md)
 - [Çağrı ağacı görünümü](../profiling/call-tree-view-sampling-data.md)

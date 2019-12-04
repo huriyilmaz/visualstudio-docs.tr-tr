@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Başlatma için ikili dosya belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: başlatılacak Ikiliyi belirtme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,32 +11,33 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a03bf203e5078bdbdf6327ec7bda186613a25c03
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fd3379b9769cfd6bfe1335b12545e635a9bde782
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996137"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778693"
 ---
-# <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: Başlatma için ikili dosya belirtme
+# <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: başlatılacak ikiliyi belirtme
 
-İçin profil ikili dosyaları, DLL'ler gibi bilgileri girmeniz gerekir  **\<hedef > özellik sayfaları** iletişim kutusu. Bu bilgiler, DLL projesi çağıran uygulama nereden gösterir.
+Dll 'Ler gibi ikili dosyaların profilini almak için, **\<hedef > Özellik sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgi, DLL projesinin çağıran uygulamayı bulabileceği yeri gösterir.
 
-1. İçinde **performans Gezgini**ikili hedef sağ tıklayın ve ardından **özellikleri**.
+1. **Performans Gezgini**, hedef ikiliye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. İçinde **özellik sayfaları** iletişim kutusu, tıklayın **başlatma** özellikleri.
+2. **Özellik sayfaları** iletişim kutusunda, **başlatma** özellikleri ' ne tıklayın.
 
-3. Seçin **proje özelliklerini geçersiz kılma** onay kutusu.
+3. **Proje özelliklerini geçersiz kıl** onay kutusunu seçin.
 
-4. İçinde **başlatılacak yürütülebilir** metin kutusunda, dosya konumunu belirtin.
+4. **Başlatılacak yürütülebilir** metin kutusunda dosya konumunu belirtin.
 
-5. İçinde **bağımsız değişkenleri** metin kutusunda, uygulamayı başlatmak için gerekli bağımsız değişkenleri belirtin.
+5. **Bağımsız değişkenler** metin kutusunda, uygulamayı başlatmak için gereken bağımsız değişkenleri belirtin.
 
-6. İçinde **çalışma dizini** metin kutusunda, dizin konumunu belirtin.
+6. **Çalışma dizini** metin kutusunda dizin konumunu belirtin.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

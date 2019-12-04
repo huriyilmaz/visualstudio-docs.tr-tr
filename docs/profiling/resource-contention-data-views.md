@@ -9,64 +9,65 @@ ms.assetid: be79ec41-f1dd-4984-993f-5c2962355a32
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b284a53d930fc7882b9a2a9a3bde8d5334ea13ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e30589a7c58a756a981ed8a690afe4b052aeaf0b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62798441"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771536"
 ---
 # <a name="resource-contention-data-views"></a>Kaynak Çakışması Veri Görünümleri
-Bu bölüm, görünümleri ve raporları iş parçacığı Çekişme profil oluşturma verisi içeren bir profil oluşturucu veri dosyalarının yönelik başvuru bilgileri içerir.
+Bu bölüm, iş parçacığı çakışması profil oluşturma verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
-- [Özet görünümü - çakışma verileri Profiler](../profiling/resource-contention-data-views.md)
+- [Özet Görünümü-Profil Oluşturucu çekişme verileri](../profiling/resource-contention-data-views.md)
 
- Profil oluşturma verilerinin grafik bir zaman çizelgesi görüntüler ve en engelleme olayları katılmış kaynakları ve işlevleri listeler.
+ Profil oluşturma verilerinin grafik zaman çizelgesini görüntüler ve en fazla engelleme olayına katılmış olan işlevleri ve kaynakları listeler.
 
 - [Çağrı Ağacı Görünümü](../profiling/call-tree-view-contention-data.md)
 
- Kaynak Çekişme verisi işlevleri çalıştırmak profil oluşturma ve yürütme yollarını temsil eden bir hiyerarşik ağaç görüntüler.
+ Profil oluşturma çalıştırmasında çalıştırılan işlevlerin yürütme yollarını ve kaynak çekişme verilerini temsil eden hiyerarşik bir ağaç görüntüler.
 
 - [Modüller Görünümü](../profiling/modules-view-contention-data.md)
 
- İş parçacığı ve kaynak Çekişme verisi modülü tarafından düzenler ve İşlevler, kaynak kod satırlarına ve engelleme olayları oluştuğunda yürütülen yönergeleri listeler.
+ İş parçacığı ve kaynak çekişmesini modüle göre düzenler ve olayları engelleme sırasında yürütülen işlevleri, kaynak kodu satırlarını ve yönergeleri listeler.
 
-- [Arayan / Aranan görünümü - çakışma verileri](../profiling/caller-callee-view-contention-data.md)
+- [Arayan/çağrılan görünümü-çekişme verileri](../profiling/caller-callee-view-contention-data.md)
 
- Seçili işleve ve çağrılır ve seçili işlev tarafından çağrılmış işlevler için iş parçacığı ve kaynak çekişmesi veriler listelenir.
+ Seçili işlev için iş parçacığı ve kaynak çekişmesini ve seçilen işlev tarafından çağrılan ve çağrılan işlevleri listeler.
 
 - [Kaynak Ayrıntıları Görünümü](../profiling/resource-details-view-contention-data.md)
 
- Çekişmeli kaynakların engelleme olayları grafik bir zaman çizelgesi görüntüler ve engelleme olaylar için çağrı yığınını listeler.
+ Her bir contenstack kaynağı için engelleme olaylarının grafik zaman çizelgesini görüntüler ve engelleme olayları için çağrı yığınını listeler.
 
 - [İş Parçacığı Ayrıntıları Görünümü](../profiling/thread-details-view-contention-data.md)
 
- Her iş parçacığı engelleme olayları grafik bir zaman çizelgesi görüntüler ve engelleme olaylar için çağrı yığınını listeler.
+ Her iş parçacığı için engelleme olaylarının grafik zaman çizelgesini görüntüler ve engelleme olayları için çağrı yığınını listeler.
 
 - [İşlevler Görünümü](../profiling/functions-view-contention-data.md)
 
- İş parçacığı ve kaynak Çekişme verisi işlevi tarafından listeler.
+ İşleve göre iş parçacığı ve kaynak çekişme verilerini listeler.
 
 - [Kaynak Çekişmeleri Görünümü](../profiling/resource-contentions-view-contention-data.md)
 
- Kaynak Çekişme verisi tarafından engellenen kaynak listeler.
+ Engellenen kaynağa göre kaynak çakışması verilerini listeler.
 
 - [Satırlar Görünümü](../profiling/lines-view-contention-data.md)
 
- Kaynak Çekişme verisi kaynak kod satırı tarafından listeler.
+ Kaynak kodu satırına göre kaynak çakışması verilerini listeler.
 
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-contention-data.md)
 
- Kaynak çakışması yönerge listeler.
+ Yönergeyle kaynak çekişmesini listeler.
 
 - [İşlem Görünümü](../profiling/process-view-contention-data.md)
 
- İşlem ve iş parçacığı tarafından kaynak çekişmesini listeler.
+ İşleme ve iş parçacığına göre kaynak çekişmesini listeler.
 
 ## <a name="reference"></a>Başvuru
 - [İşlev Ayrıntıları Görünümü](../profiling/function-details-view.md)
 
- Seçili işleve çağrılır ve seçili işlev tarafından çağrılmış işlevler arasındaki ilişkinin bir grafik görüntüler.
+ Seçilen işlev ve seçilen işlev tarafından çağrılan ve çağrılan işlevler arasındaki ilişkinin grafik grafiğini görüntüler.

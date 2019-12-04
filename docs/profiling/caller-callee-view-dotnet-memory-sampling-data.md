@@ -1,5 +1,5 @@
 ---
-title: Arayan-Aranan görünümü - .NET bellek örnekleme verileri | Microsoft Docs
+title: Arayan-Aranan görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,49 +8,50 @@ ms.assetid: 36f5b4de-5686-4f40-9e72-f4aee27d833c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f3e07510f38c18f7d8e4a52d788935400b5a9388
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 50e278e858ea086c83b29ef4eebf6b48ee8e477e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62776750"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773315"
 ---
-# <a name="callercallee-view---net-memory-sampling-data"></a>Arayan/Aranan görünümü - .NET bellek örnekleme verileri
-Arayan/Aranan görünümü seçili işlev ve üst ve alt işlevleri için profil oluşturma verilerini .NET bellek görüntüler. Arayan/Aranan görünümü üç Kılavuzlar içerir.
+# <a name="callercallee-view---net-memory-sampling-data"></a>Arayan/Aranan görünümü-.NET Bellek Örnekleme verileri
+Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için .NET bellek profili oluşturma verilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
 
- **Geçerli işlev** Orta kılavuzda görüntülenir ve bellek profili oluşturma seçili işlev hakkında bilgi gösterir. İşlev çağrıları tüm örneklenen değerlerini içerir.
+ **Geçerli işlev** ortadaki kılavuzda görüntülenir ve seçili işlevle ilgili bellek profili oluşturma bilgilerini gösterir. Değerler, işleve tüm örneklenmiş çağrıları içerir.
 
- **Geçerli işlevi çağırmış işlevler** üst kılavuz görüntülenir ve çağıran (üst) işlevi'öğesinden gelen çağrılar tarafından oluşturulmuş seçili (geçerli) işlevinin değeri miktarını gösterir.
+ **Geçerli işlevi çağıran işlevler** üst kılavuzda görüntülenir ve çağıran (üst) işlevden çağrılar tarafından oluşturulan seçili (geçerli) işlevin değerinin miktarını gösterir.
 
- **Geçerli işlev tarafından çağrılan işlevler** alt kılavuz görüntülenir ve bellek alt işlevi geçerli işlev tarafından çağrıldığında çağrılan (alt) işlevlerini seçili işlev için profil oluşturma gösterilmektedir.
+ **Geçerli işlev tarafından çağrılan işlevler** alt kılavuzda görüntülenir ve alt işlev geçerli işlev tarafından çağrıldığında seçili işlevin aranan (alt) işlevlerine yönelik bellek profili oluşturma verilerini gösterir.
 
- Geçerli işlev satır yapmak için bir çağıran ya da çağrılan işlev satır çift tıklayın.
+ Bu satırı geçerli işlev haline getirmek için bir arayan veya çağrılan işlev satırına çift tıklayın.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**İşlem kimliği**|İşlem, profil oluşturma çalışması Kimliğine (PID).|
+|**İşlem KIMLIĞI**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|İşlemin adı.|
-|**Modül adı**|İşlevi içeren modül adı.|
-|**Modül yolu**|İşlevi içeren modül yolu.|
-|**Kaynak dosyası**|Bu işlevin tanımını içeren kaynak dosya.|
-|**İşlev adı**|İşlev tam adı.|
-|**İşlevin satır numarası**|Satır numarası kaynak dosyada bu işlevin başlangıcı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
+|**Modül yolu**|İşlevi içeren modülün yolu.|
+|**Kaynak dosya**|Bu işlevin tanımını içeren kaynak dosya.|
+|**İşlev adı**|İşlevin tam adı.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**İşlev adresi**|İşlevin adresi.|
-|**Tür**|İşlevin bağlamı:<br /><br /> **0** -geçerli işlevi<br /><br /> **1** -geçerli işlevi çağıran bir işlev<br /><br /> **2** -geçerli işlev tarafından çağrılan bir işlev<br /><br /> Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlar.|
-|**Düzey**|İşlev çağrısı ağacında derinliği. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlar.|
-|**Kapsamlı ayırmalar**|-Geçerli işlev için profil oluşturma işlevi tarafından ayrılan nesnelerin sayısını çalıştırın. Bu sayı, çağrılan işlevlerde oluşturulan nesneleri içerir.<br />-Çağıran işlev için bu işleve çağrılar tarafından oluşturulan kapsamlı ayırmalar geçerli işlevin sayısı.<br />-Çağrılan işlev için geçerli işlev tarafından çağrılan örnekleri bu işlev tarafından ayrılan nesne sayısı. Çağrılan işlev tarafından çağrılan işlevler tarafından yapılan ayırmaları içerir.|
-|**Kapsamlı ayırma yüzdesi**|, Profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi, bu işlevin kapsamlı ayırmalar yoktu.|
-|**Dışlamalı ayırmalar**|-Geçerli işlev, işlev işlev gövdesinin kod yürütülürken, oluşturulan nesne sayısı için (diğer bir deyişle, ne işlev çağrı yığınının en üstünde zaman). Sayı, işlev tarafından çağrılan işlevler oluşturulan nesneleri içermez.<br />-Çağıran işlev için geçerli işlevin bu işlevin çağrılarından tarafından oluşturulan özel ayırmaların sayısı.<br />-Çağrılan işlev için geçerli işlev tarafından çağrılan örneklerini bu işlev tarafından oluşturulan nesne sayısı. Sayı çağrılan işlev tarafından çağrılan işlevler tarafından oluşturulmuş nesneleri içermez.|
-|**Dışlamalı ayırma yüzdesi**|, Profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi, bu işlevin kapsamlı ayırmalar yoktu.|
-|**Kapsamlı bayt**|-Geçerli işlev için profil oluşturma çalışması işlev tarafından ayrılan bellek bayt sayısı. Sayı ayrılan bellek bu işlev tarafından çağrılan işlevler içerir.<br />-Çağıran işlevin için oluşturulmuş geçerli işlevin kapsamlı bayt sayısı tarafından çağıran işlevi çağırır.<br />-Çağrılan işlev için çağrılarından geçerli işlev tarafından oluşturulan bu işlev örnekleri tarafından ayrılan bayt sayısı. Çağrılan işlev tarafından çağrılan işlevler tarafından ayrılan bayt sayısını içerir.|
-|**Kapsamlı bayt yüzdesi**|, Profil oluşturma çalışmasında ayrılan tüm bellek bayt yüzdesi, bu işlevin kapsamlı ayırmalar yoktu.|
-|**Dışlamalı bayt**|-Geçerli işlev için profil oluşturma çalışması işlev tarafından ayrılan bellek bayt sayısı. Geçerli işlev tarafından çağrılan işlevler tarafından ayrılan bellek bu sayının içermez.<br />-Çağıran işlev için geçerli işlevi çağıran işleve çağrılar tarafından oluşturulan özel bayt sayısı.<br />-Çağrılan işlev için çağrılarından geçerli işlev tarafından oluşturulan işlev örnekleri tarafından ayrılan bayt sayısı. Çağrılan işlev tarafından çağrılan işlevler tarafından ayrılan bayt sayısı dahil değildir.|
-|**Dışlamalı bayt yüzdesi**|, Profil oluşturma çalışmasında ayrılan tüm bellek bayt yüzdesi, bu işlevin dışlamalı ayırmalar yoktu.|
+|**Türüyle**|İşlevin bağlamı:<br /><br /> **0** -geçerli işlev<br /><br /> **1** -geçerli işlevi çağıran bir işlev<br /><br /> **2** -geçerli işlev tarafından çağrılan bir işlev<br /><br /> Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
+|**Düzeyde**|Çağrı ağacındaki işlevin derinliği. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
+|**Kapsamlı ayırmalar**|-Geçerli işlev için, profil oluşturma çalıştırmasında işlev tarafından ayrılan nesne sayısı. Bu sayı, çağrılan işlevlerde oluşturulan nesneleri içerir.<br />-Bir çağıran işlevi için, bu işlevden çağrılar tarafından oluşturulan geçerli işlevin dahil olduğu ayırmaların sayısı.<br />-Bir çağrılan işlev için, bu işlevin geçerli işlev tarafından çağrılan örnekleri tarafından ayrılan nesne sayısı. Bu sayı, çağrılan işlev tarafından çağrılan işlevler tarafından yapılan ayırmaları içerir.|
+|**Kapsamlı ayırmalar%**|Bu işlevin kapsamlı ayırmaları olan profil oluşturma çalıştırmasında oluşturulan tüm nesnelerin yüzdesi.|
+|**Dışlamalı ayırmalar**|-Geçerli işlev için, işlev, işlev gövdesinin kodunu yürütürken oluşturulan nesne sayısı (yani, işlev çağrı yığınının en üstünde olduğunda). Bu sayı, işlev tarafından çağrılan işlevlerde oluşturulmuş nesneleri içermez.<br />-Bir çağıran işlevi için, bu işlevden çağrılar tarafından oluşturulan geçerli işlevin dışlamalı ayırmaların sayısı.<br />-Bir çağrılan işlev için, bu işlevin geçerli işlev tarafından çağrılan örnekleri tarafından oluşturulan nesne sayısı. Numara, çağrılan işlev tarafından çağrılan işlevler tarafından oluşturulan nesneleri içermez.|
+|**Dışlamalı ayırmalar%**|Bu işlevin kapsamlı ayırmaları olan profil oluşturma çalıştırmasında oluşturulan tüm nesnelerin yüzdesi.|
+|**Kapsamlı baytlar**|-Geçerli işlev için, profil oluşturma çalıştırmasında işlev tarafından ayrılan bellek bayt sayısı. Bu sayı, bu işlev tarafından çağrılan işlevlerde ayrılan belleği içerir.<br />-Çağıran işlevi için, çağıran işlevi tarafından yapılan çağrılardan oluşturulan geçerli işlevin dahil bayt sayısı.<br />-Bir çağrılan işlev için, bu işlevin, geçerli işlevden çağrılar tarafından oluşturulan örnekleri tarafından ayrılan bayt sayısı. Bu sayı, çağrılan işlev tarafından çağrılan işlevler tarafından ayrılan baytları içerir.|
+|**Dahil edilen baytlar%**|Bu işlevin kapsamlı ayırmaları olan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
+|**Dışlamalı baytlar**|-Geçerli işlev için, profil oluşturma çalıştırmasında işlev tarafından ayrılan bellek bayt sayısı. Bu sayı, geçerli işlev tarafından çağrılan işlevler tarafından ayrılan belleği içermez.<br />-Çağıran işlevi için, çağıran işlevden çağrılar tarafından oluşturulan geçerli işlevin özel bayt sayısı.<br />-Bir çağrılan işlev için, geçerli işlevden çağrılar tarafından oluşturulan işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, çağrılan işlev tarafından çağrılan işlevler tarafından ayrılan baytları içermez.|
+|**Dışlamalı bayt yüzdesi**|Bu işlevin özel ayırmaları olan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
-- [Arayan/Aranan görünümü - .NET bellek izleme verileri](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
-- [Arayan/Aranan görünümü - örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
-- [Arayan/Aranan görünümü - izleme verileri](../profiling/caller-callee-view-instrumentation-data.md)
+- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Arayan/Aranan görünümü-.NET bellek izleme verileri](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+- [Çağıran/çağrılan görünümü-örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
+- [Arayan/çağrılan görünümü-izleme verileri](../profiling/caller-callee-view-instrumentation-data.md)

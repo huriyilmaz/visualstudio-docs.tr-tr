@@ -1,5 +1,5 @@
 ---
-title: Örnekleme kullanarak performans istatistikleri toplama | Microsoft Docs
+title: Örnekleme kullanarak performans Istatistiklerini toplama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,42 +8,43 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 97644776f4197e2f3286d29cbd3f746f7ecd0b15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cbe03f52b31664c59cb7e59d448db7c6b96b6487
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62809658"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772884"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>Örnekleme kullanarak performans istatistikleri toplama
 
-Varsayılan olarak, Visual Studio profil oluşturma araçları örnekleme profil bilgilerini her 10.000.000 işlemci döngülerinin (yaklaşık olarak her bir yüzde değerini saniyenin 1 GHz bilgisayarda) toplar. Örnekleme yöntemi çoğu performans araştırmalar başlangıç için önerilen yöntem ve işlemci kullanım sorunları bulmak için kullanışlıdır.
+Varsayılan olarak, Visual Studio Profil Oluşturma Araçları örnekleme yöntemi, profil oluşturma bilgilerini her 10.000.000 işlemci döngüsünde (yaklaşık 1 GHz bilgisayar üzerinde bir saniyenin her biri) toplar. Örnekleme yöntemi, işlemci kullanımı sorunlarını bulmak için yararlıdır ve performans araştırmaları 'nın en iyi şekilde başlatılması için önerilen yöntemdir.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'deki Gelişmiş güvenlik özellikleri Visual Studio profil oluşturucu bu platformlarda veri toplayan bir şekilde önemli değişiklikler gerekmiştir. UWP uygulamaları, ayrıca yeni toplama teknikleri gerektirir. Bkz: [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
-Örnekleme yöntemi, aşağıdaki yordamlardan birini kullanarak belirtebilirsiniz:
+Aşağıdaki yordamlardan birini kullanarak örnekleme yöntemini belirtebilirsiniz:
 
-- Profil Oluşturma Sihirbazı'nın ilk sayfasında, tıklayın **CPU örnekleme (önerilir)**.
-- Üzerinde **performans Gezgini** araç penceresindeki **yöntemi** listesinde **örnekleme**.
-- Üzerinde **genel** sayfası için performans oturumu Özellikleri iletişim kutusu tıklayın **örnekleme**.
+- Profil oluşturma sihirbazının ilk sayfasında **CPU örnekleme (önerilen)** seçeneğine tıklayın.
+- **Performans Gezgini** araç çubuğunda, **Yöntem** listesinde **örnekleme**' ye tıklayın.
+- Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında **örnekleme**' ye tıklayın.
 
 ## <a name="common-tasks"></a>Ortak görevler
 
-Ek seçenekler belirtebilirsiniz _performans oturumu_**özellik sayfaları** performans oturumunun iletişim kutusu. Bu iletişim kutusunu açmak için:
+Performans oturumunun _performans oturumu_**Özellik sayfaları** iletişim kutusunda ek seçenekleri belirtebilirsiniz. Bu iletişim kutusunu açmak için:
 
-- İçinde **performans Gezgini**performans oturumu adına sağ tıklayın ve ardından **özellikleri**.
+- **Performans Gezgini**, performans oturumu adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-  Aşağıdaki tabloda görevler belirleyebilirsiniz seçenekleri açıklanmıştır _performans oturumu_**özellik sayfaları** iletişim kutusuna örnekleme yöntemiyle profili.
+  Aşağıdaki tabloda yer alan görevler, örnekleme yöntemini kullanarak profil oluştururken _performans oturumu_**Özellik sayfaları** iletişim kutusunda belirtebileceğiniz seçenekleri anlatmaktadır.
 
-|Görev|İlgili içerik|
+|Görev|İlgili Içerik|
 |----------|---------------------|
-|Üzerinde **genel** sayfasında .NET bellek ayırma ve yaşam süresi verilerini toplama ekleyin ve oluşturulan profil oluşturma veri (.vsp) dosyasının adlandırma ayrıntılarını belirtin.|- [.NET bellek ayırma ve yaşam süresi verilerini toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Nasıl Yapılır: Performans Veri Dosyası Adlandırma Seçeneklerini Ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|
-|Üzerinde **örnekleme** sayfasında, örnekleme hızını değiştirmek, örnekleme olay işlemci saat döngülerini başka bir işlemci performans sayacı değiştirme veya her ikisini de değiştirin...|- [Nasıl Yapılır: Örnekleme Olaylarını Seçme](../profiling/how-to-choose-sampling-events.md)|
-|Üzerinde **başlatma** sayfasında, uygulamayı başlatmak için başlangıç sipariş kod çözümünüzde birden fazla .exe projeler varsa belirtin.|- [Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)|
-|Üzerinde **katman etkileşim** sayfasında, theprofiling çalıştırın toplanan veriler ADO.NET çağrı bilgilerini ekleyin.|- [Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)|
-|Üzerinde **Windows olayları** sayfasında, bir veya daha fazla olay izleme için Windows (ETW) olayları, örnekleme verileri toplama belirtin.|- [Nasıl Yapılır: Windows İçin Olay İzleme (ETW) Verileri Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
-|Üzerinde **Windows sayaçları** sayfasında işaretleri olarak profil oluşturma verilerini eklemek için bir veya daha fazla işletim sistemi performans sayaçları belirtin.|- [Nasıl Yapılır: Windows Sayaç Verileri Toplama](../profiling/how-to-collect-windows-counter-data.md)|
-|Üzerinde **Gelişmiş** sayfasında, uygulama modüllerinizi birden çok sürümü kullanırsanız profili .NET Framework çalışma zamanının sürümünü belirtin. Varsayılan olarak yüklenen ilk sürüm profil oluşturulan.|- [Nasıl Yapılır: .NET Framework Çalışma Zamanını Belirtme](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|**Genel** sayfasında, .net bellek ayırma ve yaşam süresi veri toplamayı ekleyin ve oluşturulan profil oluşturma verileri (. vsp) dosyası için adlandırma ayrıntılarını belirtin.|[.net bellek ayırma ve yaşam süresi verilerini toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md) - <br />- [nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|
+|**Örnekleme** sayfasında, örnekleme oranını değiştirin, örnekleme olayını işlemci saati döngülerinden başka bir işlemci performans sayacından değiştirin veya her ikisini de değiştirin.|- [nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md)|
+|**Başlatma** sayfasında, kod çözümünüzde birden fazla. exe projeniz varsa, başlatılacak uygulamayı ve başlangıç sırasını belirtin.|[katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md) - |
+|**Katman etkileşimi** sayfasında, profil oluşturma çalıştırmasında toplanan verilere ADO.NET çağrı bilgilerini ekleyin.|[katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md) - |
+|**Windows olayları** sayfasında, örnekleme verileriyle toplanacak bir veya daha fazla Windows Için olay Izleme (ETW) olayları belirtin.|- [nasıl yapılır: Windows Için olay izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
+|**Windows sayaçları** sayfasında, profil oluşturma verilerine işaret eklemek için bir veya daha fazla işletim sistemi performans sayacı belirtin.|- [nasıl yapılır: Windows sayaç verilerini toplama](../profiling/how-to-collect-windows-counter-data.md)|
+|**Gelişmiş** sayfasında, uygulama modülleriniz birden çok sürüm kullanıyorsa, profil için .NET Framework çalışma zamanının sürümünü belirtin. Varsayılan olarak, yüklenen ilk sürüm profili oluşturulur.|- [nasıl yapılır: .NET Framework çalışma zamanını belirtme](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

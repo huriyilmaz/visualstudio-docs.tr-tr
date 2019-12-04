@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme | Microsoft Docs'
+title: 'Nasıl yapılır: rapor görünümü sütunlarını özelleştirme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: cb6f6d30-52a5-4d92-ab07-1d5ddb67884c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e5fd58603e287de31fab35375e9441f9113fb025
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973935"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778979"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme
-Visual Studio Team System geliştirme sürümü Performans araçları tümleşik geliştirme ortamına (IDE) kesintisiz bir kullanıcı deneyimi sağlamak için tam olarak tümleşiktir. Aşağıdaki listede ekleme, kaldırma ve sütunları yeniden düzenleme özelleştirilmiş görünümleri etmektedir:
+# <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: rapor görünümü sütunlarını özelleştirme
+Visual Studio Team System Development Edition 'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için tümleşik geliştirme ortamı (IDE) ile tamamen tümleşiktir. Aşağıdaki liste sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümlerin temsilcisidir:
 
 - [Modüller Görünümü](../profiling/modules-view.md)
 
@@ -47,7 +48,7 @@ Visual Studio Team System geliştirme sürümü Performans araçları tümleşik
 
 1. Rapor görünümünü açın.
 
-2. Rapor görünümü yüzeyine sağ tıklayın ve ardından **sütunları Ekle/Kaldır**.
+2. Rapor görünümü yüzeyine sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.
 
      **Sütunları Ekle/Kaldır** iletişim kutusu görüntülenir.
 
@@ -55,4 +56,4 @@ Visual Studio Team System geliştirme sürümü Performans araçları tümleşik
 
 4. Sütunları yeniden sıralamak için ok düğmesine tıklayın.
 
-5. **Tamam**'ı tıklatın.
+5. **Tamam**'a tıklayın.

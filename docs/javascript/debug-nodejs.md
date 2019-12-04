@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0405488f6f456f22711498e81789881ffc5a0a8a
-ms.sourcegitcommit: 308a2bdbea81df78bffc3a01afce4ab13131fabc
+ms.openlocfilehash: 95693261cebf26bb740861795f7faf5c56503daf
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913005"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777939"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio 'da JavaScript veya TypeScript uygulamasında hata ayıklama
 
@@ -33,7 +33,7 @@ Visual Studio kullanarak JavaScript ve TypeScript kodunda hata ayıklaması yapa
 
     Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-1. Uygulamanızı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama  >  hata**ayıklamayı Başlat**).
+1. Uygulamanızı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama > hata **ayıklamayı Başlat**).
 
     Hata ayıklayıcı ayarladığınız kesme noktasında duraklatılır (geçerli ifade sarı olarak işaretlenir). Artık, şu anda kapsamda olan değişkenlerin üzerine giderek, **Yereller** ve **izleme** pencereleri gibi hata ayıklayıcı pencereleri kullanarak uygulamanızın durumunu inceleyebilirsiniz.
 
@@ -111,7 +111,7 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
     Belirli kodu bir transpiled dosyasında bulmak için **Ctrl**+**F** (**düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
 
-    İstemci tarafı kod için, TypeScript dosyasındaki veya JSX dosyasındaki bir kesme noktasına isabet etmek için genellikle [kaynak haritaları](#generate_source_maps)kullanılması gerekir. Visual Studio 'da hata ayıklamayı desteklemek için bir kaynak eşlemesinin doğru şekilde yapılandırılması gerekir.
+    İstemci tarafı kod için, bir TypeScript dosyasında bir kesme noktasına isabet etmek üzere *. Vue*veya JSX dosyası genellikle [kaynak eşlemelerinin](#generate_source_maps)kullanılmasını gerektirir. Visual Studio 'da hata ayıklamayı desteklemek için bir kaynak eşlemesinin doğru şekilde yapılandırılması gerekir.
 
 2. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin, ardından uygulamayı tarayıcıda çalıştırmak için **Ctrl**+**F5** tuşuna**basın (hata ayıklama > ** **başlatın**).
 
@@ -121,15 +121,14 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
     Uygulama yeni bir tarayıcı sekmesinde açılır.
 
-3. **Işleme eklemek** >  **Hata Ayıkla** ' yı seçin.
+3. **Işleme eklemek** > **Hata Ayıkla** ' yı seçin.
 
     > [!TIP]
     > Visual Studio 2017 ' den başlayarak, bu adımları izleyerek işleme ilk kez iliştirdikten sonra, **işlem için yeniden iliştir** > **Hata Ayıkla** ' yı seçerek aynı işleme hızlıca tekrar iliştirebilirsiniz.
 
 4. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
-
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de, **Ekle** alanına hedef tarayıcınız, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge-ucmıum)** için doğru hata ayıklayıcıyı seçin, filtre kutusuna **grafik** Arama sonuçları.
+    Visual Studio 2019 ' de, arama sonuçlarını filtrelemek için hedef tarayıcınız, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge-ku)** için doğru hata ayıklayıcıyı seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Visual Studio 2017 ' de, **Ekle** alanına **WebKit Code** ' u seçin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** yazın.
@@ -268,7 +267,7 @@ Ancak, Razor söz dizimi (cshtml, vbhtml) ile oluşturulan dosyalarda otomatik o
    Chrome için, **YourPageName > Çözüm Gezgini > betik belgelerini**ziyaret edin.
 
     > [!NOTE]
-    > Chrome kullanırken, **\<script > etiketleri arasında kullanılabilir kaynak bulunmadığını**bir ileti alabilirsiniz. Bu Tamam, hata ayıklamaya devam et.
+    > Chrome kullanırken, **\<betiği > etiketleri arasında kaynak bulunmadığını**bir ileti alabilirsiniz. Bu Tamam, hata ayıklamaya devam et.
 
    ::: moniker range=">=vs-2019"
    Microsoft Edge (Kmıum) için Chrome ile aynı yordamı kullanın.

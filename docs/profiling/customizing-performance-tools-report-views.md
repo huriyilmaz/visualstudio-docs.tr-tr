@@ -1,5 +1,5 @@
 ---
-title: Araçlar rapor görünümlerini özelleştirme performans | Microsoft Docs
+title: Performans araçları rapor görünümlerini özelleştirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,28 +9,29 @@ ms.assetid: 5224ac52-0fc2-4269-8eb2-ead7fda3afd4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: de8eb3b0e56351e9da0af799db40a29721df5df6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9479c0dc2af592271bc7f21db1cec0c71cc7e71d
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62552833"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777770"
 ---
 # <a name="customize-performance-tools-report-views"></a>Performans araçları rapor görünümlerini özelleştirme
-Bu bölüm ile oluşturulan raporları nasıl özelleştireceğiniz kapsar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma araçları.
+Bu bölümde, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları ile oluşturulan raporların nasıl özelleştirileceği ele alınmaktadır.
 
 ## <a name="common-tasks"></a>Ortak görevler
 
-|Görev|İlgili içerik|
+|Görev|İlgili Içerik|
 |----------|---------------------|
-|**Ekleme, kaldırma ve bir rapor görünümü'nde sütunlara göre sıralama:** Tablo tabanlı görünümlerde görüntülenmesini istediğiniz sütunları belirtebilirsiniz ve sütunların görüntüleneceği sırayı belirtebilirsiniz. Rapor tablosu satırlarını sütun değerlerine göre sıralayabilirsiniz.|-   [Nasıl Yapılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)|
-|**Rapor'den küçük işlevleri kaldırın:** Raporlardan belirtilen bir eşik değerinden daha küçük olan işlevleri çıkarabilirsiniz.|-   [Nasıl Yapılır: Rapor görünümlerinde gürültü azaltmayı yapılandırma](../profiling/how-to-configure-noise-reduction-in-report-views.md)|
-|**Rapor Görünümü'nde tarihi filtre**: Profil oluşturma çalıştırmasını zaman parçası için bir raporda görüntülenen verileri sınırlayabilirsiniz. Özet görünümü zaman çizelgesi grafikte zaman diliminin belirtebilir veya rapor Görünümü Filtresi tanımladığınız sorgu zaman diliminin belirtebilirsiniz. Ayrıca, raporları, kod dosyalarında tanımlanan işlevleri göstermek için filtre uygulayabilirsiniz.|-   [Rapor görünümlerini filtreleme](../profiling/filtering-report-views.md)<br />-   [Nasıl Yapılır: Özet zaman çizelgesinden rapor görünümlerini filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)<br />-   [Nasıl Yapılır: Yalnızca benim kodumu görüntülemek için profil oluşturma araçları rapor görünümlerini filtreleme](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)<br />-   [Performans Raporu Görünüm Filtresi](../profiling/performance-report-view-filter.md)|
+|**Bir rapor görünümünde sütunları ekleme, kaldırma ve sıralama ölçütü:** Tablo tabanlı görünümlerde görüntülenmesini istediğiniz sütunları belirtebilir ve sütunların görüneceği sırayı belirtebilirsiniz... Ayrıca, rapor tablosunun satırlarını sütun değerlerine göre sıralayabilirsiniz.|-   [nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)|
+|**Rapordan küçük Işlevleri ortadan kaldırın:** Raporlardan belirtilen eşikten daha küçük olan işlevleri ortadan kaldırabilirsiniz.|-   [nasıl yapılır: rapor görünümlerinde gürültü azaltmanızı yapılandırma](../profiling/how-to-configure-noise-reduction-in-report-views.md)|
+|**Bir rapor görünümündeki tarihi filtreleyin**: bir raporda görüntülenen verileri profil oluşturma çalıştırmasının zaman dilimine göre sınırlayabilirsiniz. Özet görünümünün zaman çizelgesi grafiğinde bir zaman dilimi belirtebilir veya zaman kesimini rapor görünümü filtresinde tanımladığınız bir sorguda belirtebilirsiniz. Raporları yalnızca kod dosyalarınızda tanımlanan işlevleri gösterecek şekilde de filtreleyebilirsiniz.|-   [filtresi rapor görünümleri](../profiling/filtering-report-views.md)<br />-   [nasıl yapılır: Özet zaman çizelgesinden Rapor Görünümlerini Filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)<br />-   [nasıl yapılır: profil oluşturma araçları rapor görünümlerini yalnızca kendi kodumu görüntüleyecek şekilde filtreleme](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)<br />-   [Performans raporu görünüm filtresi](../profiling/performance-report-view-filter.md)|
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Performans raporu görünümleri](../profiling/performance-report-views.md) profil oluşturma verilerini analiz etmek için kullanabileceğiniz görünümler açıklanmaktadır.
+- [Performans raporu görünümleri](../profiling/performance-report-views.md) Profil oluşturma verilerini çözümlemek için kullanabileceğiniz görünümleri açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)

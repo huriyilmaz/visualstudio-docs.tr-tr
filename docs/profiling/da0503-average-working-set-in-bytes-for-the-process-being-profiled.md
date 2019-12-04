@@ -10,24 +10,25 @@ ms.assetid: 9047a494-eaaf-4679-b422-c64e8bde77a4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f2f349c4ca2172ac2be6c22f3fe999ca0a3cff0
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 8c9d309d7bf10cee07cc30c4568d2dfa59d1be56
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910203"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777456"
 ---
 # <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: işlemin profili oluşturulan ortalama çalışma kümesi bayt cinsinden
 
 |||
 |-|-|
-|Kural kimliği|DA0503|
+|Kural Kimliği|DA0503|
 |Kategori|Kaynak Izleme|
 |Profil oluşturma yöntemi|Tümü|
 |İleti|Bu bilgiler yalnızca bilgi için toplanmıştı. Işlem çalışma kümesi sayacı, profil oluşturduğunuz işlem tarafından fiziksel bellek kullanımını ölçer. Bildirilen değer tüm ölçüm aralıklarında hesaplanan ortalama değerdir.|
-|Kural türü|Bilgiler|
+|Kural türü|Bilgisi|
 
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 

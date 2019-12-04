@@ -10,19 +10,20 @@ ms.assetid: a4ecfe1c-abbc-4fb3-9ab2-34de50486901
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6328ea53c90b5a5a7ba50fde5a00e29fadacaaa7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e66432fd2f5d8b1532bece9d76e7dfc2a261e4b7
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924513"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771614"
 ---
 # <a name="resource-details-view---contention-data"></a>Kaynak Ayrıntıları Görünümü - Çakışma Verileri
 Kaynak Ayrıntıları görünümü, seçili bir kaynak üzerinde çekişmeler nedeniyle oluşan engelleme olaylarının bir zaman çizelgesi grafiğini sunar. Başka bir iş parçacığının kaynağa erişimi kilitlendiğinden, bir iş parçacığı yürütmeyi askıya almaya zorlandığında engelleyici bir olay oluşur.
 
- Bu görünüm her bir iş parçacığının yürütme zaman çizelgesini yatay bir çubuk olarak temsil eder ve her engelleme olayını iş parçacığı zaman çizelgesinde dikey bir çubuk olarak temsil eder. Gerektiğinde, bağımsız olayları görüntülemek için zaman çizelgesinin bir bölümünü büyütebilirsiniz. Olaya yol eden işlevlerin yürütme yolunu (çağrı yığını) görüntülemek için olay çubuğuna tıklayın. İşlevler **çağrı yığını** penceresinde görünür. Bir işlevin kaynak kodu kullanılabilir olduğunda, için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]arabirimindeki kaynak dosyayı düzenlemek için işlev adına tıklayabilirsiniz.
+ Bu görünüm her bir iş parçacığının yürütme zaman çizelgesini yatay bir çubuk olarak temsil eder ve her engelleme olayını iş parçacığı zaman çizelgesinde dikey bir çubuk olarak temsil eder. Gerektiğinde, bağımsız olayları görüntülemek için zaman çizelgesinin bir bölümünü büyütebilirsiniz. Olaya yol eden işlevlerin yürütme yolunu (çağrı yığını) görüntülemek için olay çubuğuna tıklayın. İşlevler **çağrı yığını** penceresinde görünür. Bir işlevin kaynak kodu kullanılabilir olduğunda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]için arabirimdeki kaynak dosyayı düzenlemek için işlev adına tıklayabilirsiniz.
 
 ## <a name="procedures"></a>Yordamlar
 
@@ -34,7 +35,7 @@ Kaynak Ayrıntıları görünümü, seçili bir kaynak üzerinde çekişmeler ne
 
 #### <a name="to-zoom-out-on-a-timeline"></a>Bir zaman çizelgesinde uzaklaştırmak için
 
-- Aşağıdaki adımlardan birini uygulayın:
+- Aşağıdaki adımlardan birini gerçekleştirin:
 
   - Önceki yakınlaştırma düzeyine dönmek için **uzaklaştır** ' ı tıklatın.
 

@@ -6,19 +6,20 @@ ms.assetid: f9732480-287f-40f1-a4ff-b112e143b940
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 479f7e1cbd85c0421497020ae1fc108154ca639a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fffcab1d841840c15957e8dae0ff0f87b20de28d
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968320"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771612"
 ---
 # <a name="targetclr"></a>TargetCLR
-**TargetCLR** seçeneği bir uygulamada birden fazla CLR sürümü yüklendiğinde, ortak dil çalışma zamanı (CLR) sürümünü profiline belirtir.
+**Targetclr** seçeneği, BIR uygulamaya CLR 'nin birden fazla sürümü yüklendiğinde profil için ortak dil çalışma zamanı (CLR) sürümünü belirtir.
 
- Varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma araçları hedef uygulama tarafından yüklenen CLR ilk sürümü.
+ Varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları, uygulama tarafından yüklenen CLR 'nin ilk sürümünü hedeflemelidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,17 +28,17 @@ VSPerfCmd.exe {/Launch:AppName | /Attach:PID} /TargetCLR[:ClrVersion] [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `ClrVersion` CLR sürüm numarası. Sürüm biçimi **vN.N.NNNNN**.
+ CLR sürüm numarasını `ClrVersion`. **Vn. N.** 2 sürüm biçimini kullanın.
 
-## <a name="required-options"></a>Gerekli seçenekleri
- **TargetCLR** seçeneği yalnızca kullanılabilir ile **başlatma** veya **iliştirme** seçenekleri.
+## <a name="required-options"></a>Gerekli seçenekler
+ **Targetclr** seçeneği yalnızca **başlatma** veya **iliştirme** seçenekleriyle kullanılabilir.
 
- **Başlat:** `AppName` Belirtilen uygulamayı başlatır ve profile başlatır.
+ **Başlat:** `AppName` belirtilen uygulamayı başlatır ve profile başlar.
 
- **Ekleme:** `PID` Belirtilen işlem profili başlar.
+ **Attach:** `PID` belirtilen Işlemi profile başlar.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, TargetCLR seçeneği, CLR sürümü 4.0.11003 profili emin emin olmak için kullanılır.
+ Bu örnekte, CLR Version 4.0.11003 'ın profili oluşturulmuş olduğundan emin olmak için TargetCLR seçeneği kullanılır.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp

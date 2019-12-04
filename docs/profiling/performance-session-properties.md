@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c8a5058d52684ec08e13641953c789c244f2fa9
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 1b3bafa976c8e57f468a3f3f59a3b6b19308fd1b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910141"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772208"
 ---
 # <a name="performance-session-properties"></a>Performans oturumu özellikleri
 
@@ -32,7 +33,7 @@ Performans oturumu aşağıdaki özellik sayfalarına sahiptir:
 
 Bu ayarlar, .NET nesne koleksiyonu ve ömür verileri eklemek ve varsayılan rapor konumunu ve adlandırma kurallarını belirtmek için profil oluşturma yöntemini seçmenizi sağlar.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 [Nasıl yapılır: Toplama metotlarını seçme](../profiling/how-to-choose-collection-methods.md)
 
@@ -71,7 +72,7 @@ Daha fazla bilgi için bkz. [Katman etkileşimi verilerini toplama](../profiling
 
 Bu ayarlar, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web sayfalarında JScript kodu için performans verileri toplamanıza olanak sağlar ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtebilirsiniz.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 [Nasıl yapılır: Web sayfalarında JavaScript kodu profili oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)
 
@@ -87,7 +88,7 @@ Daha fazla bilgi için bkz [. nasıl yapılır: CPU sayacı verilerini toplama](
 
 Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. *VSPerfReport. exe* komut satırı aracı `/calltrace` seçeneğini kullanarak verileri görüntüleyebilirsiniz. Windows için olay Izleme (ETW) hakkında daha fazla bilgi için bkz. [olay Izleme hakkında](/windows/win32/etw/about-event-tracing).
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 [Nasıl yapılır: Windows için olay izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 
@@ -103,7 +104,7 @@ Bu seçenek, Windows performans Izleyicisi sayaçlarından veri toplamanıza ola
 
 Bu ayarlar, [vsinstr](../profiling/vsinstr.md) komut satırı profil oluşturma Aracı ' nın bir veya daha fazla seçeneğini belirterek, izleme işlemine seçenekler eklemenize olanak tanır. Ayrıca, uygulama birden fazla sürüm kullanırken profil için ortak çalışma zamanının sürümünü belirtebilirsiniz.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 [Nasıl yapılır: .NET Framework çalışma zamanını belirtin](../profiling/how-to-specify-the-dotnet-framework-runtime.md)
 

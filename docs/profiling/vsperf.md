@@ -6,21 +6,22 @@ ms.assetid: b5854e62-279e-4850-bfeb-0c6ef82f4805
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: baea4215ac3424bbf8d9d2acc713aac80e273d1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 051c983920ddc80909d721e569c5efb5ecd33a7c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822878"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779941"
 ---
 # <a name="vsperf"></a>VSPerf
-Kullanım **VsPerf** komut satırı aracı:
+**VSPerf** komut satırı aracını kullanarak şunları yapın:
 
-1. Visual Studio cihazda yüklü değilse komut satırından UWP uygulamaları profil.
+1. Cihaza Visual Studio yüklü olmadığında UWP uygulamalarının komut satırından profilini yapın.
 
-2. Masaüstü uygulamalarını Windows 8 ve Windows Server 2012 uygulamalar örnekleme profili oluşturma yöntemi kullanarak profil.
+2. Örnekleme profili oluşturma yöntemini kullanarak Windows 8 masaüstü uygulamalarını ve Windows Server 2012 uygulamalarını profili oluşturma.
 
    Profil oluşturma seçenekleriniz hakkında daha fazla bilgi için bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
@@ -29,33 +30,33 @@ Kullanım **VsPerf** komut satırı aracı:
 
 |||
 |-|-|
-|**/App: {AppName}**|Profil oluşturucuyu başlatır ve Başlat Menüsü'nden başlatılmak üzere belirtilen uygulama bekler.<br /><br /> Çalıştırma `vsperf /listapps` Pakettamadı yüklü uygulamalar ve uygulama adı görüntülemek için.|
-|**/ Paket: {Pakettamadı}**|Profil oluşturucuyu başlatır ve Başlat Menüsü'nden başlatılmak üzere belirtilen uygulama bekler.<br /><br /> Çalıştırma `vsperf /listapps` Pakettamadı yüklü uygulamalar ve uygulama adı görüntülemek için.|
-|**/js**|Profil oluşturma JavaScript uygulamaları için gereklidir.<br /><br /> JavaScript uygulamalarından performans verilerini topla.<br /><br /> Sadece/Package kullanımı veya / ekleyin.|
-|**/noclr**|İsteğe bağlı. CLR veri toplamaz.<br /><br /> Sadece/Package kullanımı veya / ekleyin.<br /><br /> En iyi duruma getirilmesi, yönetilen sembol çözülecektir.|
-|**/listapps**|Yüklü uygulama adları ve PackageFullNames listeleyin.|
+|**/App: {AppName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> Yüklü uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için `vsperf /listapps` çalıştırın.|
+|**/Package: {PackageFullName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> Yüklü uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için `vsperf /listapps` çalıştırın.|
+|**/JS**|JavaScript uygulamalarının profilini oluşturmak için gereklidir.<br /><br /> JavaScript uygulamalarından performans verileri toplayın.<br /><br /> Yalnızca/Package veya/attachile kullanın.|
+|**/noclr**|İsteğe bağlı. CLR verileri toplama.<br /><br /> Yalnızca/Package veya/attachile kullanın.<br /><br /> İyileştirme, yönetilen semboller çözümlenmez.|
+|**/listapps**|Yüklü uygulama adlarını ve PackageFullNames listesini listeleyin.|
 
-## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Masaüstü uygulamalarını Windows 8 ve Windows Server 2012 uygulamalar
- Bu seçenekler, UWP uygulamaları üzerinde çalışmaz.
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları
+ Bu seçenekler UWP uygulamaları üzerinde çalışmaz.
 
 |||
 |-|-|
-|**/ launch: {yürütülebilir}**|Başlatır ve belirtilen yürütülebilir dosya profil oluşturma başlar.|
-|**args: {ExecutableArguments}**|Geçirilecek komut satırı bağımsız değişkenlerini belirtir **/başlatma** hedef.|
-|**/ Console**|Çalıştırmaları **/başlatma** hedef yeni bir komut penceresinde.|
+|**/Launch: {executable}**|Başlatılır ve belirtilen yürütülebilir dosyanın profilini oluşturmaya başlar.|
+|**/args: {ExecutableArguments}**|**/Launch** hedefini geçirmek için komut satırı bağımsız değişkenlerini belirtir.|
+|**/Console**|Yeni bir komut penceresinde **/Launch** hedefini çalıştırır.|
 
 ## <a name="all-applications"></a>Tüm uygulamalar
- Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulama için geçerlidir.
+ Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulaması için geçerlidir.
 
 |||
 |-|-|
-|**/ ekleme: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Belirtilen işlemlerden veri toplar.<br /><br /> İşlem kimliği (PID) görüntülemek ve işlem adları çalışan uygulamalar için Görev Yöneticisi'ni kullanın.|
-|**/ file:{ReportName}**|İsteğe bağlı. Çıkış dosyası (varolan dosyanın üzerine yazar) belirtir.<br /><br /> Sadece/Package kullanımı veya / ekleyin.|
-|**/ Pause**|Veri koleksiyonu duraklatın.|
-|**/Resume**|Veri koleksiyonu devam ettirin.|
-|**/ stop**|Veri toplama işlemini durdurun ve hedef işlemleri sonlandırın.|
-|**/ detach**|Veri toplamayı Durdur, ancak çalışmaya devam hedef işlemler sağlar.|
-|**/ Status**|Profil Oluşturucu durumunu gösterir.|
+|**/Attach: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Belirtilen işlemlerden verileri toplar.<br /><br /> Çalışan uygulamaların işlem kimliğini (PID) ve işlem adlarını görüntülemek için Görev Yöneticisi 'ni kullanın.|
+|**/File: {ReportName}**|İsteğe bağlı. Çıkış dosyasını belirtir (varolan dosyanın üzerine yazar).<br /><br /> Yalnızca/Package veya/attachile kullanın.|
+|**/Pause**|Veri toplamayı duraklatın.|
+|**/Resume sistemde**|Veri toplamayı sürdürür.|
+|**/Stop**|Veri toplamayı durdurun ve hedef süreçlerini sonlandırın.|
+|**/Detach**|Veri toplamayı durdurun, ancak hedef işlemlerin çalışmaya devam etmesine izin verin.|
+|**/Status**|Profil Oluşturucu durumunu göster.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)

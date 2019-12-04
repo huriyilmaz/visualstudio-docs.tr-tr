@@ -1,130 +1,131 @@
 ---
-title: 'Profiler komut satırı: Dinamik bir ASP.NET uygulamasını izleme, bellek verileri Al'
+title: 'Profil oluşturucu komut satırı: dinamik ASP.NET uygulamasını gereç, bellek verilerini edinme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2cdd9903-39db-47e8-93dd-5e6a21bc3435
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: f784807a99c288663bee381bfc1e481dd9d5d8e4
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 3378a45ebace942bb8696f2f67962365b5f57796
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031982"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778888"
 ---
-# <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>Nasıl yapılır: Gereç dinamik olarak derlenmiş bir ASP.NET web uygulamasını ve profil oluşturucu komut satırını kullanarak bellek verilerini toplamak
-Bu konu nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayrıntılı .NET bellek ayırma ve nesne yaşam süresi verilerini dinamik olarak derlenmiş toplamak için profil oluşturma araçları komut satırı araçlarının [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web uygulamasını izleme profili oluşturma yöntemi kullanarak.
+# <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>Nasıl yapılır: profil oluşturucu komut satırını kullanarak dinamik olarak derlenmiş bir ASP.NET Web uygulamasını izleme ve bellek verileri toplama
+Bu konuda, izleme profili oluşturma yöntemi kullanılarak dinamik olarak derlenmiş bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulaması için ayrıntılı .NET bellek ayırma ve nesne yaşam süresi verilerini toplamak üzere [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağı açıklanmaktadır.
 
 > [!NOTE]
-> Profil oluşturma araçları için olan yolu almak için bkz: [komut satırı araçları yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64-bit bilgisayarlarda araçların 64-bit hem 32-bit sürümleri kullanılabilir. Profil oluşturucu komut satırı araçlarını kullanmak için Araçlar yolunu komut istemi penceresinin PATH ortam değişkenine ekleyin veya komutun kendisine eklemeniz gerekir.
+> Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
 
- Performans verileri toplamak için bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web uygulaması, değişiklik *web.config* etkinleştirmek için hedef uygulamanın dosya [VSInstr.exe](../profiling/vsinstr.md) dinamik olarak derlenmiş bir işaretleme aracı Uygulama dosyaları. Daha sonra [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) barındıran sunucuyu yapılandırmak için aracı [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulaması ve uygun ortam değişkenlerini ayarlayarak .NET bellek profili oluşturmayı etkinleştirin ve ardından bilgisayarı yeniden başlatın.
+ [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasından performans verilerini toplamak için, [vsinstr. exe](../profiling/vsinstr.md) aracını dinamik olarak derlenen uygulama dosyalarını işaretlemek üzere hedef uygulamanın *Web. config* dosyasını değiştirirsiniz. Daha sonra, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını barındıran sunucuyu yapılandırmak için [VSPerfCLREnv. cmd](../profiling/vsperfclrenv.md) aracını kullanın ve uygun ortam değişkenlerini ayarlayarak .net bellek profili oluşturmayı etkinleştirin ve ardından bilgisayarı yeniden başlatın.
 
- Verileri toplamak için profil oluşturucuyu başlatın ve ardından hedef uygulamayı çalıştırın. Profil Oluşturucu uygulamaya bağlı durumdayken, duraklatma ve veri koleksiyonu devam ettirin. İlgili verileri topladıktan sonra uygulamayı kapatabilir, Internet Information Services (IIS) çalışan işlemi kapatın ve sonra profil oluşturucuyu kapatın.
+ Veri toplamak için profil oluşturucuyu başlatın ve hedef uygulamayı çalıştırın. Profil Oluşturucu uygulamaya iliştirirken, veri toplamayı duraklatabilir ve devam ettirebilirsiniz. Uygun verileri topladığınızda, uygulamayı kapatın, Internet Information Services (IIS) çalışan işlemini kapatın ve sonra profil oluşturucuyu kapatın.
 
- Profil oluşturma işinizi tamamladıktan sonra geri yükleme *web.config* dosya ve özgün durumlarına web sunucusu.
+ Profil oluşturma işinizi tamamladıktan sonra, *Web. config* dosyasını ve Web sunucusunu özgün durumlarına geri yükleyin.
 
-## <a name="configure-the-aspnet-web-application-and-the-web-server"></a>ASP.NET web uygulaması ve web sunucusunu yapılandırma
+## <a name="configure-the-aspnet-web-application-and-the-web-server"></a>ASP.NET Web uygulamasını ve Web sunucusunu yapılandırma
 
-#### <a name="to-configure-the-aspnet-web-application-and-the-web-server"></a>ASP.NET web uygulaması ve web sunucusunu yapılandırmak için
+#### <a name="to-configure-the-aspnet-web-application-and-the-web-server"></a>ASP.NET Web uygulamasını ve Web sunucusunu yapılandırmak için
 
-1. Değiştirme *web.config* hedef uygulamanın dosya. Bkz: [nasıl yapılır: İzleme ve profil dinamik olarak derlenmiş ASP.NET web uygulamaları için web.config dosyalarını değiştirme](../profiling/how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md).
+1. Hedef uygulamanın *Web. config* dosyasını değiştirin. Bkz. [nasıl yapılır: Web. config dosyalarını dinamik olarak derlenen ASP.NET Web uygulamalarını işaretlemek ve profil haline getirmek Için değiştirme](../profiling/how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md).
 
 2. Web uygulamasını barındıran bilgisayarda bir komut istemi penceresi açın.
 
 3. Profil oluşturma ortamı değişkenlerini başlatın. Tür:
 
-     **VSPerfClrEnv /globaltracegc**
+     **VSPerfClrEnv/globaltracegc**
 
-     -veya-
+     veya
 
-     **VSPerfClrEnv /globaltracegclife**
+     **VSPerfClrEnv/globaltracegclife**
 
-    - **/globaltracegc** bellek ayırma verilerinin toplanmasını etkinleştirir.
+    - **/globaltracegc** bellek ayırma verilerinin toplanmasını mümkün.
 
-    - **/globaltracegclife** bellek ayırma verilerinin ve nesne yaşam verisi toplamayı etkinleştirir.
+    - **/globaltracegclife** , bellek ayırma verilerinin ve nesne yaşam süresi verilerinin toplanmasını mümkün.
 
 4. Bilgisayarı yeniden başlatın.
 
-## <a name="run-the-profiling-session"></a>Profil oluşturma oturumu çalıştırma
+## <a name="run-the-profiling-session"></a>Profil oluşturma oturumunu çalıştırma
 
-#### <a name="to-profile-the-aspnet-web-application"></a>ASP.NET web uygulamasının profilini çıkarmak için
+#### <a name="to-profile-the-aspnet-web-application"></a>ASP.NET Web uygulamasını profili eklemek için
 
 1. Profil oluşturucuyu başlatın. Tür:
 
-    **VSPerfCmd** [/start](../profiling/start.md) **: izleme** [/output](../profiling/output.md) **:** `OutputFile` [`Options`]
+    **VSPerfCmd** [/Start](../profiling/start.md) **: Trace** [/output](../profiling/output.md) **:** `OutputFile` [`Options`]
 
-   - **Çalıştığından** seçeneği profil oluşturucuyu başlatır.
+   - **/Start: Trace** seçeneği profil oluşturucuyu başlatır.
 
-   - **/Output:** `OutputFile` ile seçeneği gereklidir **/start**. `OutputFile` Profil oluşturma verilerinin konumunu ve adını belirtir (. *Vsp*) dosyası.
+   - **/Output:** `OutputFile` seçeneği, **/Start**ile gereklidir. `OutputFile` profil oluşturma verilerinin adını ve konumunu belirtir (. *VSP*) dosyası.
 
-     Aşağıdaki seçeneklerle dilediğinizi kullanabilirsiniz **çalıştığından** seçeneği.
+     Aşağıdaki seçeneklerden herhangi birini, **/Start: Trace** seçeneği ile kullanabilirsiniz.
 
    > [!NOTE]
-   > **/User** ve **/crosssession** seçenekleri genellikle ASP.NET uygulamaları için gereklidir.
+   > **/User** ve **/CrossSession** seçenekleri genellikle ASP.NET uygulamaları için gereklidir.
 
    | Seçenek | Açıklama |
    | - | - |
-   | [/ User](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | Sahibi olan hesabının isteğe bağlı etki alanı ve kullanıcı adını belirtir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemi. Bu seçenek, oturum açan kullanıcının farklı bir kullanıcı olarak işlem çalışıyorsa gereklidir. Adı listelenir **kullanıcı adı** sütunu **işlemleri** Windows Görev Yöneticisi'nin sekmesinde. |
-   | [/ crosssession](../profiling/crosssession.md) | Etkinleştirir, diğer oturumlarda işlemleri profil oluşturma. Bu seçenek, başka bir oturumda uygulama çalışıyorsa gereklidir. Oturum kimliği listelendiğinden **oturum kimliği** sütunu **işlemleri** Windows Görev Yöneticisi'nin sekmesinde. **/CS** için bir kısaltma olarak belirtilebilir **/crosssession**. |
-   | [/globaloff](../profiling/globalon-and-globaloff.md) | Profil Oluşturucu veri koleksiyonu duraklatıldı başlatır. Kullanım [/globalon](../profiling/globalon-and-globaloff.md) profil oluşturmayı devam ettirmek için. |
-   | [/ Sayaç](../profiling/counter.md) **:** `Config` | Belirtilen sayaç işlemci performans bilgilerini toplar `Config`. Sayaç bilgileri, her profil oluşturma etkinliğinde toplanan verilere eklenir. |
-   | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | Profil oluşturma sırasında Tahsil edilecek Windows performans sayacı belirtir. |
-   | [/automark](../profiling/automark.md) **:** `Interval` | İle kullanma **/wincounter** yalnızca. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. 500 ms varsayılandır. |
-   | [/Events](../profiling/events-vsperfcmd.md) **:** `Config` | Profil oluşturma sırasında Tahsil edilecek bir olay izleme için Windows (ETW) olayı belirtir. Ayrı bir toplanan ETW olayları (. *etl*) dosyası. |
+   | [/User](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemine sahip olan hesabın isteğe bağlı etki alanını ve Kullanıcı adını belirtir. İşlem, oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa, bu seçenek gereklidir. Ad, Windows Görev Yöneticisi 'nin **süreçler** sekmesinde **Kullanıcı adı** sütununda listelenir. |
+   | [/CrossSession](../profiling/crosssession.md) | Diğer oturumlardaki işlemlerin profilini oluşturmaya izin vermez. Uygulama farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. Oturum KIMLIĞI, Windows Görev Yöneticisi 'nin **süreçler** SEKMESINDEKI **oturum kimliği** sütununda listelenir. **/CS** , **/CrossSession**için bir kısaltma olarak belirtilebilir. |
+   | [/globaloff](../profiling/globalon-and-globaloff.md) | Profil Oluşturucu veri koleksiyonu duraklatılmış şekilde başlatılır. Profil oluşturmayı sürdürmeye yönelik [/GlobalOn](../profiling/globalon-and-globaloff.md) kullanın. |
+   | [/Counter](../profiling/counter.md) **:** `Config` | `Config`' de belirtilen işlemci performans sayacından bilgi toplar. Her profil oluşturma olayında toplanan verilere sayaç bilgileri eklenir. |
+   | [/WINCOUNTER](../profiling/wincounter.md) **:** `WinCounterPath` | Profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
+   | [/AutoMark](../profiling/automark.md) **:** `Interval` | Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:** `Config` | Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (. *ETL*) dosyası. |
 
-2. Başlangıç [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] normal şekilde web uygulaması.
+2. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını normal şekilde başlatın.
 
 ## <a name="control-data-collection"></a>Veri toplamayı denetleme
- Hedef uygulama çalışırken, Profil Oluşturucu veri dosyasına verilerin yazılmasını kullanarak durdurmayla ve veri toplamayı kontrol edebilirsiniz *VSPerfCmd.exe* seçenekleri. Veri toplama denetimi uygulamayı kapatma veya başlatma gibi program yürütmenin özel bir bölümü için veri toplamanızı sağlar.
+ Hedef uygulama çalışırken, *VSPerfCmd. exe* seçeneklerini kullanarak profil oluşturucu veri dosyasına veri yazmayı başlatıp durdurarak veri toplamayı kontrol edebilirsiniz. Veri toplamayı denetlemek, program yürütmesinin, uygulamayı başlatma veya kapatma gibi belirli bir bölümü için veri toplamanızı sağlar.
 
-#### <a name="to-start-and-stop-data-collection"></a>Veri toplamayı durdurmak ve başlatmak
+#### <a name="to-start-and-stop-data-collection"></a>Veri toplamayı başlatmak ve durdurmak için
 
-- Aşağıdaki seçenekleri çiftlerini başlatın ve veri toplama işlemini durdurun. Her seçeneği ayrı bir komut satırında belirtin. Veri Toplama'ı, birden çok kez açıp kapatabilirsiniz.
+- Aşağıdaki seçenek çiftleri veri toplamayı başlatır ve durdurur. Her seçeneği ayrı bir komut satırında belirtin. Veri toplamayı birden çok kez açıp kapatabilirsiniz.
 
     |Seçenek|Açıklama|
     |------------|-----------------|
-    |[/ globalon /globaloff](../profiling/globalon-and-globaloff.md)|Başlar ( **/globalon**) veya durdurur ( **/globaloff**) tüm işlemler için veri toplama.|
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Başlar ( **/processon**) veya durdurur ( **/processoff**) işlem kimliği tarafından belirtilen işlem için veri toplama (`PID`).|
-    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Başlar ( **/threadon**) veya durdurur ( **/threadoff**) veri toplama iş parçacığı kimliği tarafından belirtilen iş parçacığı için (`TID`).|
+    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Tüm süreçler için veri toplamayı başlatır ( **/GlobalOn**) veya Durdur ( **/globaloff**).|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:** `PID`|İşlem KIMLIĞI (`PID`) tarafından belirtilen işlem için veri toplamayı başlatır ( **/ProcessOn**) veya Durdur ( **/ProcessOff**).|
+    |[/ThreadOn](../profiling/threadon-and-threadoff.md) **:** `TID` [/ThreadOff](../profiling/threadon-and-threadoff.md) **:** `TID`|İş parçacığı KIMLIĞI (`TID`) tarafından belirtilen iş parçacığı için ( **/ThreadOn**) veya Durdur ( **/ThreadOff**) veri toplamayı başlatır.|
 
-- Ayrıca **VSPerfCmd.exe**[/mark](../profiling/mark.md) veri dosyasına bir profil oluşturma işareti eklemek için seçeneği. **/Mark** komut tanımlayıcı, bir zaman damgası ve isteğe bağlı kullanıcı tanımlı bir metin dizesi ekler. İşaretler profil oluşturucu raporlar ve veri görünümlerindeki verilere filtre için kullanılabilir.
+- Veri dosyasına bir profil oluşturma işareti eklemek için **VSPerfCmd. exe**[/Mark](../profiling/mark.md) seçeneğini de kullanabilirsiniz. **/Mark** komutu bir tanımlayıcı, bir zaman damgası ve Kullanıcı tanımlı isteğe bağlı bir metin dizesi ekler. İşaretler, profil oluşturucu raporlarında ve veri görünümlerinde verileri filtrelemek için kullanılabilir.
 
-## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu sona erdirme
- Profil oluşturma oturumunu sona erdirmek için hedef kapatmak [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web uygulaması, Internet Information Services (IIS), profilli işlemin durdurun ve sonra profil oluşturucuyu kapatın durdurun. Ardından, IIS'yi yeniden başlatın.
+## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu Sonlandır
+ Profil oluşturma oturumunu sonlandırmak için, hedef [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını kapatın, profili oluşturulmuş işlemi durdurmak için Internet Information Services (IIS) durdurun ve ardından Profiler 'ı kapatın. Ardından IIS 'yi yeniden başlatın.
 
-#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sona erdirmek için
+#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sonlandırmak için
 
-1. Kapat [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web uygulaması.
+1. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını kapatın.
 
-2. Kapat [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemi tarafından Internet Information Services (IIS) sıfırlanıyor. Tür:
+2. Internet Information Services (IIS) ' i sıfırlayarak [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemini kapatın. Tür:
 
     **IISReset/stop**
 
 3. Profil oluşturucuyu kapatın. Tür:
 
-    **VSPerfCmd**  [ /Shutdown](../profiling/shutdown.md)
+    **VSPerfCmd** [/Shutdown](../profiling/shutdown.md)
 
-4. IIS’yi yeniden başlatın. Tür:
+4. IIS 'i yeniden başlatın. Tür:
 
     **IISReset/Start**
 
 ## <a name="restore-the-application-and-computer-configuration"></a>Uygulama ve bilgisayar yapılandırmasını geri yükleme
- Tüm profil oluşturma işlemini tamamladıktan sonra değiştirmek *web.config* dosya, profil oluşturma ortam değişkenlerini temizleyin ve sunucuyu geri yüklemek için bilgisayarı yeniden başlatın ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] özgün durumlarına uygulama.
+ Tüm profil oluşturmayı tamamladığınızda, *Web. config* dosyasını değiştirin, profil oluşturma ortamı değişkenlerini kaldırın ve sunucuyu ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamasını özgün durumlarına geri yüklemek için bilgisayarı yeniden başlatın.
 
 #### <a name="to-restore-the-application-and-computer-configuration"></a>Uygulama ve bilgisayar yapılandırmasını geri yüklemek için
 
-1. Değiştirin *web.config* özgün dosyanın bir kopyasını içeren dosya.
+1. *Web. config* dosyasını özgün dosyanın bir kopyasıyla değiştirin.
 
-2. (İsteğe bağlı). Profil oluşturma ortam değişkenlerini temizleyin. Tür:
+2. (İsteğe bağlı). Profil oluşturma ortamı değişkenlerini temizleyin. Tür:
 
-     **VSPerfCmd /globaloff**
+     **VSPerfCmd/globaloff**
 
 3. Bilgisayarı yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [.NET bellek verisi görünümleri](../profiling/dotnet-memory-data-views.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)

@@ -6,74 +6,75 @@ ms.assetid: 5613fafc-f298-4e7a-9a2d-a853b61cdf9c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b5f2c1d350f487b6490d0c2b4ce4fe0b83bb38f
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: b30aa723ea3014aec2bd05d4bd204b9427b3c218
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746773"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779980"
 ---
 # <a name="use-profiling-methods-to-collect-performance-data-from-the-command-line"></a>Komut satırından performans verileri toplamak için profil oluşturma metotlarını kullanma
-Tercih ettiğiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Araçları komut satırı araçlarını ve seçeneklerini etkenlere bağlıdır uygulama türü gibi profil olduğunu, kullanmak istediğiniz ve hedef uygulamayı yerel yazılmış olup profil oluşturma yöntemine veya .NET Framework kodu.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] seçiminiz Profil Oluşturma Araçları komut satırı araçları ve seçenekleri, profil oluşturduğunuz uygulamanın türü, kullanmak istediğiniz profil oluşturma yöntemi ve hedef uygulamanın yerel veya .NET Framework kodunda yazılıp yazılmayacağı gibi faktörlere bağlıdır.
 
- Bu konu başlığı altında komut satırı yordam konuları seçtiğiniz profil oluşturma yöntemine göre düzenler.
+ Bu konu, komut satırı yordamsal konuları seçtiğiniz profil oluşturma yöntemine göre düzenler.
 
-## <a name="use-the-sampling-method-to-collect-performance-statistics"></a>Örnekleme yöntemi performans istatistikleri toplamak için kullanın
- Profil oluşturma araçları örnekleme profil oluşturma çalıştırmada belirtilen aralıklarla performans verilerini toplar. Veri örnekleme CPU bağımlı performans sorunlarıyla ilgili Öngörüler sağlayabilir ve bir uygulamanın performansını keşfetmeye başlamak için en iyi yolu olabilir.
+## <a name="use-the-sampling-method-to-collect-performance-statistics"></a>Performans istatistiklerini toplamak için örnekleme yöntemini kullanın
+ Profil Oluşturma Araçları örnekleme yöntemi, bir profil oluşturma çalıştırmasında belirtilen aralıklarda performans verilerini toplar. Örnekleme verileri, CPU 'ya dayalı performans sorunlarına yönelik öngörüler sağlayabilir ve bir uygulamanın performansını keşfetmeye başlamak için iyi bir yoldur.
 
- Profil Oluşturucu uygulamaya çalışan bir örneğini ekleme veya profil oluşturucuyu ve aynı zamanda uygulamayı başlatabilirsiniz.
+ Profil oluşturucuyu ve uygulamayı aynı anda başlatabilir veya profil oluşturucuyu uygulamanın çalışan bir örneğine iliştirebilirsiniz.
 
 |Görev|Hedef uygulama türü|
 |----------|-----------------------------|
-|**Bir uygulama başlatın**|-   [Tek başına uygulamalar](../profiling/how-to-launch-a-stand-alone-app-and-collect-application-statistics.md)|
-|**Çalışan bir işleme**|-   [.NET framework bağımsız uygulamalar](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-application-statistics.md)<br />-   [Yerel bir tek başına uygulamalar](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-application-statistics.md)<br />-   [ASP.NET web uygulamaları](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)<br />-   [.NET Hizmetleri](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-application-statistics-by-using-the-command-line.md)<br />-   [Yerel Hizmetleri](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line.md)|
+|**Uygulama başlatma**|[tek başına uygulamalar](../profiling/how-to-launch-a-stand-alone-app-and-collect-application-statistics.md) -   |
+|**Çalışan bir işleme iliştirme**|[tek başına uygulamalar .NET Framework](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-application-statistics.md) -   <br />[yerel tek başına uygulamaları](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-application-statistics.md) -   <br />-   [ASP.NET Web uygulamaları](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)<br />-   [.net Hizmetleri](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-application-statistics-by-using-the-command-line.md)<br />[yerel hizmetler](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line.md) -   |
 
-## <a name="use-the-instrumentation-method-to-collect-detailed-timing-data"></a>Ayrıntılı zamanlama verileri toplamak için izleme metodunu kullanın.
- Profil oluşturma araçları izleme metodunu yazılım araştırmalardaki kayıt performans bilgilerini içeren bir uygulama ikili dosyalarını kopyalarını performans verilerini toplar. Ölçümlü izleme verilerini, başlangıç ve bitiş izleme eklenmiş her işlevin ve diğer işlevlere her çağrı izleme eklenmiş işlevden toplanır. Araçlar yöntemini, disk kullanımı gibi g/ç sorunlarını ile performans sorunlarını bulmak için yararlıdır.
+## <a name="use-the-instrumentation-method-to-collect-detailed-timing-data"></a>Ayrıntılı zamanlama verileri toplamak için izleme yöntemini kullanın
+ Profil Oluşturma Araçları izleme yöntemi, performans bilgilerini kaydetmek için yazılım araştırmalarını içeren uygulama ikili dosyalarının kopyalarından performans verilerini toplar. İzleme verileri, her bir belgelenmiş işlevin başlangıcında ve sonunda ve belgelenmiş işlevden gelen diğer işlevlere yapılan her çağrıda toplanır. İzleme yöntemi, disk kullanımı gibi g/ç sorunları ile ilgili performans sorunlarını bulmak için yararlıdır.
 
- İzleme eklenmiş ikili ile oluşturduğunuz [VInstr.exe](../profiling/vsinstr.md) aracı. Profil oluşturucuyu başlatmayı sonra hedef uygulamayı çalıştırdığınızda veri izleme eklenmiş ikili dosyaları otomatik olarak toplanır.
+ Birlikte işaretlenmiş ikilisini [VInstr. exe](../profiling/vsinstr.md) aracıyla oluşturursunuz. Profil oluşturucuyu başlattıktan sonra, hedef uygulamayı çalıştırdığınızda veriler otomatik olarak belgelenmiş ikili dosyalar üzerinden toplanır.
 
  **Hedef uygulama türü**
 
-- [.NET framework bağımsız bileşenler](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)
+- [Tek başına bileşenleri .NET Framework](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)
 
-- [Yerel bağımsız bileşenler](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)
+- [Yerel tek başına bileşenler](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)
 
-- [Statik olarak derlenmiş ASP.NET web uygulamaları](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)
+- [Statik olarak derlenen ASP.NET Web uygulamaları](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)
 
-- [Dinamik olarak derlenmiş ASP.NET web uygulamaları](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
+- [Dinamik olarak derlenen ASP.NET Web uygulamaları](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
 
 - [.NET Hizmetleri](../profiling/how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)
 
-- [Yerel Hizmetleri](../profiling/how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)
+- [Yerel hizmetler](../profiling/how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)
 
-## <a name="use-net-memory-methods-to-collect-memory-allocation-and-object-lifetime-data"></a>Bellek ayırma ve nesne yaşam verisi toplamak için .NET bellek yöntemleri kullanın.
- Profil oluşturma araçlar .NET bellek yöntemi, .NET Framework bellek ayırma verilerinin ve .NET Framework nesne yaşam süresi hakkında bilgi toplamanıza olanak sağlar.
+## <a name="use-net-memory-methods-to-collect-memory-allocation-and-object-lifetime-data"></a>Bellek ayırma ve nesne yaşam süresi verilerini toplamak için .NET bellek yöntemlerini kullanın
+ Profil Oluşturma Araçları .NET bellek yöntemi, .NET Framework nesnelerinin yaşam süresi hakkında .NET Framework bellek ayırma verileri ve bilgileri toplamanıza olanak sağlar.
 
- Hedef uygulamadaki profil oluşturucuyu kullanarak başlayabilirsiniz; Profil Oluşturucu uygulamaya çalışan bir örneğini ekleyebilirsiniz; ve ayrıntılı zamanlama bilgileri birlikte .NET Framework bellek verileri toplamak için uygulamanın belgelenmiş sürümünü oluşturabilirsiniz.
-
-|Görev|Hedef uygulama türü|
-|----------|-----------------------------|
-|**Bir uygulama başlatın**|-   [Tek başına bir .NET Framework uygulamaları](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
-|**Çalışan bir işleme**|-   [.NET framework bağımsız uygulamalar](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)<br />-   [ASP.NET web uygulamaları](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)<br />-   [.NET Hizmetleri](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md)|
-|**Gereç modülleri**|-   [.NET framework bağımsız bileşenler](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)<br />-   [Statik olarak derlenmiş ASP.NET web uygulamaları](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)<br />-   [Dinamik olarak derlenmiş ASP.NET web uygulamaları](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)<br />-   [.NET Hizmetleri](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|
-
-## <a name="use-the-concurrency-method-to-collect-resource-contention-and-thread-activity-data"></a>Kaynak çakışması ve iş parçacığı etkinlik verilerini toplamak için eşzamanlılık yöntemi kullanın.
- Profil oluşturma araçları eşzamanlılık yöntemi, kaynak çekişmesini ve iş parçacığı ve işlem etkinlik verileri birden çok iş parçacıklı uygulamalardan toplamanıza olanak tanır.
-
- Profil oluşturucuyu kullanarak uygulamayı başlatabilirsiniz veya profil oluşturucuyu çalışan bir uygulama örneği için ekleyebilirsiniz.
+ Profil oluşturucuyu kullanarak hedef uygulamayı başlatabilirsiniz; profil oluşturucuyu uygulamanın çalışan bir örneğine ekleyebilirsiniz; ve ayrıntılı zamanlama bilgilerini .NET Framework bellek verileriyle birlikte toplamak için uygulamanın belgelenmiş sürümlerini oluşturabilirsiniz.
 
 |Görev|Hedef uygulama türü|
 |----------|-----------------------------|
-|**Bir uygulama başlatın**|-   [Tek başına bir .NET Framework uygulaması](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)<br />-   [Tek başına yerel uygulama](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md)|
-|**Çalışan bir işleme**|-   [.NET framework bağımsız uygulamasına](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md)<br />-   [Yerel bir tek başına uygulama](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md)<br />-   [ASP.NET web uygulaması](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)<br />-   [.NET hizmeti](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-concurrency-data-by-using-the-command-line.md)<br />-   [Yerel hizmeti](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md)|
+|**Uygulama başlatma**|[tek başına .NET Framework uygulamaları](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md) -   |
+|**Çalışan bir işleme iliştirme**|[tek başına uygulamalar .NET Framework](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md) -   <br />-   [ASP.NET Web uygulamaları](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)<br />-   [.net Hizmetleri](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md)|
+|**Araç modülleri**|[tek başına bileşenleri .NET Framework](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md) -   <br />[statik olarak derlenen ASP.NET Web uygulamaları](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md) -   <br />[dinamik olarak derlenen ASP.NET Web uygulamaları](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md) -   <br />-   [.net Hizmetleri](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|
 
-## <a name="add-tier-interaction-data-to-a-profiling-run"></a>Bir profil oluşturma yürütmesine katman etkileşim verileri ekleme
- Bir profil oluşturma yürütmesine katman etkileşim verileri ekleme, komut satırı profil araçlarıyla özel yordamlar gerektirir. Bkz: [katman etkileşim verileri toplama](../profiling/adding-tier-interaction-data-from-the-command-line.md)
+## <a name="use-the-concurrency-method-to-collect-resource-contention-and-thread-activity-data"></a>Kaynak çekişmesini ve iş parçacığı etkinlik verilerini toplamak için eşzamanlılık yöntemini kullanın
+ Profil Oluşturma Araçları eşzamanlılık yöntemi, çok iş parçacıklı uygulamalardan kaynak çekişmesini ve iş parçacığını toplamanıza ve etkinlik verilerini işlemenize olanak sağlar.
+
+ Profil oluşturucuyu kullanarak uygulamayı başlatabilir veya profil oluşturucuyu bir uygulamanın çalışan örneğine iliştirebilirsiniz.
+
+|Görev|Hedef uygulama türü|
+|----------|-----------------------------|
+|**Uygulama başlatma**|[tek başına .NET Framework uygulama](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md) -   <br />[tek başına yerel uygulama](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md) -   |
+|**Çalışan bir işleme iliştirme**|[tek başına uygulama .NET Framework](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md) -   <br />[yerel tek başına uygulama](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md) -   <br />-   [ASP.NET Web uygulaması](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)<br />-   [.net hizmeti](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-concurrency-data-by-using-the-command-line.md)<br />[yerel hizmet](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md) -   |
+
+## <a name="add-tier-interaction-data-to-a-profiling-run"></a>Bir profil oluşturma çalıştırmasına katman etkileşim verileri ekleme
+ Bir profil oluşturma çalıştırmasına katman etkileşim verileri eklemek, komut satırı profil oluşturma araçlarıyla belirli yordamlar gerektirir. Bkz. [Katman etkileşimi verilerini toplama](../profiling/adding-tier-interaction-data-from-the-command-line.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağımsız uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil hizmetler](../profiling/command-line-profiling-of-services.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

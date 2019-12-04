@@ -1,5 +1,5 @@
 ---
-title: 'DA0502: Profili oluşturulan işlemin maksimum CPU kullanımının | Microsoft Docs'
+title: 'DA0502: Işlem tarafından profili oluşturulan en yüksek CPU kullanımı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,29 +10,30 @@ ms.assetid: 1ee53df5-b0dc-4265-9d4f-527830d08725
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e7092e6424a5f00ed4461a91ed10bbf530597082
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5c3cb5169d078ba1242bf898ba93e31a7a488bb8
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935971"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779343"
 ---
-# <a name="da0502-maximum-cpu-consumption-by-the-process-being-profiled"></a>DA0502: Profil oluşturulan işlem tarafından en fazla CPU kullanımı
+# <a name="da0502-maximum-cpu-consumption-by-the-process-being-profiled"></a>DA0502: işlem tarafından profili oluşturulan en yüksek CPU tüketimi
 
 |||
 |-|-|
 |Kural Kimliği|DA0502|
-|Kategori|Kaynak İzleme|
+|Kategori|Kaynak Izleme|
 |Profil oluşturma yöntemi|Tümü|
-|İleti|Bu kural yalnızca bilgi içindir. İşlem()\\% İşlemci Zamanı sayacı, profil oluşturma işleminin CPU kullanımını ölçer. Bildirilen değer tüm ölçüm aralıklarında gözlemlenen en yüksek.|
+|İleti|Bu kural yalnızca bilgi içindir. Işlem ()\\% Işlemci zamanı sayacı, profil oluşturduğunuz işlemin CPU tüketimini ölçer. Bildirilen değer tüm ölçüm aralıklarında gözlemlenen en yüksek değerdir.|
 |Kural türü|Bilgi|
 
- Örnekleme, .NET bellek ve kaynak çekişmesi yöntemleri kullanılarak profili, bu kural tetiklemek için en az 10 örnekleri toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Bu ileti, en yüksek işlemci yönergeleri uygulamadan çalıştırmakla meşgul olduğu süre yüzdesi bildirir. Profil oluşturulan işlem etkin olduğu tüm ölçüm aralıklarında arasında bildirilen en yüksek değeri bildirilen değerdir. Yüzde, birden çok işlemcili bir makinede % 100'den daha büyük olabilir.
+ Bu ileti, bir işlemcinin uygulamadan yönergeleri yürütürken meşgul olduğu sürenin en uzun yüzdesini bildirir. Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıkları arasında raporlanan en büyük değerdir. Yüzde 100 ' den fazla işlemciye sahip bir makinede yüzde ' den büyük olabilir.
 
-## <a name="how-to-use-the-rule-data"></a>Kural verileri kullanma
- Kural değeri, farklı sürümlerin performans veya programın yapıları karşılaştırmak veya farklı bir profil oluşturma senaryoları altında uygulama performansını anlamanın kullanın.
+## <a name="how-to-use-the-rule-data"></a>Kural verilerini kullanma
+ Programın farklı sürümlerinin veya derlemelerin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için kural değerini kullanın.

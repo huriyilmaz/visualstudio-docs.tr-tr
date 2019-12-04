@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Koleksiyon metotları seçme | Microsoft Docs'
+title: 'Nasıl yapılır: koleksiyon yöntemlerini seçme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,88 +9,89 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe046f07a27a9fdcf07fc891f7c264a45a3d61c
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 3c633e12b2e0bf157ffd94ef06a5898fdc3ec830
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744721"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74776351"
 ---
-# <a name="how-to-choose-collection-methods"></a>Nasıl yapılır: Toplama metotlarını seçme
+# <a name="how-to-choose-collection-methods"></a>Nasıl yapılır: koleksiyon yöntemleri seçme
 
-Visual Studio Profil Araçları performans verilerini toplama üç yöntemleri destekler: örnekleme, izleme ve eşzamanlılık. .NET bellek ayırma ve yaşam süresi verilerini toplamak için örnekleme veya Araçlar yöntemi de kullanabilirsiniz.
+Visual Studio Profil Oluşturma Araçları performans verilerini toplamak için üç yöntem destekler: örnekleme, izleme ve eşzamanlılık. .NET bellek ayırma ve yaşam süresi verilerini toplamak için örnekleme veya izleme yöntemini de kullanabilirsiniz.
 
-Performans oturumu kullanabilirsiniz **yöntemi** uygulamanız için en uygun koleksiyon yöntemi belirtmek için özellik. Performans Sihirbazı, performans Gezgini ya da bir performans oturumunun özellik sayfaları koleksiyonunu yöntemi ayarlayabilirsiniz. Komut satırı araçlarını kullanıyorsanız bkz [komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md) daha fazla bilgi için.
+Uygulamanız için en uygun koleksiyon yöntemini belirtmek üzere performans oturumu **yöntemi** özelliğini kullanabilirsiniz. Bir performans oturumunun Özellik sayfalarından, Performans Gezgini veya performans sihirbazından koleksiyon yöntemini ayarlayabilirsiniz. Komut satırı araçları kullanıyorsanız daha fazla bilgi için bkz. [komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md) .
 
 ## <a name="performance-wizard"></a>Performans Sihirbazı
 
-### <a name="to-select-a-collection-method-using-the-performance-wizard"></a>Performans Sihirbazı'nı kullanarak toplama yöntemi seçme
+### <a name="to-select-a-collection-method-using-the-performance-wizard"></a>Performans sihirbazını kullanarak bir koleksiyon yöntemi seçmek için
 
 - Sihirbazın ilk sayfasında, aşağıdaki seçeneklerden birini seçin:
 
 | Seçenek | Açıklama |
 |----------------------------| - |
-| **CPU örnekleme** | İlk çözümleme ve CPU kullanımı sorunlarını analiz etmek için yararlı olan uygulama istatistikleri toplar. |
-| **İzleme** | Odaklı analiz için ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. |
-| **.NET bellek ayırma** | Örnekleme profili oluşturma yöntemi kullanarak .NET Framework bellek ayırma verileri toplar. |
-| **Eşzamanlılık** | Sayısal kaynak Çekişme verisi toplar. |
+| **CPU örnekleme** | İlk analizler ve CPU kullanımı sorunlarını analiz etmek için yararlı olan uygulama istatistiklerini toplar. |
+| **Yapısı** | Odaklanmış analizler ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. |
+| **.NET bellek ayırma** | Örnekleme profili oluşturma yöntemini kullanarak .NET Framework bellek ayırma verilerini toplar. |
+| **Eşzamanlılık** | Sayısal kaynak çekişmesini verilerini toplar. |
 
 ## <a name="performance-explorer"></a>Performans Gezgini
 
-### <a name="to-select-a-collection-method-using-performance-explorer"></a>Performans Gezgini'ni kullanarak koleksiyon yöntemi seçme
+### <a name="to-select-a-collection-method-using-performance-explorer"></a>Performans Gezgini kullanarak bir koleksiyon yöntemi seçmek için
 
-1. Üzerinde **performans Gezgini** araç yanındaki oka tıklayın **yöntemi** aşağı açılan listesi.
+1. **Performans Gezgini** araç çubuğunda, **Yöntem** açılır listesinin yanındaki oka tıklayın.
 
-2. Tercih ettiğiniz bir koleksiyon Metoda tıklayın.
+2. Tercih ettiğiniz koleksiyon yöntemine tıklayın.
 
-## <a name="performance-session-property-pages"></a>Performans oturumu özellik sayfaları
+## <a name="performance-session-property-pages"></a>Performans oturumu Özellik sayfaları
 
-### <a name="to-select-the-sampling-or-instrumentation-method-using-performance-session-properties"></a>Performans oturumu özellikleri kullanarak örnekleme veya Araçlar yöntemini seçmek için
+### <a name="to-select-the-sampling-or-instrumentation-method-using-performance-session-properties"></a>Performans oturumu özelliklerini kullanarak örnekleme veya izleme yöntemini seçmek için
 
-1. İçinde **performans Gezgini**, performans oturumu seçin.
+1. **Performans Gezgini**' de, performans oturumu ' nu seçin.
 
-     Bir performans oturumu dosyası ada sahip bir. *psess* uzantısı.
+     Bir performans oturumu dosya adı öğesine sahiptir. *psess* uzantısı.
 
-2. Performans oturumu sağ tıklayın ve ardından **özellikleri**.
+2. Performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-3. İçinde **özellik sayfaları**, tıklayın **genel**.
+3. **Özellik sayfalarında**, **genel**' e tıklayın.
 
-4. Tercih ettiğiniz bir koleksiyon Metoda tıklayın.
+4. Tercih ettiğiniz koleksiyon yöntemine tıklayın.
 
-    - Örnekleme verileri toplanırken kullanılabilen diğer seçenekler hakkında daha fazla bilgi için bkz: [tarafından örnekleme kullanarak performans istatistikleri toplama](../profiling/collecting-performance-statistics-by-using-sampling.md)
+    - Örnekleme verilerini toplarken kullanılabilir diğer seçenekler hakkında daha fazla bilgi için bkz. [örnekleme kullanarak performans Istatistikleri toplama](../profiling/collecting-performance-statistics-by-using-sampling.md)
 
-    - Örnekleme verileri toplanırken kullanılabilen diğer seçenekler hakkında daha fazla bilgi için bkz: [tarafından ölçümlü izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md).
+    - Örnekleme verilerini toplarken kullanılabilir diğer seçenekler hakkında daha fazla bilgi için bkz. [Izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md).
 
-### <a name="to-select-net-memory-data-collection-by-using-performance-session-properties"></a>Performans oturumu Özellikleri'ni kullanarak .NET bellek verileri toplama seçmek için
+### <a name="to-select-net-memory-data-collection-by-using-performance-session-properties"></a>Performans oturumu özelliklerini kullanarak .NET bellek verileri toplamayı seçmek için
 
-1. İçinde **performans Gezgini**, performans oturumu seçin.
+1. **Performans Gezgini**' de, performans oturumu ' nu seçin.
 
-     Bir performans oturumu dosyası adı bir .psess uzantısına sahiptir.
+     Bir performans oturumu dosya adının. psess uzantısı vardır.
 
-2. Performans oturumu sağ tıklayın ve ardından **özellikleri**.
+2. Performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-3. İçinde **özellik sayfaları**, tıklayın **genel**.
+3. **Özellik sayfalarında**, **genel**' e tıklayın.
 
-4. Tıklayın **örnekleme** veya **izleme**.
+4. **Örnekleme** veya **izleme**' ye tıklayın.
 
-5. Tıklayın **toplamak .NET nesnesi ayırma bilgilerini** .NET Framework nesne ayırmaların sayısı ve boyutu toplanacak.
+5. .NET Framework nesne ayırmalarının boyutunu ve sayısını toplamak için **.NET nesne ayırma bilgilerini topla** ' ya tıklayın.
 
-6. (İsteğe bağlı) Tıklayın **ayrıca .NET nesnesi ömür bilgilerini toplayın** içinde nesne belleği yeniden çöp toplama kuşakları hakkında veri toplamak için.
+6. Seçim Ayrıca, nesne belleğinin geri alındığı çöp toplama nesilleri hakkında veri toplamak için **.NET nesne yaşam süresi bilgilerini toplayın** .
 
-     .NET bellek verileri toplanırken kullanılabilen diğer seçenekler hakkında daha fazla bilgi için bkz: [toplamak .NET bellek ayırma ve yaşam süresi verilerini](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md).
+     .NET bellek verileri topladığınızda kullanılabilen diğer seçenekler hakkında bilgi için bkz. [.net bellek ayırma ve ömür verileri toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md).
 
-### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>Performans oturumu Özellikleri'ni kullanarak eşzamanlılık verileri toplama seçmek için
+### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>Performans oturumu özelliklerini kullanarak eşzamanlılık veri toplamayı seçme
 
-1. İçinde **performans Gezgini**performans oturumu sağ tıklayın ve ardından **özellikleri**.
+1. **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. İçinde **özellik sayfaları**, tıklayın **genel**.
+2. **Özellik sayfalarında**, **genel**' e tıklayın.
 
-3. Tıklayın **eşzamanlılık**.
+3. **Eşzamanlılık**' e tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
+Performans [oturumlarını](../profiling/configuring-performance-sessions.md)
 [örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)
-[performans oturumu özellikleri](../profiling/performance-session-properties.md)
+performans [oturumu özellikleri](../profiling/performance-session-properties.md)

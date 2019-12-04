@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Geçerli oturumu ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: geçerli oturumu ayarlama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,30 +13,31 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ad917a67ab03a4cb6c1e265ec2dafcbe6e2ee421
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70f33888be5097d2682133cda363099bb815c5b0
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778758"
 ---
-# <a name="how-to-set-the-current-session"></a>Nasıl yapılır: Geçerli oturumu ayarlama
+# <a name="how-to-set-the-current-session"></a>Nasıl yapılır: geçerli oturumu ayarlama
 
-İçinde birden çok performans oturumu açabilirsiniz **performans Gezgini**ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumları birini seçebilirsiniz.
+**Performans Gezgini**birden çok performans oturumu açabilir ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçebilirsiniz.
 
-Bir oturum geçerli oturum olarak ayarladıktan sonra tıklayarak **başlatma** üzerinde **performans Gezgini** araç, profil oluşturma geçerli oturumunu başlayacak.
+Geçerli oturum olarak bir oturum ayarladıktan sonra, **Performans Gezgini** araç çubuğunda **Başlat** ' a tıklamak geçerli oturumun profilini oluşturmaya başlar.
 
-## <a name="to-set-current-performance-session"></a>Geçerli Performans oturumunu ayarlama
+## <a name="to-set-current-performance-session"></a>Geçerli performans oturumunu ayarlamak için
 
-- İçinde **performans Gezgini**performans oturumu sağ tıklayın ve ardından **geçerli oturumu ayarlama**.
+- **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **geçerli oturum olarak ayarla**' ya tıklayın.
 
-     Oturum adı kalın yazı tipinde görünür.
+     Oturum adı kalın olarak görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
-[performans Gezgini penceresi](../profiling/performance-explorer-window.md)
-[performans oturumu özellikleri](../profiling/performance-session-properties.md) 
- [ Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
+Performans oturumlarını
+[Performans Gezgini pencere](../profiling/performance-explorer-window.md)
+performans oturumu [özelliklerini](../profiling/performance-session-properties.md) [yapılandırma](../profiling/configuring-performance-sessions.md)
+[performans oturumuna genel bakış](../profiling/performance-session-overview.md)

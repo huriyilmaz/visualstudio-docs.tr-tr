@@ -1,48 +1,49 @@
 ---
-title: Sorunları araçları performans sorunlarını giderme | Microsoft Docs
+title: Performans araçları sorunlarını giderme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b61cdf7-75b7-4abd-aff2-7bd997717626
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ef65019223ba1978ea31fbdb9020993a166da89b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 514b910f2c19822dc821b8c9a52ae96b8aac80f0
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422192"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778108"
 ---
-# <a name="troubleshoot-performance-tools-issues"></a>Performans sorunlarını giderme
-Profil oluşturma Araçları'nı kullandığınızda aşağıdaki sorunlardan biriyle karşılaşabilirsiniz:
+# <a name="troubleshoot-performance-tools-issues"></a>Performans araçları sorunlarını giderme
+Profil Oluşturma Araçları kullandığınızda aşağıdaki sorunlardan biriyle karşılaşabilirsiniz:
 
-- [Profil oluşturma araçları tarafından toplanan veri yok](#no-data-is-collected-by-the-profiling-tools)
+- [Profil oluşturma araçları tarafından hiçbir veri toplanmadı](#no-data-is-collected-by-the-profiling-tools)
 
-- [Performans görünümlerinde ve raporlarında sayılar için işlev adlarını görüntüle](#performance-views-and-reports-display-numbers-for-function-names)
+- [Performans görünümleri ve raporlar işlev adlarının numaralarını görüntüler](#performance-views-and-reports-display-numbers-for-function-names)
 
-## <a name="no-data-is-collected-by-the-profiling-tools"></a>Profil oluşturma araçları tarafından toplanan veri yok
- Profil oluşturma verilerinin bir uygulama profili sonra (. *Vsp*) dosyası oluşturulmaz ve aşağıdaki uyarıyı alırsınız **çıkış** penceresi ya da komut penceresinde:
+## <a name="no-data-is-collected-by-the-profiling-tools"></a>Profil oluşturma araçları tarafından hiçbir veri toplanmadı
+ Bir uygulamayı profilledikten sonra, profil oluşturma verileri (. *VSP*) dosyası oluşturulmaz ve **Çıkış** penceresinde veya komut penceresinde aşağıdaki uyarıyı alırsınız:
 
- PRF0025: Hiçbir veri toplanamadı.
+ PRF0025: veri toplanmadı.
 
- Bu sorunu çeşitli sorunları neden olabilir:
+ Bu sorun birkaç sorundan kaynaklanıyor olabilir:
 
-- Örnekleme veya .NET bellek yöntemi kullanarak profili oluşturulmuş bir işlem uygulama işi yapar işlem haline gelen bir alt işlemi başlatır. Örneğin, bazı uygulamalar, bir Windows uygulaması veya bir komut satırı uygulaması olarak başlatılmış olup olmadığını belirlemek için komut satırını okur. Bir Windows uygulaması istendi, özgün işlem bir Windows uygulaması olarak yapılandırılmış yeni bir işlem başlatır ve ardından özgün işlem çıkar. Profil oluşturma araçları otomatik olarak alt işlemleri için veri toplama için hiçbir veri toplanır.
+- Örnekleme veya .NET bellek yöntemi kullanılarak profili oluşturulmuş bir işlem, uygulamanın çalışmasını gerçekleştiren işlem haline gelen bir alt işlem başlatır. Örneğin, bazı uygulamalar, bir Windows uygulaması veya bir komut satırı uygulaması olarak başlatılıp başlatılmayacağını anlamak için komut satırını okur. Bir Windows uygulaması isteniyorsa, özgün işlem Windows uygulaması olarak yapılandırılmış yeni bir işlem başlatır ve ardından orijinal işlem çıkar. Profil Oluşturma Araçları alt işlemlere yönelik verileri otomatik olarak toplamadığından, hiçbir veri toplanmaz.
 
-     Bu durumda profil oluşturma verilerini toplamak için profil oluşturucu uygulamaya Profil Oluşturucu ile başlatma yerine alt işlem ekleme. Daha fazla bilgi için [nasıl yapılır: Ekleme ve ayırma performans araçlarını çalışan işlemlere](../profiling/how-to-attach-and-detach-performance-tools-to-running-processes.md) ve [İliştir (VSPerfCmd)](../profiling/attach.md)
+     Bu durumda profil oluşturma verilerini toplamak için, profil oluşturucuyu, uygulamayı profil Oluşturucu ile başlatmak yerine alt işleme bağlayın. Daha fazla bilgi için bkz [. nasıl yapılır: performans araçlarını çalışan Işlemlere bağlama ve ayırma](../profiling/how-to-attach-and-detach-performance-tools-to-running-processes.md) ve [Iliştirme (VSPerfCmd)](../profiling/attach.md)
 
-## <a name="performance-views-and-reports-display-numbers-for-function-names"></a>Performans görünümlerinde ve raporlarında sayılar için işlev adlarını görüntüle
- Bir uygulamanın profilini sonra raporları ve görünümleri işlev adları yerine numaraları görürsünüz.
+## <a name="performance-views-and-reports-display-numbers-for-function-names"></a>Performans görünümleri ve raporlar işlev adlarının numaralarını görüntüler
+ Bir uygulamayı profilledikten sonra, raporlarda ve görünümlerde işlev adları yerine sayılar görürsünüz.
 
- Bu sorunu bulmak çözememesi profil oluşturma araçları analiz altyapısı tarafından neden olur. *pdb* haritalar kod bilgileri gibi işlev adları ve satır numaralarını derlenmiş dosyasına kaynak sembol bilgilerini içeren dosyaları. Varsayılan olarak, derleyici oluşturur. *pdb* uygulama dosyası yapılandırıldığında dosyası. Yerel dizinden bir başvuru. *pdb* derlenmiş uygulamada saklanır. Analiz altyapısı için başvurulan bir dizini arar. *pdb* dosya ve ardından dosyasında şu anda uygulama dosyasını içeren. Varsa. *pdb* dosya bulunamadı, analiz altyapısı işlevi uzaklıkları yerine işlev adlarını kullanır.
+ Bu sorun, Profil Oluşturma Araçları Analysis Engine 'in bulamamasından kaynaklanmıştır. kaynak kodu bilgilerini, derlenmiş dosyanın işlev adlarını ve satır numaralarını eşleyen simge bilgilerini içeren *pdb* dosyaları. Varsayılan olarak, derleyici öğesini oluşturur. uygulama dosyası yapılandırıldığında *pdb* dosyası. Yerel dizinine başvuru. *pdb* dosyası derlenen uygulamada depolanıyor. Analiz altyapısı, için başvurulan dizine bakar. *pdb* dosyası ve ardından uygulama dosyasını içeren dosyada. . *pdb* dosyası bulunamadı, analiz Altyapısı işlev adları yerine işlev uzaklıklarını kullanır.
 
- İki yoldan biriyle sorunu düzeltebilirsiniz:
+ Sorunu iki şekilde giderebilirsiniz:
 
-- Bulun. *pdb* dosyaları ve uygulama dosyaları aynı dizine koyun.
+- Öğesini bulun. *pdb* dosyaları ve uygulama dosyalarıyla aynı dizine yerleştirin.
 
-- Sembol bilgilerini profil oluşturma verileri ekleme (. *Vsp*) dosyası. Daha fazla bilgi için [sembol bilgilerini performans veri dosyalarını Kaydet](../profiling/saving-symbol-information-with-performance-data-files.md).
+- Sembol bilgilerini profil oluşturma verilerine ekleyin (. *VSP*) dosyası. Daha fazla bilgi için bkz. [performans veri dosyalarıyla sembol bilgilerini kaydetme](../profiling/saving-symbol-information-with-performance-data-files.md).
 
 > [!NOTE]
-> Analiz altyapısı gerektirir. *pdb* derlenmiş uygulama dosyası aynı sürüme dosyasıdır. A. *pdb* uygulama dosyasının bir önceki veya sonraki derleme dosyasından çalışmaz.
+> Analiz altyapısı, için gerektirir. *pdb* dosyası, derlenen uygulama dosyasıyla aynı sürümdür. A. uygulama dosyasının önceki veya sonraki bir derlemeden *pdb* dosyası çalışmayacak.

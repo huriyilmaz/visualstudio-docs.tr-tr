@@ -11,20 +11,21 @@ ms.assetid: a0c3be92-c263-4678-9fb9-bafead3bd5f5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f0071e98c9e36f3af11d318f480b4b9c6ec4cc1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 89dadc3213620b668160752e919679cccead90bc
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822826"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778030"
 ---
-# <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profil oluşturucu API Başvurusu (yerel)
-Visual Studio profil oluşturma API'ları, programlı olarak toplanan veri miktarını denetlemek ve profil oluşturma sırasında zaman damgası ve profillerinin ikisi de işaretleri eklemek izin verin. Yerel API'leri kullanmak için dahil *VSPerf.h* üstbilgi dosya ve ekleme *VSPerf.lib* projenizdeki.
+# <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profil oluşturucu API başvurusu (yerel)
+Visual Studio Profiler API 'Leri, toplanan veri miktarını programlı bir şekilde denetlemenize ve profil oluşturma sırasında hem zaman damgası hem de profil işaretlerini eklemenize olanak tanır. Yerel API 'Leri kullanmak için *VSPerf. h* üstbilgi dosyasını dahil edin ve projenize *VSPerf. lib* ekleyin.
 
 > [!NOTE]
-> Profil oluşturma araçları için olan yolu almak için bkz: [komut satırı araçları yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
+> Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
 [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)
@@ -47,5 +48,5 @@ Visual Studio profil oluşturma API'ları, programlı olarak toplanan veri mikta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Araçları API'leri](../profiling/profiling-tools-apis.md)
-- [İzlenecek yol: Profil Oluşturucu API'ler kullanma](../profiling/walkthrough-using-profiler-apis.md)
+- [Profil araçları API 'Leri](../profiling/profiling-tools-apis.md)
+- [İzlenecek yol: Profil oluşturucu API'ler Kullanma](../profiling/walkthrough-using-profiler-apis.md)

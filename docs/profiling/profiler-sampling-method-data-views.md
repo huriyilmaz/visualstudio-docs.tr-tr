@@ -1,5 +1,5 @@
 ---
-title: Örnekleme yöntemi veri görünümleri Profiler | Microsoft Docs
+title: Profiler örnekleme yöntemi veri görünümleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,71 +9,72 @@ ms.assetid: 798de693-e43a-4056-aff5-48310c2172c5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 622a088506fe913c834e7de8807dc167f6ab0fc9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8d845d84d421ca44f5b936df0a7138fefa848d8d
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431981"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772169"
 ---
 # <a name="profiler-sampling-method-data-views"></a>Profiler örnekleme yöntemi veri görünümleri
-Bu bölüm, görünümleri ve raporları örnekleme metodu kullanılarak üretilen Profil Oluşturucu veri dosyalarının yönelik başvuru bilgileri içerir.
+Bu bölüm, örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'deki Gelişmiş güvenlik özellikleri Visual Studio profil oluşturucu bu platformlarda veri toplayan bir şekilde önemli değişiklikler gerekmiştir. UWP uygulamaları, ayrıca yeni toplama teknikleri gerektirir. Bkz: [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Özet görünümü](../profiling/summary-view-sampling-data.md)
 
- Örnek zaman toplanmadı en sık yürütülen işlevler ve en bireysel işleri yapan işlevleri listeler.
+ Örnekler toplandığında en sık yürütülen işlevleri ve en bireysel çalışmayı gerçekleştiren işlevleri listeler.
 
 - [Çağrı ağacı görünümü](../profiling/call-tree-view-sampling-data.md)
 
- İşlev yürütme yollarını hiyerarşik bir ağaç şeklinde görüntüler.
+ Hiyerarşik bir ağaçtaki işlevlerin yürütme yollarını görüntüler.
 
 - [Modüller görünümü](../profiling/modules-view-sampling-data.md)
 
- Modülü tarafından profil oluşturma verileri düzenler ve İşlevler, kaynak kod satırlarına ve örnek toplanmadı yürütme yönergeleri listeler.
+ Profil oluşturma verilerini modüle göre düzenler ve örnekler toplandığında yürütülen işlevleri, kaynak kodu satırlarını ve yönergeleri listeler.
 
-- [Arayan / Aranan görünümü - örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
+- [Çağıran/çağrılan görünümü-örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
 
- Seçili işleve ve çağrılır ve seçili işlev tarafından çağrılmış işlevler için profil oluşturma verilerini görüntüler.
+ Seçili işlev için profil oluşturma verilerini ve seçilen işlev tarafından çağrılan ve çağrılan işlevleri görüntüler.
 
 - [İşlevler görünümü](../profiling/functions-view-sampling-data.md)
 
- İşlev tarafından profil oluşturma düzenler ve örnek toplanmadı olduğunda yürüten işlevleri listeler.
+ Profil oluşturmayı işleve göre düzenler ve örnekler toplandığında yürütülen işlevleri listeler.
 
-- [Satırlar görünümü](../profiling/lines-view-sampling-data.md)
+- [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)
 
- Örnek toplanmadı olduğunda yürüten kaynak kod satırlarına listeler.
+ Örnekler toplandığında yürütülen kaynak kodu satırlarını listeler.
 
-- [Yönerge işaretçileri (IP) görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)
+- [Yönerge Işaretçileri (IP) görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)
 
- Örnek toplanmadı olduğunda yürüten kaynak kod satırlarına listeler.
+ Örnekler toplandığında yürütülen kaynak kodu satırlarını listeler.
 
 ## <a name="reference"></a>Başvuru
 - [İşlem görünümü](../profiling/process-view.md)
 
- Listeleri işlem ve iş parçacığı başlangıç ve bitiş zamanlarını.
+ İşlem ve iş parçacığı başlangıç ve bitiş zamanlarını listeler.
 
 - [İşaretler görünümü](../profiling/marks-view.md)
 
- ETW ve örnekleme bir profil oluşturma veri dosyası içine eklenen olaylarını listeler.
+ Profil oluşturma veri dosyasına eklenen ETW ve örnekleme olaylarını listeler.
 
 - [İşlev Ayrıntıları görünümü](../profiling/function-details-view.md)
 
- Seçili işleve çağrılır ve seçili işlev tarafından çağrılmış işlevler arasındaki ilişkinin bir grafik görüntüler.
+ Seçilen işlev ve seçilen işlev tarafından çağrılan ve çağrılan işlevler arasındaki ilişkinin grafik grafiğini görüntüler.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [İzleme metodu veri görünümleri](../profiling/instrumentation-method-data-views.md)
+- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
 
- Görünümleri ve raporları araç haline getirme yöntemi kullanılarak üretilen Profil Oluşturucu veri dosyalarının için başvuru bilgileri.
+ İzleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
-- [.NET bellek verisi görünümleri](../profiling/dotnet-memory-data-views.md)
+- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)
 
- Görünümleri ve raporları, .NET bellek verileri içeren bir profil oluşturucu veri dosyalarının için başvuru bilgileri.
+ .NET bellek verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)

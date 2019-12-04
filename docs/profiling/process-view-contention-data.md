@@ -1,5 +1,5 @@
 ---
-title: İşlem görünümü - çakışma verileri | Microsoft Docs
+title: İşlem görünümü-çekişme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,36 +8,37 @@ ms.assetid: 8821d98c-0771-43b2-a38b-e9039a3abd75
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 79f9330733a0d32faeb9980813f170f52a6f7121
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30c938088538bcecc71e3a7e37d5ae403dd476e1
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965642"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778407"
 ---
-# <a name="process-view---contention-data"></a>İşlem görünümü - çakışma verileri
-İşlem görünümü işlemleri ve profil oluşturma çalışması sırasında yürütülen iş parçacığı için Çekişme verilerini görüntüler.
+# <a name="process-view---contention-data"></a>İşlem görünümü-çekişme verileri
+Işlem görünümü, profil oluşturma çalışması sırasında yürütülen işlemler ve iş parçacıkları için çekişme verilerini görüntüler.
 
- Semboller kullanılabilir olduğunda işlemler adına göre listelenmiştir. Simgeleri kullanılabilir durumda değilse, işlemleri kendi bellek adresi onaltılık biçiminde listelenir. İş parçacıkları, onları oluşturan işlemin alt öğesi olarak listelenir.
+ Semboller kullanılabilir olduğunda, süreçler ada göre listelenir. Semboller kullanılabilir olmadığında, işlem bellek adresleri tarafından onaltılık biçimde listelenir. İş parçacıkları, kendilerini oluşturan işlemin alt öğeleri olarak listelenir.
 
- İşlem görünümü tablodaki sütun değerleri aşağıdaki tabloda açıklanmaktadır.
+ Aşağıdaki tabloda, Işlem görünümü tablosundaki sütunların değerleri açıklanmaktadır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Başlangıç zamanı**|Milisaniye veya işlemci sayısını, işlem veya iş parçacığı başına profil oluşturma başlangıç geçiş yapar.|
-|**Engellenme süresi**|Bu sırada iş parçacığı ve işlem işlevlerini yürütülmesini engellenen toplam süresi.|
-|**Engellenme süresi yüzdesi**|İşlem veya iş parçacığı ve işlem işlevlerini çalıştırılması engellenen iş parçacığı ömrünün yüzdesi.|
-|**Çakışmaları**|İş parçacığı ve işlem işlevlerini çalıştırılması engellenen sayısı.|
-|**Çekişme yüzdesi**|Profil çalıştıran tüm çekişmelerin yüzdesi, işlem veya iş parçacığı Çekişme yoktu.|
-|**Bitiş zamanı**|Milisaniye veya işlemci sayısını başından sonuna kadar işlem veya iş parçacığı profil oluşturma.|
-|**ID**|Sistem tarafından oluşturulan tanımlayıcısını işlem veya iş parçacığı.|
-|**Yaşam süresi**|Milisaniye veya işlemci sayısını, işlem ya da iş parçacığı işlem veya iş parçacığı sonuna ya da profil oluşturmanın sonuna başından itibaren geçiş yapar.|
-|**Tür**|Satır türü işlem veya iş parçacığı.<br /><br /> Yalnızca **VSReport** komut satırı raporlar. Daha fazla bilgi için [VSPerfReport](../profiling/vsperfreport.md).|
-|**Ad**|İşlem veya iş parçacığı adı.|
-|**Benzersiz kimliği**|İş parçacığı ve işlem için benzersiz olan bir profil oluşturucu tarafından oluşturulan bir tanımlayıcı.|
+|**Başlangıç zamanı**|Profil oluşturmanın başından işlemin veya iş parçacığının başlangıcına kadar geçen milisaniye veya işlemci döngüsü sayısı.|
+|**Engellenme süresi**|İşlemin veya iş parçacığının işlevlerinin yürütülmesinin engellendiği toplam süre.|
+|**Engellenme süresi yüzdesi**|İşlemin veya iş parçacığının işlevlerinin yürütülmesinin engellendiği işlemin veya iş parçacığının yaşam süresinin yüzdesi.|
+|**Çekişme**|İşlem veya iş parçacığının işlevlerinin yürütülmesinin engellendiği zaman sayısı.|
+|**Çekişme**|İşlem veya iş parçacığının çekişmeleri olan profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
+|**Bitiş zamanı**|Profil oluşturmanın başından işlemin veya iş parçacığının sonuna kadar geçen milisaniye veya işlemci döngüsü sayısı.|
+|**NUMARASıNı**|İşlemin veya iş parçacığının sistem tarafından oluşturulan tanımlayıcısı.|
+|**Yaşam süresi**|İşlemin veya iş parçacığının başından, işlemin veya iş parçacığının sonuna veya profil oluşturmanın sonuna kadar geçen milisaniye veya işlemci döngüsü sayısı.|
+|**Türüyle**|Satır türü, işlem veya iş parçacığı.<br /><br /> Yalnızca **VSReport** komut satırı raporlarında. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).|
+|**Ad**|İşlemin veya iş parçacığının adı.|
+|**Benzersiz KIMLIK**|İşlem veya iş parçacığı için benzersiz olan profil oluşturucu tarafından oluşturulan bir tanımlayıcı.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
 - [İşlem Görünümü](../profiling/process-view.md)

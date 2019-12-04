@@ -1,5 +1,5 @@
 ---
-title: Rapor görünümlerini filtreleme | Microsoft Docs
+title: Rapor Görünümlerini Filtreleme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,86 +8,87 @@ ms.assetid: 820cf192-7fd6-4bee-9a51-aa69154aca85
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b2f06778de19c16df9d6e43108ecf4daba539c06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: acdfe8f96d30ad881d8c9c0f0a9ff48c3353afee
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779252"
 ---
-# <a name="filter-report-views"></a>Rapor görünümlerini filtreleme
-Profil oluşturma performans raporu görünümlerde görüntülenmesi ve rapor dosyasına dışarı profil oluşturma verileri sınırlamak için veri dosyaları için filtre uygulayabilirsiniz. Bir rapor için zaman damgası değerlerini arasındaki verileri sınırlayabilir ve belirli işlem ve iş parçacıkları için verileri sınırlayabilirsiniz. Filtreler bir dosyaya kaydedin ve kaydedilmiş filtre içeri aktararak Bu filtre üzerinde farklı bir profil oluşturma veri dosyasını oluşturun.
+# <a name="filter-report-views"></a>Rapor görünümlerini filtrele
+Performans raporu görünümlerinde görüntülenen profil oluşturma verilerini sınırlandırmak ve rapor dosyalarına aktarmak için profil oluşturma veri dosyalarına filtre uygulayabilirsiniz. Zaman damgası değerleri arasındaki verilerle bir raporu sınırlayabilir ve verileri belirli işlemlerle ve iş parçacıklarıyla sınırlayabilirsiniz. Filtreleri bir dosyaya kaydedebilir ve sonra kaydedilen filtreyi içeri aktararak farklı bir profil oluşturma veri dosyasında bir filtre oluşturabilirsiniz.
 
- Bir rapor için zaman diliminin Özet görünümü grafik zaman çizelgesini kullanarak da sınırlayabilirsiniz. Bkz: [nasıl yapılır: Özet zaman çizelgesinden rapor görünümlerini filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
+ Ayrıca Özet görünümündeki grafik zaman çizelgesini kullanarak bir raporu zaman kesimiyle sınırlandırabilirsiniz. Bkz. [nasıl yapılır: Özet zaman çizelgesinden Rapor Görünümlerini Filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
 
- Sistem ve üçüncü taraf kodu bir raporundan dışlamak için bkz: [nasıl yapılır: Yalnızca Kendi Kodumu Görüntülemek için Profil Oluşturma Araçları Raporu Görünümlerini Filtreleme](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)
+ Bir rapordan sistem ve üçüncü taraf kodu hariç tutmak için bkz [. nasıl yapılır: profil oluşturma araçları rapor görünümlerini görüntülemek Için filtreleme yalnızca kendi kodum](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)
 
 ## <a name="procedures"></a>Yordamlar
 
-#### <a name="to-create-a-profiler-report-filter"></a>Bir profil oluşturucu rapor filtresi oluşturmak için
+#### <a name="to-create-a-profiler-report-filter"></a>Profil Oluşturucu rapor filtresi oluşturmak için
 
-1. Performans Raporu Görünüm Filtresi penceresi görüntülenmiyorsa, tıklayın **Göster filtre** performans rapor görünümü araç.
+1. Performans raporu görünümü filtre penceresi görüntülenmiyorsa, performans raporu görünümü araç çubuğunda **filtreyi göster** ' e tıklayın.
 
-     Performans Raporu Görünüm filtresi bir tablodur. Tablodaki her satır bir filtre yan tümcesi temsil eder. Bir filtre için istediğiniz sayıda yan tümce ekleyebilirsiniz.
+     Performans raporu görünüm filtresi bir tablodur. Tablonun her satırı, filtrenin bir yan tümcesini temsil eder. Filtre uygulamak istediğiniz kadar çok sayıda yan tümce ekleyebilirsiniz.
 
-2. Filtre eklemek istediğiniz her yan tümce için bir satır aşağıdaki alanlarda değerleri girin veya seçin.
+2. Bir filtreye eklemek istediğiniz her yan tümce için, bir satırın aşağıdaki alanlarına değerler seçin veya girin.
 
     |Alan|Açıklama|
     |-----------|-----------------|
-    |**Ve/veya**|Seçin **ve** eşleşiyorsa bir sonuç bu yan tümce hem de sonraki yan tümcesi her ikisi de true olmalıdır. Seçin **veya** eşleşiyorsa bir sonucu veya bu yan tümce hem de sonraki yan tümcesi True olabilir.|
-    |**Alan**|Filtre yan tümcesi veri alanlarının görüntülenen listeden kullanmak için rapor alanı seçin.|
-    |**İşleci**|Alan ve değer arasında yan tümcesinde istediğiniz ilişkiyi belirtir bir işleç seçin.<br /><br /> = Eşittir<br /><br /> <> Eşit değildir<br /><br /> < Küçüktür<br /><br /> > Büyüktür<br /><br /> < = küçüktür veya eşittir<br /><br /> > = büyüktür veya eşittir|
-    |**Değer**|Aranacak bir değer girin veya seçin. Bazı alanları, alan için kullanılabilen değerleri listeler.|
+    |**Ve/veya**|Bu yan **tümce ve Next** yan tümcesinin bir sonuçla eşleştirmek için true olması gerekir. Bu yan **tümce veya sonraki** yan tümce bir sonuçla eşleşecek şekilde doğru olabilir.|
+    |**Alanla**|Görüntülenecek veri alanları listesinden filtre yan tümcesinde kullanılacak rapor alanını seçin.|
+    |**İşlecinde**|Alan ve değer arasındaki yan tümce içinde istediğiniz ilişkiyi belirten işleci seçin.<br /><br /> = Eşittir<br /><br /> Eşit değildir > <<br /><br /> < Küçüktür<br /><br /> Şundan büyük ><br /><br /> < = küçüktür veya eşittir<br /><br /> > = büyüktür veya eşittir|
+    |**Değer**|Aranacak değeri seçin veya girin. Bazı alanlar alan için kullanılabilir değerleri listeler.|
 
-#### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>Bir profil oluşturucu rapor filtresi işaretleri rapor görünümünde oluşturmak için
+#### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>Işaretler rapor görünümünden bir profil Oluşturucu rapor filtresi oluşturmak için
 
-1. Seçin **işaretleri** gelen **Geçerli Görünüm** performans raporu Görünüm araç çubuğundaki listesi.
+1. Performans raporu görünümü araç çubuğundaki **geçerli görünüm** listesinden **işaretler** ' i seçin.
 
-    İşaretler profil oluşturucu rapor görüntülenir.
+    Işaretler profil Oluşturucu raporu görüntülenir.
 
-2. ETW ve örnekleme bile, raporun başlangıç noktası olarak kullanmak istediğiniz seçin.
+2. Raporun başlangıç noktası olarak kullanmak istediğiniz ETW veya örnekleme 'yi seçin.
 
-3. Tuşuna basın ve CTRL basılı tutun ve raporun bitiş noktası olarak kullanmak istediğiniz bir etkinliğe tıklayın.
+3. CTRL tuşuna basın ve basılı tutun ve raporun bitiş noktası olarak kullanmak istediğiniz olaya tıklayın.
 
-4. Sağ tıklayın ve sonra aşağıdaki seçeneklerden birine tıklayın:
+4. Sağ tıklayın ve ardından aşağıdaki seçeneklerden birine tıklayın:
 
-   - **Filtre işaretlerini Ekle** işareti sütunu Filtre alanını kullanan filtre yan tümcesi oluşturur.
+   - **Işaretlere Filtre Ekle** , işaret sütununu filtre alanı olarak kullanan filtre yan tümceleri oluşturur.
 
-   - **Üzerinde zaman damgalarına Filtre Ekle** içindeki zaman damgası milisaniye sütun filtresi alan olarak kullanan bir filtre yan tümcesi oluşturur.
+   - **Zaman Damgalarına Filtre Ekle** , filtre alanı olarak milisaniye sütununda zaman damgasını kullanan filtre yan tümceleri oluşturur.
 
-     İki seçenek, aynı başlangıç ve bitiş noktalarını geçerli veri dosyası filtreleyin. İki seçenekten birini diğer raporlarda kullanmak için filtreyi dışarı aktarırsanız daha iyi olabilir.
+     İki seçenek, geçerli veri dosyasını aynı başlangıç ve bitiş noktalarında filtreleyin. Her iki seçenek de, başka raporlarda kullanmak üzere filtreyi dışa aktardığınızda daha iyi olabilir.
 
 #### <a name="to-load-an-existing-filter-from-a-file"></a>Bir dosyadan varolan bir filtreyi yüklemek için
 
-1. Performans rapor görünümü araç çubuğunda **içeri aktarma filtre**.
+1. Performans raporu görünümü araç çubuğunda **filtreyi Içeri aktar**' a tıklayın.
 
-     **Yük filtre** iletişim kutusu görüntülenir.
+     **Yükleme filtresi** iletişim kutusu görüntülenir.
 
-2. Filtre (.vspf) dosyası yüklemek için konum ve dosya adını belirtin.
+2. Yüklenecek filtre (. vspf) dosyasının konumunu ve dosya adını belirtin.
 
-#### <a name="to-execute-a-filter"></a>Bir filtre yürütmek için
+#### <a name="to-execute-a-filter"></a>Bir filtreyi yürütmek için
 
-- Performans rapor görünümü araç çubuğunda **yürütme filtre**.
+- Performans raporu görünümü araç çubuğunda **filtreyi Yürüt**' e tıklayın.
 
-#### <a name="to-stop-a-filter-that-is-taking-too-long-to-execute"></a>Yürütülmesi çok uzun sürecek bir filtre durdurmak için
+#### <a name="to-stop-a-filter-that-is-taking-too-long-to-execute"></a>Yürütülmesi çok uzun süren bir filtreyi durdurmak için
 
-- Performans rapor görünümü araç çubuğunda **Durdur filtre**.
+- Performans raporu görünümü araç çubuğunda **filtreyi durdur**' a tıklayın.
 
-#### <a name="to-remove-a-filter-on-a-report-view"></a>Rapor görünümünde filtreyi kaldırmak için
+#### <a name="to-remove-a-filter-on-a-report-view"></a>Bir rapor görünümündeki filtreyi kaldırmak için
 
-1. Performans Raporu Görünüm filtresi yan tümcelerinde satırlarını silin.
+1. Performans raporu görünümü filtresindeki yan tümce satırlarını silin.
 
-2. Performans rapor görünümü araç çubuğunda **yürütme filtre**.
+2. Performans raporu görünümü araç çubuğunda **filtreyi Yürüt**' e tıklayın.
 
-#### <a name="to-save-a-filter-to-a-file"></a>Bir filtre bir dosyaya kaydetmek için
+#### <a name="to-save-a-filter-to-a-file"></a>Bir dosyaya filtre kaydetmek için
 
-1. Performans rapor görünümü araç çubuğunda **dışarı aktarma filtre**.
+1. Performans raporu görünümü araç çubuğunda, **filtreyi dışarı aktar**' a tıklayın.
 
-     **Kaydet filtre** iletişim kutusu görüntülenir.
+     **Filtre kaydet** iletişim kutusu görüntülenir.
 
-2. Filtre (.vspf) dosyası kaydetmek için konum ve dosya adını belirtin.
+2. Kaydedilecek filtre (. vspf) dosyasının konumunu ve dosya adını belirtin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans Araçları Rapor Görünümlerini Özelleştirme](../profiling/customizing-performance-tools-report-views.md)

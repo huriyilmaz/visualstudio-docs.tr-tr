@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Profil oluşturucu API 'Leri kullanma | Microsoft Docs"
+title: "İzlenecek yol: profil oluşturucu API 'Leri kullanma | Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,18 +9,19 @@ ms.assetid: c2ae0b3e-a0ca-4967-b4df-e319008f520e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 203952f712fb3b28b93d570f99e6d36f56b5f2b5
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 81071a44b51b1441782b25741126873fc720ed7b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870286"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779889"
 ---
-# <a name="walkthrough-using-profiler-apis"></a>İzlenecek yol: Profil Oluşturucu API’lerini kullanma
+# <a name="walkthrough-using-profiler-apis"></a>İzlenecek yol: Profil oluşturucu API'ler Kullanma
 
-İzlenecek yol, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma araçları C# API 'lerinin nasıl kullanılacağını göstermek için bir uygulama kullanır. İzleme profili oluşturma sırasında toplanan veri miktarını sınırlamak için profil oluşturucu API 'Lerini kullanacaksınız.
+İzlenecek yol, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] C# profil oluşturma araçları API 'lerinin nasıl kullanılacağını göstermek için bir uygulama kullanır. İzleme profili oluşturma sırasında toplanan veri miktarını sınırlamak için profil oluşturucu API 'Lerini kullanacaksınız.
 
  Bu yönergedeki adımlar, genellikle bir C/C++ uygulama için geçerlidir. Her dil için yapı ortamınızı uygun şekilde yapılandırmanız gerekecektir.
 
@@ -30,19 +31,16 @@ ms.locfileid: "68870286"
 
  Visual Studio Profiler, veri toplamayı sınırlandırmanıza olanak sağlar. Bu izlenecek yol, profil oluşturucu API 'Leri kullanılarak veri koleksiyonunun nasıl sınırlandıralınacağını gösteren bir örnek sunmaktadır. Visual Studio Profiler, bir uygulamanın içinden veri toplamayı denetlemek için bir API sağlar.
 
- ::: moniker range=">=vs-2019"
- Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf. dll*' dir. VSPerf. *h*ve içeri aktarma kitaplığı olan *VSPerf. lib*üstbilgi dosyası *Microsoft Visual Studio\2019\team Tools\Performance Tools\PerfSDK* dizininde bulunur.  64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\2019\Team Tools\Performance Tools\x64\PerfSDK* şeklindedir
- ::: moniker-end
  ::: moniker range="vs-2017"
  Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf. dll*' dir. *VSPerf. h*ve içeri aktarma kitaplığı olan *VSPerf. lib*üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.  64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
  ::: moniker-end
 
  Yönetilen kod için profil oluşturucu API 'Leri *Microsoft. VisualStudio. Profiler. dll*' dir. Bu DLL *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunur. 64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*' dir. Daha fazla bilgi için bkz. [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140)).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yol, geliştirme ortamınızın tercih ettiğiniz hata ayıklama ve örnekleme işlemini destekleyecek şekilde yapılandırıldığını varsayar. Aşağıdaki konular, bu önkoşullara genel bir bakış sağlar:
 
-- [Nasıl yapılır: Koleksiyon yöntemlerini seçin](../profiling/how-to-choose-collection-methods.md)
+- [Nasıl yapılır: Toplama metotlarını seçme](../profiling/how-to-choose-collection-methods.md)
 
 - [Nasıl yapılır: Başvuru pencereleri sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md)
 
@@ -154,15 +152,15 @@ DataCollection.CurrentId);
 
      **VsPerfCLREnv/TRACEON**
 
-3. Şu komutu yazın: **Vsinstr \<filename >. exe**
+3. Şu komutu yazın: **vsinstr \<filename >. exe**
 
 4. Şu komutu yazın: **VSPerfCmd/start: Trace/output:\<filename >. vsp**
 
-5. Şu komutu yazın: **VSPerfCmd /globaloff**
+5. Şu komutu yazın: **VSPerfCmd/globaloff**
 
 6. Programınızı yürütün.
 
-7. Şu komutu yazın: **VSPerfCmd/Shutdown**
+7. Şu komutu yazın: **VSPerfCmd/shutdown**
 
 8. Şu komutu yazın: **VSPerfReport/calltrace:\<filename >. vsp**
 

@@ -6,23 +6,24 @@ ms.assetid: ff319ffc-f249-4c3f-9eb2-06e392e3ae80
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e93cc526ad61916e2a8663caa9652842ce136c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9455d596e27526f6075ad3b667ac441b12511d58
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62960200"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779850"
 ---
 # <a name="wincounter"></a>WinCounter
-**WinCounter** seçeneği, farklı çalıştır profilinin sırasında belirlenen aralıklarla toplamak için bir Windows ya da uygulama performans sayacı belirtir. Windows ve uygulama performans sayaçları, profil oluşturma veri dosyasını işaretleri olarak listelenir. Ayrı seçeneklerinde toplamak için birden çok performans sayaçları belirtebilirsiniz.
+**WinCounter** seçeneği, profil çalıştırması sırasında ayarlanan aralıklarda toplanacak bir Windows veya uygulama performans sayacı belirtir. Windows ve uygulama performansı sayaçları, profil oluşturma veri dosyasında işaretler olarak listelenir. Ayrı seçeneklerde toplanacak birden çok performans sayacı belirtebilirsiniz.
 
- Sayaçlar varsayılan olarak, toplanan her 500 milisaniye. Kullanım **AutoMark** seçeneği farklı bir koleksiyon aralığı belirtin.
+ Varsayılan olarak, sayaçlar her 500 milisaniyede toplanır. Farklı bir koleksiyon aralığı belirtmek için **otomatik işaret** seçeneğini kullanın.
 
- Yalnızca bir **AutoMark** seçeneği kullanılır. Birden çok **AutoMark** seçenekler belirtilir, sonuncu kullanılır.
+ Yalnızca bir **otomatik işaret** seçeneği kullanılır. Birden çok **otomatik işaret** seçeneği belirtilirse, son bir tane kullanılır.
 
- **WinCounter** seçeneği yalnızca kullanılabilir ile **Başlat** seçeneği.
+ **WinCounter** seçeneği yalnızca **Start** seçeneğiyle birlikte kullanılabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,20 +32,20 @@ VSPerfCmd.exe /Start:Method /Wincounter:Path [/WinCounter:Path] [AutoMark:Millis
 ```
 
 #### <a name="parameters"></a>Parametreler
- `Path` Windows performans sayacı PDH sayacı yol biçiminde.
+ Windows performans sayacını PDH sayaç yolu biçiminde `Path`.
 
-## <a name="required-options"></a>Gerekli seçenekleri
- **WinCounter** seçeneği yalnızca kullanılabilir ile **Başlat** seçeneği.
+## <a name="required-options"></a>Gerekli seçenekler
+ **WinCounter** seçeneği yalnızca **Start** seçeneğiyle birlikte kullanılabilir.
 
- **Başlat:** `Method` **Başlat** seçeneği belirtilen profil oluşturma metodu için profil oluşturucuyu başlatır.
+ **Başlat:** **Başlat** seçeneği `Method` profil oluşturucuyu belirtilen profil oluşturma yöntemine başlatır.
 
-## <a name="exclusive-options"></a>Dışlayan seçenekleri
- **AutoMark** seçeneği yalnızca kullanılabilir ile **WinCounter** seçeneği.
+## <a name="exclusive-options"></a>Dışlamalı seçenekler
+ **Otomatik işaret** seçeneği yalnızca **WinCounter** seçeneği ile kullanılabilir.
 
- **AutoMark:** `Milliseconds` Windows performans sayacı verilerini toplama arasındaki milisaniye sayısını belirtir.
+ **Otomatik işaret:** `Milliseconds` Windows performans sayacı veri toplama arasındaki milisaniye sayısını belirtir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, 1000 milisaniye cinsinden zaman aralığı sırasında Tahsil edilecek Windows performans sayaçları iki belirtilir.
+ Aşağıdaki örnekte, iki Windows performans sayacı 1000 milisaniyede bir aralıkta toplanabilecek şekilde belirtilmiştir.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /WinCounter:"\Processor(0)\% Processor Time" /WinCounter:"\System\Context Switches/sec" /AutoMark:1000
@@ -52,6 +53,6 @@ VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /WinCounter:"\Processor(0)\%
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Bağımsız uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil hizmetler](../profiling/command-line-profiling-of-services.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

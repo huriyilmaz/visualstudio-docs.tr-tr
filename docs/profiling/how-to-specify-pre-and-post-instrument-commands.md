@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ön ve son izleme komutları belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: ön ve araç sonrası komutları belirtme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,62 +12,63 @@ ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dec06f7f45666845dfcc7080ed4b18db8baba993
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 22ad5558ed01e5bb1b8d12b7a4cc65b4d677d0cd
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539070"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778719"
 ---
-# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Nasıl yapılır: Ön ve son izleme komutları belirtme
+# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Nasıl yapılır: ön ve araç sonrası komutları belirtme
 
-Önce veya sonra performans oturumu içindeki ikili dosyaları notınstrumented çalışan komutlar belirtebilirsiniz. Komut satırından verilen herhangi bir komutu bir işaretleme öncesi veya izleme sonrası olayı olarak belirtilebilir. Örneğin, ikili dosyaları algılayıcılarla sonra çalıştırılan bir toplu iş dosyasında bir tanımlayıcı ad anahtarıyla bir derlemenin bildirimin otomatikleştirmek komutları belirtebilirsiniz.
+Bir performans oturumunda ikili dosyalardan önce veya sonra çalıştırılan komutlar görüntülenir. Komut satırından verilebileceğiniz herhangi bir komut, bir ön izleme veya bir işaretleme sonrası olay olarak belirtilebilir. Örneğin, ikili dosyalar görüntülendikten sonra yürütülen bir toplu iş dosyasında tanımlayıcı ad anahtarı olan bir derlemenin çekilişini otomatikleştiren komutları belirtebilirsiniz.
 
-Komutları için profil oluşturma çalıştırmasını tüm izleme eklenmiş ikili dosyaları veya bireysel ikili dosyaları belirtebilirsiniz. Bununla birlikte, önce çalıştırmak için yalnızca bir işaretleme öncesi komutu ve izleme işleminden sonra çalıştırmak için yalnızca bir son izleme komut belirtebilirsiniz. Komutları bireysel ikili dosyaları ve hem tüm ikili dosyaları için belirtilemez. Tüm ikili dosyaları için komutları belirttiğinizde, önce veya sonra her bir ikili izleme oturumunda komutları çalıştırılır.
+Profil oluşturma çalıştırmasında veya tek tek ikili dosyalarda tüm belgelenmiş ikili dosyalar için komutlar belirtebilirsiniz. Ancak, daha önce çalıştırmak için yalnızca bir pre-Instrument komutu ve izleme işleminden sonra çalıştırılacak bir araç sonrası komutu belirtebilirsiniz. Tüm ikili dosyalar için ve tek tek ikililer için komut belirtemezsiniz. Tüm ikili dosyalar için komutlar belirttiğinizde, komutlar oturumdaki her bir ikilinin izleme öncesi veya sonrasında çalıştırılır.
 
-Komutları yürütülürken çalışma dizini çalıştırdığınız işletim sistemine bağlıdır [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ve profili oluşturulan uygulamanın hedef platformu.
+Komutların yürütüldüğü çalışma dizini, [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] çalıştırdığınız işletim sistemine ve profili oluşturulmuş uygulamanın hedef platformunda değişir.
 
-Profil oluşturma araçları için olan yolu almak için bkz: [komut satırı araçları yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
+Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
-## <a name="to-specify-pre-instrument-commands"></a>İşaretleme öncesi komut belirtmek için
+## <a name="to-specify-pre-instrument-commands"></a>Araç öncesi komutları belirtmek için
 
-1. Aşağıdaki adımlardan birini uygulayın:
+1. Aşağıdaki adımlardan birini gerçekleştirin:
 
-    - İşaretleme öncesi komutlar tüm ikili dosyaları için bir performans oturumu belirtmek için performans oturumu düğümünde seçin **performans Gezgini**ve ardından sağ tıklayıp **özellikleri**.
+    - Bir performans oturumunda tüm ikili dosyalar için ön gereç komutlarını belirtmek üzere **Performans Gezgini**' deki performans oturumu düğümünü seçin ve ardından **Özellikler**' i seçin.
 
-    - İşaretleme öncesi komut için belirli bir ikili belirtmek için ikili adına sağ tıklayın **hedefleri** performans oturumu tıklayın ve ardından listesi **özellikleri**.
+    - Belirli bir ikiliye ilişkin ön gereç komutlarını belirtmek için, performans oturumunun **hedefler** listesinden ikilinin adına sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. İçinde **özellik sayfaları**, tıklayın **izleme**.
+2. **Özellik sayfalarında**, **izleme**' ye tıklayın.
 
-3. Komut türü **komut satırı** metin kutusu altında **işaretleme öncesi olaylar**.
-
-    > [!NOTE]
-    > Üç nokta düğmesine tıklayabilirsiniz **(...)**  bitişik olan **komut satırı** kutusunu göz atın ve uygun .exe, .cmd veya .bat dosyasını seçin.
-
-4. **Tamam**'ı tıklatın.
-
-     Komut çalışmasını kaldırmadan devre dışı bırakmak için seçin **İzleme'den Dışla** onay kutusu. Derleyici veya bağlayıcı ayarları değiştirmek için proje özellik sayfalarını kullanın.
-
-## <a name="to-specify-post-instrument-commands"></a>Son izleme komutları belirtmek için
-
-1. Aşağıdaki adımlardan birini uygulayın:
-
-    - Son izleme komutları tüm ikili dosyaları için bir performans oturumu belirtmek için performans oturumu düğümünde seçin **performans Gezgini**ve ardından sağ tıklayıp **özellikleri**.
-
-    - Son izleme komutları için belirli bir ikili belirtmek için ikili adına sağ tıklayın **hedefleri** performans oturumu tıklayın ve ardından listesi **özellikleri**.
-
-2. İçinde **özellik sayfaları**, tıklayın **izleme**.
-
-3. Komut türü **komut satırı** metin kutusu altında **son izleme olayları**.
+3. Komut **satırı** metin kutusuna komutu, **önceden işaretleme olayları**altında yazın.
 
     > [!NOTE]
-    > Üç nokta düğmesine tıklayabilirsiniz **(...)**  bitişik olan **komut satırı** kutusunu göz atın ve uygun .exe, .cmd veya .bat dosyasını seçin.
+    > **Komut satırı** kutusunun yanındaki üç nokta düğmesini **(...)** tıklatarak uygun. exe,. cmd veya. bat dosyasına gözatıp seçebilirsiniz.
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
-     Komut çalışmasını kaldırmadan devre dışı bırakmak için seçin **İzleme'den Dışla** onay kutusu. Derleyici veya bağlayıcı ayarları değiştirmek için proje özellik sayfalarını kullanın.
+     Komutun kaldırılmadan çalıştırılmasını devre dışı bırakmak için, **araçlardan Dışla** onay kutusunu seçin. Derleyici veya bağlayıcı ayarlarını değiştirmek için, proje özelliği sayfalarını kullanın.
+
+## <a name="to-specify-post-instrument-commands"></a>Araç sonrası komutları belirtmek için
+
+1. Aşağıdaki adımlardan birini gerçekleştirin:
+
+    - Bir performans oturumunda tüm ikili dosyalar için araç sonrası komutları belirtmek için **Performans Gezgini**' deki performans oturumu düğümünü seçin ve ardından **Özellikler**' i seçin.
+
+    - Belirli bir ikiliye yönelik son araç komutlarını belirtmek için, performans oturumunun **hedefler** listesinden ikilinin adına sağ tıklayın ve ardından **Özellikler**' i seçin.
+
+2. **Özellik sayfalarında**, **izleme**' ye tıklayın.
+
+3. Komut **satırı** metin kutusuna komutu, **son izleme olayları**altında yazın.
+
+    > [!NOTE]
+    > **Komut satırı** kutusunun yanındaki üç nokta düğmesini **(...)** tıklatarak uygun. exe,. cmd veya. bat dosyasına gözatıp seçebilirsiniz.
+
+4. **Tamam**'a tıklayın.
+
+     Komutun kaldırılmadan çalıştırılmasını devre dışı bırakmak için, **araçlardan Dışla** onay kutusunu seçin. Derleyici veya bağlayıcı ayarlarını değiştirmek için, proje özelliği sayfalarını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

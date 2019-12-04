@@ -1,5 +1,5 @@
 ---
-title: Satırlar görünümü - örnekleme verileri | Microsoft Docs
+title: Satırlar Görünümü-Örnekleme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,56 +8,57 @@ ms.assetid: 46497249-c797-42c5-a02c-3e4bb3b4ee60
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ed2c552baa07bf0f3d2a395cbdfbf1d5346178c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ff4d851937111400002de531696b9b69aec20ba9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435613"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778589"
 ---
-# <a name="lines-view---sampling-data"></a>Satırlar görünümü - örnekleme verileri
-Profil oluşturma örnek toplanmadı olduğunda yürüten deyimleri için performans verilerini örnekleme verileri görünümünü listeler satırları çalıştırın.
+# <a name="lines-view---sampling-data"></a>Satırlar Görünümü-Örnekleme verileri
+Örnekleme verilerinin satırlar görünümü, profil oluşturma çalıştırmasında örnek toplandığında yürütülen deyimler için performans verilerini listeler.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'deki Gelişmiş güvenlik özellikleri Visual Studio profil oluşturucu bu platformlarda veri toplayan bir şekilde önemli değişiklikler gerekmiştir. UWP uygulamaları, ayrıca yeni toplama teknikleri gerektirir. Bkz: [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
- Bir kaynak dosyasında bir deyimi kaynak dosyasında birden fazla satırı kapsayabilir ve tek bir satır birden fazla deyim içerebilir. Bir deyimi aşağıdaki tarafından tanımlanır:
+ Bir kaynak dosyasında, bir ifade kaynak dosyada birden fazla satıra yayılabilir ve tek bir satır birden fazla ifade içerebilir. Bir ifade aşağıdaki şekilde tanımlanır:
 
-- Function deyimi içeren kaynak dosyası.
+- Function ifadesini içeren kaynak dosya.
 
-- Deyimi içeren işlev.
+- İfadesini içeren işlev.
 
-- Kaynak satırı deyim başlar.
+- Deyimin başladığı kaynak satır.
 
-- Deyim başladığı kaynak satırı karakter.
+- Deyimin başladığı kaynak satırdaki karakter.
 
-- Kaynak satırı başlangıçtan deyimini sonlandırır.
+- Deyimin bittiği kaynak satır.
 
-- Deyim erdiği kaynak satırı karakter.
+- Deyimin bittiği kaynak satırdaki karakter.
 
-  Satır adı sütunu tanımlayıcısı veri sıralanabilir bir birleşimini sağlar.
+  Satır adı sütunu, tanımlayıcı verilerinin sıralanabilir bir birleştirmesini sağlar.
 
-  Tanımı gereği, diğer işlevler bir deyim çağırmaz. Bu nedenle, yalnızca özel değerler listelenmiştir.
+  Tanım olarak, bir ifade diğer işlevleri çağırmaz. Bu nedenle, yalnızca dışlamalı değerler listelenir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**İşlem kimliği**|İşlem, profil oluşturma çalışması Kimliğine (PID).|
+|**İşlem KIMLIĞI**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|İşlemin adı.|
-|**Modül adı**|İşlev satır içeren modül adı.|
-|**Modül yolu**|İşlev satır içeren modül yolu.|
-|**Kaynak dosyası**|İşlev satır içeren kaynak dosyası.|
+|**Modül adı**|İşlev satırını içeren modülün adı.|
+|**Modül yolu**|İşlev satırını içeren modülün yolu.|
+|**Kaynak dosya**|İşlev satırını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin adı.|
-|**İşlevin satır numarası**|Satır numarası kaynak dosyada bu işlevin başlangıcı.|
-|**İşlev adresi**|İşlev başlangıç adresi.|
-|**Kaynak satır başlangıcı**|Bu örnek, toplanan kaynak dosyadaki başlangıç satır numarası.|
-|**Kaynak satır sonu**|Bitiş satır numarası kaynak dosyada, bu örnek toplanmadı.|
-|**Kaynak karakter başlangıcı**|Bu örnek, toplanan kaynak dosya satırında başlangıç karakteri uzaklığı.|
-|**Kaynak karakter sonu**|Bu örnek, toplanan kaynak dosya satırdaki bitiş karakter uzaklığı.|
-|**Satır adı**|Profil Oluşturucu tarafından oluşturulan bir satırın aşağıdaki sözdizimiyle tanıtıcısı:`Source File`**; [**  `Line Number Start` **,**`Character Start`**] ->; [** `Line Number End`**,**`Character End`**]**|
-|**Dışlamalı örnekler**|İşlev satır yürütülürken, toplanan örneklerin toplam sayısı.|
-|**Dışlamalı örnek yüzdesi**|İşlev satır yürütülürken, toplanmış olan profil oluşturma, tüm örneklerin yüzdesi.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**İşlev adresi**|İşlevin başlangıç adresi.|
+|**Kaynak satırı başlangıç**|Bu örneğin toplandığı kaynak dosyadaki başlangıç satırı numarası.|
+|**Kaynak satır sonu**|Bu örneğin toplandığı kaynak dosyadaki bitiş satırı numarası.|
+|**Kaynak karakter başlangıcı**|Bu örneğin toplandığı kaynak dosya satırındaki başlangıç karakterinin boşluğu.|
+|**Kaynak karakter sonu**|Bu örneğin toplandığı kaynak dosya satırındaki bitiş karakterinin boşluğu.|
+|**Satır adı**|Aşağıdaki sözdizimine sahip satır için profil oluşturucu tarafından oluşturulan bir tanımlayıcı:`Source File` **; [** `Line Number Start` **,** `Character Start` **]->; [** `Line Number End` **,** `Character End` **]**|
+|**Dışlamalı örnekler**|İşlev satırı yürütüldüğü zaman toplanan örneklerin toplam sayısı.|
+|**Dışlamalı örnekler%**|İşlev satırı yürütüldüğü sırada toplanan profil oluşturma çalıştırmasında tüm örneklerin yüzdesi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Satırlar görünümü - örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
+- [Satırlar Görünümü-Örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)

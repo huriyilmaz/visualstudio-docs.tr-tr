@@ -10,24 +10,25 @@ ms.assetid: 36e71603-ece7-4000-85fc-9da4eed61bf2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f5bebcaf9b6e69883f8876a10a99fefb81e6105
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: a181ecb66c3735eb34ab3c866c3c68b2397781f6
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911931"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779330"
 ---
 # <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504: İşlem için izin verilen Bayt Cinsinden En Büyük Çalışma Kümesinin profili oluşturuluyor
 
 |||
 |-|-|
-|Kural kimliği|DA0504|
+|Kural Kimliği|DA0504|
 |Kategori|Kaynak yönetimi|
 |Profil oluşturma yöntemi|Tümü|
 |İleti|Bu bilgiler yalnızca bilgi için toplanmıştı. Işlem çalışma kümesi sayacı, profil oluşturduğunuz işlem tarafından fiziksel bellek kullanımını ölçer. Bildirilen değer tüm ölçüm aralıklarında gözlemlenen en yüksek değerdir.|
-|Kural türü|Bilgiler|
+|Kural türü|Bilgisi|
 
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 

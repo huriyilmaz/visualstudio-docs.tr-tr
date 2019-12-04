@@ -9,28 +9,29 @@ ms.assetid: e6fda144-f21d-4912-9d16-1b8d3555a210
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9802bc92a857192ce144432114a8add2c1becba8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 64842c5b4f622a1f76aa528360f79403ec92cb42
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788525"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777863"
 ---
 # <a name="compare-performance-data-files"></a>Performans veri dosyalarını karşılaştırma
 
-Profil oluşturma araçları veri dosyalarını karşılaştırma işlevi sayesinde iki rapor dosyası seçin (. *Vsp* ya. *vsps*) dosyaları ve farkları, performans gerilemeleri ve bir profil oluşturma oturumundan diğerine oluştu iyileştirmeleri gösteren bir rapor oluşturur.
+Profil Oluşturma Araçları veri dosyaları karşılaştırma işlevselliği, iki rapor dosyası seçmenizi sağlar (. *VSP* /or. *vsps*) dosyalar ve bir profil oluşturma oturumundan diğerine gerçekleşen farkları, performans gerilemeleri ve geliştirmeleri gösteren bir rapor oluşturur.
 
-Veri dosyalarını Karşılaştırma raporu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma araçları, başka bir veri dosyasındaki bir temel analiz sonuçları için bir profil oluşturma veri dosyasını içinde analiz sonuçlarını karşılaştırır. Her iki veri dosyalarını aynı profil oluşturma yöntemini kullanarak oluşturulmuş olmalıdır. Analiz edilen Karşılaştırma raporu olarak kaydedilmiş bir. *vsps* dosya.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları veri dosyalarının karşılaştırma raporu, bir profil oluşturma veri dosyasındaki analizin sonuçlarını başka bir veri dosyasındaki temel çözümlemenin sonuçlarına karşılaştırır. Her iki veri dosyası aynı profil oluşturma yöntemi kullanılarak oluşturulmuş olmalıdır. Çözümlenen karşılaştırmalar raporu bir olarak kaydedilir. *vsps* dosyası.
 
-Değiştirilen verileri içeren bir tablo görünümü karşılaştırma rapor görünümünü sunar. Tablo, delta veya taban çizgisinden Değiştir sunar. Delta eski değeri, temel değeri ve sonuç değeri arasındaki farkı yeni analiz belirleyerek hesaplanır.
+Karşılaştırma raporu görünümü değiştirilen verilerin tablo görünümünü sunar. Tablo, Delta veya taban çizgisinden göre değişiklik gösterir. Delta değeri, eski değer, taban çizgisi değeri ve yeni analizin sonucu değeri arasındaki fark saptanarak hesaplanır.
 
-Profil Oluşturucu veri karşılaştırmalarını temel işlevler kodu, uygulama, çizgiler, yönerge işaretçileri (IP) ve türleri modüllerde alabilir.
+Profiler verilerinin karşılaştırmaları, koddaki işlevlere, uygulamadaki modüllerde, satırlarda, yönerge işaretçilerine (IP) ve türlere göre yapılabilir.
 
-Profil oluşturma verisi karşılaştırma için kullanılabilir olan sütunları görüntülenen bilgileri içerir. Bu sütun adları tanımları için bkz: [performans raporu görünümleri](../profiling/performance-report-views.md).
+Karşılaştırma için kullanılabilen profil oluşturma verileri sütunlarda görüntülenen bilgileri içerir. Bu sütun adlarının tanımları için bkz. [Performans raporu görünümleri](../profiling/performance-report-views.md).
 
-Bir eşiği gürültüsünü azaltmak ve değişip değişmediğini satır karşılaştırma Tablo görünümünde herhangi bir veri filtrelemek için belirli bir miktarda ayarlanabilir.
+Bir eşik, paraziti azaltmak ve belirli bir miktarda değişmemiş satırların karşılaştırma tablosu görünümündeki verilerin filtreleneceği şekilde ayarlanabilir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 

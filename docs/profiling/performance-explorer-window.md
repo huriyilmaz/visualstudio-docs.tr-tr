@@ -10,47 +10,48 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c8ffa5340ceaa00adb5e86100d8e58c307f41d40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a365892f606da90c608e43b7ccce73b902ec0e98
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772445"
 ---
 # <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 
-**Performans Gezgini** penceresi Visual Studio IDE içinde yapılandırmanıza ve Visual Studio Profil Araçları performans oturumlarını başlamayı sağlar. Pencereyi açmak gerekiyorsa, yönergeleri [yeni başlayanlar için performans profili oluşturma Kılavuzu](../profiling/beginners-guide-to-cpu-sampling.md).
+Visual Studio IDE 'deki **Performans Gezgini** penceresi, visual Studio profil oluşturma araçları kullanarak performans oturumlarını yapılandırıp başlatabilmenizi sağlar. Pencereyi açmanız gerekiyorsa [performans profili oluşturmak Için yeni başlayanlar kılavuzundaki](../profiling/beginners-guide-to-cpu-sampling.md)yönergeleri izleyin.
 
 ## <a name="performance-explorer-toolbar"></a>Performans Gezgini araç çubuğu
 
-Aşağıdaki seçenekler mevcuttur **performans Gezgini** araç çubuğu:
+**Performans Gezgini** araç çubuğunda aşağıdaki seçenekler mevcuttur:
 
-- **Performans Sihirbazını Başlat** -performans Gezgini penceresi için yeni performans oturumu eklemek için performans Sihirbazı'nı görüntüler.
+- **Performansı Başlatma Sihirbazı** -performans Gezgini penceresine yeni bir performans oturumu eklemek Için performans sihirbazını görüntüler.
 
-- **Yeni performans oturumu** -performans Gezgini penceresi için bir boş performans oturumu ekler.
+- **Yeni performans oturumu** -performans Gezgini penceresine boş bir performans oturumu ekler.
 
-- **Başlatma** - **başlatma** komut düğmesi listesi sağlar, profil oluşturma hemen etkin olan bir hedef uygulama başlatılamadı (**başlatma profil oluşturma ile**) veya askıya alınmış (Profiloluşturma **Profil oluşturma ile Başlat duraklatıldı**).
+- **Başlat** - **Başlat** komut düğmesi listesi, profil oluşturma işleminin hemen etkinleştirildiği (**profil oluşturma ile başlatma**) veya profil oluşturma askıya alınmış olarak (profil**oluşturma duraklatılmış şekilde başlatma**) hedef uygulamayı başlatmanıza olanak sağlar.
 
-- **Yöntem** -oturumun profil oluşturma yöntemine mi örnekleme veya Araçlar belirtir.
+- **Yöntem** -oturumun profil oluşturma yönteminin örnekleme veya izleme olup olmadığını belirtir.
 
-- **Durdur** -hedef uygulamanın ve profil oluşturucu hemen çıkar.
+- **Durdur** -hedef uygulamayı ve profil oluşturucuyu hemen çıkar.
 
-- **Attach/Detach** -görüntüler **işleme iliştirmek Profiler** iletişim kutusu, profil oluşturucuyu eklemek için çalışan bir işlem seçin.
+- **İliştir/ayır** -profil oluşturucunun ekleneceği çalışan bir işlem seçmek Için **Işleme profil oluşturucuyu Ekle** iletişim kutusunu görüntüler.
 
 ## <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 
-**Performans Gezgini** penceresi ikili dosyaları ve bir veya daha fazla performans oturumları, rapor veri dosyalarını görüntüleyen bir ağaç denetimi içerir.
+**Performans Gezgini** pencere, bir veya daha fazla performans oturumunun ikili dosyalarını ve rapor veri dosyalarını görüntüleyen bir ağaç denetimi içerir.
 
-- **Oturum adı** -ağaç denetimi kök oturumun adı içerir. Oturum özellikleri ayarlamak veya hedef uygulama ve profil oluşturucuyu başlatmak için oturum adına sağ tıklayın.
+- **Oturum adı** -ağaç denetiminin kökü, oturumun adını içerir. Oturum özelliklerini ayarlamak için oturum adına sağ tıklayın veya hedef uygulamayı ve profil oluşturucuyu başlatın.
 
-- **Hedefleri** -oturumda profil oluşturulacak ikili dosyalarının adlarını görüntüler. Sağ **hedefleri** eklemek veya bir ikili kaldırmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje veya Web sitesi. Bireysel ikili özelliklerini ayarlamak için bir hedef adına sağ tıklayın.
+- **Hedefler** -oturumda profili oluşturulacak ikili dosyaların adlarını görüntüler. Bir ikili, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projesi veya Web sitesi eklemek veya kaldırmak için **hedefler** ' e sağ tıklayın. Tek bir ikilinin özelliklerini ayarlamak için bir hedef adına sağ tıklayın.
 
-- **Raporları** -oturumu için oluşturulan profil oluşturucu veri dosyalarının adlarını görüntüler. Sağ **raporları** iki Profil Oluşturucu veri dosyalarını karşılaştırma ya da mevcut bir raporu ekleyin. Açık, kaldırmak veya bir profil oluşturucu veri dosyasına dışarı aktarmak için bir rapor adına sağ tıklayın.
+- **Raporlar** -oturum için oluşturulan profil oluşturucu veri dosyalarının adlarını görüntüler. Mevcut bir raporu eklemek veya iki profil oluşturucu veri dosyasını karşılaştırmak için **raporlar** ' a sağ tıklayın. Profil Oluşturucu veri dosyasını açmak, kaldırmak veya dışarı aktarmak için bir rapor adına sağ tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Genel bakışlar](../profiling/overviews-performance-tools.md)
+[Veri toplamayı denetlemek](../profiling/controlling-data-collection.md)
 [performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
-[veri toplama denetimi](../profiling/controlling-data-collection.md)
+[genel bakış](../profiling/overviews-performance-tools.md)

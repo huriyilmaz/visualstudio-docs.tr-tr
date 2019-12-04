@@ -7,20 +7,21 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 510fca63f57189aa86c11dd6afbc1ddfe894a597
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 96b5fed31238fbc0e46d9982080b3acb1082e9f9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973388"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778134"
 ---
 # <a name="tier-interaction-views"></a>Etkileşim Görünümleri
 
-Katman etkileşim profili oluşturma veritabanları ile iletişim kuran çok katmanlı uygulamaların işlevlerin yürütme sürelerini hakkında ek bilgi sağlayan [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]. Verileri yalnızca zaman uyumlu işlev çağrıları için toplanır. Tüm profil oluşturma yöntemleri katman etkileşim verileri içerebilir.
+Katman etkileşimi profili oluşturma, [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]aracılığıyla veritabanlarıyla iletişim kuran çok katmanlı uygulamalardaki işlevlerin yürütme zamanları hakkında ek bilgiler sağlar. Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır. Katman etkileşim verilerini tüm profil oluşturma yöntemlerine dahil edebilirsiniz.
 
-Katman etkileşimi görünümleri, yalnızca Visual Studio Enterprise'da kullanılabilir.
+Katman etkileşimi görünümleri yalnızca Visual Studio Enterprise kullanılabilir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 

@@ -1,24 +1,25 @@
 ---
-title: Args | Microsoft Docs
+title: Bağımsız değişkenler | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 20c35949-1f29-4282-ac75-4e6c237d71bc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 036b13a7fea5d64e23e2b7d5ccbd8a7b17f91176
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b6d01a95b7e0872d6bb36c6d9f3917bc6a05b3b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777056"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779824"
 ---
 # <a name="args"></a>Bağımsız Değişkenler
-VSPerfCmd.exe **Args** seçeneği belirtir hedef uygulamaya geçirilen bağımsız değişkenlerin bir listesi **başlatma** alt.
+VSPerfCmd. exe **args** seçeneği, **Launch** alt komutunun hedef uygulamasına geçirilen bağımsız değişkenlerin bir listesini belirtir.
 
- **Args** yalnızca ne zaman kullanılabilir **başlatma** da komut satırı üzerinde belirtilmiş. **Args** isteğe bağlı olduğunda **başlatma** belirtilir.
+ **Bağımsız değişkenler** yalnızca **başlatma** komut satırında de belirtildiğinde kullanılabilir. **Başlatma** belirtildiğinde **args** isteğe bağlıdır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,13 +28,13 @@ VSPerfCmd.exe /Launch:AppName /Args:Arguments [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `Arguments` Hedef uygulamayı bağımsız değişken listesi **başlatma** komutu.
+ **başlatma** komutunun hedef uygulamasına bağımsız değişkenlerin bir listesini `Arguments`.
 
-## <a name="required-options"></a>Gerekli seçenekleri
- **Başlat:** `AppName` Belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profili oluşturma başlar.
+## <a name="required-options"></a>Gerekli seçenekler
+ **Başlatma:** `AppName` belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profil oluşturmaya başlar.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte **Args** TestApp.exe için bağımsız değişkenleri geçirmek için seçeneği.
+ Aşağıdaki örnek, bağımsız değişkenleri TestApp. exe ' ye geçirmek için **args** seçeneğini kullanır.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -42,6 +43,6 @@ VSPerfCmd.exe /Launch:TestApp.exe /Args:"123, 'Hello World'"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Bağımsız uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil oluşturma hizmetleri](../profiling/command-line-profiling-of-services.md)

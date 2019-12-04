@@ -1,5 +1,5 @@
 ---
-title: Yönerge işaretçileri (IP) görünümü | Microsoft Docs
+title: Yönerge Işaretçileri (IP) görünümü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,25 +15,26 @@ ms.assetid: 5e26e0fd-383b-4fb6-a29d-a458d8232828
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a9208a274c9dc50226452bbe9d2235d8dbf9b42
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9c90d070a3b7125143eda5fd8666b1a4f64312b3
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62995361"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778641"
 ---
 # <a name="instruction-pointers-ips-view"></a>Yönerge İşaretçileri (IP) Görünümü
-Yönerge işaretçileri görünümü, örnekleme profil oluşturma sırasında yürütülen belirli yönergeler görmenizi sağlar.
+Yönerge Işaretçileri görünümü örnekleme profili oluşturma sırasında yürütülen belirli talimatları görmenizi sağlar.
 
- Bu görünüm izleme profil oluşturma sırasında kullanılamaz.
+ Bu görünüm, izleme profili oluşturma sırasında kullanılamaz.
 
- Profil verileri örnekleme için IP'ler görünüm örnek toplandığında doğrudan yürütülmekte olan bir işlevde yönergeleri tanımlar.
+ Örnekleme profili verileri için, IP 'Ler görünümü, örnek toplandığında doğrudan yürütülen bir işlevdeki yönergeleri tanımlar.
 
- .NET bellek verileri için bellek tahsis yönergeleri satırlar görünümü tanımlar.
+ .NET bellek verileri için satırlar görünümü bellek ayıran yönergeleri tanımlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)
-- [Yönerge işaretçileri (IP) görünümü - örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
+- [Yönerge Işaretçileri (IP) görünümü-örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-contention-data.md)

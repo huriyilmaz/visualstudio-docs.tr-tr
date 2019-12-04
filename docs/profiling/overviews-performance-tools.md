@@ -6,54 +6,55 @@ ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dcce2a7a505c5ac5aa1db3232055f8b37b7e64ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d284ffc6b850a9746cf1442f35400a18045bbe18
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794407"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772690"
 ---
 # <a name="overviews-performance-tools"></a>Genel Bakış (performans araçları)
-Bu bölüm, kavramsal sağlar ve terminolojisi genel bakışlar için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , geliştirme aşamasındaki uygulama performans özellikleri ölçmek için kullanabileceğiniz profil oluşturma araçları.
+Bu bölüm, geliştirme aşamasındaki bir uygulamanın performans özelliklerini ölçmek için kullanabileceğiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları için kavramsal ve terminoloji genel bilgileri sağlar.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
 
- Performans profili oluşturma hakkındaki temel bilgileri öğrenin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma araçları.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları ile performans profili oluşturma temellerini öğrenin.
 
 - [Performans oturumu özellikleri](../profiling/performance-session-properties.md)
 
- Performans oturumu yapılandırmak için kullanılan özellikleri tanımlar.
+ Bir performans oturumu yapılandırmak için kullanılabilen özellikleri açıklar.
 
 - [Örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)
 
- Örnekleme profili oluşturma yöntemi kullandığınızda, bildirilen veri değerleri öğrenin.
+ Örnekleme profil oluşturma yöntemini kullandığınızda raporlanan veri değerlerini öğrenin.
 
 - [İzleme veri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md)
 
- İzleme profil oluşturma metodunu kullandığınızda raporlanır veri değerleri öğrenin.
+ İzleme profili oluşturma yöntemini kullanırken raporlanan veri değerlerini öğrenin.
 
-- [Bellek ayırma ve nesne yaşam verisi değerlerini anlama](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
+- [Bellek ayırmayı ve nesne yaşam süresi veri değerlerini anlama](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
 
- .NET bellek profili oluşturma yöntemi kullandığınızda, bildirilen veri değerleri öğrenin.
+ .NET bellek profili oluşturma yöntemini kullandığınızda bildirilen veri değerlerini öğrenin.
 
 - [Kaynak çakışması veri değerlerini anlama](../profiling/understanding-resource-contention-data-values.md)
 
- Eşzamanlılık profil oluşturma yöntemi kullandığınızda, bildirilen veri değerleri öğrenin.
+ Eşzamanlılık profil oluşturma yöntemini kullandığınızda raporlanan veri değerlerini öğrenin.
 
 - [Performans Gezgini penceresi](../profiling/performance-explorer-window.md)
 
- Yapılandırma ve performans oturumu başlatmak için kullanılan pencere açıklar.
+ Performans oturumlarını yapılandırmak ve başlatmak için kullanılan pencereyi açıklar.
 
 - [CPU ve Windows sayaçları](../profiling/cpu-and-windows-counters.md)
 
- Bir performans oturumu ek performans verileri sağlayan CPU ve Windows performans sayaçları hakkında bilgi edinin.
+ Performans oturumunda ek performans verileri sağlayabilen CPU ve Windows performans sayaçları hakkında bilgi edinin.
 
 - [Profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md)
 
- Sorunlar ve örnekleme verileri toplama ve çapraz oturum profil için gerekli olan adımları öğrenmek uygulamaları [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)].
+ Örnekleme verilerini toplamak ve [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]çapraz oturum uygulamalarının profilini almak için gereken sorunları ve adımları öğrenin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

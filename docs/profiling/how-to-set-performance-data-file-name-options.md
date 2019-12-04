@@ -1,47 +1,48 @@
 ---
-title: 'Nasıl yapılır: Performans veri dosyası adlandırma seçeneklerini ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b83b0aa083ca115797c9dc1cd8345d397307177
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cc42b63524a867c0893aa255180c740d03d4b5fe
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539279"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778771"
 ---
-# <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: Performans veri dosyası adlandırma seçeneklerini ayarlama
+# <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama
 
-Varsayılan olarak, profil oluşturma verilerini kaydedin (. *Vsp*) aşağıdaki söz dizimini kullanarak dosya:
+Varsayılan olarak, profil oluşturma verilerini (. *VSP*) dosyası aşağıdaki sözdizimini kullanarak:
 
-*Path\VSP-File\YYMMDD(N)* **.vsp**
+*Yol\vsp-file\ydd (N)* **. vsp**
 
-Herhangi bir adlandırma parametre değiştirebileceğiniz **genel** için performans oturumu Özellikleri iletişim kutusu sayfası.
+Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında herhangi bir adlandırma parametresini değiştirebilirsiniz.
 
 |||
 |-|-|
-|*Yolu*|Rapor içeren dizin. Varsayılan konumu, kullanıcının projeler ve çözümler için varsayılan konum ya da Çözüm klasörü ' dir.|
-|*VSP-File*|Profil oluşturma veri dosyasının adı. Yürütülebilir, profil oluşturulan ya da çözüm adı varsayılan addır.|
-|*YYAAGG*|Yıl, ay ve profil oluşturma verilerinin toplandığı günü gösteren tarih damgası.|
-|*(N)*|Birden fazla profil oluşturma veri dosyası varsa, dosya adı parantezler arasında artan bir sayı eklenir.|
+|*Yolun*|Raporu içeren dizin. Varsayılan konum, çözüm klasörüdür veya kullanıcının projeleri ve çözümleri için varsayılan konumdur.|
+|*VSP dosyası*|Profil oluşturma veri dosyasının adı. Varsayılan ad, profil oluşturulan çözümün veya yürütülebilir dosyanın adıdır.|
+|*YYAAGG*|Profil oluşturma verilerinin toplandığı yılı, ayı ve günü gösteren bir tarih damgası.|
+|*No*|Birden fazla profil oluşturma veri dosyası varsa, parantez arasında dosya adına artan bir sayı eklenir.|
 
-## <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>Adlandırma söz dizimi profil oluşturma veri dosyaları bir performans oturumunun değiştirmek için
+## <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>Bir performans oturumunun profil oluşturma veri dosyalarının adlandırma sözdizimini değiştirmek için
 
-1. İçinde **performans Gezgini**performans oturumu adına sağ tıklayın ve ardından **özellikleri**.
+1. **Performans Gezgini**, performans oturumunun adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Tıklayın **genel**.
+2. **Genel**' e tıklayın.
 
-3. Altında **rapor**, aşağıdaki ayarlardan birini değiştirin:
+3. **Rapor**' ın altında, aşağıdaki ayarlardan birini değiştirin:
 
     |||
     |-|-|
-    |**Rapor konumu**|Profil oluşturma veri dosyaları depolamak için bir dizin belirtin.|
-    |**Rapor adı**|Dosyalar için temel bir ad belirtin.|
-    |**Yeni raporlar oturuma otomatik olarak Ekle**|Veri dosyası için performans oturumu otomatik olarak eklemek için onay kutusunu işaretleyin.|
-    |**Oluşturulan raporlar için artan bir sayı Ekle**|Aynı ada sahip birden fazla dosya varsa, artan bir sayı için dosya adı eklemek için onay kutusunu işaretleyin. Varolan dosyanın üzerine yazmak için bu onay kutusunu temizleyin.|
-    |**Numara için zaman damgasını kullanın**|Dosya adına bir tarih damgası eklemek için onay kutusunu işaretleyin.|
+    |**Rapor konumu**|Profil oluşturma veri dosyalarını depolamak için bir dizin belirtin.|
+    |**Rapor adı**|Dosyalar için bir temel ad belirtin.|
+    |**Oturuma otomatik olarak yeni raporlar ekleyin**|Veri dosyasını otomatik olarak performans oturumuna eklemek için onay kutusunu işaretleyin.|
+    |**Oluşturulan raporlara artan bir sayı Ekle**|Aynı ada sahip birden fazla dosya varsa dosya adına bir artan sayı eklemek için onay kutusunu işaretleyin. Varolan bir dosyanın üzerine yazmak için onay kutusunu temizleyin.|
+    |**Numara için zaman damgası kullanın**|Dosya adına bir dateStamp eklemek için onay kutusunu işaretleyin.|

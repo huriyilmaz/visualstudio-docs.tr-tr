@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Web sitesi için performans verilerini toplama | Microsoft Docs'
+title: 'Nasıl yapılır: bir Web sitesi için performans verilerini toplama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,93 +15,94 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f91646575fba2df1f48c08adc7a9233bb63f27df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8b5cacba328c48b682fe9069d8ab4a9ee21635db
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779044"
 ---
-# <a name="how-to-collect-performance-data-for-a-web-site"></a>Nasıl yapılır: Bir web sitesi için performans verilerini topla
+# <a name="how-to-collect-performance-data-for-a-web-site"></a>Nasıl yapılır: bir Web sitesi için performans verilerini toplama
 
-Kullanabileceğiniz **performans Sihirbazı** için performans verilerini toplamak için bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web uygulaması. Visual Studio'da açık olan bir web uygulaması profilini oluşturabilirsiniz veya profil bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web sitesi, yerel bilgisayarınızda bulunan ve Visual Studio IDE'de açık değil.
+Bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulaması için performans verilerini toplamak üzere **performans sihirbazını** kullanabilirsiniz. Visual Studio 'da açık olan bir Web uygulaması profilini oluşturabilir veya yerel bilgisayarınızda bulunan ve Visual Studio IDE 'de açık olmayan bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web sitesinin profilini oluşturabilirsiniz.
 
 > [!NOTE]
-> **Performans Sihirbazı** Katman etkileşimi (TIP) verileri, JScript performans verilerini veya hem toplanan profil oluşturma verilerinin eklemenize olanak tanır. İpucu seçeneği, sunucu tarafı işlemlerden veri toplar. JScript profil oluşturmayı yerel veya uzak bir Web sitesi üzerinde çalıştırılan betikler veri toplar. Çoğu durumda, seçeneklerden yalnızca birini seçmeniz gerekir.
+> **Performans Sihirbazı** , toplanan profil oluşturma verilerine katman ETKILEŞIMI (tıp) verileri, JScript performans verileri veya her ikisini birden eklemenizi sağlar. Ipucu seçeneği, sunucu tarafı süreçlerinden veri toplar. JScript profil oluşturma, yerel veya uzak Web sitesinde çalışan betiklerden veri toplar. Çoğu durumda seçeneklerden yalnızca birini seçmeniz gerekir.
 
- Yönetici kullanımına kullanıcı erişim izinleri ayarlarına bağlı olarak tek bir kullanıcı olabilir veya ASP.NET işleminin barındıran bilgisayarda bir profil oluşturucu oturumu oluşturmak için güvenlik izni olmayabilir. Aşağıdaki örneklerde kullanıcılar arasındaki olası farklar gösterilmektedir:
+ Yöneticinin kullanılabilir hale getirdiğine yönelik kullanıcı erişim Izinleri ayarlarına bağlı olarak, tek bir Kullanıcı, ASP.NET işlemini barındıran bilgisayarda bir profil oluşturucu oturumu oluşturmak için güvenlik iznine sahip olabilir veya olmayabilir. Aşağıdaki örneklerde kullanıcılar arasındaki olası farklılıklar gösterilmektedir:
 
-- Bazı kullanıcılar, sürücü ve hizmeti başlatmak için yöneticiniz tarafından belirlenen zaman Gelişmiş profil oluşturma özelliklerine erişimi.
+- Yönetici, sürücüyü ve hizmeti başlatmaya ayarladıktan sonra bazı kullanıcılar Gelişmiş profil oluşturma özelliklerine erişebilir.
 
-- Etki alanı kullanıcıları yalnızca örnek profil oluşturma erişebilir.
+- Etki alanı kullanıcıları yalnızca örnek profil oluşturma erişimi sağlayabilir.
 
-- Bazı kullanıcılar, diğer tüm kullanıcılar için profil oluşturma için erişimi kısıtla.
+- Bazı kullanıcılar, diğer tüm kullanıcılar için profil oluşturmaya erişimi reddedebilirler.
 
-  Daha fazla bilgi için [profil oluşturma ve Windows Vista Güvenliği](../profiling/profiling-and-windows-vista-security.md) ve yönetim seçeneklerini [VSPerfCmd](../profiling/vsperfcmd.md).
+  Daha fazla bilgi için bkz. [profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md) ve [VSPerfCmd](../profiling/vsperfcmd.md)içindeki yönetici seçenekleri.
 
-## <a name="to-profile-a-web-site-project"></a>Bir web sitesi projesi profilini çıkarmak için
+## <a name="to-profile-a-web-site-project"></a>Bir Web sitesi projesi profili oluşturma
 
-1. Açık [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Visual Studio'da Web projesi.
+1. Visual Studio 'da [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web projesi ' ni açın.
 
-2. Üzerinde **Çözümle** menüsünde **performans Profiler**seçin **performans Gezgini**ve ardından **Başlat**.
+2. **Çözümle** menüsünde, **performans profili Oluşturucu**' yı seçin, **Performans Gezgini**' yi seçin ve ardından **Başlat**' ı seçin.
 
-3. Sihirbazın ilk sayfasında, profil oluşturma yöntemini seçin ve ardından **sonraki**. Profil oluşturma yöntemlerini hakkında daha fazla bilgi için bkz. [performans bilgilerini toplama metotlarını anlama](../profiling/understanding-performance-collection-methods.md). Profil oluşturma yöntemi eşzamanlılık görselleştiricisi web uygulamaları için kullanılabilir olmadığını unutmayın.
+3. Sihirbazın ilk sayfasında bir profil oluşturma yöntemi seçin ve ardından **İleri**' ye tıklayın. Profil oluşturma yöntemleri hakkında daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](../profiling/understanding-performance-collection-methods.md). Eşzamanlılık görselleştiricisi profil oluşturma yönteminin Web uygulamaları için kullanılabilir olmadığına unutmayın.
 
-4. İçinde **hangi uygulamanın profilini oluşturmak için hedeflemek istiyorsunuz?** aşağı açılan listesinde, geçerli projenin'in seçili olduğundan emin olun ve ardından **sonraki**.
+4. **Profil oluşturmak Için hangi uygulamayı hedeflemek istiyorsunuz?** açılan listede, geçerli projenin seçili olduğundan emin olun ve ardından **İleri**' ye tıklayın.
 
-5. Sihirbazın üçüncü sayfasında Katman etkileşimi profil oluşturma (TIP) verileri, JavaScript web sayfaları veya her ikisi içinde çalışan verilerini eklemek seçebilirsiniz.
+5. Sihirbazın üçüncü sayfasında, katman etkileşimi profil oluşturma (tıp) verilerini, Web sayfalarında çalışan JavaScript 'ten verileri veya her ikisini de eklemeyi seçebilirsiniz.
 
-    - Katman etkileşim toplamak için seçin **Katman etkileşimi profil oluşturmayı etkinleştir** onay kutusu.
+    - Katman etkileşimini toplamak için **katman etkileşim profilini etkinleştir** onay kutusunu seçin.
 
-    - JavaScript Web sayfaları'nda çalışan veri toplamak için seçin **JavaScript profili** onay kutusu.
+    - Web sayfalarında çalışan JavaScript 'ten veri toplamak için, **profil JavaScript** onay kutusunu seçin.
 
 6. **İleri**'ye tıklayın.
 
-7. Sihirbazının dördüncü sayfasında tıklayın **son**.
+7. Sihirbazın dördüncü sayfasında **son**' a tıklayın.
 
-8. Performans oturumu için oluşturulan [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulaması ve web sitesi tarayıcıda başlatılır. Profil oluşturmak istediğiniz işlevi çalıştırın ve sonra Tarayıcıyı kapatın.
+8. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulaması için bir performans oturumu oluşturulur ve Web sitesi tarayıcıda başlatılır. Profili eklemek istediğiniz işlevleri yapın ve ardından tarayıcıyı kapatın.
 
-     Profil Oluşturucu veri dosyasını oluşturur ve veri Özet görünümünü görüntüler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ana penceresi.
+     Profil Oluşturucu veri dosyasını oluşturur ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ana penceresindeki verilerin özet görünümünü görüntüler.
 
-## <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio'da bir proje açmadan bir web sitesinin profilini çıkarmak için
+## <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio 'da bir proje açmadan bir Web sitesi profili oluşturma
 
 1. Visual Studio'yu açın.
 
-2. Üzerinde **Çözümle** menüsünde **performans Profiler**seçin **performans Gezgini**ve ardından **Başlat**.
+2. **Çözümle** menüsünde, **performans profili Oluşturucu**' yı seçin, **Performans Gezgini**' yi seçin ve ardından **Başlat**' ı seçin.
 
-3. Sihirbazın ilk sayfasında, profil oluşturma yöntemini seçin ve ardından **sonraki**. Daha fazla bilgi için [anlama performans koleksiyon metotları](../profiling/understanding-performance-collection-methods.md).
+3. Sihirbazın ilk sayfasında bir profil oluşturma yöntemi seçin ve ardından **İleri**' ye tıklayın. Daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](../profiling/understanding-performance-collection-methods.md).
 
-4. Sihirbazın ikinci sayfasında seçin **bir ASP.NET veya JavaScript uygulamanın profilini** seçeneğini ve ardından **sonraki**.
+4. Sihirbazın ikinci sayfasında, **profil a ASP.NET veya JavaScript uygulaması** seçeneğini belirleyin ve ardından **İleri**' ye tıklayın.
 
-5. İçinde **web uygulamanız hangi URL'de çalışacak** kutusunda sihirbazın üçüncü sayfasında, uygulama giriş sayfası URL'sini girin ve ardından **sonraki**.
+5. Sihirbazın üçüncü sayfasında **Web uygulamanızı HANGI URL veya yolda çalıştıracağınızı** , uygulama GIRIŞ sayfasına URL girin ve ardından **İleri**' ye tıklayın.
 
-   - Sunucusu (IIS) tabanlı Web sitesi için bir URL gibi yazın **< `http://localhost/MySite/default.aspx` >**. Bu neden [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulama kök profili oluşturulacak MySite ve sayfa default.aspx oturumu başlatmak için Internet Explorer'da başlatılması için bu sitede yerel bilgisayardaki uygulama.
+   - Sunucu (IIS) tabanlı bir Web sitesi için **<`http://localhost/MySite/default.aspx`>** gıbı bir URL yazın. Bunun nedeni, Sitem 'in uygulama kökündeki yerel bilgisayardaki [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamasının profili oluşturulabilir ve oturumu başlatmak için Internet Explorer 'da varsayılan. aspx sayfası başlatılır.
 
-   - Bir dosya tabanlı Web sitesi için dosya / / / gibi bir yol yazın**c:\WebSites\MySite\default.aspx**. Bu neden [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulama profili oluşturulacak c:\webSites\MySite ve sayfa bulunan `http://localhost:nnnn/MySite/default.aspx` oturumu başlatmak için Internet Explorer'da başlatılacak.
+   - Dosya tabanlı bir Web sitesi için, File///**c:\WebSites\MySite\default.aspx**gibi bir yol yazın. Bu, C:\websites\sitem konumundaki [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamasının profili oluşturulabilir ve oturumu başlatmak için Internet Explorer 'da `http://localhost:nnnn/MySite/default.aspx` sayfanın başlatılmasına neden olur.
 
-   - Örneğin URL'yi yazın, JavaScript verilerini toplamak istediğiniz dış siteleri için `http://www.contoso.com`.
+   - JavaScript verilerini toplamak istediğiniz dış sitelerde URL 'yi yazın, örneğin `http://www.contoso.com`.
 
-     Daha fazla bilgi için özellik sayfaları görüntülemek bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] hedef ikili.
+     Daha fazla bilgi için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] hedef ikilisinin özellik sayfalarını görüntüleyin.
 
-6. Sihirbazın üçüncü sayfasında Katman etkileşimi profil oluşturma (TIP) verileri, JavaScript web sayfaları veya her ikisi içinde çalışan verilerini eklemek seçebilirsiniz.
+6. Sihirbazın üçüncü sayfasında, katman etkileşimi profil oluşturma (tıp) verilerini, Web sayfalarında çalışan JavaScript 'ten verileri veya her ikisini de eklemeyi seçebilirsiniz.
 
-    - Katman etkileşim toplamak için seçin **Katman etkileşimi profil oluşturmayı etkinleştir** onay kutusu.
+    - Katman etkileşimini toplamak için **katman etkileşim profilini etkinleştir** onay kutusunu seçin.
 
-    - JavaScript web sayfaları'nda çalışan veri toplamak için seçin **JavaScript profili** onay kutusu.
+    - Web sayfalarında çalışan JavaScript 'ten veri toplamak için, **profil JavaScript** onay kutusunu seçin.
 
 7. **İleri**'ye tıklayın.
 
-8. Sihirbazının dördüncü sayfasında tıklayın **son**.
+8. Sihirbazın dördüncü sayfasında **son**' a tıklayın.
 
-9. Performans oturumu için ASP.NET uygulama oluşturulur ve web sitesi tarayıcıda başlatılır. Profil oluşturmak istediğiniz işlevi çalıştırın ve sonra Tarayıcıyı kapatın.
+9. ASP.NET uygulaması için bir performans oturumu oluşturulur ve Web sitesi tarayıcıda başlatılır. Profili eklemek istediğiniz işlevleri yapın ve ardından tarayıcıyı kapatın.
 
-     Profil Oluşturucu veri dosyasını oluşturur ve veri Özet görünümünü görüntüler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ana penceresi.
+     Profil Oluşturucu veri dosyasını oluşturur ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ana penceresindeki verilerin özet görünümünü görüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Genel bakışlar](../profiling/overviews-performance-tools.md)
+[Genel bakış](../profiling/overviews-performance-tools.md)
 [performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
 [izleme veri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md)
-[anlayın örnekleme veri değerlerini](../profiling/understanding-sampling-data-values.md)
+[örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)

@@ -5,23 +5,24 @@ ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c68ddbcf6d2284cc3cb2ec103fa9417a6e0338f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4201895fd93d3fa3a9ccb9072382432d6f6e02be
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779707"
 ---
 # <a name="collect-additional-performance-data"></a>Ek performans verileri toplama
 
-Profil oluşturma yöntemini kullanarak topladığınız verilerin yanı sıra, Visual Studio profil oluşturma araçları için ek verileri kaydetmenizi ve görüntülemenizi sağlar.
+Bir profil oluşturma yöntemi kullanarak topladığınız verilerin yanı sıra, Visual Studio Profil Oluşturma Araçları ek verileri kaydetmenize ve görüntülemenize imkan tanır.
 
 ## <a name="common-tasks"></a>Ortak görevler
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**Uygulamanızdaki ADO.NET çağrıları için performans verilerini topla.** Uygulamanızın veritabanına yaptığı zaman uyumlu çağrılar hakkında veri ekleyin.|- [Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)|
-|**Windows performans sayacı verilerini toplayın.** Profil oluşturma işaretleri olarak profil oluşturma verilerine sistem performans sayaçları ekleyin. İşaretler, raporlara filtre uygulamak için kullanılabilir.|- [Nasıl Yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)|
-|**Windows Olay İzleme'için verileri toplar.** Uygulama ve profil oluşturma verilerine ek olarak sistem olaylarını kaydetmek için olay izleme için Windows (ETW) verilerini toplayın.|- [Nasıl Yapılır: Olay izleme için Windows (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
+|**Uygulamanızdaki ADO.NET çağrıları için performans verilerini toplayın.** Uygulamanızın veritabanlarına yaptığı zaman uyumlu çağrılar hakkında veri ekleyin.|[katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md) - |
+|**Windows performans sayacı verilerini toplayın.** Profil oluşturma verilerinize profil oluşturma işaretleri olarak sistem performans sayaçları ekleyin. İşaretler, raporları filtrelemek için kullanılabilir.|- [nasıl yapılır: Windows sayaç verilerini toplama](../profiling/how-to-collect-windows-counter-data.md)|
+|**Windows verileri için olay Izleme toplayın.** Profil oluşturma verilerinize ek olarak uygulama ve sistem olaylarını kaydetmek üzere Windows için olay Izleme (ETW) verilerini toplayın.|- [nasıl yapılır: Windows Için olay izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|

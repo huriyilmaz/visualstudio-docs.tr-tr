@@ -10,24 +10,25 @@ ms.assetid: ebf5d9b3-a1ac-4688-8f0f-39a85f4dd15f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fd4cf83315965d55b97ac19d4c7d88739f932c2
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 36350b59a3d70f8553fddc5f58bf5c79716fa3aa
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777666"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Yüksek oranda Gen 1 çöp koleksiyonları
 
 |||
 |-|-|
-|Kural kimliği|DA0021|
+|Kural Kimliği|DA0021|
 |Kategori|.NET Framework kullanımı|
 |Profil oluşturma yöntemleri|Tümü|
 |İleti|Gerçekleşen çok yüksek bir gen 1 çöp koleksiyonları vardır. Tasarım ile programınızın veri yapılarının çoğu uzun bir süre ayrılır ve kalıcı hale getirilir, bu normalde bir sorun değildir. Ancak, bu davranış istenmeden, uygulamanız nesneleri sabitlenebilir olabilir. Emin değilseniz, uygulamanızın kullandığı bellek ayırma modelini anlamak için .NET bellek ayırma verileri ve nesne yaşam süresi bilgilerini toplayabilirsiniz.|
-|Kural türü|Bilgiler|
+|Kural türü|Bilgisi|
 
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 

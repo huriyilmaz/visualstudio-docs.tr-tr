@@ -11,35 +11,36 @@ ms.assetid: b2773344-8081-4116-85a1-58f770448f6a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: badb2266e47fcbf0bb20c5fd6fd2f7f25a167997
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c9a0537e146ead1c163941a0f552bdea7a28b89c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830921"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773974"
 ---
 # <a name="marks-view"></a>İşaretler Görünümü
-İşaret görünümü, örnekleme ve uygulamaya eklenen ETW olaylarını görüntüler.
+Işaretler görünümü, uygulamaya eklenmiş olan örnekleme ve ETW olaylarını görüntüler.
 
- Raporda önceden doldurulan işaretler, program ve program sonu başlangıcını etiketleyin.
+ Rapor etiketinde önceden doldurulan varsayılan işaretler programın başlangıcını ve programın sonunu belirtir.
 
- Otomatik oluşturulan işaretlerden Windows sayaç verileri de bu görünümde sunulur. Daha fazla bilgi için [nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md).
+ Bu görünümde otomatik olarak oluşturulan işaretlerin Windows sayaçları verileri de sunulur. Daha fazla bilgi için bkz. [nasıl yapılır: Windows sayaç verilerini toplama](../profiling/how-to-collect-windows-counter-data.md).
 
- İki işaretler arasında bir filtre oluşturmak için işaretleri, sağ tıklayın ve ardından seçin **işaretlere göre filtre Ekle** veya **zaman damgasına göre filtre Ekle**.
+ İki işaret arasında bir filtre oluşturmak için, işaretleri seçin, sağ tıklayın ve sonra **işaretler** veya **zaman damgalarına göre filtre Ekle**' ye tıklayın.
 
- Aşağıdaki tablo işaret görünümünde kullanılabilen sütunların tanımlarını sağlar.
+ Aşağıdaki tablo, Işaretler görünümünde kullanılabilir olan sütunların tanımlarını sağlar.
 
- **İşaret kimliği** profil oluşturma işaretinin benzersiz tanımlayıcısı.
+ **Işaret kimliği** Profil oluşturma işaretinin benzersiz tanıtıcısı.
 
- **İşaret adı** olayın adı.
+ **Işaret adı** Etkinliğin adı.
 
- **Zaman damgası** başından itibaren olayın kaydedildiği zaman profil oluşturma zamanı.
+ **Zaman damgası** Profil oluşturmanın başlangıcından olayın kaydedildiği zamana kadar geçen süre.
 
- Windows performans sayacı verileri toplanan değerler, Windows performans sayacı verilerini, sayacın adını taşıyan bir sütunda görüntülenir.
+ Windows performans sayacı verileri toplandığında Windows performans sayacı verileri, sayaç adı olan bir sütunda görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans raporuna genel bakış](../profiling/performance-report-overview.md)
 - [Nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)
-- [&#91;NIB&#93; veri koleksiyonu denetimi penceresi](https://msdn.microsoft.com/98d740d8-459f-4605-bf04-fb17aafaaa8f)
+- [&#91;NIB&#93; veri toplama denetim penceresi](https://msdn.microsoft.com/98d740d8-459f-4605-bf04-fb17aafaaa8f)

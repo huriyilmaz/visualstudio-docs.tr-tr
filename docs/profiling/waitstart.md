@@ -6,14 +6,15 @@ ms.assetid: 6c737177-2dfb-4150-963e-a49ac9aaa591
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a409a4fe4ffe843df536e3c9e17a3a5a3b6560db
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: 1cbabcf86afa9770f1616c7e4e508af1c9afa1ba
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322490"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779863"
 ---
 # <a name="waitstart"></a>WaitStart
 WaitStart seçeneği, *VSPerfCmd. exe* Start alt komutunun yalnızca profil oluşturucu başlatıldığında veya belirtilen saniye sayısı geçtiğinde dönmesini sağlar. Varsayılan olarak start komutu hemen döndürür. Start Sub komutu, profil oluşturucuyu başlatmadan döndürürse bir hata döndürülür. Saniye sayısı belirtilmemişse, Başlat komutu süresiz olarak bekler.
@@ -27,12 +28,12 @@ VSPerfCmd.exe /Start:Method /Output:FileName[Options] /WaitStart[:Seconds]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `Seconds`Başlangıç alt komutundan döndürülmeden önce beklenecek saniye sayısı.
+ Başlangıç alt komutundan dönmeden önce beklenecek saniye sayısını `Seconds`.
 
 ## <a name="required-options"></a>Gerekli seçenekler
  WaitStart seçeneği yalnızca start Sub-komutuyla birlikte kullanılabilir.
 
- **Çıkış:** `filename`Çıkış dosyası adını belirtir.
+ **Çıkış:** `filename` çıkış dosyası adını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 

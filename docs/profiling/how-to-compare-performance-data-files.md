@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Performans veri dosyalarını karşılaştırma | Microsoft Docs'
+title: 'Nasıl yapılır: performans veri dosyalarını karşılaştırma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,48 +11,49 @@ ms.assetid: 1905b45d-c6b3-43c8-87b1-1aee734f37f9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 101512cb15bca022e5e3b473c84bd433a7269e15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6dc9d485f6f40eb345ade8f9680be9e0b948106
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973909"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779005"
 ---
-# <a name="how-to-compare-performance-data-files"></a>Nasıl yapılır: Performans veri dosyalarını karşılaştırma
-İki farklı profil oluşturucu veri dosyalarının sonuçları karşılaştırmak (. *Vsp* veya. *vsps*) bir karşılaştırması ("fark") oluşturarak, rapor veya görüntüleyin. Farklar, performans gerilemeleri ve bir profil oluşturma oturumundan diğerine oluştu iyileştirmeleri karşılaştırmasını gösterir.
+# <a name="how-to-compare-performance-data-files"></a>Nasıl yapılır: performans veri dosyalarını karşılaştırma
+İki farklı profil oluşturucu veri dosyasının sonuçlarını karşılaştırabilirsiniz (. *VSP* veya. *vsps*) bir karşılaştırma ("fark") raporu ya da görünümü oluşturarak. Karşılaştırma, bir profil oluşturma oturumundan diğerine gerçekleşen farkları, performans gerilemeleri ve geliştirmeleri gösterir.
 
- Fark rapor verilerin tablo bir görünümünü sunar. Tablo, delta veya taban çizgisinden Değiştir sunar. Bu, eski değeri, temel değeri ve sonuç değeri arasındaki farkı yeni analiz belirleyerek hesaplanır.
+ Fark raporu, verilerin tablo görünümünü sunar. Tablo, Delta veya taban çizgisinden göre değişiklik gösterir. Bu, eski değer, taban çizgisi değeri ve yeni analizin sonucu değeri arasındaki farkı belirleyerek hesaplanır.
 
- Profil Oluşturucu veri karşılaştırmalarını temel işlevler kodu, uygulama, çizgiler, yönerge işaretçileri (IP) ve türleri modüllerde alabilir.
+ Profiler verilerinin karşılaştırmaları, koddaki işlevlere, uygulamadaki modüllerde, satırlarda, yönerge işaretçilerine (IP) ve türlere göre yapılabilir.
 
- Bir eşiği gürültüsünü azaltmak ve Tablo görünümünde değişip değişmediğini satırların herhangi bir veri filtrelemek için belirli bir miktarda ayarlanabilir.
+ Bir eşik, paraziti azaltmak ve belirli bir miktarda değişmemiş satırların tablo görünümündeki verileri filtrelemek için ayarlanabilir.
 
-### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>Performans Gezgini içinde bir proje için karşılaştırma dosya görünümü oluşturmak için
+### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>Performans Gezgini bir proje için karşılaştırma dosyası görünümü oluşturmak için
 
-1. İçinde **performans Gezgini**altında **raporları**seçin. *Vsp* veya. *vsps* taban çizgisi değerlerini karşılaştırma için kullanmak istediğiniz rapor dosyası.
+1. **Performans Gezgini**, **raporlar**altında öğesini seçin. *VSP* veya. Karşılaştırma için taban çizgisi değerleri olarak kullanmak istediğiniz *vsps* rapor dosyası.
 
-2. Seçin. *vsp* veya. *vsps* rapor karşılaştırmak istediğiniz dosyaları.
+2. Öğesini seçin. *VSP* veya. karşılaştırmak istediğiniz *vsps* rapor dosyaları.
 
-3. Seçilen dosyalardan birine sağ tıklayın ve ardından **karşılaştırma raporları**.
+3. Seçili dosyalardan birine sağ tıklayın ve ardından **raporları Karşılaştır**' a tıklayın.
 
 ### <a name="to-compare-values"></a>Değerleri karşılaştırmak için
 
-1. Seçin **Karşılaştırma raporu** rapor görünümü penceresindeki sekmesi.
+1. Rapor Görünümü penceresinde **karşılaştırma raporu** sekmesini seçin.
 
-2. İçinde **tablo** aşağı açılan listesinde, işlev veya karşılaştırmak için modülleri seçin.
+2. **Tablo** açılan listesinde, Karşılaştırılacak işlev veya modülleri seçin.
 
-3. İçinde **sütun** aşağı açılan listesinde, karşılaştırmak istediğiniz değer seçin.
+3. **Sütun** açılan listesinde, karşılaştırmak istediğiniz değeri seçin.
 
-4. (isteğe bağlı) İçin bir değer yazın **eşiği**.
+4. seçim **Eşik**için bir değer yazın.
 
-5. **Uygula**'ya tıklayın.
+5. **Uygula**' ya tıklayın.
 
-### <a name="to-compare-report-files"></a>Rapor dosyalarını karşılaştırma
+### <a name="to-compare-report-files"></a>Rapor dosyalarını karşılaştırmak için
 
-1. Üzerinde **Çözümle** menüsünde **Performans raporlarını Karşılaştır**.
+1. **Çözümle** menüsünde, **performans raporlarını karşılaştır**' ı seçin.
 
-2. İçinde **seçin analiz dosyaları karşılaştırma** penceresinde, Gözat ve Seç **ana hat dosyası** analiz dosyası (. *Vsp* veya. *vsps*) ve **karşılaştırma dosyası** (. *Vsp* veya. *vsps*).
+2. **Karşılaştırma için analiz dosyalarını Seç** penceresinde, **taban çizgisi dosya** Analizi dosyasını (. *VSP* veya. *vsps*) ve **karşılaştırma dosyası** (. *VSP* veya. *vsps*).
 
-3. **Tamam**'ı tıklatın.
+3. **Tamam**'a tıklayın.

@@ -1,27 +1,28 @@
 ---
-title: Ekleme | Microsoft Docs
+title: Ekle | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f080957774b33ca00787f061708426a62bd7768f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 634169607a7d581de1b1332d78e8d5abde1a722e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440290"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773745"
 ---
-# <a name="attach"></a>İliştir
-*VSPerfCmd.exe* **iliştirme** seçeneği, çalışan işlemin işlem kimliği (PID) tarafından belirtilen örnek profil oluşturma başlar.
+# <a name="attach"></a>Kullanıma aç
+*VSPerfCmd. exe* **Attach** seçeneği, işlem kimliği (PID) tarafından belirtilen çalışan işlemin örnek profilini oluşturmaya başlar.
 
- Kullanılacak **iliştirme** seçeneğini belirtmelisiniz **örnek** başlangıç seçeneği yöntemi.
+ **Attach** seçeneğini kullanmak Için, başlangıç seçeneğinde **örnek** yöntemi belirtmeniz gerekir.
 
 > [!NOTE]
-> Varsa **Başlat** seçeneği ile belirtilen **Crosssession** seçeneğini çağrıları **VSPerfCmd /Attach** veya **VSPerfCmd/detach** gerekir Ayrıca belirtin **Crosssession**.
+> **Başlangıç** seçeneği **CrossSession** seçeneğiyle belirtilmişse, **VSPerfCmd/Attach** veya **VSPerfCmd/detach** öğesine yapılan çağrılar de **CrossSession**belirtmelidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,36 +31,36 @@ VSPerfCmd.exe /Attach:ProcessID [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `ProcessID` İşlem kimliği (PID) çalışan işleminin. Windows Görev Yöneticisi'nin İşlemler sekmesinde bir çalışan işleminin PID listeleniyor.
+ çalışan işlemin işlem KIMLIĞINI (PID) `ProcessID`. Çalışan bir işlemin PID 'SI Windows Görev Yöneticisi 'nin Işlemler sekmesinde listelenir.
 
-## <a name="valid-options"></a>Geçerli seçenekler şunlardır:
- Aşağıdaki **VSPerfCmd** seçenekleri ile birleştirilebilir **iliştirme** tek bir komut satırı seçeneği.
+## <a name="valid-options"></a>Geçerli seçenekler
+ Aşağıdaki **VSPerfCmd** seçenekleri tek bir komut satırında **Attach** seçeneğiyle birleştirilebilir.
 
- **Crosssession** oturumlarında oturum dışındaki uygulamaların profilini oluşturma etkinleştirir. Gerekli if **Başlat** seçeneği ile belirtilen **Crosssession** seçeneği.
+ **CrossSession** , Oturum açma oturumu dışındaki oturumlarda profil oluşturma uygulamalarına izin vermez. **CrossSession** seçeneğiyle **Start** seçeneği belirtilmişse gereklidir.
 
- **Başlat:** `Method` Komut satırı Profil Oluşturucu oturumu başlatır ve belirtilen profil oluşturma yöntemini ayarlar.
+ **Başlat:** `Method` komut satırı profil oluşturucu oturumunu başlatır ve belirtilen profil oluşturma yöntemini ayarlar.
 
- **TargetCLR** profil oluşturma oturumu içinde birden fazla sürümü yüklendiğinde, .NET Framework ortak dil çalışma zamanı (CLR) profil sürümü belirtir. Varsayılan olarak, ilk yüklenen sürümü profil oluşturulan.
+ **Targetclr** Profil oluşturma oturumunda birden fazla sürüm yüklendiğinde profile yapılacak .NET Framework ortak dil çalışma zamanının (CLR) sürümünü belirtir. Varsayılan olarak, ilk yüklenen sürüm profili oluşturulur.
 
- **GlobalOn ve GlobalOff** sürdürür (**GlobalOn**) veya duraklatır (**GlobalOff**) profil oluşturma, ancak profil oluşturma oturumu sona ermez.
+ **GlobalOn GlobalOn** Profil oluşturmayı sürdürür (**GlobalOn**) veya duraklatır (**globaloff**), ancak profil oluşturma oturumunu sonlandırmaz.
 
- **ProcessOn:** `PID` **ProcessOff:** `PID` Sürdürür (**ProcessOn**) veya duraklatır (**ProcessOff**) belirtilen işlem için profil oluşturma.
+ **ProcessOn:** `PID` **processoff:** `PID` devam eden (**ProcessOn**) veya duraklama (**ProcessOff**) profili oluşturma işlemi belirtilen işlem için.
 
-## <a name="interval-options"></a>Aralık Seçenekleri
- Örnekleme aralığı şunlardan birini Ekle komut satırında belirtilebilir. Varsayılan örnekleme aralığı 10.000.000 işlemci saat döngülerini ' dir.
+## <a name="interval-options"></a>Aralık seçenekleri
+ Aşağıdaki örnekleme aralığı seçeneklerinden biri, Attach komut satırında belirlenebilir. Varsayılan örnekleme aralığı 10.000.000 işlemci saat döngülerinde bulunur.
 
- **Zamanlayıcı**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[<strong>:</strong> Olayları]**sayacı**[**:**`Name`,`Reload`,`FriendlyName`] sayısı ve örnekleme aralığı türünü belirtir.
+ **Süreölçer**[ **:** `Cycles`]**PF**[ **:** `Events`]**sys**[<strong>:</strong>Events]**sayaç**[ **:** `Name`,`Reload`,`FriendlyName`] örnekleme aralığının sayısını ve türünü belirtir.
 
-- **Zamanlayıcı** -örnekleri her `Cycles` işlemci saat döngüsü. Varsa `Cycles` belirtilmezse, 10.000.000 döngüleri kullanılır.
+- **Zamanlayıcı** -örnekleri her `Cycles` işlemci saati döngüsü. `Cycles` belirtilmemişse, 10.000.000 döngüsü kullanılır.
 
-- **PF** -örnekleri her `Events` sayfa hataları. Varsa `Events` belirtilmezse, 10 sayfa hataları kullanılır.
+- **PF** -her `Events` sayfa hatalarını örnekler. `Events` belirtilmemişse, 10 sayfa hatası kullanılır.
 
-- **Sys** -örnekleri her `Events` işletim sistem çağrıları. Varsa `Events` belirtilmezse, 10 sistem çağrıları kullanılır.
+- Her `Events` işletim sistemine çağıran **sys** -Samples. `Events` belirtilmemişse, 10 sistem çağrısı kullanılır.
 
-- **Sayaç** -örnekleri her `Reload` CPU performans sayaç tarafından belirtilen sayıda `Name`. İsteğe bağlı olarak, `FriendlyName` profil oluşturucusu raporu sütun başlığına olarak kullanılacak bir dize belirtebilirsiniz.
+- **Sayaç** -örnekleri, `Name`tarafından belirtilen CPU performans sayacının `Reload` her sayısıdır. İsteğe bağlı olarak, `FriendlyName` Profiler raporlarında sütun üst bilgisi olarak kullanılacak bir dize belirtebilir.
 
 ## <a name="example"></a>Örnek
- Bu örnek uygulamanın çalışan bir örneği 12345 işlem kimliği eklemek nasıl gösterir.
+ Bu örnek, 12345 işlem KIMLIĞIYLE uygulamanın çalışan bir örneğine nasıl ekleneceğini gösterir.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -68,6 +69,6 @@ VSPerfCmd.exe /Attach:12345
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Bağımsız uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil hizmetler](../profiling/command-line-profiling-of-services.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

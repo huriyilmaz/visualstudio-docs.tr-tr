@@ -1,24 +1,25 @@
 ---
-title: Başlatma | Microsoft Docs
+title: Başlat | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f81bde5c-3394-4b79-a315-c2f6491689b3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c105f5176948271c832330f01d0d03d270e69a97
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9834c10c58fb343de0707fa0b805586a6cdebcb3
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62995313"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778615"
 ---
 # <a name="launch"></a>Başlat
-**Başlatma** seçeneği profil oluşturucu örnekleme metodu kullanılarak başlatılır ve ayrıca belirtilen uygulamayı başlatır.
+**Başlatma** seçeneği, örnekleme yöntemini kullanarak profil oluşturucuyu başlatır ve ayrıca belirtilen uygulamayı başlatır.
 
- Kullanılacak **başlatma** seçeneğini belirtmelisiniz **örnek** yönteminde **Başlat** seçeneği.
+ **Başlatma** seçeneğini kullanmak Için, **Başlangıç** seçeneğinde **örnek** yöntemi belirtmeniz gerekir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,45 +28,45 @@ VSPerfCmd.exe /Launch:AppName [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `AppName` Başlatmak için uygulamanın adı. Geçerli dizindeki tam ve kısmi yollar desteklenir.
+ başlatılacak uygulamanın adını `AppName`. Geçerli dizinden gelen tam ve kısmi yollar desteklenir.
 
-## <a name="valid-options"></a>Geçerli seçenekler şunlardır:
- Aşağıdaki VSPerfCmd seçenekleri ile birleştirilebilir **başlatma** tek bir komut satırı seçeneği.
+## <a name="valid-options"></a>Geçerli seçenekler
+ Aşağıdaki VSPerfCmd seçenekleri tek bir komut satırında **başlatma** seçeneği ile birleştirilebilir.
 
- **Başlat:** `Method` Komut satırı Profil Oluşturucu oturumu başlatır ve belirtilen profil oluşturma yöntemini ayarlar.
+ **Başlat:** `Method` komut satırı profil oluşturucu oturumunu başlatır ve belirtilen profil oluşturma yöntemini ayarlar.
 
- **GlobalOn** ve **GlobalOff** sürdürür (**GlobalOn**) veya duraklatır (**GlobalOff**) profil oluşturma, ancak profil oluşturma oturumu sona ermez.
+ **GlobalOn** ve **globaloff** devam ettirir (**GlobalOn**) veya profil oluşturma (**globaloff**) profili oluşturma, ancak profil oluşturma oturumunu sonlandırmaz.
 
- **ProcessOn:** `PID` ve **ProcessOff**:`PID` Sürdürür (**ProcessOn**) veya duraklatır (**ProcessOff**) belirtilen işlem için profil oluşturma.
+ **ProcessOn:** `PID` ve **processoff**:`PID`, belirtilen işlem Için özgeçmişler (**ProcessOn**) veya duraklama (**ProcessOff**) profili oluşturma.
 
- **TargetCLR** profil oluşturma oturumu içinde birden fazla sürümü yüklendiğinde, .NET Framework ortak dil çalışma zamanı (CLR) profil sürümü belirtir. Varsayılan olarak, ilk yüklenen sürümü profil oluşturulan.
+ **Targetclr** Profil oluşturma oturumunda birden fazla sürüm yüklendiğinde profile yapılacak .NET Framework ortak dil çalışma zamanının (CLR) sürümünü belirtir. Varsayılan olarak, ilk yüklenen sürüm profili oluşturulur.
 
-## <a name="exclusive-options"></a>Dışlayan seçenekleri
- Aşağıdaki seçenekler ile yalnızca kullanılabilir **başlatma** seçeneği.
+## <a name="exclusive-options"></a>Dışlamalı seçenekler
+ Aşağıdaki seçenekler yalnızca **başlatma** seçeneği ile kullanılabilir.
 
- **Konsol** yeni bir pencerede belirtilen komut satırı uygulaması başlatır.
+ **Konsol** Belirtilen komut satırı uygulamasını yeni bir pencerede başlatır.
 
- **Bağımsız değişkenleri:** `ArgList` Uygulamaya devredilecek bağımsız değişkenler listesini belirtir.
+ **Args:** `ArgList` uygulamaya geçirilecek bağımsız değişkenlerin listesini belirtir.
 
- **Lıneoff** satır düzeyi profil oluşturma verilerinin toplanmasını devre dışı bırakır.
+ **Satır kapalı** Satır düzeyi profil oluşturma verilerinin koleksiyonunu devre dışı bırakır.
 
 ## <a name="sampling-options"></a>Örnekleme seçenekleri
- Örnekleme aralığı şunlardan biri belirtilebilir üzerinde **başlatma** komut satırı. Varsayılan örnekleme aralığı 10.000.000 işlemci saat döngülerini ' dir.
+ **Başlatma** komut satırında aşağıdaki örnekleme aralığı seçeneklerinden biri belirtilebilir. Varsayılan örnekleme aralığı 10.000.000 işlemci saat döngülerinde bulunur.
 
- **Zamanlayıcı**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[**:**`Events`] **Sayaç**[**:**`Name`,`Reload`,`FriendlyName`]**GC**[:**ayırma** &#124;  **yaşam süresi**] sayısı ve örnekleme aralığı türünü belirtir.
+ **Süreölçer**[ **:** `Cycles`]**PF**[ **:** `Events`]**sys**[ **:** `Events`]**Counter**[ **:`Name`,** `Reload`,`FriendlyName`]**GC**[:**ayırma**&#124;**ömrü**] örnekleme aralığının sayısını ve türünü belirtir.
 
-- **Zamanlayıcı** -örnekleri her `Cycles` durdurulmamış işlemci saat döngüsü. Varsa `Cycles` belirtilmezse, 10.000.000 döngüleri kullanılır.
+- **Zamanlayıcı** -örnekleri `Cycles` her durdurulmayan işlemci saati döngüsü. `Cycles` belirtilmemişse, 10.000.000 döngüsü kullanılır.
 
-- **PF** -örnekleri her `Events` sayfa hataları. Varsa `Events` belirtilmezse, 10 sayfa hataları.
+- **PF** -her `Events` sayfa hatalarını örnekler. `Events` belirtilmemişse, 10 sayfa hatası.
 
-- **Sys** -örnekleri her `Events` işletim sistem çağrıları. Varsa `Events` belirtilmezse, 10 sistem çağrıları kullanılır.
+- Her `Events` işletim sistemine çağıran **sys** -Samples. `Events` belirtilmemişse, 10 sistem çağrısı kullanılır.
 
-- **Sayaç** -örnekleri her `Reload` CPU performans sayaç tarafından belirtilen sayıda `Name`. İsteğe bağlı olarak, `FriendlyName` profil oluşturucusu raporu sütun başlığına olarak kullanılacak bir dize belirtebilirsiniz.
+- **Sayaç** -örnekleri, `Name`tarafından belirtilen CPU performans sayacının `Reload` her sayısıdır. İsteğe bağlı olarak, `FriendlyName` Profiler raporlarında sütun üst bilgisi olarak kullanılacak bir dize belirtebilir.
 
-- **GC** -toplar .NET bellek verileri. Varsayılan olarak (**ayırma**), her bir bellek ayırma etkinlikte toplanan veriler. Zaman **ömrü** parametresi belirtildiğinde, veriler ayrıca her çöp toplama olayını toplanır.
+- **GC** -.net bellek verilerini toplar. Varsayılan olarak,veriler her bellek ayırma olayında toplanır. **Ömür** parametresi belirtildiğinde her çöp toplama olayında de veriler toplanır.
 
 ## <a name="example"></a>Örnek
- Bu örnek kullanımını gösterir **başlatma** bir uygulamayı başlatmak için.
+ Bu örnek, bir uygulamayı başlatmak için **başlatma** kullanımını gösterir.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -74,6 +75,6 @@ VSPerfCmd.exe /Launch:TestApp.exe
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Bağımsız uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil hizmetler](../profiling/command-line-profiling-of-services.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

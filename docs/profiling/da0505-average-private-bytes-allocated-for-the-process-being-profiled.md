@@ -10,24 +10,25 @@ ms.assetid: 32c612ea-d077-44ba-8e6f-3a96333bad00
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cff41d3ff03efd70eb876531a2d7b8602d3f8796
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b905b0de69110f5f7cd684deb6fe6c5955bb4b0c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910166"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777409"
 ---
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505: İşlem için izin verilen Ortalama Özel Bayt Sayısının profili oluşturuluyor
 
 |||
 |-|-|
-|Kural kimliği|DA0505|
+|Kural Kimliği|DA0505|
 |Kategori|Kaynak yönetimi|
 |Profil oluşturma yöntemi|Tümü|
 |İleti|Bu bilgiler yalnızca bilgi için toplanmıştı. Işlem özel baytları sayacı, profil oluşturduğunuz işlem tarafından ayrılan sanal belleği ölçer. Bildirilen değer tüm ölçüm aralıklarında hesaplanan ortalama değerdir.|
-|Kural türü|Bilgiler|
+|Kural türü|Bilgisi|
 
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 

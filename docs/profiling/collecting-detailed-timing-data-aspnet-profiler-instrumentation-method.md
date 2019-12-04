@@ -1,5 +1,5 @@
 ---
-title: 'VSPerfCmd: ASP.NET web uygulaması için izleme metodunu kullanarak zamanlama verileri alma'
+title: 'VSPerfCmd: izleme kullanarak ASP.NET Web uygulaması için zamanlama verilerini al'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,44 +9,45 @@ ms.assetid: 29f2fc55-aaf7-4e18-a672-8815455fba73
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 87e7f5f49072326028405e153cffe94ce1ca63f2
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: d764ef32cdcb061992817d433dabb6ae61b64fd9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033061"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779655"
 ---
-# <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Komut satırından profil oluşturucu izleme metodunu kullanarak bir ASP.NET web uygulaması için ayrıntılı zamanlama verileri toplama
-Bu bölümde ayrıntılı performans toplama seçeneklerini ve yordamlar açıklanmaktadır. verileri bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını kullanarak **VSPerfCmd** komut satırı aracı ve araç haline getirme yöntemi.
+# <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Komut satırından profil oluşturucu izleme yöntemini kullanarak bir ASP.NET Web uygulaması için ayrıntılı zamanlama verileri toplama
+Bu bölümde, **VSPerfCmd** komut satırı aracı ve izleme yöntemi kullanılarak bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulaması için ayrıntılı performans verileri toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
 
 > [!NOTE]
-> **VSPerfCmd** aracı profil oluşturma araçları işlevselliği, duraklatma ve profil oluşturma ve ek veri işlemci ve Windows performans sayaçlarını toplamayı yeniden başlatma da dahil olmak üzere tam erişimle, sağlar. Ayrıca **VSPerfASPNETCmd** bu işlevselliği gerekmediğinde komut satırı aracı. Comparison için [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracı, hiçbir ortam değişkenlerini ayarlamak sahip ve bilgisayarın yeniden başlatılması gerekli değildir. Daha fazla bilgi için [VSPerfASPNETCmd ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).
+> **VSPerfCmd** Aracı, profil oluşturmayı duraklatma ve sürdürme ve Işlemci ve Windows performans sayaçlarından ek veri toplama dahil olmak üzere profil oluşturma araçları işlevselliğine yönelik tüm erişimi sağlar. Bu işlevselliğe ihtiyacınız olmadığında **VSPerfASPNETCmd** komut satırı aracını da kullanabilirsiniz. [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracına kıyasla, hiçbir ortam değişkeni ayarlanamaz ve bilgisayarın yeniden başlatılması gerekmez. Daha fazla bilgi için bkz. [VSPerfASPNETCmd Ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).
 
 ## <a name="common-tasks"></a>Ortak görevler
 
-|Görev|İlgili içerik|
+|Görev|İlgili Içerik|
 |----------|---------------------|
-|**Statik olarak derlenmiş ikili dosyaları profili**|-   [Nasıl Yapılır: Statik olarak derlenmiş bir ASP.NET uygulamasın izleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)|
-|**Dinamik olarak derlenmiş ikili dosyaları profili**|-   [Nasıl Yapılır: Dinamik olarak derlenmiş bir ASP.NET uygulamasını izleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)|
+|**Statik olarak derlenen ikili dosyalar profili**|-   [nasıl yapılır: statik olarak derlenen bir ASP.NET uygulamasını işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)|
+|**Dinamik olarak derlenen ikili dosyalar profili**|-   [nasıl yapılır: dinamik olarak derlenen bir ASP.NET uygulamasını işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
-### <a name="profile-aspnet-web-applications"></a>Profil ASP.NET web uygulamaları
+### <a name="profile-aspnet-web-applications"></a>ASP.NET Web uygulamaları profili
 
-|Görev|İlgili içerik|
+|Görev|İlgili Içerik|
 |----------|---------------------|
-|**Örnekleme yöntemiyle profili**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
-|**Bellek ayırma ve atık koleksiyon profili**|-   [Bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
-|**Kaynak çakışması ve iş parçacığı etkinliği profil**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
+|**Örnekleme yöntemi kullanılarak profil**|[örnekleme kullanarak uygulama Istatistiklerini toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md) -   |
+|**Profil bellek ayırma ve çöp toplama**|[bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md) -   |
+|**Profil kaynağı çekişmesi ve iş parçacığı etkinliği**|-   [eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
 
-### <a name="profile-by-using-the-instrumentation-method"></a>İzleme metodunu kullanarak profili
+### <a name="profile-by-using-the-instrumentation-method"></a>İzleme yöntemini kullanarak profil
 
-|Görev|İlgili içerik|
+|Görev|İlgili Içerik|
 |----------|---------------------|
-|**(İstemci) tek başına uygulamaların profilini oluşturma**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
-|**Profil hizmetler**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
+|**Tek başına (istemci) uygulamalar profili**|[izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md) -   |
+|**Profil hizmetleri**|[izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md) -   |
 
-### <a name="analyze-instrumentation-data-views-and-reports"></a>İzleme veri görünümleri ve raporları analiz edin
-- [İzleme metodu veri görünümleri](../profiling/instrumentation-method-data-views.md)
+### <a name="analyze-instrumentation-data-views-and-reports"></a>İzleme verileri görünümlerini ve raporlarını çözümleyin
+- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)

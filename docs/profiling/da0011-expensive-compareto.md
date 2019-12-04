@@ -1,5 +1,5 @@
 ---
-title: 'DA0011: Pahalı CompareTo | Microsoft Docs'
+title: 'DA0011: pahalı CompareTo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,30 +11,31 @@ ms.assetid: 239a381d-0d97-4367-8668-746c93f5af2c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee5839e91e2205a98a38ed27823a26a4a127e1ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0eb4566fd4c8a513b1492cecffc16cb94a1fd83
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779434"
 ---
 # <a name="da0011-expensive-compareto"></a>DA0011: Pahalı CompareTo
 
 |||
 |-|-|
 |Kural Kimliği|DA0011|
-|Kategori|.NET framework kullanımı|
-|Profil oluşturma yöntemleri|Örnekleme<br /><br /> .NET bellek|
-|İleti|CompareTo fonksiyonları ucuz ve diğer bellek ayrılamadı. gerekir. Mümkünse CompareTo fonksiyonunun karmaşıklığını azaltın.|
+|Kategori|.NET Framework kullanımı|
+|Profil oluşturma yöntemleri|Aşağıdakine<br /><br /> .NET belleği|
+|İleti|CompareTo işlevleri, ucuz olmalı ve herhangi bir bellek ayırmamalıdır. Mümkünse, CompareTo işlevi karmaşıklığını azaltın.|
 |Kural türü|Uyarı|
 
 ## <a name="cause"></a>Sebep
- CompareTo Yöntemi türü, pahalıdır veya bellek ayırır.
+ Türün CompareTo yöntemi pahalıdır veya bellek ayırır.
 
 ## <a name="rule-description"></a>Kural açıklaması
- CompareTo Yöntemi verimli olmalıdır ve bellek ayrılamadı.
+ CompareTo metotları etkili olmalıdır ve bellek ayırmamalıdır.
 
-## <a name="how-to-fix-violations"></a>İhlaller nasıl düzeltilir?
- CompareTo Yöntemi karmaşıklığını azaltın.
+## <a name="how-to-fix-violations"></a>İhlalleri çözme
+ CompareTo yönteminin karmaşıklığını azaltın.

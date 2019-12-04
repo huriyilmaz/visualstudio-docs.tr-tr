@@ -9,43 +9,44 @@ ms.assetid: 842112fc-b886-4801-8cd7-a25b314b0393
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 091961f3425714c0dc5ddabfac847c76339ab064
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a74862d59fe402cbfd9e6bfa804d62ca4c8310b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994950"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778381"
 ---
 # <a name="profiling-and-windows-vista-security"></a>Profil oluşturma ve Windows Vista güvenliği
 
-Yapılandırmanıza bağlı olarak [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] bilgisayar yöneticisi kullanılabilir hale getirdiği kullanıcı erişimi izinleri ayarları, bireysel bir kullanıcı bu bilgisayarda bir işlem profili için güvenlik izni olabilir. Aşağıdaki örneklerde kullanıcılar arasındaki olası farklar gösterilmektedir:
+Bir bilgisayar yöneticisinin kullanılabilir hale yaptığı [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] Kullanıcı erişim Izinleri ayarlarına bağlı olarak, bireysel bir kullanıcı o bilgisayardaki bir işlemi profile yönelik güvenlik iznine sahip olabilir. Aşağıdaki örneklerde kullanıcılar arasındaki olası farklılıklar gösterilmektedir:
 
-- Yöneticisi hizmetinin başlatılmasını ve sürücü ayarladığınızda, bazı kullanıcılar Gelişmiş profil oluşturma özelliklerine erişebilir.
+- Yönetici, sürücüyü ve hizmeti başlatmaya ayarladıktan sonra bazı kullanıcılar Gelişmiş profil oluşturma özelliklerine erişebilir.
 
-- Etki alanı kullanıcıları yalnızca örnek profil oluşturma erişebilir.
+- Etki alanı kullanıcıları yalnızca örnek profil oluşturma erişimi sağlayabilir.
 
-- Bazı kullanıcılar, diğer tüm kullanıcılar için profil oluşturma için erişim reddedebilir.
+- Bazı kullanıcılar, diğer tüm kullanıcılar için profil oluşturmaya erişimi reddedebilir.
 
-  Daha fazla bilgi için yönetim seçenekleri görmek [VSPerfCmd](../profiling/vsperfcmd.md).
+  Daha fazla bilgi için bkz. [VSPerfCmd](../profiling/vsperfcmd.md)içindeki yönetici seçenekleri.
 
-## <a name="cross-session-profiling"></a>Çapraz oturum profil oluşturma
+## <a name="cross-session-profiling"></a>Çapraz oturum profili oluşturma
 
-*Çapraz oturum profil oluşturma* farklı kullanıcı oturumunda çalışan bir işlemi profil yeteneğidir. Örneğin, çoğu Hizmetleri 0 oturumunda çalıştırın ve kullanıcıların 0. oturumunda doğrudan çalıştıramazsınız. Kullanarak **iliştirme** performans Gezgini araç çubuğundan veya `/attach` seçeneği VSPerfCmd komut satırı aracı, farklı bir kullanıcı oturumunu çoğu işlemlerin profilini oluşturabilirsiniz.
+*Çapraz oturum profili oluşturma* , farklı bir kullanıcı oturumunda çalışan bir işlemi profil oluşturma olanağıdır. Örneğin, çoğu hizmet oturum 0 ' da çalışır ve kullanıcılar 0 oturumunda doğrudan çalıştırılamaz. Performans Gezgini araç çubuğundaki **Işleme İliştir** düğmesini veya VSPerfCmd komut satırı aracının `/attach` seçeneğini kullanarak, birçok işlemi farklı kullanıcı oturumlarında profil oluşturabilirsiniz.
 
-Çapraz işlem profil görünürlüğü seçeneklerini ayarlayarak kullanılabilir işlem listesini görebilirsiniz. Bu seçenekler kullanılabilir **iliştirme** seçeneğini belirlediğinizde görüntülenen penceresi **iliştirme**:
+İşlemler arası profil oluşturma görünürlüğü seçeneklerini ayarlayarak kullanılabilir işlemlerin bir listesini görebilirsiniz. Bu seçenekler, **işleme**İliştir ' i seçtiğinizde görüntülenen **İşleme İliştir** penceresinde kullanılabilir:
 
-- **Tüm kullanıcıların işlemlerini göster**
+- **Tüm kullanıcılardan işlem göster**
 
-  Bu seçeneği seçili değilse, listeyi yalnızca geçerli kullanıcıya ait işlemleri görüntüler. Aksi takdirde, tüm kullanıcıların işlemlerini listeler.
+  Bu seçenek seçilmezse, listede yalnızca geçerli kullanıcıya ait olan süreçler görüntülenir. Aksi takdirde, listede tüm kullanıcıların süreçler görüntülenir.
 
-- **Tüm oturumlardaki işlemleri göster**
+- **Tüm oturumlarda işlem göster**
 
-  Bu seçeneği seçili değilse, listenin geçerli oturumda işlemleri görüntüler. Aksi takdirde, listenin tüm oturumlardaki işlemleri görüntüler.
+  Bu seçenek seçilmezse, listede geçerli oturumdaki süreçler görüntülenir. Aksi takdirde, listede tüm oturumlardaki süreçler görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel Bakışlar](../profiling/overviews-performance-tools.md)
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Nasıl yapılır: Çalışan bir işleme](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z\(v\=vs.100\))
+- [Nasıl yapılır: çalışan bir işleme Iliştirme](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z\(v\=vs.100\))

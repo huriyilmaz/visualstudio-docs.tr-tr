@@ -1,5 +1,5 @@
 ---
-title: Satırlar görünümü | Microsoft Docs
+title: Satırlar Görünümü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,37 +12,38 @@ ms.assetid: 71ec0781-6031-4e17-af09-f50226018437
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfb1780cfb8a64ebe20fc45f02992e60d7bb201
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25dbb0beb600f7f043ae006e09ac48b9b64d613b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000086"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773987"
 ---
 # <a name="lines-view"></a>Satırlar Görünümü
-Satırlar görünümü, toplanan örnekleme yöntemini kullanarak profil oluşturucu verileri için kullanılabilir. Görünüm araçları kullanılarak toplanan veriler için kullanılabilir değil.
+Satırlar görünümü yalnızca örnekleme yöntemi kullanılarak toplanan profil oluşturucu verileri için kullanılabilir. Görünüm, izleme kullanılarak toplanan veriler için kullanılamaz.
 
- Satırlar görünümü, profil verileri örnekleme için örnek toplanan doğrudan yürütülmekte olan bir işlev bildiriminde tanımlar. .NET bellek verileri için bellek tahsis deyimleri satırlar görünümü tanımlar.
+ Örnekleme profili verileri için satırlar görünümü, örnek toplandığında doğrudan yürütülen bir işlevde ifadeyi tanımlar. .NET bellek verileri için satırlar görünümü bellek ayıran deyimleri tanımlar.
 
- Bir kaynak dosyasında bir deyimi kaynak dosyasında bir satırdan daha kapsayabilir ve tek bir satır birden fazla deyim içerebilir.
+ Bir kaynak dosyasında, bir ifade kaynak dosyada bir satırı daha fazla yayılabilir ve tek bir satır birden fazla deyime dahil olabilir.
 
- Bir deyimi aşağıdaki tarafından tanımlanır:
+ Bir ifade aşağıdaki şekilde tanımlanır:
 
-- Function deyimi içeren kaynak dosyası.
+- Function ifadesini içeren kaynak dosya.
 
-- Deyimi içeren işlev.
+- İfadesini içeren işlev.
 
-- Deyim başladığı kaynak satırı.
+- Deyimin başladığı kaynak satır.
 
-- Deyim başladığı kaynak satırı karakter.
+- Deyimin başladığı kaynak satırdaki karakter.
 
-- Kaynak satırı başlangıçtan deyimini sonlandırır.
+- Deyimin bittiği kaynak satır.
 
-- Deyim erdiği kaynak satırı karakter.
+- Deyimin bittiği kaynak satırdaki karakter.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)
-- [Satırlar görünümü - örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
+- [Satırlar Görünümü-Örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
 - [Satırlar Görünümü](../profiling/lines-view-contention-data.md)

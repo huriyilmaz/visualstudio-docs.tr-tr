@@ -6,17 +6,18 @@ ms.assetid: 5e286e61-4548-42cf-a635-e608c5edbe2b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 78d5b39908bc0ffa39533c22ea4effcbe97397b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ab01f67d44e8c6e0cc13eaf9b0046695a0132e65
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794223"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778511"
 ---
 # <a name="output"></a>Çıkış
-**Çıkış** seçeneği performans oturumu için profil oluşturma veri dosyasının adını belirtir. **Çıkış** ile birlikte kullanılmalıdır **Başlat** seçeneği.
+**Output** seçeneği, performans oturumu için profil oluşturma veri dosyasının adını belirtir. **Çıkışın** **Başlangıç** seçeneğiyle birlikte kullanılması gerekir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -25,15 +26,15 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `FileName` Veri dosyasının adı. Tam ve kısmi yollar kabul edilir. Bir yol belirtilmezse, dosyayı geçerli dizinde oluşturulur.
+ veri dosyasının adını `FileName`. Tam ve kısmi yollar kabul edilir. Bir yol belirtilmemişse dosya geçerli dizinde oluşturulur.
 
-## <a name="required-options"></a>Gerekli seçenekleri
- **Çıkış** seçeneği kullanılmalıdır **Başlat** seçeneği.
+## <a name="required-options"></a>Gerekli seçenekler
+ **Output** seçeneği **Start** seçeneğiyle birlikte kullanılmalıdır.
 
- **Başlat:** `Method` Çıkış dosyası adını belirtir.
+ **Başlat:** `Method` çıkış dosyası adını belirtir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, profil oluşturma veri dosyasını geçerli dizinde oluşturulur.
+ Aşağıdaki örnekte, profil oluşturma veri dosyası geçerli dizinde oluşturulur.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -41,6 +42,6 @@ VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Bağımsız uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET web uygulamaları](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil hizmetler](../profiling/command-line-profiling-of-services.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

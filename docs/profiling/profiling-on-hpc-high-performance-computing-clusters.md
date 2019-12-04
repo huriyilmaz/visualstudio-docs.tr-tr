@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 867350c1a786971a25256bbe8f60ac2bfca14a19
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: f2d3949194dedab6d7e7ea2faa1aea304d889bc4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910318"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772126"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>HPC (yüksek performanslı bilgi işlem) kümelerinde profil
 
@@ -53,8 +54,8 @@ Bir HPC işlem düğümünde profil yapmak için aşağıdakileri yapmanız gere
 | | |
 |------------------| - |
 | *Baş düğümüne* | Kümenin baş düğümünün adı. |
-| *% FxPath%* | .NET Framework 4 yükleyicisinin yolu. Visual Studio yükleme medyasında yol şu şekilde olur: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe |
-| *% ProfilerPath%* | Profil Oluşturma Araçları yükleyicisinin bağımsız sürümünün yolu. Visual Studio yükleme medyasında yol: tek başına Profiler\x64\vs_profiler.exe |
+| *% FxPath%* | .NET Framework 4 yükleyicisinin yolu. Visual Studio yükleme medyasında yol şu şekilde olur: WCU\dotNetFramework\ dotNetFx40_Full_x86_x64. exe |
+| *% ProfilerPath%* | Profil Oluşturma Araçları yükleyicisinin bağımsız sürümünün yolu. Visual Studio yükleme medyasında yol: tek başına Profiler\x64\ vs_profiler. exe ' dir |
 
 ## <a name="profile-on-an-hpc-compute-node"></a>HPC işlem düğümündeki profil
 

@@ -1,5 +1,5 @@
 ---
-title: Performans Raporu Görünüm Filtresi | Microsoft Docs
+title: Performans raporu görünüm filtresi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,32 +9,33 @@ ms.assetid: 35f89d86-4683-4db1-aa0c-ae0ce65fa524
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ae4c5281386cb43d4dddb55db8578aea7515dce1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9a5642a8e153a4dfc7705d91d933397b6f8acb37
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793987"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778460"
 ---
 # <a name="performance-report-view-filter"></a>Performans Raporu Görünüm Filtresi
-**Profiler Rapor Görünümü Filtresi** penceresinin en üstündeki bulunduğu **performans raporu** penceresi. Göremiyorsanız, tıklayın **Göster filtre** düğmesi.
+**Profil Oluşturucu rapor görünümü filtresi** penceresi, **Performans raporu** penceresinin en üstünde bulunur. Bunu göremiyorsanız **filtre göster** düğmesine tıklayın.
 
- Her filtre yan tümcesi, sonuçlarınızı daraltmak için değiştirebilirsiniz. Aşağıdaki sütunlar, filtre Oluşturucusu'nda kullanılabilir.
+ Sonuçlarınızı iyileştirmek için her bir filtre yan tümcesini değiştirebilirsiniz. Aşağıdaki sütunlar, filtre Oluşturucusu 'nda mevcuttur.
 
 |Filtre öğesi|Açıklama|
 |-----------------|-----------------|
-|Ve/veya|Seçin **ve** eşleşiyorsa bir sonuç bu yan tümce hem de sonraki yan tümcesi her ikisi de true olmalıdır. Seçin **veya** eşleşiyorsa bir sonucu veya bu yan tümce hem de sonraki yan tümcesi True olabilir.|
-|Alan|Filtre yan tümcesi geçerli rapor dosyada kullanılabilir olan veri alanları listesinden kullanılacak bir alan seçin.|
-|İşleç|Alan ve değer arasında istediğiniz ilişkiyi belirtir işleci seçin.<br /><br /> = Eşittir<br /><br /> <> Eşit değildir<br /><br /> < Küçüktür<br /><br /> > Büyüktür<br /><br /> < = küçüktür veya eşittir<br /><br /> > = büyüktür veya eşittir|
-|Değer|Aranacak bir değer girin veya seçin. Bazı alanları, alan için kullanılabilen değerleri listeler.|
+|Ve/Veya|Bu yan **tümce ve Next** yan tümcesinin bir sonuçla eşleştirmek için true olması gerekir. Bu yan **tümce veya sonraki** yan tümce bir sonuçla eşleşecek şekilde doğru olabilir.|
+|Alan|Geçerli rapor dosyasında kullanılabilir olan veri alanları listesinden filtre yan tümcesinde kullanılacak alanı seçin.|
+|İşleç|Alan ve değer arasında istediğiniz ilişkiyi belirten işleci seçin.<br /><br /> = Eşittir<br /><br /> Eşit değildir > <<br /><br /> < Küçüktür<br /><br /> Şundan büyük ><br /><br /> < = küçüktür veya eşittir<br /><br /> > = büyüktür veya eşittir|
+|Değer|Aranacak değeri seçin veya girin. Bazı alanlar alan için kullanılabilir değerleri listeler.|
 
- Filtre en iyi sonuçlar verecek düşündüğünüz kadar filtre yan tümce ekleyebilirsiniz. Tıklayın **yürütme filtre** veri dosyasına filtre uygulamak için.
+ Filtrenin size en iyi sonuçları vermesini hissetene kadar filtre tümceleri ekleyebilirsiniz. Filtreyi veri dosyasına uygulamak için **filtreyi Yürüt** ' e tıklayın.
 
- Gelen **işaretleri** rapor görünümü, verileri iki işaretler arasında toplanan veriler için rapor görünümlerini sınırlandırmak için filtre yan tümcesi üretebilir. Başlangıç ve bitiş veri, sonra sağ tıklayıp ya da rapor için istediğiniz işaretleri seçin **işaretleri filtreye Ekle** veya **zaman damgalarına Filtre Ekle**. Her iki filtreleri aynı aralığa geçerli veri dosyasındaki verileri sınırlamak; **İşaretleri filtreye Ekle** diğer .vsp dosyalarına uygulanabilir.
+ **İşaretler** rapor görünümünden, rapor görünümlerindeki verileri iki işaret arasında toplanan verilerle sınırlamak için filtre yan tümceleri oluşturabilirsiniz. Başlamak istediğiniz işaretleri seçin ve rapor verilerini sonlandırın, sonra sağ tıklayın ve **Işaretlere Filtre Ekle** ya da **Zaman Damgalarına Filtre Ekle**' yi seçin. Her iki filtre de geçerli veri dosyasındaki verileri aynı yayılma ile sınırlar; **Işaretlere filtre ekleme** , diğer. vsp dosyalarına uygulanabilir.
 
- Filtre kaydetmek için tıklatın **dışarı aktarma filtre** üzerinde **performans raporu** araç ve ardından bir konum ve dosya adını belirtin. *vspf* dosya. Daha önce kaydedilen bir filtreyi yüklemek için tıklayın **içeri aktarma filtre** ve kaydedilmiş filtre dosyasını bulun. Filtre dosyaları, veri dosyalarını bağımsız profil oluşturma araçları yüklü olan bilgisayarlarda filtrelemek için de kullanılabilir. Daha fazla bilgi için [VSPerfReport](../profiling/vsperfreport.md).
+ Filtreyi kaydetmek için **Performans raporu** araç çubuğunda **filtreyi dışarı aktar** ' a tıklayın ve ardından için bir konum ve dosya adı belirtin. *vspf* dosyası. Daha önce kaydedilen bir filtreyi yüklemek için **filtreyi Içeri aktar** ' a tıklayın ve kaydedilen filtre dosyasını bulun. Filtre dosyaları, tek başına Profil Oluşturma Araçları yüklü bilgisayarlardaki veri dosyalarını filtrelemek için de kullanılabilir. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)

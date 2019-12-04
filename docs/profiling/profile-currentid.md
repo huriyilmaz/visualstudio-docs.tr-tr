@@ -8,27 +8,28 @@ ms.assetid: 55ccf665-a05e-48c3-adf7-7714c0a9aaef
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 747922bf52bee18b20aeba95f7d549c890afceea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63b44bee152acbf5529acfcadaa49a19e9feb52b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778368"
 ---
-# <a name="profilecurrentid"></a>PROFILE_CURRENTID
-PROFILE_CURRENTID NameProfile, StartProfile StopProfile SuspendProfile ve ResumeProfile işlev çağrısında, işlem kimliği ve iş parçacığı kimliği için sözde belirteci döndürür. İşlevi, geçerli iş parçacığı veya işlemi yerine özellikle belirtilen bir çalışmasına neden kullanın.
+# <a name="profile_currentid"></a>PROFILE_CURRENTID
+PROFILE_CURRENTID, NameProfile, StartProfile, StopProfile, SuspendProfile ve ResumeProfile işlevlerine yapılan çağrıda iş parçacığı KIMLIĞI veya işlem KIMLIĞI için sözde belirteci döndürür. İşlevin, özel olarak belirtilen bir iş parçacığı veya işlem üzerinde çalışmasını sağlamak için bunu kullanın.
 
 ## <a name="example"></a>Örnek
- İçinde tanımlı PROFILE_CURRENTID *VSPerf.h* olarak:
+ PROFILE_CURRENTID, *VSPerf. h* içinde şu şekilde tanımlanır:
 
 ```cpp
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek PROFILE_CURRENTID gösterir. Bu örnek, bir çağrı geçerli iş parçacığında tanımlayan bir parametre olarak PROFILE_CURRENTID kullanır. [StartProfile](../profiling/startprofile.md) işlevi.
+ Aşağıdaki örnekte PROFILE_CURRENTID gösterilmektedir. Örnek, [StartProfile](../profiling/startprofile.md) işlevine yapılan çağrıda geçerli iş parçacığını tanımlayan bir parametre olarak PROFILE_CURRENTID kullanır.
 
 ```cpp
 void ExerciseProfileCurrentID()
@@ -58,7 +59,7 @@ void ExerciseProfileCurrentID()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu API Başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
 - [NameProfile](../profiling/nameprofile.md)
 - [ResumeProfile](../profiling/resumeprofile.md)
 - [StartProfile](../profiling/startprofile.md)

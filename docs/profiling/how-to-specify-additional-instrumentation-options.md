@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ek izleme seçeneklerini belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: ek Izleme seçeneklerini belirtme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,35 +11,36 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c95add435824663e798d226e0be11ddbe06b8aba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2d1f7e912ed5960c52e3f0bfa40fe9b87e91a2e6
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539146"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778706"
 ---
-# <a name="how-to-specify-additional-instrumentation-options"></a>Nasıl yapılır: Ek izleme seçeneklerini belirtme
+# <a name="how-to-specify-additional-instrumentation-options"></a>Nasıl yapılır: ek izleme seçeneklerini belirtme
 
-İkili dosyaları Visual Studio IDE kullanarak veya komut satırı araçlarını kullanarak izleyebilirsiniz. IDE içinde bir ikili izleme, ek izleme seçeneklerini belirterek izleme sırasında toplanan verilerin hacmini denetleyebilirsiniz [Vsınstr](../profiling/vsinstr.md) aracı. Bu seçenekler, oturum veya hedef düzeyinde kullanılabilir. Örneğin, dahil etmek veya izleme işlemi sırasında belirli işlevleri hariç tutmak için hedef düzeyinde ek izleme seçeneği kullanın.
+Visual Studio IDE 'yi kullanarak veya komut satırı araçlarını kullanarak ikili dosyaları seçebilirsiniz. IDE içinden bir ikili değer verirseniz, [vsinstr](../profiling/vsinstr.md) aracına ek izleme seçenekleri belirterek, izleme sırasında toplanan veri hacminin denetimini yapabilirsiniz. Bu seçenekler oturumda veya hedef düzeyinde kullanılabilir. Örneğin, izleme işlemi sırasında belirli işlevleri dahil etmek veya hariç tutmak için, hedef düzeyinde ek izleme seçeneğini kullanın.
 
 > [!IMPORTANT]
-> Eklenen her araştırma biraz özgün programın davranışını değiştirir. Bu değişikliği yükü analiz zamanında neden olur. Bu ek yükü yaklaşık çıkarılır olsa da, yine de çok iş parçacıklı uygulamalar üzerinde ince zamanlama etkileri vardır. [Vsınstr](../profiling/vsinstr.md) aracı profil oluşturma sırasında seçenekleri Yardım denetim veri koleksiyonu.
+> Eklenen her araştırma, özgün programın davranışını biraz değiştirir. Bu değişiklik çözümleme sırasında ek yüke neden olur. Bu ek yükün yaklaşık bir nedeni kaldırılmış olsa da, çok iş parçacıklı uygulamalar üzerinde hala hafif zamanlama etkileri vardır. [Vsinstr](../profiling/vsinstr.md) aracı seçenekleri, profil oluşturma sırasında veri toplamayı denetlemenize yardımcı olur.
 
-## <a name="to-specify-additional-instrumentation-option"></a>Ek izleme seçeneği belirlemek için
+## <a name="to-specify-additional-instrumentation-option"></a>Ek izleme seçeneğini belirtmek için
 
-1. İçinde **performans Gezgini**seçin **performans oturumu** ve ardından sağ tıklayıp **özellikleri**.
+1. **Performans Gezgini**' de, **performans oturumu** ' nu seçin ve ardından sağ tıklayıp **Özellikler**' i seçin.
 
-2. İçinde **özellikler sayfaları**, tıklayın **Gelişmiş** özellikleri.
+2. **Özellikler sayfalarında** **Gelişmiş** Özellikler ' e tıklayın.
 
-3. Tür seçenekleri **ek izleme seçeneklerini** kutusu.
+3. **Ek izleme seçenekleri** kutusunda seçenekler yazın.
 
-     Örneğin, /CONTROL:THREAD profil oluşturma düzeyini belirtmek için kullanın. Seçeneklerinin tam listesi için bkz: [Vsınstr](../profiling/vsinstr.md).
+     Örneğin, profil oluşturma düzeyini belirtmek için/CONTROL: THREAD komutunu kullanın. Seçeneklerin tamamı listesi için bkz. [vsinstr](../profiling/vsinstr.md).
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
-[komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)
+[Komut satırından](../profiling/using-the-profiling-tools-from-the-command-line.md) [performans oturumlarını](../profiling/configuring-performance-sessions.md)
+profili yapılandırma

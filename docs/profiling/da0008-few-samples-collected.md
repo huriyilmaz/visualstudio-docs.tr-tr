@@ -1,5 +1,5 @@
 ---
-title: 'DA0008: Az sayıda örnek toplandı | Microsoft Docs'
+title: 'DA0008: toplanan birkaç örnek | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,30 +11,31 @@ ms.assetid: 8a5b78aa-7b3d-476c-a47d-abfaff3fae7c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b33193f30edd19ef18ead5cf15f2e41d352f4d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 15f8eeb370a3f1e61981e0e936704d33f6b44bbd
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936624"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779447"
 ---
-# <a name="da0008-few-samples-collected"></a>DA0008: Az sayıda örnek toplandı
+# <a name="da0008-few-samples-collected"></a>DA0008: Toplanan örnek az
 
 |||
 |-|-|
 |Kural Kimliği|DA0008|
-|Kategori|Profil oluşturma araçları kullanım|
-|Profil oluşturma yöntemi|Örnekleme|
-|İleti|Yalnızca birkaç örnek toplanmadı. Uzun bir veya daha hızlı çalışmasını örnekleme hızı daha geçerli sonuçlar için göz önünde bulundurun.|
-|Kural türü|Bilgiler|
+|Kategori|Profil Oluşturma Araçları kullanımı|
+|Profil oluşturma yöntemi|Aşağıdakine|
+|İleti|Yalnızca birkaç örnek toplandı. Daha önemli sonuçlar için daha uzun bir çalıştırma veya daha hızlı örnekleme oranı düşünün.|
+|Kural türü|Bilgisi|
 
 ## <a name="cause"></a>Sebep
- Yalnızca birkaç örnek profil oluşturma çalışmasında toplanmadı.
+ Profil oluşturma çalıştırmasında yalnızca birkaç örnek toplandı.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Örnekleme yöntemi kullanıldığında, bir istatistiksel veriler gerçek program davranışını temsil emin olmak için örnek sayısı toplamanız gerekir. Örnekleme hataları en aza indirmek için en az 1000 program yönerge yürütme davranışını örnekleri toplamak çalışmanız gerekir. Yeterli örnekleri tahsil etmeme, profil oluşturma verilerinin analiz ederken, misled.
+ Örnekleme yöntemi kullanıldığında, verilerin gerçek program davranışını temsil ettiğinden emin olmak için istatistiksel olarak önemli sayıda örnek toplamanız gerekir. Örnekleme hatalarını en aza indirmek için, program yönergesi yürütme davranışının en az 1000 örneğini toplamaya çalışırsınız. Yeterli örnek toplamazsınız, profil oluşturma verilerini çözümlediğinizde yanlış olabilir.
 
-## <a name="how-to-fix-violations"></a>İhlaller nasıl düzeltilir?
- Bir uygulama bir artık çalıştırma profili oluşturma veya istatistiksel sonuçları elde etmek için daha hızlı bir örnekleme hızı kullanmayı düşünün. Visual Studio IDE'de örnekleme oranını değiştirme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Örnekleme olayları seçme](../profiling/how-to-choose-sampling-events.md). Profil Araçları komut satırı özelliğini kullandığınızda, örnekleme hızını değiştirme hakkında daha fazla bilgi için bkz. [Zamanlayıcı](../profiling/timer.md) içinde [VSPerfCmd](../profiling/vsperfcmd.md) başvuru.
+## <a name="how-to-fix-violations"></a>İhlalleri çözme
+ Uygulamanın daha uzun bir şekilde çalıştırılmasını veya istatistiksel olarak önemli sonuçlar elde etmek için daha hızlı örnekleme hızı kullanmayı düşünün. Visual Studio IDE 'de örnekleme hızının nasıl değiştirileceği hakkında bilgi için bkz. [nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md). Profil Oluşturma Araçları komut satırını kullanırken örnekleme hızının nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [VSPerfCmd](../profiling/vsperfcmd.md) Reference içindeki [Timer](../profiling/timer.md) .

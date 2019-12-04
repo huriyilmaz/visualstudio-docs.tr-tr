@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: .NET Framework çalışma zamanını belirtin. | Microsoft Docs'
+title: 'Nasıl yapılır: .NET Framework çalışma zamanını belirtme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,41 +9,42 @@ ms.assetid: d39f3579-719a-4f47-a97d-5b4232fe4c64
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0179be3aa5ca55eef0854cc68a7e1287ac284f1
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 4ab53a6cf265b36ee423a2df176014187860f635
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746419"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778680"
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>Nasıl yapılır: .NET Framework çalışma zamanını belirtme
 
-.NET Framework 4'ın yayınlanmasıyla birlikte, uygulamaları, .NET Framework çalışma zamanı farklı sürümleri kullanılarak derlenmiş modüllerin oluşabilir. Varsayılan olarak, Visual Studio profil oluşturma araçları, uygulama tarafından yüklenen ilk çalışma zamanı profili. Bir uygulamaya Profil Oluşturucu ile başladığınızda ve profil oluşturucu zaten çalışan bir uygulamaya ekleme yaptığınızda profil için çalışma zamanı belirtebilirsiniz.
+.NET Framework 4 sürümünde, uygulamalar .NET Framework çalışma zamanının farklı sürümleri kullanılarak oluşturulmuş modüllerden oluşabilir. Varsayılan olarak, Visual Studio Profil Oluşturma Araçları uygulama tarafından yüklenen ilk çalışma zamanını profili. Profil Oluşturucu ile bir uygulama başlattığınızda ve zaten çalışan bir uygulamaya profil oluşturucu iliştirçalıştığınızda, profil oluşturma zamanını belirtebilirsiniz.
 
-## <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>Profil Oluşturucu ile bir uygulama başlatma sırasında .NET Framework çalışma zamanı profili belirtmek için
+## <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>Profil Oluşturucu ile bir uygulama başlatılırken .NET Framework çalışma zamanını belirlemek için
 
-1. İçinde **performans Gezgini**, performans oturumu sağ tıklayın, **özellikleri**ve ardından **Gelişmiş**.
+1. **Performans Gezgini**, performans oturumuna sağ tıklayın, **Özellikler**' e ve ardından **Gelişmiş**' e tıklayın.
 
-     **Hedef CLR sürümü** liste kutusu görüntüler **otomatik** bilgisayarda yüklü olan .NET Framework çalışma zamanı sürümleri.
+     **Hedef CLR sürümü** liste kutusu, bilgisayarda yüklü olan .NET Framework çalışma zamanının **Otomatik** ve sürümlerini görüntüler.
 
-2. Aşağıdaki adımlardan birini uygulayın:
+2. Aşağıdaki adımlardan birini gerçekleştirin:
 
-    - Profil oluşturmak istediğiniz CLR sürümünü tıklayın.
+    - Profil eklemek istediğiniz CLR sürümüne tıklayın.
 
-    - Tıklayın **otomatik** profilini uygulama tarafından yüklenen ilk sürümü.
+    - Uygulama tarafından yüklenen ilk sürümü profil için **Otomatik** ' e tıklayın.
 
-## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Bir uygulamaya profil oluşturucu iliştirme ne zaman .NET Framework çalışma zamanı profili belirtmek için
+## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Profil oluşturucuyu bir uygulamaya eklerken kullanılacak .NET Framework çalışma zamanını belirtmek için
 
-1. Üzerinde **Çözümle** menüsünde **Profiler**, ardından **Attach/Detach**.
+1. **Çözümle** menüsünde **Profil Oluşturucu**' nın üzerine gelin ve **Ekle/ayır**' a tıklayın.
 
-2. Üzerinde **işleme iliştirmek Profiler** iletişim kutusunda, profil oluşturmak istediğiniz işleme tıklayın.
+2. **Işleme profil oluşturucu Ekle** iletişim kutusunda, profil eklemek istediğiniz işleme tıklayın.
 
-     **Hedef CLR sürümü** liste kutusu s **otomatik** bilgisayarda yüklü olan .NET Framework çalışma zamanı sürümleri.
+     **Hedef CLR sürümü** liste kutusu **Otomatik** ve bilgisayarda yüklü olan .NET Framework çalışma zamanının sürümleri.
 
-3. Aşağıdaki adımlardan birini uygulayın:
+3. Aşağıdaki adımlardan birini gerçekleştirin:
 
-    - Profil oluşturmak istediğiniz CLR sürümünü tıklayın.
+    - Profil eklemek istediğiniz CLR sürümüne tıklayın.
 
-    - Tıklayın **otomatik** uygulamaya profil oluşturucu ekler, yüklü sürümle profil için.
+    - Profil Oluşturucu uygulamaya iliştirayarlandığında yüklenen sürümü profil için **Otomatik** ' e tıklayın.
