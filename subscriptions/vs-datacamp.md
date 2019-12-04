@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/13/2019
 ms.topic: conceptual
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: ea889814373fa7c970e905bb4a845d5ca67c92e7
-ms.sourcegitcommit: 6f25855de9db455e6d38bc105057d2ed1e7454b9
+ms.openlocfilehash: 4ddfe064539a2ff572a7c89b89d618dff84f63a0
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199876"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706876"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
 Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, tarayıcınızın rahatlığıyla ihtiyacınız olan tüm veri bilimi yeteneklerini öğrenebilirsiniz. Ne zaman ve ne zaman öğreneceğinizi seçebilirsiniz. Yüklenecek yazılım olmadan ve özel donanım gereksinimleri olmadan öğrenme veri bilimi her zamankinden daha kolay.
@@ -50,7 +50,7 @@ Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, 
    > [!div class="mx-imgBorder"]
    > ![DataCamp kullanmaya başlama](_img/vs-datacamp/vs-datacamp-getting-started.png)
 
-Herhangi bir noktada durabilir ve bir sonraki oturumunuzda öğreticinizi sürdürebilirsiniz.  [http://www.datacamp.com](http://www.datacamp.com)ziyaret edip oturum açmanız yeterlidir.  Panonuzu görürsünüz ve duraklattığınız yerden eğitim sağlayabilirsiniz. **Izlemeye devam et**' e tıklamanız yeterlidir.
+Herhangi bir noktada durabilir ve bir sonraki oturumunuzda öğreticinizi sürdürebilirsiniz.  [https://www.datacamp.com](https://www.datacamp.com)ziyaret edip oturum açmanız yeterlidir.  Panonuzu görürsünüz ve duraklattığınız yerden eğitim sağlayabilirsiniz. **Izlemeye devam et**' e tıklamanız yeterlidir.
 
 > [!div class="mx-imgBorder"]
 > ![veri Camp devam eğitimi](_img/vs-datacamp/vs-datacamp-continue-training.png)
@@ -64,8 +64,8 @@ Herhangi bir noktada durabilir ve bir sonraki oturumunuzda öğreticinizi sürd�
 | GitHub Enterprise ile Visual Studio Professional| VL | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 3 ay                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | 3 ay                                              |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Yok  | Yok |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | Yok |
+| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Yok  | YOK |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | YOK |
 
 <sup>1</sup>  *şunları içerir: iş için değil (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine*
 

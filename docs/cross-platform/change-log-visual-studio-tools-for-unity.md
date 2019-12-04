@@ -1,7 +1,7 @@
 ---
-title: Değişiklik günlüğü (Unity, Windows için Visual Studio Araçları) | Microsoft Docs
+title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/02/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,64 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 713535bb11b4bd9cab4ef1b31507b96fe1c9897a
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 0e1810f452f48c95e0c4e8117820be3598b0f139
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185997"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706779"
 ---
-# <a name="change-log-visual-studio-tools-for-unity-windows"></a>Değişiklik günlüğü (Unity, Windows için Visual Studio Araçları)
+# <a name="change-log-visual-studio-tools-for-unity-windows"></a>Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)
 
-Değişiklik günlüğü Unity için Visual Studio Araçları.
+Unity için Visual Studio Araçları değişiklik günlüğü.
+
+## <a name="4420"></a>4.4.2.0
+
+Yayın 3 Aralık 2019
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Kullanıcı tanımlı arabirimler ile sabit Tanılamalar.
+
+  - Hatalı biçimlendirilmiş ifadelerle hızlı araç ipuçları düzeltildi.
+
+## <a name="4410"></a>4.4.1.0
+
+Yayın tarihi, 6 Kasım 2019
+
+### <a name="new-features"></a>Yeni özellikler
+
+- **Tümleştirme**
+
+  - Unity arka plan işlemlerine yönelik destek eklendi. (Hata ayıklayıcı alt işlem yerine ana işleme otomatik olarak bağlanabilir).
+  
+  - Unity iletileri için ilgili belgeleri görüntüleyen bir hızlı araç ipucu eklendi.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Gelişmiş ikili ve çağırma ifadeleriyle etiket karşılaştırma Çözümleyicisi `UNT0002` düzeltildi.
+
+### <a name="deprecated-features"></a>Kullanım dışı Özellikler
+
+- **Tümleştirme**
+
+  - Unity için Visual Studio Araçları, yalnızca Visual Studio 2017 + desteğine sahip olur.
+
+## <a name="4400"></a>4.4.0.0
+
+Yayımlanma tarihi, 15 Ekim 2019
+
+### <a name="new-features"></a>Yeni özellikler
+
+- **Tümleştirme**
+
+  - Tüm Unity iletileri için `IDE0060` (kullanılmamış parametre) için supprescursor eklendi.
+  
+  - `TooltipAttribute`etiketli alanlar için hızlı araç ipucu eklendi. (Bu, bu alanı kullanarak basit bir get erişimcisi için de çalışır).
 
 ## <a name="4330"></a>4.3.3.0
 
@@ -27,7 +75,7 @@ Yayın tarihi, 23 Eylül 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Basit derlemeler için düzeltilen hata ve uyarı raporlaması.
 
@@ -35,52 +83,52 @@ Yayın tarihi, 23 Eylül 2019
 
 Yayın tarihi, 16 Eylül 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Unity 'ye özgü yeni Tanılamalar ekleyerek, Visual Studio 'nun Unity projelerine yönelik olduğunu anlama konusunu sunuyoruz. Unity projeleri için geçerli olmayan genel C# tanılamalarını gizleyerek IDE’yi daha akıllı hale getirdik. Örneğin, IDE, Unity düzenleyicisinde değişkeni değiştirmenize engel olacak bir Inspector değişkenini `readonly` değiştirmek için hızlı bir çözüm göstermez.
-    - `UNT0001`: Unity iletileri, boş olsalar bile çalışma zamanı tarafından çağrılır. Unity çalışma zamanının bunları işlemek için gereksiz yere zaman harcamaması için bunları bildirmeyin.
-    - `UNT0002`: Dize eşitliği kullanarak etiket karşılaştırması yapma, yerleşik CompareTag yönteminden daha yavaştır.
-    - `UNT0003`: Tür güvenliği için, GetComponent’ın genel biçiminin kullanılması tercih edilir.
-    - `UNT0004`: Güncelleştirme iletisi kare hızına bağlıdır ve Time.fixedDeltaTime yerine Time.deltaTime’ı kullanmalıdır.
-    - `UNT0005`: FixedUpdate iletisi kare hızından bağımsızdır ve Time.deltaTime yerine Time.fixedDeltaTime kullanmalıdır.
+  - Unity 'ye özgü yeni Tanılamalar ekleyerek, Visual Studio 'nun Unity projelerine yönelik olduğunu anlama konusunu sunuyoruz. Unity projeleri için geçerli olmayan genel C# tanılamalarını gizleyerek IDE’yi daha akıllı hale getirdik. Örneğin, IDE, bir Inspector değişkenini `readonly` olarak değiştirmek için bir hızlı onarım göstermez ve bu, değişkenleri Unity düzenleyicisinde değiştirmenize engel olur.
+    - `UNT0001`: Unity iletileri, boş olsalar bile çalışma zamanı tarafından çağrılır, Unity çalışma zamanına göre uncesseray işlemesini önlemek için bunları bildirmeyin.
+    - `UNT0002`: dize eşitlik kullanılarak etiket karşılaştırması yerleşik CompareTag yönteminden daha yavaştır.
+    - `UNT0003`: tür güvenliği için GetComponent 'un genel biçiminin kullanımı tercih edilir.
+    - `UNT0004`: güncelleştirme iletisi çerçeve hızına bağımlıdır ve Time. deltaTime yerine Time. fixedDeltaTime kullanın.
+    - `UNT0005`: FixedUpdate iletisi çerçeve hızına bağımsızdır ve Time. fixedDeltaTime yerine Time. deltaTime kullanmalıdır.
     - `UNT0006`: Bu Unity iletisi için yanlış bir yöntem imzası algılandı.
-    - `UNT0007`: Unity nesnelerine yönelik null karşılaştırma işleci, null birleşim ile uyumsuzdur ve Unity bunu geçersiz kılar.
-    - `UNT0008`: Unity nesnelerine yönelik null karşılaştırma işleci, null yayma ile uyumsuzdur ve Unity bunu geçersiz kılar.
-    - `UNT0009`: Bir sınıfa InitializeOnLoad özniteliği uygularken statik bir oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
-    - `UNT0010`: MonoBehaviours yalnızca AddComponent() kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
-    - `UNT0011`: ScriptableObject yalnızca CreateInstance() kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
-    - `USP0001`için `IDE0029`: Unity nesneleri null birleşim kullanmamalıdır.
-    - `USP0002`için `IDE0031`: Unity nesneleri null yayma kullanmamalıdır.
-    - `USP0003`için `IDE0051`: Unity iletileri Unity çalışma zamanı tarafından çağrılır.
-    - `USP0004`için `IDE0044`: SerializeField özniteliğine sahip alanlar ReadOnly yapılmamalıdır.
+    - `UNT0007`: Unity, null birleştirme ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecini geçersiz kılar.
+    - `UNT0008`: Unity, null yayılmayla uyumsuz olan Unity nesneleri için null karşılaştırma işlecini geçersiz kılar.
+    - `UNT0009`: bir sınıfa ınitializeonload özniteliği uygulanırken statik bir Oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
+    - `UNT0010`: MonoBehaviours yalnızca AddComponent () kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
+    - `UNT0011`: ScriptableObject yalnızca CreateInstance () kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
+    - `IDE0029`için `USP0001`: Unity nesneleri null birleştirme kullanmamalıdır.
+    - `IDE0031`için `USP0002`: Unity nesneleri null yayma kullanmamalıdır.
+    - `IDE0051`için `USP0003`: Unity iletileri Unity çalışma zamanı tarafından çağrılır.
+    - `IDE0044`için `USP0004`: SerializeField özniteliğine sahip alanlar ReadOnly yapılmamalıdır.
 
 ## <a name="4310"></a>4.3.1.0
 
 Yayımlanma tarihi 4 Eylül 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - Daha iyi tür görüntüleme desteği eklendi, yani `List<object>` `List'1[[System.Object, <corlib...>]]`yerine.
+  - Daha iyi tür görüntüleme desteği eklendi, örn. `List'1[[System.Object, <corlib...>]]`yerine `List<object>`.
 
-  - İşaretçi üye erişimi için destek eklendi, ör `p->data->member`.
+  - İşaretçi üye erişimi için destek eklendi, yani `p->data->member`.
 
-  - Dizi başlatıcılarda örtük dönüştürmeler için destek eklendi, örn `new byte [] {1,2,3,4}`.
+  - Dizi başlatıcılarda örtük dönüştürmeler için destek eklendi, yani `new byte [] {1,2,3,4}`.
 
 ## <a name="4300"></a>4.3.0.0
 
 Yayın tarihi 13 Ağustos 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
   - MDS Protokolü 2,51 için destek eklendi.
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Sıralama, arama ve yenileme özellikleriyle "Unity örneğine Ekle" penceresi geliştirildi. PID artık yerel oyuncular için de görüntülenir (sahip olan işlemi almak için sistemdeki dinleme yuvaları sorgulanarak).
 
@@ -88,11 +136,11 @@ Yayın tarihi 13 Ağustos 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Unity oynatıcılarla iletişim kurulurken hatalı biçimlendirilmiş iletilerin işlenmesi düzeltildi.
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
   - İfadelerde ad alanlarını sabit olarak işleme.
 
@@ -110,9 +158,9 @@ Yayın tarihi 13 Ağustos 2019
 
 Yayın tarihi, 24 Temmuz 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Unity Proje Gezgini 'nden herhangi bir tür dosya oluşturmak için yeni bir seçenek eklendi.
   
@@ -120,7 +168,7 @@ Yayın tarihi, 24 Temmuz 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Dosya Uzantısı iyi bilinen herhangi bir düzenleyici tarafından işlenmediğinde bir sorun düzeltildi.
 
@@ -134,15 +182,15 @@ Yayın tarihi, 24 Temmuz 2019
 
 Yayımlanma tarihi 24 Mayıs 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Monodavranış API 'SI 2019,1 olarak güncelleştirildi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Hafif derleme etkinleştirildiğinde, çıktının düzeltilme uyarıları ve hataları düzeltildi.
 
@@ -152,9 +200,9 @@ Yayımlanma tarihi 24 Mayıs 2019
 
 Yayımlanma tarihi 21 Mayıs 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Projeleri daha hızlı yeniden yüklemek için yeni Batch API 'SI için destek eklendi.
 
@@ -164,21 +212,21 @@ Yayımlanma tarihi 21 Mayıs 2019
 
   - Unity 2019. x ile güncelleştirilmiş proje adı ayıklama mekanizması.
 
-  - UPE içinde Unity paketleri için destek eklendi. Yalnızca başvurulan paketler ( `Packages` klasöründe manifest. JSON kullanılarak) ve yerel paketler ( `Packages` klasöre katıştırılmış) görünür.
+  - UPE içinde Unity paketleri için destek eklendi. Yalnızca başvurulan paketler (`Packages` klasöründe manifest. JSON kullanılarak) ve yerel paketler (`Packages` klasörüne katıştırılmış) görünür.
 
 - **Proje oluşturma:**
 
   - Çözüm dosyasını işlerken dış özellikleri koruyun.
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
   - Diğer ad nitelenmiş adlar için destek eklendi (şimdilik yalnızca genel ad alanı). Bu nedenle, ifade değerlendirici artık genel:: Namespace. Type biçimini kullanarak türleri kabul ediyor.
 
-  - İşaretçi başvuru `pointer[index]` `*(pointer+index)` formuyla anlam ile aynı olan form için destek eklendi.
+  - `pointer[index]` form için, işaretçi başvuru `*(pointer+index)` form ile özdeş olan destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Microsoft. VisualStudio. MPF ile ilgili sabitlenmiş bağımlılık sorunları.
 
@@ -188,7 +236,7 @@ Yayımlanma tarihi 21 Mayıs 2019
 
   - Etiketler ve onay kutuları ile ilgili sabit Tema sorunları.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
   - Statik oluşturucularla düzeltilen Adımlama.
 
@@ -198,7 +246,7 @@ Yayın tarihi, 27 Şubat 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Kurulum paketiyle Visual Studio sürüm algılaması düzeltildi.
 
@@ -208,31 +256,31 @@ Yayın tarihi, 27 Şubat 2019
 
 Yayın tarihi, 13 Şubat 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Yükleme sırasında Unity süreçlerini düzgün bir şekilde algılamak ve kurulum altyapısının dosya kilitlerini daha iyi işlemesini sağlamak için destek eklendi.
 
-  - `ScriptableObject` API güncelleştirildi.
+  - `ScriptableObject` API 'SI güncelleştirildi.
 
 ## <a name="4003"></a>4.0.0.3
 
 Yayın tarihi 31 Ocak 2019
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - **Proje oluşturma:**
 
   - Ortak ve serileştirilmiş alanlar artık uyarılara neden olmaz. Bu iletileri oluşturan Unity projelerinde `CS0649` ve `IDE0051` derleyici uyarılarını otomatik olarak gizliyoruz.
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Unity Düzenleyicisi ve oynatıcı örneklerini görüntülemek için Kullanıcı deneyimi geliştirildi (Windows artık yeniden boyutlandırılabilir, tek biçimli kenar boşlukları kullanıyor ve bir yeniden boyutlandırma tutamacı görüntülüyor). Unity düzenleyicileri için Işlem kimliği bilgileri eklendi.
 
-  - `MonoBehaviour` API güncelleştirildi.
+  - `MonoBehaviour` API 'SI güncelleştirildi.
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
   - Yerel işlevler için destek eklendi.
 
@@ -240,7 +288,7 @@ Yayın tarihi 31 Ocak 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Bilinen ad görüntüleri ve temalarıyla ilgili bir sorun düzeltildi.
 
@@ -248,7 +296,7 @@ Yayın tarihi 31 Ocak 2019
 
   - Monodavranış Sihirbazı filtrelemesinde sabit UI gecikmeleri.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
   - Eski protokol sürümleri kullanılırken adlandırılmış bağımsız değişkenlerde özel öznitelik okuma düzeltildi.
 
@@ -258,7 +306,7 @@ Yayın tarihi, 23 Ocak 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Deneysel derleme üretimi düzeltildi.
 
@@ -266,7 +314,7 @@ Yayın tarihi, 23 Ocak 2019
 
   - Toplu metin değişiklikleri ile sabit tamamlama sağlayıcısı.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
   - Kullanıcı hata ayıklama iletilerinin ekli hata ayıklayıcısına gösterilmesi düzeltildi.
 
@@ -274,9 +322,9 @@ Yayın tarihi, 23 Ocak 2019
 
 Yayın tarihi 10 Aralık 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
   - İfade değerlendirmesi için NRefactory 'ın Roslyn tarafından değiştirildiği yer.
 
@@ -286,13 +334,13 @@ Yayın tarihi 10 Aralık 2018
 
   - Zaman uyumsuz yapılar için destek eklendi.
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Kayıt sırasında Unity 'nin varlık veritabanının otomatik olarak yenilenmesi için destek eklendi. Bu, varsayılan olarak etkindir ve Visual Studio 'da bir betiği kaydederken Unity tarafında yeniden derleme tetikleyecektir. Kayıt sırasında Unity 'nin Assetveritabanını yenilemek için Tools\Options\Tools içinde bu özelliği devre dışı bırakabilirsiniz.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Tercih edilen harici düzenleyici olarak Visual Studio seçilmediğinde, sabitlenmiş köprü etkinleştirme.
 
@@ -302,9 +350,9 @@ Yayın tarihi 10 Aralık 2018
 
 Yayın tarihi 4 Aralık 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Visual Studio 2019 için destek eklendi (Visual Studio 2019 ' i dış betik düzenleyicisi olarak kullanabilmeniz için en az Unity 2018,3 gerekir).
 
@@ -312,7 +360,7 @@ Yayın tarihi 4 Aralık 2018
 
 ### <a name="deprecated-features"></a>Kullanım dışı Özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Unity için Visual Studio Araçları, yalnızca Unity 5.2 + ' ı destekler (Unity 'nin yerleşik Visual Studio tümleştirmesiyle).
 
@@ -324,231 +372,231 @@ Yayın tarihi 4 Aralık 2018
 
 ## <a name="3903"></a>3.9.0.3
 
-Yayın Tarihi: 28 Kasım 2018
+Yayın tarihi, 28 Kasım 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Çok birinci projede bulunan betikleri eklerken veya kaldırırken düzeltilen proje yeniden yükleme ve IntelliSense sorunları.
 
 ## <a name="3902"></a>3.9.0.2
 
-Yayın Tarihi: 19 Kasım 2018
+Yayın tarihi 19 Kasım 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Visual Studio veya Unity, özellikle 'Unity İşleme İliştir' ulaşmaktan olduğunda dondurma yapma veya oyunu yeniden Unity'nın hata ayıklayıcısı altyapısı ile iletişim kurmak için kullanılan Kitaplığı'nda bir kilitlenme düzeltildi.
+  - Unity 'nin hata ayıklayıcı altyapısı ile iletişim kurmak için kullanılan kitaplıkta bir kilitlenme düzeltildi, özellikle ' Unity 'ye Ekle ' veya oyunu yeniden başlatma sırasında, Visual Studio veya Unity dondurma
 
 ## <a name="3901"></a>3.9.0.1
 
-15 Kasım 2018'de yayınlanan
+Yayımlanma tarihi, 15 Kasım 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Başka bir varsayılan düzenleyici seçildiğinde sabit Unity eklentisini etkinleştirme.
+  - Başka bir varsayılan düzenleyici seçildiğinde, sabit Unity eklentisi etkinleştirmesi.
 
 ## <a name="3900"></a>3.9.0.0
 
-13 Kasım 2018'de yayınlanan
+Yayın tarihi, 13 Kasım 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Unity tarafından sabit bir Unity performans hatanın geçici çözümü geri alındı.
+  - Unity tarafından düzeltilen bir Unity performans hatası için geçici çözümü geri alındı.
 
 ## <a name="3807"></a>3.8.0.7
 
-Yayın Tarihi: 20 Eylül 2018
+Yayımlanma tarihi, 20 Eylül 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - (Backported 3.9.0.2 gelen) Visual Studio veya Unity, özellikle 'Unity İşleme İliştir' ulaşmaktan olduğunda dondurma yapma veya oyunu yeniden Unity'nın hata ayıklayıcısı altyapısı ile iletişim kurmak için kullanılan Kitaplığı'nda bir kilitlenme düzeltildi.
+  - (3.9.0.2 'ten geri alma) Unity 'nin hata ayıklayıcı altyapısı ile iletişim kurmak için kullanılan kitaplıkta bir kilitlenme düzeltildi, özellikle ' Unity 'ye Ekle ' veya oyunu yeniden başlatma sırasında, Visual Studio veya Unity dondurma
 
 ## <a name="3806"></a>3.8.0.6
 
-Yayın Tarihi: 27 Ağustos 2018
+Yayın tarihi 27 Ağustos 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Proje ve çözüm yeniden düzeltildi.
+  - Proje ve çözümün yeniden yüklenmesi düzeltildi.
 
 ## <a name="3805"></a>3.8.0.5
 
-Yayın Tarihi: 20 Ağustos 2018
+Yayın 20 Ağustos 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Abonelik elden izleme sabit bir proje.
+  - Sabit proje izleme aboneliği elden çıkarma.
 
 ## <a name="3804"></a>3.8.0.4
 
-Yayın Tarihi: 14 Ağustos 2018
+14 Ağustos 2018 tarihinde yayınlandı
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
   - İşaretçi değerleri için destek eklendi.
 
-  - Genel metotlar için desteği eklendi.
+  - Genel yöntemler için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Birden çok proje ile akıllı yeniden değiştirildi.
+  - Birden çok projeyle birlikte akıllı yeniden yükleme değiştirildi.
 
 ## <a name="3803"></a>3.8.0.3
 
-24 Temmuz 2018'de yayınlanan
+Yayın tarihi, 24 Temmuz 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - (Backported 3.9.0.0 gelen) Unity tarafından sabit bir Unity performans hatanın geçici çözümü geri alındı.
+  - (3.9.0.0 'ten geri alma) Unity tarafından düzeltilen bir Unity performans hatası için geçici çözümü geri alındı.
 
 ## <a name="3802"></a>3.8.0.2
 
-7 Temmuz 2018'de yayınlanan
+Yayın tarihi 7 Temmuz 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Unity performans hatanın geçici çözüm: projeleri oluştururken MonoIslands önbellek.
+  - Unity performans hatası için geçici geçici çözüm: proje oluştururken Cache Monoadaları.
 
 ## <a name="3801"></a>3.8.0.1
 
-26 Haziran 2018'de yayınlanan
+Yayın tarihi 26 Haziran 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Hata ayıklama:**
+- **Masının**
 
   - UserLog ve UserBreak komutları için destek eklendi.
 
-  - Eklenen lazy türü yükleme desteği (Ağ Yükü ve hata ayıklayıcı yanıt gecikme süresi en iyi duruma getirme).
+  - Geç tür yükleme desteği eklendi (ağ yükü ve hata ayıklayıcı yanıt gecikmesini en iyi duruma getirme).
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - İkili-işleç ifade değerlendirmesi ve yöntem arama geliştirildi.
+  - Geliştirilmiş ikili işleç ifade değerlendirmesi ve yöntem arama.
 
 ## <a name="3800"></a>3.8.0.0
 
-30 Mayıs 2018'de yayınlanan
+Yayımlanma tarihi 30 Mayıs 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Hata ayıklama:**
+- **Masının**
 
-  - Zaman uyumsuz yapılarında değişkenler görüntülemek için destek eklendi.
+  - Zaman uyumsuz yapıların değişkenlerini görüntülemek için destek eklendi.
 
-  - İç içe geçmiş türler derleyici yapılarıyla uyarıları önlemek için kesme noktaları, ayarlarken işlemek için destek eklendi.
+  - Derleyici yapıları ile uyarıları engellemek için kesme noktaları ayarlanırken iç içe türlerin işlenmesine yönelik destek eklendi.
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - İçin destek eklendi textmate dil bilgisi için gölgelendiriciler (C++ iş yükünde artık gölgelendirici kod coloration için gereklidir).
+  - Gölgelendiriciler için TextMate dilbilgisi desteği eklendi (gölgelendirici kodu C++ renklendirme için iş yükü artık gerekli değildir).
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Taşınabilir pdb mdb için artık yeni Unity çalışma zamanı kullanırken dönüştürmez.
+  - Yeni Unity çalışma zamanı kullanılırken taşınabilir pdb 'yi artık mdb 'ye dönüştürmeyin.
 
 ## <a name="3701"></a>3.7.0.1
 
-7 Mayıs 2018'de yayınlanan
+Yayımlanma tarihi 7 Mayıs 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Yükleyici:**
+- **Yükleyicinin**
 
-  - Deneysel kullanırken sabit bağımlılık sorun oluşturur.
+  - Deneysel derlemeler kullanılırken sabitlenmiş bağımlılık sorunu.
 
 ## <a name="3700"></a>3.7.0.0
 
-7 Mayıs 2018'de yayınlanan
+Yayımlanma tarihi 7 Mayıs 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Hata ayıklama:**
+- **Masının**
 
-  - (Birden çok oyuncuların/düzenleyici ile aynı Visual Studio oturumu hata ayıklama) düzenlenmiş hata ayıklama için destek eklendi.
+  - Düzenlenmiş hata ayıklama için destek eklendi (aynı Visual Studio oturumunda birden çok oynatıcı/düzenleyicide hata ayıklama).
 
-  - Android USB player hata ayıklama için destek eklendi.
+  - Android USB oynatıcı hata ayıklama desteği eklendi.
 
-  - UWP/ıl2cpp player hata ayıklama için destek eklendi.
+  - UWP/IL2CPP Player hata ayıklama desteği eklendi.
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - Onaltılık tanımlayıcıları için destek eklendi.
+  - Onaltılık tanımlayıcılar için destek eklendi.
 
-  - Gelişmiş İzleme penceresinde değerlendirme deneyimi.
+  - Geliştirilmiş Gözcü penceresi değerlendirme deneyimi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Özel durum ayarları sabit kullanımı.
+  - Özel durum ayarlarının sabit kullanımı.
 
 - **Proje oluşturma:**
 
-  - Paket Yöneticisi derleme biriminden kuşaktan hariç tutun.
+  - Paket Yöneticisi derleme birimlerini oluşturma işleminden dışlayın.
 
 ## <a name="3605"></a>3.6.0.5
 
-13 Mart 2018'de yayınlanan
+Yayın tarihi 13 Mart 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - **Proje oluşturma:**
 
-  - Yeni Proje Oluşturma Aracı'nda Unity 2018.1 desteği eklendi.
+  - Unity 2018,1 ' de yeni proje Oluşturucu desteği eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Bozuk durum özel projeler içeren işleme düzeltildi.
+  - Özel projelerle bozulmuş durumları işleme düzeltildi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Sonraki deyimin ayarlanması düzeltildi.
+  - Next ifadesinin ayarlanması düzeltildi.
 
 ## <a name="3604"></a>3.6.0.4
 
-5 Mart 2018'de yayınlanan
+Yayımlanma tarihi, 5 Mart 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Mono sürüm algılama düzeltildi.
+  - Sabit mono sürümü algılama.
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - 2018.1 ile zamanlama sorunları düzeltildi ve eklentisini etkinleştirme.
+  - 2018,1 ve eklenti etkinleştirme ile ilgili sabit zamanlama sorunları.
 
 ## <a name="3603"></a>3.6.0.3
 
-23 Şubat 2018'de yayınlanan
+Yayın tarihi, 23 Şubat 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - **Proje oluşturma:**
 
@@ -558,1158 +606,1158 @@ Yayın Tarihi: 14 Ağustos 2018
 
 - **Proje oluşturma:**
 
-  - Sabit Unity hedef framework algılama.
+  - Sabit Unity hedef Framework algılaması.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Sabit bozucu dışında usercode attığı özel durumları hakkında.
+  - UserCode dışında oluşturulan özel durumlarla ilgili sabit bir bölme.
 
 ## <a name="3602"></a>3.6.0.2
 
-7 Şubat 2018'de yayınlanan
+Yayın tarihi 7 Şubat 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - UnityMessage API yüzeyi 2017.3 için güncelleştirin.
+  - 2017,3 için UnityMessage API yüzeyini güncelleştirin.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Yalnızca dış değişiklik (azaltma ile) projeleri yeniden yükleyin.
+  - Yalnızca dış değişiklik üzerinde projeleri yeniden yükle (daraltma ile).
 
 ## <a name="3601"></a>3.6.0.1
 
-Yayın Tarihi: 24 Ocak 2018
+24 Ocak 2018 ' de yayınlandı
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Mdb hata ayıklama sembol dönüştürme sabit otomatik pdb.
+  - Otomatik pdb 'den mdb hata ayıklama sembol dönüştürme.
 
-  - Dizi boyutu değiştirilmeye çalışılırken Inspector'ı etkileyen EditorPrefs.GetBool sabit dolaylı çağrı.
+  - EditorPrefs. GetBool öğesine yapılan dolaylı çağrı, dizi boyutunu değiştirmeye çalışırken Inspector 'ı etkiliyor.
 
-## <a name="3600"></a>3.6.0.0'dan
+## <a name="3600"></a>3.6.0.0
 
-10 Ocak 2018'de yayınlanan
+Yayımlanma tarihi 10 Ocak 2018
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - **Proje oluşturma:**
 
-  - 2018.1 MonoIsland başvuru modeli için destek eklendi.
+  - 2018,1 Monoadası başvuru modeli için destek eklendi.
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - $Exception tanımlayıcısı için destek eklendi.
+  - $Exception tanımlayıcı için destek eklendi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Yeni Unity çalışma zamanı ile DebuggerHidden/Debuggestepthrough öznitelikler için destek eklendi.
+  - Yeni Unity çalışma zamanına sahip öznitelikler aracılığıyla DebuggerHidden/Debuggerstepdesteği eklendi.
 
-- **Sihirbazlar:**
+- **'Nı**
 
-  - Sihirbazlar için 'Son' sürümü tanıtır.
+  - Sihirbazlar için ' en son ' sürümünü tanıtın.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Oynatıcı projeleri için proje GUID hesaplama düzeltildi.
+  - Oynatıcı projeleri için sabit proje GUID hesaplaması.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Kesme olayları işleme, bir yarış düzeltildi.
+  - Parçalama olaylarını işlerken bir yarış düzeltildi.
 
-- **Sihirbazlar:**
+- **'Nı**
 
-  - Roslyn bağlam yöntemi eklemeden önce yenileyin.
+  - Yöntemi eklemeden önce Roslyn bağlamını yenileyin.
 
 ## <a name="3503"></a>3.5.0.3
 
-9 Ocak 2018'de yayınlanan
+Yayımlanma tarihi 9 Ocak 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Mdb hata ayıklama sembol dönüştürme sabit otomatik pdb.
+  - Otomatik pdb 'den mdb hata ayıklama sembol dönüştürme.
 
 ## <a name="3502"></a>3.5.0.2
 
-Yayın Tarihi: 4 Aralık 2017
+Yayın tarihi 4 Aralık 2017
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
   - Artık Unity'de bir betik eklediğinizde veya kaldırdığınızda Unity projeleri Visual Studio'da otomatik olarak yeniden yükleniyor.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Unity Editor'daki hata ayıklama için Mac için Visual Studio ve Xamarin tarafından paylaşılan Mono hata ayıklayıcısını kullanma seçeneği eklendi.
+  - Unity düzenleyicisinde hata ayıklamak için Xamarin ve Mac için Visual Studio tarafından paylaşılan mono hata ayıklayıcısını kullanma seçeneği eklendi.
 
   - Taşınabilir hata ayıklama sembol dosyaları için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme:**
+- **Tümleştirme**
 
-  - Kurulum bağımlılıkları sorunlar düzeltildi.
+  - Düzeltilen kurulum bağımlılıkları sorunları.
 
   - Sabit Unity API Yardım menüsü gösterilmiyor.
 
 - **Proje oluşturma:**
 
-  - Sabit player proje oluşturma ıl2cpp/.NET 4.6 arka ucu ile bir UWP oyunu üzerinde çalışırken.
+  - IL2CPP/. NET 4,6 arka ucu ile UWP oyunu üzerinde çalışırken düzeltilen oynatıcı proje üretimi.
 
-  - Ek .dll uzantısı yanlış derleme dosya adına eklenmiş düzeltildi.
+  - Derleme dosya adına yanlışlıkla eklenmiş ek. dll uzantısı düzeltildi.
 
-  - Belirli bir proje API uyumluluk düzeyi yerine genel bir sabit kullanımı.
+  - Genel bir tane yerine belirli bir Project API Uyumluluk düzeyinin sabit kullanımı.
 
-  - Varsayılan 'true' olduğunda AllowAttachedDebuggingOfEditor Unity bayrağı zorlamaz.
+  - Varsayılan olarak ' true ' olduğundan AllowAttachedDebuggingOfEditor Unity bayrağını zorlamayın.
 
 ## <a name="3402"></a>3.4.0.2
 
-Yayın Tarihi: 19 Eylül 2017
+Yayın tarihi 19 Eylül 2017
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - **Proje oluşturma:**
 
-  - Assembly.json derleme birimler için destek eklendi.
+  - Assembly. JSON derleme birimleri için destek eklendi.
 
-  - Unity derlemeleri proje klasörüne kopyalama durduruldu.
+  - Unity derlemelerinin proje klasörüne kopyalanması durduruldu.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Yeni Unity çalışma zamanı ile sonraki deyimi ayarlamak için destek eklendi.
+  - Yeni Unity çalışma zamanı ile sonraki ifadeyi ayarlamaya yönelik destek eklendi.
 
-  - Decimal türü ile yeni Unity çalışma zamanı desteği eklendi.
+  - Yeni Unity çalışma zamanına sahip onlu tür için destek eklendi.
 
   - Örtük/açık dönüştürmeler için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - Dizi oluşturma örtük boyutu sabit.
+  - Örtük boyut ile sabit dizi oluşturma.
 
-  - Sabit derleyici Yereller öğeleriyle oluşturulur.
+  - Sabit derleyici, Yerellerle oluşturulmuş öğeler.
 
 - **Proje oluşturma:**
 
-  - Microsoft.CSharp sabit başvuru için 4,6 API düzeyi.
+  - 4,6 API düzeyi için Microsoft. CSharp 'e yönelik sabit başvuru.
 
 ## <a name="3302"></a>3.3.0.2
 
-Yayın Tarihi: 15 Ağustos 2017
+15 Ağustos 2017 ' de yayınlandı
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Visual Studio çözümü oluşturma Unity 5.5 ve önceki sürümlerde düzeltildi.
+  - Unity 5,5 ve önceki sürümlerde Visual Studio çözüm üretimi düzeltildi.
 
 ## <a name="3300"></a>3.3.0.0
 
-Yayın Tarihi: 14 Ağustos 2017
+14 Ağustos 2017 tarihinde yayınlandı
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - Yapılar yeni Unity çalışma zamanı ile oluşturma desteği eklendi.
+  - Yeni Unity çalışma zamanı ile yapı oluşturma desteği eklendi.
 
-  - İşaretçileri minimalist desteği eklendi.
+  - İşaretçiler için minimum aList desteği eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Değerlendirme:**
+- **Değerlendirmesinin**
 
-  - Fixed yöntemi çağırma temelleri üzerinde.
+  - Temel elemanlar üzerinde sabit Yöntem çağırma.
 
-  - Alan değerlendirme Beforefiledinit ile işaretlenen türlerdeki ile düzeltildi.
+  - BeforeFieldInit ile işaretlenmiş türlerle sabit alan değerlendirmesi.
 
-  - İkili işleçli (çıkar) sabit olmayan desteklenen çağırır.
+  - İkili işleçlerle (substract) desteklenmeyen ve olmayan çağrılar düzeltildi.
 
-  - Visual Studio saate öğeleri eklerken sorunlar düzeltildi.
+  - Visual Studio Watch 'a öğe eklenirken oluşan sorunlar düzeltildi.
 
 - **Proje oluşturma:**
 
-  - Derleme adı başvuruları mcs.rsp dosyalarıyla düzeltildi.
+  - MCS. rsp dosyalarıyla düzeltilen derleme adı başvuruları.
 
-  - Sabit ile API düzeyleri tanımlar.
+  - API düzeyleriyle düzeltilen tanımlar.
 
 ## <a name="3200"></a>3.2.0.0
 
-Yayın Tarihi: 10 Mayıs 2017
+Yayımlanma tarihi 10 Mayıs 2017
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Yükleyici:**
+- **Yükleyicinin**
 
-  - MEF önbelleği temizleme desteği eklendi.
+  - MEF önbelleğini temizleme desteği eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Kod Düzenleyicisi:**
 
-  - Sabit sınıflandırma/tamamlama özel özniteliklere sahip.
+  - Özel özniteliklerle sabit sınıflandırma/tamamlama.
 
-  - Unity iletileri ile titremeyi düzeltildi.
+  - Unity iletileriyle düzeltilen titreşme.
 
 ## <a name="3100"></a>3.1.0.0
 
-Yayın Tarihi: 7 Nisan 2017
+Yayın tarihi, 7 Nisan 2017
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Yeni Unity çalışma zamanı desteği eklendi (.NET 4.6 ile / C# 6 uyumluluğu).
+  - Yeni Unity çalışma zamanı (.NET 4,6/ C# 6 uyumluluğuyla) için destek eklendi.
 
 - **Proje oluşturma:**
 
-  - .NET 4.6 profili için destek eklendi.
+  - .NET 4,6 profili için destek eklendi.
 
-  - Mcs.rsp dosyaları için destek eklendi.
+  - MCS. rsp dosyaları için destek eklendi.
 
-  - Unity 5.6 kullanıldığında her zaman güvensiz derleme anahtar etkinleştirin.
+  - Unity 5,6 kullanıldığında her zaman güvenli olmayan derleme anahtarını etkinleştirin.
 
-  - "Player" proje oluşturma desteği eklendi Windows Store platform ve ıl2cpp arka ucu kullanırken.
+  - Windows Mağazası platformu ve il2cpp arka ucu kullanılırken "oynatıcı" proje üretimi için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Kod Düzenleyicisi:**
 
-  - Giriş işareti konumunu, otomatik tamamlama yöntemi ekledikten sonra düzeltildi.
+  - Otomatik tamamlama ile Yöntem eklendikten sonra düzeltilen giriş işareti konumu.
 
 - **Proje oluşturma:**
 
-  - Kaldırılan derleme sonrası işleme sürümü.
+  - Derleme sürümü işleme sonrası kaldırıldı.
 
 ## <a name="3001"></a>3.0.0.1
 
-Yayın Tarihi: 7 Mart 2017
+Yayın tarihi 7 Mart 2017
 
-### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Bu sürümü, tüm yeni özellikler ve hata düzeltmeleri 2.8.x serisi ile sunulan içerir.
+### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Bu sürüm, 2.8. x serisi ile tanıtılan tüm yeni özellikleri ve hata düzeltmelerini içerir.
 
-## <a name="2820---30-preview-3"></a>2.8.2.0 - 3.0 preview 3
-25 Ocak 2017 tarihinde yayımlandı
+## <a name="2820---30-preview-3"></a>2.8.2.0-3,0 Preview 3
+25 Ocak 2017 tarihinde yayınlandı
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - Burada eklenti projeleri iki kez başvurulan burada ilk olarak ikili bir DLL sonra bir proje olarak başvuruda gerilemesi düzeltildi.
+  - İkinci kez bir ikili DLL olarak, önce bir proje başvurusu olarak başvurulan eklenti projelerinin bulunduğu bir sabit gerileme.
 
-## <a name="2810---30-preview-2"></a>2.8.1.0 - 3.0 Önizleme 2
-Yayın Tarihi: 23 Ocak 2017
+## <a name="2810---30-preview-2"></a>2.8.1.0-3,0 Preview 2
+Yayın tarihi, 23 Ocak 2017
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Kod Düzenleyicisi:**
 
-  - Bir öznitelik bildirimi olmadan küme ayracı tamamlama başlatırken bir kilitlenme düzeltildi.
+  - Küme ayracı tamamlanana gerek olmadan bir öznitelik bildirimi başlatıldığında kilitlenme düzeltildi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Eş yordamlar yeni Unity derleyici/çalışma zamanı altında sabit bir işlev kesme noktaları.
+  - Yeni Unity derleyicisi/çalışma zamanı altındaki eş değerleri içeren sabit işlev kesme noktaları.
 
-  - Eklenen uyarı durumunda (karşılık gelen kaynak konumu bulunduğunda) unbindable bir kesme noktası.
+  - Bağlanabilir kesme noktası (karşılık gelen kaynak-konum bulunamadı) durumunda uyarı eklendi.
 
 - **Proje oluşturma:**
 
-  - Özel ve yerelleştirilmiş karakterleri ile csproj oluşturma düzeltildi.
+  - Özel/yerelleştirilmiş karakterlerle sabit csproj oluşturma.
 
-  - Sabit başvuruları kitaplığı (gibi Facebook SDK'sı) gibi varlıkları dışında.
+  - Kitaplık (Facebook SDK gibi) dışındaki varlık başvuruları.
 
-- **Çeşitli:**
+- **Muht**
 
-  - Unity yüklemeden veya kaldırmadan olduğunda çalışmasını engellemek için bir denetim eklendi.
+  - Yükleme veya kaldırma sırasında Unity 'nin çalışmasını engellemek için denetim eklendi.
 
-  - Uzak Unity belgeleri hedeflemek için https olarak değiştirdi.
+  - Uzak Unity belgelerini hedeflemek için https 'ye geçildi.
 
-## <a name="2800---30-preview"></a>2.8.0.0 - 3.0 Önizleme
-17 Kasım 2016 yayımlanan
+## <a name="2800---30-preview"></a>2.8.0.0-3,0 Preview
+Yayınlanan 17 Kasım 2016
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Genel:**
+- **Genel**
 
-  - Visual Studio 2017 yükleyicisi desteği eklendi.
+  - Visual Studio 2017 yükleyici desteği eklendi.
 
-  - Visual Studio 2017 uzantısı desteği eklendi.
+  - Visual Studio 2017 uzantı desteği eklendi.
 
-  - Eklenen yerelleştirme desteği.
+  - Yerelleştirme desteği eklendi.
 
 - **Kod Düzenleyicisi:**
 
-  - Ek C# Unity iletileri için IntelliSense.
+  - Unity C# iletileri için IntelliSense eklendi.
 
-  - Ek C# kod coloration Unity iletileri için.
+  - Unity C# iletileri için kod renklendirme eklendi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - İçin destek eklendi `is`, `as`, doğrudan tür dönüştürme; `default`, `new` ifadeler.
+  - `is`, `as`, doğrudan atama, `default``new` ifadeleri için destek eklendi.
 
-  - Dize concat ifadeleri için destek eklendi.
+  - Dize Concat ifadeleri için destek eklendi.
 
-  - Onaltılık gösterim tamsayı değerleri için destek eklendi.
+  - Tamsayı değerlerinin onaltılı görünümü için destek eklendi.
 
-  - Yeni geçici değişkenlerin (ifadeler) oluşturma desteği eklendi.
+  - Yeni geçici değişkenler (deyimler) oluşturma desteği eklendi.
 
-  - Temel örtülü dönüştürmeler için destek eklendi.
+  - Örtük ilkel dönüştürmeler için destek eklendi.
 
-  - Daha iyi bir tür bekleniyor veya nebyl nalezen hata iletileri eklendi.
+  - Bir tür beklendiğinde veya bulunamadığında daha iyi hata iletileri eklendi.
 
 - **Proje oluşturma:**
 
-  - CSharp soneki proje adlarından kaldırıldı.
+  - Proje adlarından CSharp son eki kaldırıldı.
 
-  - Bir sistem geniş msbuild hedef dosyası kaldırılan başvuru.
+  - Bir sistem genelinde MSBuild hedef dosyasına başvuru kaldırıldı.
 
-- **Sihirbazlar:**
+- **'Nı**
 
-  - Düzenleyici veya EditorWindow gibi olmayan davranışı türlerinde Unity iletileri için destek eklendi.
+  - Düzenleyici veya EditorWindow gibi davranış türlerinde Unity iletileri için destek eklendi.
 
-  - Ekleme ve Unity iletileri için Roslyn değiştirdi.
+  - Unity iletilerini eklemek ve biçimlendirmek için Roslyn 'e geçildi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Genel türler değerlendirirken Unity kilitlenme düzeltildi.
+  - Genel türler değerlendirilirken Unity 'yi kilitlenen bir hata düzeltildi.
 
-  - Boş değer atanabilir türler sabit işlenmesi.
+  - Null yapılabilir türlerin sabit işlenmesi.
 
-  - Numaralandırmalar sabit işlenmesi.
+  - Numaralandırmaların sabit işlenmesi.
 
-  - İç içe üyesi türlerin sabit işleme.
+  - İç içe üye türlerin sabit işlenmesi.
 
-  - Sabit koleksiyonu dizin oluşturucusu erişim.
+  - Koleksiyon dizin oluşturucu erişimi düzeltildi.
 
-  - Sabit yineleyici çerçeve yeni C# derleyicisi ile hata ayıklama desteği.
+  - Yeni C# derleyici ile Yineleyici çerçevelerini hata ayıklama için sabit destek.
 
 - **Proje oluşturma:**
 
-  - Unity Web Oynatıcısı hedeflenirken derleme önleyen hata düzeltildi.
+  - Unity Web oynatıcı hedeflenirken derlemeyi önleyen hata düzeltildi.
 
-  - Bir web ile bir komut dosyası derlenirken derleme önleyen hata düzeltildi, dosya adı kodlanmış.
+  - Web kodlamalı dosya adı ile bir betiği derlerken derlemeyi önleyen hata düzeltildi.
 
 ## <a name="2300"></a>2.3.0.0
 
-Yayınlanma tarihi: 14 Temmuz 2016
+Yayın tarihi 14 Temmuz 2016
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Genel:**
+- **Genel**
 
-  - Visual Studio hata listesinde Unity konsolundan devre dışı bırakmak için bir seçenek günlükleri eklendi.
+  - Visual Studio 'nun hata listesindeki Unity konsol günlüklerini devre dışı bırakma seçeneği eklendi.
 
-  - Oluşturulan proje özellikleri değiştirilmesine izin verme seçeneği eklendi.
+  - Oluşturulan proje özelliklerinin değiştirilmesine izin veren bir seçenek eklendi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Eklenen metin, XML, HTML ve JSON görselleştiriciler dize.
+  - Metin, XML, HTML ve JSON dize Görselleştiriciler eklendi.
 
-- **Sihirbazlar:**
+- **'Nı**
 
-  - MonoBehaviors eksik eklendi.
+  - Eksik Monodavranışlar eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Genel:**
+- **Genel**
 
-  - Denetim içinde görüntülenmesini Visual Studio ayarları önleyen ReSharper ile bir çakışma çözüldü.
+  - Visual Studio ayarlarının içindeki denetimlerin görüntülenmesini önleyen ReSharper ile bir çakışma düzeltildi.
 
-  - Bazı durumlarda hata ayıklamayı engelleyen Xamarin ile bir çakışma çözüldü.
+  - Bazı durumlarda hata ayıklamayı önleyen Xamarin ile bir çakışma düzeltildi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Visual Studio'nun hata ayıklama sırasında donmasıyla sonuçlanabiliyor nedeni bir sorun düzeltildi.
+  - Hata ayıklarken Visual Studio 'Nun dondurmasına neden olan bir sorun düzeltildi.
 
-  - Visual Studio 2015'te işlev kesme noktaları ile bir sorun düzeltildi.
+  - Visual Studio 2015 ' de işlev kesme noktaları ile ilgili bir sorun düzeltildi.
 
-  - Birden fazla ifade değerlendirme sorunları düzeltildi.
+  - Birkaç ifade değerlendirme sorunu düzeltildi.
 
 ## <a name="2200"></a>2.2.0.0
 
-Yayınlanma tarihi: 4 Şubat 2016
+Yayımlanma tarihi 4 Şubat 2016
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- **Sihirbazlar:**
+- **'Nı**
 
-  - Eklenen akıllı arama **uygulama MonoBehavior** Sihirbazı.
+  - **Tek davranış uygulama** sihirbazına akıllı arama eklendi.
 
-  - Yapılan sihirbazları bağlamı kullanan; Örneğin, NetworkBehavior iletileri yalnızca bir NetworkBehavior ile çalışırken kullanılabilir.
+  - Sihirbazlar bağlamı uyumlu hale getirilir; Örneğin, NetworkBehavior iletileri yalnızca bir NetworkBehavior ile çalışırken kullanılabilir.
 
-  - Sihirbazlar NetworkBehavior iletiler için destek eklendi.
+  - Sihirbazlardaki NetworkBehavior iletileri için destek eklendi.
 
 - **UI:**
 
-  - MonoBehavior iletilerin görünürlüğünü yapılandırmak için bir seçenek eklenmiştir.
+  - Tek davranış iletilerinin görünürlüğünü yapılandırmak için bir seçenek eklenmiştir.
 
-  - Visual Studio için Unity projeleri ilgili olmayan özellik sayfalarını kaldırıldı.
+  - Unity projeleriyle ilgili olmayan Visual Studio özellik sayfaları kaldırıldı.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Proje oluşturma:**
 
-  - UnityEngine ve Unity 4.6 üzerinde UnityEditor sabit başvuruları.
+  - Unity 4,6 ' de UnityEngine ve UnityEditor 'a yönelik sabit başvurular.
 
-  - Sabit Unity OSX üzerinde çalışırken proje dosyalarının oluşturulmasını.
+  - Unity, OSX üzerinde çalışırken proje dosyalarının sabit üretimi düzeltildi.
 
-  - Proje adları hashmark (#) karakterleri içeren sabit işlenmesi.
+  - Diyez işareti (#) karakteri içeren proje adlarının sabit işlenmesi.
 
-  - Oluşturulan projeleri C# 4'e sınırlı.
+  - Kısıtlanmış üretilen projeler 4 C# ' e kadar.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Bir sorun, bir Unity eş yordam içinde hata ayıklama sırasında ifade değerlendirme ile düzeltildi.
+  - Unity eş içinde hata ayıklanırken ifade değerlendirmesiyle ilgili bir sorun düzeltildi.
 
-  - Visual Studio'nun hata ayıklama sırasında donmasıyla sonuçlanabiliyor nedeni bir sorun düzeltildi.
+  - Hata ayıklarken Visual Studio 'Nun dondurmasına neden olan bir sorun düzeltildi.
 
 - **UI:**
 
-  - Bir uyumsuzluk sabit [sekmeleri Studio](https://tabsstudio.com/) Visual Studio uzantısı.
+  - [Sekmeler Studio](https://tabsstudio.com/) Visual Studio uzantısıyla uyumsuzluk düzeltildi.
 
-- **Yükleyici:**
+- **Yükleyicinin**
 
-  - HKLM Kayıt defteri girişleri oluşturarak VSTU (tüm kullanıcılar için yüklenir) makineye yüklenmesini destekler.
+  - HKLM Kayıt defteri girişleri oluşturarak, bir VSTU (tüm kullanıcılar için yükleme) makine genelinde yüklemesini destekler.
 
-  - Visual Studio'nun birden çok farklı sürümleri için VSTU sürümüyle aynı sürümü yüklendiğinde VSTU kaldırılması ile sorunlar düzeltildi. Örneğin, VSTU **2015** 2.1.0.0 ve VSTU **2013** 2.1.0.0 hem takıldı.
+  - Aynı VSTU sürümü Visual Studio 'nun birden çok farklı sürümüne yüklendiğinde, VSTU 'nin kaldırılmasıyla ilgili sorunlar düzeltildi. Örneğin, VSTU **2015** 2.1.0.0 ve vstu **2013** 2.1.0.0 her ikisi de yüklüyse.
 
 ## <a name="2100"></a>2.1.0.0
 
-8 Eylül 2015'i yayınladı
+Yayın tarihi, 8 Eylül 2015
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity 5.2 için destek
+- Unity 5,2 için destek
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Unity üzerinde menü öğeleri görüntüle < 4.2
+- Unity < 4,2 ' de menü öğelerini görüntüle
 
-- Bir hata iletisi artık Visual Studio XML IntelliSense dosyalarını kilitler görüntülenir.
+- Visual Studio XML IntelliSense dosyalarını kilitlediğinde bir hata iletisi artık görüntülenmez.
 
-- Tanıtıcı <\<sorunu gidermeye çalışırken değiştirdiği >> koşullu bağımsız değişkeni bir boolean değeri değil, koşullu kesme noktaları.
+- Koşullu bağımsız değişken bir Boole değeri olmadığında <\<> değiştirildiğinde, koşullu kesme noktaları >.
 
-- Windows Store uygulamaları için UnityEngine ve UnityEditor derlemelere başvuruları sabit.
+- Windows Mağazası uygulamaları için UnityEngine ve UnityEditor Derlemeleriyle ilgili sabit başvurular.
 
-- Hata ayıklayıcıda adımla düzeltilen hata: Adım, genel özel durum.
+- Hata ayıklayıcıda adımla düzeltilen hata: adım, genel özel durum.
 
-- Visual Studio 2015'te sabit isabet sayısı kesme noktaları.
+- Visual Studio 2015 ' de sabit isabet sayısı kesme noktaları.
 
 ## <a name="2000"></a>2.0.0.0
 
-20 Temmuz 2015'i yayınladı
+Yayın tarihi 20 Temmuz 2015
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Unity tümleştirmesi:**
 
-  - Bir DLL ve onun hata ayıklama simgeleri (PDB) içeri aktarırken Visual Studio 2015 ile oluşturulan hata ayıklama sembolleri dönüştürme sabit.
+  - DLL ve hata ayıklama sembolleri (PDB) içeri aktarılırken Visual Studio 2015 ile oluşturulan hata ayıklama simgelerinin dönüştürülmesi düzeltildi.
 
-  - Her zaman MDB dosyaları bir DLL ve onun hata ayıklama simgeleri (PDB) içeri aktarılırken ne zaman bir MDB dosyası ayrıca sağlanan dışında oluşturun.
+  - Bir MDB dosyası da sağlanmasının dışında, bir DLL ve hata ayıklama sembolleri (PDB) içeri aktarırken her zaman MDB dosyaları oluştur.
 
-  - Sabit kirlilik Unity proje dizininin obj dizinine sahip.
+  - Bir obj diziniyle Unity proje dizininin sabit bir şekilde kirmi düzeltildi.
 
-  - Başvuruları System.Xml.Link ve System.Runtime.Serialization sabit oluşturma.
+  - System. xml. Link ve System. Runtime. Serialization başvuruları düzeltildi.
 
-  - Kancaları. birden fazla aboneye proje dosyası oluşturma API desteği eklendi.
+  - Proje dosyası oluşturma API kancalarına birden çok abone desteği eklendi.
 
-  - Oluşturulacak dosyalardan biri kilitli olduğunda bile her zaman tam proje dosyası oluşturma.
+  - Oluşturulacak dosyalardan biri kilitlendiğinde bile proje dosya oluşturmayı her zaman doldurun.
 
-  - İçin destek eklendi * uzantı joker karakter filtre belirtmek için C# projesinde dahil edilecek dosyalar.
+  - C# Projeye dahil edilecek dosyaları belirtirken uzantı filtresinde * joker karakterleri için destek eklendi.
 
 - **Visual Studio tümleştirmesi:**
 
-  - Productivity Power Tools ile bir uyumluluk sorunu düzeltildi.
+  - Üretkenlik güç araçlarıyla bir uyumluluk sorunu düzeltildi.
 
-  - Olaylar ve temsilciler bildirimleri MonoBehaviors oluşturma düzeltildi.
+  - Olaylar ve temsilciler bildirimlerinin etrafında Monodavranışlar üretme düzeltildi.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Hata ayıklama sırasında olası dondurma düzeltildi.
+  - Hata ayıklanırken olası dondurma düzeltildi.
 
-  - Burada Yereller belirli yığın çerçevelerinde görüntülenmez bir sorun düzeltildi.
+  - Belirli yığın çerçevelerinde Yerellerden görüntülenmeyen bir sorun düzeltildi.
 
-  - Boş bir dizi inceleyerek düzeltildi.
+  - Boş dizileri inceliyor düzeltildi.
 
-## <a name="1990---20-preview-2"></a>1.9.9.0 - 2.0 preview 2
-2 Nisan 2015'i yayınladı
+## <a name="1990---20-preview-2"></a>1.9.9.0-2,0 Preview 2
+Yayın 2 Nisan 2015
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - **Unity Proje Gezgini:**
 
-  - Unity proje Gezgininde dosya yeniden adlandırılırken, sınıf otomatik olarak yeniden adlandırın (bkz **seçenekleri** iletişim).
+  - Unity proje Gezgininde bir dosyayı yeniden adlandırırken otomatik olarak sınıfı yeniden adlandır (bkz. **Seçenekler** iletişim kutusu).
 
-  - Otomatik olarak yeni oluşturulan betiklerini, Unity proje Gezgininde seçin.
+  - Unity proje Gezgininde yeni oluşturulan betikleri otomatik olarak seçin.
 
-  - Unity proje Gezgininde etkin betik izleyin (bkz **seçenekleri** iletişim).
+  - Unity proje Gezgininde etkin betiği izleyin (bkz. **Seçenekler** iletişim kutusu).
 
-  - Visual Studio Çözüm Gezgini'nde çift-eşitleme (bkz **seçenekleri** iletişim).
+  - Visual Studio Çözüm Gezgini ikili olarak eşitler (bkz. **Seçenekler** iletişim kutusu).
 
-  - Unity proje Gezgininde Visual Studio simgeler benimseyin.
+  - Unity proje Gezgininde Visual Studio simgelerini benimseyin.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Etkin hata ayıklama hedefi kaydedilmiş veya yakın zamanda kullanılan hata ayıklama hedefleri listesinden seçin (bkz **seçenekleri** iletişim).
+  - Kaydedilmiş veya son kullanılan hata ayıklama hedefleri listesinden etkin hata ayıklama hedefini seçin (bkz. **Seçenekler** iletişim kutusu).
 
-  - İşlev kesme noktaları MonoBehavior yöntemlerde oluşturabilir ve bunları birden çok MonoBehavior sınıflarına uygulayabilirsiniz.
+  - Tek davranış yöntemlerinde işlev kesme noktaları oluşturun ve bunları birden çok MonoBehavior sınıfına uygulayın.
 
-  - Nesne Kimliği yap hata ayıklayıcıda destekler.
+  - Hata ayıklayıcıda nesne KIMLIĞI oluşturma desteği.
 
-  - Destek kesme noktası isabet sayısı hata ayıklayıcısı.
+  - Hata ayıklayıcıda destek kesme noktası isabet sayısı.
 
-  - (Deneysel. hata ayıklayıcıda kesme üzerinde özel durum desteği Bkz: **seçenekleri** iletişim).
+  - Hata ayıklayıcıda kesme özel durumunu destekle (deneysel. Bkz. **Seçenekler** iletişim kutusu).
 
-  - Hata ayıklayıcıdaki ifadeler değerlendirildiğinde nesneler ve diziler oluşturulmasını destekler.
+  - Hata ayıklayıcıda ifadeler değerlendirilirken nesne ve dizi oluşturulmasını destekler.
 
-  - Null karşılaştırma desteği, Hata ayıklayıcıdaki ifadeler değerlendirme.
+  - Hata ayıklayıcıda değerlendirme ifadeleri olduğunda null karşılaştırmayı destekler.
 
-  - Eski üyeler hata ayıklayıcı gözlem pencerelerinde filtreleyin.
+  - Hata ayıklayıcı 'da eski üyeleri filtrele Windows izleme.
 
-- **Yükleyici:**
+- **Yükleyicinin**
 
-  - En iyi duruma getirilmiş Visual Studio Araçları için Unity uzantısı kaydı.
+  - En iyi duruma getirilmiş Unity için Visual Studio Araçları uzantısı kaydı.
 
-  - Visual Studio Araçları için Unity 5 için Unity paketini yükleyin.
+  - Unity 5 için Unity için Visual Studio Araçları paketini yükler.
 
-- **Belgelerle** Belge oluşturma performansını geliştirir.
+- **Belgeler:** Belge oluşturma performansını geliştirir.
 
 - **Sihirbazlar:** Unity 4,6 ve Unity 5 için yeni MonoBehavior yöntemlerini destekler.
 
 - **Unity:** Proje dosyası oluşturma sırasında. rsp dosyalarında güvenli olmayan bayraklar ve özel tanımlar arama yapın.
 
-- **UI:** Visual Studio 'da Unity için Visual Studio Araçları **seçenekleri** iletişim kutusu eklendi.
+- **Kullanıcı arabirimi:** Visual Studio 'da Unity için Visual Studio Araçları **seçenekleri** iletişim kutusu eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
 - **Unity Proje Gezgini:**
 
-  - Taşınmış ya da Visual Studio Çözüm Gezgini'nden yeniden adlandırılmış dosyaları sonra Unity proje Gezgini'ni yenileyin.
+  - Dosyalar taşındıktan veya Visual Studio Çözüm Gezgini yeniden adlandırıldıktan sonra Unity proje Gezginini yenileyin.
 
-  - Unity proje Gezgininde dosya yeniden adlandırılırken seçimleri koruyun.
+  - Unity proje Gezgininde dosyaları yeniden adlandırırken seçimleri koru.
 
-  - Otomatik önlemek genişletip Unity proje Gezgininde tıkladı dosyaları çift olduğunda daraltabilirsiniz.
+  - Unity proje Gezgininde dosyalar çift tıklandığında otomatik genişletmeyi önleyin ve daraltın.
 
-  - Yeni seçilen dosyaları Unity proje Gezgininde görünür olduğundan emin olun.
+  - Yeni seçilen dosyaların Unity proje Gezgininde göründüğünden emin olun.
 
-- **Hata Ayıklayıcı:**
+- **Sý**
 
-  - Visual Studio Hata ayıklayıcıdaki ifadeler değerlendirildiğinde dondurma olası engelleme.
+  - Hata ayıklayıcıda ifadeler değerlendirilirken olası bir Visual Studio donmasını önleyin.
 
-  - Yöntem çağrıları hata ayıklayıcısı doğru etki alanında olması emin olun.
+  - Yöntem etkinleştirmeleri hata ayıklayıcıda doğru etki alanında gerçekleşdiğinden emin olun.
 
-- **Unity:**
+- **'Yi**
 
-  - Unity 5 UnityVS.OpenFile konumunu düzeltin.
+  - UnityVS. OpenFile konumunu Unity 5 ile düzeltin.
 
-  - Unity 5 pdb2mdb konumunu düzeltin.
+  - Pdb2mdb konumunu Unity 5 ile düzeltin.
 
-  - Proje dosyası oluşturma sırasında olası bir özel durumu engellersiniz.
+  - Proje dosyası oluşturma sırasında olası bir özel durumu önleyin.
 
-  - Unity OSX üzerinde çalışırken olası dondurma engelleyin.
+  - OSX üzerinde Unity çalıştırırken olası dondurma önleme.
 
-  - İç özel durumları işler.
+  - İç özel durumları işleyin.
 
-  - İçin VS hata listesi Unity konsol günlükleri gönderin.
+  - Unity konsol günlüklerini VS hata listesine gönderin.
 
-- **Belgelerle** Yeni Unity belgeleri için doğru belge oluşturma.
+- **Belgeler:** Yeni Unity belgeleri için doğru belge oluşturma.
 
-- **Proje** Gerektiğinde de Unity. meta dosyalarını taşıyın ve yeniden adlandırın.
+- **Proje:** Gerektiğinde de Unity. meta dosyalarını taşıyın ve yeniden adlandırın.
 
 - **Sihirbazlar:** Kod oluştururken MonoBehavior yöntem parametrelerinin sırasını düzeltin.
 
-- **UI:** Bağlam menüsü ve simgeler için Visual Studio temalarını destekleme.
+- **Kullanıcı arabirimi:** Bağlam menüsü ve simgeler için Visual Studio temalarını destekleme.
 
-## <a name="1980---20-preview"></a>1.9.8.0 - 2.0 Önizlemesi
-12 Kasım 2014'te yayımlamıştır
+## <a name="1980---20-preview"></a>1.9.8.0-2,0 Preview
+Yayımlanma tarihi, 12 Kasım 2014
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - Visual Studio 2015 için destek.
 
-- Visual Studio 2015'te Unity gölgelendiriciler için kod Coloration.
+- Visual Studio 2015 ' de Unity gölgelendiriciler için kod renklendirme.
 
-- Geliştirilmiş görsel olarak hata ayıklama sırasında değerleri:
+- Hata ayıklama sırasında değerlerin görselleştirilmesi geliştirildi:
 
-  - Daha iyi görselleştirme ArrayLists, listeler, Hashtable'da ve sözlük.
+  - ArrayLists, listeler, hashtables ve sözlükler için daha iyi görselleştirme.
 
-  - Genel olmayan üyeler ve statik üyeler İzlemedeki ve yerel görünümlerle kategorileri gösterme.
+  - Genel olmayan üyeleri ve statik üyeleri, izleme ve yerel görünümlerde kategori olarak gösterin.
 
-  - Unity'nın SerializedProperty yalnızca özellik için geçerli bir değer alanı değerlendirmek için geliştirilmiş görüntüsü.
+  - Unity 'nin SerializedProperty özelliğinin yalnızca özellik için geçerli olan değer alanını değerlendirmek için iyileştirilmiş görünümü.
 
-  - Sınıflar ve yapılar DebuggerDisplayAttribute desteği.
+  - Sınıflar ve yapılar için DebuggerDisplayAttribute desteği.
 
   - DebuggerTypeProxyAttribute desteği.
 
-- Kodlama kuralları kullanıcı cevaben bizim sihirbazları kullanarak MonoBehaviour yöntemleri ekleme yapın.
+- Kullanıcı kodlama kurallarına göre sihirbazları kullanarak Monodavranış yöntemlerinin eklenmesini sağlayın.
 
-- UnityVS oluşturulan projeleri derleme zamanı metin şablonları için destek uygular.
+- UnityVS tarafından oluşturulan projelerde derleme zamanı metin şablonları için destek uygulayın.
 
-- ResX kaynakları için destek oluşturulan UnityVS projelerinde uygulayın.
+- UnityVS tarafından oluşturulan projelerde ResX kaynakları için destek uygulayın.
 
-- Unity Visual Studio'dan gölgelendiricileri açma desteği.
+- Unity 'den Visual Studio 'da gölgelendiriciler açmayı destekler.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- İliştirme işleminden sonra Unity oyun başlatmadan önce yuvaların ve Visual Studio'da Play tetiklendi. Bu bazı sorunlar ile Unity VS arasında bağlantı kararlılığını İliştir ve Yürüt kullanırken düzeltir.
+- Visual Studio 'da Iliştirme ve yürütme tetiklendikten sonra Unity 'de oyunu başlatmadan önce Yuvaları Temizleme. Bu, Attach ve Play kullanılırken Unity ile VS arasındaki bağlantının kararlılığı ile ilgili bazı sorunları düzeltir.
 
-- Unity'nın komut dosyası altyapısı hata ayıklayıcı arabiriminde Unity dondurulamıyor meyillidir yöntemleri çağırmaktan kaçının. Bu, hata ayıklayıcı eklerken Unity dondurma düzeltir.
+- Unity 'nin betik altyapısı hata ayıklayıcısı arabirimindeki, Unity 'nin donmasına engel olan yöntemlerin çağrılmasını önleyin. Bu, hata ayıklayıcı eklenirken Unity dondurma 'yı düzeltir.
 
-- Sembol kullanılabilir olduğunda çağrı yığınını görüntüleme düzeltin.
+- Kullanılabilir sembol olmadığında çağrı yığınlarının görüntülenmesini düzeltir.
 
-- İçin yoksa, günlük geri kaydetmeyin.
+- Gerekmiyorsa, günlük geri aramayı kaydedin.
 
 ## <a name="1920"></a>1.9.2.0
 
-9 Ekim 2014'te yayımlamıştır
+Yayın tarihi 9 Ekim 2014
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity oyuncuların algılanması geliştirin.
+- Unity oynatıcıların algılanmasını geliştirme.
 
-- Bizim dosya açan kullanırken, dosya adının yanı sıra, satır numarası geçirmek Unity olun.
+- Dosya openmizi kullanırken, Unity 'yi dosya adının yanı sıra satır numarası olarak geçirin.
 
-- Çevrimiçi Unity belgeleri için varsayılan olarak yerel bir belge yok ise.
+- Yerel belge yoksa, çevrimiçi Unity belgeleri için varsayılan değer.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Bir etki alanı yeniden sonra bir kesme noktasına ulaşma olası Unity kilitlenme düzeltildi.
+- Bir etki alanı yeniden yüklendikten sonra bir kesme noktasına gelindiğinde olası Unity kilitlenmeyi düzeltir.
 
-- Bizim yapılandırma kapatırken Unity konsolunda gösterilen özel durumları düzeltin veya windows hakkında bir etki alanı sonra yeniden yükleyin.
+- Bir etki alanı yeniden yüklendikten sonra, konfigürasyonumuzu veya Windows 'u kapatırken Unity konsolunda gösterilen özel durumları düzeltir.
 
-- Yerel olarak çalışan 64 bit Unity algılanması düzeltin.
+- Yerel olarak çalışan 64bit Unity algılama işlemini düzeltir.
 
-- Sihirbazlar Unity sürümünde her Monobehaviour filtreleme düzeltin.
+- Sihirbazlardaki Unity sürümü başına MonoBehaviours filtrelemesini onarın.
 
-- Burada uzantı filtresi boşsa tüm varlıkları proje dosyalarında bulunan hatası düzeltildi.
+- Uzantı filtresi boşsa tüm varlıkların proje dosyalarına dahil edildiği hatayı düzeltir.
 
 ## <a name="1910"></a>1.9.1.0
 
-22 Eylül 2014'te yayımlamıştır
+Yayımlanma tarihi, 22 Eylül 2014
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Bağlama kesme noktası için kaynak konumları iyileştirin.
+- Bağlama kesme noktasını kaynak konumlarına iyileştirin.
 
-- Hata ayıklayıcı ifade değerlendirmesindeki aşırı yüklenmiş yöntemler için destek.
+- Hata ayıklayıcının Ifade değerlendirmesinde aşırı yüklenmiş yöntemler için destek.
 
-- Kutulama temelleri ve hata ayıklayıcı ifade değerlendirmesindeki değer türleri için destek.
+- Hata ayıklayıcının Ifade değerlendirmesinde paketleme temelleri ve değer türleri için destek.
 
-- Anonim yöntemler hata ayıklama sırasında C# yerel değişkenler ortamın oluşturulması destekler.
+- Anonim yöntemlerde hata C# ayıklarken yerel değişkenler ortamını yeniden oluşturmayı destekler.
 
-- Silin ve Visual Studio'dan dosyaları yeniden adlandırma veya silme .meta dosyalarını yeniden adlandırın.
+- Visual Studio 'dan dosyaları silerken veya yeniden adlandırırken. meta dosyalarını silin ve yeniden adlandırın.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Visual Studio temasından işlenmesini düzeltin. Daha önce siyah Temalar iletişim kutuları boş görünebilir.
+- Visual Studio temalarını işlemeyi çözme. Daha önce, siyah temalardaki iletişim kutuları boş görünebilir.
 
-- Unity dondurma Unity yeniden derlenmesi sırasında hata ayıklayıcı bağlanırken, düzeltmek.
+- Unity yeniden derlenirken hata ayıklayıcıyı bağlarken Unity donması 'nı düzeltemedi.
 
-- Uzak düzenleyiciler veya başka bir sistem üzerinde derlenmiş oyuncuların hata ayıklanırken kesme noktaları düzeltin.
+- Başka bir sistemde derlenen uzak düzenleyicilerde veya yürütücülerde hata ayıklarken kesme noktalarını düzeltme.
 
-- Bir kesme noktası isabet edildiğinde olası bir Visual Studio kilitlenme sorunu düzeltildi.
+- Kesme noktası isabet edildiğinde olası bir Visual Studio kilitlenmesine çözüm.
 
-- Kesme noktaları olarak gösteren önlemek için bağlama düzeltme kesme noktaları kaldırıldı.
+- Kesme noktaları bağlantısını, bellekten kaldırılmamasına engel olmak için düzeltir.
 
-- Kapsam dışına görüntülenen dinamik değişkenleri önlemek için hata ayıklayıcı değişken kapsamı işlenmesini düzeltin.
+- Kapsam dışında görünen canlı değişkenlerin önüne geçmek için hata ayıklayıcıda değişken kapsamının işlenmesini düzeltir.
 
-- Statik üyeleri arama ifade değerlendirmesinde hata ayıklayıcı düzeltin.
+- Hata ayıklayıcının Ifade değerlendirmesi içindeki statik üyelerin aramasını düzeltir.
 
-- Statik alanlar ve Özellikler göstermek için hata ayıklayıcı ifade değerlendirmesindeki türlerini görüntüleme düzeltin.
+- Statik alanları ve özellikleri göstermek için hata ayıklayıcının Ifade değerlendirmesinde türlerin görüntülenmesini düzeltir.
 
-- Unity proje adları Visual Studio'nın (Connect sorun #948666) engelliyor özel karakterler içerdiğinde çözüm oluşturulmasını düzeltme.
+- Unity proje adları, Visual Studio yasaklıyor (Connect sorun #948666) özel karakterler içerdiğinde çözüm üretimini düzeltir.
 
-- Unchecked (Connect sorun #933357) seçeneğini sonra konsol olay göndermeye hemen durdurmak için Visual Studio Araçları Unity paketini düzeltin.
+- Seçenek işaretlendikten sonra konsol olaylarının gönderilmesini hemen durdurmak için Visual Studio Araçları Unity paketini onarın (bağlantı verme #933357).
 
-- Başvurular düzgün UnityEngine.UI gibi yeni API'ler başvuruları UnityVS oluşturulan projelerde yeniden algılanması düzeltin.
+- UnityEngine. UI gibi yeni API 'Lerin başvurularını doğru şekilde yeniden oluşturmak için başvuruları algılamayı, UnityVS tarafından oluşturulan projelerde düzeltir.
 
-- Yükleyici bozuk yüklemeleri önlemek için yüklemeden önce Visual Studio kapalı olduğunu gerektirecek şekilde düzeltin.
+- Yükleyici, bozulan yüklemeleri önlemek için yüklemeden önce Visual Studio 'Nun kapatılmasını gerektirecek şekilde düzeltilir.
 
-- VSTU tüm sürümleri arasında paylaşılan bir uygun bir tek başına bileşeni Unity başvuru derlemelerini yüklemek için yükleyici düzeltin.
+- Unity başvuru derlemelerini, tüm VSTU sürümleri arasında paylaşılan, uygun bir bağımsız bileşen olarak yüklemek için yükleyiciyi onarın.
 
-- Betikleri açma VSTU ile Unity 64 bit sürümlerinde düzeltin.
+- Unity 'nin 64 bit sürümlerinde VSTU ile betikleri açmayı onarma.
 
 ## <a name="1900"></a>1.9.0.0
 
-29 Temmuz 2014'te yayımlamıştır
+Piyasaya çıkarılan 29 Temmuz 2014
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity hata ayıklayıcı Ekle penceresinde, bir özel IP ve bağlantı noktası hata ayıklamak için girin olanağı eklendi.
+- Unity hata ayıklayıcısı Ekle penceresinde, hata ayıklama için özel bir IP ve bağlantı noktası girme özelliğini ekleyin.
 
-- Arka planda çalışıp için Unity ayarlamak için yapılandırma seçeneği ekleyin.
+- Unity 'yi arka planda çalışacak şekilde ayarlamak için yapılandırma seçeneği ekleyin.
 
-- Çözüm ve proje dosyaları ya da yalnızca proje dosyaları oluşturmak için yapılandırma seçeneği ekleyin.
+- Yalnızca çözüm ve proje dosyaları ya da proje dosyaları oluşturmak için yapılandırma seçeneği ekleyin.
 
-- Başlangıç hedef: Unity Ekle veya Unity ve Play Ekle öğesini seçin.
+- Başlangıç hedefi: Unity 'ye eklemek veya Unity 'ye eklemek ve oynatmak için seçin.
 
-- Çok boyutlu diziler hata ayıklayıcı görüntü.
+- Hata ayıklayıcıda çok boyutlu dizileri görüntüleme.
 
-- Yeni Unity Player'da hata ayıklama bağlantı noktalarını işler.
+- Yeni Unity oynatıcı hata ayıklama bağlantı noktalarını işleyin.
 
-- Unity'nün 4.6 GUI derlemeleri gibi yeni Unity derlemelere başvuruları işleyin.
+- Unity 'nin 4,6 GUI derlemeleri gibi yeni Unity derlemelerine başvuruları işleyin.
 
-- Hata ayıklarken yerel değişkenler düzgün görüntülenmesi için kapanışlar deconstructs.
+- Hata ayıklarken yerel değişkenleri düzgün şekilde göstermek için kapanışları kaldırır.
 
-- Oluşturulan Yineleyicilerin değişkenleri, hata ayıklama sırasında bağımsız değişkenleriyle deconstructs.
+- Hata ayıklarken oluşturulan yineleyiciler değişkenlerini bağımsız değişkenlerle kaldırır.
 
-- Bir projeyi yeniden sonra Unity Proje Gezgini'nın durumu korur.
+- Proje yeniden yüklendikten sonra Unity Proje Gezgini 'nin durumunu koru.
 
-- Unity Proje Gezgini geçerli belge ile eşitlemek için bir komut ekleyin.
+- Unity proje Gezginini geçerli belgeyle eşitleyecek bir komut ekleyin.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Koşullu kesme noktaları hata ayıklayıcıyı başlatmadan önce koşulları ayarlayın düzeltin.
+- Koşulu hata ayıklayıcıya başlamadan önce ayarlanan koşullu kesme noktalarını düzeltir.
 
-- UnityEngine uyarılarından kaçınmak için başvurular düzeltin.
+- Uyarıları önlemek için UnityEngine başvurularını onarın.
 
-- Unity betalar için ayrıştırma sürümleri düzeltin.
+- Unity betas için ayrıştırma sürümlerini onarma.
 
-- Burada değişkenler yerel değişkenler penceresinde bir kesme noktasına ulaşma olduğunda gösterilmeyebiliyor sorunu düzeltin veya Adımlama.
+- Bir kesme noktasına veya adımlamayı vurarak değişkenlerin yerel değişkenler penceresinde gözükmesine neden olan sorunu giderme.
 
-- Değişkenleri araç ipuçları, Visual Studio 2013'te düzeltin.
+- Visual Studio 2013 değişkenleri araç ipuçlarını düzeltir.
 
-- Unity 4.5 IntelliSense belgelerini oluşturulmasını düzeltme.
+- Unity 4,5 için IntelliSense belgelerinin oluşturulmasını düzeltir.
 
-- Unity düzeltme / bir etki alanından sonra Visual Studio iletişim (play/stop Unity) yeniden yükleyin.
+- Bir etki alanı yeniden yüklendikten sonra Unity/Visual Studio iletişimini onarın (Unity 'de Oynat/Durdur).
 
-- Visual Studio temasından bölümlerini işlenmesini düzeltin.
+- Visual Studio temalarının parçalarını işlemeyi çözme.
 
 > [!IMPORTANT]
-> C# Unity ekosisteminde - yeni örnek varlıkları hakim dili olan C# ' de, Unity belgeleri varsayılan C# - C# deneyimi daha fazla odaklanması UnityScript ve hata için temel destek kaldırdık. Sonuç olarak, VSTU çözümleri artık yalnızca C# değildir ve yüklemek için daha hızlıdır.
+> C#Unity ekosisteminde önceden baskın dil olmak üzere; yeni örnek varlıklar ' de yer alır, C#Unity belgeleri varsayılan olarak C# ' i n ve bu C# deneyimle daha iyi odaklanmak için de Boo 'ın temel desteğini kaldırdık. Sonuç olarak, VSTU çözümleri artık C# yalnızca, yükleme için çok daha hızlıdır.
 
 ## <a name="1820"></a>1.8.2.0
 
-7 Ocak 2014'te yayımlamıştır
+Yayın tarihi 7 Ocak 2014
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity'nın komut dosyası altyapısının ağ katmanında bir soruna geçici bir çözüm üzerinde Mavericks düzenleyicileri uzak bulma için çalışır.
+- , Düzenleyicilerin uzaktan keşfi için Mavericks adresindeki Ağ katmanında bir sorunu geçici olarak çözmek.
 
-- Uzak Unity oyuncuların bulmak için yeni bağlantı noktaları işleyin.
+- Uzak Unity oynatıcılarını keşfetmeye yönelik yeni bağlantı noktalarını işleyin.
 
-- Hedef yapı geçerli belirli UnityEngine bütünleştirilmiş kod başvurusu.
+- Geçerli derleme hedefine özel UnityEngine derlemesine başvur.
 
-- Oluşturulan projeleri içerecek şekilde filtre dosyalara ayarı ekleyin.
+- Oluşturulan projelere dahil edilecek dosyaları filtrelemek için ayar ekleyin.
 
-- Visual Studio hata listesi gönderen konsol günlüklerine devre dışı bırakma ayarı ekleyin. Nedeni olarak yalnızca bir geri çağırma konsol günlükleri almak için Unity içinde kayıtlı PlayMaker veya konsol Pro kullanıyorsanız, bu yararlıdır.
+- Konsol günlüklerinin Visual Studio hata listesine gönderilmesini devre dışı bırakmak için ayar ekleyin. Konsol günlüklerini almak için Unity 'de kayıtlı yalnızca bir geri çağırma işlemi olduğu için, PlayMaker veya Console Pro kullanıyorsanız bu faydalıdır.
 
-- Mdb hata ayıklama sembolleri oluşturmayı devre dışı bırakma ayarı ekleyin. Kendiniz mdb oluşturma, bu yararlıdır.
+- MDB hata ayıklama sembolleri oluşturmayı devre dışı bırakmak için ayar ekleyin. Bu, mdb 'yi kendiniz oluşturuyorsanız yararlı olur.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Unity VS'den açılmış dosyalar bir gerileme düzeltildi > = 4.2 IntelliSense kaybeder.
+- Unity 'den VS > = 4,2 ' de açılan dosyalar IntelliSense 'i kaybedecektir.
 
-- Özel Temalar işlemek için sunduğumuz VS iletişim kutuları düzeltin.
+- Özel temaları işlemek için VS iletişim kutusumuzu düzeltir.
 
-- Bağlam menüsüne UPE kapatma düzeltin.
+- UPE öğesinin bağlam menüsünü kapatmayı düzeltir.
 
-- Unity kilitlenme eşitlenmemiş, derleme sürüm özel oluşturulmuş engelleyin.
+- Sürüme özgü oluşturulan derleme eşitleme dışı olduğunda Unity 'de kilitlenmeyi önleyin.
 
 ## <a name="1810"></a>1.8.1.0
 
-Yayımlanan 21 Kasım 2013
+Yayın tarihi 21 Kasım 2013
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- MonoBehaviour sihirbazları Unity 4.3 API'leri ile ayarlanır.
+- Unity 4,3 API 'Leri ile Monodavranış sihirbazları ayarlandı.
 
-- MonoBehaviour sihirbazları Unity API'leri sürüme bağlı olarak filtre.
+- Tek davranış sihirbazları, kullandığınız sürüme bağlı olarak Unity API 'Larını filtrelemedir.
 
-- System.Xml.Linq başvuru için Unity projeleri Ekle > 4.1.
+- Unity > 4,1 için projelere System. xml. Linq başvurusu ekleyin.
 
-- Stacktrace başına iletisinde içermeyecek şekilde Debug.Log bizim çağrısına prettify.
+- İletiye StackTrace 'in başlangıcını dahil etmek için hata ayıklama. log çağrılarımızın önmizi yapın.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Burada şu JavaScript dosyaları Visual Studio'da varsayılan işleme ile neden bir hata düzeltildi.
+- Visual Studio 'da JavaScript dosyalarının varsayılan işlemesini etkileyebilecek bir hata düzeltildi.
 
-- Bu süre içinde VS, gerçek görünen bir beyaz piksel düzeltildi.
+- Bu kez, gerçek zamanlı olarak VS. olarak görünen beyaz bir piksel düzeltildi.
 
-- Sabit bir SCM tarafından salt okunur olarak işaretlenmiş olması durumunda UnityVS.VersionSpecific derlemeyi silme işlemi.
+- Bir SCM tarafından ReadOnly olarak işaretlenmişse UnityVS. VersionSpecific derlemesini silme işlemi düzeltildi.
 
-- Yuva UnityVS paketi oluştururken sabit özel durumlar.
+- UnityVS paketinde yuva oluşturulurken oluşan özel durumlar düzeltildi.
 
-- Visual Studio derlemelerden stok görüntüleri yüklenirken Visual Studio'da bir kilitlenme sorunu düzeltildi.
+- Visual Studio derlemelerinden hisse senedi görüntüleri yüklenirken Visual Studio 'da kilitlenme düzeltildi.
 
-- Unity derlemeleri kaynak UnityVS.VersionSpecific oluşturulmasında içinde bir hata düzeltildi.
+- Unity 'nin kaynak yapıları için UnityVS. VersionSpecific 'ın oluşturulmasında hata düzeltildi.
 
-- Bir yuva Unity pakette açılırken olası dondurma düzeltildi.
+- Unity paketinde bir yuva açılırken olası bir dondurma düzeltildi.
 
-- Unity proje bir tire (-) ile işlenmesini adında düzeltildi.
+- Unity projesinin adında bir tire (-) ile işlenmesi düzeltildi.
 
-- ALT + sekme sırasını Unity 4.2 ve üzeri karıştırmamaya Unity'de açılış betikleri düzeltildi.
+- Unity 'de betikler 4,2 ve üzeri için ALT + sekme sırasını karıştırmayın.
 
 ## <a name="1800"></a>1.8.0.0
 
-24 Eylül 2013 yayımlanan
+Yayın tarihi, 24 Eylül 2013
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Hata ayıklayıcı bağlantı hızını önemli ölçüde geliştirildi.
+- Büyük ölçüde geliştirilmiş hata ayıklayıcı bağlantı hızı.
 
-- Dosya ve satır Unity 4.2 ve üzeri için Gezinti otomatik olarak işler.
+- Unity 4,2 ve üzeri üzerine dosya ve satıra gezintiyi otomatik olarak işler.
 
 - Koşullu kesme noktaları.
 
-- Proje dosya oluşturucu artık T4 şablonlarını işler.
+- Proje dosya üreticisi artık T4 şablonlarını işler.
 
-- MonBehavior sihirbazları yeni API'ler ile güncelleştirin.
+- Yeni API 'lerle MonBehavior sihirbazları ' nı güncelleştirin.
 
-- C# IntelliSense belgelerini Unity türleri için.
+- Unity türleri için C# içindeki IntelliSense belgeleri.
 
-- Aritmetik ve mantıksal ifadeleri değerlendirme.
+- Aritmetik ve mantıksal ifadeler değerlendirmesi.
 
-- Uzaktan hata ayıklama preview için Uzak düzenleyicileri daha iyi bulma.
+- Uzaktan hata ayıklama önizlemesi için uzak düzenleyicilerin daha iyi bulunması.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Biz burada sızıntı bir iş parçacığı VS hata ayıklayıcı bağlantısını kestikten sonra düzeltildi.
+- Hata ayıklayıcının bağlantısını kestikten sonra VS 'deki bir iş parçacığını sızdığımız bir hata düzeltildi.
 
-- VS'de görünen bir beyaz piksel düzeltildi.
+- VS 'de görünen beyaz piksel düzeltildi.
 
-- Durum çubuğu simgesine tıklama işleme düzeltildi.
+- Durum çubuğu simgesinde tıklamaların işlenmesi düzeltildi.
 
-- Eklentileri klasörlerdeki derlemeleri ile başvuruları nesil düzeltildi.
+- Eklentiler klasörlerinde Derlemelerle başvuruların üretimi düzeltildi.
 
-- Yuva özel durumları durumunda UnityVS paketinden sabit oluşturma.
+- Özel durumlar söz konusu olduğunda UnityVS paketinden yuvaların oluşturulması düzeltildi.
 
-- Yeni sürümlerini UnityVS algılanması düzeltildi.
+- Yeni bir UnityVS sürümünün algılanması düzeltildi.
 
-- Lisans süresi dolduğunda Lisans Yöneticisi'nin istemi düzeltildi.
+- Lisansın süre dolduğunda Lisans Yöneticisi istemi düzeltildi.
 
-- İşlem listesi boş VS işlem penceresi için ek hata ayıklayıcı işleme bir hata düzeltildi.
+- VS 'nin işlem hata ayıklayıcısına karşılık gelen işlem listesini içeren bir hata düzeltildi.
 
-- Yerel görünümünde Boole değerleri, sabit değişen değerler.
+- Yerel görünümde Boole değerleri değiştirme değeri düzeltildi.
 
 ## <a name="1220"></a>1.2.2.0
 
-9 Temmuz 2013 yayımlanan
+Yayın tarihi, 9 Temmuz 2013
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- İfade değerlendirici tam adlarını işleyin.
+- İfade değerlendirici içinde tam nitelikli adları işleyin.
 
-- Özel durum işleme için ilgili bir dondurma burada Unity komut dosyası altyapısı bize yanlış stackframe veri gönderiyor düzeltildi.
+- Unity betik altyapısının yanlış StackFrame verileri gönderdiği özel durum işlemeyle ilgili bir dondurma düzeltildi.
 
-- Web hedefler için derleme işlemi düzeltildi.
+- Web hedefleri için düzeltilen derleme işlemi.
 
-- Visual Studio başlatıldığından ve silinen bir dosyayı başlangıçta açmak için dosya listesi olduğu meydana gelmiş olabilir bir hata düzeltildi.
+- Visual Studio başlatıldığında ve silinen bir dosyanın başlangıçta açılacak dosya listesinde olması durumunda oluşabilecek bir hata düzeltildi.
 
-- Benzer olmayan komut dosyalarını işlemek için sabit UnityVS.OpenFile gölgelendiricileri derlenmiş.
+- Derlenmiş gölgelendiriciler gibi betik olmayan dosyaları işlemek için fixed UnityVS. OpenFile.
 
-- Biz artık Boo.Lang ve UnityScript.Lang tüm C# içinden projeleri başvuru.
+- Şimdi Boo. lang ve UnityScript. lang tüm C# projelerden başvurduk.
 
-- Proje özel karakterler varsa projelerinde başvuruları sabit oluşturma.
+- Projede özel karakterler varsa, projelerdeki başvuruların sabit üretimi.
 
-- Yöntem çağrıları için projeleri burada elden geçici bir VS sorunu birden çok NullReferenceException MessageBox tetikleyecektir.
+- Geçici çözüm, yöntemin atılmış projelere çağrı yaptığı bir VS sorunu, birden çok NullReferenceException MessageBox tetikleyecektir.
 
-- Unity 4.2 Beta derlemelerin sabit işleme.
+- Unity 4,2 Beta derlemelerinin sabit işlenmesi.
 
 ## <a name="1210"></a>1.2.1.0
 
-Yayımlanan 9 Nisan 2013
+Yayımlanma tarihi, 9 Nisan 2013
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Unity derlemeleri için kod tamamlama g/ç hatası durumunda yerel dağıtımını sabit (salt okunur dosyaları gibi veya Visual Studio tarafından kilitlenmiş dosyaları).
+- Bir GÇ hatası (salt okuma dosyaları veya Visual Studio tarafından kilitlenen dosyalar gibi) durumunda kod tamamlama için Unity derlemelerinin sabit yerel dağıtımı.
 
-- Visual Studio'da zaten açıldıysa burada Unity'de bir betiğin açılması dosya odaklanmak değil bir gerileme düzeltildi.
+- Unity 'den bir betik açmak, Visual Studio 'da zaten açılırsa dosyayı odaklanmaz.
 
-- Yeni özel durum işleme performans sorunu düzeltildi.
+- Yeni özel durum işlemenin sabit performans sorunu.
 
-- Sabit bağlama dış bazı DLL'lerde kesme noktaları.
+- Bazı dış dll 'lerde kesme noktalarının sabit bağlaması.
 
 ## <a name="1200"></a>1.2.0.0
 
-Yayımlanan 25 Mart 2013
+Yayımlanma tarihi, 25 Mart 2013
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Hata ayıklayıcı bağlantı hızını önemli ölçüde geliştirildi.
+- Büyük ölçüde geliştirilmiş hata ayıklayıcı bağlantı hızı.
 
-- Daha büyük projeler için en iyi duruma getirilmiş Unity Proje Gezgini.
+- Daha büyük projeler için iyileştirilmiş Unity Proje Gezgini.
 
-- (Veya etkinleştirmezsiniz) ayırmak için Visual Studio ayarları dikkate işlenen ve işlenmeyen özel durumlar.
+- İşlenmiş ve işlenmemiş özel durumların üzerine kesmek (veya not etmek) için Visual Studio ayarlarını dikkate alır.
 
-- ToString yerel değişkenlerde çağırmak için Visual Studio ayarı oluşuyor.
+- Yerel değişkenlerde ToString çağrısı yapmak için Visual Studio ayarını dikkate alır.
 
-- Ekleme yeni menü hata ayıklama -> Unity oyuncuların hata ayıklamak için kullanabileceğiniz ekleme Unity hata ayıklayıcı.
+- Yeni menü hata ayıklama-> Unity oynatıcısında hata ayıklamak için kullanabileceğiniz Unity hata ayıklayıcısı ekleyin.
 
-- Çözüm dosyası oluşturma sırasında UnityVS çözüm eklenen özel projeler korur.
+- Çözüm dosyası oluşturma sırasında UnityVS çözümüne eklenen özel projeleri koruma.
 
-- Ekleme yeni klavye kısayolu CTRL + ALT + M, giriş işareti konumuna Unity işlevi veya üye için Unity belgeleri görüntülemek için CTRL + H ->.
+- Yeni klavye kısayolu Ekle CTRL + ALT + M->, CTRL + H tuşlarına basarak Unity işlevine veya üyesine yönelik Unity belgelerini giriş işareti konumunda görüntüleyin.
 
-- Derleyici yanıt dosyaları (rsp), Visual Studio ile derleme yapılırken dikkate alın.
+- Visual Studio 'dan derlerken derleyici yanıt dosyalarını (rsp) hesaba alın.
 
-- Oluşturucu yöntemleri hata ayıklama sırasında değişkenleri göstermek için derleyicinin ürettiği türleri ayrıştırma.
+- Oluşturucu metotlarında hata ayıklama sırasında değişkenleri göstermek için derleyicinin ürettiği türler kaldırılıyor.
 
-- Uzak bir paylaşılan klasöre Unity yapılandırma gereksinimini ortadan kaldırarak hata ayıklama basitleştirin. Şimdi Windows için Unity projeniz erişimi yeterlidir.
+- Paylaşılan bir klasörü Unity 'ye yapılandırma gereksinimini kaldırarak uzaktan hata ayıklamayı kolaylaştırın. Artık yalnızca Windows 'da Unity projenize erişiminizin olması gerekir.
 
-- Özel Unity profil, bir standart .net hedef profil yükleyin. Bu, ReSharper gösterebilirsiniz tüm hatalı pozitif sonuçları düzeltir.
+- Özel bir Unity profilini standart .net hedef profili olarak yükler. Bu, ReSharper tarafından gösterebilecek tüm hatalı pozitif durumları düzeltir.
 
-- Geçici bir Unity altyapısı hata, hata ayıklayıcı olmayan düzgün bir şekilde kesme olmaz şekilde komut iş parçacığı kayıtlı.
+- Bir Unity betik altyapısı hatasına geçici olarak çalışın, bu nedenle hata ayıklayıcı düzgün şekilde kaydedilmemiş iş parçacıklarında kesintiye uğramaz.
 
-- Burada dosya açık istekte kilitlenme sırasında dosyaları açmak için talep vs'de bir yarış durumu önlemek için dosyayı açan yeniden.
+- Dosya açma isteği üzerinde kilitlenme sırasında dosyaları açmak için gereken yerde bir yarış durumu oluşmasını önlemek için dosyayı Opener 'da yeniden çalışın.
 
-- UnityVS VS oluşturulurken proje oluşturma yenilemek şimdi isteyen ve değil dosya artık kaydedin.
+- UnityVS, artık projeyi oluştururken ve artık dosya Kaydet 'de değil derlemeyi yenilemeyi istiyor.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Sabit özel bizim .net profili
+- Özel .net profiliniz düzeltildi
 
-- Tema oluşturma tümleştirme sabit, bu VS 2012 koyu tema ile bizim sorunları giderir.
+- Tema tümleştirmesi düzeltildi, bu, VS 2012 koyu temasıyla ilgili sorunlarımızı düzeltir.
 
-- VS 2012'de sabit hızlı davranışı kısayol.
+- VS 2012 ' de sabit hızlı davranış kısayolu.
 
-- Hata ayıklama sırasında gerçekleşebilir Adımlama bir sorun düzeltildi ve ana olmayan iş parçacığı bir kesme noktasına ulaşılmasına neden olur.
+- Hata ayıklama ve ana olmayan iş parçacığı bir kesme noktasına isabet edildiğinde oluşabilecek bir Adımlama sorunu düzeltildi.
 
-- Tür diğer adları gibi tamsayı sabit UnityScript ve hata tamamlama
+- İnt gibi tür diğer adların sabit Unityscrıpt ve Boo 'un tamamlanması.
 
-- Yeni UnityScript veya hata dize yazarken sabit özel durum.
+- Yeni bir UnityScript veya Boo dizesi yazılırken düzeltilen özel durum.
 
-- Bir çözümü yüklenmedi, Unity menüleri sabit durumlar.
+- Bir çözüm yüklenmediği zaman Unity menülerindeki özel durumlar düzeltildi.
 
-- Hata düzeltildi UV'leri 48: çift tırnak bazen hataya yazıp tüm işlevi (kod tamamlama, sözdizimi vurgulama vs.) Kes.
+- Düzeltilen hata UVS-48: çift tırnak yazıldığında bazen hata oluşur ve tüm işlev kesilir (kod tamamlama, sözdizimi vurgusu vb.).
 
-- Düzeltilen hata UVS-46: Visual Studio 'nun Hata Listesi tıklarken yinelenen açılan betik dosyası (UnityScript).
+- Düzeltilen hata UVS-46: Visual Studio 'nun Hata Listesi tıklandığında yinelenen açık betik dosyası (UnityScript).
 
-- Düzeltilen hata UVS-42: Durum çubuğundaki Unity bağlantı logosu, VS 2012 ' deki fare olaylarını işlemez.
+- Düzeltilen hata UVS-42: durum çubuğundaki Unity bağlantı logosu, VS 2012 ' de fare olaylarını işlemez.
 
-- Düzeltilen hata UVS-44: CTRL + SHIFT + Q, VS 2012 ' de hızlı MonoBehaviours için kullanılamaz.
+- Sabit hata UVS-44: CTRL + SHIFT + Q, VS 2012 ' de hızlı MonoBehaviours için kullanılamaz.
 
-- Düzeltilen hata UVS-40: VS2012 "koyu" temasından pencere etkin olmadığında Unity proje Gezgininde seçilen öğeler okunamaz.
+- Düzeltilen hata UVS-40: Unity proje Gezgininde seçili öğeler, VS2012 "koyu" teması içinde pencere etkin olmadığında okunamaz.
 
-- Düzeltilen hata UVS-39: Atlanan dizeleri simgeleştirirken sorun.
+- Düzeltilen hata UVS-39: atlanan dizeleri simgeleştirirken sorun.
 
-- Düzeltilen hata UVS-35: Değişkenler incelenirken nesneler üzerinde ToString öğesini çağır.
+- Düzeltilen hata UVS-35: değişkenleri incelerken nesnelerde ToString çağrısı yapın.
 
-- Sabit hata UVS-27: VS2012 içinde "koyu" temayla sembol penceresi tutarsızlığına git.
+- Düzeltilen hata UVS-27: VS2012 içinde "koyu" temayla sembol penceresine git.
 
-- Sabit hata UVS-11: Eş öğelerdeki Yereller.
+- Sabit hata UVS-11: eş öğelerdeki Yereller.
 
-## <a name="1100---beta-release"></a>1.1.0.0 - beta sürümü
-Yayımlanan, 9 Mart 2013
+## <a name="1100---beta-release"></a>1.1.0.0-Beta sürümü
+Çıkarılan, 9, 2013
 
 ## <a name="10130"></a>1.0.13.0
-Yayımlanan Ocak 21 Şubat 2013
+Yayımlanma tarihi 21 Ocak 2013
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Geçersiz iş parçacığı olayları hedef hata ayıklanan gönderiyorsa, meydana gelmiş olabilir bir Visual Studio kilitleniyor düzeltildi. Bu genellikle, uzak bir Unity OSX üzerinde hata ayıklama olacağını.
+- Hedef hata ayıklananın geçersiz iş parçacığı olayları göndermesi durumunda oluşabilecek bir Visual Studio kilitleniyor düzeltildi. Bu, genellikle OSX üzerinde Uzak Unity hata ayıklaması yapılırken meydana gelir.
 
-- Bir özel durum hata ayıklayıcı kapanıyorsa gerçekleşebilir, Visual Studio kilitleniyor düzeltildi.
+- Bir özel durum hata ayıklayıcıyı kapdığı takdirde oluşabilecek bir Visual Studio kilitleniyor düzeltildi.
 
-- Bir C# MonoBehavior bir ad alanında olduğunda, bizim MonoBehavior Yardımcıları düzeltildi.
+- C# Tek davranış bir ad alanında olduğunda MonoBehavior yardımcılarımız düzeltildi.
 
-- Visual Studio 2012'de UnityScript için sabit bir hata ayıklayıcı araç ipuçları.
+- Visual Studio 2012 ' de Unityscrıpt için düzeltilen hata ayıklayıcı araç ipuçları.
 
-- Yalnızca hata ayıklama sabitleri Unity'de değiştiği proje oluşturma düzeltildi.
+- Unity 'den yalnızca hata ayıklama sabitleri değiştirildiğinde düzeltilen proje oluşturma.
 
-- Unity Proje Gezgini sabit klavye gezintisi.
+- Unity proje Gezgininde sabit klavye gezintisi.
 
-- Kaçış dizileri için sabit UnityScript renklendirme.
+- Atlanan dizeler için kod renklendirme düzeltildi.
 
-- Proje adı Unity dışında kullanıldığında daha iyi tahmin bizim dosya açan düzeltildi. Kullanıcı, bir üçüncü bölümü dosya açan temsilciler için UnityVS, Unity kullandığında, gereklidir.
+- Unity dışında kullanıldığında proje adını daha iyi tahmin etmek için dosya Openme düzeltildi. Bu, Kullanıcı Unity 'de UnityVS 'ye temsilci olarak üçüncü bir bölüm dosyası kullandığında gereklidir.
 
-- Sabit işleme için UnityVS Unity'de gönderilen uzun iletisi. Bundan önce uzun iletileri UnityVS Mesajlaşma bizim parçası kilitlenebiliyordu. Sonuç olarak, bazen UnityVS dosya Unity'de açın mıydı.
+- Unity 'den UnityVS 'e gönderilen uzun mesajların sabit işlenmesi. Bundan önce, uzun iletiler ileti alımızın bir parçası olan mesajlaşma bölümünü çökebilir. Sonuç olarak, bazen Unity 'den bir dosya açılmaz.
 
 ## <a name="10120"></a>1.0.12.0
-3 Ocak 2013'ün yayımlanan
+Yayımlanma tarihi 3 Ocak 2013
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Visual Studio bir kesme noktası silerken, oluşabilir sabit Visual Studio kilitleniyor.
+- Visual Studio bir kesme noktasını sildiğinde oluşabilecek sabit Visual Studio kilitleniyor.
 
-- Unity oyun betikleri yeniden derlenen sonra nerede bazı kesme noktaları isabet değil, bir hata düzeltildi.
+- Unity 'nin oyun betiklerini yeniden derlendikten sonra bazı kesme noktaları isabet ettirilmeyen bir hata düzeltildi.
 
-- Hata ayıklayıcı kesme noktaları ilişkisiz Visual Studio doğru şekilde bildirmek için düzeltildi.
+- Kesme noktaları ilişkisiz olduğunda Visual Studio 'Yu düzgün şekilde bilgilendirmek için hata ayıklayıcı düzeltildi.
 
-- Yerel programlarda hata ayıklamak için Visual Studio hata ayıklayıcısını engelleyen bir kayıt sorun düzeltildi.
+- Visual Studio hata ayıklayıcının yerel programlarda hata ayıklamasına engel olabilecek bir kayıt sorunu düzeltildi.
 
-- UnityScript değerlendirirken gerçekleşir ve ifadeleri önyük özel durum düzeltildi.
+- UnityScript ve Boo ifadeleri değerlendirilirken oluşabilecek bir özel durum düzeltildi.
 
-- Burada .net API düzeyini Unity proje dosyalarının bir güncelleştirme tetikleyecek değil bir gerileme düzeltildi.
+- Unity 'de .NET API düzeyinin değiştirilmesinin proje dosyalarının güncelleştirilmesini tetikleyemediğinde bir gerileme düzeltildi.
 
-- Burada kullanıcı kodu içinde günlük geri çağırma işleyiciyi katılmamayı bir API sorun düzeltildi.
+- Kullanıcı kodunun günlük geri çağırma işleyicisine katılabileceği bir API hatası düzeltildi.
 
 ## <a name="10110"></a>1.0.11.0
-28 Kasım 2012 yayımlanan
+Yayın tarihi, 28 Kasım 2012
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity 4 resmi desteği.
+- Unity 4 için resmi destek.
 
-- Unity Proje Gezgini betiklerin işleme.
+- Unity Proje Gezgini 'nden betikleri düzenleme.
 
-- Visual Studio penceresinde gitmek için tümleştirme.
+- Visual Studio 'da tümleştirme, pencereye git.
 
-- Bilgi konsol iletisi hata listesinde tıklayarak kaplamaları için bu, ilk stackframe simgelerle için ayrıştırılıyor.
+- Bilgi konsolu iletisini ayrıştırma, Hata Listesi tıklamak, simgeleri olan ilk StackFrame 'e götürür.
 
-- Ekleme bir [API](../cross-platform/customize-project-files-created-by-vstu.md) proje oluşturma işleminde katılmasına izin vermek için.
+- Kullanıcının proje üretimine katılmasını sağlamak için bir [API](../cross-platform/customize-project-files-created-by-vstu.md) ekleyin.
 
-- Ekleme bir [API](../cross-platform/share-the-unity-log-callback-with-vstu.md) içinde LogCallback katılmasına izin vermek için.
+- Kullanıcının LogCallback 'a katılmasını sağlamak için bir [API](../cross-platform/share-the-unity-log-callback-with-vstu.md) ekleyin.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Unity Proje Gezgini Visual Studio 2012'de, sabit regresyon arka planda.
+- Visual Studio 2012 ' de Unity Proje Gezgini 'nin arka planında düzeltilen gerileme.
 
-- Tam .net Profil kullanıcılar için proje oluşturma düzeltildi.
+- Tam .net profilinin kullanıcıları için sabit proje üretimi.
 
-- Web hedefinin kullanıcılar için proje oluşturma düzeltildi.
+- Web hedefinin kullanıcıları için sabit proje üretimi.
 
-- Sabit proje oluşturma dahil etmek için hata ayıklama ve izleme derleme simgeleri Unity olarak yapar.
+- Unity olarak hata ayıklama ve Izleme derleme sembolleri dahil olmak üzere sabit proje üretimi.
 
-- Özel karakterler bizim Goto sembol penceresinde kullanırken sabit kilitlenme.
+- Goto symbol penceremizdeki özel karakterler kullanılırken oluşan kilitlenme düzeltildi.
 
-- Size sunduğumuz simgesi Visual Studio durum çubuğunda eklenemiyor, sabit kilitlenme.
+- Visual Studio 'nun durum çubuğunda simgemizi ekleyeemiz için çökme düzeltildi.
 
 ## <a name="10100"></a>1.0.10.0
-Yayımlanan 9 Ekim 2012
+Yayın tarihi 9 Ekim 2012
 
 ### <a name="bug-fixes"></a>Hata Düzeltmeleri
 
-- Unity Proje Gezgini arka planını Visual Studio 2010'da düzelttik.
+- Visual Studio 2010 ' de Unity Proje Gezgini 'nin arka planı düzeltildi.
 
-- UnityVS, hata ayıklayıcı arabirim önceden kilitlenmiş bir Unity için hata ayıklayıcının çalıştılarsa meydana gelmiş olabilir bir Visual Studio dondurma düzeltildi.
+- Hata ayıklayıcı arabirimi daha önce kilitlenen bir Unity 'ye hata ayıklayıcı eklemesi denenirse bir Visual Studio donması düzeltildi.
 
-- Bir kesme noktası ayarlandı ve AppDomain yeniden ortaya çıkabilecek meydana gelmiş olabilir bir Visual Studio dondurma düzeltildi.
+- Bir kesme noktası ayarlandığında ve bir AppDomain yeniden yüklemesi gerçekleştiğinde ortaya çıkabilecek bir Visual Studio donması düzeltildi.
 
-- Sabit dosyalar kilitlenmesini önlemek ve Unity yapı işlemi karıştırır Unity'de derlemeleri nasıl alınır.
+- Dosyaları kilitlemenin ve Unity oluşturma işleminin karışmasını önlemek için derlemelerin Unity 'den nasıl alındığı düzeltildi.
 
 ## <a name="1090"></a>1.0.9.0
 
-Yayımlanan 3 Ekim 2012
+Yayımlanma tarihi, 3 Ekim 2012
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Sabit proje oluşturma, Unity projesi gerçek JavaScript varlıkları içerir.
+- Unity projesi gerçek JavaScript varlıklarını içerdiğinde, sabit proje üretimi.
 
-- İfade değerlendirmesinde işleme sabit bir hata oluştu.
+- İfade değerlendirmesinde düzeltilen hata işleme.
 
-- Yeni değerler alanlara değer türlerinin ayarlama düzeltildi.
+- Değer türlerinin alanlarına yeni değerleri ayarlama düzeltildi.
 
-- Sabit olası yan kod düzenleyicisinden ifadeleri üzerine gelindiğinde etkiler.
+- Kod düzenleyicisinden ifadelerin üzerine gelindiğinde olası yan etkiler düzeltildi.
 
-- Sabit ifade değerlendirmesi için yüklü bütünleştirilmiş kodlarında türler nasıl aranır.
+- İfade değerlendirmesi için yüklü derlemelerde türlerin nasıl arandığı düzeltildi.
 
-- Sabit hata UVS-21: Unity nesnelerinde atama değerlendirmesi etkisizdir.
+- Düzeltilen hata UVS-21: Unity nesnelerinde atamanın değerlendirmesi etkisizdir.
 
-- Sabit hata UVS-21: Unity matematik API 'sine bir yöntem çağrısı değerlendirilirken geçersiz işaretçi.
+- Düzeltilen hata UVS-21: Unity matematik API 'sine bir yöntem çağrısı değerlendirilirken geçersiz işaretçi.
 
 ## <a name="1080"></a>1.0.8.0
 
-26 Eylül 2012 yayımlanan
+Yayımlanma tarihi, 26 Eylül 2012
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Sabit bizim betik açan projeyi yolunu elde emin olan yoldur hem Visual Studio hem de komut dosyaları açamaz.
+- Betiğimizin, hem Visual Studio hem de betikleri açabildiğinden emin olmak için, projenin yolunu elde ettiği şekilde düzeltildi.
 
-- Sabit bir hata ile kesme noktaları hata ayıklama oturumu, çalışırken oluşturulan Visual Studio'nun kilitlenmesine neden olabilir.
+- Hata ayıklama oturumu çalıştırılırken oluşturulan kesme noktalarıyla bir hata düzeltildi ve bu, Visual Studio 'Nun kilitlenmesini istiyor olabilir.
 
-- Visual Studio 2010'da UnityVS nasıl kayıtlı düzeltildi.
+- Visual Studio 2010 ' de UnityVS 'in nasıl kaydedildiği düzeltildi.
 
 ## <a name="1070"></a>1.0.7.0
 
-14 Eylül 2012 yayımlanan
+Yayın tarihi 14 Eylül 2012
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
 - Visual Studio 2012 desteği.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Unity'nın davranışı eşleştirmek için düzenleyici ve eklentileri proje dosyalarının oluşturulmasını sabit.
+- Unity 'nin davranışını eşleştirmek için, düzenleyici ve eklenti proje dosyalarının sabit üretimi.
 
-- Çeviri .pdb simgeleri Unity 4'te düzeltilmiştir.
+- Unity 4 ' te. pdb sembolleri çevirisi düzeltildi.
 
 > [!IMPORTANT]
-> Visual Studio 2012 desteği nedeniyle birkaç dosyalarını yeniden adlandırın ve başka gezinme vardı. Unity içeri aktarmak için UnityVS paket artık UnityVS 2010 veya UnityVS 2012'de, sırasıyla Visual Studio 2010 ve Visual Studio 2012 için olarak adlandırılır. Bu sürüm ayrıca UnityVS proje dosyalarını yeniden oluşturulduğunu gerektirir.
+> Visual Studio 2012 desteği nedeniyle, birkaç dosyayı yeniden adlandırdık ve başka bir süre içinde taşınacak. Unity 'yi içeri aktarmaya yönelik UnityVS paketi, sırasıyla Visual Studio 2010 ve Visual Studio 2012 için UnityVS 2010 ya da UnityVS 2012 olarak adlandırılmaktadır. Bu sürüm ayrıca, UnityVS proje dosyalarının yeniden oluşturulmasını gerektirir.
 
-## <a name="1060---internal-build"></a>1.0.6.0 - iç yapı
-12 Eylül 2012 yayımlanan
+## <a name="1060---internal-build"></a>1.0.6.0-iç derleme
+12 Eylül 2012 ' de yayınlandı
 
 ## <a name="1050"></a>1.0.5.0
 
-10 Eylül 2012 yayımlanan
+Yayın tarihi 10 Eylül 2012
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Sabit betikleri ve gölgelendiricileri geçersiz xml karakter değilse, proje dosyalarının oluşturulmasını.
+- Betiklerin veya gölgelendiricilerin geçersiz bir XML karakteri olduğunda proje dosyalarının sabit üretimi düzeltildi.
 
-- Unity varlık sunucuya bağlanıldığında Unity örnekleri sabit algılanması. Bu, Unity ve Visual Studio hata ayıklayıcı otomatik bağlantısı dosyaları açmak için hataları tetiklenir.
+- Unity varlık sunucusuna bağlıyken Unity örneklerinin sabit algılanması. Bu, Unity 'den dosyaları açmak ve Visual Studio hata ayıklayıcının otomatik bağlantısı için hata tetikledi.
 
 ## <a name="1040"></a>1.0.4.0
 
-5 Eylül 2012 yayımlanan
+Yayımlanma tarihi, 5 Eylül 2012
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity hata ayıklama sembolleri otomatik dönüştürme.
+- Unity 'de hata ayıklama sembollerini otomatik dönüştürme.
 
-    Bir .NET .dll derlemesi ile kendi ilgili .pdb varlık klasörünüzde varsa, yalnızca derlemenin yeniden içeri aktarın ve UnityVS, Unity'nın komut dosyası altyapısı anlar ve sizin için adım, .NET derlemeleri halinde mümkün olacaktır bir hata ayıklama sembolleri dosyasına .pdb dönüştürür UnityVS.
+    Varlık klasörünüzde ilişkili. pdb ile bir .NET. dll derlemesi varsa, derlemeyi yeniden içeri aktarmanız yeterlidir ve UnityVS,. pdb 'yi Unity 'nin betik altyapısının anladığı bir hata ayıklama sembolleri dosyasına dönüştürür ve UnityVS.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Yöntemleri veya özellikleri içinde Unity tarafından oluşturulan özel durumları nedeniyle hata ayıklama sırasında UnityVS kilitlenme sorunu düzeltildi.
+- Unity içindeki metotlar veya özellikler tarafından oluşturulan özel durumlar nedeniyle hata ayıklamada hata ayıklama sırasında sabit Unıvs kilitlenmesi
 
 ## <a name="1030"></a>1.0.3.0
 
-4 Eylül 2012 yayımlanan
+Yayımlanma tarihi 4 Eylül 2012
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity'de dosyaları açmak için UnityVS kullanımını devre dışı bırakmak için yeni yapılandırma seçeneği.
+- Unity 'den dosya açmaya yönelik UnityVS kullanımını devre dışı bırakmak için yeni yapılandırma seçeneği.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Sabit UnityEditor başvuruları nesil olmayan Düzenleyicisi projeler için.
+- Düzenleyici olmayan projeler için UnityEditor başvuruları düzeltildi.
 
-- Sabit olmayan Düzenleyicisi projeleri UNITY_EDITOR sembolünün tanımı.
+- Düzenleyici olmayan projeler için UNITY_EDITOR sembolün sabit tanımı.
 
-- Çökme, özel durum çubuğu tarafından neden rastgele VS sabit.
+- Özel durum çubuğumuzdan kaynaklanan sabit rastgele VS kilitlenmesi.
 
 ## <a name="1020"></a>1.0.2.0
 
-Yayımlanan 30 Ağustos 2012
+30 Ağustos 2012 tarihinde yayınlandı
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- PythonTools hata ayıklayıcı sabit çakışıyor.
+- PythonTools hata ayıklayıcı ile çakışma düzeltildi.
 
-- Mono.Cecil sabit başvurular.
+- Mono. CECIL 'e yönelik sabit başvurular.
 
-- Hata düzeltildi nasıl betik derlemelerde alınan Unity'de Unity 4 b7 ile.
+- Unity 4 B7 ile Unity 'den komut dosyası derlemelerinin nasıl alındığı ile ilgili hata düzeltildi.
 
 ## <a name="1010"></a>1.0.1.0
 
-28 Ağustos 2012 yayımlanan
+28 Ağustos 2012 ' de yayınlandı
 
-### <a name="new-features"></a>Yeni Özellikler
+### <a name="new-features"></a>Yeni özellikler
 
-- Unity 4.0 Beta önizlemesi desteği.
+- Unity 4,0 Beta için Önizleme desteği.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- Özel durumları atma özelliklerini inceleme düzeltildi.
+- Özelliklerin özel durum atma denetimi düzeltildi.
 
-- Temel nesnelere nesneleri incelerken azalan düzeltildi.
+- Nesneler incelenirken temel nesnelerde azalan şekilde düzeltildi.
 
-- Ekleme noktasını MonoBehavior Sihirbazı için sabit boş açılan listesi.
+- Tek davranış sihirbazında ekleme noktası için boş açılan liste.
 
-- Dll içindeki varlık klasörünü sabit tamamlanmasını UnityScript ve hata.
+- UnityScript ve Boo 'un varlık klasörü içindeki dll için sabit tamamlama.
 
-## <a name="1000---initial-release"></a>1.0.0.0 - ilk yayın
-22 Ağustos 2012 yayımlanan
+## <a name="1000---initial-release"></a>1.0.0.0-ilk sürüm
+Yayın tarihi 22 Ağustos 2012

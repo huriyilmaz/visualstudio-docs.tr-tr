@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: f88cf221f47f2b8aa89a733a4794e424ac938261
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: f7c1353e9f9759b91a7d83d8296a036bb5b80dd7
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74161975"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706989"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde teknik destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **Üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
@@ -54,7 +54,7 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
 > Destek hesabınızı Ingilizce dışındaki bir dilde etkinleştirmek için [Bu listeden](https://support.microsoft.com/help/14084/activate-support-contract)bulunduğunuz ülkeyi seçin.
 
 ## <a name="how-to-submit-an-incident-using-your-benefit"></a>Avantajınızı kullanarak bir olay gönderme
-**Sözleşme kimliğiniz** ve **erişim kimliğiniz** kurulduktan sonra, bir teknik [destek olayı (](http://support.microsoft.com/oas/) oturum açmak için) veya [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) aracılığıyla ya da ülkeniz için teknik destek numarasını çağırarak, bu ayarı kullanabilirsiniz. Olayınızı çevrimiçi gönderirseniz, geri dönüş Microsoft Desteği profesyonel bir arama seçeneğiniz vardır.
+**Sözleşme kimliğiniz** ve **erişim kimliğiniz** kurulduktan sonra, bir teknik [destek olayı (](https://support.microsoft.com/oas/) oturum açmak için) veya [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) aracılığıyla ya da ülkeniz için teknik destek numarasını çağırarak, bu ayarı kullanabilirsiniz. Olayınızı çevrimiçi gönderirseniz, geri dönüş Microsoft Desteği profesyonel bir arama seçeneğiniz vardır.
 
 ### <a name="already-have-your-contract-id-and-access-id-associated-with-the-account-used-to-sign-in-to-submit-a-tech-support-incident-online"></a>Zaten bir teknik destek olayı çevrimiçi göndermek için kullanılan hesapla ilişkili sözleşme KIMLIĞINIZ ve erişim KIMLIĞINIZ zaten var mı?
 Bir olayı çevrimiçi olarak gönderirken öncelikle oturum açmanız istenir. Bildiğiniz hesapla oturum açarak, sözleşmenin KIMLIĞI ve erişim KIMLIĞINIZ ile ilişkilendirilir. Hesabınızla ilişkili mevcut destek planı avantajınız, destek iş akışında 3. adımda görünür. Bu planı seçmeniz ve servis talebinizi göndermeye devam etmeniz yeterlidir. Olayları planda belirtilen sınıra kadar veya planın sona erme tarihine kadar, hangisi önce gelirse gönderebilirsiniz. Kalan olaylar "0" öğesini gösterir veya planınız sona erdiğinde, artık etkin değildir.

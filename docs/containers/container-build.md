@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: a2f837ba264a12391786f584cf2698e19250fb2e
-ms.sourcegitcommit: 6336c387388707da94a91060dc3f34d4cfdc0a7b
+ms.openlocfilehash: e1b2f332563503dcb4d63faf301000db83eed5ea
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74549949"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706828"
 ---
-# <a name="build-and-debug-containerized-apps-using-visual-studio-or-the-command-line"></a>Visual Studio veya komut satırı kullanarak Kapsayıcılı uygulamalar derleme ve hata ayıklama
+# <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio Kapsayıcılı uygulamaları nasıl oluşturur
 
-Visual Studio IDE 'den oluşturuluyor veya bir komut satırı derlemesi ayarlıyoruz, Visual Studio derlemelerinizin projelerinizi oluşturmak için Dockerfile 'ı nasıl kullandığını bilmeniz gerekir.  Performans nedenleriyle, Visual Studio Kapsayıcılı uygulamalar için özel bir işlem izler. Visual Studio 'Nun projelerinizi nasıl derlemediğini anlamak, Dockerfile dosyasını değiştirerek yapı işleminizi özelleştirirken özellikle önemlidir.
+Visual Studio IDE 'den oluşturuluyor veya bir komut satırı derlemesi ayarlıyoruz, Visual Studio 'Nun projelerinizi oluşturmak için Dockerfile 'ı nasıl kullandığını bilmeniz gerekir.  Performans nedenleriyle, Visual Studio Kapsayıcılı uygulamalar için özel bir işlem izler. Visual Studio 'Nun projelerinizi nasıl derlemediğini anlamak, Dockerfile dosyasını değiştirerek yapı işleminizi özelleştirirken özellikle önemlidir.
 
 Visual Studio, Docker Kapsayıcıları kullanmayan bir proje oluşturduğunda, yerel makinede MSBuild 'i çağırır ve çıkış dosyalarını yerel çözüm klasörünüzün altında bir klasörde (genellikle `bin`) oluşturur. Bununla birlikte, kapsayıcılı bir proje için yapı işlemi, Dockerfile 'ın Kapsayıcılı uygulama oluşturma yönergelerinin bir hesabını alır. Visual Studio 'Nun kullandığı Dockerfile birden çok aşamaya bölünmüştür. Bu işlem Docker 'ın *çok aşamalı derleme* özelliğini kullanır.
 
@@ -84,7 +84,7 @@ MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
 
 Visual Studio IDE 'den Çözümünüzü oluştururken **Çıkış** penceresinde gördüklerinize benzer bir çıktı görürsünüz. Her zaman `/p:Configuration=Release`kullanın, Visual Studio 'Nun çok aşamalı derleme iyileştirmesini kullandığı durumlarda, **hata ayıklama** yapılandırmasını oluştururken sonuçlar beklendiği gibi olmayabilir. Bkz. [hata ayıklama](#debugging).
 
-Docker Compose projesi kullanıyorsanız, görüntüleri derlemek için komutunu kullanın:
+Docker Compose projesi kullanıyorsanız, görüntü oluşturmak için bu komutu kullanın:
 
 ```cmd
 msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-compose.dcproj
@@ -99,7 +99,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 - Dockerfile ' ın ilk aşamasında görüntüleri çekin (çoğu Dockerfiles içindeki `base` aşaması).  
 - Dockerfile 'ı oluşturun ve kapsayıcıyı başlatın.
 
-Warmup yalnızca **hızlı** modda gerçekleşecektir, bu nedenle çalışan kapsayıcıda uygulama klasörü birimi takılmış ve uygulamadaki tüm değişiklikler kapsayıcıyı geçersiz kılmaz. Bu nedenle, hata ayıklama performansı önemli ölçüde artar ve büyük görüntüleri çekme gibi uzun süre çalışan görevler için bekleme süresini azaltır.
+Warmup yalnızca **hızlı** modda gerçekleşecektir, bu nedenle çalışan kapsayıcıda birim takılmış uygulama klasörü olacaktır. Diğer bir deyişle, uygulamadaki tüm değişiklikler kapsayıcıyı geçersiz kılmaz. Bu nedenle, hata ayıklama performansı önemli ölçüde artar ve büyük görüntüleri çekme gibi uzun süre çalışan görevler için bekleme süresini azaltır.
 
 ## <a name="volume-mapping"></a>Birim eşleme
 

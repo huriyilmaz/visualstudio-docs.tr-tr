@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 26e9227fbd3852e4e9115e06e2882fe6358831a3
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 2e57d3b1ede0320cdf0766e3b4ab64d67b16b808
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491295"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706994"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -83,14 +83,14 @@ Y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneli�
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: özelleştirilmiş bir öğrenme çalma listelerine veya kanala erişimim var mı?
 Y: Evet, Visual Studio abonesi olarak, uzman eğitim avantajınız kapsamında uzman kanallara erişim elde edersiniz. Bu kanallar, Microsoft uzmanları tarafından özel olarak kaldırılmıştır ve .net, Azure, DevOps ve Mobility alanlarında öğrenmeye yöneliktir. Pluralalsel giriş sayfanızda bu kanallara erişim elde etmek için Visual Studio abonelik portalınız [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) göz alıcı avantajınızı etkinleştirin.
 
-• Scott HANSELMANN (.net, Azure)- [http://go.pluralsight.com/scott-hanselman](http://go.pluralsight.com/scott-hanselman)
+• Scott HANSELMANN (.net, Azure)- [https://go.pluralsight.com/scott-hanselman](https://go.pluralsight.com/scott-hanselman)
 
-• Donovan kahverengi (DevOps)- [http://go.pluralsight.com/donovan-brown](http://go.pluralsight.com/donovan-brown)
+• Donovan kahverengi (DevOps)- [https://go.pluralsight.com/donovan-brown](https://go.pluralsight.com/donovan-brown)
 
-• James Montemagno (Mobility)- [http://go.pluralsight.com/james-montemagno](http://go.pluralsight.com/james-montemagno)
+• James Montemagno (Mobility)- [https://go.pluralsight.com/james-montemagno](https://go.pluralsight.com/james-montemagno)
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>S: Pluralm aboneliğim çalıştırıldığında ne olur?
-Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satın almayı tercih edebilirsiniz.  Tam Ayrıntılar için lütfen [Pluralali](http://www.pluralsight.com) ile iletişime geçin.
+Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satın almayı tercih edebilirsiniz.  Tam Ayrıntılar için lütfen [Pluralali](https://www.pluralsight.com) ile iletişime geçin.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - [Pluraltarın yardım merkezi](https://help.pluralsight.com/help) , pluralaltim kurslarını alma veya plurali Web sitesini kullanma konusunda yardım sağlar.
@@ -98,6 +98,6 @@ Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satı
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Hesabınızı oluşturduktan sonra eğitime başlamaya hazırsınız demektir.  Yeni bir kurs başlatmak veya sürmekte olan bir kursa geri dönmek için [https://www.pluralsight.com](http://www.pluralsight.com) ziyaret edin ve sayfanın sağ üst köşesindeki **oturum aç** ' a dokunun.
+Hesabınızı oluşturduktan sonra eğitime başlamaya hazırsınız demektir.  Yeni bir kurs başlatmak veya sürmekte olan bir kursa geri dönmek için [https://www.pluralsight.com](https://www.pluralsight.com) ziyaret edin ve sayfanın sağ üst köşesindeki **oturum aç** ' a dokunun.
 
 [Azure DevTest bireysel kredilerinizi](vs-azure.md)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın. 

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/17/2019
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: dcbcbc9c11dc5c695a1ca2ed523ad982ff18f5c5
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: a8a58cd3fca2443ca84db712cbd2a356351d4499
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493352"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706978"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -25,26 +25,26 @@ Visual Studio abonelikleri portalı, tüm Visual Studio aboneliklerinizi ve prog
 
 Avantajlar sayfasında, kullanımdaki abonelik mavi başlık başlığında görünür. Ayrıca sayfanın sağ üst kısmında da gösterilir.
 > [!div class="mx-imgBorder"]
-> ![Etkin abonelik](_img/manage-vs-subscriptions/current-subscription-cropped.png)
+> etkin aboneliği ![](_img/manage-vs-subscriptions/current-subscription-cropped.png)
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>Abonelikler arasında geçiş yapmak için şunları yapabilirsiniz:
 
 - Sağ üst taraftaki aşağı açılan listeye tıklayın ve listeden aboneliği seçin
 - Abonelikler sekmesine tıklayın ve ardından istediğiniz aboneliğe tıklayın
   > [!div class="mx-imgBorder"]
-  > ![Abonelikleri değiştirme](_img/manage-vs-subscriptions/change-subscription-resized.png)
+  > abonelik ![](_img/manage-vs-subscriptions/change-subscription-resized.png) değiştirme
 
 ### <a name="if-your-subscription-is-not-visible"></a>Aboneliğiniz görünür değilse...
 
 - Bu işlem zaman aşımına uğradı. Yalnızca etkin abonelikler abone portalında görüntülenir.
-- Bu, farklı bir e-posta adresiyle ilişkilendirilebilir. Örneğin, iş/okul e-postalarınız ile bir Visual Studio Professional abonelikte oturum açarsanız ve Microsoft hesabınızla ilişkili bir Visual Studio Dev Essentials üyeliği varsa, yalnızca size e-posta adresine karşılık gelen aboneliği görürsünüz Abone portalında oturum açmak için kullanılır. Diğer aboneliği görmek için oturumunuzu kapatıp diğer e-posta adresiyle oturum açmanız gerekecektir.
+- Bu, farklı bir e-posta adresiyle ilişkilendirilebilir. Örneğin, iş/okul e-postanız ile bir Visual Studio Professional abonelikte oturum açarsanız ve Microsoft hesabınızla ilişkili bir Visual Studio Dev Essentials üyeliği varsa, yalnızca abone portalında oturum açmak için kullandığınız e-posta adresine karşılık gelen aboneliği görürsünüz. Diğer aboneliği görmek için oturumunuzu kapatıp diğer e-posta adresiyle oturum açmanız gerekecektir.
 - Şirketiniz bir toplu lisans aracılığıyla abonelikler satın alıyorsa, yöneticiniz size bir abonelik atamaya da aboneliğinizi başka bir kullanıcıya atamış olabilir.
 
 ## <a name="renewing-my-subscriptions"></a>Aboneliklerimi yenileme
 
 **Standart abonelikler**
-- Microsoft Store: Aboneliğinizi [Microsoft Store](http://www.microsoft.com/store)satın aldıysanız, bunu da yenileyebilirsiniz.
-- Toplu Lisans:  Şirketiniz bir toplu lisans aracılığıyla abonelikler satın alıyorsa, yöneticiniz aboneliklerinizi yenilemek için bir satıcı ile iletişim kurmanız gerekir.
+- Microsoft Store: aboneliğinizi [Microsoft Store](https://www.microsoft.com/store)satın aldıysanız, bunu da yenileyebilirsiniz.
+- Toplu Lisans: Şirketiniz bir toplu lisans aracılığıyla abonelikler satın alıyorsa, yöneticinizin aboneliklerinizi yenilemek için bir satıcıyla iletişim kurabilmesi gerekir.
 
 **Bulut abonelikleri:**  Bulut aboneliklerinin yenilenmesi gerekmez. Aboneliğiniz ödendiğinde etkin olmaya devam eder.
 
@@ -75,10 +75,10 @@ Profilinizdeki iletişim bilgilerini ve tercihlerini kolayca değiştirebilirsin
 5. Avantajlar sayfasına geri dönmek için tarayıcınızın **geri** düğmesine tıklayın.
 
 ### <a name="setting-communications-preferences"></a>İletişim tercihlerini ayarlama
-Aylık Visual Studio abonelikleri bülteni de dahil olmak üzere aboneliğiniz ve avantajlarınız hakkında düzenli güncelleştirmeler almak isterseniz, Visual Studio profilinizde Visual Studio abonelikleri kutusunu işaretleyerek [tercihlerinizi güncelleştirin](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) . Bu tercihleri değiştirebilir ve istediğiniz zaman aboneliğinizi kaldırabilirsiniz. 
+Aylık Visual Studio abonelikleri Bülteni dahil olmak üzere aboneliğiniz ve avantajlarınız hakkında düzenli güncelleştirmeler almak isterseniz, Visual Studio profilinizde Visual Studio abonelikleri kutusunu işaretleyerek [tercihlerinizi güncelleştirin](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) . Bu tercihleri değiştirebilir ve istediğiniz zaman aboneliğinizi kaldırabilirsiniz. 
 
    > [!div class="mx-imgBorder"]
-   > ![Tercihleri ayarlama](_img/manage-vs-subscriptions/change-prefs.png)
+   > ![ayarı tercihleri](_img/manage-vs-subscriptions/change-prefs.png)
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>Aboneliğimi mevcut Azure DevOps Services veya Azure aboneliklerine bağlama
 Aboneliğinizde kişisel Microsoft hesabı (MSA) kullanarak oturum açarsanız ve Azure tarafından yönetilen iş veya okul hesabını kullanarak Azure DevOps Services veya Microsoft Azure içeren bir aboneliğe sahipseniz, iki aboneliği bağlayabilirsiniz. Bu, "Alternatif hesap" olarak adlandırılır ve mevcut Azure, Azure DevOps Services veya okulunuzla veya iş hesaplarınızla ilişkili olan IDE kaynaklarına erişim sağlarken, kendi aboneliğinizde oturum açmak için MSA 'u kullanmaya devam etmenizi sağlar.
@@ -96,10 +96,10 @@ Alternatif bir hesap ekledikten sonra, **abonelik** sekmesine tıklayarak ve **i
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="q-if-i-do-not-renew-my-subscription-how-long-will-microsoft-keep-my-data"></a>Ç Aboneliğimi yenilediğimde, Microsoft verilerimi ne kadar süreyle tutacağım?
-Y: Microsoft, satın alma kanalına bağlı olarak, müşteri verilerini farklı süreler boyunca tutar.
+### <a name="q-if-i-do-not-renew-my-subscription-how-long-will-microsoft-keep-my-data"></a>S: aboneliğimi yenilediğimde Microsoft verilerimi ne kadar süreyle tutacağım?
+Y: satın alma kanalına bağlı olarak Microsoft, müşteri verilerini farklı uzunluklara karşı korur.
 
-| Kanalla                                                | Süre (gün) |
+| Kanal                                                | Süre (gün) |
 |--------------------------------------------------------|-----------------|
 |    Perakende (örn. Microsoft Store)               |    360          |
 |    Toplu Lisanslama Hizmet Merkezi (VLSC)              |    180          |

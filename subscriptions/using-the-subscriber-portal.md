@@ -1,30 +1,30 @@
 ---
-title: Abone portalını kullanma- http://my.visualstudio.com | Microsoft Docs
+title: Abone portalını kullanma- https://my.visualstudio.com | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Visual Studio abonelikleri portalında kullanabileceğiniz tüm avantajlar hakkında bilgi edinin
-ms.openlocfilehash: 5ca5d3a2dcdf04e54159c746b93368b7d56be0da
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 7f1d3654aa49b53a1bb8543c28f6edb517c265bf
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095312"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74705822"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Abone portalını kullanma-my.visualstudio.com
 
-Visual Studio abonelikleri portalı [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs), Visual Studio aboneliğiniz aracılığıyla sunulan tüm avantajların avantajlarından yararlanabilmek için hepsi bir arada kaynaktır.
+Visual Studio abonelikleri portalı, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs), Visual Studio aboneliğiniz aracılığıyla sunulan tüm avantajların avantajlarından yararlanabilmek için hepsi bir arada kaynaktır.
 
 Portalın kullanılması için aboneliğinizle ilişkili kimlikle oturum açmanız gerekir.  Bu, Microsoft hesabınız (MSA) veya bir kuruluş tarafından, işvereniniz veya okulunuz gibi size sağlanmış bir e-posta adresi olabilir.  [Oturum açma](signing-in.md)hakkında bilgi edinin.
 
 Portal altı sayfada düzenlenir.  Her sayfa, aboneliğinize dahil edilen farklı ürün veya hizmetlere erişmenizi sağlar.  Altı sayfa avantajlardır, Indirmeler, ürün anahtarları, abonelikler, destek ve Market.
 
 ## <a name="benefitshttpsmyvisualstudiocombenefitswtmc_idomsftdocs"></a>[Larından](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-Aboneliklerinize dahil edilen araçlar ve hizmetler, avantajlar sayfasında "kutucuklar" olarak görüntülenir.  Tüm avantajlar tüm aboneliklere dahil değildir. Kutucuklar üç kategoride gruplandırılır:  Araçlar, profesyonel geliştirme ve destek.  
+Aboneliklerinize dahil edilen araçlar ve hizmetler, avantajlar sayfasında "kutucuklar" olarak görüntülenir.  Tüm avantajlar tüm aboneliklere dahil değildir. Kutucuklar üç kategoride gruplandırılır: Araçlar, profesyonel geliştirme ve destek.  
 
-### <a name="tools"></a>Araçlar
+### <a name="tools"></a>Araçları
 Araçlar kategorisi, Visual Studio IDE, Azure DevOps ve iş ortaklarımız tarafından sunulan araçların yanı sıra temel geliştirme araçlarını bulabileceğiniz yerdir.  Ayrıca Azure ve Visual Studio App Center gibi hizmetleri de görürsünüz.
 
 ### <a name="professional-development"></a>Profesyonel Geliştirme
@@ -53,4 +53,4 @@ Avantajlar sayfasındaki destek kategorisinde bulunan bireysel avantajlara ek ol
 Bir Visual Studio bulut aboneliğini yenilemeniz mı gerekiyor?  Visual Studio ürün ailesi için en son uzantıları indirmek istiyor musunuz?  Market, kullanıcıların Azure DevOps, Azure DevOps Server ve Visual Studio Code daha da iyi hale getirmek için uzantıları, araçları ve Hizmetleri bulmasına yardımcı olur. Hatta bir Yayımcı olabilir ve Market 'te kendi uzantılarınızı yayımlayabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Adresinde [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) portalda oturum açın ve avantajlarınıza göz atın.  Ayrıca, portalda [Microsoft hesabınızla](sign-in-msa.md) oturum açma hakkında daha fazla bilgi edinebilirsiniz (MSA), [iş veya okul hesabınız](sign-in-work.md)ve hatta [Github hesabınız](sign-in-github.md). 
+[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 'de portalda oturum açın ve avantajlarınıza göz atın.  Ayrıca, portalda [Microsoft hesabınızla](sign-in-msa.md) oturum açma hakkında daha fazla bilgi edinebilirsiniz (MSA), [iş veya okul hesabınız](sign-in-work.md)ve hatta [Github hesabınız](sign-in-github.md). 
