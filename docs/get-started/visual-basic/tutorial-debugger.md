@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici: Hata ayıklama Visual Basic kodu'
+title: 'Öğretici: hata ayıklama Visual Basic kodu'
 description: Kodu adımlayın Visual Studio hata ayıklayıcısını başlatın ve veri İnceleme hakkında bilgi edinin.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 11/27/2018
@@ -15,14 +15,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e7ddccf321259ff8f4de2522404fdc42617a810
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 9b38089a088186a30ebd13cae68d19ac23235bf9
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180189"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829980"
 ---
-# <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak Visual Basic kodun hatalarını ayıklamayı öğrenin
+# <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak Visual Basic kodu hata ayıklamanın nasıl yapılacağını öğrenin
 
 Bu makalede, Visual Studio hata ayıklayıcı adım adım kılavuzda özelliklerini tanıtır. Hata ayıklayıcı özelliklerinin daha üst düzey bir görünümünü istiyorsanız, bkz. [hata ayıklayıcıya ilk bakış](../../debugger/debugger-feature-tour.md). Olduğunda, *uygulamanızda hata ayıklama*, hata ayıklayıcısı ekli, uygulamanızın çalıştığını genellikle anlamına gelir. Bunu yaptığınızda, hata ayıklayıcı, kodunuzun ne yaptığını görmek için birçok yol sağlar. çalışırken. Kodunuzda adım adım ve değişkenlerinde depolanan değerleri bakmak, gözcüler ayarlayabilirsiniz değerleri değiştiğinde görmek için değişkenlerini kodunuzun yürütme yolunu inceleyin, bir dal kod çalıştırma, vb. olup olmadığını. Bu, kodda hata ayıklamak için girişimde ilk kez ise, okumak isteyebilirsiniz [yeni başlayanlar için hata ayıklama](../../debugger/debugging-absolute-beginners.md) bu makalede geçmeden önce.
 
@@ -34,7 +34,7 @@ Bu öğreticide şunları yapacaksınız:
 > * Veri ipuçları ve hata ayıklayıcı pencereleri değişkenler inceleyin
 > * Çağrı yığınını inceleyin
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 ::: moniker range=">=vs-2019"
 
@@ -59,24 +59,24 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 ::: moniker-end
 
-İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar** > **ve Özellikler al.** .. ' a giderek Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi'ni başlatır. Seçin **.NET masaüstü geliştirme** iş yükü, ardından **Değiştir**.
+İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Visual Studio Yükleyicisi'ni başlatır. Seçin **.NET masaüstü geliştirme** iş yükü, ardından **Değiştir**.
 
-## <a name="create-a-project"></a>Proje oluşturma
+## <a name="create-a-project"></a>Proje oluştur
 
 1. Visual Studio'yu açın.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Visual Basic**yazın, **Şablonlar**' ı seçin ve ardından **Yeni konsol uygulaması (.NET Framework) projesi oluştur**' u seçin. Görüntülenen iletişim kutusunda, **Get-Started-hata ayıklama**gibi bir ad yazın ve ardından **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Visual Basic**yazın, **Şablonlar**' ı seçin ve ardından yeni konsol uygulaması **(.NET Core) projesi oluştur** ya da **Yeni konsol uygulaması (.NET Framework) projesi**seçin. Görüntülenen iletişim kutusunda, **Get-Started-hata ayıklama**gibi bir ad yazın ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic**altında **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması ' nı (.NET Framework)** seçin. Ardından, **Get-Started-hata ayıklama** gibi bir ad yazın ve **Tamam**' a tıklayın.
     ::: moniker-end
 
-    **Konsol uygulaması (.NET Framework)** proje şablonunu görmüyorsanız Araçlar**ve Özellikler al.** .. ' a giderek Visual Studio yükleyicisi açan **Araçlar** > ' a gidin. Seçin **.NET masaüstü geliştirme** iş yükü, ardından **Değiştir**.
+    **Konsol uygulaması (.NET Framework)** proje şablonunu görmüyorsanız, **Araçlar** ' a gidin > **Araçlar ve Özellikler al...** ' a giderek Visual Studio yükleyicisi açılır. Seçin **.NET masaüstü geliştirme** iş yükü, ardından **Değiştir**.
 
     Visual Studio projesi oluşturur.
 
-1. *Module1. vb*dosyasında aşağıdaki kodu değiştirin
+1. *Module1. vb*dosyasında, tüm varsayılan kodu değiştirin
 
     ```vb
     Module Module1
@@ -197,7 +197,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 ## <a name="start-the-debugger"></a>Hata ayıklayıcıyı başlatın!
 
-1. Tuşuna **F5** (**hata ayıklama > hata ayıklamayı Başlat**) veya **hata ayıklamayı Başlat** düğmesi ![hata ayıklamayı Başlat](../../debugger/media/dbg-tour-start-debugging.png "hata ayıklamayı Başlat ") hata ayıklama araç çubuğu.
+1. Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata**Ayıkla > Başlat**) ![veya hata](../../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
 
      **F5** başladığında hata ayıklayıcının uygulamayla uygulamaya bağlı işlem ancak biz kodunu incelemek için özel bir şey yapmadınız hemen. Bu nedenle yalnızca uygulamayı yükler ve konsol çıktısı görürsünüz.
 
@@ -212,7 +212,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
      Bu öğreticide, biz hata ayıklayıcıyı kullanarak bu uygulamaya daha yakından göz atın ve hata ayıklayıcı göz özelliklerini elde etmek.
 
-2. Kırmızı Durdur tuşuna basarak hata ayıklayıcıyı ![hata ayıklamayı Durdur](../../debugger/media/dbg-tour-stop-debugging.png "hata ayıklamayı Durdur") düğmesi.
+2. Kırmızı durma ![hata ayıklamayı](../../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") Durdur düğmesine basarak hata ayıklayıcıyı durdurun.
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Bir kesme noktası ayarlayın ve hata ayıklayıcıyı başlatın
 
@@ -222,11 +222,11 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
     Kesme noktasının ayarlandığı kırmızı bir daire görünür.
 
-    ![Kesme noktası ayarlama](../visual-basic/media/get-started-set-breakpoint-vb.png)
+    ![Bir kesme noktası belirleyin](../visual-basic/media/get-started-set-breakpoint-vb.png)
 
     Kesme noktaları güvenilir hata ayıklama en temel hem de temel özelliğidir. Bir kesme noktası değişkenlerin değerleri veya bellek davranışını göz olabilmesi için Visual Studio çalışan kodunuzu nereye askıya almanız ya da bir dal kod getting run olup olmadığını gösterir.
 
-2. **F5** tuşuna basın veya **hata** ayıklamayı Başlat ![](../../debugger/media/dbg-tour-start-debugging.png "")düğmesine basın hata ayıklamayı başlatın, uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
+2. **F5** tuşuna basın veya hata **ayıklamayı Başlat** ![düğmesine basın](../../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat"), uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
 
     ![Kesme noktasına isabet edin](../visual-basic/media/get-started-hit-breakpoint-vb.png)
 
@@ -242,30 +242,30 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
 1. İçinde duraklatıldığı sırada `shape.Draw` yöntem çağrısı `Main` işlev, basın **F11** (veya tercih **hata ayıklama > içine adımla**) için koda ilerlemek için `Rectangle` sınıfı.
 
-     ![İçine adımla kodu F11 kullanın](../visual-basic/media/get-started-f11-vb.png "F11 adımla")
+     ![Koda geçmek için F11 kullanın](../visual-basic/media/get-started-f11-vb.png "F11 Step Into")
 
-     F11 olan **içine adımla** komut ve aynı anda uygulama yürütme bir deyim ilerler. F11 çoğu ayrıntılı yürütme akışı incelemek için iyi bir yoludur. (Daha hızlı kod boyunca taşımak için başka seçenekleriniz de gösteriyoruz.) Varsayılan olarak, kullanıcı dışı kod üzerinde hata ayıklayıcı atlar (daha ayrıntılı bilgi isterseniz bkz [yalnızca kendi kodum](../../debugger/just-my-code.md)).
+     F11 olan **içine adımla** komut ve aynı anda uygulama yürütme bir deyim ilerler. F11 çoğu ayrıntılı yürütme akışı incelemek için iyi bir yoludur. (Kod aracılığıyla daha hızlı hareket etmek için diğer bazı seçenekleri de göstereceğiz.) Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../../debugger/just-my-code.md)).
 
 2. Basın **F10** (veya tercih **hata ayıklama > Step Over**) hata ayıklayıcı birkaç kez durur kadar `MyBase.Draw` yöntem çağrısının yazıp ENTER tuşuna **F10** bir kez daha.
 
-     ![Step Over kodu F10 kullanın](../visual-basic/media/get-started-step-over-vb.png "F10 adımla")
+     ![Kod üzerinde adımla F10 kullanın](../visual-basic/media/get-started-step-over-vb.png "F10 Step Over")
 
-     Hata ayıklayıcı içine girmez şu bildirim `Draw` temel sınıf yöntemini (`Shape`). **F10** işlevleri veya yöntemleri (kod hala çalışır), uygulama kodunuzda içine Adımlama olmadan, hata ayıklayıcı ilerler. `MyBase.Draw` Yöntem çağrısında **F10** tuşuna basarak ( **F11**yerine), için `MyBase.Draw` uygulama kodu atlandık (Bu, şu anda ilgilenmiyor olabilir).
+     Hata ayıklayıcı içine girmez şu bildirim `Draw` temel sınıf yöntemini (`Shape`). **F10** işlevleri veya yöntemleri (kod hala çalışır), uygulama kodunuzda içine Adımlama olmadan, hata ayıklayıcı ilerler. By pressing **F10** on the `MyBase.Draw` method call (instead of **F11**), we skipped over the implementation code for `MyBase.Draw` (which maybe we're not interested in right now).
 
 ## <a name="navigate-code-using-run-to-click"></a>Tıkla Çalıştır'ı kullanarak kod gidin
 
-1. Kod Düzenleyicisi'nde, ekranı aşağı kaydırın ve üzerine `Console.WriteLine` yönteminde `Triangle` sınıfı yeşil kadar **tıklanan satıra kadar Çalıştır** düğmesi ![tıklanan satıra kadar Çalıştır](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")soldaki bölmede görünür. Düğme araç ipucu "yürütmeyi buraya kadar Çalıştır" gösterir.
+1. In the code editor, scroll down and hover over the `Console.WriteLine` method in the `Triangle` class until the green **Run to Click** button ![Run to Click](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") appears on the left. The tooltip for the button shows "Run execution to here".
 
-     ![Tıkla Çalıştır kullanın özellik](../visual-basic/media/get-started-run-to-click-vb.png "tıklanan satıra kadar Çalıştır")
+     ![Use the Run to Click feature](../visual-basic/media/get-started-run-to-click-vb.png "Tıklanan Satıra Kadar Çalıştır")
 
    > [!NOTE]
    > **Tıklanan satıra kadar Çalıştır** düğmesidir yeni [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. Yeşil ok düğmesini görmüyorsanız kullanın **F11** Bu örnekte bunun yerine hata ayıklayıcı doğru yere ilerlemek için.
 
-2. Tıklayın **tıklanan satıra kadar Çalıştır** düğmesi ![tıklanan satıra kadar Çalıştır](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+2. Click the **Run to Click** button ![Run to Click](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
     Bu düğmeyi kullanarak geçici bir kesme noktası ayarlayarak benzer. **Tıklanan satıra kadar Çalıştır** (herhangi bir açık dosyayı tıklayabilirsiniz) uygulama kodu görünür bir bölge içinde hızla dolaşma için kullanışlıdır.
 
-    Hata ayıklayıcı ilerler `Console.WriteLine` yöntem uygulaması için `Triangle` sınıfı.
+    Hata ayıklayıcı ilerler `Console.WriteLine` yöntem uygulaması için `Triangle` sınıfı. (If the debugger pauses first at the breakpoint that you set earlier, use **Run to Click** again to advance the debugger to `Console.WriteLine`.)
 
     Duraklatıldığı sırada bir yazım yanlışı dikkat edin! "Bir trangle çizim" çıkış yanlış yazılmıştır. Biz burada Hata Ayıklayıcısı'nda uygulama çalıştırılırken düzeltebilirsiniz.
 
@@ -286,11 +286,11 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
      Bu komut, uygulama yürütmeyi devam ettirir (ve hata ayıklayıcı ilerler) geçerli işlev dönene kadar.
 
-     Geri olmalıdır `For Each` içinde döngü `Main` yöntemi.
+     Geri olmalıdır `For Each` içinde döngü `Main` yöntemi. If not, press **Shift** + **F11** a second time.
 
 ## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlı bir şekilde yeniden başlatın
 
-Tıklayın **yeniden** ![yeniden uygulama](../../debugger/media/dbg-tour-restart.png "RestartApp") hata ayıklama araç çubuğu düğmesini (**Ctrl** + **kaydırma**   +  **F5**).
+Click the **Restart** ![Restart App](../../debugger/media/dbg-tour-restart.png "RestartApp") button in the Debug Toolbar (**Ctrl** + **Shift** + **F5**).
 
 Bastığınızda **yeniden**, uygulama durdurup hata ayıklayıcı yerine zaman kaydeder. İlk kesme noktasına isabet kodu yürüterek, hata ayıklayıcı duraklatır.
 
@@ -300,13 +300,13 @@ Hata ayıklayıcıyı yeniden üzerinde sizin ayarladığınız kesme noktasınd
 
 Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özellikler biridir ve bunu yapmanın farklı yolu vardır. Genellikle, hata ayıklama bir sorun açmayı denediğinde, belirli bir zamanda sahip olmalarını beklediğiniz değerleri değişkenleri olup depoladığını kullanıma bulmak çalışıyorsunuz.
 
-1. `shape.Draw()` Yöntemde duraklalarken, `shapes` nesnenin üzerine gelin ve `Count` varsayılan özellik değerini, özelliğini görürsünüz.
+1. While paused on the `shape.Draw()` method, hover over the `shapes` object and you see its default property value, the `Count` property.
 
-1. Bir değeri `[0]`olandizininilk dizini gibi tüm özelliklerini görmek için `shapes` nesnesini genişletin `Rectangle`.
+1. Expand the `shapes` object to see all its properties, such as the first index of the array `[0]`, which has a value of `Rectangle`.
 
-     ![Bir veri ipucunda görüntülemek](../visual-basic/media/get-started-data-tip-vb.png "bir veri ipucunda görüntüleyin")
+     ![View a data tip](../visual-basic/media/get-started-data-tip-vb.png "View a Data Tip")
 
-    Dikdörtgenin `Height` özelliği gibi özelliklerini görüntülemek için nesneleri daha da genişletebilirsiniz.
+    You can further expand objects to view their properties, such as the `Height` property of the rectangle.
 
     Genellikle, hata ayıklama sırasında istediğiniz nesnelerin özellik değerlerini denetlemek için hızlı bir yol ve veri ipuçları yapmak için iyi bir yoludur.
 
@@ -314,7 +314,7 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
 1. Bakmak **Otolar** altındaki kod düzenleyicisi penceresi.
 
-     ![Otomatik değişkenler penceresi değişkenleri İnceleme](../visual-basic/media/get-started-autos-window-vb.png "otomatik değişkenler penceresi")
+     ![Inspect variables in the Autos Window](../visual-basic/media/get-started-autos-window-vb.png "Autos Window")
 
     İçinde **Otolar** penceresi değişkenleri ve bunların geçerli değerini görürsünüz. **Otolar** penceresi, geçerli veya önceki satırındaki (dile özgü davranışı için belgeleri denetleyin) kullanılan tüm değişkenleri gösterir.
 
@@ -336,7 +336,7 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
 2. Tıklayın **F11** birkaç kez duraklatmak, hata ayıklayıcı görene kadar `MyBase.Draw` yöntemi `Rectangle` Kod düzenleyicisinde sınıfı. Bakmak **çağrı yığını** penceresi.
 
-    ![Çağrı yığınını incelemek](../visual-basic/media/get-started-call-stack-vb.png "ExamineCallStack")
+    ![Examine the call stack](../visual-basic/media/get-started-call-stack-vb.png "ExamineCallStack")
 
     **Çağrı yığını** penceresi, yöntemleri ve işlevleri çağrılır sırasını gösterir. Geçerli işlev en üst satırına gösterir ( `Rectangle.Draw` bu uygulamada yöntemi). İkinci satır gösteren `Rectangle.Draw` çağırıldığı `Main` işlevi ve benzeri.
 
@@ -347,15 +347,15 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
     Bir satır kod, kaynak koda bakmaktır gitmek için çift tıklayın ve hata ayıklayıcı tarafından denetlenmekte olan geçerli kapsamını da değişiklikler. Bu eylem, hata ayıklayıcı ilerleyin değil.
 
-    Sağ tıklama menülerden kullanabilirsiniz **çağrı yığını** başka şeyler için pencere. Örneğin, belirtilen işlevlere kesme noktaları ekleme, hata ayıklayıcıyı kullanarak ilerleyin **imlece kadar Çalıştır**ve kaynak kodunu inceleyin. Daha fazla bilgi için [nasıl yapılır: Çağrı yığınını](../../debugger/how-to-use-the-call-stack-window.md)inceleyin.
+    Sağ tıklama menülerden kullanabilirsiniz **çağrı yığını** başka şeyler için pencere. Örneğin, belirtilen işlevlere kesme noktaları ekleme, hata ayıklayıcıyı kullanarak ilerleyin **imlece kadar Çalıştır**ve kaynak kodunu inceleyin. Daha fazla bilgi için [nasıl yapılır: çağrı yığını inceleyin](../../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="change-the-execution-flow"></a>Yürütme akışı değiştirme
 
-1. `Rectangle` Sınıfın `MyBase.Draw` Yöntem çağrısında hata ayıklayıcı duraklatıldığında, sol taraftaki sarı oku (yürütme işaretçisi) almak için fareyi kullanın ve sarı oku bir satır `Console.WriteLine` aşağı doğru aşağı taşıyın.
+1. With the debugger paused in the `MyBase.Draw` method call of the `Rectangle` class, use the mouse to grab the yellow arrow (the execution pointer) on the left and move the yellow arrow up one line to the `Console.WriteLine` method call.
 
 1. Tuşuna **F11**.
 
-    Hata ayıklayıcı `Console.WriteLine` yöntemini yeniden çalıştırır (konsol penceresinde çıkışta yinelenen çıktı görürsünüz).
+    The debugger reruns the `Console.WriteLine` method (you see duplicate output in the console window output).
 
     Yürütme akışı değiştirerek farklı kod yürütme yolları test veya hata ayıklayıcı yeniden başlatmadan kodu yeniden gibi işlemler yapabilirsiniz.
 

@@ -1,6 +1,6 @@
 ---
 title: Bir özellik önerin
-description: Geliştirici topluluğu önerileri nedir, nasıl bir öneride bulunmak ve öneriler Visual Studio yol haritası, Microsoft tarafından nasıl kullanıldığını açıklar.
+description: Geliştirici topluluğu 'nda hangi önerilerin olduğunu, bir önerinizin nasıl yapılacağını ve önerilerin Visual Studio yol haritasında Microsoft tarafından nasıl kullanıldığını açıklar.
 ms.date: 12/17/2018
 ms.topic: conceptual
 author: seaniyer
@@ -8,40 +8,40 @@ ms.author: seiyer
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4da08c2a7fed28b7f4ca75770682673bf58e30c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3af6d0b7b9f211fb9d0aa0a4b9a96b618081b89e
+ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951077"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853522"
 ---
-# <a name="overview-suggest-a-feature"></a>Genel bakış: Özellik önerin
+# <a name="suggest-a-feature-for-visual-studio"></a>Visual Studio için özellik önerin
 
-Özellik sorunları bildirmek için geçerli özelliği yanı sıra üzerinde önermek için yeni bir deneyim tanıttık [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com). Bu, doğrudan Visual Studio'nun mühendislik iş akışı ile etkileşim kurmak için yetkilendirilmiş yepyeni bir yoludur.
+[Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com)'nda sorunları bildirme özelliği hakkında yeni bir deneyim sunduk. Bu, doğrudan Visual Studio'nun mühendislik iş akışı ile etkileşim kurmak için yetkilendirilmiş yepyeni bir yoludur.
 
-![Geliştirici topluluğu bir özellik düğmesine önerin](media/suggest-a-feature/suggest-feature-button.png)
+![Geliştirici topluluğu 'nda özellik düğmesi önerme](media/suggest-a-feature/suggest-feature-button.png)
 
-Seçerek doğrudan Visual Studio'dan bir özellik önerisi başlatabilirsiniz **bir öneride** gelen **sağladığınız geri bildirimle** simgesini ekranın üst ana Visual Studio penceresinin sağ:
+Ayrıca, ana Visual Studio penceresinin sağ üst köşesinde bulunan **geribildirim sağla** simgesini **seçerek doğrudan** Visual Studio 'dan bir özellik önerisi başlatabilirsiniz:
 
-![Visual Studio menüsündeki bir öneri sağlayın](media/suggest-a-feature/provide-suggestion.png)
+![Visual Studio 'da öneri menüsü sağlama](media/suggest-a-feature/provide-suggestion.png)
 
-Seçme **bir öneride** açılır [Geliştirici topluluğu](https://developercommunity.visualstudio.com), önerinizi girebileceğiniz.
+**Öneri sağla** ' yı seçtiğinizde, önerinizi girebileceğiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com)' na gidersiniz.
 
 ## <a name="user-voice"></a>Uservoice
 
-Şimdiye kadar Visual Studio kullanıcılarına User Voice yeni özellik fikirleri önerdi. Ekleyerek *özellik önerin* Geliştirici topluluğuna, tüm Visual Studio ürün takımı için geri bildirim işlevdir artık tek bir yerde.
+Artık, Visual Studio kullanıcıları Kullanıcı Sessiyle yeni özellik fikirleri önerdi. Geliştirici topluluğu 'na *bir özellik öner* işlevi ekleyerek, Visual Studio ürün ekibine yönelik tüm geri bildirimleriniz artık tek bir yerde bulunur.
 
-User Voice sitesinde salt okunur yapıldı. Bağlam için gerekir, ancak tüm yeni özellik önerisi Geliştirici topluluğu üzerinde önceden bildirimde bulunularak gönderilmelidir geri göz atabilirsiniz.
+Kullanıcı ses sitesi salt okunurdur. Bağlam için gereken şekilde geri bakabilirsiniz, ancak tüm yeni özellik önerileri geliştirici topluluğu 'nda gönderilmelidir.
 
-Biz fikirleri başlangıç kümesi User Voice Forumdan Geliştirici topluluğuna geçirildi. Geçişi geri bildirim ve bizim ürün yol haritası öncelikleri topluluk etkisine göre yapılır. Biz eksik kalmış olabilir geçen bir öneri görmeyi beklediğiniz gibi değilse, geliştirici topluluğuna eklemek çekinmeyin.
+Kullanıcı sesli forumundan geliştirici topluluğu 'na ilk fikir kümesini geçirdik. Geçişi geri bildirim ve bizim ürün yol haritası öncelikleri topluluk etkisine göre yapılır. Biz eksik kalmış olabilir geçen bir öneri görmeyi beklediğiniz gibi değilse, geliştirici topluluğuna eklemek çekinmeyin.
 
 ## <a name="votes"></a>Oylar
 
-Geliştirici topluluğu oylama sistemde User Voice farklıdır. Geliştirici topluluğu oy sayıları bütünlüğünü sağlamak ve adlı kullanıcıların oyları, User Voice oy sayıları göze çarpacak şekilde her bir özellik önerisi yanındaki etiketini göstereceğiz eğriltme önlemek için. Gelişmiş Geliştirici Topluluğu'nda önerileri oylamak devam ederken, yeni oy sayısı alınan User Voice oy sayımların ayrı olarak gösterilir.
+Geliştirici topluluğundaki oylama sistemi, Kullanıcı sesiyle farklıdır. Geliştirici topluluğu oy sayıları bütünlüğünü sağlamak ve adlı kullanıcıların oyları, User Voice oy sayıları göze çarpacak şekilde her bir özellik önerisi yanındaki etiketini göstereceğiz eğriltme önlemek için. Gelişmiş Geliştirici Topluluğu'nda önerileri oylamak devam ederken, yeni oy sayısı alınan User Voice oy sayımların ayrı olarak gösterilir.
 
 ## <a name="suggestion-status"></a>Öneri Durumu
 
-Bir özellik önerisi gönderdikten sonra özellik gönderiminiz yaşam döngüsü içinde olduğu durumları gösterir. Geri bildiriminiz dikkate alın ve iş akışı taşımak gibi biz bunu karşılık gelen durumuyla etiketleyin. Özellik önerileri ile ilişkili çeşitli durumları burada anlamı ve renk göstergeleri açıklamasıyla birlikte listelenir.
+Bir özellik önerisi gönderdikten sonra özellik gönderiminiz yaşam döngüsü içinde olduğu durumları gösterir. Geri bildiriminiz dikkate alın ve iş akışı taşımak gibi biz bunu karşılık gelen durumuyla etiketleyin. Özellik önerileri ile ilişkili çeşitli durumlar, anlamları ve renk göstergelerinin açıklamasıyla birlikte burada listelenir.
 
 ![Geliştirici topluluğu ilgili öneriler almak için yeni durum](../ide/media/SuggestStates/New.jpg)
 
@@ -129,4 +129,4 @@ Yanıt süresi, geri bildirim içinde durumu bağlıdır. Lütfen yanıt sürele
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- ['Özellik Geliştirici Topluluğu'nda (Visual Studio blogu) önerin' ile tanışın](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)
+- [Geliştirici topluluğu 'nda ' özellik önerme ' tanıtımı (Visual Studio blogu)](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)

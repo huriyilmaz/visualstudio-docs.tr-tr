@@ -1,5 +1,5 @@
 ---
-title: Sorun bildirin
+title: 'Sorun bildirin: durumlar ve SSS'
 description: Sorun bildir aracına genel bir bakış sağlar ve sorun durumları ve tanımlar içerir
 ms.date: 11/15/2018
 ms.custom: seodec18
@@ -9,14 +9,14 @@ ms.author: seiyer
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 519c7f233866bf71bb342d4f740b3e0a90a4ba72
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d024e28d696a60a9fc77c290283382dcd0e0ede8
+ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925990"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853509"
 ---
-# <a name="overview-report-a-problem"></a>Genel bakış: Sorun Bildirme
+# <a name="report-a-problem-states-and-faq"></a>Sorun bildirin: durumlar ve SSS
 
 Sorun bildir Aracı, Visual Studio geliştirici topluluğunun sorunları göndermesini sağlar. Sorun raporlarınızdan her biri, temel mühendislik sistemimizde bir iş öğesi haline gelir ve bu sorunları belirlememize ve çözmenize yardımcı olmak için doğrudan ürün ekiplerimiz ile birlikte çalışmanıza olanak sağlar. Zengin tanılama bilgileriyle gönderilen geri bildiriminiz, Visual Studio ürün ailesini geliştirmek için kritik öneme sahiptir. Sorunları bildirmek için zaman ayırdığınız için teşekkür ederiz.
 

@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 9606b02cb26e8e0ad37f490e330e7d81f3089e27
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 684cd4762eed38d947d76655bd9632fc10d0aacd
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189003"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829990"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Öğretici: Visual Studio 'da Visual Basic kullanmaya başlayın
 
@@ -27,23 +27,23 @@ Visual Basic (VB) için bu öğreticide, Visual Studio 'Yu kullanarak birkaç fa
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
+Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
 
 ::: moniker-end
 
-## <a name="create-a-project"></a>Proje oluşturma
+## <a name="create-a-project"></a>Proje oluştur
 
 İlk olarak, Visual Basic bir uygulama projesi oluşturacağız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio 2017 ' i açın.
+1. Visual Studio 2017'yi açın.
 
 2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
@@ -61,7 +61,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
    ![Yeni proje iletişim kutusundan Visual Studio Yükleyicisi aç bağlantısına tıklayın](../media/vs-open-visual-studio-installer-generic.png)
 
-1. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+1. Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
    ![Visual Studio Yükleyicisi .NET Core platformlar arası geliştirme iş yükü](../media/tutorial-aspnet-workload.png)
 
@@ -69,14 +69,14 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 1. **Yeni proje** iletişim kutusunu iptal edin ve üst menü çubuğundan Araçlar **ve Özellikler al**> **Araçlar** ' ı seçin.
 
-1. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+1. Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. Koyu tema kullanmıyorsanız, ancak isterseniz, nasıl yapılacağını öğrenmek için [Visual STUDIO IDE ve düzenleyici 'Yi kişiselleştirme](../../ide/quickstart-personalize-the-ide.md) sayfasına bakın.
+> Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. Koyu tema kullanmayan ancak öğrenmek istiyorsanız [Düzenleyicisi ve Visual Studio IDE'yi kişiselleştirme](../../ide/quickstart-personalize-the-ide.md) öğrenmek için sayfa nasıl.
 
 1. Visual Studio 2019 ' i açın.
 
@@ -111,7 +111,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ## <a name="create-a-what-is-your-name-application"></a>"Adınız nedir" uygulamanız oluşturun
 
-Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat ile birlikte görüntülüyor. Şöyle:
+Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat ile birlikte görüntülüyor. Bunun için:
 
  ::: moniker range="vs-2017"
 
@@ -131,6 +131,8 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
     Bu kod, mevcut <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>ve <xref:System.Console.ReadKey%2A> deyimlerinin yerini alır.
 
    ![Ad kodunuzun ne olduğunu gösteren kod penceresi](./media/vs-2019/vb-codewindow-what-name-dark.png)
+
+1. İlk uygulamanızı derlemek ve çalıştırmak için yeşil **Başlat** düğmesini kullanın veya **F5** tuşuna basın.
 
 1. Konsol penceresi açıldığında adınızı girin. Konsol pencereniz aşağıdaki ekran görüntüsüne benzer görünmelidir:
 
@@ -156,6 +158,8 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
     Bu kod, mevcut <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>ve <xref:System.Console.ReadKey%2A> deyimlerinin yerini alır.
 
    ![Ad kodunuzun ne olduğunu gösteren kod penceresi](./media/vs-2019/vb-codewindow-what-name-dark.png)
+
+1. İlk uygulamanızı derlemek ve çalıştırmak için yeşil **Başlat** düğmesini kullanın veya **F5** tuşuna basın.
 
 1. Konsol penceresi açıldığında adınızı girin. Konsol pencereniz aşağıdaki ekran görüntüsüne benzer görünmelidir:
 
@@ -259,7 +263,7 @@ Konsol uygulaması giriş alır ve çıktıyı bir komut satırı penceresinde g
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamlama! Daha da fazla bilgi edinmek için aşağıdaki öğreticiye bakın.
+Bu öğreticiyi tamamlamak Tebrikler! Daha da fazla bilgi edinmek için aşağıdaki öğreticiye bakın.
 
 > [!div class="nextstepaction"]
 > [Visual Studio 'da Visual Basic ve .NET Core SDK ile kitaplık oluşturma](/dotnet/core/tutorials/vb-library-with-visual-studio)
