@@ -3,14 +3,14 @@ title: Unity'ye yönelik Mac için Visual Studio Araçları
 description: Unity uzantısı için Visual Studio Araçları ile tanışın
 author: therealjohn
 ms.author: johmil
-ms.date: 06/18/2019
+ms.date: 10/25/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 98a34df9960ca95edbaf6b9c5ae91d7cd4e06568
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: c411ae1730c2bd9b4f92729a8480d7fa399d0894
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691866"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797255"
 ---
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Unity'ye yönelik Mac için Visual Studio Araçları
 
@@ -21,9 +21,9 @@ Mac için Visual Studio Unity Araçları, Maci için Visual Studio’yu Unity pl
 Unity tümleştirmesi dahil Visual Studio'da edebilmesi için Mac ve Unity 2018.1 ' başlayarak, Mac için Visual Studio varsayılan değer C# Unity projeleri için IDE.
 
 > [!NOTE]
-> Mac IDE için Visual Studio bu bilgiler sağlar. Visual Studio Code için bkz. [bu kılavuzda](https://code.visualstudio.com/docs/other/unity) daha fazla bilgi için.
+> Bu bilgiler Mac için Visual Studio IDE içindir. Visual Studio Code için, daha fazla bilgi için [bu kılavuza](https://code.visualstudio.com/docs/other/unity) bakın.
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
 Unity için Mac araçları Visual Studio'nun önemli özelliklerinden bazıları şunlardır:
 
@@ -47,6 +47,12 @@ Visual Studio için Unity için Mac araçları destekleyen tüm [hata ayıklama]
 ### <a name="powerful-refactoring-and-context-actions"></a>Güçlü yeniden düzenleme ve içerik eylemleri
 
 Hızlı menüler ile daha fazla kullanılabilir kod yazma ve klavye kısayolları [yeniden adlandırma, yeniden düzenleme ve bağlam eylemlerini](refactoring.md).
+
+### <a name="roslyn-diagnostics-and-quick-fixes-for-unity"></a>Unity için Roslyn tanılama ve hızlı düzeltme
+
+Mac için Visual Studio Unity projelerinin derinlemesine anlaşılmasına sahip en iyi uygulamaları yakalayan daha iyi bir kod yazın. 
+
+![For Mac yeniden düzenleme dizesi CompareTag ile KARŞıLAŞTıRMASı](media/using-vsmac-tools-unity-image9.png)
 
 ### <a name="browse-and-add-new-files"></a>Gözat ve yeni dosyalar Ekle
 

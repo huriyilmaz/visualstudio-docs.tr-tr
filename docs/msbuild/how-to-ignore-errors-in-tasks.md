@@ -9,12 +9,12 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: abd907e86a451ca035d44d9a12084c7b84acd1ed
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
-ms.translationtype: HT
+ms.openlocfilehash: d84292592183d11e5d9ee4fc2febac6679e2a73b
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74777900"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797215"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>Nasıl yapılır: görevlerdeki hataları yoksayma
 Bazen bir derlemeyi belirli görevlerde hatalara karşı dayanıklı olmasını isteyebilirsiniz. Kritik olmayan görevler başarısız olursa, gerekli çıktıyı hala üretebileceğinden, derlemeyi devam ettirmek istersiniz. Örneğin, bir proje her bileşen oluşturulduktan sonra bir e-posta iletisi göndermek için bir `SendMail` görevi kullanıyorsa, posta sunucuları kullanılamadığında ve durum iletileri gönderilemediği zaman bile yapılandırmanın tamamlanmasına devam edebilmesi için kabul edilebilir olarak düşünebilirsiniz. Ya da örneğin, derleme sırasında ara dosyalar silinirse, bu dosyalar silinemese bile, derleme tamamlanana kadar devam etmek için kabul edilebilir olarak düşünebilirsiniz.
@@ -38,7 +38,7 @@ Bazen bir derlemeyi belirli görevlerde hatalara karşı dayanıklı olmasını 
 
 Görevin `ContinueOnError` özniteliğini kullanın. Örneğin:
 
-```c#
+```xml
 <Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>
 ```
 

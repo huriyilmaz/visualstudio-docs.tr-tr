@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5ac9c395936ae23bdf94e006a002fb994d8c8cd
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: 2d97552a79b520bd522cb8ec768d7d36fe2fb052
+ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568796"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74809806"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop çözümleyicileri için kural kapsamı seçenekleri
 
@@ -32,7 +32,7 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| API yüzeyinin analiz edileceği bölüm | `public`<br/>`internal` veya `friend`<br/>`private`<br/>`all`<br/><br/>Birden çok değeri virgülle ayırın (,) | `public` | [CA1000](ca1000-do-not-declare-static-members-on-generic-types.md)<br/>[CA1003](ca1003-use-generic-event-handler-instances.md)<br/>[CA1008](ca1008-enums-should-have-zero-value.md)<br/>[CA1010](ca1010-collections-should-implement-generic-interface.md)<br/>[CA1012](ca1012-abstract-types-should-not-have-constructors.md)<br/>[CA1024](ca1024-use-properties-where-appropriate.md)<br/>[CA1027](ca1027-mark-enums-with-flagsattribute.md)<br/>[CA1028](ca1028-enum-storage-should-be-int32.md)<br/>[CA1030](ca1030-use-events-where-appropriate.md)<br/>[CA1036](ca1036-override-methods-on-comparable-types.md)<br/>[CA1040](ca1040-avoid-empty-interfaces.md)<br/>[CA1041](ca1041-provide-obsoleteattribute-message.md)<br/>[CA1043](ca1043-use-integral-or-string-argument-for-indexers.md)<br/>[CA1044](ca1044-properties-should-not-be-write-only.md)<br/>[CA1051](ca1051-do-not-declare-visible-instance-fields.md)<br/>[CA1052](ca1052-static-holder-types-should-be-sealed.md)<br/>[CA1054](ca1054-uri-parameters-should-not-be-strings.md)<br/>[CA1055](ca1055-uri-return-values-should-not-be-strings.md)<br/>[CA1056](ca1056-uri-properties-should-not-be-strings.md)<br/>[CA1058](ca1058-types-should-not-extend-certain-base-types.md)<br/>[CA1063](ca1063-implement-idisposable-correctly.md)<br/>[CA1708](ca1708-identifiers-should-differ-by-more-than-case.md)<br/>[CA1710](ca1710-identifiers-should-have-correct-suffix.md)<br/>[CA1711](ca1711-identifiers-should-not-have-incorrect-suffix.md)<br/>[CA1714](ca1714-flags-enums-should-have-plural-names.md)<br/>[CA1715](ca1715.md)<br/>[CA1716](ca1716-identifiers-should-not-match-keywords.md)<br/>[CA1717](ca1717-only-flagsattribute-enums-should-have-plural-names.md)<br/>[CA1720](ca1720-identifiers-should-not-contain-type-names.md)<br/>[CA1721](ca1721-property-names-should-not-match-get-methods.md)<br/>[CA1725](ca1725-parameter-names-should-match-base-declaration.md)<br/>[CA1802](ca1802.md)<br/>[CA1815](ca1815.md)<br/>[CA1819](ca1819.md)<br/>[CA2217](ca2217.md)<br/>[CA2225](ca2225.md)<br/>[CA2226](ca2226.md)<br/>[CA2231](ca2231.md)<br/>[CA2234](ca2234.md) |
+| API yüzeyinin analiz edileceği bölüm | `public`<br/>`internal` veya `friend`<br/>`private`<br/>`all`<br/><br/>Birden çok değeri virgülle ayırın (,) | `public` | [CA1000](ca1000.md) [CA1003](ca1003.md) [CA1008](ca1008.md) [CA1010](ca1010.md)<br/>[CA1012](ca1012.md) [CA1024](ca1024.md) [CA1027](ca1027.md) [CA1028](ca1028.md)<br/>[CA1030](ca1030.md) [CA1036](ca1036.md) [CA1040](ca1040.md) [CA1041](ca1041.md)<br/>[CA1043](ca1043.md) [CA1044](ca1044.md) [CA1051](ca1051.md) [CA1052](ca1052.md)<br/>[CA1054](ca1054.md) [CA1055](ca1055.md) [CA1056](ca1056.md) [CA1058](ca1058.md)<br/>[CA1063](ca1063.md) [CA1708](ca1708.md) [CA1710](ca1710.md) [CA1711](ca1711.md)<br/>[CA1714](ca1714.md) [CA1715](ca1715.md) [CA1716](ca1716.md) [CA1717](ca1717.md)<br/>[CA1720](ca1720.md) [CA1721](ca1721.md) [CA1725](ca1725.md) [CA1801](ca1801.md)<br/>[CA1802](ca1802.md) [CA1815](ca1815.md) [CA1819](ca1819.md) [CA2217](ca2217.md)<br/>[CA2225](ca2225.md) [CA2226](ca2226.md) [CA2231](ca2231.md) [CA2234](ca2234.md)<br/>|
 
 ## <a name="exclude_async_void_methods"></a>exclude_async_void_methods
 
@@ -41,7 +41,7 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 | Değer döndürmeyen zaman uyumsuz yöntemlerin yoksayılıp yoksayılmayacağı | `true`<br/>`false` | `false` | [CA2007](ca2007.md) |
 
 > [!NOTE]
-> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `skip_async_void_methods` olarak adlandırılmıştır.
+> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `skip_async_void_methods`olarak adlandırılmıştır.
 
 ## <a name="exclude_single_letter_type_parameters"></a>exclude_single_letter_type_parameters
 
@@ -50,10 +50,66 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 | Kuraldan tek karakterlik [tür parametrelerinin](/dotnet/csharp/programming-guide/generics/generic-type-parameters) dışlanıp dışlanmayacağı, örneğin, `Collection<S>` `S` | `true`<br/>`false` | `false` | [CA1715](ca1715.md) |
 
 > [!NOTE]
-> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `allow_single_letter_type_parameters` olarak adlandırılmıştır.
+> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `allow_single_letter_type_parameters`olarak adlandırılmıştır.
 
 ## <a name="output_kind"></a>output_kind
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Bu tür derlemeyi üreten bir projedeki kodun analiz edilmesi gerektiğini belirtir | <xref:Microsoft.CodeAnalysis.OutputKind> numaralandırmasının bir veya daha fazla alanı<br/><br/>Birden çok değeri virgülle ayırın (,) | Tüm çıktı türleri | [CA2007](ca2007.md) |
+
+## <a name="required_modifiers"></a>required_modifiers
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Çözümlenmesi gereken API 'Ler için gerekli değiştiriciler belirtir | Aşağıdaki izin verilen değiştirici tablosundan bir veya daha fazla değer<br/><br/>Birden çok değeri virgülle ayırın (,) | Her kurala bağlıdır | [CA1802](ca1802.md) |
+
+| İzin verilen değiştirici | Özet |
+| --- | --- |
+| `none` | Değiştirici gereksinimi yok |
+| `static` veya `Shared` | Visual Basic) ' static ' (' Shared ') olarak bildirilmelidir |
+| `const` | ' Const ' olarak bildirilmelidir |
+| `readonly` | ' ReadOnly ' olarak bildirilmelidir |
+| `abstract` | ' Abstract ' olarak bildirilmelidir |
+| `virtual` | ' Sanal ' olarak bildirilmelidir |
+| `override` | ' Override ' olarak bildirilmelidir |
+| `sealed` | ' Sealed ' olarak bildirilmelidir |
+| `extern` | ' Extern ' olarak bildirilmelidir |
+| `async` | ' Async ' olarak bildirilmelidir |
+
+## <a name="exclude_extension_method_this_parameter"></a>exclude_extension_method_this_parameter
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Uzantı yöntemlerinin `this` parametresi için analizin atlanıp atlanmayacağı | `true`<br/>`false` | `false` | [CA1062](ca1062.md) |
+
+## <a name="null_check_validation_methods"></a>null_check_validation_methods
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Yönteme geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (`|`ile ayrılmış):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı `M:` ön ekiyle tam adlar | Yok. | [CA1062](ca1062.md) |
+
+## <a name="additional_string_formatting_methods"></a>additional_string_formatting_methods
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Ek dize biçimlendirme yöntemlerinin adları | İzin verilen yöntem adı biçimleri (`|`ile ayrılmış):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı `M:` ön ekiyle tam adlar | Yok. | [CA2241](ca2241.md) |
+
+## <a name="excluded_type_names_with_derived_types"></a>excluded_type_names_with_derived_types
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Tür ve türetilmiş tüm türleri analiz için hariç tutulan türlerin adları | İzin verilen sembol adı biçimleri (`|`ile ayrılmış):<br/> -Yalnızca tür adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm türleri içerir)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı `T:` ön ekiyle tam adlar | Yok. | [CA1303](ca1303.md) |
+
+## <a name="excluded_symbol_names"></a>excluded_symbol_names
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Analiz için dışlanan simgelerin adları | İzin verilen sembol adı biçimleri (`|`ile ayrılmış):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format)tam nitelikli adlar. Her sembol adı, "d:" metotları için önek, "T:" türler için önek, "N:" ad alanları için önek vb. gibi bir sembol türü öneki gerektirir.<br/> oluşturucular ve statik oluşturucular için `.cctor` - `.ctor` | Yok. | [CA1062](ca1062.md) [CA1303](ca1303.md) [CA2000](ca2000.md) [CA2100](ca2100.md) [CA2301](ca2301.md) [CA2302](ca2302.md)<br/>[CA2311](ca2311.md) [CA2312](ca2312.md) [CA2321](ca2321.md) [CA2322](ca2322.md) [CA2327](ca2327.md) [CA2328](ca2328.md)<br/>[CA2329](ca2329.md) [CA2330](ca2330.md) [CA3001](ca3001.md) [CA3002](ca3002.md) [CA3003](ca3003.md) [CA3004](ca3004.md)<br/>[CA3005](ca3005.md) [CA3006](ca3006.md) [CA3007](ca3007.md) [CA3008](ca3008.md) [CA3009](ca3009.md) [CA3010](ca3010.md)<br/>[CA3011](ca3011.md) [CA3012](ca3012.md) [CA5361](ca5361.md) CA5376 CA5377 [CA5378](ca5378.md)<br/>[CA5380](ca5380.md) [CA5381](ca5381.md) CA5382 CA5383 CA5384 CA5387<br/>CA5388 [CA5389](ca5389.md) CA5390 |
+
+## <a name="disallowed_symbol_names"></a>disallowed_symbol_names
+
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| - | - | - | - |
+| Analiz bağlamında izin verilmeyen simgelerin adları | İzin verilen sembol adı biçimleri (`|`ile ayrılmış):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format)tam nitelikli adlar. Her sembol adı, "d:" metotları için önek, "T:" türler için önek, "N:" ad alanları için önek vb. gibi bir sembol türü öneki gerektirir.<br/> oluşturucular ve statik oluşturucular için `.cctor` - `.ctor` | Yok. | [CA1031](ca1031.md) |
+

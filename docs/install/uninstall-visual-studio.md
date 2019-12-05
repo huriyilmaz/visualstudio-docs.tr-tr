@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9e9212bc5dda2ea69f685077eb2cbe86470d4064
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: d15a20adeb3203687e4d940635551c33774953a5
+ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681360"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74809673"
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio'yu kaldırma
 
@@ -36,14 +36,14 @@ Bu sayfa, Visual Studio'nun tümleşik paketimiz geliştiricileri için üretken
 
      Örneğin, Windows 10 yıldönümü güncelleştirmesi veya sonraki bir sürümünü çalıştıran bir bilgisayarda **Başlat** ' ı seçin ve **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
 
-     ![Visual Studio yükleyicisi](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio yükleyicisi bulunamıyor")
+     ![Visual Studio Yükleyicisi](media/locate-the-visual-studio-installer.png "Microsoft Visual Studio yükleyicisini bulun")
 
    > [!NOTE]
    > Bazı bilgisayarlarda, Visual Studio yükleyicisi harfi altında listelenebilir **"M"** olarak **Microsoft Visual Studio yükleyicisi**.<br/><br/> Alternatif olarak, Visual Studio yükleyicisi şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü arayın. Daha sonra, **daha fazla**' yı ve ardından **Kaldır**' ı seçin.
 
-     ![Visual Studio 2017 'Yi kaldırma](media/uninstall-visual-studio.png "Visual Studio 2017 'Yi kaldırma")
+     ![Visual Studio 2017'yi kaldırın](media/uninstall-visual-studio.png "Visual Studio 2017'yi kaldırın")
 
 1. Tıklayın **Tamam** Seçiminizi onaylayın.
 
@@ -67,7 +67,7 @@ Visual Studio 2017 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizde
 
      Örneğin, Windows 10 çalıştıran bir bilgisayarda seçin **Başlat**ve harfi kaydırın **V**, olarak listelenen burada **Visual Studio yükleyicisi**.
 
-     ![Visual Studio yükleyicisi açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio yükleyicisi açın")
+     ![Visual Studio Yükleyicisi açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisi açın")
 
      > [!NOTE]
      > Aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
@@ -78,11 +78,11 @@ Visual Studio 2017 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizde
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü arayın. Daha sonra, **daha fazla**' yı ve ardından **Kaldır**' ı seçin.
 
-     ![Visual Studio 2019 'Yi kaldırma](media/vs-2019/vs-installer-uninstall.png "Visual Studio 2019 'Yi kaldırma")
+     ![Visual Studio 2019 'yi kaldırma](media/vs-2019/vs-installer-uninstall.png "Visual Studio 2019 'yi kaldırma")
 
 1. Tıklayın **Tamam** Seçiminizi onaylayın.
 
-     ![Visual Studio onayını kaldır](media/vs-2019/uninstall-visualstudio-confirm.png "Visual Studio 2019 ' i kaldırmak Istediğinizi onaylayın")
+     ![Visual Studio onayını kaldır](media/vs-2019/uninstall-visualstudio-confirm.png "Visual Studio 2019 ' i kaldırmak istediğinizi onaylayın")
 
 Daha sonra fikrinizi değiştirirseniz ve Visual Studio 2019 ' i yeniden yüklemek istiyorsanız Visual Studio Yükleyicisi yeniden başlatın, **kullanılabilir** sekmesini seçin, yüklemek Istediğiniz Visual Studio sürümünü seçin ve ardından **Yükle**' yi seçin.
 
