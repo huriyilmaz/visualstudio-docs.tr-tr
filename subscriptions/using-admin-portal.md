@@ -6,17 +6,18 @@ manager: lank
 ms.date: 08/07/2019
 ms.topic: conceptual
 description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: 6ee33bfaf47452a1213cd5def206e47aee790fc3
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: 484ecdca3435ee725853932acd66e307c2eb3cbe
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490700"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879314"
 ---
-# <a name="overview-of-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalına genel bakış
+# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
+
 Visual Studio abonelikleri yönetim portalı, kuruluşunuzun aboneliklerini tek bir yerde yönetmeye yönelik araçlar sağlar. 
 
-## <a name="important-considerations"></a>Önemli konular
+## <a name="important-considerations"></a>Önemli noktalar
 Visual Studio abonelikleri yönetim portalını kullanırken bu noktaları göz önünde bulundurun:
 - **Visual Studio abonelikleri Kullanıcı başına lisanslanır.** Her abone, yazılımı geliştirme ve test için gereken sayıda bilgisayar üzerinde kullanabilir.
 - Her abone için, kuruluşunuzun satın aldığı Visual Studio aboneliğine karşılık gelen **yalnızca bir abonelik düzeyi atayın**. Birden fazla abonelik düzeyi atanmış abonelere sahipseniz, ayarlarını yalnızca bir tane olacak şekilde düzenleyin.

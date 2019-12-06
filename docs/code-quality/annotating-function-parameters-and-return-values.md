@@ -128,12 +128,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 8437a18bf2b732ee3f12774b04baedf12003d554
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 16e7ffb30dc7ec4ae1b78647a0964b81932617ab
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806800"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879275"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>İşlev Parametrelerini ve Dönüş Değerlerini Açıklama
 Bu makalede basit işlev parametreleri için ek açıklamaların tipik kullanımları ve yapı ve sınıf işaretçileri ve birçok arabellek türü açıklanmaktadır.  Bu makalede ayrıca ek açıklamalar için ortak kullanım desenleri gösterilmektedir. İşlevlerle ilgili ek ek açıklamalar için bkz. [Işlev davranışına açıklama ekleme](../code-quality/annotating-function-behavior.md).
@@ -157,7 +157,7 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
 - `_In_z_`
 
-     Giriş olarak kullanılan null ile sonlandırılmış bir dize işaretçisi.  Dize, ön durumunda geçerli olmalıdır.  Zaten doğru ek açıklamaları olan `PSTR` çeşitleri tercih edilir.
+     Giriş olarak kullanılan null ile sonlandırılmış bir dize işaretçisi.  Dize, ön durumunda geçerli olmalıdır.  Doğru ek açıklamaların zaten bulunduğu `PSTR`türevleri tercih edilir.
 
 - `_Inout_z_`
 
@@ -167,17 +167,17 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
      `_In_reads_bytes_(s)`
 
-     İşlev tarafından okunan dizi için bir işaretçi.  Dizi, tümünün geçerli olması gereken `s` öğelerinin boyutudur.
+     İşlev tarafından okunan dizi için bir işaretçi.  Dizi, hepsi geçerli olması gereken `s` öğe boyutudur.
 
-     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
+     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeler yalnızca `wchar_t` kullanan benzer bir işlev `_bytes_` değişken kullanır.
 
 - `_In_reads_z_(s)`
 
-     Null sonlandırılmış ve bilinen bir boyuta sahip dizi için bir işaretçi. Null sonlandırıcıya kadar olan öğeler — veya null Sonlandırıcı yoksa `s`, ön durumda geçerli olmalıdır.  Boyut bayt olarak bilindiğinde, öğe boyutuna göre `s` ' ı ölçeklendirin.
+     Null sonlandırılmış ve bilinen bir boyuta sahip dizi için bir işaretçi. Null sonlandırıcısına sahip öğeler — veya null Sonlandırıcı yoksa `s`, ön durumda geçerli olmalıdır.  Boyut bayt olarak tanındığı takdirde, `s` öğe boyutuna göre ölçeklendirin.
 
 - `_In_reads_or_z_(s)`
 
-     Null sonlandırılmış veya bilinen bir boyut veya her ikisi içeren bir dizi işaretçisi. Null sonlandırıcıya kadar olan öğeler — veya null Sonlandırıcı yoksa `s`, ön durumda geçerli olmalıdır.  Boyut bayt olarak bilindiğinde, öğe boyutuna göre `s` ' ı ölçeklendirin.  (`strn` ailesi için kullanılır.)
+     Null sonlandırılmış veya bilinen bir boyut veya her ikisi içeren bir dizi işaretçisi. Null sonlandırıcısına sahip öğeler — veya null Sonlandırıcı yoksa `s`, ön durumda geçerli olmalıdır.  Boyut bayt olarak tanındığı takdirde, `s` öğe boyutuna göre ölçeklendirin.  (`strn` ailesi için kullanılır.)
 
 - `_Out_writes_(s)`
 
@@ -185,15 +185,18 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
      İşlev tarafından yazılacak `s` öğeleri (yanıt. bayt) dizisine yönelik bir işaretçi.  Dizi öğelerinin ön durumunda geçerli olması gerekmez ve durum sonrası için geçerli olan öğe sayısı belirtilmemiş olur.  Parametre türünde ek açıklamalar varsa, bunlar durum sonrası ' a uygulanır. Örneğin, aşağıdaki kodu göz önünde bulundurun.
 
-     `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`
+     ```cpp
+     typedef _Null_terminated_ wchar_t *PWSTR;
+     void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
+     ```
 
-     Bu örnekte, çağıran, `p1` için `size` öğelerinin bir arabelleğini sağlar.  `MyStringCopy`, bu öğelerin bazılarını geçerli hale getirir. Daha da önemlisi, `PWSTR` ' deki `_Null_terminated_` ek açıklaması, durum sonrası `p1` ' nin null sonlandırıldığı anlamına gelir.  Bu şekilde, geçerli öğe sayısı hala iyi tanımlanmış, ancak belirli bir öğe sayısı gerekli değildir.
+     Bu örnekte, çağıran, `p1`için `size` öğelerinin bir arabelleğini sağlar.  `MyStringCopy`, bu öğelerin bazılarını geçerli hale getirir. Daha da önemlisi, `PWSTR` `_Null_terminated_` ek açıklaması, `p1` durum sonrası null olarak sonlandırıldığı anlamına gelir.  Bu şekilde, geçerli öğe sayısı hala iyi tanımlanmış, ancak belirli bir öğe sayısı gerekli değildir.
 
-     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
+     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeler yalnızca `wchar_t` kullanan benzer bir işlev `_bytes_` değişken kullanır.
 
 - `_Out_writes_z_(s)`
 
-     `s` öğelerinin dizisine yönelik bir işaretçi.  Öğelerin ön durumunda geçerli olması gerekmez.  Durum sonrası 'de, mevcut olması gereken null Sonlandırıcı aracılığıyla bulunan öğeler geçerli olmalıdır.  Boyut bayt olarak bilindiğinde, öğe boyutuna göre `s` ' ı ölçeklendirin.
+     `s` öğelerinin dizisine yönelik bir işaretçi.  Öğelerin ön durumunda geçerli olması gerekmez.  Durum sonrası 'de, mevcut olması gereken null Sonlandırıcı aracılığıyla bulunan öğeler geçerli olmalıdır.  Boyut bayt olarak tanındığı takdirde, `s` öğe boyutuna göre ölçeklendirin.
 
 - `_Inout_updates_(s)`
 
@@ -201,11 +204,11 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
      Bir dizi için, hem okunan hem de işlevine yazılan bir işaretçi.  Bu boyut `s` öğeleridir ve ön durum ve son durum ' da geçerlidir.
 
-     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
+     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeler yalnızca `wchar_t` kullanan benzer bir işlev `_bytes_` değişken kullanır.
 
 - `_Inout_updates_z_(s)`
 
-     Null sonlandırılmış ve bilinen bir boyuta sahip dizi için bir işaretçi. Mevcut olması gereken null Sonlandırıcı aracılığıyla bulunan öğeler, hem ön durum hem de durum sonrası için geçerli olmalıdır.  Durum sonrası değeri, ön durumundaki değerden farklı olacak şekilde belirlenir; Bu, null Sonlandırıcı konumunu içerir. Boyut bayt olarak bilindiğinde, öğe boyutuna göre `s` ' ı ölçeklendirin.
+     Null sonlandırılmış ve bilinen bir boyuta sahip dizi için bir işaretçi. Mevcut olması gereken null Sonlandırıcı aracılığıyla bulunan öğeler, hem ön durum hem de durum sonrası için geçerli olmalıdır.  Durum sonrası değeri, ön durumundaki değerden farklı olacak şekilde belirlenir; Bu, null Sonlandırıcı konumunu içerir. Boyut bayt olarak tanındığı takdirde, `s` öğe boyutuna göre ölçeklendirin.
 
 - `_Out_writes_to_(s,c)`
 
@@ -215,21 +218,22 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
      `_Out_writes_bytes_all_(s)`
 
-     `s` öğelerinin dizisine yönelik bir işaretçi.  Öğelerin ön durumunda geçerli olması gerekmez.  Durum sonrası, `c`-TH öğesine kadar olan öğeler geçerli olmalıdır.  Boyut bayt olarak bilindiğinde, `s` ve `c` ' i öğe boyutuna göre ölçeklendirin ve şu şekilde tanımlanan `_bytes_` türevini kullanın:
+     `s` öğelerinin dizisine yönelik bir işaretçi.  Öğelerin ön durumunda geçerli olması gerekmez.  Durum sonrası, `c`-TH öğesine kadar olan öğeler geçerli olmalıdır.  Boyut, öğe sayısı yerine bayt olarak biliniyorsa `_bytes_` değişken kullanılabilir.
+     
+     Örneğin:
 
-     `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`
-
-     Diğer bir deyişle, ön durumunda `s` ' a kadar olan arabellekte bulunan her öğe, son durum durumunda geçerlidir.  Örneğin:
-
-     `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`
+     ```cpp
+     void *memcpy(_Out_writes_bytes_all_(s) char *p1, _In_reads_bytes_(s) char *p2, _In_ int s); 
+     void *wordcpy(_Out_writes_all_(s) DWORD *p1, _In_reads_(s) DWORD *p2, _In_ int s);
+     ```
 
 - `_Inout_updates_to_(s,c)`
 
      `_Inout_updates_bytes_to_(s,c)`
 
-     İşlev tarafından hem okunan hem yazılan dizi için bir işaretçi.  Bu, tümünün ön durumunda geçerli olması gereken `s` öğelerinin boyutudur ve `c` öğelerinin durum sonrası geçerli olması gerekir.
+     İşlev tarafından hem okunan hem yazılan dizi için bir işaretçi.  Bu, tümünün ön durumunda geçerli olması gereken `s` ve `c` öğelerinin durum sonrası geçerli olması gereken bir boyut.
 
-     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
+     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeler yalnızca `wchar_t` kullanan benzer bir işlev `_bytes_` değişken kullanır.
 
 - `_Inout_updates_all_(s)`
 
@@ -239,29 +243,34 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
      `_Inout_updates_to_(_Old_(s), _Old_(s))    _Inout_updates_bytes_to_(_Old_(s), _Old_(s))`
 
-     Diğer bir deyişle, ön durumunda `s` ' a kadar olan arabellekte bulunan her öğe, ön durum ve sonrası durumunda geçerlidir.
+     Diğer bir deyişle, ön durumunda `s` için arabellekte bulunan her öğe, ön durum ve sonrası durumunda geçerlidir.
 
-     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
+     `_bytes_` Variant, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeler yalnızca `wchar_t` kullanan benzer bir işlev `_bytes_` değişken kullanır.
 
 - `_In_reads_to_ptr_(p)`
 
-     `p` - `_Curr_` ifadesi (yani `p` eksi `_Curr_`) uygun dil standardı tarafından tanımlanan dizi için bir işaretçi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekir.
+     `p - _Curr_` (yani `p` eksi `_Curr_`) geçerli bir ifade olan dizinin bir işaretçisi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekir.
+
+    Örneğin:
+    ```cpp
+    int ReadAllElements(_In_reads_to_ptr_(EndOfArray) const int *Array, const int *EndOfArray);
+    ```
 
 - `_In_reads_to_ptr_z_(p)`
 
-     `p` - `_Curr_` ifadesi (yani `p` eksi `_Curr_`) uygun dil standardı tarafından tanımlanan, null ile sonlandırılmış dizi işaretçisi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekir.
+     İfade `p - _Curr_` (yani `p` eksi `_Curr_`) geçerli bir ifade olan, null ile sonlandırılmış dizi işaretçisi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekir.
 
 - `_Out_writes_to_ptr_(p)`
 
-     `p` - `_Curr_` ifadesi (yani `p` eksi `_Curr_`) uygun dil standardı tarafından tanımlanan dizi için bir işaretçi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekmez ve durum sonrası için geçerli olmalıdır.
+     `p - _Curr_` (yani `p` eksi `_Curr_`) geçerli bir ifade olan dizinin bir işaretçisi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekmez ve durum sonrası için geçerli olmalıdır.
 
 - `_Out_writes_to_ptr_z_(p)`
 
-     `p` - `_Curr_` ifadesi (yani `p` eksi `_Curr_`) uygun dil standardı tarafından tanımlanan, null ile sonlandırılmış dizi işaretçisi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekmez ve durum sonrası için geçerli olmalıdır.
+     `p - _Curr_` (yani `p` eksi `_Curr_`) geçerli bir ifade olan, null ile sonlandırılmış dizi için bir işaretçi.  `p` öncesindeki öğelerin ön durumunda geçerli olması gerekmez ve durum sonrası için geçerli olmalıdır.
 
 ## <a name="optional-pointer-parameters"></a>İsteğe bağlı Işaretçi parametreleri
 
-Bir işaretçi parametresi ek açıklaması `_opt_` içerdiğinde, parametrenin null olabileceğini gösterir. Aksi takdirde, ek açıklama `_opt_` içermeyen sürümle aynı şekilde çalışır. İşaretçi parametresi ek açıklamaların `_opt_` türevlerini listesi aşağıdadır:
+Bir işaretçi parametresi ek açıklaması `_opt_`içerdiğinde, parametrenin null olabileceğini gösterir. Aksi takdirde, ek açıklama `_opt_`içermeyen sürümle aynı şekilde çalışır. İşaretçi parametresi ek açıklamaların `_opt_` varyantlarıyla bir listesi aşağıda verilmiştir:
 
 ||||
 |-|-|-|
@@ -288,7 +297,7 @@ Bir işaretçi parametresi ek açıklaması `_opt_` içerdiğinde, parametrenin 
 
    Parametre null olabilir ve durum son durumunda, işaret edilen konum null olabilir.
 
-  Aşağıdaki tabloda ek alt dizeler, ek açıklamanın anlamını daha fazla nitelemek için ek bir açıklama adına eklenir.  Çeşitli alt dizeler `_z`, `_COM_`, `_buffer_`, `_bytebuffer_` ve `_to_` ' dir.
+  Aşağıdaki tabloda ek alt dizeler, ek açıklamanın anlamını daha fazla nitelemek için ek bir açıklama adına eklenir.  Çeşitli alt dizeler `_z`, `_COM_`, `_buffer_`, `_bytebuffer_`ve `_to_`.
 
 > [!IMPORTANT]
 > Not ettiğiniz arabirim COM ise, bu ek açıklamaların COM formunu kullanın. Diğer tür arabirimlerle COM ek açıklamalarını kullanmayın.
@@ -313,7 +322,7 @@ Bir işaretçi parametresi ek açıklaması `_opt_` içerdiğinde, parametrenin 
 
    `_COM_Outptr_opt_result_maybenull_`
 
-   Döndürülen işaretçinin COM semantiği vardır ve bu nedenle döndürülen işaretçinin null olduğu `_On_failure_` koşulunu taşır.
+   Döndürülen işaretçinin COM semantiği vardır ve bu nedenle döndürülen işaretçinin null olduğu bir `_On_failure_` koşulu taşır.
 
 - `_Outptr_result_buffer_(s)`
 
@@ -323,7 +332,7 @@ Bir işaretçi parametresi ek açıklaması `_opt_` içerdiğinde, parametrenin 
 
    `_Outptr_opt_result_bytebuffer_(s)`
 
-   Döndürülen işaretçi `s` öğe veya bayt boyutundaki geçerli bir arabelleğe işaret ediyor.
+   Döndürülen işaretçi `s` öğeleri veya baytları için geçerli bir arabelleğe işaret eder.
 
 - `_Outptr_result_buffer_to_(s, c)`
 
@@ -333,7 +342,7 @@ Bir işaretçi parametresi ek açıklaması `_opt_` içerdiğinde, parametrenin 
 
    `_Outptr_opt_result_bytebuffer_to_(s,c)`
 
-   Döndürülen işaretçi `s` öğe veya bayt boyutunda bir arabelleğe işaret eder; ilk `c` geçerli olur.
+   Döndürülen işaretçi, `s` öğeleri veya baytları için ilk `c` geçerli olduğu bir arabelleğe işaret eder.
 
   Belirli arabirim kuralları, hata durumunda çıkış parametrelerinin null olduğunu varsayar.  Açık COM kodu hariç, aşağıdaki tablodaki formlar tercih edilir.  COM kodu için, önceki bölümde listelenen ilgili COM formlarını kullanın.
 
@@ -361,7 +370,7 @@ Bir işaretçi parametresi ek açıklaması `_opt_` içerdiğinde, parametrenin 
 
 ## <a name="output-reference-parameters"></a>Çıkış başvurusu parametreleri
 
-Başvuru parametresinin ortak kullanımı çıkış parametrelerine yöneliktir.  Basit çıkış başvuru parametreleri için — örneğin, `int&` — `_Out_` doğru semantiğini sağlar.  Ancak, çıkış değeri bir işaretçisiyse — örneğin `int *&` — `_Outptr_ int **` gibi denk işaretçi ek açıklamaları doğru semantiğini sağlamaz.  İşaretçi türleri için çıkış başvurusu parametrelerinin semantiğini öz için, bu bileşik ek açıklamaları kullanın:
+Başvuru parametresinin ortak kullanımı çıkış parametrelerine yöneliktir.  `int&`gibi basit çıkış başvuru parametreleri için, `_Out_` doğru semantiğini sağlar.  Ancak, çıkış değeri `int *&`gibi bir işaretçisiyse, `_Outptr_ int **` gibi eşdeğer işaretçi ek açıklamaları doğru semantiğini sağlamaz.  İşaretçi türleri için çıkış başvurusu parametrelerinin semantiğini öz için, bu bileşik ek açıklamaları kullanın:
 
 **Ek açıklamalar ve açıklamalar**
 
@@ -383,11 +392,11 @@ Başvuru parametresinin ortak kullanımı çıkış parametrelerine yöneliktir.
 
 - `_Outref_result_buffer_to_(s, c)`
 
-     Sonuç, durum sonrası için geçerli olmalıdır ve null olamaz. İlk `c` ' in geçerli olduğu `s` öğelerinden oluşan arabelleğe işaret eder.
+     Sonuç, durum sonrası için geçerli olmalıdır ve null olamaz. İlk `c` geçerli olduğu `s` öğelerinin arabelleğini işaret eder.
 
 - `_Outref_result_bytebuffer_to_(s, c)`
 
-     Sonuç, durum sonrası için geçerli olmalıdır ve null olamaz. İlk `c` ' in geçerli olduğu `s` baytlık arabelleğe işaret eder.
+     Sonuç, durum sonrası için geçerli olmalıdır ve null olamaz. İlk `c` geçerli olduğu `s` baytlık arabelleğe işaret eder.
 
 - `_Outref_result_buffer_all_(s)`
 
@@ -407,11 +416,11 @@ Başvuru parametresinin ortak kullanımı çıkış parametrelerine yöneliktir.
 
 - `_Outref_result_buffer_to_maybenull_(s, c)`
 
-     Sonuç, durum sonrası için geçerli olmalıdır, ancak durum sonrası null olabilir. İlk `c` ' in geçerli olduğu `s` öğelerinden oluşan arabelleğe işaret eder.
+     Sonuç, durum sonrası için geçerli olmalıdır, ancak durum sonrası null olabilir. İlk `c` geçerli olduğu `s` öğelerinin arabelleğini işaret eder.
 
 - `_Outref_result_bytebuffer_to_maybenull_(s,c)`
 
-     Sonuç, durum sonrası için geçerli olmalıdır, ancak post durumunda null olabilir. İlk `c` ' in geçerli olduğu `s` baytlık arabelleğe işaret eder.
+     Sonuç, durum sonrası için geçerli olmalıdır, ancak post durumunda null olabilir. İlk `c` geçerli olduğu `s` baytlık arabelleğe işaret eder.
 
 - `_Outref_result_buffer_all_maybenull_(s)`
 
@@ -423,7 +432,7 @@ Başvuru parametresinin ortak kullanımı çıkış parametrelerine yöneliktir.
 
 ## <a name="return-values"></a>Dönüş Değerleri
 
-Bir işlevin dönüş değeri `_Out_` parametresine benzer, ancak farklı bir de başvuru düzeyindedir ve işaretçi kavramını sonuca düşünmek zorunda kalmazsınız.  Aşağıdaki ek açıklamalar için, dönüş değeri, bir skalar, bir struct işaretçisi veya bir arabelleğin işaretçisi olan açıklamalı nesnedir. Bu ek açıklamalar karşılık gelen `_Out_` ek açıklaması ile aynı semantiğe sahiptir.
+Bir işlevin dönüş değeri bir `_Out_` parametresine benzer, ancak farklı bir de başvuru düzeyindedir ve sonuç için işaretçi kavramını düşünmeniz gerekmez.  Aşağıdaki ek açıklamalar için, dönüş değeri, bir skalar, bir struct işaretçisi veya bir arabelleğin işaretçisi olan açıklamalı nesnedir. Bu ek açıklamalar karşılık gelen `_Out_` ek açıklaması ile aynı semantiğe sahiptir.
 
 |||
 |-|-|
@@ -494,20 +503,20 @@ Bir işlevin dönüş değeri `_Out_` parametresine benzer, ancak farklı bir de
 
      `_Field_range_(low, hi)`
 
-     Parametresi, alanı veya sonucu, `low` ile `hi` arasında (dahil) aralığındadır.  İlgili bir ön durum veya durum sonrası koşulları ile birlikte açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` ile eşdeğerdir.
+     Parametresi, alanı veya sonucu, `hi``low` (dahil) aralığındadır.  Açıklamalı nesneye uygun ön durum veya durum sonrası koşullarıyla birlikte uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` eşdeğerdir.
 
     > [!IMPORTANT]
-    > Adlar "ın" ve "Out" içerse de, `_In_` ve `_Out_` semantiği bu ek açıklamalar için **uygulanmaz.**
+    > Adlar "ın" ve "Out" içerse de, `_In_` ve `_Out_` semantiği bu ek açıklamalar için **uygulanmıyor.**
 
 - `_Pre_equal_to_(expr)`
 
      `_Post_equal_to_(expr)`
 
-     Açıklamalı değer tam olarak `expr` ' dır.  İlgili bir ön durum veya durum sonrası koşulları ile birlikte açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ == expr)` ile eşdeğerdir.
+     Açıklamalı değer tam olarak `expr`.  Açıklamalı nesneye uygun ön durum veya durum sonrası koşullarıyla birlikte uygulanan `_Satisfies_(_Curr_ == expr)` eşdeğerdir.
 
 - `_Struct_size_bytes_(size)`
 
-     Bir struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size` tarafından verilen bayt sayısıyla, belirtilen tür ile daha büyük olabileceğini gösterir.  Örneğin:
+     Bir struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size`tarafından verilen bayt sayısıyla, belirtilen türden daha büyük olabileceğini gösterir.  Örneğin:
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 
