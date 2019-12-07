@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0024716875dce7e81567d60a6e61069be64ec185
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: eb66615abbd7124fd6b781598bd8eb28ea34756d
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911452"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903871"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>Anında Hata Ayıklayıcı’yı devre dışı bırakma
 
 Çalışan bir uygulamada hata oluştuğunda tam zamanında hata ayıklayıcı iletişim kutusu açılabilir ve uygulamanın devam etmesini engelleyebilirsiniz.
 
-Tam zamanında hata ayıklayıcı, hata ayıklamak için Visual Studio 'Yu başlatma seçeneği sunar. Hatayla ilgili ayrıntılı bilgileri görüntülemek veya hata ayıklamayı denemek için [Visual Studio](https://visualstudio.microsoft.com/) veya başka bir seçili hata ayıklayıcı yüklü olmalıdır.
+Tam zamanında hata ayıklayıcı, hata ayıklamak için Visual Studio 'Yu başlatma seçeneği sunar. Hatayla ilgili ayrıntılı bilgileri görüntülemek veya hata ayıklamayı denemek için Visual Studio veya başka bir seçili hata ayıklayıcı yüklü olmalıdır.
 
-Visual Studio kullanıcısı ve hatada hata ayıklamayı denemek istiyorsanız, [tam zamanında hata ayıklayıcı kullanarak hata ayıkla](../debugger/debug-using-the-just-in-time-debugger.md)bölümüne bakın. Hatayı düzeltemedi veya tam zamanında hata ayıklayıcıyı açmak istiyorsanız, [Visual Studio 'Da tam zamanında hata ayıklamayı devre dışı](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)bırakabilirsiniz.
+Zaten bir Visual Studio kullanıcısı ve hata ayıklamayı denemek istiyorsanız, [tam zamanında hata ayıklayıcı kullanarak hata ayıkla](../debugger/debug-using-the-just-in-time-debugger.md)bölümüne bakın. Hatayı düzeltemedi veya tam zamanında hata ayıklayıcıyı açmak istiyorsanız, [Visual Studio 'Da tam zamanında hata ayıklamayı devre dışı](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)bırakabilirsiniz.
 
 Visual Studio yüklüyse ancak artık bunu yapmazsanız, [Windows kayıt defterinden tam zamanında hata ayıklamayı devre dışı bırakmanız](debug-using-the-just-in-time-debugger.md#disable-just-in-time-debugging-from-the-windows-registry)gerekebilir.
 

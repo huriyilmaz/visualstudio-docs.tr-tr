@@ -18,16 +18,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a4674dec4b15f608eb25ffaf62c97efcc2363ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f121c7aadb605e6eb87089556ddaf1b1f4999dbb
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929966"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903896"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>Kod Düzenleyicisi'nde veri değerlerini görüntüleme datatips
 
-DataTips, hata ayıklama sırasında programınızdaki değişkenleri hakkında daha fazla bilgi görüntülemek için kullanışlı bir yol sağlar. DataTips, sadece kesme modunda ve yalnızca yürütme geçerli kapsamdaki değişkenler çalışın. Bu, kodda hata ayıklamak için girişimde ilk kez ise, okumak isteyebilirsiniz [yeni başlayanlar için hata ayıklama](../debugger/debugging-absolute-beginners.md) ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) bu makalede geçmeden önce.
+DataTips, hata ayıklama sırasında programınızdaki değişkenleri hakkında daha fazla bilgi görüntülemek için kullanışlı bir yol sağlar. DataTips, sadece kesme modunda ve yalnızca yürütme geçerli kapsamdaki değişkenler çalışın. Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
 
 ## <a name="work-with-datatips"></a>DataTips ile çalışma
 
@@ -46,7 +46,7 @@ Bir DataTip sırada DataTip içinde bunun altındaki kodu görmek için saydam h
 
 Açık kalması bir DataTip sabitlemek için Raptiye seçin **kaynağına PIN** simgesi.
 
-![Bir DataTip sabitleme](../debugger/media/dbg-tips-data-tips-pinned.png "bir DataTip sabitleme")
+![Veri Ipucunu sabitleme](../debugger/media/dbg-tips-data-tips-pinned.png "PIN bir DataTip")
 
 Sabitlenmiş bir DataTip kod penceresi sürükleyerek taşıyabilirsiniz. Cilt payını DataTip sabitlenmiş satırın yanındaki Raptiye simgesi görünür.
 
@@ -84,7 +84,7 @@ DataTips, bir dizi, yapı veya üyelerini görüntülemek için bir nesne geniş
 
 Bir nesne öğeleri görmek için bir DataTip içinde genişletmek için Genişlet oklar öğeleri ağaç formunda görüntülenecek öğe adları önce üzerine gelin. Sabitlenmiş bir DataTip için seçin **+** değişkeni önce adlandırın ve ardından ağacı genişletin.
 
-![Bir DataTip genişletin](../debugger/media/dbg-tour-data-tips.png "bir DataTip genişletin")
+![Bir veri Ipucunu Genişlet](../debugger/media/dbg-tour-data-tips.png "Bir veri Ipucunu Genişlet")
 
 Genişletilmiş görünümde yukarı ve aşağı taşımak için klavye üzerinde fareyi veya ok tuşlarını kullanabilirsiniz.
 
@@ -94,11 +94,26 @@ Ayrıca, üzerine gelip Raptiye simgelerine seçerek sabitlenmiş DataTip geniş
 
 Bir değişken veya DataTip öğesinde değerini düzenlemek için değer, yeni bir değer yazın ve ENTER tuşuna seçin **Enter**. Seçimi için salt okunur değerleri devre dışı bırakıldı.
 
+::: moniker range=">= vs-2019"
+
+## <a name="pin-properties-in-datatips-supported-in-visual-studio-2019-version-164-preview-3-or-higher"></a>Veri Ipuçlarında sabitleme özellikleri (Visual Studio 2019 sürüm 16,4 Preview 3 veya üzeri sürümlerde desteklenir)
+
+> [!NOTE]
+> Bu özellik .NET Core 3,0 veya üzeri sürümlerde desteklenir.
+
+Veri Ipuçları **bölümünde, bu nesneleri özelliklerine göre** hızlıca inceleyebilirsiniz.  Bu aracı kullanmak için bir özelliğin üzerine gelin ve görüntülenen sabitleme simgesini seçin ya da sağ tıklayın ve ortaya çıkan bağlam menüsünde **üyeyi sık kullanılanlara sabitle** seçeneğini belirleyin.  Bu özelliği nesnenin özellik listesinin en üstüne, özellik adı ve değeri ise veri Ipucunun sağ sütununda görüntülenir.  Bir özelliği kaldırmak için, PIN simgesini yeniden seçin veya bağlam menüsünde **üyeyi sık kullanılanlara ayır** seçeneğini belirleyin.
+
+![Bir veri Ipucunda bir özelliği sabitleme](../debugger/media/basic-pin-datatip.gif "Bir veri Ipucunda bir özelliği sabitleme")
+
+Ayrıca, bir veri ipucunda nesnenin özellik listesini görüntülerken özellik adlarını açıp sabitlenmemiş özellikleri filtreleyebilirsiniz.  Özellik içeren bir satıra sağ tıklayıp, **yalnızca sabitlenmiş üyeleri göster** ' i seçerek ya da bağlam menüsündeki **değerler seçeneklerinde sabitlenmiş üye adlarını gizleyerek** her iki seçeneğe erişebilirsiniz.
+
+::: moniker-end
+
 ## <a name="visualize-complex-data-types"></a>Karmaşık veri türleri görselleştirin
 
 Bir veya daha fazla yanında bir değişken veya öğesi bir DataTip içinde bir Büyüteç simgesi anlamına gelir [görselleştiriciler](../debugger/create-custom-visualizers-of-data.md), gibi [metin görselleştiricisi](../debugger/string-visualizer-dialog-box.md), değişken için kullanılabilir. Görselleştiriciler, bazen grafik daha anlamlı bir şekilde bilgi görüntüler.
 
-Veri türü için varsayılan görselleştiricisi'ni kullanarak öğeyi görüntülemek için büyüteç simgesini ![Görselleştirici simgesi](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi"). Görselleştiriciler veri türü için bir listesinden seçmek için Büyüteç simgesinin yanındaki oku seçin.
+Veri türü için varsayılan görselleştiricisi kullanarak öğeyi görüntülemek için büyüteç simgesini ![görselleştirme simgesini](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi")seçin. Görselleştiriciler veri türü için bir listesinden seçmek için Büyüteç simgesinin yanındaki oku seçin.
 
 ## <a name="add-a-variable-to-a-watch-window"></a>Bir Gözcü penceresi için bir değişken Ekle
 

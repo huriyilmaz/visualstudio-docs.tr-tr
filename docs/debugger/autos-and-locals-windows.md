@@ -15,16 +15,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60bb98644c1905b030176b28b97575b379bed38d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b159f631534135ac568fb03dbffa46ae0360fc47
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564586"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74904118"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Otolar ve yerel öğeler pencerelerinde değişkenleri denetleyin
 
-**Otolar** ve **Yereller** windows ayıklarken değişken değerleri gösterir. Windows, yalnızca hata ayıklama oturumu sırasında kullanılabilir. **Otolar** geçerli kesme noktası kullanılan değişkenler penceresi gösterir. **Yereller** penceresi, genellikle geçerli işlev veya yöntem olan yerel kapsamda tanımlanan değişkenler gösterir. Bu, kodda hata ayıklamak için girişimde ilk kez ise, okumak isteyebilirsiniz [yeni başlayanlar için hata ayıklama](../debugger/debugging-absolute-beginners.md) ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) bu makalede geçmeden önce.
+**Otolar** ve **Yereller** windows ayıklarken değişken değerleri gösterir. Windows, yalnızca hata ayıklama oturumu sırasında kullanılabilir. **Otolar** geçerli kesme noktası kullanılan değişkenler penceresi gösterir. **Yereller** penceresi, genellikle geçerli işlev veya yöntem olan yerel kapsamda tanımlanan değişkenler gösterir. Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
 
  **Otolar** penceresi, kullanılabilir C#, Visual Basic, C++ ve Python kodu, ancak JavaScript veya F#.
 
@@ -39,7 +39,7 @@ Açmak için **Yereller** hata ayıklarken, penceresinde **hata ayıklama** > **
 
 Diziler ve nesneleri göster **Otolar** ve **Yereller** ağaç denetimleri olarak windows. Görünümü alanlar ve Özellikler'i gösterecek şekilde genişletmek için bir değişken adının sol tarafındaki oku seçin. İşte bir örnek bir <xref:System.IO.FileStream?displayProperty=fullName> nesnesine **Yereller** penceresi:
 
-![Yerel öğeler FILESTREAM](../debugger/media/locals-filestream.png "Yereller FILESTREAM")
+![Yereller-FILESTREAM](../debugger/media/locals-filestream.png "Yereller-FILESTREAM")
 
 Kırmızı bir değer **Yereller** veya **Otolar** penceresi anlamına gelir değeri son değerlendirme bu yana değişti. Değişiklik, bir önceki hata ayıklama oturumundan olabilir veya penceresinde değeri değiştirildi.
 
@@ -61,15 +61,29 @@ Yerel C++ kod içinde bir değişken adının bağlamını nitelemeniz gerekebil
 >- Kayan nokta değerlerini düzenlemek, kesirli bileşenlerin ondalıktan ikiliye dönüştürülmesi nedeniyle küçük yanlışlıklara neden olabilir. Görünüşte zararsız bir düzenleme bitler kayan nokta değişkenindeki bazı değişikliklere neden olabilir.
 
 ::: moniker range=">= vs-2019" 
-## <a name="search-in-the-autos-or-locals-window"></a>Arama Otomatikler veya Yereller penceresinde
+## <a name="search-in-the-autos-or-locals-window"></a>Oto veya Yereller penceresinde ara
 
-Ad ve değer türü sütunlarını anahtar sözcükleri arayabilirsiniz **Otolar** veya **Yereller** her bir pencere arama çubuğunu kullanarak penceresi. ENTER tuşuna basın veya bir arama yürütmek için okları seçin. Devam eden bir arama iptal etmek için arama çubuğuna "x" simgesini seçin.
+Her pencerenin üzerindeki arama çubuğunu kullanarak, **oto** veya **Yereller** penceresinin Ad, değer ve tür sütunlarında anahtar sözcük araması yapabilirsiniz. Bir arama yürütmek için ENTER tuşuna basın veya oklardan birini seçin. Devam eden bir aramayı iptal etmek için arama çubuğundaki "x" simgesini seçin.
 
-Sol ve sağ ok tuşlarını kullanın (Shift + F3 ve F3 sırasıyla) arasında gezinmek için eşleşme bulunamadı.
+Bulunan eşleşmeler arasında gezinmek için sol ve sağ okları (sırasıyla SHIFT + F3 ve F3) kullanın.
 
-![Arama Yereller penceresinde](../debugger/media/ee-search-locals.png "Yereller penceresinde arama")
+![Yereller penceresinde ara](../debugger/media/ee-search-locals.png "Yereller penceresinde ara")
 
-Aramanızı daha az veya kapsamlı kullanmasına olanak **derin arama** en üstündeki açılan **Otolar** veya **Yereller** içinde arama yapmak istediğiniz kaç düzey derinlikte seçmek için Pencere iç içe nesneler. 
+Aramanızı daha fazla veya daha az kapsamlı hale getirmek için, iç içe geçmiş nesnelerde kaç düzey derinlikte arama yapmak istediğinizi seçmek üzere, **oto s** veya **Locals** penceresinin en üstündeki **arama daha derin** açılan listesini kullanın. 
+
+## <a name="pin-properties-in-the-autos-or-locals-window"></a>Oto veya Yereller penceresinde sabitleme özellikleri
+
+> [!NOTE]
+> Bu özellik .NET Core 3,0 veya üzeri sürümlerde desteklenir.
+
+Hızlı bir şekilde nesneleri, Windows ve yerel öğeler pencerelerinde, **Pinınspectlik özellikleri** aracıyla hızlıca inceleyebilirsiniz.  Bu aracı kullanmak için bir özelliğin üzerine gelin ve görüntülenen sabitleme simgesini seçin ya da sağ tıklayın ve ortaya çıkan bağlam menüsünde **üyeyi sık kullanılanlara sabitle** seçeneğini belirleyin.  Bu özelliği nesnenin özellik listesinin en üstüne, özellik adı ve değeri ise **değer** sütununda görüntülenir.  Bir özelliği kaldırmak için, PIN simgesini yeniden seçin veya bağlam menüsünde **üyeyi sık kullanılanlara ayır** seçeneğini belirleyin.
+
+![Yereller penceresindeki sabitleme özellikleri](../debugger/media/basic-pin.gif "Yereller penceresindeki sabitleme özellikleri")
+
+Ayrıca, oto veya yerel öğeler pencerelerinde nesnenin özellik listesini görüntülerken özellik adlarını açıp sabitlenmemiş özellikleri filtreleyebilirsiniz.  Her seçeneğe, oto veya Yereller pencerelerinin üstündeki araç çubuğunda bulunan düğmeleri seçerek erişebilirsiniz.
+
+![Sık kullanılan özellikleri filtrele](../debugger/media/filter-pinned-properties-locals.png "Sık kullanılan özellikleri filtrele")
+![özellik adlarını değiştirme](../debugger/media/toggle-property-names.gif "Özellik adlarını değiştirme")
 
 ::: moniker-end
 
@@ -81,7 +95,7 @@ Etkinleştirmek için **hata ayıklama konumu** araç seçin ve araç çubuğu a
 
 Bir kesme noktası ayarlayın ve hata ayıklamaya başlayın. Kesme noktası isabet edildiğinde yürütme duraklatır ve konumda görebilirsiniz **hata ayıklama konumu** araç çubuğu.
 
-![Hata ayıklama konumu araç çubuğu](../debugger/media/debuglocationtoolbar.png "hata ayıklama konumu araç çubuğu")
+![Hata ayıklama konumu araç çubuğu](../debugger/media/debuglocationtoolbar.png "Hata Ayıklama Konumu araç çubuğu")
 
 ## <a name="bkmk_whatvariables"></a> Otomatik değişkenler penceresi değişkenleri (C#, C++, Visual Basic, Python)
 
@@ -102,7 +116,7 @@ Farklı kod dilleri görüntülemek farklı değişkenlerinde **Otolar** pencere
 
    Satırına bir kesme noktası ayarlamak `c = 3;`, ve hata ayıklayıcıyı başlatın. Yürütme durakladığında **Otolar** penceresi görüntülenir:
 
-   ![Otolar-CSharp](../debugger/media/autos-csharp.png "Otolar-CSharp")
+   ![Oto 'lar-CSharp](../debugger/media/autos-csharp.png "Oto 'lar-CSharp")
 
    Değerini `c` 0, çünkü satır `c = 3` henüz çalıştırılmadı.
 
@@ -122,7 +136,7 @@ Farklı kod dilleri görüntülemek farklı değişkenlerinde **Otolar** pencere
 
     Satırına bir kesme noktası ayarlamak `e = 5;` ve hata ayıklayıcı çalıştırın. Yürütme sona erdiğinde, **Otolar** penceresi görüntülenir:
 
-    ![Otolar C++](../debugger/media/autos-cplus.png "Otolar C++")
+    ![OtolarC++](../debugger/media/autos-cplus.png "OtolarC++")
 
     Değişken `e` olduğundan başlatılmadı satır `e = 5` henüz çalıştırılmadı.
 
@@ -159,7 +173,7 @@ Dönüş değerleri görmek için `sumVars()` ve `subtractVars()` yöntemini ça
 
 1. Hata ayıklamayı başlatmak ve yürütme kesme noktasında durakladığında seçin **Step Over** veya basın **F10**. Aşağıdaki dönüş değerleri görmelisiniz **Otolar** penceresi:
 
-  ![Otolar dönüş değeri C# ](../debugger/media/autosreturnvaluecsharp2.png "Otolar dönüş değeriC#")
+  ![Oto dönüş değeriC#](../debugger/media/autosreturnvaluecsharp2.png "Oto dönüş değeriC#")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

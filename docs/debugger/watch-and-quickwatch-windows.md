@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8cd119ab39939de6562adcb962679874d528283
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ea3d2a1e82e92473859fef29754fbb831cf3685b
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929303"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74904059"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>İzleme ve QuickWatch değişkenlerle izleyin
 
@@ -30,7 +30,7 @@ Hata ayıklarken, kullanabileceğiniz **Watch** windows ve **QuickWatch** deği�
 
 **İzleme** windows aynı anda hata ayıklama sırasında birkaç değişkenleri görüntüleyebilir. **QuickWatch** iletişim kutusu, bir kerede tek bir değişken görüntüler ve hata ayıklama devam etmeden önce kapatılması gerekir.
 
-Bu, kodda hata ayıklamak için girişimde ilk kez ise, okumak isteyebilirsiniz [yeni başlayanlar için hata ayıklama](../debugger/debugging-absolute-beginners.md) ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) bu makalede geçmeden önce.
+Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
 
 ## <a name="observe-variables-with-a-watch-window"></a>İzleme penceresi değişkenleri gözlemleyin
 
@@ -68,7 +68,7 @@ int main()
 
 1. İçinde **Watch** pencere, boş bir satırı seçin ve tür değişkeni `a`. İçin de aynısını yapın `b` ve `c`.
 
-   ![Değişkenleri izleyin](../debugger/media/watchvariables.png "WatchVariables")
+   ![Değişkenleri izle](../debugger/media/watchvariables.png "WatchVariables")
 
 1. Seçerek hata ayıklamaya devam et **hata ayıklama** > **içine adımla** ya basarak **F11** ilerlemek için gerektiği şekilde. Değişken değerleri **Watch** değiştirme penceresi aracılığıyla yineleme gibi `for` döngü.
 
@@ -84,24 +84,35 @@ Hata ayıklayıcıda tarafından tanınan herhangi bir geçerli ifade inceleyebi
 
 Örneğin, önceki bölümde kodunu üç değerlerin ortalamasını girerek alabileceğiniz `(a + b + c) / 3` içinde **Watch** penceresi:
 
-![İfadeyi İzle](../debugger/media/watchexpression.png "ifade izleyin")
+![Gözcü ifadesi](../debugger/media/watchexpression.png "Gözcü ifadesi")
 
 İfadeleri değerlendirme kuralları **Watch** penceresi, genellikle kod dili ifadelerinde değerlendirme kuralları olarak aynı. Bir ifade söz dizimi hatası varsa, Kod Düzenleyicisi olduğu gibi aynı derleyici hatası bekler. Örneğin, önceki ifade bir yazım yanlışı bu hatayı üretir **Watch** penceresi:
 
-![İfade hatası izleyin](../debugger/media/watchexpressionerror.png "ifade hatası izleyin")
+![İzleme ifadesi hatası](../debugger/media/watchexpressionerror.png "İzleme ifadesi hatası")
 
 İki dalgalı çizgi simgesine daire görünebilir **Watch** penceresi. Bu simge, hata ayıklayıcı olası iş parçacıkları arası bağımlılık nedeniyle ifadeyi değerlendirmez anlamına gelir. Diğer iş parçacıklarını geçici olarak çalıştırmayı uygulamanıza kod değerlendirme gerektirir, ancak kesme modunda olduğundan, uygulamanızı tüm iş parçacıkları genellikle durdurulur. Diğer iş parçacıklarını geçici olarak çalışmasına izin vererek olabilir beklenmeyen etkileri durumunu uygulamanızı ve hata ayıklayıcı kesme noktaları ve bu iş parçacıklarında özel durumlar gibi olayları yoksay.
 
 ::: moniker range=">= vs-2019" 
-## <a name="search-in-the-watch-window"></a>İzleme penceresinde arayın
+## <a name="search-in-the-watch-window"></a>izleme penceresi arama
 
-Ad ve değer türü sütunlarını anahtar sözcükleri arayabilirsiniz **Watch** her bir pencere arama çubuğunu kullanarak penceresi. ENTER tuşuna basın veya bir arama yürütmek için okları seçin. Devam eden bir arama iptal etmek için arama çubuğuna "x" simgesini seçin.
+Her pencerenin üzerindeki arama çubuğunu kullanarak, **izleme** penceresinin Ad, değer ve tür sütunlarında anahtar sözcük arayabilirsiniz. Bir arama yürütmek için ENTER tuşuna basın veya oklardan birini seçin. Devam eden bir aramayı iptal etmek için arama çubuğundaki "x" simgesini seçin.
 
-Sol ve sağ ok tuşlarını kullanın (Shift + F3 ve F3 sırasıyla) arasında gezinmek için eşleşme bulunamadı.
+Bulunan eşleşmeler arasında gezinmek için sol ve sağ okları (sırasıyla SHIFT + F3 ve F3) kullanın.
 
-![İzle penceresine aramaya](../debugger/media/ee-search-watch.png "Gözcü penceresi içinde arama")
+![Gözcü penceresinde ara](../debugger/media/ee-search-watch.png "Gözcü penceresinde ara")
 
-Aramanızı daha az veya kapsamlı kullanmasına olanak **derin arama** en üstündeki açılan **Watch** içinde arama yapmak istediğiniz kaç düzey derinlikte seçmek için Pencere iç içe nesneler. 
+Aramanızı daha fazla veya daha az kapsamlı hale getirmek için, **izleme** penceresinin en üstündeki **arama daha derin** açılan listesini kullanarak iç içe geçmiş nesnelerde kaç düzey derinlikte arama yapmayı istediğinizi seçin. 
+
+## <a name="pin-properties-in-the-watch-window"></a>izleme penceresi özellikleri sabitleme
+
+>[!NOTE]
+> Bu özellik .NET Core 3,0 veya üzeri sürümlerde desteklenir.
+
+İzleme penceresi,, **Pininceleyi Özellikler** aracıyla nesneleri hızla inceleyebilirsiniz.  Bu aracı kullanmak için bir özelliğin üzerine gelin ve görüntülenen sabitleme simgesini seçin ya da sağ tıklayın ve ortaya çıkan bağlam menüsünde **üyeyi sık kullanılanlara sabitle** seçeneğini belirleyin.  Bu özelliği nesnenin özellik listesinin en üstüne, özellik adı ve değeri ise **değer** sütununda görüntülenir.  Bir özelliği kaldırmak için, PIN simgesini yeniden seçin veya bağlam menüsünde **üyeyi sık kullanılanlara ayır** seçeneğini belirleyin.
+
+![izleme penceresi özellikleri sabitleme](../debugger/media/basic-pin-watch.gif "izleme penceresi özellikleri sabitleme")
+
+Ayrıca, izleme penceresi nesnenin özellik listesini görüntülerken özellik adlarını açıp sabitlenmemiş özellikleri filtreleyebilirsiniz.  İzleme penceresinin üstündeki araç çubuğunda bulunan düğmeleri seçerek her iki seçeneğe da erişebilirsiniz.
 
 ::: moniker-end
 
@@ -138,7 +149,7 @@ Yenile simgesini kullanarak göstermek için:
 
 1. Hata ayıklama başlatılamıyor. **Watch** penceresi gibi aşağıdaki iletiyi gösterir:
 
-   ![Watch yenileme](../debugger/media/refreshwatch.png "Watch yenileme")
+   ![Izlemeyi Yenile](../debugger/media/refreshwatch.png "Izlemeyi Yenile")
 
 1. Değer yenilemek için yenile simgesini seçin veya Ara çubuğuna basın. Hata ayıklayıcı ifade reevaluates.
 
@@ -210,7 +221,7 @@ Adını öğrenmek için `Person` içinde `DoSomething()` yöntemi, bir başvuru
 
 1. İçinde **Yereller** penceresinde sağ `Person` seçin ve değişken **nesne kimliği yap**.
 
-   Bir dolar işareti görmeniz gerekir (**$**) bir sayı artı **Yereller** penceresinde, nesne kimliği'dir.
+   Bir dolar işareti görmeniz gerekir ( **$** ) bir sayı artı **Yereller** penceresinde, nesne kimliği'dir.
 
 1. Nesne kimliği ekleme **Watch** nesne kimliği sağ tıklatıp seçerek penceresi **Gözcü Ekle**.
 
@@ -283,7 +294,7 @@ Gözlemlemek için `a` değişkeni
 
 1. Türü gibi bir ifade değişkeni kullanarak bir ifadeyi değerlendirmek için `a + b` içinde **ifade** kutusunda ve seçin **yeniden değerlendir**.
 
-   ![QuickWatch ifade](../debugger/media/quickwatchexpression.png "QuickWatch ifadesi")
+   ![QuickWatch ifadesi](../debugger/media/quickwatchexpression.png "QuickWatch ifadesi")
 
 1. Değişken veya ifadeyi eklemek için **QuickWatch** için **Watch** penceresinde **Gözcü Ekle**.
 

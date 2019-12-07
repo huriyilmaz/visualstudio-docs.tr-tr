@@ -7,12 +7,12 @@ author: madskristensen
 ms.author: madsk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd7e091192e0111a9dcf0997af8316daef364adb
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2abe9938d4c3212f29b8591727d731e99e47929c
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252339"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74904013"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Nasıl yapılır: Visual Studio uzantıları için kural tabanlı kullanıcı arabirimi bağlamını kullanma
 
@@ -39,13 +39,13 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
 
 1. Yeni bir Uıcontext GUID tanımlayın ve VSPackage sınıfa eklemek <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> ve <xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute>.
 
-    Örneğin, yeni bir UIContext "Uıcontextguid" ekleneceğini varsayalım. Oluşturulan GUID ( **Araçlar** > **Oluştur GUID**' ye tıklayarak bir GUID oluşturabilirsiniz) "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B" olur. Ardından, paket sınıfınızın içine aşağıdaki bildirimi eklersiniz:
+    Örneğin, yeni bir UIContext "Uıcontextguid" ekleneceğini varsayalım. Oluşturulan GUID ( **Araçlar** oluşturmak > **GUID**' ye tıklayarak bir GUID oluşturabilirsiniz) "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B". Ardından, paket sınıfınızın içine aşağıdaki bildirimi eklersiniz:
 
    ```csharp
    public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";
    ```
 
-    Öznitelikler için aşağıdaki değerleri ekleyin: (Bu özniteliklerin ayrıntıları daha sonra açıklanacaktır)
+    Öznitelikler için şu değerleri ekleyin: (Bu özniteliklerin ayrıntıları daha sonra açıklanacaktır)
 
    ```csharp
    [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -56,7 +56,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
        termValues: new[] { "HierSingleSelectionName:.config$" })]
    ```
 
-    Bu meta veriler, yeni Uıcontext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) ve tek bir terimi, "DotConfig" başvuran bir ifade tanımlayın. Etkin hiyerarşideki geçerli seçimin "\\. config $" normal ifade düzeniyle eşleşen bir adı olduğunda "dotconfig" terimi true olarak değerlendirilir ( *. config*ile biter). Hata ayıklama için yararlı kuralı için isteğe bağlı bir ad (varsayılan) değerini tanımlar.
+    Bu meta veriler, yeni Uıcontext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) ve tek bir terimi, "DotConfig" başvuran bir ifade tanımlayın. Etkin hiyerarşideki geçerli seçimin "\\. config $" normal ifade düzeniyle eşleşen bir adı olduğunda "DotConfig" terimi true olarak değerlendirilir ( *. config*ile biter). Hata ayıklama için yararlı kuralı için isteğe bağlı bir ad (varsayılan) değerini tanımlar.
 
     Öznitelik değerleri daha sonra derleme zamanında oluşturulan pkgdef eklenir.
 
@@ -80,7 +80,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
    <GuidSymbol name="UIContextGuid" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />
    ```
 
-    Artık,  *\*. config* dosyaları için bağlam menüsü komutları yalnızca Çözüm Gezgini 'ndeki seçili öğe bir *. config* dosyası olduğunda ve bu komutlardan biri seçilene kadar paket yüklenemeyecek şekilde görünür.
+    Artık, *\*. config* dosyaları için bağlam menüsü komutları yalnızca Çözüm Gezgini 'ndeki seçili öğe bir *. config* dosyası olduğunda ve bu komutlardan biri seçilene kadar paket yüklenemeyecek şekilde görünür.
 
    Daha sonra, paketin yalnızca bunu beklediğinde yüklediğini doğrulamak için bir hata ayıklayıcı kullanın. TestPackage hata ayıklamak için:
 
@@ -90,7 +90,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
 
 7. Bir proje oluşturun veya açın.
 
-8. Uzantısı *. config*dışında herhangi bir dosya seçin. Kesme noktası isabet değil.
+8. Uzantısı *. config*dışında herhangi bir dosya seçin. Kesme noktası isabet ettirilmemelidir.
 
 9. *App. config* dosyasını seçin.
 
@@ -136,14 +136,14 @@ Terim desteklenen çeşitli türleri şunlardır:
 |UserSettingsStoreQuery:\<sorgu >|"sorgu", sıfır olmayan bir değer olarak değerlendirilmesi gereken Kullanıcı ayarları deposunun tam yolunu temsil eder. Sorgu, "koleksiyonu" ve "propertyName" en son eğik çizgi ayrılır.|
 |ConfigSettingsStoreQuery:\<sorgu >|"sorgu", sıfır olmayan bir değere değerlendirilmesi gereken yapılandırma ayarları deposunun tam yolunu temsil eder. Sorgu, "koleksiyonu" ve "propertyName" en son eğik çizgi ayrılır.|
 |ActiveProjectFlavor:\<projectTypeGuid >|Seçili olan projeye markdown'lar her terimi true (toplu olarak) ve GUID belirli proje türüyle eşleşen bir özellik vardır.|
-|ActiveEditorContentType:\<contentType >|Seçili belgeyi belirtilen içerik türü metin düzenleyiciyle olduğunda terimi true olur.|
+|ActiveEditorContentType:\<contentType >|Seçili belgeyi belirtilen içerik türü metin düzenleyiciyle olduğunda terimi true olur. Not: Seçilen belge yeniden adlandırıldığında, Dosya kapatılıp yeniden açılıncaya kadar bu terim yenilenmez.|
 |ActiveProjectCapability:\<ifadesi >|Etkin proje özellikleri, belirtilen ifadeyle eşleşiyorsa, terim true olur. Bir ifade VB &#124; CSharp gibi bir şey olabilir.|
 |SolutionHasProjectCapability:\<ifadesi >|Yukarıdaki benzer; ancak terimi olduğunda true ifade ile eşleşen tüm yüklenen proje çözümü vardır.|
 |SolutionHasProjectFlavor:\<projectTypeGuid >|Her bir çözüm (toplu) özellikli proje varsa ve GUID belirli proje türüyle eşleşen bir özellik terimi true olur.|
 |Projectaddedıtem:\<model >| "Model" ile eşleşen bir dosya, açılan bir projede bir projeye eklendiğinde true olur.|
-|Activeprojectoutputtype:\<outputType >|Etkin projenin çıkış türü tam olarak eşleştiğinde terim true olur.  OutputType bir tamsayı veya <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROJOUTPUTTYPE> tür olabilir.|
-|Activeprojectbuildproperty:\<BuildProperty > =\<Regex >|Etkin proje belirtilen derleme özelliğine sahip olduğunda ve değeri, Regex filtresiyle eşleşen özellik değeri ile eşleştiğinde, bu koşul doğrudur. Derleme özellikleri hakkında daha fazla bilgi için [MSBuild proje dosyalarındaki kalıcı verilere](internals/persisting-data-in-the-msbuild-project-file.md) bakın.|
-|Solutionhasprojectbuildproperty:\<BuildProperty > =\<Regex >|Çözümde belirtilen derleme özelliğine sahip yüklü bir proje olduğunda ve özellik değeri, Regex filtresi ile eşleştiğinde terim true olur.|
+|ActiveProjectOutputType:\<outputType >|Etkin projenin çıkış türü tam olarak eşleştiğinde terim true olur.  OutputType bir tamsayı veya <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROJOUTPUTTYPE> türü olabilir.|
+|ActiveProjectBuildProperty:\<buildProperty > =\<Regex >|Etkin proje belirtilen derleme özelliğine sahip olduğunda ve değeri, Regex filtresiyle eşleşen özellik değeri ile eşleştiğinde, bu koşul doğrudur. Derleme özellikleri hakkında daha fazla bilgi için [MSBuild proje dosyalarındaki kalıcı verilere](internals/persisting-data-in-the-msbuild-project-file.md) bakın.|
+|SolutionHasProjectBuildProperty:\<buildProperty > =\<Regex >|Çözümde belirtilen derleme özelliğine sahip yüklü bir proje olduğunda ve özellik değeri, Regex filtresi ile eşleştiğinde terim true olur.|
 
 ## <a name="compatibility-with-cross-version-extension"></a>Sürümler arası uzantısı ile uyumluluk
 
