@@ -1,127 +1,161 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Mac için Visual Studio 2019 belgeleri
+### YamlMime:Hub
+title: Mac için Visual Studio belgeleri
+summary: .NET kullanarak iOS, Android ve web’e yönelik uygulama ve oyunlar geliştirmek amacıyla Mac için Visual Studio’yu kullanmayı öğrenin.
+brand: visual-studio
 metadata:
-  description: Bu makalede Mac için Visual Studio özellikleri tanıtılmaktadır.
+  title: Mac için Visual Studio belgeleri | Microsoft Docs
+  description: Bu makalede Mac için Visual Studio’nun özellikleri tanıtılır.
   author: asb3993
   ms.author: amburns
-  ms.date: 08/08/2019
-  ms.topic: landing-page
-  ms.prod: visual-studio-mac
-  ms.technology: vs-ide-general
-sections:
-  - title: Mac için Visual Studio ile çalışmaya başlama
+  ms.date: 09/18/2019
+  ms.topic: hub-page
+  ms.openlocfilehash: a5fbbf15cc9d753ef5c47a584ac25a9ca7ef7ca8
+  ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74829955"
+highlightedContent:
+  items:
+  - title: Mac için Visual Studio’yu yükleyin
+    itemType: download
+    url: ~/installation.md
+  - title: Mac için Visual Studio turu
+    itemType: overview
+    url: ~/ide-tour.md
+  - title: Mac için Visual Studio Sürüm Notları
+    itemType: whats-new
+    url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
+  - title: Geliştirme becerilerinizin artırın
+    itemType: learn
+    url: /learn/
+productDirectory:
+  title: Ne oluşturabilirim?
+  items:
+  - title: ASP.NET Core
+    imageSrc: https://docs.microsoft.com/media/logos/logo_NETcore.svg
+    links:
+    - url: ~/net-core-support.md
+      text: .NET Core Desteği
+    - url: ~/asp-net-core.md
+      text: .NET Core’u kullanmaya başlama
+    - url: https://docs.microsoft.com/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc
+      text: ASP.NET Belgeleri
+  - title: Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_azure.svg
+    links:
+    - url: ~/azure-functions.md
+      text: Azure İşlevleri’ne Giriş
+    - url: ~/azure-functions-lab.md
+      text: Azure İşlevleri Öğreticisi
+  - title: Unity
+    imageSrc: https://docs.microsoft.com/media/logos/logo_unity.svg
+    links:
+    - url: ~/unity-tools.md
+      text: Unity’ye Genel Bakış
+    - url: ~/setup-vsmac-tools-unity.md
+      text: Unity ve Mac için Visual Studio’yu ayarlama
+    - url: ~/unity-walkthrough.md
+      text: Unity ile oyun oluşturmaya başlama
+  - title: Xamarin
+    imageSrc: https://docs.microsoft.com/media/logos/logo_xamarin.svg
+    links:
+    - url: ~/xamarin.md
+      text: Mac için Visual Studio’da Xamarin mobil uygulama geliştirme
+    - url: https://docs.microsoft.com/xamarin/cross-platform/get-started/introduction-to-mobile-development
+      text: Xamarin nedir?
+    - url: https://docs.microsoft.com/xamarin/get-started/quickstarts/single-page?pivots=macos
+      text: Xamarin'i Kullanmaya Başlama
+tools:
+  title: Diller
+  summary: Mac için Visual Studio ile C#, F#, Razor, HTML5, CSS, JavaScript ve TypeScript, XAML ve XML dillerinde yazabilirsiniz.
+  items:
+  - title: C#
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
+    url: /dotnet/csharp
+  - title: F#
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
+    url: /dotnet/fsharp
+  - title: JavaScript
+    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+    url: ~/javascript.md
+  - title: TypeScript
+    imageSrc: https://docs.microsoft.com/media/logos/logo_TS.svg
+    url: ~/javascript.md
+  - title: HTML/Razor
+    imageSrc: https://docs.microsoft.com/media/logos/logo_html5.svg
+    url: ~/razor.md
+conceptualContent:
+  title: Başlarken
+  items:
+  - title: Mac için Visual Studio Kullanmaya Başlayın
+    links:
+    - url: ~/ide-tour.md
+      itemType: overview
+      text: IDE turuna katılın
+    - url: ~/version-control.md
+      itemType: overview
+      text: Depodan kod açma
+    - url: ~/projects-and-solutions.md
+      itemType: overview
+      text: Proje ve Çözümlerle çalışma
+    - url: ~/source-editor.md
+      itemType: overview
+      text: Kod yazma
+    - url: ~/debugging.md
+      itemType: overview
+      text: Kodunuzda hata ayıklama
+    - url: ~/compiling-and-building.md
+      itemType: overview
+      text: Proje derleme ve oluşturma
+    - url: ~/install-preview.md
+      itemType: download
+      text: Bir önizleme sürümünü yükleme
+    - url: ~/update.md
+      itemType: download
+      text: IDE’yi güncelleştirme
+  - title: İstekleriniz doğrultusunda tasarlama
+    links:
+    - url: ~/signing-in.md
+      itemType: get-started
+      text: Oturum aç
+    - url: ~/customizing-the-ide.md
+      itemType: get-started
+      text: IDE’yi Özelleştirme
+    - url: ~/keyboard-shortcuts.md
+      itemType: get-started
+      text: Klavye kısayollarını kullanma
+    - url: ~/editorconfig.md
+      itemType: get-started
+      text: EditorConfig ayarlama
+  - title: Daha fazla bilgi
+    links:
+    - url: https://visualstudio.microsoft.com/vs/support/mac/
+      itemType: reference
+      text: Mac için Visual Studio desteği - SSS
+    - url: https://visualstudio.microsoft.com/vs/pricing/
+      itemType: reference
+      text: Fiyatlandırma ve abonelikler
+    - url: https://visualstudio.microsoft.com/vs/compare/
+      itemType: reference
+      text: Sürümleri karşılaştır
+    - url: https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20Mac
+      itemType: reference
+      text: Abone erişimi 
+additionalContent:
+  sections:
+  - title: Görevler
     items:
-      - type: paragraph
-        text: Mac için Visual Studio tümleşik geliştirme ortamı (IDE) hakkında daha fazla bilgi edinin.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ~/installation.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Mac için Visual Studio'yu yükleyin
-          - href: ~/ide-tour.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_vs-mac.svg'
-            title: Tur Mac için Visual Studio
-          - href: 'https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes'
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Mac için Visual Studio Sürüm Notları
-  - title: Hangi uygulamaları yapılandırabilirim?
-    items:
-      - type: paragraph
-        text: 'Mac için Visual Studio ile, .NET Core, Unity ile Oyunlar ve Android ve iOS için Xamarin kullanarak mobil uygulamalar aracılığıyla ASP.NET Core ve uygulamalar ile Web siteleri oluşturabilirsiniz. Azure, tüm uygulamalarınıza eklenebilir.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_NETcore.svg'
-            text: ASP.NET Core
-            href: ~/asp-net-core.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
-            text: Azure
-            href: ~/azure-workload.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_unity.svg'
-            text: Unity
-            href: ~/unity-tools.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
-            text: Xamarin
-            href: /xamarin/
-  - title: Hangi dilleri kullanabilirim?
-    items:
-      - type: paragraph
-        text: 'Mac için Visual Studio, F#, Razor, HTML5 C#, CSS, JavaScript ve TypeScript, XAML ve XML '' de yazabilirsiniz.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Csharp.svg'
-            text: 'C#'
-            href: /dotnet/csharp/
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Fsharp.svg'
-            text: 'F#'
-            href: /dotnet/fsharp/
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_js.svg'
-            text: JavaScript
-            href: ~/javascript.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_TS.svg'
-            text: TypeScript
-            href: ~/javascript.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_html5.svg'
-            text: HTML/Razor
-            href: ~/razor.md
-  - title: Mac için Visual Studio kod yazın
-    items:
-      - type: paragraph
-        text: 'Kodunuzu yazmak, derlemek, hatalarını ayıklamak ve depolamak için Visual Studio ''Yu kullanma hakkında daha fazla bilgi edinin.'
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ~/source-editor.md
-            html: '<p>En sevdiğiniz dil için IntelliSense, yeniden düzenleme ve sözdizimi vurgulama.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-            title: Kod yazma
-          - href: ~/compiling-and-building.md
-            html: <p>Derleyicinizi yapılandırın ve uygulamanızı derleyin.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-            title: Derleme ve oluşturma
-          - href: ~/debugging.md
-            html: <p>Sorunları araştırmak için uygulamanızı hata ayıklayıcı altında çalıştırın.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Hata ayıklama
-          - href: ~/version-control.md
-            html: '<p>Azure DevOps, git veya Subversion kaynak depolarına erişin.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_pull-request.svg'
-            title: Sürüm Denetimi
-  - title: Daha fazla yardıma ihtiyacım var
-    items:
-      - type: paragraph
-        text: Diğer yararlı içeriklere yönelik bağlantılar
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="https://visualstudio.microsoft.com/vs/support/mac/">Mac için Visual Studio desteği – SSS</a>'
-          - html: '<a href="https://visualstudio.microsoft.com/vs/pricing/">Fiyatlandırma ve abonelikler</a>'
-          - html: '<a href="https://visualstudio.microsoft.com/vs/compare/">Sürümleri Karşılaştır</a>'
-          - html: '<a href="https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20Mac">Abone erişimi (eski indirmeler dahil)</a>'
-          - html: '<a href="https://code.visualstudio.com">Visual Studio Code</a>'
+    - title: Geliştirme
+      summary: IntelliSense, yeniden düzenleme ve en sık kullandığınız dil için söz dizimi vurgulama.
+      url: ~/source-editor.md
+    - title: Yapı
+      summary: Derleyicinizi yapılandırıp uygulamanızı oluşturun.
+      url: ~/compiling-and-building.md
+    - title: Hata ayıklama
+      summary: Sorunları araştırmak için uygulamanızı hata ayıklayıcısında çalıştırın.
+      url: ~/debugging.md
+    - title: Sürüm Denetimi
+      summary: Git ve Subversion gibi sürüm denetimi teknolojilerini kullanarak kod paylaşın.
+      url: ~/version-control.md
+  footer: '[Bloglar](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/visualstudiomac) - [Sorun Bildirme](~/report-a-problem.md) - [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/problem/post.html?space=41)'

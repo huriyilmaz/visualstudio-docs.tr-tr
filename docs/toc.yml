@@ -1403,28 +1403,6 @@
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Destek yaşam döngüsü ve bakım
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Sorun raporları
-      items:
-        - name: Visual Studio’da sorun bildirme
-          href: ide/how-to-report-a-problem-with-visual-studio.md
-        - name: Sorun bildirme durumları ve SSS
-          displayName: Developer Community
-          href: ide/report-a-problem.md
-        - name: Bir performans sorununun düzeltilme olasılığını artırma
-          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
-        - name: Bir Visual Studio işlemi için tüm çağrı yığınlarıyla mini dökümler oluşturma
-          displayName: Create minidumps with call stacks
-          href: ide/report-a-problem-minidumps.md
-        - name: MSBuild sorunları için günlükler oluşturma
-          displayName: Create logs for MSBuild problems
-          href: ide/msbuild-logs.md
-        - name: PerfView ile ETL izlemesi toplama
-          displayName: ETL trace with PerfView
-          href: ide/report-a-problem-perfview.md
-    - name: Visual Studio için özellik önerin
-      href: ide/suggest-a-feature.md
-    - name: Geliştirici Topluluğu veri gizliliği
-      href: ide/developer-community-privacy.md
     - name: Müşteri Deneyimi Geliştirme Programı
       items:
         - name: Genel Bakış
@@ -1434,6 +1412,25 @@
           href: ide/diagnostic-data-collection.md
     - name: IDE hataları için sorun giderme kaynakları
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
-    - name: Geribildirim
-      displayName: Feedback
+- name: Geri bildirim gönder
+  items:
+    - name: Genel Bakış
       href: ide/feedback-options.md
+    - name: Sorun bildirin
+      items:
+        - name: Sorun bildirme
+          href: ide/how-to-report-a-problem-with-visual-studio.md
+        - name: Sorun bildirme durumları ve SSS
+          href: ide/report-a-problem.md
+        - name: Performans sorunlarının daha hızlı şekilde düzeltilmesini sağlama
+          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
+        - name: Çağrı yığınları ile mini dökümler oluşturma
+          href: ide/report-a-problem-minidumps.md
+        - name: MSBuild sorunları için günlükler oluşturma
+          href: ide/msbuild-logs.md
+        - name: PerfView ile ETL izlemesi toplama
+          href: ide/report-a-problem-perfview.md
+    - name: Bir özellik önerin
+      href: ide/suggest-a-feature.md
+    - name: Geliştirici Topluluğu veri gizliliği
+      href: ide/developer-community-privacy.md
