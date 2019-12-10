@@ -46,6 +46,8 @@
           href: using-breakpoints.md
         - name: Kesme noktalarıyla ilgili sorun giderme
           href: troubleshooting-breakpoints.md
+        - name: 'C# veri kesme noktalarıyla ilgili sorun giderme'
+          href: troubleshoot-data-breakpoint-errors.md
     - name: Veri inceleme
       items:
         - name: Hata ayıklayıcı pencerelerindeki verileri inceleme
