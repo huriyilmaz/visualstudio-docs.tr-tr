@@ -1,17 +1,17 @@
 ---
 title: Projenize bir NuGet paketi dahil etme
 description: Bu belge bir Xamarin projesine bir NuGet paketinin nasıl ekleneceğini kapsar. Bir paketi bulmayı ve indirmeyi, Ayrıca IDE tümleştirme özelliklerini tanıtmayı da açıklar.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
-ms.openlocfilehash: 154f779ee8b622c9ee66a753a23e9627f9d443c0
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 728a225f4a1d14af986039cae7cb2fc8a493ecc9
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73715171"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983310"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Projenize bir NuGet paketi ekleyin
 
@@ -23,7 +23,7 @@ Bu makalede, bir projeye NuGet paketinin nasıl dahil edileceğini ve işlemin s
 
 NuGet paket işlevini göstermek için, ilk olarak yeni bir uygulama oluşturma ve buna paket ekleme adımlarını inceleyeceğiz. Daha sonra paketlerin yönetilmesine yardımcı olan IDE özellikleri ele alınacaktır.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturun
 
 İlk olarak, aşağıda gösterildiği gibi `HelloNuget` adlı bir proje oluşturun. Bu örnekte iOS tek görünüm uygulama şablonu gösterilmektedir, ancak desteklenen tüm proje türleri çalışır:
 

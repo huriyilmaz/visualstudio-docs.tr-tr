@@ -1,22 +1,22 @@
 ---
 title: Subversion Deposu Ayarlama
-description: Subversion, Mac için Visual Studio kullanarak
-author: conceptdev
-ms.author: crdun
+description: Mac için Visual Studio alt sürüm kullanılıyor.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: 7dfb5c645125afc1485c1422909e52741507b327
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7133ffd01d8f384efa91d95bc8ea05aa75b7dd0d
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988184"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985222"
 ---
-# <a name="set-up-a-subversion-repository"></a>Bir Subversion deposu ayarlama
+# <a name="set-up-a-subversion-repository"></a>Bir alt sürüm deposu ayarlama
 
-Subversion'dır Merkezi _sürüm denetimi sistemi_, tüm dosyaları ve düzeltmelerini içeren tek bir sunucu olduğu anlamına gelen, hangi kullanıcıların herhangi bir dosyayı herhangi bir sürümünü kontrol edebilirsiniz. Dosyalar uzak Subversion depodan kullanıma, kullanıcı o noktasında depo anlık görüntüsünü alır.
+Alt sürüm, tüm dosyaları ve düzeltmeleri içeren tek bir sunucu olan ve kullanıcıların herhangi bir dosyanın herhangi bir sürümünü denetleyebileceği bir merkezi _sürüm denetim sistemidir_. Dosyalar uzak bir alt sürüm deposundan kullanıma alındığı zaman, Kullanıcı o anda deponun anlık görüntüsünü alır.
 
-Sürüm denetimi için Subversion'ı kullanmak için makinenizde yüklü gerekir. Subversion olup olmadığını denetlemek için makinenizde yüklü, terminalde aşağıdaki komutu kullanın:
+Sürüm denetiminizin alt sürümünü kullanmak için makinenizde yüklü olması gerekir. Makinenizin alt sürümünün yüklenip yüklenmediğini denetlemek için terminalde aşağıdaki komutu kullanın:
 
 ```bash
 svn --version
@@ -24,37 +24,37 @@ svn --version
 
 Bu komut, sürüm numarasını döndürür.
 
-Yükleyerek Subversion zaten yüklü değilse, bunu yapmanın en kolay yolu olan _Xcode komut satırı araçları_. Xcode komut satırı araçları ve Subversion'ı yüklemek için aşağıdaki komutu kullanın.
+Alt sürüm zaten yüklü değilse, _Xcode komut satırı araçlarının_yüklenmesi en kolay yoldur. Xcode komut satırı araçlarını ve alt sürümünü yüklemek için aşağıdaki komutu kullanın.
 
 ```bash
 xcode-select --install
 ```
 
-Subversion makinenizde yüklendikten sonra SVN projenizi yayımlamak için aşağıdaki adımları kullanın.
+Makinenizde alt sürüm yüklendikten sonra, SVN 'de projenizi yayımlamak için aşağıdaki adımları kullanın.
 
-1. Bir ücretsiz SVN deposu oluşturun. Bu örnekte, [Assembla](https://app.assembla.com/) kullanıldı. Oluşturulduktan, bir URL sağlanacaktır, bu depoya bağlanmak için kullanılacak:
+1. Çevrimiçi olarak ücretsiz bir SVN deposu oluşturun. Bu örnekte, bir veya daha fazla [birleştirme](https://app.assembla.com/) kullanıldı. Oluşturulduktan sonra, depoya bağlanmak için kullanılacak bir URL sunulacaktır:
 
-    ![SVN URL'yi kopyalayın](media/version-control-subversion1-sml.png)
+    ![SVN URL 'sini Kopyala](media/version-control-subversion1-sml.png)
 
-2. Visual Studio için Mac projesi oluşturun veya açın.
+2. Bir Mac için Visual Studio projesi açın veya oluşturun.
 
-3. Seçin ve proje üzerinde sağ tıklayın **sürüm denetimi > sürüm denetiminde Yayımla...** :
+3. Projeye sağ tıklayın ve sürüm **denetiminde yayımla > sürüm denetimi ' ni seçin...** :
 
-    ![Proje Yayımlama Başlat](media/version-control-subversion2.png)
+    ![Projeyi yayımlamaya başla](media/version-control-subversion2.png)
 
-4. İçinde **depo Bağlan** sekmesinde **Subversion** üst açılır.
+4. **Depoya Bağlan** sekmesinde üst açılan kutudan **alt sürüm** ' ü seçin.
 
-5. Adım 1'den URL'sini girin. URL'sini girdikten sonra diğer alanları varsayılan olarak doldurulur:
+5. Adım 1 ' den URL 'YI girin. URL girildiğinde, diğer alanlar varsayılan olarak doldurulur:
 
-    ![Depo seçin ve iletişim ayrıntılarını girin](media/version-control-subversion3.png)
+    ![Depo seçin ve ayrıntıları girin Iletişim kutusu](media/version-control-subversion3.png)
 
-7. Tıklayın **Tamam** tuşlarına basarak onaylayın **Yayımla**.
+7. **Tamam** ' a tıklayın ve ardından **Yayımla**' ya basarak onaylayın.
 
-7. İstenirse, kimlik bilgilerinizi depo oluşturun site için aşağıda gösterildiği gibi girin:
+7. İstenirse, depoyu oluşturduğunuz sitenin kimlik bilgilerini aşağıda gösterildiği gibi girin:
 
-    ![Subversion depo için kimlik bilgilerini girme](media/version-control-subversion5.png)
+    ![Alt sürüm deposu için kimlik bilgilerini girme](media/version-control-subversion5.png)
 
-8. Kullanılabilir tüm sürüm denetim komutlarını artık sürüm denetimi menüsünde görünür olmalıdır.
+8. Kullanılabilir tüm sürüm denetimi komutları artık sürüm denetim menüsünde görünür olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

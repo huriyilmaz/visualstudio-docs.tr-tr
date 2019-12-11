@@ -1,18 +1,18 @@
 ---
 title: Mac için Visual Studio 2019 'yi yükler
 description: Mac için Visual Studio 2019 ' i ve platformlar arası geliştirme için gereken ek bileşenleri yüklemek için yönergeler.
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 1ace600f9c4582e99c6fa324cb9dcc61593d3d97
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: dd6afc69c2a7e513358c69eafeacb49fcb06dd52
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716775"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983973"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 'yi yükler
 
@@ -37,7 +37,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
     [yüklemeyi başlatmak için büyük oka ![tıklayın](media/install-installer-sml.png)](media/install-installer.png#lightbox)
 
-3. Internet 'ten indirilen uygulamayla ilgili bir uyarı alabilirsiniz. **Aç**' a tıklayın.
+3. Internet 'ten indirilen uygulamayla ilgili bir uyarı alabilirsiniz. Tıklayın **açık**.
 4. Yükleyici sisteminizi denetlerken bekleyin:
 
     [yükleyicinin sisteminizde yüklü bileşenleri denetlemesi ![](media/install-checking-sml.png)](media/install-checking.png#lightbox)
@@ -56,11 +56,11 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 |Uygulama türü  |Hedef  |Seçim  |Notlar  |
 |---------|---------|---------|---------|
 |**Xamarin kullanan uygulamalar**| Xamarin.Forms|**Android** ve **iOS** platformlarını seçin |[ **Xcode** 'u yüklemeniz gerekecektir](https://developer.apple.com/xcode/) |
-||yalnızca iOS|**İOS** platformunu seçin|[ **Xcode** 'u yüklemeniz gerekecektir](https://developer.apple.com/xcode/)|
+||Yalnızca iOS|**İOS** platformunu seçin|[ **Xcode** 'u yüklemeniz gerekecektir](https://developer.apple.com/xcode/)|
 ||Yalnızca Android|**Android** platformunu seçin|Ayrıca ilgili bağımlılıkları da seçmeniz gerektiğini unutmayın|
 ||Yalnızca Mac|**MacOS (Cocoa)** platformunu seçin|[ **Xcode** 'u yüklemeniz gerekecektir](https://developer.apple.com/xcode/)|
 |**.NET Core Uygulamaları**|         |**.NET Core** platformunu seçin.|         |
-|**ASP.NET Core Web uygulamaları**|         |**.NET Core** platformunu seçin.|         |
+|**ASP.NET Core Web Uygulamaları**|         |**.NET Core** platformunu seçin.|         |
 |**Azure İşlevleri**|         |**.NET Core** platformunu seçin.|         |
 |**Platformlar arası Unity oyun geliştirme**|         |Mac için Visual Studio ötesinde ek platform yüklenmesi gerekmez.| Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](/visualstudio/mac/setup-vsmac-tools-unity) bakın.|
 

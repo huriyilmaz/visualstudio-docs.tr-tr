@@ -3,23 +3,23 @@ title: Bir güvenlik duvarı veya proxy sunucusu arkasında Mac için Visual Stu
 description: Bu belge, güvenlik duvarınızda bir kurumsal ortamda çalışmak üzere Mac için Visual Studio (ve Xamarin dahil iş yükleri) izin vermek için izin verilmesi gereken ana bilgisayarların bir listesini sağlar.
 ms.topic: troubleshooting
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
-ms.openlocfilehash: 3c5fce37b7cb26ef9aeceaba700e72e79e809d7d
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 717eb9cd58f213c3d2c31a18c546a83ab8feb645
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213643"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984036"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Bir güvenlik duvarı veya proxy sunucusu arkasında Mac için Visual Studio yükleyip kullanma
 
 Siz veya kuruluşunuz bir güvenlik duvarı veya proxy sunucusu gibi güvenlik önlemleri kullanıyorsa, bir "izin verilenler listesine" eklemek isteyebileceğiniz etki alanları vardır ve bu durumda, VI 'yi yükleyip kullandığınızda en iyi deneyimle karşılaşabilmeniz için, açmak isteyebileceğiniz bağlantı noktaları ve protokoller vardır Mac için Visual Studio ve Azure hizmetleri.
 
-- [**Mac için Visual Studio yüklensin**](#install-visual-studio-for-mac): Bu tablolar, Mac için Visual Studio tüm özelliklerine ve iş yüklerini erişiminizin olması için bağlantıya izin veren etki alanlarını içerir.
+- [**Mac için Visual Studio yüklemek**](#install-visual-studio-for-mac): Bu tablolar, Mac için Visual Studio tüm özelliklerine ve iş yüklerine erişebilmek için bağlantı kurulmasına izin veren etki alanlarını içerir.
 
-- [**Mac için Visual Studio kullanın**](#use-visual-studio-for-mac): Bu tablolar, ilgili özelliklere erişebilmeniz için bağlantıya izin veren etki alanlarını içerir.
+- [**Mac için Visual Studio kullan**](#use-visual-studio-for-mac): Bu tablolar, ilgili özelliklere erişebilmeniz için bağlantıya izin veren etki alanlarını içerir.
 
 ## <a name="install-visual-studio-for-mac"></a>Mac için Visual Studio'yu yükleyin
 
@@ -40,14 +40,14 @@ Mac için Visual Studio yükleyicisi çeşitli etki alanlarından indirir ve sun
 | developer.xamarin.com | Yükleyici paketleri|
 | static.xamarin.com | Yükleyici paketleri|
 | DL.xamarin.com | Yükleyici paketleri|
-| dc.services.visualstudio.com| Kilitlenme raporlaması |
+| dc.services.visualstudio.com| Kilitlenme Raporlaması |
 
 ### <a name="third-party-domains"></a>Üçüncü taraf etki alanları
 
 | Etki Alanı| Amaç |
 | --------------------------|-------------------------|
 | DL.Google.com | Android SDK |
-| download.Oracle.com | Java SDK 'Sı|
+| download.Oracle.com | Java SDK|
 | api.apple-cloudkit.com| Apple güvenlik hizmetleri |
 
 ## <a name="use-visual-studio-for-mac"></a>Mac için Visual Studio kullan
@@ -69,9 +69,9 @@ Proxy veya güvenlik duvarının arkasında Mac için Visual Studio ihtiyacını
 
 | Etki Alanı | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
-| login.microsoftonline.com | 80/443| Kimlik sağlayıcısı|
-| secure.aadcdn.microsoftonline-p.com | 80/443|Kimlik sağlayıcısı|
-| dc.services.visualstudio.com| 80/443|Kilitlenme raporlaması|
+| login.microsoftonline.com | 80/443| Kimlik Sağlayıcı|
+| secure.aadcdn.microsoftonline-p.com | 80/443|Kimlik Sağlayıcı|
+| dc.services.visualstudio.com| 80/443|Kilitlenme Raporlaması|
 | Management.Azure.com|80/443| Azure Hizmetleri API 'SI |
 
 ### <a name="nuget"></a>NuGet
@@ -79,7 +79,7 @@ Proxy veya güvenlik duvarının arkasında Mac için Visual Studio ihtiyacını
 | Etki Alanı | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
 | api.nuget.org | 80/443|NuGet API|
-| secure.aadcdn.microsoftonline-p.com |80/443| Kimlik sağlayıcısı|
+| secure.aadcdn.microsoftonline-p.com |80/443| Kimlik Sağlayıcı|
 
 ### <a name="android-projects"></a>Android projeleri
 

@@ -2,21 +2,21 @@
 title: Mac için Visual Studio ile VoiceOver kullanma
 description: Mac için Visual Studio ile macOS VoiceOver gezintisini kullanma
 author: alanjclark
-ms.author: alcl
+ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 590C325D-AAD0-4889-B1DB-A1090BBFBE89
-ms.openlocfilehash: 0645d0f00445c70d8d6b768063b3e9be219a0a83
-ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
+ms.openlocfilehash: 8f5cfc4c05ed3911370782185475b23112207c62
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274410"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985070"
 ---
 # <a name="using-voiceover-with-visual-studio-for-mac"></a>Mac için Visual Studio ile VoiceOver kullanma
 
 Bir ekran okuyucusu gerektiren kullanıcılar macOS VoiceOver 'tan faydalanır. Mac için Visual Studio ortak VoiceOver komutları kullanılarak erişilebilir.
 
-## <a name="how-to-enable-and-use-voiceover"></a>Nasıl yapılır: VoiceOver 'i etkinleştirme ve kullanma
+## <a name="how-to-enable-and-use-voiceover"></a>Nasıl yapılır: VoiceOver etkinleştirme ve kullanma
 
 VoiceOver 'i etkinleştirmek veya devre dışı bırakmak için F5 'e basın  **&#8984;**
 

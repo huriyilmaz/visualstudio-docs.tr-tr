@@ -1,46 +1,46 @@
 ---
-title: Öğretici - oluşturmak çok kapsayıcılı Docker ile uygulama oluşturma
-description: Mac için Visual Studio'da aralarında iletişim kurmak ve birden fazla kapsayıcı yönetme hakkında bilgi edinin
-author: asb3993
-ms.author: amburns
+title: Öğretici-Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
+description: Birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio aralarında iletişim kurmayı öğrenin
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 06/17/2019
-ms.openlocfilehash: 7570788b50a83d9a74657408d4f38fbce21bd1c3
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 487945399252ca3627d625e3572637b5b2af2916
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691715"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983967"
 ---
-# <a name="create-a-multi-container-app-with-docker-compose"></a>Oluşturmak çok kapsayıcılı Docker ile uygulama oluşturma
+# <a name="create-a-multi-container-app-with-docker-compose"></a>Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
-Bu öğreticide, birden fazla kapsayıcı yönetme ve aralarında Mac için Visual Studio kullanarak Docker Compose iletişim hakkında bilgi edineceksiniz
+Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio Docker Compose kullanırken aralarında iletişim kurmayı öğreneceksiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
-* [2019 Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac)
+* [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/vs/mac)
 
-## <a name="create-an-aspnet-core-web-application-and-add-docker-support"></a>Bir ASP.NET Core Web uygulaması oluşturma ve Docker desteği Ekle
+## <a name="create-an-aspnet-core-web-application-and-add-docker-support"></a>ASP.NET Core Web uygulaması oluşturma ve Docker desteği ekleme
 
-1. Giderek yeni bir çözüm oluşturmak **Dosya > Yeni Çözüm**.
-1. Altında **.NET Core > Uygulama** seçin **Web uygulaması** şablonu: ![Yeni bir ASP.NET uygulaması oluşturma](media/docker-quickstart-1.png)
-1. Hedef Framework'ü seçin. Bu örnekte, .NET Core 2.2 kullanacağız: ![Hedef Framework'ü ayarlama](media/docker-quickstart-2.png)
-1. Proje Ayrıntıları gibi proje adı girin (_DockerDemoFrontEnd_ Bu örnekte) ve çözüm adı (_DockerDemo_). Oluşturulan projeyi derlemek ve bir ASP.NET Core web sitesini çalıştırmak için gereken tüm temel öğeleri içerir.
-1. Çözüm panelinde DockerDemoFrontEnd projeyi sağ tıklatın ve seçin **Ekle > Docker desteği Ekle**: ![Docker desteği Ekle](media/docker-quickstart-3.png)
+1. **Yeni çözüm > dosyaya**giderek yeni bir çözüm oluşturun.
+1. **.NET Core > uygulama** altında **Web uygulaması** şablonunu seçin: ![yeni bir ASP.NET uygulaması oluşturun](media/docker-quickstart-1.png)
+1. Hedef çerçeveyi seçin. Bu örnekte, .NET Core 2,2: ![Target Framework 'ü kullanacak şekilde kullanacağız](media/docker-quickstart-2.png)
+1. Proje adı (Bu örnekte_DockerDemoFrontEnd_ ) ve çözüm adı (_dockerdemo_) gibi proje ayrıntılarını girin. Oluşturulan proje, bir ASP.NET Core Web sitesi derlemek ve çalıştırmak için ihtiyacınız olan tüm temel bilgileri içerir.
+1. Çözüm Bölmesi, DockerDemoFrontEnd projesine sağ tıklayın ve **ekle > Docker desteği**Ekle ' yi seçin: ![Docker desteği ekleyin](media/docker-quickstart-3.png)
 
-Mac için Visual Studio otomatik olarak olarak adlandırılan çözümünüze yeni bir proje ekleyecek **docker-compose** ve ekleme bir **Dockerfile** mevcut projenize.
+Mac için Visual Studio, çözümünüze **Docker-Compose** adlı otomatik olarak yeni bir proje ekleyecek ve mevcut projenize bir **dockerfile** ekleyecek.
 
-## <a name="create-an-aspnet-core-web-api-and-add-docker-support"></a>Bir ASP.NET Core Web API'si oluşturma ve Docker desteği Ekle
+## <a name="create-an-aspnet-core-web-api-and-add-docker-support"></a>ASP.NET Core Web API 'SI oluşturun ve Docker desteği ekleyin
 
-Bizim arka uç API olarak hareket edecek, ikinci bir proje sonraki oluşturacağız. **.NET Core API** kurmamızı RESTful isteklerini işlemek bir denetleyici şablonu içerir.
+Ardından, arka uç API 'SI olarak görev yapacak ikinci bir proje oluşturacağız. **.NET Core API** şablonu, yeniden gelen istekleri işleyebileceğimizi sağlayan bir denetleyici içerir.
 
-1. Çözüme sağ tıklayıp seçerek mevcut çözüme yeni bir proje eklemek **Ekle > Yeni Proje Ekle**.
-1. Altında **.NET Core > Uygulama** seçin **API** şablonu.
-1. Hedef Framework'ü seçin. Bu örnekte, .NET Core 2.2 kullanacağız
-1. Proje Ayrıntıları gibi proje adı girin (_DockerDemoAPI_ Bu örnekte).
-1. Oluşturulduktan sonra çözüm bölmesi için Git ve DockerDemoAPI projeyi sağ tıklatın ve seçin **Ekle > Docker desteği Ekle**.
+1. Çözüme sağ tıklayıp **Yeni proje ekle > Ekle**' yi seçerek mevcut çözüme yeni bir proje ekleyin.
+1. **.NET Core > uygulama** altında **API** şablonunu seçin.
+1. Hedef çerçeveyi seçin. Bu örnekte, .NET Core 2,2 kullanacağız
+1. Proje adı (Bu örnekteki_Dockerdemoapı_ ) gibi proje ayrıntılarını girin.
+1. Oluşturulduktan sonra Çözüm Bölmesi gidin ve Dockerdemoapı projesine sağ tıklayın ve **ekle > Docker desteği ekle**' yi seçin.
 
-**Docker-compose.yml** dosyası **docker-compose** proje otomatik olarak güncelleştirilecek var olan Web uygulaması projesi yanı sıra API projesini dahil et. Ne zaman biz derleme ve çalıştırma **docker-compose** proje, bu projelerin her biri için ayrı bir Docker kapsayıcısı dağıtılacak.
+**Docker-Compose** projesindeki **Docker-Compose. yıml** dosyası, mevcut Web UYGULAMASı projesinin yanı sıra API projesini dahil edecek şekilde otomatik olarak güncelleştirilir. **Docker-Compose** projesi oluşturup çalıştırdığımızda, bu projelerin her biri ayrı bir Docker kapsayıcısına dağıtılır.
 
 ```
 version: '3.4'
@@ -59,11 +59,11 @@ services:
       dockerfile: DockerDemoAPI/Dockerfile
 ```
 
-## <a name="integrate-the-two-containers"></a>İki kapsayıcı tümleştirin
+## <a name="integrate-the-two-containers"></a>Iki kapsayıcıyı tümleştirin
 
-Bizim çözümde şimdi iki ASP.NET projeleri vardır ve her ikisi de yapılandırılır Docker desteği. Bazı kod eklemek için ihtiyacımız olan sonraki!
+Artık çözümünüzde iki ASP.NET projesi var ve her ikisi de Docker desteğiyle yapılandırılmış. Sonraki bir kod eklememiz gerekiyor!
 
-1. İçinde `DockerDemoFrontEnd` projesini açarsanız *Index.cshtml.cs* dosyasını bulun ve değiştirin `OnGet` yöntemini aşağıdaki kod ile:
+1. `DockerDemoFrontEnd` projesinde, *Index.cshtml.cs* dosyasını açın ve `OnGet` yöntemini aşağıdaki kodla değiştirin:
 
    ```csharp
     public async Task OnGet()
@@ -81,7 +81,7 @@ Bizim çözümde şimdi iki ASP.NET projeleri vardır ve her ikisi de yapıland�
     }
    ```
 
-1. İçinde *Index.cshtml* görüntülemek için bir satır ekleyin `ViewData["Message"]` böylece dosyanın şu kod gibi görünür:
+1. *Index. cshtml* dosyasında, dosyanın aşağıdaki kod gibi görünmesi için `ViewData["Message"]` görüntülenecek bir satır ekleyin:
 
       ```cshtml
       @page
@@ -97,7 +97,7 @@ Bizim çözümde şimdi iki ASP.NET projeleri vardır ve her ikisi de yapıland�
       </div>
       ```
 
-1. Şimdi Web API projesinde, kod, eklediğiniz arama API'si tarafından döndürülen iletisini özelleştirmek için değerleri denetleyici ekleyin *webfrontend*:
+1. Şimdi Web API projesinde, *webön*ucunda eklediğiniz çağrı için API tarafından döndürülen iletiyi özelleştirmek üzere değerler denetleyicisine kod ekleyin:
 
       ```csharp
         // GET api/values/5
@@ -108,6 +108,6 @@ Bizim çözümde şimdi iki ASP.NET projeleri vardır ve her ikisi de yapıland�
         }
       ```
 
-1. Ayarlama `docker-compose` projesini başlangıç projesi olarak ve Git **çalıştırın > hata ayıklamayı Başlat**. Her şeyin doğru şekilde yapılandırıldıysa, "Hello webfrontend ve webapı (1 değeriyle)." iletisini görürsünüz:
+1. `docker-compose` projesini başlangıç projesi olarak ayarlayın ve **hata ayıklamayı başlatmak > Çalıştır**' a gidin. Her şey doğru yapılandırılmışsa, "Web ön ucu ve WebApi 'den Merhaba (değer 1 ile)" iletisini görürsünüz.
 
-![Çalışan docker çoklu kapsayıcı çözümü](media/docker-multicontainer-debug.png)
+![Docker Multi Container Solution çalışıyor](media/docker-multicontainer-debug.png)

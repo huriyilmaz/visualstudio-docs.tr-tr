@@ -1,86 +1,86 @@
 ---
 title: Kaynak Düzenleyicisi
-description: Mac için Visual Studio Kaynak Düzenleyicisi'ni kullanarak
-author: conceptdev
-ms.author: crdun
+description: Mac için Visual Studio 'de kaynak düzenleyiciyi kullanma
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
-ms.openlocfilehash: b284cde511b17863861908d9967bbea7672e297b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 187805767e9f67851975dccf8513c708c4233ccc
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987782"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985208"
 ---
 # <a name="source-editor"></a>Kaynak Düzenleyicisi
 
-Güvenilir bir kaynak Düzenleyicisi kod temellerini ve verimli bir şekilde yazmak için gereklidir. Mac için Visual Studio IDE ile etkileşimlerinizde ortasına bir Gelişmiş kaynak Düzenleyicisi sağlar. Kaynak Düzenleyicisi beklediğiniz ve kolayca çalışmanızı yapmanız gereken özellikleri sağlar: Temel tür söz dizimi vurgulama, kod parçacıkları ve kod katlamayı, avantajlarını kendi Roslyn derleyici tümleştirme gibi tam olarak işlevsel IntelliSense kod tamamlama.
+Güvenilir bir kaynak Düzenleyicisi, kod succinctly ve verimli bir şekilde yazmak için gereklidir. Mac için Visual Studio IDE ile etkileşimlerinizin merkezinde olan gelişmiş bir kaynak Düzenleyicisi sağlar. Kaynak Düzenleyicisi, bekleolabileceğiniz ve işinizi kolayca yapmanız gerekebilecek özellikler sağlar: Bu tür bir sözdizimi vurgulaması, kod parçacıkları ve kod katlama sayesinde, tam işlevli IntelliSense kodu gibi Roslyn derleyici tümleştirmesinin avantajları bekleyerek.
 
-Mac için Visual Studio kaynak düzenleyicisinde, yeniden düzenleme, hata ayıklama ve sürüm denetimi tümleştirmesi gibi IDE içindeki diğer tüm işlevlere sahip için benzersiz bir deneyim sağlar.
+Mac için Visual Studio kaynak Düzenleyicisi, IDE 'deki hata ayıklama, yeniden düzenleme ve sürüm denetimi tümleştirmesi gibi tüm diğer işlevlerle sorunsuz bir deneyim sağlar.
 
-Bu makalede, bazı kaynak Düzenleyicisi anahtar özelliklerini tanıtır ve mümkün olduğunca fazla verimli olması için Mac için Visual Studio nasıl kullanabileceğinizi keşfediyor.
+Bu makalede, kaynak Düzenleyicisi 'nin bazı önemli özellikleri tanıtılmakta ve Mac için Visual Studio olabildiğince üretken olmak için nasıl kullanabileceğiniz açıklanır.
 
 ## <a name="the-source-editor-experience"></a>Kaynak Düzenleyicisi deneyimi
 
-Görüntüleme ve verimli bir şekilde kodunuzda taşıma geliştirme iş akışı önemli bir parçasıdır. Tam olarak nasıl görüntülemek ve geliştiricilerin - ve genellikle projeler arasında değişen bir kişisel karar kod korumak karar.
+Kod genelinde etkili bir şekilde görüntüleme ve taşıma, geliştirme iş akışının ayrılmaz bir parçasıdır. Kodu görüntüleme ve sürdürme konusunda tam olarak nasıl karar vereceğiniz, geliştiriciler arasında ve genellikle projeler arasında farklılık gösteren bir kişisel karardır.
 
-Mac için Visual Studio'nun platformlar arası geliştirme erişilebilir ve kadar kullanışlı hale getirmek için çok sayıda güçlü özellikler sunar. Aşağıdaki bölümlerde, önemli noktalardan bazıları açıklanmaktadır.
+Mac için Visual Studio platformlar arası geliştirmeyi erişilebilir ve mümkün olduğunca kullanışlı hale getirmek için birçok güçlü özellik sunar. Aşağıdaki bölümlerde bazı vurguların bazıları açıklanır.
 
-## <a name="code-folding"></a>Kod Katlama
+## <a name="code-folding"></a>Kod katlama
 
-Kod katlamayı büyük kaynak kodu dosyaları göster veya gizle tam yönergeleri, ortak kod ve açıklamalar ve #region deyimleri kullanma gibi kod bölümlerini geliştiricilerin vererek yönetmenizi kolaylaştırır. Kod katlamayı Visual Studio'da varsayılan olarak Mac için devre dışı
+Kod katlama, geliştiricilerin yönergeler, demirbaş kodu ve açıklamaları ve #region deyimlerini kullanma gibi tüm kod bölümlerini göstermesini veya gizlemesini sağlayarak büyük kaynak kodu dosyalarını yönetmeyi kolaylaştırır. Kod katlama Mac için Visual Studio varsayılan olarak kapalıdır
 
-Kod katlamayı üzerinde etkinleştirmek için gidin **Visual Studio > Tercihler > Metin Düzenleyicisi > Genel > kod Katlama**:
+Kod katlamayı açmak için **Visual Studio > tercihleri > metin Düzenleyicisi ' ne gidin > genel > kod katlaması**:
 
-![Kod Katlama Seçenekleri](media/source-editor-image1.png)
+![Kod katlama seçenekleri](media/source-editor-image1.png)
 
-Bu menü seçeneği #regions ve açıklamalar, kod yerine adlandırılmış bir ipucu görüntüleyen varsayılan olarak katlamak için de içerir.
+Bu menü Ayrıca, kod yerine adlandırılmış bir ipucu görüntüleyerek #regions ve açıklamaları varsayılan olarak katlama seçeneğini de içerir.
 
-Göstermek veya gizlemek bölümleri için satır numarası yanındaki açıklama pencere öğesini kullanın:
+Bölümleri göstermek veya gizlemek için, satır numarasının yanındaki açıklama pencere öğesini kullanın:
 
-![Gösterme veya gizleme kod olarak bölümlerde](media/source-editor-image2.png)
+![Koddaki bölümleri gösterme veya gizleme](media/source-editor-image2.png)
 
-Kullanarak büyük Katlama gizleme ve gösterilmesi arasında geçiş yapabilirsiniz **Görüntüle > Katlama > Aç/Kapat Katlama / tüm büyük Katlama geçiş** menü öğesi:
+Ayrıca, **görünüm > katlamayı kullanarak katların** gösterilmesi ve gizlenmesi arasında geçiş yapabilirsiniz > katlama ve menüyü değiştir menü öğesi:
 
-![Menü öğesi Katlama](media/source-editor-image19.png)
+![Katlama menüsü öğesi](media/source-editor-image19.png)
 
-Bu menü öğesi, etkinleştirme veya devre dışı kod katlamayı de kullanılabilir.
+Bu menü öğesi, kod katlamayı etkinleştirmek veya devre dışı bırakmak için de kullanılabilir.
 
 ## <a name="white-space"></a>Boşluk
 
-Görünmez karakterler kaynak kodunda görüntülemeniz için gerekli olabilir. Kod standartlarımız, koda ve gereksiz yere değil yer harcama bağlılığı emin olmak için görünür bir yoludur. Ayrıca yazarken kullanışlıdır F#, kod değerlendirmek için tam olarak girintili satırlarına bağlıdır.
+Kaynak kodda görünmeyen karakterleri görüntülemeniz gerekebilir. Bu, kodlama standartlarına bağlı olduğunuzdan ve gereksiz bir şekilde alan beklediğinizden emin olmak için görülebilir bir yoldur. Kod değerlendirmek için tam olarak girintili F#satırlara dayanan yazma sırasında da yararlıdır.
 
-Boşluk giderek göstermek için seçenekleri ayarlayın **Visual Studio > Tercihler > Metin Düzenleyicisi > işaretleyiciler ve Cetveller**. Bu seçenek olanak ayarı _olduğunda_ görünmez karakterler gösterilir: Hiçbir zaman seçimi veya her zaman:
+**Visual Studio > tercihleri > metin düzenleyicisi > işaretçileri ve cetvellere**giderek boşluğu göstermek için seçenekleri ayarlayın. Bu seçeneğin belirlenmesi, görünmeyen karakterlerin _ne zaman_ görüntüleneceğini ayarlamaya izin verir: hiçbir zaman, seçimde veya her zaman:
 
-![Görünmez karakterler seçeneklerini göster](media/source-editor-image3.png)
+![Görünmeyen karakter seçeneklerini göster](media/source-editor-image3.png)
 
-Sekmeler, boşluk ve satır sonlarını göstermek için bir seçenek de kullanılabilir:
+Sekmeleri, boşlukları ve satır sonlarını gösterme seçeneği de kullanılabilir:
 
-![Sekmeler ve alanları göster](media/source-editor-image4.png)
+![Sekmeleri ve boşlukları göster](media/source-editor-image4.png)
 
-Görünmez karakterler gri noktalar, aşağıdaki görüntüde gösterildiği gibi görüntülenir:
+Görünmez karakterler, aşağıdaki görüntüde gösterildiği gibi gri noktalar olarak görüntülenir:
 
-![Görüntülenen boşluk](media/source-editor-image22.png)
+![boşluk görüntülendi](media/source-editor-image22.png)
 
 ## <a name="ruler"></a>Cetvel
 
-Sütun cetvelini özellikle satır uzunluğu yönergeleri içeren bir ekip çalışırken satır uzunluğu belirlemek için yararlıdır. Sütun cetvelini açıp giderek kapatılabilir **Visual Studio > Tercihler > Metin Düzenleyicisi > işaretleyiciler ve Cetveller** seçerek (veya seçimini) **Göster sütun cetvelini**de gösterildiği gibi Aşağıdaki görüntüde:
+Sütun cetveli, özellikle satır uzunluğu yönergelerine sahip bir ekip üzerinde çalışırken, satır uzunluklarını belirlemek için faydalıdır. Aşağıdaki görüntüde gösterildiği gibi, **Visual Studio > tercihleri > metin düzenleyicisi > işaretçileri ve cetvellerinin** yanı sıra **sütun cetvelini**seçerek (veya seçimini kaldırarak), sütun cetveli açılabilir veya kapatılabilir:
 
-!["Show sütun cetvelini vurgulanmış" ile Tercihler iletişim kutusu](media/source-editor-image5.png)
+!["Sütun cetvelini göster" vurgulanmış Tercihler iletişim kutusu](media/source-editor-image5.png)
 
- Bu, kaynak düzenleyicisinde dikey açık gri çizgi olarak görüntüler.
+ Bu, kaynak düzenleyicide dikey açık gri çizgi olarak görüntülenir.
 
-## <a name="highlight-identifier-references"></a>Tanımlayıcı başvurularını vurgulamak
+## <a name="highlight-identifier-references"></a>Tanımlayıcı başvurularını Vurgula
 
-Başvurularıyla"seçeneğinin etkin vurgulama tanımlayıcı", kaynak kodunda herhangi bir sembol seçebilirsiniz ve o dosyadaki tüm diğer başvurular için görsel bir kılavuz Kaynak Düzenleyicisi sağlar. Bu seçeneği etkinleştirmek için şuraya gidin: **Visual Studio > Tercihler > Metin Düzenleyicisi > işaretleyiciler ve Cetveller** seçip _tanımlayıcı başvurularını vurgulamak_aşağıdaki görüntüde gösterildiği gibi:
+"Tanımlayıcı başvurularını Vurgula" seçeneği etkin olduğunda, kaynak kodda herhangi bir sembol seçebilirsiniz ve kaynak Düzenleyici bu dosyadaki diğer tüm başvurulara görsel kılavuz sağlar. Bu seçeneği etkinleştirmek için **Visual Studio > tercihleri > metin düzenleyicisi > işaretleyiciler ve cetveller** ' e gidin ve aşağıdaki görüntüde gösterildiği gibi _tanımlayıcı başvurularını Vurgula_' yı seçin:
 
-!["Vurgulanmış tanımlayıcı başvuruları Vurgula" ile Tercihler iletişim kutusu](media/source-editor-image6.png)
+!["Tanımlayıcı başvurularını Vurgula" vurgulanmış Tercihler iletişim kutusu](media/source-editor-image6.png)
 
-Vurgu rengi de bir atanan veya başvurulan belirten için yararlıdır. Bir şey atanırsa kırmızıyla vurgulanır. başvuru, mavi renkle vurgulanır:
+Vurgulamanın rengi, bir şeyin atandığını veya başvurulduğunu belirten da yararlıdır. Bir şey atanmışsa, kırmızı renkle vurgulanır; başvuruluyorsa mavi renkle vurgulanır:
 
-![Örnek gösteren Vurgu rengi](media/source-editor-image7.png)
+![Vurgulamanın rengini gösteren örnek](media/source-editor-image7.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi'ni (Windows için Visual Studio) özellikleri](/visualstudio/ide/writing-code-in-the-code-and-text-editor)
-- [Anahat oluşturma (Windows için Visual Studio)](/visualstudio/ide/outlining)
+- [Kod düzenleyicisinin özellikleri (Windows üzerinde Visual Studio)](/visualstudio/ide/writing-code-in-the-code-and-text-editor)
+- [Anahat oluşturma (Windows üzerinde Visual Studio)](/visualstudio/ide/outlining)

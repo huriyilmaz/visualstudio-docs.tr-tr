@@ -1,17 +1,17 @@
 ---
 title: Xamarin ile hata ayıklama
 description: Hata ayıklama, programlama için ortak ve gerekli bir parçasıdır. Yetişkinlere yönelik bir IDE olarak, Mac için Visual Studio hata ayıklamayı kolay hale getirmek için bir bütün özellik paketini içerir. Güvenli hata ayıklamadan veri görselleştirmesine kadar, bu makale Mac için Visual Studio ' de hata ayıklamanın tam potansiyelini nasıl kullanacağınızı açıklayacak.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: 96474925c5411d76395cb60ab1ad4851c1cbfa19
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: f62ebe21dcc5eb60927c0bc14617051aba3363e8
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73715944"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985019"
 ---
 # <a name="debugging-with-xamarin"></a>Xamarin ile hata ayıklama
 
@@ -41,7 +41,7 @@ IDE 'niz içinde bir kesme noktası ayarlamak için, düzenleyicinin kenar boşl
 
 ![Kesme noktaları listesi](media/debugging-image0a.png)
 
-## <a name="start-debugging"></a>Hata ayıklamayı Başlat
+## <a name="start-debugging"></a>Hata Ayıklamayı Başlat
 
 Hata ayıklamayı başlatmak için IDE 'nizin hedef cihazı veya benzer/öykünücü seçin:
 

@@ -1,93 +1,93 @@
 ---
 title: Kod Parçacıkları
-description: Mac için Visual Studio'da verimli bir şekilde programlanacağı kod parçacıkları kullanma
-author: conceptdev
-ms.author: crdun
+description: Mac için Visual Studio ' de kod parçacıklarını verimli bir şekilde kullanma
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 02/07/2019
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
-ms.openlocfilehash: 2def790511a69dc7b5cab8a5020f488e58b85db9
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 96344b72dd27095f8b9060078112fb767b1338fc
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693008"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984812"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
-Kod parçacıkları, genellikle olarak adlandırılan _kod şablonları_önceden yazılmış kod bloklarını düzenleme ve bunlar eklemeye izin verecek şekilde etkili programlama için kullanışlıdır. Yeni desenler, geliştirici olarak da öğrenmeye yönelik da sözdizimi emin değilseniz veya kod parçacıkları ortak desenler hızlı bir şekilde eklemek için kullanışlı olabilir. Şablonlar için sağlanan C#, F#, HTML, XML, Python ve Razor.
+Genellikle _kod şablonları_olarak anılan kod parçacıkları, önceden yazılmış kod bloklarının eklenmesine ve düzenlenmesine izin veren verimli programlama için yararlıdır. Kod parçacıklarını kullanmak, sık kullanılan desenleri kolayca eklemek veya geliştirici olarak sözdiziminin ne zaman öğreneceğinizden yeni desenler öğrenmek için kullanışlı olabilir. , F#, HTML, XML C#, Python ve Razor için sunulan şablonlar vardır.
 
-Bu bölümde, oluşturma, ekleme ve kod parçacıklarını kullanma açıklanmaktadır.
+Bu bölümde kod içinde kod parçacıklarının nasıl oluşturulacağı, ekleneceği ve kullanılacağı açıklanmaktadır.
 
-## <a name="inserting-a-snippet"></a>Bir kod parçacığı ekleme
+## <a name="inserting-a-snippet"></a>Kod parçacığı ekleme
 
-Kod parçacıkları, bunlardan bazıları aşağıda açıklanmıştır eklemek için bazı farklı yolu vardır:
+Kod parçacıkları eklemenin bazı farklı yolları vardır, bazıları aşağıda açıklanmıştır:
 
-- **Sekme genişletmeyi** &ndash; şablon adını yazmaya başlayın, liste ve ENTER tuşuna seçin **sekmesini**, **sekmesini** eklemek için:
+- **Sekme genişletme** &ndash; şablon adını yazmaya başlayın, listeden seçin ve eklemek için **sekme** **tuşuna basın** :
 
-  ![Sekme genişletmeyi kod](media/source-editor-image13.png)
+  ![Kodda sekme genişletme](media/source-editor-image13.png)
 
-- **Araç kutusu** &ndash; tüm kod parçacıkları listesini görüntülemek için araç takımını kullanın. Herhangi bir şablon kaynak kodu doğru konumda araç kutusundan sürükleyin:
+- **Araç** kutusu &ndash; tüm kod parçacıklarının listesini göstermek için araç kutusu panelini kullanın. Araç kutusundaki herhangi bir şablonu kaynak kodda doğru konuma sürükleyin:
 
-  [![Araç kutusu kod parçacıkları](media/source-editor-image14-sml.png)](media/source-editor-image14.png#lightbox)
+  [Araç kutusundaki kod parçacıklarını ![](media/source-editor-image14-sml.png)](media/source-editor-image14.png#lightbox)
 
-- **Şablonları komut Ekle** &ndash; şu anda bir şablon eklemek için set bağlama varsayılan anahtarı yok. Oluşturmak için Gözat **Visual Studio > Tercihler > anahtar bağlamaları** araması `template`. Bu bağlama düzen alanına istenen anahtar bağlaması ekleniyor sağlar, ardından **Uygula**:
+- **Şablonlar Ekle komutu** &ndash; Şu anda şablon eklemek için ayarlanmış varsayılan anahtar bağlama yok. Bir tane oluşturmak için **Visual Studio > tercihleri > anahtar bağlamaları** ' na giderek `template`arayın. Bu, istenen anahtar bağlamasının düzenleme bağlama alanına eklenmesini sağlar ve ardından **Uygula**' ya tıklayın:
 
-  ![İç Metin şablonu komutu](media/source-editor-image15.png)
+  ![İç içe şablon komutu](media/source-editor-image15.png)
 
 ## <a name="creating-a-new-template"></a>Yeni şablon oluşturma
 
-Birçok var olan şablonu kullanın ve düzenleme dilleri çeşitli olsa da, yeni şablonlar da giderek eklenebilir **Visual Studio > Tercihler > Metin Düzenleyicisi > kod parçacıkları**:
+Kullanabileceğiniz ve düzenleyebileceğiniz çeşitli dillerde birçok mevcut şablon varsa, **Visual Studio > tercihleri > metin düzenleyicisi > kod parçacıkları**' na giderek yeni şablonlar da eklenebilir.
 
-![Yeni şablon iç](media/source-editor-image12.png)
+![Yeni şablonu iç içe](media/source-editor-image12.png)
 
-Tuşuna **Ekle** veya **Düzenle** oluşturma veya düzenleme kod parçacıklarını düğmeleri.
+Kod parçacıkları oluşturmak veya düzenlemek için **Ekle** veya **Düzenle** düğmelerine basın.
 
-## <a name="keywords-in-code-snippets"></a>Kod parçacığı anahtar sözcükleri
+## <a name="keywords-in-code-snippets"></a>Kod parçacıkları içindeki anahtar sözcükler
 
-Düzenleyiciye bir kod parçacığı eklendikten sonra tanımlanan herhangi bir anahtar sözcük vurgulanır ve bunlar arasında sekmeyle gitmeyi düzenlenebilir. Anahtar sözcükler, kod parçacığında bir "değişken" gibi davranır ve bir dolar işareti koyarak tanımlanan `$` anahtar adından önce ve sonra. 
+Bir kod parçacığı düzenleyiciye eklendikten sonra, tanımlanan tüm anahtar sözcükler vurgulanır ve bunlar arasında sekme ile düzenlenebilir. Anahtar sözcükler, kod parçacığında bir "değişken" gibi davranır ve anahtar sözcüğünün adından önce ve sonra dolar işareti `$` girilerek tanımlanır. 
 
-**Şablonu Düzen** penceresini aşağıda gösterilmektedir, yerleşik düzenleme `prop` kod parçacığı. İki anahtar sözcüğü kod parçacığının içerdiği &ndash; `$type$` ve `$name$` &ndash; olabilen ek özelliklerini (varsayılan değer ve araç ipucu gibi), pencerenin sağ tarafında ayarla:
+**Şablonu Düzenle** penceresi aşağıda gösterilmektedir ve yerleşik `prop` parçacığı düzenlenmelidir. Kod parçacığı, pencerenin sağ tarafında daha fazla özellikleri (örneğin bir varsayılan değer ve araç ipucu) olabilen `$type$` ve `$name$` &ndash; &ndash; iki anahtar sözcük içerir:
 
-![Şablon pencere Düzenle](media/source-editor-image12z.png)
+![Şablon penceresini Düzenle](media/source-editor-image12z.png)
 
-Aşağıdaki alanlar, bir kod parçacığı tanımlamak için kullanılır:
+Aşağıdaki alanlar bir kod parçacığını tanımlamak için kullanılır:
 
-- **Kısayol** &ndash; metin kod parçacığını eklemek için kullanıcı türleri.
-- **Grup** &ndash; parçacıkları arada gruplandırılır kod parçacığı içerik menüsünü kullanarak bu değeri.
-- **Açıklama** &ndash; parçacığının amaçlı açıklaması.
-- **MIME** &ndash; hangi dosya türleri kod parçacığı kullanılabilir denetler.
-- **Genişletilebilir şablonu** &ndash; kısayol tuşlarına basarak imleci kod parçacığı eklenebilir böylece seçili emin olun.
-- **Şablon çevrelemeyi olduğu** &ndash; bu kısayol, listelemek için bu seçeneği işaretleyin **Şununla Çevrele...**  Düzenleyicisi'nde içerik menüsü.
-- **Şablon metni** &ndash; gerçek kod parçacığı düzenleyicide yerleşik eklenir. Anahtar sözcük yer tutucuları, dolar işareti belirteciyle örn çevreleyen tarafından tanımlanabilir. `$type$`.
-- **Anahtar özellik paneli** &ndash; bir anahtar sözcük seçmek için sağ tarafında penceresinin, açılır listede üstündeki kullanın (örn `type`) ve varsayılan değer ve araç ipucu gibi özelliklerini düzenleyin.
+- **Kısayol** &ndash; parçacığı eklemek için Kullanıcı tarafından kullanılacak metni.
+- **Grup** &ndash; parçacıkları, bu değer kullanılarak kod parçacığı içeriği menüsünde birlikte gruplandırılır.
+- **Açıklama** &ndash; parçacığın amacının açıklaması.
+- **Mıme** &ndash;, kod parçacığının hangi dosya türlerini kullanılabildiğini denetler.
+- **Genişletilebilir şablon** &ndash;, bu, kod parçacığının, kısayolu yazarak imlece eklenebilmesini sağlamak için kontrol edilir.
+- **Şablonla çevredir** &ndash; bu kısayolu düzenleyicideki... Içerik menüsüyle **çevrelemek** için bu seçeneği işaretleyin.
+- **Şablon metni** , düzenleyiciye eklenecek olan gerçek kod parçacığına &ndash;. Anahtar sözcük yer tutucuları, bir belirteci dolar işareti gibi çevreleyerek tanımlanabilir. `$type$`.
+- **Anahtar sözcük özelliği paneli** &ndash; pencerenin sağ tarafında, en üstteki açılan listeyi kullanarak bir anahtar sözcük seçin (örn. `type`) ve varsayılan değer ve araç ipucu gibi özellikleri düzenleyin.
 
-## <a name="using-keywords-in-the-editor"></a>Anahtar sözcükler Düzenleyicisi'nde kullanma
+## <a name="using-keywords-in-the-editor"></a>Düzenleyicide anahtar sözcükleri kullanma
 
-Yukarıda bir tanımlandığı gibi bir kod parçacığı anahtar sözcükleri ile kullanmak için tuşuna basın ve kısayol yazın **sekmesini** iki kez ve kod parçacığı içeriği imlecin eklenir:
+Yukarıda tanımlanan gibi anahtar sözcüklerle bir kod parçacığı kullanmak için, kısayolu yazın ve **Tab** tuşuna iki kez basın ve kod parçacığı içerikleri imlecin üzerine eklenir:
 
-![Eklenen kod parçacığı anahtar sözcükleri gösteriliyor](media/source-editor-image12a.png)
+![Anahtar sözcükleri gösteren parçacık ekleniyor](media/source-editor-image12a.png)
 
-Tuşuna **sekmesini** arasında taşımak için anahtar `object` ve `MyProperty` sınıfınız için kod parçacığı özelleştirmek için.
+Sınıfınız için kod parçacığını özelleştirmek üzere `object` ve `MyProperty` arasında gezinmek için **Tab** tuşuna basın.
 
-Bunun gibi bir kod parçacığı, bir anahtar sözcük yinelenebilir `for` örnek, bildirim `$i$` anahtar sözcüğü 3 kez görüntülenir:
+Bir anahtar sözcük, bu `for` örneği gibi bir kod parçacığında yinelenebilir `$i$` anahtar sözcüğünün 3 kez göründüğünü fark edebilirsiniz:
 
-![Yinelenen anahtar sözcüklerle parçacık şablonu](media/source-editor-image12b.png)
+![Yinelenen anahtar sözcüklerle kod parçacığı şablonu](media/source-editor-image12b.png)
 
-Düzenleyici'de kullanıldığında **sekmesini** anahtar ilk arasında geçirir `i` ve `max`. Varsa, üzerine yazma `i` üç hepsinin farklı bir değişken adı ile güncelleştirilir:
+Düzenleyicide kullanıldığında, **Tab** tuşu ilk `i` ve `max`arasında geçiş yapar. `i` farklı bir değişken adıyla üzerine yaz, üç örnek de güncelleştirilir:
 
-![Birden çok anahtar sözcükleri gösteren eklenen kod parçacığı](media/source-editor-image12c.png)
+![Birden çok anahtar sözcük gösteren yerleştirilmiş kod parçacığı](media/source-editor-image12c.png)
 
-### <a name="reserved-keywords"></a>ayrılmış anahtar sözcükler
+### <a name="reserved-keywords"></a>Ayrılmış anahtar sözcükler
 
-Bir kod parçacığında kullanabileceğiniz iki ayrılmış anahtar sözcükler vardır:
+Bir kod parçacığında kullanabileceğiniz iki ayrılmış anahtar sözcük vardır:
 
-- `$selected$` &ndash; Kod parçacığı varsa **şablon çevrelemeyi olan** işaretli bu anahtar sözcük kod parçacığı seçildi, düzenleyicide vurgulanan metin tarafından değiştirilir.
-- `$end$` &ndash; İmleç bir kod parçacığı anahtar sözcükleri düzenleme kullanıcı sona erdiğinde konumunda yerleştirilecek `$end$` anahtar sözcüğü.
+- `$selected$` &ndash;, kod parçacığında **şablonla birlikte** bulunuyorsa, bu anahtar sözcük, kod parçacığı seçildiğinde düzenleyicide vurgulanan metinle birlikte değişir.
+- `$end$` &ndash; Kullanıcı bir kod parçacığında anahtar sözcükleri düzenlemesini bitirdiğinde, imleç `$end$` anahtar sözcüğünün konumuna yerleştirilir.
 
-`for` Kod parçacığı önceki bölümde hem bu ayrılmış anahtar sözcükler örneğidir.
+Önceki bölümde `for` parçacığı, bu ayrılmış anahtar sözcüklerin her ikisine de bir örnektir.
 
-Başvurmak [Visual Studio kod parçacıkları başvurusu](/visualstudio/ide/code-snippets-schema-reference#keywords) daha fazla bilgi için.
+Daha fazla bilgi için [Visual Studio kod parçacıkları başvurusuna](/visualstudio/ide/code-snippets-schema-reference#keywords) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod parçacıkları (Windows için Visual Studio)](/visualstudio/ide/code-snippets)
+- [Kod parçacıkları (Windows üzerinde Visual Studio)](/visualstudio/ide/code-snippets)

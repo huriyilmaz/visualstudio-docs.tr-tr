@@ -2,15 +2,15 @@
 title: IDE erişilebilirlik seçeneklerini ayarlama
 description: Mac için Visual Studio erişilebilirlik seçeneklerini ayarlamaya giriş
 author: alanjclark
-ms.author: alcl
+ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 87D22340-2BE6-40EE-ACFD-3CF1BA886175
-ms.openlocfilehash: b0bafdefe65d4bbfe616d51913096faaaf033eb2
-ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
+ms.openlocfilehash: aece4bec978b609dd1fd5f67d2562bd87f847a3a
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342318"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985123"
 ---
 # <a name="set-ide-accessibility-options"></a>IDE erişilebilirlik seçeneklerini ayarlama
 
@@ -23,15 +23,15 @@ MacOS 'a doğrudan yerleştirilmiş özelliklerin yanı sıra Mac için Visual S
 1. **Görünüm (menü)** öğesini seçin ve sonra **Yakınlaştır (&#8984;+)** veya **uzaklaştır&#8984;(-)** seçeneğini belirleyin.
 
 > [!TIP]
-> İçeriği varsayılan boyuta sıfırlamak için, **Görünüm (menü)**  > **Normal boyut&#8984;(0)** seçeneğini belirleyebilirsiniz.
+> İçeriği varsayılan boyuta sıfırlamak için, **Normal boyut (&#8984;0)**  > **Görünüm (menü)** seçeneğini belirleyebilirsiniz.
 
 ## <a name="change-the-content-font-and-size"></a>İçerik yazı tipini ve boyutunu değiştirme
 
-Mac için Visual Studio çoğu defterde içeriğin yazı tipini ve boyutunu özelleştirmek mümkündür. Şöyle:
+Mac için Visual Studio çoğu defterde içeriğin yazı tipini ve boyutunu özelleştirmek mümkündür. Bunun için:
 
-1. **Visual Studio (menü)**  >  tercihleri ' ne git **... (&#8984;,)** .
+1. **Visual Studio 'ya git (menü)**  > **tercihleri... (&#8984;,)** .
 
-1. **Tercihler**' de, **ortam** > **yazı tipi**' ne gidin.
+1. **Tercihler**' de, **ortam** > **yazı tipleri**' ne gidin.
 
 1. **Metin Düzenleyicisi**, **genel Pad metni**veya **Çıkış paneli içerikleri**için yazı tipi ve boyut düğmesini seçin.
 
@@ -44,9 +44,9 @@ Mac için Visual Studio çoğu defterde içeriğin yazı tipini ve boyutunu öze
 
 Bazı kullanıcılar varsayılan renk düzeninin karşıtlığın veya renk gereksinimlerinin karşılamaz olduğunu fark edebilir. Mac için Visual Studio, iki yüksek karşıtlık teması da dahil olmak üzere, kullanıcının seçebileceğiniz birkaç alternatif teması vardır.
 
-1. **Visual Studio (menü)**  >  tercihleri ' ne git **... (&#8984;,)** .
+1. **Visual Studio 'ya git (menü)**  > **tercihleri... (&#8984;,)** .
 
-1. **Tercihler**bölümünde **metin düzenleyici** > **renk teması**' na gidin.
+1. **Tercihler**' de, **metin düzenleyici** > **renk teması**' na gidin.
 
 1. İstediğiniz temayı seçin.
 

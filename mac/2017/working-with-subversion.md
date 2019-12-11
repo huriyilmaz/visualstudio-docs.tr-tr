@@ -1,59 +1,59 @@
 ---
 title: Subversion ile çalışma
-description: Subversion, Mac için Visual Studio kullanarak
-author: conceptdev
-ms.author: crdun
+description: Mac için Visual Studio alt sürüm kullanılıyor.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 7dcbd619fe0c1a0ab84a8667f5a781d006f80999
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e5a9dd8120dd312bfc3e1c8905a725a58cca0e92
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62985555"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983529"
 ---
 # <a name="working-with-subversion"></a>Subversion ile çalışma
 
-Subversion tek ana verilerin bir kopyasını merkezi denetlemenizi sağlayan merkezi sürüm denetim sistemidir. Aksine, Git, Subversion deposu denetimi deponun tamamı kopyalama değil, yalnızca o noktasında bir anlık görüntüsünü alır.
+Alt sürüm, merkezi verilerin tek bir ana kopyasını denetlemenizi sağlayan merkezi sürüm denetim sistemidir. Git 'in aksine bir alt sürüm deposu, deponun tamamını kopyalamaz ve bu noktada yalnızca bir anlık görüntü alır.
 
-Subversion, kullanıcının aynı anda aynı Havuzda çalışmasına izin vermek için bir kopyalama-değiştirme-merge modeli kullanır. Başka bir deyişle, her kullanıcı bunlar birbirinden bağımsız olarak çalıştığı merkezi veri yerel ya da çalışır durumda bir kopyasını oluşturur. Değişiklikleri kopyaları kullanıcılara kronolojik bir biçimde birleştirilir.
+Alt sürüm, kullanıcıların aynı depoda aynı anda çalışmasına izin vermek için bir kopyalama-değiştirme-birleştirme modeli kullanır. Bu, her kullanıcının bağımsız olarak çalıştıkları merkezi verilerin yerel veya çalışan bir kopyasını oluşturduğu anlamına gelir. Kullanıcı çalışma kopyalarında yapılan değişiklikler kronolojik biçimde birleştirilir.
 
-Örneğin, kullanıcı A ve B kullanıcısına bir kopyasından uzak depoya ve her Değiştir dosyaları kullanıma olduğunu düşünün. Kullanıcı A, değişikliklerin tamamlanır ve Uzaktan kaydeder. Kullanıcı B işlerini işlemeler önce değişikliklerle birleştirme kullanıcı A'ın değişiklikler uzak, kendi çalışma kopyası güncelleştirmelisiniz.
+Örneğin, A kullanıcısının A ve B kullanıcısının uzak depodan bir kopyayı kontrol etmekte olduğunu ve bunların her birinin dosyayı değiştirmekte olduğunu düşünün. Kullanıcı A değişiklikleri tamamlar ve uzaktan kaydeder. Kullanıcı B işlerini işlemeden önce, çalışma kopyalarını, Kullanıcı A 'nın değişikliklerinde bulunan değişikliklerle güncelleştirmeleri gerekir.
 
-Aşağıdaki bölümlerde nasıl Subversion Visual Studio'da sürüm denetimi için Mac için kullanılabileceğini keşfedin
+Aşağıdaki bölümlerde, Mac için Visual Studio ' de sürüm denetimi için alt sürümün nasıl kullanılabileceği araştırılamaz.
 
-Aşağıdaki görüntüde, sürüm denetimi menü öğesi tarafından Mac için Visual Studio tarafından sağlanan seçenekleri gösterir:
+Aşağıdaki görüntüde, sürüm denetim menüsü öğesi tarafından Mac için Visual Studio tarafından belirtilen seçenekler gösterilmektedir:
 
 ![Sürüm denetimi menü öğeleri](media/version-control-svnVersionControlMenu.png)
 
-## <a name="checkout"></a>Kullanıma alma...
+## <a name="checkout"></a>Kullanıma al...
 
-Uzak bir Subversion depo kullanmaya başlamadan önce yerel makinenizde bu dizine çalışan bir kopyasını oluşturmak için depoya göz atın.
+Uzak bir alt sürüm deposunu kullanmaya başlamadan önce, yerel makinenizde bu dizinin çalışma kopyasını oluşturmak için depoyu inceleyin.
 
-Kullanma hakkında bilgi edinmek için **kullanıma alma** Mac için Visual Studio özelliği, adımları [bir Subversion deposu ayarlama](set-up-subversion-repository.md) bölümü.
+Mac için Visual Studio ' de **kullanıma alma** özelliğini kullanma hakkında bilgi edinmek için, [bir alt sürüm deposu ayarlama](set-up-subversion-repository.md) bölümündeki adımları izleyin.
 
-## <a name="update-solution"></a>Güncelleştirme çözümü
+## <a name="update-solution"></a>Çözümü Güncelleştir
 
-Uzak bir depo kullanırken, diğer kullanıcılar dosyaları, eski çalışma kopyanıza yapmadan değiştiriliyor olabilir olduğunu unutmamak önemlidir. Çakışma olasılığına çalışma başlatılmadan önce ve gerçekleştirmeden önce depodan değişiklikleri çözümünüze çekmek için her zaman önerilir. Değişiklikleri çıkarmak için seçin **sürüm denetimi > güncelleştirme çözümünü** menü öğesi.
+Uzak bir depo kullanırken, diğer kullanıcıların dosyaları değiştiriyor olabileceğini unutmamak önemlidir. Bu, çalışma kopyanızın güncelliğini yitirmiş hale getirir. Olasılığına ' de, her zaman, iş başlamadan önce ve işlemeden önce, depodaki tüm değişiklikleri çözümünüze çekmeye önerilir. Çekme değişiklikleri yapmak için **sürüm denetimi > çözüm** menü öğesini seçin.
 
-## <a name="review-solution-and-commit"></a>Gözden geçirme çözüm ve işleme
+## <a name="review-solution-and-commit"></a>Çözümü gözden geçir ve Yürüt
 
-Dosyalardaki değişiklikler gözden geçirmek için değişiklikleri, sorumluyu günlük kullanın ve aşağıdaki görüntüde gösterildiği gibi her belge sekmelerinde birleştirme:
+Dosyalardaki değişiklikleri gözden geçirmek için, aşağıdaki görüntüde gösterildiği gibi her bir belgedeki değişiklikleri, güçlendirme, günlük ve birleştirme sekmelerini kullanın:
 
 ![Sürüm denetimi sekmeleri](media/version-control-vcTabs.png)
 
-Göz atarak bir projedeki tüm değişiklikleri gözden **sürüm denetimi > İnceleme çözüm ve işleme** menü öğesi:
+Sürüm denetimine göz atarak bir projedeki tüm değişiklikleri gözden geçirin **> çözüm ve COMMIT** menü öğesi:
 
-![Çözümü gözden geçirin](media/version-control-vcStatus.png)
+![Çözümü gözden geçir](media/version-control-vcStatus.png)
 
-Bu, tüm değişiklikleri geri al, düzeltme eki oluşturma seçeneğine sahip bir proje her dosyanın görüntüleme izin verir veya işleyin.
+Bu, bir proje dosyasındaki tüm değişiklikleri alma, düzeltme eki oluşturma veya tamamlama seçeneğiyle görüntülemeyi sağlar.
 
-Dosya uzak depoya kaydetmeye işleme basın..., bir işleme iletisi girin ve Kaydet düğmesi ile onaylayın:
+Uzak depoya bir dosyayı yürütmek için, Yürüt... düğmesine basın, bir teslim iletisi girin ve Kaydet düğmesini kullanarak onaylayın:
 
-![Dosya işleniyor](media/version-control-svnCommit.png)
+![Dosya yürütülüyor](media/version-control-svnCommit.png)
 
-Bu değişiklikler burada tüm değişiklikler yeni bir düzeltme oluşturdukları depoya gönderir.
+Bu işlem, değişiklikleri depoya tüm değişikliklerinizin yeni düzeltmesini oluşturduklarında gönderir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bir Subversion deposu ayarlama](set-up-subversion-repository.md)
+- [Bir alt sürüm deposu ayarlama](set-up-subversion-repository.md)

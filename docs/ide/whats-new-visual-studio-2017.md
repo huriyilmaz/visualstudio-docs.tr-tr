@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 79570fe403c12c89860a67683456a3d6ca3d3f01
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: de26054894783df283d38223a59741c0500d0bc5
+ms.sourcegitcommit: 0a8855572c6c88f4b2ece232c04aa124fbd9cec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189607"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955042"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017’deki yenilikler
 
@@ -50,7 +50,7 @@ Aşağıda, önceki sürümden bu yana yapılan değişikliklerin Yüksek düzey
 
 Aşağıda, Visual Studio 2017 ' deki en önemli iyileştirmeler ve yeni özelliklerden bazıları hakkında daha ayrıntılı bilgiler verilmiştir.
 
-## <a name="redefined-fundamentals"></a>Temelleri yeniden tanımlandı
+## <a name="redefined-fundamentals"></a>Temel kavramlar yeniden tanımlandı
 
 ### <a name="a-new-setup-experience"></a>Yeni bir kurulum deneyimi
 
@@ -143,60 +143,60 @@ Ayrıca, Visual Studio DevLabs uzantısı [Için sürekli teslim araçlarındaki
 
 Daha fazla bilgi için [metin bul ve Değiştir](finding-and-replacing-text.md) sayfasının [Çoklu şapka seçimi](finding-and-replacing-text.md#multi-caret-selection) bölümüne bakın.
 
-#### <a name="keep-keybinding-profiles-consistent"></a>KeyBinding profillerini tutarlı tut
+#### <a name="keep-keybinding-profiles-consistent"></a>Keep keybinding profiles consistent
 
-**15,8 ' de yeni**: artık, anahtar bağlamalarınızı iki yeni klavye profili ile araçlar arasında tutarlı tutabilirsiniz: Visual Studio Code ve ReSharper (Visual Studio). Bu düzenleri **araçlar** > **Seçenekler** altında, **genel** > **klavye** ve üst açılan menü > bulabilirsiniz.
+**New in 15.8**: Now, you can keep your keybindings consistent across tools with two new keyboard profiles: Visual Studio Code and ReSharper (Visual Studio). You can find these schemes under **Tools** > **Options** > **General** > **Keyboard** and the top drop-down menu.
 
-  ![Visual Studio Code ve ReSharper için yeni KeyBinding profilleri](media/vs-keyboard-mappings-code-resharper.png)
+  ![New keybinding profiles for Visual Studio Code and ReSharper](media/vs-keyboard-mappings-code-resharper.png)
 
-#### <a name="use-new-refactorings"></a>Yeni yeniden düzenlemeler kullan
+#### <a name="use-new-refactorings"></a>Use new refactorings
 
-Yeniden düzenleme, kodunuzun yazıldıktan sonra geliştirilmesi işlemidir. Yeniden düzenleme, kodun davranışını değiştirmeden kodun iç yapısını değiştirir. Yeni yeniden düzenlemeler sıklıkla ekleyeceğiz. İşte yalnızca birkaç:
+Refactoring is the process of improving your code after it has been written. Refactoring changes the internal structure of the code without changing its behavior. We add new refactorings often; here are just a few:
 
-* Parametre Ekle (Callsitesinden)
-* Geçersiz kılmalar oluştur
-* Adlandırılmış bağımsız değişken Ekle
-* Parametreler için null denetimi Ekle
-* Sabit değerlere basamak ayırıcıları ekleyin
-* Sayısal değişmez değerler için tabanı Değiştir (örneğin, onaltılı-ikili)
-* Geçiş için Dönüştür
-* Kullanılmayan değişkeni kaldır
+* Add parameter (from CallSite)
+* Generate overrides
+* Add named argument
+* Add null-check for parameters
+* Insert digit-separators into literals
+* Change base for numeric literals (for example, hex to binary)
+* Convert if-to-switch
+* Remove unused variable
 
-Daha fazla bilgi için bkz. [hızlı eylemler](common-quick-actions.md).
+For more information, see [Quick Actions](common-quick-actions.md).
 
-#### <a name="interact-with-git"></a>Git ile etkileşim kurma
+#### <a name="interact-with-git"></a>Interact with Git
 
-Visual Studio 'da bir projeyle çalışırken, kodunuzu ayarlayıp hızlı bir şekilde kaydedebilir ve bir git hizmetine yayımlayabilirsiniz. Git depolarınızı, IDE 'nin sağ alt köşesindeki düğmelerden menü tıklamalarını kullanarak da yönetebilirsiniz.
+When you are working with a project in Visual Studio, you can set up and quickly commit and publish your code to a Git service. You can also manage your Git repositories by using menu clicks from buttons in the bottom right-hand corner of the IDE.
 
-![Visual Studio 2017 Git iletişim kutusuyla etkileşime girer](media/vsIDE-GitInteraction.png)
+![Visual Studio 2017 interacts with the Git dialog](media/vsIDE-GitInteraction.png)
 
-#### <a name="experience-improved-navigation-controls"></a>Gelişmiş gezinti denetimleri deneyimi
+#### <a name="experience-improved-navigation-controls"></a>Experience improved navigation controls
 
-Büyük ve daha az sayıda güvenle, A 'dan B 'ye başlamanıza yardımcı olacak gezinti deneyimini yeniledi.
+We've refreshed the navigation experience to help you get from A to B with greater confidence and fewer distractions.
 
-* **15,4 ' deki yenilikler**: **tanıma git** (**CTRL**+**tıklama** veya **F12**) &ndash; fare kullanıcıları, **CTRL** tuşuna basarak ve üyeye tıklayarak üyenin tanımına gitmek için daha kolay bir yoldur. **CTRL** tuşuna basmak ve bir kod sembolünün üzerine gelindiğinde, bunun üzerine gelin ve bir bağlantıya dönüşür. Daha fazla bilgi için bkz. [Tanıma Git ve açıklama tanımı](go-to-and-peek-definition.md) .
+* **New in 15.4**: **Go To Definition** (**Ctrl**+**click** or **F12**) &ndash; Mouse users have an easier way to navigate to the definition of a member by pressing **Ctrl** and then clicking the member. Pressing **Ctrl** and hovering over a code symbol will underline it and turn it into a link. See [Go To Definition and Peek Definition](go-to-and-peek-definition.md) for more information.
 
-* Herhangi bir temel türden veya Üyeden çeşitli uygulamalarına gitmek &ndash; **uygulamaya gidin** (**CTRL**+**F12**).
+* **Go To Implementation** (**Ctrl**+**F12**) &ndash; Navigate from any base type or member to its various implementations.
 
-* Tüm dosya/tür/üye/sembol bildirimine doğrudan gitmek &ndash; **tümüne git** (**CTRL**+**t** veya **CTRL**+ **,** ). Sonuç listenizi filtreleyebilir veya sorgu sözdizimini kullanabilirsiniz (örneğin, dosyalar için "f searchTerm", türler için "t searchTerm" vb.).
+* **Go To All** (**Ctrl**+**T** or **Ctrl**+ **,** ) &ndash; Navigate directly to any file/type/member/symbol declaration. You can filter your result list or use the query syntax (for example, "f searchTerm" for files, "t searchTerm" for types, etc.).
 
-  ![Gelişmiş tümüne git](media/vs2017ide-navigation-go-to.png)
+  ![Improved Go To All](media/vs2017ide-navigation-go-to.png)
 
-* **Tüm başvuruları bul** (**Shift**+**F12**) &ndash; söz dizimi renklendirmesi ile, tüm başvuru sonuçlarını proje, tanım ve yol birleşimine göre bul ' u gruplandırabilirsiniz. Ayrıca, özgün sonuçlarınızı kaybetmeden diğer başvuruları bulmaya devam edebilmeniz için "kilitle" sonuçlarını da kullanabilirsiniz.
+* **Find All References** (**Shift**+**F12**) &ndash; With syntax colorization, you can group Find All Reference results by a combination of project, definition, and path. You can also "lock" results so that you can continue to find other references without losing your original results.
 
-  ![Yeni tüm başvuruları bul aracı](media/vs2017ide-find-all-references.png)
+  ![New Find All References tool](media/vs2017ide-find-all-references.png)
 
-* **Yapı görselleştiricisi** &ndash; noktalı, gri dikey çizgiler (girinti kılavuzlarından), görünüm çerçevmenizde bağlam sağlamak için kodda yer işareti olarak davranır. Bunları popüler üretkenlik güç araçlarından de tanıyabilirsiniz. Bu özellikleri, herhangi bir zamanda kaydırma yapmak zorunda kalmadan istediğiniz zaman kod bloğunu görselleştirmek ve keşfedebilmeniz için kullanabilirsiniz. Satırların üzerine gelindiğinde, bu bloğun ve üst öğelerinin açılmasını gösteren bir araç ipucu görüntülenir. TextMate dilmars aracılığıyla desteklenen dillerin yanı sıra C#, VISUAL BASIC ve XAML tarafından da kullanılabilir.
+* **Structure Visualizer** &ndash; Dotted, gray vertical lines (indent guides) act as landmarks in code to provide context within your frame of view. You may recognize them from the popular Productivity Power Tools. You can use them to visualize and discover what block of code you're in at any time without having to scroll. Hovering over the lines displays a tooltip that shows you the opening of that block and its parents. It's available for all the languages supported via TextMate grammars, as well as C#, Visual Basic, and XAML.
 
-  ![Visual Studio 2017 yapı görselleştiricisi](media/vsIDE-StructureVisualizer.png)
+  ![Visual Studio 2017 structure visualizer](media/vsIDE-StructureVisualizer.png)
 
-Yeni üretkenlik özellikleri hakkında daha fazla bilgi için bkz. [Visual Studio 2017: üretkenlik, performans ve Iş ortakları](https://devblogs.microsoft.com/visualstudio/visual-studio-2017-productivity-performance-and-partners/) blog gönderisi.
+For more information about the new productivity features, see the [Visual Studio 2017: Productivity, Performance, and Partners](https://devblogs.microsoft.com/visualstudio/visual-studio-2017-productivity-performance-and-partners/) blog post.
 
 ### <a name="visual-c"></a>Visual C++
 
-Visual Studio 'da, Visual Studio ile temel yönergeleri dağıtma C++ , c++ 11 ve C++ özellikleri için gelişmiş destek eklenerek derleyiciyi güncelleştirme, ve işlevleri ekleme ve güncelleştirme gibi çeşitli geliştirmeler göreceksiniz. C++ Kütüphaneler. Ayrıca C++ IDE, yükleme iş yükleri ve daha birçok performansı geliştirdik.
+You'll see several improvements in Visual Studio, such as distributing C++ Core Guidelines with Visual Studio, updating the compiler by adding enhanced support for C++11 and C++ features, and adding and updating functionality in the C++ libraries. We've also improved the performance of the C++ IDE, installation workloads, and more.
 
-Ayrıca, [ C++için geliştirici topluluğu ](https://developercommunity.visualstudio.com/spaces/62/index.html "İçin geliştirici topluluğuC++")aracılığıyla müşteriler tarafından gönderilen, derleyici ve araçlarda 250 hata ve bildirilen sorunları düzelttik.
+As well, we've fixed over 250 bugs and reported issues in the compiler and tools, many submitted by customers through the [Developer Community for C++](https://developercommunity.visualstudio.com/spaces/62/index.html "İçin geliştirici topluluğuC++").
 
 Tüm ayrıntılar için bkz. [Visual için visual 2017 C++ 'deki](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio) yenilikler sayfası.
 
@@ -317,7 +317,7 @@ Daha fazla bilgi için bkz. [tanıtma App Center: bulut blog gönderisinde uygul
 
 ## <a name="cross-platform-development"></a>Platformlar arası geliştirme
 
-### <a name="redgate-data-tools"></a>Redgate veri araçları
+### <a name="redgate-data-tools"></a>Redgate Veri Araçları
 
 DevOps yeteneklerini SQL Server veritabanı geliştirmeye genişletmek için, Redgate veri araçları artık Visual Studio 'da kullanılabilir.
 
@@ -362,7 +362,7 @@ Daha fazla bilgi için [Unity için Visual Studio Araçları](../cross-platform/
 
 Daha fazla bilgi için [Visual Studio Tools for AI](../ai/about-ai-tools.md) sayfasına bakın.
 
-## <a name="whats-next"></a>Sıradaki
+## <a name="whats-next"></a>Sırada ne var?
 
 Visual Studio 2017 ' i genellikle geliştirme deneyiminizi daha da iyi hale getirebileceğiniz yeni özelliklerle güncelleştiririz. Deneysel Önizlemedeki en önemli güncelleştirmelerimizden bazıları aşağıda verilmiştir:
 
@@ -389,6 +389,6 @@ Bazen, karşılaştığınız bir sorunun tam etkisini iletmek için bir ileti y
 * [Visual Studio 2017 SDK’daki Yenilikler](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)
 * [Görseldeki yeniliklerC++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C# Yenilikleri](/dotnet/csharp/whats-new)
-* [Team Foundation Server yenilikler](/tfs/server/whats-new?view=vsts)
+* [Team Foundation Server yenilikler](/azure/devops/server/whats-new)
 * [Mac için Visual Studio yenilikleri](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
 * [Visual Studio 2019 ' deki yenilikler](whats-new-visual-studio-2019.md)

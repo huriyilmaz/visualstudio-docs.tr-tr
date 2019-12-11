@@ -1,167 +1,167 @@
 ---
-title: Bir Git deposu ayarlama
-description: Git, Subversion Mac için Visual Studio kullanarak
-author: conceptdev
-ms.author: crdun
+title: Git deposu ayarlama
+description: Mac için Visual Studio git ve alt sürüm kullanma.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 02/15/2018
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: a5a6dd04cd080f57d6a6ba97b3696b0351a0a8aa
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: e6dbe3b04a39a1ffd9a6e1b8f241b497ba8a6563
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692989"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984853"
 ---
-# <a name="set-up-a-git-repository"></a>Bir Git deposu ayarlama
+# <a name="set-up-a-git-repository"></a>Git deposu ayarlama
 
-Git takımlar aynı belgelerde aynı anda çalışmasına izin veren bir dağıtılmış sürüm denetim sistemidir. Bu, tüm dosyaları içeren tek bir sunucu yoktur, ancak bu kaynaktan bir depo kullanıma her deponun tamamı makinenizde yerel olarak kopyalanmış olan anlamına gelir.
+Git, ekiplerin aynı belgelerde aynı anda çalışmasına izin veren bir dağıtılmış sürüm denetim sistemidir. Bu, tüm dosyaları içeren tek bir sunucu olduğu anlamına gelir, ancak bu Merkezi kaynaktan bir depo kullanıma alındığı zaman, tüm depo yerel olarak makinenize kopyalanır.
 
-GitHub ancak yaygın bir ana bilgisayardır sürüm denetimi için Git ile çalışmanıza olanak tanıyan çok uzak ana vardır. Aşağıdaki örnek, bir GitHub konak kullanır, ancak Mac için Visual Studio'da sürüm denetimi için herhangi bir Git ana kullanabilirsiniz
+Sürüm denetimi için git ile çalışmanıza izin veren birçok uzak ana bilgisayar vardır, ancak en yaygın konak GitHub ' dır. Aşağıdaki örnek bir GitHub Konağı kullanır, ancak Mac için Visual Studio ' de sürüm denetimi için herhangi bir git konağını kullanabilirsiniz.
 
-GitHub kullanmak istiyorsanız, bir hesap oluşturulur ve bu makaledeki adımları izlemeden önce yapılandırılmış olduğundan emin olun.
+GitHub kullanmak istiyorsanız, bu makaledeki adımları izleyerek önce oluşturulmuş ve yapılandırılmış bir hesabınız olduğundan emin olun.
 
-## <a name="creating-a-remote-repo-on-github"></a>GitHub üzerinde uzak bir depo oluşturma
+## <a name="creating-a-remote-repo-on-github"></a>GitHub 'da uzak depo oluşturma
 
-Aşağıdaki örnek, bir GitHub konak kullanır, ancak Mac için Visual Studio'da sürüm denetimi için herhangi bir Git ana kullanabilirsiniz
+Aşağıdaki örnek bir GitHub Konağı kullanır, ancak Mac için Visual Studio ' de sürüm denetimi için herhangi bir git konağını kullanabilirsiniz.
 
-Bir Git deposu ayarlama için aşağıdaki adımları uygulayın:
+Bir git deposu ayarlamak için aşağıdaki adımları yürütün:
 
-1. Github.com yeni Git deposu oluşturun:
+1. Github.com adresinde yeni bir git deposu oluşturun:
 
-    ![Yeni git deposu oluşturma](media/version-control-git1-sml.png)
+    ![Yeni git deposu oluştur](media/version-control-git1-sml.png)
 
-2. Depo adı, açıklama ve gizlilik ayarlayın. Yapmak **değil** depo başlatın. .Gitignore ve lisans hiçbiri olarak ayarlayın:
+2. Depo adı, açıklama ve gizliliği ayarlayın. Depoyu **başlatmayın** . . Gitignore ve lisansını None olarak ayarlayın:
 
-    ![Git deposunun kümesi ayrıntıları](media/version-control-git2.png)
+    ![Git deposunun ayrıntılarını ayarlama](media/version-control-git2.png)
 
-3. Sonraki sayfada görüntülemek ve HTTPS ya da SSH adresi oluşturduğunuz depoyu kopyalamak için bir seçenek sunar:
+3. Sonraki sayfada, HTTPS ya da SSH adresini görüntüleme ve oluşturduğunuz depoya kopyalama seçeneği sunulur:
 
-    ![görüntüleme ve kopyalama adresi](media/version-control-git3.png)
+    ![adresi görüntüle ve Kopyala](media/version-control-git3.png)
 
-   Mac için bu depoya noktası Visual Studio için HTTPS adresi gerekir.
+   Mac için Visual Studio bu depoya işaret etmek için HTTPS adresine ihtiyacınız olacak.
 
 ## <a name="publishing-an-existing-project"></a>Mevcut bir projeyi yayımlama
 
-Mevcut bir proje varsa _değil_ zaten sürüm denetiminde Git'te ayarlamak için aşağıdaki adımları kullanın:
+Zaten sürüm denetiminde _olmayan_ mevcut bir projeniz varsa, git 'te ayarlamak için aşağıdaki adımları kullanın:
 
-1. Mac için Visual Studio'da Çözüm bölmesi çözüm adı seçin
+1. Mac için Visual Studio Çözüm Bölmesi çözüm adını seçin.
 
-2. Menü çubuğunda **sürüm denetimi > sürüm denetiminde Yayımla** görüntülenecek **depo seçin** iletişim:
+2. Menü çubuğunda, **Depo Seç** iletişim kutusunu göstermek için sürüm denetimi **'Nde Yayımla > sürüm** denetimi ' ni seçin:
 
-    ![Mac için Visual Studio'da kullanıma almayı başlatma](media/version-control-git4-sml.png)
+    ![Mac için Visual Studio kullanıma almayı Başlat](media/version-control-git4-sml.png)
 
-    Bu menü öğesi menüde gri renkte görünür, çözüm adı seçtiğinizden emin olun.
+    Menüdeki bu menü öğesi gri görünürse, çözüm adını seçtiğinizden emin olun.
 
-3. Seçin **kayıtlı depoları** sekmesi ve ENTER tuşuna **Ekle** düğmesi:
+3. **Kayıtlı depolar** sekmesini seçin ve **Ekle** düğmesine basın:
 
     ![](media/version-control-git5.png)
 
-4. Yerel olarak görüntülemek ve #3. adımdaki URL'yi yapıştırın istediğiniz deponun adını girin. Depo yapılandırması iletişim aşağıdakine benzer görünmelidir. Tamam'a basın:
+4. Yerel olarak görüntülenmesini istediğiniz deponun adını girin ve adım #3 ' den URL 'YI yapıştırın. Depo yapılandırma iletişim kutusu, aşağıdakine benzer olmalıdır. Tamam 'a basın:
 
-    ![Git Ayrıntıları iletişim girin](media/version-control-git6.png)
+    ![Git ayrıntıları iletişim kutusunu girin](media/version-control-git6.png)
 
-    Git'e bağlanmak için SSH kullanmak da mümkündür.
+    Ayrıca, git 'e bağlanmak için SSH kullanmak mümkündür.
 
-5. Uygulama için Git yayımlamayı denerse için depoyu seçin ve emin her ikisi de **modül adı** ve **ileti** metin alanları tamamlanır:
+5. Uygulamayı git 'e yayımlamayı denemek için depoyu seçin ve hem **Modül adı** hem de **ileti** metin alanlarının tamamlandığından emin olun:
 
-    ![Proje için git yayımlamayı denerse](media/version-control-git7.png)
+    ![Projeyi git 'e yayımlamayı dene](media/version-control-git7.png)
 
-6. Tıklayın **Tamam**, ardından **Yayımla** uyarı iletişim.
+6. **Tamam**' a ve ardından uyarı Iletişim kutusundan **Yayımla** ' ya tıklayın.
 
-7. İçinde **Git kimlik bilgileri** penceresinde GitHub kullanıcı adınızı ve parolanızı girin. 
+7. **Git kimlik bilgileri** penceresinde GitHub Kullanıcı adınızı ve parolanızı girin. 
 
 > [!NOTE]
-> Hesabınızı etkin iki öğeli kimlik doğrulamayı (2FA) varsa, bir erişim bir parola yerine kullanılan belirteç oluşturmak gerekir. Bir erişim belirteci oluşturmadıysanız, Git adımları [erişim belirteci](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) belgeleri.
+> Hesabınızda iki öğeli kimlik doğrulaması (2FA) etkinse, parola yerine kullanılan bir erişim belirteci oluşturmanız gerekir. Erişim belirteci oluşturmadıysanız git [erişim belirteci](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) belgelerindeki adımları izleyin.
 
-8. Kullanıcı adı ve kişisel erişim belirteci, girin ve basın **Tamam**:
+8. Kullanıcı adı ve kişisel erişim belirtecini girip **Tamam**' a basın:
 
-    ![Git için kullanıcı adı ve parola girin](media/version-control-git9-sml.png)
+    ![Git için Kullanıcı adı ve parola girin](media/version-control-git9-sml.png)
 
-9. Birkaç saniye sonra çözümü ile ilk alt işleme yayımlanması gerekir. Pek çok seçenek ile doldurulmuş artık sürüm denetimi menü öğesi göz atarak yayımlandı onaylayın:
+9. Birkaç saniye sonra çözümün ilk yürütmesi ile yayımlanması gerekir. Sürüm denetimi menü öğesine göz atarak yayımlanmış olduğunu onaylayın ve şu anda birçok seçenekten doldurulması gerekir:
 
-    ![Sürüm denetimi menüsü](media/version-control-git10.png)
+    ![Sürüm Denetim menüsü](media/version-control-git10.png)
 
-10. Ek değişiklikler yapmak başlattıktan sonra seçin **değişiklikleri gönderdikten** değişiklikleri göndermek için **uzak** depo. Bu, üzerinde github.com görüntülemek uygun tüm kullanıcılara izin verir:
+10. Daha fazla değişiklik yapmaya başladıktan sonra değişiklikleri **Gönder** ' i seçerek değişiklikleri **uzak** depoya gönderin. Bu, tüm uygun kullanıcıların github.com üzerinde görüntülemesini sağlar:
 
-    ![Değişiklikleri uzak depoya gönderin](media/version-control-git11.png)
+    ![Değişiklikleri uzak depoya gönder](media/version-control-git11.png)
 
 ## <a name="publishing-a-new-project"></a>Yeni bir proje yayımlama
 
-Yeni Proje iletişim kutusu, bir yerel git deposu ile yeni bir proje oluşturmak için kullanılabilir. Bunu etkinleştirmek için işaretleyin **sürüm denetimi için git kullanan** aşağıdaki ekran görüntüsünde gösterildiği gibi onay kutusu. Deponuzu başlatmak ve isteğe bağlı bir .gitignore dosyası ekleyin:
+Yeni proje iletişim kutusu yerel bir git deposu ile yeni bir proje oluşturmak için kullanılabilir. Etkinleştirmek için, aşağıdaki ekran görüntüsünde gösterildiği gibi **sürüm denetimi için git kullan** onay kutusunu seçin. Bu işlem, depoyu başlatacak ve isteğe bağlı bir. gitignore dosyası ekleyecek:
 
-![Yeni proje oluşturma ile git desteği](media/version-control-git-publish-new1.png)
+![Git desteğiyle yeni proje oluşturma](media/version-control-git-publish-new1.png)
 
-Yeni yerel deponuzun yeni bir GitHub deposuna göndermek için aşağıdaki adımları izleyin:
-
-> [!NOTE]
-> Bir GitHub deposu zaten oluşturmadıysanız başvurmak [Github'da uzak bir depo oluşturma](#creating-a-remote-repo-on-github) bölümü.
-
-1. İlk işlemenize giderek oluşturma **sürüm denetimi > İnceleme çözüm ve işleme** menü çubuğundaki.
-
-2. Durum sekmesinde seçin **işleme** sol üstteki.
-
-3. Örneğin "ilk kaydı", bir işleme iletisi yazma sonra tıklayın **işleme**:
-
-    ![Git deposuna ilk değişiklikleri](media/version-control-git-publish-new2.png)
-
-4. Ardından, menü çubuğunda Git **sürüm denetimi > yönetme dalları ve uzak kaynakları**.
-
-5. Git **uzak kaynaklar** sekmesine ve ardından tıklayın **Ekle**.
-
-6. İçinde **uzak kaynak** penceresinde, önceden oluşturulmuş GitHub deponuza ayrıntılarını eklemek ve tıklayın **Tamam**:
-
-    ![Git deposu için Uzak kaynaklarını yapılandırma](media/version-control-git-publish-new3.png)
-
-7. Kapat **Git deposu Yapılandırması** sonra menü çubuğundaki penceresinde Git **sürüm denetimi > anında iletme değişiklikleri**.
-
-8. İçinde **depoya itme** penceresi tıklayarak **değişiklikleri anında iletme** düğmesi:
-
-    ![Değişiklikleri uzak depoya gönderin](media/version-control-git-publish-new4.png)
-
-9. İstendiğinde GitHub kullanıcı adınızı ve parolanızı girin.
+Yeni yerel deponuzu yeni bir GitHub deposuna göndermek için aşağıdaki adımları izleyin:
 
 > [!NOTE]
-> Hesabınızı etkin iki öğeli kimlik doğrulamayı (2FA) varsa, bir erişim bir parola yerine kullanılan belirteç oluşturmak gerekir. Bir erişim belirteci oluşturmadıysanız, Git adımları [erişim belirteci](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) belgeleri.
+> Zaten bir GitHub deposu oluşturmadıysanız [GitHub 'da uzak depo oluşturma](#creating-a-remote-repo-on-github) bölümüne bakın.
 
-Mac için Visual Studio, artık uzak GitHub deponuza değişiklikleri gönderir:
+1. **Sürüm denetimi > gözden geçirme çözümü ve** menü çubuğunda Kaydet ' e giderek ilk yürütmeyi oluşturun.
+
+2. Durum sekmesinde, sol üst kısımdaki **Kaydet** ' i seçin.
+
+3. "Ilk tamamlama" gibi bir teslim iletisi yazın ve ardından **Yürüt**' e tıklayın:
+
+    ![Git deposuna ilk değişiklikleri Kaydet](media/version-control-git-publish-new2.png)
+
+4. Ardından, menü çubuğunda sürüm denetimi ' ne gidin **> dalları ve uzaktan**Kumandalar ' ı yönetin.
+
+5. **Uzak kaynaklar** sekmesine gidin ve ardından **Ekle**' ye tıklayın.
+
+6. **Uzak kaynak** penceresinde, önceden oluşturulmuş GitHub deponuzun ayrıntılarını ekleyin ve **Tamam**' a tıklayın:
+
+    ![Git deposu için uzak kaynakları yapılandırma](media/version-control-git-publish-new3.png)
+
+7. **Git deposu yapılandırma** penceresini kapatın, ardından menü çubuğunda **sürüm denetimi > gönderme değişiklikleri**' ne gidin.
+
+8. **Depoya gönder** penceresinde **Değişiklikleri Gönder** düğmesine tıklayın:
+
+    ![Değişiklikleri uzak depoya gönder](media/version-control-git-publish-new4.png)
+
+9. İstendiğinde GitHub Kullanıcı adınızı ve parolanızı girin.
+
+> [!NOTE]
+> Hesabınızda iki öğeli kimlik doğrulaması (2FA) etkinse, parola yerine kullanılan bir erişim belirteci oluşturmanız gerekir. Erişim belirteci oluşturmadıysanız git [erişim belirteci](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) belgelerindeki adımları izleyin.
+
+Mac için Visual Studio artık değişiklikleri uzak GitHub deponuza gönderir:
 
 ![Gönderme işlemi başarıyla tamamlandı onayı](media/version-control-git11.png)
 
-## <a name="check-out-an-existing-repository"></a>Mevcut bir havuzuna göz atın
+## <a name="check-out-an-existing-repository"></a>Mevcut bir depoya göz atın
 
-Yerel makinenizde olmayan uzak yalnızca var olan bir GitHub deposu ile çalışmak zorunda kalırsınız olasıdır. Mac için Visual Studio Bu deponun hızla kullanıma olanak sağlar. Makinenize kopyalamak için aşağıdaki adımları izleyin:
+Yerel makinenizde değil yalnızca uzak üzerinde bulunan bir GitHub deposu ile çalışmanız gerekecektir. Mac için Visual Studio, bu depoyu hızla denetlemenizi sağlar. Makinenize kopyalamak için aşağıdaki adımları izleyin:
 
-1. Menü çubuğunda **sürüm denetimi > kullanıma alma**:
+1. Menü çubuğunda, **sürüm denetimi > kullanıma al**' ı seçin:
 
-2. Bu görüntüler **depo Bağlan** sekmesinde:
+2. Bu, **depoya Bağlan** sekmesini görüntüler:
 
-    ![Girilen ayrıntılarla depo sekmesinde bağlanma](media/version-control-git13.png)
+    ![Girilen ayrıntıları içeren depo sekmesine Bağlan](media/version-control-git13.png)
 
-3. Uzak deponun GitHub sayfasında basın **Kopyala veya indir** düğmesi ve sağlanan URL'yi kopyalayın:
+3. Uzak deponun GitHub sayfasında, Kopyala **veya indir** düğmesine basın ve belirtilen URL 'yi kopyalayın:
 
-    ![Görüntülenen github URL'si](media/version-control-git14.png)
+    ![GitHub URL 'si görüntülendi](media/version-control-git14.png)
 
-4. Tüm metni değiştirin **URL** giriş alanına **depo Bağlan** sekmesi. Bu en diğer alanları bu sekme, #2. adımdaki resimde gösterildiği gibi doldurur.
+4. **Depoya Bağlan** sekmesindeki **URL** girdisi alanındaki tüm metni değiştirin. Bu, adım #2 görüntüde gösterildiği gibi bu sekmedeki diğer birçok alanın çoğunu dolduracaktır.
 
-5. Depoyu kopyalamak ve basın istediğiniz dizini girin **kullanıma alma**.
+5. Depoyu kopyalamak istediğiniz dizini girin ve **kullanıma al**' a basın.
 
 > [!NOTE]
-> Depo 4 GB boyutunda ise sorunlarla karşılaşabilirsiniz.
+> Depo boyutu 4 GB 'ın üzerinde olduğunda sorunlarla karşılaşabilirsiniz.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Boş bir uzak depo projenizle başlatma sorunları varsa, aşağıdaki adımları deneyebilirsiniz:
+Projenizi boş bir uzak depoyla başlatma ile ilgili sorunlarınız varsa, aşağıdaki adımları deneyebilirsiniz:
 
 1. Çözüm klasörünüze gidin.
-1. Tuşuna **Command + üst karakter +.** Gizli dosya ve klasörleri göstermek için.
-1. Varsa bir **.git** klasörünü silin.
-1. Varsa bir **da gitignore** dosya, silin.
-1. Tuşuna **Command + üst karakter +.** Dosya ve klasörleri gizlemek için.
-1. Mac için VS çözümünüzü açın
-1. Çözüm paneli üzerinde çözüm düğümü seçin.
-1. Sürüm denetimi menüsüne göz atıp seçin **sürüm denetiminde Yayımla**.
-1. Adım 6 ' itibaren yukarıdaki öğreticideki adımları izleyin.
+1. **Komut + SHIFT +** tuşlarına basın. gizli dosyaları ve klasörleri göstermek için.
+1. Bir **. git** klasörü varsa, silin.
+1. Bir **gitignore** dosyası varsa, silin.
+1. **Komut + SHIFT +** tuşlarına basın. dosya ve klasörleri gizleme.
+1. Çözümünüzü Mac için VS 'de açın.
+1. Çözüm panelinde, çözüm düğümünüz ' ı seçin.
+1. Sürüm denetimi menüsüne gidin ve **sürüm denetiminde Yayımla '** yı seçin.
+1. Adım 6 ' dan başlayarak yukarıdaki öğreticinin adımlarını izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da sürüm denetimi (Windows üzerinde)](/visualstudio/version-control/)
+- [Visual Studio 'da sürüm denetimi (Windows üzerinde)](/visualstudio/version-control/)

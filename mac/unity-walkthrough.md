@@ -1,17 +1,17 @@
 ---
 title: Unity ile oyun oluşturmaya başlama
 description: Unity ve Mac için Visual Studio kullanmaya başlama
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/20/2019
 ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
-ms.openlocfilehash: ff8fe1b2b4efe7ff91d3b363c58183be534a1441
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: c25df777a9af10859c70741a78c880a57c6f5b8e
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108425"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984800"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>Mac için Visual Studio Unity ile Oyunlar oluşturmaya başlama
 
@@ -24,16 +24,16 @@ Unity için Mac için Visual Studio Araçları, Mac için Visual Studio yüklene
 > [!div class="checklist"]
 > * Mac için Visual Studio ile Unity geliştirme hakkında bilgi edinin
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - Mac için Visual Studio ([https://www.visualstudio.com/vs/mac](https://www.visualstudio.com/vs/visual-studio-mac))
-- Unity 5.6.1 Personal Edition veya üzeri ([https://store.unity.com](https://store.unity.com/), çalıştırmak için bir Unity.com hesabı gerekir)
+- Unity 5.6.1 Personal Edition veya üzeri ([https://store.unity.com](https://store.unity.com/), çalıştırmak için bir Unity.com hesabının olması gerekir)
 
-## <a name="intended-audience"></a>Hedeflenen hedef kitle
+## <a name="intended-audience"></a>Hedef Kitle
 
 Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak derin deneyim gerekli değildir.
 
-## <a name="task-1-creating-a-basic-unity-project"></a>Görev 1: Temel Unity projesi oluşturma
+## <a name="task-1-creating-a-basic-unity-project"></a>Görev 1: temel bir Unity projesi oluşturma
 
 1. **Unity**'yi başlatın. İsteniyorsa oturum açın.
 
@@ -117,7 +117,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 23. C# **"Enemyai"** adlı yeni betiği adlandırın.
 
-    ![C#SCRIPT](media/unity-image19.png)
+    ![C# betiği](media/unity-image19.png)
 
 24. Oyun nesnelerine komut dosyaları eklemek için, yeni oluşturulan betiği **hiyerarşi** bölmesindeki **rakip** nesnesine sürükleyin. Artık bu nesne, bu betikteki davranışları kullanacaktır.
 
@@ -125,7 +125,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 25. Geçerli sahneyi kaydetmek için **dosya > sahneleri kaydet** ' i seçin. **"Mysah"** olarak adlandırın.
 
-## <a name="task-2-working-with-visual-studio-for-mac-tools-for-unity"></a>Görev 2: Unity için Mac için Visual Studio araçlarıyla çalışma
+## <a name="task-2-working-with-visual-studio-for-mac-tools-for-unity"></a>2\. görev: Unity için Mac için Visual Studio araçlarıyla çalışma
 
 1. Kodu düzenlemenin C# en iyi yolu Mac için Visual Studio kullanmaktır. Unity 'yi varsayılan işleyicisi olarak Mac için Visual Studio kullanacak şekilde yapılandırabilirsiniz. **Unity > tercihlerini**seçin.
 
@@ -275,7 +275,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 7. Gölgelendirici dosya biçimi, okumayı ve anlamayı kolaylaştırmak için tam renkli ve yazı tipi işleme alır.
 
-    ![söz dizimi vurgulama](media/unity-image44.png)
+    ![söz dizimi vurgulaması](media/unity-image44.png)
 
 8. **Unity**'ye geri dönün. Mac için Visual Studio aynı proje sistemiyle çalıştığından, her iki yerde yapılan değişiklikler otomatik olarak diğer ile eşitlenecek şekilde görürsünüz. Artık görev için en iyi aracı kullanmak kolaydır.
 
@@ -283,4 +283,4 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 ## <a name="summary"></a>Özet
 
-Bu laboratuvarda, Unity ve Mac için Visual Studio bir oyun oluşturmaya nasıl başladığınızı öğrendiniz. Unity [https://unity3d.com/learn](https://unity3d.com/learn) hakkında daha fazla bilgi için bkz.
+Bu laboratuvarda, Unity ve Mac için Visual Studio bir oyun oluşturmaya nasıl başladığınızı öğrendiniz. Unity hakkında daha fazla bilgi için bkz. [https://unity3d.com/learn](https://unity3d.com/learn) .

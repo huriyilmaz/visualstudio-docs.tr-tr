@@ -1,17 +1,17 @@
 ---
 title: JavaScript ve TypeScript
 description: Mac için Visual Studio JavaScript desteği hakkında bilgi
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
-ms.openlocfilehash: 7839b3ed777de134bea835c94c428166ea4430f4
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: cc10cd6125dc19571424358fd1ce9de46f7d86c5
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107849"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984907"
 ---
 # <a name="javascript-and-typescript-support"></a>JavaScript ve TypeScript desteği
 
@@ -39,7 +39,7 @@ Mac için Visual Studio içindeki JavaScript IntelliSense, tür çıkarımı, JS
 
 - **Tür çıkarımı** : bir nesnenin türü, çevreleyen kod bağlamı tarafından iletişime. Daha fazla bilgi için bkz. [tür çıkarımı temelinde IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference)üzerinde Visual Studio bölümü.
 - **JSDoc** : tür çıkarımı doğru tür bilgilerini sağlamıyorsa zaman vardır. Bu gibi durumlarda, tür bilgileri açıkça [JSDoc](https://jsdoc.app/about-getting-started.html) ek açıklamaları tarafından sağlanmış olabilir. Daha fazla bilgi için bkz. Visual Studio 'nun [IntelliSense 'de JSDoc tabanlı](/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc) bölümü
-- **TypeScript bildirim dosyaları** – `.d.ts` dosyalar, JavaScript IntelliSense için değerler sağlamak üzere kullanılır. Bu dosyada bildirildiği türler, JSDoc açıklamalarında türler olarak kullanılabilir. Daha fazla bilgi için bkz. [TypeScript bildirim dosyalarını temel alan IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files) üzerinde Visual Studio 'nun bölümü
+- **TypeScript bildirim dosyaları** – `.d.ts` dosyalar JavaScript IntelliSense için değerler sağlamak üzere kullanılır. Bu dosyada bildirildiği türler, JSDoc açıklamalarında türler olarak kullanılabilir. Daha fazla bilgi için bkz. [TypeScript bildirim dosyalarını temel alan IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files) üzerinde Visual Studio 'nun bölümü
 
     ![TypeScript tanım dosyası ekleniyor](media/javascript-image3.png)
 

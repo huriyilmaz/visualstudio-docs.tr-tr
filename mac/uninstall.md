@@ -1,17 +1,17 @@
 ---
 title: Mac için Visual Studio kaldır
 description: Mac için Visual Studio ve ilgili araçları kaldırmaya yönelik yönergeler.
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 7d86e5abbb25d8c348f550d28618aae614725471
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 58c4395e1569f6ca444a8b1fdcd2b8906d3fdb75
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211513"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984070"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac için Visual Studio kaldırılıyor
 
@@ -144,7 +144,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 Android uygulamalarının geliştirilmesi için Android SDK gereklidir. Android SDK tüm parçalarını tamamen kaldırmak için, dosyayı **~/Library/Developer/Xamarin/** adresinde bulun ve **çöp kutusuna**taşıyın.
 
 > [!WARNING]
-> Mac için Visual Studio tarafından oluşturulan Android imzalama anahtarlarının içinde `~/Library/Developer/Xamarin/Keystore`bulunduğunu bilmelisiniz. Bunları uygun şekilde yedeklediğinizden emin olun veya keystore 'u tutmak istiyorsanız bu dizini kaldırmaktan kaçının.
+> Mac için Visual Studio tarafından oluşturulan Android imzalama anahtarlarının `~/Library/Developer/Xamarin/Keystore`yer aldığını unutmayın. Bunları uygun şekilde yedeklediğinizden emin olun veya keystore 'u tutmak istiyorsanız bu dizini kaldırmaktan kaçının.
 
 Java SDK (JDK) Mac OS X/macOS 'un bir parçası olarak önceden paketlendiğinden kaldırılması gerekmez.
 
@@ -199,10 +199,10 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Eski sürümler için aşağıdaki yapıtları el ile kaldırmanız gerekir:
 
-* Çalışma kitapları uygulamasını şurada silin:`"/Applications/Xamarin Workbooks.app"`
-* Inspector uygulamasını şurada Sil:`"Applications/Xamarin Inspector.app"`
-* Eklentileri silin: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` ve`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Inspector ve destekleyici dosyaları şurada silin: `/Library/Frameworks/Xamarin.Interactive.framework` ve`/Library/Frameworks/Xamarin.Inspector.framework`
+* `"/Applications/Xamarin Workbooks.app"` çalışma kitapları uygulamasını silme
+* `"Applications/Xamarin Inspector.app"` 'de Inspector uygulamasını silme
+* Eklentileri silme: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` ve `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Inspector ve destekleyici dosyaları şurada Sil: `/Library/Frameworks/Xamarin.Interactive.framework` ve `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler kaldırın
 

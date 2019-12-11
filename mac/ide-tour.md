@@ -1,23 +1,23 @@
 ---
 title: Mac için Visual Studio turu
 description: Mac için Visual Studio, macOS 'ta iOS, Android, Mac ve Xamarin. Forms için ASP.NET Core Web siteleri ve Xamarin projeleri gibi .NET uygulamaları oluşturmaya yönelik tümleşik bir geliştirme ortamı sağlar.
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 60691ef47b3a3dfdb2fa1148507697a27a99ef7b
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 6d2f0f891f704d3762bc0967da466960ee5170ee
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213713"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984709"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Mac için Visual Studio 2019 Tur turu
 
 Mac için Visual Studio, Mac üzerinde kod düzenlemek, hata ayıklamak ve derlemek ve sonra bir uygulama yayımlamak için kullanılabilen .NET _Tümleşik geliştirme ortamıdır_ . Standart bir düzenleyici ve hata ayıklayıcı gibi beklenen özelliklerin yanı sıra, Mac için Visual Studio yazılım geliştirme sürecini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve kaynak denetimi de içerir.
 
-Mac için Visual Studio,, veya `.csproj` `.sln` dosyaları gibi Windows karşılığı `.fsproj`ile aynı dosya türlerini destekler ve editorconfig gibi özellikleri destekler, bu da sizin için en uygun IDE 'yi kullanabileceğiniz anlamına gelir.
+Mac için Visual Studio, Windows karşılığı ile `.csproj`, `.fsproj`veya `.sln` dosyaları gibi aynı dosya türlerini destekler ve EditorConfig gibi özellikleri destekler, yani sizin için en uygun IDE 'yi kullanabileceğiniz anlamına gelir.
 Bir uygulama oluşturmak, açmak ve geliştirmek, daha önce Windows üzerinde Visual Studio kullanan herkes için tanıdık bir deneyim olacaktır. Ayrıca Mac için Visual Studio, Windows karşılığına yönelik güçlü bir IDE gibi birçok güçlü araç kullanır. Roslyn derleyici platformu, yeniden düzenleme ve IntelliSense için kullanılır. Proje sistemi ve derleme altyapısı MSBuild kullanır ve kaynak Düzenleyicisi Windows üzerinde Visual Studio ile aynı temeli kullanır. Xamarin ve .NET Core uygulamaları için aynı hata ayıklayıcı altyapılarını ve Xamarin. iOS ve Xamarin. Android için aynı tasarımcıları kullanır.
 
 ## <a name="what-can-i-do-in-visual-studio-for-mac"></a>Mac için Visual Studio için ne yapabilirim?
@@ -42,7 +42,7 @@ Mac için Visual Studio 2019 ' u başlattığınızda yeni kullanıcılar bir ot
 
 ![Microsoft hesabı oturum açın](media/ide-tour-2019-start-signin.png)
 
-Daha sonra tercih ettiğiniz klavye kısayollarını seçerek IDE 'yi özelleştirme seçeneği sunulur: Mac için Visual Studio, Visual Studio, Visual Studio Code veya Xcode:
+Daha sonra tercih ettiğiniz klavye kısayollarını seçerek IDE 'yi özelleştirme seçeneği verilir: Mac için Visual Studio, Visual Studio, Visual Studio Code veya Xcode:
 
 ![En sevdiğiniz klavye kısayollarını seçin](media/ide-tour-2019-keyboard-shortcut.png)
 
@@ -119,7 +119,7 @@ Sekmeleri her zaman görünür tutmak için, onları sabitlemenin avantajlarınd
 
 ## <a name="refactoring"></a>Yeniden Düzenle
 
-Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağlar: Bağlam eylemleri ve kaynak analizi. Yeniden [düzenleme](/visualstudio/mac/refactoring) makalesindeki bunlarla ilgili daha fazla bilgi edinebilirsiniz.
+Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağlar: bağlam eylemleri ve kaynak analizi. Yeniden [düzenleme](/visualstudio/mac/refactoring) makalesindeki bunlarla ilgili daha fazla bilgi edinebilirsiniz.
 
 ## <a name="debugging"></a>Hata Ayıklama
 

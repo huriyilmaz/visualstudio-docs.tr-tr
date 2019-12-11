@@ -1,33 +1,33 @@
 ---
 title: Uygulama kaynaklarını yönetme
-description: Bu makalede bağlantılar Mac için çeşitli Visual Studio'da platformlar için uygulama kaynakları yönetmek nasıl açıklayan çeşitli kılavuzları
-author: conceptdev
-ms.author: crdun
+description: Bu makale, Mac için Visual Studio ' deki çeşitli platformlar için uygulama kaynaklarının nasıl yönetileceğini betimleyen çeşitli kılavuzlara bağlantı sağlar
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 61EAAB8F-3C32-4574-924F-CFC616604089
-ms.openlocfilehash: e4182bdcc8e2a97b152d5548b07cd03a152607ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3572edc46d4f69a338ba655b32254126a7fce9c
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62997193"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985282"
 ---
 # <a name="managing-app-resources"></a>Uygulama kaynaklarını yönetme
 
-Uygulama kaynak dosyaları, resimleri, metin dosyalarını ve ses dosyaları gibi uygulamanız için gerekli olan ancak uygulama ile derlenmiş değil. Mac için Visual Studio tarafından desteklenen her platform bu kaynakları aşağıdaki yönergelerde açıklandığı gibi farklı yollarla işler:
+Görüntü, metin dosyaları ve ses dosyaları gibi uygulama kaynak dosyaları, uygulamanız için gereklidir ancak uygulamayla derlenmez. Mac için Visual Studio tarafından desteklenen her platform, aşağıdaki kılavuzlarda açıklandığı şekilde bu kaynakları farklı yollarla işler:
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Her biri kendi dosya sistemi sahip birden çok platformda - Xamarin.Forms kodu çalıştırır ve her dosya sistemi için dosyaları okuma ve yazma nasıl belirler. Xamarin.Forms içinde her platformda yerel dosya API'lerini kullanarak veya dosya gömülü kaynaklar ekleme, uygulama kaynaklarını yönetebilirsiniz.
+Xamarin. Forms kodu birden çok platformda çalışarak, her biri kendi dosya sistemine sahiptir ve her dosya sistemi, dosyaların nasıl okunacağını ve yazılacağını belirler. Xamarin. Forms içinde, her platformda yerel dosya API 'Lerini kullanarak veya katıştırılmış kaynak olarak dosya ekleyerek uygulama kaynaklarını yönetebilirsiniz.
 
 * [Görüntülerle Çalışma](https://developer.xamarin.com/guides/xamarin-forms/user-interface/images/)
 * [Dosyalarla Çalışma]( https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/files/)
 
 ## <a name="xamarinios"></a>Xamarin.iOS
 
-* [Kaynakları ile çalışma](https://developer.xamarin.com/guides/ios/application_fundamentals/working_with_resources/)
+* [Kaynaklarla çalışma](https://developer.xamarin.com/guides/ios/application_fundamentals/working_with_resources/)
 * [Görüntülerle Çalışma](https://developer.xamarin.com/guides/ios/application_fundamentals/working_with_images/)
-* [Dosya sistemi ile çalışma](https://developer.xamarin.com/guides/ios/application_fundamentals/working_with_the_file_system/)
+* [Dosya sistemiyle çalışma](https://developer.xamarin.com/guides/ios/application_fundamentals/working_with_the_file_system/)
 
 ## <a name="xamarinandroid"></a>Xamarin.Android
 
@@ -39,4 +39,4 @@ Her biri kendi dosya sistemi sahip birden çok platformda - Xamarin.Forms kodu �
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Windows için Visual Studio) uygulama kaynaklarını yönetme](/visualstudio/ide/managing-application-resources-dotnet)
+- [Uygulama kaynaklarını yönetme (Windows üzerinde Visual Studio)](/visualstudio/ide/managing-application-resources-dotnet)

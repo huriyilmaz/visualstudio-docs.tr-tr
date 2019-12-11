@@ -2,16 +2,16 @@
 title: IDE’yi Özelleştirme
 description: Mac için Visual Studio, kullanıcıların hem verimlilik hem de Aesthetic Characteristics ihtiyaçlarını karşılayan bir ortamda uygulama geliştirmesine olanak tanıyan çeşitli yollarla özelleştirilebilir. Bu makalede, Mac için Visual Studio gereksinimlerinize uyacak şekilde uyarlanabilen çeşitli yollar ele alınabilir.
 author: alanjclark
-ms.author: alcl
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
-ms.openlocfilehash: fa1e2924e810f9e37f28d5becdfd8d46243b76fe
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: d35cd7ebc5534cd49f18db794b5fdeb5f62f4758
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213747"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984200"
 ---
 # <a name="customizing-the-ide"></a>IDE’yi Özelleştirme
 
@@ -30,7 +30,7 @@ Mac için Visual Studio temaları, Visual **Studio > tercihleri > ortam > görse
 Mac için Visual Studio, aşağıdaki 14 dilde yerelleştirilir ve daha fazla geliştirici tarafından erişilebilmesini sağlar:
 
 * Çince-Çin
-* Çince-Tayvan
+* Çince - Tayvan
 * Çekçe
 * Fransızca
 * Almanca
@@ -44,7 +44,7 @@ Mac için Visual Studio, aşağıdaki 14 dilde yerelleştirilir ve daha fazla ge
 * İspanyolca
 * Türkçe
 
-Mac için Visual Studio tarafından gösterilen dili değiştirmek için, Visual **Studio > tercihleri > ortam > görsel stil** ' e gidin ve aşağıda gösterildiği gibi **Kullanıcı arabirimi dili** açılan listesinden istediğiniz dili seçin görüntüyle
+Mac için Visual Studio tarafından gösterilen dili değiştirmek için, Visual **Studio > tercihleri > ortam > görsel stil** ' e gidin ve aşağıdaki görüntüde gösterildiği gibi **Kullanıcı arabirimi dili** açılan listesinden istediğiniz dili seçin:
 
 ![Dil seçimi](media/customizing-the-ide-image11a.png)
 
@@ -76,7 +76,7 @@ Bu bağlamalar, **klavye seçim** ekranı aracılığıyla Mac için Visual Stud
 
 ## <a name="workspace-layout"></a>Çalışma alanı düzeni
 
-Mac için Visual Studio çalışma alanı, ana belge alanından (normalde düzenleyici, tasarımcı yüzeyi veya seçenekler dosyası) oluşur ve uygulama dosyalarına erişmek ve bunları yönetmek, test etmek ve yönetmek için faydalı *bilgiler içeren* masının.
+Mac için Visual Studio çalışma alanı, ana belge alanından (normalde düzenleyici, tasarımcı yüzeyi veya seçenekler dosyası) oluşur. Bu, uygulama dosyalarına erişmek ve bunları yönetmek, test etmek ve hata ayıklamak için yararlı bilgiler içeren, tamamlayıcı *defterlerden* çevrelenmiş bir belgedir.
 
  ![Çalışma alanı düzeni](media/customizing-the-ide-image1a.png)
 

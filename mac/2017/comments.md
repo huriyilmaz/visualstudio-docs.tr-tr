@@ -1,34 +1,34 @@
 ---
 title: Kodu açıklama
-description: Bu makalede, Mac için Visual Studio kaynak düzenleyicisinde açıklamalar kullanılarak açıklanır.
-author: conceptdev
-ms.author: crdun
+description: Bu makalede, Mac için Visual Studio kaynak düzenleyicisinde yorumların kullanılması açıklanmaktadır
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 0FE5E929-1846-4F48-B5E3-70990FAF9504
-ms.openlocfilehash: 1f792e5ba670854e4a3a9ce703212d18c16e5512
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 038c2bf7205ccc642d613893635b9323afe613b9
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62933017"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74982638"
 ---
 # <a name="comments"></a>Açıklamalar
 
-Hata ayıklama veya kodla denemeler, kod bloklarını ya da geçici olarak açıklama satırı yapın veya uzun süreli yararlı olabilir.
+Hata ayıklarken veya kodla denemeler yaparken, geçici ya da uzun süreli kod blokları yorumu için yararlı olabilir.
 
-Tüm bir kod bloğunu açıklama eklemek için:
+Tüm kod bloğunu açıklama olarak eklemek için:
 
-* Kod seçip **geçiş _Satır** bağlam menüsünden
+* Kodu seçin ve bağlam menüsünden **satır açıklamalarını aç** ' ı seçin.
 
 VEYA
 
-* Kullanım `cmd + /` tuş üzerinde seçili kod.
+* Seçili kodda `cmd + /` KeyBinding kullanın.
 
-Bu yöntemler, açıklama ve kodun bölümlerine için kullanılabilir. C# dosyaları ek düzeyleri satırlı yorumlar, açıklanmış ve açıklamalı olmayan çalışırken yine de koruma gerçek yorumları kodlarının bölgeleri sağlayan eklenebilir:
+Bu yöntemler kodun bölümlerini açıklamaya ve açıklama eklemek için kullanılabilir. C# Dosyalarda, kod bölgelerinin açıklamalı ve açıklama kaldırmamaları, ancak yine de gerçek Yorumları korurken ek satır açıklamaları eklenebilir.
 
-![çok düzeyli açıklamaları](media/source-editor-image8.png)
+![çok düzeyli açıklamalar](media/source-editor-image8.png)
 
-Açıklamalar, panoyla etkileşim gelecekteki geliştiriciler için kod belgeleme için kullanışlıdır. Bunlar genellikle şu şekilde her dilde eklenen çok satırlı yorumlar biçiminde gerçekleştirilir:
+Açıklamalar Ayrıca, gelecekteki geliştiricilerle etkileşime girebilen kod belgeleme için de yararlıdır. Bunlar genellikle her dilde aşağıdaki şekilde eklenen çok satırlı açıklamalar biçiminde yapılır:
 
 **C#**
 
@@ -50,4 +50,4 @@ Açıklamalar, panoyla etkileşim gelecekteki geliştiriciler için kod belgelem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod (Windows için Visual Studio) açıklama satırı yapın](/visualstudio/ide/quickstart-editor#comment-out-code)
+- [Açıklama çıkışı kodu (Windows üzerinde Visual Studio)](/visualstudio/ide/quickstart-editor#comment-out-code)

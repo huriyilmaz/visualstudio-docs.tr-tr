@@ -1,25 +1,25 @@
 ---
 title: Erişilebilirlik
 description: Bu makalede Mac için Visual Studio erişilebilirlik özellikleri ve bunların nasıl etkinleştiribilecekleri açıklanır.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 08/15/2017
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
-ms.openlocfilehash: 19104cb090ff2a115afefe994bd53c93d2baaf5d
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: c0f056643a8cea0c9a5eca9801d2bd008e0793a8
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73714428"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984869"
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 
 MacOS 'taki özellik ve yardımcı programlara ek olarak, Mac için Visual Studio aşağıdaki özelliklere sahiptir ve Engelli kişiler için daha erişilebilir hale getirir:
 
 - Çözüm ve düzenleyici defterlerindeki metin büyütme
-- Düzenleyicilerde metin boyutu seçenekleri
-- Düzenleyicilerde renk özelleştirmesi
-- Klavye kısayolu özelleştirmesi
+- Metin düzenleyicilerde boyut seçenekleri
+- Düzenleyicilerde özelleştirme rengi
+- Klavye kısayolunu özelleştirme
 - Yöntemler ve parametreler için kod tamamlama
 
 MacOS 'taki erişilebilirlik özellikleri hakkında daha fazla bilgi için [Apple 'ın Web sitesine](https://www.apple.com/accessibility/mac/)bakın.

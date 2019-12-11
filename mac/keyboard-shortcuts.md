@@ -2,21 +2,21 @@
 title: Varsayılan Klavye Kısayolları
 description: Bu makalede, Mac için Visual Studio varsayılan klavye kısayolları listelenmektedir
 ms.date: 03/14/2019
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: b569887005d22a4eab7289c4ab940c9d9539d040
-ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
+ms.openlocfilehash: af7fa16100f31a6c4042e40bf8f270be9a78d2ec
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273327"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984567"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Mac için Visual Studio varsayılan klavye kısayolları
 
-Klavye erişilebilirliği hakkında daha fazla bilgi için [bkz. nasıl yapılır: Klavye gezintisi](~/accessibility-keyboard.md)kullanın.
+Klavye erişilebilirliği hakkında daha fazla bilgi için bkz. [nasıl yapılır: klavye gezintisini kullanma](~/accessibility-keyboard.md).
 
-Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara erişebilirsiniz. Bu belgede **Mac için Visual Studio** anahtar bağlama düzeni için varsayılan kısayollar listelenmektedir. Anahtar bağlama düzeninin nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [IDE 'Yi özelleştirme](~/customizing-the-ide.md#key-bindings). Ayrıca, **Mac için Visual Studio** > **tercihleri** menü öğesini kullanarak bir komutun kısayollarını özelleştirebilir ve **Tercihler** penceresinde **ortam** > **anahtarı bağlamaları** ' nı seçebilirsiniz.
+Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara erişebilirsiniz. Bu belgede **Mac için Visual Studio** anahtar bağlama düzeni için varsayılan kısayollar listelenmektedir. Anahtar bağlama düzeninin nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [IDE 'Yi özelleştirme](~/customizing-the-ide.md#key-bindings). Ayrıca, **Mac için Visual Studio** > **tercihleri** menü öğesini kullanarak bir komutun kısayollarını özelleştirebilir ve **Tercihler** penceresinde **ortam** > **anahtar bağlamaları** ' nı seçebilirsiniz.
 
 > [!TIP]
 > Bu belgede görüntülenen klavye kısayolları ve Mac için Visual Studio içindeki anahtar bağlama tercihleri, macOS 'ta yaygın olarak kullanılan semboller kullanılarak sunulur. Bir sembolden emin değilseniz, [MacOS anahtar sembolleri loopkup tablosunu](#macos-key-symbols-lookup)gözden geçirin.
@@ -67,7 +67,7 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Yapıştır|**⌘ V**|
 |Tercihler|**⌘**|
 |Yinele|**⇧ ⌘ Z**|
-|Rename|**⌘R**, **F2**|
+|Yeniden adlandır|**⌘R**, **F2**|
 |Tümünü Seç|**⌘ A**|
 |Kod oluşturmayı göster|**⌘ I**|
 |Tüm katlara geç|**⌥ ⇧ ⌘ ↑**|
@@ -83,7 +83,7 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Komutlar|Klavye kısayolları|
 |-|-|
 |Etkileşimli F# temizle|**⌃ ⌥ C**|
-|F# Etkileşimli|**⌃ ⌥ F**|
+|{1&gt;F# Etkileşimli&lt;1}|**⌃ ⌥ F**|
 |Etkileşimli F# yeniden Başlat|**⌃ ⌥ R**|
 |Çizgiyi etkileşimli olarak F# gönder|**⌃ ⌥ L**|
 |Başvuruları etkileşimli 'e F# gönder|**⌃ ⌥ P**|
@@ -96,12 +96,12 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Tümünü Kapat|**⇧ ⌘ W**|
 |Dosyayı kapat|**⌘ W**|
 |Çalışma alanını kapat|**⌥ ⌘ W**|
-|Yeni dosya|**⌘ N**|
+|Yeni Dosya|**⌘ N**|
 |Yeni çözüm|**⇧ ⌘ N**|
 |Open|**⌘ O**|
 |Yazdırma|**⌘ P**|
-|Çıkmak|**⌘Q**|
-|Döndürülemiyor|**⌘ U**|
+|Çık|**⌘Q**|
+|Geri döndür|**⌘ U**|
 |Kaydet|**⌘ S**|
 |Tümünü Kaydet|**⇧ ⌘ S**|
 
@@ -109,7 +109,7 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|API belgeleri|**⌥ ⌘?**|
+|API Belgeleri|**⌥ ⌘?**|
 |Unity API başvurusu|**⌘**|
 
 ## <a name="other"></a>Diğer
@@ -117,17 +117,17 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Komutlar|Klavye kısayolları|
 |-|-|
 |Unity Iletileri uygulama|**⇧ ⌘ D**|
-|bilgiyi|**⌥ ⌘ I**|
+|İncele|**⌥ ⌘ I**|
 
-## <a name="project"></a>Project
+## <a name="project"></a>{1&gt;Proje (Project)&lt;1}
 
 |Komutlar|Klavye kısayolları|
 |-|-|
 |Dosya Ekleme|**⌥ ⌘ A**|
-|Yapı|**⌘ K**, **⇧ F6**|
+|{1&gt;Yapı (Build)&lt;1}|**⌘ K**, **⇧ F6**|
 |Tümünü Oluştur|**⌘ B**, **F6**|
-|Temizlenemedi|**⇧ ⌘ K**|
-|Derlemesine|**⌃ ⌘ K**|
+|Temizle|**⇧ ⌘ K**|
+|Yeniden derleme|**⌃ ⌘ K**|
 |Tümünü yeniden derle|**⌃ ⌘ B**|
 |Hata Ayıklamayı Başlat|**⌘ ⏎**, **F5**|
 |Hata ayıklama olmadan Başlat|**⌥ ⌘ ⏎**, **⌃ F5**|
@@ -158,7 +158,7 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Dosyalarda Değiştir|**⌥ ⇧ ⌘ F**|
 |Değiştir|**⌥ ⌘ F**|
 
-## <a name="text-editor"></a>Metin Düzenleyici
+## <a name="text-editor"></a>{1&gt;Metin Düzenleyici&lt;1}
 
 |Komutlar|Klavye kısayolları|
 |-|-|
@@ -190,7 +190,7 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Bir karakter sağa git|**⌃ F**|
 |Belgenin başlangıcına git|**⌘ ↑**|
 |Satırın başlangıcına git|**⌘←**, **⌃A**|
-|Belgenin sonuna git|**⌘↓**|
+|Go to end of document (Belgenin sonuna git)|**⌘↓**|
 |Satır sonuna git|**⌘ →**, **⌃ E**|
 |Eşleşen ayraca git|**⇧ ⌘\\**|
 |Sonraki satıra git|**⌃ N**|
@@ -207,9 +207,9 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |Hızlı bilgileri göster|**⌘ F1**|
 |Kapsamları göster|**⌥ ⇧ ⌘ P**|
 |Karakterleri değiştir|**⌃ T**|
-|Div ile &lt;sarın&gt;|**⌥ ⇧ W**|
+|&lt;div ile kaydırın&gt;|**⌥ ⇧ W**|
 
-## <a name="view"></a>Görüntüle
+## <a name="view"></a>Görünüm
 
 |Komutlar|Klavye kısayolları|
 |-|-|
@@ -243,7 +243,7 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 |9 etkinleştirin|**⌘ 9**|
 |Diğerlerini gizle|**⌥ ⌘ H**|
 |Visual Studio 'Yu gizle|**⌘ H**|
-|Halinde|**⌘**|
+|Simge durumuna küçültme|**⌘**|
 |Sonraki belge|**⌘}** , **⌘ F6**|
 |Önceki belge|**⌘ {** , **⇧ ⌘ F6**|
 |Sonraki belgeye geç|**⌃⇥**|
@@ -253,17 +253,17 @@ Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara 
 
 ## <a name="macos-key-symbols-lookup"></a>macOS anahtar sembolleri araması
 
-|Sembol|Anahtar|
+|Simge|Anahtar|
 |-|-|
 |⌘|**Komut** (**cmd**)|
 |⌥|**Seçenek** (**alt**)|
 |⇧|**Karakter**|
 |⌃|**Denetim** (**CTRL**)
-|⇞|**Sayfa yukarı** (**Pg up**)|
-|⇟|**Sayfa aşağı** (**Pg dn**)|
-|⌫|**Sil** (**Geri al**)|
+|⇞|**Sayfa yukarı** (**pg up**)|
+|⇟|**Sayfa aşağı** (**pg dn**)|
+|⌫|**Sil** (**geri al**)|
 |⌦|**İleri silme**|
-|❌|**Döndürülmesini**|
+|‎|**Döndürülmesini**|
 |←→↑↓|**Ok tuşları**|
 |↖|**Giriş**|
 |↘|**Son**|

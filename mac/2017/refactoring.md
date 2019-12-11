@@ -1,68 +1,68 @@
 ---
 title: Kodu yeniden düzenleme
-description: Mac için Visual Studio'da kod düzenleme, yeniden kaynak analizini kullanarak basit yapılır.
-author: conceptdev
-ms.author: crdun
+description: Mac için Visual Studio kodu yeniden düzenleme, kaynak analizinin kullanımı aracılığıyla basit hale getirilir.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
-ms.openlocfilehash: d7df01e2d2c6e4acb347b40cb82a04bee9394fe1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7b11f09d8fb70612d4496987f69583b2ac691275
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988690"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985240"
 ---
 # <a name="refactoring"></a>Yeniden Düzenle
 
-Kodu yeniden düzenleme, yeniden düzenleme, yeniden yapılandırmayı ve kodu Genel davranışını değişmeyen sağlarken mevcut kodu açıklamak için bir yoldur.
+Kodu yeniden düzenleme, kodun genel davranışının değişmeyeceğinden emin olmak için mevcut kodu yeniden düzenlemek, yeniden yapılandırmak ve netleştirmek için bir yoldur.
 
-Yeniden düzenleme, veya herhangi başka bir geliştirici ya koda başvurabilir kullanıcı için fazla kullanım, okunabilir ve sürdürülebilir yaparak daha iyi bir kod tabanına üretir.
+Yeniden düzenleme, bir isteyen kod tabanı üretir, sizin için daha kolay bir şekilde çalışabilir, okunabilir ve sürdürülebilir hale gelir.
 
-Roslyn, Microsoft'un açık kaynak .NET derleyici platformu ile tümleştirme Mac için Visual Studio için daha fazla yeniden düzenleme işlemleri sağlar.
+Mac için Visual Studio, Microsoft 'un açık kaynaklı .NET derleyicisi platformu ile, daha yeniden düzenleme işlemlerine izin verir.
 
 ## <a name="renaming"></a>Yeniden adlandırma
 
-*Yeniden Adlandır* komutu yeniden düzenleme tüm kod tanımlayıcısı (örneğin, bir sınıf adı, özellik adı vb.) tüm tanımlayıcı örneklerini bulun ve bunları değiştirmek için kullanılabilir. Bir sembol yeniden adlandırmak için sağ tıklayın ve seçin **yeniden düzenleyin > Yeniden Adlandır**, veya **Cmd + R** anahtar bağlama:
+*Yeniden düzenlemeyi yeniden adlandır* komutu herhangi bir kod tanımlayıcısı üzerinde (örneğin, bir sınıf adı, özellik adı vb.), Bu tanımlayıcının tüm oluşumlarını bulmak ve bunları değiştirmek için kullanılabilir. Bir sembolü yeniden adlandırmak için, üzerine sağ tıklayın ve **yeniden düzenle > yeniden adlandır**' ı veya **cmd + R** tuşu bağlamasını seçin:
 
-![Menü öğesini yeniden adlandırma](media/refactoring-renaming1.png)
+![Menü öğesini yeniden adlandır](media/refactoring-renaming1.png)
 
-Bu, simge ve tüm başvuruları vurgular. Yeni bir ad yazarak başlattığınızda kodunuzdaki tüm başvurularını otomatik olarak değiştirir ve yeniden adlandırma, tamamlama tuşlarına basarak sinyal verebilirsiniz **Enter**:
+Bu, simgeyi ve ona yapılan tüm başvuruları vurgular. Yeni bir ad yazmaya başladığınızda kodunuzdaki tüm başvuruları otomatik olarak değiştirir ve **ENTER**tuşuna basarak yeniden adlandırma tamamlanmanıza işaret edebilirsiniz:
 
 ![Yeniden adlandırma ve tanımlayıcı](media/refactoring-renaming2.png)
 
 ## <a name="context-actions"></a>Bağlam eylemleri
 
-Bağlam Eylemler, herhangi bir C# kod İnceleme olanak sağlar ve tüm olası yeniden düzenleme seçeneklerini görmek.
+Bağlam eylemleri, herhangi bir C# kodu incelemenizi ve tüm olası yeniden düzenleme seçeneklerini görmenizi sağlar.
 
-**Çözmek** ve **yeniden düzenleme** bağlam öğeleri tek bir birleştirilmiş *hızlı düzeltme...*  kullanılabilir tüm bağlam Eylemler ile sağlayacak öğesi:
+**Çözümle** ve yeniden **düzenleme** bağlam öğeleri, size tüm kullanılabilir bağlam eylemlerini sağlayacak tek bir *hızlı düzelme...* öğesi içinde birleştirilir:
 
-![İçerik öğeleri görüntüle](media/refactoring-context-action.png)
+![Bağlam öğelerini görüntüle](media/refactoring-context-action.png)
 
-Herhangi bir bağlam eylemleri üzerine geldiğinizde, bir önizleme ne eklenecek veya kodunuz içinden kaldırıldı sağlar.
+Bağlam eylemlerinin herhangi birinin üzerine gelindiğinde, kodunuzla nelerin ekleneceğini veya hangilerinin kaldırılabileceği hakkında bir önizleme sunulmaktadır.
 
-Alternatif olarak, basabilirsiniz **seçeneği + Enter** kodunuzdaki herhangi bir yeri:
+Alternatif olarak, kodunuzda herhangi bir yere **ENTER + ENTER** tuşuna basabilirsiniz:
 
-![Seçeneği girin içerik öğeleri](media/refactoring-image2a.png)
+![Seçenek bağlam öğelerini gir](media/refactoring-image2a.png)
 
-Bu seçenekleri etkinleştirmek için seçmelisiniz *açık dosyaların kaynak analizini etkinleştir* seçeneklerinde **Mac için Visual Studio > Tercihler > Metin Düzenleyicisi > kaynak çözümleme**:
+Bu seçenekleri etkinleştirmek için, seçeneklerde *Açık dosyaların kaynak analizini etkinleştir* ' i seçmeniz gerekir **Mac için Visual Studio > Tercihleri > Metin Düzenleyicisi > kaynak analizi**:
 
-![Kaynak analizi etkinleştirme](media/refactoring-options.png)
+![Kaynak analizini etkinleştirme](media/refactoring-options.png)
 
-Etkin veya devre dışı göz atarak önerilebilir, 100'den fazla olası eylemler vardır **Mac için Visual Studio > Tercihler > kaynak çözümleme > C# > kod eylemleri** seçerek veya yanındaki kutuyu seçimini Eylem:
+Mac için Visual Studio > tercihlerine göz atarak etkin veya devre dışı bırakılmış olabilecek 100 üzerinde **> kaynak analizi > C# , kod eylemlerini >** ve eylemin yanındaki kutuyu seçip seçimi kaldır:
 
-![C# kaynak çözümleme eylemleri](media/refactoring-image3a.png)
+![C#Kaynak çözümleme eylemleri](media/refactoring-image3a.png)
 
-### <a name="common-context-actions"></a>Genel bağlam eylemleri
+### <a name="common-context-actions"></a>Ortak bağlam eylemleri
 
-En sık kullanılan bağlam eylemlerin bazıları aşağıda açıklanmıştır.
+Yaygın olarak kullanılan bazı bağlam eylemleri aşağıda açıklanmaktadır.
 
 #### <a name="extract-method"></a>Ayıklama metodu
 
-Ayıklama yöntemi yeniden düzenleme işlemi, varolan bir üye kodda seçim çekip çıkararak yeni bir yöntem oluşturmanıza olanak sağlar. Bu eylem, iki şey yapar:
+Metodu Ayıkla yeniden düzenleme işlemi, varolan bir üyede bir kod seçimini ayıklayarak yeni bir yöntem oluşturmanıza olanak sağlar. Bu eylem iki şeyi yapar:
 
-* Seçilen kod içeren yeni bir yöntem oluşturur
-* Seçilen kod olduğu yerde yeni yöntemi çağırır.
+* Seçilen kodu içeren yeni bir yöntem oluşturur
+* Seçili kodun olduğu yerde yeni yöntemi çağırır.
 
 ##### <a name="example"></a>Örnek
 
@@ -82,36 +82,36 @@ Ayıklama yöntemi yeniden düzenleme işlemi, varolan bir üye kodda seçim çe
     }
 ```
 
-2. Satırı Vurgula `double volume = (baseArea * height) / 3;`, sağ tıklayın ve seçin **yeniden düzenleyin > yöntemi ayıklama**.
+2. Satır `double volume = (baseArea * height) / 3;`vurgulayın, üzerine sağ tıklayın ve sonra **yöntemi > yeniden Düzenle**' yi seçin.
 
-3. Yeni yöntemi kodunuzu nereye yerleştirileceğini seçmek için ok tuşlarını kullanın.
+3. Yeni yöntemin kodunuza yerleştirilmesi gereken yeri seçmek için ok tuşlarını kullanın.
 
 #### <a name="encapsulate-field"></a>Alanı kapsülleme
 
-Alan yalıtma işlemi, mevcut bir alandan bir özellik oluşturmanıza olanak sağlar ve yeni oluşturulan özellik başvurmak için kodunuzu güncelleştirir. Alan kapsülleyen bir özellik oluşturarak, doğrudan erişim, ortak alan için diğer nesneler üzerinde değişiklik yapamazsınız, yani engelleyerek.
+Alanı Yalıtma işlemi, mevcut bir alandan bir özellik oluşturmanıza ve kodunuzu yeni oluşturulan özelliğe başvuracak şekilde günceletmenize olanak tanır. Alanınızı kapsülleyen bir özellik oluşturarak, ortak alana doğrudan erişim izni verilmez, yani diğer nesneler bunu değiştiremeyeceği anlamına gelir.
 
-Bu eylem aşağıdakileri yapın:
+Bu eylem şunları yapılır:
 
-* Özel erişim değiştiricisi değiştirir.
-* (Bu durumda yalnızca bir alıcı oluşturun salt okunur alan olmadığı sürece), alıcı ve Ayarlayıcıyı alanın oluşturur.
+* Erişim değiştiricisini özel olarak değiştirir.
+* Alan için bir alıcı ve ayarlayıcı üretir (alan salt okunurdur, bu durumda yalnızca bir alıcı oluşturur).
 
-## <a name="source-analysis"></a>Kaynak analizi
+## <a name="source-analysis"></a>Kaynak Analizi
 
-Kaynak analizi, kodunuzun çalışma sırasında altı çizili olası hataları ve stili ihlalleri tarafından analiz ederek bağlam eylem olarak otomatik sağlama giderir.
+Kaynak analizi, olası hataların ve stil ihlallerinin altını ve bağlam eylemleri olarak otomatik düzeltmeler sağlayarak kodunuzu anında analiz eder.
 
-Metin Düzenleyicisi sağ tarafında kaydırma çubuğu görüntüleyerek herhangi bir zamanda tüm herhangi bir dosya için kaynak analiz sonuçlarını görüntüleyebilirsiniz:
+Herhangi bir dosya için kaynak analizinin tüm sonuçlarını, istediğiniz zaman, metin düzenleyicisinin sağ tarafındaki kaydırma çubuğunu görüntüleyerek görüntüleyebilirsiniz:
 
-![Kaynak analizi kenar çubuğu](media/refactoring-image4a.png)
+![Kaynak çözümleme kenar çubuğu](media/refactoring-image4a.png)
 
-Üst daireye tıklayarak, her öneri yüksek öneme sahip sorunlar ilk gösteren yineleyebilirsiniz. Bir tek tek sonuç veya satır geldiğinizde bağlam eylemleri sabit sorunu görüntüler:
+Üstteki daireye tıkladığınızda, en yüksek önem derecesine sahip olan ilk öneri arasında yineleme yapabilirsiniz. Tek bir sonucun veya satırın üzerine gelindiğinde sorun görüntülenir ve bu, bağlam eylemleri aracılığıyla düzeltilenebilir:
 
-![Kaynak analizi öğesi](media/refactoring-image5.png)
+![Kaynak analiz öğesi](media/refactoring-image5.png)
 
-## <a name="related-video"></a>İlgili Video
+## <a name="related-video"></a>İlgili video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Refactoring-Code/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Eylemler (Windows için Visual Studio)](/visualstudio/ide/quick-actions)
-- [(Windows için Visual Studio) kodu yeniden düzenleyin](/visualstudio/ide/refactoring-in-visual-studio)
+- [Hızlı eylemler (Windows üzerinde Visual Studio)](/visualstudio/ide/quick-actions)
+- [Kodu yeniden düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)

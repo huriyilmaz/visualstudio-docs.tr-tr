@@ -1,23 +1,23 @@
 ---
-title: Neden tüm kullanılabilir şablonlar görebilirim değil?
-description: Tüm kullanılabilir şablonlar neden göremiyorum sorun giderme makalesi.
+title: Tüm kullanılabilir şablonları neden göremiyorum?
+description: Tüm kullanılabilir şablonları neden görmediğiniz hakkında sorun giderme makalesi.
 ms.topic: troubleshooting
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/02/2019
 ms.assetid: 297D9094-B40F-4C1A-BF19-B14CB735003A
-ms.openlocfilehash: 633a893933f99f34ed2870c236287a5e26799a76
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 119c257ef2c1120e8c97995c1fad076bae093ac0
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691918"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983499"
 ---
-# <a name="troubleshooting-why-can-i-not-see-all-available-templates"></a>Sorun Giderme: Neden tüm kullanılabilir şablonlar görebilirim değil?
+# <a name="troubleshooting-why-can-i-not-see-all-available-templates"></a>Sorun giderme: kullanılabilir tüm şablonları neden göremiyorum?
 
-Yeni Proje iletişim kutusunda, yalnızca yüklenmiş olan bileşenlerin şablonları görürsünüz. Aşağıdaki tüm bileşenleri eksikse, aşağıda açıklandığı gibi doğru bileşenler yüklü, emin olun:
+Yeni proje Iletişim kutusunda yalnızca yüklenmiş bileşenlerin şablonlarını görürsünüz. Aşağıdaki bileşenlerden herhangi biri eksikse, aşağıda açıklandığı gibi doğru bileşenlerin yüklü olduğundan emin olun:
 
-|Şablon eksik  |Yükleme için bileşen  |
+|Eksik şablon  |Yüklenecek bileşen  |
 |---------|---------|
 |Android     |Android        |
 |iOS     |iOS         |
@@ -27,4 +27,4 @@ Yeni Proje iletişim kutusunda, yalnızca yüklenmiş olan bileşenlerin şablon
 |Mac     |macOS (Cocoa)         |
 |.NET Core     |.NET Core         |
 
-VisualStudioForMacInstaller.dmg bileşenlerini yüklemeyi yeniden çalıştırın. Artık, varsa, buradan indirebilirsiniz [Mac için Visual Studio](https://aka.ms/vsmac) Web sayfası.
+Bileşenleri yüklemek için VisualStudioForMacInstaller. dmg ' i yeniden çalıştırın. Artık yoksa, [Mac için Visual Studio](https://aka.ms/vsmac) Web sayfasından indirebilirsiniz.

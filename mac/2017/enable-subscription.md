@@ -1,16 +1,16 @@
 ---
 title: Aboneliği Etkinleştirme
 description: Bu makalede, Mac için Visual Studio içindeki aboneliğinizi etkinleştirmek ve özellikleri açmak için Microsoft hesabı nasıl kullanılacağı açıklanmaktadır
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: 7acef72e3e1768d0250e0dd7ff2b587277d133ec
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: c3f8aef1b784b0261eeba6408a8cef0144e5fcac
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872309"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984998"
 ---
 # <a name="enable-subscription"></a>Aboneliği Etkinleştirme
 
@@ -28,7 +28,7 @@ Bir aboneliği kullanmaya başlamak için Mac için Visual Studio 'de oturum [a�
 
 Aboneliğinizin süresi dolmuşsa iki seçeneğiniz vardır:
 
-1. Aboneliğinizi yenileyin. Aboneliğinizi, ' a giderek yenileyebilirsiniz [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/).
+1. Aboneliğinizi yenileyin. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)giderek aboneliğinizi yenileyebilirsiniz.
 
 2. Etkin bir aboneliğe sahip başka bir hesabınız varsa, [birden çok kullanıcı hesabı ekleme](signing-in.md) makalesinde ayrıntılı olarak Mac için Visual Studio ekleyebilirsiniz. Mac için Visual Studio, eklediğiniz tüm hesaplardan en iyi kullanılabilir lisansı algılar.
 
