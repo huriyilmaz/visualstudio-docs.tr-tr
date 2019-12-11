@@ -1,17 +1,17 @@
 ---
 title: Azure İşlevleri’ne Giriş
 description: Mac için Visual Studio 'de Azure işlevleri 'ni kullanma.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
-ms.openlocfilehash: 6755f6fd681dac87741b9de6a8d1fcd123a8ad9b
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.openlocfilehash: 85e66711c8bfe65319bf6af90ce0452478c4b7f8
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024696"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983472"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
@@ -68,7 +68,7 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
     Çıktıdan URL 'YI kopyalayın.
 
-3. HTTP isteğinin URL 'sini tarayıcınızın adres çubuğuna yapıştırın. `?name=<yourname>` sorgu dizesini URL 'nin sonuna ekleyin ve isteği yürütün. Aşağıdaki görüntüde, bu işlevin döndürdüğü yerel GET isteğine tarayıcıda yapılan yanıt gösterilmektedir:
+3. HTTP isteğinin URL’sini tarayıcınızın adres çubuğuna yapıştırın. `?name=<yourname>` sorgu dizesini URL 'nin sonuna ekleyin ve isteği yürütün. Aşağıdaki görüntüde, bu işlevin döndürdüğü yerel GET isteğine tarayıcıda yapılan yanıt gösterilmektedir:
 
     ![tarayıcıda http isteği](media/azure-functions-httpreq.png)
 
@@ -98,18 +98,18 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
     |Ayar  |Açıklama  |
     |---------|---------|
     |**App Service adı**|Yeni işlev uygulamanızı tanımlayan genel olarak benzersiz bir ad.|
-    |**Aboneliğiniz**|Kullanılacak Azure aboneliği.|
-    |**[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)**|İşlev uygulamanızın oluşturulacağı kaynak grubunun adı. Yeni bir kaynak grubu oluşturmak için **+** seçin.|
+    |**Abonelik**|Kullanılacak Azure aboneliği.|
+    |**[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)**|İşlev uygulamanızın oluşturulacağı kaynak grubunun adı. Yeni bir kaynak grubu oluşturmak için **+** seçin.|
     |**[Hizmet planı](/azure/azure-functions/functions-scale)**|Mevcut bir planı seçin veya özel bir plan oluşturun. Size yakın bir bölgede veya işlevlerinizin erişebileceği diğer hizmetlere yakın bir konum seçin.|
 
     > [!CAUTION]
     > Mac için Visual Studio 7,6 sürümünde bir hata vardır. Bu, bir sağlama hatası ile, **fiyatlandırma** kümesine sahip özel bir hizmet planı oluşturmaya çalışırsanız, yayımlamanın bir sağlama hatasıyla başarısız olmasına neden **olur.** Bu, bir sonraki hizmet sürümünde düzeltilecektir.
 
-5. Bir depolama hesabı oluşturmak için **İleri** ' ye tıklayın. Işlevler çalışma zamanı için bir Azure depolama hesabı gereklidir. Genel amaçlı bir depolama hesabı oluşturmak için **özel** ' e tıklayın veya var olan birini kullanın:
+5. Bir depolama hesabı oluşturmak için **İleri** ' ye tıklayın. İşlevler çalışma zamanı için bir Azure depolama hesabı gereklidir. Genel amaçlı bir depolama hesabı oluşturmak için **özel** ' e tıklayın veya var olan birini kullanın:
 
     ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image8.png)
 
-6. Azure 'da bu ayarlarla bir işlev uygulaması ve ilgili kaynaklar oluşturmak ve işlev proje kodunuzu dağıtmak için **Oluştur** ' a tıklayın.
+6. **Oluştur**'a tıklayarak Azure'da bu ayarlarla bir işlev uygulaması ve ilgili kaynaklar oluşturun ve işlev proje kodunuzu dağıtın.
 
 7. Yayımlama sırasında bir iletişim kutusu istenebilir, "Azure 'da Işlevleri güncelleştirme" konusunda sizi bilgilendiren bir iletişim kutusu görüntülenebilir. **Evet**' e tıklayın:
 
@@ -156,7 +156,7 @@ Ayarlamanız gerekebilecek önemli bir ayar `FUNCTIONS_EXTENSION_VERSION`. Mac i
 
 - **Genel Web kancası** – bu, Web kancalarını destekleyen herhangi bir hizmetten her istek aldığında çalıştırılacak basit bir işlevdir. Daha fazla bilgi için bkz. [Genel Web kancaları hakkında Azure işlevleri makalesi](/azure/azure-functions/functions-create-generic-webhook-triggered-function).
 
-- **Dayanıklı işlevler düzenleme** – dayanıklı işlevler sunucusuz bir ortamda durum bilgisi olan işlevler yazmanızı sağlar. Uzantı durum, denetim noktaları ve yeniden başlatma işlemlerini sizin için yönetir. Daha fazla bilgi için bkz. [dayanıklı Işlevlerde](/azure/azure-functions/durable-functions-overview)Azure işlevleri Kılavuzu.
+- **Dayanıklı işlevler düzenleme** – dayanıklı işlevler sunucusuz bir ortamda durum bilgisi olan işlevler yazmanızı sağlar. Uzantı sizin için durumu, denetim noktalarını ve yeniden başlatmaları yönetir. Daha fazla bilgi için bkz. [dayanıklı Işlevlerde](/azure/azure-functions/durable-functions-overview)Azure işlevleri Kılavuzu.
 
 - **Görüntü Resizer** – bu işlev, bir kapsayıcıya bir blob eklendiğinde yeniden boyutlandırılmış görüntüler oluşturur. Şablon, tetikleyici için yol ve bağlantı dizesi, küçük bir görüntü çıkışı ve orta görüntü çıkışı alır.
 

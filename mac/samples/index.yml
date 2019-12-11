@@ -1,14 +1,14 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Mac için Visual Studio örnekleri
+title: Mac için Visual Studio Örnekleri
 metadata:
   description: Mac için Visual Studio ile çalışan örnek uygulamalar.
-  author: asb3993
-  ms.author: amburns
+  author: heiligerdankgesang
+  ms.author: dominicn
   ms.date: 07/31/2019
   ms.topic: sample
 abstract:
-  description: Mac için Visual Studio ile proje oluşturmaya başlamanıza yardımcı olacak Xamarin örnekleri uygulamalar ve kod tanıtımları.
+  description: Mac için Visual Studio ile proje oluşturmaya başlamanıza yardımcı olacak Xamarin örnek uygulamaları ve kod tanıtımları.
 sections:
   - title: Xamarin.Forms
     items:
@@ -113,19 +113,19 @@ sections:
         className: cardsW
         items:
           - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
-            html: Xamarin örnek uygulamaları ve kod tanıtımları için tüm küme.
+            html: Xamarin örnek uygulamalarından ve kod tanıtımlarından oluşan tam bir set.
             image:
               src: ../media/samples/sample-download.svg
               href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             title: Tüm Xamarin örnekleri
           - href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
-            html: ASP.NET Core örnek uygulamalar ve kod tanıtımları.
+            html: ASP.NET Core örnek uygulamalarından ve kod tanıtımlarından oluşan tam bir set.
             image:
               src: ../media/samples/sample-download.svg
               href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
             title: Tüm ASP.NET Core örnekleri
           - href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
-            html: .NET Core örnek uygulamaları ve kod tanıtımları kümesi. Bu örneklerden bazılarının Windows 'a özgü gereksinimleri olduğunu ve bu nedenle Mac için Visual Studio çalıştırılmadığını unutmayın.
+            html: .NET Core örnek uygulamalarından ve kod tanıtımlarından oluşan tam bir set. Bu örneklerden bazılarının Windows’a özgü gereksinimleri olduğunu ve bu nedenle Mac için Visual Studio’da çalışmayacağını unutmayın
             image:
               src: ../media/samples/sample-download.svg
               href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
