@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, solution templates
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 110d357bd113913ab73990b8e3cfa12e4dd1cdae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b76b61bb0ff84d3e1f0948057b60f6f3fbb505ad
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748519"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590572"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>Etki Alanına Özgü Dil Çözümü Şablonu Seçme
 Alana özgü dil çözümü oluşturmak için Alana Özgü Dil Tasarımcısı sihirbazında bulunan çözüm şablonlarından birini seçin. Oluşturmak istediğiniz dile en yakından benzeyen şablonu seçerek, başlangıç çözümünde yapmanız gereken değişiklikleri en aza indirmenize olanak sağlayabilirsiniz.

@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Settings waterfall
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: ad5f03d7722fa2fb8452b6a1217c18996d6c978f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 95a2029cee1fd13241aba727f671a164d7272543
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653162"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591586"
 ---
 # <a name="settings-waterfall"></a>Ayarlar şelalesi
 
@@ -24,7 +24,7 @@ Ayarlar şelale kavramı, kullanıcının **derlemeyi**, **armatürü**ve **ara�
 * Fixture- [PexClass](attribute-glossary.md#pexclass)
 * Araştırma- [Pexaraştırması Ationattributebase](attribute-glossary.md#pexexplorationattributebase)
 
-**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win &mdash;if bir ayar **derleme** ve **armadeğer** düzeylerinde tanımlanmıştır ve **Bu ayarlar kullanılır** .
+**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win&mdash;bir ayar **derleme** ve **armadeğer** düzeylerinde **tanımlandıysa, bu ayarlar kullanılır** .
 
 Bazı ayarların **derleme** düzeyi veya **armatürü** düzeyine özgü olduğunu unutmayın.
 
@@ -46,6 +46,6 @@ namespace MyTests
 }
 ```
 
-## <a name="got-feedback"></a>Geri bildirim alındı mı?
+## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
 
 Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.

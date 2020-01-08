@@ -3,17 +3,17 @@ title: Nesnelerin stilini değiştirme
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 225a9e85493711a1e2903c1f6a632ae68f31136f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f38bfc7a6899ff1d61b8103204bb58df5c5106a6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668832"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592954"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Visual Studio için Blend içindeki nesnelerin stilini değiştirme
 
@@ -75,7 +75,7 @@ Bir stil oluşturmak için, nesneyi seçin ve ardından **nesne** menüsünde **
 
 > [!NOTE]
 > Her denetim türü için stil veya şablon oluşturamazsınız. Bir denetim bunları desteklemiyorsa, içerik haritası düğmesi çalışma yüzeyi üzerinde görünmez.
-> Ana belgenizin düzenlenme kapsamına dönmek için, kapsamı **geri döndür** ' e tıklayarak kapsamı simge ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png) ![Return.
+> Ana belgenizin düzenlenme kapsamına dönmek için, kapsamı **geri** Döndür ' e tıklayarak ![kapsamını simgeye](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)döndürün.
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Denetime stil veya şablon uygulama
 
@@ -85,7 +85,7 @@ Bir stil oluşturmak için, nesneyi seçin ve ardından **nesne** menüsünde **
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>Bir denetimin varsayılan stilini veya şablonunu geri yükleme
 
-Denetimi seçin ve * * Özellikler * * * * penceresinde **Stil** veya **şablon** özelliğini bulun. **Gelişmiş Seçenekler**' i seçin ve ardından kısayol menüsünde **Sıfırla** ' ya tıklayın.
+Denetimi seçin ve **Özellikler** **penceresinde **Stil** veya **şablon** özelliğini bulun. **Gelişmiş Seçenekler**' i seçin ve ardından kısayol menüsünde **Sıfırla** ' ya tıklayın.
 
 ## <a name="visual-states"></a>Görsel durumlar
 
@@ -93,7 +93,7 @@ Görsel durumlar, bir denetimin görünüşünü durumunu temel alarak değişti
 
 ![Fare durumuna göre](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-[WPF denetimlerinizin durumunu yönetmek](https://www.youtube.com/watch?v=m0PlkF5i6uw)](../designers/media/bldadminconsoleinitialconfigicon.PNG) **kısa bir video izleyin:** ![Play düğme.
+[WPF denetimlerinizin durumunu yönetmek](https://www.youtube.com/watch?v=m0PlkF5i6uw)](../designers/media/bldadminconsoleinitialconfigicon.PNG) **kısa bir video Izleyin:** ![Oynat düğmesi.
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>Kaynaklar: renkler, stiller ve şablonlar oluşturun ve daha sonra yeniden kullanın
 

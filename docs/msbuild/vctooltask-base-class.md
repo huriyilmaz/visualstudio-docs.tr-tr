@@ -7,35 +7,35 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-author: mikeblome
-ms.author: mblome
+author: ghogen
+ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bdad856a6ea0ec6cca8292bc3095f51c500bcb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: df75bb998d2b8c6486e20c4c3ca0d80347c8f88a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970724"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591677"
 ---
-# <a name="vctooltask-base-class"></a>VCToolTask taban sınıfı
+# <a name="vctooltask-base-class"></a>VCToolTask temel sınıfı
 
-Birçok görevi sonuçta devralınacak <xref:Microsoft.Build.Utilities.Task> sınıfı ve [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) sınıfı. Bu sınıf, bunlardan türeyen görevlere birkaç parametre ekler. Bu parametreler, bu belgede listelenir.
+Çoğu görev <xref:Microsoft.Build.Utilities.Task> sınıfından ve [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) sınıfından devralınır. Bu sınıf, bunlardan türetilen görevlere birkaç parametre ekler. Bu parametreler bu belgede listelenmiştir.
 
 ## <a name="parameters"></a>Parametreler
 
-Parametreleri aşağıdaki tabloda açıklanmıştır **VCToolTask** temel sınıfı.
+Aşağıdaki tabloda **Vctooltask** temel sınıfının parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**ActiveToolSwitchesValues**|İsteğe bağlı **sözlük\<dize, ToolSwitch >** parametresi.|
+|**Activetoolanahtardeğerleri**|İsteğe bağlı **sözlük\<dize, ToolSwitch >** parametresi.|
 |**AdditionalOptions**|İsteğe bağlı **dize** parametresi.|
-|**EffectiveWorkingDirectory**|İsteğe bağlı **dize** parametresi.|
+|**Efektte WorkingDirectory**|İsteğe bağlı **dize** parametresi.|
 |**EnableErrorListRegex**|İsteğe bağlı **bool** parametresi.<br/><br/>Varsayılan değer `true`.|
-|**ErrorListRegex**|İsteğe bağlı **Itaskıtem []** parametresi.|
-|**ErrorListListExclusion**|İsteğe bağlı **Itaskıtem []** parametresi.|
-|**GenerateCommandLine**|İsteğe bağlı **dize** parametresi.<br/><br/>Değerleri kullanan **CommandLineFormat** *biçimi* [varsayılan CommandLineFormat.ForBuildLog =] ve **EscapeFormat** *escapeFormat* [ Varsayılan EscapeFormat.Default =].|
-|**GenerateCommandLineExceptSwitches**|İsteğe bağlı **dize** parametresi.<br/><br/>Değerleri kullanan **string []** *switchesToRemove*, **CommandLineFormat** *biçimi* [varsayılan CommandLineFormat.ForBuildLog =], ve **EscapeFormat** *escapeFormat* [varsayılan EscapeFormat.Default =].|
+|**ErrorListRegex**|İsteğe bağlı **ıtaskitem []** parametresi.|
+|**Errorlistlistexclusiyon**|İsteğe bağlı **ıtaskitem []** parametresi.|
+|**GenerateCommandLine**|İsteğe bağlı **dize** parametresi.<br/><br/>Değer **commandlineformat** *biçimi* [varsayılan = Commandlineformat. forbuildlog] ve **escapeformat** *escapeformat* [varsayılan = escapeformat. Default] değerlerini kullanır.|
+|**Generatecommandlineexceptanahtarlarý**|İsteğe bağlı **dize** parametresi.<br/><br/>**[]** *Anahtar/[] anahtar/* dize değerlerini kullanır, **CommandLineFormat** *biçimi* [varsayılan = Commandlineformat. forbuildlog] ve **EscapeFormat** *escapeformat* [varsayılan = escapeformat. Default].|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

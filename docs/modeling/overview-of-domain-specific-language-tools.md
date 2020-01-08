@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82bccbd9558a5dad87e9fe13f9ed7136a5d77d8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7af9aa8ce8719fe08e16e244a2f7009ddf67f533
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747519"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591703"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Etki Alanına Özgü Dil Araçlarına Genel Bakış
 Visual Studio 'da barındırılan Alana Özgü Dil Araçları (DSL araçları), etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile göre modeller oluşturmak için sahip olmaları gereken her şeyi oluşturmanıza imkan tanır.
@@ -72,9 +72,9 @@ Visual Studio 'da barındırılan Alana Özgü Dil Araçları (DSL araçları), 
 ## <a name="distributing-your-dsl-solution"></a>DSL çözümünüzü dağıtma
  DSL araçları, Visual Studio 'da barındırılan bir paket oluşturur. Paket, bir araç kutusu, DSL Gezgini ve kullanıcıların, etki alanına özgü dilinizi kullanarak modeller oluşturmalarına izin veren diğer kullanıcı arabirimi öğelerini görüntüler.
 
- Visual Studio 'da DSL araçları çözümünü oluşturup çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği, etki alanına özgü dilin dilin kullanıcısına nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladıktan sonra, bulacağınız `.vsix` dosyasını DslPackage projesinin Build klasöründe dağıtabilirsiniz. Bu dosya, DSL 'yi bir Visual Studio uzantısı olarak diğer bilgisayarlara yüklemek için kullanılabilir.  Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+ Visual Studio 'da DSL araçları çözümünü oluşturup çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği, etki alanına özgü dilin dilin kullanıcısına nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladıktan sonra, bulacağınız `.vsix` dosyasını DslPackage projesinin Build klasöründe dağıtabilirsiniz. Bu dosya, DSL 'yi bir Visual Studio uzantısı olarak diğer bilgisayarlara yüklemek için kullanılabilir.  Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Deneysel Örnek](../extensibility/the-experimental-instance.md)
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

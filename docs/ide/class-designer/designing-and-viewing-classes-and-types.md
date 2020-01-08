@@ -11,17 +11,17 @@ helpviewer_keywords:
 - classes [Visual Studio], viewing
 - class designer
 ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31b28da2206d23c6112d7e7e154d7e907f63b163
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c65be2b5afe91f9ee20a5eecde57d790a0cbcb2c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631895"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590403"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>Sınıf Tasarımcısı sınıfları ve türleri tasarlama ve görüntüleme
 
@@ -57,5 +57,5 @@ Bir veya daha fazla sınıf diyagramına ince ayar yaptıktan sonra, bunları Mi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod düzenleyicisinin özellikleri](../writing-code-in-the-code-and-text-editor.md)
+- [Kod Düzenleyicisi özellikleri](../writing-code-in-the-code-and-text-editor.md)
 - [Çözümlerinizdeki bağımlılıkları eşleme](../../modeling/map-dependencies-across-your-solutions.md)

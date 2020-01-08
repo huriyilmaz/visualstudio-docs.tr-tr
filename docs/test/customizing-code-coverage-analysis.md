@@ -2,39 +2,39 @@
 title: Kod Kapsamı Çözümlemeyi Özelleştirme
 ms.date: 08/21/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 7392397748d26224a0fba0d5510fccb6655d7642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: d90292d339c87c74892d715f2a376b5159226dd7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665070"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590338"
 ---
 # <a name="customize-code-coverage-analysis"></a>Kod kapsamı analizini özelleştirme
 
-Varsayılan olarak, kod kapsamı birim testleri sırasında yüklenen tüm çözüm derlemelerini analiz eder. Çoğu zaman en iyi şekilde çalıştığından, bu varsayılan davranışı kullanmanızı öneririz. Daha fazla bilgi için bkz. kod [kapsamını kullanarak ne kadar kodun test edildiğini belirleme](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Varsayılan olarak, birim testleri sırasında yüklenen tüm çözüm derlemelerine kod kapsamı analiz eder. Çoğu zaman iyi çalıştığı için bu varsayılan davranışı kullanmanızı öneririz. Daha fazla bilgi için [ne kadar kod test belirlemek için kod kapsamı kullanın](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
-Kod kapsamı sonuçlarından test kodunu dışlamak ve yalnızca uygulama kodunu dahil etmek için, <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> özniteliğini test sınıfınıza ekleyin.
+Kod kapsamı sonuçları test kodu hariç ve yalnızca uygulama kodu eklemek için aşağıdakileri ekleyin <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> test sınıfı özniteliği.
 
-Çözümünüzün bir parçası olmayan derlemeleri dahil etmek için, bu derlemeler için *. pdb* dosyalarını edinin ve bunları Assembly *. dll* dosyaları ile aynı klasöre kopyalayın.
+Dahil etmek, çözümünüzün bir parçası olmayan derlemeler için elde *.pdb* bu derlemeler için dosyaları ve derleme olarak aynı klasöre kopyalayın *.dll* dosyaları.
 
 ## <a name="run-settings-file"></a>Çalışma ayarları dosyası
 
-[Çalışma ayarları dosyası](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md) birim testi araçları tarafından kullanılan yapılandırma dosyasıdır. Gelişmiş kod kapsamı ayarları bir *. runsettings* dosyasında belirtilir.
+[Çalışma ayarları dosyası](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md) birim testi araçları tarafından kullanılan yapılandırma dosyasıdır. Gelişmiş kod kapsamı ayarları içinde belirtilmiş bir *.runsettings* dosya.
 
-Kod kapsamını özelleştirmek için şu adımları izleyin:
+Kod kapsamını özelleştirmek için aşağıdaki adımları izleyin:
 
-1. Çözümünüze bir çalışma ayarları dosyası ekleyin. **Çözüm Gezgini**, çözümünüzün kısayol menüsünde,  > **Yeni öğe** **Ekle** ' yi seçin ve **XML dosyası**' nı seçin. Dosyayı *CodeCoverage. runsettings*gibi bir adla kaydedin.
+1. Çalıştırma ayarları dosyasını çözümünüze ekleyin. İçinde **Çözüm Gezgini**, çözümünüzün kısayol menüsünde **Ekle** > **yeni öğe**seçip **XML dosyası**. Dosyayı gibi bir adla kaydetme *CodeCoverage.runsettings*.
 
-2. Bu makalenin sonundaki örnek dosyadan içerik ekleyin ve ardından aşağıdaki bölümlerde açıklandığı gibi gereksinimlerinize göre özelleştirin.
+2. İçerik bu makalenin sonunda örnek dosyası ekleyin ve sonra gereksinimleriniz için aşağıdaki bölümlerde açıklandığı şekilde özelleştirin.
 
 ::: moniker range="vs-2017"
 
-3. Çalışma ayarları dosyasını seçmek için, **Test** menüsünde test **ayarları** ' nı seçin  > **Test ayarları dosyası**' nı seçin. Komut satırından testleri çalıştırmak için bir çalıştırma ayarları dosyası belirtmek için bkz. [birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
+3. Çalışma ayarları dosyası seçilecek **Test** menüsünde seçin **Test ayarları** > **Test ayarları dosyasını Seç**. Komut satırından testleri çalıştırmak için bir çalıştırma ayarları dosyası belirtmek için bkz. [birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
 
 ::: moniker-end
 
@@ -44,7 +44,7 @@ Kod kapsamını özelleştirmek için şu adımları izleyin:
 
 ::: moniker-end
 
-   **Kod kapsamını çözümle**' yi seçtiğinizde, yapılandırma bilgileri çalışma ayarları dosyasından okunmalıdır.
+   Seçtiğinizde, **kod kapsamı analizi**, yapılandırma bilgilerini çalışma ayarları dosyasından okunur.
 
    > [!TIP]
    > Testleri çalıştırdığınızda veya kodunuzu güncelleştirdiğinizde önceki kod kapsamı sonuçları ve kod renklendirme otomatik olarak gizlenmez.
@@ -65,7 +65,7 @@ Kod kapsamını özelleştirmek için şu adımları izleyin:
 
 ## <a name="symbol-search-paths"></a>Sembol arama yolları
 
-Kod kapsamı derlemeler için sembol dosyaları ( *. pdb* dosyaları) gerektirir. Çözümünüz tarafından oluşturulan derlemeler için, sembol dosyaları genellikle ikili dosyalarla birlikte bulunur ve kod kapsamı otomatik olarak işe yarar. Bazı durumlarda, kod kapsamı analizinizdeki başvurulan derlemeleri dahil etmek isteyebilirsiniz. Bu gibi durumlarda, *. pdb* dosyaları ikililerin bitişik olmayabilir, ancak *. runsettings* dosyasında sembol arama yolunu belirtebilirsiniz.
+Kod kapsamı sembol dosyalarını gerektirir ( *.pdb* dosyaları) derlemeler için. Çözümünüz tarafından oluşturulan derlemeler için, sembol dosyaları genellikle ikili dosyalarla birlikte bulunur ve kod kapsamı otomatik olarak işe yarar. Bazı durumlarda, kod kapsamı analizinizdeki başvurulan derlemeleri dahil etmek isteyebilirsiniz. Bu gibi durumlarda *.pdb* dosyaları ikili bitişik olmayabilir ve sembol arama yolu belirtebilirsiniz *.runsettings* dosya.
 
 ```xml
 <SymbolSearchPaths>
@@ -75,7 +75,7 @@ Kod kapsamı derlemeler için sembol dosyaları ( *. pdb* dosyaları) gerektirir
 ```
 
 > [!NOTE]
-> Özellikle çok sayıda derlemeye sahip bir uzak dosya konumu kullanılırken, sembol çözünürlüğü zaman alabilir. Bu nedenle, *. pdb* dosyalarını ikili ( *. dll* ve *. exe*) dosyalarıyla aynı yerel konuma kopyalamayı göz önünde bulundurun.
+> Sembol çözümleme zaman alabilir özellikle birçok derlemeleri ile bir uzak dosya konumu kullanırken. Bu nedenle, kopyalamayı düşünün *.pdb* aynı yerel konuma ikili dosyaları ( *.dll* ve *.exe*) dosyaları.
 
 ## <a name="include-or-exclude-assemblies-and-members"></a>Derlemeleri ve üyeleri dahil etme veya dışlama
 
@@ -111,24 +111,24 @@ Aşağıdaki tabloda, derlemelerin ve üyelerin kod kapsamından içerme veya d�
 | CompanyName | Derlemeleri **Şirket** özniteliğiyle eşleştirir. |
 | PublicKeyToken | İmzalı derlemeleri ortak anahtar belirteci ile eşleştirir. |
 | Kaynak | Öğelerin tanımlandıkları kaynak dosyanın yol adına göre eşleşir. |
-| Öznitelik | Belirtilen özniteliğine sahip öğeleri eşleştirir. Özniteliğin tam adını belirtin, örneğin `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`.<br/><br/>@No__t_0 özniteliğini hariç tutdıysanız, `async`, `await`, `yield return` ve otomatik uygulanan özellikler gibi dil özelliklerini kullanan kod, kod kapsamı analizinden çıkarılır. Gerçekten üretilen kodu hariç tutmak için yalnızca <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> özniteliğini hariç tutun. |
+| Öznitelik | Belirtilen özniteliğine sahip öğeleri eşleştirir. Özniteliğin tam adını belirtin, örneğin `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`.<br/><br/><xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> özniteliğini hariç tutdıysanız, `async`, `await`, `yield return`ve otomatik uygulanan özellikler gibi dil özelliklerini kullanan kod, kod kapsamı analizinden çıkarılır. Gerçekten üretilen kodu hariç tutmak için yalnızca <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> özniteliğini hariç tutun. |
 | İşlev | Parametre listesi de dahil olmak üzere tam olarak nitelenmiş ad ile yordamları, işlevleri veya yöntemleri eşleştirir. Ayrıca, bir [normal ifade](#regular-expressions)kullanarak adın bir bölümünü de eşleştirebilirsiniz.<br/><br/>Örnekler:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` (C++) |
 
 ### <a name="regular-expressions"></a>Normal ifadeler
 
-Dahil etme ve hariç tutma düğümleri, joker karakterlerle aynı olmayan normal ifadeler kullanır. Tüm eşlemeler büyük/küçük harf duyarsızdır. Bazı örnekler şunlardır:
+Dahil etme ve hariç tutma düğümleri, joker karakterlerle aynı olmayan normal ifadeler kullanır. Tüm eşlemeler büyük/küçük harf duyarsızdır. Bazı örnekler:
 
-- **. \*** herhangi bir karakter dizesiyle eşleşir
+- **.\*** herhangi bir karakter dizesiyle eşleşir
 
 - **\\.** bir noktayla eşleşir "."
 
-- **\\ (\\)** parantezlerle eşleşir "()"
+- **\\( \\)** eşleşen parantez "(")
 
-- **\\ \\** , "\\" dosya yolu sınırlayıcısıyla eşleşiyor
+- **\\\\** eşleşen bir dosya yolu sınırlayıcı "\\"
 
-- **^** dizenin başlangıcını eşleştirir
+- **^** dizenin başlangıcıyla eşleşir
 
-- **$** dizenin sonuyla eşleşiyor
+- **$** Dize sonu ile eşleşir
 
 Aşağıdaki XML, belirli derlemelerin normal ifadeler kullanılarak nasıl ekleneceğini ve dışlanacağını göstermektedir:
 
@@ -165,13 +165,13 @@ Aşağıdaki XML, belirli işlevlerin normal ifadeler kullanılarak nasıl eklen
 ```
 
 > [!WARNING]
-> Kaçışsız veya eşleşmeyen parantez gibi normal ifadede bir hata varsa, kod kapsamı Analizi çalışmaz.
+> Atlanmayan veya eşleşmeyen parantezler gibi normal bir ifadede bir hata varsa kod kapsamı çözümleme çalışmaz.
 
 Normal ifadeler hakkında daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
 ## <a name="sample-runsettings-file"></a>Örnek .runsettings dosyası
 
-Bu kodu kopyalayın ve gereksinimlerinize uyacak şekilde düzenleyin.
+Bu kodu kopyalayın ve ihtiyaçlarınıza uyacak şekilde düzenleyin.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -290,6 +290,6 @@ Included items must then not match any entries in the exclude list to remain inc
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma ayarları dosyası kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-- [Ne kadar kodun test edildiğini öğrenmek için kod kapsamını kullanın](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Çalıştırma ayarları dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+- [Ne kadar kod test belirlemek için kod kapsamını kullanma](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+- [Birim testi kod](../test/unit-test-your-code.md)

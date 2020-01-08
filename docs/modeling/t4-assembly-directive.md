@@ -2,17 +2,17 @@
 title: T4 Derleme Yönergesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f605748d4bda13567713b646f0232d684ec46fe1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8d441d74d1ddea5a7b5dd063d302ec93e75fc1c9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748183"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591898"
 ---
 # <a name="t4-assembly-directive"></a>T4 Derleme Yönergesi
 
@@ -32,7 +32,7 @@ Visual Studio tasarım zamanı metin şablonunda `assembly` yönergesi, şablon 
 
  Derleme adı aşağıdakilerden biri olmalıdır:
 
-- GAC 'deki bir derlemenin tanımlayıcı adı, örneğin `System.Xml.dll`. Ayrıca, `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` gibi uzun biçimi de kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Reflection.AssemblyName>.
+- GAC 'deki bir derlemenin tanımlayıcı adı, örneğin `System.Xml.dll`. Ayrıca, `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`gibi uzun biçimi de kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Reflection.AssemblyName>.
 
 - Derlemenin mutlak yolu
 
@@ -66,7 +66,7 @@ Visual Studio tasarım zamanı metin şablonunda `assembly` yönergesi, şablon 
 ## <a name="msbuild"></a>MSBuild ve Visual Studio 'da proje özelliklerini kullanma
  $ (SolutionDir) gibi Visual Studio makroları MSBuild 'de çalışmıyor. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
 
- Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myLibFolder` adlı bir özelliği tanımlar:
+ Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myLibFolder`adlı bir özelliği tanımlar:
 
 ```xml
 <!-- Define a project property, myLibFolder: -->

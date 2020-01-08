@@ -2,17 +2,17 @@
 title: T4 Include Yönergesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 636260609aa535e3bc45efe0224a517fd782c040
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a1ee58c29be3c4dfb5e2148c54464a7a511d1839
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606384"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591859"
 ---
 # <a name="t4-include-directive"></a>T4 Include Yönergesi
 
@@ -36,9 +36,9 @@ Visual Studio 'daki bir metin şablonunda, `<#@include#>` yönergesini kullanara
   <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
   ```
 
-- Dahil edilen bir dosyanın adı `".tt"` uzantısını kullanmak zorunda değildir.
+- Dahil edilen bir dosyanın adı `".tt"`uzantısını kullanmak zorunda değildir.
 
-   Eklenen dosyalar için `".t4"` gibi başka bir uzantı kullanmak isteyebilirsiniz. Bunun nedeni, bir projeye bir `.tt` dosyası eklediğinizde, Visual Studio **özel araç** özelliğini otomatik olarak `TextTemplatingFileGenerator` olarak ayarlıyor. Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
+   Eklenen dosyalar için `".t4"` gibi başka bir uzantı kullanmak isteyebilirsiniz. Bunun nedeni, bir projeye bir `.tt` dosyası eklediğinizde, Visual Studio **özel araç** özelliğini otomatik olarak `TextTemplatingFileGenerator`olarak ayarlıyor. Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
 
    Diğer taraftan, bazı durumlarda, dosya uzantısının ek klasörlerin hangi include dosyalarının aranacağını etkilediğinin farkında olmalısınız. Diğer dosyaları içeren eklediğiniz bir dosya varsa, bu önemli olabilir.
 
@@ -108,7 +108,7 @@ Output message 5 (from top template).
 ## <a name="msbuild"></a>MSBuild ve Visual Studio 'da proje özelliklerini kullanma
  Include yönergesinde $ (SolutionDir) gibi Visual Studio makrolarını de kullanabilirsiniz, ancak MSBuild 'de çalışmaz. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
 
- Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myIncludeFolder` adlı bir özelliği tanımlar:
+ Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myIncludeFolder`adlı bir özelliği tanımlar:
 
 ```xml
 <!-- Define a project property, myIncludeFolder: -->

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagrams - modeling, layer
 - software, designing
 - software, modeling
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95df70a3458c758fb886cbe2bc5d52d3192ba7cc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: b7015583fef2323e3c53b8e786c9e8a529e0fab6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984435"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590533"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 
-Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkındaki fikirleri anlamanıza, açıklığa kavuşturmanıza ve iletmeye yardımcı olur.
+Modelleme diyagramları kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleriniz hakkındaki fikirleri anlamanıza, belirtmenize ve tartışmanıza yardımcı olur.
 
 Visual Studio 'nun hangi sürümlerinin her diyagram türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -44,7 +44,7 @@ Bir sistemin veya varolan kodun mimarisini görselleştirmek için aşağıdaki 
 
 ## <a name="related-tasks"></a>İlgili görevler
 
-|**İlerde**|**Görevinin**|
+|**Konu**|**Görev**|
 |-|-|
 |[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve bağımlılık diyagramları oluşturun.|
 |[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|

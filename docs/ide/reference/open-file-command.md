@@ -9,21 +9,21 @@ helpviewer_keywords:
 - File.OpenFile command
 - of command
 ms.assetid: a51a83fc-e3c6-4fa2-8882-8b7b6c0a6406
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 811667e89f01728c5a7516f5e7f7a12d448c6311
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 50e29e3182a19c9f3a667d41725327110b415fd0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666425"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591521"
 ---
 # <a name="open-file-command"></a>Dosya Aç komutu
 
-Var olan bir dosyayı açar ve bir düzenleyici belirtmenize olanak tanır.
+Varolan bir dosyayı açar ve bir düzenleyici belirtmenize olanak tanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,15 +37,15 @@ File.OpenFile filename [/e:editorname]
 
 Gerekli. Açılacak dosyanın tam veya kısmi yolu ve dosya adı. Boşluk içeren yollar tırnak işaretleri içine alınmalıdır.
 
-## <a name="switches"></a>Anahtarlar
+## <a name="switches"></a>Geçişler
 
-/e: `editorname`
+/e:`editorname`
 
 İsteğe bağlı. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
 
-/E: `editorname` bağımsız değişkeni sözdizimi, birlikte Aç Iletişim kutusunda göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
+/E:`editorname` bağımsız değişkeni sözdizimi, birlikte Aç Iletişim kutusunda göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
 
-Örneğin, kaynak kodu düzenleyicisinde bir dosyayı açmak için,/e: `editorname` bağımsız değişkeni olarak aşağıdakileri girersiniz.
+Örneğin, kaynak kodu düzenleyicisinde bir dosyayı açmak için,/e:`editorname` bağımsız değişkeni olarak aşağıdakileri girersiniz.
 
 ```cmd
 /e:"Source Code (text) Editor"

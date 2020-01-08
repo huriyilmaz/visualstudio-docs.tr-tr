@@ -2,17 +2,17 @@
 title: T4 Çıkış Yönergesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1da8ec010e878ff80a9f46748993705b87193d99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eb1634da6374ad49f1386be4403e72e8edeff2ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606223"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591820"
 ---
 # <a name="t4-output-directive"></a>T4 Çıkış Yönergesi
 
@@ -24,7 +24,7 @@ Visual Studio metin şablonlarında `output` yönergesi, dönüştürülmüş do
 
  ardından, Visual Studio **myTemplate.cs** adlı bir dosya oluşturur
 
- @No__t_0 yönergesi, çalışma zamanı (önceden işlenmiş) metin şablonunda gerekli değildir. Bunun yerine, uygulamanız `TextTransform()` çağırarak oluşturulan dizeyi edinir. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ `output` yönergesi, çalışma zamanı (önceden işlenmiş) metin şablonunda gerekli değildir. Bunun yerine, uygulamanız `TextTransform()`çağırarak oluşturulan dizeyi edinir. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
 ## <a name="using-the-output-directive"></a>Output yönergesini kullanma
 
@@ -70,4 +70,4 @@ Visual Studio metin şablonlarında `output` yönergesi, dönüştürülmüş do
 
  `0` (sistem varsayılanı)
 
- Genel olarak, WebName dizesini veya <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName> tarafından döndürülen kodlamalara ait kod sayfası numarasını kullanabilirsiniz.
+ Genel olarak, WebName dizesini veya <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName>tarafından döndürülen kodlamalara ait kod sayfası numarasını kullanabilirsiniz.

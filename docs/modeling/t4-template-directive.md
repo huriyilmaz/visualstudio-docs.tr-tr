@@ -2,17 +2,17 @@
 title: T4 Şablon Yönergesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 410bc879ff4822f19436794d3cb99732be9d413e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: f7ada5558cfdfaadca5793d9edc61f13a6d4d11b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983698"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591846"
 ---
 # <a name="t4-template-directive"></a>T4 Şablon Yönergesi
 
@@ -92,7 +92,7 @@ Geçerli değerler:
 
 `trueFromBase`
 
-Bu özniteliğin değerini `true` olarak ayarlarsanız, metin şablonunuz tarafından oluşturulan sınıfa `Host` adlı bir özellik eklenir. Özelliği, dönüşüm altyapısının ana bilgisayarına bir başvurudur ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))olarak bildirilmiştir. Özel bir sunucu tanımladıysanız, bunu özel ana bilgisayar türüne atayabilirsiniz.
+Bu özniteliğin değerini `true`olarak ayarlarsanız, metin şablonunuz tarafından oluşturulan sınıfa `Host` adlı bir özellik eklenir. Özelliği, dönüşüm altyapısının ana bilgisayarına bir başvurudur ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))olarak bildirilmiştir. Özel bir sunucu tanımladıysanız, bunu özel ana bilgisayar türüne atayabilirsiniz.
 
 Bu özelliğin türü ana bilgisayarın türüne bağlı olduğundan, yalnızca belirli bir ana bilgisayar ile çalışan bir metin şablonu yazıyorsanız faydalıdır. [Tasarım zamanı şablonları](../modeling/design-time-code-generation-by-using-t4-text-templates.md), ancak [çalışma zamanı şablonları](../modeling/run-time-text-generation-with-t4-text-templates.md)için geçerlidir.
 
@@ -233,7 +233,7 @@ Ayrıca sıradan bir elle yazılmış sınıfı taban sınıf olarak kullanabili
 
 Tasarım zamanı metin şablonu, **özel aracın** **TextTemplatingFileGenerator**olarak ayarlandığı bir dosyadır. Şablon, Visual Studio projenizin bir kısmını oluşturan kod veya metin çıkış dosyası oluşturur. Çıktı dosyasını oluşturmak için, şablon ilk olarak genellikle görmediğiniz bir ara program kod dosyasına çevrilir. `inherits` özniteliği bu ara kodun temel sınıfını belirtir.
 
-Tasarım zamanı metin şablonu için <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> türetilen herhangi bir temel sınıfı belirtebilirsiniz. Temel sınıfı içeren derlemeyi veya projeyi yüklemek için `<#@assembly#>` yönergesini kullanın.
+Tasarım zamanı metin şablonu için <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>türetilen herhangi bir temel sınıfı belirtebilirsiniz. Temel sınıfı içeren derlemeyi veya projeyi yüklemek için `<#@assembly#>` yönergesini kullanın.
 
 Daha fazla bilgi için, [Gareth Jones ' bloguna "metin şablonlarına devralma"](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)konusuna bakın.
 

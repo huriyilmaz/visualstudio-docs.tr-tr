@@ -4,16 +4,16 @@ ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing FAQ
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db8264268eb04edc3140d0e2a6ece5896692e38
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653046"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591547"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing sık sorulan sorular
 
@@ -25,7 +25,7 @@ Live Unit Testing, aşağıdaki tabloda listelenen üç popüler birim testi çe
 
 |Test çerçevesi  |Visual Studio bağdaştırıcısı en düşük sürüm  |Framework en düşük sürüm  |
 |---------|---------|---------|
-|xUnit.net |xunit.Runner.VisualStudio sürüm 2.2.0-beta3-build1187 |xunit 1.9.2 |
+|{1&gt;{2&gt;xUnit.net&lt;2}&lt;1} |xunit.Runner.VisualStudio sürüm 2.2.0-beta3-build1187 |xunit 1.9.2 |
 |NUnit |NUnit3TestAdapter sürümü 3.7.0 |NUnit 3.5.0 sürümü |
 |MSTest |MSTest.TestAdapter 1.1.4-preview |MSTest.TestFramework 1.0.5-preview |
 
@@ -85,15 +85,26 @@ Evet. Live Unit Testing .NET Core ve .NET Framework ile birlikte kullanılabilir
 </Target>
 ```
 
-## <a name="error-messages-with-outputpath-or-outdir"></a>\<OutputPath > veya \<OutDir > içeren hata iletileri
+## <a name="error-messages-with-outputpath-outdir-or-intermediateoutputpath"></a>\<OutputPath >, \<OutDir > veya \<IntermediateOutputPath > içeren hata iletileri
 
 **Live Unit Testing çözümümüzü derlemeyi denediğinde neden aşağıdaki hatayı alıyorum: "... koşulsuz olarak ayarlı `<OutputPath>` veya `<OutDir>`görünür. Live Unit Testing, çıkış derlemesinden testleri yürütmez "?**
 
-Çözümünüze yönelik derleme işlemi `<OutputPath>` veya `<OutDir>` `<BaseOutputPath>`alt dizini olmaması adına koşulsuz olarak geçersiz kıldığında bu hatayı alabilirsiniz. Bu gibi durumlarda Live Unit Testing, derleme yapıtlarının `<BaseOutputPath>`altındaki bir klasöre bırakıldığından emin olmak için bu değerleri geçersiz kıldığından çalışmayacaktır. Yapı yapıtlarınızın düzenli bir yapıda kesilmesini istediğiniz konumu geçersiz kılmanız gerekiyorsa, `<BaseOutputPath>`göre koşullu `<OutputPath>` geçersiz kılın.
+Çözümünüz için derleme işleminin ikili dosyaların nerede oluşturulacağını belirten özel bir mantığı varsa, bu hatayı alabilirsiniz. Varsayılan olarak, ikili ağınızın konumu `<OutputPath>`, `<OutDir>` veya `<IntermediateOutputPath>`, `<BaseOutputPath>` veya `<BaseIntermediateOutputPath>`bağlıdır.
 
-Örneğin, derlemeniz aşağıda gösterildiği gibi `<OutputPath>` geçersiz kılıyorsa:
+Live Unit Testing, derleme yapıtlarının bir Live Unit Testing yapıt klasörüne bırakılması ve derleme işleminiz bu değişkenleri geçersiz kılıyorsa başarısız olacağı için bu değişkenleri geçersiz kılar.
 
-```xml 
+Live Unit Testing derlemeyi başarıyla oluşturmak için iki ana yaklaşım vardır. Daha kolay derleme yapılandırmalarında, çıkış yollarınızın `<BaseIntermediateOutputPath>`temel alabilirsiniz. Daha karmaşık yapılandırmalarda, çıkış yollarınızın `<LiveUnitTestingBuildRootPath>`temel alabilirsiniz.
+
+### <a name="overriding-outputpathintermediateoutputpath-conditionally-based-on-baseoutputpath-baseintermediateoutputpath"></a>`<OutputPath>`/`<IntermediateOutputPath>` `<BaseOutputPath>`/ `<BaseIntermediateOutputPath>`göre koşullu olarak geçersiz kılma.
+
+> [!NOTE]
+> Bu yaklaşımı kullanmak için, her projenin birbirinden bağımsız olarak derlenebilir olması gerekir. Derleme sırasında başka bir projeden bir proje başvuru yapıtlarına sahip değilsiniz. Çalışma zamanı sırasında bir projeyi dinamik olarak başka bir projeden yükleme (örneğin, çağrı `Assembly.Loadfile("..\..\Project2\Release\Project2.dll")`).
+
+Derleme sırasında Live Unit Testing, Live Unit Testing yapıtları klasörünü hedeflemek için `<BaseOutputPath>`/`<BaseIntermediateOutputPath>` değişkenlerini otomatik olarak geçersiz kılar.
+
+Örneğin, derlemeniz aşağıda gösterildiği gibi <OutputPath> geçersiz kılıyorsa:
+
+```xml
 <Project>
   <PropertyGroup>
     <OutputPath>$(SolutionDir)Artifacts\$(Configuration)\bin\$(MSBuildProjectName)</OutputPath>
@@ -103,7 +114,7 @@ Evet. Live Unit Testing .NET Core ve .NET Framework ile birlikte kullanılabilir
 
 ardından, aşağıdaki XML ile değiştirebilirsiniz:
 
-```xml 
+```xml
 <Project>
   <PropertyGroup>
     <BaseOutputPath Condition="'$(BaseOutputPath)' == ''">$(SolutionDir)Artifacts\$(Configuration)\bin\$(MSBuildProjectName)\</BaseOutputPath>
@@ -115,6 +126,46 @@ ardından, aşağıdaki XML ile değiştirebilirsiniz:
 Bu, `<OutputPath>` `<BaseOutputPath>` klasörünün içinde olmasını sağlar.
 
 Yapı sürecinizdeki `<OutDir>` doğrudan geçersiz kılmayın; derleme yapıtlarını belirli bir konuma bırakmak yerine `<OutputPath>` geçersiz kılın.
+
+### <a name="overriding-your-properties-based-on-the-liveunittestingbuildrootpath-property"></a>`<LiveUnitTestingBuildRootPath>` özelliğine göre özelliklerinizi geçersiz kılma.
+
+> [!NOTE]
+> Bu yaklaşımda, derleme sırasında oluşturulmayan yapıt klasörü altına eklenen dosyalar konusunda dikkatli olmanız gerekir. Aşağıdaki örnekte, paketler klasörü yapıtlar altına yerleştirilirken ne yapabileceğiniz gösterilmektedir. Bu klasörün içeriği derleme sırasında oluşturulmadığından, MSBuild özelliği **değiştirilmemelidir**.
+
+Live Unit Testing derlemesi sırasında, `<LiveUnitTestingBuildRootPath>` özelliği Live Unit Testing yapıtlar klasörünün konumuna ayarlanır.
+
+Örneğin, projenizin burada gösterilen yapıya sahip olduğunu varsayalım.
+
+```
+.vs\...\lut\0\b
+artifacts\{binlog,obj,bin,nupkg,testresults,packages}
+src\{proj1,proj2,proj3}
+tests\{testproj1,testproj2}
+Solution.sln
+```
+Live Unit Testing yapı sırasında, `<LiveUnitTestingBuildRootPath>` özelliği `.vs\...\lut\0\b`tam yoluna ayarlanır. Proje, çözüm dizini ile eşleşen `<ArtifactsRoot>` özelliğini tanımlıyorsa, MSBuild projesini aşağıdaki şekilde güncelleştirebilirsiniz:
+
+```xml
+<Project>
+    <PropertyGroup Condition="'$(LiveUnitTestingBuildRootPath)' == ''">
+        <SolutionDir>$([MSBuild]::GetDirectoryNameOfFileAbove(`$(MSBuildProjectDirectory)`, `YOUR_SOLUTION_NAME.sln`))\</SolutionDir>
+
+        <ArtifactsRoot>Artifacts\</ArtifactsRoot>
+        <ArtifactsRoot Condition="'$(LiveUnitTestingBuildRootPath)' != ''">$(LiveUnitTestingBuildRootPath)</ArtifactsRoot>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <BinLogPath>$(ArtifactsRoot)\BinLog</BinLogPath>
+        <ObjPath>$(ArtifactsRoot)\Obj</ObjPath>
+        <BinPath>$(ArtifactsRoot)\Bin</BinPath>
+        <NupkgPath>$(ArtifactsRoot)\Nupkg</NupkgPath>
+        <TestResultsPath>$(ArtifactsRoot)\TestResults</TestResultsPath>
+
+        <!-- Note: Given that a build doesn't generate packages, the path should be relative to the solution dir, rather than artifacts root, which will change during a Live Unit Testing build. -->
+        <PackagesPath>$(SolutionDir)\artifacts\packages</PackagesPath>
+    </PropertyGroup>
+</Project>
+```
 
 ## <a name="build-artifact-location"></a>Yapı yapıt konumu
 
@@ -133,8 +184,6 @@ Yapı sürecinizdeki `<OutDir>` doğrudan geçersiz kılmayın; derleme yapıtla
 - Live Unit Testing testleri çalıştırmak için yeni bir uygulama etki alanı oluşturmaz, ancak **Test Gezgini** penceresinden çalıştırılan testler yeni bir uygulama etki alanı oluşturur.
 
 - Live Unit Testing testler sırayla her bir test derlemesindeki çalıştırır. **Test Gezgini**'nde, paralel olarak birden çok test çalıştırmayı seçebilirsiniz.
-
-- Live Unit Testing testlerin keşfi ve yürütülmesi `TestPlatform`sürüm 2 ' yi kullanır, ancak **Test Gezgini** penceresi sürüm 1 ' i kullanır. Ancak çoğu durumda fark vermezsiniz.
 
 - **Test Gezgini** , testleri tek iş parçacıklı bir grupta (STA) çalıştırır. Live Unit Testing, testleri çok iş parçacıklı bir grupta (MTA) çalıştırır. Live Unit Testing içinde STA 'da MSTest testlerini çalıştırmak için, test yöntemini veya içeren sınıfı, `MSTest.STAExtensions 1.0.3-beta` NuGet paketinde bulunan `<STATestMethod>` veya `<STATestClass>` özniteliğiyle süsledir. NUnit için, `<RequiresThread(ApartmentState.STA)>` özniteliğiyle ve xUnit için `<STAFact>` özniteliğiyle test yöntemini süsle.
 

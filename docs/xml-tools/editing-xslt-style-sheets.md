@@ -3,17 +3,17 @@ title: XSLT Stil Sayfalarını Düzenleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 080bed0f-0ca9-4be7-aecd-6bdaebc04007
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fc987f8362d5daf435b7e9de860cc13f16a1aaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 81bab324c58c06cc1ca553bae2f81faf474c4ad0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646065"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592847"
 ---
 # <a name="edit-xslt-style-sheets"></a>XSLT stil sayfalarını düzenleme
 
@@ -25,7 +25,7 @@ Aşağıdaki tabloda XSLT stil sayfalarıyla çalışmaya özgü özellikler aç
 
 **Sözdizimi renklendirme**
 
-@No__t_0 ve `match` gibi XSLT anahtar sözcükleri, **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
+`template` ve `match`gibi XSLT anahtar sözcükleri, **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
 
 **Dalgalı alt çizgiler**
 

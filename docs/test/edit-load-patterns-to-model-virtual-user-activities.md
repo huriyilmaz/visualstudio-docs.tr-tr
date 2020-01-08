@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, scenarios
 - load tests, virtual users
 ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8651b3a11b9db82d4c52ff600706b51855881f02
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0836fdb085ab33b2a646d9774c94bd859b5ca5ad
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665048"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590312"
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>Sanal Kullanıcı etkinliklerini modellemek için yük düzenlerini düzenleme
 
@@ -42,7 +42,7 @@ Bir yük testinin çalıştırılması sırasında aynı kullanıcı yükünü �
 
 Adım yükü stili, tanımlı en yüksek Kullanıcı yüküne kadar geçen bir kullanıcı yükünü belirtmek için kullanılır. Atlama yükleri için **Ilk Kullanıcı sayısı**, **en yüksek Kullanıcı sayısı**, **adım süresi (saniye)** ve **adım kullanıcı sayısı**' nı belirtirsiniz.
 
-Örneğin, **Ilk Kullanıcı sayısı** , **en yüksek Kullanıcı** sayısı 100, **adım süresi (saniye)** , 10 ve **adım kullanıcı sayısı** 1 olan bir adım yükleme, 1 ' den başlayan bir Kullanıcı yük deseninin yanı sıra, her 10 saniyede 1 ' e kadar artar. 100 kullanıcıya ulaşır.
+Örneğin, **Ilk Kullanıcı sayısı** , **en yüksek Kullanıcı** sayısı 100, **adım süresi (saniye)** , 10 ve **adım kullanıcı sayısı** 1 olan bir adım yükleme, 1 ' den başlayan bir Kullanıcı yük deseninin yanı sıra, 100 kullanıcıya ulaşıncaya kadar 10 dakikada bir artar.
 
 > [!NOTE]
 > Toplam test süresi en fazla Kullanıcı yüküne geçmek için gereken süreden kısaysa, test geçen süreden sonra duraklar ve **en yüksek Kullanıcı sayısı** hedefine ulaşmaz.
@@ -79,12 +79,12 @@ Hedef tabanlı yük deseninin adım düzenine benzer ancak performans sayacı e�
 
   Aşağıdaki tabloda, örnek olarak aşağıdaki özellik ayarlarına sahip hedef tabanlı bir model gösterilmektedir:
 
-|Özellik grubu|Özellik|Değer|
+|Özellik Grubu|Özellik|Değer|
 |-|--------------|-|
-|Performans sayacı|Kategori|İşlemci|
-|Performans sayacı|Bilgisayar|ContosoServer1|
-|Performans sayacı|Sayaç|% İşlemci zamanı|
-|Performans sayacı|Örnek|_Total|
+|Performans Sayacı|Kategori|İşlemci|
+|Performans Sayacı|Bilgisayar|ContosoServer1|
+|Performans Sayacı|Sayaç|% İşlemci Zamanı|
+|Performans Sayacı|Örnek|_Total|
 |Performans sayacı için hedef Aralık|Üst uç|90|
 |Performans sayacı için hedef Aralık|Düşük uç|70|
 |Kullanıcı sayısı sınırları|İlk Kullanıcı sayısı|1\.|
@@ -119,7 +119,7 @@ Hedef tabanlı yük düzeniyle, sisteminizin bazı kaynak kullanımı düzeyine 
 **Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, bir senaryoyla ilişkili yük deseninin özelliklerini test hedeflerinizi karşılayan düzeylere değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
 
 > [!NOTE]
-> Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
+> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
 
 Yük düzeniyle, yük testi sırasında etkin olan sanal kullanıcı sayısı ve yeni kullanıcıların Eklenme oranı belirtilir. Kullanılabilir üç desen arasından seçim yapabilirsiniz: adım deseni, sabit ve amaç tabanlı. Daha fazla bilgi için bkz. [bir yük testi senaryosunda yük desenlerine sahip sanal kullanıcı sayısını belirtme](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
@@ -135,7 +135,7 @@ Yük düzeniyle, yük testi sırasında etkin olan sanal kullanıcı sayısı ve
     > [!NOTE]
     > Yük testinin senaryo ağacında gösterildiği gibi, yük örüntüsünün düğümünün ifadesi, yük testini oluştururken seçtiğiniz yük profilini yansıtır. Bu, **sabit yük profili** ya da **adım yükleme profili**olabilir.
 
-3. **Özellikler** penceresini göstermek için **F4** tuşuna basın.
+3. Tuşuna **F4** görüntülenecek **özellikleri** penceresi.
 
      **Yükleme kalıbı** ve **Parametreler** kategorileri **Özellikler** penceresinde görüntülenir.
 
@@ -152,6 +152,6 @@ Yük düzeniyle, yük testi sırasında etkin olan sanal kullanıcı sayısı ve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını Düzenle](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
 - [Nasıl yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtme](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)
 - [Nasıl yapılır: adım yükleme deseninin Adım Rampa Süresi özelliğini belirtme](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)

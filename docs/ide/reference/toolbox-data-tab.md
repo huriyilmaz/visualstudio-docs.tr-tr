@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Data tab, Toolbox
 - data [Visual Studio], Toolbox
 ms.assetid: 2ae38b2a-29d2-461c-a67d-29dad274bf45
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34707c39a14650023c9caa701813de65999010ef
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e79b80890925bdf4d6d191db759516b5545fc403
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644609"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590260"
 ---
 # <a name="toolbox-data-tab"></a>Araç kutusu, veri sekmesi
 
@@ -32,7 +32,7 @@ Bir bileşen için doğrudan .NET başvuru sayfasına gitmek için, **araç kutu
 
 |Name|Açıklama|
 |----------|-----------------|
-|<xref:System.Data.DataSet>|Form veya bileşene türü belirtilmiş veya türsüz veri kümesinin bir örneğini ekler. Bu nesneyi bir tasarımcıya sürüklediğinizde, var olan bir türü belirtilmiş veri kümesi sınıfını seçmenizi sağlayan bir iletişim kutusu görüntüler veya yeni, boş ve türsüz bir veri kümesi oluşturmak istediğinizi belirtebilirsiniz. **Note:**  Yeni bir türü belirtilmiş veri kümesi şeması ve sınıfı oluşturmak için **araç kutusu** üzerinde <xref:System.Data.DataSet> nesnesini kullanmayın. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
+|<xref:System.Data.DataSet>|Form veya bileşene türü belirtilmiş veya türsüz veri kümesinin bir örneğini ekler. Bu nesneyi bir tasarımcıya sürüklediğinizde, var olan bir türü belirtilmiş veri kümesi sınıfını seçmenizi sağlayan bir iletişim kutusu görüntüler veya yeni, boş ve türsüz bir veri kümesi oluşturmak istediğinizi belirtebilirsiniz. **Note:**  Yeni bir türü belirtilmiş veri kümesi şeması ve sınıfı oluşturmak için **araç kutusu** üzerinde <xref:System.Data.DataSet> nesnesini kullanmayın. Daha fazla bilgi için [oluşturun ve veri kümeleri yapılandırma](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
 |<xref:System.Windows.Forms.DataGridView>|Verileri tablolu biçimde görüntülemenin güçlü ve esnek bir yolunu sağlar.|
 |<xref:System.Windows.Forms.BindingSource>|Temel alınan bir veri kaynağına denetim bağlama sürecini basitleştirir.|
 |<xref:System.Windows.Forms.BindingNavigator>|Verilere bağlı bir formdaki denetimler için gezinti ve düzenleme kullanıcı arabirimini (UI) temsil eder.|

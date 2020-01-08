@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, modeling architecture
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e87759206f6d05267e2be5be25fdb8c3e9b70df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ba455730ddac9b2a02b8f0580711499d6a779f49
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747533"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590234"
 ---
 # <a name="model-your-app39s-architecture"></a>Uygulamanızın&#39;mimarisini modelleyin
 Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlarını karşıladığından emin olmak için, yazılım sisteminizin veya uygulamanızın genel yapısı ve davranışı açıklamasının bir parçası olarak Visual Studio 'da modeller oluşturabilirsiniz. Modelleri kullanarak, tasarımın tamamında kullanılan desenleri de tanımlayabilirsiniz. Bu modeller mevcut mimariyi anlamanıza, değişiklikleri tartışmanıza ve amaclarınızı açık bir şekilde iletmanıza yardımcı olur.
@@ -88,7 +88,7 @@ Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlar�
 
  Tasarım alanı bir belge içinde tanımlanır ve genellikle şu parçaları içerir:
 
-- ada.
+- Adı.
 
 - Geçerli olduğu bağlamın açıklaması. Bir geliştirici bu düzenin uygulanmasını ne planlıyor?
 

@@ -6,21 +6,21 @@ f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
 ms.assetid: cef390cd-eeda-42e6-9d2e-18c8325a4f06
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14ca8baa34de7763608641d9269b1721058c5af2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f1a7030b6c351407814314ccd41e0e2ed6a880e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649873"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593115"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>System. Activities sekmesi, araç kutusu öğeleri iletişim kutusu seçin
 
-**Araç kutusu öğelerini Seç** iletişim kutusunun bu sekmesi, kullanabileceğiniz WINDOWS Workflow FOUNDATION (WF) etkinliklerinin, şablonlarının ve öğelerin bir listesini görüntüler. Bu listeyi göstermek için **Araçlar** menüsünden **araç kutusu öğelerini Seç** ' i seçin **veya araç kutusuna** sağ tıklayıp **öğeleri seç** ' i seçerek **araç kutusu öğelerini Seç** iletişim kutusunu görüntüleyin ve sonra da **bunu seçin System. Activities** sekmesi. kutudan çıkar, listede System. Activities, System. ServiceModel. Activities ve System. Activities. Core. Presentation derlemelerinden iş akışı etkinlikleri bulunur; Ancak, yalnızca, **araç kutusunda** görüntülenen diğer derlemeler aracılığıyla eklenen ve yalnızca sistem tarafından sağlanmış etkinlikler, varsayılan olarak denetlenir. Son eklenen etkinlikler otomatik olarak denetlenir ve iletişim kutusunda **Tamam** ' a tıkladığınızda **araç** kutusunda görüntülenir. Ayrıca, bu öğeler etkinlik/öğe/şablonun bulunduğu ad alanına karşılık gelen yeni bir kategori altında **araç kutusunda** görüntülenir.
+**Araç kutusu öğelerini Seç** iletişim kutusunun bu sekmesi, kullanabileceğiniz WINDOWS Workflow FOUNDATION (WF) etkinliklerinin, şablonlarının ve öğelerin bir listesini görüntüler. Bu listeyi göstermek için, **Araçlar** menüsünden **araç kutusu öğelerini Seç** ' i **seçin ve araç kutusu** **öğelerini Seç** iletişim kutusunu göstermek için **öğe seç** ' i seçip öğeleri seçin ' i **seçerek System.** Activities. Core. Presentation derlemelerinden iş akışı etkinliklerini içerir. Ancak, yalnızca, **araç kutusunda** görüntülenen diğer derlemeler aracılığıyla eklenen ve yalnızca sistem tarafından sağlanmış etkinlikler, varsayılan olarak denetlenir. Son eklenen etkinlikler otomatik olarak denetlenir ve iletişim kutusunda **Tamam** ' a tıkladığınızda **araç** kutusunda görüntülenir. Ayrıca, bu öğeler etkinlik/öğe/şablonun bulunduğu ad alanına karşılık gelen yeni bir kategori altında **araç kutusunda** görüntülenir.
 
 > [!WARNING]
 > Herhangi bir iş akışı etkinliği içermeyen bir derleme eklemeye çalışırsanız, derlemenin hiç etkinlik içermediğini açıklayan bir hata iletişim kutusu görüntülenir.
@@ -29,7 +29,7 @@ Bu iletişim kutusu proje agtik olur ve bu nedenle **System. Activities** sekmes
 
 Filtreleme her sekmede yapılır ve **.net bileşen** sekmesi aracılığıyla iş akışı etkinliklerini eklemek mümkün değildir. bunları **System. Activities** sekmesinin kendisi aracılığıyla ekleyin.
 
-**Araç** kutusunda bu iletişim kutusundan görmek istemediğiniz öğelerin işaretini kaldırın veya alternatif olarak, **araç kutusu** **'ndaki sağ tıklama** menü seçeneğini kullanarak, bir derlemeye yeniden başvuru yapan öğeyi **Araç kutusu**.
+**Araç** kutusunda bu iletişim kutusundan görmek istemediğiniz öğelerin işaretini kaldırın veya alternatif olarak, **araç kutusu** 'Ndaki sağ tıklama menüsünü **Sil** seçeneğini kullanarak bir derlemeye yeniden başvurmaz ve **araç kutusundan**öğeyi kaldırmaz.
 
 Tasarımcı üzerinde sürükleyip bırakarak etkinliğin örneklenmesi, öğeyi içeren derlemeyi otomatik olarak başvurulan derlemeler listesine ekler. Ayrıca, etkinlik bir derleme C 'ye başvuruyorsa, başvurulan derleme listesine C eklemez. Derleme C, GAC içinde veya etkinlik B ile aynı dizinde olmalıdır. Tek başına durumda, derleme GAC 'de veya VS 'nin araştırma yollarında olmalıdır. Etkinliği yalnızca iş akışı Tasarımcısı yüzeyine sürükleyip bırakabilirsiniz.
 

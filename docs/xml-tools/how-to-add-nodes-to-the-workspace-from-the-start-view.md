@@ -3,17 +3,17 @@ title: XML şema tasarımcısında başlangıç görünümünden çalışma alan
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3fc7af94-dcb8-4226-a577-43f03664388b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6f1471f03dac54b484e37b2319e15380055661e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6fa3ecf986b77ed2ca93cf182d442156a11d0530
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646006"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592834"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl yapılır: başlangıç görünümünden çalışma alanına düğüm ekleme
 
@@ -31,4 +31,4 @@ Bu konuda, [Başlangıç görünümünden](../xml-tools/start-view.md) [XML şem
 
 3. **Genel karmaşık türler** başlığının sağındaki **Ekle** bağlantısına tıklayın.
 
-     @No__t_0 ve `PurchaseOrderType` karmaşık tür düğümleri grafik görünümünün tasarım yüzeyinde görünür.
+     `USAddress` ve `PurchaseOrderType` karmaşık tür düğümleri grafik görünümünün tasarım yüzeyinde görünür.

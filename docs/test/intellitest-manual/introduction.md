@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 94bd67ecb4646e3b8079d2d1aadda097c655af4c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: dfa81e7afe313a112e2355ddf5efadb70c555477
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653167"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591611"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest 'e genel bakış
 
@@ -70,13 +70,16 @@ public partial class HelloWorldTest {
 Derlendikten ve yürütüldükten sonra, IntelliTest aşağıdaki küme gibi bir test kümesi oluşturur:
 
 1. ""
-2. "\ 0 \ 0 \ 0 \ 0 \ 0"
-3. Herkese
-4. "\ 0 \ 0 \ 0 \ 0 \ 0 \ 0"
+2. "\0\0\0\0\0"
+3. "Hello"
+4. "\0\0\0\0\0\0"
 5. "Merhaba \"
 6. "Merhaba \0\0"
 7. "Merhaba \0Dünya!"
 8. "Merhaba Dünya!"
+
+> [!NOTE]
+> Derleme sorunları için Microsoft. VisualStudio. TestPlatform. TestFramework ve Microsoft. VisualStudio. TestPlatform. TestFramework. Extensions başvurularını Microsoft. VisualStudio. QualityTools. UnitTestFramework başvurusuyla değiştirmeyi deneyin.
 
 Oluşturulan testlerin nerede kaydedileceğini anlamak için [, IntelliTest ile birim testleri oluştur](../../test/generate-unit-tests-for-your-code-with-intellitest.md) konusunu okuyun. Oluşturulan test kodu aşağıdaki kod gibi bir test içermelidir:
 
@@ -99,7 +102,7 @@ Bu bölümde IntelliTest kısıtlamaları açıklanmaktadır:
 * [Belirleyici olmayan ISM](#nondeterminism)
 * [Eşzamanlılık](#concurrency)
 * [Yerel .NET kodu](#native-code)
-* [Platformunun](#platform)
+* [Platform](#platform)
 * [Dil](#language)
 * [Sembolik mantık yürütme](#symbolic-reasoning)
 * [Yığın izlemeleri](#incorrect-stack-traces)
@@ -115,7 +118,7 @@ Bu anlamda, yönetilmeyen veya açıklanmeyen koda yapılan çağrıların sonu�
 
 Ayrıca, program yeniden çalıştırıldığında dış kaynaklardaki değerler değiştiğinde program determistic olmayan olarak değerlendirilir. Bu gibi durumlarda, IntelliTest programın yürütülmesi üzerinde denetimi kaybeder ve arama verimsiz hale gelir.
 
-Bazen bu gerçekleştiğinde belirgin değildir. Aşağıdaki örnekleri göz önünde bulundurun:
+Bazen bu gerçekleştiğinde belirgin değildir. Aşağıdaki örnekleri dikkate alın:
 
 * **GetHashCode ()** yönteminin sonucu yönetilmeyen kod tarafından sağlanır ve tahmin edilebilir değildir.
 * **System. Random** sınıfı, gerçekten rastgele değerler sunmak için geçerli sistem saatini kullanır.
@@ -148,7 +151,7 @@ IntelliTest, test ve test altındaki program için hangi değerlerin ilgili oldu
 
 Her bir belgelenmiş yöntemde IntelliTest catch ve "Re," özel durumları, yığın izlemelerinde bulunan satır numaraları doğru olmayacaktır. Bu, "Rethrow" yönergesinin tasarımıyla bir kısıtlamadır.
 
-## <a name="further-reading"></a>Daha fazla okuma
+## <a name="further-reading"></a>Daha fazla bilgi için
 
 * [Giriş blog gönderisi](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/).
 * [Intellitest ile kodunuz için birim testleri oluşturma](../../test/generate-unit-tests-for-your-code-with-intellitest.md)

@@ -3,17 +3,17 @@ title: XSLT hata ayıklayıcısı pencereleri
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae37db21072e81a5940f09f085bf261839686a69
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646083"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592886"
 ---
 # <a name="debugger-user-interface-xslt"></a>Hata ayıklayıcı kullanıcı arabirimi (XSLT)
 
@@ -33,7 +33,7 @@ Bu sütun, geçerli kapsamdaki tüm yerel değişkenlerin adlarını içerir. D�
 
 Bu sütunda her bir değişken tarafından içerilen değer gösterilir. Öznitelik, işleme yönergesi, açıklama, metin ve CData düğümleri, düğümün metin değerini görüntüler. Ad alanı düğümleri ad alanı URI 'sini görüntüler.
 
-**Türüyle**
+**Türü**
 
 Bu sütun, **ad** sütununda listelenen her değişkenin veri türünü tanımlar.
 
@@ -64,7 +64,7 @@ Kesme noktaları penceresi geçerli projede ayarlanan tüm kesme noktalarını g
 
 Kesme noktaları penceresi diğer Visual Studio hata ayıklayıcıları ile aynı şekilde davranır.
 
-## <a name="watch-window"></a>Gözcü penceresi
+## <a name="watch-window"></a>İzleme penceresi
 
 İzleme penceresi değişkenleri değerlendirmek için kullanılır. Değişkenlerin değerlerini de değiştirebilirsiniz.
 
@@ -88,7 +88,7 @@ Aşağıdaki listede XPath ifade değerlendirmesi kısıtlamaları açıklanmakt
 
 - Yalnızca yerleşik XPath işlevlerine izin verilir.
 
-- @No__t_0 ve `key()` gibi yerleşik XSLT işlevlerine izin verilmez.
+- `document()` ve `key()` gibi yerleşik XSLT işlevlerine izin verilmez.
 
 - Kullanıcı tanımlı işlevlere izin verilmiyor.
 

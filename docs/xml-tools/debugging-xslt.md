@@ -2,19 +2,19 @@
 title: XSLT kodunda hata ayıklamanın yolları
 ms.date: 03/05/2019
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: bb358efb711211d58525afb8d30d5cb4cad6b2e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f6f4a1ce60f04bcea6e21b52db9347a95292dab2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646080"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592860"
 ---
 # <a name="debugging-xslt"></a>XSLT Hatalarını Ayıklama
 
@@ -33,18 +33,18 @@ Bir stil sayfası veya düzenleyicide açık bir giriş XML dosyanız olduğunda
 
 1. Stil sayfasını veya XML dosyasını Visual Studio 'da açın.
 
-1. **XML** menüsünde **XSLT hata ayıklamayı Başlat** ' ı seçin veya **alt** +**F5**tuşuna basın.
+1. **XML** menüsünde **XSLT hata ayıklamayı Başlat** ' ı seçin veya **alt**+**F5**tuşuna basın.
 
 ## <a name="debug-from-an-app-that-uses-xslt"></a>XSLT kullanan bir uygulamadan hata ayıklama
 
-Bir uygulamada hata ayıklarken XSLT içine adım aktarabilirsiniz. @No__t_1 çağrısında **F11** tuşuna basarsanız, hata ayıklayıcı XSLT koduna ileredebilir.
+Bir uygulamada hata ayıklarken XSLT içine adım aktarabilirsiniz. <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> çağrısında **F11** tuşuna basarsanız, hata ayıklayıcı XSLT koduna ileredebilir.
 
 > [!NOTE]
-> @No__t_0 sınıfından XSLT 'ye Adımlama desteklenmez. @No__t_0 sınıfı, hata ayıklama sırasında XSLT 'de adımlamayı destekleyen tek XSLT işlemcisidir.
+> <xref:System.Xml.Xsl.XslTransform> sınıfından XSLT 'ye Adımlama desteklenmez. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, hata ayıklama sırasında XSLT 'de adımlamayı destekleyen tek XSLT işlemcisidir.
 
 ### <a name="to-start-debugging-an-xslt-application"></a>XSLT uygulamasında hata ayıklamaya başlamak için
 
-1. @No__t_0 nesnesini örnekledikten sonra, `enableDebug` parametresini kodunuzda `true` olarak ayarlayın. Bu, XSLT işlemcisinin kod derlendiğinde hata ayıklama bilgileri oluşturmasını söyler.
+1. <xref:System.Xml.Xsl.XslCompiledTransform> nesnesini örnekledikten sonra, `enableDebug` parametresini kodunuzda `true` olarak ayarlayın. Bu, XSLT işlemcisinin kod derlendiğinde hata ayıklama bilgileri oluşturmasını söyler.
 
 1. XSLT koduna geçmek için **F11** tuşuna basın.
 
@@ -76,7 +76,7 @@ namespace ConsoleApplication
       XslCompiledTransform xslt = new XslCompiledTransform(true);
 
       // Compile the style sheet.
-      xslt.Load(stylesheet)
+      xslt.Load(stylesheet);
 
       // Execute the XSLT transform.
       FileStream outputStream = new FileStream(outputFile, FileMode.Append);

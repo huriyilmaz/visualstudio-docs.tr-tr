@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Static helper classes
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: dd57ecafa0b4da56366faa83d52c39ca556e421a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 5010761213cf79756cf8da3d2fffe60dd0b61efd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653143"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591573"
 ---
 # <a name="static-helper-classes"></a>Statik yardımcı sınıfları
 
@@ -48,7 +48,7 @@ public void TestSomething(int i, int j) {
 }
 ```
 
-**Açıklamalarının**
+**Açıklamalar**
 
 Yukarıdaki kod, neredeyse eşittir:
 
@@ -95,7 +95,7 @@ Bir teste yardımcı giriş değerleri sağlayan statik bir sınıf, [parametrel
 
 * Belirli test çalışmaları için oluşturulan kod, seçim sağlayıcısını belirli bir şekilde ayarlar, böylece böyle bir test çalışmasının yeniden yürütülmesi belirli bir yürütme yolunu tetiklemeye yönelik belirli seçimler oluşturur.
 
-**Kullanımıyla**
+**Kullanım**
 
 * Basit çağrı **PexChoose. Value** yeni bir değer oluşturmak için:
 
@@ -141,7 +141,7 @@ public partial class MathExTests {
 
 Parametrelerin kısıtlamalarını yoksaymak ve değerlerle ilişkili sembolik bilgileri yazdırmak için kullanılan statik bir sınıf.
 
-**Kullanımıyla**
+**Kullanım**
 
 Normalde, IntelliTest yürütme sırasında kodun tüm yürütme yollarını kapsamaya çalışır. Ancak, özellikle de varsayım ve onaylama koşullarını hesaplarken, olası tüm durumları araştırmamalıdır.
 
@@ -170,6 +170,6 @@ public static void AreElementsNotNull<T>(T[] value)
 }
 ```
 
-## <a name="got-feedback"></a>Geri bildirim alındı mı?
+## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
 
 Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.

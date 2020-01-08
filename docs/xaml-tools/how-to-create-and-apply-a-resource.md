@@ -6,17 +6,17 @@ f1_keywords:
 - VS.XamlDesigner.CreateResource
 - VS.XamlDesigner.EditResource
 ms.assetid: 3ff4006d-659d-4073-9a41-06ff85e6cfdf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7648772c8ac1657f4c650b38d9f0fc22e8653022
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ac633f94c237bdff418375903e99f6f2da9e776
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650925"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592968"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Kaynak oluşturma ve uygulama
 
@@ -58,7 +58,7 @@ Varolan bir özellikten, [stille](xref:Windows.UI.Xaml.Style)veya [ControlTempla
 
       Görmeyi düşündüğünüz bir kaynağı görmüyorsanız, bunun nedeni kaynağın türünün özelliğin türüyle eşleşmemesi olabilir.
 
-   - Bir denetime stil veya denetim şablonu kaynağı uygulayın. Belge Anahattı penceresinde bir denetim için sağ tıklama menüsünü (bağlam menüsü) açın, **Şablonu Düzenle** veya **Ek Şablonları Düzenle**' yi seçin, **kaynağı Uygula**' yı seçin ve ardından listeden denetim şablonunun adını seçin görüneceği.
+   - Bir denetime stil veya denetim şablonu kaynağı uygulayın. Belge Anahattı penceresinde bir denetim için sağ tıklama menüsünü (bağlam menüsü) açın, **Şablonu Düzenle** veya **Ek Şablonları Düzenle**' yi seçin, **kaynağı Uygula**' yı seçin ve açılan listeden denetim şablonunun adını seçin.
 
      > [!NOTE]
      > **Şablonu Düzenle** denetim şablonlarını uygular. **Ek Şablonları Düzenle** diğer şablon türlerini uygular.

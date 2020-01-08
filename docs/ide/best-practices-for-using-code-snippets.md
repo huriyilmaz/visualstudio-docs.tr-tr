@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, best practices
 - code snippets, security
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8afb10d2fb5dcf99c63fb12ac624b904353d95b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 08add20b59e3e14897d1870aa45fd6cce8698d96
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647762"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591716"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Kod parçacıkları kullanmak için en iyi uygulamalar
 
@@ -31,7 +31,7 @@ Dosya konumlarını uygulamanıza uyardığınızda, aşağıdakilere göz önü
 
 - Erişilebilir bir konum bulma. Kullanıcıların, bilgisayarın *Program Files* klasörüne erişimi olmayabilir, bu nedenle dosyaları uygulama dosyalarıyla depolamak çalışmayabilir.
 
-- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (*C: \\* ) güvenli değildir. Uygulama verileri için *uygulama verileri* klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için *Belgeler* klasöründeki her bir kullanıcı için bir dosya oluşturabilir.
+- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (*C:\\* ) güvenli değildir. Uygulama verileri için *uygulama verileri* klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için *Belgeler* klasöründeki her bir kullanıcı için bir dosya oluşturabilir.
 
 - Geçerli bir dosya adı kullanılıyor. Geçersiz dosya adlarının olasılığını azaltmak için <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> denetimlerini kullanabilirsiniz. Kullanıcının bir dosyayı seçtiği zaman ve kodunuzun dosyayı ne zaman kullandığı zaman arasında, dosyanın silinmiş olabileceğini unutmayın. Ayrıca, kullanıcının dosyaya yazma izni olmayabilir.
 

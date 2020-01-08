@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Test generation
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 3dbcbed0c336ff931971e0a4a6a939e681c6948b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: c251a1539b42da2b4e92c2996457075f3c3be135
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653120"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591560"
 ---
 # <a name="test-generation"></a>Test oluşturma
 
@@ -235,11 +235,11 @@ namespace MyTests
 ```
 
 <a name="further-reading"></a>
-## <a name="further-reading"></a>Daha fazla okuma
+## <a name="further-reading"></a>Daha fazla bilgi için
 
 * [Kod bağlamaya test](https://devblogs.microsoft.com/devops/smart-unit-tests-test-to-code-binding-test-case-management/)
 * [Tümünü kurala göre bir test](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)
 
-## <a name="got-feedback"></a>Geri bildirim alındı mı?
+## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
 
 Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
