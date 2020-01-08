@@ -3,17 +3,17 @@ title: 'İzlenecek Yol: XSLT IntelliSense Kullanma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 606c4ad307de46d19989d14e2c660cc0286cb803
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: adeab012e78d5f49ca94d1d8135aaf491839c767
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604370"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592444"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>İzlenecek Yol: XSLT IntelliSense Kullanma
 
@@ -45,7 +45,7 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
     </xsl:stylesheet>
     ```
 
-2. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:call-template` öğesini yazmaya başlayın:
+2. `<xsl:template name="msg23" match="msg23">` sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:call-template` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:call-template name="localized-message">
@@ -54,7 +54,7 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
 
      Şablon adları listesi, yazarken `xsl:call-template` öğesinin `name=""` özniteliğinde görüntülenir.
 
-3. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:with-param` öğesini yazmaya başlayın:
+3. `<xsl:call-template name="localized-message">` sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:with-param` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:with-param name="msgcode">msg23</xsl:with-param>
@@ -111,7 +111,7 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
     </xsl:stylesheet>
     ```
 
-2. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl: apply-templates` öğesini yazmaya başlayın:
+2. `<xsl:apply-templates select="phone" />` sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl: apply-templates` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:apply-templates select="phone"  mode="accountNumber">
@@ -152,7 +152,7 @@ Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak 
     </xsl:stylesheet>
     ```
 
-2. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:namespace-alias` öğesini yazmaya başlayın:
+2. `<xsl:stylesheet version="1.0">` sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:namespace-alias` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>
