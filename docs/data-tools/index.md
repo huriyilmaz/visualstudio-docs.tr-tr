@@ -1,23 +1,23 @@
 ---
 title: Veri çözümleri geliştirme
-description: .NET araçları, SQL Server Veri Araçları, Azure Data Lake, Azure HDInsight ve Azure Akış Analizi dahil olmak üzere Visual Studio 'da veri çözümleri geliştirmeye yönelik farklı araçlar hakkında bilgi edinin.
+description: Visual Studio’da veri çözümleri geliştirme olanağı tanıyan .NET araçları, SQL Server Veri Araçları, Azure Data Lake, Azure HDInsight ve Azure Streaming Analytics gibi farklı araçlar hakkında bilgi edinin.
 layout: LandingPage
 ms.date: 01/01/2018
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: 38b0d25539b4fe02d81463e9bc4e481c3b45010e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MT
+ms.openlocfilehash: 2b4d283a6d07a17fe5d405863106155230e9ec78
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648331"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586438"
 ---
-# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Veri çözümleri geliştirmek için Visual Studio 'da veri araçları kullanma
+# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Veri çözümleri geliştirmek için Visual Studio’daki veri araçlarını kullanma
 
-SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştirmek ve test etmek için Visual Studio 'da veri araçları 'nı nasıl kullanacağınızı öğrenin.
+SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümleri geliştirip test etmek için Visual Studio veri araçlarını kullanmayı öğrenin.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -33,7 +33,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştir
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual Studio ve .NET&#39;s araçları ve veri uygulamaları GELIŞTIRMEYE yönelik API desteği hakkında bilgi edinin</h3>
+                        <h3>Visual Studio ve .NET&#39;in veri uygulamaları geliştirmeye yönelik API desteği hakkında bilgi edinin</h3>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştir
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>SQL Server Veri Araçları veritabanlarını tasarlama, dağıtma ve sürdürme hakkında bilgi edinin</h3>
+                        <h3>SQL Server Veri Araçları ile veritabanı tasarlamayı, dağıtmayı ve bunları korumayı öğrenin</h3>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştir
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Azure Data Lake kullanarak U-SQL ve .NET ile büyük veri uygulamaları geliştirme hakkında bilgi edinin</h3>
+                        <h3>Azure Data Lake kullanarak U-SQL ve .NET ile Büyük Veri uygulamaları geliştirmeyi öğrenin</h3>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştir
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Azure HDInsight 'ta Hadoop ile Hive sorguları çalıştırma hakkında bilgi edinin</h3>
+                        <h3>Azure HDInsight’ta Hadoop ile Hive sorguları çalıştırmayı öğrenin</h3>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştir
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Azure Akış Analizi ile neredeyse gerçek zamanlı zaman büyük veri çözümleri geliştirme hakkında bilgi edinin</h3>
+                        <h3>Azure Streaming Analytics ile gerçek zamanlıya yakın büyük veri çözümleri geliştirmeyi öğrenin</h3>
                     </div>
                 </div>
             </div>

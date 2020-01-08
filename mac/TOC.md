@@ -25,6 +25,7 @@
 ## [Yeni Projeler oluşturuluyor](create-new-projects.md)
 ## [Proje Öğeleri ekleme ve kaldırma](add-and-remove-project-items.md)
 ## [Çözümleri ve Proje özelliklerini yönetme](managing-solutions-and-project-properties.md)
+## [Çoklu Sürüm Desteği](project-multitargeting.md)
 ## Bir projedeki başvuruları yönetme
 ### [Genel bakış](managing-references-in-a-project.md)
 ### [İzlenecek yol - Projenize NuGet paketi ekleme](nuget-walkthrough.md)
@@ -35,6 +36,8 @@
 ## [Düzenleyici Özellikleri](source-editor.md)
 ## [Yeniden Düzenleme](refactoring.md)
 ## [IntelliSense](intellisense.md)
+## [İçeri Aktarma Öğelerini Gösterme](show-imports.md)
+## [Çoklu Giriş İşareti Düzenleme](multi-caret-editing.md)
 ## [Açıklamalar](comments.md)
 ## [Düzenleyici Davranışı](editor-behavior.md)
 ## [Görev Açıklamaları](task-comments.md)
@@ -47,6 +50,7 @@
 # Hata Ayıklama
 ## [Genel bakış](debugging.md)
 ## [Veri Görselleştirmeleri](data-visualizations.md)
+## [Kaynak Bağlantısı ile NuGet paketlerinde hata ayıklama](source-link.md)
 
 # Derleme ve Oluşturma
 ## [Genel bakış](compiling-and-building.md)
