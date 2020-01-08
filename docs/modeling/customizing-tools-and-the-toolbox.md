@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.selectcursordialog
 helpviewer_keywords:
 - Domain-Specific Language, toolbox
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8099773dbbfdd06e4ce806401400bf3d2443b57f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2e8e9fc3a9ecbadc47c3390d2d4a9b504a316658
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747601"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589727"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Araçları ve Araç Kutusunu Özelleştirme
 
@@ -69,7 +69,7 @@ Bir bağlantı aracının **bağlantı Oluşturucu** özelliği, aracın ne tür
 
 3. **Araç kutusu simgesi** özelliğini 16x16 bit eşlem 'e başvuracak şekilde ayarlayın.
 
-     Yeni bir simge tanımlamak istiyorsanız, **Dsl\resources** klasöründe Çözüm Gezgini bir bit eşlem dosyası oluşturun. Dosya aşağıdaki özellik değerlerine sahip olmalıdır: **derleme eylemi** **içerik** = ; **Çıkış dizinine kopyala**  = **kopyalamayın**.
+     Yeni bir simge tanımlamak istiyorsanız, **Dsl\resources** klasöründe Çözüm Gezgini bir bit eşlem dosyası oluşturun. Dosya aşağıdaki özellik değerlerine sahip olmalıdır: **derleme eylemi** **içerik** = ; **Çıkış dizinine kopyala** = **kopyalamayın**.
 
 4. **Bir öğe aracı için:** Bir şekle eşlenen somut bir etki alanı sınıfına başvuracak şekilde aracın **sınıf** özelliğini ayarlayın.
 
@@ -77,7 +77,7 @@ Bir bağlantı aracının **bağlantı Oluşturucu** özelliği, aracın ne tür
 
 5. DSL 'yi test etmek için F5 veya CTRL + F5 tuşlarına basın ve Visual Studio 'nun deneysel örneğinde örnek bir model dosyası açın. Yeni araç araç kutusunda görünmelidir. Yeni bir öğe oluşturduğunu doğrulamak için onu diyagrama sürükleyin.
 
-     Araç görünmezse, deneysel Visual Studio 'Yu durdurun. Windows **Başlat** menüsünde **Microsoft Visual Studio 2010 Deneysel örneğini Sıfırla**' yı çalıştırın. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın. Ardından DSL 'yi yeniden test edin.
+     Araç görünmezse, deneysel Visual Studio 'Yu durdurun. Windows **Başlat** menüsünde **Microsoft Visual Studio 2010 Deneysel örneğini Sıfırla**' yı çalıştırın. Üzerinde **derleme** menüsünde tıklatın **çözümü yeniden derle**. Ardından DSL 'yi yeniden test edin.
 
 ## <a name="customizing"></a>Öğe araçlarını özelleştirme
  Varsayılan olarak, araç belirtilen sınıfın tek bir örneğini oluşturur, ancak bunu iki şekilde değiştirebilirsiniz:
@@ -154,12 +154,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  Bağlantı oluşturucular, etki alanı ilişkisini ve kaynak ve hedef öğeleri belirten bir veya daha fazla bağlantı bağlama yönergesi içerir. Örneğin, görev akışı çözüm şablonunda, **DSL Gezgini**'Nde **CommentReferencesSubjectsBuilder** ' ı görebilirsiniz. Bu bağlantı Oluşturucusu, **commentreferencesilgilileri**adlı bir bağlantı bağlama yönergesi içerir ve bu ad alanı Ilişkisi **commentreferenceskonularıyla**eşlenir. Bu bağlantı bağlama yönergesi, `Comment` etki alanı sınıfına işaret eden bir kaynak rol yönergesi ve `FlowElement` etki alanı sınıfına işaret eden bir hedef rol yönergesi içerir.
 
 ### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>Kaynak ve hedef rolleri kısıtlamak için bağlantı oluşturucuları kullanma
- Kaynak roldeki veya belirli bir etki alanı ilişkisinin hedef rolündeki belirli sınıfların oluşumunu kısıtlamak için bağlantı oluşturucularını kullanabilirsiniz. Örneğin, başka bir etki alanı sınıfıyla bir etki alanı ilişkisine sahip olan bir temel etki alanı sınıfınız olabilir, ancak taban sınıfın tüm türetilmiş sınıflarının bu ilişkide aynı rollere sahip olmasını istemeyebilirsiniz. Görev akışı **çözümünde, soyut etki alanı sınıfından doğrudan**ve iki somut etki alanı sınıfı (**StartPoint**, **Endpoint**, **MergeBranch**ve **Synchronization**) vardır. dolaylı olarak ondan alınan etki alanı sınıfları (**görev** ve **ObjectInState**). Ayrıca, hem kaynak rolünde hem de hedef rolde **aynı etki alanı** sınıflarını alan bir **akış** başvurusu ilişkisi vardır. Ancak, bir **uç nokta** etki alanı sınıfının bir örneği bir **akış** ilişkisi örneğinin kaynağı olmamalıdır, ya da bir **StartPoint** sınıfının örneği bir **akış** ilişkisi örneğinin hedefi olmalıdır. **FlowBuilder** bağlantı oluşturucusunun, kaynak rolünü (**görev**, **MergeBranch**, **StartPoint**ve **Synchronization**) hangi etki alanı sınıflarının çalabildiğini belirten **Flow** adlı bir bağlantı bağlama yönergesi vardır ve bu hedef rolü (**MergeBranch**, **Endpoint**ve **Synchronization**) oynayabilir.
+ Kaynak roldeki veya belirli bir etki alanı ilişkisinin hedef rolündeki belirli sınıfların oluşumunu kısıtlamak için bağlantı oluşturucularını kullanabilirsiniz. Örneğin, başka bir etki alanı sınıfıyla bir etki alanı ilişkisine sahip olan bir temel etki alanı sınıfınız olabilir, ancak taban sınıfın tüm türetilmiş sınıflarının bu ilişkide aynı rollere sahip olmasını istemeyebilirsiniz. Görev akışı çözümünde, doğrudan soyut etki alanı sınıfından (StartPoint, **uç nokta**, MergeBranch ve eşitleme **), bundan**dolaylı olarak miras alan iki somut etki alanı sınıfı**vardır (** **StartPoint**, Endpoint, **MergeBranch**ve **Synchronization**) **.** Ayrıca, hem kaynak rolünde hem de hedef rolde **aynı etki alanı** sınıflarını alan bir **akış** başvurusu ilişkisi vardır. Ancak, bir **uç nokta** etki alanı sınıfının bir örneği bir **akış** ilişkisi örneğinin kaynağı olmamalıdır, ya da bir **StartPoint** sınıfının örneği bir **akış** ilişkisi örneğinin hedefi olmalıdır. **FlowBuilder** bağlantı oluşturucusunun, kaynak rolünü (**görev**, **MergeBranch**, **StartPoint**ve **Synchronization**) çalabildiğini ve hedef rolünü (**MergeBranch**, **uç nokta**ve **eşitleme**) çalabildiğini belirten **Flow** adlı bir bağlantı bağlama yönergesi vardır.
 
 ### <a name="connection-builders-with-multiple-link-connect-directives"></a>Birden çok bağlantı bağlama yönergesi olan bağlantı oluşturucular
  Bir bağlantı oluşturucusuna birden fazla bağlantı bağlama yönergesi ekleyebilirsiniz. Bu, etki alanı modelinin bazı karmaşıklıklarını gizlemenize ve **araç kutusunun** çok karışık olmasını sağlamanıza yardımcı olabilir. Tek bir bağlantı oluşturucusuna birkaç farklı etki alanı ilişkisi için bağlantı bağlama yönergeleri ekleyebilirsiniz. Ancak, etki alanı ilişkilerini yaklaşık olarak aynı işlevi gerçekleştirirken birleştirmeniz gerekir.
 
- Görev akışı çözümünde **akış** bağlantısı aracı hem **Flow** hem de **objectflow** etki alanı ilişkilerinin örneklerini çizmek için kullanılır. **FlowBuilder** bağlantı Oluşturucu, daha önce açıklanan **Flow** bağlantı bağlama yönergesinin yanı sıra **objectflow**adlı iki bağlantı bağlama yönergesi içerir. Bu yönergeler, **objectinstate** etki alanı sınıfının örnekleri arasında veya bir **ObjectInState** örneğinden bir **görevin**örneğine değil, bir dizi örneğine çizilemeyen bir **objectflow** ilişkisinin bir örneğidir bir **görevin**örnekleri veya bir **görevin** örneğinden **ObjectInState**örneğine. Ancak, bir **akış** ilişkisinin bir örneği bir **görevin**iki örneği arasında çizilebilir. Görev akışı çözümünü derleyip çalıştırırsanız, bir **Objectinstate** örneğinden bir **görevin** örneğine **akış** çizimi için bir **objectflow**örneği oluşturur, ancak iki örnek arasında **akış** çiziyor bir **görev** bir **akış**örneği oluşturur.
+ Görev akışı çözümünde **akış** bağlantısı aracı hem **Flow** hem de **objectflow** etki alanı ilişkilerinin örneklerini çizmek için kullanılır. **FlowBuilder** bağlantı Oluşturucu, daha önce açıklanan **Flow** bağlantı bağlama yönergesinin yanı sıra **objectflow**adlı iki bağlantı bağlama yönergesi içerir. Bu yönergeler, **objectinstate** etki alanı sınıfının örnekleri arasında ya **da bir** **ObjectInState** örneğinden bir görevin örneğine veya **bir görevin bir** örneğinden bir **Objectinstate**örneğine **değil, bir** **objectflow** ilişkisinin bir örneğinin çizildiğini belirtir. Ancak, bir **akış** ilişkisinin bir örneği bir **görevin**iki örneği arasında çizilebilir. Görev akışı çözümünü derleyip çalıştırırsanız, bir **Objectinstate** örneğinden bir **görevin** örneğine **akış** çizimi için bir **objectflow**örneği oluşturur, ancak bir **görevin** iki örneği arasında bir **akış** çizmek bir **akış**örneği oluşturur.
 
 ### <a name="custom-code-for-connection-builders"></a>Bağlantı oluşturucuları için özel kod
  Kullanıcı arabiriminde, bağlantı oluşturucuların farklı tür özelleştirmesini tanımlayan dört onay kutusu vardır:

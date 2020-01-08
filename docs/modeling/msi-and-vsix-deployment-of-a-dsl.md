@@ -2,17 +2,17 @@
 title: DSL'nin MSI ve VSIX Dağıtımı
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73c81d88f055ea7a585e3d14ab4a0086d9236938
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 96922848adf053e3b728196a445407f3d5f86428
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984445"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590195"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
 Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil yükleyebilirsiniz. Visual Studio 'Nun hedef bilgisayarda zaten yüklü olması gerekir.
@@ -35,7 +35,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
    1. **Çözüm Gezgini**, **DslPackage** projesine sağ tıklayın ve ardından **Dosya Gezgini 'nde klasörü aç**' a tıklayın.
 
-   2. Dosya **bin \\ \* \\** _projem_' i bulun **. DslPackage. vsix**
+   2. Dosya **bin\\\*\\** _projem_' i bulun **. DslPackage. vsix**
 
 2. **. Vsix** dosyasını, DSL 'yi yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
@@ -61,7 +61,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
    Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
 
-   *LocalAppData* **\Microsoft\visualstudio\10.0\Extensions**
+   *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**
 
 ## <a name="msi"></a>MSI içinde DSL dağıtma
  DSL 'niz için bir MSI (Windows Installer) dosyası tanımlayarak, kullanıcıların Windows Gezgini 'nden DSL dosyalarını açmasına izin verebilirsiniz. Ayrıca, dosya adı uzantınızla bir simge ve kısa açıklama ilişkilendirebilirsiniz. Buna ek olarak, MSI DSL dosyalarını doğrulamak için kullanılabilen bir XSD 'yi de yükleyebilir. İsterseniz, diğer bileşenleri MSI 'ye aynı anda yüklenecek şekilde ekleyebilirsiniz.
@@ -74,7 +74,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
 1. Uzantı bildiriminde `InstalledByMsi` ayarlayın. Bu, VSX 'in MSI dışında yüklenmesini ve kaldırılmasını engeller. Bu, MSI 'ye diğer bileşenleri dahil etmek için önemlidir.
 
-   1. Açık DslPackage\source.extension.tt
+   1. Open DslPackage\source.extension.tt
 
    2. `<SupportedProducts>`önce aşağıdaki satırı ekleyin:
 
@@ -90,7 +90,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
        - Açıklama
 
-       - Version
+       - Sürüm
 
    - **Düzenleyici** düğümüne tıklayın ve Özellikler penceresi **simgesine**tıklayın. Değeri **Dslpackage\resources**içindeki **File. ico** gibi bir simge dosyasına başvuracak şekilde ayarlayın.
 
@@ -102,11 +102,11 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
     Visual Studio, **CreateMsiSetupProject. VDPROJ**adlı bir dosya oluşturur.
 
-6. Windows Gezgini 'nde, DSL \\ *. VDPROJ öğesini kurulum adlı yeni bir klasöre kopyalayın.
+6. Windows Gezgini 'nde, DSL\\*. VDPROJ öğesini kurulum adlı yeni bir klasöre kopyalayın.
 
     (İsterseniz, CreateMsiSetupProject.tt artık DSL projenizden dışarıda bırakabilirsiniz.)
 
-7. **Çözüm Gezgini**, mevcut bir proje olarak **\*. VDPROJ kurulum \\** ekleyin.
+7. **Çözüm Gezgini**, mevcut bir proje olarak **\*. VDPROJ kurulum\\** ekleyin.
 
 8. **Proje** menüsünde **Proje bağımlılıkları**' na tıklayın.
 

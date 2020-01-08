@@ -5,19 +5,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, distributing
 ms.assetid: 5f717abd-e167-47ae-818c-6b0bae100ceb
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b5ae4053e97e823952118abda11f334c5ac1083
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23e77658b2b09f643af18a3f136f5428828cfb5c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656074"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591066"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Nasıl yapılır: kod parçacıklarını dağıtma
 
@@ -67,19 +67,19 @@ Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-cr
 
 2. *. Parçacığının* dosyasını *HelloWorldVB* klasörüne taşıyın.
 
-3. **Çözüm Gezgini** *. kod parçacığı* dosyasını seçin ve **Özellikler** penceresinde **derleme eyleminin** **içerik**olarak ayarlandığından emin olun, **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlanır ve **VSIX 'e dahil** edin **true**olarak ayarlandı.
+3. **Çözüm Gezgini** *. kod parçacığı* dosyasını seçin ve **Özellikler** penceresinde **derleme eyleminin** **içerik**olarak ayarlandığından emin olun, **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlanır ve **VSIX 'e dahil et** özelliği **true**olarak ayarlanır.
 
 ### <a name="add-the-pkgdef-file"></a>. Pkgdef dosyasını ekleme
 
 ::: moniker range="vs-2017"
 
-1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef*olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
+1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef*olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef*olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
+1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef*olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\16.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
 
 ::: moniker-end
 
@@ -107,15 +107,15 @@ Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-cr
 
 1. Artık kod parçacığının Visual Studio 'nun deneysel örneğinde çalıştığından emin olabilirsiniz. Deneysel örnek, Visual Studio 'nun kod yazmak için kullandığınız bir ikinci kopyasıdır. Geliştirme ortamınızı etkilemeden bir uzantı üzerinde çalışmanıza olanak sağlar.
 
-2. Projeyi derleyin ve hata ayıklamayı başlatın.
+2. Projeyi oluşturmak ve hata ayıklamaya başlayın.
 
    Visual Studio 'nun ikinci bir örneği görüntülenir.
 
-3. Deneysel örnekte, **araçlar**  > **kod parçacıkları Yöneticisi** ' ne gidin ve **dili** **temel**olarak ayarlayın. Bir klasörden birine *Merhaba Worldvb* görmeniz gerekir ve *Merhaba worldvb* kod parçacığını görmek için klasörü genişletmeniz gerekir.
+3. Deneysel örnekte, **araçlar** > **kod parçacıkları Yöneticisi** ' ne gidin ve **dili** **temel**olarak ayarlayın. Bir klasörden birine *Merhaba Worldvb* görmeniz gerekir ve *Merhaba worldvb* kod parçacığını görmek için klasörü genişletmeniz gerekir.
 
 4. Kod parçacığını test edin. Deneysel örnekte, bir Visual Basic projesi açın ve kod dosyalarından birini açın. İmlecinizi kodda bir yere yerleştirin, sağ tıklayın ve bağlam menüsünde kod **parçacığı Ekle**' yi seçin.
 
-5. Bir klasörden biri olarak *Merhaba Worldvb* görmeniz gerekir. Çift tıklayın. Açılan bir **ekleme kod parçacığı** görmeniz gerekir: bir açılan Merhaba çalışma parçacığı, bir açılan **helloworldvb**>. **Merhaba Worldvb** açılan listesine tıklayın.
+5. Bir klasörden biri olarak *Merhaba Worldvb* görmeniz gerekir. Çift tıklatın. Açılan bir **ekleme kod parçacığı** görmeniz gerekir: bir açılan Merhaba çalışma parçacığı, bir açılan **helloworldvb**>. **Merhaba Worldvb** açılan listesine tıklayın.
 
    Kod dosyasına aşağıdaki satır eklenir:
 

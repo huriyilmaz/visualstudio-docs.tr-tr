@@ -2,17 +2,17 @@
 title: Kaydırma çubuğu eşleme modu ve çubuk modu
 ms.date: 09/25/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 997f44fede7b31fe44b1e2ea28186ad52d39f443
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 22436c221813ec4c3701d208fc74a96b403fff9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656574"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591404"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Nasıl yapılır: kaydırma çubuğunu özelleştirme
 
@@ -22,7 +22,7 @@ Uzun kod dosyalarıyla çalışırken her şeyin dosyada nerede olduğunu izleme
 
 Kaydırma çubuğunun kod değişiklikleri, kesme noktaları, yer işaretleri, hatalar ve giriş işareti konumu gibi ek açıklamaları gösterilip gösterilmeyeceğini belirleyebilirsiniz.
 
-   1. **Tüm diller**  > **kaydırma çubukları** >  **Araçlar**  > **Seçenekler**  > **metin Düzenleyicisi** ' ni seçerek **kaydırma çubukları** seçenekleri sayfasını açın.
+   1. **Tüm diller** > **kaydırma çubukları** > **Araçlar** > **Seçenekler** > **metin Düzenleyicisi** ' ni seçerek **kaydırma çubukları** seçenekleri sayfasını açın.
 
    2. **Dikey kaydırma çubuğu üzerinde ek açıklamaları göster**' i seçin ve ardından görmek istediğiniz ek açıklamaları seçin. Kullanılabilir ek açıklamalar şunlardır:
 
@@ -69,4 +69,4 @@ Aşağıdaki görüntüde **Önizleme araç Ipucunu göster** seçeneği göster
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)

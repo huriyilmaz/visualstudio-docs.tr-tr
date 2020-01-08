@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: XML parçacıkları oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb511ba6f2eea9c56be4e826c3b689856c22214a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: df3c2592036f085fcf89d80bcefb1a469b3c1e15
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645934"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592756"
 ---
 # <a name="how-to-create-xml-snippets"></a>Nasıl yapılır: XML parçacıkları oluşturma
 
@@ -56,11 +56,11 @@ Düzenleyici iki kod parçacığı türünü destekler:
 </SnippetTypes>
 ```
 
-@No__t_0 türü, kod **parçacığı Ekle** komutunu çağırdığınızda parçacığın görünüp görünmeyeceğini belirler. @No__t_0 türü, **birlikte çevreler** komutuyla çağırdığınızda parçacığın görünüp görünmeyeceğini belirler.
+`Expansion` türü, kod **parçacığı Ekle** komutunu çağırdığınızda parçacığın görünüp görünmeyeceğini belirler. `SurroundsWith` türü, **birlikte çevreler** komutuyla çağırdığınızda parçacığın görünüp görünmeyeceğini belirler.
 
 ### <a name="code-element"></a>Kod öğesi
 
-@No__t_0 öğesi, kod parçacığı çağrıldığında eklenecek XML metnini tanımlar.
+`Code` öğesi, kod parçacığı çağrıldığında eklenecek XML metnini tanımlar.
 
 > [!NOTE]
 > XML kod parçacığı metni bir `<![CDATA[...]]>` bölümü içine alınmalıdır.
@@ -75,7 +75,7 @@ Ortak parçacığı tarafından oluşturulan `Code` öğesi aşağıda verilmiş
 </Code>
 ```
 
-@No__t_0 öğesi üç değişken içerir.
+`Code` öğesi üç değişken içerir.
 
 - $name $ Kullanıcı tanımlı değişkendir. Varsayılan olarak "Name" olan düzenlenebilir bir değere sahip bir `name` öğesi oluşturur. Kullanıcı tanımlı değişkenler `Literal` öğesi kullanılarak tanımlanır.
 
@@ -95,7 +95,7 @@ Name öğesinin değeri düzenlenebilir bir bölge olarak işaretlenir.
 
 ### <a name="literal-element"></a>Literal öğesi
 
-@No__t_0 öğesi, dosyaya eklendikten sonra özelleştirilebilecek değiştirme metnini belirlemek için kullanılır. Örneğin, değişmez dizeler, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilemez. XML kod parçacığınızdan herhangi bir sayıda sabit değer tanımlayabilir ve kod parçacığının içinden birden çok kez başvurabilirsiniz. Aşağıda, varsayılan değeri "ad" olan bir $name $ değişkenini tanımlayan bir `Literal` öğesi örneği verilmiştir.
+`Literal` öğesi, dosyaya eklendikten sonra özelleştirilebilecek değiştirme metnini belirlemek için kullanılır. Örneğin, değişmez dizeler, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilemez. XML kod parçacığınızdan herhangi bir sayıda sabit değer tanımlayabilir ve kod parçacığının içinden birden çok kez başvurabilirsiniz. Aşağıda, varsayılan değeri "ad" olan bir $name $ değişkenini tanımlayan bir `Literal` öğesi örneği verilmiştir.
 
 ```xml
 <Literal>

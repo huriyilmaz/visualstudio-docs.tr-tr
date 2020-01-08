@@ -3,17 +3,17 @@ title: XML Belge Özellikleri, Özellik Penceresi
 ms.date: 03/05/2019
 ms.topic: reference
 ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99102248a9456de3a2b3aeba28e54de4299fae40
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1b21f4435737597136e1ac4a4dd8651decaf4c65
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604152"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592431"
 ---
 # <a name="xml-document-properties-properties-window"></a>XML belgesi özellikleri, Özellikler penceresi
 
@@ -22,13 +22,13 @@ ms.locfileid: "72604152"
 > [!NOTE]
 > Tüm XML belgesi özellikleri çözüme kaydedilir. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
 
-**Şifreleme**
+**Kodlama**
 
 Dosya için karakter kodlaması. Bu özelliğin değiştirilmesi, XML bildiriminde kodlama özniteliğini de değiştirir ve tam tersi de geçerlidir. Yeni kodlama dosyayı kaydettiğinizde dosyayı kodlamak için kullanılır.
 
 **Giriş**
 
-XSLT stil sayfasıyla ilişkili giriş belgesi. **Başlangıç XSLT** komutları tarafından kullanılır, örneğin, **XML**  > ,**XSLT 'yi hata ayıklama olmadan başlatır**. Bir belge, gezinme ( **...** ) düğmesi kullanılarak seçilebilir.
+XSLT stil sayfasıyla ilişkili giriş belgesi. **Başlangıç XSLT** komutları tarafından kullanılır, örneğin, **XML** > , **XSLT 'yi hata ayıklama olmadan başlatır**. Bir belge, gezinme ( **...** ) düğmesi kullanılarak seçilebilir.
 
 Bu özellik yalnızca düzenleyicide bir XSLT dosyası açıkken görünür.
 

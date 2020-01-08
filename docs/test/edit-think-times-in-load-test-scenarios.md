@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, adding delays
 - load tests, changing think times
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 661a31411a561f15809a10fb15fd71a29e6a64fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 887d2af9e60be914bd74141041ecc375cfea4f00
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672946"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590039"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Yük testi senaryolarında Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleyin
 
@@ -42,7 +42,7 @@ Düşünme süreleri, tam olarak Web performans testinde kaydedildikleri gibi ku
 Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde değiştirilebilir. İstekler arasında düşünme süresini biraz değiştirerek sanal kullanıcıların daha gerçekçi bir benzetimi sağlar.
 
 > [!NOTE]
-> Yük testi senaryosu özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
+> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz: [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
 
 ## <a name="change-the-think-profile"></a>Düşünme profilini değiştirme
 
@@ -50,7 +50,7 @@ Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde değiştiril
 
 1. Web performans ve yük testi projesinden bir yük testi açın.
 
-2. **Yük Testi Düzenleyicisi**, **Düşünme profilini**değiştirmek istediğiniz senaryo düğümünü seçin. **Düşünme profili** **Özellikler** penceresinde görüntülenir. **Özellikler** penceresini göstermek için **F4** tuşuna basın.
+2. **Yük Testi Düzenleyicisi**, **Düşünme profilini**değiştirmek istediğiniz senaryo düğümünü seçin. **Düşünme profili** **Özellikler** penceresinde görüntülenir. Tuşuna **F4** görüntülenecek **özellikleri** penceresi.
 
 3. **Özellikler** penceresinde **Düşünme profili** özelliğini değiştirin.
 
@@ -58,4 +58,4 @@ Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde değiştiril
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını Düzenle](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)

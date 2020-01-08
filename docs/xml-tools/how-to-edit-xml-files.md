@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: XML dosyalarını düzenleme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd8671bf45230ec24a37d5006a2d32e5aabe8f28
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 216718627936ac7f519c1a6a28a30886e8ae9c27
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645918"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592743"
 ---
 # <a name="how-to-edit-xml-files"></a>Nasıl yapılır: XML dosyalarını düzenleme
 
@@ -32,7 +32,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 3. **Ad** alanına dosya adını girin ve **Ekle**' ye basın.
 
-   XML dosyası projeye eklenir ve XML düzenleyicisinde açılır. Dosya, `<?xml version="1.0" encoding="utf-8" ?>` varsayılan XML bildirimini içerir.
+   XML dosyası projeye eklenir ve XML düzenleyicisinde açılır. Dosya, `<?xml version="1.0" encoding="utf-8" ?>`varsayılan XML bildirimini içerir.
 
 ## <a name="add-an-existing-xml-file-to-a-project"></a>Bir projeye var olan bir XML dosyası Ekle
 
@@ -50,7 +50,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 2. Yeni bir XML dosyası oluşturmak için **XML dosyasını** seçin; veya yeni bir XSLT stil sayfası oluşturmak için **XSLT dosyası** ' nı seçin.
 
-3. **Aç**' a tıklayın.
+3. Tıklayın **açık**.
 
 ## <a name="create-an-empty-project-for-xml-files"></a>XML dosyaları için boş bir proje oluştur
 
@@ -62,7 +62,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 2. Seçtiğiniz kod dilini seçin ve **boş proje (.NET Framework)** şablonunu seçin.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**'ı tıklatın.
 
 ::: moniker-end
 

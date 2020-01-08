@@ -16,23 +16,23 @@ helpviewer_keywords:
 - namespaces [Visual Studio], referencing
 - COM components, referencing
 - objects [Visual Studio], referencing
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06235439fdff952225fe3aafea9f5354a27cb0a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9623e8ffb6a315851d26cd06defb62899e429f44
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658429"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591261"
 ---
 # <a name="manage-references-in-a-project"></a>Bir projedeki başvuruları yönetme
 
 Bir dış bileşene veya bağlı hizmete karşı kod yazmadan önce, projenizin bir başvurusu içermesi gerekir. Başvuru temelde, Visual Studio 'Nun bileşeni veya hizmeti bulması için gereken bilgileri içeren bir proje dosyasındaki giriştir.
 
-Başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Proje düğümüne sağ tıklayıp  > **başvuru** **Ekle** ' yi de seçebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
+Başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Proje düğümüne sağ tıklayıp > **başvuru** **Ekle** ' yi de seçebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
 
 ![Visual C 'de başvuru ekleme&#43;&#43;](../ide/media/vs2015_cpp_add_reference.png)
 
@@ -72,7 +72,7 @@ Uygulamanız tarafından başvurulan Uzantı SDK 'sının desteklenmediğini bel
     > Bir uzantı SDK 'sının diğer uzantı SDK 'lerinde bağımlılıklara sahip olup olmadığını bulmanın bir yolu, **başvuru Yöneticisi**'ne bakar. Visual Studio 'Yu yeniden başlatın, yeni C# bir UWP uygulaması projesi oluşturun ve ardından projeye sağ tıklayıp **Başvuru Ekle**' yi seçin. **Windows** sekmesine, ardından **Uzantılar** alt sekmesine gidip Uzantı SDK 'sını seçin. **Başvuru Yöneticisi**' nde sağ bölmeye bakın. Bağımlılıklar varsa, burada listelenir.
 
     > [!IMPORTANT]
-    > Projeniz Windows 10 ' u hedefliyorsanız ve önceki adımda yüklenen Uzantı SDK 'sının Microsoft Visual C++ Runtime paketine bağımlılığı varsa, Windows 10 Ile uyumlu Microsoft Visual C++ Runtime paketinin sürümü v 14.0 ' dir. ve Visual Studio ile birlikte yüklenir.
+    > Projeniz Windows 10 ' u hedefliyorsanız ve önceki adımda yüklenen Uzantı SDK 'sının Microsoft Visual C++ Runtime paketine bağımlılığı varsa, Windows 10 Ile uyumlu Microsoft Visual C++ Runtime paketinin sürümü v 14.0 ve Visual Studio ile birlikte yüklenir.
 
 1. Önceki adımda yüklediğiniz Uzantı SDK diğer uzantı SDK 'larına bağımlılar içeriyorsa, bağımlılıklara sahip olan satıcıların sitelerine gidin ve projenizin platform sürümü ile uyumlu olan bu bağımlılıkların sürümlerini yükleyebilirsiniz hedefleyen.
 
@@ -80,7 +80,7 @@ Uygulamanız tarafından başvurulan Uzantı SDK 'sının desteklenmediğini bel
 
 1. Projede hataya neden olan **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
-1. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin. **Tamam**'a tıklayın.
+1. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin. **Tamam**'ı tıklatın.
 
 ## <a name="add-a-reference-at-design-time"></a>Tasarım zamanında başvuru ekleme
 
@@ -92,12 +92,12 @@ Projenizdeki bir derlemeye başvuru yaptığınızda, Visual Studio derlemeyi a�
 
 > [!NOTE]
 > - Tüm projeler **mscorlib**'e örtük bir başvuru içerir.
-> - Tüm projeler, `System.Core` başvurular listesinden kaldırılsa bile, `System.Core` için örtük bir başvuru içerir.
-> - Visual Basic projeler, <xref:Microsoft.VisualBasic> için örtük bir başvuru içerir.
+> - Tüm projeler, `System.Core` başvurular listesinden kaldırılsa bile, `System.Core`için örtük bir başvuru içerir.
+> - Visual Basic projeler, <xref:Microsoft.VisualBasic>için örtük bir başvuru içerir.
 
 ## <a name="references-to-shared-components-at-run-time"></a>Çalışma zamanında paylaşılan bileşenlere başvurular
 
-Çalışma zamanında, bileşenlerin ya projenin çıkış yolunda ya da genel derleme önbelleğinde (GAC) olması gerekir. Proje, bu konumlardan birinde olmayan bir nesneye başvuru içeriyorsa, projeyi oluşturduğunuzda projenin çıkış yoluna başvuruyu kopyalamanız gerekir. @No__t_0 özelliği, bu kopyanın yapılıp yapılmayacağını belirtir. Değer **true**ise, projeyi oluşturduğunuzda başvuru proje dizinine kopyalanır. Değer **false**ise, başvuru kopyalanmaz.
+Çalışma zamanında, bileşenlerin ya projenin çıkış yolunda ya da genel derleme önbelleğinde (GAC) olması gerekir. Proje, bu konumlardan birinde olmayan bir nesneye başvuru içeriyorsa, projeyi oluşturduğunuzda projenin çıkış yoluna başvuruyu kopyalamanız gerekir. <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliği, bu kopyanın yapılıp yapılmayacağını belirtir. Değer **true**ise, projeyi oluşturduğunuzda başvuru proje dizinine kopyalanır. Değer **false**ise, başvuru kopyalanmaz.
 
 GAC 'de kayıtlı bir özel bileşene başvuru içeren bir uygulama dağıtırsanız, bileşen <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> ayarından bağımsız olarak uygulamayla dağıtılmaz. Visual Studio 'nun önceki sürümlerinde, derlemenin dağıtıldığından emin olmak için bir başvuru üzerinde <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliğini ayarlayabilirsiniz. Şimdi, derlemeyi \bin klasörüne el ile eklemeniz gerekir. Bu, tüm özel kodu scrutlı 'in altına koyar ve alışık olduğunuz özel kodu yayımlama riskini azaltır.
 

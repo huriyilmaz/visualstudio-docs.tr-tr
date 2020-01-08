@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae55428b61053fbd255446833cb20aec3da79b6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ec320018cc64e774751c312ca4cdeb94a6d53a9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645377"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592691"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma
 
@@ -33,13 +33,13 @@ Bu özellik yalnızca öğelerde kullanılabilir. Aşağıdaki kurallar da geçe
 
 - İmleç, öğe adının hemen sağına yerleştirilmelidir.
 
-Oluşturulan kod parçacığı tüm gerekli öznitelikleri ve öğeleri içerir. @No__t_0 sıfırdan büyükse, en fazla 100 örneğe kadar, bu öğenin gereken minimum örnek sayısı kod parçacığına dahil edilir. Şemada bulunan sabit değerler, kod parçacığında sabit değerlerle sonuçlanır. `xsd:any` ve `xsd:anyAttribute` öğeleri yok sayılır ve ek bir kod parçacığı yapılarıyla sonuçlanır.
+Oluşturulan kod parçacığı tüm gerekli öznitelikleri ve öğeleri içerir. `minOccurs` sıfırdan büyükse, en fazla 100 örneğe kadar, bu öğenin gereken minimum örnek sayısı kod parçacığına dahil edilir. Şemada bulunan sabit değerler, kod parçacığında sabit değerlerle sonuçlanır. `xsd:any` ve `xsd:anyAttribute` öğeleri yok sayılır ve ek bir kod parçacığı yapılarıyla sonuçlanır.
 
 Varsayılan değerler oluşturulur ve düzenlenebilir değerler olarak belirtilmiştir. Şema varsayılan bir değer belirtiyorsa, bu varsayılan değer kullanılır. Ancak, şema varsayılan değeri boş bir dize ise, düzenleyici varsayılan değerleri aşağıdaki şekilde oluşturur:
 
 - Şema türü herhangi bir numaralandırma modeli içeriyorsa, doğrudan veya dolaylı olarak bir birleşim türü üye aracılığıyla, şema nesne modelinde bulunan ilk Numaralandırılmış değer varsayılan olarak kullanılır.
 
-- Şema türü Atomik bir tür ise, düzenleyici Atomik türü alır ve atomik tür adını ekler. Türetilmiş basit bir tür için temel basit türü kullanır. Liste türü için atomik tür `itemType`. Bir birleşim için atomik tür, ilk `memberType` atomik türüdür.
+- Şema türü Atomik bir tür ise, düzenleyici Atomik türü alır ve atomik tür adını ekler. Türetilmiş basit bir tür için temel basit türü kullanır. Liste türü için atomik tür `itemType`. Bir birleşim için atomik tür, ilk `memberType`atomik türüdür.
 
 ## <a name="example"></a>Örnek
 
@@ -54,7 +54,7 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç**' a tıklayın.
 
-     Düzenleyicide yeni bir dosya açılır. Dosya, `<?xml version="1.0" encoding="utf-8">` varsayılan bir XML bildirimi içerir.
+     Düzenleyicide yeni bir dosya açılır. Dosya, `<?xml version="1.0" encoding="utf-8">`varsayılan bir XML bildirimi içerir.
 
 3. Belge Özellikleri penceresinde, **şemalar** alanındaki ( **...** ) düğmesine tıklayın.
 
@@ -66,7 +66,7 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 5. Şema dosyasını seçin ve **Aç**' a tıklayın.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**'ı tıklatın.
 
      XML şeması artık XML belgesiyle ilişkili.
 
@@ -141,7 +141,7 @@ Aşağıdaki şema dosyası, izlenecek yol tarafından kullanılır.
 
 ### <a name="output"></a>Çıkış
 
-Aşağıda, `Contact` öğesiyle ilişkili şema bilgilerine göre oluşturulan XML verileri verilmiştir. @No__t_0 olarak işaretlenen öğeler, XML kod parçacığında düzenlenebilir alanları tasarmı.
+Aşağıda, `Contact` öğesiyle ilişkili şema bilgilerine göre oluşturulan XML verileri verilmiştir. `bold` olarak işaretlenen öğeler, XML kod parçacığında düzenlenebilir alanları tasarmı.
 
 ```xml
 <Contact>

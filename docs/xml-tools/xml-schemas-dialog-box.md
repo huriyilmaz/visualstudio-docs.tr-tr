@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - vs.xmleditor.schemasdialog
 ms.assetid: 0271fa26-2205-49bd-96e0-ae1441571808
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11743756ffd8f59520448d2687dbada6d4eaca40
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d01c56b04a9b046f695a19d61a9b47fcac73e06
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608043"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592340"
 ---
 # <a name="xml-schemas-dialog-box"></a>XML Şemaları iletişim kutusu
 
@@ -25,15 +25,15 @@ Belge Özellikleri penceresinde **şemalar** düğmesine tıklayarak veya **XML*
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-**Kullanırsınız**
+**Kullanma**
 
 XML şemasının nasıl kullanılacağını seçin.
 
 - **Otomatik**. Bu şema geçerli belge tarafından kullanımda değil, ancak otomatik ilişkilendirme için kullanılabilir. XML belgesi, bu şemanın `targetNamespace` eşleşen bir ad alanı bildiriyorsa, şema otomatik olarak ilişkilendirilir ve şema kümesine dahil edilir.
 
-- **Bu şemayı kullanın**. Bu şema geçerli belge tarafından kullanılıyor. Kullanıcı, bu şemanın bu sütuna tıklanarak kullanılmasını açıkça istedi, ya da şema eşleşen bir `targetNamespace` göre otomatik olarak ilişkilendirildi.
+- **Bu şemayı kullanın**. Bu şema geçerli belge tarafından kullanılıyor. Kullanıcı, bu şemanın bu sütuna tıklanarak kullanılmasını açıkça istedi, ya da şema eşleşen bir `targetNamespace`göre otomatik olarak ilişkilendirildi.
 
-- **Seçili şemaları kullanmayın**. Şema eşleşen bir `targetNamespace` olsa bile, bu şema geçerli belge tarafından kullanılmaz. Bu ayar, şema önbelleğinde veya çözümünde aynı şemanın birden fazla sürümü olduğunda çakışmaları çözümlemek için yararlı olabilir.
+- **Seçili şemaları kullanmayın**. Şema eşleşen bir `targetNamespace`olsa bile, bu şema geçerli belge tarafından kullanılmaz. Bu ayar, şema önbelleğinde veya çözümünde aynı şemanın birden fazla sürümü olduğunda çakışmaları çözümlemek için yararlı olabilir.
 
 **Hedef ad alanı**
 
@@ -43,7 +43,7 @@ XML şemasıyla ilişkili hedef ad alanını görüntüler.
 
 XML şeması dosya adını görüntüler.
 
-**Add**
+**Ekle**
 
 Şema kümesine eklemek üzere ek şemalar seçmenize olanak sağlayan, **Açık xsd şeması** iletişim kutusunu açar. Şema kümesine bir şema eklediğinizde, **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
 

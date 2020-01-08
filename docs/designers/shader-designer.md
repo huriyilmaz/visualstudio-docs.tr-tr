@@ -6,17 +6,17 @@ f1_keywords:
 - vs.graphics.designer.effectdesigner
 - vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd82a5c8bee50c778b87927f1074d71a38a21e9f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85ce7b0f270f0da8728b17610a683dcc17d06189
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635051"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589935"
 ---
 # <a name="shader-designer"></a>Gölgelendirici Tasarımcısı
 
@@ -30,12 +30,12 @@ Bu belgede, *gölgelendiriciler*olarak bilinen özel görsel etkileri oluşturma
 
 |Biçim Adı|Dosya Uzantısı|Desteklenen Işlemler (görüntüleme, düzenleme, dışarı aktarma)|
 |-----------------| - | - |
-|Yönlendirilmiş grafik gölgelendirici dili|*. dgsl*|Görüntüleme, düzenleme|
-|HLSL gölgelendiricisi (kaynak kodu)|*. HLSL*|İşlemi|
-|HLSL gölgelendiricisi (bytecode)|*. cso*|İşlemi|
-|C++üst bilgi (HLSL bytecode dizisi)|*. h*|İşlemi|
+|Yönlendirilmiş grafik gölgelendirici dili|*.dgsl*|Görüntüleme, düzenleme|
+|HLSL gölgelendiricisi (kaynak kodu)|*. HLSL*|Dışarı Aktarma|
+|HLSL gölgelendiricisi (bytecode)|*. cso*|Dışarı Aktarma|
+|C++üst bilgi (HLSL bytecode dizisi)|*. h*|Dışarı Aktarma|
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>Başlangıç
 
 Bu bölümde, Visual Studio C++ projenize bir DGSL gölgelendiricisi ekleme ve kullanmaya başlamanıza yardımcı olacak temel bilgiler sağlanmaktadır.
 
@@ -46,11 +46,11 @@ Bu bölümde, Visual Studio C++ projenize bir DGSL gölgelendiricisi ekleme ve k
 
 1. Grafiklerle çalışmanız için gereken Visual Studio bileşeninin yüklü olduğundan emin olun. Bileşen, **görüntü ve 3B model düzenleyicileri**olarak adlandırılır.
 
-   Yüklemek için  >  **Araçlar** ' ı seçerek Visual Studio yükleyicisi açın ve menü çubuğundan**Araçlar ve Özellikler al** ' ı seçin ve ardından **ayrı bileşenler** sekmesini seçin.  **Oyunlar ve grafikler** kategorisi ve ardından **Değiştir**' i seçin.
+   Yüklemek için, > **Araçlar** ' ı seçerek Visual Studio yükleyicisi açın ve menü çubuğundan **Araçlar ve Özellikler al** ' ı seçin ve ardından **ayrı bileşenler** sekmesini seçin. **Oyunlar ve grafikler** kategorisi altındaki **görüntü ve 3B model düzenleyicileri** bileşenini seçin ve ardından **Değiştir**' i seçin.
 
    ![Görüntü ve 3B model düzenleyicileri bileşeni](media/image-3d-model-editors-component.png)
 
-2. **Çözüm Gezgini**, gölgelendiriciyi eklemek istediğiniz C++ projenin kısayol menüsünü açın ve ardından  > **Yeni öğe** **Ekle** ' yi seçin.
+2. **Çözüm Gezgini**, gölgelendiriciyi eklemek istediğiniz C++ projenin kısayol menüsünü açın ve ardından > **Yeni öğe** **Ekle** ' yi seçin.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **yüklü**altında **grafikler**' i seçin ve ardından **Görsel Gölgelendirici Grafiği (. dgsl)** öğesini seçin.
 
@@ -59,7 +59,7 @@ Bu bölümde, Visual Studio C++ projenize bir DGSL gölgelendiricisi ekleme ve k
 
 4. Gölgelendirici dosyasının **adını** ve oluşturulmasını istediğiniz **konumu** belirtin.
 
-5. **Ekle** düğmesini seçin.
+5. Seçin **Ekle** düğmesi.
 
 ### <a name="the-default-shader"></a>Varsayılan gölgelendirici
 
@@ -107,7 +107,7 @@ Düğümleri eklemek, kaldırmak, yeniden konumlandırmak, bağlamak ve yapılan
 
 #### <a name="to-perform-basic-operations-in-select-mode"></a>Seçme modunda temel işlemleri gerçekleştirmek için
 
-- Şöyle:
+- Bunun için:
 
   - Grafiğe bir düğüm eklemek için **araç kutusunda** seçin ve tasarım yüzeyine taşıyın.
 
@@ -145,7 +145,7 @@ Aşağıdaki tabloda, değiştirebileceğiniz Gölgelendirici parametreleri gös
 
 |Parametre|Özellikler|
 |---------------|----------------|
-|**Doku 1**  - **doku 8**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Dosya adı**: Bu doku kaydı ile ilişkili doku dosyasının tam yolu.|
+|**Doku 1** - **doku 8**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Dosya adı**: Bu doku kaydı ile ilişkili doku dosyasının tam yolu.|
 |**Malzeme çevresel**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: dolaylı veya çevresel aydınlatma nedeniyle geçerli pikselin dağıtma rengi.|
 |**Malzeme dağıtma**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselin nasıl doğrudan aydınlatma kullandığını açıklayan bir renk.|
 |**Malzeme yanıltıcı**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: kendi kendine sunulan aydınlatma nedeniyle geçerli pikselin renk katkısı.|
@@ -176,26 +176,26 @@ Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi
 
 |Komut|Klavye kısayolları|
 |-------------| - |
-|**Seçme** moduna geçiş yap|**Ctrl** +**G**, **CTRL** +**Q**<br /><br /> **Malar**|
-|**Yakınlaştırma** moduna geç|**Ctrl** +**G**, **CTRL** +**Z**<br /><br /> **Kadar**|
-|**Pan** moduna geç|**Ctrl** +**G**, **CTRL** +**P**<br /><br /> **Ek**|
+|**Seçme** moduna geçiş yap|**Ctrl**+**G**, **CTRL**+**Q**<br /><br /> **S**|
+|**Yakınlaştırma** moduna geç|**Ctrl**+**G**, **CTRL**+**Z**<br /><br /> **Z**|
+|**Pan** moduna geç|**Ctrl**+**G**, **CTRL**+**P**<br /><br /> **K**|
 |Tümünü seç|**Ctrl**+**A**|
 |Geçerli seçimi sil|**Delete**|
 |Geçerli seçimi iptal et|**Escape** (**ESC**)|
-|Yakınlaştır|**Fare tekerleği ileri** + **CTRL**<br /><br /> Artı Işareti ( **+** )|
-|Uzaklaştır|**@No__t_1** **fare tekerleği geriye doğru**<br /><br /> Eksi Işareti ( **-** )|
+|Yakınlaştır|**Fare tekerleği ileri**+**CTRL**<br /><br /> Artı Işareti ( **+** )|
+|Uzaklaştır|**+** **fare tekerleği geriye doğru**<br /><br /> Eksi Işareti ( **-** )|
 |Tasarım yüzeyini yukarı kaydır|**Fare tekerleği geriye doğru**<br /><br /> **Seç**|
 |Tasarım yüzeyini aşağı kaydır|**Fare tekerleği ileri**<br /><br /> **Seç**|
-|Tasarım yüzeyini sola kaydır|@No__t_1**fare tekerleğini geriye doğru** **Kaydır**<br /><br /> **Fare tekerleği sol**<br /><br /> @No__t_1**Pageaşağı** **Kaydır**|
-|Tasarım yüzeyini sağa kaydır|@No__t_1**fare tekerleğini Ileri** **Kaydır**<br /><br /> **Fare tekerleği sağ**<br /><br /> @No__t_1**PageUp** **Kaydır**|
+|Tasarım yüzeyini sola kaydır|+**fare tekerleğini geriye doğru** **Kaydır**<br /><br /> **Fare tekerleği sol**<br /><br /> +**Pageaşağı** **Kaydır**|
+|Tasarım yüzeyini sağa kaydır|+**fare tekerleğini Ileri** **Kaydır**<br /><br /> **Fare tekerleği sağ**<br /><br /> +**PageUp** **Kaydır**|
 |Klavye odağını başka bir düğüme taşı|**Ok** tuşları|
-|Klavye odağının bulunduğu düğümü seçin (düğümü seçim grubuna ekler)|**Shıft** +**boşluk çubuğu**|
-|Klavye odağına sahip olan düğüm seçimini değiştirme|**Ctrl** +**boşluk çubuğu**|
+|Klavye odağının bulunduğu düğümü seçin (düğümü seçim grubuna ekler)|**Shıft**+**boşluk çubuğu**|
+|Klavye odağına sahip olan düğüm seçimini değiştirme|**Ctrl**+**boşluk çubuğu**|
 |Geçerli seçimi değiştirin (hiçbir düğüm seçilmezse, klavye odağına sahip düğümü seçin)|**'Nu**|
-|Geçerli seçimi yukarı taşı|**Shıft** +**yukarı ok**|
-|Geçerli seçimi aşağı taşı|**Shıft** +**aşağı ok**|
-|Geçerli seçimi sola taşı|**Shıft** +**sol ok**|
-|Geçerli seçimi sağa taşı|**Shıft** +**sağ ok**.|
+|Geçerli seçimi yukarı taşı|**Shıft**+**yukarı ok**|
+|Geçerli seçimi aşağı taşı|**Shıft**+**aşağı ok**|
+|Geçerli seçimi sola taşı|**Shıft**+**sol ok**|
+|Geçerli seçimi sağa taşı|**Shıft**+**sağ ok**.|
 
 ## <a name="related-topics"></a>İlgili konular
 

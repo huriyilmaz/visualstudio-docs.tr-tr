@@ -12,15 +12,15 @@ helpviewer_keywords:
 - load tests, using graphs
 - load test results, graphs
 ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4efedd7fc7672331f04440f09d49b9339d90bdb2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dac639b8513e8ef675c6246476791b9351241130
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665376"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591274"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>Yük Testi Çözümleyicisinin grafik görünümünde Yük testi sonuçlarını çözümleme
 
@@ -45,14 +45,14 @@ Aşağıdaki tabloda, yük testi sonuçlarını çözümlemek için kullanılabi
 |Sayfa yanıt süresi|Yük testi sırasında erişilen Web sayfaları için Ortalama yanıt süresi.|
 |Test altındaki sistem|Sınanan uygulamanın çalıştırıldığı bilgisayarlar hakkında bilgiler. Bu, bellek kullanımı, işlemci, fiziksel disk, süreçler hakkındaki verileri içerir.<br /><br /> Varsayılan olarak, yalnızca kullanılabilir MBayt ve Işlemci zamanı sayaçları toplanır.|
 |Denetleyici ve aracılar|Yük testlerinin çalıştığı bilgisayarlar hakkında bilgiler. Bu, bellek kullanımı, işlemci, fiziksel disk, süreçler hakkındaki verileri içerir.<br /><br /> Varsayılan olarak yalnızca kullanılabilir MBayt ve Işlemci zamanı sayaçları toplanır.|
-|İşlem yanıt süresi|Yük testi sırasında oluşan işlemler için Ortalama yanıt süresi.|
+|İşlem Yanıt Süresi|Yük testi sırasında oluşan işlemler için Ortalama yanıt süresi.|
 
 Hem çalışma zamanında hem de bir test çalıştırıldıktan sonra grafikte farklı sayaçlar görüntüleyebilirsiniz.
 
 > [!NOTE]
 > Otomatik olarak oluşturulan yanıt süresi grafiğine yalnızca yanıt süresi performans sayaçları eklenebilir.
 
-Sayaç bilgileri hem grafikte hem de grafiklerin altındaki göstergede görüntülenir. Ayrıca, grafiğin bir bölümünü de yakınlaştırabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: grafiğin bir bölgesini yakınlaştırma](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md).
+Sayaç bilgileri hem grafikte hem de grafiklerin altındaki göstergede görüntülenir. Ayrıca, grafiğin bir bölümünü de yakınlaştırabilirsiniz. Daha fazla bilgi için [nasıl yapılır: grafiğin bir bölgesine yakınlaştırmak](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md).
 
 ## <a name="counters-displayed-in-graphs"></a>Grafiklerde görünen sayaçlar
 
@@ -71,8 +71,8 @@ Gösterge şu sütunları içerir:
 |Aralık|Bu sayacın grafiğinde 100 ile temsil edilen sayıyı gösterir. Örneğin, üst değeri 10.000 olan bir Aralık için, grafiğin en üstündeki 100 etiketi 10.000 ' ı temsil eder.|
 |Min.|Sayaç için en küçük değeri milisaniye cinsinden gösterir.|
 |Maks.|Sayaç için milisaniye olarak en büyük değeri gösterir.|
-|Cin|Sayacın ortalama değerini milisaniye cinsinden gösterir.|
-|soyadına|En son örnekleme aralığı sırasında sayacın değerini milisaniye cinsinden gösterir.|
+|Ort|Sayacın ortalama değerini milisaniye cinsinden gösterir.|
+|Sonuncu|En son örnekleme aralığı sırasında sayacın değerini milisaniye cinsinden gösterir.|
 
 ## <a name="tasks"></a>Görevler
 
@@ -80,18 +80,18 @@ Gösterge şu sütunları içerir:
 |-|-|
 |**Göstergeyi kullanarak grafikleri özelleştirin:** Grafikler görünümü göstergesi, bir grafikle ilişkili her performans sayacı için bilgileri görüntüler. Göstergeyi, performans sayaçlarını kaldırmak, grafikteki performans sayaçlarını vurgulamak ve çizim seçeneklerini özelleştirmek için kullanabilirsiniz.|[yük testlerini çözümlemek Için grafik görünümü göstergesini kullanarak](../test/use-the-graphs-view-legend-to-analyze-load-tests.md) -   |
 |**Grafiklerde sayaçları görüntüle:** Grafiğe sayaç yerleştirerek, yük testi sonuçları grafiğine farklı türlerde veriler ekleyebilirsiniz.|-   [nasıl yapılır: grafiklerde sayaç ekleme ve silme](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)|
-|**Grafikleri Yakınlaştır:** Bir yük testi tamamlandıktan sonra yakınlaştırma çubuklarını kullanarak grafiğin bir bölgesine yakınlaştırıp kaydırma yapabilirsiniz. ' İ yakınlaştırarak, yük testi sırasında oluşturulan verileri daha ayrıntılı bir şekilde inceleyebilirsiniz.|-   [nasıl yapılır: grafiğin bir bölgesine yakınlaştırma](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)|
+|**Grafikleri Yakınlaştır:** Bir yük testi tamamlandıktan sonra yakınlaştırma çubuklarını kullanarak grafiğin bir bölgesine yakınlaştırıp kaydırma yapabilirsiniz. Yakınlaştırma tarafından ince ayrıntılı olarak yük testi sırasında oluşturulan verileri inceleyebilirsiniz.|-   [nasıl yapılır: grafiğin bir bölgesine yakınlaştırma](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)|
 |**Kutucuk grafikleri:** Yük testi sonuçları grafiklerini birkaç desenden herhangi birinde düzenleyebilirsiniz. Dört adede kadar grafik döşemesini sağlayabilirsiniz.||
-|**Özel grafikler oluşturma:** Yük testi sonuçlarıyla ilgili belirli bilgileri görüntüleyen grafikler tasarlayabilirsiniz. Grafiğin görüntüleyeceği yük testi sayaçlarını belirterek özel bir grafik tasarlayacaksınız.|-   [nasıl yapılır: özel grafikler oluşturma](../test/how-to-create-custom-graphs-in-load-test-results.md)|
+|**Özel grafikler oluşturma:** Yük testi sonuçlarıyla ilgili belirli bilgileri görüntüleyen grafikler tasarlayabilirsiniz. Özel bir grafik, graf görüntüleyen yük testi sayacı belirterek tasarlayın.|-   [nasıl yapılır: özel grafikler oluşturma](../test/how-to-create-custom-graphs-in-load-test-results.md)|
 |**Grafikteki performans sayaçları verilerini dışarı aktarın:** **Grafik görünümdeyken** , **Yük Testi Çözümleyicisi** araç çubuğunda grafik **verilerini Excel 'e ver** düğmesini kullanarak Microsoft Excel 'e aktarabilirsiniz.||
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
 [Tablolar görünümünde Yük testi sonuçlarını ve hatalarını çözümleme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
 
-[Nasıl yapılır: analiz için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md)
+[Nasıl yapılır: erişim yük testi sonuçlarını çözümleme](../test/how-to-access-load-test-results-for-analysis.md)
 
-[Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+[Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

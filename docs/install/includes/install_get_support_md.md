@@ -6,15 +6,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 4990bed7cc6a35be55c667951cbfec89d8bb7b44
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "68159919"
 ---
 ## <a name="get-support"></a>Destek alın
 
-Bazı durumlarda sorunlar. Visual Studio yüklemenizin başarısız olursa bkz [sorun giderme Visual Studio yükleme ve yükseltme sorunlarını](../troubleshooting-installation-issues.md) yönelik adım adım yönergeler.
+Bazı durumlarda sorunlar. Visual Studio yüklemeniz başarısız olursa, adım adım yönergeler için bkz. [Visual Studio yüklemesinde sorun giderme ve yükseltme sorunları](../troubleshooting-installation-issues.md) .
 
 Ayrıca sunuyoruz bir [ **canlı sohbet** ](https://visualstudio.microsoft.com/vs/support/#talktous) yüklemeyle ilgili sorunlar için destek seçeneği (yalnızca İngilizce).
 

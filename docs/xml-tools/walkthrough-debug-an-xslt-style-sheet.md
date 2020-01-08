@@ -3,17 +3,17 @@ title: XSLT stil sayfalarında hata ayıkla
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c1f774757acc293091f19a783ed93f34647d494
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd5882cc606bf241a281940464ba028e77986807
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604605"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592483"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT stil sayfasında hata ayıklama
 
@@ -24,9 +24,9 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 > [!NOTE]
 > XSLT hata ayıklayıcısı yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
 
-## <a name="start-debugging"></a>Hata ayıklamayı Başlat
+## <a name="start-debugging"></a>Hata Ayıklamayı Başlat
 
-1. **Dosya** menüsünden  > **dosyayı** **Aç** ' ı seçin.
+1. **Dosya** menüsünden > **dosyayı** **Aç** ' ı seçin.
 
 2. *Below-Average. xsl* dosyasını bulun ve **Aç**' ı seçin.
 
@@ -44,11 +44,11 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
    - 12. satırda herhangi bir yere tıklayın ve ardından **F9**tuşuna basın.
 
-   - @No__t_0 Başlangıç etiketini sağ tıklatın ve **ardından kesme noktası** **Ekle** >  kesme noktası ' nı seçin.
+   - `xsl:if` Başlangıç etiketini sağ tıklatın ve **ardından kesme noktası** **Ekle** > kesme noktası ' nı seçin.
 
       ![Visual Studio 'da XSL dosyasında kesme noktası ekle](media/insert-breakpoint.PNG)
 
-6. Menü çubuğunda, **XML**  > **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** +**F5**tuşuna basın).
+6. Menü çubuğunda, **XML** > **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt**+**F5**tuşuna basın).
 
    Hata ayıklama işlemi başlar.
 
@@ -56,23 +56,23 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
    **Oto, Yereller**ve **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
 
-## <a name="watch-window"></a>Gözcü penceresi
+## <a name="watch-window"></a>İzleme penceresi
 
 Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gözcü** penceresine iki değişken ekleyeceğiz. (İzlemek istediğiniz değişkenler zaten orada ise, değerleri incelemek için **Yereller** penceresini de kullanabilirsiniz.)
 
-1. **Hata Ayıkla** menüsünde **Windows**  > **İzle** ** >  izle**' yi seçin.
+1. **Hata Ayıkla** menüsünde **Windows** > **İzle** ** > izle**' yi seçin.
 
    **1. gözcü** penceresi görünür hale gelir.
 
 2. **Ad** alanına `$bookAverage` yazın ve ardından **ENTER**tuşuna basın.
 
-   @No__t_0 değişkenin değeri **değer** alanında görüntülenir.
+   `$bookAverage` değişkenin değeri **değer** alanında görüntülenir.
 
 3. Sonraki satırda, **ad** alanına `self::node()` yazın ve ardından **ENTER**tuşuna basın.
 
-   `self::node()`, geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. @No__t_0 XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
+   `self::node()`, geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. `self::node()` XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
 
-4. @No__t_0 düğümünü genişletin ve ardından değeri `price` olan düğümü genişletin.
+4. `self::node()` düğümünü genişletin ve ardından değeri `price`olan düğümü genişletin.
 
    ![Visual Studio 'da XSLT hata ayıklaması sırasında izleme penceresi](media/xslt-debugging-watch-window.png)
 
@@ -80,21 +80,21 @@ Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gö
 
 ## <a name="step-through-the-code"></a>Kod içinde adımla
 
-1. Devam etmek için **F5** 'e basın.
+1. Devam etmek için **F5** tuşuna basın.
 
    İlk kitap düğümü `xsl:if` koşulunu karşıladığı için kitap düğümü *below-Average. xml* çıkış dosyasına eklenir. Hata ayıklayıcı, stil sayfasındaki `xsl:if` öğesinde yeniden konumlandırılana kadar yürütülmeye devam eder. Hata ayıklayıcı artık *Books. xml* dosyasındaki ikinci kitap düğümüne yerleştirildi.
 
    1\. **Gözcü** penceresinde, `self::node()` değeri ikinci kitap düğümüne değişir. Price öğesinin değerini inceleyerek, fiyatın ortalamanın üzerinde olduğunu belirleyebilir, bu nedenle `xsl:if` koşulu başarısız olmalıdır.
 
-2. Devam etmek için **F5** 'e basın.
+2. Devam etmek için **F5** tuşuna basın.
 
    İkinci kitap düğümü `xsl:if` koşulunu karşılamadığından, kitap düğümü *below-Average. xml* çıkış dosyasına eklenmez. Hata ayıklayıcı, stil sayfasındaki `xsl:if` öğesinde yeniden konumlandırılana kadar yürütülmeye devam eder. Hata ayıklayıcı artık *Books. xml* dosyasındaki üçüncü `book` düğümüne konumlandırıldı.
 
-   1\. **Gözcü** penceresinde, `self::node()` değeri üçüncü kitap düğümüne dönüşür. @No__t_0 öğesinin değerini inceleyerek, fiyatın ortalamanın altında olduğunu belirleyebilirsiniz. @No__t_0 koşulu başarılı olmalıdır.
+   1\. **Gözcü** penceresinde, `self::node()` değeri üçüncü kitap düğümüne dönüşür. `price` öğesinin değerini inceleyerek, fiyatın ortalamanın altında olduğunu belirleyebilirsiniz. `xsl:if` koşulu başarılı olmalıdır.
 
-3. Devam etmek için **F5** 'e basın.
+3. Devam etmek için **F5** tuşuna basın.
 
-   @No__t_0 koşul karşılandığından, üçüncü kitap *below-Average. xml* çıkış dosyasına eklenir. XML belgesindeki tüm kitaplar işlendi ve hata ayıklayıcı durdu.
+   `xsl:if` koşul karşılandığından, üçüncü kitap *below-Average. xml* çıkış dosyasına eklenir. XML belgesindeki tüm kitaplar işlendi ve hata ayıklayıcı durdu.
 
 ## <a name="sample-files"></a>Örnek dosyalar
 

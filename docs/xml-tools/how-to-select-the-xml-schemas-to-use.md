@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: kullanılacak XML şemalarını seçme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 275def786a93d42e6b8e110d3b3d785a24e948b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2acafe0c782b39bb7aa345b5456df7238703cb20
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601905"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592652"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: kullanılacak XML şemalarını seçme
 
@@ -34,7 +34,7 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
    ![XML dosyası için Schemas özelliği](media/properties-schemas.png)
 
-   [XML şemaları iletişim kutusu](xml-schemas-dialog-box.md) açılır. İletişim kutusu, içeren tüm şemaları listeler. şema önbelleğinde ( *Catalog. xml* dosyasında başvurulan şemalar dahil) *XSD* uzantısı ve ayrıca geçerli çözümdeki herhangi bir şema, bir `xsd:schemaLocation` özniteliğinde başvurulan veya **şemalarda** başvurulan Visual Studio 'da aç özelliði.
+   [XML şemaları iletişim kutusu](xml-schemas-dialog-box.md) açılır. İletişim kutusu, içeren tüm şemaları listeler. şema önbelleğinde ( *Catalog. xml* dosyasında başvurulan şemalar dahil) *XSD* uzantısı ve ayrıca geçerli çözümdeki herhangi bir şema, bir `xsd:schemaLocation` özniteliğinde başvurulan veya **şemalar** özelliğinde başvurulan Visual Studio 'da açın.
 
 3. Aşağıdakilerden birini yaparak doğrulama için kullanılacak şemaları seçin:
 
@@ -44,7 +44,7 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
    - **XML şemaları** iletişim kutusunda birden çok şema seçin ve sağ tıklayın ve **Bu şemayı kullan**' ı seçin.
 
-4. **Tamam ' ı**seçin.
+4. **Tamam**’ı seçin.
 
    Seçilen şemaların listesi, **şemalar** belge özelliğine geri kopyalanır.
 
@@ -58,7 +58,7 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 3. Şema önbelleğine eklenecek şemaya gözatıp seçin.
 
-4. **Aç**' a tıklayın.
+4. Tıklayın **açık**.
 
    Şemalar şema önbelleğine eklenir ve **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
 

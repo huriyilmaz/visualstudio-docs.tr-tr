@@ -3,17 +3,17 @@ title: XML Düzenleyicisi şema önbelleği
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aae5749d57dd1c9aaca8748ed02bdbb5587cade6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 40781a5249d9b69df5f41f863f3d36ac6a119645
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668736"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592496"
 ---
 # <a name="schema-cache"></a>Şema önbelleği
 
@@ -26,22 +26,22 @@ Aşağıdaki tablo, XML Düzenleyicisi ile yüklenen şemaları açıklar.
 | Kısaltın | Açıklama |
 |-| - |
 | *Catalog. xsd* | XML Düzenleyicisi şema kataloğu dosyaları için şema. Şema katalogları hakkında daha fazla bilgi için aşağıya bakın. |
-| *DotNetConfig. xsd* | Web. config dosyaları için şema, "<http://schemas.microsoft.com/.NETConfiguration/v2.0>". |
-| *MSBuild. xsd* | MSBuild Make dosyaları için şema, "<http://schemas.microsoft.com/developer/msbuild/2003>". |
-| *msdata. xsd* | @No__t_0 sınıfı tarafından eklenen XSD ek açıklamaları için şema, "urn: schemas-microsoft-com: XML-msdata". |
+| *DotNetConfig.xsd* | Web. config dosyaları için şema, `http://schemas.microsoft.com/.NETConfiguration/v2.0`. |
+| *msbuild.xsd* | MSBuild Make dosyaları için şema `http://schemas.microsoft.com/developer/msbuild/2003`. |
+| *msdata. xsd* | <xref:System.Data.DataSet> sınıfı tarafından eklenen XSD ek açıklamaları için şema, "urn: schemas-microsoft-com: XML-msdata". |
 | *msxsl. xsd* | Microsoft XSLT betik bloğu uzantıları, urn: schemas-microsoft-com: XSLT şeması. |
 | *SnippetFormat. xsd* | Kod parçacığı XML dosyaları için şema. Örnekler için bkz. *% VSInstallDir% \VC#\ expansions*. |
-| *Soap 1.1. xsd* | Basit nesne erişim Protokolü (SOAP) 1,1 için şema http://schemas.xmlsoap.org/soap/envelope/. |
+| *Soap 1.1. xsd* | Basit nesne erişim Protokolü (SOAP) 1,1 için şema `http://schemas.xmlsoap.org/soap/envelope/`. |
 | *Soap 1.2. xsd* | Basit nesne erişim Protokolü 1,2 şeması. |
-| *SiteMapSchema. xsd* | ASP.NET sitemap XML dosyası "<http://schemas.microsoft.com/AspNet/SiteMap-File-1.0>" şeması. |
-| *WSDL. xsd* | Web hizmeti Açıklama Dili için şema, http://schemas.xmlsoap.org/wsdl/. |
-| *XENC. xsd* | XML şifreleme şeması, http://www.w3.org/2000/09/xmldsig#. |
-| *XHTML. xsd* | XHTML http://www.w3.org/1999/xhtml şeması. |
-| *XLink. xsd* | XLink 1.0 için şema http://www.w3.org/1999/xlink. |
-| *XML. xsd* | XML: Space ve XML: lang özniteliklerini tanımlayan şema http://www.w3.org/XML/1998/namespace. |
-| *xmlsig. xsd* | XML dijital Imzaları için şema, http://www.w3.org/2000/09/xmldsig#. |
-| *XSDSchema. xsd* | XSD kendisini tanımlayan şema http://www.w3.org/2001/XMLSchema. |
-| *XSLT. xsd* | XML dönüşümleri için şema, http://www.w3.org/1999/XSL/Transform. |
+| *SiteMapSchema. xsd* | ASP.NET sitemap XML dosyası için şema `http://schemas.microsoft.com/AspNet/SiteMap-File-1.0`. |
+| *wsdl.xsd* | Web hizmeti Açıklama Dili için şema, `http://schemas.xmlsoap.org/wsdl/`. |
+| *XENC. xsd* | XML şifreleme şeması, `http://www.w3.org/2000/09/xmldsig#`. |
+| *XHTML. xsd* | XHTML `http://www.w3.org/1999/xhtml`şeması. |
+| *XLink. xsd* | XLink 1.0 için şema `http://www.w3.org/1999/xlink`. |
+| *XML. xsd* | XML: Space ve XML: lang özniteliklerini tanımlayan şema `http://www.w3.org/XML/1998/namespace`. |
+| *xmlsig. xsd* | XML dijital Imzaları için şema, `http://www.w3.org/2000/09/xmldsig#`. |
+| *XSDSchema. xsd* | XSD kendisini tanımlayan şema `http://www.w3.org/2001/XMLSchema`. |
+| *XSLT. xsd* | XML dönüşümleri için şema, `http://www.w3.org/1999/XSL/Transform`. |
 
 ## <a name="update-schemas-in-the-cache"></a>Önbellekteki şemaları güncelleştirme
 
@@ -60,7 +60,7 @@ XML Düzenleyicisi, şema önbellek dizinindeki herhangi bir sayıda şema katal
 </SchemaCatalog>
 ```
 
-@No__t_0 özniteliği, şemaya işaret eden herhangi bir dosya yolu veya HTTP URL 'SI olabilir. Dosya yolu, Katalog belgesine göreli olabilir. %% Tarafından ayrılan şu değişkenler, düzenleyici tarafından tanınır ve yolda genişletilir:
+`href` özniteliği, şemaya işaret eden herhangi bir dosya yolu veya HTTP URL 'SI olabilir. Dosya yolu, Katalog belgesine göreli olabilir. %% Tarafından ayrılan şu değişkenler, düzenleyici tarafından tanınır ve yolda genişletilir:
 
 - VSInstallDir
 
@@ -78,7 +78,7 @@ XML Düzenleyicisi, şema önbellek dizinindeki herhangi bir sayıda şema katal
 
 - LCID
 
-Katalog belgesi, diğer kataloglara işaret eden bir `Catalog` öğesi içerebilir. Ekip veya şirketiniz tarafından paylaşılan bir merkezi kataloğa veya iş ortaklarınızla paylaşılan bir çevrimiçi kataloğa işaret etmek için `Catalog` öğesini kullanabilirsiniz. @No__t_0 özniteliği, diğer katalogların dosya yolu veya HTTP URL 'sidir. @No__t_0 öğesinin bir örneği aşağıda verilmiştir:
+Katalog belgesi, diğer kataloglara işaret eden bir `Catalog` öğesi içerebilir. Ekip veya şirketiniz tarafından paylaşılan bir merkezi kataloğa veya iş ortaklarınızla paylaşılan bir çevrimiçi kataloğa işaret etmek için `Catalog` öğesini kullanabilirsiniz. `href` özniteliği, diğer katalogların dosya yolu veya HTTP URL 'sidir. `Catalog` öğesinin bir örneği aşağıda verilmiştir:
 
 ```xml
 <Catalog href="file://c:/xcbl/xcblCatalog.xml"/>

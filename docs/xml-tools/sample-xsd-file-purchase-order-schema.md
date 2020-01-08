@@ -3,17 +3,17 @@ title: 'Örnek XSD dosyası: satınalma siparişi şeması'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a81cae6bc91e480fb619afd647e8285b6efc410
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d841b75b58dc977b5141dce0b8c7275e4a3ced8a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601804"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592574"
 ---
 # <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: satınalma siparişi şeması
 
@@ -88,4 +88,4 @@ Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli ör
 ```
 
 > [!NOTE]
-> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.
+> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yerler veya etkinliklerle hiçbir ilişki amaçlanmamıştır veya oluşturulmamalıdır.

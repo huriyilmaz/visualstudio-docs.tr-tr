@@ -13,34 +13,34 @@ helpviewer_keywords:
 - CreateProperty task [MSBuild]
 - MSBuild, CreateProperty task
 ms.assetid: fbc31a88-62d4-43d2-b739-68ef3fac38f5
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39b732a962f648f0c812f3f9d37df7dcf17296ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cac0af3371a5c4ae385cc19367b360b8e8f608fd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778267"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590065"
 ---
 # <a name="createproperty-task"></a>CreateProperty görevi
-Özellikler, geçirilen değerlerle doldurur. Bu, bir özellik veya dize diğerine kopyalanması için değerler sağlar.
+Özellikleri geçirilen değerlerle doldurur. Bu, değerlerin bir özellikten veya dizeden diğerine kopyalanmasını sağlar.
 
-## <a name="attributes"></a>Öznitelikler
-Parametreleri aşağıdaki tabloda açıklanmıştır `CreateProperty` görev.
+## <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+Aşağıdaki tabloda `CreateProperty` görevinin parametreleri açıklanmaktadır.
 
 | Parametre | Açıklama |
 |------------------| - |
-| `Value` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> Yeni özelliğe kopyalamak için bir değer belirtir. |
-| `ValueSetByTask` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> Aynı değeri içeren `Value` parametresi. Belirlediği çıktı özelliği kaçınmak istiyorsanız bu parametreyi kullanın [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] zaman bunu atlar kapsayan hedef çıkışları güncel olduğundan. |
+| `Value` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> Yeni özelliğe kopyalanacak değeri belirtir. |
+| `ValueSetByTask` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> `Value` parametresiyle aynı değeri içerir. Bu parametreyi yalnızca, çıktılar güncel olduğundan, kapsayan hedefi atlayan çıkış özelliğinin [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] tarafından ayarlanmış olmasını önlemek istediğinizde kullanın. |
 
 ## <a name="remarks"></a>Açıklamalar
-Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension taban sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnekte `CreateProperty` oluşturmak için görev `NewFile` özellik değerlerinin birleşimini kullanarak `SourceFilename` ve `SourceFileExtension` özelliği.
+Aşağıdaki örnek, `SourceFilename` ve `SourceFileExtension` özelliğinin değerlerinin birleşimini kullanarak `NewFile` özelliğini oluşturmak için `CreateProperty` görevini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -64,7 +64,7 @@ Aşağıdaki örnekte `CreateProperty` oluşturmak için görev `NewFile` özell
 </Project>
 ```
 
-Proje değerini çalıştırdıktan sonra `NewFile` özelliği *Module1.vb*.
+Projeyi çalıştırdıktan sonra, `NewFile` özelliğinin değeri *Module1. vb*' dir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

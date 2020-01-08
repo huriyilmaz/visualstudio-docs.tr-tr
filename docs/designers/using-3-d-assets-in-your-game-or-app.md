@@ -10,17 +10,17 @@ f1_keywords:
 - VC.Project.ShaderGraphContentTask.ContentOutput
 - VC.Project.ImageContentTask.GenerateMips
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4df842f83f92afe8a8f747135632eb30a715d43f
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: d38f87970d5f9ff6d90befc61073cc4ed3d4ca92
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888499"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589831"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Nasıl yapılır: oyununuzda veya uygulamanızda 3B varlıkları kullanma
 
@@ -34,7 +34,7 @@ Bu makalede, Visual Studio 'Yu kullanarak 3B varlıkları nasıl işleyebileceğ
 
 ### <a name="to-add-the-build-customizations-to-your-project"></a>Projenize yapı özelleştirmeleri eklemek için
 
-1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve yapı**Özelleştirmeleri** >  derleme **bağımlılıkları** ' nı seçin.
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve yapı **Özelleştirmeleri** > derleme **bağımlılıkları** ' nı seçin.
 
    **Görsel C++ yapı özelleştirmeleri dosyaları** iletişim kutusu görüntülenir.
 
@@ -43,10 +43,10 @@ Bu makalede, Visual Studio 'Yu kullanarak 3B varlıkları nasıl işleyebileceğ
     |Varlık türü|Yapı özelleştirmesi adı|
     |----------------| - |
     |Dokular ve görüntüler|**ImageContentTask (. targets,. props)**|
-    |3B modeller|**MeshContentTask (. targets,. props)**|
+    |3B Modeller|**MeshContentTask (. targets,. props)**|
     |Gölgelendiriciler|**ShaderGraphContentTask (. targets,. props)**|
 
-3. **Tamam** düğmesini seçin.
+3. Seçin **Tamam** düğmesi.
 
 ## <a name="include-assets-in-your-build"></a>Derlemenize varlıklar ekleyin
 
@@ -65,7 +65,7 @@ Artık projeniz kullanmak istediğiniz farklı türlerdeki 3B varlıkların oldu
     > [!IMPORTANT]
     > Varsayılan olarak, Visual Studio, Visual Studio 'da yerleşik olarak bulunan **görüntü** öğesi türü kullanılarak birçok görüntü dosyası türünün kategorize olması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her bir görüntünün **öğe türü** özelliğini değiştirmeniz gerekir. 3B modeller ve Visual gölgelendirici grafik için diğer içerik ardışık düzen kaynak dosyalarının doğru **öğe türü**için varsayılan türü.
 
-4. **Tamam** düğmesini seçin.
+4. Seçin **Tamam** düğmesi.
 
 Aşağıda üç içerik ardışık düzen öğe türü ve ilişkili kaynak ve çıkış dosyası türleri verilmiştir.
 
@@ -89,7 +89,7 @@ Her bir varlık dosyasının içerik ardışık düzen özelliklerini belirli bi
 
 3. **Yapılandırma özellikleri**altında, içerik ardışık düzeni düğümünü seçin (örneğin, doku ve görüntü varlıkları Için **görüntü içeriği işlem hattı** ) ve sonra özellik kılavuzunda, özellikleri uygun değerlere ayarlayın. Örneğin, derleme zamanında bir doku varlığı için mı haritaları oluşturmak için, **MIPS oluştur** özelliğini **Evet**olarak ayarlayın.
 
-4. **Tamam** düğmesini seçin.
+4. Seçin **Tamam** düğmesi.
 
 ### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık düzen yapılandırması
 
@@ -97,7 +97,7 @@ Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen ara
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Kullanılabilir seçenekler şunlardır:<br /><br /> **sıkıştırma** -   <br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
+|**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Şu seçenekler sağlanır:<br /><br /> **sıkıştırma** -   <br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
 |Önceden çoğaltılmış alfa biçimine Dönüştür|**Evet** , görüntüyü çıkış dosyasında önceden çarpılan Alfa biçimine dönüştürmek için. Aksi takdirde, **Hayır**. Yalnızca çıkış dosyası değiştirildiğinde, kaynak görüntü değiştirilmez.|
 |**MIPS oluştur**|Derleme zamanında tam MıP zinciri oluşturmak ve bunu çıkış dosyasına dahil etmek için **Evet** ; Aksi takdirde, **Hayır**. **Hayır**ise ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıkış dosyası bir MIP zincirine sahip olur; Aksi takdirde, çıkış dosyası MıP zincirine sahip olmaz.|
 |**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|

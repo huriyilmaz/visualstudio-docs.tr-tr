@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4789248a129bcd41452af1184418f9f59ede7595
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: c3c6eed20fc1f2b76c02865c2a5f6b21cde1ae51
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72562570"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590000"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>6\. Adım: çıkarma sorunu ekleme
 Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşağıdaki görevlerin nasıl gerçekleştirileceğini öğreneceksiniz:
@@ -54,19 +54,19 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
      [!code-vb[VbExpressTutorial3Step5_6#13](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_2.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#13](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_2.cs)]
 
-     Çıkarma sorununa yönelik olumsuz yanıtları engellemek için, bu kod, <xref:System.Random> sınıfının <xref:System.Random.Next> yöntemini ek sorunun nasıl yaptığından biraz farklı şekilde kullanır. @No__t_0 yöntemine iki değer verdiğinizde, ilk değerden büyük veya ona eşit ve ikinciden küçük bir rastgele sayı seçer. Aşağıdaki kod, 1 ile 100 arasında rastgele bir sayı seçer ve eksilen değişkeninde depolar.
+     Çıkarma sorununa yönelik olumsuz yanıtları engellemek için, bu kod, <xref:System.Random> sınıfının <xref:System.Random.Next> yöntemini ek sorunun nasıl yaptığından biraz farklı şekilde kullanır. `Next()` yöntemine iki değer verdiğinizde, ilk değerden büyük veya ona eşit ve ikinciden küçük bir rastgele sayı seçer. Aşağıdaki kod, 1 ile 100 arasında rastgele bir sayı seçer ve eksilen değişkeninde depolar.
 
      [!code-vb[VbExpressTutorial3Step5_6#21](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_3.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#21](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_3.cs)]
 
-     Bu öğreticide daha önce "rasgeleizer" olarak adlandırdığınız Random sınıfının `Next()` yöntemini birçok şekilde çağırabilirsiniz. Birden fazla yoldan çağırabileceğiniz Yöntemler aşırı yüklenmiş olarak adlandırılır ve IntelliSense 'i kullanarak bunları keşfedebilirsiniz. @No__t_0 yöntemi için IntelliSense penceresinin araç ipucunda tekrar bakın.
+     Bu öğreticide daha önce "rasgeleizer" olarak adlandırdığınız Random sınıfının `Next()` yöntemini birçok şekilde çağırabilirsiniz. Birden fazla yoldan çağırabileceğiniz Yöntemler aşırı yüklenmiş olarak adlandırılır ve IntelliSense 'i kullanarak bunları keşfedebilirsiniz. `Next()` yöntemi için IntelliSense penceresinin araç ipucunda tekrar bakın.
 
-     ![IntelliSense pencere araç ipucu ](../ide/media/express_overloads.png)<br/>
+     ![IntelliSense penceresi araç ipucu](../ide/media/express_overloads.png)<br/>
 ***IntelliSense*** *penceresi araç ipucu*
 
-     Araç İpucu **(+ 2 aşırı yükleme**) gösterir. bu, `Next()` yöntemini iki farklı şekilde çağırabilmeniz anlamına gelir. Aşırı yüklemeler farklı sayılar veya bağımsız değişken türleri içerir, böylece bir diğerinden biraz farklı çalışırlar. Örneğin, bir yöntem tek bir tamsayı bağımsız değişkeni alabilir ve aşırı yüklerinden biri tamsayı ve dize alabilir. Ne yapmak istediğinize bağlı olarak doğru aşırı yüklemeyi seçersiniz. Kodu `StartTheQuiz()` yöntemine eklediğinizde, `randomizer.Next(` girersiniz hemen sonra IntelliSense penceresinde daha fazla bilgi görüntülenir. Aşırı yüklemeler arasında geçiş yapmak için, aşağıdaki çizimde gösterildiği gibi **yukarı ok** ve **aşağı ok** tuşlarını seçin:
+     Araç İpucu **(+ 2 aşırı yükleme**) gösterir. bu, `Next()` yöntemini iki farklı şekilde çağırabilmeniz anlamına gelir. Aşırı yüklemeler farklı sayılar veya bağımsız değişken türleri içerir, böylece bir diğerinden biraz farklı çalışırlar. Örneğin, bir yöntem tek bir tamsayı bağımsız değişkeni alabilir ve aşırı yüklerinden biri tamsayı ve dize alabilir. Ne yapmak istediğinize bağlı olarak doğru aşırı yüklemeyi seçersiniz. Kodu `StartTheQuiz()` yöntemine eklediğinizde, `randomizer.Next(`girersiniz hemen sonra IntelliSense penceresinde daha fazla bilgi görüntülenir. Aşırı yüklemeler arasında geçiş yapmak için, aşağıdaki çizimde gösterildiği gibi **yukarı ok** ve **aşağı ok** tuşlarını seçin:
 
-     IntelliSense 'de Next&#40; &#41; yöntemi için ![Overload ](../ide/media/express_nextoverload.png)<br/>
+     IntelliSense 'de Next&#40; &#41; yöntemi için aşırı yüklemeyi ![](../ide/media/express_nextoverload.png)<br/>
 ***IntelliSense*** 'de ***Next ()*** *yöntemi* *için aşırı yükleme*
 
      Bu durumda, en düşük ve en yüksek değerleri belirtebileceğiniz için son aşırı yüklemeyi seçmek istersiniz.
@@ -76,7 +76,7 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
      [!code-vb[VbExpressTutorial3Step5_6#14](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_4.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#14](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_4.cs)]
 
-     İçinde C#, `&&` `logical and` işleçtir. Visual Basic, denk işleç `AndAlso`. Bu işleçler, "addend1 ve addend2 toplamının Sum NumericUpDown değerine eşit olup olmadığını ve eksilen eksi çıkarılan değerinin fark NumericUpDown değerine eşit olup olmadığını gösterir. @No__t_0 yöntemi, yalnızca toplama ve çıkarma sorunlarına verilen yanıtların ikisi de doğru olduğunda `true` döndürür.
+     İçinde C#, `&&` `logical and` işleçtir. Visual Basic, denk işleç `AndAlso`. Bu işleçler, "addend1 ve addend2 toplamının Sum NumericUpDown değerine eşit olup olmadığını ve eksilen eksi çıkarılan değerinin fark NumericUpDown değerine eşit olup olmadığını gösterir. `CheckTheAnswer()` yöntemi, yalnızca toplama ve çıkarma sorunlarına verilen yanıtların ikisi de doğru olduğunda `true` döndürür.
 
 4. Zamanlayıcının Tick olay işleyicisinin son bölümünü aşağıdaki kodla değiştirin, böylece zaman aşımı olduğunda doğru yanıtı dolduracaktır.
 
@@ -87,7 +87,7 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
 
      Aşağıdaki çizimde gösterildiği gibi programınız bir çıkarma sorunu içerir:
 
-     çıkarma sorunuyla ![Math test ](../ide/media/express_addsubtract.png)<br/>
+     çıkarma sorunuyla ![matematik sınavından](../ide/media/express_addsubtract.png)<br/>
 *Çıkarma sorunu Ile* ***matematik testi***
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için

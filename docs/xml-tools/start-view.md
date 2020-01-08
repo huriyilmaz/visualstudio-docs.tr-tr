@@ -3,17 +3,17 @@ title: XML şema Tasarımcısı başlangıç görünümü
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f25e7a2f-7469-4279-b2f4-ee2dfd4d3af1
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1978760aba90b884099085c995372f9612be3c8a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f05c3023a246ba193c98cb1b01984a54fdaa0ebb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608498"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592535"
 ---
 # <a name="start-view"></a>Başlangıç Görünümü
 
@@ -23,7 +23,7 @@ Başlangıç görünümü iki ana bölüm, *filigran* ve **şema kümesi ayrınt
 
 ![XML şema Tasarımcısı başlangıç görünümü](../xml-tools/media/xsddesigner_startview.gif)
 
-## <a name="watermark"></a>Filigr
+## <a name="watermark"></a>Filigran
 
 Filigran bölmesi, tüm XSD Designer görünümleri, XML Düzenleyicisi ve **XML şema Gezgini**bağlantılarının bir listesini içerir. Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "küme içindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
 
@@ -41,9 +41,9 @@ Başlangıç görünümü etkinken, XSD Tasarımcı araç çubuğunda aşağıda
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç görünümünü göster**|Başlangıç görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**1**.|
-|**Içerik modeli görünümünü göster**|Içerik modeli görünümüne geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**2**.|
-|**Graf görünümünü göster**|Grafik görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**3**.|
+|**Başlangıç görünümünü göster**|Başlangıç görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**1**.|
+|**Içerik modeli görünümünü göster**|Içerik modeli görünümüne geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**2**.|
+|**Graf görünümünü göster**|Grafik görünümüne geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**3**.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

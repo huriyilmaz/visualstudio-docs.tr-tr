@@ -3,17 +3,17 @@ title: XML Düzenleyicisi IntelliSense özellikleri
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a44af076e8663e525e33727a24aa93f9391f4b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 609684452190bf7471f90fee75f66dbb2fcbec8e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603959"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592392"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML düzenleyicisi IntelliSense özellikleri
 
@@ -29,9 +29,9 @@ Bir şema belgeyle ilişkilendirildikten sonra, `"<"` her seferinde beklenen ö�
 
 Başlangıç etiketinin içinden boşluk yazdığınızda, geçerli öğeye eklenebilen tüm öznitelikleri gösteren bir açılan liste da alırsınız.
 
-Bir öznitelik değeri için `"="` yazdığınızda veya değerin açılış tırnak işareti söz konusu öznitelik için olası değerlerin listesini de alırsınız. Değerler yalnızca şema `xsd:enumeration` modelleri aracılığıyla numaralandırılmış değerler sağlıyorsa veya öznitelik bir `Boolean` türü ise sağlanır. Bilinen dil kodlarının IntelliSense listesi, `xml:lang` veya `xsd:language` türetilen `simpleType` için de sağlanır. Bilinen `targetNamespace` değerlerinin IntelliSense listesi, ad alanı bildirimleri için verilmiştir.
+Bir öznitelik değeri için `"="` yazdığınızda veya değerin açılış tırnak işareti söz konusu öznitelik için olası değerlerin listesini de alırsınız. Değerler yalnızca şema `xsd:enumeration` modelleri aracılığıyla numaralandırılmış değerler sağlıyorsa veya öznitelik bir `Boolean` türü ise sağlanır. Bilinen dil kodlarının IntelliSense listesi, `xml:lang` veya `xsd:language`türetilen `simpleType` için de sağlanır. Bilinen `targetNamespace` değerlerinin IntelliSense listesi, ad alanı bildirimleri için verilmiştir.
 
-Öğe bir `simpleType` ise başlangıç etiketini kapatmak için `">"` yazdığınızda, olası değerlerin bir IntelliSense listesi de sağlanır. Öğelerin davranışı, önceki paragrafta açıklanan özniteliklerin davranışına benzerdir.
+Öğe bir `simpleType`ise başlangıç etiketini kapatmak için `">"` yazdığınızda, olası değerlerin bir IntelliSense listesi de sağlanır. Öğelerin davranışı, önceki paragrafta açıklanan özniteliklerin davranışına benzerdir.
 
 Araç Ipuçları Ayrıca bu IntelliSense listelerinde, ilişkili şemada bulunan `xsd:annotation` ve `xsd:documentation` bilgilerine göre de görünür.
 
@@ -87,7 +87,7 @@ Bir IntelliSense listesinden nitelenmiş bir ad alanı veya öznitelik seçersen
 
 ## <a name="brace-matching"></a>Ayraç eşleştirme
 
-XML Düzenleyicisi, az önce kapattığınız öğeler hakkında anında geri bildirim sağlamak için küme ayracı vurgulamasını sağlar. Ayrıca, bir küme ayracından eşleşen küme ayracına geçmek için klavye kısayolunu (**Ctrl** + **]** ) de kullanabilirsiniz.
+XML Düzenleyicisi, az önce kapattığınız öğeler hakkında anında geri bildirim sağlamak için küme ayracı vurgulamasını sağlar. Ayrıca, bir küme ayracından eşleşen küme ayracına geçmek için klavye kısayolunu (**Ctrl**+ **]** ) de kullanabilirsiniz.
 
 XML Düzenleyicisi bunu aşağıdaki öğeler için yapar:
 
@@ -107,7 +107,7 @@ XML Düzenleyicisi bunu aşağıdaki öğeler için yapar:
 
 ## <a name="modify-the-intellisense-options"></a>IntelliSense seçeneklerini değiştirme
 
-IntelliSense ve otomatik tamamlama özellikleri varsayılan olarak etkindir. Ancak, **araçlar**  > **seçenekleri** ayarlarını değiştirerek bunu değiştirebilirsiniz.
+IntelliSense ve otomatik tamamlama özellikleri varsayılan olarak etkindir. Ancak, **araçlar** > **seçenekleri** ayarlarını değiştirerek bunu değiştirebilirsiniz.
 
 **Çeşitli** sayfasının **Otomatik Ekle** bölümü aşağıdaki davranışı denetler:
 
@@ -119,7 +119,7 @@ IntelliSense ve otomatik tamamlama özellikleri varsayılan olarak etkindir. Anc
 
 ### <a name="to-change-the-auto-completion-behavior"></a>Otomatik tamamlama davranışını değiştirmek için
 
-1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
+1. Seçin **seçenekleri** gelen **Araçları** menüsü.
 
 2. **Metin düzenleyiciyi**genişletin, **XML**' i genişletin ve **çeşitli**' ı seçin.
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - types [Visual Studio], class diagrams
 - attributes [Visual Studio], applying custom
 ms.assetid: 94458c31-28bc-40e2-9737-85868788a0e5
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1db43fc16202234f24d8179bba656d71ac96d39a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 881a8ed7f1aceb5f97eaed1f0b9285951d1d39f6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631746"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590182"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı kullanarak tür oluşturma
 
@@ -36,11 +36,11 @@ Ve Visual Basic projeler için C# yeni türler tasarlamak için bunları bir sı
 
     - **Yardımının**
 
-    - **Arayüz**
+    - **Arabirimi**
 
     - **Yapı** (vb) veya **struct** (C#)
 
-    - **Ğini**
+    - **Temsilci**
 
     - **Modül** (yalnızca vb)
 
@@ -58,12 +58,12 @@ Ve Visual Basic projeler için C# yeni türler tasarlamak için bunları bir sı
 
     |||
     |-|-|
-    |**Bekleniyor**|**Add**|
+    |**Bekleniyor**|**Ekle**|
     |Sınıflar, soyut sınıflar, yapılar veya struct'lar|Yöntemler, özellikler, alanlar, olaylar, yapıcılar (yöntem), yıkıcılar (yöntem) ve türü tanımlayan sabitler|
     |Numaralandırmalar|Numaralandırmayı oluşturan alan değerleri|
     |Arabirimler|Yöntemler, özellikler ve arabirimi oluşturan olaylar|
     |Temsilci|Temsilciyi tanımlayan parametreler|
-    |Modül|Yöntemler, özellikler, alanlar, olaylar, yapıcılar (yöntem) ve modülü tanımlayan sabitler|
+    |Modülü|Yöntemler, özellikler, alanlar, olaylar, yapıcılar (yöntem) ve modülü tanımlayan sabitler|
 
      Bkz. [üyeleri oluşturma](creating-and-configuring-type-members.md#create-members).
 

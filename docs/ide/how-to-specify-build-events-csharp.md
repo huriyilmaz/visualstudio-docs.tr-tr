@@ -10,17 +10,17 @@ helpviewer_keywords:
 - build events [Visual Studio]
 - builds [Visual Studio], events
 ms.assetid: b4ce1ad9-5215-4b6f-b6a2-798b249aa335
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a28f491ea5af53546f66e066bf8f78575708bc57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 24f64cdaa52b923e288d704a10cb7a7438b028b4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656596"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591443"
 ---
 # <a name="how-to-specify-build-events-c"></a>Nasıl yapılır: derleme olaylarını belirtme (C#)
 
@@ -78,7 +78,7 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
    using System.Xml;
    ```
 
-3. @No__t_0 ad alanında, `Program` sınıfı uygulamasını şu kodla değiştirin:
+3. `ChangeOSVersionCS` ad alanında, `Program` sınıfı uygulamasını şu kodla değiştirin:
 
    ```csharp
    class Program
@@ -148,9 +148,9 @@ Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir o
 
 4. **Şimdi Yayımla**' ya tıklayarak projeyi yayımlayın.
 
-   Bildirim dosyası *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest*'e oluşturulup kaydedilir. Bildirimi görüntülemek için, dosyaya sağ tıklayın, **birlikte Aç**' a tıklayın, **Listeden programı seç**' i seçin ve ardından **Notepad**' e tıklayın.
+   Bildirim dosyası oluşturulup *C:\Temp\ CSWinApp_1_0_0_0 \cswinapp.exe.manifest dizinine*kaydedilir. Bildirimi görüntülemek için, dosyaya sağ tıklayın, **birlikte Aç**' a tıklayın, **Listeden programı seç**' i seçin ve ardından **Notepad**' e tıklayın.
 
-   @No__t_0 öğesi için dosyada arama yapın. Örneğin, sürüm şu olabilir:
+   `<osVersionInfo>` öğesi için dosyada arama yapın. Örneğin, sürüm şu olabilir:
 
    ```xml
    <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
@@ -164,7 +164,7 @@ Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir o
 
    Projeyi derlediğinizde, bu komut uygulama bildirimindeki en düşük işletim sistemi sürümünü 5.1.2600.0 olarak değiştirir.
 
-   @No__t_0 makro oluşturulan yürütülebilir dosyanın tam yolunu ifade ettiğinden, `$(TargetPath).manifest` *bin* dizininde oluşturulan uygulama bildirimini belirtir. Yayımlama, bu bildirimi daha önce ayarladığınız yayımlama konumuna kopyalar.
+   `$(TargetPath)` makro oluşturulan yürütülebilir dosyanın tam yolunu ifade ettiğinden, `$(TargetPath).manifest` *bin* dizininde oluşturulan uygulama bildirimini belirtir. Yayımlama, bu bildirimi daha önce ayarladığınız yayımlama konumuna kopyalar.
 
 7. Projeyi yeniden yayımlayın.
 

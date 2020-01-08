@@ -3,17 +3,17 @@ title: 'İzlenecek yol: gerçekçi bir 3B bilardo topu oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95125e2f808dde634435e4eeb2254e397fceb140
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 866f91303c224f8330a4d2be76f3d29331fcb346
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72634551"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589922"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Gerçekçi bir 3B bilardo topu oluşturma
 
@@ -161,15 +161,15 @@ Ortam eşleme, önceki paragraflarda açıklandığı şekilde gerçek yansıma 
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>DirectX doku aracını kullanarak bir küp haritasını birleştirmek için
 
-1. DirectX doku aracında, ana menüdeki **dosya**  > **yeni doku**' ı seçin. **Yeni doku** iletişim kutusu görüntülenir.
+1. DirectX doku aracında, ana menüdeki **dosya** > **yeni doku**' ı seçin. **Yeni doku** iletişim kutusu görüntülenir.
 
 2. **Doku türü** grubunda, **cubemap dokusunu**seçin.
 
 3. **Boyutlar** grubunda **Genişlik** ve **Yükseklik**için doğru değeri girip **Tamam**' ı seçin. Yeni bir doku belgesi görüntülenir. Varsayılan olarak, doku belgesinde ilk olarak gösterilen doku **pozitif X** küp yüzüne karşılık gelir.
 
-4. Doku küpünün yan tarafında oluşturduğunuz dokuyu küp yüzüne yükleyin. Ana menüde,**Bu Cubemap**üzerinde **Dosya**  >  aç ' ı seçin, küpün yan tarafında oluşturduğunuz dokuyu seçin ve sonra **Aç**' ı seçin.
+4. Doku küpünün yan tarafında oluşturduğunuz dokuyu küp yüzüne yükleyin. Ana menüde, **Bu Cubemap**üzerinde **Dosya** > aç ' ı seçin, küpün yan tarafında oluşturduğunuz dokuyu seçin ve sonra **Aç**' ı seçin.
 
-5. **Negatif X**, **pozitif Z**ve **negatif z** küp yüzleri için 4. adımı yineleyin. Bunu yapmak için, yüklemek istediğiniz yüzü görüntülemeniz gerekir. Farklı bir küp Haritası yüzünü görüntülemek için, ana menüdeki  > **küp haritasını** **görüntüle** ' yi seçin ve ardından görüntülemek istediğiniz yüzü seçin.
+5. **Negatif X**, **pozitif Z**ve **negatif z** küp yüzleri için 4. adımı yineleyin. Bunu yapmak için, yüklemek istediğiniz yüzü görüntülemeniz gerekir. Farklı bir küp Haritası yüzünü görüntülemek için, ana menüdeki > **küp haritasını** **görüntüle** ' yi seçin ve ardından görüntülemek istediğiniz yüzü seçin.
 
 6. **Pozitif Y** küp yüzü için, doku küpünün üst kısmında oluşturduğunuz dokuyu yükleyin.
 

@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4269a6f17c83e7fe6f111c4e564ace0e40cfa7e6
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: aa9fc04df3e817730492353e54d74c1e46c3775e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888473"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589805"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Oyunlar ve uygulamalar için 3B varlıklarla çalışma
 
@@ -23,7 +23,7 @@ Bu makalede, DirectX tabanlı oyunlar ve uygulamalar için 3B modeller, dokular 
 
 ## <a name="directx-app-development-in-visual-studio"></a>Visual Studio 'da DirectX uygulama geliştirme
 
-DirectX uygulaması genellikle programlama mantığını, DirectX API 'sini ve yüksek düzeyde gölgeleme dili (HLSL) programlarını zengin ve etkileşimli bir multimedya deneyimi sunmak için ses ve 3B görsel varlıklarla birlikte birleştirir. Visual Studio, IDE 'yi başka bir araç kullanmak için uygulamadan çıkmadan görüntüler, dokular, 3B modeller ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları, üretime uygun varlıkları komisyondan önce kodu test etmek için kullanabileceğiniz ve üretim için kullanıma uygun varlıkları incelemek ve değiştirmek için kullanabileceğiniz *yer tutucu* varlıklar oluşturmaya uygundur. uygulamanızda hata ayıklama.
+DirectX uygulaması genellikle programlama mantığını, DirectX API 'sini ve yüksek düzeyde gölgeleme dili (HLSL) programlarını zengin ve etkileşimli bir multimedya deneyimi sunmak için ses ve 3B görsel varlıklarla birlikte birleştirir. Visual Studio, IDE 'yi başka bir araç kullanmak için uygulamadan çıkmadan görüntüler, dokular, 3B modeller ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları özellikle, üretime uygun varlıkları komisyondan önce kodu test etmek için kullanabileceğiniz ve uygulamanızda hata ayıklarken üretime uygun varlıkları İnceleme ve değiştirme amacıyla kullanabileceğiniz *yer tutucu* varlıklar oluşturmaya uygundur.
 
 Visual Studio 'da çalıştığınız varlık türleri hakkında daha fazla bilgi edinebilirsiniz.
 

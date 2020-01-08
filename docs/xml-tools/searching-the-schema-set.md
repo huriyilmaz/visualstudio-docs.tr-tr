@@ -3,17 +3,17 @@ title: XML şema Gezgini-şema kümesini arama
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff7684c56a22ef760655563d1d9f58e2ff01b0c9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8378ebaccefaedfcc3d83f23bcab56f7417264dd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604649"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592509"
 ---
 # <a name="search-the-schema-set"></a>Şema kümesini arama
 
@@ -43,7 +43,7 @@ ms.locfileid: "72604649"
 
 ## <a name="display-and-navigate-search-results"></a>Arama sonuçlarını görüntüle ve gezin
 
-Arama tamamlandıktan sonra, özet sonuçları bölmesi, arama sonuçlarıyla birlikte araç çubuğuna eklenir. Arama sonuçları ayrıca **XML şema Gezgini** 'nde vurgulanır ve dikey kaydırma çubuğundaki Tick 'ler tarafından işaretlenir. Arama sonuçlarında, **sonraki arama sonuçlarına git** ' i kullanarak ve **XML şeması Gezgini** araç çubuğunun özet sonuçları bölmesinde **önceki arama sonucu düğmesine gidebilirsiniz** ; **F3** tuşu ve **SHIFT** +**F3**tuşlarını kullanarak ya da kaydırma çubuğundaki onay işaretlerine tıklayarak.
+Arama tamamlandıktan sonra, özet sonuçları bölmesi, arama sonuçlarıyla birlikte araç çubuğuna eklenir. Arama sonuçları ayrıca **XML şema Gezgini** 'nde vurgulanır ve dikey kaydırma çubuğundaki Tick 'ler tarafından işaretlenir. Arama sonuçlarında, **sonraki arama sonuçlarına git** ' i kullanarak ve **XML şeması Gezgini** araç çubuğunun özet sonuçları bölmesinde **önceki arama sonucu düğmesine gidebilirsiniz** ; **F3** tuşu ve **SHIFT**+**F3**tuşlarını kullanarak ya da kaydırma çubuğundaki onay işaretlerine tıklayarak.
 
 Özet sonuçlar bölmesinde, **çalışma alanına vurgulanan düğümleri Ekle** düğmesine tıklayarak arama sonuçlarını çalışma alanına ekleyebilirsiniz.
 

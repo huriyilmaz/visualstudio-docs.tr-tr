@@ -6,17 +6,17 @@ f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - external tools [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1caf72ea2dccd9dfe2978726834e8066a9f5b56b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f22c687f88c7736d5c088ebc28ff490c4c16b8f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652389"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591300"
 ---
 # <a name="manage-external-tools"></a>Dış araçları yönetme
 
@@ -47,7 +47,7 @@ ms.locfileid: "72652389"
 
 **Araçlar** menüsünde görünecek bir dış araç ekleyebilirsiniz.
 
-1. **Dış Araçlar iletişim kutusunu,** **Araçlar**  > **dış araçlar**' a tıklayarak açın.
+1. **Dış Araçlar iletişim kutusunu,** **Araçlar** > **dış araçlar**' a tıklayarak açın.
 
 1. **Ekle**' ye tıklayın ve ardından bilgileri girin. Örneğin, aşağıdaki giriş, **Windows Gezgini** 'nin şu anda Visual Studio 'da açtığınız dosyanın dizininde açılmasını sağlar:
 
@@ -55,7 +55,7 @@ ms.locfileid: "72652389"
 
    * Komut: `explorer.exe`
 
-   * Bağımsız değişkenler: `/root, "$(ItemDir)"`
+   * Bağımsız değişkenleri: `/root, "$(ItemDir)"`
 
    ![Dış Araçlar iletişim kutusu](media/external-tools-dialog.png)
 

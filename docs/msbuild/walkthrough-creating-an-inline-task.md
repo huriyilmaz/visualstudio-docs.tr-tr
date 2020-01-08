@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MSBuild, tutorial
 - MSBuild, tasks
 ms.assetid: 438194cb-668c-41a9-a7e2-c118d14c1ea7
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbeba8418b3364d4e3762643a78465158f80e6fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3856c658c4d3d2598b69cc9bf77f95c219b187b4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655442"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590052"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>İzlenecek yol: satır içi görev oluşturma
 MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir sınıf derlenerek oluşturulur. .NET Framework sürüm 4 ' den başlayarak, proje dosyasında görevleri satır içinde oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanız gerekmez. Daha fazla bilgi için bkz. [satır içi görevler](../msbuild/msbuild-inline-tasks.md).
@@ -46,7 +46,7 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 1. Visual Studio 'da, **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda,  **C# görsel** proje türünü seçin ve sonra **Windows Forms uygulama** şablonunu seçin. **Ad** kutusuna `InlineTasks` yazın. Çözüm için bir **konum** yazın, örneğin, *D: \\* . **Çözüm için dizin oluştur** ' un seçili olduğundan emin olun, **kaynak denetimine Ekle** ' nin Işaretli olmadığından ve **çözüm adının** **InlineTasks**olması gerekir.
+2. **Yeni proje** iletişim kutusunda,  **C# görsel** proje türünü seçin ve sonra **Windows Forms uygulama** şablonunu seçin. **Ad** kutusuna `InlineTasks` yazın. Çözüm için bir **konum** yazın, örneğin, *D:\\* . **Çözüm için dizin oluştur** ' un seçili olduğundan emin olun, **kaynak denetimine Ekle** ' nin Işaretli olmadığından ve **çözüm adının** **InlineTasks**olması gerekir.
 
 3. Proje dosyasını oluşturmak için **Tamam** ' ı tıklatın.
 
@@ -61,7 +61,7 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 #### <a name="to-add-a-basic-hello-task"></a>Temel bir Merhaba görev eklemek için
 
-1. Kök `Project` düğümünde `DefaultTargets` özniteliğini `TestBuild` olarak değiştirin. elde edilen `Project` düğümü şu örneğe benzemelidir:
+1. Kök `Project` düğümünde `DefaultTargets` özniteliğini `TestBuild`olarak değiştirin. Elde edilen `Project` düğümü şu örneğe benzemelidir:
 
    ```xml
    <Project ToolsVersion="4.0" DefaultTargets="TestBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -94,7 +94,7 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 1. **Başlat**' a tıklayın, **tüm programlar**' a tıklayın ve ardından **Visual Studio Araçları** klasörünü bulun ve **Visual Studio komut istemi**' ne tıklayın.
 
-2. **Komut Istemi penceresinde**, proje dosyasını içeren klasörü bulun, bu durumda *D:\ınlinetasks\ınlinetasks \\* .
+2. **Komut Istemi penceresinde**, proje dosyasını içeren klasörü bulun, bu durumda *D:\ınlinetasks\ınlinetasks\\* .
 
 3. Komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Bu, varsayılan olarak, *InlineTasks. csproj* dosyasını oluşturur ve varsayılan hedef TestBuild öğesini işler ve bu da Hello görevini çağırır.
 
@@ -172,7 +172,7 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
     `The sum is 9`
 
-   Bu kod, Adder adlı bir satır içi görevi tanımlar ve iki gerekli tamsayı giriş parametresine, A ve B ve bir tamsayı çıkış parametresi olan C ' yi içerir. Adder görevi iki giriş parametrelerini ekler ve çıkış parametresindeki toplamı döndürür. Toplam, MSBuild özelliği `Sum` olarak yayılır. Giriş parametrelerinin değerleri, TestBuild hedefi Adder görevini çalıştırdığında ayarlanır.
+   Bu kod, Adder adlı bir satır içi görevi tanımlar ve iki gerekli tamsayı giriş parametresine, A ve B ve bir tamsayı çıkış parametresi olan C ' yi içerir. Adder görevi iki giriş parametrelerini ekler ve çıkış parametresindeki toplamı döndürür. Toplam, MSBuild özelliği `Sum`olarak yayılır. Giriş parametrelerinin değerleri, TestBuild hedefi Adder görevini çalıştırdığında ayarlanır.
 
 ## <a name="define-the-regx-task"></a>RegX görevini tanımlama
  Bir öğe grubunu ve normal ifadeyi kabul eden bir satır içi görev oluşturun ve ifadesiyle eşleşen dosya içeriğine sahip tüm öğelerin bir listesini döndürür.
@@ -241,10 +241,10 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
 
 - `Result`, normal ifadeyle eşleşen içeriği olan dosyaların listesi olan bir çıkış parametresidir.
 
-  Giriş parametrelerinin değeri, TestBuild hedefi RegX görevini çalıştırdığında ayarlanır. RegX görevi her dosyayı okur ve normal ifadeyle eşleşen dosyaların listesini döndürür. Bu liste, MSBuild öğesi `MatchedFiles` olarak yayılan `Result` çıkış parametresi olarak döndürülür.
+  Giriş parametrelerinin değeri, TestBuild hedefi RegX görevini çalıştırdığında ayarlanır. RegX görevi her dosyayı okur ve normal ifadeyle eşleşen dosyaların listesini döndürür. Bu liste, MSBuild öğesi `MatchedFiles`olarak yayılan `Result` çıkış parametresi olarak döndürülür.
 
 ### <a name="handle-reserved-characters"></a>Ayrılan karakterleri işle
- MSBuild ayrıştırıcısı satır içi görevleri XML olarak işler. "@No__t_0" ve ">" gibi, XML olarak ayrılmış anlamı olan karakterler, .NET kaynak kodu değil, XML gibi algılanır ve işlenir. @No__t_0 gibi kod ifadelerinde ayrılmış karakterleri dahil etmek için, `Code` öğesini, içeriğinin CDATA ifadesinde olması için aşağıdaki gibi yazın:
+ MSBuild ayrıştırıcısı satır içi görevleri XML olarak işler. "\<" ve ">" gibi, XML olarak ayrılmış anlamı olan karakterler, .NET kaynak kodu değil, XML gibi algılanır ve işlenir. `Files.Length > 0`gibi kod ifadelerinde ayrılmış karakterleri dahil etmek için, `Code` öğesini, içeriğinin CDATA ifadesinde olması için aşağıdaki gibi yazın:
 
  ```xml
 <Code Type="Fragment" Language="cs">

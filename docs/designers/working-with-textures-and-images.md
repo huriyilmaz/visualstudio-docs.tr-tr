@@ -3,17 +3,17 @@ title: Dokularla ve Görüntülerle Çalışma
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d59b7c2c52cc0fe230a6e9c5c7c89db56d065aff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 110cbbb01f5b86d462a9a5f196735fd4d477fb10
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633697"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589870"
 ---
 # <a name="work-with-textures-and-images"></a>Dokularla ve görüntülerle çalışma
 
@@ -46,7 +46,7 @@ Yükseklik haritaları, yükseklik alanı verileri içerir. Bunlar, istenen etki
 
 ### <a name="cube-maps"></a>Küp haritaları
 
-Küp haritaları, farklı veri türleri içerebilir — Örneğin, renkler veya normaller —, ancak küpün yüzlerinde altı doku olarak düzenlenir. Bu nedenle, küp haritaları doku koordinatları sağlayarak örneklenmez, ancak kaynağı küpün ortası olan bir vektör sağlayarak; örnek, vector öğesinin kübü kesiştiği noktada alınır. Küp haritaları, yansıma gibi yansımaları hesaplamak için kullanılabilecek ortamın yaklaşık bir kısmını sağlamak için kullanılır. Bu, *ortam eşleme*olarak bilinir — ya da temel kıyasla daha az deformasyonu olan küresel nesnelere doku sağlamak için, iki boyutlu dokuların kullanılabilmesi için girmelisiniz.
+Küp haritaları, farklı veri türleri içerebilir — Örneğin, renkler veya normaller —, ancak küpün yüzlerinde altı doku olarak düzenlenir. Bu nedenle, küp haritaları doku koordinatları sağlayarak örneklenmez, ancak kaynağı küpün ortası olan bir vektör sağlayarak; örnek, vector öğesinin kübü kesiştiği noktada alınır. Küp haritaları, yansıma gibi yansımaları hesaplamak için kullanılabilecek ortamın yaklaşık bir kısmını sağlamak için kullanılır. Bu, *ortam eşleme*olarak bilinir — ya da temel kıyasla daha az deformasyonu olan küresel nesnelere doku sağlamak için, iki boyutlu dokuların sağlayabildiği bir değer sağlar.
 
 ## <a name="related-topics"></a>İlgili konular
 
