@@ -9,21 +9,21 @@ helpviewer_keywords:
 - imported namespaces [Visual Studio]
 - references [Visual Studio], imported namespaces
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ff6ad1a07440b27b679fa3f749c24a6d3157dbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e636969164c4cf2526bb85add95e7cfe02ce6176
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654650"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593336"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Nasıl yapılır: içeri aktarılan ad alanlarını ekleme veya kaldırma (Visual Basic)
 
-Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `System.Messaging.MessageQueue` sınıfındaki `Create` yöntemine erişmek istiyorsanız, `System.Messaging` ad alanını içeri aktarabilir ve yalnızca `MessageQueue.Create` olarak kodunuzda ihtiyacınız olan öğeye başvurabilirsiniz.
+Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `System.Messaging.MessageQueue` sınıfındaki `Create` yöntemine erişmek istiyorsanız, `System.Messaging` ad alanını içeri aktarabilir ve yalnızca `MessageQueue.Create`olarak kodunuzda ihtiyacınız olan öğeye başvurabilirsiniz.
 
 İçeri aktarılan ad alanları, **Proje Tasarımcısı**'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir ( */Imports*) ve projenizdeki tüm dosyalar için geçerlidir. Tek kaynak kod dosyasında bir ad alanı kullanmak için `Imports` ifadesini kullanın.
 
@@ -36,7 +36,7 @@ Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad 
 3. **Içeri aktarılan ad alanları** listesinde, eklemek istediğiniz ad alanının onay kutusunu seçin.
 
     > [!NOTE]
-    > İçeri aktarılmak üzere, ad alanı başvurulan bir bileşende olmalıdır. Ad alanı listede görünmezse, onu içeren bileşene bir başvuru eklemeniz gerekir. Daha fazla bilgi için bkz. [bir projedeki başvuruları yönetme](managing-references-in-a-project.md).
+    > İçeri aktarılmak üzere, ad alanı başvurulan bir bileşende olmalıdır. Ad alanı listede görünmezse, onu içeren bileşene bir başvuru eklemeniz gerekir. Daha fazla bilgi için [bir projedeki başvuruları yönetme](managing-references-in-a-project.md).
 
 ### <a name="to-remove-an-imported-namespace"></a>İçeri aktarılan bir ad alanını kaldırma
 
@@ -47,7 +47,7 @@ Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad 
 3. **Içeri aktarılan ad alanları** listesinde, kaldırmak istediğiniz ad alanı için onay kutusunu temizleyin.
 
 ## <a name="user-imports"></a>Kullanıcı içeri aktarmaları
-Kullanıcı içeri aktarmaları, tüm ad alanı yerine bir ad alanı içinde belirli bir sınıfı içeri aktarmanızı sağlar. Örneğin, uygulamanızda <xref:System.Diagnostics> ad alanı için bir içeri aktarma olabilir, ancak ilgilendiğiniz bu ad alanı içindeki tek sınıf `Debug` sınıfıdır. @No__t_0 Kullanıcı içeri aktarma olarak tanımlayabilir ve sonra <xref:System.Diagnostics> için içeri aktarmayı kaldırabilirsiniz.
+Kullanıcı içeri aktarmaları, tüm ad alanı yerine bir ad alanı içinde belirli bir sınıfı içeri aktarmanızı sağlar. Örneğin, uygulamanızda <xref:System.Diagnostics> ad alanı için bir içeri aktarma olabilir, ancak ilgilendiğiniz bu ad alanı içindeki tek sınıf `Debug` sınıfıdır. <xref:System.Diagnostics.Debug> Kullanıcı içeri aktarma olarak tanımlayabilir ve sonra <xref:System.Diagnostics>için içeri aktarmayı kaldırabilirsiniz.
 
 Daha sonra fikrinizi değiştirirseniz ve bunun gerçekten gereken `EventLog` sınıfı olduğuna karar verirseniz, Kullanıcı içeri aktarma olarak <xref:System.Diagnostics.EventLog> girebilir ve güncelleştirme işlevini kullanarak <xref:System.Diagnostics.Debug> üzerine yazabilirsiniz.
 

@@ -3,17 +3,17 @@ title: XML şema Tasarımcısı grafik görünümü
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b19f8f64bc4fe63d111f4d5c61e96d6fff88a14b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb71196dfbaf371e66131bf1e4b22584d3dbf0c3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646046"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592873"
 ---
 # <a name="graph-view"></a>Grafik görünümü
 
@@ -101,16 +101,16 @@ Grafik görünümü etkinken aşağıdaki XSD araç çubuğu düğmeleri etkinle
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**1**.|
-|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**2**.|
-|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**3**.|
+|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**1**.|
+|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**2**.|
+|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl**+**3**.|
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır. Bu seçenek, Içerik modeli görünümünde ve grafik görünümünde etkinleştirilir.|
-|**Soldan sağa**|Grafik görünümündeki düzeni düğümlerin soldan sağa hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt** +**sağ ok**kullanılarak erişilebilir.|
-|**Sağdan sola**|Grafik görünümündeki düzeni düğümlerin sağdan sola hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **Alt** +**sol ok**.|
-|**Yukarıdan aşağıya**|Grafik görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt** +**aşağı ok**.|
-|**Aşağıdan yukarıya**|Grafik görünümündeki düzeni düğümlerin aşağıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt** +**yukarı ok**kullanılarak erişilebilir.|
+|**Soldan sağa**|Grafik görünümündeki düzeni düğümlerin soldan sağa hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt**+**sağ ok**kullanılarak erişilebilir.|
+|**Sağdan sola**|Grafik görünümündeki düzeni düğümlerin sağdan sola hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **Alt**+**sol ok**.|
+|**Yukarıdan aşağıya**|Grafik görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt**+**aşağı ok**.|
+|**Aşağıdan yukarıya**|Grafik görünümündeki düzeni düğümlerin aşağıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt**+**yukarı ok**kullanılarak erişilebilir.|
 
 ## <a name="panscroll"></a>Kaydır/KAYDIR
 

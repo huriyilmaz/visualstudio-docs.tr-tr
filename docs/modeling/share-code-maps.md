@@ -2,17 +2,17 @@
 title: Kod eşlemelerini dışarı ve Kaydet
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 991773953338e38331bad45bfa1149aeb27c748b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 57989de2cca3582b3193a7b55b81d1d444dcf1c1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670798"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591937"
 ---
 # <a name="share-code-maps"></a>Kod haritalarını paylaşma
 
@@ -24,7 +24,7 @@ Haritayı kaydetmek için **Dosya** menüsünü kullanın.
 
 veya
 
-Haritayı belirli projenin bir parçası olarak kaydetmek için harita araç çubuğunda, **paylaşma**  >  **\<CodeMapName >. dgml**' i seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
+Haritayı belirli projenin bir parçası olarak kaydetmek için, harita araç çubuğunda, **paylaşma** >  **\<codemapname >. dgml**' i seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
 
 ![Haritayı başka bir projeye taşıma](../modeling/media/codemapsmovemapmenu.png)
 
@@ -43,7 +43,7 @@ Visual Studio, Haritayı Visual Studio Enterprise ve Visual Studio Professional 
 
 Bir kod haritasını görüntü olarak dışarı aktardığınızda, Microsoft Word veya PowerPoint gibi diğer uygulamalara kopyalayabilirsiniz.
 
-1. Kod Haritası araç çubuğunda  > **e-postayı görüntü olarak** **paylaşma** veya **görüntü kopyalama**' yı seçin.
+1. Kod Haritası araç çubuğunda > **e-postayı görüntü olarak** **paylaşma** veya **görüntü kopyalama**' yı seçin.
 
 2. Görüntüyü başka bir uygulamaya yapıştırın.
 
@@ -51,11 +51,11 @@ Bir kod haritasını görüntü olarak dışarı aktardığınızda, Microsoft W
 
 Bir kod haritasını XPS dosyası olarak dışa aktardığınızda, bu dosyayı Internet Explorer gibi XML veya XAML görüntüleyicilerinde görebilirsiniz.
 
-1. Kod Haritası araç çubuğunda,  > **e-postayı TAŞINABILIR XPS olarak** **paylaşma** veya **Taşınabilir XPS olarak kaydetme**' yi seçin.
+1. Kod Haritası araç çubuğunda, > **e-postayı TAŞINABILIR XPS olarak** **paylaşma** veya **Taşınabilir XPS olarak kaydetme**' yi seçin.
 
 2. Dosyayı kaydetmek istediğiniz yere gidin.
 
-3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**' i seçin.
+3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**’i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

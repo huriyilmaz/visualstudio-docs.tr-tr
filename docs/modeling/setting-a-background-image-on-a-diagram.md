@@ -2,17 +2,17 @@
 title: Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f8806571939cb057852ddd9cca971f9415339ca
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1bdf30636a6c7fee1463cbe554058f0802a5f6f0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748246"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591963"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
 Visual Studio görselleştirme ve modelleme SDK 'da, özel kod kullanarak oluşturulan tasarımcı için arka plan resmini ayarlayabilirsiniz.
@@ -43,7 +43,7 @@ Visual Studio görselleştirme ve modelleme SDK 'da, özel kod kullanarak oluşt
 
 11. Resources.Designer.cs eksikse **Çözüm Gezgini**' de resources. resx dosyasına tıklayın.
 
-12. **Özellikler** penceresinde `Custom Tool` özelliğini `ResXFileCodeGenerator` olarak ayarlayın.
+12. **Özellikler** penceresinde `Custom Tool` özelliğini `ResXFileCodeGenerator`olarak ayarlayın.
 
 13. **Çözüm Gezgini**, DSL projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın.
 
@@ -53,7 +53,7 @@ Visual Studio görselleştirme ve modelleme SDK 'da, özel kod kullanarak oluşt
 
 16. **Yeni öğe Ekle** iletişim kutusunda, **Şablonlar** listesinde, **kod dosyası**' na tıklayın.
 
-17. **Ad** kutusuna `BackgroundImage.cs` yazın ve **Ekle**' ye tıklayın.
+17. **Ad** kutusuna `BackgroundImage.cs`yazın ve **Ekle**' ye tıklayın.
 
 18. Aşağıdaki kodu BackgroundImage.cs dosyasına kopyalayın, ad alanı, diyagram sınıf adı ve görüntü dosyası kaynak adı ' nı ayarlama.
 

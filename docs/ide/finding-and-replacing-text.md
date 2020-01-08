@@ -25,21 +25,21 @@ helpviewer_keywords:
 - find text
 - replace text
 - multi-caret selection
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e5c4bd54e71357ff6a2d667c540953bc0057b70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ffc31a0d0e2b6878b5dd5173a35ce4f538e135be
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654242"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590351"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
-[Bul ve Değiştir](#find-and-replace-control) (**CTRL** +**F** veya **CTRL** +**H**) veya [dosyalarda Bul/Değiştir '](#find-in-files-and-replace-in-files) i kullanarak Visual Studio düzenleyicisinde metin bulabilir ve değiştirebilirsiniz (**CTRL** +**SHIFT** 1 **F** veya **CTRL** 4**SHIFT** 6**H**). Ayrıca, *[Çoklu şapka seçimini](#multi-caret-selection)* kullanarak bir düzenin yalnızca *bazı* örneklerini bulabilir ve değiştirebilirsiniz.
+Visual Studio Düzenleyicisi 'ndeki metni [Bul ve Değiştir](#find-and-replace-control) (**CTRL**+**F** veya **CTRL**+**H**) kullanarak bulabilir ve değiştirebilir veya [dosyalarda Bul/Değiştir](#find-in-files-and-replace-in-files) (**CTRL**+**SHIFT**+**F** ya da **CTRL**+**SHIFT**+**H**). Ayrıca, *[Çoklu şapka seçimini](#multi-caret-selection)* kullanarak bir düzenin yalnızca *bazı* örneklerini bulabilir ve değiştirebilirsiniz.
 
 > [!TIP]
 > Değişkenler ve yöntemler gibi kod sembollerini yeniden adlandırıyorsanız, bul ve Değiştir ' i kullanmaya kıyasla yeniden *[düzenleme](../ide/reference/rename.md)* daha iyidir. Yeniden düzenleme akıllı ve anlamıştır, ancak bul ve Değiştir, tüm örneklerin yerini alır.
@@ -53,8 +53,8 @@ Aramaları geçerli belge, geçerli çözüm veya özel bir klasör kümesiyle k
 
 ## <a name="find-and-replace-control"></a>Bul ve Değiştir denetimi
 
-- Geçerli dosyada bir dize *bulmak* için kısayol olarak **CTRL** +**F** tuşlarına basın.
-- Geçerli dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak **CTRL** +**H** tuşuna basın.
+- Geçerli dosyada bir dize *bulmak* için kısayol olarak **CTRL**+**F** tuşlarına basın.
+- Geçerli dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak **CTRL**+**H** tuşuna basın.
 
 **Bul ve Değiştir** denetimi, kod Düzenleyicisi penceresinin sağ üst köşesinde görüntülenir. Geçerli belgede verilen arama dizesinin her oluşumunu anında vurgular. Arama denetimindeki **Sonrakini Bul** düğmesini veya **Öncekini Bul** düğmesini seçerek bir örnekten diğerine gidebilirsiniz.
 
@@ -66,16 +66,16 @@ Eşleşmelerin vurgu rengini değiştirmek için, **Araçlar** menüsünü seçi
 
 ### <a name="search-tool-windows"></a>Arama aracı pencereleri
 
-**Düzenle**  > **Bul ve Değiştir** ' i seçerek veya **CTRL + F**tuşlarına basarak kodda veya metin penceresinde bulunan **bul** denetimini kullanabilirsiniz.
+**Düzenle** > **Bul ve Değiştir** ' i seçerek veya **CTRL + F**tuşlarına basarak kodda veya metin penceresinde bulunan **bul** denetimini kullanabilirsiniz.
 
 **Bul** denetiminin bir sürümü de bazı araç pencereleri için de kullanılabilir. Örneğin, arama kutusuna metin girerek **araç kutusu** penceresindeki denetim listesini filtreleyebilirsiniz. İçeriklerini aramanıza izin veren diğer araç pencereleri **Çözüm Gezgini**, **özellikler** penceresi ve **Takım Gezgini**içerir.
 
 ## <a name="find-in-files-and-replace-in-files"></a>Dosyalarda bulma ve dosyalardaki değiştirme
 
-- Birden çok dosyada bir dize *bulmak* için kısayol olarak **Ctrl** +**SHIFT** +**F** tuşlarına basın.
-- Birden çok dosyada bir dizeyi *bulmak ve değiştirmek* için kısayol olarak **Ctrl** +**SHIFT** +**H** tuşlarına basın.
+- Birden çok dosyada bir dize *bulmak* için kısayol olarak **Ctrl**+**SHIFT**+**F** tuşlarına basın.
+- Birden çok dosyada bir dizeyi *bulmak ve değiştirmek* için kısayol olarak **Ctrl**+**SHIFT**+**H** tuşlarına basın.
 
-**Dosyalarınızda Bul/Değiştir** , **Bul ve Değiştir** denetimi gibi çalışarak, aramanız için bir kapsam tanımlayabilmeniz gerekir. Yalnızca düzenleyicideki geçerli açık dosyada arama yapabilir, ancak tüm açık belgeler, tüm çözüm, geçerli proje ve seçili klasör kümelerini de arayabilirsiniz. Dosya adı uzantısına göre de arama yapabilirsiniz. **Dosyalarda Bul/Değiştir** iletişim kutusuna erişmek Için, **Düzenle** menüsünde **Bul ve Değiştir** ' i seçin (veya **CTRL** +**SHIFT** +**F**' e basın).
+**Dosyalarınızda Bul/Değiştir** , **Bul ve Değiştir** denetimi gibi çalışarak, aramanız için bir kapsam tanımlayabilmeniz gerekir. Yalnızca düzenleyicideki geçerli açık dosyada arama yapabilir, ancak tüm açık belgeler, tüm çözüm, geçerli proje ve seçili klasör kümelerini de arayabilirsiniz. Dosya adı uzantısına göre de arama yapabilirsiniz. **Dosyalarda Bul/Değiştir** iletişim kutusuna erişmek Için, **Düzenle** menüsünde **Bul ve Değiştir** ' i seçin (veya **CTRL**+**SHIFT**+**F**' e basın).
 
 ![Visual Studio 'da dosyalarda bul](media/find-in-files-box.png)
 
@@ -110,7 +110,7 @@ Aşağıdaki ekran görüntüsünde, üç konumda `-0000` seçilidir; Kullanıc�
 Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tıklatın veya seçin, sonra da her bir ek konumda metin ' i tıklattığınızda veya seçerken **alt** tuşuna basın. Ayrıca, eşleşen metni ek seçimler olarak otomatik olarak ekleyebilir veya her satırda aynı şekilde düzenlenecek metin kutusunu seçebilirsiniz.
 
 > [!TIP]
-> Fare tıklaması için değiştirici tuşu olarak **alt** ' i seçtiyseniz **Araçlar**  > **Seçenekler**' de tanıma git ' e tıklayın, çoklu şapka seçimi devre dışıdır.
+> Fare tıklaması için değiştirici tuşu olarak **alt** ' i seçtiyseniz **Araçlar** > **Seçenekler**' de tanıma git ' e tıklayın, çoklu şapka seçimi devre dışıdır.
 
 ### <a name="commands"></a>Komutlar
 
@@ -118,13 +118,13 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 
 |Kısayol|Eylem|
 |-|-|
-|**Ctrl** +**alt** + tıklama|İkincil giriş işareti ekleme|
-|**Ctrl** +**alt** + çift tıklama|İkincil sözcük seçimi ekleme|
-|**Ctrl** +**alt** + + sürükle 'e tıklayın|İkincil bir seçim ekleyin|
-|**Shıft** +**alt** + **.**|Sonraki eşleşen metni seçim olarak ekle|
-|**Ctrl** +**shıft** +**alt** + **,**|Tüm eşleşen metni seçimler olarak ekle|
-|**Shıft** +**alt** + **,**|Son seçili oluşumu kaldır|
-|**Ctrl** +**shıft** +**alt** + **.**|Sonraki eşleşen oluşumu atla|
+|**Ctrl**+**alt** + tıklama|İkincil giriş işareti ekleme|
+|**Ctrl**+**alt** + çift tıklama|İkincil sözcük seçimi ekleme|
+|**Ctrl**+**alt** + + sürükle 'e tıklayın|İkincil bir seçim ekleyin|
+|**Shıft**+**alt**+ **.**|Sonraki eşleşen metni seçim olarak ekle|
+|**Ctrl**+**shıft**+**alt**+ **,**|Tüm eşleşen metni seçimler olarak ekle|
+|**Shıft**+**alt**+ **,**|Son seçili oluşumu kaldır|
+|**Ctrl**+**shıft**+**alt**+ **.**|Sonraki eşleşen oluşumu atla|
 |**Alt** + tıklama|Kutu seçimi Ekle|
 |**ESC** veya tıklama|Tüm Seçimleri Temizle|
 

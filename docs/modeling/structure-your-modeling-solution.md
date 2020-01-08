@@ -2,17 +2,17 @@
 title: Modelleme çözümünüzün yapısını oluşturma
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fecf0d146c1116e6ec6376ffd9ad929cc9179d1c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 57edf4253840294968238793bf9f3b24326a1e3f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985217"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591950"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -72,7 +72,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Her katman için ayrı bir paket kullanın
 
-1. Her katmanın çözümünde mimari modelleme projesini ekleyin. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
+1. Her katmanın çözümünde mimari modelleme projesini ekleyin. İçinde **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, fareyle **Ekle**ve ardından **mevcut proje**. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
 
 2. Paylaşılan modelde, her katman için bir paket oluşturun: **Çözüm Gezgini**, modelleme projesini seçin. **UML Model Gezgini**' nde model kök düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **paket**' e tıklayın.
 
@@ -102,7 +102,7 @@ Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmaz, ancak pr
 
 4. Sihirbazdaki yönergeleri izleyerek, şablona dahil etmek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
 
-## <a name="watch-a-video"></a>Video izleyin
+## <a name="watch-a-video"></a>Nasıl yapılacağını görmek için
 
 [Modellerinizi düzenleyin ve yönetin](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 

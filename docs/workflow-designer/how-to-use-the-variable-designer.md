@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - System.Activities.Presentation.View.DesignTimeVariable.UI
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59a0da5ad0345ba0733f52d087b262bdc706cd21
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ec5e6d16d17024b0b49f977b87ddacc275e5860
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650245"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593180"
 ---
 # <a name="how-to-use-the-variable-designer"></a>Nasıl yapılır: değişken tasarımcısını kullanma
 
@@ -31,7 +31,7 @@ Değişken tasarımcı, veri bağlama senaryolarında ve Koşullu deyimlerde kul
 
 3. Tasarım tuvalinin sol alt köşesindeki **değişkenler** düğmesine tıklayarak değişken tasarımcısını açın. Değişken tasarımcı belirir.
 
-4. **Oluşturma değişkeni**etiketli boş satıra tıklayın. Bu işlem, şu varsayılan değerleri kullanarak yeni bir değişken içeren yeni bir satır ekler: **x, benzersiz** değişken adları oluşturmak için otomatik olarak artan 1 başlangıç değeri olan bir tamsayı, değişken için **dize** **kapsam**Için tür ve **sıra** . **Varsayılan**için değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
+4. **Oluşturma değişkeni**etiketli boş satıra tıklayın. Bu, aşağıdaki varsayılan değerleri kullanarak yeni bir değişken içeren yeni bir satır ekler: x, benzersiz değişken adları, **değişken türü**için **dize** ve **kapsam** **sırası** için otomatik olarak arttırılan 1 başlangıç değeri olan bir tamsayı olan **addır** . **Varsayılan**için değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
 
     > [!NOTE]
     > Bir değişkeni silmek için, ve ardından **Delete** tuşuna basarak değişkeni seçin.

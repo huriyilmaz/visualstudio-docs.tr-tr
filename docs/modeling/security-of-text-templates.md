@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, security
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eab987d406d6a2c05c8350aaac9dd1ecfc13e4a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 25815bcb7f027501fb849dcd29d14b040c24d7fa
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660084"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591976"
 ---
 # <a name="security-of-text-templates"></a>Metin Şablonlarının Güvenliği
 Metin şablonlarında aşağıdaki güvenlik sorunları vardır:
@@ -24,7 +24,7 @@ Metin şablonlarında aşağıdaki güvenlik sorunları vardır:
 - Konağın bir yönerge işlemcisini bulmak için kullandığı mekanizma güvenli değilse, kötü amaçlı yönerge işlemcisi çalıştırılabilir.
 
 ## <a name="arbitrary-code"></a>Rastgele kod
- Bir şablon yazdığınızda, \< # # > etiketleri içinde herhangi bir kod yerleştirebilirsiniz. Bu, bir metin şablonu içinden rastgele kodun yürütülmesini sağlar.
+ Bir şablon yazdığınızda, \<# # > etiketleri içinde herhangi bir kod yerleştirebilirsiniz. Bu, bir metin şablonu içinden rastgele kodun yürütülmesini sağlar.
 
  Güvenilen kaynaklardan şablonlar aldığınızdan emin olun. Uygulamanızın son kullanıcılarını, güvenilir kaynaklardan gelmeyen şablonları yürütmek için not aldığınızdan emin olun.
 

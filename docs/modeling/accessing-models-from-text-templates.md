@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, accessing models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61f69163e4458c62b9f114eca72c954a2317076b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b9ac9fb023797db98f3b83aa4da7b92e71f0e71e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652375"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590624"
 ---
 # <a name="access-models-from-text-templates"></a>Metin şablonlarından modellere erişin
 
@@ -57,7 +57,7 @@ Here is a list of elements in the model:
 
 - Şablon, `requires` özelliğinde belirttiğiniz model dosyasını yükler.
 
-- @No__t_0 bir özellik kök öğesi içerir. Buradan, kodunuz modelin diğer öğelerine gidebilir. Özelliğin adı genellikle DSL 'nizin kök etki alanı sınıfıyla aynıdır. Bu örnekte, `this.ExampleModel`.
+- `this` bir özellik kök öğesi içerir. Buradan, kodunuz modelin diğer öğelerine gidebilir. Özelliğin adı genellikle DSL 'nizin kök etki alanı sınıfıyla aynıdır. Bu örnekte bu değer `this.ExampleModel`’dur.
 
 - Kod parçalarının yazıldığı dil olmakla birlikte C#, herhangi bir türde metin oluşturabilirsiniz. Ayrıca, `template` yönergesine `language="VB"` özelliğini ekleyerek [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kodu yazabilirsiniz.
 
@@ -78,7 +78,7 @@ Here is a list of elements in the model:
 
 - Derlemeyi etkin bir şekilde ekler ve DSL 'ye başvuran şablona içeri aktarma yönergeleri. Bu, Şablon kodunda etki alanı sınıflarınızı kullanmanıza olanak sağlar.
 
-- @No__t_0 parametresinde belirttiğiniz dosyayı yükler ve `this`, yüklenen modelin kök öğesine başvuran bir özelliği ayarlar.
+- `requires` parametresinde belirttiğiniz dosyayı yükler ve `this`, yüklenen modelin kök öğesine başvuran bir özelliği ayarlar.
 
 ## <a name="validating-the-model-before-running-the-template"></a>Şablonu çalıştırmadan önce model doğrulanıyor
  Şablon yürütülmeden önce modelin doğrulanmasını sağlayabilirsiniz.
@@ -89,7 +89,7 @@ Here is a list of elements in the model:
 
  Dikkat edin:
 
-1. @No__t_0 ve `validation` parametreleri ";" ile ayrılır ve başka ayırıcı veya boşluk olmamalıdır.
+1. `filename` ve `validation` parametreleri ";" ile ayrılır ve başka ayırıcı veya boşluk olmamalıdır.
 
 2. Doğrulama kategorilerinin listesi hangi doğrulama yöntemlerinin çalıştırılacağını belirler. Birden çok kategori "&#124;" ile ayrılmalıdır ve başka ayırıcı veya boşluk olmamalıdır.
 
@@ -100,7 +100,7 @@ Here is a list of elements in the model:
 > [!NOTE]
 > Bu yöntem, aynı şablonda birden çok modeli okumanızı sağlar, ancak ModelBus başvurularını desteklemez. ModelBus başvuruları tarafından birbirine bağlanmış modelleri okumak için, bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
- Aynı metin şablonundan birden fazla modele erişmek istiyorsanız, her bir model için oluşturulan yönerge işlemcisini bir kez çağırmanız gerekir. @No__t_0 parametresindeki her bir modelin dosya adını belirtmeniz gerekir. @No__t_0 parametresindeki kök etki alanı sınıfı için kullanmak istediğiniz adları belirtmeniz gerekir. Yönerge çağrılarının her birinde `provides` parametreleri için farklı değerler belirtmeniz gerekir. Örneğin, Library. xyz, okul. xyz ve Work. xyz adlı üç model dosyanız olduğunu varsayalım. Aynı metin şablonundan erişmek için, aşağıdakine benzeyen üç yönerge çağrısı yazmanız gerekir.
+ Aynı metin şablonundan birden fazla modele erişmek istiyorsanız, her bir model için oluşturulan yönerge işlemcisini bir kez çağırmanız gerekir. `requires` parametresindeki her bir modelin dosya adını belirtmeniz gerekir. `provides` parametresindeki kök etki alanı sınıfı için kullanmak istediğiniz adları belirtmeniz gerekir. Yönerge çağrılarının her birinde `provides` parametreleri için farklı değerler belirtmeniz gerekir. Örneğin, Library. xyz, okul. xyz ve Work. xyz adlı üç model dosyanız olduğunu varsayalım. Aynı metin şablonundan erişmek için, aşağıdakine benzeyen üç yönerge çağrısı yazmanız gerekir.
 
 ```
 <#@ ExampleModel processor="<YourLanguageName>DirectiveProcessor" requires="fileName='Library.xyz'" provides="ExampleModel=LibraryModel" #>
@@ -138,9 +138,9 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 ## <a name="loading-models-dynamically"></a>Modelleri dinamik olarak yükleme
  Hangi modellerdeki çalışma zamanında yükleneceğini öğrenmek isterseniz, DSL 'ye özgü yönergeyi kullanmak yerine program kodunuzda dinamik olarak bir model dosyası yükleyebilirsiniz.
 
- Ancak, DSL 'ye özgü yönergesinin işlevlerinden birine, şablon kodunun o DSL 'de tanımlanan etki alanı sınıflarını kullanabilmesi için DSL ad alanını içeri aktarmaları gerekir. Yönergesini kullanmadığınız için, yüklediğiniz tüm modeller için **\<assembly >** ve **\<import >** yönergelerini eklemeniz gerekir. Bu, yüklediğiniz farklı modeller aynı DSL 'nin tüm örnekleri ise kolay bir işlemdir.
+ Ancak, DSL 'ye özgü yönergesinin işlevlerinden birine, şablon kodunun o DSL 'de tanımlanan etki alanı sınıflarını kullanabilmesi için DSL ad alanını içeri aktarmaları gerekir. Yönergesini kullanmadığınız için, **\<bütünleştirilmiş kod >** eklemeli ve **\<içeri aktarma >** yönergeleri yüklemeniz gerekir. Bu, yüklediğiniz farklı modeller aynı DSL 'nin tüm örnekleri ise kolay bir işlemdir.
 
- Dosyayı yüklemek için en etkili yöntem Visual Studio ModelBus kullanmaktır. Tipik bir senaryoda, metin şablonunuz ilk modeli her zamanki şekilde yüklemek için DSL 'ye özgü bir yönerge kullanacaktır. Bu model, başka bir modele ModelBus başvuruları içerir. ModelBus kullanarak başvurulan modeli açabilir ve belirli bir öğeye erişebilirsiniz. Daha fazla bilgi için bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
+ Dosyayı yüklemek için en etkili yöntem Visual Studio ModelBus kullanmaktır. Tipik bir senaryoda, metin şablonunuz ilk modeli her zamanki şekilde yüklemek için DSL 'ye özgü bir yönerge kullanacaktır. Bu model, başka bir modele ModelBus başvuruları içerir. ModelBus kullanarak başvurulan modeli açabilir ve belirli bir öğeye erişebilirsiniz. Daha fazla bilgi için [metin şablonunda Visual Studio ModelBus kullanarak](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
  Daha az olağan bir senaryoda, yalnızca bir dosya adına sahip olduğunuz ve geçerli Visual Studio projesinde bulunmayabilir bir model dosyası açmak isteyebilirsiniz. Bu durumda, [nasıl yapılır: program kodunda dosyadan model açma](../modeling/how-to-open-a-model-from-file-in-program-code.md)bölümünde açıklanan tekniği kullanarak dosyayı açabilirsiniz.
 
@@ -172,7 +172,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 #>
 ```
 
- `LoopSplitter.tt` `LoopTemplate.t4` çağırır ve sonra elde edilen dosyayı segmentlerine böler. Modeli okumadığından bu şablonun modelleme şablonu olması gerekmez.
+ `LoopSplitter.tt` `LoopTemplate.t4`çağırır ve sonra elde edilen dosyayı segmentlerine böler. Modeli okumadığından bu şablonun modelleme şablonu olması gerekmez.
 
 ```
 <#@ template hostspecific="true" language="C#" #>
