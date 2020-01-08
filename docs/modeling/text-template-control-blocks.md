@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, template code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 128be69d356b371cc34f5e089df25546428bc83f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef39e82ea1abe95b3bea799545ed7fbf5b766fd3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606082"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591794"
 ---
 # <a name="text-template-control-blocks"></a>Metin Şablonu Denetim Blokları
 Denetim blokları çıktıyı değiştirmek için metin şablonunuza kod yazmanızı sağlar. Sol köşeli ayraçlarına göre ayırt edilen üç tür denetim bloğu vardır:
@@ -47,7 +47,7 @@ Denetim blokları çıktıyı değiştirmek için metin şablonunuza kod yazman�
 #>
 ```
 
- Düz metni `if` veya `for` gibi bir bileşik deyimin içine ekleyebilirsiniz. Örneğin, bu parça her döngü yinelemesinde bir çıkış satırı üretir:
+ Düz metni `if` veya `for`gibi bir bileşik deyimin içine ekleyebilirsiniz. Örneğin, bu parça her döngü yinelemesinde bir çıkış satırı üretir:
 
 ```
 <#
@@ -141,15 +141,15 @@ Some text.
 ```
 
 ## <a name="how-to-use-control-blocks"></a>Denetim bloklarını kullanma
- Tek bir şablonda tüm standart ve ifade denetim bloklardaki tüm kod (dahil edilen şablonlarda bulunan tüm kodlar dahil) oluşturulan kodun `TransformText()` yöntemini biçimlendirmek için birleştirilir. (@No__t_0 yönergesiyle diğer metin şablonlarını dahil etme hakkında daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).)
+ Tek bir şablonda tüm standart ve ifade denetim bloklardaki tüm kod (dahil edilen şablonlarda bulunan tüm kodlar dahil) oluşturulan kodun `TransformText()` yöntemini biçimlendirmek için birleştirilir. (`include` yönergesiyle diğer metin şablonlarını dahil etme hakkında daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).)
 
  Denetim bloklarını kullanırken aşağıdaki noktaları göz önünde bulundurmanız gerekir:
 
-- **Dildir.** Bir metin şablonunda ya C# da Visual Basic kodu kullanabilirsiniz. Varsayılan dil C#, ancak `template` yönergesinin `language` parametresiyle Visual Basic belirtebilirsiniz. (@No__t_0 yönergesi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).)
+- **Dili.** Bir metin şablonunda ya C# da Visual Basic kodu kullanabilirsiniz. Varsayılan dil C#, ancak `template` yönergesinin `language` parametresiyle Visual Basic belirtebilirsiniz. (`template` yönergesi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).)
 
      Denetim bloklarından kullandığınız dilin bir metin şablonunda oluşturduğunuz dilin veya biçimdeki herhangi bir şey yoktur. Visual Basic kodu kullanarak C# oluşturabilir veya bunun tersini yapabilirsiniz.
 
-     @No__t_0 yönergesine dahil ettiğiniz tüm metin şablonları dahil olmak üzere, belirli bir metin şablonunda yalnızca bir dil kullanabilirsiniz.
+     `include` yönergesine dahil ettiğiniz tüm metin şablonları dahil olmak üzere, belirli bir metin şablonunda yalnızca bir dil kullanabilirsiniz.
 
 - **Yerel değişkenler.** Bir metin şablonundaki standart ve ifade denetim bloklarının tüm kodları tek bir yöntem olarak oluşturulduğundan, yerel değişkenlerin adlarıyla hiçbir çakışma olmadığından emin olmanız gerekir. Diğer metin şablonlarını dahil ediyorsanız, değişken adlarının dahil edilen tüm şablonlar genelinde benzersiz olduğundan emin olmanız gerekir. Bunu sağlamanın bir yolu, bildirildiği metin şablonunu tanımlayan her yerel değişken adına bir dize eklemektir.
 

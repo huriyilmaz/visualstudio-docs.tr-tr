@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 - stories
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68aa46b3dc07813b73921b8acb5970289c30aecc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658408"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590247"
 ---
 # <a name="model-user-requirements"></a>Kullanıcı gereksinimlerini modelleme
 
@@ -72,7 +72,7 @@ Buradaki seçim, gereksinimlerin nasıl tanımladığına ilişkin olduğunu ve 
 
 Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
-|Hakkında bilgi edinmek için|Oku|
+|Hakkında bilgi edinmek için|Okuma|
 |-|-|
 |İş kurallarına uygun kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
@@ -84,7 +84,7 @@ Hizmet gereksinimi kalitesi için çeşitli kategoriler vardır. Bunlar aşağı
 
 - Güvenlik
 
-- Stillerin
+- Kullanılabilirlik
 
 - Güvenilirlik
 

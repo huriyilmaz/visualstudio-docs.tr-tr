@@ -15,17 +15,17 @@ helpviewer_keywords:
 - dependency graphs, customizing
 - graph documents, grouping nodes
 - dependency graphs, assigning categories and properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ace7da233f135aa795d73d43a5e10e411c0d646f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2b79fd73713de535c11062fd6396abde6b1a0131
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748476"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590520"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML dosyalarını düzenleyerek kod haritalarını özelleştirme
 
@@ -43,11 +43,11 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. Bir kod öğesini bir gruba dönüştürmek için, bu kod öğesi için `<Node/>` öğesini bulun.
 
-    \- veya-
+    \- veya -
 
     Yeni bir grup eklemek için `<Nodes>` bölümünü bulun. Yeni bir `<Node/>` öğesi ekleyin.
 
-3. @No__t_0 öğesinde, grubun genişletilmiş mı yoksa daraltılmış mi göründüğünü belirtmek için bir `Group` özniteliği ekleyin. Örneğin:
+3. `<Node/>` öğesinde, grubun genişletilmiş mı yoksa daraltılmış mi göründüğünü belirtmek için bir `Group` özniteliği ekleyin. Örneğin:
 
    ```xml
    <Nodes>
@@ -56,7 +56,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
    </Nodes>
    ```
 
-4. @No__t_0 bölümünde, bir grup kodu öğesi ve onun alt kod öğeleri arasındaki her ilişki için aşağıdaki özniteliklere sahip bir `<Link/>` öğesinin bulunduğundan emin olun:
+4. `<Links>` bölümünde, bir grup kodu öğesi ve onun alt kod öğeleri arasındaki her ilişki için aşağıdaki özniteliklere sahip bir `<Link/>` öğesinin bulunduğundan emin olun:
 
    - Grup Kodu öğesini belirten bir `Source` özniteliği
 
@@ -75,14 +75,14 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
    </Links>
    ```
 
-    @No__t_0 özniteliği hakkında daha fazla bilgi için bkz. [kod öğelerine ve bağlantılarına kategori atama](#AssignCategories).
+    `Category` özniteliği hakkında daha fazla bilgi için bkz. [kod öğelerine ve bağlantılarına kategori atama](#AssignCategories).
 
 ## <a name="ChangeGraphStyle"></a>Haritanın stilini değiştirme
  Haritanın. dgml dosyasını düzenleyerek haritanın arka plan rengini ve kenarlık rengini değiştirebilirsiniz. Kod öğelerinin ve bağlantıların stilini değiştirmek için bkz. [kod öğelerinin ve bağlantılarının stilini değiştirme](#Highlight).
 
 1. . Dgml dosyasını bir metin veya XML düzenleyicisinde açın.
 
-2. @No__t_0 öğesinde, stilini değiştirmek için aşağıdaki özniteliklerin herhangi birini ekleyin:
+2. `<DirectedGraph>` öğesinde, stilini değiştirmek için aşağıdaki özniteliklerin herhangi birini ekleyin:
 
      Arka plan rengi
 
@@ -187,7 +187,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
     Style="Glass"
     ```
 
-     - veya
+     - veya -
 
     ```xml
     Style="Plain"
@@ -216,7 +216,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. Hem kaynak kodu öğesinin hem de hedef kod öğesinin adlarını içeren `<Link/>` öğesini bulun.
 
-3. @No__t_0 öğesinde, stilini özelleştirmek için aşağıdaki özniteliklerin herhangi birini ekleyin:
+3. `<Link/>` öğesinde, stilini özelleştirmek için aşağıdaki özniteliklerin herhangi birini ekleyin:
 
      Anahat ve ok ucu rengi
 
@@ -250,7 +250,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. Bir `<Styles></Styles>` öğesi yoksa, `<Links></Links>` öğeden sonra `<DirectedGraph></DirectedGraph>` öğesinin altına bir tane ekleyin.
 
-3. @No__t_0 öğesinde, `<Style/>` öğesi altında ve aşağıdaki öznitelikleri belirtin:
+3. `<Styles></Styles>` öğesinde, `<Style/>` öğesi altında ve aşağıdaki öznitelikleri belirtin:
 
    - `TargetType="Node` &#124; `Link | Graph"`
 
@@ -264,7 +264,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 1. . Dgml dosyasını bir metin veya XML düzenleyicisinde açın.
 
-2. @No__t_0 öğesinde, Boole değeri döndüren bir ifade belirtmek için `Expression` özniteliği içeren bir `<Condition/>` öğesi ekleyin.
+2. `<Style/>` öğesinde, Boole değeri döndüren bir ifade belirtmek için `Expression` özniteliği içeren bir `<Condition/>` öğesi ekleyin.
 
     Örneğin:
 
@@ -272,13 +272,13 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
    <Condition Expression="MyCategory"/>
    ```
 
-    - veya
+    - veya -
 
    ```xml
    <Condition Expression="MyCategory > 100"/>
    ```
 
-    - veya
+    - veya -
 
    ```xml
    <Condition Expression="HasCategory('MyCategory')"/>
@@ -286,33 +286,33 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
     Bu ifade aşağıdaki Backus-Naur Form (BNF) sözdizimini kullanır:
 
-    \<Expression >:: = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "(" \<Expression > ")" &#124; \<MemberBindings > &#124; \<Literal > &#124; 1Number >
+    \<Ifade >:: = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "("\<Expression > ")" &#124; \<Memberbindings &#124; > \<sabit > &#124; \<sayı >
 
-    \<BinaryExpression >:: = \<Expression > \<Operator > \<Expression >
+    \<BinaryExpression >:: = \<Ifade > \<Işleç > \<Ifade >
 
-    \<UnaryExpression >:: = "!"  \<Expression > &#124; "+" \<Expression > &#124; "-" \<Expression >
+    \<UnaryExpression >:: = "!" \<Ifadesi > &#124; "+" \<Expression > &#124; "-" \<ifadesi >
 
-    \<Operator >:: = "<" &#124; "\< =" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "veya" &#124; "ve" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
+    \<işleci >:: = "<" &#124; "\<=" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "veya" &#124; "ve" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
 
-    \<MemberBindings >:: = \<MemberBindings > &#124; \<MemberBinding > "."  \<MemberBinding >
+    \<MemberBindings >:: = \<MemberBindings > &#124; \<MemberBinding > "." \<MemberBinding >
 
-    \<MemberBinding >:: = \<MethodCall > &#124; \<PropertyGet >
+    \<MemberBinding >:: = \<MethodCall > &#124; \<propertyget >
 
-    \<MethodCall >:: = \<Identifier > "(" \<MethodArgs > ")"
+    \<MethodCall >:: = \<tanımlayıcı > "(" \<Methodarg > ")"
 
     \<PropertyGet >:: = tanımlayıcı
 
-    \<MethodArgs >:: = \<Expression > &#124; \<Expression > "," \<MethodArgs > &#124; \<empty >
+    \<Methodarg >:: = \<Ifadesi > &#124; \<Expression > "," \<MethodArgs > &#124; boş \<
 
     \<tanımlayıcı >:: = [^. ]*
 
-    \<Literal >:: = tek veya çift tırnaklı dize sabit değeri
+    \<değişmez >:: = tek veya çift tırnaklı dize sabit değeri
 
     \<Number >:: = isteğe bağlı ondalık noktalı basamaklar dizesi
 
     Stili uygulamak için tümü doğru olması gereken birden çok `<Condition/>` öğesi belirtebilirsiniz.
 
-3. @No__t_0 öğeden sonraki satırda, bir veya daha fazla `<Setter/>` öğesi ekleyerek bir `Property` özniteliği, bir sabit `Value` özniteliği veya eşleme, kod öğeleri için bir hesaplanmış `Expression` özniteliği belirtin ya da koşulu karşılayan bağlantılar.
+3. `<Condition/>` öğeden sonraki satırda, bir veya daha fazla `<Setter/>` öğesini, bir `Property` özniteliği ve bir sabit `Value` özniteliği veya bir eşleme, kod öğeleri veya koşulu karşılayan bağlantılara uygulamak için bir hesaplanmış `Expression` özniteliği belirtmek üzere ekleyin.
 
     Örneğin:
 
@@ -320,7 +320,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
    <Setter Property="BackGround" Value="Green"/>
    ```
 
-   Basit bir örnek olarak, aşağıdaki koşul, `Passed` kategorisinin `True` veya `False` olarak ayarlanmış olup olmadığına bağlı olarak bir kod öğesinin yeşil veya kırmızı göründüğünü belirtir:
+   Basit bir örnek olarak, aşağıdaki koşul, `Passed` kategorisinin `True` veya `False`olarak ayarlanmış olup olmadığına bağlı olarak bir kod öğesinin yeşil veya kırmızı göründüğünü belirtir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -346,7 +346,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
  Aşağıdaki tabloda kullanabileceğiniz bazı örnek koşullar bulunmaktadır:
 
- Yazı tipi boyutunu kod satırı sayısının bir işlevi olarak ayarlayın, bu da kod öğesinin boyutunu da değiştirir. Bu örnek, `FontSize` ve `FontFamily` birden çok özellik ayarlamak için tek bir koşullu ifade kullanır.
+ Yazı tipi boyutunu kod satırı sayısının bir işlevi olarak ayarlayın, bu da kod öğesinin boyutunu da değiştirir. Bu örnek, `FontSize` ve `FontFamily`birden çok özellik ayarlamak için tek bir koşullu ifade kullanır.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -373,11 +373,11 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
  Bu örnekte:
 
-1. @No__t_0 > 80 ise `Background` özelliğini yeşil olarak ayarlayın.
+1. `Coverage` > 80 ise `Background` özelliğini yeşil olarak ayarlayın.
 
 2. Değilse, `Coverage` > 50 ise, `Coverage` özelliğinin değerine bağlı olarak `Background` özelliğini turuncu bir gölgeye ayarlayın.
 
-3. @No__t_0 özelliğini, `Coverage` özelliğinin değerine göre kırmızı bir gölgeye ayarlayın.
+3. `Background` özelliğini, `Coverage` özelliğinin değerine göre kırmızı bir gölgeye ayarlayın.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -464,7 +464,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. Hem kaynak kodu öğesinin hem de hedef kod öğesinin adlarını içeren `<Link/>` öğesini bulun.
 
-3. @No__t_0 öğesinde, özelliğin adını ve değerini belirtin. Örneğin:
+3. `<Node/>` öğesinde, özelliğin adını ve değerini belirtin. Örneğin:
 
     ```xml
     <Links>
@@ -489,7 +489,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 - İstediğiniz kod öğesi için `<Node/>` öğesini bulun.
 
-- @No__t_0 öğesinde kategorinin adını belirtmek için bir `Category` özniteliği ekleyin. Örneğin:
+- `<Node/>` öğesinde kategorinin adını belirtmek için bir `Category` özniteliği ekleyin. Örneğin:
 
     ```xml
     <Nodes>
@@ -511,7 +511,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. Hem kaynak kodu öğesinin hem de hedef kod öğesinin adlarını içeren `<Link/>` öğesini bulun.
 
-3. @No__t_0 öğesinde kategorinin adını belirtmek için bir `Category` özniteliği ekleyin. Örneğin:
+3. `<Link/>` öğesinde kategorinin adını belirtmek için bir `Category` özniteliği ekleyin. Örneğin:
 
     ```xml
     <Links>
@@ -549,10 +549,10 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
     </Categories>
     ```
 
-     Bu örnekte, `MyFirstNode` arka planı yeşildir çünkü `Category` özniteliği `MyParentCategory` `Background` özniteliğini devralır.
+     Bu örnekte, `MyFirstNode` arka planı yeşildir çünkü `Category` özniteliği `MyParentCategory``Background` özniteliğini devralır.
 
 ## <a name="AddReferences"></a>Belge veya URL 'Leri kod öğelerine ve bağlantılarına bağlama
- Harita. dgml dosyasını düzenleyerek veya bir bağlantı için bir kod `<Link/>` öğesi için `<Node/>` öğesine bir `Reference` özniteliği ekleyerek, belge veya URL 'Leri kod öğelerine veya bağlantılara bağlayabilirsiniz. Daha sonra bu içeriği kod öğesinden veya bağlantıdan açabilir ve görüntüleyebilirsiniz. @No__t_0 özniteliği bu içeriğin yolunu belirtir. Bu, .dgml dosya konumu veya mutlak yol ile göreli bir yol olabilir.
+ Harita. dgml dosyasını düzenleyerek veya bir bağlantı için bir kod `<Link/>` öğesi için `<Node/>` öğesine bir `Reference` özniteliği ekleyerek, belge veya URL 'Leri kod öğelerine veya bağlantılara bağlayabilirsiniz. Daha sonra bu içeriği kod öğesinden veya bağlantıdan açabilir ve görüntüleyebilirsiniz. `Reference` özniteliği bu içeriğin yolunu belirtir. Bu, .dgml dosya konumu veya mutlak yol ile göreli bir yol olabilir.
 
 > [!CAUTION]
 > Göreli yollar kullanıyorsanız ve .dgml dosyası farklı bir konuma taşınırsa, bu yollar artık çözümlenmez. Bağlantılı içeriği açmaya ve görüntülemeye çalıştığınızda, içeriğin görüntülenemediğini bildiren bir hata ortaya çıkar.
@@ -577,7 +577,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
     Tek bir kod öğesi
 
-   - @No__t_0 veya `<Link/>` öğesinde, kod öğesinin konumunu belirtmek için bir `Reference` özniteliği ekleyin.
+   - `<Node/>` veya `<Link/>` öğesinde, kod öğesinin konumunu belirtmek için bir `Reference` özniteliği ekleyin.
 
      > [!NOTE]
      > Öğe başına yalnızca bir `Reference` özniteliğine sahip olabilirsiniz.
@@ -595,15 +595,15 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
     Birden çok kod öğesi
 
-   1. @No__t_0 veya `<Link/>` öğesinde, her başvurunun konumunu belirtmek için yeni bir öznitelik ekleyin.
+   1. `<Node/>` veya `<Link/>` öğesinde, her başvurunun konumunu belirtmek için yeni bir öznitelik ekleyin.
 
-   2. @No__t_0 bölümünde:
+   2. `<Properties>` bölümünde:
 
       1. Her yeni başvuru türü için `<Property/>` öğesi ekleyin.
 
-      2. @No__t_0 özniteliğini yeni başvuru özniteliğinin adı olarak ayarlayın.
+      2. `Id` özniteliğini yeni başvuru özniteliğinin adı olarak ayarlayın.
 
-      3. @No__t_0 özniteliğini ekleyin ve başvuruyu kod öğesinin **başvuruya git** kısayol menüsünde görünmesini sağlamak için `True` olarak ayarlayın.
+      3. `IsReference` özniteliğini ekleyin ve başvuruyu kod öğesinin **başvuruya git** kısayol menüsünde görünmesini sağlamak için `True` olarak ayarlayın.
 
       4. Kod öğesinin **başvuruya git** kısayol menüsünde görüntü metnini belirtmek için `Label` özniteliğini kullanın.
 
@@ -623,7 +623,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 4. Başvuru içindeki dizeyi yinelemek yerine birden çok başvuru tarafından kullanılan bir URL gibi ortak bir dize belirtmek için `ReferenceTemplate` özniteliğini kullanın.
 
-    @No__t_0 özniteliği başvurunun değeri için bir yer tutucu belirtir. Aşağıdaki örnekte, `ReferenceTemplate` özniteliğinde `{0}` yer tutucusu, `<Node/>` öğesindeki `MyFirstReference` ve `MySecondReference` özniteliklerinin bir tam yol oluşturacak şekilde yerine geçer:
+    `ReferenceTemplate` özniteliği başvurunun değeri için bir yer tutucu belirtir. Aşağıdaki örnekte, `ReferenceTemplate` özniteliğinde `{0}` yer tutucusu, `<Node/>` öğesindeki `MyFirstReference` ve `MySecondReference` özniteliklerinin bir tam yol oluşturacak şekilde yerine geçer:
 
    ```xml
    <Nodes>

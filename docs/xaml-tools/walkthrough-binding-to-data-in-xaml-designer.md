@@ -7,23 +7,23 @@ f1_keywords:
 dev_langs:
 - CSharp
 - VB
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 7aace70ce773c9051367bf88bea1d798eb069bcf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1abe14c443432d0da0ab0c53b33f9321034228be
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668624"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592933"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>İzlenecek yol: XAML Tasarımcısı’nda verilere bağlama
 
-XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak veri bağlama özelliklerini ayarlayabilirsiniz. Bu yönergedeki örnek, verileri bir denetime bağlamayı gösterir. Özellikle, izlenecek yol, `ItemCount` adlı bir [DependencyProperty](xref:Windows.UI.Xaml.DependencyProperty) 'ye sahip basit bir alışveriş sepeti sınıfının nasıl oluşturulacağını gösterir ve ardından `ItemCount` özelliğini bir [TextBlock](xref:Windows.UI.Xaml.Controls.TextBlock) denetiminin **Text** özelliğine bağlar.
+XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak veri bağlama özelliklerini ayarlayabilirsiniz. Bu yönergedeki örnek, verileri bir denetime bağlamayı gösterir. Özellikle, izlenecek yol, `ItemCount`adlı bir [DependencyProperty](xref:Windows.UI.Xaml.DependencyProperty) 'yi içeren basit bir alışveriş sepeti sınıfının nasıl oluşturulacağını gösterir ve sonra `ItemCount` özelliğini bir [TextBlock](xref:Windows.UI.Xaml.Controls.TextBlock) denetiminin **Text** özelliğine bağlar.
 
 ## <a name="to-create-a-class-to-use-as-a-data-source"></a>Veri kaynağı olarak kullanılacak bir sınıf oluşturmak için
 
-1. **Dosya** menüsünde, **Yeni** > **Proje**' yi seçin.
+1. Üzerinde **dosya** menüsünde seçin **yeni** > **proje**.
 
 1. **Yeni proje** iletişim kutusunda, **Visual C#**  veya **Visual Basic** düğümünü seçin, **Windows Masaüstü** düğümünü genişletin ve ardından **WPF uygulama** şablonunu seçin.
 
@@ -65,7 +65,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
    Bu kod, [PropertyMetadata](xref:Windows.UI.Xaml.PropertyMetadata) nesnesini kullanarak varsayılan öğe sayısı olarak 0 değerini ayarlar.
 
-1. **Dosya** menüsünde, **derleme** > **Build Solution**' ı seçin.
+1. **Dosya** menüsünde **derleme** > **Build Solution**öğesini seçin.
 
 ## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>ItemCount özelliğini bir TextBlock denetimine bağlamak için
 
@@ -73,7 +73,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 1. Araç kutusunda bir [kılavuz](xref:Windows.UI.Xaml.Controls.Grid) denetimi seçin ve forma ekleyin.
 
-1. @No__t_0 seçili olan Özellikler penceresi, **DataContext** özelliğinin yanındaki **Yeni** düğmesini seçin.
+1. `Grid` seçili olan Özellikler penceresi, **DataContext** özelliğinin yanındaki **Yeni** düğmesini seçin.
 
 1. **Nesne Seç** iletişim kutusunda, **tüm derlemeleri göster** onay kutusunun temizlenmiş olduğundan emin olun, **BindingTest** ad alanı altında **ShoppingCart** ' i seçin ve **Tamam** düğmesini seçin.
 
@@ -83,7 +83,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 1. **Araç kutusunda**, forma eklemek için bir `TextBlock` denetimi seçin.
 
-1. @No__t_0 denetimi seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretçisini seçin ve sonra **veri bağlama oluştur**' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
+1. `TextBlock` denetimi seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretçisini seçin ve sonra **veri bağlama oluştur**' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
 
 1. Veri bağlamayı oluştur iletişim kutusunda, **yol** kutusunda, **ItemCount: (Int32)** özelliğini seçin ve sonra **Tamam** düğmesini seçin.
 
@@ -93,7 +93,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 1. Uygulamayı çalıştırmak için **F5** tuşuna basın.
 
-     @No__t_0 denetim, varsayılan değer olan 0 değerini metin olarak göstermelidir.
+     `TextBlock` denetim, varsayılan değer olan 0 değerini metin olarak göstermelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

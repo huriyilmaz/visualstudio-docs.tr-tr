@@ -3,17 +3,17 @@ title: XML şeması oluşturma
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 1d6700a9-fd67-4794-8997-399589e99bec
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73563d732aab48192892794c15750bc9e5d3eb6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 857b75f22d45cbabc22062fd14b385e8f6ea5f14
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645959"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592782"
 ---
 # <a name="how-to-create-an-xml-schema-from-an-xml-document"></a>Nasıl yapılır: XML belgesinden XML şeması oluşturma
 
@@ -33,7 +33,7 @@ Oluşturulan şemalar, XML dosyası için IntelliSense sağlamak üzere kullanı
 
 1. Visual Studio 'da bir XML dosyası açın.
 
-2. Menü çubuğunda **XML**  > **şema oluştur**' u seçin.
+2. Menü çubuğunda **XML** > **şema oluştur**' u seçin.
 
    XML dosyasında bulunan her ad alanı için bir XML şeması belgesi oluşturulup açılır. Her şema geçici bir çeşitli dosya olarak açılır. Şemalar diske kaydedilebilir, projenize eklenebilir veya atılır.
 

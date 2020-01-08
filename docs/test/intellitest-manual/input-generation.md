@@ -4,31 +4,31 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Dynamic symbolic execution
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 26befe6612c874c2565e44459cc90fe980296137
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: e5a3248d3f081bcab08c08110d305f0aa6235817
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653181"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591612"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Dinamik sembolik yürütme kullanarak giriş oluşturma
 
-IntelliTest, programdaki dal koşullarını çözümleyerek [parametreli birim testleri](test-generation.md#parameterized-unit-testing) için girişler oluşturur. Test girdileri, programın yeni dallanma davranışlarını tetikleyebilecekleri ve bunlara göre seçilir. Analiz, artımlı bir işlemdir. Biçimsel test giriş parametreleri `I` üzerinde `q: I -> {true, false}` bir koşulu iyileştirir. `q` IntelliTest 'in zaten gözlemlediği davranışlar kümesini temsil eder. Başlangıçta, hiçbir şey gözlemlenmemiş olduğundan `q := false`.
+IntelliTest, programdaki dal koşullarını çözümleyerek [parametreli birim testleri](test-generation.md#parameterized-unit-testing) için girişler oluşturur. Test girdileri, programın yeni dallanma davranışlarını tetikleyebilecekleri ve bunlara göre seçilir. Analiz, artımlı bir işlemdir. Biçimsel test giriş parametreleri `I`üzerinde `q: I -> {true, false}` bir koşulu iyileştirir. `q` IntelliTest 'in zaten gözlemlediği davranışlar kümesini temsil eder. Başlangıçta, hiçbir şey gözlemlenmemiş olduğundan `q := false`.
 
 Döngünün adımları şunlardır:
 
 1. IntelliTest, bir [kısıtlama çözücü](#constraint-solver)kullanarak `q(i)=false` `i` girdileri belirler. Oluşturma ile, giriş `i` daha önce görülmeyen bir yürütme yolu alır. Başlangıçta bu, `i` herhangi bir giriş olabileceği anlamına gelir, çünkü henüz bir yürütme yolu bulunamamıştır.
 
-1. IntelliTest, seçili giriş `i` ile testi yürütür ve testin ve test altındaki programın yürütülmesini izler.
+1. IntelliTest, seçili giriş `i`ile testi yürütür ve testin ve test altındaki programın yürütülmesini izler.
 
 1. Yürütme sırasında program, programın tüm koşullu dallarıyla belirlenen belirli bir yolu alır. Yürütmeyi tespit eden tüm koşulların kümesine, biçimsel giriş parametreleri üzerinde `p: I -> {true, false}` koşul olarak yazılmış *yol koşulu*denir. IntelliTest bu koşulun gösterimini hesaplar.
 
-1. IntelliTest kümeleri `q := (q or p)`. Diğer bir deyişle, `p` tarafından temsil edilen yolu gördüğü olguyu kaydeder.
+1. IntelliTest kümeleri `q := (q or p)`. Diğer bir deyişle, `p`tarafından temsil edilen yolu gördüğü olguyu kaydeder.
 
 1. 1\. adıma gidin.
 
@@ -54,7 +54,7 @@ IntelliTest, [Z3](https://github.com/Z3Prover/z3/wiki) kısıtlaması çözücü
 Çalışma zamanı izlemenin yan etkisi olarak, IntelliTest dinamik kod kapsamı verilerini toplar.
 Bu *dinamik* olarak adlandırılır çünkü IntelliTest yalnızca yürütülen kodu bilir ve bu nedenle, diğer kapsam araçlarının genellikle yaptığı şekilde kapsama için mutlak değerler veremeyiz.
 
-Örneğin, IntelliTest dinamik kapsamı 5/10 temel bloklar olarak raporladığında, bu, analiz tarafından şimdiye kadar ulaşılan tüm yöntemlerin toplam blok sayısının (örneğin, bir içinde var olan tüm yöntemlerin aksine) ele alınmıştır. test edilen erleme) on ' dur.
+Örneğin, IntelliTest dinamik kapsamı 5/10 temel bloklar olarak raporladığında, bu, en fazla (test edilen derlemede bulunan tüm yöntemlerin aksine) en fazla bir çözümleme tarafından ulaşılan tüm yöntemlerin toplam blok sayısının on olduğu anlamına gelir.
 Daha sonra analizde daha erişilebilir yöntemler bulunduğundan, her ikisi de pay (Bu örnekteki 5) ve payda (10) artabilir.
 
 ## <a name="integers-and-floats"></a>Tamsayılar ve float
@@ -129,10 +129,10 @@ IntelliTest, ilginç program davranışlarını tetiklemek için gereken diziler
 
 [PexChoose](static-helper-classes.md#pexchoose) statik sınıfı, bir teste ek girişler elde etmek için kullanılabilir ve [parametreli modülleri](#parameterized-mocks)uygulamak için kullanılabilir.
 
-## <a name="got-feedback"></a>Geri bildirim alındı mı?
+## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
 
 Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
 
-## <a name="further-reading"></a>Daha fazla okuma
+## <a name="further-reading"></a>Daha fazla bilgi için
 
 * [Nasıl çalışır?](https://devblogs.microsoft.com/devops/smart-unit-tests-a-mental-model/)

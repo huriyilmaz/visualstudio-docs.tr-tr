@@ -4,17 +4,17 @@ titleSuffix: Blend for Visual Studio
 ms.date: 03/06/2018
 ms.topic: conceptual
 ms.assetid: 87d31b6c-4607-4121-bb7d-cfc80390ab93
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ed267391565012a65f14ce675131df79e39adc6
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: f273294d9da0c0cf71f96ae3bde8e5e0457259c9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919216"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592975"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Visual Studio için Blend verileri görüntüleme
 
