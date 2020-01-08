@@ -5,19 +5,19 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: doughall
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4e84704d4ca37dd9e36da3838b5b1b23f068568c
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 3ef0cf63f8063d543cbb8fb69a0588dc331e4c6a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888577"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590962"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Bakım temeli sırasında Visual Studio’yu güncelleştirme
 
@@ -35,7 +35,7 @@ Hizmet temeli seçeneği, geliştiricilere ve yöneticilere yeni küçük günce
 Bir hizmet temeli kullanmaya başlamak için, [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0)adresinden sabit sürümlü bir Visual Studio yükleyicisi önyükleyici indirin. Bootstrap'in bu belirli sürüme yönelik ürün yapılandırmalarına, iş yüklerine ve bileşenlerine bağlantıları vardır.
 
 > [!NOTE]
-> Sabit sürümlü önyükleyici ve standart bootstrapdenetleyicileri arasında ayrım yapmanız konusunda dikkatli olun. Standart bootstrapdenetleyicileri, Visual Studio 'nun en son sürümünü kullanacak şekilde yapılandırılmıştır. Standart önyükleyici, My.VisualStudio.com ' den İndirildiklerinde dosya adında bir sayı (örneğin, vs_enterprise__123456789-123456789. exe) vardır.
+> Sabit sürümlü önyükleyici ve standart bootstrapdenetleyicileri arasında ayrım yapmanız konusunda dikkatli olun. Standart bootstrapdenetleyicileri, Visual Studio 'nun en son sürümünü kullanacak şekilde yapılandırılmıştır. Standart önyükleyici, My.VisualStudio.com ' den İndirildiklerinde dosya adında bir sayı (örneğin, vs_enterprise__123456789 -123456789. exe) vardır.
 
 Yükleme sırasında, Kuruluş yöneticilerinin istemcilerinin en son sürüme güncelleştirilmesini engellemek için istemcilerini yapılandırması gerekir. Bunu yapmak için çeşitli yollar vardır:
 - [Yanıt yapılandırma dosyasında `channelUri` ayarını](update-servicing-baseline.md#install-a-servicing-baseline-on-a-network) , düzen veya yerel klasörde bir kanal bildirimi kullanacak şekilde değiştirin.
@@ -87,5 +87,5 @@ Internet tabanlı bir yüklemede, istemci üzerindeki var olmayan bir kanal bild
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
 * [Yanıt dosyasındaki ayarları tanımlama](automated-installation-with-response-file.md)
-* [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
+* [Ağ tabanlı Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
 * [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)

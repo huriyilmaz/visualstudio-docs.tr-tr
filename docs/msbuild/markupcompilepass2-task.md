@@ -11,48 +11,48 @@ helpviewer_keywords:
 - performing second-pass markup [WPF MSBuild], MarkupCompilePass2 task
 - MarkupCompilePass2 task [WPF MSBuild]
 - MarkupCompilePass2 task [WPF MSBuild], parameters
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d929abc6581bf77dfd6ff5cf8b23d450a78a6f6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f239670200a75dc3494b22b9a6aa761b1736119d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817367"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592223"
 ---
 # <a name="markupcompilepass2-task"></a>MarkupCompilePass2 görevi
 
-<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> Görevi gerçekleştiren ikinci geçiş işaretlemesi derleme üzerinde [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] başvuru türleri aynı projedeki dosyaları.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> görevi, aynı projedeki türlere başvuran [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] dosyalarında ikinci geçiş biçimlendirme derlemesini gerçekleştirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 | - | - |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | İsteğe bağlı **Boole** parametresi.<br /><br /> Ayrı bir görevin çalıştırılıp çalıştırılmayacağını belirtir <xref:System.AppDomain>. Bu parametre döndürürse **false**, görev aynı şekilde çalışır <xref:System.AppDomain> olarak [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)], ve daha hızlı çalışır. Parametre döndürürse **true**, görev, bir saniye içinde çalışır <xref:System.AppDomain> olan gelen yalıtılmış [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] ve daha yavaş çalışır. |
-| `AssembliesGeneratedDuringBuild` | İsteğe bağlı **String []** parametresi.<br /><br /> Derleme işlemi sırasında değiştirmek derlemelerin başvurularını belirtir. Örneğin, bir Visual Studio çözümü derlenmiş çıktısını başka bir projeye başvuran bir proje içerebilir. Bu durumda, ikinci projenizin derlenen Çıkışta eklenebilen **AssembliesGeneratedDuringBuild**.<br /><br /> Not: **AssembliesGeneratedDuringBuild** eksiksiz bir yapı çözümü tarafından oluşturulan derlemelere başvurular içermelidir. |
-| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Kısa bir proje için üretilen derleme adını belirtir. Örneğin, bir proje oluşturma bir [!INCLUDE[TLA#tla_win](../msbuild/includes/tlasharptla_win_md.md)] yürütülebilir dosya adı olan *WinExeAssembly.exe*, **AssemblyName** parametresinin değerini **WinExeAssembly**. |
-| `GeneratedBaml` | İsteğe bağlı **Itaskıtem []** çıkış parametresi.<br /><br /> Oluşturulan dosyaların listesini içeren [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimi. |
-| `KnownReferencePaths` | İsteğe bağlı **String []** parametresi.<br /><br /> Hiç derleme işlemi sırasında değiştirilen derlemelerin başvurularını belirtir. Bulunan derlemeleri içerir [!INCLUDE[TLA#tla_gac](../msbuild/includes/tlasharptla_gac_md.md)], bir [!INCLUDE[TLA#tla_netframewk](../misc/includes/tlasharptla_netframewk_md.md)] yükleme dizinini ve benzeri. |
-| `Language` | Gerekli **dize** parametresi.<br /><br /> Derleyici destekleyen yönetilen dilini belirtir. Geçerli seçenekler şunlardır **C#**, **VB**, **JScript**, ve **C++**. |
-| `LocalizationDirectivesToLocFile` | İsteğe bağlı **dize** parametresi.<br /><br /> Her kaynak için yerelleştirme bilgisi oluşturmak nasıl belirtir [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosya. Geçerli seçenekler şunlardır **hiçbiri**, **CommentsOnly**, ve **tüm**. |
-| `OutputPath` | Gerekli **dize** parametresi.<br /><br /> Dizini, belirtir oluşturulan [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimi dosyalar oluşturulur. |
-| `OutputType` | Gerekli **dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derleme türünü belirtir. Geçerli seçenekler şunlardır **winexe**, **exe**, **Kitaplığı**, ve **netmodule**. |
-| `References` | İsteğe bağlı **Itaskıtem []** parametresi.<br /><br /> Kullanılan türleri içeren derlemeler için başvurular dosyalarından listesini belirtir [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyaları. Bir başvurudur tarafından oluşturulan derlemeye <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> önce çalıştırılması gereken görev <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> görev. |
-| `RootNamespace` | İsteğe bağlı **dize** parametresi.<br /><br /> Projesi içinde olan sınıfları kök ad alanını belirtir. **RootNamespace** oluşturulmuş bir yönetilen kod varsayılan ad alanı olarak da kullanılan dosyası karşılık gelen [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosya içermez `x:Class` özniteliği. |
-| `XAMLDebuggingInformation` | İsteğe bağlı **Boole** parametresi.<br /><br /> Zaman **true**, tanılama bilgilerini oluşturulur ve derlenmiş dahil [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] hata ayıklama yardımcı olmak için. |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | İsteğe bağlı **Boolean** parametresi.<br /><br /> Görevin ayrı bir <xref:System.AppDomain>çalıştırıp çalıştıramayacağını belirtir. Bu parametre **false**döndürürse, görev [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)]ile aynı <xref:System.AppDomain> çalışır ve daha hızlı çalışır. Parametre **true**değerini döndürürse, görev [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] yalıtılmış ve daha yavaş çalışan ikinci bir <xref:System.AppDomain> çalışır. |
+| `AssembliesGeneratedDuringBuild` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında değişen derlemelere yönelik başvuruları belirtir. Örneğin, bir Visual Studio çözümü başka bir projenin derlenmiş çıktısına başvuran bir proje içerebilir. Bu durumda, ikinci projenin derlenmiş çıktısı **AssembliesGeneratedDuringBuild**' e eklenebilir.<br /><br /> Note: **AssembliesGeneratedDuringBuild** , derleme çözümü tarafından oluşturulan derlemelerin tamamına yönelik başvuruları içermelidir. |
+| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir. Örneğin, bir proje adı *WinExeAssembly. exe*olan [!INCLUDE[TLA#tla_win](../msbuild/includes/tlasharptla_win_md.md)] yürütülebilir bir dosya üretiyorsa, **AssemblyName** parametresinin değeri **WinExeAssembly**olur. |
+| `GeneratedBaml` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimdeki oluşturulan dosyaların listesini içerir. |
+| `KnownReferencePaths` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında hiçbir değişiklik olmayan derlemeler için başvuruları belirtir. [!INCLUDE[TLA#tla_gac](../msbuild/includes/tlasharptla_gac_md.md)], [!INCLUDE[TLA#tla_netframewk](../misc/includes/tlasharptla_netframewk_md.md)] yükleme dizininde bulunan derlemeler ve bu şekilde devam eder. |
+| `Language` | Gerekli **dize** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. Geçerli seçenekler, **C#** **vb**, **JScript**ve **C++** ' dir. |
+| `LocalizationDirectivesToLocFile` | İsteğe bağlı **dize** parametresi.<br /><br /> Her kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyası için yerelleştirme bilgilerinin nasıl oluşturulacağını belirtir. Geçerli seçenekler None, **CommentsOnly**ve **All** **'tur**. |
+| `OutputPath` | Gerekli **dize** parametresi.<br /><br /> Oluşturulan [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçim dosyalarının oluşturulduğu dizini belirtir. |
+| `OutputType` | Gerekli **dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derlemenin türünü belirtir. Geçerli seçenekler **winexe**, **exe**, **Library**ve **netmodule**' dir. |
+| `References` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Dosya [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarında kullanılan türleri içeren derlemelere ait başvuruların listesini belirtir. Bir başvuru, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> görevden önce çalıştırılması gereken <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> görevi tarafından oluşturulan derlemeye yönelik bir başvurudur. |
+| `RootNamespace` | İsteğe bağlı **dize** parametresi.<br /><br /> Projenin içindeki sınıfların kök ad alanını belirtir. **RootNamespace** , karşılık gelen [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyası `x:Class` özniteliğini içermiyorsa, oluşturulan bir yönetilen kod dosyasının varsayılan ad alanı olarak da kullanılır. |
+| `XAMLDebuggingInformation` | İsteğe bağlı **Boolean** parametresi.<br /><br /> **Doğru**olduğunda, hata ayıklamaya yardımcı olması için tanılama bilgileri oluşturulup derlenmiş [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] eklenir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Çalıştırmadan önce **MarkupCompilePass2**, tarafından kullanılan türler içeren geçici bir derleme oluşturmalıdır [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] , biçimlendirme derleme geçişi ertelenmiş dosyaları. Çalıştırarak geçici derlemesi oluştur **GenerateTemporaryTargetAssembly** görev.
+**MarkupCompilePass2**çalıştırmadan önce, biçimlendirme derleme geçişinin ertelenmesi olan [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyaları tarafından kullanılan türleri içeren geçici bir derleme oluşturmanız gerekir. **GenerateTemporaryTargetAssembly** görevini çalıştırarak geçici derlemeyi oluşturabilirsiniz.
 
-Oluşturulan geçici derlemesine bir başvuru için sağlanan <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> çalıştığında izin vererek [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] , derleme, ilk biçimlendirme derlemede ertelenmiş dosyaları geçirmek için ikili biçimi artık derlenecek.
+Oluşturulan geçici derlemeye bir başvuru, çalıştırıldığında <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> için verilmiştir ve derleme, ilk biçimlendirme derleme geçişinde, artık ikili biçime derlenmek üzere ertelenmiş [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalara izin verir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> ikinci gerçekleştirmek için görev derleme geçirin.
+Aşağıdaki örnek, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> görevinin ikinci bir pass derlemesini gerçekleştirmek için nasıl kullanılacağını gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -76,5 +76,5 @@ Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:Microsoft.Build.T
 - [WPF MSBuild görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [MSBuild görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Bir WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
 - [WPF XAML tarayıcı uygulamalarına genel bakış](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

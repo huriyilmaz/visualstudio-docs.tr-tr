@@ -1,33 +1,33 @@
 ---
-title: MSBuild toplu işleme | Microsoft Docs
+title: MSBuild Toplu Işleme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - batching [MSBuild]
 - MSBuild, batching
 ms.assetid: d35c085b-27b8-49d7-b6f8-8f2f3a0eec38
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22aa04bb41363eebc20257236515634f5e7e14ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d62e1824d72933d8cb5c3c345ed8788435a6f20
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931514"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592106"
 ---
-# <a name="msbuild-batching"></a>MSBuild toplu işleme
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] öğe listeleri farklı kategorileri veya toplu işlemi bölmek için özelliği, öğe meta verileri temel alarak ve bir hedef veya görevi, her batch ile bir kez çalıştırın.
+# <a name="msbuild-batching"></a>MSBuild Toplu işleme
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] öğe listesini, öğe meta verilerine göre farklı kategorilere veya toplu işlemlere bölebilir ve her Batch ile bir kez hedef veya görev çalıştırabilir.
 
-## <a name="task-batching"></a>Toplu Görev işlemede
-Toplu Görev işlemede öğe listeleri farklı yığınlara ayırmak ve bu toplu işlerin her bir görevle ayrı olarak geçirmek için bir yol sağlayarak proje dosyalarınızı basitleştirmek sağlar. Bu, bir proje dosyası yalnızca birkaç kez çalıştırılabilir olsa bile görev ve bir kez bildirilen özniteliklerini sahip olması gerektiğini anlamına gelir.
+## <a name="task-batching"></a>Görev toplu işleme
+Görev toplu işleme, öğe listelerini farklı toplu işlemlere bölmek ve bu toplu işlerin her birini ayrı bir göreve geçirmek için bir yol sağlayarak Proje dosyalarınızı basitleştirmenize olanak tanır. Bu, bir proje dosyasının, birkaç kez çalıştırılabilse de, yalnızca görevin ve özniteliklerinin bir kez bildirilmesine ihtiyaç duyacağı anlamına gelir.
 
-İstediğinizi belirtin [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevle kullanarak toplu işleme gerçekleştirmek için %(\<ItemMetaDataName >) görev özniteliklerinden biri olarak gösterimi. Aşağıdaki örnek böler `Example` toplu iş öğesi listesine dayalı `Color` öğesi meta veri değeri ve geçişleri her toplu `MyTask` ayrı olarak görev.
+Görev özniteliklerinden birindeki%(\<ItemMetaDataName >) gösterimini kullanarak bir görevle toplu işlem gerçekleştirmesini [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] istediğinizi belirtirsiniz. Aşağıdaki örnek, `Example` öğe listesini `Color` öğesi meta veri değerine göre toplu işlemlere böler ve toplu işlerin her birini `MyTask` görevine ayrı olarak geçirir.
 
 > [!NOTE]
-> Öğeyi listeden başka bir yerde görev öznitelikleri başvurmadığından veya meta veri adı belirsiz olabilir, kullanabileceğiniz %(\<ItemCollection.ItemMetaDataName >) için toplu işlem kullanma için öğe meta veri değeri tam olarak nitelemek için gösterimi.
+> Görev özniteliklerinin başka bir yerinde öğe listesine başvurmayın veya meta veri adı belirsiz olabilir, toplu işleme için kullanılacak öğe meta verileri değerini tamamen nitelemek için%(\<ItemCollection. ItemMetaDataName >) gösterimini kullanabilirsiniz.
 
 ```xml
 <Project
@@ -51,12 +51,12 @@ Toplu Görev işlemede öğe listeleri farklı yığınlara ayırmak ve bu toplu
 </Project>
 ```
 
-Toplu işlem daha ayrıntılı örnekler için bkz. [toplu görev işlemede öğe meta verileri](../msbuild/item-metadata-in-task-batching.md).
+Daha özel toplu işlem örnekleri için bkz. [görev toplu işleme Içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md).
 
-## <a name="target-batching"></a>Toplu hedef işlemede
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Hedef çalıştırılmadan önce giriş ve çıkışları bir hedefin güncel olup olmadığını denetler. Hem girişler ve çıkışlar güncel olduğundan, hedef atlandı. Toplu işlem, bir hedef içinde bir görevi kullanıyorsa, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] girişler ve çıkışlar öğelerinin her toplu iş için güncel olup olmadığını gerekiyor. Aksi takdirde, isabet her zaman hedef yürütülür.
+## <a name="target-batching"></a>Hedef toplu işleme
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], hedefin giriş ve çıkışları hedefi çalıştırmadan önce güncel olup olmadığını denetler. Hem giriş hem de çıkış güncel ise, hedef atlanır. Bir hedefin içindeki bir görev toplu işlem kullanıyorsa, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] her öğe için giriş ve çıktıların güncel olup olmadığını belirlemesi gerekir. Aksi takdirde, hedef her isabet edildiğinde yürütülür.
 
-Aşağıdaki örnekte gösterildiği bir `Target` öğesini içeren bir `Outputs` özniteliğini %(\<ItemMetaDataName >) gösterimi. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bölecek `Example` toplu iş öğesi listesine dayalı `Color` öğe meta verileri ve zaman damgaları ve çıkış dosyalarının her toplu iş için analiz edin. Bir toplu iş çıkışları güncel değilse, hedef çalıştırılır. Aksi takdirde, hedef atlandı.
+Aşağıdaki örnek,%(\<ItemMetaDataName >) gösterimiyle bir `Outputs` özniteliği içeren bir `Target` öğesini gösterir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], `Example` öğe listesini `Color` öğesi meta verileri temelinde toplu işlemlere böler ve her toplu iş için çıkış dosyalarının zaman damgalarını analiz eder. Bir toplu işteki çıktılar güncel değilse, hedef çalıştırılır. Aksi takdirde, hedef atlanır.
 
 ```xml
 <Project
@@ -82,25 +82,25 @@ Aşağıdaki örnekte gösterildiği bir `Target` öğesini içeren bir `Outputs
 </Project>
 ```
 
-Toplu hedef işlemede başka bir örnek için bkz. [toplu hedef işlemede öğe meta verileri](../msbuild/item-metadata-in-target-batching.md).
+Hedef toplu işleme bir örnek için bkz. [hedef toplu işleme Içindeki öğe meta verileri](../msbuild/item-metadata-in-target-batching.md).
 
-## <a name="property-functions-using-metadata"></a>Meta verileri kullanarak özellik işlevleri
-Toplu işleme, meta verileri içeren özellik işlevleri tarafından denetlenebilir. Örneğin,
+## <a name="property-functions-using-metadata"></a>Meta verileri kullanan özellik işlevleri
+Toplu işlem, meta veri içeren özellik işlevleri tarafından denetlenebilir. Örneğin,
 
 `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`
 
-kullanan <xref:System.IO.Path.Combine%2A> bir kök klasör yolu derleme öğe yolu ile birleştirilecek.
+bir kök klasör yolunu derleme öğesi yoluyla birleştirmek için <xref:System.IO.Path.Combine%2A> kullanır.
 
-Özellik işlevleri içindeki meta veri değerleri görünmeyebilir. Örneğin,
+Özellik işlevleri, meta veri değerleri içinde görünmeyebilir. Örneğin,
 
 `%(Compile.FullPath.Substring(0,3))`
 
 izin verilmiyor.
 
-Özellik işlevleri hakkında daha fazla bilgi için bkz: [özellik işlevleri](../msbuild/property-functions.md).
+Özellik işlevleri hakkında daha fazla bilgi için bkz. [özellik işlevleri](../msbuild/property-functions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Itemmetadata öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
+- [ItemMetadata öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md)

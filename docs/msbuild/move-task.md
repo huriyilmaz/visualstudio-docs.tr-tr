@@ -1,5 +1,5 @@
 ---
-title: Taşıma görevi | Microsoft Docs
+title: Görevi taşı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,38 +11,38 @@ helpviewer_keywords:
 - MSBuild, Move task
 - Move task [MSBuild]
 ms.assetid: d1405347-1309-4f18-b565-905408093d59
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc2e11a1466f359cebb60505f498c0df3ae6c45b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8adfa75964959e2cce61779914a52f03319ed314
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817528"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592145"
 ---
 # <a name="move-task"></a>Taşıma görevi
-Dosyalarını yeni konuma taşır.
+Dosyaları yeni bir konuma taşıın.
 
 ## <a name="parameters"></a>Parametreler
- Parametreleri aşağıdaki tabloda açıklanmıştır `Move` görev.
+ Katlama tablosu `Move` görevin parametrelerini açıklar.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DestinationFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Kaynak dosyaların dosyaların listesini belirtir. Bu liste belirtilen listesine bire bir eşleme olması beklenir `SourceFiles` parametresi. Diğer bir deyişle, belirtilen ilk dosya `SourceFiles` içinde belirtilen ilk konuma taşınır `DestinationFiles`ve böyle devam eder.|
+|`DestinationFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Kaynak dosyaların taşınacağı dosyaların listesini belirtir. Bu listenin `SourceFiles` parametresinde belirtilen listeye bire bir eşleme olması beklenir. Diğer bir deyişle, `SourceFiles` belirtilen ilk dosya `DestinationFiles`belirtilen ilk konuma taşınır ve bu şekilde devam eder.|
 |`DestinationFolder`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Dosyaları taşımak istediğiniz dizini belirtir.|
-|`MovedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Başarıyla taşındı öğeleri içerir.|
-|`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, salt okunur dosyalar işaretlenmiş olsa bile dosyaların üzerine yazar.|
-|`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dosyaların belirtir.|
+|`MovedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Başarıyla taşınan öğeleri içerir.|
+|`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, salt okuma dosyaları olarak işaretlenseler bile dosyaların üzerine yazar.|
+|`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Taşınacak dosyaları belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Her iki `DestinationFolder` parametresi veya `DestinationFiles` parametresi belirtilen, ancak ikisi birden değil olmalıdır. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
+ `DestinationFolder` parametresi ya da `DestinationFiles` parametresi belirtilmelidir, ikisi birden belirtilmemelidir. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
 
- `Move` Görev istenen hedef dosyaları için gerekli klasörler oluşturur.
+ `Move` görev, istenen hedef dosyalar için gereken klasörleri oluşturur.
 
- Tabloda listelenen parametreleri sahip olmaya ek olarak, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension taban sınıfı](../msbuild/taskextension-base-class.md).
+ Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görevler](../msbuild/msbuild-tasks.md)

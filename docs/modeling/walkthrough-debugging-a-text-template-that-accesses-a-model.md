@@ -2,17 +2,17 @@
 title: 'İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 344a9331ed63d2da27379770305905ecf5edee77
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f592cfbd46e0f4fc3a64ecaabadf17a6754480c0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666954"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593531"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama
 Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken veya eklediğinizde, motor şablonu kaynak koda dönüştürdiğinde veya üretilen kodu derlediğinde hata alabilirsiniz. Aşağıdaki kılavuzda, bir metin şablonunda hata ayıklamak için yapabileceğiniz bazı şeyler gösterilmektedir.
@@ -42,10 +42,10 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
 2. Hata ayıklama projesine `DebugTest.tt` adlı bir metin dosyası ekleyin.
 
-3. DebugTest.tt öğesinin **özel araç** özelliğinin `TextTemplatingFileGenerator` olarak ayarlandığından emin olun.
+3. DebugTest.tt öğesinin **özel araç** özelliğinin `TextTemplatingFileGenerator`olarak ayarlandığından emin olun.
 
 ## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Bir metin şablonundan bir modele erişen hata ayıklama yönergeleri
- Bir metin şablonundaki deyimlerden ve ifadelerden bir modele erişebilmek için önce oluşturulan bir yönerge işlemcisini çağırmanız gerekir. Oluşturulan yönerge işlemcisini çağırmak, modelinizdeki sınıfları metin şablonu kodu özelliği olarak kullanılabilir hale getirir. Daha fazla bilgi için bkz. [metin şablonlarından modellere erişme](../modeling/accessing-models-from-text-templates.md).
+ Bir metin şablonundaki deyimlerden ve ifadelerden bir modele erişebilmek için önce oluşturulan bir yönerge işlemcisini çağırmanız gerekir. Oluşturulan yönerge işlemcisini çağırmak, modelinizdeki sınıfları metin şablonu kodu özelliği olarak kullanılabilir hale getirir. Daha fazla bilgi için [metin şablonlarından modellere erişme](../modeling/accessing-models-from-text-templates.md).
 
  Aşağıdaki yordamlarda yanlış yönerge adı ve yanlış özellik adı hatalarını ayıklayacaksınız.
 
@@ -97,7 +97,7 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
 3. Koda gitmek için **hata listesi** penceresindeki hataya çift tıklayın.
 
-4. Kodu düzeltmek için yönerge adını `DebuggingTestLanguage` olarak değiştirin.
+4. Kodu düzeltmek için yönerge adını `DebuggingTestLanguage`olarak değiştirin.
 
      Değişiklik vurgulanır.
 
@@ -157,11 +157,11 @@ Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken vey
 
      (C#)
 
-     **Dönüştürme derleniyor: Microsoft. VisualStudio. Textşablon \<GUID >. GeneratedTextTransformation ', ' ExampleModel ' için bir tanım içermiyor**
+     **Dönüştürme derleniyor: Microsoft. VisualStudio. Textşablon\<GUID >. GeneratedTextTransformation ', ' ExampleModel ' için bir tanım içermiyor**
 
      (Visual Basic)
 
-     **Dönüştürme derleniyor: ' ExampleModel ', ' Microsoft. VisualStudio. Textşablon \<GUID > üyesi değil. GeneratedTextTransformation'.**
+     **Dönüştürme derleniyor: ' ExampleModel ', ' Microsoft. VisualStudio. Textşablon\<GUID > üyesi değil. GeneratedTextTransformation'.**
 
      Bu durumda, metin şablonu kodu yanlış bir özellik adı içerir. Özellik adı olarak `ExampleModel` belirttiniz, ancak doğru özellik adı `LibraryModel`. Doğru özellik adını aşağıdaki kodda gösterildiği gibi, sağlar parametresinde bulabilirsiniz:
 

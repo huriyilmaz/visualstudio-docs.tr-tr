@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d24a2ea1b614cb0ca82bdcf1c4954aba9a9174c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: ff583874778a2f1affd589ef260c6b9eac6b5d06
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984414"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593515"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Metin Şablonları kullanarak Kod Oluşturma
 
@@ -99,7 +99,7 @@ Bu dosyanın amacı, uygulamanızın okuyabilmesini istediğiniz XML düğüm t�
 
 3. Örnek içeriğinizi dosyaya ekleyin.
 
-4. Bu izlenecek yol için `exampleXml.xml` dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
+4. Bu izlenecek yol için `exampleXml.xml`dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
 
 ### <a name="add-a-test-code-file"></a>Test kodu dosyası Ekle
 
@@ -138,7 +138,7 @@ Bir metin şablonu dosyası ekleyin ve çıktı uzantısını *. cs*olarak ayarl
     > [!NOTE]
     > Önceden Işlenmiş bir metin şablonu değil, bir metin şablonu eklediğinizden emin olun.
 
-3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini `true` olarak değiştirin.
+3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini `true`olarak değiştirin.
 
      Bu değişiklik, şablon kodunun Visual Studio hizmetlerine erişim elde etmesine imkan sağlar.
 
@@ -197,7 +197,7 @@ XML dosyasını okumak ve sınıf bildirimleri oluşturmak için şablon içeri�
 
 Dosya yolunu, projeniz için doğru yol ile değiştirin.
 
-Kod bloğu sınırlayıcılarının `<#...#>` dikkat edin. Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` bir dizeye değerlendirilebilen bir ifadenin ayracı.
+Kod bloğu sınırlayıcılarının `<#...#>`dikkat edin. Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` bir dizeye değerlendirilebilen bir ifadenin ayracı.
 
 Uygulamanız için kaynak kodu üreten bir şablon yazarken, iki ayrı program metni ile ilgilenolursunuz. Kod bloğu sınırlayıcılarının içindeki program, şablonu her kaydettiğinizde veya odağı başka bir pencereye taşıdığınızda çalışır. Oluşturduğu metin, sınırlayıcılar dışında görünen metin oluşturulan dosyaya kopyalanır ve uygulama kodunuzun bir parçası haline gelir.
 
@@ -426,7 +426,7 @@ Bu kılavuzda, program kodu aslında modelin bir örneğinden oluşturulur ve uy
 
 ## <a name="troubleshoot-the-text-template"></a>Metin şablonunda sorun giderme
 
-**Hata listesi**şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform ile dosya oluşturma bölümünde açıklanan tekniklerle ilgili sorunları giderebilirsiniz Yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md).
+**Hata listesi**şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)bölümünde açıklanan tekniklerle sorun giderebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

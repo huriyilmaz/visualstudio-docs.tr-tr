@@ -4,17 +4,17 @@ ms.date: 04/29/2019
 ms.topic: reference
 helpviewer_keywords:
 - roslyn package versions
-author: jillre
-ms.author: jillfra
+author: madskristensen
+ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1965b0a2aa4b87dacee6f7cd1e1d2d7bc5c36819
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9c05b9533461cbf233c2e5fd323f3723f7fc6bec
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647932"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590793"
 ---
 # <a name="net-compiler-platform-package-version-reference"></a>.NET derleyicisi platform paketi sürüm başvurusu
 
@@ -28,8 +28,8 @@ Aşağıdaki tabloda, Visual Studio 'nun farklı sürümleri için hangi [.NET d
 | 2.10.0 | Visual Studio 2017 sürüm 15,9 |
 | 2.9.0 | Visual Studio 2017 sürüm 15,8 |
 | 2.8.2 | Visual Studio 2017 sürüm 15,7 |
-| 2.7.0 | Visual Studio 2017 sürüm 15,6 |
-| 2.6.1 | Visual Studio 2017 sürüm 15,5 |
+| 2.7.0 | Visual Studio 2017 sürüm 15.6 |
+| 2.6.1 | Visual Studio 2017 sürüm 15.5 |
 | 2.4.0 | Visual Studio 2017 sürüm 15,4 |
 | 2.3.2 | Visual Studio 2017 sürüm 15,3 |
 | 2.2.0 | Visual Studio 2017 sürüm 15,2 |

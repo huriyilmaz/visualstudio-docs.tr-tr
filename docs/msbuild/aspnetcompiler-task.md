@@ -1,5 +1,5 @@
 ---
-title: ASP.NET uygulamaları derleneceği AspNetCompiler görevi kullanılarak | Microsoft Docs
+title: ASP.NET uygulamalarını önceden derlemek için AspNetCompiler görevi kullanma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,46 +13,46 @@ helpviewer_keywords:
 - MSBuild, AspNetCompiler task
 - AspNetCompiler task [MSBuild]
 ms.assetid: f811c019-a67b-4d54-82e6-e29549496f6e
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 90b9111d8d8ae78e5b937942df32fb84c97355fa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a6535dbec7c09f0888d0fb29a2e6b801632da22f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945433"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593466"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler görevi
-`AspNetCompiler` Görev sarar *aspnet_compiler.exe*, önceden derlemek için bir yardımcı program [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamalar.
+`AspNetCompiler` görev, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamaları önceden derlemeye yönelik bir yardımcı program olan *aspnet_compiler. exe*' yi sarmalanmış.
 
 ## <a name="task-parameters"></a>Görev parametreleri
-Parametreleri aşağıdaki tabloda açıklanmıştır `AspNetCompiler` görev.
+Aşağıdaki tabloda `AspNetCompiler` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AllowPartiallyTrustedCallers`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, tanımlayıcı ad bütünleştirilmiş kod kısmen güvenilen arayanlara izin verir.|
-|`Clean`|İsteğe bağlı `Boolean` parametresi<br /><br /> Bu parametre `true`, uygulamanın temiz oluşturulacaktır. Önceden derlenmiş bileşenler yeniden derlenecek. Varsayılan değer `false` şeklindedir. Bu parametre için karşılık gelen **- c** açın *aspnet_compiler.exe*.|
-|`Debug`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, hata ayıklama bilgileri (. PDB dosyası), derleme sırasında yayınlanır. Varsayılan değer `false` şeklindedir. Bu parametre için karşılık gelen **-d** açın *aspnet_compiler.exe*.|
-|`DelaySign`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, derlemenin tam olarak oluştururken imzalı değil.|
-|`FixedNames`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, derlenmiş bütünleştirilmiş sabit adlar verilir...|
-|`Force`|İsteğe bağlı `Boolean` parametresi<br /><br /> Bu parametre `true`, zaten varsa, görev hedef dizine üzerine yazar. Mevcut içerik kaybolur. Varsayılan değer `false` şeklindedir. Bu parametre için karşılık gelen **-f** açın *aspnet_compiler.exe*.|
-|`KeyContainer`|İsteğe bağlı `String` parametresi.<br /><br /> Tanımlayıcı ad anahtar kapsayıcısı belirtir.|
-|`KeyFile`|İsteğe bağlı `String` parametresi.<br /><br /> Tanımlayıcı ad anahtar dosyası fiziksel yolunu belirtir...|
-|`MetabasePath`|İsteğe bağlı `String` parametresi.<br /><br /> Uygulamanın tam IIS metatabanı yolu belirtir. Bu parametre ile birleştirilemez `VirtualPath` veya `PhysicalPath` parametreleri. Bu parametre için karşılık gelen **-m** açın *aspnet_compiler.exe*.|
-|`PhysicalPath`|İsteğe bağlı `String` parametresi.<br /><br /> Derlenecek uygulamanın fiziksel yolu belirtir. Bu parametre yoksa, IIS metabase uygulamayı bulmak için kullanılır. Bu parametre için karşılık gelen **-p** açın *aspnet_compiler.exe*.|
-|`TargetFrameworkMoniker`|İsteğe bağlı `String` parametresi.<br /><br /> Hangi .NET Framework sürümünü gösteren TargetFrameworkMoniker belirtir *aspnet_compiler.exe* kullanılmalıdır. Yalnızca .NET Framework adlar kabul eder.|
-|`TargetPath`|İsteğe bağlı `String` parametresi.<br /><br /> Uygulamanın derlenmiş olan fiziksel yolunu belirtir. Belirtilmezse, yerinde önceden derlenmiş uygulamasıdır.|
-|`Updateable`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, önceden derlenmiş uygulama güncelleştirilebilir.  Varsayılan değer `false` şeklindedir. Bu parametre için karşılık gelen **-u** açın *aspnet_compiler.exe*.|
-|`VirtualPath`|İsteğe bağlı `String` parametresi.<br /><br /> Derlenecek uygulamanın sanal yolu. Varsa `PhysicalPath` belirtilen fiziksel yola uygulamayı bulmak için kullanılır. Aksi takdirde, IIS metabase kullanılır ve uygulamanın varsayılan sitenin olduğu varsayılır. Bu parametre için karşılık gelen **- v** açın *aspnet_compiler.exe*.|
+|`AllowPartiallyTrustedCallers`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`ise, tanımlayıcı ad derlemesi kısmen güvenilen çağıranlara izin verir.|
+|`Clean`|İsteğe bağlı `Boolean` parametresi<br /><br /> Bu parametre `true`ise, önceden derlenmiş uygulama temiz oluşturulur. Önceden derlenen tüm bileşenler yeniden derlenir. Varsayılan değer `false` şeklindedir. Bu parametre *aspnet_compiler. exe*üzerindeki **-c** anahtarına karşılık gelir.|
+|`Debug`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, hata ayıklama bilgileri (. PDB dosyası) derleme sırasında yayılır. Varsayılan değer `false` şeklindedir. Bu parametre *aspnet_compiler. exe*üzerindeki **-d** anahtarına karşılık gelir.|
+|`DelaySign`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`ise, derleme oluşturulduğunda tamamen imzalanmaz.|
+|`FixedNames`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, derlenmiş derlemelere sabit adlar verilir.|
+|`Force`|İsteğe bağlı `Boolean` parametresi<br /><br /> Bu parametre `true`, zaten varsa, görev hedef dizinin üzerine yazar. Mevcut içerikler kaybedilir. Varsayılan değer `false` şeklindedir. Bu parametre *aspnet_compiler. exe*üzerindeki **-f** anahtarına karşılık gelir.|
+|`KeyContainer`|İsteğe bağlı `String` parametresi.<br /><br /> Bir tanımlayıcı ad anahtar kapsayıcısı belirtir.|
+|`KeyFile`|İsteğe bağlı `String` parametresi.<br /><br /> Tanımlayıcı ad anahtar dosyasının fiziksel yolunu belirtir..|
+|`MetabasePath`|İsteğe bağlı `String` parametresi.<br /><br /> Uygulamanın tam IIS metatabanı yolunu belirtir. Bu parametre `VirtualPath` veya `PhysicalPath` parametreleriyle birleştirilemez. Bu parametre *aspnet_compiler. exe*üzerindeki **-e** anahtarına karşılık gelir.|
+|`PhysicalPath`|İsteğe bağlı `String` parametresi.<br /><br /> Derlenecek uygulamanın fiziksel yolunu belirtir. Bu parametre eksikse, IIS metatabanı uygulamayı bulmak için kullanılır. Bu parametre *aspnet_compiler. exe*üzerindeki **-p** anahtarına karşılık gelir.|
+|`TargetFrameworkMoniker`|İsteğe bağlı `String` parametresi.<br /><br /> *Aspnet_compiler. exe* ' nin .NET Framework sürümünün kullanılması gerektiğini belirten Targetframeworkbilinen adını belirtir. Yalnızca .NET Framework bilinen adları kabul eder.|
+|`TargetPath`|İsteğe bağlı `String` parametresi.<br /><br /> Uygulamanın derlendiği fiziksel yolu belirtir. Belirtilmemişse, uygulama yerinde önceden derlenmiş olur.|
+|`Updateable`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Bu parametre `true`, önceden derlenmiş uygulama güncelleştirilebilir olur.  Varsayılan değer `false` şeklindedir. Bu parametre *aspnet_compiler. exe*üzerindeki **-u** anahtarına karşılık gelir.|
+|`VirtualPath`|İsteğe bağlı `String` parametresi.<br /><br /> Derlenecek uygulamanın sanal yolu. `PhysicalPath` belirtilmişse, uygulamayı bulmak için fiziksel yol kullanılır. Aksi takdirde, IIS metatabanı kullanılır ve uygulamanın varsayılan sitede olduğu varsayılır. Bu parametre *aspnet_compiler. exe*üzerindeki **-v** anahtarına karşılık gelir.|
 
 ## <a name="remarks"></a>Açıklamalar
-Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.ToolTaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.ToolTask> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [ToolTaskExtension taban sınıfı](../msbuild/tooltaskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.ToolTask> sınıfından devralan <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
-Aşağıdaki kod örneğinde `AspNetCompiler` derleneceği görev bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulama.
+Aşağıdaki kod örneği, bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamasını önceden derlemek için `AspNetCompiler` görevini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

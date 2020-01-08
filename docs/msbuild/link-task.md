@@ -25,17 +25,17 @@ helpviewer_keywords:
 - MSBuild (C++), Link task
 - Link task (MSBuild (C++))
 ms.assetid: 0a61f168-3113-4fa7-83a3-d9142e2a33f8
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98bf3e143a3fcb6613752362acf83f5c2441b98b
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 31bad6dfd0c336e4535e446d1167cb9fd6874972
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911256"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592210"
 ---
 # <a name="link-task"></a>Bağlantı görevi
 Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı aracı ortak nesne dosyası biçimi (COFF) nesne dosyalarını ve kitaplıklarını, yürütülebilir ( *. exe*) dosya veya dinamik bağlantı KITAPLıĞı (dll) oluşturmak için bağlar. Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](/cpp/build/reference/linker-options).
@@ -71,7 +71,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   İsteğe bağlı **dize** parametresi.
 
-  Komut satırında belirtilen bağlayıcı seçeneklerinin bir listesi. Örneğin,/\<option1 >/\<option2 >/\<option # >. Başka bir **bağlantı** görevi parametresi tarafından temsil edilmeyen bağlayıcı seçeneklerini belirtmek için bu parametreyi kullanın.
+  Komut satırında belirtilen bağlayıcı seçeneklerinin bir listesi. Örneğin,/\<Seçenek1 >/\<Seçenek2 >/\<Seçenek # >. Başka bir **bağlantı** görevi parametresi tarafından temsil edilmeyen bağlayıcı seçeneklerini belirtmek için bu parametreyi kullanın.
 
   Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](/cpp/build/reference/linker-options).
 
@@ -111,7 +111,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Örtük **Boolean** parametresi.
 
-  Daha derin dosya izlemenin bağlantı artımlı davranışını yakalamasını sağlar. Her zaman `true`döndürür.
+  Daha derin dosya izlemenin bağlantı artımlı davranışını yakalamasını sağlar. Her zaman `true` döndürür.
 
 - **BaseAddress**
 
@@ -129,7 +129,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Bu parametrenin denk bağlayıcı seçeneği yok.
 
-- **CLRIMAGETYPE**
+- **CLRImageType**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -137,11 +137,11 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Her biri bir bağlayıcı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Varsayılan**  -  *\<none >*
+  - **Varsayılan** -  *\<yok >*
 
-  - **ForceIJWImage** -  **/Clrimagetype: IJW**
+  - **ForceIJWImage** -  **/CLRIMAGETYPE:IJW**
 
-  - **Forcepureilımage** -  **/Clrimagetype: Pure**
+  - **ForcePureILImage** -  **/CLRIMAGETYPE:PURE**
 
   - **Forcesafeilımage** -  **/Clrimagetype: Safe**
 
@@ -187,7 +187,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute ekleyin)](/cpp/build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute).
 
-- **Createhotpatchableımage**
+- **CreateHotPatchableImage**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -205,7 +205,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/functionpadmin (düzeltme eki eklenebilir görüntü oluşturma)](/cpp/build/reference/functionpadmin-create-hotpatchable-image).
 
-- **Dataexecutionengellemesini**
+- **DataExecutionPrevention**
 
   İsteğe bağlı **Boolean** parametresi.
 
@@ -225,11 +225,11 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   İsteğe bağlı **Boolean** parametresi.
 
-  `true`, bir derlemeyi kısmen imzalar. Varsayılan olarak, değer `false`.
+  `true`, bir derlemeyi kısmen imzalar. Varsayılan değer `false` şeklindedir.
 
   Daha fazla bilgi için bkz. [/delaysign (derlemeyi kısmen imzala)](/cpp/build/reference/delaysign-partially-sign-an-assembly).
 
-- **Aygıt**
+- **Sürücü**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -255,7 +255,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/ASSEMBLYRESOURCE (yönetilen kaynağı katıştır)](/cpp/build/reference/assemblyresource-embed-a-managed-resource).
 
-- **Enablecomdatkatlamalı**
+- **EnableCOMDATFolding**
 
   İsteğe bağlı **Boolean** parametresi.
 
@@ -413,7 +413,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/keycontainer (bir derlemeyi imzalamak için bir anahtar kapsayıcısı belirtin)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly). Ayrıca bkz. bu tablodaki **keyfile** parametresi.
 
-- **Dosyasına**
+- **KeyFile**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -449,7 +449,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   - **Hemen sor** -  **/errorreport: Prompt**
 
-  - **Queuefornextlogin** -  **/errorreport: Queue**
+  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**
 
   - **Senderrorreport** -  **/errorreport: Send**
 
@@ -487,17 +487,17 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Varsayılan**  -  *\<none >*
+  - **Varsayılan** -  *\<yok >*
 
-  - **Uselinktimecodegeneration** -  **/LTCG**
+  - **UseLinkTimeCodeGeneration** -  **/LTCG**
 
-  - **Pgınstrum - ** **/LTCG: PGINSTRUMENT**
+  - **PGInstrument** -  **/LTCG:PGInstrument**
 
-  - **Pgoptimization** -  **/LTCG: pgoptimize**
+  - **PGOptimization** -  **/LTCG:PGOptimize**
 
   - **PGUpdate**
 
-    \- **/LTCG: PGUpdate**
+    \- **/LTCG:PGUpdate**
 
   Daha fazla bilgi için bkz. [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation).
 
@@ -539,7 +539,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/merge (bölümleri birleştirme)](/cpp/build/reference/merge-combine-sections).
 
-- **Mıdlcommandfile**
+- **MidlCommandFile**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -591,7 +591,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için, [/opt (iyileştirmeler)](/cpp/build/reference/opt-optimizations)içindeki `REF` bağımsız değişkenine bakın.
 
-- **Çıktı**
+- **OutputFile**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -603,7 +603,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   İsteğe bağlı **Boolean** parametresi.
 
-  `true` ve kayıt çıktısı etkinse, kayıt defteri yazmaları **HKEY_CLASSES_ROOT** öğesine, **HKEY_CURRENT_USER**öğesine yeniden yönlendirilmeye zorlar.
+  `true` ve kayıt çıktısı etkinse, kayıt defteri yazmaları **HKEY_CLASSES_ROOT** **HKEY_CURRENT_USER**yeniden yönlendirilmeye zorlar.
 
 - **PreprocessOutput**
 
@@ -619,7 +619,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/Allowbind (dll bağlamasını engelle)](/cpp/build/reference/allowbind-prevent-dll-binding).
 
-- **Profilinizi**
+- **Profil**
 
   İsteğe bağlı **Boolean** parametresi.
 
@@ -627,7 +627,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/profile (performans araçları profil Oluşturucu)](/cpp/build/reference/profile-performance-tools-profiler).
 
-- **Profilekılavuz Ddatabase**
+- **ProfileGuidedDatabase**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -683,17 +683,17 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   - **NotSet** -  *\<yok >*
 
-  - **Linkverbose** -  **/verbose**
+  - **LinkVerbose** -  **/VERBOSE**
 
-  - **LinkVerboseLib** -  **/verbose: lib**
+  - **LinkVerboseLib** -  **/VERBOSE:Lib**
 
-  - **LinkVerboseICF** -  **/verbose: ICF**
+  - **LinkVerboseICF** -  **/VERBOSE:ICF**
 
-  - **LinkVerboseREF** -  **/verbose: ref**
+  - **LinkVerboseREF** -  **/VERBOSE:REF**
 
-  - **LinkVerboseSAFESEH** -  **/verbose: SafeSEH**
+  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**
 
-  - **LinkVerboseCLR** -  **/verbose: clr**
+  - **LinkVerboseCLR** -  **/VERBOSE:CLR**
 
   Daha fazla bilgi için bkz. [/verbose (ilerleme Iletilerini Yazdır)](/cpp/build/reference/verbose-print-progress-messages).
 
@@ -719,7 +719,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz./Stack 'in `commit` bağımsız değişkeni [(yığın ayırmaları)](/cpp/build/reference/stack-stack-allocations).
 
-- **Stackrezervesize**
+- **StackReserveSize**
 
   İsteğe bağlı **dize** parametresi.
 
@@ -733,7 +733,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Müşterilerinize dağıtmak istemediğiniz sembolleri atlatabilecek ikinci program veritabanı (PDB) dosyası oluşturur. İkinci PDB dosyasının adını belirtin.
 
-  Daha fazla bilgi için bkz. [/Pdbçıkarıldı (özel sembolleri Strip)](/cpp/build/reference/pdbstripped-strip-private-symbols).
+  Daha fazla bilgi için [/pdbstrıpped (özel simgeleri Şerit)](/cpp/build/reference/pdbstripped-strip-private-symbols).
 
 - **Sistemin**
 
@@ -751,13 +751,13 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   - **Yerel** -  **/Subsystem: Native**
 
-  - **EFI uygulaması** -  **/Subsystem: EFI_APPLICATION**
+  - **EFI uygulaması** -  **/subsystem: EFI_APPLICATION**
 
-  - **EFI Önyükleme hizmeti sürücüsü** -  **/Subsystem: EFI_BOOT_SERVICE_DRIVER**
+  - **EFI Önyükleme hizmeti sürücüsü** -  **/subsystem: EFI_BOOT_SERVICE_DRIVER**
 
-  - **EFı ROM** -  **/Subsystem: EFI_ROM**
+  - **EFı ROM** -  **/subsystem: EFI_ROM**
 
-  - **EFI çalışma zamanı** -  **/Subsystem: EFI_RUNTIME_DRIVER**
+  - **EFI çalışma zamanı** -  **/subsystem: EFI_RUNTIME_DRIVER**
 
   - **Windowsce** -  **/Subsystem: WindowsCE**
 
@@ -825,11 +825,11 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   - **MachineMIPS16** -  **/MACHINE: kayıtlardan biri mıps16**
 
-  - **Machinemıpsfpu** -  **/Machine: MIPSFPU**
+  - **MachineMIPSFPU** -  **/MACHINE:MIPSFPU**
 
-  - **MachineMIPSFPU16** -  **/MACHINE: MIPSFPU16**
+  - **MachineMIPSFPU16** -  **/MACHINE:MIPSFPU16**
 
-  - **MachineSH4** -  **/MACHINE: sh4**
+  - **MachineSH4** -  **/MACHINE:SH4**
 
   - **Machinethumb** -  **/MACHıNE: Thumb**
 
@@ -885,7 +885,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Daha fazla bilgi için bkz. [/Tldeklarasyon (TypeLib için kaynak Kimliğini Belirt)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib).
 
-- **Uıacexecutionlevel**
+- **UACExecutionLevel**
 
   İsteğe bağlı **dize** parametresi.
 

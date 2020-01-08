@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - Class Designer [Visual Studio], classes
 ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fc10a3f62ea4bef82a466b2d76c46e73eb7e6e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748923"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590741"
 ---
 # <a name="c-classes-in-class-designer"></a>C++Sınıf Tasarımcısı sınıflar
 
@@ -69,7 +69,7 @@ int main()
 }
 ```
 
-Ancak, `Swimmer` sınıfını ayrı nesneler olarak örneğini oluşturmak istemeyebilirsiniz. Örneğin, `Penguin`, `Whale` ve `Fish` gibi diğer tür bir sınıf sınıfını türetebilirsiniz. Bu durumda, `Swimmer` sınıfını soyut temel sınıf olarak bildirirsiniz.
+Ancak, `Swimmer` sınıfını ayrı nesneler olarak örneğini oluşturmak istemeyebilirsiniz. Örneğin, `Penguin`, `Whale`ve `Fish`gibi diğer tür bir sınıf sınıfını türetebilirsiniz. Bu durumda, `Swimmer` sınıfını soyut temel sınıf olarak bildirirsiniz.
 
 Bir sınıfı Özet olarak bildirmek için `abstract` anahtar sözcüğünü kullanabilirsiniz. Soyut olarak işaretlenen veya soyut bir sınıfa eklenen Üyeler sanal ve soyut sınıftan türetilmiş sınıflar tarafından uygulanmalıdır.
 
@@ -121,7 +121,7 @@ typedef struct
 } POINT;
 ```
 
-Yapılar da anonim olabilir. **Sınıf Tasarımcısı** , anonim sınıfları ve yapıları ilgili türü görüntülediği gibi görüntüler. Anonim sınıfları ve yapıları bildirebilmenize ve görüntüleyseniz de **Sınıf Tasarımcısı** belirttiğiniz etiket adını kullanmaz. Sınıf Görünümü oluşturduğu adı kullanacaktır. Sınıf veya yapı, Sınıf Görünümü ve **Sınıf Tasarımcısı** **__adlandırılmamış**adlı bir öğe olarak görünür.
+Yapılar da anonim olabilir. **Sınıf Tasarımcısı** , anonim sınıfları ve yapıları ilgili türü görüntülediği gibi görüntüler. Anonim sınıfları ve yapıları bildirebilmenize ve görüntüleyseniz de **Sınıf Tasarımcısı** belirttiğiniz etiket adını kullanmaz. Sınıf Görünümü oluşturduğu adı kullanacaktır. Sınıf veya yapı, Sınıf Görünümü ve **Sınıf Tasarımcısı** **__unnamed**adlı bir öğe olarak görünür.
 
 Anonim sınıflar hakkında daha fazla bilgi için bkz. [anonim sınıf türleri](/cpp/cpp/anonymous-class-types).
 
@@ -149,27 +149,27 @@ Aşağıdaki tabloda kısmi özelleşmenin bazı devralma örnekleri gösterilme
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> Şablon sınıfı<br /><br /> `B`<br /><br /> örneği<br /><br /> (sınıf A 'ya işaret eder)<br /><br /> `C`<br /><br /> örneği<br /><br /> (sınıf A 'ya işaret eder)|
+|`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> Şablon sınıfı<br /><br /> `B`<br /><br /> Sınıf<br /><br /> (sınıf A 'ya işaret eder)<br /><br /> `C`<br /><br /> Sınıf<br /><br /> (sınıf A 'ya işaret eder)|
 
 Aşağıdaki tabloda kısmi özelleşme şablonu işlevlerinin bazı örnekleri gösterilmektedir.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func \<T, U > (+ 1 aşırı yükleme)|
+|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func\<T, U > (+ 1 aşırı yükleme)|
 |`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> Şablon sınıfı<br /><br /> `B<T2>`<br /><br /> Şablon sınıfı<br /><br /> (B sınıf içinde **Iç Içe geçmiş türler**altında bulunur)|
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> örneği<br /><br /> -> C \<int ><br /><br /> `C<T>`<br /><br /> Şablon sınıfı|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Sınıf<br /><br /> -> C\<int ><br /><br /> `C<T>`<br /><br /> Şablon sınıfı|
 
 Aşağıdaki tabloda şablon devralmanın bazı örnekleri gösterilmektedir.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> örneği<br /><br /> -> B<br /><br /> `C<int>`<br /><br /> örneği<br /><br /> (B, **Iç Içe türler**altında C sınıfı içinde bulunur)<br /><br /> `C<T>`<br /><br /> Şablon sınıfı|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Sınıf<br /><br /> -> B<br /><br /> `C<int>`<br /><br /> Sınıf<br /><br /> (B, **Iç Içe türler**altında C sınıfı içinde bulunur)<br /><br /> `C<T>`<br /><br /> Şablon sınıfı|
 
 Aşağıdaki tabloda, kurallı özelleştirilmiş sınıf bağlantısının bazı örnekleri gösterilmektedir.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> örneği<br /><br /> -> C \<int ><br /><br /> `C<int>`<br /><br /> örneği<br /><br /> `C<T>`<br /><br /> Şablon sınıfı<br /><br /> `D`<br /><br /> örneği<br /><br /> -> C \<float >|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Sınıf<br /><br /> -> C\<int ><br /><br /> `C<int>`<br /><br /> Sınıf<br /><br /> `C<T>`<br /><br /> Şablon sınıfı<br /><br /> `D`<br /><br /> Sınıf<br /><br /> -> C\<float >|
 |`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> Min \<T >|
 
 ## <a name="see-also"></a>Ayrıca bkz.

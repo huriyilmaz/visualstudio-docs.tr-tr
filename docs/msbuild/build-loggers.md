@@ -1,5 +1,5 @@
 ---
-title: Günlükçüleri derleme | Microsoft Docs
+title: Günlükçüler oluşturun | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,53 +7,53 @@ helpviewer_keywords:
 - MSBuild, logging
 - logging [MSBuild]
 ms.assetid: fa34810d-185a-4d22-92bd-9852915e5f1d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c5bb6bbd3d05c22b7615a027ac3fcf6aa686156
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c82b7456e0fc497b753c87f7a4d6808c81d5ab2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823034"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593414"
 ---
-# <a name="build-loggers"></a>Günlükçüleri derleme
-Günlükçüleri derleme çıkışını özelleştirebilir ve belirli bir yapı olaylarına yanıt olarak iletileri, hata veya uyarı görüntülemek bir yol sağlar. Her bir Günlükçü uygulayan bir .NET sınıfı uygulanır <xref:Microsoft.Build.Framework.ILogger> tanımlanan arabirimi *Microsoft.Build.Framework.dll* derleme.
+# <a name="build-loggers"></a>Günlükçüler oluşturun
+Günlükçüler, belirli derleme olaylarına yanıt olarak, derlemenize ait çıktıyı özelleştirmek ve iletileri, hataları veya uyarıları göstermek için bir yol sağlar. Her Günlükçü, *Microsoft. Build. Framework. dll* derlemesinde tanımlanan <xref:Microsoft.Build.Framework.ILogger> arabirimini uygulayan bir .NET sınıfı olarak uygulanır.
 
 Günlükçü uygularken kullanabileceğiniz iki yaklaşım vardır:
 
-- Uygulama <xref:Microsoft.Build.Framework.ILogger> doğrudan arabirim.
-- Sınıfınıza Yardımcısı sınıfından türetilen <xref:Microsoft.Build.Utilities.Logger>, tanımlanan *Microsoft.Build.Utilities.dll* derleme. <xref:Microsoft.Build.Utilities.Logger> uygulayan <xref:Microsoft.Build.Framework.ILogger> ve bazı varsayılan uygulamalarını sağlar <xref:Microsoft.Build.Framework.ILogger> üyeleri.
+- <xref:Microsoft.Build.Framework.ILogger> arabirimini doğrudan uygulayın.
+- *Microsoft. Build. Utilities. dll* derlemesinde tanımlanan <xref:Microsoft.Build.Utilities.Logger>yardımcı sınıfından sınıfınızı türetirsiniz. <xref:Microsoft.Build.Utilities.Logger>, <xref:Microsoft.Build.Framework.ILogger> uygular ve bazı <xref:Microsoft.Build.Framework.ILogger> üyelerin varsayılan uygulamalarını sağlar.
 
-  Bu konuda, türetilen bir basit bir Günlükçü yazılacağı nasıl açıklayacak <xref:Microsoft.Build.Utilities.Logger>, ve derleme olaylarını konsolunda belirli yanıt iletileri görüntüler.
+  Bu konu, <xref:Microsoft.Build.Utilities.Logger>türetilen basit bir günlükçü yazmayı açıklar ve belirli derleme olaylarına yanıt olarak konsolda iletileri görüntüler.
 
-## <a name="register-for-events"></a>Olayları için kaydolun
-Günlükçü amacı, yapı altyapısı tarafından raporlanan yapı ilerlemesini bilgi toplamak ve daha sonra bu bilgileri faydalı bir şekilde rapor sağlamaktır. Tüm günlükçüleri kılmalı <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> Günlükçü olayları için kaydettiği olan yöntem. Bu örnekte Günlükçü için kayıtları <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, ve <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> olayları.
+## <a name="register-for-events"></a>Olaylara kaydolun
+Günlükçü amacı, derleme altyapısı tarafından bildirildiği için derleme ilerlemesi hakkında bilgi toplamaktır ve daha sonra bu bilgileri faydalı bir şekilde bildirir. Tüm Günlükçüler, günlükçü olayları kaydeden <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> yöntemi geçersiz kılmalıdır. Bu örnekte, günlükçü <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>ve <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> olaylarını kaydeder.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#2](../msbuild/codesnippet/CSharp/build-loggers_1.cs)]
 
-## <a name="respond-to-events"></a>Olaylara yanıt vermesi
-Günlükçü belirli olayları kaydedildiğinden, ortaya çıkan bu olayları işlemek gerekir. İçin <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, ve <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> olayları Günlükçü yalnızca yazar kısa ifade ve olayla proje dosyasının adı. Günlükçü gelen tüm iletileri konsol penceresine yazılır.
+## <a name="respond-to-events"></a>Olaylara yanıt verme
+Günlükçüler belirli olaylara kaydoldığına göre, bu olayları gerçekleştiğinde işlemek gerekir. <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>ve <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> olaylar için, günlükçü yalnızca kısa bir ifade ve olayda yer alan proje dosyasının adını yazar. Günlükçü 'deki tüm iletiler konsol penceresine yazılır.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#3](../msbuild/codesnippet/CSharp/build-loggers_2.cs)]
 
-## <a name="respond-to-logger-verbosity-values"></a>Günlükçü ayrıntı değerlerine yanıt
-Bazı durumlarda yalnızca bilgileri, bir olay günlüğe isteyebilirsiniz MSBuild.exe **-ayrıntı** anahtarını belirli bir değer içeriyor. Bu örnekte, <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> olay işleyicisi, bir ileti yalnızca günlükleri <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> tarafından ayarlanan özellik **-ayrıntı** değiştirmek, eşittir <xref:Microsoft.Build.Framework.LoggerVerbosity> `Detailed`.
+## <a name="respond-to-logger-verbosity-values"></a>Günlükçü ayrıntı değerlerine yanıt verme
+Bazı durumlarda, MSBuild. exe **-ayrıntı** anahtarı belirli bir değer içeriyorsa yalnızca bir olaydan bilgileri günlüğe kaydetmek isteyebilirsiniz. Bu örnekte, <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> olay işleyicisi yalnızca **-ayrıntı** anahtarı tarafından ayarlanan <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> özelliği <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed`eşitse bir iletiyi günlüğe kaydeder.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#4](../msbuild/codesnippet/CSharp/build-loggers_3.cs)]
 
-## <a name="specify-a-logger"></a>Bir Günlükçü belirtin
-Günlükçü bütünleştirilmiş kod içine derlenmiş olan bir kez söylemeniz gerekir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bu Günlükçü yapılar sırasında kullanılacak. Bu yapılır kullanarak **-Günlükçü** anahtarı ile *MSBuild.exe*. Kullanılabilir anahtarları hakkında daha fazla bilgi için *MSBuild.exe*, bkz: [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
+## <a name="specify-a-logger"></a>Günlükçü belirtin
+Günlükçü bir derlemeye derlendikten sonra, derlemeler sırasında bu günlükçüsü kullanmak için [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] söylemeniz gerekir. Bu işlem, *MSBuild. exe*ile **-günlükçü** anahtarı kullanılarak yapılır. *MSBuild. exe*için kullanılabilen anahtarlar hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
 
-Aşağıdaki komut satırını projeyi derler *MyProject.csproj* Günlükçü sınıfı içinde uygulanan kullanır *SimpleLogger.dll*. **- Nologo** anahtar başlığını ve telif hakkı iletisini gizler ve **- noconsolelogger** anahtarı varsayılan devre dışı bırakır [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] konsol Günlükçü.
+Aşağıdaki komut satırı *MyProject. csproj* projesini oluşturur ve *simplegünlükçü. dll*dosyasında uygulanan günlükçü sınıfını kullanır. **-Nologo** anahtarı başlık ve telif hakkı iletisini gizler ve **-noconsolegünlükçü** anahtarı varsayılan [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] konsol günlükçüsü 'yi devre dışı bırakır.
 
 ```cmd
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll
 ```
 
-Aşağıdaki komut satırını, aynı Günlükçü ancak ile projeyi oluşturur bir `Verbosity` düzeyini `Detailed`.
+Aşağıdaki komut satırı, projeyi aynı günlükçü ile, ancak bir `Detailed``Verbosity` düzeyiyle oluşturur.
 
 ```cmd
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
@@ -62,7 +62,7 @@ MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
-Aşağıdaki örnek, Günlükçü için tam kod içerir.
+Aşağıdaki örnek, günlükçü için kodun tamamını içerir.
 
 ### <a name="code"></a>Kod
 [!code-csharp[msbuild_SimpleConsoleLogger#1](../msbuild/codesnippet/CSharp/build-loggers_4.cs)]
@@ -70,11 +70,11 @@ Aşağıdaki örnek, Günlükçü için tam kod içerir.
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
-Aşağıdaki örnek, konsol penceresinde görüntüleme yerine bir dosya günlüğüne yazan bir Günlükçü uygulamak gösterilmektedir.
+Aşağıdaki örnek, günlüğü konsol penceresinde görüntülemek yerine bir dosyaya yazan bir günlükçü nasıl uygulanacağını gösterir.
 
 ### <a name="code"></a>Kod
 [!code-csharp[msbuild_BasicLogger#1](../msbuild/codesnippet/CSharp/build-loggers_5.cs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Derleme günlükleri alın](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)

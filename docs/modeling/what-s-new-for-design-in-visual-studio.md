@@ -7,71 +7,71 @@ helpviewer_keywords:
 - what's new [Visual Studio], architecture and modeling
 - architecture [Visual Studio], modeling
 - modeling software [Visual Studio], What's New
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 51d4f4d2af5dde398744d926e45200ec16c6214a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6f81cc32604abe6d90ac0d263574e97df35c63bd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666945"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593518"
 ---
 # <a name="whats-new-for-design-in-visual-studio-2017"></a>Visual Studio 2017’de tasarıma yönelik yenilikler
 
-## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulaması
+## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulama
 
-İstenmeyen bağımlılıkların kaldırılması, teknik borcunu yönetmenin önemli bir parçasıdır. Visual Studio, sorunlar hakkında kesin bilgiler de dahil olmak üzere bağımlılıklar için canlı doğrulama sağlar, örneğin nerede bulunur. Canlı bağımlılık doğrulaması, Hata Listesi ve düzenleyicideki yeni özelliklerin tam avantajlarından yararlanır.
+İstenmeyen bağımlılık kaldırma, teknik borcun yönetimi, önemli bir parçasıdır. Visual Studio, sorunlar hakkında kesin bilgiler de dahil olmak üzere bağımlılıklar için canlı doğrulama sağlar, örneğin nerede bulunur. Canlı bağımlılık doğrulaması, Hata Listesi ve düzenleyicideki yeni özelliklerin tam avantajlarından yararlanır.
 
-![Canlı bağımlılık doğrulaması eylemde](media/dep-validation-whatsnew-01.png)
+![Eylem Canlı bağımlılık doğrulama](media/dep-validation-whatsnew-01.png)
 
 Yazma deneyimi, bağımlılık doğrulamasını daha keşfedilebilir ve daha erişilebilir hale getirmek üzere değiştirilmiştir. Terminoloji "katman diyagramı" iken "bağımlılık diyagramı" olarak değiştirildi.
 
-**Mimari** menüsünde artık doğrudan bir bağımlılık diyagramı oluşturmak için bir komut bulunur:
+**Mimarisi** menüsü artık, doğrudan bir bağımlılık diyagramı oluşturmak için bir komut içerir:
 
-![Mimari menüsünde canlı bağımlılık öğesi](media/dep-validation-whatsnew-02.png)
+![Canlı bağımlılık öğede mimari menüsü](media/dep-validation-whatsnew-02.png)
 
 Katman özelliği adları ve açıklamaları daha anlamlı hale getirmek için değiştirilmiştir:
 
-![Canlı bağımlılık güncelleştirilmiş özellik adları](media/dep-validation-whatsnew-03.png)
+![Canlı bağımlılık özelliği adları güncelleştirildi](media/dep-validation-whatsnew-03.png)
 
 Her diyagramı her kaydedişinizde çözümdeki geçerli kod için analiz sonuçlarında yaptığınız değişikliklerin etkisini hemen görürsünüz. **Bağımlılıkları doğrula** komutunun tamamlanmasını beklemeniz gerekmez.
 
-Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/live-architecture-dependency-validation-in-visual-studio-15-preview-5/)bakın.
+Daha fazla ayrıntı için [bu blog gönderisini](https://devblogs.microsoft.com/devops/live-architecture-dependency-validation-in-visual-studio-15-preview-5/).
 
-## <a name="uml-designers-have-been-removed"></a>UML tasarımcıları kaldırıldı
+## <a name="uml-designers-have-been-removed"></a>UML tasarımcılarına kaldırıldı
 
 UML tasarımcıları Visual Studio 'dan kaldırılmıştır.
 
-* UML diyagramları artık XML dosyaları olarak sunulmuştur
+* UML diyagramları artık XML dosyaları olarak sunulur
 * UML Model Gezgini artık yok
-* Bağımlılık doğrulaması için modelleme projesi başvuruları artık kullanılmıyor
-* Çözüm Gezgini ' deki "Katman başvuruları" düğümü artık görüntülenmiyor
-* Bağımlılık (katman) diyagramında "doğrulama" derleme eylemi artık kullanılmıyor; derleme görevi kaldırılmış
-* Proje yapısı, sürümler arasında gidiş dönüşü için korunur
-* Bağımlılık (katman) diyagramını XML olarak açmaya, oluşturmaya, düzenlemeye ve kaydetmeye devam edebilirsiniz
-* Bir bağımlılık (katman) diyagramına bağlı TFS iş öğelerine tasarım yüzeyinde erişilemiyor
-* ' Den DSL 'ye veya katmana geri bağlama artık desteklenmiyor
-* Modelleme SDK 'sında UML genişletilebilirliği artık desteklenmiyor
+* Modelleme projesi başvuruları artık bağımlılık doğrulaması için kullanılır
+* Çözüm Gezgini "Katman başvuruları" düğümünde artık görüntülenmez
+* Bağımlılık (katman) diyagram üzerinde "Doğrula" derleme eylemi artık kullanılmamaktadır - derleme görevi kaldırıldı
+* Proje yapısını sürümleri arasında gidiş dönüşü korunur
+* Yine de açın, oluşturabilir, düzenleyebilir ve bir bağımlılık (katman) diyagramı XML olarak kaydetme
+* TFS iş öğeleri için bir bağımlılık (katman) diyagramı tasarım yüzeyinde erişilebilir değil
+* Geri gelen DSL veya katmanına bağlama artık desteklenmiyor
+* UML Genişletilebilirlik modelleme SDK'sı, artık desteklenmiyor
 
 .NET ve C++ kod mimarisini görselleştirmeye yönelik destek [kod haritaları](map-dependencies-across-your-solutions.md)aracılığıyla kullanılabilir.
 
-UML tasarımcılarının önemli bir kullanıcısı ise, UML gereksinimleriniz için alternatif bir araç üzerinde karar verirken Visual Studio 2015 veya önceki sürümlerini kullanmaya devam edebilirsiniz.
+UML tasarımcılarına önemli bir kullanıcı varsa, UML ihtiyaçlarınız için alternatif bir aracı üzerinde karar sırada Visual Studio 2015 veya önceki sürümlerini kullanmaya devam edebilirsiniz.
 
-Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)bakın.
+Daha fazla ayrıntı için [bu blog gönderisini](https://devblogs.microsoft.com/devops/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/).
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="a-nameversionsupport-edition-support-for-architecture-and-modeling-tools"></a>mimari ve modelleme araçları için <a name="VersionSupport" />Edition desteği
+## <a name="a-nameversionsupport-edition-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport" />Mimari ve Modelleme Araçları sürüm desteği
 
-Visual Studio çeşitli sürümlerde kullanılabilir. Bunların hepsi mimari ve modelleme araçları için destek sağlamaz. Aşağıdaki tabloda her aracın kullanılabilirliği gösterilmektedir.
+Visual Studio çeşitli sürümlerde kullanılabilir. Bunların tümü, mimari ve Modelleme Araçları için destek sağlar. Aşağıdaki tabloda her bir aracı kullanılabilirliğini gösterir.
 
-|**Özellik**|**Kurumsal sürüm**|**Professional sürümü**|**Topluluk sürümü**|
+|**Özelliği**|**Enterprise edition**|**Professional sürümü**|**Community sürümü**|
 |-|-|-|-|
-|**Kod eşlemeleri**|Evet|Yalnızca kod eşlemelerini okumayı, kod eşlemelerini filtrelemeyi, yeni genel düğümleri eklemeyi ve bir seçimden yeni bir yönlendirilmiş grafik oluşturmayı destekler.|-|
-|**Bağımlılık diyagramları**|Evet|Yalnızca bağımlılık diyagramlarını okumayı destekler.|Yalnızca bağımlılık diyagramlarını okumayı destekler.|
-|**Yönlendirilmiş grafikler** (DGML diyagramları)|Evet|Evet|Evet|
+|**Kod haritaları**|Evet|Yalnızca okuma kod haritalarını destekler, kod filtreleme, yeni genel düğüm ekleme ve seçimden yeni yönlendirilmiş grafik oluşturma eşler.|-|
+|**Bağımlılık diyagramları**|Evet|Yalnızca bağımlılık diyagramlarını okuma destekler.|Yalnızca bağımlılık diyagramlarını okuma destekler.|
+|**Yönlendirilmiş grafikleri** (DGML diyagramları)|Evet|Evet|Evet|
 |**Kod kopyası**|Evet|-|-|

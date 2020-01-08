@@ -2,8 +2,8 @@
 title: Visual Studio Test Professional iş yükü ve bileşen kimlikleri
 titleSuffix: ''
 description: Tümleşik test araçları için genel test edicileri sağlamak için Visual Studio iş yükü ve Bileşen kimlikleri kullanın
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.date: 09/23/2019
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.assetid: 70c03438-8434-4921-ada0-c172519af431
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: d61105a16919e8384aad961d62a81ff3a8688b25
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 9ed75c9731d36f48dcb50be7f929c4cba5ed3b6c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213655"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590907"
 ---
 # <a name="visual-studio-test-professional-component-directory"></a>Visual Studio Test Professional bileşen dizini
 
@@ -33,19 +33,19 @@ Ayrıca sayfa hakkında aşağıdakileri unutmayın:
 * Kullanmayı tercih ederseniz de yükleyebilirsiniz **önerilen** ve **isteğe bağlı** bileşenleri.
 * Her türlü iş yükü ile bağlı olmayan ek bileşenleri listeleyen bir bölüm de ekledik.
 
-VSIX bildiriminizi bağımlılıkları oluşturduğunuzda, Bileşen kimlikleri yalnızca belirtmeniz gerekir. Tablolar, sunduğumuz en az Bileşen bağımlılıkları belirlemek için bu sayfada kullanın. Bazı senaryolarda, bir iş yükü yalnızca bir bileşenden belirttiğiniz gelebilir. Diğer senaryolarda, tek bir iş yükünü birden fazla bileşenlerini veya birden çok iş yükü birden çok bileşenlerini belirttiğiniz gelebilir. Daha fazla bilgi için bkz [. nasıl yapılır: Genişletilebilirlik projelerini Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sayfasına geçirin.
+VSIX bildiriminizi bağımlılıkları oluşturduğunuzda, Bileşen kimlikleri yalnızca belirtmeniz gerekir. Tablolar, sunduğumuz en az Bileşen bağımlılıkları belirlemek için bu sayfada kullanın. Bazı senaryolarda, bir iş yükü yalnızca bir bileşenden belirttiğiniz gelebilir. Diğer senaryolarda, tek bir iş yükünü birden fazla bileşenlerini veya birden çok iş yükü birden çok bileşenlerini belirttiğiniz gelebilir. Daha fazla bilgi için bkz [nasıl yapılır: Visual Studio 2017'ye geçirme genişletilebilirlik projeleri](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sayfası.
 
 Bu kimliklerinin kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 2017'yi yükleme komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md) sayfası. Ve iş yükü ve Bileşen kimlikleri diğer ürünlere yönelik bir listesi için bkz. [Visual Studio 2017 iş yükü ve Bileşen kimlikleri](workload-and-component-ids.md) sayfası.
 
 ## <a name="test-professional"></a>Test Uzmanı
 
-**NUMARASINI** Microsoft. VisualStudio. Workload. TestProfessional
+**ID:** Microsoft.VisualStudio.Workload.TestProfessional
 
-**Açıklama:** Test Professional, kendi test yaşam döngüsünün tamamında test ihtiyaçlarını kullanmalarına yardımcı olan, genel test ediciler için hedeflenen tümleşik test araçları sağlar.
+**Açıklama:** Test Professional, BT'yi uzmanı edicileri hedefleyen tümleşik test araçları, tüm test yaşam test ihtiyaçlarını sürücü sağlar.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Geri Bildirim İstemcisi | 15.6.27406.0 | Gerekli
 Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test Manager | 15.6.27406.0 | Gerekli
@@ -54,7 +54,7 @@ Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test
 
 Bu, her türlü iş yükü ile dahil edilmez, ancak tek bir bileşeni olarak seçilebilir bileşenlerdir.
 
-Bileşen kimliği | Ad | Sürüm
+Bileşen kimliği | Name | Sürüm
 --- | --- | ---
 yok | yok | yok
 
