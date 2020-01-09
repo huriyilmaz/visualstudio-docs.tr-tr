@@ -32,12 +32,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 25978ae5fa76afc7cd43c9ccc243f25712495ddd
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+ms.openlocfilehash: ce5e4d1e8ed3505d1f971ef209c7e05ba85e0d69
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879288"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75402027"
 ---
 # <a name="annotating-locking-behavior"></a>Kilitlenme Davranışını Yorumlama
 Çok iş parçacıklı programınızda eşzamanlılık hatalarından kaçınmak için, her zaman uygun bir tane disiplin ve SAL ek açıklamalarını kullanın.
@@ -73,7 +73,7 @@ Aşağıdaki tabloda kilitleme ek açıklamaları listelenmektedir.
 |`_Create_lock_level_(name)`|Ek açıklamaların `_Has_Lock_level_` ve `_Lock_level_order_`kullanılabilmesi için simgeyi `name` bir kilit düzeyi olarak bildiren bir ifade.|
 |`_Has_lock_kind_(kind)`|Bir kaynak nesnesinin tür bilgilerini iyileştirmek için herhangi bir nesneye Açıklama Ekle. Bazen, farklı türlerde kaynaklar için ortak bir tür kullanılır ve aşırı yüklenmiş tür çeşitli kaynaklar arasındaki anlam gereksinimlerini ayırt etmek için yeterli değildir. Önceden tanımlanmış `kind` parametrelerinin listesi aşağıda verilmiştir:<br /><br /> `_Lock_kind_mutex_`<br /> Zaman uyumu sağlayıcılar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_event_`<br /> Olaylar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_semaphore_`<br /> Semaforlar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_spin_lock_`<br /> Döndürme kilitleri için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_critical_section_`<br /> Kritik bölümler için kilit türü KIMLIĞI.|
 |`_Has_lock_level_(name)`|Bir kilit nesnesine açıklama koyun ve `name`kilit düzeyini verir.|
-|`_Lock_level_order_(name1, name2)`|`name1` ve `name2`arasında kilit sıralaması sağlayan bir ifade.  Düzeyi `name1` olan kilitler, düzeyi `name2` kilitlerinin önüne alınmalıdır|
+|`_Lock_level_order_(name1, name2)`|`name1` ve `name2`arasında kilit sıralaması sağlayan bir ifade.  Düzeyi `name1` olan kilitler, düzeyi `name2`olmayan kilitlere göre alınmalıdır.|
 |`_Post_same_lock_(expr1, expr2)`|Bir işlevi bir işleve açıklama olarak, `expr1` ve `expr2`olmak üzere iki kilit, aynı kilit nesnesi gibi değerlendirildiğini gösterir.|
 |`_Releases_exclusive_lock_(expr)`|Bir işlevi bir işleve açıklama ve bu işlevin, `expr`tarafından adlandırılan kilit nesnesinin dışlamalı kilit sayısına göre ne kadar azaltır olduğunu gösterir.|
 |`_Releases_lock_(expr)`|Bir işlevi daha fazla açıklama olarak gösterir ve işlevin, `expr`tarafından adlandırılan kilit nesnesinin kilit sayısına göre ne kadar azaltır.|

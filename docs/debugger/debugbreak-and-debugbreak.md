@@ -19,17 +19,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce99cd360d75472df6326cfaf6a3f4ddb198b6d2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 097405f98d1a80b8605b6773bdc675ff2c4ab773
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738363"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404649"
 ---
 # <a name="debugbreak-and-__debugbreak"></a>DebugBreak ve __debugbreak
-Kodunuzda herhangi bir noktada DebugBreak Win32 işlevini veya [__debugbreak](/cpp/intrinsics/debugbreak) iç öğesini çağırabilirsiniz. `DebugBreak` ve `__debugbreak`, bu konumda kesme noktası ayarlama ile aynı etkiye sahiptir.
+Kodunuzda herhangi bir noktada [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) Win32 işlevini veya [__debugbreak](/cpp/intrinsics/debugbreak) iç öğesini çağırabilirsiniz. `DebugBreak` ve `__debugbreak`, bu konumda kesme noktası ayarlama ile aynı etkiye sahiptir.
 
- @No__t_0, bir sistem işlevine yönelik bir çağrı olduğundan, doğru çağrı yığını bilgilerinin koparmadan sonra görüntülendiğinden emin olmak için sistem hata ayıklama simgelerinin yüklenmesi gerekir. Aksi takdirde, hata ayıklayıcı tarafından görünen çağrı yığını bilgileri bir çerçeve tarafından kapalı olabilir. @No__t_0 kullanıyorsanız, semboller gerekli değildir.
+ `DebugBreak`, bir sistem işlevine yönelik bir çağrı olduğundan, doğru çağrı yığını bilgilerinin koparmadan sonra görüntülendiğinden emin olmak için sistem hata ayıklama simgelerinin yüklenmesi gerekir. Aksi takdirde, hata ayıklayıcı tarafından görünen çağrı yığını bilgileri bir çerçeve tarafından kapalı olabilir. `__debugbreak`kullanıyorsanız, semboller gerekli değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Derleyici İç Bilgileri](/cpp/intrinsics/compiler-intrinsics)

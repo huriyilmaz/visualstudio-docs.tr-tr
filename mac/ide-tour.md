@@ -3,15 +3,15 @@ title: Mac için Visual Studio turu
 description: Mac için Visual Studio, macOS 'ta iOS, Android, Mac ve Xamarin. Forms için ASP.NET Core Web siteleri ve Xamarin projeleri gibi .NET uygulamaları oluşturmaya yönelik tümleşik bir geliştirme ortamı sağlar.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/18/2019
+ms.date: 12/13/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 6d2f0f891f704d3762bc0967da466960ee5170ee
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: f7686efae903912b64d8692a823d6e82592cbec9
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984709"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405827"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Mac için Visual Studio 2019 Tur turu
 
@@ -123,7 +123,7 @@ Mac için Visual Studio, kodunuzu yeniden düzenleme için iki yararlı yol sağ
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-Mac için Visual Studio, Xamarin. iOS, Xamarin. Mac ve Xamarin. Android uygulamaları için hata ayıklama desteğine izin veren yerel bir hata ayıklayıcıya sahiptir. Mac için Visual Studio, mono çalışma zamanına uygulanan, IDE 'nin tüm platformlarda yönetilen kodda hata ayıklamasına izin veren mono yazılım hata ayıklayıcısını kullanır. Hata ayıklama hakkında daha fazla bilgi için [hata ayıklama](/visualstudio/mac/debugging) makalesini ziyaret edin.
+Mac için Visual Studio .NET Core, .NET Framework, Unity ve Xamarin projelerini destekleyen hata ayıklayıcıları vardır. Mac için Visual Studio, .NET Core hata ayıklayıcısını ve mono Soft Debugger 'ı kullanarak IDE 'nin tüm platformlarda yönetilen kodun hatalarını ayıklamasına olanak tanır. Hata ayıklama hakkında daha fazla bilgi için [hata ayıklama](/visualstudio/mac/debugging) makalesini ziyaret edin.
 
 Hata ayıklayıcı, dizeler, renkler, URL 'Ler ve boyutlar, koordinatlar ve Bézier eğrileri gibi özel türler için zengin Görselleştiriciler içerir.
 

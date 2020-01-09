@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
-ms.openlocfilehash: 5aa0b02c87335305f29d098b51c89310cc0a9e5d
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 5600fd2f0b6d83a3bd27350a4d4f0137ea44ced2
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73717273"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75398275"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Mac için Visual Studio ASP.NET Core uygulamalar oluşturma
 
@@ -21,7 +21,7 @@ Bu laboratuvarda, Mac için Visual Studio bir ASP.NET Core uygulaması oluştura
 ## <a name="objectives"></a>Amaçlar
 
 > [!div class="checklist"]
-> * ASP.NET Core Web uygulaması oluşturma
+> * ASP.NET Core web uygulaması oluşturma
 > * Barındırma, yapılandırma ve ara yazılım modelini ASP.NET Core keşfet
 > * ASP.NET Core Web uygulamasında hata ayıklama
 
@@ -29,7 +29,7 @@ Bu laboratuvarda, Mac için Visual Studio bir ASP.NET Core uygulaması oluştura
 
 - [Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac)
 
-## <a name="intended-audience"></a>Hedeflenen hedef kitle
+## <a name="intended-audience"></a>Hedef Kitle
 
 Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak derin deneyim gerekli değildir.
 
@@ -73,9 +73,9 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image8.png)
 
-7. Ayrıca, çalışma zamanında projeyi, paketleri ve uygulamayı yönetmeye yönelik bir dizi yapılandırma dosyası da vardır. Örneğin, varsayılan uygulama [yapılandırması](/aspnet/core/fundamentals/configuration) **appSettings. JSON**' da depolanır. Bununla birlikte, bu ayarların bir kısmını/tümünü, bir appSettings sağlayarak gibi ortam başına temelinde geçersiz kılabilirsiniz **.**  **Geliştirme** ortamı için Development. JSON dosyası.
+7. Ayrıca, çalışma zamanında projeyi, paketleri ve uygulamayı yönetmeye yönelik bir dizi yapılandırma dosyası da vardır. Örneğin, varsayılan uygulama [yapılandırması](/aspnet/core/fundamentals/configuration) **appSettings. JSON**' da depolanır. Aşağıda iç içe geçmiş appSettings. JSON dosyası **appSettings 'dir. Development. JSON** dosyası. Burada, bu ayarların bazılarını/tümünü ortam başına temelinde geçersiz kılabilirsiniz. Mac için Visual Studio, Windows için Visual Studio ile aynı mantığı kullanarak dosyaları bu şekilde iç içe geçirecektir. böylece, daha sık erişmeniz gereken dosyalar Forefront ' de olur. 
 
-    ![](media/netcore-image9.png)
+    ![](media/netcore-build-nested.png)
 
 ## <a name="task-3-understanding-how-the-application-is-hosted"></a>3\. görev: uygulamanın nasıl barındırıldığını anlama
 
@@ -107,7 +107,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image16.png)
 
-8. **Iwebhost** sınıfları, engelleyici olmayan **Başlangıç**uygulamasını uygulamak için gerekli olsa da, ASP.NET Core projelerin, engelleme kodu ile **başlayan** bir genişletme yöntemi vardır **; Bu nedenle** , yöntemi el ile engellemeniz gerekmez hemen çıkılıyor.
+8. **Iwebhost** sınıfları engelleyici olmayan **Başlangıç**uygulamasını uygulamak için gerekli olsa da ASP.NET Core projeler, engelleme kodu ile **başlayan** bir genişletme yöntemine sahiptir, böylece metodun hemen çıkış yapmasını el ile engellemeniz gerekmez.
 
     ![](media/netcore-image17.png)
 
@@ -121,7 +121,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 3. **Dış konsolda Çalıştır** ' ı işaretleyin ve **konsol çıkışını Duraklat**' işaretini kaldırın. Genellikle şirket içinde barındırılan uygulamanın Konsolu görünür olmaz, bunun yerine sonuçları **Çıkış** paneline kaydeder. Bu laboratuvarın amaçları doğrultusunda, normal geliştirme sırasında bunu yapmanıza gerek olmasa da, bunu ayrı bir pencerede de göstereceğiz.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**'ı tıklatın.
 
     ![](media/netcore-image19.png)
 

@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: d07849a362779f3fad8f7544899dc23b9d4538d6
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: d0e00929de11ff3fd820670be2bb6361cfb5fa6c
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913326"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404998"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core kullanmaya başlama
 
@@ -25,7 +25,7 @@ ms.locfileid: "70913326"
 
 Mac için Visual Studio açın. Başlangıç ekranında **Yeni proje...** öğesini seçin.
 
-![Yeni proje Iletişim kutusu](media/asp-net-core-2019-new-asp-core.png)
+![Yeni Proje İletişim Kutusu](media/asp-net-core-2019-new-asp-core.png)
 
 Bu işlem, yeni proje iletişim kutusunu görüntüleyecektir ve uygulamanızı oluşturmak için bir şablon seçmenizi sağlar.
 
@@ -42,13 +42,13 @@ ASP.NET Core uygulamanızı oluşturmaya başlamak için size önceden oluşturu
 
 ![Yeni ASP.NET Core boş proje görünümü](media/asp-net-core-2019-empty-project.png)
 
-Boş ASP.NET Core şablonu iki varsayılan dosya içeren bir Web uygulaması oluşturur: Aşağıda açıklanan **program.cs** ve **Startup.cs**. Ayrıca, projenin ASP.NET Core, .NET Core Framework ve projeyi oluşturan MSBuild hedefleri gibi NuGet paket bağımlılıklarını içeren bir bağımlılıklar klasörü de oluşturur:
+ASP.NET Core boş şablon, aşağıda açıklanan iki varsayılan dosya içeren bir Web uygulaması oluşturur: **program.cs** ve **Startup.cs**. Ayrıca, projenin ASP.NET Core, .NET Core Framework ve projeyi oluşturan MSBuild hedefleri gibi NuGet paket bağımlılıklarını içeren bir bağımlılıklar klasörü de oluşturur:
 
 ![Bağımlılıkları görüntüleme Çözüm Bölmesi](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
-**Program.cs** dosyasını projenizde açın ve inceleyin. `Main` Yöntemde birkaç şeyin gerçekleşdiğine dikkat edin: uygulamanıza giriş:
+**Program.cs** dosyasını projenizde açın ve inceleyin. `Main` yönteminde birkaç şeyin gerçekleşdiğine dikkat edin: uygulamanıza giriş:
 
 ```csharp
     public class Program
@@ -64,19 +64,19 @@ Boş ASP.NET Core şablonu iki varsayılan dosya içeren bir Web uygulaması olu
     }
 ```
 
-Bir ASP.NET Core uygulaması, bir örneği [`WebHostBuilder`](/aspnet/core/fundamentals/hosting)aracılığıyla ana bilgisayar yapılandırıp başlatarak ana yönteminde bir Web sunucusu oluşturur. Bu Oluşturucu konağın yapılandırılmasına izin vermek için yöntemler sağlar. Şablon uygulamasında aşağıdaki yapılandırma kullanılır:
+Bir ASP.NET Core uygulaması, bir [`WebHostBuilder`](/aspnet/core/fundamentals/hosting)örneği aracılığıyla ana bilgisayar yapılandırıp başlatarak ana yönteminde bir Web sunucusu oluşturur. Bu Oluşturucu konağın yapılandırılmasına izin vermek için yöntemler sağlar. Şablon uygulamasında aşağıdaki yapılandırma kullanılır:
 
-* `.UseStartup<Startup>()`: Başlangıç sınıfını belirtir.
+* `.UseStartup<Startup>()`: başlangıç sınıfını belirtir.
 
 Ancak, gibi ek konfigürasyonlar da ekleyebilirsiniz:
 
-* `UseKestrel`: Uygulama tarafından kullanılacak Kestrel sunucusunu belirtir
-* `UseContentRoot(Directory.GetCurrentDirectory())`: Uygulama bu klasörden başlatıldığında, uygulamanın içerik kökü olarak Web projesinin kök klasörünü kullanır
-* `.UseIISIntegration()`: Uygulamanın IIS ile çalışması gerektiğini belirtir. IIS 'yi ASP.NET Core `UseKestrel` birlikte kullanmak ve `UseIISIntegration` belirtilmesi gerekir.
+* `UseKestrel`: uygulama tarafından kullanılacak Kestrel sunucusunu belirtir
+* `UseContentRoot(Directory.GetCurrentDirectory())`: uygulama bu klasörden başlatıldığında, uygulamanın içerik kökü olarak Web projesinin kök klasörünü kullanır
+* `.UseIISIntegration()`: uygulamanın IIS ile çalışması gerektiğini belirtir. IIS 'yi hem ASP.NET Core hem de `UseKestrel` birlikte kullanmak için `UseIISIntegration` belirtilmesi gerekir.
 
 ### <a name="startupcs"></a>Startup.cs
 
-Uygulamanızın başlangıç sınıfı, `UseStartup()` `CreateWebHostBuilder`üzerindeki yönteminde belirtilir. Bu sınıf, istek işleme işlem hattını belirtmenizi ve herhangi bir hizmeti yapılandırdığınız yerdir.
+Uygulamanızın başlangıç sınıfı, `CreateWebHostBuilder``UseStartup()` yönteminde belirtilir. Bu sınıf, istek işleme işlem hattını belirtmenizi ve herhangi bir hizmeti yapılandırdığınız yerdir.
 
 Projenizdeki **Startup.cs** dosyasını açın ve inceleyin:
 
@@ -108,25 +108,25 @@ Projenizdeki **Startup.cs** dosyasını açın ve inceleyin:
 Bu başlangıç sınıfının her zaman aşağıdaki kurallara uyması gerekir:
 
 - Her zaman ortak olmalıdır
-- İki ortak yöntemi içermelidir: `ConfigureServices` ve`Configure`
+- İki ortak yöntemi içermelidir: `ConfigureServices` ve `Configure`
 
-Yöntemi `ConfigureServices` , uygulamanız tarafından kullanılacak hizmetleri tanımlar.
+`ConfigureServices` yöntemi, uygulamanız tarafından kullanılacak hizmetleri tanımlar.
 
-, `Configure` [Ara yazılımı](/aspnet/core/fundamentals/middleware)kullanarak istek işlem hattınızı oluşturmanıza olanak sağlar. Bunlar, istekleri ve yanıtları işlemek için bir ASP.NET uygulama işlem hattı içinde kullanılan bileşenlerdir. HTTP işlem hattı, sırayla çağrılan bir dizi istek temsilcisinden oluşur. Her temsilci, isteğin kendisini işlemeye veya bir sonraki temsilciye geçirmeye seçim yapabilir.
+`Configure`, [Ara](/aspnet/core/fundamentals/middleware)hattını kullanarak istek işlem hattınızı oluşturmanıza olanak sağlar. Bunlar, istekleri ve yanıtları işlemek için bir ASP.NET uygulama işlem hattı içinde kullanılan bileşenlerdir. HTTP işlem hattı, sırayla çağrılan bir dizi istek temsilcisinden oluşur. Her temsilci, isteğin kendisini işlemeye veya bir sonraki temsilciye geçirmeye seçim yapabilir.
 
-`Run`,,`Map`Ve `Run` yöntemlerini kullanarak temsilcileri yapılandırabilirsiniz, ancak yöntem bir sonraki temsilciyi asla çağırmaz ve her zaman ardışık düzenin sonunda kullanılmalıdır. `IApplicationBuilder` `Use`
+`IApplicationBuilder`üzerinde `Run`,`Map`ve `Use` yöntemlerini kullanarak temsilciler yapılandırabilirsiniz, ancak `Run` yöntemi asla bir sonraki temsilciyi çağırmaz ve her zaman ardışık düzenin sonunda kullanılmalıdır.
 
-Önceden oluşturulmuş şablonun yöntemi birkaç şeyi yapmak üzere oluşturulmuştur. `Configure` İlk olarak, geliştirme sırasında kullanılmak üzere bir özel durum işleme sayfasını yapılandırır. Daha sonra, istek yapan web sayfasına basit bir "Merhaba Dünya" ile yanıt gönderir.
+Önceden oluşturulmuş şablonun `Configure` yöntemi birkaç şeyi yapmak üzere oluşturulmuştur. İlk olarak, geliştirme sırasında kullanılmak üzere bir özel durum işleme sayfasını yapılandırır. Daha sonra, istek yapan web sayfasına basit bir "Merhaba Dünya" ile yanıt gönderir.
 
-Bu basit Merhaba, Dünya Projesi artık ek kod eklenmeksizin çalıştırılabilir. Uygulamayı çalıştırmak ve tarayıcınızda görüntülemek için araç çubuğundaki Oynat (üçgen) düğmesine basın:
+Bu basit Merhaba, Dünya Projesi artık ek kod eklenmeksizin çalıştırılabilir. Uygulamayı çalıştırmak için, yürütme düğmesinin sağ açılır menüsünü kullanarak uygulamayı çalıştırmak istediğiniz tarayıcıyı seçebilir ya da varsayılan tarayıcınızı kullanmak için yalnızca Oynat (üç taraflı) düğmesine basabilirsiniz:
 
-![Uygulamayı çalıştır](media/asp-net-core-2019-run-debug.png)
+![Tarayıcı çalıştırması](media/asp-net-web-picker.png)
 
 Mac için Visual Studio, Web projenizi başlatmak için rastgele bir bağlantı noktası kullanır. Bu bağlantı noktasını öğrenmek için, **görünüm > Pad**altında listelenen uygulama çıktısını açın. Aşağıdakine benzer bir çıktıyı aşağıda gösterildiği gibi bulmalısınız:
 
 ![Dinleme bağlantı noktasını görüntüleyen uygulama çıkışı](media/asp-net-core-image6.png)
 
-Proje çalışmaya başladıktan sonra varsayılan Web tarayıcınız, uygulama çıkışında listelenen URL 'yi başlatıp bağlantı etmelidir. Alternatif olarak, istediğiniz herhangi bir tarayıcıyı açabilir ve `http://localhost:5000/`öğesini, `5000` uygulama çıkışında Visual Studio çıktısı olan bağlantı noktasıyla değiştirerek yazabilirsiniz. Şu metni `Hello World!`görmeniz gerekir:
+Proje çalışmaya başladıktan sonra varsayılan Web tarayıcınız, uygulama çıkışında listelenen URL 'yi başlatıp bağlantı etmelidir. Alternatif olarak, istediğiniz herhangi bir tarayıcıyı açabilir ve `5000` `http://localhost:5000/`girerek, uygulama çıkışında Visual Studio çıktısı olan bağlantı noktasıyla değiştirin. Metin `Hello World!`görmeniz gerekir:
 
 ![metin gösteren tarayıcı](media/asp-net-core-image7.png)
 
@@ -134,8 +134,8 @@ Proje çalışmaya başladıktan sonra varsayılan Web tarayıcınız, uygulama 
 
 ASP.NET Core uygulamalar, uygulamanın her bir bölümü için bir sorumluluk için bir mantık ayrımı sağlamak üzere Model-View-Controller (MVC) tasarım modelini kullanır. MVC aşağıdakilerden oluşur:
 
-- **Model**: Uygulamanın verilerini temsil eden bir sınıf.
-- **Görüntüle**: Uygulamanın kullanıcı arabirimini (genellikle model verileri) görüntüler.
+- **Model**: uygulamanın verilerini temsil eden bir sınıf.
+- **Görünüm**: uygulamanın kullanıcı arabirimini (genellikle model verileri) görüntüler.
 - **Denetleyici**: Tarayıcı isteklerini işleyen, kullanıcı girişine ve etkileşime yanıt veren bir sınıf.
 
 MVC kullanma hakkında daha fazla bilgi için [, ASP.NET Core MVC kılavuzuna genel bakış](/aspnet/core/mvc/overview) bölümüne bakın.
@@ -169,13 +169,13 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
     }
     ```
 
-3. **Bağımlılık klasörüne sağ** tıklayıp **paket Ekle...** seçeneğini belirleyerek bağımlılığıprojeyeekleyin.`Microsoft.AspNetCore.Mvc`
+3. **Bağımlılık** klasörüne sağ tıklayıp **paket Ekle...** seçeneğini belirleyerek `Microsoft.AspNetCore.Mvc` bağımlılığı projeye ekleyin.
 
-4. İçin `Microsoft.AspNetCore.Mvc`NuGet kitaplığına gitmek için arama kutusunu kullanın ve **paket Ekle**' yi seçin. Bu işlem birkaç dakika sürebilir ve gerekli bağımlılıklar için çeşitli lisanslar kabul etmeniz istenebilir:
+4. `Microsoft.AspNetCore.Mvc`için NuGet kitaplığına gitmek için arama kutusunu kullanın ve **paket Ekle**' yi seçin. Bu işlem birkaç dakika sürebilir ve gerekli bağımlılıklar için çeşitli lisanslar kabul etmeniz istenebilir:
 
     ![NuGet Ekle](media/asp-net-core-image9.png)
 
-5. Başlangıç sınıfında, `app.Run` lambda 'yi kaldırın ve MVC tarafından aşağıdaki için hangi kodun çağrılmasını gerektiğini öğrenmek için kullanılan URL yönlendirme mantığını ayarlayın:
+5. Başlangıç sınıfında, `app.Run` lambda 'yi kaldırın ve MVC tarafından aşağıdaki için hangi kodun hangi kodla çalışacağını öğrenmek için kullanılan URL yönlendirme mantığını ayarlayın:
 
     ```csharp
     app.UseMvc(routes =>
@@ -186,15 +186,15 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
     });
     ```
 
-    Bu, yönlendirme mantığını geçersiz `app.Run` kılacaktır, lambda 'yi kaldırdığınızdan emin olun.
+    Yönlendirme mantığını geçersiz kılacak olduğundan `app.Run` lambda 'yi kaldırdığınızdan emin olun.
 
     MVC, hangi kodun çalıştırılacağını anlamak için aşağıdaki biçimi kullanır:
 
     `/[Controller]/[ActionName]/[Parameters]`
 
-    Yukarıdaki kod parçacığını eklediğinizde, uygulamanın `HelloWorld` denetleyiciye varsayılan olarak `Index` ve eylem yöntemine söylemiş olursunuz.
+    Yukarıdaki kod parçacığını eklediğinizde, uygulamanın `HelloWorld` denetleyicisine ve `Index` eylem yöntemine göre varsayılan olarak olduğunu söylemiş olursunuz.
 
-6. Aşağıdaki gösterildiği gibi `ConfigureServices` yöntemine çağrıekleyin:`services.AddMvc();`
+6. `services.AddMvc();` çağrısını aşağıda gösterildiği gibi `ConfigureServices` yöntemine ekleyin:
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
@@ -218,7 +218,7 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
 
     ![Uygulamayı tarayıcıda çalıştırma](media/asp-net-core-image13.png)
 
-9. Gözatmaya `http://localhost:xxxx/HelloWorld/Xamarin?name=Amy` (doğru bağlantı noktasıyla değiştirme `xxxx` ) çalışırsanız, aşağıdakileri görmeniz gerekir:
+9. `http://localhost:xxxx/HelloWorld/Xamarin?name=Amy` gözatmaya çalışın (`xxxx` doğru bağlantı noktasıyla değiştirerek), aşağıdakileri görmeniz gerekir:
 
     ![Uygulama, bağımsız değişkenlerle tarayıcıda çalıştırılıyor](media/asp-net-core-image10.png)
 

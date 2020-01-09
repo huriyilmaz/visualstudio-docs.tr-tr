@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: a61a3181f47af4a660641ef02ce4ba1b31eedc46
-ms.sourcegitcommit: 916bbe1d77c9253424daa86c71c40f5e1ec74400
+ms.openlocfilehash: 18fa63f2a6f4b6d789bad6f813cb3956a636a2d2
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74951944"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404081"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
@@ -56,7 +56,7 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
 
 - *"Özellik değeri değişti ve artık izlenemez."*
 
-    - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. Bkz. `"The property is dependent on more memory than can be tracked by the hardware."`.
+    - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. Aşağıya `"The property is dependent on more memory than can be tracked by the hardware."` bakın.
 
 - *"Özelliği, donanım tarafından izlenebileceğinden daha fazla belleğe bağımlıdır."*
     
@@ -83,5 +83,5 @@ Programınızın üzerinde çalıştığı mimari (Platform yapılandırması), 
 Bu özellikle ilgili herhangi bir sorun veya öneri için, lütfen yardım > bir sorun bildirmek > IDE 'de veya [Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'Nda [bir sorun bildirmek](../ide/how-to-report-a-problem-with-visual-studio.md) için lütfen bize bilgi verin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Core 3,0 ' de "değer değiştiğinde kes" kullanımı](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed).
+- [.NET Core 3,0 ' de "değer değiştiğinde kes" kullanımı](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus).
 - [DevBlog: değer değiştiğinde kes: Visual Studio 2019 ' de .NET Core için veri kesme noktaları](https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/)

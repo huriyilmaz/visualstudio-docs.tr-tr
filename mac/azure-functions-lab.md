@@ -1,17 +1,17 @@
 ---
-title: 'Öğretici: Azure İşlevleri'
+title: 'Öğretici: Azure Işlevleri'
 description: Mac için Visual Studio 'de Azure işlevleri 'ni kullanma.
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
-ms.openlocfilehash: 6bea12b37bc7fe1f608c27cd72e48c7cdc7e13d8
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 1a3c4f3283ab10cfc4f8ee8364113dcb7f075af8
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108139"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75398169"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>Öğretici: Azure Işlevleri 'ni kullanmaya başlama
 
@@ -27,7 +27,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 ## <a name="requirements"></a>Gereksinimler
 
 - Mac için Visual Studio 7,5 veya üzeri.
-- Bir Azure aboneliği (öğesinden [https://azure.com/free](https://azure.com/free)ücretsiz olarak kullanılabilir).
+- Bir Azure aboneliği ( [https://azure.com/free](https://azure.com/free?ref=visualstudio)ücretsiz olarak kullanılabilir).
 
 ## <a name="exercise-1-creating-an-azure-functions-project"></a>Alıştırma 1: Azure Işlevleri projesi oluşturma
 
@@ -54,7 +54,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
 ## <a name="exercise-2-creating-an-azure-storage-account"></a>Alıştırma 2: Azure depolama hesabı oluşturma
 
-1. Konumundaki [https://portal.azure.com](https://portal.azure.com)Azure hesabınızda oturum açın.
+1. [https://portal.azure.com](https://portal.azure.com)adresinden Azure hesabınızda oturum açın.
 
 1. Ekranın solunda bulunan **Sık Kullanılanlar** bölümünde **depolama hesapları**' nı seçin:
 
@@ -68,7 +68,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![Yeni depolama hesabı ayrıntıları](media/azure-functions-lab-image6.png)
 
-1. **Oluştur**'a tıklayın. Depolama hesabının oluşturulması birkaç dakika sürebilir. Başarılı bir şekilde oluşturulduktan sonra bir bildirim alırsınız.
+1. **Oluştur**'u tıklatın. Depolama hesabının oluşturulması birkaç dakika sürebilir. Başarılı bir şekilde oluşturulduktan sonra bir bildirim alırsınız.
 
     ![Dağıtım başarılı bildirimi](media/azure-functions-lab-image7.png)
 
@@ -86,7 +86,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![bağlantı anahtarı girilen yerel ayarlar dosyası](media/azure-functions-lab-image10.png)
 
-## <a name="example-3-creating-and-debugging-an-azure-function"></a>Örnek 3: Azure Işlevi oluşturma ve hata ayıklama
+## <a name="example-3-creating-and-debugging-an-azure-function"></a>Örnek 3: bir Azure Işlevi oluşturma ve hata ayıklama
 
 1. Artık kod eklemeye başlamaya hazırsınız. .NET sınıf kitaplığı ile çalışırken, Azure Işlevleri statik yöntemler olarak eklenir. **Çözüm bölmesi**, **Azurefunctions** proje düğümüne sağ tıklayın ve **Ekle > Ekle işlevi**' ni seçin:
 
@@ -104,7 +104,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
     using Microsoft.WindowsAzure.Storage.Table;
     ```
 
-1. Mevcut `Run` yöntemi kaldırın ve aşağıdaki yöntemi Azure işleviniz olarak sınıfına ekleyin:
+1. Mevcut `Run` yöntemini kaldırın ve aşağıdaki yöntemi Azure Işleviniz olarak sınıfına ekleyin:
 
     ```csharp
     [FunctionName("Add")]
@@ -184,7 +184,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
 1. Uygulamayı çalıştırın.
 
-1. Tarayıcı penceresine dönün ve dizeyi `/?x=2&y=3` URL 'ye ekleyin. Tüm URL artık olmalıdır `http://localhost:7071/api/Add?x=2&y=3`. Yeni URL 'ye gidin.
+1. Tarayıcı penceresine dönün ve `/?x=2&y=3` dize URL 'sini ekleyin. URL 'nin tamamı artık `http://localhost:7071/api/Add?x=2&y=3`olmalıdır. Yeni URL 'ye gidin.
 
 1. Bu kez, sonuç yeni parametreleri yansıtmalıdır. Projeyi farklı değerlerle çalıştırmayı ücretsiz olarak hissetmekten çekinmeyin. Hata denetimi olmadığını unutmayın, bu nedenle geçersiz veya eksik parametreler hata oluşturacak.
 
@@ -279,7 +279,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![JSON dosyası için Özellikler seçenekleri](media/azure-functions-lab-image30.png)
 
-1. **Add.cs**' de, `Run` yöntemi (özniteliği dahil), beklenen işlevi yerine getirmek için aşağıdaki yöntemle değiştirin. Bu çok benzerdir `Run`, ancak hiçbir öznitelik kullanmaz ve **x** ve **y**için açık parametrelere sahip olur.
+1. **Add.cs**içinde, beklenen işlevi yerine getirmek için `Run` yöntemini (özniteliği dahil) aşağıdaki yöntemle değiştirin. `Run`, öznitelik olmaması ve **x** ve **y**için açık parametrelere sahip olması dışında, benzerdir.
 
     ```csharp
     public static int Add2(
@@ -298,7 +298,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![Http işlevleri URL 'SI](media/azure-functions-lab-image31.png)
 
-1. Tarayıcı penceresini döndürün ve adresine **http://localhost:7071/api/Adder/3/5** gidin.
+1. Tarayıcı penceresini döndürün ve **http://localhost:7071/api/Adder/3/5** ' a gidin.
 
 1. Bu kez Yöntem bir kez daha çalışarak yoldan parametreler çekerek ve bir toplam üretir.
 
@@ -347,7 +347,7 @@ Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli 
 
 1. Projeyi derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-1. Tarayıcı sekmesinde öğesine **http://localhost:7071/api/Process/4/6** gidin. Bu, kuyruğa başka bir ileti yerleştirir. Bu, sonunda tabloya başka bir satırın eklenmesine neden olur.
+1. Tarayıcı sekmesinde **http://localhost:7071/api/Process/4/6** ' a gidin. Bu, kuyruğa başka bir ileti yerleştirir. Bu, sonunda tabloya başka bir satırın eklenmesine neden olur.
 
 1. **Terminal** 'e dönün ve **4 + 6**gelen isteğini izleyin.
 
@@ -380,11 +380,11 @@ Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli 
 
 1. Projeyi derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-1. Tarayıcı sekmesinde URL 'YI **http://localhost:7071/api/Process/4/6** yenileyin. Bu kaydın tablo satırı var olduğundan, hemen ve hatasız döndürmelidir. HTTP çıktısı olmadığından çıktıyı terminalde görebilirsiniz.
+1. Tarayıcı sekmesinde **http://localhost:7071/api/Process/4/6** URL 'yi yenileyin. Bu kaydın tablo satırı var olduğundan, hemen ve hatasız döndürmelidir. HTTP çıktısı olmadığından çıktıyı terminalde görebilirsiniz.
 
     ![Tablo satırını gösteren Terminal çıkışı zaten var](media/azure-functions-lab-image33.png)
 
-1. URL 'YI, henüz test **http://localhost:7071/api/Process/5/7** edilmemiş bir birleşimi yansıtacak şekilde güncelleştirin. Terminal 'teki, tablo satırının bulunamadığını (beklenen şekilde) belirten iletiyi not edin.
+1. URL 'YI, **http://localhost:7071/api/Process/5/7** gibi henüz sınanmamıştır bir birleşimi yansıtacak şekilde güncelleştirin. Terminal 'teki, tablo satırının bulunamadığını (beklenen şekilde) belirten iletiyi not edin.
 
     ![Yeni işlemi gösteren Terminal çıkışı](media/azure-functions-lab-image34.png)
 

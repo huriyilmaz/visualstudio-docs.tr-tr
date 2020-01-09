@@ -11,18 +11,18 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 071c16267486e1dda1e183cad3c488345974a3cc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 84f6ddc2012617a5216c58fa0761dc100fb8942f
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745917"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75402751"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>Kod C++ analizi için örnek proje
 
 Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı gösterilmektedir [: hatalar Için CC++ /kod çözümleme](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Şu yordamları oluşturun:
 
-- CppDemo adlı bir Visual Studio çözümü.
+- A [! CppDemo adlı ıncludevsprvs] çözümü.
 
 - Codearızaları adlı bir statik kitaplık projesi.
 
@@ -32,19 +32,17 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>CppDemo çözümü ve Codekusurları projesi oluşturma
 
-1. **Dosya** menüsüne tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
+1. Açık [! Includevsprvs] ve **Yeni proje oluştur** seçeneğini belirleyin
 
-2. **Proje türleri** ağaç LISTESINDE, C++ vs genişletme **diğer dillerde**varsayılan diliniz değilse.
+2. Dil filtresini Değiştir**C++**
 
-3. **Görsel C++** ' i genişletin ve ardından **genel**' e tıklayın.
+3. **Boş proje** ' yi seçin ve **İleri** ' ye tıklayın
 
-4. **Şablonlar**' da **boş proje**' ye tıklayın.
+4. **Proje adı** metin kutusuna **codekusurlarını** yazın
 
-5. **Ad** metin kutusuna **codekusurlarını**yazın.
+5. **Çözüm adı** metin kutusuna **CppDemo** yazın
 
-6. **Çözüm için dizin oluştur** onay kutusunu seçin.
-
-7. **Çözüm adı** metin kutusuna **CppDemo**yazın.
+6. **Oluştur**'a tıklayın.
 
 ## <a name="configure-the-codedefects-project-as-a-static-library"></a>Codekusurları projesini statik kitaplık olarak yapılandırma
 
@@ -52,9 +50,9 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 2. **Yapılandırma özellikleri** ' ni genişletin ve ardından **genel**' e tıklayın.
 
-3. **Genel** listesinde, **hedef uzantı**' ın yanındaki sütundaki metni seçin ve **. lib**yazın.
+3. **Genel** listesinde, **yapılandırma türünü** **statik kitaplık (. lib)** olarak değiştirin.
 
-4. **Proje Varsayılanları**' nda, **yapılandırma türü**' nün yanındaki sütununa tıklayın ve ardından **statik LIB (. lib)** öğesine tıklayın.
+4. **Gelişmiş** listede **hedef dosya uzantısını** **. lib** olarak değiştirin
 
 ## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Üstbilgi ve kaynak dosyayı Codekusurları projesine ekleyin
 
@@ -64,27 +62,23 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 3. **Ad** kutusuna **Bug. h** yazın ve ardından **Ekle**' ye tıklayın.
 
-4. Aşağıdaki kodu kopyalayın ve Visual Studio Düzenleyicisi 'ndeki *Bug. h* dosyasına yapıştırın.
+4. Aşağıdaki kodu kopyalayın ve düzenleyicideki *hata. h* dosyasına yapıştırın.
 
-    ```cpp
-    #include <windows.h>
+```cpp
+#pragma once
 
-    //
-    //These 3 functions are consumed by the sample
-    //  but are not defined. This project cannot be linked!
-    //
+#include <windows.h>
 
-    bool CheckDomain( LPCSTR );
-    HRESULT ReadUserAccount();
+// These functions are consumed by the sample
+// but are not defined. This project cannot be linked!
+bool CheckDomain(LPCTSTR);
+HRESULT ReadUserAccount();
 
-    //
-    //These constants define the common sizes of the
-    //  user account information throughout the program
-    //
-
-    const int USER_ACCOUNT_LEN = 256;
-    const int ACCOUNT_DOMAIN_LEN = 128;
-    ```
+// These constants define the common sizes of the
+// user account information throughout the program
+const int USER_ACCOUNT_LEN = 256;
+const int ACCOUNT_DOMAIN_LEN = 128;
+```
 
 5. Çözüm Gezgini, **kaynak dosyalar**' a sağ tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın.
 
@@ -92,65 +86,63 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 7. **Ad** kutusuna **Bug. cpp** yazın ve ardından **Ekle**' ye tıklayın.
 
-8. Aşağıdaki kodu kopyalayın ve Visual Studio Düzenleyicisi 'nde *hata. cpp* dosyasına yapıştırın.
+8. Aşağıdaki kodu kopyalayın ve düzenleyicideki *hata. cpp* dosyasına yapıştırın.
 
-    ```cpp
-    #include <stdlib.h>
-    #include "Bug.h"
+```cpp
+#include "Bug.h"
 
-    // the user account
-    TCHAR g_userAccount[USER_ACCOUNT_LEN] = "";
-    int len = 0;
+// the user account
+TCHAR g_userAccount[USER_ACCOUNT_LEN] = {};
+int len = 0;
 
-    bool ProcessDomain()
+bool ProcessDomain()
+{
+    TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
+    // ReadUserAccount gets a 'domain\user' input from
+    //the user into the global 'g_userAccount'
+    if (ReadUserAccount())
     {
-        TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
-        // ReadUserAccount gets a 'domain\user' input from
-        //the user into the global 'g_userAccount'
-        if (ReadUserAccount() )
+        // Copies part of the string prior to the '\'
+        // character onto the 'domain' buffer
+        for (len = 0; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != L'\0'); len++)
         {
-
-            // Copies part of the string prior to the '\'
-            // character onto the 'domain' buffer
-            for( len = 0 ; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != '\0') ; len++  )
+            if (g_userAccount[len] == '\\')
             {
-                if ( g_userAccount[len] == '\\' )
-                {
-                    // Stops copying on the domain and user separator ('\')
-                    break;
-                }
-                domain[len] = g_userAccount[len];
+                // Stops copying on the domain and user separator ('\')
+                break;
             }
-            if((len= ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
-            {
-                // '\' was not found. Invalid domain\user string.
-                delete [] domain;
-                return false;
-            }
-            else
-            {
-                domain[len]='\0';
-            }
-            // Process domain string
-            bool result = CheckDomain( domain );
-
-            delete[] domain;
-            return result;
+            domain[len] = g_userAccount[len];
         }
-        return false;
-    }
-
-    int path_dependent(int n)
-    {
-        int i;
-        int j;
-        if (n == 0)
-            i = 1;
+        if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+        {
+            // '\' was not found. Invalid domain\user string.
+            delete[] domain;
+            return false;
+        }
         else
-            j = 1;
-        return i+j;
+        {
+            domain[len] = '\0';
+        }
+        // Process domain string
+        bool result = CheckDomain(domain);
+
+        delete[] domain;
+        return result;
     }
-    ```
+    return false;
+}
+
+int path_dependent(int n)
+{
+    int i;
+    int j;
+    if (n == 0)
+        i = 1;
+    else
+        j = 1;
+    return i + j;
+}
+```
 
 9. **Dosya** menüsüne tıklayın ve ardından **Tümünü Kaydet**' e tıklayın.
 
@@ -158,17 +150,18 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 1. Çözüm Gezgini, **CppDemo**' e tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. **Yeni Proje Ekle** iletişim kutusunda, görsel C++' i genişletin, **genel**' i ve ardından **boş proje**' yi tıklatın.
+2. **Yeni Proje Ekle** iletişim kutusunda dil filtresini olarak **C++** değiştirip **boş proje** ' yi seçin ve ardından **İleri**' ye tıklayın.
 
-3. **Ad** metin kutusuna **ek açıklamalar**yazın ve ardından **Ekle**' ye tıklayın.
+3. **Proje adı** metin kutusuna **ek açıklamalar**yazın ve ardından **Oluştur**' a tıklayın.
 
 4. Çözüm Gezgini, **ek açıklamalar** ' a sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 5. **Yapılandırma özellikleri** ' ni genişletin ve ardından **genel**' e tıklayın.
 
-6. **Genel** listesinde, **hedef uzantı**' ın yanındaki sütundaki metni seçin ve **. lib**yazın.
+6. **Genel** listesinde **yapılandırma türünü**değiştirin ve ardından **statik kitaplık (. lib)** öğesine tıklayın.
 
-7. **Proje Varsayılanları**' nda, **yapılandırma türü**' nün yanındaki sütununa tıklayın ve ardından **statik LIB (. lib)** öğesine tıklayın.
+7. **Gelişmiş** listede, **hedef dosya uzantısı**' nın yanındaki sütundaki metni seçin ve **. lib**yazın.
+
 
 ## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Üst bilgi dosyasını ve kaynak dosyayı ek açıklamalar projesine ekleyin
 
@@ -178,22 +171,22 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 3. **Ad** kutusuna, **ek açıklama. h** yazın ve ardından **Ekle**' ye tıklayın.
 
-4. Aşağıdaki kodu kopyalayın ve Visual Studio Düzenleyicisi 'ndeki *ek açıklamalar. h* dosyasına yapıştırın.
+4. Aşağıdaki kodu kopyalayın ve düzenleyicideki *ek açıklamalar. h* dosyasına yapıştırın.
 
-    ```cpp
-    #include <CodeAnalysis/SourceAnnotations.h>
+```cpp
+#pragma once
+#include <sal.h>
 
-    struct LinkedList
-    {
-        struct LinkedList* next;
-        int data;
-    };
+struct LinkedList
+{
+    struct LinkedList* next;
+    int data;
+};
 
-    typedef struct LinkedList LinkedList;
+typedef struct LinkedList LinkedList;
 
-    [returnvalue:SA_Post( Null=SA_Maybe )] LinkedList* AllocateNode();
-
-    ```
+_Ret_maybenull_ LinkedList* AllocateNode();
+```
 
 5. Çözüm Gezgini, **kaynak dosyalar**' a sağ tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın.
 
@@ -201,33 +194,30 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 7. **Ad** kutusuna, **ek açıklama. cpp** yazın ve ardından **Ekle**' ye tıklayın.
 
-8. Aşağıdaki kodu kopyalayın ve Visual Studio Düzenleyicisi 'ndeki *ek açıklamalar. cpp* dosyasına yapıştırın.
+8. Aşağıdaki kodu kopyalayın ve düzenleyicideki *ek açıklama. cpp* dosyasına yapıştırın.
 
-    ```cpp
-    #include <CodeAnalysis/SourceAnnotations.h>
-    #include <windows.h>
-    #include <stdlib.h>
-    #include "annotations.h"
+```cpp
+#include "annotations.h"
 
-    LinkedList* AddTail( LinkedList *node, int value )
+LinkedList* AddTail(LinkedList* node, int value)
+{
+    // finds the last node
+    while (node->next != nullptr)
     {
-        LinkedList *newNode = NULL;
-
-        // finds the last node
-        while ( node->next != NULL )
-        {
-            node = node->next;
-        }
-
-        // appends the new node
-        newNode = AllocateNode();
-        newNode->data = value;
-        newNode->next = 0;
-        node->next = newNode;
-
-        return newNode;
+        node = node->next;
     }
 
-    ```
+    // appends the new node
+    LinkedList* newNode = AllocateNode();
+    newNode->data = value;
+    newNode->next = 0;
+    node->next = newNode;
+
+    return newNode;
+}
+```
 
 9. **Dosya** menüsüne tıklayın ve ardından **Tümünü Kaydet**' e tıklayın.
+
+
+Çözüm artık tamamlanmıştır ve hatasız bir şekilde oluşturulmalıdır.

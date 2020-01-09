@@ -1,6 +1,6 @@
 ---
 title: Zaman uyumlu bir şekilde otomatik yüklenen uzantılar
-ms.date: 02/16/2019
+ms.date: 12/11/2019
 ms.topic: conceptual
 ms.assetid: 822e3cf8-f723-4ff1-8467-e0fb42358a1f
 author: madskristensen
@@ -8,48 +8,50 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b18642269326c516c2af0baef57cb306f60ae6a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: aaa26585ff4cca909a7fb7c955b351b8860436b4
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316707"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406629"
 ---
 # <a name="synchronously-autoloaded-extensions"></a>Zaman uyumlu bir şekilde otomatik yüklenen uzantılar
 
-Zaman uyumlu olarak autoloaded uzantılar Visual Studio performansını olumsuz bir etkiye sahip ve zaman uyumsuz sorsorgu yerine kullanacak şekilde dönüştürülmeleri. Uzantı, zaman uyumlu olarak autoloaded yüklenirken Visual Studio 2019 Önizleme 2'de başlayarak, kullanıcılar bilgilendirildi. Uzantı yükleme ve normal şekilde çalışır.
+Zaman uyumlu olarak yüklenen uzantılar, Visual Studio 'nun performansı üzerinde olumsuz bir etkiye sahiptir ve bunun yerine zaman uyumsuz bir oto yükü kullanacak şekilde dönüştürülmelidir. Visual Studio 2019, varsayılan olarak herhangi bir uzantıdan zaman uyumlu olarak yüklenen paketleri engeller ve kullanıcıya bildirim gönderir.
 
-![Uzantı uyumluluk Uyarısı](media/extension-compatibility-warning.png)
+![Uzantı uyumluluk uyarısı](media/extension-compatibility-warning-16-1.png.png)
 
-Kullanıcılar şunları yapabilir:
+Şunları yapabilirsiniz:
 
-- Tıklayarak **daha fazla bilgi edinin** bu bilgileri sayfasına ulaşmak için.
+- Uzantıların oto yüklemesine izin vermek için **zaman uyumlu bir oto yüküne Izin ver** ' e tıklayın. Visual Studio seçeneklerinde bu ayarı değiştirmek için, ortam ' a ve ardından Uzantılar ' a tıklayın ve ardından "uzantıların zaman uyumlu olarak yeniden yüklenmesine Izin ver" onay kutusunu seçin. 
 
-- Tıklayarak **performansı yönetme** açmak için [Performans Yöneticisi iletişim kutusu](#performance-manager-dialog) uzantıları ve araç pencerelerini ile performans sorunlarını gösterir.
+- Uzantılara ve araç pencereleri ile ilgili performans sorunlarını gösteren [Performans Yöneticisi iletişim kutusunu](#performance-manager-dialog) açmak Için **performansı Yönet** ' e tıklayın.
 
-- Tıklayarak **bu iletiyi tekrar gösterme** bildirimi kapatmak için. Bu seçeneğin belirlenmesi, zaman uyumlu olarak autoloaded uzantılardan gelecekteki tüm bildirimleri engeller. Kullanıcılar, diğer Visual Studio özellikleri hakkında bildirim almaya devam edebilir.
+- Bildirimi kapatmak ve mevcut yüklü uzantılardan gelecek bildirimleri engellemek için **geçerli uzantılar için bu iletiyi gösterme** ' ye tıklayın. Zaman uyumlu olarak tekrar yüklenen yeni bir uzantı eklerseniz, bu bildirim yeniden görüntülenir. Diğer Visual Studio özellikleri hakkında bildirim almaya devam edersiniz.
 
 ## <a name="performance-manager-dialog"></a>Performans Yöneticisi iletişim kutusu
 
 ![Performans Yöneticisi iletişim kutusu](media/performance-manager.png)
 
-Görünür zaman uyumlu olarak herhangi bir paket içinde herhangi bir kullanıcı oturumlarını yüklenen tüm uzantıları **API'leri kullanım dışı** sekmesi.
+Tüm Kullanıcı oturumlarındaki paketleri eşzamanlı olarak yükleyen tüm uzantılar **kullanım dışı API 'ler** sekmesinde görünür.
 
-* Kullanıcılar tıklayabilirsiniz **Bu sorun hakkında daha fazla bilgi** kaldırılmış API'ler hakkında daha fazla bilgi toplayın.
-* Kullanıcılar kendi uzantı satıcıları geçiş ilerleme durumu iletişim kurabilirsiniz.
+* Kullanım dışı bırakılmış API 'Ler hakkında daha fazla bilgi toplamak için **Bu sorunla Ilgili daha fazla bilgi** için tıklayın.
+* Geçiş ilerlemesi için uzantı satıcılarına başvurun.
 
-Uzantı yazarları geçirilmesine yönelik yönergeler bulabilir zaman uyumsuz sorsorgu paketlere [AsyncPackage geçiş](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/AsyncPackageMigration).
+## <a name="specify-synchronous-autoload-settings-using-group-policy"></a>Grup İlkesi kullanarak zaman uyumlu tekrar yükleme ayarlarını belirtin
 
-## <a name="specify-synchronous-autoload-settings-using-group-policy"></a>Grup İlkesi kullanarak zaman uyumlu otomatik yükleme ayarlarını belirtin
+Yöneticiler, zaman uyumlu bir oto yüküne izin vermek için grup ilkesi etkinleştirebilir. Bunu yapmak için aşağıdaki anahtarı kayıt defteri tabanlı bir ilke ayarlayın:
 
-Visual Studio 2019 güncelleştirme 1, varsayılan olarak, Visual Studio yükleme blokları zaman uyumlu sorsorgu başlatılıyor. Grup İlkesi'ni etkinleştirdiğinizde, Visual Studio tek tek bilgisayarlarda zaman uyumlu sorsorgu izin verecek şekilde yapılandırabilirsiniz. Bunu yapmak için aşağıdaki anahtarı kayıt defteri tabanlı bir ilke ayarlayın:
+**HKEY_LOCAL_MACHINE \Software\policies\microsoft\visualstudio\synchronousoto Load**
 
-**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SynchronousAutoload**
-
-Giriş = **izin**
+Giriş = **Izin verildi**
 
 Değer (DWORD) =
-* **0** zaman uyumlu sorsorgu izin verilmiyor
-* **1** zaman uyumlu sorsorgu izin verilir
+* **0** zaman uyumlu bir oto yüküne izin verilmiyor
+* **1** zaman uyumlu bir oto yüküne izin verilir
 
-Visual Studio 2019 güncelleştirme 1'deki eşzamanlı otomatik yükleme ayarları hakkında daha fazla bilgi için bkz. [eşzamanlı Sorsorgu davranış](https://aka.ms/AA52xzw) sayfası.
+## <a name="extension-authors"></a>Uzantı yazarları
+Uzantı yazarları, [AsyncPackage 'e geçiş](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/AsyncPackageMigration)sırasında paketlerin zaman uyumsuz olarak geçişine yönelik yönergeler bulabilir.
+
+## <a name="see-also"></a>Ayrıca bkz.
+Visual Studio 2019 ' de zaman uyumlu tekrar yükleme ayarları hakkında daha fazla bilgi için bkz. [zaman uyumlu oto yükleme davranışı](https://aka.ms/AA52xzw) sayfası.

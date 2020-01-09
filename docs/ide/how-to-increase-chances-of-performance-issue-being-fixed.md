@@ -5,12 +5,12 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 3bf61c1ecbed5a3da1fe7ec0bcf9c6d4b7580b8d
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 57d956a426e791fcc84d5972f564cd554d6e72f8
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904000"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406100"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
@@ -39,6 +39,8 @@ Aşağıda açıklanan sorunlar iyi tanılama dosyaları olmadan tanılanması z
 -   [Yavaşlık sorunları:](#slowness-and-high-cpu-issues) VS 'deki belirli bir eylem, istenenden daha yavaş
 
 -   [Yüksek CPU:](#slowness-and-high-cpu-issues) Beklenmedik bir şekilde yüksek CPU kullanımı uzatılmış dönemleri
+
+-   [Işlem dışı sorunlar:](#out-of-process-issues) Visual Studio uydu sürecinin neden olduğu bir sorun
 
 ## <a name="crashes"></a>Çökme
 İşlem (Visual Studio) beklenmedik bir şekilde sonlandırıldığında kilitlenme oluşur.
@@ -171,6 +173,23 @@ Geliştirici topluluğu Web sitesinde mevcut geri bildirim öğelerine doğrudan
 **Gelişmiş performans Izlemeleri**
 
 Rapor-sorun aracında izleme koleksiyonu özellikleri çoğu senaryo için yeterlidir. Ancak, izleme koleksiyonu üzerinde daha fazla denetim gerekli olduğunda (örneğin, daha büyük bir arabellek boyutu ile izleme), bu durumda PerfView kullanmak için harika bir araçtır. PerfView aracını kullanarak performans izlemesini el ile kaydetme adımları, [PerfView Ile kaydetme performansı izlemeleri](https://github.com/dotnet/roslyn/wiki/Recording-performance-traces-with-PerfView) sayfasında bulunabilir.
+
+## <a name="out-of-process-issues"></a>Işlem dışı sorunlar
+
+> [!NOTE]
+> Visual Studio 2019 sürüm 16,3 ' den başlayarak, sorun bildir Aracı kullanılarak gönderilen geri bildirimde otomatik olarak işlem dışı Günlükler eklenir. Ancak, sorun doğrudan tekrarlanabilir ise, aşağıdaki adımlardan sonra sorunun daha iyi tanılanmasına yardımcı olmak için ek bilgiler eklemeye yardımcı olabilir.
+
+Visual Studio 'ya paralel olarak çalışan ve ana Visual Studio işleminin dışından çeşitli özellikler sağlayan birçok uydu işlemi vardır. Bu uydu işlemlerinden birinde bir hata oluşursa, genellikle Visual Studio tarafında ' StreamJsonRpc. Remoteınvocationexception ' veya bir ' StreamJsonRpc. ConnectionLostException ' olarak görülür.
+
+Bu tür sorunların en çok eyleme neden olduğu, aşağıdaki adımları izleyerek toplanabilecek ek Günlükler sağlamaktır:
+
+1.  Bu doğrudan tekrarlanabilir bir sorun ise, **% Temp%/servicehub/logs** klasörünü silerek başlayın. Bu sorunu yeniden oluşturamıyorsanız lütfen bu klasörü bozulmadan koruyun ve aşağıdaki madde işaretlerini yoksayın:
+
+    -   **Servicehubtracelevel** genel ortam değişkenini **All** olarak ayarlayın
+    -   Sorunu yeniden oluşturun.
+
+2.  Microsoft Visual Studio ve .NET Framework günlük toplama aracını [buraya](https://aka.ms/vscollect)indirin.
+3.  Aracı çalıştırın. Bu, **% Temp%/Vslogs.zip**dosyasına bir ZIP dosyası verir. Lütfen bu dosyayı geri bildiriminiz için bağlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

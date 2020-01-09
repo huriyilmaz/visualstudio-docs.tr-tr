@@ -26,22 +26,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c976f14a4250741d166c189c53a1b8cae8ea891a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2f0e3666c313c55df605cd7b79199827765f40f3
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736701"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404347"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>Hata: Web Sunucusunda Hata Ayıklama Başlatılamıyor
 
 Web sunucusunda çalışan bir ASP.NET uygulamasında hata ayıklamaya çalıştığınızda şu hata iletisini alabilirsiniz: `Unable to start debugging on the Web server`.
 
-Genellikle, bu hata bir hata veya yapılandırma değişikliği gerçekleştiğinden uygulama Havuzlarınızda, IIS sıfırlamasının veya her ikisinde de bir güncelleştirme yapılmasını gerektirir. Yükseltilmiş bir komut istemi açıp `iisreset` yazarak IIS 'yi sıfırlayabilirsiniz.
+Genellikle, bu hata bir hata veya yapılandırma değişikliği gerçekleştiğinden uygulama Havuzlarınızda, IIS sıfırlamasının veya her ikisinde de bir güncelleştirme yapılmasını gerektirir. Yükseltilmiş bir komut istemi açıp `iisreset`yazarak IIS 'yi sıfırlayabilirsiniz.
 
 ## <a name="specificerrors"></a>Ayrıntılı hata iletisi nedir?
 
-@No__t_0 iletisi geneldir. Genellikle, hata dizesinde daha belirli bir ileti bulunur ve sorunun nedenini belirlemenize yardımcı olabilir veya daha kesin bir çözüm arayın. Ana hata iletisine eklenen daha yaygın hata iletilerinin bazıları aşağıda verilmiştir:
+`Unable to start debugging on the Web server` iletisi geneldir. Genellikle, hata dizesinde daha belirli bir ileti bulunur ve sorunun nedenini belirlemenize yardımcı olabilir veya daha kesin bir çözüm arayın. Ana hata iletisine eklenen daha yaygın hata iletilerinin bazıları aşağıda verilmiştir:
 
 - [IIS, başlatma URL 'siyle eşleşen bir Web sitesi listelemez](#IISlist)
 - [Web sunucusu doğru yapılandırılmamış](#web_server_config)
@@ -52,6 +52,7 @@ Genellikle, bu hata bir hata veya yapılandırma değişikliği gerçekleştiği
 - [ASP.NET hata ayıklaması başlatılamadı](#aspnet)
 - [Hata ayıklayıcı uzak bilgisayara bağlanamıyor](#cannot_connect)
 - [Yaygın yapılandırma hataları için yardıma bakın. Web sayfasını hata ayıklayıcı dışında çalıştırmak daha fazla bilgi sağlayabilir.](#see_help)
+- [İşlem desteklenmiyor. Bilinmeyen hata: *ErrorNumber*](#operation_not_supported)
 
 ## <a name="IISlist"></a>IIS, başlatma URL 'siyle eşleşen bir Web sitesi listelemez
 
@@ -76,14 +77,14 @@ Genellikle, bu hata bir hata veya yapılandırma değişikliği gerçekleştiği
 ## <a name="msvsmon"></a>Microsoft Visual Studio uzaktan hata ayıklama İzleyicisi (Msvsmon. exe) uzak bilgisayarda çalışıyor olarak görünmüyor
 
 - Uzak makinede hata ayıklaması yapıyorsanız, ' [nin yüklü olduğundan ve uzaktan hata ayıklayıcı 'nın çalıştığından](../debugger/remote-debugging.md)emin olun. İleti bir güvenlik duvarıyla karşılaşırsanız, özellikle de üçüncü taraf güvenlik duvarı kullanıyorsanız [güvenlik duvarında doğru bağlantı noktalarının](../debugger/remote-debugger-port-assignments.md) açık olduğundan emin olun.
-- Bir HOSTS dosyası kullanıyorsanız doğru yapılandırıldığından emin olun. Örneğin, **F5** kullanarak hata ayıklama ( **işleme iliştirme**yerine), ana bilgisayar dosyasının proje özelliklerindeki aynı proje URL 'Sini, **Özellikler > Web > sunucuları** veya **Özellikleri > hata ayıkladığına**göre içermesi gerekir Proje türü.
+- Bir HOSTS dosyası kullanıyorsanız doğru yapılandırıldığından emin olun. Örneğin, **F5** kullanarak hata ayıklama ( **işlemek için iliştirme**yerine), ana bilgisayar dosyasının proje özelliklerinizi, **Özellikler > Web > Servers** veya **Properties > Hata Ayıkla**, proje türüne bağlı olarak aynı proje URL 'sini içermesi gerekir.
 
 ## <a name="server_error"></a>Uzak sunucu bir hata döndürdü
 
 Hata kodları ve ek bilgiler için [IIS günlük dosyanızı](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) ve bu IIS 7 [blog gönderisini](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)denetleyin.
 
 Buna ek olarak, bazı yaygın hata kodları ve birkaç öneri de bulunur.
-- (403) yasak. Bu hatanın birçok olası nedeni vardır. bu nedenle, Web sitesi için günlük dosyanızı ve IIS güvenlik ayarlarını kontrol edin. Sunucunun Web. config dosyasının derleme öğesinde `debug=true` içerdiğinden emin olun. Web uygulaması klasörünüzün doğru izinlere sahip olduğundan ve uygulama havuzu yapılandırmanızın doğru olduğundan emin olun (parola değişmiş olabilir). Bkz. [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck). Bu ayarlar zaten doğruysa ve yerel olarak hata ayıklıyorsanız, doğru sunucu türüne ve URL 'ye ( **> Web > sunucularında** veya **özelliklerde > hata ayıkladığınızda**, proje türüne bağlı olarak) bağlandığınızdan emin olun.
+- (403) Yasak. Bu hatanın birçok olası nedeni vardır. bu nedenle, Web sitesi için günlük dosyanızı ve IIS güvenlik ayarlarını kontrol edin. Sunucunun Web. config dosyasının derleme öğesinde `debug=true` içerdiğinden emin olun. Web uygulaması klasörünüzün doğru izinlere sahip olduğundan ve uygulama havuzu yapılandırmanızın doğru olduğundan emin olun (parola değişmiş olabilir). Bkz. [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck). Bu ayarlar zaten doğruysa ve yerel olarak hata ayıklıyorsanız, doğru sunucu türüne ve URL 'ye ( **> Web > sunucularında** veya **özelliklerde > hata ayıkladığınızda**, proje türüne bağlı olarak) bağlandığınızdan emin olun.
 - (503) sunucu kullanılamıyor. Uygulama havuzu bir hata veya yapılandırma değişikliği nedeniyle durdurulmuş olabilir. Uygulama havuzunu yeniden başlatın.
 - (404) bulunamadı. Uygulama havuzunun doğru ASP.NET sürümü için yapılandırıldığından emin olun.
 
@@ -96,7 +97,7 @@ Buna ek olarak, bazı yaygın hata kodları ve birkaç öneri de bulunur.
 
 Yerel olarak hata ayıklaması yapıyorsanız, Visual Studio 'da proje özelliklerinizi açın ve projenin doğru Web sunucusuna ve URL 'ye bağlanacak şekilde yapılandırıldığından emin olun. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın.)
 
-Bu hata, Visual Studio 32 bitlik bir uygulama olduğu için yerel olarak hata ayıklanırken oluşabilir. bu nedenle, 64 bit uygulamalarda hata ayıklamak için uzaktan hata ayıklayıcının 64 bit sürümünü kullanır. **32 bitlik uygulamaların** `true` ayarlandığından emin olmak için IIS 'de uygulama havuzunuzu DENETLEYIN, IIS 'yi yeniden başlatın ve yeniden deneyin.
+Bu hata, Visual Studio 32 bitlik bir uygulama olduğu için yerel olarak hata ayıklanırken oluşabilir. bu nedenle, 64 bit uygulamalarda hata ayıklamak için uzaktan hata ayıklayıcının 64 bit sürümünü kullanır. **32 bitlik uygulamaların** `true`ayarlandığından emin olmak için IIS 'de uygulama havuzunuzu DENETLEYIN, IIS 'yi yeniden başlatın ve yeniden deneyin.
 
 Ayrıca, bir HOSTS dosyası kullanıyorsanız doğru yapılandırıldığından emin olun. Örneğin, ana bilgisayar dosyasının, proje gereksinimlerinize bağlı olarak, **hata ayıklama >** **Web > sunucuları** veya ÖZELLIKLERI > aynı proje URL 'sini içermesi gerekir.
 
@@ -106,9 +107,13 @@ Ayrıca, bir HOSTS dosyası kullanıyorsanız doğru yapılandırıldığından 
 
 - Bu işe çalışmazsa veya uzaktan hata ayıklaması yapıyorsanız, [IIS yapılandırmanızı denetleme](#vxtbshttpservererrorsthingstocheck)bölümündeki adımları uygulayın.
 
+## <a name="operation_not_supported"></a>İşlem desteklenmiyor. Bilinmeyen hata: *ErrorNumber*
+
+URL yeniden yazar yapıyorsanız, URL 'YI yeniden vererek temel bir Web. config 'i test edin. [IIS yapılandırmanızı kontrol](#vxtbshttpservererrorsthingstocheck)eden URL yeniden yazma modülü hakkındaki **nota** bakın.
+
 ## <a name="vxtbshttpservererrorsthingstocheck"></a>IIS yapılandırmanızı denetleyin
 
-Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata ayıklamayı yeniden denemeden önce, IIS 'yi de sıfırlamanız gerekebilir. Bunu, yükseltilmiş bir komut istemi açıp `iisreset` yazarak yapabilirsiniz.
+Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata ayıklamayı yeniden denemeden önce, IIS 'yi de sıfırlamanız gerekebilir. Bunu, yükseltilmiş bir komut istemi açıp `iisreset`yazarak yapabilirsiniz.
 
 * IIS uygulama havuzlarınızı durdurup yeniden başlatın ve yeniden deneyin.
 
@@ -125,7 +130,7 @@ Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata 
 
 * Web uygulaması klasörünüzün doğru izinlere sahip olup olmadığını denetleyin.
 
-    Web uygulaması klasörü için ııS_ıRS, ıUSR veya [uygulama havuzu](/iis/manage/configuring-security/application-pool-identities) okuma ve yürütme haklarıyla ilişkili olan belirli bir kullanıcıya sahip olduğunuzdan emin olun. Sorunu giderip uygulama havuzunuzu yeniden başlatın.
+    Web uygulaması klasörü için IIS_IUSRS, ıUSR veya [uygulama havuzu](/iis/manage/configuring-security/application-pool-identities) okuma ve yürütme haklarıyla ilişkili olan belirli bir kullanıcıya sahip olduğunuzdan emin olun. Sorunu giderip uygulama havuzunuzu yeniden başlatın.
 
 * IIS 'de doğru ASP.NET sürümünün yüklü olduğundan emin olun.
 

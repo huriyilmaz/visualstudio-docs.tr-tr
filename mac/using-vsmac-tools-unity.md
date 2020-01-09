@@ -3,14 +3,14 @@ title: Visual Studio için Unity için Mac araçları kullanarak
 description: Bu kılavuz, Mac araçları için Unity uzantısı için Visual Studio kullanmayı açıklar
 author: therealjohn
 ms.author: johmil
-ms.date: 06/18/2019
+ms.date: 12/13/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: daffb7721164ae49888a894bec7cad3ac74801a4
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 4247e5cfb936d79c2b2bea5ac68a16164f0c0ef0
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692213"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406665"
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>Visual Studio için Unity için Mac araçları kullanarak
 
@@ -29,7 +29,7 @@ Alternatif olarak, Mac için Visual Studio komut dosyası içermeyen kaynak düz
 Unity için Araçlar Mac için Visual Studio Unity API belgelerini erişmek için bir kısayol içerir. Mac için Visual Studio Unity API belgelerini erişmek için Unity hakkında bilgi edinin ve basın istediğiniz API imleci **⌘ komut + '** .
 
 ## <a name="intellisense-for-unity-messages"></a>Unity özellikleri için IntelliSense
-Unity altyapısı MonoBehaviour betikleri, geliştiricilerin OnMouseDown, OnTriggerEnter vb. gibi iletileri tepki verdiğini kod yazmak iletileri yayınlar. Bu temel MonoBehaviour sınıfta sanal yöntemleri olmadığından, Unity iletileri için kod Tamamlama işlevi MonoDevelop gibi bazı IDE özellikleri mevcut değildir.
+Unity motoru, tek davranış betiklerine ileti yayınlar, geliştiricilerin OnMouseDown, OnTriggerEnter vb. gibi iletilere yeniden davranan kodu yazmasına izin verir. Bunlar, temel Monodavranış sınıfında sanal metotlar olmadığından, MonoDevelop gibi bazı IDE 'Ler Unity iletileri için kod tamamlama işlevselliği olmamasıdır.
 
 Ancak, Visual Studio için Unity için Mac araçları Unity iletileri için IntelliSense işlevselliği genişletir. Unity iletilerini Uygula MonoBehaviour betiklerde daha kolay hale getirir ve Unity API öğrenmeye yardımcı olur. Unity iletileri için IntelliSense kullanmak için:
 
@@ -61,7 +61,7 @@ Ancak, Visual Studio için Unity için Mac araçları Unity iletileri için Inte
 
 ## <a name="adding-new-unity-files-and-folders"></a>Yeni Unity dosyaları ve klasörleri ekleme
 
-Unity Düzenleyicisi'nde bir Unity projesi için her zaman yeni dosyaları ekleyebilirsiniz, ancak yeni Unity betikleri, gölgelendiricilerin, yapılar, numaralandırmalar ve klasörlerinden Visual Studio'dan kolayca oluşturmak için Mac için Visual Studio sağlar.
+Unity düzenleyicisinde bir Unity projesine her zaman yeni dosyalar ekleyebilmeniz için Mac için Visual Studio, Visual Studio içinden kolayca yeni Unity betikleri, gölgelendiriciler, yapılar, numaralandırmalar ve klasörler oluşturulmasına olanak sağlar.
 
 ### <a name="add-a-new-c-monobehaviour-script"></a>Yeni bir C# MonoBehaviour betik Ekle
 
@@ -103,11 +103,11 @@ Hata ayıklamayı başlatmak için:
 
 3. Oyun bağlıyken, Visual Studio için Unity Düzenleyicisi'nde çalışırken karşılaşılan herhangi bir kesme noktası oyun yürütülmesini Duraklat ve burada oyun Mac için Visual Studio'da kesme noktası isabet kod satırının getirecek
 
-### <a name="start-debugging-in-a-single-step"></a>Tek bir adımda hata ayıklamayı Başlat
+### <a name="start-debugging-in-a-single-step"></a>Hata ayıklamayı tek bir adımda Başlat
 
-Başlangıç hata ayıklama ve Unity editor yürütmeyi tamamlanabileceğini tek bir adımda Visual Studio'dan doğrudan Mac için seçerek **ekleme Unity ve Yürüt** yapılandırma.
+Unity 'nin hata ayıklamasının başlaması ve Unity Düzenleyicisi 'nin yürütülmesi, **Unity 'ye Ekle ve Çalıştır** yapılandırması seçilerek Mac için Visual Studio doğrudan tek bir adımda tamamlanabilir.
 
-![Unity ve Play seçin ekleyin](media/using-vsmac-tools-unity-image8.png)
+![Unity 'ye Ekle ve Yürüt ' ü seçin](media/using-vsmac-tools-unity-image8.png)
 
 ### <a name="stop-debugging"></a>Hata ayıklamayı Durdur
 
@@ -118,6 +118,6 @@ Hata ayıklamayı durdurmak için:
    ![Visual Studio'da Durdur'u tıklatın](media/using-vsmac-tools-unity-image7.png)
 
 > [!NOTE]
-> Kullanarak hata ayıklama başlattıysanız **ekleme Unity ve Yürüt** Yapılandırması **Durdur** düğmesi de Unity durdurun.
+> **Unity 'ye Ekle ve Çalıştır** yapılandırmasını kullanarak hata ayıklamaya başladıysanız, **Durdur** düğmesi de Unity 'yi durdurur.
 
 Mac için Visual Studio'da hata ayıklama hakkında daha fazla bilgi için bkz: [hata ayıklayıcıyı kullanma](debugging.md).

@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 087407f511c038a369694beca8a9fe4ecc2ff7b7
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: f66ed17aec8c6e5303ea61741021dd25032fcb37
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74771597"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406311"
 ---
 # <a name="specify-the-path-to-profiling-tools-command-line-tools"></a>Profil Araçları komut satırı araçlarının yolunu belirtin
 
@@ -22,9 +22,7 @@ ms.locfileid: "74771597"
 
 ## <a name="32-bit-computers"></a>32 bit bilgisayarlar
 
-::: moniker range="vs-2017"
- Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf. dll*' dir. *VSPerf. h*ve içeri aktarma kitaplığı olan *VSPerf. lib*üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.
-::: moniker-end
+Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf. dll*' dir. *VSPerf. h*ve içeri aktarma kitaplığı olan *VSPerf. lib*üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.
 
  Yönetilen kod için profil oluşturucu API 'Leri *Microsoft. VisualStudio. Profiler. dll*' dir. Bu DLL *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunur.
 
@@ -32,12 +30,14 @@ ms.locfileid: "74771597"
 
 64 bit bilgisayarlarda, profili oluşturulmuş uygulamanın hedef platformuna göre yolunu belirtin.
 
-::: moniker range="vs-2017"
 - 32 bitlik uygulamalar için varsayılan profil oluşturucu araçları dizini:
 
-     Yerel *Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK* (yönetilen) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools*
+     Yerel *Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK*
+     
+     lebilmesi *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools*
 
 - 64 bitlik uygulamalar için varsayılan profil oluşturucu araçları dizini:
 
-     Yerel *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK* (yönetilen) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*
-::: moniker-end
+     Yerel *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
+
+     lebilmesi *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*

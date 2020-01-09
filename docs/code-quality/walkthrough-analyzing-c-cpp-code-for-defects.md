@@ -12,12 +12,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb99cf487995859b9623f11b3559f1b5e7e3ca7
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e2154a07d498012c9c45f992ebed51b0218e823a
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018345"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75401016"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme
 
@@ -28,7 +28,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 - Uyarıyı hata olarak değerlendirin.
 - Kod hatası analizini geliştirmek için kaynak koda not ekleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - [Demo örneğinin](../code-quality/demo-sample.md)bir kopyası.
 - C/C++hakkında temel bilgiler.
@@ -67,9 +67,9 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
      Uyarı C6230: anlamsal olarak farklı türler arasında örtük atama: Boole bağlamında HRESULT kullanılıyor.
 
-     Kod Düzenleyicisi, `bool ProcessDomain()`işlevindeki uyarıya neden olan satırı görüntüler. Bu uyarı, Boole sonucunun beklenen bir ' if ' bildiriminde bir HRESULT kullanıldığını gösterir.
+     Kod Düzenleyicisi, `bool ProcessDomain()`işlevindeki uyarıya neden olan satırı görüntüler. Bu uyarı, bir `HRESULT` Boole sonucunun beklenen bir ' if ' ifadesinde kullanıldığını gösterir.  Bu genellikle bir hata olur çünkü `S_OK` HRESULT, It işlevinden döndürüldüğünde, başarılı olduğunu gösterir, ancak `false`olarak değerlendirilen bir Boole değerine dönüştürülür.
 
-3. BAŞARıLı makroyu kullanarak bu uyarıyı düzeltin. Kodunuz aşağıdaki koda benzemelidir:
+3. Bu uyarıyı, bir `HRESULT` dönüş değeri başarıyı gösteriyorsa `true` dönüştürür `SUCCEEDED` makrosunu kullanarak düzeltin. Kodunuz aşağıdaki koda benzemelidir:
 
    ```cpp
    if (SUCCEEDED (ReadUserAccount()) )
@@ -128,11 +128,11 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 8. Bu uyarıyı düzeltmek için, dönüş değerini test etmek için bir ' if ' ifadesini kullanın. Kodunuz aşağıdaki koda benzemelidir:
 
    ```cpp
-   if (NULL != newNode)
+   if (nullptr != newNode)
    {
-   newNode->data = value;
-   newNode->next = 0;
-   node->next = newNode;
+       newNode->data = value;
+       newNode->next = 0;
+       node->next = newNode;
    }
    ```
 
@@ -142,14 +142,10 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
 ### <a name="to-use-source-code-annotation"></a>Kaynak kodu ek açıklamasını kullanmak için
 
-1. Aşağıdaki örnekte gösterildiği gibi, ön ve post koşullarını kullanarak `AddTail` işlevin biçimsel parametrelerini ve dönüş değerini not edin:
+1. İşaretçi değerlerinin null olabileceğini göstermek için `AddTail` biçimsel parametrelere ve dönüş değerine açıklama ekleyin:
 
    ```cpp
-   [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
-   (
-   [SA_Pre(Null=SA_Maybe)] LinkedList* node,
-   int value
-   )
+   _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
 2. Ek açıklama projesini yeniden derleyin.
@@ -160,21 +156,18 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
      Bu uyarı, işleve geçirilen düğümün null olabileceğini ve uyarının oluşturulduğu satır numarasını belirtir.
 
-4. Bu uyarıyı düzeltmek için, dönüş değerini test etmek için bir ' if ' ifadesini kullanın. Kodunuz aşağıdaki koda benzemelidir:
+4. Bu uyarıyı düzeltmek için, geçirilen değeri sınamak üzere işlevin başındaki bir ' if ' ifadesini kullanın. Kodunuz aşağıdaki koda benzemelidir:
 
    ```cpp
-   . . .
-   LinkedList *newNode = NULL;
-   if (NULL == node)
+   if (nullptr == node)
    {
-        return NULL;
-        . . .
+        return nullptr;
    }
    ```
 
 5. Ek açıklama projesini yeniden derleyin.
 
-     Proje herhangi bir uyarı veya hata olmadan oluşturulur.
+     Proje artık herhangi bir uyarı veya hata olmadan oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
