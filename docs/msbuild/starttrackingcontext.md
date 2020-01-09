@@ -10,20 +10,20 @@ apitype: COM
 helpviewer_keywords:
 - StartTrackingContext
 ms.assetid: 720cd295-38e7-4974-86db-b8106b1207ba
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c395df1e08f1b4e33e9cd34fec54bdd044f3b4c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b84753974eeecb8dca85035d50635d0bee47645
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939215"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595052"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
-Bir izleme bağlamına başlayın.
+Bir izleme bağlamı başlatın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 #### <a name="parameters"></a>Parametreler
 [in] `intermediateDirectory`
 
- İzleme günlüğü depolanacağı dizin.
+ İzleme günlüğünün depolayabileceği dizin.
 
 [in] `taskName`
 
- İzleme bağlamı tanımlar. Bu ad, günlük dosyası adı oluşturmak için kullanılır.
+ İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.
 
 ## <a name="return-value"></a>Dönüş değeri
- Bir **HRESULT** ile **başarılı** izleme bağlamına oluşturulduysa biti ayarlanmamış.
+ İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *FileTracker.h*
+ **Üstbilgi:** *FileTracker. h*

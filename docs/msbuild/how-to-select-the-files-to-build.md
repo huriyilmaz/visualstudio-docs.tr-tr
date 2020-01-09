@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derlenecek dosyaları seçme | Microsoft Docs'
+title: 'Nasıl yapılır: derlenecek dosyaları seçme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,29 +7,29 @@ helpviewer_keywords:
 - MSBuild, including files
 - Include attribute [MSBuild]
 ms.assetid: f5ff182f-7b3a-46fb-9335-37df54cfb8eb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f8f582a0148f5fddd88393e008593d9ad9a05ce
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a9ad869fc091035de711ec59e20d10fd0af5e21b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386182"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75574619"
 ---
-# <a name="how-to-select-the-files-to-build"></a>Nasıl yapılır: Derleme dosyaları seçin
-Bir proje oluşturduğunuzda bazı dosyaları içeren, her dosya proje dosyasında ayrı olarak listeleyebilirsiniz veya tüm dosyaları bir dizin veya iç içe geçmiş bir dizinler kümesi eklemek için joker karakterler kullanabilirsiniz.
+# <a name="how-to-select-the-files-to-build"></a>Nasıl yapılır: derlenecek dosyaları seçme
+Birden çok dosya içeren bir proje oluşturduğunuzda, her dosyayı proje dosyasında ayrı olarak listeleyebilir veya tüm dosyaları bir dizin veya iç içe geçmiş dizin kümesine dahil etmek için joker karakterler kullanabilirsiniz.
 
-## <a name="specify-inputs"></a>Girişleri belirtin
-Öğeleri bir derleme için girişler temsil eder. Öğeler hakkında daha fazla bilgi için bkz. [öğeleri](../msbuild/msbuild-items.md).
+## <a name="specify-inputs"></a>Girişleri belirt
+Öğeler bir yapı için girişleri temsil eder. Öğeler hakkında daha fazla bilgi için bkz. [Items](../msbuild/msbuild-items.md).
 
-Bir derleme için dosyaları eklemek için bir öğe listesinde eklenmelidir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyası. Birden çok dosya öğesi listeleri için tek tek dosyalar dahil olmak üzere veya aynı anda çok sayıda dosya eklemek için joker karakterler kullanılarak eklenebilir.
+Bir yapı için dosyaları dahil etmek için, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasındaki bir öğe listesine dahil edilmeleri gerekir. Dosyalar ayrı ayrı eklenerek veya aynı anda birçok dosya eklemek için joker karakterler kullanılarak öğe listelerine birden çok dosya eklenebilir.
 
-#### <a name="to-declare-items-individually"></a>Bildirmek için ayrı ayrı öğeler
+#### <a name="to-declare-items-individually"></a>Öğeleri ayrı olarak bildirmek için
 
-- Kullanım `Include` öznitelikleri benzer aşağıdaki:
+- Şuna benzer `Include` özniteliklerini kullanın:
 
     `<CSFile Include="form1.cs"/>`
 
@@ -38,11 +38,11 @@ Bir derleme için dosyaları eklemek için bir öğe listesinde eklenmelidir [!I
     `<VBFile Include="form1.vb"/>`
 
     > [!NOTE]
-    > Proje dosyası ile aynı dizinde bir öğe koleksiyonu öğeleri emin değilseniz, öğenin tam veya göreli yol belirtmeniz gerekir. Örneğin: `Include="..\..\form2.cs"`
+    > Bir öğe koleksiyonundaki öğeler proje dosyası ile aynı dizinde değilse, öğenin tam veya göreli yolunu belirtmeniz gerekir. Örneğin: `Include="..\..\form2.cs"`.
 
 #### <a name="to-declare-multiple-items"></a>Birden çok öğe bildirmek için
 
-- Kullanım `Include` öznitelikleri benzer aşağıdaki:
+- Şuna benzer `Include` özniteliklerini kullanın:
 
     `<CSFile Include="form1.cs;form2.cs"/>`
 
@@ -50,32 +50,32 @@ Bir derleme için dosyaları eklemek için bir öğe listesinde eklenmelidir [!I
 
     `<VBFile Include="form1.vb;form2.vb"/>`
 
-## <a name="specify-inputs-with-wildcards"></a>Joker karakter olarak girişleri belirtin
-Ayrıca bir yapı için girdi olarak yinelemeli olarak joker karakterler tüm dosyaları veya yalnızca belirli dosyaları alt dizinleri. Joker karakterler hakkında daha fazla bilgi için bkz: [öğeleri](../msbuild/msbuild-items.md)
+## <a name="specify-inputs-with-wildcards"></a>Joker karakterlere sahip girişler belirtin
+Bir derleme için girdi olarak tüm dosyaları veya alt dizinlerden yalnızca belirli dosyaları yinelemeli olarak eklemek için joker karakterleri de kullanabilirsiniz. Joker karakterler hakkında daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md)
 
-Aşağıdaki örnekler grafikleri dosyaları aşağıdaki dizinlerde içeren bir proje temel alır ve alt dizinleri, proje dosyasıyla birlikte bulunan *proje* dizini:
+Aşağıdaki örnekler, *Proje* dizininde bulunan proje dosyası ile aşağıdaki dizinlerde ve alt dizinlerde bulunan grafik dosyalarını içeren bir projeye dayalıdır:
 
 *Project\Images\BestJpgs*
 
 *Project\Images\ImgJpgs*
 
-*Project\Images\ImgJpgs\Img1*
+*Project\ımages\imgjpgs\img1*
 
-#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Tüm içerecek şekilde *.jpg* dosyalar *görüntüleri* dizin ve alt dizinleri
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Tüm *. jpg* dosyalarını *görüntüler* dizinine ve alt dizinlere dahil etmek için
 
-- Aşağıdaki `Include` özniteliği:
+- Aşağıdaki `Include` özniteliğini kullanın:
 
     `Include="Images\**\*.jpg"`
 
-#### <a name="to-include-all-jpg-files-starting-with-img"></a>Tüm içerecek şekilde *.jpg* dosyaları başlayarak *img*
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>*İmg* ile başlayan tüm *. jpg* dosyalarını dahil etmek için
 
-- Aşağıdaki `Include` özniteliği:
+- Aşağıdaki `Include` özniteliğini kullanın:
 
     `Include="Images\**\img*.jpg"`
 
-#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>Sonlanan adlara sahip dizinlerinde tüm dosyaları eklenip eklenmeyeceğini *jpg formatından*
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>*Jpgs* ile biten adlara sahip dizinlere tüm dosyaları dahil etmek için
 
-- Aşağıdakilerden birini kullanın `Include` öznitelikleri:
+- Aşağıdaki `Include` özniteliklerinden birini kullanın:
 
     `Include="Images\**\*jpgs\*.*"`
 
@@ -83,12 +83,12 @@ Aşağıdaki örnekler grafikleri dosyaları aşağıdaki dizinlerde içeren bir
 
     `Include="Images\**\*jpgs\*"`
 
-## <a name="pass-items-to-a-task"></a>Bir göreve geçiş öğeleri
-Bir proje dosyasında kullanabileceğiniz @ görevler bir derleme için giriş olarak bir tüm öğe listesini belirtmek için () gösterimi. Bu gösterim, tüm dosyaları ayrı ayrı listelemek veya joker karakter kullanabilirsiniz.
+## <a name="pass-items-to-a-task"></a>Bir göreve öğe geçirme
+Bir proje dosyasında, bir derleme girişi olarak tüm öğe listesini belirtmek için görevlerde @ () gösterimini kullanabilirsiniz. Bu gösterimi, tüm dosyaları ayrı olarak listelemenizde veya joker karakterler kullanırken kullanabilirsiniz.
 
-#### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>Tüm Visual C# veya Visual Basic dosyalarını girdi olarak kullanmak için
+#### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>Tüm görsel C# veya Visual Basic dosyaları giriş olarak kullanmak için
 
-- Kullanım `Include` öznitelikleri aşağıdakine benzer:
+- Şuna benzer `Include` özniteliklerini kullanın:
 
     `<CSC Sources="@(CSFile)">...</CSC>`
 
@@ -97,12 +97,12 @@ Bir proje dosyasında kullanabileceğiniz @ görevler bir derleme için giriş o
     `<VBC Sources="@(VBFile)">...</VBC>`
 
 > [!NOTE]
-> Bir derleme için girişler belirtmek için öğeleriyle joker karakterler kullanmanız gerekir; kullanarak girişleri belirtemezsiniz `Sources` özniteliğini [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] gibi görevleri [Csc](../msbuild/csc-task.md) veya [Vbc](../msbuild/vbc-task.md). Aşağıdaki örnek bir proje dosyasında geçerli değil:
+> Bir derleme için girdileri belirtmek üzere öğelerle joker karakterler kullanmanız gerekir; [CSC](../msbuild/csc-task.md) veya [vbc](../msbuild/vbc-task.md)gibi [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevlerinde `Sources` özniteliğini kullanarak girdileri belirtemezsiniz. Aşağıdaki örnek bir proje dosyasında geçerli değildir:
 >
 > `<CSC Sources="*.cs">...</CSC>`
 
 ## <a name="example"></a>Örnek
-Aşağıdaki kod örneği, tüm giriş dosyalarını ayrı olarak içeren bir proje gösterir.
+Aşağıdaki kod örneğinde, tüm giriş dosyalarını ayrı ayrı içeren bir proje gösterilmektedir.
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -136,7 +136,7 @@ Aşağıdaki kod örneği, tüm giriş dosyalarını ayrı olarak içeren bir pr
 ```
 
 ## <a name="example"></a>Örnek
-Aşağıdaki kod örneği, tüm içerecek şekilde bir joker karakter kullanır. *.cs* dosyaları.
+Aşağıdaki kod örneği, tüm *. cs* dosyalarını dahil etmek için bir joker karakter kullanır.
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -170,5 +170,5 @@ Aşağıdaki kod örneği, tüm içerecek şekilde bir joker karakter kullanır.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Dosyaları derlemeden dışlama](../msbuild/how-to-exclude-files-from-the-build.md)
+- [Nasıl yapılır: derlemeden Dosya dışlama](../msbuild/how-to-exclude-files-from-the-build.md)
 - [Öğeler](../msbuild/msbuild-items.md)

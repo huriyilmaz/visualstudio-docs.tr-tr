@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 999e8f27a9c60d776d65dc87eb2b42adeec2226c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3d578161d43de68d85f3b7704c9fd69fe4e268ea
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666968"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593544"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma
 
@@ -51,9 +51,9 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 2. Aşağıdaki derlemelere başvurular ekleyin:
 
-   - **Microsoft. VisualStudio. Textşablon oluşturma. \*.0**
+   - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
-   - **Microsoft. VisualStudio. Textşablon. Interfaces. 10.0 ve sonraki sürümler**
+   - **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**
 
 3. Program.cs veya Module1.vb dosyasındaki kodu aşağıdaki kodla değiştirin:
 
@@ -716,9 +716,9 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 4. Yalnızca [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] için, **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
 
-5. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+5. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
 
-6. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+6. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="test-the-custom-host"></a>Özel Konağı test etme
 
@@ -726,7 +726,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 ### <a name="to-create-a-text-template-to-test-the-custom-host"></a>Özel ana bilgisayarı sınamak amacıyla metin şablonu oluşturmak için
 
-1. Bir metin dosyası oluşturun ve `TestTemplate.tt` adlandırın.
+1. Bir metin dosyası oluşturun ve `TestTemplate.tt`adlandırın.
 
      Dosyayı oluşturmak için herhangi bir metin düzenleyicisi (ör. Notepad) kullanabilirsiniz.
 

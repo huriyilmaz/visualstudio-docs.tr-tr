@@ -4,23 +4,23 @@ ms.date: 11/15/2018
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 554311f7b7af5c104b48f5a4901677595d60ab41
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5cf5f8d3660abcf941eb5cc429b8f190459d9c56
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647836"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596053"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Visual Studio IDE 'ye hoş geldiniz | Visual Basic
 
-Visual Studio *Tümleşik geliştirme ortamı* , kod düzenlemek, hatalarını ayıklamak ve derlemek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma paneliyle bulunur. Tümleşik geliştirme ortamı (IDE), yazılım geliştirmenin birçok yönü için kullanılabilen özellik açısından zengin bir programdır. En çok kullanılan standart düzenleyici ve hata ayıklayıcı üzerinde ve üzerinde, Visual Studio, yazılım geliştirme sürecini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve çok daha birçok özellik içerir.
+Visual Studio *tümleşik geliştirme ortamı* bir yaratıcı launching düzenleme, hata ayıklama ve kod oluşturmak için kullanın ve ardından bir uygulama yayımlama takımdır. Bir tümleşik geliştirme ortamı (IDE) birçok yönüyle yazılım geliştirme için kullanılabilen zengin bir programdır. Standart Düzenleyici ve hata ayıklayıcı sağladığımız çoğu IDE'ler sağlamanızı, Visual Studio yazılım geliştirme işlemini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve daha birçok özellik içerir.
 
 ::: moniker range="vs-2017"
 
@@ -30,49 +30,49 @@ Visual Studio *Tümleşik geliştirme ortamı* , kod düzenlemek, hatalarını a
 
 ::: moniker range=">=vs-2019"
 
-[![The Visual Studio 2019 IDE](media/vs-2019/ide-overview.png)](media/vs-2019/ide-overview.png#lightbox)
+[Visual Studio 2019 IDE ![](media/vs-2019/ide-overview.png)](media/vs-2019/ide-overview.png#lightbox)
 
 ::: moniker-end
 
-Bu resimde, büyük olasılıkla kullanabileceğiniz bir açık proje ve birkaç anahtar araç penceresi içeren Visual Studio gösterilmektedir:
+Bu görüntü, büyük olasılıkla kullanacağınız birkaç anahtar araç pencereleri ve bir Proje Aç ile Visual Studio gösterir:
 
-- [Çözüm Gezgini](../../ide/solutions-and-projects-in-visual-studio.md) (sağ üst) kod dosyalarınızı görüntülemenize, gezinmenize ve yönetmenize olanak sağlar. **Çözüm Gezgini** , dosyaları [çözümler ve projelerle](tutorial-projects-solutions.md)gruplayarak kodunuzun düzenlenmesine yardımcı olabilir.
+- [Çözüm Gezgini](../../ide/solutions-and-projects-in-visual-studio.md) (sağ üst) kod dosyalarınızı görüntülemenize, gezinmenize ve yönetmenize olanak sağlar. **Çözüm Gezgini** dosyalarına gruplandırarak kodunuzu düzenleme şeklinizdir yardımcı olabilecek [çözümler ve projeler](tutorial-projects-solutions.md).
 
-- Büyük olasılıkla zaman harcamanız gereken [Düzenleyici penceresi](../../ide/writing-code-in-the-code-and-text-editor.md) (Center), dosya içeriklerini görüntüler. Bu, kodu düzenleyebileceğiniz veya düğmeler ve metin kutuları içeren pencere gibi bir kullanıcı arabirimi tasarlayabileceğiniz yerdir.
+- [Düzenleyicisi penceresi](../../ide/writing-code-in-the-code-and-text-editor.md) (Merkezi), büyük olasılıkla, zamanınızın çoğunu geçireceksiniz burada dosya içeriğini görüntüler. Burada kodunu düzenleyin veya düğme ve metin kutusu içeren bir pencere gibi bir kullanıcı arabirimi tasarım budur.
 
-- [Çıkış penceresi](../../ide/reference/output-window.md) (alt orta), Visual Studio 'nun hata ayıklama ve hata iletileri, derleyici uyarıları, yayımlama durumu iletileri ve daha fazlası gibi bildirimler gönderdiği yerdir. Her ileti kaynağının kendi sekmesi vardır.
+- [Çıkış penceresine](../../ide/reference/output-window.md) (alt Merkezi), burada Visual Studio hata ayıklama ve hata iletileri, derleyici uyarılarını, yayımlama durum iletilerini ve diğer bildirimleri gönderir. Her ileti kaynağı kendi sekmesi vardır.
 
-- [Takım Gezgini](/azure/devops/user-guide/work-team-explorer?view=vsts) (sağ alt) [Git](https://git-scm.com/) ve [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts)gibi sürüm denetimi teknolojilerini kullanarak iş öğelerini izlemenize ve kodu başkalarıyla paylaşmanıza olanak sağlar.
+- [Takım Gezgini](/azure/devops/user-guide/work-team-explorer?view=vsts) (sağ alt) sağlar, iş öğelerini izlemek ve kod başkalarıyla paylaşmak gibi sürüm denetimi teknolojileri kullanarak [Git](https://git-scm.com/) ve [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts).
 
 ## <a name="editions"></a>Sürümler
 
-Visual Studio, Windows ve Mac için kullanılabilir. [Mac için Visual Studio](/visualstudio/mac/) , Visual Studio 2017 ile aynı özelliklerin çoğuna sahiptir ve platformlar arası ve mobil uygulamalar geliştirmek için iyileştirilmiştir. Bu makalede, Visual Studio 2017 ' nin Windows sürümü ele alınmaktadır.
+Windows ve Mac için Visual Studio kullanılabilir [Mac için Visual Studio](/visualstudio/mac/) birçok Visual Studio 2017 aynı özelliklere sahiptir ve platformlar arası ve mobil uygulamalarını geliştirmek için optimize edilmiştir. Bu makalede Visual Studio 2017'in Windows sürümünde odaklanır.
 
-Visual Studio 2017: Community, Professional ve Enterprise 'ın üç sürümü vardır. Her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Visual Studio 2017 IDEs 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) .
+Visual Studio 2017'in üç sürüm bulunur: Community, Professional ve Enterprise. Bkz: [Visual Studio 2017 IDE'lerini karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) her iki sürümünde desteklenen hangi özellikler hakkında bilgi edinmek için.
 
 ## <a name="popular-productivity-features"></a>Popüler üretkenlik özellikleri
 
-Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı olan popüler özelliklerden bazıları şunlardır:
+Visual Studio yazılım geliştirme sırasında daha üretken olmanıza yardımcı olan popüler özelliklerinden bazıları şunlardır:
 
-- Dalgalı çizgiler ve [hızlı eylemler](../../ide/quick-actions.md)
+- Dalgalı çizgiler ve [hızlı Eylemler](../../ide/quick-actions.md)
 
-   Dalgalı çizgiler, siz yazarken kodunuzda hataları veya olası sorunları uyaran dalgalı alt çizgiler. Bu görsel ipuçları, hata oluşturma sırasında veya programı çalıştırdığınızda hatanın bulunmasını beklemeden sorunları anında çözmenizi sağlar. Dalgalı bir çizgi üzerine geldiğinizde, hatayla ilgili ek bilgileri görürsünüz. Ayrıca, bir ampulü, hızlı eylemler olarak bilinen eylemlerle birlikte, hatayı düzelrebilir.
+   Siz yazarken, hatalar veya kodunuzdaki olası sorunlar için uyarı dalgalı alt çizgiler dalgalı çizgiler var. Bu görsel ipuçları hata derleme sırasında veya programı çalıştırdığınızda bulunmak beklenmeden hemen sorunları düzeltmek etkinleştirin. Bir dalgalı çizgi gelin, hatayla ilgili ek bilgileri görürsünüz. Hatayı düzeltmek için hızlı Eylemler bilinen eylemlerle sol kenar boşluğunda bir ampul de görünebilir.
 
    ::: moniker range="vs-2017"
 
-   ![Visual Studio 'da dalgalı çizgiler](media/squiggles-error.png)
+   ![Visual Studio'da dalgalı çizgiler](media/squiggles-error.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Visual Studio 'da dalgalı çizgiler](media/vs-2019/squiggles-error.png)
+   ![Visual Studio'da dalgalı çizgiler](media/vs-2019/squiggles-error.png)
 
    ::: moniker-end
 
 - [Yeniden Düzenle](../../ide/refactoring-in-visual-studio.md)
 
-   Yeniden düzenleme, değişkenlerin akıllı yeniden adlandırılması, bir veya daha fazla kod satırını yeni bir yönteme ayıklama, yöntem parametrelerinin sırasını değiştirme ve daha fazlası gibi işlemleri içerir.
+   Yeniden düzenleme, bir veya daha fazla kod satırlarını yöntem parametreleri ve daha fazlasını sırasını değiştirerek yeni bir yönteme ayıklama değişkenlerin akıllı yeniden adlandırma gibi işlemleri içerir.
 
    ::: moniker range="vs-2017"
 
@@ -88,7 +88,7 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
 - [IntelliSense](../../ide/using-intellisense.md)
 
-   IntelliSense, kodunuzla ilgili bilgileri doğrudan düzenleyicide görüntüleyen özellikler kümesi için bir terimdir ve bazı durumlarda, sizin için küçük bit kod yazın. Temel belgeleri düzenleyicide satır içine almak gibidir, bu da tür bilgilerini başka bir yerde aramak zorunda kalmanızı sağlar. IntelliSense özellikleri dile göre farklılık gösterir. Daha fazla bilgi için bkz [ C# . IntelliSense](../../ide/visual-csharp-intellisense.md), [ C++ Visual IntelliSense](../../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../../ide/javascript-intellisense.md)ve [Visual Basic IntelliSense](../../ide/visual-basic-specific-intellisense.md). Aşağıdaki çizimde, IntelliSense 'in bir tür için üye listesini nasıl görüntüleyeceği gösterilmektedir:
+   IntelliSense, doğrudan düzenleyicide kod hakkında bilgi görüntüler ve bazı durumlarda, küçük kod parçalarını sizin için yazma özellikleri kümesi için kullanılan bir terimdir. Bu temel belgeleri satır içi başka bir yerde türü bilgi aramak zorunda kalmaktan kurtarır düzenleyicisinde gibidir. IntelliSense özellikleri dile göre değişiklik gösterir. Daha fazla bilgi için [C# IntelliSense](../../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../../ide/javascript-intellisense.md), ve [Visual Basic IntelliSense](../../ide/visual-basic-specific-intellisense.md). Aşağıdaki çizimde, IntelliSense üye listesi bir türü için nasıl görüntülediğini gösterir:
 
    ::: moniker range="vs-2017"
 
@@ -104,10 +104,10 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
 - Arama kutusu
 
-   Visual Studio çok sayıda menü, seçenek ve özellik ile zaman içinde yoğun görünebilir. Arama kutusu, Visual Studio 'da gerekenleri hızlı bir şekilde bulmanın harika bir yoludur. Aradığınız bir şeyin adını yazmaya başladığınızda, Visual Studio size tam olarak gitmeniz gereken yere sahip olan sonuçları listeler. Visual Studio 'ya işlevsellik eklemeniz gerekiyorsa, örneğin ek bir programlama dili için destek eklemek istiyorsanız, arama kutusu, bir iş yükünü veya tek bir bileşeni yüklemek için Visual Studio Yükleyicisi açan sonuçlar sağlar.
+   Visual Studio zamanlarda sürü menüleri, seçenekleri ve özellikleri ile zor görünebilir. Arama kutusu, Visual Studio 'da gerekenleri hızlı bir şekilde bulmanın harika bir yoludur. Aradığınız bir şey adını yazmaya başladığınızda, Visual Studio tam olarak gitmek gerek duyduğunuz aldığınız sonuçları listeler. Visual Studio 'ya işlevsellik eklemeniz gerekiyorsa, örneğin ek bir programlama dili için destek eklemek istiyorsanız, arama kutusu, bir iş yükünü veya tek bir bileşeni yüklemek için Visual Studio Yükleyicisi açan sonuçlar sağlar.
 
    > [!TIP]
-   > Arama kutusunun bir kısayolu olarak **Ctrl** +**Q** tuşuna basın.
+   > Arama kutusunun bir kısayolu olarak **Ctrl**+**Q** tuşuna basın.
 
    ::: moniker range="vs-2017"
 
@@ -129,7 +129,7 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
 - [Çağrı Hiyerarşisi](../../ide/reference/call-hierarchy.md)
 
-   **Çağrı hiyerarşisi** penceresi, seçilen bir yöntemi çağıran yöntemleri gösterir. Bu, yöntemi değiştirme veya kaldırma hakkında düşündüğünde veya bir hatayı izlemeye çalışırken yararlı bilgiler olabilir.
+   **Çağrı hiyerarşisi** penceresi seçili bir yöntemi çağıran yöntemleri gösterir. Bu, değiştirme veya kaldırma yöntemi düşündüğünüzü yararlı bilgiler olması veya bir hatayı izlemek çalışırken oluşturabilirsiniz.
 
    ::: moniker range="vs-2017"
 
@@ -145,7 +145,7 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
 - [CodeLens](../../ide/find-code-changes-and-other-history-with-codelens.md)
 
-   CodeLens, kodunuzun başvurularını, kodunuzda yaptığınız değişiklikleri, bağlantılı hataları, iş öğelerini, kod incelemelerinizi ve birim testlerini, Düzenleyiciden çıkmadan bulmanıza yardımcı olur.
+   CodeLens, kodunuz için başvurular bulmanıza yardımcı olur, düzenleyiciden çıkmadan, kod, bağlı hataları, iş öğeleri, kod incelemeleri ve birim testleri değiştirir.
 
    ::: moniker range="vs-2017"
 
@@ -161,7 +161,7 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
 - [Tanıma Git](../../ide/go-to-and-peek-definition.md)
 
-   Tanıma Git özelliği sizi doğrudan bir işlevin veya türün tanımlandığı konuma götürür.
+   Tanıma özelliği, doğrudan bir işlev veya tür tanımlandığı konumuna götürür.
 
    ::: moniker range="vs-2017"
 
@@ -175,9 +175,9 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
    ::: moniker-end
 
-- [Açıklama Özeti](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+- [Tanıma göz at](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
-   Özet **tanım** penceresi, aslında ayrı bir dosya açmadan bir yöntemin veya türün tanımını gösterir.
+   **Özet tanım** penceresi, ayrı bir dosyayı açmaya gerek kalmadan bir yöntem veya tür tanımı gösterir.
 
    ::: moniker range="vs-2017"
 
@@ -191,33 +191,33 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 
    ::: moniker-end
 
-## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE 'yi yükler
+## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE yükleyin
 
 Bu bölümde, Visual Studio ile yapabileceğiniz bazı şeyleri denemek için basit bir proje oluşturacaksınız. Renk temasını değiştirecek, [IntelliSense](../../ide/using-intellisense.md) 'i kodlama Yardımcısı olarak kullanacaksınız ve programın yürütülmesi sırasında bir değişkenin değerini görmek için bir uygulamanın hatalarını ayıklayacaksınız.
 
 ::: moniker range="vs-2017"
 
-Başlamak için [Visual Studio 'yu indirin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ve sisteminize yükleyin. Modüler yükleyici, tercih ettiğiniz programlama dili veya platformu için gereken özellik grupları olan *iş yüklerini*seçmenizi ve yüklemenizi sağlar. [Program oluşturma](#create-a-program)adımlarını izlemek için, yükleme sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçtiğinizden emin olun.
+Başlamak için [Visual Studio 'yu indirin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ve sisteminize yükleyin. Modüler yükleyici seçin ve yüklemek sağlayan *iş yükleri*, programlama dili veya tercih ettiğiniz platform için gerekli özellikler grupları olduğu. İçin adımları [bir program oluşturma](#create-a-program), seçtiğinizden emin olun **.NET Core çoklu platform geliştirme** yüklemesi sırasında iş yükü.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Başlamak için [Visual Studio 'yu indirin](https://visualstudio.microsoft.com/downloads) ve sisteminize yükleyin. Modüler yükleyici, tercih ettiğiniz programlama dili veya platformu için gereken özellik grupları olan *iş yüklerini*seçmenizi ve yüklemenizi sağlar. [Program oluşturma](#create-a-program)adımlarını izlemek için, yükleme sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçtiğinizden emin olun.
+Başlamak için [Visual Studio 'yu indirin](https://visualstudio.microsoft.com/downloads) ve sisteminize yükleyin. Modüler yükleyici seçin ve yüklemek sağlayan *iş yükleri*, programlama dili veya tercih ettiğiniz platform için gerekli özellikler grupları olduğu. İçin adımları [bir program oluşturma](#create-a-program), seçtiğinizden emin olun **.NET Core çoklu platform geliştirme** yüklemesi sırasında iş yükü.
 
 ::: moniker-end
 
-![Visual Studio Yükleyicisi 'de .NET Core platformlar arası geliştirme iş yükü](../media/dotnet-core-cross-platform-workload.png)
+![.NET core çoklu platform geliştirme iş yükünü Visual Studio yükleyicisi](../media/dotnet-core-cross-platform-workload.png)
 
 Visual Studio 'Yu ilk kez açtığınızda, isteğe bağlı olarak Microsoft hesabı veya iş veya okul hesabınızı kullanarak [oturum](../../ide/signing-in-to-visual-studio.md) açabilirsiniz.
 
-## <a name="customize-visual-studio"></a>Visual Studio 'Yu özelleştirme
+## <a name="customize-visual-studio"></a>Visual Studio'yu özelleştirme
 
-Visual Studio Kullanıcı arabirimini kişiselleştirmek için, varsayılan renk temasını değiştirme de dahil olmak üzere özelleştirebilirsiniz.
+Varsayılan renk temasını değiştirme dahil olmak üzere Visual Studio kullanıcı arabirimi kişiselleştirebilirsiniz.
 
 ### <a name="change-the-color-theme"></a>Renk temasını değiştirme
 
-**Koyu** temaya geçiş yapmak için:
+Değiştirilecek **koyu** teması:
 
 ::: moniker range="vs-2017"
 
@@ -235,23 +235,23 @@ Visual Studio Kullanıcı arabirimini kişiselleştirmek için, varsayılan renk
 
 ::: moniker-end
 
-2. **Seçenekler** iletişim kutusunu açmak için menü çubuğunda **Araçlar**  > **Seçenekler** ' i seçin.
+2. Menü çubuğunda, **Araçları** > **seçenekleri** açmak için **seçenekleri** iletişim.
 
-3. **Ortam**  > **genel** Seçenekler sayfasında, **renk teması** seçimini **koyu**olarak değiştirin ve ardından **Tamam**' ı seçin.
+3. Üzerinde **ortam** > **genel** seçenekler sayfası, değişiklik **renk teması** seçimi **koyu**seçin **Tamam**.
 
    ![Visual Studio 'da renk temasını koyu olarak değiştirme](media/change-color-theme.png)
 
-   IDE 'nin tamamına yönelik renk teması **koyu**olarak değişir.
+   IDE renk temasını tamamı için değişir **koyu**.
 
    ::: moniker range="vs-2017"
 
-   ![Koyu temalı Visual Studio](../../ide/media/quickstart-personalize-dark-theme.png)
+   ![Visual Studio'da koyu tema](../../ide/media/quickstart-personalize-dark-theme.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Koyu temalı Visual Studio](media/vs-2019/dark-theme.png)
+   ![Visual Studio'da koyu tema](media/vs-2019/dark-theme.png)
 
    ::: moniker-end
 
@@ -259,7 +259,7 @@ Visual Studio Kullanıcı arabirimini kişiselleştirmek için, varsayılan renk
 
 Ardından, Visual Studio 'Yu Visual Basic geliştiricilere uyarlanmış ortam ayarlarını kullanacak şekilde yapılandıracağız.
 
-1. Menü çubuğunda **araçlar**  > **Içeri ve dışarı aktarma ayarları**' nı seçin.
+1. Menü çubuğunda, **Araçları** > **içeri ve dışarı aktarma ayarları**.
 
 2. **Ayarları içeri ve dışarı aktarma sihirbazında**, ilk sayfadaki **tüm ayarları Sıfırla** ' yı seçin ve ardından **İleri**' yi seçin.
 
@@ -269,73 +269,73 @@ Ardından, Visual Studio 'Yu Visual Basic geliştiricilere uyarlanmış ortam ay
 
 5. **Sıfırlama Tamam** sayfasında **Kapat**' ı seçin.
 
-IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bilgi edinmek için bkz. [Visual Studio 'Yu kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md).
+IDE'yi kişiselleştirme diğer yollar hakkında bilgi edinmek için [kişiselleştirme Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="create-a-program"></a>Program oluşturma
+## <a name="create-a-program"></a>Bir program oluşturma
 
-Şimdi bir basit program oluşturalım.
+Şimdi kolları sıvayın ve basit bir program oluşturun.
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio menü çubuğunda **dosya** > **Yeni proje**' yi seçin.
 
-   ![Dosya > Menü çubuğunda yeni proje](media/file-new-project-menu.png)
+   ![Dosya > Yeni Proje menü çubuğunda](media/file-new-project-menu.png)
 
-   **Yeni proje** iletişim kutusunda çeşitli proje *şablonları*gösterilmektedir. Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
+   **Yeni proje** iletişim kutusu gösterir birkaç proje *şablonları*. Şablon, belirtilen proje türü için gereken ayarları ve temel dosyaları içerir.
 
-1. **Visual Basic**altında **.NET Core** kategorisini seçin ve **konsol uygulaması (.NET Core)** şablonunu seçin. **Ad** metin kutusuna **HelloWorld**yazın ve **Tamam** düğmesini seçin.
+1. **Visual Basic**altında **.NET Core** kategorisini seçin ve **konsol uygulaması (.NET Core)** şablonunu seçin. İçinde **adı** metin kutusunda, **HelloWorld**ve ardından **Tamam** düğmesi.
 
-   ![.NET Core uygulama şablonu](media/overview-npd.png)
+   ![.NET core uygulaması şablonu](media/overview-npd.png)
 
    > [!NOTE]
-   > **.NET Core** kategorisini görmüyorsanız **.NET Core platformlar arası geliştirme** iş yükünü yüklemeniz gerekir. Bunu yapmak için, **Yeni proje** iletişim kutusunun sol alt kısmındaki **Aç Visual Studio yükleyicisi** bağlantısını seçin. Visual Studio Yükleyicisi açıldıktan sonra, aşağı kaydırarak **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+   > Görmüyorsanız **.NET Core** kategorisi, yüklemeniz gereken **.NET Core çoklu platform geliştirme** iş yükü. Bunu yapmak için **açık Visual Studio yükleyicisi** alt sol tarafındaki bağlantıyı **yeni proje** iletişim. Visual Studio yükleyicisi açıldığında, aşağıya kaydırın ve **.NET Core çoklu platform geliştirme** iş yükü ve ardından **Değiştir**.
 
-   Visual Studio projeyi oluşturur. "Merhaba Dünya!" değişmez dizesini göstermek için <xref:System.Console.WriteLine?displayProperty=nameWithType> yöntemini çağıran basit bir "Merhaba Dünya" uygulaması Konsol (program çıktısı) penceresinde.
+   Visual Studio projesi oluşturur. Çağıran basit bir "Hello World" uygulaması olan <xref:System.Console.WriteLine?displayProperty=nameWithType> "Hello World!" sabit dizesini görüntülemek için yöntemi (program çıktısı) konsol penceresinde.
 
-   Kısa süre içinde aşağıdakine benzer bir şey görmeniz gerekir:
+   Kısa bir süre sonra aşağıdaki gibi görmeniz gerekir:
 
    ![Visual Studio IDE](media/overview-ide-console-app.png)
 
-   Uygulamanın Visual Basic kodu, alanın çoğunu alan düzenleyici penceresinde görünür. Metnin anahtar sözcükler ve türler gibi farklı parçalarını göstermek için otomatik olarak renklendirildiğine dikkat edin. Ayrıca, koddaki küçük, dikey kesikli çizgiler, hangi küme ayracın birbiriyle eşleştiğini gösterir ve satır numaraları kodu daha sonra bulmanıza yardımcı olur. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi işaretini seçebilirsiniz. Bu kod ana hattı özelliği, ihtiyacınız olmayan kodun gizlenmesini sağlar ve ekran dağınıklığını en aza indirmenize yardımcı olur. Proje dosyaları, **Çözüm Gezgini**adlı bir pencerenin sağ tarafında listelenir.
+   Uygulamanın Visual Basic kodu, alanın çoğunu alan düzenleyici penceresinde görünür. Farklı anahtar sözcükleri ve türleri gibi bir kod bölümlerini göstermek için metni otomatik olarak renklendirilmiş dikkat edin. Ayrıca, hangi küme ayraçları başka bir eşleşen küçük, dikey kesikli satır kodda belirtmek ve satır numaralarını Yardım kodu daha sonra bulun. Daraltma veya genişletme kod blokları için küçük, kutulanmış eksi işaretleri seçebilirsiniz. Anahat oluşturma özelliği bu kod, ekranda dağınıklığı aza indirilmesine yardımcı ihtiyacınız olmayan kodu Gizle olanak tanır. Proje dosyalarını adlı bir pencerede sağ tarafta listelenen **Çözüm Gezgini**.
 
-   ![Kırmızı kutular içeren Visual Studio IDE](media/overview-ide-console-app-red-boxes.png)
+   ![Kırmızı kutuları ile Visual Studio IDE](media/overview-ide-console-app-red-boxes.png)
 
-   Diğer menüler ve araç pencereleri mevcuttur, ancak şimdilik bu aşamada geçiş yapalım.
+   Kullanılabilir diğer menüleri ve araç pencerelerini, ancak geçelim şimdilik.
 
-1. Şimdi uygulamayı başlatın. Bunu, menü çubuğundaki **hata ayıklama** menüsünden **hata ayıklama olmadan Başlat** ' a tıklayarak yapabilirsiniz. Ayrıca, **Ctrl** +**F5**tuşuna da basabilirsiniz.
+1. Şimdi uygulamayı başlatın. Bunu seçerek yapabilirsiniz **hata ayıklama olmadan Başlat** gelen **hata ayıklama** menü çubuğundaki menü. Ayrıca basabilirsiniz **Ctrl**+**F5**.
 
-   ![Hata ayıklama menüsü olmadan > Başlat](../media/overview-start-without-debugging.png)
+   ![Hata ayıklama > menü hata ayıklama olmadan Başlat](../media/overview-start-without-debugging.png)
 
-   Visual Studio uygulamayı oluşturur ve **Merhaba Dünya!** iletisi ile bir konsol penceresi açılır. Artık çalışan bir uygulamanız var!
+   Visual Studio uygulamayı derler ve bir konsol penceresi iletiyle açılır **Merhaba Dünya!** . Artık çalışan bir uygulamanın var!
 
    ![Konsol penceresi](../media/overview-console-window.png)
 
 1. Konsol penceresini kapatmak için klavyenizde herhangi bir tuşa basın.
 
-1. Uygulamaya bazı ek kodlar ekleyelim. Aşağıdaki Visual Basic kodu `Console.WriteLine("Hello World!")` satırı önüne ekleyin:
+1. Uygulama için bazı ek kod ekleyelim. Aşağıdaki Visual Basic kodu `Console.WriteLine("Hello World!")`satırı önüne ekleyin:
 
    ```vb
    Console.WriteLine("What is your name?")
    Dim name = Console.ReadLine()
    ```
 
-   Bu kod, konsol penceresinde **adınızın ne olduğunu** görüntüler ve ardından **ENTER** tuşuna basarak Kullanıcı bir metin girip girene kadar bekler.
+   Bu kod görüntüler **adınız ne?** konsol penceresi, ve ardından kullanıcı tarafından izlenen metin girene kadar bekler **Enter** anahtarı.
 
-1. @No__t_0 belirten satırı aşağıdaki kodla değiştirin:
+1. Yazan satırı değiştirin `Console.WriteLine("Hello World!")` aşağıdaki koda:
 
    ```vb
    Console.WriteLine("Hello " + name + "!")
    ```
 
-1. **Ctrl** +**F5**tuşuna basarak uygulamayı yeniden çalıştırın.
+1. **Ctrl**+**F5**tuşuna basarak uygulamayı yeniden çalıştırın.
 
-   Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
+   Visual Studio uygulaması oluşturur ve bir konsol penceresi açar ve sizden adınız için ister.
 
-1. Konsol penceresine adınızı girin ve **ENTER**'a basın.
+1. Konsol penceresi ve ENTER tuşuna adınızı girin **Enter**.
 
-   ![Konsol penceresi girişi](../media/overview-console-input.png)
+   ![Konsol penceresi girdisi](../media/overview-console-input.png)
 
-1. Herhangi bir tuşa basarak konsol penceresini kapatın ve çalışan programı durdurun.
+1. Konsol penceresini kapatın ve çalışan programa durdurmak için herhangi bir tuşa basın.
 
 ::: moniker-end
 
@@ -343,9 +343,9 @@ IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bil
 
 1. Visual Studio menü çubuğunda **dosya** > **Yeni proje**' yi seçin.
 
-   ![Dosya > Menü çubuğunda yeni proje](media/vs-2019/file-new-project.png)
+   ![Dosya > Yeni Proje menü çubuğunda](media/vs-2019/file-new-project.png)
 
-   **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu*gösterir. Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
+   **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu*gösterir. Şablon, belirtilen proje türü için gereken ayarları ve temel dosyaları içerir.
 
 1. İstediğimiz şablonu bulmak için arama kutusuna **.NET Core konsolunu** yazın veya girin. Kullanılabilir şablonların listesi, girdiğiniz anahtar sözcüklere göre otomatik olarak filtrelenir. Ayrıca, **dil** açılır listesinden **Visual Basic** seçerek şablon sonuçlarını daha fazla filtreleyebilirsiniz.
 
@@ -357,82 +357,82 @@ IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bil
 
    ![Visual Studio 'da yeni proje yapılandırma](media/vs-2019/configure-new-project.png)
 
-   Visual Studio projeyi oluşturur. "Merhaba Dünya!" değişmez dizesini göstermek için <xref:System.Console.WriteLine?displayProperty=nameWithType> yöntemini çağıran basit bir "Merhaba Dünya" uygulaması Konsol (program çıktısı) penceresinde.
+   Visual Studio projesi oluşturur. Çağıran basit bir "Hello World" uygulaması olan <xref:System.Console.WriteLine?displayProperty=nameWithType> "Hello World!" sabit dizesini görüntülemek için yöntemi (program çıktısı) konsol penceresinde.
 
-   Kısa süre içinde aşağıdakine benzer bir şey görmeniz gerekir:
+   Kısa bir süre sonra aşağıdaki gibi görmeniz gerekir:
 
    ![Visual Studio IDE](media/overview-ide-console-app.png)
 
-   Uygulamanın Visual Basic kodu, alanın çoğunu alan düzenleyici penceresinde görünür. Metnin anahtar sözcükler ve türler gibi farklı parçalarını göstermek için otomatik olarak renklendirildiğine dikkat edin. Ayrıca, koddaki küçük, dikey kesikli çizgiler, hangi küme ayracın birbiriyle eşleştiğini gösterir ve satır numaraları kodu daha sonra bulmanıza yardımcı olur. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi işaretini seçebilirsiniz. Bu kod ana hattı özelliği, ihtiyacınız olmayan kodun gizlenmesini sağlar ve ekran dağınıklığını en aza indirmenize yardımcı olur. Proje dosyaları, **Çözüm Gezgini**adlı bir pencerenin sağ tarafında listelenir.
+   Uygulamanın Visual Basic kodu, alanın çoğunu alan düzenleyici penceresinde görünür. Farklı anahtar sözcükleri ve türleri gibi bir kod bölümlerini göstermek için metni otomatik olarak renklendirilmiş dikkat edin. Ayrıca, hangi küme ayraçları başka bir eşleşen küçük, dikey kesikli satır kodda belirtmek ve satır numaralarını Yardım kodu daha sonra bulun. Daraltma veya genişletme kod blokları için küçük, kutulanmış eksi işaretleri seçebilirsiniz. Anahat oluşturma özelliği bu kod, ekranda dağınıklığı aza indirilmesine yardımcı ihtiyacınız olmayan kodu Gizle olanak tanır. Proje dosyalarını adlı bir pencerede sağ tarafta listelenen **Çözüm Gezgini**.
 
-   ![Kırmızı kutular içeren Visual Studio IDE](media/overview-ide-console-app-red-boxes.png)
+   ![Kırmızı kutuları ile Visual Studio IDE](media/overview-ide-console-app-red-boxes.png)
 
-   Diğer menüler ve araç pencereleri mevcuttur, ancak şimdilik bu aşamada geçiş yapalım.
+   Kullanılabilir diğer menüleri ve araç pencerelerini, ancak geçelim şimdilik.
 
-1. Şimdi uygulamayı başlatın. Bunu, menü çubuğundaki **hata ayıklama** menüsünden **hata ayıklama olmadan Başlat** ' a tıklayarak yapabilirsiniz. Ayrıca, **Ctrl** +**F5**tuşuna da basabilirsiniz.
+1. Şimdi uygulamayı başlatın. Bunu seçerek yapabilirsiniz **hata ayıklama olmadan Başlat** gelen **hata ayıklama** menü çubuğundaki menü. Ayrıca basabilirsiniz **Ctrl**+**F5**.
 
-   ![Hata ayıklama menüsü olmadan > Başlat](media/vs-2019/start-without-debugging.png)
+   ![Hata ayıklama > menü hata ayıklama olmadan Başlat](media/vs-2019/start-without-debugging.png)
 
-   Visual Studio uygulamayı oluşturur ve **Merhaba Dünya!** iletisi ile bir konsol penceresi açılır. Artık çalışan bir uygulamanız var!
+   Visual Studio uygulamayı derler ve bir konsol penceresi iletiyle açılır **Merhaba Dünya!** . Artık çalışan bir uygulamanın var!
 
    ![Konsol penceresi](../media/vs-2019/overview-console-window.png)
 
 1. Konsol penceresini kapatmak için klavyenizde herhangi bir tuşa basın.
 
-1. Uygulamaya bazı ek kodlar ekleyelim. Aşağıdaki Visual Basic kodu `Console.WriteLine("Hello World!")` satırı önüne ekleyin:
+1. Uygulama için bazı ek kod ekleyelim. Aşağıdaki Visual Basic kodu `Console.WriteLine("Hello World!")`satırı önüne ekleyin:
 
    ```vb
    Console.WriteLine("What is your name?")
    Dim name = Console.ReadLine()
    ```
 
-   Bu kod, konsol penceresinde **adınızın ne olduğunu** görüntüler ve ardından **ENTER** tuşuna basarak Kullanıcı bir metin girip girene kadar bekler.
+   Bu kod görüntüler **adınız ne?** konsol penceresi, ve ardından kullanıcı tarafından izlenen metin girene kadar bekler **Enter** anahtarı.
 
-1. @No__t_0 belirten satırı aşağıdaki kodla değiştirin:
+1. Yazan satırı değiştirin `Console.WriteLine("Hello World!")` aşağıdaki koda:
 
    ```vb
    Console.WriteLine("Hello " + name + "!")
    ```
 
-1. **Ctrl** +**F5**tuşuna basarak uygulamayı yeniden çalıştırın.
+1. **Ctrl**+**F5**tuşuna basarak uygulamayı yeniden çalıştırın.
 
-   Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
+   Visual Studio uygulaması oluşturur ve bir konsol penceresi açar ve sizden adınız için ister.
 
-1. Konsol penceresine adınızı girin ve **ENTER**'a basın.
+1. Konsol penceresi ve ENTER tuşuna adınızı girin **Enter**.
 
    ![Konsol penceresi](../media/vs-2019/overview-console-input.png)
 
-1. Herhangi bir tuşa basarak konsol penceresini kapatın ve çalışan programı durdurun.
+1. Konsol penceresini kapatın ve çalışan programa durdurmak için herhangi bir tuşa basın.
 
 ::: moniker-end
 
 ## <a name="use-refactoring-and-intellisense"></a>Yeniden düzenleme ve IntelliSense kullanma
 
-Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense](../../ide/using-intellisense.md) 'in daha verimli bir şekilde kodlamasına yardımcı olması için birkaç yol göz atalım.
+Birkaç farklı şekilde bakalım, [yeniden düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense](../../ide/using-intellisense.md) yardımcı olabilecek daha verimli bir şekilde kod.
 
-İlk olarak `name` değişkenini yeniden adlandıralım:
+İlk olarak, Şimdi Yeniden Adlandır `name` değişkeni:
 
-1. @No__t_0 değişkenine çift tıklayarak seçin.
+1. Çift `name` değişkeni seçin.
 
-2. Değişken için yeni adı yazın, **Kullanıcı**adı.
+2. Değişken için yeni adı yazın **username**.
 
-   Değişken etrafında gri bir kutu göründüğünü ve kenar boşluğunda ampul göründüğünü unutmayın.
+   Değişkeni ve bir ampul gri kutu göründüğüne dikkat edin, kenar boşluğunda görünür.
 
-3. Kullanılabilir [hızlı eylemleri](../../ide/quick-actions.md)göstermek için ampul simgesini seçin. ' **Name ' öğesini ' username ' olarak yeniden adlandır**' ı seçin.
+3. Kullanılabilir göstermek için ampul simgesini [hızlı Eylemler](../../ide/quick-actions.md). Seçin **Yeniden Adlandır 'name 'username' için'** .
 
-   ![Visual Studio 'da yeniden adlandırma eylemi](media/rename-quick-action.png)
+   ![Visual Studio'da eylemini yeniden adlandır](media/rename-quick-action.png)
 
-   Değişken, proje genelinde yeniden adlandırılır, bu durumda yalnızca iki yer olur.
+   Değişkeni, bu örnekte yalnızca iki basamağı olan proje boyunca yeniden adlandırılır.
 
-4. Şimdi IntelliSense 'e göz atalım. @No__t_0 belirten satırın altına aşağıdaki kod parçasını yazın:
+4. Artık IntelliSense bir göz atalım. `Console.WriteLine("Hello " + username + "!")`belirten satırın altına aşağıdaki kod parçasını yazın:
 
     ```vb
    Dim now = Date.
    ```
 
-   Bir kutu <xref:System.DateTime> sınıfının üyelerini görüntüler. Ayrıca, şu anda seçili olan üyenin açıklaması ayrı bir kutu içinde görüntülenir.
+   Bir kutu üyelerini görüntüler <xref:System.DateTime> sınıfı. Ayrıca, ayrı bir kutuda şu anda seçilen üyenin açıklamasını görüntüler.
 
-   ![Visual Studio 'da IntelliSense liste üyeleri](media/intellisense-list-members.png)
+   ![Visual Studio IntelliSense üyeleri Listele](media/intellisense-list-members.png)
 
 5. Sınıfın bir özelliği olan **Şimdi**adlı üyeyi seçin. Bu özellik, çift tıklayarak ya da yukarı veya aşağı ok tuşlarını kullanarak ve ardından **sekme**tuşuna basarak seçerek.
 
@@ -445,63 +445,63 @@ Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense
    ```
 
    > [!TIP]
-   > <xref:System.Console.Write%2A?displayProperty=nameWithType>, yazdırıldıktan sonra satır Sonlandırıcı eklememesi için <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> biraz farklıdır. Diğer bir deyişle, çıktıya gönderilen sonraki metin parçası aynı satıra yazdırılır. Açıklamalarını görmek için kodunuzda bu yöntemlerin her birinin üzerine gelebilmeniz gerekir.
+   > <xref:System.Console.Write%2A?displayProperty=nameWithType> biraz farklı <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> içeren Yazar sonra bir satır Sonlandırıcı eklemez. Bu sonraki çıkışa gönderilir metin parçası aynı satırda yazdırılır anlamına gelir. Bu yöntemlerin her biri kendi açıklamasını görmek için kodunuzda gelebilirsiniz.
 
-7. Daha sonra, yeniden düzenleme kullanarak kodu biraz daha kısa hale getirebilirsiniz. Satır `Dim now = Date.Now` `now` değişkenine tıklayın.
+7. Ardından, yeniden yeniden düzenleme kod biraz daha kısa olmak için kullanacağız. Değişkenin üzerine tıklayın `now` satırında `Dim now = Date.Now`.
 
-   Bu satırdaki kenar boşluğunda küçük bir screwsürücü simgesinin göründüğünü unutmayın.
+   Kenar boşluğunda bu satırdaki bir tornavida ikonu görüntülendiğine dikkat edin.
 
-8. Visual Studio 'Nun hangi önerilerin kullanılabilir olduğunu görmek için screwdriver simgesine tıklayın. Bu durumda, kodun genel davranışını değiştirmeden bir kod satırını kaldırmak için [satır içi geçici değişken](../../ide/reference/inline-temporary-variable.md) yeniden düzenlemesi gösteriliyor:
+8. Önerileri görmek için tornavida simgesine tıklayarak Visual Studio kullanılabilir sahiptir. Bu durumda, kodun genel davranışını değiştirmeden bir kod satırını kaldırmak için [satır içi geçici değişken](../../ide/reference/inline-temporary-variable.md) yeniden düzenlemesi gösteriliyor:
 
-   ![Visual Studio 'da satır içi geçici değişken yeniden düzenlemesi](media/inline-temporary-variable-refactoring.png)
+   ![Satır içi geçici değişken Visual Studio'da yeniden düzenleme](media/inline-temporary-variable-refactoring.png)
 
-9. Kodu yeniden düzenleme için **satır içi geçici değişken** ' e tıklayın.
+9. Tıklayın **satır içi geçici değişken** kodun yeniden.
 
 ::: moniker range="vs-2017"
 
-10. **Ctrl** +**F5**tuşuna basarak programı yeniden çalıştırın. Çıktı şuna benzer:
+10. Tuşlarına basarak programı yeniden çalıştırın **Ctrl**+**F5**. Çıktı aşağıdakine benzer olacaktır:
 
-    ![Program çıktısı olan konsol penceresi](../media/overview-console-final.png)
+    ![Konsol penceresi ile program çıktısı](../media/overview-console-final.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-10. **Ctrl** +**F5**tuşuna basarak programı yeniden çalıştırın. Çıktı şuna benzer:
+10. Tuşlarına basarak programı yeniden çalıştırın **Ctrl**+**F5**. Çıktı aşağıdakine benzer olacaktır:
 
-    ![Program çıktısı olan konsol penceresi](../media/vs-2019/overview-console-final.png)
+    ![Konsol penceresi ile program çıktısı](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 
-## <a name="debug-code"></a>Hata ayıklama kodu
+## <a name="debug-code"></a>Kodda hata ayıklama
 
-Kod yazdığınızda çalıştırmanız ve hatalar için test etmeniz gerekir. Visual Studio 'nun hata ayıklama sistemi, kod tek bir bildirimde bir kez ilerlemenizi ve siz yazarken değişkenleri incelemenizi sağlar. Kodun belirli bir satırda yürütülmesini durduran *kesme noktaları* belirleyebilirsiniz. Bir değişken değerinin kodun çalıştırıldığı şekilde nasıl değiştiğini gözlemleyebilirsiniz ve daha fazlasını yapabilirsiniz.
+Kod yazmak, çalıştırmak ve hatalar için test gerekir. Visual Studio'nun hata ayıklama sistem aynı anda bir deyim kod adım adım ve kullandıkça, değişkenleri inceleyebilir olanak sağlar. Ayarlayabileceğiniz *kesme noktaları* belirli bir satır kod yürütmeyi durdurun. Bir değişken değişiklikleri değeri olarak kodu nasıl çalıştığını ve daha fazlasını gözlemleyebilirsiniz.
 
-Program "uçuş aşamasında" iken `username` değişkeninin değerini görmek için bir kesme noktası ayarlayalım.
+Değerini görmek için bir kesme noktası ayarlayalım `username` program "uçuşta" iken değişkeni.
 
-1. @No__t_0 belirten kod satırını bulun. Bu kod satırında bir kesme noktası ayarlamak için, diğer bir deyişle, programın bu satırda yürütmeyi duraklamasını sağlamak için düzenleyicinin en sol kenar boşluğuna tıklayın. Ayrıca kod satırında herhangi bir yere tıklayabilir ve ardından **F9**' e basabilirsiniz.
+1. İfadesini içeren kod satırını bulun `Console.WriteLine("Hello " + username + "!")`. Bu kod satırı, programın bu satırı yürütmeyi Duraklat yapmak için diğer bir deyişle, bir kesme noktası ayarlamak için düzenleyicisinin en sol kenar boşluğunda tıklayın. Ayrıca kod satırında herhangi bir yere tıklayın ve sonra basın **F9**.
 
-   Sol taraftaki kenar boşluğunda kırmızı bir daire görünür ve kod kırmızı renkle vurgulanır.
+   Kırmızı bir daire en sol kenar boşluğunda görünür ve kodu vurgulanır.
 
-   ![Visual Studio 'da kod satırında kesme noktası](media/breakpoint.png)
+   ![Visual Studio'da kod satırında kesme noktası](media/breakpoint.png)
 
-1. Hata ayıklamayı Başlat  >  **hata** **ayıklamayı başlatın** veya **F5**'e basarak hata ayıklamayı başlatın.
+1. Seçerek hata ayıklamayı Başlat **hata ayıklama** > **hata ayıklamayı Başlat** veya basarak **F5**.
 
-1. Konsol penceresi göründüğünde ve adınızı istediğinde, yazın ve **ENTER**tuşuna basın.
+1. Konsol penceresinde görünür ve adınız için ister, yazın ve basın **Enter**.
 
-   Odak, Visual Studio kod düzenleyicisine geri döner ve kesme noktasıyla birlikte kod satırı sarı renkle vurgulanır. Bu, programın yürütecektir bir sonraki kod satırı olduğunu belirtir.
+   Odak, Visual Studio kod düzenleyicisine geri döner ve kesme noktasıyla birlikte kod satırı sarı renkle vurgulanır. Bu program yürütülen kodun sonraki satıra olduğunu gösterir.
 
-1. Değerini görmek için farenizi `username` değişkenin üzerine getirin. Alternatif olarak, `username` ' a sağ tıklayıp, sonra da bu değişkenin değerini görebileceğiniz **izleme** penceresine eklemek Için **Gözcü Ekle** ' yi seçebilirsiniz.
+1. Fareyi üzerine `username` değerini görmek için değişkeni. Alternatif olarak, üzerinde sağ tıklayabilirsiniz `username` seçip **Gözcü Ekle** değişkeni eklemek için **Watch** penceresinde de görebileceğiniz değeri.
 
-   ![Visual Studio 'da hata ayıklama sırasında değişken değeri](media/debugging-variable-value.png)
+   ![Visual Studio'da hata ayıklama sırasında değişken değeri](media/debugging-variable-value.png)
 
-1. Programın tamamlanmasını çalışmasına izin vermek için **F5** tuşuna basın.
+1. Programın tamamlanmaya kadar çalışmasına izin vermek için basın **F5** yeniden.
 
-Visual Studio 'da hata ayıklama hakkında daha fazla bilgi edinmek için bkz. [hata ayıklayıcı Özellik turu](../../debugger/debugger-feature-tour.md).
+Visual Studio'da hata ayıklama hakkında daha fazla bilgi edinmek için bkz. [hata ayıklayıcısı özellik Turu](../../debugger/debugger-feature-tour.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Aşağıdaki tanıtım makaleleriyle birlikte Visual Studio 'Yu daha ayrıntılı bir şekilde bulun:
+Bu tanıtıcı makaleler biriyle boyunca izleyerek daha fazla Visual Studio'ı keşfedin:
 
 > [!div class="nextstepaction"]
 > [Kod düzenleyicisini kullanmayı öğrenin](tutorial-editor.md)
@@ -511,6 +511,6 @@ Aşağıdaki tanıtım makaleleriyle birlikte Visual Studio 'Yu daha ayrıntıl�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Daha fazla Visual Studio özelliği](../../ide/advanced-feature-overview.md) bulun
-- [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/) ziyaret edin
-- [Visual Studio blogunu](https://devblogs.microsoft.com/visualstudio/) okuyun
+- Bulma [daha fazla Visual Studio özellikleri](../../ide/advanced-feature-overview.md)
+- Ziyaret [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
+- Okuma [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/)

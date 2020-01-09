@@ -7,17 +7,17 @@ helpviewer_keywords:
 - snippets [Visual Studio], functions
 - IntelliSense code snippets, functions
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85124837e378ea4377de0ca08c5a8680034240c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c7df85c429794d61028d5304108d289dfe9bf496
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647537"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594246"
 ---
 # <a name="code-snippet-functions"></a>Kod parçacığı işlevleri
 
@@ -29,7 +29,7 @@ Aşağıdaki tabloda, kod parçacıkları içinde `Function` öğesiyle birlikte
 
 |İşlev|Açıklama|Dil|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(EnumerationLiteral)`|@No__t_0 parametresi tarafından belirtilen numaralandırma üyeleri için bir switch deyimi ve Case deyimleri kümesi oluşturur. @No__t_0 parametresi bir sabit listesi sabit değeri ya da bir numaralandırma türü için başvuru olmalıdır.|C#|
+|`GenerateSwitchCases(EnumerationLiteral)`|`EnumerationLiteral` parametresi tarafından belirtilen numaralandırma üyeleri için bir switch deyimi ve Case deyimleri kümesi oluşturur. `EnumerationLiteral` parametresi bir sabit listesi sabit değeri ya da bir numaralandırma türü için başvuru olmalıdır.|C#|
 |`ClassName()`|Eklenen kod parçacığını içeren sınıfın adını döndürür.|C#|
 |`SimpleTypeName(TypeName)`|*TypeName* parametresini, kod parçacığının çağrıldığı bağlamdaki en basit biçimine düşürür.|C#|
 

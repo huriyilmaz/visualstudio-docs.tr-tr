@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660c93c5e1ee6b41369ebbfc9f43c4c047042589
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652408"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597275"
 ---
 # <a name="about-domain-specific-languages"></a>Etki Alanına Özgü Diller Hakkında
 
@@ -62,7 +62,7 @@ Etki alanına özgü geliştirme, etki alanına özgü bir dili kullanarak model
 
 Grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
 
-- İmle
+- Gösterim
 
 - Etki alanı modeli
 
@@ -72,9 +72,9 @@ Grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
 
 - Visual Studio ile Tümleştirme
 
-### <a name="notation"></a>İmle
+### <a name="notation"></a>Gösterim
 
-Alana özgü bir dilin, etki alanına özgü yapıları temsil etmek üzere kolayca tanımlanabilen ve genişletilebilen, makul bir öğe kümesine sahip olması gerekir. Bir gösterim, bir grafik diyagram yüzeyinde öğeler arasındaki ilişkileri temsil eden öğeleri ve bağlayıcıları temsil eden şekillerden oluşur. @No__t_0, şekiller, etki alanına özgü dilin öğelerini göstermek için genişletilebilir ve iyileştirilmiş olabilir.
+Alana özgü bir dilin, etki alanına özgü yapıları temsil etmek üzere kolayca tanımlanabilen ve genişletilebilen, makul bir öğe kümesine sahip olması gerekir. Bir gösterim, bir grafik diyagram yüzeyinde öğeler arasındaki ilişkileri temsil eden öğeleri ve bağlayıcıları temsil eden şekillerden oluşur. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], şekiller, etki alanına özgü dilin öğelerini göstermek için genişletilebilir ve iyileştirilmiş olabilir.
 
 ### <a name="domain-model"></a>Etki alanı modeli
 
@@ -90,7 +90,7 @@ Düzenlenebilen, kaydedilebilen, kapatılan ve yeniden yüklenmiş bir biçimde,
 
 ### <a name="integration-with-visual-studio"></a>Visual Studio ile Tümleştirme
 
-@No__t_0 Visual Studio 'da barındırıldığından, birçok Visual Studio pencerelerini ve denetimini genişletir. Ayrıca, menü komutlarının, araç kutusu öğelerinin ve Kullanıcı arabiriminin diğer öğelerinin davranışını özelleştirmenizi sağlar.
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Visual Studio 'da barındırıldığından, birçok Visual Studio pencerelerini ve denetimini genişletir. Ayrıca, menü komutlarının, araç kutusu öğelerinin ve Kullanıcı arabiriminin diğer öğelerinin davranışını özelleştirmenizi sağlar.
 
 Ayrıca, etki alanına özgü diliniz için bir model veri yolu bağdaştırıcısı da oluşturabilirsiniz. Bu bağdaştırıcı, bir model içindeki model ve öğelere başvurmanıza ve DSL örneğine erişebilen ve güncelleştiren bir kod yazmanıza olanak tanır. Güçlü model veri yolu mekanizmasını kullanarak, birden çok modelle çalışan Visual Studio uzantıları yazabilirsiniz. Ayrıca, modellerle çalışan tek başına uygulamalar yazabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 

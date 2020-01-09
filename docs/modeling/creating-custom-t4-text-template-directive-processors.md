@@ -4,25 +4,25 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 836e2c24d9f236c7b87dfff60b934221b7645f1b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c70aa1853701ef671b7057ad698a0fb63334a1ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654065"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597184"
 ---
 # <a name="create-custom-t4-text-template-directive-processors"></a>Özel T4 Metin Şablonu Yönerge İşlemcileri Oluşturma
 
 *Metin şablonu dönüştürme işlemi* , girdi olarak bir *metin şablonu* dosyası alır ve çıktı olarak bir metin dosyası üretir. *Metin şablonu dönüştürme altyapısı* işlemi denetler ve motor bir metin şablonu dönüştürme konağından ve bir veya daha fazla metin şablonu *yönerge işlemcisiyle* etkileşime geçerek işlemi tamamlar. Daha fazla bilgi için bkz. [metin şablonu dönüştürme işlemi](../modeling/the-text-template-transformation-process.md).
 
-Özel bir yönerge işlemcisi oluşturmak için <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> ya da <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> devralan bir sınıf oluşturursunuz.
+Özel bir yönerge işlemcisi oluşturmak için <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> ya da <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>devralan bir sınıf oluşturursunuz.
 
-Bu iki arasındaki fark, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> kullanıcıdan parametreleri almak ve şablon çıkış dosyasını üreten kodu oluşturmak için gerekli olan en düşük arabirimi uygular. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>, tasarım deseninin gerektirdiği/sağladığı şekilde uygular. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>, `requires` ve `provides` iki özel parametreyi işler.  Örneğin, özel bir yönerge işlemcisi kullanıcıdan bir dosya adı kabul edebilir, dosyayı açıp okuyabilir ve sonra dosyanın metnini `fileText` adlı bir değişkende saklayabilir. @No__t_0 sınıfının bir alt sınıfı, kullanıcıdan `requires` parametresinin değeri olarak bir dosya adı ve `provides` parametresinin değeri olarak metnin kaydedileceği değişkenin adını alabilir. Bu işlemci dosyayı açıp okuyabilir ve sonra dosyanın metnini belirtilen değişkende depolar.
+Bu iki arasındaki fark, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> kullanıcıdan parametreleri almak ve şablon çıkış dosyasını üreten kodu oluşturmak için gerekli olan en düşük arabirimi uygular. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>, tasarım deseninin gerektirdiği/sağladığı şekilde uygular. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>, `requires` ve `provides`iki özel parametreyi işler.  Örneğin, özel bir yönerge işlemcisi kullanıcıdan bir dosya adı kabul edebilir, dosyayı açıp okuyabilir ve sonra dosyanın metnini `fileText`adlı bir değişkende saklayabilir. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> sınıfının bir alt sınıfı, kullanıcıdan `requires` parametresinin değeri olarak bir dosya adı ve `provides` parametresinin değeri olarak metnin kaydedileceği değişkenin adını alabilir. Bu işlemci dosyayı açıp okuyabilir ve sonra dosyanın metnini belirtilen değişkende depolar.
 
 Visual Studio 'da bir metin şablonundan özel bir yönerge işlemcisini çağırabilmeniz için önce onu kaydetmeniz gerekir.
 
@@ -46,7 +46,7 @@ Bazı özel yönerge işlemcileri örnekleri şunlar olabilir:
 
 ### <a name="principal-parts-of-a-custom-directive-processor"></a>Özel yönerge işlemcisinin asıl kısımları
 
-Bir yönerge işlemcisi geliştirmek için, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> veya <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> devralan bir sınıf oluşturmanız gerekir.
+Bir yönerge işlemcisi geliştirmek için, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> veya <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>devralan bir sınıf oluşturmanız gerekir.
 
 Uygulamanız gereken en önemli `DirectiveProcessor` yöntemler aşağıdaki gibidir.
 

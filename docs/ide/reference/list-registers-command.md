@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Debug.ListRegisters command
 - ListRegisters command
 ms.assetid: 19a9d789-f6c9-46b3-b1f6-4934fc33e055
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0e52f42e495c2bac5e80195d360096947210980
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e87b10a7827b5365b507abb2c72a21506e59c19e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748686"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568691"
 ---
 # <a name="list-registers-command"></a>Yazmaçları Listele Komutu
 Seçili yazmaçların değerini görüntüler ve gösterilecek kayıt listesini değiştirmenize izin verir.
@@ -32,10 +32,10 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 [/Unwatch [{register|registerGroup}...]]
 ```
 
-## <a name="switches"></a>Anahtarlar
-/Display [{`register`&#124; `registerGroup`}...]
+## <a name="switches"></a>Geçişler
+/Display [{`register`&#124;`registerGroup`}...]
 
-Belirtilen `register` veya `registerGroup` değerlerini görüntüler. @No__t_0 veya `registerGroup` belirtilmemişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örneğin:
+Belirtilen `register` veya `registerGroup`değerlerini görüntüler. `register` veya `registerGroup` belirtilmemişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örneğin:
 
 `Debug.ListRegisters /Display eax`
 
@@ -47,19 +47,19 @@ eşdeğerdir
 
 Listedeki tüm kayıt gruplarını görüntüler.
 
-/Watch [{`register`&#124; `registerGroup`}...]
+/Watch [{`register`&#124;`registerGroup`}...]
 
 Listeye bir veya daha fazla `register` veya `registerGroup` değeri ekler.
 
-/Unwatch [{`register`&#124; `registerGroup`}...]
+/Unwatch [{`register`&#124;`registerGroup`}...]
 
 Listeden bir veya daha fazla `register` veya `registerGroup` değeri kaldırır.
 
 ## <a name="remarks"></a>Açıklamalar
-Diğer ad `r` `Debug.ListRegisters` yerine kullanılabilir.
+Diğer ad `r` `Debug.ListRegisters`yerine kullanılabilir.
 
 ## <a name="example"></a>Örnek
-Bu örnek, kayıt grubu `Flags` değerlerini göstermek için `r` `Debug.ListRegisters` diğer adını kullanır.
+Bu örnek, kayıt grubu `Flags`değerlerini göstermek için `r` `Debug.ListRegisters` diğer adını kullanır.
 
 ```cmd
 r /Display Flags

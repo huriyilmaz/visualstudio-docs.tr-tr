@@ -2,17 +2,17 @@
 title: 'Nasıl yapılır: Program Kodunda Dosyadan Model Açma'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d39543a388c112cf13a5841e4fe825717597d5c1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661175"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594623"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Nasıl yapılır: Program Kodunda Dosyadan Model Açma
 
@@ -39,9 +39,9 @@ Bu başvuruları Visual Studio uygulama projenize ekleyin:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **gözden** geçirme sekmesine tıklayın ve `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` ' a gidin.
+  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **gözden** geçirme sekmesine tıklayın ve `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`' a gidin.
 
-- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Projeniz* `.Dsl.dll`.
+- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Projeniz*`.Dsl.dll`.
 
 ## <a name="important-classes-in-the-dsl"></a>DSL 'deki önemli sınıflar
 
@@ -49,7 +49,7 @@ DSL 'yi okuyan kodu yazmadan önce, DSL 'niz tarafından oluşturulan sınıflar
 
 Şunları belirlemeniz gereken sınıflardır:
 
-- *YourDslRootClass* -bu, `DslDefinition.dsl` kök sınıfın adıdır.
+- *YourDslRootClass* -bu, `DslDefinition.dsl`kök sınıfın adıdır.
 
 - *Yourdslname* `SerializationHelper`-Bu sınıf DSL projenizdeki `SerializationHelper.cs` tanımlanmıştır.
 

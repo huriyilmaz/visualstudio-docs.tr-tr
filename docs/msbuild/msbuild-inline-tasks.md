@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, tasks
 ms.assetid: e72e6506-4a11-4edf-ae8d-cfb5a3b9d8a0
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37597d1e1f4fde2b2e81e7aa7868c0aaff935337
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 4f5f19d756d669a7b3e9e5d32a89c598c7edc9d3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416858"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593661"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild satır içi görevleri
 MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir sınıf derlenerek oluşturulur. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
@@ -24,7 +24,7 @@ MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimini
 
  MSBuild 15,8 ' de [Roslyncodetaskfactory](../msbuild/msbuild-roslyncodetaskfactory.md) , .NET Standard platformlar arası satır içi görevler oluşturabilecek şekilde eklenmiştir.  .NET Core 'da satır içi görevler kullanmanız gerekiyorsa, RoslynCodeTaskFactory ' yi kullanmanız gerekir.
 ## <a name="the-structure-of-an-inline-task"></a>Satır içi görevin yapısı
- Bir Inline görevi [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesi tarafından içerilir. Satır içi görev ve `UsingTask` bu öğeyi içeren öğe, genellikle bir *. targets* dosyasına dahil edilir ve gereken şekilde diğer proje dosyalarına aktarılır. Temel bir satır içi görev aşağıda verilmiştir. Hiçbir şey yapmediğine dikkat edin.
+ Bir Inline görevi [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesi tarafından içerilir. Satır içi görev ve onu içeren `UsingTask` öğesi, genellikle bir *. targets* dosyasına dahil edilir ve gerektiği şekilde diğer proje dosyalarına içeri aktarılır. Temel bir satır içi görev aşağıda verilmiştir. Hiçbir şey yapmediğine dikkat edin.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -44,48 +44,48 @@ MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimini
 </Project>
 ```
 
- Örnekteki `UsingTask` öğesinde, görevi tanımlayan üç öznitelik ve onu derleyen satır içi görev fabrikası vardır.
+ Örnekteki `UsingTask` öğesi, görevi ve onu derleyen satır içi görev fabrikasını tanımlayan üç özniteliğe sahiptir.
 
-- Özniteliği, bu `DoNothing`durumda görevi adlandırır. `TaskName`
+- `TaskName` özniteliği görevi, bu durumda `DoNothing`adlandırır.
 
-- `TaskFactory` Özniteliği, satır içi görev fabrikasını uygulayan sınıfı adlandırır.
+- `TaskFactory` özniteliği, satır içi görev fabrikasını uygulayan sınıfı adlandırır.
 
-- `AssemblyFile` Özniteliği, satır içi görev fabrikasının konumunu verir. Alternatif olarak, genellikle genel derleme `AssemblyName` önbelleğinde (GAC) bulunan satır içi görev fabrikası sınıfının tam adını belirtmek için özniteliğini kullanabilirsiniz.
+- `AssemblyFile` özniteliği, satır içi görev fabrikasının konumunu verir. Alternatif olarak, genellikle genel derleme önbelleğinde (GAC) bulunan satır içi görev fabrikası sınıfının tam adını belirtmek için `AssemblyName` özniteliğini kullanabilirsiniz.
 
-`DoNothing` Görevin kalan öğeleri boştur ve bir satır içi görevin sırasını ve yapısını göstermek için verilmiştir. Daha sonra bu konunun ilerleyen kısımlarında daha sağlam bir örnek sunulmaktadır.
+`DoNothing` görevinin kalan öğeleri boştur ve bir satır içi görevin sırasını ve yapısını göstermek için verilmiştir. Daha sonra bu konunun ilerleyen kısımlarında daha sağlam bir örnek sunulmaktadır.
 
-- `ParameterGroup` Öğesi isteğe bağlıdır. Belirtildiğinde, görevin parametrelerini bildirir. Giriş ve çıkış parametreleri hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [giriş ve çıkış parametreleri](#input-and-output-parameters) bölümüne bakın.
+- `ParameterGroup` öğesi isteğe bağlıdır. Belirtildiğinde, görevin parametrelerini bildirir. Giriş ve çıkış parametreleri hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [giriş ve çıkış parametreleri](#input-and-output-parameters) bölümüne bakın.
 
-- `Task` Öğesi, görev kaynak kodunu tanımlar ve içerir.
+- `Task` öğesi, görev kaynak kodunu açıklar ve içerir.
 
-- Öğesi `Reference` , kodunuzda kullanmakta olduğunuz .NET derlemelerine başvuruları belirtir. Bu, Visual Studio 'da bir projeye başvuru ekleme ile eşdeğerdir. `Include` Öznitelik, başvurulan derlemenin yolunu belirtir.
+- `Reference` öğesi, kodunuzda kullandığınız .NET derlemelerine başvuruları belirtir. Bu, Visual Studio 'da bir projeye başvuru ekleme ile eşdeğerdir. `Include` özniteliği başvurulan derlemenin yolunu belirtir.
 
-- `Using` Öğesi, erişmek istediğiniz ad alanlarını listeler. Bu, `Using` Visual C#'teki ifadeye benzer. `Namespace` Öznitelik, dahil edilecek ad alanını belirtir.
+- `Using` öğesi erişmek istediğiniz ad alanlarını listeler. Bu, Visual C#'teki `Using` ifadeye benzer. `Namespace` özniteliği dahil edilecek ad alanını belirtir.
 
-`Reference`ve `Using` öğeleri dilden bağımsız değildir. Satır içi görevler desteklenen .NET CodeDom dillerinin herhangi birine (örneğin, Visual Basic veya görsel C#) yazılabilir.
+`Reference` ve `Using` öğeleri dilden bağımsız değildir. Satır içi görevler desteklenen .NET CodeDom dillerinin herhangi birine (örneğin, Visual Basic veya görsel C#) yazılabilir.
 
 > [!NOTE]
-> `Task` Öğesi tarafından içerilen öğeler, bu durumda kod görev fabrikası olan görev fabrikasına özeldir.
+> `Task` öğesinin içerdiği öğeler, görev fabrikasına, bu durumda kod görev fabrikasına özgüdür.
 
 ### <a name="code-element"></a>Kod öğesi
- `Task` Öğesi`Code` içinde görünecek Son alt öğe öğesi. Öğesi `Code` , bir görevde derlenmek istediğiniz kodu içerir veya konumlandırır. `Code` Öğesine yerleştirdiğiniz öğe, görevi nasıl yazmak istediğinize bağlıdır.
+ `Task` öğesi içinde görünecek Son alt öğe `Code` öğesidir. `Code` öğesi, bir görevde derlenmek istediğiniz kodu içerir veya konumlandırır. `Code` öğesine yerleştirdiğiniz öğe, görevi nasıl yazmak istediğinize bağlıdır.
 
- `Language` Özniteliği, kodunuzun yazıldığı dili belirtir. Visual Basic `vb` için kabul `cs` edilebilir C#değerler içindir.
+ `Language` özniteliği, kodunuzun yazıldığı dili belirtir. Kabul edilebilir değerler C#, Visual Basic için `vb` `cs`.
 
- Özniteliği, `Code` öğesinde bulunan kodun türünü belirtir. `Type`
+ `Type` özniteliği `Code` öğesinde bulunan kodun türünü belirtir.
 
-- Değeri `Type` ise `Class`, <xref:Microsoft.Build.Framework.ITask> öğesi arabirimindentüretilenbirsınıfiçinkodiçerir.`Code`
+- `Type` değeri `Class`ise, `Code` öğesi <xref:Microsoft.Build.Framework.ITask> arabiriminden türetilen bir sınıf için kod içerir.
 
-- Değeri `Type` ise `Method`, kod, <xref:Microsoft.Build.Framework.ITask> arabirimin `Execute` yöntemini geçersiz kılmayı tanımlar.
+- `Type` değeri `Method`ise, kod <xref:Microsoft.Build.Framework.ITask> arabiriminin `Execute` yönteminin bir geçersiz kılmayı tanımlar.
 
-- Değeri `Type` ise `Fragment`, `Execute` kod`return` yöntemin içeriğini tanımlar, ancak imza veya deyimin değil.
+- `Type` değeri `Fragment`, kod `Execute` yönteminin içeriğini tanımlar, ancak imza veya `return` ifadesiyle değil.
 
-Kod genellikle bir `<![CDATA[` işaret `]]>` ve işaret arasında görünür. Kod cdata bölümünde olduğundan, kaçış ayrılmış karakterleri (örneğin, "\<" veya ">") konusunda endişelenmeniz gerekmez.
+Kod genellikle `<![CDATA[` işaretleyicisi ve `]]>` işaretleyicisi arasında görüntülenir. Kod CDATA bölümünde olduğundan, kaçış ayrılmış karakterleri (örneğin, "\<" veya ">") konusunda endişelenmeniz gerekmez.
 
-Alternatif olarak, görevin kodunu içeren `Source` bir dosyanın konumunu `Code` belirtmek için öğesinin özniteliğini kullanabilirsiniz. Kaynak dosyadaki kod, `Type` özniteliği tarafından belirtilen türde olmalıdır. Özniteliği varsa, varsayılan `Type` değeri olur `Class`. `Source` Yoksa, varsayılan değer olur `Fragment`. `Source`
+Alternatif olarak, görevin kodunu içeren bir dosyanın konumunu belirtmek için `Code` öğesinin `Source` özniteliğini kullanabilirsiniz. Kaynak dosyadaki kodun, `Type` özniteliği tarafından belirtilen türde olması gerekir. `Source` özniteliği varsa, varsayılan `Type` değeri `Class`olur. `Source` yoksa, varsayılan değer `Fragment`.
 
 > [!NOTE]
-> Kaynak dosyada görev sınıfını tanımlarken, sınıf adı karşılık gelen `TaskName` [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesinin özniteliğiyle kabul etmelidir.
+> Kaynak dosyada görev sınıfını tanımlarken, sınıf adı karşılık gelen [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesinin `TaskName` özniteliğiyle kabul etmelidir.
 
 ## <a name="helloworld"></a>HelloWorld
  Daha sağlam bir satır içi görev aşağıda verilmiştir. HelloWorld görevinde "Hello, World!" görüntülenir Varsayılan hata günlüğü cihazında, genellikle sistem konsolu veya Visual Studio **çıktı** penceresidir. Örnekteki `Reference` öğesi yalnızca çizim için dahil edilmiştir.
@@ -125,7 +125,7 @@ Log.LogError("Hello, world!");
 ```
 
 ## <a name="input-and-output-parameters"></a>Giriş ve çıkış parametreleri
- Satır içi görev parametreleri bir `ParameterGroup` öğenin alt öğeleridir. Her parametre, kendisini tanımlayan öğenin adını alır. Aşağıdaki kod parametresini `Text`tanımlar.
+ Satır içi görev parametreleri bir `ParameterGroup` öğesinin alt öğeleridir. Her parametre, kendisini tanımlayan öğenin adını alır. Aşağıdaki kod `Text`parametresini tanımlar.
 
 ```xml
 <ParameterGroup>
@@ -135,11 +135,11 @@ Log.LogError("Hello, world!");
 
  Parametrelerde bu özniteliklerin bir veya daha fazlası olabilir:
 
-- `Required`, varsayılan `false` olarak bir isteğe bağlı özniteliktir. `true`Daha sonra parametresi zorunludur ve görev çağrılmadan önce bir değer verilmelidir.
+- `Required` varsayılan olarak `false` isteğe bağlı bir özniteliktir. `true`, parametresi zorunludur ve görev çağrılmadan önce bir değer verilmelidir.
 
-- `ParameterType`, varsayılan `System.String` olarak bir isteğe bağlı özniteliktir. System. Convert. ChangeType kullanarak bir öğe ya da bir dizeden dönüştürülebilen bir değer olan herhangi bir tamamen nitelenmiş türe ayarlanabilir. (Başka bir deyişle, bir dış görevden ve bu bilgisayardan geçirilebilecek herhangi bir tür.)
+- `ParameterType` varsayılan olarak `System.String` isteğe bağlı bir özniteliktir. System. Convert. ChangeType kullanarak bir öğe ya da bir dizeden dönüştürülebilen bir değer olan herhangi bir tamamen nitelenmiş türe ayarlanabilir. (Başka bir deyişle, bir dış görevden ve bu bilgisayardan geçirilebilecek herhangi bir tür.)
 
-- `Output`, varsayılan `false` olarak bir isteğe bağlı özniteliktir. İse `true`, Execute yönteminden dönmeden önce parametreye bir değer verilmelidir.
+- `Output` varsayılan olarak `false` isteğe bağlı bir özniteliktir. `true`, Execute yönteminden dönmeden önce parametreye bir değer verilmelidir.
 
 Örneğin,
 
@@ -155,11 +155,11 @@ Log.LogError("Hello, world!");
 
 - `Expression`, System. String türünde gerekli bir giriş parametresidir.
 
-- `Files`gerekli bir öğe listesi giriş parametresidir.
+- `Files`, gerekli bir öğe listesi giriş parametresidir.
 
 - `Tally`, System. Int32 türünde bir çıkış parametresidir.
 
-`Code` Öğesinde `Type` veya özniteliği`Method`varsa, özellikler her parametre için otomatik olarak oluşturulur. `Fragment` Aksi halde, özellikler, görev kaynak kodunda açıkça bildirilmelidir ve parametre tanımlarıyla tam olarak eşleşmesi gerekir.
+`Code` öğesinde `Fragment` veya `Method``Type` özniteliği varsa, özellikler her parametre için otomatik olarak oluşturulur. Aksi halde, özellikler, görev kaynak kodunda açıkça bildirilmelidir ve parametre tanımlarıyla tam olarak eşleşmesi gerekir.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki satır içi görev, verilen dosyadaki bir belirtecin her oluşumunu verilen değerle değiştirir.
@@ -191,4 +191,4 @@ File.WriteAllText(Path, content);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görevler](../msbuild/msbuild-tasks.md)
-- [İzlenecek yol: Satır içi görev oluşturma](../msbuild/walkthrough-creating-an-inline-task.md)
+- [İzlenecek yol: satır içi görev oluşturma](../msbuild/walkthrough-creating-an-inline-task.md)

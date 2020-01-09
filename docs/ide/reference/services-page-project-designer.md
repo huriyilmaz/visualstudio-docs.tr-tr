@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - Services page in Project Designer
 - Project Designer, Services page
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd374482d0432a54ed66442610aac1f60ca1828f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d30d8e8ddcdc8c1fa4fe1935da1f1dedd1b18f4b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655481"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593570"
 ---
 # <a name="services-page-project-designer"></a>Hizmetler Sayfası, Proje Tasarımcısı
 
@@ -37,7 +37,7 @@ ms.locfileid: "72655481"
 
 Bu denetim bu sayfada düzenlenemez. Bu denetimin açıklaması için bkz. [derleme sayfası, proje Tasarımcısı (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) veya [derleme sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md).
 
- **Platformunun**
+ **Platform**
 
 Bu denetim bu sayfada düzenlenemez. Bu denetimin açıklaması için bkz. [derleme sayfası, proje Tasarımcısı (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) veya [derleme sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md).
 
@@ -59,7 +59,7 @@ Yalnızca Forms kimlik doğrulaması ile kullanılır. Kimlik doğrulama hizmeti
 
  **İsteğe bağlı: kimlik bilgileri sağlayıcısı**
 
-Yalnızca Forms kimlik doğrulaması ile kullanılır. Uygulamanız `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> yöntemini çağırdığında ve boş dizeleri geçirirse ve parametreler için `null`, kimlik doğrulama hizmetinin bir oturum açma iletişim kutusunu görüntülemesi için kullanacağı <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> uygulamasını gösterir. Bu kutuyu boş bırakırsanız <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> metoduna geçerli bir Kullanıcı adı ve parola geçirmeniz gerekir. Kimlik bilgileri sağlayıcısını derleme nitelikli bir tür adı olarak belirtmeniz gerekir. Daha fazla bilgi için bkz. <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> ve [derleme adları](/dotnet/framework/app-domains/assembly-names). En basit biçimde, derleme nitelikli tür adı aşağıdaki örneğe benzer şekilde görünür: `MyNamespace.MyLoginClass, MyAssembly`
+Yalnızca Forms kimlik doğrulaması ile kullanılır. Uygulamanız `static`<xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> yöntemini çağırdığında ve boş dizeleri geçirirse ve parametreler için `null`, kimlik doğrulama hizmetinin bir oturum açma iletişim kutusunu görüntülemesi için kullanacağı <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> uygulamasını gösterir. Bu kutuyu boş bırakırsanız <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> metoduna geçerli bir Kullanıcı adı ve parola geçirmeniz gerekir. Kimlik bilgileri sağlayıcısını derleme nitelikli bir tür adı olarak belirtmeniz gerekir. Daha fazla bilgi için bkz. <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> ve [derleme adları](/dotnet/framework/app-domains/assembly-names). En basit biçimde, derleme nitelikli tür adı aşağıdaki örneğe benzer şekilde görünür: `MyNamespace.MyLoginClass, MyAssembly`
 
  **Rol hizmeti konumu**
 

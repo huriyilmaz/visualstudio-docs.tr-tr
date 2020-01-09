@@ -2,17 +2,17 @@
 title: 'Nasıl yapılır: Üçüncü taraf birim test çerçevelerini yükleme'
 ms.date: 04/01/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: fef59c757476b46936389ca48ca2bdaf32aec729
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: b70e26adc7c0c9a8dc409d9b4b971b233418b8e1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653247"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594285"
 ---
 # <a name="install-unit-test-frameworks"></a>Birim testi çerçeveleri 'ni yükler
 
@@ -38,7 +38,7 @@ Daha iyi test bulma ve yürütme deneyimi sağlamak için en son kararlı test b
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>En son kararlı test bağdaştırıcısı sürümüne güncelleştirmek için
 
-1. Çözüm**için NuGet paketlerini yönet** >   > **NuGet Paket Yöneticisi** ' **ne giderek çözümünüz** için NuGet Paket Yöneticisi 'ni açın.
+1. Çözüm **için NuGet paketlerini yönet** >  > **NuGet Paket Yöneticisi** ' **ne giderek çözümünüz** için NuGet Paket Yöneticisi 'ni açın.
 
 2. **Güncelleştirmeler** sekmesine tıklayın ve yüklü MSTest, NUnit veya xUnit test bağdaştırıcıları için arama yapın.
 
@@ -50,4 +50,4 @@ Daha iyi test bulma ve yürütme deneyimi sağlamak için en son kararlı test b
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Birim testi kod](../test/unit-test-your-code.md)

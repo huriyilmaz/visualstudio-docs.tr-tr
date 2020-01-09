@@ -5,40 +5,40 @@ ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, item definitions
 ms.assetid: 8e3dc223-f9e5-4974-aa0e-5dc7967419cb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8673cb816cfd03aa5bb0f2c6ffb7aa5205a8372e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 95275f90af0fbf6f002a7e3a127e7d7ca7d08a39
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006817"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573787"
 ---
 # <a name="item-definitions"></a>Öğe tanımları
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 kullanarak proje dosyalarındaki öğeleri statik bildirimi sağlayan [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğesi. Ancak, meta veriler için tüm öğeleri aynı olsa bile, yalnızca öğe düzeyinde meta veri eklenebilir. İtibariyle [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5, adlı bir proje öğesi [Itemdefinitiongroup](../msbuild/itemdefinitiongroup-element-msbuild.md) bu sınırlamayı kaldırır. *Itemdefinitiongroup* adlandırılmış öğe türü içindeki tüm öğeler için varsayılan meta veri değerlerini ekleyen öğesi tanımları kümesini tanımlamanızı sağlar.
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2,0, [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğesini kullanarak proje dosyalarındaki öğelerin statik bildirimini sunar. Ancak meta veriler, tüm öğeler için özdeş olsa bile yalnızca öğe düzeyinde eklenebilir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3,5 ' den başlayarak, [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) adlı bir proje öğesi bu sınırlamaya sahiptir. *ItemDefinitionGroup* , adlandırılmış öğe türündeki tüm öğelere varsayılan meta veri değerleri ekleyen bir öğe tanımları kümesi tanımlamanızı sağlar.
 
-*Itemdefinitiongroup* öğesi görünür hemen sonra [proje](../msbuild/project-element-msbuild.md) proje dosyasının öğesi. Öğe tanımları aşağıdaki işlevleri sağlar:
+*ItemDefinitionGroup* öğesi proje dosyasının [Proje](../msbuild/project-element-msbuild.md) öğesinden hemen sonra görünür. Öğe tanımları aşağıdaki işlevleri sağlar:
 
-- Öğeleri dışında bir hedef için genel varsayılan meta verileri tanımlayabilirsiniz. Diğer bir deyişle, aynı meta verileri belirtilen türdeki tüm öğeler için geçerlidir.
+- Bir hedefin dışındaki öğeler için genel varsayılan meta verileri tanımlayabilirsiniz. Diğer bir deyişle, aynı meta veriler belirtilen türdeki tüm öğeler için geçerlidir.
 
-- Öğesi türleri, birden çok tanımına sahip olabilir. Ek meta veri belirtimleri türüne eklenir, son belirtimi önceliklidir. \(Meta veri özelliklerini izleyin aynı alma sırada izler.\)
+- Öğe türlerinde birden çok tanım olabilir. Türe ek meta veri belirtimleri eklendiğinde, son belirtim öncelik kazanır. meta veriler, Özellikler takip eden aynı alma sırasını izler \(.\)
 
-- Meta veri olabilir eklenebilir. Örneğin, CDefines değerleri koşullu olarak ayarlanan özellikler bağlı olarak toplanır. Örneğin: `MT;STD_CALL;DEBUG;UNICODE`
+- Meta veriler eklenebilir. Örneğin, Ctanımlıyor değerleri, ayarlanmakta olan özelliklere bağlı olarak koşullu olarak toplanır. Örneğin: `MT;STD_CALL;DEBUG;UNICODE`.
 
-- Meta veri kaldırılabilir.
+- Meta veriler kaldırılabilir.
 
-- Koşullar, eklenmesi, meta verileri denetlemek için kullanılabilir.
+- Koşullar, meta verilerin eklenmesini denetlemek için kullanılabilir.
 
-## <a name="item-metadata-default-values"></a>Öğe meta verileri varsayılan değerler
-Bir Itemdefinitiongroup içinde tanımlanan öğe meta verileri yalnızca bir varsayılan meta veri bildirimidir. Meta veri değerleri içeren bir ItemGroup kullanan bir öğeyi tanımlamak sürece meta veriler geçerli değildir.
+## <a name="item-metadata-default-values"></a>Öğe meta verileri varsayılan değerleri
+Bir ItemDefinitionGroup içinde tanımlanan öğe meta verileri yalnızca varsayılan meta verilerin bir bildirimidir. Meta veri değerlerini içeren bir ItemGroup kullanan bir öğe tanımlamadığınız takdirde meta veriler uygulanmaz.
 
 > [!NOTE]
-> Çoğu bu konudaki örnekler, Itemdefinitiongroup öğesi gösterilir ancak karşılık gelen ItemGroup tanımına açıklık için atlanır.
+> Bu konudaki örneklerin çoğunda, bir ItemDefinitionGroup öğesi gösteriliyor ancak karşılık gelen ItemGroup tanımı açıklık için atlandı.
 
-Bir ItemGroup içinde açıkça tanımlanmış meta verileri Itemdefinitiongroup meta verilerinde daha önceliklidir. Itemdefinitiongroup meta veriler, yalnızca bir ItemGroup meta verilerinde tanımsız için uygulanır. Örneğin:
+Bir ItemGroup içinde açıkça tanımlanan meta veriler, ItemDefinitionGroup içindeki meta verilerden önceliklidir. ItemDefinitionGroup içindeki meta veriler yalnızca bir ItemGroup içindeki tanımsız meta veriler için uygulandı. Örneğin:
 
 ```xml
 <ItemDefinitionGroup>
@@ -55,41 +55,41 @@ Bir ItemGroup içinde açıkça tanımlanmış meta verileri Itemdefinitiongroup
 </ItemGroup>
 ```
 
-"M" meta veri öğesi "i" tarafından açıkça tanımlanmadığından Bu örnekte, "m" varsayılan meta veri "i" öğesine uygulanır. Ancak, varsayılan meta veri "n", "n" meta veri öğesi "i" tarafından zaten tanımlı olduğundan, "i" öğesine uygulanmaz.
+Bu örnekte, "m" meta verileri "i" öğesi tarafından açıkça tanımlanmadığından "m" varsayılan meta verileri "i" öğesine uygulanır. Ancak, "n" meta verileri "i" öğesi tarafından zaten tanımlandığından "i" varsayılan meta verileri "i" öğesine uygulanmıyor.
 
 > [!NOTE]
-> XML öğesi ve parametre adları olan çalışması\-hassas. Öğe meta verileri ve öğe\/özellik adları büyük/küçük harf olmayan\-hassas. Bu nedenle, yalnızca büyük küçük harfle farklı adlara sahip Itemdefinitiongroup öğeleri aynı ItemGroup değerlendirilmelidir.
+> XML öğesi ve parametre adları büyük/küçük harfe\-duyarlıdır. Öğe meta verileri ve öğe\/Özellik adları, büyük/küçük harfe duyarlı\-. Bu nedenle, yalnızca büyük/küçük harfe göre farklı adlara sahip olan ItemDefinitionGroup öğeleri aynı ItemGroup olarak değerlendirilmelidir.
 
 ## <a name="value-sources"></a>Değer kaynakları
-Bir Itemdefinitiongroup içinde tanımlanmış meta verileri değerlerini gibi birçok farklı kaynaklardan gelebilir:
+Bir ItemDefinitionGroup içinde tanımlanan meta verilerin değerleri, aşağıdaki gibi birçok farklı kaynaktan gelebilir:
 
 - PropertyGroup özelliği
 
-- Bir Itemdefinitiongroup öğesi
+- ItemDefinitionGroup 'tan öğe
 
-- Itemdefinitiongroup öğesi üzerinde öğesi dönüştürme
+- Bir ItemDefinitionGroup öğesinde öğe dönüştürme
 
 - Ortam değişkeni
 
-- Global özelliği (gelen *MSBuild.exe* komut satırı)
+- Global özelliği ( *MSBuild. exe* komut satırından)
 
-- Ayrılmış bir özellik
+- Ayrılmış Özellik
 
-- Bir Itemdefinitiongroup bir öğe üzerinde iyi bilinen meta veriler
+- ItemDefinitionGroup 'tan bir öğe üzerinde iyi bilinen meta veriler
 
-- CDATA bölümü \< \! \[CDATA\[burada bir şey ayrıştırılmaz\]\]\>
+- CDATA bölümü \<\!\[CDATA\[hiçbir şey ayrıştırılmaz\]\]
 
 > [!NOTE]
-> Itemdefinitiongroup öğeler ItemGroup öğelerini önce işlendiğinden bir ItemGroup öğesi meta verilerini bir Itemdefinitiongroup meta veri bildiriminde faydalı değil.
+> ItemDefinitionGroup öğeleri ItemGroup öğelerinden önce işlendiğinden, ItemGroup 'tan öğe meta verileri bir ItemDefinitionGroup meta veri bildiriminde yararlı değildir.
 
 ## <a name="additive-and-multiple-definitions"></a>Eklenebilir ve birden çok tanım
-Tanımları ekleme veya birden çok ItemDefinitionGroups kullandığınızda aşağıdakileri unutmayın:
+Tanımlar eklediğinizde veya birden çok ItemDefinitionGroups kullandığınızda, aşağıdakileri unutmayın:
 
-- Ek meta veri belirtimine türüne eklenir.
+- Ek meta veri belirtimi türe eklenir.
 
-- Son belirtimi önceliklidir.
+- Son belirtim öncelik kazanır.
 
-Birden çok ItemDefinitionGroups varsa, sonraki her belirtimi için önceki tanım meta verileri ekler. Örneğin:
+Birden çok ItemDefinitionGroups varsa, izleyen her belirtim meta verilerini önceki tanımına ekler. Örneğin:
 
 ```xml
 <ItemDefinitionGroup>
@@ -105,9 +105,9 @@ Birden çok ItemDefinitionGroups varsa, sonraki her belirtimi için önceki tan�
 </ItemDefinitionGroup>
 ```
 
-Bu örnekte, "m" ve "n" için "o" meta veriler eklenir.
+Bu örnekte, "o" meta verileri "m" ve "n" öğesine eklenir.
 
-Ayrıca, önceden tanımlanmış meta verileri değerlerini de eklenebilir. Örneğin:
+Ayrıca, önceden tanımlanmış meta veri değerleri de eklenebilir. Örneğin:
 
 ```xml
 <ItemDefinitionGroup>
@@ -122,12 +122,12 @@ Ayrıca, önceden tanımlanmış meta verileri değerlerini de eklenebilir. Örn
 </ItemDefinitionGroup>
 ```
 
-Bu örnekte, "m" meta veriler için önceden tanımlanmış değer \(m1\) yeni değere eklenen \(m2\), böylece son değeri "m1; m2".
+Bu örnekte, en son değerin "M1; m2" olması için, "d" \(M1\) meta verileri için önceden tanımlanmış değer \(m2\)yeni değerine eklenir.
 
 > [!NOTE]
-> Bu ayrıca aynı Itemdefinitiongroup ortaya çıkabilir.
+> Bu, aynı ItemDefinitionGroup içinde de gerçekleşebilir.
 
-Önceden tanımlanmış meta verileri geçersiz kılma son belirtimi önceliklidir. Aşağıdaki örnekte, "m" meta veri son değerini "m1" "m1a için" gider.
+Önceden tanımlanmış meta verileri geçersiz kıldığınızda, son belirtim öncelik kazanır. Aşağıdaki örnekte, "m" meta verisinin son değeri "M1" öğesinden "M1A" öğesine gider.
 
 ```xml
 <ItemDefinitionGroup>
@@ -142,8 +142,8 @@ Bu örnekte, "m" meta veriler için önceden tanımlanmış değer \(m1\) yeni d
 </ItemDefinitionGroup>
 ```
 
-## <a name="use-conditions-in-an-itemdefinitiongroup"></a>Bir Itemdefinitiongroup kullanım koşulları
-Meta verilerin eklenmesi denetlemek için bir Itemdefinitiongroup koşulları kullanabilirsiniz. Örneğin:
+## <a name="use-conditions-in-an-itemdefinitiongroup"></a>Bir ItemDefinitionGroup içindeki koşulları kullanma
+Meta verilerin eklenmesini denetlemek için bir ItemDefinitionGroup içindeki koşulları kullanabilirsiniz. Örneğin:
 
 ```xml
 <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -153,12 +153,12 @@ Meta verilerin eklenmesi denetlemek için bir Itemdefinitiongroup koşulları ku
 </ItemDefinitionGroup>
 ```
 
-Bu durumda, yalnızca "Yapılandırma" özelliğinin değeri "Debug" ise "m1" öğesinde "i" varsayılan meta dahil edilir.
+Bu durumda, "i" öğesinde "M1" varsayılan meta verileri yalnızca "Configuration" özelliğinin değeri "Debug" ise dahil edilir.
 
 > [!NOTE]
-> Yalnızca yerel meta veri başvurularının koşullarda desteklenir.
+> Koşullarda yalnızca yerel meta veri başvuruları desteklenir.
 
-Öğesi, tanım grubu içinde önceki bir Itemdefinitiongroup tanımlı meta veri başvurularını yereldir. Diğer bir deyişle, başvuruları kapsamını özel öğesi. Örneğin:
+Önceki bir ItemDefinitionGroup içinde tanımlanan meta verilere yapılan başvurular, tanım grubuna değil, öğe için yereldir. Diğer bir deyişle, başvuruların kapsamı öğeye özgüdür. Örneğin:
 
 ```xml
 <ItemDefinitionGroup>
@@ -173,7 +173,7 @@ Bu durumda, yalnızca "Yapılandırma" özelliğinin değeri "Debug" ise "m1" ö
 
 ```
 
-Yukarıdaki örnekte, "i" "test" öğesi kendi koşulunda öğesi başvuruyor. Hiçbir zaman MSBuild bir Itemdefinitiongroup boş dize olarak başka bir öğenin meta verilerinde başvuru yorumlar bu koşul true olur. "M", "m0" Bu nedenle, ayarlanır
+Yukarıdaki örnekte, "i" öğesi "test" öğesine başvuruyor. MSBuild bir ItemDefinitionGroup içindeki başka bir öğenin meta verilerine bir başvuruyu boş dize olarak yorumladığı için bu durum hiçbir şekilde doğru olmaz. Bu nedenle "d", "M0" olarak ayarlanır.
 
 ```xml
   <ItemDefinitionGroup>
@@ -186,10 +186,10 @@ Yukarıdaki örnekte, "i" "test" öğesi kendi koşulunda öğesi başvuruyor. H
 
 ```
 
-Koşul başvuruları "i" öğesi olarak yukarıdaki örnekte, "m" "m1" değerine ayarlanır 's "yes" öğesi için meta veri değeri
+Yukarıdaki örnekte "m", "Evet" öğesi için "i" öğesinin meta veri değerine başvurduğundan "M1" değerine ayarlanır.
 
-## <a name="override-and-delete-metadata"></a>Geçersiz kılma ve meta verilerini silme
-Bir Itemdefinitiongroup öğesinde tanımlanan meta verileri, meta veri değeri için boş olarak ayarlayarak, bir sonraki Itemdefinitiongroup öğesi içinde kılınabilir. Bir meta veri öğesi boş bir değere ayarlayarak da verimli bir şekilde silebilirsiniz. Örneğin:
+## <a name="override-and-delete-metadata"></a>Meta verileri geçersiz kıl ve Sil
+Bir ItemDefinitionGroup öğesinde tanımlanan meta veriler, meta veri değeri boş olarak ayarlanarak sonraki bir ItemDefinitionGroup öğesinde geçersiz kılınabilir. Ayrıca, bir meta veri öğesini boş bir değere ayarlayarak etkin bir şekilde silebilirsiniz. Örneğin:
 
 ```xml
 <ItemDefinitionGroup>
@@ -204,10 +204,10 @@ Bir Itemdefinitiongroup öğesinde tanımlanan meta verileri, meta veri değeri 
 </ItemDefinitionGroup>
 ```
 
-"İ" öğe meta verileri "m" hala içeriyor, ancak değeri artık boştur.
+"İ" öğesi "m" meta verilerini hala içeriyor, ancak değeri artık boş.
 
-## <a name="scope-of-metadata"></a>Meta verilerin kapsam
-Tanımlanmış olan her yerde ItemDefinitionGroups tanımlı ve genel özellikleri genel kapsam vardır. Varsayılan meta veri tanımlarının bir Itemdefinitiongroup kendine başvuran olabilir. Örneğin, aşağıdaki basit bir meta veri başvurusu kullanır:
+## <a name="scope-of-metadata"></a>Meta veri kapsamı
+ItemDefinitionGroups tanımlandıklarında, tanımlı ve genel özelliklerde genel kapsama sahiptir. Bir ItemDefinitionGroup içindeki varsayılan meta veri tanımları kendi kendine başvuru olabilir. Örneğin, aşağıdaki bir basit meta veri başvurusu kullanır:
 
 ```xml
 <ItemDefinitionGroup>
@@ -218,7 +218,7 @@ Tanımlanmış olan her yerde ItemDefinitionGroups tanımlı ve genel özellikle
 </ItemDefinitionGroup>
 ```
 
-Bir tam meta veri başvurusu de kullanılabilir:
+Nitelikli bir meta veri başvurusu da kullanılabilir:
 
 ```xml
 <ItemDefinitionGroup>
@@ -229,7 +229,7 @@ Bir tam meta veri başvurusu de kullanılabilir:
 </ItemDefinitionGroup>
 ```
 
-Ancak, aşağıdaki geçerli değil:
+Ancak, şunlar geçerli değildir:
 
 ```xml
 <ItemDefinitionGroup>
@@ -240,7 +240,7 @@ Ancak, aşağıdaki geçerli değil:
 </ItemDefinitionGroup>
 ```
 
-Başlayarak [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5, Itemgroups'un de olabilir kendine başvuran. Örneğin:
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3,5 ' den başlayarak, ItemGroups da kendine başvuran olabilir. Örneğin:
 
 ```xml
 <ItemGroup>

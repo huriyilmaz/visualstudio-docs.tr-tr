@@ -5,21 +5,21 @@ ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 837F31AA-F121-46e9-9996-F8BCE768E579
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0f35348e6704ffa822ba5dee93ad930f209004e1
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: ce4a118d57c20cad9556ecb3b44127ed10ae96b0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586874"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597288"
 ---
-# <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Visual Studio yükleme için komut satırı parametresi örnekleri
+# <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Visual Studio yüklemesi için komut satırı parametresi örnekleri
 
 Göstermek için nasıl [Visual Studio'yu yüklemek için komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md), ihtiyaçlarınıza uygun olarak özelleştirebileceğiniz bazı örnekleri aşağıda verilmiştir.
 
@@ -31,7 +31,7 @@ Her örnekte `vs_enterprise.exe`, `vs_professional.exe` ve `vs_community.exe` in
 > [!NOTE]
 > Kullanabileceğiniz `^` birden fazla satır tek bir komutta birleştirmek için komut satırının sonunda karakter. Alternatif olarak, yalnızca bu satırlara birlikte tek bir satır yerleştirebilirsiniz. PowerShell'de vurgulamasını belirtir eşdeğerdir (`` ` ``) karakter.
 
-Komut satırını kullanarak yükleyebileceğiniz bileşenleri ve iş yüklerini listelerini görmek [Visual Studio iş yükü ve Bileşen kimlikleri](workload-and-component-ids.md) sayfası.
+Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
 
 ## <a name="using---installpath"></a>--İnstallPath kullanma
 
@@ -62,9 +62,9 @@ Komut satırını kullanarak yükleyebileceğiniz bileşenleri ve iş yüklerini
    --includeRecommended --quiet --wait
   ```
 
-## <a name="using---wait"></a>Kullanarak--bekleyin
+## <a name="using---wait"></a>--Wait kullanma
 
-* Sonraki komut yürütülmeden önce tamamlamak Visual Studio Yükleyicisi için beklenecek toplu dosyalar veya betikler kullanın. Toplu iş dosyaları için bir `%ERRORLEVEL%` açıklandığı gibi ortam değişkeni komut dönüş değeri içerecek [Visual Studio'yu yüklemek için komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md) sayfası. Bazı komut yardımcı programları tamamlanmasını bekleyin ve Yükleyicisi'nin dönüş değeri elde etmek için ek parametreler gerektirir. Ek parametreleri 'İşlemini Başlat' PowerShell komutu ile kullanılan bir örnek verilmiştir:
+* Sonraki komut yürütülmeden önce Visual Studio yükleyicisi 'nin tamamlanmasını beklemek için Batch dosyalarında veya betiklerinizde kullanın. Toplu iş dosyaları için, bir `%ERRORLEVEL%` ortam değişkeni, [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfasına belgelendiği gibi komutun dönüş değerini içerir. Bazı komut yardımcı programları, tamamlama için beklemek ve yükleyicinin dönüş değerini almak için ek parametreler gerektirir. Aşağıda, ' Start-Process ' PowerShell betiği komutuyla kullanılan ek parametrelerin bir örneği verilmiştir:
 
    ```cmd
    start /wait vs_professional.exe --installPath "C:\VS" --passive --wait > nul
@@ -87,7 +87,7 @@ Komut satırını kullanarak yükleyebileceğiniz bileşenleri ve iş yüklerini
     $process.WaitForExit()
    ```
 
-* İlk '--bekleyin ' Visual Studio Yükleyicisi ve ikinci tarafından kullanılan '-bekleyin ' 'Start-işlemi tarafından' tamamlanmasını beklemek için kullanılır. '-PassThru' parametresi 'Start-işlem tarafından' için dönüş değeri yükleyicinin çıkış kodu kullanmak için kullanılır.
+* İlk '--Wait ' Visual Studio Yükleyicisi tarafından kullanılır ve ikinci '-Wait ' ' Start-Process ' tarafından tamamlanmasını beklemek için kullanılır. '-Passby ' parametresi, dönüş değeri için yükleyicinin çıkış kodunu kullanmak üzere ' Start-Process ' tarafından kullanılır.
 
 ## <a name="using---layout"></a>Kullanarak--düzeni
 
@@ -110,9 +110,9 @@ Komut satırını kullanarak yükleyebileceğiniz bileşenleri ve iş yüklerini
    --includeRecommended
   ```
 
-## <a name="using---all"></a>Kullanarak--tüm
+## <a name="using---all"></a>Kullanarak--tümü
 
-* Etkileşimli bir yükleme, tüm iş yükleri ve Visual Studio Enterprise sürümünde kullanılabilir olan bileşenleri başlatın:
+* Visual Studio Enterprise sürümünde bulunan tüm iş yüklerinin ve bileşenlerin etkileşimli bir yüklemesini başlatın:
 
    ```cmd
    vs_enterprise.exe --all
@@ -120,7 +120,7 @@ Komut satırını kullanarak yükleyebileceğiniz bileşenleri ve iş yüklerini
 
 ## <a name="using---includerecommended"></a>--İncludeRecommended kullanma
 
-* Visual Studio Professional'ın ikinci, adlandırılmış bir örnek Visual Studio Community Edition, Node.js geliştirme desteği ile yüklü bir makineye yükleyin:
+* Node. js geliştirme desteğiyle, Visual Studio Community Edition 'ın zaten yüklü olduğu bir makineye ikinci, adlandırılmış bir Visual Studio Professional örneğini yükleyin:
 
    ```cmd
    vs_professional.exe --installPath C:\VSforNode ^

@@ -5,28 +5,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - build
 ms.assetid: 936317aa-63b7-4eb0-b9db-b260a0306196
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae3478aef733d106fa075a51edce4af91b404149
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01ce9401174a26d58b7ef88d536a24bfb9017154
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939408"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595091"
 ---
-# <a name="start-a-build-from-within-the-ide"></a>IDE içinden derleme Başlat
-Özel proje sistemleri kullanmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> yapıları başlatmak için. Bu makalede, bu gereksinim nedenlerini açıklar ve yordamı açıklar.
+# <a name="start-a-build-from-within-the-ide"></a>IDE içinden derleme başlatma
+Özel proje sistemleri, derlemeleri başlatmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> kullanmalıdır. Bu makalede, bu gereksinimin nedenleri açıklanmaktadır ve yordam özetlenmektedir.
 
-## <a name="parallel-builds-and-threads"></a>Paralel yapılar ve iş parçacıkları
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ortak kaynaklara erişim için dolayımlama gerektiren paralel yapılar sağlar. Proje sistemleri yapıları zaman uyumsuz olarak çalıştırabilirsiniz, ancak bu tür sistemleri telefonla geri arama içinden yapı işlevlerini çağırmamalıdır.
+## <a name="parallel-builds-and-threads"></a>Paralel derlemeler ve iş parçacıkları
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], genel kaynaklara erişim için ortam gerektiren paralel derlemelere izin verir. Proje sistemleri derlemeleri zaman uyumsuz olarak çalıştırabilir, ancak bu tür sistemler, çağrı geri göndermeler içerisinden derleme işlevlerini çağırmamalıdır.
 
- Proje sistemi ortam değişkenlerini değiştiriyorsa, yapı Outofproc olarak ayarlaması gerekir. Bu gereksinim, bunlar işlemde düğüm gerektirdiklerinden, ana bilgisayar nesnelerini kullanamayacağınız anlamına gelir.
+ Proje sistemi ortam değişkenlerini değiştirirse, derleme için Nodebenzeşimini OutOfProc olarak ayarlaması gerekir. Bu gereksinim, işlem içi düğümü gerektirdiğinden ana bilgisayar nesnelerini kullanamayacağı anlamına gelir.
 
-## <a name="use-ivsbuildmanageraccessor"></a>Use IVSBuildManagerAccessor
- Aşağıdaki kod, proje sistemi bir derlemeyi başlatmak için kullanabileceğiniz bir yöntemin anahatlarını vermektedir:
+## <a name="use-ivsbuildmanageraccessor"></a>IVsBuildManagerAccessor kullanın
+ Aşağıdaki kod, bir proje sisteminin bir derlemeyi başlatmak için kullanabileceği bir yöntemi özetler:
 
 ```csharp
 

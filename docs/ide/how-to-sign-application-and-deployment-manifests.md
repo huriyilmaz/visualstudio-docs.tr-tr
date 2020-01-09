@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama ve dağıtım bildirimlerini imzalama'
+title: 'Nasıl yapılır: uygulama ve dağıtım bildirimlerini Imzalama'
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - key files [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 64173505-8bfb-41cf-a0de-b9075173f3a2
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2edc0e1e63a716f5e2e649660a9b0333ec8bc923
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: fbf25301095ac5ff438514c37f61337e46342860
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079358"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596170"
 ---
-# <a name="how-to-sign-application-and-deployment-manifests"></a>Nasıl yapılır: Uygulama ve dağıtım bildirimlerini imzalama
+# <a name="how-to-sign-application-and-deployment-manifests"></a>Nasıl yapılır: uygulama ve dağıtım bildirimlerini Imzalama
 
 ClickOnce dağıtımını kullanarak bir uygulama yayımlamak istiyorsanız, uygulama ve dağıtım bildirimlerinin bir ortak/özel anahtar çifti ile imzalanması ve Authenticode teknolojisi kullanılarak imzalanmış olması gerekir. Windows sertifika deposundan veya anahtar dosyasından bir sertifika kullanarak bildirimleri imzalayabilirsiniz.
 
@@ -33,7 +33,7 @@ ClickOnce dağıtımı hakkında daha fazla bilgi için bkz. [ClickOnce Security
 
 ClickOnce bildirimlerinin imzalanması, *. exe*tabanlı uygulamalar için isteğe bağlıdır. Daha fazla bilgi için bu belgenin "imzasız bildirimleri oluşturma" bölümüne bakın.
 
-Anahtar dosyaları oluşturma hakkında daha fazla bilgi için [bkz. nasıl yapılır: Ortak özel anahtar çifti](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)oluşturun.
+Anahtar dosyaları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel-özel anahtar çifti oluşturma](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
 
 > [!NOTE]
 > Visual Studio yalnızca *. pfx* uzantılı kişisel bilgi DEĞIŞIMI (PFX) anahtar dosyalarını destekler. Ancak, proje özelliklerinin **imzalama** sayfasında **depodan Seç** ' i tıklatarak geçerli kullanıcının Windows sertifika deposundan diğer sertifika türlerini seçebilirsiniz.
@@ -71,7 +71,7 @@ Anahtar dosyaları oluşturma hakkında daha fazla bilgi için [bkz. nasıl yap�
 4. Anahtar dosyasına erişmek için parolayı girin ve ardından **ENTER**' u seçin.
 
 > [!NOTE]
-> *. Pfx* dosyası, sertifika zincirleme bilgilerini içeremez. Varsa, aşağıdaki içeri aktarma hatası oluşur: **Şifre çözme için sertifika ve özel anahtar bulunamıyor**. Sertifika zincirleme bilgilerini kaldırmak için *certmgr. msc* ' yi kullanabilir ve *. pfx dosyasını dışarı aktarırken **tüm sertifikaları dahil etme** [seçeneğini devre dışı bırakabilirsiniz](/previous-versions/aa730868(v=vs.80)) .
+> *. Pfx* dosyası, sertifika zincirleme bilgilerini içeremez. Varsa, aşağıdaki içeri aktarma hatası oluşur: **şifre çözme için sertifika ve özel anahtar bulunamıyor**. Sertifika zincirleme bilgilerini kaldırmak için *certmgr. msc* ' yi kullanabilir ve *. pfx dosyasını dışarı aktarırken **tüm sertifikaları dahil etme** [seçeneğini devre dışı bırakabilirsiniz](/previous-versions/aa730868(v=vs.80)) .
 
 ## <a name="sign-using-a-test-certificate"></a>Test sertifikası kullanarak imzala
 
@@ -96,7 +96,7 @@ Varsayılan olarak, bir veya daha fazla dosya özel olarak oluşturulan karmadan
 
 2. **İmzalama** sayfasında, **ClickOnce bildirimlerini imzala** onay kutusunu temizleyin.
 
-3. Uygulamanızın yalnızca bir sürümü kullanılabilir olacak şekilde yayımlama sürümünü sıfırlayın. Varsayılan olarak, Visual Studio, uygulamayı her yayımladığınızda Yayımla sürümünün Düzeltme numarasını otomatik olarak arttırır. Daha fazla bilgi için [nasıl yapılır: ClickOnce Publish sürümünü](../deployment/how-to-set-the-clickonce-publish-version.md)ayarlayın.
+3. Uygulamanızın yalnızca bir sürümü kullanılabilir olacak şekilde yayımlama sürümünü sıfırlayın. Varsayılan olarak, Visual Studio, uygulamayı her yayımladığınızda Yayımla sürümünün Düzeltme numarasını otomatik olarak arttırır. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce Publish sürümünü ayarlama](../deployment/how-to-set-the-clickonce-publish-version.md).
 
 4. Uygulamayı yayımlayın.
 
@@ -114,6 +114,6 @@ Varsayılan olarak, bir veya daha fazla dosya özel olarak oluşturulan karmadan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tanımlayıcı adlı derlemeler](/dotnet/framework/app-domains/strong-named-assemblies)
-- [Nasıl yapılır: Ortak özel anahtar çifti oluşturma](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)
+- [Nasıl yapılır: genel-özel anahtar çifti oluşturma](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)
 - [İmzalama sayfası, proje Tasarımcısı](../ide/reference/signing-page-project-designer.md)
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)

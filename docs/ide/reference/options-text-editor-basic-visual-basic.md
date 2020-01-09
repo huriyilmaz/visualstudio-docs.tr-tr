@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a07645597846bd85f3152da866a253b079bc3963
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 11a069e17e615199e367683273adb85e771f1d9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666337"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584523"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>Seçenekler, metin düzenleyici, temel (Visual Basic), gelişmiş
 **Seçenekler** (**Araçlar** menüsü) iletişim kutusunun **metin düzenleyici** klasörünün **temel** klasöründe **vb 'ye özgü** Özellik sayfası aşağıdaki özellikleri içerir:
@@ -51,11 +51,11 @@ ms.locfileid: "72666337"
 
    ![Visual Studio 'da NuGet paketini yüklemeye yönelik hızlı eylem](media/nuget-lightbulb.png)
 
-## <a name="highlighting"></a>Vurgusuz
+## <a name="highlighting"></a>Vurgulama
 
  **Başvuruların ve anahtar sözcüklerin vurgulanmasını etkinleştir**
 
-Metin Düzenleyicisi, bir sembolün veya `If..Then`, `While...End While` veya `Try...Catch...Finally` gibi bir yan tümcedeki tüm anahtar kelimelerin tüm örneklerini vurgulayabilir. **Ctrl**  + **SHIFT**  + **aşağı ok** veya **CTRL**  + **SHIFT**  + **yukarı ok**tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
+Metin Düzenleyicisi, bir sembolün veya `If..Then`, `While...End While`veya `Try...Catch...Finally`gibi bir yan tümcedeki tüm anahtar kelimelerin tüm örneklerini vurgulayabilir. **Ctrl** + **SHIFT** + **aşağı ok** veya **CTRL** + **SHIFT** + **yukarı ok**tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
@@ -85,7 +85,7 @@ Seçildiğinde, düzenleyicide tek tek kod bloklarını kolayca tanımlamanızı
 
 - Büyük/küçük anahtar sözcükler, değişkenler ve nesneler doğru durumda
 
-- @No__t_1 bildirimine eksik `Then` ekleme
+- `If...Then` bildirimine eksik `Then` ekleme
 
 - İşlev çağrılarına parantez Ekle
 

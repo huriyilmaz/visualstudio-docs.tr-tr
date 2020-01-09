@@ -11,17 +11,17 @@ helpviewer_keywords:
 - code visualization [Visual Studio]
 - dependencies, visualizing
 - dependency graphs
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45fb9b1a08dc54257f24f469d3a717b82faccf45
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a6e4efbc0cf950781c84eadf974ea87943d9828c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661537"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594584"
 ---
 # <a name="map-dependencies-with-code-maps"></a>Bağımlılıkları kod eşlemeleriyle eşleyin
 
@@ -49,7 +49,7 @@ Bu dillerdeki kod bağımlılıklarını eşleyebilirsiniz:
 
 Visual Studio 'da bir kod haritası oluşturmak için önce **kod haritasını** ve **canlı bağımlılık doğrulama** bileşenlerini yüklemeniz gerekir:
 
-1. **Visual Studio yükleyicisi**açın. Araçları**ve özellikleri al** >  **Araçlar** ' ı seçerek Windows Başlat menüsünden veya Visual Studio içinden açabilirsiniz.
+1. **Visual Studio yükleyicisi**açın. Araçları **ve özellikleri al** > **Araçlar** ' ı seçerek Windows Başlat menüsünden veya Visual Studio içinden açabilirsiniz.
 
 1. **Ayrı bileşenler** sekmesini seçin.
 
@@ -67,7 +67,7 @@ Derleme başvuruları, dosyalar ve klasörler de dahil olmak üzere boş bir kod
 
 Boş bir kod eşlemesi eklemek için:
 
-1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın. @No__t_1**Yeni öğe** **Ekle** ' yi seçin.
+1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın.  > **Yeni öğe** **Ekle** ' yi seçin.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü**altında **genel** kategorisini seçin.
 
@@ -78,13 +78,13 @@ Boş bir kod eşlemesi eklemek için:
 
    Çözümünüzün **Çözüm öğeleri** klasöründe boş bir harita görüntülenir.
 
-Benzer şekilde, yeni kod**eşlemesi** veya **dosya**  > **Yeni**  > **dosyası** >  **mimari** seçerek çözümünüze eklemeden yeni bir kod eşleme dosyası oluşturabilirsiniz.
+Benzer şekilde, yeni kod **eşlemesi** veya **dosya** > **Yeni** > **dosyası** > **mimari** seçerek çözümünüze eklemeden yeni bir kod eşleme dosyası oluşturabilirsiniz.
 
 ## <a name="generate-a-code-map-for-your-solution"></a>Çözümünüz için bir kod Haritası oluşturma
 
 Çözümünüzdeki tüm bağımlılıkları görmek için:
 
-1. Menü çubuğunda **mimari** ' i seçin  > **çözüm Için kod Haritası Oluştur**' u seçin. Kodunuz son kez derlenmeden bu yana değiştirilmediyse, bunun yerine**Yapı olmadan çözüm Için kod haritası oluşturmak**  >  **mimari** ' i seçebilirsiniz.
+1. Menü çubuğunda **mimari** ' i seçin > **çözüm Için kod Haritası Oluştur**' u seçin. Kodunuz son kez derlenmeden bu yana değiştirilmediyse, bunun yerine **Yapı olmadan çözüm Için kod haritası oluşturmak** > **mimari** ' i seçebilirsiniz.
 
    ![Kod Haritası komutu oluştur](../modeling/media/codemapsarchitecturemenu.png)
 
@@ -146,7 +146,7 @@ Benzer şekilde, yeni kod**eşlemesi** veya **dosya**  > **Yeni**  > **dosyası*
 
     ![İlişkileri görüntülemek için öğeleri seçin](../modeling/media/codemapsviewnewrelationships.png)
 
-Ayrıca bkz.:
+Ayrıca bkz.
 
 - [Kod haritalarına göz atma ve bunları yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)
 - [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
@@ -162,7 +162,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
    ![Eşlemek istediğiniz öğeleri seçin](../modeling/media/codemapsselectinsolutionexplorer.png)
 
-1. **Çözüm Gezgini** araç çubuğunda, seçili düğümlerde yeni grafik ![Create **kod eşlemesinde göster** ' i seçin (](../modeling/media/createnewgraphfromselectedbutton.gif). Ya da bir grup öğe için kısayol menüsünü açın ve **kod eşlemesinde göster '** i seçin.
+1. **Çözüm Gezgini** araç çubuğunda, **kod haritasında göster** ' i seçin ![seçili düğümlerden yeni grafik oluştur düğmesini](../modeling/media/createnewgraphfromselectedbutton.gif). Ya da bir grup öğe için kısayol menüsünü açın ve **kod eşlemesinde göster '** i seçin.
 
    Ayrıca **Çözüm Gezgini**, **sınıf görünümü**veya **nesne tarayıcısı**öğeleri [Yeni](#add-a-code-map) veya varolan bir kod haritasına sürükleyebilirsiniz. Öğelerinizin üst hiyerarşisini dahil etmek için, öğeleri sürüklerken **CTRL** tuşuna basın ve basılı tutun ya da varsayılan eylemi belirtmek için kod Haritası araç çubuğundaki **üst öğeleri dahil et** düğmesini kullanın. Ayrıca, derleme dosyalarını **Windows Gezgini**gibi Visual Studio 'nun dışından da sürükleyebilirsiniz.
 
@@ -177,13 +177,13 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
    ![Kod haritasında bir düğümü genişletme](../modeling/media/dependencygraph_containment.png)
 
-   Tüm öğeleri genişletmek için, **Ctrl** +**A**kullanarak bunları seçin, sonra haritanın kısayol menüsünü açın ve **Grup**  > **Genişlet**' i seçin. Ancak, tüm grupların genişletilmesi kullanılamaz bir eşleme veya bellek sorunları oluşturursa, bu seçenek kullanılamaz.
+   Tüm öğeleri genişletmek için, **Ctrl**+**A**kullanarak bunları seçin, sonra haritanın kısayol menüsünü açın ve **Grup** > **Genişlet**' i seçin. Ancak, tüm grupların genişletilmesi kullanılamaz bir eşleme veya bellek sorunları oluşturursa, bu seçenek kullanılamaz.
 
 5. İlgilendiğiniz öğeleri genişletmeye devam edin, gerekirse sınıf ve üye düzeyine doğru bir şekilde geçin.
 
    ![Grupları sınıfa ve üye düzeyine Genişlet](../modeling/media/codemapsexpandtoclassandmember.png)
 
-   Koddaki, ancak haritada görünmeyen üyeleri görmek için, bir grubun sol üst köşesinde bulunan alt öğe ](../modeling/media/dependencygraph_deletednodesicon.png) simgesini ![Refetch **tekrar al alt** simgesine tıklayın.
+   Koddaki, ancak haritada görünmeyen üyeleri görmek için, bir grubun sol üst köşesinde bulunan **tekrar al Children** simgesine ![tekrar al children Icon](../modeling/media/dependencygraph_deletednodesicon.png) tıklayın.
 
 6. Haritadaki öğelerle ilgili daha fazla öğe görmek için, bir tane seçin ve kod Haritası araç çubuğunda **ilgili öğe göster** ' i seçin, ardından haritaya eklenecek ilgili öğelerin türünü seçin. Alternatif olarak, bir veya daha fazla öğe seçin, kısayol menüsünü açın ve ardından haritaya eklenecek ilgili öğelerin türünün **göster** seçeneğini seçin. Örneğin:
 

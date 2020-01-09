@@ -12,17 +12,17 @@ helpviewer_keywords:
 - forms, passing data between
 - Windows Forms, walkthroughs
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: eb4b1c0af617bfd8e1771e500b4f12699e3f0ec4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 358cdc4822aa0da1d980f22196618aeaada4b1be
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641446"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586373"
 ---
 # <a name="pass-data-between-forms"></a>Formlar arasında veri geçirme
 
@@ -37,7 +37,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile bir veri kümesi oluşturma ve yapılandırma.
 
-- **Veri kaynakları** penceresinden öğeleri sürüklerken formda oluşturulacak denetimi seçme. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- **Veri kaynakları** penceresinden öğeleri sürüklerken formda oluşturulacak denetimi seçme. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 - **Veri kaynakları** penceresinden bir forma öğe sürükleyerek veri bağlantılı denetim oluşturma.
 
@@ -61,13 +61,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-the-windows-forms-app-project"></a>Windows Forms uygulama projesi oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -111,7 +111,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 - Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) **Form1**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) **Form1**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 ## <a name="create-the-second-form"></a>İkinci formu oluşturma
 
@@ -123,7 +123,7 @@ Verileri iletmek için ikinci bir form oluşturun.
 
 3. Ana **siparişler** düğümünü **veri kaynakları** penceresinden **Form2**üzerine sürükleyin.
 
-     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) **Form2**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+     Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) **Form2**üzerinde görünür. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
 
 4. Bileşen tepsisinden **OrdersBindingNavigator** öğesini silin.
 
@@ -141,7 +141,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 4. **Satırları döndüren Seç**varsayılan seçeneğini bırakın ve ardından **İleri**' ye tıklayın.
 
-5. @No__t_1 göre `Orders` döndürmek için sorguya bir WHERE yan tümcesi ekleyin. Sorgu aşağıdakine benzemelidir:
+5. `CustomerID`göre `Orders` döndürmek için sorguya bir WHERE yan tümcesi ekleyin. Sorgu aşağıdakine benzemelidir:
 
     ```sql
     SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry
@@ -154,7 +154,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 6. **İleri**'ye tıklayın.
 
-7. **Bir DataTableMethod adı doldur**için `FillByCustomerID` yazın.
+7. **Bir DataTableMethod adı doldur**için `FillByCustomerID`yazın.
 
 8. **Bir DataTable döndürün** seçeneğinin işaretini kaldırın ve ardından **İleri**' ye tıklayın.
 
@@ -164,7 +164,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 1. **Form2**' e sağ tıklayın ve **Kod Düzenleyicisi**'nde **Form2** ' yi açmak için **kodu görüntüle** ' yi seçin.
 
-2. @No__t_1 yönteminden sonra **Form2** ' ye aşağıdaki kodu ekleyin:
+2. `Form2_Load` yönteminden sonra **Form2** ' ye aşağıdaki kodu ekleyin:
 
      [!code-vb[VbRaddataDisplaying#1](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_1.vb)]
      [!code-csharp[VbRaddataDisplaying#1](../data-tools/codesnippet/CSharp/pass-data-between-forms_1.cs)]
@@ -186,7 +186,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-- Uygulamayı çalıştırmak için **F5** tuşuna basın.
+- Uygulamayı çalıştırmak için **F5**'e basın.
 
 - Bu müşterinin siparişleriyle **Form2** açmak için **Form1** içindeki bir müşteri kaydına çift tıklayın.
 
@@ -194,7 +194,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 Uygulama gereksinimlerinize bağlı olarak, formlar arasında veri geçirmeden sonra gerçekleştirmek isteyebileceğiniz birkaç adım vardır. Bu izlenecek yolda yapabileceğiniz bazı geliştirmeler şunlardır:
 
-- Veritabanı nesneleri eklemek veya çıkarmak için veri kümesini düzenleme. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Veritabanı nesneleri eklemek veya çıkarmak için veri kümesini düzenleme. Daha fazla bilgi için [oluşturun ve veri kümeleri yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
 - Verileri veritabanına geri kaydetme işlevselliği ekleme. Daha fazla bilgi için bkz. [verileri veritabanına geri kaydetme](../data-tools/save-data-back-to-the-database.md).
 

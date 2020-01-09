@@ -1,92 +1,92 @@
 ---
-title: Web performans testleri için Istek düzeyi eklentisi oluşturma
+title: İstek düzeyi eklentisi web performans testleri için oluşturma
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - request-level plug-in, creating
 - Web performance tests, requests
 ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ce0a8030253e69b35deda379cffcf7475dc8bb62
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b6e57f92a3f45983321a866f3524974ea99dba82
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653632"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589168"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>Nasıl yapılır: istek düzeyi eklentisi oluşturma
 
-*İstekler* , Web performans testlerini oluşturan bildirime dayalı deyimlerdir. Web performans testi eklentileri, Web performans testinizde ana bildirim deyimleri dışında kodu yalıtmanızı ve yeniden kullanmanıza olanak tanır. Eklentiler oluşturabilir ve bunları içeren Web performans testine ve tek bir isteğe da ekleyebilirsiniz. Özelleştirilmiş bir *istek eklentisi* bir Web performans testinde belirli bir istek çalıştırıldığı için kodu çağırmak için bir yol sunar.
+*İstekleri* web performans testleri oluşturan bildirim deyimleri. Web performans testi eklentileri yalıtmak ve ana bildirim deyimleri, web performans testinde dışındaki kod yeniden kullanımını etkinleştirin. Eklentileri oluşturun ve bunları tek bir istek de içeren web performans testi için farklı ekleyin. Özelleştirilmiş *istek eklentisi* belirli bir istek, bir web performans testi çalıştırırken kodu çağırmak için bir yol sunar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Her Web performansı test isteği eklentisinin bir Önkoşulcu yöntemi ve bir PostRequest yöntemi vardır. Belirli bir HTTP isteğine bir istek eklentisi iliştirdikten sonra, istek verildikten önce ön koşul olayı tetiklenir ve yanıt alındıktan sonra PostRequest tetiklenir.
+Her web performans test isteği eklentisi PreRequest yöntemi ve PostRequest yöntemi vardır. Belirli bir http isteği için bir istek eklentisi ekledikten sonra istek ve yanıt alındıktan sonra PostRequest harekete önce PreRequest olay harekete geçirilir.
 
-@No__t_0 temel sınıfından kendi sınıfınızı türeterek, özelleştirilmiş bir Web başarım testi istek eklentisi oluşturabilirsiniz.
+Kendi sınıftan türetme tarafından özelleştirilmiş web performans test isteği eklentisi oluşturabilirsiniz <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> temel sınıfı.
 
-Özelleştirilmiş Web performansı test isteği eklentilerini, kaydettiğiniz Web performans testleri ile birlikte kullanabilirsiniz. Özelleştirilmiş Web performans testi istek eklentileri, Web performans testleriniz üzerinde daha yüksek düzeyde denetim elde etmek için en az miktarda kod yazmanızı sağlar. Ancak, bunları kodlanmış Web performans testleri ile de kullanabilirsiniz. Bkz. [kodlanmış Web performans testi oluşturma ve çalıştırma](../test/generate-and-run-a-coded-web-performance-test.md).
+Web performans testleri kaydettiğiniz özelleştirilmiş web performans testi isteği eklentileri kullanabilirsiniz. Özelleştirilmiş web performans testi isteği eklentileri en az miktarda bir büyük bir web performans testlerinizi üzerindeki denetim düzeyini elde etmek için kod yazmanıza olanak sağlar. Ancak, bunları kodlanmış web performans testleri ile de kullanabilirsiniz. Bkz: [oluştur ve Çalıştır kodlanmış web performans testi](../test/generate-and-run-a-coded-web-performance-test.md).
 
 ## <a name="to-create-a-request-level-plug-in"></a>İstek düzeyi eklentisi oluşturmak için
 
-1. **Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle** ' yi ve ardından **Yeni proje**' yi seçin.
+1. İçinde **Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle** seçip **yeni proje**.
 
 2. Yeni bir **sınıf kitaplığı** projesi oluşturun.
 
-3. **Çözüm Gezgini**' de, yeni sınıf kitaplığındaki **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
+3. İçinde **Çözüm Gezgini**, sağ **başvuruları** seçin ve yeni sınıf kitaplığı klasöründe **Başvuru Ekle**.
 
      **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-4. **.Net** sekmesini seçin, aşağı kaydırın, **Microsoft. VisualStudio. QualityTools. WebTestFramework** öğesini seçin ve ardından **Tamam** ' ı seçin.
+4. Seçin **.NET** sekmesinde, aşağı kaydırın, seçin **Microsoft.VisualStudio.QualityTools.WebTestFramework** seçip **Tamam**
 
-     **Microsoft. VisualStudio. QualityTools. WebTestFramework** başvurusu **Çözüm Gezgini**içindeki **başvuru** klasörüne eklenir.
+     Başvuru **Microsoft.VisualStudio.QualityTools.WebTestFramework** eklenir **başvuru** klasöründe **Çözüm Gezgini**.
 
-5. **Çözüm Gezgini**' de, Web performansı test isteği test eklentisini eklemek istediğiniz yük testini içeren Web performansının ve yük testi projesinin en üst düğümüne sağ tıklayın. **Başvuru Ekle**' yi seçin.
+5. İçinde **Çözüm Gezgini**web performansının üst düğümünü sağ tıklatın ve web performans testi isteği test eklentisini eklemek istediğiniz yük testini içeren test projesini yükleyin. Seçin **Başvurusu Ekle**.
 
      **Başvuru Ekle iletişim kutusu görüntülenir**.
 
-6. **Projeler** sekmesini seçin, **Sınıf Kitaplığı projesini** seçin ve ardından **Tamam** ' ı seçin.
+6. Seçin **projeleri** sekmesinde **sınıf kitaplığı projesi** seçip **Tamam** .
 
-7. **Kod düzenleyicisinde**, eklentinin kodunu yazın. İlk olarak, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> türetilen yeni bir ortak sınıf oluşturun.
+7. İçinde **Kod Düzenleyicisi**, eklentinizin kodunu yazın. İlk olarak, türetilen yeni bir ortak sınıf oluşturun <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>.
 
-8. @No__t_0 ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PostRequest*> olay işleyicilerinin bir veya her ikisinin içinde kod uygulayın. Örnek bir uygulama için aşağıdaki örnek bölümüne bakın.
+8. Uygulama içinde bir veya iki kod <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PreRequest*> ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PostRequest*> olay işleyicileri. Örnek uygulama için aşağıdaki örnek bölümüne bakın.
 
 9. Kodu yazdıktan sonra yeni projeyi derleyin.
 
-10. İstek eklentisini eklemek istediğiniz Web performans testini açın.
+10. İstek eklentisi eklemek istediğiniz web performans testi açın.
 
-11. İstek eklentisini eklemek istediğiniz isteğe sağ tıklayın ve **Istek eklentisi Ekle**' yi seçin.
+11. İstek eklentisi ve select eklemek istediğiniz isteğe sağ tıklatın **istek eklentisi Ekle**.
 
-     **Web test Isteği eklentisi Ekle** iletişim kutusu görüntülenir.
+     **Web Test isteği Eklentisi Ekle** iletişim kutusu görüntülenir.
 
-12. **Eklenti seçin**altında yeni eklentiyi seçin.
+12. Altında **bir eklenti seçin**, yeni seçin eklenti.
 
-13. **Seçili eklenti bölmesinin Özellikler** bölümünde, çalışma zamanında kullanılacak eklentinin başlangıç değerlerini ayarlayın.
+13. İçinde **özelliklerini çili eklenti** bölmesinde, çalışma zamanında kullanmak eklenti için başlangıç değerlerini ayarlayın.
 
     > [!NOTE]
-    > Eklentilerinizi istediğiniz kadar çok özelliği kullanıma sunabilirsiniz. bunları ortak, ayarlanabilir ve tamsayı, Boole veya dize gibi bir temel tür yapmanız yeterlidir. Web performans testi eklentisi özelliklerini daha sonra Özellikler penceresi kullanarak da değiştirebilirsiniz.
+    > Eklentilerinizi istediğiniz sayıda özelliği getirebilir; bunları yalnızca genel, ayarlanabilir ve tam sayı, Boole veya dize gibi bir temel türden yapın. Özellikler penceresini kullanarak web başarım testi eklentisi özelliklerini daha sonra da değiştirebilirsiniz.
 
-14. **Tamam ' ı**seçin.
+14. **Tamam**’ı seçin.
 
-     Eklenti, HTTP isteğinin bir alt klasörü olan **istek** eklentileri klasörüne eklenir.
+     Eklenti eklenir **istek eklentileri** HTTP isteğinin bir alt klasörü klasörü.
 
     > [!WARNING]
-    > Eklentiyi kullanan bir Web performans testi veya yük testi çalıştırdığınızda aşağıdakine benzer bir hata alabilirsiniz:
+    > Bir web performans testi ya da eklentisini kullanan yük testi çalıştırdığınızda aşağıdakine benzer bir hata alabilirsiniz:
     >
-    > **İstek başarısız: \<plug > olayında özel durum: dosya veya derleme ' \< "eklenti adı". dll dosyası >, sürüm = \<n. n. n. n >, kültür = neutral, PublicKeyToken = null ' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.**
+    > **İstek başarısız: \<eklenti > olayında özel durum: dosya veya derleme '\<"eklenti adı". dll dosyası >, sürüm =\<n. n. n. n >, kültür = neutral, PublicKeyToken = null ' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.**
     >
-    > Bu, eklentilerinizin herhangi birine kod değişikliği yaptığınızda ve yeni bir DLL sürümü **(sürüm = 0.0.0.0)** oluşturuyorsanız, ancak eklentinin özgün eklenti sürümüne başvurmaya devam ediyorsa oluşur. Bu sorunu düzeltmek için aşağıdaki adımları izleyin:
+    > Eklentilerinizi birine kod değişikliği yapmanız ve yeni bir DLL sürümü oluşturursanız Bunun nedeni **(sürüm = 0.0.0.0)** , ancak eklenti hala özgün eklenti sürümüne başvuruyor. Bu sorunu gidermek için şu adımları izleyin:
     >
-    > 1. Web performansı ve yük testi projenizde, başvurularda bir uyarı görürsünüz. Başvuruyu eklenti DLL 'nize kaldırın ve yeniden ekleyin.
-    > 2. Testinizden veya uygun konumdan eklentiyi kaldırın ve ardından yeniden ekleyin.
+    > 1. Web performansı ve yük testi projesi içinde başvurularda bir uyarı görürsünüz. Kaldırın ve Başvuruyu eklenti DLL'nizden yeniden ekleyin.
+    > 2. Test veya uygun konumdan eklentiyi kaldırın ve yeniden ekleyin.
 
 ## <a name="example"></a>Örnek
 
-İki iletişim kutusu gösteren özelleştirilmiş bir Web başarım testi eklentisi oluşturmak için aşağıdaki kodu kullanabilirsiniz. Bir iletişim kutusu, istek eklentisini eklediğiniz istekle ilişkili URL 'YI görüntüler. İkinci iletişim kutusu, aracının bilgisayar adını görüntüler.
+İki iletişim kutusu görüntüleyen bir özelleştirilmiş web performans testi eklentisi oluşturmak için aşağıdaki kodu kullanabilirsiniz. İstek Eklentisi Ekle istekle ilişkili URL bir iletişim kutusu görüntüler. İkinci iletişim kutusunda, aracı için bilgisayar adı görüntülenir.
 
 > [!NOTE]
-> Aşağıdaki kod, System. Windows. Forms 'a bir başvuru eklemenizi gerektirir.
+> Aşağıdaki kodu üzere System.Windows.Forms başvurusu eklemeniz gerekir.
 
 ```csharp
 using System;
@@ -113,8 +113,8 @@ namespace RequestPluginNamespace
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>
-- [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Web performans testi için özel bir ayıklama kuralı kodlayın](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
-- [Web performans testi için özel doğrulama kuralı kodu oluşturma](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [Nasıl yapılır: yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
-- [Kodlanmış Web performans testi oluşturma ve çalıştırma](../test/generate-and-run-a-coded-web-performance-test.md)
+- [Özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Kodu bir web performans testi için özel bir ayıklama kuralı](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Kodu bir web performans testi için özel doğrulama kuralı](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
+- [Nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
+- [Oluşturma ve bir kodlanmış web performans testini çalıştırma](../test/generate-and-run-a-coded-web-performance-test.md)

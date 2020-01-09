@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 056d88790cda6e763ebd0531d61f7007d16d82eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4080866de58e17c5e11ed01d61740c2f83aed9a7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648241"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586347"
 ---
 # <a name="query-datasets"></a>Veri kümelerini sorgulama
 Bir veri kümesindeki belirli kayıtları aramak için DataTable üzerinde `FindBy` yöntemini kullanın, tablonun satır koleksiyonu üzerinde döngü yapmak için kendi foreach deyiminizi yazın veya [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)kullanın.
@@ -35,7 +35,7 @@ Ancak, büyük/küçük harf duyarlılığı, verilerin veri kümesi içinde nas
 
 - Bir satırı bulmak için, tablonun birincil anahtarını kullanan türü kesin belirlenmiş `FindBy` yöntemi çağırın.
 
-     Aşağıdaki örnekte, `CustomerID` sütunu `Customers` tablosunun birincil anahtarıdır. Bu, oluşturulan `FindBy` yönteminin `FindByCustomerID` olduğu anlamına gelir. Örnek, oluşturulan `FindBy` yöntemi kullanılarak bir değişkene belirli bir <xref:System.Data.DataRow> atamayı gösterir.
+     Aşağıdaki örnekte, `CustomerID` sütunu `Customers` tablosunun birincil anahtarıdır. Bu, oluşturulan `FindBy` yönteminin `FindByCustomerID`olduğu anlamına gelir. Örnek, oluşturulan `FindBy` yöntemi kullanılarak bir değişkene belirli bir <xref:System.Data.DataRow> atamayı gösterir.
 
      [!code-csharp[VbRaddataEditing#18](../data-tools/codesnippet/CSharp/query-datasets_1.cs)]
      [!code-vb[VbRaddataEditing#18](../data-tools/codesnippet/VisualBasic/query-datasets_1.vb)]
@@ -53,7 +53,7 @@ Ancak, büyük/küçük harf duyarlılığı, verilerin veri kümesi içinde nas
 
 #### <a name="to-find-rows-based-on-the-values-in-any-column"></a>Herhangi bir sütundaki değerlere göre satırları bulmak için
 
-- Veri tabloları, <xref:System.Data.DataTable.Select%2A> yöntemine geçirilen ifadeye dayalı bir <xref:System.Data.DataRow>s dizisi döndüren <xref:System.Data.DataTable.Select%2A> yöntemiyle oluşturulur. Geçerli ifadeler oluşturma hakkında daha fazla bilgi için, <xref:System.Data.DataColumn.Expression%2A> özelliği hakkındaki sayfanın "Ifade sözdizimi" bölümüne bakın.
+- Veri tabloları, <xref:System.Data.DataTable.Select%2A> yöntemine geçirilen ifadeye göre <xref:System.Data.DataRow>s dizisini döndüren <xref:System.Data.DataTable.Select%2A> yöntemiyle oluşturulur. Geçerli ifadeler oluşturma hakkında daha fazla bilgi için, <xref:System.Data.DataColumn.Expression%2A> özelliği hakkındaki sayfanın "Ifade sözdizimi" bölümüne bakın.
 
      Aşağıdaki örnek, belirli satırları bulmak için <xref:System.Data.DataTable> <xref:System.Data.DataTable.Select%2A> yönteminin nasıl kullanılacağını gösterir.
 
@@ -68,15 +68,15 @@ Bir veri kümesindeki tablolar ilişkili olduğunda, <xref:System.Data.DataRelat
 Bu sayfa, türü belirtilmiş veri kümelerini kullanarak örnekler sağlar. Türsüz veri kümelerinde ilişkileri gezinme hakkında daha fazla bilgi için bkz. [Datareto gezinme](/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations).
 
 > [!NOTE]
-> Windows Forms bir uygulamada çalışıyorsanız ve verileri göstermek için veri bağlama özelliklerini kullanıyorsanız, tasarımcı tarafından oluşturulan form uygulamanız için yeterli işlevsellik sağlayabilir. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md). Özellikle, bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
+> Windows Forms bir uygulamada çalışıyorsanız ve verileri göstermek için veri bağlama özelliklerini kullanıyorsanız, tasarımcı tarafından oluşturulan form uygulamanız için yeterli işlevsellik sağlayabilir. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md). Özellikle, bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
 
-Aşağıdaki kod örnekleri, türü belirtilmiş veri kümelerinde yukarı ve aşağı ilişkileri nasıl gidebileceğinizi göstermektedir. Kod örnekleri, istenen bir satırı bulmak ve ilgili kayıtları döndürmek için yazılan <xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) ve üretilen Bulby*PrimaryKey* (`FindByCustomerID`) yöntemlerini kullanır. Örnekler yalnızca şunları yaptıysanız derleme ve doğru şekilde çalışır:
+Aşağıdaki kod örnekleri, türü belirtilmiş veri kümelerinde yukarı ve aşağı ilişkileri nasıl gidebileceğinizi göstermektedir. Kod örnekleri, istenen bir satırı bulmak ve ilgili kayıtları döndürmek için yazılan <xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) ve üretilen bulun*PrimaryKey* (`FindByCustomerID`) yöntemlerini kullanır. Örnekler yalnızca şunları yaptıysanız derleme ve doğru şekilde çalışır:
 
-- @No__t_1 tabloyla `NorthwindDataSet` adlı bir veri kümesinin örneği.
+- `Customers` tabloyla `NorthwindDataSet` adlı bir veri kümesinin örneği.
 
 - Bir `Orders` tablosu.
 
-- İki tablo `FK_Orders_Customers`relating adlı bir ilişki.
+- İki tabloyla ilişkili `FK_Orders_Customers`adlı bir ilişki.
 
 Ayrıca, her iki tablonun da döndürülecek kayıtlar için verilerle doldurulması gerekir.
 

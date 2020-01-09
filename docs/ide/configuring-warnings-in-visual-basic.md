@@ -7,23 +7,23 @@ helpviewer_keywords:
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c71c352040898874cd90a397db6b8c7321ff39d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67f65ea691a02bac87f75f43e0a9938125bcd959
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652083"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585515"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic uyarıları yapılandırma
 
-@No__t_0 derleyicisi, çalışma zamanı hatalarına neden olabilecek kodla ilgili bir uyarı kümesi içerir. Daha az hata ile temizleyici, daha hızlı ve daha iyi kod yazmak için bu bilgileri kullanabilirsiniz. Örneğin, Kullanıcı atanmamış bir nesne değişkeninin bir üyesini çağırmayı denediğinde bir uyarı üretir, dönüş değerini ayarlamadan bir işlevden geri dönüş veya özel durumları yakalamak için mantığdaki hatalarla birlikte `Try` bir blok yürütmez.
+[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] derleyicisi, çalışma zamanı hatalarına neden olabilecek kodla ilgili bir uyarı kümesi içerir. Daha az hata ile temizleyici, daha hızlı ve daha iyi kod yazmak için bu bilgileri kullanabilirsiniz. Örneğin, Kullanıcı atanmamış bir nesne değişkeninin bir üyesini çağırmayı denediğinde bir uyarı üretir, dönüş değerini ayarlamadan bir işlevden geri dönüş veya özel durumları yakalamak için mantığdaki hatalarla birlikte `Try` bir blok yürütmez.
 
-Bazen derleyici Kullanıcı adına ek mantık sağlar, böylece Kullanıcı, benimsemeyi bekleme olası hatalar yerine her seferinde bir göreve odaklanabilir. @No__t_0 önceki sürümlerinde, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] derleyicinin sağladığı ek mantığı sınırlamak için **Strict seçeneği** kullanılmıştır. Uyarıları yapılandırmak, bu mantığı bireysel uyarıların düzeyinde daha ayrıntılı bir şekilde sınırlamanıza olanak tanır.
+Bazen derleyici Kullanıcı adına ek mantık sağlar, böylece Kullanıcı, benimsemeyi bekleme olası hatalar yerine her seferinde bir göreve odaklanabilir. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]önceki sürümlerinde, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] derleyicinin sağladığı ek mantığı sınırlamak için **Strict seçeneği** kullanılmıştır. Uyarıları yapılandırmak, bu mantığı bireysel uyarıların düzeyinde daha ayrıntılı bir şekilde sınırlamanıza olanak tanır.
 
 Projenizi özelleştirmek ve diğer uyarıları hatalara karşı yaparken uygulamanız için gerekli olan bazı uyarıları kapatmak isteyebilirsiniz. Bu sayfada, tek tek uyarıların nasıl kapatılacağı ve kapatılacağı açıklanmaktadır.
 
@@ -40,7 +40,7 @@ Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olara
 | - |---------------|
 |`/warnaserror+`|Tüm uyarıları hata olarak değerlendir|
 |`/warnsaserror`-|Hata olarak uyarı olarak davranmayın. Bu varsayılandır.|
-|`/warnaserror+:<warning list``>`|Belirli uyarıları, virgülle ayrılmış bir liste r içinde kendi hata KIMLIĞI numarası ile listelenmiş hata olarak değerlendirin.|
+|`/warnaserror+:<warning list` `>`|Belirli uyarıları, virgülle ayrılmış bir liste r içinde kendi hata KIMLIĞI numarası ile listelenmiş hata olarak değerlendirin.|
 |`/warnaserror-:<warning list>`|Belirli uyarıları hata olarak değerlendirmeyin ve hata KIMLIK numarası, virgülle ayrılmış bir liste ile listelenir.|
 |`/nowarn`|Uyarı bildirme.|
 |`/nowarn:<warning list>`|Belirtilen uyarıları, kendi hata KIMLIĞI numarasına göre, virgülle ayrılmış bir listede bildirmeyin.|
@@ -63,7 +63,7 @@ Komut satırı bağımsız değişkenlerinin Bu örnek tablosu, her bir bağıms
 Hata olarak değerlendirmek isteyebileceğiniz uyarıların listesi aşağıda verilmiştir.
 
 ### <a name="implicit-conversion-warning"></a>Örtük dönüştürme uyarısı
-Örtük dönüştürme örnekleri için oluşturulur. @No__t_0 işleci kullanılırken, iç sayısal türden bir dizeye örtük dönüştürmeler eklemeyin. Yeni projeler için varsayılan değer kapalıdır.
+Örtük dönüştürme örnekleri için oluşturulur. `&` işleci kullanılırken, iç sayısal türden bir dizeye örtük dönüştürmeler eklemeyin. Yeni projeler için varsayılan değer kapalıdır.
 
 KIMLIK: 42016
 
@@ -78,7 +78,7 @@ Tür işlenenleri `Object` oluştuğunda üretilir ve **Option Strict On**ile bi
 KIMLIK: 42018 ve 42019
 
 ### <a name="declarations-require-as-clause-warnings"></a>Bildirimler ' As ' yan tümce uyarıları gerektirir
-Bir `As` yan tümcesi bulunmayan bir değişken, işlev veya özellik bildirimi, **Option Strict On**ile bir hata oluşturacaksa üretilir. Kendisine atanmış bir türü olmayan değişkenlerin türü `Object` olarak kabul edilir. Yeni projeler için varsayılan değer açık.
+Bir `As` yan tümcesi bulunmayan bir değişken, işlev veya özellik bildirimi, **Option Strict On**ile bir hata oluşturacaksa üretilir. Kendisine atanmış bir türü olmayan değişkenlerin türü `Object`olarak kabul edilir. Yeni projeler için varsayılan değer açık.
 
 KIMLIK: 42020 (değişken bildirimi), 42021 (işlev bildirimi) ve 42022 (özellik bildirimi).
 
@@ -108,7 +108,7 @@ KIMLIK: 42004 (işleç), 42026 (özellik)
 KIMLIK: 42105 (işlev), 42016 (işleç)
 
 ### <a name="overloads-modifier-used-in-a-module-warning"></a>Modül uyarısında kullanılan aşırı yükleme değiştiricisi
-Bir `Module` `Overloads` kullanıldığında oluşturulur. Yeni projeler için varsayılan değer açık.
+Bir `Module``Overloads` kullanıldığında oluşturulur. Yeni projeler için varsayılan değer açık.
 
 KIMLIK: 42028
 

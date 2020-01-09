@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 391dff6540bcea26f63d8ea88f344455722b742a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748230"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565909"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
 Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodları ile birlikte DSL tanım dosyası tarafından tanımlanır. DSL çözümünde program kodunun çoğu bu dosyadan oluşturulur.
@@ -22,7 +22,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bu konuda, DSL tanımının merkezi özellikleri açıklanmaktadır.
 
 ## <a name="the-dsl-definition"></a>DSL tanımı
- @No__t_0 açtığınızda, Visual Studio pencereniz aşağıdaki resme benzer.
+ `Dsl\DslDefinition.dsl`açtığınızda, Visual Studio pencereniz aşağıdaki resme benzer.
 
  ![DSL Tasarımcısı](../modeling/media/dsl_designer.png)
 
@@ -116,7 +116,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
  Modelin XML gösteriminde, iki öğe arasındaki bir başvuru bağlantısı, *bilinen adlar* kullanılarak temsil edilir. Diğer bir deyişle, adlar modeldeki her öğeyi benzersiz bir şekilde tanımlayan adlardır. Her model öğesi için XML düğümü, ilişkinin adını ve diğer öğenin bilinen adını belirten bir düğüm içerir.
 
-## <a name="roles"></a>Lerdir
+## <a name="roles"></a>Roller
  Her etki alanı ilişkisinde, bir kaynak rol ve bir hedef rol olmak üzere iki rol bulunur.
 
  Aşağıdaki resimde, **Yayımcı** etki alanı sınıfı ve **PublisherCatalog** etki alanı ilişkisi arasındaki çizgi, kaynak roldür. Etki alanı ilişkisi ve **Albüm** etki alanı sınıfı arasındaki çizgi hedef roldür.
@@ -128,7 +128,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bir DSL tanımında ilişki oluşturduğunuzda, özellik ve ilişki adlarına varsayılan değerler verilir. Ancak, bunları değiştirebilirsiniz.
 
 ## <a name="multiplicities"></a>Çeşitlilimler
- Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, **Katalog** rolünde bulunan sıfır-çok (0.. \*) çoğulluk ayarı, **Yayımcı** etki alanı sınıfının herhangi bir örneğinin, vermek Istediğiniz kadar çok sayıda **PublisherCatalog** ilişki bağlantısına sahip olduğunu belirtir.
+ Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, **Katalog** rolünde bulunan sıfır-çok (0..\*) çoğulluk ayarı, **Yayımcı** etki alanı sınıfının herhangi bir örneğinin, vermek Istediğiniz kadar çok sayıda **PublisherCatalog** ilişki bağlantısına sahip olduğunu belirtir.
 
  Diyagram üzerine yazarak veya **Özellikler** penceresindeki `Multiplicity` özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
 
@@ -150,4 +150,4 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

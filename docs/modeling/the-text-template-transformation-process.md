@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, transformation process
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 518c06f8630ad9fa7742f7b3e85ac27263cd0a86
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605800"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565870"
 ---
 # <a name="the-text-template-transformation-process"></a>Metin Şablonu Dönüştürme Süreci
 Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası alır ve çıktı olarak yeni bir metin dosyası oluşturur. Örneğin, Visual Basic veya C# kod oluşturmak için metin şablonlarını kullanabilir veya bir HTML raporu oluşturabilirsiniz.
@@ -27,8 +27,8 @@ Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası 
 
 |Bileşen|Açıklama|Özelleştirilebilir (Evet/Hayır)|
 |-|-|-|
-|Altyapısına|Motor bileşeni, metin şablonu dönüştürme işlemini denetler|Hayır.|
-|Ana bilgisayar|Konak, motor ve Kullanıcı ortamı arasındaki arabirimdir. Visual Studio, metin dönüştürme sürecinin bir konağından oluşur.|Evet. Özel bir ana bilgisayar yazabilirsiniz.|
+|Altyapısı|Motor bileşeni, metin şablonu dönüştürme işlemini denetler|Hayır.|
+|Konak|Konak, motor ve Kullanıcı ortamı arasındaki arabirimdir. Visual Studio, metin dönüştürme sürecinin bir konağından oluşur.|Evet. Özel bir ana bilgisayar yazabilirsiniz.|
 |Yönerge Işlemcileri|Yönerge işlemcileri, metin şablonlarındaki yönergeleri işleyen sınıflardır. Giriş kaynağından bir metin şablonuna veri sağlamak için yönergelerini kullanabilirsiniz.|Evet. Özel yönerge işlemcileri yazabilirsiniz|
 
 ## <a name="the-engine"></a>Motor
@@ -60,4 +60,4 @@ Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası 
 
  `<#@ import namespace="System.Text" #>`
 
- Standart yönerge işlemcisi bunu, oluşturulan dönüştürme sınıfındaki bir `using` ifadesine dönüştürür. Daha sonra şablon kodunuzun geri kalanında `StringBuilder` sınıfını `System.Text.StringBuilder` olarak nitelemeden kullanabilirsiniz.
+ Standart yönerge işlemcisi bunu, oluşturulan dönüştürme sınıfındaki bir `using` ifadesine dönüştürür. Daha sonra şablon kodunuzun geri kalanında `StringBuilder` sınıfını `System.Text.StringBuilder`olarak nitelemeden kullanabilirsiniz.

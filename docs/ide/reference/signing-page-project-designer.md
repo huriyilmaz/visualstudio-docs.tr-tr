@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Project Designer, Signing page
 - Signing page in Project Designer
 ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d4fa326d65606fd06d41fc5c697b80a526c1059
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 516e2aaf4a55ad6422200f9fef1cbbf2d435af7b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461285"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597340"
 ---
 # <a name="signing-page-project-designer"></a>İmzalama Sayfası, Proje Tasarımcısı
 
@@ -41,7 +41,7 @@ Ayrıca, anahtar dosya bilgilerinin depolanması, bildirim imzalama ve derleme i
 
 **ClickOnce bildirimlerini imzala** onay kutusu
 
-Uygulama ve dağıtım bildirimlerini bir ortak/özel anahtar çiftiyle imzalamak için bu onay kutusunu işaretleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz [. nasıl yapılır: Uygulama ve dağıtım bildirimlerini](../../ide/how-to-sign-application-and-deployment-manifests.md)imzalayın.
+Uygulama ve dağıtım bildirimlerini bir ortak/özel anahtar çiftiyle imzalamak için bu onay kutusunu işaretleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini imzalama](../../ide/how-to-sign-application-and-deployment-manifests.md).
 
 **Mağaza 'Dan Seç** düğmesi
 
@@ -63,7 +63,7 @@ Dosyadan **Seç** ' e tıkladığınızda **Dosya Seç** iletişim kutusu açıl
 
 Test için bir sertifika oluşturmanıza olanak sağlar. Test sertifikası, ClickOnce uygulamanızı ve dağıtım bildirimlerini imzalamak için kullanılır.
 
-Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** iletişim kutusunu açar, burada test sertifikası için tanımlayıcı ad anahtar dosyası için bir parola yazabilirsiniz. Dosya *ProjectName*_TemporaryKey. pfx olarak adlandırılır. Parola yazmadan **Tamam** ' a tıkladığınızda,. pfx dosyası parola şifrelenmez.
+Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** iletişim kutusunu açar, burada test sertifikası için tanımlayıcı ad anahtar dosyası için bir parola yazabilirsiniz. Dosya *projectname*_TemporaryKey. pfx olarak adlandırılır. Parola yazmadan **Tamam** ' a tıkladığınızda,. pfx dosyası parola şifrelenmez.
 
 **Zaman damgası sunucusu URL 'si** kutusu
 
@@ -73,15 +73,15 @@ Test **sertifikası oluştur** ' a tıklamak, test sertifikası **Oluştur** ile
 
 **Derlemeyi imzala** onay kutusu
 
-Derlemeyi imzalamak ve kesin adlı bir adlandırılmış anahtar dosyası oluşturmak için bu onay kutusunu seçin. **Proje tasarımcısını**kullanarak derlemeyi imzalama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Derlemeyi imzala (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).
+Derlemeyi imzalamak ve kesin adlı bir adlandırılmış anahtar dosyası oluşturmak için bu onay kutusunu seçin. **Proje tasarımcısını**kullanarak derlemeyi imzalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir derlemeyi Imzalama (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).
 
-Bu seçenek, derlemeyi imzalamak için Windows yazılım geliştirme seti (SDK) tarafından sunulan al. exe aracını kullanır. Al. exe hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir derlemeyi güçlü bir adla](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)imzalayın.
+Bu seçenek, derlemeyi imzalamak için Windows yazılım geliştirme seti (SDK) tarafından sunulan al. exe aracını kullanır. Al. exe hakkında daha fazla bilgi için bkz. [nasıl yapılır: derlemeyi güçlü bir adla imzalama](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).
 
 **Tanımlayıcı ad anahtar dosyası listesi seçin**
 
-Derlemeyi imzalamak için kullanılan yeni veya var olan bir kesin adlandırılmış anahtar dosyası belirtmenize olanak sağlar. **\<Gözatmayı seç...** mevcut bir anahtar dosyasını seçmek için >.
+Derlemeyi imzalamak için kullanılan yeni veya var olan bir kesin adlandırılmış anahtar dosyası belirtmenize olanak sağlar. **\<gözatmaya seç...** mevcut bir anahtar dosyasını seçmek için >.
 
-Yeni ' yi seçin **\<...** derlemenin imzalanmasını sağlayan yeni bir anahtar dosyası oluşturmak için >. Bir anahtar dosya adı belirtmek ve anahtar dosyasını parolayla korumak için kullanabileceğiniz **tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir. Parola en az 6 karakter uzunluğunda olmalıdır. Bir parola belirtirseniz, kişisel bilgi değişimi (. pfx) dosyası oluşturulur; bir parola belirtmezseniz, kesin adlı bir adlandırılmış anahtar (. snk) dosyası oluşturulur.
+**Yeni\<seçin...** derlemenin imzalanmasını sağlayan yeni bir anahtar dosyası oluşturmak için >. Bir anahtar dosya adı belirtmek ve anahtar dosyasını parolayla korumak için kullanabileceğiniz **tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir. Parola en az 6 karakter uzunluğunda olmalıdır. Bir parola belirtirseniz, kişisel bilgi değişimi (. pfx) dosyası oluşturulur; bir parola belirtmezseniz, kesin adlı bir adlandırılmış anahtar (. snk) dosyası oluşturulur.
 
 **Parola değiştirme** düğmesi
 
@@ -93,7 +93,7 @@ Derlemeyi imzalamak için kullanılan kişisel bilgi değişimi (. pfx) anahtar 
 
 Gecikmeli imzalamayı etkinleştirmek için bu onay kutusunu işaretleyin.
 
-Bir gecikmeli imzalanmış projenin çalıştırılmadığını ve ayıklanamayacağını unutmayın. Ancak, geliştirme sırasında doğrulamayı atlamak için [sn. exe (tanımlayıcı ad aracı)](/dotnet/framework/tools/sn-exe-strong-name-tool) `-Vr` seçeneğini kullanabilirsiniz.
+Bir gecikmeli imzalanmış projenin çalıştırılmadığını ve ayıklanamayacağını unutmayın. Ancak, geliştirme sırasında doğrulamayı atlamak için `-Vr` seçeneğiyle [sn. exe (tanımlayıcı ad aracı)](/dotnet/framework/tools/sn-exe-strong-name-tool) kullanabilirsiniz.
 
 > [!NOTE]
 > Bir derlemeyi imzaladığınızda, her zaman bir özel anahtara erişiminiz olmayabilir. Örneğin, bir kuruluş, geliştiricilerin günlük olarak erişimi olmayan, daha yakından korunan bir anahtar çiftine sahip olabilir. Ortak anahtar kullanılabilir olabilir, ancak özel anahtara erişim birkaç bireyle kısıtlıdır. Böyle bir durumda, ortak anahtar sağlamak için *gecikmeli* veya *kısmi imzalamayı* , derleme kullanıma alınana kadar özel anahtarın eklenmesini ertelemeyi de kullanabilirsiniz.
@@ -102,7 +102,7 @@ Bir gecikmeli imzalanmış projenin çalıştırılmadığını ve ayıklanamaya
 
 - [Proje Özellikleri Başvurusu](../../ide/reference/project-properties-reference.md)
 - [Derleme ve Bildirim İmzalamayı Yönetme](../../ide/managing-assembly-and-manifest-signing.md)
-- [Nasıl yapılır: Uygulama ve Dağıtım Bildirimlerini İmzalama](../../ide/how-to-sign-application-and-deployment-manifests.md)
-- [Nasıl yapılır: Derlemeyi imzala (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
-- [Nasıl yapılır: Bir derlemeyi güçlü bir adla imzala](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
+- [Nasıl Yapılır: Uygulama ve Dağıtım Bildirimlerini İmzalama](../../ide/how-to-sign-application-and-deployment-manifests.md)
+- [Nasıl yapılır: derlemeyi Imzalama (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
+- [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
 - [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](/dotnet/framework/app-domains/strong-named-assemblies)

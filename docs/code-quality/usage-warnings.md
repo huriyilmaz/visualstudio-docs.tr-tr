@@ -9,17 +9,17 @@ helpviewer_keywords:
 - managed code analysis warnings, usage warnings
 - usage warnings
 ms.assetid: fe7dc2a3-289d-4bf7-a1e4-0947a81287c4
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 423367381c9b4624b9b3f4f739b017231276c76d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ca3a5efb7d75cebfd36ea6ac190f50ab90dcb06c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649064"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587192"
 ---
 # <a name="usage-warnings"></a>Kullanım Uyarıları
 
@@ -31,7 +31,7 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 |----------|-----------------|
 |[CA1801: Kullanılmayan parametreleri gözden geçir](../code-quality/ca1801.md)|Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir.|
 |[CA1806: Yöntem sonuçlarını yoksaymayın](../code-quality/ca1806.md)|Yeni bir nesne oluşturulur, ancak hiç kullanılmaz veya çağrılan yeni dizeyi oluşturur ve döndürür ve yeni dize hiç kullanılmaz ya da COM veya P/Invoke yöntemi, bir HRESULT ya da hiç kullanılmayan hata kodu döndürür.|
-|[CA1816: GC.SuppressFinalize öğesini doğru çağırın](../code-quality/ca1816.md)|Dispose uygulamasının bir yöntemi GC çağrısını yapmaz. SuppressFinalize ya da Dispose çağrılarının uygulanması olmayan bir yöntem GC. SuppressFinalize ya da bir yöntemi GC çağırır. SuppressFinalize ve bu (Visual Basic) dışında bir şey geçirir.|
+|[CA1816: GC.SuppressFinalize öğesini doğru çağırın](../code-quality/ca1816.md)|Dispose uygulamasını bir yöntemi, GC çağırmaz. IDisposable.Dispose; ya da GC Dispose uygulamasını değil bir yöntemi çağırır. IDisposable.Dispose; ya da GC yöntemi çağırır. IDisposable.Dispose ve bu (Visual Basic'te Me) dışında bir şey geçirir.|
 |[CA2200: Yığın ayrıntılarını korumak için yeniden fırlatma](../code-quality/ca2200.md)|Tekrar fırlatılan bir özel durum ve fırlatma açıklamasında açıkça belirtilen özel durum. Bir özel durum throw deyiminde özel durum belirterek yeniden fırlatılırsa yöntem listesi özel durum döndüren özgün yöntem ile kaybolan geçerli yöntem arasında çağırır.|
 |[CA2201: Ayrılmış özel durum türleri oluşturmayın](../code-quality/ca2201.md)|Bu, özgün hatayı algılamaya ve hata ayıklamasına keskin hale getirir.|
 |[CA2202: Nesneleri birden çok kez atmayın](../code-quality/ca2202.md)|Yöntem uygulaması, aynı nesne üzerinde System.IDisposable.Dispose veya bir Dispose eşdeğer (örneğin, bazı türleri üzerinde Close() yöntemi) için birden fazla çağrı kodu yolları içerir.|

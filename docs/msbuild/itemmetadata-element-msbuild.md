@@ -1,5 +1,5 @@
 ---
-title: ItemMetadata Element (MSBuild) | Microsoft Docs
+title: ItemMetadata öğesi (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ItemMetadata Element [MSBuild]
 - <ItemMetadata> Element [MSBuild]
 ms.assetid: e3db5122-202d-43a9-b2f4-3e0ec4ed3d08
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 825c6b897447a5a628d9a97e4c7e64f1427fb4d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 66c19dbd74176babbf9e26030a68a6095992b660
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817677"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589376"
 ---
-# <a name="itemmetadata-element-msbuild"></a>Itemmetadata öğesi (MSBuild)
-Öğe meta veri değeri içeren bir kullanıcı tarafından tanımlanan öğe meta verileri anahtar içerir. Bir öğe meta verileri anahtar-değer çiftleri herhangi bir sayı olabilir.
+# <a name="itemmetadata-element-msbuild"></a>ItemMetadata öğesi (MSBuild)
+Öğe meta veri değerini içeren Kullanıcı tanımlı bir öğe meta veri anahtarı içerir. Bir öğe herhangi bir sayıda meta veri anahtar-değer çifti içerebilir.
 
  \<Proje > \<ItemGroup > \<öğesi >
 
@@ -37,11 +37,11 @@ ms.locfileid: "62817677"
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>Öznitelikler
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için [koşullar](../msbuild/msbuild-conditions.md).|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -50,15 +50,15 @@ ms.locfileid: "62817677"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Öğesi](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişler tanımlayan bir kullanıcı tarafından tanımlanan öğe.|
+|[Öğesi](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlayan Kullanıcı tanımlı bir öğe.|
 
 ## <a name="text-value"></a>Metin değeri
  Metin değeri isteğe bağlıdır.
 
- Bu metin, metin veya XML olabilir öğesi meta veri değeri belirtir.
+ Bu metin, metin veya XML olabilen öğe meta veri değerini belirtir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde nasıl ekleneceğini gösterir `Culture` meta veri değerine sahip `fr` öğesine `CSFile`.
+ Aşağıdaki kod örneği, öğe `CSFile``fr` değer ile `Culture` meta verilerin nasıl ekleneceğini gösterir.
 
 ```xml
 <ItemGroup>

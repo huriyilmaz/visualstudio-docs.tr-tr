@@ -11,17 +11,17 @@ helpviewer_keywords:
 - dialog boxes [Visual Studio], shortcut keys
 - accessibility [Visual Studio]
 ms.assetid: d71a4cc1-d352-4164-8538-3f9fa070a331
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15cb030bc8be30d147a7d2e73dbeee6d3fca046a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3b1beb2ccb6b3e3e2b74ed7deaf2f31443ee2466
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650801"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569029"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Klavye kullanımı özel
 
@@ -37,15 +37,15 @@ Visual Studio 'da komut kısayol tuşlarının tam listesi için bkz. [varsayıl
 ::: moniker-end
 
 > [!NOTE]
-> Ayarlarınıza veya kullandığınız Visual Studio sürümüne bağlı olarak, gördüğünüz iletişim kutuları ve menü komutları yardım bölümünde açıklananlardan farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
+> Ayarlarınıza veya kullandığınız Visual Studio sürümüne bağlı olarak, gördüğünüz iletişim kutuları ve menü komutları yardım bölümünde açıklananlardan farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [ayarlarına](../environment-settings.md#reset-settings).
 
 ## <a name="toolbox-controls"></a>Araç kutusu denetimleri
 
 Araç kutusu üzerinde fare kullanmadan bir form veya tasarımcıya denetim eklemek için:
 
-1. Menü çubuğunda **görünüm**  > **araç kutusu**' nu seçin.
+1. Menü çubuğunda **görünüm** > **araç kutusu**' nu seçin.
 
-2. **Araç kutusu** sekmesindeki bölümler arasında Ilerlemek için **CTRL** +**yukarı oku** veya **CTRL** +**aşağı ok** tuşlarını kullanın.
+2. **Araç kutusu** sekmesindeki bölümler arasında Ilerlemek için **CTRL**+**yukarı oku** veya **CTRL**+**aşağı ok** tuşlarını kullanın.
 
 3. Bir bölümdeki denetimler arasında gezinmek için **yukarı ok** tuşunu veya **aşağı ok** tuşunu kullanın.
 
@@ -55,7 +55,7 @@ Araç kutusu üzerinde fare kullanmadan bir form veya tasarımcıya denetim ekle
 
 Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarlarını yalnızca klavyeyi kullanarak değiştirmek için:
 
-1. İletişim kutusundaki denetimlerde yukarı ve aşağı gitmek için **sekme** veya **SHIFT** +**sekmesini** kullanın.
+1. İletişim kutusundaki denetimlerde yukarı ve aşağı gitmek için **sekme** veya **SHIFT**+**sekmesini** kullanın.
 
 2. Seçenek ayarlarını değiştirmek için:
 
@@ -63,17 +63,17 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
    - Onay kutuları için, seçmek veya seçimini kaldırmak üzere **Ara çubuğuna** basın.
 
-   - Aşağı açılan listelerde, öğeleri göstermek için **alt** +**aşağı oku** kullanın ve sonra seçili öğeyi değiştirmek Için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
+   - Aşağı açılan listelerde, öğeleri göstermek için **alt**+**aşağı oku** kullanın ve sonra seçili öğeyi değiştirmek Için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
 
    - Düğmeler için, çağırmak için **ENTER** ' u seçin.
 
-   - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki açılan listede, öğeleri göstermek için **shıft** +**alt** +**aşağı oku** kullanın ve ardından **yukarı ok** ve **aşağı ok** tuşlarını kullanarak seçili öğeyi değiştirin.
+   - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki açılan listede, öğeleri göstermek için **shıft**+**alt**+**aşağı oku** kullanın ve ardından **yukarı ok** ve **aşağı ok** tuşlarını kullanarak seçili öğeyi değiştirin.
 
 ## <a name="navigate-between-windows-and-files"></a>Pencereler ve dosyalar arasında gezinme
 
-- Bir düzenleyici veya tasarımcıda dosyalar arasında geçiş yapmak için **Ctrl** +**Tab** klavye kısayolunu seçerek IDE Gezginini seçili **etkin dosyalarla** görüntüleyin. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
+- Bir düzenleyici veya tasarımcıda dosyalar arasında geçiş yapmak için **Ctrl**+**Tab** klavye kısayolunu seçerek IDE Gezginini seçili **etkin dosyalarla** görüntüleyin. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
 
-- Sabitlenmiş araç pencereleri arasında gezinmek için, **Alt** +**F7** klavye kısayolunu seçerek IDE Gezginini seçili **etkin araç pencereleri** ile görüntüleyin. Vurgulanan pencereye gitmek için **ENTER** tuşunu seçin.
+- Sabitlenmiş araç pencereleri arasında gezinmek için, **Alt**+**F7** klavye kısayolunu seçerek IDE Gezginini seçili **etkin araç pencereleri** ile görüntüleyin. Vurgulanan pencereye gitmek için **ENTER** tuşunu seçin.
 
 ## <a name="move-and-dock-tool-windows"></a>Araç pencerelerini taşı ve Yerleştir
 
@@ -81,7 +81,7 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
 2. **Pencere** menüsünde, **dockable** seçeneğini belirleyin.
 
-3. **Alt** +**Ara çubuğuna**basın ve ardından **Taşı**' yı seçin.
+3. **Alt**+**Ara çubuğuna**basın ve ardından **Taşı**' yı seçin.
 
    Yerleştirme Kılavuzu elmas görünür.
 
@@ -93,7 +93,7 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
    Yeni yerleştirme konumunda araç penceresinin ana hattı görüntülenir.
 
-6. **ENTER**tuşuna basın.
+6. Tuşuna **girin**.
 
    Araç penceresi yeni yerleştirme konumunda yer içine yapışır.
 

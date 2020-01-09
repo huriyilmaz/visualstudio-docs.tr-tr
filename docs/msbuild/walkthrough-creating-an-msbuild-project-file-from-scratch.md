@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, tutorial
 ms.assetid: e3acff7c-cb4e-4ae1-8be2-a871bcff847b
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e13399d80e74f41774542da31d0edd8c36a42c7e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0c7b79347416df5fd0790baf7ebe6495c739f7c4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748027"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565987"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma
 .NET Framework hedefleyen programlama dilleri, uygulama derleme sürecini anlatmak ve denetlemek için MSBuild proje dosyalarını kullanır. MSBuild proje dosyası oluşturmak için Visual Studio kullandığınızda, uygun XML dosyaya otomatik olarak eklenir. Ancak, XML 'nin nasıl düzenlendiğini ve bir derlemeyi denetlemek için nasıl değiştirileceğini anlamak yararlı olabilir.
@@ -145,7 +145,7 @@ Minimum proje dosyanız aşağıdaki koda benzemelidir:
 </Project>
 ```
 
-Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# Compiler`Csc`görevi tek görevdir. Derlemek için kaynak dosyalarının bir listesini bekler ve bu, `Compile` öğenin değeri tarafından verilir. `Compile` öğesi yalnızca bir kaynak dosyaya başvuruyor, *HelloWorld.cs*.
+Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# Compiler `Csc` görevi tek görevdir. Derlemek için kaynak dosyalarının bir listesini bekler ve bu, `Compile` öğenin değeri tarafından verilir. `Compile` öğesi yalnızca bir kaynak dosyaya başvuruyor, *HelloWorld.cs*.
 
 > [!NOTE]
 > Öğe öğesinde, *. cs* dosya adı uzantısına sahip tüm dosyalara şu şekilde başvurmak için yıldız joker karakterini (\*) kullanabilirsiniz:
@@ -219,7 +219,7 @@ Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# C
     <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
     ```
 
-     Bu, Visual C# derleyicisine`AssemblyName`özelliği tarafından adlandırılan bir derleme üretmesini ve`OutputPath`özelliği tarafından adlandırılan klasöre yerleştirmesini sağlar.
+     Bu, Visual C# derleyicisine `AssemblyName` özelliği tarafından adlandırılan bir derleme üretmesini ve `OutputPath` özelliği tarafından adlandırılan klasöre yerleştirmesini sağlar.
 
 5. Değişikliklerinizi kaydedin.
 
@@ -242,7 +242,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 ```
 
 > [!NOTE]
-> `Csc` görevinin `OutputAssembly` özniteliğinde eklemek yerine, `OutputPath` öğesinde belirttiğinizde, klasör adının sonuna ters eğik çizgi (\\) yol sınırlayıcısı eklemenizi öneririz. Dolayısıyla
+> `Csc` görevinin `OutputAssembly` özniteliğinde eklemek yerine, `OutputPath` öğesinde belirttiğinizde, klasör adının sonuna ters eğik çizgi (\\) yol sınırlayıcısı eklemenizi öneririz. Bu nedenle,
 >
 > `<OutputPath>Bin\</OutputPath>`
 >

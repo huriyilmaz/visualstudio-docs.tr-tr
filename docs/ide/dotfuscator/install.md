@@ -19,15 +19,15 @@ helpviewer_keywords:
 - set up Dotfuscator
 description: Visual Studio 'ya dahil edilen Dotfuscator topluluğunun ücretsiz kopyasını yüklemeyi öğrenin.
 ms.assetid: f2146651-e24a-4e24-ade8-8ddee8ff4e43
-author: Joe-Sewell-PreEmptive
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f4ff951ee202f706ab3b8553cff83519e36c86ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb659976126713a11594ad1b4aeb536510744c38
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652413"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596820"
 ---
 # <a name="install-dotfuscator-community"></a>Dotfuscator Community’yi yükleme
 
@@ -44,7 +44,7 @@ Bu yönergeler nasıl yükleneceğini açıklar.
 
 Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
 
-1. **Arama kutusuna** (CTRL + Q) `dotfuscator` yazın. <br/> <br/> ![Search kutusu ](media/install_in_vs19_12.png) <br/> <br/>
+1. **Arama kutusuna** (CTRL + Q) `dotfuscator`yazın. <br/> <br/> ![arama kutusu](media/install_in_vs19_12.png) <br/> <br/>
 
 2. Gösterilen arama sonuçlarında, *Bileşenler* başlığı altında **Install preemptive Protection-Dotfuscator**' ı seçin.
    * Bunun yerine bkz. *menü* başlığı, **preemptive Protection-Dotfuscator topluluğu**altında, Dotfuscator topluluğu zaten yüklü. [Başlamak için bu][get-started]seçeneği belirleyin.
@@ -53,7 +53,7 @@ Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
    > [!NOTE]
    > Devam etmek için yönetici kimlik bilgilerini sağlamanız gerekebilir.
 
-4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![Click ](media/install_in_vs19_34.png) yüklemesi <br/> <br/>
+4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![' ye tıklayın](media/install_in_vs19_34.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -61,7 +61,7 @@ Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
 
 Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
 
-1. **Hızlı Başlat** (CTRL + Q) arama çubuğunda `dotfuscator` yazın. <br/> <br/> ![Quick başlatma ](media/install_from_vs_12.png) <br/> <br/>
+1. **Hızlı Başlat** (CTRL + Q) arama çubuğunda `dotfuscator`yazın. <br/> <br/> ![Hızlı Başlatma](media/install_from_vs_12.png) <br/> <br/>
 
 2. Gösterilen hızlı başlatma sonuçlarında, *Install* başlığı altında **preemptive Protection-Dotfuscator (bireysel bileşen)** öğesini seçin.
    * Bunun yerine, *menüler* başlığı altında **Araçlar-preemptive Protection-Dotfuscator**' ın altında, DOTFUSCATOR CE zaten yüklüdür. [Başlamak için bu][get-started]seçeneği belirleyin.
@@ -70,7 +70,7 @@ Visual Studio IDE 'den Dotfuscator topluluğunu yükleyebilirsiniz:
    > [!NOTE]
    > Devam etmek için yönetici kimlik bilgilerini sağlamanız gerekebilir.
 
-4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![Click ](media/install_from_vs_345.png) yüklemesi <br/> <br/>
+4. Visual Studio Yükleyicisi penceresinde, *yüklensin*' e tıklayın. <br/> <br/> ![' ye tıklayın](media/install_from_vs_345.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -96,12 +96,12 @@ Visual Studio 'Yu henüz yüklemediyseniz, yükleyiciyi [Visual Studio Web sites
 Ardından, Visual Studio 'nun tek bir bileşeni olarak Dotfuscator topluluğunu yükleyebilirsiniz:
 
 1. **Ayrı bileşenler** sekmesini seçin.
-2. *Kod araçları*altında *preemptive Protection-Dotfuscator* öğesini kontrol edin.<br/> <br/> ![Individual bileşenleri ](media/install_individually_12.png) <br/> <br/>
-3. *Özet* panelinde, *tek tek bileşenler* bölümünde *preemptive Protection-Dotfuscator* görüntülenir. <br/> <br/> ![Summary bölmesi ](media/install_individually_3.png) <br/> <br/>
+2. *Kod araçları*altında *preemptive Protection-Dotfuscator* öğesini kontrol edin.<br/> <br/> Tek tek bileşenler ![](media/install_individually_12.png) <br/> <br/>
+3. *Özet* panelinde, *tek tek bileşenler* bölümünde *preemptive Protection-Dotfuscator* görüntülenir. <br/> <br/> ![Özet bölmesi](media/install_individually_3.png) <br/> <br/>
 4. Ortamınız için uygun olan diğer yükleme ayarlarını yapılandırın.
 5. Visual Studio 'Yu yüklemeye hazırsanız, *install* düğmesine tıklayın.
 
-Yükleme tamamlandıktan sonra Dotfuscator Community kullanmaya başlayabilirsiniz. Ayrıntılar için, [tam Dotfuscator topluluk Kullanıcı kılavuzunun Başlarken sayfasına][get-started]bakın.
+Yükleme tamamlandıktan sonra Dotfuscator Community kullanmaya başlayabilirsiniz. Ayrıntılar için, bkz. [Tam kapsamlı Dotfuscator Community Kullanıcı Kılavuzu’nun Kullanmaya Başlama Sayfası][get-started].
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

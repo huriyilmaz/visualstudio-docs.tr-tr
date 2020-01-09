@@ -5,91 +5,91 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code, editing [Visual Studio]
 - code editor [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86cab4db7c732aeb33d9adf61bfdcb2c4563da57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: de209e0a940fe7f7c64644cea37de3762df0d643
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647040"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588557"
 ---
-# <a name="features-of-the-code-editor"></a>Kod düzenleyicisinin özellikleri
+# <a name="features-of-the-code-editor"></a>Kod Düzenleyicisi özellikleri
 
-Visual Studio Düzenleyicisi, kodunuzu ve metninizi yazmanızı ve yönetmenizi kolaylaştıran birçok özellik sağlar. Anahat kullanarak farklı kod bloklarını genişletebilir ve daraltabilirsiniz. IntelliSense, **nesne tarayıcısı**ve çağrı hiyerarşisini kullanarak kod hakkında daha fazla bilgi edinebilirsiniz. **Git**gibi özellikleri kullanarak kodu bulabilir, **tanıma gidebilirsiniz**ve **tüm başvuruları bulabilirsiniz**. Kod parçacıkları içeren kod blokları ekleyebilirsiniz ve **kullanımdan oluştur**gibi özellikleri kullanarak kod oluşturabilirsiniz. Daha önce Visual Studio düzenleyicisini kullanmadıysanız bkz. [kod düzenleyicisini kullanmayı öğrenin](../get-started/tutorial-editor.md).
+Visual Studio Düzenleyicisi, yazma ve kod ve metin yönetmek için kolaylaştıran birçok özellik sağlar. Genişletebilir ve Anahat oluşturmayı kullanarak farklı kod bloklarından birini daraltabilirsiniz. IntelliSense, kullanarak kod hakkında daha fazla bilgi edinebilirsiniz **Nesne Tarayıcısı**ve arama hiyerarşisi. Gibi özellikleri kullanarak kod bulabilirsiniz **Git**, **tanıma**, ve **tüm başvuruları Bul**. Kod parçacıklarıyla kod blokları ekleyebilirsiniz ve kod gibi özellikleri kullanarak oluşturabileceğiniz **kullanımından Oluştur**. Daha önce Visual Studio düzenleyicisini kullanmadıysanız bkz. [kod düzenleyicisini kullanmayı öğrenin](../get-started/tutorial-editor.md).
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz: [Kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor).
 
-Kodunuzu çeşitli yollarla görüntüleyebilirsiniz. Varsayılan olarak **Çözüm Gezgini** , kodunuzu dosyalara göre düzenlenmiş olarak gösterir. Kodunuzu sınıflara göre düzenlenmiş olarak görüntülemek için pencerenin alt kısmındaki **sınıf görünümü** sekmesine tıklayabilirsiniz.
+Kodunuzu bir dizi farklı yolla görüntüleyebilirsiniz. Varsayılan olarak, **Çözüm Gezgini** dosyalar tarafından düzenlenir kodunuzu gösterir. Tıklayabilirsiniz **sınıf görünümü** pencerenin kodunu görüntülemek için sekmesinde sınıfları tarafından düzenlenir.
 
-Tek veya birden çok dosyada metin arayabilir ve değiştirebilirsiniz. Daha fazla bilgi için bkz. [metni bulma ve değiştirme](../ide/finding-and-replacing-text.md). Metni bulmak ve değiştirmek için normal ifadeleri kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
+Arama ve tek veya birden çok dosyalardaki metni değiştirin. Daha fazla bilgi için [metin bulma ve değiştirme](../ide/finding-and-replacing-text.md). Metin bulma ve değiştirme için normal ifadeler kullanabilirsiniz. Daha fazla bilgi için [Visual Studio'da normal ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
-Farklı Visual Studio dilleri farklı özellik kümeleri sunar ve bazı durumlarda özellikler farklı dillerde farklı davranır. Bu farklılıkların birçoğu özelliklerin açıklamalarında belirtilmiştir, ancak daha fazla bilgi için belirli Visual Studio dillerinde bölümleri görebilirsiniz.
+Farklı Visual Studio dilleri farklı özellik kümeleri sunar ve bazı durumlarda özellikler farklı dillerde farklı davranır. Bu farklılıkların birçoğu özelliklerin açıklamasında belirtilmiştir, ancak daha fazla bilgi için belirli Visual Studio dillerindeki bölümlere görebilirsiniz.
 
-## <a name="editor-features"></a>Düzenleyici özellikleri
-
-|||
-|-|-|
-|Sözdizimi renklendirme|Kod ve biçimlendirme dosyalarının bazı sözdizimi öğeleri, bunları ayırt etmek için farklı renklendirilir. Örneğin, anahtar sözcükler (Visual Basic `using` C# ve `Imports`) bir renktedir, ancak türler (`Console` ve `Uri` gibi) başka bir renktir. Diğer sözdizimi öğeleri de, dize sabit değerleri ve açıklamalar gibi renklendirilmiştir. C++diğer belirteçlerde türler, numaralandırmalar ve makrolar arasında ayrım yapmak için renk kullanır.<br /><br /> Her tür için varsayılan rengi görebilir ve **Araçlar** menüsünden açabileceğiniz [yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusunda](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)herhangi bir belirli bir söz dizimi öğesi için rengi değiştirebilirsiniz.|
-|Hata ve uyarı Işaretleri|Kod eklerken ve çözümünüzü oluştururken, kodunuzda görüntülenen (a) farklı renkli dalgalı alt çizgiler (dalgalı çizgiler olarak bilinir) veya (b) açık bulbs görebilirsiniz. Red dalgalı çizgiler, sözdizimi hatalarını ifade eder, mavi derleyici hatalarını, yeşil bir uyarı gösterir ve mor diğer hata türlerini gösterir. [Hızlı eylemler](../ide/quick-actions.md) sorunlara yönelik düzeltmeler önerir ve düzeltmenin uygulanmasını kolaylaştırır.<br /><br /> **Araçlar** > **Seçenekler** > **ortam** > **yazı tipi ve renkler** iletişim kutusunda her bir hata ve uyarı dalgalı çizgi için varsayılan rengi görebilirsiniz. **Sözdizimi hatası**, **derleyici hatası**, **Uyarı**ve **diğer hata**olup olmadığına bakın.|
-|Ayraç eşleştirme|Ekleme noktası, bir kod dosyasındaki açık bir küme ayracı üzerine yerleştirildiğinde, hem hem de kapanış küme ayracı vurgulanır. Bu özellik, yanlış yerleştirilmiş veya eksik küme ayraçları hakkında anında geri bildirim sağlar. **Otomatik sınırlayıcı vurgulama** ayarı (**Araçlar** > **seçenekleri** > **metin Düzenleyicisi**) ile, çift ayraç eşleştirmeyi etkinleştirebilir veya devre dışı bırakabilirsiniz. **Yazı tipi ve renkler** ayarında vurgu rengini değiştirebilirsiniz (**Araçlar** > **Seçenekler** > **ortamı**). **Küme ayracı Ile eşleşen (vurgu)** veya **ayraç eşleştirme (dikdörtgen)** arayın.|
-|Yapı görselleştiricisi|Noktalı çizgiler, kod dosyalarında eşleşen küme ayraçlarını, açma ve kapatma küme ayracı çiftlerini daha kolay görmenizi sağlar. Bu, kod tabanınızdaki kodu daha hızlı bir şekilde bulmanıza yardımcı olabilir. Bu satırları, **araçlar** > **seçenekleri** > **metin Düzenleyicisi** > **genel** sayfasındaki **görüntü** bölümünde bulunan **yapısı göster yönergeleriyle** birlikte etkinleştirebilir veya devre dışı bırakabilirsiniz.|
-|Satır numaraları|Satır numaraları, kod penceresinin sol kenar boşluğunda görüntülenebilir. Varsayılan olarak gösterilmezler. Bu seçeneği, **metin düzenleyici tüm diller** ayarlarında (**Araçlar** > **seçenekleri** > **metin Düzenleyicisi** > **tüm diller**) açabilirsiniz. Bu dillerin ayarlarını değiştirerek bağımsız programlama dillerinin satır numaralarını görüntüleyebilirsiniz (**araçlar** > **seçenekleri** > **metin Düzenleyicisi** >  **\<dil >** ). Yazdırılacak satır numaraları için **Yazdır** iletişim kutusunda **satır numaralarını dahil et** ' i seçmeniz gerekir.|
-|Değişiklik İzleme|Sol kenar boşluğunun rengi, bir dosyada yaptığınız değişiklikleri izlemenize olanak sağlar. Dosya açıldığı ancak kaydedilmediği için yaptığınız değişiklikler sol kenar boşluğunda (seçim kenar boşluğu olarak bilinir) sarı bir çubukla gösterilir. Değişiklikleri kaydettikten sonra (ancak dosyayı kapatmadan önce), çubuk yeşile döner. Dosyayı kaydettikten sonra bir değişikliği geri alırsanız, çubuk turuncu 'ı kapatır. Bu özelliği devre dışı bırakmak ve açmak için **metin Düzenleyicisi** ayarlarındaki **Değişiklikleri İzle** seçeneğini değiştirin (**araçlar** > **Seçenekler** > **metin Düzenleyicisi**).|
-|Kod ve metin seçme|Standart sürekli akış modunda veya kutu modunda metin seçebilirsiniz, burada satır kümesi yerine metnin dikdörtgen bir bölümünü seçersiniz. Kutu modunda seçim yapmak için, fareyi seçimin üzerine sürüklerken **alt** tuşuna basın (veya **alt**+**SHIFT**+ **\<OK tuşuna basın >** ). Seçim, seçimdeki ilk karakter ve son karakter tarafından tanımlanan dikdörtgenin içindeki tüm karakterleri içerir. Seçilen alana yazılan veya yapıştırılan her şey, her satırda aynı noktaya eklenir.|
-|Yakınlaştır|**CTRL** tuşunu basılı tutarak ve kaydırma tekerleğini fareyle taşıyarak (ya da **CTRL**+**SHIFT**+ ' i seçerek herhangi bir kod penceresinde yakınlaştırıp uzaklaştırabilirsiniz **.** artırmak ve **Ctrl** +**SHIFT** **+ azaltmak için.** Ayrıca, belirli bir yakınlaştırma yüzdesi ayarlamak için kod penceresinin sol alt köşesindeki **Yakınlaştır** kutusunu da kullanabilirsiniz. Yakınlaştırma özelliği araç pencereleri içinde çalışmaz.|
-|Sanal alan|Varsayılan olarak, Visual Studio düzenleyicilerinde bulunan satırlar son karakterden sonra sona erdir, böylece satırın sonundaki **sağ ok** tuşu imleci bir sonraki satırın başlangıcına taşıdıkça. Bazı diğer düzenleyicilerde, bir satır son karakterden sonra bitmez ve imlecinizi satıra istediğiniz yere yerleştirebilirsiniz. **Araçlar** > **seçenekleri** > **metin Düzenleyicisi** > **tüm diller** ayarları ' nda düzenleyicide sanal alanı etkinleştirebilirsiniz. **Sanal alanı** veya **sözcük kaydırmayı**etkinleştirebileceğinizi, ancak ikisini de kullanabileceğinizi unutmayın.|
-|Yazdırma|Dosya yazdırırken satır numaralarını dahil etmek veya daraltılmış kod bölgelerini gizlemek için **Yazdır** iletişim kutusundaki seçenekleri kullanabilirsiniz. **Sayfa yapısı** iletişim kutusunda, **sayfa üstbilgisi**' ni seçerek dosyanın tam yolunu ve adını yazdırmayı da tercih edebilirsiniz.<br /><br /> **Araçlar** > **seçenekleri** > **ortam** > **yazı tipi ve renkler** iletişim kutusunda renkli yazdırma seçeneklerini ayarlayabilirsiniz. Renkli yazdırmayı özelleştirmek için **ayarları göster** listesinden **Yazıcı** ' yı seçin. Bir dosyayı düzenleyen bir dosyayı yazdırmak için farklı renkler belirtebilirsiniz.|
-|Küresel geri alma ve yineleme|**Düzenleme** menüsündeki **son genel eylemi geri al** ve **son genel eylemi yinele** komutları, birden çok dosyayı etkileyen genel eylemleri geri alır veya yineler. Genel eylemler bir sınıf veya ad alanını yeniden adlandırma, bir çözüm genelinde bul ve değiştir işlemi gerçekleştirme, bir veritabanını yeniden düzenleme ya da birden çok dosyayı değiştiren başka bir işlem yapma içerir. Bir eylemin uygulandığı çözümü kapattıktan sonra bile, geçerli Visual Studio oturumunda eylemlere genel geri alma ve yineleme komutlarını uygulayabilirsiniz.|
-
-## <a name="advanced-editing-features"></a>Gelişmiş Özellikleri Düzenle
-
-Araç **çubuğundaki  > ** **Gelişmiş** Özellikler menüsünden Gelişmiş özellikler bulabilirsiniz. Tüm kod dosyası türlerinde bu özelliklerin hepsi kullanılamaz.
+## <a name="editor-features"></a>Düzenleyici Özellikleri
 
 |||
 |-|-|
-|Belgeyi Biçimlendir|Kod satırlarının uygun girintisini ayarlar ve küme ayraçlarını belgedeki satırlara ayırmak için taşımayın.|
-|Biçim Seçimi|Kod satırlarının doğru girintilenmesini ayarlar ve küme ayraçlarını seçimdeki satırlara ayırmak için taşımayın.|
-|Seçili satırları sekmeye Dönüştür|Baştaki boşlukları uygun yerlerde sekmeler olarak değiştirir.|
-|Seçili satırları sekmeye Dönüştür|Baştaki sekmeleri boşluklara dönüştürür. Dosyanızdaki tüm boşlukları sekmelere (veya tüm sekmeleri boşluklara) dönüştürmek istiyorsanız, `Edit.ConvertSpacesToTabs` ve `Edit.ConvertTabsToSpaces` komutlarını kullanabilirsiniz. Bu komutlar Visual Studio menülerinde görünmez, ancak bunları **hızlı erişim** penceresinden veya komut penceresinden çağırabilirsiniz.|
-|Büyük harf yap|Seçimdeki tüm karakterleri büyük harfe değiştirir veya seçim yoksa ekleme noktasındaki karakteri büyük harfe değiştirir. Kısayol: **Ctrl**+**SHIFT**+**U**.|
-|Küçük harf yap|Seçimdeki tüm karakterleri küçük harfe çevirir veya seçim yoksa ekleme noktasındaki karakteri küçük harfe dönüştürür. Kısayol: **Ctrl**+**U**.|
-|Seçili satırları yukarı taşı|Seçili satırı bir satır yukarı kaydırır. Kısayol: **Alt**+**yukarı ok**.|
-|Seçili satırları aşağı taşı|Seçili satırı bir satır aşağı kaydırır. Kısayol: **Alt**+**aşağı ok**.|
-|Yatay boşluğu Sil|Geçerli satırın sonundaki sekmeleri veya boşlukları siler. Kısayol: **ctrl**+**K**, **CTRL**+ **\\**|
-|Boşluğu görüntüle|Boşlukları, kabarık noktalar olarak ve ok olarak sekme olarak görüntüler. Bir dosyanın sonu dikdörtgen bir karakter olarak görüntülenir. **Araçlar** > **Seçenekler** > **metin Düzenleyicisi** > **tüm diller** > **sözcük kaydırmayı** >  sözcük kaydırması**için görünür glifleri göster** seçilidir, bu glif de görüntülenir.|
-|Sözcük Kaydırma|Belgedeki tüm satırların kod penceresinde görünür olmasını sağlar. Word kaydırmayı, **metin düzenleyici tüm diller** ayarlarında (**Araçlar** > **seçenekleri** > **metin Düzenleyicisi** > **tüm diller**) açabilir.|
-|Açıklama seçimi|Seçime veya geçerli satıra Açıklama karakterleri ekler. Kısayol: **ctrl**+**K**, **CTRL**+**C**|
-|Seçimi açıklama kaldır|Seçim veya geçerli satırdan açıklama karakterlerini kaldırır. Kısayol: **ctrl**+**K**, **CTRL**+**U**|
-|Satır girintisini artır|Seçili satırlara veya geçerli satıra bir sekme (veya eşdeğer boşluk) ekler.|
-|Satır girintisini azalt|Seçili satırlardan veya geçerli satırdan bir sekmeyi (veya eşdeğer alanları) kaldırır.|
-|Etiket Seç|Etiketler (örneğin, XML veya HTML) içeren bir belgede etiketi seçer.|
-|Etiket Içeriğini seçin|Etiketler (örneğin, XML veya HTML) içeren bir belgede, içeriği seçer.|
+|Söz dizimi renklendirmesi|Bazı sözdizimi öğeleri kodu ve biçimlendirme dosyaları bunları ayırt etmek için farklı renklendirilmiştir. Örneğin, anahtar sözcükleri (gibi `using` C# ve `Imports` Visual Basic'te) bir renk, ancak türleri (gibi `Console` ve `Uri`) başka bir renktir. Diğer sözdizimi öğeleri de, dize sabit değerleri ve açıklamaları gibi renklendirilmiştir. C++ türler, numaralandırmaları ve makroları, diğer belirteçler arasında arasında ayırt etmek için renk kullanır.<br /><br /> Her tür için varsayılan rengi görebilir ve herhangi bir özel sözdizimi öğenin rengini değiştirebilirsiniz [yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md), hangi açabileceğiniz **Araçları** menüsü.|
+|Hata ve uyarı işaretleri|Kod eklediğinizde ve çözümünüzü gibi (a) farklı renkte dalgalı çizgiler (dalgalı çizgiler olarak da bilinir) veya (b) kodunuzda görünen ampuller görebilirsiniz. Kırmızı dalgalı çizgiler söz dizimi hataları belirtmek, mavi derleyici hataları gösterir, yeşil uyarılarını gösterir ve diğer hata türleri mor gösterir. [Hızlı Eylemler](../ide/quick-actions.md) sorunlara yönelik düzeltmeler önerir ve düzeltmeyi uygulamaya kolaylaştırır.<br /><br /> Her hata ve uyarı dalgalı oku için varsayılan rengi görebilirsiniz **Araçları** > **seçenekleri** > **ortam**  >   **Yazı tipleri ve renkler** iletişim kutusu. Aranacak **söz dizimi hatası**, **derleyici hatası**, **uyarı**, ve **diğer hata**.|
+|Ayraç eşleştirme|Ekleme noktasını, kod dosyasındaki açık bir ayraç yerleştirildiğinde, hem hem de kapanış ayracı vurgulanır. Bu özellik eksik veya yanlış yerleştirilmiş ayraçlarla küme ayraçları anında geri bildirim sağlar. Açıp eşleşen ayracı kapatabilirsiniz **otomatik sınırlandırıcı vurgulaması** ayarı (**Araçları** > **seçenekleri**  >   **Metin düzenleyici**). Vurgu rengini değiştirebilirsiniz **yazı tipleri ve renkler** ayarı (**Araçları** > **seçenekleri** > **ortamı**). Aranacak **Ayraç eşleştirme (vurgula)** veya **Ayraç eşleştirme (dikdörtgen)** .|
+|Yapı Görselleştirici|Noktalı çizgiler açılış ve kapanış küme ayracı çiftleri görmeyi kolaylaştıracak eşleşen küme ayraçlarını kodu dosyalarında bağlanın. Bu kodda bulmanıza yardımcı olabilir, daha hızlı kod tabanı. Bu satırlar üzerinde veya ile kapatabilirsiniz **yapısı Kılavuzları Göster** içinde **görünen** bölümünü **Araçları** > **seçenekleri**  >  **Metin düzenleyici** > **genel** sayfası.|
+|Satır numaraları|Satır numaraları kod penceresinin sol kenar boşluğu içinde görüntülenebilir. Varsayılan olarak görüntülenmez. Bu seçenek de etkinleştirebilirsiniz **metin düzenleyici tüm diller** ayarları (**Araçları** > **seçenekleri** > **MetinDüzenleyicisi**  >  **Tüm diller**). Bu diller için ayarları değiştirerek alan bireysel programlama dilleri için satır numaralarını görüntüleyebilirsiniz (**Araçları** > **seçenekleri** > **metin düzenleyicisi**   >   **\<dil >** ). Yazdırılacak satır numaraları için seçmelisiniz **satır numaralarını dahil etme** içinde **yazdırma** iletişim kutusu.|
+|Değişiklik İzleme|Sol kenar boşluğunun rengi bir dosyada yaptığınız değişiklikleri izlemenize olanak sağlar. Dosya açıldı ancak kaydedilmedi yaptığınız değişiklikler sol kenar boşluğu (Seçim kenar boşluğu olarak bilinir) bulunan sarı çubuk ile belirtilir. Değişiklikleri kaydettikten sonra (ancak dosyayı kapatmadan önce), çubuğun rengi yeşile döner. Dosyayı kaydettikten sonra bir değişikliği geri alırsanız çubuk turuncu olur. Bu özelliği kapatıp açmak için değiştirmek **Değişiklikleri İzle** seçeneğini **metin düzenleyici** ayarları (**Araçları** > **seçenekleri**  >  **Metin düzenleyici**).|
+|Kod ve metin seçme|Metni standart sürekli akış modunda veya bir dizi satır yerine metnin dikdörtgen bir bölümünü seçtiğiniz kutu modunda seçebilirsiniz. Kutu modunda bir seçim yapmak için basın **Alt** fareyi seçimin üzerine sürüklerken (veya basın **Alt**+**Shift** +  **\<ok tuşu >** ). Seçim ilk ve son karakter tarafından tanımlanan dikdörtgen içindeki karakterlerin tümünü içerir. Yazılan veya yapıştırılan seçilen alana her satırın aynı noktasına eklenir.|
+|Yakınlaştır|Size yakınlaştırma veya uzaklaştırma herhangi kod penceresinde tuşuna basarak ve bulunduran **Ctrl** anahtar ve kaydırma tekerleğini hareket ettirerek (veya **Ctrl**+**Shift** + **.** artırma ve **Ctrl**+**Shift**+ **,** azaltmak için). Ayrıca **yakınlaştırma** belirli bir yakınlaştırma yüzdesi ayarlamak için kod penceresinin sol alt köşesinde kutusu. Yakınlaştırma özelliği araç pencerelerinde çalışmaz.|
+|Sanal alan|Varsayılan olarak, Visual Studio düzenleyicileri bitimine son karakterden sonra satırları. böylece **sağ ok** anahtarı bir satırın sonunda imleci sonraki satırın başlangıcına taşır. Diğer bazı düzenleyicilerde bir satır son karakterden sonra bitmez ve imleci satır üzerinde herhangi bir yere yerleştirebilirsiniz. Düzenleyicide sanal alanı etkinleştirebilirsiniz **Araçları** > **seçenekleri** > **metin düzenleyici** > **tüm Diller** ayarları. Ya da etkileştiremeyeceğinizi unutmayın **sanal adres alanı** veya **sözcük kaydırma**, ikisini birden belirtmeyin.|
+|Yazdırma|Kullanabileceğiniz seçenekler **yazdırma** dosya yazdırırken satır numaralarını dahil etme veya gizlemek için iletişim kutusu daraltılmış bölgeleri. İçinde **sayfa yapısı** iletişim kutusunda da tercih edebilirsiniz tam yolunu ve dosya adını seçerek yazdırma **sayfa üstbilgisi**.<br /><br /> Renkli yazdırma seçeneklerini belirleyebileceğiniz **Araçları** > **seçenekleri** > **ortam** > **yazı tipleri ve Renkleri** iletişim kutusu. Seçin **yazıcı** içinde **ayarlarını göster** renkli baskıyı özelleştirmek için. Bir dosyayı düzenlemek için çok yazdırmak için farklı renkler belirtebilirsiniz.|
+|Genel Geri Al ve Yinele|**Son genel eylemi geri** ve **son genel eylemi yinele** komutlarını **Düzenle** menü geri alma veya birden çok dosyayı etkileyen genel eylemi yinele. Genel eylemler bir sınıf veya ad alanı, bir veritabanı veya birden çok dosyayı değiştiren başka herhangi bir eylemi yeniden düzenleme, bir çözüm çapında Bul ve Değiştir işlemi yeniden adlandırma içerir. Genel geri alma uygulayabilirsiniz ve bile, hangi eylemin uygulandığı çözüm kapatıldıktan sonra geçerli Visual Studio oturumunda komutları eylemlerine Yinele.|
 
-## <a name="navigate-and-find-code"></a>Gezinme ve kod bulma
+## <a name="advanced-editing-features"></a>Gelişmiş düzenleme özellikleri
 
-Geriye doğru gitme ve önceki ekleme noktalarına iletme, bir tür veya üyenin tanımını görüntüleme ve gezinti çubuğunu kullanarak belirli bir yönteme atlama dahil olmak üzere birkaç farklı yolla kod düzenleyicide gezinebilirsiniz. Daha fazla bilgi için bkz. [gezinme kodu](navigating-code.md).
+Gelişmiş Özellikler bulabilirsiniz **Düzenle** > **Gelişmiş** araç çubuğundaki menü. Bu özelliklerin tümünü kod dosyaların tüm türleri için kullanılabilir.
 
-## <a name="find-references-in-your-code-base"></a>Kod tabanınız için başvuruları bulma
+|||
+|-|-|
+|Belgeyi Biçimlendir|Kod satırlarının uygun girintisini ayarlar ve belgedeki satırları ayırmak için çengelli ayraç taşır.|
+|Biçim Seçimi|Kod satırlarının uygun girintisini ayarlar ve seçimdeki satırları ayırmak için çengelli ayraç taşır.|
+|Seçili satırları sekmeye Dönüştür|Uygun yerlerde sekmeleri öndeki boşlukları değiştirir.|
+|Seçili satırları sekmeye dönüştürme|Değişiklikleri sekmeleri boşluklarla değiştirin. Dosyanızdaki tüm boşlukları sekme (veya tüm sekmeleri boşluklara) dönüştürmek isterseniz, kullanabileceğiniz `Edit.ConvertSpacesToTabs` ve `Edit.ConvertTabsToSpaces` komutları. Bu komutlar Visual Studio menülerinde görünmez, ancak bunları çağırabilirsiniz **hızlı erişim** penceresinden veya komut penceresinden.|
+|Büyük Harf Yap|Büyük harfe Seçimdeki tüm karakterleri veya seçim yok ise büyük harfe ekleme noktasındaki karakteri değiştirir. Kısayol: **Ctrl**+**SHIFT**+**U**.|
+|Küçük harfe Dönüştür|Küçük harf, seçimdeki tüm karakterleri veya herhangi bir seçim yoksa ekleme noktasındaki karakteri küçük harfe değiştirir. Kısayol: **Ctrl**+**U**.|
+|Seçili satırları Yukarı Taşı|Seçili satır bir satır yukarı taşır. Kısayol: **Alt**+**yukarı ok**.|
+|Seçili satırları Aşağı Taşı|Seçili satır bir satır aşağı taşır. Kısayol: **Alt**+**aşağı ok**.|
+|Yatay boşluğu Sil|Sekme veya boşluk geçerli satırın sonunda siler. Kısayol: **ctrl**+**K**, **CTRL**+ **\\**|
+|Boşluğu görüntüle|Boşlukları Kabarık noktalar olarak, sekmeleri oklar olarak görüntüler. Bir dosyanın sonu dikdörtgen bir simge olarak görüntülenir. Varsa **Araçları** > **seçenekleri** > **metin düzenleyici** > **tüm diller**  >  **Sözcük kaydırma** > **Show görünür glyph'leri sözcük kaydırma için** olduğu belirlenirse, o glyph de gösterilir.|
+|Sözcük Kaydırma|Tüm satırların kod penceresinde görünür olmasını belgeye neden olur. Sözcük kaydırma ve buna kapatabilirsiniz **metin düzenleyici tüm diller** ayarları (**Araçları** > **seçenekleri** > **metin düzenleyicisi**   >  **Tüm diller**).|
+|Seçimi açıklama satırı yap|Seçime veya geçerli satıra yorum karakterleri ekler. Kısayol: **ctrl**+**K**, **CTRL**+**C**|
+|Seçimi işletilir satıra Çevir|Seçimden veya geçerli satıra yorum karakterleri kaldırır. Kısayol: **ctrl**+**K**, **CTRL**+**U**|
+|Satır Girintisini Artır|Bir sekme (veya eşdeğer boşluk) seçilen satırlardan veya geçerli satırı ekler.|
+|Satır girintisini Azalt|Bir sekme (veya eşdeğer boşluk) seçilen satırlardan veya geçerli satırı kaldırır.|
+|Etiket Seç|Etiket (örneğin, XML veya HTML) içeren bir belgede etiket seçilir.|
+|Etiket içeriğini Seç|Etiket (örneğin, XML veya HTML) içeren bir belgede içerik seçilir.|
 
-Belirli kod öğelerine kod tabanınızın tamamında başvurulduğunu bulmak için, **tüm başvuruları bul** komutunu kullanabilir veya **SHIFT**+**F12**tuşlarına basabilirsiniz. Ayrıca, bir tür veya üyeye tıkladığınızda, **başvuru vurgulama** özelliği bu tür veya üyeye yapılan tüm başvuruları otomatik olarak vurgular. Daha fazla bilgi için bkz. [kodunuzda başvuruları bulma](finding-references.md).
+## <a name="navigate-and-find-code"></a>Gidin ve kodu bulma
+
+Kod Düzenleyicisi'nde çeşitli geriye doğru gezinmek gibi farklı yolları ve ileten önceki ekleme noktaları için tür veya üyenin tanımı görüntüleme ve gezinti çubuğunu kullanarak belirli bir yönteme atlama taşıyabilirsiniz. Daha fazla bilgi için [koda gitmek](navigating-code.md).
+
+## <a name="find-references-in-your-code-base"></a>Kod tabanınızın başvuruları Bul
+
+Kodlarınızın tamamında belirli kod öğelerine başvurulduğunu bulmak için, **tüm başvuruları bul** komutunu kullanabilir veya **SHIFT**+**F12**tuşlarına basabilirsiniz. Ayrıca, tıkladığınızda bir tür veya üye, **başvuru vurgulama** özelliği, bu türe veya üyeye tüm başvurularını otomatik olarak vurgular. Daha fazla bilgi için [kodunuzdaki başvuruları bulma](finding-references.md).
 
 ## <a name="customize-the-editor"></a>Düzenleyiciyi özelleştirme
 
-Visual Studio ayarlarınızı başka bir geliştiriciyle paylaşabilir, ayarlarınızı bir standart ile uyumlu yapabilir veya **Araçlar** menüsünde **ayarları Içeri ve dışarı aktarma Sihirbazı** komutunu kullanarak Visual Studio varsayılan ayarlarına dönebilirsiniz. **Ayarları içeri ve dışarı aktarma sihirbazında**, seçili genel ayarları veya dili ve projeye özgü ayarları değiştirebilirsiniz.
+Başka bir Visual Studio ayarlarınızı paylaşabilir, ayarlarınızı standarda ya da kullanarak Visual Studio varsayılan ayarlarına geri döndürmeye **içeri ve dışarı aktarma ayarları Sihirbazı** komutunu  **Araçlar** menüsü. İçinde **içeri ve dışarı aktarma ayarları Sihirbazı**, seçilen genel ayarları veya dili ve projeye özgü ayarları değiştirebilirsiniz.
 
-Yeni kısayol tuşlarını tanımlamak veya mevcut kısayol tuşlarını yeniden tanımlamak için **araçlar**  > **seçenekler**  > **ortam**  > **klavye**' ye gidin. Kısayol tuşları hakkında daha fazla bilgi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Yeni kısayol tuşlarını tanımlayabilir veya var olan bir kısayol tuşlarını yeniden tanımlamak için Git **Araçları** > **seçenekleri** > **ortam**  >  **Klavye**. Kısayol tuşları hakkında daha fazla bilgi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
-JavaScript 'e özgü düzenleyici seçenekleri için bkz. [JavaScript Düzenleyicisi seçenekleri](../ide/reference/options-text-editor-javascript-formatting.md).
+JavaScript özel düzenleyici seçenekleri için bkz. [JavaScript Düzenleyici Seçenekleri](../ide/reference/options-text-editor-javascript-formatting.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor)
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
-- [Visual Studio C++ 'da kullanmaya başlayın](/cpp/get-started/tutorial-console-cpp)
-- [Visual Studio 'da C# ve ASP.NET kullanmaya başlayın](../get-started/csharp/tutorial-aspnet-core.md)
-- [Visual Studio 'da Python ile çalışmaya başlama](../ide/quickstart-python.md)
+- [Visual Studio'da C++ kullanmaya başlama](/cpp/get-started/tutorial-console-cpp)
+- [C# ve Visual Studio'da ASP.NET kullanmaya başlama](../get-started/csharp/tutorial-aspnet-core.md)
+- [Visual Studio'da Python ile çalışmaya başlama](../ide/quickstart-python.md)

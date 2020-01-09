@@ -3,17 +3,17 @@ title: 'Nasıl Yapılır: Temel Doku Gölgelendiricisi Oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6b4aa042e3ba51621e43ee2f531364135179c02
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac74155b8de4669d959d9b14e9be20ada2ec51d9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635867"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589480"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Nasıl yapılır: temel doku gölgelendiricisi oluşturma
 
@@ -27,7 +27,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 1. Birlikte çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
 
-2. **Nokta rengi** düğümünü silin. **Seç** modunda, **nokta rengi** düğümünü seçin ve ardından menü çubuğunda **Düzenle**  > **Sil**' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
+2. **Nokta rengi** düğümünü silin. **Seç** modunda, **nokta rengi** düğümünü seçin ve ardından menü çubuğunda **Düzenle** > **Sil**' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
 
 3. Grafiğe bir **doku örnek** düğümü ekleyin. **Araç kutusunda** **doku**altında **doku örneği** ' ni seçin ve tasarım yüzeyine taşıyın.
 
@@ -39,7 +39,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 7. Doku koordinatlarını doku örneğine bağlayın. **Seç** modunda, **doku koordinat** düğümünün **Çıkış** terminali ' ni **doku örnek** düğümünün **UV** terminaline taşıyın. Bu bağlantı, belirtilen koordinatlarda dokuyu örnekler.
 
-8. Doku örneğini son renge bağlayın. **Doku örneği** düğümünün **RGB** terminalini **son renk** düğümünün **RGB** terminaline taşıyın ve ardından **doku örnek** düğümünün **Alfa** terminalini son rengin **Alfa** terminaline taşıyındüğüm.
+8. Doku örneğini son renge bağlayın. **Doku örneği** düğümünün **RGB** terminalini **son renk** düğümünün **RGB** terminaline taşıyın ve ardından **doku örnek** düğümünün **Alfa** terminalini **son renk** düğümünün **Alfa** terminaline taşıyın.
 
 Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir küpe uygulanan gölgelendirici önizlemesi gösterilmektedir.
 

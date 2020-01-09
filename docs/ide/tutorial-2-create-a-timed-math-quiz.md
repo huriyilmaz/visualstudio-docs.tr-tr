@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e092e11474aa872903977e1b07c699b160bef8a2
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 884047237652f6b69bd437b5faf47d820903b824
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516591"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588674"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Öğretici 2: süreli bir matematik testi oluşturma
 
@@ -25,11 +25,11 @@ Bu öğreticide, bir sınavın belirli bir süre içinde dört rastgele aritmeti
 
 Bu öğretici aşağıdaki görevlerde size kılavuzluk eder:
 
-- @No__t_0 sınıfını kullanarak rastgele sayılar üretin.
+- <xref:System.Random> sınıfını kullanarak rastgele sayılar üretin.
 
-- @No__t_0 denetimi kullanarak olayları belirli bir zamanda gerçekleşecek şekilde tetikleyin.
+- <xref:System.Windows.Forms.Timer> denetimi kullanarak olayları belirli bir zamanda gerçekleşecek şekilde tetikleyin.
 
-- @No__t_0 deyimlerini kullanarak program akışını denetleme.
+- `if else` deyimlerini kullanarak program akışını denetleme.
 
 - Kodda temel aritmetik işlemler gerçekleştirin.
 

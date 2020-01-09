@@ -7,22 +7,22 @@ helpviewer_keywords:
 - EditorConfig coding conventions
 - language code style rules [EditorConfig]
 - formatting conventions [EditorConfig]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 99d83157e2b6d108eb87a701aa8bc05ca2c7b1e6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2c93a6e86ba82a75dabb8b2be77d2a82a3b4d599
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653713"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566247"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig için .NET kodlama kuralı ayarları
 
-Bir [Editorconfig](../ide/create-portable-custom-editor-options.md) dosyası kullanımıyla kod tabanınızda tutarlı kod stili tanımlayabilir ve bakımını yapabilirsiniz. EditorConfig, `indent_style` ve `indent_size` gibi birçok temel biçimlendirme özelliği içerir. Visual Studio 'da, .NET kodlama kuralları ayarları bir EditorConfig dosyası kullanılarak da yapılandırılabilir. Bireysel .NET kodlama kurallarını etkinleştirebilir veya devre dışı bırakabilir ve her kuralın uygulanmasını istediğiniz dereceyi bir önem düzeyi aracılığıyla yapılandırabilirsiniz.
+Bir [Editorconfig](../ide/create-portable-custom-editor-options.md) dosyası kullanımıyla kod tabanınızda tutarlı kod stili tanımlayabilir ve bakımını yapabilirsiniz. EditorConfig, `indent_style` ve `indent_size`gibi birçok temel biçimlendirme özelliği içerir. Visual Studio 'da, .NET kodlama kuralları ayarları bir EditorConfig dosyası kullanılarak da yapılandırılabilir. Bireysel .NET kodlama kurallarını etkinleştirebilir veya devre dışı bırakabilir ve her kuralın uygulanmasını istediğiniz dereceyi bir önem düzeyi aracılığıyla yapılandırabilirsiniz.
 
 > [!TIP]
 > - Bir EditorConfig dosyasında kodlama kuralları tanımladığınızda, kodunuzu çözümlemek üzere Visual Studio 'da yerleşik olarak bulunan [kod stili Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) nasıl istediğinizi yapılandırıyorsunuz. EditorConfig dosyası, bu çözümleyiciler için yapılandırma dosyasıdır.

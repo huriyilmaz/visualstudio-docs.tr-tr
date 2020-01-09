@@ -7,17 +7,17 @@ helpviewer_keywords:
 - editors, text viewing
 - Code Editor, word wrap
 ms.assetid: 442f33ef-9f52-4515-b55f-fb816d664645
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30bfe549100a06df6b9a8163cad1e3d519c3a91b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 36720588f56d7c718078dca96445eb48915a3845
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663116"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569081"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Nasıl yapılır: düzenleyicide sözcük kaydırmayı yönetme
 
@@ -28,11 +28,11 @@ ms.locfileid: "72663116"
 
 ## <a name="to-set-word-wrap-preferences"></a>Sözcük kaydırmayı tercihleri ayarlamak için
 
-1. **Araçlar** menüsünde **Seçenekler**' i seçin.
+1. **Araçlar** menüsünde **Seçenekler**’i belirleyin.
 
 2. **Metin düzenleyici** klasöründe, bu seçeneği küresel olarak ayarlamak Için **tüm diller** alt klasöründeki **genel** seçenekleri seçin.
 
-     veya
+     — veya —
 
      Programlamadaki dilin alt klasöründeki **genel** seçenekleri seçin.
 
@@ -55,4 +55,4 @@ Not defteri + +, alt açık metin veya Visual Studio Code Word sarması hakkınd
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)

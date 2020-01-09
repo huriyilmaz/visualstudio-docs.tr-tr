@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 321e8271806f8f9e2983e82db010cd2ffb49a3ee
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: faf418155708ebc577efea57ed3352953a8d577d
+ms.sourcegitcommit: 5920a8b0c68350f11eabc1652a19b04d0196881a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74777952"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75622565"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node. js ve tepki verme uygulaması oluşturma
 
@@ -35,7 +35,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 İşte size bazı önemli kavramlara yol açmaya yönelik hızlı bir SSS.
 
-### <a name="what-is-nodejs"></a>Node. js nedir?
+### <a name="what-is-nodejs"></a>Node.js nedir?
 
 Node. js, JavaScript sunucu tarafını yürüten sunucu tarafı bir JavaScript çalışma zamanı ortamıdır.
 
@@ -66,15 +66,15 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
     Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Seçin **Node.js geliştirme** iş yükü, ardından **Değiştir**.
 
-    ![VS yükleyicisinde Node. js iş yükü](../ide/media/quickstart-nodejs-workload.png)
+    ![Node.js iş yükü VS yükleyicisi](../ide/media/quickstart-nodejs-workload.png)
 
-* Node. js çalışma zamanının yüklü olması gerekir.
+* Node.js çalışma zamanı yüklü olması gerekir.
 
     Bu öğretici sürüm 10.16.0 ile test edilmiştir.
 
-    Yüklü değilse, [Node. js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yükleyebilirsiniz. Genel olarak, Visual Studio yüklü Node. js çalışma zamanını otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayıp **Özellikler**' i seçin).
+    LTS sürümünden yüklü yoksa, yükleme [Node.js](https://nodejs.org/en/download/) Web sitesi. Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılayan değil, projenizi yüklü çalışma zamanı özellikleri sayfasında başvurmak için yapılandırabilirsiniz (bir proje oluşturduğunuzda, proje düğümüne sağ tıklayın ve seçin **özellikleri**).
 
 ## <a name="create-a-project"></a>Proje oluştur
 
@@ -85,10 +85,12 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
 1. Yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve **boş Node. js web uygulaması** (JavaScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve **boş Node. js web uygulaması-JavaScript**' i seçin. (Bu öğretici TypeScript derleyicisini kullanıyor olsa da, adımlar **JavaScript** şablonuyla başlamanız gerekir.)
+    
+    Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede **boş Node. js web uygulaması**' nı seçin, **Nodejswebappblank**adını yazın ve ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede **boş Node. js web uygulaması**' nı seçin, **Nodejswebappblank**adını yazın ve ardından **Tamam**' ı seçin.
     ::: moniker-end
     **Boş Node. js web uygulaması** proje şablonunu görmüyorsanız **Node. js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
@@ -98,7 +100,7 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
 
     (1), **Yeni proje** iletişim kutusunda verdiğiniz adı kullanarak projenizde **kalın** olarak vurgulanır. Dosya sisteminde bu proje, proje klasörünüzdeki bir *. njsproj* dosyası tarafından temsil edilir. Projeye sağ tıklayıp **Özellikler**' i seçerek projeyle ilişkili özellikleri ve ortam değişkenlerini ayarlayabilirsiniz. Proje dosyası Node. js proje kaynağında özel değişiklikler yapmadığından, diğer geliştirme araçlarıyla gidiş dönüşü yapabilirsiniz.
 
-    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Disk üzerinde *. sln* dosyası tarafından temsil edilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
+    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Tarafından temsil edilen bir çözüm, bir *.sln* dosya diskte, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
     (3) NPM düğümü yüklü NPM paketlerini gösterir. Bir iletişim kutusu kullanarak NPM paketlerini aramak ve yüklemek için NPM düğümüne sağ tıklayabilir veya *Package. JSON* ' daki ayarları kullanarak paketleri yükleyip güncelleyebilir ve NPM düğümündeki Seçenekler ' e sağ tıklayın.
 
@@ -110,14 +112,14 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
 
 Bu uygulama, doğru bir şekilde çalışması için birkaç NPM modülü gerektirir.
 
-* tıkla
+* react
 * tepki verme-Dom
-* çaba
+* express
 * yol
 * TS-yükleyici
-* TypeScript
+* typescript
 * Web paketi
-* Web paketi-CLI
+* webpack-cli
 
 1. Çözüm Gezgini (sağ bölme) menüsünde, projedeki **NPM** düğümüne sağ tıklayın ve **Yeni NPM paketleri yüklensin**' i seçin.
 
@@ -166,9 +168,9 @@ Bu uygulama, doğru bir şekilde çalışması için birkaç NPM modülü gerekt
 Bu adımlarda, projenize dört yeni dosya eklersiniz.
 
 * *App. TSX*
-* *WebPack-config. js*
+* *webpack-config.js*
 * *index. html*
-* *tsconfig. JSON*
+* *tsconfig.json*
 
 Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğu uygulamalarda, genellikle dosyaları alt klasörlere ekler ve göreli yol başvurularını uygun şekilde ayarlayabilirsiniz.)
 
@@ -368,9 +370,9 @@ Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling
 
 1. *Server. js*' de, bir kesme noktası ayarlamak için `staticPath` bildiriminin solundaki cilt paya tıklayın:
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
-    Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
+    Kesme noktaları güvenilir hata ayıklama en temel hem de temel özelliğidir. Bir kesme noktası değişkenlerin değerleri veya bellek davranışını göz olabilmesi için Visual Studio çalışan kodunuzu nereye askıya almanız ya da bir dal kod getting run olup olmadığını gösterir.
 
 1. Uygulamayı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama > hata **ayıklamayı Başlat**).
 
@@ -418,7 +420,7 @@ Bu senaryo için Chrome ' ı kullanın.
 
     `msedge --remote-debugging-port=9222`
 
-    veya
+    veya,
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
@@ -439,13 +441,13 @@ Bu senaryo için Chrome ' ı kullanın.
 
     *App-Bundle. js*için, aşağıdaki çizimde gösterildiği gibi `render()` işlevindeki kesme noktasını ayarlayın:
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Transpiled *App-Bundle. js* dosyasında `render()` işlevini bulmak için **CTRL**+**F** (**Düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
 
     *App. TSX*için, `return` deyimindeki `render()` işlevinin içinde kesme noktası ayarlayın.
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
+    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
 
 2. Kesme noktasını *. TSX* dosyasında ( *App-Bundle. js*yerine) ayarlıyorsanız, *WebPack-config. js*' yi güncelleştirmeniz gerekir. Aşağıdaki kodu değiştirin:
 
@@ -455,7 +457,7 @@ Bu senaryo için Chrome ' ı kullanın.
     },
     ```
 
-    Şu kodla:
+    Bu kod ile:
 
     ```javascript
     output: {
@@ -495,10 +497,10 @@ Bu senaryo için Chrome ' ı kullanın.
     ::: moniker range=">=vs-2019"
     Aşağıdaki örnekte bunun Microsoft Edge (Kmıum) tarayıcısı için nasıl göründüğü gösterilmektedir.
 
-    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
+    ![İşleme ekle öğesi kullanılarak bir işleme eklenirken tek bir işlem için verileri gösterir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
+    ![İşleme ekle öğesi kullanılarak bir işleme eklenirken tek bir işlem için verileri gösterir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
     Visual Studio 'da DOM Gezgini ve JavaScript konsolu açıldığında hata ayıklayıcının doğru şekilde eklenmiş olduğunu bilirsiniz. Bu hata ayıklama araçları, Microsoft Edge için Chrome Geliştirici Araçları ve F12 araçlarına benzerdir.
     ::: moniker-end
@@ -524,4 +526,4 @@ Bu senaryo için Chrome ' ı kullanın.
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Uygulamayı Linux 'a dağıtma App Service](../javascript/publish-nodejs-app-azure.md)
+> [Uygulamayı Linux App Service'e dağıtma](../javascript/publish-nodejs-app-azure.md)

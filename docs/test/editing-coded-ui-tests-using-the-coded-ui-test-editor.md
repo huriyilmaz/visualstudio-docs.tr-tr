@@ -6,17 +6,17 @@ f1_keywords:
 - vs.codedUItest.testeditor
 helpviewer_keywords:
 - coded UI test, Coded UI Test Editor
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 971b5d178a777b7a0021eda4bfccab06727981ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 1e861c31fa2959c3bace008af7937f6686b2705f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664995"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589662"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi 'Ni kullanarak kodlanmış UI testlerini düzenleme
 
@@ -74,9 +74,9 @@ Kodlanmış UI test düzenleyicisini kullanarak, test yöntemlerinizin tüm Kull
 
 Bir UI eyleminin özelliklerini değiştirmek için, **UI eylemi** bölmesinde, özelliklerini düzenlemek ISTEDIĞINIZ bir UI eylemi içeren test yöntemini genişletin, Kullanıcı arabirimi eylemini seçin ve ardından Özellikler penceresi kullanarak özellikleri değiştirin.
 
-Örneğin, bir sunucu kullanılamaz durumdaysa ve Web tarayıcınızla ilişkili bir Kullanıcı Arabirimi eylemi varsa, **' <http://Contoso1/default.aspx> ' Web sayfasına gitiyorsa**, URL 'yi `'http://Contoso2/default.aspx'` olarak değiştirebilirsiniz.
+Örneğin, bir sunucu kullanılamaz durumdaysa ve Web tarayıcınızla ilişkili bir Kullanıcı Arabirimi eylemi varsa, **'<http://Contoso1/default.aspx>' Web sayfasına gitiyorsa**, URL 'yi `'http://Contoso2/default.aspx'`olarak değiştirebilirsiniz.
 
-![Denetim Özellikleri](../test/media/codeduitestcontrolprop.png)
+![Denetim özellikleri](../test/media/codeduitestcontrolprop.png)
 
 Bir denetimin özelliklerini değiştirmek, UI eylemleriyle aynı şekilde yapılır. **UI denetim Haritası** bölmesinde, düzenlemek istediğiniz denetimi seçin ve **Özellikler penceresini kullanarak özelliklerini değiştirin** .
 
@@ -88,7 +88,7 @@ Değişikliklerinizi tamamladıktan sonra, Visual Studio araç çubuğunda **Kay
 
 - **Özellikler** penceresi görüntülenmiyorsa, **ENTER**tuşuna basarak **alt** tuşunu basılı tutun veya **F4**tuşuna basın.
 
-- Yaptığınız özellik değişikliklerini geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** +**Z**' ye basın.
+- Yaptığınız özellik değişikliklerini geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL**+**Z**' ye basın.
 
 - Visual Studio 'da **Bul ve Değiştir** aracını açmak IÇIN kodlanmış UI Test Düzenleyicisi araç çubuğundaki **bul** düğmesini kullanabilirsiniz. Daha sonra, kodlanmış UI test düzenleyicisinde bir kullanıcı arabirimi eylemini bulmak için **bul** denetimini kullanabilirsiniz. Örneğin, "Click ' Login' düğmesini bulmayı deneyebilirsiniz." Bu, büyük testlerde yararlı olabilir. Kodlanmış UI test düzenleyicisinde **Bul ve Değiştir** aracında değiştirme işlevini kullanamazsınız. Daha fazla bilgi için bkz. [bulma ve değiştirme metin](../ide/finding-and-replacing-text.md)Içinde denetimi bulma.
 
@@ -117,11 +117,11 @@ UI eylemlerini daraltmak için bir test yöntemini bölebilir veya ayarlayabilir
 Yöntemi bölmeyi tamamladıktan sonra, Visual Studio araç çubuğunda **Kaydet** ' i seçerek *UIMap. Designer* dosyasındaki değişiklikleri kaydedin.
 
 > [!WARNING]
-> Bir yöntemi bölemeseniz, mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerekir, bu kullanıcı arabirimi eylemlerinin hala dahil edilmesini istiyorsanız oluşturmak üzere olduğunuz yeni yöntemi de çağırır. Bir yöntemi böldüğünüz zaman bir Microsoft Visual Studio iletişim kutusu görüntülenir. Ayrıca, oluşturmak üzere olduğunuz yeni yöntemi çağırmak için mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerektiğini uyarır. **Evet**' i seçin.
+> Bir yöntemi bölemeseniz, mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerekir, bu kullanıcı arabirimi eylemlerinin hala dahil edilmesini istiyorsanız oluşturmak üzere olduğunuz yeni yöntemi de çağırır. Bir yöntemi böldüğünüz zaman bir Microsoft Visual Studio iletişim kutusu görüntülenir. Ayrıca, oluşturmak üzere olduğunuz yeni yöntemi çağırmak için mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerektiğini uyarır. Seçin **Evet**.
 
 ### <a name="tips"></a>İpuçları
 
-- Bölmeyi geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** +**Z**' ye basın.
+- Bölmeyi geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL**+**Z**' ye basın.
 
 - Yeni yöntemi yeniden adlandırabilirsiniz. **UI eylemleri** bölmesinde seçin ve kodlanmış UI Test Düzenleyicisi araç çubuğundaki **Yeniden Adlandır** düğmesini seçin.
 
@@ -129,7 +129,7 @@ Yöntemi bölmeyi tamamladıktan sonra, Visual Studio araç çubuğunda **Kaydet
 
    Yeni test yönteminin kısayol menüsünü açın ve **Yeniden Adlandır**' ı seçin.
 
-   Microsoft Visual Studio iletişim kutusu görüntülenir. Yönteme başvuran tüm kodları değiştirmeniz gerektiğini uyarır. **Evet**' i seçin.
+   Microsoft Visual Studio iletişim kutusu görüntülenir. Yönteme başvuran tüm kodları değiştirmeniz gerektiğini uyarır. Seçin **Evet**.
 
 ## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a>Özelleştirmeyi kolaylaştırmak için bir test yöntemini UIMap dosyasına taşıyın
 
@@ -140,11 +140,11 @@ Kodlanmış UI testinizde test yöntemlerinizin birinin özel kod gerektirdiğin
 Yöntemi taşımayı tamamladıktan sonra, Visual Studio araç çubuğunda **Kaydet** ' i seçerek *UIMap. Designer* dosyasına değişiklikleri kaydedin.
 
 > [!WARNING]
-> Bir yöntemi taşındıktan sonra, kodlanmış UI test düzenleyicisini kullanarak artık düzenleyemezsiniz. Özel kodunuzu eklemeli ve Kod Düzenleyicisi'ni kullanarak korumalısınız. Bir yöntemi taşıdığınızda bir Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntemin *Umap. UITest* dosyasından *UIMap.cs* veya *umap. vb* dosyasına taşınacağını ve artık kodlanmış UI test düzenleyicisini kullanarak yöntemi düzenleyemeyeceksiniz. **Evet**' i seçin.
+> Bir yöntemi taşındıktan sonra, kodlanmış UI test düzenleyicisini kullanarak artık düzenleyemezsiniz. Özel kodunuzu eklemeli ve Kod Düzenleyicisi'ni kullanarak korumalısınız. Bir yöntemi taşıdığınızda bir Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntemin *Umap. UITest* dosyasından *UIMap.cs* veya *umap. vb* dosyasına taşınacağını ve artık kodlanmış UI test düzenleyicisini kullanarak yöntemi düzenleyemeyeceksiniz. Seçin **Evet**.
 
 ### <a name="tips"></a>İpuçları
 
-Taşımayı geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** +**Z**' ye basın. Ancak, kodu *UIMap.cs* veya *umap. vb* dosyasından el ile kaldırmanız gerekir.
+Taşımayı geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL**+**Z**' ye basın. Ancak, kodu *UIMap.cs* veya *umap. vb* dosyasından el ile kaldırmanız gerekir.
 
 ## <a name="locate-a-ui-control-in-the-application-under-test"></a>Test edilen uygulamada bir UI denetimini bulma
 

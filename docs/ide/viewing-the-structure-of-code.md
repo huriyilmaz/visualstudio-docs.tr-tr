@@ -20,17 +20,17 @@ helpviewer_keywords:
 - Visual Studio, call hierarchy window
 - class view
 - object browser
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fc7ade360ac586f09eb838057251172be5d0e81
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b73a4660c9e0dad66ceb73c04852601765174264
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647299"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594207"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>Farklı araç pencerelerini kullanarak kodun yapısını görüntüleme
 
@@ -119,7 +119,7 @@ Ana bölmede, yöntemine ve yönteminden yapılan çağrılar görüntülenir ve
 |**Tanıma Git**|Bir yöntemin orijinal tanımına gider.|
 |**Tüm başvuruları bul**|Seçili yönteme ait tüm başvuruları projede bulur.|
 |**Kopyala**|Seçili düğümü kopyalar (alt düğümleri değil).|
-|**Yenileyebilir**|Bilgileri yeniler.|
+|**Yenileme**|Bilgileri yeniler.|
 
 ## <a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
 
@@ -200,9 +200,9 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |||
 |-|-|
 |**Hızlı Eylemler ve yeniden düzenlemeler**||
-|**Yeniden Adlandır**||
+|**Rename**||
 |**Ekleme dosyalarının grafiğini oluştur**||
-|**Açıklama Özeti**||
+|**Tanıma göz at**||
 |**Tanıma Git**|Tanımı (veya kısmi sınıflar için tanımları) bulur ve **sonuçları bul** penceresinde görüntüler.|
 |**Bildirime git**||
 |**Tüm başvuruları bul**|Çözümdeki türe veya üyeye başvuruları bulur.|
@@ -211,8 +211,8 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |**Testleri Çalıştır**|Projede birim testleri varsa, seçilen kod için testleri çalıştırır.|
 |**Hata ayıklama testleri**||
 |**Ilı**|Bir kesme noktası (veya izleme noktası) ekler.|
-|**Imlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
-|**Gösterildiği**||
+|**İmlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
+|**Kod parçacığı**||
 |**Kes**, **Kopyala**, **Yapıştır**||
 |**Ek Açıklama**||
 |**Anahat Oluşturma**|Standart ana hat komutları.|

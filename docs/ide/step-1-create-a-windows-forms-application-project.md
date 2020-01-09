@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 897c4ba0bfa46e73115f8288770d088346498dee
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 0a1c0184c11b745ef6c83c35b524884a139bc3d8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516701"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588791"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1\. Adım: Windows Forms uygulama projesi oluşturma
 
@@ -25,16 +25,16 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 ## <a name="open-visual-studio-2017"></a>Visual Studio 2017 'yi açın
 
-1. Menü çubuğunda **dosya**  > **Yeni**  > **Proje**' yi seçin. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
+1. Menü çubuğunda, **dosya** > **yeni** > **proje**. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
-     ![New proje iletişim ](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje*** *iletişim kutusu*
+     Yeni proje iletişim kutusunu ![](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje*** *iletişim kutusu*
 
 2. **Yeni proje** iletişim kutusunun sol tarafında, **görsel C#**  veya **Visual Basic**' yi seçin ve ardından **Windows Masaüstü**' nu seçin.
 
 3. Proje şablonları listesinde **Windows Forms uygulama (.NET Framework)** öğesini seçin. Yeni formu *PictureViewer olarak adlandırın*olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
     >[!NOTE]
-    >**Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>Visual Studio Yükleyicisi ](../ide/media/dot-net-desktop-dev-workload.png) .NET masaüstü geliştirme iş yükünü ![<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
+    >**Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>Visual Studio Yükleyicisi](../ide/media/dot-net-desktop-dev-workload.png) .NET masaüstü geliştirme iş yükünü ![<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
 
 ::: moniker-end
 
@@ -59,7 +59,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
    >
    > Sonra, Visual Studio Yükleyicisi **.net masaüstü geliştirme** Iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi .NET Core iş yükü](../ide/media/install-dot-net-desktop-env.png)
+   > ![Visual Studio Yükleyicisi'nde .NET core iş yükü](../ide/media/install-dot-net-desktop-env.png)
    >
    > Bundan sonra Visual Studio Yükleyicisi **Değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin.
 
@@ -73,9 +73,9 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
 
 1. Geliştirme ortamı üç pencere içerir: Ana pencere, **Çözüm Gezgini**ve **Özellikler** penceresi.
 
-     Bu pencerelerin herhangi biri eksikse, varsayılan pencere yerleşimini geri yükleyebilirsiniz. Menü çubuğunda **pencere**  > **pencere yerleşimini Sıfırla**' yı seçin.
+     Bu pencerelerin herhangi biri eksikse, varsayılan pencere yerleşimini geri yükleyebilirsiniz. Menü çubuğunda **pencere** > **pencere yerleşimini Sıfırla**' yı seçin.
 
-     Ayrıca, menü komutlarını kullanarak da Windows görüntüleyebilirsiniz. Menü çubuğunda, **görünüm**  > **Özellikler penceresi** ' ni veya **Çözüm Gezgini**' ı seçin.
+     Ayrıca, menü komutlarını kullanarak da Windows görüntüleyebilirsiniz. Menü çubuğunda, **görünüm** > **Özellikler penceresi** ' ni veya **Çözüm Gezgini**' ı seçin.
 
      Başka herhangi bir pencere açıksa, sağ üst köşelerindeki **Kapat** (x) düğmesini seçerek onları kapatın.
 
@@ -100,11 +100,11 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
       > [!NOTE]
       > **Çözüm Gezgini** en üstteki satır, Visual Studio 'nun sizin için bir çözüm oluşturduğu anlamına gelen **' PictureViewer olarak adlandırın ' (1 proje) çözümünü**gösterir. Bir çözüm birden fazla proje içerebilir, ancak şimdilik yalnızca bir proje içeren çözümlerle çalışırsınız.
 
-1. Menü çubuğunda **dosya**  > **Tümünü Kaydet**' i seçin.
+1. Menü çubuğunda **dosya** > **Tümünü Kaydet**' i seçin.
 
      Alternatif olarak, aşağıdaki görüntüde gösterildiği gibi, araç çubuğunda **Tümünü Kaydet** düğmesini seçin.
 
-     Tüm araç çubuğu düğmesini ![Save ](../ide/media/express_iconsaveall.png)<br/>
+     ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express_iconsaveall.png)<br/>
      ***Tümünü Kaydet*** *araç çubuğu düğmesi*
 
      Visual Studio, klasör adı ve proje adını otomatik olarak doldurur ve projeyi projeler klasörünüze kaydeder.

@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Options dialog box, Web settings
 - Internet Explorer, setting options
 ms.assetid: 586db4eb-032d-4cb5-93a6-a7c14de1ae49
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae83add4db8e45fca1b97b9c4148cea5bcba0947
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8915bef3bba477dd515b1d176971cfb9949e9899
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72621907"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596508"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: ortam \> Web tarayıcısı
 
 Hem iç Web tarayıcısı hem de Internet Explorer seçeneklerini ayarlar. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **ortam** klasörünü genişletin ve **Web tarayıcısı**' nı seçin.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [ayarlarına](../environment-settings.md#reset-settings).
 
 > [!IMPORTANT]
 > Web 'den belirli dosyaları veya bileşenleri açmak, bilgisayarınızda kod yürütebilir.
@@ -56,7 +56,7 @@ IDE Web tarayıcısını açtığınızda görünen sayfayı ayarlar.
 
 - **Dış düzenleyici** Kaynağı başka bir düzenleyicide görüntülemek için seçin. Seçtiğiniz düzenleyicinin yolunu belirtin; örneğin, Notepad. exe.
 
-## <a name="internet-explorer-options"></a>Internet Explorer seçenekleri
+## <a name="internet-explorer-options"></a>Internet Explorer Seçenekleri
 
 İnternet **özellikleri** Iletişim kutusunda Internet Explorer seçeneklerini değiştirmek için tıklayın. Bu iletişim kutusunda yapılan değişiklikler hem iç Web tarayıcısını hem de Visual Studio IDE dışında başlatılan Internet Explorer örneklerini (örneğin, Başlat menüsünden) etkiler.
 

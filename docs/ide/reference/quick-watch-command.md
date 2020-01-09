@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Quick Watch command
 - Debug.Quickwatch command
 ms.assetid: 9670ac3a-8f2f-4874-974d-cb87d3b0cde1
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1de6841f25bcc6f6c45bde93fdd4cf2cb49481ab
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8f6382a79884bf8c3891a3a191b594bf183efb62
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747812"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565636"
 ---
 # <a name="quick-watch-command"></a>Hızlı Bakış Komutu
 [QuickWatch](../../debugger/watch-and-quickwatch-windows.md) penceresinin Expression alanında seçili veya belirtilen metni görüntüler. Bu iletişim kutusunu, hata ayıklayıcı tarafından tanınan bir değişkenin veya ifadenin geçerli değerini ya da bir kaydın içeriğini hesaplamak için kullanabilirsiniz. Ayrıca, herhangi bir const olmayan değişkenin veya herhangi bir kaydın içeriğinin değerini değiştirebilirsiniz.
@@ -36,7 +36,7 @@ Debug.QuickWatchq [text]
 
 ## <a name="remarks"></a>Açıklamalar
 
-@No__t_0 atlanırsa, imlecin Şu anda seçili olan metni veya sözcüğü izleme penceresi eklenir.
+`text` atlanırsa, imlecin Şu anda seçili olan metni veya sözcüğü izleme penceresi eklenir.
 
 ## <a name="example"></a>Örnek
 

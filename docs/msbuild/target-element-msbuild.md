@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Target element [MSBuild]
 - <Target> element [MSBuild]
 ms.assetid: 350f6fc2-86b3-45f2-a31e-ece0e6bd4dca
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1748064482e13eba95e9aa83e9cb04c93b8066f
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: c69ee5758d5c6e513af853a8d7589057c6537956
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491624"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566429"
 ---
 # <a name="target-element-msbuild"></a>Target öğesi (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sırayla yürütebilmesi için bir görev kümesi içerir.
@@ -72,7 +72,7 @@ ms.locfileid: "74491624"
 
 | Öğe | Açıklama |
 | - | - |
-| [Görevinin](../msbuild/task-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevin örneğini oluşturur ve yürütür. Hedefte sıfır veya daha fazla görev olabilir. |
+| [Görev](../msbuild/task-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevin örneğini oluşturur ve yürütür. Hedefte sıfır veya daha fazla görev olabilir. |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Kullanıcı tanımlı `Property` öğeleri kümesi içerir. .NET Framework 3,5 ' den başlayarak `Target` bir öğe `PropertyGroup` öğeleri içerebilir. |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Kullanıcı tanımlı `Item` öğeleri kümesi içerir. .NET Framework 3,5 ' den başlayarak `Target` bir öğe `ItemGroup` öğeleri içerebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md). |
 | [OnError](../msbuild/onerror-element-msbuild.md) | Başarısız bir görevin `ContinueOnError` özniteliği Errportadstop (veya `false`) ise, bir veya daha fazla hedefin yürütülmesine neden olur. Bir hedefte sıfır veya daha fazla `OnError` öğe olabilir. `OnError` öğeler varsa, bu öğelerin `Target` öğesindeki son öğeler olması gerekir.<br /><br /> `ContinueOnError` özniteliği hakkında daha fazla bilgi için bkz. [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). |
@@ -81,7 +81,7 @@ ms.locfileid: "74491624"
 
 | Öğe | Açıklama |
 | - | - |
-| [Proje](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
  Yürütülecek ilk hedef çalışma zamanında belirtilir. Hedeflerin diğer hedeflere bağımlılıkları olabilir. Örneğin, dağıtım hedefi, derleme için bir hedefe bağlıdır. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısı, bağımlılıkları `DependsOnTargets` özniteliğinde göründükleri sırada (soldan sağa) yürütür. Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md).

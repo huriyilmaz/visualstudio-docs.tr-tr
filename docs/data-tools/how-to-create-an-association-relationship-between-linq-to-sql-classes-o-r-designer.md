@@ -3,20 +3,20 @@ title: LINQ to SQL sınıfları arasındaki ilişkiler (O/R Tasarımcısı)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 13443dd25719caad5002b29a33975a0dbc5850f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fb81cf17de86a11d2373f6a545b3efc78e65ada9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641895"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586477"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Nasıl yapılır: LINQ to SQL sınıfları arasında ilişki oluşturma (O/R Designer)
-@No__t_0 varlık sınıfları arasındaki ilişkilendirmeler, bir veritabanındaki tablolar arasındaki ilişkilerle benzerdir. **Ilişki düzenleyici** iletişim kutusunu kullanarak varlık sınıfları arasında ilişkiler oluşturabilirsiniz.
+[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] varlık sınıfları arasındaki ilişkilendirmeler, bir veritabanındaki tablolar arasındaki ilişkilerle benzerdir. **Ilişki düzenleyici** iletişim kutusunu kullanarak varlık sınıfları arasında ilişkiler oluşturabilirsiniz.
 
 İlişki oluşturmak için **Ilişkilendirme düzenleyici** iletişim kutusunu kullandığınızda bir üst sınıf ve alt sınıf seçmelisiniz. Ana sınıf, birincil anahtarı içeren varlık sınıfıdır; alt sınıf, yabancı anahtarı içeren varlık sınıfıdır. Örneğin, `Northwind Customers` ve `Orders` tabloları ile eşlenen varlık sınıfları oluşturulduysa, `Customer` sınıfı üst sınıf olur ve `Order` sınıfı alt sınıf olur.
 
@@ -29,8 +29,8 @@ Bir ilişki oluşturduktan sonra, **O/R tasarımcısında**ilişkilendirmeyi se�
 |Özellik|Açıklama|
 |--------------|-----------------|
 |**İte**|İlişkilendirmenin bire çok veya bire bir olduğunu denetler.|
-|**Alt özellik**|Üst öğede, ilişkilendirmenin yabancı anahtar tarafındaki alt kayıtlara yönelik bir koleksiyon veya başvuru olan bir özellik oluşturulup oluşturulmayacağını belirtir. Örneğin, `Customer` ve `Order` arasındaki ilişkilendirmede, **alt özelliği** **true**olarak ayarlanırsa, ana sınıfta `Orders` adlı bir özellik oluşturulur.|
-|**Parent özelliği**|İlişkili üst sınıfa başvuran alt sınıftaki özellik. Örneğin, `Customer` ve `Order` arasındaki ilişkide, `Order` sınıfında bir sipariş için ilişkili müşteriye başvuran `Customer` adlı bir özellik oluşturulur.|
+|**Alt özellik**|Üst öğede, ilişkilendirmenin yabancı anahtar tarafındaki alt kayıtlara yönelik bir koleksiyon veya başvuru olan bir özellik oluşturulup oluşturulmayacağını belirtir. Örneğin, `Customer` ve `Order`arasındaki ilişkilendirmede, **alt özelliği** **true**olarak ayarlanırsa, ana sınıfta `Orders` adlı bir özellik oluşturulur.|
+|**Parent özelliği**|İlişkili üst sınıfa başvuran alt sınıftaki özellik. Örneğin, `Customer` ve `Order`arasındaki ilişkide, `Order` sınıfında bir sipariş için ilişkili müşteriye başvuran `Customer` adlı bir özellik oluşturulur.|
 |**Katılım özellikleri**|İlişki özelliklerini görüntüler ve **Ilişkilendirme düzenleyici** iletişim kutusunu yeniden açan **üç nokta** düğmesini (...) sağlar.|
 |**Eşi**|Yabancı hedef sütunlarının benzersizlik kısıtlaması olup olmadığını belirtir.|
 

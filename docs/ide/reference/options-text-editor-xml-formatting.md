@@ -5,25 +5,25 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 203e60b2-7b80-4ff4-9fa1-aa9f4374377b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ccd5fdee974e7222d1009b508b7ef90758fafcb6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5dabfbc4f705d7de9fa881f373994714e43d26a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666598"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568145"
 ---
 # <a name="options-text-editor-xml-formatting"></a>Seçenekler, metin düzenleyici, XML, biçimlendirme
 
-Öğelerin ve özniteliklerin XML belgelerinizde nasıl biçimlendirileceğini belirtmek için **biçimlendirme** seçenekleri sayfasını kullanın. XML biçimlendirme seçeneklerine erişmek için **araçlar**  > **Seçenekler**  > **metin Düzenleyicisi**  > **XML**' i seçin ve ardından **biçimlendirme**' yi seçin.
+Öğelerin ve özniteliklerin XML belgelerinizde nasıl biçimlendirileceğini belirtmek için **biçimlendirme** seçenekleri sayfasını kullanın. XML biçimlendirme seçeneklerine erişmek için **araçlar** > **Seçenekler** > **metin Düzenleyicisi** > **XML**' i seçin ve ardından **biçimlendirme**' yi seçin.
 
-## <a name="attributes"></a>Öznitelikler
+## <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
 
 **El ile öznitelik biçimlendirmesini koru**
 
-Öznitelikleri yeniden biçimlendirmeyin. Bu ayar varsayılandır.
+Öznitelikleri yeniden biçimlendirmeyin. Bu, varsayılan ayardır.
 
 > [!NOTE]
 > Öznitelikler birden çok satırda varsa, düzenleyici her bir öznitelik satırını üst öğenin girintilemesi ile eşleşecek şekilde girintiler.
@@ -53,7 +53,7 @@ Bitiş etiketi tamamlandığında öğeyi yeniden biçimlendirin.
 
 **Karma içeriği varsayılan olarak biçimlendirin.**
 
-İçeriğin bir `xml:space="preserve"` kapsamında bulunması dışında, karışık içeriği yeniden biçimlendirme girişimi. Bu ayar varsayılandır.
+İçeriğin bir `xml:space="preserve"` kapsamında bulunması dışında, karışık içeriği yeniden biçimlendirme girişimi. Bu, varsayılan ayardır.
 
 Bir öğe metin ve biçimlendirme karışımı içeriyorsa, içerik karışık içerik olarak kabul edilir. Aşağıda, karışık içerikli bir öğe örneği verilmiştir.
 

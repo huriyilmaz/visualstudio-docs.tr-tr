@@ -9,17 +9,17 @@ helpviewer_keywords:
 - n-tier applications, creating
 - n-tier applications, walkthroughs
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8fad79423465ac3d90c426862f93f09d721c7df3
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: f84e334409f4e3546d8963a51bb5cf79b31f0afd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806983"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585970"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>İzlenecek yol: n katmanlı veri uygulaması oluşturma
 *N katmanlı* veri uygulamaları, verilere erişen ve birden çok mantıksal katmana veya katmana ayrılan *uygulamalardır.* Uygulama bileşenlerini farklı katmanlara ayırmak uygulamanızın yönetilebilirliğini ve ölçeklenebilirliğini artırır. Bunu, tüm çözümü yeniden tasarlamanıza gerek kalmadan tek bir katmana uygulanabilen yeni teknolojilerin daha kolay benimsenmesini sağlayarak yapar. N katmanlı mimaride bir sunu katmanı, bir orta katman ve bir veri katmanı bulunur. Orta katmanda genellikle bir veri erişim katmanı, iş mantığı katmanı ve kimlik doğrulaması ve doğrulama gibi paylaşılan bileşenler bulunur. Veri katmanında ilişkisel bir veritabanı vardır. N katmanlı uygulamalar hassas bilgileri orta katmanın veri erişimi katmanında depolayarak sunu katmanına erişimi olan son kullanıcılardan uzakta tutulmasını sağlar. Daha fazla bilgi için bkz. [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md).
@@ -63,7 +63,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
@@ -75,7 +75,7 @@ Bu kılavuzun ilk adımı bir çözüm ve iki sınıf kitaplığı projesi oluş
 
 ### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>N katmanlı çözüm ve DataEntityTier sınıf kitaplığı oluşturmak için
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -92,7 +92,7 @@ DataEntityTier projesini oluşturduktan sonraki adım başka bir sınıf kitapl�
 
 ### <a name="to-create-a-separate-class-library-for-the-tableadapters"></a>TableAdapters için ayrı bir sınıf kitaplığı oluşturmak için
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve > **Yeni proje** **Ekle** ' yi seçin.
 
 2. **Yeni proje** iletişim kutusunda, Orta bölmede, **sınıf kitaplığı**' nı seçin.
 
@@ -110,7 +110,7 @@ Sonraki adım türü belirtilmiş bir veri kümesi oluşturmaktır. Türü belir
 
 1. **Çözüm Gezgini**içinde **DataAccessTier** seçin.
 
-2. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
+2. Üzerinde **veri** menüsünde **veri kaynaklarını Göster**.
 
    **Veri kaynakları** penceresi açılır.
 
@@ -152,7 +152,7 @@ Veri kümesi oluşturduktan sonra, üretilen veri kümesi sınıfını TableAdap
 
 4. **Veri kümesi proje** listesinde **DataEntityTier**' ı seçin.
 
-5. **Build** menüsünde **Build Solution**' ı seçin.
+5. Üzerinde **derleme** menüsünde **Çözümü Derle**.
 
    Veri kümesi ve TableAdapter bağdaştırıcıları iki sınıf kitaplığı projesine ayrılır. Başlangıçta tüm veri kümesini (`DataAccessTier`) içeren proje artık yalnızca TableAdapters içerir. **DataSet proje** özelliğinde (`DataEntityTier`) belirtilen proje türü belirtilmiş veri kümesini Içerir: *NorthwindDataSet. DataSet. Designer. vb* (veya *NorthwindDataSet.DataSet.Designer.cs*).
 
@@ -164,7 +164,7 @@ Bu kılavuzda, bir WCF hizmeti kullanılarak veri erişim katmanına nasıl eri�
 
 ### <a name="to-create-a-new-wcf-service-application"></a>Yeni bir WCF Hizmeti uygulaması oluşturmak için
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve > **Yeni proje** **Ekle** ' yi seçin.
 
 2. **Yeni proje** iletişim kutusunda, sol taraftaki bölmede, **WCF**' yi seçin. Orta bölmede, **WCF hizmet kitaplığı**' nı seçin.
 
@@ -173,7 +173,7 @@ Bu kılavuzda, bir WCF hizmeti kullanılarak veri erişim katmanına nasıl eri�
      DataService projesi oluşturulur ve NTierWalkthrough çözümüne eklenir.
 
 ## <a name="create-methods-in-the-data-access-tier-to-return-the-customers-and-orders-data"></a>Müşteriler ve siparişler verilerini döndürmek için veri erişim katmanında Yöntemler oluşturun
-Veri hizmeti, veri erişim katmanında iki yöntemi çağırmalıdır: `GetCustomers` ve `GetOrders`. Bu yöntemler, Northwind `Customers` ve `Orders` tabloları döndürür. @No__t_2 projesinde `GetCustomers` ve `GetOrders` yöntemlerini oluşturun.
+Veri hizmeti, veri erişim katmanında iki yöntemi çağırmalıdır: `GetCustomers` ve `GetOrders`. Bu yöntemler, Northwind `Customers` ve `Orders` tabloları döndürür. `DataAccessTier` projesinde `GetCustomers` ve `GetOrders` yöntemlerini oluşturun.
 
 ### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>Veri erişim katmanında Customers tablosunu döndüren bir yöntem oluşturmak için
 
@@ -205,7 +205,7 @@ Veri hizmeti, veri erişim katmanında iki yöntemi çağırmalıdır: `GetCusto
 
 6. **Son**'a tıklayın.
 
-7. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+7. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="add-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Veri hizmetine veri varlığa ve veri erişim katmanlarına bir başvuru ekleyin
 Veri hizmeti veri kümesinden ve TableAdapters bilgi gerektirdiğinden, **DataEntityTier** ve **DataAccessTier** projelerine başvurular ekleyin.
@@ -218,7 +218,7 @@ Veri hizmeti veri kümesinden ve TableAdapters bilgi gerektirdiğinden, **DataEn
 
 3. Hem **DataAccessTier** hem de **DataEntityTier** projelerini seçin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**'ı tıklatın.
 
 ## <a name="add-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Veri erişim katmanında GetCustomers ve GetOrders yöntemlerini çağırmak için hizmete işlevler ekleyin
 Şimdi veri erişim katmanında veri döndürme yöntemleri bulunduğuna göre, veri erişim katmanındaki yöntemleri çağırmak için veri hizmetinde yöntemler oluşturun.
@@ -281,14 +281,14 @@ Veri hizmeti veri kümesinden ve TableAdapters bilgi gerektirdiğinden, **DataEn
     }
     ```
 
-5. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+5. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="create-a-presentation-tier-to-display-data-from-the-data-service"></a>Veri hizmetinden verileri göstermek için bir sunum katmanı oluşturma
 Artık çözüm, veri erişim katmanına çağrı yapan yöntemlere sahip veri hizmetini içerdiğinden, veri hizmetine çağıran ve verileri kullanıcılara sunan başka bir proje oluşturun. Bu kılavuz için bir Windows Forms uygulaması oluşturun; bu n katmanlı uygulamanın sunu katmanıdır.
 
 ### <a name="to-create-the-presentation-tier-project"></a>Sunu katmanı projesi oluşturmak için
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve > **Yeni proje** **Ekle** ' yi seçin.
 
 2. **Yeni proje** iletişim kutusunda, sol taraftaki bölmede **Windows Masaüstü**' nü seçin. Orta bölmede **Windows Forms uygulama**' yı seçin.
 
@@ -358,7 +358,7 @@ Hizmet başvurusunu veri hizmetine ekledikten sonra, **veri kaynakları** pencer
     ```
 
 ## <a name="increase-the-maximum-message-size-allowed-by-the-service"></a>Hizmet tarafından izin verilen en büyük ileti boyutunu artırın
-@No__t_0 için varsayılan değer `Customers` ve `Orders` tablolarından alınan verileri tutabilecek kadar büyük değildir. Aşağıdaki adımlarda değeri 6553600 olarak artıracaksınız. İstemci üzerinde, hizmet başvurusunu otomatik olarak güncelleştiren değeri değiştirirsiniz.
+`maxReceivedMessageSize` için varsayılan değer `Customers` ve `Orders` tablolarından alınan verileri tutabilecek kadar büyük değildir. Aşağıdaki adımlarda değeri 6553600 olarak artıracaksınız. İstemci üzerinde, hizmet başvurusunu otomatik olarak güncelleştiren değeri değiştirirsiniz.
 
 > [!NOTE]
 > Varsayılan alt sınır boyutu hizmet reddi (DoS) saldırılarına maruz kalmayı sınırlamak içindir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>.
@@ -367,10 +367,10 @@ Hizmet başvurusunu veri hizmetine ekledikten sonra, **veri kaynakları** pencer
 
 1. **Çözüm Gezgini**, **PresentationTier** projesindeki **app. config** dosyasına çift tıklayın.
 
-2. **Maxreceived ileti** boyutu özniteliğini bulun ve değeri `6553600` değiştirin.
+2. **Maxreceived ileti** boyutu özniteliğini bulun ve değeri `6553600`değiştirin.
 
-## <a name="test-the-application"></a>Uygulamayı test etme
-**F5**tuşuna basarak uygulamayı çalıştırın. @No__t_0 ve `Orders` tablolarından alınan veriler veri hizmetinden alınır ve formda görüntülenir.
+## <a name="test-the-application"></a>Uygulamayı test edin
+**F5**tuşuna basarak uygulamayı çalıştırın. `Customers` ve `Orders` tablolarından alınan veriler veri hizmetinden alınır ve formda görüntülenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Uygulama gereksinimlerinize bağlı olarak, Windows tabanlı bir uygulama içinde ilgili verileri kaydettikten sonra gerçekleştirmek isteyebileceğiniz birkaç adım vardır. Örneğin, bu uygulamada aşağıdaki geliştirmeleri yapabilirsiniz:

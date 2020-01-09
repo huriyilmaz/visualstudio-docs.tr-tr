@@ -3,17 +3,17 @@ title: Verileri güncelleştirmek için LINQ to SQL saklı yordamları kullanma 
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 019bf6b115fc526e39a3bc65bd9d0607c1a976db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8028171cf3255de3484bb89a374bfc22a2625b1a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648397"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586555"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Nasıl yapılır: güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Designer)
 
@@ -39,7 +39,7 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
 
 3. Saklı yordamı **O/R tasarımcısına**sürükleyin.
 
-     Saklı yordam, yöntem bölmesine bir <xref:System.Data.Linq.DataContext> yöntemi olarak eklenir. Daha fazla bilgi için bkz. [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+     Saklı yordam, yöntem bölmesine bir <xref:System.Data.Linq.DataContext> yöntemi olarak eklenir. Daha fazla bilgi için [DataContext yöntemi (O/R Tasarımcısı)](../data-tools/datacontext-methods-o-r-designer.md).
 
 4. Güncelleştirme gerçekleştirmek için saklı yordamı kullanmak istediğiniz varlık sınıfını seçin.
 
@@ -47,7 +47,7 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
 
 6. **Çalışma zamanı kullan** **iletişim kutusunu** açmak için sözcüklerin yanındaki üç nokta (...) simgesine tıklayın.
 
-7. **Özelleştir**' i seçin.
+7. Seçin **özelleştirme**.
 
 8. **Özelleştir** listesinde istenen saklı yordamı seçin.
 
@@ -61,7 +61,7 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
     > [!NOTE]
     > Her bir değişiklik yaptıktan sonra **Uygula** ' ya tıkladığınızda her bir sınıf ve davranış birleşimine yönelik davranışı yapılandırmaya devam edebilirsiniz. **Uygula**' ya tıklamadan önce sınıfı veya davranışı değiştirirseniz, bir uyarı iletişim kutusu görüntülenir ve yaptığınız değişiklikleri uygulamak için size bir fırsat sağlar.
 
-Güncelleştirmeler için varsayılan çalışma zamanı mantığını kullanmaya dönmek için, **Özellikler** penceresinde **Ekle**, **Güncelleştir**ve **Sil** komutunun yanındaki üç noktaya tıklayın ve ardından **Yapılandır davranışındaki** **çalışma zamanını kullan** ' ı seçin. iletişim kutusu.
+Güncelleştirmeler için varsayılan çalışma zamanı mantığını kullanmaya dönmek için, **Özellikler** penceresinde **Ekle**, **Güncelleştir**ve **Sil** komutunun yanındaki üç noktaya tıklayın ve sonra **davranışı Yapılandır** iletişim kutusunda **çalışma zamanını kullan** iletişim kutusunu seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

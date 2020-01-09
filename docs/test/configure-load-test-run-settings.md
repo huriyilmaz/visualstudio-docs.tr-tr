@@ -5,25 +5,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - load tests, configuring run settings
 ms.assetid: 0c86918b-cd63-4468-8f49-6d547a1276dc
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 35da7997e5a0e3260064e6f3de7ac4f9e0740fa4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ffc9d6c2e563fcd16a61e91eaa94889de8607efc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665218"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595988"
 ---
-# <a name="configure-load-test-run-settings"></a>Yük testi çalıştırma ayarlarını yapılandır
+# <a name="configure-load-test-run-settings"></a>Yük testi çalıştırma ayarlarını yapılandırma
 
-*Çalışma ayarları* , yük testinin çalışma biçimini etkileyen bir özellikler kümesidir. Çalışma ayarları, **Özellikler** penceresindeki kategorilere göre düzenlenir.
+*Çalıştırma ayarları* bir yük testinin çalışma biçimini etkileyen özellikler kümesidir. Çalıştırma ayarları kategorilere göre düzenlenir **özellikleri** penceresi.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Yük testinde birden fazla çalışma ayarınız olabilir, ancak çalıştırma ayarlarından yalnızca biri etkin olabilir. Diğer çalışma ayarları, sonraki test çalıştırmaları için kullanılacak alternatif bir ayar seçmek için hızlı bir yol sağlar.
+Bir yük testinde çalışma ayarları, ancak tek çalışma etkin olabilir, birden fazla çalışma ayarı olabilir. Diğer çalışma ayarları çalıştıran alternatif bir ayar sonraki testi için kullanmak üzere seçmek için hızlı bir yol sağlar.
 
-**Yeni Yük Testi Sihirbazı**kullanarak bir yük testi oluşturduğunuzda ilk çalıştırma ayarı oluşturulur.
+İlk çalıştırma ayarı kullanarak bir yük testi oluşturduğunuzda oluşturulan **Yeni Yük Testi Sihirbazı**.
 
 ![Yük testi çalıştırma ayarları](../test/media/loadtestrunsettings.png)
 
@@ -31,12 +31,12 @@ Yük testinde birden fazla çalışma ayarınız olabilir, ancak çalıştırma 
 
 |Görevler|İlişkili Konular|
 |-|-|
-|**Yük testinize daha fazla çalışma ayarı ekleyin:** **Yeni Yük Testi Sihirbazı**çalıştırdığınızda oluşturulan çalıştırma ayarına ek olarak, testi farklı koşullarda çalıştırabilmeniz için yük testinize daha fazla çalışma ayarları ekleyebilirsiniz.|-   [nasıl yapılır: yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md)|
-|**Yük testiyle birlikte kullanılacak etkin çalıştırma ayarını belirtin:** Yük Testi Düzenleyicisi kullanarak, yük testinizdeki kullanmak istediğiniz çalıştırma ayarını seçebilirsiniz. Etkin çalıştırma ayarı "[etkin]" son eki tarafından tanımlanır.|-   [nasıl yapılır: yük testi için etkin çalışma ayarını seçme](../test/how-to-select-the-active-run-setting-for-a-load-test.md)|
-|**Çalışma ayarı özelliklerini Düzenle:** Farklı Çalıştır seçeneklerini (daha fazla bkz. daha fazla gör), test süresini, ısınma süresini, en fazla hata ayrıntısı sayısını belirleme, örnekleme hızı, bağlantı modeli (yalnızca Web performans testleri), sonuçlar depolama türü, doğrulama düzeyi ve SQL izleme. Çalışma ayarları, yük testinizin hedeflerini yansıtmalıdır.|[Yük testi çalıştırma ayarları özelliklerini](../test/load-test-run-settings-properties.md) -   <br />-   [çalışma ayarı özelliklerini değiştirme](../test/load-test-run-settings-properties.md#change-run-setting-properties)|
-|**Yük testi çalıştırma ayarlarında test yineleme sayısını belirtin:** **Test yinelemeleri** özelliğini yapılandırarak yük testlerinizin tüm senaryolarında Web performansının ve birim testlerinin tümünün kaç kez çalıştırılacağını belirtebilirsiniz.|-   [nasıl yapılır: bir çalışma ayarında test yineleme sayısını belirtme](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)|
-|**Yük testi çalışma ayarı için örnekleme hızını belirtin:** **Örnek hız** özelliğini yapılandırarak yük testinin performans sayacı verilerinin ne sıklıkta toplanacağını belirtebilirsiniz.|-   [nasıl yapılır: örnek hızı belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md)|
-|**Zamanlama Ayrıntıları Depolama seçeneğini belirtin:** **Zamanlama Ayrıntıları Depolama** özelliğini yapılandırarak yük testinin ayrıntılarının nasıl kaydedilmesini istediğinizi belirtebilirsiniz.|-   [nasıl yapılır: zamanlama ayrıntıları depolama özelliğini belirtme](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)|
-|**Sınama kaynağı saklama süresini belirtin:** **Kaynak saklama süresi** özelliğini ayarlayarak belirli bir süre için test kaynaklarını koruyarak test > düzeltmesini > yeniden test etme döngüsünü hızlandırın.|[Yük testini hızlandırmak için kaynakları koruyun](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts) -   |
-|**Bağlam parametrelerini kullan:** Bir dizeyi parametreleştirmek için bağlam parametreleri kullanabilirsiniz. Örneğin, yük testiniz parametreli bir Web sunucusu kullanan bir Web performans testi içeriyorsa, farklı bir sunucuya eşlenen çalışma ayarlarına bir bağlam parametresi ekleyebilirsiniz.|-   [nasıl yapılır: bir çalışma ayarına bağlam parametreleri ekleme](../test/how-to-add-context-parameters-to-a-load-test-run-setting.md)|
-|**Test günlüğü özelliklerini yapılandırma:** Verilerin yük testi çalıştırma ayarlarınızla ilişkili günlüğe ne sıklıkla yazıldığını yapılandırabilirsiniz. Bu, günlük birkaç gigabayt haline gelebileceğinden büyük veya karmaşık bir yük testi çalıştırırken önemli olabilir.<br /><br /> Ayrıca, yük testiniz uygulamanızı hata ayıklamada ve çözümlemede yardımcı olmazsa günlük dosyasını otomatik olarak kaydedilecek şekilde yapılandırabilirsiniz.|[Yük testi günlük ayarlarını değiştirme](../test/modify-load-test-logging-settings.md) -   |
+|**Yük testiniz için daha fazla çalıştırma ayarları ekleme:** çalıştırdığınızda oluşturduğunuz çalışma ayarı yanı sıra **Yeni Yük Testi Sihirbazı**, daha fazla çalıştırma ayarları yük testinize altındaki farklı test çalıştırabilmek ekleyebilirsiniz. koşullar.|-   [Nasıl yapılır: bir yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md)|
+|**Etkin yük testi ile kullanmak için ayarı çalışma belirlemek:** Yük Testi Düzenleyicisini kullanarak yük testi ile kullanmak istediğiniz çalışma ayarını seçebilirsiniz. Etkin çalışma ayarı, "[etkin]" soneki ile tanımlanır.|-   [Nasıl yapılır: etkin çalışma yük testi için ayarı seçin](../test/how-to-select-the-active-run-setting-for-a-load-test.md)|
+|**Çalıştırma ayarı Özellikleri Düzenle:** çalıştırmanız düzenleyebileceğiniz özelliklerini gibi şeyler günlüğe kaydetme seçeneklerini ayarlama (daha aşağıda, test, Isınma Süresi, en fazla hata sayısı uzunluğunu belirleyen bakın), örnekleme hızını, bağlantı bildirilen ayrıntıları Modeli (yalnızca web performans testleri), sonuç depolama türü, doğrulama düzeyi ve SQL izleme. Çalıştırma ayarları yük testinizin hedeflerini yansıtmalıdır.|-   [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md)<br />-   [Çalışma ayarı özelliklerini değiştirme](../test/load-test-run-settings-properties.md#change-run-setting-properties)|
+|**Yük testi çalışma ayarlarında test yineleme sayısını belirtin:** tüm web başarım ve birim testlerinin yük testlerinizin senaryoların tümünde yapılandırarak çalıştırılacak kaç kez belirtebilirsiniz **Test Yinelemeleri** özellik.|-   [Nasıl yapılır: bir çalışma ayarında test yineleme sayısını belirtme](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)|
+|**Yük testi çalışma ayarı için örnekleme oranını belirtin:** yapılandırarak Topla performans sayacı verilerini test yük ne sıklıkla belirtebilirsiniz **örnek hızı** özelliği.|-   [Nasıl yapılır: örnek hızı belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md)|
+|**Zamanlama Ayrıntıları Depolama seçeneği belirtin:** ayrıntılarını yapılandırarak kaydedildi yük testinin nasıl istediğinizi belirtebilirsiniz **Zamanlama Ayrıntıları Deposu** özelliği.|-   [Nasıl yapılır: zamanlama ayrıntıları depolama özelliğini belirtme](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)|
+|**Test kaynak saklama süresini belirtin:** test hızını > Düzeltme > test kaynakları belirli bir süre boyunca koruyarak ayarlayarak döngüsü değişiyorsa **kaynakları saklama süresi** özelliği.|-   [Yük testi hızlandırmak için kaynakların saklanacağı](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts)|
+|**Bağlam parametreleri kullanma:** bir dizeyi parametre haline getirmek için bağlam parametreleri kullanabilirsiniz. Örneğin, yük testinizi bir parametreli web sunucusu kullanan bir web performans testi içeriyorsa, farklı bir sunucuya eşleyen çalışma ayarları için bir bağlam parametresi ekleyebilirsiniz.|-   [Nasıl yapılır: bir çalışma ayarına bağlam parametreleri ekleme](../test/how-to-add-context-parameters-to-a-load-test-run-setting.md)|
+|**Test günlüğü özelliklerini yapılandırma:** ne sıklıkta çalıştırma ayarları yük testi ile ilişkili olan günlük verileri yazılır yapılandırabilirsiniz. Günlük birkaç gigabayt olabilir çünkü büyük veya karmaşık bir yük testi çalıştırırken bu önemli olabilir.<br /><br /> Hata ayıklama ve uygulamanızı analiz etmenize yardımcı olmak yük testi başarısız olduğunda otomatik olarak kaydedilecek günlük dosyası da yapılandırabilirsiniz.|-   [Yük testi günlüğü ayarlarını değiştirme](../test/modify-load-test-logging-settings.md)|

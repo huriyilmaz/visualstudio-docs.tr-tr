@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data [Visual Studio], TableAdapters
 - data [Visual Studio], creating table adapters
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f1403d61dd7a0d36401e449806fdafa6adc533b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e5a557aeeee3fca2bef0367a630dfaca04b3a74
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648600"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586789"
 ---
 # <a name="create-and-configure-tableadapters"></a>TableAdapter’lar oluşturma ve yapılandırma
 
@@ -51,10 +51,10 @@ Araç kutusundan yeni bir TableAdapter sürükleyip **veri kümesi Tasarımcıs�
 
 - Ayrıca, TableAdapter 'ın **Select**, **Insert**, **Update**ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
 
-Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki `CompanyName` sütununa geçtiğinde `@CompanyName` adlı bir parametreyi kabul ederse `@CompanyName` parametresinin **kaynak sütununu** `CompanyName` olarak ayarlayın.
+Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki `CompanyName` sütununa geçtiğinde `@CompanyName` adlı bir parametreyi kabul ederse `@CompanyName` parametresinin **kaynak sütununu** `CompanyName`olarak ayarlayın.
 
 > [!NOTE]
-> SELECT komutuna atanan saklı yordam, sihirbazın bir sonraki adımında adı ettiğiniz TableAdapter 'ın yöntemi çağırarak çalıştırılır. Varsayılan yöntem `Fill`, bu nedenle genellikle SELECT yordamını çalıştırmak için kullanılan kod `TableAdapter.Fill(tableName)`. @No__t_0 varsayılan adı değiştirirseniz, `Fill` adını atadığınız adla değiştirin ve "TableAdapter" değerini TableAdapter 'ın gerçek adıyla değiştirin (örneğin, `CustomersTableAdapter`).
+> SELECT komutuna atanan saklı yordam, sihirbazın bir sonraki adımında adı ettiğiniz TableAdapter 'ın yöntemi çağırarak çalıştırılır. Varsayılan yöntem `Fill`, bu nedenle genellikle SELECT yordamını çalıştırmak için kullanılan kod `TableAdapter.Fill(tableName)`. `Fill`varsayılan adı değiştirirseniz, `Fill` adını atadığınız adla değiştirin ve "TableAdapter" değerini TableAdapter 'ın gerçek adıyla değiştirin (örneğin, `CustomersTableAdapter`).
 
 - **Güncelleştirmeleri doğrudan veritabanına göndermek Için oluşturma yöntemleri** seçildiğinde `GenerateDBDirectMethods` özelliği true olarak ayarlanmasına eşdeğerdir. Özgün SQL açıklaması yeterli bilgi sağlamıyorsa veya sorgu güncelleştirilebilir bir sorgu olmadığında bu seçenek kullanılamaz. Bu durum, örneğin, bir tek (skaler) değer döndüren sorguları ve sorguları **birleştirmek** gibi meydana gelebilir.
 
@@ -74,15 +74,15 @@ TableAdapter 'ın Main `Fill` yönteminde yaptığınız tüm değişiklikler, i
 
 TableAdapter sorgu Yapılandırma Sihirbazı 'nı kullanarak TableAdapter için ek sorgular oluşturabilir ve düzenleyebilirsiniz. Bu ek sorgular, skaler bir değer döndürmedikleri müddetçe tablo şemasına uymalıdır.  Her ek sorgunun belirttiğiniz bir adı vardır.
 
-Aşağıdaki örnek, `FillByCity` adlı ek bir sorgunun nasıl çağrılacağını göstermektedir:
+Aşağıdaki örnek, `FillByCity`adlı ek bir sorgunun nasıl çağrılacağını göstermektedir:
 
 `CustomersTableAdapter.FillByCity(NorthwindDataSet.Customers, "Seattle")`
 
 ### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>TableAdapter sorgu Yapılandırma Sihirbazı 'nı yeni bir sorgu ile başlatmak için
 
-1. Veri kümenizi **veri kümesi Tasarımcısı**açın.
+1. Kümenizde açın **veri kümesi Tasarımcısı**.
 
-2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **araç kutusu** **sekmesinden bir** <xref:System.Data.DataTable> sürükleyin veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili bir <xref:System.Data.DataTable> olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı**boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz. Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
+2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **araç kutusu** **sekmesinden bir** <xref:System.Data.DataTable>sürükleyin veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili bir <xref:System.Data.DataTable>olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı**boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz. Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
 
 3. **Veri bağlantınızı seçin** ekranında, sorgunun kullanacağı bağlantıyı seçin veya oluşturun.
 

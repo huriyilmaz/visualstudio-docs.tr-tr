@@ -5,21 +5,21 @@ ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Format
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d1e5f07a2b68d86051452a16ac0f42fc9b9acf0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9e28caf7f71af7c7a07634d1732a1001a32a4aee
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666201"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568327"
 ---
 # <a name="options-text-editor-html-web-forms-formatting"></a>Seçenekler, metin düzenleyici, HTML (Web Forms), biçimlendirme
 
-Kod düzenleyicisinde biçimlendirme kodu için HTML projesi seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **araçlar**  > **Seçenekler**' i seçin ve ardından **metin Düzenleyicisi**  > **HTML (Web Forms)** **biçimlendirme** >  ' ı genişletin.
+Kod düzenleyicisinde biçimlendirme kodu için HTML projesi seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **araçlar** > **Seçenekler**' i seçin ve ardından **metin Düzenleyicisi** > **HTML (Web Forms)** **biçimlendirme** > ' ı genişletin.
 
 ## <a name="capitalization"></a>Büyük harfe çevirme
 
@@ -91,7 +91,7 @@ Bu seçenekler, belirli bir uzunluktan daha fazla gittiklerinde düzenleyicinin 
    > [!NOTE]
    > Belirttiğiniz değer en düşük değer olarak kullanılır. Düzenleyici bağımsız öznitelikleri parçalara ayırmaz.
 
-- **Uzunluklu**
+- **Uzunluk**
 
    Sarmalamadan önce bir satırda görüntülenecek karakter sayısını belirtir. Bu giriş kutusu, **belirtilen uzunluk aşıldığında etiketleri Sarla** onay kutusu işaretli değilse devre dışıdır.
 

@@ -3,32 +3,32 @@ title: Metin Şablonundan Visual Studio'ya veya diğer Ana Bilgisayarlara Erişm
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 752b9d9e69eee26f267927f03c4b83c68740100b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd69ae5864df9cbddd204c45975736fc4aae49e5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652371"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597262"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>Metin şablonundan Visual Studio 'Ya veya diğer konaklara erişme
 
-Bir metin şablonunda, şablonu yürüten ana bilgisayar tarafından sunulan yöntemleri ve özellikleri kullanabilirsiniz. Visual Studio, ana bilgisayar örneğidir.
+Metin şablonunda, yöntemleri ve şablonu yürütür ana bilgisayar tarafından gösterilen özelliklerin kullanabilirsiniz. Visual Studio, bir konak örneğidir.
 
 > [!NOTE]
-> Ana bilgisayar yöntemlerini ve özelliklerini normal metin şablonlarında kullanabilirsiniz, ancak *önceden işlenmiş* metin şablonlarında kullanamazsınız.
+> Konak yöntemleri ve özellikleri normal metin şablonlarında kullanabilirsiniz, ancak değil *önceden işlenmiş* metin şablonları.
 
-## <a name="obtain-access-to-the-host"></a>Konağa erişim elde edin
+## <a name="obtain-access-to-the-host"></a>Konak erişim sağlamak
 
-Konağa erişmek için `template` yönergesindeki `hostspecific="true"` ayarlayın. Artık [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))türüne sahip `this.Host` kullanabilirsiniz. [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) türü, dosya adlarını çözümlemek için kullanabileceğiniz üyelere ve örneğin günlük hatalarına sahiptir.
+Konak erişmek için `hostspecific="true"` içinde `template` yönergesi. Artık [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))türüne sahip `this.Host`kullanabilirsiniz. [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) türü, dosya adlarını çözümlemek için kullanabileceğiniz üyelere ve örneğin günlük hatalarına sahiptir.
 
-### <a name="resolve-file-names"></a>Dosya adlarını çözümle
+### <a name="resolve-file-names"></a>Dosya adlarını çözümleme
 
-Metin şablonuyla ilişkili bir dosyanın tam yolunu bulmak için `this.Host.ResolvePath()` kullanın.
+Metin şablonu göreli bir dosyanın tam yolunu bulmak için kullanın `this.Host.ResolvePath()`.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -42,9 +42,9 @@ Content of myFile is:
 <#= myFile #>
 ```
 
-### <a name="display-error-messages"></a>Hata Iletilerini görüntüle
+### <a name="display-error-messages"></a>Hata iletilerini görüntüleme
 
-Bu örnek, şablonu dönüştürdüğünüzde iletileri günlüğe kaydeder. Konak Visual Studio ise, hatalar **hata listesi**eklenir.
+Bu örnekte, şablon dönüştürdüğünüzde iletileri günlüğe kaydeder. Visual Studio ana bilgisayar ise hataları eklenen **hata listesi**.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -60,13 +60,13 @@ Bu örnek, şablonu dönüştürdüğünüzde iletileri günlüğe kaydeder. Kon
 #>
 ```
 
-## <a name="use-the-visual-studio-api"></a>Visual Studio API 'sini kullanma
+## <a name="use-the-visual-studio-api"></a>Visual Studio API kullanın
 
-Visual Studio 'da bir metin şablonu yürütüyorsanız, Visual Studio tarafından sunulan hizmetlere ve yüklenen paketlere ya da uzantılara erişmek için `this.Host` kullanabilirsiniz.
+Visual Studio'da bir metin şablonu yürütme, kullanabileceğiniz `this.Host` Visual Studio ve paketleri veya yüklü uzantılar tarafından sağlanan Erişim Hizmetleri için.
 
-Hostspecific = "true" ve cast `this.Host` <xref:System.IServiceProvider> olarak ayarlayın.
+Ayarlama hostspecific = "true" ve dönüştürme `this.Host` için <xref:System.IServiceProvider>.
 
-Bu örnek, bir hizmet olarak <xref:EnvDTE.DTE> Visual Studio API 'sini alır:
+Bu örnek, Visual Studio API alır <xref:EnvDTE.DTE>, hizmet olarak:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -80,6 +80,6 @@ Bu örnek, bir hizmet olarak <xref:EnvDTE.DTE> Visual Studio API 'sini alır:
 Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 ```
 
-## <a name="use-hostspecific-with-template-inheritance"></a>Şablon devralma ile hostSpecific kullanma
+## <a name="use-hostspecific-with-template-inheritance"></a>Şablon kalıtım hostSpecific kullanın
 
-@No__t_1 özniteliğini de kullanıyorsanız ve `hostspecific="true"` belirten bir şablondan kalýtýmla alıyorsanız `hostspecific="trueFromBase"` belirtin. Bunu yapmazsanız, özelliğin `Host` iki kez bildirildiği bir derleyici uyarısı alabilirsiniz.
+Belirtin `hostspecific="trueFromBase"` da kullanıyorsanız `inherits` özniteliği ve belirten bir şablondan devralıyorsanız `hostspecific="true"`. Aksi takdirde, derleyici, uyarısı özelliği alabilirsiniz `Host` iki kez bildirilmiş.

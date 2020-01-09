@@ -1,5 +1,5 @@
 ---
-title: Öğe öğesi (MSBuild) | Microsoft Docs
+title: Item öğesi (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Item Element [MSBuild]
 - <Item> Element [MSBuild]
 ms.assetid: dcef5f91-0613-4bfc-8ee9-d7004bb6d3a9
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d94058f1f14f1da644cff672d73cd77e0840c68
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 730e7d317ffa3fd5a450978f35659df3fe5629f3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006810"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573670"
 ---
-# <a name="item-element-msbuild"></a>Öğe unsuru (MSBuild)
-Kullanıcı tanımlı bir öğe ve meta verilerini içerir. Kullanılan her öğe bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] alt öğesi olarak proje belirtilen bir `ItemGroup` öğesi.
+# <a name="item-element-msbuild"></a>Item öğesi (MSBuild)
+Kullanıcı tanımlı bir öğe ve onun meta verilerini içerir. Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesinde kullanılan her öğe, bir `ItemGroup` öğesinin alt öğesi olarak belirtilmelidir.
 
 \<Proje > \<ItemGroup > \<öğesi >
 
@@ -40,10 +40,10 @@ Kullanıcı tanımlı bir öğe ve meta verilerini içerir. Kullanılan her öğ
 </Item>
 ```
 
-## <a name="specify-metadata-as-attributes"></a>Meta veri öznitelikleri belirtin.
-MSBuild 15.1 veya sonraki sürümlerde, herhangi bir meta veri öznitelikleri geçerli listesi ile çakışmadığından bir ad ile isteğe bağlı olarak bir özniteliği olarak ifade edilebilir.
+## <a name="specify-metadata-as-attributes"></a>Meta verileri öznitelik olarak belirt
+MSBuild 15,1 veya sonraki sürümlerde, geçerli öznitelik listesiyle çakışmayan bir ada sahip tüm meta veriler, isteğe bağlı olarak bir öznitelik olarak ifade edilebilir.
 
-Örneğin, NuGet paketlerinin bir listesini belirtmek için normalde sözdizimine benzer bir şey kullanırsınız.
+Örneğin, NuGet paketlerinin listesini belirtmek için normalde aşağıdaki söz dizimi gibi bir şey kullanırsınız.
 
 ```xml
 <ItemGroup>
@@ -53,7 +53,7 @@ MSBuild 15.1 veya sonraki sürümlerde, herhangi bir meta veri öznitelikleri ge
 </ItemGroup>
 ```
 
-Şimdi, Bununla birlikte, geçirebilirsiniz `Version` olarak bir öznitelik, aşağıdaki söz dizimini gibi meta veriler:
+Ancak, `Version` meta verilerini aşağıdaki sözdiziminde olduğu gibi bir öznitelik olarak geçirebilirsiniz:
 
 ```xml
 <ItemGroup>
@@ -64,40 +64,40 @@ MSBuild 15.1 veya sonraki sürümlerde, herhangi bir meta veri öznitelikleri ge
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>Öznitelikler
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Include`|İsteğe bağlı öznitelik.<br /><br /> Dosya veya öğe listesinde içermek için joker karakter.|
-|`Exclude`|İsteğe bağlı öznitelik.<br /><br /> Dosya veya öğe listesinden dışlamak için joker karakter.|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için [koşullar](../msbuild/msbuild-conditions.md).|
-|`Remove`|İsteğe bağlı öznitelik.<br /><br /> Dosya veya öğe listesinden kaldırmak için joker karakter.<br /><br />|
-|`KeepDuplicates`|İsteğe bağlı öznitelik.<br /><br /> Var olan bir öğeye tam bir kopyasını ise bir öğe için hedef grubu eklenip eklenmeyeceğini belirtir. Kaynak ve hedef öğesi aynı varsa `Include` değeri ancak farklı meta veriler, öğedir eklenmiş olsa bile `KeepDuplicates` ayarlanır `false`. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca bir öğe için belirtilmişse geçerli bir `ItemGroup` olan bir `Target`.|
-|`KeepMetadata`|İsteğe bağlı öznitelik.<br /><br /> Hedef öğeleri eklemek kaynak öğeleri için meta veriler. Yalnızca, adları noktalı virgülle ayrılmış listede belirtilen meta veriler, bir kaynak öğeden hedef öğeye aktarılır. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca bir öğe için belirtilmişse geçerli bir `ItemGroup` olan bir `Target`.|
-|`RemoveMetadata`|İsteğe bağlı öznitelik.<br /><br /> Hedef öğe için Aktarım değil kaynak öğeleri meta verileri. Tüm meta veriler bir kaynak öğeden hedef öğesi meta veri dışında adları adları noktalı virgülle ayrılmış listesi yer alır aktarılır. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca bir öğe için belirtilmişse geçerli bir `ItemGroup` olan bir `Target`.|
-|`Update`|İsteğe bağlı öznitelik. (Yalnızca Visual Studio 2017 veya sonraki bir sürümünde .NET Core projeleri için kullanılabilir.)<br /><br /> Bir glob kullanarak dahil bir dosyanın meta verilerini değiştirmenize olanak sağlar.<br /><br /> Bu öznitelik yalnızca bir öğe için belirtilmişse geçerli bir `ItemGroup` içinde değil bir `Target`.|
+|`Include`|İsteğe bağlı öznitelik.<br /><br /> Öğe listesine dahil edilecek dosya veya joker karakter.|
+|`Exclude`|İsteğe bağlı öznitelik.<br /><br /> Öğe listesinden dışlanacak dosya veya joker karakter.|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Remove`|İsteğe bağlı öznitelik.<br /><br /> Öğe listesinden kaldırılacak dosya veya joker karakter.<br /><br />|
+|`KeepDuplicates`|İsteğe bağlı öznitelik.<br /><br /> Bir öğenin, var olan bir öğenin tam yinelemesi olması halinde, hedef gruba eklenip eklenmeyeceğini belirtir. Kaynak ve hedef öğe aynı `Include` değerine sahip ancak farklı meta veriler içeriyorsa, `KeepDuplicates` `false`olarak ayarlanmış olsa bile öğe eklenir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca bir `Target`olan `ItemGroup` bir öğe için belirtilmişse geçerlidir.|
+|`KeepMetadata`|İsteğe bağlı öznitelik.<br /><br /> Hedef öğelere eklenecek kaynak öğelerinin meta verileri. Yalnızca adları noktalı virgülle ayrılmış listede belirtilen meta veriler bir kaynak öğeden hedef öğeye aktarılır. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca bir `Target`olan `ItemGroup` bir öğe için belirtilmişse geçerlidir.|
+|`RemoveMetadata`|İsteğe bağlı öznitelik.<br /><br /> Hedef öğelere aktarılamayan kaynak öğelerinin meta verileri. Tüm meta veriler, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler hariç bir kaynak öğeden hedef öğeye aktarılır. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca bir `Target`olan `ItemGroup` bir öğe için belirtilmişse geçerlidir.|
+|`Update`|İsteğe bağlı öznitelik. (Yalnızca Visual Studio 2017 veya üzeri sürümlerde .NET Core projeleri için kullanılabilir.)<br /><br /> Bir glob kullanılarak dahil edilen bir dosyanın meta verilerini değiştirmenize olanak sağlar.<br /><br /> Bu öznitelik yalnızca bir `Target`olmayan `ItemGroup` bir öğe için belirtilmişse geçerlidir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ItemMetadata](../msbuild/itemmetadata-element-msbuild.md)|Öğe meta veri değeri içeren bir kullanıcı tanımlı meta veri, öğe anahtarı. Sıfır veya daha fazla olabilir `ItemMetadata` öğeleri bir öğe.|
+|[ItemMetadata](../msbuild/itemmetadata-element-msbuild.md)|Öğe meta veri değerini içeren Kullanıcı tanımlı öğe meta verileri anahtarı. Bir öğede sıfır veya daha fazla `ItemMetadata` öğe olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Öğeleri için gruplandırma öğesi.|
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Öğeler için gruplandırma öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
-`Item` öğeleri, derleme sistemine girişleri tanımlayın ve öğe koleksiyonlarını, kullanıcı tanımlı toplama adlarına göre gruplanmıştır. Bu öğe koleksiyonlarını için parametre olarak kullanılan [görevleri](../msbuild/msbuild-tasks.md), hangi bireysel öğeleri koleksiyonlarında derleme işleminin adımları gerçekleştirmek için kullanın. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md).
+`Item` öğeleri, derleme sistemine girdileri tanımlar ve Kullanıcı tanımlı koleksiyon adlarına göre öğe koleksiyonları halinde gruplandırılır. Bu öğe koleksiyonları, yapı işlemi adımlarını gerçekleştirmek için koleksiyonlardaki ayrı öğeleri kullanan [Görevler](../msbuild/msbuild-tasks.md)için parametre olarak kullanılabilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
-Gösterimini kullanarak @(\<myType >) tür öğelerinin bir koleksiyonunu sağlayan \<myType > bir noktalı virgül ile ayrılmış dize listesi genişletilir ve bir parametre geçirildi. Parametre türü ise `string`, sonra parametresinin değeri öğeleri noktalı virgülle ayrılmış listesidir. Parametre dizisini ise (`string[]`), sonra her öğe noktalı konumunu temel alarak diziye eklenir. Görev parametresi türü ise <xref:Microsoft.Build.Framework.ITaskItem> `[]`, birlikte bağlı herhangi bir meta veri öğesi koleksiyonun içeriğini değeridir. Bir karakteri dışındaki bir noktalı virgül kullanarak her bir öğe sınırlandırmak için söz dizimini kullanın @(\<myType >, '\<ayırıcı >').
+@ (\<myType >) gösterimini kullanmak, \<myType > türünde öğelerin toplanmasını, noktalı virgülle ayrılmış dizeler listesine genişletmenizi ve bir parametreye geçirilmesini sağlar. Parametre `string`türünde ise, parametrenin değeri noktalı virgülle ayırarak öğelerin listesidir. Parametre bir dizeler diziyse (`string[]`), her öğe noktalı virgül konumunu temel alarak diziye eklenir. Görev parametresi <xref:Microsoft.Build.Framework.ITaskItem>`[]`türünde ise, değer, eklenen tüm meta verilerle birlikte öğe koleksiyonunun içeriğidir. Noktalı virgül dışında bir karakter kullanarak her öğeyi sınırlandırmak için @ (\<myType >, '\<separator > ') sözdizimini kullanın.
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Altyapısı değerlendirme joker karakterler gibi `*` ve `?` ve yinelemeli joker karakterler gibi  */ \* \* / \*.cs*. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md).
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısı, `*` ve `?` gibi joker karakterleri ve/\*\*/\* *. cs*gibi özyinelemeli joker karakterleri değerlendirebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 ## <a name="examples"></a>Örnekler
-Aşağıdaki kod örneği, iki öğe türünde bildirmeniz gösterilmektedir `CSFile`. İkinci öğe olan metaverilerini içeren bildirilen `MyMetadata` kümesine `HelloWorld`.
+Aşağıdaki kod örneği, `CSFile`türünde iki öğenin nasıl bildirilemeyeceğini gösterir. Belirtilen ikinci öğe, `HelloWorld`olarak ayarlanmış `MyMetadata` meta veriler içeriyor.
 
 ```xml
 <ItemGroup>
@@ -108,7 +108,7 @@ Aşağıdaki kod örneği, iki öğe türünde bildirmeniz gösterilmektedir `CS
 </ItemGroup>
 ```
 
-Aşağıdaki kod örneği kullanma işlemini gösterir `Update` adlı bir dosyaya meta verilerde değiştirmek için özniteliği *somefile.cs* , bir glob dahil. (Yalnızca Visual Studio 2017 veya sonraki bir sürümünde .NET Core projeleri için kullanılabilir.)
+Aşağıdaki kod örneği, bir glob aracılığıyla eklenen *somefile.cs* adlı bir dosyadaki meta verileri değiştirmek için `Update` özniteliğinin nasıl kullanılacağını gösterir. (Yalnızca Visual Studio 2017 veya üzeri sürümlerde .NET Core projeleri için kullanılabilir.)
 
 ```xml
 <ItemGroup>
@@ -120,6 +120,6 @@ Aşağıdaki kod örneği kullanma işlemini gösterir `Update` adlı bir dosyay
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Öğeler](../msbuild/msbuild-items.md)
-- [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
+- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

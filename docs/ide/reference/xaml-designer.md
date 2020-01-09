@@ -5,24 +5,24 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.XAMLDesigner
 - VS.ToolsOptionsPages.XAML_Designer.General
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 6a08358e8e82abf00a133edab876dc45626bf500
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9a925e7f3c31b8347148c15b050692fcee26fcb1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72621903"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585619"
 ---
 # <a name="xaml-designer-options-page"></a>XAML Tasarımcısı seçenekleri sayfası
 
 Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **XAML Tasarımcısı** seçenekleri sayfasını kullanın. Bu sayfayı açmak için **Araçlar** menüsünü ve ardından **Seçenekler**' i seçin. **XAML Tasarımcısı** Özellik sayfasına erişmek için **XAML Tasarımcısı** düğümünü seçin. XAML Tasarımcısı ayarları, belgeyi açtığınızda uygulanır. Bu nedenle, ayarlarda değişiklik yaparsanız değişiklikleri görmek için Visual Studio 'Yu kapatıp yeniden açmanız gerekir.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [ayarlarına](../environment-settings.md#reset-settings).
 
 ## <a name="enable-xaml-designer"></a>XAML Tasarımcısı etkinleştir
 

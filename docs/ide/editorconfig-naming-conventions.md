@@ -5,33 +5,33 @@ ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ff6c9885bd01a94cc36046faf71067e1fe9c17b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5c4115f4d63456e105fb4a6770fd1650938770d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650910"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588609"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig için .NET adlandırma kuralları
 
-Adlandırma kuralları sınıflar, Özellikler ve yöntemler gibi kod öğelerinin adlandırılmasına yardımcı olabilir. Örneğin, ortak üyelerin büyük harfle veya zaman uyumsuz yöntemlerin "Async" ile bitmesi gerektiğini belirtebilirsiniz. Bu kuralları bir [. editorconfig dosyasında](../ide/create-portable-custom-editor-options.md)belirterek uygulayabilirsiniz. Kural için seçtiğiniz önem derecesine bağlı olarak, adlandırma kuralı ihlalleri **hata listesi** veya ad altında bir öneri olarak görüntülenir. İhlalleri görmek için projeyi derlemek gerekmez.
+Adlandırma kuralları sınıflar, Özellikler ve yöntemler gibi kod öğelerinin adlandırılmasına yardımcı olabilir. Örneğin, genel üyelerin büyük harfle veya özel alanların `_`ile başlaması gerektiğini belirtebilirsiniz. Bu kuralları bir [. editorconfig dosyasında](../ide/create-portable-custom-editor-options.md)belirterek uygulayabilirsiniz. Kural için seçtiğiniz önem derecesine bağlı olarak, adlandırma kuralı ihlalleri **hata listesi** veya ad altında bir öneri olarak görüntülenir. İhlalleri görmek için projeyi derlemek gerekmez.
 
 Her adlandırma kuralı için, aşağıda açıklanan özellikleri kullanarak, uygulanan sembolleri, bir adlandırma stilini ve kuralı zorlamaya yönelik önem derecesini belirtmeniz gerekir. Özelliklerin sırası önemli değildir.
 
-Başlamak için, kural için gereken her bir özelliklerde kullanacağınız adlandırma kuralınız için bir başlık seçin. Örneğin, `public_members_must_be_capitalized` bir adlandırma kuralı için iyi, açıklayıcı bir addır. Bu sayfa, aşağıdaki bölümlerde **< Namingrutatitle \>** olarak seçtiğiniz başlığa başvurur.
+Başlamak için, kural için gereken her bir özelliklerde kullanacağınız adlandırma kuralınız için bir başlık seçin. Örneğin, `public_members_must_be_capitalized` bir adlandırma kuralı için iyi, açıklayıcı bir addır. Bu sayfa, aşağıdaki bölümlerde **< Namingrutatitle\>** olarak seçtiğiniz başlığa başvurur.
 
-## <a name="symbols"></a>Simgeleri
+## <a name="symbols"></a>Simgeler
 
 İlk olarak, adlandırma kuralını uygulamak için bir sembol grubu belirler. Bu özellik aşağıdaki biçimdedir:
 
 `dotnet_naming_rule.<namingRuleTitle>.symbols = <symbolTitle>`
 
-**< symboltitle \>** değerini açıklayıcı bir başlıkla değiştirerek sembol grubuna bir ad verin, örneğin `public_symbols`. Kuralın hangi sembolleri uygulanacağını (sembol, erişilebilirlik düzeyi ve değiştirici türleri) açıklayan üç özellik adında **< symbolTitle \>** değerini kullanacaksınız.
+**< symboltitle\>** değerini açıklayıcı bir başlıkla değiştirerek sembol grubuna bir ad verin, örneğin `public_symbols`. Kuralın hangi sembolleri uygulanacağını (sembol, erişilebilirlik düzeyi ve değiştirici türleri) açıklayan üç özellik adında **< symbolTitle\>** değerini kullanacaksınız.
 
 ### <a name="kinds-of-symbols"></a>Sembol türleri
 
@@ -48,7 +48,7 @@ Aşağıdaki liste, izin verilen değerleri gösterir ve birden fazla değeri vi
 - arabirim
 - enum
 - özellik
-- yöntemi
+- {1&gt; yöntemi&lt;1}
 - alan
 - olay
 - temsilci
@@ -66,15 +66,15 @@ Adlandırma kuralının uygulanmasını istediğiniz sembollerin erişilebilirli
 Aşağıdaki liste, izin verilen değerleri gösterir ve birden fazla değeri virgülle ayırarak belirtebilirsiniz.
 
 - \* (tüm erişilebilirlik düzeylerini belirtmek için bu değeri kullanın)
-- public
+- {1&gt;public&lt;1}
 - iç veya arkadaş
 - private
 - protected
-- korumalı \_internal veya protected_friend
-- Özel \_protected
+- \_iç veya protected_friend korumalı
+- korunan özel\_
 - yerel
 
-   @No__t_0 erişilebilirlik düzeyi bir yöntem içinde tanımlanan semboller için geçerlidir. Erişilebilirlik, kodda belirtime gibi semboller için adlandırma kuralları tanımlamak için faydalıdır. Örneğin, sabitler (`required_modifiers = const`) için bir adlandırma kuralında `applicable_accessibilities = local` belirtirseniz, kural yalnızca bir yöntemde tanımlanan ve bir tür içinde tanımlananlar için geçerlidir.
+   `local` erişilebilirlik düzeyi bir yöntem içinde tanımlanan semboller için geçerlidir. Erişilebilirlik, kodda belirtime gibi semboller için adlandırma kuralları tanımlamak için faydalıdır. Örneğin, sabitler (`required_modifiers = const`) için bir adlandırma kuralında `applicable_accessibilities = local` belirtirseniz, kural yalnızca bir yöntemde tanımlanan ve bir tür içinde tanımlananlar için geçerlidir.
 
    ```csharp
    class TypeName
@@ -105,12 +105,12 @@ Aşağıdaki liste, izin verilen değerleri gösterir (birden çok değeri virg�
 - `static` veya `shared`
 
    > [!NOTE]
-   > @No__t_0 veya `shared` sembolleri için bir adlandırma kuralınız varsa, örtülü olarak statik olduklarından `const` sembollerine de uygulanır. @No__t_0 adlandırma kuralının `const` simgelere uygulanmasını istemiyorsanız `const` sembolleri için ayrı bir adlandırma kuralı oluşturun.
+   > `static` veya `shared` sembolleri için bir adlandırma kuralınız varsa, örtülü olarak statik olduklarından `const` sembollerine de uygulanır. `static` adlandırma kuralının `const` simgelere uygulanmasını istemiyorsanız `const` sembolleri için ayrı bir adlandırma kuralı oluşturun.
 
-Adlandırma kuralı, `required_modifiers` ' de belirtilen *Tüm* değiştiricilere sahip imzalarla eşleşir. Bu özelliği atlarsanız, boş bir listenin varsayılan değeri kullanılır, diğer bir deyişle, eşleşme için belirli bir değiştirici gerekmez. Bu, sembolün değiştiricilerin bu kuralın uygulanıp uygulanmadığı üzerinde hiçbir etkisi olmayacağı anlamına gelir.
+Adlandırma kuralı, `required_modifiers`' de belirtilen *Tüm* değiştiricilere sahip imzalarla eşleşir. Bu özelliği atlarsanız, boş bir listenin varsayılan değeri kullanılır, diğer bir deyişle, eşleşme için belirli bir değiştirici gerekmez. Bu, sembolün değiştiricilerin bu kuralın uygulanıp uygulanmadığı üzerinde hiçbir etkisi olmayacağı anlamına gelir.
 
 > [!TIP]
-> @No__t_1 için `*` değeri belirtmeyin. Bunun yerine, `required_modifiers` özelliğini tamamen atlayın ve adlandırma kuralınız her türlü değiştirici için geçerlidir.
+> `required_modifiers`için `*` değeri belirtmeyin. Bunun yerine, `required_modifiers` özelliğini tamamen atlayın ve adlandırma kuralınız her türlü değiştirici için geçerlidir.
 
 ## <a name="style"></a>Stil
 
@@ -118,7 +118,7 @@ Adlandırma kuralını uygulamak için sembol grubunu tanımladığınıza göre
 
 `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>`
 
-**< styletitle \>** değerini açıklayıcı bir başlıkla değiştirerek stile bir ad verin, örneğin `first_word_upper_case_style`. Adlandırma stilini (ön ek, sonek, sözcük ayırıcı karakteri ve büyük/küçük harf) tanımlayan özellik adlarında **< styleTitle \>** değerini kullanacaksınız. Stilinizi anlatmak için bu özelliklerden birini veya daha fazlasını kullanın.
+**< styletitle\>** değerini açıklayıcı bir başlıkla değiştirerek stile bir ad verin, örneğin `first_word_upper_case_style`. Adlandırma stilini (ön ek, sonek, sözcük ayırıcı karakteri ve büyük/küçük harf) tanımlayan özellik adlarında **< styleTitle\>** değerini kullanacaksınız. Stilinizi anlatmak için bu özelliklerden birini veya daha fazlasını kullanın.
 
 ### <a name="require-a-prefix"></a>Ön ek gerektir
 
@@ -148,8 +148,8 @@ Bu özellik için izin verilen değerler şunlardır:
 
 - pascal_case
 - camel_case
-- ilk \_word_upper
-- Tüm \_upper
+- ilk\_word_upper
+- Tüm\_üst
 - all_lower
 
 > [!NOTE]
@@ -194,9 +194,9 @@ Visual Studio 'nun önceki bir sürümünü kullanıyorsanız, adlandırma kural
 
 Herhangi bir özel adlandırma kuralı belirtmezseniz, Visual Studio aşağıdaki varsayılan stilleri kullanır:
 
-- @No__t_0, `private`, `internal`, `protected` veya `protected_internal` erişilebilirliği olan sınıflar, yapılar, numaralandırmalar, Özellikler ve olaylar için, varsayılan adlandırma stili Pascal durumdur.
+- `public`, `private`, `internal`, `protected`veya `protected_internal` erişilebilirliği olan sınıflar, yapılar, numaralandırmalar, Özellikler ve olaylar için, varsayılan adlandırma stili Pascal durumdur.
 
-- @No__t_0, `private`, `internal`, `protected` veya `protected_internal` erişilebilirliği olan arabirimler için, varsayılan adlandırma stili, gerekli bir **I**ön eki olan Pascal durumdur.
+- `public`, `private`, `internal`, `protected`veya `protected_internal` erişilebilirliği olan arabirimler için, varsayılan adlandırma stili, gerekli bir **I**ön eki olan Pascal durumdur.
 
 ## <a name="example"></a>Örnek
 
@@ -220,7 +220,7 @@ Aşağıdaki ekran görüntüsünde, bu adlandırma kuralının düzenleyicide e
 
 ![Adlandırma kuralı önerisi](media/editorconfig-naming-rule-suggestion.png)
 
-Şimdi ihlalin önem derecesini `warning` olarak değiştirelim:
+Şimdi ihlalin önem derecesini `warning`olarak değiştirelim:
 
 ```ini
 dotnet_naming_rule.public_members_must_be_capitalized.severity = warning
@@ -236,4 +236,4 @@ Kod dosyanızı kapatıp yeniden açarsanız, ad ihlalinin altındaki öneriyi g
 - [Biçimlendirme kuralları](editorconfig-formatting-conventions.md)
 - [Roslyn adlandırma kuralları](https://github.com/dotnet/roslyn/blob/master/.editorconfig#L63)
 - [Taşınabilir özel düzenleyici seçenekleri oluştur](../ide/create-portable-custom-editor-options.md)
-- [EditorConfig için .NET kodlama kuralı ayarları](editorconfig-code-style-settings-reference.md)
+- [Kodlama kuralı ayarlarına EditorConfig için .NET](editorconfig-code-style-settings-reference.md)

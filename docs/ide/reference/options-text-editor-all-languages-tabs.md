@@ -36,17 +36,17 @@ helpviewer_keywords:
 - Code Editor, indenting
 - Code Editor, tabs
 ms.assetid: 7e208e1d-5e3a-4bf7-a27b-4417e3e049c7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45cee31df08461731c14e2ac1fdef8456a882800
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666366"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594753"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
 
@@ -67,7 +67,7 @@ Blok
 
 Seçildiğinde, yeni satırlar otomatik olarak girintilenir. Ekleme noktası, önceki satır ile aynı başlangıç noktasına yerleştirilir.
 
-Lý
+Akıllı
 
 Seçildiğinde, yeni satırlar kod bağlamına sığacak şekilde konumlandırılır, diğer kod biçimlendirme ayarları ve geliştirme diliniz için IntelliSense kuralları kullanılır. Bu seçenek tüm geliştirme dilleri için kullanılamaz.
 
@@ -87,7 +87,7 @@ Boşluk Ekle
 
 Seçildiğinde, girinti işlemleri sekme karakterleri değil yalnızca boşluk karakterleri ekler. Örneğin, **girinti boyutu** 5 olarak AYARLANDıYSA, sekme tuşuna veya **biçimlendirme** araç çubuğundaki **Girintiyi Artır** düğmesine her bastığınızda beş boşluk karakteri eklenir.
 
-Sekmeleri sakla
+Sekmeleri izleyin
 
 Seçildiğinde, Girintile işlemleri mümkün olduğunca çok sekme karakteri ekler. Her sekme karakteri, **sekme boyutunda**belirtilen boşluk sayısını doldurur. **Girinti boyutu** **sekme boyutunun**Çift katı değilse, farkı dolduracak şekilde boşluk karakterleri eklenir.
 

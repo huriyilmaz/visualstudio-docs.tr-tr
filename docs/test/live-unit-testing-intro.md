@@ -5,17 +5,17 @@ ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3bcc86f8d423422eafeb3101bf8512e7341d3b7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f3a5e97153997908a0360bc123fd1b88fb5c009
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653025"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596846"
 ---
 # <a name="live-unit-testing-overview"></a>Live Unit Testing genel bakış
 
@@ -23,7 +23,7 @@ Live Unit Testing, kod değişiklikleri yaptığınızda birim testlerinizi otom
 
 Live Unit Testing, birim testlerinizin kodunuzu yeterince kapsamadığını gösterir. Kod kapsamını gerçek zamanlı olarak grafiksel olarak gösterir. Her bir kod satırını kapsayan ve hangi satırların herhangi bir birim testi kapsamında olmadığını bir bakışta görebilirsiniz.
 
-Bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa, Visual Studio 'da en üst düzey menü çubuğundan**başlamak**  >  **Test**  > **Live Unit Testing** ' nı seçerek Live Unit Testing etkinleştirebilirsiniz.
+Bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa, Visual Studio 'da en üst düzey menü çubuğundan **başlamak** > **Test** > **Live Unit Testing** ' nı seçerek Live Unit Testing etkinleştirebilirsiniz.
 
 > [!NOTE]
 > Live Unit Testing yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
@@ -42,5 +42,5 @@ Live Unit Testing hakkında daha fazla bilgi edinmek için:
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 
-- [Kod testi araçları](https://visualstudio.microsoft.com/vs/testing-tools/)
-- [Kodunuzun birim testi](unit-test-your-code.md)
+- [Kod test araçları](https://visualstudio.microsoft.com/vs/testing-tools/)
+- [Birim testi kod](unit-test-your-code.md)

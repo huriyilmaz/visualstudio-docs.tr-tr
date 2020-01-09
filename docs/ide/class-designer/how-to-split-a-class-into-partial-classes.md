@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Class Designer, partial classes
 - partial classes, Class Designer
 ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 42d2cf5c0fa5c08c51ebfbc94d9a03221df46788
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 48672e2d316828019ede7097306517b270062327
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647701"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588687"
 ---
 # <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı bir sınıfı kısmi sınıflara bölme
 
-Bir sınıfın veya yapının bildirimini birkaç bildirim arasında bölmek için `partial` anahtar sözcüğünü (Visual Basic `Partial`) kullanabilirsiniz. İstediğiniz kadar çok sayıda kısmi bildirim kullanabilirsiniz.
+Bir sınıfın veya yapının bildirimini birkaç bildirim arasında bölmek için `partial` anahtar sözcüğünü (Visual Basic`Partial`) kullanabilirsiniz. İstediğiniz kadar çok sayıda kısmi bildirim kullanabilirsiniz.
 
 Bildirimler bir veya birden çok kaynak dosyasında olabilir. Tüm bildirimlerin aynı derlemede ve aynı ad alanında olması gerekir.
 
@@ -36,13 +36,13 @@ Kısmi sınıflar çeşitli durumlarda faydalıdır. Örneğin, büyük bir proj
 Aşağıdaki örnekler, her biri farklı bir yordam tanımlayan `Employee` sınıfının tanımını iki bildirime ayırır. Örneklerdeki iki kısmi Tanım, bir kaynak dosyasında veya iki farklı kaynak dosyada olabilir.
 
 > [!NOTE]
-> Visual Basic, Visual Studio tarafından üretilen kodu Kullanıcı tarafından yazılan koddan ayırmak için kısmi sınıf tanımları kullanır. Kod ayrı kaynak dosyalarına ayrılmıştır. Örneğin, **Windows form tasarımcısı** `Form` gibi denetimler için kısmi sınıfları tanımlar. Bu denetimlerde oluşturulan kodu değiştirmemelisiniz.
+> Visual Basic, Visual Studio tarafından üretilen kodu Kullanıcı tarafından yazılan koddan ayırmak için kısmi sınıf tanımları kullanır. Kod ayrı kaynak dosyalarına ayrılmıştır. Örneğin, **Windows form tasarımcısı** `Form`gibi denetimler için kısmi sınıfları tanımlar. Bu denetimlerde oluşturulan kodu değiştirmemelisiniz.
 
 Visual Basic kısmi türleri hakkında daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial).
 
 ## <a name="example"></a>Örnek
 
-Bir sınıf tanımını ayırmak için, aşağıdaki örnekte gösterildiği gibi `partial` anahtar sözcüğünü (Visual Basic `Partial`) kullanın:
+Bir sınıf tanımını ayırmak için, aşağıdaki örnekte gösterildiği gibi `partial` anahtar sözcüğünü (Visual Basic`Partial`) kullanın:
 
 ```csharp
 // First part of class definition.

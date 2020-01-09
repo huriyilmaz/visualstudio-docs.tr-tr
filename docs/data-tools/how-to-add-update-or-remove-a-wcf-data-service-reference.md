@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ADO.NET service references
 - ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8f19fbfb82a74de0f0eedf784483ecaeccc9a5fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c60dffc7bb47336ae36e64a366def3c4dce06213
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648415"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586594"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
-Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] erişmesini sağlar. Geçerli çözümde, yerel bir ağda veya Internet 'te [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] aramak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın.
+Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]erişmesini sağlar. Geçerli çözümde, yerel bir ağda veya Internet 'te [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] aramak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -57,7 +57,7 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../d
 
     **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
 
-2. **Keşfet**' e tıklayın.
+2. **Bul**'a tıklayın.
 
     Geçerli Çözümdeki tüm hizmetler (hem [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] hem de WCF Hizmetleri) **Hizmetler** listesine eklenir.
 

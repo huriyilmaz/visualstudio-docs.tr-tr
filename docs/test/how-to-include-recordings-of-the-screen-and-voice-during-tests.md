@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - test settings, recording desktop video
 ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 572b3132056ebed1d26c983fdc4024d2ddc51a82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 94d8fdc2765b3a073ca481d09bc38dfbc9b38f2c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653516"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589025"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Nasıl yapılır: test ayarlarını kullanarak testler sırasında ekran ve ses kayıtlarını ekleme
 
@@ -56,14 +56,14 @@ Ekran ve Ses Kaydedicisi, el ile veya otomatikleştirilmiş testlerle birlikte k
 
     3. **Kalite (1-100):** 1 ile 100 arasında bir Aralık seçerek ekran ve ses kaydı kalitesini belirtebilirsiniz. Varsayılan değer 50 ' dir (orta Aralık).
 
-7. **Tamam ' ı**seçin. Tanılama izleme toplayıcısı ayarları artık test ayarlarınız için yapılandırılır ve kaydedilir.
+7. **Tamam**’ı seçin. Tanılama izleme toplayıcısı ayarları artık test ayarlarınız için yapılandırılır ve kaydedilir.
 
     > [!TIP]
     > Bu tanılama veri bağdaştırıcısı için yapılandırmayı sıfırlamak üzere, Visual Studio için **varsayılan yapılandırmaya Sıfırla** ' yı seçin ve Microsoft Test Yöneticisi Için varsayılana **sıfırlayın** .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Test sırasında tanılama verilerini topla (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
-- [Tanılama verilerini el ile testlerde topla (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
-- [Test ayarlarını kullanarak tanılama bilgilerini topla](../test/collect-diagnostic-information-using-test-settings.md)
-- [El ile testleri çalıştırma (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)
+- [(Azure Test planları) test sırasında tanılama verilerini toplayın](/azure/devops/test/collect-diagnostic-data?view=vsts)
+- [El ile testlerde (Azure Test planları) tanılama verilerini toplayın](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+- [Test ayarlarını kullanarak tanılama bilgileri Topla](../test/collect-diagnostic-information-using-test-settings.md)
+- [El ile yapılan testleri (Azure Test planları)](/azure/devops/test/run-manual-tests?view=vsts)

@@ -9,21 +9,21 @@ f1_keywords:
 helpviewer_keywords:
 - task list
 - Visual Studio, task list
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69c0e4c3a19358d9b29e4d7d3616c6718117e059
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db39850350f99e6c046996f6408973cbc6543868
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647313"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594233"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
-@No__t_1 ve `HACK` ya da özel belirteçler gibi belirteçleri kullanan kod açıklamalarını izlemek ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetmek için **görev listesi** kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeye tıklayın.
+`TODO` ve `HACK`ya da özel belirteçler gibi belirteçleri kullanan kod açıklamalarını izlemek ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetmek için **görev listesi** kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeye tıklayın.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments).
@@ -32,7 +32,7 @@ ms.locfileid: "72647313"
 
 **Görev listesi** açık olduğunda, uygulama penceresinin alt kısmında görünür.
 
-**Görev listesi**açmak Için, **Görünüm**  > **görev listesi**' yı seçin veya klavyede **CTRL** + **\\** ,**t**tuşlarına basın.
+**Görev listesi**açmak Için, **Görünüm** > **görev listesi**' yı seçin veya klavyede **CTRL**+ **\\** ,**t**tuşlarına basın.
 
 ![Görev Listesi penceresi](../ide/media/vs2015_task_list.png)
 
@@ -62,18 +62,18 @@ Kodunuzda bir açıklama işaretçisi ve önceden tanımlanmış bir belirteç b
 // TODO: Load state from previously suspended application
 ```
 
-@No__t_0 önceden tanımlanmış bir belirteç olduğundan, bu açıklama listede bir `TODO` görev olarak görünür.
+`TODO` önceden tanımlanmış bir belirteç olduğundan, bu açıklama listede bir `TODO` görev olarak görünür.
 
 > [!NOTE]
 > Varsayılan belirteçler yalnızca C/C++, C#, ve vb dilleri için kullanılabilir. Diğer diller için bkz. **özel belirteçler** bölümü.
 
-### <a name="custom-tokens"></a>Özel belirteçler
+### <a name="custom-tokens"></a>{1&gt;Özel belirteçler&lt;1}
 
-Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK`, `TODO`, `UNDONE` ve `UnresolvedMergeConflict`. Büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
+Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK`, `TODO`, `UNDONE`ve `UnresolvedMergeConflict`. Bunlar büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
 
 Özel belirteç oluşturmak için:
 
-1. **Araçlar** menüsünde **Seçenekler**' i seçin.
+1. Üzerinde **Araçları** menüsünde seçin **seçenekleri**.
 
 2. **Ortam** klasörünü açın ve ardından **görev listesi**öğesini seçin.
 
@@ -85,7 +85,7 @@ Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK`, `T
 
 4. **Öncelik** açılan listesinde, yeni belirteç için varsayılan önceliği seçin.
 
-5. **Ekle**' yi seçin.
+5. Seçin **ekleme**.
 
 > [!TIP]
 > Ad girdikten sonra **Ekle** düğmesi etkin hale gelir. **Ekle**' ye tıklamadan önce bir ad girmeniz gerekir.
@@ -94,7 +94,7 @@ Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK`, `T
 
 Varsayılan olarak, C++ yapılacaklar açıklamaları **görev listesi**görüntülenir.
 
-C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekler**  > **metin düzenleyici**  > **C/C++**   >  0**Açıklama görevlerini** **görüntüle** ' yi seçin ve değeri false olarak ayarlayın.
+C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekler** > **metin düzenleyici** > **C/C++**  >  > **Açıklama görevlerini** **görüntüle** ' yi seçin ve değeri **false**olarak ayarlayın.
 
 ## <a name="shortcuts"></a>Kısayollar
 
@@ -102,9 +102,9 @@ C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekl
 
 ![Visual Studio Görev Listesi kısayol simgesi](../ide/media/vs2015_task_list_bookmark.png)
 
-### <a name="create-a-shortcut"></a>Kısayol oluştur
+### <a name="create-a-shortcut"></a>Kısayol oluşturma
 
-Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin. @No__t_1**yer Imlerini** **Düzenle**  > **görev listesi kısayol Ekle** ' yi seçin veya **CTRL** +**K**, **CTRL** +**H**tuşlarına basın.
+Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin.  > **yer Imlerini** **Düzenle** > **görev listesi kısayol Ekle** ' yi seçin veya **CTRL**+**K**, **CTRL**+**H**tuşlarına basın.
 
 Koddaki kısayollar arasında gezinmek için listeden bir kısayol seçin ve sonra kısayol menüsünden **sonraki görev** veya **önceki görev** ' i seçin.
 

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MSBuild, tasks
 - MSBuild, dependency diagrams
 - MSBuild, validating code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fc852b4d5003cf809248c72ca3ac42ad3a6bf23
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 36320daf91380d0b04333b228a1d4b9d58c6693c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981127"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594025"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Bağımlılık diyagramları ile kod doğrulama
 
@@ -44,7 +44,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'da ba
 
 **Requirements**
 
-- Visual Studio
+- {1&gt;Visual Studio&lt;1}
 
   .NET Core projesi için bir bağımlılık diyagramı oluşturmak için, Visual Studio 2019 sürüm 16,2 veya sonraki bir sürüme sahip olmanız gerekir.
 
@@ -57,7 +57,7 @@ Kodu, Visual Studio 'da veya bir komut isteminden açık bir bağımlılık diya
 > [!IMPORTANT]
 > Team Foundation Server (TFS) kullanarak katman doğrulaması çalıştırmak istiyorsanız, Yapı sunucunuza aynı Visual Studio sürümünü de yüklemelisiniz.
 
-## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulaması
+## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulama
 
 Bağımlılık doğrulaması gerçek zamanlı olarak gerçekleşir ve hatalar hemen **hata listesi**görüntülenir.
 
@@ -122,7 +122,7 @@ Katmanları birden çok uygulama arasında paylaşılan Web sitelerine, Office b
        msbuild <FilePath+ModelProjectFileName>.modelproj /p:ValidateArchitecture=true
        ```
 
-     - veya
+     - veya -
 
        Modelleme projesi (. modelproj) dosyasını ve bağımlılık diyagramını içeren klasöre gidin ve aşağıdaki özel özellikle MSBuild 'i çalıştırın:
 
@@ -136,7 +136,7 @@ Katmanları birden çok uygulama arasında paylaşılan Web sitelerine, Office b
        msbuild <FilePath+SolutionName>.sln /p:ValidateArchitecture=true
        ```
 
-     - veya
+     - veya -
 
        Bağımlılık diyagramı içeren bir modelleme projesi içermesi gereken çözüm klasörüne gidin ve aşağıdaki özel özellikle MSBuild 'i çalıştırın:
 
@@ -161,7 +161,7 @@ Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmalar�
 
 **Hata listesi** penceresindeki doğrulama hatalarını yönetmek için bu görevleri kullanın:
 
-|**Hedef**|**Bu adımları izleyin**|
+|**Alıcı**|**Bu adımları izleyin**|
 |-|-|
 |Doğrulama sırasında seçili hataları gizleme|Seçilen bir veya birden çok hataya sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **hataları Gizle**' ye tıklayın.<br /><br /> Gizlenen hatalar üstü çizili biçimde görünür. Doğrulamayı daha sonra çalıştırdığınızda bu hatalar görünmez.<br /><br /> Gizlenen hatalar, ilgili bağımlılık diyagramı dosyası için bir. suppressions dosyasında izlenir.|
 |Seçili hataların gizlenmesini durdurma|Seçili gizlenen hata veya hatalara sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından hataları gizlemeyi **Durdur**' a tıklayın.<br /><br /> Doğrulamayı daha sonra çalıştırdığınızda seçili gizlenen hatalar görünecektir.|
@@ -180,7 +180,7 @@ Modelleme projesi (.modelproj) dosyası açmak için metin düzenleyicisi kullan
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
-\- veya-
+\- veya -
 
 1. **Çözüm Gezgini**' de, bağımlılık diyagramı veya diyagramlarını içeren modelleme projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -200,7 +200,7 @@ Hata Listesi penceresindeki hataları yönetmek için bkz. [katman doğrulama ha
 
 Aşağıdaki tabloda katman doğrulama sorunları ve bunların çözümü açıklanmaktadır. Bu sorunlar, kod ve tasarım arasındaki çakışmalarla sonuçlanan hatalardan ayrılır. Bu hatalar hakkında daha fazla bilgi için bkz. [katman doğrulama sorunlarını giderme](#troubleshoot-layer-validation-issues).
 
-|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
+|**Sorun**|**Olası neden**|**Çözümleme**|
 |-|-|-|
 |Doğrulama hataları beklendiği gibi gerçekleşmez.|Doğrulama, Çözüm Gezgini ' deki diğer bağımlılık diyagramlarından kopyalanmış ve aynı modelleme projesinde olan bağımlılık diyagramlarında çalışmaz. Bu şekilde kopyalanmış bağımlılık diyagramları, özgün bağımlılık diyagramı ile aynı başvuruları içerir.|Modelleme projesine yeni bir bağımlılık diyagramı ekleyin.<br /><br /> Öğeleri kaynak bağımlılığı diyagramından yeni diyagrama kopyalayın.|
 
@@ -216,7 +216,7 @@ Bu hataları çözmek için doğrulama sırasında daha fazla hata görünmeyene
 
 Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu hataların anlamı açıklanmakta ve bunları çözmek veya yönetmek için yapabilecekleriniz önerilmektedir.
 
-|**Sözdizimi**|**Açıklama**|
+|**Söz dizimi**|**Açıklama**|
 |-|-|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* , bağımlılık diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem**gibi *ArtifactN*türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Bir ad alanının adı.|
@@ -229,6 +229,8 @@ Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu ha
 | DV1001: **geçersiz ad alanı adı** | Bu sorun, "Izin verilen ad alanı adları" özelliği bu kod öğesinin tanımlandığı ad alanını içermediği bir katmanla ilişkili bir kod öğesinde raporlanır. Bu bir adlandırma kısıtlaması ihlalidir. "Izin verilen ad alanı adları" sözdiziminin, katman olarak ilişkilendirilmiş kod öğelerinin tanımlanmasına izin verilen ad alanlarının noktalı virgülle bir listesi olacağını unutmayın. |
 | DV1002: **Referenceable ad alanına bağımlılık** | Bu sorun, katman ile ilişkili bir kod öğesinde raporlanır ve katmanın "Referenceable namespace" özelliğinde tanımlanan bir ad alanında tanımlanan başka bir kod öğesine başvuracaktır. Bu bir adlandırma kısıtlaması ihlalidir. "Başvurulmayan ad alanları" özelliğinin, bu katmanla ilişkili kod öğelerinde başvurulmaması gereken, noktalı virgülle ayrılmış ad alanları listesi olarak tanımlandığını unutmayın. |
 | DV1003: **Izin verilmeyen ad alanı adı** | Bu sorun, "Izin verilmeyen ad alanı adları" özelliği bu kod öğesinin tanımlandığı ad alanını içerdiği bir katmanla ilişkili bir kod öğesinde raporlanır. Bu bir adlandırma kısıtlaması ihlalidir. "Izin verilmeyen ad alanı adı" özelliğinin, bu katman ile ilişkili kod öğelerinin tanımlanmadığı ad alanlarının noktalı virgülle ayrılmış bir listesi olarak tanımlandığını unutmayın. |
+| DV2001: **Katman diyagramı varlık** | Bu sorun, bağımlılık diyagramı dosyası içermeyen bir projede raporlanır, ancak bağımlılık doğrulama Çözümleyicileri anlamına gelir. Bağımlılık doğrulaması kullanılmıyorsa, "Microsoft. DependencyValidation. çözümleyiciler" öğesini doğrudan Çözüm Gezgini kaldırabilir veya bu uyarıyı gizleyebilirsiniz. Bir bağımlılık diyagramı eklemek için bkz. [kodunuzda bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md). |
+| DV2002: **eşlenmemiş türler tabanı** | Bu sorun, bir kod öğesi herhangi bir katmana eşlenmezse raporlanır. |
 | DV3001: **eksik bağlantı** | '*LayerName*' katmanı, bulunamayan '*yapıt*' öğesine bağlanır. Eksik bir derleme başvurunuz mu var? |
 | DV9001: **mimari analizi iç hatalar buldu** | Sonuçlar tamamlanmamış olabilir. Daha fazla bilgi için ayrıntılı yapı olay günlüğü veya çıkış penceresine bakın. |
 

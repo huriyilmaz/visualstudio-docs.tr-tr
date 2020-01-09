@@ -11,41 +11,41 @@ helpviewer_keywords:
 - Immediate window
 - first-chance exception notifications
 ms.assetid: d33e7937-73f3-4c69-9df0-777a8713c6f2
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa5f804c22090fa79586549db00b13d824a54690
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b21cdb9136abe1e960e5b74bbf09e7d1694519d7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662537"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568964"
 ---
 # <a name="immediate-window"></a>Komut penceresi
 
 İfadeleri hata ayıklamak ve değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için **hemen** penceresini kullanın. **Komut** penceresi, şu anda seçili olan projeyi oluşturup kullanarak ifadeleri değerlendirir.
 
-**Hemen** penceresini göstermek için, bir projeyi düzenlenmek üzere açın ve ardından **hata ayıkla**  > **Windows**  > **hemen** seçin ya da **CTRL** +**alt** +**I**tuşlarına basın. Ayrıca, **komut** penceresinde **hata ayıkla. hemen** girebilirsiniz.
+**Hemen** penceresini göstermek için, bir projeyi düzenlenmek üzere açın ve ardından **hata ayıkla** > **Windows** > **hemen** seçin ya da **CTRL**+**alt**+**I**tuşlarına basın. Ayrıca, **komut** penceresinde **hata ayıkla. hemen** girebilirsiniz.
 
 **Komut** penceresi IntelliSense 'i destekler.
 
 ## <a name="display-the-values-of-variables"></a>Değişkenlerin değerlerini görüntüleme
 
-Bir uygulamanın hatalarını ayıklarken, **komut** penceresi özellikle faydalıdır. Örneğin, bir değişken `varA` değerini denetlemek için [Print komutunu](../../ide/reference/print-command.md)kullanabilirsiniz:
+Bir uygulamanın hatalarını ayıklarken, **komut** penceresi özellikle faydalıdır. Örneğin, bir değişken `varA`değerini denetlemek için [Print komutunu](../../ide/reference/print-command.md)kullanabilirsiniz:
 
 ```cmd
 >Debug.Print varA
 ```
 
-Soru işareti (?) `Debug.Print` için bir diğer addır, bu nedenle bu komut de yazılabilir:
+Soru işareti (?) `Debug.Print`için bir diğer addır, bu nedenle bu komut de yazılabilir:
 
 ```cmd
 ? varA
 ```
 
-Bu komutun her iki sürümü de `varA` değişkenin değerini döndürür.
+Bu komutun her iki sürümü de `varA`değişkenin değerini döndürür.
 
 > [!TIP]
 > **Hemen** penceresinde bir Visual Studio komutu vermek için, komutun işaretini büyüktür işareti (>) ile önceden başlatmalısınız. Birden çok komut girmek için [komut penceresi](command-window.md)geçin.
@@ -72,13 +72,13 @@ Tasarım zamanında bir işlevi veya alt yordamı yürütmek için **hemen** pen
    End Module
    ```
 
-2. **Hata Ayıkla** menüsünde **Windows**  > **hemen**' ni seçin.
+2. **Hata Ayıkla** menüsünde **Windows** > **hemen**' ni seçin.
 
 3. **Hemen** penceresine `?MyFunction(2)` yazın ve **ENTER**tuşuna basın.
 
-    **Komut** penceresi `MyFunction` çalışır ve `4` görüntüler.
+    **Komut** penceresi `MyFunction` çalışır ve `4`görüntüler.
 
-İşlev veya alt yordam bir kesme noktası içeriyorsa, Visual Studio uygun noktada yürütmeyi keser. Daha sonra program durumlarınızı incelemek için hata ayıklayıcı pencerelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: tasarım zamanında hata ayıklama](../../debugger/walkthrough-debugging-at-design-time.md).
+İşlev veya alt yordam bir kesme noktası içeriyorsa, Visual Studio uygun noktada yürütmeyi keser. Ardından, programınızın durumunu incelemek için hata ayıklayıcı penceresini kullanabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: tasarım zamanında hata ayıklama](../../debugger/walkthrough-debugging-at-design-time.md).
 
 Office projeleri, Web projeleri, akıllı cihaz projeleri ve SQL projeleri için Visual Studio Araçları dahil olmak üzere bir yürütme ortamının başlatılması gereken proje türlerinde tasarım zamanı ifade değerlendirmesi kullanamazsınız.
 
@@ -95,7 +95,7 @@ Visual Studio komutlarını **komut** penceresinde verirken büyüktür işareti
 |Bir ifadeyi değerlendirin.|İfadeyi bir soru işaretiyle (?) önyüz.|`? a+b`|
 |Komut modunu anında modda (tek bir komut yürütmek için) geçici olarak girin.|Komutu, işareti daha büyük (>) ile önceden girerek girin.|`>alias`|
 |Komut penceresi geçin.|Pencereye daha büyük (>) işaretiyle `cmd` girin.|`>cmd`|
-|Anında pencereye geri dönün.|@No__t_0, büyüktür işareti (>) olmadan pencereye girin.|`immed`|
+|Anında pencereye geri dönün.|`immed`, büyüktür işareti (>) olmadan pencereye girin.|`immed`|
 
 ## <a name="mark-mode"></a>İşaret modu
 

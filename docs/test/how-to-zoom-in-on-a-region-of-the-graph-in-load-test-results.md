@@ -1,5 +1,5 @@
 ---
-title: Yük testi sonuç grafiklerini Yakınlaştır
+title: Yük testi sonuç grafikleri üzerinde Yakınlaştır
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,88 +8,88 @@ helpviewer_keywords:
 - graphs, analyzing load tests
 - load tests, zooming with graphs
 ms.assetid: 729b4c30-4bc3-4698-91b3-17a676897443
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f8e37d7ce5f4f52074904aa353ad6d02d65f5ca6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a22f1a9b6aa772224b217b5de4136687df1462a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653259"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594376"
 ---
-# <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Nasıl yapılır: yük testi sonuçlarında grafiğin bir bölgesini yakınlaştırma
+# <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Nasıl yapılır: yük testi sonuçlarında grafiğin bir bölgesine yakınlaştırma
 
-Bir yük testi tamamlandıktan sonra yakınlaştırma çubuklarını kullanarak grafiğin bir bölgesine yakınlaştırıp kaydırma yapabilirsiniz. ' İ yakınlaştırarak, yük testi sırasında oluşturulan verileri daha ayrıntılı bir şekilde inceleyebilirsiniz.
+Bir yük testi tamamlandıktan sonra yakınlaştırmak ve kaydırmak için grafiğin bir bölgesine yakınlaştırma çubukları kullanabilirsiniz. Yakınlaştırma tarafından ince ayrıntılı olarak yük testi sırasında oluşturulan verileri inceleyebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Yakınlaştırma yalnızca, tamamlanan bir yük testinin sonucunu analiz ederken, çalışan bir testin sonuçlarını gözlemleyerek değil, kullanılabilir.
+Yakınlaştırma sırasında çalışan bir test sonuçlarını gözlemeyerek yalnızca zaman, bir Tamamlanan yük testi sonuçlarını analiz kullanılabilir.
 
-Yakınlaştırma denetimi, bir yük testi sonucunu yakınlaştırma modunda görüntülediğinizde yalnızca **Yük Testi Çözümleyicisi** 'nde görünür. Yükleme testi tamamlandığında veya daha önce çalıştırılan bir yük testi yüklendiğinde yakınlaştırma modu grafik görünümünde oluşturulur. Araç çubuğundaki **Yakınlaştırma denetimlerini göster** ' i kullanarak Grafiklerde yakınlaştırma denetimlerini gösterebilir veya gizleyebilirsiniz.
+Yakınlaştırma denetimini yalnızca görünür **Yük Testi Çözümleyicisi** bir yük testi sonucu yakınlaştırma modunda görüntülediğinizde. Yakınlaştırma modu Grafik görünümünde yük testi tamamlandıktan veya önceden çalışan yük testi yüklenen kurulur. Göstermek veya grafik yakınlaştırma denetimlerini kullanarak Gizle **yakınlaştırma denetimlerini göster** araç.
 
-**Yatay x ekseni yakınlaştırması** , yük testi sırasında belirli zaman aralıklarını çözümlemek üzere ayarlanabilir. **Dikey y ekseni yakınlaştırması** , grafiğe dahil edilen sayaçların belirli değer aralıklarını çözümlemek üzere ayarlanabilir.
+**Yatay ekseni yakınlaştırma** yük testi sırasında belirli süreler çözümlemek için ayarlanabilir. **Dikey ekseni yakınlaştırma** grafikte yer sayaçları için belirli bir değer aralıklarına çözümlemek için ayarlanabilir.
 
-Hem **Yatay zaman çizelgesi** hem de **Dikey değer aralığı** yakınlaştırma denetimleri, fare kullanılarak ayarlanabilir. **Yatay zaman çizelgesi denetimi** de sol ve sağ ok tuşları kullanılarak ayarlanabilir. Yakınlaştırma denetimini ayarlamak için ok tuşlarını kullanarak, Windows aralığını tek seferde 1 örnekleme aralığına göre ayarlayabilirsiniz. **SHIFT** ve ok tuşlarının kullanılması 10 örnekleme aralığının ayarlamalarını yapar.
+Her iki **yatay zaman çizelgesi** ve **dikey değer aralığı** yakınlaştırma denetimleri fare kullanılarak ayarlanabilir. **Yatay zaman çizelgesi denetimi** sol ve sağ ok tuşlarını kullanarak da ayarlanabilir. Yakınlaştırma denetimini ayarlamak için ok tuşlarını kullanarak, aynı anda 1 örnekleme aralığı tarafından windows aralığı ayarlayabilirsiniz. Kullanarak **Shift** ve ok tuşları 10 örnekleme aralığının ayarlamalar yapar.
 
-Ok tuşunu kullanarak yakınlaştırma denetimini ayarlamak için, önce **Tab** tuşunu kullanarak yakınlaştırma denetimindeki odağı ayarlayın. Sol kaydırıcı odağa sahip olduğunda, ok tuşları yakınlaştırma penceresinin başlangıç sınırını 1 Aralık sola veya sağa taşır. Odak Merkez kaydırıcıdayken, yakınlaştırma penceresinin boyutunu değiştirmeden sola veya sağa 1 örnekleme aralığını kaydırmak için ok tuşlarını kullanabilirsiniz. Son olarak, sağ kenar kaydırıcı, yakınlaştırma penceresinin sonundaki aralığı 1 örnekleme aralığına genişleterek veya azaltarak hareket eder.
+Yakınlaştırma denetimini ok tuşunu kullanarak ayarlamak için önce yakınlaştırma denetimi kullanarak Odaklan **sekmesini** anahtarı. Sol kaydırıcının odağa sahip olduğunda, ok tuşlarını yakınlaştırma pencerenin başlangıç sınır 1 aralığına göre sola veya sağa taşınır. Odağı merkezi kaydırıcısını açık olduğunda, yakınlaştırma penceresi sola veya sağa 1 örnekleme aralığı yakınlaştırma penceresinin boyutunu değiştirmeden kaydırmak için ok tuşlarını kullanabilirsiniz. Ve son olarak, sağ tarafta kaydırıcıyı hareket genişletme veya 1 ile yakınlaştırma penceresinin bitiş aralığını azaltmayı örnekleme aralığı.
 
-Tüm zaman çizelgesini ve değer aralıklarını göstermek üzere yatay ve dikey yakınlaştırma denetimlerini döndürmek için **yatay Yakınlaştır** seçeneğini, **Dikey uzaklaştır** seçeneğini veya grafikteki açılır menüdeki **her iki öğeyi de uzaklaştır** seçeneğini kullanabilirsiniz.
+Değer aralıkları ve tam zaman çizelgesini göstermek için yatay ve dikey yakınlaştırma denetimlerini döndürmek için kullanabileceğiniz **Yatay Uzaklaştır** seçeneği **Dikey Uzaklaştır** seçeneği veya **Uzaklaştır Her ikisi de** açılır menüde bir seçenek grafikteki.
 
 > [!TIP]
-> Otomatik yatay yakınlaştırma eşitlemesini açıp kapatmak için araç çubuğundaki **Yatay Yakınlaştırma Denetimlerini Eşitle** ' ye geçebilirsiniz. Eşitlemeyle birlikte, grafik için uyguladığınız tüm yakınlaştırmanın grafikleri görünümündeki diğer grafiklere de uygulanması gerekir.
+> Kullanabileceğiniz **Yatay Yakınlaştırma Denetimlerini Eşitle** açmasına veya kapatmasına otomatik yatay yakınlaştırma eşitleme için araç çubuğundaki. İle eşitlemede herhangi bir grafiğe geçerli yakınlaştırma da diğer bir grafikler grafikler görünümü üzerinde uygulanır.
 
-![Grafik görünümü yakınlaştırma denetimi](../test/media/ltest_zoomcontrol.png)
+![Graf görünümü yakınlaştırma denetimi](../test/media/ltest_zoomcontrol.png)
 
-Önceki çizimde, **Test grafiği altındaki sistem** eşik sorunlarını araştırmak için yakınlaştırıldı. Eşik ihlalleri, araç çubuğunda **grafik seçenekleri** açılır listesinden **Eşik ihlallerini göster** kullanılarak etkinleştirildi.
+Önceki çizimde, **Test altındaki sistem** grafik yakınlaştırıldı eşik sorunlarını araştırmak için. Eşik ihlalleri kullanılarak etkinleştirilen **Eşik İhlallerini Grafikte Göster** gelen **grafik seçenekleri** araç çubuğundaki açılan.
 
-Daha fazla bilgi için bkz. [Grafik görünümünde Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md).
+Daha fazla bilgi için [Çözümle yük testi sonuçlarını grafik görünümünde](../test/analyze-load-test-results-in-the-graphs-view.md).
 
-## <a name="display-graphs"></a>Grafikleri görüntüle
+## <a name="display-graphs"></a>Grafik görüntüleme
 
-Bir grafiği yakınlaştırarak veya uzaklaştırarak veya kaydırarak ekran görüntüsünü değiştirmeden önce, grafikleri göstermek için bu yordamı izleyin.
+Yakınlaştırma veya uzaklaştırma veya kaydırma bir grafik görüntüsünü değiştirmeden önce grafikleri görüntülemek için bu yordamı izleyin.
 
-Grafikleri göstermek için:
+Grafikleri görüntülemek için:
 
-1. Tamamlanana kadar bir yük testi çalıştırın.
+1. Bir yük testi tamamlanana kadar çalıştırın.
 
-2. Yük testi çalıştırmasının sonunda, yük testi sonuçları deposundan sonuçları görüntülemeyi soran iletişim kutusunda **Evet** ' i seçin.
+2. Yük testi çalıştırması sonunda seçin **Evet** sonuçları yük testi sonuçlarını görüntüleme yapılıp yapılmayacağının sorulduğu iletişim kutusunda depolar.
 
-     \- veya-
+     \- veya -
 
-     Daha önce çalıştırılan bir yük testinin ayrıntılarını görüntüleyin. Daha fazla bilgi için bkz. [nasıl yapılır: çözümleme için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md).
+     Daha önce çalıştırılan yük testi ayrıntılarını görüntüleyin. Daha fazla bilgi için [nasıl yapılır: erişim yük testi sonuçlarını analiz](../test/how-to-access-load-test-results-for-analysis.md).
 
-3. Grafiklerinizin görüntülenmediğini **grafikler** ' i seçin.
+3. Seçin **grafikleri** graflarınız görüntülenmiyorsa.
 
-4. Yakınlaştırma çubukları görüntülenmiyorsa, **Yakınlaştırma denetimlerini göster**' i seçin.
+4. Yakınlaştırma çubukları görüntülenmiyorsa seçin **yakınlaştırma denetimlerini göster**.
 
-     Her grafik için iki yakınlaştırma çubuğu bulunur. Dikey ölçeği denetleyen yakınlaştırma çubuğu grafiğin solunda görünür. Yatay ölçeklendirmeyi denetleyen yakınlaştırma çubuğu grafiğin altında görünür.
+     İki yakınlaştırma çubukları, her bir grafik için kullanılabilir. Dikey ölçeklendirme denetleyen yakınlaştırma çubuğu grafiği solunda görünür. Grafiğin altında yatay ölçeklendirme özellikleri denetleyen yakınlaştırma çubuğu görünür.
 
-     Her yakınlaştırma çubuğunun iki tutamacı vardır. Tutamaç, Yakınlaştırma çubuğunun her ucundaki dikdörtgen bir alandır.
+     İki tanıtıcıları her yakınlaştırma çubuğu vardır. Yakınlaştırma çubuğunun her iki ucunda bir dikdörtgen alan işleyicisidir.
 
-## <a name="zoom-and-scroll"></a>Yakınlaştır ve Kaydır
+## <a name="zoom-and-scroll"></a>Yakınlaştırma ve kaydırma
 
-Birden çok grafik görüntülendiğinde, yük testi çalıştırmasının aynı bölümünü görüntülemesi için onları eşitlenmiş halde tutabilirsiniz.
+Görüntülenen birden çok grafik olduğunda, böylece yük testi çalıştırması aynı kısmını görüntüledikleri eşitlenme tutabilirsiniz.
 
-### <a name="to-synchronize-zooming-and-scrolling"></a>Yakınlaştırmayı ve kaydırmayı eşleştirmek için
+### <a name="to-synchronize-zooming-and-scrolling"></a>Yakınlaştırma ve kaydırma eşitlemek için
 
-1. **Yük Testi Çözümleyicisi**'Nde **yatay yakınlaştırma denetimlerini eşitler**' ı seçin.
+1. Üzerinde **Yük Testi Çözümleyicisi**, seçin **Yatay Yakınlaştırma Denetimlerini Eşitle**.
 
-     **Yatay yakınlaştırma denetimlerini senkronize** et düğmesi seçildiğinde, tek bir grafiğin zaman ölçeğini yakınlaştırmak ve kaydırmak, diğer grafiklerin zaman ölçeğini de büyütür ve kaydırır.
+     Zaman **Yatay Yakınlaştırma Denetimlerini Eşitle** düğmesi seçildiğinde, yakınlaştırma ve kaydırma bireysel bir grafiğin zaman ölçeğini de yakınlaştırıldığını ve diğer grafikleri zaman ölçeğini kaydırır.
 
-2. Yine, **yatay yakınlaştırma denetimlerini eşitler**' ı seçin.
+2. Yeniden seçmeniz **Yatay Yakınlaştırma Denetimlerini Eşitle**.
 
-     **Yatay yakınlaştırma denetimlerini zamanla** düğmesi seçili olmadığında, tek bir grafiğin zaman ölçeğini yakınlaştırmak ve kaydırmak yalnızca o grafiği etkiler.
+     Zaman **Yatay Yakınlaştırma Denetimlerini Eşitle** düğme seçili değilse, yakınlaştırma ve kaydırma bireysel bir grafiğin zaman ölçeğini yalnızca o grafiği etkiler.
 
-### <a name="to-zoom-and-scroll-to-a-region-of-the-graph"></a>Grafiğin bir bölgesine yakınlaştırmak ve kaydırmak için
+### <a name="to-zoom-and-scroll-to-a-region-of-the-graph"></a>Grafiğin bir bölgesine kaydırma ve yakınlaştırma
 
-1. Grafik altındaki Yakınlaştırma çubuğunda, sol taraftaki tutamacı sağa sürükleyin.
+1. Altında bir grafik yakınlaştırma çubuğu üzerinde sol taraftaki tutamacı sağa sürükleyin.
 
-     Bu, Test çalıştırmasının ikinci bölümünde yakınlaştırılır. Benzer şekilde, sağ taraftaki tutamacı sola sürükleyerek Test çalıştırmasının önceki bölümlerinde yakınlaştırın.
+     Bu test çalıştırması ikincisi parçası üzerinde yakınlaştırır. Benzer şekilde, sağ taraftaki tutamacı sola sürükleyerek önceki test çalıştırması kısımlarına yakınlaştırır.
 
-2. Belirli bir alanı yakınlaştırmak için her iki tutamacı de grafiğin ortasına kaydırın.
+2. Belirli bir alanı yakınlaştırmak için slayt iki grafiğin merkezine işler.
 
-     İki tutamacı birbirlerine yaklaştırırsanız, yük testinin daha kısa ve daha iyi segmentlerini göstermek için daha fazla yakınlaştırmanız gerekir.
+     Yakın iki birbirine daha kısa, hassas kesimleri yük testinin görüntülemek için ekranı tanıtıcılarıdır.
 
      Yakınlaştırma çubuğunun orta kısmını seçin ve ardından onu sürükleyerek yük testinde belirli bir noktaya kaydırın.
 
@@ -97,24 +97,24 @@ Birden çok grafik görüntülendiğinde, yük testi çalıştırmasının aynı
 
 1. Yakınlaştırma alanının bir ucunda bulunan bir grafiği seçin.
 
-2. Fare işaretçisini yakınlaştırma alanının diğer ucuna sürükleyin.
+2. Fare işaretçisi Yakınlaştırma alanının diğer sonuna kadar sürükleyin.
 
 3. Fare düğmesini bırakın.
 
     Bu, seçip sürükleyerek tanımladığınız alanı büyütür.
 
-   Aşağıdaki yordamda Yakınlaştırma çubuğunun uçlarını ayarlamak zorunda kalmadan hızlı bir şekilde yakınlaştırmanın nasıl yapılacağı açıklanmaktadır.
+   Aşağıdaki yordam, yakınlaştırma çubuğu ucunda ayarlamak zorunda kalmadan hızlıca uzaklaştırmak açıklar.
 
 ### <a name="to-zoom-out"></a>Uzaklaştırmak için
 
-1. Yakınlaştırılmış bir grafiğe sağ tıklayın.
+1. Yakınlaştırılmış grafiğe sağ tıklayın.
 
-2. Kısayol menüsünde **Yatay Uzaklaştır**' ı seçin.
+2. Kısayol menüsünde **Yatay Uzaklaştır**.
 
-     Bu, yük testi çalıştırmasının tüm süresini göstermek için uzaklaşır.
+     Bu sürenin tamamı yük testinin çalışma gösterilecek uzaklaştırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Grafik görünümünde Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Grafik görünümünde yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md)
+- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [Nasıl yapılır: grafiklerde sayaç ekleme ve silme](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)

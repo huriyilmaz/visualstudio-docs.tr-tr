@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ListMemory command
 - list memory command
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bb92f3ac3420f146fdcd39b5925f7b3a517959a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c500b1b516c2b1ab1bc66b7970fccc4ec7a85baa
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748709"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568717"
 ---
 # <a name="list-memory-command"></a>Belleği Listele Komutu
-Belirtilen bellek aralığının içeriğini görüntüler.
+Belirtilen bellek aralığının içeriklerini görüntüler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,16 +36,16 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 
 İsteğe bağlı. Belleği görüntülemeye başlamak için gereken bellek adresi.
 
-## <a name="switches"></a>Anahtarlar
+## <a name="switches"></a>Geçişler
 /ANSI&#124;Unicode
 
 İsteğe bağlı. Belleği, ANSI veya Unicode bellek baytlarına karşılık gelen karakterler olarak görüntüler.
 
-/Count: `number`
+/Count:`number`
 
-İsteğe bağlı. @No__t_0 başlayarak, kaç baytlık bellek gösterileceğini belirler.
+İsteğe bağlı. `expression`başlayarak, kaç baytlık bellek gösterileceğini belirler.
 
-/Format: `formattype`
+/Format:`formattype`
 
 İsteğe bağlı. **Bellek penceresinde bellek** bilgilerini görüntülemek için biçim türü; OneByte, TwoBytes, on bayt, sekizinci TBytes, float (32-bit) veya Double (64-bit) olabilir. OneByte kullanılıyorsa `/Unicode` kullanılamaz.
 
@@ -60,7 +60,7 @@ Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yeri
 >Debug.ListMemory /Format:float /Count:30 /Unicode
 ```
 
-şunu yazabilirsiniz:
+Şunu yazabilirsiniz:
 
 ```cmd
 >df /Count:30 /Unicode
@@ -70,14 +70,14 @@ Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yeri
 
 |Alias|Komut ve anahtarlar|
 |-----------| - |
-|**TID**|Debug. ListMemory|
-|**kapattığımda**|Debug. ListMemory/ANSI|
-|**veritabanı**|Debug. ListMemory/Format: OneByte|
-|**'ye**|Debug. ListMemory/Format: on bayt/ANSI|
-|**gg**|Debug. ListMemory/Format: on bayt|
+|**d**|Debug.ListMemory|
+|**kapattığımda**|Debug.ListMemory /Ansi|
+|**veritabanı**|Debug.ListMemory /Format:OneByte|
+|**'ye**|Debug.ListMemory /Format:FourBytes /Ansi|
+|**dd**|Debug.ListMemory /Format:FourBytes|
 |**df**|Debug. ListMemory/Format: float|
-|**DQ**|Debug. ListMemory/Format: sekizinci TBytes|
-|**du**|Debug. ListMemory/UNICODE|
+|**DQ**|Debug.ListMemory /Format:EightBytes|
+|**du**|Debug.ListMemory / Unicode|
 
 ## <a name="example"></a>Örnek
 

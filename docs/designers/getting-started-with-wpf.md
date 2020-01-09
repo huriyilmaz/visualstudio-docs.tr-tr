@@ -3,17 +3,17 @@ title: WPF nedir?
 ms.date: 04/16/2018
 ms.topic: conceptual
 ms.assetid: f3be98cb-870f-472c-9da5-cb815e4f6598
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8cc1ea22c5cdbe85bf1d24d1641709c5fe5da7a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: eb58a1a7bee7b07cc9b5434f7fa3e6bd295060d2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187135"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589545"
 ---
 # <a name="get-started-with-wpf"></a>WPF kullanmaya başlama
 
@@ -23,7 +23,7 @@ Bu bölümde WPF ile çalışmaya başlamanıza yardımcı olan konular yer alı
 
 ## <a name="where-should-i-start"></a>Nereden başlamalıyım?
 
-|Konu|Makaleleri|
+|Subject|Makaleler|
 |-|-|
 |Hemen hızlı bir şekilde geçmek istiyorum...|[İzlenecek Yol: İlk WPF masaüstü uygulamam](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |XAML tasarım araçlarını karşılaştırmak istiyorum...|[Visual Studio ve Visual Studio için Blend XAML tasarlama](../xaml-tools/designing-xaml-in-visual-studio.md)|

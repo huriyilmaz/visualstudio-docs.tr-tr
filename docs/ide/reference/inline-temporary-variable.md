@@ -1,23 +1,23 @@
 ---
-title: Geçici bir değişkeni değeriyle değiştir
+title: Geçici bir değişken değeriyle değiştirin.
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8b758407dc5500630157050c10f881a6515e1216
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8f0199436f5f9b1013a4c49cfb5909e760c73dcc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661008"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568873"
 ---
-# <a name="inline-a-temporary-variable-refactoring"></a>Geçici bir değişken yeniden düzenleme
+# <a name="inline-a-temporary-variable-refactoring"></a>Satır içi bir geçici değişken yeniden düzenleme
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -25,42 +25,42 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Visual Basic
 
-**Ne:** Geçici bir değişkeni kaldırmanıza ve bunun yerine değeri ile değiştirmenize izin verir.
+**Ne:** geçici değişken kaldırın ve bunun yerine değeriyle değiştirme olanak tanır.
 
-**Ne zaman:** Geçici değişkenin kullanımı, kodun anlaşılması daha zor hale getirir.
+**Ne zaman:** geçici değişken kullanımı kodu anlamak zorlaştırır.
 
-**Neden:** Geçici bir değişkenin kaldırılması kodu daha kolay okunabilir hale gelebilir.
+**Neden:** geçici değişken kaldırılması duruma kodu daha kolay okunabilir.
 
-## <a name="how-to"></a>Nasıl yapılır
+## <a name="how-to"></a>Nasıl Yapılır Konuları
 
-1. Metin imlecini satır içine eklenecek geçici değişkenin içine vurgulayın veya yerleştirin:
-
-   - C#:
-
-       ![Vurgulanan kod-C#](media/inline-highlight-cs.png)
-
-   - Visual Basic:
-
-       ![Vurgulanan kod Visual Basic](media/inline-highlight-vb.png)
-
-2. Sonra, aşağıdakilerden birini yapın:
-
-   - **Klavyenizdeki**
-      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
-   - **Tığında**
-      - Koda sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-
-3. Önizleme penceresi açılır penceresinde **satır içi geçici değişken** ' i seçin.
-
-   Değişken kaldırılır ve kullanımları değişkenin değerine göre değişir.
+1. Vurgulama veya satır içine alınmayacak kadar geçici değişken metin imleci yerleştirin:
 
    - C#:
 
-      ![Satır içi sonuç-C#](media/inline-result-cs.png)
+       ![Vurgulanan kodu:C#](media/inline-highlight-cs.png)
 
    - Visual Basic:
 
-      ![Satır içi sonuç-Visual Basic](media/inline-result-vb.png)
+       ![Vurgulanan kod - Visual Basic](media/inline-highlight-vb.png)
+
+2. Ardından, aşağıdakilerden birini yapın:
+
+   - **Klavye**
+      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+   - **Fare**
+      - Kod sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+
+3. Seçin **satır içi geçici değişken** gelen önizleme penceresi açılır.
+
+   Değişken kaldırılır ve kendi kullanımları değişkenin değeriyle değiştirilir.
+
+   - C#:
+
+      ![Satır içi sonucu-C#](media/inline-result-cs.png)
+
+   - Visual Basic:
+
+      ![Satır içi sonucu - Visual Basic](media/inline-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

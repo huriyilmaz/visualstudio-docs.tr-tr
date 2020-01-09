@@ -11,21 +11,21 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], TableAdapter
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b73e193f1bb3082a353e004200d437a74f508941
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 16ba6fcab6ef0f7a60f8cb8373a10a7c4383676b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641156"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586217"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect metotlarıyla veri kaydetme
 
-Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL deyimlerini doğrudan bir veritabanına karşı çalıştırmaya yönelik ayrıntılı yönergeler sağlar. Bir TableAdapter 'ın DBDirect yöntemleri, veritabanı güncelleştirmeleriniz üzerinde ince bir denetim düzeyi sağlar. Uygulamanızı gerektiği gibi bireysel `Insert`, `Update` ve `Delete` yöntemlerini çağırarak belirli SQL deyimlerini ve saklı yordamları çalıştırmak için bunları kullanabilirsiniz (GÜNCELLEŞTIRMEYI gerçekleştiren aşırı yüklenmiş `Update` yönteminin aksine, Ekle ve deyimleri tek bir çağrıda sıler).
+Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL deyimlerini doğrudan bir veritabanına karşı çalıştırmaya yönelik ayrıntılı yönergeler sağlar. Bir TableAdapter 'ın DBDirect yöntemleri, veritabanı güncelleştirmeleriniz üzerinde ince bir denetim düzeyi sağlar. Uygulamanızı gerektiği gibi bireysel `Insert`, `Update`ve `Delete` yöntemlerini çağırarak belirli SQL deyimlerini ve saklı yordamları çalıştırmak için kullanabilirsiniz (tümünü tek bir çağrıda GÜNCELLEŞTIRME, ekleme ve SILME deyimlerini gerçekleştiren aşırı yüklenmiş `Update` yönteminin aksine).
 
 Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
@@ -33,7 +33,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile bir veri kümesi oluşturun ve yapılandırın.
 
-- **Veri kaynakları** penceresinden öğeleri sürüklerken form üzerinde oluşturulacak denetimi seçin. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- **Veri kaynakları** penceresinden öğeleri sürüklerken form üzerinde oluşturulacak denetimi seçin. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 - **Veri kaynakları** penceresinden forma öğe sürükleyerek veri bağlantılı bir form oluşturun.
 
@@ -53,7 +53,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
@@ -61,7 +61,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama**oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -77,7 +77,7 @@ Bu adım, Northwind örnek veritabanındaki `Region` tablosuna dayalı bir veri 
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
+1. Üzerinde **veri** menüsünde **veri kaynaklarını Göster**.
 
    **Veri kaynakları** penceresi açılır.
 
@@ -99,7 +99,7 @@ Bu adım, Northwind örnek veritabanındaki `Region` tablosuna dayalı bir veri 
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. @No__t_0 tablosunu seçip **son**' u seçin.
+8. `Region` tablosunu seçip **son**' u seçin.
 
      **NorthwindDataSet** , projenize eklenir ve `Region` tablosu **veri kaynakları** penceresinde görünür.
 
@@ -109,7 +109,7 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 Windows formunda veri bağlantılı denetimler oluşturmak için, **veri kaynakları** penceresinden ana **bölge** düğümünü form üzerine sürükleyin.
 
-Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> denetimi ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
+Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> denetimi ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource>ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
 
 ### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Bireysel TableAdapter DbDirect yöntemlerini çağıran düğmeler eklemek için
 
@@ -119,7 +119,7 @@ Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> 
 
     |Name|Metin|
     |----------|----------|
-    |`InsertButton`|**Ekleyin**|
+    |`InsertButton`|**Ekle**|
     |`UpdateButton`|**Güncelleştir**|
     |`DeleteButton`|**Delete**|
 
@@ -127,7 +127,7 @@ Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> 
 
 1. Tıklama olayı için bir olay işleyicisi oluşturmak ve kod düzenleyicisinde formunuzu açmak için **InsertButton** öğesini seçin.
 
-2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
+2. `InsertButton_Click` olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
      [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]
@@ -136,7 +136,7 @@ Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> 
 
 1. Tıklama olayı için bir olay işleyicisi oluşturmak ve formunuzu Kod düzenleyicisinde açmak için **UpdateButton** öğesine çift tıklayın.
 
-2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
+2. `UpdateButton_Click` olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
      [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]
@@ -145,12 +145,12 @@ Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> 
 
 1. Tıklama olayı için bir olay işleyicisi oluşturmak üzere **DeleteButton** ' ı seçin ve formunuzu Kod düzenleyicisinde açın.
 
-2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
+2. `DeleteButton_Click` olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
      [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırma
+## <a name="run-the-application"></a>Uygulamayı çalıştırın
 
 - Uygulamayı çalıştırmak için **F5** ' i seçin.
 

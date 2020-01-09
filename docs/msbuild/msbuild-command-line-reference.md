@@ -12,17 +12,17 @@ helpviewer_keywords:
 - MSBuild, command line reference
 - msbuild.exe
 ms.assetid: edaa65ec-ab8a-42a1-84cb-d76d5b2f4584
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a23a82afcc484cbbe71bf167ecd0884f399e656
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: e8cd04d16f35ae2cc1edaf43ae9f8803c3e424ba
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252654"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589259"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild komut satırı başvurusu
 Bir proje veya çözüm dosyası oluşturmak için *MSBuild. exe* kullandığınızda, işlemin çeşitli yönlerini belirtmek için birkaç anahtar ekleyebilirsiniz.
@@ -41,7 +41,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |--------------|-----------------|
 |`ProjectFile`|Belirttiğiniz proje dosyasında hedefleri oluşturur. Proje dosyası belirtmezseniz, MSBuild, *proj* içinde sonlanan ve bu dosyayı kullanan bir dosya adı uzantısı için geçerli çalışma dizinini arar. Ayrıca, bu bağımsız değişken için bir Visual Studio çözüm dosyası da belirtebilirsiniz.|
 
-## <a name="switches"></a>Anahtarlar
+## <a name="switches"></a>Geçişler
 
 |Anahtar|Kısa biçim|Açıklama|
 |------------|----------------|-----------------|

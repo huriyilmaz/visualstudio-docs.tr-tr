@@ -8,17 +8,17 @@ helpviewer_keywords:
 - database files, creating
 - table designer
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14d30a366c7400b05a713f146e602ae9ccd7e766
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c8fa89b2cf6eb5afdf1d09a9b4de60cdc9ca11f2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648670"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586893"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>Visual Studio 'da veritabanı oluşturma ve tablo ekleme
 
@@ -26,13 +26,13 @@ SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve gü
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Bu izlenecek yolu tamamlamak için, Visual Studio 'da yüklü **.net masaüstü geliştirme** ve **veri depolama ve işleme** iş yükleri gerekir. Bunları yüklemek için **Visual Studio yükleyicisi** açın ve değiştirmek Istediğiniz Visual Studio sürümünün yanındaki **Değiştir** ' i (veya **daha fazla**  > **Değiştir**) seçin.
+Bu izlenecek yolu tamamlamak için, Visual Studio 'da yüklü **.net masaüstü geliştirme** ve **veri depolama ve işleme** iş yükleri gerekir. Bunları yüklemek için **Visual Studio yükleyicisi** açın ve değiştirmek Istediğiniz Visual Studio sürümünün yanındaki **Değiştir** ' i (veya **daha fazla** > **Değiştir**) seçin.
 
 ## <a name="create-a-project-and-a-local-database-file"></a>Bir proje ve yerel veritabanı dosyası oluşturma
 
 1. Yeni bir **Windows Forms App** projesi oluşturun ve **SampleDatabaseWalkthrough**olarak adlandırın.
 
-2. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
+2. Menü çubuğunda, **proje** > **Yeni öğe Ekle**' yi seçin.
 
 3. Öğe şablonları listesinde, aşağı kaydırın ve **hizmet tabanlı veritabanı**' nı seçin.
 
@@ -40,9 +40,9 @@ Bu izlenecek yolu tamamlamak için, Visual Studio 'da yüklü **.net masaüstü 
 
 4. Veritabanı **örnekveritabanını**adlandırın ve ardından **Ekle**' ye tıklayın.
 
-### <a name="add-a-data-source"></a>Veri kaynağı ekleme
+### <a name="add-a-data-source"></a>Veri Kaynağı Ekle
 
-1. **Veri kaynakları** penceresi açık değilse, **shıft** +**alt** +**D** ' ye basarak veya menü çubuğundaki**diğer Windows**  > **veri kaynaklarını**  >  **görüntüle** ' yi seçerek açın.
+1. **Veri kaynakları** penceresi açık değilse, **shıft**+**alt**+**D** ' ye basarak veya menü çubuğundaki **diğer Windows** > **veri kaynaklarını** > **görüntüle** ' yi seçerek açın.
 
 1. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' yi seçin.
 
@@ -58,15 +58,15 @@ Bu izlenecek yolu tamamlamak için, Visual Studio 'da yüklü **.net masaüstü 
 
 1. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında **İleri**' yi seçin.
 
-1. **Veritabanı nesnelerinizi seçin** sayfasında, veritabanının herhangi bir nesne içermediğini belirten bir ileti görürsünüz. **Son**' a tıklayın.
+1. **Veritabanı nesnelerinizi seçin** sayfasında, veritabanının herhangi bir nesne içermediğini belirten bir ileti görürsünüz. Seçin **son**.
 
 ### <a name="view-properties-of-the-data-connection"></a>Veri bağlantısının özelliklerini görüntüle
 
 Veri bağlantısının Özellikler penceresi açarak *SampleDatabase. mdf* dosyası için bağlantı dizesini görüntüleyebilirsiniz:
 
-- **SQL Server Nesne Gezgini** penceresini açmak için  > **SQL Server Nesne Gezgini** **görüntüle** ' yi seçin. **(LocalDB) \MSSQLLocalDB**  > **veritabanları**' nı genişletin ve *SampleDatabase. mdf* ' ye sağ tıklayıp **Özellikler**' i seçin.
+- **SQL Server Nesne Gezgini** penceresini açmak için > **SQL Server Nesne Gezgini** **görüntüle** ' yi seçin. **(LocalDB) \MSSQLLocalDB** > **veritabanları**' nı genişletin ve *SampleDatabase. mdf* ' ye sağ tıklayıp **Özellikler**' i seçin.
 
-- Alternatif olarak, bu pencere zaten açık değilse,  > **Sunucu Gezgini** **görüntüle** seçeneğini belirleyebilirsiniz. **Veri bağlantıları** düğümünü genişleterek, *SampleDatabase. mdf*' ye sağ tıklayıp **Özellikler**' i seçerek Özellikler penceresi açın.
+- Alternatif olarak, bu pencere zaten açık değilse, > **Sunucu Gezgini** **görüntüle** seçeneğini belirleyebilirsiniz. **Veri bağlantıları** düğümünü genişleterek, *SampleDatabase. mdf*' ye sağ tıklayıp **Özellikler**' i seçerek Özellikler penceresi açın.
 
   > [!TIP]
   > Veri bağlantıları düğümünü genişletemiyorum veya SampleDatabase. mdf bağlantısı listelenmiyorsa Sunucu Gezgini araç çubuğundaki **veritabanına Bağlan** düğmesini seçin. **Bağlantı ekle** iletişim kutusunda, **veri kaynağı**altında **Microsoft SQL Server veritabanı dosyası** ' nın seçildiğinden emin olun ve SampleDatabase. mdf dosyasına gidip seçin. **Tamam ' ı**seçerek bağlantıyı eklemeyi tamamlayın.
@@ -94,7 +94,7 @@ Bu bölümde, iki tablo, her tabloda bir birincil anahtar ve birkaç örnek veri
    |`ContactName`|`nvarchar (50)`|True (seçili)|
    |`Phone`|`nvarchar (24)`|True (seçili)|
 
-4. @No__t_0 satırına sağ tıklayın ve ardından **birincil anahtarı ayarla**' yı seçin.
+4. `CustomerID` satırına sağ tıklayın ve ardından **birincil anahtarı ayarla**' yı seçin.
 
 5. Varsayılan satıra (`Id`) sağ tıklayın ve ardından **Sil**' i seçin.
 
@@ -104,7 +104,7 @@ Bu bölümde, iki tablo, her tabloda bir birincil anahtar ve birkaç örnek veri
    CREATE TABLE [dbo].[Customers]
    ```
 
-   Şuna benzer bir şey görmeniz gerekir:
+   Aşağıdakine benzer bir şey görmelisiniz:
 
    ![Tablo Tasarımcısı](../data-tools/media/table-designer.png)
 
@@ -180,7 +180,7 @@ Bu bölümde, iki tablo, her tabloda bir birincil anahtar ve birkaç örnek veri
     > [!IMPORTANT]
     > Tüm sipariş kimlikleri ve sipariş miktarları ' nın tamsayılar olduğundan ve her müşteri KIMLIĞININ Customers tablosunun **CustomerID** sütununda belirtilen bir değerle eşleştiğinden emin olun.
 
-7. Menü çubuğunda **dosya**  > **Tümünü Kaydet**' i seçin.
+7. Menü çubuğunda **dosya** > **Tümünü Kaydet**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

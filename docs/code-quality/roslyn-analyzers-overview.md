@@ -7,17 +7,17 @@ helpviewer_keywords:
 - analyzers
 - Roslyn analyzers
 - code analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 388667485f27b59e46a1c39d95b37ddc413240ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ee96272733eb519e92262cece405de21c06fa3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649144"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587283"
 ---
 # <a name="overview-of-source-code-analyzers"></a>Kaynak kodu Çözümleyicileri 'ne genel bakış
 
@@ -40,7 +40,7 @@ Birçok çözümleyici kuralı veya *tanılaması*, sorunu gidermek için uygula
 
 Roslyn çözümleyicilerine göre kaynak analizi, yönetilen kod için [eski Analizi](../code-quality/code-analysis-for-managed-code-overview.md) yerine koyar. Eski analiz kurallarının birçoğu zaten Roslyn kod Çözümleyicileri olarak yeniden yazıldı. .NET Core ve .NET Standard projeleri gibi daha yeni proje şablonları için eski analizler de kullanılamaz.
 
-Eski analiz kuralı ihlallerine benzer şekilde, kaynak kodu çözümleme ihlalleri Visual Studio 'daki Hata Listesi penceresinde görüntülenir. Ayrıca, kaynak kodu çözümleme ihlalleri, kod Düzenleyicisi 'nde, sorunlu kodun altında *dalgalı çizgiler* olarak da görünür. Dalgalı çizginin rengi kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#rule-severity) bağlıdır. Aşağıdaki görüntüde kırmızı, bir yeşil ve bir gri &mdash;one üç ihlal gösterilmektedir:
+Eski analiz kuralı ihlallerine benzer şekilde, kaynak kodu çözümleme ihlalleri Visual Studio 'daki Hata Listesi penceresinde görüntülenir. Ayrıca, kaynak kodu çözümleme ihlalleri, kod Düzenleyicisi 'nde, sorunlu kodun altında *dalgalı çizgiler* olarak da görünür. Dalgalı çizginin rengi kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#rule-severity) bağlıdır. Aşağıdaki görüntüde, bir kırmızı, bir yeşil ve bir gri&mdash;üç ihlal gösterilmektedir:
 
 ![Visual Studio 'da kod düzenleyicisinde dalgalı çizgiler](media/diagnostics-severity-colors.png)
 
@@ -52,7 +52,7 @@ Kod Çözümleyicileri, derleme zamanında kodu inceleyerek eski analizler gibi,
 Yalnızca Roslyn kod Çözümleyicileri, eski analizler tarafından aynı tür sorunları rapor etmez, ancak dosya veya projenizde ihlalin bir veya bütün tekrarlarını düzeltmenize olanak sağlar. Bu eylemlere *kod düzeltmeleri*denir. Kod düzeltmeleri IDE 'ye özgüdür; Visual Studio 'da, bunlar [hızlı eylemler](../ide/quick-actions.md)olarak uygulanır. Tüm çözümleyici tanılamaları ilişkili bir kod düzeltmesine sahip değildir.
 
 > [!NOTE]
-> @No__t_1**çalıştırma kodu analizini** **Çözümle** menü seçeneği yalnızca eski analizler için geçerlidir.
+>  > **çalıştırma kodu analizini** **Çözümle** menü seçeneği yalnızca eski analizler için geçerlidir.
 
 Hata Listesi kod Çözümleyicileri ve eski analizin ihlallerini birbirinden ayırt etmek için **araç** sütununa bakın. Araç değeri **Çözüm Gezgini**içindeki çözümleyici derlemelerinden biriyle eşleşiyorsa (örneğin, **Microsoft. Codequality. çözümleyiciler**), Ihlal bir kod çözümleyicisinden gelir. Aksi takdirde, ihlalin eski analizler.
 

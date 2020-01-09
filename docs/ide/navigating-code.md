@@ -13,17 +13,17 @@ helpviewer_keywords:
 - peek definition
 - go to line
 - go to
-author: mikadumont
-ms.author: midumont
+author: TerryGLee
+ms.author: tglee
 manager: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: f5348fc0c36435e5760f3967a7e6c9be2aecb1b7
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: 0216a71b675473d54aec9738ea7bdc85b7643841
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316461"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585827"
 ---
 # <a name="navigate-code"></a>Koda git
 
@@ -61,12 +61,12 @@ Gezinti çubuğunu gizlemek için, **metin düzenleyici tüm diller** ayarların
 
 ## <a name="find-all-references"></a>Tüm başvuruları Bul
 
-Çözümdeki seçili öğenin tüm başvurularını bulur. Bunu, büyük bir yeniden düzenleme için olası yan etkileri denetlemek veya "ölü" kodu doğrulamak için kullanabilirsiniz. Sonuçlar arasında geçmek için **F8** tuşuna basın. Daha fazla bilgi için bkz. [kodunuzda başvuruları bulma](finding-references.md).
+Çözümdeki seçili öğenin tüm başvurularını bulur. Bunu, büyük bir yeniden düzenleme için olası yan etkileri denetlemek veya "ölü" kodu doğrulamak için kullanabilirsiniz. Sonuçlar arasında geçmek için **F8** tuşuna basın. Daha fazla bilgi için [kodunuzdaki başvuruları bulma](finding-references.md).
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **shıft**+**F12** tuşlarına basın
-**Tığında** | Sağ tıklama menüsünden **tüm başvuruları bul** ' u seçin
+**Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **shıft**+**F12** tuşlarına basın
+**Fare** | Sağ tıklama menüsünden **tüm başvuruları bul** ' u seçin
 
 ## <a name="reference-highlighting"></a>Başvuru vurgulama
 
@@ -104,8 +104,8 @@ Tanıma git, sizi seçili öğenin tanımına götürür. Daha fazla bilgi için
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **F12** tuşuna basın
-**Tığında** | Tür adına sağ tıklayın ve **Tanıma Git** ' i seçin veya **CTRL** tuşuna basın ve tür adına tıklayın
+**Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **F12** tuşuna basın
+**Fare** | Tür adına sağ tıklayın ve **Tanıma Git** ' i seçin veya **CTRL** tuşuna basın ve tür adına tıklayın
 
 ## <a name="peek-definition"></a>Tanıma göz at
 
@@ -113,8 +113,8 @@ Göz atma tanımı, seçili öğenin tanımını, kod düzenleyicisindeki geçer
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **Alt**+**F12** tuşlarına basın
-**Tığında** | Tür adına sağ tıklayın ve bakış **tanımı** ' nı seçin veya **CTRL** tuşuna basın veya tür adına tıklayın ( **göz atma görünümünde aç seçeneğinde açık tanımı** varsa)
+**Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **Alt**+**F12** tuşlarına basın
+**Fare** | Tür adına sağ tıklayın ve bakış **tanımı** ' nı seçin veya **CTRL** tuşuna basın veya tür adına tıklayın ( **göz atma görünümünde aç seçeneğinde açık tanımı** varsa)
 
 ## <a name="go-to-implementation"></a>Uygulamaya git
 
@@ -122,8 +122,8 @@ Uygulamaya git ' i kullanarak, temel bir sınıftan gezinebilirsiniz veya uygula
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **Ctrl**+**F12** tuşlarına basın
-**Tığında** | Tür adına sağ tıklayın ve **uygulamaya git** ' i seçin.
+**Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **Ctrl**+**F12** tuşlarına basın
+**Fare** | Tür adına sağ tıklayın ve **uygulamaya git** ' i seçin.
 
 ## <a name="go-to-base"></a>Temele git
 
@@ -131,8 +131,8 @@ Temele git ' i kullanarak seçili öğenin devralma zincirinde gezinebilirsiniz.
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **Alt**+**giriş sayfasına** basın
-**Tığında** | Tür adına sağ tıklayın ve **temele git** ' i seçin
+**Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **Alt**+**giriş sayfasına** basın
+**Fare** | Tür adına sağ tıklayın ve **temele git** ' i seçin
 
 ## <a name="call-hierarchy"></a>Çağrı Hiyerarşisi
 
@@ -140,8 +140,8 @@ Giriş | İşlev
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **ctrl**+**K**, **CTRL**+**t** tuşlarına basın
-**Tığında** | Üye adına sağ tıklayın ve **Çağrı hiyerarşisini görüntüle** ' yi seçin.
+**Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **ctrl**+**K**, **CTRL**+**t** tuşlarına basın
+**Fare** | Üye adına sağ tıklayın ve **Çağrı hiyerarşisini görüntüle** ' yi seçin.
 
 ## <a name="next-method-and-previous-method-commands-visual-basic"></a>Next yöntemi ve önceki yöntem komutları (Visual Basic)
 
@@ -165,5 +165,5 @@ Kod düzenleyicisinde CodeLens kullandığınızda, değişiklikler ve bu deği�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Çağrı hiyerarşisini görüntüle](../ide/reference/call-hierarchy.md)

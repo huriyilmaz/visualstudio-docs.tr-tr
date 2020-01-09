@@ -4,17 +4,17 @@ ms.date: 04/17/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - configure test agents, test lab
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edb10246437bff9bef0a6f76ffde95bc12855944
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27f030fb73629172e0b5a2d5d4cb27cf186bb69f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653074"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594272"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Test aracılarını ve test denetleyicilerini yükleme
 
@@ -28,7 +28,7 @@ Aşağıdaki tabloda, Visual Studio için test aracısı veya test denetleyicisi
 
 | Öğe | Gereksinimler |
 | ---- | ------------ |
-| **Aracısı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
+| **Aracı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
 | **Kumandasını** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
@@ -44,7 +44,7 @@ Bu yükleyiciler, sanal makinelerde kolay yükleme için ISO dosyaları olarak k
 
 Aşağıdaki tabloya göre TFS, Microsoft Test Yöneticisi, test denetleyicisi ve test aracısının farklı sürümlerini karıştırabilirsiniz:
 
-| TFS | Laboratuvar Merkezi ile Microsoft Test Yöneticisi | Kumandasını | Aracı |
+| TFS | Laboratuvar Merkezi ile Microsoft Test Yöneticisi | Denetleyici | Aracı |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017:2015 veya yeni yüklemeyi yükseltin | 2017 | 2017 | 2017 |
 | 2017:2015 veya yeni yüklemeyi yükseltin | 2017 | 2013 güncelleştirme 5 | 2013 güncelleştirme 5 |

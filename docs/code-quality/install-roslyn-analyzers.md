@@ -6,17 +6,17 @@ helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9013d7be60a8091f7ce4fc4fe92fa4acaef43720
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 9a833cb46811bd97467fdb048272c9feb2bb7873
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636530"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587387"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>.NET Compiler Platform kodu Çözümleyicileri yüklemesi
 
@@ -33,7 +33,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
    > [!NOTE]
    > Her çözümleyici paketi için www.nuget.org sayfasında, **Paket Yöneticisi konsoluna**yapıştırmanın komutu gösterilmektedir. Metni panoya kopyalamak için kullanışlı bir düğme de vardır.
 
-   Çözümleyici derlemeleri yüklenir ve  > **Çözümleyicileri** **başvuruları**altında **Çözüm Gezgini** görüntülenir.
+   Çözümleyici derlemeleri yüklenir **ve > ** **çözümleyiciler** **Çözüm Gezgini** içinde görüntülenir.
 
 ## <a name="to-install-vsix-analyzers"></a>VSıX Çözümleyicileri yüklemek için
 
@@ -50,7 +50,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 ::: moniker range=">=vs-2019"
 
-1. Visual Studio 'da **uzantılar** > uzantıları **Yönet**' i seçin.
+1. Visual Studio 'da uzantıları **yönet**> **Uzantılar** ' ı seçin.
 
    **Uzantıları Yönet** iletişim kutusu açılır.
 
@@ -63,7 +63,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 3. Arama kutusuna, yüklemek istediğiniz çözümleyici uzantısının adını yazın. Örneğin, kodunuzu güvenlik ve performans sorunlarıyla ilgili olarak denetlemek için [Microsoft FxCop çözümleyicileri 'ni yüklemek](install-fxcop-analyzers.md#vsix) isteyebilirsiniz.
 
-4. **İndir**' i seçin.
+4. **Download** (İndir) seçeneğini belirleyin.
 
    Uzantı indirilir.
 
@@ -75,19 +75,19 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 6. Yüklemeyi başlatmak için **Değiştir** ' i seçin.
 
-7. Bir dakikadan veya ikinin ardından yükleme tamamlanır. **Kapat**' ı seçin.
+7. Bir dakikadan veya ikinin ardından yükleme tamamlanır. **Kapat**’ı seçin.
 
 8. Visual Studio 'Yu yeniden açın.
 
 ::: moniker range="vs-2017"
 
-Uzantının yüklenip yüklenmediğini denetlemek isterseniz, **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin. **Uzantılar ve güncelleştirmeler** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve ardından uzantıyı ada göre arayın.
+Uzantının yüklü olup olmadığını denetlemek istiyorsanız, **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin. **Uzantılar ve güncelleştirmeler** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve ardından uzantıyı ada göre arayın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Uzantının yüklenip yüklenmediğini denetlemek istiyorsanız, uzantıları  > **Uzantıları Yönet** **' i seçin**. **Uzantıları Yönet** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve uzantıyı ada göre arayın.
+Uzantının yüklenip yüklenmediğini denetlemek isterseniz, uzantıları **yönet** > **Uzantılar** ' ı seçin. **Uzantıları Yönet** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve uzantıyı ada göre arayın.
 
 ::: moniker-end
 

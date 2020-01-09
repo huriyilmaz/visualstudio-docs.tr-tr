@@ -6,17 +6,17 @@ helpviewer_keywords:
 - class diagrams, creating
 - Class Designer [Visual Studio], opening
 ms.assetid: 0eac1b54-2711-4e4b-9654-a0c429c08c8f
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f7a909196a3b345b39c006e9bf7cd6a52c9bde
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 87a6c1e996d820724138b6bf38c6440193a4c26b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188991"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588843"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapılır: projelere sınıf diyagramları ekleme
 
@@ -28,7 +28,7 @@ Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları o
 
 **Sınıf Tasarımcısı** bileşenini yüklemediyseniz, yüklemek için aşağıdaki adımları izleyin.
 
-1. Windows Başlat menüsünden **Visual Studio yükleyicisi** açın veya **Araçlar** ' ı seçerek Visual Studio 'daki menü çubuğundan**Araçlar ve Özellikler alın**  > .
+1. Windows Başlat menüsünden **Visual Studio yükleyicisi** açın veya **Araçlar** ' ı seçerek Visual Studio 'daki menü çubuğundan **Araçlar ve Özellikler alın** > .
 
    **Visual Studio yükleyicisi** açılır.
 
@@ -42,11 +42,11 @@ Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları o
 
 ## <a name="add-a-blank-class-diagram-to-a-project"></a>Projeye boş bir sınıf diyagramı ekleme
 
-1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve ardından  > **Yeni öğe** **Ekle** ' yi seçin. Ya da **Ctrl** +**SHIFT** +**A**'ya basın.
+1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve ardından > **Yeni öğe** **Ekle** ' yi seçin. Ya da **Ctrl**+**SHIFT**+**A**'ya basın.
 
    **Yeni öğe Ekle** iletişim kutusu açılır.
 
-2. **Ortak öğeleri** **genel** >  genişletin ve ardından şablon listesinden **sınıf diyagramı** ' nı seçin. Görsel C++ projelerde, **sınıf diyagramı** şablonunu bulmak için **yardımcı program** kategorisine bakın.
+2. **Ortak öğeleri** **genel** > genişletin ve ardından şablon listesinden **sınıf diyagramı** ' nı seçin. Görsel C++ projelerde, **sınıf diyagramı** şablonunu bulmak için **yardımcı program** kategorisine bakın.
 
    > [!NOTE]
    > **Sınıf diyagramı** şablonunu görmüyorsanız, Visual Studio için **Sınıf Tasarımcısı** bileşenini yüklemek için [adımları izleyin](#install-the-class-designer-component) .

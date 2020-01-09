@@ -15,17 +15,17 @@ helpviewer_keywords:
 - XSD task (MSBuild (C++))
 - MSBuild (C++), XSD task
 ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec51406aec9aec8981e5517480e4cd07bc80ffb1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 31c256e02901d4f7dd7de6f14e9f650626feac25
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748020"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565792"
 ---
 # <a name="xsd-task"></a>XSD görevi
 Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'nı (*XSD. exe*) sarmalanmış olarak kaydırır.
@@ -40,7 +40,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'n
 
      İsteğe bağlı **dize** parametresi.
 
-     Komut satırında belirtilen seçeneklerin listesi. Örneğin,/\<option1 >/\<option2 >/\<option # >. Başka bir **XSD** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.
+     Komut satırında belirtilen seçeneklerin listesi. Örneğin,/\<Seçenek1 >/\<Seçenek2 >/\<Seçenek # >. Başka bir **XSD** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.
 
 - **GenerateFromSchema**
 
@@ -50,9 +50,9 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'n
 
   Her biri bir XSD seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **sınıflar**  -  **/Classes**
+  - **sınıflar** -  **/Classes**
 
-  - **veri kümesi**  -  **/DataSet**
+  - **veri kümesi** -  **/DataSet**
 
 - **Dil**
 
@@ -62,7 +62,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'n
 
      **CS** C#(varsayılan olan), **vb** (Visual Basic) veya **js** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Uzayına**
+- **Namespace**
 
      İsteğe bağlı **dize** parametresi.
 
@@ -78,7 +78,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'n
 
      İsteğe bağlı **Boolean** parametresi.
 
-     @No__t_0, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
+     `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
 
 - **TrackerLogDirectory**
 

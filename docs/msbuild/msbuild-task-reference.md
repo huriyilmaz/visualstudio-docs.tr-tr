@@ -10,42 +10,42 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, tasks
 ms.assetid: b3144b27-a426-4259-b8ae-5f7991b202b6
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00af44212dd142dd94629f886a50b9646488af3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d050aa095868e229887e4928285d746e1b5906a5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747278"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593882"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild görev başvurusu
 
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. Aşağıdaki listede yer alan görevler [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] eklenmiştir. @No__t_0 yüklendiğinde, [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projeleri oluşturmak için kullanılan ek görevler vardır. Daha fazla bilgi için bkz [ C++ . görevler](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).
+Görevler, derleme işlemi sırasında çalışan kodu sağlar. Aşağıdaki listede yer alan görevler [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]eklenmiştir. [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] yüklendiğinde, [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projeleri oluşturmak için kullanılan ek görevler vardır. Daha fazla bilgi için bkz [ C++ . görevler](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).
 
 Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağıdaki parametrelere de sahiptir:
 
 | Parametre | Açıklama |
 |-------------------| - |
-| `Condition` | İsteğe bağlı `String` parametresi.<br /><br /> @No__t_1 altyapısının bu görevin yürütülüp yürütülmeyeceğini belirlemede kullandığı `Boolean` ifadesi. @No__t_0 tarafından desteklenen koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md). |
+| `Condition` | İsteğe bağlı `String` parametresi.<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısının bu görevin yürütülüp yürütülmeyeceğini belirlemede kullandığı `Boolean` ifadesi. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]tarafından desteklenen koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md). |
 | `ContinueOnError` | İsteğe bağlı parametre. , Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** ya da **true**. Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir.<br />-   **Errportadcontinue**. Bir görev başarısız olduğunda, `Target` öğesi ve derleme içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.<br />-   **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda, `Target` öğesi ve derleme içindeki kalan görevler yürütülmez ve tüm `Target` öğesi ve derleme başarısız olduğu kabul edilir.<br /><br /> 4,5 öncesindeki .NET Framework sürümleri yalnızca `true` ve `false` değerlerini destekliyordu.<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 - [Görev temel sınıfı](../msbuild/task-base-class.md)
 
- @No__t_0 sınıfından türetilen görevlere birkaç parametre ekler.
+ <xref:Microsoft.Build.Utilities.Task> sınıfından türetilen görevlere birkaç parametre ekler.
 
 - [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md)
 
- @No__t_0 sınıfından türetilen görevlere birkaç parametre ekler.
+ <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından türetilen görevlere birkaç parametre ekler.
 
 - [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md)
 
- @No__t_0 sınıfından türetilen görevlere birkaç parametre ekler.
+ <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından türetilen görevlere birkaç parametre ekler.
 
 - [AL (derleme bağlayıcı) görevi](../msbuild/al-assembly-linker-task.md)
 
@@ -85,7 +85,7 @@ Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağı
 
 - [CreateCSharpManifestResourceName görevi](../msbuild/createcsharpmanifestresourcename-task.md)
 
- Verilen bir *. resx* dosya adından veya başka bir kaynaktan [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] stili bir bildirim adı oluşturur.
+ Verilen bir *. resx* dosya adından veya başka bir kaynaktan [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]stili bir bildirim adı oluşturur.
 
 - [CreateItem görevi](../msbuild/createitem-task.md)
 
@@ -97,7 +97,7 @@ Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağı
 
 - [CreateVisualBasicManifestResourceName görevi](../msbuild/createvisualbasicmanifestresourcename-task.md)
 
- Verilen bir *. resx* dosya adından veya başka bir kaynaktan [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] stili bir bildirim adı oluşturur.
+ Verilen bir *. resx* dosya adından veya başka bir kaynaktan [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]stili bir bildirim adı oluşturur.
 
 - [Csc görevi](../msbuild/csc-task.md)
 
@@ -173,7 +173,7 @@ Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağı
 
 - [GetFrameworkSdkPath görevi](../msbuild/getframeworksdkpath-task.md)
 
- @No__t_0 yolunu alır.
+ [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]yolunu alır.
 
 - [GetReferenceAssemblyPaths görevi](../msbuild/getreferenceassemblypaths-task.md)
 
@@ -221,7 +221,7 @@ Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağı
 
 - ResGen görevi
 
- Kullanımdan kalktı. *. Txt* ve *. resx* dosyalarını ortak dil çalışma zamanı ikili *. resources* dosyalarına dönüştürmek için [GenerateResource görev](../msbuild/generateresource-task.md) görevini kullanın.
+ {1&gt;Artık kullanılmıyor.&lt;1} *. Txt* ve *. resx* dosyalarını ortak dil çalışma zamanı ikili *. resources* dosyalarına dönüştürmek için [GenerateResource görev](../msbuild/generateresource-task.md) görevini kullanın.
 
 - [ResolveAssemblyReference görevi](../msbuild/resolveassemblyreference-task.md)
 

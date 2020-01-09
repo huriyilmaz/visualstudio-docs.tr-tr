@@ -5,19 +5,19 @@ ms.date: 09/24/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: d79260be-6234-4fd3-89b5-a9756b4a93c1
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4c3e8313e1357095a9732c9304a695dd3b13b465
-ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
+ms.openlocfilehash: d269102b4ab3edcf62a2101802c4731667b76eb7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71831840"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567209"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Visual Studio’yu dağıtırken ürün anahtarlarını otomatik olarak uygulama
 
@@ -58,7 +58,7 @@ Aşağıdaki örnek, Visual Studio 2017 bir MPC 08860 biri olan bir kuruluş iç
 
 ::: moniker range="vs-2019"
 
-Aşağıdaki örnek, MPC/09260, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`ve varsayılan yükleme konumunu varsayan Visual Studio 2019 Enterprise lisansını uygulamak için bir komut satırı gösterir:
+Aşağıdaki örnek, MPC/09260, `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`ürün anahtarı ve varsayılan yükleme konumunu varsayan Visual Studio 2019 Enterprise lisansını uygulamak için bir komut satırı gösterir:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 09260
@@ -100,7 +100,7 @@ Varsa `StorePID.exe` başarıyla döndürür ürün anahtarı geçerli bir `%ERR
 | `PID_ACTION_NOUPGRADE`    | 6    |
 
 > [!NOTE]
-> Visual Studio 'nun bir sanal örneğini çalıştırdığınızda, Yerel AppData klasörünü ve kayıt defterini de sanallaştırdığınızdan emin olun. Sanal örneklerle ilgili sorunları gidermek için `C:\Program Files (x86)\Microsoft Visual Studio\<version>\Common7\IDE\DDConfigCA.exe` ' ı çalıştırın.  
+> Visual Studio 'nun bir sanal örneğini çalıştırdığınızda, Yerel AppData klasörünü ve kayıt defterini de sanallaştırdığınızdan emin olun. Sanal örneklerle ilgili sorunları gidermek için `C:\Program Files (x86)\Microsoft Visual Studio\<version>\Common7\IDE\DDConfigCA.exe`çalıştırın.  
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

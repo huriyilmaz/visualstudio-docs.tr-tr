@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TextTemplatingFilePreprocessor custom tool
 - text templates, TransformText() method
 - text templates, generating files at run time
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1ee422ec549ced0995db22258edf9ef21540804
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 26897bee69f7c0e969cd42feb7604321294641fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660302"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595377"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 Metin Şablonları İle Çalışma Süresi Metni Oluşturma
 
@@ -53,16 +53,16 @@ Uygulamanızda bir şablon kullanmak, çıktının son formunu (örneğin, uzun 
 
 ### <a name="to-create-a-run-time-text-template"></a>Çalışma zamanı metin şablonu oluşturmak için
 
-1. Çözüm Gezgini, projenizin kısayol menüsünde  > **Yeni öğe** **Ekle** ' yi seçin.
+1. Çözüm Gezgini, projenizin kısayol menüsünde > **Yeni öğe** **Ekle** ' yi seçin.
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **çalışma zamanı metin şablonu**' nu seçin. (Visual Basic**genel** >  genel **öğeler** altında görünür.)
+2. **Yeni öğe Ekle** Iletişim kutusunda **çalışma zamanı metin şablonu**' nu seçin. (Visual Basic **genel** > genel **öğeler** altında görünür.)
 
 3. Şablon dosyanız için bir ad yazın.
 
     > [!NOTE]
     > Şablon dosyası adı, oluşturulan kodda bir sınıf adı olarak kullanılır. Bu nedenle, boşluk veya noktalama işareti içermemelidir.
 
-4. **Ekle**' yi seçin.
+4. Seçin **ekleme**.
 
     **. Tt**uzantılı yeni bir dosya oluşturulur. **Özel araç** özelliği **Texttemplatingfileönişlemci**olarak ayarlanmıştır. Aşağıdaki satırları içerir:
 
@@ -80,7 +80,7 @@ Bir şablon oluşturmanın iyi bir yolu, var olan çıktının bir örneğini d�
 
 ### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>Varolan bir metin dosyasını çalışma zamanı şablonuna dönüştürmek için
 
-1. Dosyayı Visual Studio projenize ekleyin. Çözüm Gezgini, projenin kısayol menüsünde,  > **varolan öğeyi** **Ekle** ' yi seçin.
+1. Dosyayı Visual Studio projenize ekleyin. Çözüm Gezgini, projenin kısayol menüsünde, > **varolan öğeyi** **Ekle** ' yi seçin.
 
 2. Dosyanın **özel araçlar** özelliğini **Texttemplatingfileönişlemci**olarak ayarlayın. Çözüm Gezgini, dosyanın kısayol menüsünde **Özellikler**' i seçin.
 
@@ -119,7 +119,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>Gömülü program kodu
 
-@No__t_0 ve `#>` arasında program kodu ekleyebilirsiniz. Örneğin:
+`<#` ve `#>`arasında program kodu ekleyebilirsiniz. Örneğin:
 
 ```csharp
 <table>
@@ -144,7 +144,7 @@ This report is Company Confidential.
 </table>
 ```
 
-Deyimlerin `<# ... #>` ve ifadeler arasına `<#= ... #>` arasına eklendiğine dikkat edin. Daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
+Deyimlerin `<# ... #>` ve ifadeler arasına `<#= ... #>`arasına eklendiğine dikkat edin. Daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-template"></a>Şablonu kullanma
 
@@ -152,7 +152,7 @@ Deyimlerin `<# ... #>` ve ifadeler arasına `<#= ... #>` arasına eklendiğine d
 
 **. Tt** dosyasını kaydettiğinizde, bir yan kuruluş **. cs** veya **. vb** dosyası oluşturulur. Bu dosyayı **Çözüm Gezgini**görmek için **. tt** dosya düğümünü genişletin. Visual Basic projede, önce **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
-Alt dosya dosyasının `TransformText()` adlı bir yöntemi içeren kısmi bir sınıf içerdiğine dikkat edin. Bu yöntemi uygulamanızdan çağırabilirsiniz.
+Alt dosya dosyasının `TransformText()`adlı bir yöntemi içeren kısmi bir sınıf içerdiğine dikkat edin. Bu yöntemi uygulamanızdan çağırabilirsiniz.
 
 ### <a name="generating-text-at-run-time"></a>Çalışma zamanında metin üretiliyor
 
@@ -262,7 +262,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 #### <a name="passing-data-in-template-properties"></a>Şablon özelliklerinde veri geçirme
 
-Verileri şablona geçirmenin alternatif bir yolu, bir kısmi sınıf tanımındaki şablon sınıfına ortak özellikler eklemektir. Uygulamanız `TransformText()` çağırmadan önce özellikleri ayarlayabilir.
+Verileri şablona geçirmenin alternatif bir yolu, bir kısmi sınıf tanımındaki şablon sınıfına ortak özellikler eklemektir. Uygulamanız `TransformText()`çağırmadan önce özellikleri ayarlayabilir.
 
 Ayrıca, kısmi bir tanımda şablon sınıfınıza alanlar ekleyebilirsiniz. Bu, şablonun ardışık yürütmeleri arasında veri geçirmenize olanak sağlar.
 
@@ -302,13 +302,13 @@ Include yönergesi, bir şablon dosyası veya dahil edilen bir dosyanın metin i
 
 Aşağıdaki örnekte kullanılan düzende aşağıdaki noktalara dikkat edin:
 
-- Temel sınıf `SharedFragments` sınıf özelliği blokları `<#+ ... #>` içindeki yöntemleri tanımlar.
+- Temel sınıf `SharedFragments` sınıf özelliği blokları `<#+ ... #>`içindeki yöntemleri tanımlar.
 
 - Temel sınıf boş metin içermiyor. Bunun yerine, tüm metin blokları sınıf özelliği yöntemleri içinde oluşur.
 
-- Türetilmiş sınıf, `SharedFragments` tanımlanan yöntemleri çağırır.
+- Türetilmiş sınıf, `SharedFragments`tanımlanan yöntemleri çağırır.
 
-- Uygulama, türetilmiş sınıfın `TextTransform()` yöntemini çağırır, ancak temel sınıf `SharedFragments` dönüştürmez.
+- Uygulama, türetilmiş sınıfın `TextTransform()` yöntemini çağırır, ancak temel sınıf `SharedFragments`dönüştürmez.
 
 - Hem temel hem de türetilmiş sınıflar çalışma zamanı metin şablonlarıdır; diğer bir deyişle, **özel araç** özelliği **Texttemplatingfileönişlemci**olarak ayarlanır.
 

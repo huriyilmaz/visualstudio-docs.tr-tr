@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, providing overridable classes
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c2386b7a7472f6b80457a5a803f6dfe886cc1d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658331"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595897"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>Oluşturulan sınıfları geçersiz kılma ve genişletme
 
@@ -28,7 +28,7 @@ Oluşturulan kodu genişletmenize olanak tanımak için çeşitli mekanizmalar s
 
 Kısmi sınıf tanımları, bir sınıfın birden fazla yerde tanımlanmasını sağlar. Bu, oluşturduğunuz kodu kendi yazdığınız koddan ayırmanızı sağlar. El ile yazılmış kodunuzda, oluşturulan kod tarafından devralınan sınıfları geçersiz kılabilirsiniz.
 
-Örneğin, DSL tanımınızda `Book` adlı bir etki alanı sınıfı tanımlarsanız, geçersiz kılma yöntemleri ekleyen özel kod yazabilirsiniz:
+Örneğin, DSL tanımınızda `Book`adlı bir etki alanı sınıfı tanımlarsanız, geçersiz kılma yöntemleri ekleyen özel kod yazabilirsiniz:
 
 ```csharp
 public partial class Book
@@ -52,13 +52,13 @@ Oluşturulan sınıflarda yöntemlerin çoğu, modelleme ad alanlarındaki sabit
 
 Bununla birlikte, etki alanı sınıfı için **Double türetilmiş** bayrağını ayarlayarak bu yöntemleri geçersiz kılabilirsiniz. Bu, biri diğerinin soyut taban sınıfı olmak üzere iki sınıfın oluşturulmasına neden olur. Tüm Yöntem ve özellik tanımları temel sınıfta bulunur ve yalnızca Oluşturucu türetilmiş sınıfta bulunur.
 
-Örneğin, örnek Library. dsl ' de, `CirculationBook` etki alanı sınıfı `Generates``Double Derived` özelliği `true` olarak ayarlanmıştır. Bu alan sınıfı için oluşturulan kod iki sınıf içerir:
+Örneğin, örnek Library. dsl ' de, `CirculationBook` etki alanı sınıfı `Generates``Double Derived` özelliği `true`olarak ayarlanmıştır. Bu alan sınıfı için oluşturulan kod iki sınıf içerir:
 
 - bir soyut olan ve tüm yöntemleri ve özellikleri içeren `CirculationBookBase`.
 
-- `CirculationBookBase` türetilen `CirculationBook`. Oluşturucular dışında boştur.
+- `CirculationBookBase`türetilen `CirculationBook`. Oluşturucular dışında boştur.
 
-Herhangi bir yöntemi geçersiz kılmak için, türetilmiş sınıfın `CirculationBook` gibi kısmi bir tanımını oluşturursunuz. Oluşturulan yöntemleri ve modelleme çerçevesinden devralınan yöntemleri geçersiz kılabilirsiniz.
+Herhangi bir yöntemi geçersiz kılmak için, türetilmiş sınıfın `CirculationBook`gibi kısmi bir tanımını oluşturursunuz. Oluşturulan yöntemleri ve modelleme çerçevesinden devralınan yöntemleri geçersiz kılabilirsiniz.
 
 Model öğeleri, ilişkiler, şekiller, diyagramlar ve bağlayıcılar dahil olmak üzere tüm öğe türleriyle bu yöntemi kullanabilirsiniz. Ayrıca, diğer oluşturulan sınıfların yöntemlerini geçersiz kılabilirsiniz. ToolboxHelper gibi bazı oluşturulan sınıflar her zaman çift türetilir.
 
@@ -80,7 +80,7 @@ Her durumda, bayrağını ayarlayıp kodu yeniden oluşturduğunuzda bir yapı h
 
 İşlem Yöneticisi, bir özellikte değişiklik gibi, belirtilen bir olayın gerçekleştiği bir işlemin sonundan önce çalışan kurallar tanımlamanızı sağlar. Kurallar genellikle depodaki farklı öğeler arasında eşitlemeyi sürdürmek için kullanılır. Örneğin, diyagramın modelin geçerli durumunu görüntülediğinden emin olmak için kurallar kullanılır.
 
-Kurallar her bir nesne için bir kural kaydeden koda sahip olmanız gerekmez, her sınıf temelinde tanımlanır. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
+Kurallar her bir nesne için bir kural kaydeden koda sahip olmanız gerekmez, her sınıf temelinde tanımlanır. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="store-events"></a>Olayları depola
 

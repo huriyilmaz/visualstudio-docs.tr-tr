@@ -1,51 +1,51 @@
 ---
-title: 'Nasıl yapılır: Virgülle ayrılmış bir öğe listesini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, separating items with semicolons
 - MSBuild, formatting item collections
 ms.assetid: 3cae844c-7c6d-4144-82dc-efad10ba458f
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b01e39569207065fac9c28d093267348a829d73f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 677278d08e3223f759afc64692481311bfba3356
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945059"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596339"
 ---
-# <a name="how-to-display-an-item-list-separated-with-commas"></a>Nasıl yapılır: Virgülle ayrılmış bir öğe listesini görüntüleme
-Öğesi ile çalışırken listeleri [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]), bu öğe listeleri içeriğini okumak kolay bir şekilde görüntülemek bazen kullanışlıdır. Veya özel ayırıcı dize ile ayrılmış olan öğelerin listesini alan bir görev olabilir. Her iki durumda, bir öğe listesi için bir ayırıcı dize belirtebilirsiniz.
+# <a name="how-to-display-an-item-list-separated-with-commas"></a>Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme
+[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) içindeki öğe listeleriyle çalışırken, bu öğe listelerinin içeriğini okunması kolay bir şekilde göstermek bazen yararlı olur. Ya da özel bir ayırıcı dizesiyle ayrılan öğelerin listesini alan bir göreviniz olabilir. Bu iki durumda da, bir öğe listesi için bir ayırıcı dize belirtebilirsiniz.
 
-## <a name="separate-items-in-a-list-with-commas"></a>Virgül içeren bir liste içindeki ayrı öğeleri
-Varsayılan olarak, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] listedeki öğeleri ayırmak için noktalı virgül kullanır. Örneğin, bir `Message` şu değere sahip öğe:
+## <a name="separate-items-in-a-list-with-commas"></a>Listedeki öğeleri virgülle ayırın
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], varsayılan olarak, listedeki öğeleri ayırmak için noktalı virgül kullanır. Örneğin, aşağıdaki değere sahip bir `Message` öğesini düşünün:
 
 `<Message Text="This is my list of TXT files: @(TXTFile)"/>`
 
-Zaman `@(TXTFile)` öğe listesi öğeleri içeren *App1.txt*, *App2.txt*, ve *App3.txt*, ileti:
+`@(TXTFile)` öğe listesi *app1. txt*, *app2. txt*ve *App3. txt*öğelerini içerdiğinde ileti şu şekilde olur:
 
 `This is my list of TXT files: App1.txt;App2.txt;App3.txt`
 
-Varsayılan davranışı değiştirmek isterseniz, kendi ayırıcı belirtebilirsiniz. Bir öğe liste ayırıcı belirtmek için sözdizimi aşağıdaki gibidir:
+Varsayılan davranışı değiştirmek istiyorsanız kendi ayırıcıınızı belirtebilirsiniz. Öğe listesi ayırıcısını belirtmek için sözdizimi şöyledir:
 
 `@(ItemListName, '<separator>')`
 
-Ayırıcı, tek bir karakter veya bir dize olabilir ve tek tırnak içine alınmalıdır.
+Ayırıcı tek bir karakter veya dize olabilir ve tek tırnak içine alınmalıdır.
 
-#### <a name="to-insert-a-comma-and-a-space-between-items"></a>Bir virgül ve öğeleri arasına boşluk eklemek için
+#### <a name="to-insert-a-comma-and-a-space-between-items"></a>Öğeler arasına virgül ve boşluk eklemek için
 
-- Aşağıdakine benzer bir öğe gösterimini kullanın:
+- Aşağıdakine benzer öğe gösterimini kullanın:
 
     `@(TXTFile, ', ')`
 
 ## <a name="example"></a>Örnek
-Bu örnekte, [Exec](../msbuild/exec-task.md) görev çalıştırır dosyasında belirtilen metin dizeleri bulmak için findstr aracı *Phrases.txt*. Findstr komut içinde değişmez değer dizeleri tarafından belirtilen **-c:** geçiş, bunu öğesi ayırıcısı `-c:` bulunan öğeler arasındaki eklenen `@(Phrase)` öğe listesi.
+Bu örnekte, [Exec](../msbuild/exec-task.md) görevi, belirtilen metin dizelerini dosya, *tümcecikler. txt*dosyasında bulmak için Findstr aracını çalıştırır. Findstr komutunda, değişmez değer arama dizeleri **-c:** anahtarıyla belirtilir, bu nedenle öğe ayırıcısı, `-c:` `@(Phrase)` öğesi listesindeki öğeler arasına eklenir.
 
-Bu örnekte, eşdeğer komut satırı komutudur:
+Bu örnek için, eşdeğer komut satırı komutu:
 
 `findstr /i /c:hello /c:world /c:msbuild phrases.txt`
 

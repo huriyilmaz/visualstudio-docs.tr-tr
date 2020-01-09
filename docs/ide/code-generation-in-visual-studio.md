@@ -2,36 +2,36 @@
 title: Kod oluşturma özellikleri
 ms.date: 01/11/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 12c54e15eaab39ecfa10657c9c5ea3f3605db022
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a043c2e1e79d629b32d46f0f54d233cd0ea9cb54
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631135"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594259"
 ---
-# <a name="code-generation-features-in-visual-studio"></a>Visual Studio 'da kod oluşturma özellikleri
+# <a name="code-generation-features-in-visual-studio"></a>Visual Studio'da kod oluşturma özellikleri
 
-Visual Studio 'Nun kodu oluşturma, çözme ve yeniden düzenleme konusunda size yardımcı olabilecek birçok yol vardır.
+Visual Studio oluşturmak, düzeltme ve kodu yeniden düzenleme yardımcı olabilecek çok sayıda yolu vardır.
 
 ## <a name="features"></a>Özellikler
 
-- [Anahtar](/dotnet/csharp/language-reference/keywords/switch) bloğu veya [enum](/dotnet/csharp/language-reference/keywords/enum) bildirimi gibi bir şablon eklemek için [kod parçacıklarını](../ide/code-snippets.md) kullanabilirsiniz.
+- Kullanabileceğiniz [kod parçacıkları](../ide/code-snippets.md) gibi bir şablon eklemek için bir [geçiş](/dotnet/csharp/language-reference/keywords/switch) blok veya [enum](/dotnet/csharp/language-reference/keywords/enum) bildirimi.
 
-- Sınıflar ve özellikler gibi kodları oluşturmak veya yerel bir değişken tanıtmak için [hızlı eylemleri](../ide/quick-actions.md) kullanabilirsiniz. Ayrıca, [kodu geliştirmek](../ide/common-quick-actions.md)Için hızlı eylemleri de kullanabilirsiniz. Örneğin, gereksiz yayınları ve kullanılmayan değişkenleri kaldırmak ya da değişkenlere erişmeden önce null denetimler eklemek için.
+- Kullanabileceğiniz [hızlı Eylemler](../ide/quick-actions.md) sınıfları ve özellikleri gibi bir kod oluşturmak veya bir yerel değişken ekleme. Hızlı eylemler için de kullanabilirsiniz [kodu geliştirecek](../ide/common-quick-actions.md), örneğin kaldırma gereksiz atamalar ve kullanılmayan değişkenler veya değişkenleri erişmeden önce null denetimleri Ekle.
 
-- Bir değişkeni yeniden adlandırmak, yöntem parametrelerini yeniden sıralamak veya bir türü dosya adı ile eşitlenmesi için birkaç kez yeniden [düzenleme](../ide/refactoring-in-visual-studio.md) yapabilirsiniz.
+- Yapabilecekleriniz [yeniden düzenleme, kod](../ide/refactoring-in-visual-studio.md) bir değişken yeniden adlandırmak için Yöntem parametreleri yeniden Sırala veya bir tür, dosya adı ile eşitlemek birkaçıdır.
 
 > [!NOTE]
-> Visual Studio 'daki her dil hizmeti kendi kod oluşturma yeteneklerini sağlar, bu yüzden bazı özellikler yalnızca ' de C#kullanılabilir ve bazıları hem C# hem de Visual Basic kullanılabilir.
+> Bazı özellikler yalnızca bulunan her dil hizmeti Visual Studio'da kendi kod oluşturma özellikleri sağlar. böylece C#, ve her ikisinde de kullanılabilir bazıları C# ve Visual Basic.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod parçacıkları](../ide/code-snippets.md)
 - [Hızlı Eylemler](../ide/quick-actions.md)
 - [Yeniden Düzenle](../ide/refactoring-in-visual-studio.md)
-- [Kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md)
+- [Kod oluşturma ve T4 metin şablonları](../modeling/code-generation-and-t4-text-templates.md)

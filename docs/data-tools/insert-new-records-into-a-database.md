@@ -12,17 +12,17 @@ helpviewer_keywords:
 - records, inserting
 - saving data
 ms.assetid: ea118fff-69b1-4675-b79a-e33374377f04
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: aaca23e6aa81fab958fc813fa5e2331f8906a562
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3a3830c9dd1921939ced3577b7bafa22772b49f6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648309"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586425"
 ---
 # <a name="insert-new-records-into-a-database"></a>Veritabanına yeni kayıtlar ekleme
 
@@ -30,23 +30,23 @@ Yeni kayıtları bir veritabanına eklemek için, `TableAdapter.Update` yöntemi
 
 Uygulamanız TableAdapters kullanmıyorsa, veritabanınızdaki yeni kayıtları eklemek için komut nesnelerini (örneğin, <xref:System.Data.SqlClient.SqlCommand>) kullanabilirsiniz.
 
-Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa, `TableAdapter.Update` yöntemini kullanın. @No__t_0 yöntemi tüm değişiklikleri (güncelleştirmeler, ekler ve siler) veritabanına gönderir.
+Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa, `TableAdapter.Update` yöntemini kullanın. `Update` yöntemi tüm değişiklikleri (güncelleştirmeler, ekler ve siler) veritabanına gönderir.
 
 Uygulamanız verileri depolamak için nesneler kullanıyorsa veya veritabanında yeni kayıtlar oluşturmak için daha ayrıntılı bir denetim istiyorsanız, `TableAdapter.Insert` yöntemini kullanın.
 
-TableAdapter ' ın bir `Insert` yöntemi yoksa, TableAdapter saklı yordamları kullanacak şekilde yapılandırıldığı veya `GenerateDBDirectMethods` özelliği `false` olarak ayarlandığı anlamına gelir. TableAdapter 'ın `GenerateDBDirectMethods` özelliğini **veri kümesi Tasarımcısı**içinden `true` olarak ayarlamayı deneyin ve ardından veri kümesini kaydedin. Bu, TableAdapter 'ı yeniden oluşturacak. TableAdapter 'ın bir `Insert` yöntemi yoksa, tablo muhtemelen tek tek satırları ayırt etmek için yeterli şema bilgisi sağlamaz (örneğin, tabloda birincil anahtar kümesi olmayabilir).
+TableAdapter ' ın bir `Insert` yöntemi yoksa, TableAdapter saklı yordamları kullanacak şekilde yapılandırıldığı veya `GenerateDBDirectMethods` özelliği `false`olarak ayarlandığı anlamına gelir. TableAdapter 'ın `GenerateDBDirectMethods` özelliğini **veri kümesi Tasarımcısı**içinden `true` olarak ayarlamayı deneyin ve ardından veri kümesini kaydedin. Bu, TableAdapter 'ı yeniden oluşturacak. TableAdapter 'ın bir `Insert` yöntemi yoksa, tablo muhtemelen tek tek satırları ayırt etmek için yeterli şema bilgisi sağlamaz (örneğin, tabloda birincil anahtar kümesi olmayabilir).
 
 ## <a name="insert-new-records-by-using-tableadapters"></a>TableAdapters kullanarak yeni kayıtlar ekleme
 
 TableAdapters, uygulamanızın gereksinimlerine bağlı olarak yeni kayıtları bir veritabanına eklemek için farklı yollar sunar.
 
-Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa, veri kümesindeki istenen <xref:System.Data.DataTable> yeni kayıtlar ekleyebilir ve sonra `TableAdapter.Update` yöntemini çağırabilirsiniz. @No__t_0 yöntemi, <xref:System.Data.DataTable> tüm değişiklikleri veritabanına gönderir (değiştirilen ve silinen kayıtlar dahil).
+Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa, veri kümesindeki istenen <xref:System.Data.DataTable> yeni kayıtlar ekleyebilir ve sonra `TableAdapter.Update` yöntemini çağırabilirsiniz. `TableAdapter.Update` yöntemi, <xref:System.Data.DataTable> tüm değişiklikleri veritabanına gönderir (değiştirilen ve silinen kayıtlar dahil).
 
 ### <a name="to-insert-new-records-into-a-database-by-using-the-tableadapterupdate-method"></a>TableAdapter. Update yöntemini kullanarak bir veritabanına yeni kayıtlar eklemek için
 
 1. Yeni bir <xref:System.Data.DataRow> oluşturup <xref:System.Data.DataTable.Rows%2A> koleksiyonuna ekleyerek istenen <xref:System.Data.DataTable> yeni kayıtlar ekleyin.
 
-2. Yeni satırlar <xref:System.Data.DataTable> eklendikten sonra, `TableAdapter.Update` yöntemini çağırın. Tüm <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>s dizisini veya tek bir <xref:System.Data.DataRow> geçirerek güncelleştirilecek veri miktarını denetleyebilirsiniz.
+2. Yeni satırlar <xref:System.Data.DataTable>eklendikten sonra, `TableAdapter.Update` yöntemini çağırın. <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>bir dizi veya tek bir <xref:System.Data.DataRow>geçirerek güncelleştirilecek veri miktarını kontrol edebilirsiniz.
 
    Aşağıdaki kod, bir <xref:System.Data.DataTable> yeni bir kaydın nasıl ekleneceğini ve sonra yeni satırı veritabanına kaydetmek için `TableAdapter.Update` metodunu çağırılacağını gösterir. (Bu örnek, Northwind veritabanındaki `Region` tablosunu kullanır.)
 
@@ -55,7 +55,7 @@ Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa, veri kümesi
 
 ### <a name="to-insert-new-records-into-a-database-by-using-the-tableadapterinsert-method"></a>TableAdapter. Insert metodunu kullanarak bir veritabanına yeni kayıtlar eklemek için
 
-Uygulamanız verileri depolamak için nesneler kullanıyorsa, doğrudan veritabanında yeni satırlar oluşturmak için `TableAdapter.Insert` yöntemini kullanabilirsiniz. @No__t_0 yöntemi her bir sütunun parametre olarak ayrı değerlerini kabul eder. Yöntemi çağırmak, veritabanına geçirilen parametre değerleriyle yeni bir kayıt ekler.
+Uygulamanız verileri depolamak için nesneler kullanıyorsa, doğrudan veritabanında yeni satırlar oluşturmak için `TableAdapter.Insert` yöntemini kullanabilirsiniz. `Insert` yöntemi her bir sütunun parametre olarak ayrı değerlerini kabul eder. Yöntemi çağırmak, veritabanına geçirilen parametre değerleriyle yeni bir kayıt ekler.
 
 - Her bir sütunun değerlerini parametre olarak geçirerek TableAdapter 'ın `Insert` yöntemini çağırın.
 
@@ -73,7 +73,7 @@ Komut nesnelerini kullanarak doğrudan bir veritabanına yeni kayıtlar ekleyebi
 
 ### <a name="to-insert-new-records-into-a-database-by-using-command-objects"></a>Komut nesnelerini kullanarak bir veritabanına yeni kayıtlar eklemek için
 
-- Yeni bir komut nesnesi oluşturun ve ardından `Connection`, `CommandType` ve `CommandText` özelliklerini ayarlayın.
+- Yeni bir komut nesnesi oluşturun ve ardından `Connection`, `CommandType`ve `CommandText` özelliklerini ayarlayın.
 
 Aşağıdaki örnek, komut nesnesi kullanarak bir veritabanına kayıt eklemeyi gösterir. Northwind veritabanındaki `Region` tablosuna veri ekler.
 

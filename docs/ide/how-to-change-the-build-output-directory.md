@@ -1,24 +1,24 @@
 ---
-title: 'Nasıl Yapılır: Derleme çıkış dizinini değiştirme'
+title: 'Nasıl yapılır: derleme çıkış dizinini değiştirme'
 ms.date: 05/15/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
 - output directory, changing
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 493de227174b60b4834c2732ddbf16a5586fa49e
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 732e48bf5cbea8534cc5c90ac5af80df0cc93e7b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238182"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594389"
 ---
-# <a name="how-to-change-the-build-output-directory"></a>Nasıl yapılır: Derleme çıkış dizinini değiştirme
+# <a name="how-to-change-the-build-output-directory"></a>Nasıl yapılır: derleme çıkış dizinini değiştirme
 
 Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ayıklama, yayın veya her ikisi için) konumunu belirtebilirsiniz.
 
@@ -34,7 +34,7 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
 
 3. Üstteki yapılandırma açılır penceresinde çıkış dosyası konumunu değiştirmek istediğiniz yapılandırmayı (**hata ayıklama**, **yayın**veya **tüm yapılandırmalar**) seçin.
 
-4. Proje türüne göre farklılık gösteren sayfada&mdash;çıkış yolu girişini bulun:
+4. Sayfada, proje türüne göre farklılık gösteren&mdash;çıkış yolu girişini bulun:
 
    - Ve JavaScript projeleri C# için **çıkış yolu**
    - Visual Basic projeleri için **derleme çıkış yolu**

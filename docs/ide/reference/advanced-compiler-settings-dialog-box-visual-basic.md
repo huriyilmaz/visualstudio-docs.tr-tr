@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - Advanced Compiler Settings dialog box
 ms.assetid: 1f81133a-293f-4dba-bc1c-8baafb01d857
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cb77021818fd77205a598f54a4a64a1929348f2
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9ebc2da5e71dbdee13df4cf658f3681804879f58
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919351"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596937"
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>Gelişmiş Derleme Ayarları İletişim Kutusu (Visual Basic)
 
@@ -30,13 +30,13 @@ Projenin Gelişmiş derleme yapılandırma özelliklerini belirtmek için **Proj
 
 2. **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **Derle** sekmesine tıklayın.
 
-3. [Derle sayfasında, proje Tasarımcısı (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md), **yapılandırma** ve **platformu**seçin. Basitleştirilmiş derleme yapılandırmalarında **yapılandırma** ve **Platform** listeleri görüntülenmez. Daha fazla bilgi için [nasıl yapılır: Hata ayıklama ve yayın yapılandırmasını](../../debugger/how-to-set-debug-and-release-configurations.md)ayarlayın.
+3. [Derle sayfasında, proje Tasarımcısı (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md), **yapılandırma** ve **platformu**seçin. Basitleştirilmiş derleme yapılandırmalarında **yapılandırma** ve **Platform** listeleri görüntülenmez. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../../debugger/how-to-set-debug-and-release-configurations.md).
 
 4. **Gelişmiş derleme seçenekleri**' ne tıklayın.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="optimizations"></a>İyileştirmeleri
+## <a name="optimizations"></a>İyileştirmeler
 
 Aşağıdaki seçenekler, bir program dosyasını daha küçük hale getirmek, bir programın daha hızlı çalışmasını sağlamak ya da yapı sürecini hızlandırmak için bazı durumlarda en iyileştirmeleri belirler.
 
@@ -44,7 +44,7 @@ Aşağıdaki seçenekler, bir program dosyasını daha küçük hale getirmek, b
 
 Tam sayı taşma denetimini etkinleştirmek için bu onay kutusu varsayılan olarak temizlenir. Tamsayı taşma denetimini kaldırmak için bu onay kutusunu seçin. Bu onay kutusunu seçerseniz, tamsayı hesaplamaları daha hızlı olabilir. Ancak, taşma denetimini ve veri türü kapasitelerinin taşmasını kaldırırsanız hatalı sonuçlar, bir hata oluşmadan depolanabilir.
 
-Taşma koşulları işaretliyse ve bir tamsayı işlemi taşarsa, bir <xref:System.OverflowException> özel durum oluşturulur. Taşma koşulları işaretli değilse, tamsayı işlemi taşma bir özel durum oluşturmaz.
+Taşma koşulları işaretliyse ve bir tamsayı işlemi taşarsa bir <xref:System.OverflowException> özel durumu oluşturulur. Taşma koşulları işaretli değilse, tamsayı işlemi taşma bir özel durum oluşturmaz.
 
 **Eniyileştirmeleri etkinleştir**
 
@@ -72,13 +72,13 @@ Varsayılan olarak, bu onay kutusu seçilidir ve bir Izleme sabiti ayarlanır.
 
  **Özel sabitler**
 
-Bu metin kutusuna uygulamanız için özel sabitler girin. Bu form kullanılarak girişler virgülle ayrılmalıdır: **Name1 = "değer1", AD2 = "değer2", name3 = "Value3"** .
+Bu metin kutusuna uygulamanız için özel sabitler girin. Şu biçim kullanılarak girişler virgülle ayrılmalıdır: **name1 = "değer1", AD2 = "değer2", name3 = "Value3"** .
 
-## <a name="other-settings"></a>Diğer ayarlar
+## <a name="other-settings"></a>Diğer Ayarlar
 
 **Serileştirme derlemeleri oluştur**
 
-Bu ayar derleyicinin XML serileştirme derlemeleri oluşturup oluşturmayacağını belirtir. Kodunuzda türleri seri hale getirmek için bu sınıfı <xref:System.Xml.Serialization.XmlSerializer> kullandıysanız, serileştirme derlemeleri ' nin başlangıç performansını iyileştirebilir. Bu seçenek için varsayılan değer **Auto**' dır. **Otomatik** serileştirme derlemelerinin yalnızca kodunuzdaki türleri XML olarak kodlamak için kullandıysanız <xref:System.Xml.Serialization.XmlSerializer> oluşturulacağını belirtir. **Kapalı** , kodunuzun kullanıp kullanmadığına <xref:System.Xml.Serialization.XmlSerializer>bakılmaksızın serileştirme derlemelerinin hiçbir şekilde üretilmediğini belirtir. **On** , serileştirme derlemelerinin her zaman oluşturulacağını belirtir. Serileştirme bütünleştirilmiş kodları adlandırılır `TypeName`. Xmlserileştiriciler. dll.
+Bu ayar derleyicinin XML serileştirme derlemeleri oluşturup oluşturmayacağını belirtir. Kodunuzda türleri seri hale getirmek için bu sınıfı kullandıysanız, serileştirme derlemeleri <xref:System.Xml.Serialization.XmlSerializer> başlangıç performansını iyileştirebilir. Bu seçenek için varsayılan değer **Auto**' dır. **Otomatik** olarak serileştirme derlemelerinin, yalnızca KODUNUZDAKI türleri XML olarak kodlamak için <xref:System.Xml.Serialization.XmlSerializer> kullandıysanız oluşturulacağını belirtir. **Kapalı** , kodunuzun <xref:System.Xml.Serialization.XmlSerializer>kullanıp kullanmadığına bakılmaksızın serileştirme derlemelerinin hiçbir şekilde üretilmediğini belirtir. **On** , serileştirme derlemelerinin her zaman oluşturulacağını belirtir. Serileştirme bütünleştirilmiş kodları `TypeName`olarak adlandırılır. Xmlserileştiriciler. dll.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

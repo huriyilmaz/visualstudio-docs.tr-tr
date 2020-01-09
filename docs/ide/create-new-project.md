@@ -1,22 +1,22 @@
 ---
-title: Yeni bir proje oluşturma
+title: Yeni bir proje oluşturun
 ms.date: 03/19/2019
 ms.topic: conceptual
 f1_keywords:
 - vs.newproject
 helpviewer_keywords:
 - projects [Visual Studio], creating
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a35302e8f749563ab173e7be15e944f8462fdb18
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77a6a33a1dde4d779a56c9ee559ecfd3b20dfbfb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652647"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585476"
 ---
 # <a name="create-a-new-project-in-visual-studio"></a>Visual Studio 'da yeni proje oluşturma
 
@@ -24,18 +24,18 @@ ms.locfileid: "72652647"
 
 ## <a name="open-the-new-project-dialog"></a>Yeni proje iletişim kutusunu aç
 
-Visual Studio 2017 ' de yeni bir proje oluşturmanın birden çok yolu vardır. Başlangıç sayfasında, proje **şablonları ara** kutusuna bir proje şablonunun adını yazabilir veya yeni proje **Oluştur** bağlantısını seçerek **Yeni proje** iletişim kutusunu açabilirsiniz. Başlangıç sayfasından sonra, menü çubuğunda **dosya**  > **Yeni**  > **projesi** ' ni seçip araç çubuğunda **Yeni proje** düğmesine tıklayabilirsiniz.
+Visual Studio 2017 ' de yeni bir proje oluşturmanın birden çok yolu vardır. Başlangıç sayfasında, proje **şablonları ara** kutusuna bir proje şablonunun adını yazabilir veya yeni proje **Oluştur** bağlantısını seçerek **Yeni proje** iletişim kutusunu açabilirsiniz. Başlangıç sayfasından sonra, menü çubuğunda **dosya** > **Yeni** > **projesi** ' ni seçip araç çubuğunda **Yeni proje** düğmesine tıklayabilirsiniz.
 
 ![Yeni > projesi > sayfa ve dosya başlatma](./media/vside-newproject1.png)
 
 ## <a name="select-a-template-type"></a>Şablon türü seçin
 
-**Yeni proje** iletişim kutusunda, kullanılabilir proje şablonları **Şablonlar** kategorisi altındaki bir listede görüntülenir. Şablonlar programlama dili ve görsel C#, JavaScript ve Azure Data Lake gibi proje türüne göre düzenlenir.
+İçinde **yeni proje** iletişim kutusu, kullanılabilir proje şablonları görünür altında bir listede **şablonları** kategorisi. Şablonları Visual gibi dil ve proje türü programlama tarafından düzenlenir C#, JavaScript ve Azure Data Lake.
 
-![Yeni proje iletişim kutusu](./media/vside-newproject-templates-list.png)
+![Yeni Proje iletişim kutusu](./media/vside-newproject-templates-list.png)
 
 > [!NOTE]
-> Görüntülenen kullanılabilir dillerin ve proje şablonlarının listesi, çalıştırdığınız Visual Studio sürümüne ve yüklü iş yüklerine bağlıdır. Ek iş yüklerini nasıl yükleyeceğiniz hakkında bilgi edinmek için bkz. [iş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme](../install/modify-visual-studio.md).
+> Görüntülenen listeden kullanılabilir diller ve proje şablonları, kullanmakta olduğunuz Visual Studio ve yüklü iş yükleri sürümüne bağlıdır. Ek iş yüklerini nasıl yükleyeceğiniz hakkında bilgi edinmek için bkz. [iş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme](../install/modify-visual-studio.md).
 
 Dil adının yanındaki üçgeni tıklatıp ardından bir proje kategorisi (Windows Masaüstü gibi) seçerek kullanmak istediğiniz programlama diline ait şablonların listesini görüntüleyin.
 
@@ -45,7 +45,7 @@ Aşağıdaki görüntüde, Visual C# .NET Core projeleri için kullanılabilir p
 
 ## <a name="configure-your-project"></a>Projenizi yapılandırma
 
-**Ad** kutusuna yeni proje için bir ad girin. Projeyi bilgisayarınızda varsayılan konuma kaydedebilir ya da başka bir konum bulmak için **tarayıcı** düğmesine tıklayabilirsiniz. Ayrıca, bir çözüm adı seçebilir veya yeni projeyi bir git deposuna ekleyebilirsiniz ( **kaynak denetimine Ekle**' yi seçerek).
+Yeni proje için bir ad girin **adı** kutusu. Projeyi bilgisayarınızda varsayılan konuma kaydedebilir ya da başka bir konum bulmak için **tarayıcı** düğmesine tıklayabilirsiniz. Ayrıca, bir çözüm adı seçebilir veya yeni projeyi bir git deposuna ekleyebilirsiniz ( **kaynak denetimine Ekle**' yi seçerek).
 
 Çözümü ve projeyi oluşturmak için **Tamam** ' ı tıklatın.
 
@@ -67,7 +67,7 @@ Visual Studio geliştirme ortamı zaten açıksa, menü çubuğunda **dosya** > 
 
 **Yeni proje oluştur** sayfasında, son seçtiğiniz şablonların listesi solda görüntülenir. Şablonlar *en son kullanılanlar*tarafından sıralanır.
 
-Son kullanılan şablonlardan seçim yapmadıysanız, tüm kullanılabilir proje şablonlarını **dile** göre C# (örneğin, C++veya), **Platform** (örneğin, Windows veya Azure) ve **Proje türü** olarak filtreleyebilirsiniz (örneğin, Masaüstü veya Web). Şablonları daha fazla filtrelemek için arama kutusuna arama metni de girebilirsiniz, örneğin, **ASP.net**.
+Son kullanılan şablonlardan seçim yapmadıysanız, tüm kullanılabilir proje şablonlarını **dile** göre C# (örneğin, C++veya), **Platform** (örneğin, Windows veya Azure) ve **proje türünü** (örneğin, masaüstü veya Web) göre filtreleyebilirsiniz. Şablonları daha fazla filtrelemek için arama kutusuna arama metni de girebilirsiniz, örneğin, **ASP.net**.
 
 ![Visual Studio 2019 'de proje şablonu filtreleri](media/vs-2019/create-new-project-filters.png)
 
@@ -97,7 +97,7 @@ Yeni projeyi oluşturmak için **Oluştur** ' a tıklayın.
 
 ## <a name="add-additional-projects-to-a-solution"></a>Çözüme ek projeler ekleme
 
-Bir çözüme ek bir proje eklemek istiyorsanız **Çözüm Gezgini** çözüm düğümüne sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
+Bir çözüme ek bir proje eklemek istiyorsanız **Çözüm Gezgini** çözüm düğümüne sağ tıklayın ve > **Yeni proje** **Ekle** ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

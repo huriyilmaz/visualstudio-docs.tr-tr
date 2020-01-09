@@ -3,17 +3,17 @@ title: 'İş Akışı Tasarımcısı-nasıl yapılır: Iş akışlarında kesme 
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e41b21c9-c061-4358-8e2f-eb5e412864a8
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6d2806a8757f00924d51c76aea82cfc8c6a5673
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4ebebd0efe689c2f3f83e776c0cb3889ee64add2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650325"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593895"
 ---
 # <a name="how-to-set-breakpoints-in-workflows"></a>Nasıl yapılır: iş akışlarında kesme noktalarını ayarlama
 
@@ -25,10 +25,10 @@ Kesme noktasında üç durum vardır: *bekleyen*, *bağlantılı*ve *hata*. Bir 
 > Çağrılan iş akışlarında kesme noktalarının ayarlanması desteklenmez.
 
 > [!NOTE]
-> Hata ayıklamadan önce **araçlar**  > **Seçenekler**  > **hata ayıklama** menüsünden **yalnızca kendi kodum etkinleştir (yalnızca yönetilen)** seçeneğini seçtiğinizden emin olun. Seçenek seçilmezse ve başka bir sıra içinde iç içe geçmiş iki diziniz varsa ve ilk iç dizide bir kesme noktası ayarlarsanız, **F11** tuşuna basmak ikinci iç dizide hata ayıklamaz.
+> Hata ayıklamadan önce **araçlar** > **Seçenekler** > **hata ayıklama** menüsünden **yalnızca kendi kodum etkinleştir (yalnızca yönetilen)** seçeneğini seçtiğinizden emin olun. Seçenek seçilmezse ve başka bir sıra içinde iç içe geçmiş iki diziniz varsa ve ilk iç dizide bir kesme noktası ayarlarsanız, **F11** tuşuna basmak ikinci iç dizide hata ayıklamaz.
 
 > [!NOTE]
-> XAML dosya özelliğinin tam yolu doğru değilse, iş akışındaki kesme noktaları isabet etmez. XAML dosyasının tam yolu, proje veya çözümü başka bir klasöre veya başka bir makineye taşıdıktan sonra doğru değil. Tam yol özelliğini kaydetmek ve güncelleştirmek için **Ctrl** +**S** ' yi seçin.
+> XAML dosya özelliğinin tam yolu doğru değilse, iş akışındaki kesme noktaları isabet etmez. XAML dosyasının tam yolu, proje veya çözümü başka bir klasöre veya başka bir makineye taşıdıktan sonra doğru değil. Tam yol özelliğini kaydetmek ve güncelleştirmek için **Ctrl**+**S** ' yi seçin.
 
 ## <a name="to-set-a-breakpoint-on-an-activity-in-the-design-view"></a>Tasarım görünümündeki bir etkinlikte bir kesme noktası ayarlamak için
 
@@ -36,7 +36,7 @@ Kesme noktasında üç durum vardır: *bekleyen*, *bağlantılı*ve *hata*. Bir 
 
 2. **Hata Ayıkla** menüsünde, **kesme noktasını aç**' ı seçin. Etkinliğin sol üst köşesinde kırmızı bir simge görünür.
 
-   Alternatif olarak, etkinliği seçtikten sonra **F9** tuşuna basabilir veya sağ tıklama menüsünden**kesme noktası eklemek**  >  **kesme noktası** ' nı seçebilirsiniz.
+   Alternatif olarak, etkinliği seçtikten sonra **F9** tuşuna basabilir veya sağ tıklama menüsünden **kesme noktası eklemek** > **kesme noktası** ' nı seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

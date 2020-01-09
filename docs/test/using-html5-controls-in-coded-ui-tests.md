@@ -2,17 +2,17 @@
 title: Kodlanmış UI Testlerinde HTML5 Denetimleri Kullanma
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: e9118dc94019f40289730be78c28777fb86d89db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 13f5da784a43df5146a66ca868bb6add9a702906
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659773"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585593"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>Kodlanmış UI testlerinde HTML5 denetimleri kullanma
 
@@ -36,20 +36,20 @@ Kodlanmış UI testleri, Internet Explorer 9 ve Internet Explorer 10 ' da buluna
 
 ![HTML5 ses denetimi](../test/media/codedui_html5_audio.png)
 
-|Eylem|Yapılmıyor|Oluşturulan kod|
+|Eylem|Kayıt|Oluşturulan kod|
 |-|---------------|-|
-|**Ses çal**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|00:00:00 \<name > ses çal|Htmdefdio. Play (TimeSpan)|
-|**Ses içinde belirli bir zamana arama**|@No__t_0name > Ses ara 00:01:48|Htmdefdio. Seek (TimeSpan)|
-|**Sesi Duraklat**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|@No__t_0name > sesini Duraklat: 00:01:53|Htmdefdio. Pause (TimeSpan)|
-|**Sesi sustur**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|Sessiz \<name > Ses|Htmdefdio. Mute ()|
-|**Sesi aç**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|@No__t_0name > sesi aç|Htmdefdio. aç ()|
-|**Ses düzeyini Değiştir**|@No__t_0name > sesini %79 olarak ayarla|Htmdefdio. SetVolume (float)|
+|**Ses çal**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|00:00:00 'den Ses > \<adı oynat|Htmdefdio. Play (TimeSpan)|
+|**Ses içinde belirli bir zamana arama**|\<> Ses ara 00:01:48|Htmdefdio. Seek (TimeSpan)|
+|**Sesi Duraklat**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|\<adı > sesi 00:01:53 adresinden Duraklat|Htmdefdio. Pause (TimeSpan)|
+|**Sesi sustur**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|Sessiz \<adı > Ses|Htmdefdio. Mute ()|
+|**Sesi aç**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|\<adı > sesi aç|Htmdefdio. aç ()|
+|**Ses düzeyini Değiştir**|Ses \<adı > sesini %79 olarak ayarla|Htmdefdio. SetVolume (float)|
 
 Onaylama ekleyebileceğiniz özelliklerin listesi için bkz. [Htmdefdioelement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement) .
 
-**Arama özellikleri:** @No__t_1 için arama özellikleri `Id`, `Name` ve `Title`.
+**Arama özellikleri:** `HtmlAudio` için arama özellikleri `Id`, `Name` ve `Title`.
 
-**Filtre özellikleri:** @No__t_1 için filtre özellikleri `Src`, `Class`, `ControlDefinition` ve `TagInstance`.
+**Filtre özellikleri:** `HtmlAudio` için filtre özellikleri `Src`, `Class`, `ControlDefinition` ve `TagInstance`.
 
 > [!NOTE]
 > Arama ve duraklatma için zaman miktarı önemli olabilir. Kayıttan yürütme sırasında, kodlanmış UI testi sesi duraklatmadan önce `(TimeSpan)` belirtilen zamana kadar bekler. Bazı özel durumlar tarafından, belirtilen süre duraklatma komutuna vurmadan önce geçmişse, bir özel durum oluşturulur.
@@ -59,20 +59,20 @@ Onaylama ekleyebileceğiniz özelliklerin listesi için bkz. [Htmdefdioelement](
 
 ![HTML5 video denetimi](../test/media/codedui_html5_video.png)
 
-|Eylem|Yapılmıyor|Oluşturulan kod|
+|Eylem|Kayıt|Oluşturulan kod|
 |-|---------------|-|
-|**Videoyu oynat**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|00:00:00 \<name > Videoyu oynat|HtmlVideo. Play (TimeSpan)|
-|**Videoda belirli bir zamana arama**|00:01:48 \<name > video ara|HtmlVideo. Seek (TimeSpan)|
-|**Videoyu Duraklat**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|00:01:53 \<name > videoyu Duraklat|HtmlVideo. Pause (TimeSpan)|
-|**Videoyu sustur**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|@No__t_0name > videoyu susturma|HtmlVideo. Mute ()|
-|**Videoyu aç**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|@No__t_0name > videoyu aç|HtmlVideo. aç ()|
-|**Video hacmini değiştirme**|@No__t_0name > videonun hacmini %79 olarak ayarlayın||
+|**Videoyu oynat**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|00:00:00 'den video > \<adı oynat|HtmlVideo. Play (TimeSpan)|
+|**Videoda belirli bir zamana arama**|\<adı ara > video 00:01:48|HtmlVideo. Seek (TimeSpan)|
+|**Videoyu Duraklat**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|00:01:53 adresinden \<adı > video Duraklat|HtmlVideo. Pause (TimeSpan)|
+|**Videoyu sustur**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|\<adı > video sesini kapat|HtmlVideo. Mute ()|
+|**Videoyu aç**<br /><br /> Doğrudan denetimden veya denetimin sağ tıklama menüsünden.|\<adı > videoyu aç|HtmlVideo. aç ()|
+|**Video hacmini değiştirme**|Video > \<adı birimini %79 olarak ayarlayın||
 
 Onaylama ekleyebileceğiniz özelliklerin listesi için bkz. [Htmlvideoelement](https://developer.mozilla.org/docs/Web/HTML/Element/video) .
 
-**Arama özellikleri:** @No__t_1 için arama özellikleri `Id`, `Name` ve `Title`.
+**Arama özellikleri:** `HtmlVideo` için arama özellikleri `Id`, `Name` ve `Title`.
 
-**Filtre özellikleri:** @No__t_1 için filtre özellikleri `Src`, `Poster`, `Class`, `ControlDefinition` ve `TagInstance`.
+**Filtre özellikleri:** `HtmlVideo` için filtre özellikleri `Src`, `Poster`, `Class`, `ControlDefinition` ve `TagInstance`.
 
 > [!NOTE]
 > -30s veya + 30s etiketlerini kullanarak videoyu geri sarın veya ileri sardıysanız, bu, uygun zamana göre arama yapmak için toplanır.
@@ -87,4 +87,4 @@ Onaylama ekleyebileceğiniz özelliklerin listesi için bkz. [Htmlvideoelement](
 - [HTML öğeleri](https://developer.mozilla.org/docs/Web/HTML/Element)
 - [UI otomasyonunu kullanarak kodunuzu test etme](../test/use-ui-automation-to-test-your-code.md)
 - [Kodlanmış UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md)
-- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

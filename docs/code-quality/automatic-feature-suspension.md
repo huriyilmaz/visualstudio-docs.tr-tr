@@ -7,60 +7,60 @@ helpviewer_keywords:
 - performance
 - low-memory
 ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd399d78ac43085d89958ba358954f9e6cefe521
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d6910bae3d924202fad8995d6ccd53efe848ba50
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606532"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573306"
 ---
 # <a name="automatic-feature-suspension"></a>Otomatik özelliği askıya alma
 
-Kullanılabilir sistem belleğiniz 200 MB veya daha az kalırsa, Visual Studio kod düzenleyicisinde şu iletiyi görüntüler:
+200 MB veya daha az, kullanılabilir sistem belleğini denk gelirse, Visual Studio Kod Düzenleyicisi'nde aşağıdaki iletiyi görüntüler:
 
-![Tam çözüm analizini askıya alarak uyarı metni](../code-quality/media/fsa_alert.png)
+![Tam çözüm analizini askıya uyarı metni](../code-quality/media/fsa_alert.png)
 
-Visual Studio düşük bellekli bir durum algıladığında, kararlı kalmasını sağlamak için bazı gelişmiş özellikleri otomatik olarak askıya alır. Visual Studio daha önce olduğu gibi çalışmaya devam eder, ancak performansı düşer.
+Otomatik olarak Visual Studio bir yetersiz bellek koşulunu algıladığında, tutarlı kalmasını yardımcı olmak için bazı gelişmiş özellikleri askıya alır. Visual Studio'nun önceki gibi çalışmaya devam eder, ancak bunun performansı düşer.
 
-Düşük bellek koşulunda aşağıdaki işlemler gerçekleşir:
+Bir düşük bellek durumu aşağıdaki eylemler gerçekleşir:
 
-- Görsel C# ve Visual Basic için tam çözüm Analizi devre dışı bırakıldı.
+- Visual C# ve Visual Basic için tam çözüm analizini devre dışı bırakıldı.
 
-- Görsel C# ve Visual Basic Için [çöp toplama](/dotnet/standard/garbage-collection/index) (GC) düşük gecikme modu devre dışı.
+- [Çöp toplama](/dotnet/standard/garbage-collection/index) görsel için düşük gecikmeli modu (GC) C# ve Visual Basic devre dışı bırakıldı.
 
-- Visual Studio önbellekleri temizlendi.
+- Visual Studio önbellekler temizlenir.
 
-## <a name="improve-visual-studio-performance"></a>Visual Studio performansını geliştirme
+## <a name="improve-visual-studio-performance"></a>Visual Studio performansını
 
-Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+İpuçları ve püf noktaları ile büyük çözümlerin veya düşük bellek koşullarını ilgilenirken Visual Studio performansını geliştirmeye yönelik bkz [büyük çözümler için başarım düşünceleri](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
-## <a name="full-solution-analysis-suspended"></a>Tam çözüm Analizi askıya alındı
+## <a name="full-solution-analysis-suspended"></a>Tam çözüm analizini askıya alındı
 
-Varsayılan olarak, tam çözüm Analizi Visual Basic için etkinleştirilmiştir ve görsel C#için devre dışı bırakılır. Ancak, düşük bellek koşulunda, Seçenekler iletişim kutusundaki ayarlarından bağımsız olarak hem Visual Basic hem de görsel C#için tam çözüm Analizi otomatik olarak devre dışıdır. Ancak, Seçenekler iletişim kutusunda **tam çözüm analizini etkinleştir** onay kutusunu seçerek veya Visual Studio 'yu yeniden başlatarak, görüntülenen bilgi çubuğundaki **yeniden etkinleştir** düğmesini seçerek tam çözüm analizini yeniden etkinleştirebilirsiniz. Seçenekler iletişim kutusu her zaman geçerli tam çözüm Analizi ayarlarını gösterir. Daha fazla bilgi için bkz. [nasıl yapılır: tam çözüm analizini etkinleştirme ve devre dışı bırakma](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
+Varsayılan olarak, tam çözüm analizini Visual Basic için etkinleştirilir ve Visual C# için devre dışı. Ancak, bir düşük bellek koşulunda tam çözüm analizini otomatik olarak hem Visual Basic ve Visual C# için Seçenekler iletişim kutusu ayarlarına bakılmaksızın devre dışıdır. Ancak, tam çözüm analizini seçerek yeniden etkinleştirebilirsiniz **yeniden etkinleştirmeniz** düğmesi olduğunda, seçerek göründüğü çubuğu bilgileri **tam çözüm analizini etkinleştirme** onay kutusundan veya Seçenekler iletişim kutusunda Visual Studio yeniden başlatılıyor. Seçenekler iletişim kutusu, her zaman geçerli tam çözüm analizi ayarları gösterir. Daha fazla bilgi için [nasıl yapılır: etkinleştirme ve devre dışı tam çözüm analizini](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
 
-## <a name="gc-low-latency-disabled"></a>GC düşük gecikme süresi devre dışı
+## <a name="gc-low-latency-disabled"></a>GC devre dışı gecikme süresi düşük
 
-GC düşük gecikmeli modunu yeniden etkinleştirmek için Visual Studio 'Yu yeniden başlatın. Varsayılan olarak, yazılarınızın herhangi bir GC işlemini engellemediğinden emin olmak için her yazarken, Visual Studio GC düşük gecikme süresi modunu sağlar. Ancak, düşük bellek durumu Visual Studio 'Nun otomatik askıya alma uyarısını görüntülemesine neden oluyorsa, GC düşük gecikme modu bu oturum için devre dışıdır. Visual Studio 'Yu yeniden başlatmak için varsayılan GC davranışı etkinleştirilir. Daha fazla bilgi için bkz. <xref:System.Runtime.GCLatencyMode>.
+GC düşük gecikme süreli modunda yeniden etkinleştirmek için Visual Studio'yu yeniden başlatın. Herhangi bir GC işlemi yazdıklarınızı engellemediğinden emin olmak için yazdığınız zaman varsayılan olarak, Visual Studio GC düşük gecikme süreli modunu etkinleştirir. Ancak, bir düşük bellek durumu otomatik askıya alma uyarısı görüntülemek Visual Studio neden olursa, GC düşük gecikme süreli modu bu oturum için devre dışı bırakıldı. Visual Studio'yu yeniden başlatmayı varsayılan GC davranışı yeniden etkinleştirir. Daha fazla bilgi için bkz. <xref:System.Runtime.GCLatencyMode>.
 
-## <a name="visual-studio-caches-flushed"></a>Visual Studio önbellekleri temizlendi
+## <a name="visual-studio-caches-flushed"></a>Visual Studio önbellekler temizlendi
 
-Geçerli geliştirme oturumunuza devam ederseniz veya Visual Studio 'yu yeniden başlatırsanız, tüm Visual Studio önbellekleri hemen boşaltılır, ancak yeniden oluşturmaya başlar. Temizlenen önbellekler aşağıdaki özelliklere yönelik önbellekleri içerir:
+Tüm Visual Studio önbellekleri, hemen geçerli geliştirme oturumunuzu devam veya Visual Studio'yu yeniden başlatın, boşaltılıp ancak derlenmeye başlar. Temizlenen önbellekleri önbellekler için aşağıdaki özellikleri içerir:
 
-- Tüm başvuruları bul
+- Tüm başvuruları Bul
 
-- Şuraya gidin
+- Gidin
 
-- Kullanarak Ekle
+- Using ekleme
 
-Ayrıca, iç Visual Studio işlemleri için kullanılan önbellekler da temizlenir.
+Ayrıca, iç Visual Studio işlemleri için kullanılan önbellekler de temizlenir.
 
 > [!NOTE]
-> Otomatik Özellik askıya alma uyarısı, her oturum için değil, her çözüm temelinde yalnızca bir kez gerçekleşir. Bu, Visual Basic 'den görsele C# (veya tam tersi) geçiş yaptıysanız ve başka bir düşük bellek koşuluyla çalıştırırsanız, başka bir otomatik özellik askıya alma uyarısı elde edebilirsiniz.
+> Çözüm başına temelinde, bir oturum başına temelinde otomatik özelliği askıya alma uyarısı yalnızca bir kez gerçekleşir. Bu, Visual Basic, Visual C# (veya tersi) geçin ve başka bir düşük bellekli bir duruma çalıştırın, başka bir otomatik özelliği askıya alma uyarısı büyük olasılıkla edinebileceğiniz anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

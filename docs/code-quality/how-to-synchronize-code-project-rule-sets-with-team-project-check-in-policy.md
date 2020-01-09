@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe6e9e49998c3e98335cd7e873d53531c8bfa99a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a765bcdd6eefbb5c256603bb73c0684c8782f803
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649378"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587413"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Azure DevOps projesi Iade Ilkesiyle kod proje kural kümelerini senkronize etme
 
@@ -31,7 +31,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Bir Microsoft standart kural kümesi belirtmek için
 
-1. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+1. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
 
 2. **Kod Analizi**' ne tıklayın.
 
@@ -51,19 +51,19 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 1. Gerekirse, iade ilkesini belirten kural kümesi dosyasında bir get işlemi gerçekleştirin.
 
-2. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+2. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
 
 3. **Kod Analizi**' ne tıklayın.
 
 ::: moniker range="vs-2017"
 
-4. **Bu kural kümesini Çalıştır** listesinde **\<zat >** ' a tıklayın.
+4. **Bu kural kümesini Çalıştır** listesinde **\<gitmek >** ' e tıklayın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. **Etkin kurallar** listesinde **\<Browse >** ' ne tıklayın.
+4. **Etkin kurallar** listesinde **\<gitmek >** ' a tıklayın.
 
 ::: moniker-end
 

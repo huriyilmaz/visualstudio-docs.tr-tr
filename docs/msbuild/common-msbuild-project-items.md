@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, common project items
 ms.assetid: 1eba3721-cc12-4b80-9987-84923ede5e2e
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb759ba9571e16d0030f1fd6baf6d4feb03efb2e
-ms.sourcegitcommit: 510529f2f86a9897ed5767973e60c99c0d3a77a6
+ms.openlocfilehash: b10768d5ab291981dc77af650de61eb9496dfda5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73956138"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596157"
 ---
 # <a name="common-msbuild-project-items"></a>Ortak MSBuild proje öğeleri
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], öğe bir veya daha fazla dosyaya yönelik adlandırılmış bir başvurudur. Öğeler, dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tüm proje türlerinde ortak olarak birkaç öğe vardır. Bu öğeler *Microsoft. Build. CommonTypes. xsd*dosyasında tanımlanmıştır.
@@ -51,7 +51,7 @@ ms.locfileid: "73956138"
 |VersionMinor|Gerekli dize. Bileşenin sürüm numarasının küçük bölümü. Örneğin, tam sürüm numarası "5,46" ise, "46".|
 |LCID|İsteğe bağlı dize. Bileşenin LocaleID 'Si.|
 |WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|
-|Ayrılır|İsteğe bağlı Boolean. Bileşenin bir reg-Free bileşeni olup olmadığını belirtir.|
+|Yalıtılmış|İsteğe bağlı Boolean. Bileşenin bir reg-Free bileşeni olup olmadığını belirtir.|
 
 ### <a name="comfilereference"></a>COMFileReference
  [ResolveComReference](resolvecomreference-task.md) hedefinin `TypeLibFiles` parametresine geçirilen tür kitaplıklarının listesini temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
@@ -74,11 +74,11 @@ ms.locfileid: "73956138"
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
 |Name|İsteğe bağlı dize. Başvurunun görünen adı.|
-|Project|İsteğe bağlı dize. {12345678-1234-1234-1234-1234567891234}formundaki Başvuru için bir GUID.|
+|{1&gt;Proje (Project)&lt;1}|İsteğe bağlı dize. {12345678-1234-1234-1234-1234567891234}formundaki Başvuru için bir GUID.|
 |Paket|İsteğe bağlı dize. Başvurulduğu proje dosyasının yolu.|
-|ReferenceOutputAssembly|İsteğe bağlı Boolean. `false`olarak ayarlanırsa, başvurulan projenin çıktısını bu projenin bir [başvurusu](#reference) olarak içermez, ancak yine de diğer projenin bundan önce derleme yapmalarını sağlar. Varsayılan değer `true` ' dır.|
+|ReferenceOutputAssembly|İsteğe bağlı Boolean. `false`olarak ayarlanırsa, başvurulan projenin çıktısını bu projenin bir [başvurusu](#reference) olarak içermez, ancak yine de diğer projenin bundan önce derleme yapmalarını sağlar. `true` değerini varsayılan olarak alır.|
 
-### <a name="compile"></a>Se
+### <a name="compile"></a>Derleme
  Derleyicinin kaynak dosyalarını temsil eder.
 
 | Öğe meta veri adı | Açıklama |
@@ -86,7 +86,7 @@ ms.locfileid: "73956138"
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oto gen | İsteğe bağlı Boolean. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı (IDE) tarafından proje için dosyanın oluşturulup oluşturulmayacağını gösterir. |
 | Bağlantı | İsteğe bağlı dize. Dosya fiziksel olarak proje dosyasının etki dışında konumlandırıldığında görüntülenecek olan notational yolu. |
-| Görüne | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
+| Görünür | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
 ### <a name="embeddedresource"></a>EmbeddedResource
@@ -99,7 +99,7 @@ ms.locfileid: "73956138"
 | LastGenOutput | Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı. |
 | CustomToolNamespace | Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun kod oluşturması gereken ad alanı. |
 | Bağlantı | İsteğe bağlı dize. Dosya fiziksel olarak projenin etki alanının dışında konumlandırıldığında, notational yolu görüntülenir. |
-| Görüne | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
+| Görünür | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 | LogicalName | Gerekli dize. Gömülü kaynağın mantıksal adı. |
 
@@ -115,7 +115,7 @@ ms.locfileid: "73956138"
 | Bağlantı | İsteğe bağlı dize. Dosya fiziksel olarak projenin etkisi dışında konumlandırıldığında görüntülenecek olan notational yolu. |
 | PublishState | Gerekli dize. İçeriğin Yayımlanma Durumu, aşağıdakilerden biri:<br /><br /> -Varsayılan<br />-Dahil edilen<br />-Dışlanan<br />-Veri dosyası<br />-Önkoşul |
 | IsAssembly | İsteğe bağlı Boolean. Dosyanın bir derleme olup olmadığını belirtir. |
-| Görüne | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
+| Görünür | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
 ### <a name="none"></a>Yok.
@@ -128,7 +128,7 @@ ms.locfileid: "73956138"
 | LastGenOutput | Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya üreticisi tarafından oluşturulan dosyanın adı. |
 | CustomToolNamespace | Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun kod oluşturması gereken ad alanı. |
 | Bağlantı | İsteğe bağlı dize. Dosya fiziksel olarak projenin etkisi dışında konumlandırıldığında görüntülenecek olan notational yolu. |
-| Görüne | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
+| Görünür | İsteğe bağlı Boolean. Dosyanın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**Çözüm Gezgini** ' de görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
 ### <a name="assemblymetadata"></a>AssemblyMetadata
@@ -148,7 +148,7 @@ ms.locfileid: "73956138"
 ### <a name="codeanalysisimport"></a>Codeanalysisımport
  İçeri aktarılacak FxCop projesini temsil eder.
 
-### <a name="import"></a>aktarmaya
+### <a name="import"></a>Al
  Ad alanları [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] derleyicisi tarafından içeri aktarılması gereken derlemeleri temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.

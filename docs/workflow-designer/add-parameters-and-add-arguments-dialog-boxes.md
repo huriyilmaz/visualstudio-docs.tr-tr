@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - AddParameters.UI
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
-ms.author: jillfra
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 78f773776c3285b60b2747c74e11a90ff08dba8a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: TerryGLee
+ms.openlocfilehash: 68973963d77bdd4134213b8524b24f75a6be5ab1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650760"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597132"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>Parametreler ve Bağımsız Değişkenler Ekle İletişim Kutuları
 
@@ -23,8 +23,8 @@ Aşağıdaki tabloda, <xref:System.Activities.Statements.InvokeMethod> Tasarımc
 
 |||
 |-|-|
-|**Görünüm**|Parametrenin yönteme veri akışını, yöntemin dışına mı yoksa her ikisini de temsil ettiğini belirtir.|
-|**Türüyle**|Yeni parametrenin tür adı.|
+|**Yön**|Parametrenin yönteme veri akışını, yöntemin dışına mı yoksa her ikisini de temsil ettiğini belirtir.|
+|**Türü**|Yeni parametrenin tür adı.|
 |**Değer**|Yeni parametreye varsayılan bir değer atamak için kullanılan bir Visual Basic ifadesi|
 
 Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeDelegate> Tasarımcısı tarafından kullanılan **bağımsız değişken Ekle** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
@@ -32,6 +32,6 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeDelegate> Tasarım
 |||
 |-|-|
 |**Ad**|Bağımsız değişkenin adı.|
-|**Görünüm**|Bağımsız değişkenin temsilciye veri akışını temsil ettiğini, temsilcinin dışına mı yoksa her ikisini birden mi temsil ettiğini belirtir.|
-|**Türüyle**|Yeni bağımsız değişkenin tür adı.|
+|**Yön**|Bağımsız değişkenin temsilciye veri akışını temsil ettiğini, temsilcinin dışına mı yoksa her ikisini birden mi temsil ettiğini belirtir.|
+|**Türü**|Yeni bağımsız değişkenin tür adı.|
 |**Değer**|Temsilci bağımsız değişkeninin bu örneği için kullanılacak değer.|

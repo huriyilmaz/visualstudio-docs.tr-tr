@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.FindInFiles command
 - find in files command
 ms.assetid: 2fc78bfe-b339-4599-97f9-4cafd8a194d9
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25342f86c545752a263d295550222e14c2aa7866
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 87d313c29be1d5fb4f1be1febe9b5b7cd32e7e11
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748768"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569588"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
@@ -36,14 +36,14 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 `findwhat`\
 Gerekli. Eşleştirilecek metin.
 
-## <a name="switches"></a>Anahtarlar
+## <a name="switches"></a>Geçişler
 /Case veya/C\
 İsteğe bağlı. Eşleşmeler yalnızca, büyük harf ve küçük harf karakterlerinin `findwhat` bağımsız değişkeninde belirtilen olanlarla tam olarak eşleşmesi durumunda meydana gelir.
 
-/ext: `extensions` \
+/ext: `extensions`\
 İsteğe bağlı. Aranacak dosyalar için dosya uzantılarını belirtir. Belirtilmemişse, önceki uzantı daha önce girilmişse kullanılır.
 
-/lookin: `searchpath` \
+/lookin: `searchpath`\
 İsteğe bağlı. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
 
 /Names veya/n\
@@ -53,20 +53,20 @@ Gerekli. Eşleştirilecek metin.
 İsteğe bağlı. Geçerli bulma seçeneği ayarlarının listesini görüntüler ve arama yapmaz.
 
 /Regex veya/r \
-İsteğe bağlı. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+İsteğe bağlı. `findwhat` bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
 /Reset süpürmeden veya/e\
 İsteğe bağlı. Bulma seçeneklerini varsayılan ayarlarına döndürür ve arama yapmaz.
 
 /Stop
-İsteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. @No__t_0 belirtildiğinde arama diğer tüm bağımsız değişkenleri yoksayar. Örneğin, geçerli aramayı durdurmak için şunu girin:
+İsteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. `/stop` belirtildiğinde arama diğer tüm bağımsız değişkenleri yoksayar. Örneğin, geçerli aramayı durdurmak için şunu girin:
 
 ```cmd
 >Edit.FindinFiles /stop
 ```
 
 /Sub seçeneklerini veya/s\
-İsteğe bağlı. /Lookin: `searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
+İsteğe bağlı. /Lookin:`searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
 
 /text2 veya/2 \
 İsteğe bağlı. Arama sonuçlarını bul 2 penceresinde görüntüler.

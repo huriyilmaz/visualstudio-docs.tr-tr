@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
 - IntelliSense [Visual Studio], Visual Basic
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa21939375956024a0ca16cadd99160d142a1d5d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 118de9ec05bcd5c56376376619bea0c5148d36ab
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647266"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594194"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>Visual Basic kod dosyaları için IntelliSense
 
@@ -31,15 +31,15 @@ Söz dizimi ipuçları, yazmakta olduğunuz deyimin sözdizimini görüntüler. 
 
 - Çeşitli anahtar sözcüklerde tamamlama
 
-     Örneğin, `goto` ve bir boşluk yazarsanız, IntelliSense açılan menüdeki tanımlı etiketlerin bir listesini görüntüler. Desteklenen diğer anahtar sözcükler `Exit`, `Implements`, `Option` ve `Declare` içerir.
+     Örneğin, `goto` ve bir boşluk yazarsanız, IntelliSense açılan menüdeki tanımlı etiketlerin bir listesini görüntüler. Desteklenen diğer anahtar sözcükler `Exit`, `Implements`, `Option`ve `Declare`içerir.
 
-- @No__t_0 ve `Boolean` tamamlama
+- `Enum` ve `Boolean` tamamlama
 
-    Bir ifade bir numaralandırmanın üyesine başvuracaktır, IntelliSense `Enum` üyelerinin bir listesini görüntüler. Bir deyimin `Boolean` başvurması durumunda IntelliSense, true-false açılan menüsünü görüntüler.
+    Bir ifade bir numaralandırmanın üyesine başvuracaktır, IntelliSense `Enum`üyelerinin bir listesini görüntüler. Bir deyimin `Boolean`başvurması durumunda IntelliSense, true-false açılan menüsünü görüntüler.
 
 Tamamlama, **Visual Basic** klasöründeki **genel** özellik sayfasından **otomatik liste üyelerinin** seçimini kaldırarak varsayılan olarak devre dışı bırakabilirsiniz.
 
-Liste üyelerini çağırarak tamamlamayı el ile çağırabilirsiniz, kelime veya **Alt** +**sağ oku**. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md).
+Liste üyelerini çağırarak tamamlamayı el ile çağırabilirsiniz, kelime veya **Alt**+**sağ oku**. Daha fazla bilgi için [kullanım IntelliSense](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>Bölgedeki IntelliSense
 

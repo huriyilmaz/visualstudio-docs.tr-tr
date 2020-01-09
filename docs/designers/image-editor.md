@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.graphics.designer.imageeditor
 - vs.graphics.imageeditor
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f2430dddb4fe7de0d050ce26fc94e54c13a7779
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fd7d9aed75876b47a6574d46b226f5baec336883
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635312"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589324"
 ---
 # <a name="image-editor"></a>Görüntü düzenleyicisi
 
@@ -43,12 +43,12 @@ Bu bölümde, Visual Studio projenize bir görüntü ekleme ve gereksinimleriniz
 
 ### <a name="add-an-image-to-your-project"></a>Projenize resim ekleme
 
-1. **Çözüm Gezgini**, görüntüsünü eklemek istediğiniz projenin kısayol menüsünü açın ve ardından  > **Yeni öğe** **Ekle** ' yi seçin.
+1. **Çözüm Gezgini**, görüntüsünü eklemek istediğiniz projenin kısayol menüsünü açın ve ardından > **Yeni öğe** **Ekle** ' yi seçin.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü**altında **grafikler**' i seçin ve ardından görüntü için uygun bir dosya biçimi seçin.
 
    > [!NOTE]
-   > **Yeni öğe Ekle** Iletişim kutusunda **grafik** kategorisini görmüyorsanız, **görüntü ve 3B model düzenleyicileri** bileşenini yüklemeniz gerekebilir. İletişim kutusunu kapatın ve **Visual Studio yükleyicisi**açmak için menü çubuğundan**Araçlar ve Özellikler al**  >  **Araçlar** ' ı seçin. **Ayrı bileşenler** sekmesini seçin ve ardından **Oyunlar ve grafikler** kategorisi altındaki **görüntü ve 3B model düzenleyicileri** bileşenini seçin. **Değiştir**'i seçin.
+   > **Yeni öğe Ekle** Iletişim kutusunda **grafik** kategorisini görmüyorsanız, **görüntü ve 3B model düzenleyicileri** bileşenini yüklemeniz gerekebilir. İletişim kutusunu kapatın ve **Visual Studio yükleyicisi**açmak için menü çubuğundan **Araçlar ve Özellikler al** > **Araçlar** ' ı seçin. **Ayrı bileşenler** sekmesini seçin ve ardından **Oyunlar ve grafikler** kategorisi altındaki **görüntü ve 3B model düzenleyicileri** bileşenini seçin. **Değiştir**'i seçin.
    >
    > ![Görüntü ve 3B model düzenleyicileri bileşeni](media/image-3d-model-editors-component.png)
 
@@ -56,7 +56,7 @@ Bu bölümde, Visual Studio projenize bir görüntü ekleme ve gereksinimleriniz
 
 3. Görüntü dosyasının **adını** ve oluşturulmasını istediğiniz **konumu** belirtin.
 
-4. **Ekle** düğmesini seçin.
+4. Seçin **Ekle** düğmesi.
 
 ### <a name="choose-the-image-format"></a>Görüntü biçimini seçin
 
@@ -138,13 +138,13 @@ Aşağıdaki tabloda, en üstten alta göründükleri sırada listelenen **Gör�
 |Araç Çubuğu Öğesi|Açıklama|
 |------------------|-----------------|
 |**Düğmede**|Diğer adı olan bir vuruş çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
-|**Fırçanın**|, İzin verilen bir kenar yumuşatma çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
+|**Fırça**|, İzin verilen bir kenar yumuşatma çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
 |**Boya tabancası**|, Görüntüyle birlikte karışan ve zaman içerisinde daha fazla doygun bir kenar yumuşatma içeren bir vuruş çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
 |**Damlalığı**|Etkin renk seçimini seçili pikselin rengine ayarlar.|
 |**Doldurması**|Görüntünün bir bölgesini dolduracak etkin renk seçimini kullanır. Etkilenen bölge, her pikselde aynı renkteki ve aynı rengin kendisi olan piksellerle bağlantılı olan her pikselle birlikte, dolgunun uygulandığı piksel olarak tanımlanır. Dolguyu etkin bir seçim içinde uygulanırsa, etkilenen bölge seçim tarafından sınırlandırılır.<br /><br /> Varsayılan olarak, etkin renk seçimi, Alfa bileşenine göre görüntünün etkilenen bölgesiyle birlikte karıştırılırdı. Etkilenen bölgenin üzerine yazmak üzere etkin renk seçimini kullanmak için, Fill aracını kullanırken **SHIFT** tuşuna basın ve basılı tutun.|
 |**Silgi**|Resim bir alfa kanalını destekliyorsa, pikselleri tamamen saydam renge ayarlar. Aksi takdirde, pikselleri etkin arka plan rengine ayarlar.|
 |**Çizgi**, **dikdörtgen**, **yuvarlatılmış dikdörtgen**, **elips**|Görüntüde bir şekil çizer. Ana hattın rengini ve kalınlığını **Özellikler** penceresinde ayarlayabilirsiniz.<br /><br /> Eşit genişliğe ve yüksekliğe sahip bir temel öğe çizmek için, çizerken **SHIFT** tuşuna basın ve basılı tutun.|
-|**Metin**|Metin çizmek için ön plan rengi seçimini kullanır. Arka plan rengi, arka plan rengi seçimine göre belirlenir. Saydam bir arka plan için, arka plan rengi seçiminin alfa değeri 0 olmalıdır. Metin bölgesi etkin olsa da, metnin bir kenar yumuşatma uygulanmış vuruş ile çizilip çizilmeyeceğini ayarlayabilir ve metin **değeri**, **yazı tipi**, **Boyut**ve stil —**kalın**, **italik**veya **altı çizili**— Özellikler ' de ayarlanabilirpencere. Metin bölgesi artık etkin olmadığında metnin içeriği ve görünümü sonlandırılır.|
+|**Metin**|Metin çizmek için ön plan rengi seçimini kullanır. Arka plan rengi, arka plan rengi seçimine göre belirlenir. Saydam bir arka plan için, arka plan rengi seçiminin alfa değeri 0 olmalıdır. Metin bölgesi etkin olsa da, metnin bir kenar yumuşatma ile çizilip çizilmeyeceğini ayarlayabilir ve **Özellikler** penceresinde metin **değeri**, **yazı tipi**, **Boyut**ve stil —**kalın**, **italik**veya **altı çizili**) ayarlayabilirsiniz. Metin bölgesi artık etkin olmadığında metnin içeriği ve görünümü sonlandırılır.|
 |**Boyut**|Görüntüyü saat yönünde 90 derece döndürür.|
 |**Kırpma**|Görüntüyü etkin seçime kırpar.|
 
@@ -198,7 +198,7 @@ Bir görüntüyü yeniden boyutlandırmanın iki yolu vardır. Her iki durumda d
 
 **Görüntü düzenleyicisinde** seçimler etkin olan görüntünün bölgelerini tanımlar. Etkin bölgeler araçlar ve dönüşümlerinden etkilenir. Etkin bir seçim olduğunda, seçilen bölgenin dışındaki bölgeler çoğu araç ve dönüşümden etkilenmez. Etkin bir seçim yoksa görüntünün tamamı etkin olur.
 
-Çoğu araç (**kurşun kalem**, **fırça**, **püskürtme**, **Fill**, **silgi**ve 2B temel elemanlar) ve dönüşümler (**döndürme**, **kırpma**, **renkleri ters**çevirme, **Yatay Çevir**ve **Dikey Çevir**) kısıtlanmış veya etkin seçim tarafından tanımlanır. Ancak bazı araçlar (**damlalık** ve **metin**) ve dönüşümler (**MIPS oluştur**), herhangi bir etkin seçimden etkilenmez. Bu araçlar her zaman tüm görüntünün etkin seçim olduğu gibi davranır.
+Çoğu araç (**kurşun kalem**, **fırça**, **püskürtme**, **Fill**, **silgi**ve 2B temel elemanlar) ve dönüşümler (**döndürme**, **kesme**, **renkleri ters**çevirme, **Yatay Çevir**ve **Dikey Çevir**), etkin seçim tarafından kısıtlı veya tanımlı. Ancak bazı araçlar (**damlalık** ve **metin**) ve dönüşümler (**MIPS oluştur**), herhangi bir etkin seçimden etkilenmez. Bu araçlar her zaman tüm görüntünün etkin seçim olduğu gibi davranır.
 
 Bir bölge seçerken, orantılı (kare) seçim yapmak için **SHIFT** tuşuna basılı tutabilirsiniz. Aksi takdirde, seçim kısıtlı değildir.
 
@@ -214,7 +214,7 @@ Bir bölge seçtikten sonra seçim işaretçisinin boyutunu değiştirerek onu v
 
 Aşağıdaki tabloda geçerli değiştirici tuş bileşimleri açıklanmaktadır:
 
-|T|Karakter|Alternatif|Açıklama|
+|Ctrl|Shift|Alt|Açıklama|
 |----------|-----------|---------|-----------------|
 ||||Seçili bölgenin içeriğini yeniden boyutlandırır.|
 ||**Karakter**||Seçili bölgenin içeriğini orantılı olarak yeniden boyutlandırır.|
@@ -235,51 +235,51 @@ Aşağıdaki tabloda araç özellikleri açıklanmaktadır:
 |----------|----------------|
 |Tüm araçlar ve seçimler|**Döndürme ölçütü**<br /> Seçim ya da araç efektinin saatin saat yönünde döndürüldüğü miktarı derece cinsinden tanımlar.|
 |**Kurşun kalem**, **fırça**, **püskürtme**, **silgi**|**Kalınlığı**<br /> Araçtan etkilenen alanın boyutunu tanımlar.|
-|**Metin**|**Kenar yumuşatma**<br /> Daha fazla kenar yumuşatma uygulanmış kenarları olan metni çizer. Bu metin daha yumuşak bir görünüm sağlar.<br /><br /> **Değer**<br /> Çizilecek metin.<br /><br /> **Yazý**<br /> Metni çizmek için kullanılan yazı tipi.<br /><br /> **Boyutla**<br /> Metnin boyutu.<br /><br /> **Kalın**<br /> Yazı tipini kalın yapar.<br /><br /> **İtalik**<br /> Yazı tipini italik yapar.<br /><br /> **Çiz**<br /> Yazı tipi altı çizili hale gelir.|
+|**Metin**|**Kenar yumuşatma**<br /> Daha fazla kenar yumuşatma uygulanmış kenarları olan metni çizer. Bu metin daha yumuşak bir görünüm sağlar.<br /><br /> **Değer**<br /> Çizilecek metin.<br /><br /> **Yazı tipi**<br /> Metni çizmek için kullanılan yazı tipi.<br /><br /> **Boyut**<br /> Metnin boyutu.<br /><br /> **Kalın**<br /> Yazı tipini kalın yapar.<br /><br /> **İtalik**<br /> Yazı tipini italik yapar.<br /><br /> **Çiz**<br /> Yazı tipi altı çizili hale gelir.|
 |**2B temel**|**Kenar yumuşatma**<br /> Kenar yumuşatma uygulanmış kenarları olan temel türleri çizer. Böylece daha yumuşak bir görünüm elde edin.<br /><br /> **Kalınlığı**<br /> Temel öğesinin sınırını oluşturan çizginin kalınlığını tanımlar.<br /><br /> **Yarıçap X**<br /> (Yalnızca yuvarlatılmış dikdörtgen) Temel öğesinin üst ve alt kenarları için yuvarlama yarıçapını tanımlar.<br /><br /> **Yarıçap Y**<br /> (Yalnızca yuvarlatılmış dikdörtgen) Temel öğesinin sol ve sağ kenarları için yuvarlama yarıçapını tanımlar.|
-|**Kurşun kalem**, **fırça**, **püskürtme**, **2B temel**|**Lardan**<br /> Görüntüleme ve çizim için belirli renk kanallarını etkinleştirip devre dışı bırakır. Belirli bir renk kanalı için **Görünüm** ayarlandıysa, bu kanal görüntüde görünür; Aksi takdirde, görünür değildir. Belirli bir renk kanalı için **Çizim** ayarlandıysa, bu kanal çizim işlemleri tarafından etkilenir; Aksi takdirde, değildir.|
+|**Kurşun kalem**, **fırça**, **püskürtme**, **2B temel**|**Kanallar**<br /> Görüntüleme ve çizim için belirli renk kanallarını etkinleştirip devre dışı bırakır. Belirli bir renk kanalı için **Görünüm** ayarlandıysa, bu kanal görüntüde görünür; Aksi takdirde, görünür değildir. Belirli bir renk kanalı için **Çizim** ayarlandıysa, bu kanal çizim işlemleri tarafından etkilenir; Aksi takdirde, değildir.|
 |**Değnek seçimi**, **dolgusu**|**Payı**<br /> Etkilenen veya seçilen bölgenin bir parçası olarak daha az veya daha fazla benzer renge sahip olduğu için, benzer olarak kabul edildiği bitişik renkler arasındaki en büyük farkı tanımlar. Varsayılan olarak, değer 32 ' dir. Bu, orijinal rengin 32 gölgeler (daha açık veya daha koyu) içindeki bitişik piksellerin bölgenin parçası olarak kabul edildiği anlamına gelir.|
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
 |Komut|Klavye kısayolları|
 |-------------| - |
-|**Seçme** moduna geçiş yap|**Malar**|
-|**Yakınlaştırma** moduna geç|**Kadar**|
-|**Pan** moduna geç|**Ek**|
+|**Seçme** moduna geçiş yap|**S**|
+|**Yakınlaştırma** moduna geç|**Z**|
+|**Pan** moduna geç|**K**|
 |Tümünü seç|**Ctrl**+**A**|
 |Geçerli seçimi sil|**Delete**|
 |Geçerli seçimi iptal et|**ESC** (kaçış)|
-|Yakınlaştır|**Fare tekerleği ileri** + **CTRL**<br /><br /> **Ctrl** +**PageUp**<br /><br /> Artı Işareti ( **+** )|
-|Uzaklaştır|**@No__t_1** **fare tekerleği geriye doğru**<br /><br /> **Ctrl** -**pageaşağı**<br /><br /> Eksi Işareti ( **-** )|
+|Yakınlaştır|**Fare tekerleği ileri**+**CTRL**<br /><br /> **Ctrl**+**PageUp**<br /><br /> Artı Işareti ( **+** )|
+|Uzaklaştır|**-** **fare tekerleği geriye doğru**<br /><br /> **Ctrl**-**pageaşağı**<br /><br /> Eksi Işareti ( **-** )|
 |Görüntüyü yukarı kaydır|**Fare tekerleği geriye doğru**<br /><br /> **Seç**|
 |Görüntüyü aşağı kaydır|**Fare tekerleği ileri**<br /><br /> **Seç**|
-|Görüntüyü sola kaydır|@No__t_1**fare tekerleğini geriye doğru** **Kaydır**<br /><br /> **Fare tekerleği sol**<br /><br /> @No__t_1**Pageaşağı** **Kaydır**|
-|Görüntüyü sağa kaydır|@No__t_1**fare tekerleğini Ileri** **Kaydır**<br /><br /> **Fare tekerleği sağ**<br /><br /> @No__t_1**PageUp** **Kaydır**|
-|Gerçek boyuta Yakınlaştır|**Ctrl** +**0** (sıfır)|
-|Görüntüyü pencereye sığdır|**Ctrl** +**G**, **CTRL** +**F**|
-|Görüntüyü pencere genişliğine Sığdır|**Ctrl** +**g**, **CTRL** +**ı**|
-|Kılavuza geç|**Ctrl** +**g**, **CTRL** +**g**|
-|Görüntüyü geçerli seçime Kırp|**Ctrl** +**G**, **CTRL** +**C**|
-|Sonrakini görüntüle (daha yüksek ayrıntı) MıP düzeyi|**Ctrl** +**G**, **CTRL** +**6**|
-|Öncekini görüntüle (düşük ayrıntı) MıP düzeyi|**Ctrl** +**G**, **CTRL** +**7**|
-|Kırmızı renk kanalını değiştirme|**Ctrl** +**G**, **CTRL** +**1**|
-|Yeşil renk kanalını aç|**Ctrl** +**G**, **CTRL** +**2**|
-|Mavi renk kanalını aç|**Ctrl** +**G**, **CTRL** +**3**|
-|Alfa (saydam) kanalını değiştirme|**Ctrl** +**G**, **CTRL** +**4**|
-|Alfa dama tahtası düzenine geç|**Ctrl** +**G**, **CTRL** +**B**|
-|Düzensiz seçim aracına geç|**Girişindeki**|
+|Görüntüyü sola kaydır|+**fare tekerleğini geriye doğru** **Kaydır**<br /><br /> **Fare tekerleği sol**<br /><br /> +**Pageaşağı** **Kaydır**|
+|Görüntüyü sağa kaydır|+**fare tekerleğini Ileri** **Kaydır**<br /><br /> **Fare tekerleği sağ**<br /><br /> +**PageUp** **Kaydır**|
+|Gerçek boyuta Yakınlaştır|**Ctrl**+**0** (sıfır)|
+|Görüntüyü pencereye sığdır|**Ctrl**+**G**, **CTRL**+**F**|
+|Görüntüyü pencere genişliğine Sığdır|**Ctrl**+**g**, **CTRL**+**ı**|
+|Kılavuza geç|**Ctrl**+**g**, **CTRL**+**g**|
+|Görüntüyü geçerli seçime Kırp|**Ctrl**+**G**, **CTRL**+**C**|
+|Sonrakini görüntüle (daha yüksek ayrıntı) MıP düzeyi|**Ctrl**+**G**, **CTRL**+**6**|
+|Öncekini görüntüle (düşük ayrıntı) MıP düzeyi|**Ctrl**+**G**, **CTRL**+**7**|
+|Kırmızı renk kanalını değiştirme|**Ctrl**+**G**, **CTRL**+**1**|
+|Yeşil renk kanalını aç|**Ctrl**+**G**, **CTRL**+**2**|
+|Mavi renk kanalını aç|**Ctrl**+**G**, **CTRL**+**3**|
+|Alfa (saydam) kanalını değiştirme|**Ctrl**+**G**, **CTRL**+**4**|
+|Alfa dama tahtası düzenine geç|**Ctrl**+**G**, **CTRL**+**B**|
+|Düzensiz seçim aracına geç|**L**|
 |Değnek seçim aracına geç|**M**|
-|Kurşun Kalem aracına geç|**Lama**|
-|Fırça aracına geç|**Kenarı**|
-|Fill aracına geç|**Vadeli**|
-|Silgi aracına geç|**A**|
-|Metin aracına geç|**Şı**|
-|Renk seç (damlalık) aracına geç|**Kaydedemiyorum**|
+|Kurşun Kalem aracına geç|**P**|
+|Fırça aracına geç|**B**|
+|Fill aracına geç|**F**|
+|Silgi aracına geç|**E**|
+|Metin aracına geç|**T**|
+|Renk seç (damlalık) aracına geç|**I**|
 |Etkin seçimi ve içeriğini taşıyın.|**Ok** tuşları.|
-|Etkin seçimi ve içeriğini yeniden boyutlandırın.|**Ctrl** +**ok** tuşları|
-|Etkin seçimi taşıyın, ancak içeriğini değil.|**Shıft** +**ok** tuşları|
-|Etkin seçimi yeniden boyutlandırın, ancak içeriğini değil.|**Shıft** +**CTRL** +**ok** tuşları|
+|Etkin seçimi ve içeriğini yeniden boyutlandırın.|**Ctrl**+**ok** tuşları|
+|Etkin seçimi taşıyın, ancak içeriğini değil.|**Shıft**+**ok** tuşları|
+|Etkin seçimi yeniden boyutlandırın, ancak içeriğini değil.|**Shıft**+**CTRL**+**ok** tuşları|
 |Geçerli katmanı Yürüt|**Döndürülmesini**|
 |Araç kalınlığını azalt|**[**|
 |Araç kalınlığını artır|**]**|

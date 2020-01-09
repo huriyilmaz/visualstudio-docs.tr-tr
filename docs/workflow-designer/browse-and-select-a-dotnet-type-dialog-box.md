@@ -6,21 +6,21 @@ f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eac3c2a45f1e220415f7512e601f4bf034c4dd7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189805"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597119"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
-**Özellikler** penceresi, iletişim kutuları veya değişken Tasarımcısı gibi tasarımcılarda, bir veri türleri listesinden **türler için araştır** ' ı seçtiğinizde, **bir .NET türü görüntüle ve Seç** iletişim kutusu (kısaltılmış bir biçimde "tür olarak adlandırılır tarayıcı "). Bu iletişim kutusunda, derlemelerin ve projelerin ağaç görünümünden bir tür seçebilirsiniz.
+**Özellikler** penceresi, iletişim kutuları veya değişken Tasarımcısı gibi tasarımcılarda, bir veri türleri listesinden **türler için gözatma** ' yı seçtiğinizde, **bir .NET türü görüntüle ve Seç** iletişim kutusu (kısaltılmış bir biçimde "tür tarayıcısı" olarak adlandırılır) bulunur. Bu iletişim kutusunda, derlemelerin ve projelerin ağaç görünümünden bir tür seçebilirsiniz.
 
 Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı senaryolarında işe alındı:
 
@@ -65,7 +65,7 @@ Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine gör
 
 Örneğin:
 
-1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleşir, ancak <xref:System.InvalidOperationException> eşleşmez. <xref:System.InvalidOperationException>eşleştirmek için, System. ı veya geçersiz yazmaya başlayın.
+1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleşir, ancak <xref:System.InvalidOperationException>eşleşmez. <xref:System.InvalidOperationException>eşleştirmek için, System. ı veya geçersiz yazmaya başlayın.
 
 2. **Genel** eşleşmeler yazmak <xref:System.GenericUriParser>, <xref:System.Collections.Generic> ad alanındaki türleri değil. <xref:System.Collections.Generic> ad alanındaki türleri aramak için ad alanının tam adını yazın.
 

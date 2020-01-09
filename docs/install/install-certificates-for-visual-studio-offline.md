@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 9750A3F3-89C7-4A8F-BA75-B0B06BD772C2
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 11b05a7993d2fcd6bc52b53edfde2e97a566574c
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 4db5de36e9982ac3d708f8826f441751c2fd0891
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018832"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594077"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio'yu çevrimdışı yükleme için gerekli sertifikaları yükleme
 
@@ -38,7 +38,7 @@ Yükleme veya çevrimdışı bir ortamda sertifikaları güncelleştirme için �
 
 Bir ağ düzeni oluşturduğunuzda, gerekli sertifikaları Sertifikalar klasörüne yüklenir. Daha sonra el ile sertifikalar tarafından her bir sertifika dosyasını çift tıklatarak ve ardından Sertifika Yöneticisi Sihirbazı yükleyebilirsiniz. İçin bir parola istenirse, boş bırakın.
 
-**Güncelleştirme**: Visual Studio 2017 sürüm 15,8 Preview 2 veya sonraki sürümler için, sertifika dosyalarının her birine sağ tıklayıp sertifika yüklensin ' i seçip Sertifika Yöneticisi Sihirbazı ' na tıklayarak sertifikaları el ile yükleyebilirsiniz.
+**Güncelleştirme**: Visual Studio 2017 sürüm 15,8 önizleme 2 veya daha sonra el ile sertifikalar her sertifika dosyaları sağ tıklayarak yükleyebilirsiniz sertifikayı yükle, seçtikten sonra Sertifika Yöneticisi sihirbazda ilerleyin.
 
 ::: moniker-end
 
@@ -76,7 +76,7 @@ Visual Studio'nun istemci iş istasyonları için çevrimdışı bir ortamda da�
    certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
    ```
 
-   **Güncelleştirme**: Visual Studio 2017 sürüm 15,8 Preview 2 veya üzeri için, toplu iş dosyasını aşağıdaki komutlarla oluşturun:
+   **Güncelleştirme**: Visual Studio 2017 sürüm 15,8 önizleme 2 veya sonraki sürümü oluşturma toplu iş dosyası aşağıdaki komutlarla:
 
    ```cmd
    certmgr.exe -add [layout path]\certificates\manifestRootCertificate.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
@@ -102,7 +102,7 @@ Visual Studio'nun istemci iş istasyonları için çevrimdışı bir ortamda da�
 
 ::: moniker range="vs-2019"
 
-1. [Sertifika Yöneticisi aracını](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr. exe) yükleme paylaşımında (örneğin, \\Sunucu \ Share \ vs2019) kopyalayın. Certmgr.exe dahil değildir ancak Windows kendisini bir parçası olarak olarak kullanılabilir parçası [Windows SDK'sı](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
+1. [Sertifika Yöneticisi aracını](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr. exe) yükleme paylaşımında (örneğin, \\server\share\vs2019) kopyalayın. Certmgr.exe dahil değildir ancak Windows kendisini bir parçası olarak olarak kullanılabilir parçası [Windows SDK'sı](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
 
 2. Bir toplu iş dosyası aşağıdaki komutlarla oluşturun:
 
@@ -135,22 +135,22 @@ Visual Studio'nun istemci iş istasyonları için çevrimdışı bir ortamda da�
 Üç. P12 bu klasördeki dosyalar her bir ara sertifika ve bir kök sertifikası içerir. Windows Update ile güncel çoğu sistemleri, bu sertifikaların yüklü sahiptir.
 
 * **ManifestSignCertificates.p12** içerir:
-  * Ara sertifika: **Microsoft kod Imzalama PCA 2011**
+  * Ara Sertifika: **Microsoft kod imzalama PCA 2011**
     * Gerekli değildir. Varsa, bazı senaryolarda performansı artırır.
   * Kök sertifika: **Microsoft kök sertifika yetkilisi 2011**
     * Windows 7 Service Pack 1 sistemlerinde yüklü en son Windows güncelleştirmelerini sahip olmaması gerekir.
 * **ManifestCounterSignCertificates.p12** içerir:
-  * Ara sertifika: **Microsoft zaman damgası PCA 2010**
+  * Ara Sertifika: **Microsoft zaman damgası PCA 2010**
     * Gerekli değildir. Varsa, bazı senaryolarda performansı artırır.
   * Kök sertifika: **Microsoft kök sertifika yetkilisi 2010**
     * En son Windows güncelleştirmelerini yüklü olmayan Windows 7 Service Pack 1 sistemler için gereklidir.
 * **Vs_installer_opc. SignCertificates.p12** içerir:
-  * Ara sertifika: **Microsoft kod Imzalama PCA**
+  * Ara Sertifika: **Microsoft kod imzalama PCA**
     * Tüm sistemler için gereklidir. Tüm güncelleştirmelerin Windows Update'ten uygulandığı sistemleri bu sertifikayı olmayabilir unutmayın.
   * Kök sertifika: **Microsoft kök sertifika yetkilisi**
     * Gerekli. Bu sertifika, Windows 7 veya üzerini çalıştıran sistemleriyle birlikte gelir.
 
-**Güncelleştirme**: Visual Studio 2017 sürüm 15,8 Preview 2 veya sonraki sürümler için Visual Studio Yükleyicisi yalnızca kök sertifikaların sisteme yüklenmesini gerektirir. Bu sertifikalar. p12 yerine. cer dosyalarında depolanır.
+**Güncelleştirme**: sistemde yüklenmesi için Visual Studio 2017 sürüm 2 veya üzeri 15,8 önizleme, Visual Studio yükleyicisi, yalnızca kök gerektirir sertifikaları. Bu sertifikalar. p12 yerine. cer dosyalarında depolanır.
 
 ::: moniker-end
 
@@ -197,7 +197,7 @@ Yükleme sistemde denetleyin yollarından biri, şu adımları takip etmektir:
 
 Sertifika adları içinde değilse **çıkarılan** sütunları yüklü olması gerekir.  Bir ara sertifika yalnızca içinde ise **geçerli kullanıcının** ara sertifika deposu, sonra da günlüğe kaydedilen kullanıcı için kullanılabilir. Diğer kullanıcılar için yüklemeniz gerekebilir.
 
-## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
+## <a name="install-visual-studio"></a>Visual Studio Yükle
 
 Sertifikalar'ı yükledikten sonra Visual Studio'nun dağıtım yönergeleri kullanarak devam edebilirsiniz [ağ yüklemesinden dağıtma](create-a-network-installation-of-visual-studio.md#deploy-from-a-network-installation) sayfası "oluşturma Visual Studio'nun bir ağ yükleme" bölümü.
 

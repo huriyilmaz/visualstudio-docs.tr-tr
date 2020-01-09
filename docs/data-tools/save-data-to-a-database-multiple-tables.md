@@ -11,17 +11,17 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], updating
 ms.assetid: 7ebe03da-ce8c-4cbc-bac0-a2fde4ae4d07
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bcb551cdcd5b2505c6ac536a440fcc3e70464bfb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d4dd98a622a3aa09b2ec11f4f3521ce1839ce8c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648203"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586256"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Bir veritabanına (birden çok tablo) veri kaydetme
 
@@ -33,7 +33,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile uygulamanızda bir veri kaynağı oluşturma ve yapılandırma.
 
-- [Veri kaynakları penceresindeki](add-new-data-sources.md#data-sources-window)öğelerin denetimlerini ayarlama. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- [Veri kaynakları penceresindeki](add-new-data-sources.md#data-sources-window)öğelerin denetimlerini ayarlama. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 - **Veri kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlantılı denetimler oluşturma.
 
@@ -55,7 +55,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
@@ -67,7 +67,7 @@ Ya da C# Visual Basic için yeni bir **Windows Forms uygulama** projesi oluştur
 
 Bu adım, **veri kaynağı Yapılandırma Sihirbazı**'Nı kullanarak Northwind veritabanından bir veri kaynağı oluşturur. Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: örnek veritabanlarını kurma](../data-tools/installing-database-systems-tools-and-samples.md).
 
-1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
+1. Üzerinde **veri** menüsünde **veri kaynaklarını Göster**.
 
    **Veri kaynakları** penceresi açılır.
 
@@ -95,13 +95,13 @@ Bu adım, **veri kaynağı Yapılandırma Sihirbazı**'Nı kullanarak Northwind 
 
 ## <a name="set-the-controls-to-be-created"></a>Oluşturulacak denetimleri ayarlayın
 
-Bu izlenecek yol için `Customers` tablosundaki veriler, verilerin ayrı denetimlerde görüntülendiği bir **Ayrıntılar** düzeninde yer aldığı yerdir. @No__t_0 tablodaki veriler, <xref:System.Windows.Forms.DataGridView> denetiminde görüntülenen **kılavuz** düzenidir.
+Bu izlenecek yol için `Customers` tablosundaki veriler, verilerin ayrı denetimlerde görüntülendiği bir **Ayrıntılar** düzeninde yer aldığı yerdir. `Orders` tablodaki veriler, <xref:System.Windows.Forms.DataGridView> denetiminde görüntülenen **kılavuz** düzenidir.
 
 ### <a name="to-set-the-drop-type-for-the-items-in-the-data-sources-window"></a>Veri kaynakları penceresinde öğelerin bırakma türünü ayarlamak için
 
 1. **Veri kaynakları** penceresinde, **müşteriler** düğümünü genişletin.
 
-2. **Müşteriler düğümünde,** **müşteriler** tablosunun denetimini ayrı denetimler olarak değiştirmek için denetim listesinden **Ayrıntılar** ' ı seçin. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+2. **Müşteriler düğümünde,** **müşteriler** tablosunun denetimini ayrı denetimler olarak değiştirmek için denetim listesinden **Ayrıntılar** ' ı seçin. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 ## <a name="create-the-data-bound-form"></a>Veri bağlantılı formu oluşturma
 
@@ -109,7 +109,7 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 1. Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
-     Açıklayıcı etiketlere sahip veriye bağlı denetimler, formda gezinmek için bir araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) ile birlikte görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
+     Açıklayıcı etiketlere sahip veriye bağlı denetimler, formda gezinmek için bir araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) ile birlikte görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
 
 2. İlgili **siparişler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
@@ -120,21 +120,21 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 ## <a name="add-code-to-update-the-database"></a>Veritabanını güncelleştirmek için kod ekleme
 
-**Müşteriler** ve **siparişler** TableAdapters `Update` yöntemlerini çağırarak veritabanını güncelleştirebilirsiniz. Varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator> **Kaydet** düğmesine yönelik bir olay işleyicisi, güncelleştirmeleri veritabanına göndermek için formun koduna eklenir. Bu yordam, güncelleştirmeleri doğru sırada göndermek için kodu değiştirir. Bu, başvurusal bütünlük hataları oluşturma olasılığını ortadan kaldırır. Kod ayrıca, bir try-catch bloğunda güncelleştirme çağrısını sarmalayarak hata işleme uygular. Kodu uygulamanızın gereksinimlerine uyacak şekilde değiştirebilirsiniz.
+**Müşteriler** ve **siparişler** TableAdapters `Update` yöntemlerini çağırarak veritabanını güncelleştirebilirsiniz. Varsayılan olarak,<xref:System.Windows.Forms.BindingNavigator> **Kaydet** düğmesine yönelik bir olay işleyicisi, güncelleştirmeleri veritabanına göndermek için formun koduna eklenir. Bu yordam, güncelleştirmeleri doğru sırada göndermek için kodu değiştirir. Bu, başvurusal bütünlük hataları oluşturma olasılığını ortadan kaldırır. Kod ayrıca, bir try-catch bloğunda güncelleştirme çağrısını sarmalayarak hata işleme uygular. Kodu uygulamanızın gereksinimlerine uyacak şekilde değiştirebilirsiniz.
 
 > [!NOTE]
 > Netlik için bu izlenecek yol bir işlem kullanmaz. Ancak, iki veya daha fazla ilişkili tabloyu güncelleştiriyorsanız, tüm güncelleştirme mantığını bir işlem içine dahil edin. İşlem, herhangi bir değişiklik kaydedilmeden önce bir veritabanında yapılan tüm değişikliklerin başarılı olmasını sağlayan bir işlemdir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](/dotnet/framework/data/adonet/transactions-and-concurrency).
 
 ### <a name="to-add-update-logic-to-the-application"></a>Uygulamaya güncelleştirme mantığı eklemek için
 
-1. @No__t_1 **Kaydet** düğmesini seçin. Bu, kod düzenleyicisini `bindingNavigatorSaveItem_Click` olay işleyicisine açar.
+1. <xref:System.Windows.Forms.BindingNavigator>**Kaydet** düğmesini seçin. Bu, kod düzenleyicisini `bindingNavigatorSaveItem_Click` olay işleyicisine açar.
 
-2. Olay işleyicisindeki kodu, ilgili TableAdapters `Update` yöntemlerini çağırmak için değiştirin. Aşağıdaki kod ilk olarak her bir <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState.Deleted>, <xref:System.Data.DataRowState.Added> ve <xref:System.Data.DataRowState.Modified>) güncelleştirilmiş bilgileri tutmak için üç geçici veri tablosu oluşturur. Güncelleştirmeler doğru sırada çalıştırılır. Kod aşağıdaki gibi görünmelidir:
+2. Olay işleyicisindeki kodu, ilgili TableAdapters `Update` yöntemlerini çağırmak için değiştirin. Aşağıdaki kod ilk olarak her bir <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState.Deleted>, <xref:System.Data.DataRowState.Added>ve <xref:System.Data.DataRowState.Modified>) güncelleştirilmiş bilgileri tutmak için üç geçici veri tablosu oluşturur. Güncelleştirmeler doğru sırada çalıştırılır. Kod aşağıdaki gibi görünmelidir:
 
      [!code-vb[VbRaddataSaving#10](../data-tools/codesnippet/VisualBasic/save-data-to-a-database-multiple-tables_1.vb)]
      [!code-csharp[VbRaddataSaving#10](../data-tools/codesnippet/CSharp/save-data-to-a-database-multiple-tables_1.cs)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 
 1. **F5**tuşuna basın.
 

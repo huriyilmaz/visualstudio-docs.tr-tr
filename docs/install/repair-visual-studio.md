@@ -5,19 +5,19 @@ description: Visual Studio 2017 yüklemesini onarmak hakkında bilgi edinin
 ms.date: 07/31/2019
 ms.custom: seodec18
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ed6b7050d2162fc4e893db6ec4f429fbe3f8eb4f
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 255995f7ca660d36ae40a6a8fead4b3ea5d70424
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681343"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594558"
 ---
 # <a name="repair-visual-studio"></a>Visual Studio’yu onarın
 
@@ -36,7 +36,7 @@ Bazı durumlarda Visual Studio yüklemenizin zarar görmüş veya bozulmuş olur
 
 1. Yükleyiciyi açın, **daha fazla**' yı seçin ve ardından **Onar**' ı seçin.
 
-    ![Visual Studio yükleyicisi Visual Studio 'Yu onarın](media/repair-visual-studio.png "Visual Studio yükleyicisi Visual Studio 'Yu onarın")
+    ![Visual Studio Yükleyicisi Visual Studio 'Yu onarın](media/repair-visual-studio.png "Visual Studio Yükleyicisi Visual Studio 'Yu onarın")
 
    > [!NOTE]
    > Visual Studio 'Yu onarmak ortamı sıfırlar. Yükselme, Kullanıcı ayarları ve profiller olmadan yüklenen Kullanıcı başına uzantılar gibi yerel özelleştirmeler kaldırılır. Temalar, renkler, anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenecek.
@@ -53,7 +53,7 @@ Bazı durumlarda Visual Studio yüklemenizin zarar görmüş veya bozulmuş olur
 
      Örneğin, Windows 10 çalıştıran bir bilgisayarda seçin **Başlat**ve harfi kaydırın **V**, olarak listelenen burada **Visual Studio yükleyicisi**.
 
-     ![Visual Studio yükleyicisi açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio yükleyicisi açın")
+     ![Visual Studio Yükleyicisi açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisi açın")
 
      > [!NOTE]
      > Aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
@@ -64,7 +64,7 @@ Bazı durumlarda Visual Studio yüklemenizin zarar görmüş veya bozulmuş olur
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü arayın. Daha sonra, **daha fazla**' yı ve ardından **Onar**' ı seçin.
 
-     ![Visual Studio 2019 'Yi onarma](media/vs-2019/vs-installer-repair.png "Visual Studio 2019 'Yi onarma")
+     ![Visual Studio 2019 'yi onarma](media/vs-2019/vs-installer-repair.png "Visual Studio 2019 'yi onarma")
 
    > [!NOTE]
    > Visual Studio 'Yu onarmak ortamı sıfırlar. Yükselme, Kullanıcı ayarları ve profiller olmadan yüklenen Kullanıcı başına uzantılar gibi yerel özelleştirmeler kaldırılır. Temalar, renkler, anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenecek.

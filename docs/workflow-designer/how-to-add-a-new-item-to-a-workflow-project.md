@@ -3,17 +3,17 @@ title: 'İş Akışı Tasarımcısı: iş akışı projesine yeni öğe ekleme'
 ms.date: 06/25/2018
 ms.topic: conceptual
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cdea5b3cbf99ab8213c320acc82665816062dca
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: d7bedc36af2e8fbe19fbb3cc85d82be09d8673de
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189630"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593960"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Nasıl yapılır: bir iş akışı projesine yeni öğe ekleme
 
@@ -32,7 +32,7 @@ Aşağıdaki tabloda, bir iş akışı projesine ekleyebileceğiniz Windows Work
 
 1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-   **Yeni öğe Ekle** iletişim kutusu açılır.
+   **Yeni Öğe Ekle** iletişim kutusu açılır.
 
 1. Sol bölmede, **Iş akışı** kategorisini seçin ve sonra bir iş akışı öğesi şablonu seçin.
 

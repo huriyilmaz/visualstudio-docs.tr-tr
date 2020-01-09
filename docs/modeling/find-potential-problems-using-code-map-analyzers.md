@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code analysis, dependency graphs
 - dependency graphs, analyzing code
 - graph documents, analyzing
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f55d4d3c4470d32d9779f7adf06934f10ac618e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd20d3c40a4fbe80ac1578275ccd8614eb018d7a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657489"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596599"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>Kod haritası çözümleyicilerini kullanarak olası sorunları bulma
 
@@ -32,7 +32,7 @@ Aşırı karmaşık olabilecek veya geliştirme gerektirebilecek kodu tanımlama
 
 ## <a name="analyze-code-maps"></a>Kod eşlemelerini çözümle
 
-Harita araç çubuğunda **düzen**  > **Çözümleyicileri**' ni ve ardından çalıştırmak istediğiniz çözümleyici ' yi seçin:
+Harita araç çubuğunda **düzen** > **Çözümleyicileri**' ni ve ardından çalıştırmak istediğiniz çözümleyici ' yi seçin:
 
 |**Analyzer**|**Olan düğümleri belirlemek için**|
 |-|-|
@@ -40,7 +40,7 @@ Harita araç çubuğunda **düzen**  > **Çözümleyicileri**' ni ve ardından �
 |**Hub Çözümleyicisi bulma**|Yüksek oranda bağlı düğümlerin üst %25 ' i<br /><br /> **Haritadaki tüm diğer düğümleri gizlemek için**<br /><br /> -Haritanın kısayol menüsünü açın, **Gelişmiş**' i seçin, Seç ' i **seçin**ve **seçimini gizleyin**.<br />     Harita seçilmemiş düğümleri gizler ve çözümleyici yeni düğümleri hub olarak tanımlar.|
 |**Başvurulmayan düğümler Çözümleyicisi**|Diğer düğümlerden başvuruları yoktur. **Dikkat:**  Kodun kullanılmadığını varsaymadan önce bu durumların her birini doğrulayın. XAML bağımlılıkları ve çalışma zamanı bağımlılıkları gibi belirli bağımlılıklar kodda statik olarak bulunamaz.|
 
-Kod Haritası Çözümleyicileri, uygulandıktan sonra çalışmaya devam edecektir. Eşlemeyi değiştirirseniz, uygulanan tüm çözümleyiciler, güncelleştirilmiş Haritayı otomatik olarak yeniden işler. Bir çözümleyici çalıştırmayı durdurmak için harita araç çubuğunda **,  > ** **çözümleyiciler**' ı seçin. Seçili çözümleyici 'yi devre dışı bırakın.
+Kod Haritası Çözümleyicileri, uygulandıktan sonra çalışmaya devam edecektir. Eşlemeyi değiştirirseniz, uygulanan tüm çözümleyiciler, güncelleştirilmiş Haritayı otomatik olarak yeniden işler. Bir çözümleyici çalıştırmayı durdurmak için harita araç çubuğunda **, > ** **çözümleyiciler**' ı seçin. Seçili çözümleyici 'yi devre dışı bırakın.
 
 > [!TIP]
 > Çok büyük bir haritanız varsa, bir çözümleyici çalıştırmak yetersiz bellek özel durumuna neden olabilir. Bu durumda, kapsamını daraltmak için haritayı düzenleyin veya daha küçük bir tane oluşturun ve ardından çözümleyici 'yi çalıştırın.

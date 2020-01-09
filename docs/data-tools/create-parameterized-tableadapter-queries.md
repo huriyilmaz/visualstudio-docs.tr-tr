@@ -13,17 +13,17 @@ helpviewer_keywords:
 - TableAdapters, searching data
 - queries [Visual Studio], TableAdapters
 ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0926558c4d6e94032e2af2c75189f287da8d4811
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 98e1ee8a279933cc2cc59abe70b6ea8af4850676
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642156"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586750"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Parametreleştirilmiş TableAdapter sorguları oluşturma
 
@@ -71,7 +71,7 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 
 5. **Sorgu metin** kutusuna parametreleri alan bir sorgu yazın.
 
-6. **Tamam ' ı**seçin.
+6. Seçin **Tamam**.
 
      Parametre ve bir **yükleme** düğmesi girmek için bir denetim, <xref:System.Windows.Forms.ToolStrip> denetimindeki forma eklenir.
 
@@ -96,7 +96,7 @@ Bir sorguyu null değerlerini kabul edecek şekilde etkinleştirmek için:
 
 2. **Özellikler** penceresinde **Parametreler**' i seçin, sonra **Parametreler koleksiyonu düzenleyicisini**açmak için üç nokta ( **...** ) düğmesini tıklatın.
 
-3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini `true` olarak ayarlayın.
+3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini `true`olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

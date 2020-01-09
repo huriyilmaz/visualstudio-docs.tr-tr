@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Toolbox, HTML tab
 - HTML Designer, setting options
 - HTML tab in Toolbox
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed46bdb9b5562b38f37129d69e7f075e425588b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0489f534466149a437384d4f21e34f1fa9e98c5b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644778"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596443"
 ---
 # <a name="toolbox-html-tab"></a>Araç kutusu, HTML sekmesi
 
@@ -34,13 +34,13 @@ Aşağıdaki araçlar HTML sekmesinde varsayılan olarak kullanılabilir.
 
 ![ASP.NET Mobile Designer HTMLpage Işaretçisi](../../ide/reference/media/vxpointer.gif)
 
-Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Silinemez. İşaretçi, nesneleri Tasarım görünümü yüzeyi üzerine sürüklemenize, yeniden boyutlandırmanıza ve sayfa ya da form üzerinde yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için bkz. [araç kutusu](../../ide/reference/toolbox.md).
+Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Silinemez. İşaretçi, nesneleri Tasarım görünümü yüzeyi üzerine sürüklemenize, yeniden boyutlandırmanıza ve sayfa ya da form üzerinde yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için [araç kutusu](../../ide/reference/toolbox.md).
 
 **Giriş (düğme)**
 
 ![HTML Web sayfası düğmesi](../../ide/reference/media/vxbutton.gif)
 
-@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Button1"` ilk düğme için eklenir, ikincisi için `id="Button2"` ve bu şekilde devam eder.
+`type="button"`bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Button1"` ilk düğme için eklenir, ikincisi için `id="Button2"` ve bu şekilde devam eder.
 
 **Giriş (düğme)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -52,7 +52,7 @@ Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Si
 
 ![HTMLpageResetButton ekran görüntüsü](../../ide/reference/media/vxreset.gif)
 
-@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Reset1"` ilk sıfırlama düğmesine eklenir, ikincisi için `id="Reset2"` ve bu şekilde devam eder.
+`type="reset"`bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Reset1"` ilk sıfırlama düğmesine eklenir, ikincisi için `id="Reset2"` ve bu şekilde devam eder.
 
 **Girişi (sıfırlama)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -64,7 +64,7 @@ Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Si
 
 ![HTMLpageToolbarSubmitButton ekran görüntüsü](../../ide/reference/media/vxsubmit.gif)
 
-@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Submit1"` ilk Gönder düğmesine eklenir, ikincisi için `id="Submit2"` ve bu şekilde devam eder.
+`type="submit"`bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Submit1"` ilk Gönder düğmesine eklenir, ikincisi için `id="Submit2"` ve bu şekilde devam eder.
 
 **Girişi (Gönder)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -106,7 +106,7 @@ Belgenize `type="file"` `input` öğesi ekler. Varsayılan olarak, `id="File1"` 
 
 ![Visual Studio parolası alanı](../../ide/reference/media/vxpassword.gif)
 
-@No__t_1 bir `input` öğesi ekler. Varsayılan olarak, `id="Password1"` ilk parola alanı için eklenir, ikincisi için `id="Password2"` ve bu şekilde devam eder.
+`type="password"`bir `input` öğesi ekler. Varsayılan olarak, `id="Password1"` ilk parola alanı için eklenir, ikincisi için `id="Password2"` ve bu şekilde devam eder.
 
 **Giriş (parola)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -121,7 +121,7 @@ Belgenize `type="file"` `input` öğesi ekler. Varsayılan olarak, `id="File1"` 
 
 ![HTML Web sayfası araç kutusu seçeneği](../../ide/reference/media/vxcheckbox.gif)
 
-@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Checkbox1"` ilk onay kutusu için eklenir, ikincisi için `id="Checkbox2"` ve bu şekilde devam eder.
+`type="checkbox"`bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Checkbox1"` ilk onay kutusu için eklenir, ikincisi için `id="Checkbox2"` ve bu şekilde devam eder.
 
 **Girişi (onay kutusu)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -133,7 +133,7 @@ Belgenize `type="file"` `input` öğesi ekler. Varsayılan olarak, `id="File1"` 
 
 ![VisualStudioHTMLpageRadioButton ekran görüntüsü](../../ide/reference/media/vxradio.gif)
 
-@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Radio1"` ilk radyo düğmesi için eklenir, ikincisi için `id="Radio2"` ve bu şekilde devam eder.
+`type="radio"`bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Radio1"` ilk radyo düğmesi için eklenir, ikincisi için `id="Radio2"` ve bu şekilde devam eder.
 
 **Girişi (radyo)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -145,7 +145,7 @@ Belgenize `type="file"` `input` öğesi ekler. Varsayılan olarak, `id="File1"` 
 
 ![HTML sayfası gizli öğesi](../../ide/reference/media/vxhidden.gif)
 
-@No__t_1 bir `input` öğesi ekler. Varsayılan olarak, `id="Hidden1"` ilk gizli alan için eklenir, ikincisi için `id="Hidden2"` ve bu şekilde devam eder.
+`type="hidden"`bir `input` öğesi ekler. Varsayılan olarak, `id="Hidden1"` ilk gizli alan için eklenir, ikincisi için `id="Hidden2"` ve bu şekilde devam eder.
 
 **Girişi (gizli)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -184,7 +184,7 @@ Bir `table` öğesi ekler.
 
 ![HTML sayfası resim öğesi](../../ide/reference/media/vximage.gif)
 
-Bir `img` öğesi ekler. @No__t_0 ve `alt` metnini belirtmek için bu öğeyi düzenleyin.
+Bir `img` öğesi ekler. `src` ve `alt` metnini belirtmek için bu öğeyi düzenleyin.
 
 **Görüntüyü** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
@@ -222,7 +222,7 @@ Bir `hr` öğesi ekler. Çizginin kalınlığını artırmak için `size` öznit
 
 ![HTML sayfa etiketi](../../ide/reference/media/vxlabel.gif)
 
-Bir `ms_positioning="FlowLayout"` özniteliği içeren bir `div` öğesi ekler. Genişlik ve Yükseklik dışında, bu öğe bir akış düzeni paneliyle aynıdır. @No__t_0 öğesi içinde bulunan metni biçimlendirmek için, açma etiketine bir `class="stylename"` özniteliği ekleyin.
+Bir `ms_positioning="FlowLayout"` özniteliği içeren bir `div` öğesi ekler. Genişlik ve Yükseklik dışında, bu öğe bir akış düzeni paneliyle aynıdır. `div` öğesi içinde bulunan metni biçimlendirmek için, açma etiketine bir `class="stylename"` özniteliği ekleyin.
 
 **Div** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 

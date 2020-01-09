@@ -11,22 +11,22 @@ helpviewer_keywords:
 - TaskBody element [MSBuild]
 - <TaskBody> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f788df1dd3cad2baddd6d2966b04195af01fe7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ac4e04c1a75fe7afdebc984381e17d7e55913fd4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62938967"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594987"
 ---
 # <a name="taskbody-element-msbuild"></a>TaskBody öğesi (MSBuild)
-Geçirilen verileri içeren bir `UsingTask` `TaskFactory`. Daha fazla bilgi için [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<Proje > \<UsingTask > \<TaskBody >
+ \<Project > \<UsingTask > \<TaskBody >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,26 +37,26 @@ Geçirilen verileri içeren bir `UsingTask` `TaskFactory`. Daha fazla bilgi içi
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>Öznitelikler
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Evaluate`|İsteğe bağlı Boolean özniteliği.<br /><br /> Varsa `true`, MSBuild herhangi bir iç öğe değerlendirir ve bilgileri geçirmeden önce öğeleri ve özellikleri genişletir `TaskFactory` görev oluşturulduğunda.|
+|`Evaluate`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`, MSBuild tüm iç öğeleri değerlendirir ve görev örneği oluşturulduğunda bilgileri `TaskFactory` geçirmeden önce öğeleri ve özellikleri genişletir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Veri|Arasına metin `TaskBody` etiketleri için verbatim gönderilir `TaskFactory`.|
+|Veri|`TaskBody` etiketleri arasındaki metin, `TaskFactory`harfine gönderilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Görevleri kaydetmek için bir yol sağlar [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Sıfır veya daha fazla olabilir `UsingTask` proje öğeleri. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]görevleri kaydetmek için bir yol sağlar. Bir projede sıfır veya daha fazla öğe `UsingTask` olabilir. |
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek nasıl kullanılacağını gösterir `TaskBody` öğesi ile bir `Evaluate` özniteliği.
+ Aşağıdaki örnek, `Evaluate` özniteliğiyle `TaskBody` öğesinin nasıl kullanılacağını gösterir.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">

@@ -1,7 +1,7 @@
 ---
 title: .NET geliştirme için üretkenliğinizi artırın
 description: Daha iyi .NET kodu daha hızlı yazmanıza yardımcı olacak gezinti, kod analizi, birim testi ve diğer özelliklere genel bakış.
-author: mikadumont
+author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.date: 11/21/2019
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5777ef318d557b85abddf35d2fbdf37a044b0ead
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 0aa8e19f2be78671587dd1d9bc6254306c82a78c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491647"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567508"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>Geliştiriciler için C# Visual Studio üretkenlik Kılavuzu
 
@@ -43,21 +43,21 @@ Popüler Visual Studio kısayollarından bazıları aşağıda verilmiştir:
 
 | Kısayol (tüm profiller) | Komut | Açıklama |
 |-|-|-|
-| **Ctrl**+**t** | Tümüne git | Herhangi bir dosya, tür, üye veya sembol bildirimine gidin |
+| **CTRL**+**T** | Tümüne git | Herhangi bir dosya, tür, üye veya sembol bildirimine gidin |
 | **F12** (ayrıca **CTRL**+**tıklama**) | Tanıma Git | Simgenin tanımlandığı yere gitme |
 | **Ctrl**+**F12** | Uygulamaya git | Temel bir türden veya Üyeden çeşitli uygulamalarına gitme |
 | **Shıft**+**F12** | Tüm Başvuruları Bul | Tüm sembol veya değişmez başvuruları gör |
 | **Alt**+**giriş** | Temele git | Devralma zincirinde gezin |
 | **Ctrl**+ **.** (Ayrıca, C# **alt**+profile **yazın** ) | Hızlı Eylemler ve Yeniden Düzenlemeler | İmlecin konumunda veya kod seçiminde kod düzeltmelerinin, kod oluşturma eylemlerinin, yeniden düzenlemeler veya diğer hızlı eylemlerin kullanılabildiğini görün |
-| **Ctrl**+**D** | Yinelenen satır | İmlecin bulunduğu kod satırını çoğaltır ( **Visual Studio 2017 sürüm 15,6** ve üzeri sürümlerde kullanılabilir) |
+| **Ctrl**+**D** | Satırı Yinele | İmlecin bulunduğu kod satırını çoğaltır ( **Visual Studio 2017 sürüm 15,6** ve üzeri sürümlerde kullanılabilir) |
 | **Shıft**+**Alt**+ **+** / **-** | Genişlet/sözleşme seçimi | Düzenleyicideki geçerli seçimi genişletir veya sözleşmelerini ( **Visual Studio 2017 sürüm 15,5** ve üzeri sürümlerde bulunur) |
 | **Shıft** + **alt** +  **.** | Sonraki eşleşen giriş Işaretini Ekle | Geçerli seçimle eşleşen bir sonraki konuma bir seçim ve giriş işareti ekler ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde kullanılabilir) |
-| **Ctrl**+**Q** | Ara | Tüm Visual Studio ayarlarında ara |
-| **F5** | Hata ayıklamayı Başlat | Uygulamanızda hata ayıklamayı başlatma |
+| **CTRL**+**Q** | Ara | Tüm Visual Studio ayarlarında ara |
+| **F5** | Hata Ayıklamayı Başlat | Uygulamanızda hata ayıklamayı başlatma |
 | **Ctrl**+**F5** | Hata ayıklama olmadan Çalıştır | Uygulamanızı hata ayıklama olmadan yerel olarak çalıştırma |
 | **CTRL**+**K**,**d** (varsayılan profil) veya **CTRL**+**E**,**d** (C# profil) | Belgeyi Biçimlendir | Yeni satır, Aralık ve girintileme ayarlarınıza göre dosyanızdaki biçimlendirme ihlallerini temizler |
 | **CTRL**+ **\\** ,**CTRL**+**E** (varsayılan profil) veya **CTRL**+**W**,**E** (C# profil) | Hata Listesi görüntüle | Belge, proje veya çözümünüzdeki tüm hataları görün |
-| **Alt** + **PgUp/PgDn** | Sonraki/önceki soruna git | Belgenizde ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde bulunur) önceki/sonraki hataya, uyarıya ve önerisine atlayın |
+| **Alt** + **PgUp/PgDn** | Sonraki/önceki soruna gidin | Belgenizde ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde bulunur) önceki/sonraki hataya, uyarıya ve önerisine atlayın |
 | **Ctrl**+**K**, **/** | Tek satır yorum/açıklama kaldır | Bu komut, seçiminizin zaten açıklama eklenmiş olmasına bağlı olarak tek satırlık yorum ekler veya kaldırır |
 | **Ctrl**+**SHIFT**+ **/** | Değiştirme bloğu açıklaması/Açıklama | Bu komut, seçtiğiniz seçeneğe bağlı olarak blok açıklamalarını ekler veya kaldırır |
 
@@ -159,8 +159,8 @@ Visual Studio 'da, [kodunuzda gezinmenize ve gezinmenize](../ide/navigating-code
 | Tüm Başvuruları Bul | **Shıft**+**F12**| Sonuçlar renklendirilir ve okuma veya yazma gibi proje, tanım ve başvuru türüne göre gruplanabilir. Ayrıca "kilitle" sonuçlarını da kullanabilirsiniz. |
 | Uygulamaya git | **Ctrl**+**F12** | Geçersiz kılınan üyeye gitmek için `override` anahtar sözcüğüyle tanımına git ' i kullanabilirsiniz |
 | Tanıma Git | **F12** veya **CTRL**+**tıklama**| Tanıma gitmek için tıklarken **CTRL** tuşuna basın |
-| Açıklama Özeti | **Alt**+**F12** | Bir tanım için satır içi görünüm |
-| Yapı görselleştiricisi | Köşeli ayraçlar arasında gri, noktalı çizgiler | Kod yapınızı görmek için üzerine gelin |
+| Tanıma göz at | **Alt**+**F12** | Bir tanım için satır içi görünüm |
+| Yapı Görselleştirici | Köşeli ayraçlar arasında gri, noktalı çizgiler | Kod yapınızı görmek için üzerine gelin |
 | Ayrıştırılmış derlemelere gezinti | **F12** veya **CTRL**+**tıklama** | Özelliği etkinleştirerek dış kaynak (ılspy ile derlenen) bölümüne gidin: **araçlar** > **Seçenekler** > **metin Düzenleyicisi** > **C#**  > **Gelişmiş** > **ayrıştırılmış kaynaklara gezinmeyi etkinleştir**. |
 
 ![Tümüne git ve tüm başvuruları bul](../ide/media/VSIDE_Productivity_Navigation.png)

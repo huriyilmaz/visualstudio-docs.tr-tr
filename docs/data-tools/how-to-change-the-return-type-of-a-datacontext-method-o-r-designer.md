@@ -3,20 +3,20 @@ title: DataContext metodunun dönüş türünü değiştir (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c5b66bff-6dbb-43c0-bffa-317133ca5b9e
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 304cd62e83ae2e256e40cdbb8f046b637cbd8d58
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fac3a26f77151d7e09b620ef084d42a9ab50f1e5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648375"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586542"
 ---
 # <a name="how-to-change-the-return-type-of-a-datacontext-method-or-designer"></a>Nasıl yapılır: DataContext metodunun dönüş türünü değiştirme (O/R Designer)
-Bir <xref:System.Data.Linq.DataContext> yönteminin dönüş türü (saklı yordam veya işlevi temel alınarak oluşturulur),, **O/R tasarımcısında**saklı yordam veya işlevi nerede bıraktığınızda olduğuna bağlı olarak farklılık gösterir. Bir öğeyi doğrudan mevcut bir varlık sınıfına bırakırsanız, varlık sınıfının dönüş türüne sahip bir <xref:System.Data.Linq.DataContext> yöntemi oluşturulur (saklı yordam veya işlev tarafından döndürülen verilerin şeması, varlık sınıfının şekliyle eşleşiyorsa). Bir öğeyi **O/R tasarımcısının**boş bir alanına bırakırsanız, otomatik olarak oluşturulan bir tür döndüren <xref:System.Data.Linq.DataContext> yöntemi oluşturulur. @No__t_0 yönteminin dönüş türünü Yöntemler bölmesine ekledikten sonra değiştirebilirsiniz. Bir <xref:System.Data.Linq.DataContext> yönteminin dönüş türünü incelemek veya değiştirmek için, bunu seçin ve **Özellikler** penceresinde **dönüş türü** özelliğine tıklayın.
+Bir <xref:System.Data.Linq.DataContext> yönteminin dönüş türü (saklı yordam veya işlevi temel alınarak oluşturulur),, **O/R tasarımcısında**saklı yordam veya işlevi nerede bıraktığınızda olduğuna bağlı olarak farklılık gösterir. Bir öğeyi doğrudan mevcut bir varlık sınıfına bırakırsanız, varlık sınıfının dönüş türüne sahip bir <xref:System.Data.Linq.DataContext> yöntemi oluşturulur (saklı yordam veya işlev tarafından döndürülen verilerin şeması, varlık sınıfının şekliyle eşleşiyorsa). Bir öğeyi **O/R tasarımcısının**boş bir alanına bırakırsanız, otomatik olarak oluşturulan bir tür döndüren <xref:System.Data.Linq.DataContext> yöntemi oluşturulur. <xref:System.Data.Linq.DataContext> yönteminin dönüş türünü Yöntemler bölmesine ekledikten sonra değiştirebilirsiniz. Bir <xref:System.Data.Linq.DataContext> yönteminin dönüş türünü incelemek veya değiştirmek için, bunu seçin ve **Özellikler** penceresinde **dönüş türü** özelliğine tıklayın.
 
 > [!NOTE]
 > **Özellikler** penceresini kullanarak otomatik oluşturulan türü döndürmek için bir dönüş türü bir varlık sınıfına ayarlanmış <xref:System.Data.Linq.DataContext> metotları geri döndüremezsiniz. Otomatik olarak oluşturulan bir tür döndürmek için bir <xref:System.Data.Linq.DataContext> metodunu geri döndürmek için, özgün veritabanı nesnesini **O/R tasarımcısına** yeniden sürüklemeniz gerekir.

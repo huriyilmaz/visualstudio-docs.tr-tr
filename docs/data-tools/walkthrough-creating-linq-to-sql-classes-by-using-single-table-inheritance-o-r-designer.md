@@ -6,20 +6,20 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7ab33c2e77de183b5c916fbcfe60843c47c4f83f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c9e6974f1b676b623c58eea451270bde98ddcff7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648051"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585983"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma
-[Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: u/R tasarımcısını kullanarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusuna sağlanan genel adımlara ve [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] devralma kullanımını göstermek için bazı gerçek veriler sağlar.
+[Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: u/R tasarımcısını kullanarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusuna sağlanan genel adımlara ve [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]devralma kullanımını göstermek için bazı gerçek veriler sağlar.
 
 Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 
@@ -49,13 +49,13 @@ Kalıtımın nasıl çalıştığını görmek için küçük bir `Person` tablo
 
 2. **Tablo Tasarımcısı**, tabloya aşağıdaki sütunları ekleyin:
 
-    |Sütun adı|Veri Türü|Null değerlere izin ver|
+    |Sütun Adı|Veri Türü|Null değerlere izin ver|
     |-----------------|---------------|-----------------|
-    |**NUMARASıNı**|**int**|**Yanlýþ**|
-    |**Türüyle**|**int**|**Değeri**|
+    |**ID**|**int**|**Yanlýþ**|
+    |**Türü**|**int**|**True**|
     |**FirstName**|**nvarchar (200)**|**Yanlýþ**|
     |**Soyadı**|**nvarchar (200)**|**Yanlýþ**|
-    |**Manager**|**int**|**Değeri**|
+    |**Manager**|**int**|**True**|
 
 3. KIMLIK sütununu birincil anahtar olarak ayarlayın.
 
@@ -72,26 +72,26 @@ Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun 
 
     ||||||
     |-|-|-|-|-|
-    |**NUMARASıNı**|**Türüyle**|**FirstName**|**Soyadı**|**Manager**|
+    |**ID**|**Türü**|**FirstName**|**Soyadı**|**Manager**|
     |**1**|**1**|**Gamze**|**Wallace**|**DEĞER**|
-    |**iki**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|
-    |**03**|**1**|**Yael**|**Peled**|**DEĞER**|
-    |**4**|**iki**|**Gaz**|**Ozolins**|**1**|
-    |**e**|**iki**|**Andreas**|**Hauser**|**1**|
-    |**inç**|**iki**|**Tiffany**|**Phuvasate**|**1**|
-    |**7@@**|**iki**|**Alexey**|**Orekhov**|**iki**|
-    |**240**|**iki**|**Michał**|**Poliszkiewicz**|**iki**|
-    |**tuşlarına**|**iki**|**Tay**|**Yee**|**iki**|
-    |**(**|**iki**|**Fabricıo**|**Noriega dili**|**03**|
-    |**üst**|**iki**|**Mindy**|**Martin**|**03**|
-    |**+**|**iki**|**UK**|**Kwok**|**03**|
+    |**2**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|
+    |**3**|**1**|**Yael**|**Peled**|**DEĞER**|
+    |**4**|**2**|**Gaz**|**Ozolins**|**1**|
+    |**5**|**2**|**Andreas**|**Hauser**|**1**|
+    |**6**|**2**|**Tiffany**|**Phuvasate**|**1**|
+    |**7**|**2**|**Alexey**|**Orekhov**|**2**|
+    |**8**|**2**|**Michał**|**Poliszkiewicz**|**2**|
+    |**9**|**2**|**Tay**|**Yee**|**2**|
+    |**10**|**2**|**Fabricıo**|**Noriega dili**|**3**|
+    |**11**|**2**|**Mindy**|**Martin**|**3**|
+    |**12**|**2**|**UK**|**Kwok**|**3**|
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturun
 Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek için yeni bir proje oluşturun.
 
 ### <a name="to-create-the-new-windows-forms-application"></a>Yeni Windows Forms uygulamasını oluşturmak için
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -147,9 +147,9 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
 
 1. Bir **liste kutusunu** **Form1**üzerine sürükleyin.
 
-2. @No__t_0 olay işleyicisi oluşturmak için forma çift tıklayın.
+2. `Form1_Load` olay işleyicisi oluşturmak için forma çift tıklayın.
 
-3. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+3. `Form1_Load` olay işleyicisine aşağıdaki kodu ekleyin:
 
     ```vb
     Dim dc As New DataClasses1DataContext
@@ -174,7 +174,7 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
     }
     ```
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 Uygulamayı çalıştırın ve liste kutusunda görüntülenen kayıtların tüm çalışanlar ( **tür** sütununda 2 değeri olan kayıtlar) olduğunu doğrulayın.
 
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için

@@ -1,6 +1,6 @@
 ---
-title: Yüklemeyi bir yanıt dosyasıyla otomatikleştirin
-description: Visual Studio yüklemenizi otomatikleştirmenize yardımcı olan bir JSON yanıt dosyası oluşturmayı öğrenin
+title: Yükleme yanıt dosyası ile otomatikleştirme
+description: Visual Studio yüklemenizin otomatikleştirmenize yardımcı olur. bir JSON yanıt dosyası oluşturmayı öğrenin
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -9,46 +9,46 @@ helpviewer_keywords:
 - automate
 - installation
 - command-line
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d26211f566bb8f683f3b38deade4f13defe9cb01
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 43a4212a9faf0b7fef3395a847e8c614507e56df
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189508"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588543"
 ---
-# <a name="how-to-define-settings-in-a-response-file"></a>Yanıt dosyasındaki ayarları tanımlama
+# <a name="how-to-define-settings-in-a-response-file"></a>Yanıt dosyasında ayarları tanımlama
 
-Visual Studio dağıtan Yöneticiler, aşağıdaki örnekte olduğu gibi `--in` parametresini kullanarak bir yanıt dosyası belirtebilir:
+Visual Studio dağıtma Yöneticiler, bir yanıt dosyası kullanarak belirleyebilir `--in` parametresi, aşağıdaki örnekte olduğu gibi:
 
 ```cmd
 vs_enterprise.exe --in customInstall.json
 ```
 
-Yanıt dosyaları, içeriği komut satırı bağımsız değişkenlerini yansıtarak [JSON](http://json-schema.org/) dosyalarıdır.  Genel olarak, bir komut satırı parametresi bağımsız değişken alırsa (örneğin, `--quiet`, `--passive`, vb.), yanıt dosyasındaki değer true/false olmalıdır.  Bir bağımsız değişken alırsa (örneğin, `--installPath <dir>`), yanıt dosyasındaki değer bir dize olmalıdır.  Bir bağımsız değişken alırsa ve komut satırında birden çok kez görünebilen (örneğin, `--add <id>`), dize dizisi olmalıdır.
+Yanıt dosyaları [JSON](http://json-schema.org/) içerikleri komut satırı bağımsız değişkenleri yansıtan dosyaları.  Genel olarak bir komut satırı parametre bağımsız değişken olmadan alırsa, (örneğin, `--quiet`, `--passive`, vs.), yanıt dosyasındaki değeri true/false olmalıdır.  Bağımsız değişken aldığı durumlarda (örneğin, `--installPath <dir>`), yanıt dosyasındaki değeri bir dize olmalıdır.  Bir bağımsız değişkeni alır ve komut satırında birden fazla kez görünebilir (örneğin, `--add <id>`), dizelerden oluşan bir dizi olmalıdır.
 
-Parametrelerin birden çok giriş (örneğin, `--add`) olması dışında, yanıt dosyasındaki komut satırı geçersiz kılma ayarlarında belirtilen parametreler. Birden çok giriş olduğunda, komut satırında sağlanan girişler yanıt dosyasındaki ayarlarla birleştirilir.
+Birden çok giriş parametre alır, üzerinde yanıt dosyasından komut satırı geçersiz kılma ayarları dışında belirtilen parametreler (örneğin, `--add`). Birden fazla giriş varsa, komut satırında sağlanan girişler yanıt dosyasındaki ayarları ile birleştirilir.
 
-## <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio için varsayılan yapılandırmayı ayarlama
+## <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio için varsayılan yapılandırma ayarı
 
-`--layout`bir ağ düzeni önbelleği oluşturduysanız, düzende bir ilk `response.json` dosyası oluşturulur. Kısmi bir düzen oluşturursanız, bu yanıt dosyası, düzende yer alan iş yüklerini ve dilleri içerir.  Bu düzenden kurulum 'u çalıştırmak, mizanpaja dahil olan iş yüklerini ve bileşenleri seçen bu Response. json dosyasını otomatik olarak kullanır.  Kullanıcılar, Visual Studio 'Yu yüklemeden önce kurulum Kullanıcı arabirimindeki iş yüklerini seçebilir veya seçimden kaldırır.
+Bir ağ düzeni önbellekle oluşturduysanız `--layout`, bir ilk `response.json` düzende dosyası oluşturulur. Kısmi bir düzen oluşturursanız, bu yanıt dosyası düzende dahil edilen diller ve iş yüklerini içerir.  Kurulum bu düzeninden otomatik olarak çalışan iş yüklerinin ve bileşenlerin düzende seçer bu response.json dosyası kullanır.  Kullanıcılar yine de seçebilir veya Visual Studio'yu yüklemeden önce kurulum UI içinde herhangi bir iş yükünü seçimini kaldırın.
 
-Düzen oluşturan Yöneticiler, mizanpajdaki `response.json` dosyasını, kullanıcıların Visual Studio 'Yu düzenden yüklediklerinde göreceği varsayılan ayarları denetlemek için değiştirebilir.  Örneğin, bir yönetici varsayılan olarak belirli iş yüklerini ve bileşenleri istiyorsa, `response.json` dosyayı onları eklemek üzere yapılandırabilirler.
+Bir düzen oluşturma yöneticileri değiştirebilirsiniz `response.json` düzenini, kullanıcıları, bunlar düzenden Visual Studio yüklediğinizde gördüğünüzü varsayılan ayarlarını denetlemek için dosyasında.  Örneğin, bir yönetici belirli iş yükleri ve bileşenlerin varsayılan olarak yüklü isterse, yapılandırabileceği `response.json` bunları eklemek için dosya.
 
-Visual Studio Kurulumu bir düzen klasöründen çalıştırıldığında, _otomatik olarak_ düzen klasöründeki yanıt dosyasını kullanır.  `--in` seçeneğini kullanmak zorunda değilsiniz.
+Visual Studio kurulumunda bir düzen klasöründen çalıştırdığınızda, _otomatik olarak_ Düzen klasöründe yanıt dosyası kullanır.  Kullanmak zorunda değilsiniz `--in` seçeneği.
 
-Bu düzenden yükleyen kullanıcılar için varsayılan ayarı tanımlamak üzere çevrimdışı bir düzen klasöründe oluşturulan `response.json` dosyasını güncelleştirebilirsiniz.
+Güncelleştirebilirsiniz `response.json` bu düzeninden yükleyen kullanıcılar için varsayılan ayar tanımlamak için bir çevrimdışı Düzen klasöründe oluşturulan dosya.
 
 > [!WARNING]
-> Düzen oluşturulduğunda tanımlanmış mevcut özellikleri bırakmanız önemlidir.
+> Düzen oluşturulurken tanımlanan varolan özellikleri bırakın önemlidir.
 
-Bir düzendeki temel `response.json` dosyası aşağıdaki örneğe benzer görünmelidir, ancak yüklemek istediğiniz ürün ve kanal için değeri de içermelidir:
+Temel `response.json` ürün ve yüklemek istediğiniz kanalı için bir değer verilebilir dışında Düzen dosyasında aşağıdaki örneğe benzer görünmelidir:
 
 ::: moniker range="vs-2017"
 
@@ -78,11 +78,11 @@ Bir düzendeki temel `response.json` dosyası aşağıdaki örneğe benzer gör�
 
 ::: moniker-end
 
-Bir düzen oluşturduğunuzda veya güncelleştirdiğinizde bir Response. Template. JSON dosyası da oluşturulur.  Bu dosya, kullanılabilecek tüm iş yükü, bileşen ve dil kimliklerini içerir.  Bu dosya, tümünün özel bir yüklemeye dahil edilip edildikleriniz için bir şablon olarak sağlanır.  Yöneticiler, bu dosyayı özel bir yanıt dosyası için bir başlangıç noktası olarak kullanabilir.  Yüklemek istemediğiniz nesnelerin kimliklerini kaldırmanız ve kendi yanıt dosyanıza kaydetmeniz yeterlidir.  Response. Template. json dosyasını özelleştirmeyin veya Düzen her güncelleştirildiğinde değişiklikleriniz kaybedilir.
+Bir düzen güncelle response.template.json dosyası da oluşturulur.  Bu dosya, tüm iş yükü, bileşen ve dil kullanılabilir kimliklerini içerir.  Bu dosya, bir şablon için hangi tüm içinde özel bir yükleme içerdiğinden sağlanır.  Yöneticiler bu dosya, bir özel yanıt dosyası için bir başlangıç noktası olarak kullanabilir.  Yalnızca kimlikleri yükleyin ve kendi yanıt dosyasına kaydetmek istemediğiniz herhangi bir şeyi kaldırın.  Response.template.json dosya özelleştirmeyin veya Düzen güncelleştirildiğinde yaptığınız değişiklikler kaybolacak.
 
-## <a name="example-layout-response-file-content"></a>Örnek düzen yanıt dosyası içeriği
+## <a name="example-layout-response-file-content"></a>Örnek Düzen yanıt dosyası içeriği
 
-Aşağıdaki örnek, Visual Studio Enterprise altı ortak iş yükü ve bileşeni ve hem Ingilizce hem de Fransızca Kullanıcı arabirimi dilleri ile yüklenmektedir. Bu örneği şablon olarak kullanabilirsiniz; yalnızca iş yüklerini ve bileşenleri yüklemek istediğiniz olanlarla değiştirin:
+Aşağıdaki örnek, altı yaygın iş yüklerinin ve bileşenlerin ve hem İngilizce ve Fransızca kullanıcı Arabirimi dilleri ile Visual Studio Enterprise yükler. Bu örnekte, şablon olarak kullanabilirsiniz; yalnızca iş yüklerinin ve bileşenlerin, yüklemek istediğiniz değiştirin:
 
 ::: moniker range="vs-2017"
 

@@ -1,35 +1,35 @@
 ---
-title: Hangi&#39;MSBuild 16,0 da | Microsoft Docs
+title: "&#39;MSBuild 16,0 ' deki yenilikler | Microsoft Docs"
 ms.date: 03/11/2019
 ms.topic: conceptual
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 9fb23c8a48493056c9a37f510cefea3cc3374095
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3e6ecfc1c08f30eb0232f230d955967d95bc32ee
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777912"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566975"
 ---
-# <a name="whats-new-in-msbuild-160"></a>MSBuild 16,0 yenilikler
+# <a name="whats-new-in-msbuild-160"></a>MSBuild 16,0 ' deki yenilikler
 
-Bu makalede, güncelleştirilmiş özellikleri ve MSBuild 16,0 özellikleri açıklanmaktadır. Ayrıntılı sürüm notları (yalnızca taslak), bkz: [ MSBuild 16,0](https://gist.github.com/rainersigwald/009627466f03964d0028e16fda633d9c).
+Bu makalede, MSBuild 16,0 ' deki güncelleştirilmiş özellikler ve özellikler açıklanmaktadır. Ayrıntılı sürüm notları (yalnızca taslak) için bkz. [MSBuild 16,0](https://gist.github.com/rainersigwald/009627466f03964d0028e16fda633d9c).
 
-## <a name="changed-path"></a>Değiştirilen yolu
+## <a name="changed-path"></a>Değiştirilen yol
 
- MSBuild yüklü *\Current* Visual Studio'nun her sürümü klasöründedir. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\Current\Enterprise\MSBuild*. MSBuild bulmak için aşağıdaki PowerShell modülünü de kullanabilirsiniz: [vssetup.powershell](https://github.com/Microsoft/vssetup.powershell).
+ MSBuild, Visual Studio 'nun her bir sürümünde *\Current* klasörüne yüklenir. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\Current\Enterprise\MSBuild*. MSBuild: [vssetup. PowerShell](https://github.com/Microsoft/vssetup.powershell)' i bulmak Için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
 
-## <a name="changed-properties"></a>Özellikleri değiştirilmiş
+## <a name="changed-properties"></a>Değiştirilen özellikler
 
- Aşağıdaki MSBuild özellikleri nedeniyle yeni sürüm numarası güncelleştirildi.
+ Yeni sürüm numarası nedeniyle aşağıdaki MSBuild özellikleri güncelleştirildi.
 
-- `MSBuildToolsVersion` Bu araçlar için "Geçerli" sürümüdür. Derleme sürümü Visual Studio 2017, olduğu gibi 15.1.0.0 olduğu aynıdır.
+- araçların bu sürümü için `MSBuildToolsVersion` "geçerli". Derleme sürümü, 15.1.0.0 olan Visual Studio 2017 ile aynıdır.
 
-- `VisualStudioVersion` Bu araçlar için "16,0" sürümüdür
+- araçların bu sürümü için `VisualStudioVersion` "16,0"
 
 ## <a name="updates"></a>Güncelleştirmeler
 

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97352f60bfc40df28876731ec1e8aee1bff1773c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 6548b86f075e5da51bea7835c93e5604f2177397
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576273"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588778"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>2\. Adım: rastgele bir nesne ve simge listesi ekleme
 
@@ -26,7 +26,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Rastgele bir nesne ve simge listesi eklemek için
 
-1. **Çözüm Gezgini**' de, kullanıyorsanız C#Form1.cs ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda, **Görünüm**  > **kodu**' nu seçin. Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini**içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
+1. **Çözüm Gezgini**' de, kullanıyorsanız C#Form1.cs ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda, **Görünüm** > **kodu**' nu seçin. Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini**içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
 
      Böylece Form1'in arkasındaki kod modülü görüntülenir.
 
@@ -36,13 +36,13 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
      [!code-vb[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/VisualBasic/step-2-add-a-random-object-and-a-list-of-icons_1.vb)]
 
       > [!IMPORTANT]
-      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com ](../ide/media/docs-programming-language-control.png) için dil denetimi ![Programming
+      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com](../ide/media/docs-programming-language-control.png) için programlama dili denetimi ![
 
       Kullanıyorsanız C#, kodu açılış küme ayracından sonra ve Sınıf bildiriminden hemen sonra (`public partial class Form1 : Form`) yerleştirdiğinizden emin olun. Visual Basic kullanıyorsanız, kodu Sınıf bildiriminden hemen sonra koyun (`Public Class Form1`).
 
 3. Liste nesnesi eklenirken, açılan **IntelliSense** penceresine dikkat edin. Aşağıda bir örnek verilmiştir C# ancak Visual Basic bir liste eklediğinizde benzer bir metin görüntülenir.
 
-     Tıklama olayını gösteren ![Properties pencere ](../ide/media/express_listintellisense.png)<br/>***IntelliSense** penceresi*
+     Click Event](../ide/media/express_listintellisense.png) gösteren Özellikler penceresi ![<br/>***IntelliSense** penceresi*
 
     > [!NOTE]
     > IntelliSense penceresi yalnızca el ile kod girdiğinizde görünür. Kodu kopyalayıp yapıştırırsanız görünmez.

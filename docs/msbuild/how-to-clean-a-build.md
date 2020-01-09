@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derlemeyi temizleme | Microsoft Docs'
+title: 'Nasıl yapılır: derlemeyi Temizleme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,54 +8,54 @@ helpviewer_keywords:
 - directories [.NET Framework], for output items
 - output, removing items
 ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d737ecf51b6726bf46a525104c99f8ac61569964
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d183026ffdfce3ada7fc96c29c83570ee18c694
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977292"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585225"
 ---
-# <a name="how-to-clean-a-build"></a>Nasıl yapılır: Derlemeyi temizleme
-Derlemeyi temizleme, yalnızca proje ve bileşen dosyalarını bırakarak tüm ara ve Çıkış dosyalarını silinir. Proje ve bileşen dosyalarından yeni örneklerini Ara ve çıkış dosyalarının sonra oluşturulabilir. Kitaplığı ile sağlanan ortak görevler [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] içeren bir [Exec](../msbuild/exec-task.md) sistem komutlarını çalıştırmak için kullanabileceğiniz bir görev. Görevleri Kitaplığı hakkında daha fazla bilgi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
+# <a name="how-to-clean-a-build"></a>Nasıl yapılır: derlemeyi Temizleme
+Bir derlemeyi temizlediğinizde, tüm ara ve çıkış dosyaları silinir ve yalnızca proje ve bileşen dosyalarından bırakılır. Proje ve bileşen dosyalarından, ara ve çıkış dosyalarının yeni örnekleri derlenebilir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ile birlikte sunulan ortak görevlerin kitaplığı, sistem komutlarını çalıştırmak için kullanabileceğiniz bir [Exec](../msbuild/exec-task.md) görevi içerir. Görevler Kitaplığı hakkında daha fazla bilgi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
 
-## <a name="create-a-directory-for-output-items"></a>Çıktı öğeleri için bir dizin oluşturun
- Varsayılan olarak, *.exe* oluşturulan bir projeyi derlediğinizde dosyası, proje ve kaynak dosyalarıyla aynı dizine yerleştirilir. Genellikle, Bununla birlikte, çıkış öğeleri farklı bir dizinde oluşturulur.
+## <a name="create-a-directory-for-output-items"></a>Çıkış öğeleri için dizin oluşturma
+ Varsayılan olarak, bir projeyi derlerken oluşturulan *. exe* dosyası proje ve kaynak dosyalarla aynı dizine yerleştirilir. Ancak, genellikle çıkış öğeleri ayrı bir dizinde oluşturulur.
 
-#### <a name="to-create-a-directory-for-output-items"></a>Çıktı öğeleri için bir dizin oluşturmak için
+#### <a name="to-create-a-directory-for-output-items"></a>Çıkış öğeleri için bir dizin oluşturmak için
 
-1. Kullanım `Property` dizinin adını ve konumunu tanımlamak için. Örneğin, adında bir dizin oluşturma *BuiltApp* proje ve kaynak dosyaları içeren dizine:
+1. Dizinin konumunu ve adını tanımlamak için `Property` öğesini kullanın. Örneğin, proje ve kaynak dosyalarını içeren dizinde *Builtapp* adlı bir dizin oluşturun:
 
      `<builtdir>BuiltApp</builtdir>`
 
-2. Kullanım [MakeDir](../msbuild/makedir-task.md) dizini mevcut değilse dizini oluşturmak için görev. Örneğin:
+2. Dizin yoksa, dizini oluşturmak için [MakeDir](../msbuild/makedir-task.md) görevini kullanın. Örneğin:
 
      ```xml
      <MakeDir Directories = "$(builtdir)"
       Condition = "!Exists('$(builtdir)')" />
      ```
 
-## <a name="remove-the-output-items"></a>Çıktı öğeleri Kaldır
- Ara ve çıkış dosyalarının yeni kopyalarını oluşturmadan önce önceki tüm ara ve çıkış dosyalarının örneklerini silmek isteyebilirsiniz. Kullanım [RemoveDir](../msbuild/removedir-task.md) görev bir dizin ve tüm dosyaları ve dizinleri içeren bir diskten silinecek.
+## <a name="remove-the-output-items"></a>Çıkış öğelerini kaldır
+ Ara ve çıkış dosyalarının yeni örnekleri oluşturmadan önce, ara ve çıkış dosyalarının önceki tüm örneklerini temizlemek isteyebilirsiniz. Bir dizin ve bir diskten içerdiği tüm dosya ve dizinleri silmek için [RemoveDir](../msbuild/removedir-task.md) görevini kullanın.
 
-#### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Bir dizin ve dizinde bulunan tüm dosyaları kaldırmak için
+#### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Dizinde bulunan bir dizini ve tüm dosyaları kaldırmak için
 
-- Kullanım `RemoveDir` görev dizini kaldırılamıyor. Örneğin:
+- Dizini kaldırmak için `RemoveDir` görevini kullanın. Örneğin:
 
      `<RemoveDir Directories="$(builtdir)" />`
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod projesini içeren yeni bir hedef örneği `Clean`, kullanan `RemoveDir` bir dizin ve tüm dosyaları ve içerdiği dizinleri silmek için görev. Ayrıca bu örnekte, `Compile` hedef derleme temizlendiğinde silinir çıktı öğeleri için ayrı bir dizin oluşturur.
+ Aşağıdaki kod örneği projesi, bir dizini ve içerdiği tüm dosya ve dizinleri silmek için `RemoveDir` görevi kullanan yeni bir hedef `Clean`içerir. Ayrıca, bu örnekte `Compile` hedefi, derleme temizlendiğinde silinen çıkış öğeleri için ayrı bir dizin oluşturur.
 
- `Compile` varsayılan hedef olarak tanımlanır ve farklı bir hedef veya hedefleri belirtmediğiniz sürece bu nedenle otomatik olarak kullanılır. Komut satırı anahtarını kullanmanız **-hedef** farklı bir hedef belirtmek için. Örneğin:
+ `Compile`, varsayılan hedef olarak tanımlanır ve bu nedenle farklı bir hedef veya hedef belirtmediğiniz sürece otomatik olarak kullanılır. Farklı bir hedef belirtmek için komut satırı anahtar **hedefini** kullanırsınız. Örneğin:
 
  `msbuild <file name>.proj -target:Clean`
 
- **-Hedef** anahtarı kısalttık için **-t** ve birden fazla hedef belirtebilirsiniz. Örneğin, hedef kullanılacak `Clean` hedef `Compile`, türü:
+ **-Target** anahtarı **-t** olarak kısaltılarak, birden fazla hedef belirtebilir. Örneğin, hedef `Compile``Clean` hedefi kullanmak için şunu yazın:
 
  `msbuild <file name>.proj -t:Clean;Compile`
 
@@ -100,8 +100,8 @@ Derlemeyi temizleme, yalnızca proje ve bileşen dosyalarını bırakarak tüm a
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yürütme görevi](../msbuild/exec-task.md)
+- [Exec görevi](../msbuild/exec-task.md)
 - [MakeDir görevi](../msbuild/makedir-task.md)
-- [RemoveDir görevi](../msbuild/removedir-task.md)
-- [CSC görevi](../msbuild/csc-task.md)
+- [RemoveDir Görevi](../msbuild/removedir-task.md)
+- [Csc görevi](../msbuild/csc-task.md)
 - [Hedefler](../msbuild/msbuild-targets.md)

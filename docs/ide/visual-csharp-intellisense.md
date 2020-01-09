@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - C#, IntelliSense
 - IntelliSense [C#]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 13a3c16adca29128be275495fe8921895aa84250
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ed5d86599fa99b9c1360b414b37ef95ab59082d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647220"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594181"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -60,7 +60,7 @@ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldır�
 
 - **Arabirimler ve temel sınıflar**: IntelliSense hem sınıf bildirim tabanında hem de arabirim listelerinde ve kısıtlama listelerinde bulunan öğeleri arabirim ve temel sınıf tamamlama listelerinden otomatik olarak kaldırır. Örneğin, numaralandırmalar taban sınıflar için kullanılamadığından numaralandırmalar, temel sınıfların tamamlanma listesinde görünmez. Temel sınıfların tamamlanma listesi yalnızca arabirimler ve ad alanları içerir. Listeden bir öğe seçer ve sonra bir virgül yazarsanız, IntelliSense, birden fazla devralmayı desteklemediği için, temel sınıfları tamamlama listesinden C# kaldırır. Aynı davranış de kısıtlama yan tümceleri için oluşur.
 
-- **Öznitelikler**: bir türe bir öznitelik uyguladığınızda, listenin yalnızca bu türleri içeren ad alanlarından (<xref:System.Attribute> gibi) ilgili türleri içermesi için tamamlama listesi filtrelenir.
+- **Öznitelikler**: bir türe bir öznitelik uyguladığınızda, listenin yalnızca bu türleri içeren ad alanlarından (<xref:System.Attribute>gibi) ilgili türleri içermesi için tamamlama listesi filtrelenir.
 
 - **Catch yan tümceleri**
 
@@ -72,7 +72,7 @@ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldır�
 
 - **as ve in işleçleri**: `as` veya `is` anahtar sözcüğünü yazdıktan sonra **alana** bastığınızda filtrelenmiş bir tamamlanma listesi otomatik olarak görüntülenir.
 
-- **Olaylar**: `event` anahtar sözcüğünü yazdığınızda, tamamlanma listesi yalnızca temsilci türlerini içerir.
+- **Olaylar**: `event`anahtar sözcüğünü yazdığınızda, tamamlanma listesi yalnızca temsilci türlerini içerir.
 
 - **Parametre yardımı** , parametreleri girdiğiniz parametrelerle eşleşen ilk yöntem aşırı yüklemesini otomatik olarak sıralar. Birden çok yöntem aşırı yüklemesi varsa, listede bir sonraki olası aşırı yüklemeye gitmek için yukarı ve aşağı okları kullanabilirsiniz.
 
@@ -80,9 +80,9 @@ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldır�
 
 IntelliSense, otomatik nesne adı tamamlamada açılan [liste üyeleri](../ide/using-intellisense.md) kutusunda en son seçtiğiniz üyeleri anımsar. **Üye listesini**bir dahaki sefer kullandığınızda en son kullanılan Üyeler en üstte gösterilir. En son kullanılan üyelerin geçmişi her bir Visual Studio oturumu arasında temizlenir.
 
-### <a name="override"></a>override
+### <a name="override"></a>geçersiz kılma
 
-[Geçersiz kılma](/dotnet/csharp/language-reference/keywords/override) yazın ve ardından **boşluk**tuşuna bastığınızda IntelliSense, bir açılır liste kutusunda geçersiz kılabileceğiniz geçerli temel sınıf üyelerini görüntüler. @No__t_0 sonra yöntemin dönüş türünü yazmak, IntelliSense 'in yalnızca aynı türü döndüren yöntemleri göstermesini ister. IntelliSense herhangi bir eşleşme bulamadığınızda, tüm temel sınıf üyelerini görüntüler.
+[Geçersiz kılma](/dotnet/csharp/language-reference/keywords/override) yazın ve ardından **boşluk**tuşuna bastığınızda IntelliSense, bir açılır liste kutusunda geçersiz kılabileceğiniz geçerli temel sınıf üyelerini görüntüler. `override` sonra yöntemin dönüş türünü yazmak, IntelliSense 'in yalnızca aynı türü döndüren yöntemleri göstermesini ister. IntelliSense herhangi bir eşleşme bulamadığınızda, tüm temel sınıf üyelerini görüntüler.
 
 ### <a name="ai-enhanced-intellisense"></a>AI ile geliştirilmiş IntelliSense
 
@@ -124,7 +124,7 @@ Her tanımsız tanımlayıcı altında kırmızı dalgalı alt çizgi görünür
 
 - Tanımsız tanımlayıcıya tıklayın. Tanımlayıcının altında **hızlı bir eylem** hatası ampulü görünür. Ampul hatası ' na tıklayın.
 
-- Tanımsız tanımlayıcıya ve ardından **Ctrl** + ' a basın **.** (**CTRL** + nokta).
+- Tanımsız tanımlayıcıya ve ardından **Ctrl**+' a basın **.** (**CTRL** + nokta).
 
 - Tanımsız tanımlayıcıya sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler**' e tıklayın.
 
@@ -158,7 +158,7 @@ Bir *. cs* dosyasındaki bir olay alanından sonra `+=` işlecini yazdığınız
 **Sekme**tuşuna basarsanız, IntelliSense doğru imzaya sahip bir yöntemi dışarı yerleştirir ve imleci olay işleyicinizin gövdesine koyar.
 
 > [!NOTE]
-> Olay kancası bildirimine geri dönmek için **Görünüm** menüsündeki **geri git** komutunu (**CTRL** + **-** ) kullanın.
+> Olay kancası bildirimine geri dönmek için **Görünüm** menüsündeki **geri git** komutunu (**CTRL**+ **-** ) kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

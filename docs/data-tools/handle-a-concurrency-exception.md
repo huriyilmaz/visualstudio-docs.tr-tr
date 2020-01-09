@@ -13,21 +13,21 @@ helpviewer_keywords:
 - updating datasets, errors
 - concurrency control, walkthroughs
 ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6096e8919d21a93af0dbf6beea2f263bd500d26c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 462d0a9beb88a8fb6d73bf0672bb012c75b8ea93
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648438"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586607"
 ---
 # <a name="handle-a-concurrency-exception"></a>Bir eşzamanlılık özel durumunu işleme
 
-Eşzamanlılık özel durumları (<xref:System.Data.DBConcurrencyException?displayProperty=fullName>) iki kullanıcı aynı anda bir veritabanında aynı verileri değiştirmeye çalıştıklarında tetiklenir. Bu kılavuzda, bir <xref:System.Data.DBConcurrencyException> nasıl yakalayacağınızı gösteren bir Windows uygulaması oluşturacaksınız, hataya neden olan satırı nasıl bulabileceğinizi ve nasıl işleyeceğinizi gösteren bir strateji öğreneceksiniz.
+Eşzamanlılık özel durumları (<xref:System.Data.DBConcurrencyException?displayProperty=fullName>) iki kullanıcı aynı anda bir veritabanında aynı verileri değiştirmeye çalıştıklarında tetiklenir. Bu kılavuzda, bir <xref:System.Data.DBConcurrencyException>nasıl yakalayacağınızı gösteren bir Windows uygulaması oluşturacaksınız, hataya neden olan satırı nasıl bulabileceğinizi ve nasıl işleyeceğinizi gösteren bir strateji öğreneceksiniz.
 
 Bu izlenecek yol, aşağıdaki işlem boyunca size kılavuzluk eden bir işlemdir:
 
@@ -59,15 +59,15 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturun
 
 Yeni bir Windows Forms uygulaması oluşturarak başlayın:
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -112,7 +112,7 @@ Bu bölümde, **müşteriler** öğesini **veri kaynakları** penceresinden Wind
 
 4. Tabloyu formunuzun boş bir alanının üzerine sürükleyin.
 
-     **CustomersDataGridView**adlı bir <xref:System.Windows.Forms.DataGridView> denetimi ve **customersbindingnavigator**adlı bir <xref:System.Windows.Forms.BindingNavigator>, <xref:System.Windows.Forms.BindingSource> bağlanan forma eklenir. Bu, sırasıyla NorthwindDataSet 'teki Customers tablosuna bağlanır.
+     **CustomersDataGridView**adlı bir <xref:System.Windows.Forms.DataGridView> denetimi ve **customersbindingnavigator**adlı bir <xref:System.Windows.Forms.BindingNavigator>, <xref:System.Windows.Forms.BindingSource>bağlanan forma eklenir. Bu, sırasıyla NorthwindDataSet 'teki Customers tablosuna bağlanır.
 
 ## <a name="test-the-form"></a>Formu test etme
 
@@ -153,14 +153,14 @@ Böylece Kullanıcı önerilen sürümle birlikte veritabanının üzerine yazab
 Bir güncelleştirme gerçekleştirmeye çalıştığınızda ve bir özel durum ortaya çıktığında, genellikle oluşturulan özel durum tarafından verilen bilgilerle ilgili bir şey yapmak istersiniz. Bu bölümde, veritabanını güncelleştirmeyi deneyen kodu eklersiniz. Ayrıca, başka özel durumlar da ortaya çıkarılan <xref:System.Data.DBConcurrencyException> de işleyebilirsiniz.
 
 > [!NOTE]
-> @No__t_0 ve `ProcessDialogResults` yöntemleri daha sonra izlenecek yolda eklenir.
+> `CreateMessage` ve `ProcessDialogResults` yöntemleri daha sonra izlenecek yolda eklenir.
 
-1. @No__t_0 yönteminin altına aşağıdaki kodu ekleyin:
+1. `Form1_Load` yönteminin altına aşağıdaki kodu ekleyin:
 
    [!code-csharp[VbRaddataConcurrency#1](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_1.cs)]
    [!code-vb[VbRaddataConcurrency#1](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_1.vb)]
 
-2. @No__t_0 yöntemini, aşağıdaki gibi görünmesi için `UpdateDatabase` yöntemini çağırmak üzere değiştirin:
+2. `CustomersBindingNavigatorSaveItem_Click` yöntemini, aşağıdaki gibi görünmesi için `UpdateDatabase` yöntemini çağırmak üzere değiştirin:
 
    [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
    [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
@@ -169,7 +169,7 @@ Bir güncelleştirme gerçekleştirmeye çalıştığınızda ve bir özel durum
 
 Yeni yazdığınız kod, kullanıcıya hata bilgilerini göstermek için `CreateMessage` yordamını çağırır. Bu izlenecek yol için, kaydın farklı sürümlerini kullanıcıya göstermek üzere bir ileti kutusu kullanın. Bu, kullanıcının değişikliklerle ilgili kaydın üzerine yazılıp yazılmayacağını veya düzenlemeyi iptal edip etmediğini seçmesini sağlar. Kullanıcı, ileti kutusunda bir seçenek seçtiğinde (bir düğmeye tıkladığında), yanıt `ProcessDialogResult` yöntemine geçirilir.
 
-**Kod düzenleyicisine**aşağıdaki kodu ekleyerek iletiyi oluşturun. @No__t_0 yönteminin altına bu kodu girin:
+**Kod düzenleyicisine**aşağıdaki kodu ekleyerek iletiyi oluşturun. `UpdateDatabase` yönteminin altına bu kodu girin:
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]

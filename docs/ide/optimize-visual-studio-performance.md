@@ -1,27 +1,27 @@
 ---
-title: Visual Studio yavaşsa performansı iyileştirme
+title: Visual Studio yavaşsa performansı
 titleSuffix: ''
 ms.date: 04/11/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: ad6951179d9326a2785bee865e9bc8adbefd3f2e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6495e8506e12c0c5e5f878a23c609fe53a401bde
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667059"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597002"
 ---
-# <a name="optimize-visual-studio-performance"></a>Visual Studio performansını iyileştirin
+# <a name="optimize-visual-studio-performance"></a>Visual Studio performansını iyileştirme
 
-Bu makalede, Visual Studio 'Nun yavaş çalıştığını fark ederseniz deneyebileceğiniz bazı öneriler sunulmaktadır. Ayrıca, performansı geliştirme hakkında daha fazla öneri için [Visual Studio performans ipuçlarına ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md) 'na göz atabilirsiniz.
+Bu makalede, Visual Studio'nun yavaş çalıştığından bulursanız denemek için bazı öneriler sağlar. Ayrıca bir göz atabilirsiniz [Visual Studio performans ipuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md) performansı konusunda daha fazla öneri için.
 
 ## <a name="upgrade-visual-studio"></a>Visual Studio 'Yu yükseltme
 
@@ -29,29 +29,29 @@ Bu makalede, Visual Studio 'Nun yavaş çalıştığını fark ederseniz deneyeb
 
 ::: moniker range="vs-2017"
 
-Zaten Visual Studio 2017 kullanıyorsanız, sürüm 15,6 veya üzerini çalıştırdığınızdan emin olun. Veriler, çözümlerin 15,6 sürümünün en fazla iki veya üç kez daha hızlı yükleneceğini gösterir. [Buradan](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)indirin.
+Zaten Visual Studio 2017 kullanıyorsanız, sürüm 15,6 veya üzerini çalıştırdığınızdan emin olun. Veri çözümleri için iki veya üç kez sürüm 15.6 daha hızlı yükleneceğiyle olduğunu gösterir. İndirdiği [burada](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download).
 
 ::: moniker-end
 
 ## <a name="extensions-and-tool-windows"></a>Uzantılar ve araç pencereleri
 
-Visual Studio 'Yu yavaşlatan yüklü uzantılara sahip olabilirsiniz. Performansı artırmak için uzantıları yönetme konusunda yardım için bkz. [performansı artırmak için uzantı ayarlarını değiştirme](../ide/optimize-visual-studio-startup-time.md#extensions).
+Visual Studio yavaşlamasıdır yüklü uzantılar olabilir. Performansı artırmak için uzantıları yönetme hakkında daha fazla yardım için bkz: [performansını artırmak için uzantı ayarları değiştir](../ide/optimize-visual-studio-startup-time.md#extensions).
 
-Benzer şekilde, Visual Studio 'Yu yavaşlatan araç pencerelerini de kullanabilirsiniz. Araç pencerelerini yönetme konusunda yardım için bkz. [performansı artırmak için araç penceresi ayarlarını değiştirme](../ide/optimize-visual-studio-startup-time.md#tool-windows).
+Benzer şekilde, Visual Studio yavaşlamasıdır araç pencereleri olabilir. Araç pencereleri yönetme hakkında daha fazla yardım için bkz: [performansını artırmak için araç penceresi ayarlarını değiştir](../ide/optimize-visual-studio-startup-time.md#tool-windows).
 
 ## <a name="hardware"></a>Donanım
 
-Donanımınızı yükseltmeyi düşünüyorsanız, bir katı hal sürücüsü (SSD) daha fazla RAM veya daha hızlı bir CPU performansı üzerinde daha etkili olur.
+Donanım yükseltme hakkında düşünüyorsanız, ek RAM veya daha hızlı bir CPU performans üzerindeki etkisini daha fazla katı hal sürücüsü (SSD) sahiptir.
 
-Bir SSD eklerseniz, bir sabit disk sürücüsü (HDD) aksine bu sürücüye en iyi performans için Windows 'u yükleyebilirsiniz. Visual Studio çözümlerinizin sürücü konumu çok büyük görünmüyor.
+Bir SSD eklerseniz, en iyi performans için bir sabit disk sürücüsü (HDD) aksine bu sürücüyü Windows yükleyin. Visual Studio çözümünüzü sürücü konumunu kadar önemli görünmüyor.
 
-Ayrıca, çözümünüzü bir USB sürücüsünden çalıştırmayın. Bunu HDD 'niz veya SSD 'nize kopyalayın.
+Ayrıca, çözümünüze bir USB sürücüsünden çalıştırmayın. HDD veya SSD kopyalayın.
 
 ## <a name="help-us-improve"></a>Geliştirmemize yardımcı olun
 
-Geribildiriminiz iyileştirmemize yardımcı olur. Bir izlemeyi "kaydetmek" ve bize göndermek için **sorun bildir** özelliğini kullanın. **Hızlı Başlat**' ın yanındaki geri bildirim simgesini seçin veya menü çubuğundan**sorun bildirmek**  >  **Yardım**  > **geri bildirim gönder** ' i seçin. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
+Geri bildiriminiz geliştirmemize yardımcı olur. Kullanım **sorun bildir** özelliğini "kaydı bir izleme" ve bize gönderin. Geri bildirim simgesini seçin **hızlı başlatma**, ya da seçin **yardımcı** > **geri bildirim gönder** > **sorunbildir** menü çubuğundan. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans ipuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md)
-- [Visual Studio blogu-Visual Studio 2017 sürüm 15,6 ile çözümleri daha hızlı yükleme](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [Performans İpuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md)
+- [Visual Studio blogu - Visual Studio 2017 sürüm 15.6 ile daha hızlı yük çözümleri](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

@@ -12,48 +12,48 @@ helpviewer_keywords:
 - Load Test Results Repository
 - SQL, Load Test Results Store
 ms.assetid: fa0c4dd9-612f-4a57-b8eb-458f129d9cda
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b5b1b13ec6b81536a63a1732e7521dd1e64d007f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 513dd884f65e041e7ad90dda1483633fec57e100
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653466"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589012"
 ---
-# <a name="how-to-select-a-load-test-results-repository"></a>Nasıl yapılır: yük testi sonuçları deposu seçme
+# <a name="how-to-select-a-load-test-results-repository"></a>Nasıl yapılır: bir yük testi sonuçları deposunu seçme
 
-Yerel bir sonuç deposuyla sınırlı değilsiniz. Genellikle, yük testleri, uzak bir aracı bilgisayarları kümesi üzerinde çalıştırılır. Aracılar, bir denetleyici ile birlikte, tek bir bilgisayardan daha fazla benzetimli yük oluşturabilir. Daha fazla bilgi için bkz. [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md).
+Bir yerel sonuç deposuyla sınırlı değildir. Sık, yük testleri Aracı bilgisayarların bir uzak kümesi üzerinde çalıştırılır. Aracıları, bir denetleyici ile birlikte tek bir bilgisayardan daha fazla benzetilmiş yük oluşturabilir. Daha fazla bilgi için [Test denetleyicileri ve test aracılarını](configure-test-agents-and-controllers-for-load-tests.md).
 
-Aracılarınızdan veya yerel bilgisayarınızda test sonuçları, yük testi sonuçları deposu oluşturduğunuz herhangi bir SQL Server 'a kaydedilebilir. Her iki durumda da, **Test Denetleyicilerini Yönet** penceresini kullanarak yük testi sonuçlarınızı nerede depolamak istediğinizi belirlemeniz gerekir.
+Test sonuçları, aracılarınız veya yerel bilgisayarınız bir yük testi sonuçları deposu oluşturmuş olduğunuz herhangi bir SQL Server'a kaydedilebilir. Her iki durumda da kullanarak yük testi sonuçlarını depolamak istediğiniz tanımlamalıdır **Test Denetleyicilerini Yönet** penceresi.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="identify-a-results-store-for-load-test-data"></a>Yük testi verileri için bir sonuç deposu tanımla
+## <a name="identify-a-results-store-for-load-test-data"></a>Yük testi verileri için bir sonuç deposu tanımlayın
 
-1. **Çözüm Gezgini**' de, yük testi dosyanızı açın.
+1. İçinde **Çözüm Gezgini**, yük testi dosyanızı açın.
 
-2. **Yük testi** araç çubuğundan, **Test Denetleyicilerini Yönet**' i seçin. **Test denetleyicisini Yönet** iletişim kutusu görüntülenir. Uzaktan aracı kullanıyorsanız, bir denetleyici seçmelisiniz.
+2. Gelen **yük testi** araç seçin **Test Denetleyicilerini Yönet**. **Test denetleyicisini Yönet** iletişim kutusu görüntülenir. Aracıyı uzaktan kullanıyorsanız, bir denetleyici seçmeniz gerekir.
 
-     ![Load test sonuçları deposu bağlantı özellikleri ](../test/media/loadtestconnectionproperties.png) yük testi sonuçları deposu bağlantı özellikleri
+     ![Yük testi sonuçları deposunu bağlantı özellikleri](../test/media/loadtestconnectionproperties.png) yük testi sonuçları deposunu bağlantı özellikleri
 
-3. **Yük testi sonuçları deposunda**, **bağlantı özellikleri** iletişim kutusunu göstermek için **(...)** seçeneğine tıklayın.
+3. İçinde **Yük Testi Sonuçları Deposu**, tıklayın **(...)**  görüntülenecek **bağlantı özellikleri** iletişim kutusu.
 
-4. **Sunucu adı**' nda, `LoadTest` betikleri çalıştırdığınız sunucunun adını yazın.
+4. İçinde **sunucu adı**, çalıştırdığınız sunucunun adını yazın `LoadTest` betikler.
 
     > [!TIP]
-    > Yük testi deposu için yerel makinenizde SQL Express kullanıyorsanız, \<computername > \SQLEXPRESS (örneğin, **mymakinesqlexpress**) yazın.
+    > Yük testi deposu için yerel makinenizde SQL Express kullanıyorsanız girin \<bilgisayaradı > \sqlexpress (örneğin, **Bilgisayarım\sqlexpress**).
 
-5. **Sunucuda oturum**aç ' ın altında, **Windows kimlik doğrulamasını kullan**' ı seçebilirsiniz. Kullanıcı adını ve parolayı belirtebilirsiniz, ancak bunu yaparsanız **Parolamı kaydet**seçeneğini belirlemeniz gerekir.
+5. Altında **sunucuda oturum açın**, seçebileceğiniz **Windows kimlik doğrulamasını kullan**. Kullanıcı adı ve parola belirtebilirsiniz, ancak bunu yaparsanız, seçeneğini belirlemeniz **parolamı Kaydet**.
 
-6. **Veritabanına Bağlan**' ın altında, Seç ' i **veya bir veritabanı adı girin**' i seçin. Açılan liste kutusundan **LoadTest** öğesini seçin.
+6. Altında **veritabanına bağlan**, seçin **bir veritabanı adı seçin veya girin**. Seçin **LoadTest** aşağı açılan liste kutusundan.
 
-7. **Tamam ' ı**seçin. Bağlantıyı **Sına**' yı seçerek bağlantıyı test edebilirsiniz.
+7. **Tamam**’ı seçin. Bağlantıyı seçerek sınayabilirsiniz **Bağlantıyı Sına**.
 
-8. **Test denetleyicisini Yönet** Iletişim kutusunda **Kapat** ' ı seçin.
+8. Seçin **Kapat** içinde **Test denetleyicisini Yönet** iletişim kutusu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük Test Sonuçları deposundaki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [Yük testi sonuçları deposu içindeki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)

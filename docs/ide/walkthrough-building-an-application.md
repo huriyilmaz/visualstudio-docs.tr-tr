@@ -3,17 +3,17 @@ title: 'İzlenecek yol: Uygulama oluşturma'
 ms.date: 09/25/2017
 ms.technology: vs-ide-compile
 ms.topic: conceptual
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f94cc62cdadb2df3806f5b188278f49e4041235
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 570dd2044346ace8a51096a04842ea88de0a8803
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647169"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594155"
 ---
 # <a name="walkthrough-build-an-application"></a>İzlenecek yol: Uygulama oluşturma
 
@@ -35,25 +35,25 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
    ![Derleme menüsü, Configuration Manager komutu](../ide/media/buildwalk_configurationmanagerdialogbox.png)
 
-1. **Etkin çözüm yapılandırması** listesinde **\<New... \>** öğesini seçin.
+1. **Etkin çözüm yapılandırması** listesinde **\<yeni...\>** öğesini seçin.
 
-1. **Yeni çözüm yapılandırması** iletişim kutusunda yeni yapılandırma `Test` adlandırın, mevcut **hata ayıklama** yapılandırmasından ayarları kopyalayın ve **Tamam** düğmesini seçin.
+1. **Yeni çözüm yapılandırması** iletişim kutusunda yeni yapılandırma `Test`adlandırın, mevcut **hata ayıklama** yapılandırmasından ayarları kopyalayın ve **Tamam** düğmesini seçin.
 
    ![Yeni çözüm yapılandırması Iletişim kutusu](../ide/media/buildwalk_newsolutionconfigdlgbox.png)
 
-1. **Etkin çözüm platformu** listesinde **\<New... \>** öğesini seçin.
+1. **Etkin çözüm platformu** listesinde **\<yeni...\>** öğesini seçin.
 
 1. **Yeni çözüm platformu** iletişim kutusunda **x64**öğesini seçin ve ayarları x86 platformundan kopyalamayın.
 
    ![Yeni çözüm platformu Iletişim kutusu](../ide/media/buildwalk_newsolutionplatform.png)
 
-1. **Tamam** düğmesini seçin.
+1. Seçin **Tamam** düğmesi.
 
    Etkin çözüm yapılandırması, etkin çözüm platformunun x64 olarak ayarlandığı **Test** olacak şekilde değiştirilmiştir.
 
    ![Test yapılandırmasıyla Configuration Manager](../ide/media/buildwalk_configmanagertestconfig.png)
 
-1. **Kapat**' ı seçin.
+1. Seçin **Kapat**.
 
 **Standart** araç çubuğunda **çözüm yapılandırmaları** listesini kullanarak etkin çözüm yapılandırmasını hızlı bir şekilde doğrulayabilirsiniz veya değiştirebilirsiniz.
 
@@ -63,9 +63,9 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
 Ardından, özel yapı yapılandırmasıyla çözümü oluşturacaksınız.
 
-### <a name="build-the-solution"></a>Çözümü oluşturma
+### <a name="build-the-solution"></a>Çözümü derleme
 
-- Menü çubuğunda, **derleme**  > **Oluştur çözüm**' ü seçin veya **CTRL** +**SHIFT** +**B**' ye basın.
+- Menü çubuğunda, **derleme** > **Oluştur çözüm**' ü seçin veya **CTRL**+**SHIFT**+**B**' ye basın.
 
     **Çıkış** penceresi, derleme sonuçlarını görüntüler. Derleme başarılı oldu.
 
@@ -93,7 +93,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **Çözüm Gezgini**' de en üst düzey proje düğümünü seçin.
 
-1. Menü çubuğunda **görünüm**  > **Özellik sayfaları**' nı seçin.
+1. Menü çubuğunda, **görünümü** > **özellik sayfaları**.
 
      **Proje Tasarımcısı** açılır.
 
@@ -113,7 +113,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **Çözüm Gezgini**' de en üst düzey proje düğümünü seçin.
 
-2. Menü çubuğunda **görünüm**  > **Özellik sayfaları**' nı seçin.
+2. Menü çubuğunda, **görünümü** > **özellik sayfaları**.
 
      **Proje Tasarımcısı** açılır.
 
@@ -121,7 +121,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
      ![Derleme sayfası, proje Tasarımcısı](../ide/media/buildwalk_vbsuppresswarnings.png)
 
-     Daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
+     Daha fazla bilgi için [Visual Basic ile uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
 
 4. Çözümü oluşturun.
 
@@ -148,18 +148,18 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **MSBuild proje derleme çıkışı ayrıntı** listesinde **normal**' i seçin ve ardından **Tamam** düğmesini seçin.
 
-1. Menü çubuğunda **derleme**  > **Temizleme çözümü**' ni seçin.
+1. Menü çubuğunda **derleme** > **Temizleme çözümü**' ni seçin.
 
 1. Çözümü oluşturun ve ardından **Çıkış** penceresindeki bilgileri gözden geçirin.
 
      Yapı bilgileri, yapılandırmanın başlatıldığı saati (başlangıcında bulunur) ve dosyaların işlendiği sırayı içerir. Bu bilgiler, Visual Studio 'Nun derleme sırasında çalıştığı gerçek derleyici söz dizimini da içerir.
 
-     Örneğin, C# derlemede, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz **1762**uyarı kodunu listeler.
+     Örneğin, C# derlemede, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz **0168**uyarı kodunu listeler.
 
      Visual Basic derlemede, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) hariç tutulacak belirli uyarıları içermez, bu nedenle hiçbir uyarı görünmez.
 
     > [!TIP]
-    > **Ctrl** +**F** tuşlarını seçerek **bul** iletişim kutusunu görüntülediğinizde **Çıkış** penceresinin içeriğinde arama yapabilirsiniz.
+    > **Ctrl**+**F** tuşlarını seçerek **bul** iletişim kutusunu görüntülediğinizde **Çıkış** penceresinin içeriğinde arama yapabilirsiniz.
 
 Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
@@ -183,7 +183,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 1. **Yapı çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-     Örneğin, `\\myserver\builds` belirtebilirsiniz.
+     Örneğin, `\\myserver\builds`belirtebilirsiniz.
 
     > [!IMPORTANT]
     > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
@@ -192,13 +192,13 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
      ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png)
 
-### <a name="specify-a-release-build-for-c"></a>C \# için bir yayın derlemesi belirtin
+### <a name="specify-a-release-build-for-c"></a>C\# için bir yayın derlemesi belirtin
 
 1. **Proje tasarımcısını**açın.
 
      ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
-1. **Yapı** sayfasını seçin.
+1. Seçin **derleme** sayfası.
 
 1. **Yapılandırma** listesinde **yayın**' ı seçin.
 
@@ -206,7 +206,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 1. **Çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-     Örneğin, `\\myserver\builds` belirtebilirsiniz.
+     Örneğin, `\\myserver\builds`belirtebilirsiniz.
 
     > [!IMPORTANT]
     > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
@@ -219,7 +219,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
    Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu `\\myserver\builds\\FileName.exe`.
 
-Mühendisi! Bu yönergeyi başarıyla tamamladınız.
+Tebrikler! Bu yönergeyi başarıyla tamamladınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

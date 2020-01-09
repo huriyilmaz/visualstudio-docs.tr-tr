@@ -23,21 +23,21 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], errors
 - class diagrams, errors
 ms.assetid: 79d70e70-704c-4255-ab68-c10d6949470e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de1c6c5ec6c5639cc8a9e036bcc674c407c1ac8f
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: dc8b2c013a3e685a6071f4a12d63e3ca475051a0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919052"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596521"
 ---
 # <a name="class-designer-errors"></a>Sınıf Tasarımcısı hataları
 
-**Sınıf Tasarımcısı** , kaynak dosyalarınızın konumunu izlemediğinden, proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak **Sınıf Tasarımcısı** , örneğin, bir ' ın kaynak türünü değiştirmek için yaygındır. TypeDef, temel sınıflar ve ilişkilendirme türleri. **Sınıf Tasarımcısı bu tür görüntülenemiyor**gibi bir hata alabilirsiniz. Hatayı gidermek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyerek görüntüleyin.
+**Sınıf Tasarımcısı** , kaynak dosyalarınızın konumunu izlemediğinden, proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak **Sınıf Tasarımcısı** , örneğin, bir typedef, temel sınıflar ve ilişki türlerinin kaynak türünü değiştirmek için yaygındır. **Sınıf Tasarımcısı bu tür görüntülenemiyor**gibi bir hata alabilirsiniz. Hatayı gidermek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyerek görüntüleyin.
 
 ## <a name="resources"></a>Kaynaklar
 

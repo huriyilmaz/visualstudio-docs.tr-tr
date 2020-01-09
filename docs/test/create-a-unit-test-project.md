@@ -2,32 +2,32 @@
 title: Birim testi projesi oluşturma
 ms.date: 01/29/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 30edc1a894a64fb7b9d8b988cafaed14aeaebfdd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 313083090c94c94f4e196e87f3bf6cf6df36e118
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665117"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565259"
 ---
 # <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
-Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneğin, üründeki her kod projesi için bir birim testi projesi oluşturulur. Test projesi üretim koduyla aynı çözümde olabilir veya ayrı bir çözümde olabilir. Bir çözümde birden çok birim testi projesine sahip olabilirsiniz.
+Birim testleri, test altındaki kod yapısına genellikle yansıtır. Örneğin, her kod projesini ürün için birim testi projesi oluşturulması. Ayrı bir çözümde de olabilir veya üretim kodu aynı çözümde test projesini olabilir. Test projeleri bir çözümde birden çok birim olabilir.
 
 > [!NOTE]
-> Yerel kod ve test projesi yapısına yönelik birim testlerinin konumu, bu makalede açıklanan yapıdan farklı olabilir. Daha fazla bilgi için bkz. [C/C++Için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
+> Yerel kod ve test projesi yapısına yönelik birim testlerinin konumu, bu makalede açıklanan yapıdan farklı olabilir. Daha fazla bilgi için [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
 
 ## <a name="to-create-a-unit-test-project"></a>Birim testi projesi oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  > **Proje**' yi seçin veya **CTRL** +**SHIFT** +**N**tuşlarına basın.
+1. **Dosya** menüsünde **Yeni** > **Proje**' yi seçin veya **CTRL**+**SHIFT**+**N**tuşlarına basın.
 
 ::: moniker range="vs-2017"
 
-2. **Yeni proje** iletişim kutusunda, **yüklü** düğümünü genişletin, test projeniz için kullanmak istediğiniz dili seçin ve ardından **Test**' i seçin.
+2. İçinde **yeni proje** iletişim kutusunda **yüklü** düğümü, test projeniz için kullanın ve ardından istediğiniz dili seçin **Test**.
 
 3. Kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test projesi** veya **NUnit test projesi**. Projeyi adlandırın ve ardından **Tamam**' ı seçin.
 
@@ -45,11 +45,11 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
 ::: moniker-end
 
-4. Birim testi projenizde, test altındaki koda bir başvuru ekleyin. Aynı çözümde bir kod projesine bir başvuru eklemek için:
+4. Birim test projenizde, test edilen kod bir başvuru ekleyin. Aynı çözümde bir kod projesine bir başvuru eklemek için:
 
    1. **Çözüm Gezgini**' de test projesi seçin.
 
-   2. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
+   2. Üzerinde **proje** menüsünde seçin **Başvuru Ekle**.
 
    3. **Başvuru Yöneticisi**' nde **Projeler**altındaki **çözüm** düğümünü seçin. Test etmek istediğiniz kod projesini seçin ve ardından **Tamam**' ı seçin.
 
@@ -59,13 +59,13 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
 Aşağıdaki bölümlerden birine bakın:
 
-**Birim testlerini yazma**
+**Birim testleri yazma**
 
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Birim testi kod](../test/unit-test-your-code.md)
 
-- [C/için birim testleri yazmaC++](writing-unit-tests-for-c-cpp.md)
+- [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md)
 
-- [Birim testlerinde MSTest çerçevesini kullanma](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
+- [MSTest framework birim testleri kullanın](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 
 **Birim testlerini çalıştırma**
 

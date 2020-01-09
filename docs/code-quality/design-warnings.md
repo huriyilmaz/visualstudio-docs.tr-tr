@@ -9,17 +9,17 @@ helpviewer_keywords:
 - managed code analysis warnings, design warnings
 - warnings, design
 ms.assetid: 34e65a18-560c-423f-814f-519089e318cf
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc714a4663505fe2a40cc145e8c8ca3c7bf86a1e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 301b829341eeb859030afabbf2225ea833e99a22
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649668"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587686"
 ---
 # <a name="design-warnings"></a>Tasarım uyarıları
 
@@ -31,10 +31,10 @@ Tasarım uyarıları [.net tasarım yönergelerine](/dotnet/standard/design-guid
 | - | - |
 | [CA1000: Genel türlerde statik üyeleri belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | [CA1001: Atılabilir alanlara sahip olan türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf, System. IDisposable türünde bir örnek alanı bildirir ve uygular ve sınıf IDisposable uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
-| [CA1002: Genel listeleri gösterme](../code-quality/ca1002.md) | System. Collections. Generic. List < (\< (T >) >), devralma değil, performans için tasarlanan genel bir koleksiyondur. Bu nedenle, Liste herhangi bir sanal üyeyi içermiyor. Bunun yerine devralma için tasarlanmış genel koleksiyonlar maruz kalmalıdır. |
+| [CA1002: Genel listeleri gösterme](../code-quality/ca1002.md) | System.Collections.Generic.List < (biri \<(T >) >) değil devralma performans için tasarlanmış bir genel koleksiyondur. Bu nedenle, Liste herhangi bir sanal üyeyi içermiyor. Bunun yerine devralma için tasarlanmış genel koleksiyonlar maruz kalmalıdır. |
 | [CA1003: Genel olay işleyici örnekleri kullan](../code-quality/ca1003.md) | Bir tür, imzası iki parametre (ilk bir nesne ve ikinci olarak EventArgs 'a atanabilen bir tür) içeren void döndüren bir temsilci içerir ve kapsayan bütünleştirilmiş kod 2,0 .NET Framework hedefler. |
 | [CA1004: Genel metotlar tür parametresi sağlamalıdır](../code-quality/ca1004.md) | Tip argümanının açıkça özelleştirilmesi yerine yöntemi geçen argüman tipiyle tanımlanan genel yöntemin nasıl tip argümanı olduğunun sonucudur. Çıkarımı etkinleştirmek için bir genel yöntem parametre imzası yöntem türü parametresi gibi aynı türde bir parametre içermelidir. Bu durumda, tip bağımsız değişkeninin belirtilmesine gerek yoktur. Tüm tür parametreleri için çıkarımı kullandığınızda, genel ve genel olmayan örnek yöntemleri çağırma söz dizimi aynıdır; Bu, genel yöntemlerin kullanılabilirliğini basitleştirir. |
-| [CA1005: Genel türlerde aşırı parametrelerden kaçının](../code-quality/ca1005.md) | Daha çok tip parametresi, genel tip içerir, bilmek daha zordur ve hangi tip parametrelerinin temsil ettiğini anımsamak zordur. Genellikle, liste \<T > ve belirli durumlarda, sözlük \<TKey, TValue > gibi iki tür parametresiyle birlikte tek bir tür parametresiyle açıktır. Ancak, iki parametreden fazla parametre varsa, birçok kullanıcı için zorluk derecesi artar. |
+| [CA1005: Genel türlerde aşırı parametrelerden kaçının](../code-quality/ca1005.md) | Daha çok tip parametresi, genel tip içerir, bilmek daha zordur ve hangi tip parametrelerinin temsil ettiğini anımsamak zordur. Genellikle tek bir tür parametresiyle, List\<T > ve belirli durumlarda iki tür parametresi ile birlikte, sözlük\<TKey, TValue > olarak açıktır. Ancak, iki parametreden fazla parametre varsa, birçok kullanıcı için zorluk derecesi artar. |
 | [CA1006: Üye imzalarında genel türleri iç içe kullanmayın](../code-quality/ca1006.md) | Bir yuvalanmış bağımsız değişken aynı zamanda genel tip olan bir tip bağımsız değişkendir. Yuvalanmış tip bağımsız değişkeni içeren imzası olan bir üye çağırmak için, kullanıcı bir genel tipi örneklemeli ve bu tipi ikinci bir genel tipin yapıcısına geçirmelidir. Gerekli yordam ve sözdizimi karmaşıktır ve kaçınılmalıdır. |
 | [CA1007: Uygun yerlerde genel türler kullanın](../code-quality/ca1007.md) | System.Object türünde bir başvuru parametresi dışarıdan görünen bir yöntem içerir. Bir genel yöntem kullanımı başvuru parametresi türünü ilk tür olarak atmadan yönteme aktarılan kısıtlamalar için tüm türleri ve konuları etkinleştirir. |
 | [CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008.md) | Tıpkı diğer türler gibi, başlatılmamış bir numaralandırmanın varsayılan değeri sıfırdır. Hiçbir bayrak atanmış olmayan bir numaralandırma, varsayılan değerin sabit listesinin geçerli bir değeri olması için sıfır değerini kullanarak bir üye tanımlamalıdır. Numaralandırma FlagsAttribute özniteliği sıfır değerli üyeyi tanımlarsa, onun adı numaralandırmada hiçbir değerin ayarlanmadığı "Hiçbiri" olmalıdır. |
@@ -84,11 +84,11 @@ Tasarım uyarıları [.net tasarım yönergelerine](/dotnet/standard/design-guid
 | [CA1057: Dize URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır](../code-quality/ca1057.md) | Bir tür sadece System.Uri parametresi ile dize parametresinin değiştirilmesiyle yöntem aşırı yüklemesini bildirir. Aşırı yüklemeler URI parametresiyle aşırı yüklenmiş olan dize parametresini alır. |
 | [CA1058: Türler belli temel türleri genişletmemelidir](../code-quality/ca1058.md) | Dışarıdan görünen tür belirli temel türleri genişletir. Diğer seçenekleri kullanın. |
 | [CA1059: Üyeler belli somut türleri göstermemelidir](../code-quality/ca1059.md) | Somut tür tam bir uygulamaya sahiptir ve bu nedenle oluşturulabilecek bir türdür. Üye yaygın kullanımını etkinleştirmek için önerilen arabirimi kullanarak somut türünü değiştirin. |
-| [CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın](../code-quality/ca1060.md) | @No__t_1 içindeki Declare anahtar sözcüğü kullanılarak tanımlanan <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> veya yöntemlerle işaretlenenler gibi platform çağırma yöntemleri, yönetilmeyen koda erişin. Bu yöntemler, NativeMethods, SafeNativeMethods veya UnsafeNativeMethods sınıfının üyesi olmalıdır. |
+| [CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın](../code-quality/ca1060.md) | [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]içindeki Declare anahtar sözcüğü kullanılarak tanımlanan <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> veya yöntemlerle işaretlenenler gibi platform çağırma yöntemleri, yönetilmeyen koda erişin. Bu yöntemler, NativeMethods, SafeNativeMethods veya UnsafeNativeMethods sınıfının üyesi olmalıdır. |
 | [CA1061: Taban sınıf yöntemlerini gizlemeyin](../code-quality/ca1061.md) | Basit türdeki bir yöntem türetilmiş türdeki adlandırılmış yöntem tarafından gizlenmiştir, türetilmiş yöntemin parametre imzası yalnızca türetilmiş türleri ve karşılık gelen temel yöntemin parametre imzası daha zayıf türlerine göre farklı olduğunda temel türde bir yöntemin türetilmiş türle aynı adlı yöntem olarak gizlidir. |
 | [CA1062: Genel yöntemlerin bağımsız değişkenlerini doğrulayın](../code-quality/ca1062.md) | Dışarıdan görünen yöntemlerin null'a karşı denetlenmesi için geçirilen tüm başvuru bağımsız değişkenleri. |
 | [CA1063: IDisposable'ı doğru uygulayın](../code-quality/ca1063.md) | Tüm IDisposable türleri Dispose kalıbını doğru uygulamalıdır. |
-| [CA1064: Özel durumlar genel olmamalıdır](../code-quality/ca1064.md) | Bir iç özel durum yalnızca kendi iç kapsamı içinde görülebilir. İç kapsam dışında kalan özel durumlardan sonra, sadece basit istisnalar istisna yakalamak için kullanılabilir. İç özel durum <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName> veya <xref:System.ApplicationException?displayProperty=fullName> ' den devralınmışsa, dış kodun özel durumla ne yapacaklarından haberdar olmak için yeterli bilgileri olmayacaktır. |
+| [CA1064: Özel durumlar genel olmamalıdır](../code-quality/ca1064.md) | Bir iç özel durum yalnızca kendi iç kapsamı içinde görülebilir. İç kapsam dışında kalan özel durumlardan sonra, sadece basit istisnalar istisna yakalamak için kullanılabilir. İç özel durum öğesinden devralınan <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, veya <xref:System.ApplicationException?displayProperty=fullName>, harici kod özel durum ne olduğunu bilmek yeterli bilgiye sahip değildir. |
 | [CA1065: Beklenmedik konumlarda özel durumlar tetiklemeyin](../code-quality/ca1065.md) | İstisna atılmasını beklemeyen yöntem bir istisna atar. |
 | [CA1068: CancellationToken parametreleri en son gelmelidir](../code-quality/ca1068.md) | Bir yöntem, son parametre olmayan CancellationToken parametresine sahiptir. |
 | [CA2210: Derlemelerin tanımlayıcı adı geçerli olmalıdır](../code-quality/ca2210.md) | Güçlü ad oynanmış derlemeyi bilmeden yükleyerek istemcileri korur. Güçlü adı olmayan derlemeler oldukça sınırlı sayıda senaryo dışında kullanılmamalıdır. Düzgün imzalanmamış derlemeleri paylaşırsanız veya dağıtırsanız, derleme aslı bozuabilir, ortak dil çalışma zamanı derlemeyi yükleyemeyebilir veya kullanıcı kendi bilgisayarındaki doğrulamayı devre dışı bırakabilir. |

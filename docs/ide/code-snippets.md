@@ -8,8 +8,8 @@ f1_keywords:
 helpviewer_keywords:
 - surround with
 - code snippets
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
@@ -17,12 +17,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 09f6e2e9b4b89c7e6fd1fe9a342d4fd05b12e7a9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c06f9f7dc7e5a672e3fd5da3f3fc834fe223a783
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747975"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585424"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
@@ -31,17 +31,17 @@ Kod parçacıkları, sağ tıklama menüsü (bağlam menüsü) komutu veya kısa
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kod parçacıkları (Mac için Visual Studio)](/visualstudio/mac/snippets).
 
-Kod parçacıkları,, Visual Basic, XML ve T-SQL dahil C#olmak C++üzere çok sayıda dilde kullanılabilir ve birkaç kez ad verebilir. Bir dile ait kullanılabilir tüm yüklü parçacıkları görüntülemek için, **Araçlar** menüsünden **kod parçacıkları Yöneticisi 'ni** açın (veya **ctrl** +**K**, **CTRL** +**B**) tuşlarına basın ve açılır menüden dili seçin en üstte.
+Kod parçacıkları,, Visual Basic, XML ve T-SQL dahil C#olmak C++üzere çok sayıda dilde kullanılabilir ve birkaç kez ad verebilir. Bir dile ait kullanılabilir tüm yüklü parçacıkları görüntülemek için, **Araçlar** menüsünden **kod parçacıkları Yöneticisi 'ni** açın (veya **ctrl**+**K**, **CTRL**+**B**) tuşlarına basın ve üstteki açılan menüden dili seçin.
 
 ![Kod parçacıkları Yöneticisi iletişim kutusu](media/code-snippets-manager.png)
 
 Kod parçacıklarına aşağıdaki genel yollarla erişilebilir:
 
-- Menü çubuğunda **düzenle**  > **IntelliSense** ' i seçin  > **kod parçacığı Ekle**
+- Menü çubuğunda **düzenle** > **IntelliSense** ' i seçin > **kod parçacığı Ekle**
 
-- Kod düzenleyicisindeki sağ tıklama veya bağlam menüsünde kod **parçacığı**  >  kod**parçacığı Ekle** ' yi seçin.
+- Kod düzenleyicisindeki sağ tıklama veya bağlam menüsünde kod **parçacığı** > kod **parçacığı Ekle** ' yi seçin.
 
-- Klavyeden **ctrl** +**K**,**CTRL** +**X** tuşlarına basın
+- Klavyeden **ctrl**+**K**,**CTRL**+**X** tuşlarına basın
 
 ## <a name="expansion-snippets-and-surround-with-snippets"></a>Genişleme parçacıkları ve surround-kod parçacıkları
 
@@ -60,9 +60,9 @@ finally
 }
 ```
 
-Kod penceresinin sağ tıklama menüsünde (bağlam menüsü) kod **parçacığı Ekle** ' **C#** ye tıklayıp, ardından `tryf` yazıp **Tab**tuşuna basarak bu kod parçacığını ekleyebilirsiniz. Ya da `tryf` yazabilir ve **Tab** tuşuna iki kez basabilirsiniz.
+Kod penceresinin sağ tıklama menüsünde (bağlam menüsü) kod **parçacığı Ekle** ' **C#** ye tıklayıp, ardından `tryf`yazıp **Tab**tuşuna basarak bu kod parçacığını ekleyebilirsiniz. Ya da `tryf` yazabilir ve **Tab** tuşuna iki kez basabilirsiniz.
 
-Kısayol `if` C++ , bir ekleme kod parçacığı ya da surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçerseniz (örneğin `return FALSE;`) ve sonra  >  **Ile çevrelemeyi** **seçerseniz, kod**parçacığı satır etrafında genişletilir:
+Kısayol `if` C++ , bir ekleme kod parçacığı ya da surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçerseniz (örneğin `return FALSE;`) ve sonra > **Ile çevrelemeyi** **seçerseniz, kod**parçacığı satır etrafında genişletilir:
 
 ```cpp
 if (true)
@@ -75,7 +75,7 @@ if (true)
 
 Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true`, uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
 
-Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için, Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden kod parçacığı**ekle** ** >  kod parçacığı öğesini** seçin. Ardından,**Özellikler, yordamlar, olaylar**  > **bir özellik tanımlamak** >  **kod düzenlerini** seçin.
+Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için, Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden kod parçacığı **ekle** ** > kod parçacığı öğesini** seçin. Ardından, **Özellikler, yordamlar, olaylar** > **bir özellik tanımlamak** > **kod düzenlerini** seçin.
 
 ![Özellik tanımlamak için kod parçacığı menüsü](media/code-snippets-vb-property.png)
 
@@ -93,7 +93,7 @@ Public Property NewProperty() As String
 End Property
 ```
 
-@No__t_0 `m_property` olarak değiştirirseniz `newPropertyValue` her örneği değiştirilir. Özellik bildiriminde `Int` `String` değiştirirseniz, set yöntemindeki değer de `Int` olarak değiştirilir.
+`newPropertyValue` `m_property`olarak değiştirirseniz `newPropertyValue` her örneği değiştirilir. Özellik bildiriminde `Int` `String` değiştirirseniz, set yöntemindeki değer de `Int`olarak değiştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

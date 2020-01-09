@@ -5,19 +5,19 @@ ms.topic: reference
 helpviewer_keywords:
 - load tests, run settings
 ms.assetid: de10dabb-02ed-403b-9e6f-0b735524988c
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7bea257e45b557fd157d68baf9e0229a602a7a6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8898a474888ce9efbf4c91a5251bf8fe7036fe5f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652982"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584471"
 ---
 # <a name="load-test-run-settings-properties"></a>Yük testi çalıştırma ayarları özellikleri
 
-Yük testinin çalışma ayarları, testin süresi, sonuç koleksiyonu ayrıntı düzeyi ve test çalışırken toplanan sayaç kümeleri dahil olmak üzere çeşitli diğer ayarları belirler. Her bir yük testi için birden fazla çalışma ayarı oluşturup depolayabilmeniz ve sonra testi çalıştırdığınızda kullanılacak belirli bir ayarı seçmeniz gerekir. **Yeni Yük Testi Sihirbazı**kullanarak yük testinizi oluşturduğunuzda, yük testinize bir başlangıç çalıştırması ayarı eklenir.
+Yük testinin çalışma ayarları, testin süresi, sonuç koleksiyonu ayrıntı düzeyi ve test çalışırken toplanan sayaç kümeleri dahil olmak üzere çeşitli diğer ayarları belirler. Oluşturun ve her bir yük testi için birden çok çalışma ayarlarını depolamak ve ardından test çalıştırması sırasında kullanmak için belirli bir ayar seçin. **Yeni Yük Testi Sihirbazı**kullanarak yük testinizi oluşturduğunuzda, yük testinize bir başlangıç çalıştırması ayarı eklenir.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -33,7 +33,7 @@ Daha fazla bilgi için bkz. [Yük testi çalıştırma ayarlarını yapılandır
 |**Tür başına en yüksek hata**|Yük testi için kaydedilecek tür başına en yüksek hata sayısı.<br /><br /> Gerekirse bu sayıyı artırabilirsiniz, ancak bunu yapmak yük testi sonucunun boyut ve işlem süresini de artırır.|
 |**Raporlanan en yüksek Istek URL 'Leri**|Bu yük testinde sonuçların raporlanmasına yönelik en fazla benzersiz Web performansı test isteği URL sayısı.<br /><br /> Gerekirse bu sayıyı artırabilirsiniz, ancak bunu yapmak yük testi sonucunun boyut ve işlem süresini de artırır.|
 |**En fazla eşik ihlalleri**|Bu yük testi için kaydedilecek en yüksek eşik ihlali sayısı.<br /><br /> Gerekirse bu sayıyı artırabilirsiniz, ancak bunu yapmak yük testi sonucunun boyut ve işlem süresini de artırır.|
-|**Uygulama etki alanında birim testlerini Çalıştır**|Yük testi birim testleri içerdiğinde, her birim testi derlemesinin ayrı bir uygulama etki alanında çalışıp çalışmadığını belirleyen bir Boolean değer. Varsayılan ayar true 'dur.<br /><br /> Birim testleriniz ayrı bir uygulama etki alanı veya App. config dosyasının düzgün şekilde çalışmasını gerektirmiyorsa, birim testleriniz bu özelliğin değeri `False` olarak ayarlanarak daha hızlı çalışabilir.|
+|**Uygulama etki alanında birim testlerini Çalıştır**|Yük testi birim testleri içerdiğinde, her birim testi derlemesinin ayrı bir uygulama etki alanında çalışıp çalışmadığını belirleyen bir Boolean değer. Varsayılan ayar true 'dur.<br /><br /> Birim testleriniz ayrı bir uygulama etki alanı veya App. config dosyasının düzgün şekilde çalışmasını gerektirmiyorsa, birim testleriniz bu özelliğin değeri `False`olarak ayarlanarak daha hızlı çalışabilir.|
 |**Ad**|Çalışma ayarının **Yük Testi Düzenleyicisi** **çalışma ayarları** düğümünde göründüğü şekliyle adı.|
 |**Doğrulama düzeyi**|Bu, bir yük testinde çalışacak en yüksek doğrulama kuralı düzeyini tanımlar. Doğrulama kuralları Web performans testi istekleriyle ilişkilendirilir. Her doğrulama kuralının ilişkili bir doğrulama düzeyi vardır: **yüksek**, **Orta**veya **düşük**. Bu yük testi çalıştırma ayarı, Web performans testinin yük testinde çalıştırıldığı sırada hangi doğrulama kurallarının çalıştırılacağını belirler. Örneğin, bu çalıştırma ayarı **Orta**olarak ayarlandıysa, tüm doğrulama kuralları **Orta**olarak işaretlenir veya **düşük** olur.|
 
@@ -52,7 +52,7 @@ Daha fazla bilgi için bkz. [Yük testi günlük ayarlarını değiştirme](../t
 |Özellik|Tanım|
 |-|----------------|
 |**Depolama türü**|Bir yük testinde elde edilen performans sayaçlarını depolamanın yolu. Seçenekler şunlardır:<br /><br /> -   **veritabanı** - **yük test sonuçları deposu**olan bir SQL veritabanı gerektirir.<br />-   **yok**.|
-|**Zamanlama Ayrıntıları Depolaması**|Bu, **Load Test sonuçları deposunda**depolanacak ayrıntıları belirlemekte kullanılır. Üç değer mevcuttur:<br /><br /> -   **Allindividualdetails** - **yük test sonuçları deposundaki**yük testi sırasında çalıştırılan veya verilen her test, işlem ve sayfa için bireysel zamanlama değerlerini toplayın ve saklayın. **Yük Testi Çözümleyicisi**'Nde **Sanal Kullanıcı etkinliği grafiğini** kullanmayı düşünüyorsanız, bu gereklidir.<br />     Daha fazla bilgi için bkz. [Ayrıntılar görünümündeki sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).<br />**None** -   -tek bir zamanlama değeri toplanmaz. Bu, Visual Studio 2013 Güncelleştirme 4 ve sonraki sürümler için varsayılan değerdir.<br />-   **StatisticsOnly** - **yük test sonuçları deposundaki**yük testi sırasında yürütülen veya verilen her test, işlem ve sayfa için bireysel zamanlama değerlerini depolamak yerine yalnızca istatistikleri toplayın ve saklayın.<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: zamanlama ayrıntıları depolama özelliğini belirtme](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).|
+|**Zamanlama Ayrıntıları Depolaması**|Bu, **Load Test sonuçları deposunda**depolanacak ayrıntıları belirlemekte kullanılır. Üç değer mevcuttur:<br /><br /> -   **Allindividualdetails** - **yük test sonuçları deposundaki**yük testi sırasında çalıştırılan veya verilen her test, işlem ve sayfa için bireysel zamanlama değerlerini toplayın ve saklayın. **Yük Testi Çözümleyicisi**'Nde **Sanal Kullanıcı etkinliği grafiğini** kullanmayı düşünüyorsanız, bu gereklidir.<br />     Daha fazla bilgi için [Ayrıntılar görünümünde sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).<br />**None** -   -tek bir zamanlama değeri toplanmaz. Bu, Visual Studio 2013 Güncelleştirme 4 ve sonraki sürümler için varsayılan değerdir.<br />-   **StatisticsOnly** - **yük test sonuçları deposundaki**yük testi sırasında yürütülen veya verilen her test, işlem ve sayfa için bireysel zamanlama değerlerini depolamak yerine yalnızca istatistikleri toplayın ve saklayın.<br /><br /> Daha fazla bilgi için [nasıl yapılır: zamanlama ayrıntıları depolama özelliğini belirtme](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).|
 
 ## <a name="sql-tracing-properties"></a>SQL izleme özellikleri
 
@@ -67,7 +67,7 @@ Daha fazla bilgi için bkz. [Yük testi günlük ayarlarını değiştirme](../t
 
 |Özellik|Tanım|
 |-|----------------|
-|**Test yinelemeleri**|Yük testi tamamlanmadan önce çalıştırılacak bireysel testlerin toplam sayısını belirtir. Bu özellik yalnızca "test yinelemeleri kullan" özelliği `True` geçerlidir.|
+|**Test yinelemeleri**|Yük testi tamamlanmadan önce çalıştırılacak bireysel testlerin toplam sayısını belirtir. Bu özellik yalnızca "test yinelemeleri kullan" özelliği `True`geçerlidir.|
 |**Test Yinelemeleri Kullan**|Test Yinelemeleri Kullan `True`, yük testi içinde tamamlanan bireysel testlerin sayısı "test yinelemeleri" özelliği tarafından belirtilen sayıya ulaşırsa, yük testi çalışır. Bu durumda, ısınma süresi, çalıştırma süresi ve seyrek erişimli süre olan zaman tabanlı ayarlar yoksayılır. "Test yinelemeleri kullan" `False`, tüm zamanlama ayarları uygulanır ve "test yinelemeleri" yok sayılır.|
 
 Daha fazla bilgi için, bkz. [nasıl yapılır: bir çalışma ayarında test yinelemesi sayısını belirtme](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md).
@@ -78,7 +78,7 @@ Daha fazla bilgi için, bkz. [nasıl yapılır: bir çalışma ayarında test yi
 |-|----------------|
 |**Cool-azaltma süresi**|Sınama soğuk-azaltma döneminin süresi hh: mm: ss biçiminde ifade edilir. Yük testi tamamlandığında, yük testi içindeki bireysel testler yine de çalışıyor olabilir. Cool azaltma süresi boyunca, bu testler tamamlanana kadar veya seyrek erişimli dönemin sonuna ulaşılana kadar devam edebilir. Varsayılan olarak, bir soğuk nokta yoktur ve yük testi çalışma süresi ayarına göre tamamlandığında, bireysel testler sonlandırılır.|
 |**Çalışma süresi**|Testin uzunluğu ss: DD: ss biçimindedir.|
-|**Örnek hız**|Performans sayacı değerlerinin, ss: DD: ss biçiminde yakalanacağı Aralık.<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: örnek hızını belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md).|
+|**Örnek hız**|Performans sayacı değerlerinin, ss: DD: ss biçiminde yakalanacağı Aralık.<br /><br /> Daha fazla bilgi için [nasıl yapılır: örnek hızı belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md).|
 |**Isınma Süresi**|Testin başlangıcı ve veri örneklerinin ne zaman kaydedilebildiği, ss: DD: ss biçiminde süresi. Bu, genellikle örnek değerleri kaydetmeden önce belirli bir yük düzeyine ulaşmak üzere sanal kullanıcıları yüklemek için kullanılır. Isınma süresi bitmeden önce yakalanan örnek değerler, **Yük Testi Çözümleyicisi**'nde gösterilir.|
 
 ## <a name="webtest-connections-properties"></a>WebTest bağlantıları özellikleri
@@ -90,21 +90,21 @@ Daha fazla bilgi için, bkz. [nasıl yapılır: bir çalışma ayarında test yi
 
 ## <a name="change-run-setting-properties"></a>Çalışma ayarı özelliklerini değiştir
 
-Yük testini farklı koşullarda çalıştırabilmeniz için, farklı özellik ayarlarıyla yük testinize daha fazla çalışma ayarı ekleyebilirsiniz. Örneğin, yeni bir test ayarı ekleyebilir ve farklı bir örnek hızı kullanabilir ya da daha uzun çalışma süresi belirtebilirsiniz. Tek seferde yalnızca bir çalıştırma ayarı kullanabilirsiniz ve onu etkin olarak işaretleyerek hangi çalıştırma ayarını kullanacağınızı belirtmeniz gerekir. Bir örnek için bkz. [nasıl yapılır: yük testi için etkin çalıştırma ayarını seçme](../test/how-to-select-the-active-run-setting-for-a-load-test.md).
+Yük testi farklı koşullar altında çalıştırabilmeniz için daha fazla yük testinize farklı özellik ayarları ile çalışma ayarları ekleyebilirsiniz. Örneğin, yeni bir test ayarı ekleyin ve farklı bir örnek hızı kullanabilir veya bir uzun çalıştırma süresi belirtin. Tek seferde yalnızca bir çalıştırma ayarı kullanabilirsiniz ve onu etkin olarak işaretleyerek hangi çalıştırma ayarını kullanacağınızı belirtmeniz gerekir. Bir örnek için bkz. [nasıl yapılır: yük testi için etkin çalıştırma ayarını seçme](../test/how-to-select-the-active-run-setting-for-a-load-test.md).
 
 Çalışma ayarlarını değiştirmek için:
 
 1. Bir yük testi açın.
 
-2. **Çalışma ayarları** klasörünü genişletin.
+2. Genişletin **çalıştırma ayarları** klasör.
 
 3. **Çalışma ayarları** düğümünü seçin.
 
-4. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
+4. Üzerinde **görünümü** menüsünde seçin **Özellikler penceresi**.
 
      **Özellikler penceresi** görüntülenir ve seçilen çalışma ayarının özellikleri görüntülenir.
 
-5. Çalıştırma ayarlarını değiştirmek için **Özellikler penceresini** kullanın. Örneğin, testinizi beş dakikada çalıştırmak için çalıştırma süresini **00:05:00** olarak değiştirin.
+5. Çalıştırma ayarlarını değiştirmek için **Özellikler penceresini** kullanın. Örneğin, çalışma süresini **00:05:00** testiniz için beş dakika çalıştırılacak.
 
     > [!NOTE]
     > Çalışma ayarları özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi çalışma ayarı özellikleri](../test/load-test-run-settings-properties.md).
@@ -112,8 +112,8 @@ Yük testini farklı koşullarda çalıştırabilmeniz için, farklı özellik a
 6. Özellikleri değiştirmeyi tamamladığınızda, yük testinizi kaydedin. **Dosya** menüsünde **Kaydet**' i seçin.
 
 > [!NOTE]
-> Sayaç kümesi eşlemeleri aynı zamanda çalıştırma ayarları ' nın bir parçasıdır. Daha fazla bilgi için bkz. [bir yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
+> Sayaç kümesi eşlemeleri aynı zamanda çalıştırma ayarları ' nın bir parçasıdır. Daha fazla bilgi için [sayaç kümelerini ve eşik kurallarını bilgisayarlar için bir yük testinde belirtin](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi çalıştırma ayarlarını yapılandır](../test/configure-load-test-run-settings.md)
+- [Yük testi çalıştırma ayarlarını yapılandırma](../test/configure-load-test-run-settings.md)

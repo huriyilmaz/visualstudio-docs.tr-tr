@@ -2,17 +2,17 @@
 title: MEF kullanarak DSL'nizi genişletme
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f42186915ade2a518506f5f6ccc55b3599a3ba99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8e4898ba6c87f25b38a6c3e42032412d69d8ece
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657507"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596612"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
 
@@ -107,7 +107,7 @@ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)
 
 5. DSL Gezgini ' nde **Editor\validation**' ı seçin.
 
-6. Özellikler penceresi, **kullanılan** özelliklerden en az birinin `true` olduğundan emin olun.
+6. Özellikler penceresi, **kullanılan** özelliklerden en az birinin `true`olduğundan emin olun.
 
 7. **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür**' e tıklayın.
 
@@ -129,21 +129,21 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    - Bu derleme genellikle "ile biten bir ada sahiptir. DSL. dll ".
 
-   - DSL projesine erişiminiz varsa, derleme dosyasını **\\bin \\ Dizin dsl bulabilirsiniz \***
+   - DSL projesine erişiminiz varsa, derleme dosyasını Dizin **DSL\\bin\\** altında bulabilirsiniz \*
 
    - DSL VSıX dosyasına erişiminiz varsa, VSıX dosyasının dosya adı uzantısını ". zip" olarak değiştirerek derlemeyi bulabilirsiniz. . Zip dosyasını sıkıştırmasını açın.
 
 3. Aşağıdaki .NET derlemelerine başvuruları ekleyin:
 
-   - Microsoft. VisualStudio. modellemesi. SDK. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
 
-   - Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
 
-   - Microsoft. VisualStudio. modellemesi. SDK. Shell. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
 
    - System.ComponentModel.Composition.dll
 
-   - System. Windows. Forms. dll
+   - System.Windows.Forms.dll
 
 4. Yeni bir **VSIX proje** projesi oluşturun.
 
@@ -157,7 +157,7 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    1. **Source. Extension. valtmanifest**Içinde **Başvuru Ekle** ' ye tıklayın.
 
-   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\bin \\ \*** 'da DSL çözümünde oluşturulmuştur.
+   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage\\bin\\\*** içinde DSL çözümünde oluşturulmuştur.
 
        Bu, kullanıcıların DSL 'yi ve uzantınızı aynı anda yüklemesine olanak tanır. Kullanıcı DSL 'yi zaten yüklemiştir, yalnızca uzantınızın yüklenmesi gerekir.
 
@@ -175,7 +175,7 @@ Ayrı bir DSL uzantısı çözümünün derleme kodu projesinde uzantı yazabili
 
 ### <a name="menu-commands"></a>Menü Komutları
 
-Bir menü komutu yazmak için <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> uygulayan bir sınıf tanımlayın ve bu sınıfa, *dsl `CommandExtension` ADLı DSL içinde* tanımlanan özniteliğe önek ekleyin. Birden fazla menü komut sınıfı yazabilirsiniz.
+Bir menü komutu yazmak için <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> uygulayan bir sınıf tanımlayın ve bu sınıfa, *dsl`CommandExtension`ADLı DSL içinde* tanımlanan özniteliğe önek ekleyin. Birden fazla menü komut sınıfı yazabilirsiniz.
 
 `QueryStatus()`, kullanıcı diyagrama sağ tıkladığı zaman çağrılır. Geçerli seçimi inceleyerek, komutun ne zaman geçerli olduğunu göstermek için `command.Enabled` ayarlaması gerekir.
 
@@ -321,7 +321,7 @@ namespace MefExtension
 
 ### <a name="validation-constraints"></a>Doğrulama kısıtlamaları
 
-Doğrulama yöntemleri DSL tarafından oluşturulan `ValidationExtension` özniteliği tarafından ve ayrıca <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> tarafından işaretlenir. Yöntemi bir öznitelik tarafından işaretlenmemiş herhangi bir sınıfta bulunabilir.
+Doğrulama yöntemleri DSL tarafından oluşturulan `ValidationExtension` özniteliği tarafından ve ayrıca <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>tarafından işaretlenir. Yöntemi bir öznitelik tarafından işaretlenmemiş herhangi bir sınıfta bulunabilir.
 
 Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 

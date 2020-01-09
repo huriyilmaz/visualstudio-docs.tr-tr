@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, disable
 - disable code analysis
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cb1a41642e405046459f6196a98cd6290a217223
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d25254cabecd88c6e876646c3c276503aadf7eb7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649658"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587673"
 ---
 # <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Yönetilen kod için kaynak kodu analizini devre dışı bırakma
 
@@ -27,7 +27,7 @@ Bu sayfa, Visual Studio 'da Kod analizini devre dışı bırakmanızı sağlar. 
 
 - NuGet çözümleyici paketi ve VSıX veya yerleşik çözümleyiciler
 
-  Şu anda, yerleşik çözümleyiciler için Canlı Kod analizini devre dışı bırakamezsiniz, örneğin, kural KIMLIĞI IDE0067. Benzer şekilde, Visual Studio uzantısının (VSıX) bir parçası olarak yüklenen çözümleyiciler için Canlı Kod analizini devre dışı bırakabilirsiniz. Yerleşik ve VSıX tabanlı çözümleyicilerin hatalarını ve uyarılarını gizlemek için, menü **çubuğunda  > ** **Oluştur ve etkin sorunları Gizle** ' yi seçin. NuGet paketinin bir parçası olarak yüklenen çözümleyiciler için canlı ve yerleşik *Analizi devre dışı bırakabilirsiniz.*
+  Şu anda, yerleşik çözümleyiciler için Canlı Kod analizini devre dışı bırakamezsiniz, örneğin, kural KIMLIĞI IDE0067. Benzer şekilde, Visual Studio uzantısının (VSıX) bir parçası olarak yüklenen çözümleyiciler için Canlı Kod analizini devre dışı bırakabilirsiniz. Yerleşik ve VSıX tabanlı çözümleyicilerin hatalarını ve uyarılarını gizlemek için, menü **çubuğunda > ** **Oluştur ve etkin sorunları Gizle** ' yi seçin. NuGet paketinin bir parçası olarak yüklenen çözümleyiciler için canlı ve yerleşik *Analizi devre dışı bırakabilirsiniz.*
 
 - Kaynak Analizi ve eski analizler
 
@@ -45,7 +45,7 @@ Bu sayfayı açmak için **Çözüm Gezgini** içindeki proje düğümüne sağ 
 - Canlı kaynak analizini devre dışı bırakmak için **canlı olarak çalıştır analiz** seçeneğinin işaretini kaldırın.
 
 > [!NOTE]
-> Yerleşik ve VSıX tabanlı çözümleyiciler, **canlı Analize Çalıştır** işaretli olsa bile kodunuzun canlı analizini sağlamaya devam edecektir. Bu çözümleyiciler içindeki hataları ve uyarıları gizlemek istiyorsanız, menü **çubuğunda  > ** **Oluştur ve etkin sorunları Gizle** ' yi seçin.
+> Yerleşik ve VSıX tabanlı çözümleyiciler, **canlı Analize Çalıştır** işaretli olsa bile kodunuzun canlı analizini sağlamaya devam edecektir. Bu çözümleyiciler içindeki hataları ve uyarıları gizlemek istiyorsanız, menü **çubuğunda > ** **Oluştur ve etkin sorunları Gizle** ' yi seçin.
 
 ## <a name="net-framework-projects"></a>.NET Framework projeleri
 
@@ -55,7 +55,7 @@ NuGet paketinin bir parçası olarak yüklenen çözümleyiciler için kaynak ko
 | - | - | - |
 | `RunAnalyzersDuringBuild` | NuGet tabanlı çözümleyicilerin derleme zamanında çalışıp çalışmadığını denetler. | `true` |
 | `RunAnalyzersDuringLiveAnalysis` | NuGet tabanlı çözümleyiciler, kodu tasarım zamanında canlı olarak analiz edip etmediğini denetler. | `true` |
-| `RunAnalyzers` | Hem derleme hem de tasarım zamanında NuGet tabanlı Çözümleyicileri devre dışı bırakır. Bu özellik `RunAnalyzersDuringBuild` ve `RunAnalyzersDuringLiveAnalysis` önceliklidir. | `true` |
+| `RunAnalyzers` | Hem derleme hem de tasarım zamanında NuGet tabanlı Çözümleyicileri devre dışı bırakır. Bu özellik `RunAnalyzersDuringBuild` ve `RunAnalyzersDuringLiveAnalysis`önceliklidir. | `true` |
 
 Örnekler:
 
@@ -71,7 +71,7 @@ NuGet paketinin bir parçası olarak yüklenen çözümleyiciler için kaynak ko
 
 ## <a name="source-analysis"></a>Kaynak Analizi
 
-Visual Studio 2017 ' de [kaynak analizini](roslyn-analyzers-overview.md) devre dışı bırakabilirsiniz. Hata Listesi çözümleyici hatalarını kaldırmak istiyorsanız, **çözümle**  > **Kod analizini Çalıştır ve menü çubuğunda etkin sorunları Gizle** ' yi seçerek tüm geçerli ihlallerin görüntülenmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [Ihlalleri gösterme](use-roslyn-analyzers.md#suppress-violations).
+Visual Studio 2017 ' de [kaynak analizini](roslyn-analyzers-overview.md) devre dışı bırakabilirsiniz. Hata Listesi çözümleyici hatalarını kaldırmak istiyorsanız, **çözümle** > **Kod analizini Çalıştır ve menü çubuğunda etkin sorunları Gizle** ' yi seçerek tüm geçerli ihlallerin görüntülenmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [Ihlalleri gösterme](use-roslyn-analyzers.md#suppress-violations).
 
 Visual Studio 2019 sürüm 16,3 ' den başlayarak NuGet tabanlı kaynak kodu analizini devre dışı bırakabilirsiniz. Visual Studio 2019 ' e yükseltmeyi düşünün.
 

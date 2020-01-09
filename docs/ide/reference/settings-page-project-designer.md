@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - Settings page in Project Designer
 - Project Designer, Settings page
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11f6f787d3799813aa526395a7137fd68e5c573d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4f4ca1def334241999445e3f11cf142aa426d962
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645259"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566780"
 ---
 # <a name="settings-page-project-designer"></a>Ayarlar sayfası, proje Tasarımcısı
 
 Projenin uygulama ayarlarını belirtmek için proje Tasarımcısı ' nın **Ayarlar** sayfasını kullanın. Uygulama ayarları, uygulamanız için özellik ayarlarını ve diğer bilgileri dinamik olarak depolamanızı ve almanızı sağlar. Ayrıca, bir istemci bilgisayarda özel uygulama ve Kullanıcı tercihlerini korumanıza olanak sağlar. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme](../managing-application-settings-dotnet.md).
 
-**Ayarlar** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje**  > **Özellikler**' i seçin. Proje Tasarımcısı göründüğünde, **Ayarlar** sekmesini seçin.
+**Ayarlar** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** > **Özellikler**' i seçin. Proje Tasarımcısı göründüğünde, **Ayarlar** sekmesini seçin.
 
 ## <a name="header-bar"></a>Başlık çubuğu
 
@@ -39,13 +39,13 @@ Projenin uygulama ayarlarını belirtmek için proje Tasarımcısı ' nın **Aya
 
 **Kodu görüntüle**
 
-Projeler C# Için **kodu görüntüle** düğmesi, *Settings.cs* dosyasındaki kodu görüntülemenize olanak sağlar. Bu dosya, `Settings` nesnesinde belirli olayları işleyebilmenizi sağlayan `Settings` sınıfını tanımlar. Visual Basic dışındaki dillerde, Kullanıcı ayarlarını kalıcı hale getirmek için bu sarmalayıcı sınıfının `Save` yöntemini açıkça çağırmanız gerekir. Bunu genellikle ana formun **Kapanış** olay işleyicisinde yapabilirsiniz. @No__t_0 yöntemine yapılan çağrının bir örneği aşağıda verilmiştir:
+Projeler C# Için **kodu görüntüle** düğmesi, *Settings.cs* dosyasındaki kodu görüntülemenize olanak sağlar. Bu dosya, `Settings` nesnesinde belirli olayları işleyebilmenizi sağlayan `Settings` sınıfını tanımlar. Visual Basic dışındaki dillerde, Kullanıcı ayarlarını kalıcı hale getirmek için bu sarmalayıcı sınıfının `Save` yöntemini açıkça çağırmanız gerekir. Bunu genellikle ana formun **Kapanış** olay işleyicisinde yapabilirsiniz. `Save` yöntemine yapılan çağrının bir örneği aşağıda verilmiştir:
 
 ```csharp
 Properties.Settings.Default.Save();
 ```
 
-Visual Basic projeleri için, **kodu görüntüle** düğmesi *Settings. vb* dosyasındaki kodu görüntülemenize olanak sağlar. Bu dosya, `My.Settings` nesnesinde belirli olayları işleyebilmenizi sağlayan `MySettings` sınıfını tanımlar. @No__t_0 nesnesini kullanarak uygulama ayarlarına erişme hakkında daha fazla bilgi için bkz. [Access Application Settings](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
+Visual Basic projeleri için, **kodu görüntüle** düğmesi *Settings. vb* dosyasındaki kodu görüntülemenize olanak sağlar. Bu dosya, `My.Settings` nesnesinde belirli olayları işleyebilmenizi sağlayan `MySettings` sınıfını tanımlar. `My.Settings` nesnesini kullanarak uygulama ayarlarına erişme hakkında daha fazla bilgi için bkz. [Access Application Settings](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
 
 Uygulama ayarlarına erişme hakkında daha fazla bilgi için bkz. [Windows Forms Için uygulama ayarları](/dotnet/framework/winforms/advanced/application-settings-for-windows-forms).
 
@@ -69,7 +69,7 @@ Ayarlar yardımcı sınıfları hakkında daha fazla bilgi için bkz. [uygulama 
 
 Uygulama ayarının adını bu alana girin.
 
-**Türüyle**
+**Türü**
 
 Ayar için bir tür seçmek üzere açılır listeyi kullanın. En sık kullanılan türler, örneğin **dize**, **(bağlantı dizesi)** ve **System. Drawing. Font**gibi açılan listede görüntülenir. Listenin sonuna kadar **bul** ' u seçerek ve ardından **bir tür Seç** iletişim kutusunda bir tür seçerek başka bir tür seçebilirsiniz. Bir tür seçtikten sonra, açılan listedeki ortak türlere eklenir (yalnızca geçerli çözüm için).
 

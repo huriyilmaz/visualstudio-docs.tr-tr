@@ -28,17 +28,17 @@ helpviewer_keywords:
 - Text Editor [Visual Studio]
 - editors, global settings
 ms.assetid: 4ac21e48-3243-4141-9058-7eaf12b3cde7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee7d7ebab51a3edfeb84a95609c6bdad581b6753
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ebe526bbac859777edb4c2c78c65a1cdbd27fc85
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666206"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568418"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: metin Düzenleyicisi \> genel
 
@@ -54,7 +54,7 @@ Seçildiğinde, metni seçip fareyle geçerli belge veya başka bir açık belge
 
 Seçildiğinde, parametreleri veya öğe-değer çiftlerini ve eşleşen küme ayraçlarını ayıran sınırlayıcı karakterler vurgulanır.
 
-### <a name="track-changes"></a>Değişiklikleri izle
+### <a name="track-changes"></a>Değişiklikleri izleme
 
 Kod Düzenleyicisi seçildiğinde, dosyanın en son kaydedduğundan bu yana değiştirilen kodu işaretlemek için seçim kenar boşluğunda dikey sarı bir çizgi görünür. Değişiklikleri kaydettiğinizde dikey satırlar yeşil olur.
 
@@ -68,7 +68,7 @@ Seçildiğinde, projenin belirtilen kodlama kuralları kişisel projelerinizde k
 
 ### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Tanıma Git işlemini gerçekleştirmek için fare tıklamasını etkinleştir
 
-Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür. **Değiştirici tuşu kullan** açılır listesinden alt veya **CTRL**  + **alt** **tuşlarını da seçebilirsiniz** .
+Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür. **Değiştirici tuşu kullan** açılır listesinden alt veya **CTRL** + **alt** **tuşlarını da seçebilirsiniz** .
 
 Öğenin tanımını, kod düzenleyicisinde geçerli konumunuzla uzaklaşmadan bir pencerede görüntülemek için, **görünümü göz atma ' da aç** onay kutusunu seçin.
 

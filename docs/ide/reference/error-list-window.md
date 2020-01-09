@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Error List window
 - errors [Visual Studio], Error List window
 ms.assetid: b7f6d45a-733b-4ad8-bc2f-737a37509e56
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0921d89caa6428c45dc2522e78f58bde50f84be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c6d925f61714c524f97a57690870229b2340d21
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654441"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569669"
 ---
 # <a name="error-list-window"></a>Hata Listesi Penceresi
 
 > [!NOTE]
-> **Hata listesi** belirli bir hata iletisiyle ilgili bilgileri görüntüler. Hata numarasını veya hata dizesi metnini **Çıkış** penceresinden kopyalayabilirsiniz. **Çıkış** penceresini göstermek için **Ctrl** +**alt** +**O**tuşlarına basın. [Çıkış penceresine](../../ide/reference/output-window.md)bakın.
+> **Hata listesi** belirli bir hata iletisiyle ilgili bilgileri görüntüler. Hata numarasını veya hata dizesi metnini **Çıkış** penceresinden kopyalayabilirsiniz. **Çıkış** penceresini göstermek için **Ctrl**+**alt**+**O**tuşlarına basın. [Çıkış penceresine](../../ide/reference/output-window.md)bakın.
 
 **Hata listesi** penceresi aşağıdaki görevleri gerçekleştirmenize olanak sağlar:
 
@@ -41,7 +41,7 @@ ms.locfileid: "72654441"
 
 - Belirli terimleri arayın ve aramayı yalnızca geçerli proje veya belge ile kapsamını bulun.
 
-**Hata listesi**görüntülemek için,  >  hata listesi **görüntüle** 'yi seçin veya **CTRL** + **\\** +**E**tuşlarına basın.
+**Hata listesi**görüntülemek için, > hata listesi **görüntüle** 'yi seçin veya **CTRL**+ **\\** +**E**tuşlarına basın.
 
 Farklı bilgi düzeylerini görmek için **hatalar**, **Uyarılar**ve **iletiler** sekmelerini seçebilirsiniz.
 
@@ -74,7 +74,7 @@ Hata listesindeki belirli hataları bulmak için **hata listesi** araç çubuğu
 
 Hata listesini kopyalayabilir ve bir dosyaya kaydedebilirsiniz. Kopyalamak istediğiniz hataları seçin ve seçimi sağ tıklatın, ardından bağlam menüsünde **Kopyala**' yı seçin. Sonra hataları bir dosyaya yapıştırabilirsiniz. Hataları bir Excel elektronik tablosuna yapıştırırsanız, alanlar farklı sütunlar halinde görünür.
 
-## <a name="ui-element-list"></a>UI öğe listesi
+## <a name="ui-element-list"></a>UI Öğe Listesi
 
 Önem Derecesi
 
@@ -88,7 +88,7 @@ Açıklama
 
 Girişin metnini görüntüler.
 
-Project
+{1&gt;Proje (Project)&lt;1}
 
 Geçerli projenin adını görüntüler.
 
@@ -96,6 +96,6 @@ Dosya
 
 Dosya adını görüntüler.
 
-Çizgi
+Satır
 
 Sorunun gerçekleştiği satırı görüntüler.

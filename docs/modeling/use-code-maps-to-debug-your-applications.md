@@ -11,17 +11,17 @@ helpviewer_keywords:
 - mapping code relationships
 - code maps
 - mapping relationships in code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0b3c65c0a7e5cb08869a6d756ce0c443fa3bf2e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e01857878f927c619529d3bbfc63728f84f0b81d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748281"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594116"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
 
@@ -31,7 +31,7 @@ Kod haritaları, büyük kod tabanlarında, bilmediğiniz kodda veya eski kodda 
 
 **Bir yeşil ok, imlecinizin düzenleyicide nerede göründüğünü gösterir**
 
-Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin ayrıntıları için bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
+Komutlar ve kod haritaları ile çalışırken kullanabileceğiniz eylemler için bilgi [göz atma ve yeniden düzenleme kod eşlemeleri](../modeling/browse-and-rearrange-code-maps.md).
 
 > [!NOTE]
 > Kod haritaları oluşturmak ve düzenlemek için Visual Studio Enterprise sürümüne ihtiyacınız vardır. Visual Studio Community ve Professional sürümlerinde, Enterprise Edition 'da oluşturulan diyagramları açabilir, ancak düzenleyemezsiniz.
@@ -43,7 +43,7 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
 
  ![Kod Haritası &#45; yeniden üretme hatası](../modeling/media/codemapstoryboardpaint0.png)
 
- Bu nedenle, `Undo` yöntemini arayarak araştırmaya başlayabilirsiniz. @No__t_0 sınıfında bulabilirsiniz.
+ Bu nedenle, `Undo` yöntemini arayarak araştırmaya başlayabilirsiniz. `PaintCanvas` sınıfında bulabilirsiniz.
 
  ![Kod Haritası &#45; kod bulma](../modeling/media/codemapstoryboardpaint1.png)
 
@@ -90,16 +90,16 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
 
  ![Kod Haritası &#45; inceleme yöntemi tanımı](../modeling/media/codemapstoryboardpaint8.png)
 
- Şimdi `clear` yöntem tanımını incelemek için aynı adımları yineleyin. @No__t_0 `paintObjects` ve `history` bazı görevler gerçekleştireceğini öğrenirsiniz. Daha sonra `Repaint` yöntemini çağırır.
+ Şimdi `clear` yöntem tanımını incelemek için aynı adımları yineleyin. `clear` `paintObjects` ve `history`bazı görevler gerçekleştireceğini öğrenirsiniz. Daha sonra `Repaint` yöntemini çağırır.
 
  ![Kod Haritası &#45; inceleme yöntemi tanımı](../modeling/media/codemapstoryboardpaint9.png)
 
- Şimdi `addPaintObject` yöntemi tanımını inceleyin. Ayrıca `history` ve `paintObjects` bazı görevler gerçekleştirir. Ayrıca `Repaint` çağırır.
+ Şimdi `addPaintObject` yöntemi tanımını inceleyin. Ayrıca `history` ve `paintObjects`bazı görevler gerçekleştirir. Ayrıca `Repaint`çağırır.
 
  ![Kod Haritası &#45; inceleme yöntemi tanımı](../modeling/media/codemapstoryboardpaint10.png)
 
 ## <a name="find-the-problem-by-examining-the-map"></a>Eşlemeyi inceleyerek sorunu bulma
- @No__t_0 ve `paintObjects` çağrı `Repaint` değiştiren tüm yöntemler. @No__t_0 yöntemi, `undo` aynı alanları değiştirse de `Repaint` çağırmaz. Bu nedenle, `undo` `Repaint` çağırarak bu sorunu giderebilirsiniz.
+ `history` ve `paintObjects` çağrı `Repaint`değiştiren tüm yöntemler. `undo` yöntemi, `undo` aynı alanları değiştirse de `Repaint`çağırmaz. Bu nedenle, `undo``Repaint` çağırarak bu sorunu giderebilirsiniz.
 
  ![Kod eşlemesinde &#45; eksik yöntem çağrısı bul](../modeling/media/codemapstoryboardpaint11.png)
 
@@ -119,7 +119,7 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
  ![Kod Haritası &#45; paylaşma, dışarı aktarma, posta](../modeling/media/codemapstoryboardpaint13.png)
 
 ## <a name="fix-the-problem-and-show-what-you-did"></a>Sorunu giderme ve ne yaptığınızı gösterme
- Bu hatayı onarmak için `Repaint` çağrısını `undo` eklersiniz.
+ Bu hatayı onarmak için `Repaint` çağrısını `undo`eklersiniz.
 
  ![Kod eşlemesi &#45; eksik metot çağrısını Ekle](../modeling/media/codemapstoryboardpaint14.png)
 

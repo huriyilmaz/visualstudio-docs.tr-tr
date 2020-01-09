@@ -4,17 +4,17 @@ ms.date: 08/03/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - fxcop analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9791e2dbb6d4a82a49539216eda53d217140bd52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 06362bcf00bc35fdef701e26fe03694b038e88b1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649334"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587465"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Visual Studio 'da FxCop çözümleyicileri 'ni yükler
 
@@ -34,7 +34,7 @@ Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerde, [Microsoft. CodeAnalysi
 
 2. **Yükle**'yi seçin.
 
-   Visual Studio, Microsoft. Codeçözümleyiciler. Fxcopçözümleyiciler paketinin en son sürümünü yüklüyor. Derlemeler, **Çözüm Gezgini**  > **çözümleyiciler**altında görüntülenir.
+   Visual Studio, Microsoft. Codeçözümleyiciler. Fxcopçözümleyiciler paketinin en son sürümünü yüklüyor. Derlemeler, **Çözüm Gezgini** > **çözümleyiciler**altında görüntülenir.
 
    ![Çözüm Gezgini içinde düğüm Çözümleyicileri](media/solution-explorer-analyzers-node.png)
 
@@ -105,7 +105,7 @@ Visual Studio 2017 sürüm 15,5 ve sonraki sürümlerde, yönetilen projeler iç
 
 [Microsoft kod analizi 2019](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.MicrosoftCodeAnalysis2019) uzantısı, yönetilen projeler Için tüm FxCop çözümleyicileri içerir. Bu uzantıyı yüklemek için:
 
-1. Visual Studio 'da **uzantılar** > uzantıları **Yönet**' i seçin.
+1. Visual Studio 'da uzantıları **yönet**> **Uzantılar** ' ı seçin.
 
    **Uzantıları Yönet** iletişim kutusu açılır.
 
@@ -120,7 +120,7 @@ Visual Studio 2017 sürüm 15,5 ve sonraki sürümlerde, yönetilen projeler iç
 
 ::: moniker-end
 
-4. **İndir**' i seçin.
+4. **Download** (İndir) seçeneğini belirleyin.
 
    Uzantı indirilir.
 
@@ -142,13 +142,13 @@ Visual Studio 2017 sürüm 15,5 ve sonraki sürümlerde, yönetilen projeler iç
 
 ::: moniker range="vs-2017"
 
-Uzantının yüklenip yüklenmediğini denetlemek isterseniz, **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin. **Uzantılar ve güncelleştirmeler** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve ardından uzantıyı ada göre arayın.
+Uzantının yüklü olup olmadığını denetlemek istiyorsanız, **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin. **Uzantılar ve güncelleştirmeler** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve ardından uzantıyı ada göre arayın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Uzantının yüklenip yüklenmediğini denetlemek istiyorsanız, uzantıları  > **Uzantıları Yönet** **' i seçin**. **Uzantıları Yönet** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve uzantıyı ada göre arayın.
+Uzantının yüklenip yüklenmediğini denetlemek isterseniz, uzantıları **yönet** > **Uzantılar** ' ı seçin. **Uzantıları Yönet** iletişim kutusunda, sol taraftaki **yüklü** kategoriyi seçin ve uzantıyı ada göre arayın.
 
 ::: moniker-end
 

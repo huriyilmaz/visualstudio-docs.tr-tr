@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 83c6addb7aa6cf0b54398db351bee5825bc2d6f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3ccd83662700794e60572eed923d10452595d726
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648403"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586568"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Nasıl yapılır: varlık sınıflarına doğrulama ekleme
 Varlık sınıflarını *doğrulamak* , veri nesnelerine girilen değerlerin bir nesnenin şemasındaki kısıtlamalara ve ayrıca uygulama için belirlenen kurallara uygun olduğunu onaylama işlemidir. Temel alınan veritabanına güncelleştirmeleri göndermeden önce verilerin doğrulanması, hataları azaltan iyi bir uygulamadır. Ayrıca, bir uygulama ve veritabanı arasındaki gidiş dönüşlerin olası sayısını azaltır.
@@ -49,7 +49,7 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
 
     3. Kısmi sınıfa bir `OnCOLUMNNAMEChanging` yöntemi eklenir.
 
-    4. Önce bir değer girildiğini doğrulamak ve ardından sütun için girilen değerin uygulamanız için kabul edilebilir olduğundan emin olmak için aşağıdaki kodu ekleyin. @No__t_0 bağımsız değişkeni önerilen değeri içerir, bu nedenle geçerli bir değer olduğunu onaylamak için mantık ekleyin:
+    4. Önce bir değer girildiğini doğrulamak ve ardından sütun için girilen değerin uygulamanız için kabul edilebilir olduğundan emin olmak için aşağıdaki kodu ekleyin. `value` bağımsız değişkeni önerilen değeri içerir, bu nedenle geçerli bir değer olduğunu onaylamak için mantık ekleyin:
 
         ```vb
         If value.HasValue Then
@@ -62,7 +62,7 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
 
     Projeler C# için:
 
-    C# Projeler otomatik olarak olay işleyicileri oluşturmadığından, sütun değiştiren kısmi Yöntemler oluşturmak için IntelliSense 'i kullanabilirsiniz. @No__t_0 yazın ve ardından kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk girin. Doğrulama eklemek istediğiniz sütun için sütun değiştirme yöntemine tıklayın. Aşağıdaki kod, bir sütun değiştirme kısmi yöntemi seçtiğinizde oluşturulan koda benzer:
+    C# Projeler otomatik olarak olay işleyicileri oluşturmadığından, sütun değiştiren kısmi Yöntemler oluşturmak için IntelliSense 'i kullanabilirsiniz. `partial` yazın ve ardından kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk girin. Doğrulama eklemek istediğiniz sütun için sütun değiştirme yöntemine tıklayın. Aşağıdaki kod, bir sütun değiştirme kısmi yöntemi seçtiğinizde oluşturulan koda benzer:
 
     ```csharp
     partial void OnCOLUMNNAMEChanging(COLUMNDATATYPE value)
@@ -83,9 +83,9 @@ Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün var
 
 2. **O/R tasarımcısında** boş bir alana sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
-     Kod Düzenleyicisi `DataContext` için bir kısmi sınıfla açılır.
+     Kod Düzenleyicisi `DataContext`için bir kısmi sınıfla açılır.
 
-3. İmleci `DataContext` kısmi sınıfına yerleştirin.
+3. İmleci `DataContext`kısmi sınıfına yerleştirin.
 
 4. Visual Basic projeleri için:
 
@@ -106,7 +106,7 @@ Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün var
 
     Projeler C# için:
 
-    C# Projeler otomatik olarak olay işleyicileri oluşturmadığından, kısmi `UpdateCLASSNAME` yöntemini oluşturmak için IntelliSense 'i kullanabilirsiniz. @No__t_0 yazın ve ardından kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk girin. Doğrulama eklemek istediğiniz sınıf için Update metoduna tıklayın. Aşağıdaki kod, `UpdateCLASSNAME` kısmi bir yöntem seçtiğinizde oluşturulan koda benzer:
+    C# Projeler otomatik olarak olay işleyicileri oluşturmadığından, kısmi `UpdateCLASSNAME` yöntemini oluşturmak için IntelliSense 'i kullanabilirsiniz. `partial` yazın ve ardından kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk girin. Doğrulama eklemek istediğiniz sınıf için Update metoduna tıklayın. Aşağıdaki kod, `UpdateCLASSNAME` kısmi bir yöntem seçtiğinizde oluşturulan koda benzer:
 
     ```csharp
     partial void UpdateCLASSNAME(CLASSNAME instance)

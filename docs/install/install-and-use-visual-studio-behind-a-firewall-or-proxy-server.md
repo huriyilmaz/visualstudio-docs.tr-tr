@@ -10,21 +10,21 @@ helpviewer_keywords:
 - installing Visual Studio, administrator guide
 - list of domains, locations, URLs
 ms.assetid: ''
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 12b8f29f80f80a4322dc6a4cf43061696db6f370
-ms.sourcegitcommit: 4b911e768601992ad42dd5911dc6a01e1fe48588
+ms.openlocfilehash: c33de2ef29394cc09b6a65072439c745ca24af94
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413568"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594103"
 ---
-# <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusunun arkasında yükleyip kullanma
+# <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Yükleme ve bir güvenlik duvarı veya proxy sunucusunun arkasına Visual Studio ve Azure hizmetlerini kullanma
 
 Siz veya kuruluşunuz bir güvenlik duvarı veya proxy sunucusu gibi güvenlik önlemleri kullanıyorsa, ' yi yükleyip kullandığınızda en iyi deneyimlere sahip olmanız için, açmak isteyebileceğiniz bir "izin verilenler listesine" ve bağlantı noktalarına ve protokollere eklemek isteyebileceğiniz etki alanı URL 'Leri vardır.  Visual Studio ve Azure hizmetleri.
 
@@ -33,9 +33,9 @@ Siz veya kuruluşunuz bir güvenlik duvarı veya proxy sunucusu gibi güvenlik �
 * **[Visual Studio ve Azure hizmetlerini kullanın](#use-visual-studio-and-azure-services)** : Bu tablo, bir izin verilenler listesine eklemek için etki alanı URL 'lerini ve açılacak bağlantı noktalarını ve protokolleri içerir. böylece, istediğiniz tüm özelliklere ve hizmetlere erişebilirsiniz.
 
 > [!NOTE]
-> Bu makale Windows üzerinde Visual Studio için yazılmıştır, ancak bazı bilgiler bir güvenlik duvarı veya proxy sunucusunun arkasında [Mac için Visual Studio yüklemek](/visualstudio/mac/install-behind-a-firewall-or-proxy-server) için de geçerlidir.
+> Bu makalede, Windows üzerinde Visual Studio için yazılmıştır, ancak bazı bilgiler de geçerlidir [Mac için Visual Studio yükleme](/visualstudio/mac/install-behind-a-firewall-or-proxy-server) bir güvenlik duvarı veya proxy sunucusu arkasında.
 
-## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
+## <a name="install-visual-studio"></a>Visual Studio Yükle
 
 ### <a name="urls-to-add-to-an-allow-list"></a>İzin verilenler listesine eklenecek URL 'Ler
 
@@ -45,40 +45,40 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 
 | Etki Alanı | Amaç |
 | - | - |
-| go.microsoft.com | Kurulum URL 'SI çözümlemesi |
-| aka.ms | Kurulum URL 'SI çözümlemesi |
-| download.visualstudio.microsoft.com | Kurulum paketleri indirme konumu |
+| go.microsoft.com | Kurulum URL çözümleme |
+| aka.MS | Kurulum URL çözümleme |
+| download.VisualStudio.microsoft.com | Kurulum paketleri indirme konumu |
 | download.microsoft.com | Kurulum paketleri indirme konumu |
-| download.visualstudio.com | Kurulum paketleri indirme konumu |
-| dl.xamarin.com | Kurulum paketleri indirme konumu |
+| download.VisualStudio.com | Kurulum paketleri indirme konumu |
+| DL.xamarin.com | Kurulum paketleri indirme konumu |
 | xamarin-downloads.azureedge.net | Android SDK paketleri indirme listesi konumu |
-| marketplace.visualstudio.com | Visual Studio uzantıları indirme konumu |
+| marketplace.visualstudio.com | Visual Studio uzantılarını indirme konumu |
 | visualstudio.microsoft.com | Belge konumu |
 | docs.microsoft.com | Belge konumu |
-| msdn.microsoft.com | Belge konumu |
+| MSDN.microsoft.com | Belge konumu |
 | www\.microsoft.com | Belge konumu |
-| \*.windows.net | Oturum açma konumu |
-| \*.microsoftonline.com | Oturum açma konumu |
+| \*. windows.net | Oturum açma konumu |
+| \*. microsoftonline.com | Oturum açma konumu |
 | \*. live.com | Oturum açma konumu |
 | | |
 
-#### <a name="non-microsoft-domains"></a>Microsoft dışı etki alanları
+#### <a name="non-microsoft-domains"></a>Microsoft olmayan etki alanları
 
-| Etki Alanı | Bu iş yüklerini yükleme |
+| Etki Alanı | Bu iş yüklerini yükler |
 | - | - |
-| archive.apache.org | JavaScript ile mobil geliştirme (Cordova) |
-| cocos2d-x.org | İle C++ oyun geliştirme (Cocos) |
-| download.epicgames.com | (Unreal C++ Engine) ile oyun geliştirme |
-| download.oracle.com | JavaScript ile mobil geliştirme (Java SDK) <br /><br />.NET ile mobil geliştirme (Java SDK) |
-| download.unity3d.com | Unity ile oyun geliştirme (Unity) |
-| netstorage.unity3d.com | Unity ile oyun geliştirme (Unity) |
-| dl.google.com | JavaScript ile mobil geliştirme (Android SDK ve NDK, öykünücü) <br /><br />.NET ile mobil geliştirme (Android SDK ve NDK, öykünücü) |
-| www\.incredibuild.com | İle C++ oyun geliştirme (IncrediBuild) |
-| incredibuildvs2017i.azureedge.net | İle C++ oyun geliştirme (IncrediBuild) |
+| Archive.apache.org | (Cordova) JavaScript ile Mobil Geliştirme |
+| cocos2d-x.org | (Cocos) C++ ile oyun geliştirme |
+| download.epicgames.com | (Unreal Engine) C++ ile oyun geliştirme |
+| download.Oracle.com | JavaScript (Java SDK) ile Mobil Geliştirme <br /><br />.NET ile mobil geliştirme (Java SDK'sı) |
+| download.unity3d.com | (Unity) Unity ile oyun geliştirme |
+| netstorage.unity3d.com | (Unity) Unity ile oyun geliştirme |
+| DL.Google.com | (Android SDK ve NDK, öykünücü) bir JavaScript ile Mobil Geliştirme <br /><br />(Android SDK'sı ve NDK, öykünücü) bir .NET ile Mobil Geliştirme |
+| www\.incredibuild.com | (IncrediBuild) C++ ile oyun geliştirme |
+| incredibuildvs2017i.azureedge.net | (IncrediBuild) C++ ile oyun geliştirme |
 | www\.python.org | Python geliştirme (Python) <br /><br />Veri bilimi ve analitik uygulamalar (Python) |
 | | |
 
-## <a name="use-visual-studio-and-azure-services"></a>Visual Studio ve Azure hizmetlerini kullanma
+## <a name="use-visual-studio-and-azure-services"></a>Visual Studio ve Azure hizmetlerini kullanın
 
 ### <a name="urls-to-add-to-an-allow-list-and-ports-and-protocols-to-open"></a>Açılacak bir izin verilenler listesine ve bağlantı noktalarına ve protokollere eklenecek URL 'Ler
 
@@ -86,64 +86,64 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 
 | Hizmet veya senaryo | DNS uç noktası | Protokol | Bağlantı Noktası | Açıklama |
 | - | - | - | - | - |
-| URL<br>çözüm | go.microsoft.com<br><br>aka.ms | | | URL 'Leri kısaltmak için kullanılır ve daha uzun URL 'Ler olarak çözümlenir |
-| Başlangıç Sayfası | vsstartpage.blob.core.windows.net | | 443 | Başlangıç sayfasında gösterilen geliştirici haberlerini göstermek için kullanılır (yalnızca Visual Studio 2017) |
-| Yönlendirilen<br> Bildirim <br>Hizmet | targetednotifications.azurewebsites.net <br><br>www.research.net | | 80<br><br>443 | Yalnızca belirli makine/kullanım senaryosu türleri için geçerli olan bir listeye yönelik genel bildirim listesini filtrelemek için kullanılır |
-| uzantının <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
-| AI projesi <br>Tümleştirme | az861674.vo.msecnd.net | | 443<br> | Yeni projeleri kayıtlı Application Insights hesabınıza kullanım verilerini gönderecek şekilde yapılandırmak için kullanılır |
-| Kod lens | codelensprodscus1su0. app.<br>codelens.visualstudio.com | | 443 | Bir dosyanın en son ne zaman güncelleştirildiği, değişiklikler zaman çizelgesi, değişen iş öğeleri, yazarlar ve daha fazlası ile ilgili düzenleyicide bilgi sağlamak için kullanılır |
-| Deneysel <br>özellik etkinleştirme | visualstudio-devdiv-c2s.msedge.net | | 80 | Deneysel yeni özellikleri veya özellik değişikliklerini etkinleştirmek için kullanılır |
-| "Rozet" kimliği <br>(Kullanıcı adı ve avatar)<br>and <br>Dolaşım ayarları | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net | | 443 | IDE 'de kullanıcının adını ve avatarını göstermek için kullanılır <br><br> Ayar değişikliklerinin bir makineden diğerine dolaşımını sağlamak için kullanılır |
-| Uzak ayarlar | az700632.vo.msecnd.net | | 443 | Visual Studio 'da sorunlara neden olan bilinen uzantıları kapatmak için kullanılır |
-| Windows araçları | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | 'Dir | 443 | Windows uygulama mağazası senaryoları için kullanılır |
-| JSON şeması <br>Bulma <br><br>JSON şeması <br>Tanım<br><br>JSON şeması <br>İçin destek <br>Azure kaynakları | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http<br>'Dir<br><br>http<br><br>'Dir | 80<br>443 <br><br> 443<br><br>443 | Kullanıcının JSON belgelerini düzenlenirken kullanabileceği JSON şemalarını bulma ve indirme için kullanılır <br><br>JSON için meta doğrulama şemasını almak için kullanılır<br><br>Azure Resource Manager dağıtım şablonlarının geçerli şemasını almak için kullanılır |
-| NPM paketi <br>keşif | Skimdb.npmjs.com <br><br>Registry.npmjs.org <br><br>Api.npms.io | 'Dir<br><br>http/s<br><br>'Dir | 443<br><br>80/443<br><br>443 | NPM paketlerini aramak için gereklidir ve web projelerinde istemci tarafı betik paketi yüklemesi için kullanılır |
-| Bower paketi<br> simgeler<br><br>Bower paketi <br>search | Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http<br><br>'Dir<br>http<br>'Dir | 80<br><br>443<br>80<br>443 | Varsayılan Bower paket simgesini sağlar  <br><br>Bower paketlerini arama olanağı sağlar |
-| NuGet<br><br>NuGet paketi<br> keşif | Api.nuget.org <br>www.nuget.org <br>Nuget.org<br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com | 'Dir<br><br>http/s | 443<br><br>80/443<br> | İmzalanmış NuGet paketlerini doğrulamak için kullanılır.<br><br>NuGet paketlerini ve sürümlerini aramak için gereklidir |
-| GitHub depo bilgileri | api.github.com | 'Dir | 443 | Bower paketleri hakkında ek bilgi almak için gereklidir |
-| Web linters | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
-| Cookiecutter<br>Gezgin şablonu<br>keşif <br><br>Cookiecutter <br>Gezgin projesi<br> Oluşturulurken | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | 'Dir | 443<br> | Önerilen akışımız ve GitHub depolarımızdan çevrimiçi şablonları bulmaya yönelik kullanılır <br><br>Python paket dizininden (Pypı) bir cookiecutter Python paketinin isteğe bağlı bir kez yüklenmesini gerektiren bir cookiecutter şablonundan proje oluşturmak için kullanılır |
-| Python paketi <br>keşif<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> proje <br>templates | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | 'Dir | 443 | PIP paketleri arama olanağı sağlar<br><br>Eksik ise PIP 'yi otomatik olarak yüklemek için kullanılır <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Sınıflandırıcı projesi<br>-Kümeleme projesi <br> -Gerileme projesi <br> -PyKinect kullanan PyGame <br> -Pyvot projesi |
-| Office Web <br>eklenti <br> Bildirim <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | 'Dir | 443 | Office Web eklentileri için bildirimleri doğrulamak için kullanılır |
-| SharePoint ve <br>Office eklentileri | sharepoint.com | 'Dir | 443 | SharePoint Online 'da SharePoint ve Office eklentilerini yayımlamak ve test etmek için kullanılır |
-| İş akışı Yöneticisi <br>Test hizmeti<br> Ana bilgisayar | | http | 12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
-| Otomatik olarak toplanan <br>güvenilirlik istatistikleri <br>ve diğer <br>Müşteri deneyimi <br>Geliştirme programları (CEIP)<br> Azure SDK ve <br>SQL araçları için <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | 'Dir | 443 | Kullanıcıdan Microsoft 'a güvenilirlik istatistikleri (kilitlenme/askıda kalma verileri) göndermek için kullanılır. Windows Hata Bildirimi etkinse gerçek kilitlenme/askıda kalma dökümleri yine de karşıya yüklenir. Yalnızca istatistiksel bilgiler bastırılır; <br>Visual Studio 'ya yönelik Azure Araçları SDK uzantısı için anonim kullanım düzenlerini açığa çıkarmak için ve Visual Studio 'ya SQL araçları için kullanım desenleri için kullanılır |
-| Visual Studio <br> Müşteri deneyimi <br>Geliştirme programı (CEIP) <br><br>PerfWatson. exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | 'Dir | 443 | Anonim kullanım desenlerini ve hata günlüklerini toplamak için kullanılır <br><br>UI dondurma sorunlarını izlemek için kullanılır |
-| Oluşturma ve<br>Yönetim <br>Azure kaynakları | management.azure.com <br>management.core.windows.net | 'Dir | 443 | Web uygulamalarının, Azure Işlevlerinin veya Webişlerin yayımlanmasını desteklemek üzere Azure Web siteleri veya diğer kaynaklar oluşturmak için kullanılır |
-| Web yayımlama araçları güncelleştirildi <br>denetimler ve uzantılar <br>Öneri | marketplace.visualstudio.com | 'Dir | 443 | Güncelleştirilmiş yayımlama araçları 'nın kullanılabilirliğini denetlemek için kullanılır. Devre dışı bırakılırsa, Web yayımlaması için olası bir önerilen uzantı gösterilmeyebilir |
-| Güncelleştirilmiş Azure kaynağı <br>Oluşturma uç noktası bilgileri | \*.blob.core.windows.net | 'Dir | 443 | Belirli Azure hizmetleri için Azure kaynakları oluşturmak üzere kullanılan uç noktaları güncelleştirmek için kullanılır. Devre dışı bırakılırsa, bunun yerine son indirilen veya yerleşik uç nokta konumları kullanılır |
-| Uzaktan hata ayıklama ve <br>Uzaktan profil oluşturma <br>Azure Web siteleri | &#42;. cloudapp.net <br> &#42;. azurewebsites.net | | 4022 | Uzaktan hata ayıklayıcıyı Azure Web sitelerine eklemek için kullanılır. Devre dışı bırakılırsa, uzaktan hata ayıklayıcıyı Azure Web sitelerine eklemek işe alınacaktır |
-| Active Directory <br>Çıkarılamıyor | graph.windows.net | 'Dir | 443 | Yeni Azure Active Directory uygulamalar sağlamak için kullanılır. Office 365 Msgraf bağlantılı hizmet sağlayıcısı tarafından da kullanılır |
-| Azure İşlevleri <br>CLı güncelleştirmesi <br>Denetlemez | functionscdn.azureedge.net | 'Dir | 443 | Azure Işlevleri CLı 'nın güncelleştirilmiş sürümlerini denetlemek için kullanılır. Devre dışı bırakılırsa, bunun yerine CLı 'nın önbelleğe alınmış bir kopyası (veya Azure Işlevleri bileşeni tarafından taşınan kopya) kullanılacaktır |
-| Cordova | npmjs.org<br>gradle.org | http/s | 80/443 | HTTP, derleme sırasında Gradle indirmeleri için kullanılır; Projelerde Cordova eklentileri dahil etmek için HTTPS kullanılır |
-| Bulut Gezgini | 1. &#60;clusterendpoint&#62; <br>Service Fabric <br>2. &#60;yönetim uç noktası&#62;<br>Genel bulut exp <br>3. &#60;Graph uç noktası&#62;<br>Genel bulut exp<br>4. &#60;depolama hesabı uç noktası&#62;<br>Depolama düğümleri <br>5. &#60;Azure Portal URL 'leri&#62;<br>Genel bulut exp <br>6. &#60;Anahtar Kasası uç noktaları&#62; <br>Azure Resource Manager VM düğümleri<br>7. &#60;publicıpaddressofcluster&#62;<br>Uzaktan hata ayıklama ve ETW Izlemelerini Service Fabric | <br>1. https<br>2. https<br>3. https<br>4. https<br>5. https<br>6. https<br>7: TCP | 1.19080<br>2.443 <br>3.443 <br>4.443 <br>5.443 <br>6.443 <br>7. dinamik | 1. örnek: test12.eastus.cloudapp.com<br>2. abonelikleri alır ve Azure kaynaklarını alır/yönetir<br>3. Azure Stack abonelikleri alır<br>4. depolama kaynaklarını yönetir (örnek: mystorageaccount.blob.core.windows.net)<br>5. "portalda aç" bağlam menü seçeneği (Azure portal bir kaynak açar)<br>6. VM hata ayıklaması için Anahtar Kasası oluşturur ve kullanır (örnek: myvault.vault.azure.net) <br><br>7. bağlantı noktası bloğunu kümedeki düğümlerin sayısına ve kullanılabilir bağlantı noktalarına göre dinamik olarak ayırır. <br><br>Bir bağlantı noktası bloğu, en az 10 bağlantı noktası olan düğüm sayısını üç kez almaya çalışır.<br><br>Akış izlemeleri için 810 numaralı bağlantı noktası bloğunu almak için bir girişimde bulunuldu. Bu bağlantı noktası bloğundan birini zaten kullandıysanız, sonraki bloğu almak için bir deneme yapılır ve bu şekilde devam eder. (Yük dengeleyici boş, sonra 810 ' den gelen bağlantı noktaları en büyük olasılıkla kullanılır) <br><br>Benzer şekilde, hata ayıklama için, bağlantı noktası bloklarının dört kümesi ayrılmıştır: <br>-connectorPort: 30398, <br>-forwarderPort: 31398, <br>-forwarderPortx86:31399,<br>-fileUploadPort: 32398<br> |
-| Cloud Services | 1. RDP<br><br>2. core.windows.net <br><br>3. management.azure.com<br> management.core.windows.net <br><br>4. &#42;. blob.Core.Windows.net <br>&#42;. queue.core.windows.net<br>&#42;. table.core.windows.net <br><br>5. portal.azure.com <br><br>6. &#60;kullanıcının bulut hizmeti&#62;. cloudapp.net <br> &#60;kullanıcının VM&#62;'si. &#60;region&#62;. Azure.com | 1. rdp <br><br> 2. https <br><br> 3. https <br><br> 4. https <br><br> 5. https <br><br>6. TCP | 1.3389 <br><br> 2.443 <br><br> 3.443 <br><br>4.443 <br><br>5.443 <br><br> 6. a) 30398 <br> 6. b) 30400 <br> 6. c) 31398 <br> 6. d) 31400 <br> 6. e) 32398 <br> 6. f) 32400 | 1. Cloud Services sanal makineye Uzak Masaüstü <br><br> 2. özel tanılama yapılandırmasının depolama hesabı bileşeni <br><br> 3. Azure portal <br><br> 4. Sunucu Gezgini-Azure depolama &#42; , depolama hesabı olarak adlandırılır  <br><br> 5. portalı &#47; açmak için bağlantılar abonelik sertifikası &#47; yayımlama ayarları dosyasını indirin <br><br>6. a) bağlayıcı yerel bağlantı noktası, bulut hizmeti ve VM için uzaktan hata ayıklama<br> 6. b) bulut hizmeti ve VM için uzaktan hata ayıklama için bağlayıcı genel bağlantı noktası <br> 6. c) bulut hizmeti ve VM için uzaktan hata ayıklama için Iletici yerel bağlantı noktası <br> 6. d) bulut hizmeti ve VM için uzaktan hata ayıklama için Iletici genel bağlantı noktası  <br> 6. e) bulut hizmeti ve VM için uzaktan hata ayıklama için dosya Uploader yerel bağlantı noktası <br> 6. f) dosya yükleyici, bulut hizmeti ve VM için uzaktan hata ayıklama için genel bağlantı noktası |
-| Service Fabric | 1. <br>çalıştırmayan. Microsoft.com<br>aka.ms <br>go.microsoft.com <br><br>2. <br>vssftools.blob.core.windows.net <br>Vault.azure.com <br>Portal.azure.com <br><br> 3. &#42; Vault.Azure.net<br><br> 4. <br>app.vsaex.visualstudio.com<br>&#42;. vsspsext.visualstudio.com<br>clouds.vsrm.visualstudio.com <br>clouds.visualstudio.com<br>app.vssps.visualstudio.com <br>&#42;. visualstudio.com | 'Dir | 443 | 1. belge <br><br> 2. küme özelliği oluştur <br><br>3. &#42; Azure Anahtar Kasası adı (örnek:-test11220180112110108.Vault.Azure.net  <br><br>  4. &#42; dinamik bir örnektir (örnek: vsspsextprodch1su1.vsspsext.VisualStudio.com) |
-| Anlık Görüntü <br>Hata Ayıklayıcısı | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;SCM.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon (. exe) | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6. conkablosu <br> | 1.443<br> 2.443<br>3.80  <br>4.443<br> 5.443<br> 6.4022 (Visual Studio sürümüne bağımlı) | 1. App Service SKU boyutu için Query. JSON dosyası <br>2. çeşitli Azure RM çağrıları <br>3. ile site ısınma çağrısı  <br>4. müşterinin hedeflenen App Service kudu uç noktası <br>5. nuget.org içinde yayınlanan site uzantısı sürümünü sorgula <br>6. uzaktan hata ayıklama kanalı |
-| Azure Stream Analytics <br><br>'Tan | Management.azure.com | 'Dir | 443 | ASA işlerini görüntülemek, göndermek, çalıştırmak ve yönetmek için kullanılır <br><br> HDI kümelerine Gözatılacak ve HDI işlerini göndermek, tanılamak ve hatalarını ayıklamak için kullanılır |
-| Azure Data Lake | &#42;. azuredatalakestore.net <br>&#42;. azuredatalakeanalytics.net | 'Dir | 443 | İşleri derlemek, göndermek, görüntülemek, tanılamak ve hatalarını ayıklamak için kullanılır; ADLS dosyalarına Gözatılacak şekilde kullanılır; dosyaları karşıya yüklemek ve indirmek için kullanılır |
-| Paketleme hizmeti | [hesap]. VisualStudio. com <br/> [hesap].\*. visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | 'Dir | 443 | \*. npmjs.org, \*. NuGet.org ve \*. NodeJS.org yalnızca belirli derleme görev senaryolarında gereklidir (örneğin, NuGet araç yükleyicisi, düğüm araç Yükleyicisi) veya akışlarınız ile ortak yukarı akışlar kullanmayı amaçlıyorsanız. Paketleme hizmetinin temel işlevleri için diğer üç etki alanı gereklidir. |
-| Azure DevOps Services | \*. vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | | Azure DevOps Services ile bağlantı kurmak için kullanılır |
+| {1&gt;URL&lt;1}<br>çözüm | go.microsoft.com<br><br>aka.MS | | | Sonra uzun URL'leri çözümleyin URL'leri kısaltmak için kullanılan |
+| Başlangıç sayfası | vsstartpage.blob.core.windows.net | | 443 | Başlangıç sayfasında gösterilen geliştirici haberlerini göstermek için kullanılır (yalnızca Visual Studio 2017) |
+| Hedeflenen<br> Bildirim <br>Hizmet | targetednotifications.azurewebsites.NET <br><br>www.research.net | | 80<br><br>443 | Bildirimleri yalnızca belirli türlerini makineleri/kullanım senaryoları için uygun bir liste için genel bir listesini filtrelemek için kullanılan |
+| Uzantı <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;.microsoftonline.com <br>&#42;. live.com | | 443 | Yüklü uzantı bir güncelleştirme kullanılabilir olduğunda bildirim sağlamak için kullanılan <br><br> Bir oturum açma konumu olarak kullanılır |
+| Yapay ZEKA proje <br>Tümleştirme | az861674.vo.msecnd.net | | 443<br> | Kayıtlı Application ınsights'ı hesabınız için kullanım verileri göndermek için yeni projeler yapılandırmak için kullanılan |
+| Kod odağı | codelensprodscus1su0.app.<br>codelens.visualstudio.com | | 443 | Bir dosyanın en son ne zaman güncelleştirildiği, değişikliklerin zaman çizelgesi, değişiklikleri ilişkili iş öğeleri, yazarlar ve hakkında daha fazla bilgi Düzenleyicisi'nde sağlamak için kullanılan |
+| Deneysel <br>özellik etkinleştirme | visualstudio-devdiv-c2s.msedge.net | | 80 | Deneysel yeni özellikler ve özellik değişiklikleri etkinleştirmek için kullanılan |
+| Kimlik "rozet" <br>(kullanıcı adınızı ve Avatarınızı)<br>and <br>Dolaşım ayarları | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net | | 443 | Kullanıcı adı ve avatar IDE içinde görüntülemek için kullanılır <br><br> Ayar değişiklikleri bir makineden diğerine geçiş emin emin olmak için kullanılır |
+| Uzak bağlantı ayarları | az700632.vo.msecnd.net | | 443 | Visual Studio'da sorunlara neden olduğu bilinen uzantıları devre dışı bırakmak için kullanılır |
+| Windows Araçları | Developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | https | 443 | Windows app store senaryoları için kullanılır |
+| JSON şeması <br>Bulma <br><br>JSON şeması <br>Tanım<br><br>JSON şeması <br>desteği <br>Azure kaynakları | JSON.schemastore.org <br>schemastoreorg.azurewebsites.NET<br><br>JSON schema.org<br><br>schema.management.azure.com | http<br>https<br><br>http<br><br>https | 80<br>443 <br><br> 443<br><br>443 | Bulmak ve bir kullanıcı, JSON belgelerini düzenlerken kullanabilir ve JSON şemalarının indirmek için kullanılan <br><br>JSON için meta-doğrulama şeması almak için kullanılır<br><br>Geçerli şema için Azure Resource Manager dağıtım şablonlarını almak için kullanılır |
+| NPM paket <br>bulma | Skimdb.npmjs.com <br><br>Registry.npmjs.org <br><br>Api.npms.io | https<br><br>HTTP/s<br><br>https | 443<br><br>80/443<br><br>443 | NPM paketlerini arama için gereklidir ve istemci tarafı komut dosyası paket yüklemesi web projeleri için kullanılır |
+| Bower paket<br> simgeler<br><br>Bower paket <br>search | Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http<br><br>https<br>http<br>https | 80<br><br>443<br>80<br>443 | Varsayılan bower paket simgesinin sağlar  <br><br>Bower paketlerini için arama özelliğini sağlar. |
+| NuGet<br><br>NuGet paketi<br> bulma | Api.nuget.org <br>www.nuget.org <br>Nuget.org<br><br>crl3.digicert.com <br>crl4.digicert.com <br>OCSP.digicert.com <br>cacerts.digicert.com | https<br><br>HTTP/s | 443<br><br>80/443<br> | İmzalı NuGet paketlerini doğrulamak için kullanılır.<br><br>NuGet paketlerini ve sürümlerini arama için gerekli |
+| GitHub depo bilgilerini | api.github.com | https | 443 | Bower paketlerini hakkında ek bilgi almak için gerekli |
+| Web Lint | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
+| Cookiecutter<br>Explorer şablonu<br>bulma <br><br>Cookiecutter <br>Proje Gezgini<br> Oluşturma | api.github.com <br>RAW.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.Python.org | https | 443<br> | Önerilen akışımız ve GitHub depolarımızdan çevrimiçi şablonları bulmaya yönelik kullanılır <br><br>Bir cookiecutter Python paket Python paket dizinini (Pypı) tek seferlik bir isteğe bağlı yükleme gerektirir bir cookiecutter şablonundan bir proje oluşturmak için kullanılan |
+| Python paketi <br>bulma<br><br>Python paketi <br>yönetimi<br><br>Yeni <br>Python <br> proje <br>şablonlar | pypi.org<br> <br>pypi.Python.org <br>Bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | Pip paketleri için arama özelliğini sağlar.<br><br>Pip eksik olup olmadığını otomatik olarak yüklemek için kullanılan <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Projekt Klasifikace<br>-Kümeleme proje <br> -Projekt Regrese <br> -PyGame PyKinect kullanma <br> -Projekt Pyvot |
+| Office web <br>eklentisi <br> Bildirimi <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | https | 443 | Office web eklentileri için bildirimleri doğrulamak için kullanılır |
+| SharePoint ve <br>Office eklentileri | SharePoint.com | https | 443 | Yayımlama ve SharePoint ve Office eklentileri SharePoint Online'a test etmek için kullanılan |
+| İş Akışı Yöneticisi <br>Test hizmeti<br> Konak | | http | 12292 | SharePoint eklentileri iş akışları ile test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
+| Otomatik olarak toplanan <br>Güvenilirlik istatistikleri <br>ve diğer <br>Müşteri Deneyimi <br>Geliştirme programlar (CEIP)<br> Azure SDK'sı ve <br>SQL araçları <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https | 443 | Güvenilirlik istatistikleri (kilitlenme/yanıt vermemesine veriler) kullanıcıdan Microsoft'a göndermek için kullanılır. Windows Hata Raporlama etkinse, gerçek kilitlenme/yanıt vermemesine dökümleri hala karşıya yüklenecek; yalnızca istatistiksel bilgileri gizlenir; <br>Anonim kullanım düzenlerini kullanım desenleri ve Visual Studio için Azure Araçları SDK'sı uzantısı için Visual Studio Araçları SQL açığa çıkarmak için kullanılan |
+| {1&gt;Visual Studio&lt;1} <br> Müşteri Deneyimi <br>Geliştirme Programı (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https | 443 | Anonim kullanım desenleri ve Hata günlüklerini toplamak için kullanılan <br><br>Kullanıcı Arabirimi dondurma sorunları izlemek için kullanılan |
+| Oluşturma ve<br>Yönetimi <br>Azure kaynakları | Management.Azure.com <br>Management.Core.Windows.NET | https | 443 | Azure Web siteleri veya diğer kaynakları oluşturmak için kullanılan web uygulamaları, Azure işlevleri ve Web işleri yayımlama desteği |
+| Güncelleştirilmiş web yayımlama araçları <br>denetimler ve uzantısı <br>Önerileri | marketplace.visualstudio.com | https | 443 | İçin kullanılabilirliğini denetlemek için kullanılan güncelleştirme araçları yayımlayın. Devre dışı bırakılırsa, olası bir web yayımlama uzantısı önerilen görünmeyebilir |
+| Güncelleştirilmiş bir Azure kaynak <br>Uç nokta bilgileri oluşturma | \*.blob.core.windows.net | https | 443 | Azure kaynaklarının oluşturulmasını belirli Azure Hizmetleri için kullanılan uç noktalarını güncelleştirmek için kullanılır. Devre dışı bırakılırsa, en son indirilen veya yerleşik uç noktasında konumlar yerine kullanılır |
+| Uzaktan hata ayıklama ve <br>Uzak profil oluşturma <br>Azure Web siteleri | &#42;. cloudapp.net <br> &#42;. azurewebsites.net | | 4022 | Azure Web Siteleri'nde uzaktan hata ayıklayıcıyı eklemek için kullanılır. Devre dışı bırakılırsa, Azure Web Siteleri'nde uzaktan hata ayıklayıcı iliştirmek çalışmaz |
+| Active Directory <br>Graf | Graph.Windows.NET | https | 443 | Yeni Azure Active Directory uygulamaları sağlamak için kullanılır. Ayrıca Office 365 MSGraph - bağlı hizmet sağlayıcısı tarafından kullanılan |
+| Azure İşlevleri <br>CLI güncelleştirme <br>Onayla | functionscdn.azureedge.net | https | 443 | Azure işlevleri CLI'ın güncelleştirilmiş sürümlerini denetlemek için kullanılır. Devre dışı bırakılırsa, önbelleğe alınmış kopyasını (veya Azure işlevleri bileşen tarafından gerçekleştirilen kopyalama) CLI'yı yerine kullanılır |
+| Cordova | npmjs.org<br>gradle.org | HTTP/s | 80/443 | HTTP kullanılan Gradle derleme sırasında; indirmeleri için HTTPS, Cordova eklentileri projelerinde dahil etmek için kullanılır |
+| Cloud explorer | 1. &#60;clusterendpoint&#62; <br>Service Fabric <br>2. &#60;yönetim uç noktası&#62;<br>Genel bulut üs <br>3. &#60;graph uç noktası&#62;<br>Genel bulut üs<br>4. &#60;depolama hesabınızın uç noktası&#62;<br>Depolama düğümleri <br>5. &#60;azure portalı URL'leri&#62;<br>Genel bulut üs <br>6. &#60;anahtar kasası uç noktaları&#62; <br>Azure Resource Manager VM düğümleri<br>7. &#60;PublicIPAddressOfCluster&#62;<br>Service Fabric uzaktan hata ayıklama ve ETW izlemelerini | <br>1. https<br>2. https<br>3. https<br>4. https<br>5. https<br>6. https<br>7: tcp | 1. 19080<br>2. 443 <br>3. 443 <br>4. 443 <br>5. 443 <br>6. 443 <br>7. dinamik | 1. örnek: test12.eastus.cloudapp.com<br>2. abonelikleri alır ve Azure kaynaklarını alır/yönetir<br>3. Azure Stack abonelikleri alır<br>4. depolama kaynaklarını yönetir (örnek: mystorageaccount.blob.core.windows.net)<br>5. "portalda aç" bağlam menü seçeneği (Azure portal bir kaynak açar)<br>6. VM hata ayıklaması için Anahtar Kasası oluşturur ve kullanır (örnek: myvault.vault.azure.net) <br><br>7. bağlantı noktası bloğunu kümedeki düğümlerin sayısına ve kullanılabilir bağlantı noktalarına göre dinamik olarak ayırır. <br><br>Bir bağlantı noktası bloğu, en az 10 bağlantı noktaları ile düğüm sayısını üç kez almaya çalışacaktır.<br><br>Akış izlemeler için 810 bağlantı noktası bloğu alma denemesi yapılır. Bu bağlantı noktası blok birini zaten kullanılıyor, girişiminde sonraki saatleri alma vb. için yapılır. (Bağlantı noktalarından 810 büyük olasılıkla kullanılan sonra Yük Dengeleyici boş.) <br><br>Benzer şekilde, hata ayıklama için bağlantı noktaları blokları dört kümesini ayrılmıştır: <br>-connectorPort: 30398, <br>-forwarderPort: 31398, <br>-forwarderPortx86: 31399,<br>-fileUploadPort: 32398<br> |
+| Bulut Hizmetleri | 1. RDP<br><br>2. core.windows.net <br><br>3. management.azure.com<br> Management.Core.Windows.NET <br><br>4. &#42;. blob.core.windows.net <br>&#42;. queue.core.windows.net<br>&#42;. table.core.windows.net <br><br>5. portal.azure.com <br><br>6. &#60;kullanıcının bulut hizmeti&#62;. cloudapp.net <br> &#60;kullanıcının VM&#62;. &#60;bölge&#62;. azure.com | 1. rdp <br><br> 2. https <br><br> 3. https <br><br> 4. https <br><br> 5. https <br><br>6. tcp | 1. 3389 <br><br> 2. 443 <br><br> 3. 443 <br><br>4. 443 <br><br>5. 443 <br><br> 6. bir) 30398 <br> 6. b) 30400 <br> 6. c) 31398 <br> 6. d) 31400 <br> 6. e) 32398 <br> 6. f) 32400 | 1. Cloud Services sanal makineye Uzak Masaüstü <br><br> 2. özel tanılama yapılandırmasının depolama hesabı bileşeni <br><br> 3. Azure portal <br><br> 4. Sunucu Gezgini-Azure depolama &#42; , depolama hesabı olarak adlandırılır  <br><br> 5. portalı &#47; açmak için bağlantılar abonelik sertifikası &#47; yayımlama ayarları dosyasını indirin <br><br>6. bir) Bağlayıcısı ve bir bulut hizmeti VM için uzaktan hata ayıklama için yerel bağlantı noktası<br> 6. b) Bağlayıcısı ve bir bulut hizmeti VM için uzaktan hata ayıklama için ortak bağlantı noktası <br> 6. c) ileticisi ve bir bulut hizmeti VM için uzaktan hata ayıklama için yerel bağlantı noktası <br> 6. d) ileticisi ve bir bulut hizmeti VM için uzaktan hata ayıklama için genel bağlantı noktası  <br> 6. e) dosya yükleyici ve bir bulut hizmeti VM için uzaktan hata ayıklama için yerel bağlantı noktası <br> 6. f) bulut hizmeti ve VM için uzaktan hata ayıklama için genel bağlantı noktası yükleyici dosyası |
+| Service Fabric | 1. <br>OCS. Microsoft.com<br>aka.MS <br>go.microsoft.com <br><br>2. <br>vssftools.blob.core.windows.net <br>Vault.azure.com <br>Portal.azure.com <br><br> 3. &#42; vault.azure.net<br><br> 4. <br>app.vsaex.visualstudio.com<br>&#42;. vsspsext.visualstudio.com<br>clouds.vsrm.visualstudio.com <br>clouds.visualstudio.com<br>app.vssps.visualstudio.com <br>&#42;. visualstudio.com | https | 443 | 1. belge <br><br> 2. küme özelliği oluştur <br><br>3. &#42; Azure Anahtar Kasası adı (örnek:-test11220180112110108.Vault.Azure.net  <br><br>  4. &#42; dinamik bir örnektir (örnek: vsspsextprodch1su1.vsspsext.VisualStudio.com) |
+| Anlık görüntü <br>Hata Ayıklayıcısı | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon (. exe) | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6. conkablosu <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022 (visual Studio sürüm bağımlı) | 1. App Service SKU boyutu için Query. JSON dosyası <br>2. çeşitli Azure RM çağrıları <br>3. ile site ısınma çağrısı  <br>4. müşterinin hedeflenen App Service kudu uç noktası <br>5. nuget.org içinde yayınlanan site uzantısı sürümünü sorgula <br>6. uzaktan hata ayıklama kanalı |
+| Azure Stream Analytics <br><br>HDInsight | Management.Azure.com | https | 443 | Görüntülemek için kullanılan, gönderme, çalıştırma ve ASA işleri Yönet <br><br> HDI küme göz atın ve göndermek için kullanılan tanılama ve HDI işlerinde hata ayıklama |
+| Azure veri Gölü | &#42;. azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | Derleme, gönderme, görüntülemek, tanılama ve işlerinin hatalarını ayıklamak için kullanılır. ADLS dosyalara göz atmak için kullanılır. dosyaları yükleme ve indirme için kullanılan |
+| Paketleme hizmeti | [hesap].VisualStudio.com <br/> [hesap]. \*. visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | \*. Npmjs.org, \*. nuget.org, ve \*. nodejs.org, yalnızca belirli senaryoları görev oluşturmak için gereken (örneğin: NuGet araç yükleyicisi, düğüm aracı Yükleyicisi) veya genel yukarı akışlar akışlarınızı ile kullanmak istiyorsanız. Diğer üç etki alanı paketleme hizmeti temel işlevleri için gereklidir. |
+| Azure DevOps Services | \*. vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | | Azure DevOps hizmetleriyle bağlanmak için kullanılan |
 | | | | | |
 
-## <a name="troubleshoot-network-related-errors"></a>Ağla ilgili hatalarda sorun giderme
+## <a name="troubleshoot-network-related-errors"></a>Ağ ile ilgili hataları giderme
 
-Bazen, Visual Studio 'Yu bir güvenlik duvarı veya proxy sunucusu arkasında yüklerken veya kullandığınızda ağ veya ara sunucu ile ilgili hatalara de karşılaşabilirsiniz. Bu tür hata iletileri için çözümler hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklerken veya kullanırken ağla ilgili hatalara sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md) sayfası.
+Yüklediğinizde veya bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio'yu kullanın. Bazı durumlarda, ağ veya Ara sunucu ile ilgili hataları çalıştırılır. Bu hata iletileri için çözümleri hakkında daha fazla bilgi için bkz. [Visual Studio yüklediğinizde veya kullandığınızda ağ ile ilgili hataları giderme](troubleshooting-network-related-errors-in-visual-studio.md) sayfası.
 
 ## <a name="get-support"></a>Destek alın
 
-Yükleme ile ilgili sorunlar için [**canlı sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği sunuyoruz.
+Sunuyoruz bir [ **canlı sohbet** ](https://visualstudio.microsoft.com/vs/support/#talktous) yüklemeyle ilgili sorunlar için destek seçeneği (yalnızca İngilizce).
 
-İşte daha fazla destek seçeneği aşağıda verilmiştir:
+Birkaç diğer destek seçenekleri şunlardır:
 
-* Hem Visual Studio Yükleyicisi hem de Visual Studio IDE içinde görüntülenen [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanarak ürün sorunlarını bize bildirin.
-* [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'nda bir özellik önerin, ürün sorunlarını izleyebilir ve yanıt bulabilirsiniz.
-* [Gitter Community 'Deki Visual Studio görüşmesinde](https://gitter.im/Microsoft/VisualStudio)bizimle ve diğer Visual Studio geliştiricileriyle konuşmak için [GitHub](https://github.com/) hesabınızı kullanın.
+* Ürün sorunları bize bildirin [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) hem de Visual Studio yükleyicisi Visual Studio IDE içinde görünen bir araç.
+* Özellik önerin, ürün sorunları izlemek ve sorularınıza cevap bulun [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/).
+* Kullanım, [GitHub](https://github.com/) ABD ve diğer Visual Studio geliştiriciler konuşabilir hesabı [Gitter Topluluğu'nda Visual Studio konuşma](https://gitter.im/Microsoft/VisualStudio).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Live Share için bağlantı gereksinimleri](/visualstudio/liveshare/reference/connectivity/)
-* [Visual Studio 'nun ağ yüklemesi oluşturma](create-a-network-installation-of-visual-studio.md)
-* [Visual Studio 'da ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md)
+* [Visual Studio'nun bir ağ oluşturun](create-a-network-installation-of-visual-studio.md)
+* [Visual Studio'da ağ ile ilgili hataları giderme](troubleshooting-network-related-errors-in-visual-studio.md)
 * [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
-* [Bir güvenlik duvarı veya ara sunucu (Mac için Visual Studio) arkasına yüklemesi](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)
+* [(Mac için Visual Studio) bir güvenlik duvarı veya proxy sunucusunun arkasına yükleme](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)

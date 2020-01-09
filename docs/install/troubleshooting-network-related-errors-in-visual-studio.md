@@ -1,6 +1,6 @@
 ---
-title: Ağ veya proxy hatalarında sorun giderme
-description: Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio 'Yu yüklediğinizde veya kullandığınızda karşılaşabileceğiniz ağ veya ara sunucu ile ilgili hatalara yönelik çözümler bulun.
+title: Ağ ya da proxy hatalarını giderme
+description: Yüklediğinizde veya Visual Studio'yu bir güvenlik duvarı veya proxy sunucusu arkasında kullanın karşılaşabileceğiniz ağ veya Ara sunucu ile ilgili hatalar için çözüm bulun.
 ms.date: 10/29/2019
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - list of domains, locations, URLs, Visual Studio
 - proxy errors, Visual Studio
 ms.assetid: ''
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f1b928d04ae581b0df04ab74f3a756d359abc06f
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 44f18e64db08efa848c498f8956d61a79c24846d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713963"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594467"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>Visual Studio 'Yu yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme
 
-Visual Studio 'Yu bir güvenlik duvarı veya proxy sunucusu arkasında yüklerken veya kullandığınızda karşılaşabileceğiniz, en tipik ağ veya ara sunucu ile ilgili hatalara yönelik çözümler sunuyoruz.
+Yüklediğinizde veya Visual Studio'yu bir güvenlik duvarı veya proxy sunucusu arkasında kullanın karşılaşabileceğiniz en sık karşılaşılan ağ veya Ara sunucu ile ilgili hatalar için çözümleri sorunumuz.
 
-## <a name="error-proxy-authorization-required"></a>Hata: "proxy yetkilendirmesi gerekiyor"
+## <a name="error-proxy-authorization-required"></a>Hata: "gerekli Proxy Yetkilendirmesi"
 
-Bu hata genellikle, kullanıcılar bir ara sunucu üzerinden İnternet 'e bağlandığında oluşur ve proxy sunucusu, Visual Studio 'Nun bazı ağ kaynaklarına yaptığı çağrıları engeller.
+Bu hata genellikle kullanıcılar bir ara sunucu üzerinden İnternet'e bağlı ve proxy sunucu Visual Studio bazı ağ kaynaklarına yaptığı çağrılar engeller oluşur.
 
-### <a name="to-fix-this-proxy-error"></a>Bu proxy hatasını onarmak için
+### <a name="to-fix-this-proxy-error"></a>Bu proxy hatayı düzeltmek için
 
-- Visual Studio'yu yeniden başlatın. Proxy kimlik doğrulaması iletişim kutusu görünmelidir. İletişim kutusunda istendiğinde kimlik bilgilerinizi girin.
+- Visual Studio'yu yeniden başlatın. Bir ara sunucu kimlik doğrulaması iletişim kutusu görünür. İletişim kutusunda istendiğinde kimlik bilgilerinizi girin.
 
 - Visual Studio 'yu yeniden başlatmak sorunu çözmezse, proxy sunucunuz http:&#47;&#47;go.Microsoft.com adreslerinde kimlik bilgilerini istemez ancak. visualStudio.Microsoft.com adresleri için &#42;bunu yapar. Bu sunucular için, Visual Studio 'daki tüm oturum açma senaryolarına engel olmak için aşağıdaki URL 'Leri izin verilenler listesine eklemeyi göz önünde bulundurun:
 
   - &#42;. windows.net
 
-  - &#42;. microsoftonline.com
+  - &#42;.microsoftonline.com
 
   - &#42;. visualstudio.microsoft.com
 
@@ -48,17 +48,17 @@ Bu hata genellikle, kullanıcılar bir ara sunucu üzerinden İnternet 'e bağla
 
   - &#42;. live.com
 
-- Aksi takdirde, http:&#47;&#47;go.Microsoft.com adresini izin verilenler listesinden kaldırabilirsiniz. böylece, proxy kimlik doğrulama iletişim kutusu, Visual Studio olduğunda her ikisi de&#47;&#47;http: go.Microsoft.com adresi ve sunucu uç noktaları için görüntülenir başladığında.
+- Aksi takdirde, http:&#47;&#47;go.Microsoft.com adresini izin verilenler listesinden kaldırabilirsiniz. böylece, proxy kimlik doğrulama iletişim kutusu, Visual Studio yeniden başlatıldığında hem http&#47;&#47;: go.Microsoft.com adresi hem de sunucu uç noktaları için görüntülenir.
 
-  Veya
+  \- VEYA -
 
-- Proxy 'niz ile varsayılan kimlik bilgilerinizi kullanmak istiyorsanız, aşağıdaki işlemleri gerçekleştirebilirsiniz:
+- Ara sunucunuzda varsayılan kimlik bilgilerinizi kullanmak istiyorsanız, aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
 ::: moniker range="vs-2017"
 
-  1. : **%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE** veya **% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE**içindeki **devenv. exe. config** (devenv. exe yapılandırma dosyası) bulun.
+  1. Bulma **devenv.exe.config** (devenv.exe yapılandırma dosyası) içindeki: **%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE** veya **% ProgramFiles (x86) %\Microsoft Görsel Studio\2017\Enterprise\Common7\IDE**.
 
-  2. Yapılandırma dosyasında `<system.net>` bloğunu bulun ve şu kodu ekleyin:
+  2. Yapılandırma dosyasında bulunamıyor `<system.net>` engelleme ve sonra bu kodu ekleyin:
 
       ```xml
       <defaultProxy enabled="true" useDefaultCredentials="true">
@@ -66,7 +66,7 @@ Bu hata genellikle, kullanıcılar bir ara sunucu üzerinden İnternet 'e bağla
       </defaultProxy>
       ```
 
-      `proxyaddress="<http://<yourproxy:port#>`ağ için doğru proxy adresini eklemeniz gerekir.
+      Doğru ara sunucu adresi için ağınızda eklemelisiniz `proxyaddress="<http://<yourproxy:port#>`.
 
      > [!NOTE]
      > Daha fazla bilgi için [&lt;defaultProxy&gt; öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) ve [&lt;ara sunucu&gt; öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) sayfalarına bakın.
@@ -77,7 +77,7 @@ Bu hata genellikle, kullanıcılar bir ara sunucu üzerinden İnternet 'e bağla
 
   1. : **%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE** veya **% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Enterprise\Common7\IDE**içindeki **devenv. exe. config** (devenv. exe yapılandırma dosyası) bulun.
 
-  2. Yapılandırma dosyasında `<system.net>` bloğunu bulun ve şu kodu ekleyin:
+  2. Yapılandırma dosyasında bulunamıyor `<system.net>` engelleme ve sonra bu kodu ekleyin:
 
       ```xml
       <defaultProxy enabled="true" useDefaultCredentials="true">
@@ -85,53 +85,53 @@ Bu hata genellikle, kullanıcılar bir ara sunucu üzerinden İnternet 'e bağla
       </defaultProxy>
       ```
 
-      `proxyaddress="<http://<yourproxy:port#>`ağ için doğru proxy adresini eklemeniz gerekir.
+      Doğru ara sunucu adresi için ağınızda eklemelisiniz `proxyaddress="<http://<yourproxy:port#>`.
 
      > [!NOTE]
      > Daha fazla bilgi için [&lt;defaultProxy&gt; öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) ve [&lt;ara sunucu&gt; öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) sayfalarına bakın.
 
 ::: moniker-end
 
-## <a name="error-the-underlying-connection-was-closed"></a>Hata: "temeldeki bağlantı kapatıldı"
+## <a name="error-the-underlying-connection-was-closed"></a>Hata: "temel alınan bağlantı kapatıldı"
 
-Visual Studio 'Yu güvenlik duvarı olan bir özel ağda kullanıyorsanız, Visual Studio bazı ağ kaynaklarına bağlanabilmeyebilir. Bu kaynaklar, oturum açma ve lisanslama, NuGet ve Azure hizmetleri için Azure DevOps Services içerebilir. Visual Studio bu kaynaklardan birine bağlanamıyorsa aşağıdaki hata iletisini görebilirsiniz:
+Visual Studio, bir güvenlik duvarı özel bir ağda Visual Studio kullanıyorsanız, bazı ağ kaynaklarına bağlanmak mümkün olmayabilir. Azure DevOps Services oturum açma ve lisans, NuGet ve Azure Hizmetleri için bu kaynakları içerebilir. Bu kaynaklar birine bağlanmak Visual Studio başarısız olursa, aşağıdaki hata iletisini görebilirsiniz:
 
-  **Temel alınan bağlantı kapatıldı: gönderme sırasında beklenmeyen bir hata oluştu**
+  **Temel alınan bağlantı kapatıldı: Gönder beklenmeyen bir hata oluştu**
 
-Visual Studio, ağ kaynaklarına bağlanmak için Aktarım Katmanı Güvenliği (TLS) 1,2 protokolünü kullanır. Bazı özel ağlardaki güvenlik gereçleri, Visual Studio TLS 1,2 kullandığında bazı sunucu bağlantılarını engeller.
+Visual Studio, ağ kaynaklarına bağlanmak için Aktarım Katmanı Güvenliği (TLS) 1.2 protokolünü kullanır. Visual Studio TLS 1.2 kullandığı durumlarda, bazı özel ağlar üzerindeki güvenlik gereçlerinin bazı sunucu bağlantılarını engelleyin.
 
-### <a name="to-fix-this-connection-error"></a>Bu bağlantı hatasını onarmak için
+### <a name="to-fix-this-connection-error"></a>Bu bağlantı hatayı düzeltmek için
 
-Aşağıdaki URL 'Ler için bağlantıları etkinleştirin:
+Aşağıdaki URL'ler için bağlantılar sağlar:
 
-- https:&#47;&#47;Management.Core.Windows.net
+- https:&#47;&#47;management.core.windows.net
 
-- https:&#47;&#47;App.vssps.VisualStudio.com
+- https:&#47;&#47;app.vssps.visualstudio.com
 
-- https:&#47;&#47;Login.microsoftonline.com
+- https:&#47;&#47;login.microsoftonline.com
 
-- https:&#47;&#47;Login.Live.com
+- https:&#47;&#47;login.live.com
 
-- https:&#47;&#47;go.Microsoft.com
+- https:&#47;&#47;go.microsoft.com
 
-- https:&#47;&#47;Graph.Windows.net
+- https:&#47;&#47;graph.windows.net
 
-- https:&#47;&#47;App.vsspsext.VisualStudio.com
+- https:&#47;&#47;app.vsspsext.visualstudio.com
 
 - &#42;. azurewebsites.net (Azure bağlantıları için)
 
 - &#42;. visualstudio.microsoft.com
 
-- cdn.vsassets.io (içerik teslim ağı veya CDN, içerik barındırır)
+- CDN.vsassets.io (ana içerik teslim ağı veya CDN, içerik)
 
-- &#42;. gallerycdn.vsassets.io (Azure DevOps Services uzantıları barındırır)
+- &#42;. gallerycdn.vsassets.io (ana Azure DevOps Hizmetleri uzantıları)
 
-- static2.sharepointonline.com (Visual Studio 'Nun Office UI Fabric Kit 'te yazı tipleri gibi kullandığı kaynakları barındırır)
+- static2.sharepointonline.com (Office UI Fabric Seti'nde yazı tipleri gibi Visual Studio kullanan ana bilgisayar kaynakları)
 
 - &#42;. nuget.org (NuGet bağlantıları için)
 
   > [!NOTE]
-  > Özel olarak sahip olan NuGet sunucusu URL 'Leri bu listeye dahil olmayabilir. %APPData%\Nuget\NuGet.Config. ' de kullandığınız NuGet sunucularını kontrol edebilirsiniz
+  > Özel NuGet sunucu URL'leri bu listede bulunmayabilir ait. % APPData%\Nuget\NuGet.Config kullanmakta olduğunuz NuGet sunucularını denetleyebilirsiniz.
 
 ## <a name="error-failed-to-parse-id-from-parent-process"></a>Hata: "KIMLIĞI üst işlemden ayrıştırılamadı"
 

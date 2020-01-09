@@ -3,20 +3,20 @@ title: Yaygın Hızlı Eylemler
 description: Visual Basic ve için C# en popüler hızlı eylemler, yanlış yazılmış anahtar sözcükleri veya sembolleri düzeltme, birleştirme çakışmalarını çözme, gerekli içeri aktarmaları kaldırma, türleri oluşturma, yerel değişkenlere giriş vb.
 ms.date: 03/28/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bad97ac5574afd65103263b2ce51a4dfba02741c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db7a3a550f6bfc1250679eeefa0ba3ec6291eef0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652244"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585528"
 ---
 # <a name="common-quick-actions"></a>Yaygın Hızlı Eylemler
 
@@ -30,7 +30,7 @@ Bu bölümdeki hızlı eylemler, bir yapılandırmanın başarısız olmasına n
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>Yanlış yazılmış sembol veya anahtar sözcüğü düzelt
 
-Visual Studio 'da bir tür veya anahtar sözcüğü yanlışlıkla yanlış yazarsanız, bu hızlı eylem sizin için otomatik olarak düzeltir. Bu öğeleri ampul menüsünde **"\<misspelled sözcüğü > ' ' \<correct word > '" olarak değiştirin**. Örneğin:
+Visual Studio 'da bir tür veya anahtar sözcüğü yanlışlıkla yanlış yazarsanız, bu hızlı eylem sizin için otomatik olarak düzeltir. Bu öğeleri ampul menüsünde **"Değiştir"\<yanlış yazılmış kelime > '\<doğru sözcüğü > ' "** olarak görürsünüz. Örneğin:
 
 ```csharp
 // Before
@@ -58,7 +58,7 @@ Function MyFunction as Integer
 End Function
 ```
 
-| Hata KIMLIĞI | Uygun diller |
+| Hata Kimliği | Uygun diller |
 | - | - |
 | CS0103, BC30002 | C# ve Visual Basic |
 
@@ -88,7 +88,7 @@ private void MyMethod()
 }
 ```
 
-| Hata KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Hata Kimliği | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | CS8300, BC37284 | C# ve Visual Basic | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -98,7 +98,7 @@ private void MyMethod()
 
 **Gereksiz kullanımlar/Içeri aktarmalar kaldırma** hızlı eylemi, geçerli dosya için kullanılmayan `using` ve `Import` yönergeleri kaldırır. Bu öğeyi seçtiğinizde, kullanılmayan ad alanı içeri aktarmaları kaldırılır.
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | - | - |
 | C# ve Visual Basic | Visual Studio 2015 ve üzeri |
 
@@ -126,7 +126,7 @@ Dim number as Integer = CType(3, Integer)
 Dim number as Integer = 3
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0004 | C# ve Visual Basic | Visual Studio 2015 ve üzeri |
 
@@ -153,7 +153,7 @@ public MyMethod()
 }
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | CS0219, BC42024 | C# ve Visual Basic | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -171,7 +171,7 @@ void DoWork(CancellationToken cancellationToken = default(CancellationToken)) { 
 void DoWork(CancellationToken cancellationToken = default) { ... }
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0034 | C#7.1 + | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -279,7 +279,7 @@ Select Case myEnum
 End Select
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0010 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -313,7 +313,7 @@ class MyClass
 }
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -329,7 +329,7 @@ var date = new DateTime(1997, 7, 8);
 var date = new DateTime(year: 1997, month: 7, day: 8);
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -351,7 +351,7 @@ if (true)
 }
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0011 | C# | Visual Studio 2017 ve üzeri |
 
@@ -385,7 +385,7 @@ static private int thisFieldIsPublic;
 private static int thisFieldIsPublic;
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0036 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,5 ve üzeri |
 | IDE0040 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,5 ve üzeri |
@@ -443,7 +443,7 @@ Select Case obj
 End Select
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
 | C# ve Visual Basic| Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -475,7 +475,7 @@ Dim num as Integer = 3
 Dim s As String = $"My string with {num} in the middle"
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
 | C#6.0 + ve Visual Basic 14 + | Visual Studio 2017 ve üzeri |
 
@@ -505,7 +505,7 @@ c.Age = 21
 Dim c = New Customer() With {.Age = 21}
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0017 | C# ve Visual Basic | Visual Studio 2017 ve üzeri |
 
@@ -539,7 +539,7 @@ list.Add(3)
 Dim list = New List(Of Integer) From {1, 2, 3}
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0028 | C# ve Visual Basic | Visual Studio 2017 ve üzeri |
 
@@ -580,7 +580,7 @@ Public Property Name As String
 End Property
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | -------------------- | ---------------- |
 | C# ve Visual Basic | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
@@ -633,7 +633,7 @@ class MyClass4
 }
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0021-27 | C#6.0 + | Visual Studio 2017 ve üzeri |
 
@@ -660,7 +660,7 @@ int fibonacci(int n)
 
 ### <a name="convert-referenceequals-to-is-null"></a>' ReferenceEquals ' öğesini ' null ' olarak Dönüştür
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0041 | C#7.0 + | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
@@ -684,7 +684,7 @@ if (value is null)
 }
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0039 | C#7.0 + | Visual Studio 2017 sürüm 15. ve üzeri |
 
@@ -726,7 +726,7 @@ if (o is string s)
 }
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0020 | C#7.0 + | Visual Studio 2017 ve üzeri |
 | IDE0019 | C#7.0 + | Visual Studio 2017 ve üzeri |
@@ -755,7 +755,7 @@ Dim countdown As Integer = 2097152
 Dim countdown As Integer = &H200000
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | C#7.0 + ve Visual Basic 14 + | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -783,7 +783,7 @@ Dim countdown As Integer = 1000000
 Dim countdown As Integer = 1_000_000
 ```
 
-| Uygun diller | Desteklenen sürüm |
+| Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | C#7.0 + ve Visual Basic 14 + | Visual Studio 2017 sürüm 15,3 ve üzeri |
 
@@ -815,7 +815,7 @@ Dim customer As (name As String, age As Integer) = GetCustomer()
 Dim name = customer.name
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0033 | C#7.0 + ve Visual Basic 15 + | Visual Studio 2017 ve üzeri |
 
@@ -843,7 +843,7 @@ var tuple = (age: age, name: name);
 var tuple = (age, name);
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0037 | C# | Visual Studio 2017 sürüm 15,5 ve üzeri |
 | IDE0037 | C#7.1 + | Visual Studio 2017 sürüm 15,5 ve üzeri |
@@ -870,7 +870,7 @@ Console.WriteLine($"{name} {age}");
 Console.WriteLine($"{x} {y}");
 ```
 
-| Tanılama KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Tanılama KIMLIĞI | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | IDE0042 | C#7.0 + | Visual Studio 2017 sürüm 15,5 ve üzeri |
 
@@ -908,7 +908,7 @@ Function MyAsyncMethod() As Integer
 End Function
 ```
 
-| Hata KIMLIĞI | Uygun diller |
+| Hata Kimliği | Uygun diller |
 | ------- | -------------------- |
 | CS1998, BC42356 | C# ve Visual Basic |
 
@@ -946,7 +946,7 @@ Async Function MyAsyncMethod() As Task(Of Integer)
 End Function
 ```
 
-| Hata KIMLIĞI | Uygun diller | Desteklenen sürüm |
+| Hata Kimliği | Uygun diller | Desteklenen Sürüm |
 | ------- | -------------------- | ---------------- |
 | CS4032, BC37057 | C# ve Visual Basic | Visual Studio 2017 ve üzeri |
 

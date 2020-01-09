@@ -2,17 +2,17 @@
 title: Kaynak dosyalar ve C++ üstbilgi dosyaları arasındaki bağımlılıklara bakın
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbba97f47c3ac0686bad15c3a1882e1e9bd85057
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654191"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597249"
 ---
 # <a name="code-maps-for-c-projects"></a>Projeler için C++ kod haritaları
 
@@ -20,7 +20,7 @@ Projeler için C++ daha fazla kapsamlı haritalar oluşturmak istiyorsanız, bu 
 
 Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi ( *. h* veya `#include`) dosyaları için kod haritaları oluşturmeyebilirsiniz. Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz.
 
-- Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için **mimari**  > **Içerme dosyaları grafiğini oluştur**' u seçin.
+- Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için **mimari** > **Içerme dosyaları grafiğini oluştur**' u seçin.
 
    ![Yerel kod için bağımlılık grafiği](../modeling/media/dependencygraphgeneral_nativecode.png)
 
@@ -38,7 +38,7 @@ Bu öğeler C ve C++ Code için desteklenmez:
 
 Bu sorunlar, C ve C++ Code için kod haritaları oluşturduğunuzda oluşabilir:
 
-|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
+|**Sorun**|**Olası nedeni**|**Çözümleme**|
 |-|-|-|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
 |**Mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda Visual Studio yanıt vermemeye çalışır.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|

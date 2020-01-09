@@ -2,24 +2,24 @@
 title: Hızlı Eylemler, hafif bulbs ve screwdrivers
 ms.date: 03/28/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 18df1378218d2188ee78d1b1b2a991e35f5ed689
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ce8ce85e027a7ed7f78d0da1f68f328c1ca103d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666751"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596963"
 ---
 # <a name="quick-actions"></a>Hızlı Eylemler
 
-Hızlı Eylemler, tek bir eylem ile kodu kolayca yeniden düzenleme, oluşturma veya başka şekilde değiştirmenize olanak sağlar. Hızlı Eylemler, [C++](/cpp/ide/writing-and-refactoring-code-cpp)ve Visual Basic C#kod dosyaları için kullanılabilir. Bazı eylemler bir dile özeldir ve diğerleri tüm diller için geçerlidir.
+Hızlı Eylemler, kolayca yeniden düzenleme sağlar, oluşturmak veya aksi halde kodu tek eylemle değiştirin. Hızlı Eylemler, [C++](/cpp/ide/writing-and-refactoring-code-cpp)ve Visual Basic C#kod dosyaları için kullanılabilir. Bazı eylemler bir dile özeldir ve diğerleri tüm diller için geçerlidir.
 
 Hızlı eylemler şu Işlemler için kullanılabilir:
 
@@ -44,13 +44,13 @@ Hızlı eylemler şu Işlemler için kullanılabilir:
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. yeniden [düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring).
 
-Hızlı Eylemler, ampulü ![light ampul simgesi ](media/light-bulb-icon.png) veya screwsürücü ![screwdriver simgesi ](media/screwdriver-icon.png) simgeleri kullanılarak veya **Ctrl** + tuşlarına basarak uygulanabilir **.** imlecinizin bir eylemin kullanılabildiği bir kod satırundayken. Bir hata olduğunu gösteren kırmızı renkli bir çizgi varsa ve Visual Studio 'Nun bu hata için kullanılabilir bir düzeltilmesi varsa ![error ampul simgesi ](media/error-light-bulb-icon.png) bir hata görürsünüz.
+Hızlı Eylemler, ampul ![ampul simgesi](media/light-bulb-icon.png) veya screwsürücü ![screwsürücü simgesi](media/screwdriver-icon.png) simgeleri kullanılarak veya **Ctrl**+tuşlarına basarak uygulanabilir **.** imlecinizin bir eylemin kullanılabildiği bir kod satırundayken. Bir hata olduğunu gösteren kırmızı renkli bir çizgi varsa ve Visual Studio 'Nun bu hatayla ilgili bir düzeltilmesi varsa, hata ampulü ![bir hata ampul](media/error-light-bulb-icon.png) simgesi görürsünüz.
 
 Herhangi bir dilde üçüncü taraflar, bir SDK 'nın parçası olarak özel tanılama ve öneriler sağlayabilir ve bu kurallara göre Visual Studio Light bulbs görüntülenir.
 
 ## <a name="icons"></a>Simgeler
 
-Hızlı bir eylem kullanılabilir olduğunda görüntülenen simge, düzeltilmesi veya kullanılabilir yeniden düzenleme türü hakkında bir gösterge sağlar. *Screwdriver* ![screwdriver simgesi ](media/screwdriver-icon.png) simge, yalnızca kodu değiştirmek için kullanılabilen eylemlerin olduğunu gösterir, ancak bunları kullanmamanız gerekmez. *Sarı* ampul ![light ampul simgesi ](media/light-bulb-icon.png) simge, kodunuzu geliştirmek için yapmanız *gereken* eylemler olduğunu gösterir. Ampul *![error ampul* simgesi ](media/error-light-bulb-icon.png) simge, kodunuzda bir hatayı düzelten bir eylem olduğunu gösterir.
+Hızlı bir eylem kullanılabilir olduğunda görüntülenen simge, düzeltilmesi veya kullanılabilir yeniden düzenleme türü hakkında bir gösterge sağlar. *Screwdriver* ![screwsürücü simgesi](media/screwdriver-icon.png) simge, yalnızca kodu değiştirmek için kullanılabilen eylemlerin olduğunu gösterir, ancak bunları kullanmamanız gerekmez. *Sarı* ampul ![ampul simgesi](media/light-bulb-icon.png) simge, kodunuzu geliştirmek için yapmanız *gereken* eylemler olduğunu gösterir. Hata *ışığı ![hatası* ampul simgesi](media/error-light-bulb-icon.png) simge, kodunuzda bir hatayı düzelten bir eylem olduğunu gösterir.
 
 ## <a name="to-see-a-light-bulb-or-screwdriver"></a>Ampul veya screwsürücüyü görmek için
 
@@ -62,7 +62,7 @@ Bir çözüm varsa, hafif bulbs görünür:
 
 - Giriş işaretini (imleç) geçerli kod satırına taşıdığınızda düzenleyicinin sol kenar boşluğunda
 
-Ayrıca, **Ctrl** + de basabilirsiniz **.** kullanılabilir hızlı eylemlerin ve yeniden düzenlemeler listesini görmek için satırda herhangi bir yerde.
+Ayrıca, **Ctrl**+de basabilirsiniz **.** kullanılabilir hızlı eylemlerin ve yeniden düzenlemeler listesini görmek için satırda herhangi bir yerde.
 
 Olası düzeltmeleri görmek için, ampul ' ın yanındaki aşağı oku veya **olası düzeltmeleri göster** bağlantısını seçin. Kullanılabilir hızlı eylemlerin bir listesi görüntülenir.
 

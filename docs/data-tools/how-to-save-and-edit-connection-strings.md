@@ -3,17 +3,17 @@ title: 'Nasıl Yapılır: Bağlantı Dizelerini Kaydetme ve Düzenleme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f8ef3a2c-029c-423b-9d9e-a4f1add4f640
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a78194ae6e4f462ec732e1ae2a1981aa8d857978
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ed0f0105383667e1122d6636a3baab3aa925a742
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641808"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586464"
 ---
 # <a name="how-to-save-and-edit-connection-strings"></a>Nasıl yapılır: bağlantı dizelerini kaydetme ve düzenleme
 Visual Studio uygulamalarındaki bağlantı dizeleri uygulama yapılandırma dosyasına (uygulama ayarları olarak da anılır) veya doğrudan uygulamanızda sabit kodlanmış olarak kaydedilir. Bağlantı dizelerini uygulama yapılandırma dosyasına kaydetmek, uygulamanızı sürdürme görevini basitleştirir. Bağlantı dizesinin değiştirilmesi gerekiyorsa, bunu uygulama ayarları dosyasında güncelleştirebilirsiniz (kaynak kodda değiştirmek ve uygulamayı yeniden derlemek zorunda kalmak yerine).
@@ -28,7 +28,7 @@ Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](/dotnet/framework/da
 
 ## <a name="to-save-a-connection-string-directly-into-application-settings"></a>Bağlantı dizesini doğrudan uygulama ayarlarına kaydetmek için
 1. **Çözüm Gezgini**, proje **tasarımcısını**açmak için **projem** simgesine (Visual Basic) veya **Özellikler** simgesine (C#) çift tıklayın.
-1. **Ayarlar** sekmesini seçin.
+1. Seçin **ayarları** sekmesi.
 1. Bağlantı dizesi için bir **ad** girin. Koddaki bağlantı dizesine erişirken bu adı inceleyin.
 1. **Türü** (**bağlantı dizesi**) olarak ayarlayın.
 1. **Kapsamı** **uygulama**olarak ayarlayın.
@@ -39,7 +39,7 @@ Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](/dotnet/framework/da
 
 ### <a name="to-edit-a-connection-string-stored-in-application-settings"></a>Uygulama ayarlarında depolanan bir bağlantı dizesini düzenlemek için
 1. **Çözüm Gezgini**, proje **tasarımcısını**açmak için **projem** simgesine (Visual Basic) veya **Özellikler** simgesine (C#) çift tıklayın.
-1. **Ayarlar** sekmesini seçin.
+1. Seçin **ayarları** sekmesi.
 1. Düzenlemek istediğiniz bağlantıyı bulun ve **değer** alanındaki metni seçin.
 1. **Değer** alanındaki bağlantı dizesini düzenleyin veya bağlantı **özellikleri** iletişim kutusuyla bağlantınızı düzenlemek için **değer** alanındaki **üç nokta** (...) düğmesine tıklayın.
 

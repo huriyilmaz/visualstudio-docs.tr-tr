@@ -13,28 +13,28 @@ helpviewer_keywords:
 - data [Visual Studio], updating
 - saving data
 ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b54aeb91ea873b23b1e68731e40542df04fcbd01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ffb5139e148fba6facd1d437d4f7977d8d7e0b28
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648120"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586087"
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter kullanarak verileri güncelleştirme
 
-Veri kümenizdeki veriler değiştirildikten ve doğrulandıktan sonra, bir [TableAdapter](../data-tools/create-and-configure-tableadapters.md)'ın `Update` yöntemini çağırarak güncelleştirilmiş verileri bir veritabanına geri gönderebilirsiniz. @No__t_0 yöntemi tek bir veri tablosunu güncelleştirir ve tablodaki her bir veri satırının <xref:System.Data.DataRow.RowState%2A> göre doğru komutu (INSERT, UPDATE veya DELETE) çalıştırır. Bir veri kümesinde ilgili tablolar olduğunda Visual Studio, güncelleştirmeleri yapmak için kullandığınız bir TableAdapterManager sınıfı oluşturur. TableAdapterManager sınıfı, güncelleştirmelerin veritabanında tanımlanan yabancı anahtar kısıtlamalarına göre doğru sırada yapılmasını sağlar. Veriye dayalı denetimleri kullandığınızda, veri bağlama mimarisi tableAdapterManager adlı TableAdapterManager sınıfının bir üye değişkenini oluşturur.
+Veri kümenizdeki veriler değiştirildikten ve doğrulandıktan sonra, bir [TableAdapter](../data-tools/create-and-configure-tableadapters.md)'ın `Update` yöntemini çağırarak güncelleştirilmiş verileri bir veritabanına geri gönderebilirsiniz. `Update` yöntemi tek bir veri tablosunu güncelleştirir ve tablodaki her bir veri satırının <xref:System.Data.DataRow.RowState%2A> göre doğru komutu (INSERT, UPDATE veya DELETE) çalıştırır. Bir veri kümesinde ilgili tablolar olduğunda Visual Studio, güncelleştirmeleri yapmak için kullandığınız bir TableAdapterManager sınıfı oluşturur. TableAdapterManager sınıfı, güncelleştirmelerin veritabanında tanımlanan yabancı anahtar kısıtlamalarına göre doğru sırada yapılmasını sağlar. Veriye dayalı denetimleri kullandığınızda, veri bağlama mimarisi tableAdapterManager adlı TableAdapterManager sınıfının bir üye değişkenini oluşturur.
 
 > [!NOTE]
-> Bir veri kaynağını bir veri kümesinin içeriğiyle güncelleştirmeyi denediğinizde, hata alabilirsiniz. Hataları önlemek için, bağdaştırıcının `Update` yöntemini çağıran kodu bir `try` / `catch` bloğu içine koymanızı öneririz.
+> Bir veri kaynağını bir veri kümesinin içeriğiyle güncelleştirmeyi denediğinizde, hata alabilirsiniz. Hataları önlemek için, bağdaştırıcının `Update` yöntemini çağıran kodu bir `try`/`catch` bloğu içine koymanızı öneririz.
 
 Bir veri kaynağını güncelleştirmeye yönelik tam yordam, iş ihtiyaçlarına bağlı olarak farklılık gösterebilir, ancak aşağıdaki adımları içerir:
 
-1. Bağdaştırıcının `Update` yöntemini bir `try` / `catch` bloğunda çağırın.
+1. Bağdaştırıcının `Update` yöntemini bir `try`/`catch` bloğunda çağırın.
 
 2. Bir özel durum yakalanmışsa, hataya neden olan veri satırını bulun.
 
@@ -46,7 +46,7 @@ TableAdapter 'ın `Update` yöntemini çağırın. Veritabanına yazılacak değ
 
 ### <a name="to-update-a-database-by-using-a-tableadapter"></a>TableAdapter kullanarak bir veritabanını güncelleştirmek için
 
-- TableAdapter 'ın `Update` yöntemini bir `try` / `catch` bloğuna iliştirin. Aşağıdaki örnek, bir `try` / `catch` bloğunun içinden `NorthwindDataSet` `Customers` tablonun içeriğini nasıl güncelleşkullanabileceğinizi gösterir.
+- TableAdapter 'ın`Update` yöntemini bir `try`/`catch` bloğuna iliştirin. Aşağıdaki örnek, bir `try`/`catch` bloğunun içinden `NorthwindDataSet` `Customers` tablonun içeriğini nasıl güncelleşkullanabileceğinizi gösterir.
 
      [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]

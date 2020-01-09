@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derlemede ortam değişkenlerini kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,46 +7,46 @@ helpviewer_keywords:
 - projects [.NET Framework], environment variables
 - MSBuild, environment variables
 ms.assetid: 7f9e4469-8865-4b59-aab3-3ff26bd36e77
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c3e79fdbadffadc188610523eeb505df0ffa15f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4d66fb73972a81e421b6e7343e549b0ef3069001
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412403"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75574424"
 ---
-# <a name="how-to-use-environment-variables-in-a-build"></a>Nasıl yapılır: Derlemede ortam değişkenlerini kullanma
-Projeler derlerken genellikle proje dosyası veya proje oluşturan dosyaların değil bilgileri kullanarak yapı seçeneklerini ayarlamak gereklidir. Bu bilgiler genellikle ortam değişkenleri olarak depolanır.
+# <a name="how-to-use-environment-variables-in-a-build"></a>Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma
+Projeleri oluştururken, genellikle proje dosyasında veya projenizi oluşturan dosyalarda olmayan bilgileri kullanarak yapı seçeneklerini ayarlamak gerekir. Bu bilgiler genellikle ortam değişkenlerinde depolanır.
 
-## <a name="reference-environment-variables"></a>Başvuru ortam değişkenleri
- Tüm ortam değişkenleri kullanılabilir [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) özellikleri olarak proje dosyası.
+## <a name="reference-environment-variables"></a>Başvuru ortamı değişkenleri
+ Tüm ortam değişkenleri, özellikler olarak [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) proje dosyasında kullanılabilir.
 
 > [!NOTE]
-> Proje dosyası açık bir ortam değişkeni ile aynı ada sahip bir özellik tanımı içeriyorsa, proje dosyasındaki özellik ortam değişkeninin değerini geçersiz kılar.
+> Proje dosyası bir ortam değişkeniyle aynı ada sahip bir özelliğin açık tanımını içeriyorsa, proje dosyasındaki özelliği ortam değişkeninin değerini geçersiz kılar.
 
-#### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>İçinde bir MSBuild Projesi bir ortam değişkenini kullanmak için
+#### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild projesinde ortam değişkenini kullanmak için
 
-- Ortam değişkeni, proje dosyasında bildirilen bir değişken olduğu gibi başvuru. Örneğin, aşağıdaki kodu BIN_PATH ortam değişkeni başvuruyor:
+- Ortam değişkenine, proje dosyanızda bildirildiği bir değişkenle aynı şekilde başvurun. Örneğin, aşağıdaki kod BIN_PATH ortam değişkenine başvurur:
 
    `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`
 
-  Kullanabileceğiniz bir `Condition` ortam değişkeni ayarlanmamış olması halinde bir özellik için varsayılan bir değer sağlamak için özniteliği.
+  Ortam değişkeni ayarlanmamışsa bir özellik için varsayılan değer sağlamak üzere bir `Condition` özniteliği kullanabilirsiniz.
 
-#### <a name="to-provide-a-default-value-for-a-property"></a>Bir özellik için varsayılan bir değer sağlamak için
+#### <a name="to-provide-a-default-value-for-a-property"></a>Bir özellik için varsayılan değer sağlamak için
 
-- Kullanım bir `Condition` özellik değeri yalnızca şu durumlarda ayarlamak için bir özellik özniteliğini değere sahip değil. Örneğin, aşağıdaki ayarlar kod `ToolsPath` özelliğini *c:\tools* yalnızca `ToolsPath` ortam değişkeninin ayarlı değil:
+- Değeri yalnızca özelliğin değeri yoksa ayarlamak için bir özellik üzerinde `Condition` özniteliği kullanın. Örneğin, aşağıdaki kod, `ToolsPath` özelliğini yalnızca `ToolsPath` ortam değişkeni ayarlanmamışsa *c:\Tools* olarak ayarlar:
 
      `<ToolsPath Condition="'$(TOOLSPATH)' == ''">c:\tools</ToolsPath>`
 
     > [!NOTE]
-    > Özellik adlarını büyük küçük harfe duyarlı olmayan şekilde hem `$(ToolsPath)` ve `$(TOOLSPATH)` aynı özellik veya ortam değişkeni başvurusu.
+    > Özellik adları büyük/küçük harfe duyarlı değildir, bu nedenle hem `$(ToolsPath)` hem de `$(TOOLSPATH)` aynı özelliğe veya ortam değişkenine başvurur.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki proje dosyası, dizin konumunu belirtmek için ortam değişkenlerini kullanır.
+ Aşağıdaki proje dosyası dizinlerin konumunu belirtmek için ortam değişkenlerini kullanır.
 
 ```xml
 <Project DefaultTargets="FakeBuild">
@@ -65,4 +65,4 @@ Projeler derlerken genellikle proje dosyası veya proje oluşturan dosyaların d
 ## <a name="see-also"></a>Ayrıca bkz.
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
-- [Nasıl yapılır: Farklı seçeneklerle aynı kaynak dosyaları derleme](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
+- [Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

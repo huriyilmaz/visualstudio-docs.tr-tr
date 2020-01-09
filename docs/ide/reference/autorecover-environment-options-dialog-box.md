@@ -12,27 +12,27 @@ helpviewer_keywords:
 - saving files, automatically
 - files, saving automatically
 ms.assetid: 397e5e44-4bbe-4289-94d1-642b466c9111
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 865cf2ec43071a01a333961e118beab14abab82b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 81493379cf847251124d2ab4fd0a978abd96af8f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651892"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585671"
 ---
 # <a name="autorecover-environment-options-dialog-box"></a>Otomatik kurtarma, ortam, Seçenekler iletişim kutusu
 
 Dosyaların otomatik olarak yedeklenip yedeklenmeyeceğini belirtmek için **Seçenekler** iletişim kutusunda bu sayfayı kullanın. Ayrıca, Visual Studio beklenmedik şekilde kapatılırsa değiştirilen dosyaları geri yüklemek istediğinizi de belirtebilirsiniz.
 
-Bu iletişim kutusuna, **Araçlar** menüsünü seçip **Seçenekler**' i seçip, sonra**Otomatik Kurtarma** >  **ortam** ' ı seçerek erişin. Bu sayfa listede görünmezse, **Seçenekler** iletişim kutusunda **Tüm ayarı göster** ' i seçin.
+Bu iletişim kutusuna, **Araçlar** menüsünü seçip **Seçenekler**' i seçip, sonra **Otomatik Kurtarma** > **ortam** ' ı seçerek erişin. Bu sayfa listede görünmezse, **Seçenekler** iletişim kutusunda **Tüm ayarı göster** ' i seçin.
 
 **Otomatik Kurtarma bilgilerini her [n] dakikada bir Kaydet**
 
-Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için dosyanın bir kopyası *%userprofile%\\Backup Studio \\ [Version] files \\ [ProjectName]* içinde kaydedilir. Dosya yeni ise ve henüz kaydetmediyseniz, dosya rastgele oluşturulmuş bir dosya adı kullanılarak otomatik olarak kaydedilir.
+Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için dosyanın bir kopyası *%userprofile%\\Backup Studio\\[Version] files\\[ProjectName]* içinde kaydedilir. Dosya yeni ise ve henüz kaydetmediyseniz, dosya rastgele oluşturulmuş bir dosya adı kullanılarak otomatik olarak kaydedilir.
 
 **[N] gün için otomatik kurtarma bilgilerini tut**
 

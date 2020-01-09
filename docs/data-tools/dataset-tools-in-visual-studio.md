@@ -42,36 +42,36 @@ helpviewer_keywords:
 - datasets [Visual Basic], namespace
 - data adapters, populating datasets
 ms.assetid: ee57f4f6-9fe1-4e0a-be9a-955c486ff427
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3796a9b7a1d37911601574e02c89e8ccebb684ca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb41a4e3e4ed1c0032c579779a18c7df0bc22477
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642117"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586724"
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio'daki veri kümesi araçları
 
 > [!NOTE]
-> Veri kümeleri ve ilgili sınıflar, uygulamaların veritabanıyla bağlantısı kesildiğinde uygulamaların bellekteki verilerle çalışmasını sağlayan, ilk 2000 ' den eski .NET teknolojileridir. Bunlar özellikle, kullanıcıların verileri değiştirmesini ve değişiklikleri veritabanına geri kalıcı hale getirebilmesini sağlayan uygulamalar için yararlıdır. Veri kümelerinin çok başarılı bir teknoloji olarak kanıtlanmış olmasına rağmen, yeni .NET uygulamalarının Entity Framework kullanmasını öneririz. Entity Framework, tablo verileriyle nesne modelleri olarak çalışmak için daha doğal bir yol sağlar ve daha basit bir programlama arabirimine sahiptir.
+> Veri kümeleri ve ilgili sınıflar, bellekteki verileri veritabanından uygulamaları değilken çalışmak uygulamaları etkinleştirme erken 2000'li yıllardan eski .NET teknolojiden var. Bunlar, kullanıcıların verileri değiştirme ve veritabanına değişiklikleri kalıcı hale getirmek uygulamalar için özellikle yararlıdır. Veri kümeleri çok başarılı bir teknoloji olacak şekilde kanıtlanmış olsa da, yeni .NET uygulamalarını Entity Framework kullanmanızı öneririz. Entity Framework tablosal verileri nesne modellerini olarak çalışmak için daha doğal bir yol sağlar ve daha basit bir programlama arabirimi vardır.
 
-@No__t_0 nesnesi, aslında bir mini veritabanı olan bellek içi bir nesnedir. Açık bir bağlantı sürdürmek zorunda kalmadan bir veya daha fazla veritabanından veri depolayabilmeniz ve değiştirebileceğiniz `DataTable`, `DataColumn` ve `DataRow` nesneleri içerir. Veri kümesi, verilerinde yapılan değişikliklerle ilgili bilgileri saklar, böylece Güncelleştirmeler izlenebilir ve uygulamanız yeniden bağlandığında veritabanına geri gönderilebilir.
+`DataSet` nesnesi, aslında bir mini veritabanı olan bellek içi bir nesnedir. Açık bir bağlantı sürdürmek zorunda kalmadan bir veya daha fazla veritabanından veri depolayabilmeniz ve değiştirebileceğiniz `DataTable`, `DataColumn`ve `DataRow` nesneleri içerir. Güncelleştirmeleri izlenen ve uygulamanızı bağlandığınızda olur veritabanına geri gönderilen veri kümesi, verilerde yapılan değişiklikleri ilgili bilgileri tutar.
 
-Veri kümeleri ve ilgili sınıflar, .NET API 'sindeki <xref:System.Data?displayProperty=fullName> ad alanında tanımlanmıştır. ADO.NET kullanarak, kodda dinamik olarak veri kümeleri oluşturabilir ve değiştirebilirsiniz. Bu bölümdeki belgelerde, Visual Studio tasarımcıları kullanılarak veri kümeleriyle nasıl çalışılacağı gösterilmektedir. Tasarımcılar aracılığıyla oluşturulan veri kümeleri, veritabanıyla etkileşime geçmek için **TableAdapter** nesnelerini kullanır. Program aracılığıyla oluşturulan veri kümeleri **DataAdapter** nesnelerini kullanır. Program aracılığıyla veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. [DataAdapter ve DataReaders](/dotnet/framework/data/adonet/dataadapters-and-datareaders).
+Veri kümeleri ve ilgili sınıflar, .NET API 'sindeki <xref:System.Data?displayProperty=fullName> ad alanında tanımlanmıştır. ADO.NET kullanarak, kodda dinamik olarak veri kümeleri oluşturabilir ve değiştirebilirsiniz. Bu bölümdeki belgelere, Visual Studio tasarımcıları kullanarak veri kümeleriyle çalışan işlemi gösterilmektedir. Tasarımcılar aracılığıyla oluşturulan veri kümeleri, veritabanıyla etkileşime geçmek için **TableAdapter** nesnelerini kullanır. Program aracılığıyla oluşturulan veri kümeleri **DataAdapter** nesnelerini kullanır. Program aracılığıyla veri kümeleri oluşturma hakkında daha fazla bilgi için bkz: [DataAdapters ve DataReaders](/dotnet/framework/data/adonet/dataadapters-and-datareaders).
 
-Uygulamanızın verileri yalnızca bir veritabanından okuması, eklemeleri veya silmeleri için ihtiyacı varsa, verileri genel bir `List` nesnesine veya başka bir koleksiyon nesnesine almak için bir `DataReader` nesnesi kullanarak genellikle daha iyi performans elde edebilirsiniz. Verileri görüntülüyorsanız, Kullanıcı arabirimini koleksiyona veri bağlayabilirsiniz.
+Uygulamanızın verileri yalnızca bir veritabanından okuması, eklemeleri veya silmeleri için ihtiyacı varsa, verileri genel bir `List` nesnesine veya başka bir koleksiyon nesnesine almak için bir `DataReader` nesnesi kullanarak genellikle daha iyi performans elde edebilirsiniz. Verileri görüntülüyorsa, veri kullanıcı arabirimi koleksiyona bağlama.
 
 ## <a name="dataset-workflow"></a>Veri kümesi iş akışı
 
-Visual Studio, veri kümeleriyle çalışmayı basitleştirmek için araç sağlar. Temel uçtan uca iş akışı:
+Visual Studio, veri kümeleriyle çalışmayı basitleştirmek için araç sağlar. Temel uçtan uca iş akışı şöyledir:
 
-- Bir veya daha fazla veri kaynağından yeni bir veri kümesi oluşturmak için [veri kaynakları penceresini](add-new-data-sources.md#data-sources-window) kullanın. Veri kümesini yapılandırmak ve özelliklerini ayarlamak için **veri kümesi Tasarımcısı** kullanın. Örneğin, veri kaynağından hangi tabloların ekleneceğini ve her tablodaki sütunları belirtmeniz gerekir. Veri kümesinin gerektirdiği bellek miktarını korumak için dikkatle ' yi seçin. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Bir veya daha fazla veri kaynağından yeni bir veri kümesi oluşturmak için [veri kaynakları penceresini](add-new-data-sources.md#data-sources-window) kullanın. Kullanım **veri kümesi Tasarımcısı** veri kümesini yapılandırma ve özelliklerini ayarlayın. Örneğin, dahil etmek için veri kaynağından tablolar ve her bir tablodaki hangi sütunların belirtmeniz gerekir. Veri kümesinin gerektirdiği bellek miktarını korumak için dikkatle ' yi seçin. Daha fazla bilgi için [oluşturun ve veri kümeleri yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
-- Yabancı anahtarların doğru şekilde işlenebilmesi için tablolar arasındaki ilişkileri belirtin. Daha fazla bilgi için bkz. [TableAdapters kullanarak veri kümelerini doldur](../data-tools/fill-datasets-by-using-tableadapters.md).
+- Tablolar arasında ilişki, yabancı anahtarlar doğru şekilde işlenir böylece belirtin. Daha fazla bilgi için [TableAdapter kullanarak veri kümelerini dolgu](../data-tools/fill-datasets-by-using-tableadapters.md).
 
 - Veri kümesini dolduran sorgu veya saklı yordamı ve uygulanacak veritabanı işlemlerini (güncelleştirme, silme, vb.) belirtmek için **TableAdapter Yapılandırma sihirbazını** kullanın. Daha fazla bilgi için şu konulara bakın:
 
@@ -83,17 +83,17 @@ Visual Studio, veri kümeleriyle çalışmayı basitleştirmek için araç sağl
 
   - [Verileri yeniden veritabanına kaydetme](../data-tools/save-data-back-to-the-database.md)
 
-- Veri kümesindeki verileri sorgulama ve arama. Daha fazla bilgi için bkz. [sorgu veri kümeleri](../data-tools/query-datasets.md). [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)], bir <xref:System.Data.DataSet> nesnesindeki veriler üzerinde [LINQ (dil Ile tümleşik sorgu)](/dotnet/csharp/linq/) olanağı sunar. Daha fazla bilgi için bkz. [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
+- Sorgu ve veri kümesinde arayın. Daha fazla bilgi için [sorgu veri kümeleri](../data-tools/query-datasets.md). [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)] sağlar [LINQ (dil ile tümleşik sorgu)](/dotnet/csharp/linq/) verileri üzerinde bir <xref:System.Data.DataSet> nesne. Daha fazla bilgi için [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
 
-- Kullanıcı arabirimi denetimlerini veri kümesine veya tek tek sütunlarına bağlamak ve hangi sütunların Kullanıcı tarafından düzenlenebilir olduğunu belirtmek için **veri kaynakları** penceresini kullanın. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
+- Kullanım **veri kaynakları** penceresi kullanıcı arabirimi denetimleri, veri kümesi veya tek tek sütunlarını bağlamak için ve hangi sütunların kullanıcı tarafından düzenlenebilir olduğunu belirtmek için. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="datasets-and-n-tier-architecture"></a>Veri kümeleri ve N katmanlı mimari
 
-N katmanlı uygulamalardaki veri kümeleri hakkında bilgi için, bkz. [n katmanlı uygulamalarda veri kümeleriyle çalışma](../data-tools/work-with-datasets-in-n-tier-applications.md).
+N katmanlı uygulamalarda veri kümeleri hakkında daha fazla bilgi için bkz: [n katmanlı uygulamalarda veri kümeleriyle çalışmak](../data-tools/work-with-datasets-in-n-tier-applications.md).
 
 ## <a name="datasets-and-xml"></a>Veri kümeleri ve XML
 
-Veri kümelerini XML 'e ve öğesinden dönüştürme hakkında daha fazla bilgi için bkz. [XML verilerini bir veri kümesine okuma](../data-tools/read-xml-data-into-a-dataset.md) ve [veri kümesini XML olarak kaydetme](../data-tools/save-a-dataset-as-xml.md).
+Veri kümeleri ve XML dönüştürme hakkında daha fazla bilgi için bkz: [okuma XML veri kümesine](../data-tools/read-xml-data-into-a-dataset.md) ve [bir veri kümesini XML olarak kaydetme](../data-tools/save-a-dataset-as-xml.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

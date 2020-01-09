@@ -7,28 +7,28 @@ helpviewer_keywords:
 - code editor, go to line
 - go to line
 - go to
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3a810e96b410c0f1f6f5d6ffdaa07b1e007abd6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb39f1d395e48351aeacb587556224b0f86aac3e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654634"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593791"
 ---
 # <a name="find-code-using-go-to-commands"></a>Git komutlarını kullanarak kod bulma
 
 Visual Studio 'nun komutlara **Git** , belirtilen öğeleri hızlı bir şekilde bulmanıza yardımcı olmak için kodunuzda odaklanmış bir arama gerçekleştirir. Basit ve Birleşik bir arabirimden belirli bir satıra, türe, simgeye, dosyaya ve üyeye gidebilirsiniz.
 
-## <a name="how-to-use-it"></a>Nasıl kullanılır
+## <a name="how-to-use-it"></a>Kullanımı
 
 Giriş | İşlev
 ------------ | ---
-**Klavyenizdeki** | **Ctrl** +**t** veya **CTRL** + tuşlarına basın **,**
-**Tığında** | **Düzenle**  > **Git** ' i seçin  > **tümüne git**
+**Klavye** | **Ctrl**+**t** veya **CTRL**+tuşlarına basın **,**
+**Fare** | **Düzenle** > **Git** ' i seçin > **tümüne git**
 
 Kod Düzenleyicinizde sağ üst köşede küçük bir pencere görüntülenir.
 
@@ -52,14 +52,14 @@ Varsayılan olarak, belirtilen öğe tüm çözüm öğelerinde aranır. Ancak, 
 
 Aramanızı belirli bir kod öğesi türüne daraltmak için, arama kutusunda bir ön ek belirtebilir veya beş filtre simgelerinden birini seçebilirsiniz:
 
-koy | Simge | Kısayol | Açıklama
+Prefix | Simge | Kısayol | Açıklama
 :-: | - | - | -
 :| ![Çizgi simgesi](media/gotoall-line-icon.png) | **Ctrl**+**G** | Belirtilen satır numarasına git
-Vadeli| ![Dosyalar simgesi](media/gotoall-files-icon.png) | **Ctrl** +**1**, **CTRL** +**F** | Belirtilen dosyaya git
-Sağ| ![Son dosyalar simgesi](media/gotoall-recent-files-icon.png) | **Ctrl** +**1**, **CTRL** +**R** | Belirtilen, son ziyaret edilen dosyaya git
-t| ![Türler simgesi](media/gotoall-types-icon.png) | **Ctrl** +**1**, **CTRL** +**t** | Belirtilen türe git
-m| ![Üyeler simgesi](media/gotoall-members-icon.png) | **Ctrl** +**1**, **CTRL** +**ı** | Belirtilen üyeye git
-\#| ![Semboller simgesi](media/gotoall-symbols-icon.png) | **Ctrl** +**1**, **CTRL** +**S** | Belirtilen simgeye git
+f| ![Dosyalar simgesi](media/gotoall-files-icon.png) | **Ctrl**+**1**, **CTRL**+**F** | Belirtilen dosyaya git
+r| ![Son dosyalar simgesi](media/gotoall-recent-files-icon.png) | **Ctrl**+**1**, **CTRL**+**R** | Belirtilen, son ziyaret edilen dosyaya git
+t| ![Türler simgesi](media/gotoall-types-icon.png) | **Ctrl**+**1**, **CTRL**+**t** | Belirtilen türe git
+m| ![Üyeler simgesi](media/gotoall-members-icon.png) | **Ctrl**+**1**, **CTRL**+**ı** | Belirtilen üyeye git
+\#| ![Semboller simgesi](media/gotoall-symbols-icon.png) | **Ctrl**+**1**, **CTRL**+**S** | Belirtilen simgeye git
 
 ### <a name="filter-to-a-specific-location"></a>Belirli bir konuma filtrele
 
@@ -72,7 +72,7 @@ Simge | Açıklama
 
 ## <a name="camel-casing"></a>Kamel büyük harfleri
 
-Kodunuzda [ortası](https://en.wikipedia.org/wiki/Camel_case) büyük harfleri kullanırsanız, yalnızca kod öğesi adının büyük harflerini girerek kod öğelerini daha hızlı bulabilirsiniz. Örneğin, kodunuzun `CredentialViewModel` adında bir türü varsa, **tür** filtresini (**t**) seçerek ve ardından Git iletişim kutusunda adın yalnızca büyük harflerini (`CVM`) girerek aramayı daraltabilirsiniz. Kodunuzun uzun adlara sahip olması durumunda bu özellik yararlı olabilir.
+Kodunuzda [ortası](https://en.wikipedia.org/wiki/Camel_case) büyük harfleri kullanırsanız, yalnızca kod öğesi adının büyük harflerini girerek kod öğelerini daha hızlı bulabilirsiniz. Örneğin, kodunuzun `CredentialViewModel`adında bir türü varsa, **tür** filtresini (**t**) seçerek ve ardından Git iletişim kutusunda adın yalnızca büyük harflerini (`CVM`) girerek aramayı daraltabilirsiniz. Kodunuzun uzun adlara sahip olması durumunda bu özellik yararlı olabilir.
 
 ![Pencereye gitme-büyük harfler ile arama](../ide/media/vside_capitalsearch.png)
 
@@ -83,11 +83,11 @@ Dişli simgesini seçme ![Dişli simgesi](media/gotoall_gear.png) Bu özelliğin
 Ayar | Açıklama
 ------- | ---
 Önizleme sekmesini kullan | Seçili öğeyi IDE 'nin önizleme sekmesinde hemen görüntüle
-Ayrıntıları göster | Penceredeki belge açıklamalarından proje, dosya, satır ve Özet bilgilerini görüntüleme
+Ayrıntıları Göster | Penceredeki belge açıklamalarından proje, dosya, satır ve Özet bilgilerini görüntüleme
 Pencereyi Ortala | Bu pencereyi, sağ üst yerine kod düzenleyicisinin üst ortasına taşıyın
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Koda git](../ide/navigating-code.md)
+- [Kod gidin](../ide/navigating-code.md)
 - [Satıra Git iletişim kutusu](../ide/reference/go-to-line.md)
 - [Tanıma ve Özet Tanıma Gitme](../ide/go-to-and-peek-definition.md)

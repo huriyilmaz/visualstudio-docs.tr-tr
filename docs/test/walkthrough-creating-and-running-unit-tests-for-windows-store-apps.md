@@ -1,5 +1,5 @@
 ---
-title: UWP uygulamaları için birim testleri oluşturma ve çalıştırma
+title: Oluşturma ve UWP uygulamaları için birim testleri çalıştırma
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - unit tests
 - unit tests, UWP apps
 - unit tests, running
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-author: jillre
-ms.openlocfilehash: aa3b4b06fa1a1a1dfe21ec690e158bb955f416c0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 4109f743caf7c62450591f78e90b92113fc4107e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659669"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568886"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>İzlenecek yol: UWP uygulamaları için birim testleri oluşturma ve çalıştırma
 
-Visual Studio, birim testi Evrensel Windows Platformu (UWP) uygulamaları için destek içerir. Visual Studio, Visual Basic ve C# C++için birim testi proje şablonları sağlar.
+Visual Studio birim testi Evrensel Windows Platformu (UWP) uygulamaları için destek içerir. Visual Studio, Visual Basic ve C# C++için birim testi proje şablonları sağlar.
 
 > [!TIP]
-> UWP uygulamaları geliştirme hakkında daha fazla bilgi için bkz. [UWP uygulamalarını kullanmaya](/windows/uwp/get-started/)başlama.
+> UWP uygulamaları geliştirme hakkında daha fazla bilgi için bkz. [UWP uygulamaları kullanmaya başlama](/windows/uwp/get-started/).
 
 Aşağıdaki yordamlarda, UWP uygulaması için birim testleri oluşturma, çalıştırma ve hata ayıklama adımları açıklanır.
 
-## <a name="create-a-unit-test-project-for-a-uwp-app"></a>UWP uygulaması için birim testi projesi oluşturma
+## <a name="create-a-unit-test-project-for-a-uwp-app"></a>Bir UWP uygulaması için birim test projesi oluşturma
 
 ::: moniker range=">=vs-2019"
 
@@ -54,42 +54,42 @@ Bu adımları tamamladıktan sonra, birim test projesi oluşturulur ve Çözüm 
 
 ::: moniker range="vs-2017"
 
-1. **Dosya** menüsünden **Yeni proje**' yi seçin.
+1. Gelen **dosya** menüsünde seçin **yeni proje**.
 
-   **Yeni proje** iletişim kutusu görüntülenir.
+   **Yeni proje** iletişim kutusunu görüntüler.
 
-2. Şablonlar ' ın altında, birim testleri oluşturmak istediğiniz programlama dilini seçin ve ardından ilişkili Windows Evrensel birim testi kitaplığını seçin. Örneğin, **görsel C#**  ' i seçin, ardından **Windows Universal**' i seçin ve ardından **birim testi kitaplığı (Evrensel Windows)** öğesini seçin.
+2. Şablonlar'ın altında birim testleri oluşturun ve sonra kitaplık ilişkili Windows Evrensel birim testi için kullanmak istediğiniz programlama dilini seçin. Örneğin, **Visual C#** , ardından **Windows Evrensel**ve ardından **birim testi kitaplığı (Evrensel Windows)** .
 
-3. Seçim **Ad** metin kutusuna, proje için kullanmak istediğiniz adı girin.
+3. (İsteğe bağlı) İçinde **adı** metin kutusuna proje için kullanmak istediğiniz adı girin.
 
-4. Seçim Projeyi, **konum** metin kutusuna girerek oluşturmak istediğiniz yolu değiştirin veya **Araştır** düğmesini seçin.
+4. (İsteğe bağlı) Girerek projeyi oluşturmak istediğiniz yolu değiştirmek **konumu** metin veya seçerek **Gözat** düğmesi.
 
-5. Seçim **Çözüm** adı metin kutusuna çözümünüz için kullanmak istediğiniz adı girin.
+5. (İsteğe bağlı) İçinde **çözüm** ad metin kutusunda, çözümünüz için kullanmak istediğiniz ismi girin.
 
-6. **Çözüm için dizin oluştur** seçeneğini seçili bırakın ve **Tamam** düğmesini seçin.
+6. Bırakın **çözüm için dizin oluştur** seçeneği seçili ve seçin **Tamam** düğmesi.
 
-   ![Özel birim testi kitaplığı](../test/media/unit_test_win8_1.png)
+   ![Özel olarak uyarlanmış bir birim testi kitaplığı](../test/media/unit_test_win8_1.png)
 
-   **Çözüm GEZGINI** UWP birim testi projesi ile doldurulur ve kod Düzenleyicisi UnitTest1 başlıklı varsayılan birim testini görüntüler.
+   **Çözüm Gezgini** doldurulur UWP birim testi projesi ve Kod Düzenleyicisi, UnitTest1 başlıklı varsayılan birim sınamasını görüntüler.
 
-   ![Yeni özel birim testi projesi](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png)
+   ![Yeni özel olarak uyarlanmış bir birim test projesi](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png)
 
 ::: moniker-end
 
-## <a name="edit-the-unit-test-projects-uwp-application-manifest-file"></a>Birim testi projesinin UWP uygulaması bildirim dosyasını Düzenle
+## <a name="edit-the-unit-test-projects-uwp-application-manifest-file"></a>Birim test projesinin UWP uygulama bildirim dosyasını Düzenle
 
-1. **Çözüm Gezgini**, *Package. appxmanifest* dosyasına sağ tıklayın ve **Aç**' ı seçin.
+1. İçinde **Çözüm Gezgini**, sağ *Package.appxmanifest* seçin ve dosya **açık**.
 
-2. **Bildirim tasarımcısında** **yetenekler** sekmesini seçin.
+2. İçinde **bildirim Tasarımcısı**, seçin **özellikleri** sekmesi.
 
-3. **Özellikleri**altındaki listede, birim testiniz için gereken özellikleri ve test eden kodu seçin. Örneğin, birim testinin ihtiyacı varsa ve test edilmiş kodun internet 'e erişme yeteneğine sahip olması gerekiyorsa **Internet** onay kutusunu seçin.
+3. Listenin altında **özellikleri**, birim sınamanız ve kod gereken yetenekleri seçin sahip sınamanız. Örneğin, **Internet** birim testi ve test ettiği kodun onay kutusu İnternet'e erişme özelliği olması gerekir.
 
    > [!NOTE]
-   > Seçtiğiniz yetenekler yalnızca birim testinin doğru çalışması için gerekli olan özellikleri içermelidir.
+   > Seçtiğiniz yetenekler yalnızca birim testi düzgün çalışması gerekli olan yetenekleri içermelidir.
 
-   ![Birim testi bildirimi](../test/media/unit_test_win8_.png)
+   ![Birim Test bildirimi](../test/media/unit_test_win8_.png)
 
-## <a name="code-the-unit-test-for-a-uwp-app"></a>UWP uygulaması için birim testini kodlayın
+## <a name="code-the-unit-test-for-a-uwp-app"></a>Bir UWP uygulaması için birim testini kodlama
 
 Kod Düzenleyicisi 'nde, birim testini düzenleyin ve testiniz için gereken onayları ve mantığı ekleyin.
 
@@ -97,33 +97,33 @@ Kod Düzenleyicisi 'nde, birim testini düzenleyin ve testiniz için gereken ona
 
 Çözümü oluşturmak ve test Gezgini 'ni kullanarak birim testini çalıştırmak için:
 
-1. **Test** menüsünde **Windows**' u ve ardından **Test Gezgini**' ni seçin.
+1. Üzerinde **Test** menüsünde seçin **Windows**ve ardından **Test Gezgini**.
 
-2. **Build** menüsünde **Build Solution**öğesini seçin.
+2. Gelen **derleme** menüsünde seçin **Çözümü Derle**.
 
    Birim testiniz artık test Gezgini 'nde gösteriliyor.
 
    > [!NOTE]
-   > Test Gezgini 'nde birim testlerinin listesini güncelleştirmek için çözümü derlemeniz gerekir.
+   > Test Gezgini'nde birim testleri listesini güncelleme çözümünü oluşturmanız gerekir.
 
-3. **Test Gezgini**' nde, oluşturduğunuz birim testini seçin.
+3. İçinde **Test Gezgini**, oluşturduğunuz birim sınamayı seçin.
 
-4. **Tümünü Çalıştır**' ı seçin.
+4. Seçin **çalıştırması**.
 
-   ![Birim testi Gezgini &#45; çalışma birimi testi](../test/media/unit_test_win8_unittestexplorer_contextmenurun.png)
+   ![Birim Test Gezgini &#45; birim testi çalıştırma](../test/media/unit_test_win8_unittestexplorer_contextmenurun.png)
 
    > [!TIP]
    > Test Gezgini 'nde listelenen bir veya daha fazla birim testi seçebilir ve sağ tıklayıp **Seçili Testleri Çalıştır**' ı seçebilirsiniz.
    >
-   > Ayrıca, **Seçili testlerin hatalarını ayıklamayı**, **testi açmayı**ve **Özellikler** seçeneğini kullanmayı seçebilirsiniz.
+   > Ayrıca, seçebileceğiniz **seçilen Testlerde Hata Ayıkla**, **açık Test**ve **özellikleri** seçeneği.
    >
    > ![Birim testi Gezgini &#45; birim testi bağlam menüsü](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
 
    Birim testi çalışır. Tamamlandıktan sonra test Gezgini, test durumunu ve geçen süreyi görüntüler ve kaynağa bir bağlantı sağlar.
 
-   ![Birim test Gezgini &#45; testi tamamlandı](../test/media/unit_test_win8_unittestexplorer_done.png)
+   ![Birim Test Gezgini &#45; test tamamlandı](../test/media/unit_test_win8_unittestexplorer_done.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio ile UWP uygulamalarını test etme](../test/unit-test-your-code.md)
-- [UWP uygulaması oluşturma ve test etme](/azure/devops/pipelines/apps/windows/universal?tabs=vsts)
+- [Yapı ve test bir UWP uygulaması](/azure/devops/pipelines/apps/windows/universal?tabs=vsts)

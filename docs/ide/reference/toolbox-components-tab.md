@@ -8,23 +8,23 @@ f1_keywords:
 - VS.CHOOSEITEMS.UniversalWindowsComponents
 helpviewer_keywords:
 - Toolbox, Components tab
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd9c6bf4d24a681c426a20f490dba2cc1d5080fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e5eb8c320a3190121d95395f7b359aa9ed978408
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644603"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597314"
 ---
 # <a name="toolbox-components-tab"></a>Araç kutusu, bileşenler sekmesi
 
-Windows Forms için Visual Basic ve C# tasarımcılara ekleyebileceğiniz bileşenleri görüntüler. @No__t_0 ve <xref:System.Diagnostics.EventLog> bileşenleri gibi Visual Studio 'da bulunan .NET bileşenlerine ek olarak, kendi veya üçüncü taraf bileşenlerinizi bu sekmeye ekleyebilirsiniz.
+Windows Forms için Visual Basic ve C# tasarımcılara ekleyebileceğiniz bileşenleri görüntüler. <xref:System.Messaging.MessageQueue> ve <xref:System.Diagnostics.EventLog> bileşenleri gibi Visual Studio 'da bulunan .NET bileşenlerine ek olarak, kendi veya üçüncü taraf bileşenlerinizi bu sekmeye ekleyebilirsiniz.
 
-Bu sekmeyi göstermek için bir Windows Forms Tasarımcısı açın. @No__t_1**araç kutusunu** **görüntüle** ' yi seçin. **Araç kutusu**' nda **Bileşenler** sekmesini seçin.
+Bu sekmeyi göstermek için bir Windows Forms Tasarımcısı açın.  > **araç kutusunu** **görüntüle** ' yi seçin. **Araç kutusu**' nda **Bileşenler** sekmesini seçin.
 
 ## <a name="components"></a>Bileşenler
 
@@ -40,7 +40,7 @@ Active Directory hiyerarşisinde bir düğüm veya nesneyi kapsülleyen ve Activ
 
 Active Directory karşı sorguları gerçekleştirmek için kullanabileceğiniz bir <xref:System.DirectoryServices.DirectorySearcher> bileşen örneği oluşturur.
 
-**Bileþeni**
+**ErrorProvider**
 
 Son kullanıcıya, formdaki bir denetimin bir hata ile ilişkili bir hata olduğunu gösteren <xref:System.Windows.Forms.ErrorProvider> bileşen örneği oluşturur. Daha fazla bilgi için bkz. [ErrorProvider Component](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms).
 
@@ -90,5 +90,5 @@ Windows tabanlı uygulamalarınıza zamana dayalı işlevsellik eklemek için ku
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms için kullanılacak denetimler](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
-- [Araç kutusu öğelerini, WPF bileşenlerini seçin](choose-toolbox-items-wpf-components.md)
+- [Araç kutusu öğelerini, WPF bileşenlerini seçme](choose-toolbox-items-wpf-components.md)
 - [Araç Kutusu](../../ide/reference/toolbox.md)

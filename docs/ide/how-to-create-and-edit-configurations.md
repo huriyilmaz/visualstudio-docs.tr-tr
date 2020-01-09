@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yapılandırmaları oluşturma ve düzenleme'
+title: 'Nasıl yapılır: yapılandırma oluşturma ve düzenleme'
 ms.date: 06/21/2017
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - project build configurations, creating
 - project build configurations, editing
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6fdf3fa790a29f94a5bf3b40bc0d2ada703bc5b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bb47a1b136f4f1e584b9b1b6f99fde7008ecc902
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925771"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595299"
 ---
-# <a name="how-to-create-and-edit-configurations"></a>Nasıl yapılır: Yapılandırmaları oluşturma ve düzenleme
+# <a name="how-to-create-and-edit-configurations"></a>Nasıl yapılır: yapılandırma oluşturma ve düzenleme
 
 Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneğin, sınayıcılarınızın sorunları bulmak ve gidermek için kullanabileceği bir hata ayıklama derlemesi yapılandırabilir ve farklı müşterilere dağıtabileceğiniz farklı tür yapılar yapılandırabilirsiniz.
 
@@ -40,7 +40,7 @@ Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneği
 **Configuration Manager** iletişim kutusunu açmak için, **Çözüm Gezgini**' de çözüm için kısayol menüsünü açın ve ardından **Configuration Manager**' yı seçin.
 
 > [!NOTE]
-> **Configuration Manager** komutu kısayol menüsünde görünmezse, menü çubuğunda **derleme** menüsünün altına bakın. Burada görünmezse, menü çubuğunda **Araçlar** > **Seçenekler**' i seçin ve ardından **Seçenekler** iletişim kutusunun sol bölmesinde, **Projeler ve çözümler** > **genel**' i genişletin ve sağ tarafta bölmesinde, **Gelişmiş derleme yapılandırmasını göster** onay kutusunu seçin.
+> **Configuration Manager** komutu kısayol menüsünde görünmezse, menü çubuğunda **derleme** menüsünün altına bakın. Burada görünmezse, menü çubuğunda **araçlar** > **Seçenekler**' i seçin ve ardından **Seçenekler** iletişim kutusunun sol bölmesinde, **genel**' i > **Projeler ve çözümler** ' i genişletin ve sağ bölmedeki **Gelişmiş derleme yapılandırmasını göster** onay kutusunu seçin.
 
 **Configuration Manager** iletişim kutusunda, çözüm genelinde bir yapı yapılandırması seçmek, var olan bir yapılandırmayı değiştirmek veya yeni bir yapılandırma oluşturmak için **etkin çözüm yapılandırma** açılan listesini kullanabilirsiniz. **Etkin çözüm platformu** açılan listesini, yapılandırmanın hedeflediği platformu seçmek, var olan bir nesneyi değiştirmek veya yeni bir platform eklemek için kullanabilirsiniz. **Proje bağlamları** bölmesinde, çözümdeki projeler listelenir. Her proje için, projeye özgü bir yapılandırma ve platform seçebilir, var olanları değiştirebilir veya yeni bir yapılandırma oluşturabilir ya da yeni bir platform ekleyebilirsiniz. Çözümü derlemek veya dağıtmak için çözüm genelinde yapılandırma kullandığınızda her projenin dahil edilip edilmeyeceğini belirten onay kutularını da seçebilirsiniz.
 
@@ -48,7 +48,7 @@ Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneği
 
 ### <a name="set-properties-based-on-configurations"></a>Yapılandırma tabanlı özellikleri ayarla
 
-Yapılandırma tabanlı özellikleri ayarlamak için, **Çözüm Gezgini**' de bir proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Yapılandırmalarınızın özelliklerini ayarlayabilirsiniz. Örneğin, bir yayın yapılandırması için, çözüm oluşturulduğunda kodun iyileştirildiği ve hata ayıklama yapılandırmasında `DEBUG` koşullu derleme sembolünün dahil edileceğini belirtebilirsiniz.
+Yapılandırma tabanlı özellikleri ayarlamak için, **Çözüm Gezgini**' de bir proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Yapılandırmalarınızın özelliklerini ayarlayabilirsiniz. Örneğin, bir yayın yapılandırması için, çözüm oluşturulduğunda kodun iyileştirildiğini belirtebilir ve bir hata ayıklama yapılandırması için `DEBUG` koşullu derleme sembolünün dahil edileceğini belirtebilirsiniz.
 
 Özellik sayfası ayarları hakkında daha fazla bilgi için bkz. [Proje ve çözüm özelliklerini yönetme](../ide/managing-project-and-solution-properties.md).
 
@@ -116,7 +116,7 @@ Yapılandırma tabanlı özellikleri ayarlamak için, **Çözüm Gezgini**' de b
 
 2. **Etkin çözüm yapılandırması** açılan listesinde, istediğiniz yapılandırmayı seçin.
 
-3. **Proje bağlamları** bölmesinde her proje Için istediğiniz **yapılandırma** ve **platformu** seçin ve oluşturulup oluşturulmayacağını ve **dağıtıp dağıtamayacağını** seçin.
+3. **Proje bağlamları** bölmesinde her proje Için istediğiniz **yapılandırma** ve **platformu** seçin **ve oluşturulup oluşturulmayacağını** ve **dağıtıp dağıtamayacağını** seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

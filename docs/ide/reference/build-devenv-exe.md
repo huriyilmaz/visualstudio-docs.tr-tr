@@ -9,17 +9,17 @@ helpviewer_keywords:
 - build Devenv switch
 - command-line builds
 ms.assetid: ced21627-7653-455b-8821-3e31c6a448cf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aef4dcdc9069c1bbfe71a90bbaba214ebcd18ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1766fe22573554b41ebfaa38fbd9e8d6c90c5790
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667875"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595767"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv.exe)
 
@@ -47,7 +47,7 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 - `/ProjectConfig` *Projconfigname*
 
-  İsteğe bağlı. Adlandırılmış proje oluşturulurken kullanılacak bir proje derleme yapılandırması (`Debug` veya `Release` gibi) adı. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32`). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
+  İsteğe bağlı. Adlandırılmış proje oluşturulurken kullanılacak bir proje derleme yapılandırması (`Debug` veya `Release`gibi) adı. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32`). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
 
 - `/Out` *outputFilename*
 
@@ -55,19 +55,19 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 ## <a name="remarks"></a>Açıklamalar
 
-- @No__t_0 anahtarı tümleşik geliştirme ortamı (IDE) içinde **yapı çözümü** menü komutuyla aynı işlevi gerçekleştirir.
+- `/Build` anahtarı tümleşik geliştirme ortamı (IDE) içinde **yapı çözümü** menü komutuyla aynı işlevi gerçekleştirir.
 
 - Boşluk içeren dizeleri çift tırnak içine alın.
 
 - Hatalar da dahil olmak üzere derlemeler için Özet bilgiler, komut penceresinde veya `/Out` anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
 
-- @No__t_0 anahtarı yalnızca son derlemeden bu yana değiştirilen projeleri oluşturur. Bir Çözümdeki tüm projeleri oluşturmak için, bunun yerine [/Rebuild](../../ide/reference/rebuild-devenv-exe.md) kullanın.
+- `/Build` anahtarı yalnızca son derlemeden bu yana değiştirilen projeleri oluşturur. Bir Çözümdeki tüm projeleri oluşturmak için, bunun yerine [/Rebuild](../../ide/reference/rebuild-devenv-exe.md) kullanın.
 
 - **Geçersiz proje yapılandırması**belirten bir hata iletisi alırsanız, bir çözüm platformu veya proje platformu belirttiğinizden emin olun (örneğin, `Debug|Win32`).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki komut, `MySolution` içinde `Debug` proje derleme yapılandırması kullanarak proje `CSharpWinApp` oluşturur.
+Aşağıdaki komut, `MySolution`içinde `Debug` proje derleme yapılandırması kullanarak proje `CSharpWinApp`oluşturur.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug

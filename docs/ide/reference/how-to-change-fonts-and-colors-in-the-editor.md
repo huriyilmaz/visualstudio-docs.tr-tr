@@ -9,17 +9,17 @@ helpviewer_keywords:
 - text, fonts
 - editors, text color
 ms.assetid: 3f7629d1-1cdf-4046-9a31-0632517f234d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7aa359e9918cb808989bb1f0e65de516af422dc6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c7347ba6bf599e34d9555f6acaeb03cf396a5855
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668242"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595572"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da düzenleyici için yazı tiplerini ve renkleri değiştirme
 
@@ -33,7 +33,7 @@ Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayab
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>Varsayılan yazı tipini, boyutunu ve renklerini değiştirme
 
-1. **Araçlar** menüsünde **Seçenekler** ' i seçin. **Ortam**altında [yazı tipi ve renkler](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)' i seçin.
+1. Seçin **seçenekleri** gelen **Araçları** menüsü. **Ortam**altında [yazı tipi ve renkler](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)' i seçin.
 
 2. **Ayarları göster**bölümünde **metin düzenleyici**' yi seçin.
 
@@ -44,9 +44,9 @@ Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayab
     > [!TIP]
     > Varsayılan ayarları sıfırlamak için **Varsayılanları Kullan** ' a tıklayın.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**'ı tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
 - [Nasıl yapılır: Visual Studio 'da yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

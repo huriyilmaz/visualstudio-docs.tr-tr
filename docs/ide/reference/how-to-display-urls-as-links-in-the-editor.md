@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Code Editor, displaying URLs
 - editors, displaying URLs
 ms.assetid: 7c673953-476e-4897-9c2d-1fc15556c172
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9814614ae752a670a8b707e6fd701a5fa151f481
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aefabb480830f7fc649bc73d47a3b47594100616
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668586"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569094"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>Nasıl Yapılır: Düzenleyicide URL'leri Bağlantılar Olarak Görüntüleme
 
@@ -27,11 +27,11 @@ Kod düzenleyicisinin kodunuzda Tekdüzen Kaynak Konum belirleyicilerinin (URL '
 
 - Üzerine geldiğinizde bir **araç ipucu** görüntüleyin.
 
-- **Ctrl** **+ bağlantıyı tıklattığınızda belirtilen** Web sitesini açmayı deneyin. Varsayılan olarak, Web sitesi iç Web tarayıcısında görüntülenir.
+- **Ctrl** **+bağlantıyı tıklattığınızda belirtilen** Web sitesini açmayı deneyin. Varsayılan olarak, Web sitesi iç Web tarayıcısında görüntülenir.
 
 ## <a name="display-urls-as-links"></a>URL’leri bağlantı olarak görüntüleme
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.
 
 2. **Metin düzenleyici**' ye tıklayın.
 
@@ -45,4 +45,4 @@ Kod düzenleyicisinin kodunuzda Tekdüzen Kaynak Konum belirleyicilerinin (URL '
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)

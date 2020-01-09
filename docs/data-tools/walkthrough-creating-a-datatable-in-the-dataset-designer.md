@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Dataset Designer, creating data tables
 - tables [Visual Studio], creating
 - data [Visual Studio], Dataset Designer
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9dbf7116c614a8eec599f197f975ab4c389bc950
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1526a5f4137ece5b76c282255af3da4ab20ac119
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648066"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586009"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir DataTable oluşturun
 
@@ -25,7 +25,7 @@ Bu izlenecek yol, **veri kümesi Tasarımcısı**kullanılarak <xref:System.Data
 
 ## <a name="create-a-new-windows-forms-application"></a>Yeni bir Windows Forms uygulaması oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -39,11 +39,11 @@ Bu izlenecek yol, **veri kümesi Tasarımcısı**kullanılarak <xref:System.Data
 
 1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-     **Yeni öğe Ekle** iletişim kutusu görüntülenir.
+     **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
 
 2. Sol bölmedeki **veriler**' i seçin ve ardından orta bölmedeki veri **kümesi** ' ni seçin.
 
-3. **Ekle**' yi seçin.
+3. Seçin **ekleme**.
 
      Visual Studio **dataSet1. xsd** adlı bir dosyayı projeye ekler ve **veri kümesi Tasarımcısı**açar.
 
@@ -53,15 +53,15 @@ Bu izlenecek yol, **veri kümesi Tasarımcısı**kullanılarak <xref:System.Data
 
      **DataTable1** adlı bir tablo, veri kümesine eklenir.
 
-2. **DataTable1** öğesinin başlık çubuğuna tıklayın ve `Music` yeniden adlandırın.
+2. **DataTable1** öğesinin başlık çubuğuna tıklayın ve `Music`yeniden adlandırın.
 
 ## <a name="add-columns-to-the-datatable"></a>DataTable 'a sütun ekleme
 
 1. **Müzik** tablosuna sağ tıklayın. **Ekle**' nin üzerine gelin ve ardından **sütun**' a tıklayın.
 
-2. Sütunu `SongID` olarak adlandırın.
+2. Sütunu `SongID`olarak adlandırın.
 
-3. **Özellikler** penceresinde <xref:System.Data.DataColumn.DataType%2A> özelliğini <xref:System.Int16?displayProperty=fullName> olarak ayarlayın.
+3. **Özellikler** penceresinde <xref:System.Data.DataColumn.DataType%2A> özelliğini <xref:System.Int16?displayProperty=fullName>olarak ayarlayın.
 
 4. Bu işlemi yineleyin ve aşağıdaki sütunları ekleyin:
 

@@ -1,5 +1,5 @@
 ---
-title: Büyük projeler derlerken belleği verimli şekilde kullanma | Microsoft Docs
+title: Büyük projeler oluşturduğunuzda belleği verimli bir şekilde kullanma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - msbuild, efficient memory use building large trees
 - caching (MSBuild)
 ms.assetid: 853a21ed-69f7-4817-af00-57f73e2c74b5
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab3be342f31e5df018c14f84d30febd38c31c401
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: af61c15c8ef65c062c1aab6eba079c613f99b5f8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786212"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595238"
 ---
-# <a name="use-memory-efficiently-when-you-build-large-projects"></a>Büyük projeler derlerken belleği verimli bir şekilde kullanın
-Büyük projeler çoğunlukla birçok projeler ve sistem belleği çok sayıda derleme zamanında kullanabileceği diğer bağımlılıklar içerir. Kullanılabilir sistem belleğini azaldıkça, sistem performansı da azaltılabilir. Eski sürümlerini [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje bellekte kaldı. Sürüm 3.5 projeleri eski sürümlerini kaldırılır, ancak yapı sonuçlarını sonraki almak için bir önbellekte saklanır.
+# <a name="use-memory-efficiently-when-you-build-large-projects"></a>Büyük projeler oluşturduğunuzda belleği verimli bir şekilde kullanın
+Büyük projeler genellikle birçok alt projeyi ve derleme zamanında çok fazla sistem belleği tüketen diğer bağımlılıkları içerir. Kullanılabilir sistem belleği azaltıldı, sistem performansı da azalabilir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projelerinin daha eski sürümleri bellekte kaldı. Sürüm 3,5, projelerin eski sürümlerini kaldırdı, ancak derleme sonuçlarını daha sonra almak üzere bir önbellekte bekletir.
 
- Sürüm 4.0 işleme bu bellek yönetimi otomatik olarak gibi özellikleri kullanmak zorunda kalmaktan projeleri kaydederek `UnloadProjectsOnCompletion` ve `UseResultsCache`.
+ Sürüm 4,0, bu bellek yönetimini otomatik olarak işler, projeleri `UnloadProjectsOnCompletion` ve `UseResultsCache`gibi özellikleri kullanmak zorunda kalmadan kaydederek yönetir.
 
 ### <a name="see-also"></a>Ayrıca bkz.
-- [Paralel olarak birden çok proje derleme](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+- [Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)

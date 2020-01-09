@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, decorators
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 567cba4be2d225985b5a6d690f0d8264f24190f4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3374c07cac01104354b2ce41abddbeabbec0a373
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747499"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566143"
 ---
 # <a name="properties-of-decorators"></a>Dekoratörlerin Özellikleri
 Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebilen simgelerle, metin veya genişletme/daraltma köşeli ayraçlardır. Aşağıdaki tablolarda, üç dekoratörün çeşitinin özellikleri gösterilmektedir. Bazı özellikler yalnızca şekil dekoratlarını veya yalnızca bağlayıcı dekoratlarını üzerinde görünür.
@@ -27,7 +27,7 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |-|-|-|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Daraltma dekoratörü Genişlet|
 |Name|Dekoratörün adı.|ExpandCollapseDecorator|
-|Notlar|Bu dekoratör ile ilişkili resmi olmayan notlar.|\<none >|
+|Notlar|Bu dekoratör ile ilişkili resmi olmayan notlar.|\<yok >|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
@@ -38,10 +38,10 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|DefaultIcon|Görüntülenecek simgenin veya resim dosyasının yolu.|\<none >|
+|DefaultIcon|Görüntülenecek simgenin veya resim dosyasının yolu.|\<yok >|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Simge dekoratör|
 |Name|Dekoratörün adı.|Şeklindeki IconDecorator|
-|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none >|
+|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<yok >|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
@@ -55,9 +55,9 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |Ise DefaultText|Görüntülenecek varsayılan metin.|Etiketle|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Etiketle|
 |FontSize|Dekoratör içinde görüntülenen metnin yazı tipi boyutu.|8|
-|FontStyle|Dekoratör içinde görüntülenen metnin yazı tipi stili.|Aralıklarla|
+|FontStyle|Dekoratör içinde görüntülenen metnin yazı tipi stili.|Düzenli|
 |Name|Dekoratörün adı.|Etiketle|
-|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none >|
+|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<yok >|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
@@ -66,4 +66,4 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

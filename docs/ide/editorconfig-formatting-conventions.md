@@ -7,18 +7,18 @@ dev_langs:
 - VB
 helpviewer_keywords:
 - formatting conventions [EditorConfig]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 42f1ab99a82f402ef6eced09ad5e47cf54122b86
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652799"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589233"
 ---
 # <a name="formatting-conventions"></a>Biçimlendirme kuralları
 
@@ -34,7 +34,7 @@ Biçimlendirme kuralları için kurallar aşağıdaki biçimdedir:
 
 `rule_name = value`
 
-Birçok kural için, `value` için `true` (Bu stili tercih et) ya da `false` (Bu stili tercih et) belirtirsiniz. Diğer kurallar için, kuralın ne zaman ve nereye uygulanacağını betimleyen `flush_left` veya `before_and_after` gibi bir değer belirtirsiniz. Önem derecesi belirtmezsiniz.
+Birçok kural için, `value`için `true` (Bu stili tercih et) ya da `false` (Bu stili tercih et) belirtirsiniz. Diğer kurallar için, kuralın ne zaman ve nereye uygulanacağını betimleyen `flush_left` veya `before_and_after` gibi bir değer belirtirsiniz. Önem derecesi belirtmezsiniz.
 
 ## <a name="net-formatting-settings"></a>.NET biçimlendirme ayarları
 
@@ -57,7 +57,7 @@ dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = true
 ```
 
-#### <a name="dotnet_sort_system_directives_first"></a>DotNet \_sort \_system \_directives_first
+#### <a name="dotnet_sort_system_directives_first"></a>DotNet\_\_sistemi\_sıralama directives_first
 
 |||
 |-|-|
@@ -81,13 +81,13 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-#### <a name="dotnet_separate_import_directive_groups"></a>DotNet \_separate \_import \_directive \_groups
+#### <a name="dotnet_separate_import_directive_groups"></a>DotNet\_ayrı\_içeri aktarma\_yönerge\_grupları
 
 |||
 |-|-|
 | **Kural adı** | dotnet_separate_import_directive_groups |
 | **Uygun diller** | C# ve Visual Basic |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,5 |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.5 |
 | **Değerler** | `true` `using` yönerge grupları arasına boş bir satır koyun.<br /><br />`false`-`using` yönerge grupları arasına boş bir satır yerleştirmeyin. |
 | **Visual Studio varsayılanı** | `false` |
 
@@ -170,7 +170,7 @@ csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 ```
 
-#### <a name="csharp_new_line_before_open_brace"></a>CSharp \_new \_line \_before \_open_brace
+#### <a name="csharp_new_line_before_open_brace"></a>CSharp\_yeni\_satır\_\_önce open_brace
 
 Bu kural, bir açık ayraç `{` önceki kodla aynı satıra veya yeni bir satıra yerleştirilmelidir. Bu kural için, bu kuralın ne zaman uygulanacağını tanımlamak üzere **Yöntemler** veya **Özellikler**gibi **All**, **none**veya bir ya da daha fazla kod öğesi belirtirsiniz. Birden çok kod öğesi belirtmek için bunları virgülle (,) ayırın.
 
@@ -179,7 +179,7 @@ Bu kural, bir açık ayraç `{` önceki kodla aynı satıra veya yeni bir satır
 | **Kural adı** | csharp_new_line_before_open_brace |
 | **Uygun diller** | C# |
 | **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `all`-küme ayracın tüm ifadeler için yeni bir satırda olması gerekir ("Allman" stili).<br /><br />`none`-ayraç, tüm ifadeler için aynı satırda olması gerekir ("K & R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers`, 0, 1-küme ayraçlarının belirtilen kod öğesi ("Allman" Style) için yeni bir satırda olması gerekir. |
+| **Değerler** | `all`-küme ayracın tüm ifadeler için yeni bir satırda olması gerekir ("Allman" stili).<br /><br />`none`-ayraç, tüm ifadeler için aynı satırda olması gerekir ("K & R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers`, `properties`, `types`-küme ayraçlarının belirtilen kod öğesi ("Allman" Style) için yeni bir satırda olması gerekir. |
 | **Visual Studio varsayılanı** | `all` |
 
 Kod örnekleri:
@@ -202,7 +202,7 @@ void MyMethod() {
 }
 ```
 
-#### <a name="csharp_new_line_before_else"></a>CSharp \_new \_line \_before_else
+#### <a name="csharp_new_line_before_else"></a>CSharp\_yeni\_satır\_before_else
 
 |||
 |-|-|
@@ -231,7 +231,7 @@ if (...) {
 }
 ```
 
-#### <a name="csharp_new_line_before_catch"></a>CSharp \_new \_line \_before_catch
+#### <a name="csharp_new_line_before_catch"></a>CSharp\_yeni\_satır\_before_catch
 
 |||
 |-|-|
@@ -260,7 +260,7 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_finally"></a>CSharp \_new \_line \_before_finally
+#### <a name="csharp_new_line_before_finally"></a>CSharp\_yeni\_satır\_before_finally
 
 |||
 |-|-|
@@ -294,7 +294,7 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_object_initializers"></a>CSharp \_new \_line \_before \_members \_in \_object_initializers
+#### <a name="csharp_new_line_before_members_in_object_initializers"></a>CSharp\_yeni\_satır\_\_\_\_üye object_initializers
 
 |||
 |-|-|
@@ -321,7 +321,7 @@ var z = new B()
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>CSharp \_new \_line \_before \_members \_in \_anonymous_types
+#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>CSharp\_yeni\_satır\_\_\_\_üye anonymous_types
 
 |||
 |-|-|
@@ -388,7 +388,7 @@ csharp_indent_braces = false
 csharp_indent_case_contents_when_block = true
 ```
 
-#### <a name="csharp_indent_case_contents"></a>CSharp \_indent \_case_contents
+#### <a name="csharp_indent_case_contents"></a>CSharp\_girinti\_case_contents
 
 |||
 |-|-|
@@ -431,7 +431,7 @@ switch(c) {
 }
 ```
 
-#### <a name="csharp_indent_switch_labels"></a>CSharp \_indent \_switch_labels
+#### <a name="csharp_indent_switch_labels"></a>CSharp\_girinti\_switch_labels
 
 |||
 |-|-|
@@ -471,7 +471,7 @@ default:
 }
 ```
 
-#### <a name="csharp_indent_labels"></a>CSharp \_indent_labels
+#### <a name="csharp_indent_labels"></a>CSharp\_indent_labels
 
 |||
 |-|-|
@@ -634,7 +634,7 @@ csharp_space_between_empty_square_brackets = false
 csharp_space_between_square_brackets = false
 ```
 
-#### <a name="csharp_space_after_cast"></a>CSharp \_space \_after_cast
+#### <a name="csharp_space_after_cast"></a>CSharp\_alanı\_after_cast
 
 |||
 |-|-|
@@ -684,7 +684,7 @@ for(int i;i<x;i++) { ... }
 | **Değerler** | `control_flow_statements`-denetim akışı deyimlerinin ayraçları arasına boşluk yerleştir<br /><br />`expressions` ifadelerin parantezleri arasına boşluk yerleştir<br /><br />`type_casts`-tür yayınlarına parantez arasına boşluk yerleştir |
 | **Visual Studio varsayılanı** | `false` |
 
-Bu kuralı atlarsanız veya `control_flow_statements`, `expressions` veya `type_casts` dışında bir değer kullanırsanız, ayar uygulanmaz.
+Bu kuralı atlarsanız veya `control_flow_statements`, `expressions`veya `type_casts`dışında bir değer kullanırsanız, ayar uygulanmaz.
 
 Kod örnekleri:
 
@@ -699,7 +699,7 @@ var z = ( x * y ) - ( ( y - x ) * 3 );
 int y = ( int )x;
 ```
 
-#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>CSharp \_space \_before \_colon \_in \_inheritance_clause
+#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>CSharp\_alanı\_\_iki nokta üst üste\_önce\_inheritance_clause
 
 |||
 |-|-|
@@ -735,7 +735,7 @@ class C: I
 }
 ```
 
-#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>CSharp \_space \_after \_colon \_in \_inheritance_clause
+#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>CSharp\_alanı\_\_iki nokta üst üste\_sonra\_inheritance_clause
 
 |||
 |-|-|
@@ -771,7 +771,7 @@ class C :I
 }
 ```
 
-#### <a name="csharp_space_around_binary_operators"></a>CSharp \_space \_around \_binary_operators
+#### <a name="csharp_space_around_binary_operators"></a>CSharp\_alanı\_etrafında\_binary_operators
 
 |||
 |-|-|
@@ -781,7 +781,7 @@ class C :I
 | **Değerler** | `before_and_after`-ikili işleçten önce ve sonra boşluk Ekle<br /><br />`none`-ikili işleçten önce ve sonra boşlukları kaldır<br /><br />`ignore`-ikili operatörlerin çevresindeki boşlukları yoksay |
 | **Visual Studio varsayılanı** | `before_and_after` |
 
-Bu kuralı atlarsanız veya `before_and_after`, `none` veya `ignore` dışında bir değer kullanırsanız, ayar uygulanmaz.
+Bu kuralı atlarsanız veya `before_and_after`, `none`veya `ignore`dışında bir değer kullanırsanız, ayar uygulanmaz.
 
 Kod örnekleri:
 
@@ -1214,4 +1214,4 @@ public int MyProperty
 
 - [Dil kuralları](editorconfig-language-conventions.md)
 - [Adlandırma kuralları](editorconfig-naming-conventions.md)
-- [EditorConfig için .NET kodlama kuralı ayarları](editorconfig-code-style-settings-reference.md)
+- [Kodlama kuralı ayarlarına EditorConfig için .NET](editorconfig-code-style-settings-reference.md)

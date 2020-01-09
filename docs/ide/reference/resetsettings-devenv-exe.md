@@ -8,17 +8,17 @@ helpviewer_keywords:
 - /ResetSettings Devenv switch
 - settings [Visual Studio], resetting
 ms.assetid: 1d41021c-6f58-4bd5-b122-d1c995812192
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3549801001ba8df60634884dc58137a8fa77d905
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eebcf2c6796723e51c3aefdb12575aa89779429f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655560"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593869"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
@@ -61,7 +61,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 ## <a name="example"></a>Örnek
 
-İlk örnek, `MySettings.vssettings` dosya içinde depolanan ayarları uygular.
+İlk örnek, `MySettings.vssettings`dosya içinde depolanan ayarları uygular.
 
 İkinci örnek, görsel C# varsayılan profilini geri yükler.
 
@@ -74,5 +74,5 @@ devenv /resetsettings CSharp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ortam ayarları](../environment-settings.md)
-- [Visual Studio IDE 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio IDE'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)

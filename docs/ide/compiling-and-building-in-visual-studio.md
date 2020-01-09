@@ -7,17 +7,17 @@ helpviewer_keywords:
 - builds [Visual Studio], about building in Visual Studio
 - custom build steps, types of builds
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c99408530344c72d2e9669178c5e79f7c34d551
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 38d583553c0382598681ab3aa52ca3a41a27ed2c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211248"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585502"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Derleme ve Visual Studio'da derleyin
 
@@ -25,7 +25,7 @@ Kaynak kodu derlerken, derleme altyapısı derlemeler ve yürütülebilir uygula
 
 Kodunuzu genellikle oluşturarak hızlı bir şekilde sözdizimi, yanlış yazılmış anahtar sözcükler gibi derleme zamanı hataları belirlemek ve uyuşmazlıkları yazın. Ayrıca, algılamak ve çalışma zamanı hataları, mantık hataları ve anlamsal hataları gibi oluşturma ve kod hata ayıklama sürümlerini çalıştıran düzeltin.
 
-Uygulamanın kaynak kodunu doğru söz dizimini içerir ve kitaplıkları, derlemeler ve diğer bileşenleri için tüm statik başvuruları çözümlemek başarılı bir derleme doğrular. Çalıştırılabilir bir uygulamaya üretilen, test edilebilirler düzgün hem de çalışması için bir [ortam hata ayıklama](../debugger/index.yml) ve el ile ve otomatik testler için çeşitli [kod kalitesini doğrulamak](../test/improve-code-quality.md). Uygulamanın tam olarak test sonra müşterilerinize dağıtmak için bir yayın sürümünü derleyebilirsiniz. Bu işleme giriş için bkz [. İzlenecek yol: Uygulama](../ide/walkthrough-building-an-application.md)oluşturma.
+Uygulamanın kaynak kodunu doğru söz dizimini içerir ve kitaplıkları, derlemeler ve diğer bileşenleri için tüm statik başvuruları çözümlemek başarılı bir derleme doğrular. Çalıştırılabilir bir uygulamaya üretilen, test edilebilirler düzgün hem de çalışması için bir [ortam hata ayıklama](../debugger/index.yml) ve el ile ve otomatik testler için çeşitli [kod kalitesini doğrulamak](../test/improve-code-quality.md). Uygulamanın tam olarak test sonra müşterilerinize dağıtmak için bir yayın sürümünü derleyebilirsiniz. Bu işlem, giriş için bkz. [izlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md).
 
 Bir uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz: Visual Studio IDE, MSBuild komut satırı araçları ve Azure işlem hatları:
 
@@ -33,7 +33,7 @@ Bir uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullan
 | --- |--- | --- |
 | IDE |-Derlemeleri hemen oluşturun ve bunları bir hata ayıklayıcıda test edin.<br />-C++ ve C# projeleri için birden çok işlemcili derlemeleri çalıştırın.<br />-Derleme sistemin farklı yönlerini özelleştirin. |
 | MSBuild komut satırı| -Visual Studio yüklemeden projeleri oluşturun.<br />-Çalışma birden çok işlemcili için tüm proje türleri oluşturur.<br />-Birçok alan yapı sisteminin özelleştirin.|
-| Azure işlem hatları | -Bir sürekli tümleştirme/sürekli teslim işlem hattı bir parçası olarak yapı sürecinizi otomatik hale getirin.<br />-Her derleme ile otomatik testler için geçerlidir.<br />-Yapı işlemleri için neredeyse sınırsız bulut tabanlı kaynakların paylaşmayan kullanır.<br />-Yapı iş akışını değiştirin ve ayrıntılı bir şekilde özelleştirilmiş görevleri gerçekleştirmek için yapı etkinlikleri oluşturun.|
+| Azure Pipelines | -Bir sürekli tümleştirme/sürekli teslim işlem hattı bir parçası olarak yapı sürecinizi otomatik hale getirin.<br />-Her derleme ile otomatik testler için geçerlidir.<br />-Yapı işlemleri için neredeyse sınırsız bulut tabanlı kaynakların paylaşmayan kullanır.<br />-Yapı iş akışını değiştirin ve ayrıntılı bir şekilde özelleştirilmiş görevleri gerçekleştirmek için yapı etkinlikleri oluşturun.|
 
 Bu bölümdeki belgeler, daha fazla IDE tabanlı yapı işleminin ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için bkz. [MSBuild](../msbuild/msbuild.md) ve [Azure işlem hatları](/azure/devops/pipelines/index?view=vsts)sırasıyla.
 
@@ -44,7 +44,7 @@ Bu bölümdeki belgeler, daha fazla IDE tabanlı yapı işleminin ayrıntıları
 
 Bir proje oluşturduğunuzda, Visual Studio projeyi ve projeyi içeren çözüm derleme yapılandırmaları varsayılan oluşturulur.  Bu yapılandırmaları nasıl çözümler ve projeler dağıtılan ve derlenen tanımlar. Proje yapılandırmaları, özellikle bir hedef Platformu (örneğin, Windows veya Linux) için benzersizdir ve türlerinin (örneğin, hata ayıklama veya sürüm) oluşturun. İster ve kendi yapılandırmalarınızı gerektiği gibi oluşturabilirsiniz ancak bu yapılandırmalar düzenleyebilirsiniz.
 
-IDE içinde oluşturmaya yönelik ilk giriş için bkz [. İzlenecek yol: Uygulama](walkthrough-building-an-application.md)oluşturma.
+IDE içinden yapı ilk bir giriş için bkz. [izlenecek yol: uygulama oluşturma](walkthrough-building-an-application.md).
 
 Ardından, bkz: [oluşturma ve projeler ve çözümler Visual Studio'da Temizleme](building-and-cleaning-projects-and-solutions-in-visual-studio.md) farklı yönlerini özelleştirmeleri hakkında bilgi edinmek için işlemi yapabilirsiniz. Özelleştirmeleri içerir [çıktı dizini değiştirerek](how-to-change-the-build-output-directory.md), [derleme olayları belirtme özel](specifying-custom-build-events-in-visual-studio.md), [proje bağımlılıkları yönetmek](how-to-create-and-remove-project-dependencies.md), [yapı günlüğünü yönetme dosyaları](how-to-view-save-and-configure-build-log-files.md), ve [Derleyici uyarılarını gizleme](how-to-suppress-compiler-warnings.md).
 

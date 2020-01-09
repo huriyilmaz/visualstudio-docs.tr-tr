@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83edb231819a47c3c8a6f7a1943ae9086e06467d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8a10252d8465373c8637681763e59511b1e2d621
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653882"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596677"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Özel Yönerge İşlemcisi Dağıtma
 
@@ -52,9 +52,9 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
     1. VSıX bildirim düzenleyicisinde, **varlıklar** sekmesinde **Yeni** ' yi seçin ve yeni öğenin özelliklerini ayarlayın:
 
-         @No__t_1**VSPackage** **içerik türü**
+          = **VSPackage** **içerik türü**
 
-         **Kaynak proje**  = *geçerli proje* \< >
+         **Kaynak proje** = *geçerli proje* \<>
 
     2. **Seçili sürümler** ' e tıklayın ve yönerge işlemcisinin kullanılabilir olmasını istediğiniz yükleme türlerini işaretleyin.
 
@@ -66,11 +66,11 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
     2. Çözüm Gezgini'nde seçin ve özelliklerini aşağıdaki gibi ayarlayın:
 
-         **Derleme eylemi**  = **içeriği**
+         **Derleme Eylemi** = **İçerik**
 
-         **Her zaman kopyala**  =  **Çıkış Dizinine Kopyala**
+         **Her zaman kopyala** = **Çıkış Dizinine Kopyala**
 
-         VSıX  = **true** **olarak ekle**
+         VSıX = **true** **olarak ekle**
 
     3. VSIX'in adını ayarlayın ve kimliğin benzersiz olmasını sağlayın.
 
@@ -89,15 +89,15 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 5. Aşağıdaki başvuruları projeye ekleyin:
 
-    - **Microsoft. VisualStudio. Textşablon oluşturma. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
-    - **Microsoft. VisualStudio. Textşablon. Interfaces. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
 
-    - **Microsoft. VisualStudio. Textşablon. VSHost. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**
 
 6. Projeye özel yönerge işlemcisi sınıfınızı ekleyin.
 
-     Bu, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> veya <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> uygulaması gereken bir genel sınıftır.
+     Bu, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> veya <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>uygulaması gereken bir genel sınıftır.
 
 #### <a name="to-install-the-custom-directive-processor"></a>Özel Yönerge İşlemcisini yüklemek için
 
@@ -122,9 +122,9 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 - Özel yönergede belirttiğiniz Işlemci adı,. pkgdef dosyasında belirttiğiniz `CustomDirectiveProcessorName` eşleşmelidir.
 
-- @No__t_0 yönteminizin `CustomDirective` adı geçirildiğinde `true` döndürmesi gerekir.
+- `IsDirectiveSupported` yönteminizin `CustomDirective`adı geçirildiğinde `true` döndürmesi gerekir.
 
-- Uzantıyı uzantı Yöneticisi 'nde göremiyorsanız, ancak sistem bunu yüklemenize izin vermeyecektir, uzantıyı **%LocalAppData%\microsoft\visualstudio \\ \* 0 \ Extensions \\** silin.
+- Uzantıyı uzantı Yöneticisi 'nde göremiyorsanız, ancak sistem bunu yüklemenize izin vermeyecektir, uzantıyı **%LocalAppData%\microsoft\visualstudio\\\*0 \ Extensions\\** silin.
 
 - .Vsix dosyasını açın ve içeriğini inceleyin. Açmak için, dosya adı uzantısını .zip olarak değiştirin. .dll, .pkgdef ve extension.vsixmanifest dosyalarını içerdiğini doğrulayın. .vsixmanifest uzantı dosyası SupportedProducts düğümü için uygun listeyi içermelidir ve buna ek olarak İçerik düğümü altında bir VsPackage düğümü içermelidir:
 
@@ -164,7 +164,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 2. Regedit içinde şuraya gidin:
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \*.0 \ Texttemplating\directiveiþlemcileri**
+    **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\\\*. 0 \ Texttemplating\directiveiþlemcileri**
 
     Visual Studio 'nun deneysel sürümüne yönerge işlemcisini yüklemek isterseniz "11,0" sonrasına "exp" ekleyin.
 
@@ -185,16 +185,16 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 |Name|Tür|Veri|
 |-|-|-|
 |(Varsayılan)|REG_SZ|(değer ayarlı değil)|
-|örneği|REG_SZ|**\<Namespace adı >. \<Class adı >**|
-|CodeBase|REG_SZ|**\<Your yol > \\ derleme adınızı < \>**|
+|Sınıf|REG_SZ|**\<ad alanı adı >.\<sınıf adı >**|
+|CodeBase|REG_SZ|**\<\\derleme adınızı <\>**|
 
  Derleme GAC'deyse, kayıt defteri alt anahtarları aşağıdaki tabloda gibi görünmelidir:
 
 |Name|Tür|Veri|
 |-|-|-|
 |(Varsayılan)|REG_SZ|(değer ayarlı değil)|
-|örneği|REG_SZ|**tam sınıf adınızı** \< >|
-|Derleme|REG_SZ|**GAC 'de derleme adınızı** \< >|
+|Sınıf|REG_SZ|**tam sınıf adınızı** \<>|
+|Derleme|REG_SZ|**GAC 'de derleme adınızı** \<>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

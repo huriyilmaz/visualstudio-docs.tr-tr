@@ -2,23 +2,23 @@
 title: Test odaklı geliştirme Kılavuzu
 ms.date: 07/24/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: d62989ffe5444f94cf3b062cde16399c08322b16
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: a264975014fea88126bbca0589fe037e629dae10
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646663"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566286"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>İzlenecek yol: test Gezginini kullanarak test odaklı geliştirme
 
-Artımlı kod değişiklikleri aracılığıyla kodunuzun düzgün çalışmasını sağlamaya yardımcı olmak için birim testleri oluşturun. Üçüncü taraflar tarafından geliştirilen bazıları dahil olmak üzere birim testlerini yazmak için kullanabileceğiniz çeşitli çerçeveler vardır. Bazı test çerçeveleri, farklı diller veya platformlarda test için özelleştirilmiştir. Test Gezgini, bu çerçevelerin herhangi birinde birim testleri için tek bir arabirim sağlar. **Test Gezgini**hakkında daha fazla bilgi için bkz. Test Gezgini ve [Test Gezgini](test-explorer-faq.md) [ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) SSS.
+Artımlı kod değişiklikleri aracılığıyla kodunuzun düzgün çalışmasını sağlamaya yardımcı olmak için birim testleri oluşturun. Bazı üçüncü taraflar tarafından geliştirilen dahil olmak üzere birim testleri yazmak için kullanabileceğiniz birkaç çerçeve vardır. Bazı test çerçeveleri, farklı diller veya platformlarda test için özelleştirilmiştir. Test Gezgini bu çerçevelerin herhangi birinde yapılan birim testleri için tek bir arabirim sağlar. **Test Gezgini**hakkında daha fazla bilgi için bkz. Test Gezgini ve [Test Gezgini](test-explorer-faq.md) [ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) SSS.
 
-Bu izlenecek yol, C# Microsoft Test çerçevesi (MSTest) kullanarak test edilmiş bir yöntemin nasıl geliştirileceğini göstermektedir. Diğer diller veya NUnit gibi diğer test çerçeveleri için kolayca uyum sağlayabilirsiniz. Daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçevelerini yüklemeyi](install-third-party-unit-test-frameworks.md).
+Bu izlenecek yol, C# Microsoft Test çerçevesi (MSTest) kullanarak test edilmiş bir yöntemin nasıl geliştirileceğini göstermektedir. Diğer diller veya NUnit gibi diğer test çerçeveleri için kolayca uyum sağlayabilirsiniz. Daha fazla bilgi için [üçüncü taraf birim testi çerçevelerini yükleme](install-third-party-unit-test-frameworks.md).
 
 ## <a name="create-a-test-and-generate-code"></a>Test oluşturma ve kod üretme
 
@@ -28,7 +28,7 @@ Bu izlenecek yol, C# Microsoft Test çerçevesi (MSTest) kullanarak test edilmi�
 
    ![Yeni kod ve test projeleri](../test/media/test-driven-development-ide.png)
 
-3. Belirli bir giriş için elde edilen sonucu doğrulayan basit bir test yöntemi yazın. @No__t_0 sınıfına aşağıdaki kodu ekleyin:
+3. Belirli bir giriş için elde edilen sonucu doğrulayan basit bir test yöntemi yazın. `UnitTest1` sınıfına aşağıdaki kodu ekleyin:
 
    ```csharp
    [TestMethod]
@@ -48,7 +48,7 @@ Bu izlenecek yol, C# Microsoft Test çerçevesi (MSTest) kullanarak test edilmi�
 
 4. Test kodundan bir tür oluşturun.
 
-   1. İmleci `Rooter` yerleştirin ve ardından ampul menüsünde,**yeni tür oluştur** >  **' Rooter ' türü oluştur '** u seçin.
+   1. İmleci `Rooter`yerleştirin ve ardından ampul menüsünde, **yeni tür oluştur** >  **' Rooter ' türü oluştur '** u seçin.
 
       ![Yeni tür hızlı eylem Oluştur](media/test-driven-development-generate-new-type.png)
 
@@ -56,11 +56,11 @@ Bu izlenecek yol, C# Microsoft Test çerçevesi (MSTest) kullanarak test edilmi�
 
       ![Visual Studio 2019 'de tür oluştur iletişim kutusu](media/test-driven-development-generate-type-dialog.png)
 
-5. Test kodundan bir yöntem oluşturun. İmleci `SquareRoot` yerleştirin ve ardından ampul menüsünde, **' Rooter. SquareRoot ' metodunu üret**' i seçin.
+5. Test kodundan bir yöntem oluşturun. İmleci `SquareRoot`yerleştirin ve ardından ampul menüsünde, **' Rooter. SquareRoot ' metodunu üret**' i seçin.
 
 6. Birim testini çalıştırın.
 
-   1. **Test Gezgini**'ni açmak Için, **test** menüsünde **Windows**  > **Test Gezgini**' ni seçin.
+   1. **Test Gezgini**'ni açmak Için, **test** menüsünde **Windows** > **Test Gezgini**' ni seçin.
 
    2. **Test Gezgini**'nde, testi çalıştırmak Için **Tümünü Çalıştır** düğmesini seçin.
 
@@ -78,7 +78,7 @@ Bu noktada, testin başarılı olması için değiştirebileceğiniz bir test ve
 
 ## <a name="verify-a-code-change"></a>Kod değişikliğini doğrulama
 
-1. *Class1.cs* dosyasında `SquareRoot` kodunu geliştirebilirsiniz:
+1. *Class1.cs* dosyasında `SquareRoot`kodunu geliştirebilirsiniz:
 
     ```csharp
     public double SquareRoot(double input)
@@ -87,7 +87,7 @@ Bu noktada, testin başarılı olması için değiştirebileceğiniz bir test ve
     }
     ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
 
    Çözüm oluşturulur ve test çalıştırmaları ve geçirir.
 
@@ -98,7 +98,7 @@ Bu noktada, testin başarılı olması için değiştirebileceğiniz bir test ve
 Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş değerleri aralığı deneyen testler ekleyin.
 
 > [!TIP]
-> Başarılı olan testlerin değiştirilmesini önleyin. Bunun yerine, yeni testler ekleyin. Mevcut testleri yalnızca kullanıcı gereksinimleri değiştiğinde değiştirin. Bu ilke, kodu genişletmek için çalışırken mevcut işlevselliği kaybetmemenizi sağlamaya yardımcı olur.
+> Geçen var olan testlerden geçilenleri değiştirmekten kaçının. Bunun yerine yeni testler ekleyin. Varolan testleri yalnızca kullanıcı gereksinimleri değiştiğinde değiştirin. Bu ilke, kod genişletmeye çalışırken mevcut işlevselliği kaybetmemenizi sağlamaya yardımcı olur.
 
 1. Test sınıfında, aşağıdaki testi ekleyerek bir giriş değerleri aralığı dener:
 
@@ -124,11 +124,11 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
     }
     ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
 
    Yeni test başarısız olur (ancak ilk test devam eder). Başarısızlık noktasını bulmak için, başarısız testi seçin ve ardından **Test ayrıntısı Özeti** bölmesindeki ayrıntılara bakın.
 
-3. Neyin yanlış olabileceğini görmek için test kapsamındaki yöntemi inceleyin. @No__t_0 kodunu aşağıdaki gibi değiştirin:
+3. Neyin yanlış olabileceğini görmek için test altındaki yöntemi inceleyin. `SquareRoot` kodunu aşağıdaki gibi değiştirin:
 
     ```csharp
     public double SquareRoot(double input)
@@ -144,9 +144,9 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
     }
     ```
 
-4. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+4. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
 
-   Her iki test artık geçer.
+   Şimdi iki test geçirin.
 
 ## <a name="add-tests-for-exceptional-cases"></a>Olağanüstü durumlar için testler ekleme
 
@@ -169,7 +169,7 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
     }
     ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
 
    Test döngüleri altındaki yöntemi el ile iptal edilmesi gerekir.
 
@@ -189,7 +189,7 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
         ...
     ```
 
-5. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+5. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
 
    Tüm testler geçer.
 
@@ -198,11 +198,11 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
 Kodu yeniden düzenleyin, ancak testleri değiştirmeyin.
 
 > [!TIP]
-> Yeniden *düzenleme* , kodun daha iyi veya anlaşılması daha kolay hale getirmek için tasarlanan bir değişikdir. Kodun davranışını değiştirmek için tasarlanmamıştır ve bu nedenle testler değiştirilmez.
+> Yeniden *düzenleme* , kodun daha iyi veya anlaşılması daha kolay hale getirmek için tasarlanan bir değişikdir. Kod davranışını değiştirmek üzere tasarlanmamıştır ve bu nedenle testler değiştirilmez.
 >
-> Yeniden düzenleme adımlarını işlevselliği genişleten adımlardan ayrı olarak gerçekleştirmenizi öneririz. Testlerin değişmeden tutulması, yanlışlıkla yeniden düzenleme sırasında hata sunmamanızı sağlar.
+> Yeniden düzenleme adımları ayrı ayrı işlevselliği genişleten adımlardan gerçekleştirmenizi öneririz. Testlerin değiştirmeden tutmak, yanlışlıkla hataları yeniden düzenleme sırasında oluşturmadığından emin olmanızı sağlar.
 
-1. @No__t_1 yönteminde `result` hesaplayan satırı aşağıdaki gibi değiştirin:
+1. `SquareRoot` yönteminde `result` hesaplayan satırı aşağıdaki gibi değiştirin:
 
     ```csharp
     public double SquareRoot(double input)

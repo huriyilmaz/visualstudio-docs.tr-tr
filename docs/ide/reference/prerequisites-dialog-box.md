@@ -7,17 +7,17 @@ f1_keywords:
 - Microsoft.VisualStudio.Publish.BaseProvider.Dialog.Bootstrapper
 helpviewer_keywords:
 - Prerequisites dialog box
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ab3cb844f518ef5fae553010fe4a800c09d170a
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.openlocfilehash: 0ecbba1a1c5e8670fd9adcafdfed8cec21dd3912
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533379"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567911"
 ---
 # <a name="prerequisites-dialog-box"></a>Önkoşullar iletişim kutusu
 
@@ -25,7 +25,7 @@ ms.locfileid: "68533379"
 
 ![Visual Studio 'da Önkoşullar iletişim kutusu](media/prerequisites-dialog-box.png)
 
-İletişim kutusuna erişmek için, **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** > **özellikleri**' ni seçin. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesini seçin ve ardından **Önkoşullar**' ı seçin. Kurulum projeleri için, **Proje** menüsünde **Özellikler**' e tıklayın. **Özellik sayfaları** iletişim kutusu göründüğünde, **Önkoşullar**' ı tıklatın.
+İletişim kutusuna erişmek için **Çözüm Gezgini**bir proje düğümü seçin ve ardından **Proje** > **Özellikler**' i seçin. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesini seçin ve ardından **Önkoşullar**' ı seçin. Kurulum projeleri için, **Proje** menüsünde **Özellikler**' e tıklayın. **Özellik sayfaları** iletişim kutusu göründüğünde, **Önkoşullar**' ı tıklatın.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
@@ -46,7 +46,7 @@ ms.locfileid: "68533379"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|**.NET Framework 3,5 SP1**|Bu paket aşağıdakileri yükleyerek:<br /><br /> -2,0, 3,0 ve 3,5 sürümlerini .NET Framework.<br />-32-bit (x86) ve 64 bit (x64) işletim sistemlerindeki tüm .NET Framework sürümleri için destek.<br />-Paketiyle birlikte yüklenen her bir .NET Framework sürümü için dil paketleri.<br />-.NET Framework 2,0 ve 3,0 için hizmet paketleri.<br /><br /> .NET Framework 3,0, Windows Vista 'da bulunur ve Visual Studio 'da .NET Framework 3,5 bulunur. .NET Framework 3,5, 32-bit işletim sistemleri C# için derlenen ve hedef Framework 'ün **.NET Framework 3,5**olarak ayarlandığı ve 64-bit için derlenen Visual Basic ve C# projelerin tüm Visual Basic ve projeleri için gereklidir işletim sistemleri. (IA64 desteklenmez.) Visual Basic ve C# projelerin varsayılan olarak HERHANGI bir CPU mimarisi için derlendiğini unutmayın. Daha fazla bilgi için bkz. [framework hedefleme genel bakış](../../ide/visual-studio-multi-targeting-overview.md) ve [64-bit uygulamalar için önkoşulları dağıtma](../../deployment/deploying-prerequisites-for-64-bit-applications.md).|
+|**.NET Framework 3,5 SP1**|Bu paket aşağıdakileri yükleyerek:<br /><br /> -2,0, 3,0 ve 3,5 sürümlerini .NET Framework.<br />-32-bit (x86) ve 64 bit (x64) işletim sistemlerindeki tüm .NET Framework sürümleri için destek.<br />-Paketiyle birlikte yüklenen her bir .NET Framework sürümü için dil paketleri.<br />-.NET Framework 2,0 ve 3,0 için hizmet paketleri.<br /><br /> .NET Framework 3,0, Windows Vista 'da bulunur ve Visual Studio 'da .NET Framework 3,5 bulunur. .NET Framework 3,5, 32-bit işletim sistemleri C# için derlenen ve hedef Framework 'ün **.NET Framework 3,5**olarak ayarlandığı ve 64-bit işletim sistemleri için derlenen Visual Basic ve C# projelerin her türlü Visual Basic ve projesi için gereklidir. (IA64 desteklenmez.) Visual Basic ve C# projelerin varsayılan olarak HERHANGI bir CPU mimarisi için derlendiğini unutmayın. Daha fazla bilgi için bkz. [framework hedefleme genel bakış](../../ide/visual-studio-multi-targeting-overview.md) ve [64-bit uygulamalar için önkoşulları dağıtma](../../deployment/deploying-prerequisites-for-64-bit-applications.md).|
 |**Microsoft .NET Framework 4. x**|Bu paket, hem x86 hem de x64 platformları için 4. x .NET Framework.|
 |**SQL Server 2014 için Microsoft System CLR Types (x64 ve x86)**|Bu paket x64 veya x86 için SQL Server 2014 için Microsoft System CLR türlerini kurar.|
 |**SQL Server 2008 R2 Express**|Bu paket, bir Microsoft SQL Server 2008 R2 ücretsiz sürümü olan Microsoft SQL Server 2008 R2 Express, küçük Web, sunucu veya masaüstü uygulamalarına yönelik ideal bir veritabanıdır. Geliştirme ve üretim için ücretsiz olarak kullanılabilir.|

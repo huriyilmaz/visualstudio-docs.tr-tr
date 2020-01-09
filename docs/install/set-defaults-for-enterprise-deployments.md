@@ -11,19 +11,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 9B7B4608-7A3F-4FF4-BDCE-42D9F7CE6DBA
-author: heaths
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3f1ddb1f1d39255c14e03d114891145c8f2dece5
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 305b0398550a64722f6029a3d50082e6397643cb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551181"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594532"
 ---
 # <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>Visual Studio kuruluş dağıtımları için varsayılanları ayarlama
 
@@ -58,7 +58,7 @@ Aşağıdaki kayıt defteri değerlerini ayarlayabilirsiniz:
 | `BackgroundDownloadDisabled` |`REG_DWORD` | 1\. | Kurulumun tüm yüklü Visual Studio ürünleri için güncelleştirmeleri otomatik olarak indirmasını engelleyin. Değer dilediğiniz zaman değiştirebilirsiniz. |
 
 > [!IMPORTANT]
-> Herhangi bir yüklemeden sonra `CachePath` kayıt defteri ilkesini değiştirirseniz, mevcut paket önbelleğini yeni konuma taşımanız ve tam denetime `Administrators` `Everyone` sahip olmak ve okuma erişimi olması için güvenli `SYSTEM` olduğundan emin olmanız gerekir.
+> Herhangi bir yüklemeden sonra `CachePath` kayıt defteri ilkesini değiştirirseniz, mevcut paket önbelleğini yeni konuma taşımanız ve `SYSTEM` ve `Administrators` tam denetime sahip olduğundan ve `Everyone` okuma erişimine sahip olması için güvenli olduğundan emin olmanız gerekir.
 > Mevcut önbelleğin taşınamaması veya güvenliğinin sağlanması gelecekteki yüklemelerde sorunlara neden olabilir.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]

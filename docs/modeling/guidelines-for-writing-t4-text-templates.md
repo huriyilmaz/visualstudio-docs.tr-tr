@@ -2,17 +2,17 @@
 title: T4 Metin Şablonları Yazma Yönergeleri
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0b1a8c70a0e7ec95e0545ecf3caf932f582b3c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667285"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596547"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
 
@@ -64,7 +64,7 @@ Büyük kod bloklarını ayrı bir derlemeye taşımayı düşünün.
 
 Büyük kod bloklarında ve sınıf özellik bloklarınız varsa, bu kodların bazılarını ayrı bir projede derleyebileceğiniz yöntemlere taşımak yararlı olabilir. Şablondaki koda erişmek için `<#@ assembly #>` yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
 
-Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıfın <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> devralması gerekir. Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
+Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıfın <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>devralması gerekir. Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
 
 Yapılandırma dosyaları değil, kod oluştur.
 
@@ -115,7 +115,7 @@ Bunu yapmanın avantajı, IntelliSense 'in kullanılabildiği için kodun daha k
 
 Özel koda izin ver: uzantı noktaları sağlayın.
 
-@No__t_0 # + sınıf özelliği blokları # > içinde sanal yöntemler oluşturmayı düşünün. Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
+\<# + sınıf özelliği blokları # > içinde sanal yöntemler oluşturmayı düşünün. Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
 
 Örneğin, MyStandardRunTimeTemplate.tt içinde:
 
@@ -139,7 +139,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 Metin oluşturma işleminden ayrı veri toplamayı ayırın.
 
-Hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için # Code Block # > ilk \< kullanın. İlk metin bloğundan şablonun sonuna veya ilk \< # + sınıf özelliği blok # >, uzun ifadelerden kaçının ve metin blokları içermediği sürece döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
+Hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için # Code Block # > ilk \<kullanın. İlk metin bloğundan şablonun sonuna veya ilk \<# + sınıf özelliği blok # >, uzun ifadelerden kaçının ve metin blokları içermediği sürece döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
 
 İçerme dosyaları için `.tt` kullanmayın.
 

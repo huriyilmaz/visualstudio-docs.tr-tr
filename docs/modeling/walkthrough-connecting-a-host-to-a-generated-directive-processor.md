@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: d474de7da459e9639e8ec9f29f34e59267388b50
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: a27b856b9c5129f725381afa34bd134009002216
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984418"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593986"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Konağı Oluşturulan bir Yönerge İşlemcisine Bağlama
 
@@ -39,13 +39,13 @@ Bu izlenecek yol aşağıdaki görevleri içerir:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
+Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
 
 | | |
 |-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
+| {1&gt;Visual Studio&lt;1} | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
-| Visual Studio görselleştirme ve modelleme SDK | |
+| {1&gt;{2&gt;Visual Studio Görselleştirme ve Modelleme SDK'sı&lt;2}&lt;1} | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
@@ -67,12 +67,12 @@ Bu kılavuzda, DSLMinimalTest çözümü için etki alanına özgü bir dil olu�
 
    Etki alanına özgü dil çözümü oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+2. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
    > [!IMPORTANT]
    > Bu adım yönerge işlemcisini oluşturur ve anahtar kayıt defterine ekler.
 
-3. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
+3. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
 
     Visual Studio 'nun ikinci bir örneği açılır.
 
@@ -96,17 +96,17 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve [Izlenecek y
 
 3. Aşağıdaki başvuruları ekleyin:
 
-    - Microsoft. VisualStudio. model. SDK. 11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    - Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    - Microsoft. VisualStudio. Textşablon. 11.0
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    - Microsoft. VisualStudio. Textşablon. Interfaces. 11.0
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    - Microsoft. VisualStudio. Textşablon. model. 11.0
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    - Microsoft. VisualStudio. Textşablon. VSHost. 11.0
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
 4. Program.cs veya Module1. vb 'nin en üstünde aşağıdaki kod satırını ekleyin:
 
@@ -228,9 +228,9 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve [Izlenecek y
             }
     ```
 
-7. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+7. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
 
-8. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+8. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="test-the-custom-host-with-the-directive-processor"></a>Özel Konağı yönerge Işlemcisi ile test etme
 
@@ -238,7 +238,7 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve [Izlenecek y
 
 ### <a name="create-a-text-template-to-test-the-custom-host"></a>Özel ana bilgisayarı sınamak için bir metin şablonu oluşturma
 
-1. Bir metin dosyası oluşturun ve `TestTemplateWithDP.tt` adlandırın. Dosyayı oluşturmak için Not Defteri gibi herhangi bir metin düzenleyicisini kullanabilirsiniz.
+1. Bir metin dosyası oluşturun ve `TestTemplateWithDP.tt`adlandırın. Dosyayı oluşturmak için Not Defteri gibi herhangi bir metin düzenleyicisini kullanabilirsiniz.
 
 2. Aşağıdakileri metin dosyasına ekleyin:
 
@@ -312,13 +312,13 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve [Izlenecek y
     #>
     ```
 
-3. Kodda \<YOUR PATH > değerini, ilk yordamda oluşturduğunuz tasarıma özgü dilden Sample. min dosyasının yoluyla değiştirin.
+3. Kodda, yol > \<, ilk yordamda oluşturduğunuz tasarıma özgü dilden Sample. min dosyasının yoluyla değiştirin.
 
 4. Dosyayı kaydedin ve kapatın.
 
 ### <a name="test-the-custom-host"></a>Özel Konağı test etme
 
-1. Bir komut Istemi penceresi açın.
+1. Bir Komut İstemi penceresi açın.
 
 2. Özel ana bilgisayar için yürütülebilir dosyanın yolunu yazın, ancak henüz ENTER'a basmayın.
 

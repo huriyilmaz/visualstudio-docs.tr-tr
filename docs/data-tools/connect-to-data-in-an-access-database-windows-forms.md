@@ -7,17 +7,17 @@ helpviewer_keywords:
 - connecting to data, Access databases
 - Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 65fa8b823a49644110dc773eb614da6022f4e8f5
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: deb163779110c50560787b35ad7744f90f6a7f36
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924512"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586867"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
@@ -33,7 +33,7 @@ Aşağıdaki yordamı kullanarak Office 365, Access 2013, Access 2010 veya 2007 
 
 1. Visual Studio 'da bir Windows Forms veya WPF uygulama projesi açın.
 
-2. **Veri kaynakları** penceresini açmak Için, **Görünüm** menüsünde **diğer Windows**  > **veri kaynakları**' nı seçin.
+2. **Veri kaynakları** penceresini açmak Için, **Görünüm** menüsünde **diğer Windows** > **veri kaynakları**' nı seçin.
 
    ![Diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png)
 
@@ -75,7 +75,7 @@ Aşağıdaki yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlar�
 
 1. Visual Studio 'da bir Windows Forms veya WPF uygulama projesi açın.
 
-2. **Görünüm** menüsünde **diğer Windows**  > **veri kaynakları**' nı seçin.
+2. **Görünüm** menüsünde **diğer Windows** > **veri kaynakları**' nı seçin.
 
    ![Diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png)
 

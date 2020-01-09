@@ -5,23 +5,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - msbuild
 ms.assetid: 20dae076-733e-49c1-a2e9-b336757ae21d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 131cc61614c9f3e814cca5bcbc0ff6db303414cf
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: d46b2042755df9f9f0e1abcb43c07a5318c92593
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253751"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595156"
 ---
 # <a name="resolve-assemblies-at-design-time"></a>Tasarım zamanında derlemeleri çözümleyin
 Başvuru **Ekle** iletişim kutusunun **.net** sekmesi aracılığıyla bir derlemeye başvuru eklediğinizde, başvuru bir ara başvuru derlemesine işaret eder; diğer bir deyişle, tüm tür ve imza bilgilerini içeren, ancak herhangi bir kod içermesi gerekmeyen bir derlemedir. **.Net** sekmesi .NET Framework çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler. Ayrıca, üçüncü taraflar tarafından kullanılan kayıtlı AssemblyFoldersEx klasörlerindeki çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler.
 
 ## <a name="multi-targeting"></a>Çoklu hedefleme
- [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)], ortak dil çalışma zamanı (CLR) sürüm 2,0 veya sürüm 4 ' te çalıştırılan .NET Framework sürümlerini hedeflemenizi sağlar. Bu sürümler 2,0, 3,0, 3,5, 4, 4,5, ve 4.5.1 sürümlerini ve Silverlight sürümlerini 1,0, 2,0 ve 3,0 içerir .NET Framework. CLR sürüm 2,0 veya sürüm 4 ' ü temel alan yeni bir .NET Framework sürümü yayınlanmışsa, Framework bir hedefleme paketi kullanılarak yüklenebilir ve Visual Studio 'da otomatik olarak bir hedef olarak görünür.
+ [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)], ortak dil çalışma zamanı (CLR) sürüm 2,0 veya sürüm 4 ' te çalışan .NET Framework sürümlerini hedeflemenizi sağlar. Bu sürümler 2,0, 3,0, 3,5, 4, 4,5, ve 4.5.1 sürümlerini ve Silverlight sürümlerini 1,0, 2,0 ve 3,0 içerir .NET Framework. CLR sürüm 2,0 veya sürüm 4 ' ü temel alan yeni bir .NET Framework sürümü yayınlanmışsa, Framework bir hedefleme paketi kullanılarak yüklenebilir ve Visual Studio 'da otomatik olarak bir hedef olarak görünür.
 
 ## <a name="how-type-resolution-works"></a>Tür çözümlemenin çalışması
  Çalışma zamanında, CLR GAC 'ye, *bin* dizinine ve herhangi bir yoklama yoluna bakarak derlemedeki türleri çözümler. Bu, Fusion yükleyicisi tarafından işlenir. Ancak, Fusion yükleyici ne aradıklarını nasıl bilir? Bu, uygulama yapılandırıldığında tasarım zamanında yapılan bir çözüme bağlıdır.

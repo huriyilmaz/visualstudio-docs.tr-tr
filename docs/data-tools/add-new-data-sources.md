@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 99e9d9d466ae32d86b64b17738c96c245bda8f96
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 555d32eb295e944060d2efe0b843e9d157b7c675
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648895"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587062"
 ---
 # <a name="add-new-data-sources"></a>Yeni veri kaynağı ekleme
 
@@ -37,7 +37,7 @@ Visual Studio 'daki .NET veri araçları bağlamında *veri kaynağı* terimi, b
 > [!NOTE]
 > Veri bağlama özellikleri, veri kümeleri, Entity Framework, LINQ to SQL, WCF veya SharePoint kullanmıyorsanız, "veri kaynağı" kavramı uygulanmaz. Yalnızca SQLCommand nesnelerini kullanarak doğrudan veritabanına bağlanın ve veritabanıyla doğrudan iletişim kurun.
 
-Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygulamasında **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanarak oluşturur ve düzenleyebilirsiniz. Entity Framework için öncelikle varlık sınıflarınızı oluşturun ve ardından **proje**  > **Yeni veri kaynağı Ekle** ' yi seçerek Sihirbazı başlatın (Bu makalenin ilerleyen bölümlerinde daha ayrıntılı açıklanmıştır).
+Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygulamasında **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanarak oluşturur ve düzenleyebilirsiniz. Entity Framework için öncelikle varlık sınıflarınızı oluşturun ve ardından **proje** > **Yeni veri kaynağı Ekle** ' yi seçerek Sihirbazı başlatın (Bu makalenin ilerleyen bölümlerinde daha ayrıntılı açıklanmıştır).
 
 ![Veri Kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)
 
@@ -46,7 +46,7 @@ Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygul
 Bir veri kaynağı oluşturduktan sonra **veri kaynakları** araç penceresinde görünür.
 
 > [!TIP]
-> **Veri kaynakları** penceresini açmak için, projenizin açık olduğundan emin olun ve ardından **shıft** +**alt** +**D** ' ye basın veya  > **diğer Windows**  > **veri kaynaklarını** **görüntüle** ' yi seçin.
+> **Veri kaynakları** penceresini açmak için, projenizin açık olduğundan emin olun ve ardından **shıft**+**alt**+**D** ' ye basın veya > **diğer Windows** > **veri kaynaklarını** **görüntüle** ' yi seçin.
 
 Veri **kaynakları** penceresinden bir veri kaynağını form tasarım yüzeyine veya denetimine sürükleyebilirsiniz. Bu, veri deposundaki verileri görüntüleyen ortak kodların oluşturulmasına neden olur.
 
@@ -60,13 +60,13 @@ Veritabanı veya veritabanı dosyası için veri kaynağı olarak kullanmak üze
 
 ### <a name="dataset"></a>Veri kümesi
 
-Veri kaynağı olarak bir veri kümesi oluşturmak için, **proje**  > **Yeni veri kaynağı Ekle**' yi seçerek **veri kaynağı Yapılandırma Sihirbazı 'nı** çalıştırın. **Veritabanı** veri kaynağı türünü seçin ve yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
+Veri kaynağı olarak bir veri kümesi oluşturmak için, **proje** > **Yeni veri kaynağı Ekle**' yi seçerek **veri kaynağı Yapılandırma Sihirbazı 'nı** çalıştırın. **Veritabanı** veri kaynağı türünü seçin ve yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
 
 ### <a name="entity-classes"></a>Varlık sınıfları
 
 Veri kaynağı olarak bir Entity Framework modeli oluşturmak için:
 
-1. Varlık sınıflarını oluşturmak için **varlık veri modeli Sihirbazı 'nı** çalıştırın. **ADO.NET varlık veri modeli** **Yeni  >  öğe eklemek**  >  **Proje** ' yi seçin.
+1. Varlık sınıflarını oluşturmak için **varlık veri modeli Sihirbazı 'nı** çalıştırın. **ADO.NET varlık veri modeli** **Yeni > öğe eklemek** > **Proje** ' yi seçin.
 
    ![Yeni Entity Framework modeli proje öğesi](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 

@@ -3,17 +3,17 @@ title: 'Nasıl Yapılır: Gölgelendiriciyi Dışarı Aktarma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0bd48bf4-9792-4456-a545-e462a2be668d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c05e40b76d60a5602cee1cb67b5c3094fb94d249
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f4a3aec047238786a60b1261415acccfed521695
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635544"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589441"
 ---
 # <a name="how-to-export-a-shader"></a>Nasıl yapılır: gölgelendiriciyi dışarı aktarma
 
@@ -27,7 +27,7 @@ Gölgelendirici tasarımcısını kullanarak bir gölgelendirici oluşturduktan 
 
      Açmak için bir **Görsel Gölgelendirici Grafiği (. dgsl)** dosyanız yoksa, [nasıl yapılır: temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)bölümünde açıklandığı gibi bir tane oluşturun.
 
-2. **Gölgelendirici Tasarımcısı** araç çubuğunda **Gelişmiş**  > **dışarı** **Aktar  >  dışarı aktar '** ı seçin. **Gölgelendiriciyi dışarı aktar** iletişim kutusu görünür.
+2. **Gölgelendirici Tasarımcısı** araç çubuğunda **Gelişmiş** > **dışarı** **Aktar > dışarı aktar '** ı seçin. **Gölgelendiriciyi dışarı aktar** iletişim kutusu görünür.
 
 3. **Farklı kaydet türü** aşağı açılan listesinde, dışarı aktarmak istediğiniz biçimi seçin.
 

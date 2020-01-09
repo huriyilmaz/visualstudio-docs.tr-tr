@@ -5,17 +5,17 @@ ms.date: 07/11/2018
 ms.topic: reference
 helpviewer_keywords:
 - F# features [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 176504ceb7c80a36028e7d5f1806aa598cdf708e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 75ebee68bf76a4dd5419942f79a3207c29673134
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645360"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565246"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Visual Studio 'da F# Visual ile geliştirme
 
@@ -23,7 +23,7 @@ Bu makale, geliştirme için F# Visual Studio özellikleri hakkında bilgi içer
 
 ## <a name="install-f-support"></a>Destek F# yüklemesi
 
-Visual Studio 'da F# ile geliştirme yapmak için, henüz yapmadıysanız **.net masaüstü geliştirme** iş yükünü yüklemeniz gerekir. Araçlar**ve Özellikler al** >  **Araçlar** ' ı seçerek açabileceğiniz Visual Studio yükleyicisi aracılığıyla Visual Studio iş yüklerini yüklersiniz.
+Visual Studio 'da F# ile geliştirme yapmak için, henüz yapmadıysanız **.net masaüstü geliştirme** iş yükünü yüklemeniz gerekir. Araçlar **ve Özellikler al** > **Araçlar** ' ı seçerek açabileceğiniz Visual Studio yükleyicisi aracılığıyla Visual Studio iş yüklerini yüklersiniz.
 
 ![Visual Studio 'da .NET masaüstü geliştirme iş yükü](media/dotnet-desktop-development-workload.png)
 
@@ -61,12 +61,12 @@ Aşağıdaki tablo, için F#proje özelliklerindeki özellikleri özetler:
 |Proje Tasarımcısı sayfası|İlgili bağlantılar|Açıklama|
 | - |-------------|-----------|
 |Uygulama|[Uygulama sayfası, proje Tasarımcısı](reference/application-page-project-designer-csharp.md)|Bir kitaplık veya yürütülebilir dosya oluşturma, uygulamanın hedeflediği .NET sürümü ve uygulamanın kullandığı kaynak dosyalarının nerede depolandığı hakkında bilgi gibi uygulama düzeyinde ayarları ve özellikleri belirtmenize olanak sağlar.|
-|Yapı|[Derleme sayfası, proje Tasarımcısı](reference/build-page-project-designer-csharp.md)|Kodun nasıl derlendiğini denetlemenizi sağlar.|
+|{1&gt;Yapı (Build)&lt;1}|[Derleme sayfası, proje Tasarımcısı](reference/build-page-project-designer-csharp.md)|Kodun nasıl derlendiğini denetlemenizi sağlar.|
 |Derleme olayları|[Derleme olayları sayfası, proje Tasarımcısı](reference/build-events-page-project-designer-csharp.md)|Derlemeden önce veya sonra çalıştırılacak komutları belirtmenize olanak sağlar.|
 |Hata ayıklama|[Hata Ayıklama Sayfası, Proje Tasarımcısı](reference/debug-page-project-designer.md)|Hata ayıklama sırasında uygulamanın nasıl çalıştığını denetlemenizi sağlar. Bu, hangi komutların kullanılacağını ve uygulamanızın Başlangıç dizininin ne olduğunu, yerel kod ve SQL gibi özel hata ayıklama modlarını da içerir.|
-|Paket (yalnızca .NET SDK)|Yok|NuGet paketi olarak yayımlarken NuGet paketi meta verilerini tanımlamanızı sağlar.|
+|Paket (yalnızca .NET SDK)|YOK|NuGet paketi olarak yayımlarken NuGet paketi meta verilerini tanımlamanızı sağlar.|
 |Başvuru yolları|[Bir projedeki başvuruları yönetme](managing-references-in-a-project.md)|Kodun bağımlı olduğu derlemelerin nerede aranacağını belirtmenizi sağlar.|
-|Kaynaklar (yalnızca .NET SDK)|Yok|Varsayılan bir kaynak dosyası oluşturmanıza ve yönetmenize olanak sağlar.|
+|Kaynaklar (yalnızca .NET SDK)|YOK|Varsayılan bir kaynak dosyası oluşturmanıza ve yönetmenize olanak sağlar.|
 
 ### <a name="f-specific-settings"></a>F#-özel ayarlar
 
@@ -74,8 +74,8 @@ Aşağıdaki tablo, öğesine F#özgü ayarları özetler:
 
 |Proje Tasarımcısı sayfası|Ayar|Açıklama|
 | - |-------|-----------|
-|Yapı|Kuyruk çağrıları oluştur|Seçilirse, tail Microsoft ara dili (MSIL) yönergesinin kullanımını etkinleştirilir. Bu, yığın çerçevesinin tail Özyinelemeli işlevler için yeniden kullanılmasına neden olur. @No__t_0 derleyici seçeneğine eşdeğerdir.|
-|Yapı|Diğer bayraklar|Ek derleyici komut satırı seçeneklerini belirtmenizi sağlar.|
+|{1&gt;Yapı (Build)&lt;1}|Kuyruk çağrıları oluştur|Seçilirse, tail Microsoft ara dili (MSIL) yönergesinin kullanımını etkinleştirilir. Bu, yığın çerçevesinin tail Özyinelemeli işlevler için yeniden kullanılmasına neden olur. `--tailcalls` derleyici seçeneğine eşdeğerdir.|
+|{1&gt;Yapı (Build)&lt;1}|Diğer bayraklar|Ek derleyici komut satırı seçeneklerini belirtmenizi sağlar.|
 
 ## <a name="code-and-text-editor-features"></a>Kod ve metin Düzenleyicisi özellikleri
 
@@ -98,9 +98,9 @@ Visual Studio Code ve metin düzenleyicilerinin aşağıdaki özellikleri içind
 |Sekmeye Dönüştür|Boşlukları sekmelere dönüştürür.|Evet|
 |Tür renklendirme|Tanımlı tür adlarını özel bir renkte gösterir.|Evet|
 |Hızlı bul. Bkz. hızlı bul, bul ve Değiştir penceresi.|Bir dosya veya projede arama yapmanızı sağlar.|Evet|
-|Tanıma gitmek için **Ctrl** +**tıklayın**|Tanıma Git 'i çağırmak için **CTRL** tuşunu basılı tutarak F# simgeye tıklamenize olanak tanır.|Evet|
+|Tanıma gitmek için **Ctrl**+**tıklayın**|Tanıma Git 'i çağırmak için **CTRL** tuşunu basılı tutarak F# simgeye tıklamenize olanak tanır.|Evet|
 |Hızlı bilgilerim tanımına git|ToolTip 'e git çağıran araç ipuçları içinde tıklatılabilir semboller.|Evet|
-|Tümüne git|F# **CTRL** +**t**aracılığıyla tüm yapılar için genel, benzer şekilde eşleşen gezinmeyi mümkün hale sunar.|Evet|
+|Tümüne Git|F# **CTRL**+**t**aracılığıyla tüm yapılar için genel, benzer şekilde eşleşen gezinmeyi mümkün hale sunar.|Evet|
 |Satır içi yeniden adlandırma|Bir simgenin tüm oluşumlarını satır içi olarak yeniden adlandırır.|Evet|
 |Tüm başvuruları bul|Bir kod tabanında bir sembolün tüm oluşumlarını bulur.|Evet|
 |Ad kodu düzeltmesini basitleştirme|Semboller için F# gereksiz niteleyicileri kaldırır.|Evet|
@@ -118,7 +118,7 @@ Aşağıdaki tabloda, desteklenen ve içinde F#desteklenmeyen IntelliSense özel
 |Arabirimleri otomatik olarak Uygula|Arabirim yöntemleri için kod saplamaları üretir.|Evet|
 |Kod parçacıkları|Ortak kodlama yapıları kitaplığındaki kodu konu başlıkları halinde çıkartır.|Hayır|
 |Tam Sözcük|Yazdığınız sözcükleri ve adları tamamlayarak yazma işlemini kaydeder.|Evet|
-|Otomatik tamamlama|Etkinleştirildiğinde, sözcüğün tamamlanmasını beklemek yerine, bir tane seçmenizi veya **Ctrl** +**boşluk**tuşlarına basmanız beklenmez.|Evet|
+|Otomatik tamamlama|Etkinleştirildiğinde, sözcüğün tamamlanmasını beklemek yerine, bir tane seçmenizi veya **Ctrl**+**boşluk**tuşlarına basmanız beklenmez.|Evet|
 |Açık olmayan ad alanlarında semboller için tamamlama sunma|Otomatik tamamlama ile, açılmamış bir ad alanında bulunan eşleşen bir sembol önerilir ve seçilirken karşılık gelen `open` ifadesiyle tamamlamak için teklif edilir.|Evet|
 |Kod öğeleri oluşturma|Çeşitli yapılar için saplama kodu oluşturmanıza olanak sağlar.|Hayır|
 |Üyeleri Listeleme|Üye erişim işlecini (.) yazdığınızda, bir türün üyelerini gösterir.|Evet|
@@ -142,9 +142,9 @@ Aşağıdaki tabloda, kod hata ayıkladığınızda F# kullanılabilen özellikl
 |İfade değerlendirici|Çalışma zamanında kodu değerlendirir ve yürütür.|Hayır, ancak sözdizimi C# kullanmanız C# gerekir, ancak ifade değerlendirici kullanılabilir.|
 |Geçmiş hata ayıklama|Daha önce yürütülen koda adım adım eklemenizi sağlar.|Evet|
 |Yerel öğeler penceresi|Yerel olarak tanımlanan değerleri ve değişkenleri gösterir.|Evet|
-|Imlece kadar Çalıştır|İmleci içeren satıra ulaşılana kadar kodu çalıştırmanızı sağlar.|Evet|
+|İmlece kadar Çalıştır|İmleci içeren satıra ulaşılana kadar kodu çalıştırmanızı sağlar.|Evet|
 |Adımla|Yürütmeyi ilerletebilirsiniz ve herhangi bir işlev çağrısına geçiş yapmanızı sağlar.|Evet|
-|Adımla|Geçerli yığın çerçevesindeki yürütmeyi ilerlemenize ve herhangi bir işlev çağrısını taşımanızı sağlar.|Evet|
+|Üzerinden adımla|Geçerli yığın çerçevesindeki yürütmeyi ilerlemenize ve herhangi bir işlev çağrısını taşımanızı sağlar.|Evet|
 
 Visual Studio hata ayıklayıcısı hakkında genel bilgi için bkz. [Visual Studio 'Da hata ayıklama](../debugger/index.yml).
 

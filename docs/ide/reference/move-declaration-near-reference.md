@@ -1,45 +1,45 @@
 ---
-title: Değişken bildirimini başvuru yakınına taşı
+title: Değişken bildirimi başvurunun yanına taşıma
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0a82b48a556e26866393661d4b87836db765abb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 35735009a5b813ca29159f276fe2d5abb734be0e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666495"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585290"
 ---
-# <a name="move-declaration-near-reference-refactoring"></a>Bildirimi başvuru yeniden düzenlemesi yakınında taşı
+# <a name="move-declaration-near-reference-refactoring"></a>Başvuru yeniden düzenleme yakın bildirimi taşıma
 
 Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** Değişken bildirimlerini kullanımlarına yaklaştırmanızı sağlar.
+**Ne:** yakın değişken bildirimlerini kullanımları için geçiş yapmanıza izin veren.
 
-**Ne zaman:** Daha dar bir kapsamda olabilecek değişken bildirimlerinizde yer vardır.
+**Ne zaman:** daha dar bir kapsamda olan değişken bildirimleri sahip.
 
-**Neden:** Bunu olduğu gibi bırakabilirsiniz, ancak bu durum okunabilirlik sorunları veya bilgi gizlenmesine neden olabilir. Bu, okunabilirliği artırmak için yeniden düzenleme şansı sağlar.
+**Neden:** olduğu, ancak okunabilirlik sorunları veya bilgi gizleme neden olabilir bırakabilir. Okunabilirliği artırmak için yeniden düzenleme için bir fırsat budur.
 
-## <a name="how-to"></a>Nasıl yapılır
+## <a name="how-to"></a>Nasıl Yapılır Konuları
 
-1. İmlecinizi değişken bildirimine yerleştirin.
+1. İmlecinizi Değişken bildiriminde yerleştirin.
 
-1. Sonra, aşağıdakilerden birini yapın:
+1. Ardından, aşağıdakilerden birini yapın:
 
-   - **Klavyenizdeki**
-      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **bildirimi başvuru yakınına taşı** ' yı seçin.
-   - **Tığında**
-      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçip Önizleme penceresi açılır penceresinde **bildirimi başvuru yakınına taşı** ' yı seçin.
+   - **Klavye**
+      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **bildirimi başvurunun yanına taşıma** gelen önizleme penceresi açılır.
+   - **Fare**
+      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **bildirimi başvurunun yanına taşıma** gelen önizleme penceresi açılır.
 
-1. Değişikliğin ne kadar memnunsanız, **ENTER** tuşuna basın veya menüdeki değişikliğe tıklayın ve değişiklikler uygulanır.
+1. Değişiklik ile tamamladığınızda basın **Enter** veya düzeltmeyi menüsünde tıklatın ve değişiklikler uygulanır.
 
 Örnek:
 

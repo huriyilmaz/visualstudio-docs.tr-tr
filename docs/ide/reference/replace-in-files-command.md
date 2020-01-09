@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Replace In Files command
 - ReplaceInFiles command
 ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fccfe696da2d38ff03ffb2f9b91de481e924a514
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 96f7d7ae0ea5eaf0de1a6fa4357e2750cdd8c22e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748662"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565480"
 ---
 # <a name="replace-in-files-command"></a>Dosyalarda Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
@@ -41,7 +41,7 @@ Gerekli. Eşleştirilecek metin.
 
 Gerekli. Eşleşen metnin yerine konacak metin.
 
-## <a name="switches"></a>Anahtarlar
+## <a name="switches"></a>Geçişler
 /All veya/a
 
 İsteğe bağlı. Arama metninin tüm oluşumlarını değiştirme metniyle değiştirir.
@@ -68,7 +68,7 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /Regex veya/r
 
-İsteğe bağlı. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+İsteğe bağlı. `findwhat` bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
 /Reset süpürmeden veya/e
 
@@ -84,7 +84,7 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /Sub seçeneklerini veya/s
 
-İsteğe bağlı. /Lookin: `searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
+İsteğe bağlı. /Lookin:`searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
 
 /text2 veya/2
 

@@ -6,17 +6,17 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.PreviewFeatures
 helpviewer_keywords:
 - Preview Features Options dialog box
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d53e232fd26f9986be63e332ee36d0740d66c94b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e5fc392e6d3d862ae81f0844d2cd28e8da44a805
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654454"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595689"
 ---
 # <a name="options-dialog-box-environment--preview-features"></a>Seçenekler iletişim kutusu: ortam \> Önizleme özellikleri
 
@@ -24,4 +24,4 @@ Visual Studio 'da Önizleme özelliklerini etkinleştirmek veya devre dışı b�
 
 ![Visual Studio 2019 ' de Önizleme özellikleri Seçenekler sayfası](media/environment-preview-features-page.png)
 
-Bu iletişim kutusuna, **Araçlar** menüsünden **Seçenekler** ' i ve ardından **ortam**  > **Önizleme özellikleri** sayfası ' nı seçerek erişebilirsiniz. Ya da Visual Studio **arama** kutusuna **Önizleme özellikleri** girin (odağı **arama** kutusuna taşımak için **CTRL** +**Q** tuşlarına basın).
+Bu iletişim kutusuna, **Araçlar** menüsünden **Seçenekler** ' i ve ardından **ortam** > **Önizleme özellikleri** sayfası ' nı seçerek erişebilirsiniz. Ya da Visual Studio **arama** kutusuna **Önizleme özellikleri** girin (odağı **arama** kutusuna taşımak için **CTRL**+**Q** tuşlarına basın).

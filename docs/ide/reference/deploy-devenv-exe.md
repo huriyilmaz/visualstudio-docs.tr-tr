@@ -8,17 +8,17 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], after build
 - /Deploy Devenv switch
 ms.assetid: e47c8723-df08-4645-aa2d-0c956e7ccca2
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff5f79b2482c2e025957872892a585e08bbfa8d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8eeb1a03e584b0b39030ec56ca6945a2d5ced78
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661659"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75570134"
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
 
@@ -46,7 +46,7 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 - `/ProjectConfig` *Projconfigname*
 
-  İsteğe bağlı. Adlı `/Project` oluşturulurken kullanılacak bir proje derleme yapılandırması (`Debug` veya `Release` gibi) adları. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32`). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
+  İsteğe bağlı. Adlı `/Project` oluşturulurken kullanılacak bir proje derleme yapılandırması (`Debug` veya `Release`gibi) adları. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32`). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
 
 - `/Out` *outputFilename*
 
@@ -62,7 +62,7 @@ Hatalar da dahil olmak üzere derlemeler için Özet bilgiler, **komut** pencere
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, `MySolution` içinde `Release` proje derleme yapılandırması kullanarak proje `CSharpWinApp` dağıtır.
+Bu örnek, `MySolution`içinde `Release` proje derleme yapılandırması kullanarak proje `CSharpWinApp`dağıtır.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release

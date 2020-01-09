@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tests and requirements
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70e58883e671dea242e0c69aee0ce6cf8b911371
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2981d510b5f56b89a2cb68d1a6bee93222d71b3b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747593"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596664"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
-Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. @No__t_0 kullanıyorsanız, modeller ve testler arasındaki bağlantıları da tutabilirsiniz.
+Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]kullanıyorsanız, modeller ve testler arasındaki bağlantıları da tutabilirsiniz.
 
  Visual Studio 'nun hangi sürümlerinin bu özellikleri desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -36,7 +36,7 @@ Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için ger
  Sistem testleri ve gereksinimler modeli arasında bir ilişki oluşturabilir ve bakımını yapabilirsiniz. Bu ilişkiyi oluşturmak için, gereksinimler modelinin ana öğelerine karşılık gelen testleri yazarsınız. Visual Studio, modelin testleri ve bölümleri arasında bağlantılar oluşturmanıza izin vererek ilişkiyi korumanıza yardımcı olur. Gereksinim modelleri hakkında daha fazla bilgi için bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
 
 ### <a name="write-tests-for-each-use-case"></a>Her kullanım örneği için test yazma
- @No__t_0 kullanıyorsanız, gereksinim modelinizde tanımladığınız her kullanım örneği için bir test grubu oluşturabilirsiniz. Örneğin, sipariş oluştur ve sipariş Ekle öğelerini içeren bir yemek kullanım örneği siparişiniz varsa, bu kullanım örneklerinin her ikisi için de test oluşturabilirsiniz.
+ [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]kullanıyorsanız, gereksinim modelinizde tanımladığınız her kullanım örneği için bir test grubu oluşturabilirsiniz. Örneğin, sipariş oluştur ve sipariş Ekle öğelerini içeren bir yemek kullanım örneği siparişiniz varsa, bu kullanım örneklerinin her ikisi için de test oluşturabilirsiniz.
 
  Bu yönergeler yararlı olabilir:
 
@@ -57,9 +57,9 @@ Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için ger
 
 ###### <a name="to-link-tests-to-a-use-case"></a>Testleri kullanım örneğine bağlamak için
 
-1. @No__t_0, bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
+1. [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
 
-    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
 2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla kullanım durumuna bağlayın.
 
@@ -129,9 +129,9 @@ Assert (countAfter == countBefore = 1);
  Bir test noktasından, gereksinimler modeli testler için bir toplu değer olarak görülebilir. Bu nedenle, proje genelinde testler ve modeller arasındaki ilişkinin korunması önemlidir.
 
 ## <a name="Attaching"></a>Model öğelerine test durumları iliştirme
- Projeniz [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] kullanıyorsa, testlerinizi modelinizdeki öğelere bağlayabilirsiniz. Bu, gereksinimlerdeki bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin gerçekleştirilme kapsamını izlemenize yardımcı olur.
+ Projeniz [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]kullanıyorsa, testlerinizi modelinizdeki öğelere bağlayabilirsiniz. Bu, gereksinimlerdeki bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin gerçekleştirilme kapsamını izlemenize yardımcı olur.
 
- Testleri tüm öğe türlerine bağlayabilirsiniz. Aşağıda bazı örnekler verilmiştir:
+ Testleri tüm öğe türlerine bağlayabilirsiniz. Bazı örnekler şunlardır:
 
 - Kullanım örneğini, onu uygulayan testlere bağlayın.
 
@@ -145,9 +145,9 @@ Assert (countAfter == countBefore = 1);
 
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Testleri model öğesine veya ilişkiye bağlamak için
 
-1. @No__t_0, bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
+1. [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
 
-    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
 2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla öğeye bağlayın.
 

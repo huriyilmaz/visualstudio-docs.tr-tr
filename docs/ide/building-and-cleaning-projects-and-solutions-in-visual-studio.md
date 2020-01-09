@@ -18,21 +18,21 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8676ad9dc1a3b245242687e2ea56148b83b8d56
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: f3e71fe9b6179ac8f7ac69b0cb987fdbc30459fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416427"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596534"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme
 
-Bu konudaki yordamları kullanarak, derleme, yeniden veya tüm veya bazı projeler veya bir çözümde proje öğeleri temizleyin. Adım adım bir öğretici için bkz [. İzlenecek yol: Uygulama](../ide/walkthrough-building-an-application.md)oluşturma.
+Bu konudaki yordamları kullanarak, derleme, yeniden veya tüm veya bazı projeler veya bir çözümde proje öğeleri temizleyin. Adım adım bir öğretici için bkz. [Izlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md).
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio içindeki proje ve çözümleri oluşturma ve Temizleme](/visualstudio/mac/building-and-cleaning-projects-and-solutions).
@@ -71,21 +71,21 @@ Bu konudaki yordamları kullanarak, derleme, yeniden veya tüm veya bazı projel
 
 2. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler** düğümünü seçip **derleme ve çalıştırma** sayfası.
 
-     **Projeleri ve çözümleri** >  oluşturmaveçalıştırmaseçenekleri > iletişim kutusu açılır.
+     **Oluşturma ve çalıştırma** > **projeler ve çözümler** > **Seçenekler** iletişim kutusu açılır.
 
 3. Seçin **çalıştırıldığında yalnızca başlangıç projelerini ve bağımlılıkları derle** onay kutusu.
 
      Bu onay kutusu işaretli olduğunda, aşağıdaki adımlardan birini gerçekleştirdiğinizde yalnızca geçerli başlangıç projesi ve bağımlılıklarını oluşturulur:
 
-    - Menü çubuğunda **Hata Ayıkla** > **Başlat** (**F5**) öğesini seçin.
+    - Menü çubuğunda **hata ayıkla** > **Başlat** (**F5**) öğesini seçin.
 
-    - Menü çubuğunda Build**Build Solution** ( > **CTRL**+**Shift**+**B**) **öğesini seçin.**
+    - Menü çubuğunda **derleme** > **Build Solution** (**CTRL**+**SHIFT**+**B**) öğesini seçin.
 
     Bu onay kutusunun işareti kaldırıldığında, önceki komutlardan birini çalıştırdığınızda tüm projeler, bağımlılıklarını ve çözüm dosyaları oluşturulur. Varsayılan olarak, bu onay kutusu işaretli değildir.
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçilen Visual C++ projesi oluşturmak için
 
-Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ardından menü çubuğunda**yalnızca proje** **Oluştur** > ' u ve aşağıdaki komutlardan birini seçin:
+Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projesi seçin ve ardından menü çubuğunda **yalnızca > projesi** **Oluştur** ' u ve aşağıdaki komutlardan birini seçin:
 
 - **Yalnızca derleme** *ProjectName*
 
@@ -107,17 +107,17 @@ Dosyaları bağımlılıkları varsa, bağımlılık sırasına dosyaları derle
 
 Aşağıdaki adımlardan birini gerçekleştirin:
 
-- Menü çubuğunda, **derleme** > **iptali**' ni seçin.
+- Menü çubuğunda **oluştur** > **iptal**' i seçin.
 
-- **CTRL**+**Kes**'e basın.
+- **Ctrl**+**Break**tuşlarına basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md)
+- [Nasıl yapılır: görüntüleme, kaydetme ve derleme günlüğü dosyalarını yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md)
 - [Derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
 - [Yapı yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
-- [Nasıl yapılır: Hata ayıklama ve yayın yapılandırmasını ayarla](../debugger/how-to-set-debug-and-release-configurations.md)
+- [Nasıl yapılır: Hata ayıklama ve dağıtım yapılandırmalarını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md)
 - [C/C++ oluşturma başvurusu](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md)
 - [Projeler ve çözümler](../ide/solutions-and-projects-in-visual-studio.md)

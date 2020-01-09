@@ -12,17 +12,17 @@ helpviewer_keywords:
 - multitargeting
 - .NET Framework Client Profile
 ms.assetid: 830e3e45-9a93-4279-a249-75b84599aefb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36401e2ac002a74cdab6e9c19373354f4eb6fb1e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 1c384f7e2bdd22f7a68140c90aa172d1efc9aca6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189428"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594922"
 ---
 # <a name="troubleshoot-net-framework-targeting-errors"></a>.NET Framework Hedefleme hatalarını giderme
 Bu konuda, başvuru sorunları ve bu hataları nasıl giderebileceğinizi belirten MSBuild hataları açıklanmaktadır.
@@ -33,7 +33,7 @@ Bu konuda, başvuru sorunları ve bu hataları nasıl giderebileceğinizi belirt
 ## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework"></a>Bir projeyi .NET Framework farklı bir sürümüne yeniden hedeflediniz
  Uygulamanız için .NET Framework hedef sürümünü değiştirirseniz, Visual Studio bazı başvuruları değiştirir ancak bazı başvuruları el ile güncelleştirmeniz gerekebilir. Örneğin, bir uygulamayı [!INCLUDE[net_v35SP1_long](../msbuild/includes/net_v35sp1_long_md.md)] hedefleyecek şekilde değiştirirseniz ve bu uygulamanın .NET Framework 4 ' e ait istemci profilini kullanan kaynakları veya ayarları varsa, daha önce bahsedilen hatalardan biri oluşabilir.
 
- Uygulama ayarlarını geçici olarak çözmek için **Çözüm Gezgini**açın, **tüm dosyaları göster**' i seçin ve ardından Visual Studio 'nun XML düzenleyicisinde *app. config* dosyasını düzenleyin. Ayarlarınızdaki sürümü .NET Framework uygun sürümüyle eşleşecek şekilde değiştirin. Örneğin, 4.0.0.0 olan sürüm ayarını 2.0.0.0 olarak değiştirebilirsiniz. Benzer şekilde, kaynakları ekleyen bir uygulama için **Çözüm Gezgini**açın, **tüm dosyaları göster** düğmesini seçin, **projem** (Visual Basic) veya **Properties** (C#) öğesini genişletin ve ardından *Resources. resx* dosyasını düzenleyin. Visual Studio 'nun XML düzenleyicisinde dosyası. 4\.0.0.0 olan sürüm ayarını 2.0.0.0 olarak değiştirin.
+ Uygulama ayarlarını geçici olarak çözmek için **Çözüm Gezgini**açın, **tüm dosyaları göster**' i seçin ve ardından Visual Studio 'nun XML düzenleyicisinde *app. config* dosyasını düzenleyin. Ayarlarınızdaki sürümü .NET Framework uygun sürümüyle eşleşecek şekilde değiştirin. Örneğin, 4.0.0.0 olan sürüm ayarını 2.0.0.0 olarak değiştirebilirsiniz. Benzer şekilde, kaynakları ekleyen bir uygulama için **Çözüm Gezgini**açın, **tüm dosyaları göster** düğmesini seçin, **projem** (Visual Basic) veya **Properties** (C#) öğesini genişletin ve ardından Visual Studio 'nun XML düzenleyicisinde *Resources. resx* dosyasını düzenleyin. 4\.0.0.0 olan sürüm ayarını 2.0.0.0 olarak değiştirin.
 
  Uygulamanızın simgeler veya bit eşlemler veya veri bağlantı dizeleri gibi ayarlar gibi kaynakları varsa, **Proje Tasarımcısı** 'nın **Ayarlar** sayfasındaki tüm öğeleri kaldırarak ve ardından gerekli ayarları yeniden ekleyerek hatayı çözebilirsiniz.
 
