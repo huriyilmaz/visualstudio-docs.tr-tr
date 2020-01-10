@@ -1,36 +1,36 @@
 ---
 title: Yönetici olarak çalıştır
-ms.date: 06/05/2018
+ms.date: 01/06/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
 - user permissions
 - administrative privileges
 - permissions
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6086485ef20330de7971297f52a112d5183ee4a2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 927031b4755644aeac553367a4f8a08faa0c0992
+ms.sourcegitcommit: 5421999c9ff05b3242d33e4b0465f8bc29c7c643
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647342"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718642"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Kullanıcı izinleri ve Visual Studio
 
-Güvenlik nedenleriyle, mümkün olduğunda Visual Studio 'Yu normal bir kullanıcı olarak çalıştırmanız gerekir.
+Güvenlik nedenleriyle, mümkün olan her durumda Visual Studio 'Yu normal bir kullanıcı olarak çalıştırmanız gerekir.
 
 > [!WARNING]
 > Ayrıca güvenilir bir kişi ya da güvenilir bir konumdan gelmeyen herhangi bir Visual Studio çözümüyle derleme, başlatma veya hata ayıklama yapmadığınızdan emin olmalısınız.
 
-Visual Studio IDE 'deki neredeyse her şeyi normal kullanıcı olarak yapabilirsiniz. Aşağıdaki görevleri gerçekleştirmek için yönetici izinlerine sahip olmanız gerekir:
+Normal bir kullanıcı olarak Visual Studio IDE 'deki neredeyse her şeyi yapabilirsiniz. Aşağıdaki görevleri gerçekleştirmek için yönetici izinlerine sahip olmanız gerekir:
 
 |Alan|Görev|Daha fazla bilgi için|
 |----------|----------| - |
-|Yükleme|Visual Studio 'Yu yükler.|[Visual Studio'yu yükleyin](../install/install-visual-studio.md)|
+|Yükleme|Visual Studio 'Yu yükler veya değiştirir.|[Visual Studio 'Yu yüklemeyi](../install/install-visual-studio.md), [Visual Studio 'yu değiştirme](../install/modify-visual-studio.md)|
 ||Yerel Yardım içeriğini yükler, güncelleştirir veya kaldırır.|[Yerel Yardım içeriğini yükleyip yönetme](../help-viewer/install-manage-local-content.md)|
 |Araç Kutusu|**Araç kutusuna**klasik com denetimleri ekleyin.|[Araç Kutusu](../ide/reference/toolbox.md)|
 |Oluşturma|Bir bileşeni kaydeden oluşturma sonrası olayları kullanın.|[Özel derleme adımlarını ve derleme olaylarını anlama](/cpp/build/understanding-custom-build-steps-and-build-events)|
@@ -57,7 +57,7 @@ Visual Studio 'Yu yönetici olarak çalıştırmanız gerekiyorsa IDE 'yi açmak
 
 1. **Visual Studio 2017**' un sağ tıklama veya bağlam menüsünden **yönetici olarak çalıştır**> **daha fazla** ' yı seçin.
 
-   Visual Studio başladığında, başlık çubuğunda ürün adından sonra **(yönetici)** görüntülenir.
+   Visual Studio başladığında **(Yönetici)** başlık çubuğundaki ürün adının görünür.
 
 ::: moniker-end
 
@@ -67,7 +67,7 @@ Visual Studio 'Yu yönetici olarak çalıştırmanız gerekiyorsa IDE 'yi açmak
 
 1. **Visual Studio 2019**' un sağ tıklama veya bağlam menüsünden **yönetici olarak çalıştır**> **daha fazla** ' yı seçin.
 
-   Visual Studio başladığında, başlık çubuğunda ürün adından sonra **(yönetici)** görüntülenir.
+   Visual Studio başladığında **(Yönetici)** başlık çubuğundaki ürün adının görünür.
 
 ::: moniker-end
 

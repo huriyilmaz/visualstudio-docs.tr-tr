@@ -11,27 +11,27 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 95693261cebf26bb740861795f7faf5c56503daf
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 3f8fa8fcd859a7464d471972689728dc556a79bd
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74777939"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75678980"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio 'da JavaScript veya TypeScript uygulamasında hata ayıklama
 
 Visual Studio kullanarak JavaScript ve TypeScript kodunda hata ayıklaması yapabilirsiniz. Kesme noktaları ayarlayabilir ve isabet edebilir, hata ayıklayıcıyı ekleyebilir, değişkenleri inceleyebilir, çağrı yığınını görüntüleyebilir ve diğer hata ayıklama özelliklerini kullanabilirsiniz.
 
 > [!TIP]
-> Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın. Yaptığınız uygulama geliştirme türüne bağlı olarak, Visual Studio ile **Node. js geliştirme iş yükünü** yüklemeniz gerekebilir.
+> Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) ücretsiz yüklemek için sayfa. Yaptığınız uygulama geliştirme türüne bağlı olarak, Visual Studio ile **Node. js geliştirme iş yükünü** yüklemeniz gerekebilir.
 
 ## <a name="debug-server-side-script"></a>Sunucu tarafında hata ayıklama betiği
 
 1. Projenizi Visual Studio 'da açtığınızda, sunucu tarafı bir JavaScript dosyası (örneğin, *Server. js*) açın, bir kesme noktası ayarlamak için sol Cilt payının cilt payını tıklatın:
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
-    Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
+    Kesme noktaları güvenilir hata ayıklama en temel hem de temel özelliğidir. Bir kesme noktası değişkenlerin değerleri veya bellek davranışını göz olabilmesi için Visual Studio çalışan kodunuzu nereye askıya almanız ya da bir dal kod getting run olup olmadığını gösterir.
 
 1. Uygulamanızı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama > hata **ayıklamayı Başlat**).
 
@@ -44,7 +44,7 @@ Visual Studio kullanarak JavaScript ve TypeScript kodunda hata ayıklaması yapa
 ## <a name="debug-client-side-script"></a>İstemci tarafı komut dosyasında hata ayıkla
 
 ::: moniker range=">=vs-2019"
-Visual Studio yalnızca Chrome ve Microsoft Edge (Kmıum) için istemci tarafı hata ayıklama desteği sağlar. Bazı senaryolarda, hata ayıklayıcı JavaScript ve TypeScript kodunda ve HTML dosyalarındaki katıştırılmış betiklerdeki kesme noktalarını otomatik olarak ziyaret ediyor. ASP.NET uygulamalarında istemci tarafı komut dosyasında hata ayıklamak için, [Microsoft Edge 'de blog gönderisi hata ayıklama JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) ve [Google Chrome için bu gönderi](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)bölümüne bakın.
+Visual Studio yalnızca Chrome ve Microsoft Edge (Kmıum) için istemci tarafı hata ayıklama desteği sağlar. Bazı senaryolarda, hata ayıklayıcı JavaScript ve TypeScript kodunda ve HTML dosyalarındaki katıştırılmış betiklerdeki kesme noktalarını otomatik olarak ziyaret ediyor. ASP.NET uygulamalarında istemci tarafı komut dosyasında hata ayıklamak için, [Microsoft Edge 'de blog gönderisi hata ayıklama JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) ve [Google Chrome için bu gönderi](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)bölümüne bakın. ASP.NET Core 'de TypeScript hata ayıklama için, bkz. [TypeScript ile ASP.NET Core uygulaması oluşturma](tutorial-aspnet-with-typescript.md).
 ::: moniker-end
 ::: moniker range="vs-2017"
 Visual Studio yalnızca Chrome ve Internet Explorer için istemci tarafı hata ayıklama desteği sağlar. Bazı senaryolarda, hata ayıklayıcı JavaScript ve TypeScript kodunda ve HTML dosyalarındaki katıştırılmış betiklerdeki kesme noktalarını otomatik olarak ziyaret ediyor. ASP.NET uygulamalarında istemci tarafı komut dosyasında hata ayıklamak için [Google Chrome 'daki ASP.net projelerinin istemci tarafında hata ayıklama](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome/)bölümüne bakın.
@@ -86,7 +86,7 @@ Bu senaryo için Chrome ' ı kullanın.
 
     `msedge --remote-debugging-port=9222`
 
-    veya
+    veya,
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
@@ -107,7 +107,7 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
 1. Visual Studio 'ya geçin ve kaynak kodunuzda bir JavaScript dosyası, TypeScript dosyası veya JSX dosyası olabilecek bir kesme noktası ayarlayın. (Dönüş bildirimi veya var bildirimi gibi kesme noktalarına izin veren bir kod satırında kesme noktası ayarlayın.)
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Belirli kodu bir transpiled dosyasında bulmak için **Ctrl**+**F** (**düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
 
@@ -141,10 +141,10 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
     ::: moniker range=">=vs-2019"
     Aşağıdaki örnekte bunun Microsoft Edge (Kmıum) tarayıcısı için nasıl göründüğü gösterilmektedir.
 
-    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
+    ![İşleme ekle öğesi kullanılarak bir işleme eklenirken tek bir işlem için verileri gösterir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
+    ![İşleme ekle öğesi kullanılarak bir işleme eklenirken tek bir işlem için verileri gösterir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
     Visual Studio 'da DOM Gezgini ve JavaScript konsolu açıldığında hata ayıklayıcının doğru şekilde eklenmiş olduğunu bilirsiniz. Bu hata ayıklama araçları, Microsoft Edge için Chrome Geliştirici Araçları ve F12 araçlarına benzerdir.
     ::: moniker-end
@@ -187,7 +187,7 @@ Visual Studio, JavaScript kaynak dosyalarında kaynak haritaları kullanma ve ol
 
 Kaynak eşlemelerinin gelişmiş ayarlarını yapılandırmak için, bir TypeScript projesinde *tsconfig. JSON* veya proje ayarlarını kullanın, ancak her ikisini birden kullanmayın.
 
-Visual Studio kullanarak hata ayıklamayı etkinleştirmek için, oluşturulan kaynak haritadaki kaynak dosyanıza yönelik başvurunun doğru olduğundan emin olmanız gerekir (Bu işlem test gerektirebilir). Örneğin, WebPack kullanıyorsanız, kaynak eşleme dosyasındaki başvurular, Visual Studio 'Nun bir TypeScript veya JSX kaynak dosyası bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, hata ayıklama amacıyla bunu Düzeltmediğiniz zaman, kaynak dosyasına ( *app. TSX*gibi) yapılan başvuru, *WebPack:///./app.TSX* gibi bir şekilde değiştirilmelidir ve hata ayıklamayı sağlayan *./app.exe.* yol, kaynak dosyanıza göredir). Aşağıdaki örnek, Visual Studio ile çalışmak için en yaygın paketleyiciler olan WebPack 'te kaynak eşlemelerini nasıl yapılandırabildiğini gösterir.
+Visual Studio kullanarak hata ayıklamayı etkinleştirmek için, oluşturulan kaynak haritadaki kaynak dosyanıza yönelik başvurunun doğru olduğundan emin olmanız gerekir (Bu işlem test gerektirebilir). Örneğin, WebPack kullanıyorsanız, kaynak eşleme dosyasındaki başvurular, Visual Studio 'Nun bir TypeScript veya JSX kaynak dosyası bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, hata ayıklama amacıyla bunu Düzeltmediğiniz zaman, kaynak dosyasına ( *app. TSX*gibi) yapılan başvuru, *WebPack:///./app.TSX* gibi bir şekilde değiştirilmelidir *.* bu, hata ayıklamayı (yol, kaynak dosyanıza görelidir) sağlar. Aşağıdaki örnek, Visual Studio ile çalışmak için en yaygın paketleyiciler olan WebPack 'te kaynak eşlemelerini nasıl yapılandırabildiğini gösterir.
 
 (Yalnızca WebPack) Kesme noktasını JSX dosyasında (bir transpiled JavaScript dosyası yerine) bir TypeScript olarak ayarlıyorsanız, WebPack yapılandırmanızı güncelleştirmeniz gerekir. Örneğin, *WebPack-config. js*' de, aşağıdaki kodu değiştirmeniz gerekebilir:
 
@@ -197,7 +197,7 @@ Visual Studio kullanarak hata ayıklamayı etkinleştirmek için, oluşturulan k
   },
 ```
 
-Şu kodla:
+Bu kod ile:
 
 ```javascript
   output: {

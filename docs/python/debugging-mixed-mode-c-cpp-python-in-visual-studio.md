@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a2848f04e2765c23f60de041e865e7684901b924
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc90d659a32c14f92e1eff058dd22d4a17d0b1cb
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62962801"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75679006"
 ---
 # <a name="debug-python-and-c-together"></a>Python ve C++ birlikte hata ayıklama
 
@@ -38,7 +38,7 @@ Bu makalede açıklandığı gibi karışık mod hata ayıklama özellikleri aş
 
 |   |   |
 |---|---|
-| ![video kamera simgesini film](../install/media/video-icon.png "bir video izleyin") | Test ve yerel C modülleri Visual Studio ile hata ayıklama oluşturmaya giriş için bkz: [yakından bakış: Yerel modülleri oluşturma](https://youtu.be/D9RlT06a1EI) (youtube.com 9 dk 09s). Video, Visual Studio 2015 ve 2017 için geçerlidir. |
+| ![video için film kamerası simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için") | Test ve yerel C modülleri Visual Studio ile hata ayıklama oluşturmaya giriş için bkz. [yakından bakış: yerel modülleri oluşturma](https://youtu.be/D9RlT06a1EI) (youtube.com 9 dk 09s). Video, Visual Studio 2015 ve 2017 için geçerlidir. |
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Karma mod bir Python projesinde hata ayıklamayı etkinleştir
 
@@ -57,18 +57,21 @@ Bu makalede açıklandığı gibi karışık mod hata ayıklama özellikleri aş
 
     Ek olarak ya da onun yerine diğer kod türleri seçmek mümkündür **yerel**. Örneğin, yönetilen uygulamayı CPython barındırıyorsa, hangi içinde Aç yerel uzantı modüllerini kullanır ve kontrol edebilirsiniz, tüm üç hata ayıklamak istediğiniz **Python**, **yerel**, ve **yönetilen**birlikte için birleştirilmiş bir hata ayıklama deneyimini de dahil olmak üzere birleştirilmiş çağrı yığınları ve üç tüm çalışma zamanları arasında adımlama.
 
-1. Karışık modda hata ayıklama için ilk kez başlattığınızda, görebileceğiniz bir **Python sembolleri gerekli** iletişim (bkz [karışık mod hata ayıklaması için semboller](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Verilen herhangi bir Python ortamı için yalnızca bir kez sembolleri yüklemeniz gerekir. Python desteği (Visual Studio 2017 ve üzeri) Visual Studio yükleyicisi aracılığıyla yüklerseniz, semboller otomatik olarak eklenir.
+1. Karışık modda hata ayıklama için ilk kez başlattığınızda, görebileceğiniz bir **Python sembolleri gerekli** iletişim (bkz [karışık mod hata ayıklaması için semboller](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Verilen herhangi bir Python ortamı için yalnızca bir kez sembolleri yüklemeniz gerekir. Visual Studio yükleyicisi aracılığıyla Python desteği yüklerseniz semboller otomatik olarak eklenir (Visual Studio 2017 ve üzeri).
 
 1. Kaynak kodu standart Python için kendisini hata ayıklama sırasında kullandırmak için şurayı ziyaret edin [ https://www.python.org/downloads/source/ ](https://www.python.org/downloads/source/), sürümünüz için uygun arşiv indirmek ve bir klasöre ayıklayın. Ardından Visual Studio'da bu klasöre işaret ne olursa olsun, belirli dosyaları ister noktası.
 
 ## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>Karma mod bir C/C++ projesinde hata ayıklamayı etkinleştir
 
-Visual Studio (2017 sürüm 15.5 ve üstü) destekleyen karışık bir C/C++ proje hata ayıklama modu (örneğin, [Python python.org üzerinde açıklandığı gibi başka bir uygulamaya ekleme](https://docs.python.org/3/extending/embedding.html)). C/C++ projesi başlatmak için karışık mod hata ayıklamayı etkinleştirmek için yapılandırma **Python/yerel hata ayıklama**:
+Visual Studio (2017 sürüm 15,5 ve üzeri), bir C/C++ projeden karışık modda hata ayıklamayı destekler (örneğin, Python, [Python.org ' de açıklandığı gibi başka bir uygulamaya Katıştırırken](https://docs.python.org/3/extending/embedding.html)). C/C++ projesi başlatmak için karışık mod hata ayıklamayı etkinleştirmek için yapılandırma **Python/yerel hata ayıklama**:
 
 1. C/C++ projeye sağ **Çözüm Gezgini** seçip **özellikleri**.
 1. Seçin **hata ayıklama** sekmesinde **Python/yerel hata ayıklama** gelen **başlatmak için hata ayıklayıcı**seçip **Tamam**.
 
     ![Python/yerel hata ayıklayıcı bir C/C++ projesinde seçme](media/mixed-mode-debugging-select-cpp-debugger.png)
+
+> [!Note]
+> **Python/yerel hata ayıklamayı** seçme seçeneğiniz yoksa, önce vs yükleyicisini kullanarak **Python yerel geliştirme araçlarını** yüklemeniz gerekir. Bunu, Python geliştirme iş yükü altında bir seçenek olarak bulabilirsiniz. Daha fazla bilgi için bkz. [Windows üzerinde Visual Studio 'Da Python desteği nasıl yüklenir](installing-python-support-in-visual-studio.md).
 
 Bu yöntemi kullanarak, ayıklanamıyor kullanan *py.exe* Başlatıcısı kendisi, çünkü bu bir alt öğesi olarak çoğaltılır *python.exe* hata ayıklayıcı iliştirilmiş olmaz işlem. Başlatmak istiyorsanız *python.exe* doğrudan bağımsız değişkenlerle değiştirmek **komut** seçeneğini **Python/yerel hata ayıklama** özelliklerine (önceki görüntüde gösterilmiştir) tam yolunu belirtin *python.exe*, ardından bağımsız değişkenleri belirtin **komut satırı bağımsız değişkenlerini**.
 
@@ -168,8 +171,8 @@ Karışık mod hata ayıklayıcı kodundan [standart bir Python hata ayıklayıc
 
 - Desteklenmeyen özellikler: koşullu kesme noktaları **hata ayıklama etkileşimli** penceresi ve platformlar arası uzaktan hata ayıklama.
 - **Hemen** penceresi: işlevlerini ve sınırlamalar dahil olmak üzere, sınırlı bir alt kümesi ile kullanılabilir ancak burada listelenir.
-- Desteklenen Python sürümleri: CPython 2.7 ve 3.3 + yalnızca.
-- Visual Studio Kabuğu: Python ile Visual Studio Shell kullanırken (örneğin, tümleşik Yükleyicisi'ni kullanarak yüklediyseniz), Visual Studio C++ projeleri açamıyor ve yalnızca bir temel metin düzenleyici, C++ dosyaları için düzenleme deneyimi olan. Ancak, C/C++ hata ayıklama ve karma mod hata ayıklama tamamen Kabuğu'nda C++ ifade değerlendirmesi hata ayıklayıcı pencerelerinde ve yerel kod içine Adımlama, kaynak kodu ile desteklenir.
+- Python sürümleri desteklenir: CPython 2.7 ve 3.3 + yalnızca.
+- Visual Studio Shell: Python ile Visual Studio Shell kullanırken (örneğin, tümleşik Yükleyicisi'ni kullanarak yüklediyseniz), Visual Studio C++ projeleri açamıyor ve yalnızca bir temel metin düzenleyici, C++ dosyaları için düzenleme deneyimi olan. Ancak, C/C++ hata ayıklama ve karma mod hata ayıklama tamamen Kabuğu'nda C++ ifade değerlendirmesi hata ayıklayıcı pencerelerinde ve yerel kod içine Adımlama, kaynak kodu ile desteklenir.
 - Görüntüleme ve genişletme nesneleri: Python nesneleri görüntülerken **Yereller** ve **Watch** hata ayıklayıcı, araç pencerelerini, karma mod hata ayıklayıcı yalnızca nesnelerin yapısı gösterilmektedir. Otomatik olarak özellikleri değerlendirmek veya hesaplanan öznitelikleri gösterir. İsteğe bağlı olarak koleksiyonları için yalnızca yerleşik koleksiyon türleri için öğeleri gösterir (`tuple`, `list`, `dict`, `set`). Bazı yerleşik koleksiyon türden devralınan sürece özel koleksiyon türlerini koleksiyon olarak görselleştirilmiştir değil.
 - İfade değerlendirme: aşağıya bakın.
 

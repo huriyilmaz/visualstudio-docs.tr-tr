@@ -11,16 +11,16 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: de486593c21813746c6c13fa835506d7b1703279
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5befdfb5f6974ff7b042319121a27c3628757b6e
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62958231"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75678993"
 ---
-# <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>2. Adım: Görünümleri ve şablonların ile bir Django uygulaması oluşturma
+# <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>2\. adım: görünümleri ve şablonların bir Django uygulaması oluşturma
 
-**Önceki adım sayısı: [Visual Studio'nun proje ve çözüm oluşturma](learn-django-in-visual-studio-step-01-project-and-solution.md)**
+**Önceki adımda: [Visual Studio'nun proje ve çözüm oluşturma](learn-django-in-visual-studio-step-01-project-and-solution.md)**
 
 Şu ana kadar Visual Studio projesini bileşenleridir yalnızca site düzeyi bir Django sahip olduğunuz *proje*, bir veya daha fazla Django çalıştırabilirsiniz *uygulamaları*. Sonraki adım, ilk uygulamanızı tek bir sayfayla oluşturmaktır.
 
@@ -32,15 +32,15 @@ Bu adımda, daha fazla bilgi için nasıl:
 > - HTML (Adım 2-3) kullanarak görünüm işlemek
 > - Django sayfası şablonu (Adım 2-4) kullanarak görünüm işlemek
 
-## <a name="step-2-1-create-an-app-with-a-default-structure"></a>2-1. adım: Varsayılan bir yapısı ile uygulama oluşturma
+## <a name="step-2-1-create-an-app-with-a-default-structure"></a>2-1. adım: bir varsayılan yapı ile uygulama oluşturma
 
-Bir Django uygulaması belirli bir amaç için ilgili dosyaları içeren ayrı bir Python paketidir. Django projesi yansıtan bir web ana bilgisayarı bir tek etki alanı adı ayrı giriş noktalarından herhangi bir sayıda verebilen olgu herhangi bir sayıda uygulamaları içerebilir. Örneğin, contoso.com için tek bir uygulama içerebilir gibi bir etki alanı için bir Django projesi `www.contoso.com`, support.contoso.com için ikinci bir uygulama ve docs.contoso.com için üçüncü bir uygulaması. Bu durumda, Django projesi site düzeyinde URL Yönlendirme ve ayarları işler (içinde kendi *urls.py* ve *settings.py* dosyaları), her uygulama kendi ayrı stil ve iç aracılığıyla davranışını varken Yönlendirme, görünümler, modelleri, statik dosyalar ve yönetim arabirimi.
+Bir Django uygulaması belirli bir amaç için ilgili dosyaları içeren ayrı bir Python paketidir. Django projesi yansıtan bir web ana bilgisayarı bir tek etki alanı adı ayrı giriş noktalarından herhangi bir sayıda verebilen olgu herhangi bir sayıda uygulamaları içerebilir. Örneğin, contoso.com gibi bir etki alanı için Docgo projesi `www.contoso.com`bir uygulama, support.contoso.com için ikinci bir uygulama ve docs.contoso.com için üçüncü bir uygulama içerebilir. Bu durumda, Django projesi site düzeyinde URL Yönlendirme ve ayarları işler (içinde kendi *urls.py* ve *settings.py* dosyaları), her uygulama kendi ayrı stil ve iç aracılığıyla davranışını varken Yönlendirme, görünümler, modelleri, statik dosyalar ve yönetim arabirimi.
 
 Bir Django uygulaması genellikle standart bir dosya kümesi ile başlar. Visual Studio öğe şablonları aynı amaca hizmet eder bir tümleşik menü komutu ile birlikte bir Django projesi içinde bir Django uygulaması başlatılamadı sağlar:
 
-- Şablonları: İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **Ekle** > **yeni öğe**. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Django 1.9 uygulama** şablon, uygulama adı belirtin **adı** alan ve seçim **Tamam**.
+- : Şablonları **Çözüm Gezgini**, projeye sağ tıklayıp seçin **Ekle** > **yeni öğe**. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Django 1.9 uygulama** şablon, uygulama adı belirtin **adı** alan ve seçim **Tamam**.
 
-- Tümleşik komut: İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **Ekle** > **Django uygulaması**. Bu komut için bir ad ister ve Django 1.9 uygulaması oluşturur.
+- Tümleşik komut: içinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **Ekle** > **Django uygulaması**. Bu komut için bir ad ister ve Django 1.9 uygulaması oluşturur.
 
     ![Bir Django uygulaması eklemek için menü komutu](media/django/step02-add-django-app-command.png)
 
@@ -52,14 +52,14 @@ Her iki yöntemi kullanarak, "HelloDjangoApp" adı ile bir uygulama oluşturun. 
 | --- | --- |
 | **\_\_init\_\_.py** | Uygulamayı bir paket olarak tanımlayan dosya. |
 | **Geçişleri** | Django ile hizalamak için veritabanını güncelleştiren komut dosyaları depolayan bir klasör için modelleri değiştirir. Geçerli modelleri eşleşmesi Django'nın Geçiş Araçları veritabanının önceki bir sürümüne sonra gerekli değişiklikleri uygulayın. Modellerinizi üzerinde odaklanma tutun migrations'ı kullanma ve temel alınan veritabanı şemasını işlemek Django olanak tanır. Geçişler, 6. adımda ele alınmıştır; şimdilik yalnızca klasörü içeren bir  *\_ \_init\_\_.py* dosyası (klasörü kendi Python paketini tanımlar gösterir). |
-| **Şablonları** | Django sayfası şablonlarını içeren tek bir dosya için bir klasör *index.html* uygulama adıyla eşleşen bir klasör içinde. (Visual Studio 2017 15.7 ve önceki sürümlerinde, dosyanın doğrudan altında bulunan *şablonları* ve adım 2-4 bildirir, bir alt klasör oluşturun.) İçine bir sayfayı dinamik olarak oluşturmak için bilgi görünümleri ekleyebilirsiniz HTML bloklarını şablonlardır. Şablon "değişkenler," gibi sayfa `{{ content }}` içinde *index.html*, bu makalenin ilerleyen bölümlerinde (2. adım) açıklandığı gibi dinamik değerler için yer tutucular olan. Genellikle Django uygulamaları, uygulama adıyla eşleşen bir alt klasöre yerleştirerek, şablon için bir ad alanı oluşturun. |
+| **Şablonları** | Django sayfası şablonlarını içeren tek bir dosya için bir klasör *index.html* uygulama adıyla eşleşen bir klasör içinde. (Visual Studio 2017 15,7 ve önceki sürümlerde dosya doğrudan *Şablonlar* altında bulunur ve adım 2-4 alt klasörü oluşturmanızı söyler.) Şablonlar, görünümün dinamik olarak bir sayfayı işlemek için bilgi ekleyebileceği HTML bloklarıdır. Şablon "değişkenler," gibi sayfa `{{ content }}` içinde *index.html*, bu makalenin ilerleyen bölümlerinde (2. adım) açıklandığı gibi dinamik değerler için yer tutucular olan. Genellikle Django uygulamaları, uygulama adıyla eşleşen bir alt klasöre yerleştirerek, şablon için bir ad alanı oluşturun. |
 | **Admin.PY** | Uygulamayı genişletmek Python dosyası yönetim arabirimi (6. adıma bakın), temel ve bir veritabanındaki verileri düzenlemek için kullanılır. Başlangıçta, bu dosya yalnızca deyimi içerir `from django.contrib import admin`. Varsayılan olarak, Django Django projesinin girişleri aracılığıyla standart bir yönetim arabirimi içerir *settings.py* uncommenting mevcut girişlere göre açabilirsiniz dosyasını *urls.py*. |
 | **Apps.PY** | (Bu tablodan sonraki, aşağıya bakın) uygulaması için bir yapılandırma sınıfı tanımlayan bir Python dosyası. |
 | **models.PY** | Veri nesneleri, işlevleri, görünümleri uygulamanın temel veritabanıyla etkileşim tarafından tanımlanan modelleridir (6. adıma bakın). Django veritabanı bağlantı katmanı sağladığından uygulamalar kendilerini bu ayrıntılarla ilgilendiriyor gerekmez. *Models.py* dosya bir varsayılan Modellerinizi oluşturulacağı yerdir ve başlangıçta yalnızca deyimi içeren `from django.db import models`. |
 | **Tests.PY** | Temel yapısını birim testleri içeren bir Python dosyası. |
 | **Views.PY** | Genellikle, web bir HTTP isteğini alıp bir HTTP yanıt sayfaları düşüncelerinizi görünümleridir. Görünümleri genellikle web tarayıcıları nasıl görüntüleneceğini bildiğiniz HTML olarak işlemenizi, ancak bir görünüm mutlaka (Ara formu gibi) görünür olmak zorunda değildir. Bir görünümü olan sorumluluğundadır tarayıcıya göndermek için HTML oluşturmak için bir Python işlevi tarafından tanımlanır. *Views.py* dosya bir varsayılan görünüm oluşturulacağı yerdir ve başlangıçta yalnızca deyimi içeren `from django.shortcuts import render`. |
 
-İçeriğini *app.py* adı "HelloDjangoApp" kullanırken aşağıdaki gibi görünür:
+*Apps.py* Içeriği "Hellodocgoapp" adı kullanılırken şöyle görünür:
 
 ```python
 from django.apps import AppConfig
@@ -68,11 +68,11 @@ class HelloDjangoAppConfig(AppConfig):
     name = 'HelloDjango'
 ```
 
-### <a name="question-is-creating-a-django-app-in-visual-studio-any-different-from-creating-an-app-on-the-command-line"></a>Soru: Bir Django uygulaması Visual Studio'da uygulama oluşturma komut satırında yapılan çağrılardan farklı oluşturuyor?
+### <a name="question-is-creating-a-django-app-in-visual-studio-any-different-from-creating-an-app-on-the-command-line"></a>Soru: bir Django uygulaması Visual Studio'da uygulama oluşturma komut satırında yapılan çağrılardan farklı oluşturuyor?
 
-Yanıt: Çalışan **Ekle** > **Django uygulaması** komut veya kullanarak **Ekle** > **yeni öğe** ile Django uygulaması şablonu Django komutu ile aynı dosyaları üretir `manage.py startapp <app_name>`. Visual Studio'da uygulama oluşturmanın avantajı, uygulama klasörü ve tüm dosyalar projeye otomatik olarak tümleştirilir içindir. Aynı Visual Studio komut, projenizdeki herhangi bir sayıda uygulamaları oluşturmak için kullanabilirsiniz.
+Yanıt: Çalışan **Ekle** > **Django uygulaması** komut veya kullanarak **Ekle** > **yeni öğe** bir Django uygulaması Şablon ile aynı Django komut dosyaları üretir `manage.py startapp <app_name>`. Visual Studio'da uygulama oluşturmanın avantajı, uygulama klasörü ve tüm dosyalar projeye otomatik olarak tümleştirilir içindir. Aynı Visual Studio komut, projenizdeki herhangi bir sayıda uygulamaları oluşturmak için kullanabilirsiniz.
 
-## <a name="step-2-2-run-the-app-from-the-django-project"></a>2-2. adım: Django projeden uygulamayı çalıştırma
+## <a name="step-2-2-run-the-app-from-the-django-project"></a>2-2. adım: uygulamayı Django projeden çalıştırın
 
 Visual Studio'da proje yeniden çalıştırmanız gerekirse bu noktada (araç çubuğu düğmesini kullanarak veya **hata ayıklama** > **hata ayıklamayı Başlat**), yine de varsayılan sayfayı görürsünüz. Bir uygulamaya özgü sayfa tanımlama ve uygulama Django projeye eklemek gerektiği için hiçbir uygulama içeriği görünür:
 
@@ -111,17 +111,17 @@ Kodunuzda değişiklikler yaptık ve başarıyla sınanmıştır olduğundan, ka
 
     ![Visual Studio durum çubuğunda kaynak denetim değişikliklerini düğmesine](media/django/step02-source-control-changes-button.png)
 
-1. İçinde **Takım Gezgini**"ilk Django uygulaması oluşturma gibi" bir işleme iletisi girin ve seçin **tümünü işle**. İşleme tamamlandığında, bir ileti görürsünüz **işleme \<karma > yerel olarak oluşturuldu. Değişikliklerinizi sunucuyla paylaşmak için Eşitleme'yi tıklatın.** Değişiklikleri uzak depoya itme isteyip istemediğinizi seçin **eşitleme**, ardından **anında iletme** altında **giden işlemeler**. Ayrıca, uzak göndermeden önce birden çok yerel işlemeleri birikebilir.
+1. İçinde **Takım Gezgini**"ilk Django uygulaması oluşturma gibi" bir işleme iletisi girin ve seçin **tümünü işle**. Kayıt tamamlandığında, **karma > yerel olarak oluşturulan bir Ileti tamamlama \<görürsünüz. Değişikliklerinizi sunucuyla paylaşmak için eşitleyin.** Değişiklikleri uzak depoya itme isteyip istemediğinizi seçin **eşitleme**, ardından **anında iletme** altında **giden işlemeler**. Ayrıca, uzak göndermeden önce birden çok yerel işlemeleri birikebilir.
 
     ![Uzak Ekip Gezgini'nde yürütmeler gönderin](media/django/step02-source-control-push-to-remote.png)
 
 ### <a name="question-what-is-the-r-prefix-before-the-routing-strings-for"></a>Soru: Yönlendirme dizeleri için önce 'r' öneki nedir?
 
-Yanıt: Python'da bir dize 'r' öneki "ham" Python bildirir, dize içindeki herhangi bir karakter kaçış değil anlamına gelir. Normal ifadeler çok sayıda özel karakterler kullanmak için 'r' öneki kullanarak bu dizelerin içeriyorsa, bir dizi değerinden okumak kolaylaştırır '\\' kaçış karakterleri.
+Yanıt: 'R' ön ek Python dizesinde "ham", dize içindeki herhangi bir karakter kaçış değil Python bildirir anlamına gelir. Normal ifadeler çok sayıda özel karakterler kullanmak için 'r' öneki kullanarak bu dizelerin içeriyorsa, bir dizi değerinden okumak kolaylaştırır '\\' kaçış karakterleri.
 
 ### <a name="question-what-do-the--and--characters-mean-in-the-url-routing-entries"></a>Soru: Neler ^ ve $ karakterlerini, URL yönlendirme girişleri anlamına gelir?
 
-Yanıt: Normal ifadelerdeki URL desenleri tanımlamak ^ "satırın" anlamına gelir ve $, "yeniden URL'leri olduğu site köküne göreli satırın sonuna" anlamına gelir (aşağıdaki bölümü `https://www.domain.com/`). Normal ifade `^$` etkili bir şekilde anlamına gelir "blank" ve bu nedenle tam URL ile eşleşen `https://www.domain.com/` (hiçbir şey site köküne eklenen). Desen `^home$` tam olarak eşleşen `https://www.domain.com/home/`. (Django kullanmaz sondaki / desen eşleştirme.)
+Yanıt: URL desenleri tanımlayan normal ifadelerde ^ "satırın" anlamına gelir ve $, "yeniden URL'leri olduğu site köküne göreli satırın sonuna" anlamına gelir (aşağıdaki bölümü `https://www.domain.com/`). Normal ifade `^$` etkili bir şekilde anlamına gelir "blank" ve bu nedenle tam URL ile eşleşen `https://www.domain.com/` (hiçbir şey site köküne eklenen). Desen `^home$` tam olarak eşleşen `https://www.domain.com/home/`. (Django kullanmaz sondaki / desen eşleştirme.)
 
 Sonunda $ bir normal ifadede kullanmıyorsanız, olduğu gibi `^home`, URL deseni ile eşleşen sonra *herhangi* "home", "Ev ödevleri", "yerimizle" ve "home192837" gibi "home" ile başlayan URL.
 
@@ -153,7 +153,7 @@ Gibi bir ileti yeniden görmek için projeyi Çalıştır "**Django Merhaba!** P
 >
 > ![Visual Studio'da hata ayıklama araç çubuğundan yeniden başlatın](media/debugging-restart-toolbar-button.png)
 
-## <a name="step-2-4-render-a-view-using-a-page-template"></a>2-4. adım: Bir sayfa şablonu kullanarak bir görünüm oluşturma
+## <a name="step-2-4-render-a-view-using-a-page-template"></a>2-4. adım: bir sayfası şablonu kullanarak görünüm işlemek
 
 HTML kod oluşturma için çok küçük sayfaları düzgün çalışır, ancak sayfaları daha karmaşık hale geldikçe genellikle "sayfa şablonları, ardından eklediğiniz" sayfanızın (birlikte, CSS ve JavaScript dosyalarına yapılan başvurular) statik HTML parçaları dinamik korumak istediğiniz kod tarafından oluşturulan içerikleri. Önceki bölümde, yalnızca tarih ve saat `now.strftime` çağrıdır dinamik, diğer tüm içerik sayfası şablonunda yerleştirilebileceğini anlamına gelir.
 
@@ -247,27 +247,27 @@ Aşağıdaki adımlarda, şablonların kullanımı gösterilmektedir:
 
     ![Şablon kullanarak çalışan uygulama](media/django/step02-result.png)
 
-1. <a name="template-namespacing"></a>Visual Studio 2017 sürüm 15.7 ve önceki sürümler: Son adım olarak, şablonlarınızı bir ad alanı oluşturur ve projeye eklemiş olabileceğiniz diğer uygulamalarla olası çakışmaları ortadan kaldırır, uygulama, aynı adlı bir alt klasör içine taşıyın. (VS 2017'de 15,8 + şablonlarında sizin için otomatik olarak bunu.) Diğer bir deyişle, bir alt klasöre oluşturma *şablonları* adlı *HelloDjangoApp*, taşıma *index.html* o alt klasörü içine ve değiştirme `index` görüntülemek başvurmak için işlevi Şablonun yeni yolu *HelloDjangoApp/index.html*. Ardından projeyi çalıştırın, sayfanın düzgün bir şekilde oluşturulduğunu doğrulayın ve sunucuyu durdur.
+1. <a name="template-namespacing"></a>Visual Studio 2017 sürüm 15.7 ve önceki: son adım olarak, bir ad alanı oluşturur ve projeye eklemek diğer uygulamalarla olası çakışmaları ortadan kaldırır, uygulama, aynı adlı bir alt klasör içine şablonlarınızı taşıyın. (VS 2017 'deki şablonlar 15.8 + bunu sizin için otomatik olarak yapın.) Diğer bir deyişle, *Merhaba Docgoapp*adlı *şablonlarda* bir alt klasör oluşturun, *index. html* dosyasını bu alt klasöre taşıyın ve `index` görünüm işlevini, şablonun yeni yoluna ( *HelloDjangoApp/index.html*) başvuracak şekilde değiştirin. Ardından projeyi çalıştırın, sayfanın düzgün bir şekilde oluşturulduğunu doğrulayın ve sunucuyu durdur.
 
 1. Kaynak denetimi ve uzak deponuz isterseniz altında açıklandığı gibi güncelleştirmek için değişikliklerinizi işleyin [2 2. adım](#commit-to-source-control).
 
-### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Soru: Şablonların ayrı bir dosyada olmam gerekir mi?
+### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Soru: şablonların ayrı bir dosyada olmam gerekir mi?
 
-Yanıt: Şablonları genellikle ayrı HTML dosyalarında saklanır olsa da, bir satır içi şablonu da kullanabilirsiniz. Ayrı bir dosya kullanarak, ancak işaretleme ve kod arasında NET bir ayrım sağlamak için önerilir.
+Yanıt: şablonları genellikle ayrı HTML dosyalarında korunsa de satır içi şablonu kullanabilirsiniz. Ayrı bir dosya kullanarak, ancak işaretleme ve kod arasında NET bir ayrım sağlamak için önerilir.
 
-### <a name="question-must-templates-use-the-html-file-extension"></a>Soru: Şablonları .html dosya uzantısını kullanmalıdır?
+### <a name="question-must-templates-use-the-html-file-extension"></a>Soru: şablonları .html dosya uzantısını kullanmalıdır?
 
-Yanıt: *.Html* sayfa şablon dosyaları için uzantısıdır tamamen isteğe bağlı ikinci bağımsız değişkeni dosyasında tam göreli yolunu her zaman belirttikleri `render` işlevi. Ancak, Visual Studio (ve diğer Düzenleyiciler) genellikle kod tamamlama ve sözdizimi coloration ile gibi özellikler size *.html* şablonları sayfasında olgu ağır dosyaları olmayan kesinlikle HTML.
+Yanıt: *.html* sayfa şablon dosyaları için uzantısıdır tamamen isteğe bağlı ikinci bağımsız değişkeni dosyasında tam göreli yolunu her zaman belirttikleri `render` işlevi. Ancak, Visual Studio (ve diğer Düzenleyiciler) genellikle kod tamamlama ve sözdizimi coloration ile gibi özellikler size *.html* şablonları sayfasında olgu ağır dosyaları olmayan kesinlikle HTML.
 
 Aslında, Django projesi ile çalışırken, Visual Studio otomatik olarak düzenlediğiniz HTML dosyası aslında bir Django şablonudur algılar ve bazı otomatik tamamlama özellikleri sağlar. Örneğin, başlattığınızda bir Django sayfası şablonu yorum yazmak `{#`, Visual Studio otomatik olarak size kapatma `#}` karakter. **Yorum seçimi** ve **seçimi işletilir satıra çevir** komutları (üzerinde **Düzenle** > **Gelişmiş** menü ve araç çubuğundaki) Ayrıca şablon açıklamaları yerine HTML Yorumlarını kullanın.
 
 ### <a name="question-when-i-run-the-project-i-see-an-error-that-the-template-cannot-be-found-whats-wrong"></a>Soru: Proje çalıştırabilir, şablon bulunamayan bir hata görüyorum. Ne oldu?
 
-Yanıt: Şablon bulunamıyor hatalar görürseniz, Django proje için uygulama eklediğinizden emin olun *settings.py* içinde `INSTALLED_APPS` listesi. Bu giriş olmadan uygulamanın aramak için Django bilemezsiniz *şablonları* klasör.
+Yanıt: şablon bulunamıyor hatalar görürseniz, Django proje için uygulama eklediğinizden emin olun *settings.py* içinde `INSTALLED_APPS` listesi. Bu giriş olmadan uygulamanın aramak için Django bilemezsiniz *şablonları* klasör.
 
 ### <a name="question-why-is-template-namespacing-important"></a>Soru: Şablon namespacing neden önemlidir?
 
-Yanıt: Ne zaman için bir şablon Django görünüyor için başvurulan `render` işlevi, göreli yol ile eşleşen bulduğu ilk ne olursa olsun dosyasını kullanır. Aynı klasör yapılarını için şablonları kullanın. aynı projede birden fazla Django uygulamaları varsa, tek bir uygulama, yanlışlıkla başka bir uygulamadan şablon kullanacağınız olasıdır. Bu tür hataları önlemek için her zaman uygulamanın altında bir alt klasör oluşturun *şablonları* tüm yinelemeyi önlemek üzere bir uygulama adıyla eşleşen bir klasör.
+Yanıt: Başvurulan bir şablon için Django göründüğünde `render` işlevi, göreli yol ile eşleşen bulduğu ilk ne olursa olsun dosyasını kullanır. Aynı klasör yapılarını için şablonları kullanın. aynı projede birden fazla Django uygulamaları varsa, tek bir uygulama, yanlışlıkla başka bir uygulamadan şablon kullanacağınız olasıdır. Bu tür hataları önlemek için her zaman uygulamanın altında bir alt klasör oluşturun *şablonları* tüm yinelemeyi önlemek üzere bir uygulama adıyla eşleşen bir klasör.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
