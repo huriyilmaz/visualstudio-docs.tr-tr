@@ -13,21 +13,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5ee65126fb89f2725b69d196e0659c622d9c389
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 97188d7dcaff2133c22f4954146ba5e977ab2c6d
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314111"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776059"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>3\. Adım: geri sayım Zamanlayıcısı ekleme
 
 Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyerek, test takici 'in tamamlaması için kalan saniye sayısını izleyebilirsiniz.
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır.
-> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-add-a-countdown-timer"></a>Geri sayım Zamanlayıcısı eklemek için
 
@@ -61,7 +59,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
      Zaman yoksa, süreölçer yanıt vermez ve **timeLabel** denetiminin metin değişikliğini **zaman** aşımına göre gösterir. Bir ileti kutusu, sınavın daha fazla olduğunu ve yanıtın ortaya çıkarduğunu duyurduğunu ve bu durumda addend1 ve addend2 ekleyerek ortaya çıkarduğunu duyurur. **StartButton** denetiminin **Enabled** özelliği **true** olarak ayarlanır, böylece test takici başka bir test başlatabilir.
 
-     Yalnızca bir `if else` ifadesini eklemiş olursunuz, bu, programları kararlar almak için nasıl söylersiniz. @No__t_0 bir ifade aşağıdaki gibi görünür.
+     Yalnızca bir `if else` ifadesini eklemiş olursunuz, bu, programları kararlar almak için nasıl söylersiniz. `if else` bir ifade aşağıdaki gibi görünür.
 
     > [!NOTE]
     > Aşağıdaki örnek yalnızca tanıtım amaçlıdır; projenize eklemeyin.
@@ -98,7 +96,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
      Test sahipleri <xref:System.Windows.Forms.NumericUpDown> bir denetim kullanarak daha kolay sayı girebilir, bu da matematik sorunlarına yönelik yanıtlar için bir tane kullanmanızı sağlar. Tüm olası yanıtlar 0 ile 100 arasında tüm sayılardır. **Minimum**, **Maksimum**ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, test takipçilerin ondalık sayı, negatif sayı veya çok yüksek sayı girememesini sağlayabilirsiniz. (Test takipçilerin 3,141 girmelerini, ancak 3,1415 değil, izin vermek istiyorsanız, **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
 
-6. @No__t_0 yönteminin sonuna üç satır ekleyin, bu nedenle kod aşağıdaki gibi görünür.
+6. `StartTheQuiz()` yönteminin sonuna üç satır ekleyin, bu nedenle kod aşağıdaki gibi görünür.
 
      [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]
      [!code-csharp[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]
@@ -109,7 +107,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
      Süreölçer, sayıyı aşağı doğru olarak başlatır. Zaman çalıştığında, test sonlanır ve yanıt görüntülenir. Aşağıdaki çizimde devam eden bir test gösterilmektedir.
 
-     ![Math test devam ediyor ](../ide/media/express_addcountdown.png)<br/>
+     ![matematik testi devam ediyor](../ide/media/express_addcountdown.png)<br/>
 *Matematik testi devam ediyor*
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için

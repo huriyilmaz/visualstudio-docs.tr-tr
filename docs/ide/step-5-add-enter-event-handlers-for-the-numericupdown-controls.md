@@ -13,21 +13,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7de9fafa32922792e21eb672df0aa9128c25dbe2
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 0d9bc44cb945b8df3ca444ce09b1b5c39795d3bc
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314123"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776075"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5\. Adım: NumericUpDown denetimleri için giriş olay işleyicileri ekleme
 
 Bu öğreticinin beşinci kısmında, test sorunlarının yanıtlarını biraz daha kolay bir şekilde girmek için <xref:System.Windows.Forms.Control.Enter> olay işleyicileri ekleyeceksiniz. Bu kod, test takı seçtiği ve farklı bir değer girmeye başladığı anda her bir <xref:System.Windows.Forms.NumericUpDown> denetimindeki geçerli değeri seçer ve temizler.
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır.
-> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-verify-the-default-behavior"></a>Varsayılan davranışı doğrulamak için
 
@@ -51,13 +49,13 @@ Bu öğreticinin beşinci kısmında, test sorunlarının yanıtlarını biraz d
 
    **Özellikler** Iletişim kutusundaki **Olaylar** sekmesi, formda seçtiğiniz öğe için yanıt verebildiği tüm olayları (tanıtıcı) görüntüler. NumericUpDown denetimini seçtiğinizden, listelenen tüm olaylar buna aittir.
 
-2. **ENTER** olayını seçin, `answer_Enter` yazın ve **ENTER** tuşuna basın.
+2. **ENTER** olayını seçin, `answer_Enter`yazın ve **ENTER** tuşuna basın.
 
    ![Olay işleyicisi yöntem adını girin](media/enter-event.png)
 
-   Sum NumericUpDown denetimi için bir Enter Olay işleyicisi eklediniz ve Handler **answer_Enter**olarak adlandırdınız.
+   Sum NumericUpDown denetimi için bir Enter Olay işleyicisi eklediniz ve işleyiciyi **answer_Enter**adlandırdınız.
 
-3. **Answer_Enter** olay işleyicisi yönteminde aşağıdaki kodu ekleyin:
+3. **Answer_Enter** olay işleyicisine yönelik yöntemde aşağıdaki kodu ekleyin:
 
      [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]

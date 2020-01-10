@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3ef0cf63f8063d543cbb8fb69a0588dc331e4c6a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4c33420e715f2164f767ba57ff149a409d7d3627
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590962"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776179"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Bakım temeli sırasında Visual Studio’yu güncelleştirme
 
@@ -62,7 +62,7 @@ vs_enterprise.exe --channelUri c:\doesnotexist.chman
 
 Hizmet temeli için bir güncelleştirme kullanılabilir olduğunda, [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0)adresindeki bakım güncelleştirmesi için sabit sürümlü önyükleyici dosyaları kullanılabilir hale getirilir.
 
-Ağ düzeni yüklemesi kullanarak dağıtan Yöneticiler için, yöneticinin [Düzen konumunu](update-a-network-installation-of-visual-studio.md)güncelleştirmesi gerekir. Konumdan yüklenen istemciler, güncelleştirme bildirimleri alır. Güncelleştirmenin istemcilere dağıtılması gerekiyorsa, [Bu yönergeleri](update-a-network-installation-of-visual-studio.md#how-to-deploy-an-update-to-client-machines)izleyin. Bir güncelleştirme için ' Response. json ' öğesini değiştirdiğinizde ek iş yükleri, bileşenler veya diller eklemeyin. Bu ayarların yönetilmesi, ürün güncelleştirildikten sonra ' Değiştir ' dağıtımı olarak yapılmalıdır.
+Ağ düzeni yüklemesi kullanarak dağıtan Yöneticiler için, yöneticinin [Düzen konumunu](update-a-network-installation-of-visual-studio.md)güncelleştirmesi gerekir. Konumdan yüklenen istemciler, güncelleştirme bildirimleri alır. Güncelleştirmenin istemcilere dağıtılması gerekiyorsa, [Bu yönergeleri](update-a-network-installation-of-visual-studio.md#deploy-an-update-to-client-machines)izleyin. Bir güncelleştirme için ' Response. json ' öğesini değiştirdiğinizde ek iş yükleri, bileşenler veya diller eklemeyin. Bu ayarların yönetilmesi, ürün güncelleştirildikten sonra ' Değiştir ' dağıtımı olarak yapılmalıdır.
 
 Internet tabanlı bir yüklemede, istemci üzerindeki var olmayan bir kanal bildirimini işaret eden `--channelUri` parametresi ile yeni bir sabit sürüm önyükleyici çalıştırın. Güncelleştirme sessiz veya pasif modda dağıtılmışsa, iki ayrı komut kullanın:
 

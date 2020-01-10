@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - developer community privacy
 - privacy, developer community
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1856d6421dc61ada2f3040e4fdeed880a6ab201
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e87f35778b8aec615410312c0eb7373d4e9969f
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652476"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75775887"
 ---
 # <a name="developer-community-data-privacy"></a>Geliştirici Topluluğu veri gizliliği
 
@@ -81,8 +81,8 @@ Visual Studio 'dan **bir sorun rapor** başlatılmışsa, aşağıdaki veri tür
   - Döküm dosyası
 
 > [!NOTE]
-> Günlük dosyaları, ekran görüntüleri ve kayıt verileri yalnızca dahil oldukları sorun raporunu göndererek izin sağladığınızda Microsoft 'a gönderilir. ' Sorun bildir ' penceresinin ' Özet ' adımında hangi dosyaların ekleneceğini görebilirsiniz (Bu notta yer alan ekran görüntüsüne bakın). Toplanan Günlükler ve dosyalar% temp% klasöründe depolanır ve her yükleme işleminden sonra düzenli olarak temizlenir. Sorun raporunuza bir günlük eklemek istemiyorsanız, raporu göndermeden önce dosyayı% Temp% klasöründen silin.
-  > Sorun ![Report-toplanan günlüklerin Özeti ](media/report-a-problem-logs-collected.png)
+> Kullandığınız günlük dosyaları, ekran görüntüleri ve kayıt verileri, Microsoft 'un kendi özelliklerini anlama ve sorununuzu yanıtlama konusunda önemli ölçüde artış sağlayabilir.  Bu nedenle, bunları dahil etmenizi öneririz. Gizliliğinizi korumak için, ekli günlük dosyaları, ekran görüntüleri ve kayıt verileri yalnızca dahil oldukları sorun raporunu göndererek izin sağladığınızda Microsoft 'a gönderilir. Raporu göndermeden önce ' bir sorun bildir ' penceresinin ' Özet ' adımında hangi dosyaların ekleneceğini görebilirsiniz. ' Özet ' adımında ' sistem günlüklerini Ekle ' seçeneğinin işaretini kaldırarak, sistem günlük dosyalarını rapordan dışlayabilirsiniz. Başvuru için aşağıdaki ekran görüntüsüne bakın. 
+  > Sorun bildirmek ![-toplanan günlüklerin Özeti](media/report-a-problem-logs-collected.png)
 
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -10,21 +10,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fdda615ceea11434a4533fa2a5071a5a999c1c4
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: c0fa7afc7262a1a78b356104f8cc206e8898f22e
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516688"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776128"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1\. Adım: proje oluşturma ve formunuza etiketler ekleme
 
 Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etiketler, bir düğme ve diğer denetimler eklersiniz. Eklediğiniz her denetim için de Özellikler ayarlarsınız. Proje formu, denetimleri ve (öğreticide daha sonra) kodu içerecektir. Düğme, testi başlatır, Etiketler test sorunlarını gösterir ve diğer denetimler, test yanıtlarını ve testi tamamlaması için kalan süreyi gösterir.
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. 
-> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md). 
-> - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-create-a-project-for-a-form"></a>Form için bir proje oluşturmak için
 
@@ -39,7 +37,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
     Seçtiğiniz programlama diline bağlı olarak, *Form1.cs* veya *Form1. vb* adlı bir form görüntülenir.
 
    > [!NOTE]
-   > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>Visual Studio Yükleyicisi ](../ide/media/dot-net-desktop-dev-workload.png) .NET masaüstü geliştirme iş yükünü ![<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
+   > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>Visual Studio Yükleyicisi](../ide/media/dot-net-desktop-dev-workload.png) .NET masaüstü geliştirme iş yükünü ![<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
 
 ::: moniker-end
 
@@ -62,7 +60,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
    >
    > Sonra, Visual Studio Yükleyicisi **.net masaüstü geliştirme** Iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi .NET Core iş yükü](../ide/media/install-dot-net-desktop-env.png)
+   > ![Visual Studio Yükleyicisi'nde .NET core iş yükü](../ide/media/install-dot-net-desktop-env.png)
    >
    > Bundan sonra Visual Studio Yükleyicisi **Değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin.
 
@@ -130,9 +128,9 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 7. **(Ad)** özelliğini **plusLeftLabel**olarak ayarlayın.
 
-8. **PlusLeftLabel** etiketini seçin ve ardından **CTRL** +**C** tuşlarını veya **Düzen** menüsünden **Kopyala** ' yı seçin.
+8. **PlusLeftLabel** etiketini seçin ve ardından **CTRL**+**C** tuşlarını veya **Düzen** menüsünden **Kopyala** ' yı seçin.
 
-9. **Ctrl** +**V** tuşlarını seçerek veya **Düzen** menüsüne **yapıştırarak** etiketi üç kez yapıştırın.
+9. **Ctrl**+**V** tuşlarını seçerek veya **Düzen** menüsüne **yapıştırarak** etiketi üç kez yapıştırın.
 
 10. Üç yeni etiketi, **plusLeftLabel** etiketinin sağındaki bir satırda olacak şekilde düzenleyin.
 
@@ -198,7 +196,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 6. **StartButton** denetimi için **TabIndex** özelliğinin değerini **1**olarak ayarlayın.
 
     > [!NOTE]
-    > **TabIndex** özelliği, test Taklayıcı **sekme** tuşunu seçtiğinde denetimlerin sırasını ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda **dosya**  > **Aç**' ı seçin ve ardından **sekme** tuşuna birkaç kez tıklayın. Her **sekme** tuşunu seçtiğiniz her seferinde imlecinizin denetim ' e nasıl taşındığını izleyin. Bir programcı bu formu oluştururken bir sıraya karar verdi.
+    > **TabIndex** özelliği, test Taklayıcı **sekme** tuşunu seçtiğinde denetimlerin sırasını ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda **dosya** > **Aç**' ı seçin ve ardından **sekme** tuşuna birkaç kez tıklayın. Her **sekme** tuşunu seçtiğiniz her seferinde imlecinizin denetim ' e nasıl taşındığını izleyin. Bir programcı bu formu oluştururken bir sıraya karar verdi.
 
 7. Değer denetimi için **TabIndex** özelliğinin değerini **2**, fark denetimi için **3**, ürün denetimi için **4**ve bölüm denetimi için **5**olarak ayarlayın.
 
@@ -206,7 +204,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
      ![İlk matematik testi formu](../ide/media/express_formlaidout.png)
 
-8. **TabIndex** özelliğinin beklendiği gibi çalışıp çalışmadığını doğrulamak için **F5** tuşunu seçerek veya menü çubuğunda Hata**ayıklamayı Başlat**  >  **Hata Ayıkla** ' yı seçerek programınızı kaydedin ve çalıştırın ve ardından **sekme** tuşuna birkaç kez tıklayın.
+8. **TabIndex** özelliğinin beklendiği gibi çalışıp çalışmadığını doğrulamak için **F5** tuşunu seçerek veya menü çubuğunda Hata **ayıklamayı Başlat** > **Hata Ayıkla** ' yı seçerek programınızı kaydedin ve çalıştırın ve ardından **sekme** tuşuna birkaç kez tıklayın.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 

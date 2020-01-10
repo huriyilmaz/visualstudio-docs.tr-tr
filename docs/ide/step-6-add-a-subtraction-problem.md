@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3c6eed20fc1f2b76c02865c2a5f6b21cde1ae51
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 611df946b97f97832b7debfac3d11c5b7972cdae
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590000"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776098"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>6\. Adım: çıkarma sorunu ekleme
 Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşağıdaki görevlerin nasıl gerçekleştirileceğini öğreneceksiniz:
@@ -32,9 +32,7 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
 - Zaman aşımı olduğunda olay işleyicisinin doğru yanıtı doldurması için zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisini güncelleştirin.
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır.
-> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-add-a-subtraction-problem"></a>Çıkarma sorunu eklemek için
 

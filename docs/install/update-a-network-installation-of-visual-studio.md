@@ -1,26 +1,26 @@
 ---
 title: Ağ tabanlı yüklemeyi güncelleştirme
 description: Kullanarak ağ tabanlı bir Visual Studio yüklemesini güncelleştirme öğrenin Düzen komutu
-ms.date: 10/07/2019
+ms.date: 01/08/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 1AF69C0E-0AC9-451B-845D-AE4EDBCEA65C
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2157a6142f95b6ffe34503a8ee80419fcb9ca506
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 774e189306345187ac6a0c29b7060cb5537e8adb
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018818"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776165"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme
 
@@ -28,21 +28,24 @@ Bunu mümkün olması için bir ağ yükleme düzeni, Visual Studio'nun en son �
 
 ## <a name="how-to-update-a-network-layout"></a>Bir ağ düzeni güncelleştirme
 
+> [!IMPORTANT]
+> Bu yönergelerde, daha önce bir ağ yükleme düzeni oluşturmuş olduğunuz varsayılır. Bunun nasıl yapılacağı hakkında daha fazla bilgi için [Visual Studio 'nun ağ yüklemesi oluşturma](create-a-network-installation-of-visual-studio.md) sayfasına bakın.
+
 Ağ yükleme paylaşımınızı en son güncelleştirmeleri içerecek şekilde yenilemek için, güncelleştirilmiş paketleri artımlı olarak indirmek üzere `--layout` komutunu çalıştırın.
 
 ::: moniker range="vs-2017"
 
-**15,3 sürümündeki yenilikler**: İlk ağ düzeni oluşturduğunuz sırada kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki Düzen komutları, önceki seçeneklerinin yanı sıra, belirttiğiniz yeni seçenekleri kullanın. Ancak önceki bir sürümün bir yerleşimini kullanıyorsanız, içeriğini güncelleştirmek için ağ yüklemesi yerleşimini (diğer bir deyişle, aynı iş yüklerini ve dilleri) ilk oluşturduğunuzda kullandığınız komut satırı parametrelerinin aynısını kullanmanız gerekir.
+**15,3 ' de yeni**: [ağ düzeni ilk oluşturduğunuzda](create-a-network-installation-of-visual-studio.md)kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki Düzen komutları, önceki seçeneklerinin yanı sıra, belirttiğiniz yeni seçenekleri kullanın. Ancak önceki bir sürümün bir yerleşimini kullanıyorsanız, içeriğini güncelleştirmek için ağ yüklemesi yerleşimini (diğer bir deyişle, aynı iş yüklerini ve dilleri) ilk oluşturduğunuzda kullandığınız komut satırı parametrelerinin aynısını kullanmanız gerekir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-İlk ağ düzeni oluşturduğunuz sırada kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki Düzen komutları, önceki seçeneklerinin yanı sıra, belirttiğiniz yeni seçenekleri kullanın.
+[Ağ yerleşimini ilk oluşturduğunuzda](create-a-network-installation-of-visual-studio.md)kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki Düzen komutları, önceki seçeneklerinin yanı sıra, belirttiğiniz yeni seçenekleri kullanın.
 
 ::: moniker-end
 
-Bir dosya paylaşımında bir düzen barındırdıysanız, düzenin özel bir kopyasını (örneğin, c:\VSLayout) güncelleştirmeniz gerekir ve ardından tüm güncelleştirilmiş içerik indirildikten sonra dosyayı dosya paylaşımınıza kopyalayın (örneğin, \\Server \ Products \ VS). Bunu yapmazsanız, Düzen güncelleştirildiği sırada Kurulum'u tüm kullanıcılar, henüz tamamen güncelleştirilmez tüm içeriğin elde düzenden mümkün olmayabilir, büyük bir olasılık yoktur.
+Bir dosya paylaşımında bir düzen barındırdıysanız, düzenin özel bir kopyasını (örneğin, c:\VSLayout) güncelleştirmeniz gerekir ve ardından tüm güncelleştirilmiş içerik indirildikten sonra dosyayı dosya paylaşımınıza kopyalayın (örneğin, \\server\products\VS). Bunu yapmazsanız, Düzen güncelleştirildiği sırada Kurulum'u tüm kullanıcılar, henüz tamamen güncelleştirilmez tüm içeriğin elde düzenden mümkün olmayabilir, büyük bir olasılık yoktur.
 
 Bir düzeni oluşturma ve güncelleştirme hakkında birkaç örnek adım adım inceleyelim:
 
@@ -64,7 +67,7 @@ Bir düzeni oluşturma ve güncelleştirme hakkında birkaç örnek adım adım 
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* Bir ek iş yükü ve yerelleştirilmiş dilini nasıl ekleneceğini aşağıda verilmiştir.  (Bu komut *Azure geliştirme* iş yükünü ekler.)  Artık hem yönetilen Masaüstü hem de Azure Bu düzende dahil edilir.  İngilizce ve Almanca dil kaynakları için bu iş yükleri de dahildir.  Ve düzeni, kullanılabilir en son sürüme güncelleştirilir.
+* Bir ek iş yükü ve yerelleştirilmiş dilini nasıl ekleneceğini aşağıda verilmiştir.  (Bu komut *Azure geliştirme* iş yükünü ekler.)  Artık hem yönetilen masaüstü hem de Azure bu düzene dahildir.  İngilizce ve Almanca dil kaynakları için bu iş yükleri de dahildir.  Ve düzeni, kullanılabilir en son sürüme güncelleştirilir.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
@@ -73,7 +76,7 @@ Bir düzeni oluşturma ve güncelleştirme hakkında birkaç örnek adım adım 
     > [!IMPORTANT]
     > Bir güncelleştirme işlemi, bir [yanıt dosyasının](automated-installation-with-response-file.md)"Ekle" bölümüne bu bileşenleri dahil etseniz bile yeni eklenen isteğe bağlı bileşenleri yüklemez. Bu durum, bir güncelleştirme sırasında ekleme işlemi kullanılmadığından oluşur.
     >
-    > **Geçici çözüm**: Eksik bileşenleri yüklemek için yükseltmeden sonra ayrı bir değiştirme işlemi çalıştırın.
+    > **Geçici çözüm**: eksik bileşenleri yüklemek için bir yükseltmeden sonra ayrı bir değiştirme işlemi çalıştırın.
 
 * Son olarak, burada da bir ek iş yükü ve yerelleştirilmiş dil sürümü güncelleştirmeden ekleme. (Bu komut *ASP.net ve Web geliştirme* iş yükünü ekler.)  Artık yönetilen Masaüstü, Azure ve ASP.NET & Web geliştirme iş yükleri bu düzene dahildir. İngilizce, Almanca ve Fransızca Dil kaynakları için bu iş yükleri de dahildir.  Ancak, bu komutu çalıştırdığınızda düzenini kullanılabilir en son sürüme güncelleştirilmedi. Bu, mevcut sürümde kalır.
 
@@ -81,7 +84,7 @@ Bir düzeni oluşturma ve güncelleştirme hakkında birkaç örnek adım adım 
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
-## <a name="how-to-deploy-an-update-to-client-machines"></a>İstemci makineler için bir güncelleştirme dağıtma
+## <a name="deploy-an-update-to-client-machines"></a>İstemci makinelerine güncelleştirme dağıtma
 
 Ağ ortamınızı nasıl yapılandırıldığına bağlı olarak, bir güncelleştirme bir kurumsal yönetici tarafından dağıtılan veya bir istemci makinesinden başlattı.
 
@@ -111,7 +114,7 @@ Ağ ortamınızı nasıl yapılandırıldığına bağlı olarak, bir güncelle�
 > [!TIP]
 > Güncelleştirme bildirimleri kullanıcılara sunulduğundan zaman denetleme hakkında daha fazla bilgi için bkz: [ağ tabanlı Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetlemek](controlling-updates-to-visual-studio-deployments.md).
 
-## <a name="how-to-verify-a-layout"></a>Bir düzen doğrulama
+## <a name="verify-a-layout"></a>Bir düzeni doğrulama
 
 Kullanım `--verify` sağlanan çevrimdışı önbellekte doğrulama gerçekleştirmek için. Eksik veya geçersiz paketleri dosyaları olup olmadığını denetler. Doğrulama sonunda eksik dosyalar ve geçersiz dosyaların listesini yazdırır.
 
@@ -122,16 +125,16 @@ vs_enterprise.exe --layout <layoutDir> --verify
 İçinde layoutDir vs_enterprise.exe çağrılabilir.
 
 > [!NOTE]
-> Tarafından gereken bazı önemli meta veri dosyaları `--verify` seçeneği Düzen çevrimdışı önbellekte olması gerekir. Bu meta veri dosyaları eksikse "--doğrulayın" çalıştırılamıyor ve Kurulum bir hata verir. Bu hata ile karşılaşırsanız, yeni bir çevrimdışı Düzen farklı bir klasöre (veya aynı Çevrimdışı Önbellek klasörü. yeniden oluştur Bu nedenle yapmak için ilk çevrimdışı düzen oluşturmak için kullandığınız aynı düzen komutu çalıştırın. Örneğin: `vs_enterprise.exe --layout <layoutDir>`
+> Tarafından gereken bazı önemli meta veri dosyaları `--verify` seçeneği Düzen çevrimdışı önbellekte olması gerekir. Bu meta veri dosyaları eksikse "--doğrulayın" çalıştırılamıyor ve Kurulum bir hata verir. Bu hata ile karşılaşırsanız, yeni bir çevrimdışı Düzen farklı bir klasöre (veya aynı Çevrimdışı Önbellek klasörü. yeniden oluştur Bu nedenle yapmak için ilk çevrimdışı düzen oluşturmak için kullandığınız aynı düzen komutu çalıştırın. Örneğin: `vs_enterprise.exe --layout <layoutDir>`.
 
 Oluşturduğunuz yeni düzene ilk düzeni sürümünün aynı olmayabilir bu nedenle, Microsoft Visual Studio güncelleştirmeleri düzenli olarak gelir.
 
 > [!NOTE]
 > Doğrulama yalnızca Visual Studio 'nun belirli bir ikincil sürümünün en son sürümü için geçerlidir. Yeni bir sürüm yayımlandığında, doğrulama işlemi, aynı ikincil sürümün önceki düzeltme eki düzeyi sürümleri için çalışmaz.
 
-## <a name="how-to-fix-a-layout"></a>Bir düzen nasıl
+## <a name="fix-a-layout"></a>Düzeni çözme
 
-Kullanım `--fix` olarak aynı doğrulamanın `--verify` ve bilinen sorunları düzeltmek de deneyin. @No__t-0 işlemi bir internet bağlantısına ihtiyaç duyuyor, bu nedenle `--fix` ' i çağırmadan önce makinenizin internet 'e bağlı olduğundan emin olun.
+Kullanım `--fix` olarak aynı doğrulamanın `--verify` ve bilinen sorunları düzeltmek de deneyin. `--fix` işlemin bir internet bağlantısı olması gerekir, bu nedenle `--fix`çağırmadan önce makinenizin internet 'e bağlı olduğundan emin olun.
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --fix
@@ -139,7 +142,7 @@ vs_enterprise.exe --layout <layoutDir> --fix
 
 İçinde layoutDir vs_enterprise.exe çağrılabilir.
 
-## <a name="how-to-remove-older-versions-from-a-layout"></a>Bir düzenden eski sürümlerini kaldırma
+## <a name="remove-older-versions-from-a-layout"></a>Eski sürümleri düzenden kaldırma
 
 Çevrimdışı bir önbellek için Düzen güncelleştirmeleri gerçekleştirdikten sonra Düzen önbellek klasörünün en son Visual Studio yüklemesinin artık gerekli olmayan bazı eski paketleri olabilir. Kullanabileceğiniz `--clean` seçeneği bir Çevrimdışı Önbellek klasör'den eski paketleri kaldırın.
 
@@ -165,7 +168,13 @@ c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1
 
 Kurulum, bu komutu yürüttükten sonra onu kaldırır dosyaların listesini bulmak için Çevrimdışı Önbellek klasörü analiz eder. Ardından, silinecek ve silme onayı yükleneceği dosyalarını gözden geçirmek için bir fırsat gerekir.
 
-[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
+## <a name="get-support-for-your-offline-installer"></a>Çevrimdışı yükleyicinizin desteğini alın
+
+Çevrimdışı yüklemenizle ilgili bir sorun yaşarsanız, bunu bilmek istiyoruz. Bize en iyi yolu kullanmaktır [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracı. Bu aracı, bize tanılayın ve sorunu çözmeye yardımcı olmak için ihtiyacımız olan günlükleri ve telemetri gönderebilir.
+
+Ayrıca sunuyoruz bir [ **canlı sohbet** ](https://visualstudio.microsoft.com/vs/support/#talktous) yüklemeyle ilgili sorunlar için destek seçeneği (yalnızca İngilizce).
+
+Diğer destek seçenekleri, çok sahibiz. Bir liste için bkz. [geri bildirim](../ide/feedback-options.md) sayfamız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

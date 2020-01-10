@@ -13,30 +13,28 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 075c56a5d5bcb02ee443035ac26d7730f145a445
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 658815849051aa8f86d70d0181b4f3b075fac9a8
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314085"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776056"
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>4\. Adım: CheckTheAnswer () metodunu ekleme
 
-Bu öğreticinin dördüncü bölümünde, matematik sorunlarına verilen yanıtların doğru olup olmadığını belirleyen `CheckTheAnswer()` bir yöntem yazacaksınız. Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
+Bu öğreticinin dördüncü bölümünde, matematik sorunlarına verilen yanıtların doğru olup olmadığını belirleyen `CheckTheAnswer()`bir yöntem yazacaksınız. Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır.
-> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-verify-whether-the-answers-are-correct"></a>Yanıtların doğru olup olmadığını doğrulamak için
 
 > [!NOTE]
 > Visual Basic ' de takip ediyorsanız, her zamanki `Sub` anahtar sözcüğü yerine `Function` anahtar sözcüğünü kullanırsınız çünkü bu yöntem bir değer döndürür. Oldukça basittir: Sub bir değer döndürmez, ancak bir işlev yapar.
 
-1. @No__t_0 yöntemi ekleyin.
+1. `CheckTheAnswer()` yöntemi ekleyin.
 
-     Bu yöntem çağrıldığında, addend1 ve addend2 değerlerini ekler ve sonucu, Sum <xref:System.Windows.Forms.NumericUpDown> denetimindeki değeri karşılaştırır. Değerler eşitse, yöntem `true` bir değer döndürür. Aksi takdirde, yöntemi `false` bir değer döndürür. Kodunuzun aşağıdaki gibi görünmesi gerekir.
+     Bu yöntem çağrıldığında, addend1 ve addend2 değerlerini ekler ve sonucu, Sum <xref:System.Windows.Forms.NumericUpDown> denetimindeki değeri karşılaştırır. Değerler eşitse, yöntem `true`bir değer döndürür. Aksi takdirde, yöntemi `false`bir değer döndürür. Kodunuzun aşağıdaki gibi görünmesi gerekir.
 
      [!code-vb[VbExpressTutorial3Step4#8](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_1.vb)]
      [!code-csharp[VbExpressTutorial3Step4#8](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_1.cs)]
@@ -50,7 +48,7 @@ Bu öğreticinin dördüncü bölümünde, matematik sorunlarına verilen yanıt
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
      [!code-csharp[VbExpressTutorial3Step4#10](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_2.cs)]
 
-     Yanıt doğruysa, `CheckTheAnswer()` `true` döndürür. Olay işleyicisi zamanlayıcıyı durduruyor, kutlama iletisini gösterir ve sonra **Başlat** düğmesini tekrar kullanılabilir yapar. Aksi takdirde, test devam eder.
+     Yanıt doğruysa, `CheckTheAnswer()` `true`döndürür. Olay işleyicisi zamanlayıcıyı durduruyor, kutlama iletisini gösterir ve sonra **Başlat** düğmesini tekrar kullanılabilir yapar. Aksi takdirde, test devam eder.
 
 3. Programınızı kaydedin, çalıştırın, bir test başlatın ve ek sorun için doğru bir yanıt sağlayın.
 

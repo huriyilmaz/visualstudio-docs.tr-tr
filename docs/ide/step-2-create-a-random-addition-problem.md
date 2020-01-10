@@ -13,27 +13,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb6f0600d8bdfe8c736305ffd31788edb9d817a6
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: f19c7854f2fb3d24010a5ee0e983b8efe4209997
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576286"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776035"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>2\. Adım: rastgele bir ek sorun oluşturma
 
 Bu öğreticinin ikinci bölümünde, rastgele sayıları temel alan matematik sorunları ekleyerek testi zorlayıcı hale getirebilirsiniz. Ayrıca, `StartTheQuiz()` adlı ve sorunları dolduran ve geri sayım zamanlayıcısını Başlatan bir yöntem oluşturursunuz. Bu öğreticide daha sonra çıkarma, çarpma ve bölme sorunlarını ekleyeceğiz.
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır.
-> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-create-a-random-addition-problem"></a>Rastgele bir ek sorun oluşturmak için
 
 1. Form tasarımcısında, formunu (**Form1**) seçin.
 
-2. Menü çubuğunda  > **kodu** **görüntüle** ' yi seçin.
+2. Menü çubuğunda > **kodu** **görüntüle** ' yi seçin.
 
      *Form1.cs* veya *Form1. vb* , kullandığınız programlama diline bağlı olarak görünür, böylece formun arkasındaki kodu görüntüleyebilmenizi sağlayabilirsiniz.
 
@@ -60,20 +58,20 @@ Bu öğreticinin ikinci bölümünde, rastgele sayıları temel alan matematik s
      [!code-csharp[VbExpressTutorial3Step2#2](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_2.cs)]
      [!code-vb[VbExpressTutorial3Step2#2](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_2.vb)]
 
-5. @No__t_0 adında bir yöntem ekleyin ve bu, etiket içindeki rastgele sayıları göstermek için rastgele nesnenin <xref:System.Random.Next> yöntemini kullanır. `StartTheQuiz()`, sonunda tüm sorunları doldurup süreölçeri başlatır, bu nedenle bir yorum ekleyin. İşlevin aşağıdaki gibi görünmesi gerekir.
+5. `StartTheQuiz()` adında bir yöntem ekleyin ve bu, etiket içindeki rastgele sayıları göstermek için rastgele nesnenin <xref:System.Random.Next> yöntemini kullanır. `StartTheQuiz()`, sonunda tüm sorunları doldurup süreölçeri başlatır, bu nedenle bir yorum ekleyin. İşlevin aşağıdaki gibi görünmesi gerekir.
 
      [!code-csharp[VbExpressTutorial3Step2#3](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_3.cs)]
      [!code-vb[VbExpressTutorial3Step2#3](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_3.vb)]
 
      Koddaki `randomizer` sonra nokta (.) girdiğinizde, bir IntelliSense penceresi açılır ve çağırabilmeniz için tüm rasgele nesne yöntemlerini gösterir. Örneğin, IntelliSense `Next()` yöntemini aşağıdaki şekilde listeler.
 
-     ![Next yöntemi ](../ide/media/express_randomwhite.png)<br/>
+     Sonraki yöntemi ![](../ide/media/express_randomwhite.png)<br/>
 *Next yöntemi*
 
      Bir nesneden sonra bir nokta girdiğinizde, IntelliSense, nesne üyelerinin bir listesini (özellikler, Yöntemler ve olaylar gibi) gösterir.
 
     > [!NOTE]
-    > @No__t_0 yöntemini `Random` nesnesiyle kullandığınızda (örneğin, `randomizer.Next(50)` çağırdığınızda) 50 ' den küçük bir rastgele sayı alırsınız (0 ile 49 arasında). Bu örnekte `randomizer.Next(51)` çağırılır. İki rastgele sayının, 0 ile 100 arasında bir yanıt ekleyecek şekilde 50 değil 51 ' i kullandınız. @No__t_0 yöntemine 50 geçirirseniz, 0 ile 49 arasında bir sayı seçer. bu nedenle, olası en yüksek yanıt 100 değil 98. Yöntemdeki ilk iki deyim çalıştıktan sonra, **addend1** ve **addend2**iki tamsayı değişkeninin her biri, 0 ile 50 arasında rastgele bir sayı tutar. Bu ekran görüntüsü C# kodu gösterir, ancak IntelliSense Visual Basic için de aynı şekilde çalışmaktadır.
+    > `Next()` yöntemini `Random` nesnesiyle kullandığınızda (örneğin, `randomizer.Next(50)`çağırdığınızda) 50 ' den küçük bir rastgele sayı alırsınız (0 ile 49 arasında). Bu örnekte `randomizer.Next(51)`çağırılır. İki rastgele sayının, 0 ile 100 arasında bir yanıt ekleyecek şekilde 50 değil 51 ' i kullandınız. `Next()` yöntemine 50 geçirirseniz, 0 ile 49 arasında bir sayı seçer. bu nedenle, olası en yüksek yanıt 100 değil 98. Yöntemdeki ilk iki deyim çalıştıktan sonra, **addend1** ve **addend2**iki tamsayı değişkeninin her biri, 0 ile 50 arasında rastgele bir sayı tutar. Bu ekran görüntüsü C# kodu gösterir, ancak IntelliSense Visual Basic için de aynı şekilde çalışmaktadır.
 
      Bu deyimlere daha yakından göz atın.
 
@@ -97,7 +95,7 @@ Bu öğreticinin ikinci bölümünde, rastgele sayıları temel alan matematik s
 
      Aşağıdaki ekran görüntüsünde gösterildiği gibi rastgele bir ek sorun belirir.
 
-     ![Random ekleme sorunu ](../ide/media/express_additionproblem.png)<br/>
+     ![rastgele ek sorun](../ide/media/express_additionproblem.png)<br/>
 *Rastgele ek sorun*
 
      Öğreticinin bir sonraki adımında, toplamı ekleyeceksiniz.

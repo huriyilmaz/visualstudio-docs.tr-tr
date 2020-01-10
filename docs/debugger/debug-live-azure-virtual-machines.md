@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 52ce973f1521f3ca9ba83513f6711287c49db7bb
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: ef314cf78c685251496274309af91e3bb2108a1b
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415765"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776116"
 ---
 # <a name="debug-live-aspnet-apps-on-azure-virtual-machines-and-azure-virtual-machine-scale-sets-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak Azure sanal makinelerinde ve Azure sanal makine ölçek kümelerinde canlı ASP.NET uygulamalarında hata ayıklayın
 
@@ -33,15 +33,18 @@ Bu öğreticide şunları yapacaksınız:
 > * Bir anlık görüntü noktası ayarlayın ve bir anlık görüntüyü Göster
 > * Bir günlüğe kaydetme noktası ayarlayın
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-* Azure sanal makineler (VM) ve Azure sanal makine ölçek kümeleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle**Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test** > **anlık görüntü hata ayıklayıcısı**altında bulabilirsiniz.)
+* Azure sanal makineler (VM) ve Azure sanal makine ölçek kümeleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle**Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Bireysel bileşenler** sekmesinde, **hata ayıklama ve test** > **anlık görüntü hata ayıklayıcısı**altında bulabilirsiniz.)
 
     Henüz yüklenmemişse, [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/)'ı yükleme.
 
 * Anlık görüntü koleksiyonu şu Azure sanal makine ölçek kümeleri Web uygulamaları için kullanılabilir:
   * .NET Framework 4.6.1 üzerinde çalışan ASP.NET uygulamalarından veya üzeri.
   * .NET Core 2.0 veya daha sonra Windows üzerinde çalışan ASP.NET Core uygulamaları.
+
+  > [!NOTE]
+  >  32 bit Windows üzerinde çalışan Visual Studio Enterprise, anlık görüntüleri görüntüleyemez.
 
 ## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Snapshot Debugger'ı başlatın ve projenizi açın
 

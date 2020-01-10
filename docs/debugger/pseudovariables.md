@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e328e85f58e69ef1d579fd979f629c59b90caf3e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b5b0369a30e69fc69782bbc4a0f5b0c4518cac07
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730515"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776095"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sahte değişkenler
 Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **QuickWatch** iletişim kutusunda göstermek için kullanılan terimlerdir. Bir sözde değişkeni, normal bir değişkene girebileceğiniz şekilde girebilirsiniz. Ancak sözde değişkenler, değişken değildir ve programınızdaki değişken adlarına karşılık gelmez.
@@ -47,7 +47,7 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 |`$clk`|Saat döngülerinde saati görüntüler.|
 |`$user`|Uygulamayı çalıştıran hesap için hesap bilgilerine sahip bir yapı görüntüler. Güvenlik nedenleriyle parola bilgileri gösterilmez.|
 |`$exceptionstack`|Geçerli Windows Çalışma Zamanı özel durumunun yığın izlemesini görüntüler. `$ exceptionstack` yalnızca UWP uygulamalarında kullanılabilir. `$ exceptionstack`, ve SEH özel C++ durumları için desteklenmez|
-|`$returnvalue`|Bir .NET yönteminin dönüş değerini görüntüler.|
+|`$returnvalue`|Bir yöntemin dönüş değerini görüntüler.|
 
  ' C# De, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
 
@@ -62,10 +62,10 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 |Sözde değişken|İşlev|
 |--------------------|--------------|
 |`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata mesajı görüntüler.|
-|`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya `$delete,` *değişkenidir* `.`|
-|`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya `$listobjectids,` *ifade* `.`|
+|`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya`$delete,` *değişkenidir*`.`|
+|`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya`$listobjectids,` *ifade*`.`|
 |`$` *N* `#`|Nesne KIMLIĞIYLE birlikte *N*değerine eşit olan nesneyi görüntüler.|
-|`$dynamic`|@No__t_1 uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler. Arayüz. Söz dizimi `$dynamic,` *nesnesidir*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
+|`$dynamic`|`IDynamicMetaObjectProvider`uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler. Arayüz. Söz dizimi `$dynamic,` *nesnesidir*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)
