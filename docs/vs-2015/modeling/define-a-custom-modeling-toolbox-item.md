@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0a038150519ea7a40a52fb1be16ed93045c09eed
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299295"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851515"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>Özel bir modelleme araç kutusu öğesi tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,7 +113,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 - Örnekte gösterildiği gibi, araç kutusu simgesi için `<bmp fileName="…"/>` ve diğer öğeler için `<value>string</value>`.
 
-  \- veya-
+  \- veya -
 
 - `<resource fileName="Resources.dll"`
 
@@ -125,11 +125,11 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
   **. Tbxinfo** dosyasındaki düğümler aşağıdaki gibidir. Her düğüm için varsayılan bir değer vardır.
 
-|Düğüm adı|tanımlar|
+|Düğüm adı|Tanımlar|
 |---------------|-------------|
 |displayName|Araç kutusu öğesinin adı.|
 |tabName|Öğenin görünmesi gereken araç kutusu sekmesi. Bu tür diyagram için normal sekmenin adını ya da ayrı bir adı belirtebilirsiniz.|
-|image|Yüksekliği 16 ve 16 bit renk derinliğine sahip olması gereken bit eşlem ( **. bmp**) dosyasının konumu.|
+|görüntü|Yüksekliği 16 ve 16 bit renk derinliğine sahip olması gereken bit eşlem ( **. bmp**) dosyasının konumu.|
 |f1Keyword|Yardım konusunu bulan anahtar sözcük.|
 |ipucuna|Bu araç için araç ipucu.|
 
@@ -139,7 +139,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 > Diyagram dosyalarını kendi üzerinde kullanmaya çalıştıktan sonra bir. tbxinfo dosyası kullanmaya başladıysanız araç kutusu öğesinin hem eski hem de yeni sürümlerini içerdiğini görebilirsiniz. Bu durum, Diyagram dosyasının adı. tbxinfo dosyasında yanlış olursa da oluşabilir. Bu durumda, araç kutusunun kısayol menüsünde, **araç kutusunu Sıfırla**' yı seçin. Özel araç kutusu öğeleri kaybolur. Visual Studio 'Yu yeniden başlatın ve doğru özel öğeler görüntülenir.
 
 ## <a name="Extension"></a>Visual Studio uzantısında araç kutusu öğelerini dağıtma
- Araç kutusu öğelerini, bir Visual Studio uzantısı 'na (VSıX) paketleyerek diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanıcılara dağıtabilirsiniz. Komutları, profilleri ve diğer uzantıları aynı VSıX dosyasında paketleyebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](https://go.microsoft.com/fwlink/?LinkId=160780).
+ Araç kutusu öğelerini, bir Visual Studio uzantısı 'na (VSıX) paketleyerek diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanıcılara dağıtabilirsiniz. Komutları, profilleri ve diğer uzantıları aynı VSıX dosyasında paketleyebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](https://msdn.microsoft.com/library/dd393694(VS.100).aspx).
 
  Visual Studio uzantısı oluşturmanın her zamanki yolu VSıX proje şablonunu kullanmaktır. Bunu yapmak için [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]yüklemiş olmanız gerekir.
 
@@ -151,7 +151,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 3. Mevcut bir Visual Studio uzantısı projesi açın.
 
-     \- veya-
+     \- veya -
 
      Yeni bir Visual Studio uzantısı projesi tanımlayın.
 
@@ -170,7 +170,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
      **Her zaman kopyala** = **Çıkış Dizinine Kopyala**
 
-     **Derleme eylemi** = **içeriği**
+     **Derleme Eylemi** = **İçerik**
 
      VSıX = **true** **olarak ekle**
 
@@ -220,7 +220,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 3. Her ek derlemeyi, adı dilin kültür kodu olan bir klasöre yerleştirin. Örneğin, derlemenin bir Fransızca sürümünü **fr**adlı bir klasörün içine yerleştirin.
 
-4. `fr-CA`gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://go.microsoft.com/fwlink/?LinkId=160782)bakın.
+4. `fr-CA`gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx)bakın.
 
 5. Visual Studio uzantısı oluşturun ve dağıtın.
 

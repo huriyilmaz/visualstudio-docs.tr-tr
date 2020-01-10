@@ -9,19 +9,19 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 89ca4c02a1cbb1171619060b9478b5f2d3ccaa36
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a6e66c8192b1fa409482bd33287cec04f74c1304
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295729"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851525"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>5\. Adım: Formunuza Denetimler Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu adımda, formunuza `PictureBox` denetimi ve `CheckBox` denetimi gibi denetimler eklersiniz. Ardından Formunuza düğmeler eklersiniz.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 2](https://go.microsoft.com/fwlink/?LinkId=205211) veya [öğretici 1: video 2 ' de C# bir resim görüntüleyici oluşturma](https://go.microsoft.com/fwlink/?LinkId=205200). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 2](https://msdn.microsoft.com/vbasic/gg315945.aspx) veya [öğretici 1: video 2 ' de C# bir resim görüntüleyici oluşturma](https://msdn.microsoft.com/vcsharp/gg278410.aspx). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-add-controls-to-your-form"></a>Formunuza denetim eklemek için
 

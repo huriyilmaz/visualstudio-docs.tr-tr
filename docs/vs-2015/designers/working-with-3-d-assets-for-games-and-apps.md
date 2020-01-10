@@ -11,12 +11,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9cc4f8038906de89afd86fd666fbb011e974362d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e181500beefd32dffb9c0e8a7572a198cc9ff1f2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298094"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852191"
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,10 +44,10 @@ Bu belgede, DirectX tabanlı oyunlar ve uygulamalar için 3-b modeller, dokular 
  HLSL programlamayı bilmeden özel görsel etkiler oluşturmak için grafik tabanlı gölgelendirici tasarım aracı olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici tasarımcısını kullanabilirsiniz.
 
 > [!NOTE]
-> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](https://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamada hata ayıklama hakkında daha fazla bilgi için bkz. [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/visual-studio-graphics-diagnostics.md).
+> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](https://msdn.microsoft.com/library/ee663274(VS.85).aspx). DirectX tabanlı bir uygulamada hata ayıklama hakkında daha fazla bilgi için bkz. [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/visual-studio-graphics-diagnostics.md).
 
 ## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 2-b ve 3-b varlıklarını işlemek için DirectX kullanır. DirectX 11 oluşturucuyu ya da Windows Gelişmiş Tarama Platformu (WARP) yazılım oluşturucuyu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU 'Larda yüksek performanslı, donanım hızlandırmalı işleme sağlar. WARP işleyicisi, varlıklarınızın çok çeşitli bilgisayarlarla çalıştığından emin olmanıza yardımcı olur. Bu, modern grafik donanımı ve tümleşik grafik donanımına sahip olmayan bilgisayarlar dahil olmak üzere, bu bilgisayarlara sahip olmayan bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz. [Windows Gelişmiş Tarama Platformu (warp) Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=224634).
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 2-b ve 3-b varlıklarını işlemek için DirectX kullanır. DirectX 11 oluşturucuyu ya da Windows Gelişmiş Tarama Platformu (WARP) yazılım oluşturucuyu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU 'Larda yüksek performanslı, donanım hızlandırmalı işleme sağlar. WARP işleyicisi, varlıklarınızın çok çeşitli bilgisayarlarla çalıştığından emin olmanıza yardımcı olur. Bu, modern grafik donanımı ve tümleşik grafik donanımına sahip olmayan bilgisayarlar dahil olmak üzere, bu bilgisayarlara sahip olmayan bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz. [Windows Gelişmiş Tarama Platformu (warp) Kılavuzu](https://msdn.microsoft.com/library/gg615082(VS.85).aspx).
 
 ## <a name="related-topics"></a>İlgili konular
 

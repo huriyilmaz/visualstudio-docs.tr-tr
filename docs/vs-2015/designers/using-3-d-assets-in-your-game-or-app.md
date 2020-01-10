@@ -16,12 +16,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6d838b7519b40d47b644a53befb91391fa30a664
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f290c68933a71f40899ce454eb6ba788ef31a56f
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74293134"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846496"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>Oyunlarda veya Uygulamalarda 3B Varlıklar Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
     |3-b modeller|**MeshContentTask (. targets,. props)**|
     |Gölgelendiriciler|**ShaderGraphContentTask (. targets,. props)**|
 
-3. **Tamam** düğmesini seçin.
+3. Seçin **Tamam** düğmesi.
 
 ## <a name="including-assets-in-your-build"></a>Derlemenize varlıklar ekleme
  Artık projeniz, kullanmak istediğiniz farklı 3-b varlık türlerini öğrendiğinden, bir sonraki adım, hangi dosyaların 3-b varlık olduğunu ve hangi tür varlıkların olduğunu söyleyecektir.
@@ -61,7 +61,7 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
    > [!IMPORTANT]
    > Varsayılan olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birçok görüntü dosyası türünün, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]yerleşik **görüntü** öğesi türü kullanılarak kategorize olması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her bir görüntünün **öğe türü** özelliğini değiştirmeniz gerekir. 3-b modeller ve Visual gölgelendirici grafik için diğer içerik ardışık düzen kaynak dosyalarının doğru **öğe türü**için varsayılan türleri.
 
-4. **Tamam** düğmesini seçin.
+4. Seçin **Tamam** düğmesi.
 
    Üç içerik ardışık düzen öğe türü ve bunların ilişkili kaynak ve çıkış dosyası türleri aşağıda verilmiştir.
 
@@ -82,14 +82,14 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
 
 3. **Yapılandırma özellikleri**altında, içerik ardışık düzeni düğümünü seçin — örneğin, doku ve görüntü varlıkları Için **görüntü içeriği işlem hattı** — ve sonra özellik kılavuzunda, özellikleri uygun değerlere ayarlayın. Örneğin, derleme zamanında bir doku varlığı için mı haritaları oluşturmak için, **MIPS oluştur** özelliğini **Evet**olarak ayarlayın.
 
-4. **Tamam** düğmesini seçin.
+4. Seçin **Tamam** düğmesi.
 
 ### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık düzen yapılandırması
  Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen aracını kullandığınızda, dokuyu çeşitli yollarla sıkıştırabilir, MıP düzeylerinin derleme zamanında oluşturulup oluşturulmayacağını belirtebilir ve çıkış dosyasının adını değiştirebilirsiniz.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Kullanılabilir seçenekler şunlardır:<br /><br /> **sıkıştırma** -   <br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=246265).|
+|**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Şu seçenekler sağlanır:<br /><br /> **sıkıştırma** -   <br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](https://msdn.microsoft.com/library/windows/desktop/bb219822(v=vs.85).aspx).|
 |Önceden çoğaltılmış alfa biçimine Dönüştür|**Evet** , görüntüyü çıkış dosyasında önceden çarpılan Alfa biçimine dönüştürmek için. Aksi takdirde, **Hayır**. Yalnızca çıkış dosyası değiştirildiğinde, kaynak görüntü değiştirilmez.|
 |**MIPS oluştur**|Derleme zamanında tam MıP zinciri oluşturmak ve bunu çıkış dosyasına dahil etmek için **Evet** ; Aksi takdirde, **Hayır**. **Hayır**ise ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıkış dosyası bir MIP zincirine sahip olur; Aksi takdirde, çıkış dosyası MıP zincirine sahip olmaz.|
 |**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
@@ -111,13 +111,13 @@ Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek i
 ## <a name="loading-and-using-3-d-assets-at-run-time"></a>Çalışma zamanında 3-b varlıklarını yükleme ve kullanma
 
 ### <a name="using-textures-and-images"></a>Dokuları ve görüntüleri kullanma
- Direct3D, doku kaynakları oluşturmak için işlevler sağlar. Direct3D 11 ' de, D3DX11 yardımcı program kitaplığı, doğrudan görüntü dosyalarından doku kaynakları ve kaynak görünümleri oluşturmak için ek işlevler sağlar. Direct3D 11 ' de doku kaynağı oluşturma hakkında daha fazla bilgi için bkz. [dokular](https://go.microsoft.com/fwlink/p/?LinkID=246267). Bir görüntü dosyasından doku kaynağı veya kaynak görünümü oluşturmak için D3DX11 kitaplığını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir dokuyu dosyadan doku başlatma](https://go.microsoft.com/fwlink/p/?LinkId=246268).
+ Direct3D, doku kaynakları oluşturmak için işlevler sağlar. Direct3D 11 ' de, D3DX11 yardımcı program kitaplığı, doğrudan görüntü dosyalarından doku kaynakları ve kaynak görünümleri oluşturmak için ek işlevler sağlar. Direct3D 11 ' de doku kaynağı oluşturma hakkında daha fazla bilgi için bkz. [dokular](https://msdn.microsoft.com/library/windows/desktop/ff476902(v=vs.85).aspx). Bir görüntü dosyasından doku kaynağı veya kaynak görünümü oluşturmak için D3DX11 kitaplığını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir dokuyu dosyadan doku başlatma](https://msdn.microsoft.com/library/windows/desktop/ff476904(v=vs.85).aspx).
 
 ### <a name="using-3-d-models"></a>3-b modeller kullanma
  Direct3D 11, 3-b modellerinden kaynak oluşturmak için işlevler sağlamaz. Bunun yerine, 3-D model dosyasını okuyan ve 3B modeli ve modelin gerektirdiği tüm kaynakları (örneğin, dokular veya gölgelendiriciler) temsil eden köşe ve dizin arabellekleri oluşturan bir kod yazmanız gerekir.
 
 ### <a name="using-shaders"></a>Gölgelendiriciler kullanma
- Direct3D, gölgelendirici kaynakları oluşturmak ve bunları programlanabilir grafik ardışık düzenine bağlamak için işlevler sağlar. Direct3D 'de gölgelendirici kaynağı oluşturma ve ardışık düzene bağlama hakkında daha fazla bilgi için bkz. [HLSL Için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkID=261521).
+ Direct3D, gölgelendirici kaynakları oluşturmak ve bunları programlanabilir grafik ardışık düzenine bağlamak için işlevler sağlar. Direct3D 'de gölgelendirici kaynağı oluşturma ve ardışık düzene bağlama hakkında daha fazla bilgi için bkz. [HLSL Için Programlama Kılavuzu](https://msdn.microsoft.com/library/windows/desktop/bb509635(v=vs.85).aspx).
 
  Programlanabilir grafik ardışık düzeninde, işlem hattının her bir aşaması, anlanabilir bir şekilde biçimlendirilen bir sonuç olan işlem hattının sonraki aşamasına vermelidir. Gölgelendirici Tasarımcısı yalnızca Piksel gölgelendiricileri oluşturabileceğinden, bu, aldığı verilerin beklediği biçimde olduğundan emin olmak için uygulamanıza ait olduğu anlamına gelir. Birkaç programlanabilir gölgelendirici aşaması, piksel gölgelendiriciden önce oluşur ve geometrik dönüşümler, köşe gölgelendiricisi, kabuk gölgelendiricisi, etki alanı gölgelendiricisi ve geometri gölgelendirici gerçekleştirir. Programlanabilir olmayan mozaik döşeme aşaması, piksel gölgelendiriciden önce de gerçekleşir. Bu aşamaların ne kadar doğrudan piksel gölgelendiricisinin önünde olduğuna bakılmaksızın, bunun sonucunu bu biçimde vermelidir:
 

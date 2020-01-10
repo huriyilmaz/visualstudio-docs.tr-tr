@@ -14,17 +14,17 @@ caps.latest.revision: 57
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 51cb71d4bc2f66377b677d5be292c4eafa1dbd18
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 21376668eef88d3d8ce42ff73785b972be045cb2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299456"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850630"
 ---
 # <a name="layer-diagrams-guidelines"></a>Katman Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir katman diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz. [Channel 9 video: Katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://go.microsoft.com/fwlink/?LinkID=252073).
+Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir katman diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz. [Channel 9 video: Katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -66,7 +66,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="CreateLayers"></a>İşlevsel alan veya bileşenleri temsil etmek için katmanları tanımlama
  Katmanlar, projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi mantıksal *yapıt*gruplarını temsil eder. Visual C# .net ve Visual Basic .net projelerinin yapılarından katmanlar oluşturabilir veya Word dosyaları ya da PowerPoint sunuları gibi belgeleri bağlayarak bir katmana özellikler veya planlar ekleyebilirsiniz. Her katman diyagramda dikdörtgen olarak görünür ve onunla bağlantılı yapıların sayısını gösterir. Katman, daha belirli görevleri tanımlayan iç içe katmanlar içerebilir.
 
- Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için [http://go.microsoft.com/fwlink/?LinkId=145794](https://go.microsoft.com/fwlink/?LinkId=145794)konumundaki desenler & Uygulamalar sitesini ziyaret edin.
+ Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için [http://go.microsoft.com/fwlink/?LinkId=145794](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home)konumundaki desenler & Uygulamalar sitesini ziyaret edin.
 
 > [!TIP]
 > Katmanlara bağlayabileceğiniz ancak katman diyagramına karşı doğrulamayı desteklemeyen belirli türde yapıtlar vardır. Yapının doğrulamayı destekleyip desteklemediğini görmek için, yapıt bağlantısının **doğrulamayı destekler** özelliğini Incelemek üzere **Katman Gezgini** ' ni açın. Bkz. [katmanlar arasında var olan bağımlılıkları bulma](#Generate).
@@ -96,7 +96,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="EditArchitecture"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, katman diyagramını düzenlemek üzere aşağıdaki adımları kullanın. Ayrıca, kod yapısını genişletmeden önce geliştirmek için bazı yeniden düzenleme değişiklikleri yapmayı düşünebilirsiniz. Bkz. [kodun yapısını geliştirme](#Improving).
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Alıcı**|**Bu adımları gerçekleştirin**|
 |------------|-----------------------------|
 |Olmaması gereken bir bağımlılığı silme|Bağımlılığa tıklayın ve ardından **Delete**tuşuna basın.|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
@@ -115,7 +115,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="NewAreas"></a>Uygulamanızın yeni bölgelerini tasarlama
  Yeni bir proje veya yeni bir projedeki yeni bir alan geliştirmeyi başlattığınızda, kodu geliştirmeye başlamadan önce ana bileşenleri belirlemenize yardımcı olmak için Katmanlar ve bağımlılıklar çizebilirsiniz.
 
-- Mümkünse, katman diyagramlarınızda **tanımlanabilir mimari desenleri gösterin** . Örneğin, bir masaüstü uygulamasını açıklayan bir katman diyagramı, sunum, etki alanı mantığı ve veri deposu gibi katmanları içerebilir. Bir uygulamadaki tek bir özelliği kaplayan katman diyagramı, model, görünüm ve denetleyici gibi katmanlara sahip olabilir. Bu tür desenler hakkında daha fazla bilgi için bkz. [desenler & uygulamalar: uygulama mimarisi](https://go.microsoft.com/fwlink/?LinkId=145794).
+- Mümkünse, katman diyagramlarınızda **tanımlanabilir mimari desenleri gösterin** . Örneğin, bir masaüstü uygulamasını açıklayan bir katman diyagramı, sunum, etki alanı mantığı ve veri deposu gibi katmanları içerebilir. Bir uygulamadaki tek bir özelliği kaplayan katman diyagramı, model, görünüm ve denetleyici gibi katmanlara sahip olabilir. Bu tür desenler hakkında daha fazla bilgi için bkz. [desenler & uygulamalar: uygulama mimarisi](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home).
 
      Genellikle benzer desenler oluşturuyorsanız özel bir araç oluşturun. Bkz. [Özel Modelleme Araç kutusu öğesi tanımlama](../modeling/define-a-custom-modeling-toolbox-item.md).
 

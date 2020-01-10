@@ -7,19 +7,19 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 633f8358b85b030c125bc632ff759d92e508cfaf
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 45f9756607cbb638d1f69f77bdf8cd2ee30953c5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404957"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851946"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 'yi yükler
 
 MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak için aşağıdaki adımları izleyerek Mac için Visual Studio 2019 ' yi yüklemelisiniz.
 
  > [!div class="button"]
- > [Mac için Visual Studio indir](https://aka.ms/vsmac)
+ > [Mac için Visual Studio indir](https://visualstudio.microsoft.com/vs/mac/)
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -32,7 +32,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
 ## <a name="installation-instructions"></a>Yükleme yönergeleri
 
-1. Yükleyiciyi [Mac için Visual Studio indirme sayfasından](https://aka.ms/vsmac)indirin.
+1. Yükleyiciyi [Mac için Visual Studio indirme sayfasından](https://visualstudio.microsoft.com/vs/mac/)indirin.
 2. İndirme işlemi tamamlandıktan sonra, yükleyiciyi bağlamak için **VisualStudioforMacInstaller. dmg** ' ye tıklayın ve ardından ok logosunu çift tıklayarak çalıştırın:
 
     [yüklemeyi başlatmak için büyük oka ![tıklayın](media/install-installer-sml.png)](media/install-installer.png#lightbox)

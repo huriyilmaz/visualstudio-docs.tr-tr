@@ -8,12 +8,12 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d9c86125d934c5165e3e8111fdd06631844ad1a6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8a5034a13771c0ea1f7b6dcd2e073ad02e838e07
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297956"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851212"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle Farklı Web Tarayıcıları Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -111,9 +111,9 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
   **Uçları**
 
-- ![İpucu](../test/media/tip.png "İpucu") Çıktıyı, kodlanmış UI günlüklerinde ekran görüntülerini içerecek şekilde yapılandırabilirsiniz. Bunu yapmak için bazı yapılandırma ayarlarını QTAgent32.exe.config dosyasında ayarlamanız gerekir. Varsayılan olarak, bu dosya aşağıdaki konuma yüklenir:
+- ![İpucu](../test/media/tip.png "{1&gt;İpucu&lt;1}") Çıktıyı, kodlanmış UI günlüklerinde ekran görüntülerini içerecek şekilde yapılandırabilirsiniz. Bunu yapmak için bazı yapılandırma ayarlarını QTAgent32.exe.config dosyasında ayarlamanız gerekir. Varsayılan olarak, bu dosya aşağıdaki konuma yüklenir:
 
-   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\ıde**
+   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
 
    Aşağıdaki değerleri ayarlayın:
 
@@ -138,18 +138,18 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
  [Çapraz tarayıcı test hatalarıyla ilgili sorunları giderme](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
-### <a name="guidance"></a>Rehber
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)
+### <a name="guidance"></a>Kılavuz
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://msdn.microsoft.com/library/jj159340.aspx)
 
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://go.microsoft.com/fwlink/?LinkID=255196)
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="faq"></a>SSS
- [Kodlanmış UI testleri SSS-1](https://go.microsoft.com/fwlink/?LinkID=230576)
+ [Kodlanmış UI testleri SSS-1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
- [Kodlanmış UI testleri SSS-2](https://go.microsoft.com/fwlink/?LinkID=230578)
+ [Kodlanmış UI testleri SSS-2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>Forum
- [Visual Studio UI Otomasyon testi (kodlanmış UI dahil)](https://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI Otomasyon testi (kodlanmış UI dahil)](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  Kodlanmış UI [Testleri ve eylem kayıtları için](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) kodlanmış UI [Test günlüklerini kullanarak kodlanmış UI testlerini ANALIZ](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md) [etmek için UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)

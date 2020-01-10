@@ -12,12 +12,12 @@ ms.assetid: 8b86d62f-c274-4e91-82e0-38cdb9a423d5
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 156b221265b4c3c23b795b09b9a50ccb27a63bcf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2a769b0d04f76a2a32c00e262ff03b400af02feb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295645"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852283"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>Bir VSIX Paketinin Anatomisi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,4 +59,4 @@ VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek iç
 ## <a name="content_typesxml"></a>[Content_Types]. xml  
  [Content_Types]. xml dosyası genişletilmiş. vsix dosyasındaki dosya türlerini tanımlar. Visual Studio, paketin yüklenmesi sırasında bu dosyayı kullanır, ancak dosyanın kendisini yüklemez. Bu dosya hakkında daha fazla bilgi için [Content_types\]. xml dosyasının yapısına](../extensibility/the-structure-of-the-content-types-dot-xml-file.md)bakın.  
   
- Açık paketleme kuralları (OPC) standardı için bir [Content_Types]. xml dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](https://go.microsoft.com/fwlink/?LinkID=148207) .
+ Açık paketleme kuralları (OPC) standardı için bir [Content_Types]. xml dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](https://msdn.microsoft.com/magazine/cc163372.aspx) .

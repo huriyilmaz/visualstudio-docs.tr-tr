@@ -17,12 +17,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cafc4e2a87a31603e1f8cef4174d8538be768428
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0954a38a2667331c537487a706d1d2d13a07f6c4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296022"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850905"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -176,9 +176,9 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
  Örneğin, Lucerne Şimdi akşam yemeği Web sitesinde gerçekleştirilen ve bunları gerçekleştiren görevleri anlamak için aşağıdaki kullanım örneği diyagramını oluşturur:
 
- ![UML Kullanım örneği diyagramı](../modeling/media/uml-usecase.png "UML_UseCase")
+ ![UML Kullanım durumu diyagramı](../modeling/media/uml-usecase.png "UML_UseCase")
 
- **UML Kullanım örneği diyagramı**
+ **UML Kullanım durumu diyagramı**
 
  Aşağıdaki etkinlik diyagramı, bir müşteri şimdi akşam yemeği Web sitesinde bir sipariş oluşturduğunda adımların akışını açıklar. Bu sürümde, açıklamaları role göre düzenleyen, bu sürümde rolleri ve satır *kulvarları*oluştur öğelerini belirler:
 
@@ -203,7 +203,7 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
  Örneğin, aşağıdaki kullanım durumu diyagramı yeni gereksinimi göstermek için yeni bir "Gözden geçirme yazma" kullanım durumu içerir. Daha kolay tanımlama için diyagramda Turuncu renkle vurgulanır:
 
- ![UML Kullanım örneği diyagramı](../modeling/media/uml-writerev.png "UML_WriteRev")
+ ![UML Kullanım durumu diyagramı](../modeling/media/uml-writerev.png "UML_WriteRev")
 
  **UML Kullanım örneği diyagramı**
 
@@ -363,9 +363,9 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
 - [Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)
 
-- [Sürüm denetimini kullanma](https://go.microsoft.com/fwlink/?LinkID=525605)
+- [Sürüm denetimini kullanma](https://docs.microsoft.com/azure/devops/repos/tfvc/overview?view=azure-devops)
 
-- [Uygulamayı oluşturma](/azure/devops/pipelines/index)
+- [Uygulamayı oluşturun](/azure/devops/pipelines/index)
 
 ## <a name="UpdatingSystem"></a>Görselleştirme ve modelleme kullanarak sistemi güncelleştirme
  Lucerne ve Dinner Now ödeme sistemlerini tümleştirmelidir. Aşağıdaki bölümlerde, Visual Studio 'daki modelleme diyagramları bu görevi gerçekleştirmelerine yardımcı olur:
@@ -643,7 +643,7 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
      Derlenmiş koda hızlı bir genel bakış için, boş bir kod haritası oluşturun ve ardından derleme dosyalarını veya ikili dosyaları harita yüzeyine sürükleyin.
 
-- Belirli kod veya çözüm öğelerini araştırmak için, görselleştirmek istediğiniz öğeleri ve ilişkileri seçmek üzere Çözüm Gezgini kullanın. Daha sonra yeni bir eşleme oluşturabilir veya seçili öğeleri var olan bir haritaya ekleyebilirsiniz. Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
+- Belirli kod veya çözüm öğelerini araştırmak için, görselleştirmek istediğiniz öğeleri ve ilişkileri seçmek üzere Çözüm Gezgini kullanın. Daha sonra yeni bir eşleme oluşturabilir veya seçili öğeleri var olan bir haritaya ekleyebilirsiniz. Bkz: [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md).
 
 - Haritayı keşfetmenize yardımcı olması için düzeni, yapmak istediğiniz görev türlerine uygun olacak şekilde yeniden düzenleyin.
 
@@ -880,9 +880,9 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Kod geliştirmeyi görselleştirme](../modeling/visualize-code.md) [uygulamanızın](../modeling/create-models-for-your-app.md) [geliştirme sürecinizdeki modellerini kullanma modelleri geliştirme sürecinde](../modeling/use-models-in-your-development-process.md) [kullanın çevik geliştirme](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) [sırasında](../modeling/validate-your-system-during-development.md) [](../modeling/extend-uml-models-and-diagrams.md) modelleri geliştirme

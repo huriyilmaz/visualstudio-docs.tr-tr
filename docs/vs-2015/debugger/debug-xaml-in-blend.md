@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d90e495ba64018479758e4fa38de0035601a8f0d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eeda91dad54cc189fba6f23ce6d21e6aa9a6c5da
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298326"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850513"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ Uygulamanızdaki XAML hatalarını ayıklamak için [!INCLUDE[blend_first](../in
   
 - XAML öğesi, izin verilmeyen bir konumda bulunmaktadır.  
   
-  Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=329942).  
+  Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](https://msdn.microsoft.com/library/windows/apps/hh700351.aspx).  
   
   Ayrıca, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]' de basit kod hataları, derleme hataları ve çalışma zamanı hataları tanımlayabilir ve bunları çözebilirsiniz. Ancak, Visual Studio 'da kodun arkasındaki hataların tanımlanması ve çözümlenmesi daha kolay olabilir.  
   
@@ -123,7 +123,7 @@ Uygulamanızdaki XAML hatalarını ayıklamak için [!INCLUDE[blend_first](../in
 ## <a name="debugging-in-visual-studio"></a>Visual Studio'da Hata Ayıklama  
  Uygulamanızdaki kodda daha kolay hata ayıklamak için Visual Studio 'da [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projeleri açabilirsiniz. Visual Studio 'da bir [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projesi açmak için **Projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio 'da Düzenle**' ye tıklayın. Visual Studio 'da hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için CTRL + SHIFT + S tuşlarına basın ve ardından [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]geri dönün. Projeyi yeniden yüklemeniz istenecektir. [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.  
   
- Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'Da Windows Mağazası uygulamalarında hata ayıklama](https://go.microsoft.com/fwlink/?LinkId=329944).  
+ Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'Da Windows Mağazası uygulamalarında hata ayıklama](https://msdn.microsoft.com/library/windows/apps/hh441472.aspx).  
   
 ## <a name="getting-help"></a>Yardım alma  
- [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] uygulamanızda hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorununuzla ilgili olarak [Windows Mağazası uygulaması topluluk forumlarında](https://go.microsoft.com/fwlink/?LinkId=280308) arama yapabilir veya soru gönderebilirsiniz.
+ [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] uygulamanızda hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorununuzla ilgili olarak [Windows Mağazası uygulaması topluluk forumlarında](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) arama yapabilir veya soru gönderebilirsiniz.

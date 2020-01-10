@@ -12,12 +12,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 01049d5ecf8710cd680278dbf95dbe70767cd5bf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2cedc9f45d2e21684496bd882de4aa74b3bf8b3d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299891"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851074"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>Yardım Görüntüleyici'de Sorun Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Bu konuda, yardım görüntüleyiciyle karşılaşabileceğiniz sorunlar ele al�
 
 #### <a name="to-activate-windows-search-service"></a>Windows Search hizmetini etkinleştirmek için
 
-1. Sunucu Yöneticisi başlatın.
+1. Sunucu Yöneticisi'ni başlatın.
 
 2. Sol gezinti bölmesinde **Roller**' i seçin.
 
@@ -45,9 +45,9 @@ Bu konuda, yardım görüntüleyiciyle karşılaşabileceğiniz sorunlar ele al�
 ## <a name="additional-resources"></a>Ek Kaynaklar
  Aşağıdaki kaynakları kullanarak daha fazla bilgi alabilir ve Yardım Görüntüleyicisi hakkında geri bildirim sağlayabilirsiniz:
 
-- Geri bildirim sağlamak için Microsoft Web sitesinde [Microsoft Connect](https://go.microsoft.com/fwlink/?linkid=243983) 'e bakın veya [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com)e-posta gönderin.
+- Geri bildirim sağlamak için Microsoft Web sitesinde [Microsoft Connect](https://connect.microsoft.com/) 'e bakın veya [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com)e-posta gönderin.
 
-- Daha fazla bilgi için [Geliştirici belgelerine ve yardım sistemi](https://go.microsoft.com/fwlink/?LinkId=232741) forumuna ve [Yardım Guy](https://go.microsoft.com/fwlink/?LinkId=232743) bloguna bakın.
+- Daha fazla bilgi için [Geliştirici belgelerine ve yardım sistemi](https://social.msdn.microsoft.com/Forums/en-US/devdocs/threads) forumuna ve [Yardım Guy](https://blogs.msdn.com/b/thehelpguy/) bloguna bakın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Yardım Görüntüleyicisi 2,1 Yönetici Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=243985)
+ [Yardım Görüntüleyicisi 2,1 Yönetici Kılavuzu](https://msdn.microsoft.com/library/hh492077(VS.110).aspx)

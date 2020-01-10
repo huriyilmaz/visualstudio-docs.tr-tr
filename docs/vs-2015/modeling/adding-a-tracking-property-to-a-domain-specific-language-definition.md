@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 19d673d9d09ce95580e25033966e1a901255fd90
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1e98a5902495528082a8328befe724c91f01a3d0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74292648"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852397"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Etki Alanına Özgü Dil Tanımıma İzleme Özelliği Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,21 +45,21 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 - **Özellikler** penceresinde, izleme özelliği kullanıcı durumunda olduğunda, değeri kalın yazı tipinde görüntülenir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu yönergeyi başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
-|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
 ## <a name="creating-the-dsl-project"></a>DSL projesi oluşturma
  Etki alanına özgü diliniz için projeyi oluşturun.
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
 
-1. Alana Özgü Dil Tasarımcısı projesi oluşturun. `TrackingPropertyDSL`adlandırın.
+1. Alana Özgü Dil Tasarımcısı projesi oluşturun. Bunu, `TrackingPropertyDSL` olarak adlandırın.
 
 2. **Alana özgü dil Tasarımcısı sihirbazında**, aşağıdaki seçenekleri ayarlayın:
 
@@ -348,7 +348,7 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
  `GetCustomElementsValue` yönteminin tanımlanması, `ExampleModel`'ın CustomElements hesaplanan özelliğine yönelik mantığı sağlar. Bu yöntem, Kullanıcı tarafından güncelleştirilmiş bir değere sahip bir ad alanı izleme özelliğine sahip `ExampleElement` etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
 
- Ayrıca, `ExampleModel`bir `OnDefaultNamespaceChanged` yöntemi ekleyin ve `ExampleModel` çağırmak için `DefaultNamespacePropertyHandler` iç içe sınıfının `OnValueChanged` yöntemini geçersiz kılın.`OnDefaultNamespaceChanged`
+ Ayrıca, `ExampleModel`bir `OnDefaultNamespaceChanged` yöntemi ekleyin ve `ExampleModel` çağırmak için `DefaultNamespacePropertyHandler` iç içe sınıfının `OnValueChanged` yöntemini geçersiz kılın.
 
  DefaultNamespace özelliği ad alanı izleme özelliğini hesaplamak için kullanıldığından, `ExampleModel` DefaultNamespace değerinin değiştiği tüm `ExampleElement` etki alanı sınıflarını bilgilendirmelidir.
 
@@ -722,9 +722,9 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 #### <a name="to-exercise-the-language"></a>Dili uygulamak için
 
-1. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın.
+1. Üzerinde **derleme** menüsünde tıklatın **çözümü yeniden derle**.
 
-2. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
+2. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
 
      [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] deneysel derlemesi, boş bir test dosyası içeren **hata ayıklama** çözümünü açar.
 
@@ -760,5 +760,5 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
  Birden fazla izleme özelliği kullanmayı veya birden fazla DSL 'de izleme özellikleri uygulamayı planlıyorsanız, her izleme özelliğini desteklemek için ortak kodu oluşturmak üzere bir metin şablonu oluşturabilirsiniz. Metin şablonları hakkında daha fazla bilgi için bkz. [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor><xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
+ <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor> <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
  [Etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md) [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md) [izlenecek yol: etki alanına özgü dil tanımını özelleştirme](../misc/walkthrough-customizing-the-domain-specific-language-definition.md)

@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 16a51c7fc05d51b551884f70dc514e8939962818
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c676c57d6e6e6008611133235df8d525752f16b5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296033"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849498"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Yönlendirilmiş Grafik Biçimlendirme Dili (DGML) başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
  Visual Studio 'nun bazı sürümlerinin yalnızca DGML özellikleri alt kümesini desteklediğine, bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](https://go.microsoft.com/fwlink/?LinkId=182345).
+> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](https://msdn.microsoft.com/library/system.windows.media.colors.aspx).
 
 ## <a name="DGML"></a>DGML sözdizimi
  Aşağıdaki tabloda DGML 'de kullanılan öğelerin türleri açıklanmaktadır:
@@ -98,7 +98,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 
    `Label`-düğümün görünen adı.
 
-   Stil öznitelikleri. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Stil öznitelikleri. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category`-bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
@@ -163,7 +163,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 
    `Label`-bağlantının görünen adı
 
-   Stil öznitelikleri. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Stil öznitelikleri. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category`-bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
@@ -220,7 +220,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 
    Bu öğe için örneğinde, `FailedTest` kategorisi `PassedTest` kategorisinden `Stroke` özniteliğini devralır. [Dgml dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)bölümünde "Hiyerarşik kategoriler oluşturmak için" bölümüne bakın.
 
-   Kategoriler Ayrıca, bir haritada görüntülendiklerinde düğümlerin ve bağlantıların görünümünü denetleyen bazı temel şablon davranışlarını de sağlar. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategoriler Ayrıca, bir haritada görüntülendiklerinde düğümlerin ve bağlantıların görünümünü denetleyen bazı temel şablon davranışlarını de sağlar. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Örnek:
 

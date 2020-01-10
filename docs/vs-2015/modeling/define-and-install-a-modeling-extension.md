@@ -12,17 +12,17 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c0fa4e92c62ffb5b9c41cf5e297ed11ca63c38e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c38150dd84ef8898b2aa894a614dfb79e289b593
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298719"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850447"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Modelleme uzantısı tanımlama ve yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsiniz. Bu şekilde, diyagramları ve modelleri kendi gereksinimlerinize uyarlayabilirsiniz. Örneğin, menü komutlarını, UML profillerini, doğrulama kısıtlamalarını ve araç kutusu öğelerini tanımlayabilirsiniz. Tek bir uzantıda birkaç bileşen tanımlayabilirsiniz. Ayrıca, bu uzantıları [Visual Studio Tümleştirme Uzantısı (VSIX)](https://go.microsoft.com/fwlink/?LinkId=160780)biçimindeki diğer Visual Studio kullanıcılarına dağıtabilirsiniz. Visual Studio 'da VSıX projesi kullanarak bir VSıX oluşturabilirsiniz.
+Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsiniz. Bu şekilde, diyagramları ve modelleri kendi gereksinimlerinize uyarlayabilirsiniz. Örneğin, menü komutlarını, UML profillerini, doğrulama kısıtlamalarını ve araç kutusu öğelerini tanımlayabilirsiniz. Tek bir uzantıda birkaç bileşen tanımlayabilirsiniz. Ayrıca, bu uzantıları [Visual Studio Tümleştirme Uzantısı (VSIX)](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)biçimindeki diğer Visual Studio kullanıcılarına dağıtabilirsiniz. Visual Studio 'da VSıX projesi kullanarak bir VSıX oluşturabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
  [Gereksinimlere](../modeling/extend-uml-models-and-diagrams.md#Requirements)bakın.
@@ -68,7 +68,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 7. **Varlıklar** sekmesinde, bileşenlerinizi Visual Studio uzantısına ekleyin.
 
-    1. **Yeni**' yi seçin.
+    1. **Yeni**'yi seçin.
 
     2. Kod içeren bir bileşen için **yeni varlık Ekle** iletişim kutusunda bu alanları ayarlayın:
 
@@ -76,7 +76,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
         |-|-|
         |**Tür** =|**Microsoft. VisualStudio. MefComponent**|
         |**Kaynak** =|**Geçerli çözümdeki bir proje**|
-        |**Proje** =|*Sınıf kitaplığı projeniz*|
+        |**Project** =|*Sınıf kitaplığı projeniz*|
         |**Bu klasöre ekle** =|*olmamalıdır*|
 
          Diğer bileşen türleri için, sonraki bölümde bulunan bağlantılara bakın.
@@ -130,7 +130,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
-1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
+1. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
 
 2. **Yüklü uzantıları**genişletin.
 

@@ -31,12 +31,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 181c32017a84328037ea46d49698821fa3cb41ea
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 930cec012bfda49c61116ada2ba6df10c3a48f51
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295880"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850993"
 ---
 # <a name="link-task"></a>Bağlantı Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,7 +68,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Bildirim dosyasının `dependency` bölümüne yerleştirilecek öznitelikleri belirtir.  
   
-   Daha fazla bilgi için bkz. [/Manifestdependency (Bildirim Bağımlılıklarını Belirt)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Ayrıca, [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "Yayımcı yapılandırma dosyaları" bölümüne bakın.  
+   Daha fazla bilgi için bkz. [/Manifestdependency (Bildirim Bağımlılıklarını Belirt)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Ayrıca, [MSDN](https://msdn.microsoft.com/) Web sitesindeki "Yayımcı yapılandırma dosyaları" bölümüne bakın.  
   
 - **AdditionalOptions**  
   
@@ -114,7 +114,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Örtük **Boolean** parametresi.  
   
-   Daha derin dosya izlemenin bağlantı artımlı davranışını yakalamasını sağlar. Her zaman `true`döndürür.  
+   Daha derin dosya izlemenin bağlantı artımlı davranışını yakalamasını sağlar. Her zaman `true` döndürür.  
   
 - **BaseAddress**  
   
@@ -132,7 +132,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Bu parametrenin denk bağlayıcı seçeneği yok.  
   
-- **CLRIMAGETYPE**  
+- **CLRImageType**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -142,9 +142,9 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
   - **Varsayılan** -  *\<yok >*  
   
-  - **ForceIJWImage** -  **/Clrimagetype: IJW**  
+  - **ForceIJWImage** -  **/CLRIMAGETYPE:IJW**  
   
-  - **Forcepureilımage** -  **/Clrimagetype: Pure**  
+  - **ForcePureILImage** -  **/CLRIMAGETYPE:PURE**  
   
   - **Forcesafeilımage** -  **/Clrimagetype: Safe**  
   
@@ -190,7 +190,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute ekleyin)](https://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2).  
   
-- **Createhotpatchableımage**  
+- **CreateHotPatchableImage**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -208,7 +208,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
     Daha fazla bilgi için bkz. [/functionpadmin (düzeltme eki eklenebilir görüntü oluşturma)](https://msdn.microsoft.com/library/25b02c13-1add-4fbd-add9-fcb30eb2cae7).  
   
-- **Dataexecutionengellemesini**  
+- **DataExecutionPrevention**  
   
    İsteğe bağlı **Boolean** parametresi.  
   
@@ -228,11 +228,11 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    İsteğe bağlı **Boolean** parametresi.  
   
-   `true`, bir derlemeyi kısmen imzalar. Varsayılan olarak, değer `false`.  
+   `true`, bir derlemeyi kısmen imzalar. Varsayılan değer `false` şeklindedir.  
   
    Daha fazla bilgi için bkz. [/delaysign (derlemeyi kısmen imzala)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
   
-- **Aygıt**  
+- **Sürücü**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -258,7 +258,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/ASSEMBLYRESOURCE (yönetilen kaynağı katıştır)](https://msdn.microsoft.com/library/0ce6e1fb-921b-4b1b-a59c-d35388d789f2).  
   
-- **Enablecomdatkatlamalı**  
+- **EnableCOMDATFolding**  
   
    İsteğe bağlı **Boolean** parametresi.  
   
@@ -344,7 +344,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    `true`, bir *eşleme dosyası*oluşturur. Eşleme dosyasının dosya adı uzantısı. map ' dir.  
   
-   Daha fazla bilgi için bkz. [/Map (mapfile üret)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
+   Daha fazla bilgi için [Map (eşlem dosyası oluştur)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
   
 - **HeapCommitSize**  
   
@@ -416,7 +416,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/keycontainer (bir derlemeyi imzalamak için bir anahtar kapsayıcısı belirtin)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e). Ayrıca bkz. bu tablodaki **keyfile** parametresi.  
   
-- **Dosyasına**  
+- **KeyFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -452,7 +452,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
   - **Hemen sor** -  **/errorreport: Prompt**  
   
-  - **Queuefornextlogin** -  **/errorreport: Queue**  
+  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**  
   
   - **Senderrorreport** -  **/errorreport: Send**  
   
@@ -492,15 +492,15 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
   - **Varsayılan** -  *\<yok >*  
   
-  - **Uselinktimecodegeneration** -  **/LTCG**  
+  - **UseLinkTimeCodeGeneration** -  **/LTCG**  
   
-  - **Pgınstrum - ** **/LTCG: PGINSTRUMENT**  
+  - **PGInstrument** -  **/LTCG:PGInstrument**  
   
-  - **Pgoptimization** -  **/LTCG: pgoptimize**  
+  - **PGOptimization** -  **/LTCG:PGOptimize**  
   
   - **PGUpdate**  
   
-     \- **/LTCG: PGUpdate**  
+     \- **/LTCG:PGUpdate**  
   
     Daha fazla bilgi için bkz. [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
@@ -542,7 +542,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/merge (bölümleri birleştirme)](https://msdn.microsoft.com/library/10fb20c2-0b3f-4c8d-98a8-f69aedf03d52).  
   
-- **Mıdlcommandfile**  
+- **MidlCommandFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -594,7 +594,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için, [/opt (iyileştirmeler)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac)içindeki `REF` bağımsız değişkenine bakın.  
   
-- **Çıktı**  
+- **OutputFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -622,7 +622,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/Allowbind (dll bağlamasını engelle)](https://msdn.microsoft.com/library/30e37e24-12e4-407e-988a-39d357403598).  
   
-- **Profilinizi**  
+- **Profil**  
   
    İsteğe bağlı **Boolean** parametresi.  
   
@@ -630,7 +630,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/profile (performans araçları profil Oluşturucu)](https://msdn.microsoft.com/library/e676baa1-5063-47a3-a357-ba0d1f0d1699).  
   
-- **Profilekılavuz Ddatabase**  
+- **ProfileGuidedDatabase**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -686,17 +686,17 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
   - **NotSet** -  *\<yok >*  
   
-  - **Linkverbose** -  **/verbose**  
+  - **LinkVerbose** -  **/VERBOSE**  
   
-  - **LinkVerboseLib** -  **/verbose: lib**  
+  - **LinkVerboseLib** -  **/VERBOSE:Lib**  
   
-  - **LinkVerboseICF** -  **/verbose: ICF**  
+  - **LinkVerboseICF** -  **/VERBOSE:ICF**  
   
-  - **LinkVerboseREF** -  **/verbose: ref**  
+  - **LinkVerboseREF** -  **/VERBOSE:REF**  
   
-  - **LinkVerboseSAFESEH** -  **/verbose: SafeSEH**  
+  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**  
   
-  - **LinkVerboseCLR** -  **/verbose: clr**  
+  - **LinkVerboseCLR** -  **/VERBOSE:CLR**  
   
     Daha fazla bilgi için bkz. [/verbose (Ilerleme Iletilerini Yazdır)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
   
@@ -722,7 +722,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz./Stack 'in `commit` bağımsız değişkeni [(yığın ayırmaları)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
   
-- **Stackrezervesize**  
+- **StackReserveSize**  
   
    İsteğe bağlı **dize** parametresi.  
   
@@ -828,11 +828,11 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
   - **MachineMIPS16** -  **/MACHINE: kayıtlardan biri mıps16**  
   
-  - **Machinemıpsfpu** -  **/Machine: MIPSFPU**  
+  - **MachineMIPSFPU** -  **/MACHINE:MIPSFPU**  
   
-  - **MachineMIPSFPU16** -  **/MACHINE: MIPSFPU16**  
+  - **MachineMIPSFPU16** -  **/MACHINE:MIPSFPU16**  
   
-  - **MachineSH4** -  **/MACHINE: sh4**  
+  - **MachineSH4** -  **/MACHINE:SH4**  
   
   - **Machinethumb** -  **/MACHıNE: Thumb**  
   
@@ -888,7 +888,7 @@ Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı or
   
    Daha fazla bilgi için bkz. [/Tldeklarasyon (TypeLib Için kaynak Kimliğini Belirt)](https://msdn.microsoft.com/library/434b28a2-4656-4d52-ac82-8b18bf486fb2).  
   
-- **Uıacexecutionlevel**  
+- **UACExecutionLevel**  
   
    İsteğe bağlı **dize** parametresi.  
   

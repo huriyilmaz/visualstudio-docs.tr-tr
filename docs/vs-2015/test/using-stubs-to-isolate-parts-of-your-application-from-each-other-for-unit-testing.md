@@ -8,12 +8,12 @@ ms.assetid: 73519dd9-f3d5-49b6-a634-38881b459ea4
 caps.latest.revision: 19
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9f2e62766f919c9f3379d59c4528a32739ef73ac
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b77a088fc144df8c7305098e48c45f672733a7c9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301392"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851198"
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -90,7 +90,7 @@ End Function
 
  Arabirim eklemeye aşağıdaki kural uygulanır:
 
-- Uygulamanızın herhangi bir bileşeninin kodu, bir bildirimde veya `new` bildiriminde, başka bir bileşen içindeki bir sınıfa asla açıkça başvurmamalıdır. Bunun yerine, değişkenler ve parametreler arabirimleriyle bildirilmesi gerekir. Bileşen örnekleri yalnızca bileşen kapsayıcı tarafından oluşturulmalıdır.
+- Uygulamanızı herhangi bir bileşeninin kodu asla açıkça bir bildirim veya başka bir bileşendeki bir sınıfa başvurmalıdır bir `new` deyimi. Bunun yerine, değişkenler ve parametreler arabirimleriyle bildirilmesi gerekir. Bileşen örnekleri yalnızca bileşen kapsayıcı tarafından oluşturulmalıdır.
 
    "Bileşeni" tarafından bu durumda bir sınıf veya geliştirdiğiniz ve birlikte güncelleştirdiğiniz sınıflar grubunu demek isteriz. Genellikle, bir bileşen Visual Studio projesindeki koddur. Aynı zamanda güncelleştirildiğinden sınıfları bir bileşen içinde ayırmak daha az önemlidir.
 
@@ -159,7 +159,7 @@ analyzer = new StockAnalyzer(new StockFeed())
 
 2. Saptamaları oluşturmak istediğiniz arabirim tanımlarını içeren derlemeyi seçin.
 
-3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
+3. Kısayol menüsünde **Fakes derlemesi Ekle**.
 
 ### <a name="WriteTest"></a>Yer tutucular ile testinizi yazma
 
@@ -219,7 +219,7 @@ End Class
 
 ```
 
- Burada Magic 'in özel parçası `StubIStockFeed`sınıftır. Başvurulan derlemedeki her genel tür için Microsoft Fakes mekanizması saptama sınıfı oluşturur. Saplama sınıfının adı, arabirimin adından türetilir, ön ek olarak "`Fakes.Stub`" ve parametre türü adları eklenir.
+ Özel sihir parçası burada sınıftır `StubIStockFeed`. Başvurulan derlemedeki her genel tür için Microsoft Fakes mekanizması saptama sınıfı oluşturur. Saplama sınıfının adı ile arabirimin adından türetilir olan "`Fakes.Stub`" ön ek ve parametre türü adları eklenir.
 
  Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu ve ayarlayıcılar için oluşturulur.
 
@@ -304,7 +304,7 @@ End Class
 ## <a name="BKMK_Stub_basics"></a>Farklı tür üyeleri için saplamalar
 
 ### <a name="BKMK_Methods"></a>Yöntem
- Örnekte açıklandığı gibi yöntemler saptama sınıfının bir örneği için temsilci ekleyerek tamamlanmamış. Saptama türünün adı yöntemi ve parametreleri adlarından türetilir. Örneğin, aşağıdaki `IMyInterface` arabirimi ve yöntemi `MyMethod`verilmiştir:
+ Örnekte açıklandığı gibi yöntemler saptama sınıfının bir örneği için temsilci ekleyerek tamamlanmamış. Saptama türünün adı yöntemi ve parametreleri adlarından türetilir. Örneğin, aşağıda verilen `IMyInterface` arabirimi ve yöntem `MyMethod`:
 
 ```csharp
 // application under test
@@ -314,7 +314,7 @@ interface IMyInterface
 }
 ```
 
- Her zaman 1 döndüren `MyMethod` için bir saplama ekledik:
+ Biz eklemek için bir saplama `MyMethod` her zaman 1 döndüren:
 
 ```csharp
 // unit test code
@@ -323,10 +323,10 @@ interface IMyInterface
 
 ```
 
- Bir işlev için saptama belirtmezseniz, Fakes dönüş türünün varsayılan değerini döndüren bir işlev oluşturur. Sayılar için varsayılan değer 0 ' dır ve sınıf türleri için `null` (C#) veya `Nothing` (Visual Basic).
+ Bir işlev için saptama belirtmezseniz, Fakes dönüş türünün varsayılan değerini döndüren bir işlev oluşturur. Sayılar için varsayılan değer 0'dır ve sınıf türleri için ise `null` (C#) veya `Nothing` (Visual Basic).
 
-### <a name="BKMK_Properties"></a>Özelliklerinin
- Özellik alıcılar ve ayarlayıcılar, ayrı temsilciler olarak sunulur ve ayrı ayrı saptanmış olabilirler. Örneğin, `IMyInterface``Value` özelliğini göz önünde bulundurun:
+### <a name="BKMK_Properties"></a> Özellikler
+ Özellik alıcılar ve ayarlayıcılar, ayrı temsilciler olarak sunulur ve ayrı ayrı saptanmış olabilirler. Örneğin, düşünün `Value` özelliği `IMyInterface`:
 
 ```csharp
 // code under test
@@ -337,7 +337,7 @@ interface IMyInterface
 
 ```
 
- Otomatik özelliğin benzetimini yapmak için `Value` alıcı ve ayarlayıcısına temsilciler iliştirdik:
+ Alıcı ve ayarlayıcısına temsilcileri ekleyin `Value` otomatik özellik benzetimi yapmak için:
 
 ```csharp
 // unit test code
@@ -361,7 +361,7 @@ interface IWithEvents
 }
 ```
 
- `Changed` olayını yükseltmek için, yalnızca yedekleme temsilcisini çağırdık:
+ Yükseltmek için `Changed` olay, biz sadece yedekleme temsilcisini çağırır:
 
 ```csharp
 // unit test code
@@ -397,7 +397,7 @@ public void TestGetValue()
 }
 ```
 
- Kod, başka bir örneklemeyle `GetValue<T>` çağırırdı, saplama yalnızca davranışı çağırır.
+ Kod çağırıyorsa `GetValue<T>` diğer oluşturma ile saplama basitçe davranışı çağıracaktır.
 
 ### <a name="BKMK_Partial_stubs"></a>Sanal sınıfların saplamaları
  Önceki örneklerde saptamalar arabirimlerden üretilmedi. Sanal veya özet üyeler bir sınıftan saptamalar da oluşturabilir. Örneğin:
@@ -424,7 +424,7 @@ public void TestGetValue()
 
 ```
 
- Sanal bir yöntem için temsilci belirtmezseniz, Fakes ya da varsayılan davranışı sağlayabilir veya temel sınıf yöntemi çağırabilirsiniz. Temel yöntemin çağrılması için `CallBase` özelliğini ayarlayın:
+ Sanal bir yöntem için temsilci belirtmezseniz, Fakes ya da varsayılan davranışı sağlayabilir veya temel sınıf yöntemi çağırabilirsiniz. Adı verilen temel yöntemi için ayarlanmış `CallBase` özelliği:
 
 ```csharp
 // unit test code
@@ -448,9 +448,9 @@ Assert.AreEqual(43,stub.DoVirtual(1));
 2. Saptama sınıfları veya statik yöntemleri saptanmamalı; çünkü saptama türü sanal yöntem gönderimine dayanır. Bu tür durumlarda, [birim testi için uygulamanızı diğer derlemelerden yalıtmak üzere](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) dolgu türlerini, parça kullanma bölümünde açıklanan şekilde kullanın
 
 ## <a name="BKMK_Changing_the_default_behavior_of_stubs"></a>Saplamalarının varsayılan davranışını değiştirme
- Oluşturulan her saplama türü `IStubBehavior` arabiriminin bir örneğini tutar (`IStub.InstanceBehavior` özelliği aracılığıyla). Hiç eklenmemiş özel temsilci ile üye istemci çağrıları olarak adlandırılır. Davranış ayarlanmamışsa, `StubsBehaviors.Current` özelliği tarafından döndürülen örneği kullanacaktır. Varsayılan olarak, bu özellik `NotImplementedException` özel durumu oluşturan bir davranış döndürür.
+ Her üretilen saptama türü bir örneğini tutan `IStubBehavior` arabirimi (aracılığıyla `IStub.InstanceBehavior` özelliği). Hiç eklenmemiş özel temsilci ile üye istemci çağrıları olarak adlandırılır. Davranış ayarlanmamışsa, tarafından döndürülen örneği kullanacak `StubsBehaviors.Current` özelliği. Varsayılan olarak, bu özellik atan bir davranış döndürür. bir `NotImplementedException` özel durum.
 
- Herhangi bir saplama örneğindeki `InstanceBehavior` özelliği ayarlanarak davranış herhangi bir zamanda değiştirilebilir. Örneğin, aşağıdaki kod parçacığı hiçbir şey yapan veya dönüş türünün varsayılan değerini döndüren bir davranışı değiştirir: `default(T)`:
+ Davranış ayarlayarak herhangi bir zamanda değiştirilebilir `InstanceBehavior` herhangi bir saptamadaki özelliği. Örneğin, aşağıdaki kod parçacığı, hiçbir şey yapmaz veya dönüş türünün varsayılan değerini döndürür olarak davranışı değiştirir: `default(T)`:
 
 ```csharp
 // unit test code
@@ -459,7 +459,7 @@ var stub = new StubIFileSystem();
 stub.InstanceBehavior = StubsBehaviors.DefaultValue;
 ```
 
- Davranış, `StubsBehaviors.Current` özelliği ayarlanarak davranışın ayarlanmayan tüm saplama nesneleri için genel olarak da değiştirilebilir:
+ Tüm saptama nesneleri için davranışı ayarlanmamış ayarlayarak davranışı ayrıca genel olarak değiştirilebilir `StubsBehaviors.Current` özelliği:
 
 ```csharp
 // unit test code
@@ -471,8 +471,8 @@ StubBehaviors.Current =
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
-### <a name="guidance"></a>Rehber
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)
+### <a name="guidance"></a>Kılavuz
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Microsoft Fakes ile Test Edilen Kodu Yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)

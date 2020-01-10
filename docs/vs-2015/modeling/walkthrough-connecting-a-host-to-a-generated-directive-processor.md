@@ -12,12 +12,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 10c9c6cfa1d8553c79b710239a99f8ea9e2438e5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 47e1b1f11fd885afbb5e84e1530a171442938af0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301280"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851290"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Üretilen bir Yönerge İşlemcisine Ana Bilgisayar Bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,14 +37,14 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
 
 - Özel ana bilgisayarı oluşturulan yönerge işlemcisi ile test etme.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio Görselleştirme ve modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|{1&gt;{2&gt;Visual Studio Görselleştirme ve Modelleme SDK'sı&lt;2}&lt;1}|[http://go.microsoft.com/fwlink/?LinkID=186128](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
  Ayrıca, [Izlenecek yol: özel metin şablonu Konağı oluşturma](../modeling/walkthrough-creating-a-custom-text-template-host.md)bölümünde özel metin şablonu dönüşümünün oluşturulmuş olması gerekir.
 
@@ -65,12 +65,12 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
 
      Etki alanına özgü dil çözümü oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+2. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
    > [!IMPORTANT]
    > Bu adım yönerge işlemcisini oluşturur ve anahtar kayıt defterine ekler.
 
-3. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
+3. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
 
     İkinci bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği açılır.
 
@@ -227,9 +227,9 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
             }
     ```
 
-7. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+7. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
 
-8. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+8. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="testing-the-custom-host-with-the-directive-processor"></a>Özel Konağı yönerge Işlemcisi ile test etme
  Özel metin şablonu konağını test etmek için, önce oluşturulan yönerge işlemcisini çağıran bir metin şablonu yazmanız gerekir. Ardından Özel Konağı çalıştırın, metin şablonunun adını geçirin ve yönergesinin doğru şekilde işlendiğini doğrulayın.
@@ -316,7 +316,7 @@ Metin şablonlarını işleyen kendi ana bilgisayarınızı yazabilirsiniz. [Izl
 
 #### <a name="to-test-the-custom-host"></a>Özel ana bilgisayarı sınamak için
 
-1. Bir komut istemi penceresi açın.
+1. Bir Komut İstemi penceresi açın.
 
 2. Özel ana bilgisayar için yürütülebilir dosyanın yolunu yazın, ancak henüz ENTER'a basmayın.
 

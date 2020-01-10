@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5acbb4d2966e89f7913fa1479b882fad5c9650f7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0d9887e3c7cf283bff453e458502400a7ade1a41
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295810"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849567"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "74295810"
 > [!NOTE]
 > Kilitleme ilkesi, yansıma kullanılarak atlatılabilir. Üçüncü taraf geliştiricilere yönelik açık bir sınır sağlar, ancak güçlü güvenlik sağlamaz.
 
- Daha fazla bilgi ve örnek [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [görselleştirme ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkId=186128) Web sitesinde bulunabilir.
+ Daha fazla bilgi ve örnek [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [görselleştirme ve modelleme SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) Web sitesinde bulunabilir.
 
 ## <a name="setting-and-getting-locks"></a>Kilitleri ayarlama ve alma
  Mağaza üzerinde, bir bölümde veya tek bir öğede kilit ayarlayabilirsiniz. Örneğin, bu ifade bir model öğesinin silinmesini engeller ve ayrıca özelliklerinin değiştirilmesini engeller:
@@ -77,14 +77,14 @@ partition.SetLocks(Locks.Delete);
 
   Bir bölüm veya mağaza üzerinde kilit ayarlayamazsınız ve aynı zamanda tek bir öğe üzerindeki kilidi devre dışı bırakın.
 
-|Value|`IsLocked(Value)` true ise anlamı|
+|Değer|`IsLocked(Value)` true ise anlamı|
 |-----------|------------------------------------------|
 |Yok.|Kısıtlama yoktur.|
 |Özellik|Öğelerin etki alanı özellikleri değiştirilemez. Bu, bir ilişkide bir etki alanı sınıfının rolü tarafından oluşturulan özellikler için geçerlidir.|
 |Ekle|Yeni öğeler ve bağlantılar bir bölüm veya depoda oluşturulamaz.<br /><br /> `ModelElement`için geçerli değildir.|
-|Taşıma|`element.IsLocked(Move)` true ise veya `targetPartition.IsLocked(Move)` true ise, öğe bölümler arasında taşınamaz.|
+|Taşı|`element.IsLocked(Move)` true ise veya `targetPartition.IsLocked(Move)` true ise, öğe bölümler arasında taşınamaz.|
 |Sil|Bu kilit öğenin kendisinde ayarlandıysa veya katıştırılmış öğeler ve şekiller gibi silme işleminin yayıldığı öğelerin herhangi birinde bir öğe silinemez.<br /><br /> Bir öğenin silinip silinemediğini saptamak için `element.CanDelete()` kullanabilirsiniz.|
-|Sütunlarını|Bir rolündeki RolePlayer 'da bağlantıların sıralaması değiştirilemez.|
+|Yeniden sırala|Bir rolündeki RolePlayer 'da bağlantıların sıralaması değiştirilemez.|
 |Rolündeki RolePlayer|Bu öğede kaynağı olan bağlantı kümesi değiştirilemez. Örneğin, yeni öğeler bu öğe altına Katıştırılamaz. Bu, bu öğenin hedef olduğu bağlantıları etkilemez.<br /><br /> Bu öğe bir bağlantı ise, kaynağı ve hedefi etkilenmez.|
 |Tümü|Diğer değerlerin bit düzeyinde veya diğer değerleri.|
 

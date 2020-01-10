@@ -12,20 +12,20 @@ ms.assetid: 8b12e223-aae3-4c23-813d-ede1125f5f69
 caps.latest.revision: 55
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: b6dc84dd8d9f19012c4d09ba9bfd974ec181b9f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6192eb5583e7d0bc37518e995aacccad643cc9ec
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291268"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850343"
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>İzlenecek yol: temel yalıtılmış bir kabuk uygulaması oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğunu, yardım hakkında araç penceresini özelleştirmeyi ve yalıtılmış Kabuğu yükleyen bir kurulum programı oluşturmayı gösterir.  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md). Yalıtılmış Kabuğu dağıtmak için, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketini de kullanmanız gerekir.  
+## <a name="prerequisites"></a>Prerequisites  
+ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md). Yalıtılmış Kabuğu dağıtmak için, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketini de kullanmanız gerekir.  
   
 ## <a name="creating-an-isolated-shell-solution"></a>Yalıtılmış Kabuk çözümü oluşturma  
  Bu bölümde, yalıtılmış bir kabuk çözümü oluşturmak için Visual Studio Kabuğu yalıtılmış proje şablonunun nasıl kullanılacağı gösterilmektedir. Çözüm aşağıdaki projeleri içerir:  
@@ -163,7 +163,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
 6. Çözümü yeniden derleyin ve yalıtılmış kabukta hata ayıklamayı başlatın. Yardım/hakkında kutusu yaklaşık kare olmalıdır.  
   
 ## <a name="before-you-deploy-the-isolated-shell-application"></a>Yalıtılmış kabuk uygulamasını dağıtmadan önce  
- Yalıtılmış Kabuk uygulamanız, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketi olan herhangi bir bilgisayara yüklenebilir. Yeniden dağıtılabilir paket hakkında daha fazla bilgi için bkz. [Visual Studio genişletilebilirlik indirmeleri](https://go.microsoft.com/fwlink/?LinkID=119298) Web sitesi.  
+ Yalıtılmış Kabuk uygulamanız, Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketi olan herhangi bir bilgisayara yüklenebilir. Yeniden dağıtılabilir paket hakkında daha fazla bilgi için bkz. [Visual Studio genişletilebilirlik indirmeleri](https://msdn.microsoft.com/vstudio/bb984878.aspx) Web sitesi.  
   
 ## <a name="deploying-the-isolated-shell-application"></a>Yalıtılmış kabuk uygulamasını dağıtma  
  Yalıtılmış Kabuk uygulamanızı bir hedef bilgisayara bir kurulum projesi oluşturarak dağıtırsınız. Şunları belirtmeniz gerekir:  
@@ -216,7 +216,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
     7. Splash. bmp  
   
-5. **Proje çıktıları Ekle** düğmesine tıklayın ve **MyVSShellStub/birincil çıkış**ekleyin. **Tamam**'a tıklayın.  
+5. **Proje çıktıları Ekle** düğmesine tıklayın ve **MyVSShellStub/birincil çıkış**ekleyin. **Tamam**'ı tıklatın.  
   
 6. Sol bölmede, **hedef bilgisayar**altında **fabrikam musıc DÜZENLEYICISI [INSTALLDİR]** düğümüne sağ tıklayın ve **Uzantılar**adlı **Yeni bir klasör** ekleyin.  
   
@@ -248,7 +248,7 @@ Bu izlenecek yol, yalıtılmış bir kabuk çözümünün nasıl oluşturulduğu
   
 18. **Ne bulmak istiyorsunuz?** bölmesinde, açılan listeden **kayıt defteri girişi** ' ni seçin ve **İleri**' ye tıklayın.  
   
-19. **Nasıl aramak istiyorsunuz?** bölmesinde kayıt defteri kökü olarak **HKEY_LOCAL_MACHINE** ' yi seçin. 64 bit sistemler için **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** veya 32-bit sistemler için **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** girin ve kayıt defteri değeri olarak **Install** yazın. **İleri**’ye tıklayın.  
+19. **Nasıl aramak istiyorsunuz?** bölmesinde kayıt defteri kökü olarak **HKEY_LOCAL_MACHINE** ' yi seçin. 64 bit sistemler için **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** veya 32-bit sistemler için **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** girin ve kayıt defteri değeri olarak **Install** yazın. **İleri**'ye tıklayın.  
   
 20. Bu **değerle ne yapmak istiyorsunuz?** bölmesine, **Bu ürünün yüklenmesi için Visual Studio 2015 yalıtılmış Kabuk yeniden dağıtılabilir gereklidir.** görüntülenecek metin ve **son**' a tıklayın.  
   

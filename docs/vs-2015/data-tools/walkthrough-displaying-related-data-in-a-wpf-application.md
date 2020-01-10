@@ -19,12 +19,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 787be52eeb546d2ab184a172464862d10cb43288
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8116d4ab4a2f20f79f3849ae7f8b324af9832dd5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299577"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850248"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>İzlenecek Yol: Bir WPF Uygulamasında İlgili Verileri Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,12 +41,12 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
-- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
+- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://codeplex.com/SqlServerSamples)indirebilirsiniz.
 
   Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
@@ -71,9 +71,9 @@ Bu kılavuzda, üst/alt ilişkisi olan veritabanı tablolarından veri görünt�
 
 5. **WPF uygulaması** proje şablonunu seçin.
 
-6. **Ad** kutusuna `AdventureWorksOrdersViewer`yazın.
+6. **Ad** kutusuna `AdventureWorksOrdersViewer` yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**'ı tıklatın.
 
      Visual Studio `AdventureWorksOrdersViewer` projesi oluşturur.
 

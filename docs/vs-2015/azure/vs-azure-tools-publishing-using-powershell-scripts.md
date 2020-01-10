@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5af4fc76fa20148495ca44cc7e9b74d4b95ecb7c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a6d6611c8ce8bdb09023794b5eca029b6b972afb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298100"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849983"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Windows PowerShell betiklerini kullanarak geliştirme ve test ortamlarına yayımlama
 
@@ -24,15 +24,15 @@ Visual Studio 'da bir Web uygulaması oluşturduğunuzda, daha sonra Web siteniz
 
 Bu betikleri kullanarak, geçici kullanım için sitenizin özelleştirilmiş sürümlerini (geliştirme ve test ortamları olarak da bilinir) sağlayabilirsiniz. Örneğin, bir Azure sanal makinesinde veya bir Web sitesindeki hazırlama yuvasında bir test paketini çalıştırmak, bir hatayı yeniden oluşturmak, bir hata düzeltmesini test etmek, önerilen bir değişikliği denemek veya bir demo ya da sunum için özel bir ortam ayarlamak üzere Web sitenizin belirli bir sürümünü kurabilirsiniz. Projenizi yayımlayan bir betik oluşturduktan sonra, komut dosyasını gerektiği gibi yeniden çalıştırarak özdeş ortamları yeniden oluşturabilir veya test için özel bir ortam oluşturmak üzere betiği kendi Web uygulamanızın derlemesi ile çalıştırabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-* Azure SDK 2,3 veya sonraki bir sürümü. Bkz. [Visual Studio İndirmeleri](https://go.microsoft.com/fwlink/?LinkID=624384). (Web projelerine yönelik betikleri oluşturmak için Azure SDK 'ya ihtiyacınız yoktur. Bu özellik, bulut hizmetlerinde Web rolleri değil Web projelerine yöneliktir.)
-* Azure PowerShell 0.7.4 veya üzeri. Bkz. [Azure PowerShell nasıl yüklenir ve yapılandırılır](/powershell/azure/overview).
+* Azure SDK 2,3 veya sonraki bir sürümü. Bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/). (Web projelerine yönelik betikleri oluşturmak için Azure SDK 'ya ihtiyacınız yoktur. Bu özellik, bulut hizmetlerinde Web rolleri değil Web projelerine yöneliktir.)
+* Azure PowerShell 0.7.4 veya üzeri. Bkz. [Azure PowerShell'i yükleme ve yapılandırma](/powershell/azure/overview).
 * [Windows PowerShell 3,0](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) veya üzeri.
 
 ## <a name="additional-tools"></a>Ek araçlar
 
-Azure geliştirme için Visual Studio 'da PowerShell ile çalışmaya yönelik ek araçlar ve kaynaklar mevcuttur. Bkz. [PowerShell Tools for Visual Studio](https://go.microsoft.com/fwlink/?LinkId=404012).
+Azure geliştirme için Visual Studio 'da PowerShell ile çalışmaya yönelik ek araçlar ve kaynaklar mevcuttur. Bkz. [PowerShell Tools for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597).
 
 ## <a name="generating-the-publish-scripts"></a>Yayımlama betikleri oluşturuluyor
 
@@ -48,7 +48,7 @@ Yayımla betiği, bir Web sitesine veya sanal makineye dağıtmaya yönelik beli
 
 ### <a name="windows-powershell-module"></a>Windows PowerShell modülü
 
-Visual Studio 'Nun oluşturduğu Windows PowerShell modülü, yayımlama betiğinin kullandığı işlevleri içerir. Bu Azure PowerShell işlevlerinin değiştirilmesi amaçlanmamaktadır. Bkz. [Azure PowerShell nasıl yüklenir ve yapılandırılır](/powershell/azure/overview).
+Visual Studio 'Nun oluşturduğu Windows PowerShell modülü, yayımlama betiğinin kullandığı işlevleri içerir. Bu Azure PowerShell işlevlerinin değiştirilmesi amaçlanmamaktadır. Bkz. [Azure PowerShell'i yükleme ve yapılandırma](/powershell/azure/overview).
 
 ### <a name="json-configuration-file"></a>JSON yapılandırma dosyası
 
@@ -173,7 +173,7 @@ Daha önce bir Windows PowerShell betiği çalıştırmadıysanız, önce komut 
 
     İstendiğinde, Kullanıcı adınızı ve parolanızı girin.
 
-    Betiği otomatikleştirdiğiniz zaman, Azure kimlik bilgilerini sağlamaya yönelik bu yöntem işe yaramadığını unutmayın. Bunun yerine, kimlik bilgilerini sağlamak için `.publishsettings` dosyasını kullanmanız gerekir. Yalnızca bir kez, dosyayı Azure 'dan indirmek için **Get-Azuikinci dosya SettingsFile** komutunu kullanın ve bundan sonra dosyayı içeri aktarmak için **Import-Azuyeniden yayımcı SettingsFile** komutunu kullanın. Ayrıntılı yönergeler için bkz. [Azure PowerShell nasıl yüklenir ve yapılandırılır](/powershell/azure/overview).
+    Betiği otomatikleştirdiğiniz zaman, Azure kimlik bilgilerini sağlamaya yönelik bu yöntem işe yaramadığını unutmayın. Bunun yerine, kimlik bilgilerini sağlamak için `.publishsettings` dosyasını kullanmanız gerekir. Yalnızca bir kez, dosyayı Azure 'dan indirmek için **Get-Azuikinci dosya SettingsFile** komutunu kullanın ve bundan sonra dosyayı içeri aktarmak için **Import-Azuyeniden yayımcı SettingsFile** komutunu kullanın. Ayrıntılı yönergeler için bkz. [Azure PowerShell'i yükleme ve yapılandırma](/powershell/azure/overview).
 
 1. Seçim Web uygulamanızı yayımlamadan sanal makine, veritabanı ve Web sitesi gibi Azure kaynakları oluşturmak istiyorsanız, **Publish-WebApplication. ps1** komutunu, **-CONFIGURATION** bağımsız değişkeniyle JSON yapılandırma dosyasına ayarlanmış şekilde kullanın. Bu komut satırı, hangi kaynakların oluşturulacağını belirleyen JSON yapılandırma dosyasını kullanır. Diğer komut satırı bağımsız değişkenleri için varsayılan ayarları kullandığından, kaynakları oluşturur, ancak Web uygulamanızı yayımlamaz. – Verbose seçeneği, neler olduğu hakkında daha fazla bilgi sağlar.
 
@@ -252,7 +252,7 @@ Projenizi oluşturmaya otomatik hale getirmek için, bu kod örneğinde gösteri
         #Write a function to build and package your web application
     ```
 
-    Web uygulamanızı derlemek için MsBuild. exe ' yi kullanın. Yardım için bkz. MSBuild komut satırı başvurusu: [http://go.microsoft.com/fwlink/?LinkId=391339](https://go.microsoft.com/fwlink/?LinkId=391339)
+    Web uygulamanızı derlemek için MsBuild. exe ' yi kullanın. Yardım için bkz. MSBuild komut satırı başvurusu: [http://go.microsoft.com/fwlink/?LinkId=391339](https://msdn.microsoft.com/library/ms164311.aspx)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'

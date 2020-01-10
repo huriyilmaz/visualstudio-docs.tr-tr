@@ -23,12 +23,12 @@ caps.latest.revision: 55
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c5906084fc7db96ddf304e8362bf7692dac62d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cdd853307bdea28c48762a6a3f0416e698b577ff
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297151"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850132"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>UML Sıralı Diyagramlar: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -123,7 +123,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Bir iletiyi yaşam çizgisinde yukarı veya aşağı sürükleyin. Başka iletilerin üzerine veya bir yürütme bloğunun içine veya dışına sürükleyebilirsiniz.
 
-     \- veya-
+     \- veya -
 
 - İleti konumlarını ayarlamak için iletiye tıklayın ve **yukarı ok** ve **aşağı ok** tuşlarını kullanın. İletilerin sırasını değiştirmek için **SHIFT + yukarı ok** ve **SHIFT + aşağı ok** tuşlarını kullanın.
 
@@ -165,7 +165,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 2. Etkileşimi pakete sürükleyin.
 
-     \- veya-
+     \- veya -
 
      Etkileşime sağ tıklayın ve ardından **Kes**' e tıklayın. Pakete sağ tıklayın ve ardından **Yapıştır**' a tıklayın.
 
@@ -274,7 +274,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - UML Model Gezgini 'nden bir sınıf, bileşen veya arabirimi sıralı diyagram üzerine sürükleyin.
 
-   \- veya-
+   \- veya -
 
   1. İlgili diyagramda sınıf, bileşen veya arabirime sağ tıklayın ve ardından **yaşam çizgisi oluştur**' a tıklayın.
 
@@ -323,7 +323,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
          Sınıf veya arabirim sınıf diyagramında görüntülenir.
 
-         \- veya-
+         \- veya -
 
     3. Yeni arabirimi **UML Model Gezgini** ' nden bileşen diyagramında bir bileşene veya bağlantı noktasına sürükleyin.
 
@@ -349,7 +349,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 3. Etkileşim kullanımıyla ilgili ada çift tıklayın ve bu diyagramda yeniden kullanılabilir sıranın etkisini tanımlayacak şekilde yeniden adlandırın.
 
-     \- veya-
+     \- veya -
 
      Parametresi ile bir işlev çağrısı gibi bir ad yazın.
 
@@ -357,7 +357,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
      Yeni sıralı diyagram oluşturmak için **yeni dizi oluştur** 'a tıklayın
 
-     \- veya-
+     \- veya -
 
      Var olan bir diyagrama bağlamak için **sıralama bağlantısı** ' na tıklayın.
 
@@ -384,7 +384,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Etkileşim kullanımına çift tıklayın.
 
-     \- veya-
+     \- veya -
 
      Etkileşim kullanımına sağ tıklayın ve ardından **Diziye Git ' e**tıklayın.
 
@@ -443,4 +443,4 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 5. Bir parçaya yeni iletiler eklemek için ileti araçlarını kullanın veya kopyalayıp yapıştırın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru [UML Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru [video: sıralı diyagramlar kullanılarak taslak etkileşimleri](https://go.microsoft.com/fwlink/?LinkId=201113)
+ [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru [UML Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru [video: sıralı diyagramlar kullanılarak taslak etkileşimleri](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases)

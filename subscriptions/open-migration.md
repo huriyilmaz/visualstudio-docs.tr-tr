@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/21/2019
 ms.topic: conceptual
 description: İş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
-ms.openlocfilehash: 8a1e0bcaac4cc66f0c1682010102a657c47e770b
-ms.sourcegitcommit: c90a998716b3dfa614dedc61a1bea515364efbec
+ms.openlocfilehash: 2dba1491bd7472e1de824433ce534503de0b37be
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000905"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850554"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteri adına abonelikleri yöneten iş ortakları
 Visual Studio [abonelikleri yönetim portalı](https://manage.visualstudio.com)'nda abonelikleri yönetmek için, izlenmesi gereken birkaç adım vardır. İşlem şu şekilde olacaktır:
@@ -21,7 +21,7 @@ Visual Studio [abonelikleri yönetim portalı](https://manage.visualstudio.com)'
 
 ## <a name="existing-partners-adding-a-new-license"></a>Mevcut iş ortakları yeni lisans ekliyor
 Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)zaten erişimi olan iş ortakları için geçerlidir, ancak yönetilmesi gereken Visual Studio abonelikleri Ile açık lisanslar siparişi yerleştirmiş olur.  İş ortaklarının yeni lisans eklemesi adımları:
-- Oturum açın https://manage.visualstudio.com.
+- https://manage.visualstudio.com oturum açın.
 - Sözleşme açılan listesini seçin ve **+ yeni açık lisans**seçeneğinin bulunduğu en alta kaydırın.
 - Açılır panelde, anlaşmada bulunan Yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu işaretleyin ve ardından **Gönder**' e tıklayın.
 
@@ -32,7 +32,7 @@ Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio
 Bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak Visual Studio [abonelikleri yönetim portalına](https://manage.visualstudio.com)erişmeyi denemeden önce Add-Open Flow aracılığıyla [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'ye kaydolmaya çalışır. İş ortakları aşağıdaki adımları izlemelidir:
 - VLSC 'de oturum açın ve "Ilişki Özeti" sayfasına gidin.
 - İstenen açık lisansı seçin.
-- Sonra, "Visual Studio abonelikleri" altındaki "Lisans Ayrıntıları" bölümünde, bağlantı aracılığıyla abonelikleri yönetme seçeneğini belirleyin.
+- Sonra, "Visual Studio abonelikleri" altındaki "Lisans Ayrıntıları" bölümünde **, bağlantı aracılığıyla**abonelikleri yönetme seçeneğini belirleyin.
 - Daha önce VLSC 'de oturum açmak için kullanılan e-posta adresini kullanarak yeni Yönet portalında oturum açın.
 - Daha sonra Iş ortağı bu açık lisans için abonelikleri yönetebilecektir.
 
@@ -42,7 +42,7 @@ Bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak
 
 ## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>Visual Studio abonelikleri yönetim portalını doğrudan ziyaret eden yeni iş ortakları
 Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Aşağıdaki adımları uygulayın:
-- Adresini https://manage.visualstudio.com ziyaret edin.
+- https://manage.visualstudio.com ziyaret edin.
 - Tanınan bir Kullanıcı değilsiniz hatası alıyorsunuz.
 - **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder**' e tıklayın.
 
@@ -50,7 +50,7 @@ Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](ht
 > Müşteriye, açık lisansa bir Iş ortağının eklendiğini bildiren bir bildirim e-postası gönderilir. Iş ortağının erişimini kaldırmayı seçebilirler.
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio Lisanslama Teknik İncelemesi](https://aka.ms/vslicensing)
+- [Visual Studio Lisanslama Teknik İncelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Toplu Lisanslama Hükümleri](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

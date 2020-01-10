@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a9f07fc064a87910f59f5734d4d635aa3b5d6b77
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 676a4ef2570873998f3ebc890e06d6d5ccae4cf2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299505"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852432"
 ---
 # <a name="debug-css-styles-using-dom-explorer"></a>DOM Gezgini'ni kullanarak CSS stillerinde hata ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -100,7 +100,7 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
     > [!TIP]
     > Uygulama Simulator'da göründükten sonra, CSS stillerinde yaptığınız seçimlerin ve değişikliklerin sonuçlarını hemen görebilmek için Simulator'ı hemen Visual Studio penceresinin yanına konumlandırın.  
   
-6. Visual Studio 'ya geçin ve DOM Gezgini 'nde **öğe seç** ' e tıklayın (veya CTRL + B tuşlarına basın). Böylece seçim modu değişir ve öğeyi tıklatarak seçebilirsiniz ve uygulama da önplana gelir. Tek tıklatmadan sonra mod geri döner. **Öğe seç** düğmesi aşağıda verilmiştir. ![DOM Gezgini 'nde öğe seç düğmesi](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button ")  
+6. Visual Studio 'ya geçin ve DOM Gezgini 'nde **öğe seç** ' e tıklayın (veya CTRL + B tuşlarına basın). Böylece seçim modu değişir ve öğeyi tıklatarak seçebilirsiniz ve uygulama da önplana gelir. Tek tıklatmadan sonra mod geri döner. **Öğe seç** düğmesi aşağıda verilmiştir. ![DOM Gezgini 'nde öğe seç düğmesi](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
   
     > [!TIP]
     > HTML öğelerini doğrudan DOM Gezgini'nde de seçebilirsiniz. Öğe seçme hakkında daha fazla bilgi için bkz. [hızlı başlangıç: hata ayıklama HTML ve CSS](../debugger/quickstart-debug-html-and-css.md).  
@@ -160,4 +160,4 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
  [Hızlı başlangıç: hata ayıklama HTML ve CSS](../debugger/quickstart-debug-html-and-css.md)   
  [DOM Gezgini 'ni kullanarak düzen hata ayıklama](../debugger/debug-layout-using-dom-explorer.md)   
  [DOM olay dinleyicilerini görüntüle](../debugger/view-dom-event-listeners.md)   
- [Ürün desteği ve erişilebilirlik](https://go.microsoft.com/fwlink/?LinkId=253502)
+ [Ürün desteği ve erişilebilirlik](https://msdn.microsoft.com/library/tzbxw1af(VS.110).aspx)

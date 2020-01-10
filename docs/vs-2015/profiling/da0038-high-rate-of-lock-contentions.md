@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e3f96303d69d394f3e24021ddea530d44a8ab718
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 28a2998f1521c612823ee59dcfe8484f2213e026
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300075"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850927"
 ---
 # <a name="da0038-high-rate-of-lock-contentions"></a>DA0038: Yüksek Oranda Kilit çakışmaları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,19 +29,19 @@ Visual Studio ile ilgili en son belgeler için bkz. [DA0038: yüksek hız kilitl
 |-|-|  
 |Kural Kimliği|DA0038|  
 |Kategori|.NET Framework kullanımı|  
-|Profil oluşturma yöntemi|Aşağıdakine<br /><br /> İzleme<br /><br /> .NET belleği|  
+|Profil oluşturma yöntemi|Örnekleme<br /><br /> İzleme<br /><br /> .NET belleği|  
 |İleti|Yüksek oranda .NET kilit çekişmeleri meydana geldiğini belirtir. Lütfen eşzamanlılık profilini çalıştırarak bu kilit çakışmasının nedenini araştırın.|  
-|Kural türü|Bilgiler|  
+|Kural türü|Bilgisi|  
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Nedeni  
+## <a name="cause"></a>Sebep  
  Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütmesi sırasında önemli ölçüde yüksek bir kilit çekişmesinin gerçekleştiğini gösterir. Çekişmelerin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün.  
   
 ## <a name="rule-description"></a>Kural Tanımı  
- Kilitler, çok iş parçacıklı bir uygulamada tek seferde bir iş parçacığı tarafından yürütülmesi gereken önemli kod bölümlerini korumak için kullanılır. Microsoft .NET ortak dil çalışma zamanı (CLR), tam bir eşitleme ve kilitleme temelleri kümesi sağlar. Örneğin, C# dil bir kilit ifadesini (Visual Basic 'de SyncLock) destekler. Yönetilen bir uygulama, doğrudan bir kilit edinmek ve serbest bırakmak için System. Threading ad alanındaki `Monitor.Enter` ve `Monitor.Exit` yöntemleri çağırabilir. .NET Framework, zaman uyumu sağlayıcılar, Readerwriterkilitleri ve semaforları destekleyen sınıflar da dahil olmak üzere ek eşitleme ve kilitleme temel öğelerini destekler. Daha fazla bilgi için, MSDN Web sitesindeki .NET Framework Geliştirici kılavuzundaki [eşitleme temel bilgilerine genel bakış](https://go.microsoft.com/fwlink/?LinkId=177867) konusuna bakın. .NET Framework sınıfları, Windows işletim sisteminde yerleşik olarak bulunan alt düzey Eşitleme Hizmetleri üzerinde katmanlıdır. Bunlar, kritik bölüm nesnelerini ve birçok farklı bekleme ve olay sinyali işlevini içerir. Daha fazla bilgi için, MSDN Kitaplığı 'nda Win32 ve COM Geliştirme 'nin [eşitleme](https://go.microsoft.com/fwlink/?LinkId=177869) bölümüne bakın.  
+ Kilitler, çok iş parçacıklı bir uygulamada tek seferde bir iş parçacığı tarafından yürütülmesi gereken önemli kod bölümlerini korumak için kullanılır. Microsoft .NET ortak dil çalışma zamanı (CLR), tam bir eşitleme ve kilitleme temelleri kümesi sağlar. Örneğin, C# dil bir kilit ifadesini (Visual Basic 'de SyncLock) destekler. Yönetilen bir uygulama, doğrudan bir kilit edinmek ve serbest bırakmak için System. Threading ad alanındaki `Monitor.Enter` ve `Monitor.Exit` yöntemleri çağırabilir. .NET Framework, zaman uyumu sağlayıcılar, Readerwriterkilitleri ve semaforları destekleyen sınıflar da dahil olmak üzere ek eşitleme ve kilitleme temel öğelerini destekler. Daha fazla bilgi için, MSDN Web sitesindeki .NET Framework Geliştirici kılavuzundaki [eşitleme temel bilgilerine genel bakış](https://msdn.microsoft.com/library/ms228964.aspx) konusuna bakın. .NET Framework sınıfları, Windows işletim sisteminde yerleşik olarak bulunan alt düzey Eşitleme Hizmetleri üzerinde katmanlıdır. Bunlar, kritik bölüm nesnelerini ve birçok farklı bekleme ve olay sinyali işlevini içerir. Daha fazla bilgi için, MSDN Kitaplığı 'nda Win32 ve COM Geliştirme 'nin [eşitleme](https://msdn.microsoft.com/library/ms686353.aspx) bölümüne bakın.  
   
- Hem .NET Framework sınıfları hem de eşitleme ve kilitleme için kullanılan yerel Windows nesnelerini temel alan, birbirine kenetlenmiş işlemler kullanılarak değiştirilmesi gereken paylaşılan bellek konumlarıdır. Birbirine kenetlenmiş işlemler, Atomik işlemler kullanılarak durumlarını değiştirmek üzere paylaşılan bellek konumlarında çalışan donanıma özgü yönergeler kullanır. Atomik işlemlerin makinedeki tüm işlemciler arasında tutarlı olması garanti edilir. Kilitler ve WaitHandle, otomatik olarak karşılıklı kilitleme işlemlerini ayarlanan veya sıfırlanan zaman kullanan .NET nesneleridir. Uygulamanızda, iş parçacığı güvenli bir biçimde güncelleştirilmesini sağlamak için birbirine kenetlenmiş işlemleri de kullanmanızı gerektiren başka paylaşılan bellek veri yapıları olabilir. Daha fazla bilgi için bkz. MSND kitaplığı 'nın .NET Framework bölümünde, [birbirine kenetlenmiş işlemler](https://go.microsoft.com/fwlink/?LinkId=177870)  
+ Hem .NET Framework sınıfları hem de eşitleme ve kilitleme için kullanılan yerel Windows nesnelerini temel alan, birbirine kenetlenmiş işlemler kullanılarak değiştirilmesi gereken paylaşılan bellek konumlarıdır. Birbirine kenetlenmiş işlemler, Atomik işlemler kullanılarak durumlarını değiştirmek üzere paylaşılan bellek konumlarında çalışan donanıma özgü yönergeler kullanır. Atomik işlemlerin makinedeki tüm işlemciler arasında tutarlı olması garanti edilir. Kilitler ve WaitHandle, otomatik olarak karşılıklı kilitleme işlemlerini ayarlanan veya sıfırlanan zaman kullanan .NET nesneleridir. Uygulamanızda, iş parçacığı güvenli bir biçimde güncelleştirilmesini sağlamak için birbirine kenetlenmiş işlemleri de kullanmanızı gerektiren başka paylaşılan bellek veri yapıları olabilir. Daha fazla bilgi için bkz. MSND kitaplığı 'nın .NET Framework bölümünde, [birbirine kenetlenmiş işlemler](https://msdn.microsoft.com/library/sbhbke0y.aspx)  
   
  Eşitleme ve kilitleme, çok iş parçacıklı uygulamaların doğru şekilde yürütmesini sağlamak için kullanılan mekanizmalarda bulunur. Çok iş parçacıklı bir uygulamanın her iş parçacığı, işletim sistemi tarafından bağımsız olarak zamanlanan bağımsız bir yürütme birimidir. Bir kilit elde edilmeye çalışan bir iş parçacığı gecikmeli tutulduğu için kilit çakışması oluşur.  
   

@@ -15,12 +15,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8b85bbad909a05bacab361a49cc7e029482ad606
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d4e45ade24ce792999d1f9b0f52d9c82703fc5a0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291197"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849877"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>Kod Analiz Araçları ile Uygulama Kalitesini Analiz Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Bu bölümde, yönetilen kod [kalitesini analiz etme](../code-quality/analyzing-
 
  [Kod analizi araçlarını kullanarak sürücü kalitesini analiz etme](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Sürücüler için kod analizi, C ve C++ programlarındaki temel kodlama hatalarını algılayan derleme zamanı statik doğrulama aracıdır ve (birincil) çekirdek modu sürücü kodundaki hataları algılamak için tasarlanan özel bir modül içerir. Statik Sürücü Doğrulayıcısı (SDV), Windows çekirdek modu sürücülerinin kaynak kodunu sistematik olarak analiz eden bir statik doğrulama aracıdır. SDV, sürücünün Windows işletim sistemi çekirdekle doğru şekilde etkileşime sahip olup olmadığını belirler.
 
- [Sürücüler Için kod analizi uyarıları](https://go.microsoft.com/fwlink/?LinkId=225920) Sürücü kodunda olası bir hata algılandığında, sürücüler için kod analizinin rapor veren uyarıları açıklar.
+ [Sürücüler Için kod analizi uyarıları](https://msdn.microsoft.com/library/windows/hardware/ff550572(v=VS.85).aspx) Sürücü kodunda olası bir hata algılandığında, sürücüler için kod analizinin rapor veren uyarıları açıklar.
 
 ## <a name="related-tasks"></a>İlgili görevler
  [Yönetilen kodun ölçüm karmaşıklığı ve Bakımma](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md) Açıklamayı buraya ekleyin.

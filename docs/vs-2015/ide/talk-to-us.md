@@ -11,12 +11,12 @@ caps.latest.revision: 34
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 89f43167a12bce77ef260fcf3d72764072f80143
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b55100fa6aaf74dee6277db2a079a0a908dc265c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299932"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851061"
 ---
 # <a name="talk-to-us"></a>Bizimle İletişime Geçin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,13 +38,13 @@ Belgelerimizi iyileştirmek için fikirlerinizi ilgileniyoruz. Kişisel olarak y
  Visual Studio 'nun yayın öncesi sürümleri, çalıştırmakta olduğunuz yapı kalitesi hakkında geri bildirim göndermenizi sağlayan **Bu ürün** menüsü öğesini derecelendirin. Bu ürünün yayınlanmış sürümlerinde bu sürümü görmezsiniz.
 
 ## <a name="i-need-help"></a>Yardım almam gerekiyor!
- Çevrimiçi yardım için [Microsoft desteği](https://go.microsoft.com/fwlink/?LinkID=99019) bakın.
+ Çevrimiçi yardım için [Microsoft desteği](https://support.microsoft.com/) bakın.
 
  Amerika Birleşik Devletleri ve Kanada dışında destek seçenekleri değişebilir. Bölgesel kişilerin listesi için bkz. [Microsoft Dünya çapında siteler](https://www.microsoft.com/worldwide/).
 
  Daha fazla seçenek için bkz. [desteğe genel bakış](https://visualstudio.microsoft.com/support/).
 
- Doğrudan Microsoft'tan yönetilen destek almayı gerektiren büyük kuruluşlarda, çeşitli Premier Destek olanaklarının sunulduğu sözleşmelerden yararlanılabilir. Daha fazla bilgi için bkz. [Microsoft hizmetleri Premier destek](https://go.microsoft.com/fwlink/?LinkId=258223).
+ Doğrudan Microsoft'tan yönetilen destek almayı gerektiren büyük kuruluşlarda, çeşitli Premier Destek olanaklarının sunulduğu sözleşmelerden yararlanılabilir. Daha fazla bilgi için bkz. [Microsoft hizmetleri Premier destek](https://www.microsoft.com/industry/services/support).
 
  Ürün yeni bir bilgisayar ya da cihaz ile yüklenmiş gelirse, bu yazılım için teknik destek ve yardımı donanım üreticisi sağlar. Destek için doğrudan üreticiye başvurun.
 

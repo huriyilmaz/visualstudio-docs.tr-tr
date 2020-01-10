@@ -12,12 +12,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ae28c59f9c5f19e87b833c90e7dbc6bf3b7497ea
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: bffaf0bcff0c0fc93201badeb01b95928edc2979
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297934"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850709"
 ---
 # <a name="code-generation-in-a-build-process"></a>Derleme Sürecinde Kod Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,7 +67,7 @@ Düzenlemeden sonra **yeniden yükle**' yi seçin.
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- veya-
+\- veya -
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -284,5 +284,5 @@ Artık derlemede ve ekleme yönergelerinde proje özelliklerini kullanabilirsini
 T4 MSbuild şablonundaki rehber oldukça kullanışlıdır: $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets
 
 - [T4 Metin Şablonu Yazma](../modeling/writing-a-t4-text-template.md)
-- [Visual Studio görselleştirme ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=185579)
+- [Visual Studio görselleştirme ve modelleme SDK](https://www.visualstudio.com/)
 - [Oleg Sych: T4 'Yi anlama: MSBuild tümleştirmesi](https://github.com/olegsych/T4Toolbox)

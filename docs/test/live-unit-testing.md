@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: f020de0c08d8869a8ee9e6f807201303a46b2a0d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1e1a0ec1fd6f2fbdf4f016b1d22db5a6929b5e24
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588895"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851439"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Live Unit Testing yapılandırma ve kullanma
 
@@ -198,6 +198,6 @@ Live Unit Testing tüm testlerin bir derlemesini dışlamak için aşağıdaki �
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod test araçları](https://visualstudio.microsoft.com/vs/testing-tools/)
-- [Live Unit Testing blogu](https://go.microsoft.com/fwlink/?linkid=842514)
+- [Live Unit Testing blogu](https://devblogs.microsoft.com/visualstudio/live-unit-testing-in-visual-studio-2017-enterprise/)
 - [Live Unit Testing SSS](live-unit-testing-faq.md)
 - [Channel 9 videosu: Visual Studio 'da Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Bulut abonelikleri için faturalandırma soruları.
-ms.openlocfilehash: 12ff77a052e54520885642cb3cd6ed1dea31506b
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: c4544df196d3e861522dfcbb877a90a5656ad7ba
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491268"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851419"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio Cloud abonelikleri faturalama hakkında SSS
 Bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her bir Visual Studio aboneliğinin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
@@ -37,7 +37,7 @@ Y: doğru ayrıcalıklara sahip olup olmadığınızı belirlemede en kolay yakl
 Şu anda oturum açınızdan bağlantılı olan sunulan Azure abonelikleri listesinden bir Azure aboneliği (faturalandırma hesabı) seçmeniz gerekir.
 Azure aboneliğinin adı faturalandırma hesabı türü ("Kullandıkça öde", "Kurumsal Anlaşma" vb.) için varsayılan olarak, Azure aboneliği Kurumsal Anlaşma bir parçasıysa, genellikle net değildir.
 
-Başka bir yaklaşım de [Azure Enterprise Portal](https://ea.azure.com)ziyaret etmeye çalışır.  Başarılı bir şekilde ulaşabilseniz, Kurumsal Yönetici veya hesap sahibi rolüne zaten sahipsiniz demektir. Yalnızca hesap sahipleri yeni Azure Faturalandırma hesaplarını bir Kurumsal Anlaşma ayarlayabilir. Azure Enterprise Portal 'a erişemiyorsanız, kurumsal yöneticinizin kim olduğunu öğrenmek için lütfen kuruluşunuzun içinde sorgulama yapın ve bu kişiden sizi Azure Enterprise Portal içinde hesap sahibi olarak eklemesini isteyin.  Bu kişiyi bulamıyorsanız, [bir destek bileti gönderebilir](https://aka.ms/AzureEntSupport) ve iletişim bilgilerini isteyebilirsiniz.  Destek bileti için kuruluşunuzun adı ve Kurumsal Anlaşma kayıt numaranız olması gerekir.
+Başka bir yaklaşım de [Azure Enterprise Portal](https://ea.azure.com)ziyaret etmeye çalışır.  Başarılı bir şekilde ulaşabilseniz, Kurumsal Yönetici veya hesap sahibi rolüne zaten sahipsiniz demektir. Yalnızca hesap sahipleri yeni Azure Faturalandırma hesaplarını bir Kurumsal Anlaşma ayarlayabilir. Azure Enterprise Portal 'a erişemiyorsanız, kurumsal yöneticinizin kim olduğunu öğrenmek için lütfen kuruluşunuzun içinde sorgulama yapın ve bu kişiden sizi Azure Enterprise Portal içinde hesap sahibi olarak eklemesini isteyin.  Bu kişiyi bulamıyorsanız, [bir destek bileti gönderebilir](https://support.microsoft.com/supportrequestform/cf791efa-485b-95a3-6fad-3daf9cd4027c) ve iletişim bilgilerini isteyebilirsiniz.  Destek bileti için kuruluşunuzun adı ve Kurumsal Anlaşma kayıt numaranız olması gerekir.
 
 ### <a name="q-can-i-use-the-azure-monetary-commitment-funds-from-my-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>S: Kurumsal Anlaşma 'den Azure parasal taahhüt fonlarını kullanarak Visual Studio bulut abonelikleri satın alabilir miyim?
 Y: Hayır, bu ön ödemeli fon, Visual Studio bulut abonelikleri satın almaya uygun değildir. EA 'niz için Visual Studio bulut abonelikleri satın almak üzere oluşturulan bir Azure aboneliğini seçtiğinizde, ücretler sonraki "fazla kullanım" faturanızda görünür. Genellikle bu ayda bir gerçekleşir ancak bazı EA müşterilerinin geçmiş kuralları nedeniyle, bir fazla ay için fazla kullanım faturası verilmeyebilir. Ek satın alma miktarı (Azure parasal taahhüt fonları için uygun olmayan Satınalmalar) için bir fazla kullanım faturası tetiklemeniz gerekiyorsa lütfen EA 'nizin lisanslama uzmanına başvurun.

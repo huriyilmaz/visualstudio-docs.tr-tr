@@ -9,17 +9,17 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c56eb091e6d4efbe33dc8f05d5040272307c274
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 66988fa88ae347a2db08bf2f6d1b79ba3bcd80b8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299908"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851318"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Eğitmen 1: Resim Görüntüleyici Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüleyen bir program oluşturacaksınız. Formunuza düğmeler ve resim kutuları gibi denetimleri nasıl sürükleyeceğinizi, özelliklerini ayarlamanıza ve formu düzgün şekilde yeniden boyutlandırmak için kapsayıcıları nasıl kullanacağınızı öğreneceksiniz. Ayrıca kod yazmaya başlayın. Aşağıdakileri nasıl yapacağınızı öğrenirsiniz:
+Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüleyen bir program oluşturacaksınız. Formunuza düğmeler ve resim kutuları gibi denetimleri nasıl sürükleyeceğinizi, özelliklerini ayarlamanıza ve formu düzgün şekilde yeniden boyutlandırmak için kapsayıcıları nasıl kullanacağınızı öğreneceksiniz. Ayrıca kod yazmaya başlayın. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
 
 - Yeni bir proje oluşturun.
 
@@ -39,7 +39,7 @@ Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüley
 
   ![Bu öğreticide oluşturduğunuz resim](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone") Bu öğreticide oluşturduğunuz resim
 
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [nasıl yapılır: Visual Basic bir resim görüntüleyici oluşturma?](https://go.microsoft.com/fwlink/?LinkId=205207) veya [' C#de nasıl yapılır: bir resim görüntüleyici oluşturma?](https://go.microsoft.com/fwlink/?LinkId=205198).
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [nasıl yapılır: Visual Basic bir resim görüntüleyici oluşturma?](https://msdn.microsoft.com/vstudio/gg315352) veya [' C#de nasıl yapılır: bir resim görüntüleyici oluşturma?](https://msdn.microsoft.com/vcsharp/gg278960.aspx).
 
 > [!NOTE]
 > Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır. Görsel C# ve Visual Basic her ikisi de bu öğreticide ele alınmıştır, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanın.

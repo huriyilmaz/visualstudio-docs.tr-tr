@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: abbd3c3c-3a6e-4539-bd6c-a5891dead234
 caps.latest.revision: 12
 manager: jillfra
-ms.openlocfilehash: 8436b8eee0193715e4ae886db18f91f7148dcb3b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1f3b0c173d5d1f4b3642bf61d2cca9fb6fd231e6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300421"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850321"
 ---
 # <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Nasıl yapılır: Windows Forms kullanan bir araç kutusu denetimi oluşturma
 [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] eklenen Windows Forms araç kutusu denetim şablonu, uzantı yüklendiğinde **araç kutusuna** otomatik olarak eklenen Windows Forms denetimleri oluşturmanıza imkan tanır. Bu konu başlığı altında, diğer kullanıcılara dağıtabileceğiniz bir **araç kutusu** denetimi oluşturmak için şablonunun nasıl kullanılacağı gösterilmektedir.  
   
 > [!NOTE]
-> Visual Studio SDK 'sını nasıl indirecek hakkında bilgi edinmek için MSDN Web sitesinde [Visual Studio genişletilebilirlik Geliştirici Merkezi](https://go.microsoft.com/fwlink/?linkid=121964) ' ne bakın.  
+> Visual Studio SDK 'sını nasıl indirecek hakkında bilgi edinmek için MSDN Web sitesinde [Visual Studio genişletilebilirlik Geliştirici Merkezi](https://msdn.microsoft.com/vsx/default.aspx) ' ne bakın.  
   
 ## <a name="creating-a-toolbox-control"></a>Araç kutusu denetimi oluşturma  
  Projeyi oluşturmak için Windows Forms araç kutusu denetim şablonunu kullanın ve ardından Tasarımcıda bir kullanıcı arabirimi (UI) oluşturun.  
   
 #### <a name="to-create-a-windows-forms-toolbox-control-project"></a>Windows Forms araç kutusu denetimi projesi oluşturmak için  
   
-1. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın.  
+1. **Dosya** menüsünde **Yeni** ve **Proje**’ye sırasıyla tıklayın.  
   
 2. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**' ın altında, tercih ettiğiniz programlama dilinin düğümüne tıklayın ve ardından **genişletilebilirlik**' e tıklayın. Proje türleri listesinde **Windows Forms araç kutusu denetimi**' ni seçin.  
   
-3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. **Tamam**'a tıklayın.  
+3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. **Tamam**'ı tıklatın.  
   
      Visual Studio, bir kullanıcı denetimi, denetimin **araç kutusuna**yerleştirilecek bir öznitelik ve dağıtım IÇIN bir VSIX bildirimi içeren bir çözüm oluşturur.  
   

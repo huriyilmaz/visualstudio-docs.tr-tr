@@ -12,12 +12,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dcb179ae80e60654c981da8c76e9a57e6fb8ed66
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: bdf1111198c7f874d03596382372fe25851e37d3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296061"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852125"
 ---
 # <a name="programming-with-the-uml-api"></a>UML API ile Programlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Visual Studio 'nun UML API 'SI, UML modellerini ve diyagramlarını oluşturmak,
 
 |Konu|Örnek türleri ve açıklanan Yöntemler|Açıklanan özellikler|
 |-----------|-----------------------------------------|------------------------|
-|[UML API ile ilişkilerde gezinme](../modeling/navigate-relationships-with-the-uml-api.md)|UML öğeleri ve özellikleri ve ilişkilendirmeleri. Örneğin, IClass, IActivity, IUseCase, IComponent, Iıntercomponent, IModel, IPackage dahil olmak üzere IElement ve alt öğeleri.|UML modelleri, Visual Studio 'da UML [kaynak sayfasında](https://go.microsoft.com/fwlink/?LinkId=160796)elde edilen UML belirtim sürümü 2.1.2 'yi ile uyumlu olur. Her tür, UML türüyle aynı ada sahip olan ve "I" önekli bir arabirimdir.|
+|[UML API ile ilişkilerde gezinme](../modeling/navigate-relationships-with-the-uml-api.md)|UML öğeleri ve özellikleri ve ilişkilendirmeleri. Örneğin, IClass, IActivity, IUseCase, IComponent, Iıntercomponent, IModel, IPackage dahil olmak üzere IElement ve alt öğeleri.|UML modelleri, Visual Studio 'da UML [kaynak sayfasında](https://www.uml.org/)elde edilen UML belirtim sürümü 2.1.2 'yi ile uyumlu olur. Her tür, UML türüyle aynı ada sahip olan ve "I" önekli bir arabirimdir.|
 |[UML modellerinde öğe ve ilişki oluşturma](../modeling/create-elements-and-relationships-in-uml-models.md)|IPackage. CreateClass ()<br /><br /> IClass. CreateOperation ()|Her öğe türünün alt öğelerini oluşturmak için yöntemleri vardır.|
 |[Diyagramlar üzerinde model görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)|IShape, IDiagram<br /><br /> IShape. Move ()|Bir modeldeki her öğe diyagram üzerinde bir şekil olarak temsil edilebilir. Bazı durumlarda, her nesne için yeni şekiller oluşturabilirsiniz. Bu şekilleri taşıyabilir, yeniden boyutlandırabilir, renkleyebilir, daraltabilir veya genişletebilirsiniz.|
 |[UML modelinde gezinme](../modeling/navigate-the-uml-model.md)|IModelStore<br /><br /> IDiagramContext|Model deposu modeli depolar.<br /><br /> Diyagram bağlamı, geçerli diyagrama ve depoya erişmenizi sağlar.|
@@ -51,7 +51,7 @@ Visual Studio 'nun UML API 'SI, UML modellerini ve diyagramlarını oluşturmak,
 ## <a name="the-api-assemblies"></a>API derlemeleri
  Bu tablo, UML araçları için genişletilebilirlik sağlayan derlemeleri ve kullanmanız önerilen ad alanlarını özetler.
 
-|Derleme|{1&gt;Ad Alanları&lt;1}|Erişim sağlar:|
+|Derleme|{1&gt;Ad alanları&lt;1}|Erişim sağlar:|
 |--------------|----------------|-------------------------|
 |Microsoft.VisualStudio.Uml.Interfaces|(Tümü)|UML türleri.|
 |Microsoft. VisualStudio. mimari Turetools. Extensibility|Microsoft. VisualStudio. mimari Turetools. Extensibility. Uml|[Oluşturma yöntemleri](../modeling/create-elements-and-relationships-in-uml-models.md)|

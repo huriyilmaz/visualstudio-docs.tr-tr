@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/07/2019
 ms.topic: conceptual
 description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: 484ecdca3435ee725853932acd66e307c2eb3cbe
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+ms.openlocfilehash: b7a6d93e3c284e3778d9574eb86c4e998324c559
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879314"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850536"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
@@ -47,7 +47,7 @@ Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için Ayrıntı
 > ![Visual Studio abonelikleri yönetim portalı ayrıntıları sayfası](_img/using-admin-portal/details-page.png)
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio lisanslama teknik incelemesi](https://aka.ms/vslicensing)
+- [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Abonelik seçeneklerini ve fiyatlandırmalarını karşılaştırma](https://visualstudio.microsoft.com/vs/pricing)
 - [Visual Studio IDE özelliklerini karşılaştırma](https://visualstudio.microsoft.com/vs/compare)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)

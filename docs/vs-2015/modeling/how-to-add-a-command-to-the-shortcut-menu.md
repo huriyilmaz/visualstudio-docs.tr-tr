@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8d5373ae27797aa3bfe4627fb84ce393dce9e910
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d5ddea477aa7295c41097177265b43483b7aa45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300893"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850409"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: Kısayol Menüsüne Komut Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 
 3. Komutu görünür hale getirmek ve komutun ne yapmasını istediğinizi tanımlamak için [CommandSet sınıfına Yöntemler yazın](#CommandSet) .
 
-   Örnekler için [görselleştirme ve modelleme SDK Web sitesine](https://go.microsoft.com/fwlink/?LinkID=185579)bakın.
+   Örnekler için [görselleştirme ve modelleme SDK Web sitesine](https://www.visualstudio.com/)bakın.
 
 > [!NOTE]
 > Ayrıca, kes, Yapıştır, Tümünü Seç ve CommandSet.cs içindeki yöntemleri geçersiz kılarak Yazdır gibi bazı mevcut komutların davranışını değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
@@ -335,7 +335,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 ## <a name="troubleshooting"></a>Sorun giderme
  **Komut menüde görünmüyor:**
 
-- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 - Deneysel örneklerinizin bu DSL için doğru dosya adı uzantısına sahip olduğundan emin olun. Dosya adı uzantısını denetlemek için, Visual Studio 'nun ana örneğinde DslDefinition. dsl dosyasını açın. Ardından DSL Gezgini ' nde düzenleyici düğümüne sağ tıklayın ve ardından Özellikler ' e tıklayın. Özellikler penceresi FileExtension özelliğini inceleyin.
 

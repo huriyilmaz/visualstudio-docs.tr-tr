@@ -18,28 +18,28 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b4bcd1f1f023c9e439fb870c9e31f07aa5be215d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8050e0245708d855d78dbba94e1bb56399343ecf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299548"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850697"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözüm oluşturursunuz. Çözümün anahtar bölümü DslDefinition. dsl ' de depolanan DSL tanımı diyagramıdır. DSL tanımı, DSL 'nin sınıflarını ve şekillerini tanımlar. Bu öğelere değiştirdikten ve ekledikten sonra, DSL 'yi daha ayrıntılı şekilde özelleştirmek için program kodu ekleyebilirsiniz.
 
- DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
+ DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="templates"></a>Şablon çözümü seçme
  Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio Görselleştirme ve modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|{1&gt;{2&gt;Visual Studio Görselleştirme ve Modelleme SDK'sı&lt;2}&lt;1}|[http://go.microsoft.com/fwlink/?LinkID=186128](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
  Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil proje şablonunu kullanarak yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturursunuz.
 
@@ -105,7 +105,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
  Araçlarla denemeler yapın. Öğeler oluşturun ve bunları bağlayın.
 
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneğini kapatın.
+ Deneysel örneği kapatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 > [!NOTE]
 > DSL 'yi değiştirdiğinizde, örnek test dosyasında artık şekilleri göremezsiniz. Bununla birlikte, yeni öğeler de oluşturabilirsiniz.
@@ -609,7 +609,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
  Ayrıca bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
 
 ## <a name="trouble"></a>Sorunu
- Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları Extensibililty forumundan](https://go.microsoft.com/fwlink/?LinkId=186074)daha fazla öneri bulabilirsiniz.
+ Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları Extensibililty forumundan](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)daha fazla öneri bulabilirsiniz.
 
 |Sorun|Öneri|
 |-------------|----------------|

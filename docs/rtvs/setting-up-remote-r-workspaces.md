@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: e8cd1868e61b0691be7ea639d8b5d826c608915d
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 686f98aaaade035f1632139d255ccff8b37eddf3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888540"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850061"
 ---
 # <a name="set-up-remote-workspaces"></a>Uzak çalışma alanlarını ayarlama
 
@@ -24,7 +24,7 @@ Bu makalede, bir uzak sunucunun SSL ve uygun R hizmeti ile nasıl yapılandırı
 - Windows 10, Windows Server 2016 veya Windows Server 2012 R2. RTVS Ayrıca gerektirir
 - [.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) veya üzeri
 
-## <a name="install-an-ssl-certificate"></a>SSL sertifikası yükler
+## <a name="install-an-ssl-certificate"></a>Bir SSL sertifikası yükleme
 
 RTVS, sunucuda bir SSL sertifikası gerektiren, uzak bir sunucu ile tüm iletişimlerin HTTP üzerinden gerçekleşmesini gerektirir. Güvenilen bir sertifika yetkilisi tarafından imzalanmış bir sertifika (önerilen) veya otomatik olarak imzalanan bir sertifika kullanabilirsiniz. (Otomatik olarak imzalanan bir sertifika, bağlandığında, RTVS uyarıları oluşturulmasına neden olur.) Bunlardan biri ile bilgisayara yüklemeniz ve özel anahtarına erişime izin vermeniz gerekir.
 
@@ -65,7 +65,7 @@ Otomatik olarak imzalanan bir sertifika vermek için:
 
 Arka plan için bkz. Vikipte [otomatik olarak imzalanan sertifikalar](https://en.wikipedia.org/wiki/Self-signed_certificate) .
 
-### <a name="install-the-certificate"></a>Sertifikayı yükler
+### <a name="install-the-certificate"></a>Sertifikayı yükleme
 
 Sertifikayı uzak bilgisayara yüklemek için bir komut isteminden *Certlm. msc* (Sertifika Yöneticisi) komutunu çalıştırın. **Kişisel** klasöre sağ tıklayın ve **Tüm görevler** > **içeri aktar** komutunu seçin:
 
@@ -143,7 +143,7 @@ R kodunu çalıştırmak için, uzak bilgisayarda aşağıdaki gibi bir R yoruml
 
      Her ikisi de aynı işlevselliğe sahiptir, ancak [Intel Math Çekirdek Kitaplığı](https://software.intel.com/intel-mkl)'nın sağladığı ek donanım hızlandırmalı doğrusal algeköşeli kütüphanelerinin Microsoft R açık avantajları.
 
-2. [R Services yükleyicisini](https://aka.ms/rtvs-services) çalıştırın ve istendiğinde yeniden başlatın. Yükleyici şunları yapar:
+2. [R Services yükleyicisini](https://github.com/Microsoft/RTVS/blob/master/doc/rtvsd/rtvs-remote-downloads.md) çalıştırın ve istendiğinde yeniden başlatın. Yükleyici şunları yapar:
 
     - *%ProgramFiles%\r araçları 'Nda Visual Studio\1.0\\için* bir klasör oluşturun ve tüm gerekli ikilileri kopyalayın.
     - `RHostBrokerService` ve `RUserProfileService` yükleyip otomatik olarak başlayacak şekilde yapılandırın.
@@ -184,7 +184,7 @@ Uzak bilgisayarda çalışan R Services ile Kullanıcı hesapları oluşturmanı
 
     Ancak, sertifikanızı Internet 'e yönelik bir sunucuya (örneğin, bir Azure VM) yüklüyorsanız, Internet 'e yönelik bir sunucunun FQDN 'SI, NetBIOS adı ile hiçbir şekilde aynı olmadığından sunucunuzun tam etki alanı adını (FQDN) kullanın.
 
-    FQDN 'yi kullanmak için, R Services 'ın yüklü olduğu yere gidin (varsayılan olarak*Visual Studio\1.0 için% program FILES%\R uzak hizmeti* ), bir metin düzenleyicisinde *Microsoft. R. Host. Broker. config. JSON* dosyasını açın ve içeriğini aşağıdakiler ile değiştirin. sunucunuzun FQDN 'sine her ne kadar `foo.westus.cloudapp.azure.com`gibi bir CN atama:
+    FQDN 'yi kullanmak için, R Services 'ın yüklü olduğu yere gidin (varsayılan olarak,*Visual Studio\1.0 için% program FILES%\R uzak hizmeti* ), bir metin düzenleyicisinde *Microsoft. R. Host. Broker. config. JSON* dosyasını açın ve içeriğini AŞAĞıDAKI ile değiştirerek sunucunuzun FQDN 'sine, ÖRNEĞIN `foo.westus.cloudapp.azure.com`gibi, CN 'yi atayarak:
 
     ```json
     {

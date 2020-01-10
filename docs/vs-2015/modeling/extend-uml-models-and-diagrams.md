@@ -12,12 +12,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b8b154ccd18472d0b0bca502c78a6612aeccdda6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301039"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849799"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>UML modellerini ve diyagramları genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,9 +30,9 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
  Fabrikam 'ın araçlar ekibi, geliştirme ekiplerine yardımcı olmak için bir dizi geliştirme yapar. Aşağıdaki bölümlerde, tanımlayabilmeniz gereken farklı uzantı türleri açıklanır. Bu tekniklerin birçoğunu tek bir Visual Studio uzantısı içinde birleştirebilirsiniz.
 
- Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://go.microsoft.com/fwlink/?LinkId=214467).
+ Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://msdn.microsoft.com/vstudio/ff859492).
 
-## <a name="Requirements"></a>Gereklilik
+## <a name="Requirements"></a> Gereksinimleri
 
 - [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
@@ -111,12 +111,12 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Videolar**|![video MSDN bağlantısı-](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: VISUAL Studio ile UML](https://go.microsoft.com/fwlink/?LinkId=199957)|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Videolar**|![video MSDN bağlantısı-](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://msdn.microsoft.com/vstudio/ff859492)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: VISUAL Studio ile UML](https://channel9.msdn.com/posts/clinted/)|
+|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML modelleme genişletilebilirliği için uygulama API başvurunuz](../modeling/api-reference-for-uml-modeling-extensibility.md) [için modeller oluşturma](../modeling/create-models-for-your-app.md)

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 03/24/2019
 ms.topic: conceptual
 description: Yönetici portalında en fazla atanmış abonelik sayısını görüntülemeyi öğrenin
-ms.openlocfilehash: 368ca1ad0373267e9753ab223c2e200cbc87f1e0
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 76360c9843d82350a2b9929b8debfdb4aa4cde82
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491726"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852336"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Atanan aboneliklerin sayısını izlemek için en yüksek kullanım özelliğini kullanın
 Visual Studio abonelikleri yönetim portalındaki yeni bir özellik, satın almış ve atanan aboneliklerin sayısını izlemenize ve atadığınız her bir düzeyin abonelik sayısını, hem geçmiş yıl içinde hem de tüm sözleşmenizin süresi. 
@@ -42,7 +42,7 @@ Her abonelik düzeyi için rapor, yeni bir maksimum atama düzeyine ulaştınız
 Y: genel görünümde bulunan bilgiler, her abonelik düzeyi için *geçerli* atamaları ve kullanılabilir abonelikleri gösterir.  Bu, geçerli yıl veya sözleşmenin ömrü boyunca sözleşme için atanan maksimum abonelik sayısından çok farklı olabilir.  En yüksek kullanım özelliği, en yüksek atama düzeylerine ne zaman ulaşılmadığını ve düzeylerin ne zaman yapılacağını görmenizi sağlar.  Bu önemli bir ayırım olduğundan, doğru bir farklılık sırasında abonelikler için faturalandırma, yıl içinde herhangi bir noktada atanan maksimum abonelik sayısına bağlıdır. 
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio lisanslama teknik incelemesi](https://aka.ms/vslicensing)
+- [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

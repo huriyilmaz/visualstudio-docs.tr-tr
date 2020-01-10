@@ -9,12 +9,12 @@ caps.latest.revision: 4
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4917fc81f439ef0185a753fb1c4c85e460eb7681
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 5770fb604c1c700919f2e738a00ee07cc969b355
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297735"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850110"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,14 +64,14 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 
    Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
 
-   *LocalAppData* **\Microsoft\visualstudio\10.0\Extensions**
+   *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**
 
 ## <a name="msi"></a>MSI içinde DSL dağıtma
  DSL 'niz için bir MSI (Windows Installer) dosyası tanımlayarak, kullanıcıların Windows Gezgini 'nden DSL dosyalarını açmasına izin verebilirsiniz. Ayrıca, dosya adı uzantınızla bir simge ve kısa açıklama ilişkilendirebilirsiniz. Buna ek olarak, MSI DSL dosyalarını doğrulamak için kullanılabilen bir XSD 'yi de yükleyebilir. İsterseniz, diğer bileşenleri MSI 'ye aynı anda yüklenecek şekilde ekleyebilirsiniz.
 
  MSI dosyaları ve diğer dağıtım seçenekleri hakkında daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
 
- Bir MSI oluşturmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünüze bir kurulum projesi eklersiniz. Bir kurulum projesi oluşturmanın en kolay yöntemi, [VMSDK sitesinden](https://go.microsoft.com/fwlink/?LinkID=186128)indirebileceğiniz CreateMsiSetupProject.tt şablonunu kullanmaktır.
+ Bir MSI oluşturmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünüze bir kurulum projesi eklersiniz. Bir kurulum projesi oluşturmanın en kolay yöntemi, [VMSDK sitesinden](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)indirebileceğiniz CreateMsiSetupProject.tt şablonunu kullanmaktır.
 
 #### <a name="to-deploy-a-dsl-in-an-msi"></a>MSI içinde DSL dağıtmak için
 
@@ -99,7 +99,7 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 
    - **Yapı** menüsünde **Configuration Manager**açın ve derlemek istediğiniz yapılandırmayı (örneğin, **yayın** veya **hata ayıklama**) seçin.
 
-4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](https://go.microsoft.com/fwlink/?LinkID=186128)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt**indirin.
+4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt**indirin.
 
 5. DSL projenize **CreateMsiSetupProject.tt** ekleyin.
 
@@ -129,7 +129,7 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 
     - Dosyayı çift tıklattığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlatılır ve DSL dosyasını DSL düzenleyicisinde açar.
 
-    İsterseniz, Kurulum projesini metin şablonunu kullanmak yerine el ile oluşturabilirsiniz. Bu yordamı içeren bir anlatım için [görselleştirme ve modelleme SDK laboratuvarının](https://go.microsoft.com/fwlink/?LinkId=208878)5. bölümüne bakın.
+    İsterseniz, Kurulum projesini metin şablonunu kullanmak yerine el ile oluşturabilirsiniz. Bu yordamı içeren bir anlatım için [görselleştirme ve modelleme SDK laboratuvarının](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)5. bölümüne bakın.
 
 #### <a name="to-uninstall-a-dsl-that-was-installed-from-an-msi"></a>MSI 'dan yüklenmiş bir DSL 'yi kaldırmak için
 

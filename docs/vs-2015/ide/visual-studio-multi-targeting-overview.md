@@ -14,43 +14,43 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6a816981b41dd8ca2a2119bbd99c776c6a7e2436
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e9e8b53c5bd4d6045d7582c24be865ae216f1114
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296880"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851083"
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio Çoklu Sürüm Desteğine Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]sürümünde, uygulamanız için gerekli [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü belirtebilirsiniz. Bu nedenle, önceki bir sürümde başlattığınız bir projeyi geliştirmeye devam etmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 'un bu sürümünü kullanmak istiyorsanız, Framework hedefini değiştirmeniz gerekmez. Ayrıca, farklı sürümlerini hedefleyen framework'ün projeleri içeren bir çözüm oluşturabilirsiniz. Çerçeve hedefleme ayrıca uygulamanın yalnızca belirtilen çerçeve sürümünde kullanılabilir olan işlevleri kullanmasının garantilenmesine yardımcı olur.
+Bu sürümünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], sürümünü belirtebilirsiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] uygulamanız için gerekli olmasıdır. Bu nedenle, bu sürümü kullanmak istiyorsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] önceki bir sürümde başlatılan bir projeyi geliştirmeye devam etmek için çerçeve hedefini değiştirmeniz gerekmez. Ayrıca, farklı sürümlerini hedefleyen framework'ün projeleri içeren bir çözüm oluşturabilirsiniz. Çerçeve hedefleme ayrıca uygulamanın yalnızca belirtilen çerçeve sürümünde kullanılabilir olan işlevleri kullanmasının garantilenmesine yardımcı olur.
 
 > [!TIP]
-> Ayrıca, farklı platformlar için uygulamaları hedefleyebilirsiniz. Daha fazla bilgi için bkz. [Çoklu hedefleme](../msbuild/msbuild-multitargeting-overview.md)
+> Ayrıca, farklı platformlar için uygulamaları hedefleyebilirsiniz. Daha fazla bilgi için [çoklu sürüm desteği](../msbuild/msbuild-multitargeting-overview.md)
 
 ## <a name="framework-targeting-features"></a>Çerçeve hedefleme özellikleri
  Çerçeve hedefleme şu özellikleri içerir:
 
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]önceki bir sürümünü hedefleyen bir projeyi açtığınızda, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] otomatik olarak yükseltebilir veya hedefi olduğu gibi bırakabilir.
+- Önceki bir sürümünü hedefleyen bir proje açtığınızda [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] otomatik olarak bu yükseltebilir veya hedefi olduğu gibi bırakın.
 
-- Bir proje oluşturduğunuzda, hedeflemek istediğiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü belirtebilirsiniz.
+- Bir proje oluşturduğunuzda, sürümünü belirtebilirsiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hedeflemek istediğiniz.
 
-- Var olan bir projenin hedeflediği [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü değiştirebilirsiniz.
+- Sürümünü değiştirebilirsiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] varolan bir projenin hedefler.
 
-- Aynı çözümdeki birçok projenin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] farklı bir sürümünü hedefleyebilirsiniz.
+- Farklı bir sürümünü hedefleyebilirsiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] aynı çözümdeki çeşitli projelerin her birinde içinde.
 
-- Bir projenin hedeflediği [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü değiştirdiğinizde [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], başvurularda ve yapılandırma dosyalarında gerekli değişiklikleri yapar.
+- Sürümünü değiştirdiğinizde [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , bir projenin hedeflediği [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] başvurular ve yapılandırma dosyalarında gerekli değişiklikleri yapar.
 
-  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]önceki bir sürümünü hedefleyen bir projede çalışırken, Visual Studio geliştirme ortamını dinamik olarak aşağıdaki gibi değiştirir:
+  Önceki bir sürümünü hedefleyen bir proje üzerinde çalışırken [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], Visual Studio dinamik olarak geliştirme ortamını aşağıdaki gibi değişir:
 
-- **Yeni proje** iletişim kutusu, yeni **öğe Ekle** Iletişim kutusu, **Yeni Başvuru Ekle** iletişim kutusu ve hedeflenen sürümde kullanılamayan seçimleri atlamak için **hizmet başvurusu Ekle** iletişim kutusu içindeki öğelere filtre uygular.
+- Öğelere **yeni proje** iletişim kutusu, **Yeni Öğe Ekle** iletişim kutusu, **Yeni Başvuru Ekle** iletişim kutusu ve **hizmetBaşvurusuEkle** hedef sürümde bulunmayan seçimleri atlamak için iletişim kutusu.
 
-- **Araç kutusundaki** özel denetimleri filtreleyerek, hedeflenen sürümde mevcut olmayan olanları kaldırabilir ve birden fazla denetim kullanılabilir olduğunda yalnızca en güncel denetimleri gösterebilirsiniz.
+- Özel denetimlerinde filtreler **araç kutusu** hedeflenen sürümde olmayanları kaldırın ve yalnızca göstermek için birden çok denetim uygun olduğunda en güncel kontrol eder.
 
 - Bu, hedeflenen sürümde olmayan dil özelliklerini atlamak için Intellisense'e filtre uygular.
 
-- **Özellikler** penceresindeki özellikleri, hedeflenen sürümde mevcut olmayan olanları atlamak için filtreler.
+- Özelliklere **özellikleri** hedeflenen sürümde olmayanları atlamak için penceresi.
 
 - Bu, hedeflenen sürümde kullanılabilir olmayan seçenekleri atlamak için menü seçeneklerine filtre uygular.
 
@@ -60,23 +60,23 @@ Bu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]sürümünde, uygulamanız için 
 > Çerçeve hedefleme, uygulamanızın doğru şekilde çalışacağını garanti etmez. Hedeflenen sürümde çalışacağından çalıştığından emin olmak için uygulamanızı test etmeniz gerekir. .NET Framework 2. 0 ' daha eski framework sürümlerini hedefleyemezsiniz.
 
 ## <a name="selecting-a-target-framework-version"></a>Hedef Framework sürüm seçme
- Bir proje oluşturduğunuzda, **Yeni proje** iletişim kutusunda hedef [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü seçin. Kullanılabilir proje şablonları listesinde, seçime göre filtrelenir. Mevcut bir projede, proje özellikleri iletişim kutusunda hedef [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
+ Bir proje oluşturduğunuzda, hedef seçin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünde **yeni proje** iletişim kutusu. Kullanılabilir proje şablonları listesinde, seçime göre filtrelenir. Varolan bir projede, hedef değiştirebilirsiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünü Proje Özellikleri iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: .NET Framework sürümü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
 
 > [!NOTE]
-> Visual Studio 'nun Express sürümlerinde, **Yeni proje** iletişim kutusunda hedef Framework 'ü ayarlayamazsınız.
+> Visual Studio'nun Express sürümlerinde hedef Framework'ü olarak ayarlanamıyor **yeni proje** iletişim kutusu.
 
 ## <a name="resolving-system-and-user-assembly-references"></a>Sistem ve kullanıcı derleme başvurularını çözümleme
- Bir .NET Framework sürümünü hedeflemek için önce uygun derleme başvurularını yüklemeniz gerekir. 2,0, 3,0 ve 3,5 .NET Framework sürümleri için derleme başvuruları, [Microsoft Indirme merkezi 'nden Microsoft Visual Studio](https://www.microsoft.com/download/details.aspx?id=25150) Web sitesinden indirebileceğiniz .NET Framework 3,5 SP1 'e dahildir. .NET Framework 3,5 Istemci profili için derleme başvuruları, .NET Framework 4, .NET Framework 4 Istemci profili ve Silverlight, [Visual Studio İndirmeleri](https://go.microsoft.com/fwlink/?LinkId=179687) Web sitesinden de kullanılabilir.
+ Bir .NET Framework sürümünü hedeflemek için önce uygun derleme başvurularını yüklemeniz gerekir. .NET Framework sürüm 2.0, 3.0 ve 3.5 için derleme başvuruları karşıdan yükleyebileceğiniz .NET Framework 3.5 SP1, dahil edilecek [Microsoft Download Center, Microsoft Visual Studio](https://www.microsoft.com/download/details.aspx?id=25150) Web sitesi. .NET Framework 3.5 istemci profili, .NET Framework 4, .NET Framework 4 istemci profili ve Silverlight için derleme başvuruları web'da ayrıca [Visual Studio indirmeleri](https://msdn.microsoft.com/vstudio/bb984878.aspx) Web sitesi.
 
 > [!NOTE]
-> .NET Framework istemci profili, kitaplıkların ve özelliklerin sınırlı bir kümesini sağlayan .NET Framework'ün bir alt kümesidir. İstemci profilleri hakkında daha fazla bilgi için bkz. [.NET Framework Client Profile](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1).
+> .NET Framework istemci profili, kitaplıkların ve özelliklerin sınırlı bir kümesini sağlayan .NET Framework'ün bir alt kümesidir. İstemci profilleri hakkında daha fazla bilgi için bkz. [.NET Framework istemci profili](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1).
 
- **Başvuru Ekle** iletişim kutusu, bir projeye yanlışlıkla eklenememesi için hedef [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümüyle ilgili olmayan sistem derlemelerini devre dışı bırakır. (Sistem derlemeleri [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünde yer alan. dll dosyalarıdır.) Hedeflenen sürümden daha sonraki bir çerçeve sürümüne ait olan başvurular çözümlenmeyecektir ve bu tür bir başvuruya bağlı olan denetimler eklenemez. Böyle bir başvuruyu etkinleştirmek istiyorsanız, projenin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hedefini başvuruyu içeren bir tane olarak sıfırlayın.  Daha fazla bilgi için bkz. [Proje tasarımcısına giriş](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
+ **Başvuru Ekle** iletişim kutusu, hedefine ait olmayan sistem derlemelerini devre dışı bırakır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürüm böylece bunlar yanlışlıkla bir projeye eklenemez. (Sistem derlemeleri [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümünde yer alan. dll dosyalarıdır.) Hedeflenen sürümden daha sonraki bir çerçeve sürümüne ait olan başvurular çözümlenmeyecektir ve bu tür bir başvuruya bağlı olan denetimler eklenemez. Böyle bir başvuruyu etkinleştirmek istiyorsanız, sıfırlama [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hedef başvuru içeren bir proje.  Daha fazla bilgi için [Proje Tasarımcısı giriş](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
 
- Derleme başvuruları hakkında daha fazla bilgi için bkz. [tasarım zamanında derlemeleri çözme](../msbuild/resolving-assemblies-at-design-time.md).
+ Derleme başvuruları hakkında daha fazla bilgi için bkz: [tasarım zamanında derlemeleri çözme](../msbuild/resolving-assemblies-at-design-time.md).
 
 ## <a name="enabling-linq"></a>LINQ'i etkinleştirme
- .NET Framework 3.5 veya sonraki sürümler, bir System.Core başvurusu ve bir proje düzeyi içeri aktarma (yalnızca Visual Basic'te) System.Linq hedeflediğinizde otomatik olarak eklenir. LINQ özelliklerini kullanmak istiyorsanız, ayrıca Option Infer (yalnızca Visual Basic'te) açmanız gerekir. Hedefi önceki bir .NET Framework sürümü ile değiştirirseniz başvuru ve içe aktarma otomatik olarak kaldırılır. Daha fazla bilgi için bkz. [nasıl yapılır: LINQ projesi oluşturma](https://msdn.microsoft.com/library/a929e653-09a3-44be-881f-68ca33f192b2).
+ .NET Framework 3.5 veya sonraki sürümler, bir System.Core başvurusu ve bir proje düzeyi içeri aktarma (yalnızca Visual Basic'te) System.Linq hedeflediğinizde otomatik olarak eklenir. LINQ özelliklerini kullanmak istiyorsanız, ayrıca Option Infer (yalnızca Visual Basic'te) açmanız gerekir. Hedefi önceki bir .NET Framework sürümü ile değiştirirseniz başvuru ve içe aktarma otomatik olarak kaldırılır. Daha fazla bilgi için [nasıl yapılır: bir LINQ projesi oluşturma](https://msdn.microsoft.com/library/a929e653-09a3-44be-881f-68ca33f192b2).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 Çoklu [hedefleme](../msbuild/msbuild-multitargeting-overview.md)

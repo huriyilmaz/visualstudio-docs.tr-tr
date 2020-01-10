@@ -11,17 +11,17 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 33689ed44f4228411243d3b9716a2407b751d32b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 14bced870cd24badcaf2a687fc4a1a2edeb740c0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300638"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851014"
 ---
 # <a name="concurrency-visualizer-sdk"></a>Eşzamanlılık Görselleştiricisi SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzamanlılık Görselleştiricisi SDK 'sını kullanarak kaynak kodunuzu gösterebilirsiniz. Ek verileri kodunuzda aşamalar ve olaylarla ilişkilendirebilirsiniz. Bu ek görselleştirmeler *işaretçiler*olarak bilinir.  Tanıtım amaçlı bir anlatım için bkz. [Eşzamanlılık Görselleştiricisi SDK 'Sını tanıtma](https://go.microsoft.com/fwlink/?LinkId=235405).
+Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzamanlılık Görselleştiricisi SDK 'sını kullanarak kaynak kodunuzu gösterebilirsiniz. Ek verileri kodunuzda aşamalar ve olaylarla ilişkilendirebilirsiniz. Bu ek görselleştirmeler *işaretçiler*olarak bilinir.  Tanıtım amaçlı bir anlatım için bkz. [Eşzamanlılık Görselleştiricisi SDK 'Sını tanıtma](https://blogs.msdn.com/b/visualizeparallel/archive/2011/10/17/introducing-the-concurrency-visualizer-sdk.aspx).
 
 ## <a name="properties"></a>Özellikler
  Bayraklar, yayılma ve mesajlar her biri iki özelliğe sahiptir: Kategori ve önem derecesi. [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunda, görüntülenen işaretçiler kümesini filtrelemek için bu özellikleri kullanabilirsiniz. Ayrıca, bu özellikler işaretçiler görsel gösterimini etkiler. Örneğin, önemli olduğunu göstermek için bayrakların boyutu kullanılır. Ayrıca, kategori göstermek için renk kullanılır.

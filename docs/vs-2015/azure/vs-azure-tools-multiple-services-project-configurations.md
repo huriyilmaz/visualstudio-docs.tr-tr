@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 70217cc4c83a1f281e8a2fdebec404fa9757bf01
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a151e16537eb143f27e9fd518cdc2495ac954563
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299022"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851380"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Visual Studio'da Azure projenizi birden çok hizmet yapılandırması kullanacak şekilde yapılandırma
 
@@ -51,13 +51,13 @@ Bu özelliği, Visual Studio 'Nun HTTP uç noktaları veya HTTPS uç noktaları 
 
 Zaten bir HTTPS uç noktası eklediyseniz, HTTPS uç noktası seçeneği varsayılan olarak etkindir ve Visual Studio, hata ayıklamaya başladığınızda, HTTP uç noktanızın bir tarayıcısına ek olarak, her iki başlatma seçeneğinin de etkinleştirildiğinden bu uç nokta için bir tarayıcı başlatır.
 
-### <a name="diagnostics"></a>Tanılama
+### <a name="diagnostics"></a>Tanılamalar
 
 Varsayılan olarak, Web rolü için tanılama etkindir. Azure bulut hizmeti projesi ve depolama hesabı yerel depolama öykünücüsünü kullanacak şekilde ayarlanır. Azure 'a dağıtmaya hazırsanız, bunun yerine Azure Storage 'ı kullanmak için Oluşturucu düğmesini ( **...** ) seçebilirsiniz. Tanılama verilerini depolama hesabına isteğe bağlı olarak veya otomatik olarak zamanlanmış aralıklarla aktarabilirsiniz. Azure Tanılama hakkında daha fazla bilgi için bkz. [azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirme](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
-## <a name="settings-page"></a>Ayarları sayfası
+## <a name="settings-page"></a>Ayarlar sayfası
 
-**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](https://go.microsoft.com/fwlink?LinkID=171026)tarafından sunulan sınıfları kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir, özellikle [Getconfigurationsettingvalue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) yöntemi.
+**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](https://msdn.microsoft.com/library/azure/dn602775(v=azure.11).aspx)tarafından sunulan sınıfları kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir, özellikle [Getconfigurationsettingvalue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) yöntemi.
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Depolama hesabı için bağlantı dizesi yapılandırma
 

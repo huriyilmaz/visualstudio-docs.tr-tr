@@ -13,12 +13,12 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bcd5a4996db4a5e374baabe4f52d5fd1dbac2e5e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e590af12e8979d16a946339cae530fd5ccc1b08d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301119"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850733"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 Metin Şablonu Yazma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -203,7 +203,7 @@ private void WriteSquareLine(int i)
 
  Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
 
-### <a name="namespaces"></a>{1&gt;Ad Alanları&lt;1}
+### <a name="namespaces"></a>{1&gt;Ad alanları&lt;1}
  İçeri aktarma yönergesi, içindeki C# `using` yan tümcesiyle veya Visual Basic `imports` yan tümcesinde aynıdır. Tam nitelikli bir ad kullanmadan kodunuzdaki türlere başvurabileceğiniz bir kod sağlar:
 
 ```
@@ -242,7 +242,7 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](https://go.microsoft.com/fwlink/?LinkId=178765) ' yi de kullanabilirsiniz.
+ **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) ' yi de kullanabilirsiniz.
 
  **Model dosyasını diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../includes/dsl-md.md)], bir modeli diyagram veya Windows formu olarak düzenlemenize olanak sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcılarıyla tartışmanızı kolaylaştırır. [!INCLUDE[dsl](../includes/dsl-md.md)] Ayrıca, modelin yapısını yansıtan türü kesin belirlenmiş sınıflar kümesi de oluşturur. Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
 

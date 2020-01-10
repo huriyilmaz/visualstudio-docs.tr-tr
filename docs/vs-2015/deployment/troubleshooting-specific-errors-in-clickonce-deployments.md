@@ -20,12 +20,12 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c66a25830e34571648727bd6ec71791e5e637ca8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9a27a2fc17f9d3450a20596d53695070bd84f0f2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294738"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850609"
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce Dağıtımları İçinde Belirli Hataları Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -105,9 +105,9 @@ Bu konu, bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulaması 
  Bir URL ile yayınlıyorsanız, hedef bilgisayarda FrontPage Server Extensions 'ın etkinleştirildiğinden emin olun.  
   
 #### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>Hata Iletisi: '\<site > ' Web sitesi oluşturulamıyor. FrontPage Server uzantılarıyla iletişim kurmak için bileşenler yüklü değil.  
- Yayımlamakta olduğunuz makinede Microsoft Visual Studio Web yazma bileşeninin yüklü olduğundan emin olun. Express kullanıcıları için bu bileşen varsayılan olarak yüklenmez. Daha fazla bilgi için bkz. [http://go.microsoft.com/fwlink/?LinkId=102310](https://go.microsoft.com/fwlink/?LinkId=102310).  
+ Yayımlamakta olduğunuz makinede Microsoft Visual Studio Web yazma bileşeninin yüklü olduğundan emin olun. Express kullanıcıları için bu bileşen varsayılan olarak yüklenmez. Daha fazla bilgi için bkz. [http://go.microsoft.com/fwlink/?LinkId=102310](https://support.microsoft.com/kb/945358/en-us).  
   
-#### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>Hata Iletisi: ' Microsoft. Windows. Common-Controls, Version = 6.0.0.0, Culture = *, PublicKeyToken = 6595b64144ccf1df, ProcessorArchitecture =\*, Type = Win32 ' dosyası bulunamadı  
+#### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>Hata iletisi: dosya bulunamadı. ' Microsoft.Windows.Common-denetimleri, sürüm= 6.0.0.0, kültür =\*, PublicKeyToken 6595b64144ccf1df, ProcessorArchitecture =\*, türü= win32'  
  Bu hata iletisi, görsel stiller etkinken bir WPF uygulaması yayımlamaya çalıştığınızda görüntülenir. Bu sorunu çözmek için bkz. [nasıl yapılır: görsel STILLERLE WPF uygulaması yayımlama etkin](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md).  
   
 ## <a name="using-mage"></a>Mage kullanma  

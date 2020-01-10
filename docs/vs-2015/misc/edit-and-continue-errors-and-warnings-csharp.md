@@ -61,12 +61,12 @@ ms.assetid: c0e12b0a-8009-4a4a-979f-c804a91a5d9b
 caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d0865e06c5abb5faccce51a2bc38bb223f7fa3eb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eec40bc584e831f8b43b79c9bc7cee5a48a291aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299280"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850969"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>Düzenle ve Devam Et Hataları ve Uyarıları (C#)
 Visual C# Edit ve Continue içinde izin verilmeyen bir kod bölümüne düzenleme yaptınız.  
@@ -75,7 +75,7 @@ Visual C# Edit ve Continue içinde izin verilmeyen bir kod bölümüne düzenlem
   
  Bir sınıfın ortak yapısını etkileyen bildirime dayalı kod düzenlemeleri genellikle yasaktır ve bir yöntem, Özellik gövdesi veya bir sınıf içindeki özel bildirimlere yaptığınız bazı düzenlemelere izin verilmez. Mümkün olduğunda, Düzenle ve devam et açık gri olarak düzenlenemeyen kodu işaretler ve bir hata iletisi görüntüler.  
   
- [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]Düzenle ve devam et 'de desteklenen düzenlemeler hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC#()](../debugger/supported-code-changes-csharp.md). Belirli bir hata veya uyarı hakkında daha fazla bilgiye ihtiyacınız varsa, MSDN [Visual C# IDE forumundan](https://go.microsoft.com/fwlink/?LinkId=214693)arama veya gönderi gönderebilirsiniz.  
+ [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]Düzenle ve devam et 'de desteklenen düzenlemeler hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC#()](../debugger/supported-code-changes-csharp.md). Belirli bir hata veya uyarı hakkında daha fazla bilgiye ihtiyacınız varsa, MSDN [Visual C# IDE forumundan](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads)arama veya gönderi gönderebilirsiniz.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   

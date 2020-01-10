@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0ab8aaff0ddf793fe64dd3695adc58c281290f98
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 37db8a095e8f7b420f14df29de30f265aee49bb6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295696"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850815"
 ---
 # <a name="memory-usage-without-debugging"></a>Hata Ayıklayıcı Olmadan Bellek Kullanımı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,10 +81,10 @@ ms.locfileid: "74295696"
   
 |||  
 |-|-|  
-|![1. adım](../profiling/media/procguid-1.png "ProcGuid_1")|Bağlantı metni, anlık görüntü çekilirken bellekteki toplam bayt sayısını gösterir.<br /><br /> Tür örneklerinin toplam boyutuna göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için bu bağlantıyı seçin.|  
-|![2. adım](../profiling/media/procguid-2.png "ProcGuid_2")|Bağlantı metni, anlık görüntü çekilirken bellekteki toplam nesne sayısını gösterir.<br /><br /> Türlerin örnek sayısına göre sıralanan bir anlık görüntü ayrıntıları raporunu göstermek için bu bağlantıyı seçin.|  
-|![3. adım](../profiling/media/procguid-3.png "ProcGuid_3")|Bağlantı metni, bu anlık görüntünün şu andaki toplam nesne boyutu ve önceki anlık görüntünün toplam boyutu arasındaki farkı gösterir.<br /><br /> Bu anlık görüntünün bellek boyutu öncekinden daha büyükse ve boyut daha küçükse negatif bir sayı olduğunda bağlantı metni pozitif bir sayıdır. Bağlantı metni **taban çizgisi** , bu anlık görüntünün tanılama oturumunda ilk olduğunu belirtir; **Fark** , farkın sıfır olduğunu gösterir.<br /><br /> Bu bağlantıyı, türlerin örneklerinin toplam boyutundaki farka göre sıralanmış bir anlık görüntü fark raporu göstermek için seçin.|  
-|![4. adım](../profiling/media/procguid-4.png "ProcGuid_4")|Bağlantı metni, bu anlık görüntüdeki toplam bellek nesnesi sayısı ve önceki anlık görüntüdeki nesne sayısı arasındaki farkı gösterir.<br /><br /> Türlerin toplam örnek sayısı içindeki farka göre sıralanan bir anlık görüntü fark raporu göstermek için bu bağlantıyı seçin.|  
+|![1. Adım](../profiling/media/procguid-1.png "ProcGuid_1")|Bağlantı metni, anlık görüntü çekilirken bellekteki toplam bayt sayısını gösterir.<br /><br /> Tür örneklerinin toplam boyutuna göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için bu bağlantıyı seçin.|  
+|![2. Adım](../profiling/media/procguid-2.png "ProcGuid_2")|Bağlantı metni, anlık görüntü çekilirken bellekteki toplam nesne sayısını gösterir.<br /><br /> Türlerin örnek sayısına göre sıralanan bir anlık görüntü ayrıntıları raporunu göstermek için bu bağlantıyı seçin.|  
+|![3. Adım](../profiling/media/procguid-3.png "ProcGuid_3")|Bağlantı metni, bu anlık görüntünün şu andaki toplam nesne boyutu ve önceki anlık görüntünün toplam boyutu arasındaki farkı gösterir.<br /><br /> Bu anlık görüntünün bellek boyutu öncekinden daha büyükse ve boyut daha küçükse negatif bir sayı olduğunda bağlantı metni pozitif bir sayıdır. Bağlantı metni **taban çizgisi** , bu anlık görüntünün tanılama oturumunda ilk olduğunu belirtir; **Fark** , farkın sıfır olduğunu gösterir.<br /><br /> Bu bağlantıyı, türlerin örneklerinin toplam boyutundaki farka göre sıralanmış bir anlık görüntü fark raporu göstermek için seçin.|  
+|![4. Adım](../profiling/media/procguid-4.png "ProcGuid_4")|Bağlantı metni, bu anlık görüntüdeki toplam bellek nesnesi sayısı ve önceki anlık görüntüdeki nesne sayısı arasındaki farkı gösterir.<br /><br /> Türlerin toplam örnek sayısı içindeki farka göre sıralanan bir anlık görüntü fark raporu göstermek için bu bağlantıyı seçin.|  
   
 ## <a name="BKMK_Snapshot_reports"></a>Anlık görüntü raporları  
  ![Bellek kullanımı anlık görüntü raporu](../profiling/media/memuse-snapshotreport-all.png "MEMUSE_SnapshotReport_All")  
@@ -207,4 +207,4 @@ ms.locfileid: "74295696"
  [Uygulama performansını analiz](https://msdn.microsoft.com/library/58acb30b-8428-41a6-b195-b0fdedb89575)   
  [Performans ve tanılama araçlarını çalıştırın](https://msdn.microsoft.com/library/788279d8-f56b-40a0-9bef-facc3dfba471)   
  [ C++, C#Ve Visual Basic kullanarak Windows Mağazası uygulamaları için en iyi performans uygulamaları](https://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
- [Visual Studio 'da yeni bellek kullanımı aracı ile bellek sorunlarını tanılama](https://go.microsoft.com/fwlink/p/?LinkId=394706)
+ [Visual Studio 'da yeni bellek kullanımı aracı ile bellek sorunlarını tanılama](https://blogs.msdn.com/b/visualstudioalm/archive/2014/04/02/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio.aspx)

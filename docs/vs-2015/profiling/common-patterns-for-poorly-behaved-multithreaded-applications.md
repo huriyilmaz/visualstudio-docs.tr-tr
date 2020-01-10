@@ -13,12 +13,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b103c2611216a5024d600aafba212919592ff3b3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 414b5ea6a6cf6bf0277ad8d2df51b20c39f558e1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300666"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852161"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Hatalı Davranan Çok İş Parçacıklı Uygulamalar için Ortak Desenler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Eşzamanlılık görselleştiricisi, geliştiricilerin çok iş parçacıklı bi
   
  Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi de bu belirtiyi CPU kullanımı görünümünde kullanıma sunabileceğinden, burada birden çok iş parçacığı varlığına rağmen uygulama yalnızca bir mantıksal çekirdek tüketir.  
   
- Daha fazla bilgi için, MSDN blog Web sitesindeki Windows bloguna yönelik Parallel ım Shafi 'un [paralel performans araçları](https://go.microsoft.com/fwlink/?LinkID=160569) ' nda "performans kalıbı 1: kilit çekişmesini tanımlama" bölümüne bakın.  
+ Daha fazla bilgi için, MSDN blog Web sitesindeki Windows bloguna yönelik Parallel ım Shafi 'un [paralel performans araçları](https://blogs.msdn.com/hshafi) ' nda "performans kalıbı 1: kilit çekişmesini tanımlama" bölümüne bakın.  
   
  ![Kilit çakışması](../profiling/media/lockcontention-2.png "LockContention_2")  
   

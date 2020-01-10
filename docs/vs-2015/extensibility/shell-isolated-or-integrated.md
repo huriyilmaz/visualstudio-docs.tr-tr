@@ -14,17 +14,17 @@ ms.assetid: c64a9bf0-9bf8-45c3-8fa2-306fa6cab66a
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 0db0ab2c2a97f7cedde5b9b3a5ab925467a25146
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: aa346ebfe321e4672ea3fa71a4dcc872ebf22cda
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300486"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850227"
 ---
 # <a name="shell-isolated-or-integrated"></a>Kabuk (Yalıtılmış veya Tümleşik)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kendi Visual Studio tabanlı uygulamanızı tümleşik ya da yalıtılmış modda oluşturabilirsiniz. Tümleşik modda, uygulamanıza ek olarak birçok Visual Studio özelliği de mevcuttur. Yalıtılmış modda, kendi uzantınızla birlikte dağıtmak istediğiniz Visual Studio özelliklerinin bir alt kümesini seçersiniz.  
+Kendi Visual Studio tabanlı uygulamanızı tümleşik ya da yalıtılmış modda oluşturabilirsiniz. Tümleşik modda, uygulamanıza ek olarak birçok Visual Studio özelliği kullanılabilir. Yalıtılmış modda, kendi uzantınızla birlikte dağıtmak istediğiniz Visual Studio özelliklerinin bir alt kümesini seçebilirsiniz.  
   
 ## <a name="integrated-mode"></a>Tümleşik mod  
  Tümleşik mod, kullanıcılarınızın özel araçlarınızla birlikte standart Visual Studio özelliklerini kullanmasına olanak sağlar. Tümleşik Kabuk öncelikle programlama dillerini ve yazılım geliştirme araçlarını barındırmak için tasarlanmıştır.  
@@ -55,7 +55,7 @@ Kendi Visual Studio tabanlı uygulamanızı tümleşik ya da yalıtılmış modd
 > - Müşterilerinizin, Visual Studio ile tümleşik veya yalıtılmış Kabuğu en azından kabuk yazılımının Microsoft son kullanıcı lisans koşullarına kadar koruduğu koşulları kabul etmesi için kendi EULA 'Sı gerekir  
   
 ## <a name="additional-resources"></a>Ek Kaynaklar  
- Yeniden dağıtılabilir paketler hakkında daha fazla bilgi için bkz. [Visual Studio genişletilebilirlik indirmeleri](https://go.microsoft.com/fwlink/?LinkID=119298) Web sitesi.  
+ Yeniden dağıtılabilir paketler hakkında daha fazla bilgi için bkz. [Visual Studio genişletilebilirlik indirmeleri](https://msdn.microsoft.com/vstudio/bb984878.aspx) Web sitesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Uzantıları Gönderme](../extensibility/shipping-visual-studio-extensions.md)

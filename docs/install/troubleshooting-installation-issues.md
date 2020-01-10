@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 24a6a642528fbf8fed7b8000434a963e32cc85ee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe581d9c754ee78f66771901661e8870fd91b4b3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594493"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849587"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio yükleme ve yükseltme sorunlarını giderme
 
@@ -127,11 +127,11 @@ Bir [ağ yüklemesiyle](create-a-network-installation-of-visual-studio.md)ilgili
 
 Kurulum günlükleri, çoğu yükleme sorunlarını gidermek için gereklidir. Ne zaman gönderdiğiniz bir sorun kullanarak [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) Visual Studio Yükleyicisi ', bu günlükleri otomatik olarak, rapora dahil edilir.
 
-Microsoft Support başvurursanız kullanarak bu ayar günlüklerini göndermeniz gerekebilir [Microsoft Visual Studio ve .NET Framework günlük toplama aracı](https://aka.ms/vscollect). Günlük toplama aracı, Visual Studio tarafından yüklenen .NET Framework, Windows SDK ve SQL Server dahil tüm bileşenlerin kurulum günlüklerini toplar. Ayrıca, bilgisayar bilgilerini, Windows Installer envanterini ve Visual Studio yükleyicisi, Windows Installer ve sistem geri yükleme için Windows olay günlüğü bilgilerini toplar.
+Microsoft Support başvurursanız kullanarak bu ayar günlüklerini göndermeniz gerekebilir [Microsoft Visual Studio ve .NET Framework günlük toplama aracı](https://www.microsoft.com/download/details.aspx?id=12493). Günlük toplama aracı, Visual Studio tarafından yüklenen .NET Framework, Windows SDK ve SQL Server dahil tüm bileşenlerin kurulum günlüklerini toplar. Ayrıca, bilgisayar bilgilerini, Windows Installer envanterini ve Visual Studio yükleyicisi, Windows Installer ve sistem geri yükleme için Windows olay günlüğü bilgilerini toplar.
 
 Günlükleri toplamak için:
 
-1. [Aracı indirmek](https://aka.ms/vscollect).
+1. [Aracı indirmek](https://www.microsoft.com/download/details.aspx?id=12493).
 2. Bir yönetici komut istemi açın.
 3. Çalıştırma `Collect.exe` aracı kaydettiğiniz dizinden.
 4. Ortaya çıkan Bul `vslogs.zip` dosyası, `%TEMP%` dizine, örneğin, `C:\Users\YourName\AppData\Local\Temp\vslogs.zip`.

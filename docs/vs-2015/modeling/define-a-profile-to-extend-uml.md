@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bdb6620f8d73bf7fae7b7dbb1b92af38e71345b6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b680c2e27b871e654618b4c0ada0904744751282
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295676"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850477"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>UML’yi genişletmek için profil tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -76,7 +76,7 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 6. Uzantı dosyasını, bilgisayarlarına yüklemek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diğer kullanıcılarına gönderin.
 
 ## <a name="AddProfile"></a>Visual Studio uzantısına profil ekleme
- Bir profil yüklemek ve diğer kullanıcılara göndermenize izin vermek için, profili bir Visual Studio uzantısına eklemeniz gerekir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](https://go.microsoft.com/fwlink/?LinkId=160780).
+ Bir profil yüklemek ve diğer kullanıcılara göndermenize izin vermek için, profili bir Visual Studio uzantısına eklemeniz gerekir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](https://msdn.microsoft.com/library/dd393694(VS.100).aspx).
 
 #### <a name="to-define-a-profile-in-a-new-visual-studio-extension"></a>Yeni bir Visual Studio uzantısında bir profil tanımlamak için
 
@@ -196,7 +196,7 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
     > [!NOTE]
     > Uzantıyı bir Visual Studio uzantısı projesi kullanarak oluşturuyorsanız, projeye yeni bir klasör eklemek için Çözüm Gezgini kullanın.
 
-3. Yeni dizinin adını, yerelleştirilmiş kültürün (Bulgarca için `bg` veya Fransızca için `fr`) ISO kısa kodu olarak değiştirin. `fr-CA`gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://go.microsoft.com/fwlink/?LinkId=160782)bakın.
+3. Yeni dizinin adını, yerelleştirilmiş kültürün (Bulgarca için `bg` veya Fransızca için `fr`) ISO kısa kodu olarak değiştirin. `fr-CA`gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx)bakın.
 
 4. Varsayılan profilinizin bir kopyasını yeni dizine ekleyin. Dosya adını değiştirmeyin.
 
@@ -220,7 +220,7 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 7. Uzantı projesini oluşturarak ya da önceki bölümlerde açıklandığı gibi tüm dosyaları sıkıştırarak Visual Studio uzantısı oluşturun.
 
 ## <a name="Schema"></a>Bir profilin yapısı
- UML profilleri için XSD dosyası aşağıdaki örnekte bulunabilir: [Stereotipler ve PROFILLER xsd olarak ayarlanıyor](https://go.microsoft.com/fwlink/?LinkID=213811). Profil dosyalarını düzenlemenize yardımcı olması için `.xsd` dosyasını içine yükleyebilirsiniz:
+ UML profilleri için XSD dosyası aşağıdaki örnekte bulunabilir: [Stereotipler ve PROFILLER xsd olarak ayarlanıyor](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples). Profil dosyalarını düzenlemenize yardımcı olması için `.xsd` dosyasını içine yükleyebilirsiniz:
 
  **%ProgramFiles%\Microsoft Visual Studio [sürüm] \Xml\Schemas**
 
@@ -349,7 +349,7 @@ Profilinizi bir paket veya modelde seçmeniz gerekir. Stereotipler daha sonra pa
 
 3. Sözdiziminin burada açıklandığı gibi olduğundan ve _sürücüde_gösterildiği gibi **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** .
 
-4. Hatalı uzantıyı kaldırın. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
+4. Hatalı uzantıyı kaldırın. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
 
    - Uzantı görünmezse bir sonraki öğeye bakın.
 
@@ -365,4 +365,4 @@ Profilinizi bir paket veya modelde seçmeniz gerekir. Stereotipler daha sonra pa
 6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md) [modelinizi, modellerinizi profiller ve Stereotipler](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [için standart stereotiplerle](../modeling/standard-stereotypes-for-uml-models.md) özelleştirin [örnek: stereotiplere göre renk UML ÖĞELERI](https://go.microsoft.com/fwlink/?LinkID=213841) örnek: [Stereotipler ayarlama, profiller xsd](https://go.microsoft.com/fwlink/?LinkID=213811)
+ [UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md) [modelinizi, modellerinizi profiller ve Stereotipler](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [için standart stereotiplerle](../modeling/standard-stereotypes-for-uml-models.md) özelleştirin [örnek: stereotiplere göre renk UML ÖĞELERI](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) örnek: [Stereotipler ayarlama, profiller xsd](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

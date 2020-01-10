@@ -23,12 +23,12 @@ caps.latest.revision: 48
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1ed9a341e1b0f7247175e62aceafc6051f83e8f9
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d0763f2cf86d94f96f6f9c907ee306c731994f22
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300161"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852084"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl Yapılır: Başvuru Yöneticisi'ni Kullanarak Başvuru Ekleme veya Kaldırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ Sizin, Microsoft veya başka bir şirketinizin geliştirdiği bileşenlere başv
 - Gözat; En Son alt grubu ile.
 
 ## <a name="assemblies-tab"></a>Derlemeler sekmesi
- **Derlemeler** sekmesi, başvuru için kullanılabilen tüm .NET Framework derlemeleri listeler. GAC içindeki derlemeler çalışma zamanı ortamının bir parçası olduğundan, **derlemeler** sekmesi genel derleme ÖNBELLEĞINDEN (GAC) herhangi bir derlemeyi listeetmez. GAC'de kayıtlı bir derlemeye başvuru içeren bir uygulamayı dağıtır ya da kopyalarsanız, derleme 'Yereli Kopyala' ayarına bakılmaksızın uygulama ile birlikte dağıtılmaz veya kopyalanmaz. Daha fazla bilgi için bkz. [Proje başvuruları](https://go.microsoft.com/fwlink/?LinkId=238512).
+ **Derlemeler** sekmesi, başvuru için kullanılabilen tüm .NET Framework derlemeleri listeler. GAC içindeki derlemeler çalışma zamanı ortamının bir parçası olduğundan, **derlemeler** sekmesi genel derleme ÖNBELLEĞINDEN (GAC) herhangi bir derlemeyi listeetmez. GAC'de kayıtlı bir derlemeye başvuru içeren bir uygulamayı dağıtır ya da kopyalarsanız, derleme 'Yereli Kopyala' ayarına bakılmaksızın uygulama ile birlikte dağıtılmaz veya kopyalanmaz. Daha fazla bilgi için bkz. [Proje başvuruları](https://msdn.microsoft.com/library/ez524kew.aspx).
 
  EnvDTE ad alanlarının herhangi birine (EnvDTE, EnvDTE80, EnvDTE90, EnvDTE90a veya EnvDTE100) el ile bir başvuru eklediğinizde, Özellikler penceresinde başvurunun 'Birlikte Çalışma Türlerini Katıştır' özelliğini False olarak ayarlayın. Bu özelliğin True olarak ayarlanması, katıştırılamayan belirli EnvDTE özellikleri nedeniyle derleme sorunlarına yol açabilir.
 
@@ -109,7 +109,7 @@ Sizin, Microsoft veya başka bir şirketinizin geliştirdiği bileşenlere başv
 
   - Aynı çözümdeki diğer proje dizinleri. ( **Projeler** sekmesini kullanarak bu derlemeleri bulabilirsiniz.)
 
-    \- veya-
+    \- veya -
 
 - Görüntülenecek derlemelerin konumunu belirten bir kayıt defteri anahtarı ayarlayın:
 
@@ -121,9 +121,9 @@ Sizin, Microsoft veya başka bir şirketinizin geliştirdiği bileşenlere başv
 
     64 bitlik bir işletim sistemi için, 32 bit kayıt defteri kovanında aşağıdaki kayıt defteri anahtarlarından birini ekleyin.
 
-  - [HKEY_CURRENT_USER \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+  - [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
 
-  - [HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
 
     *VersionMinimum* , uygulanan en düşük .NET Framework sürümüdür. *VersionMinimum* değeri v 3.0 Ise, AssemblyFoldersEx içinde belirtilen klasörler, .NET Framework 3,0 ve üstünü hedefleyen projeler için geçerlidir.
 

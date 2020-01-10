@@ -19,12 +19,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cb2b5a55f778b8025ea9da25713eca903f9cbf74
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 020535ac73c48be74e56100c7b6f9c49b69e50dc
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296213"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851310"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Visual C++ Kodu ile Çalışma (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -82,7 +82,7 @@ Sınıf Tasarımcısı, projenizdeki kod öğelerinin görsel gösterimini sağl
 - Sınıf Tasarımcısı bulmak için türün doğru kapsamda olduğundan emin olun. Kodda `using`, `imports`veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
 
 ### <a name="troubleshooting-other-error-messages"></a>Diğer hata Iletileri sorunlarını giderme
- Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyla ve uyarılarla ilgili yardım bulabilirsiniz. Bkz. [Visual Studio Sınıf Tasarımcısı Forumu](https://go.microsoft.com/fwlink/?linkid=160754).
+ Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyla ve uyarılarla ilgili yardım bulabilirsiniz. Bkz. [Visual Studio Sınıf Tasarımcısı Forumu](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1).
 
 ## <a name="limitations"></a>Kod öğeleri C++ için sınırlamalar
 

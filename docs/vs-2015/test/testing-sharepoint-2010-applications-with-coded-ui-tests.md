@@ -8,12 +8,12 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 73dd0e406e8e0a00260d922e38dee70135c3645d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b44e921a8e1ba13d3f0786d4633f942f94f3eaaa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298011"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851284"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ Kodlanmış UI testlerini bir SharePoint uygulamasına dahil etmek, Kullanıcı 
 - Visual Studio Enterprise
 
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>Kodlanmış UI testleri hakkında başka ne bilmeliyim?
- Kodlanmış UI testlerini kullanmanın avantajları hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 2012 – Bölüm 5 ' i kullanarak sürekli teslim Için](https://go.microsoft.com/fwlink/?LinkID=255196) [kodunuzu test etmek Için UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md) .
+ Kodlanmış UI testlerini kullanmanın avantajları hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 2012 – Bölüm 5 ' i kullanarak sürekli teslim Için](https://msdn.microsoft.com/library/jj159335.aspx) [kodunuzu test etmek Için UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md) .
 
  **Notlar**
 
@@ -114,7 +114,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 #### <a name="testing-silverlight-web-parts"></a>Silverlight Web parçalarını test etme
 
-1. Fiddler 'ı başlatın.
+1. Fiddler'ı Başlatın.
 
 2. Tarayıcı önbelleğini temizleyin. Bu gereklidir çünkü Silverlight UI Otomasyon Yardımcısı DLL 'sini içeren XAP dosyası tipik olarak önbelleğe alınır. Değiştirilen XAP dosyasının çekildiğinizden emin olmak istiyoruz, bu nedenle tarayıcı önbelleğini temizliyoruz.
 
@@ -137,11 +137,11 @@ uiGridKeyboardInputEdit.Text=value;
 
  [Kodlanmış UI testi için içerik dizini](https://blogs.msdn.microsoft.com/mathew_aniyan/2013/02/18/content-index-for-coded-ui-test/)
 
-### <a name="guidance"></a>Rehber
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5 Sistem testlerini otomatikleştirme](https://go.microsoft.com/fwlink/?LinkID=255196)
+### <a name="guidance"></a>Kılavuz
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5 Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="forum"></a>Forum
- [Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=254496)
+ [Visual Studio ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm/)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  Kod [Web performansınızı test etmek ve sharepoint 2010 ve 2013 uygulamalarında yük](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) testi [yapmak Için UI Otomasyonu kullanma](../test/use-ui-automation-to-test-your-code.md) SharePoint [çözümlerini oluşturma](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ve hata ayıklama](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) SharePoint [çözümlerini derleme ve hata ayıklama](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) SharePoint [uygulamalarının performansı profili](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8) oluşturma

@@ -17,12 +17,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ffb1298981481bde063de898dc81c02dad548888
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e9fa22a4ed52c3e0a1afdda0105716c0de9b3316
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297827"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851821"
 ---
 # <a name="property-pages-javascript"></a>Özellik Sayfaları, JavaScript
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "74297827"
 
  **Başlatılacak hata ayıklayıcı** Hata ayıklayıcı için varsayılan Konağı belirtir.
 
-- Uygulamayı Visual Studio konak bilgisayarında başlatmak için **yerel makine** ' yi seçin. Daha fazla bilgi için bkz. [Yerel makinede uygulamaları çalıştırma](https://go.microsoft.com/fwlink/?LinkId=234912).
+- Uygulamayı Visual Studio konak bilgisayarında başlatmak için **yerel makine** ' yi seçin. Daha fazla bilgi için bkz. [Yerel makinede uygulamaları çalıştırma](https://msdn.microsoft.com/library/windows/apps/hh441483(v=VS.85).aspx).
 
-- Simülatör 'da uygulamayı başlatmak için **simülatör** ' ı seçin. Daha fazla bilgi için bkz. [simülatörde uygulamaları çalıştırma](https://go.microsoft.com/fwlink/?LinkId=234913).
+- Simülatör 'da uygulamayı başlatmak için **simülatör** ' ı seçin. Daha fazla bilgi için bkz. [simülatörde uygulamaları çalıştırma](https://msdn.microsoft.com/library/windows/apps/hh441475(v=VS.85).aspx).
 
-- Uzak bir bilgisayarda uygulamayı başlatmak için **uzak makine** ' yi seçin. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [uzak makinede uygulamaları çalıştırma](https://go.microsoft.com/fwlink/?LinkId=234914).
+- Uzak bir bilgisayarda uygulamayı başlatmak için **uzak makine** ' yi seçin. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [uzak makinede uygulamaları çalıştırma](https://msdn.microsoft.com/library/windows/apps/hh441469(v=VS.85).aspx).
 
   **Uygulamayı Başlat** F5 tuşuna bastığınızda veya **Hata Ayıkla**, **hata ayıklamayı Başlat**' a tıkladığınızda uygulamanın başlatılıp başlatılmayacağını belirtir. Uygulamayı başlatmak için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. **Hayır**' ı seçerseniz, uygulamayı başlatmak için farklı bir yöntem kullanıyorsanız uygulamada hata ayıklamaya devam edebilirsiniz.
 

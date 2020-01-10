@@ -11,12 +11,12 @@ caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 23c6f008050cc2695a5b86d2164093823726a7b2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9b08035deec65c8c42fe875d380d9cc3d15533a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300656"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850263"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlılık Görselleştiricisi Komut Satırı Yardımcı Programı (CVCollectionCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCo
 |Çözümle|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|  
 |LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca başlatma komutu için geçerlidir.|Uygulamanın komut satırı bağımsız değişkenleri.|Yok.|  
 |OutDir|İzleme dosyalarının kaydedileceği dizini belirtir. Başlatma ve Iliştirme komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|  
-|Process|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|  
+|İşlem|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|  
 |Yapılandırma|Koleksiyon ayarlarının varsayılanlar dışında olmasını istiyorsanız, yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|  
   
 ## <a name="customizing-configuration-settings"></a>Yapılandırma ayarlarını özelleştirme  
@@ -71,8 +71,8 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCo
 |MinorVersion|Yapılandırma dosyasının ikincil sürümünü belirtir.|[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projeleri için 0 olmalıdır. 0 değilse, yardımcı program çalışmaz.|  
 |Includeenvsymbolpath|Ortam sembol yolunun (_NT_SYMBOL_PATH) kullanılıp kullanılmayacağını belirleyen bir değer ayarlar.|-True<br />-False|  
 |DeleteEtlsAfterAnalysis|Analiz tamamlandığında ETL dosyalarının silinip silinmediğini belirleyen bir değer ayarlar.|-True<br />-False|  
-|SymbolPath|Sembol sunucusunun yolunu belirtir. Daha fazla bilgi için bkz. [hata ayıklama sembol dosyalarını almak Için Microsoft sembol sunucusunu kullanma](https://go.microsoft.com/fwlink/?LinkID=149389).|Bir dizin adı veya URL 'SI.|  
-|İmleçleri|İşaretleyici sağlayıcılarının listesini içerir.|Sıfır veya daha fazla MarkerProvider öğesi içerebilir.|  
+|SymbolPath|Sembol sunucusunun yolunu belirtir. Daha fazla bilgi için bkz. [hata ayıklama sembol dosyalarını almak Için Microsoft sembol sunucusunu kullanma](https://support.microsoft.com/kb/311503).|Bir dizin adı veya URL 'SI.|  
+|İşaretler|İşaretleyici sağlayıcılarının listesini içerir.|Sıfır veya daha fazla MarkerProvider öğesi içerebilir.|  
 |MarkerProvider|Tek bir işaret sağlayıcısını belirtir.|Şu öğeleri içermelidir:<br /><br /> -Düzey<br />-GUID<br />-Ad<br /><br /> Şu öğeleri içerebilir:<br /><br /> -Kategoriler<br />-IsEnabled|  
 |Düzey|Bir MarkerProvider 'ın önem düzeyini ayarlar.|-Düşük<br />-Normal<br />-Yüksek<br />-Kritik<br />-Her şey|  
 |Guid|ETW işaretleyici sağlayıcısının genel benzersiz tanımlayıcısı.|BIR GUıD.|  

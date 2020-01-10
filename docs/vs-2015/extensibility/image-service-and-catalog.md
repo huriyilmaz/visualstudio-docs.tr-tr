@@ -6,12 +6,12 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 0f509ca93b6802fc99a21143360227d64f8db319
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 42c42a845ef98fb3a6ebe9b5e017ae2783365f1b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301179"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851358"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü Hizmeti ve Kataloğu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -105,7 +105,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||  
 |-|-|  
 |**Subelement**|**Tanım**|  
-|{1&gt;İçeri Aktar&lt;1}|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|  
+|Al|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|  
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|  
 |Kimlik|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|  
 |Dize|Sembol rastgele bir dize değerini temsil eder|  
@@ -151,7 +151,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |Kimlik|Istenir Görüntü adının KIMLIK kısmı|  
 |Allowcolorınversion|[İsteğe bağlı, varsayılan doğru] Görüntünün, koyu bir arka planda kullanıldığında, renkleri program aracılığıyla ters çevrimeyeceğini gösterir.|  
 
- **Kaynaktaki**  
+ **Kaynak**  
 
  \<Source > öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.  
 
@@ -173,7 +173,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 ||||  
 |-|-|-|  
 |**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|  
-|\<boyutu >|Value|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|  
+|\<boyutu >|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|  
 |\<SizeRange >|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|  
 |\<boyutlar >|Width, Height|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|  
 |\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|  
@@ -187,7 +187,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||  
 |-|-|  
 |**Öznitelik**|**Tanım**|  
-|Type|Istenir Yerel kaynağın türü, XAML veya PNG|  
+|Tür|Istenir Yerel kaynağın türü, XAML veya PNG|  
 |Kimlik|Istenir Yerel kaynağın tamsayı KIMLIĞI bölümü|  
 
  **'I**  
@@ -650,7 +650,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. Kodu, güncelleştirilmiş eşleme aracılığıyla takma ad istemek üzere görüntü hizmetini kullanacak şekilde güncelleştirin. (Bu, yönetilen kod için **çapraz görüntülerin** güncelleştirilmesi veya görüntü hizmetinden hbit eşlemler ya da hcons istemek ve yerel kod için bu dosyaları iletmek anlamına gelebilir.)  
 
 ## <a name="testing-your-images"></a>Görüntülerinizi test etme  
- Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](https://msdn.microsoft.com/library/bb166441.aspx)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](https://aka.ms/VSImageThemeTools)bulunabilir.  
+ Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](https://msdn.microsoft.com/library/bb166441.aspx)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](https://docs.microsoft.com/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015&redirectedfrom=MSDN)bulunabilir.  
 
 ## <a name="additional-resources"></a>Ek kaynaklar  
 
@@ -949,7 +949,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupError||StatusError|  
     |GlyphBscFile||Sınıfdosyası|  
     |GlyphAssembly||Başvuru|  
-    |GlyphLibrary||Kitaplık|  
+    |GlyphLibrary||Kitaplığı|  
     |GlyphVBProject||VBProjectNode|  
     |GlyphCoolProject||CSProjectNode|  
     |GlyphCppProject||CPPProjectNode|  

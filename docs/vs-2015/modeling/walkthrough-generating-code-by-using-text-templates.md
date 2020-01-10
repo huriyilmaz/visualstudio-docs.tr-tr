@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2a86689fd41b7c0233db0df544082ef22c4931a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 89f78e129d64b313de7bada3c72a449f1fb2aece
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295502"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849929"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>İzlenecek Yol: Metin Şablonları Kullanarak Kod Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Kod üretimi, kesin olarak yazılmış program kodu oluşturmanıza ve kaynak mo
  Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
 
 > [!NOTE]
-> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ile birlikte gelen [XSD. exe](https://go.microsoft.com/fwlink/?LinkId=178765)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ile birlikte gelen [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
 
  Örnek dosya aşağıda verilmiştir:
 
@@ -105,7 +105,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 4. Bu izlenecek yol için `exampleXml.xml`dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
 
-   ..
+   .
 
 ### <a name="add-a-test-code-file"></a>Test kodu dosyası Ekle
  Projenize bir C# dosya ekleyin ve yazabilmesi istediğiniz kodun bir örneğini yazın. Örneğin:

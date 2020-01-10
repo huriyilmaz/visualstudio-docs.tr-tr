@@ -3,19 +3,19 @@ title: Beyaz kaynak sürgüsü avantajı | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 11/18/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: fb403053d101cf2edf8677c7bcce494ae4e2d21e
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 8db777135e9f78321ccbc7cc9d40bf657da97589
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74174124"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75866159"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde beyaz kaynak sürgüsü
 
-Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açık kaynaklı bileşenlerin kapsamlı envanterini ve lisans raporlarını oluşturun. 
+Açık kaynak güvenlik açıklarını bulup düzeltin ve derlemenizdeki tüm açık kaynaklı bileşenlerin kapsamlı envanter ve lisans raporlarını oluşturun. 
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 
@@ -37,8 +37,23 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
 8. Beyaz kaynak sürgüsü başarıyla yükledikten sonra [etkinleştir sayfasına](https://bolt.whitesourcesoftware.com/whitesource-bolt-azure-devops#activate)dönün ve nasıl yapılandırılacağını görmek için videoyu görüntüleyin. 
 9. Daha fazla bilgi için, beyaz kaynak sürgüsü [SSS sayfasını](https://bolt.whitesourcesoftware.com/azure/faq/)ziyaret edin. 
 
-## <a name="eligibility"></a>Önceliği
-[Beyaz kaynak sürgüsü](https://marketplace.visualstudio.com/search?term=whitesource&target=AzureDevOps&category=All%20categories&sortBy=Relevance) artık [Visual Studio Market ücretsiz olarak kullanılabilir. 
+## <a name="eligibility"></a>Uygunluk
+
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Evet       |
+| GitHub Enterprise ile Visual Studio Enterprise | VL | 6 ay       |  Evet       |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                           |Yok         |
+| GitHub Enterprise ile Visual Studio Professional | VL                                      | Yok                                                           |Yok         |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                                           |Yok         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                                           |Yok         |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Yok                                                           |Yok|
+||
+
+<sup>1</sup>  *şunları içerir: Microsoft iş ortağı ağı (Kurumsal).  Hariç tutar: satılamaz (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, MCT Software & Services geliştiricisi, BizSpark, Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri.*
+
+> [!NOTE]
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, Visual Studio 'Yu satın almaya yönelik farklı seçenekleri araştırmak için [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) gitmesi önerilir.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Beyaz kaynak sürgüsü ile ilgili yardım mı gerekiyor?  https://www.whitesourcesoftware.com/vse_whitesource_bolt/ bir beyaz kaynak rulosu temsilcisiyle sohbet edin
@@ -50,3 +65,9 @@ Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avant
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure DevTest bireysel kredisi](vs-azure.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)

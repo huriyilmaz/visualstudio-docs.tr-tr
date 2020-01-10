@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 9a95cd84ede6befded37f9d875535f39846de50a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 12f94605ee6a1f4e4cc0142e6dd59ec02ed619c9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291049"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849947"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
 
@@ -24,7 +24,7 @@ Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgi
 
 1. Cloud Explorer 'da bir sanal makine seçin ve ardından Özellikler penceresini göstermek için F4 tuşunu seçin.
 
-    Aşağıdaki tabloda kullanılabilen özellikler gösterilmektedir, ancak bunların hepsi salt okunurdur. Bunları değiştirmek için [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanın.
+    Aşağıdaki tabloda kullanılabilen özellikler gösterilmektedir, ancak bunların hepsi salt okunurdur. Bunları değiştirmek için [Azure Portal](https://portal.azure.com/)kullanın.
 
    | Özellik | Açıklama |
    | --- | --- |
@@ -32,10 +32,10 @@ Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgi
    | Ortam |Bir sanal makine için, bu özelliğin değeri her zaman üretime yöneliktir. |
    | Name |Sanal makinenin adı. |
    | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs). |
-   | Durum |Değerler, başlatma, başlatma, durdurma, durdurma ve durum alma içerir. Durum alma görünürse, geçerli durum bilinmiyor olur. Bu özelliğin değerleri, [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanılan değerlerden farklıdır. |
-   | SubscriptionID |Azure hesabınızın abonelik KIMLIĞI. Bir aboneliğin özelliklerini görüntüleyerek [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040) bu bilgileri gösterebilirsiniz. |
+   | Durum |Değerler, başlatma, başlatma, durdurma, durdurma ve durum alma içerir. Durum alma görünürse, geçerli durum bilinmiyor olur. Bu özelliğin değerleri, [Azure Portal](https://portal.azure.com/)kullanılan değerlerden farklıdır. |
+   | SubscriptionID |Azure hesabınızın abonelik KIMLIĞI. Bir aboneliğin özelliklerini görüntüleyerek [Azure Portal](https://portal.azure.com/) bu bilgileri gösterebilirsiniz. |
 2. Bir uç nokta düğümü seçin ve ardından **Özellikler** penceresini görüntüleyin.
-3. Aşağıdaki tabloda, uç noktaların kullanılabilir özellikleri açıklanmıştır, ancak bunlar salt okunurdur. Bir sanal makineye yönelik uç noktaları eklemek veya düzenlemek için [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanın. 
+3. Aşağıdaki tabloda, uç noktaların kullanılabilir özellikleri açıklanmıştır, ancak bunlar salt okunurdur. Bir sanal makineye yönelik uç noktaları eklemek veya düzenlemek için [Azure Portal](https://portal.azure.com/)kullanın. 
 
    | Özellik | Açıklama |
    | --- | --- |

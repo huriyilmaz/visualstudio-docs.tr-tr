@@ -11,12 +11,12 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: a077173a0d095ee10cc1fa16da3db1f3744dafa8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4d9a7b39dc322ab92458dbd6c7304f672468db17
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301161"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851708"
 ---
 # <a name="installing-an-isolated-shell-application"></a>Yalıtılmış Kabuk Uygulaması Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
 - Bir kurulum Önyükleyicisi oluşturun.  
   
-  Bu belgedeki örnek kodun tamamı, MSDN Web sitesindeki kod galerisinden indirebileceğiniz [Kabuk dağıtım örneğinden](https://go.microsoft.com/fwlink/?LinkId=262245)gelir. Örnek, bu adımların her birini gerçekleştirme sonuçlarını gösterir.  
+  Bu belgedeki örnek kodun tamamı, MSDN Web sitesindeki kod galerisinden indirebileceğiniz [Kabuk dağıtım örneğinden](https://code.msdn.microsoft.com/Sample-setup-program-for-81ca73f7)gelir. Örnek, bu adımların her birini gerçekleştirme sonuçlarını gösterir.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Prerequisites  
  Bu konunun açıkladığı yordamları gerçekleştirmek için, bilgisayarınızda aşağıdaki araçların yüklü olması gerekir.  
   
-- Visual Studio SDK 'Sı  
+- Visual Studio SDK  
   
-- [WINDOWS Installer XML araç takımı](https://go.microsoft.com/fwlink/?LinkId=82720) 3,6 sürümü  
+- [WINDOWS Installer XML araç takımı](http://wix.sourceforge.net/) 3,6 sürümü  
   
   Örnek ayrıca, tüm kabukların gerektirdiği Microsoft görselleştirme ve modelleme SDK 'sını de gerektirir.  
   
@@ -54,7 +54,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
 2. VSıX bildirimi içeren her proje için, içeriği MSI 'nizin yükleneceği konuma çıkarmak üzere derleme görevlerini düzenleyin. Derleme çıktısına VSıX bildirimini ekleyin, ancak bir. VSIX dosyası oluşturmayın.  
   
 ## <a name="creating-an-msi-for-your-shell"></a>Kabuğunuz için MSI oluşturma  
- MSI paketinizi derlemek için, standart bir kurulum projesinden daha fazla esneklik sağladığından [WINDOWS Installer XML araç takımını](https://go.microsoft.com/fwlink/?LinkId=82720) kullanmanızı öneririz.  
+ MSI paketinizi derlemek için, standart bir kurulum projesinden daha fazla esneklik sağladığından [WINDOWS Installer XML araç takımını](http://wix.sourceforge.net/) kullanmanızı öneririz.  
   
  Ürün. WXS dosyanızda, algılama bloklarını ve kabuk bileşenlerinin yerleşimini ayarlayın.  
   

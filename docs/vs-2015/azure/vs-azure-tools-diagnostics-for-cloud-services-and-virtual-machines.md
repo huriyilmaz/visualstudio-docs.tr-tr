@@ -10,12 +10,12 @@ ms.date: 06/28/2018
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 0839c69a95df4419781ece2a163071ae0e3e6930
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 96df8bbf1c991b98571a427a5118374cd6f3ba3b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74293682"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851449"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
 Bir Azure bulut hizmetinde veya sanal makinede sorun gidermeniz gerektiğinde Azure Tanılama daha kolay bir şekilde kurmak için Visual Studio 'Yu kullanabilirsiniz. Tanılama, bulut hizmetinizi çalıştıran sanal makinelerde ve sanal makine örneklerinde sistem verilerini ve günlük verilerini yakalar. Tanılama verileri, seçtiğiniz bir depolama hesabına aktarılır. Azure 'da tanılama günlüğü hakkında daha fazla bilgi için bkz. [Azure App Service Web Apps için tanılama günlüğünü etkinleştirme](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -38,7 +38,7 @@ Bağlantı dizesi, Azure SDK 2,6 ve üzeri sürümlerde Azure SDK 2,4 ve önceki
 * Azure SDK 2,4 ve önceki sürümlerde, bağlantı dizesi, tanılama günlüklerini aktarmaya yönelik depolama hesabı bilgilerini almak için tanılama eklentisi tarafından bir çalışma zamanı olarak kullanılır.
 * Azure SDK 2,6 ve sonraki sürümlerinde, Visual Studio, yayımlama sırasında uygun depolama hesabı bilgileriyle Azure Tanılama uzantısını ayarlamak için tanılama bağlantı dizesini kullanır. Visual Studio 'Nun yayımlama sırasında kullandığı farklı hizmet yapılandırmalarına yönelik farklı depolama hesapları tanımlamak için bağlantı dizesini kullanabilirsiniz. Ancak, tanılama eklentisi Azure SDK 2,5 sonrasında kullanılamadığından,. cscfg dosyası kendisi için tanılama uzantısını ayarlayamayabilir. Uzantıyı Visual Studio veya PowerShell gibi araçları kullanarak ayrı olarak ayarlamanız gerekir.
 * PowerShell kullanarak tanılama uzantısını ayarlama sürecini basitleştirmek için, Visual Studio 'daki paket çıktısı her rolün tanılama uzantısının ortak yapılandırma XML 'sini içerir. Visual Studio, genel yapılandırmadaki depolama hesabı bilgilerini doldurmak için tanılama bağlantı dizesini kullanır. Ortak yapılandırma dosyaları uzantılar klasöründe oluşturulur. Ortak yapılandırma dosyaları, PaaSDiagnostics adlandırma düzenlerini kullanır. rol adı\>&lt;. PubConfig. xml. Herhangi bir PowerShell tabanlı dağıtımlar, her yapılandırmayı bir rolle eşlemek için bu kalıbı kullanabilir.
-* [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040) , tanılama verilerine erişmek için. cscfg dosyasındaki bağlantı dizesini kullanır. Veriler **izleme** sekmesinde görüntülenir. Bağlantı dizesi, hizmeti portalda ayrıntılı izleme verilerini gösterecek şekilde ayarlamak için gereklidir.
+* [Azure Portal](https://portal.azure.com/) , tanılama verilerine erişmek için. cscfg dosyasındaki bağlantı dizesini kullanır. Veriler **izleme** sekmesinde görüntülenir. Bağlantı dizesi, hizmeti portalda ayrıntılı izleme verilerini gösterecek şekilde ayarlamak için gereklidir.
 
 ## <a name="migrate-projects-to-azure-sdk-26-and-later"></a>Projeleri Azure SDK 2,6 ve üzeri sürümlere geçirme
 Azure SDK 2,5 ' den Azure SDK 2,6 veya sonraki bir sürüme geçirdiğinizde,. wadcfgx dosyasında belirtilen bir tanılama depolama hesabınız varsa, depolama hesabı bu dosyada kalır. Farklı depolama yapılandırmalarının farklı depolama hesaplarını kullanma esnekliğinden faydalanmak için bağlantı dizesini projenize el ile ekleyin. Bir projeyi Azure SDK 2,4 veya önceki sürümlerden Azure SDK 2,6 ' ye geçiriyorsanız, tanılama bağlantı dizeleri korunur. Bununla birlikte, önceki bölümde açıklanan şekilde, bağlantı dizelerinin Azure SDK 2,6 ' de nasıl ele alındığına ilişkin değişikliklere göz önüne alın.
@@ -69,7 +69,7 @@ Visual Studio 'da, dağıtımdan önce hizmet öykünücüsünde hizmeti çalı�
 ### <a name="to-turn-on-diagnostics-in-visual-studio-before-deployment"></a>Dağıtımdan önce Visual Studio 'da tanılamayı açmak için
 
 1. Rolün kısayol menüsünde, **Özellikler**' i seçin. Rolün **Özellikler** Iletişim kutusunda **yapılandırma** sekmesini seçin.
-2. **Tanılama** bölümünde, **tanılamayı etkinleştir** onay kutusunun seçili olduğundan emin olun.
+2. İçinde **tanılama** bölümünde, emin **tanılamayı etkinleştir** onay kutusu seçilidir.
 
     ![Tanılamayı etkinleştir seçeneğine erişin](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796660.png)
 3. Tanılama verilerine yönelik depolama hesabı belirtmek için üç nokta (...) düğmesini seçin.
@@ -250,7 +250,7 @@ Zaten çalışmakta olan bir bulut hizmetiyle ilgili bir sorunu araştırıyorsa
 ### <a name="to-set-up-diagnostics-for-a-running-cloud-service"></a>Çalışan bir bulut hizmeti için tanılamayı ayarlamak için
 1. Sunucu Gezgini ' de, **Cloud Services** düğümünü genişletin ve ardından araştırmak istediğiniz rolü veya örneği (ya da her ikisini) bulmak için düğüm listesini genişletin.
 
-    ![Tanılamayı yapılandırma](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC748913.png)
+    ![Tanılama yapılandırma](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC748913.png)
 2. Örnek düğümü veya rol düğümünün kısayol menüsünde, **tanılama ayarlarını Güncelleştir**' i seçin ve ardından toplamak istediğiniz tanılama ayarlarını seçin.
 
     Yapılandırma ayarları hakkında daha fazla bilgi için bu makaledeki **Tanılama veri kaynaklarını ayarlama** bölümüne bakın. Tanılama verilerini görüntüleme hakkında daha fazla bilgi için bu makaledeki **tanılama verilerini görüntüleyin** bölümüne bakın.

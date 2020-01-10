@@ -18,12 +18,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03ecd3fcc253f255afc59c2d6412f3864fe253b8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 10375e00eb850691e88d01c56a87bb967c40e9ea
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300607"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850562"
 ---
 # <a name="creating-solutions-and-projects"></a>Çözümler ve Projeler Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "74300607"
 Projeler, uygulamanızı derlemek için gereken her şeye yönelik mantıksal kapsayıcılardır. Ana menüden  **&#124; dosya yeni &#124; proje** ' yi seçerek bir proje oluşturduğunuzda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bunu içeren bir çözüm oluşturur. Daha sonra, gerekirse çözüme daha fazla yeni veya mevcut proje ekleyebilirsiniz. Mevcut kod dosyalarından projeler oluşturabilirsiniz ve bunlar ile işiniz bittiğinde silinecek geçici projeler (yalnızca .NET) oluşturabilirsiniz.
 
 > [!NOTE]
-> Açıklamalar bu konuda, Visual Studio Community edition temel alır. İletişim kutuları ve menü komutları gördüğünüz ayarları ya da Visual Studio sürümü bağlı olarak burada açıklananlar farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Açıklamalar bu konuda, Visual Studio Community edition temel alır. İletişim kutuları ve menü komutları gördüğünüz ayarları ya da Visual Studio sürümü bağlı olarak burada açıklananlar farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="create-a-project-from-an-installed-project-template"></a>Yüklü bir proje şablonundan proje oluşturma
  Yeni proje iletişim kutusunu açmak için ana menüden  **&#124; &#124; yeni proje dosyasını** açın. Sol bölmede, **Intalled &#124; şablonları** ' nın altında, programlama dilini ve platformunu ya da teknolojisini seçip ortadaki bölmedeki kullanılabilir şablonlar ' ı seçin.
@@ -53,7 +53,7 @@ Projeler, uygulamanızı derlemek için gereken her şeye yönelik mantıksal ka
  4,0 ' den önceki Framework sürümlerine erişmek için sisteminizde .NET Framework 3,5 yüklü olmalıdır.
 
 ## <a name="downloading-sample-solutions"></a>Örnek çözümler indiriliyor
- Visual Studio 'Yu kullanarak [MSDN kod galerisindeki](https://go.microsoft.com/fwlink/?LinkId=254185)örnek çözümleri indirebilir ve yükleyebilirsiniz.
+ Visual Studio 'Yu kullanarak [MSDN kod galerisindeki](https://code.msdn.microsoft.com/)örnek çözümleri indirebilir ve yükleyebilirsiniz.
 
  Örnekleri tek tek indirebilir veya bir teknolojiyi veya konuyu paylaşan ilgili örnekleri içeren bir örnek paket indirebilirsiniz. Karşıdan yüklediğiniz herhangi bir örnek için kaynak kodu değişiklikleri yayımlandığında bir bildirim alırsınız.
 

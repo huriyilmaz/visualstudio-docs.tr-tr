@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 35b39aef2865f0438e6165bd6bf2c5418e8fbcb0
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 24cc456058f4a87426261ce53fbecb2d919d6a2d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254639"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846357"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 'te COM, VSTO ve VBA eklentileri için geliştirme için en iyi yöntemler
   Office için COM, VSTO veya VBA eklentileri geliştiriyorsanız, bu makalede açıklanan en iyi geliştirme uygulamalarını izleyin.   Bu, şunları sağlamanıza yardımcı olur:
@@ -25,13 +25,13 @@ ms.locfileid: "71254639"
 - Kullanıcılarınızın ve BT yöneticileriniz için eklenti dağıtımının azaldığı karmaşıklık.
 - Yüklemenizin istenmeden yüklenmesi veya çalışma zamanı sorunları oluşmaz.
 
->Not: Windows Mağazası için COM, VSTO veya VBA eklentisi hazırlamak üzere [Masaüstü köprüsünü](/windows/uwp/porting/desktop-to-uwp-root) kullanmak desteklenmez. COM, VSTO ve VBA eklentileri Windows Mağazası 'nda veya Office Mağazası 'nda dağıtılamaz.
+>Not: Windows Mağazası için COM, VSTO veya VBA eklentisinin hazırlanması için [Masaüstü Köprüsü](/windows/uwp/porting/desktop-to-uwp-root) 'nün kullanılması desteklenmez. COM, VSTO ve VBA eklentileri Windows Mağazası 'nda veya Office Mağazası 'nda dağıtılamaz.
 
 ## <a name="do-not-check-for-office-during-installation"></a>Yükleme sırasında Office 'i denetleme
  Eklentinin, eklenti yükleme işlemi sırasında Office 'in yüklü olup olmadığını algılamasını önermeyiz. Office yüklü değilse, eklentiyi yükleyebilirsiniz ve Office yüklendikten sonra Kullanıcı bu eklentiye erişebilir.
 
 ## <a name="use-embedded-interop-types-nopia"></a>Gömülü birlikte çalışma türlerini kullan (Nopıa)
-Çözümünüz .NET 4,0 veya sonraki bir sürümü kullanıyorsa, Office birincil birlikte çalışma derlemeleri (PIA) yeniden dağıtılabilir öğesine göre değil, gömülü birlikte çalışma türleri (Nopıa) kullanın. Tür ekleme kullanmak çözümünüzün yükleme boyutunu azaltır ve ileride uyumlulukla uyumluluk sağlar. Office 2010, PIA Redistributable çalıştıran Office 'in son sürümüdür. Daha fazla bilgi için bkz [. İzlenecek yol: Microsoft Office Derlemelerinden](https://msdn.microsoft.com/library/ee317478.aspx) tür bilgilerini ve [tür denklik ve katıştırılmış birlikte çalışma türlerini](/windows/uwp/porting/desktop-to-uwp-root)katıştırma.
+Çözümünüz .NET 4,0 veya sonraki bir sürümü kullanıyorsa, Office birincil birlikte çalışma derlemeleri (PIA) yeniden dağıtılabilir öğesine göre değil, gömülü birlikte çalışma türleri (Nopıa) kullanın. Tür ekleme kullanmak çözümünüzün yükleme boyutunu azaltır ve ileride uyumlulukla uyumluluk sağlar. Office 2010, PIA Redistributable çalıştıran Office 'in son sürümüdür. Daha fazla bilgi için bkz. [Izlenecek yol: Microsoft Office Derlemelerinden tür bilgilerini katıştırma](https://msdn.microsoft.com/library/ee317478.aspx) ve [tür denklik ve katıştırılmış birlikte çalışma türleri](/windows/uwp/porting/desktop-to-uwp-root).
 
 Çözümünüz .NET 'in önceki bir sürümünü kullanıyorsa, çözümünüzü .NET 4,0 veya üstünü kullanacak şekilde güncelleştirmenizi öneririz. .NET 4,0 veya sonraki bir sürümünü kullanmak, Windows 'un daha yeni sürümlerindeki çalışma zamanı önkoşullarını azaltır.
 
@@ -61,7 +61,7 @@ Müşteriler, ISV 'Lerin Office 'te çalışan COM, VSTO ve VBA eklentileri içi
 
 Office istemci uygulamalarına yönelik destek deyimleri sağlamak için (örneğin, Word veya Excel), önce eklentilerinizin geçerli Office sürümünde çalıştırıldığını doğrulayın ve sonra eklenti sonraki bir sürümde kesintiye kesildiğinde güncelleştirmeler sağlamak için yürütün. Microsoft yeni bir yapı veya Office güncelleştirmesi yayımlandığında eklentilerinizi test etmeniz gerekmez. Microsoft, Office 'teki COM, VSTO ve VBA genişletilebilirlik platformunu nadiren değiştirir ve bu değişiklikler iyi şekilde belgelenmiştir.
 
->Önemli: Microsoft, hazırlık raporları ve ISV iletişim bilgileri için desteklenen eklentilerin bir listesini tutar. Eklentiyi listeye almak için, bkz [https://aka.ms/readyforwindows](https://aka.ms/readyforwindows).
+>Önemli: Microsoft, hazırlık raporları ve ISV iletişim bilgileri için desteklenen eklentilerin bir listesini tutar. Eklentiyi listeye almak için, bkz. [https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows](https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows).
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>Yükleme veya yükleme sorunlarını ayıklamada yardımcı olması için Işlem Izleyicisini kullanın
 Eklentilerinizin yükleme veya yükleme sırasında uyumluluk sorunları varsa, bu kişiler dosya veya kayıt defteri erişimiyle ilgili sorunlar ile ilişkili olabilir. Sorunu belirlemenize yardımcı olması için [Işlem izleyicisini](/sysinternals/downloads/procmon) veya benzer bir hata ayıklama aracını kullanarak bir çalışma ortamına karşı davranışı günlüğe kaydedin ve karşılaştırın.

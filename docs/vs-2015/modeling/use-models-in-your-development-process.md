@@ -11,17 +11,17 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d5284bb163f474d67324c395a4342ccef6f8561
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 5952a65881a84ab131703db630f5f3b257683e45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298256"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852178"
 ---
 # <a name="use-models-in-your-development-process"></a>Geliştirme sürecinizde modelleri kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirmenize yardımcı olması için bir model kullanabilirsiniz. Bir model sisteminizin çalıştığı dünyayı görselleştirmenize, kullanıcıların ihtiyaçlarını açıklığa kavuşturmanıza, sisteminizin mimarisini tanımlamanıza, kodu analiz etmenize ve kodunuzun gereksinimleri karşıladığından emin olmanıza yardımcı olabilir. Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](https://go.microsoft.com/fwlink/?LinkID=252078).
+Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirmenize yardımcı olması için bir model kullanabilirsiniz. Bir model sisteminizin çalıştığı dünyayı görselleştirmenize, kullanıcıların ihtiyaçlarını açıklığa kavuşturmanıza, sisteminizin mimarisini tanımlamanıza, kodu analiz etmenize ve kodunuzun gereksinimleri karşıladığından emin olmanıza yardımcı olabilir. Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling).
 
  Hangi Visual Studio sürümlerinin her model türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -122,7 +122,7 @@ Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirm
 
 |Tasarım düzeyi|Diyagram türleri|
 |------------------|-------------------|
-|İş süreci<br /><br /> Sisteminizin kullanılacağı bağlamı anlamak, kullanıcıların ne ihtiyacı olduğunu anlamanıza yardımcı olur.|-Etkinlik diyagramları, iş hedeflerine ulaşmak için kişiler ve sistemler arasındaki iş akışını anlatmaktadır.<br />-Kavramsal sınıf diyagramları, iş sürecinde kullanılan iş kavramlarını anlatmaktadır.|
+|İş Süreci<br /><br /> Sisteminizin kullanılacağı bağlamı anlamak, kullanıcıların ne ihtiyacı olduğunu anlamanıza yardımcı olur.|-Etkinlik diyagramları, iş hedeflerine ulaşmak için kişiler ve sistemler arasındaki iş akışını anlatmaktadır.<br />-Kavramsal sınıf diyagramları, iş sürecinde kullanılan iş kavramlarını anlatmaktadır.|
 |Kullanıcı gereksinimleri<br /><br /> Kullanıcılarınızın sisteminizden ihtiyacı olan tanım.|-Kullanım örneği diyagramları, kullanıcıların ve diğer dış sistemlerin geliştirmekte olduğunuz sistemle olan etkileşimleri özetler. Her kullanım örneğine başka belgeler iliştirebilir ve bunu ayrıntılı olarak tanımlayabilirsiniz.<br />-UML sınıf diyagramları, kullanıcıların ve sistemin iletişim kurduğu bilgi türlerini anlatmaktadır.<br />-İş kuralları ve hizmet gereksinimlerinin kalitesi ayrı belgelerde açıklanabilir.|
 |Yüksek düzey tasarım<br /><br /> Sistemin genel yapısı: ana bileşenler ve bunların nasıl birlikte kullanıldığı.|-Katman diyagramları sistemin birbirine bağlı parçalar halinde nasıl yapılandırıldığını açıklamaktadır. Mimariye uymasını sağlamak için program kodunu katman diyagramlarına karşı doğrulayabilirsiniz.<br />-Bileşen diyagramları, her bileşen için sunulan ve gereken iletileri ve Hizmetleri belirten parçaların arabirimlerini gösterir.<br />-Sıralı diyagramlar, bileşenlerin her kullanım durumunu uygulamak için nasıl iletişim kurduğunu gösterir.<br />-UML sınıf diyagramları, bileşenlerin arabirimlerini ve bileşenler arasında geçirilen veri türlerini anlatmaktadır.|
 |Tasarım desenleri<br /><br /> Tasarımın tüm bölümlerinde kullanılan tasarım sorunlarını çözme kuralları ve yöntemleri|-UML sınıf diyagramları bir düzenin yapılarını anlatmaktadır<br />-Sequence veya Activity diyagramlarında etkileşimleri ve algoritmaları gösterir|
@@ -130,12 +130,12 @@ Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirm
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Videolar**|![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo") [: nasıl yapılır videoları: UML modellerini ve diyagramlarını oluşturma ve kullanma (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: Visual STUDIO 2010 ile UML](https://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![video MSDN bağlantısı](../data-tools/media/playvideo.gif "PlayVideo ") [nasıl yapılır: UML araçları ve genişletilebilirliği (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkID=214467)|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio Mimari Araç Kullanımı Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**Videolar**|![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo") [: nasıl yapılır videoları: UML modellerini ve diyagramlarını oluşturma ve kullanma (Visual Studio 2010 Ultimate)](https://msdn.microsoft.com/vstudio/gg418384)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: Visual STUDIO 2010 ile UML](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-1-Brainstorming-a-Project/)<br /><br /> ![video MSDN bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır: UML araçları ve genişletilebilirliği (Visual Studio 2010 Ultimate)](https://msdn.microsoft.com/vstudio/ff859492)|
+|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://msdn.microsoft.com/architecture/default.aspx)<br /><br /> [Visual Studio Mimari Araç Kullanımı Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Çevik geliştirme içinde modelleri kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) [uygulama](../modeling/create-models-for-your-app.md) [modelleriniz için model oluşturma kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [modeli uygulamanızın mimarisi](../modeling/model-your-app-s-architecture.md) , [modelleme çözümünüz model yapısından](../modeling/structure-your-modeling-solution.md) [Test geliştirme](../modeling/develop-tests-from-a-model.md)

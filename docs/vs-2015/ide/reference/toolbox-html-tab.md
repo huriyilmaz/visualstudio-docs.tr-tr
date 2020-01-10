@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7ca3179d3e4883f8a2867e13cbdd5e874d60462
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4474f2a0823b5599da30706daedff6e5cd1fc0f5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297774"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851657"
 ---
 # <a name="toolbox-html-tab"></a>Araç Kutusu, HTML Sekmesi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -121,7 +121,7 @@ Araç kutusunun **HTML** sekmesi, Web sayfaları ve Web formlarında yararlı ol
  Daha fazla bilgi için bkz. [HTML giriş denetimleri](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de), [Htmlputpassword sunucu denetimi bildirime dayalı sözdizimi](https://msdn.microsoft.com/df703dd0-1624-4e5a-a547-c97f2f331b9f), [nasıl yapılır: parola girişi Için metin kutusu Web sunucusu denetimi ayarlama](https://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)ve [Izlenecek yol: Web Forms sayfasında Kullanıcı girişini doğrulama](https://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436).
 
 > [!IMPORTANT]
-> Uygulamanız kullanıcı adlarını ve parolaları iletitirse, Web sitenizi, iletimi şifrelemek için Güvenli Yuva Katmanı (SSL) kullanacak şekilde yapılandırmanız gerekir. Daha fazla bilgi için [IIS Işlemler Kılavuzu](https://go.microsoft.com/fwlink/?linkid=47856)'NDAKI "SSL Ile bağlantıları güvenli hale getirme" konusuna bakın. Ayrıca, tüm kullanıcı girişlerini doğrulamanız önerilir. Daha fazla bilgi için bkz. [ASP.NET Web sayfalarındaki Kullanıcı girişini doğrulama](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).
+> Uygulamanız kullanıcı adlarını ve parolaları iletitirse, Web sitenizi, iletimi şifrelemek için Güvenli Yuva Katmanı (SSL) kullanacak şekilde yapılandırmanız gerekir. Daha fazla bilgi için [IIS Işlemler Kılavuzu](https://technet.microsoft.com/library/cc732976(v=WS.10).aspx)'NDAKI "SSL Ile bağlantıları güvenli hale getirme" konusuna bakın. Ayrıca, tüm kullanıcı girişlerini doğrulamanız önerilir. Daha fazla bilgi için bkz. [ASP.NET Web sayfalarındaki Kullanıcı girişini doğrulama](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).
 
  **Giriş (onay kutusu)** ![HTML Web sayfası araç kutusu seçeneği](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")
 

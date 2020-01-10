@@ -11,23 +11,23 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: f6ccc19ccc21b7cabcd553e9d040d20a89ed6ccb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 64d60c3a18338956d4d34b0406fff061970d2974
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298078"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850004"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
 
 Cloud Explorer, Azure kaynaklarınızı ve Kaynak gruplarınızı görüntülemenize, özelliklerini incelemenize ve Visual Studio içinden önemli geliştirici tanılama eylemleri gerçekleştirmenize olanak sağlar.
 
-[Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)gibi, bulut Gezgini Azure Resource Manager yığınında oluşturulmuştur. Bu nedenle, Cloud Explorer, Azure Kaynak grupları ve Logic Apps ve API uygulamaları gibi Azure hizmetleri gibi kaynakları anlamıştır ve [rol tabanlı erişim denetimini](/azure/role-based-access-control/role-assignments-portal) (RBAC) destekler.
+[Azure Portal](https://portal.azure.com/)gibi, bulut Gezgini Azure Resource Manager yığınında oluşturulmuştur. Bu nedenle, Cloud Explorer, Azure Kaynak grupları ve Logic Apps ve API uygulamaları gibi Azure hizmetleri gibi kaynakları anlamıştır ve [rol tabanlı erişim denetimini](/azure/role-based-access-control/role-assignments-portal) (RBAC) destekler.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * [2,9 .NET için Microsoft Azure SDK](https://www.microsoft.com/download/details.aspx?id=51657)Visual Studio 2015.
-* Microsoft Azure hesabı-hesabınız yoksa, [ücretsiz deneme için kaydolabilir](https://go.microsoft.com/fwlink/?LinkId=623901) veya [Visual Studio abone avantajlarınızı etkinleştirebilirsiniz](https://go.microsoft.com/fwlink/?LinkId=623901).
+* Microsoft Azure hesabı-hesabınız yoksa, [ücretsiz deneme için kaydolabilir](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) veya [Visual Studio abone avantajlarınızı etkinleştirebilirsiniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/).
 
 > [!NOTE]
 > Bulut Gezginini görüntülemek için, menü çubuğunda > **bulut Gezginini** **görüntüle** ' yi seçin.
@@ -78,7 +78,7 @@ Azure kaynaklarınızı görüntülemek için **kaynak türlerini** veya **kayna
 
 1. Bağlam menüsünde istediğiniz görünümü seçin:
 
-   * **Kaynak türleri** görünümü- [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanılan ortak görünüm, Azure kaynaklarınızı Web Apps, depolama hesapları ve sanal makineler gibi türlerine göre kategorilere ayırarak gösterir.
+   * **Kaynak türleri** görünümü- [Azure Portal](https://portal.azure.com/)kullanılan ortak görünüm, Azure kaynaklarınızı Web Apps, depolama hesapları ve sanal makineler gibi türlerine göre kategorilere ayırarak gösterir.
    * **Kaynak grupları** görünümü-Azure kaynaklarını Ilişkili oldukları Azure Kaynak grubuna göre kategorilere ayırır. Kaynak grubu, genellikle belirli bir uygulama tarafından kullanılan Azure kaynakları grubudur. Azure Kaynak grupları hakkında daha fazla bilgi edinmek için bkz. [Azure Resource Manager genel bakış](/azure/azure-resource-manager/resource-group-overview).
 
    Aşağıdaki görüntüde, iki kaynak görünümünün karşılaştırması gösterilmektedir:
@@ -97,7 +97,7 @@ Aşağıdaki görüntüde App Service için her sekmede gördüklerinize ilişki
 
   ![Cloud Explorer 'ın ekran görüntüsü](./media/vs-azure-tools-resources-managing-with-cloud-explorer/actions-and-properties.png)
 
-Her kaynak, **portalda açık**olan eylemi içerir. Bu eylemi seçtiğinizde, Cloud Explorer [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)seçili kaynağı görüntüler. **Portal 'Da aç** özelliği, derin iç içe geçmiş kaynaklara gitmek için kullanışlıdır.
+Her kaynak, **portalda açık**olan eylemi içerir. Bu eylemi seçtiğinizde, Cloud Explorer [Azure Portal](https://portal.azure.com/)seçili kaynağı görüntüler. **Portal 'Da aç** özelliği, derin iç içe geçmiş kaynaklara gitmek için kullanışlıdır.
 
 Ek eylemler ve özellik değerleri, Azure kaynağına göre de görünebilir. Örneğin, Web Apps ve Logic Apps Ayrıca eylemler **Içinde açılır** ve **portalda aç**' a ek olarak **hata ayıklayıcı ekler** . Bir depolama hesabı blobu, kuyruğu veya tablosu seçtiğinizde, düzenleyicilerin açılacağı eylemler görünür. Azure uygulamalarının **URL** ve **durum** özellikleri vardır, ancak depolama kaynaklarında anahtar ve bağlantı dizesi özellikleri vardır.
 

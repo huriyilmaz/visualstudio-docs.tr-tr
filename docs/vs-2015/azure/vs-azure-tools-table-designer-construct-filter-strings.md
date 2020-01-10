@@ -11,18 +11,18 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: f1cf5634985683fc86a738d93a6cfa352b52bd24
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c76113f014d8be3bd706ef02ec1135a84cbcae82
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74290988"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849952"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
-## <a name="overview"></a>Genel Bakış
-Visual Studio **Tablo Tasarımcısı**görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](https://go.microsoft.com/fwlink/p/?LinkId=400447)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
+## <a name="overview"></a>Genel bakış
+Visual Studio **Tablo Tasarımcısı**görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](https://msdn.microsoft.com/library/dd179355.aspx)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
 
-WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://go.microsoft.com/fwlink/p/?LinkId=214805) (OData) temel alır. Filtre sistemi sorgu seçeneği ( **$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://go.microsoft.com/fwlink/p/?LinkId=214806).
+WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği ( **$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 ## <a name="comparison-operators"></a>Karşılaştırma İşleçleri
 Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
@@ -35,15 +35,15 @@ Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
 | lt |Küçüktür |Fiyat lt 20 |
 | Le |Küçük veya eşittir |Fiyat Le 100 |
 | Savaşı |Eşit değildir |Şehir ne ' Londra ' |
-| ve |Ve |Fiyat Le 200 ve fiyat gt 3,5 |
+| and |And |Fiyat Le 200 ve fiyat gt 3,5 |
 | veya |Veya |Fiyat Le 3,5 veya fiyat gt 200 |
 | not |değil |ıısavailable yok |
 
 Bir filtre dizesi oluştururken aşağıdaki kurallar önemlidir:
 
 * Bir özelliği bir değerle karşılaştırmak için mantıksal işleçleri kullanın. Bir özelliği dinamik bir değerle karşılaştırmak mümkün değildir; ifadenin bir tarafı bir sabit olmalıdır.
-* Filtre dizesinin tüm bölümleri büyük/küçük harfe duyarlıdır.
-* Filtrenin geçerli sonuçları döndürmesi için sabit değerin özelliği ile aynı veri türünde olması gerekir. Desteklenen özellik türleri hakkında daha fazla bilgi için bkz. [Tablo hizmeti veri modelini anlama](https://go.microsoft.com/fwlink/p/?LinkId=400448).
+* Filtre dizesinin tüm kısımları büyük/küçük harfe duyarlıdır.
+* Filtrenin geçerli sonuçlar döndürmesi için sabit değer, özellikle aynı veri türünde olmalıdır. Desteklenen özellik türleri hakkında daha fazla bilgi için bkz. [Tablo Hizmeti Veri Modelini anlama](https://msdn.microsoft.com/library/dd179338.aspx).
 
 ## <a name="filtering-on-string-properties"></a>Dize özelliklerinde filtreleme
 Dize özelliklerine filtre uyguladığınızda, dize sabitini tek tırnak işaretleri içine alın.
@@ -103,7 +103,7 @@ not IsActive
 ```
 
 ## <a name="filtering-on-datetime-properties"></a>Tarih saat özelliklerine filtre uygulama
-Bir tarih saat değerini filtrelemek için, **DateTime** anahtar sözcüğünü ve ardından tek tırnak işaretleri içinde tarih/saat sabiti ' ni belirtin. Tarih/saat sabiti, [DateTime özellik değerlerini biçimlendirme](https://go.microsoft.com/fwlink/p/?LinkId=400449)bölümünde açıklandığı gıbı Birleşik UTC biçiminde olmalıdır.
+Bir tarih saat değerini filtrelemek için, **DateTime** anahtar sözcüğünü ve ardından tek tırnak işaretleri içinde tarih/saat sabiti ' ni belirtin. Tarih/saat sabiti, [DateTime özellik değerlerini biçimlendirme](https://msdn.microsoft.com/library/azure/dd894027.aspx)bölümünde açıklandığı gıbı Birleşik UTC biçiminde olmalıdır.
 
 Aşağıdaki örnek, CustomerSince özelliğinin 10 Temmuz 2008 ' ye eşit olduğu varlıkları döndürür:
 

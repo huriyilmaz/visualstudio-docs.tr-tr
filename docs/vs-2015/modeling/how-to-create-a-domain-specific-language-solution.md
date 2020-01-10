@@ -15,26 +15,26 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60813fcce28c71c91a3e0c2af9889261c8897a99
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f4c5bd99c47517156f1ec89de9da1a163223b99a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301408"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850444"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Özel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu yordamı başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
-|Visual Studio Görselleştirme ve modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|{1&gt;{2&gt;Visual Studio Görselleştirme ve Modelleme SDK'sı&lt;2}&lt;1}|[http://go.microsoft.com/fwlink/?LinkID=185581](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
 ## <a name="creating-a-domain-specific-language-solution"></a>Etki alanına özgü dil çözümü oluşturma
 
@@ -50,7 +50,7 @@ ms.locfileid: "74301408"
 
    4. **Alana özgü dil Tasarımcısı**' ye tıklayın.
 
-   5. **Ad** kutusuna çözüm için bir ad yazın. **Tamam**'a tıklayın.
+   5. **Ad** kutusuna çözüm için bir ad yazın. **Tamam**'ı tıklatın.
 
        **Alana özgü dil Tasarımcısı Sihirbazı** görüntülenir.
 
@@ -100,11 +100,11 @@ Yeni bir dosya uzantısı yazın.
 
 - Farklı bir dosya uzantısı yazın.
 
-     \- veya-
+     \- veya -
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deneysel örneği sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
 
-     \- veya-
+     \- veya -
 
 - Bu dosya uzantısını kullanan bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı bilgisayarınızda tamamen yüklüyse, kaldırın. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın.
 
@@ -127,7 +127,7 @@ Bu, varsayılan olarak şirketinizden ve ürün adınızdan oluşan bir addır.
 
  **Mevcut tanımlayıcı ad anahtarını kullan** DSL 'nizi başka bir derlemeyle bütünleştirmek istiyorsanız bu seçeneği kullanın.
 
- Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](https://go.microsoft.com/fwlink/?LinkId=186073).
+ Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](https://docs.microsoft.com/dotnet/standard/assembly/create-use-strong-named?redirectedfrom=MSDN).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) [alana özgü dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa) tanımlama

@@ -13,17 +13,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 955103b6d28e90321fb45c23825f0c2a25362208
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9dcb6edf8ce69d48805c3ad8c3c25ef9cc0ed591
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301312"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851353"
 ---
 # <a name="visualize-code"></a>Kodu görselleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da görselleştirme ve modelleme araçlarını kullanarak mevcut kodu anlamanıza ve uygulamanızı açıklamanıza yardımcı olabilirsiniz. Bu, değişikliklerinizin kodu nasıl etkileyebileceğini görsel olarak öğrenmenize ve bu değişikliklerden kaynaklanan iş ve riskleri değerlendirmenize yardımcı olur. Örneğin:
+Visual Studio 'da görselleştirme ve modelleme araçlarını kullanarak mevcut kodu anlamanıza ve uygulamanızı açıklamanıza yardımcı olabilirsiniz. Bu sayede değişikliklerinizin kodunuzu nasıl etkileyeceğini görsel olarak öğrenebilir ve söz konusu değişiklikler sonucu ortaya çıkabilecek riskleri hesaplayabilirsiniz. Örneğin:
 
 - Kodunuzdaki ilişkileri anlamak için, bu ilişkileri görsel olarak eşleyin.
 
@@ -48,11 +48,11 @@ Visual Studio 'da görselleştirme ve modelleme araçlarını kullanarak mevcut 
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimarisi Forumu](https://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimarisi Forumu](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Senaryo: görselleştirme ve modelleme](../modeling/scenario-change-your-design-using-visualization-and-modeling.md) [çözümleme ve modelleme mimarisini](../modeling/analyze-and-model-your-architecture.md) kullanarak tasarımınızı değiştirme [uygulama modelinize yönelik modeller oluşturma](../modeling/create-models-for-your-app.md) [Kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [modeli](../modeling/model-your-app-s-architecture.md) [geliştirme sürecinizdeki uygulamanızın mimarisi kullanım modelleri](../modeling/use-models-in-your-development-process.md)

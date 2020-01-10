@@ -18,19 +18,19 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5dd40381b8f5ba4807e95cfcf5e5b7d54afd77e2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1a3c9b3a6ae2ed11e8512f8cf8857d27b3d0043b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298387"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850069"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>DOM Gezgini'ni kullanarak düzen hatalarını ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- DOM Gezgini 'nin **Düzen** sekmesi, bir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamasında seçili öğe için [CSS kutusu modelini](https://go.microsoft.com/fwlink/?LinkID=238778) , Windows Phone mağaza uygulamasını veya Apache Cordova Visual Studio araçları kullanılarak oluşturulan bir uygulamayı gösterir. Öğelerin görünümünü etkileyen düzenle ilgili değerleri belirlemek ve değiştirmek için Box modelinin bu görsel gösterimini kullanabilirsiniz.  
+ DOM Gezgini 'nin **Düzen** sekmesi, bir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamasında seçili öğe için [CSS kutusu modelini](https://www.w3.org/TR/CSS2/box.html) , Windows Phone mağaza uygulamasını veya Apache Cordova Visual Studio araçları kullanılarak oluşturulan bir uygulamayı gösterir. Öğelerin görünümünü etkileyen düzenle ilgili değerleri belirlemek ve değiştirmek için Box modelinin bu görsel gösterimini kullanabilirsiniz.  
   
 > [!TIP]
 > **Düzen** sekmesinde yaptığınız değişiklikler kalıcı değildir. Kaynak kodunuzda kalıcı değişiklikler yapabilir ve ardından hata ayıklama araç çubuğunda **Windows uygulamasını Yenile** düğmesini (yalnızca Windows mağazası ve Windows Phone mağaza uygulamaları) kullanarak uygulamanızı yenileyebilirsiniz. Bu şekilde, hata ayıklayıcıyı yeniden başlatmanıza engel olabilirsiniz.  
@@ -120,7 +120,7 @@ Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content
   
 12. **Düzen** sekmesinde, kutunun sol tarafındaki **kenar boşluğu** kutusunda görünen **66,66** veya **146,66**seçeneklerinden birini belirleyin.  
   
-13. `0` yazın ve ENTER tuşuna basın. (Değeri değiştirmek için yukarı ok ve aşağı ok tuşlarını da kullanabilirsiniz.)  
+13. `0` yazıp Enter tuşuna basın. (Değeri değiştirmek için yukarı ok ve aşağı ok tuşlarını da kullanabilirsiniz.)  
   
 14. DOM Gezgini 'nde diğer \<img > öğelerini seçin ve kenar boşluğu sol değerlerini 0 olarak değiştirin.  
   
