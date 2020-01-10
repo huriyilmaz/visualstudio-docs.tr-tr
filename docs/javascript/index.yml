@@ -2,25 +2,25 @@
 title: Visual Studio öğreticileri | JavaScript ve TypeScript
 summary: Visual Studio ile JavaScript ve TypeScript uygulamaları oluşturma
 metadata:
-  title: Visual Studio 'da JavaScript ve TypeScript
-  description: JavaScript ve TypeScript uygulamaları oluşturmak için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
+  title: Visual Studio’da JavaScript ve TypeScript
+  description: JavaScript ve TypeScript uygulamaları oluşturmak için Visual Studio’yu nasıl kullanacağınızı öğrenin.
   ms.topic: landing-page
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/15/2019
-  ms.openlocfilehash: 1bdf2530d8e6513f57b515680410b9111cec87c6
-  ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
-  ms.translationtype: MT
+  ms.openlocfilehash: 9f81043622a48bbda93e52216a3ce2a6cd9a01b2
+  ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/17/2019
-  ms.locfileid: "72517107"
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75678954"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
   - linkListType: overview
     links:
-    - text: Visual Studio 'da JavaScript ve TypeScript
+    - text: Visual Studio’da JavaScript ve TypeScript
       url: javascript-in-vs-2019.md
   - linkListType: how-to-guide
     links:
@@ -28,18 +28,20 @@ landingContent:
       url: ../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Kılavuzlu tura başla
+    - text: Kılavuzlu turu başlat
       url: quickstart-ide-orientation-js.md
 - title: JavaScript ve TypeScript uygulamaları oluşturma
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Node. js ve Express ile Web uygulaması oluşturma
+    - text: Node.js ve Express ile web uygulaması oluşturma
       url: tutorial-nodejs.md
-    - text: Node. js ile bir Web uygulaması oluşturma ve tepki verme
+    - text: Node.js ve React ile web uygulaması oluşturma
       url: tutorial-nodejs-with-react-and-jsx.md
-    - text: Node. js ve Vue. js ile bir Web uygulaması oluşturma
+    - text: Node.js ve Vue.js ile web uygulaması oluşturma
       url: quickstart-vuejs-with-nodejs.md
+    - text: TypeScript ile ASP.NET Core uygulaması oluşturma
+      url: tutorial-aspnet-with-typescript.md
 - title: Visual Studio'yu öğrenin
   linkLists:
   - linkListType: how-to-guide
@@ -54,5 +56,5 @@ landingContent:
       url: debug-nodejs.md
     - text: Proje veya çözüm olmadan kod geliştirme
       url: develop-javascript-code-without-solutions-projects.md
-    - text: Birim testlerini yazma ve çalıştırma
+    - text: Birim testleri yazma ve çalıştırma
       url: unit-testing-javascript-with-visual-studio.md

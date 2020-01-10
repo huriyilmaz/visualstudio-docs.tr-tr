@@ -20,6 +20,8 @@
       href: tutorial-nodejs.md
     - name: React ile Node.js uygulaması oluşturma
       href: tutorial-nodejs-with-react-and-jsx.md
+    - name: TypeScript ile ASP.NET Core uygulaması oluşturma
+      href: tutorial-aspnet-with-typescript.md
     - name: Linux App Service’e bir Node.js uygulaması yayımlama
       href: publish-nodejs-app-azure.md
 - name: Nasıl Yapılır Kılavuzları
