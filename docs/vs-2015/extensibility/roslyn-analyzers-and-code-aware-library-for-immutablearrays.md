@@ -8,12 +8,12 @@ ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9fbba44ef5ac0e531198b3569008a260118aefcf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fd54c5e730f757a0e198ad7cf1d8577e686b9ea9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298370"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845872"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>ImmutableArray’ler için Roslyn Çözümleyicileri ve Kod Algılayan Kitaplık
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ Bu örneği derlemek için aşağıdakilere ihtiyacınız vardır:
 
 - [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md). Ayrıca, Visual Studio 'Yu yüklerken SDK 'yı aynı anda yüklemek için ortak araçların altındaki Visual Studio Genişletilebilirlik Araçları kontrol edebilirsiniz. Visual Studio 'Yu zaten yüklediyseniz, bu SDK 'yı Ayrıca ana menü **dosyasına &#124; yeni &#124;proje...** giderek, sol gezinti bölmesinde seçip C# genişletilebilirlik 'i seçerek de yükleyebilirsiniz. "**Visual Studio genişletilebilirlik Araçları**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister.
 
-- [.Net Compiler platform ("Roslyn") SDK](https://aka.ms/roslynsdktemplates). Bu SDK 'yı Ayrıca, ana menü **dosyasına &#124; yeni &#124; proje...** giderek, **C#** sol gezinti bölmesinde seçip **genişletilebilirlik**' i seçerek de yükleyebilirsiniz. " **.Net COMPILER Platform SDK 'Yı indir**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister. Bu SDK, [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)içerir. Bu son derece faydalı araç, çözümleyicinizdeki için aramanız gereken kod modeli türlerini bulmanıza yardımcı olur. Çözümleyici altyapısı, belirli kod modeli türleri için kodunuzu çağırır, bu nedenle kodunuz yalnızca gerektiğinde yürütülür ve yalnızca ilgili kodu analiz etmeye odaklanabilir.
+- [.Net Compiler platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Bu SDK 'yı Ayrıca, ana menü **dosyasına &#124; yeni &#124; proje...** giderek, **C#** sol gezinti bölmesinde seçip **genişletilebilirlik**' i seçerek de yükleyebilirsiniz. " **.Net COMPILER Platform SDK 'Yı indir**" içerik haritası proje şablonu ' nu seçtiğinizde, SDK 'yı indirip yüklemenizi ister. Bu SDK, [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)içerir. Bu son derece faydalı araç, çözümleyicinizdeki için aramanız gereken kod modeli türlerini bulmanıza yardımcı olur. Çözümleyici altyapısı, belirli kod modeli türleri için kodunuzu çağırır, bu nedenle kodunuz yalnızca gerektiğinde yürütülür ve yalnızca ilgili kodu analiz etmeye odaklanabilir.
 
 ## <a name="whats-the-problem"></a>Sorun nedir?
 ImmutableArray (örneğin, <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>) desteğini içeren bir kitaplık sağladığınızı düşünelim. C#geliştiricilere .NET dizileri ile çok fazla deneyim vardır. Ancak, uygulamada kullanılan ımmutablearışınlar ve iyileştirme teknikleri doğası nedeniyle, C# geliştirici kullanıcıları kitaplığınızın kullanıcılarının, aşağıda açıklandığı gibi bozuk kod yazmasına neden olur. Ayrıca, kullanıcılar çalışma zamanına kadar kendi hatalarını görmez. Bu, .NET ile Visual Studio 'da kullanıldıkları kalite deneyimi değildir.
@@ -102,7 +102,7 @@ Bir sözdizimi düğümü için kayıt yaptırın ve yalnızca nesne oluşturma 
 internal const string Category = "Naming";
 ```
 
-`"Naming"` `"API Guidance"`olarak değiştirin.
+Değişiklik `"Naming"` için `"API Guidance"`.
 
 Daha sonra **Çözüm Gezgini**kullanarak projenizde resources. resx dosyasını bulun ve açın. Çözümleyici, başlık vb. için bir açıklama koyabilirsiniz. Bunların tümünün değerini şimdilik `“Don’t use ImmutableArray<T> constructor”` değiştirebilirsiniz. String biçimlendirme bağımsız değişkenlerini dizeniz ({0}, {1}, vb.) koyabilirsiniz ve daha sonra `Diagnostic.Create()`çağırdığınızda, geçirilecek bağımsız değişkenlerin params dizisini sağlayabilirsiniz.
 

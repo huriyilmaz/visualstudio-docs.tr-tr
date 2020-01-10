@@ -15,30 +15,30 @@ caps.latest.revision: 4
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1c18a08986bf8e4aa30969a9d30d740fb68e978c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0f8599348d204d149f3e28d17d681941ddf476b8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297477"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849326"
 ---
 # <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>Nasıl yapılır: PolicyActivity kural kümesi oluşturma (eski)
 Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak ilke etkinlik kuralı kümesinin nasıl oluşturulacağı açıklanmaktadır.
 
- Bir **ilke** etkinlik öğesini **araç kutusundan** iş akışı tasarım yüzeyine sürükledikten sonra, mevcut bir kuralı seçmek veya [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) etkinliği için yeni bir kural kümesi oluşturmanız gerekir. Kural kümesi [Seç Iletişim kutusunu (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md) kullanarak varolan bir kural kümesini seçin ve kural [kümesi Düzenleyicisi Iletişim kutusunu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)kullanarak kural kümeleri oluşturun.
+ Bir **ilke** etkinlik öğesini **araç kutusundan** iş akışı tasarım yüzeyine sürükledikten sonra, mevcut bir kuralı seçmek veya [PolicyActivity](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) etkinliği için yeni bir kural kümesi oluşturmanız gerekir. Kural kümesi [Seç Iletişim kutusunu (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md) kullanarak varolan bir kural kümesini seçin ve kural [kümesi Düzenleyicisi Iletişim kutusunu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)kullanarak kural kümeleri oluşturun.
 
 > [!NOTE]
-> [Kural kümesi Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) iletişim kutusunu, iş akışı tasarım yüzeyinde bir [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) etkinliğine çift tıklayarak da açabilirsiniz.
+> [Kural kümesi Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) iletişim kutusunu, iş akışı tasarım yüzeyinde bir [PolicyActivity](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) etkinliğine çift tıklayarak da açabilirsiniz.
 
 ### <a name="to-select-or-create-a-rule-set-for-a-policyactivity-activity"></a>PolicyActivity etkinliğine yönelik bir kural kümesi seçmek veya oluşturmak için
 
-1. [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019)öğesine sağ tıklayın ve ardından **Özellikler penceresini açmak** için **Özellikler** ' e tıklayın.
+1. [PolicyActivity](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx)öğesine sağ tıklayın ve ardından **Özellikler penceresini açmak** için **Özellikler** ' e tıklayın.
 
 2. **RuleSetReference** özelliğine tıklayın.
 
 3. Aşağıdakilerden birini yapın:
 
-    - **RuleSetReference** üç nokta ( **...]** düğmesine tıklayın ve ardından [kural kümesi Seç iletişim kutusunda (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md)varolan bir kural kümesini seçin. Ardından 10. adıma gidin.
+    - **RuleSetReference** üç nokta ( **...]** düğmesine tıklayın ve ardından [kural kümesi Seç iletişim kutusunda (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md)varolan bir kural kümesini seçin. Daha sonra 10. adıma gidin.
 
          veya
 
@@ -63,4 +63,4 @@ Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLU
 9. İşiniz bittiğinde **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) [kural kümesi Seç iletişim kutusu (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md) [kural kümesi Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [ilke etkinliği](https://go.microsoft.com/fwlink?LinkID=65004) [eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md)
+ [PolicyActivity](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) [kural kümesi Seç iletişim kutusu (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md) [kural kümesi Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [ilke etkinliği](https://msdn2.microsoft.com/library/bb675229.aspx) [eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md)

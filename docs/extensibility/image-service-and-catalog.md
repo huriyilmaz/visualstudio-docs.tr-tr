@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2647c09718f17235a3024f5787a0b85a7633ee1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: d792f13e073f11c8e6d3a652c1d041902f1209c9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982245"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848915"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü hizmeti ve kataloğu
 Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de tanıtılan görüntü kataloğunu benimseme için rehberlik ve en iyi uygulamaları içerir.
@@ -43,7 +43,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
   ![Önce ve sonra görüntü hizmeti](../extensibility/media/image-service-before-and-after.png "Önce ve sonra görüntü hizmeti")
 
-## <a name="how-it-works"></a>Nasıl çalıştığı
+## <a name="how-it-works"></a>Nasıl çalışır?
  Görüntü hizmeti, desteklenen herhangi bir kullanıcı arabirimi çerçevesi için uygun bir bit eşlemeli görüntü sağlayabilir:
 
 - WPF: BitmapSource
@@ -105,7 +105,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||
 |-|-|
 |**Subelement**|**Tanım**|
-|Aktarmaya|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
+|Al|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|
 |Kimlik|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|
 |Dize|Sembol rastgele bir dize değerini temsil eder|
@@ -151,7 +151,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |Kimlik|Istenir Görüntü adının KIMLIK kısmı|
 |Allowcolorınversion|[İsteğe bağlı, varsayılan doğru] Görüntünün, koyu bir arka planda kullanıldığında, renkleri program aracılığıyla ters çevrimeyeceğini gösterir.|
 
- **Kaynaktaki**
+ **Kaynak**
 
  \<Source > öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.
 
@@ -164,7 +164,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||
 |-|-|
 |**Öznitelik**|**Tanım**|
-|Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu|
+|Uri|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu|
 |Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> *Koyu:* Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
 
 \<kaynak > öğesi, aşağıdaki isteğe bağlı alt öğeleri tam olarak bir tane içerebilir:
@@ -174,7 +174,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |\<boyutu >|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
 |\<SizeRange >|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|
-|\<boyutlar >|Genişlik, yükseklik|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|
+|\<boyutlar >|Width, Height|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|
 |\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|
 
  \<kaynak > öğesi, yönetilen bir derleme yerine yerel bir derlemeden yüklenen \<kaynak > tanımlayan isteğe bağlı bir \<NativeResource > alt öğesi de içerebilir.
@@ -563,7 +563,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
  **My. vsct dosyası aynı zamanda Visual Studio 'nun eski sürümleri tarafından okunmalıdır?**
 
- Visual Studio 'nun eski sürümleri **Iconisbilinen ad** komut bayrağını tanımıyor. Görüntü hizmetindeki görüntüleri destekleyen Visual Studio sürümlerinde kullanabilirsiniz, ancak eski stil görüntülerini Visual Studio 'nun eski sürümlerinde kullanmaya devam edebilirsiniz. Bunu yapmak için, *. vsct* dosyasını değiştirmeden bırakır (ve bu nedenle Visual Studio 'nun eski sürümleriyle uyumludur) ve bir *. vsct* dosyasının \<BIT eşlemlerinde tanımlanan GUID/ID ÇIFTLERINDEN eşleyen bir CSV (virgülle ayrılmış değerler) dosyası oluşturursunuz > öğeden resme bilinen ad GUID/ID çiftleri.
+ Visual Studio 'nun eski sürümleri **Iconisbilinen ad** komut bayrağını tanımıyor. Görüntü hizmetindeki görüntüleri destekleyen Visual Studio sürümlerinde kullanabilirsiniz, ancak eski stil görüntülerini Visual Studio 'nun eski sürümlerinde kullanmaya devam edebilirsiniz. Bunu yapmak için, *. vsct* dosyasını değiştirmeden bırakır (ve bu nedenle Visual Studio 'nun eski sürümleriyle uyumludur) ve bir *. vsct* dosyasının \<bit > eşlemlerinde tanımlanan GUID/ID çiftlerinden, görüntü BILINEN adı GUID/ID ÇIFTLERIYLE eşleşen bir CSV (virgülle ayrılmış değerler) dosyası oluşturun.
 
  Eşleme CSV dosyasının biçimi:
 
@@ -579,14 +579,14 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]
 ```
 
- **Imappingfilename** , $PackageFolder $ öğesinde (Yukarıdaki örnekte olduğu gibi) dolaylı olarak belirtilen göreli bir yoldur ya da bir ortam değişkeni tarafından tanımlanan bir dizinde (örneğin, *@ "%USERPROFILE%\dir1\dir2\) açıkça bir mutlak yol olarak kök MyMappingFile. csv "* .
+ **Imappingfilename** , $PackageFolder $ (Yukarıdaki örnekte olduğu gibi) ' de dolaylı olarak belirtilen göreli bir yoldur veya bir ortam değişkeni tarafından tanımlanan bir dizinde (örneğin, *@ "%userprofile%\dir1\dir2\mymappingfile.exe"* ) açıkça bir mutlak yol.
 
 ## <a name="how-do-i-port-a-project-system"></a>Nasıl yaparım? bir proje sistemi mi?
  **Bir proje için ımagetakma adlar sağlama**
 
 1. Projenin **IVsHierarchy**üzerinde **VSHPROPID_SupportsIconMonikers** uygulayın ve true döndürün.
 
-2. **VSHPROPID_IconMonikerImageList** (orijinal proje **VSHPROPID_IconImgList**kullanıyorsa) ya da **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, **VSHPROPID_OpenFolderIconMonikerId** (özgün proje **VSHPROPID_IconHandle** ve **VSHPROPID_OpenFolderIconHandle**kullanıyorsa).
+2. **VSHPROPID_IconMonikerImageList** (orijinal proje **VSHPROPID_IconImgList**kullanıyorsa) veya **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, **VSHPROPID_OpenFolderIconMonikerId** (orijinal proje **VSHPROPID_IconHandle** ve **VSHPROPID_OpenFolderIconHandle**kullanılıyorsa) uygulayın.
 
 3. Uzantı noktaları tarafından istenirse simgelerin "eski" sürümlerini oluşturmak için simgeler için özgün Vshpropıds uygulamasını değiştirin. **IVsImageService2** bu simgeleri almak için gereken işlevselliği sağlar
 
@@ -720,7 +720,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. Kodu, güncelleştirilmiş eşleme aracılığıyla takma ad istemek üzere görüntü hizmetini kullanacak şekilde güncelleştirin. (Bu, yönetilen kod için **çapraz görüntülerin** güncelleştirilmesi veya görüntü hizmetinden hbit eşlemler ya da hcons istemek ve yerel kod için bu dosyaları iletmek anlamına gelebilir.)
 
 ## <a name="testing-your-images"></a>Görüntülerinizi test etme
- Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](https://aka.ms/VSImageThemeTools)bulunabilir.
+ Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](https://docs.microsoft.com/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015&redirectedfrom=MSDN)bulunabilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
@@ -789,7 +789,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |ImageName. AspPage|Knownımageıds. ASPFile|
     |GörüntüAdı. GlobalApplicationClass|Knownımageıds. SettingsFile|
     |GörüntüAdı. WebConfig|Knownımageıds. ConfigurationFile|
-    |GörüntüAdı. HtmlPage|Knownımageıds. HTMLFile|
+    |GörüntüAdı. HtmlPage|KnownImageIds.HTMLFile|
     |ImageName. StyleSheet|Knownımageıds. StyleSheet|
     |ImageName. ScriptFile|Knownımageıds. JSScript|
     |ImageName. TextFile|Knownımageıds. Document|
@@ -823,8 +823,8 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |ImageName. SharedProjectCs|Knownımageıds. CSSharedProject|
     |ImageName. SharedProjectVc|Knownımageıds. CPPSharedProject|
     |ImageName. SharedProjectJs|Knownımageıds. JSSharedProject|
-    |ImageName. CSharpCodeFile|Knownımageıds. CSFileNode|
-    |ImageName. VisualBasicCodeFile|Knownımageıds. VBFileNode|
+    |ImageName. CSharpCodeFile|KnownImageIds.CSFileNode|
+    |ImageName. VisualBasicCodeFile|KnownImageIds.VBFileNode|
 
   - Tamamlanma listesi sağlayıcımı güncelleştiriyorum. Eski **Standartglyphgroup** ve **standardglif** değerleriyle hangi **knowntakma adları** eşleşiyor?
 
@@ -1023,16 +1023,16 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|
     |GlyphCppProject||CPPProjectNode|
-    |Glyphdialogıd||İletişim|
+    |Glyphdialogıd||İletişim kutusu|
     |GlyphOpenFolder||Klasör açıldı|
     |GlyphClosedFolder||FolderClosed|
     |GlyphArrow||Sonrakine sonra|
     |GlyphCSharpFile||CSFileNode|
-    |GlyphCSharpExpansion||Gösterildiği|
+    |GlyphCSharpExpansion||Kod parçacığı|
     |Glyphanahtar sözcüğü||Intellisenseanahtar sözcüğü|
     |Glyphınformation||StatusInformation|
     |GlyphReference||ClassMethodReference|
-    |Glyphözyineleme||Yinelenme|
+    |Glyphözyineleme||{1&gt;Yineleme&lt;1}|
     |Glyphxmlıtıtem||Etiket|
     |Glyphjkeskinproject||DocumentCollection|
     |Glyphjnetdocument||Belge|

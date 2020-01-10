@@ -9,12 +9,12 @@ caps.latest.revision: 20
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c65561f9a9a2ca287232b7a61bb0e07ca07a769d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a2fa9581d94b3b70ca427c292c147562a11d55a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299655"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847993"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 ve Windows Server 2012 Uygulamalarında Performans Araçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visua
 > [!NOTE]
 > Desteklenen diğer Windows sürümleri (Windows 7, Windows Server 2008 R2) için performans araçları değişmemiştir.  
   
-## <a name="BKMK_In_this_topic"></a>Bu konuda  
+## <a name="BKMK_In_this_topic"></a> Bu konudaki  
  [Visual Studio IDE 'den Windows Mağazası uygulamaları üzerinde veri toplama](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Visual Studio IDE 'den Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalarda veri toplama](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -74,7 +74,7 @@ Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visua
   
 - [Windows Mağazası uygulamalarında Visual C++, visual C#ve Visual Basic Code için performans verilerini çözümleme](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
-  [Bu konuda](#BKMK_In_this_topic)  
+  [Bu konudaki](#BKMK_In_this_topic)  
   
 ## <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a>Visual Studio IDE 'den Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalarda veri toplama  
  İzleme yöntemini kullanarak profil oluşturma, Windows 8 için değişmemiştir.  
@@ -100,7 +100,7 @@ Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visua
   
  Visual Studio yüklü olmayan cihazlarda uygulama profili eklemek için aşağıdakilerden birini yapın:  
   
-- Araçları [MSDN Web sitesinden](https://go.microsoft.com/fwlink/?LinkID=219549)Visual Studio için uzak Araçlar bir parçası olarak indirin.  
+- Araçları [MSDN Web sitesinden](https://www.microsoft.com/visualstudio/eng#downloads+d-additional-software)Visual Studio için uzak Araçlar bir parçası olarak indirin.  
   
 - Visual Studio bilgisayarınızdan tek başına profil oluşturucu araçları yükleme programını kopyalayın ve çalıştırın. Yükleme programları *% VSInstallDir%* **\Team Tools\performance tools\kurulumları** klasöründedir. Uzak bilgisayarın işletim sistemi (x86/x64) için Kurulum programını seçin.  
   

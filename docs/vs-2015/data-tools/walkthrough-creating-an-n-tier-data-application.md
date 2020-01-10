@@ -17,12 +17,12 @@ caps.latest.revision: 51
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bd77006eda03b716e3c54c0b5b52ac633a383377
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 195a3a36b53e5f84f6052a15e01007bb5ed77fac
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299588"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844197"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>İzlenecek Yol: N Katmanlı Bir Veri Uygulaması Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,9 +53,9 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 - Veri tablolarını doldurmak için kod yazma.
 
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [video nasıl yapılır: N katmanlı veri uygulaması oluşturma](https://go.microsoft.com/fwlink/?LinkId=115188).
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [video nasıl yapılır: N katmanlı veri uygulaması oluşturma](https://msdn2.microsoft.com/library/cc178916.aspx).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu kılavuzu tamamlamak için gerekenler:
 
 - Northwind örnek veritabanına erişim.
@@ -81,7 +81,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 5. Çözüm **NTierWalkthrough**olarak adlandırın.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**'ı tıklatın.
 
      DataEntityTier projesini içeren bir NTierWalkthrough Çözümü oluşturulup **Çözüm Gezgini**eklenir.
 
@@ -108,7 +108,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 1. **Çözüm Gezgini**'de DataAccessTier ' ye tıklayın.
 
-2. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+2. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
 
 3. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' ye tıklayın.
 
@@ -148,7 +148,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 4. **Veri kümesi projesi** listesinde **DataEntityTier**' e tıklayın.
 
-5. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+5. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
    Veri kümesi ve TableAdapter bağdaştırıcıları iki sınıf kitaplığı projesine ayrılır. Başlangıçta tüm veri kümesini (DataAccessTier) içeren projede şimdi yalnızca TableAdapter bağdaştırıcıları bulunur. **DataSet proje** özelliğinde (DataEntityTier) belirtilen proje türü belirtilmiş veri kümesini Içerir: NorthwindDataSet. DataSet. Designer. vb (veya NorthwindDataSet.DataSet.Designer.cs).
 
@@ -201,7 +201,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 6. **Son**'a tıklayın.
 
-7. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+7. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Veri Hizmetinin Veri Varlığı ve Veri Erişimi Katmanlarına Başvuru Ekleme
  Veri hizmetinin veri kümesinden ve TableAdapter bağdaştırıcılarından bilgi alması gerektiğinden DataEntityTier ve DataAccessTier projelerine başvurular ekleyin.
@@ -214,7 +214,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
 
 3. Hem **DataAccessTier** hem de **DataEntityTier** projelerini seçin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**'ı tıklatın.
 
 ## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Veri Erişim Katmanındaki GetCustomers ve GetOrder Yöntemlerini Çağırmak İçin Hizmete İşlev Ekleme
  Şimdi veri erişim katmanında veri döndürme yöntemleri bulunduğuna göre, veri erişim katmanındaki yöntemleri çağırmak için veri hizmetinde yöntemler oluşturun.
@@ -280,7 +280,7 @@ N katmanlı * veri uygulamaları, verilere erişen ve birden çok mantıksal *ka
     }
     ```
 
-5. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+5. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
 ## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Veri Hizmetinden Verileri Görüntülemek İçin Bir Sunu Katmanı Oluşturma
  Şimdi çözümde veri erişim katmanına çağrı gönderen yöntemler bulunduğuna göre, veri hizmetine çağrı gönderecek ve verileri kullanıcılara sunacak başka bir proje oluşturun. Bu kılavuz için bir Windows Forms uygulaması oluşturun; bu n katmanlı uygulamanın sunu katmanıdır.

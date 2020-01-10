@@ -21,12 +21,12 @@ caps.latest.revision: 84
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 596711c5c59738d5356437bb761e80caeddfbd6b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 45b82ece15cfef4d313764027c0220453a6d4849
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301350"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845440"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>Katman diyagramları ile kod doğrulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   **Requirements**
 
-- Visual Studio
+- {1&gt;Visual Studio&lt;1}
 
 - Team Foundation yapısı ile kodu otomatik olarak doğrulamak için Team Foundation Yapı sunucunuzdaki Visual Studio
 
@@ -53,7 +53,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-  Visual Studio'daki açık bir katman diyagramından veya komut isteminden kodu el ile doğrulayabilirsiniz. Ayrıca yerel yapıları veya Team Foundation Yapısı'nı çalıştırırken kodu otomatik olarak doğrulayabilirsiniz. Bkz. [Channel 9 video: Katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://go.microsoft.com/fwlink/?LinkID=252073).
+  Visual Studio'daki açık bir katman diyagramından veya komut isteminden kodu el ile doğrulayabilirsiniz. Ayrıca yerel yapıları veya Team Foundation Yapısı'nı çalıştırırken kodu otomatik olarak doğrulayabilirsiniz. Bkz. [Channel 9 video: Katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
 > [!IMPORTANT]
 > Katman doğrulamasını Team Foundation yapısı ile çalıştırmak istiyorsanız, Yapı sunucunuza aynı Visual Studio sürümünü de yüklemelisiniz.
@@ -153,7 +153,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   **Hata listesi** penceresindeki doğrulama hatalarını yönetmek için bu görevleri kullanın:
 
-|**Hedef**|**Bu adımları izleyin**|
+|**Alıcı**|**Bu adımları izleyin**|
 |------------|----------------------------|
 |Doğrulama sırasında seçili hataları gizleme|Seçilen bir veya birden çok hataya sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **hataları Gizle**' ye tıklayın.<br /><br /> Gizlenen hatalar üstü çizili biçimde görünür. Doğrulamayı daha sonra çalıştırdığınızda bu hatalar görünmez.<br /><br /> Gizlenen hatalar, ilgili katman diyagramı dosyası için .gizlenenler dosyasında izlenir.|
 |Seçili hataların gizlenmesini durdurma|Seçili gizlenen hata veya hatalara sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından hataları gizlemeyi **Durdur**' a tıklayın.<br /><br /> Doğrulamayı daha sonra çalıştırdığınızda seçili gizlenen hatalar görünecektir.|
@@ -171,7 +171,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
- \- veya-
+ \- veya -
 
 1. **Çözüm Gezgini**, katman diyagramını veya diyagramlarını içeren modelleme projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -197,7 +197,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
    Doğrulama hataları hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors). [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]hakkında daha fazla bilgi için bkz.:
 
-- [Uygulamayı oluşturma](/azure/devops/pipelines/index)
+- [Uygulamayı oluşturun](/azure/devops/pipelines/index)
 
 - [Yapı işleminiz için varsayılan şablonu kullanın](https://msdn.microsoft.com/library/43930b12-c21b-4599-a980-2995e3d16e31)
 
@@ -210,7 +210,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 ## <a name="TroubleshootingValidation"></a>Katman doğrulama sorunlarını giderme
  Aşağıdaki tabloda katman doğrulama sorunları ve bunların çözümü açıklanmaktadır. Bu sorunlar, kod ve tasarım arasındaki çakışmalarla sonuçlanan hatalardan ayrılır. Bu hatalar hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors).
 
-|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
+|**Sorun**|**Olası neden**|**Çözümleme**|
 |---------------|------------------------|--------------------|
 |Doğrulama hataları beklendiği gibi gerçekleşmez.|Doğrulama Çözüm Gezgini'ndeki diğer katman diyagramlarından kopyalanmış ve aynı modelleme projesinde bulunan katman diyagramlarında işe yaramaz. Bu şekilde kopyalanan katman diyagramları, orijinal katman diyagramıyla aynı başvuruları içerir.|Modelleme projesine yeni bir katman diyagramı ekleyin.<br /><br /> Öğeleri kaynak katmanı diyagramından yeni diyagrama kopyalayın.|
 
@@ -225,7 +225,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu hataların anlamı açıklanmakta ve bunları çözmek veya yönetmek için yapabilecekleriniz önerilmektedir.
 
-|**Sözdizimi**|**Açıklama**|
+|**Söz dizimi**|**Açıklama**|
 |----------------|---------------------|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* katman diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem**gibi *ArtifactN*türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Bir ad alanının adı.|

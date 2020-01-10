@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 10/16/2019
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 355a08b2ff322226d347d999f4ec8a9ebb7ba5fc
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: bdf326bc337456a0a9b4ba085d308ead2c90d49b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188729"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846939"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Visual Studio 'da kapsayıcıları ve görüntüleri görüntüleme ve tanılama
 
@@ -21,11 +21,11 @@ ms.locfileid: "73188729"
 ## <a name="prerequisites"></a>Prerequisites
 
 - [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-- [Visual studio 2019 sürüm 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) veya üzeri ya da visual Studio 2019 ' nin önceki bir sürümünü kullanıyorsanız [kapsayıcılar pencere uzantısını](https://aka.ms/vscontainerspreview)yükleyebilirsiniz.
+- [Visual studio 2019 sürüm 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) veya üzeri ya da visual Studio 2019 ' nin önceki bir sürümünü kullanıyorsanız [kapsayıcılar pencere uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions)yükleyebilirsiniz.
 
 ## <a name="view-information-about-your-containers"></a>Kapsayıcılarınız hakkındaki bilgileri görüntüleyin
 
-Kapsayıcılı bir .NET projesi başlattığınızda **kapsayıcılar** penceresi otomatik olarak açılır. İstediğiniz zaman, Visual Studio 'da kapsayıcıları görüntülemek için, Visual Studio arama kutusunu etkinleştirmek üzere **Ctrl** +**Q** kullanın ve `Containers` yazıp ilk öğeyi seçin. Ayrıca, ana menüden **kapsayıcılar** penceresini açabilirsiniz. **Diğer Windows**  > **kapsayıcılarını** >  menü yolu **görünümünü** kullanın.  
+Kapsayıcılı bir .NET projesi başlattığınızda **kapsayıcılar** penceresi otomatik olarak açılır. İstediğiniz zaman, Visual Studio 'da kapsayıcıları görüntülemek için, Visual Studio arama kutusunu etkinleştirmek üzere **Ctrl**+**Q** kullanın ve `Containers` yazıp ilk öğeyi seçin. Ayrıca, ana menüden **kapsayıcılar** penceresini açabilirsiniz. **Diğer Windows** > **kapsayıcılarını** > menü yolu **görünümünü** kullanın.  
 
 ![Kapsayıcılar penceresindeki ortam sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/container-window.png)
 
@@ -51,7 +51,7 @@ Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümün
 
 İyi bilinen bağlantı noktaları bağlanır, bu nedenle bir bağlantı noktasında kullanılabilir içerik varsa, tarayıcıyı açmak için bağlantıya tıklayabilirsiniz.
 
-## <a name="view-logs"></a>Günlükleri görüntüle
+## <a name="view-logs"></a>Günlükleri görüntüleme
 
 **Günlükler** sekmesi `docker logs` komutunun sonuçlarını gösterir. Varsayılan olarak, sekmesi bir kapsayıcıda stdout ve stderr akışlarını gösterir, ancak çıktıyı yapılandırabilirsiniz. Ayrıntılar için bkz. [Docker günlüğü](https://docs.docker.com/config/containers/logging/).  Varsayılan olarak, **Günlükler** sekmesi günlükleri akışlar, ancak sekmedeki **Durdur** düğmesini seçerek bunu devre dışı bırakabilirsiniz.
 
@@ -60,7 +60,7 @@ Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümün
 Günlükleri temizlemek için **Günlükler** sekmesindeki **Temizle** düğmesini kullanın.  Tüm günlükleri almak için **Yenile** düğmesini kullanın.
 
 > [!NOTE]
-> Visual Studio, Windows kapsayıcıları ile hata ayıklamadan çalıştırdığınızda stdout ve stderr 'i **Çıkış** penceresine otomatik olarak yönlendirir. bu nedenle, Visual Studio 'dan **CTRL** +**F5** kullanılarak başlatılan Windows kapsayıcıları, günlükleri içinde görüntülemez Bu sekme; Bunun yerine **Çıkış** penceresini kullanın.
+> Visual Studio, Windows kapsayıcıları ile hata ayıklamadan çalıştırdığınızda stdout ve stderr 'i **Çıkış** penceresine otomatik olarak yönlendirir. bu nedenle, Visual Studio 'dan **CTRL**+**F5** kullanılarak başlatılan Windows kapsayıcıları bu sekmede günlükleri görüntülemez; Bunun yerine **Çıkış** penceresini kullanın.
 
 ## <a name="view-the-filesystem"></a>Dosya sistemini görüntüleme
 

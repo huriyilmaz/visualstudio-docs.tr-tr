@@ -10,12 +10,12 @@ ms.assetid: 5838f02d-001f-49ce-adce-c9ea1afaec2f
 caps.latest.revision: 58
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3aec055c0fb0253f0b233f51e50485ccb4ee3382
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1db35e1eb98ad23a4414a48389092a3b05485527
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302604"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851861"
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>Verilerle Çalışan Kodlanmış UI Testi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,17 +59,17 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
     }
     ```
 
-5. Testin çalıştığını doğrulamak için `AddNumbers()` yöntemini kullanın. İmleci yukarıda gösterilen test yöntemine yerleştirin, bağlam menüsünü açın ve **Testleri Çalıştır**' ı seçin. (Klavye kısayolu: CTRL + R, T).
+5. Kullanım `AddNumbers()` test çalıştırdığını doğrulamak için yöntem. Yukarıda gösterilen test yönteminde imleci, bağlam menüsünü açın ve seçin **çalıştırmak testlerini**. (Klavye kısayolu: CTRL + R, T).
 
      Test Gezgini penceresinde başarılı veya başarısız olan testin görüntülendiğini gösteren test sonucu. Test Gezgini penceresini açmak için, **Test** menüsünde **Windows** ' u ve ardından **Test Gezgini**' ni seçin.
 
-6. Bir veri kaynağı, beklenen değerleri doğrulamak için test tarafından kullanılan onaylama parametre değerleri için de kullanılabilir —, iki sayının toplamının doğru olduğunu doğrulamak için bir onaylama ekleyelim. İmleci yukarıda gösterilen test yöntemine yerleştirin, bağlam menüsünü açın ve **KODLANMıŞ UI testi Için kod oluştur**' u seçin ve **kodlanmış UI Test Oluşturucusu**' nu kullanın.
+6. Bir veri kaynağı, beklenen değerleri doğrulamak için test tarafından kullanılan onaylama parametre değerleri için de kullanılabilir —, iki sayının toplamının doğru olduğunu doğrulamak için bir onaylama ekleyelim. Yukarıda gösterilen test yönteminde imleci, bağlam menüsünü açın ve seçin **kodlanmış UI testi için kod üret**, ardından **kullanım kodlanmış UI Test Oluşturucusu**.
 
      Toplamı görüntüleyen hesaplayıcı metin denetiminde eşleyin.
 
      ![UI metin denetimini eşleme](../test/media/cuit-datadriven-addassertion.png "CUIT_dataDriven_AddAssertion")
 
-7. Toplam değeri doğru olduğunu doğrulayan bir onay ekleyin. **3** değerine sahip **Görüntümetni** özelliğini seçin ve ardından **onay Ekle**' yi seçin. **Areeşitse** karşılaştırıcısı ' nı kullanın ve karşılaştırma değerinin **3**olduğunu doğrulayın.
+7. Toplam değeri doğru olduğunu doğrulayan bir onay ekleyin. Seçin **görüntü metni** sahip özellik **3** seçip **onaylama Ekle**. Kullanım **AreEqual** karşılaştırıcı ve karşılaştırma değeri olduğundan emin olun **3**.
 
      ![Onaylama işlemi yapılandırma](../test/media/cuit-datadriven-builderaddassertion2.png "CUIT_dataDriven_BuilderAddAssertion2")
 
@@ -77,7 +77,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
 
      ![Onaylama yöntemini oluşturma](../test/media/cuit-datadriven-assertiongencode.png "CUIT_dataDriven_AssertionGenCode")
 
-     `ValidateSum` yöntemi `AddNumbers` yönteminin sonuçlarını doğruladığından, kodu kod bloğunun en altına taşıyın.
+     Çünkü `ValidateSum` yöntemi doğrulama sonuçlarını `AddNumbers` yöntemi, kod bloğunun altına taşıyın.
 
     ```csharp
     public void CodedUITestMethod1()
@@ -90,7 +90,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
     }
     ```
 
-9. Testin `ValidateSum()` yöntemini kullanarak çalıştığını doğrulayın. İmleci yukarıda gösterilen test yöntemine yerleştirin, bağlam menüsünü açın ve **Testleri Çalıştır**' ı seçin. (Klavye kısayolu: CTRL + R, T).
+9. Test kullanarak çalıştığını doğrulamak `ValidateSum()` yöntemi. Yukarıda gösterilen test yönteminde imleci, bağlam menüsünü açın ve seçin **çalıştırmak testlerini**. (Klavye kısayolu: CTRL + R, T).
 
      Bu noktada, tüm parametre değerlerini kendi yöntemlerini sabiti olarak tanımlanır. Ardından, test veri odaklı bir veri kümesi oluşturalım.
 
@@ -102,7 +102,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
 
 2. . Csv dosyasını aşağıdaki verilerle doldurun:
 
-    |Num1|Num2|TOPLA|
+    |Num1|Num2|Toplam|
     |----------|----------|---------|
     |3|4|7|
     |5|6|11|
@@ -122,7 +122,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
 
 #### <a name="step-3--add-data-source-binding"></a>3\. adım – veri kaynağı bağlamayı ekleme
 
-1. Veri kaynağını bağlamak için, test yönteminin hemen üzerinde yer alan var olan `[TestMethod]` özniteliği içine bir `DataSource` özniteliği ekleyin.
+1. Veri kaynağına bağlamak için ekleme bir `DataSource` görüntülenmesi için öznitelik `[TestMethod]` hemen test metodu özniteliği.
 
     ```
     [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\data.csv", "data#csv", DataAccessMethod.Sequential), DeploymentItem("data.csv"), TestMethod]
@@ -140,7 +140,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
      Veri kaynağı artık bu test yöntemi, kullanabilmeniz için kullanılabilir.
 
     > [!TIP]
-    > XML, SQL Express ve Excel gibi diğer veri kaynağı türlerini kullanma örnekleri için bkz. soru-& cevap bölümünde [veri kaynağı öznitelik örnekleri](#CreateDataDrivenCUIT_QA_DataSourceAttributes) .
+    > Bkz: [veri kaynağı özniteliği örnekleri](#CreateDataDrivenCUIT_QA_DataSourceAttributes) soru-cevap'ta XML, SQL Express ve Excel gibi diğer veri kaynağı türleri kullanma örnekleri için bir bölüm.
 
 2. Testi çalıştırın.
 
@@ -166,7 +166,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
     ```
 
-2. `CodedUITestMethod1()` yöntemine, veri kaynağından değerleri uygulayacak `TestContext.DataRow[]` ekleyin. Veri kaynağı değerleri, `SearchProperties`denetimleri kullanılarak UIMap denetimlerine atanan sabitleri geçersiz kılar:
+2. Ekleme `TestContext.DataRow[]` içinde `CodedUITestMethod1()` yöntemi değerleri veri kaynağından uygulanır. Veri kaynağı değerleri denetimlerini kullanarak UIMap denetimlerine atanan sabitleri geçersiz kılma `SearchProperties`:
 
     ```
     public void CodedUITestMethod1()
@@ -187,11 +187,11 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
 
          ![Kodlanmış UI test düzenleyicisini açın](../test/media/cuit-datadriven-opentesteditor.png "CUIT_dataDriven_OpenTestEditor")
 
-    - UI eylemi seçin ve karşılık gelen UI denetim eşlemesi gözlemleyin. Eşlemenin koda nasıl karşılık geldiğini (örneğin, `this.UIMap.UICalculatorWindow.UIItemWindow.UIItem1Button`) unutmayın.
+    - UI eylemi seçin ve karşılık gelen UI denetim eşlemesi gözlemleyin. Nasıl eşleme kod, örneğin, karşılık gelen fark `this.UIMap.UICalculatorWindow.UIItemWindow.UIItem1Button`.
 
          ![Koda yardımcı olması için kodlanmış UI test düzenleyicisini kullanın](../test/media/cuit-datadriven-testeditor.png "CUIT_dataDriven_TestEditor")
 
-    - Özellikler penceresinde **arama özellikleri**' ni açın. Arama özellikleri **adı** değeri, veri kaynağı kullanılarak kodda ne tür bir şekilde işlenemekte. Örneğin, `SearchProperties` her bir veri satırının ilk sütunundaki değerler atanmaktadır: `UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`. Bu test, üç yineleme için arama özelliğinin **ad** değerini 3, sonra 5 ve son 6 olarak değiştirir.
+    - Özellikler penceresinde **arama özellikleri**' ni açın. Arama özellikleri **adı** değerdir veri kaynağını kullanma kodda neler değiştirildiği. Örneğin, `SearchProperties` her veri satırının ilk sütununu değerler atanır: `UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`. Bu test için üç yineleme, değişir **adı** 3, sonra 5 ve 6 son arama özelliği için değer.
 
          ![Kodlamaya yardımcı olması için arama özelliklerini kullanın](../test/media/cuit-datadriven-searchproperties.png "CUIT_dataDriven_SearchProperties")
 
@@ -205,11 +205,11 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
 
    **Kılavuz**
 
-   Daha fazla bilgi için bkz [. Visual Studio Ile sürekli teslim Için test etme 2012 – Bölüm 2: birim testi:](https://go.microsoft.com/fwlink/?LinkID=255188) [Visual Studio 2012 ile sürekli teslim için, içeri ve test etmeyi test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://go.microsoft.com/fwlink/?LinkID=255196)
+   Daha fazla bilgi için bkz [. Visual Studio Ile sürekli teslim Için test etme 2012 – Bölüm 2: birim testi:](https://msdn.microsoft.com/library/jj159340.aspx) [Visual Studio 2012 ile sürekli teslim için, içeri ve test etmeyi test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ## <a name="q--a"></a>Soru - Yanıt
 
-### <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a>SQL Express veya XML gibi diğer veri kaynağı türleri için veri kaynağı öznitelikleri nelerdir?
+### <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express veya XML gibi diğer veri kaynağı türleri için veri kaynağı öznitelikleri nelerdir?
  Kodunuza kopyalayarak ve gereken özelleştirmeleri yaparak, aşağıdaki tabloda örnek veri kaynağı dizeleri kullanabilirsiniz.
 
  **Veri kaynağı türleri ve öznitelikleri**
@@ -226,7 +226,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
 
      `[DataSource("Microsoft.VisualStudio.TestTools.DataSource.TestCase", "http://vlm13261329:8080/tfs/DefaultCollection;Agile", "30", DataAccessMethod.Sequential), TestMethod]`
 
-- XML
+- {1&gt;XML&lt;1}
 
      `[DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "|DataDirectory|\\data.xml", "Iterations", DataAccessMethod.Sequential), DeploymentItem("data.xml"), TestMethod]`
 
@@ -235,7 +235,7 @@ Farklı koşulları test etmeye yönelik farklı parametre değerleriniz ile bir
      `[DataSource("System.Data.SqlClient", "Data Source=.\\sqlexpress;Initial Catalog=tempdb;Integrated Security=True", "Data", DataAccessMethod.Sequential), TestMethod]`
 
 ### <a name="q-can-i-use-data-driven-tests-on-my-windows-phone-app"></a>S: Windows Phone uygulamamda veri tabanlı testleri kullanabilir miyim?
- Y **:** Yes. Windows Phone için veri odaklı kodlanmış UI testleri, bir test yönteminde DataRow özniteliği kullanılarak tanımlanır. Aşağıdaki örnekte x ve y, ilk yineleme için 1 ve 2 değerlerini ve testin ikinci yinelemesi için-1 ve-2 değerlerini kullanır.
+ **Y:** Evet. Windows Phone için veri odaklı kodlanmış UI testleri, bir test yönteminde DataRow özniteliği kullanılarak tanımlanır. Aşağıdaki örnekte x ve y, ilk yineleme için 1 ve 2 değerlerini ve testin ikinci yinelemesi için-1 ve-2 değerlerini kullanır.
 
 ```
 [DataRow(1, 2, DisplayName = "Add positive numbers")]

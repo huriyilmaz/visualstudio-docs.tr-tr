@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 278858eb28e0db7edd2694397cc7b24f1cfec301
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ac188bcf7975b8da1bbc71a90d3b6c34b095d424
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296833"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845573"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>İzlenecek Yol: Kod Parçacığı Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74296833"
 Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Yapmanız gereken tek şey bir XML dosyası oluşturur, uygun öğeleri doldurur ve kodunuzu buna ekler. Ayrıca, kodunuza başvurular ve değiştirme parametreleri de ekleyebilirsiniz. Kod parçacıkları yöneticisinde (**Araçlar/kod parçacıkları Yöneticisi**) içeri aktar düğmesini kullanarak kod parçacığını Visual Studio yüklemenize ekleyebilirsiniz.
 
 > [!TIP]
-> Kod parçacıklarını daha kolay yazma hakkında daha fazla bilgi için, CodePlex Web sitesinde [kod parçacığı Düzenleyicisi](https://go.microsoft.com/fwlink/?LinkId=251033)gibi topluluk araçları arayın.
+> Kod parçacıklarını daha kolay yazma hakkında daha fazla bilgi için, CodePlex Web sitesinde [kod parçacığı Düzenleyicisi](https://snippeteditor.codeplex.com/)gibi topluluk araçları arayın.
 
 ## <a name="snippet-template"></a>Kod parçacığı şablonu
  Temel kod parçacığı şablonu aşağıda verilmiştir:
@@ -75,7 +75,7 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
 1. Kod parçacıkları Yöneticisi 'Ni kullanarak Visual Studio yüklemenize kendi kod parçacıklarını ekleyebilirsiniz. Kod parçacıkları yöneticisini açın (**Araçlar/kod parçacıkları Yöneticisi**).
 
-2. **İçeri aktar** düğmesine tıklayın.
+2. **Al** düğmesine tıklayın.
 
 3. Kod parçacığını önceki yordamda kaydettiğiniz konuma gidin, seçin ve **Aç**' a tıklayın.
 

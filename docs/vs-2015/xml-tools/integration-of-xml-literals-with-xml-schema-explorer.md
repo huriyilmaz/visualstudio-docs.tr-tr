@@ -9,17 +9,17 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d808fce2783d444071ea1a7976d26e3c5bf02eed
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a15767454c83604de2844e4c0a9f2e121a9a1a4f
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297463"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846116"
 ---
 # <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>XML Değişmez Değerlerinin XML Şeması Gezgini ile Tümleştirilmesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Basic XML sabit değerlerini destekler. Bu, XML parçalarını doğrudan Visual Basic kodunuza birleştirebilmeniz anlamına gelir. Daha fazla bilgi için bkz. [XML değişmez değerleri genel bakış](https://go.microsoft.com/fwlink/?LinkId=140325).
+Visual Basic XML sabit değerlerini destekler. Bu, XML parçalarını doğrudan Visual Basic kodunuza birleştirebilmeniz anlamına gelir. Daha fazla bilgi için bkz. [XML değişmez değerleri genel bakış](https://msdn.microsoft.com/library/bb384629.aspx).
 
  Visual Basic projenizdeki bir XSD dosyası bir XML sabit değeri içeriyorsa, XML şema Gezgini 'nde XML şeması kümesini görüntüleyebilirsiniz. Bir XML sabit değeri ile ilişkili Şema kümesini görüntülemek için, XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma ' ya sağ tıklayın ve **şema Gezgininde göster**' i seçin.
 

@@ -11,30 +11,30 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0bf997205979cdfbb9c9f03492a5943f458e2d9c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 03360bfc01110e7b4ef73956f0199aaaed9cee2c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342268"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848966"
 ---
 # <a name="automation-support-for-options-pages"></a>Seçenekler sayfaları için Otomasyon desteği
-VSPackage özel sağlayabilir **seçenekleri** iletişim kutuları için **Araçları** menü (**Araçlar Seçenekler** sayfaları) içinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bunları Otomasyon için kullanılabilir hale getirebilirsiniz Model.
+VSPackages, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ' de **Araçlar** menüsüne (**Araçlar seçenekleri** sayfaları) özel **Seçenekler** iletişim kutuları sağlayabilir ve bunları otomasyon modeli için kullanılabilir hale getirir.
 
 ## <a name="tools-options-pages"></a>Araçlar Seçenekler sayfaları
- Oluşturmak için bir **Araçlar Seçenekler** sayfasında VSPackage VSPackage'nın uygulaması aracılığıyla ortamına döndürülen bir kullanıcı denetimi uygulama sağlamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemi. (Veya yönetilen kod, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemi.)
+ Bir **araç seçenekleri** sayfası oluşturmak için, bir vspackage, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yönteminin VSPackage uygulamasının aracılığıyla ortama döndürülen bir kullanıcı denetim uygulamasını sağlamalıdır. (Veya, yönetilen kod için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemi.)
 
- Bu isteğe bağlıdır, ancak bu yeni sayfa otomasyon modeli aracılığıyla erişmesine izin vermek için önemle önerilir. Aşağıdaki adımlarla bunu yapabilirsiniz:
+ Bu yeni sayfaya otomasyon modeli aracılığıyla erişime izin vermek için isteğe bağlıdır, ancak önemle önerilir. Bunu aşağıdaki adımlarla yapabilirsiniz:
 
-1. Genişletme <xref:EnvDTE._DTE.Properties%2A> IDispatch türetilmiş bir nesnenin uygulanmasına aracılığıyla nesne.
+1. <xref:EnvDTE._DTE.Properties%2A> nesnesini IDispatch ile türetilmiş bir nesnenin uygulamasıyla genişletin.
 
-2. Uygulanışı dönüş <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> yöntemi (veya yönetilen kod için <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A> yöntemi) IDispatch türetilmiş nesne.
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> yönteminin (veya yönetilen kod için <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A> yöntemi) bir uygulamasını IDispatch ile türetilmiş nesneye döndürün.
 
-3. Bir Otomasyon tüketici çağırdığında <xref:EnvDTE._DTE.Properties%2A> özel metodunda **seçeneği** özellik sayfası, ortam kullanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> özel elde etmek için yöntemi **Araçlar Seçenekler** sayfanın Otomasyon uygulama.
+3. Bir Otomasyon tüketicisi özel bir **seçenek** özelliği sayfasında <xref:EnvDTE._DTE.Properties%2A> yöntemini çağırdığında, ortam, özel bir **araç seçenekleri** sayfasının otomasyon uygulamasını elde etmek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> yöntemini kullanır.
 
-4. Otomasyon nesne VSPackage'ı, ardından her sağlamak için kullanılan <xref:EnvDTE.Property> tarafından döndürülen <xref:EnvDTE._DTE.Properties%2A>.
+4. VSPackage Otomasyon nesnesi, <xref:EnvDTE._DTE.Properties%2A>tarafından döndürülen her bir <xref:EnvDTE.Property> sağlamak için kullanılır.
 
-   Özel bir uygulama örneği **Araçlar Seçenekler** sayfasında, bkz: [VSSDK örnekleri](https://aka.ms/vs2015sdksamples).
+   Özel bir **Araçlar Seçenekler** sayfası uygulayan bir örnek için bkz. [VSSDK örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Proje nesnelerini kullanıma sunma](../../extensibility/internals/exposing-project-objects.md)

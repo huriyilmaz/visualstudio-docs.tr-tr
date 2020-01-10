@@ -3,15 +3,15 @@ title: XAML Tasarımcısı’nda proje kodu hatalarını ayıklama veya proje ko
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e6426479012ba950f261286323b166da695e9cc5
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ce29bcef43877ec8a41235545652278645cad123
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189595"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592996"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>XAML Tasarımcısı’nda proje kodu hatalarını ayıklama veya proje kodunu devre dışı bırakma
 
@@ -35,7 +35,7 @@ Proje kodu devre dışı bırakıldığında, Visual Studio yer tutucular göste
 
 1. İşlenmeyen özel durum iletişim kutusunda **Tasarımcı bağlantısını yeniden yüklemek için buraya tıklayın ' ı** seçin.
 
-2. Menü çubuğunda **hata ayıkla** > , uygulamayı derlemek ve çalıştırmak Için**hata ayıklamayı Başlat** ' ı seçin.
+2. Menü çubuğunda **Hata Ayıkla** ' yı seçin > uygulamayı derlemek ve çalıştırmak Için **hata ayıklamayı başlatın** .
 
      Uygulama başarılı bir şekilde oluşturulup çalışırsa, tasarım zamanı özel durumuna tasarımcıda çalışan proje kodunuz neden olmuş olabilir.
 
@@ -53,7 +53,7 @@ Proje kodu devre dışı bırakıldığında, Visual Studio yer tutucular göste
 
 5. Proje kodunuzda bir kesme noktası ayarlayın.
 
-6. Visual Studio 'nun yeni örneğinde, menü çubuğunda **hata ayıkla** > **işlem için İliştir**' i seçin.
+6. Visual Studio 'nun yeni örneğinde, menü çubuğunda **hata ayıkla** > **İşleme İliştir**' i seçin.
 
 7. **Işleme İliştir** iletişim kutusunda, **kullanılabilir Işlemler** listesinde **xdesproc. exe**' yi seçin ve **Ekle** düğmesini seçin.
 
@@ -61,7 +61,7 @@ Proje kodu devre dışı bırakıldığında, Visual Studio yer tutucular göste
 
      Bu işlem, Visual Studio 'nun ilk örneğindeki XAML Tasarımcısı işlemidir.
 
-8. Visual Studio 'nun ilk örneğinde, menü çubuğunda **hata ayıkla** > **hata ayıklamayı Başlat**' ı seçin.
+8. Visual Studio 'nun ilk örneğinde, menü çubuğunda **hata ayıkla** > hata **ayıklamayı Başlat**' ı seçin.
 
      Artık tasarımcıda çalışan kodunuzda bir adım adım ekleyebilirsiniz.
 

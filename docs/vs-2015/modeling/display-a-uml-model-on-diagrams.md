@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 67eb1a6ce55292415da4a5c4e363941a4285d8b7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b43d4353e325bb81a29fe39106ac13e1ddcf96a9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296011"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849477"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>Diyagramlar üzerinde model görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -379,4 +379,4 @@ namespace AlignCommand
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramları GENIŞLETME](../modeling/extend-uml-models-and-diagrams.md) [UML modeline git](../modeling/navigate-the-uml-model.md) [örnek: diyagram üzerinde şekilleri hizalama menü komut](https://go.microsoft.com/fwlink/?LinkId=213809) [örneği: öğeler, şekiller ve Stereotipler oluşturma](https://go.microsoft.com/fwlink/?LinkId=213811)
+ [UML modellerini ve diyagramları GENIŞLETME](../modeling/extend-uml-models-and-diagrams.md) [UML modeline git](../modeling/navigate-the-uml-model.md) [örnek: diyagram üzerinde şekilleri hizalama menü komut](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [örneği: öğeler, şekiller ve Stereotipler oluşturma](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

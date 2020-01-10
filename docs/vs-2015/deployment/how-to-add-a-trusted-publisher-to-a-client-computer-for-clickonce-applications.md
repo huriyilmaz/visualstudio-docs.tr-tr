@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9b535737860b846aadecb6b73b4bd26659db37b1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 296aec3b2b5cd307400b230375a7171f158fee60
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74289707"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847690"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl yapılır: ClickOnce Uygulamaları için Sunucu Bilgisayara Güvenilir Yayımcı Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
   
 1. Bir CA 'dan dijital sertifika alın.  
   
-2. Sertifikayı Base64 X. 509.440 (. cer) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](https://go.microsoft.com/fwlink/?LinkId=164793).  
+2. Sertifikayı Base64 X. 509.440 (. cer) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](https://technet.microsoft.com/library/cc730988(WS.10).aspx).  
   
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:  
   
@@ -51,7 +51,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
   
 1. Bir CA 'dan dijital sertifika alın.  
   
-2. Sertifikayı Base64 X. 509.440 (. cer) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](https://go.microsoft.com/fwlink/?LinkId=164793).  
+2. Sertifikayı Base64 X. 509.440 (. cer) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](https://technet.microsoft.com/library/cc730988(WS.10).aspx).  
   
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:  
   

@@ -11,12 +11,12 @@ caps.latest.revision: 23
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5b1d8bdeb4497af57c385e73ff0dcd34041a2097
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9e56f2d8ef72121e8b34117436019251449fbb75
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297324"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845044"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,9 +37,9 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
   
 |Direct3D 12 kuyruğu|Renk|  
 |-----------------------|-----------|  
-|İşleme kuyruğu|Renkli|  
-|İşlem kuyruğu|Renkle|  
-|Kopyalama kuyruğu|Al|  
+|İşleme kuyruğu|Yeşil|  
+|İşlem kuyruğu|Sarı|  
+|Kopyalama kuyruğu|Turuncu|  
   
  Direct3D 11 birden çok kuyruğu kullanıma sunmadığından, bir Direct3D 11 uygulaması yakalamayla çalışırken olay listesinde olaylar renk kodlanmamış.  
   
@@ -93,7 +93,7 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 ### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Direct3D 11 ve önceki sürümlerde Kullanıcı tanımlı olaylar  
  Direct3D 11 veya daha önceki sürümlerde gruplar ve işaretçiler oluşturmak için bu bölümde açıklanan API 'Leri kullanın. Aşağıdaki tabloda, Direct3D 11 ve daha önceki Direct3D sürümlerinin farklı sürümleri için kullanabileceğiniz API 'Ler özetlenmektedir.  
   
-|API açıklaması|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](https://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11,1)|D3DPerf_ API ailesi (Direct3D 11,0 ve öncesi)|  
+|API açıklaması|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](https://msdn.microsoft.com/library/windows/desktop/hh446881(v=vs.85).aspx) (Direct3D 11,1)|D3DPerf_ API ailesi (Direct3D 11,0 ve öncesi)|  
 |---------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------------------|  
 |Bir olay grubuna başla|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|  
 |Bir olay grubunu Sonlandır|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  

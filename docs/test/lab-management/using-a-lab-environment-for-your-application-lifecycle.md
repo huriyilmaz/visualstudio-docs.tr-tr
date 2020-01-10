@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c9d7e90e0c4eb48a19c36ad86d8f438080b38d62
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b02f8bf9542b5de4737d173835c011f59c3fdc86
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588908"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847298"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Devops için bir laboratuvar ortamı kullanma
 
@@ -140,5 +140,5 @@ Ortamları ayarlama hakkında daha fazla bilgi için bkz:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Test aracılarını yükleme ve yapılandırma](../../test/lab-management/install-configure-test-agents.md)
-* [Visual Studio Laboratuvar Yönetimi Kılavuzu](https://aka.ms/vsarsolutions)
+* [Visual Studio Laboratuvar Yönetimi Kılavuzu](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/)
 * [Microsoft DevOps blogu](https://devblogs.microsoft.com/devops/)

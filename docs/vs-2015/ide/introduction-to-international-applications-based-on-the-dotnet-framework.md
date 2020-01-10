@@ -26,12 +26,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f394cca9a248b5304a165f68a60b966d8e3684b2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0d57cee8591196d12e51e58fb0e5e6a4a2cdf94a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291371"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848373"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework Tabanlı Uluslararası Uygulamalara Giriş
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "74291371"
 
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yerelleştirme modeli, hem uygulama kodunu hem de geri dönüş kaynaklarını içeren bir ana derlemeden oluşur: uygulamanın ilk geliştirildiği dile yönelik dizeler, görüntüler ve diğer nesneler. Her yerelleştirilmiş uygulamanın uydu derlemeleri veya yalnızca yerelleştirilmiş kaynakları içeren derlemeler olacaktır. Ana derleme her zaman geri dönüş kaynaklarını içerdiğinden, bir kaynak yerelleştirilmiş uydu derlemesinde bulunmazsa <xref:System.Resources.ResourceManager>, bu dosyayı hiyerarşik bir şekilde yüklemeye çalışır ve sonuçta ana derlemede kaynağa geri düşerler. Kaynak geri dönüş sistemi, [Yerelleştirme Için kaynakların hiyerarşik kuruluşunda](../ide/hierarchical-organization-of-resources-for-localization.md)daha ayrıntılı olarak açıklanmıştır.
 
- Kullanarak göz önünde bulundurmanız gereken bir yerelleştirme kaynağı, tüm Microsoft yerelleştirilmiş ürünlerin sözlüğbir biridir. Bu CSV dosyasında 12.000 ' den fazla Ingilizce terim ve bu koşulların en fazla 59 farklı dilde olan çevirileri bulunur. Sözlük, [Microsoft terminoloji çevirileri](https://go.microsoft.com/fwlink/?LinkId=128146) Web sayfasında indirilebilir.
+ Kullanarak göz önünde bulundurmanız gereken bir yerelleştirme kaynağı, tüm Microsoft yerelleştirilmiş ürünlerin sözlüğbir biridir. Bu CSV dosyasında 12.000 ' den fazla Ingilizce terim ve bu koşulların en fazla 59 farklı dilde olan çevirileri bulunur. Sözlük, [Microsoft terminoloji çevirileri](https://msdn.microsoft.com/goglobal/bb688105.aspx) Web sayfasında indirilebilir.
 
  Windows Forms uygulamalar için proje sistemi hem geri dönüş hem de istediğiniz her ek kullanıcı arabirimi kültürü için kaynak dosyaları oluşturabilir. Geri dönüş kaynak dosyası ana derlemede yerleşik olarak bulunur ve kültüre özgü kaynak dosyaları her bir kullanıcı arabirimi kültürü için bir tane olmak üzere uydu Derlemeleriyle yerleşik olarak bulunur. Bir proje oluşturduğunuzda, kaynak dosyaları Visual Studio XML biçiminden (. resx), daha sonra uydu derlemelerine gömülü bir ara ikili biçime (. resources) derlenir.
 
@@ -49,5 +49,5 @@ ms.locfileid: "74291371"
  Yerelleştirilmiş bir uygulama yürütüldüğünde, görünümü iki kültür değeri tarafından belirlenir. ( *Kültür* , kullanıcının dili, ortamı ve kültürel kuralları ile ilgili Kullanıcı tercihi bilgileri kümesidir.) UI kültürü ayarı hangi kaynakların yükleneceğini belirler. UI kültürü, Web. config dosyaları ve sayfa yönergeleri içinde `UICulture` olarak ve Visual Basic ya da görsel C# kodda <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> olarak ayarlanır. Kültür ayarı Tarih, sayı, para birimi vb. gibi değerlerin biçimlendirilmesini belirler. Kültür, Web. config dosyaları ve sayfa yönergeleri içinde `Culture` olarak ayarlanır, Visual Basic veya görsel C# kodda <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Globalization><xref:System.Resources>
+ <xref:System.Globalization> <xref:System.Resources>
  Uygulamalar [güvenlik ve yerelleştirilmiş uydu derlemelerini](../ide/security-and-localized-satellite-assemblies.md) [Genelleştirme ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)

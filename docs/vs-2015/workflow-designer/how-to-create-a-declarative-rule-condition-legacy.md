@@ -13,12 +13,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2dc63fc58b22792e566df91bd86cac40e3fd2e65
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0c23fed64d7f3a7681fce96663262f6d633299a9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297484"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849329"
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>Nasıl yapılır: bildirime dayalı bir kural koşulu oluşturma (eski)
 Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak bir kural koşulunun nasıl bildirildiği açıklanmaktadır.
@@ -27,17 +27,17 @@ Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLU
 
  Bildirim temelli kural koşulları aşağıdaki Windows Workflow Foundation hazır etkinliklerinde kullanılır:
 
-- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
+- [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
 
-- [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
+- [IfElseBranchActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelsebranchactivity.aspx)
 
-- [ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039)
+- [ReplicatorActivity](https://msdn2.microsoft.com/library/system.workflow.activities.replicatoractivity.aspx)
 
-- [WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
+- [WhileActivity](https://msdn2.microsoft.com/library/system.workflow.activities.whileactivity.aspx)
 
-- [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)
+- [SequentialWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequentialworkflowactivity.aspx)
 
-- [StateMachineWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65045)
+- [StateMachineWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.statemachineworkflowactivity.aspx)
 
 ### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>Kural koşulu düzenleyicisini kullanarak bildirim temelli bir kural koşulu oluşturmak için
 
@@ -64,4 +64,4 @@ Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLU
      **Koşul Seç** iletişim kutusunu kullanma hakkında daha fazla bilgi için bkz. [Koşul Seç Iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [While etkinlik](https://go.microsoft.com/fwlink?LinkID=65091) [kuralı koşulu Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [iş akışlarındaki koşulları kullanarak](https://go.microsoft.com/fwlink?LinkID=65009) bir süre sonra [Koşul Seç Iletişim kutusunu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md) kullanan [IfElseBranchActivity etkinliğini](https://go.microsoft.com/fwlink?LinkID=65075) [](https://go.microsoft.com/fwlink?LinkID=65080) kullanan [eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [](https://go.microsoft.com/fwlink?LinkID=65066)
+ [While etkinlik](https://msdn2.microsoft.com/library/bb628552.aspx) [kuralı koşulu Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [iş akışlarındaki koşulları kullanarak](https://msdn2.microsoft.com/library/bb628447.aspx) bir süre sonra [Koşul Seç Iletişim kutusunu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md) kullanan [IfElseBranchActivity etkinliğini](https://msdn2.microsoft.com/library/bb628465.aspx) [](https://msdn2.microsoft.com/library/bb628544.aspx) kullanan [eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [](https://msdn2.microsoft.com/library/bb675237.aspx)

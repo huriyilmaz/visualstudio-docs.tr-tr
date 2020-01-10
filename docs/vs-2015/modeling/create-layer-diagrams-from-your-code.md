@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3e6cd77e785adb59fc8b2cf3b28724ed0efe1ae3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eea557035ef4e5f1ffa2585e620a331fb6b5cce2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300273"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852074"
 ---
 # <a name="create-layer-diagrams-from-your-code"></a>Kodunuz aracılığıyla katman diyagramları oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,14 +64,14 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
  Bağlı bir öğenin doğrulamayı destekleyip desteklemediğini görmek için **Katman Gezgini** ' ni açın ve öğenin **doğrulamayı destekler** özelliğini inceleyin. Bkz. [yapıtlara bağlantıları yönetme](#Managing).
 
-|**Hedef**|**Bu adımları izleyin**|
+|**Alıcı**|**Bu adımları izleyin**|
 |------------|----------------------------|
 |Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki katman diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları katman diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak**olarak ayarlayın.</li></ol>|
 |Seçilen tüm yapılar için tek bir katman oluşturma|Tüm yapıları aynı anda katman diyagramına sürükleyin.<br /><br /> Katman diyagramda görünür ve tüm yapılara bağlıdır.|
 |Seçilen her yapı için bir katman oluşturma|Tüm yapıtları aynı anda katman diyagramına sürüklerken **SHIFT** tuşuna basın ve basılı tutun. **Note:**  Bir dizi öğeyi seçmek için **SHIFT** tuşunu kullanırsanız, yapıtları seçtikten sonra anahtarı bırakın. Yapıları diyagrama sürüklerken tuşu tekrar basılı tutun. <br /><br /> Katman her yapı için diyagramda görünür ve her yapıya bağlanır.|
 |Katmana yapı ekleme|Yapıyı katmana sürükleyin.|
-|Bağlantısız bir katman oluşturma|**Araç kutusunda** **Katman diyagramı** bölümünü genişletin ve katman diyagramına bir **Katman** sürükleyin.<br /><br /> Çoklu katman eklemek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.<br /><br /> veya<br /><br /> Katman diyagramının kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
-|İç içe katmanlar oluşturma|Varolan katmanı başka bir katmanın üzerine sürükleyin.<br /><br /> veya<br /><br /> Katman için kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
+|Bağlantısız bir katman oluşturma|**Araç kutusunda** **Katman diyagramı** bölümünü genişletin ve katman diyagramına bir **Katman** sürükleyin.<br /><br /> Çoklu katman eklemek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.<br /><br /> - veya -<br /><br /> Katman diyagramının kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
+|İç içe katmanlar oluşturma|Varolan katmanı başka bir katmanın üzerine sürükleyin.<br /><br /> - veya -<br /><br /> Katman için kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
 |Varolan iki veya daha fazla katmanı içeren yeni bir katman oluşturma|Katmanları seçin, seçiminizin kısayol menüsünü açın ve **Grup**' u seçin.|
 |Katmanın rengini değiştirme|**Color** özelliğini istediğiniz renge ayarlayın.|
 |Bir katman ile ilişkili yapıların belirli ad alanlarına ait olmaması gerektiğini belirtme|Katmanın **yasak ad alanları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül ( **;** ) kullanın.|
@@ -94,10 +94,10 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 2. Bu bağlantıları yönetmek için aşağıdaki görevleri kullanın.
 
-|**Hedef**|**Katman Gezgini 'nde**|
+|**Alıcı**|**Katman Gezgini 'nde**|
 |------------|---------------------------|
 |Katman ve yapı arasındaki bağlantıyı silme|Yapıt bağlantısının kısayol menüsünü açın ve **Sil**' i seçin.|
-|Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> veya<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. katman diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
+|Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> - veya -<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. katman diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
 |Bağlantıyı bir katmandan diğerine kopyalama|1. yapıt bağlantısının kısayol menüsünü açın ve **Kopyala**' yı seçin.<br />2. katman diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
 |Varolan yapı bağlantısından yeni bir katman oluşturma|Yapı bağlantısını diyagramdaki boş bir alana sürükleyin.|
 |Bağlantılı bir yapının, katman diyagramına karşı doğrulamayı desteklediğini onaylayın.|Yapıt bağlantısı için **doğrulama sütununu destekler** bölümüne bakın.|
@@ -115,7 +115,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 ## <a name="EditDependencies"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya hedeflenen mimaride yapmayı planladığınız değişiklikleri açıklamak için katman diyagramını düzenleyin:
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Alıcı**|**Bu adımları gerçekleştirin**|
 |------------|-----------------------------|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.|
@@ -136,4 +136,4 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 - [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Channel 9 video: katman diyagramları katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://go.microsoft.com/fwlink/?LinkID=252073) [: başvuru](../modeling/layer-diagrams-reference.md) [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md) [Katman diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md) [kodu görselleştirin](../modeling/visualize-code.md)
+ [Channel 9 video: katman diyagramları katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture) [: başvuru](../modeling/layer-diagrams-reference.md) [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md) [Katman diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md) [kodu görselleştirin](../modeling/visualize-code.md)

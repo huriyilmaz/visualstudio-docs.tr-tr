@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1d82531bcde6e0a03485ac6bf77965b5c5744f23
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8ede112706cfc0291d2523424192f123c9929771
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300444"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846963"
 ---
 # <a name="additional-resources-for-msbuild"></a>MSBuild için Ek Kaynaklar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,13 +31,13 @@ Aşağıdaki Web siteleri ve forumları, [!INCLUDE[vstecmsbuild](../includes/vst
 ## <a name="microsoft-resources"></a>Microsoft Kaynakları  
   
 ### <a name="on-the-web"></a>Web'de  
- [MSBuild Channel 9 Web sitesi](https://go.microsoft.com/fwlink/?LinkId=243092)  
+ [MSBuild Channel 9 Web sitesi](https://channel9.msdn.com/tags/MSBuild/)  
  Web üzerinde [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ve diğer [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] sitelerin bağlantılarıyla ilgili bilgiler içerir.  
   
- [MSBuild ekip blogu](https://go.microsoft.com/fwlink/?LinkId=65846)  
+ [MSBuild ekip blogu](https://blogs.msdn.com/msbuild/)  
  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ürün ekibi tarafından yazılan bilgileri, bağlantıları ve güncelleştirmeleri içerir.  
   
- [Visual Studio MSBuild Forumu](https://go.microsoft.com/fwlink/?LinkId=48931)  
+ [Visual Studio MSBuild Forumu](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)  
  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]için ayrılmış bir topluluk Forumu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

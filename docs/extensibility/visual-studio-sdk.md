@@ -14,12 +14,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73c14c61702ec978d8ffec896b13204c238762a2
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: 5949a651c99c0ce45f963b5f2042cdfe6cb40b87
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568831"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848583"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özellikleri Visual Studio 'da tümleştirmenize yardımcı olur. Uzantılarınızın yanı sıra Visual Studio Market diğer kullanıcılara da dağıtabilirsiniz. Aşağıda, Visual Studio 'Yu genişletebilmeniz için bazı yollar verilmiştir:
@@ -41,7 +41,7 @@ Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özell
   Daha önce hiç bir Visual Studio uzantısı yazmadıysanız, bu özellikler hakkında daha fazla bilgi ve [Visual Studio uzantıları geliştirmeye Başlarken](../extensibility/starting-to-develop-visual-studio-extensions.md)hakkında daha fazla bilgi bulmanız gerekir.
 
 ## <a name="install-the-visual-studio-sdk"></a>Visual Studio SDK’yı Yükleme
- Visual Studio SDK, Visual Studio kurulumunda isteğe bağlı bir özelliktir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio SDK, Visual Studio kurulumunda isteğe bağlı bir özelliktir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK 'daki yenilikler
  Visual Studio SDK, VSıX v3 biçimi gibi bazı yeni özelliklerin yanı sıra uzantınızı güncelleştirmenizi gerektirebilecek büyük değişiklikler içerir. Daha fazla bilgi için bkz. [Visual Studio 2017 SDK 'daki](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)yenilikler.
@@ -60,7 +60,7 @@ Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özell
  Visual Studio SDK API başvurusunu [Visual STUDIO SDK başvurusunda](../extensibility/visual-studio-sdk-reference.md)bulabilirsiniz.
 
 ## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK örnekleri
- [Visual Studio örneklerinde](https://aka.ms/vs2015sdksamples)GITHUB 'DA vs SDK uzantılarının açık kaynak örneklerini bulabilirsiniz. Bu GitHub deposu, Visual Studio 'daki çeşitli Genişletilebilir özellikleri gösteren örnekler içerir.
+ [Visual Studio örneklerinde](https://github.com/Microsoft/VSSDK-Extensibility-Samples)GITHUB 'DA vs SDK uzantılarının açık kaynak örneklerini bulabilirsiniz. Bu GitHub deposu, Visual Studio 'daki çeşitli Genişletilebilir özellikleri gösteren örnekler içerir.
 
 ## <a name="other-visual-studio-sdk-resources"></a>Diğer Visual Studio SDK kaynakları
  VSSDK hakkında sorularınız varsa veya deneyimlerini geliştirme ve genişletmelerini paylaşmak istiyorsanız, [Visual Studio genişletilebilirlik Forumu](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) veya [extendvs Gitter Chatroom](https://gitter.im/Microsoft/extendvs)kullanabilirsiniz.

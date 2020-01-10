@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e17e29e36be5636662e6105a05446a9cbe0aa724
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 791e2e077ebd2ed3e97aecd4c7c6e52316b4fe3b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301181"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845296"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ Rolü **yalnızca bağlantıya yaymak**Için rolün **yayan Copy** özelliğini 
  **Öğeleri kopyalayıp yapıştırarak hızla çoğaltın.** Normal olarak, yeni kopyaladığınız öğe hala seçilidir ve aynı öğe türünü üzerine yapıştıramazsınız.
 Etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve birleştirme Işlemini üst sınıfa ilet olarak ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
 
- \- veya-
+ \- veya -
 
  `ClipboardCommandSet.ProcessOnPasteCommand()`geçersiz kılarak öğeleri yapıştırmadan önce diyagramı seçin. Bu kodu DslPackage projesindeki özel bir dosyaya ekleyin:
 
@@ -80,7 +80,7 @@ partial class MyDslClipboardCommandSet
  **Kullanıcı seçili bir hedefi üzerine yapıştırdığı zaman ek bağlantılar oluştur.** Örneğin, bir açıklama kutusu bir öğeye yapıştırıldığında aralarında bir bağlantı yapılır.
 Hedef etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve bağlantı ekleyerek birleştirme işlemini işleyecek şekilde ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
 
- \- veya-
+ \- veya -
 
  Temel yöntemi çağırdıktan sonra ek bağlantılar oluşturmak için `ClipboardCommandSet.ProcessOnPasteCommand()` geçersiz kılın.
 
@@ -91,7 +91,7 @@ DslPackage projesindeki *MyDSL*`ClipboardCommandSet.ProcessOnMenuCopyCommand()` 
 DslPackage projesindeki *MyDSL*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` geçersiz kılın.
 
  **Kopyala ve Yapıştır ile şekil yerleşimini koruyun.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://go.microsoft.com/fwlink/?LinkId=213879)örnekle gösterilmiştir.
+Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)örnekle gösterilmiştir.
 
  Bu etkiyi elde etmek için şekilleri ve bağlayıcıları kopyalanmış ElementGroupPrototype öğesine ekleyin. Geçersiz kılınacak en kullanışlı Yöntem ElementOperations. CreateElementGroupPrototype (). Bunu yapmak için DSL projesine aşağıdaki kodu ekleyin:
 
@@ -148,7 +148,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://go.microsoft.com/fwlink/?LinkId=213879)örnekle gösterilmiştir.
+Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)örnekle gösterilmiştir.
 
  Bu etkiyi elde etmek için `ClipboardCommandSet.ProcessOnMenuPasteCommand()` `ElementOperations.Merge()`konuma özgü sürümünü kullanacak şekilde geçersiz kılın. Bunu yapmak için DslPackage projesine aşağıdaki kodu ekleyin:
 
@@ -564,4 +564,4 @@ namespace Company.MyDsl
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md) [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [SILME davranışını özelleştirme](../modeling/customizing-deletion-behavior.md) [örnek: VMSDK devre şemaları örneği](https://go.microsoft.com/fwlink/?LinkId=213879)
+ [Öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md) [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [SILME davranışını özelleştirme](../modeling/customizing-deletion-behavior.md) [örnek: VMSDK devre şemaları örneği](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

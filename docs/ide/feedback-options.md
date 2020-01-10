@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 1c7d9ce8382ee208b160fa5cec845c8ff9508d74
-ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
+ms.openlocfilehash: 6577d49094cd4e2718507eb0c1f4f83ff146da05
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74853496"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847458"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio geri bildirim seçenekleri
 
@@ -75,12 +75,12 @@ Belgeleri iyileştirmemize yardımcı olmak için iki yol vardır:
 
 ## <a name="contact-microsoft-support"></a>Microsoft Destek'e başvurun
 
-Visual Studio destek bilgileri için bkz. [ürün yaşam döngüsü & hizmet verme](/visualstudio/releases/2019/servicing/) sayfası. Diğer Microsoft ürünleri ve hizmetleri için bkz. çevrimiçi yardım için [Microsoft desteği](https://go.microsoft.com/fwlink/?LinkID=99019) .
+Visual Studio destek bilgileri için bkz. [ürün yaşam döngüsü & hizmet verme](/visualstudio/releases/2019/servicing/) sayfası. Diğer Microsoft ürünleri ve hizmetleri için bkz. çevrimiçi yardım için [Microsoft desteği](https://support.microsoft.com/) .
 
 > [!NOTE]
 > Amerika Birleşik Devletleri ve Kanada dışında destek seçenekleri değişebilir. Bölgesel kişilerin listesi için bkz. [Microsoft Dünya çapında siteler](https://www.microsoft.com/worldwide/).
 
-Doğrudan Microsoft 'tan yönetilen destek gerektiren büyük kuruluşlarda, sözleşmeler çeşitli kurumsal destek teklifleri aracılığıyla kullanılabilir. Daha fazla bilgi için bkz. [Microsoft kurumsal destek çözümleri](https://go.microsoft.com/fwlink/?LinkId=258223).
+Doğrudan Microsoft 'tan yönetilen destek gerektiren büyük kuruluşlarda, sözleşmeler çeşitli kurumsal destek teklifleri aracılığıyla kullanılabilir. Daha fazla bilgi için bkz. [Microsoft kurumsal destek çözümleri](https://www.microsoft.com/industry/services/support).
 
 Ürün yeni bir bilgisayar ya da cihaz ile yüklenmiş gelirse, bu yazılım için teknik destek ve yardımı donanım üreticisi sağlar. Destek için doğrudan üreticiye başvurun.
 

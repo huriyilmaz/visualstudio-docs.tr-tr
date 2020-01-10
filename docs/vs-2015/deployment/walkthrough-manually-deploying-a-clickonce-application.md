@@ -21,24 +21,24 @@ caps.latest.revision: 51
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1e1099eaf8d766088612abbb399bdf004e6378e4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cba55c9f4a8f7436b97099b6b548b916ea6e5ecb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294683"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844939"
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızı dağıtmak için Visual Studio 'yu kullanamaz veya güvenilir uygulama dağıtımı gibi gelişmiş dağıtım özelliklerini kullanmanız gerekiyorsa, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bildirimlerinizi oluşturmak için Mage. exe komut satırı aracını kullanmanız gerekir. Bu izlenecek yol, Bildirim Oluşturma ve Düzenleme Aracı komut satırı sürümü (Mage. exe) veya grafik sürümü (MageUI. exe) kullanarak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtımı oluşturmayı açıklar.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Prerequisites  
  Bu kılavuzda, bir dağıtım oluşturmadan önce belirlemeniz gereken bazı Önkoşullar ve seçenekler bulunur.  
   
 - Mage. exe ve MageUI. exe ' yi yükler.  
   
-     Mage. exe ve MageUI. exe [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]parçasıdır. [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] yüklü olmalıdır ya da Visual Studio ile birlikte sunulan [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] sürümü gerekir. Daha fazla bilgi için bkz. MSDN 'de [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=158044) .  
+     Mage. exe ve MageUI. exe [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]parçasıdır. [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] yüklü olmalıdır ya da Visual Studio ile birlikte sunulan [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] sürümü gerekir. Daha fazla bilgi için bkz. MSDN 'de [Windows SDK](https://msdn.microsoft.com/windowsserver/bb980924.aspx) .  
   
 - Dağıtılacak bir uygulama sağlayın.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "74294683"
   
 - Uygulamanın UAC bilgilerine sahip bir bildirimi olmadığından emin olun.  
   
-     Uygulamanızın bir `<dependentAssembly>` öğesi gibi kullanıcı hesabı denetimi (UAC) bilgilerini içeren bir bildirim içerip içermediğini belirlemeniz gerekir. Uygulama bildirimini incelemek için, Windows Sysinternals [Sigdenetim](https://go.microsoft.com/fwlink/?LinkId=158035) yardımcı programını kullanabilirsiniz.  
+     Uygulamanızın bir `<dependentAssembly>` öğesi gibi kullanıcı hesabı denetimi (UAC) bilgilerini içeren bir bildirim içerip içermediğini belirlemeniz gerekir. Uygulama bildirimini incelemek için, Windows Sysinternals [Sigdenetim](https://technet.microsoft.com/sysinternals/bb897441.aspx) yardımcı programını kullanabilirsiniz.  
   
      Uygulamanız UAC ayrıntıları içeren bir bildirim içeriyorsa, bunu UAC bilgileri olmadan yeniden derlemeniz gerekir. Visual Studio C# 'daki bir proje için, proje özelliklerini açın ve uygulama sekmesini seçin. **Bildirim** açılan listesinde, **bildirim olmadan uygulama oluştur**' u seçin. Visual Studio 'daki bir Visual Basic projesi için, proje özelliklerini açın, uygulama sekmesini seçin ve **UAC ayarlarını görüntüle**' ye tıklayın. Açılan bildirim dosyasında, tek `<asmv1:assembly>` öğesi içindeki tüm öğeleri kaldırın.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "74294683"
   
 10. Dağıtım dizinindeki tüm dosyaları dağıtım hedefine veya medyaya kopyalayın. Bu, bir Web sitesindeki veya FTP sitesindeki bir klasör, bir dosya paylaşımında veya bir CD-ROM olabilir.  
   
-11. Uygulamanızı yüklemek için kullanıcılarınıza gereken URL, UNC veya fiziksel medyayı sağlayın. Bir URL veya UNC sağlarsanız, kullanıcılarınıza dağıtım bildiriminin tam yolunu vermeniz gerekir. Örneğin, AppToDeploy, AppToDeploy dizininde http://webserver01/ dağıtılırsa, tam URL yolu http://webserver01/AppToDeploy/AppToDeploy.applicationolur.  
+11. Uygulamanızı yüklemek için kullanıcılarınıza gereken URL, UNC veya fiziksel medyayı sağlayın. Bir URL veya UNC sağlarsanız, kullanıcılarınıza dağıtım bildiriminin tam yolunu vermeniz gerekir. Örneğin, AppToDeploy, AppToDeploy dizininde http://webserver01/ dağıtılırsa, tam URL yolu http://webserver01/AppToDeploy/AppToDeploy.application olur.  
   
 ### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>MageUI. exe grafik aracıyla bir uygulama dağıtmak için  
   
@@ -200,7 +200,7 @@ ms.locfileid: "74294683"
   
 28. Dağıtım dizinindeki tüm dosyaları dağıtım hedefine veya medyaya kopyalayın. Bu, bir Web sitesindeki veya FTP sitesindeki bir klasör, bir dosya paylaşımında veya bir CD-ROM olabilir.  
   
-29. Uygulamanızı yüklemek için kullanıcılarınıza gereken URL, UNC veya fiziksel medyayı sağlayın. Bir URL veya UNC sağlarsanız, kullanıcılarınıza dağıtım bildiriminin tam yolunu vermeniz gerekir. Örneğin, AppToDeploy, AppToDeploy dizininde http://webserver01/ dağıtılırsa, tam URL yolu http://webserver01/AppToDeploy/AppToDeploy.applicationolur.  
+29. Uygulamanızı yüklemek için kullanıcılarınıza gereken URL, UNC veya fiziksel medyayı sağlayın. Bir URL veya UNC sağlarsanız, kullanıcılarınıza dağıtım bildiriminin tam yolunu vermeniz gerekir. Örneğin, AppToDeploy, AppToDeploy dizininde http://webserver01/ dağıtılırsa, tam URL yolu http://webserver01/AppToDeploy/AppToDeploy.application olur.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Uygulamanın yeni bir sürümünü dağıtmanız gerektiğinde yeni sürümden sonra adlı yeni bir dizin oluşturun — örneğin, 1.0.0.1 — ve yeni uygulama dosyalarını yeni dizine kopyalayın. Ardından, yeni bir uygulama bildirimi oluşturup imzalamak ve dağıtım bildirimini güncelleştirmek ve imzalamak için önceki adımları izlemeniz gerekir. Yalnızca en önemli en büyük tamsayı ile, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] yalnızca daha yüksek sürümleri güncelleştirdiği için Mage. exe `-New` ve `–Update` çağrılarında aynı yüksek sürümü belirttiğinizden dikkatli olun. MageUI. exe ' yi kullandıysanız, dağıtım bildirimini açarak, **uygulama başvurusu** sekmesini seçerek, **bildirim Seç** düğmesine tıklayarak ve ardından güncelleştirilmiş uygulama bildirimini seçerek güncelleştirebilirsiniz.  

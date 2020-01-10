@@ -15,12 +15,12 @@ caps.latest.revision: 61
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dcd9b9d5e336bfa0595ddd6d70032f7ba7fe780a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2bf9c64a55f6f3b49cb1e0a50fa532f276394dac
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299396"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851996"
 ---
 # <a name="application-page-project-designer-c"></a>Uygulama Sayfası, Proje Tasarımcısı (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ Projenin uygulama ayarlarını ve özelliklerini belirtmek için **Proje Tasarı
 
  Bir Web uygulaması projesi için **sınıf kitaplığı**belirtmeniz gerekir.
 
- **Winmd dosyası** seçeneğini belirtirseniz türler, herhangi bir Windows çalışma zamanı programlama diliyle yansıtıluygulanabilir. Projenin çıkışını bir WinMD dosyası olarak paketleyerek, bir uygulamayı birden fazla dilde kodlayarak kod birlikte çalışır ve aynı dilde yazmış olursunuz. [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamalar dahil Windows Çalışma Zamanı kitaplıklarını hedefleyen çözümler için bu seçeneği belirtebilirsiniz. Daha fazla bilgi için bkz. [ C# ve Visual Basic Windows çalışma zamanı bileşenleri oluşturma](https://go.microsoft.com/fwlink/?LinkId=231895).
+ **Winmd dosyası** seçeneğini belirtirseniz türler, herhangi bir Windows çalışma zamanı programlama diliyle yansıtıluygulanabilir. Projenin çıkışını bir WinMD dosyası olarak paketleyerek, bir uygulamayı birden fazla dilde kodlayarak kod birlikte çalışır ve aynı dilde yazmış olursunuz. [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamalar dahil Windows Çalışma Zamanı kitaplıklarını hedefleyen çözümler için bu seçeneği belirtebilirsiniz. Daha fazla bilgi için bkz. [ C# ve Visual Basic Windows çalışma zamanı bileşenleri oluşturma](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.85).aspx).
 
 > [!NOTE]
 > Windows Çalışma Zamanı, bu tür bir dilde yerel nesneler olarak görünecek şekilde proje türlerine sahip olabilir. Örneğin, Windows Çalışma Zamanı etkileşimde bulunan JavaScript uygulamaları bunu bir JavaScript nesneleri kümesi olarak kullanır ve C# uygulamalar kitaplığı bir .NET nesneleri koleksiyonu olarak kullanır. Projenin çıkışını bir WinMD dosyası olarak paketleyerek, Windows Çalışma Zamanı kullandığı teknolojinin avantajlarından yararlanabilirsiniz.

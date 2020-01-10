@@ -12,14 +12,14 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 25bd88886b6bed447ec7d091543fccdb478db9c5
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: bda6d8e20064ab2197408db6b9a55a86325515e8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588879"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846730"
 ---
-# <a name="install-cross-platform-mobile-development-with-c"></a>İle platformlar arası mobil geliştirmeC++
+# <a name="install-cross-platform-mobile-development-with-c"></a>C++ ile platformlar arası mobil geliştirmeyi yükleme
 
 Visual Studio 'da C++ , Windows Masaüstü uygulamaları, evrensel WINDOWS platformu (UWP) uygulamaları, Linux uygulamaları ve artık Android ve iOS uygulamaları oluşturmak için kullanabilirsiniz. İş yüküyle **Mobil C++ geliştirme** , Visual Studio 'da platformlar arası iOS, Android ve UWP Visual Studio şablonlarını içeren, yüklenebilir bir bileşen kümesidir. Hızlı bir şekilde kullanmaya başlamak için ihtiyacınız olan platformlar arası araçları ve SDK 'Ları yükler. Bu araçları, Visual Studio 'da, platformlar arası projelerinizi kolayca oluşturmak, düzenlemek, hatalarını ayıklamak ve test etmek için kullanabilirsiniz. Bu makalede, Visual Studio 'Yu C++ kullanarak platformlar arası uygulamalar geliştirmek için gereken araçların ve üçüncü taraf yazılımların nasıl yükleneceği açıklanır. Genel bakış için bkz. [Visual C++ platformlar arası mobil](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)
 
@@ -50,7 +50,7 @@ Belirli cihaz platformları için uygulamalar oluşturmak üzere bazı ek gereks
 
 - Windows Phone Öykünücüler, Hyper-V ' y i çalıştıran bir bilgisayar gerektirir. Öykünücüleri yüklemeden ve çalıştırmadan önce Windows 'daki Hyper-V özelliğinin etkinleştirilmesi gerekir. Daha fazla bilgi için öykünücü [sistem gereksinimlerine](system-requirements-for-the-visual-studio-emulator-for-android.md)bakın.
 
-## <a name="get-the-tools"></a>Araçları edinme
+## <a name="get-the-tools"></a>Araçları edinin
 
 İle C++ mobil geliştirme, Visual Studio Community, Professional ve Enterprise sürümlerinde kullanılabilir. Visual Studio 'yu almak için [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin. Platformlar arası mobil geliştirme araçları, Visual Studio 2015 ' den itibaren kullanılabilir.
 
@@ -94,7 +94,7 @@ Visual Studio yükleyicisi iş yüküne  **C++ sahip bir mobil geliştirme** iç
 
 ## <a name="install-or-update-dependencies-manually"></a>Bağımlılıkları el ile yükler veya güncelleştirir
 
-Visual Studio yükleyicisini kullanarak bir veya daha fazla üçüncü taraf bağımlılığı yüklememeyi seçerseniz, iş yüküyle (veya Visual Studio 2015, görsel C++ mobil geliştirme seçeneği) **mobil geliştirme C++**  'yı yüklediğinizde, şunları yapabilirsiniz [Araçları yükledikten](#install-the-tools)sonra bu adımları kullanarak bunları daha sonra yükleyemezsiniz. Visual Studio Yükleyicisi, en son üçüncü taraf bileşenlerini yüklemek için düzenli olarak güncelleştirilir. Bu uygulamayı, güncelleştirilmiş SDK 'Ları ve NDKs 'leri yüklemek için kullanabilirsiniz. Ayrıca, bunları Visual Studio 'dan bağımsız olarak yükleyebilir veya güncelleştirebilirsiniz.
+Visual Studio yükleyicisini kullanarak bir veya daha fazla üçüncü taraf bağımlılığı yüklememeyi seçerseniz, iş yüküyle (veya Visual Studio 2015, görsel C++ mobil geliştirme seçeneği) **Mobil geliştirmeyi C++**  yüklediğinizde, [araçları yükleme](#install-the-tools)adımlarını kullanarak bunları daha sonra yükleyebilirsiniz. Visual Studio Yükleyicisi, en son üçüncü taraf bileşenlerini yüklemek için düzenli olarak güncelleştirilir. Bu uygulamayı, güncelleştirilmiş SDK 'Ları ve NDKs 'leri yüklemek için kullanabilirsiniz. Ayrıca, bunları Visual Studio 'dan bağımsız olarak yükleyebilir veya güncelleştirebilirsiniz.
 
 SDK 'yı güncelleştirmek ve isteğe bağlı araçları ve ek API düzeylerini yüklemek için Android SDK dizininde SDK Manager uygulamasını çalıştırabilirsiniz. SDK Yöneticisi uygulamasını çalıştırmak için **yönetici olarak çalıştır** kullanmadığınız sürece güncelleştirmeler yüklenemeyebilir. Android uygulaması oluşturma sorunları yaşıyorsanız, yüklü SDK 'larınıza yönelik güncelleştirmeler için SDK Yöneticisi ' ne bakın.
 
@@ -104,9 +104,9 @@ Android SDK gelen bazı Android öykünücülerini kullanmak için donanım hız
 
 #### <a name="to-set-the-paths-for-third-party-tools"></a>Üçüncü taraf araçların yollarını ayarlamak için
 
-1. Visual Studio menü çubuğunda **araçlar**  > **Seçenekler**' i seçin.
+1. Visual Studio menü çubuğunda **araçlar** > **Seçenekler**' i seçin.
 
-1. **Seçenekler** iletişim kutusunda,**Android** >  **platformlar arası**  > **C++** seçin.
+1. **Seçenekler** iletişim kutusunda, **Android** > **platformlar arası** > **C++** seçin.
 
    ![Android araç yolu seçenekleri](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")
 
@@ -117,4 +117,4 @@ Android SDK gelen bazı Android öykünücülerini kullanmak için donanım hız
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İOS kullanarak derlemek için Araçlar yükleyip yapılandırma](install-and-configure-tools-to-build-using-ios.md)
-- [Visual C++ platformlar arası mobil](https://go.microsoft.com/fwlink/p/?LinkId=536383)
+- [Visual C++ platformlar arası mobil](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 67589a04b8f3c39e442b596a7a41981825bd5aa5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d3247fb421800f87740a911563880b70abf3eed
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301110"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844728"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: 32 bitlik Uygulama işlem tarafından yönetilen bellek sınırlarında çalışıyor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ Kural kimliği | DA0018 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Nedeni  
+## <a name="cause"></a>Sebep  
  Profil oluşturma işlemi sırasında toplanan sistem verileri, .NET Framework bellek yığınlarının, yönetilen yığınlardaki 32 bitlik bir işlemde ulaşabileceği en büyük boyutu approached gösterir. Bu en büyük boyut, varsayılan değerdir. Özel baytlar için ayrılabilecek işlem adres alanının Toplam miktarına bağlıdır. Bildirilen değer, profili oluşturulmuş işlem etkinken Heap 'ler için gözlenen en yüksek değerdir. .NET bellek profili oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün ve yönetilen kaynakların uygulama tarafından kullanımını en iyi duruma getirme işlemini yapın.  
   
  Yönetilen yığınlardaki boyut varsayılan sınıra yaklaşımında, otomatik atık toplama işleminin daha sık çağrılması gerekebilir. Bu, bellek yönetiminin ek yükünü artırır.  
@@ -64,7 +64,7 @@ Kural kimliği | DA0018 |
   
   Bu ayırmalara neden olan yürütme yolunu öğrenmek için [ayırmalar görünümünü](../profiling/dotnet-memory-allocations-view.md) kullanın.  
   
-  Çöp toplama performansını geliştirme hakkında daha fazla bilgi için MSDN Web sitesindeki .NET Framework Teknik makale, [çöp toplayıcı temelleri ve performans ipuçları](https://go.microsoft.com/fwlink/?LinkId=177946) bölümüne bakın.  
+  Çöp toplama performansını geliştirme hakkında daha fazla bilgi için MSDN Web sitesindeki .NET Framework Teknik makale, [çöp toplayıcı temelleri ve performans ipuçları](https://msdn.microsoft.com/library/ms973837.aspx) bölümüne bakın.  
   
   Bir işlem adres alanının özel bölümünün boyutundaki sanal bellek kısıtlamalarından mimari rahatını kazanmak için, bu 32 bit işlemi 64 bit bir makinede çalıştırmayı deneyin.  64 bit makinede 32 bitlik bir işlem, 4 GB 'a kadar özel sanal bellek elde edebilir.  
   

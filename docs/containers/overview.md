@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 312c827c3b748e10951b243070f43cce559e3a60
-ms.sourcegitcommit: bbff780cda82bb64862d77fe8f407f1803beb876
+ms.openlocfilehash: d785ed9416959484f9829e12e1cd20cd2924adb8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127197"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846764"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio’da Kapsayıcı Araçları
 
@@ -23,7 +23,7 @@ Kapsayıcılarla geliştirmeye yönelik Visual Studio 'ya dahil olan araçların
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
-* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="docker-support-in-visual-studio"></a>Visual Studio 'da Docker desteği
 
@@ -31,7 +31,7 @@ Docker desteği ASP.NET projeleri, ASP.NET Core projeleri ve .NET Core ve .NET F
 
 Visual Studio 'da Docker desteği, müşteri ihtiyaçlarına yanıt olarak bir dizi yayın üzerinden değişmiştir. Bir projeye ekleyebileceğiniz iki farklı Docker desteği düzeyi vardır ve desteklenen seçenekler proje türüne ve Visual Studio sürümüne göre farklılık gösterir. Desteklenen bazı proje türleriyle, tek bir proje için düzenleme kullanmadan yalnızca bir kapsayıcı istiyorsanız, bunu Docker desteği ekleyerek yapabilirsiniz.  Bir sonraki düzey, seçtiğiniz belirli bir Orchestrator için uygun destek dosyaları ekleyen kapsayıcı düzenleme destedir.  
 
-Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme hizmetleri olarak kullanabilirsiniz.  Ayrıca, [Kubernetes için Visual Studio Araçları](https://aka.ms/get-vsk8stools)yüklerseniz Kubernetes de kullanabilirsiniz.
+Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme hizmetleri olarak kullanabilirsiniz.  Ayrıca, [Kubernetes için Visual Studio Araçları](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)yüklerseniz Kubernetes de kullanabilirsiniz.
 
 > [!NOTE]
 > 15,8 ' den önceki bir Visual Studio 2017 sürümünü kullanıyorsanız veya .NET Framework proje şablonunu kullanıyorsanız (.NET Core değil), Docker desteği eklediğinizde, Docker Compose kullanarak düzenleme desteği otomatik olarak eklenir. Docker Compose aracılığıyla kapsayıcı düzenleme desteği, Visual Studio 2017 sürüm 15,0 ' de 15,7 ve .NET Framework projeler için otomatik olarak eklenir.
@@ -45,7 +45,7 @@ Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme h
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 * .NET Core 2,2 ile geliştirme için [.net core 2,2 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="docker-support-in-visual-studio"></a>Visual Studio 'da Docker desteği
 
@@ -76,7 +76,7 @@ Aşağıdaki ekran görüntüsünde gösterildiği gibi yeni bir proje oluşturu
 > [!NOTE]
 > .NET Framework projeler (.NET Core değil) için yalnızca Windows kapsayıcıları kullanılabilir.
 
-**Çözüm Gezgini**Içinde > **Docker desteği** **Ekle** ' ye tıklayarak mevcut bir projeye Docker desteği ekleyebilirsiniz. **> Docker ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, aşağıda gösterildiği gibi, **Çözüm Gezgini**içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsünde) bulunur yakala
+**Çözüm Gezgini**Içinde > **Docker desteği** **Ekle** ' ye tıklayarak mevcut bir projeye Docker desteği ekleyebilirsiniz. **> Docker desteği ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, aşağıdaki ekran görüntüsünde gösterildiği gibi, **Çözüm Gezgini**içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsü) bulunur:
 
 ![Visual Studio 'da Docker desteği Ekle menü seçeneği](./media/overview/add-docker-support-menu.png)
 
@@ -116,10 +116,10 @@ Docker Compose kullanarak denetlemek istediğiniz diğer projelerle işlemi tekr
 ## <a name="kubernetes-support"></a>Kubernetes desteği
 
 ::: moniker range="vs-2017"
-Kubernetes desteği eklemek için [Kubernetes için Visual Studio Araçları](https://aka.ms/get-vsk8stools)' yi çalıştırın.
+Kubernetes desteği eklemek için [Kubernetes için Visual Studio Araçları](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)' yi çalıştırın.
 ::: moniker-end
 
-Kubernetes desteğiyle, [Azure Kubernetes Service 'te (aks)](/azure/aks)çalışan yerel projeniz Ile Kubernetes kümesi arasında bir bağlantıyı etkinleştirebilir ve böylece Visual Studio kullanarak aks 'te çalışan hizmetlerinizi değiştirebilir ve hatalarını ayıklayabilirsiniz.  Bu hizmet [Azure dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio)tarafından sağlanır. Azure Dev Spaces Ayrıca, geliştirme amacıyla *dev alanları* adında Kubernetes hizmetlerinizin ayrı dallarını ayarlamanıza olanak tanıyarak, üretim hizmetlerini geliştirme sırasında çalışma sürümlerinden verimli bir şekilde ayırabilmeniz ve farklı değişiklikleri tutmanız gerekir birbirinden temiz bir şekilde ayrılır.
+Kubernetes desteğiyle, [Azure Kubernetes Service 'te (aks)](/azure/aks)çalışan yerel projeniz Ile Kubernetes kümesi arasında bir bağlantıyı etkinleştirebilir ve böylece Visual Studio kullanarak aks 'te çalışan hizmetlerinizi değiştirebilir ve hatalarını ayıklayabilirsiniz.  Bu hizmet [Azure dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio)tarafından sağlanır. Azure Dev Spaces Ayrıca, geliştirme amacıyla *dev alanları* adında Kubernetes hizmetlerinizin ayrı dallarını ayarlamanıza olanak tanıyarak, üretim hizmetlerini geliştirme sırasında çalışma sürümlerinden verimli bir şekilde ayırabilmeniz ve farklı değişiklikleri birbirinden düzgün bir şekilde ayrı tutmanız gerekir.
 
 Projelerinize Kubernetes desteği eklemek için, kapsayıcı düzenleme desteği eklediğinizde **Kubernetes/Held** öğesini seçin. Projenize, Kubernetes hizmetlerinizin yapısını açıklayan Azure Dev Spaces ve Held grafiklerini yapılandıran *azds. YAML*dahil olmak üzere birkaç dosya eklenir.
 

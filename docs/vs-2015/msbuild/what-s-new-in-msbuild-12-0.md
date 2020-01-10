@@ -9,17 +9,17 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9d088844a3d8c1137b762b541b0393f939cdc194
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ba733b7ef20c9a03ad19d9847a4046e4d72ebdef
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301284"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844464"
 ---
 # <a name="what39s-new-in-msbuild-120"></a>&#39;MSBuild 12,0 ' deki yenilikler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild artık .NET Framework bir parçası yerine Visual Studio 'nun bir parçası olarak yüklenir. Geçerli MSBuild sürüm numarası 12,0 ' dir. MSBuild 'i ayrı olarak yüklemek isterseniz, yükleme paketini [MSBuild indirinden](https://go.microsoft.com/fwlink/?LinkId=309745)indirin.  
+MSBuild artık .NET Framework bir parçası yerine Visual Studio 'nun bir parçası olarak yüklenir. Geçerli MSBuild sürüm numarası 12,0 ' dir. MSBuild 'i ayrı olarak yüklemek isterseniz, yükleme paketini [MSBuild indirinden](https://www.microsoft.com/download/details.aspx?id=40760)indirin.  
   
 ## <a name="changed-path"></a>Değiştirilen yol  
  MSBuild artık *% ProgramFiles%* altında (örneğin, C:\Program files\msbuild\\) yüklenir.  

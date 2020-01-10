@@ -22,12 +22,12 @@ caps.latest.revision: 73
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc16094c98a912d073bd6b873ecb3d1b3b411d1e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8c41889e0e9d570ecdb415b6487c48c7c2b7c7c4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298947"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847231"
 ---
 # <a name="intellitrace-features"></a>IntelliTrace Özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -110,7 +110,7 @@ Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, dur
  [Active Directory hesapları altında çalışan IntelliTrace tek başına toplayıcı ve uygulama havuzları](https://devblogs.microsoft.com/devops/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts/)  
   
 ## <a name="forums"></a>Forumlar  
- [Visual Studio hata ayıklayıcısı](https://go.microsoft.com/fwlink/?LinkId=262263)  
+ [Visual Studio Debugger](https://social.msdn.microsoft.com/Forums/vsdebug)  
   
 ## <a name="videos"></a>Videolar  
  [IntelliTrace deneyimi](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)  

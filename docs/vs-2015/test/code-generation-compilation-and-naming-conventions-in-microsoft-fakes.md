@@ -8,12 +8,12 @@ ms.assetid: 20221de4-2a9e-4787-b99a-b5855bb90872
 caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6ff1d953dc853beba8ef836b1eab03140ee0b1e0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ffcab2800168ab6d66426c2e7beb77a158ced1eb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300391"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851827"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes'te kod oluşturma, derleme ve adlandırma kuralları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
 
 - Visual Studio Enterprise
 
-## <a name="BKMK_In_this_topic"></a>Bu konuda
+## <a name="BKMK_In_this_topic"></a> Bu konudaki
  [Kod oluşturma ve derleme](#BKMK_Code_generation_and_compilation)
 
 - [Kod saplamalarını yapılandırma](#BKMK_Configuring_code_generation_of_stubs) • [tür filtreleme](#BKMK_Type_filtering) • [kalıntıları oluşturuluyor somut sınıflar ve sanal yöntemler](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [iç türler](#BKMK_Internal_types) • [derleme sürelerini iyileştirme](#BKMK_Optimizing_build_times) • [derleme adının çakışmasını önleme](#BKMK_Avoiding_assembly_name_clashing)
@@ -74,23 +74,23 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
 
 - Filtreleri, varsayılan olarak büyük küçük harf duyarsız; eşleşen alt dizenin filtreleri uygulayın:
 
-     `el` "Hello" ile eşleşir
+     `el` "hello" ile eşleşir
 
 - Filtrenin sonuna `!` eklemek, büyük/küçük harfe duyarlı eşleşme yapar:
 
-     `el!` "Hello" ile eşleşmiyor
+     `el!` "hello" ile eşleşmiyor
 
-     `hello!` "Hello" ile eşleşir
+     `hello!` "hello" ile eşleşir
 
 - Filtrenin sonuna `*` eklemek, dizenin ön ekiyle eşleşir:
 
-     `el*` "Hello" ile eşleşmiyor
+     `el*` "hello" ile eşleşmiyor
 
-     `he*` "Hello" ile eşleşir
+     `he*` "hello" ile eşleşir
 
 - Noktalı virgülle ayrılmış bir liste içinde birden çok filtre ayırım yaparak birleştirilebilir.
 
-     `el;wo` "Hello" ve "World" ile eşleşir
+     `el;wo` "hello" ve "world" ile eşleşir
 
 ### <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a>Kalıntıları oluşturuluyor somut sınıflar ve sanal yöntemler
  Varsayılan olarak, Koçan türleri korumalı olmayan tüm sınıflar için oluşturulur. Saplama türlerini,. Fakes yapılandırma dosyası aracılığıyla soyut sınıflarla kısıtlamak mümkündür:
@@ -110,7 +110,7 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
 ```
 
 ### <a name="BKMK_Internal_types"></a>İç türler
- Fakes kod Oluşturucusu, oluşturulan Fakes derlemesine görünür olan türler için dolgu türleri ve saplama türleri oluşturacaktır. Shimmed derlemesinin iç türlerini Fakes ve test derlemelerinizi görünür hale getirmek için, oluşturulan Fakes derlemesine ve test derlemesine görünürlük sağlayan shimmed derleme koduna <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> öznitelikleri ekleyin. Örnek buradadır:
+ Fakes kod Oluşturucusu, oluşturulan Fakes derlemesine görünür olan türler için dolgu türleri ve saplama türleri oluşturacaktır. Shimmed derleme dahili türlerini Fakes ve test derlemeniz görünür hale getirmek için ekleme <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini shimmed derleme kodu, oluşturulan Fakes derlemesine ve test derlemesine görünürlük sağlar. Örnek buradadır:
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -118,7 +118,7 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
 [assembly: InternalsVisibleTo("FileSystem.Tests")]
 ```
 
- **Kesin adlandırılmış derlemelerde iç türler**
+ **Kesin adlandırılmış derlemelerin iç türleri**
 
  Shimmed derlemesi kesin olarak adlandırılmışsa ve derlemenin iç türlerine erişim istiyorsanız:
 
@@ -136,13 +136,13 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
 
   Shimmed derlemesi kesin olarak adlandırılmışsa, Fakes çerçevesi oluşturulan Fakes derlemesini otomatik olarak kesin olarak imzalayacaktır. Test derlemesi strong oturum gerekir. Bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](https://msdn.microsoft.com/library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).
 
-  Fakes çerçevesi, tüm oluşturulan derlemeleri imzalamak için aynı anahtarı kullanır; bu nedenle, Fakes derlemesinin **InternalsVisibleTo** özniteliğini shimmed derleme kodunuza eklemek için bu kod parçacığını bir başlangıç noktası olarak kullanabilirsiniz.
+  Fakes çerçevesi, bu kod parçacığı eklemek için bir başlangıç noktası olarak kullanabilmeniz için oluşturulan tüm derlemeleri imzalamak için aynı anahtarı kullanır. **InternalsVisibleTo** özniteliğini shimmed derleme kodunuza fakes derlemesi.
 
 ```csharp
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]
 ```
 
- **. Fakes** dosyasının `Fakes`\\`Compilation` öğesindeki `KeyFile` özniteliği değeri olarak alternatif anahtarı içeren **. snk** dosyasının tam yolunu belirterek, Fakes derlemesi için, shimmed derlemesi için oluşturduğunuz bir anahtar gibi farklı bir ortak anahtar belirtebilirsiniz. Örneğin:
+ Fakes derlemesi için farklı bir ortak anahtar belirtebilirsiniz, bir anahtar gibi tam yolunu belirterek shimmed derleme için oluşturduğunuz **.snk** olarak alternatif anahtarı içeren dosyayı `KeyFile` özniteliği değeri `Fakes` \\ `Compilation` öğesinin **.fakes** dosya. Örneğin:
 
 ```xml
 <-- FileSystem.Fakes.fakes -->
@@ -152,7 +152,7 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
 
 ```
 
- Daha sonra, shimmed derleme kodundaki Fakes derlemesi için ınternalvisibleto özniteliğinin ikinci parametresi olarak alternatif **. snk** dosyasının ortak anahtarını kullanmanız gerekir:
+ Daha sonra diğer ortak anahtarını kullanmak zorunda **.snk** shimmed derleme kodunda Fakes derlemesinin Internalvisibleto özniteliğinin ikinci parametre olarak dosya:
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -162,7 +162,7 @@ Bu konuda, Fakes kod oluşturma ve derleme konusundaki seçenekler ve sorunlar e
     PublicKey=<Test_assembly_public_key>)]
 ```
 
- Yukarıdaki örnekte, değerler `Alternate_public_key` ve `Test_assembly_public_key` aynı olabilir.
+ Yukarıdaki değerleri örnekte `Alternate_public_key` ve `Test_assembly_public_key` aynı olabilir.
 
 ### <a name="BKMK_Optimizing_build_times"></a>Derleme sürelerini iyileştirme
  Fakes derlemelerinin derlemesi yapım sürenizi önemli ölçüde artırabilir. Ayrı merkezi bir proje içinde .NET System derlemeleri için Fakes derlemeleri ve üçüncü taraf derlemeler oluşturarak derleme zamanını en aza indirebilirsiniz. Bu tür derlemeler makinenizde nadiren değiştiğinden, oluşturulan Fakes derlemeleri diğer projelerde yeniden kullanabilirsiniz.
@@ -208,7 +208,7 @@ attribute of the Assembly element in the .fakes:
 
 - . Fakes sonekini ad alanına eklenir.
 
-   Örneğin, `System.Fakes` ad alanı sistem ad alanının dolgu türlerini içerir.
+   Örneğin, `System.Fakes` ad alanı System ad alanının Shim/dolgu türlerini içerir.
 
 - Global.Fakes boş ad alanını dolgu türünü içerir.
 
@@ -222,41 +222,41 @@ attribute of the Assembly element in the .fakes:
 
    Örneğin, Stubıexample IExample türünün stub türüdür.
 
-  **Tür bağımsız değişkenleri ve Iç Içe tür yapıları**
+  **Tür argümanları ve iç içe tür yapıları**
 
 - Genel tür argümanları kopyalanır.
 
 - İç içe tür yapıları shim türleri için kopyalanır.
 
 ### <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a>Dolgu temsilcisi özelliği veya saplama temsilcisi alan adlandırma kuralları
- Boş bir adından başlayarak alan adlandırmayla ilgili **temel kurallar** :
+ **Temel kurallar** alanının adlandırma, boş bir isimden başlama:
 
 - Yöntem adı eklenir.
 
 - Yöntem adı açık arabirim uygulaması ise noktalar kaldırılır.
 
-- Yöntem geneldir ise, *n* , genel yöntem bağımsız değişkenlerinin sayısıdır `Of`*n* eklenir.
+- Yöntem genelse, `Of` *n* nereden eklenir *n* genel yöntem bağımsız değişken sayısı.
 
   Özellik alıcısı veya ayarlayıcılar gibi **özel yöntem adları** aşağıdaki tabloda açıklandığı gibi değerlendirilir.
 
 |If yöntemi...|Örnek|Yöntem adı eklenmiş|
 |-------------------|-------------|--------------------------|
-|Bir **Oluşturucu**|`.ctor`|`Constructor`|
-|Statik **Oluşturucu**|`.cctor`|`StaticConstructor`|
-|"_" (Özellik alıcıları gibi) ile ayrılmış iki bölümden oluşan Yöntem adına sahip bir **erişimci**|*kind_name* (yaygın durum, ancak ECMA tarafından zorlanmaz)|*NameKind*, her iki parça da büyük harfli ve değiştirilmiş|
-||Özellik `Prop` alıcısı|`PropGet`|
-||Özellik `Prop` ayarlayıcısı|`PropSet`|
+|A **Oluşturucusu**|`.ctor`|`Constructor`|
+|Statik **Oluşturucusu**|`.cctor`|`StaticConstructor`|
+|Bir **erişimci** yöntemiyle iki kısımdan adı "_" (örneğin, özellik alıcıları) tarafından ayrılmış|*kind_name* (ortak büyük/küçük harf, ancak ECMA tarafından zorlanan değil)|*NameKind*, burada her iki parçayı büyük harfli takas ve|
+||Özelliğin alıcısı `Prop`|`PropGet`|
+||Özelliğin Ayarlayıcısı `Prop`|`PropSet`|
 ||Olay ekleyici|`Add`|
 ||Olay kaldırıcısı|`Remove`|
-|İki bölümden oluşan bir **operatör**|`op_name`|`NameOp`|
+|Bir **işleci** iki bölümden oluşur|`op_name`|`NameOp`|
 |Örneğin: + işleci|`op_Add`|`AddOp`|
-|Bir **dönüştürme işleci**için, dönüş türü eklenir.|`T op_Implicit`|`ImplicitOpT`|
+|İçin bir **dönüştürme işleci**, dönüş türü eklenir.|`T op_Implicit`|`ImplicitOpT`|
 
  **Notlar**
 
-- **Dizin oluşturucularının alıcıları ve ayarlayıcıları** özelliğe benzer şekilde işlenir. Bir dizin oluşturucunun varsayılan adı `Item`.
+- **Alıcılar ve ayarlayıcılar Dizin oluşturucuların** özelliğine benzer şekilde değerlendirilir. Bir dizin oluşturucu için varsayılan ad `Item`.
 
-- **Parametre türü** adları dönüştürülür ve bitiştirilir.
+- **Parametre türü** adları dönüştürülür ve birleştirilir.
 
 - Aşırı yükleme belirsizliğe neden olmadıkça **dönüş türü** yok sayılır. Bu durumda, dönüş türü adın sonuna eklenir
 
@@ -264,16 +264,16 @@ attribute of the Assembly element in the .fakes:
 
 |Verilen|Eklenen dize...|
 |-----------|-------------------------|
-|Bir **tür**`T`|T<br /><br /> Ad alanı, iç içe yapı ve genel tikler iptal bırakılır.|
-|**Out parametresi**`out T`|`TOut`|
-|Bir **ref parametresi** `ref T`|`TRef`|
+|A **türü**`T`|T<br /><br /> Ad alanı, iç içe yapı ve genel tikler iptal bırakılır.|
+|Bir **çıkış parametresi**`out T`|`TOut`|
+|A **ref parametresi** `ref T`|`TRef`|
 |Bir **dizi türü**`T[]`|`TArray`|
-|**Çok boyutlu dizi** türü `T[ , , ]`|`T3`|
-|Bir **işaretçi** türü `T*`|`TPtr`|
-|**Genel tür**`T<R1, …>`|`TOfR1`|
-|`C<TType>` türünde **genel tür bağımsız değişken**`!i`|`Ti`|
-|Metodun **genel metot bağımsız değişkeni**`!!i` `M<MMethod>`|`Mi`|
-|**İç içe bir tür**`N.T`|`N` eklendiğinde `T`|
+|A **çok boyutlu dizi** türü `T[ , , ]`|`T3`|
+|A **işaretçi** türü `T*`|`TPtr`|
+|A **genel tür**`T<R1, …>`|`TOfR1`|
+|A **genel tür bağımsız değişkeni** `!i` türü `C<TType>`|`Ti`|
+|A **genel metot argümanı** `!!i` yöntemi `M<MMethod>`|`Mi`|
+|A **iç içe türü**`N.T`|`N` , ardından eklenir `T`|
 
 ### <a name="BKMK_Recursive_rules"></a>Özyinelemeli kurallar
  Aşağıdaki kurallar özyinelemeli olarak uygulanır şunlardır:
@@ -285,7 +285,7 @@ attribute of the Assembly element in the .fakes:
 ## <a name="BKMK_External_resources"></a>Dış kaynaklar
 
 ### <a name="BKMK_Guidance"></a>Kılavuzu
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Microsoft Fakes ile Test Edilen Kodu Yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)

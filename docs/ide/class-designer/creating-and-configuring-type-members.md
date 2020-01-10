@@ -24,17 +24,17 @@ helpviewer_keywords:
 - Class Details window
 - Class Details window, member creation
 ms.assetid: 42af8738-3738-4ca7-82ff-edf573a68f96
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a842ccb936c755a27ab28287f9da8d6355e92fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfed51812b034d63f250a56548b88f09a98214fe
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647752"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590416"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>Sınıf Tasarımcısı tür üyeleri oluşturma ve yapılandırma
 
@@ -51,13 +51,13 @@ Bu üyeleri bir sınıf diyagramında türlere ekleyebilir ve bu üyeleri **Sın
 |Modül (Yalnızca VB)|yöntem, özellik, alan, olay, oluşturucu, sabit|
 
 > [!NOTE]
-> Bir özelliğin get ve set erişimcileri ek mantığa gerek duymadığında, otomatik uygulanan özellikleri (yalnızca C#) kullanarak özellik bildirimini daha kısa yapın. Tam imzayı göstermek için, **sınıf diyagramı** menüsünden **üye biçimini değiştir**  > **tam imzayı görüntüle**' yi seçin. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).
+> Bir özelliğin get ve set erişimcileri ek mantığa gerek duymadığında, otomatik uygulanan özellikleri (yalnızca C#) kullanarak özellik bildirimini daha kısa yapın. Tam imzayı göstermek için, **sınıf diyagramı** menüsünden **üye biçimini değiştir** > **tam imzayı görüntüle**' yi seçin. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).
 
 ## <a name="common-tasks"></a>Ortak görevler
 
 |Görev|Destekleyici içerik|
 |----------| - |
-|**Kullanmaya başlayın:** Tür üyelerini oluşturmadan ve yapılandırmadan önce, **Sınıf Ayrıntıları** penceresini açmanız gerekir.|[sınıf ayrıntıları penceresini açmak](creating-and-configuring-type-members.md#open-the-class-details-window) - <br />- [sınıfı ayrıntıları kullanım notları](creating-and-configuring-type-members.md#class-details-usage-notes)<br />[salt okuma bilgilerinin -  görüntüleme](creating-and-configuring-type-members.md#display-of-read-only-information)<br />[sınıf diyagramında ve Sınıf Ayrıntıları penceresinde klavye ve fare kısayollarını](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md) - |
+|**Kullanmaya başlayın:** Tür üyelerini oluşturmadan ve yapılandırmadan önce, **Sınıf Ayrıntıları** penceresini açmanız gerekir.|[sınıf ayrıntıları penceresini açmak](creating-and-configuring-type-members.md#open-the-class-details-window) - <br />- [sınıfı ayrıntıları kullanım notları](creating-and-configuring-type-members.md#class-details-usage-notes)<br />[salt okuma bilgilerinin - görüntüleme](creating-and-configuring-type-members.md#display-of-read-only-information)<br />[sınıf diyagramında ve Sınıf Ayrıntıları penceresinde klavye ve fare kısayollarını](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md) - |
 |**Tür üyeleri oluşturma ve değiştirme:** **Sınıf Ayrıntıları** penceresini kullanarak yeni üyeler oluşturabilir, üyeleri değiştirebilir ve bir yönteme parametreler ekleyebilirsiniz.|- [üye oluştur](creating-and-configuring-type-members.md#create-members)<br />- [üye değiştirme türü](creating-and-configuring-type-members.md#modify-type-members)<br />[yöntemlere parametre eklemek](creating-and-configuring-type-members.md#add-parameters-to-methods) - |
 
 ## <a name="open-the-class-details-window"></a>Sınıf ayrıntıları penceresini açın
@@ -66,7 +66,7 @@ Varsayılan olarak, yeni bir sınıf diyagramı açtığınızda **Sınıf Ayrı
 
 - Diyagramda herhangi bir sınıfa sağ tıklayıp bağlam menüsünü görüntüleyin ve **Sınıf Ayrıntıları**' nı seçin.
 
-- Menü çubuğundan**diğer Windows**  > **sınıfı ayrıntılarını** **görüntüle**  >  seçin.
+- Menü çubuğundan **diğer Windows** > **sınıfı ayrıntılarını** **görüntüle** > seçin.
 
 ## <a name="create-members"></a>Üye Oluştur
 
@@ -98,7 +98,7 @@ Varsayılan olarak, yeni bir sınıf diyagramı açtığınızda **Sınıf Ayrı
 
      Tür odağı alır ve içeriği **Sınıf Ayrıntıları** penceresinde görüntülenir.
 
-2. **Sınıf Ayrıntıları** penceresi araç çubuğunda en üstteki simgesine tıklayın ve açılan listeden **Yeni \<member >** ' ni seçin.
+2. **Sınıf Ayrıntıları** penceresi araç çubuğunda, üstteki simgeye tıklayın ve açılan listeden **yeni \<üye >** ' i seçin.
 
      İmleç, eklemek istediğiniz üye türü için bir satırdaki **ad** alanına gider. Örneğin, **yeni özellik**' e tıkladıysanız, Imleç **Sınıf Ayrıntıları** penceresinin **Özellikler** bölümünde yeni bir satıra gider.
 
@@ -114,7 +114,7 @@ Varsayılan olarak, yeni bir sınıf diyagramı açtığınızda **Sınıf Ayrı
 
      Tür odağı alır ve içeriği **Sınıf Ayrıntıları** penceresinde görüntülenir.
 
-2. **Sınıf Ayrıntıları** penceresinde, eklemek istediğiniz üye türünü içeren bölümde **\<add üye >** ' ye tıklayın. Örneğin, bir alan eklemek istiyorsanız **\<add alan >** ' a tıklayın.
+2. **Sınıf Ayrıntıları** penceresinde, eklemek istediğiniz üye türünü içeren bölümde **üye > eklemek\<** ' ye tıklayın. Örneğin, bir alan eklemek istiyorsanız **\<alan ekle >** ' ye tıklayın.
 
 3. Oluşturmak istediğiniz üyenin adını yazın ve Enter'a basın.
 
@@ -151,11 +151,11 @@ Her üye satırı aşağıdaki öğeleri görüntüler:
 
 - **Üye değiştiricisi**
 
-     Üyenin görünürlük değiştiricisini `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected Friend` (`protected internal`) veya 0 olarak değiştirin.
+     Üyenin görünürlük değiştiricisini `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected Friend` (`protected internal`) veya `Default`olarak değiştirin.
 
-- **\<add üye >**
+- **\<üye Ekle >**
 
-     **Sınıf Ayrıntıları** penceresindeki son satır, **ad** hücresindeki **\<add member >** metnini içerir. Bu hücreye tıklarsanız yeni bir üye oluşturabilirsiniz. Daha fazla bilgi için bkz. [üyeleri oluşturma](creating-and-configuring-type-members.md#create-members).
+     **Sınıf Ayrıntıları** penceresindeki son satır, **ad** hücresine **üye > eklemek\<** metni içerir. Bu hücreye tıklarsanız yeni bir üye oluşturabilirsiniz. Daha fazla bilgi için bkz. [üyeleri oluşturma](creating-and-configuring-type-members.md#create-members).
 
 - **Özellikler penceresi üye özellikleri**
 
@@ -204,9 +204,9 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
      Bir parametre satırındaki **Özet** hücresi, kod düzenleyicisine parametre girerken IntelliSense 'de görünen kod açıklamalarının girilmesine izin verir.
 
-- **\<add parametresi >**
+- **\<parametre ekleme >**
 
-     Bir üyenin son parametre satırı, **ad** hücresinde **\> Add parametre <** metni içerir. Bu hücreye tıklanması yeni bir parametre oluşturmanıza izin verir. Daha fazla bilgi için, bkz. [bir yönteme parametre eklemek için](creating-and-configuring-type-members.md#add-parameters-to-methods).
+     Bir üyenin son parametre satırı, **ad** hücresinde **\>Add parametre <** metni içerir. Bu hücreye tıklanması yeni bir parametre oluşturmanıza izin verir. Daha fazla bilgi için, bkz. [bir yönteme parametre eklemek için](creating-and-configuring-type-members.md#add-parameters-to-methods).
 
 **Özellikler** penceresi, **Sınıf Ayrıntıları** penceresinde görüntülenen aynı parametre özelliklerini görüntüler: **ad**, **tür**, **değiştirici**, **Özet**ve **isteğe bağlı varsayılan** özellik. Özelliğin bir konumda değiştirilmesi, özelliğin değerini global olarak güncelleştirir (değerinin diğer konumda görüntülenmesi de buna dahildir).
 
@@ -224,9 +224,9 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
 2. **Sınıf Ayrıntıları** penceresinde, parametre eklemek istediğiniz yöntemin satırını genişletin.
 
-     Yalnızca bir çift ayraçları ve **\<add parametresi >** sözcüklerini içeren girintili bir parametre satırı görünür.
+     Yalnızca bir çift ayraçları ve **\<parametresi ekle >** sözcüklerini içeren girintili bir parametre satırı görünür.
 
-3. **@No__t_1add parametre >** ' ne tıklayın, yeni parametrenin adını yazın ve **ENTER**tuşuna basın.
+3. **\<parametre ekle >** ' ye tıklayın, yeni parametrenin adını yazın ve **ENTER**tuşuna basın.
 
      Yeni parametre yöntemine ve yöntemin koduna eklenir. **Sınıf Ayrıntıları** penceresinde ve Özellikler penceresi görüntülenir.
 
@@ -240,9 +240,9 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
 2. **Sınıf Ayrıntıları** penceresinde, isteğe bağlı parametre eklemek istediğiniz yöntemin satırını genişletin.
 
-     Yalnızca bir çift ayraçları ve **\<add parametresi >** sözcüklerini içeren girintili bir parametre satırı görünür.
+     Yalnızca bir çift ayraçları ve **\<parametresi ekle >** sözcüklerini içeren girintili bir parametre satırı görünür.
 
-3. **@No__t_1add parametre >** ' ne tıklayın, yeni parametrenin adını yazın ve **ENTER**tuşuna basın.
+3. **\<parametre ekle >** ' ye tıklayın, yeni parametrenin adını yazın ve **ENTER**tuşuna basın.
 
      Yeni parametre yöntemine ve yöntemin koduna eklenir. **Sınıf Ayrıntıları** penceresinde ve Özellikler penceresi görüntülenir.
 

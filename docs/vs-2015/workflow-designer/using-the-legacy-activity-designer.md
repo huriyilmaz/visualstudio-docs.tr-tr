@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a13aeeb3394ee6b8896376c0e7d520b90fb56fa6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cd8d18d95fabd858354c625d2c9b32459efc7193
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302827"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846149"
 ---
 # <a name="using-the-legacy-activity-designer"></a>Eski Etkinlik Tasarımcısını Kullanma
 Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]etkinlik tasarımcısının nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflerken eski tasarımcıyı kullanın.
@@ -49,12 +49,12 @@ Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]etkinlik tasarımcısın
 |Özellik|Açıklamalar|
 |--------------|--------------|
 |**Ad**|Etkinliğin adı.|
-|**Temel sınıf**|Etkinliğin türetildiği temel sınıf. Varsayılan temel sınıf [SequenceActivity](https://go.microsoft.com/fwlink?LinkID=65020)'dir. **Özellikler** penceresinde, farklı bir temel sınıf **üç nokta** ( **...]** simgesini tıklayarak bir [.NET türü seçin iletişim kutusunda (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)bir temel sınıf seçin.|
+|**Temel sınıf**|Etkinliğin türetildiği temel sınıf. Varsayılan temel sınıf [SequenceActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequenceactivity.aspx)'dir. **Özellikler** penceresinde, farklı bir temel sınıf **üç nokta** ( **...]** simgesini tıklayarak bir [.NET türü seçin iletişim kutusunda (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)bir temel sınıf seçin.|
 |**Açıklama**|Etkinliğin Kullanıcı tanımlı açıklaması.|
-|**Etkinletir**|Etkinlik yürütmeyi ve doğrulamayı etkinleştirmek için varsayılan olarak **true** olarak ayarlayın. Etkinlik yürütmeyi ve doğrulamayı devre dışı bırakmak için **false** olarak ayarlayın. Etkinlik yürütme ve doğrulama hakkında daha fazla bilgi için bkz. [Iş akışı etkinliklerini geliştirme](https://go.microsoft.com/fwlink?LinkID=65024).|
+|**Etkin**|Etkinlik yürütmeyi ve doğrulamayı etkinleştirmek için varsayılan olarak **true** olarak ayarlayın. Etkinlik yürütmeyi ve doğrulamayı devre dışı bırakmak için **false** olarak ayarlayın. Etkinlik yürütme ve doğrulama hakkında daha fazla bilgi için bkz. [Iş akışı etkinliklerini geliştirme](https://msdn2.microsoft.com/library/ms734413.aspx).|
 
 ## <a name="adding-child-activities"></a>Alt etkinlikler ekleme
  Araç kutusundan alt etkinlikleri tasarlamakta olduğunuz etkinliğe sürükleyebilirsiniz. Ardından, her bir alt etkinliği Özellik tarayıcısını kullanarak yapılandırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Özel etkinlikler oluşturma](https://go.microsoft.com/fwlink?LinkID=65021) [Iş akışı etkinliklerini geliştirme](https://go.microsoft.com/fwlink?LinkID=65024) [eski Iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [özel etkinlikler örnek](https://go.microsoft.com/fwlink?LinkID=65022) nasıl yapılır: [eski iş akışı Tasarımcısı kullanarak](../workflow-designer/using-the-legacy-workflow-designer.md) [iş akışı etkinlik kitaplığı (eski) oluşturma](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)
+ [Özel etkinlikler oluşturma](https://msdn2.microsoft.com/library/bb675228.aspx) [Iş akışı etkinliklerini geliştirme](https://msdn2.microsoft.com/library/ms734413.aspx) [eski Iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [özel etkinlikler örnek](https://msdn2.microsoft.com/library/bb472471.aspx) nasıl yapılır: [eski iş akışı Tasarımcısı kullanarak](../workflow-designer/using-the-legacy-workflow-designer.md) [iş akışı etkinlik kitaplığı (eski) oluşturma](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)

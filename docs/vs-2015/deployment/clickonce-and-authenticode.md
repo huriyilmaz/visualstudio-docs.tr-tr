@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 06edf9954134a6110f9285fc744c87c2696b19d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2e48039a618f7e8eef7f2c6e9f097da87e37d0f5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298275"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847785"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce ve Authenticode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Authenticode *, uygulama kodunu uygulama yayımcısının orijinalliğini doğru
 ## <a name="authenticode-and-code-signing"></a>Authenticode ve kod Imzalama  
  *Dijital sertifika* , şifreli ortak/özel anahtar çifti içeren bir dosyadır ve sertifikanın verildiği yayımcıyı ve sertifikayı veren Kurumu tanımlayan meta verileri içerir.  
   
- Çeşitli Authenticode sertifikası türleri vardır. Her biri farklı imzalama türleri için yapılandırılır. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar için, kod imzalama için geçerli olan bir Authenticode sertifikasına sahip olmanız gerekir. Bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamasını dijital e-posta sertifikası gibi başka bir sertifika türüyle imzalamayı denerseniz, bu işlem çalışmaz. Daha fazla bilgi için bkz. [kod Imzalamaya giriş](https://go.microsoft.com/fwlink/?LinkId=179452).  
+ Çeşitli Authenticode sertifikası türleri vardır. Her biri farklı imzalama türleri için yapılandırılır. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar için, kod imzalama için geçerli olan bir Authenticode sertifikasına sahip olmanız gerekir. Bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamasını dijital e-posta sertifikası gibi başka bir sertifika türüyle imzalamayı denerseniz, bu işlem çalışmaz. Daha fazla bilgi için bkz. [kod Imzalamaya giriş](https://msdn.microsoft.com/library/ms537361.aspx).  
   
  Kod imzalama için üç şekilde bir sertifika edinebilirsiniz:  
   
@@ -65,7 +65,7 @@ Authenticode *, uygulama kodunu uygulama yayımcısının orijinalliğini doğru
   
 - Uygulamayı kaldırın ve geçerli bir sertifikayla yeni bir sürümü yeniden yükleyin.  
   
-- Sertifikayı güncelleştiren bir komut satırı derlemesi oluşturun. Bu işlemle ilgili adım adım bilgiler [Microsoft desteği makalesi 925521](https://go.microsoft.com/fwlink/?LinkId=179454)' de bulunabilir.  
+- Sertifikayı güncelleştiren bir komut satırı derlemesi oluşturun. Bu işlemle ilgili adım adım bilgiler [Microsoft desteği makalesi 925521](https://support.microsoft.com/kb/925521)' de bulunabilir.  
   
 ### <a name="storing-certificates"></a>Sertifikaları depolama  
   

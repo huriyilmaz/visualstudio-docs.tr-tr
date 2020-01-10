@@ -37,19 +37,19 @@ caps.latest.revision: 60
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a9f20629c39bc37ca20550c3b88d8ecb2aca470f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7e1b37a357113be010ea336fc5666beb8cd33dbc
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300248"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852014"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkındaki fikirleri anlamanıza, açıklığa kavuşturmanıza ve iletmeye yardımcı olur. Örneğin, Kullanıcı gereksinimlerini anlatmak ve iletmek için Birleşik Modelleme Dili (UML) kullanım örneği, etkinlik, sınıf ve sıra diyagramlarını kullanabilirsiniz. Sisteminizin işlevselliğini anlatmak ve iletmek için UML bileşeni, sınıf, etkinlik ve sıra diyagramlarını kullanabilirsiniz.
+Modelleme diyagramları kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleriniz hakkındaki fikirleri anlamanıza, belirtmenize ve tartışmanıza yardımcı olur. Örneğin, Kullanıcı gereksinimlerini anlatmak ve iletmek için Birleşik Modelleme Dili (UML) kullanım örneği, etkinlik, sınıf ve sıra diyagramlarını kullanabilirsiniz. Sisteminizin işlevselliğini tanımlamak ve açıklamak için UML bileşeni, sınıf, etkinlik ve sıra diyagramlarını kullanabilirsiniz.
 
- Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](https://go.microsoft.com/fwlink/?LinkID=252078).
+ Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling).
 
  Bu sürümde aşağıdaki UML diyagramlarını oluşturabilirsiniz:
 
@@ -73,7 +73,7 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="common-tasks"></a>Ortak Görevler
 
-|**İlerde**|**Görevinin**|
+|**Konu**|**Görev**|
 |---------------|--------------|
 |[UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Modeller oluşturun** ve diyagramlar ekleyin.|
 |[UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)|Modeli düzenlemek için **diyagramlar çizin** .|
@@ -85,7 +85,7 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="related-tasks"></a>İlgili görevler
 
-|**İlerde**|**Görevinin**|
+|**Konu**|**Görev**|
 |---------------|--------------|
 |[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve katman diyagramları oluşturun.|
 |[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|
@@ -96,6 +96,6 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|

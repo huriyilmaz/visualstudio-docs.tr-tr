@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: fb296346d54b0774bdd9a738581ee28fe99b1de0
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 54239b49344a5e29e7f837d22840f997c4b9fbe2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777478"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845065"
 ---
 # <a name="installation"></a>Yükleme
 
@@ -24,9 +24,9 @@ Visual Studio Tools for AI, Windows 64-bit işletim sistemlerine yüklenebilir.
 
 Bu uzantı, Visual Studio 2015 ve Visual Studio 2017, Community Edition veya üzeri sürümlerle birlikte kullanılabilir.
 
-Araçları [Visual Studio Market](https://aka.ms/vstoolsforai)veya Visual Studio içinden indirebilirsiniz:
+Araçları [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)veya Visual Studio içinden indirebilirsiniz:
 
-1. **Araçlar**  > **Uzantılar ve Güncelleştirmeler '** i seçin.
+1. **Araçlar** > **Uzantılar ve Güncelleştirmeler '** i seçin.
 
    ![Visual Studio 'da Uzantılar ve güncelleştirmeler menüsü](media/installation/extensions.png)
 
@@ -82,7 +82,7 @@ Python, derin öğrenme uygulamaları için birincil programlama dilidir. **64 b
 
 Derin öğrenme çerçeveleri kendi yüklemeleri için PIP kullanır.
 
-![Windows 'a Python 'u yükler](media/installation/install_python_win.png)
+![Windows üzerinde Python'ı yükleyin](media/installation/install_python_win.png)
 
 Daha sonra, Python 3,5 ' in doğru yüklenip yüklenmediğini doğrulamanız ve bir terminalde aşağıdaki komutları yürüterek PIP 'yi en son sürüme yükseltmek gerekir:
 
@@ -222,7 +222,7 @@ PyTorch 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
   > [!NOTE]
   > macOS ikilileri CUDA 'yi desteklemez, CUDA gerekliyse kaynaktan yüklenir
 
-- **'Un**
+- **Linux**
 
   ```bash
   pip3.5 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl

@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7d740f1cc6c19e8d3b53dc084d9de01547369337
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 167fc2f80a8eaeddb121d208f714fe134c63a198
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299538"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843888"
 ---
 # <a name="wpf-community-resources"></a>WPF Topluluk Kaynakları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "74299538"
 Microsoft, WPF ekibi üyeleri ve topluluk liderleri, Forumlar ve Microsoft Connect geri bildirimi ile oluşturulan blogların de dahil olduğu Windows Presentation Foundation (WPF) hakkında bilgi edinmek, tartışmak ve geri bildirimde bulunmak için kullanabileceğiniz çeşitli topluluk kaynaklarını kullanıma sunar. merkezinden.
 
 ## <a name="community"></a>Topluluk
- [WPF Forumu](https://go.microsoft.com/fwlink/?LinkId=187440)
+ [WPF Forumu](https://social.msdn.microsoft.com/forums/en-US/wpf/threads/)
 
  [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf)
 

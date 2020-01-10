@@ -9,19 +9,19 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a2757201f482682b8fdf26275f510984629204f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 71aa8b31023cedcc41a08a775f9fdf28a4489d1e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300918"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847186"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Etki Alanına Özgü Dillerle Çalışmaya Başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluşturulmuş bir etki alanına özgü dili (DSL) tanımlama ve kullanma konusundaki temel kavramlar açıklanmaktadır.
 
- DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
+ DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>Etki alanına özgü dille ne yapabilirsiniz?
  Etki alanına özgü dil, genellikle grafik olan ve belirli bir amaç için kullanılmak üzere tasarlanan bir gösterimidir. Bunun aksine, UML gibi dillerin genel amaçlı olması gerekir. Bir DSL 'de model öğesi türlerini ve bunların ilişkilerini ve bunların ekranda nasıl sunulduğunu tanımlayabilirsiniz.
@@ -36,13 +36,13 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
  Bu genel bakışın geri kalanında, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]' de alana özgü dil oluşturma ve kullanma ile ilgili temel işlemleri tanıtan bir izlenecek yol vardır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Visual Studio için modelleme SDK 'Sı|[MSDK 'yi indir](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>DSL çözümü oluşturma
@@ -58,7 +58,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     ![DSL oluştur iletişim kutusu](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'a tıklayın.
+4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'ı tıklatın.
 
     **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
 
@@ -114,7 +114,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, **Çözüm Gezgini** **Test** adlı model dosyasını açın.
 
-    \- veya-
+    \- veya -
 
     Hata ayıklama projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **öğe**' ye tıklayın. **Öğe Ekle** iletişim kutusunda, DSL 'nizin dosya türünü seçin.
 
@@ -164,7 +164,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-    \- veya-
+    \- veya -
 
     Yeniden oluşturmak istediğiniz şablonlara sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
@@ -383,7 +383,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
  Aynı yordamı kullanarak DSL 'yi kendi bilgisayarınıza yükleyebilirsiniz. bu sayede [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneğini kullanmanız gerekmez.
 
- Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+ Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
 ## <a name="Reset"></a>Eski deneysel DSLs 'ler kaldırılıyor
  Artık istemediğiniz deneysel DSLs 'Leri oluşturduysanız, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Deneysel örneğini sıfırlayarak bunları bilgisayarınızdan kaldırabilirsiniz.
@@ -399,4 +399,4 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 2. Hala kullanmak istediğiniz deneysel DSLs 'leri veya diğer deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantılarını yeniden derleyin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleri, sınıfları ve Ilişkileri anlama,](../modeling/understanding-models-classes-and-relationships.md) [etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) [Visualizaton ve modelleme SDK 'sını](https://go.microsoft.com/fwlink/?LinkID=186128) tanımlama
+ [Modelleri, sınıfları ve Ilişkileri anlama,](../modeling/understanding-models-classes-and-relationships.md) [etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) [Visualizaton ve modelleme SDK 'sını](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) tanımlama

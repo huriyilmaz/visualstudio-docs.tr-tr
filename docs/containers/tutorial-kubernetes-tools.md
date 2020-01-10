@@ -8,18 +8,18 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 8b6aef437519a4fe92f11a3b21546b3dda9981bb
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 7556bf2e8568b8685cb92209bb1ae6bbfb3d211e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188765"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847095"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes araçlarını kullanmaya başlama
 
 Visual Studio Kubernetes araçları, Kubernetes 'i hedefleyen Kapsayıcılı uygulamaların geliştirilmesini kolaylaştırmaya yardımcı olur. Visual Studio, Dockerfiles ve Held grafikleri gibi Kubernetes dağıtımını desteklemek için gereken yapılandırma olarak yapılandırma dosyalarını otomatik olarak oluşturabilir. Azure Dev Spaces kullanarak canlı bir Azure Kubernetes hizmeti (AKS) kümesinde kodunuzda hata ayıklayın veya doğrudan Visual Studio içinden bir AKS kümesinde yayımlayabilirsiniz.
 
-Bu öğreticide, bir projeye Kubernetes desteği eklemek ve AKS 'de yayımlamak için Visual Studio kullanımı ele alınmaktadır. Birincil olarak [Azure dev Spaces](https://aka.ms/get-azds) kullanarak projenizi hata ayıklamakta ve test etmek için kullanmak istiyorsanız, bunun yerine [Azure dev Spaces öğreticiye](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
+Bu öğreticide, bir projeye Kubernetes desteği eklemek ve AKS 'de yayımlamak için Visual Studio kullanımı ele alınmaktadır. Birincil olarak [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) kullanarak projenizi hata ayıklamakta ve test etmek için kullanmak istiyorsanız, bunun yerine [Azure dev Spaces öğreticiye](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -38,7 +38,7 @@ Bu yeni işlevsellikten yararlanmak için şunlar gerekir:
 
     1. [Aks yayımlama araçları](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes), ayrı bir indirme olarak kullanılabilir.
 
-    1. Bir Azure Kubernetes hizmet kümesi. Daha fazla bilgi için bkz. [AKS kümesi oluşturma](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Geliştirme iş istasyonunuzdan [kümeye bağlandığınızdan](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster) emin olun.
+    1. Azure Kubernetes hizmeti kümesi. Daha fazla bilgi için bkz. [AKS kümesi oluşturma](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Geliştirme iş istasyonunuzdan [kümeye bağlandığınızdan](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster) emin olun.
 
     1. Geliştirme iş istasyonunuza yüklenen Held CLı. Daha fazla bilgi için bkz. [Held 'Yi yükleme](https://github.com/kubernetes/helm/blob/master/docs/install.md).
 
@@ -127,7 +127,7 @@ Eklenen dosyalar şunlardır:
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Azure Kubernetes hizmeti 'ne (AKS) yayımlama
 
-Tüm bu dosyalar yerinde olduğunda, her zaman sahip olduğunuz gibi uygulama kodunuzu yazmak ve hatalarını ayıklamak için Visual Studio IDE 'yi kullanabilirsiniz. Ayrıca, bir AKS kümesinde canlı çalışan kodunuzda hızlı bir şekilde çalıştırmak ve hata ayıklamak için [Azure dev Spaces](https://aka.ms/get-azds) de kullanabilirsiniz. Daha fazla bilgi için lütfen [Azure dev Spaces öğreticisine](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio) başvurun
+Tüm bu dosyalar yerinde olduğunda, her zaman sahip olduğunuz gibi uygulama kodunuzu yazmak ve hatalarını ayıklamak için Visual Studio IDE 'yi kullanabilirsiniz. Ayrıca, bir AKS kümesinde canlı çalışan kodunuzda hızlı bir şekilde çalıştırmak ve hata ayıklamak için [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) de kullanabilirsiniz. Daha fazla bilgi için lütfen [Azure dev Spaces öğreticisine](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio) başvurun
 
 Kodunuzun istediğiniz şekilde çalışmasını tamamladıktan sonra doğrudan Visual Studio 'dan bir AKS kümesine yayımlayabilirsiniz.
 
@@ -165,10 +165,10 @@ Bunu yapmak için ilk olarak, AKS 'de yayımlama için öğenin altındaki [Önk
 
 ::: moniker-end
 
-Mühendisi! Artık tüm Kubernetes uygulama geliştirme için Visual Studio 'nun tam gücünden yararlanabilirsiniz.
+Tebrikler! Artık tüm Kubernetes uygulama geliştirme için Visual Studio 'nun tam gücünden yararlanabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 [Aks belgelerini](/azure/aks)okuyarak Azure 'Da Kubernetes geliştirme hakkında daha fazla bilgi edinin.
 
-[Azure dev Spaces belgelerini](https://aka.ms/get-azds) okuyarak Azure dev Spaces hakkında daha fazla bilgi edinin
+[Azure dev Spaces belgelerini](https://docs.microsoft.com/azure/dev-spaces/) okuyarak Azure dev Spaces hakkında daha fazla bilgi edinin

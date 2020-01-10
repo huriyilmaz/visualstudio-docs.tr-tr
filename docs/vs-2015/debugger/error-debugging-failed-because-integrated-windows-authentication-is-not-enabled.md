@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4c8c83676c8f01891aed97e931581c65b799e61e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 89afba591899b626863b0157f6d9d955d46e46cf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299792"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851925"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Hata: Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmediğinden Hata Ayıklama Başarısız
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
   
 10. **Kimlik doğrulama yöntemleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-11. **Özellikler** iletişim kutusunu kapatmak için **Tamam**’a tıklayın.  
+11. **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
 12. **Internet Information Services** penceresini kapatın.  
   
@@ -119,5 +119,5 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Web uygulamalarında hata ayıklama: hatalar ve sorun giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
- [Microsoft Digest kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=77938)   
+ [Microsoft Digest kimlik doğrulaması](https://msdn2.microsoft.com/library/Aa378744.aspx)   
  [IIS 7,0 ve Visual Studio ile Windows Vista 'da Web uygulamaları çalıştırma](https://msdn.microsoft.com/library/262a82ac-dd0e-4096-86c6-fb463e88be66)

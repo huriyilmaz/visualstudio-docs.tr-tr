@@ -10,12 +10,12 @@ ms.date: 03/06/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: d89762511e88e296a51c781c6a403c2dd227ed4f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 89d6662a1da987f927951937d04426b5e0b8cfa9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74293252"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846575"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Emulator Express kullanarak Azure bulut hizmetini yerel makinede çalıştırma ve hatalarını ayıklama
 Öykünücü Express 'i kullanarak, Visual Studio 'Yu yönetici olarak çalıştırmadan bir bulut hizmetini test edebilir ve hatalarını ayıklayabilirsiniz. Bulut hizmetinizin gereksinimlerine bağlı olarak, proje ayarlarınızı öykünücü Express ya da tam öykünücü kullanacak şekilde ayarlayabilirsiniz. Tam öykünücü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](/azure/storage/common/storage-use-emulator).
@@ -25,7 +25,7 @@ Azure SDK 2,3 veya sonraki sürümlerde bir Azure projesi oluşturduğunuzda, ö
 
 1. Oluşturun veya bir Azure bulut hizmeti projesini Visual Studio'da açın.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. İçinde **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden seçin **özellikleri**.
 
 1. Projeler Özellikler sayfasında, **Web** sekmesini seçin.
 
@@ -47,7 +47,7 @@ Aşağıdaki sorunlar öykünücü Express 'in bilinen sınırlamalarıdır:
 - Öykünücü Express IIS Web sunucusuyla uyumlu değil.
 - Bulut hizmetiniz birden çok rol içerebilir, ancak her rol bir örnekle sınırlıdır.
 - 1000 numaralı bağlantı noktası numaralarına erişemezsiniz. Normalde 1000 altında bir bağlantı noktası kullanan bir kimlik doğrulama sağlayıcısı kullanırsanız, bu değeri 1000 ' nin üzerindeki bir bağlantı noktası numarasıyla değiştirmeniz gerekebilir.
-- Azure Işlem öykünücüsü için uygulanan sınırlamalar, öykünücü Express için de geçerlidir. Örneğin, dağıtım başına en fazla 50 rol örneğine sahip olabilirsiniz. Azure Işlem öykünücüsü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](https://go.microsoft.com/fwlink/p/?LinkId=623050).
+- Azure Işlem öykünücüsü için uygulanan sınırlamalar, öykünücü Express için de geçerlidir. Örneğin, dağıtım başına en fazla 50 rol örneğine sahip olabilirsiniz. Azure Işlem öykünücüsü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-performance-profiling-cloud-services?view=vs-2019).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Azure bulut hizmetlerinde hata ayıklama](vs-azure-tools-debugging-cloud-services-overview.md)

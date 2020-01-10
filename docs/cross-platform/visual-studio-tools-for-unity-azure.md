@@ -12,12 +12,12 @@ manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: 454cb3617bb918b67784ebd2a3388ac6ee9f3826
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0a2cc0464d643fdf6f17da045b3d56ccc678fb9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818379"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846678"
 ---
 # <a name="program-with-unity-and-azure"></a>Unity ve Azure ile Programlama
 
@@ -30,12 +30,12 @@ Azure, telemetri ve diğer oyun verileri bulutta depolamak için ölçeklenebili
 
 Ziyaret [korumalı alan](/sandbox/) aşağıdaki Deneysel Azure SDK'ları ile Unity denemek için:
 
-* [Azure depolama SDK'sı için Unity](https://aka.ms/azstoragegamedev)
-* [Azure Event Hubs'a Unity için SDK'sı](https://aka.ms/azeventhubsgamedev)
-* [Unity için Azure Mobile Apps SDK](https://aka.ms/azmobileappsgamedev)
+* [Azure depolama SDK'sı için Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
+* [Azure Event Hubs'a Unity için SDK'sı](https://docs.microsoft.com/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [Unity için Azure Mobile Apps SDK](https://docs.microsoft.com/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
 
 ## <a name="azure-sdk-sample"></a>Azure SDK'sı örneği
 
-Ayrıca bir [basit örnek oyunu](https://aka.ms/azmobileappsracer) Unity ve Azure kolay tablolar SDK'sını kullanarak. Yüksek izlemek için oyun kullanan Azure kolay tablolar veri depolama puan tablosu puan ve oyun içi telemetriyi depolayın ve kullanılabilir [Github'dan indirin](https://aka.ms/azsamples-unity).
+Ayrıca bir [basit örnek oyunu](https://docs.microsoft.com/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer) Unity ve Azure kolay tablolar SDK'sını kullanarak. Yüksek izlemek için oyun kullanan Azure kolay tablolar veri depolama puan tablosu puan ve oyun içi telemetriyi depolayın ve kullanılabilir [Github'dan indirin](https://github.com/BrianPeek/AzureSamples-Unity).
 
 ![Örnek oyun ekran görüntüsü](media/vstu_azure-test-sample-game-image2.png)

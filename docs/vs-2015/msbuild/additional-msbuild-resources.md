@@ -599,12 +599,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 031ffa0daa899429454faf64819a6778022a5645
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6460d26ea7b7240cf54dfe3379ec75634bc5465d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298218"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847054"
 ---
 # <a name="additional-msbuild-resources"></a>Ek MSBuild Kaynakları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -615,12 +615,12 @@ Bir sorunu çözmeye çalışıyorsanız ve ihtiyacınız olan bilgileri belgele
  Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Bilgi Bankası (MSBuild arama sonuçları)](https://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0) Web sitesinde KB makalelerine erişebilirsiniz.  
   
 ## <a name="community-forums"></a>Topluluk Forumları  
- Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz. [MSDN forumları](https://go.microsoft.com/fwlink/?LinkId=48931) Web sitesinde Visual Studio MSBuild forumuna erişebilirsiniz.  
+ Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz. [MSDN forumları](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/) Web sitesinde Visual Studio MSBuild forumuna erişebilirsiniz.  
   
  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Community kaynaklarına, [Channel 9 MSBuild](https://channel9.msdn.com/) Web sitesinde erişebilirsiniz.  
   
 ## <a name="product-support"></a>Ürün Desteği  
- Diğer kaynakları denedikten sonra hala sorularınız varsa, Microsoft [Yardım ve destek](https://go.microsoft.com/fwlink/?linkid=1782) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [bizimle Iletişim kurun](../ide/talk-to-us.md).  
+ Diğer kaynakları denedikten sonra hala sorularınız varsa, Microsoft [Yardım ve destek](https://support.microsoft.com/) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [bizimle Iletişim kurun](../ide/talk-to-us.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)

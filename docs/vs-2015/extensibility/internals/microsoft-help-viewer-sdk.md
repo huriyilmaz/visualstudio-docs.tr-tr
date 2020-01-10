@@ -8,12 +8,12 @@ ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: cafdfacec24e906569d0f2b0d1a334511a75e30a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 96647f362566f0687cb04b7da4459331ac56b031
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300713"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851911"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ Bu makale, Visual Studio Yardım Görüntüleyicisi tümleştiricileri için aş
 
   Desteklenen dil dizeleri (büyük/küçük harfe duyarlı değil):
 
-- JavaScript
+- javascript
 
 - CSharp veya c #
 
@@ -473,7 +473,7 @@ some F# code
 |LinkTableTitle|Tablo bağla|
 |Topicenulınktext|Bilgisayarınızda mevcut olan bu konunun Ingilizce sürümünü\</a > görüntüleyin.|
 |Topiconlinelink metni|Bu konuyu bir href = "{0}" {1}> çevrimiçi\</a \<görüntüleyin >|
-|OnlineText|Online|
+|OnlineText|Çevrimiçi|
 |Özellik:|**Video ses denetimi**|
 |Kullanırsınız|Video içeriği için öğeleri ve metni görüntüleme|
 |**Öğe**|**Değer**|
@@ -555,7 +555,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**Dosyasýný**|**Kullanırsınız**|**Görünen Içerik kaynağı**|
+|**Dosya**|**Kullanma**|**Görünen Içerik kaynağı**|
 |giriş sayfası. htm|Bu, şu anda yüklü olan içeriği görüntüleyen ve kullanıcıya içerik hakkında sunmanız gereken diğer tüm iletileri gösteren bir sayfasıdır.  Bu dosya, "Microsoft.Help.Id" content = "-1" ek meta veri özniteliğine sahiptir ve bu içeriği TOC yerel içeriğinin üst kısmına koyar.||
 ||< META_HOME_PAGE_TITLE_ADD/>|Marka. xml, etiket \<HomePageTitle >|
 ||< HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Marka. xml, etiket \<Homepagetanıtımı >|
@@ -590,10 +590,10 @@ some F# code
 
 ||||
 |-|-|-|
-|**Dosyasýný**|**Kullanırsınız**|**Örnekler**|
+|**Dosya**|**Kullanma**|**Örnekler**|
 |Clear. gif|Daraltılabilir alanı işlemek için kullanılır||
 |footer_slice. gif|Alt bilgi sunumu||
-|info_icon. gif|Bilgiler görüntülenirken kullanılır|Sorumluluk reddi|
+|info_icon. gif|Bilgiler görüntülenirken kullanılır|Bildirim|
 |online_icon. gif|Bu simge çevrimiçi bağlantılarla ilişkilendirilmelidir||
 |tabLeftBD. gif|Kod parçacığı kapsayıcısını işlemek için kullanılır||
 |tabRightBD. gif|Kod parçacığı kapsayıcısını işlemek için kullanılır||
@@ -824,4 +824,4 @@ some F# code
 
 Yardım API 'sinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Yardım Görüntüleyicisi kod örnekleri](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples).
 
-Sorunları ortadan kaldırma ile ilgili güncelleştirmeler için bkz. [Yardım Görüntüleyicisi Benioku](https://go.microsoft.com/fwlink/?LinkID=231397&clcid=0x409).
+Sorunları ortadan kaldırma ile ilgili güncelleştirmeler için bkz. [Yardım Görüntüleyicisi Benioku](https://go.microsoft.com/fwlink/?LinkId=255960).

@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 952c4d9ab82275ff7b1550a3704e89b93c6260a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b8c70b3c1b8282f87c8eb5aff5d8dde769c613d4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954849"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848564"
 ---
 # <a name="python-web-application-project-templates"></a>Python web uygulaması proje şablonları
 
@@ -43,7 +43,7 @@ Tüm **boş \<framework > Web projesini** şablonları ile daha fazla bir proje 
 | --- | --- |
 | **Boş Bottle Web projesi** | En az bir uygulama oluşturur *app.py* bir ana sayfası ile `/` ve `/hello/<name>` yankılayan sayfa `<name>` çok kısa bir satır içi sayfası şablonu kullanarak. |
 | **Boş Django Web projesi** | Bir çekirdek Django site yapısı ancak hiçbir Django uygulamaları ile Django projesi oluşturur. Daha fazla bilgi için [Django şablonları](python-django-web-application-project-template.md) ve [Django adımı 1 bilgi](learn-django-in-visual-studio-step-01-project-and-solution.md). |
-| **Boş bir Flask Web projesi** | Bir tek "Hello World!" ile en az bir uygulama oluşturur. için sayfa `/`. Bu uygulamanın ayrıntılı anlatılan adımları izleyerek sonucunu benzer [hızlı başlangıç: İlk Python web uygulamanızı oluşturmak için Visual Studio'yu kullanın](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json). Ayrıca bkz: [Flask adımı 1 bilgi](learn-flask-visual-studio-step-01-project-solution.md).
+| **Boş bir Flask Web projesi** | Bir tek "Hello World!" ile en az bir uygulama oluşturur. için sayfa `/`. Bu uygulamanın ayrıntılı anlatılan adımları izleyerek sonucunu benzer [hızlı başlangıç: ilk Python web uygulamanızı oluşturmak için Visual Studio](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json). Ayrıca bkz: [Flask adımı 1 bilgi](learn-flask-visual-studio-step-01-project-solution.md).
 
 ### <a name="web-group"></a>Web grubu
 
@@ -75,7 +75,7 @@ Tüm  **\<Framework > Web projesini** şablonları, seçilen framework bağıms�
 
 Kaynak denetimi kullanıyorsanız, bu ortamda yalnızca kullanılarak yeniden oluşturulabilir gibi genellikle sanal ortam klasörü atlarsanız *requirements.txt*. Bir klasörü dışlamak için en iyi yolu ilk seçmektir **ben bunları kendim yükler** yukarıda gösterilen isteminde sonra otomatik tamamlama sanal ortamı oluşturmadan önce devre dışı bırakın. Ayrıntılar için bkz [öğrenin Django Öğreticisi - 1-2 ve 1-3 adımları](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) ve [öğrenin Flask Öğreticisi - 1-2 ve 1-3 adımları](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository).
 
-Microsoft Azure App Service'e dağıtım yaparken, Python sürümünü seçin. bir [site uzantısı](https://aka.ms/PythonOnAppService) ve paketleri el ile yükleyin. Ayrıca, Azure App Service gerçekleştirdiğinden **değil** paketleri otomatik olarak yüklemeniz bir *requirements.txt* dosya Visual Studio'dan dağıtıldığında, yapılandırma ayrıntılarını izleyin [aka.ms/ PythonOnAppService](https://aka.ms/PythonOnAppService).
+Microsoft Azure App Service'e dağıtım yaparken, Python sürümünü seçin. bir [site uzantısı](https://docs.microsoft.com/visualstudio/python/managing-python-on-azure-app-service?view=vs-2019) ve paketleri el ile yükleyin. Ayrıca, Azure App Service gerçekleştirdiğinden **değil** paketleri otomatik olarak yüklemeniz bir *requirements.txt* dosya Visual Studio'dan dağıtıldığında, yapılandırma ayrıntılarını izleyin [aka.ms/ PythonOnAppService](https://docs.microsoft.com/visualstudio/python/managing-python-on-azure-app-service?view=vs-2019).
 
 Microsoft Azure bulut Hizmetleri *mu* Destek *requirements.txt* dosya. Bkz: [Azure bulut hizmeti projeleri](python-azure-cloud-service-project-template.md) Ayrıntılar için.
 
@@ -93,7 +93,7 @@ Bir web projesi için hata ayıklama başladığında, Visual Studio rastgele bi
 
 Özelliklerinde **sunucu komutu Çalıştır** ve **Server komutu hata ayıklama** (ikinci görüntüde gösterilen aşağıda) grupları belirlemek web sunucusuna nasıl başlatılır. Birçok geçerli projenin dışında bir betik gerektirdiğinden, betiği buraya yapılandırılabilir ve başlangıç modülünün adı, parametre olarak geçirilebilir.
 
-- **Komut**: Python betiğini olabilir (*\*.py* dosyası), bir modül adı (gibi `python.exe -m module_name`), veya tek satırlık bir kod (gibi `python.exe -c "code"`). Aşağı açılan değer, bu tür barındırılmasını gösterir.
+- **Komut**: Python betiğini olabilir ( *\*.py* dosyası), bir modül adı (gibi `python.exe -m module_name`), veya tek satırlık bir kod (gibi `python.exe -c "code"`). Aşağı açılan değer, bu tür barındırılmasını gösterir.
 - **Bağımsız değişkenler**: şu bağımsız değişkenler, aşağıdaki komut komut satırında geçirilir.
 - **Ortam**: yeni satır ile ayrılmış bir listesini \<adı > =\<değer > ortam değişkenlerini belirtme çiftleri. Bu değişkenler, bağlantı noktası numarası ve arama yolları gibi ortam değiştirebilir ve bu nedenle bu değerler yazabilir tüm özellikleri sonra ayarlanır.
 

@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e78b021e41caf584a74172cbdf00135e525df265
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77ac5ffd14f97fd6fdd753327fe193ceb80ea57e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590507"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846925"
 ---
 # <a name="unit-test-basics"></a>Birim testi temel bilgileri
 
@@ -26,7 +26,7 @@ Test projelerini hızla oluşturmak ve kodunuzdan test yöntemleri veya ihtiyaç
 
 Test Gezgini, Test Gezgini eklentisi arabirimleri uyguladıysanız birim testi çerçevelerini üçüncü taraf ve açık kaynak da çalıştırabilirsiniz. Birçok Visual Studio Uzantı Yöneticisi ve Visual Studio Galerisi aracılığıyla bu çerçevesini ekleyebilirsiniz. Daha fazla bilgi için [üçüncü taraf birim testi çerçevelerini yükleme](../test/install-third-party-unit-test-frameworks.md).
 
-## <a name="get-started"></a>Başlangıç
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Doğrudan kodlama içine alan birim testine giriş için aşağıdaki konulardan birine bakın:
 
@@ -91,13 +91,16 @@ Genellikle, kod birim testi saptamalar ve birim testi projesi oluşturmak hızl�
 
    ::: moniker range="vs-2017"
    ![Bağlam menüsü düzenleyici penceresinde görüntüleme](../test/media/createunittestsrightclick.png)
-   ::: moniker-end
-   ::: moniker range=">=vs-2019"
-   ![Bağlam menüsü düzenleyici penceresinde görüntüleme](../test/media/vs-2019/basics-create-unit-tests.png)
-   ::: moniker-end
 
    > [!NOTE]
    > **Birim Testleri Oluştur** menü komutu yalnızca .NET Framework hedefleyen yönetilen kod için kullanılabilir (.NET Core 'u değil).
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Bağlam menüsü düzenleyici penceresinde görüntüleme](../test/media/vs-2019/basics-create-unit-tests.png)
+
+   > [!NOTE]
+   > **Birim Testleri Oluştur** menü komutu yalnızca yönetilen kod için kullanılabilir.
+   ::: moniker-end
 
 2. Tıklayın **Tamam** birim testleri oluşturma veya oluşturma ve birim testi projesi ve birim testlerini adı için kullanılan değerleri değiştirmek için Varsayılanları kabul etmek için. Varsayılan olarak, birim test yöntemlerini için eklenen kodu seçebilirsiniz.
 

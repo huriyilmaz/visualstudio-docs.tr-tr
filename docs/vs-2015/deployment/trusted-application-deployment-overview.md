@@ -17,12 +17,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a95392525826fcfb2595e1bac7d45ebea20317fc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 673cc3d9b936131e6423a015af5c78486846fbe7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294697"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847715"
 ---
 # <a name="trusted-application-deployment-overview"></a>Güvenilir Uygulama Dağıtımına Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ Bu konu, güvenilen uygulama dağıtım teknolojisini kullanarak yükseltilmiş 
   
 |Nesne veya rol|Açıklama|  
 |--------------------|-----------------|  
-|danışın|İstemci bilgisayarlarını güncelleştirmeden ve korumadan sorumlu kuruluş varlığı|  
+|yönetici|İstemci bilgisayarlarını güncelleştirmeden ve korumadan sorumlu kuruluş varlığı|  
 |güven Yöneticisi|Ortak dil çalışma zamanı (CLR) içindeki, istemci uygulama güvenliğini zormaktan sorumlu alt sistem.|  
 |publisher|Uygulamayı yazan ve tutan varlık.|  
 |Dağıtıcı|Uygulamayı paketleyen ve kullanıcılara dağıtan varlık.|  
@@ -74,7 +74,7 @@ Bu konu, güvenilen uygulama dağıtım teknolojisini kullanarak yükseltilmiş 
 ### <a name="add-the-publisher-to-the-trusted-publishers-store"></a>Yayımcıyı Güvenilen Yayımcılar deposuna ekleme  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızın daha yüksek bir güven düzeyi alabilmesi için, sertifikanızı Uygulamanın çalıştırılacağı her istemci bilgisayara güvenilir bir yayımcı olarak eklemeniz gerekir. Bu görevi gerçekleştirmek tek seferlik bir yapılandırmadır. İşlem tamamlandıktan sonra yayımcının sertifikasıyla imzalanmış birçok [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamayı istediğiniz gibi dağıtabilir ve bunların tümü yüksek güvenle çalışır.  
   
- Uygulamanızı yönetilen masaüstü ortamında dağıtıyorsanız; Örneğin, Windows işletim sistemini çalıştıran bir kurumsal intranet; grup ilkesi ile yeni bir sertifika güven listesi (CTL) oluşturarak, bir istemcinin deposuna güvenilen yayımcılar ekleyebilirsiniz. Daha fazla bilgi için, bkz. [Grup İlkesi bir nesne için sertifika güven listesi oluşturma](https://go.microsoft.com/fwlink/?LinkId=102576).  
+ Uygulamanızı yönetilen masaüstü ortamında dağıtıyorsanız; Örneğin, Windows işletim sistemini çalıştıran bir kurumsal intranet; grup ilkesi ile yeni bir sertifika güven listesi (CTL) oluşturarak, bir istemcinin deposuna güvenilen yayımcılar ekleyebilirsiniz. Daha fazla bilgi için, bkz. [Grup İlkesi bir nesne için sertifika güven listesi oluşturma](https://technet.microsoft.com/library/2c03582f-00b2-43e5-ae1d-493894ad0fd7).  
   
  Uygulamanızı yönetilen bir masaüstü ortamında dağıtmaktan, güvenilen yayımcı deposuna bir sertifika eklemek için aşağıdaki seçeneklere sahip olursunuz:  
   

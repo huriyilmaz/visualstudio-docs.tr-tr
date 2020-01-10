@@ -26,12 +26,12 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e367ff6d6abbf40cdf7efebed04aee6fc74a384c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 962c724e231275c9fa716d6c823b7451292392cf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300749"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848378"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -127,7 +127,7 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 ### <a name="UserDefined"></a>Kullanıcı tanımlı değişkenler, Işlevler ve nesneler
  Bir JavaScript dosyasını değiştirdiğinizde, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] tüm kullanılabilir kod kaynaklarını belirleyebilmek için, açılan ve başvurulan belgeleri tarar. Bu, oluşturduğunuz değişkenleri, işlevleri ve nesneleri içerir. Bu kaynaklar daha sonra JavaScript IntelliSense kullanımına sunulur.
 
- Kullanıcı tanımlı değişkenler, işlevler ve nesneler hakkında daha fazla bilgi için MSDN Web sitesinde [kendi nesnelerinizi oluşturma](https://go.microsoft.com/fwlink/?LinkId=108671) konusuna bakın.
+ Kullanıcı tanımlı değişkenler, işlevler ve nesneler hakkında daha fazla bilgi için MSDN Web sitesinde [kendi nesnelerinizi oluşturma](https://msdn.microsoft.com/library/202863ha.aspx) konusuna bakın.
 
 ### <a name="External"></a>Dış dosya başvuruları
  Kodunuzda IntelliSense desteği elde etmek için çeşitli türlerde harici dosya başvuruları ekleyebilirsiniz. Harici dosya başvuruları; komut dosyası başvuruları ve başvuru yönergeleri olabileceği gibi, başvuru grupları kullanılarak da belirtilebilir.
@@ -283,6 +283,6 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 - [JavaScript IntelliSense Genişletme](../ide/extending-javascript-intellisense.md)
 - [Tanımlayıcılar İçin İfade Tamamlama](../ide/statement-completion-for-identifiers.md)
 - [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
-- [DHTML nesne modeli hakkında](https://go.microsoft.com/fwlink/?LinkID=92344)
+- [DHTML nesne modeli hakkında](https://msdn2.microsoft.com/library/ms533022.aspx)
 - [Üyeleri Listele](https://msdn.microsoft.com/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
-- [SRC özniteliği &#124; src özelliği](https://go.microsoft.com/fwlink/?LinkId=92345)
+- [SRC özniteliği &#124; src özelliği](https://msdn2.microsoft.com/library/ms534642.aspx)

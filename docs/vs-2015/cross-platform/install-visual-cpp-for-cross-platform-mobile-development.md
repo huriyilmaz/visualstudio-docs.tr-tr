@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 8046b261021a1147dbf0356c6854968b3d23a1df
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 70f1266581bb633086fa33a28b43e04befc7e6f9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299796"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844324"
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Çoklu Platform Mobil Uygulama Geliştirme için Visual C++’ı yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
  [İOS  için araçları yükler](#InstallForiOS)  
  [Bağımlılıkları el ile yükler veya güncelleştirir](#ThirdParty)  
   
-## <a name="Requirements"></a>Gereklilik  
+## <a name="Requirements"></a> Gereksinimleri  
   
 - Yükleme gereksinimleri için bkz. [Visual Studio 2015 sistem gereksinimleri](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs).  
   
@@ -40,12 +40,12 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
   
 - Windows Phone Öykünücüler ve Android için Microsoft Visual Studio Öykünücüsü Hyper-V ' y i çalıştırabilen bir bilgisayar gerektirir. Öykünücüleri yüklemeden ve çalıştırmadan önce Windows 'daki Hyper-V özelliğinin etkinleştirilmesi gerekir. Daha fazla bilgi için öykünücü [sistem gereksinimlerine](https://msdn.microsoft.com/4d5bb438-231a-4cd2-84b7-e9660b0e3baf)bakın.  
   
-- Android SDK ile birlikte gelen x86 Android öykünücüleri, Intel HAXM sürücüsünü çalıştırabilirler bilgisayarlarda en iyi şekilde çalışır. Bu sürücü, VT-x ile bir Intel x64 işlemcisi ve devre dışı bırakma bit desteğini gerektirir. Daha fazla bilgi için bkz. [ıntel® Hardware Accelerated Execution Manager Için yükleme yönergeleri-Microsoft Windows](https://go.microsoft.com/fwlink/p/?LinkId=536385).  
+- Android SDK ile birlikte gelen x86 Android öykünücüleri, Intel HAXM sürücüsünü çalıştırabilirler bilgisayarlarda en iyi şekilde çalışır. Bu sürücü, VT-x ile bir Intel x64 işlemcisi ve devre dışı bırakma bit desteğini gerektirir. Daha fazla bilgi için bkz. [ıntel® Hardware Accelerated Execution Manager Için yükleme yönergeleri-Microsoft Windows](https://github.com/intel/haxm).  
   
 - İOS için kod oluşturma, bir Apple KIMLIĞI, bir iOS Geliştirici Programı hesabı ve [Xcode 6](https://go.microsoft.com/fwlink/p/?LinkId=536387) veya sonraki sürümleri Işletim sistemi X Mavericks veya üzeri sürümlerde çalışabilen bir Mac bilgisayar gerektirir. Basit yükleme adımları için bkz. [iOS Için yükleme araçları](#InstallForiOS).  
   
 ## <a name="GetTheTools"></a>Araçları edinme  
- Platformlar C++ arası mobil geliştirme Için Visual Studio Community, Professional ve Enterprise sürümlerinde yer alan yüklenebilir bir bileşendir. Visual Studio 'yu almak için [Visual studio 2015 İndirmeleri](https://go.microsoft.com/fwlink/p/?linkid=517106) sayfasına gidin ve güncelleştirme 2 veya sonraki sürümüyle visual Studio 2015 ' yi indirin.  
+ Platformlar C++ arası mobil geliştirme Için Visual Studio Community, Professional ve Enterprise sürümlerinde yer alan yüklenebilir bir bileşendir. Visual Studio 'yu almak için [Visual studio 2015 İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin ve güncelleştirme 2 veya sonraki sürümüyle visual Studio 2015 ' yi indirin.  
   
 ## <a name="InstallTheTools"></a>Araçları yükler  
  Visual Studio 2015 için yükleyici, platformlar arası mobil geliştirme için Visual C++ yükleme seçeneği içerir. Bu, gerekli C++ dil araçlarını, Visual Studio için şablonları ve bileşenleri, Android derlemeleri ve hata ayıklama için gereken GCC ve Clang araç kümelerini ve iOS geliştirmesi Için bir Mac ile iletişim kurmayı sağlar. Ayrıca iOS ve Android uygulama geliştirmeyi desteklemek için gereken tüm üçüncü taraf araçları ve yazılım geliştirme setleri de yüklenir. Bu üçüncü taraf araçların çoğu, Android Platform desteği için gereken açık kaynaklı yazılımdır.  
@@ -68,7 +68,7 @@ Platformlar C++ arası mobil geliştirme için görsel] (https://go.microsoft.co
   
      Evrensel Windows uygulamaları oluşturmak ve bunlar arasında, Android ve iOS projeleriniz arasında kod paylaşmak için, **seçme özellikleri**' nde **Windows ve Web geliştirme** ' yi genişletin ve **Evrensel Windows uygulaması geliştirme araçları**' nı işaretleyin. Evrensel Windows uygulamaları oluşturmayı planlamıyorsanız, bu seçeneği atlayabilirsiniz.  
   
-     Devam etmek için **İleri ' yi** seçin.  
+     Devam etmek için **İleri**’yi seçin.  
   
 3. Üçüncü taraf bileşenlerinin kendi lisans koşulları vardır. Lisans koşullarını her bileşenin yanındaki **Lisans koşulları** bağlantısını seçerek görüntüleyebilirsiniz. Bileşenleri eklemek ve platformlar arası mobil geliştirme Için Visual Studio 'Yu ve C++ Visual Studio 'yu yüklemek için yüklemeyi seçin.  
   

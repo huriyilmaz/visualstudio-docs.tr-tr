@@ -12,19 +12,19 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 33adad7117678ccc5550db86baada43a1c487916
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: e869a02475917f2444bedbb1bc9b7373b893d098
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588865"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846901"
 ---
-# <a name="install-and-configure-tools-to-build-using-ios"></a>İOS kullanarak derlemek için Araçlar yükleyip yapılandırma
+# <a name="install-and-configure-tools-to-build-using-ios"></a>iOS kullanarak derlemeye yönelik araçları yükleme ve yapılandırma
 
-İOS kodu düzenleme, hata ayıklama ve iOS simülatörü veya bir iOS cihazına dağıtmak için Visual Studio ile platformlar arası **Mobil geliştirmeyle C++**  birlikte kullanabilirsiniz. Ancak lisanslama kısıtlamaları nedeniyle kodun bir Mac üzerinde oluşturulması ve uzaktan çalıştırılması gerekir. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)uzak aracısını ayarlamanız ve yapılandırmanız gerekir. Uzak Aracı, Visual Studio 'dan derleme isteklerini işler ve uygulamayı Mac 'e bağlı iOS cihazında veya Mac üzerindeki iOS simülatörü üzerinde çalıştırır.
+İOS kodu düzenleme, hata ayıklama ve iOS simülatörü veya bir iOS cihazına dağıtmak için Visual Studio ile platformlar arası **Mobil geliştirmeyle C++**  birlikte kullanabilirsiniz. Ancak lisanslama kısıtlamaları nedeniyle kodun bir Mac üzerinde oluşturulması ve uzaktan çalıştırılması gerekir. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde [vcremote](https://www.npmjs.com/package/vcremote)uzak aracısını ayarlamanız ve yapılandırmanız gerekir. Uzak Aracı, Visual Studio 'dan derleme isteklerini işler ve uygulamayı Mac 'e bağlı iOS cihazında veya Mac üzerindeki iOS simülatörü üzerinde çalıştırır.
 
 > [!NOTE]
-> Mac yerine bulutta barındırılan Mac Hizmetleri kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'yu bulutta barındırılan Mac 'e bağlamak Için yapılandırma](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac). Yönergeler, Apache Cordova için Visual Studio Araçları kullanarak oluşturma içindir. Kullanarak C++oluşturma yönergelerini kullanmak için, `remotebuild` için `vcremote` değiştirin.
+> Mac yerine bulutta barındırılan Mac Hizmetleri kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'yu bulutta barındırılan Mac 'e bağlamak Için yapılandırma](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac). Yönergeler, Apache Cordova için Visual Studio Araçları kullanarak oluşturma içindir. Kullanarak C++oluşturma yönergelerini kullanmak için, `remotebuild`için `vcremote` değiştirin.
 
 İOS kullanarak derlemek için araçları yükledikten sonra, Visual Studio ve Mac 'te iOS geliştirmesi için uzak aracıyı hızlı bir şekilde yapılandırmak ve güncellemek üzere bu makaleye başvurun.
 
@@ -64,11 +64,11 @@ ms.locfileid: "72588865"
 
 - [Node. js](https://nodejs.org/) sürüm 8.11.3 ve NPM sürüm 5.6.0
 
-   Mac 'inizde Node. js sürüm 8.11.3 'yi yükler. Node. js paketini yüklerseniz, NPM sürüm 5.6.0 ile birlikte gelmelidir. Diğer Node. js ve NPM sürümleri, `vcremote` yüklemesinin başarısız olmasına neden olabilecek `vcremote` uzak aracıda kullanılan bazı modülleri desteklemiyor olabilir.
+   Mac 'inizde Node. js sürüm 8.11.3 'yi yükler. Node. js paketini yüklerseniz, NPM sürüm 5.6.0 ile birlikte gelmelidir. Diğer Node. js ve NPM sürümleri, `vcremote` yüklemesinin başarısız olmasına neden olabilecek `vcremote`uzak aracıda kullanılan bazı modülleri desteklemiyor olabilir.
 
 ## <a name="Install"></a>İOS için uzak aracıyı yükler
 
-Mobil geliştirme iş yüküyle birlikte C++ yüklediğinizde, Visual Studio [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)Ile iletişim kurabilir, Mac 'inizde çalışan uzak bir aracı, dosyaları aktarmak, iOS uygulamanızı derlemek ve çalıştırmak ve hata ayıklama komutları göndermek için kullanılabilir.
+Mobil geliştirme iş yüküyle birlikte C++ yüklediğinizde, Visual Studio [vcremote](https://www.npmjs.com/package/vcremote)Ile iletişim kurabilir, Mac 'inizde çalışan uzak bir aracı, dosyaları aktarmak, iOS uygulamanızı derlemek ve çalıştırmak ve hata ayıklama komutları göndermek için kullanılabilir.
 
 Uzak aracıyı yüklemeden önce, [önkoşulları](#prerequisites) karşıladığınızdan ve [platformlar arası C++mobil geliştirmeyi yükleme ](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)' deki yükleme adımlarını tamamladığınızdan emin olun.
 
@@ -80,7 +80,7 @@ Uzak aracıyı yüklemeden önce, [önkoşulları](#prerequisites) karşıladı�
 
    Genel yükleme ( **-g**) anahtarı önerilir, ancak gerekli değildir.
 
-   Yükleme sırasında, `vcremote` yüklenir ve geliştirici modu Mac 'inizde etkinleştirilir. [Homebrew](https://brew.sh/) ve iki NPM paketi, `vcremote-lib` ve `vcremote-utils` de yüklüdür. Yükleme tamamlandığında, atlanan isteğe bağlı bağımlılıklara ilişkin uyarıları yoksaymak güvenlidir.
+   Yükleme sırasında, `vcremote` yüklenir ve geliştirici modu Mac 'inizde etkinleştirilir. [Homebrew](https://brew.sh/) ve iki NPM paketi, `vcremote-lib` ve `vcremote-utils`de yüklüdür. Yükleme tamamlandığında, atlanan isteğe bağlı bağımlılıklara ilişkin uyarıları yoksaymak güvenlidir.
 
    > [!NOTE]
    > Homebrew 'yi yüklemek için sudo (yönetici) erişiminizin olması gerekir. Sudo olmadan `vcremote` yüklemeniz gerekiyorsa, homebrew 'yi bir usr/yerel konuma el ile yükleyebilir ve bin klasörünü yolunuza ekleyebilirsiniz. Daha fazla bilgi için [homebrew belgelerine](https://github.com/Homebrew/homebrew/wiki/Installation)bakın. Geliştirici modunu el ile etkinleştirmek için bu komutu Terminal uygulamasına girin: `DevToolsSecurity -enable`
@@ -97,7 +97,7 @@ Visual Studio 'nun yeni bir sürümüne güncelleştirirseniz, uzak aracının g
 
    `vcremote`
 
-   Bu komut, uzak aracıyı `~/vcremote` varsayılan bir yapı diziniyle başlatır. Ek yapılandırma seçenekleri için bkz. [Mac üzerinde uzak Aracıyı yapılandırma](#ConfigureMac).
+   Bu komut, uzak aracıyı `~/vcremote`varsayılan bir yapı diziniyle başlatır. Ek yapılandırma seçenekleri için bkz. [Mac üzerinde uzak Aracıyı yapılandırma](#ConfigureMac).
 
 Aracıyı ilk kez başlattığınızda ve her yeni istemci sertifikası oluşturduğunuzda, ana bilgisayar adı, bağlantı noktası ve PIN dahil olmak üzere Visual Studio 'da aracıyı yapılandırmak için gerekli bilgiler sunulur.
 
@@ -111,7 +111,7 @@ Uzak aracıyı güvenli olmayan modda kullanabilirsiniz. Güvenli olmayan modda 
 
 #### <a name="to-disable-secured-connection-mode"></a>Güvenli bağlantı modunu devre dışı bırakmak için
 
-- @No__t_0 güvenli bağlantı modunu devre dışı bırakmak için, aşağıdaki komutu Mac 'inizde Terminal uygulamasına girin:
+- `vcremote`güvenli bağlantı modunu devre dışı bırakmak için, aşağıdaki komutu Mac 'inizde Terminal uygulamasına girin:
 
    `vcremote --secure false`
 
@@ -125,7 +125,7 @@ Uzak aracıyı başlattığınızda, bunu durdurmadan, Visual Studio 'dan kullan
 
 #### <a name="to-stop-the-remote-agent"></a>Uzak aracıyı durdurmak için
 
-- @No__t_0 Terminal penceresinde, **denetim** +**C**yazın.
+- `vcremote` Terminal penceresinde, **denetim**+**C**yazın.
 
 ## <a name="ConfigureVS"></a>Visual Studio 'da uzak Aracıyı yapılandırma
 
@@ -184,13 +184,13 @@ Güvenlik nedeniyle, Visual Studio 'Yu uzak aracıyla eşleştirmeyen sunucu ser
 
 ### <a name="to-generate-a-new-server-certificate"></a>Yeni bir sunucu sertifikası oluşturmak için
 
-1. @No__t_0 aracısını durdurun.
+1. `vcremote` aracısını durdurun.
 
 1. Terminal uygulamasına şu komutu girin:
 
    `vcremote resetServerCert`
 
-1. Onay istendiğinde `Y` girin.
+1. Onay istendiğinde `Y`girin.
 
 1. Terminal uygulamasına şu komutu girin:
 
@@ -222,7 +222,7 @@ Uzak aracıyı çeşitli komut satırı seçeneklerini kullanarak yapılandırab
 
    Burada *directory_path* , günlük dosyalarının, derlemelerin ve sunucu sertifikalarının yerleştirileceği Mac 'inizde yer alır. Varsayılan olarak, bu konum `/Users/<username>/vcremote`. Derlemeler, bu konumda yapı numarasına göre düzenlenir.
 
-- @No__t_0 yakalamak ve Server. log adlı bir dosyaya `stderr` bir arka plan işlemi kullanmak için şunu girin:
+- `stdout` yakalamak ve Server. log adlı bir dosyaya `stderr` bir arka plan işlemi kullanmak için şunu girin:
 
    `vcremote > server.log 2>&1 &`
 
@@ -238,7 +238,7 @@ Uzak aracıyı çeşitli komut satırı seçeneklerini kullanarak yapılandırab
 
 ### <a name="debugging-on-an-ios-device"></a>İOS cihazında hata ayıklama
 
-Bir iOS cihazında hata ayıklama çalışmazsa, bir iOS cihazından iletişim kurmak için kullanılan [ıdeviceınstaller](https://github.com/libimobiledevice/ideviceinstaller)aracı ile ilgili sorunlar olabilir. Bu araç genellikle `vcremote` yüklemesi sırasında homebrew 'dan yüklenir. Geçici çözüm olarak aşağıdaki adımları izleyin.
+Bir iOS cihazında hata ayıklama çalışmazsa, bir iOS cihazından iletişim kurmak için kullanılan [ıdeviceınstaller](https://github.com/libimobiledevice/ideviceinstaller)aracı ile ilgili sorunlar olabilir. Bu araç genellikle `vcremote`yüklemesi sırasında homebrew 'dan yüklenir. Geçici çözüm olarak aşağıdaki adımları izleyin.
 
 Aşağıdaki komutları sırasıyla çalıştırarak Terminal uygulamasını açın ve `ideviceinstaller` ve bağımlılıklarını güncelleştirin:
 
@@ -246,13 +246,13 @@ Aşağıdaki komutları sırasıyla çalıştırarak Terminal uygulamasını aç
 
    `brew update`
 
-1. @No__t_0 ve `usbmuxd` kaldır
+1. `libimobiledevice` ve `usbmuxd` kaldır
 
    `brew uninstall --ignore-dependencies libimobiledevice`
 
    `brew uninstall --ignore-dependencies usbmuxd`
 
-1. @No__t_0 ve `usbmuxd` en son sürümünü yükleyip
+1. `libimobiledevice` ve `usbmuxd` en son sürümünü yükleyip
 
    `brew install --HEAD usbmuxd`
 
@@ -262,7 +262,7 @@ Aşağıdaki komutları sırasıyla çalıştırarak Terminal uygulamasını aç
 
    `brew install --HEAD libimobiledevice`
 
-1. @No__t_0 kaldırın ve yeniden yükleyin
+1. `ideviceinstaller` kaldırın ve yeniden yükleyin
 
    `brew uninstall ideviceinstaller`
 
@@ -272,7 +272,7 @@ Cihazda yüklü olan uygulamaları listeleyerek `ideviceinstaller` cihazla ileti
 
 `ideviceinstaller -l`
 
-@No__t_0 `/var/db/lockdown` klasöre erişemeyeceği hatalar varsa, bu klasördeki ayrıcalığı şu şekilde değiştirin:
+`ideviceinstaller` `/var/db/lockdown`klasöre erişemeyeceği hatalar varsa, bu klasördeki ayrıcalığı şu şekilde değiştirin:
 
 `sudo chmod 777 /var/db/lockdown`
     

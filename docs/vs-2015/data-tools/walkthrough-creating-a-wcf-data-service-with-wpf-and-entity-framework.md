@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5abbb647f93c991d2de626a84e82f47e03f6f71e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4d825e625313febfa67cfb85f6a9c6bccb7f3608
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299617"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844282"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek yol: WPF ve Entity Framework bir WCF veri hizmeti oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 - Northwind veritabanındaki Customers tablosunu temsil eden bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturun.
 
-- [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]oluşturun.
+- Oluşturma bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
 - Bir istemci uygulaması oluşturun ve [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]bir başvuru ekleyin.
 
@@ -40,12 +40,12 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 - İsteğe bağlı olarak, uygulamaya filtreleme yetenekleri ekleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Northwind örnek veritabanı.
 
-     Geliştirme bilgisayarınızda bu veritabanı yoksa, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=98088)' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
+     Geliştirme bilgisayarınızda bu veritabanı yoksa, [Microsoft Indirme merkezi](https://www.microsoft.com/downloads)' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
 
 ## <a name="creating-the-service"></a>Hizmeti Oluşturma
  [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]oluşturmak için bir Web projesi ekleyin, bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]oluşturun ve sonra modelden hizmeti oluşturun.

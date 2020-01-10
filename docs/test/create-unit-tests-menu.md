@@ -9,19 +9,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c562d6f750db7096e37b863c46d6330eb484912
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3eb001d2022bb57981f21fd99c051c54aeb08301
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588830"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844313"
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Birim Testleri Oluştur komutuyla birim testi yöntemi saplamaları oluşturma
 
 **Birim Testleri Oluştur** komutu birim testi yöntemi saplamaları oluşturur. Bu özellik bir test projesinin, test sınıfının ve içindeki test yönteminin Saplamasının kolay yapılandırılmasını sağlar.
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > **Birim Testleri Oluştur** menü komutu yalnızca .NET Framework (.NET Core) hedefleyen yönetilen kod için kullanılabilir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> **Birim Testleri Oluştur** menü komutu yalnızca yönetilen kod için kullanılabilir.
+::: moniker-end
 
 **Birim Testleri Oluştur** menü komutu genişletilebilir ve MSTest, MSTest v2, NUnit ve xUnit için testler oluşturmak üzere kullanılabilir.
 

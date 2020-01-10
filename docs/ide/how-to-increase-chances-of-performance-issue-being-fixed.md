@@ -5,16 +5,16 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 57d956a426e791fcc84d5972f564cd554d6e72f8
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: bce4fa8c824b6a4f1332145c1383131eb6488b6c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75406100"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847379"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
-"[Sorun bildir](https://aka.ms/vs-rap)" Aracı, Visual Studio kullanıcıları tarafından yaygın olarak bir dizi sorunu bildirmek için kullanılır. Visual Studio ekip noktaları kilitlenme ve Kullanıcı geri bildirimleriyle ilgili eğilimleri yavaşlayor ve kullanıcıların büyük bir bölümünü etkileyen sorunları gidermektedir. Belirli bir geri bildirim bileti daha fazla eyleme çıkılarak, büyük olasılıkla ürün ekibi tarafından hızlı bir şekilde tanılanabilir ve çözümlenir. Bu belge, daha fazla işlem yapılabilir olması için kilitlenme veya yavaşlık sorunları bildirirken en iyi uygulamaları açıklar.
+"[Sorun bildir](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)" Aracı, Visual Studio kullanıcıları tarafından yaygın olarak bir dizi sorunu bildirmek için kullanılır. Visual Studio ekip noktaları kilitlenme ve Kullanıcı geri bildirimleriyle ilgili eğilimleri yavaşlayor ve kullanıcıların büyük bir bölümünü etkileyen sorunları gidermektedir. Belirli bir geri bildirim bileti daha fazla eyleme çıkılarak, büyük olasılıkla ürün ekibi tarafından hızlı bir şekilde tanılanabilir ve çözümlenir. Bu belge, daha fazla işlem yapılabilir olması için kilitlenme veya yavaşlık sorunları bildirirken en iyi uygulamaları açıklar.
 
 ## <a name="general-best-practices"></a>Genel en iyi uygulamalar
 
@@ -188,7 +188,7 @@ Bu tür sorunların en çok eyleme neden olduğu, aşağıdaki adımları izleye
     -   **Servicehubtracelevel** genel ortam değişkenini **All** olarak ayarlayın
     -   Sorunu yeniden oluşturun.
 
-2.  Microsoft Visual Studio ve .NET Framework günlük toplama aracını [buraya](https://aka.ms/vscollect)indirin.
+2.  Microsoft Visual Studio ve .NET Framework günlük toplama aracını [buraya](https://www.microsoft.com/download/details.aspx?id=12493)indirin.
 3.  Aracı çalıştırın. Bu, **% Temp%/Vslogs.zip**dosyasına bir ZIP dosyası verir. Lütfen bu dosyayı geri bildiriminiz için bağlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.

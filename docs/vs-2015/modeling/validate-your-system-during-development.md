@@ -11,12 +11,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4fec3595ba7886f5ba979c35e9441ab108174726
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b3de5cb1cc62d159567eee804c1aadef865e500a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301337"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845390"
 ---
 # <a name="validate-your-system-during-development"></a>Geliştirme sırasında sisteminizi doğrulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,12 +36,12 @@ Visual Studio, yazılımınızın kullanıcıların gereksinimleriyle ve sistemi
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Videolar**|![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: Doug yedi: Visual Studio 2010 ile kod anlama ve sistem tasarımı](https://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: katman diyagramı kullanarak uygulama mimarisi](https://go.microsoft.com/fwlink/?LinkID=201117) oluşturma<br /><br /> ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo ") [: nasıl yapılır serisi: Katman diyagramlarını kullanarak kodu doğrulama](https://go.microsoft.com/fwlink/?LinkID=214405)|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|-   [Visual STUDIO ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Videolar**|![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: Doug yedi: Visual Studio 2010 ile kod anlama ve sistem tasarımı](https://channel9.msdn.com/shows/VS2010Launch/Doug-Seven-Code-Understanding-and-Systems-Design-with-Visual-Studio-2010)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: katman diyagramı kullanarak uygulama mimarisi](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-5-Architecting-an-Application) oluşturma<br /><br /> ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo") [: nasıl yapılır serisi: Katman diyagramlarını kullanarak kodu doğrulama](https://msdn.microsoft.com/vstudio/gg501755)|
+|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Bloglar**|-   [Visual STUDIO ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Uygulamayı test etme](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac) [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [Kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [çözümleme ve modelleme mimarisi](../modeling/analyze-and-model-your-architecture.md)

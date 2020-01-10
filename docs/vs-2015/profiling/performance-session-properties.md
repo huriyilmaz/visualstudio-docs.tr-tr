@@ -13,12 +13,12 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: af214f6a29e12dcdf2fe8bd2de75e05283894922
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cd521a853d9ec8c1a3fee8e50e87217621a73a89
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74290108"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848157"
 ---
 # <a name="performance-session-properties"></a>Performans Oturum Özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
 ## <a name="general"></a>Genel  
  Bu ayarlar, .NET nesne koleksiyonu ve ömür verileri eklemek ve varsayılan rapor konumunu ve adlandırma kurallarını belirtmek için profil oluşturma yöntemini seçmenizi sağlar.  
   
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
  [Nasıl Yapılır: Toplama Metotlarını Seçme](../profiling/how-to-choose-collection-methods.md)  
   
@@ -51,7 +51,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
   
  Daha fazla bilgi için bkz. [nasıl yapılır: başlatılacak Ikiliyi belirtme](../profiling/how-to-specify-the-binary-to-start.md)  
   
-## <a name="sampling"></a>Aşağıdakine  
+## <a name="sampling"></a>Örnekleme  
  Bu ayarlar, örnekleme profil oluşturma yöntemi olarak kullanıldığında örnek olay ve örnekleme aralığını seçmenizi sağlar. Belirtilen aralıkta profil oluşturma verilerini toplamak için örnek bir olay kullanılır. Örneğin, örnek olay saat döngüleri ise ve örnekleme aralığı 10.000.000 olarak ayarlanırsa, profil oluşturma verileri her 10.000.000 saat döngüden sonra toplanır. Aşağıdaki dört örnek olay türü mevcuttur:  
   
 - Saat döngüleri-CPU ile bağlantılı sorunlar için  
@@ -77,7 +77,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
 ## <a name="instrumentation"></a>İzleme  
  Bu ayarlar, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web sayfalarında JScript kodu için performans verileri toplamanıza olanak sağlar ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtebilirsiniz.  
   
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
  [Nasıl Yapılır: Web Sayfalarında JavaScript Kodunun Profilini Oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)  
   
@@ -89,9 +89,9 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
  Daha fazla bilgi için bkz [. nasıl yapılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md)  
   
 ## <a name="windows-events"></a>Windows Olayları  
- Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. VSPerfReport. exe komut satırı aracı `/calltrace` seçeneğini kullanarak verileri görüntüleyebilirsiniz. Windows için olay Izleme (ETW) hakkında daha fazla bilgi için bkz. [olay Izleme hakkında](https://go.microsoft.com/fwlink/?linkid=90752).  
+ Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. VSPerfReport. exe komut satırı aracı `/calltrace` seçeneğini kullanarak verileri görüntüleyebilirsiniz. Windows için olay Izleme (ETW) hakkında daha fazla bilgi için bkz. [olay Izleme hakkında](https://msdn2.microsoft.com/library/aa363668.aspx).  
   
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
  [Nasıl Yapılır: Windows İçin Olay İzleme (ETW) Verileri Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
   
@@ -105,7 +105,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
 ## <a name="advanced"></a>Gelişmiş  
  Bu ayarlar, [vsinstr](../profiling/vsinstr.md) komut satırı profil oluşturma Aracı ' nın bir veya daha fazla seçeneğini belirterek, izleme işlemine seçenekler eklemenize olanak tanır. Ayrıca, uygulama birden fazla sürüm kullanırken profil için ortak çalışma zamanının sürümünü belirtebilirsiniz.  
   
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
  [Nasıl Yapılır: .NET Framework Çalışma Zamanını Belirtin](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
   

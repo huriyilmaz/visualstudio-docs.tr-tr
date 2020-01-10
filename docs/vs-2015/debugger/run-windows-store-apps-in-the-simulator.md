@@ -14,12 +14,12 @@ caps.latest.revision: 45
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 96224b522b17ff9da520386d56d4fae7a04bd981
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.openlocfilehash: d072f54dfe351d54e3e115dca7a91bec77fbb9e6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144781"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844925"
 ---
 # <a name="run-windows-store-apps-in-the-simulator"></a>Simülatörde Microsoft Store uygulamaları çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -86,7 +86,7 @@ Windows Mağazası uygulamaları için Visual Studio simülatör, bir Windows Ma
  Simülatör 90 derece bir yöne döndürerek dikey ve yatay arasındaki cihaz yönünü değiştirebilirsiniz.  
   
 > [!NOTE]
-> Simülatör bir projenin [DisplayProperties. oto Rotationpreferences](https://go.microsoft.com/fwlink/?LinkId=249460) özelliğini dikkate almaz. Örneğin, projeniz yönü `Landscape`olarak ayarlarsa ve simülatörü dikey yönlendirmeye döndürdüğünüzde simülatör görüntü görüntüsü de döndürülür ve yeniden boyutlandırılır. Bu ayarları gerçek bir cihazda test edin.  
+> Simülatör bir projenin [DisplayProperties. oto Rotationpreferences](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayproperties.autorotationpreferences.aspx) özelliğini dikkate almaz. Örneğin, projeniz yönü `Landscape`olarak ayarlarsa ve simülatörü dikey yönlendirmeye döndürdüğünüzde simülatör görüntü görüntüsü de döndürülür ve yeniden boyutlandırılır. Bu ayarları gerçek bir cihazda test edin.  
   
 > [!NOTE]
 > Simülatör 'in bir kenarının, üzerinde görüntülenen ekrandan daha büyük olması için simülatörü döndürdüğünüzde, simülatör ekran içine sığacak şekilde otomatik olarak yeniden boyutlandırılır. Yeniden döndürürseniz simülatör özgün boyutuna yeniden boyutlandırılmaz.  

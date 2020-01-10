@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 067544e6b97e2709ed217ae0232771e833800e52
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0dcfa4d3522d88b58e971c0a4ff3f27649c2d21b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300123"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844623"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Yüksek oranda Gen 2 çöp koleksiyonları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ Kural kimliği | DA0022 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Nedeni  
+## <a name="cause"></a>Sebep  
  Profil oluşturma sırasında toplanan sistem performansı verileri, 1. nesil atık koleksiyonlara kıyasla bellek for.NET Framework nesnelerinin önemli bir oranının 2. nesil atık toplama işleminde geri kazanıldığını gösterir.  
   
 ## <a name="rule-description"></a>Kural Tanımı  
@@ -50,4 +50,4 @@ Kural kimliği | DA0022 |
   
  Uygulamanın yönetilen bellek kullanımı modelini anlamak için, a.NET bellek ayırma profilini çalıştıran bir kez daha profilini oluşturup nesne ömrü profil oluşturma seçeneğini belirleyin.  
   
- Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](https://go.microsoft.com/fwlink/?LinkId=148226) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](https://go.microsoft.com/fwlink/?LinkId=177836).
+ Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](https://msdn2.microsoft.com/library/ms973837.aspx) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](https://msdn.microsoft.com/magazine/cc534993.aspx).

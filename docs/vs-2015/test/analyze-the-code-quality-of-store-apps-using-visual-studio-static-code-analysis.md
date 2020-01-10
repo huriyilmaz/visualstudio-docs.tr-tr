@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4633b32c1d59a59c91848f72403571955263472f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c47a1583a1d4695905c0fb7067faaa6226fb2d7a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297547"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851862"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio statik kod analizini kullanarak Store uygulamalarının kod kalitesini analiz etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,5 +35,5 @@ Visual Studio kod analizi aracı, kodunuz için bir dizi yaygın hataları ve pr
 
 |||
 |-|-|
-|[MSDN Kitaplığı 'nda kod analizi](https://go.microsoft.com/fwlink/?LinkID=227580)|Kod Analizi Visual Studio Ultimate, Visual Studio Premium ve Visual Studio Professional'ı kullanma hakkında daha fazla bilgi bulabilirsiniz.|
-|[MSDN Kod Analizi ekip blogu](https://go.microsoft.com/fwlink/?LinkId=227200)|Teknik incelemeler ve Kod Analizi ekip blogunda örnekleri dahil olmak üzere daha fazla bilgi bulabilirsiniz.|
+|[MSDN Kitaplığı'nda kod çözümleme](https://msdn.microsoft.com/library/dd264897.aspx)|Kod Analizi Visual Studio Ultimate, Visual Studio Premium ve Visual Studio Professional'ı kullanma hakkında daha fazla bilgi bulabilirsiniz.|
+|[MSDN Kod Analizi ekip blogu](https://blogs.msdn.com/codeanalysis/)|Teknik incelemeler ve Kod Analizi ekip blogunda örnekleri dahil olmak üzere daha fazla bilgi bulabilirsiniz.|

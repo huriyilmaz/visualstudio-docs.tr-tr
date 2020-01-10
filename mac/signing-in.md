@@ -5,18 +5,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: 96a113e21fe2e2e11da0e156ba9578c632e648ae
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 9a9cf7871684e0951f66e0f20dcf156b3e625b45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74983661"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844267"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Mac için Visual Studio oturum açın
 
 Mac için Visual Studio oturum açma, [aboneliğinizi nasıl etkinleştirirsiniz](enable-subscription.md). Mac için Visual Studio yüklediğinizde, her zaman Community Edition 'ı varsayılan olarak alırsınız. [Profesyonel veya kurumsal lisansınız](https://visualstudio.microsoft.com/vs/compare/)varsa, ek özelliklerin kilidini açmak için ilk çalıştırmada oturum açmanız gerekir. Ayrıca şunları da alacaksınız:
 
-* **Visual Studio Dev Essentials programına erişim** – bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. Bkz: [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) daha fazla bilgi için.
+* **Visual Studio Dev Essentials programına erişim** – bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. Bkz: [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) daha fazla bilgi için.
 
 * Aynı hesap için kimlik bilgileri için yeniden sormadan **otomatik olarak IDE 'de Azure 'a bağlanın** .
 

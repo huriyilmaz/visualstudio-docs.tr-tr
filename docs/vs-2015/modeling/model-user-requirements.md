@@ -13,12 +13,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f27fede436ea6cabe0aab6480cd4841299c42293
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3d70a7c8b7dbf6015e992cfabb5204f3b307238a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302797"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844908"
 ---
 # <a name="model-user-requirements"></a>Kullanıcı gereksinimlerini modelleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 ## <a name="common-tasks"></a>Ortak Görevler
  Kullanıcıların gereksinimlerinin birkaç farklı görünümünü oluşturabilirsiniz.  Her görünüm belirli bir bilgi türü sağlar.  Bu görünümleri oluşturduğunuzda sıklıkla bir tane diğerine taşımak en iyisidir. Herhangi bir görünümden başlayabilirsiniz.
 
-|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Section|
+|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Bölüm|
 |-------------------------|-----------------------------------------------|-------------|
 |Kullanım örneği diyagramı|Sistemi kim ve bununla ne yaptığını kullanır.|[Sisteminizin nasıl kullanıldığını açıklama](#UseCases)|
 |Kavramsal sınıf diyagramı|Gereksinimleri anlatmak için kullanılan türlerin sözlüğü; Sistem arabiriminde görünen türler.|[Gereksinimleri tanımlamak için kullanılan terimleri tanımlama](#RequirementsClasses)|
@@ -138,7 +138,7 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
 |Kavramsal sınıf diyagramındaki öğeler|[UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)|
 |Kavramsal sınıflardan kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
- Kavramsal bir sınıf diyagramında, genellikle gezinmelerin gezinebilmesini sağlamak için, ilişkilerin oklara yerleştirileceğini göstermek yararlı değildir. Bunun nedeni, diyagramın bir uygulamayı temsil etmez. İlişkilendirmeler gerçek dünya nesneleri arasındaki ilişkileri temsil eder. Aşağıdaki [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı, varsayılan olarak çift yönlü oklar yapar: [örnek: UML etki alanı modelleme özellikleri](https://go.microsoft.com/fwlink/?LinkId=213849).
+ Kavramsal bir sınıf diyagramında, genellikle gezinmelerin gezinebilmesini sağlamak için, ilişkilerin oklara yerleştirileceğini göstermek yararlı değildir. Bunun nedeni, diyagramın bir uygulamayı temsil etmez. İlişkilendirmeler gerçek dünya nesneleri arasındaki ilişkileri temsil eder. Aşağıdaki [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı, varsayılan olarak çift yönlü oklar yapar: [örnek: UML etki alanı modelleme özellikleri](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
 ## <a name="BusinessRules"></a>Iş kurallarını gösterme
  İş kuralı, belirli bir kullanım örneği ile ilişkilendirilmemiş ve sistem genelinde gözlenecek bir gereksinimdir.
@@ -239,4 +239,4 @@ Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınız�
   Farklı diyagramların sağladığı görünümler arasındaki ilişkileri inceleyerek kullanıcılarınızın iş yaptığı ana kavramları hızlıca anlayabilir ve bu kullanıcılara, sistemden ne ihtiyacı olduğunu anlamalarına yardımcı olabilirsiniz. Ayrıca, paydaşların en az hangi gereksinimlerle ilgili olduğunu daha iyi anlayabilirsiniz. Bu özellikleri, en az Basitleştirilmiş biçimde, projenin erken bir aşamasında, kullanıcıların bunları deneymelerine izin verecek şekilde geliştirmeyi planlarsınız.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [bir modelden test](../modeling/develop-tests-from-a-model.md) [Geliştirme Geliştirme işlem modelinizdeki modellerı kullanın](../modeling/use-models-in-your-development-process.md) [uygulamanızın mimarisi](../modeling/model-your-app-s-architecture.md) [örnek VS uzantısı: UML etki alanı modelleme özellikleri](https://go.microsoft.com/fwlink/?LinkId=213849) [örnek vs uzantısı: stereotipe göre](https://go.microsoft.com/fwlink/?LinkID=213841) UML öğeleri örnek vs uzantısı: UML öğelerini [bir uml diyagramına](https://go.microsoft.com/fwlink/?LinkID=213809) [bağlama](https://go.microsoft.com/fwlink/?LinkID=213813) [video: iş etki alanını modelleme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
+ [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [bir modelden test](../modeling/develop-tests-from-a-model.md) [Geliştirme Geliştirme işlem modelinizdeki modellerı kullanın](../modeling/use-models-in-your-development-process.md) [uygulamanızın mimarisi](../modeling/model-your-app-s-architecture.md) [örnek VS uzantısı: UML etki alanı modelleme özellikleri](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [örnek vs uzantısı: stereotipe göre](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) UML öğeleri örnek vs uzantısı: UML öğelerini [bir uml diyagramına](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [bağlama](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [video: iş etki alanını modelleme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

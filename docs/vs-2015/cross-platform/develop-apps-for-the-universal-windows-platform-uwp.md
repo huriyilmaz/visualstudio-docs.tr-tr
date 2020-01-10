@@ -9,12 +9,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ac6ce00002e40c6d8bd1d5db65b8c7bb5e6bc7cd
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b3f38f519444de7876046baf242f74a18b8c5a59
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299844"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844362"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP) için uygulama geliştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Evrensel Windows platformu ve bizim bir Windows çekirdek ile aynı uygulama tü
 
 - [Windows 10](https://windows.microsoft.com/windows/downloads)
 
-- [Visual Studio 2015](https://go.microsoft.com/fwlink/p/?LinkId=526725). Evrensel Windows uygulaması geliştirme araçlarının isteğe bağlı özellikler listesinden seçildiğinden emin olun. Bu araçlar olmadan evrensel uygulamalarınızı oluşturmayacağız.
+- [Visual Studio 2015](https://visualstudio.microsoft.com/downloads/). Evrensel Windows uygulaması geliştirme araçlarının isteğe bağlı özellikler listesinden seçildiğinden emin olun. Bu araçlar olmadan evrensel uygulamalarınızı oluşturmayacağız.
 
   Bu yazılımı yükledikten sonra, [Windows 10 cihazınızı](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) geliştirme için etkinleştirmeniz gerekir. (Artık her Windows 10 cihazı için bir geliştirici lisansına ihtiyacınız yoktur.)
 

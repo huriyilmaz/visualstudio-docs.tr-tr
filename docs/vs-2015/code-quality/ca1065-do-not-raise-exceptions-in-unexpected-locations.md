@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 439c6b5fc30be2e76eb6c0b6a44b1ec5226633b1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2df740abf25344253627b614fdbd80dce86c7bfa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295950"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847480"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Beklenmedik konumlarda özel durumlar harekete geçirmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74295950"
 |Kategori|Microsoft.Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Nedeni
+## <a name="cause"></a>Sebep
  İstisna atılmasını beklemeyen yöntem bir istisna atar.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -89,7 +89,7 @@ ms.locfileid: "74295950"
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
-- [M:IEquatable.Equals](https://go.microsoft.com/fwlink/?LinkId=113472)
+- [M:IEquatable.Equals](https://msdn2.microsoft.com/library/ms131190(VS.80).aspx)
 
   Bir **Equals** yöntemi, özel durum oluşturmak yerine `true` veya `false` döndürmelidir. Örneğin, eşittir iki eşleşmeyen tür geçirtiyse, bir <xref:System.ArgumentException>oluşturmak yerine yalnızca `false` döndürmelidir.
 
@@ -98,7 +98,7 @@ ms.locfileid: "74295950"
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:iequalitycomparer.asp GetHashCode (T)](https://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:iequalitycomparer.asp GetHashCode (T)](https://msdn2.microsoft.com/library/system.collections.iequalitycomparer.gethashcode.aspx)
 
   **GetHashCode** her zaman bir değer döndürmelidir. Aksi takdirde, karma tablodaki öğeleri kaybedebilirsiniz.
 

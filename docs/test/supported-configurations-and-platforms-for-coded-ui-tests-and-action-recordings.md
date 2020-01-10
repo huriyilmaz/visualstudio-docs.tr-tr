@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 54c2ec423653d1649e7bac9dd302c5f272731477
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e18e50537f35080f9796f4a090b3806953ae5170
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594064"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845805"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar
 
@@ -54,7 +54,7 @@ Visual Studio Enterprise için kodlanmış UI testleri için desteklenen yapıla
 | Internet Explorer 6<br /><br /> Internet Explorer 7 | Desteklenmez. |
 | Chrome<br /><br /> Firefox | Eylem adımlarını kaydetme desteklenmiyor. Kodlanmış UI Testleri Chrome ve Firefox tarayıcılarda Visual Studio 2012 Update 4 veya sonraki sürümüyle kayıttan yürütülebilir. Daha fazla ayrıntı için [buraya](using-different-web-browsers-with-coded-ui-tests.md) gidin. |
 | Opera<br /><br /> Safari | Desteklenmez. |
-| Silverlight | Desteklenmez.<br /><br /> Visual Studo 2013 için ancak Visual Studio galerisinden [Silverlight için Microsoft Visual Studio 2013 kodlu UI Test eklentisini](https://go.microsoft.com/fwlink/?LinkId=691026) indirebilirsiniz. |
+| Silverlight | Desteklenmez.<br /><br /> Visual Studo 2013 için ancak Visual Studio galerisinden [Silverlight için Microsoft Visual Studio 2013 kodlu UI Test eklentisini](https://marketplace.visualstudio.com/items?itemName=PrachiBoraMSFT.MicrosoftVisualStudio2013CodedUITestPluginforSilve) indirebilirsiniz. |
 | Flash/Java | Desteklenmez. |
 | Windows Forms 2.0 ve ileri sürümü | Tam olarak desteklendi. **Note:**  NetFx denetimleri tam olarak desteklenir, ancak tüm üçüncü taraf denetimleri desteklenmez. |
 | WPF 3.5 ve ileri sürümü | Tam olarak desteklendi.<br /><br /> **Göz önünde** NetFx denetimleri tam olarak desteklenir, ancak tüm üçüncü taraf denetimleri desteklenmez. |

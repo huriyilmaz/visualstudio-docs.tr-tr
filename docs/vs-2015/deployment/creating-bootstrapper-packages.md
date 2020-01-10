@@ -21,12 +21,12 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f90344c156ea6c012c6ac086ffa40bf30e78a682
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: daf72a4466cd0f02eb6ef3a357276ed690fd26bf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300737"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845529"
 ---
 # <a name="creating-bootstrapper-packages"></a>Önyükleyici Paketleri Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -128,4 +128,4 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
  [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [Önkoşullar Iletişim kutusu](../ide/reference/prerequisites-dialog-box.md)   
  [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)   
- [Yüklemeyi başlatmak için Visual Studio 2005 önyükleyici kullanın](https://go.microsoft.com/fwlink/?LinkId=107537)
+ [Yüklemeyi başlatmak için Visual Studio 2005 önyükleyici kullanın](https://msdn.microsoft.com/magazine/cc163899.aspx)

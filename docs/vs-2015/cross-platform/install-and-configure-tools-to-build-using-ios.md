@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 695cbeaba5a108c61b5e81078a9651c0df9237f5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7290ba820c9b678e0b87bdbeaadf9c025162e8ae
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299816"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844471"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>iOS Kullanarak Derlemeye Yönelik Araçları Yükleme ve Yapılandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İOS kodu ile iOS C++ simülatörünü veya bir iOS cihazını düzenlemek, hatalarını ayıklamak ve dağıtmak için Visual, platformlar arası mobil geliştirme için kullanabilirsiniz, ancak lisanslama kısıtlamaları nedeniyle kodun bir Mac üzerinde oluşturulması ve uzaktan çalıştırılması gerekir. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)uzak aracısını ayarlamanız ve yapılandırmanız gerekir. Uzak Aracı, Visual Studio 'dan derleme isteklerini işler ve uygulamayı Mac 'e bağlı iOS cihazında veya Mac üzerindeki iOS simülatörü üzerinde çalıştırır.  
+İOS kodu ile iOS C++ simülatörünü veya bir iOS cihazını düzenlemek, hatalarını ayıklamak ve dağıtmak için Visual, platformlar arası mobil geliştirme için kullanabilirsiniz, ancak lisanslama kısıtlamaları nedeniyle kodun bir Mac üzerinde oluşturulması ve uzaktan çalıştırılması gerekir. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde [vcremote](https://www.npmjs.com/package/vcremote)uzak aracısını ayarlamanız ve yapılandırmanız gerekir. Uzak Aracı, Visual Studio 'dan derleme isteklerini işler ve uygulamayı Mac 'e bağlı iOS cihazında veya Mac üzerindeki iOS simülatörü üzerinde çalıştırır.  
   
 > [!NOTE]
 > Mac yerine bulutta barındırılan Mac Hizmetleri kullanma hakkında daha fazla bilgi için bkz. [bulutta IOS oluşturma ve benzetimi](https://taco.visualstudio.com/docs/build_ios_cloud/)yapma. Yönergeler, Apache Cordova için Visual Studio Araçları kullanarak oluşturma içindir. Platformlar arası mobil geliştirme için Visual C++ kullanarak oluşturma yönergelerini kullanmak için, vs-MDA-Remote için vcremote yerine koyun.  
@@ -78,7 +78,7 @@ ms.locfileid: "74299816"
      `sudo npm install -g npm@latest`  
   
 ## <a name="Install"></a>İOS için uzak aracıyı yükler  
- Platformlar arası mobil geliştirme C++ için Visual yüklediğinizde, Visual Studio [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)Ile iletişim kurabilir, Mac 'inizde çalışan uzak bir aracı, dosyaları aktarmak, iOS uygulamanızı derlemek ve çalıştırmak ve hata ayıklama komutları göndermek için kullanılabilir.  
+ Platformlar arası mobil geliştirme C++ için Visual yüklediğinizde, Visual Studio [vcremote](https://www.npmjs.com/package/vcremote)Ile iletişim kurabilir, Mac 'inizde çalışan uzak bir aracı, dosyaları aktarmak, iOS uygulamanızı derlemek ve çalıştırmak ve hata ayıklama komutları göndermek için kullanılabilir.  
   
  Uzak aracıyı yüklemeden önce, [platformlar arası mobil geliştirme C++ için](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#InstallTheTools) [önkoşulları](#Prerequisites) ve yüklü görseli karşıladığınızdan emin olun.  
   

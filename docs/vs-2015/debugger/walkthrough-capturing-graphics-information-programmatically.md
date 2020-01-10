@@ -9,12 +9,12 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 54097420fd212ec9057f4a968e2c6d5de199e56e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9de8e2a2ee69911f5505937494d2912c724326e9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296891"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847816"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek Yol: Grafik Bilgilerini Programla Yakalama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -145,7 +145,7 @@ Direct3D uygulamasındaki grafik bilgilerini programlı bir şekilde yakalamak i
 ### <a name="preparing-your-computer-to-use-programmatic-capture"></a>Bilgisayarınızı Programlı yakalamayı kullanacak şekilde hazırlama  
  Programlı yakalama API 'SI, Yakalama işlevselliği sağlamak üzere [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için uzak araçları kullanır. Yerel bilgisayarınızda Programlı yakalama kullanırken Uygulamanın çalıştırılacağı bilgisayarın uzak araçların yüklü olması gerekir. Yerel bir bilgisayarda Programlı yakalama gerçekleştirirken [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çalışıyor olması gerekmez.  
   
- Bir bilgisayarda çalışan bir uygulamada uzaktan yakalama API 'Lerini kullanmak için, önce bu bilgisayara [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için uzak araçları yüklemeniz gerekir. Uzak araçların farklı sürümleri farklı donanım platformlarını destekler. Uzak araçların nasıl yükleneceği hakkında bilgi için Microsoft İndirmeleri web sitesindeki [Uzak Araçlar indirme sayfasına](https://go.microsoft.com/fwlink/p/?LinkId=246691) bakın.  
+ Bir bilgisayarda çalışan bir uygulamada uzaktan yakalama API 'Lerini kullanmak için, önce bu bilgisayara [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için uzak araçları yüklemeniz gerekir. Uzak araçların farklı sürümleri farklı donanım platformlarını destekler. Uzak araçların nasıl yükleneceği hakkında bilgi için Microsoft İndirmeleri web sitesindeki [Uzak Araçlar indirme sayfasına](https://visualstudio.microsoft.com/downloads#remote-tools) bakın.  
   
  Alternatif olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 32 bitlik uygulamalar için uzaktan yakalama gerçekleştirmek üzere gerekli bileşenleri de yüklüyor.  
   

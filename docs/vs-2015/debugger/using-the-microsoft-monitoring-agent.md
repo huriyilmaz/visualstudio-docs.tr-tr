@@ -9,12 +9,12 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1d92fd478e4106afd9b61a15146a68f279a358fb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a4297cfee592977cd09ba9c0abe36e12f7986181
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297112"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845622"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft İzleme Aracısı’nı kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 ### <a name="SetUpStandaloneMMA"></a>Tek başına aracıyı ayarlama  
   
-1. Şunları yaptığınızdan emin olun:  
+1. Şunlardan emin olun:  
   
     - Web sunucunuz [Internet Information Services (IIS) desteklenen sürümlerini](https://technet.microsoft.com/library/dn465154.aspx)çalıştırıyor.  
   
@@ -53,7 +53,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     - Microsoft İzleme Aracısı'nın önceki sürümlerini kaldırdınız.  
   
-2. 32-bit sürümü **MMASetup-i386. exe** veya 64 bit sürümü **MMASetup-AMD64. exe**olan [ücretsiz Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkId=320384), Microsoft İndirme Merkezi 'nden Web sunucunuza indirin.  
+2. 32-bit sürümü **MMASetup-i386. exe** veya 64 bit sürümü **MMASetup-AMD64. exe**olan [ücretsiz Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkID=309771), Microsoft İndirme Merkezi 'nden Web sunucunuza indirin.  
   
 3. İndirdiğiniz yürütebilen dosyayı çalıştırarak yükleme sihirbazını başlatın.  
   
@@ -106,18 +106,18 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
   5. **Seçilecek nesne adlarını girin** kutusunda, Web uygulaması veya SharePoint uygulaması için uygulama havuzunu ekleyin.  
   
-  6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı**seçin.  
+  6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam**’ı seçin.  
   
   7. Uygulama havuzunun **okuma & yürütme** izinlerine sahip olduğundan emin olun.  
   
 ## <a name="MonitorEvents"></a>2. Adım: uygulamanızı izlemeye başlama  
- Uygulamanızı izlemeye başlamak için Windows PowerShell [Start-WebApplicationMonitoring](https://go.microsoft.com/fwlink/?LinkID=313686) komutunu kullanın. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).  
+ Uygulamanızı izlemeye başlamak için Windows PowerShell [Start-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472749(v=sc.20).aspx) komutunu kullanın. System Center 2012 kullanıyorsanız bkz. [Microsoft Monitoring Agent Web uygulamalarını izleme](https://technet.microsoft.com/library/dn465157.aspx).  
   
 1. Web sunucunuzda, yönetici olarak bir **Windows PowerShell** veya **Windows PowerShell ISE** komut istemi penceresi açın.  
   
      ![Windows PowerShell 'i yönetici olarak açın](../debugger/media/ffr-powershellrunadmin.png "FFR_PowerShellRunAdmin")  
   
-2. Uygulamanızı izlemeye başlamak için [Start-WebApplicationMonitoring](https://go.microsoft.com/fwlink/?LinkID=313686) komutunu çalıştırın. Bu, web sunucunuzdaki tüm web uygulamalarını yeniden başlatır.  
+2. Uygulamanızı izlemeye başlamak için [Start-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472749(v=sc.20).aspx) komutunu çalıştırın. Bu, web sunucunuzdaki tüm web uygulamalarını yeniden başlatır.  
   
      Kısa sözdizimi şu şekildedir:  
   
@@ -137,15 +137,15 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     |||  
     |-|-|  
-    |*"\<appName >"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *"\<ııswebsitename >\\< IISWebAppName\>"*<br /><br /> veya<br /><br /> **"IIS: \ siteler** *\\< ııswebsitename\>\\< iiswebappname\>"*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örneğin:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr-iismanager.png "FFR_IISManager ")<br /><br /> [Get-website](https://technet.microsoft.com/library/ee807832.aspx) ve [Get WebApplication](https://technet.microsoft.com/library/ee790554.aspx) komutlarını da kullanabilirsiniz.|  
+    |*"\<appName >"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *"\<ııswebsitename >\\< IISWebAppName\>"*<br /><br /> veya<br /><br /> **"IIS: \ siteler** *\\< ııswebsitename\>\\< iiswebappname\>"*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örneğin:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr-iismanager.png "FFR_IISManager")<br /><br /> [Get-website](https://technet.microsoft.com/library/ee807832.aspx) ve [Get WebApplication](https://technet.microsoft.com/library/ee790554.aspx) komutlarını da kullanabilirsiniz.|  
     |*\<monitoringMode >*|İzleme modunu belirtin:<br /><br /> <ul><li>**İzleme**: özel durum olayları ve performans olayları hakkında en az ayrıntıları kaydedin. Bu mod varsayılan toplama planını kullanır.</li><li>**Trace**: belirtilen koleksiyon planını kullanarak işlev düzeyi ayrıntılarını kaydedin veya SharePoint 2010 ve SharePoint 2013 uygulamalarını izleyin. Bu mod, uygulamanızın daha yavaş çalışmasına neden olabilir.<br /><br /> <ul><li>[S: uygulama havuzu için izinleri ayarla Nasıl yaparım??](#FullPermissionsITLog)</li><li>[S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)</li></ul><br />     Bu örnek, bir SharePoint sitesi üzerindeki SharePoint uygulaması için olayları kaydeder:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" Trace "C:\Program Files\Microsoft Monitoring Agent\Agent\IntelliTraceCollector\ collection_plan. ASP. NET. default. xml" "C:\IntelliTraceLogs"**</li><li>**Özel**: belirtilen özel toplama planını kullanarak özel ayrıntıları kaydedin. İzleme başladıktan sonra toplama planını değiştirirseniz izlemeyi yeniden başlatmanız gerekir.</li></ul>|  
     |*"\<outputPath >"*|IntelliTrace günlüklerinin depolanacağı tam dizin yolunu belirtin. Bu dizini izlemeye başlamadan önce oluşturduğunuzdan emin olun.|  
     |*\<UInt32 >*|IntelliTrace günlüğünün çıkabileceği en büyük boyutu belirtin. IntelliTrace günlüğü için varsayılan en büyük boyut 250 MB'tır.<br /><br /> Günlük bu sınıra ulaştığında, aracı yeni girişlere yer açmak için en eski girişlerin üzerine yazar. Bu sınırı değiştirmek için **-maximumfilesizeınmegabayt** seçeneğini kullanın veya koleksiyon planındaki `MaximumLogFileSize` özniteliğini düzenleyin.|  
-    |*"\<collectionPlanPathAndFileName >"*|Toplama planının tam yolunu veya göreli yolunu ve dosya adını belirtin. Bu plan, aracı için ayarları yapılandıran bir .xml dosyasıdır.<br /><br /> Bu planlar aracıyla birlikte gelir ve web uygulamaları ve SharePoint uygulamalarıyla çalışır:<br /><br /> -   **collection_plan. asp. net. default. xml**<br />     Yalnızca özel durumlar, performans olayları, veritabanı çağrıları ve Web sunucusu istekleri gibi olayları toplar.<br />-   **collection_plan. asp. net. Trace. xml**<br />     Varsayılan toplama planındaki verilere ek olarak işlev düzeyi çağrıları toplar. Bu plan ayrıntılı analiz için iyidir ancak uygulamanızı yavaşlatabilir.<br /><br /> Bu planların yerelleştirilmiş sürümlerini aracının alt klasörlerinde bulabilirsiniz. Ayrıca, uygulamanızı yavaşlatmayı önlemek için [Bu planları özelleştirebilir veya kendi planlarınızı oluşturabilirsiniz](https://go.microsoft.com/fwlink/?LinkId=227871) . Özel planları aracıyla aynı güvenli konuma yerleştirin.<br /><br /> [S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)|  
+    |*"\<collectionPlanPathAndFileName >"*|Toplama planının tam yolunu veya göreli yolunu ve dosya adını belirtin. Bu plan, aracı için ayarları yapılandıran bir .xml dosyasıdır.<br /><br /> Bu planlar aracıyla birlikte gelir ve web uygulamaları ve SharePoint uygulamalarıyla çalışır:<br /><br /> -   **collection_plan. asp. net. default. xml**<br />     Yalnızca özel durumlar, performans olayları, veritabanı çağrıları ve Web sunucusu istekleri gibi olayları toplar.<br />-   **collection_plan. asp. net. Trace. xml**<br />     Varsayılan toplama planındaki verilere ek olarak işlev düzeyi çağrıları toplar. Bu plan ayrıntılı analiz için iyidir ancak uygulamanızı yavaşlatabilir.<br /><br /> Bu planların yerelleştirilmiş sürümlerini aracının alt klasörlerinde bulabilirsiniz. Ayrıca, uygulamanızı yavaşlatmayı önlemek için [Bu planları özelleştirebilir veya kendi planlarınızı oluşturabilirsiniz](https://blogs.msdn.com/b/visualstudioalm/archive/2011/09/15/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector.aspx) . Özel planları aracıyla aynı güvenli konuma yerleştirin.<br /><br /> [S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)|  
   
      Tam sözdizimi ve diğer örnekler hakkında daha fazla bilgi için **Get-Help Start-WebApplicationMonitoring – Detailed** komutunu veya **Get-Help Start-WebApplicationMonitoring – examples** komutunu çalıştırın.  
   
-3. Tüm izlenen Web uygulamalarının durumunu denetlemek için [Get-WebApplicationMonitoringStatus](https://go.microsoft.com/fwlink/?LinkID=313685) komutunu çalıştırın.  
+3. Tüm izlenen Web uygulamalarının durumunu denetlemek için [Get-WebApplicationMonitoringStatus](https://technet.microsoft.com/library/dn472751(v=sc.20).aspx) komutunu çalıştırın.  
   
 ### <a name="q--a"></a>Soru - Yanıt  
   
@@ -238,11 +238,11 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 1. Web sunucunuzda, yönetici olarak bir Windows PowerShell komut istemi penceresi açın.  
   
-2. IntelliTrace günlüğünün bir anlık görüntüsünü kaydetmek için [Checkpoint-WebApplicationMonitoring](https://go.microsoft.com/fwlink/?LinkID=313684) komutunu çalıştırın:  
+2. IntelliTrace günlüğünün bir anlık görüntüsünü kaydetmek için [Checkpoint-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472750(v=sc.20).aspx) komutunu çalıştırın:  
   
     **Checkpoint-WebApplicationMonitoring** *"\<ııswebsitename >\\< iiswebappname\>"*  
   
-    \- veya-  
+    \- veya -  
   
     **Checkpoint-WebApplicationMonitoring "IIS: \ sites** *\\< ııswebsitename\>\\< iiswebappname\>"*  
   
@@ -268,11 +268,11 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
 1. Web sunucunuzda, yönetici olarak bir Windows PowerShell komut istemi penceresi açın.  
   
-2. IntelliTrace günlüğünü oluşturmak ve belirli bir Web uygulamasını izlemeyi durdurmak için [Stop-WebApplicationMonitoring](https://go.microsoft.com/fwlink/?LinkID=313687) komutunu çalıştırın:  
+2. IntelliTrace günlüğünü oluşturmak ve belirli bir Web uygulamasını izlemeyi durdurmak için [Stop-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472753(v=sc.20).aspx) komutunu çalıştırın:  
   
     **Stop-WebApplicationMonitoring** *"\<ııswebsitename >\\< iiswebappname\>"*  
   
-    \- veya-  
+    \- veya -  
   
     **Stop-WebApplicationMonitoring "IIS: \ sites** *\\< ııswebsitename\>\\< iiswebappname\>"*  
   
@@ -284,7 +284,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
   
     **PS C:\\> Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**  
   
-    \- veya-  
+    \- veya -  
   
     **PS C:\\> Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**  
   
@@ -301,7 +301,7 @@ Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kulla
 #### <a name="blogs"></a>Bloglar  
  [Microsoft Monitoring Agent tanıtımı](https://devblogs.microsoft.com/devops/introducing-microsoft-monitoring-agent-2/)  
   
- [Üretim sunucularında IntelliTrace toplamasını iyileştirme](https://go.microsoft.com/fwlink/?LinkId=255233)  
+ [Üretim sunucularında IntelliTrace toplamasını iyileştirme](https://blogs.msdn.com/b/visualstudioalm/archive/2012/05/18/optimizing-intellitrace-collection-on-production-server.aspx)  
   
 #### <a name="forums"></a>Forumlar  
- [Visual Studio tanılama](https://go.microsoft.com/fwlink/?LinkId=262263)
+ [Visual Studio tanılama](https://social.msdn.microsoft.com/Forums/vsdebug)

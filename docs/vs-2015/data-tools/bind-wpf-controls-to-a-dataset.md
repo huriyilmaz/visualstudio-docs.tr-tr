@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f0ad4ea108cb0ec3b874c7f360be2e1f0e25ef45
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 937e28e923c26a72940b0181da16cf34199bb9aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299422"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852150"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Bir veri kümesine WPF denetimleri bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,12 +42,12 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
+- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://codeplex.com/SqlServerSamples)indirebilirsiniz.
 
   Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
@@ -57,7 +57,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 - WPF veri bağlama. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211).
 
-## <a name="create-the-project"></a>Proje oluşturma
+## <a name="create-the-project"></a>Projeyi oluşturma
  Yeni bir WPF projesi oluşturun. Projede ürün kayıtları görüntülenir.
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
@@ -79,7 +79,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 #### <a name="to-create-a-dataset"></a>Bir veri kümesi oluşturmak için
 
-1. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+1. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
 
      **Veri kaynakları** penceresi açılır.
 
@@ -228,7 +228,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
     > [!NOTE]
     > Bu örnekte, değişiklikleri kaydetmek için `TableAdapter` `Save` yöntemi kullanılmaktadır. Yalnızca bir veri tablosu değiştiğinden bu izlenecek yol için uygundur. Birden çok veri tablosuna yaptığınız değişiklikleri kaydetmeniz gerekiyorsa alternatif olarak, Visual Studio 'nun veri kümeniz ile oluşturduğu `TableAdapterManager` `UpdateAll` yöntemini kullanabilirsiniz. Daha fazla bilgi için bkz. [TableAdapterManager Overview](https://msdn.microsoft.com/library/33076d42-6b41-491a-ac11-6c6339aea650).
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Uygulamayı derleyin ve çalıştırın. Ürün kayıtlarını görüntüleyebildiğinizi ve güncelleştirebildiğinizi doğrulayın.
 
 #### <a name="to-test-the-application"></a>Uygulamayı test etmek için

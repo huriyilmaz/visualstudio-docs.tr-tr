@@ -29,12 +29,12 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b25d23b7c65742ffddadbe178d7550dc1794414a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4395dbc212514a71f8c4119d8f0778280dee81aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296324"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847626"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>Çözümlerinizdeki bağımlılıkları eşleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
  **Bazı videolar aşağıda verilmiştir**:
 
-- [Görselleştirme aracılığıyla kod bağımlılıklarınızı anlayın](https://go.microsoft.com/fwlink/?LinkID=252065)
+- [Görselleştirme aracılığıyla kod bağımlılıklarınızı anlayın](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understand-your-code-dependencies-through-visualization)
 
-- [Değişikliğin etkisini görselleştirin](https://go.microsoft.com/fwlink/?LinkID=252068)
+- [Değişikliğin etkisini görselleştirin](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Visualize-the-impact-of-a-change)
 
-- [Kod eşlemeleriyle karmaşık kodu anlama](https://go.microsoft.com/fwlink/?LinkID=259869)
+- [Kod eşlemeleriyle karmaşık kodu anlama](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
 
 ## <a name="GetStarted"></a>Kod eşlemeleriyle çalışmaya başlama
  **Kod eşlemelerini kullanmak için aşağıdakilerden birini yapmanız gerekir**:
@@ -105,7 +105,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 1. **Mimari** menüsünü açın ve **Yeni kod Haritası**' nı seçin.
 
-     \- veya-
+     \- veya -
 
 2. **Dosya** menüsünü açın ve **Yeni** ' yi seçip **Dosya**' yı seçin.
 
@@ -307,7 +307,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
   Bu sorunlar, C ve C++ Code için kod haritaları oluşturduğunuzda oluşabilir:
 
-|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
+|**Sorun**|**Olası nedeni**|**Çözümleme**|
 |---------------|------------------------|--------------------|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
 |**mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yanıt vermemeye başladı.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|
@@ -329,7 +329,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 - Kod Haritası araç çubuğundaki üst öğeleri **dahil et** düğmesine sahip otomatik ekleme özelliğini devre dışı bırakın.
 
-- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
   ![Derleme ve ekleme üst öğeleri düğmelerini atla](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")
 
@@ -373,7 +373,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 2. Dosyayı kaydetmek istediğiniz yere gidin.
 
-3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**' i seçin.
+3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**’i seçin.
 
 ## <a name="what-else-can-i-do"></a>Başka ne yapabilirim?
 
