@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a71f507aa5ce524e01b2120594ace634056d0850
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a43f11df65286e25d0ea19990fa56620695e69df
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587478"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886449"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -162,6 +162,63 @@ Build succeeded.
 
 Oluşturulan XML çıktısı aşağıdaki biçimi alır:
 
+::: moniker range=">=vs-2019"
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="ConsoleApp20.csproj">
+      <Assembly Name="ConsoleApp20, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="100" />
+          <Metric Name="CyclomaticComplexity" Value="1" />
+          <Metric Name="ClassCoupling" Value="1" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="SourceLines" Value="11" />
+          <Metric Name="ExecutableLines" Value="1" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="ConsoleApp20">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="1" />
+              <Metric Name="ClassCoupling" Value="1" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="11" />
+              <Metric Name="ExecutableLines" Value="1" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Program">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="7" />
+                  <Metric Name="ExecutableLines" Value="1" />
+                </Metrics>
+                <Members>
+                  <Method Name="void Program.Main(string[] args)" File="C:\source\repos\ConsoleApp20\ConsoleApp20\Program.cs" Line="7">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>
+```
+::: moniker-end
+::: moniker range="vs-2017"
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <CodeMetricsReport Version="1.0">
@@ -212,6 +269,7 @@ Oluşturulan XML çıktısı aşağıdaki biçimi alır:
   </Targets>
 </CodeMetricsReport>
 ```
+::: moniker-end
 
 ### <a name="metricsexe"></a>Ölçümler. exe
 
@@ -253,13 +311,24 @@ Daha fazla bilgi için bkz. [eski modda kod ölçümleri oluşturmayı etkinleş
 
 ### <a name="previous-versions"></a>Önceki sürümler
 
+::: moniker range=">=vs-2019"
+Visual Studio 2015, *ölçüm. exe*olarak da adlandırılan bir komut satırı kod ölçümleri aracına dahil edilmiştir. Aracın bu önceki sürümü bir ikili analiz, yani derleme tabanlı bir analiz işlemi gerçekleştirmiş. *Ölçümler. exe* aracının daha yeni sürümü yerine kaynak kodu analiz eder. Yeni *ölçümler. exe* aracı kaynak kodu tabanlı olduğundan, komut satırı kod ölçümleri sonuçları, VISUAL Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümlerinde farklı olabilir. Visual Studio 2019 ' den itibaren, Visual Studio IDE, kaynak kodunu komut satırı aracı gibi analiz eder ve sonuçlar aynı olmalıdır.
+
+::: moniker-end
+::: moniker range="vs-2017"
 Visual Studio 2015, *ölçüm. exe*olarak da adlandırılan bir komut satırı kod ölçümleri aracına dahil edilmiştir. Aracın bu önceki sürümü bir ikili analiz, yani derleme tabanlı bir analiz işlemi gerçekleştirmiş. Yeni *ölçümler. exe* aracı bunun yerine kaynak kodu analiz eder. Yeni *ölçümler. exe* aracı kaynak kodu tabanlı olduğundan, komut satırı kod ölçümleri sonuçları, VISUAL Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümleriyle farklıdır.
+::: moniker-end
 
 Yeni komut satırı kod ölçümleri Aracı, çözüm ve proje yüklenebilse de, kaynak kodu hatalarının varlığına bile ölçümleri hesaplar.
 
 #### <a name="metric-value-differences"></a>Ölçüm değeri farkları
 
+::: moniker range=">=vs-2019"
+Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. Metiği ('nın 2.9.5 sürümüyle) ' den başlayarak, `SourceLines` ve `ExecutableLines` önceki `LinesOfCode` ölçümünü değiştirin. Yeni ölçümlerin açıklamaları için bkz. [kod ölçüm değerleri](../code-quality/code-metrics-values.md). `LinesOfCode` ölçümü eski modda kullanılabilir.
+::: moniker-end
+::: moniker range="vs-2017"
 `LinesOfCode` ölçümü yeni komut satırı kod ölçümleri aracında daha doğru ve güvenilir. Bu, herhangi bir codegen farkından bağımsızdır ve araç takımı veya çalışma zamanı değiştiğinde değişmez. Yeni araç, boş satırlar ve açıklamalar dahil olmak üzere gerçek kod satırlarını sayar.
+::: moniker-end
 
 `CyclomaticComplexity` ve `MaintainabilityIndex` gibi diğer ölçümler, *ölçüm. exe*' nin önceki sürümleriyle aynı formülleri kullanır, ancak yeni araç ara DIL (IL) yönergeleri yerine `IOperations` (mantıksal kaynak yönergeleri) sayısını sayar. Sayılar, Visual Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümleri tarafından oluşturulanlar için biraz farklı olacaktır.
 

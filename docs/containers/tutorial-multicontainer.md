@@ -3,15 +3,15 @@ title: Docker Compose & kullanarak çok Kapsayıcılı öğretici ASP.NET Core
 author: ghogen
 description: Docker Compose ile birden çok kapsayıcıyı kullanmayı öğrenin
 ms.author: ghogen
-ms.date: 02/21/2019
+ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 298ac91a7e7cf89f7723a3fd8bb3e8056da798ba
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: ebc0d8efb0d78dda45bba06dba8a497287b3597d
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75399749"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886469"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
@@ -114,7 +114,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi*olarak çağırın. Proje türü 
         }
       ```
 
-    .NET Core 3,1 ile, zaten orada olan dalgalı tahmin API 'sini kullanabilmeniz için buna ihtiyacınız yoktur. Ancak, bu kod Web API 'sini çağırmak için HTTP değil HTTPS 'yi kullandığından, *Startup.cs*içindeki `Configure` yönteminde `UseHttpsRedirections` çağrısını açıklamanız gerekir.
+    .NET Core 3,1 ile, zaten orada olan dalgalı tahmin API 'sini kullanabilmeniz için buna ihtiyacınız yoktur. Ancak, bu kod Web API 'sini çağırmak için HTTPS değil HTTP 'yi kullandığından, *Startup.cs*içindeki `Configure` yönteminde <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> çağrısını açıklamanız gerekir.
 
     ```csharp
                 //app.UseHttpsRedirection();

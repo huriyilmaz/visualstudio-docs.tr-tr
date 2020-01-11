@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6caf63b2d1fb6b9206fe43da5c7a63818fd299f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ece5c08ca3aa4a9f5e5329dbf6d5fd6c9087d085
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587712"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886411"
 ---
 # <a name="code-metrics-values"></a>Kod ölçüm değerleri
 
@@ -36,10 +36,19 @@ Aşağıdaki liste, kodu Visual Studio hesaplar ölçümleri sonuçları göster
 
 - **Sınıf bağlantısından** -bağlantı parametreleri, yerel değişkenler, dönüş türleri, yöntem çağrılarını, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamalarını, dış türlerinde tanımlanan alanların benzersiz sınıflarına ölçer ve özniteliği düzenleme. İyi yazılım tasarımı, türleri ve yöntemleri uyumun yüksek olması sahip ve eşlenmesiyle düşük olduğunu belirler. Yüksek bağlantısından yeniden kullanabilir ve diğer türleri, birçok bağımlılıkları nedeniyle korumak zor bir tasarımın belirtisidir. Daha fazla bilgi için bkz. [ders](https://blogs.msdn.microsoft.com/zainnab/2011/05/25/code-metrics-class-coupling/) Web günlüğü gönderisi sınıfı.
 
+::: moniker range=">=vs-2019"
+
+- **Kaynak kodu satırları** -boş satırlar da dahil olmak üzere kaynak dosyanızda bulunan kaynak kodu satırlarının tam sayısını gösterir. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. Metiği ('nın 2.9.5 sürümüyle) sürümünden itibaren kullanılabilir.
+
+- **Yürütülebilir kod satırları** -yürütülebilir kod satırlarının veya işlemlerin yaklaşık sayısını gösterir. Bu, çalıştırılabilir koddaki işlem sayısı sayısıdır. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. Metiği ('nın 2.9.5 sürümüyle) sürümünden itibaren kullanılabilir. Bu değer genellikle, eski modda kullanılan MSIL yönergesi tabanlı ölçüm olan önceki ölçüm ve **kod satırları**için yakın bir eşleşmedir.
+::: moniker-end
+::: moniker range="vs-2017"
+
 - **Kod satırlarını** -yaklaşık kod içinde satır sayısını belirtir. Sayısı IL kodunu alır ve bu nedenle satır kaynak kodu dosyasının tam sayı değil. Yüksek bir sayı, bir tür veya yöntemin çok fazla iş gerçekleştirmeye çalıştığını ve bölünmesi gerektiğini gösterebilir. Ayrıca, tür veya yöntem korumak zor olabilir gösterebilir.
 
    > [!NOTE]
    > [Komut satırı sürüm](../code-quality/how-to-generate-code-metrics-data.md#command-line-code-metrics) IL yerine kaynak kodunu analiz için kodunu gerçek kod satırlarını ölçümleri araç sayar.
+::: moniker-end
 
 ## <a name="anonymous-methods"></a>Anonim yöntemler
 

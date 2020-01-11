@@ -9,16 +9,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f273294d9da0c0cf71f96ae3bde8e5e0457259c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0614552bbbadd9a472e0780db6f277d423446966
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592975"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886456"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Visual Studio için Blend verileri görüntüleme
 
 Sayfalarınızın yerleşimini özelleştirirken, tasarımcılarınızdan örnek verileri görüntüleyebilirsiniz. Sıfırdan örnek veri oluşturabilir veya var olan bir sınıfı kullanarak oluşturabilirsiniz. Ayrıca, çalıştırdığınızda uygulamanızda görüntülenen *canlı verilere* de bağlanabilirsiniz.
+
+> [!NOTE]
+> Blend 'deki **veri** paneli yalnızca .NET Framework hedeflenen projeler için desteklenir. .NET Core ' u hedefleyen UWP projeleri veya projeleri için desteklenmez. 
 
 ## <a name="generate-sample-data"></a>Örnek veri üretme
 
