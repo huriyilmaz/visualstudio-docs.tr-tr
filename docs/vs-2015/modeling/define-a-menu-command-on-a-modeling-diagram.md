@@ -11,17 +11,17 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 23ba1a6900559d7ee13639bb1da696127e47e536
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 5dac0a77b47f604ae5a10f4c8bcfb9d54b51f26c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299263"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850470"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Modelleme diyagramında menü komutu tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri tanımlayabilirsiniz. Menü komutunun, Diyagram üzerindeki herhangi bir öğenin kısayol menüsünde görüntülenip görüntülenmeyeceğini ve etkin olduğunu denetleyebilir ve Kullanıcı menü öğesini seçtiğinde çalışan bir kod yazabilirsiniz. Bu uzantıları bir Visual Studio Tümleştirme Uzantısı 'na ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
+Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri tanımlayabilirsiniz. Menü komutunun, Diyagram üzerindeki herhangi bir öğenin kısayol menüsünde görüntülenip görüntülenmeyeceğini ve etkin olduğunu denetleyebilir ve Kullanıcı menü öğesini seçtiğinde çalışan bir kod yazabilirsiniz. Bu uzantıları bir Visual Studio Tümleştirme Uzantısı 'na ([VSIX](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
  [Gereksinimlere](../modeling/extend-uml-models-and-diagrams.md#Requirements)bakın.
@@ -363,4 +363,4 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleme uzantısı tanımlama ve](../modeling/define-and-install-a-modeling-extension.md) oluşturma [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [modelleme diyagramı üzerinde bir hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Özel Modelleme Araç kutusu öğesi](../modeling/define-a-custom-modeling-toolbox-item.md) tanımlama UML [modelleri için doğrulama kısıtlamaları](../modeling/define-validation-constraints-for-uml-models.md) tanımlama: UML API 'Si programlama ' i UML [API 'si ile](../modeling/programming-with-the-uml-api.md) kullanarak UML [şeması](https://go.microsoft.com/fwlink/?LinkID=213809) [düzenleme](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)
+ [Modelleme uzantısı tanımlama ve](../modeling/define-and-install-a-modeling-extension.md) oluşturma [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [modelleme diyagramı üzerinde bir hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Özel Modelleme Araç kutusu öğesi](../modeling/define-a-custom-modeling-toolbox-item.md) tanımlama UML [modelleri için doğrulama kısıtlamaları](../modeling/define-validation-constraints-for-uml-models.md) tanımlama: UML API 'Si programlama ' i UML [API 'si ile](../modeling/programming-with-the-uml-api.md) kullanarak UML [şeması](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [düzenleme](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)

@@ -17,12 +17,12 @@ caps.latest.revision: 56
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c170827825d772f4d97cd22f0b5754232e8d2257
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4f4fd6eed634da3aea956cddca8d2e1ff6220a94
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297288"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850195"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>UML Sınıf Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Bu konu UML sınıf diyagramları hakkındadır. Program kodunu görselleştirmek için oluşturabileceğiniz ve kullanabileceğiniz başka tür bir sınıf diyagramı vardır. Bkz. [sınıfları ve türleri tasarlama ve görüntüleme](https://go.microsoft.com/fwlink/?LinkId=142231).
+> Bu konu UML sınıf diyagramları hakkındadır. Program kodunu görselleştirmek için oluşturabileceğiniz ve kullanabileceğiniz başka tür bir sınıf diyagramı vardır. Bkz. [sınıfları ve türleri tasarlama ve görüntüleme](https://msdn.microsoft.com/library/ab7aty24.aspx).
 
 ## <a name="Using"></a>UML sınıf diyagramlarını kullanma
  Bir UML sınıf diyagramını çeşitli amaçlarla kullanabilirsiniz:
@@ -256,7 +256,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
 visibility attribute-name : Type
 ```
 
- \- veya-
+ \- veya -
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -367,7 +367,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - Özel bir tür ve genel bir tür arasındaki *Genelleştirme* ilişkisi
 
-   \- veya-
+   \- veya -
 
 - Bir sınıf ve uyguladığı bir arabirim arasındaki *gerçekleştirme* ilişkisi.
 
@@ -422,7 +422,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     **Şablon parametresi koleksiyon Düzenleyicisi** iletişim kutusu görüntülenir.
 
-4. **Ekle**' yi seçin.
+4. Seçin **ekleme**.
 
 5. Şablon türü için Name özelliğini bir parametre adı olarak ayarlayın, örneğin, `Key`.
 

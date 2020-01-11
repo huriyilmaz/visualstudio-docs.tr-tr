@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a3d1aab68e3dc9f33e0b3e9f9a5665d59f6f2ddc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3589f409efe2a104391eb62f939ef76d140e5224
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299404"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850136"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Bir WCF veri hizmetine WPF denetimleri bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,16 +44,16 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
+- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://codeplex.com/SqlServerSamples)indirebilirsiniz.
 
   Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
-- WCF Veri Hizmetleri. Daha fazla bilgi için bkz. [genel bakış](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb).
+- WCF Veri Hizmetleri. Daha fazla bilgi için bkz. [Genel Bakış](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb).
 
 - [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]veri modelleri.
 
@@ -109,7 +109,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 8. **Son**'a tıklayın.
 
-## <a name="create-the-service"></a>Hizmeti oluşturun
+## <a name="create-the-service"></a>Hizmeti oluşturma
  Varlık Veri Modeli verileri bir WPF uygulamasına göstermek için bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] oluşturun.
 
 #### <a name="to-create-the-service"></a>Hizmeti oluşturmak için
@@ -151,7 +151,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
      Visual Studio `AdventureWorksSalesEditor` projesini çözüme ekler.
 
-5. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+5. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
 
      **Veri kaynakları** penceresi açılır.
 

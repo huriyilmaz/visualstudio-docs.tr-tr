@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
 description: Yöneticilerin büyük ekipler ve dış yükleniciler için abonelikleri yönetme sorumluluğu hakkında bilgi edinin.
-ms.openlocfilehash: 975db18e207f52db8e9d37aa190f9085d4069163
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 379bb6b868d40a332d563a33f3a30a575aa235b7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491699"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850044"
 ---
 # <a name="large-teams-and-external-contractors"></a>Büyük takımlar ve dış yükleniciler
 Visual Studio abonelikleri yöneticileri, Visual Studio lisanslı yazılımlarla etkileşim kuran her bir kullanıcının kendi Visual Studio aboneliğiyle uygun şekilde lisanslanmasını sağlamaktan sorumludur.
@@ -29,7 +29,7 @@ Her kuruluş farklılık gösterebilir, ancak geliştirmede yer alan ekiplerin t
 Dış yükleniciler, lisansları Visual Studio lisanslı ortamınızdan devreye sokma getirebilir. Microsoft Sertifikalı Iş ortakları, iç kullanımları için birkaç ücretsiz Visual Studio aboneliği alabilir. Ancak, bu abonelikler müşteri için özel yazılım geliştirme gibi gelir üreten etkinlikleri kapsamaz. İş ortaklarından, sağladıkları lisansları ve temin etmeniz gerekenleri açıklayan sertifikalı bir mektup göndermesini isteyin.
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio lisanslama teknik incelemesi](https://aka.ms/vslicensing)
+- [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

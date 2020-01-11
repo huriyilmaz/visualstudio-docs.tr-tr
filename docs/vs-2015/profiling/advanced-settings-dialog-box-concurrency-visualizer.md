@@ -11,19 +11,19 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8e1dbe50f3161ca80b4eabe63cbf9264210e9658
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 128327b956734f7d28e7ff88f3eb6c297544587c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300321"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849816"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Gelişmiş Ayarlar İletişim Kutusu (Eşzamanlılık Görselleştiricisi)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını kontrol edebilirsiniz.  İletişim kutusunda semboller, Yalnızca kendi kodum, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler bulunur.  
   
-## <a name="symbols"></a>Simgeleri  
+## <a name="symbols"></a>Simgeler  
  Eşzamanlılık görselleştiricisi, Visual Studio hata ayıklayıcı ile aynı sembol ayarlarını kullanır. Eşzamanlılık görselleştiricisi, performans verileriyle ilişkili çağrı yığınlarını çözümlemek için ayarları kullanır.  İzleme işlerken eşzamanlılık görselleştiricisi, Ayarlar sayfasında belirtilen sembol sunucularına erişir.  Bu verilere bir ağ üzerinden erişildiğinde izleme işlemi yavaşlar.  Sembolleri çözümlemek için gereken süre miktarını azaltmak için sembolleri yerel olarak önbelleğe alabilirsiniz. Semboller indirildiyse, Visual Studio bu dosyaları yerel önbellekten yükler.  
   
 ## <a name="just-my-code"></a>Yalnızca Kendi Kodum  
@@ -32,9 +32,9 @@ Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu
  . Exe ve. dll dosyalarının yolları izleme toplandığında izleme dosyasında depolanır.  Bu ayarın değiştirilmesi, daha önce toplanan izlemeleri etkilemez.  
   
 ## <a name="buffering"></a>Ara  
- Eşzamanlılık görselleştiricisi bir izleme toplarken Windows için olay Izleme (ETW) kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](https://go.microsoft.com/fwlink/?LinkId=234579) ve [EVENT_TRACE_PROPERTIES yapısı](https://go.microsoft.com/fwlink/?LinkId=234580).  
+ Eşzamanlılık görselleştiricisi bir izleme toplarken Windows için olay Izleme (ETW) kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](https://msdn.microsoft.com/library/bb968803(VS.85).aspx) ve [EVENT_TRACE_PROPERTIES yapısı](https://msdn.microsoft.com/library/aa363784(VS.85).aspx).  
   
-## <a name="filter"></a>Filtre  
+## <a name="filter"></a>Filtrele  
  Filtre sekmesinde, eşzamanlılık görselleştiricisi tarafından toplanan olay kümesini seçebilirsiniz. Olayların bir alt kümesini seçmek raporlarda görüntülenen veri türlerini sınırlar, her izlemenin boyutunu azaltır ve izlemeleri işlemek için gereken süreyi azaltır.  
   
 ### <a name="clr-events"></a>CLR olayları  
@@ -55,7 +55,7 @@ Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu
 ### <a name="file-io-events"></a>Dosya g/ç olayları  
  Dosya g/ç olayları, geçerli işlem adına disk erişimlerini temsil eder.  Dosya g/ç olaylarını devre dışı bırakırsanız, izlemenin boyutu azalır, ancak Iş parçacıkları görünümü disk kanalları veya disk Işlemleriyle ilgili herhangi bir bilgi bildirmeyecektir.  
   
-## <a name="markers"></a>İmleçleri  
+## <a name="markers"></a>İşaretler  
  Işaretleyiciler sekmesinde, eşzamanlılık görselleştiricisi içinde Işaret olarak gösterilen ETW sağlayıcıları kümesini yapılandırabilirsiniz.  Ayrıca, Işaret koleksiyonunu önem düzeyi ve ETW kategorisine göre filtreleyebilirsiniz.  [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsanız ve kendi işaretleyici sağlayıcınızı kullanıyorsanız, Iş parçacıkları görünümünde görünmesi için buraya kaydolabilirsiniz.  
   
 ### <a name="adding-a-new-provider"></a>Yeni sağlayıcı ekleme  

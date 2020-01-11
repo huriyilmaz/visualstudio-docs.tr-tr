@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: f382226ab20053a57b10326853f16e27f641b3be
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b959d411f0f574b03729d8016feb6efc531ae171
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298120"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846511"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Visual Studio kullanarak bulut hizmetini yayımlama
 
@@ -47,7 +47,7 @@ Azure uygulamanızı yayımladığınızda, aşağıdaki görevlerden birini yap
 
    b. **Paket Azure uygulaması** iletişim kutusunda, paket oluşturmak istediğiniz hizmet yapılandırmasını seçin ve ardından yapı yapılandırmasını seçin.
 
-   c. Seçim Yayımladıktan sonra bulut hizmeti için Uzak Masaüstü 'Nü açmak üzere **tüm roller Için uzak masaüstünü etkinleştir**' i seçin ve ardından Uzak Masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Seçim Yayımladıktan sonra bulut hizmeti için Uzak Masaüstü 'Nü açmak üzere **tüm roller Için uzak masaüstünü etkinleştir**' i seçin ve ardından Uzak Masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için [Visual Studio kullanarak Azure Cloud Services'ta bir rol için Uzak Masaüstü Bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Yayımladıktan sonra bulut hizmetinizde hata ayıklamak istiyorsanız, uzaktan hata ayıklamayı **tüm roller Için etkinleştir**' i seçerek açın.
 
@@ -92,7 +92,7 @@ Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığ
     Bulut hizmeti yayımlandı. Oluşturulan sanal makinede, Web rollerinizi yeniden yayımlamadan güncelleştirmek için Web Dağıtımı IIS için uzak bağlantılar etkinleştirilmiş olmalıdır.
 
    > [!NOTE]
-   > Bir Web rolü için yapılandırılmış birden fazla örneğiniz varsa, her bir Web rolünün yalnızca uygulamanızı yayımlamak için oluşturulan pakette bir örnekle sınırlı olduğunu belirten bir uyarı iletisi görüntülenir. Devam etmek için **Tamam ' ı** seçin. Gereksinimler bölümünde belirtildiği gibi, birden fazla Web rolüne sahip olabilirsiniz ancak her rolün yalnızca bir örneği olabilir.
+   > Bir Web rolü için yapılandırılmış birden fazla örneğiniz varsa, her bir Web rolünün yalnızca uygulamanızı yayımlamak için oluşturulan pakette bir örnekle sınırlı olduğunu belirten bir uyarı iletisi görüntülenir. Devam etmek için **Tamam**'ı seçin. Gereksinimler bölümünde belirtildiği gibi, birden fazla Web rolüne sahip olabilirsiniz ancak her rolün yalnızca bir örneği olabilir.
 
 ### <a name="update-your-web-role-by-using-web-deploy"></a>Web rolünüzü Web Dağıtımı kullanarak güncelleştirin
 
@@ -122,7 +122,7 @@ Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığ
 
    a. Web rolünü çalıştıran sanal makineye bağlanmak için, **Cloud Explorer** veya **Sunucu Gezgini**web rolü örneğini seçin ve ardından **Uzak Masaüstü kullanarak bağlan** komutunu seçin. Sanal makineye bağlanma hakkında ayrıntılı adımlar için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). Tarayıcınız bir `.rdp` dosyası indirmenizi ister.
 
-   b. Bir SSL sertifikası eklemek için, Yönetim hizmetini IIS Yöneticisi ' nde açın. IIS Yöneticisi 'nde, **eylem** bölmesinde **bağlamalar** bağlantısını açarak SSL 'yi etkinleştirin. **Site Bağlaması Ekle** iletişim kutusu görüntülenir. **Ekle**' yi seçin ve ardından **tür** açılan listesinden HTTPS ' yi seçin. **SSL sertifikası** listesinde, bir CA tarafından imzaladığınız ve Azure Portal yüklediğiniz SSL sertifikasını seçin. Daha fazla bilgi için bkz. [Yönetim hizmeti Için bağlantı ayarlarını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=215824).
+   b. Bir SSL sertifikası eklemek için, Yönetim hizmetini IIS Yöneticisi ' nde açın. IIS Yöneticisi 'nde, **eylem** bölmesinde **bağlamalar** bağlantısını açarak SSL 'yi etkinleştirin. **Site Bağlaması Ekle** iletişim kutusu görüntülenir. **Ekle**' yi seçin ve ardından **tür** açılan listesinden HTTPS ' yi seçin. **SSL sertifikası** listesinde, bir CA tarafından imzaladığınız ve Azure Portal yüklediğiniz SSL sertifikasını seçin. Daha fazla bilgi için bkz. [Yönetim hizmeti Için bağlantı ayarlarını yapılandırma](https://technet.microsoft.com/library/cc770458(WS.10).aspx).
 
       > [!NOTE]
       > Güvenilen bir SSL sertifikası eklerseniz, daha sonra, **Yayımlama sihirbazında**sarı uyarı üçgeni görünmez.

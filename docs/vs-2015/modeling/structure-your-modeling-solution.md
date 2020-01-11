@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 83606b56e6509f1db77b590ec44d991ef97cf82e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d0c001ec8310759309c88c49c37050516b110b81
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298162"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850799"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -34,7 +34,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 #### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara bölmek için
 
-1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](https://go.microsoft.com/fwlink/?LinkId=196681)bölümünde açıklanmaktadır.
+1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](https://docs.microsoft.com/previous-versions/msp-n-p/ee658107(v=pandp.10)?redirectedfrom=MSDN)bölümünde açıklanmaktadır.
 
 2. Mimari çözümünü çağıracağız bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
 
@@ -100,7 +100,7 @@ Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmayacak, anca
 
 #### <a name="to-create-a-solution-template"></a>Bir çözüm şablonu oluşturmak için
 
-1. Bunu yapmadıysanız, [şablonu dışarı aktarma Sihirbazı 'Nı indirin ve yükleyin](https://go.microsoft.com/fwlink/?LinkId=196686).
+1. Bunu yapmadıysanız, [şablonu dışarı aktarma Sihirbazı 'Nı indirin ve yükleyin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ExportTemplateWizard).
 
 2. Gelecekteki projeler için başlangıç noktası olarak kullanmak istediğiniz çözüm yapısını oluşturun.
 
@@ -109,7 +109,7 @@ Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmayacak, anca
 4. Sihirbazdaki yönergeleri izleyerek, şablona dahil etmek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
 
 > [!NOTE]
-> Bu konudaki malzeme, en değerli uzmanlar (MVP), Microsoft Hizmetleri ve Visual Studio arasında işbirliği olan Visual Studio ALM derecelendirmeleri tarafından yazılmış, Visual Studio mimari araç kılavuzlarından ve paraphrased soyutlanmaktadır. ürün ekibi ve yazıcılar. [Tüm rehberlik paketini indirmek için buraya tıklayın.](https://go.microsoft.com/fwlink/?LinkID=191984)
+> Bu konudaki malzeme, en değerli uzmanlar (MVP), Microsoft Hizmetleri ve Visual Studio arasında işbirliği olan Visual Studio ALM derecelendirmeleri tarafından yazılmış, Visual Studio mimari araç kılavuzlarından ve paraphrased soyutlanmaktadır. ürün ekibi ve yazıcılar. [Tüm rehberlik paketini indirmek için buraya tıklayın.](https://archive.codeplex.com/?p=vsarchitectureguide)
 
 ## <a name="related-materials"></a>İlgili malzemeler
 

@@ -15,12 +15,12 @@ caps.latest.revision: 68
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3ca14cead3b632cb70b817c79fce797078c7069b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 893647303b493ea633caf076658edbdcf0664ccc
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299380"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850847"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -62,7 +62,7 @@ Projenin uygulama ayarlarını ve özelliklerini belirtmek için proje Tasarımc
 
  Bir Web uygulaması projesi için **sınıf kitaplığı**belirtmeniz gerekir.
 
- **Winmd dosyası** seçeneğini belirtirseniz türler, herhangi bir Windows çalışma zamanı programlama diliyle yansıtıluygulanabilir. Projenin çıkışını bir WinMD dosyası olarak paketleyerek, bir uygulamayı birden fazla dilde kodlayarak kod birlikte çalışır ve aynı dilde yazmış olursunuz. [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamalar dahil Windows Çalışma Zamanı kitaplıklarını hedefleyen çözümler için **winmd dosyası** seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [ C# ve Visual Basic Windows çalışma zamanı bileşenleri oluşturma](https://go.microsoft.com/fwlink/?LinkId=231895).
+ **Winmd dosyası** seçeneğini belirtirseniz türler, herhangi bir Windows çalışma zamanı programlama diliyle yansıtıluygulanabilir. Projenin çıkışını bir WinMD dosyası olarak paketleyerek, bir uygulamayı birden fazla dilde kodlayarak kod birlikte çalışır ve aynı dilde yazmış olursunuz. [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamalar dahil Windows Çalışma Zamanı kitaplıklarını hedefleyen çözümler için **winmd dosyası** seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [ C# ve Visual Basic Windows çalışma zamanı bileşenleri oluşturma](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.85).aspx).
 
 > [!NOTE]
 > Windows Çalışma Zamanı, bu tür bir dilde yerel nesneler olarak görünecek şekilde proje türlerine sahip olabilir. Örneğin, Windows Çalışma Zamanı etkileşimde bulunan JavaScript uygulamaları bunu bir JavaScript nesneleri kümesi olarak kullanır ve C# uygulamalar kitaplığı bir .NET nesneleri koleksiyonu olarak kullanır. Projenin çıkışını bir WinMD dosyası olarak paketleyerek, Windows Çalışma Zamanı kullandığı teknolojinin avantajlarından yararlanabilirsiniz.
@@ -112,7 +112,7 @@ Projenin uygulama ayarlarını ve özelliklerini belirtmek için proje Tasarımc
 
  `Shutdown`açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **Açık Kapat '** ı seçin.
 
- Son pencere kapandığında veya `Shutdown`açık olarak çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **son pencere Kapat '** ı seçin. Bu varsayılan ayardır.
+ Son pencere kapandığında veya `Shutdown`açık olarak çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **son pencere Kapat '** ı seçin. Varsayılan ayar budur.
 
  Ana pencere kapandığında veya `Shutdown`açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **ana pencerede Kapat '** ı seçin.
 
@@ -127,7 +127,7 @@ Projenin uygulama ayarlarını ve özelliklerini belirtmek için proje Tasarımc
 
  <xref:System.Windows.Application.Shutdown%2A>açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **Açık Kapat '** ı seçin.
 
- Son pencere kapandığında veya <xref:System.Windows.Application.Shutdown%2A>açık olarak çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **son pencere Kapat '** ı seçin. Bu varsayılan ayardır.
+ Son pencere kapandığında veya <xref:System.Windows.Application.Shutdown%2A>açık olarak çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **son pencere Kapat '** ı seçin. Varsayılan ayar budur.
 
  Ana pencere kapandığında veya <xref:System.Windows.Application.Shutdown%2A>açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **ana pencerede Kapat '** ı seçin.
 

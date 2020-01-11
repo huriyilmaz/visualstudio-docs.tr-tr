@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6ca68005f71d642650a2d9b024a16883de5eaddf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f3bbb4500eb4792f77a7011bd95dd06d05d0ff8d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298943"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850429"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -170,9 +170,9 @@ using System.Linq;
 
 1. Kaynak DSL 'yi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] model veri yolu tarafından erişilebilir hale getirme:
 
-    1. Henüz yüklenmemişse, Visual Studio Model veri yolu uzantısını indirip yükleyin. Daha fazla bilgi için bkz. [görselleştirme ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=185579).
+    1. Henüz yüklenmemişse, Visual Studio Model veri yolu uzantısını indirip yükleyin. Daha fazla bilgi için [Görselleştirme ve modelleme SDK'sı](https://www.visualstudio.com/).
 
-    2. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**'a tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
+    2. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve ardından **etkinleştirme Modelbus**. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**'ı tıklatın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
 
     3. **Tüm Şablonları Dönüştür** ' e tıklayın ve çözümü yeniden oluşturun.
 

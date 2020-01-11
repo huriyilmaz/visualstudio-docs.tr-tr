@@ -14,12 +14,12 @@ ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
 caps.latest.revision: 57
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 59ef6ae6b042b1616997821febe156ef5cac3b7f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 27dce16d9fe02063eae935af96c26184285e583d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299705"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850373"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,26 +43,26 @@ Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özell
   Daha önce hiç bir Visual Studio uzantısı yazmadıysanız, bu özellikler hakkında daha fazla bilgi ve [Visual Studio uzantıları geliştirmeye Başlarken](../extensibility/starting-to-develop-visual-studio-extensions.md)hakkında daha fazla bilgi bulmanız gerekir.  
   
 ## <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK’yı Yükleme  
- Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
+ Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK 'daki yenilikler  
- Visual Studio SDK, bir VSıX paketi kullanarak menü komutları, araç pencereleri ve Düzenleyici uzantıları oluşturmanıza imkan tanıyan açık bulbs ve yeni proje öğeleri dahil bazı yeni özelliklere sahiptir. Daha fazla bilgi için bkz. [Visual Studio 2015 SDK 'daki](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)yenilikler.  
+ Visual Studio SDK, bir VSıX paketi kullanarak menü komutları, araç pencereleri ve Düzenleyici uzantıları oluşturmanıza imkan tanıyan açık bulbs ve yeni proje öğeleri dahil bazı yeni özelliklere sahiptir. Daha fazla bilgi için [Visual Studio 2015 SDK'sındaki yenilikler](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio Kullanıcı Deneyimi Yönergeleri  
- [Visual Studio Kullanıcı deneyimi kılavuzlarından](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)UZANTıNıZıN Kullanıcı arabirimini tasarlamak için harika ipuçları alın.  
+ Uzantı için kullanıcı arabirimini tasarlamaya yönelik harika ipuçları alın [Visual Studio kullanıcı deneyimi yönergeleri](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
   
  Ayrıca, [Adres DPI sorunları](../extensibility/addressing-dpi-issues2.md) konusundaki UZANTıNıZıN yüksek DPI cihazlarda harika görünmesini sağlama hakkında bilgi edinebilirsiniz.  
   
  Harika görüntü yönetimi ve yüksek DPı ve tema desteği için [görüntü hizmetinden ve katalogdan](../extensibility/image-service-and-catalog.md) yararlanın.  
   
 ## <a name="finding-and-installing-existing-visual-studio-extensions"></a>Mevcut Visual Studio uzantılarını bulma ve yükleme  
- Visual Studio uzantılarını **Araçlar** menüsündeki **Uzantılar ve güncelleştirmeler** iletişim kutusunda bulabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio uzantılarını bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md). Uzantıları [Visual Studio Market](https://marketplace.visualstudio.com/) de bulabilirsiniz  
+ Visual Studio uzantılarını **Araçlar** menüsündeki **Uzantılar ve güncelleştirmeler** iletişim kutusunda bulabilirsiniz. Daha fazla bilgi için [bulma ve Visual Studio uzantılarını kullanarak](../ide/finding-and-using-visual-studio-extensions.md). Uzantıları [Visual Studio Market](https://marketplace.visualstudio.com/) de bulabilirsiniz  
   
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK Başvurusu  
  Visual Studio SDK API başvurusunu [Visual STUDIO SDK başvurusunda](../extensibility/visual-studio-sdk-reference.md)bulabilirsiniz.  
   
 ## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK örnekleri  
- [Visual Studio örneklerinde](https://aka.ms/vs2015sdksamples)GITHUB 'DA vs SDK uzantılarının açık kaynak örneklerini bulabilirsiniz. Bu GitHub deposu, Visual Studio 'daki çeşitli Genişletilebilir özellikleri gösteren örnekler içerir.  
+ [Visual Studio örneklerinde](https://github.com/Microsoft/VSSDK-Extensibility-Samples)GITHUB 'DA vs SDK uzantılarının açık kaynak örneklerini bulabilirsiniz. Bu GitHub deposu, Visual Studio 'daki çeşitli Genişletilebilir özellikleri gösteren örnekler içerir.  
   
 ## <a name="other-visual-studio-sdk-resources"></a>Diğer Visual Studio SDK kaynakları  
  VSSDK hakkında sorularınız varsa veya deneyimlerini geliştirme ve genişletmelerini paylaşmak istiyorsanız, [Visual Studio genişletilebilirlik Forumu](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) veya [extendvs grup sohbetini](https://gitter.im/Microsoft/extendvs)kullanabilirsiniz.  

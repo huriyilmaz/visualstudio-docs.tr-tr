@@ -9,19 +9,19 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 33a7f5a0f183030f9de021df328f8c5e50f5fd5a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 023559143a526732cb92bd72e06e19147261fba7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300904"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850690"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantılar yapabilirsiniz. Yapabileceğiniz uzantı türleri arasında menü komutları ekleme, sürükle ve çift tıklama hareketleri için işleyiciler ekleme ve belirli değer veya ilişki türleri değiştiğinde tetiklenen kurallar sayılabilir. Uzantılar, Visual Studio Tümleştirme Uzantısı (VSıX) olarak paketlenebilir ve diğer kullanıcılara dağıtılabilir.
 
- Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [görselleştirme ve modelleme SDK (VMSDK) Web sitesi](https://go.microsoft.com/fwlink/?LinkID=186128).
+ Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [görselleştirme ve modelleme SDK (VMSDK) Web sitesi](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
 ## <a name="setting-up-the-solution"></a>Çözümü kurma
  Uzantınızın kodunu içeren bir proje ve projeyi dışarı aktaran bir VSıX projesi ayarlayın. Çözümünüz aynı VSıX 'e dahil edilen diğer projeleri içerebilir.
@@ -71,7 +71,7 @@ Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantı
 
  Uzantıları ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
 
-1. VSIX projenizde VSIX yükleme dosyasını, bin\\*\\\*. VSIX ' de bulun.
+1. VSIX projenizde depo VSIX yükleme dosyasını bulmak\\*\*\\\*.vsix
 
 2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini 'nde (veya dosya Gezgini) çift tıklayın.
 

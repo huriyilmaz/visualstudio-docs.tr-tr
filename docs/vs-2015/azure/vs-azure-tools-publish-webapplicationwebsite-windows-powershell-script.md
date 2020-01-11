@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 6c9c2e281ace3b483d1f37552fba0cc6f490978a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cd26e3d37779337ee39a1afa68aa3ba9ab56d376
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298134"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846552"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (Windows PowerShell betiği)
 ## <a name="syntax"></a>Sözdizimi
@@ -41,8 +41,8 @@ Dağıtımın ayrıntılarını açıklayan JSON yapılandırma dosyasının yol
 | Gerekli mi? |true |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
+| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
@@ -50,23 +50,23 @@ Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |{1&gt;false&lt;1} |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
+| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Cloud Services ve ASP.NET ile çalışmaya başlama](https://go.microsoft.com/fwlink/p/?LinkID=623089).
+Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Cloud Services ve ASP.NET ile çalışmaya başlama](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script?view=vs-2019).
 
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |{1&gt;false&lt;1} |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
+| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
@@ -74,11 +74,11 @@ Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |{1&gt;false&lt;1} |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
+| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
 
 ## <a name="sendhostmessagestooutput"></a>Sendhostiletitooutput
 Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
@@ -86,11 +86,11 @@ Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 | Parametre | Varsayılan değer |
 | --- | --- |
 | Diğer adlar |yok |
-| Gerekli mi? |false |
+| Gerekli mi? |{1&gt;false&lt;1} |
 | Konum |adlandırılmış |
-| Varsayılan değer |false |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |{1&gt;false&lt;1} |
+| İşlem hattı girişi kabul edilsin mi? |{1&gt;false&lt;1} |
+| Joker karakterler kabul edilsin mi? |{1&gt;false&lt;1} |
 
 ## <a name="remarks"></a>Açıklamalar
 Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).

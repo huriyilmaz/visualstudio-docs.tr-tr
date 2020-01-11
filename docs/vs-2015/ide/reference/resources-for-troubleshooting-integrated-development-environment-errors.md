@@ -94,12 +94,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3d3048d16da507d9d63ea9d3df77b4e88d5a5e59
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 07a84648a24a709b47b60ee9e2a6e5d342777d77
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297765"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851647"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Tümleşik Yazılım Geliştirme Ortamı Hatalarında Sorun Giderme Kaynakları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "74297765"
 Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Hata iletisindeki bilgiler sorunu çözmenize yardımcı değilse, Bilgi Bankası makaleleri, geliştirici topluluğu veya ürün desteği gibi diğer kaynaklara de başvurabilirsiniz.
 
 ## <a name="knowledge-base-articles"></a>Bilgi Bankası Makaleleri
- Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Microsoft desteği](https://go.microsoft.com/fwlink/?linkid=1782) Web sitesinde KB makalelerine erişebilirsiniz.
+ Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Microsoft desteği](https://support.microsoft.com/) Web sitesinde KB makalelerine erişebilirsiniz.
 
 ## <a name="the-developer-community"></a>Geliştirici topluluğu
  Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz.
@@ -115,4 +115,4 @@ Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Hata iletisi
  [Microsoft Teknik topluluklar](https://techcommunity.microsoft.com/) Web sitesinde forumlara, bloglara, sohbetlere ve diğer kaynaklara erişebilirsiniz.
 
 ## <a name="product-support"></a>Ürün Desteği
- Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](https://go.microsoft.com/fwlink/?linkid=1782) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [bizimle Iletişim kurun](../../ide/talk-to-us.md).
+ Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](https://support.microsoft.com/) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [bizimle Iletişim kurun](../../ide/talk-to-us.md).

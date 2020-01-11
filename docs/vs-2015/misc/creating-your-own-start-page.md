@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0df5b9c-0932-4e54-86f0-28530ad9d684
 caps.latest.revision: 22
 manager: jillfra
-ms.openlocfilehash: ceb78d3310f37a58850199b11fb2b2fed86f6799
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fba7f1e0801b6f977d47b13af025538f5d2fe031
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299312"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850988"
 ---
 # <a name="creating-your-own-start-page"></a>Kendi başlangıç sayfanızı oluşturma
 Başlangıç sayfası proje şablonunu kullanarak ya da boş bir başlangıç sayfası oluşturarak özel bir başlangıç sayfası oluşturabilirsiniz.  
@@ -28,7 +28,7 @@ Başlangıç sayfası proje şablonunu kullanarak ya da boş bir başlangıç sa
   
 #### <a name="to-create-a-custom-start-page-by-using-the-start-page-project-template"></a>Başlangıç sayfası proje şablonunu kullanarak özel bir başlangıç sayfası oluşturmak için  
   
-1. Visual Studio galerisinden [Başlangıç sayfası proje şablonunu](https://go.microsoft.com/fwlink/?LinkId=186204) indirin ve yükleyin.  
+1. Visual Studio galerisinden [Başlangıç sayfası proje şablonunu](https://visualstudiogallery.msdn.microsoft.com/f655a5dc-1a2d-4eca-b774-76c352c03b87) indirin ve yükleyin.  
   
     > [!WARNING]
     > Bu sırada, Visual Studio 2010 başlangıç sayfası proje şablonu yükseltilmemiştir. Bu şablonu yükseltme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio özel başlangıç sayfasını yükseltme](../misc/how-to-upgrade-a-visual-studio-custom-start-page.md).  

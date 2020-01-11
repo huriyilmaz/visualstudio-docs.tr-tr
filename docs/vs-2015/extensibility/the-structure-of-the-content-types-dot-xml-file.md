@@ -13,12 +13,12 @@ ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9b1fd98b3812fbeca2597534a7177ba2f81ab138
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3185b70f74478a9a55c4fb918c1535c86d154c76
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301233"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846365"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml Dosyasının Yapısı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "74301233"
 VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paketi yüklemek için [Content_Types]. xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.  
   
 > [!NOTE]
-> Bu konu yalnızca VSıX paketlerinde kullanılan [Content_Type]. xml dosyaları için geçerli olsa da, [Content_Types]. xml dosya türü *Açık paketleme kuralları (OPC)* standardının bir parçasıdır. Daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](https://go.microsoft.com/fwlink/?LinkID=148207) .  
+> Bu konu yalnızca VSıX paketlerinde kullanılan [Content_Type]. xml dosyaları için geçerli olsa da, [Content_Types]. xml dosya türü *Açık paketleme kuralları (OPC)* standardının bir parçasıdır. Daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](https://msdn.microsoft.com/magazine/cc163372.aspx) .  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
  Aşağıdaki bölümlerde kök öğe ve öznitelikleri ve alt öğeleri açıklanır.  
@@ -37,7 +37,7 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 |-------------|-----------------|  
 |`Types`|VSıX paketindeki dosya türlerini numaralandırmanızı sağlayan alt öğeleri içerir.|  
   
-### <a name="attributes"></a>Öznitelikler  
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
@@ -45,7 +45,7 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
   
 ### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe  
   
-|                           Value                           |                Açıklama                |
+|                           Değer                           |                Açıklama                |
 |-----------------------------------------------------------|-------------------------------------------|
 | http://schemas.openformats.org/package/2006/content-types | İçerik türleri şemasının konumu. |
   
@@ -56,7 +56,7 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 |-------------|-----------------|  
 |`Default`|VSıX paketindeki bir içerik türünü açıklar. Paketteki her dosya türünün kendi `Default` öğesi olmalıdır.|  
   
-### <a name="attributes"></a>Öznitelikler  
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
@@ -66,22 +66,22 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 ### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe  
  Visual Studio, ilişkili `Extension` türleri için aşağıdaki `ContentType` değerlerini tanır.  
   
-|Dahili numara|ContentType|  
+|Uzantı|contentType|  
 |---------------|-----------------|  
 |txt|metin/düz|  
 |pkgdef|metin/düz|  
 |xml|metin/XML|  
 |vsixmanifest|metin/XML|  
-|htm veya HTML|metin/html|  
+|htm veya HTML|text/html|  
 |biçimindeki|Uygulama/RTF|  
 |pdf|uygulama/PDF|  
 |gif|resim/GIF|  
 |jpg veya JPEG|resim/jpg|  
-|dosyalarında|resim/TIFF|  
+|tiff|resim/TIFF|  
 |vsix|Uygulama/zip|  
-|zip|Uygulama/zip|  
-|dosyasını|Uygulama/sekizli-akış|  
-|diğer tüm dosya türleri|Uygulama/sekizli-akış|  
+|sıkıştırma|Uygulama/zip|  
+|dosyasını|application/octet-stream|  
+|diğer tüm dosya türleri|application/octet-stream|  
   
 ## <a name="example"></a>Örnek  
   
@@ -104,4 +104,4 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSIX paketinin Anatomumu](../extensibility/anatomy-of-a-vsix-package.md)   
  [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [OPC: verilerinizi paketlemeye yönelik yeni bir standart](https://go.microsoft.com/fwlink/?LinkID=148207)
+ [OPC: verilerinizi paketlemeye yönelik yeni bir standart](https://msdn.microsoft.com/magazine/cc163372.aspx)

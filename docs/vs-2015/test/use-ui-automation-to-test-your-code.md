@@ -17,12 +17,12 @@ ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 87
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2eb0a4ee7c69ebe2bf753d4bbde63160b6e0043e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6478de1573a90c0a7171285df1d04675f77435e2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297979"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851276"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>Kodunuzu Test Etmek için UI Otomasyonunu Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Uygulamanızı Kullanıcı arabirimi (UI) aracılığıyla hedefleyen otomatikle
 
   Kodlanmış UI testleri tarafından desteklenen platformlar ve Konfigürasyonlar hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri ve eylem kayıtları Için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
 
-  **Bu konuda**
+  **Bu konudaki**
 
 - [Kodlanmış UI testleri oluşturma](#VerifyingCodeUsingCUITCreate)
 
@@ -161,7 +161,7 @@ Uygulamanızı Kullanıcı arabirimi (UI) aracılığıyla hedefleyen otomatikle
 
 - ![Prerequsite](../test/media/prereq.png "Önkoşul") Uygulamanızı test altına başlatmak üzere eylemleri kaydetmek istemiyorsanız, **kayıt** simgesini seçmeden önce uygulamanızı başlatmanız gerekir.
 
-- ![Prerequsite](../test/media/prereq.png "Önkoşul") Testin sonunda, testin çalıştırıldığı işlem sonlandırılır. Uygulamanızı testte başlattıysanız uygulama genellikle kapanır.  Testin, çıkış sırasında uygulamanızı kapatmasını istemiyorsanız, çözümünüze bir. runsettings dosyası eklemeniz ve `KeepExecutorAliveAfterLegacyRun` seçeneğini kullanmanız gerekir. Daha fazla bilgi için bkz [. runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
+- ![Prerequsite](../test/media/prereq.png "Önkoşul") Testin sonunda, testin çalıştırıldığı işlem sonlandırılır. Uygulamanızı testte başlattıysanız uygulama genellikle kapanır.  Testin, çıkış sırasında uygulamanızı kapatmasını istemiyorsanız, çözümünüze bir. runsettings dosyası eklemeniz ve `KeepExecutorAliveAfterLegacyRun` seçeneğini kullanmanız gerekir. Daha fazla bilgi için [bir .runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
 - ![Prerequsite](../test/media/prereq.png "Önkoşul") Her test yönteminin başlangıcında kodu çalıştıran bir [TestInitialize] özniteliğiyle tanımlanan bir test Initialize yöntemi ekleyebilirsiniz. Örneğin, uygulamayı TestInitialize yönteminden başlatabilirsiniz.
 
@@ -465,22 +465,22 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - [Kodlanmış Kullanıcı Arabirimi Testlerini ve Eylem Kayıtlarını Microsoft Excel'i Desteklemek için Genişletme](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-  Kodlanmış UI testleri, genellikle el ile testleri otomatikleştirmek için kullanılır. Ek rehberlik için bkz. [Visual Studio Ile sürekli teslim Için test etme 2012 – Bölüm 5: Sistem testlerini otomatikleştirme](https://go.microsoft.com/fwlink/?LinkID=255196). El ile testler hakkında daha fazla bilgi için [ &#91;bkz&#93; . Microsoft Test Yöneticisi kullanarak el ile test çalışmaları oluşturma](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e). Otomatik sistem testleri hakkında daha fazla bilgi için bkz. [Microsoft Test Yöneticisi kullanarak otomatikleştirilmiş testler oluşturma](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0).
+  Kodlanmış UI testleri, genellikle el ile testleri otomatikleştirmek için kullanılır. Ek rehberlik için bkz. [Visual Studio Ile sürekli teslim Için test etme 2012 – Bölüm 5: Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx). El ile testler hakkında daha fazla bilgi için [ &#91;bkz&#93; . Microsoft Test Yöneticisi kullanarak el ile test çalışmaları oluşturma](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e). Otomatik sistem testleri hakkında daha fazla bilgi için bkz. [Microsoft Test Yöneticisi kullanarak otomatikleştirilmiş testler oluşturma](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0).
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-### <a name="guidance"></a>Rehber
-- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)
+### <a name="guidance"></a>Kılavuz
+- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://msdn.microsoft.com/library/jj159340.aspx)
 
-- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://go.microsoft.com/fwlink/?LinkID=255196)
+- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="faq"></a>SSS
-- [Kodlanmış UI testleri SSS-1](https://go.microsoft.com/fwlink/?LinkID=230576)
+- [Kodlanmış UI testleri SSS-1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
-- [Kodlanmış UI testleri SSS-2](https://go.microsoft.com/fwlink/?LinkID=230578)
+- [Kodlanmış UI testleri SSS-2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>Forum
-- [Visual Studio UI Otomasyon testi (CodedUI içerir)](https://go.microsoft.com/fwlink/?LinkID=224497)
+- [Visual Studio UI Otomasyon testi (CodedUI içerir)](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6fae0bb2cca6f6f8a4ffb4e5af58473d041a12eb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b9583230a081cd1e9b543350b9ad998ab5d68e79
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301329"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851393"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio Mimari Araç Kullanımı Kılavuzu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,4 +23,4 @@ Bu mimari araç kullanımı yönergesi, Visual Studio 2010 modelleme araçların
 
  İçerik, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ürün ekibinin, Microsoft hizmetlerinin, Microsoft en değerli profesyonellerin (MVP) ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] topluluk liderlerinden üyelere sahip olan özel bir grup olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM Ranger tarafından oluşturulmuştur.
 
- [Mimari araç kılavuzunu indirmek için buraya tıklayın.](https://go.microsoft.com/fwlink/?LinkID=191984)
+ [Mimari araç kılavuzunu indirmek için buraya tıklayın.](https://archive.codeplex.com/?p=vsarchitectureguide)

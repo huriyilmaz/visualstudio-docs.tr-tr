@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f19208e886eb499c825b119ad4ade7e8b52ab88f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 74a8234dfc38ef5ef41cd77b2ce10eaf54018622
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300237"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850085"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>UML API ile ilişkilerde gezinme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -152,7 +152,7 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```
 
 ## <a name="enumerating-relationships"></a>Ilişkiler numaralandırılıyor
- UML modelinin birden çok değer döndüren tüm özellikleri IEnumerable < > arabirimine uygun. Bu, [LINQ sorgu ifadelerini](https://go.microsoft.com/fwlink/?LinkId=168834) ve **System. LINQ** ad alanında tanımlanan genişletme yöntemlerini kullanabileceğiniz anlamına gelir.
+ UML modelinin birden çok değer döndüren tüm özellikleri IEnumerable < > arabirimine uygun. Bu, [LINQ sorgu ifadelerini](https://docs.microsoft.com/dotnet/csharp/linq/index) ve **System. LINQ** ad alanında tanımlanan genişletme yöntemlerini kullanabileceğiniz anlamına gelir.
 
  Örneğin:
 

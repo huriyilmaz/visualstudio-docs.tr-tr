@@ -8,19 +8,19 @@ ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4b4d3e7c597766c3b416a7cb637cf0e5e99f71d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d14de396e24874f39a09172a483ebef81a5886f2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302052"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851226"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>İzlenecek yol: Kodlanmış Bir UI Testi Oluşturmak Düzenlemek ve Sürdürmek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini ve korunduğunu göstermek üzere basit bir Windows Presentation Foundation (WPF) oluşturacaksınız. İzlenecek yol çeşitli zamanlama sorunları ve yeniden düzenlemeyi denetleme tarafından kırılan testleri düzeltmeye ilişkin çözümler sağlar.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu örnek için şunlar gerekir:
 
 - Visual Studio Enterprise
@@ -41,7 +41,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 6. Projeyi kaydetmek için bir klasör seçin. **Konum** metin kutusuna klasörün adını yazın.
 
-7. **Tamam ' ı**seçin.
+7. **Tamam**’ı seçin.
 
      Visual Studio için WPF Tasarımcısı açılır ve projenin MainWindow öğesini görüntüler.
 
@@ -133,7 +133,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 5. Orta bölmede, **KODLANMıŞ UI testi proje** şablonunu seçin.
 
-6. **Tamam ' ı**seçin.
+6. **Tamam**’ı seçin.
 
      Çözüm Gezgini, **CodedUITestProject1** adlı yenı kodlanmış UI test projesi çözümünüze eklenir.
 
@@ -215,7 +215,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 7. Kodlanmış UI Test Düzenleyicisi araç çubuğundaki **kodu taşı** düğmesini seçin.
 
-8. Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntem UIMap.uitest dosyasından UIMap.cs dosyasına taşınması için ve artık kodlanmış UI Test Düzenleyicisi'ni kullanarak yöntemi düzenlemenin mümkün olmayacağı konusunda uyarır. **Evet**' i seçin.
+8. Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntem UIMap.uitest dosyasından UIMap.cs dosyasına taşınması için ve artık kodlanmış UI Test Düzenleyicisi'ni kullanarak yöntemi düzenlemenin mümkün olmayacağı konusunda uyarır. Seçin **Evet**.
 
      Test yöntemi UIMap.uitest dosyasından kaldırılır ve artık UI Eylemler bölmesinde görüntülenmez. Taşınan test dosyasını düzenlemek için Çözüm Gezgini'nden UIMap.cs dosyasını açın.
 
@@ -369,22 +369,22 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 ## <a name="external-resources"></a>Dış Kaynaklar
 
 ### <a name="videos"></a>Videolar
- ![video](../data-tools/media/playvideo.gif "PlayVideo") [kodlu UI testlerine bağlantı-derin Dive-Episode1-gettingstarted](https://go.microsoft.com/fwlink/?LinkID=230573)
+ ![video](../data-tools/media/playvideo.gif "PlayVideo") [kodlu UI testlerine bağlantı-derin Dive-Episode1-gettingstarted](https://skydrive.live.com/?cid=2db0e1efe1c1d3b8&id=2DB0E1EFE1C1D3B8%21118)
 
- ![video](../data-tools/media/playvideo.gif "PlayVideo") [kodlu UI testlerine bağlantı-derin Dive-episode2-bakım kimliği ve hata ayıklama](https://go.microsoft.com/fwlink/?LinkID=230574)
+ ![video](../data-tools/media/playvideo.gif "PlayVideo") [kodlu UI testlerine bağlantı-derin Dive-episode2-bakım kimliği ve hata ayıklama](https://skydrive.live.com/?cid=2db0e1efe1c1d3b8&id=2DB0E1EFE1C1D3B8%21116)
 
- ![video](../data-tools/media/playvideo.gif "PlayVideo") [kodlu UI testlerine bağlantı-derin bakış-Episode3-handkodlamaya](https://go.microsoft.com/fwlink/?LinkID=230575)
+ ![video](../data-tools/media/playvideo.gif "PlayVideo") [kodlu UI testlerine bağlantı-derin bakış-Episode3-handkodlamaya](https://skydrive.live.com/?cid=2db0e1efe1c1d3b8&id=2DB0E1EFE1C1D3B8%21117)
 
 ### <a name="hands-on-lab"></a>Laboratuvarda eller
- [MSDN sanal Laboratuvarı: Visual Studio 2010 ile kodlanmış UI testleri oluşturmaya giriş](https://go.microsoft.com/fwlink/?LinkID=22508)
+ [MSDN sanal Laboratuvarı: Visual Studio 2010 ile kodlanmış UI testleri oluşturmaya giriş](https://windows.microsoft.com/en-US/windows/products/windows-media-player)
 
 ### <a name="faq"></a>SSS
- [Kodlanmış UI testleri SSS-1](https://go.microsoft.com/fwlink/?LinkID=230576)
+ [Kodlanmış UI testleri SSS-1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
- [Kodlanmış UI testleri SSS-2](https://go.microsoft.com/fwlink/?LinkID=230578)
+ [Kodlanmış UI testleri SSS-2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>Forum
- [Visual Studio UI Otomasyon testi (CodedUI içerir)](https://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI Otomasyon testi (CodedUI içerir)](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UI otomasyonunu kullanarak kodunuzu test](../test/use-ui-automation-to-test-your-code.md) etme [kodlanmış UI testleri ve eylem kayıtları Için](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) kodlanmış UI [Testi Düzenleyicisi 'ni kullanarak](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md) kodlanmış UI testlerini düzenleme [ile çalışmaya](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b) başlama
