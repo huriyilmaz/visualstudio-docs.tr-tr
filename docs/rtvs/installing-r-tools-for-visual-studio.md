@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - data-science
 monikerRange: vs-2017
-ms.openlocfilehash: 38082d854a6c817503d2765c48c5b08c0bd2a5b3
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 5a09b3f78b929fd60764be36f56c0b580c7a42d7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888531"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843736"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Visual Studio için R Araçları nasıl yüklenir
 
@@ -46,7 +46,7 @@ Yalnızca Visual Studio Test Professional ve SQL Server Management Studio gibi �
 
 1. Aynı iş yükü adının altında, sağ taraftaki ek seçenekleri ayarlayın. Varsayılan olarak, bu iş yükü F# ve Python desteği içerir. R için en düşük gereksinimler **r dil desteği**, **r geliştirme için çalışma zamanı desteği**ve **Microsoft R istemcisi**.
 
-RTVS, ' de yüklü: *% ProgramFiles (x86)% \ Microsoft Visual Studio\<sürüm >\<Edition >, Visual Studio için*\<*sürüm* > genellikle `2017` ve *\<Edition >* `Community`, `Professional`veya `Enterprise`.
+RTVS, ' de yüklü: *% ProgramFiles (x86)% \ Microsoft Visual Studio\<sürüm >\<edition > Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio* ,\<*Sürüm* > genellikle `2017` ve *\<Edition* > `Community`, `Professional`veya `Enterprise`.
 
 ## <a name="install-rtvs-in-visual-studio-2015"></a>Visual Studio 2015 ' de RTVS 'yi yükler
 
@@ -64,7 +64,7 @@ Microsoft R Open ve CRAN R birden çok yan yana sürüme izin verir. Ancak Micro
 
 ### <a name="install-the-r-tools"></a>R araçları 'nı yükler
 
-[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current)'Deki Visual Studio 2015 için geçerli rtvs 'yi indirin. RTVS, Visual Studio 'nun uygun bir sürümünü denetler ve henüz yapmadıysanız bir R yorumlayıcısı yüklemenize yardımcı olur.
+[https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.exe](https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.exe)'Deki Visual Studio 2015 için geçerli rtvs 'yi indirin. RTVS, Visual Studio 'nun uygun bir sürümünü denetler ve henüz yapmadıysanız bir R yorumlayıcısı yüklemenize yardımcı olur.
 
 > [!Note]
 > Tek başına RTVS yükleyicisi yalnızca Visual Studio 2015 ile kullanılabilir; Visual Studio 2017 ile, daha önce açıklandığı gibi [veri bilimi ve analitik uygulamalar iş yükü](#install-rtvs-in-visual-studio-2017) aracılığıyla R desteği ' ni yükler.
@@ -81,7 +81,7 @@ Visual Studio 2015 için RTVS, içine yüklendi: `%ProgramFiles(x86)%\Microsoft 
 
 1. Web sayfasında çevrimdışı yükleme oluşturmak için yönergeleri izleyin.
 
-1. Visual Studio 2015 için [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) ve [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip)çevrimdışı rtvs yükleyicilerini indirin.
+1. Visual Studio 2015 için [https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.zip](https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.zip) ve [https://rtvs.blob.core.windows.net/download/RTVS_Remote_2017-12-12.1.zip](https://rtvs.blob.core.windows.net/download/RTVS_Remote_2017-12-12.1.zip)çevrimdışı rtvs yükleyicilerini indirin.
 
 1. Çevrimdışı yükleyicilerden Visual Studio ve RTVS 'yi yükleme.
 

@@ -12,7 +12,7 @@
 #### [İş ortakları için abonelikler](program-mpn.md)
 #### [MPN için abonelikleri yönetme](manage-mpn-subscriptions.md)
 ### [Startup’lar için Microsoft](program-startups.md)
-## Oturum aç 
+## Oturum açma 
 ### [Perakende abonelikleri etkinleştirme](activate-store-subscriptions.md)
 ### [Microsoft Hesaplarıyla oturum açma](sign-in-msa.md)
 ### [İş veya okul hesaplarıyla oturum açma](sign-in-work.md)
@@ -88,7 +88,7 @@
 ### [Kişisel e-posta ile oturum açan aboneler](personal-email-sign-ins.md)
 ### [GitHub Enterprise ile Visual Studio’yu Yönetme](assign-github.md)
 # Kaynaklar
-## [Visual Studio lisanslama teknik incelemesi](https://aka.ms/vslicensing)
+## [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 ## [Abonelik seçeneklerini ve fiyatlandırmalarını karşılaştırma](https://visualstudio.microsoft.com/vs/pricing)
 ## [Visual Studio IDE özelliklerini karşılaştırma](https://visualstudio.microsoft.com/vs/compare)
 ## [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)

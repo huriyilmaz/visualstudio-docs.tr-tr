@@ -30,6 +30,8 @@
       items:
         - name: Bellek kullanımını analiz etme
           href: analyze-memory-usage.md
+        - name: .NET nesneleri için bellek kullanımını analiz etme
+          href: dotnet-alloc-tool.md
         - name: Özel yerel ETW yığın olayları
           href: custom-native-etw-heap-events.md
         - name: Hata ayıklayıcı olmadan bellek kullanımı
