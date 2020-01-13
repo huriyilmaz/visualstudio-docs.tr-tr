@@ -9,17 +9,17 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a4297cfee592977cd09ba9c0abe36e12f7986181
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d1c63b866b35ef9b029364002360d29fa72f2b9b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75845622"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918966"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft İzleme Aracısı’nı kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kullanma](https://docs.microsoft.com/visualstudio/debugger/using-the-microsoft-monitoring-agent)konusuna bakın.
+Visual Studio Ile ilgili en son belgeler için [Microsoft Monitoring Agent kullanma](/visualstudio/debugger/using-the-microsoft-monitoring-agent)konusuna bakın.
 
 **Microsoft Monitoring Agent**kullanarak IIS ile barındırılan ASP.NET Web uygulamalarını ve SharePoint 2010 veya 2013 uygulamalarını hatalara, performans sorunlarına veya diğer sorunlar için yerel olarak izleyebilirsiniz. Tanılama olaylarını aracıdan bir IntelliTrace günlük (.iTrace) dosyasına kaydedebilirsiniz. Daha sonra, tüm Visual Studio tanılama araçlarıyla ilgili sorunları ayıklamak için Visual Studio Enterprise (profesyonel veya Community Edition değil) içinde günlük dosyasını açabilirsiniz. Ayrıca, aracıyı **izleme** modunda çalıştırarak IntelliTrace Tanılama verileri ve yöntem verileri toplayabilirsiniz. Microsoft Monitoring Agent, [Application Insights](/azure/azure-monitor/app/app-insights-overview) ve [System Center Operation Manager](https://technet.microsoft.com/library/hh205987.aspx)ile tümleştirilebilir. Microsoft Monitoring Agent, yüklendiğinde hedef sistemin ortamını değiştirir.  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2f5df9fb04849fce94d1a82748f2fc88f9577667
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3cfbcf127b9951ddfce1d3db8fe1177087b0350a
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297431"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918498"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>Hata: Web sunucusu doğru yapılandırılmamış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Bu hatanın olası nedenleri şunlardır:
   
 - Farklı bir makineye kopyalanmış, el ile yeniden adlandırılan veya taşınan bir .NET Web uygulaması hata ayıklaması yapılmaya çalışılıyor.  
   
-- Yeterli sayıda IIS bağlantısı yok. Web sitesini IIS 'ye dağıtma hakkında daha fazla bilgi için bkz. [Web sitesi oluşturma](https://docs.microsoft.com/iis/get-started/getting-started-with-iis/create-a-web-site).  
+- Yeterli sayıda IIS bağlantısı yok. Web sitesini IIS 'ye dağıtma hakkında daha fazla bilgi için bkz. [Web sitesi oluşturma](/iis/get-started/getting-started-with-iis/create-a-web-site).  
   
 - Bir ASP.NET uygulamasında hata ayıklamaya çalışıyorsanız, IIS 7,5 çalıştıran uzak bir bilgisayara dağıtmaya ilişkin yönergeler için IIS 8 veya üzeri çalıştıran uzak bir bilgisayara dağıtma veya [uzak bır ııs 7,5 bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) ile ilgili yönergeler için bkz. [IIS 'de yayımlama](https://docs.asp.net/en/latest/publishing/iis.html) .  
   

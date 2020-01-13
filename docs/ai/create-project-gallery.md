@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f84051e4450926136064b9af7f3c09e2e91a2f9
-ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+ms.openlocfilehash: d5e73757e10eec5e7e8c290772822f49129fd1e5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188578"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915895"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio 'da Azure Machine Learning galerisinden bir AI projesi oluşturma
 
@@ -23,7 +23,7 @@ Azure Machine Learning Visual Studio Tools for AI tümleşiktir. Azure sanal mak
 [Visual Studio Tools for AI](installation.md)yükledikten sonra, Azure Machine Learning örnek galerisinde önceden hazırlanmış yemek tariflerini kullanarak yeni bir Python projesi oluşturmak kolaydır.
 
 > [!NOTE]
-> Azure Machine Learning Workbench yüklü olmalıdır. Yüklemek için lütfen [Azure Machine Learning yükleme hızlı başlangıç](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation) bölümüne bakın
+> Azure Machine Learning Workbench yüklü olmalıdır. Yüklemek için lütfen [Azure Machine Learning yükleme hızlı başlangıç](/azure/machine-learning/preview/quickstart-installation) bölümüne bakın
 
 1. Visual Studio'yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
 
@@ -31,11 +31,11 @@ Azure Machine Learning Visual Studio Tools for AI tümleşiktir. Azure sanal mak
 
 2. Sunucu Gezgini **Azure Machine Learning** düğümüne sağ tıklayarak Azure Machine Learning aboneliğinizde oturum açın ve **oturum aç** ' ı seçin ve yönergeleri izleyin.
 
-    ![LOGIN](media/create-project-gallery/azureml-login.png)
+    ![oturum aç](media/create-project-gallery/azureml-login.png)
 
 3. **Örnek galerisi > AI araçları**' nı Azure Machine Learning seçin.
 
-    ![Örnek Galerisi](media/create-project-gallery/gallery.png)
+    ![Örnek galerisi](media/create-project-gallery/gallery.png)
 
 4. Bu hızlı başlangıç için, "**TensorFlow kullanarak Mnist**" örneğini seçin ve ardından **Install**' a tıklayın. Aşağıdakileri sağlayın:
 

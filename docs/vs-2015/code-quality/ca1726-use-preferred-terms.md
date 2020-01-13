@@ -14,17 +14,17 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f5d184684a6ec30c216b7274313905781843071b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671571"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918233"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726: Tercih edilen terimleri kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA1726: tercih edilen terimleri kullanın](https://docs.microsoft.com/visualstudio/code-quality/ca1726-use-preferred-terms).
+Visual Studio ile ilgili en son belgeler için bkz. [CA1726: tercih edilen terimleri kullanın](/visualstudio/code-quality/ca1726-use-preferred-terms).
 
 |||
 |-|-|

@@ -11,16 +11,16 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: c76113f014d8be3bd706ef02ec1135a84cbcae82
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 571f7bf825583b3094e07ea4404437f2fb2d62de
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849952"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917609"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
 ## <a name="overview"></a>Genel bakış
-Visual Studio **Tablo Tasarımcısı**görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](https://msdn.microsoft.com/library/dd179355.aspx)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
+Visual Studio **Tablo Tasarımcısı**görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](/rest/api/storageservices)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
 
 WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği ( **$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
@@ -43,7 +43,7 @@ Bir filtre dizesi oluştururken aşağıdaki kurallar önemlidir:
 
 * Bir özelliği bir değerle karşılaştırmak için mantıksal işleçleri kullanın. Bir özelliği dinamik bir değerle karşılaştırmak mümkün değildir; ifadenin bir tarafı bir sabit olmalıdır.
 * Filtre dizesinin tüm kısımları büyük/küçük harfe duyarlıdır.
-* Filtrenin geçerli sonuçlar döndürmesi için sabit değer, özellikle aynı veri türünde olmalıdır. Desteklenen özellik türleri hakkında daha fazla bilgi için bkz. [Tablo Hizmeti Veri Modelini anlama](https://msdn.microsoft.com/library/dd179338.aspx).
+* Filtrenin geçerli sonuçlar döndürmesi için sabit değer, özellikle aynı veri türünde olmalıdır. Desteklenen özellik türleri hakkında daha fazla bilgi için bkz. [Tablo Hizmeti Veri Modelini anlama](/rest/api/storageservices/Understanding-the-Table-Service-Data-Model).
 
 ## <a name="filtering-on-string-properties"></a>Dize özelliklerinde filtreleme
 Dize özelliklerine filtre uyguladığınızda, dize sabitini tek tırnak işaretleri içine alın.
@@ -103,7 +103,7 @@ not IsActive
 ```
 
 ## <a name="filtering-on-datetime-properties"></a>Tarih saat özelliklerine filtre uygulama
-Bir tarih saat değerini filtrelemek için, **DateTime** anahtar sözcüğünü ve ardından tek tırnak işaretleri içinde tarih/saat sabiti ' ni belirtin. Tarih/saat sabiti, [DateTime özellik değerlerini biçimlendirme](https://msdn.microsoft.com/library/azure/dd894027.aspx)bölümünde açıklandığı gıbı Birleşik UTC biçiminde olmalıdır.
+Bir tarih saat değerini filtrelemek için, **DateTime** anahtar sözcüğünü ve ardından tek tırnak işaretleri içinde tarih/saat sabiti ' ni belirtin. Tarih/saat sabiti, [DateTime özellik değerlerini biçimlendirme](/rest/api/storageservices/Formatting-DateTime-Property-Values)bölümünde açıklandığı gıbı Birleşik UTC biçiminde olmalıdır.
 
 Aşağıdaki örnek, CustomerSince özelliğinin 10 Temmuz 2008 ' ye eşit olduğu varlıkları döndürür:
 

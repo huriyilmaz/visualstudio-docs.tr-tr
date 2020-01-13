@@ -9,12 +9,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 72c5968fccb55a265639ff05c600bd5f97a9f90a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 5fab56a7738ed7b52760cf20a5bfcc8542ee5a23
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852100"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919054"
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>DSL Tanımlarına Uzantılar Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ DSL tanımı uzantısı, etki alanına özgü dil (DSL) için Uzantı paketi olu
 
   Genişletilmiş bir DSL kullanıcısı ek özelliklerin örneklerini içeren bir model oluşturup kaydedebilir ve bunlar uygun uzantıyı yüklemiş olan diğer kullanıcılar tarafından okunabilir. Uzantıyı yüklememiş kullanıcılar ek özellikleri kullanamaz, ancak ek özellikleri kaybetmeden bir modeli güncelleştirebilir ve kaydedebilir.
 
-  Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. [Visual Studio görselleştirme ve modelleme SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) Web sitesi.
+  Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. [Visual Studio görselleştirme ve modelleme SDK](https://www.microsoft.com/en-us/download/details.aspx?id=48148) Web sitesi.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio görselleştirme ve modelleme SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [Visual Studio görselleştirme ve modelleme SDK](https://www.microsoft.com/en-us/download/details.aspx?id=48148)

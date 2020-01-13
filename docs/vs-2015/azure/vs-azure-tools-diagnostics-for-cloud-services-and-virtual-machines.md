@@ -10,12 +10,12 @@ ms.date: 06/28/2018
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 96df8bbf1c991b98571a427a5118374cd6f3ba3b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d7099eb47007b1fc657164d085e8a5bb6f09e1db
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851449"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915650"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
 Bir Azure bulut hizmetinde veya sanal makinede sorun gidermeniz gerektiğinde Azure Tanılama daha kolay bir şekilde kurmak için Visual Studio 'Yu kullanabilirsiniz. Tanılama, bulut hizmetinizi çalıştıran sanal makinelerde ve sanal makine örneklerinde sistem verilerini ve günlük verilerini yakalar. Tanılama verileri, seçtiğiniz bir depolama hesabına aktarılır. Azure 'da tanılama günlüğü hakkında daha fazla bilgi için bkz. [Azure App Service Web Apps için tanılama günlüğünü etkinleştirme](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -110,7 +110,7 @@ Visual Studio 'da Azure sanal makineleri için tanılama verileri toplayabilirsi
     ![Azure sanal makine uzantısı 'nı yükler](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766024.png)
 
     > [!NOTE]
-   > Diğer tanılama uzantıları, sanal makineleriniz için kullanılabilir. Daha fazla bilgi için bkz. [Windows Için sanal makine uzantıları ve özellikleri](https://docs.microsoft.com/azure/virtual-machines/windows/extensions-features).
+   > Diğer tanılama uzantıları, sanal makineleriniz için kullanılabilir. Daha fazla bilgi için bkz. [Windows Için sanal makine uzantıları ve özellikleri](/azure/virtual-machines/windows/extensions-features).
    >
    >
 5. Uzantıyı eklemek ve **Tanılama yapılandırması** iletişim kutusunu görüntülemek için **Ekle**' yi seçin.

@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 12f94605ee6a1f4e4cc0142e6dd59ec02ed619c9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: f4c1ff547d9d550cbbc2e77435b159543fc16bf6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849947"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917091"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
 
@@ -31,7 +31,7 @@ Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgi
    | DNS adı |Sanal makinenin Internet adresine sahip URL. |
    | Ortam |Bir sanal makine için, bu özelliğin değeri her zaman üretime yöneliktir. |
    | Name |Sanal makinenin adı. |
-   | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs). |
+   | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](/azure/cloud-services/cloud-services-sizes-specs). |
    | Durum |Değerler, başlatma, başlatma, durdurma, durdurma ve durum alma içerir. Durum alma görünürse, geçerli durum bilinmiyor olur. Bu özelliğin değerleri, [Azure Portal](https://portal.azure.com/)kullanılan değerlerden farklıdır. |
    | SubscriptionID |Azure hesabınızın abonelik KIMLIĞI. Bir aboneliğin özelliklerini görüntüleyerek [Azure Portal](https://portal.azure.com/) bu bilgileri gösterebilirsiniz. |
 2. Bir uç nokta düğümü seçin ve ardından **Özellikler** penceresini görüntüleyin.

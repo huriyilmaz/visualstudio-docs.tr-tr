@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ee3cace6940b4fe402595cfba7b316a273c1d50
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a0f63ac8fa782dcb504b8bd00ad7e32ce96e1eab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593401"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917807"
 ---
 # <a name="build-multiple-projects-in-parallel-with-msbuild"></a>MSBuild ile paralel olarak birden çok proje oluşturun
 MSBuild 'i paralel olarak çalıştırarak birden çok projeyi daha hızlı derlemek için kullanabilirsiniz. Yapıları paralel olarak çalıştırmak için, birden çok çekirdekli veya birden çok işlemci bilgisayarında aşağıdaki ayarları kullanın:
@@ -43,7 +43,7 @@ msbuild.exe myproj.proj -maxcpucount:3
 ```
 
 ## <a name="buildinparallel-task-parameter"></a>BuildInParallel görev parametresi
-`BuildInParallel`, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevinde isteğe bağlı bir Boolean parametredir. `BuildInParallel` `true` ayarlandığında (varsayılan değer `false`), mümkün olduğunca fazla proje oluşturmak için birden çok çalışan işlemi oluşturulur. Bunun düzgün çalışması için `-maxcpucount` anahtarı 1 ' den büyük bir değere ayarlanmalıdır ve sistem en az çift çekirdekli ya da iki veya daha fazla işlemciye sahip olmalıdır.
+`BuildInParallel`, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevinde isteğe bağlı bir Boolean parametredir. `BuildInParallel` `true` ayarlandığında (varsayılan değer `true`), mümkün olduğunca fazla proje oluşturmak için birden çok çalışan işlemi oluşturulur. Bunun düzgün çalışması için `-maxcpucount` anahtarı 1 ' den büyük bir değere ayarlanmalıdır ve sistem en az çift çekirdekli ya da iki veya daha fazla işlemciye sahip olmalıdır.
 
 Aşağıda, `BuildInParallel` parametresinin nasıl ayarlanacağı hakkında *Microsoft. Common. targets*'tan alınan bir örnek verilmiştir.
 

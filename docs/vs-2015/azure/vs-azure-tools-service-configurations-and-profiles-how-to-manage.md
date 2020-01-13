@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 2d7081fc7531c8c1c1fcf13564f9f90bc9964f17
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 008dd927f38c7fd79996bde39531e256314f2e24
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849995"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917354"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Hizmet yapılandırmalarını ve profillerini yönetme
 ## <a name="overview"></a>Genel bakış
@@ -80,7 +80,7 @@ Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur
    
     Yeni profil, hedef profil listesinde görünür.
 6. **Hedef profil** listesinde, az önce oluşturduğunuz profili seçin. Yayımla Sihirbazı ayarları, seçtiğiniz profildeki seçimlerle doldurulur.
-7. Yayımla sihirbazının her bir sayfasını göstermek için **önceki** ve **sonraki** düğmeleri seçin ve ardından bu profilin ayarlarını özelleştirin. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019) .
+7. Yayımla sihirbazının her bir sayfasını göstermek için **önceki** ve **sonraki** düğmeleri seçin ve ardından bu profilin ayarlarını özelleştirin. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md) .
 8. Ayarları özelleştirmeyi tamamladıktan sonra, ayarlar sayfasına geri dönmek için **İleri** ' yi seçin. Bu ayarları kullanarak hizmeti yayımladığınızda veya profil listesinin yanındaki **Kaydet** ' i seçtiğinizde profil kaydedilir.
 
 ### <a name="to-rename-or-delete-a-profile"></a>Bir profili yeniden adlandırmak veya silmek için
@@ -93,9 +93,9 @@ Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur
 ### <a name="to-change-a-profile"></a>Bir profili değiştirmek için
 1. Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
 2. **Hedef profil** listesinde, değiştirmek istediğiniz profili seçin.
-3. Yayımla sihirbazının her bir sayfasını göstermek için **önceki** ve **sonraki** düğmeleri seçin ve ardından istediğiniz ayarları değiştirin. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019) .
+3. Yayımla sihirbazının her bir sayfasını göstermek için **önceki** ve **sonraki** düğmeleri seçin ve ardından istediğiniz ayarları değiştirin. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md) .
 4. Ayarları değiştirmeyi tamamladıktan sonra **Ayarlar** sayfasına geri dönmek için **İleri** ' yi seçin.
 5. (İsteğe bağlı) yeni ayarları kullanarak bulut hizmetini yayımlamak için **Yayımla** ' yı seçin. Bulut hizmetinizi Şu anda yayımlamak istemiyorsanız ve Yayımlama Sihirbazı 'nı kapatırsanız, değişiklikleri profile kaydetmek isteyip istemediğinizi sorar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Visual Studio 'da Azure projenizin diğer bölümlerini yapılandırma hakkında bilgi edinmek için bkz. [Azure projesi yapılandırma](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address?view=vs-2019)
+Visual Studio 'da Azure projenizin diğer bölümlerini yapılandırma hakkında bilgi edinmek için bkz. [Azure projesi yapılandırma](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md)

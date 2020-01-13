@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 21e724e585f2a5bf0e1fe2a6b70f89c1bd5f5eec
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 960511fcfb83dfc6ac3c58a806d8a23f1ff61597
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298191"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918772"
 ---
 # <a name="getting-started-with-python"></a>Python’ı Kullanmaya Başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Dil hakkında daha fazla bilgi edinmek için python.org adresindeki [Yeni başla
 
 Python 'u yüklemek için [https://www.python.org/download/](https://www.python.org/download/)ziyaret edin.
 
-## <a name="python-tools-for-visual-studio"></a>Visual Studio için Python Araçları
+## <a name="python-tools-for-visual-studio"></a>{1&gt;{2&gt;Visual Studio için Python Araçları&lt;2}&lt;1}
   
 [VisualStudio.com](https://www.visualstudio.com/explore/python-vs)adresinden yükleyebileceğiniz Visual Studio için Python araçları, aşağıdaki özellikleri sağlar:  
   
@@ -60,7 +60,7 @@ Aşağıdaki kaynaklar başlamanıza yardımcı olur:
 
 - [Yükleme kılavuzu](https://github.com/Microsoft/PTVS/wiki/PTVS-Installation)    
 - [Başlarken ve derin videoları öğrenin](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
-- Yükleme ve Özellikler tanıtımı (27 dk)] (https://www.youtube.com/watch?v=JNNAOypc6Ek)  
+- Yükleme ve özellikleri Tanıtımı (27 dk.)]( https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [Belgeler](https://github.com/Microsoft/PTVS/wiki)  
 
 Visual Studio 'Nun mevcut olmadığı, Python kullanarak tek başına yürütülebilir bir dosya oluşturma, aslında katıştırılmış Python yorumlayıcı içeren bir program anlamına gelir. Ancak, [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)' de açıklandığı gibi, Python topluluğu 'nda bunu yapmak için çeşitli araçlar vardır. Cpyıthon Ayrıca, [cpıthon 'un eklenebilir ZIP dosyası kullanılarak](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)blog gönderisine göre yerel bir uygulama içine katıştırılmakta da desteklenir.
@@ -73,13 +73,13 @@ Python ile bir kullanıcı arabirimi oluşturmaya yönelik ana teklif, bir Pytho
   
 Windows, Mac ve Linux destekleyen Python için Azure SDK, Microsoft Azure hizmetlerini kolayca kullanmanıza ve yönetmenize olanak sağlar. Ayrıntılar için aşağıdaki kaynaklara bakın: 
 
-- SDK 'yı yüklemek için [Python paket dizinini](https://pypi.python.org/pypi/azure) kullanın veya Azure belgelerine [Python ve SDK 'yı yüklemeyi](https://docs.microsoft.com/azure/python/python-sdk-azure-install) izleyin. 
+- SDK 'yı yüklemek için [Python paket dizinini](https://pypi.python.org/pypi/azure) kullanın veya Azure belgelerine [Python ve SDK 'yı yüklemeyi](/azure/python/python-sdk-azure-install) izleyin. 
 - [Python Için Azure SDK Geliştirici Merkezi](https://azure.microsoft.com/develop/python/) , eğitimlerle belgelere yüklemeden çok fazla yardım içerir.  Bazı önemli noktalar şunlardır:  
 - Nasıl Yapılır Kılavuzları:
   - [Depolama Blobu](https://azure.microsoft.com/develop/python/how-to-guides/blob-service/)  
   - [Depolama kuyruğu](https://azure.microsoft.com/develop/python/how-to-guides/queue-service/)  
   - [Depolama tablosu](https://azure.microsoft.com/develop/python/how-to-guides/table-service/)  
-  - [Service Bus kuyrukları](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-queues/)
+  - [Service Bus Kuyrukları](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-queues/)
   - [Service Bus konuları/abonelikleri](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-topics/) 
   - [Hizmet yönetimi](https://azure.microsoft.com/develop/python/how-to-guides/service-management/)  
 

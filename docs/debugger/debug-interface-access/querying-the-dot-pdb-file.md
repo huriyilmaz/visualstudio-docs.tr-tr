@@ -13,15 +13,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68efbd59abe1b0aff717a55383f3ac330586164a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a22bc8fbe65795a3c5162607a12690081e565666
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738575"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917112"
 ---
 # <a name="querying-the-pdb-file"></a>.Pdb Dosyasını Sorgulama
-Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sırasında toplanan tür ve simgesel hata ayıklama bilgilerini içeren bir ikili dosyadır. C++ **/Zi** veya **/Zi** ile BIR C/program derlerken bir PDB dosyası ya da **/debug** seçeneğiyle bir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)],[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]veya[!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)]programı yapılandırdığınızda oluşturulur. Nesne dosyaları hata ayıklama bilgileri için. pdb dosyasına başvuruları içerir. Pdb dosyaları hakkında daha fazla bilgi için bkz. [pdb dosyaları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Bir DIA uygulaması, yürütülebilir bir görüntü içindeki çeşitli semboller, nesneler ve veri öğeleri hakkında ayrıntıları almak için aşağıdaki genel adımları kullanabilir.
+Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sırasında toplanan tür ve simgesel hata ayıklama bilgilerini içeren bir ikili dosyadır. C++ **/Zi** veya **/Zi** ile BIR C/program derlerken bir PDB dosyası ya da **/debug** seçeneğiyle bir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]veya [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] programı yapılandırdığınızda oluşturulur. Nesne dosyaları hata ayıklama bilgileri için. pdb dosyasına başvuruları içerir. Pdb dosyaları hakkında daha fazla bilgi için bkz. [pdb dosyaları](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Bir DIA uygulaması, yürütülebilir bir görüntü içindeki çeşitli semboller, nesneler ve veri öğeleri hakkında ayrıntıları almak için aşağıdaki genel adımları kullanabilir.
 
 ### <a name="to-query-the-pdb-file"></a>. Pdb dosyasını sorgulamak için
 

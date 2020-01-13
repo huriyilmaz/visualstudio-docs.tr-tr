@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b680c2e27b871e654618b4c0ada0904744751282
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a495a566f78ceb2b89f8e2070837f038da352a4d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850477"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918875"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>UML’yi genişletmek için profil tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -220,7 +220,8 @@ Standart model öğelerini belirli amaçlarla özelleştirmek için bir *UML pro
 7. Uzantı projesini oluşturarak ya da önceki bölümlerde açıklandığı gibi tüm dosyaları sıkıştırarak Visual Studio uzantısı oluşturun.
 
 ## <a name="Schema"></a>Bir profilin yapısı
- UML profilleri için XSD dosyası aşağıdaki örnekte bulunabilir: [Stereotipler ve PROFILLER xsd olarak ayarlanıyor](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples). Profil dosyalarını düzenlemenize yardımcı olması için `.xsd` dosyasını içine yükleyebilirsiniz:
+
+ Profil dosyalarını düzenlemenize yardımcı olması için `.xsd` dosyasını içine yükleyebilirsiniz:
 
  **%ProgramFiles%\Microsoft Visual Studio [sürüm] \Xml\Schemas**
 
@@ -365,4 +366,5 @@ Profilinizi bir paket veya modelde seçmeniz gerekir. Stereotipler daha sonra pa
 6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md) [modelinizi, modellerinizi profiller ve Stereotipler](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [için standart stereotiplerle](../modeling/standard-stereotypes-for-uml-models.md) özelleştirin [örnek: stereotiplere göre renk UML ÖĞELERI](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) örnek: [Stereotipler ayarlama, profiller xsd](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md) [modellerinizi PROFILLER ve](../modeling/customize-your-model-with-profiles-and-stereotypes.md) bir [UML modeli için standart stereotiplerle](../modeling/standard-stereotypes-for-uml-models.md) özelleştirme
+ 

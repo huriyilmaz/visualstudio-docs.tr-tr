@@ -11,26 +11,26 @@ ms.date: 03/21/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: b1617ab8bd61857b29d78dc800ca70e26a7c8ff2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 033e682344cbd255c8cbf41d7527ec7d08a5db20
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852265"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915619"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Visual Studio ve IntelliTrace ile yayımlanan bir Azure bulut hizmetinin hatalarını ayıklama
 IntelliTrace ile Azure içinde çalıştığında bir rol örneği için kapsamlı hata ayıklama bilgileri günlüğe kaydedebilirsiniz. Bir sorunun nedenini bulmak gerekiyorsa, IntelliTrace günlüklerini, Visual Studio'dan, Azure'da çalışıyormuş gibi kodunuzda adım adım ilerleyin için de kullanabilirsiniz. Aslında Azure uygulamanızın Azure'daki bir bulut hizmeti olarak çalışan ve Visual Studio'dan kaydedilen verileri yeniden yürütme olanak tanır, Intellitrace'in kaydettiği kod yürütme ve ortam verilerini anahtarı. 
 
 Visual Studio Enterprise yüklüyse IntelliTrace ve Azure uygulama hedeflerinizi .NET Framework 4 veya sonraki bir sürümünü kullanabilirsiniz. IntelliTrace rollerinizi Azure için bilgi toplar. Bu roller için sanal makinelerin her zaman 64-bit işletim sistemlerinde çalışır.
 
-Alternatif olarak, kullandığınız [uzaktan hata ayıklama](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-debugging-cloud-services-overview?view=vs-2019) doğrudan Azure'da çalışan bir bulut hizmetine eklemek için.
+Alternatif olarak, kullandığınız [uzaktan hata ayıklama](vs-azure-tools-debugging-cloud-services-overview.md) doğrudan Azure'da çalışan bir bulut hizmetine eklemek için.
 
 > [!IMPORTANT]
 > IntelliTrace yalnızca hata ayıklama senaryoları içindir ve Üretim dağıtımı için kullanılmamalıdır.
 > 
 
 ## <a name="configure-an-azure-application-for-intellitrace"></a>Azure uygulaması için IntelliTrace'i yapılandırın
-Azure uygulaması için IntelliTrace etkinleştirmek için oluşturma ve bir Visual Studio Azure project uygulamayı yayımlayın. Azure'da yayımlamadan önce Azure uygulamanız için IntelliTrace yapılandırmanız gerekir. IntelliTrace yapılandırmadan uygulamanızı yayımlayın, projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için [yayımlama bir Azure bulut hizmeti projeleri Visual Studio kullanarak](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publishing-a-cloud-service?view=vs-2019).
+Azure uygulaması için IntelliTrace etkinleştirmek için oluşturma ve bir Visual Studio Azure project uygulamayı yayımlayın. Azure'da yayımlamadan önce Azure uygulamanız için IntelliTrace yapılandırmanız gerekir. IntelliTrace yapılandırmadan uygulamanızı yayımlayın, projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için [yayımlama bir Azure bulut hizmeti projeleri Visual Studio kullanarak](vs-azure-tools-publishing-a-cloud-service.md).
 
 1. Azure uygulamanızı dağıtmaya hazır olduğunuzda, Proje yapı hedefleri ayarlandığından doğrulayın **hata ayıklama**.
 

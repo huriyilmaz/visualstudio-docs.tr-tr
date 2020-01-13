@@ -22,12 +22,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 065a6ae3901f2426db6556cb19e80f543cb8a78f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d2b716bb4e6119c76f593ff067784f360cb48187
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846662"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917037"
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio'da verilere erişime
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -75,7 +75,7 @@ Visual Studio'da verilere neredeyse tüm veritabanı ürün veya hizmeti, herhan
 ### <a name="net-languages"></a>.NET dilleri
  .NET Core dahil olmak üzere tüm .NET veri erişimi, ADO.NET, veri kaynağı, ilişkisel ve ilişkisel olmayan herhangi bir türden erişmek için bir arabirim tanımlayan bir sınıf kümesi dayanır. Visual Studio çeşitli araçları vardır ve veritabanlarına bağlanmanıza yardımcı olması için ADO.NET çalışmak tasarımcıları verileri işlemek ve kullanıcıya verileri sunar. Bu bölümdeki belgeler bu araçlarının nasıl kullanılacağını açıklar. Ayrıca, doğrudan ADO.NET komut nesneleri karşı programlama yapabilirsiniz. ADO.NET API'lerini doğrudan çağırma hakkında daha fazla bilgi için bkz. [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) MSDN Kitaplığı'nda.
 
- Özel ASP.NET ile ilgili veri erişim belgelerine bakın [verilerle çalışma](https://docs.microsoft.com/aspnet/web-forms/overview/presenting-and-managing-data/) ASP.NET sitesinde. ASP.NET MVC ile Entity Framework kullanan bir öğretici için bkz. [Entity Framework 6 Code MVC 5 kullanarak First ile çalışmaya başlama](https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
+ Özel ASP.NET ile ilgili veri erişim belgelerine bakın [verilerle çalışma](/aspnet/web-forms/overview/presenting-and-managing-data/) ASP.NET sitesinde. ASP.NET MVC ile Entity Framework kullanan bir öğretici için bkz. [Entity Framework 6 Code MVC 5 kullanarak First ile çalışmaya başlama](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
 
  C# veya Visual Basic'te Evrensel Windows Platformu (UWP) uygulamaları, .NET için Microsoft Azure SDK'sı, Azure depolama ve diğer Azure hizmetlerine erişmek için kullanabilirsiniz. Herhangi bir RESTful hizmeti ile iletişimi Windows.Web.HttpClient sınıfı sağlar. Daha fazla bilgi için bkz. [Windows. Web. http kullanarak http sunucusuna bağlanma](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx).
 

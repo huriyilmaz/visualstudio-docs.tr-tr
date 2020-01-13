@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ac1a2812cb86108d32d769595affd53fc402ff4
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: d7bda9882a8f46f3b32c658db952a2eaf73d3fb7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777719"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916466"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü
 
@@ -25,17 +25,17 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
 > Çoğu senaryoda, Android için Visual Studio öykünücüsü yerine Google Android öykünücüsü kullanımı önerilir:
 > - Android için Visual Studio öykünücüsü, Visual Studio 2015 sonrasında desteklenmez.
 > - Android sürüm 6,0 ' den sonraki öykünücü görüntüleri, Android için Visual Studio öykünücüsü 'nde kullanılamaz.
-> - Google Android Emulator artık [Hyper-V](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v)desteklemektedir.
+> - Google Android Emulator artık [Hyper-V](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v)desteklemektedir.
 > - Apache Cordova için Visual Studio Araçları Google Android Emulator ile birlikte kullanılabilir. Daha fazla bilgi için bkz. [Android 'de Apache Cordova uygulamanızı çalıştırma](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator) (artık bu makalede açıklandığı gibi Hyper-V ' ı devre dışı bırakmanız gerektiğini unutmayın).
 >
-> Google Android Emulator yapılandırma ve kullanma hakkında daha fazla bilgi için, bkz. [Android Emulator kurulum](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/).
+> Google Android Emulator yapılandırma ve kullanma hakkında daha fazla bilgi için, bkz. [Android Emulator kurulum](/xamarin/android/get-started/installation/android-emulator/).
 
  Android için Visual Studio öykünücüsü, gerçek bir cihaza benzer bir performans sağlamak üzere tasarlanmıştır. Ancak uygulamanızı yayımlamadan önce, uygulamanızı fiziksel bir cihazda sınamanızı öneririz.
 
  Uygulamanızı, Android için Visual Studio öykünücüsü tarafından desteklenen Android platformları, ekran çözünürlükleri ve diğer donanım özellikleri için benzersiz bir cihaz profilinde test edebilirsiniz.
 
 ## <a name="Installing"></a>Yükleme ve kaldırma
- Yüklemenin
+ Yükleme
 
  Android için Visual Studio öykünücüsü, Visual Studio 'da bulunan platformlar arası araçların bir bileşenidir ve platformlar arası mobil geliştirme, ortak araçlar ve yazılım geliştirme setleri ' ni seçtiğinizde özel bir Visual Studio Kurulumu sırasında yüklenir. ve ardından Android için Visual Studio öykünücüsü.
 
@@ -98,11 +98,11 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
 - Parlaklığı. Öykünücünün parlaklık düzeyini değiştirmek, cihazın ekranınızda görünme biçimini görsel olarak etkilemez.
 
 ## <a name="Support"></a>Destek kaynakları
- Ana bilgisayarınız sistem gereksinimlerini karşılıyorsa ve bu sorun giderme kılavuzunda kapsanmayan bir sorunla karşılaşırsanız:
+ Ana bilgisayarınızın sistem gereksinimlerini karşıladığından ve bu sorun giderme Kılavuzu'nda ele alınmayan bir sorunla karşılaşırsanız varsa:
 
 - [Android-Emulator](https://stackoverflow.com/questions/tagged/android-emulator) ve Visual-Studio etiketini kullanarak StackOverflow 'de soru sorun.
 
-- Visual Studio 'da veya öykünücü yöneticisinde gülümseme Gönder aracını kullanarak bir sorun bildirin.
+- Visual Studio'da veya öykünücü Yöneticisi'nde gönderme gülümseme aracını kullanarak bir sorun bildirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
  Android için Visual Studio öykünücüsü için [sistem gereksinimleri](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [Android Için Visual Studio öykünücüsü sorunlarını giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: a6d6611c8ce8bdb09023794b5eca029b6b972afb
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 264647dbb22e90d722bc8a80a5b05c08d6e8366b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849983"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917486"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Windows PowerShell betiklerini kullanarak geliştirme ve test ortamlarına yayımlama
 
@@ -28,7 +28,7 @@ Bu betikleri kullanarak, geçici kullanım için sitenizin özelleştirilmiş s�
 
 * Azure SDK 2,3 veya sonraki bir sürümü. Bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/). (Web projelerine yönelik betikleri oluşturmak için Azure SDK 'ya ihtiyacınız yoktur. Bu özellik, bulut hizmetlerinde Web rolleri değil Web projelerine yöneliktir.)
 * Azure PowerShell 0.7.4 veya üzeri. Bkz. [Azure PowerShell'i yükleme ve yapılandırma](/powershell/azure/overview).
-* [Windows PowerShell 3,0](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) veya üzeri.
+* [Windows PowerShell 3,0](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) veya üzeri.
 
 ## <a name="additional-tools"></a>Ek araçlar
 

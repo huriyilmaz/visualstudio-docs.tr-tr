@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7065967ec86f7cde63c90de816fca95afce2171
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 758e2bbf69c7b48a1027819377839cbdce9204fe
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851495"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919251"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Hangi&#39;Visual Studio 2015'te yeni s
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -129,7 +129,7 @@ Birçok geliştirme ve Visual Studio ALM yeni özellikler hakkında daha fazla b
 
 - **C# / Xamarin**. Kullanım [Xamarin](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) Windows, iOS ve Android Visual Studio'da C# ile yerel uygulamalar oluşturun.
 
-     [Hata ayıklama](https://docs.microsoft.com/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) (iOS) ve [cihazda hata ayıklama](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) içinde [Xamarin Geliştirici kılavuzlarındaki](https://docs.microsoft.com/xamarin/) hata ayıklama deneyimini açıklar.
+     [Hata ayıklama](/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) (iOS) ve [cihazda hata ayıklama](/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) içinde [Xamarin Geliştirici kılavuzlarındaki](/xamarin/) hata ayıklama deneyimini açıklar.
 
 - **C++ / Android**. Kullanım [platformlar arası Mobil Geliştirme için Visual C++](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) üçüncü taraf araçlarla birlikte şablonları ister [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) Windows ve Android için yerel uygulamalar oluşturmak için.
 

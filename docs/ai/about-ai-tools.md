@@ -10,18 +10,18 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 497287e2f281a5884ba50a850169770f6750bbed
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 0c16a51381a1ef22d780f7d3c2b26821d7029e8f
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777456"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915966"
 ---
 # <a name="visual-studio-tools-for-ai"></a>AI için Visual Studio Araçları
 
 Visual Studio Tools for AI derin öğrenme/AI çözümlerini derlemek, test etmek ve dağıtmak için bir uzantıdır. Veri hazırlama ve model eğitimi işlerinin farklı bilgi işlem hedeflerine saydam olarak gönderilmesi dahil, ancak bunlarla sınırlı olmamak üzere güçlü deneme özellikleri için Azure Machine Learning ile sorunsuz bir şekilde tümleşir. Ayrıca, özel ölçümler ve çalıştırma geçmişi izleme için destek sağlar ve veri bilimi reproducibility ve denetimini etkinleştirir. Kurumsal olarak hazırlanma işbirliği, diğer kişilerle proje üzerinde güvenle çalışmasına izin verin.
 
-[Microsoft Cognitive Toolkit (CNTK)](https://docs.microsoft.com/cognitive-toolkit/), [Google TensorFlow](https://www.tensorflow.org)veya diğer derin öğrenme çerçevelerinden yararlanarak, derin öğrenme ile çalışmaya hemen başlayın.
+[Microsoft Cognitive Toolkit (CNTK)](/cognitive-toolkit/), [Google TensorFlow](https://www.tensorflow.org)veya diğer derin öğrenme çerçevelerinden yararlanarak, derin öğrenme ile çalışmaya hemen başlayın.
 
 ## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>Derin öğrenme modelleri ve AI çözümleri geliştirin, hatalarını ayıklayın ve dağıtın
 Günümüzde AI yeniliklerini hızlandırmak için Visual Studio 'nun üretkenlik özelliklerini kullanın. Sözdizimi vurgulama, IntelliSense ve metin otomatik biçimlendirme gibi yerleşik kod düzenleyici özelliklerini kullanın. Yerel değişkenlerde ve modellerde adım adım hata ayıklamayı kullanarak derin öğrenme uygulamanızı yerel ortamınızda etkileşimli bir şekilde test edebilirsiniz.

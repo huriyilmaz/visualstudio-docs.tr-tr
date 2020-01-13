@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f84e334409f4e3546d8963a51bb5cf79b31f0afd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a88f0382a93027cc952dfe44f0027e6ab1076a45
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585970"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916504"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>İzlenecek yol: n katmanlı veri uygulaması oluşturma
 *N katmanlı* veri uygulamaları, verilere erişen ve birden çok mantıksal katmana veya katmana ayrılan *uygulamalardır.* Uygulama bileşenlerini farklı katmanlara ayırmak uygulamanızın yönetilebilirliğini ve ölçeklenebilirliğini artırır. Bunu, tüm çözümü yeniden tasarlamanıza gerek kalmadan tek bir katmana uygulanabilen yeni teknolojilerin daha kolay benimsenmesini sağlayarak yapar. N katmanlı mimaride bir sunu katmanı, bir orta katman ve bir veri katmanı bulunur. Orta katmanda genellikle bir veri erişim katmanı, iş mantığı katmanı ve kimlik doğrulaması ve doğrulama gibi paylaşılan bileşenler bulunur. Veri katmanında ilişkisel bir veritabanı vardır. N katmanlı uygulamalar hassas bilgileri orta katmanın veri erişimi katmanında depolayarak sunu katmanına erişimi olan son kullanıcılardan uzakta tutulmasını sağlar. Daha fazla bilgi için bkz. [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md).
@@ -48,7 +48,7 @@ Bu izlenecek yol sırasında aşağıdaki adımları gerçekleştirirsiniz:
 
 - Veri tablolarını doldurmak için kod yazma.
 
-Bu konunun video sürümü Için video](../data-tools/media/playvideo.gif) bağlantı ![, bkz. [video nasıl yapılır: n katmanlı veri uygulaması oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90)).
+Bu konunun video sürümü Için video](../data-tools/media/playvideo.gif) bağlantı ![, bkz. [video nasıl yapılır: n katmanlı veri uygulaması oluşturma](/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90)).
 
 ## <a name="prerequisites"></a>Prerequisites
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.

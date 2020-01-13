@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 89f78e129d64b313de7bada3c72a449f1fb2aece
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 43b9d201a146538cd74e9528340845fd9fd92597
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849929"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918574"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>İzlenecek Yol: Metin Şablonları Kullanarak Kod Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Kod üretimi, kesin olarak yazılmış program kodu oluşturmanıza ve kaynak mo
  Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
 
 > [!NOTE]
-> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ile birlikte gelen [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ile birlikte gelen [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
 
  Örnek dosya aşağıda verilmiştir:
 

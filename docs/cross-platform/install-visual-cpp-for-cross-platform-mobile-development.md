@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: bda6d8e20064ab2197408db6b9a55a86325515e8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c3ea8c91c54586cf54b82566a4803b464e01750c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846730"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916488"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>C++ ile platformlar arası mobil geliştirmeyi yükleme
 
@@ -98,7 +98,7 @@ Visual Studio yükleyicisini kullanarak bir veya daha fazla üçüncü taraf ba�
 
 SDK 'yı güncelleştirmek ve isteğe bağlı araçları ve ek API düzeylerini yüklemek için Android SDK dizininde SDK Manager uygulamasını çalıştırabilirsiniz. SDK Yöneticisi uygulamasını çalıştırmak için **yönetici olarak çalıştır** kullanmadığınız sürece güncelleştirmeler yüklenemeyebilir. Android uygulaması oluşturma sorunları yaşıyorsanız, yüklü SDK 'larınıza yönelik güncelleştirmeler için SDK Yöneticisi ' ne bakın.
 
-Android SDK gelen bazı Android öykünücülerini kullanmak için donanım hızlandırmayı ayarlamanız gerekebilir. Daha fazla bilgi için bkz. [öykünücü performansı Için donanım hızlandırma (Hyper-V & HAXM)](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
+Android SDK gelen bazı Android öykünücülerini kullanmak için donanım hızlandırmayı ayarlamanız gerekebilir. Daha fazla bilgi için bkz. [öykünücü performansı Için donanım hızlandırma (Hyper-V & HAXM)](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
 
 Çoğu durumda, Visual Studio yüklediğiniz üçüncü taraf yazılım için konfigürasyonları algılayabilir ve yükleme yollarını iç ortam değişkenlerine karşı korur. Visual Studio IDE 'de bu platformlar arası geliştirme araçlarının varsayılan yollarını geçersiz kılabilirsiniz.
 

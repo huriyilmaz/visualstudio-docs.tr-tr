@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: d785ed9416959484f9829e12e1cd20cd2924adb8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0d5859016a02de259c24c213c6cfef8cb5fce005
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846764"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916561"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio’da Kapsayıcı Araçları
 
@@ -44,7 +44,7 @@ Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme h
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
-* .NET Core 2,2 ile geliştirme için [.net core 2,2 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* .NET Core ile geliştirme için [.NET Core geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/) .
 * Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="docker-support-in-visual-studio"></a>Visual Studio 'da Docker desteği
@@ -56,7 +56,7 @@ Visual Studio 'da Docker desteği, müşteri ihtiyaçlarına yanıt olarak bir d
 Visual Studio 2019 ile Docker Compose, Kubernetes ve Service Fabric kapsayıcı düzenleme hizmetleri olarak kullanabilirsiniz.
 
 > [!NOTE]
-> Tam .NET Framework konsol projesi şablonu kullanıyorsanız, Docker desteği eklediğinizde, Docker Compose kullanarak düzenleme desteği otomatik olarak eklenir.
+> Tam .NET Framework konsol projesi şablonu kullanıyorsanız, desteklenen seçenek, Proje oluşturulduktan sonra, Service Fabric veya Docker Compose kullanma seçenekleriyle **kapsayıcı Orchestrator desteği ekler** . Proje oluşturma sırasında destek ekleme ve düzenleme olmadan tek bir proje için **Docker desteği ekleme** seçeneği kullanılamaz.
 
 Visual Studio 2019 sürüm 16,4 ve sonraki sürümlerde **kapsayıcılar** penceresi kullanılabilir; Bu, çalışan kapsayıcıları görüntülemenize, kullanılabilir görüntülere gözatmanıza, ortam değişkenlerini, günlüklere ve bağlantı noktası eşlemelerini görüntülemenize, dosya sistemini incelemenize, hata ayıklayıcı eklemenize veya kapsayıcı ortamında bir Terminal penceresi açmaya olanak sağlar. Bkz. [Visual Studio 'da kapsayıcıları ve görüntüleri görüntüleme ve tanılama](view-and-diagnose-containers.md).
 

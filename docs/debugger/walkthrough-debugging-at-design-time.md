@@ -1,7 +1,7 @@
 ---
 title: Tasarım zamanında hata ayıklama | Microsoft Docs
-ms.custom: seodec18
-ms.date: 11/21/2018
+ms.custom: ''
+ms.date: 01/10/2019
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,24 +16,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82e82a75ce5ecff8e9b7e6d0b6aaf2e29728fc45
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: beb16ae52f880e31bd19a185d47b13c02026752f
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901065"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916151"
 ---
-# <a name="debug-at-design-time-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio'da tasarım zamanında hata ayıklama (C#, C++, Visual Basic F#)
+# <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>Visual Studio 'da tasarım zamanında hata ayıklama (C#, C++/CLI, Visual Basic, F#)
 
 Tasarım zamanında yerine uygulama çalışırken kodda hata ayıklamak için çalışıyor, kullanabileceğiniz **hemen** penceresi.
 
-Veri bağlama kodunu gibi XAML Tasarımcısı'ndan bir uygulama arka plan XAML kod hatalarını ayıklamak için kullanabileceğiniz **hata ayıklama** > **iliştirme**.
+Dizi bildirim temelli veri bağlama senaryoları gibi XAML Tasarımcısı 'ndan bir uygulamanın arkasındaki XAML kodunda hata ayıklamak için, **Işleme eklemek** > **hata ayıklama** kullanabilirsiniz.
 
 ## <a name="use-the-immediate-window"></a>Komut penceresi kullanın
 
 Visual Studio kullanabileceğiniz **hemen** uygulamanızı çalıştırmadan bir işlev veya alt yordamı yürütmek için penceresi. İşlev veya alt yordam bir kesme noktası içeriyorsa, Visual Studio kesme noktasında çalışmamasına neden olur. Ardından, programınızın durumunu incelemek için hata ayıklayıcı penceresini kullanabilirsiniz. Bu özelliğin adı *tasarım zamanında hata ayıklama*.
 
-Aşağıdaki örnek, Visual Basic'te. Ayrıca **hemen** tasarım zamanında penceresi C#, F#ve C++ uygulamaları.
+Aşağıdaki örnek, Visual Basic'te. Ayrıca C#, F#ve C++/CLI uygulamalarında tasarım zamanında **hemen** penceresini de kullanabilirsiniz.
 
 1. Boş bir Visual Basic konsol uygulamasına aşağıdaki kodu yapıştırın:
 
@@ -75,35 +75,37 @@ Aşağıdaki örnek, Visual Basic'te. Ayrıca **hemen** tasarım zamanında penc
 
 1. İçeriğini temizlemek için **hemen** penceresi, pencere seçip sağ **Tümünü Temizle**.
 
-## <a name="attach-to-an-app-from-the-xaml-designer"></a>XAML Tasarımcısı'ndan bir uygulamaya ekleme
+## <a name="debug-a-custom-xaml-control-at-design-time-by-attaching-to-xaml-designer"></a>XAML tasarımcısına ekleyerek tasarım zamanında özel bir XAML denetiminde hata ayıklama
 
-Bazı bildirim temelli veri bağlama senaryoları, XAML Tasarımcısı'nda arkasındaki kodda hata ayıklamak için yardımcı olur.
+1. Çözümünüzü veya projenizi Visual Studio 'da açın.
 
-1. Visual Studio projesinde yeni bir XAML sayfası gibi ekleyin *temp.xaml*. Yeni XAML sayfası boş bırakın.
+1. Çözüm/proje oluşturun.
 
-1. Çözümü oluşturun.
+1. Hata ayıklamak istediğiniz özel denetimi içeren XAML sayfasını açın.
 
-1. Açık *temp.xaml*, XAML Tasarımcısı yükler *XDesProc.exe*, veya *UwpSurface.exe* bir UWP uygulamasında.
+   Windows Build 16299 veya üstünü hedefleyen UWP projeleri için bu adım *Uıwpsurface. exe* işlemini başlatacak. Windows Build 16299 ' den önceki WPF veya UWP sürümlerinde bu adım *Xdesproc. exe* işlemini başlatacak.
 
-1. Visual Studio'nun yeni bir örneğini açın. Yeni örnekte seçin **hata ayıklama** > **iliştirme**.
+1. Visual Studio 'nun ikinci bir örneğini açın. İkinci örnekte bir çözüm veya proje açmayın.
 
-1. İçinde **iliştirme** Tasarımcı işlem gelen iletişim kutusunda **kullanılabilir işlemler** listesi.
+1. Visual Studio 'nun ikinci örneğinde **Hata Ayıkla** menüsünü açın ve **işleme Ekle...** seçeneğini belirleyin.
 
-   UWP için Windows hedefleyen projeleri 16299 derleme veya üstü, Tasarımcı işlemi *UwpSurface.exe*. Önceki 16299 WPF veya UWP sürümleri için tasarımcı işlemidir *XDesProc.exe*.
+1. Proje türüne bağlı olarak (önceki adımlara bakın), kullanılabilir işlemler listesinden *Uıwpsurface. exe* veya *xdesproc. exe* işlemini seçin.
 
-1. Emin **ekleme** ayarlanmış .NET sürümünüz için doğru kod türü gibi **yönetilen kod (CoreCLR)**.
+1. **Işleme İliştir** Iletişim kutusunun **İliştir** alanına hata ayıklamak istediğiniz özel denetim için doğru kod türünü seçin.
 
-1. Seçin **ekleme**.
+   Özel denetiminiz bir .NET dilinde yazılmışsa, **yönetilen (CoreCLR)** gibi uygun .NET kod türünü seçin. Özel denetiminiz ' de C++yazılmışsa, **Yerel**' i seçin.
 
-1. İşleme bağlı olsa da diğer Visual Studio örneğine geçin ve uygulamanızın arkasındaki kodda hata ayıklamak istediğiniz kesme noktaları ayarlayın.
+1. **Ekle** düğmesine tıklayarak Visual Studio 'nun ikinci örneğini iliştirin.
 
-   Örneğin, tasarım zamanında bir TextBlock bağlar aşağıdaki XAML için tür dönüştürücüsü kodda bir kesme noktası ayarlayabilirsiniz.
+1. Visual Studio 'nun ikinci örneğinde, hata ayıklamak istediğiniz özel denetimle ilişkili kod dosyalarını açın. Tüm çözüm veya proje için değil, yalnızca dosyaları açık olduğunuzdan emin olun.
 
-    ```xaml
-    <TextBlock Text="{Binding title, ConverterParameter=lower, Converter={StaticResource StringFormatConverter}, Mode=TwoWay}"  />
-    ```
+1. Gerekli kesme noktalarını önceden açılan dosyalara yerleştirin.
 
-   Sayfa yüklendiğinde, kesme noktasına ulaşılır.
+1. Visual Studio 'nun ilk örneğinde, hata ayıklamak istediğiniz özel denetimi içeren XAML sayfasını kapatın (önceki adımlarda açtığınız sayfa).
+
+1. Visual Studio 'nun ilk örneğinde, önceki adımda kapattığınız XAML sayfasını açın. Bu, Visual Studio 'nun ikinci örneğinde ayarladığınız ilk kesme noktasında hata ayıklayıcının durdurulmasına neden olur.
+
+1. Visual Studio 'nun ikinci örneğindeki kodda hata ayıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

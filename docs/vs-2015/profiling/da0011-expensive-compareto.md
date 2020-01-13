@@ -1,5 +1,5 @@
 ---
-title: 'DA0011: Pahalı CompareTo | Microsoft Docs'
+title: 'DA0011: pahalı CompareTo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,31 +14,31 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 86d41a2717eb3ef7bd49f8d34b85198a55e5101c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ed433612498a6b7d4b87291311d7fd6efcb0974
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158645"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918379"
 ---
 # <a name="da0011-expensive-compareto"></a>DA0011: Pahalı CompareTo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [DA0011: Pahalı CompareTo](https://docs.microsoft.com/visualstudio/profiling/da0011-expensive-compareto).  
+Visual Studio ile ilgili en son belgeler için bkz. [DA0011: pahalı CompareTo](/visualstudio/profiling/da0011-expensive-compareto).  
   
 |||  
 |-|-|  
 |Kural Kimliği|DA0011|  
-|Kategori|.NET framework kullanımı|  
-|Profil oluşturma yöntemleri|Örnekleme<br /><br /> .NET bellek|  
-|`Message`|CompareTo fonksiyonları ucuz ve diğer bellek ayrılamadı. gerekir. Mümkünse CompareTo fonksiyonunun karmaşıklığını azaltın.|  
+|Kategori|.NET Framework kullanımı|  
+|Profil oluşturma yöntemleri|Örnekleme<br /><br /> .NET belleği|  
+|İleti|CompareTo işlevleri, ucuz olmalı ve herhangi bir bellek ayırmamalıdır. Mümkünse, CompareTo işlevi karmaşıklığını azaltın.|  
 |Kural türü|Uyarı|  
   
 ## <a name="cause"></a>Sebep  
- CompareTo Yöntemi türü, pahalıdır veya bellek ayırır.  
+ Türün CompareTo yöntemi pahalıdır veya bellek ayırır.  
   
 ## <a name="rule-description"></a>Kural Tanımı  
- CompareTo Yöntemi verimli olmalıdır ve bellek ayrılamadı.  
+ CompareTo metotları etkili olmalıdır ve bellek ayırmamalıdır.  
   
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?  
- CompareTo Yöntemi karmaşıklığını azaltın.
+ CompareTo yönteminin karmaşıklığını azaltın.

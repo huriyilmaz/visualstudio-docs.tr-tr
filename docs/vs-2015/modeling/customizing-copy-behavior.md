@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 791e2e077ebd2ed3e97aecd4c7c6e52316b4fe3b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 5e4cb74b075a0dc9fe538ec8a09a455b30d2964b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75845296"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918916"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -91,7 +91,7 @@ DslPackage projesindeki *MyDSL*`ClipboardCommandSet.ProcessOnMenuCopyCommand()` 
 DslPackage projesindeki *MyDSL*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` geçersiz kılın.
 
  **Kopyala ve Yapıştır ile şekil yerleşimini koruyun.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)örnekle gösterilmiştir.
+Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. 
 
  Bu etkiyi elde etmek için şekilleri ve bağlayıcıları kopyalanmış ElementGroupPrototype öğesine ekleyin. Geçersiz kılınacak en kullanışlı Yöntem ElementOperations. CreateElementGroupPrototype (). Bunu yapmak için DSL projesine aşağıdaki kodu ekleyin:
 
@@ -148,7 +148,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)örnekle gösterilmiştir.
+Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz.
 
  Bu etkiyi elde etmek için `ClipboardCommandSet.ProcessOnMenuPasteCommand()` `ElementOperations.Merge()`konuma özgü sürümünü kullanacak şekilde geçersiz kılın. Bunu yapmak için DslPackage projesine aşağıdaki kodu ekleyin:
 
@@ -564,4 +564,5 @@ namespace Company.MyDsl
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md) [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [SILME davranışını özelleştirme](../modeling/customizing-deletion-behavior.md) [örnek: VMSDK devre şemaları örneği](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [Öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md) [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [silme davranışını özelleştirme](../modeling/customizing-deletion-behavior.md)
+ 

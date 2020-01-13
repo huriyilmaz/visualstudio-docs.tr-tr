@@ -9,19 +9,17 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 023559143a526732cb92bd72e06e19147261fba7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: faac29c59b78d8f3f1a0260b0b7a8ace16169f9d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850690"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916794"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantılar yapabilirsiniz. Yapabileceğiniz uzantı türleri arasında menü komutları ekleme, sürükle ve çift tıklama hareketleri için işleyiciler ekleme ve belirli değer veya ilişki türleri değiştiğinde tetiklenen kurallar sayılabilir. Uzantılar, Visual Studio Tümleştirme Uzantısı (VSıX) olarak paketlenebilir ve diğer kullanıcılara dağıtılabilir.
-
- Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [görselleştirme ve modelleme SDK (VMSDK) Web sitesi](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
 ## <a name="setting-up-the-solution"></a>Çözümü kurma
  Uzantınızın kodunu içeren bir proje ve projeyi dışarı aktaran bir VSıX projesi ayarlayın. Çözümünüz aynı VSıX 'e dahil edilen diğer projeleri içerebilir.

@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: a151e16537eb143f27e9fd518cdc2495ac954563
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851380"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915594"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Visual Studio'da Azure projenizi birden çok hizmet yapılandırması kullanacak şekilde yapılandırma
 
@@ -57,7 +57,7 @@ Varsayılan olarak, Web rolü için tanılama etkindir. Azure bulut hizmeti proj
 
 ## <a name="settings-page"></a>Ayarlar sayfası
 
-**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](https://msdn.microsoft.com/library/azure/dn602775(v=azure.11).aspx)tarafından sunulan sınıfları kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir, özellikle [Getconfigurationsettingvalue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) yöntemi.
+**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](/previous-versions/azure/dn602775(v=azure.11))tarafından sunulan sınıfları kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir, özellikle [Getconfigurationsettingvalue](/previous-versions/azure/reference/ee772857(v=azure.100)) yöntemi.
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Depolama hesabı için bağlantı dizesi yapılandırma
 

@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0c001ec8310759309c88c49c37050516b110b81
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 83c8d8e7a1afe0946c1b1f5eb25c8650e2b512f5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850799"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917323"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -34,7 +34,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 #### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara bölmek için
 
-1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](https://docs.microsoft.com/previous-versions/msp-n-p/ee658107(v=pandp.10)?redirectedfrom=MSDN)bölümünde açıklanmaktadır.
+1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](/previous-versions/msp-n-p/ee658107(v=pandp.10))bölümünde açıklanmaktadır.
 
 2. Mimari çözümünü çağıracağız bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
 

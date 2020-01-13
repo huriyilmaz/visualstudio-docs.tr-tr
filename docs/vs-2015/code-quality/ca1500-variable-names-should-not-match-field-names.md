@@ -15,17 +15,17 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b46594a53e6562c2c6a069a9a25d58b3e32865eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5753cc660d626098d234fbce93c0bf0269e52bb3
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607936"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919045"
 ---
 # <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: Değişken adları alan adlarıyla eşleşmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA1500: değişken adları alan adlarıyla eşleşmemelidir](https://docs.microsoft.com/visualstudio/code-quality/ca1500-variable-names-should-not-match-field-names).
+Visual Studio ile ilgili en son belgeler için bkz. [CA1500: değişken adları alan adlarıyla eşleşmemelidir](/visualstudio/code-quality/ca1500-variable-names-should-not-match-field-names).
 
 |||
 |-|-|
@@ -38,7 +38,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1500: değişken adları 
  Örnek yöntemi bir parametre ya da adı bildirim türünün bir örnek alanıyla eşleşen yerel bir değişken bildirir. Kuralı ihlal eden yerel değişkenleri yakalamak için, sınanan derlemenin hata ayıklama bilgileri kullanılarak oluşturulması gerekir ve ilişkili program veritabanı (. pdb) dosyası kullanılabilir olmalıdır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir örnek alanının adı bir parametre veya yerel değişken adıyla eşleştiğinde, Yöntem gövdesinin içindeyken örnek alana `this` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Me`) anahtar sözcüğü kullanılarak erişilir. Kodu koruma sırasında, bu farkı unutmak kolaydır ve parametre/yerel değişkenin, hatalara yol eden örnek alana başvurduğunu varsayın. Bu, özellikle uzun yöntem gövdeleri için geçerlidir.
+ Bir örnek alanının adı bir parametre veya yerel değişken adıyla eşleştiğinde, Yöntem gövdesinin içindeyken örnek alana `this` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]`Me`) anahtar sözcüğü kullanılarak erişilir. Kodu koruma sırasında, bu farkı unutmak kolaydır ve parametre/yerel değişkenin, hatalara yol eden örnek alana başvurduğunu varsayın. Bu, özellikle uzun yöntem gövdeleri için geçerlidir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için parametreyi/değişkeni ya da alanını yeniden adlandırın.

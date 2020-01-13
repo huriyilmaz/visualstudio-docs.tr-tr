@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 10/16/2019
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 8083d2d6446c872791501f76cb0167a92a9ef660
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: af859c1c06820aa477869f6968e9c652bd525de6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516437"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916743"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma
 
@@ -22,7 +22,7 @@ Visual Studio ile, yanıt verme. js tek sayfalı uygulama gibi istemci tarafı J
 ::: moniker range="vs-2017"
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
-* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 * [Node.js](https://nodejs.org/en/download/)
 * Windows kapsayıcıları, Windows 10 sürüm 1903 veya üzeri için, bu makalede başvurulan Docker görüntülerini kullanmak için.
 ::: moniker-end
@@ -30,7 +30,7 @@ Visual Studio ile, yanıt verme. js tek sayfalı uygulama gibi istemci tarafı J
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 * .NET Core 2,2 ile geliştirme için [.net core 2,2 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 * [Node.js](https://nodejs.org/en/download/)
 * Windows kapsayıcıları, Windows 10 sürüm 1903 veya üzeri için, bu makalede başvurulan Docker görüntülerini kullanmak için.
 ::: moniker-end
@@ -49,7 +49,7 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 
 1. Proje düğümüne sağ tıklayın ve projenize bir Dockerfile eklemek için > **Docker desteği** **Ekle** ' yi seçin.
 
-   ![Docker desteği ekle](media/container-tools-react/vs2017/add-docker-support.png)
+   ![Docker desteği ekleme](media/container-tools-react/vs2017/add-docker-support.png)
 
 1. Kapsayıcı türünü seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
@@ -61,7 +61,7 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 
 1. Proje düğümüne sağ tıklayın ve projenize bir Dockerfile eklemek için > **Docker desteği** **Ekle** ' yi seçin.
 
-   ![Docker desteği ekle](media/container-tools-react/vs2017/add-docker-support.png)
+   ![Docker desteği ekleme](media/container-tools-react/vs2017/add-docker-support.png)
 
 1. Kapsayıcı türünü seçin.
 ::: moniker-end
@@ -121,7 +121,7 @@ Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki ö
 Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, düğümü ve NPM 'yi kapsayıcıya kopyalayacak.
 
    1. Dockerfile 'ın ilk satırına ``# escape=` `` ekleyin
-   1. @No__t_0 önce aşağıdaki satırları ekleyin
+   1. `FROM … base` önce aşağıdaki satırları ekleyin
 
       ```
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
@@ -173,7 +173,7 @@ Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, 
       ENTRYPOINT ["dotnet", "WebApplication37.dll"]
       ```
 
-1. @No__t_0 kaldırarak. dockerıgnore dosyasını güncelleştirin.
+1. `**/bin`kaldırarak. dockerıgnore dosyasını güncelleştirin.
 
 ## <a name="debug"></a>Hata ayıklama
 
@@ -205,7 +205,7 @@ microsoft/dotnet  2.2-aspnetcore-runtime  fcc3887985bb  6 days ago      255MB
 > [!NOTE]
 > **Geliştirme** görüntüsü, uygulama ikililerini ve diğer içerikleri Içermez. **hata ayıklama** yapılandırmalarında, yinelemeli düzenleme ve hata ayıklama deneyimi sağlamak için birim bağlama kullanılır. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için **yayın** yapılandırmasını kullanın.
 
-@No__t_0 komutunu PMC içinde çalıştırın. Uygulamanın, kapsayıcıyı kullanarak çalıştığını unutmayın:
+`docker ps` komutunu PMC içinde çalıştırın. Uygulamanın, kapsayıcıyı kullanarak çalıştığını unutmayın:
 
 ```console
 CONTAINER ID        IMAGE                  COMMAND               CREATED             STATUS              PORTS                                           NAMES
@@ -224,11 +224,11 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **DNS ön eki** | Genel benzersiz ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
-    | **Aboneliğiniz** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | MyResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni bir kaynak grubu oluşturmak için **Yeni** ' yi seçin.|
-    | **[ISTEYIN](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Stand | Kapsayıcı kayıt defterinin hizmet katmanı  |
-    | **Kayıt defteri konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
+    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
+    | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[ISTEYIN](/azure/container-registry/container-registry-skus)** | Standard | Kapsayıcı kayıt defterinin hizmet katmanı  |
+    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
     ![Visual Studio 'nun Azure Container Registry oluştur iletişim kutusu][0]
 

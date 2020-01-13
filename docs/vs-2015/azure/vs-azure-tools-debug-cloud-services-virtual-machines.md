@@ -11,12 +11,12 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
-ms.openlocfilehash: a22d16606cad7ecbfcf3862d6b7e85b65e7aafe4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ac1f47d3daabf800a308d73727f750f971ace4e6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850405"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919160"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Bir Azure bulut hizmeti veya sanal makinesinde Visual Studio'da hata ayıklama
 
@@ -50,7 +50,7 @@ Bulut hizmetinizi böylece gerekli hizmetlerinin (örneğin, msvsmon.exe) rol ö
 Bir bulut hizmeti için uzaktan hata ayıklama etkinleştirirseniz, performans göstermesi veya ek ücrete tabi değildir. Hizmeti kullanan istemciler olumsuz yönde etkilenebilir, çünkü bir üretim hizmetine üzerinde uzaktan hata ayıklama kullanmayın.
 
 > [!NOTE]
-> Bir bulut hizmeti Visual Studio'dan yayımladığınızda, etkinleştirebilirsiniz **IntelliTrace** .NET Framework 4 veya .NET Framework 4.5 hedefleyen herhangi bir rol içinde bu hizmet için. Kullanarak **IntelliTrace**, bir rol örneğinde geçmişte gerçekleşen olayları inceleyin ve bu süre bağlamdan yeniden. Bkz: [IntelliTrace ve Visual Studio ile yayımlanan bulut hizmeti hata ayıklama](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-intellitrace-debug-published-cloud-services?view=vs-2019) ve [kullanarak IntelliTrace](https://msdn.microsoft.com/library/dd264915.aspx).
+> Bir bulut hizmeti Visual Studio'dan yayımladığınızda, etkinleştirebilirsiniz **IntelliTrace** .NET Framework 4 veya .NET Framework 4.5 hedefleyen herhangi bir rol içinde bu hizmet için. Kullanarak **IntelliTrace**, bir rol örneğinde geçmişte gerçekleşen olayları inceleyin ve bu süre bağlamdan yeniden. Bkz: [IntelliTrace ve Visual Studio ile yayımlanan bulut hizmeti hata ayıklama](vs-azure-tools-intellitrace-debug-published-cloud-services.md) ve [kullanarak IntelliTrace](../debugger/intellitrace.md).
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirmek için
 
@@ -150,7 +150,7 @@ Visual Studio ASP.NET projeleri uygulamayı test etmek için kullanabileceğiniz
     > [!NOTE]
     > Henüz oturum açmadıysanız Azure hesabınızda oturum açmanız istenir.
 
-3. Sanal makine için çeşitli ayarları seçin ve ardından **Tamam**. Bkz: [sanal makineler](https://docs.microsoft.com/previous-versions/azure/jj156003(v=azure.100)?redirectedfrom=MSDN) daha fazla bilgi için.
+3. Sanal makine için çeşitli ayarları seçin ve ardından **Tamam**. Bkz: [sanal makineler](/previous-versions/azure/jj156003(v=azure.100)) daha fazla bilgi için.
 
     DNS adı için girdiğiniz ad, sanal makinenin adı olacaktır.
 
@@ -188,6 +188,6 @@ Visual Studio ASP.NET projeleri uygulamayı test etmek için kullanabileceğiniz
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* **IntelliTrace** kullanarak bir yayın sunucusundan gelen çağrı ve olay günlüğünü toplayın. Bkz: [IntelliTrace ve Visual Studio ile yayımlanan bulut hizmeti hata ayıklama](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-intellitrace-debug-published-cloud-services?view=vs-2019).
+* **IntelliTrace** kullanarak bir yayın sunucusundan gelen çağrı ve olay günlüğünü toplayın. Bkz: [IntelliTrace ve Visual Studio ile yayımlanan bulut hizmeti hata ayıklama](vs-azure-tools-intellitrace-debug-published-cloud-services.md).
 
 * Kullanım **Azure tanılama** rolleri geliştirme ortamında veya azure'da çalıştırıp çalıştırmadığınızı ayrıntılı bilgi roller içinde kod çalışmasını oturum. Bkz: [Azure tanılama kullanılarak günlük verilerinin toplanması](https://msdn.microsoft.com/library/gg433048.aspx).

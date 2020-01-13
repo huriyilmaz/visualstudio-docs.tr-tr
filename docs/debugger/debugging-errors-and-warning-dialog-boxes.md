@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f261eac1c3cbc73bb12323c089ae88f4ffc6b120
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431682"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916444"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Hataları Ayıklama ve Uyarı İletişim Kutuları
 Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı iletişim kutuları aşağıda verilmiştir.
@@ -63,9 +63,9 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [Uzaktan hata ayıklama hataları](../debugger/remote-debugging-errors-and-troubleshooting.md)
 
- [Hata Ekle](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
+ [Hata Ekle](/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
 
- [SQL hata ayıklama kurulumu sorunlarını giderme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
+ [SQL hata ayıklama kurulumu sorunlarını giderme](/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
  [Yerel kodda hata ayıklama SSS](../debugger/debugging-native-code-faqs.md)
 

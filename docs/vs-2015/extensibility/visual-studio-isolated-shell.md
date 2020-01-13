@@ -14,12 +14,12 @@ ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 01917b9e78ee6129f09811ca2dc3e18c149c06f6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ef2d1cbffab5e38e603b0e50beb896f1c6efa23d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850384"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919200"
 ---
 # <a name="visual-studio-isolated-shell"></a>Visual Studio Yalıtılmış Kabuğu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Visual Studio yalıtılmış kabuğu, Visual Studio’nun diğer sürümleriyle 
   
  Yalıtılmış bir kabuk projesiyle çalışmak için Visual Studio SDK 'sını yüklemelisiniz. Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
   
- Yalıtılmış bir kabuk uygulaması oluşturmak için Visual Studio Kabuğu yalıtılmış projesi ile başlayın. Bu proje, yalıtılmış Kabuk uygulamanızı geliştirmek ve test etmek için gereken her şeyi içerir. Uygulamanızı dağıtan Kurulum programını yazmaya hazırsanız, [Microsoft Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketten](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J)yalıtılmış Kabuk yeniden dağıtılabilir paketini almanız gerekir.  
+ Yalıtılmış bir kabuk uygulaması oluşturmak için Visual Studio Kabuğu yalıtılmış projesi ile başlayın. Bu proje, yalıtılmış Kabuk uygulamanızı geliştirmek ve test etmek için gereken her şeyi içerir. Uygulamanızı dağıtan Kurulum programını yazmaya hazırsanız, [Microsoft Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketten](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)yalıtılmış Kabuk yeniden dağıtılabilir paketini almanız gerekir.  
   
 > [!NOTE]
 > Yalıtılmış Kabuk yeniden dağıtılabilir paketine erişebilmek için önce kısa bir Müşteri anketi doldurmanız istenir.  Anketi doldurduktan sonra, yeniden dağıtılabilir paket indirme bağlantılarının olduğu bir Visual Studio Connect sayfasına yönlendirilirsiniz.  Sonraki ziyaretlerde bulunan **Programlar &#124; VISUAL STUDIO 2015 TÜMLEŞIK ve yalıtılmış Kabuk** sekmesinin altındaki Visual Studio Connect sitesine indirme bağlantılarını bulabilirsiniz.  

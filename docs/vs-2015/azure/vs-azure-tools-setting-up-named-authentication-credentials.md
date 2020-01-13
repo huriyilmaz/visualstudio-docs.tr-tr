@@ -1,6 +1,6 @@
 ---
-title: Adlandırılmış bir kimlik doğrulama kimlik bilgilerini ayarla | Microsoft Docs
-description: Visual Studio, Visual Studio'dan azure'a uygulama yayımlama ya da mevcut bir bulut hizmetini izlemeyi azure'a isteklerinin kimliğini doğrulamak için kullanabileceğiniz kimlik bilgilerini sağlamanız öğrenin.
+title: Adlandırılmış kimlik doğrulama kimlik bilgilerini ayarlama | Microsoft Docs
+description: Visual Studio 'Nun Azure 'a yönelik isteklerin kimliğini doğrulamak için kullanabileceği kimlik bilgilerini nasıl sağlayacağınızı öğrenin. böylece, Azure 'da bir uygulamayı Visual Studio 'dan yayımlayabilir veya var olan bir bulut hizmetini izleyebilirsiniz.
 author: ghogen
 manager: jillfra
 assetId: 61570907-42a1-40e8-bcd6-952b21a55786
@@ -11,35 +11,35 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 23abafcae0e777216a8880adc05ecac38d5b3f0f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 27837390306ad29da55c7c5262ecd8fa6bcf75b3
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961956"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917374"
 ---
 # <a name="set-up-named-authentication-credentials"></a>Adlandırılmış kimlik doğrulama bilgilerini ayarlama
 
-Bir uygulamayı azure'a yayımlayacaksınız veya mevcut bir bulut hizmeti izlemek için Visual Studio isteklerinin Azure, Azure abonelik Kimliğinizi ve en az 2048 bit anahtar ile geçerli bir X.509 v3 sertifikası kimlik doğrulaması için kimlik bilgilerini gerektirir. Aşağıdaki yöntemlerden birini kullanarak bu kimlik bilgileri sağlayın:
+Bir uygulamayı Azure 'da yayınlamak veya var olan bir bulut hizmetini izlemek için, Visual Studio Azure abonelik KIMLIĞINIZ ve en az 2048 bitlik bir anahtarla geçerli bir X. 509.440 v3 sertifikası olmak üzere Azure 'Da isteklerin kimliğini doğrulamak için kimlik bilgileri gerektirir. Aşağıdaki yöntemlerden birini kullanarak bu kimlik bilgilerini sağlarsınız:
 
-- Visual Studio seçin **Görüntüle > Sunucu Gezgini**, sağ **Azure** düğümünü **Microsoft Azure aboneliğine bağlanma**ve oturum açın.
-- Bir abonelik dosyası oluşturun (`.publishsettings`), bir sertifikanın ortak anahtarı içerir. Bu makalede açıklandığı gibi abonelik dosyası birden fazla aboneliğiniz için kimlik bilgileri içerebilir.
+- Visual Studio 'da **görünüm > Sunucu Gezgini**seçin, **Azure** düğümüne sağ tıklayın, **Microsoft Azure aboneliğine Bağlan**' ı seçin ve oturum açın.
+- Sertifika için ortak anahtar içeren bir abonelik dosyası (`.publishsettings`) oluşturun. Abonelik dosyası, bu makalede açıklandığı gibi birden fazla abonelik için kimlik bilgileri içerebilir.
 
-Not: Bu kimlik bilgileri Azure depolama hizmetlerine isteklerinin kimliğini doğrulamak için kullanılan kimlik bilgileri farklıdır.
+Note: Bu kimlik bilgileri, Azure depolama hizmetlerine yönelik isteklerin kimliğini doğrulamak için kullanılan kimlik bilgilerinden farklıdır.
 
-## <a name="create-a-subscription-file"></a>Bir abonelik dosyası oluşturma
+## <a name="create-a-subscription-file"></a>Abonelik dosyası oluşturma
 
-Sunucu Gezgini'nde sağ **Azure** düğümünü seçip alt **yönetin ve filtre abonelikleri**. Ardından **sertifikaları** sekmesine ve ardından aşağıdaki işlemlerden birini yapın:
+Sunucu Gezgini, **Azure** düğümüne sağ tıklayın ve **abonelikleri Yönet ve filtrele**' yi seçin. Ardından **Sertifikalar** sekmesini seçin ve ardından aşağıdaki eylemlerden birini yapın:
 
-- Seçin **alma** açmak için **alma Microsoft Azure abonelikleri** iletişim kutusu. Seçin **indirme abonelik dosyası** bağlantısını ve tarayıcıda indirilen dosyayı geçici bir konuma kaydedin. Geri iletişim kutusunda, indirme konumuna gidin ve kimlik doğrulaması kullanmak için alma.
-- Etkin bir aboneliğiniz seçip **Düzenle**, kimlik doğrulaması kullanmak için mevcut bir aboneliği Düzenle iletişim kutusu açılır.
-- Seçin **yeni** açmak için **yeni abonelik** iletişim kutusu ve gerekli ayrıntıları sağlar. Bulut için sertifikayı karşıya yüklemek için hizmet belirtilmiştir iletişim kutusunda, Azure portalında oturum açın, bulut hizmetinize, select gidin **Ayarları > Yönetim sertifikaları**seçin **karşıya**, ardından yolunu belirtin `.cer` dosya.
+- **Microsoft Azure abonelikleri Içeri aktar** iletişim kutusunu açmak Için **içeri aktar** ' ı seçin. **Abonelik dosyasını indir** bağlantısını seçin ve tarayıcıda indirilen dosyayı geçici bir konuma kaydedin. İletişim kutusuna geri dönüp indirme konumuna gidin ve kimlik doğrulamasında kullanmak için içeri aktarın.
+- Etkin bir abonelik seçin ve kimlik doğrulamasında kullanılmak üzere mevcut bir aboneliği düzenlediğiniz bir iletişim kutusu açan **Düzenle**' yi seçin.
+- Yeni **abonelik** iletişim kutusunu açmak için **Yeni** ' yi seçin ve gereken ayrıntıları sağlayın. Sertifikayı bulut hizmetinize yüklemek için iletişim kutusunda, Azure portal oturum açın, bulut hizmetinize gidin, **ayarlar > yönetim sertifikaları**' nı seçin, **Yükle**' yi seçin ve `.cer` dosyasının yolunu belirtin.
 
-Kendiniz bir sertifika oluşturmak istiyorsanız, yönergeleri başvurabilirsiniz [oluşturma ve karşıya yükleme için Azure yönetim sertifikası](https://msdn.microsoft.com/library/windowsazure/gg551722.aspx) ve sertifikayı el ile karşıya [Azure portalında](https://portal.azure.com/).
+Kendiniz bir sertifika oluşturmak isterseniz, [Azure için bir yönetim sertifikası oluşturma ve yükleme](https://msdn.microsoft.com/library/windowsazure/gg551722.aspx) ' deki yönergelere başvurabilirsiniz ve sonra sertifikayı [Azure Portal](https://portal.azure.com/)el ile yükleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Web Apps'e genel bakış](https://docs.microsoft.com/azure/app-service/)
-- [Uygulamanızı Azure App Service'e dağıtma](https://docs.microsoft.com/azure/app-service/app-service-deploy-local-git) 
-- [Visual Studio kullanarak webjob'ları dağıtma](https://docs.microsoft.com/azure/app-service/websites-dotnet-deploy-webjobs)
-- [Bir bulut hizmeti oluşturma ve dağıtma](https://docs.microsoft.com/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
+- [Web Apps genel bakış](/azure/app-service/)
+- [Uygulamanızı Azure App Service dağıtma](/azure/app-service/app-service-deploy-local-git) 
+- [Visual Studio kullanarak Web İşleri dağıtma](/azure/app-service/websites-dotnet-deploy-webjobs)
+- [Bulut hizmeti oluşturma ve dağıtma](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)

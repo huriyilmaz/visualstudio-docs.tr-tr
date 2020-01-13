@@ -9,12 +9,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5794aa5ab7dc14932c65a9156ea9252e71731155
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 60951091914474f07f19672799fb59c8b2d0aa56
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299478"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919136"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>Uygulamaları Evrensel Windows Platformu’na (UWP) geçirme
 Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygulamaları, Windows Phone 8,1 uygulamaları veya Visual Studio 2015 RC ile oluşturulan Evrensel Windows uygulamaları için gerekli olan proje dosyalarınızda el ile yapılan değişiklikleri yapın. (Hem Windows uygulama projesi hem de Windows Phone projesi olan bir Windows 8.1 Universal uygulamanız varsa, her bir projeyi geçirmek için adımları izlemeniz gerekir.)
@@ -236,7 +236,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
       </ItemGroup>
     ```
 
-14. Yaptığınız değişiklikleri kaydedin.
+14. Değişikliklerinizi kaydedin.
 
 15. . Csproj veya. vbproj dosyasını kapatın.
 
@@ -317,7 +317,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
     ```
 
-6. Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
+6. Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
 
 7. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
@@ -691,7 +691,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
    ```
 
-8. > Öğeleri NuGet paketlerine > \<başvurusuna sahip \<ItemGroup bulun. Gelecek bir adım için bu bilgilere ihtiyaç duyduğundan, başvurulan NuGet paketlerini göz önünde bulabilirsiniz. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](https://docs.microsoft.com/nuget/) sürüm 3 ' ü kullanmadır.
+8. > Öğeleri NuGet paketlerine > \<başvurusuna sahip \<ItemGroup bulun. Gelecek bir adım için bu bilgilere ihtiyaç duyduğundan, başvurulan NuGet paketlerini göz önünde bulabilirsiniz. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](/nuget/) sürüm 3 ' ü kullanmadır.
 
     \<ItemGroup > ve tüm alt öğelerini kaldırın. Örneğin, Visual Studio RC ile oluşturulan UWP projesi, kaldırılması gereken aşağıdaki NuGet paketlerine sahip olacaktır:
 
@@ -723,7 +723,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 9. \<AppxManifest > öğesi içeren \<ItemGroup > öğesini bulun. Include özniteliği: Packages. config olarak ayarlanmış bir \<None > öğesi varsa, silin. Ayrıca, Include özniteliğiyle birlikte \<None > öğesi ekleyin ve değerini: Project. JSON olarak ayarlayın.
 
-10. Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
+10. Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
 
 11. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
@@ -737,9 +737,9 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
         ```
 
-    2. Yaptığınız değişiklikleri kaydedin.
+    2. Değişikliklerinizi kaydedin.
 
-14. Önceki adımda sildiğiniz paketleri eklemek için NuGet yöneticisini kullanın. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](https://docs.microsoft.com/nuget/) sürüm 3 ' ü kullanmadır.
+14. Önceki adımda sildiğiniz paketleri eklemek için NuGet yöneticisini kullanın. Visual Studio 2015 RC ile Visual Studio 2015 RTM arasındaki Windows 10 proje biçimi arasındaki önemli bir fark, RTM biçiminin [NuGet](/nuget/) sürüm 3 ' ü kullanmadır.
 
     Artık uygulamanızı kodleyebilir, oluşturabilir ve hata ayıklayabilirsiniz.
 
@@ -794,7 +794,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
 
 5. .NET Native etkinleştirmek için \<EnableDotNetNativeCompatibleProfile > öğesini ve \<Usedotnetnativetoolzincirine > öğesini güncelleştirmeniz gerekir, ancak C++ şablonlarda .NET Native etkin değildir.
 
-     Yaptığınız değişiklikleri kaydedin. Ardından proje dosyasını kapatın.
+     Değişikliklerinizi kaydedin. Ardından proje dosyasını kapatın.
 
 6. Çözüm Gezgini ' de proje dosyanıza sağ tıklayın ve bağlam menüsünden projeyi yeniden yükle ' yi seçin. Projenizdeki tüm dosyalar artık Çözüm Gezgini görüntülenmelidir.
 
@@ -806,7 +806,7 @@ Visual Studio 2015 RTM ile kullanılabilmesi için, Windows Mağazası 8,1 uygul
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
         ```
 
-    2. Yaptığınız değişiklikleri kaydedin.
+    2. Değişikliklerinizi kaydedin.
 
          Artık uygulamanızı kodleyebilir, oluşturabilir ve hata ayıklayabilirsiniz.
 

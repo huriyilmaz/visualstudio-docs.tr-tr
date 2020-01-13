@@ -15,33 +15,33 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a571be6b713cd59ca290906e9398b78c8c021ba8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0ce4aa6aef9c70d0d628603afa7a256c309f280d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661162"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917937"
 ---
 # <a name="ca1822-mark-members-as-static"></a>CA1822: Üyeleri statik olarak işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA1822: üyeleri static olarak işaretleme](https://docs.microsoft.com/visualstudio/code-quality/ca1822-mark-members-as-static).
+Visual Studio ile ilgili en son belgeler için bkz. [CA1822: üyeleri static olarak işaretleme](/visualstudio/code-quality/ca1822-mark-members-as-static).
 
 |||
 |-|-|
 |TypeName|MarkMembersAsStatic|
 |CheckId|CA1822|
 |Kategori|Microsoft. Performance|
-|Yeni Değişiklik|Bozuk olmayan-üye, yaptığınız değişiklikten bağımsız olarak, derleme dışında görünür değilse.<br /><br /> Kırılmamış-üyeyi, `this` anahtar sözcüğüyle bir örnek üyesi olarak değiştirirseniz.<br /><br /> Parçalama-üyeyi bir örnek üyesinden statik üyeye değiştirirseniz ve derleme dışında görünür durumdaysa.|
+|Yeni Değişiklik|Bozuk olmayan-üye, yaptığınız değişiklikten bağımsız olarak, derleme dışında görünür değilse.<br /><br /> Parçalama-`this` anahtar sözcüğünü kullanarak üyeyi bir örnek üyesi olarak değiştirirseniz.<br /><br /> Parçalama-üyeyi bir örnek üyesinden statik üyeye değiştirirseniz ve derleme dışında görünür durumdaysa.|
 
 ## <a name="cause"></a>Sebep
- Örnek verilerine erişmeyen bir üye statik olarak işaretlenmez ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içinde paylaşılır).
+ Örnek verilerine erişmeyen bir üye statik olarak işaretlenmez ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]içinde paylaşılır).
 
 ## <a name="rule-description"></a>Kural Tanımı
- Örnek verilerine veya çağrı örnek yöntemlerine erişmeyen Üyeler statik olarak işaretlenebilir ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içinde paylaşılır). Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Sanal olmayan çağrı sitelerini yayma, geçerli nesne işaretçisinin null olmadığından emin olan her bir çağrı için çalışma zamanında bir denetim yapılmasını engeller. Bu, performansa duyarlı kod için ölçülebilir bir performans kazancı elde edebilir. Bazı durumlarda, geçerli nesne örneğine erişim hatası, doğruluk sorununu temsil eder.
+ Örnek veri veya çağrı örnek yöntemlerinin erişmez üyeleri işaretlenebilir olarak statik (paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]). Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Sanal olmayan çağrı sitelerini yayma, geçerli nesne işaretçisinin null olmadığından emin olan her bir çağrı için çalışma zamanında bir denetim yapılmasını engeller. Bu, performansa duyarlı kod için ölçülebilir bir performans kazancı elde edebilir. Bazı durumlarda, geçerli nesne örneğine erişim hatası, doğruluk sorununu temsil eder.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Üyeyi statik (veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içinde paylaşılan) olarak işaretleyin ya da uygunsa Yöntem gövdesinde ' this '/' Me ' kullanın.
+ Üyeyi statik (veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]içinde paylaşılan) olarak işaretleyin ya da uygunsa Yöntem gövdesinde ' this '/' Me ' kullanın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Daha önce sevk edilen kodun bir uyarı olması için bu kuraldan daha önce sevkedilme bir uyarı görüntülenmesini güvenlidir.

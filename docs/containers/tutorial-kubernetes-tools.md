@@ -8,18 +8,18 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 7556bf2e8568b8685cb92209bb1ae6bbfb3d211e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: f5868f97301eba62d16ea68cdaa0c97c8e20edd1
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847095"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916959"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes araçlarını kullanmaya başlama
 
 Visual Studio Kubernetes araçları, Kubernetes 'i hedefleyen Kapsayıcılı uygulamaların geliştirilmesini kolaylaştırmaya yardımcı olur. Visual Studio, Dockerfiles ve Held grafikleri gibi Kubernetes dağıtımını desteklemek için gereken yapılandırma olarak yapılandırma dosyalarını otomatik olarak oluşturabilir. Azure Dev Spaces kullanarak canlı bir Azure Kubernetes hizmeti (AKS) kümesinde kodunuzda hata ayıklayın veya doğrudan Visual Studio içinden bir AKS kümesinde yayımlayabilirsiniz.
 
-Bu öğreticide, bir projeye Kubernetes desteği eklemek ve AKS 'de yayımlamak için Visual Studio kullanımı ele alınmaktadır. Birincil olarak [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) kullanarak projenizi hata ayıklamakta ve test etmek için kullanmak istiyorsanız, bunun yerine [Azure dev Spaces öğreticiye](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
+Bu öğreticide, bir projeye Kubernetes desteği eklemek ve AKS 'de yayımlamak için Visual Studio kullanımı ele alınmaktadır. Birincil olarak [Azure dev Spaces](/azure/dev-spaces/) kullanarak projenizi hata ayıklamakta ve test etmek için kullanmak istiyorsanız, bunun yerine [Azure dev Spaces öğreticiye](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -121,13 +121,13 @@ Eklenen dosyalar şunlardır:
 
 - HELI grafiği ve bir *grafik* klasörü. Bu YAML dosyaları, uygulama için Kubernetes 'e dağıtmak için kullanabileceğiniz helk grafiğini yapar. Held hakkında daha fazla bilgi için bkz. [https://www.helm.sh](https://www.helm.sh).
 
-- *AZD. YAML*. Bu, Azure Kubernetes hizmetinde hızlı ve yinelemeli bir hata ayıklama deneyimi sağlayan Azure Dev Spaces için ayarları içerir. Daha fazla bilgi için [Azure dev Spaces belgelerine](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)bakın.
+- *AZD. YAML*. Bu, Azure Kubernetes hizmetinde hızlı ve yinelemeli bir hata ayıklama deneyimi sağlayan Azure Dev Spaces için ayarları içerir. Daha fazla bilgi için [Azure dev Spaces belgelerine](/azure/dev-spaces/azure-dev-spaces)bakın.
 
 ::: moniker range="vs-2017"
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Azure Kubernetes hizmeti 'ne (AKS) yayımlama
 
-Tüm bu dosyalar yerinde olduğunda, her zaman sahip olduğunuz gibi uygulama kodunuzu yazmak ve hatalarını ayıklamak için Visual Studio IDE 'yi kullanabilirsiniz. Ayrıca, bir AKS kümesinde canlı çalışan kodunuzda hızlı bir şekilde çalıştırmak ve hata ayıklamak için [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) de kullanabilirsiniz. Daha fazla bilgi için lütfen [Azure dev Spaces öğreticisine](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio) başvurun
+Tüm bu dosyalar yerinde olduğunda, her zaman sahip olduğunuz gibi uygulama kodunuzu yazmak ve hatalarını ayıklamak için Visual Studio IDE 'yi kullanabilirsiniz. Ayrıca, bir AKS kümesinde canlı çalışan kodunuzda hızlı bir şekilde çalıştırmak ve hata ayıklamak için [Azure dev Spaces](/azure/dev-spaces/) de kullanabilirsiniz. Daha fazla bilgi için lütfen [Azure dev Spaces öğreticisine](/azure/dev-spaces/get-started-netcore-visualstudio) başvurun
 
 Kodunuzun istediğiniz şekilde çalışmasını tamamladıktan sonra doğrudan Visual Studio 'dan bir AKS kümesine yayımlayabilirsiniz.
 
@@ -171,4 +171,4 @@ Tebrikler! Artık tüm Kubernetes uygulama geliştirme için Visual Studio 'nun 
 
 [Aks belgelerini](/azure/aks)okuyarak Azure 'Da Kubernetes geliştirme hakkında daha fazla bilgi edinin.
 
-[Azure dev Spaces belgelerini](https://docs.microsoft.com/azure/dev-spaces/) okuyarak Azure dev Spaces hakkında daha fazla bilgi edinin
+[Azure dev Spaces belgelerini](/azure/dev-spaces/) okuyarak Azure dev Spaces hakkında daha fazla bilgi edinin

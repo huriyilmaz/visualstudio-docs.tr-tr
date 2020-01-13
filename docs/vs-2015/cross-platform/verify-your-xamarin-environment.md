@@ -6,12 +6,12 @@ ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
 caps.latest.revision: 15
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 134ed47d26fb7afb50bb50ac18418b436a563eb6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 98925402b91bea62e10b47312e7834ed92a1a178
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297586"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918749"
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin ortamınızı doğrulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,10 +56,10 @@ Yükleyiciler tamamlandığında (bkz. [Kurulum ve yükleme](../cross-platform/s
   
              Not: **Android Için Visual Studio öykünücüsü... menü seçeneğinin araçlar >** görmüyorsanız, öykünücü 'nın kendisi yüklü olmayabilir. **Denetim masası > programlar ve Özellikler**' e gidin, **Microsoft Visual Studio**' i seçin ve yükleyiciyi yeniden çalıştırmak için **Değiştir** ' i tıklatın. Yükleyicide **Değiştir** ' e tıklayın, **platformlar arası mobil geliştirme > Android için Microsoft Visual Studio öykünücüsü**kutusunu işaretleyin ve **Güncelleştir**' e tıklayın.  
   
-        - Windows 7 ve öncesi için: açılan kutuda Android için Xamarin Player ' ı seçin ve çalıştırmak için F5 ' e basın. Xamarin Player, Cihaz Yöneticisi ve sorun giderme ipuçları hakkında daha fazla bilgi için [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) okuyun (Xamarin.com).  
+        - Windows 7 ve öncesi için: açılan kutuda Android için Xamarin Player ' ı seçin ve çalıştırmak için F5 ' e basın. Xamarin Player, Cihaz Yöneticisi ve sorun giderme ipuçları hakkında daha fazla bilgi için [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) okuyun (Xamarin.com).  
   
 > [!NOTE]
-> Visual Studio 'da, Google Android öykünücüsü 'nü yapılandırmak için özel olarak kullanılan cihaz yöneticisini açan araç çubuğunda (aşağıda göster) Android Emulator Manager (AVD) düğmesinin varlığını fark edebilirsiniz.  Bu, Android için Visual Studio öykünücüsü veya Xamarin Player üzerinde hiçbir etkisi yoktur, her birinin profilleri yapılandırmak için kendi cihaz yöneticisi vardır.  Ayrıntılar için bkz. [Android Için Visual Studio öykünücüsü](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (VISUAL Studio ALM blogu) ve [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com) tanıtımı.  
+> Visual Studio 'da, Google Android öykünücüsü 'nü yapılandırmak için özel olarak kullanılan cihaz yöneticisini açan araç çubuğunda (aşağıda göster) Android Emulator Manager (AVD) düğmesinin varlığını fark edebilirsiniz.  Bu, Android için Visual Studio öykünücüsü veya Xamarin Player üzerinde hiçbir etkisi yoktur, her birinin profilleri yapılandırmak için kendi cihaz yöneticisi vardır.  Ayrıntılar için bkz. [Android Için Visual Studio öykünücüsü](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (VISUAL Studio ALM blogu) ve [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com) tanıtımı.  
 > ![Çapraz Splat Xamarin doğrulama 7](../cross-platform/media/crossplat-xamarin-verify-7.png "Çapraz Splat Xamarin doğrulama 7")  
   
 ## <a name="windows-phone"></a>Windows Phone  
@@ -78,7 +78,7 @@ Yükleyiciler tamamlandığında (bkz. [Kurulum ve yükleme](../cross-platform/s
   
 ## <a name="ios"></a>iOS  
   
-1. Mac 'nizin ağda kullanılabilir ve [Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com) bölümünde açıklandığı gibi Visual Studio ile eşleştirilmiş olduğundan emin olun.  
+1. Mac 'nizin ağda kullanılabilir ve [Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com) bölümünde açıklandığı gibi Visual Studio ile eşleştirilmiş olduğundan emin olun.  
   
 2. Görsel taslak tasarımcısını doğrulayın: Çözüm Gezgini iOS projesinde, **ana. görsel taslak** dosyasını açın. Burada, Visual Studio, Mac üzerinde uzaktan çalışan tasarımcıyı barındırıyor.  
   
@@ -94,7 +94,7 @@ Yükleyiciler tamamlandığında (bkz. [Kurulum ve yükleme](../cross-platform/s
   
          ![İPhone hata ayıklama hedefini seçme](../cross-platform/media/crossplat-xamarin-verify-6.png "Çapraz Splat Xamarin doğrulama 6")  
   
-    4. Mac 'e bağlanırken sorunlarla karşılaşırsanız [bağlantı sorunlarını giderme](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (Xamarin.com) makalesini okuyun.  
+    4. Mac 'e bağlanırken sorunlarla karşılaşırsanız [bağlantı sorunlarını giderme](/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (Xamarin.com) makalesini okuyun.  
   
     5. "Yüklü sağlama profili yüklü iOS imzalama anahtarlarıyla eşleşmediğinden bir hata görürseniz şunları yapın:  
   

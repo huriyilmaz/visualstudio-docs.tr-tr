@@ -1,5 +1,5 @@
 ---
-title: Android için Visual Studio öykünücüsü sistem gereksinimleri | Microsoft Docs
+title: Android için Visual Studio öykünücüsü için sistem gereksinimleri | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-mobile
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e5f7f21206953b8d99306a9b1da6935604c88b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ee89472ba4773e3b8692b293118bea154504fb55
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62815490"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916814"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Android için Visual Studio öykünücüsü sistem gereksinimleri
 
@@ -26,7 +26,7 @@ Android için Visual Studio öykünücü Hyper-V sanallaştırma teknolojisini W
 > [!IMPORTANT]
 > Kurulum programı öykünücüsü Android için Visual Studio öykünücüsü'nü çalıştıran önkoşulları denetler. Önkoşulları mevcut değildir, ancak bunları gerektirmeyen uyarıları görüntüler.
 
-## <a name="Checklist"></a> Hızlı Denetim listesi
+## <a name="Checklist"></a>Hızlı denetim listesi
 
 Android için Visual Studio öykünücü çalıştırmak için gereksinimleri hızlı listesi aşağıda verilmiştir. Daha ayrıntılı bilgi için bu konudaki sonraki bölümlere bakın.
 
@@ -71,7 +71,7 @@ Hyper-V gereksinimleri
 
 RAM ve Denetim Masası ' nda Windows gereksinimleri denetlemek için sistem ve güvenlik seçin ve ardından sistemi seçin.
 
-![Sistem gereksinimlerini doğrulayın](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")
+![Sistem gereksinimlerini doğrulama](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")
 
 ## <a name="network-requirements"></a>Ağ gereksinimleri
 
@@ -83,7 +83,7 @@ Ağınızda aşağıdaki gereksinimleri karşılaması gerekir:
 
 - Otomatik olarak yapılandırılan DNS ve ağ geçidi ayarları
 
-   Öykünücü için el ile DNS ve ağ geçidi ayarlarını yapılandırmak mümkün değildir.
+   Öykünücü için DNS ve ağ geçidi ayarlarını el ile yapılandırmak mümkün değildir.
 
   Öykünücü'de ağ sorunlarını gidermek için aşağıdaki konulara bakın:
 
@@ -93,7 +93,7 @@ Ağınızda aşağıdaki gereksinimleri karşılaması gerekir:
 
 BIOS'u Hyper-V gereksinimleri
 
-Bilgisayarınızın BIOS aşağıdaki gereksinimleri desteklemesi gerekir ve etkinleştirilmesi gerekir:
+Bilgisayarınızın BIOS 'U aşağıdaki gereksinimleri desteklemelidir ve bu koşulların etkinleştirilmesi gerekir:
 
 - Donanım destekli sanallaştırma
 
@@ -107,7 +107,7 @@ Bilgisayar ve BIOS ayarları zaten Hyper-V desteklemek üzere yapılandırıldı
 
 |Gereksinim|Denetleyin ve bu gereksinim etkinleştirme|
 |-----------------|----------------------------------------------|
-|Hyper-V yüklü olmalıdır|İçin kullanılan aynı yönergeleri izleyerek [Hyper-V için Windows Phone öykünücüsü'nü etkinleştirme](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105)).<br /><br /> Durumunu **Hyper-V sanal makine Yönetimi** Hizmetler ek bileşeninde hizmet.|
+|Hyper-V yüklü olmalıdır|İçin kullanılan aynı yönergeleri izleyerek [Hyper-V için Windows Phone öykünücüsü'nü etkinleştirme](/previous-versions/windows/apps/jj863509(v=vs.105)).<br /><br /> Durumunu **Hyper-V sanal makine Yönetimi** Hizmetler ek bileşeninde hizmet.|
 |Hyper-V çalıştıran gerekir.|Hizmetleri yönetme hakkında daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> -   [Başlat, Durdur, duraklatma, sürdürme veya bir hizmetini yeniden başlatın](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Bir hizmetin nasıl başlatılacağını yapılandırın](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
  Yerel Hyper-V Yöneticileri grubunun bir üyesi olmanız gerekir.
@@ -119,16 +119,16 @@ Bilgisayar ve BIOS ayarları zaten Hyper-V desteklemek üzere yapılandırıldı
 > [!IMPORTANT]
 > Gruba katıldıktan sonra oturumunu kapatmanız veya etkili değişiklik yapmak için yeniden başlatın.
 
- ![Birleştirme Hyper&#45;V Administrators güvenlik grubunun](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")
+ ![Hyper&#45;V yöneticileri güvenlik grubuna katılma](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")
 
  Kendiniz bir gruba el ile eklemek için yerel kullanıcılar ve Gruplar ek bileşenini açın.
 
-## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a>Önyüklenebilir bir VHD'den öykünücüyü çalıştırma desteklenmiyor
- Önyüklenebilir bir VHD'den Windows çalışırken bir uygulamayı Android için Visual Studio öykünücü üzerinde çalıştırmayı denerseniz öykünücü genellikle başlaması birkaç dakika sürer veya başlatılamıyor. Öykünücü başlatmak başarısız olduğunda, aşağıdaki iletiyi görürsünüz: Uygulama dağıtımı başarısız oldu. Lütfen yeniden deneyin.
+## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a>Öykünücüyü önyüklenebilir bir VHD 'den çalıştırmak desteklenmez
+ Önyüklenebilir bir VHD'den Windows çalışırken bir uygulamayı Android için Visual Studio öykünücü üzerinde çalıştırmayı denerseniz öykünücü genellikle başlaması birkaç dakika sürer veya başlatılamıyor. Öykünücü başlatmak başarısız olduğunda, aşağıdaki iletiyi görürsünüz: uygulama dağıtımı başarısız oldu. Lütfen yeniden deneyin.
 
- Bu yapılandırma desteklenmez. İlgili sorunlar hakkında daha fazla bilgi için bkz: [Android için Visual Studio öykünücü sorun giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md).
+ Bu yapılandırma desteklenmez. İlgili sorunlar hakkında daha fazla bilgi için bkz. [Android Için Visual Studio öykünücüsü sorunlarını giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md).
 
-## <a name="hyper-v-requires-uncompressed-and-unencrypted-files"></a>Hyper-V sıkıştırılmamış ve şifrelenmemiş dosyaları gerektirir.
+## <a name="hyper-v-requires-uncompressed-and-unencrypted-files"></a>Hyper-V sıkıştırılmamış ve şifrelenmemiş dosyalar gerektirir
  Bir sabit sürücüde NTFS dosya sistemi ile yapılandırılmış Hyper-V tarafından kullanılan sanal sabit disk dosyalarını sıkıştırılmamış ve şifrelenmemiş. Aşağıdaki dizinler sıkıştırılmış veya şifrelenmiş değil, emin olun:
 
 - %localappdata%\Microsoft\XDE
@@ -141,7 +141,7 @@ Bilgisayar ve BIOS ayarları zaten Hyper-V desteklemek üzere yapılandırıldı
 
 ReFS dosya sistemi sanal sabit disk dosyalarını bütünlüğü bit kümesi olmamalıdır.
 
-## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>Donanım grafik (OpenGL ES destek) gereksinimlerini iletme
+## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>Donanım grafikleri iletme (OpenGL ES desteği) gereksinimleri
 
 OpenGL ES tarafından kullanılanlar gibi GPU çağrıları benzetmek öykünücüsü makinenize DirectX uyumlu GPU'ya uygun DirectX sürücüleri yüklü olması gerekir.
 

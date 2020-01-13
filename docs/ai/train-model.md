@@ -1,7 +1,7 @@
 ---
-title: Azure Batch AI, modeli eğitmek için bir iş gönderdiniz
-description: Train model bulut
-keywords: yapay zeka, visual studio, modeli eğitme bulut
+title: Azure Batch AI modeli eğitme işi gönder
+description: Model bulutu eğitme
+keywords: AI, Visual Studio, eğitme modeli, bulut
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -9,51 +9,51 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: f69d978f7257398e1518828cd0bbe7ed1ff0e66c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dec70c9e9aeb9c916b511241a74b550354aff175
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563889"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915768"
 ---
-# <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI, yapay ZEKA modellerini eğitme
+# <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI AI modellerini eğitme
 
-Batch AI, yapay ZEKA ve diğer makine öğrenimi modellerini Azure sanal makinelerini, GPU desteğine sahip VM'ler gibi kümelerinde eğitmek veri bilimcileri ve yapay ZEKA Araştırmacıları sağlayan yönetilen bir hizmettir. İşinizin gereksinimlerini tanımlamak, bulma girişleri ve çıkışları ve Batch AI depolamak nereye açıklarsınız. [Azure Batch AI hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/batch-ai/overview)
+Batch AI, veri bilimcilerinin ve AI araştırmacılarının, GPU desteğine sahip VM’ler dahil olmak üzere Azure sanal makine kümeleri üzerinde AI ve diğer makine öğrenimi modelleri ile eğitimler vermesine olanak tanıyan, yönetilen bir hizmettir. Siz işinizin gereksinimlerini, girdilerin nerede bulunacağını ve çıktıların nerede depolanacağını açıklarsınız, gerisini Batch AI yapar. [Azure Batch AI hakkında daha fazla bilgi edinin](/azure/batch-ai/overview)
 
-Dinamik olarak Azure eğitimi modellerini ölçeği genişletebilirsiniz için yapay ZEKA için Visual Studio Araçları ile tümleşiktir.  Kaydederler [yapay ZEKA için Visual Studio Araçları yüklü](installation.md), Azure Machine Learning örnek galerideki önceden yapılmış tarifleri kullanarak yeni Python projesi oluşturmak daha kolaydır.
+Azure 'da eğitim modellerini dinamik olarak ölçeklendirebilmeniz için Visual Studio Tools for AI tümleşiktir.  [Visual Studio Tools for AI](installation.md)yükledikten sonra, Azure Machine Learning örnek galerisinde önceden hazırlanmış yemek tariflerini kullanarak yeni bir Python projesi oluşturmak kolaydır.
 
-1. Visual Studio'yu başlatın. Açık **Sunucu Gezgini** açarak **yapay ZEKA Araçları** menü ve seçme **kümesi seçin**
+1. Visual Studio'yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
 
-    ![Küme Seçici](media/train-model/select-cluster.png)
+    ![Küme Seçicisi](media/train-model/select-cluster.png)
 
-2. Genişletin **yapay ZEKA Araçları**. Sahip olduğunuz herhangi bir Batch AI kaynağını otomatik olarak algılanır ve sunucu Gezgini'nde görünür.
+2. **AI araçları**' nı genişletin. Sahip olduğunuz tüm Batch AI kaynakları otomatik olarak algılanır ve Sunucu Gezgini görünür.
 
-    ![Örnek Galerisi](media/train-model/batchai.png)
+    ![Örnek galerisi](media/train-model/batchai.png)
 
-3. Seçin **Görüntüle > Takım Gezgini...**  açmak için **Takım Gezgini** penceresi içinde GitHub veya Azure DevOps bağlanabilir, ya da bir depoyu kopyalayın.
+3. GitHub veya Azure DevOps 'a bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için **Görünüm > Takım Gezgini..** . öğesini seçin.
 
-    ![Azure DevOps, GitHub'ı gösteren ve bir depo kopyalama Takım Gezgini penceresi](media/train-model/team-explorer-devops.png)
+    ![Azure DevOps, GitHub ve bir depoyu klonlama gösteren Takım Gezgini penceresi](media/train-model/team-explorer-devops.png)
 
-4. Altında alanına **yerel Git depoları**, girin `https://github.com/Microsoft/samples-for-ai`, kopyalanan dosyalar için bir klasör girin ve seçin **kopya**.
+4. **Yerel Git depoları**altındaki URL alanında `https://github.com/Microsoft/samples-for-ai`girin, kopyalanmış dosyalar için bir klasör girin ve **Kopyala**' yı seçin.
 
     > [!Tip]
-    > Takım Gezgini'nde belirttiğiniz klasör, kopyalanan dosyalar almak için belirli bir klasördür. Farklı `git clone` komutunu, Ekip Gezgini'nde bir kopya oluşturma otomatik olarak oluşturmaz bir alt klasör deponun adını.
+    > Takım Gezgini içinde belirttiğiniz klasör klonlanan dosyaları almak için özel klasördür. `git clone` komutundan farklı olarak, Takım Gezgini bir kopyanın oluşturulması, otomatik olarak deponun adı ile bir alt klasör oluşturmaz.
 
-5. Kopyalama tamamlandıktan sonra tıklayın **Dosya > çözüm Aç > Proje / çözüm**
+5. Kopyalama tamamlandığında **dosya > çözüm > proje/çözüm aç** ' a tıklayın
 
-    ![Örnek Galerisi](media/train-model/open-solution.png)
+    ![Örnek galerisi](media/train-model/open-solution.png)
 
-6. Açık **samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln** dizinde kopyaladığınız depo
+6. Depoyu Klonladığınız dizinde **Samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln** açın
 
-    ![Örnek Galerisi](media/train-model/tensorflowexamples.png)
+    ![Örnek galerisi](media/train-model/tensorflowexamples.png)
 
-7. Kümesi MNIST projesi olarak **başlangıç projesi**
+7. MNIST projesini **Başlangıç projesi** olarak ayarla
 
-    ![Örnek Galerisi](media/train-model/mnist-startup.png)
+    ![Örnek galerisi](media/train-model/mnist-startup.png)
 
-8. <strong>Sağ **MNIST proje** **işi Gönder**</strong>
+8. <strong>**Mnist projesi** ' ne sağ tıklayın, **işi gönder**</strong>
 
-    ![Örnek Galerisi](media/train-model/submit-job.png)
-9. Seçin, **Azure Batch AI** küme'a tıklayın **alma**. Seçin `AzureBatchAI_TF_MNIST.json` hızlı bir şekilde kullanmak için hangi Docker görüntüsü gibi bazı varsayılan değerler doldurmak için dosya. Ardından **Gönder**
+    ![Örnek galerisi](media/train-model/submit-job.png)
+9. **Azure Batch AI** kümenizi seçip **içeri aktar**' a tıklayın. Hangi Docker görüntüsünün kullanılacağı gibi bazı varsayılan değerleri hızlıca doldurmak için `AzureBatchAI_TF_MNIST.json` dosyasını seçin. Sonra **Gönder** ' e tıklayın.
 
-    ![Örnek Galerisi](media/train-model/submit-batch.png)
+    ![Örnek galerisi](media/train-model/submit-batch.png)

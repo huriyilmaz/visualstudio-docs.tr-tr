@@ -15,17 +15,17 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5988d472317540ca1b1a7f91acd75a48fa9743b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e85929202d36be2e6dcc2b08b5b2a60e7656b27
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669113"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919185"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcıların önekleri doğru olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA1715: tanımlayıcılar doğru öneke sahip olmalıdır](https://docs.microsoft.com/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
+Visual Studio ile ilgili en son belgeler için bkz. [CA1715: tanımlayıcılar doğru öneke sahip olmalıdır](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
 
 |||
 |-|-|

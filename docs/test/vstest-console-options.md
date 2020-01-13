@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c56e6fdb6d841f32a056fc77f4928b09d386e036
-ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
+ms.openlocfilehash: affad69f6821addb50686d4f41d0bdb3bd816e8e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886429"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919020"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
 
@@ -25,6 +25,8 @@ ms.locfileid: "75886429"
 > Visual Studio 'daki MSTest bağdaştırıcı ayrıca uyumluluk için eski modda ( *MSTest. exe*ile testleri çalıştırmaya eşdeğerdir) çalışır. Eski modda, TestCaseFilter özelliğinden faydalanabilirsiniz. Bir *testsettings* dosyası belirtildiğinde, bağdaştırıcı eski moda geçebilir, **forcelegacymode** bir *runsettings* dosyasında **true** olarak ayarlanır veya **HostType**gibi öznitelikler kullanılarak.
 >
 > ARM mimarisi tabanlı bir makinede otomatikleştirilmiş testler çalıştırmak için *VSTest. Console. exe*kullanmanız gerekir.
+
+Komut satırı aracını kullanmak için bir [Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs) açın veya aracı *% Program Files (x86)% \ Microsoft Visual Studio\\< sürüm\>\\< edition\>\Common7\ide\CommonExtensions\\< platformu | içinde bulabilirsiniz. Microsoft >* .
 
 ## <a name="general-command-line-options"></a>Genel komut satırı seçenekleri
 

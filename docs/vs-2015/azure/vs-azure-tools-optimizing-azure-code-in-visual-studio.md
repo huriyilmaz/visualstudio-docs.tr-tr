@@ -11,12 +11,12 @@ ms.date: 11/11/2016
 ms.author: ghogen
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 83500f599b909f189de86305e4f017abfd015059
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: e34c51db062528c83e08e2cb463a1cc44ab476f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846563"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915753"
 ---
 # <a name="optimizing-your-azure-code"></a>Azure Kodunuzu İyileştirme
 Microsoft Azure kullanan uygulamalar programlama, uygulama ölçeklenebilirlik, davranış ve bulut ortamlarında performans sorunlarını önlemek için izlemeniz gereken kodlama bazı yöntemler vardır. Microsoft tanır ve birkaç bu sık karşılaşılan sorunları tanımlar ve bunları çözmenize yardımcı olan bir Azure Kod Analizi aracı sağlar. NuGet aracılığıyla Visual Studio araç indirebilirsiniz.
@@ -30,8 +30,6 @@ AP0000
 
 ### <a name="description"></a>Açıklama
 Bulut uygulamaları için varsayılan (işlem içi) oturum durumu modunu kullanıyorsanız, oturum durumu kaybedebilir.
-
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Neden
 Varsayılan olarak, işlem içi oturum durumu modunu web.config dosyasında belirtilen. Ayrıca, yapılandırma dosyasında belirtilen giriş, oturum durumu modu işlem içi varsayılan kullanır. İşlem modu, web sunucusu üzerindeki bellekte oturum durumunu depolar. Örneği yeniden başlatılır ya da yeni bir örneği, Yük Dengeleme veya yük devretme desteği için kullanılan web sunucusu üzerindeki bellekte oturum durumu kaydedilmez. Bu durum uygulamanın bulutta ölçeklenebilir olmasını engeller.
@@ -93,8 +91,6 @@ AP2000
 ### <a name="description"></a>Açıklama
 Paylaşılan erişim imzası (SAS) kimlik doğrulaması için kullanın. Hizmet veri yolu kimlik doğrulaması için Access Control Service (ACS) kullanımdan kaldırılıyor.
 
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
-
 ### <a name="reason"></a>Neden
 Gelişmiş güvenlik için SAS kimlik doğrulaması ile ACS kimlik doğrulaması Azure Active Directory yerini alıyor. Bkz: [Azure Active Directory, ACS geleceği](https://cloudblogs.microsoft.com/enterprisemobility/2013/06/22/azure-active-directory-is-the-future-of-acs/) geçiş planı hakkında bilgi için.
 
@@ -109,8 +105,7 @@ BrokeredMessage receivedMessage = sc.Receive();
 
 Daha fazla bilgi için aşağıdaki konulara bakın.
 
-* Genel bakış için bkz. [paylaşılan erişim imzası kimlik doğrulaması ile Service Bus](https://msdn.microsoft.com/library/dn170477.aspx)
-* [Service Bus ile paylaşılan erişim imzası kimlik doğrulaması kullanma](https://msdn.microsoft.com/library/dn205161.aspx)
+* [Service Bus ile paylaşılan erişim imzası kimlik doğrulaması kullanma](/azure/service-bus-messaging/service-bus-sas)
 
 ## <a name="consider-using-onmessage-method-to-avoid-receive-loop"></a>"Döngü Al" önlemek için Onmessageoptions yöntemi kullanmayı düşünün
 ### <a name="id"></a>Kimlik
@@ -118,8 +113,6 @@ AP2002
 
 ### <a name="description"></a>Açıklama
 Bir "alma döngü," içine geçmesini önlemek için çağırma **Onmessageoptions** arama daha iletileri almak için daha iyi bir çözüm yöntemidir **alma** yöntemi. Ancak, kullanmanız gerekirse **alma** yöntemi ve varsayılan olmayan sunucu bekleme süresini belirtin, sunucu bekleme süresi bir dakikadan fazla olduğundan emin olun.
-
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Neden
 Çağrılırken **Onmessageoptions**, kuyruk veya abonelik sürekli yoklayan bir iç ileti pompası istemci başlatır. Bu ileti pompası iletileri almak için bir çağrı sorunları sonsuz bir döngü içeriyor. Arama zaman aşımına uğrarsa, yeni bir çağrı verir. Zaman aşımı aralığı değeri tarafından belirlenir [OperationTimeout](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactorysettings.operationtimeout.aspx) özelliği [MessagingFactory](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactory.aspx)kullanılan.
@@ -223,8 +216,6 @@ AP2003
 ### <a name="description"></a>Açıklama
 Aracılı Mesajlaşma ile performansı artırmak için Service Bus zaman uyumsuz yöntemleri kullanın.
 
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
-
 ### <a name="reason"></a>Neden
 Her çağrıyı yürütmeden ana iş parçacığını engellemez çünkü zaman uyumsuz yöntemler kullanarak uygulama programı eşzamanlılık sağlar. Mesajlaşma yöntemleri, bir işlemi gerçekleştirilirken bir Service Bus kullanırken (gönderme, alma, silme, vb.) sürer. Bu süre, istek ve yanıt gecikmeye ek olarak Service Bus hizmeti tarafından işlemi işlenmesini içerir. İşlem Saati başına sayıyı artırmak için işlemler aynı anda yürütmeniz gerekir. Daha fazla bilgi için bkz [performans geliştirmeleri kullanarak Service Bus aracılı Mesajlaşma için en iyi](https://msdn.microsoft.com/library/azure/hh528527.aspx).
 
@@ -239,8 +230,6 @@ AP2004
 
 ### <a name="description"></a>Açıklama
 Partition Service Bus kuyrukları ve konuları Service Bus mesajlaşması ile daha iyi performans için.
-
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Neden
 Bölümlenmiş bir kuyruk veya konuda genel verimini artık bir tek ileti aracısı veya ileti deposu performansını sınırlı olduğundan, Service Bus kuyrukları ve konuları bölümleme performans aktarım hızı ve hizmet kullanılabilirliğini artırır. Ayrıca, bir Mesajlaşma deposunun geçici bir kesinti bölümlenmiş bir kuyruk veya konuda kullanılamaz yapmaz. Daha fazla bilgi için [bölümleme Mesajlaşma varlıkları](https://msdn.microsoft.com/library/azure/dn520246.aspx).
@@ -264,8 +253,6 @@ AP3001
 
 ### <a name="description"></a>Açıklama
 Paylaşılan Erişim İlkesi hemen başlatmak için geçerli saate SharedAccessStartTimeset kullanarak kaçınmanız gerekir. Yalnızca paylaşılan erişim ilkesi daha sonraki bir zamanda başlatmak istiyorsanız bu özelliği ayarlayın gerekir.
-
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Neden
 Saat eşitlemesi veri merkezleri arasında bir küçük zaman farkı neden olur. Örneğin, DateTime.Now kullanarak bir depolama SAS İlkesi başlangıç saati geçerli saati ayarlama mantıksal olarak düşündüğünüz veya SAS ilke hemen etkili olması benzer bir yöntem neden olur. Ancak, veri merkezi zamanlarda, önceden sahipken başlangıç saatinden biraz daha sonra veri merkezleri arasında hafif saat farklılıklarını bu sorunlara neden olabilir. Sonuç olarak, SAS İlkesi hızla (veya hatta hemen) süresinin dolmasını sağlayabilir ilke yaşam süresi çok kısa olarak ayarlanmışsa.
@@ -347,8 +334,6 @@ AP4000
 ### <a name="description"></a>Açıklama
 Kullanarak [ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) sınıfı için projeleri gibi Azure Web sitesi ve Azure mobil Hizmetleri çalışma zamanı sorunlarına neden olmaz. En iyi uygulama, ancak bu bulut kullanmak iyi bir fikirdir[ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) tüm Azure bulut uygulamalarına yönelik yapılandırmaları yönetme birleşik bir yolu olarak.
 
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
-
 ### <a name="reason"></a>Neden
 CloudConfigurationManager uygulama ortamınız için uygun yapılandırma dosyasını okur.
 
@@ -384,8 +369,6 @@ AP4001
 ### <a name="description"></a>Açıklama
 Sabit kodlanmış bağlantı dizeleri kullanın ve bunları daha sonra güncelleştirmeyi ihtiyacınız varsa, kaynak kodunuzda değişiklikler yapın ve uygulamayı yeniden derlemenize zorunda kalırsınız. Bağlantı dizelerinizi yapılandırma dosyasında depoladığınızda, ancak, bunları daha sonra yapılandırma dosyasını güncelleştirerek değiştirebilirsiniz.
 
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
-
 ### <a name="reason"></a>Neden
 Sabit kodlama bağlantı dizeleri olduğundan hatalı bir uygulama bağlantı dizeleri hızlı bir şekilde değiştirilmesi gerektiğinde sorunları oluşabilir. Ayrıca, projeyi kaynak denetimine iade edilmesi gerekiyorsa, sabit kodlanmış bağlantı dizeleri güvenlik açıklarını dizeleri kaynak kodunda görüntülenebilir beri tanıtır.
 
@@ -396,7 +379,7 @@ Bağlantı dizelerini yapılandırma dosyaları veya Azure ortamlarını Store.
 * IIS barındırılan web uygulamaları için web.config bağlantı dizeleri depolamak için kullanın.
 * ASP.NET vNext uygulamaları için bağlantı dizeleri depolamak için configuration.json kullanın.
 
-Web.config veya app.config gibi yapılandırma dosyaları kullanma hakkında daha fazla bilgi için bkz. [ASP.NET Web yapılandırma yönergeleri](https://msdn.microsoft.com/library/vstudio/ff400235\(v=vs.100\).aspx). Azure ortam değişkenleri çalışma hakkında daha fazla bilgi için bkz: [Azure Web siteleri: nasıl uygulama dizeleri ve bağlantı dizeleri çalışma](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/). Bağlantı dizesi kaynak denetiminde depolama hakkında daha fazla bilgi için bkz: [dosyalarındaki kaynak kodu deposu içinde depolanan bağlantı dizeleri gibi hassas bilgileri eklemekten kaçının](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control).
+Web.config veya app.config gibi yapılandırma dosyaları kullanma hakkında daha fazla bilgi için bkz. [ASP.NET Web yapılandırma yönergeleri](https://msdn.microsoft.com/library/vstudio/ff400235\(v=vs.100\).aspx). Azure ortam değişkenleri çalışma hakkında daha fazla bilgi için bkz: [Azure Web siteleri: nasıl uygulama dizeleri ve bağlantı dizeleri çalışma](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/). Bağlantı dizesi kaynak denetiminde depolama hakkında daha fazla bilgi için bkz: [dosyalarındaki kaynak kodu deposu içinde depolanan bağlantı dizeleri gibi hassas bilgileri eklemekten kaçının](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control).
 
 ## <a name="use-diagnostics-configuration-file"></a>Tanılama yapılandırma dosyası kullanın
 ### <a name="id"></a>Kimlik
@@ -404,8 +387,6 @@ AP5000
 
 ### <a name="description"></a>Açıklama
 Tanılama ayarları gibi kodunuzda API'si ile programlama Microsoft.WindowsAzure.Diagnostics kullanarak yapılandırmak yerine diagnostics.wadcfg dosyasında tanılama ayarları yapılandırmanız gerekir. (Ya da Azure SDK 2.5 kullanırsanız diagnostics.wadcfgx). Bunu yaparak, kodunuzu yeniden derlemenize gerek kalmadan tanılama ayarlarını değiştirebilirsiniz.
-
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Neden
 Azure SDK 2.5 (Bu, Azure tanılama 1.3 kullanır), Azure tanılama (WAD) birkaç farklı yöntem kullanarak yapılandırılabilir önce: Bu yapılandırma blob depolama, kesinlik temelli Kodun, bildirim temelli yapılandırması ya da varsayılan kullanarak ekleme yapılandırma. Ancak, tanılamayı yapılandırmak için tercih edilen yöntem, uygulama projesindeki bir XML yapılandırma dosyası (SDK 2,5 ve üzeri için tanılama. wadcfgx) kullanmaktır. Bu yaklaşımda, diagnostics.wadcfg dosya tamamen yapılandırmasını tanımlar ve güncelleştirilebilir ve dilediğiniz zaman yeniden dağıtıldı. Tanılama. wadcfg yapılandırma dosyasının kullanımını [Diagnosticmonitor](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.diagnosticmonitor.aspx)veya [Roleınstancediagnosticmanager](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.management.roleinstancediagnosticmanager.aspx) sınıflarını kullanarak yapılandırma ayarlarının programlı yöntemleriyle karıştırma, karışıklıklara yol açabilir. Bkz: [başlatılamadı ya da Azure Tanılama yapılandırmasını değiştirme](https://msdn.microsoft.com/library/azure/hh411537.aspx) daha fazla bilgi için.
@@ -429,8 +410,6 @@ AP6000
 
 ### <a name="description"></a>Açıklama
 Bellek kaydetmek için statik olarak DBContext nesneleri bildirme kaçının.
-
-Lütfen, geri bildirim ve fikirlerinizi paylaşın [Azure Kod Analizi geri bildirim](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Neden
 Sorgu sonuçları her çağrıdan DBContext nesneleri barındırır. Uygulama etki alanı bellekten kaldırılana kadar statik DBContext nesneler atıldı değil. Bu nedenle, statik bir DBContext nesnesini büyük miktarlarda bellek tüketebilir.

@@ -9,19 +9,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 71aa8b31023cedcc41a08a775f9fdf28a4489d1e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c7e8ca0fa1558ce0a2d37d4e11a35ba10a27fd2d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847186"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919090"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Etki Alanına Özgü Dillerle Çalışmaya Başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluşturulmuş bir etki alanına özgü dili (DSL) tanımlama ve kullanma konusundaki temel kavramlar açıklanmaktadır.
-
- DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>Etki alanına özgü dille ne yapabilirsiniz?
  Etki alanına özgü dil, genellikle grafik olan ve belirli bir amaç için kullanılmak üzere tasarlanan bir gösterimidir. Bunun aksine, UML gibi dillerin genel amaçlı olması gerekir. Bir DSL 'de model öğesi türlerini ve bunların ilişkilerini ve bunların ekranda nasıl sunulduğunu tanımlayabilirsiniz.
@@ -42,7 +40,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 |||
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Visual Studio için modelleme SDK 'Sı|[MSDK 'yi indir](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>DSL çözümü oluşturma
@@ -399,4 +397,4 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 2. Hala kullanmak istediğiniz deneysel DSLs 'leri veya diğer deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantılarını yeniden derleyin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleri, sınıfları ve Ilişkileri anlama,](../modeling/understanding-models-classes-and-relationships.md) [etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) [Visualizaton ve modelleme SDK 'sını](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) tanımlama
+ [Modelleri, sınıfları ve Ilişkileri anlama,](../modeling/understanding-models-classes-and-relationships.md) [etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) [Visualizaton ve modelleme SDK 'sını](https://www.microsoft.com/download/details.aspx?id=48148) tanımlama

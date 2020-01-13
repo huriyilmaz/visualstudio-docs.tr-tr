@@ -9,12 +9,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f68328fb243c00c43c8ef454f10ad94c7d004a4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7dc2ba585c500fe045d143a2b8baa2d193466fdf
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296788"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917780"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Birden çok kullanıcı hesabıyla çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ Birden çok Microsoft hesabınız ve/veya iş veya okul hesabınız varsa, bu ka
 
  ![ASP.NET için kimlik doğrulama iletişim kutusunu değiştirme](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")
 
- ASP.NET ' de farklı kimlik doğrulama türleri hakkında daha fazla bilgi için, bkz. [Visual Studio 2013 Web projeleri oluşturma](https://docs.microsoft.com/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (kimlik doğrulama hakkındaki bilgiler hala Visual Studio 2015 için geçerlidir).
+ ASP.NET ' de farklı kimlik doğrulama türleri hakkında daha fazla bilgi için, bkz. [Visual Studio 2013 Web projeleri oluşturma](/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (kimlik doğrulama hakkındaki bilgiler hala Visual Studio 2015 için geçerlidir).
 
 ### <a name="access-your-visual-studio-team-services-account"></a>Visual Studio Team Services hesabınıza erişin
  Ana menüden **takım > Team Foundation Server Connect** ' i seçerek **Takım Gezgini** penceresini açın. **Takım projelerini Seç**' e tıklayın ve ardından **Team Foundation Server seçin**' in altındaki liste kutusunda, Visual Studio Team Services hesabınızın URL 'sini görmeniz gerekir. URL 'YI seçtiğinizde, kimlik bilgilerinizi yeniden girmeniz gerekmeden oturumunuz açılır.

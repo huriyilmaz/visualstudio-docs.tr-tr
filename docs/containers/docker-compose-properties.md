@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: c2f96bcc9df16b5de7d7f3ff485431352800d27e
-ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
+ms.openlocfilehash: c528d1ca2d767b914bba2fd554699985c37d6ba1
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74072731"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916927"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
-[Kapsayıcı araçları derleme özellikleri](container-msbuild-properties.md)bölümünde açıklanan, bağımsız Docker projelerini denetleyen özelliklere ek olarak, MSBuild 'in Docker Compose özelliklerini ayarlayarak Visual Studio 'nun Docker Compose projelerinizi nasıl derlemediğini de özelleştirebilirsiniz. çözümünüzü oluşturmak için kullanır. Ayrıca, Docker Compose yapılandırma dosyalarında dosya etiketlerini ayarlayarak Visual Studio hata ayıklayıcının Docker Compose uygulamalarınızı nasıl yürüttüğünde da denetleyebilirsiniz.
+[Kapsayıcı araçları derleme özellikleri](container-msbuild-properties.md)bölümünde açıklanan tek Docker projelerini denetleyen özelliklere ek olarak, MSBuild 'in çözümünüzü oluşturmak için kullandığı Docker Compose özelliklerini ayarlayarak Visual Studio 'nun Docker Compose projelerinizi nasıl derlemediğini de özelleştirebilirsiniz. Ayrıca, Docker Compose yapılandırma dosyalarında dosya etiketlerini ayarlayarak Visual Studio hata ayıklayıcının Docker Compose uygulamalarınızı nasıl yürüttüğünde da denetleyebilirsiniz.
 
 ## <a name="how-to-set-the-msbuild-properties"></a>MSBuild özelliklerini ayarlama
 
@@ -29,13 +29,13 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker 
 
 Özellik ayarını mevcut bir `PropertyGroup` öğesine ekleyebilir veya bir tane yoksa, yeni bir `PropertyGroup` öğesi oluşturabilirsiniz.
 
-## <a name="docker-compose-msbuild-properties"></a>MSBuild özelliklerini Docker Compose
+## <a name="docker-compose-msbuild-properties"></a>Docker Compose MSBuild özellikleri
 
 Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir.
 
 | Özellik adı | Konum | Açıklama | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
-|AdditionalComposeFiles|dcproj|Tüm komutlar için Docker-Compose. exe ' ye gönderilmek üzere noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
+|AdditionalComposeFilePaths|dcproj|Tüm komutlar için Docker-Compose. exe ' ye gönderilmek üzere noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
 |DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örneğin: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose*taban dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılacak<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
 |DockerComposeBuildArguments|dcproj|`docker-compose build` komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--parallel --pull` |
 |DockerComposeDownArguments|dcproj|`docker-compose down` komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|  
@@ -92,7 +92,7 @@ services:
 
 ## <a name="docker-compose-file-labels"></a>Docker Compose dosya etiketleri
 
-Ayrıca, aynı dizinde Docker-Compose. vs. Debug. yıml (hata ayıklama yapılandırması için) veya *Docker-Compose. vs. Release. yıml* (sürüm yapılandırması için) adlı bir dosya yerleştirerek belirli ayarları geçersiz kılabilirsiniz.  *Docker-Compose. yıml* dosyası.  Bu dosyada ayarları aşağıdaki gibi belirtebilirsiniz:
+Ayrıca, *Docker-Compose. yıml* dosyanızdaki aynı dizinde *Docker-Compose. vs. Debug. Yıml* ( **hata ayıklama** yapılandırması için) veya *Docker-Compose. vs. Release. yıml* ( **Sürüm** yapılandırması için) adlı bir dosya yerleştirerek belirli ayarları geçersiz kılabilirsiniz.  Bu dosyada ayarları aşağıdaki gibi belirtebilirsiniz:
 
 ```yml
 services:

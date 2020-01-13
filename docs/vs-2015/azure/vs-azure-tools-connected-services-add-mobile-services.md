@@ -12,12 +12,12 @@ ms.technology: vs-azure
 ms.custom: vs-azure
 ms.date: 12/16/2015
 ms.author: mlearned
-ms.openlocfilehash: 83f908876b2e0de774443084d830f20d121e33d0
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0a8f6fab3c8f30834a467e2ad98843b16a9245b4
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844845"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916705"
 ---
 # <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>Visual Studio bağlı Hizmetler'i kullanarak mobil hizmet ekleme
 Visual Studio 2015 ile Azure mobil Hizmetleri'ni kullanarak bağlanabilirsiniz **bağlı hizmet Ekle** iletişim. Tüm C# istemci uygulamalarından, tüm JavaScript uygulaması veya platformlar arası Cordova uygulaması bağlanabilirsiniz. Bağlandıktan sonra oluşturma ve verilere erişmek, özel API'ler ve zamanlanan işler oluşturabilir veya anında iletme bildirimleri için destek eklendi.  Bağlı hizmetler işlemi, tüm uygun başvuruları ve bağlantı kodunu ekler. Çeşitli Azure AD gibi popüler kimlik şemaları ile kimlik doğrulaması için yerleşik destek avantajından da sürebilir Facebook, Twitter ve Microsoft Accounts.
@@ -63,9 +63,6 @@ Aşağıdaki proje türlerini Azure mobil Hizmetler'e bağlanmak için bağlı h
    5. Yeni mobil hizmet üzerinde hizmet listesinde görünmelidir **Azure Mobile Services** iletişim kutusu. Yeni mobil hizmet listeden seçin ve ardından **Ekle** düğmesini hizmet projenize ekleyin.
 5. Açılan başlangıç sayfasını inceleyin ve projenizin nasıl değiştirildiğini öğrenin. Bir bağlı hizmet ekleyişinizde tarayıcınızda bir Başlarken sayfası görüntülenir. Önerilen sonraki adımları ve kod örneklerini inceleyebilir veya projenize hangi başvuruların eklendi ve kod ve yapılandırma dosyalarınızın nasıl değiştirilmiş görmek için olanlar sayfasına geçebilirsiniz.
 6. Kod örneklerini kılavuz olarak kullanarak, mobil hizmetinize erişmek için kod yazmaya başlayın!
-
-## <a name="how-your-project-is-modified"></a>Projenizi nasıl değiştirilir
-Visual Studio'nun projenizi nasıl değiştirdiğini, proje türüne göre değişir. C# için istemci uygulamalar, [ne olduğunu – C# projeleri](https://docs.microsoft.com/azure/). JavaScript istemci uygulamalar için [ne olduğunu – JavaScript projeleri](https://docs.microsoft.com/azure/). Cordova uygulamaları için bkz: [ne olduğunu – Cordova projeleri](https://docs.microsoft.com/azure/).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Soru sorun ve Yardım alın:

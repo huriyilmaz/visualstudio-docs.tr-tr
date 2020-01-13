@@ -10,12 +10,12 @@ ms.assetid: 22491cdc-8f04-4e1c-8eb4-ff33798ec792
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 46b48370847cbb2cf8b171342aff9baf38c40a22
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e2f4926a503304491164635b983353ba7f3bb0f6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295560"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915979"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2015 'ye geçirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Uzantınızı nasıl yükselteceğiniz aşağıda verilmiştir.
   
 2. VS SDK başvuru derlemelerini projeden seçerek kaldırın, sağ tıklayın ve **kaldırın**.  
   
-3. VS SDK başvuru derlemelerinin NuGet sürümlerini ekleyin.  Hala **Çözüm Gezgini başvurular** düğümünde, **NuGet Paketlerini Yönet...** öğesini açın. iletişim kutusu.  Bu iletişim kutusu hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [Iletişim kutusunu kullanarak NuGet paketlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio). VS SDK başvuru derlemeleri [NuGet.org](https://www.nuget.org/) tarafından [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)tarafından yayımlanır.  
+3. VS SDK başvuru derlemelerinin NuGet sürümlerini ekleyin.  Hala **Çözüm Gezgini başvurular** düğümünde, **NuGet Paketlerini Yönet...** öğesini açın. iletişim kutusu.  Bu iletişim kutusu hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [Iletişim kutusunu kullanarak NuGet paketlerini yönetme](/nuget/consume-packages/install-use-packages-visual-studio). VS SDK başvuru derlemeleri [NuGet.org](https://www.nuget.org/) tarafından [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)tarafından yayımlanır.  
   
 4. **Paket kaynağınız**olarak **NuGet.org** kullanarak, Istenen başvuru derlemesiyle eşleşen NuGet paket adını arayın (örneğin: Microsoft. VisualStudio. Shell. 14.0) ve bunu projenize yükler.  NuGet, ilk derlemenin bağımlılıklarını karşılamak için birden çok başvuru derlemesi ekleyebilir.  
   

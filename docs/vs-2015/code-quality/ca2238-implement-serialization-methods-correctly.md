@@ -15,17 +15,17 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 57e735db68d90130b537f9f5f4b220bd688c7675
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f5239ca22a30b171c53c96f3be33062b860f78b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666679"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918756"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: Serileştirme yöntemlerini doğru uygulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yöntemlerini doğru uygulama](https://docs.microsoft.com/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly).
+Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yöntemlerini doğru uygulama](/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly).
 
 |||
 |-|-|
@@ -48,7 +48,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yönt
 
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
 
-  Serileştirme olay işleyicileri <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> türünde tek bir parametre alır, `void` döndürür ve `private` görünürlüğe sahiptir.
+  Serileştirme olay işleyicileri <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>türünde tek bir parametre alır, `void`döndürür ve `private` görünürlüğe sahiptir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini düzeltmek için, serileştirme olay işleyicisinin imzasını, dönüş türünü veya görünürlüğünü düzeltin.

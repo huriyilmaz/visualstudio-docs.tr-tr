@@ -11,18 +11,18 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 0f4e7635e62c8d21b6bdb3b1fd28a2fed0c60262
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: b1e5a5d4d5312968571965df8c9e28d31379720d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851890"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915599"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Bulut hizmetinin performansını test etme
 ## <a name="overview"></a>Genel bakış
 Aşağıdaki yollarla bir bulut hizmetinin performansını test edebilirsiniz:
 
-* Azure Tanılama, istekler ve bağlantılar hakkında bilgi toplamak ve hizmeti bir müşteri açısından nasıl çalıştığını gösteren site istatistiklerini gözden geçirmek için kullanın. Kullanmaya başlamak için bkz. [Azure bulut Hizmetleri ve sanal makineler için tanılamayı yapılandırma](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?view=vs-2019).
+* Azure Tanılama, istekler ve bağlantılar hakkında bilgi toplamak ve hizmeti bir müşteri açısından nasıl çalıştığını gösteren site istatistiklerini gözden geçirmek için kullanın. Kullanmaya başlamak için bkz. [Azure bulut Hizmetleri ve sanal makineler için tanılamayı yapılandırma](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
 * Visual Studio profil oluşturucu hizmeti nasıl çalışır hesaplama yönlerini derinlemesine analizini almak için kullanın. Bu konuda açıklandığı gibi bir hizmet, Azure'da çalışan performansını ölçmek için profil oluşturucu kullanabilirsiniz. Bir hizmet yerel olarak bir işlem öykünücüsünde çalışır gibi performansını ölçmek için profil oluşturucu kullanma hakkında daha fazla bilgi için bkz: [Visual Studio ProfilerişlemöykünücüsükullanarakbirAzurebuluthizmetiyerelolarakperformansınıtest](https://azure.microsoft.com/documentation/articles/cloud-services-performance-testing-visual-studio-profiler/).
 
 ## <a name="choosing-a-performance-testing-method"></a>Performans sınama yöntemi seçme
@@ -84,7 +84,7 @@ Aşağıdaki resimde, Azure uygulamasını Yayımla iletişim kutusu, profil olu
 > 
 
 ### <a name="to-configure-profiling-settings"></a>Profil oluşturma ayarlarını yapılandırmak için
-1. Çözüm Gezgini'nde, Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**. Bir bulut hizmeti yayımlama hakkında ayrıntılı adımlar için bkz: [Azure araçlarını kullanarak bir bulut hizmeti yayımlama](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publishing-a-cloud-service?view=vs-2019).
+1. Çözüm Gezgini'nde, Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**. Bir bulut hizmeti yayımlama hakkında ayrıntılı adımlar için bkz: [Azure araçlarını kullanarak bir bulut hizmeti yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
 2. İçinde **Azure uygulamasını Yayımla** iletişim kutusunda, seçtiğiniz **Gelişmiş ayarlar** sekmesi.
 3. Oluşturmayı etkinleştirmek için işaretleyin **profil oluşturmayı etkinleştir** onay kutusu.
 4. Profil oluşturma ayarlarınızı yapılandırmak için **ayarları** köprü. Profil ayarları iletişim kutusu görüntülenir.

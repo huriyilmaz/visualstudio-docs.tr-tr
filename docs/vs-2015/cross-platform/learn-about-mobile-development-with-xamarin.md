@@ -6,12 +6,12 @@ ms.assetid: e970d936-1df4-4c0c-96e3-ef6191295882
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 9924eee661f917334aed586506a107486cd5be0f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a362bd4eef2a48667c67c03e940e213fc960418b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299772"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919013"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin ile mobil geliştirme hakkında bilgi edinin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,16 +37,16 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
 - Xcode ve Xamarin ile Mac, iOS uygulamaları için yapı/imzalama Konağı ve çalışma zamanı ortamı olarak hizmet verir. Windows bilgisayarında Visual Studio 'dan iOS için derlemeler bu Mac için temsilci olarak atanır; Visual Studio 'dan bir iOS uygulamasında hata ayıklarken, Mac 'teki iOS benzeticisinde veya doğrudan Mac 'e bağlı bir tethered cihazında çalışır. Bu durumda, Mac üzerinde veya yakınında uygulamayla etkileşime geçmeniz ve Visual Studio 'da hata ayıklama deneyiminizi yapmanız gerekir.  
   
-  Bu ilişkiler aşağıda gösterilmektedir ve [Visual Studio Için Xamarin. iOS 'A giriş bölümünde](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio) iOS uygulamalarıyla çalışma hakkında daha fazla bilgi edinebilirsiniz (Xamarin.com).  
+  Bu ilişkiler aşağıda gösterilmektedir ve [Visual Studio Için Xamarin. iOS 'A giriş bölümünde](/xamarin/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio) iOS uygulamalarıyla çalışma hakkında daha fazla bilgi edinebilirsiniz (Xamarin.com).  
   
   ![Xamarin ortamında Windows ve Mac dev bilgisayarları arasındaki ilişki](../cross-platform/media/crossplat-xamarin-learn-1.png "Çapraz Splat Xamarin öğrenme 1")  
   
 ## <a name="essentials-how-projects-are-structured"></a>Essentials: projeler nasıl yapılandırılır?  
  *10-30 dakika*  
   
-1. [Kod seçeneklerini paylaşma](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/code-sharing) (Xamarin.com). Yalnızca tüm hedef platformlarda desteklenen .NET API 'Lerini kullanmayı en iyi şekilde desteklediği için taşınabilir sınıf kitaplıkları seçeneğini kullanmanızı öneririz. Çoğu iş mantığı kodu, veritabanlarına erişim, REST API çağrılarına çağrı ve taşınabilir Xamarin bileşenlerine çağrı dahil olmak üzere PCL 'de yer alır (Bu konunun sonunda bkz. daha [derin bakış: Xamarin bileşenleri](#components) ). Xamarin. Forms ile yazılan ortak kullanıcı arabirimi kodu ayrıca bir PCL 'de bulunabilir.  
+1. [Kod seçeneklerini paylaşma](/xamarin/cross-platform/app-fundamentals/code-sharing) (Xamarin.com). Yalnızca tüm hedef platformlarda desteklenen .NET API 'Lerini kullanmayı en iyi şekilde desteklediği için taşınabilir sınıf kitaplıkları seçeneğini kullanmanızı öneririz. Çoğu iş mantığı kodu, veritabanlarına erişim, REST API çağrılarına çağrı ve taşınabilir Xamarin bileşenlerine çağrı dahil olmak üzere PCL 'de yer alır (Bu konunun sonunda bkz. daha [derin bakış: Xamarin bileşenleri](#components) ). Xamarin. Forms ile yazılan ortak kullanıcı arabirimi kodu ayrıca bir PCL 'de bulunabilir.  
   
-2. Seçim [Örnek olay incelemesi: Tasky](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky) (Xamarin.com), projeyi, verileri, veri erişimini ve iş katmanlarını ayıran paylaşılan kod IÇIN bir PCL ile yapılandırma gibi tam özellikli bir uygulamanın tasarım ve yapısına yönelik bazı en iyi yöntemleri açıklar.  
+2. Seçim [Örnek olay incelemesi: Tasky](/xamarin/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky) (Xamarin.com), projeyi, verileri, veri erişimini ve iş katmanlarını ayıran paylaşılan kod IÇIN bir PCL ile yapılandırma gibi tam özellikli bir uygulamanın tasarım ve yapısına yönelik bazı en iyi yöntemleri açıklar.  
   
 ## <a name="essentials-native-and-xamarinforms-ui-layers"></a>Essentials: yerel ve Xamarin. Forms Kullanıcı arabirimi katmanları  
  *10-40 dakika*  
@@ -67,17 +67,17 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
   Platformlar arasında UI kodu paylaşımı ayarlamak ve platforma özgü ayarlamalar yapmak için özelleştirme yeteneklerini kullanmak için her zaman bir Xamarin. Forms çözümüyle başlamasını öneririz. Tek başına platforma özgü ekranlar gerekiyorsa, Xamarin Native kullanarak bunları ayrı ayrı ekleyebilirsiniz.  
   
-  Daha fazla bilgi için:  
+  Daha fazlasını öğrenin:  
   
-1. [Xamarin. Forms](https://docs.microsoft.com/xamarin/xamarin-forms/) (Xamarin.com), Xamarin. Forms ve yerel UI katmanlarının (yani, Xamarin. IOS ve Xamarin. Android) genel bir genel bakış ve olumlu yönleri sağlar.  
+1. [Xamarin. Forms](/xamarin/xamarin-forms/) (Xamarin.com), Xamarin. Forms ve yerel UI katmanlarının (yani, Xamarin. IOS ve Xamarin. Android) genel bir genel bakış ve olumlu yönleri sağlar.  
   
 2. James Montemagno 'ın video [Xamarin. Forms: Native iOS, Android & & xaml Ile C# Windows uygulamaları](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/704) (Channel9, 13m3s), başka bir genel bakış sağlar ve tanıtımlar için izlemeye devam edebilirsiniz.  
   
-3. Seçim [Xamarin. Forms 'A giriş](https://docs.microsoft.com/xamarin/get-started/quickstarts/deepdive?pivots=windows) (Xamarin.com)  
+3. Seçim [Xamarin. Forms 'A giriş](/xamarin/get-started/quickstarts/deepdive?pivots=windows) (Xamarin.com)  
   
-4. Seçim [Cihaz sınıfı](https://docs.microsoft.com/xamarin/xamarin-forms/platform/device) belgelerinde özelleştirme Için onplatform kullanma örneklerine bakın (Xamarin.com)  
+4. Seçim [Cihaz sınıfı](/xamarin/xamarin-forms/platform/device) belgelerinde özelleştirme Için onplatform kullanma örneklerine bakın (Xamarin.com)  
   
-5. Seçim Jason Smith (MSDN Magazine) ile [Xamarin. Forms Ile mobil platformlar arasında platformlar arası paylaşılan kullanıcı arabirimi kodu](https://msdn.microsoft.com/magazine/dn904669.aspx) , Xamarin. Forms içinde farklı özelleştirme seçeneklerini özetler ve bu sayede ayrıntılar, [her platformda denetimleri özelleştirme](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/) konusunda ele alınmıştır (Xamarin.com).  
+5. Seçim Jason Smith (MSDN Magazine) ile [Xamarin. Forms Ile mobil platformlar arasında platformlar arası paylaşılan kullanıcı arabirimi kodu](https://msdn.microsoft.com/magazine/dn904669.aspx) , Xamarin. Forms içinde farklı özelleştirme seçeneklerini özetler ve bu sayede ayrıntılar, [her platformda denetimleri özelleştirme](/xamarin/xamarin-forms/app-fundamentals/custom-renderer/) konusunda ele alınmıştır (Xamarin.com).  
   
 ## <a name="deeper-dive-debugging-with-emulators"></a>Daha derin bakış: Öykünücülerle hata ayıklama  
  *10-15 dakika*  
@@ -88,7 +88,7 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
   
     - **Windows 8 + makineler:** Visual Studio ile birlikte yüklenen [Android Için Microsoft 'un Visual Studio öykünücüsü](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx)' nü kullanmanızı kesinlikle öneririz.  [Android Için Visual Studio öykünücüsü](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711) videosu (Channel9, 5m55s) bir genel bakış ve tanıtım sağlar.  
   
-    - **Windows 7 veya önceki sürümleri/Mac OS X çalışıyor**: [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com) kullanın.  
+    - **Windows 7 veya önceki sürümleri/Mac OS X çalışıyor**: [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com) kullanın.  
   
 2. **Apple 'ın iOS simülatörü.** Daha fazla bilgi edinmek için [IOS simülatörü](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (Apple.com) ile çalışmaya başlama makalesini okuyun.  
   
@@ -97,4 +97,4 @@ Bu konu, Xamarin ile platformlar arası mobil uygulamalar geliştirmeyi anlaman�
 ## <a name="components"></a>Daha derin bakış: Xamarin bileşenleri  
  *10 dakika*  
   
- Xamarin bileşenleri aracılığıyla Xamarin uygulamaları için çok sayıda genişletilmiş özellik mevcuttur. Ek kullanıcı arabirimi denetimleri, kimlik doğrulaması, Microsoft Azure gibi çeşitli bulut hizmetleri ve çok daha fazlası için bileşenleri içeren [http://components.xamarin.com/](https://docs.microsoft.com/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows)' de indirilebilir şekilde kullanılabilecek tam kataloğu bulabilirsiniz.
+ Xamarin bileşenleri aracılığıyla Xamarin uygulamaları için çok sayıda genişletilmiş özellik mevcuttur. Ek kullanıcı arabirimi denetimleri, kimlik doğrulaması, Microsoft Azure gibi çeşitli bulut hizmetleri ve çok daha fazlası için bileşenleri içeren [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows)' de indirilebilir şekilde kullanılabilecek tam kataloğu bulabilirsiniz.

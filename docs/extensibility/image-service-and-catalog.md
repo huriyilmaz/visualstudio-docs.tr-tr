@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d792f13e073f11c8e6d3a652c1d041902f1209c9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 2a1611f8fcc1ba7f754b6d178b70180678cd06d6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848915"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917621"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü hizmeti ve kataloğu
 Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de tanıtılan görüntü kataloğunu benimseme için rehberlik ve en iyi uygulamaları içerir.
@@ -720,7 +720,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. Kodu, güncelleştirilmiş eşleme aracılığıyla takma ad istemek üzere görüntü hizmetini kullanacak şekilde güncelleştirin. (Bu, yönetilen kod için **çapraz görüntülerin** güncelleştirilmesi veya görüntü hizmetinden hbit eşlemler ya da hcons istemek ve yerel kod için bu dosyaları iletmek anlamına gelebilir.)
 
 ## <a name="testing-your-images"></a>Görüntülerinizi test etme
- Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](https://docs.microsoft.com/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015&redirectedfrom=MSDN)bulunabilir.
+ Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015)bulunabilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

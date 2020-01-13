@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4db5de36e9982ac3d708f8826f441751c2fd0891
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 840ea8f701bbc602292bd7c0cf602a24944ed74a
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594077"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918524"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio'yu çevrimdışı yükleme için gerekli sertifikaları yükleme
 
@@ -50,7 +50,7 @@ Bir ağ düzeni oluşturduğunuzda, gerekli sertifikaları Sertifikalar klasör�
 
 ### <a name="option-2---distribute-trusted-root-certificates-in-an-enterprise-environment"></a>2\. seçenek - güvenilen kök dağıtmak bir kuruluş ortamında sertifikaları
 
-En son kök sertifikaların olması değil çevrimdışı makinelerle kuruluşlar için bir yönetici yönergeleri kullanabilirsiniz [yapılandırma Güvenilen Kökleri ve izin verilmeyen sertifikaları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) bunları güncelleştirmek için sayfa.
+En son kök sertifikaların olması değil çevrimdışı makinelerle kuruluşlar için bir yönetici yönergeleri kullanabilirsiniz [yapılandırma Güvenilen Kökleri ve izin verilmeyen sertifikaları](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) bunları güncelleştirmek için sayfa.
 
 ### <a name="option-3---install-certificates-as-part-of-a-scripted-deployment-of-visual-studio"></a>Seçenek 3 - bir komut dosyası dağıtım Visual Studio'nun bir parçası olarak yükleme sertifikaları
 

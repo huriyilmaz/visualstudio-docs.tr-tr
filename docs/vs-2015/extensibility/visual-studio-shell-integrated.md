@@ -11,19 +11,19 @@ ms.assetid: 0b40d495-f17f-4bb9-ace8-b365a7172784
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4f6e88e5c430129faa80f34a45f9b6620d5b0d13
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 6220afc2bdf75cc22529c65d5514f5f9e0766555
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850355"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919221"
 ---
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Kabuğu (Tümleşik)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio tümleşik kabuğu, tümleşik geliştirme ortamı (IDE), hata ayıklayıcı ve kaynak denetimi tümleştirmesini içerir. Programlama dili dahil değildir. Ancak Tümleşik Kabuk, programlama dilleri eklemenize olanak sağlayan bir çerçeve sağlar.  
   
- Visual Studio tümleşik kabuğu aslında Visual Studio yalıtılmış Kabuğu ve tümleşik kabuğa özgü bileşenleri içeren ek bir yüklemenin bir birleşimidir.  Tümleşik Kabuk uygulamanız hem [Microsoft Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketten](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J) yalıtılmış Kabuk yeniden dağıtılabilir paketini hem de [Microsoft Visual Studio Kabuğu (tümleşik) yeniden dağıtılabilir paketten](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J)Tümleşik Kabuk yeniden dağıtılabilir paketini içermelidir.  
+ Visual Studio tümleşik kabuğu aslında Visual Studio yalıtılmış Kabuğu ve tümleşik kabuğa özgü bileşenleri içeren ek bir yüklemenin bir birleşimidir.  Tümleşik Kabuk uygulamanız hem yalıtılmış Kabuk yeniden dağıtılabilir paketini hem de [Microsoft Visual Studio Shell yeniden dağıtılabilir paketleri](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)' nden Tümleşik Kabuk yeniden dağıtılabilir paketini de içermelidir.  
   
 > [!NOTE]
 > Yalıtılmış ve tümleşik kabuk yeniden dağıtılabilir paketlerine erişebilmeniz için önce kısa bir müşteri anketini doldurmanız istenir.  Anketi doldurduktan sonra, yeniden dağıtılabilir paket indirme bağlantılarının olduğu bir Visual Studio Connect sayfasına yönlendirilirsiniz.  Sonraki ziyaretlerde bulunan **Programlar &#124; VISUAL STUDIO 2015 TÜMLEŞIK ve yalıtılmış Kabuk** sekmesinin altındaki Visual Studio Connect sitesine indirme bağlantılarını bulabilirsiniz.  

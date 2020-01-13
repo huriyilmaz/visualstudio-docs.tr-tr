@@ -11,12 +11,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5dac0a77b47f604ae5a10f4c8bcfb9d54b51f26c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: fc633c0cad752203b8dadca81de0f18f4e9b1b3e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850470"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918844"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Modelleme diyagramında menü komutu tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -363,4 +363,5 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleme uzantısı tanımlama ve](../modeling/define-and-install-a-modeling-extension.md) oluşturma [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [modelleme diyagramı üzerinde bir hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Özel Modelleme Araç kutusu öğesi](../modeling/define-a-custom-modeling-toolbox-item.md) tanımlama UML [modelleri için doğrulama kısıtlamaları](../modeling/define-validation-constraints-for-uml-models.md) tanımlama: UML API 'Si programlama ' i UML [API 'si ile](../modeling/programming-with-the-uml-api.md) kullanarak UML [şeması](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [düzenleme](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)
+ [Modelleme uzantısı tanımlama ve](../modeling/define-and-install-a-modeling-extension.md) [oluşturma UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [Modelleme diyagramında bir hareket işleyicisi tanımlama bir model oluşturma diyagramı](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) tanımlama [Özel Modelleme Araç kutusu Öğesı](../modeling/define-a-custom-modeling-toolbox-item.md) tanımlama UML [modelleriyle ilgili](../modeling/define-validation-constraints-for-uml-models.md) [olarak UML API](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) [programlama](../modeling/programming-with-the-uml-api.md)
+ 

@@ -6,14 +6,14 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: e1b2f332563503dcb4d63faf301000db83eed5ea
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 6f11082a0e309d4e34dd25a1085c1f8c971f28f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706828"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916936"
 ---
-# <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio Kapsayıcılı uygulamaları nasıl oluşturur
+# <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio’nun kapsayıcılı uygulama oluşturma şekli
 
 Visual Studio IDE 'den oluşturuluyor veya bir komut satırı derlemesi ayarlıyoruz, Visual Studio 'Nun projelerinizi oluşturmak için Dockerfile 'ı nasıl kullandığını bilmeniz gerekir.  Performans nedenleriyle, Visual Studio Kapsayıcılı uygulamalar için özel bir işlem izler. Visual Studio 'Nun projelerinizi nasıl derlemediğini anlamak, Dockerfile dosyasını değiştirerek yapı işleminizi özelleştirirken özellikle önemlidir.
 
@@ -64,7 +64,7 @@ Son aşama `base`' den yeniden başlar ve yayımlanan çıktıyı son görüntü
 
 Visual Studio dışında derlemek istiyorsanız, komut satırından oluşturmak için `docker build` veya `MSBuild` kullanabilirsiniz.
 
-### <a name="docker-build"></a>Docker derlemesi
+### <a name="docker-build"></a>docker build
 
 Komut satırından kapsayıcılı bir çözüm oluşturmak için, çözüm içindeki her proje için genellikle komut `docker build <context>` kullanabilirsiniz. *Yapı bağlamı* bağımsız değişkenini sağlarsınız. Dockerfile için *derleme bağlamı* , yerel makinedeki, görüntüyü oluşturmak için çalışma klasörü olarak kullanılan klasördür. Örneğin, kapsayıcıya kopyaladığınız sırada dosyaları kopyaladığınız klasördür.  .NET Core projelerinde, çözüm dosyasını (. sln) içeren klasörü kullanın.  Göreli yol olarak ifade edilen bu bağımsız değişken, genellikle proje klasöründeki bir Dockerfile ve onun üst klasöründeki çözüm dosyası için ".." olur.  .NET Framework projeleri için, yapı bağlamı çözüm klasörü değil, proje klasörüdür.
 
@@ -103,7 +103,7 @@ Warmup yalnızca **hızlı** modda gerçekleşecektir, bu nedenle çalışan kap
 
 ## <a name="volume-mapping"></a>Birim eşleme
 
-Kapsayıcılarda çalışan hata ayıklama için, Visual Studio hata ayıklayıcı ve NuGet klasörlerini konak makinesinden eşlemek için birim eşlemesi kullanır. Kapsayıcıda bağlanan birimler şunlardır:
+Kapsayıcılarda çalışan hata ayıklama için, Visual Studio hata ayıklayıcı ve NuGet klasörlerini konak makinesinden eşlemek için birim eşlemesi kullanır. Birim eşleme, [burada](https://docs.docker.com/storage/volumes/)Docker belgelerinde açıklanmıştır. Kapsayıcıda bağlanan birimler şunlardır:
 
 |||
 |-|-|
@@ -116,11 +116,11 @@ ASP.NET Core Web Apps için, SSL sertifikası ve Kullanıcı gizli dizileri içi
 
 ## <a name="ssl-enabled-aspnet-core-apps"></a>SSL özellikli ASP.NET Core uygulamalar
 
-Visual Studio 'daki kapsayıcı araçları, bir geliştirme sertifikasıyla SSL özellikli ASP.NET Core uygulamasında hata ayıklamayı destekler, bu sayede kapsayıcı olmadan çalışmayı beklemeniz gerekir. Bu işlemi gerçekleştirmek için, Visual Studio sertifikayı dışarı aktarmak ve kapsayıcı için kullanılabilir hale getirmek için birkaç adım daha ekler. Akış şu şekildedir:
+Visual Studio 'daki kapsayıcı araçları, bir geliştirme sertifikasıyla SSL özellikli ASP.NET Core uygulamasında hata ayıklamayı destekler, bu sayede kapsayıcı olmadan çalışmayı beklemeniz gerekir. Bu işlemi gerçekleştirmek için, Visual Studio sertifikayı dışarı aktarmak ve kapsayıcı için kullanılabilir hale getirmek için birkaç adım daha ekler. Kapsayıcıda hata ayıklarken Visual Studio 'nun sizin için işlediği akış aşağıdadır:
 
-1. Yerel geliştirme sertifikasının konak makinede `dev-certs` aracı aracılığıyla mevcut ve güvenilir olduğundan emin olun.
-2. Sertifikayı bu belirli uygulama için Kullanıcı gizli dizileri deposunda depolanan güvenli bir parolayla%APPDATA%\ASP.NET\Https 'e aktarın.
-3. Birim bağlama aşağıdaki dizinler:
+1. `dev-certs` aracı aracılığıyla yerel geliştirme sertifikasının konak makinede mevcut ve güvenilir olmasını sağlar.
+2. Sertifikayı, bu belirli uygulama için Kullanıcı gizli dizileri deposunda depolanan güvenli bir parolayla%APPDATA%\ASP.NET\Https 'e aktarır.
+3. Volume-aşağıdaki dizinleri takar:
 
    - *%AppData%\microsoft\usergizlilikler*
    - *%APPDATA%\ASP.NET\Https*
@@ -140,7 +140,9 @@ ASP.NET Core, *https* klasörü altındaki derleme adıyla eşleşen bir sertifi
 }
 ```
 
-Kapsayıcılarda ASP.NET Core uygulamalarla SSL kullanma hakkında daha fazla bilgi için bkz. [https üzerinden Docker Ile barındırma ASP.NET Core görüntüleri](https://docs.microsoft.com/aspnet/core/security/docker-https).
+Yapılandırmanız Kapsayıcılı ve kapsayıcısız yapıları destekliyorsa, yollar kapsayıcı ortamına özgü olduğundan ortam değişkenlerini kullanmanız gerekir.
+
+Kapsayıcılarda ASP.NET Core uygulamalarla SSL kullanma hakkında daha fazla bilgi için bkz. [https üzerinden Docker Ile barındırma ASP.NET Core görüntüleri](/aspnet/core/security/docker-https).
 
 ## <a name="debugging"></a>Hata Ayıklama
 

@@ -13,12 +13,12 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e590af12e8979d16a946339cae530fd5ccc1b08d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c3e970ac2d6f7de86908a88aff6235c598ead810
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850733"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918472"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 Metin Şablonu Yazma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -242,7 +242,7 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) ' yi de kullanabilirsiniz.
+ **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) ' yi de kullanabilirsiniz.
 
  **Model dosyasını diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../includes/dsl-md.md)], bir modeli diyagram veya Windows formu olarak düzenlemenize olanak sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcılarıyla tartışmanızı kolaylaştırır. [!INCLUDE[dsl](../includes/dsl-md.md)] Ayrıca, modelin yapısını yansıtan türü kesin belirlenmiş sınıflar kümesi de oluşturur. Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
 

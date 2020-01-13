@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4af96ad0f76414468fd194b7079b3c4dbdaf2a4c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 250f1ad55f8d60396b8423098e58801d0ed81e77
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586672"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916732"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio'da Entity Framework Araçları
 
@@ -43,7 +43,7 @@ Entity Framework Araçları Visual Studio'da oluşturan özel araçlar şunlard�
 
 Araçlar oluşturma veya değiştirme bir *.edmx* dosya. Bu *.edmx* dosyası bunları arasındaki eşlemeleri kavramsal model ve depolama modeli açıklayan bilgileri içerir. Daha fazla bilgi için [EDMX](/ef/ef6/).
 
-[Entity Framework güç araçları](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) varlık veri modeli kullanan uygulamalar oluşturmanıza yardımcı olur. Güç araçları bir kavramsal model oluşturmak, mevcut bir model doğrulama, kavramsal model temelinde nesne sınıfları içeren kaynak kodu dosyaları üretmek ve modeli oluşturur görünümleri içeren kaynak kodu dosyaları üretir. Ayrıntılı bilgi için bkz. [Pre-Generated eşleme görünümleri](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views).
+[Entity Framework güç araçları](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) varlık veri modeli kullanan uygulamalar oluşturmanıza yardımcı olur. Güç araçları bir kavramsal model oluşturmak, mevcut bir model doğrulama, kavramsal model temelinde nesne sınıfları içeren kaynak kodu dosyaları üretmek ve modeli oluşturur görünümleri içeren kaynak kodu dosyaları üretir. Ayrıntılı bilgi için bkz. [Pre-Generated eşleme görünümleri](/ef/ef6/fundamentals/performance/pre-generated-views).
 
 ## <a name="related-topics"></a>İlgili konular
 

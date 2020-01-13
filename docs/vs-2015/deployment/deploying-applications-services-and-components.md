@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ca4d6a4097848021073bb77323fd0456f3dddc1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 42e3a4afec71b90a087ac927f5cbbbc0b181fadd
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74289820"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917549"
 ---
 # <a name="deploying-applications-services-and-components"></a>Uygulamaları, Hizmetleri ve Bileşenleri Dağıtma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +43,7 @@ Bir uygulamayı, hizmeti ya da bileşeni dağıtarak bunu diğer bilgisayarlarda
 |**Buluta yayımlayın:** Microsoft Azure dağıtmak için Visual Studio kullanarak uygulamaları, hizmetleri ve verileri her yerden kullanılabilir hale getirebilirsiniz.|[Uygulamaları Microsoft Azure yayımlama](/visualstudio/deployment/quickstart-deploy-to-azure)|  
 |**Windows Mağazası uygulaması yayımlama:** Uygulamalarınızı Windows Mağazası 'ndan dünyanın dört bir yanındaki müşterilere kolayca oluşturabilir, gönderebilir ve satabilirsiniz.|[Windows Mağazası uygulamalarını paketleme, dağıtma ve sorgulama](https://msdn.microsoft.com/library/hh446593\(v=vs.85\).aspx)|  
 |**Windows Phone uygulaması yayımlama:** Windows Phone geliştirme merkezi 'nde sertifika için mevcut bir uygulamaya yeni bir uygulama veya güncelleştirme gönderebilirsiniz.|[Windows Phone uygulaması yayımlama](https://developer.microsoft.com/)|  
-|**Bir ASP.NET uygulamasını veya hizmetini dağıtın:** ASP.NET uygulamalarını ve hizmetlerini çeşitli yollarla dağıtabilirsiniz.|[ASP.NET Web uygulamaları ve Hizmetleri 'ni dağıtma](https://docs.microsoft.com/aspnet/mvc/overview/deployment/)|  
+|**Bir ASP.NET uygulamasını veya hizmetini dağıtın:** ASP.NET uygulamalarını ve hizmetlerini çeşitli yollarla dağıtabilirsiniz.|[ASP.NET Web uygulamaları ve Hizmetleri 'ni dağıtma](/aspnet/mvc/overview/deployment/)|  
 |**LightSwitch uygulaması veya hizmeti dağıtma:** LightSwitch kullanarak uygulamaları ve OData hizmetlerini oluşturduktan sonra, bunları bir Web sunucusuna veya Microsoft Azure dağıtabilirsiniz.|[LightSwitch uygulamalarını dağıtma](https://msdn.microsoft.com/library/4818d933-295c-4ecc-9148-7ad9ca28dcdb)|  
 |**SharePoint için bir uygulama yayımlama:** SharePoint için bir uygulamayı Office Mağazası 'na veya dahili bir kuruluşun uygulama kataloğuna yayımlayabilirsiniz.|[Visual Studio kullanarak SharePoint için bir uygulama yayımlama](https://msdn.microsoft.com/library/office/jj220044\(v=office.15\).aspx)|  
 |**Office için bir uygulama yayımlama:** Office için bir uygulamayı Office Mağazası 'na veya dahili bir kuruluşun uygulama kataloğuna yayımlayabilirsiniz.|[Office için uygulamanızı yayımlama](https://msdn.microsoft.com/library/office/fp123515.aspx)|  

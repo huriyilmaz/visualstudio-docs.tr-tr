@@ -6,12 +6,12 @@ ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 703ee752a9f16f0abc5e4813707890a6d17947af
-ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
+ms.openlocfilehash: 5a3a05e50cfa17432bb2f31274c9b62c6b843687
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74538934"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917953"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac kullanıcıları için kurulum, yükleme ve doğrulamalar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
 2. [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)'Den Xcode indirin ve yükleyin.  
   
-3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
+3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
   
 4. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Windows bilgisayarında Visual Studio 'dan iOS ve Mac ile çalışabilmek [için XMA kullanarak Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com) yönergelerini izleyin.  
   
@@ -112,7 +112,7 @@ Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makin
   
    - "Yüklü Android SDK çok eski olduğunu" belirten bir hata alırsanız, bu iletideki **Android SDK aç** ' a tıklayın ve kullanılabilir en yeni SDK sürümünü seçin. SDK 'Yı güncelleştirmek için Visual Studio 'Yu yönetici olarak çalıştırıyor olmanız gerektiğini unutmayın.  
   
-3. Visual Studio 'dan Mac 'inizde yüklü olan öykünücüsüne bağlanabildiğini doğrulayın.  Bunun sonucunda, Xamarin Player 'ı Visual Studio içinden hata ayıklama için seçebileceğiniz Öykünücüler listesinde görecaksınız.  Bunu yapmak için, [Visual Studio 'yu Xamarin Android Player bağlama](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) yönergelerini izleyin (Xamarin.com).  
+3. Visual Studio 'dan Mac 'inizde yüklü olan öykünücüsüne bağlanabildiğini doğrulayın.  Bunun sonucunda, Xamarin Player 'ı Visual Studio içinden hata ayıklama için seçebileceğiniz Öykünücüler listesinde görecaksınız.  Bunu yapmak için, [Visual Studio 'yu Xamarin Android Player bağlama](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) yönergelerini izleyin (Xamarin.com).  
   
    **Android**  
   

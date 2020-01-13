@@ -1,5 +1,5 @@
 ---
-title: Windows Forms uygulamalarda hata ayıklamaya hazırlanma | Microsoft Docs
+title: Windows Forms uygulamalarında hata ayıklamak hazırlama | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,47 +20,47 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ff927e5b917834341e442afa00e4acad4af2d2f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e9e98411a009ea4345b567cbc38e6cf94c037323
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738093"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916391"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>Hata Ayıklama Hazırlığı: Windows Forms Uygulamaları
-Windows Forms proje şablonu Windows Forms bir uygulama oluşturur. @No__t_0 içinde bu tür bir uygulama için hata ayıklama basittir. Daha fazla bilgi için bkz. [Windows uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
+Windows Forms proje şablonu, bir Windows Forms uygulaması oluşturur. Bu tür bir uygulamada hata ayıklama [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oldukça basittir. Daha fazla bilgi için [bir Windows uygulaması projesi oluşturma](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
 
- Proje şablonuyla bir Windows Forms projesi oluşturduğunuzda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklama ve yayın yapılandırmalarına yönelik gerekli ayarları otomatik olarak oluşturur. Gerekirse, bu ayarları değiştirebilirsiniz. Bu ayarlar **\<project ad > Özellik sayfaları** iletişim kutusunda (Visual Basic**projem** ) değiştirilebilir.
+ Proje şablonuyla bir Windows Forms projesi oluşturduğunuzda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklama ve yayın yapılandırmaları için gereken ayarları otomatik olarak oluşturur. Gerekirse, bu ayarları değiştirebilirsiniz. Bu ayarlar değiştirilebilir  **\<proje adı > özellik sayfaları** iletişim kutusu (**Projem** Visual Basic'te).
 
- Daha fazla bilgi için bkz. [Önerilen özellik ayarları](../debugger/managed-debugging-recommended-property-settings.md).
+ Daha fazla bilgi için [önerilen özellik ayarları](../debugger/managed-debugging-recommended-property-settings.md).
 
- Aşağıdaki tabloda, önerilen bir ek özellik ayarı görüntülenmektedir.
+ Aşağıdaki tabloda bir ek önerilen özellik ayarı görüntüler.
 
 ### <a name="configuration-properties-in-debug-tab"></a>Hata ayıklama sekmesindeki yapılandırma özellikleri
 
-|**Özellik adı**|**Ayarlanmasını**|
+|**Özellik adı**|**Ayar**|
 |-----------------------|-----------------|
-|**Başlatma eylemi**|- **Projenin başlaması** için ayarlanan, çoğu zaman. Hata ayıklamayı başlattığınızda (genellikle dll 'Lerde hata ayıklama için) başka bir yürütülebilir dosya başlatmak istiyorsanız, **dış program Başlat** ' a ayarlayın.|
+|**Başlatma eylemi**|-Kümesine **başlangıç projesi** çoğu zaman. Kümesine **harici program Başlat** başka bir yürütülebilir başlatmak istiyorsanız başlattığınızda hata ayıklama (genellikle DLL'lerinde hata ayıklama için).|
 
- Windows Forms uygulamalarında [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] içinden veya zaten çalışan bir uygulamaya ekleyerek hata ayıklaması yapabilirsiniz. İliştirme hakkında daha fazla bilgi için bkz. [çalışan Işlemlere ekleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
+ Windows Forms uygulamaları içinde hata ayıklama [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], veya zaten çalışan bir uygulamaya ekleme. Ekleme hakkında daha fazla bilgi için bkz. [çalışan işlemlere ekleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
-### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>Bir C#, F#veya Visual Basic Windows Forms uygulamada hata ayıklamak için
+### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>Hata ayıklamak için bir C#, F#, veya Visual Basic Windows Forms uygulaması
 
-1. Projeyi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] açın.
+1. Projeyi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-2. Gerektiğinde kesme noktaları oluşturun.
+2. Kesme noktaları, gerektiği şekilde oluşturun.
 
-    Windows Forms uygulamalar olay odaklı olduğundan, kesme noktalarınız olay işleyicisi koduna veya olay işleyicisi kodu tarafından çağrılan yöntemlere yönlendirilir. Kesme noktalarının yerleştirileceği tipik olaylar şunlardır:
+    Windows Forms uygulamaları, olay temelli olduğundan, kesme noktalarınız olay işleyici kodu veya olay işleyici kodu tarafından çağrılan yöntemler geçer. Kesme noktaları yerleştirmek için tipik olaylar şunlardır:
 
-   1. Bir denetimle ilişkili olaylar (örneğin, Click, ENTER vb.)
+   1. ' A tıklayın, Enter vb. gibi bir denetim ile ilişkili olayları.
 
-   2. Yükleme, etkinleştirme vb. uygulama başlatma ve kapatmadan ilişkili olaylar.
+   2. Uygulama başlatma ve kapatma, yük, etkin, vb. gibi ilişkili olaylar.
 
    3. Odak ve doğrulama olayları.
 
-      Daha fazla bilgi için bkz. [Windows Forms olay Işleyicileri oluşturma](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms).
+      Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms).
 
-3. **Hata Ayıkla** menüsünde **Başlat**' a tıklayın.
+3. Üzerinde **hata ayıklama** menüsünde tıklatın **Başlat**.
 
 4. Hata [ayıklayıcıyla ilk bakış](../debugger/debugger-feature-tour.md)bölümünde açıklanan teknikleri kullanarak hata ayıklayın.
 

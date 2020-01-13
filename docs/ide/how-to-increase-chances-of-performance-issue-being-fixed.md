@@ -5,16 +5,16 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: bce4fa8c824b6a4f1332145c1383131eb6488b6c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 119de27298acafee7dc563a30246b18da42f9f29
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847379"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918158"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
-"[Sorun bildir](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)" Aracı, Visual Studio kullanıcıları tarafından yaygın olarak bir dizi sorunu bildirmek için kullanılır. Visual Studio ekip noktaları kilitlenme ve Kullanıcı geri bildirimleriyle ilgili eğilimleri yavaşlayor ve kullanıcıların büyük bir bölümünü etkileyen sorunları gidermektedir. Belirli bir geri bildirim bileti daha fazla eyleme çıkılarak, büyük olasılıkla ürün ekibi tarafından hızlı bir şekilde tanılanabilir ve çözümlenir. Bu belge, daha fazla işlem yapılabilir olması için kilitlenme veya yavaşlık sorunları bildirirken en iyi uygulamaları açıklar.
+"[Sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)" Aracı, Visual Studio kullanıcıları tarafından yaygın olarak bir dizi sorunu bildirmek için kullanılır. Visual Studio ekip noktaları kilitlenme ve Kullanıcı geri bildirimleriyle ilgili eğilimleri yavaşlayor ve kullanıcıların büyük bir bölümünü etkileyen sorunları gidermektedir. Belirli bir geri bildirim bileti daha fazla eyleme çıkılarak, büyük olasılıkla ürün ekibi tarafından hızlı bir şekilde tanılanabilir ve çözümlenir. Bu belge, daha fazla işlem yapılabilir olması için kilitlenme veya yavaşlık sorunları bildirirken en iyi uygulamaları açıklar.
 
 ## <a name="general-best-practices"></a>Genel en iyi uygulamalar
 
@@ -55,7 +55,7 @@ Doğrudan tekrarlanabilir kilitlenmeler, aşağıdaki özelliklerin tümüne sah
 
 - Örnek kodda veya geri bildirimin bir parçası olarak bağlanabilen ya da sağlanbağlanabilen bir projede yeniden oluşturulabilir (adımlar bir proje veya belge açmak içeriyorsa)
 
-Bu sorunlar için "[sorunu bildirme](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve şunları eklediğinizden emin olun:
+Bu sorunlar için "[sorunu bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve şunları eklediğinizden emin olun:
 
 -   Sorunu yeniden oluşturma adımları
 
@@ -87,7 +87,7 @@ reg add "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error
 Reporting\\LocalDumps\\devenv.exe" /v DumpFolder /t REG_SZ /d "C:\\CrashDumps"
 ```
 
-Döküm sayısını ve döküm klasörünü uygun şekilde özelleştirin. Bu ayarlarla ilgili daha fazla bilgiyi [burada](https://docs.microsoft.com/windows/win32/wer/collecting-user-mode-dumps?redirectedfrom=MSDN)bulabilirsiniz.
+Döküm sayısını ve döküm klasörünü uygun şekilde özelleştirin. Bu ayarlarla ilgili daha fazla bilgiyi [burada](/windows/win32/wer/collecting-user-mode-dumps)bulabilirsiniz.
 
 > [!NOTE]
 > Görev Yöneticisi kullanılarak yakalanan dökümlerden büyük olasılıkla yanlış bit kullanımı olabilir ve bu da daha az kullanılabilir hale gelir. Yukarıda açıklanan yordam, yığın dökümünü yakalamak için tercih edilen yoldur. Görev Yöneticisi 'ni kullanmak istiyorsanız, çalışmakta olan birini kapatın, 32bit Görev Yöneticisi 'Ni (% windir%\\sysWOW64\\taskmgr. exe) başlatın ve buradan bir yığın dökümü toplayın.
@@ -103,7 +103,7 @@ Ardından, Visual Studio 'nun "sorun bildir..." seçeneğini kullanın. Özellik
 
 2.  Mümkünse, geri bildirim göndermeden önce dosyanın boyutunu azaltmak için dosyayı (\*. zip) ZIP
 
-3.  "[Sorunu bildirme](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve yığın dökümünü yeni bir geri bildirim öğesine ekleyin.
+3.  "[Sorunu bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve yığın dökümünü yeni bir geri bildirim öğesine ekleyin.
 
 > [!NOTE] 
 > **En değerli geri bildirim:** Bu durumda, en değerli geri bildirim kilitlenme sırasında yakalanan yığın dökümünden oluşur.
@@ -118,7 +118,7 @@ Kilitlenmelerde karşılık gelen bölümünde açıklandığı gibi, birden ço
 **Bilinmeyen yanıt verme süresi**
 
 Yanıt veremeyen bir şekilde kendi kendine bildirim, bir sonraki oluşumda yeni bir Visual Studio örneği başlatın ve bu örnekten bir sorun bildirin.
-["Kayıt" ekranında](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)yanıt vermeyen Visual Studio oturumunu seçtiğinizden emin olun.
+["Kayıt" ekranında](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)yanıt vermeyen Visual Studio oturumunu seçtiğinizden emin olun.
 
 Yanıt vermeyen Visual Studio örneği yönetici modunda başlatılmışsa ikinci örneğin da yönetici modunda başlatılması gerekir.
 
@@ -145,7 +145,7 @@ Performansı yakalamaya en iyi sonuçları elde etmek için şu adımları izley
 
 3.  Visual Studio 'nun yeni kopyasında **sorun bildir** aracını açın
 
-4.  "İzleme ve yığın dökümü sağlayın (isteğe bağlı)" adımına ulaşana kadar [sorun bildirme](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) bölümündeki adımları izleyin.
+4.  "İzleme ve yığın dökümü sağlayın (isteğe bağlı)" adımına ulaşana kadar [sorun bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) bölümündeki adımları izleyin.
 
 5.  Visual Studio 'nun ilk kopyasını (performans sorunundan bir sorunla karşılaşmadan) kaydetmeyi ve kaydı başlatmayı seçin.
 
@@ -165,7 +165,7 @@ Performansı yakalamaya en iyi sonuçları elde etmek için şu adımları izley
 
 Bir performans izlemesini kaydederken, raporlama yaptığınız yavaş işlem veya yüksek CPU bir uçtan geliyorsa kaydı hemen durdurun. Çok fazla bilgi toplanırsa, en eski bilgilerin üzerine yazılır. İzleme yakında durdurulmamışsa (birkaç saniye içinde), ilginç bir işlemden sonra, yararlı izleme verilerinin üzerine yazılır.
 
-Geliştirici topluluğu Web sitesinde mevcut geri bildirim öğelerine doğrudan performans izlemeleri eklemeyin. Visual Studio 'nun yerleşik bir sorun aracında, ek bilgi isteme/sağlama işlemi desteklenen bir iş akışıdır. Önceki bir geri bildirim öğesini çözümlemek için bir performans izlemesi gerekliyse, geri bildirim öğesinin durumunu "daha fazla bilgi gerekiyor" olarak ayarlayacağız, bu da yeni bir sorunu raporlama ile aynı şekilde yanıt verebilir. Ayrıntılı yönergeler için lütfen sorun bildir aracının belgesi konusunun ["daha fazla bilgi gerekiyor" bölümüne](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017?view=vs-2017#when-further-information-is-needed-need-more-info) bakın.
+Geliştirici topluluğu Web sitesinde mevcut geri bildirim öğelerine doğrudan performans izlemeleri eklemeyin. Visual Studio 'nun yerleşik bir sorun aracında, ek bilgi isteme/sağlama işlemi desteklenen bir iş akışıdır. Önceki bir geri bildirim öğesini çözümlemek için bir performans izlemesi gerekliyse, geri bildirim öğesinin durumunu "daha fazla bilgi gerekiyor" olarak ayarlayacağız, bu da yeni bir sorunu raporlama ile aynı şekilde yanıt verebilir. Ayrıntılı yönergeler için lütfen sorun bildir aracının belgesi konusunun ["daha fazla bilgi gerekiyor" bölümüne](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017?view=vs-2017#when-further-information-is-needed-need-more-info) bakın.
 
 > [!NOTE] 
 > **En değerli geri bildirim:** Neredeyse tüm yavaşlamalar/yüksek CPU sorunları için en değerli geri bildirim, bu süre boyunca davranışı yakalayan performans izleme (\*. etl. zip) ile birlikte, ne yapmaya çalıştığınız hakkında üst düzey bir açıklamadır.

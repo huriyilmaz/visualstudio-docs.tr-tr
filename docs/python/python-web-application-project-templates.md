@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b8c70b3c1b8282f87c8eb5aff5d8dde769c613d4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 73420f5fa6a90638f4a3dbbdf484178c5e177ce9
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848564"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917382"
 ---
 # <a name="python-web-application-project-templates"></a>Python web uygulaması proje şablonları
 
@@ -75,7 +75,7 @@ Tüm  **\<Framework > Web projesini** şablonları, seçilen framework bağıms�
 
 Kaynak denetimi kullanıyorsanız, bu ortamda yalnızca kullanılarak yeniden oluşturulabilir gibi genellikle sanal ortam klasörü atlarsanız *requirements.txt*. Bir klasörü dışlamak için en iyi yolu ilk seçmektir **ben bunları kendim yükler** yukarıda gösterilen isteminde sonra otomatik tamamlama sanal ortamı oluşturmadan önce devre dışı bırakın. Ayrıntılar için bkz [öğrenin Django Öğreticisi - 1-2 ve 1-3 adımları](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) ve [öğrenin Flask Öğreticisi - 1-2 ve 1-3 adımları](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository).
 
-Microsoft Azure App Service'e dağıtım yaparken, Python sürümünü seçin. bir [site uzantısı](https://docs.microsoft.com/visualstudio/python/managing-python-on-azure-app-service?view=vs-2019) ve paketleri el ile yükleyin. Ayrıca, Azure App Service gerçekleştirdiğinden **değil** paketleri otomatik olarak yüklemeniz bir *requirements.txt* dosya Visual Studio'dan dağıtıldığında, yapılandırma ayrıntılarını izleyin [aka.ms/ PythonOnAppService](https://docs.microsoft.com/visualstudio/python/managing-python-on-azure-app-service?view=vs-2019).
+Microsoft Azure App Service'e dağıtım yaparken, Python sürümünü seçin. bir [site uzantısı](/visualstudio/python/managing-python-on-azure-app-service?view=vs-2019) ve paketleri el ile yükleyin. Ayrıca, Azure App Service gerçekleştirdiğinden **değil** paketleri otomatik olarak yüklemeniz bir *requirements.txt* dosya Visual Studio'dan dağıtıldığında, yapılandırma ayrıntılarını izleyin [aka.ms/ PythonOnAppService](managing-python-on-azure-app-service.md).
 
 Microsoft Azure bulut Hizmetleri *mu* Destek *requirements.txt* dosya. Bkz: [Azure bulut hizmeti projeleri](python-azure-cloud-service-project-template.md) Ayrıntılar için.
 

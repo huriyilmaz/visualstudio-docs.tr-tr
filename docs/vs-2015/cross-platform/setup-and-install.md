@@ -6,12 +6,12 @@ ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
 caps.latest.revision: 19
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 430c54527ad0a4647bb750c505942242688aaa17
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: dbdeeab49da1a63562bb9a4188a264a8d3d99da2
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297724"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917042"
 ---
 # <a name="setup-and-install"></a>Kurulum ve yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -97,8 +97,8 @@ Bu kurulumu yaptıktan ve yükledikten sonra Xamarin kullanarak sorunlarla karş
   
 2. [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)'Den Xcode indirin ve yükleyin ve Apple Kimliğinizi, [Hesabınızı Xcode 'a ekleme](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (Apple.com) bölümünde açıklandığı gibi ekleyin.  
   
-3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
+3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
   
-4. Hem Windows hem de Mac bilgisayarlara Xamarin 'i yüklemeyi tamamladıktan sonra, Windows bilgisayarında Visual Studio 'dan iOS ve Mac ile çalışabilmek [Için Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com) yönergelerini izleyin.  
+4. Hem Windows hem de Mac bilgisayarlara Xamarin 'i yüklemeyi tamamladıktan sonra, Windows bilgisayarında Visual Studio 'dan iOS ve Mac ile çalışabilmek [Için Mac 'e bağlanma](/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com) yönergelerini izleyin.  
   
      Her iki bilgisayarın da aynı yerel ağda olması gerektiğini unutmayın.

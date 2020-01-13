@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: b04f0e7dad4847e654560139f9a3978a4d85685b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 9f1d80d540e9a25a3ef62ee0819c6f6655b9b3ab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846913"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916529"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama
 
@@ -60,6 +60,28 @@ Bir projeniz varsa ve [genel bakış](overview.md)bölümünde açıklandığı 
 Değişiklikleri hızlıca yinelemek için, uygulamanızı bir kapsayıcıda başlatabilirsiniz. Daha sonra, IIS Express istediğiniz gibi görüntüleyerek değişiklik yapmaya devam edin.
 
 1. Docker 'ın, kullanmakta olduğunuz kapsayıcı türünü (Linux veya Windows) kullanacak şekilde ayarlandığından emin olun. Görev çubuğundaki Docker simgesine sağ tıklayın ve **Linux kapsayıcılarına geç** ' i seçin veya uygun şekilde **Windows kapsayıcılarına geçiş** yapın.
+
+1. (Yalnızca .NET Core 3 ve üzeri) Kodunuzun düzenlenmesine ve çalışan sitenin bu bölümde açıklandığı gibi yenilenmesi, .NET Core > = 3,0 ' deki varsayılan şablonlarda etkinleştirilmemiştir. Etkinleştirmek için [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/)NuGet paketini ekleyin. *Startup.cs*içinde, `IMvcBuilder.AddRazorRuntimeCompilation` uzantı yöntemine bir çağrı ekleyin `ConfigureServices` yöntemindeki kod. Bu, yalnızca hata ayıklama modunda etkinleştirilir, bu nedenle bunu aşağıdaki gibi kodlayın:
+
+    ```csharp
+    public IWebHostEnvironment Env { get; set; }
+    
+    public void ConfigureServices(IServiceCollection services)
+    {
+        IMvcBuilder builder = services.AddRazorPages();
+    
+    #if DEBUG
+        if (Env.IsDevelopment())
+        {
+            builder.AddRazorRuntimeCompilation();
+        }
+    #endif
+    
+        // code omitted for brevity
+    }
+    ```
+
+   Daha fazla bilgi için bkz. [ASP.NET Core Razor dosyası derlemesi](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1).
 
 1. **Çözüm yapılandırmasını** **hata ayıklama**olarak ayarlayın. Ardından, Docker görüntünüzü derlemek ve yerel olarak çalıştırmak için **Ctrl**+**F5** tuşlarına basın.
 
@@ -139,5 +161,5 @@ Kapsayıcınızı el ile değiştirdiyseniz ve temiz bir kapsayıcı görüntüs
 
 * [Visual Studio ile kapsayıcı geliştirme](/visualstudio/containers)hakkında daha fazla bilgi edinin.
 * Bir Docker kapsayıcısı derlemek ve dağıtmak için bkz. [Azure Pipelines Için Docker tümleştirmesi](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker).
-* Windows Server ve nano sunucu makalelerinin bir dizini için bkz. [Windows kapsayıcı bilgileri](https://docs.microsoft.com/virtualization/windowscontainers/).
+* Windows Server ve nano sunucu makalelerinin bir dizini için bkz. [Windows kapsayıcı bilgileri](/virtualization/windowscontainers/).
 * [Azure Kubernetes hizmeti](https://azure.microsoft.com/services/kubernetes-service/) hakkında bilgi edinin ve [Azure Kubernetes hizmeti belgelerini](/azure/aks)gözden geçirin.

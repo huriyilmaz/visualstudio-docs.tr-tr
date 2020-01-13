@@ -1,7 +1,7 @@
 ---
-title: TensorFlow modeli bulutta çalıştırın
-description: tensorflow modeli derin öğrenme azure'da çalıştırın
-keywords: yapay zeka, visual studio, ayrıntılı öğrenme sanal makinesi
+title: Bulutta bir TensorFlow modeli çalıştırma
+description: Azure derin öğrenme VM 'de bir TensorFlow modeli çalıştırma
+keywords: AI, Visual Studio, derin öğrenme sanal makinesi
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -10,76 +10,76 @@ ms.topic: tutorial
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: adb3720f1624f355b99d75bfe446fafab1c5e0ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cb06220c99abb86c24808f6831cf98280133f2e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62427589"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915835"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>Bulutta bir TensorFlow modeli eğitme
 
-Bu öğreticide, TensorFlow modelini kullanarak biz eğitme [MNIST dataset](http://yann.lecun.com/exdb/mnist/) bir azure'da [derin öğrenme](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) sanal makine.
+Bu öğreticide, bir Azure [derin öğrenimi](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) sanal makinesinde bulunan [mnist veri kümesini](http://yann.lecun.com/exdb/mnist/) kullanarak bir TensorFlow modeli eğeceğiz.
 
-MNIST veritabanını 60.000 örnekler Eğitim kümesi ve el yazısı basamak 10.000 örnekleri test kümesi vardır.
+MNIST veritabanı, 60.000 örnek bir eğitim kümesine ve el yazısı rakamlarının bir dizi 10.000 örneklerine sahiptir.
 
-## <a name="prerequisites"></a>Önkoşullar
-Başlamadan önce aşağıdaki yüklenmiş ve yapılandırılmış olduğundan emin olun:
+## <a name="prerequisites"></a>Prerequisites
+Başlamadan önce, aşağıdakilerin yüklü ve yapılandırılmış olduğundan emin olun:
 
-### <a name="setup-azure-deep-learning-virtual-machine"></a>Azure ayrıntılı öğrenme sanal makinesi kurma
+### <a name="setup-azure-deep-learning-virtual-machine"></a>Azure derin öğrenimi sanal makinesini kurma
 
 > [!NOTE]
-> Ayarlama **işletim sistemi türü** Linux'a.
+> **Işletim sistemi türünü** Linux olarak ayarlayın.
 
-Ayrıntılı öğrenme sanal makinesi ayarlanıyor yönergeler bulunabilir [burada](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm).
+Derin öğrenme sanal makinesini ayarlamaya yönelik yönergeler [burada](/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm)bulunabilir.
 
-### <a name="remove-comment-in-parens"></a>Remove açıklamada parens
+### <a name="remove-comment-in-parens"></a>Açıklamaları parleştirir kaldır
 
 ```bash
 echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 ```
 
-### <a name="download-sample-code"></a>Örnek kodu indirin
+### <a name="download-sample-code"></a>Örnek kodu indir
 
-Bu indirme [GitHub deposu](https://github.com/Microsoft/samples-for-ai) TensorFlow, CNTK, Theano ve daha derin öğrenme ile çalışmaya başlama örnekler içeren.
+TensorFlow, CNTK, Theano ve daha birçok konuda derin öğrenime Başlarken örnekleri içeren bu [GitHub deposunu](https://github.com/Microsoft/samples-for-ai) indirin.
 
 ## <a name="open-project"></a>Projeyi açma
 
-- Visual Studio'yu başlatın ve seçin **Dosya > Aç > Proje/çözüm**.
+- Visual Studio 'Yu başlatın ve **> projesi/çözümü açmak > dosya**' yı seçin.
 
-- Seçin **Tensorflow örnekler** klasörü açık ve indirilen örnek deposundan **TensorflowExamples.sln** dosya.
+- İndirilen örnek deposundan **TensorFlow örnekleri** klasörünü seçin ve **tensorflowexamples. sln** dosyasını açın.
 
    ![Projeyi açma](media/tensorflow-local/open-project.png)
 
-   ![Çözüm Aç](media/tensorflow-local/open-solution.png)
+   ![Çözümü aç](media/tensorflow-local/open-solution.png)
 
-## <a name="add-azure-remote-vm"></a>Uzak Azure VM Ekle
+## <a name="add-azure-remote-vm"></a>Azure uzak VM ekleme
 
-Sunucu Gezgini'nde sağ tıklayın **uzak makinede** düğümü seçin ve yapay ZEKA araçları düğümü altında "Ekle...". Uzak makine görünen adı, IP konak, SSH bağlantı noktası, kullanıcı adı ve parola/anahtar dosyası girin.
+Sunucu Gezgini, AI araçları düğümünün altındaki **uzak makineler** düğümüne sağ tıklayın ve "Ekle..." öğesini seçin. Uzak makine görünen adını, IP konağını, SSH bağlantı noktasını, Kullanıcı adını ve parolayı/anahtar dosyasını girin.
 
-![Yeni bir uzak makine Ekle](media/tensorflow-vm/add-remote-vm.png)
+![Yeni bir uzak makine ekleyin](media/tensorflow-vm/add-remote-vm.png)
 
-## <a name="submit-job-to-azure-vm"></a>Azure VM için iş gönderme
-MNIST projeye sağ **Çözüm Gezgini** seçip **işi Gönder**.
+## <a name="submit-job-to-azure-vm"></a>Azure VM 'ye iş gönderme
+**Çözüm Gezgini** ' de mnist projesine sağ tıklayın ve **işi gönder**' i seçin.
 
-![Uzak bir makine için iş gönderme](media/tensorflow-vm/job-submission.png)
+![Uzak makineye iş gönderme](media/tensorflow-vm/job-submission.png)
 
 Gönderim penceresinde:
 
-- Listesinde **kullanmak için küme**, uzak makine seçin (ile "rm:" ön eki) için işi göndermek için.
+- **Kullanılacak küme**listesinde, işi göndermek için uzak makineyi ("RM:" ön eki ile) seçin.
 
-- Girin bir **iş adı**.
+- Bir **iş adı**girin.
 
 - **Gönder**'e tıklayın.
 
-## <a name="check-status-of-job"></a>İş durumunu denetleyin
-Durum ve işlerinin ayrıntılarını görmek için: sanal makine içinde işe gönderdiğiniz genişletin **Sunucu Gezgini**. Çift **işleri**.
+## <a name="check-status-of-job"></a>İşin durumunu denetleme
+İşlerin durumunu ve ayrıntılarını görmek için: işi **Sunucu Gezgini**gönderdiğiniz sanal makineyi genişletin. **İşler**' e çift tıklayın.
 
-![İş tarayıcı](media/tensorflow-vm/job-browser.png)
+![İş tarayıcısı](media/tensorflow-vm/job-browser.png)
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Yakın gelecekte kullanmayı planlıyorsanız, sanal Makineyi durdurun. Bu öğreticiyle tamamladıysanız, kaynakları temizlemek için aşağıdaki komutu çalıştırın:
+Yakın gelecekte kullanmayı planlıyorsanız VM 'yi durdurun. Bu öğreticiyle işiniz bittiğinde, kaynaklarınızı temizlemek için aşağıdaki komutu çalıştırın:
 
 ```azurecli-interactive
 az group delete --name myResourceGroup
