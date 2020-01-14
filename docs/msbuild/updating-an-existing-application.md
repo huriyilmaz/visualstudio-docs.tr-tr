@@ -2,17 +2,17 @@
 title: Mevcut bir uygulamayı MSBuild 15 ' e güncelleştirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a891f6d18657bad65a1cf087da975849642b7aec
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 8d4e7d84768307964b495e8c5e97e7731b0622a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912043"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597145"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>MSBuild 15 için mevcut bir uygulamayı güncelleştirme
 
@@ -69,7 +69,7 @@ Uygulamanızın 15.1.0.0 sürümüne gereken bağlama yeniden yönlendirmelerini
 
 ### <a name="ensure-output-is-clean"></a>Çıktının temiz olduğundan emin olun
 
-Bir sonraki adımda eklenen Microsoft. Build. *Locator. dll*dışında *Microsoft. Build.\*. dll* derlemelerini içermediğinden emin olmak için projenizi derleyin ve çıkış dizinini inceleyin.
+Bir sonraki adımda eklenen Microsoft. Build. *Locator. dll*dışında *Microsoft. Build\*. dll* derlemelerini içermediğinden emin olmak için projenizi derleyin ve çıkış dizinini inceleyin.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Microsoft. Build. Locator için paket başvurusu Ekle
 

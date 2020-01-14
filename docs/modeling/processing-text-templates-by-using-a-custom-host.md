@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, in application or VS extension
 - text templates, custom directive hosts
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 171eb8810d74df5c1058ba055e598d04f9164633
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f7ecd6508df780f570d10b3d615094fae15209d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658299"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591690"
 ---
 # <a name="process-text-templates-by-using-a-custom-host"></a>Özel bir Konak kullanarak Metin Şablonlarını İşleme
 
@@ -33,7 +33,7 @@ Uygulamanız, derleme zamanında sabitlenmiş bir grup şablon kullanıyorsa, Ö
 
 ## <a name="execute-a-text-template-in-your-application"></a>Uygulamanızda bir metin şablonu yürütün
 
-Bir metin şablonunu yürütmek için <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> ProcessTemplate yöntemini çağırın:
+Bir metin şablonunu yürütmek için <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>ProcessTemplate yöntemini çağırın:
 
 ```csharp
 using Microsoft.VisualStudio.TextTemplating;
@@ -44,14 +44,14 @@ string output = engine.ProcessTemplate(templateString, host);
 
  Uygulamanızın şablonu bularak sağlaması ve çıktı ile işlem yapması gerekir.
 
- @No__t_0 parametresinde, [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))uygulayan bir sınıf sağlamanız gerekir. Bu, Motor tarafından geri çağrılır.
+ `host` parametresinde, [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))uygulayan bir sınıf sağlamanız gerekir. Bu, Motor tarafından geri çağrılır.
 
  Ana bilgisayar hataları günlüğe kaydedebilmeli, derleme ve ekleme dosyalarına yapılan başvuruları çözümleyebilmeli, şablonun yürütülebileceği bir Uygulama Etki Alanı sağlayabilmeli ve her yönerge için uygun işlemciyi çağırabilmelidir.
 
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>, **Microsoft. VisualStudio. Textşablon oluşturma. \* 0. dll**ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) **Microsoft. VisualStudio. textşablon. Interfaces. \*.0. dll**içinde tanımlanmıştır.
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>, **Microsoft. VisualStudio. Textşablon oluşturma.\*0. dll**ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) **Microsoft. VisualStudio. textşablon. Interfaces.\*. 0. dll**içinde tanımlanmıştır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Izlenecek yol: özel metin şablonu Konağı oluşturma](../modeling/walkthrough-creating-a-custom-text-template-host.md) Metin şablonu işlevselliğinin Visual Studio dışında kullanılabilir olmasını sağlayan bir özel metin şablonu ana bilgisayarı oluşturmayı gösterir.
+ [İzlenecek yol: Özel metin şablonu ana bilgisayarı oluşturma](../modeling/walkthrough-creating-a-custom-text-template-host.md), metin şablonu işlevselliğinin Visual Studio dışında kullanılabilir olmasını sağlayan bir özel metin şablonu ana bilgisayarı oluşturmayı gösterir.
 
 ## <a name="reference"></a>Başvuru
  [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))
