@@ -11,12 +11,12 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4d9a7b39dc322ab92458dbd6c7304f672468db17
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0adc81cfe9ea4462940c31a02c6429be89709565
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851708"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944258"
 ---
 # <a name="installing-an-isolated-shell-application"></a>Yalıtılmış Kabuk Uygulaması Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
   
 - Visual Studio SDK  
   
-- [WINDOWS Installer XML araç takımı](http://wix.sourceforge.net/) 3,6 sürümü  
+- [WINDOWS Installer XML araç takımı](https://documentation.help/WiX-Toolset/index.html/) 3,6 sürümü  
   
   Örnek ayrıca, tüm kabukların gerektirdiği Microsoft görselleştirme ve modelleme SDK 'sını de gerektirir.  
   
@@ -54,7 +54,7 @@ Bir kabuk uygulamasını yüklemek için aşağıdaki adımları gerçekleştirm
 2. VSıX bildirimi içeren her proje için, içeriği MSI 'nizin yükleneceği konuma çıkarmak üzere derleme görevlerini düzenleyin. Derleme çıktısına VSıX bildirimini ekleyin, ancak bir. VSIX dosyası oluşturmayın.  
   
 ## <a name="creating-an-msi-for-your-shell"></a>Kabuğunuz için MSI oluşturma  
- MSI paketinizi derlemek için, standart bir kurulum projesinden daha fazla esneklik sağladığından [WINDOWS Installer XML araç takımını](http://wix.sourceforge.net/) kullanmanızı öneririz.  
+ MSI paketinizi derlemek için, standart bir kurulum projesinden daha fazla esneklik sağladığından [WINDOWS Installer XML araç takımını](https://documentation.help/WiX-Toolset/index.html) kullanmanızı öneririz.  
   
  Ürün. WXS dosyanızda, algılama bloklarını ve kabuk bileşenlerinin yerleşimini ayarlayın.  
   

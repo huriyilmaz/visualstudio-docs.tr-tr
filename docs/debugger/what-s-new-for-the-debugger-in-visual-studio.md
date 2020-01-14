@@ -20,12 +20,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 130387fedce065948ebe09ea605e32cf89ad820b
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 523867a8f9aa074e9122c74deb8bcd91cddd8bee
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71210594"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944224"
 ---
 # <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Visual Studio 2017 ' de hata ayıklayıcıdaki yenilikler
 
@@ -44,31 +44,31 @@ Hata ayıklayıcı şu yeni özellikleri içerir:
 
     Hata ayıklama araç çubuğundaki **geri** ve **adım ileri** düğmelerini kullanarak anlık görüntülerle gezinerek görüntüleyebilirsiniz. Bu düğmeler **Tanılama araçları** penceresindeki **Olaylar** sekmesinde görüntülenen olaylara gider.
 
-    ![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png  "Geri adımla ve ilet düğmeleri")
+    ![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png  "Geri adımla ve Ilet düğmeleri")
 
-    Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md) sayfası.
+    Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](view-historical-application-state.md) sayfası.
 
 - **Özel** durum Yardımcısı özel durum yardımcısını değiştirir ve hatanın gerçekleştiği kalıcı olmayan bir iletişim kutusunda görünür. **Özel durum Yardımcısı** , tüm iç özel durumlara daha hızlı erişim sağlar, hata ayıklayıcı tarafından ek analizler (varsa) ve özel durum **ayarlarına** anında erişin. Özel durum Yardımcısı, görmeniz gereken bir şeyi engelliyorsa, bir kayan görünüme de sürüklenebilir.
 
     Örneğin, bir **NullReferenceException** artık null başvurusu olan değişkeni gösterir (ek bilgi).
 
-    ![Hata ayıklayıcının özel durum Yardımcısı](../debugger/media/dbg-exception-helper.png "Dbgexceptionhelper")
+    ![Hata ayıklayıcının özel durum Yardımcısı](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
 
-    Daha fazla bilgi için bkz. [Visual Studio 'Da yeni özel durum yardımcısını kullanma](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/) blog gönderisi.
+    Daha fazla bilgi için bkz. [Visual Studio 'Da yeni özel durum yardımcısını kullanma](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/) blog gönderisi.
 
 - Şimdi, **yürütmeyi buraya kadar Çalıştır** yeşil ok simgesine seçerek hata ayıklayıcıda duraklayana bir kod satırına çalıştırabilirsiniz (bir kod satırının üzerine gelindiğinde simgeyi görürsünüz). Bu, geçici kesme noktaları ayarlama gereksinimini ortadan kaldırır.
 
-    ![Hata ayıklayıcının tıklama Için Çalıştır](../debugger/media/dbg-run-to-click.png "Dbgruntoclick")
+    ![Hata ayıklayıcının tıklama için Çalıştır](../debugger/media/dbg-run-to-click.png "DbgRunToClick")
 
-- Özel durum **ayarları** iletişim kutusunda özel durumlar için koşullar ayarlayabilirsiniz (özel durum ayarları iletişim kutusundaki **koşulu Düzenle** simgesini veya özel durum üzerinde sağ tıklama menüsünü kullanarak bunu yapabilirsiniz.) Şu anda desteklenen koşullar dahil etmek veya hariç tutmak için bir özel durum için modül adlarını içerir.
+- Özel durum **ayarları** iletişim kutusunda özel durumlar için koşullar ayarlayabilirsiniz (özel durum ayarları iletişim kutusundaki **koşulu Düzenle** simgesini veya özel durum üzerinde sağ tıklama menüsünü kullanarak bunu yapabilirsiniz.) Şu anda desteklenen koşullar, özel durum için dahil edilecek veya hariç tutulacak modül adlarını içerir.
 
-    ![Özel durum koşulları](../debugger/media/dbg-conditional-exception.png "Dbgconditionalexception")
+    ![Özel durum koşulları](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
 
 - Işleme İliştir iletişim kutusu, iliştirilebilmeniz gereken işlemi daha hızlı tanımanıza yardımcı olabilecek yeni bir arama özelliği içerir.
 
-    ![Işleme İliştir Içinde ara](../debugger/media/dbg-attach-to-process-search.png "Dbgattachtoprocesssearch")
+    ![Işleme Iliştir içinde ara](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
 
-Bu yeni özellikler hakkında daha fazla bilgi için [sürüm notlarına [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
+Bu yeni özellikler hakkında daha fazla bilgi için, [[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]Için sürüm notlarına ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

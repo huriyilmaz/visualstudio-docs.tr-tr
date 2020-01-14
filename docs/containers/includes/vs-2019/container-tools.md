@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 0232b37d08901bcc04c9d66facfe6850a9852e88
-ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
+ms.openlocfilehash: d0da02773913a610c77d7165fdb0f9becfc59e9c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74485458"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75928155"
 ---
 Visual Studio ile Kapsayıcılı .NET, ASP.NET ve ASP.NET Core uygulamalarını kolayca oluşturabilir, ayıklayabilir ve çalıştırabilir ve bunları Azure Container Registry (ACR), Docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlayabilirsiniz. Bu makalede, ACR 'ye bir ASP.NET Core uygulaması yayımlayacağız.
 
@@ -21,7 +21,7 @@ Visual Studio ile Kapsayıcılı .NET, ASP.NET ve ASP.NET Core uygulamalarını 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 * .NET Core 2,2 ile geliştirme için [.net core 2,2 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="installation-and-setup"></a>Yükleme ve kurulum
 
@@ -99,15 +99,15 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **DNS ön eki** | Genel benzersiz ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
-    | **Aboneliğiniz** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni bir kaynak grubu oluşturmak için **Yeni** ' yi seçin.|
-    | **[ISTEYIN](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Standard | Kapsayıcı kayıt defterinin hizmet katmanı  |
-    | **Kayıt defteri konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
+    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
+    | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[ISTEYIN](/azure/container-registry/container-registry-skus)** | Standard | Kapsayıcı kayıt defterinin hizmet katmanı  |
+    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
     ![Visual Studio 'nun Azure Container Registry oluştur iletişim kutusu][0]
 
-1. **Oluştur** 'a tıklayın
+1. **Oluştur**'a tıklayın.
 
    ![Başarılı yayımlamayı gösteren ekran görüntüsü](../../media/container-tools/publish-succeeded.png)
 

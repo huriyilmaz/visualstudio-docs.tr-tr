@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cc8ab1ac26f4aa01342d9949243772edd3de91f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b1928176ef1c2612585c7fa46ea653f3ff800050
+ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189417"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75929245"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Hızlı başlangıç: profil oluşturma araçlarına Ilk bakış
 
@@ -34,11 +34,11 @@ Hata ayıklarken, CPU ve bellek kullanımını çözümlemek için **Tanılama a
 **Tanılama araçları** pencere, genellikle uygulamaları profil oluşturmanın tercih edilen yoludur, ancak yayın yapıları için bunun yerine uygulamanızın bir sonrası analizini de yapabilirsiniz. Farklı yaklaşımlar hakkında daha fazla bilgi istiyorsanız bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Farklı uygulama türleri için profil oluşturma araç desteğini görmek için bkz. [hangi aracı kullanmalıyım?](#which-tool-should-i-use).
 
 > [!NOTE]
-> Windows 7 ve sonraki sürümleri ile mortem araçları 'nı kullanabilirsiniz. Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
+> Windows 7 ve sonraki sürümleri ile mortem araçları 'nı kullanabilirsiniz. Windows 8 ve üzeri, hata ayıklayıcısı ile profil oluşturma araçları çalıştırmak için gereklidir (**tanılama araçları** pencere).
 
 ## <a name="analyze-cpu-usage"></a>CPU Kullanımını Analiz Etme
 
-CPU kullanımı aracı, uygulamanızın performansını çözümlemeye başlamak için iyi bir yerdir. Uygulamanızın kullandığı CPU kaynakları hakkında daha fazla bilgi sağlayacaktır. CPU kullanımı aracı hakkında daha ayrıntılı yönergeler için bkz. [Başlangıç Kılavuzu, performans profili oluşturma kılavuzu](../profiling/beginners-guide-to-performance-profiling.md).
+CPU kullanımı aracı, uygulamanızın performansını çözümlemeye başlamak için iyi bir yerdir. Uygulamanızın kullandığı CPU kaynakları hakkında daha fazla bilgi sağlayacaktır. CPU kullanımı aracı hakkında daha ayrıntılı bir anlatım için bkz. [CPU kullanımını çözümleyerek uygulama performansını ölçme](../profiling/beginners-guide-to-performance-profiling.md).
 
 Tanılama Araçları **Özet** görünümünden **CPU profilini etkinleştir** ' i seçin (bir hata ayıklama oturumunda olması gerekir).
 
@@ -91,7 +91,7 @@ UWP uygulamalarınızda **Tanılama araçları** penceresinde **UI analizini** e
 
 CPU kullanımı ve bellek kullanımı gibi profil oluşturma araçları, hata ayıklayıcıyla kullanılabilir (önceki bölümlere bakın) veya **yayın** yapıları için analiz sağlamak üzere tasarlanan performans profil oluşturucuyu kullanarak profil oluşturma araçları 'nı çalıştırabilirsiniz. Performans Profiler 'da, uygulama çalışırken tanılama bilgilerini toplayabilir ve ardından uygulama durdurulduktan sonra toplanan bilgileri inceleyebilirsiniz. Bu farklı yaklaşımlar hakkında daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmadan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-![Performans profili Oluşturucu](../profiling/media/prof-tour-performance-profiler.png "Performans profili Oluşturucu")
+![Performans profili Oluşturucu](../profiling/media/prof-tour-performance-profiler.png "Performans Profili Oluşturucu")
 
 **Hata ayıkla** > **performans profil oluşturucu**' yı seçerek performans profil oluşturucuyu açın.
 
@@ -109,7 +109,7 @@ Zaman çizelgesi ayrıntıları görünümünde, etkinlik süresiyle birlikte et
 
 Daha fazla bilgi için bkz. [uygulama zaman çizelgesi](../profiling/application-timeline.md).
 
-## <a name="analyze-gpu-usage-direct3d"></a>GPU kullanımını analiz etme (Direct3D)
+## <a name="analyze-gpu-usage-direct3d"></a>(Direct3D) GPU kullanımını analiz etme
 
 Direct3D uygulamalarında (Direct3D bileşenleri içinde C++OLMALıDıR) GPU 'daki etkinliği inceleyebilir ve performans sorunlarını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [GPU kullanımı](/visualstudio/debugger/graphics/gpu-usage). Aracı kullanmak için performans Profilcisi ' nde **GPU kullanımı** ' nı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, profil oluşturma konusunda ilgilendiğiniz senaryoya gidin ve ardından bir rapor oluşturmak için **toplamayı durdur** ' u seçin.
 
@@ -136,15 +136,15 @@ UWP uygulamalarında UI yanıtlama hızı, yavaş yükleme süresi ve yavaş gö
 ::: moniker range="vs-2017"
 ## <a name="analyze-network-usage-uwp"></a>Ağ kullanımını analiz etme (UWP)
 
-UWP uygulamalarında, `Windows.Web.Http` API kullanarak gerçekleştirilen ağ işlemlerini çözümleyebilirsiniz. Bu araç, erişim ve kimlik doğrulama sorunları, hatalı önbellek kullanımı ve kötü ekran ve indirme performansı gibi sorunları çözmenize yardımcı olabilir. Aracı kullanmak için, performans Profilcisi ' nde **ağ** ' ı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, `Windows.Web.Http` kullanan senaryoya gidin ve sonra raporu oluşturmak için **koleksiyonu durdur** ' u seçin.
+UWP uygulamalarında, `Windows.Web.Http` API kullanarak gerçekleştirilen ağ işlemlerini çözümleyebilirsiniz. Bu araç, erişim ve kimlik doğrulama sorunları, hatalı önbellek kullanımı ve kötü ekran ve indirme performansı gibi sorunları çözmenize yardımcı olabilir. Aracı kullanmak için, performans Profilcisi ' nde **ağ** ' ı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda kullandığı senaryosuyla Git `Windows.Web.Http`ve ardından **koleksiyonu Durdur** raporu oluşturmak için.
 
 ![Ağ kullanımı profil oluşturma aracı](../profiling/media/prof-tour-network-usage.png "Diag ağı kullanımı")
 
-Daha fazla ayrıntı görüntülemek için Özet görünümünde bir işlem seçin.
+Bir işlem içinde Özet görünümünü için daha fazla ayrıntı'ı seçin.
 
 ![Ağ kullanımı aracında ayrıntılı bilgiler](../profiling/media/prof-tour-network-usage-details.png "Diag ağı kullanım ayrıntıları")
 
-Daha fazla bilgi için bkz. [ağ kullanımı](../profiling/network-usage.md).
+Daha fazla bilgi için [ağ kullanımını](../profiling/network-usage.md).
 ::: moniker-end
 
 ## <a name="analyze-performance-legacy-tools"></a>Performansı çözümleme (eski araçlar)
@@ -158,30 +158,30 @@ Daha fazla bilgi için bkz. [ağ kullanımı](../profiling/network-usage.md).
 Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabileceğiniz farklı proje türlerini listeleyen bir tablo verilmiştir:
 
 ::: moniker range=">=vs-2019"
-|Performans aracı|Windows Masaüstü|UWP|ASP.NET/ASP.NET Core|
+|Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
-|[CPU Kullanımı](../profiling/cpu-usage.md)|Yes|Yes|Yes|
-|[Bellek Kullanımı](../profiling/memory-usage.md)|Yes|Yes|Yes|
-|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|Yes|Yes|eşleşen|
-|[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Yes|Yes|eşleşen|
-|[PerfTips](../profiling/perftips.md)|Yes|XAML için Evet, HTML için Hayır|Yes|
-|[Performans Gezgini](../profiling/performance-explorer.md)|Yes|eşleşen|Yes|
+|[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
+|[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
+|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
+|[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
+|[PerfTips](../profiling/perftips.md)|evet|XAML için Evet, HTML için Hayır|evet|
+|[Performans Gezgini](../profiling/performance-explorer.md)|evet|hayır|evet|
 |[IntelliTrace](../debugger/intellitrace.md)|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-|Performans aracı|Windows Masaüstü|UWP|ASP.NET/ASP.NET Core|
+|Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
-|[CPU Kullanımı](../profiling/cpu-usage.md)|Yes|Yes|Yes|
-|[Bellek Kullanımı](../profiling/memory-usage.md)|Yes|Yes|Yes|
-|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|Yes|Yes|eşleşen|
-|[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Yes|Yes|eşleşen|
-|[PerfTips](../profiling/perftips.md)|Yes|XAML için Evet, HTML için Hayır|Yes|
-|[Performans Gezgini](../profiling/performance-explorer.md)|Yes|eşleşen|Yes|
+|[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
+|[Bellek Kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
+|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
+|[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
+|[PerfTips](../profiling/perftips.md)|evet|XAML için Evet, HTML için Hayır|evet|
+|[Performans Gezgini](../profiling/performance-explorer.md)|evet|hayır|evet|
 |[IntelliTrace](../debugger/intellitrace.md)|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|
-|[Ağ Kullanımı](../profiling/network-usage.md)|eşleşen|Yes|eşleşen|
-|[HTML kullanıcı arabirimi yanıt hızı](../profiling/html-ui-responsiveness.md)|eşleşen|HTML için Evet, XAML için Hayır|eşleşen|
-|[JavaScript Belleği](../profiling/javascript-memory.md)|eşleşen|HTML için Evet, XAML için Hayır|eşleşen|
+|[Ağ Kullanımı](../profiling/network-usage.md)|hayır|evet|hayır|
+|[HTML kullanıcı arabirimi yanıt hızı](../profiling/html-ui-responsiveness.md)|hayır|HTML için Evet, XAML için Hayır|hayır|
+|[JavaScript Belleği](../profiling/javascript-memory.md)|hayır|HTML için Evet, XAML için Hayır|hayır|
 ::: moniker-end
 
 

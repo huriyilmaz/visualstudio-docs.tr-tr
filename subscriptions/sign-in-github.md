@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/11/2019
 ms.topic: conceptual
 description: GitHub hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 8a1c2884dbc5570ab18cf7496c699774702b5b62
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ffafd3821112a62ec1f86666f8c0fe6571bbb335
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850527"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944192"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>GitHub hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
 
@@ -49,7 +49,7 @@ Y: tüm Microsoft ürünleri, GitHub.com oturum açma sayfasından (örneğin, X
 Y: hiç değil. Bu, GitHub parolanızı değiştirmez; Microsoft hesabı oturum açmak için yalnızca başka bir yoldur. E-posta adresinizi kullanarak oturum açtığınızda, size Microsoft hesabı parolanızla oturum açma veya kayıt için GitHub 'a bağlanma seçeneğini sunacağız. Bir parola eklemeniz gerekiyorsa GitHub hesabınızın parolalarından farklı olduğundan emin olmak kesinlikle önerilir.
 
 #### <a name="q-i-want-to-add-the-authenticator-app-to-the-account-i-created-using-github--can-i-do-that"></a>S: kimlik doğrulayıcı uygulamasını GitHub kullanarak oluşturduğum hesaba eklemek istiyorum.  Bunu yapabilir miyim?
-Y: sorun yok — uygulamayı indirip e-posta adresinizi kullanarak oturum açmanız yeterlidir. E-posta adresinizle oturum açtığınızda kimlik bilgileriniz olarak kimlik [Doğrulayıcı uygulamasını](https://www.microsoft.com/account/authenticator#getapp) veya GitHub ' ı seçmeniz istenir.
+Y: sorun yok — uygulamayı indirip e-posta adresinizi kullanarak oturum açmanız yeterlidir. E-posta adresinizle oturum açtığınızda kimlik bilgileriniz olarak kimlik [Doğrulayıcı uygulamasını](https://www.microsoft.com/p/microsoft-authenticator/9nblgggzmcj6) veya GitHub ' ı seçmeniz istenir.
 
 #### <a name="q-ive-enabled-two-factor-authentication-on-both-my-github-and-microsoft-accounts-msa-but-when-i-sign-in-to-my-msa-im-still-asked-to-authenticate-twice--why"></a>S: hem GitHub hem de Microsoft accounts (MSA) üzerinde iki öğeli kimlik doğrulamayı etkinleştirdim, ancak MSA 'da oturum açarken, hala iki kez kimlik doğrulaması istedim.  Neden?
 Y: güvenlik kısıtlamaları nedeniyle, iki adımlı doğrulama etkin olsa bile, Microsoft, GitHub ile bir tek etmenli doğrulama olarak oturum açmayı sayar. Bu nedenle, Microsoft hesabı için tekrar kimlik doğrulaması yapmanız gerekir. 
