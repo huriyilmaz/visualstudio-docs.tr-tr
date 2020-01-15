@@ -721,6 +721,8 @@
                   href: ca3077.md
                 - name: 'CA3147: ValidateAntiForgeryToken ile fiil işleyicilerini işaretleme'
                   href: ca3147.md
+                - name: 'CA5358: Güvenli Olmayan Şifreleme Modlarını Kullanmayın'
+                  href: ca5358.md
                 - name: 'CA5361: Güçlü Şifrelemenin SChannel Kullanımını Devre Dışı Bırakma'
                   href: ca5361.md
                 - name: 'CA5363: İstek doğrulamayı devre dışı bırakmayın'
