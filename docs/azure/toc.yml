@@ -25,8 +25,6 @@
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: Bilişsel Hizmetler ekleme
       items:
-        - name: Bilişsel Hizmetler ekleme
-          href: cognitive-services-connected-services.yml
         - name: Metin Analizi
           href: /azure/cognitive-services/text-analytics/vs-text-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: Bing Arama
