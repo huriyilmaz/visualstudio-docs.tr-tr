@@ -3,42 +3,42 @@ title: Visual Studio Community 2017 iş yükü ve Bileşen kimlikleri
 titleSuffix: ''
 description: İş yükü ve Bileşen kimlikleri komut satırını kullanarak Visual Studio'yu yükleyin veya bağımlılık VSIX bildirimi olarak belirtmek için kullanın.
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: dbc7fa1f5b931a598a607ce76cfe5c7f336e8ee2
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 83a1daa65642d720bd5f2420ee634688cf4be2c4
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68177672"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76159580"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-community-2017"></a>(Visual Studio Community 2017 ile dahil) visual Studio temel Düzenleyicisi
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.CoreEditor
+**ID:** Microsoft.VisualStudio.Workload.CoreEditor
 
-**Açıklama:** Visual Studio söz dizimine duyarlı kod düzenleme, kaynak kodu denetimi de dahil olmak üzere, temel Kabuk deneyimi ve iş öğesi yönetimi.
+**Açıklama:** söz dizimine duyarlı kod düzenleme, dahil olmak üzere Visual Studio temel Kabuk deneyimi, kaynak kodu denetimi ve iş öğesi yönetimi.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio temel Düzenleyicisi | 15.8.27729.1 | Gerekli
 Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | Visual Studio başlangıç sayfasını C++ kullanıcılar | 15.0.27128.1 | İsteğe Bağlı
 
 ## <a name="azure-development"></a>Azure geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.Azure
+**ID:** Microsoft.VisualStudio.Workload.Azure
 
-**Açıklama:** Azure SDK'ları, araçları ve projeleri bulut uygulamaları geliştirmek için kaynakları oluşturmak ve Docker dahil kapsayıcılar oluşturmak destekler.
+**Açıklama:** Azure SDK'ları, araçları ve projeleri geliştirmek için bulut uygulamaları, kaynakları oluşturma ve Docker desteği dahil kapsayıcılar oluşturmak.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 15.0.26720.2 | Gerekli
 Component.Microsoft.VisualStudio.Web.AzureFunctions | Microsoft Azure Web işleri araçları | 15.7.27617.1 | Gerekli
@@ -126,13 +126,13 @@ Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation 
 
 ## <a name="data-storage-and-processing"></a>Veri depolama ve işleme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.Data
+**ID:** Microsoft.VisualStudio.Workload.Data
 
-**Açıklama:** Bağlayın, geliştirin ve SQL Server, Azure Data Lake veya Hadoop veri çözümleriyle test.
+**Açıklama:** bağlan, geliştirme ve test ile SQL Server, Azure Data Lake veya Hadoop veri çözümleri.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 15.0.26720.2 | Önerilen
 Component.Microsoft.Web.LibraryManager | Kitaplık Yöneticisi | 15.8.27705.0 | Önerilen
@@ -187,13 +187,13 @@ Microsoft.VisualStudio.Component.FSharp.Desktop | F#Masaüstü dil desteği | 15
 
 ## <a name="data-science-and-analytical-applications"></a>Veri bilimi ve analitik uygulamalar
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.DataScience
+**ID:** Microsoft.VisualStudio.Workload.DataScience
 
-**Açıklama:** Diller ve Python, R dahil olmak üzere veri bilimi uygulamaları oluşturmaya yönelik araçlar ve F#.
+**Açıklama:** dilleri ve Python, R dahil olmak üzere veri bilimi uygulamaları oluşturmaya yönelik araçlar ve F#.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Anaconda3.x64 | Anaconda3 64-bit (5.2.0) | 5.2.0 | Önerilen
 Microsoft.Component.CookiecutterTools | Cookiecutter şablonu desteği | 15.0.26621.2 | Önerilen
@@ -232,13 +232,13 @@ Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 |
 
 ## <a name="net-desktop-development"></a>.NET masaüstü geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.ManagedDesktop
+**ID:** Microsoft.VisualStudio.Workload.ManagedDesktop
 
 **Açıklama:** WPF, Windows Forms ve konsol uygulamaları kullanarak yapı C#, Visual Basic ve F#.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce yayımlama | 15.8.27825.0 | Gerekli
 Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | Gerekli
@@ -263,7 +263,7 @@ Microsoft.Net.Component.4.TargetingPack | .NET framework 4 targeting pack | 15.6
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET framework 4-4.6 geliştirme araçları | 15.6.27406.0 | Önerilen
 Microsoft.VisualStudio.Component.Debugger.JustInTime | Just-In-Time hata ayıklayıcı | 15.0.27005.2 | Önerilen
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 araçları | 15.6.27406.0 | Önerilen
-Component.Dotfuscator | PreEmptive koruma - Dotfuscator | 15.0.26208.0 | İsteğe Bağlı
+Component.Dotfuscator | PreEmptive Protection - Dotfuscator | 15.0.26208.0 | İsteğe Bağlı
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 15.0.26720.2 | İsteğe Bağlı
 Component.Microsoft.Web.LibraryManager | Kitaplık Yöneticisi | 15.8.27705.0 | İsteğe Bağlı
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | İsteğe Bağlı
@@ -307,13 +307,13 @@ Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions | ASP.NET ve web geliş
 
 ## <a name="game-development-with-unity"></a>Unity ile oyun geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.ManagedGame
+**ID:** Microsoft.VisualStudio.Workload.ManagedGame
 
-**Açıklama:** Güçlü bir platformlar arası geliştirme ortamı olan Unity ile 2B ve 3B oyunlar oluşturun.
+**Açıklama:** güçlü bir platformlar arası geliştirme ortamı olan Unity ile 2B ve 3B oyunlar oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Net.Component.3.5.DeveloperTools | .NET framework 3.5 geliştirme araçları | 15.6.27406.0 | Gerekli
 Microsoft.Net.Component.4.7.1.TargetingPack | .NET framework 4.7.1 targeting pack | 15.6.27406.0 | Gerekli
@@ -322,18 +322,18 @@ Microsoft.VisualStudio.Component.Roslyn.Compiler | C# ve Visual Basic Roslyn der
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# ve Visual Basic | 15.8.27729.1 | Gerekli
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | Statik analiz araçları | 15.0.26208.0 | Gerekli
 Microsoft.VisualStudio.Component.Unity | Unity için Visual Studio Araçları | 15.7.27617.1 | Gerekli
-Component.UnityEngine.x64 | Unity 2018.3 64 bit Düzenleyici | 15.9.28307.271 | Önerilen
+Component.UnityEngine.x64 | Unity 2018,3 64-bit düzenleyici | 15.9.28307.271 | Önerilen
 Component.UnityEngine.x86 | Unity 5.6 32 bit Düzenleyici | 15.6.27406.0 | Önerilen
 
 ## <a name="linux-development-with-c"></a>C++ ile Linux geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NativeCrossPlat
+**ID:** Microsoft.VisualStudio.Workload.NativeCrossPlat
 
-**Açıklama:** Oluşturun ve bir Linux ortamında çalışan uygulamalarda hata ayıklayın.
+**Açıklama:** Linux ortamında çalışan uygulamalar oluşturun ve hata ayıklama.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.MDD.Linux | Linux geliştirme için Visual C++ | 15.6.27406.0 | Gerekli
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ temel özellikler | 15.6.27406.0 | Gerekli
@@ -347,13 +347,13 @@ Component.MDD.Linux.GCC.arm | Gömülü geliştirme ve IOT geliştirmesi | 15.6.
 
 ## <a name="desktop-development-with-c"></a>C++ ile masaüstü geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NativeDesktop
+**ID:** Microsoft.VisualStudio.Workload.NativeDesktop
 
 **Açıklama:** Microsoft C++ araç takımı, ATL veya MFC kullanarak Windows Masaüstü uygulamaları oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | Gerekli
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# ve Visual Basic Roslyn derleyicileri | 15.6.27309.0 | Gerekli
@@ -387,12 +387,12 @@ Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | Windows 10 SDK (10.0.15063.0) Masaüstü C++ [x86 ve x64] için | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) UWP için: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) UWP için: C++ | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) için UWP: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) için UWP: C++ | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | Windows 10 SDK (10.0.16299.0) Masaüstü C++ [x86 ve x64] için | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | Windows 10 SDK (10.0.16299.0) Masaüstü C++ [ARM ve ARM64] için | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) UWP için: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 SDK (10.0.16299.0) UWP için: C++ | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) için UWP: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 UWP için SDK (10.0.16299.0): C++ | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134.0) | 15.9.28307.102 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.WinXP | C++ için Windows XP desteği | 15.8.27924.0 | İsteğe Bağlı
@@ -403,13 +403,13 @@ Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.
 
 ## <a name="game-development-with-c"></a>C++ ile oyun geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NativeGame
+**ID:** Microsoft.VisualStudio.Workload.NativeGame
 
 **Açıklama:** DirectX, Unreal veya Cocos2d tarafından desteklenen profesyonel oyunlar oluşturmak için C++'ın gücünü kullanın.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | Statik analiz araçları | 15.0.26208.0 | Gerekli
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ temel özellikler | 15.6.27406.0 | Gerekli
@@ -447,12 +447,12 @@ Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | Windows 10 SDK (10.0.15063.0) Masaüstü C++ [x86 ve x64] için | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) UWP için: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) UWP için: C++ | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) için UWP: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) için UWP: C++ | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | Windows 10 SDK (10.0.16299.0) Masaüstü C++ [x86 ve x64] için | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | Windows 10 SDK (10.0.16299.0) Masaüstü C++ [ARM ve ARM64] için | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) UWP için: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 SDK (10.0.16299.0) UWP için: C++ | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) için UWP: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 UWP için SDK (10.0.16299.0): C++ | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134.0) | 15.9.28307.102 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK ve UCRT SDK | 15.6.27406.0 | İsteğe Bağlı
@@ -461,13 +461,13 @@ Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.
 
 ## <a name="mobile-development-with-c"></a>C++ ile Mobil Geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NativeMobile
+**ID:** Microsoft.VisualStudio.Workload.NativeMobile
 
-**Açıklama:** İOS, Android veya C++ kullanarak Windows için platformlar arası uygulamalar oluşturun.
+**Açıklama:** iOS, Android veya C++ kullanarak Windows için platformlar arası uygulamalar oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Android.SDK19.Private | Android SDK kurulumu (API düzey 19) (JavaScript ile Mobil Geliştirme için yerel yükleme / C++) | 15.9.28107.0 | Gerekli
 Component.Android.SDK21.Private | Android SDK kurulumu (API düzey 21) (JavaScript ile Mobil Geliştirme için yerel yükleme / C++) | 15.9.28016.0 | Gerekli
@@ -492,13 +492,13 @@ Component.MDD.IOS | C++ iOS geliştirici araçları | 15.0.26621.2 | İsteğe Ba
 
 ## <a name="net-core-cross-platform-development"></a>.NET core platformlar arası geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NetCoreTools
+**ID:** Microsoft.VisualStudio.Workload.NetCoreTools
 
 **Açıklama:** .NET Core, ASP.NET Core, HTML/JavaScript ve Docker desteği içeren kapsayıcıları kullanarak platformlar arası uygulamalar oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 15.0.26720.2 | Gerekli
 Component.Microsoft.Web.LibraryManager | Kitaplık Yöneticisi | 15.8.27705.0 | Gerekli
@@ -560,13 +560,13 @@ Microsoft.VisualStudio.ComponentGroup.IISDevelopment | Geliştirme zamanı IIS d
 
 ## <a name="mobile-development-with-net"></a>.NET ile Mobil Geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NetCrossPlat
+**ID:** Microsoft.VisualStudio.Workload.NetCrossPlat
 
-**Açıklama:** İOS, Android veya Xamarin kullanarak Windows için platformlar arası uygulamalar oluşturun.
+**Açıklama:** iOS, Android veya Xamarin kullanarak Windows için platformlar arası uygulamalar oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Xamarin | Xamarin | 15.8.27906.1 | Gerekli
 Component.Xamarin.RemotedSimulator | Xamarin uzak simülatör | 15.6.27323.2 | Gerekli
@@ -602,13 +602,13 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Xamarin | Xamarin için evrensel Windo
 
 ## <a name="aspnet-and-web-development"></a>ASP.NET ve web geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.NetWeb
+**ID:** Microsoft.VisualStudio.Workload.NetWeb
 
 **Açıklama:** ASP.NET, ASP.NET Core, HTML/JavaScript ve Docker desteği içeren kapsayıcıları kullanarak web uygulamaları oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 15.0.26720.2 | Gerekli
 Component.Microsoft.Web.LibraryManager | Kitaplık Yöneticisi | 15.8.27705.0 | Gerekli
@@ -690,13 +690,13 @@ Microsoft.VisualStudio.Web.Mvc4.ComponentGroup | ASP.NET MVC 4 | 15.6.27406.0 | 
 
 ## <a name="nodejs-development"></a>Node.js geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.Node
+**ID:** Microsoft.VisualStudio.Workload.Node
 
-**Açıklama:** Zaman uyumsuz olay temelli JavaScript çalışma zamanı olan node.js kullanarak Ölçeklenebilir Ağ uygulamaları oluşturun. 
+**Açıklama:** bir zaman uyumsuz olay temelli bir JavaScript çalışma zamanı olan Node.js kullanarak Ölçeklenebilir Ağ uygulamaları oluşturun. 
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | Gerekli
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript tanılamaları | 15.8.27729.1 | Gerekli
@@ -716,13 +716,13 @@ Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC ++ 2017 sürüm 15.9 v14.
 
 ## <a name="officesharepoint-development"></a>Office/SharePoint geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.Office
+**ID:** Microsoft.VisualStudio.Workload.Office
 
-**Açıklama:** Office ve SharePoint eklentileri, SharePoint çözümleri ve kullanarak VSTO eklentileri oluşturma C#, VB ve JavaScript.
+**Açıklama:** Create Office ve SharePoint eklentileri, SharePoint çözümleri ve VSTO eklentileri C#, VB ve JavaScript kullanarak.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 15.0.26720.2 | Gerekli
 Component.Microsoft.Web.LibraryManager | Kitaplık Yöneticisi | 15.8.27705.0 | Gerekli
@@ -763,7 +763,7 @@ Microsoft.VisualStudio.Component.TypeScript.3.1 | 3\.1 TypeScript SDK'sı | 15.0
 Microsoft.VisualStudio.Component.VisualStudioData | Veri kaynakları ve hizmet başvuruları | 15.6.27406.0 | Gerekli
 Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation | 15.8.27924.0 | Gerekli
 Microsoft.VisualStudio.Component.Web | ASP.NET ve web geliştirme araçları | 15.8.27825.0 | Gerekli
-Microsoft.VisualStudio.Component.Workflow | Windows Workflow Foundation | 15.8.27825.0 | Gerekli
+Microsoft.VisualStudio.Component.Workflow | {1&gt;{2&gt;Windows Workflow Foundation&lt;2}&lt;1} | 15.8.27825.0 | Gerekli
 Microsoft.VisualStudio.ComponentGroup.Web | ASP.NET ve web geliştirme araçları önkoşulları | 15.9.28219.51 | Gerekli
 Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions | ASP.NET ve web geliştirme | 15.8.27825.0 | Gerekli
 Microsoft.VisualStudio.Component.TeamOffice | (VSTO) Office için Visual Studio Araçları | 15.7.27625.0 | Önerilen
@@ -783,13 +783,13 @@ Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET framework 4.7 geliştirme
 
 ## <a name="python-development"></a>Python geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.Python
+**ID:** Microsoft.VisualStudio.Workload.Python
 
-**Açıklama:** Düzenleme, hata ayıklama, etkileşimli geliştirme ve Python için kaynak denetimi.
+**Açıklama:** hata ayıklama, etkileşimli geliştirme ve kaynak denetimi Python için düzenleme.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Component.PythonTools | Python dil desteği | 15.0.26823.1 | Gerekli
 Component.CPython3.x64 | Python 3 64 bit (3.6.6) | 3.6.6 | Önerilen
@@ -866,13 +866,13 @@ Microsoft.VisualStudio.ComponentGroup.Web | ASP.NET ve web geliştirme araçlar�
 
 ## <a name="universal-windows-platform-development"></a>Evrensel Windows platformu geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.Universal
+**ID:** Microsoft.VisualStudio.Workload.Universal
 
-**Açıklama:** Evrensel Windows platformu uygulamaları oluşturmak C#, VB, JavaScript veya isteğe bağlı olarak C++.
+**Açıklama:** C#, VB, JavaScript ve C++ ile isteğe bağlı olarak, Evrensel Windows platformu uygulamaları oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | Gerekli
 Microsoft.Component.ClickOnce | ClickOnce yayımlama | 15.8.27825.0 | Gerekli
@@ -914,12 +914,12 @@ Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | Windows 10 SDK (10.0.15063.0) Masaüstü C++ [x86 ve x64] için | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) UWP için: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) UWP için: C++ | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) için UWP: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) için UWP: C++ | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | Windows 10 SDK (10.0.16299.0) Masaüstü C++ [x86 ve x64] için | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | Windows 10 SDK (10.0.16299.0) Masaüstü C++ [ARM ve ARM64] için | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) UWP için: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 SDK (10.0.16299.0) UWP için: C++ | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) için UWP: C#, VB, JS | 15.6.27406.0 | İsteğe Bağlı
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 UWP için SDK (10.0.16299.0): C++ | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134.0) | 15.9.28307.102 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.Windows10SDK.IpOverUsb | USB cihaz bağlantısı | 15.9.28307.102 | İsteğe Bağlı
 Microsoft.VisualStudio.ComponentGroup.UWP.VC | C++ Evrensel Windows platformu araçları | 15.9.28307.102 | İsteğe Bağlı
@@ -928,13 +928,13 @@ Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.
 
 ## <a name="visual-studio-extension-development"></a>Visual Studio uzantısı geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.VisualStudioExtension
+**ID:** Microsoft.VisualStudio.Workload.VisualStudioExtension
 
-**Açıklama:** Visual Studio için yeni komutlar, kod Çözümleyicileri ve araç pencerelerini de dahil olmak üzere, eklentileri ve uzantıları oluşturun.
+**Açıklama:** Oluştur eklentileri ve uzantıları yeni komutları dahil olmak üzere Visual Studio için kod Çözümleyicileri ve araç pencerelerini.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce yayımlama | 15.8.27825.0 | Gerekli
 Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | Gerekli
@@ -951,7 +951,7 @@ Microsoft.VisualStudio.Component.VSSDK | Visual Studio SDK | 15.8.27729.1 | Gere
 Microsoft.VisualStudio.ComponentGroup.VisualStudioExtension.Prerequisites | Visual Studio uzantı geliştirme önkoşulları | 15.7.27625.0 | Gerekli
 Microsoft.VisualStudio.Component.DiagnosticTools | .NET profil oluşturma araçları | 15.8.27729.1 | Önerilen
 Microsoft.VisualStudio.Component.TextTemplating | Metin şablonu dönüştürme | 15.0.26208.0 | Önerilen
-Component.Dotfuscator | PreEmptive koruma - Dotfuscator | 15.0.26208.0 | İsteğe Bağlı
+Component.Dotfuscator | PreEmptive Protection - Dotfuscator | 15.0.26208.0 | İsteğe Bağlı
 Microsoft.Component.CodeAnalysis.SDK | .NET Compiler Platform SDK’sı | 15.0.27729.1 | İsteğe Bağlı
 Microsoft.Component.VC.Runtime.OSSupport | UWP için Visual C++ çalışma zamanı | 15.6.27406.0 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.AppInsights.Tools | Geliştirici analiz araçları | 15.8.27825.0 | İsteğe Bağlı
@@ -964,13 +964,13 @@ Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC ++ 2017 sürüm 15.9 v14.
 
 ## <a name="mobile-development-with-javascript"></a>JavaScript ile Mobil Geliştirme
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.WebCrossPlat
+**ID:** Microsoft.VisualStudio.Workload.WebCrossPlat
 
-**Açıklama:** Apache Cordova için Araçları'nı kullanarak Android, iOS ve UWP uygulamaları oluşturun.
+**Açıklama:** Apache Cordova için Araçları'nı kullanarak Android, iOS ve UWP uygulamalar oluşturun.
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Component.CordovaToolset.6.3.1 | Cordova 6.3.1 araç takımı | 15.7.27625.0 | Gerekli
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | Gerekli
@@ -1001,7 +1001,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova için evrensel Windo
 
 Bu, her türlü iş yükü ile dahil edilmez, ancak tek bir bileşeni olarak seçilebilir bileşenlerdir.
 
-Bileşen kimliği | Ad | Sürüm
+Bileşen kimliği | Name | Sürüm
 --- | --- | ---
 Component.Android.Emulator | Android için Visual Studio Öykünücüsü | 15.6.27413.0
 Component.Android.NDK.R11C | Android NDK (R11C) | 11.3.14

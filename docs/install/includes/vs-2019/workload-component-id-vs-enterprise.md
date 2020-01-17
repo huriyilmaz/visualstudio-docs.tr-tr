@@ -3,19 +3,19 @@ title: Visual Studio Enterprise 2019 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
 description: İş yükü ve Bileşen kimlikleri komut satırını kullanarak Visual Studio'yu yükleyin veya bağımlılık VSIX bildirimi olarak belirtmek için kullanın.
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 58c7d8775a1db09d2628eb6946924ae3543b80e4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 9edadea9109fcd3c543ca3bd3cd777fbd488351a
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74796164"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76159536"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2019"></a>Visual Studio çekirdek Düzenleyicisi (Visual Studio Enterprise 2019 ile birlikte)
 
@@ -242,7 +242,7 @@ Microsoft.VisualStudio.Component.FSharp | F#dil desteği | 16.0.28315.86 | Öner
 Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | IntelliTrace | 16.4.29429.68 | Önerilen
 Microsoft.VisualStudio.Component.LiveUnitTesting | Live Unit Testing | 16.1.28811.260 | Önerilen
 Microsoft.VisualStudio.Component.NuGet | NuGet Paket Yöneticisi | 16.1.28829.92 | Önerilen
-Component.Dotfuscator | PreEmptive koruma - Dotfuscator | 16.0.28528.71 | İsteğe Bağlı
+Component.Dotfuscator | PreEmptive Protection - Dotfuscator | 16.0.28528.71 | İsteğe Bağlı
 Component.Microsoft.VisualStudio.RazorExtension | Razor dil Hizmetleri | 16.0.28714.129 | İsteğe Bağlı
 Component.Microsoft.Web.LibraryManager | Kitaplık Yöneticisi | 16.0.28315.86 | İsteğe Bağlı
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET framework 4.6.2 targeting pack | 16.0.28517.75 | İsteğe Bağlı

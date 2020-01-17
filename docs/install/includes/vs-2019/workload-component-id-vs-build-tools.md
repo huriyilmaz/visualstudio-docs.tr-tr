@@ -3,19 +3,19 @@ title: Visual Studio Derleme Araçları 2019 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
 description: Klasik Windows tabanlı uygulamalar oluşturmak için Visual Studio iş yükü ve Bileşen kimlikleri kullanın
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 1e9fa33bbd8604f4260b61767f69b85e3263198b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 9f3920b7b746e4329cf94760e983d43e3579e8d3
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74795606"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76159325"
 ---
 ## <a name="azure-development-build-tools"></a>Azure geliştirme derleme araçları
 
@@ -292,7 +292,7 @@ Microsoft.VisualStudio.Component.NuGet.BuildTools | NuGet hedefleri ve derleme g
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# ve Visual Basic Roslyn derleyicileri | 16.0.28714.129 | Gerekli
 Microsoft.VisualStudio.Component.VSSDKBuildTools | Visual Studio SDK derleme araçları temel | 16.0.28315.86 | Gerekli
 Microsoft.VisualStudio.ComponentGroup.VisualStudioExtensionBuildTools.Prerequisites | Visual Studio uzantı geliştirme önkoşulları | 16.4.29318.151 | Gerekli
-Component.Dotfuscator | PreEmptive koruma - Dotfuscator | 16.0.28528.71 | İsteğe Bağlı
+Component.Dotfuscator | PreEmptive Protection - Dotfuscator | 16.0.28528.71 | İsteğe Bağlı
 Microsoft.Component.VC.Runtime.OSSupport | C++V142 derleme araçları için Evrensel Windows Platformu çalışma zamanı | 16.4.29409.204 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.VC.ATL | C++En son v142 derleme araçları için ATL (x86 & x64) | 16.4.29313.120 | İsteğe Bağlı
 Microsoft.VisualStudio.Component.VC.ATLMFC | C++En son v142 derleme araçları için MFC (x86 & x64) | 16.4.29313.120 | İsteğe Bağlı

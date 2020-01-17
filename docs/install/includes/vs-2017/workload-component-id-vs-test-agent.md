@@ -3,29 +3,29 @@ title: Visual Studio Test Agent 2017'yi iş yükü ve Bileşen kimlikleri
 titleSuffix: ''
 description: Otomatik testleri çalıştırmak ve uzaktan yük testleri için Visual Studio iş yükü ve Bileşen kimlikleri kullanın
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 0a1661b885db877f216c0c9d3d8363825ea5f8eb
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: e3dda1867ee4f54588456c668639e51652d7f8e1
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68177569"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76158913"
 ---
 ## <a name="test-agent"></a>Test Aracısı
 
-**KİMLİĞİ:** Microsoft.VisualStudio.Workload.TestAgent
+**ID:** Microsoft.VisualStudio.Workload.TestAgent
 
-**Açıklama:** Otomatikleştirilmiş testleri ve yük testleri uzaktan çalıştırmak destekler
+**Açıklama:** otomatikleştirilmiş testleri ve yük testleri uzaktan çalıştırmak destekler
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
 
-Bileşen kimliği | Ad | Sürüm | Bağımlılık türü
+Bileşen kimliği | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test aracısı temel özellikleri | 15.0.27019.1 | Gerekli
 
@@ -33,6 +33,6 @@ Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test aracısı temel
 
 Bu, her türlü iş yükü ile dahil edilmez, ancak tek bir bileşeni olarak seçilebilir bileşenlerdir.
 
-Bileşen kimliği | Ad | Sürüm
+Bileşen kimliği | Name | Sürüm
 --- | --- | ---
 yok | yok | yok
