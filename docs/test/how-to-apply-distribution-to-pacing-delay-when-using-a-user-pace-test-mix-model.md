@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test mix model
 ms.assetid: ae8b35f9-d465-4d72-8d7d-7b56ae6ffd22
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3241017a381370f215ed4f9211ae646dc6c80b65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 953c1ac4cb6e0f87d2a36080cc751ea26f66d63e
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664836"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114496"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Nasıl yapılır: Kullanıcı hız testi karışımı modeli için İlerleme Gecikmesine Dağıtım uygulama
 
@@ -40,21 +40,21 @@ ms.locfileid: "72664836"
 
 1. Bir yük testi açın.
 
-   **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
+   **Yük Testi Düzenleyicisi** görünür. Yük testi ağacında görüntülenir.
 
 2. Yük testi ağacının **senaryolar** klasöründe, hız dağıtımını uygulamak istediğiniz senaryo düğümünü seçin.
 
-3. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
+3. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
 
-   Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
+   Kategoriler ve özellikler bu senaryonun görüntülenen **özellikleri** penceresi.
 
 4. **Adımlama Gecikmesine Dağıtım Uygula**için özellik değeri ' nde, **doğru** veya **yanlış**' ı seçin.
 
-5. @No__t_1 **Dosya** **Kaydet**' i seçin. Artık yük testinizi, yeni bir **adım adım gecikme değerine dağıtım Uygula** değeriyle çalıştırabilirsiniz.
+5.  > **Dosya** **Kaydet**' i seçin. Artık yük testinizi, yeni bir **adım adım gecikme değerine dağıtım Uygula** değeriyle çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını Düzenle](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
 - [İzlenecek yol: Yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
 - [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)

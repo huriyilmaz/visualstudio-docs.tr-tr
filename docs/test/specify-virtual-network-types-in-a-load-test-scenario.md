@@ -9,15 +9,15 @@ helpviewer_keywords:
 - load tests, virtual networks
 - network mix
 ms.assetid: 3c4f7874-081a-4ec4-9510-4d6d7d863a11
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dbf5dbbd9f2726eee368a3066bda686f803d46fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 60fa2bd38f3d7e594e9af7ba8ec544518bdbb920
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659938"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115304"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>Yük testi senaryosunda sanal ağ türlerini belirtme
 
@@ -25,7 +25,7 @@ ms.locfileid: "72659938"
 
 Ağ karışımı, belirli bir *ağ profilini*çalıştıran bir sanal kullanıcının olasılığını belirtir. Ağ profili, uygulama katmanında ağ bant genişliğinin bir simülasyonu olur. Gecikme süresini benzemez.
 
-Bir yük testi oluşturduğunuzda, yükün birden fazla ağ bağlantısı türü aracılığıyla üretilmekte olduğunu benzetmek isteyebilirsiniz. Ağ karışımı birkaç ağ türü sunar. Farklı ağlar benzetilir. @No__t_0 gibi bir seçenek belirlediğinizde, seçili bant genişliğinin benzetimini yapmak için bekleme süreleri teste eklenir.
+Bir yük testi oluşturduğunuzda, yükün birden fazla ağ bağlantısı türü aracılığıyla üretilmekte olduğunu benzetmek isteyebilirsiniz. Ağ karışımı birkaç ağ türü sunar. Farklı ağlar benzetilir. `Cable-DSL 1.5Mbps`gibi bir seçenek belirlediğinizde, seçili bant genişliğinin benzetimini yapmak için bekleme süreleri teste eklenir.
 
 Ağ karışımı diğer karıştırma seçenekleri gibi çalışmaktadır. Ağ türü, ağ karışımına bağlı olarak bir sanal kullanıcıyla ilişkili rastgele bir şekilde seçilir. Bu kullanıcının testleri, karışımında belirttiğiniz olasılığa bağlı olarak belirli bir ağ türü kullanılarak çalıştırılır.
 
@@ -33,17 +33,17 @@ Bir ağ karışımı belirtduktan sonra ağ türlerini ekleyebilir ve kaldırabi
 
 Karışım denetimi, bir senaryodaki ağların dağıtımını kolayca ayarlamanıza olanak sağlar.
 
-Daha fazla bilgi için bkz. [karışım denetimi hakkında](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+Daha fazla bilgi için [karışımı denetimi ile ilgili](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="true-network-emulation"></a>Gerçek ağ öykünmesi
 
-Visual Studio, yük testleri de dahil olmak üzere tüm test türleri için yazılım tabanlı doğru ağ öykünmesi kullanır. Gerçek ağ öykünmesi, ağ paketlerinin doğrudan işlemesini sağlayarak ağ koşullarına benzetir. Gerçek ağ öykünücüsü, Ethernet gibi güvenilir bir fiziksel bağlantı kullanarak hem kablolu hem de kablosuz ağların davranışını taklit edebilir. Aşağıdaki ağ öznitelikleri, gerçek ağ öykünmesine dahil edilir:
+Visual Studio, yük testleri de dahil olmak üzere tüm test türleri için yazılım tabanlı doğru ağ öykünmesi kullanır. Gerçek ağ öykünmesi ağ paketlerinin doğrudan düzenlenmesiyle ağ koşullarının benzetimini yapar. Gerçek ağ öykünücü Ethernet gibi güvenilir bir fiziksel bağlantı kullanarak hem kablolu hem de kablosuz ağların davranışını taklit edebilir. Aşağıdaki ağ öznitelikleri gerçek ağ öykünmesine dahil edilir:
 
 - Ağ üzerinden gidiş dönüş süresi (gecikme)
 
-- Kullanılabilir bant genişliği miktarı
+- Kullanılabilir bant genişliği
 
 - Sıraya alma davranışı
 
@@ -53,9 +53,9 @@ Visual Studio, yük testleri de dahil olmak üzere tüm test türleri için yaz�
 
 - Hata yayılmaları.
 
-Gerçek ağ öykünmesi, ağ paketlerinin IP adresleri veya TCP, UDP ve ıCMP gibi protokollere göre filtrelenmesi için esneklik de sağlar.
+Gerçek ağ öykünmesi aynı zamanda IP adresleri veya TCP, UDP ve ICMP gibi protokollere dayanan ağ paket filtrelemelerinde esneklik sağlar.
 
-Gerçek ağ öykünmesi, ağ tabanlı uygulama geliştiricileri ve test ediciler tarafından istenen bir test ortamına öykünmek, performansı değerlendirmek, değişikliğin etkisini tahmin etmek veya teknoloji iyileştirmesi hakkında kararlar almak için kullanılabilir. Gerçek ağ öykünmesi, donanım test bedine kıyasla, çok daha ucuz ve esnek bir çözümdür.
+Gerçek ağ öykünmesi, ağ tabanlı uygulama geliştiricileri ve test ediciler tarafından istenen bir test ortamına öykünmek, performansı değerlendirmek, değişikliğin etkisini tahmin etmek veya teknoloji iyileştirmesi hakkında kararlar almak için kullanılabilir. Donanım test yataklarıyla karşılaştırıldığında gerçek ağ öykünmesi çok daha ucuz ve daha esnek bir çözüm ' dir.
 
 ## <a name="to-add-new-networks-to-a-scenario"></a>Bir senaryoya yeni ağlar eklemek için
 
@@ -68,7 +68,7 @@ Gerçek ağ öykünmesi, ağ tabanlı uygulama geliştiricileri ve test ediciler
 
 2. **Ağ türü** sütununda, yeni giriş için oku seçin. İstediğiniz ağ türünü seçin.
 
-3. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın. Daha fazla bilgi için bkz. [karışım denetimi hakkında](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+3. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın. Daha fazla bilgi için [karışımı denetimi ile ilgili](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
 4. Ağ ekleme işiniz bittiğinde **Tamam**' ı seçin.
 
@@ -80,24 +80,24 @@ Gerçek ağ öykünmesi, ağ tabanlı uygulama geliştiricileri ve test ediciler
 
 3. Kılavuzdaki ağı seçin ve ardından **Kaldır**' ı seçin.
 
-4. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın. Daha fazla bilgi için bkz. [karışım denetimi hakkında](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+4. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın. Daha fazla bilgi için [karışımı denetimi ile ilgili](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
 5. Ağları kaldırmayı tamamladığınızda **Tamam**' ı seçin.
 
-## <a name="about-the-mix-control"></a>Karıştırma denetimi hakkında
+## <a name="about-the-mix-control"></a>Karışım denetimi hakkında
 
 Karışım denetimi, yük testi senaryosunda testler, tarayıcı türleri veya ağ türleri arasında dağıtılan yükün yüzdesini ayarlamanıza olanak sağlar. Yüzde değerlerini ayarlamak için kaydırıcıları taşıyın. Ağ türleri için karışımı ayarlamak, bir yük testi senaryosunda belirli bir ağ profilini çalıştıran bir sanal kullanıcının olasılığını belirtir.
 
-Kaydırıcıyı taşıdığınızda, tüm kullanılabilir öğelerin yüzde değerleri değişir. İkiden fazla öğe varsa, eklediğiniz veya kaldırdığınız miktar diğer öğeler arasında eşit olarak dağıtılır. Bu davranışı geçersiz kılmak mümkündür. Belirli bir öğe için kilit sütunundaki onay kutusunu seçerseniz, o öğe için belirtilen yüzde değerini kilitlersiniz. Ardından, bir kaydırıcıyı taşıdığınızda, eklediğiniz veya kaldırdığınız miktar yalnızca kalan kilitlenmemiş öğeler için geçerlidir.
+Bir kaydırıcı taşıdığınızda, tüm kullanılabilir öğeleri yüzde değerlerini değiştirin. İkiden fazla öğe varsa, ekleme veya kaldırma miktarı diğer öğeler arasında eşit olarak dağıtılır. Bu davranışı geçersiz kılmak mümkündür. Belirli bir öğe için kilit sütunundaki onay kutusunu seçerseniz, o öğe için belirtilen yüzde değerini kilitlersiniz. Ardından, bir kaydırıcıyı taşıdığınızda, ekleme veya kaldırma miktarı yalnızca kilidi kalan tüm öğeleri uygulanır.
 
-**Dağıtım** düğmesi, yüzde değerlerini tüm öğeler arasında eşit olarak ayırmak için kullanılır. Örneğin, üç öğe varsa **Dağıt** ' ı seçtiğinizde, yüzde değerleri 34, 33 ve 33 olarak ayarlanır.
+**Dağıt** düğmesi tüm öğeler arasında eşit yüzde değerlerini ayırmak için kullanılır. Örneğin, üç öğeye sahipseniz seçme **Dağıt** yüzde değerlerini 34, 33 ve 33 olarak ayarlar.
 
 > [!WARNING]
-> **Dağıt** düğmesi kilitli olan tüm öğeleri geçersiz kılar.
+> **Dağıt** düğmesi kilitli olan öğeleri geçersiz kılar.
 
-Ayrıca, kaydırıcıları kullanmak yerine, yüzde değerlerini doğrudan **%** sütununa yazmak da mümkündür. Doğrudan bir yüzde değeri girerseniz, diğer öğeler otomatik olarak ayarlanmaz.
+Yüzde değerlerini doğrudan yazmak mümkündür **%** Kaydırıcıları kullanmak yerine sütun. Bir yüzde değeri doğrudan giriyorsanız, diğer öğeler otomatik olarak ayarlar değil.
 
 > [!NOTE]
-> Toplam %100 ' e kadar veya **%** sütununa girilen yüzde değerleri ondalıksa kaydırıcıları devre dışı bırakılır.
+> Toplam % 100 eklemez veya girilen yüzde değerleri kaydırıcılar devre dışı **%** ondalıksa sütun.
 
-Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini kabul etmeniz veya geri dönüp bunları ayarlamanız istenir. Bunları olduğu gibi kabul etmek istiyorsanız, bunlar %100 'e eşit olarak dağıtılır.  Örneğin, iki öğe varsa ve bunları el ile %80 ve %40 olarak ayarlarsanız, ilk öğe% 66,67 olarak ayarlanır (80 olarak 120) ve ikinci öğe% 33,33 olarak ayarlanır (40, 120 olarak bölünür).
+Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini kabul etmeniz veya geri dönüp bunları ayarlamanız istenir. Oldukları gibi bunları kabul etmeyi seçerseniz, % 100 olarak dağıtılır.  Örneğin, iki öğeniz varsa ve el ile bunları %80 ve % 40 olarak ayarlarsanız, ilk öğeye (120 bölünmüş 80) % 66.67 ayarlayın ve ikinci öğe %33.33 (40 120 bölünmüş) ayarlayın.

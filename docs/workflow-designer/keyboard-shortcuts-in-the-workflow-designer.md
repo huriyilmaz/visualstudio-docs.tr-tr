@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f36e8b6d67d2405fbc74c0b1bf854b3a3baaf4da
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a8892f46585179ae5857d48deffd982e1cfc0dee
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650156"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115393"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>İş Akışı Tasarımcısında Klavye Kısayolları
 
@@ -32,18 +32,18 @@ Aşağıdaki tabloda İş Akışı Tasarımcısı komutlarına atanan varsayıla
 |Kısayol|Amaç|
 |-|-------------|
 |CTRL + E, A|Bağımsız değişken tasarımcısını gösterir veya gizler.|
-|CTRL + E, C|Seçili aktiviteyi yerinde daraltır.|
-|CTRL + E, E|Seçili aktiviteyi yerinde genişletir.|
+|CTRL+E, C|Seçili aktiviteyi yerinde daraltır.|
+|CTRL+E, E|Seçili aktiviteyi yerinde genişletir.|
 |CTRL + E, F|Seçilen etkinlikleri bir akış çizelgesine bağlar.|
 |CTRL + E, ı|Içeri aktarmalar tasarımcısını gösterir veya gizler.|
 |CTRL + E, M|Klavye odağını sekme düzeninde bir sonraki öğeye kaydırır.|
-|CTRL + E, N|Seçilen etkinliğin kapsamında (veya en yakın) yeni bir değişken oluşturur.|
+|CTRL+E, N|Seçilen etkinliğin kapsamında (veya en yakın) yeni bir değişken oluşturur.|
 |CTRL + E, O|Genel bakış haritasını gösterir veya gizler.|
 |CTRL + E, P|Seçili etkinliğin üst öğesine gider. Bu, içerik haritası gezinmede bir düzey yukarı gider ve tasarımcı yüzeyinde kök etkinliği değiştirir.|
 |CTRL + E, S|Klavye odağının bulunduğu öğeyi geçerli seçime ekler.|
-|CTRL + E, V|Değişken tasarımcısını gösterir veya gizler.|
-|CTRL + E, X|İş akışındaki tüm etkinlikleri genişletir.|
-|CTRL + ALT + F6|Klavye odağını geçerli kullanıcı arabirimi alanından dizideki bir sonraki alana kaydırır. Sıra aşağıdaki gibidir:<br /><br /> 1. içerik haritası gezinti çubuğu.<br />2. tasarımcı yüzeyi<br />3. açık ise bağımsız değişkenler/değişkenler/Içeri aktarma Tasarımcısı<br />4. Shell|
+|CTRL+E, V|Değişken tasarımcısını gösterir veya gizler.|
+|CTRL+E, X|İş akışındaki tüm etkinlikleri genişletir.|
+|CTRL+ALT+F6|Klavye odağını geçerli kullanıcı arabirimi alanından dizideki bir sonraki alana kaydırır. Sıra aşağıdaki gibidir:<br /><br /> 1. içerik haritası gezinti çubuğu.<br />2. tasarımcı yüzeyi<br />3. açık ise bağımsız değişkenler/değişkenler/Içeri aktarma Tasarımcısı<br />4. Shell|
 
 ### <a name="flowchart"></a>Akış Çizelgesi
 
@@ -83,7 +83,7 @@ Varsayılan olarak, Visual Basic metin düzenleme için varsayılan klavye kısa
   - Kopyala
   - Yapıştır
   - Tümünü Seç
-  - Komutunu
+  - Geri alma
   - Yinele
 
 - Visual Studio 'da İş Akışı Tasarımcısı içindeki ifade düzenleme komutlarının klavye kısayollarını yeniden eşlemek için, İş Akışı Tasarımcısı kapsamındaki kısayolları düzenleyin. Metin düzenleyici kapsamında yapılan değişiklikler İş Akışı Tasarımcısı için otomatik olarak uygulanmaz. Her iki yerde de kısayolları yeniden eşlemek isterseniz, değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).

@@ -13,17 +13,17 @@ caps.latest.revision: 22
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 197ae2a168f7f14f7d0ea3d9b82b5943c1af82f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 72bf11519ec500082304fde431122d05ee65db54
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68186007"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124523"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun Çevrimdışı Yüklemesini Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [Visual Studio'nun çevrimdışı yüklemesini oluşturma](/visualstudio/install/create-an-offline-installation-of-visual-studio) veya [Visual Studio'nun bir ağ oluşturun](/visualstudio/install/create-a-network-installation-of-visual-studio).
+Visual Studio ile ilgili en son belgeler için bkz. Visual [Studio 'nun çevrimdışı yüklemesini oluşturma](/visualstudio/install/create-an-offline-installation-of-visual-studio) veya [Visual Studio 'Nun ağ yüklemesi oluşturma](/visualstudio/install/create-a-network-installation-of-visual-studio).
 
 Bu sayfa, Internet'e bağlı olmadıkları sırada Visual Studio 2015 yüklemeyi açıklar. Ancak, "bağlantısız" bir yükleme gerçekleştirmek için önce bir çevrimdışı yükleme düzenini Internet'e bağlı bir makinede kullanarak oluşturmanız gerekir. Bunun nasıl yapılacağı aşağıda verilmiştir.
 
@@ -44,9 +44,9 @@ Bu sayfa, Internet'e bağlı olmadıkları sırada Visual Studio 2015 yüklemeyi
 
 3. Bu komutu çalıştırdıktan sonra çevrimdışı yükleme düzenini bulunmasını istediğiniz klasörü değiştirmek izin veren bir iletişim kutusu görünür.   Ardından, **indirme** düğmesi.
 
-     Paket başarılı olduğunda, bildiren bir ileti görürsünüz **Kurulum başarılı! Belirtilen tüm bileşenler başarıyla alındı.**
+     Paket indirmesi başarılı olduğunda, kurulumun başarılı olduğunu belirten bir ileti görmeniz gerekir **! Belirtilen tüm bileşenler başarıyla alındı.**
 
-4. Daha önce belirttiğiniz klasörünü bulun. (Örneğin, D:\VisualStudio2015 bulun.) Bu klasör veya yükleme medyasına paylaşılan bir konuma kopyalamak için ihtiyacınız olan her şeyi içerir.
+4. Daha önce belirttiğiniz klasörünü bulun. (Örneğin, D:\VisualStudio2015. bulun) Bu klasör, paylaşılan bir konuma kopyalamak veya medya yüklemek için gereken her şeyi içerir.
 
     > [!CAUTION]
     > Şu anda Android SDK'sı bir çevrimdışı yükleme deneyimi desteklemez. Android SDK Kurulumu öğelerini Internet'e bağlı olmayan bir bilgisayara yüklerseniz, yükleme başarısız olabilir. Daha fazla bilgi için bu konudaki "bir çevrimdışı yükleme sorunlarını giderme" bölümüne bakın.
@@ -61,28 +61,28 @@ Bu sayfa, Internet'e bağlı olmadıkları sırada Visual Studio 2015 yüklemeyi
 
 | Bileşen veya paket | Çözüm |
 |-|-|
-| Dotfuscator ve Analytics Community Edition 5.19.1 (Community, Professional ve Enterprise sürümleri için Visual Studio'nun yüklü olarak **Windows 7 SP1** ve **Windows Server 2008 R2**) | Çevrimdışı makinenize çalışıyorsa **Windows 7 SP1** veya **Windows Server 2008 R2**, Visual Studio 2015'i yüklemeden önce aşağıdaki adımları gerçekleştirmeniz gerekir:<br /><br /> 1.  CTL dosyalarını indirmek için bir dosya veya web sunucusu yapılandırın.<br /><br /> 2.    Bağlantısı kesilmiş bir ortam için Microsoft otomatik güncelleştirme URL'sini yeniden yönlendirme.<br /><br /> Daha fazla bilgi için [yapılandırma Güvenilen Kökleri ve izin verilmeyen sertifikaları](https://technet.microsoft.com/library/dn265983.aspx) Microsoft TechNet sitesindeki sayfası. |
-| Android SDK kurulumu (API düzeyi) | Android SDK'sı (API düzeyi) paketleri yüklemek için internet bağlantısı olması gerekir. Kısıtlanmış bir ağda varsa, Visual Studio'yu yüklediğinizde aşağıdaki URL'lere erişim izin vermeniz gerekir:<br /><br /> -   http://dl.google.com:443<br />-   http://dl-ssl.google.com:443<br />-   https://dl-ssl.google.com/android/repository/*<br /> <br />Proxy ayarları ile olası sorunları çözme hakkında daha fazla bilgi için bkz. [Visual Studio 2015 yükleme hataları (Android SDK Kurulumu) bir proxy'nin arkasında](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blog gönderisi. |
-| Visual Studio genişletilebilirlik öğe şablonları<br /><br /> Visual Studio için GitHub uzantısı<br /><br /> Visual Studio için PowerShell araçları | Visual Studio 2015'i yüklediğinizde, internet bağlantısı yoksa, özel bir çevrimdışı yükleme düzenini oluşturmak için çevrimdışı akış kullanabilirsiniz. **Not:**  Bu özel akış Visual Studio 2015 için en son güncelleştirmeleri içerir. <br /><br /> Çevrimdışı akış özel oluşturmak için aşağıdaki komutu çalıştırın: / Layout *sürücü:* \VisualStudio2015 /overridefeeduri *xml akışı URL'si*<br /><br /> Örneğin, İngilizce dil için Visual Studio 2015 Enterprise'nın özel çevrimdışı akış çalıştırın:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "http://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Tercih ettiğiniz dilde özel bir çevrimdışı akış oluşturmak için kullanabileceğiniz URL'leri tam bir listesi için aşağıdaki tabloya bakın. |
+| Dotfuscator ve Analytics Community Edition 5.19.1 (Community, Professional ve Enterprise sürümleri için Visual Studio'nun yüklü olarak **Windows 7 SP1** ve **Windows Server 2008 R2**) | Çevrimdışı makinenize çalışıyorsa **Windows 7 SP1** veya **Windows Server 2008 R2**, Visual Studio 2015'i yüklemeden önce aşağıdaki adımları gerçekleştirmeniz gerekir:<br /><br /> 1. CTL dosyalarını indirmek için bir dosya veya Web sunucusu yapılandırın.<br /><br /> 2. bağlantısı kesilmiş bir ortam için Microsoft otomatik güncelleştirme URL 'sini yeniden yönlendirin.<br /><br /> Daha fazla bilgi için [yapılandırma Güvenilen Kökleri ve izin verilmeyen sertifikaları](https://technet.microsoft.com/library/dn265983.aspx) Microsoft TechNet sitesindeki sayfası. |
+| Android SDK kurulumu (API düzeyi) | Android SDK'sı (API düzeyi) paketleri yüklemek için internet bağlantısı olması gerekir. Kısıtlanmış bir ağda varsa, Visual Studio'yu yüklediğinizde aşağıdaki URL'lere erişim izin vermeniz gerekir:<br /><br /> -   https://dl.google.com:443<br />-   https://dl-ssl.google.com:443<br />-   https://dl-ssl.google.com/android/repository/*<br /> <br />Proxy ayarları ile olası sorunları çözme hakkında daha fazla bilgi için bkz. [Visual Studio 2015 yükleme hataları (Android SDK Kurulumu) bir proxy'nin arkasında](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blog gönderisi. |
+| Visual Studio genişletilebilirlik öğe şablonları<br /><br /> Visual Studio için GitHub uzantısı<br /><br /> Visual Studio için PowerShell araçları | Visual Studio 2015'i yüklediğinizde, internet bağlantısı yoksa, özel bir çevrimdışı yükleme düzenini oluşturmak için çevrimdışı akış kullanabilirsiniz. **Not:** özel bu akışa Visual Studio 2015 için en son güncelleştirmeleri içerir. <br /><br /> Çevrimdışı akış özel oluşturmak için aşağıdaki komutu çalıştırın: / Layout *sürücü:* \VisualStudio2015 /overridefeeduri *xml akışı URL'si*<br /><br /> Örneğin, İngilizce dil için Visual Studio 2015 Enterprise'nın özel çevrimdışı akış çalıştırın:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Tercih ettiğiniz dilde özel bir çevrimdışı akış oluşturmak için kullanabileceğiniz URL'leri tam bir listesi için aşağıdaki tabloya bakın. |
 
  Yukarıdaki tabloda açıklandığı gibi bir dile özgü özel çevrimdışı akış, oluşturmak için aşağıdaki URL'ler kullanın.
 
-|       Dil        |                            URL                            |
+|       Dil        |                            {1&gt;URL&lt;1}                            |
 |-----------------------|-----------------------------------------------------------|
-| ve  | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
-| seçenekleri yerine | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x404 |
-|         Çekçe         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x405 |
-|        Almanca         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x407 |
-|        İngilizce        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
-|        İspanyolca        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0xC0A |
-|        Fransızca         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x40C |
-|        İtalyanca        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x410 |
-|       Japonca        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x411 |
-|        Korece         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x412 |
-|        Lehçe         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x415 |
-|      Portekizce       | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x416 |
-|        Rusça        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x419 |
-|        Türkçe        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x41F |
+| ve  | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
+| seçenekleri yerine | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x404 |
+|         Çekçe         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x405 |
+|        Almanca         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x407 |
+|        İngilizce        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
+|        İspanyolca        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0xC0A |
+|        Fransızca         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x40C |
+|        İtalyanca        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x410 |
+|       Japonca        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x411 |
+|        Korece         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x412 |
+|        Lehçe         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x415 |
+|      Portekizce       | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x416 |
+|        Rusça        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x419 |
+|        Türkçe        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x41F |
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

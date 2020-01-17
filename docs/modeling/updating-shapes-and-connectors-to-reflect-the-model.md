@@ -2,17 +2,17 @@
 title: Modeli Yansıtacak Şekilleri ve Bağlayıcıları Güncelleştirme
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84c26295461fa062faf88872dbc043048c26479a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 83a43e8570ea65373b8cac0bd3e3e7a8dc1f5791
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663790"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115030"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Şekilleri ve Bağlayıcıları Modeli Yansıtacak Şekilde Güncelleştirin
 
@@ -37,7 +37,7 @@ Artık şekil, program kodunda veya Kullanıcı olarak ayarlayabileceğiniz bir 
 
 `shape.FillColor = System.Drawing.Color.Red;`
 
-Özellik değişkenini Kullanıcı tarafından değil yalnızca program denetimi altında yapmak istiyorsanız, DSL tanımı diyagramında **Fill Color** gibi yeni bir etki alanı özelliğini seçin. Sonra, Özellikler penceresi, `false` için **gözatılabilir** veya **Kullanıcı arabirimi salt okunur** `true` olarak ayarlanmıştır.
+Özellik değişkenini Kullanıcı tarafından değil yalnızca program denetimi altında yapmak istiyorsanız, DSL tanımı diyagramında **Fill Color** gibi yeni bir etki alanı özelliğini seçin. Sonra, Özellikler penceresi, `false` için **gözatılabilir** veya **Kullanıcı arabirimi salt okunur** `true`olarak ayarlanmıştır.
 
 ## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Model öğe özelliklerine göre renk, stil veya konum sağlamak için değişiklik kurallarını tanımlayın
  Şeklin, modelin diğer bölümlerine bağımlı görünümünü güncelleştiren kurallar tanımlayabilirsiniz. Örneğin, model öğesinin özelliklerine bağımlı şeklin rengini güncelleştiren bir model öğesinde bir değişiklik kuralı tanımlayabilirsiniz. Değişiklik kuralları hakkında daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
@@ -112,7 +112,7 @@ Bu yöntem, hem etki alanı özellikleri hem de depolama olmayan özellikler iç
 
 Bir şeklin gölge veya bir bağlayıcının ok stili olup olmadığı gibi bazı özellikler için, özelliği etki alanı özelliği olarak gösterme yerleşik bir yöntemi yoktur.  Bu tür özelliklerde yapılan değişiklikler işlem sisteminin denetiminde değildir. Bu nedenle, Kullanıcı geri al komutunu gerçekleştirdiğinde kurallar çağrılmadığından kurallar kullanılarak güncelleştirilmesi uygun değildir.
 
-Bunun yerine, <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> kullanarak bu özellikleri güncelleştirebilirsiniz. Aşağıdaki örnekte, bağlayıcının ok stili, bağlayıcının gösterdiği ilişkide bir etki alanı özelliğinin değeri ile denetlenir:
+Bunun yerine, <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>kullanarak bu özellikleri güncelleştirebilirsiniz. Aşağıdaki örnekte, bağlayıcının ok stili, bağlayıcının gösterdiği ilişkide bir etki alanı özelliğinin değeri ile denetlenir:
 
 ```csharp
 public partial class ArrowConnector // My connector class.

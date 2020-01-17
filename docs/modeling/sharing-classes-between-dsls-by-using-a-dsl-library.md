@@ -2,17 +2,17 @@
 title: DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a09622a2cc7ae6d2a2451ac1de6b628020cff19f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4bfadc1777dfb4ba0c8ea712cfd39becc47f54a1
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747403"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111367"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma
 Visual Studio görselleştirme ve modelleme SDK 'sında, başka bir DSL 'ye aktarabileceğiniz tamamlanmamış bir DSL tanımı oluşturabilirsiniz. Bu, benzer modellerin ortak parçalarını çarpanlara katmanızı sağlar.
@@ -31,17 +31,17 @@ Visual Studio görselleştirme ve modelleme SDK 'sında, başka bir DSL 'ye akta
 
      İçeri aktarıcılar tarafından kullanılabilecek bir ilişki tanımlamak için iki etki alanı sınıfı oluşturun ve aralarında ilişki oluşturun.
 
-     Etki alanı sınıflarının **Devralma değiştiricisini** `Abstract` olarak ayarlamayı düşünün.
+     Etki alanı sınıflarının **Devralma değiştiricisini** `Abstract`olarak ayarlamayı düşünün.
 
 3. DSL Gezgini ' nde tanımladığınız öğeleri (bağlantı oluşturucular gibi) ekleyebilirsiniz.
 
 4. Doğrulama kısıtlamaları gibi ek kod gerektiren özelleştirmeler ekleyebilirsiniz.
 
-5. **Tüm Şablonları Dönüştür**' e tıklayın.
+5. Tıklayın **tüm şablonları dönüştürme**.
 
 6. Projeyi oluşturun.
 
-7. Diğer kişilerin kullanması için DSL dağıtırken, hem derlenen derleme (DLL) hem de dosya `DslDefinition.dsl` sağlamanız gerekir. Derlenen derlemeyi `Dsl\bin\*` altında bir klasörde bulabilirsiniz
+7. Diğer kişilerin kullanması için DSL dağıtırken, hem derlenen derleme (DLL) hem de dosya `DslDefinition.dsl`sağlamanız gerekir. Derlenen derlemeyi `Dsl\bin\*` altında bir klasörde bulabilirsiniz
 
 #### <a name="to-import-a-dsl-library"></a>DSL kitaplığını içeri aktarmak için
 

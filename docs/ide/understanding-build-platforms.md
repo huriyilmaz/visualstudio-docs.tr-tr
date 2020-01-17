@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbe00e53942827c96831889339f82d2f5e4dff7a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 996c863612907593ce2c198d4910cda150737c3c
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925826"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115069"
 ---
 # <a name="understand-build-platforms"></a>Derleme platformlarını anlama
 
@@ -30,10 +30,10 @@ Farklı hedef platformlar için uygulanan farklı çözüm ve proje özellikleri
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Nasıl yapılır: Projeleri hedef platformlar için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)\
+[Nasıl yapılır: projeleri hedef platformlar Için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)\
 Bir projenin belirli bir platformu hedefleyecek şekilde nasıl yapılandırılacağını açıklar.
 
-[Nasıl yapılır: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma](../ide/how-to-configure-projects-to-target-multiple-platforms.md)\
+[Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma](../ide/how-to-configure-projects-to-target-multiple-platforms.md)\
 Birden çok platformu hedeflemek için bir projenin nasıl yapılandırılacağını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.

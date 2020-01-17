@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma'
+title: 'Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma'
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -12,32 +12,32 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4281315c8d18388cfbd4cf9bbe6b321e9e07c32b
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 5b86a5c95131a4dcb2e6af199b57e9c8302790b5
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416717"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114456"
 ---
-# <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma
+# <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma
 
 Visual Studio, bir çözümün birçok farklı CPU mimarilerini veya platformunu aynı anda hedeflemesi için bir yol sağlar. Bunlara ayarlanacak özelliklere **Configuration Manager** iletişim kutusu üzerinden erişilir.
 
 ## <a name="target-a-platform"></a>Bir platformu hedefleyin
 
-**Configuration Manager** iletişim kutusu, çözüm düzeyi ve proje düzeyi yapılandırma ve platform oluşturmanıza ve ayarlamanıza olanak sağlar. Her çözüm düzeyi yapılandırma ve hedefin birleşimi kendisiyle ilişkili benzersiz bir özellikler kümesine sahip olabilir ve örneğin, bir [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] platformu hedefleyen bir yayın yapılandırması olan bir sürüm yapılandırması arasında kolayca geçiş yapabilirsiniz. Bu, bir x86 platformunu ve bir x86 platformunu hedefleyen bir hata ayıklama yapılandırmasını hedefler.
+**Configuration Manager** iletişim kutusu, çözüm düzeyi ve proje düzeyi yapılandırma ve platform oluşturmanıza ve ayarlamanıza olanak sağlar. Çözüm düzeyindeki yapılandırmaların ve hedeflerin her birleşimi kendisiyle ilişkili benzersiz bir özellikler kümesine sahip olabilir. Örneğin, bir [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] platformunu hedefleyen bir yayın yapılandırması, x86 platformunu hedefleyen bir sürüm yapılandırması ve x86 platformunu hedefleyen bir hata ayıklama yapılandırması arasında kolayca geçiş yapabilirsiniz.
 
-1. **Yapı** menüsünde **Configuration Manager**' a tıklayın.
+1. **Yapı** menüsünde, **Yapılandırma Yöneticisi**’ne tıklayın.
 
-2. **Etkin çözüm platformu kutusunda**, çözümünüzün hedeflemesini istediğiniz platformu seçin veya yeni bir platform oluşturmak için  **\<yeni >** ' yi seçin. Visual Studio, **Configuration Manager** iletişim kutusunda etkin platform olarak ayarlanan platformu hedeflemek için uygulamanızı derler.
+2. **Etkin çözüm platformu kutusunda**çözümünüzün hedeflemesini istediğiniz platformu seçin veya yeni bir platform oluşturmak için **Yeni\<** seçin. Visual Studio, **Configuration Manager** iletişim kutusunda etkin platform olarak ayarlanan platformu hedeflemek için uygulamanızı derler.
 
 ## <a name="remove-a-platform"></a>Platformu kaldırma
 
 Platforma ihtiyacınız olmadığını fark ederseniz **Configuration Manager** iletişim kutusunu kullanarak kaldırabilirsiniz. Bu, yapılandırma ve hedefin bu birleşimi için yapılandırdığınız tüm çözümü ve proje ayarlarını kaldırır.
 
-1. **Yapı** menüsünde **Configuration Manager**' a tıklayın.
+1. **Yapı** menüsünde, **Yapılandırma Yöneticisi**’ne tıklayın.
 
-2. **Etkin çözüm platformu kutusunda**  **\<> Düzenle**' yi seçin. **Çözüm platformlarını Düzenle** iletişim kutusu açılır.
+2. **Etkin çözüm platformu kutusunda** **\<Düzenle >** ' yi seçin. **Çözüm platformlarını Düzenle** iletişim kutusu açılır.
 
 3. Kaldırmak istediğiniz platforma tıklayın ve **Kaldır**' a tıklayın.
 
@@ -59,10 +59,10 @@ Ayarları yapılandırma ve platform ayarlarının birleşimine göre değiştir
 
 2. Aynı anda birkaç çözüm yapılandırması oluşturmak için **Batch derleme** penceresini kullanın.
 
-   Bir çözüm düzeyi platformun, örneğin [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)],, ve bu çözüm içinde aynı platformu hedefleyen hiçbir projesi yok olarak ayarlanmış olması mümkündür. Çözümünüzde, her biri farklı platformları hedefleyen birden çok projenin olması da mümkündür. Bu durumlardan birine sahipseniz, karışıklığı önlemek için açıklayıcı bir adla yeni bir yapılandırma oluşturmanız önerilir.
+   Bir çözüm düzeyi platformun (örneğin, [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)]) ve bu çözüm içinde aynı platformu hedefleyen hiçbir proje olmaması mümkündür. Çözümünüzde, her biri farklı platformları hedefleyen birden çok projenin olması da mümkündür. Bu durumlardan birine sahipseniz, karışıklığı önlemek için açıklayıcı bir adla yeni bir yapılandırma oluşturmanız önerilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
+- [Nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
 - [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
 - [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)

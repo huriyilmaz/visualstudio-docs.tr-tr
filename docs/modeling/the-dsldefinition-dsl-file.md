@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, definition file
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99145768ef4e0c37f729477ee598628a3b8d0e9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 97736dd9893f3a5d0c07f464ae75849395270d4b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605986"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114925"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl Dosyası
 
@@ -26,9 +26,9 @@ Bu konudaki örnekler bileşen diyagramı çözüm şablonundan alınmıştır. 
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>DslDefinition. dsl dosyasının bölümleri
 
-Kök öğe \<Dsl > ve öznitelikleri, sürüm oluşturma için alana özgü dilin adı, ad alanı ve birincil ve ikincil sürüm numaralarını belirler. @No__t_0 şeması geçerli bir DslDefinition. dsl dosyası için içerik ve yapıyı tanımlar.
+Kök öğe \<DSL > ve öznitelikleri, sürüm oluşturma için etki alanına özgü dilin adı, ad alanı ve birincil ve ikincil sürüm numaralarını belirler. `DslDefinitionModel` şeması geçerli bir DslDefinition. dsl dosyası için içerik ve yapıyı tanımlar.
 
-@No__t_0Dsl > kök öğesinin alt öğeleri şunlardır:
+\<DSL > kök öğesinin alt öğeleri şunlardır:
 
 ### <a name="classes"></a>Sınıflar
 
@@ -40,13 +40,13 @@ Bu bölüm modeldeki her ilişkiyi tanımlar. Kaynak ve hedef, bir ilişkinin ik
 
 ### <a name="types"></a>Türler
 
-Bu bölüm her türü ve ad alanını tanımlar. Etki alanı özelliklerinde iki tür vardır. `DomainEnumerations` modelde tanımlanmıştır ve DomainModel.cs içine türler üretir. `ExternalTypes`, başka bir yerde (`String` veya `Int32` gibi) tanımlanmış türlere ve hiçbir şey oluşturmamasına başvurur.
+Bu bölüm her türü ve ad alanını tanımlar. Etki alanı özelliklerinde iki tür vardır. `DomainEnumerations` modelde tanımlanmıştır ve DomainModel.cs içine türler üretir. `ExternalTypes`, başka bir yerde (`String` veya `Int32`gibi) tanımlanmış türlere ve hiçbir şey oluşturmamasına başvurur.
 
 ### <a name="shapes"></a>Şekiller
 
 Bu bölüm, modelin bir tasarımcıda nasıl göründüğünü betimleyen şekilleri tanımlar. Bu geometrik şekiller, diyagram bölümünde modeldeki sınıflarla eşleştirilir.
 
-### <a name="connectors"></a>Larında
+### <a name="connectors"></a>Bağlayıcılar
 
 Bu bölümde, bir tasarımcıda görüntülenen bağlayıcıların görünümü tanımlanmaktadır. Bu geometrik stil açıklamaları, diyagram bölümünde modeldeki belirli ilişkilerle eşleştirilir.
 
@@ -70,7 +70,7 @@ Bu bölüm bir diyagramı tanımlar ve arka plan rengi ve kök sınıf gibi öze
 
 Bu bölüm bir **araç kutusunu**, doğrulama ayarlarını, bir diyagramı ve bir serileştirme şemasını birlikte getiren bir tasarımcı (düzenleyici) tanımlar. Tasarımcı bölümü, genellikle diyagramın kök sınıfı olan modelin kök sınıfını da tanımlar.
 
-### <a name="explorer"></a>Gezgini
+### <a name="explorer"></a>Gezgin
 
 Bu bölümde **DSL Gezgini** davranışı (XmlSerializationBehavior bölümünde tanımlanmıştır) tanımlanmaktadır.
 
@@ -115,7 +115,7 @@ Türlerin tam adları, "String" gibi eşdeğer derleyici anahtar sözcükleri ye
 
 Dış türler standart kitaplık türleriyle sınırlı değildir.
 
-### <a name="enumerations"></a>Numaralandırmalar
+### <a name="enumerations"></a>Listelemeler
 
 Tipik bir numaralandırma belirtimi bu örneğe benzer:
 
@@ -128,11 +128,11 @@ Tipik bir numaralandırma belirtimi bu örneğe benzer:
 </DomainEnumeration>
 ```
 
-@No__t_0 özniteliği, üretilen kodun, "ortak dil çalışma zamanı (CLR) özniteliği `[Flags]` tarafından ön eki olup olmadığını denetler; bu, numaralandırmanın değerlerinin bit düzeyinde birleştirilip birleştirimeyeceğini belirler. Bu öznitelik true olarak ayarlanırsa, değişmez değerler için iki bitlik değeri belirtmeniz gerekir.
+`IsFlags` özniteliği, üretilen kodun, "ortak dil çalışma zamanı (CLR) özniteliği `[Flags]` tarafından ön eki olup olmadığını denetler; bu, numaralandırmanın değerlerinin bit düzeyinde birleştirilip birleştirimeyeceğini belirler. Bu öznitelik true olarak ayarlanırsa, değişmez değerler için iki bitlik değeri belirtmeniz gerekir.
 
 ## <a name="classes"></a>Sınıflar
 
-Etki alanına özgü dilin herhangi bir tanımındaki öğelerin çoğu doğrudan veya dolaylı olarak `DomainClass` örnekleridir. @No__t_0 alt sınıfları `DomainRelationship`, `Shape`, `Connector` ve `Diagram` içerir. DslDefinition. dsl dosyasının `Classes` bölümünde, etki alanı sınıfları listelenir.
+Etki alanına özgü dilin herhangi bir tanımındaki öğelerin çoğu doğrudan veya dolaylı olarak `DomainClass`örnekleridir. `DomainClass` alt sınıfları `DomainRelationship`, `Shape`, `Connector`ve `Diagram`içerir. DslDefinition. dsl dosyasının `Classes` bölümünde, etki alanı sınıfları listelenir.
 
 Her sınıfın bir özellikler kümesi vardır ve bir temel sınıfa sahip olabilir. Bileşen diyagramı örneğinde, `NamedElement` türü String olan bir `Name` özelliğine sahip soyut bir sınıftır:
 
@@ -148,7 +148,7 @@ Her sınıfın bir özellikler kümesi vardır ve bir temel sınıfa sahip olabi
 </DomainClass>
 ```
 
-`NamedElement`, `NamedElement` Devralındığı `Name` özelliğine ek olarak kendi özelliklerine sahip `Component` gibi diğer sınıfların birçoğuna ait temeldir. BaseClass alt düğümü bir ad başvurusu içeriyor. Başvurulan sınıf aynı ad alanında olduğundan, bilinen ad için yalnızca adı gereklidir:
+`NamedElement`, `NamedElement`Devralındığı `Name` özelliğine ek olarak kendi özelliklerine sahip `Component`gibi diğer sınıfların birçoğuna ait temeldir. BaseClass alt düğümü bir ad başvurusu içeriyor. Başvurulan sınıf aynı ad alanında olduğundan, bilinen ad için yalnızca adı gereklidir:
 
 ```xml
 <DomainClass Name="Component" Namespace="Fabrikam.CmptDsl5"              DisplayName="Component">
@@ -176,17 +176,17 @@ Her etki alanı sınıfı (ilişkiler, şekiller, bağlayıcılar ve diyagramlar
 
 - **GeneratesDoubleDerived.** Bu öznitelik true olarak ayarlanırsa, iki sınıf oluşturulur ve diğeri diğerinin bir alt sınıfıdır. Oluşturulan tüm yöntemler temelde bulunur ve oluşturucular alt sınıfta bulunur. Bu özniteliği ayarlayarak, özel kodda oluşturulan herhangi bir yöntemi geçersiz kılabilirsiniz.
 
-- **Hasccustomconstructor**. Bu öznitelik true olarak ayarlanırsa, kendi sürümünüzü yazabileceğiniz şekilde Oluşturucu oluşturulan koddan çıkarılır.
+- **HasCustomConstructor**. Bu öznitelik true olarak ayarlanırsa, kendi sürümünüzü yazabileceğiniz şekilde Oluşturucu oluşturulan koddan çıkarılır.
 
 - **Öznitelikler**. Bu öznitelik, oluşturulan sınıfın CLR özniteliklerini içerir.
 
-- **BaseClass**. Bir temel sınıf belirtirseniz, aynı türde olmalıdır. Örneğin, bir etki alanı sınıfı temel olarak başka bir etki alanı sınıfına sahip olmalıdır ve bölme şeklinin bir bölme şekli olmalıdır. Bir temel sınıf belirtmezseniz, oluşturulan koddaki sınıfı standart bir çerçeve sınıfından türetilir. Örneğin, bir etki alanı sınıfı `ModelElement` türetilir.
+- **BaseClass**. Bir temel sınıf belirtirseniz, aynı türde olmalıdır. Örneğin, bir etki alanı sınıfı temel olarak başka bir etki alanı sınıfına sahip olmalıdır ve bölme şeklinin bir bölme şekli olmalıdır. Bir temel sınıf belirtmezseniz, oluşturulan koddaki sınıfı standart bir çerçeve sınıfından türetilir. Örneğin, bir etki alanı sınıfı `ModelElement`türetilir.
 
 - **Özellikler**. Bu öznitelik, işlem denetimi altında tutulan ve model kaydedildiğinde kalıcı olan özellikleri içerir.
 
 - **Elementmergedirektifi**. Her öğe birleştirme yönergesi, bir başka sınıfın farklı bir örneğinin üst sınıf örneğine nasıl ekleneceğini denetler. Bu konunun ilerleyen kısımlarında, öğe birleştirme yönergeleri hakkında daha fazla ayrıntı bulabilirsiniz.
 
-- @No__t_1 C# bölümünde listelenen her bir etki alanı sınıfı için bir sınıf oluşturulur. C# Sınıflar Dsl\GeneratedCode\DomainClasses.cs. içinde oluşturulur
+- `Classes` C# bölümünde listelenen her bir etki alanı sınıfı için bir sınıf oluşturulur. C# Sınıflar Dsl\GeneratedCode\DomainClasses.cs. içinde oluşturulur
 
 ### <a name="properties"></a>Özellikler
 
@@ -210,15 +210,15 @@ Her etki alanı özelliği de şu özniteliklere sahip olabilir:
 
 - **Tür**. Bu özniteliği normal, hesaplanan veya CustomStorage olarak ayarlayabilirsiniz. Bu özniteliği hesaplanmak üzere ayarlarsanız, değeri belirleyen özel kod sağlamanız gerekir ve özellik salt okunurdur. Bu özniteliği CustomStorage olarak ayarlarsanız, değerleri alıp ayarlayan kodu sağlamanız gerekir.
 
-- **IsElementName**. Bu öznitelik true olarak ayarlanırsa, üst sınıfın bir örneği oluşturulduğunda değeri otomatik olarak benzersiz bir değere ayarlanır. Bu öznitelik, bir dize türü olması gereken her sınıfta yalnızca bir özellik için true olarak ayarlanabilir. Bileşen diyagramı örneğinde, `NamedElement` `Name` özelliği true olarak ayarlanmıştır `IsElementName`. Bir Kullanıcı bir `Component` öğesi oluşturduğunda (`NamedElement` devralırsa), ad "Component6" gibi bir şekilde otomatik olarak başlatılır.
+- **IsElementName**. Bu öznitelik true olarak ayarlanırsa, üst sınıfın bir örneği oluşturulduğunda değeri otomatik olarak benzersiz bir değere ayarlanır. Bu öznitelik, bir dize türü olması gereken her sınıfta yalnızca bir özellik için true olarak ayarlanabilir. Bileşen diyagramı örneğinde, `NamedElement` `Name` özelliği true olarak ayarlanmıştır `IsElementName`. Bir Kullanıcı bir `Component` öğesi oluşturduğunda (`NamedElement`devralırsa), ad "Component6" gibi bir şekilde otomatik olarak başlatılır.
 
-- `DefaultValue`. Bu özniteliği belirttiyseniz, belirttiğiniz değer bu sınıfın yeni örnekleri için bu özniteliğe atanır. @No__t_0 ayarlandıysa, DefaultValue özniteliği yeni dizenin ilk kısmını belirtir.
+- `DefaultValue`. Bu özniteliği belirttiyseniz, belirttiğiniz değer bu sınıfın yeni örnekleri için bu özniteliğe atanır. `IsElementName` ayarlandıysa, DefaultValue özniteliği yeni dizenin ilk kısmını belirtir.
 
 - **Kategori** , özelliğin **Özellikler** penceresinde görüneceği üst bilgi olur.
 
 ## <a name="relationships"></a>İlişkiler
 
-@No__t_0 bölümünde, etki alanına özgü dildeki tüm ilişkiler listelenir. Her `Domain Relationship` ikili ve yönlendirilir, kaynak sınıfın üyeleri bir hedef sınıfın üyelerine bağlanıyor. Kaynak ve hedef sınıflar genellikle etki alanı sınıflarıdır, ancak diğer ilişkilerle olan ilişkilere da izin verilir.
+`Relationships` bölümünde, etki alanına özgü dildeki tüm ilişkiler listelenir. Her `Domain Relationship` ikili ve yönlendirilir, kaynak sınıfın üyeleri bir hedef sınıfın üyelerine bağlanıyor. Kaynak ve hedef sınıflar genellikle etki alanı sınıflarıdır, ancak diğer ilişkilerle olan ilişkilere da izin verilir.
 
 Örneğin, bağlantı ilişkisi OutPort sınıfının üyelerini InPort sınıfının üyelerine bağlar. İlişkinin her bağlantı örneği bir OutPort örneğini bir InPort örneğine bağlar. İlişki çok fazla olduğundan, her bir çıkış noktası üzerinde kaynakları olan çok sayıda bağlantı bağlantısı olabilir ve her bir InPort örneği, onu hedefleyen çok sayıda bağlantı bağlantısına sahip olabilir.
 
@@ -226,11 +226,11 @@ Her etki alanı özelliği de şu özniteliklere sahip olabilir:
 
 Her ilişki aşağıdaki özniteliklere sahip kaynak ve hedef rolleri içerir:
 
-- @No__t_0 özniteliği bağlantılı örneklerin etki alanı sınıfına başvurur: kaynak için çıkış noktası, hedef için InPort.
+- `RolePlayer` özniteliği bağlantılı örneklerin etki alanı sınıfına başvurur: kaynak için çıkış noktası, hedef için InPort.
 
-- @No__t_0 özniteliğinde dört olası değer (sıfır, sıfır sıfırlama, bir, ve OneMany) vardır. Bu öznitelik, bu ilişkinin bir rol oyuncusu ile ilişkilendirilebilen bağlantı sayısını ifade eder.
+- `Multiplicity` özniteliğinde dört olası değer (sıfır, sıfır sıfırlama, bir, ve OneMany) vardır. Bu öznitelik, bu ilişkinin bir rol oyuncusu ile ilişkilendirilebilen bağlantı sayısını ifade eder.
 
-- @No__t_0 özniteliği, diğer uçtaki nesnelere erişmek için rol yürütülüyor sınıfında kullanılan adı belirtir. Bu ad, ilişkide geçiş yapmak için şablonda veya özel kodda kullanılır. Örneğin, kaynak rolün `PropertyName` özniteliği `Targets` olarak ayarlanır. Bu nedenle, aşağıdaki kod işe alınacaktır:
+- `PropertyName` özniteliği, diğer uçtaki nesnelere erişmek için rol yürütülüyor sınıfında kullanılan adı belirtir. Bu ad, ilişkide geçiş yapmak için şablonda veya özel kodda kullanılır. Örneğin, kaynak rolün `PropertyName` özniteliği `Targets`olarak ayarlanır. Bu nedenle, aşağıdaki kod işe alınacaktır:
 
     ```
     OutPort op = ...; foreach (InPort ip in op.Targets) ...
@@ -358,7 +358,7 @@ Dil kullanıcıları daha sonra bir bileşene bir açıklama sürükleyebilir ve
 
 Her etki alanı sınıfı (ilişkiler ve diğer alt türler dahil), DslDefinition. dsl dosyasının `XmlSerializationBehavior` bölümü altında görünen `XmlClassData` düğümünde ek bilgilere sahip olabilir. Bu bilgiler, bir model bir dosyaya kaydedildiğinde sınıf örneklerinin serileştirilmiş biçimde nasıl depolandığını özellikle ele alınır.
 
-@No__t_0 etkileyen üretilen kodun büyük bölümü `Dsl\GeneratedCode\Serializer.cs`.
+`XmlSerializationBehavior` etkileyen üretilen kodun büyük bölümü `Dsl\GeneratedCode\Serializer.cs`.
 
 Her bir `XmlClassData` düğümü şu alt düğümleri ve öznitelikleri içerir:
 
@@ -396,7 +396,7 @@ Her bağlantı aracı için bir bağlantı Oluşturucu tanımlanmıştır. Her b
 
 Varsayılan olarak, **Gösterim** özniteliği özniteliği olarak ayarlanır. **Temsili** öğesi olarak AYARLANDıYSA, XML 'de bir alt düğüm oluşturulur. **Temsili** Ignore olarak ayarlandıysa, özellik serileştirilmez.
 
-**IsMonikerKey** ve **IsMonikerQualifier** öznitelikleri, bir özelliğe üst sınıfın bazı örneklerini tanımlayan bir rol verir. Bir sınıf tarafından tanımlanan veya devralınan bir özellik için **IsMonikerKey** değerini true olarak ayarlayabilirsiniz. Bu öznitelik, üst sınıfın tek bir örneğini tanımlar. @No__t_0 olarak ayarladığınız özellik genellikle bir ad veya başka bir anahtar tanımlayıcısıdır. Örneğin, `Name` String özelliği, NamedElement ve türetilmiş sınıflarının bilinen ad anahtarıdır. Kullanıcı bir modeli dosyaya kaydettiğinde, bu özniteliğin her bir örnek için benzersiz değerler içermesi gerekir, bu öznitelik, katıştırma ilişkisi ağacındaki eşdüzey değerleri arasında her bir örnek için benzersiz değerler içermelidir.
+**IsMonikerKey** ve **IsMonikerQualifier** öznitelikleri, bir özelliğe üst sınıfın bazı örneklerini tanımlayan bir rol verir. Bir sınıf tarafından tanımlanan veya devralınan bir özellik için **IsMonikerKey** değerini true olarak ayarlayabilirsiniz. Bu öznitelik, üst sınıfın tek bir örneğini tanımlar. `IsMonikerKey` olarak ayarladığınız özellik genellikle bir ad veya başka bir anahtar tanımlayıcısıdır. Örneğin, `Name` String özelliği, NamedElement ve türetilmiş sınıflarının bilinen ad anahtarıdır. Kullanıcı bir modeli dosyaya kaydettiğinde, bu özniteliğin her bir örnek için benzersiz değerler içermesi gerekir, bu öznitelik, katıştırma ilişkisi ağacındaki eşdüzey değerleri arasında her bir örnek için benzersiz değerler içermelidir.
 
 Seri hale getirilmiş model dosyasında, bir öğenin tam bilinen adı, her bir noktada bilinen ad anahtarı ' nı tırnak içine alarak, ekleme ilişkilerinin ağacı olan model kökünün bir yoludur. Örneğin, InPort bileşenleri içine katıştırılır ve bu da model köküne katıştırılır. Bu nedenle geçerli bir bilinen ad:
 
@@ -478,7 +478,7 @@ Serileştirilmiş dosya şunları içerir:
 
 DslDefinition. dsl dosyası bir seri hale getirilmiş dosyadır ve alana özgü dil tanımına uyar. Aşağıda XML serileştirme tanımlarının bazı örnekleri verilmiştir:
 
-- **DSL** , RootClass düğümüdür ve diyagram sınıfıdır. DomainClass, DomainRelationship ve diğer öğeler `Dsl` altına katıştırılır.
+- **DSL** , RootClass düğümüdür ve diyagram sınıfıdır. DomainClass, DomainRelationship ve diğer öğeler `Dsl`altına katıştırılır.
 
 - **Sınıflar** , etki alanına özgü dil ve DomainClass arasındaki Ilişkinin **RoleElementName** ' dir.
 
@@ -498,7 +498,7 @@ DslDefinition. dsl dosyası bir seri hale getirilmiş dosyadır ve alana özgü 
       <XmlClassData ...>...</XmlClassData>
 ```
 
-- Connectorhasdekoratörler, `Connector` ve `Decorator` arasındaki katıştırma ilişkisidir. `UseFullForm`, ilişki adının bağlayıcı nesnesinden her bir bağlantı için özellikler listesiyle birlikte görünmesini sağlayacak şekilde ayarlanmıştır. Ancak `OmitElement`, `Connector` içine gömülü birden çok bağlantıyı hiçbir `RoleElementName` içermemesi için de ayarlanmıştır:
+- Connectorhasdekoratörler, `Connector` ve `Decorator`arasındaki katıştırma ilişkisidir. `UseFullForm`, ilişki adının bağlayıcı nesnesinden her bir bağlantı için özellikler listesiyle birlikte görünmesini sağlayacak şekilde ayarlanmıştır. Ancak `OmitElement`, `Connector`içine gömülü birden çok bağlantıyı hiçbir `RoleElementName` içermemesi için de ayarlanmıştır:
 
 ```xml
 <Connector Name="AssociationLink" ...>
@@ -517,7 +517,7 @@ DslDefinition. dsl dosyası bir seri hale getirilmiş dosyadır ve alana özgü 
 
 - `Color` ve `Line``Style` öznitelikleri.
 
-- **ExposesFillColorAsProperty** ve benzeri birkaç öznitelik. Bu Boole öznitelikleri, ilgili özellik değişkenini Kullanıcı tarafından yapar. Genellikle, bir dil kullanıcısı diyagramda bir şekle tıkladığında, **Özellikler** penceresinde görünen özellikler, şeklin eşlendiği etki alanı sınıfı örneğinden oluşur. @No__t_0 true olarak ayarlanırsa, şeklin bir özelliği de görüntülenir.
+- **ExposesFillColorAsProperty** ve benzeri birkaç öznitelik. Bu Boole öznitelikleri, ilgili özellik değişkenini Kullanıcı tarafından yapar. Genellikle, bir dil kullanıcısı diyagramda bir şekle tıkladığında, **Özellikler** penceresinde görünen özellikler, şeklin eşlendiği etki alanı sınıfı örneğinden oluşur. `ExposesFillColorAsProperty` true olarak ayarlanırsa, şeklin bir özelliği de görüntülenir.
 
 - **Shapehasdekoratörler**. Bu özniteliğin bir örneği her metin, simge veya genişletme/daraltma dekoratör için oluşur. (DslDefinition. dsl dosyasında `ShapeHasDecorators`, `UseFullForm` true olarak ayarlanan bir ilişkidir.)
 
@@ -537,9 +537,9 @@ Aşağıdaki örnekte olduğu gibi, `ShapeMap` öğeleri en azından bir etki al
 </ShapeMap>
 ```
 
-@No__t_0 öğesinin birincil işlevi, aynı nesne sınıfının farklı bağlamlarda farklı bir şekil olarak görünebilmesini sağlayacak. Örneğin, bir yoruma de bir `InPort` katıştırılabiliyorsanız, `InPort` bu amaçla farklı bir şekil olarak görünebilir.
+`ParentElementPath` öğesinin birincil işlevi, aynı nesne sınıfının farklı bağlamlarda farklı bir şekil olarak görünebilmesini sağlayacak. Örneğin, bir yoruma de bir `InPort` katıştırılabiliyorsanız, `InPort` bu amaçla farklı bir şekil olarak görünebilir.
 
-İkinci olarak, yol şeklin üst öğesiyle ilişkisini belirler. DslDefinition. dsl dosyasındaki şekiller arasında ekleme yapısı tanımlanmamıştır. Yapıyı şekil haritalarından çıkarmalısınız. Bir şeklin üst öğesi, üst öğe yolunun tanımladığı etki alanı öğesiyle eşlenen şekildir. Bu durumda yol, `InPort` ait olduğu bileşeni tanımlar. Başka bir şekil eşlemesinde, bileşen sınıfı ComponentShape ile eşleştirilir. Bu nedenle, yeni `InPort` şekli bileşenin `ComponentShape` bir alt şekli haline getirilir.
+İkinci olarak, yol şeklin üst öğesiyle ilişkisini belirler. DslDefinition. dsl dosyasındaki şekiller arasında ekleme yapısı tanımlanmamıştır. Yapıyı şekil haritalarından çıkarmalısınız. Bir şeklin üst öğesi, üst öğe yolunun tanımladığı etki alanı öğesiyle eşlenen şekildir. Bu durumda yol, `InPort` ait olduğu bileşeni tanımlar. Başka bir şekil eşlemesinde, bileşen sınıfı ComponentShape ile eşleştirilir. Bu nedenle, yeni `InPort` şekli bileşenin `ComponentShape`bir alt şekli haline getirilir.
 
 Bunun yerine, InPort şeklini diyagrama eklediyseniz, üst öğe yolunun, diyagram ile eşlenmiş bileşen modeline başka bir adım olması gerekir:
 
@@ -579,6 +579,6 @@ Bağlayıcı haritaları, dekoratör haritaları da içerebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
 - [Modelleri, Sınıfları ve İlişkileri Anlama](../modeling/understanding-models-classes-and-relationships.md)

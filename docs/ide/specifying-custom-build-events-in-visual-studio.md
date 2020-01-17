@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 620ffa1ea23c2c892e8385bd9e81a07fb640411a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fda60ffb97ecb44bd4a881cb42e4d9199cc958b8
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918907"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115334"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio'da özel derleme olayları belirtme
 
@@ -24,9 +24,9 @@ ms.locfileid: "68918907"
 
 Kullandığınız programlama diline hakkında ayrıntılı bilgi için aşağıdaki konulara bakın:
 
-- Visual Basic--[nasıl yapılır: Derleme olaylarını belirtin (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
+- Visual Basic--[nasıl yapılır: belirtin derleme olayları (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
 
-- C#ve F#--[nasıl yapılır: Derleme olaylarını (C#)](../ide/how-to-specify-build-events-csharp.md)belirtin.
+- C#ve F#--[nasıl yapılır: belirtin derleme olayları (C#)](../ide/how-to-specify-build-events-csharp.md).
 
 - Visual C++--[derleme olayları belirtme](/cpp/build/specifying-build-events).
 

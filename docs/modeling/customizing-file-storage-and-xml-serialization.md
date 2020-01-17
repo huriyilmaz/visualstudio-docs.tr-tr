@@ -6,17 +6,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27d8672ea94cf2a1547904f313ac36509f111462
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d8fe9fb5086b93861c7ca12a208affe7aa979df2
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748455"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114428"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Dosya Depolama ve XML Serileştirmeyi Özelleştirme
 
@@ -124,31 +124,31 @@ Nitelikli anahtar adları, KIMLIK adlarıyla daha kolay okunabilir. Model dosyal
 
 1. **Bilinen ad anahtarının** , sınıftaki ve temel sınıfların her etki alanı özelliği için `false` olduğundan emin olun.
 
-    1. DSL Gezgini ' nde, **XML serileştirme Behavior\Class veri \\ \<the etki alanı sınıfı > \Element verileri**' ni genişletin.
+    1. DSL Gezgini ' nde, **XML serileştirme Behavior\Class verileri \<\\etki alanı sınıfı > \Element verileri**' ni genişletin.
 
     2. **Bilinen ad anahtarının** her etki alanı özelliği için `false` olduğunu doğrulayın.
 
     3. Etki alanı sınıfında bir temel sınıf varsa, yordamı bu sınıfta tekrarlayın.
 
-2. Alan sınıfı için **serileştirme kimliği**  =  `true` ayarlayın.
+2. Alan sınıfı için **serileştirme kimliği** = `true` ayarlayın.
 
      Bu özellik, **XML serileştirme davranışı**altında bulunabilir.
 
 ### <a name="to-set-a-domain-class-to-be-referenced-by-qualified-key-monikers"></a>Bir etki alanı sınıfını tam anahtar adlarıyla başvurulacak şekilde ayarlamak için
 
-- Set, var olan bir etki alanı sınıfının bir Domain özelliği için **bilinen ad anahtarıdır** . Özelliğin türü `string` olmalıdır.
+- Set, var olan bir etki alanı sınıfının bir Domain özelliği için **bilinen ad anahtarıdır** . Özelliğin türü `string`olmalıdır.
 
-    1. DSL Gezgini 'nde, **XML serileştirme Behavior\Class veri \<the \\ etki alanı sınıfı > \Element verileri**' ni genişletin ve ardından domain özelliğini seçin.
+    1. DSL Gezgini ' nde, **XML serileştirme Behavior\Class verileri \<\\etki alanı sınıfı > \Element verileri**' ni genişletin ve ardından domain özelliğini seçin.
 
-    2. Özellikler penceresi, `true` için **bilinen ad anahtarı** ' nı ayarlayın.
+    2. Özellikler penceresi, `true`için **bilinen ad anahtarı** ' nı ayarlayın.
 
-- \- veya-
+- \- veya -
 
      **Adlandırılmış alan sınıfı** aracını kullanarak yeni bir etki alanı sınıfı oluşturun.
 
-     Bu araç, Name adlı bir etki alanı özelliğine sahip yeni bir sınıf oluşturur. **Öğesi öğesinin adı** ve, bu etki alanı özelliğinin **bilinen ad anahtarı** özellikleri `true` olarak başlatılır.
+     Bu araç, Name adlı bir etki alanı özelliğine sahip yeni bir sınıf oluşturur. **Öğesi öğesinin adı** ve, bu etki alanı özelliğinin **bilinen ad anahtarı** özellikleri `true`olarak başlatılır.
 
-- \- veya-
+- \- veya -
 
      Etki alanı sınıfından, bilinen ad anahtarı özelliğine sahip başka bir sınıfa devralma ilişkisi oluşturun.
 
@@ -158,11 +158,11 @@ Nitelikli anahtar adlar kullanırsanız, bir kullanıcının modelindeki iki ö�
 
 Bu durumdan kaçınmaya yardımcı olacak birkaç yöntem vardır:
 
-- Anahtar etki alanı özelliği için  =  `true` **öğesi adı** . DSL tanımı diyagramında etki alanı özelliğini seçin ve Özellikler penceresi değeri ayarlayın.
+- Anahtar etki alanı özelliği için = `true` **öğesi adı** . DSL tanımı diyagramında etki alanı özelliğini seçin ve Özellikler penceresi değeri ayarlayın.
 
      Kullanıcı, sınıfın yeni bir örneğini oluşturduğunda, bu değer etki alanı özelliğine otomatik olarak farklı bir değer atanmasına neden olur. Varsayılan davranış, sınıf adının sonuna bir sayı ekler. Bu, kullanıcının adı yinelenen olarak değiştirmesini engellemez, ancak kullanıcı modeli kaydetmeden önce değeri ayarlamadan bu durumda yardımcı olur.
 
-- DSL için doğrulamayı etkinleştirin. DSL Gezgini ' nde, Editor\Validation ' ı seçin ve **kullanımları...** özelliklerini `true` olarak ayarlayın.
+- DSL için doğrulamayı etkinleştirin. DSL Gezgini ' nde, Editor\Validation ' ı seçin ve **kullanımları...** özelliklerini `true`olarak ayarlayın.
 
      Belirsizlikleri için denetleyen otomatik olarak oluşturulan bir doğrulama yöntemi vardır. Yöntemi `Load` doğrulama kategorisindedir. Bu, kullanıcının dosyayı yeniden açmak mümkün olmadığını belirten bir uyarı olacaktır.
 
@@ -230,7 +230,7 @@ Aşağıdaki özelleştirmeleri yapmak için, DSL Gezgini 'ndeki **XML serileşt
     </familyTreeModel>
     ```
 
-- **Gösterimi**  = **öğesi** , öznitelik değeri yerine bir öğe olarak kaydedilmiş bir etki alanı özelliğine sahip olacak şekilde ayarlayın.
+- **Gösterimi** = **öğesi** , öznitelik değeri yerine bir öğe olarak kaydedilmiş bir etki alanı özelliğine sahip olacak şekilde ayarlayın.
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -272,12 +272,12 @@ Bu öğeler, **XML serileştirme Behavior\Class verileri**altında DSL Gezgini '
 |Özel öğe şemasına sahip|True ise, alan sınıfının özel bir öğe şemasına sahip olduğunu belirtir|
 |Özel|Bu etki alanı sınıfı için kendi serileştirme ve seri durumdan çıkarma kodunuzu yazmak istiyorsanız bunu **true** olarak ayarlayın.<br /><br /> Çözümü oluşturun ve ayrıntılı yönergeleri bulmaya yönelik hataları araştırın.|
 |Alan sınıfı|Bu sınıf veri düğümünün geçerli olduğu etki alanı sınıfı. Salt okunur.|
-|Öğe adı|Bu sınıfın öğeleri için XML düğümü adı. Varsayılan değer, etki alanı sınıf adının küçük bir sürümüdür.|
+|Öğe Adı|Bu sınıfın öğeleri için XML düğümü adı. Varsayılan değer, etki alanı sınıf adının küçük bir sürümüdür.|
 |Bilinen ad öznitelik adı|Başvuruyu içermesi için bilinen ad öğelerinde kullanılan özniteliğin adı. Boşsa, anahtar özelliğin veya kimliğin adı kullanılır.<br /><br /> Bu örnekte, "ad": `<personMoniker name="/Mike Nash"/>`|
-|Bilinen ad öğe adı|Bu sınıfın öğelerine başvuran bilinen adlar için kullanılan XML öğesinin adı.<br /><br /> Varsayılan değer, "bilinen ad" ile düzeltilen sınıf adının küçük harfli bir sürümüdür. Örneğin, `personMoniker`.|
-|Bilinen ad türü adı|Bu sınıfın öğelerine ait bilinen adlar için oluşturulan xsd türünün adı. XSD, **Dsl\generated Code \\ \*Schema. xsd** ' dir|
+|Bilinen ad öğe adı|Bu sınıfın öğelerine başvuran bilinen adlar için kullanılan XML öğesinin adı.<br /><br /> Varsayılan değer, "bilinen ad" ile düzeltilen sınıf adının küçük harfli bir sürümüdür. Örneğin: `personMoniker`.|
+|Bilinen ad türü adı|Bu sınıfın öğelerine ait bilinen adlar için oluşturulan xsd türünün adı. XSD, **Dsl\generated Code\\\*Schema. xsd** ' dir|
 |Seri hale getirme kimliği|True ise, öğe GUID 'SI dosyaya dahil edilir. Bu, **bilinen** bir özellik varsa ve bu sınıf için başvuru ilişkilerini tanımlarsa, bu doğru olmalıdır.|
-|Tür adı|Belirtilen etki alanı sınıfından xsd içinde oluşturulan XML türünün adı.|
+|Tür Adı|Belirtilen etki alanı sınıfından xsd içinde oluşturulan XML türünün adı.|
 |Notlar|Bu öğeyle ilişkili resmi olmayan notlar|
 
 ### <a name="xml-property-data"></a>Xml özelliği verileri

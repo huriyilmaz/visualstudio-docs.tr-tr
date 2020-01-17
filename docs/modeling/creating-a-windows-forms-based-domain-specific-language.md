@@ -2,17 +2,17 @@
 title: Windows Forms Tabanlı Etki Alanına Özgü Dil Oluşturma
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9d043f64204c50be06952ecc39be75e15087cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f565184dcb9570ecc34b61f1f2d4d0e2ce2a4110
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654101"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114886"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Windows Forms tabanlı bir etki alanına özgü dil oluşturma
 
@@ -33,13 +33,13 @@ Aşağıdaki görüntüde bir DSL örneği için Windows form kullanıcı arabir
    | | |
    |-|-|
    | Çözüm ve DSL adı | FarmApp |
-   | Ad Alanı | Şirket. FarmApp |
+   | Ad alanı | Şirket. FarmApp |
 
 2. Şablonun sağladığı ilk örnekle denemeler yapın:
 
    1. Tüm Şablonları Dönüştür.
 
-   2. Örneği derleyin ve çalıştırın (**Ctrl** +**F5**).
+   2. Örneği derleyin ve çalıştırın (**Ctrl**+**F5**).
 
    3. Visual Studio 'nun deneysel örneğinde, hata ayıklama projesindeki `Sample` dosyasını açın.
 
@@ -53,19 +53,19 @@ Aşağıdaki görüntüde bir DSL örneği için Windows form kullanıcı arabir
 
 - `DslDefinition.dsl` diyagram öğesi içermiyor. Bunun nedeni, DSL diyagramlarını bu DSL 'nin örnek modellerini görüntülemek için kullanmayacak. Bunun yerine, bir Windows formunu modele bağlayacaksınız ve formdaki öğeler modeli görüntüleyecektir.
 
-- @No__t_0 ve `DslPackage` projelerine ek olarak çözüm, Windows Forms denetiminin tanımını içeren `UI.`**UI** projesi adlı üçüncü bir proje içerir. `DslPackage` `UI` bağlıdır ve `UI` `Dsl` bağlıdır.
+- `Dsl` ve `DslPackage` projelerine ek olarak çözüm, Windows Forms denetiminin tanımını içeren `UI.`**UI** projesi adlı üçüncü bir proje içerir. `DslPackage` `UI`bağlıdır ve `UI` `Dsl`bağlıdır.
 
-- @No__t_0 projesinde, `UI\DocView.cs` `UI` projesinde tanımlanan Windows Forms denetimini görüntüleyen kodu içerir.
+- `DslPackage` projesinde, `UI\DocView.cs` `UI` projesinde tanımlanan Windows Forms denetimini görüntüleyen kodu içerir.
 
-- @No__t_0 projesi, DSL 'ye göre bir form denetiminin çalışan bir örneğini içerir. Ancak, DSL tanımını değiştirdiğiniz zaman çalışmaz. @No__t_0 projesi şunları içerir:
+- `UI` projesi, DSL 'ye göre bir form denetiminin çalışan bir örneğini içerir. Ancak, DSL tanımını değiştirdiğiniz zaman çalışmaz. `UI` projesi şunları içerir:
 
-  - @No__t_0 adlı bir Windows Forms sınıfı.
+  - `ModelViewControl`adlı bir Windows Forms sınıfı.
 
-  - @No__t_1 ek kısmi tanımını içeren `DataBinding.cs` adlı bir dosya. İçeriğini görmek için, **Çözüm Gezgini**' de, dosyanın kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
+  - `ModelViewControl`ek kısmi tanımını içeren `DataBinding.cs` adlı bir dosya. İçeriğini görmek için, **Çözüm Gezgini**' de, dosyanın kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
 ### <a name="about-the-ui-project"></a>UI projesi hakkında
 
-Dsl tanım dosyasını kendi DSL 'yi tanımlayacak şekilde güncelleştirdiğinizde, DSL 'nizi göstermek için `UI` projesindeki denetimi güncelleştirmeniz gerekir. @No__t_0 ve `DslPackage` projelerinin aksine, örnek `UI` proje `DslDefinitionl.dsl` oluşturulmaz. İsterseniz kodu oluşturmak için. tt dosyası ekleyebilirsiniz, ancak bu kılavuzda kapsanmaz.
+Dsl tanım dosyasını kendi DSL 'yi tanımlayacak şekilde güncelleştirdiğinizde, DSL 'nizi göstermek için `UI` projesindeki denetimi güncelleştirmeniz gerekir. `Dsl` ve `DslPackage` projelerinin aksine, örnek `UI` proje `DslDefinitionl.dsl`oluşturulmaz. İsterseniz kodu oluşturmak için. tt dosyası ekleyebilirsiniz, ancak bu kılavuzda kapsanmaz.
 
 ## <a name="update-the-dsl-definition"></a>DSL tanımını güncelleştirme
 
@@ -77,16 +77,16 @@ Bu kılavuzda aşağıdaki DSL tanımı kullanılır.
 
 2. **Örnek öğeyi** Sil
 
-3. **ExampleModel** etki alanı sınıfını `Farm` olarak yeniden adlandırın.
+3. **ExampleModel** etki alanı sınıfını `Farm`olarak yeniden adlandırın.
 
      Buna **Int32**türü `Size` adlı ek etki alanı özellikleri ve **Boole**türü `IsOrganic` verin.
 
     > [!NOTE]
-    > Kök etki alanı sınıfını silip yeni bir kök oluşturursanız, düzenleyici kök sınıfı özelliğini sıfırlamanız gerekir. **DSL Gezgini**' nde **Düzenleyici**' yi seçin. Ardından Özellikler penceresi, **kök sınıfı** `Farm` olarak ayarlayın.
+    > Kök etki alanı sınıfını silip yeni bir kök oluşturursanız, düzenleyici kök sınıfı özelliğini sıfırlamanız gerekir. **DSL Gezgini**' nde **Düzenleyici**' yi seçin. Ardından Özellikler penceresi, **kök sınıfı** `Farm`olarak ayarlayın.
 
 4. Aşağıdaki etki alanı sınıflarını oluşturmak için **adlandırılmış etki alanı sınıfı** aracını kullanın:
 
-    - `Field`-buna `Size` adlı ek bir etki alanı özelliği verin.
+    - `Field`-buna `Size`adlı ek bir etki alanı özelliği verin.
 
     - `Animal`-Özellikler penceresi, **Devralma değiştiricisini** **soyut**olarak ayarlayın.
 
@@ -96,9 +96,9 @@ Bu kılavuzda aşağıdaki DSL tanımı kullanılır.
 
     - `Goat`
 
-6. **Devralma** aracını kullanarak `Goat` ve `Sheep` `Animal` devralın.
+6. **Devralma** aracını kullanarak `Goat` ve `Sheep` `Animal`devralın.
 
-7. @No__t_1 eklemek ve `Farm` altına `Animal` eklemek için **ekleme** aracını kullanın.
+7. `Field` eklemek ve `Farm`altına `Animal` eklemek için **ekleme** aracını kullanın.
 
 8. Diyagramı kullanmak isteyebilirsiniz. Yinelenen öğe sayısını azaltmak için yaprak öğelerinin kısayol menüsündeki **alt ağacı buraya getir** komutunu kullanın.
 
@@ -123,7 +123,7 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 2. **Nesne**, **İleri**' yi seçin.
 
-     **DSL**, **Company. FarmApp**' yi genişletin ve modelinizin kök sınıfı olan **Grup**' u seçin. **Son**' a tıklayın.
+     **DSL**, **Company. FarmApp**' yi genişletin ve modelinizin kök sınıfı olan **Grup**' u seçin. Seçin **son**.
 
      Çözüm Gezgini, **Kullanıcı arabirimi** projesi artık **Properties\DataSources\Farm.DataSource** içerir
 
@@ -149,20 +149,20 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 5. **Farmbindingnavigator**'ı silin. Bu ayrıca `FarmControl` tasarımcısında otomatik olarak oluşturulur, ancak bu uygulama için yararlı değildir.
 
-6. Araç kutusunu kullanarak, iki **DataGridView**örneği oluşturun ve `AnimalGridView` ve `FieldGridView` adlandırın.
+6. Araç kutusunu kullanarak, iki **DataGridView**örneği oluşturun ve `AnimalGridView` ve `FieldGridView`adlandırın.
 
    > [!NOTE]
    > Alternatif bir adım, hayvanlar ve alanlar öğelerini veri kaynakları penceresinden denetim üzerine sürüklemektir. Bu eylem, kılavuz görünümü ve veri kaynağı arasındaki veri kılavuzlarını ve bağlamaları otomatik olarak oluşturur. Ancak, bu bağlama DSLs için doğru çalışmaz. Bu nedenle, veri kılavuzlarını ve bağlamaları el ile oluşturmak daha iyidir.
 
 7. Araç kutusu **ModelingBindingSource** aracını içermiyorsa, ekleyin. **Veri** sekmesinin kısayol menüsünde **öğeleri seç**' i seçin. **Araç kutusu öğelerini Seç** iletişim kutusunda, **.NET Framework** sekmesinden **ModelingBindingSource** ' u seçin.
 
-8. Araç kutusunu kullanarak, **ModelingBindingSource**'un iki örneğini oluşturun ve `AnimalBinding` ve `FieldBinding` adlandırın.
+8. Araç kutusunu kullanarak, **ModelingBindingSource**'un iki örneğini oluşturun ve `AnimalBinding` ve `FieldBinding`adlandırın.
 
 9. Her **ModelingBindingSource** 'un **DataSource** özelliğini **farmBindingSource**olarak ayarlayın.
 
      **DataMember** özelliğini **hayvanlar** veya **alanlar**olarak ayarlayın.
 
-10. @No__t_1 **veri kaynağı** özelliklerini `AnimalBinding` ve `FieldGridView` `FieldBinding` olarak ayarlayın.
+10. `AnimalGridView` **veri kaynağı** özelliklerini `AnimalBinding`ve `FieldGridView` `FieldBinding`olarak ayarlayın.
 
 11. Grup denetiminin yerleşimini sizin için ayarlayın.
 
@@ -174,7 +174,7 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 - Kullanıcı bir satır seçtiğinde Özellikler penceresi, veri kılavuzu satırı yerine karşılık gelen model öğesinin özelliklerini görüntülediğinden emin olur.
 
-  veri kaynakları ve görünümler arasındaki bağlantıların ](../modeling/media/dslwpf4.png) şeması ![DslWpf4.
+  veri kaynakları ve görünümler arasındaki bağlantıların DslWpf4](../modeling/media/dslwpf4.png) şeması ![.
 
 ### <a name="complete-the-bindings-to-the-dsl"></a>DSL bağlantılarını doldurun
 

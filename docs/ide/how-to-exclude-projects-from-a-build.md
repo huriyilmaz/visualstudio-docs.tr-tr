@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e72b072ad2cabab643d64f149a31b1b8dbb2a054
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: a19c49482c45aa0a3cf5d7cb33eb106adb65b83b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713944"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114807"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>Nasıl yapılır: bir derlemeden projeleri hariç tutma
 
@@ -30,7 +30,7 @@ Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/underst
 
 ## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>Etkin çözüm yapılandırmasından bir projeyi geçici olarak kaldırmak için
 
-1. Menü çubuğunda  > **Configuration Manager** **Oluştur** ' u seçin.
+1. Menü çubuğunda > **Configuration Manager** **Oluştur** ' u seçin.
 
 2. **Proje bağlamları** tablosunda, derlemeden dışlamak istediğiniz projeyi bulun.
 
@@ -40,9 +40,9 @@ Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/underst
 
 ## <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>Projeyi dışlayan bir çözüm yapılandırması oluşturmak için
 
-1. Menü çubuğunda  > **Configuration Manager** **Oluştur** ' u seçin.
+1. Menü çubuğunda > **Configuration Manager** **Oluştur** ' u seçin.
 
-2. **Etkin çözüm yapılandırması** listesinde **\<New >** ' ni seçin.
+2. **Etkin çözüm yapılandırması** listesinde **Yeni\<** ' ni seçin.
 
 3. **Ad** kutusuna çözüm yapılandırması için bir ad girin.
 
@@ -52,7 +52,7 @@ Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/underst
 
 6. **Standart** araç çubuğunda, yeni çözüm yapılandırmasının **çözüm yapılandırmaları** kutusunda etkin yapılandırma olduğunu doğrulayın.
 
-7. Menü çubuğunda **derleme**  > **yeniden oluştur çözüm**' ü seçin.
+7. Menü çubuğunda, **derleme** > **çözümü yeniden derle**.
 
 ## <a name="skipped-projects"></a>Atlanan projeler
 
@@ -69,6 +69,6 @@ Projenin neden atlandığını öğrenmek için etkin yapılandırmayı (önceki
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md)
+- [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
 - [Nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
 - [Nasıl yapılır: aynı anda birden fazla yapılandırma derleme](../ide/how-to-build-multiple-configurations-simultaneously.md)

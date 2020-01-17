@@ -14,26 +14,26 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbca6429c1cc1669345cda465ec9ecfe3af0ed06
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: 99831638219481d7db331f2a4429fffce58ecc96
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919183"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113793"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio 'nun erişilebilirlik özellikleri
 
 Windows 'daki erişilebilirlik özelliklerine ve yardımcı programlarına ek olarak, aşağıdaki özellikler Visual Studio 'Yu Engelli kişiler için daha erişilebilir hale getirir:
 
-- Araç çubuğu düğmesi ve metin büyütme
+- Araç çubuğu düğme ve metin büyütme
 
-- Düzenleyicilerde metin boyutu seçenekleri
+- Metin düzenleyicilerde boyut seçenekleri
 
-- Düzenleyicilerde renk özelleştirmesi
+- Düzenleyicilerde özelleştirme rengi
 
-- Klavye kısayolu özelleştirmesi
+- Klavye kısayolunu özelleştirme
 
-- Yöntemler ve parametreler için otomatik tamamlama
+- Yöntem ve parametreler için otomatik tamamlama
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio Için erişilebilirlik](/visualstudio/mac/accessibility).

@@ -6,17 +6,17 @@ f1_keywords:
 - AppPackage.Properties.Application
 helpviewer_keywords:
 - Application page [UWP project]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 01edb1871388cdc31f6c92ff25d10c876dfebc64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85ee317b315f8f8d21f5a2d97d91a9950fd395f9
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651947"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114399"
 ---
 # <a name="application-property-page-uwp-projects"></a>Uygulama özellik sayfası (UWP projeleri)
 
@@ -24,21 +24,21 @@ Evrensel Windows Platformu (UWP) projesinin derleme ve paket bilgilerini belirtm
 
 ![Uygulama özellik sayfası](media/application-page-uwp.png)
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini**içinde proje düğümünü seçin. Ardından, menü çubuğunda **proje**  > **Özellikler** ' i seçin. Özellik sayfaları **uygulama** sekmesinde açılır.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini**içinde proje düğümünü seçin. Ardından, menü çubuğunda **proje** > **Özellikler** ' i seçin. Özellik sayfaları **uygulama** sekmesinde açılır.
 
 ## <a name="general-section"></a>Genel Bölüm
 
-**Bütünleştirilmiş kod adı** , derleme bildirimini tutacak çıkış dosyasının adını &mdash;Specifies.
+**Derleme adı**&mdash;, derleme bildirimini tutacak çıkış dosyasının adını belirtir.
 
 Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
 
-**Varsayılan ad alanı** , projeye eklenen dosyalar için temel ad alanını &mdash;Specifies. Ad alanları hakkında daha fazla bilgi için bkz. [ad alanları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), [ad alanları (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [ad alanları (C++)](/cpp/cpp/namespaces-cpp).
+**Varsayılan ad alanı**&mdash;projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. [ad alanları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), [ad alanları (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [ad alanları (C++)](/cpp/cpp/namespaces-cpp).
 
 Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
 
-**Derleme bilgileri** &mdash;Choosing bu düğme, [derleme bilgileri iletişim kutusunu](../../ide/reference/assembly-information-dialog-box.md)görüntüler.
+**Derleme bilgileri**&mdash;bu düğme seçildiğinde [derleme bilgileri iletişim kutusu](../../ide/reference/assembly-information-dialog-box.md)görüntülenir.
 
-**Paket bildirimi** &mdash;Choosing bu düğme bildirim Tasarımcısını açar. Bildirim tasarımcısına Ayrıca **Çözüm Gezgini** _Package. appxmanifest_ dosyası seçilerek de erişilebilir. Daha fazla bilgi için bkz. [bildirim Tasarımcısı ile paket yapılandırma](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
+**Paket bildirimi**&mdash;bu düğme seçildiğinde bildirim Tasarımcısı açılır. Bildirim tasarımcısına Ayrıca **Çözüm Gezgini** _Package. appxmanifest_ dosyası seçilerek de erişilebilir. Daha fazla bilgi için bkz. [bildirim Tasarımcısı ile paket yapılandırma](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
 
 ## <a name="targeting-section"></a>Hedefleme bölümü
 

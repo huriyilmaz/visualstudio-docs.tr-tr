@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d30efd450f18832caadcc9a0008facc4388cd70a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 601a49126dd266b6c080b4d79cd215616321837a
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986291"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115048"
 ---
 # <a name="use-models-in-your-development-process"></a>Geliştirme sürecinizde modelleri kullanma
 
@@ -122,17 +122,17 @@ Farklı türlerde diyagram, tasarımı farklı soyutlama düzeylerinde tanımlam
 
 |Tasarım düzeyi|Diyagram türleri|
 |-|-|
-|İş süreci<br /><br /> Sisteminizin kullanılacağı bağlamı anlamak, kullanıcıların ne ihtiyacı olduğunu anlamanıza yardımcı olur.|-Kavramsal sınıf diyagramları, iş sürecinde kullanılan iş kavramlarını anlatmaktadır.|
+|İş Süreci<br /><br /> Sisteminizin kullanılacağı bağlamı anlamak, kullanıcıların ne ihtiyacı olduğunu anlamanıza yardımcı olur.|-Kavramsal sınıf diyagramları, iş sürecinde kullanılan iş kavramlarını anlatmaktadır.|
 |Kullanıcı gereksinimleri<br /><br /> Kullanıcılarınızın sisteminizden ihtiyacı olan tanım.|-İş kuralları ve hizmet gereksinimlerinin kalitesi ayrı belgelerde açıklanabilir.|
 |Yüksek düzey tasarım<br /><br /> Sistemin genel yapısı: ana bileşenler ve bunların nasıl birlikte kullanıldığı.|-Bağımlılık diyagramları, sistemin birbirine bağlı parçalar halinde nasıl yapılandırıldığını açıklamaktadır. Mimariye bağlı olduğundan emin olmak için program kodunu bağımlılık diyagramlarına karşı doğrulayabilirsiniz.|
 |Kod analizi<br /><br /> Diyagramlar koddan oluşturulabilir.|-Bağımlılık diyagramları sınıflar arasındaki bağımlılıkları gösterir. Güncelleştirilmiş kod, bir bağımlılık diyagramına göre doğrulanabilir.<br />-Sınıf diyagramları, koddaki sınıfları gösterir.|
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Bağlantılar**|
 |-|-|
 |**Videolar**|![e-posta](../data-tools/media/playvideo.gif) [MSDN ile bağlantı oluşturma: UML modellerini ve diyagramlarını oluşturma ve kullanma (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![video](../data-tools/media/playvideo.gif) Channel 9 ' a bağlantı [: Visual Studio 2010 Ile UML](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![e-posta](../data-tools/media/playvideo.gif) [MSDN 'ye bağlantı: UML araçları ve genişletilebilirliği (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
-|**Forumları**|- [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Forumlar**|- [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 |**Bloglar**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
 |**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](/previous-versions/dn630665(v=msdn.10))<br /><br /> [Visual Studio Mimari Araç Kullanımı Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md)|
 

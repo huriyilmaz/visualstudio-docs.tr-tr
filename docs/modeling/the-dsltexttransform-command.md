@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, commands
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a303fc3ddb880402e3f998b2360122f6f056b757
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 32c01401eda8fb1bbe2bdcfc2950a51b968e98b7
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605941"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114909"
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform Komutu
-DslTextTransform. cmd, TextTransform. exe ' yi çağıran ve ortak seçeneklerle çalıştıran bir betiktir. @No__t_0 projelerinizin gecelik bir derlemesini otomatikleştirmek için DslTextTransformation. cmd ' de kullanabilirsiniz. Daha fazla bilgi için bkz. [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md).
+DslTextTransform. cmd, TextTransform. exe ' yi çağıran ve ortak seçeneklerle çalıştıran bir betiktir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] projelerinizin gecelik bir derlemesini otomatikleştirmek için DslTextTransformation. cmd ' de kullanabilirsiniz. Daha fazla bilgi için bkz. [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md).
 
  DslTextTransform. cmd aşağıdaki dizinde bulunur:
 

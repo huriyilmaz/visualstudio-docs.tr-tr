@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - Data UI customization options
 - Options dialog box, Windows Forms Designer, Data UI Customization
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 9c4eab249b9d847b4004c02f11e3e58cbcead6ac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e48777a50ddf66a8e5493698fb401ff7201de03e
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655825"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114684"
 ---
 # <a name="options-dialog-box-windows-forms-designer--data-ui-customization"></a>Seçenekler iletişim kutusu: Windows Form Tasarımcısı > veri Kullanıcı arabirimi özelleştirmesi
 
-Bu iletişim kutusu, veri kaynakları penceresinde öğelerin kullanılabilir denetimleri listesinde hangi denetimlerin göründüğünü tanımlar. Açmak için **araçlar**  > **Seçenekler**' i seçin ve **Windows Form Tasarımcısı**  > **veri Kullanıcı arabirimi özelleştirmesi**' nı seçin.
+Bu iletişim kutusu, veri kaynakları penceresinde öğelerin kullanılabilir denetimleri listesinde hangi denetimlerin göründüğünü tanımlar. Açmak için **araçlar** > **Seçenekler**' i seçin ve **Windows Form Tasarımcısı** > **veri Kullanıcı arabirimi özelleştirmesi**' nı seçin.
 
 Bir Windows Forms uygulamasındaki form üzerine sürüklemeden önce veri kaynakları penceresinde bir öğeden denetim seçebilirsiniz. Kullanılabilir denetimler öğenin veri türüne göre belirlenir. Her veri türü, varsayılan bir denetim dahil olmak üzere, bu iletişim kutusunda tanımlanan geçerli ilişkili denetimlerin bir listesini içerir. Bir öğeyi veri kaynakları penceresinden bir denetim seçmeden bir form üzerine sürüklediğinizde, seçili öğenin veri türü için varsayılan denetim forma eklenir.
 
@@ -33,7 +33,7 @@ Denetimleri ilişkilendirdiğiniz türlerin bir listesini görüntüler. Tablola
 
 Seçili veri türüyle ilişkili denetimlerin listesini görüntüler. İlişkilendirmek veya ilişkiyi kaldırmak için denetimin yanındaki onay kutusunu işaretleyin veya temizleyin. Seçili denetimler, ilişkili veri türüne bağlanan bir veritabanı sütunu için veri kaynakları penceresinde görünür.
 
-## <a name="set-default"></a>Varsayılanı ayarla
+## <a name="set-default"></a>Varsayılan Yap’ı seçin
 
 Seçili denetim türünü seçili veri türü için varsayılan değer olacak şekilde atar. Varsayılan denetim, veri kaynakları penceresinde bir veritabanı sütunu için kısayol menüsünde ilk seçim olarak görünür. Bir öğeyi veri kaynakları penceresinden bir denetim seçmeden bir form üzerine sürüklediğinizde, seçili öğenin veri türü için varsayılan denetim forma eklenir.
 

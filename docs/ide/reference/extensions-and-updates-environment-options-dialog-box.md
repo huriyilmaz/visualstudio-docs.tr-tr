@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.ExtensionManager
 ms.assetid: c73859eb-3c33-4f39-86bf-6788387b5937
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d2c40e0f3d7cd1f4f86c10aace502796d6d00bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e7b0e1ca6d73e27f216f80054f87a35cf5389179
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654404"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114237"
 ---
 # <a name="options-dialog-box-environment--extensions"></a>Seçenekler iletişim kutusu: ortam \> uzantıları
 
@@ -27,11 +27,11 @@ Visual Studio 'Nun güncelleştirmeleri nasıl gerçekleştireceğini ve uzantı
 
 ## <a name="automatically-update-extensions"></a>Uzantıları otomatik olarak güncelleştir
 
-İşaretlendiğinde, uzantılara yönelik güncelleştirmeler sorulmadan yapılır. Daha fazla bilgi için bkz. [Visual Studio uzantılarını bulma ve kullanma](../../ide/finding-and-using-visual-studio-extensions.md).
+İşaretlendiğinde, uzantılara yönelik güncelleştirmeler sorulmadan yapılır. Daha fazla bilgi için [bulma ve Visual Studio uzantılarını kullanarak](../../ide/finding-and-using-visual-studio-extensions.md).
 
 ## <a name="load-per-user-extensions-when-running-as-administrator"></a>Yönetici olarak çalışırken Kullanıcı Uzantıları başına yükleme
 
-Daha fazla bilgi için bkz. [Visual Studio uzantılarını bulma ve kullanma](../../ide/finding-and-using-visual-studio-extensions.md).
+Daha fazla bilgi için [bulma ve Visual Studio uzantılarını kullanarak](../../ide/finding-and-using-visual-studio-extensions.md).
 
 ## <a name="additional-extension-galleries"></a>Ek uzantı galerileri
 
