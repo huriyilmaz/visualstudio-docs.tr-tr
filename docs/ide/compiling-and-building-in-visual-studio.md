@@ -12,26 +12,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d8cb2a8a7a1711b01bcb167fceb13faa30e571c
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 8b5f00b3e71f0deb15d6266640db39751f2ae22f
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114713"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269098"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Derleme ve Visual Studio'da derleyin
 
-Kaynak kodu derlerken, derleme altyapısı derlemeler ve yürütülebilir uygulamalar oluşturur. Genel olarak, derleme işlemi Windows, ASP.NET, mobil uygulamalar ve diğerleri gibi birçok farklı proje türlerinde çok benzer. Derleme işlemi ayrıca gibi programlama dillerini benzer C#, Visual Basic, C++ ve F#.
-
-Kodunuzu genellikle oluşturarak hızlı bir şekilde sözdizimi, yanlış yazılmış anahtar sözcükler gibi derleme zamanı hataları belirlemek ve uyuşmazlıkları yazın. Ayrıca, algılamak ve çalışma zamanı hataları, mantık hataları ve anlamsal hataları gibi oluşturma ve kod hata ayıklama sürümlerini çalıştıran düzeltin.
-
-Uygulamanın kaynak kodunu doğru söz dizimini içerir ve kitaplıkları, derlemeler ve diğer bileşenleri için tüm statik başvuruları çözümlemek başarılı bir derleme doğrular. Çalıştırılabilir bir uygulamaya üretilen, test edilebilirler düzgün hem de çalışması için bir [ortam hata ayıklama](../debugger/index.yml) ve el ile ve otomatik testler için çeşitli [kod kalitesini doğrulamak](../test/improve-code-quality.md). Uygulamanın tam olarak test sonra müşterilerinize dağıtmak için bir yayın sürümünü derleyebilirsiniz. Bu işlem, giriş için bkz. [izlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md).
+IDE içinden yapı ilk bir giriş için bkz. [izlenecek yol: uygulama oluşturma](walkthrough-building-an-application.md).
 
 Bir uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz: Visual Studio IDE, MSBuild komut satırı araçları ve Azure işlem hatları:
 
 | Derleme yöntemi | Yararları |
 | --- |--- | --- |
 | IDE |-Derlemeleri hemen oluşturun ve bunları bir hata ayıklayıcıda test edin.<br />-C++ ve C# projeleri için birden çok işlemcili derlemeleri çalıştırın.<br />-Derleme sistemin farklı yönlerini özelleştirin. |
+| CMake | -CMake aracını kullanarak proje oluşturun<br />-Linux ve Windows platformları genelinde aynı derleme sistemini kullanın. |
 | MSBuild komut satırı| -Visual Studio yüklemeden projeleri oluşturun.<br />-Çalışma birden çok işlemcili için tüm proje türleri oluşturur.<br />-Birçok alan yapı sisteminin özelleştirin.|
 | Azure Pipelines | -Bir sürekli tümleştirme/sürekli teslim işlem hattı bir parçası olarak yapı sürecinizi otomatik hale getirin.<br />-Her derleme ile otomatik testler için geçerlidir.<br />-Yapı işlemleri için neredeyse sınırsız bulut tabanlı kaynakların paylaşmayan kullanır.<br />-Yapı iş akışını değiştirin ve ayrıntılı bir şekilde özelleştirilmiş görevleri gerçekleştirmek için yapı etkinlikleri oluşturun.|
 
@@ -60,3 +57,4 @@ Burada, çeşitli diğer görevleri keşfedebilirsiniz:
 
 - [Web sitesi projeleri oluşturma (derleme)](https://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)
 - [Derlemek ve oluşturmak (Mac için Visual Studio)](/visualstudio/mac/compiling-and-building)
+- [Visual Studio 'da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)

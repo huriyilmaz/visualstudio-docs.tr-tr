@@ -8,18 +8,18 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 44b5c5c58c46017730f06142548505c628894a11
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: d6de945e7221d2239e1b4f00185a5b16c04b717d
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316496"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269057"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
+# <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2019/2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
 
-Bu belgede, Visual Studio 2015 ile Visual Studio 2017 arasında genişletilebilirlik projelerinin nasıl gezilebileceği açıklanmaktadır. Bu yükseltmeyi tamamladıktan sonra, bir proje hem Visual Studio 2015 hem de Visual Studio 2017 ' de açabilir, oluşturabilir, kurabilir ve çalıştırılabilir. Başvuru olarak, Visual Studio 2015 ile Visual Studio 2017 arasında gidiş dönüş sağlayan bazı uzantılar [vs SDK genişletilebilirlik örneklerinde](https://github.com/Microsoft/VSSDK-Extensibility-Samples)bulunabilir.
+Bu belgede, Visual Studio 2015 ile Visual Studio 2019 veya Visual Studio 2017 arasında genişletilebilirlik projelerinin nasıl gezilebileceği açıklanmaktadır. Bu yükseltmeyi tamamladıktan sonra, bir proje hem Visual Studio 2015 hem de Visual Studio 2019 ya da 2017 içinde açabilir, oluşturabilir, kurabilir ve çalıştırılabilir. Başvuru olarak, Visual Studio 2015 ile Visual Studio 2019 veya 2017 arasında gidiş dönüş sağlayan bazı uzantılar [vs SDK genişletilebilirlik örneklerinde](https://github.com/Microsoft/VSSDK-Extensibility-Samples)bulunabilir.
 
-Yalnızca Visual Studio 2017 ' de derlemeyi planlıyorsanız, ancak çıktı VSıX 'in hem Visual Studio 2015 hem de Visual Studio 2017 ' de çalıştırılmasını istiyorsanız [uzantı geçiş belgesine](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)bakın.
+Yalnızca Visual Studio 2019/2017 ' de derlemeyi planlıyorsanız, ancak çıktı VSıX 'in hem Visual Studio 2015 hem de Visual Studio 2019/2017 ' de çalıştırılmasını istiyorsanız [uzantı geçiş belgesine](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)bakın.
 
 > [!NOTE]
 > Sürümler arasında Visual Studio 'daki değişiklikler nedeniyle, bir sürümde çalışan bazı şeyler başka bir sürümde çalışmaz. Erişmeye çalıştığınız özelliklerin her iki sürümde de kullanılabildiğinden emin olun, aksi durumda uzantı beklenmedik sonuçlara neden olur.
@@ -29,25 +29,25 @@ Bu belgede, bir VSıX 'i yuvarlamak için tamamlayacağımız adımların bir an
 1. Doğru NuGet paketlerini içeri aktarın.
 2. Uzantı bildirimini güncelleştir:
     * Yükleme hedefi
-    * Önkoşullar
+    * Prerequisites
 3. CSProj güncelleştir:
     * Güncelleştirme `<MinimumVisualStudioVersion>`.
     * `<VsixType>` özelliğini ekleyin.
     * 3 kez `($DevEnvDir)` hata ayıklama özelliğini ekleyin.
     * Derleme araçlarını ve hedefleri içeri aktarmaya yönelik koşullar ekleyin.
 
-4. Derleme ve test
+4. Derleme ve Test Etem
 
 ## <a name="environment-setup"></a>Ortam kurulumu
 
 Bu belge, makinenizde aşağıdakilerin yüklü olduğunu varsayar:
 
 * VS SDK yüklü Visual Studio 2015
-* Genişletilebilirlik iş yükünün yüklü olduğu Visual Studio 2017
+* Genişletilebilirlik iş yükünün yüklü olduğu Visual Studio 2019 veya 2017
 
 ## <a name="recommended-approach"></a>Önerilen yaklaşım
 
-Visual Studio 2017 yerine Visual Studio 2015 ile bu yükseltmeyi başlatmak önemle önerilir. Visual Studio 2015 ' de geliştirmesinin başlıca avantajı, Visual Studio 2015 ' de bulunmayan derlemelere başvurmatığınızdan emin olunması sağlamaktır. Visual Studio 2017 ' de geliştirme yaparsanız, yalnızca Visual Studio 2017 ' de bulunan bir derlemeye bağımlılık getirebilmeniz riski vardır.
+Visual Studio 2019 veya 2017 yerine Visual Studio 2015 ile bu yükseltmeyi başlatmak önemle önerilir. Visual Studio 2015 ' de geliştirmesinin başlıca avantajı, Visual Studio 2015 ' de bulunmayan derlemelere başvurmatığınızdan emin olunması sağlamaktır. Visual Studio 2019 veya 2017 ' de geliştirme yaparsanız, yalnızca Visual Studio 2019 veya 2017 sürümünde bulunan bir derlemeye bağımlılık getirebilmeniz riski vardır.
 
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>Project. JSON öğesine başvuru olmadığından emin olun
 
@@ -67,12 +67,12 @@ Projeniz bir *Project. JSON* dosyası içeriyorsa:
 
 Uygun şekilde derleme ve hata ayıklama yapmamızı sağlayacak derleme araçları eklememiz gerekiyor. Microsoft, Microsoft. VisualStudio. SDK. BuildTasks adlı bir derleme oluşturdu.
 
-Hem Visual Studio 2015 hem de 2017 ' de bir Vsıxv3 oluşturup dağıtmak için aşağıdaki NuGet paketlerini yapmanız gerekir:
+Hem Visual Studio 2015 hem de 2019/2017 ' de bir Vsıxv3 oluşturup dağıtmak için aşağıdaki NuGet paketlerini yapmanız gerekir:
 
 Sürüm | Oluşturulan Araçlar
 --- | ---
 Visual Studio 2015 | Microsoft. VisualStudio. SDK. BuildTasks. 14.0
-Visual Studio 2017 | Microsoft. VSSDK. BuildTool
+Visual Studio 2019 veya 2017 | Microsoft. VSSDK. BuildTool
 
 Bunu yapmak için:
 
@@ -112,7 +112,7 @@ Bunu el ile yapmak için:
 * Dosyayı kaydedin ve kapatın.
 
 > [!NOTE]
-> Tüm Visual Studio 2017 sürümleriyle uyumlu olduğundan emin olmak için önkoşul sürümünü el ile düzenlemeniz gerekebilir. Bunun nedeni, tasarımcının en düşük sürümü Visual Studio 'nun geçerli sürümünüz olarak (örneğin, 15.0.26208.0) ekleyecektir. Ancak, diğer kullanıcıların önceki bir sürümü olabileceğinden, bunu 15,0 olarak el ile düzenlemeniz gerekir.
+> Tüm Visual Studio 2019 veya 2017 sürümleriyle uyumlu olduğundan emin olmak için önkoşul sürümünü el ile düzenlemeniz gerekebilir. Bunun nedeni, tasarımcının en düşük sürümü Visual Studio 'nun geçerli sürümünüz olarak (örneğin, 15.0.26208.0) ekleyecektir. Ancak, diğer kullanıcıların önceki bir sürümü olabileceğinden, bunu 15,0 olarak el ile düzenlemeniz gerekir.
 
 Bu noktada, bildirim dosyanız şuna benzer görünmelidir:
 
@@ -195,9 +195,10 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
-* Csproj dosyasını kaydedin ve kapatın.
+* Csproj dosyasını kaydedin ve kapatın. 
+  * Çözümde birden fazla proje kullanıyorsanız, proje bağlam menüsünde "başlangıç projesi olarak ayarla" seçeneğini kullanarak bu projeyi başlangıç projesi olarak ayarlayın. Bu, Visual Studio 'Yu kaldırdıktan sonra bu projeyi yeniden açmasını sağlar.
 
-## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 ve Visual Studio 2017 ' de Uzantı yüklemelerini test etme
+## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2019-or-2017"></a>Visual Studio 2015 ve Visual Studio 2019 veya 2017 ' de Uzantı yüklemelerini test edin
 
 Bu noktada, projeniz hem Visual Studio 2015 hem de Visual Studio 2017 üzerine yükleyebileceğiniz bir Vsıxv3 oluşturmaya hazırlanmalıdır.
 
@@ -205,7 +206,7 @@ Bu noktada, projeniz hem Visual Studio 2015 hem de Visual Studio 2017 üzerine y
 * Projenizi derleyin ve bir VSıX 'in doğru bir şekilde derlemelerin çıktıda onaylayın.
 * Proje dizininize gidin.
 * *\Bin\debug* klasörünü açın.
-* VSıX dosyasına çift tıklayın ve uzantınızı Visual Studio 2015 ve Visual Studio 2017 ' ye yükler.
+* VSıX dosyasına çift tıklayın ve uzantınızı Visual Studio 2015 ve Visual Studio 2019/2017 ' ye yükler.
 * Uzantıyı, **yüklü** bölümünde yer alan **Araçlar** > **Uzantılar ve güncelleştirmeler** ' de görediğinizden emin olun.
 * Çalıştığını denetlemek için uzantıyı çalıştırmayı/kullanmayı deneyin.
 
