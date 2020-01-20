@@ -10,17 +10,17 @@ helpviewer_keywords:
 - validation [Visual Basic], n-tier data applications
 - validating n-tier data applications
 ms.assetid: 34ce4db6-09bb-4b46-b435-b2514aac52d3
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ff9b2bab755a341d512669578c40ae71f554c235
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 426399022c2484dca28bb4f4e1f26c14783a3d19
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648879"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113313"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>N Katmanlı bir veri kümesine doğrulama ekleme
 N katmanlı bir çözüme ayrılmış bir veri kümesine doğrulama eklemek, temelde tek bir dosya veri kümesine (tek bir projede bir veri kümesi) doğrulama ekleme ile aynıdır. Veriler üzerinde doğrulama gerçekleştirmek için önerilen konum, bir veri tablosunun <xref:System.Data.DataTable.ColumnChanging> ve/veya <xref:System.Data.DataTable.RowChanging> olayları.
@@ -34,7 +34,7 @@ Veri kümesi, veri kümesindeki veri tablolarının sütun ve satır değiştirm
 > Veri kümesi Tasarımcısı, ' de C# <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> olayları için otomatik olarak olay işleyicileri oluşturmaz. El ile bir olay işleyicisi oluşturmanız ve olay işleyicisini temeldeki olaya yedeklemeniz gerekir. Aşağıdaki yordamlarda, hem Visual Basic hem C#de gerekli olay işleyicilerinin nasıl oluşturulacağı açıklanır.
 
 ## <a name="validate-changes-to-individual-columns"></a>Tek tek sütunlardaki değişiklikleri doğrula
-@No__t_0 olayını işleyerek tek tek sütunlardaki değerleri doğrulayın. @No__t_0 olayı, sütundaki bir değer değiştirildiğinde tetiklenir. **Veri kümesi Tasarımcısı**istenen sütuna çift tıklayarak <xref:System.Data.DataTable.ColumnChanging> olayı için bir olay işleyicisi oluşturun.
+<xref:System.Data.DataTable.ColumnChanging> olayını işleyerek tek tek sütunlardaki değerleri doğrulayın. <xref:System.Data.DataTable.ColumnChanging> olayı, sütundaki bir değer değiştirildiğinde tetiklenir. **Veri kümesi Tasarımcısı**istenen sütuna çift tıklayarak <xref:System.Data.DataTable.ColumnChanging> olayı için bir olay işleyicisi oluşturun.
 
 Bir sütuna ilk kez çift tıkladığınızda, tasarımcı <xref:System.Data.DataTable.ColumnChanging> olayı için bir olay işleyicisi oluşturur. Belirli bir sütun için testlerin de bir `If...Then` deyimleri oluşturulur. Örneğin, Northwind Orders tablosundaki **RequiredDate** sütununu çift tıklattığınızda aşağıdaki kod oluşturulur:
 
@@ -60,7 +60,7 @@ End Sub
     > [!NOTE]
     > Veri Kümesi Tasarımcısı, C# olay için otomatik olarak bir olay işleyici oluşturmaz. İçindeki C# olayı işlemek için gerekli olan kod bir sonraki bölüme dahildir. `SampleColumnChangingEvent` oluşturulur ve sonra <xref:System.Data.DataTable.EndInit%2A> yönteminde <xref:System.Data.DataTable.ColumnChanging> olayına bağlanır.
 
-3. @No__t_0 uygulamanızın gereksinimlerini karşılayan veriler içerdiğini doğrulamak için kod ekleyin. Önerilen değer kabul edilemez ise, sütunu bir hata içerdiğini belirtecek şekilde ayarlayın.
+3. `e.ProposedValue` uygulamanızın gereksinimlerini karşılayan veriler içerdiğini doğrulamak için kod ekleyin. Önerilen değer kabul edilemez ise, sütunu bir hata içerdiğini belirtecek şekilde ayarlayın.
 
      Aşağıdaki kod örneği, **Quantity** sütununun 0 ' dan büyük bir değer içerdiğini doğrular. **Quantity** 0 ' dan küçük veya eşitse, sütun bir hata olarak ayarlanır. **Quantity** 0 ' dan büyükse `Else` yan tümcesi hatayı temizler. Sütun değiştirme olay işleyicisindeki kodun aşağıdakine benzer olması gerekir:
 
@@ -102,7 +102,7 @@ End Sub
     ```
 
 ## <a name="validate-changes-to-whole-rows"></a>Tüm satırlarda yapılan değişiklikleri doğrula
-@No__t_0 olayını işleyerek tüm satırlardaki değerleri doğrulayın. @No__t_0 olayı, tüm sütunlardaki değerler işlendiği zaman tetiklenir. Bir sütundaki değer başka bir sütundaki değere dayanıyorsa <xref:System.Data.DataTable.RowChanging> olayında doğrulanması gerekir. Örneğin, Northwind 'deki Orders tablosunda OrderDate ve RequiredDate ' i göz önünde bulundurun.
+<xref:System.Data.DataTable.RowChanging> olayını işleyerek tüm satırlardaki değerleri doğrulayın. <xref:System.Data.DataTable.RowChanging> olayı, tüm sütunlardaki değerler işlendiği zaman tetiklenir. Bir sütundaki değer başka bir sütundaki değere dayanıyorsa <xref:System.Data.DataTable.RowChanging> olayında doğrulanması gerekir. Örneğin, Northwind 'deki Orders tablosunda OrderDate ve RequiredDate ' i göz önünde bulundurun.
 
 Siparişler girildiğinde, doğrulama işlemi OrderDate tarihinde veya bu tarihten önce olan bir RequiredDate ile bir siparişin girilmediğinden emin olur. Bu örnekte, hem RequiredDate hem de OrderDate sütunlarının değerlerinin karşılaştırılması gerekir, bu nedenle tek bir sütun değişikliğinin doğrulanması anlamlı değildir.
 
@@ -117,7 +117,7 @@ Siparişler girildiğinde, doğrulama işlemi OrderDate tarihinde veya bu tariht
      Kısmi bir sınıf `RowChanging` bir olay işleyicisiyle oluşturulur ve kod düzenleyicisinde açılır.
 
     > [!NOTE]
-    > Veri Kümesi Tasarımcısı, C# projelerdeki <xref:System.Data.DataTable.RowChanging> olayı için otomatik olarak bir olay işleyici oluşturmaz. @No__t_0 olayını işlemek ve kodu çalıştırmak için bir yöntem oluşturmanız ve ardından olayı tablonun başlatma yönteminde yedeklemeniz gerekir.
+    > Veri Kümesi Tasarımcısı, C# projelerdeki <xref:System.Data.DataTable.RowChanging> olayı için otomatik olarak bir olay işleyici oluşturmaz. <xref:System.Data.DataTable.RowChanging> olayını işlemek ve kodu çalıştırmak için bir yöntem oluşturmanız ve ardından olayı tablonun başlatma yönteminde yedeklemeniz gerekir.
 
 3. Kısmi sınıf bildiriminin içine Kullanıcı kodu ekleyin.
 

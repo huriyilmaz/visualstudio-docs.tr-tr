@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: def432c5c2861716b4b3fb6e2f93f20a93a54a28
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 52915f0bac2bd172daf909541ecfa86396d90a5d
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748533"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115192"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Hesaplanan ve Özel Depolama Özellikleri
 Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagramda ve dil gezgininizde kullanıcıya görüntülenebilir ve program kodu tarafından erişilebilir. Ancak özellikler, değerlerinin depolandığı şekilde farklılık gösterir.
@@ -25,8 +25,8 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 |Alan özelliği türü|Açıklama|
 |-|-|
 |**Standart** (varsayılan)|*Depoya* kaydedilen ve dosyaya serileştirilmiş bir alan özelliği.|
-|**Hesapla**|Depoda kaydedilmemiş ancak diğer değerlerden hesaplanan salt bir salt okunurdur.<br /><br /> Örneğin, `Person.Age` `Person.BirthDate` hesaplanabilir.<br /><br /> Hesaplamayı gerçekleştiren kodu sağlamanız gerekir. Genellikle, diğer etki alanı özelliklerinden değeri hesaplayabilirsiniz. Ancak dış kaynakları da kullanabilirsiniz.|
-|**Özel depolama**|Doğrudan depoya kaydedilmemiş, ancak hem Get hem de set olabilecek bir etki alanı özelliği.<br /><br /> Değeri alan ve ayarlamış olan yöntemleri sağlamanız gerekir.<br /><br /> Örneğin, `Person.FullAddress` `Person.StreetAddress`, `Person.City` ve `Person.PostalCode` depolanabilir.<br /><br /> Ayrıca, dış kaynaklara erişebilirsiniz. Örneğin, bir veritabanından değerler almak ve ayarlamak için.<br /><br /> @No__t_0 true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).|
+|**Hesapla**|Depoda kaydedilmemiş ancak diğer değerlerden hesaplanan salt bir salt okunurdur.<br /><br /> Örneğin, `Person.Age` `Person.BirthDate`hesaplanabilir.<br /><br /> Hesaplamayı gerçekleştiren kodu sağlamanız gerekir. Genellikle, diğer etki alanı özelliklerinden değeri hesaplayabilirsiniz. Ancak dış kaynakları da kullanabilirsiniz.|
+|**Özel depolama**|Doğrudan depoya kaydedilmemiş, ancak hem Get hem de set olabilecek bir etki alanı özelliği.<br /><br /> Değeri alan ve ayarlamış olan yöntemleri sağlamanız gerekir.<br /><br /> Örneğin, `Person.FullAddress` `Person.StreetAddress`, `Person.City`ve `Person.PostalCode`depolanabilir.<br /><br /> Ayrıca, dış kaynaklara erişebilirsiniz. Örneğin, bir veritabanından değerler almak ve ayarlamak için.<br /><br /> `Store.InUndoRedoOrRollback` true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).|
 
 ## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Hesaplanmış veya özel bir depolama özelliği için kod sağlama
  Bir etki alanı özelliğinin türünü hesaplanmış veya özel depolama olarak ayarlarsanız, erişim yöntemleri sağlamanız gerekir. Çözümünüzü oluşturduğunuzda bir hata raporu, size gerekli olanları bildirir.
@@ -41,7 +41,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-4. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+4. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
 
      Şu hata iletisini alıyorsunuz: "*YourClass* , Get*yourproperty*için bir tanım içermiyor."
 
@@ -52,7 +52,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
     > [!NOTE]
     > Bu dosya DslDefinition. dsl 'den oluşturulur. Bu dosyayı düzenlerseniz, **Tüm Şablonları Dönüştür**' e tıkladığınızda yaptığınız değişiklikler kaybedilir. Bunun yerine, gerekli yöntemi ayrı bir dosyaya ekleyin.
 
-6. Sınıf dosyasını ayrı bir klasörde oluşturun veya açın, örneğin CustomCode \\*YourDomainClass*. cs.
+6. Sınıf dosyasını ayrı bir klasörde oluşturun veya açın, örneğin CustomCode\\*YourDomainClass*. cs.
 
      Ad alanının oluşturulan kodla aynı olduğundan emin olun.
 
@@ -75,7 +75,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
             System.DateTime.Today.Year - value; }
     ```
 
-     @No__t_0 true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).
+     `Store.InUndoRedoOrRollback` true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).
 
 9. Çözümü derleyin ve çalıştırın.
 

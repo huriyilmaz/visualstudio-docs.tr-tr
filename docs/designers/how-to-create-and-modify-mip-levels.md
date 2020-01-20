@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: MIP Düzeyleri Oluşturma ve Değiştirme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56fa2875b8a0893e55f7fc373b933b85b4fa8207
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 793d730df3942608451e7dbc329819b98c451973
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635521"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113287"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>Nasıl yapılır: MıP düzeyleri oluşturma ve değiştirme
 Bu belgede, doku alanı ayrıntı düzeyi (LoD) için *MIP düzeylerini* oluşturmak ve değiştirmek üzere **Görüntü Düzenleyicisi** 'nin nasıl kullanılacağı gösterilir.
@@ -25,7 +25,7 @@ Msunucudan *eşleme* , farklı boyutlarda dokuların birkaç kopyasını öncede
 
 1. [Nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)bölümünde açıklandığı gibi temel bir dokuyla başlayın. En iyi sonuçlar için, boyutun boyutunun iki üssü olan genişlik ve yüksekliğe sahip bir doku belirtin, örneğin, 256, 512, 1024 vb.
 
-2. MıP düzeylerini oluşturun. **Görüntü Düzenleyicisi Modu** araç çubuğunda,**MIPS oluştur** >  **Gelişmiş**  > **araçları** ' nı seçin.
+2. MıP düzeylerini oluşturun. **Görüntü Düzenleyicisi Modu** araç çubuğunda, **MIPS oluştur** > **Gelişmiş** > **araçları** ' nı seçin.
 
      **Sonraki MIP düzeyine git** ve **önceki MIP düzeyine git** düğmeleri artık **Görüntü Düzenleyicisi Modu** araç çubuğunda görünmediğine dikkat edin. **Özellikler** penceresi görüntülenirse, salt okuma özellikleri **MIP düzeyi** ve **MIP düzeyi sayısı** ' nın artık görüntü özelliklerinde göründüğünü de unutmayın.
 

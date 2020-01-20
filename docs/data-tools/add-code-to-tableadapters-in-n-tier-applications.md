@@ -9,17 +9,17 @@ helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, extending TableAdapters
 ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 246ba595cf1da7e4713e0ddc03ea015eeb61eb64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e5d240726030a3a08d184b3015f56f65d9168e9f
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648930"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113325"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N katmanlı uygulamalarda TableAdapter’lara kod ekleme
 TableAdapter için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek bir TableAdapter 'ın işlevselliğini genişletebilirsiniz ( *DataSetName. DataSet. Designer* dosyasına kod eklemek yerine). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi (tür)](/dotnet/csharp/language-reference/keywords/partial-type).
@@ -48,7 +48,7 @@ Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra son
 
 4. Kısmi sınıf bildiriminin içine kod ekleyin.
 
-5. Aşağıdaki örnek, `NorthwindDataSet` `CustomersTableAdapter` kodun nereye ekleneceğini gösterir:
+5. Aşağıdaki örnek, `NorthwindDataSet``CustomersTableAdapter` kodun nereye ekleneceğini gösterir:
 
     ```vb
     Partial Public Class CustomersTableAdapter

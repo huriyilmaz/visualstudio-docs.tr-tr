@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b422b1844ffb30c1c6f2f8fa8845995c98c794e4
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 5243223e554f8e31fe2ffa9d667c09d0a3e1dbc0
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416837"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115152"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış derleme yapılandırmasını yönetme
 
@@ -38,7 +38,7 @@ Varsayılan olarak Visual Basic Geliştirici ayarları, [Proje tasarımcısında
 
 3. **Gelişmiş derleme yapılandırmasını göster**' e tıklayın.
 
-4.           **Tamam**'ı tıklatın.
+4. **Tamam**'ı tıklatın.
 
      **Configuration Manager** artık **derleme** menüsünde kullanılabilir ve **yapılandırma** ve **Platform** listeleri **Proje tasarımcısında**görünür.
 
