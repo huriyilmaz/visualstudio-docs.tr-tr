@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Hangi aboneliklerin sunulmakta olduğuna, hangi kuralların uygulanacağını ve MPN ' de kaç abonelik sunulacağı hakkında ayrıntılar.
-ms.openlocfilehash: 8847d320ec950b6601f99875e2c35ca80105e5b4
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 1a103f76b56df72b5829f9ce87f587070519726e
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491673"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281704"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) iş ortaklarına sunulan Visual Studio abonelikleri
 
@@ -33,7 +33,7 @@ Bir iş ortağı bir uzmanlığa sahip olduğunda (gümüş veya altın düzeyde
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | Uygulama Geliştirme                     | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | Bulut müşterisi Ilişki yönetimi      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
-| Bulut platformu                              | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
+| Bulut Platformu                              | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | Bulut verimliliği                          | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | DevOps                                      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri                |
 
@@ -47,7 +47,7 @@ Bir iş ortağının kaç uzmanlık kazandığına bakılmaksızın, Visual Stud
 
 ## <a name="subscriptions-for-partners-purchasing-the-action-pack"></a>Eylem Paketi satın alan iş ortakları için abonelikler
 
-Uzmanlığa sahip iş ortakları Eylem Paketi satın almaya uygun değildir. İş ortağı başına yalnızca bir Eylem Paketi satın alınabilir.
+Uzmanlığa sahip iş ortakları Eylem Paketi satın almaya uygundur. İş ortağı başına yalnızca bir Eylem Paketi satın alınabilir.
 
 Eylem Paketi, iş ortağı **3 Visual Studio Professional (MPN) abonelikleri**kazanırlar. Visual Studio Professional (MPN), pazarda ticari olarak kullanılabilir bir eşdeğer olmadan özel bir tekliftir. Dahil edilen özellikler şunlardır:
 
