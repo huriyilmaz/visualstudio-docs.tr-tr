@@ -4,29 +4,29 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Warnings and errors
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: b9349e2c1c9ebb52e6172cc37ab1113aff95d511
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: b948aa83d5055fdf3d628a84002881eba9c91ac2
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653136"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76112534"
 ---
 # <a name="warnings-and-errors"></a>Uyarıları ve hatalar
 
 ## <a name="warnings-and-errors-by-category"></a>Kategoriye göre uyarılar ve hatalar
 
-* **Sınırlar
-  * [MaxBranches sayısı aşıldı](#maxbranches-exceeded)
+* **Sınırlar**
+  * [MaxBranches aşıldı](#maxbranches-exceeded)
   * [MaxConstraintSolverTime aşıldı](#maxconstraintsolvertime-exceeded)
   * [MaxConditions aşıldı](#maxconditions-exceeded)
-  * [Maxçağrılarının sayısı aşıldı](#maxcalls-exceeded)
+  * [MaxCalls aşıldı](#maxcalls-exceeded)
   * [MaxStack aşıldı](#maxstack-exceeded)
-  * [Maxçalıştırmaları aşıldı](#maxruns-exceeded)
+  * [MaxRuns aşıldı](#maxruns-exceeded)
   * [MaxRunsWithoutNewTests aşıldı](#maxrunswithoutnewtests-exceeded)
 
 * **Kısıtlama çözme**
@@ -342,6 +342,6 @@ Bazı durumlarda, statik bir alanı değiştirmek kabul edilebilir:
 
 <a name="report-bug"></a>
 
-## <a name="got-feedback"></a>Geri bildirim alındı mı?
+## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 
-Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)’na gönderin.
