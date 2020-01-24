@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d10b02908c63d177149f9113c37f71813ee09dc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e912459f45086b1bf5f96a9458f006354e982ffd
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567443"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542691"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Yapı özelleştirme ve hata ayıklama için "Klasör Aç" geliştirme görevleri
 
@@ -224,6 +224,8 @@ Görevler için herhangi bir dosya veya klasör adını belirterek oluşturabile
 |`${fileExtname}`| Seçili dosya uzantısını (örneğin, *.js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>Launch.vs.JSON ile hata ayıklamayı Yapılandır
+
+CMake projelerini hata ayıklama için yapılandırmak için bkz. [CMake hata ayıklama oturumlarını yapılandırma](/cpp/build/configure-cmake-debugging-sessions).
 
 1. Yapılandırmak için hata ayıklama için de codebase **Çözüm Gezgini** seçin **hata ayıklama ve başlatma ayarları** yürütülebilir dosyanızın sağ tıklayın veya bağlam menüsünde menü öğesi.
 

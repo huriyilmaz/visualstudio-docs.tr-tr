@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil edilen Azure DevTest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: a6d0eee97ddf2d3a5a35af60ba6c6daf8bcc8425
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 01c31d96b7ee3e696f941725bbcb314c5f0e0e60
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75405298"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542678"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure kullanma
 Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -110,7 +110,7 @@ Bu e-postayı hatada aldığınızı düşünüyorsanız lütfen [Azure müşter
 ## <a name="support-resources"></a>Destek kaynakları
 - Azure’la ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
   - Teknik destek: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
-  - [Azure belgeleri](/azure/)
+  - [Azure Ipuçları & püf noktaları](https://microsoft.github.io/AzureTipsAndTricks/ "Azure Ipuçları & püf noktaları") 
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
