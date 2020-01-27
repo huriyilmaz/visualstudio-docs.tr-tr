@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 070cbcc79a79aea16e37f17ea775ce7838b41d59
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: aeef905b2372b22be7aee157c4d0249109ea3749
+ms.sourcegitcommit: 0c3c4bd38455f7046c5c5a448eaaa5e407ad5bf4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179813"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725877"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: C++ kodunuzu Visual Studio kullanarak hata ayıklamayı öğrenin
 
@@ -33,7 +33,7 @@ Bu öğreticide şunları yapacaksınız:
 > * Veri ipuçları ve hata ayıklayıcı pencereleri değişkenler inceleyin
 > * Çağrı yığınını inceleyin
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 ::: moniker range=">=vs-2019"
 
@@ -50,20 +50,45 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://
 
 İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Visual Studio Yükleyicisi'ni başlatır. Seçin **C++ ile masaüstü geliştirme** iş yükü, ardından **Değiştir**.
 
-## <a name="create-a-project"></a>Proje oluşturma
+## <a name="create-a-project"></a>Proje oluştur
 
-1. Visual Studio'yu açın.
+::: moniker range="vs-2017"
 
-    ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **C++** yazın, **Şablonlar**' ı seçin ve **Yeni konsol uygulaması projesi oluştur**' u seçin. Görüntülenen iletişim kutusunda, **Get-Started-hata ayıklama**gibi bir ad yazın ve ardından **Oluştur**' u seçin.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **görsel C++** altında **Windows Masaüstü**' nün ardından orta bölmedeki **Windows konsol uygulaması**' nı seçin. Ardından, **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
-    ::: moniker-end
+1. Visual Studio 2017'yi açın.
 
-    **Windows konsol uygulaması** proje şablonunu görmüyorsanız **Araçlar** **ve Özellikler al** > ' a gidin ve Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi'ni başlatır. Seçin **C++ ile masaüstü geliştirme** iş yükü, ardından **Değiştir**.
+2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
-    Visual Studio projesi oluşturur.
+3. Sol bölmedeki **Yeni proje** iletişim kutusunda, **görsel C++** ' i genişletin ve ardından **Windows Masaüstü**' ne tıklayın. Orta bölmede **Windows konsol uygulaması**' nı seçin. Ardından Proje *Get-Started-hata ayıklama*adını adlandırın.
+
+   > [!NOTE]
+   > **Windows konsol uygulaması** proje şablonunu görmüyorsanız **Araçlar** **ve Özellikler al** > ' a gidin ve Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi'ni başlatır. Seçin **C++ ile masaüstü geliştirme** iş yükü, ardından **Değiştir**.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Visual Studio 2019 ' i açın.
+
+   Başlangıç penceresi açık değilse **dosya** > **Başlangıç penceresi**' ni seçin.
+
+1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+
+1. **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil **C++** listesinden seçin ve ardından platform listesinden **Windows** ' u seçin. 
+
+   Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
+
+   ![Konsol uygulaması C# için şablonu seçin (.NET Core)](../debugger/media/vs-2019/get-started-create-console-project-cpp.png)
+
+   > [!NOTE]
+   > **Konsol uygulaması** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Ardından Visual Studio yükleyicisi, iş yüküyle **Masaüstü geliştirmeyi C++**  seçin.
+
+1. **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *Get-Started-Debugging* yazın veya girin. Ardından **Oluştur**' u seçin.
+
+   Visual Studio yeni projenizi açar.
+
+::: moniker-end
+
+## <a name="create-the-application"></a>Uygulama oluşturma
 
 1. İçinde *get çalışmaya debugging.cpp*, aşağıdaki kodu değiştirin
 
@@ -170,7 +195,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://
 
 ## <a name="start-the-debugger"></a>Hata ayıklayıcıyı başlatın!
 
-1. Tuşuna **F5** (**hata ayıklama > hata ayıklamayı Başlat**) veya **hata ayıklamayı Başlat** düğmesi ![hata ayıklamayı Başlat](../debugger/media/dbg-tour-start-debugging.png "hata ayıklamayı Başlat ") hata ayıklama araç çubuğu.
+1. Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata**Ayıkla > Başlat**) ![veya hata](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
 
      **F5** başladığında hata ayıklayıcının uygulamayla uygulamaya bağlı işlem ancak biz kodunu incelemek için özel bir şey yapmadınız hemen. Bu nedenle yalnızca uygulamayı yükler ve konsol çıktısı görürsünüz.
 
@@ -185,7 +210,9 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://
 
      Bu öğreticide, biz hata ayıklayıcıyı kullanarak bu uygulamaya daha yakından göz atın ve hata ayıklayıcı göz özelliklerini elde etmek.
 
-2. Kırmızı Durdur tuşuna basarak hata ayıklayıcıyı ![hata ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "hata ayıklamayı Durdur") düğmesi.
+2. Kırmızı durma ![hata ayıklamayı](../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") Durdur düğmesine basarak hata ayıklayıcıyı durdurun.
+
+3. Konsol penceresini kapatın.
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Bir kesme noktası ayarlayın ve hata ayıklayıcıyı başlatın
 
@@ -213,26 +240,28 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
 1. İçinde duraklatıldığı sırada `shape->Draw` yöntem çağrısı `main` işlev, basın **F11** (veya tercih **hata ayıklama > içine adımla**) için koda ilerlemek için `Rectangle` sınıfı.
 
-     ![İçine adımla kodu F11 kullanın](../debugger/media/get-started-f11-cpp.png "F11 adımla")
+     ![Koda geçmek için F11 kullanın](../debugger/media/get-started-f11-cpp.png "F11 step INTO")
 
      F11 olan **içine adımla** komut ve aynı anda uygulama yürütme bir deyim ilerler. F11 çoğu ayrıntılı yürütme akışı incelemek için iyi bir yoludur. (Kod aracılığıyla daha hızlı hareket etmek için diğer bazı seçenekleri de göstereceğiz.) Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../debugger/just-my-code.md)).
 
 2. Basın **F10** (veya tercih **hata ayıklama > Step Over**) hata ayıklayıcı birkaç kez durur kadar `Shape::Draw` yöntem çağrısının yazıp ENTER tuşuna **F10** bir kez daha.
 
-     ![Step Over kodu F10 kullanın](../debugger/media/get-started-step-over-cpp.png "F10 adımla")
+     ![Kod üzerinde adımla F10 kullanın](../debugger/media/get-started-step-over-cpp.png "F10 adımla")
 
      Hata ayıklayıcı içine girmez şu bildirim `Draw` temel sınıf yöntemini (`Shape`). **F10** işlevleri veya yöntemleri (kod hala çalışır), uygulama kodunuzda içine Adımlama olmadan, hata ayıklayıcı ilerler. F10 tuşlarına basarak `Shape::Draw` yöntem çağrısının (yerine **F11**), biz uygulama kodunu üzerinden atlandı `Draw` (hangi maybe değiliz ilginizi şu anda) temel sınıf.
 
 ## <a name="navigate-code-using-run-to-click"></a>Tıkla Çalıştır'ı kullanarak kod gidin
 
-1. Kod Düzenleyicisi'nde, ekranı aşağı kaydırın ve üzerine `std::cout` içinde `Triangle` sınıfı yeşil kadar **tıklanan satıra kadar Çalıştır** düğmesi ![tıklanan satıra kadar Çalıştır](../debugger/media/dbg-tour-run-to-click.png "RunToClick") Soldaki bölmede görünür.
+1. Daha önce ayarladığınız kesme noktasına sağ tıklayın ve **kesme noktasını sil** ' i seçin (veya **Ctrl** + **SHIFT** + **F9** tuşlarına basarak tüm kesme noktalarını silin).
 
-     ![Tıkla Çalıştır kullanın özellik](../debugger/media/get-started-run-to-click-cpp.png "tıklanan satıra kadar Çalıştır")
+1. Kod Düzenleyicisi 'nde, aşağı kaydırarak `Triangle` sınıfında `std::cout` üzerine gelin ve sol tarafta görüntülenen düğmesine ![tıklamak](../debugger/media/dbg-tour-run-to-click.png "RunToClick") üzere **düğme** Çalıştır düğmesine tıklayın.
+
+     ![Tıklama için Çalıştır özelliğini kullanın](../debugger/media/get-started-run-to-click-cpp.png "Tıklanan Satıra Kadar Çalıştır")
 
    > [!NOTE]
    > **Tıklama Için Çalıştır** düğmesi [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]başlayarak kullanılabilir. Yeşil ok düğmesini görmüyorsanız kullanın **F11** Bu örnekte bunun yerine hata ayıklayıcı doğru yere ilerlemek için.
 
-2. Tıklayın **tıklanan satıra kadar Çalıştır** düğmesi ![tıklanan satıra kadar Çalıştır](../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+2. **Tıklama düğmesine tıklayarak** ![' ye tıklayın.](../debugger/media/dbg-tour-run-to-click.png "RunToClick")
 
     Bu düğmeyi kullanarak geçici bir kesme noktası ayarlayarak benzer. **Tıklanan satıra kadar Çalıştır** (herhangi bir açık dosyayı tıklayabilirsiniz) uygulama kodu görünür bir bölge içinde hızla dolaşma için kullanışlıdır.
 
@@ -259,9 +288,11 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
      Geri olmalıdır `for` içinde döngü `main` yöntemi.
 
+1. `for` döngüsünde yeni bir kesme noktası eklemek için sol kenar boşluğuna tıklayın.
+
 ## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlı bir şekilde yeniden başlatın
 
-Tıklayın **yeniden** ![yeniden uygulama](../debugger/media/dbg-tour-restart.png "RestartApp") hata ayıklama araç çubuğu düğmesini (**Ctrl** + **kaydırma**   +  **F5**).
+Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![başlat](../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL** + **SHIFT** + **F5**) düğmesine tıklayın.
 
 Bastığınızda **yeniden**, uygulama durdurup hata ayıklayıcı yerine zaman kaydeder. İlk kesme noktasına isabet kodu yürüterek, hata ayıklayıcı duraklatır.
 
@@ -279,7 +310,7 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
 1. İlk dizinini genişletin `[0]` görmek için `privateHeight` dikdörtgeninin özelliği.
 
-     ![Bir veri ipucunda görüntülemek](../debugger/media/get-started-data-tip-cpp.png "bir veri ipucunda görüntüleyin")
+     ![Veri ipucunu görüntüleme](../debugger/media/get-started-data-tip-cpp.png "Veri Ipucunu görüntüleme")
 
      Genellikle, hata ayıklama sırasında istediğiniz nesnelerin özellik değerlerini denetlemek için hızlı bir yol ve veri ipuçları yapmak için iyi bir yoludur.
 
@@ -287,7 +318,7 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
 1. Bakmak **Otolar** altındaki kod düzenleyicisi penceresi.
 
-     ![Otomatik değişkenler penceresi değişkenleri İnceleme](../debugger/media/get-started-autos-window-cpp.png "otomatik değişkenler penceresi")
+     ![Oto penceresindeki değişkenleri İncele](../debugger/media/get-started-autos-window-cpp.png "Oto penceresi")
 
     İçinde **Otolar** penceresi değişkenleri ve bunların geçerli değerini görürsünüz. C++ için **Otolar** penceresi değişkenleri kod üç önceki satırlarını gösterir.
 
@@ -309,7 +340,7 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
 2. Tıklayın **F11** birkaç kez duraklatmak, hata ayıklayıcı görene kadar `Shape::Draw` yöntemi `Rectangle` Kod düzenleyicisinde sınıfı. Bakmak **çağrı yığını** penceresi.
 
-    ![Çağrı yığınını incelemek](../debugger/media/get-started-call-stack-cpp.png "ExamineCallStack")
+    ![Çağrı yığınını inceleyin](../debugger/media/get-started-call-stack-cpp.png "ExamineCallStack")
 
     **Çağrı yığını** penceresi, yöntemleri ve işlevleri çağrılır sırasını gösterir. Geçerli işlev en üst satırına gösterir ( `Rectangle::Draw` Bu örnekte yöntemi). İkinci satır gösteren `Rectangle::Draw` çağırıldığı `main` işlevi ve benzeri.
 

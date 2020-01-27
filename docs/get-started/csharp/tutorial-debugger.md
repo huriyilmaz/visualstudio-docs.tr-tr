@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c7237d8d8bf66273078049a41a3193af0026792
-ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+ms.openlocfilehash: 1e19672ccc13b94f93bd21fc02701aa54648199e
+ms.sourcegitcommit: 0c3c4bd38455f7046c5c5a448eaaa5e407ad5bf4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830019"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76726092"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: hata ayıklamayı öğrenin C# kullanarak Visual Studio code
 
@@ -40,12 +40,12 @@ Bu öğreticide şunları yapacaksınız:
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 yüklü ve **.net masaüstü geliştirme** iş yüküne sahip olmanız gerekir.
+Visual Studio 2019 ' nin yüklü olması ve **.NET Core platformlar arası geliştirme** iş yüküne sahip olmanız gerekir.
 
 ::: moniker-end
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 yüklü olması gerekir ve **.NET Masaüstü geliştirmesinden** iş yükü.
+Visual Studio 2017 ' nin yüklü olması ve **.NET Core platformlar arası geliştirme** iş yüküne sahip olmanız gerekir.
 
 ::: moniker-end
 
@@ -61,24 +61,52 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 ::: moniker-end
 
-İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Visual Studio Yükleyicisi'ni başlatır. Seçin **.NET masaüstü geliştirme** iş yükü, ardından **Değiştir**.
+İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 ## <a name="create-a-project"></a>Proje oluştur
 
-1. Visual Studio'yu açın.
+İlk olarak, bir .NET Core konsol uygulama projesi oluşturacaksınız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
 
-    ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **konsolu**yazın, **Şablonlar**' ı seçin, sonra **Yeni konsol uygulaması oluştur (.NET Core) projesi** veya **Yeni konsol uygulaması (.NET Framework) projesi**seçin. Görüntülenen iletişim kutusunda, **Get-Started-hata ayıklama**gibi bir ad yazın ve ardından **Oluştur**' u seçin.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **görsel C#** altında **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması (.NET Framework)** seçeneğini belirleyin. Ardından, **Get-Started-hata ayıklama** gibi bir ad yazın ve **Tamam**' a tıklayın.
-    ::: moniker-end
+::: moniker range="vs-2017"
 
-    **Konsol uygulaması (.NET Framework)** proje şablonunu görmüyorsanız, **Araçlar** ' a gidin > **Araçlar ve Özellikler al...** ' a giderek Visual Studio yükleyicisi açılır. Seçin **.NET masaüstü geliştirme** iş yükü, ardından **Değiştir**.
+1. Visual Studio 2017'yi açın.
 
-    Visual Studio projesi oluşturur.
+2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
-1. *Program.cs*' de, varsayılan kodun tümünü değiştirin
+3. Sol bölmedeki **Yeni proje** iletişim kutusunda, öğesini genişletin **C#** ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından Proje *Get-Started-hata ayıklama*adını adlandırın.
+
+     **Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısını seçin.
+
+     Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Visual Studio 2019 ' i açın.
+
+   Başlangıç penceresi açık değilse **dosya** > **Başlangıç penceresi**' ni seçin.
+
+1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+
+1. **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil **C#** listesinden seçin ve ardından platform listesinden **Windows** ' u seçin. 
+
+   Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+
+   ![Konsol uygulaması C# için şablonu seçin (.NET Core)](../../debugger/media/vs-2019/get-started-create-console-project.png)
+
+   > [!NOTE]
+   > **Konsol uygulaması (.NET Core)** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Sonra, Visual Studio Yükleyicisi **.NET Core platformlar arası geliştirme** iş yükünü seçin.
+
+1. **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *Get-Started-Debugging* yazın veya girin. Ardından **Oluştur**' u seçin.
+
+   Visual Studio yeni projenizi açar.
+   
+::: moniker-end
+
+## <a name="create-the-application"></a>Uygulama oluşturma
+
+1. *Program.cs*' de, burada gösterilen tüm varsayılan kodu değiştirin:
 
     ```csharp
     using System;
@@ -199,6 +227,8 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 2. Kırmızı durma ![hata ayıklamayı](../../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") Durdur düğmesine basarak hata ayıklayıcıyı durdurun.
 
+3. Konsol penceresini kapatın.
+
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Bir kesme noktası ayarlayın ve hata ayıklayıcıyı başlatın
 
 1. İçinde `foreach` , döngü `Main` işlev, aşağıdaki kod satırının sol kenar boşluğunu tıklayarak kesme noktası ayarlayın:
@@ -237,6 +267,8 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
 ## <a name="navigate-code-using-run-to-click"></a>Tıkla Çalıştır'ı kullanarak kod gidin
 
+1. Daha önce ayarladığınız kesme noktasına sağ tıklayın ve **kesme noktasını sil** ' i seçin (veya **Ctrl** + **SHIFT** + **F9** tuşlarına basarak tüm kesme noktalarını silin).
+
 1. Kod Düzenleyicisi 'nde, aşağı kaydırarak `Triangle` sınıfında `Console.WriteLine` yönteminin üzerine gelin ve sol tarafta görüntülenen düğmesine ![tıklamak](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") üzere **düğme** Çalıştır düğmesine tıklayın. Düğme araç ipucu "yürütmeyi buraya kadar Çalıştır" gösterir.
 
      ![Tıklama için Çalıştır özelliğini kullanın](../csharp/media/get-started-run-to-click.png "Tıklanan Satıra Kadar Çalıştır")
@@ -270,6 +302,8 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
      Bu komut, uygulama yürütmeyi devam ettirir (ve hata ayıklayıcı ilerler) geçerli işlev dönene kadar.
 
      Geri olmalıdır `foreach` içinde döngü `Main` yöntemi. Aksi takdirde, **shıft** + **F11** tuşuna basın.
+
+1. `for` döngüsünde yeni bir kesme noktası eklemek için sol kenar boşluğuna tıklayın.
 
 ## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlı bir şekilde yeniden başlatın
 
