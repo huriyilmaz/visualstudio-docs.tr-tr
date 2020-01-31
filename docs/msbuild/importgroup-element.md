@@ -16,17 +16,21 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4480442577ccb321d66ad65f94a7c86cdae62ae
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 56d3c301eb0e9b660a82b6552792a96aa5bd8596
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574012"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826594"
 ---
 # <a name="importgroup-element"></a>ImportGroup öğesi
+  
 İsteğe bağlı bir koşul altında gruplanan `Import` öğelerinden oluşan bir koleksiyon içerir. Daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
- \<Proje > \<ImportGroup >
+```xml
+<Project>
+  <ImportGroup>
+```
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -72,5 +76,6 @@ ms.locfileid: "75574012"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)

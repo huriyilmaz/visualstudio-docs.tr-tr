@@ -6,20 +6,18 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 78bf7fce98f2a77e05a3fbbd31afcf3f20d97a9f
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: ad0be8546b88fbd01f54faf7eb00f71ddd6aa632
+ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74985131"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76892161"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac için Visual Studio kaldırılıyor
 
 Mac için Visual Studio gibi tek başına uygulamalar dahil olmak üzere platformlar arası uygulama geliştirmeyi etkinleştiren birçok Xamarin ürünü vardır.
 
 İlgili bölüme giderek her bir ürünü tek tek kaldırmak için bu Kılavuzu kullanabilirsiniz veya [kaldırma betiği](#uninstall-script) bölümünde sunulan betikleri kullanarak her şeyi kaldırabilirsiniz.
-
-Makinenizde daha önce Xamarin Studio yüklüyse, aşağıdaki adımlara ek olarak [Xamarin 'in kaldırma](/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac) kılavuzundaki yönergeleri de izlemeniz gerekebilir.
 
 ## <a name="uninstall-script"></a>Betiği kaldır
 

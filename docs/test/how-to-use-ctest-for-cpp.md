@@ -1,18 +1,18 @@
 ---
 title: C++ için CTest kullanma
-ms.date: 05/01/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
-ms.author: mblome
+ms.author: corob
 manager: jillfra
 ms.workload:
 - cplusplus
-author: mikeblome
-ms.openlocfilehash: cc0ced6205444e1436ffbffa73ba647a6b682c5c
-ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
+author: corob-msft
+ms.openlocfilehash: 78759a017575916bce3b3fff643cbce8ff303fd6
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720557"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826529"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>Visual Studio 2017 ve üzeri sürümlerde C++ ctest kullanımı
 
@@ -20,7 +20,7 @@ CMake (ctest içeren), varsayılan olarak iş yüküyle **masaüstü geliştirme
 
 ## <a name="to-write-tests"></a>Testler yazmak için
 
-Visual Studio'da CMake desteği, Visual Studio Proje sistemi kullanılmaz. Bu nedenle, yazma ve herhangi bir CMake ortamında olduğu gibi CTest testler yapılandırın. Testi etkinleştirmek için `enable_testing()` komutunu ve yeni bir test eklemek için `add_test()` komutunu kullanın. CTest hakkında daha fazla bilgi için bkz. [CMake belgeleri](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
+Visual Studio'da CMake desteği, Visual Studio Proje sistemi kullanılmaz. Bu nedenle, yazma ve herhangi bir CMake ortamında olduğu gibi CTest testler yapılandırın. Testi etkinleştirmek için `enable_testing()` komutunu ve yeni bir test eklemek için `add_test()` veya `gtest_discover_tests()` komutunu kullanın. CTest hakkında daha fazla bilgi için bkz. [CMake belgeleri](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
 
 Visual Studio 'da CMake 'i kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'Da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio).
 

@@ -6,18 +6,16 @@ ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 58c4395e1569f6ca444a8b1fdcd2b8906d3fdb75
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 348a6ad1bde58c17b2bbb1ef4868fcfa6835ef9f
+ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984070"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76892174"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac için Visual Studio kaldırılıyor
 
 İlgili bölüme giderek Mac için Visual Studio her bileşeni tek tek kaldırmak için bu Kılavuzu kullanabilirsiniz veya [kaldırma betiği](#uninstall-script) bölümünde sunulan betikleri kullanarak her şeyi kaldırabilirsiniz.
-
-Makinenizde daha önce Xamarin Studio yüklüyse, aşağıdaki adımlara ek olarak [Xamarin 'in kaldırma](/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac) kılavuzundaki yönergeleri de izlemeniz gerekebilir.
 
 > [!NOTE]
 > Bu bilgiler, yalnızca makinenizden Mac için Visual Studio 2019 veya 2017 ' i kaldırır. Visual Studio Code kaldırmak için, Ayrıntılar için [Bu soruna](https://github.com/Microsoft/vscode/issues/52151) bakın.

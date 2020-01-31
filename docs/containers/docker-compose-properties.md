@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: c528d1ca2d767b914bba2fd554699985c37d6ba1
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 226078127d2fe61675a592bbafa06d732afc7c49
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916927"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826464"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -109,6 +109,20 @@ Yukarıdaki örnekte olduğu gibi, değerlerin etrafında çift tırnak işareti
 |com. Microsoft. VisualStudio. debugayıklanan. killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklanan programı durdurmak için kullanılır (gerektiğinde).|
 |com. Microsoft. VisualStudio. debugayıklanan. program|Hata ayıklama başlatılırken program başlatıldı. .NET Core uygulamaları için bu ayar genellikle **DotNet**' dir.|
 |com. Microsoft. VisualStudio. debugayıklanan. WorkingDirectory|Hata ayıklama başlatılırken başlangıç dizini olarak kullanılan dizin. Bu ayar genellikle Linux kapsayıcıları için */App* veya Windows kapsayıcıları için *c:\app* ' dir.|
+
+## <a name="customize-the-app-startup-process"></a>Uygulama başlatma işlemini özelleştirme
+
+`entrypoint` ayarını kullanarak uygulamanızı başlatmadan önce bir komut veya özel betik çalıştırabilir ve yapılandırmaya bağımlı hale getirebilirsiniz. Örneğin, bir sertifikayı yalnızca `update-ca-certificates`çalıştırarak **hata ayıklama** modunda ayarlamanız gerekiyorsa, ancak **yayın** modunda, aşağıdaki kodu yalnızca *Docker-Compose. vs. Debug. yml*içine ekleyebilirsiniz:
+
+```yml
+services:
+  webapplication1:
+    entrypoint: "sh -c 'update-ca-certificates && tail -f /dev/null'"
+    labels:
+      ...
+```
+
+*Docker-Compose. vs. Release. yıml* veya *Docker-Compose. vs. Debug. yıml* ' yi atlarsanız, Visual Studio varsayılan ayarlara göre bir tane oluşturur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

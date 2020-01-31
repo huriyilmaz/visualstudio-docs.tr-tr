@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d40e437763ba3eb75daa80a3a1bbf55ba9d896c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 74ccc29417cdee7a9f93c39509c0f7d06a5c72ff
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574463"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826477"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>Nasıl yapılır: MSBuild proje SDK 'larını kullanma
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 15,0 "proje SDK" kavramını ortaya sunmuştur ve bu özellik ve hedeflerin içeri aktarılmasını gerektiren yazılım geliştirme setleri kullanımını basitleştirir.
+MSBuild 15,0, özellik ve hedeflerin içeri aktarılmasını gerektiren yazılım geliştirme setleri kullanımını kolaylaştıran "proje SDK" kavramını sunmuştur.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -28,7 +28,7 @@ ms.locfileid: "75574463"
 </Project>
 ```
 
-Projenin değerlendirmesi sırasında, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projenizin üst ve alt kısmına örtük içeri aktarmalar ekler:
+Proje değerlendirmesi sırasında MSBuild, proje dosyasının en üstünde ve altında örtük içeri aktarmalar ekler:
 
 ```xml
 <Project>
@@ -46,9 +46,9 @@ Projenin değerlendirmesi sırasında, [!INCLUDE[vstecmsbuild](../extensibility/
 
 ## <a name="reference-a-project-sdk"></a>Proje SDK 'Sı başvurusu
 
- Proje SDK 'sına başvurmak için üç yol vardır:
+Proje SDK 'sına başvurmak için üç yol vardır:
 
-1. `<Project/>` öğesindeki `Sdk` özniteliğini kullanın:
+- `<Project/>` öğesindeki `Sdk` özniteliğini kullanın:
 
     ```xml
     <Project Sdk="My.Custom.Sdk">
@@ -56,9 +56,9 @@ Projenin değerlendirmesi sırasında, [!INCLUDE[vstecmsbuild](../extensibility/
     </Project>
     ```
 
-    Bir örtük içeri aktarma, yukarıda açıklandığı gibi projenin üst ve alt kısmına eklenir.
+    Daha önce anlatıldığı gibi projenin üst ve alt kısmına örtük bir içeri aktarma eklenir.
     
-    SDK 'nın belirli bir sürümünü belirtmek için onu `Sdk` özniteliğine ekleyebilirsiniz:
+    SDK 'nın belirli bir sürümünü belirtmek için, `Sdk` özniteliğine ekleyin:
 
     ```xml
     <Project Sdk="My.Custom.Sdk/1.2.3">
@@ -69,7 +69,7 @@ Projenin değerlendirmesi sırasında, [!INCLUDE[vstecmsbuild](../extensibility/
     > [!NOTE]
     > Bu, şu anda Mac için Visual Studio bir proje SDK 'sına başvurmak için desteklenen bir yoldur.
 
-2. En üst düzey `<Sdk/>` öğesini kullanın:
+- En üst düzey `<Sdk/>` öğesini kullanın:
 
     ```xml
     <Project>
@@ -78,9 +78,11 @@ Projenin değerlendirmesi sırasında, [!INCLUDE[vstecmsbuild](../extensibility/
     </Project>
    ```
 
-   Bir örtük içeri aktarma, yukarıda açıklandığı gibi projenin üst ve alt kısmına eklenir.  `Version` özniteliği gerekli değildir.
+   Daha önce anlatıldığı gibi projenin üst ve alt kısmına örtük bir içeri aktarma eklenir.
+   
+   `Version` özniteliği gerekli değildir.
 
-3. `<Import/>` öğesini projenizdeki herhangi bir yerde kullanın:
+- `<Import/>` öğesini projenizdeki herhangi bir yerde kullanın:
 
     ```xml
     <Project>
@@ -95,19 +97,23 @@ Projenin değerlendirmesi sırasında, [!INCLUDE[vstecmsbuild](../extensibility/
 
    İçeri aktarmaların projenize açıkça dahil edilmesi, sipariş üzerinde tam denetim sağlar.
 
-   `<Import/>` öğesi kullanılırken, isteğe bağlı bir `Version` özniteliği de belirtebilirsiniz.  Örneğin, `<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />`belirtebilirsiniz.
+   `<Import/>` öğesi kullanılırken, isteğe bağlı bir `Version` özniteliği de belirtebilirsiniz. Örneğin, `<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />`belirtebilirsiniz.
 
 ## <a name="how-project-sdks-are-resolved"></a>Proje SDK 'Ları nasıl çözümlenir
 
-İçeri aktarma değerlendirilirken, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] belirttiğiniz ada ve sürüme göre proje SDK 'sının yolunu dinamik olarak çözer.  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Ayrıca, makinenizde proje SDK 'larını içeren eklentiler olan kayıtlı SDK çözümleyicilerine ait bir liste de vardır.  Bu eklentiler şunları içerir:
+İçeri aktarma değerlendirilirken, MSBuild, belirtilen adı ve sürümü temel alarak proje SDK 'sının yolunu dinamik olarak çözer.  MSBuild Ayrıca, makinenizde proje SDK 'larını belirleyen eklentiler olan kayıtlı SDK çözümleyicilerine sahiptir. Bu eklentiler şunları içerir:
 
-1. Belirttiğiniz SDK 'nın KIMLIĞI ve sürümüyle eşleşen NuGet paketleri için yapılandırılmış paket akışlarınızı sorgulayan bir NuGet tabanlı çözümleyici.<br/>
-   Bu çözümleyici yalnızca isteğe bağlı bir sürüm belirttiyseniz etkindir ve herhangi bir özel proje SDK 'Sı için kullanılabilir.
-2. .NET CLı ile yüklenen SDK 'Ları çözen bir .NET CLı Çözümleyicisi.<br/>
+- Belirttiğiniz SDK 'nın KIMLIĞI ve sürümüyle eşleşen NuGet paketleri için yapılandırılmış paket akışlarınızı sorgulayan bir NuGet tabanlı çözümleyici.
+
+   Bu çözümleyici yalnızca isteğe bağlı bir sürüm belirttiyseniz etkindir. Bu, herhangi bir özel proje SDK 'Sı için kullanılabilir.
+   
+- [.Net CLI](/dotnet/core/tools/)Ile yüklenen SDK 'ları çözen BIR .net CLI Çözümleyicisi.
+
    Bu çözümleyici, ürünün parçası olan `Microsoft.NET.Sdk` ve `Microsoft.NET.Sdk.Web` gibi proje SDK 'larını bulur.
-3. MSBuild ile yüklenen SDK 'Ları çözen varsayılan çözümleyici.
+   
+- MSBuild ile yüklenen SDK 'Ları çözen varsayılan çözümleyici.
 
-NuGet tabanlı SDK Çözümleyicisi, [Global. JSON](/dotnet/core/tools/global-json) ' da her bir proje yerine bir yerde proje SDK sürümünü denetlemenize olanak sağlayan bir sürüm belirtmeyi destekler:
+NuGet tabanlı SDK çözümleyici, [genel. JSON](/dotnet/core/tools/global-json) dosyasındaki bir sürümü belirtmeyi destekler, bu da proje SDK sürümünü her bir proje yerine tek bir yerde denetlemenizi sağlar:
 
 ```json
 {
@@ -118,7 +124,7 @@ NuGet tabanlı SDK Çözümleyicisi, [Global. JSON](/dotnet/core/tools/global-js
 }
 ```
 
-Bir derleme sırasında her bir proje SDK 'sının yalnızca bir sürümü kullanılabilir.  Aynı proje SDK 'sının iki farklı sürümüne başvuruyorsam, MSBuild bir uyarı yayacaktır.  *Global. JSON*uygulamanızda bir sürüm belirtilmişse, projelerinizde bir sürüm **belirtmemelidir** .
+Bir derleme sırasında her bir proje SDK 'sının yalnızca bir sürümü kullanılabilir. Aynı proje SDK 'sının iki farklı sürümüne başvurdıysanız, MSBuild bir uyarı yayar. *Global. JSON* dosyasında bir sürüm belirtilmişse projelerinizde bir sürüm **belirtmemelidir** .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

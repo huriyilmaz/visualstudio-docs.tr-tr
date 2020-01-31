@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/24/2019
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 8785d4d4253fa3217341c8200a94dab923ae4a5f
-ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
+ms.openlocfilehash: 4ebec96f488a480ccd9b96387f2656aadd6ba2f9
+ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74797375"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76892187"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -33,7 +33,7 @@ Abonelik avantajlarına erişebilmeleri için yeni bir kullanıcıya bir Visual 
    > [!div class="mx-imgBorder"]
    > indirmelere erişim ![](media/access-to-downloads.png)
 
-       If you'd like to add your own reference notes to the subscription, you can do so in the **Add reference** section.
+    Kendi başvuru notlarınızı aboneliğe eklemek istiyorsanız, **Başvuru Ekle** bölümünde bunu yapabilirsiniz.
    > [!div class="mx-imgBorder"]
    > ![her aboneliğe kendi başvuru notlarınızı ekleyin](media/add-subscriber-reference-notes.png)
 

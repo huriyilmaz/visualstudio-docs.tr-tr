@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f79ece781db19f2483ef1dd6cb0a81ff7cf78e06
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/29/2020
 ms.locfileid: "64836306"
 ---
 # <a name="navigating-through-code-with-the-debugger"></a>Hata Ayıklayıcısı ile Kodlarda gezinme
@@ -33,8 +33,8 @@ ms.locfileid: "64836306"
 
 Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi edinin ve uygulamanızda sorunları bulmayı ve çözmeyi daha hızlı ve kolay hale getirir. Hata Ayıklayıcıdaki kodda gezinirken [uygulamanızın durumunu inceleyebilir](https://msdn.microsoft.com/library/mt243867.aspx#BKMK_Inspect_Variables) veya yürütme akışı hakkında daha fazla bilgi edinebilirsiniz.  
   
-## <a name="start-debugging"></a>Hata ayıklamayı Başlat  
- Genellikle, **F5** **(hata ayıklama  / ** hata**ayıklamayı Başlat**) kullanarak bir hata ayıklama oturumu başlatın. Bu komut, uygulamanızı hata ayıklayıcı ekli olarak başlatır.  
+## <a name="start-debugging"></a>Hata Ayıklamayı Başlat  
+ Genellikle, **F5** **(hata ayıklama / ** hata **ayıklamayı Başlat**) kullanarak bir hata ayıklama oturumu başlatın. Bu komut, uygulamanızı hata ayıklayıcı ekli olarak başlatır.  
   
  Yeşil ok hata ayıklayıcıyı da başlatır ( **F5**ile aynı).  
   
@@ -48,17 +48,17 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
   
  Hata ayıklama sırasında, **F5**, **F11** gibi komutlar arasında geçiş yapabilir ve bu konuda açıklanan diğer özellikleri (kesme noktaları gibi) kullanarak bakmak istediğiniz koda hızlıca ulaşabilirsiniz.  
   
- Yerel öğeler penceresinde değişken değerlerini görüntüleme veya izleme penceresi ifadeleri değerlendirme gibi çoğu hata ayıklayıcı özellikleri yalnızca hata ayıklayıcı duraklatıldığında ( *kesme modu*olarak da bilinir) kullanılabilir. Hata ayıklayıcı duraklatıldığında, işlevler, değişkenler ve nesneler bellekte kaldığı sürece uygulamanızın durumu askıya alınır. Kesme modundayken, ihlalleri veya hataları aramak için öğelerin konumlarını ve durumlarını inceleyebilirsiniz. Bazı proje türleri için kesme modundayken uygulamada ayarlamalar da yapabilirsiniz.  
+ Yerel öğeler penceresinde değişken değerlerini görüntüleme veya izleme penceresi ifadeleri değerlendirme gibi çoğu hata ayıklayıcı özellikleri yalnızca hata ayıklayıcı duraklatıldığında ( *kesme modu*olarak da bilinir) kullanılabilir. Hata ayıklayıcı duraklatıldığında, işlevler, değişkenler ve nesneler bellekte kaldığı sürece uygulamanızın durumu askıya alınır. Kesme modundayken, ihlalleri veya hataları aramak için öğelerin konumlarını ve durumlarını inceleyebilirsiniz. Bazı proje türleri için kesme modundayken uygulamada ayarlamalar yapabilirsiniz.  
   
 ## <a name="BKMK_Step_into__over__or_out_of_the_code"></a>Koda adımla, satıra göre satır  
- Hata ayıklarken her kod satırında (her bildiri) durdurmak için, **F11** klavye kısayolunu kullanın (veya **hata ayıklama**  / **adımla** menüdeki).  
+ Hata ayıklarken her kod satırında (her bildiri) durdurmak için, **F11** klavye kısayolunu kullanın (veya **hata ayıklama** / **adımla** menüdeki).  
   
 > [!TIP]
 > Her kod satırını yürüttüğünüzde, değerlerini görmek için değişkenlerin üzerine geldiğinizde veya [Yereller](../debugger/autos-and-locals-windows.md) ve [İzle](../debugger/autos-and-locals-windows.md) pencerelerini kullanarak değerlerinin değiştirilmesini izleyebilirsiniz.  
   
  **Adımla**ilgili davranış hakkında bazı ayrıntılar aşağıda verilmiştir:  
   
-- İç içe geçmiş işlev çağrısında, en derin iç içe geçmiş **işleve adımlayın** . @No__t_1 gibi bir çağrıda **Step into** üzerinde kullanırsanız, hata ayıklayıcı adımları işlev `Func2`.  
+- Bir iç içe geçmiş işlev çağrısında **içine adımla** en derin yuvalanmış işlevi adımlar. `Func1(Func2())`gibi bir çağrıda **Step into** üzerinde kullanırsanız, hata ayıklayıcı adımları işlev `Func2`.  
   
 - Hata ayıklayıcı, fiziksel satırlar yerine kod deyimlerine göre adımları aslında. Örneğin, bir `if` yan tümcesi tek bir satırda yazılabilir:  
   
@@ -83,13 +83,13 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
   
 |Klavye komutu|Menü komutu|Açıklama|  
 |----------------------|------------------|-----------------|  
-|**F10**|**Adımla**|Geçerli satır bir işlev çağrısı içeriyorsa, **üzerinde adımla** kodu çalıştırır ve ardından çağrılan işlev çağrıldıktan sonra ilk kod satırında yürütmeyi askıya alır.|  
-|**SHIFT + F11**|**Dışarı adımla**|**Step Out** , kodu çalıştırmaya devam eder ve geçerli işlev döndürüldüğünde yürütmeyi askıya alır (hata ayıklayıcı geçerli işlevden atlar).|  
+|**F10**|**Üzerinden adımla**|Geçerli satır bir işlev çağrısı içeriyorsa, **üzerinde adımla** kodu çalıştırır ve ardından çağrılan işlev çağrıldıktan sonra ilk kod satırında yürütmeyi askıya alır.|  
+|**Shift+F11**|**Dışına adımla**|**Step Out** , kodu çalıştırmaya devam eder ve geçerli işlev döndürüldüğünde yürütmeyi askıya alır (hata ayıklayıcı geçerli işlevden atlar).|  
   
 > [!TIP]
-> Uygulamanızda giriş noktasını bulmanız gerekiyorsa **F10** veya **F11**ile başlayın. Bu komutlar genellikle uygulama eyaletinizi incelerken veya kendi yürütme akışı hakkında daha fazla bilgi bulmaya çalışırken yararlıdır.  
+> Giriş noktası uygulamanızda bulmanız gerekiyorsa, başlayan **F10** veya **F11**. Bu komutlar genellikle uygulama eyaletinizi incelerken veya kendi yürütme akışı hakkında daha fazla bilgi bulmaya çalışırken yararlıdır.  
   
-## <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a>Belirli bir konuma veya işleve Çalıştır  
+## <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Belirli bir konuma veya işleve kadar çalıştırma  
  Genellikle, hata ayıklama kodu için tercih edilen yöntem, bu yöntemler tam olarak hangi kodu incelemek istediğinizi bildiğiniz veya en azından hata ayıklamayı başlatmak istediğinizi bildiğiniz durumlarda faydalıdır.  
   
 - **Koddaki kesme noktalarını ayarla**  
@@ -98,7 +98,7 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
   
      ![Kesme noktası ayarlama](../debugger/media/dbg-basics-setbreakpoint.png "DBG_Basics_SetBreakpoint")  
   
-     Visual Studio 'daki kesme noktaları, koşullu kesme noktaları ve izleme noktaları gibi zengin bir ek işlevsellik kümesi sağlar. Bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md).  
+     Visual Studio'daki kesme noktaları, koşullu kesme noktaları ve izleme noktaları gibi ek işlevler zengin bir özellik kümesi sağlar. Bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md).  
   
 - **İmleç konumuna Çalıştır**  
   
@@ -112,7 +112,7 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
   
 - **Çağrı yığınındaki bir işleve Çalıştır**  
   
-     **Çağrı yığını** penceresinde (hata ayıklarken kullanılabilir), işlevi seçin, sağ tıklayın ve **imlece Çalıştır**' ı seçin. Çağrı yığınını görsel olarak izlemek için bkz. [hata ayıklama sırasında çağrı yığınında eşleme yöntemleri](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
+     **Çağrı yığını** penceresinde (hata ayıklarken kullanılabilir), işlevi seçin, sağ tıklayın ve **imlece Çalıştır**' ı seçin. Çağrı yığınını görsel olarak izlemek için bkz: [hata ayıklarken çağrı yığınında yöntemler harita](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
 - **Ada göre belirtilen bir işleve Çalıştır**  
   
@@ -126,7 +126,7 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
   
      ![Kesme Noktaları seç iletişim kutusu](../debugger/media/dbg-execution-overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
   
-## <a name="BKMK_Set_the_next_statement_to_execute"></a>Yürütme akışını değiştirmek için işaretçiyi taşıyın  
+## <a name="BKMK_Set_the_next_statement_to_execute"></a> Yürütme akışı değiştirmek için işaretçiyi taşıyın  
  Hata ayıklayıcı duraklatıldığında, çalıştırılacak bir sonraki kod ifadesini ayarlamak için yönerge işaretçisini taşıyabilirsiniz. Kaynak veya ayrıştırma penceresinin kenar boşluğundaki sarı bir ok, yürütülecek sonraki deyimin konumunu işaret ediyor. Bu ok ucunu taşıyarak kodun bir bölümünü atlayabilir veya daha önce yürütülen bir satıra geri dönebilirsiniz. Bunu, bilinen bir hata içeren kodun bir bölümünü atlama gibi durumlar için kullanabilirsiniz.  
   
  ![Example2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")  
@@ -144,29 +144,29 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
 > 
 > - Eski ve yeni yürütme noktaları arasındaki yönergeler yürütülmez.  
 >   - Yürütme noktasını geriye taşırsanız, araya giren yönergeler geri alınamaz.  
->   - Sonraki deyimin başka bir işleve veya kapsama taşınması genellikle çağrı yığını bozulmasıyla sonuçlanır ve bir çalışma zamanı hatasına veya özel duruma neden olur. Sonraki ifadeyi başka bir kapsama taşımaya çalışırsanız, hata ayıklayıcı uyarı içeren bir iletişim kutusu açar ve işlemi iptal etmek için size şans verir. Visual Basic, sonraki ifadeyi başka bir kapsam veya işleve taşıyamazsınız.  
->   - Yerel C++olarak, çalışma zamanı denetimleri etkinse, bir sonraki deyimin ayarlanması, yürütme yöntemin sonuna ulaştığında bir özel durumun oluşturulmasına neden olabilir.  
->   - Düzenle ve devam et etkin olduğunda, Düzenle ve devam et ' in hemen yeniden eşlenemez olan düzenlemeler yaptıysanız **sonraki Ifadeyi ayarla** başarısız olur. Bu durum, örneğin bir catch bloğu içinde kod düzenlediyseniz olabilir. Bu durumda, işlemin desteklenmediğini bildiren bir hata iletisi görürsünüz.  
+>   - Sonraki deyimi başka bir işleve ya da kapsama taşınması genelde bir çalışma zamanı hatası ya da özel durum neden Çağrı Yığını Bozulması ile sonuçlanır. Sonraki deyimi başka bir kapsama geçmeden çalışırsanız, hata ayıklayıcı bir uyarı ile bir iletişim kutusu açılır ve işlemi iptal etmek için bir şans verir. Visual Basic'te sonraki deyimi başka bir kapsam ya da işleve taşıyamazsınız.  
+>   - Çalışma zamanı kontrolleriniz etkinse, yerel C++'da, sonraki deyimi ayarlamak bir özel yürütme yöntemin sonuna ulaştığında durum neden olabilir.  
+>   - Düzenle ve devam et etkinken, **sonraki deyimi Ayarla** , Düzenle ve devam et düzenlemeler yaptıysanız başarısız hemen yeniden eşleyemeyeceği. Bir catch bloğu içinde kod düzenlediyseniz, örneğin, ortaya çıkabilir. Bu durumda, işlemin desteklenmediğini bildiren bir hata iletisi görürsünüz.  
 > 
 > [!NOTE]
 > Yönetilen kodda, sonraki ifadeyi aşağıdaki koşullarda taşıyamazsınız:  
 > 
-> - Sonraki ifade, geçerli deyimden farklı bir yöntem içinde.  
+> - Sonraki deyimi başka bir yöntem geçerli deyimden bileşenidir.  
 >   - Hata ayıklama, tam zamanında hata ayıklama kullanılarak başlatıldı.  
 >   - Bir çağrı yığını geriye doğru izleme işlemi devam ediyor.  
->   - System. StackOverflowException veya System. Threading. Threadadbortexception özel durumu oluşturuldu.  
+>   - Bir System.StackOverflowException ya da System.Threading.ThreadAbortException özel durumu oluşturuldu.  
   
  Uygulamanız etkin olarak çalışırken sonraki ifadeyi ayarlayamazsınız. Sonraki ifadeyi ayarlamak için, hata ayıklayıcı kesme modunda olmalıdır.  
   
 ## <a name="step-into-non-user-code"></a>Kullanıcı dışı koda adımla  
  Varsayılan olarak hata ayıklayıcı, hata ayıklama sırasında yalnızca uygulama kodunuzu göstermeye çalışır, bu, *yalnızca kendi kodum*adlı bir hata ayıklayıcı ayarı tarafından belirlenir. (Bunun farklı proje türleri ve dilleri için nasıl çalıştığını ve davranışı nasıl özelleştirebileceğinizi görmek için bkz. [yalnızca kendi kodum](../debugger/just-my-code.md) .) Ancak bazen hata ayıklarken, çerçeve koduna, üçüncü taraf kitaplık koduna veya işletim sistemine (sistem çağrıları) yapılan çağrılara bakmak isteyebilirsiniz.  
   
- **Hata ayıklama**  /  **Araçlar**  / **Seçenekler** ' e giderek Yalnızca kendi kodum devre dışı bırakabilirsiniz ve **Etkinleştir yalnızca kendi kodum** onay kutusunu temizleyebilirsiniz.  
+ **Hata ayıklama** / **Araçlar** / **Seçenekler** ' e giderek Yalnızca kendi kodum devre dışı bırakabilirsiniz ve **Etkinleştir yalnızca kendi kodum** onay kutusunu temizleyebilirsiniz.  
   
  Yalnızca kendi kodum devre dışı bırakıldığında, hata ayıklayıcı Windows dışı koda ve Kullanıcı olmayan koda adım hata ayıklayıcı penceresinde görünür.  
   
 > [!NOTE]
-> Yalnızca kendi kodum, cihaz projeleri için desteklenmez.  
+> Yalnızca benim kodum cihaz projeleri için desteklenmiyor.  
   
  **Sistem çağrılarına adımla**  
   
@@ -184,5 +184,5 @@ Hata ayıklayıcıda kod gezinmek için komutlar ve kısayollar hakkında bilgi 
   
 3. Bağlam menüsünde **sembolleri yükle** ' yi seçin.  
   
-## <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a>Yönetilen koddaki Özellikler ve işleçlere adımla  
- Varsayılan olarak yönetilen koddaki Özellikler ve işleçler üzerinde hata ayıklayıcı adımları. Çoğu durumda bu, daha iyi bir hata ayıklama deneyimi sağlar. Özellikler veya işleçlere adımlamayı etkinleştirmek için **hata ayıkla**  / **Seçenekler**' i seçin. **Hata ayıklama**  / **genel** sayfasında, **Özellikler ve Işleçler üzerinde adımla (yalnızca yönetilen)** onay kutusunu temizleyin.
+## <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Yönetilen kod içindeki özellikler ve işleçlerin içine adımla  
+ Varsayılan olarak hata ayıklama adımlarında yönetilen kod içindeki özellikler ve işleçlerin üzerinden. Çoğu durumda, bunu bir daha iyi hata ayıklama deneyimi sunar. Özellikleri veya işleçleri adımlamak için seçin **hata ayıklama** / **seçenekleri**. **Hata ayıklama** / **genel** sayfasında, **Özellikler ve Işleçler üzerinde adımla (yalnızca yönetilen)** onay kutusunu temizleyin.

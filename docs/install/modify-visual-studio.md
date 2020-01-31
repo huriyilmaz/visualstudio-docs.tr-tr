@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 07aa8afbb4e4ca3970a0f082ec6649a90bfaf2ed
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 9b576bc5fa3168ea92784a79c15ee00ef492352d
+ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76112704"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76892122"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>İş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme
 
@@ -144,6 +144,9 @@ Sadece biz bunu daha da kolaylaştırdık gerçekleştirmek istediğiniz görevl
 ## <a name="modify-individual-components"></a>Tek tek bileşenler değiştirme
 
 Visual Studio yüklemenizi özelleştirmek için iş yüklerini kullanmak istemiyorsanız, Visual Studio Yükleyicisi **bireysel bileşenler** sekmesini seçin, istediğiniz bileşenleri seçin ve ardından istemleri izleyin.
+
+>[!TIP]
+> SQL Server Veri Araçları (SSDT) bileşeni hakkında daha fazla bilgi için bkz. [Visual Studio IÇIN SSDT indirme ve yükleme](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15).
 
 ## <a name="modify-language-packs"></a>Dil paketlerini değiştirme
 
