@@ -52,6 +52,8 @@
       items:
         - name: Hata ayıklayıcı pencerelerindeki verileri inceleme
           href: debugger-windows.md
+        - name: Özel durumları inceleme
+          href: exception-helper.md
         - name: Değişkenleri inceleme
           href: autos-and-locals-windows.md
         - name: Değişkenleri izleme

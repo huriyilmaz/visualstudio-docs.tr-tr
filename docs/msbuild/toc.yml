@@ -8,7 +8,8 @@
       href: what-s-new-in-msbuild-15-0.md
     - name: MSBuild Kavramları
       items:
-        - name: MSBuild Kavramları - Genel Bakış
+        - name: Genel Bakış
+          displayName: msbuild concepts
           href: msbuild-concepts.md
         - name: Özellikler
           items:
@@ -134,15 +135,16 @@
               href: resolving-assemblies-at-design-time.md
             - name: Hedefler ve Görev yapılandırması
               items:
-                - name: Hedefleri ve Görevleri Yapılandırma
+                - name: Genel Bakış
                   href: configuring-targets-and-tasks.md
                 - name: Hedefleri ve Görevleri Yapılandırma
                   href: how-to-configure-targets-and-tasks.md
-            - name: .NET Framework Hedefleme Hatalarının Sorunlarını Giderme
+            - name: .NET Framework Hedefle Hatalarıyla İlgili Sorunları Giderme
               href: troubleshooting-dotnet-framework-targeting-errors.md
         - name: Dosya İzleme
           items:
-            - name: Dosya İzleme - Genel Bakış
+            - name: Genel Bakış
+              displayName: file tracking
               href: file-tracking.md
             - name: EndTrackingContext
               href: endtrackingcontext.md
@@ -168,7 +170,8 @@
           href: msbuild-best-practices.md
     - name: Günlüğe Kaydetme
       items:
-        - name: MSBuild'de Günlük Kaydı - Genel Bakış
+        - name: Genel Bakış
+          displayName: logging
           href: logging-in-msbuild.md
         - name: MSBuild ile Yapı Günlükleri Alma
           href: obtaining-build-logs-with-msbuild.md
@@ -186,63 +189,67 @@
       href: walkthrough-creating-an-msbuild-project-file-from-scratch.md
     - name: MSBuild Başvurusu
       items:
-        - name: MSBuild Başvurusu - Genel Bakış
+        - name: Genel Bakış
+          displayName: msbuild reference
           href: msbuild-reference.md
         - name: MSBuild Proje Dosyası Şema Başvurusu
           items:
-            - name: MSBuild Proje Dosyası Şema Başvurusu - Genel Bakış
+            - name: Genel Bakış
+              displayName: Project File Schema Reference
               href: msbuild-project-file-schema-reference.md
-            - name: Öğe Seç (MSBuild)
+            - name: Choose Öğesi
               href: choose-element-msbuild.md
-            - name: İçeri Aktarma Öğesi (MSBuild)
+            - name: Import Öğesi
               href: import-element-msbuild.md
             - name: ImportGroup Öğesi
               href: importgroup-element.md
-            - name: Öğe Unsuru (MSBuild)
+            - name: Item Öğesi
               href: item-element-msbuild.md
-            - name: ItemDefinitionGroup Öğesi (MSBuild)
+            - name: ItemDefinitionGroup Öğesi
               href: itemdefinitiongroup-element-msbuild.md
-            - name: ItemGroup Öğesi (MSBuild)
+            - name: ItemGroup Öğesi
               href: itemgroup-element-msbuild.md
-            - name: ItemMetadata Öğesi (MSBuild)
+            - name: ItemMetadata Öğesi
               href: itemmetadata-element-msbuild.md
-            - name: OnError Öğesi (MSBuild)
+            - name: OnError Öğesi
               href: onerror-element-msbuild.md
-            - name: Otherwise Öğesi (MSBuild)
+            - name: Otherwise Öğesi
               href: otherwise-element-msbuild.md
-            - name: Çıktı Öğesi (MSBuild)
+            - name: Output Öğesi
               href: output-element-msbuild.md
             - name: Parameter Öğesi
               href: parameter-element.md
             - name: ParameterGroup Öğesi
               href: parametergroup-element.md
-            - name: Proje Öğesi (MSBuild)
+            - name: Project Öğesi
               href: project-element-msbuild.md
-            - name: ProjectExtensions Öğesi (MSBuild)
+            - name: ProjectExtensions Öğesi
               href: projectextensions-element-msbuild.md
-            - name: Özellik Öğesi (MSBuild)
+            - name: Property Öğesi
               href: property-element-msbuild.md
-            - name: PropertyGroup Öğesi (MSBuild)
+            - name: PropertyGroup Öğesi
               href: propertygroup-element-msbuild.md
-            - name: Sdk Öğesi (MSBuild)
+            - name: Sdk Öğesi
               href: sdk-element-msbuild.md
-            - name: Hedef Öğe (MSBuild)
+            - name: Target Öğesi
               href: target-element-msbuild.md
-            - name: Görev Öğesi (MSBuild)
+            - name: Task Öğesi
               href: task-element-msbuild.md
-            - name: TaskBody Öğesi (MSBuild)
+            - name: TaskBody Öğesi
               href: taskbody-element-msbuild.md
-            - name: UsingTask Öğesi (MSBuild)
+            - name: UsingTask Öğesi
               href: usingtask-element-msbuild.md
-            - name: When Öğesi (MSBuild)
+            - name: When Öğesi
               href: when-element-msbuild.md
         - name: Görev Başvurusu
           items:
-            - name: MSBuild Görev Başvurusu - Genel Bakış
+            - name: Genel Bakış
+              displayName: Task Reference
               href: msbuild-task-reference.md
-            - name: Visual C++'ye Özgü Görevler
+            - name: Visual C++'a Özgü Görevler
               items:
-                - name: Visual C++'ye Özgü MSBuild Görevleri - Genel Bakış
+                - name: Genel Bakış
+                  displayName: C++ tasks
                   href: msbuild-tasks-specific-to-visual-cpp.md
                 - name: BscMake Görevi
                   href: bscmake-task.md
@@ -442,13 +449,15 @@
           href: msbuild-response-files.md
         - name: WPF Başvurusu
           items:
-            - name: WPF MSBuild Başvurusu - Genel Bakış
+            - name: Genel Bakış
+              displayName: WPF MSBuild Reference
               href: wpf-msbuild-reference.md
             - name: WPF .Targets Dosyaları
               href: wpf-dot-targets-files.md
             - name: WPF Görev Başvurusu
               items:
-                - name: WPF MSBuild Görev Başvurusu - Genel Bakış
+                - name: Genel Bakış
+                  displayName: WPF MSBuild Task Reference
                   href: wpf-msbuild-task-reference.md
                 - name: FileClassifier Görevi
                   href: fileclassifier-task.md
@@ -470,11 +479,12 @@
                   href: updatemanifestforbrowserapplication-task.md
         - name: Kaçış İçin Özel Karakterler
           href: special-characters-to-escape.md
-    - name: MSBuild’ı Programlı Olarak Kullanma
+    - name: MSBuild’ı Programlama Yoluyla Kullanma
       items:
-        - name: MSBuild’ı Programlı Olarak Kullanma
+        - name: Genel Bakış
+          displayName: Use MSBuild Programmatically
           href: msbuild-api.md
-        - name: MSBuild 15’e güncelleştirme
+        - name: MSBuild 15’e Güncelleştirme
           href: updating-an-existing-application.md
     - name: MSBuild Sözlüğü
       href: msbuild-glossary.md
