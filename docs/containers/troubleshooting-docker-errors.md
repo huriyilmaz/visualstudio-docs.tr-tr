@@ -1,6 +1,6 @@
 ---
 title: Windows Docker istemcisi hatalarında sorun giderme | Microsoft Docs
-description: Visual Studio oluşturma ve Visual Studio kullanarak web uygulamaları Windows üzerindeki Docker dağıtma kullanırken karşılaştığınız sorunları giderin.
+description: Visual Studio kullanarak Web uygulamaları oluşturmak ve Windows üzerinde Docker 'a dağıtmak için Visual Studio kullanırken karşılaştığınız sorunları giderin.
 ms.technology: vs-azure
 author: ghogen
 manager: jillfra
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.workload: multiple
 ms.date: 10/13/2017
 ms.author: ghogen
-ms.openlocfilehash: ca43098740a1e8e940f27eae8d2c4d405c23230b
-ms.sourcegitcommit: 16d8ffc624adb716753412a22d586eae68a29ba2
+ms.openlocfilehash: ce7645b8b4f71cf94d7320a0072d15b2b8083dec
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412273"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76923027"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 
-Visual Studio kapsayıcı araçları ile çalışırken, oluşturma veya uygulamanızı hata ayıklama sırasında sorunlarla karşılaşabilirsiniz. Aşağıda bazı ortak adımlar giderirken.
+Visual Studio kapsayıcı araçlarıyla çalışırken, uygulamanızı oluştururken veya hata ayıklarken sorunlarla karşılaşabilirsiniz. Aşağıda bazı ortak adımlar giderirken.
 
 ## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Birim paylaşımı etkin değil. Birim, paylaşım için Docker CE Windows ayarları (yalnızca Linux kapsayıcıları) etkinleştir
 
@@ -35,11 +35,11 @@ Bu sorunu çözmek için:
 ![Paylaşılan sürücüleri](media/troubleshooting-docker-errors/shareddrives.png)
 
 > [!TIP]
-> Visual Studio sürümlerini Visual Studio 2017 sürüm 15.6 daha sonra sor ne zaman **paylaşılan sürücüleri** yapılandırılmamışlardır.
+> **Paylaşılan sürücüler** yapılandırılmadığında visual Studio 2017 sürüm 15,6 ' den sonraki Visual Studio sürümleri istemi.
 
 ### <a name="container-type"></a>Kapsayıcı türü
 
-Docker desteği bir projeye eklerken, bir Windows veya Linux kapsayıcısı seçin. Docker konağı aynı kapsayıcı türü çalıştırmalıdır. Çalışan Docker örneğinde kapsayıcı türü değiştirmek için sistem tepsisindeki'nın Docker simgesini sağ tıklatın ve seçin **Windows kapsayıcılarına geç...**  veya **geçiş Linux kapsayıcıları için...** .
+Bir projeye Docker desteği eklerken bir Windows ya da Linux kapsayıcısı seçersiniz. Docker ana bilgisayarı aynı kapsayıcı türünü çalıştırıyor olmalıdır. Çalışan Docker örneğindeki kapsayıcı türünü değiştirmek için, sistem tepsisinin Docker simgesine sağ tıklayın ve **Windows kapsayıcılarına geç...** ' i seçin veya **Linux kapsayıcılarına geç..** ..
 
 ## <a name="unable-to-start-debugging"></a>Hata ayıklama başlatılamıyor
 
@@ -56,30 +56,42 @@ Dan indirilebilir komut dosyası yürütme deneyin [temizleme kapsayıcı konağ
 
 MacOS için Docker'ı kullanırken, klasör /usr/local/share/dotnet/sdk/NuGetFallbackFolder başvuran bir hatayla karşılaşabilir. Docker dosya paylaşımı sekmesine klasörü Ekle
 
-## <a name="docker-users-group"></a>Docker Kullanıcıları grubu
+## <a name="docker-users-group"></a>Docker kullanıcıları grubu
 
-Kapsayıcılar ile çalışırken, Visual Studio şu hatayla karşılaşabilirsiniz:
+Kapsayıcılarla çalışırken Visual Studio 'da aşağıdaki hatayla karşılaşabilirsiniz:
 
 ```
 The current user must be in the 'docker-users' group to use Docker Desktop. 
 Add yourself to the 'docker-users' group and then log out of Windows.
 ```
 
-Docker kapsayıcıları ile çalışmak için izinlere sahip için 'docker-kullanıcılar' grubunun bir üyesi olmanız gerekir.  Kendiniz Windows 10'daki grubuna eklemek için aşağıdaki adımları izleyin:
+Docker kapsayıcılarıyla çalışma izinlerinin olması için ' Docker-Users ' grubunun bir üyesi olmanız gerekir.  Windows 10 ' da gruba eklemek için aşağıdaki adımları izleyin:
 
-1. Başlat menüsünden açmak **Bilgisayar Yönetimi**.
-1. Genişletin **yerel kullanıcılar ve gruplar**ve **grupları**.
-1. Bulma **docker kullanıcılar** grup, sağ tıklatın ve seçin **gruba Ekle**.
-1. Kullanıcı hesabı veya hesapları ekleyin.
-1. Oturumu kapatın ve tekrar bu değişikliklerin etkili olması için yeniden oturum açın.
+1. Başlat menüsünden **Bilgisayar Yönetimi**' ni açın.
+1. **Yerel kullanıcılar ve gruplar**' ı genişletin ve **gruplar**' ı seçin.
+1. **Docker-Users** grubunu bulun, sağ tıklayın ve **gruba ekle**' yi seçin.
+1. Kullanıcı hesabınızı veya hesaplarınızı ekleyin.
+1. Bu değişikliklerin etkili olması için oturumu kapatın ve yeniden oturum açın.
 
-Ayrıca `net localgroup` kullanıcıları belirli gruplara eklemek için yönetici komut isteminde komutu.
+Ayrıca, kullanıcıları belirli gruplara eklemek için yönetici komut isteminde `net localgroup` komutunu da kullanabilirsiniz.
 
 ```cmd
 net localgroup docker-users DOMAIN\username /add
 ```
 
-PowerShell'de kullanın [Ekle LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember) işlevi.
+PowerShell 'de [Add-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember) işlevini kullanın.
+
+## <a name="low-disk-space"></a>Yetersiz disk alanı
+
+Docker, varsayılan olarak, görüntüleri genellikle sistem sürücüsünde, * C:\ProgramData\Docker\* *% ProgramData%/Docker/* klasöründe depolar. Görüntülerin sistem sürücüsünde değerli alan almasını engellemek için, görüntü klasörü konumunu değiştirebilirsiniz.  Görev çubuğundaki Docker simgesinden Docker ayarlarını açın, **Daemon**' ı seçin ve **temel** ' ten **Gelişmiş**' e geçin. Düzen bölmesinde, Docker görüntüleri için istediğiniz konumun değeri ile `graph` özellik ayarını ekleyin:
+
+```json
+    "graph": "D:\\mypath\\images"
+```
+
+![Docker görüntüsü konum ayarının ekran görüntüsü](media/troubleshooting-docker-errors/docker-settings-image-location.png)
+
+Docker 'ı yeniden başlatmak için **Uygula** ' ya tıklayın. Bu adımlar *%ProgramData%\docker\config\daemon.JSON*adresindeki yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
 
 ## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub deposu
 

@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d74cb5b1594c0e4d347e2f8a4e1924cf68d64eed
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3ba3ca41fe1bf675bc4f17e9932525921060aaa9
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114932"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922866"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Yükleme ve bir güvenlik duvarı veya proxy sunucusunun arkasına Visual Studio ve Azure hizmetlerini kullanma
 
@@ -76,6 +76,10 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 | www\.incredibuild.com | (IncrediBuild) C++ ile oyun geliştirme |
 | incredibuildvs2017i.azureedge.net | (IncrediBuild) C++ ile oyun geliştirme |
 | www\.python.org | Python geliştirme (Python) <br /><br />Veri bilimi ve analitik uygulamalar (Python) |
+| developerservices2.apple.com | Xamarin. iOS sağlama |
+| developer.apple.com | Xamarin. iOS sağlama |
+| appstoreconnect.apple.com | Xamarin. iOS sağlama |
+| idmsa.apple.com | Xamarin. iOS sağlama |
 | | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>Visual Studio ve Azure hizmetlerini kullanın

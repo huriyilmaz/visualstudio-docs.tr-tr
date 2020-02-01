@@ -1,19 +1,19 @@
 ---
-title: ASP.NET Core ile Visual Studio kapsayıcı araçları
+title: ASP.NET ile Visual Studio kapsayıcı araçları
 author: ghogen
-description: Visual Studio kapsayıcı araçları ve Docker için Windows kullanmayı öğrenin
+description: Visual Studio kapsayıcı araçları 'nı ve Docker for Windows kullanmayı öğrenin
 ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: c7d09f3a318049e8392f744d946138e59509470a
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: bfe26a663e2c79a040f66daa2ebeecaf89b80a94
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586626"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922985"
 ---
-# <a name="quickstart-docker-in-visual-studio"></a>Hızlı Başlangıç: Visual Studio’da Docker
+# <a name="quickstart-docker-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da Docker
 
 ::: moniker range="vs-2017"
 
@@ -30,5 +30,5 @@ ms.locfileid: "67586626"
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Visual Studio ile kapsayıcı geliştirme](/visualstudio/containers)
-* [Visual Studio geliştirme Docker ile ilgili sorunları giderme](troubleshooting-docker-errors.md)
+* [Docker ile Visual Studio geliştirme sorunlarını giderme](troubleshooting-docker-errors.md)
 * [Visual Studio kapsayıcı araçları GitHub deposu](https://github.com/Microsoft/DockerTools)
