@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 619840f417c922b4019bafffca8d66c9b1c939e2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 85bf50c653d82a7de22d5a81fd81c38db0db1be8
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596872"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76923262"
 ---
 # <a name="build-page-project-designer-c"></a>Derleme Sayfası, Proje Tasarımcısı (C#)
 
@@ -65,6 +65,12 @@ Uygulamanızı uygulamanızdaki tüm kaynak kodu dosyalarında sembol olarak tan
 Çıkış dosyası tarafından hedeflenen işlemciyi belirtir. Her türlü 32 bit Intel uyumlu işlemci için **x86** seçeneğini belirleyin, her 64 bit Intel uyumlu işlemci için **x64** seçeneğini belirleyin, ARM işlemcileri için **ARM** 'yi seçin ya da herhangi bir Işlemcinin kabul EDILEBILIR olduğunu belirtmek için **herhangi bir CPU** seçin. **Tüm CPU** , uygulamanın en geniş donanım yelpazesi üzerinde çalışmasına izin verdiğinden projeler için varsayılan değerdir.
 
 Daha fazla bilgi için bkz. [/PlatformC# (derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option).
+
+**Yapılamaz**
+
+Proje genelinde C# null yapılabilir bağlamı belirtir. Bu UI seçeneği Visual Studio 16,5 ' de sunulmuştur ve yalnızca C# 8,0 veya üzeri sürümlerini kullanan projeler için etkinleştirilmiştir.
+
+Daha fazla bilgi için bkz. [Nullable bağlamları](/dotnet/csharp/nullable-references#nullable-contexts).
 
 **32 bit tercih et**
 
