@@ -38,6 +38,8 @@
 - name: Visual Studio'yu öğrenin
   expanded: true
   items:
+    - name: Program çalıştırma
+      href: run-program.md
     - name: Bir depodan proje açma
       href: ../tutorial-open-project-from-repo.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: Kodu yazma ve düzenleme

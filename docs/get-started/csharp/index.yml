@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Visual Studio öğreticileri |C#
-summary: Visual C# Studio ile uygulamalar oluşturun.
+title: Visual Studio öğreticileri | C#
+summary: Visual Studio ile C# uygulamaları oluşturun.
 metadata:
-  title: C#Visual Studio ile geliştirme
-  description: Visual C# Studio 'yu kullanarak uygulamalar oluşturun.
+  title: Visual Studio ile C# geliştirme
+  description: Visual Studio kullanarak C# uygulamaları oluşturun.
   ms.custom: seodec18
   ms.topic: landing-page
   ms.date: 11/19/2019
@@ -14,34 +14,34 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: b364716f87999272030e48a88af5a06cbff012e4
-  ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+  ms.openlocfilehash: 0e5519756bebafd91b72186e001ca6af7f53c254
+  ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/19/2019
-  ms.locfileid: "74188645"
+  ms.lasthandoff: 02/01/2020
+  ms.locfileid: "76923122"
 landingContent:
-- title: başlarken
+- title: Kullanmaya başlayın
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Visual Studio Yükle
+    - text: Visual Studio'yu yükleme
       url: ../../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Kılavuzlu tura başla
+    - text: Kılavuzlu turu başlat
       url: visual-studio-ide.md
   - linkListType: quickstart
     links:
-    - text: "\"Merhaba Dünya\" konsol uygulaması oluşturma"
+    - text: “Merhaba Dünya” konsol uygulaması oluşturma
       url: ../../ide/quickstart-csharp-console.md
-    - text: "\"Merhaba Dünya\" Web uygulaması oluşturma"
+    - text: “Merhaba Dünya” web uygulaması oluşturma
       url: ../../ide/quickstart-aspnet-core.md
-- title: Uygulama C# oluşturma
+- title: C# uygulamaları oluşturma
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Bir konsol uygulaması oluşturma
+    - text: Konsol uygulaması oluşturma
       url: tutorial-console.md
     - text: Web uygulaması oluşturma
       url: tutorial-aspnet-core.md
@@ -51,7 +51,7 @@ landingContent:
       url: tutorial-wpf.md
     - text: Windows Forms uygulaması oluşturma
       url: ../../ide/create-csharp-winform-visual-studio.md
-    - text: C# Dil hakkında bilgi edinin
+    - text: C# programlama dili hakkında bilgi edinin
       url: /dotnet/csharp/tutorials/intro-to-csharp/
   - linkListType: video
     links:
@@ -61,6 +61,8 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
+    - text: Program çalıştırma
+      url: run-program.md
     - text: Depodan kod açma
       url: ../tutorial-open-project-from-repo.md
     - text: Kodu yazma ve düzenleme
@@ -69,7 +71,7 @@ landingContent:
       url: ../../ide/compiling-and-building-in-visual-studio.md
     - text: Kodunuzda hata ayıklama
       url: ../csharp/tutorial-debugger.md
-    - text: Kodunuzu test etme
+    - text: Kodunuza test etme
       url: ../../test/getting-started-with-unit-testing.md
   - linkListType: how-to-guide
     links:

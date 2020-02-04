@@ -7,7 +7,7 @@
     - name: Hızlı başlangıç
       expanded: true
       items:
-        - name: Kapsayıcı içinde ASP.NET Core uygulaması
+        - name: Kapsayıcı içinde ASP.NET uygulaması
           href: container-tools.md
         - name: Kapsayıcı içinde React.js Tek Sayfalı Uygulama
           href: container-tools-react.md

@@ -1,20 +1,20 @@
 ### YamlMime:Landing
-title: Visual Studio 'da uygulama performansını ölçme
-summary: Profil oluşturma ve tanılama araçları, bellek ve CPU kullanımı ile diğer uygulama düzeyi sorunlarını tanılamanıza yardımcı olur. Bu araçlarla, uygulamanızı çalıştırırken performans verileri birikmesini sağlayabilirsiniz.
+title: Visual Studio’da uygulama performansını ölçme
+summary: Profil oluşturma ve tanılama araçları, bellek ve CPU kullanımına ilişkin sorunları ve uygulama düzeyindeki diğer sorunları tanılamanıza yardımcı olur. Bu araçları kullanarak, uygulamanızı çalıştırırken performans verileri toplayabilirsiniz.
 metadata:
-  title: Visual Studio 'da ölçüm performansı
-  description: Profil oluşturma araçlarını kullanarak performansı ölçmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
+  title: Visual Studio’da performansı ölçme
+  description: Profil oluşturma araçlarını kullanarak performansı ölçmek için Visual Studio’yu kullanmayı öğrenin.
   ms.topic: landing-page
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/30/2019
-  ms.openlocfilehash: c8a6adc0857924fb790231ccf5dd70635290b77e
-  ms.sourcegitcommit: 4b911e768601992ad42dd5911dc6a01e1fe48588
-  ms.translationtype: MT
+  ms.openlocfilehash: 4c5a2cfb7d3ef7a8ad71dd7591bc147932ff0535
+  ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/01/2019
-  ms.locfileid: "73413577"
+  ms.lasthandoff: 02/01/2020
+  ms.locfileid: "76923363"
 landingContent:
 - title: Profil oluşturma hakkında
   linkLists:
@@ -30,25 +30,27 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: CPU kullanımını analiz etmeC#(, Visual Basic)
+    - text: CPU kullanımını analiz etme (C#, Visual Basic)
       url: quickstart-cpu-usage-managed.md
-    - text: CPU kullanımını analiz etmeC++()
+    - text: CPU kullanımını analiz etme (C++)
       url: quickstart-cpu-usage-native.md
     - text: CPU kullanımını analiz etme (ASP.NET)
       url: quickstart-cpu-usage-aspnet.md
   - linkListType: tutorial
     links:
-    - text: CPU kullanımını çözümlemeye başlama
+    - text: CPU kullanımını analiz etmeye başlayın
       url: beginners-guide-to-performance-profiling.md
-    - text: Bellek kullanımını ölçmeye başlama
+    - text: Bellek kullanımını ölçmeye başlayın
       url: memory-usage.md
-- title: Diğer performans araçları
+- title: Daha fazla performans aracı
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Komut satırından CPU kullanımını ölçme
+      url: profile-apps-from-command-line.md
     - text: PerfTips
       url: perftips.md
-    - text: Kaynak tüketimini çözümleme (XAML)
+    - text: Kaynak tüketimini analiz etme (XAML)
       url: application-timeline.md
     - text: GPU kullanımını analiz etme (Direct3D)
       url: gpu-usage.md
