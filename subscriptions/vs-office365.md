@@ -6,29 +6,29 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Bazı Visual Studio aboneliklerine dahil edilen Office 365 avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 2dde8489f15d8bd2e6a5d04045b99aea2245f73d
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: b9834411c4b951fb7cdb09ac48dad651d109d618
+ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099604"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967348"
 ---
-# <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365 ProPlus
+# <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365
 
-En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Office 365 ProPlus, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir abonelikdir. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
+En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Office 365, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir abonelikdir. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
 
 > [!NOTE]
 > Visual Studio aboneliğiniz, üretim kullanımı için Office 365 ' i kullanmanızı sahibine.  
 
-## <a name="getting-started-with-office-365-proplus"></a>Office 365 ProPlus ile çalışmaya başlama
+## <a name="getting-started-with-office-365"></a>Office 365 ile çalışmaya başlama 
 
-Office 365 ProPlus 'ı indirmek ve etkinleştirmek için şu adımları izleyin:
+Office 365 'yi indirmek ve etkinleştirmek için şu adımları izleyin:
 1. Visual Studio Enterprise aboneliğinizde oturum açın.
 2. **İndirmeler** sekmesine tıklayın.
 3. Öne çıkan indirmelerin bir listesini görürsünüz. Office listesinde **office 365**' i seçin.
    > [!div class="mx-imgBorder"]
    > ![Office 365 Indirmeleri](_img/vs-office365/vs-office365-downloads.png)
-0. Office 365 ProPlus 'ı yüklemek için bir ürün anahtarı gerekir.  Office 365 listesinin altındaki **anahtar al** bağlantısına tıklayın.
+0. Office 365 ' ü yüklemek için bir ürün anahtarı gerekir.  Office 365 listesinin altındaki **anahtar al** bağlantısına tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Office 365 ürün anahtarı al](_img/vs-office365/vs-office365-get-key.png)
 0. Kullanıma hazır bir pencere, size ait olan ve sizin için uygun olan tüm anahtarları gösterir.  Yeni bir anahtar almak için **Office Professional Plus 2019** listesinin altında **talep anahtarı** ' na tıklayın.
@@ -52,15 +52,15 @@ Office 365 ProPlus 'ı indirmek ve etkinleştirmek için şu adımları izleyin:
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
 | GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Evet          |
-| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Yok       |  Yok          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                            |  Yok          |
-| GitHub Enterprise ile Visual Studio Professional | VL | Yok         |  Yok          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  Yok          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | Yok |
+| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Yok       |  YOK          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                            |  YOK          |
+| GitHub Enterprise ile Visual Studio Professional | VL | Yok         |  YOK          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  YOK          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  YOK          |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | YOK |
 |  |
 
-<sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio sektör ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services geliştiricisi, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD), mct yazılımı & Hizmetler, Imagine Microsoft İş Ortağı Ağı.*
+<sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), mct Software & Services, ımagine, Microsoft iş ortağı ağı.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, Visual Studio 'Yu satın almaya yönelik farklı seçenekleri araştırmak için [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) gitmesi önerilir.

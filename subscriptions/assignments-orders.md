@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için Yöneticiler ' responsibilty hakkında bilgi edinin.
-ms.openlocfilehash: 4c23994de1eb1a24982bd0554e838691b34b8025
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: bf7fcdb2fae2ad6d354c4320ec26c4f1025766dd
+ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491609"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967333"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamasını ve işlem emirlerini izleme
 Visual Studio abonelikleri yöneticilerinin, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki ana hatlarıyla belirtilen zamanlamada yapılan kullanımlar için Visual Studio kullanımını ve işlem emirlerini izlemesi beklenmektedir. Yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
@@ -30,11 +30,11 @@ Satın alma yükümlülüğünüz, kullanıcılara atadığınız maksimum abone
     > En yüksek kullanım düzeyini yapay önlemek için, önce mevcut aboneliği kaldırarak ve sonra yenisini ekleyerek bunu her zaman yapın. 
 - Kuruluşunuzun en yüksek kullanım kullanımını izlemenize yardımcı olması için, Visual Studio [abonelikleri yönetim portalında](https://manage.visualstudio.com)bir [en büyük kullanım](maximum-usage.md) raporu bulunur. 
 
-## <a name="cloud-subscriptions-open-license-or-open-value"></a>Bulut abonelikleri, açık lisans veya açık değer
-Microsoft Bulut abonelikler, lisans açma veya açık değer gibi bir program aracılığıyla abonelik atama yapabilirsiniz. Bu durumda, kullanıcıların (çalışanlar veya harici yükleniciler) Visual Studio lisanslı yazılımlarla etkileşime başlayacağı ay boyunca ek kullanıcılar için siparişinizi işlemelidir.
+## <a name="monthly-subscriptions-open-license-or-open-value"></a>Aylık abonelikler, açık lisans veya açık değer
+Açık Lisans ve açık değer gibi programlar aracılığıyla veya aylık olarak Visual Studio Market, abonelik ataması yapabilirsiniz. Bu durumda, kullanıcıların (çalışanlar veya harici yükleniciler) Visual Studio lisanslı yazılımlarla etkileşime başlayacağı ay boyunca ek kullanıcılar için siparişinizi işlemelidir.
 
 ## <a name="enterprise-mpsa-and-select-agreements"></a>Enterprise, MPSA ve Select anlaşmaları
-Microsoft Kurumsal sözleşmeleri (EA), MPSA ve Select Plus sözleşmeleri, Visual Studio yazılımlarını zaman içinde nasıl kullanacağınızı ve lisanslayabilmeniz için size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını, sözleşme döneminde belirlenen yüksek kullanım filigranlarına getirmek için yıllık bir doğru sırada olmalıdır.
+Microsoft Kurumsal sözleşmeleri (EA), MPSA ve Select Plus sözleşmeleri, Visual Studio yazılımlarını zaman içinde nasıl kullanacağınızı ve lisanslayabilmeniz için size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını sözleşme dönemi boyunca belirlenen maksimum kullanım sayısına getirmek için yıllık bir doğru sırada olmalıdır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
@@ -42,3 +42,8 @@ Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Üretim öncesi ortam envanteri](admin-inventory.md)
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure belgeleri](/azure/)
+- [Azure DevOps](/azure/devops/)
