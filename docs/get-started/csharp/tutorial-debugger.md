@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2890ee9879d3cab2ff134fdbfcd4edabb36d512
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: e81d1c50f66925064dc008d7d50bcdbe69606914
+ms.sourcegitcommit: 4a4eed115525c6d34a1fbdf87b793893cd43b70d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76923249"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001531"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: hata ayıklamayı öğrenin C# kullanarak Visual Studio code
 
@@ -187,7 +187,7 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
      `SendMessage(name, a[i]);`
 
-2. `SendMessage` metoduna geçmek için bir kez daha **F11** tuşuna basın.
+1. `SendMessage` metoduna geçmek için bir kez daha **F11** tuşuna basın.
 
      Sarı işaretçi `SendMessage` yöntemine ilerler.
 
@@ -203,7 +203,9 @@ Almak için en iyi yolu olduğundan bu çoğunlukla, klavye kısayollarını Bur
 
      `Main` yönteminde `for` döngüsünde geri almanız gerekir, `SendMessage` Yöntem çağrısında duraklatılabilir.
 
-3. Yöntem çağrısında duraklalarken **F10** tuşuna basın (veya bir kez **Hata Ayıkla > adımla**).
+1. `SendMessage` yöntemi çağrısının yeniden geri alınana kadar **F11** tuşuna basın.
+
+1. Yöntem çağrısında duraklalarken **F10** tuşuna basın (veya bir kez **Hata Ayıkla > adımla**).
 
      ![Kod üzerinde adımla F10 kullanın](../csharp/media/get-started-step-over.png "F10 adımla")
 
@@ -262,7 +264,7 @@ Değişkenleri incelemek özellik hata ayıklayıcının en kullanışlı özell
 
 1. İçerdiği öğeleri göstermek için `letters` değişkenini genişletin.
 
-     ![Oto penceresindeki değişkenleri İncele](../csharp/media/get-started-locals-window.png "Oto penceresi")
+     ![Locals penceresinde değişkenleri İnceleme](../csharp/media/get-started-locals-window.png "Yereller penceresi")
 
     **Yereller** penceresi gösterir, geçerli olan değişkenlere [kapsam](https://www.wikipedia.org/wiki/Scope_(computer_science)), diğer bir deyişle, geçerli yürütme bağlamı.
 
