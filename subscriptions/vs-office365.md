@@ -1,48 +1,52 @@
 ---
-title: Office 365 avantajı | Microsoft Docs
+title: Office 365 Pro Plus avantajı | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
-description: Bazı Visual Studio aboneliklerine dahil edilen Office 365 avantajı hakkında bilgi edinin.
-ms.openlocfilehash: b9834411c4b951fb7cdb09ac48dad651d109d618
-ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
+description: Visual Studio aboneliklerine dahil edilen Office 365 Pro Plus avantajı hakkında bilgi edinin.
+ms.openlocfilehash: 4ff521651e25fd1ad73bd629a111c7f8378fbfe3
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967348"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036727"
 ---
-# <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365
+# <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365 Pro Plus
 
-En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Office 365, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir abonelikdir. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
+En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Office 365 Pro Plus, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir abonelikdir. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
 
 > [!NOTE]
-> Visual Studio aboneliğiniz, üretim kullanımı için Office 365 ' i kullanmanızı sahibine.  
+> Visual Studio aboneliğiniz, üretim kullanımı için Office 365 Pro Plus 'ı kullanmanıza sahibine.  
 
-## <a name="getting-started-with-office-365"></a>Office 365 ile çalışmaya başlama 
+> [!IMPORTANT]
+> Office 365 Pro Plus için ürün anahtarları edinme sorunu hakkında farkındayız.  Bu sorun üzerinde çalışıyoruz ve sorun çözüldüğünde bir güncelleştirme sunacak. 
 
-Office 365 'yi indirmek ve etkinleştirmek için şu adımları izleyin:
+
+## <a name="getting-started-with-office-365-pro-plus"></a>Office 365 Pro Plus ile çalışmaya başlama
+
+Office 365 Pro Plus 'yi indirmek ve etkinleştirmek için şu adımları izleyin:
 1. Visual Studio Enterprise aboneliğinizde oturum açın.
 2. **İndirmeler** sekmesine tıklayın.
-3. Öne çıkan indirmelerin bir listesini görürsünüz. Office listesinde **office 365**' i seçin.
+3. Öne çıkan indirmelerin bir listesini görürsünüz. Office listesinde **office 365 Pro Plus**' yi seçin.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 Indirmeleri](_img/vs-office365/vs-office365-downloads.png)
-0. Office 365 ' ü yüklemek için bir ürün anahtarı gerekir.  Office 365 listesinin altındaki **anahtar al** bağlantısına tıklayın.
+   > ![Office 365 Pro Plus Indirmeleri](_img/vs-office365/vs-office365-downloads.png)
+0. Office 365 Pro Plus 'ı yüklemek için bir ürün anahtarı gerekir.  Office 365 Pro Plus listesinin altındaki **anahtar al** bağlantısına tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 ürün anahtarı al](_img/vs-office365/vs-office365-get-key.png)
+   > ![Office 365 Pro Plus ürün anahtarı al](_img/vs-office365/vs-office365-get-key.png)
 0. Kullanıma hazır bir pencere, size ait olan ve sizin için uygun olan tüm anahtarları gösterir.  Yeni bir anahtar almak için **Office Professional Plus 2019** listesinin altında **talep anahtarı** ' na tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 talep ürün anahtarı](_img/vs-office365/vs-office365-claim-key.png)
+   > ![Office 365 Pro Plus talep ürün anahtarı](_img/vs-office365/vs-office365-claim-key.png)
 0. Az önce istemiş olduğunuz anahtarı kaydedin. (Bir daha görmek için her zaman bu listeye geri dönebilirsiniz.)
 0. Uçarak Çıkış penceresini kapatın.
 0. **İndir** düğmesine tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 yükleme Başlat](_img/vs-office365/vs-office365-download-button.png)
+   > ![Office 365 Pro Plus Indirmeyi Başlat](_img/vs-office365/vs-office365-download-button.png)
 0. Microsoft hesabı oturum açın. (Zaten oturum açtıysanız **İleri**' ye tıklayın.)
 0. Ürün anahtarınızı, ülkenizi veya bölgenizi ve dilinizi girip **İleri**' ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 ürün anahtarını girin](_img/vs-office365/vs-office365-enter-key.png)
+   > ![Office 365 Pro Plus ürün anahtarı girin](_img/vs-office365/vs-office365-enter-key.png)
 0. **İleri** ' ye tıklayın.
 0. Office uygulamalarını yüklemek için **yükler** ' e tıklayın.
 
@@ -52,12 +56,12 @@ Office 365 'yi indirmek ve etkinleştirmek için şu adımları izleyin:
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
 | GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Evet          |
-| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Yok       |  YOK          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                            |  YOK          |
-| GitHub Enterprise ile Visual Studio Professional | VL | Yok         |  YOK          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  YOK          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  YOK          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | YOK |
+| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Yok       |  Yok          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                            |  Yok          |
+| GitHub Enterprise ile Visual Studio Professional | VL | Yok         |  Yok          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  Yok          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | Yok |
 |  |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), mct Software & Services, ımagine, Microsoft iş ortağı ağı.*
@@ -77,3 +81,9 @@ Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avant
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure DevTest bireysel kredisi](vs-azure.md) Office için uygulama geliştirmeyi planlıyorsanız, [Office geliştirici aboneliğinizi](vs-office-dev.md) etkinleştirmek isteyeceksiniz
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
