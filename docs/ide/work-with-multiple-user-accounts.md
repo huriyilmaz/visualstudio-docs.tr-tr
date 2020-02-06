@@ -2,17 +2,17 @@
 title: Birden çok kullanıcı hesabıyla çalışma
 ms.date: 07/23/2019
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd265d24fad683e031436d7cc81fa7fa74034ddc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 872089158b6e4dc0b55c26ad187e3b68d0501f26
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115256"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027603"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Birden çok kullanıcı hesabıyla çalışma
 
@@ -123,7 +123,7 @@ Cihaz kod akışını kullanarak oturum açmak için:
 
    ![Visual Studio tarayıcı aracılığıyla oturum açma tamam](media/work-with-multiple-user-accounts/sign-in-browser-complete.png)
 
-1. Visual Studio 'daki hesap yönetimi sayfasına geri dönün ve yeni eklenen hesabı **tüm hesaplar**altında listelenmiş olarak görürsünüz. Seçin **Kapat**.
+1. Visual Studio 'daki hesap yönetimi sayfasına geri dönün ve yeni eklenen hesabı **tüm hesaplar**altında listelenmiş olarak görürsünüz. **Kapat**' ı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

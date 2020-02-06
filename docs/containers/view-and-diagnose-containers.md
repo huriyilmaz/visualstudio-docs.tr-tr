@@ -4,21 +4,21 @@ description: Uygulamanızı barındıran kapsayıcılar içinde neler olduğunu 
 author: ghogen
 ms.author: ghogen
 ms.topic: conceptual
-ms.date: 10/16/2019
+ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: bdf326bc337456a0a9b4ba085d308ead2c90d49b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: b4670c003c06f8d16979589a4dce5abf33d5e27d
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846939"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027302"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Visual Studio 'da kapsayıcıları ve görüntüleri görüntüleme ve tanılama
 
 **Kapsayıcılar** penceresini kullanarak uygulamanızı barındıran kapsayıcılar içinde neler olduğunu görüntüleyebilirsiniz. Kapsayıcılarınız ile neler olduğunu görüntülemek ve tanılamak için Docker komutlarını çalıştırmak üzere komut istemi 'ni kullanmak üzere kullandıysanız, bu pencere, Visual Studio IDE 'den çıkmadan Kapsayıcılarınızı izlemeye yönelik daha uygun bir yol sağlar.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Visual studio 2019 sürüm 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) veya üzeri ya da visual Studio 2019 ' nin önceki bir sürümünü kullanıyorsanız [kapsayıcılar pencere uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions)yükleyebilirsiniz.

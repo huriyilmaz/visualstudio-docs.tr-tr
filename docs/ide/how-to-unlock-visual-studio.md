@@ -4,19 +4,19 @@ description: Visual Studio 'nun ücretsiz deneme sürümünü genişletmeyi, çe
 ms.date: 12/18/2019
 ms.topic: conceptual
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: db0f75b3e4c2f066b7a9d79976a50efd3364d7bd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8e11d77a94c7c1d3d7b038ecea1a6c61646e371f
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591378"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027573"
 ---
 # <a name="extend-a-trial-version-or-update-a-license"></a>Deneme sürümü uzatma veya bir lisansı güncelleştirme
 
@@ -35,7 +35,7 @@ Deneme süresi bittikten sonra Visual Studio 'Yu kullanmaya devam etmek için, [
 
 Visual Studio abonelikleri ve nasıl çalıştıkları hakkında daha fazla bilgi için, [abonelik DESTEĞI SSS](https://visualstudio.microsoft.com/subscriptions/support/) sayfasına bakın.
 
-## <a name="enter-a-product-key"></a>Bir ürün anahtarı girin
+## <a name="enter-a-product-key"></a>Ürün anahtarı girin
 
 1. **Hesap ayarları** iletişim kutusunu açmak için **Dosya** > **Hesap ayarları** ' nı seçin ve ardından **bir ürün anahtarı bağlantısı olan lisansı** seçin.
 

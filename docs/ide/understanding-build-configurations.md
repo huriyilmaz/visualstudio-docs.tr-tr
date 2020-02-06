@@ -1,6 +1,6 @@
 ---
 title: Derleme yapılandırmalarını anlama
-ms.date: 11/04/2016
+ms.date: 01/20/2020
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 f1_keywords:
@@ -26,12 +26,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47a76c054a71d88800bf1af225c332c9df3d2035
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: 6b472ca78d36247a76bf397989f48e04230ccd7d
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76269175"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027609"
 ---
 # <a name="understand-build-configurations"></a>Derleme yapılandırmalarını anlama
 
@@ -53,7 +53,7 @@ Bir yapılandırma oluşturmak, seçmek, değiştirmek veya silmek için **Confi
 > [!NOTE]
 > Araç çubuğunda çözüm yapılandırma ayarlarını bulamazsanız ve **Configuration Manager**erişemeyebilirsiniz [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] geliştirme ayarları uygulanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış konfigürasyonları yönetme](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md).
 
-Varsayılan olarak, **hata ayıklama** ve **Sürüm** yapılandırmalarının [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] şablonlar kullanılarak oluşturulan projelere dahildir. Bir **hata ayıklama** yapılandırması, bir uygulamanın hata ayıklamasını destekler ve bir **Sürüm** yapılandırması, uygulamasının dağıtılabilecek bir sürümünü oluşturur. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md). Ayrıca, özel çözüm konfigürasyonları ve proje yapılandırması da oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: yapılandırmaları oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
+Varsayılan olarak, **hata ayıklama** ve **Sürüm** yapılandırmalarının [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] şablonlar kullanılarak oluşturulan projelere dahildir. Bir **hata ayıklama** yapılandırması, bir uygulamanın hata ayıklamasını destekler ve bir **Sürüm** yapılandırması, uygulamasının dağıtılabilecek bir sürümünü oluşturur. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md). Ayrıca, özel çözüm konfigürasyonları ve proje yapılandırması da oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
 
 ## <a name="solution-configurations"></a>Çözüm yapılandırması
 
@@ -95,7 +95,7 @@ Visual Studio, çözüm yapılandırması atamak için aşağıdaki ölçütleri
 
 - [İzlenecek yol: Uygulama oluşturma](../ide/walkthrough-building-an-application.md)
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
-- [Projeler ve çözümler](../ide/solutions-and-projects-in-visual-studio.md)
+- [Çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)
 - [C/C++ derleme başvurusu](/cpp/build/reference/c-cpp-building-reference)
 - [Derleme platformlarını anlama](understanding-build-platforms.md)
 - [Derleme konfigürasyonları (Mac için Visual Studio)](/visualstudio/mac/configurations)

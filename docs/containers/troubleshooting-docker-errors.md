@@ -9,14 +9,14 @@ ms.assetid: 346f70b9-7b52-4688-a8e8-8f53869618d3
 ms.devlang: dotnet
 ms.topic: conceptual
 ms.workload: multiple
-ms.date: 10/13/2017
+ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: ce7645b8b4f71cf94d7320a0072d15b2b8083dec
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: d8aa3028a12bcfb49f2663b2bea688baf14fd7f2
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76923027"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027277"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 
@@ -26,8 +26,8 @@ Visual Studio kapsayıcı araçlarıyla çalışırken, uygulamanızı oluşturu
 
 Bu sorunu çözmek için:
 
-1. Sağ **için Docker Windows** bildirim alanına tıklayın ve ardından içinde **ayarları**.
-1. Seçin **paylaşılan sürücüleri** ve projenin bulunduğu sürücü yanı sıra sistem sürücüsünün paylaşın.
+1. Bildirim alanında **Docker for Windows** sağ tıklatın ve ardından **Ayarlar**' ı seçin.
+1. **Paylaşılan sürücüler** ' i seçin ve sistem sürücüsünü projenin bulunduğu sürücüyle birlikte paylaşabilirsiniz.
 
 > [!NOTE]
 > Dosyaları paylaşılan görünüyorsa, birimi paylaşan yeniden etkinleştirmek için iletişim kutusunun alt kısmındaki "... kimlik bilgilerini Sıfırla" bağlantısını tıklatın gerekebilir. Kimlik bilgilerini sıfırlama sonra devam etmek için Visual Studio'yu yeniden başlatmanız gerekebilir.
@@ -50,7 +50,7 @@ Nedenlerinden biri, kullanıcı profili klasöründe eski hata ayıklama bileşe
 
 ## <a name="errors-specific-to-networking-when-debugging-your-application"></a>Uygulamanızı hata ayıklama sırasında ağ ile belirli hataları
 
-Dan indirilebilir komut dosyası yürütme deneyin [temizleme kapsayıcı konağı ağ](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking), hangi ana makinenizde ağ ile ilgili bileşenler Yenile.
+Konuk makinenizde ağla ilgili bileşenleri yenileyecek şekilde, [Temizleme kapsayıcısı konak ağı](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking)'ndan indirilebilir betiği yürütmeyi deneyin.
 
 ## <a name="mounts-denied"></a>Takar reddedildi
 
@@ -95,4 +95,4 @@ Docker 'ı yeniden başlatmak için **Uygula** ' ya tıklayın. Bu adımlar *%Pr
 
 ## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub deposu
 
-Karşılaştığınız başka herhangi bir sorun için bkz: [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunları.
+Karşılaştığınız diğer sorunlar için bkz. [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunları.

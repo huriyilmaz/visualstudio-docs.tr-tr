@@ -6,14 +6,14 @@ manager: jillfra
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: article
-ms.date: 03/08/2019
+ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 9952ade8cae70b7e542b9de0b9ca36967f3bd8bb
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 6c1d56f788294826853ad441313597255308bb39
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826579"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027285"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service ASP.NET Core kapsayıcısını dağıtma
 
@@ -21,7 +21,7 @@ Bu öğretici, Kapsayıcılı ASP.NET Core Web uygulamanızı bir [Azure App Ser
 
 Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs) oluşturun.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğreticiyi tamamlamak için:
 
@@ -33,16 +33,16 @@ Bu öğreticiyi tamamlamak için:
 ::: moniker-end
 - [Docker Desktop](https://docs.docker.com/docker-for-windows/install/) 'ı yükler
 
-## <a name="create-an-aspnet-core-web-app"></a>ASP.NET Core Web uygulaması oluşturma
+## <a name="create-an-aspnet-core-web-app"></a>ASP.NET Core web uygulaması oluşturma
 
 Aşağıdaki adımlar, bu öğreticide kullanılacak temel bir ASP.NET Core uygulaması oluştururken size rehberlik eder.
 
 ::: moniker range="vs-2017"
 1. Visual Studio menüsünden **dosya > yeni > proje**' yi seçin.
 2. **Yeni proje** Iletişim kutusunun **Şablonlar** bölümünde,  **C# Visual > Web**' i seçin.
-3. Seçin **ASP.NET Core Web uygulaması**.
+3. **ASP.NET Core Web uygulaması**' nı seçin.
 4. Yeni uygulamanıza bir ad verin (veya varsayılanı alın) ve **Tamam**' ı seçin.
-5. Seçin **Web uygulaması**.
+5. **Web uygulaması**' nı seçin.
 6. **Docker desteğini etkinleştir** onay kutusunu işaretleyin.
 7. **Linux** kapsayıcı türünü seçin ve **Tamam**' a tıklayın. Windows kapsayıcıları bir kapsayıcı olarak Azure App Service dağıtmak için desteklenmez.
 ::: moniker-end
