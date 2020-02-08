@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 90a440ce88690c12792c17729e93f9fa287dabb6
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 792c74a3b5da5ed6528fa3919a0c60625d1a38ef
+ms.sourcegitcommit: 5806d463780368515e59c2614ed9cfaaa4ab4b91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888639"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071953"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'da JavaScript ve TypeScript ile birim testi
 
@@ -173,3 +173,5 @@ Yukarıdaki özelliklere ek olarak, [Microsoft. JavaScript. UnitTest](https://ww
     <GenerateProgramFile>false</GenerateProgramFile>
 </PropertyGroup>
 ```
+
+Bazı test çerçeveleri, test algılaması için ek NPM paketleri gerektirebilir. Örneğin, jest, jest-Editor-destek NPM paketini gerektirir. Gerekirse, belirli bir çerçeveye ait belgelere bakın.

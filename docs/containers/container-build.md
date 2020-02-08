@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 6f11082a0e309d4e34dd25a1085c1f8c971f28f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: d91dd01879ac3bb62b981109463f6762046382ef
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916936"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027268"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio’nun kapsayıcılı uygulama oluşturma şekli
 
@@ -32,7 +32,7 @@ EXPOSE 80
 EXPOSE 443
 ```
 
-Dockerfile içindeki satırlar, Microsoft Container Registry (mcr.microsoft.com) ' den nano sunucu görüntüsüyle başlar ve 80 ve 443 bağlantı noktalarını kullanıma sunan bir ara görüntü `base` oluşturun ve çalışma dizinini `/app`olarak ayarlar.
+Dockerfile içindeki satırlar, Microsoft Container Registry (mcr.microsoft.com) ' deki Depopla başlar ve 80 ve 443 bağlantı noktalarını kullanıma sunan bir ara görüntü `base` oluşturun ve çalışma dizinini `/app`olarak ayarlar.
 
 Sonraki aşama, aşağıdaki gibi görünen `build`.
 
@@ -64,7 +64,7 @@ Son aşama `base`' den yeniden başlar ve yayımlanan çıktıyı son görüntü
 
 Visual Studio dışında derlemek istiyorsanız, komut satırından oluşturmak için `docker build` veya `MSBuild` kullanabilirsiniz.
 
-### <a name="docker-build"></a>docker build
+### <a name="docker-build"></a>Docker derlemesi
 
 Komut satırından kapsayıcılı bir çözüm oluşturmak için, çözüm içindeki her proje için genellikle komut `docker build <context>` kullanabilirsiniz. *Yapı bağlamı* bağımsız değişkenini sağlarsınız. Dockerfile için *derleme bağlamı* , yerel makinedeki, görüntüyü oluşturmak için çalışma klasörü olarak kullanılan klasördür. Örneğin, kapsayıcıya kopyaladığınız sırada dosyaları kopyaladığınız klasördür.  .NET Core projelerinde, çözüm dosyasını (. sln) içeren klasörü kullanın.  Göreli yol olarak ifade edilen bu bağımsız değişken, genellikle proje klasöründeki bir Dockerfile ve onun üst klasöründeki çözüm dosyası için ".." olur.  .NET Framework projeleri için, yapı bağlamı çözüm klasörü değil, proje klasörüdür.
 
@@ -76,7 +76,7 @@ docker build -f Dockerfile ..
 
 .NET Framework projeleri için Visual Studio tarafından oluşturulan dockerfiles (ve Visual Studio 2017 güncelleştirme 4 ' ten önceki Visual Studio sürümleriyle oluşturulan .NET Core projeleri için) çok aşamalı Dockerfiles değildir.  Bu Dockerfiles içindeki adımlar kodunuzu derlemez.  Bunun yerine, Visual Studio .NET Framework Dockerfile oluşturduğunda, öncelikle projenizi MSBuild kullanarak derler.  Bu başarılı olduğunda Visual Studio, yapı çıkışını MSBuild 'ten elde edilen Docker görüntüsüne kopyalayan Dockerfile öğesini oluşturur.  Kodunuzu derlemek için gereken adımlar Dockerfile 'a dahil edilmediğinden, komut satırından `docker build` kullanarak .NET Framework Dockerfiles derlenemez. Bu projeleri derlemek için MSBuild 'i kullanmanız gerekir.
 
-Tek Docker kapsayıcı projesi için bir görüntü oluşturmak üzere, MSBuild 'i `/t:ContainerBuild` komut seçeneği ile kullanabilirsiniz. Örneğin:
+Tek Docker kapsayıcı projesi için bir görüntü oluşturmak üzere, MSBuild 'i `/t:ContainerBuild` komut seçeneği ile kullanabilirsiniz. Örnek:
 
 ```cmd
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
@@ -144,7 +144,7 @@ Yapılandırmanız Kapsayıcılı ve kapsayıcısız yapıları destekliyorsa, y
 
 Kapsayıcılarda ASP.NET Core uygulamalarla SSL kullanma hakkında daha fazla bilgi için bkz. [https üzerinden Docker Ile barındırma ASP.NET Core görüntüleri](/aspnet/core/security/docker-https).
 
-## <a name="debugging"></a>Hata Ayıklama
+## <a name="debugging"></a>Hata ayıklama
 
 **Hata ayıklama** yapılandırmasında oluştururken, Visual Studio 'nun Kapsayıcılı projelere yönelik yapı sürecinin performansına yardımcı olan birkaç iyileştirmesi vardır. Kapsayıcılı uygulamalar için derleme işlemi, Dockerfile içinde özetlenen adımları takip etmek kadar basit değildir. Kapsayıcıda derleme, yerel makinede oluşturmaktan çok daha yavaştır.  Bu nedenle, **hata ayıklama** yapılandırmasında derleme yaparken, Visual Studio projelerinizi gerçekten yerel makinede oluşturur ve ardından çıkış klasörünü birim bağlama kullanarak kapsayıcınıza paylaşır. Bu iyileştirme etkin olan bir yapıya *hızlı* mod oluşturma denir.
 
