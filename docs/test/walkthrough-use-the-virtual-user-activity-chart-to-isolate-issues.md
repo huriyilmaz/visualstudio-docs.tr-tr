@@ -7,20 +7,20 @@ helpviewer_keywords:
 - virtual user activity chart, isolating performance issues
 ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ebd779ed2c78f48c75d29297fba862ffda142e23
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a437da5d95b758b908f1f1d4f7b76c50b6488a3c
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659633"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091853"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>İzlenecek yol: sorunları yalıtmak için Sanal Kullanıcı etkinliği grafiğini kullanma
 
 Bu kılavuzda, yük testinizi çalıştıran tekil sanal kullanıcılar için oluşan hataları yalıtmak üzere sanal kullanıcı etkinliği grafiğini nasıl kullanacağınızı öğreneceksiniz.
 
-Sanal Kullanıcı etkinliği grafiği, yük testinizdeki ilişkili sanal kullanıcı etkinliğini görselleştirmenize olanak tanır. Grafikteki her satır, tek bir sanal kullanıcıyı temsil eder. Sanal Kullanıcı etkinliği grafiği, her bir sanal kullanıcının test sırasında hangi şekilde yürüttüğünü gösterir. Bu, Kullanıcı etkinliği desenlerini, yük düzenlerini ve başarısız veya yavaş testleri ilişkilendirmek ve diğer Sanal Kullanıcı etkinliğiyle istekleri görmek için performans sorunlarını yalıtmanızı sağlar. Sanal Kullanıcı etkinliği grafiği, yalnızca sonrasında yük çalıştırıldıktan sonra kullanılabilir.
+Sanal Kullanıcı etkinliği grafiği, yük testinizdeki ilişkili sanal kullanıcı etkinliğini görselleştirmenize olanak tanır. Grafikteki her satırın tek bir sanal kullanıcı temsil eder. Sanal Kullanıcı etkinliği grafiği, her bir sanal kullanıcının test sırasında hangi şekilde yürüttüğünü gösterir. Bu, Kullanıcı etkinliği desenlerini, yük düzenlerini ve başarısız veya yavaş testleri ilişkilendirmek ve diğer Sanal Kullanıcı etkinliğiyle istekleri görmek için performans sorunlarını yalıtmanızı sağlar. Sanal Kullanıcı etkinliği grafiği, yalnızca sonrasında yük çalıştırıldıktan sonra kullanılabilir.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -42,7 +42,7 @@ Sanal Kullanıcı etkinliği grafiği, yük testinizdeki ilişkili sanal kullan�
 
      Bu yönergedeki geri kalan adımlarda, *ColorWebAppTest. webtest* adlı bir Web performans testi ve *LoadTest1. LoadTest*adlı bir yük testi olan ColorWebApp adlı bir Web uygulaması varsayılır.
 
-## <a name="run-the-load-test"></a>Yük testini çalıştırma
+## <a name="run-the-load-test"></a>Yük testi çalıştırma
 
 Sanal Kullanıcı etkinliği verilerini toplamak için yük testinizi çalıştırın.
 
@@ -87,13 +87,13 @@ Yük testinizi çalıştırdıktan ve Sanal Kullanıcı etkinliği verilerini to
 
     - **Sonucu**
 
-    - **Network**
+    - **Ağ**
 
     - **Başlangıç zamanı**
 
     - **Sürenin**
 
-    - **Aracısı**
+    - **Aracı**
 
     - **Test günlüğü**
 

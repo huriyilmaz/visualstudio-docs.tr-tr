@@ -1,0 +1,95 @@
+---
+title: Hata ayıklarken .NET kodunu derlemeyi kaldırma | Microsoft Docs
+ms.date: 2/2/2020
+ms.topic: conceptual
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- decompilation, debugger, exception
+- debugging [Visual Studio], decompilation, source not found
+author: mikejo5000
+ms.author: mikejo
+manager: jillfra
+ms.workload:
+- multiple
+monikerRange: '>= vs-2019'
+ms.openlocfilehash: ffd5f2e4bfc13f79b519fbdf9b3cf517793cd324
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091935"
+---
+# <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Hata ayıklama sırasında .NET derlemelerinden kaynak kodu oluşturma
+
+Bir .NET uygulamasında hata ayıklarken, sahip olmadığınız kaynak kodu görüntülemek istediğinizi fark edebilirsiniz. Örneğin, bir özel duruma bölme veya bir kaynak konuma gitmek için çağrı yığınını kullanma.
+
+> [!NOTE]
+> * Kaynak kodu oluşturma (ayrıştırılmış) yalnızca .NET uygulamalarında kullanılabilir ve açık kaynaklı [ılspy](https://github.com/icsharpcode/ILSpy) projesini temel alır.
+> * Decompilation yalnızca Visual Studio 2019 16,5 ve üzeri sürümlerde kullanılabilir.
+
+## <a name="generate-source-code"></a>Kaynak kodu oluştur
+
+Hata ayıklarken ve kaynak kodu kullanılabilir olmadığında, Visual Studio **kaynak bulunamadı** belgesini gösterir veya derleme için semboller yoksa, **hiçbir sembol yüklenmedi** . Her iki belgede de geçerli konum için kod üreten C# bir **derleme kaynak kodu** seçeneği vardır. Oluşturulan C# kod daha sonra, diğer tüm kaynak kodları gibi kullanılabilir. Kodu görüntüleyebilir, değişkenleri inceleyebilir, kesme noktalarını ayarlayabilir ve benzerlerini yapabilirsiniz.
+
+### <a name="no-symbols-loaded"></a>Yüklü sembol yok
+
+Aşağıdaki çizimde **hiçbir simge yüklenmedi** iletisi gösterilmektedir.
+
+![Simge yüklü belge olmayan ekran görüntüsü](media/decompilation-no-symbol-found.png)
+
+### <a name="source-not-found"></a>Kaynak bulunamadı
+
+Aşağıdaki çizimde **kaynak bulunamadı** iletisi gösterilmektedir.
+
+![Kaynak bulunamadı belgesinin ekran görüntüsü](media/decompilation-no-source-found.png)
+
+## <a name="generate-and-embed-sources-for-an-assembly"></a>Derleme için kaynakları oluşturma ve katıştırma
+
+Belirli bir konum için kaynak kodu oluşturmaya ek olarak, belirli bir .NET derlemesi için tüm kaynak kodu oluşturabilirsiniz. Bunu yapmak için **modüller** penceresine ve bir .NET derlemesinin bağlam menüsünden gidin ve ardından **kaynak kodu derlemeyi kaldırma** komutunu seçin. Visual Studio, derleme için bir sembol dosyası oluşturur ve sonra kaynağı sembol dosyasına katıştırır. Sonraki bir adımda, gömülü kaynak kodu [ayıklayabilirsiniz](#extract-and-view-the-embedded-source-code) .
+
+![Kaynak derlemeyi kaldırma komutuyla modüller penceresinde derleme bağlam menüsünün ekran görüntüsü.](media/decompilation-decompile-source-code.png)
+
+## <a name="extract-and-view-the-embedded-source-code"></a>Gömülü kaynak kodu ayıklama ve görüntüleme
+
+**Modüller** penceresinin bağlam menüsündeki **kaynak kodu Ayıkla** komutunu kullanarak bir sembol dosyasına katıştırılmış kaynak dosyalarını ayıklayabilirsiniz.
+
+![Kaynakları Ayıkla komutuyla modüller penceresinde derleme bağlam menüsünün ekran görüntüsü.](media/decompilation-extract-source-code.png)
+
+Ayıklanan kaynak dosyalar çözüme [çeşitli dosyalar](../ide/reference/miscellaneous-files.md)olarak eklenir. Çeşitli Dosyalar özelliği, Visual Studio 'da varsayılan olarak kapalıdır. Bu özelliği **araçlar** > **seçenekler** > **ortam** ** > ,** **Çözüm Gezgini onay kutusunda çeşitli dosyaları göster** > etkinleştirebilirsiniz. Bu özelliği etkinleştirmeksizin ayıklanan kaynak kodunu açamazsınız.
+
+![Çeşitli dosyalar seçeneğinin etkinleştirildiği araçlar seçenek sayfasının ekran görüntüsü.](media/decompilation-tools-options-misc-files.png)
+
+Ayıklanan kaynak dosyaları **Çözüm Gezgini**içindeki çeşitli dosyalarda görüntülenir.
+
+![Çeşitli dosyalarla Çözüm Gezgini 'nin ekran görüntüsü.](media/decompilation-solution-explorer.png)
+
+## <a name="known-limitations"></a>Bilinen sınırlamalar
+
+### <a name="requires-break-mode"></a>Kesme modunu gerektirir
+
+Ön derleme kullanarak kaynak kodu oluşturmak yalnızca hata ayıklayıcı kesme modundayken ve uygulama duraklatıldığında mümkündür. Örneğin, Visual Studio bir kesme noktasına veya bir özel duruma rastken kesme moduna girer. **Tümünü kes** komutunu (![tümünü kes simgesi](media/decompilation-break-all.png)) kullanarak, kodunuzun çalışması Için Visual Studio 'yu kolayca tetikleyebilirsiniz.
+
+### <a name="decompilation-limitations"></a>Derlemeyi kaldırma sınırlamaları
+
+.NET derlemelerinde kullanılan ara biçimden (IL) kaynak kodu oluşturma bazı ilgili sınırlamalara sahiptir. Bu nedenle, oluşturulan kaynak kodu özgün kaynak kodu gibi görünmüyor. Birçok fark, çalışma zamanında orijinal kaynak kodundaki bilgilerin gerekli olmadığı yerlerde yer vardır. Örneğin, boşluk, açıklamalar ve yerel değişkenlerin adları gibi bilgiler çalışma zamanında gerekli değildir. Programın, orijinal kaynak kodu yerine nasıl çalıştığını ve nasıl çalıştığını anlamak için oluşturulan kaynağı kullanmanızı öneririz.
+
+### <a name="debug-optimized-or-release-assemblies"></a>İyileştirilmiş veya yayın derlemelerinde hata ayıkla
+
+Derleyici iyileştirmeleri kullanılarak derlenen bir derlemeden derlenen kodda hata ayıklarken, aşağıdaki sorunlar boyunca karşılaşabilirsiniz:
+- Kesme noktaları her zaman eşleşen kaynak konumunu bağlamayabilir.
+- Adımlamayı her zaman doğru konuma ilerlemeyebilir.
+- Yerel değişkenler doğru adlara sahip olamaz.
+
+GitHub sorunundan daha fazla ayrıntı bulunabilir: [Ichsarpcompiler. vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901).
+
+### <a name="extracted-sources"></a>Ayıklanan kaynaklar
+
+Derlemeden ayıklanan kaynak kodu aşağıdaki sınırlamalara sahiptir:
+- Oluşturulan dosyaların adı ve konumu yapılandırılabilir değildir.
+- Dosyalar geçicidir ve Visual Studio tarafından silinir.
+- Dosyalar tek bir klasöre ve özgün kaynakların kullanılmayan tüm klasör hiyerarşisine yerleştirilir.
+- Her bir dosyanın dosya adı, dosyanın sağlama toplamı karmasını içerir.
+
+### <a name="generated-code-is-c-only"></a>Oluşturulan kod C# yalnızca
+Decompilation yalnızca içinde C#kaynak kodu dosyaları oluşturur. Başka herhangi bir dilde dosya oluşturma seçeneği yoktur.

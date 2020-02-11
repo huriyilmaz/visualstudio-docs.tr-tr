@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c96c8d28014ee22a387c3ba3ca828b37f267dd
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 61a8cce68a55f6db26de7754bdfc9dda196c457a
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75405207"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091790"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Natvis çerçevesini kullanarak hata C++ ayıklayıcıda nesnelerin özel görünümlerini oluşturma
 
@@ -690,3 +690,9 @@ UIVisualizer öğesine bir örnek aşağıda verilmiştir:
 XML Natvis tanımından özel bir Görselleştirici yazmak çok daha fazla çalışmadır, ancak Natvis 'ın ne yaptığını veya desteklemediği hakkında kısıtlamalardan ücretsiz olursunuz. Özel Görselleştiriciler hata ayıklama genişletilebilirlik API 'Lerinin tamamına erişebilir, bu da hata ayıklanan işlemi sorgulayabilir ve değiştirebilir veya Visual Studio 'nun diğer bölümleriyle iletişim kurabilir.
 
  `CustomVisualizer` öğelerinde `Condition`, `IncludeView`ve `ExcludeView` özniteliklerini kullanabilirsiniz.
+
+ ## <a name="limitations"></a>Sınırlamalar
+
+Natvis özelleştirmeleri sınıflar ve yapılar ile çalışır, ancak Typedefs 'lar değildir.
+
+Natvis, temel türler (örneğin, `int`, `bool`) veya temel tür işaretçiler için Görselleştiriciler desteklemez. Bu senaryoda, bir seçenek, kullanım çalışmanıza uygun [Biçim belirleyicisi](../debugger/format-specifiers-in-cpp.md) kullanmaktır. Örneğin, kodunuzda `double* mydoublearray` kullanıyorsanız, hata ayıklayıcının **izleme** penceresinde, ilk 100 öğesini gösteren ifade `mydoublearray, [100]`gibi bir dizi Biçim belirleyicisi kullanabilirsiniz.

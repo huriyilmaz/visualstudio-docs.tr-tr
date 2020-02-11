@@ -10,16 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb4cfc272b24bf014691b5d130f71f97e4849a31
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 43c739cc24d453ad4129d8cb7cc4bfbebec07aa4
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573826"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091827"
 ---
 # <a name="incremental-builds"></a>Artımlı derlemeler
 
 Artımlı derlemeler, en iyileştirilmiş derlemelerdir, böylece ilgili giriş dosyalarına göre güncel çıkış dosyaları olan hedefler yürütülmez. Hedef öğe, hedefin giriş olarak beklediği öğeleri belirten bir `Inputs` özniteliği ve bir `Outputs` özniteliği olabilir. Bu, çıktı olarak hangi öğelerin ürettiği gösterir. MSBuild, bu özniteliklerin değerleri arasında 1 ila 1 eşleme bulmaya çalışır. 1-1 eşleme varsa, MSBuild her giriş öğesinin zaman damgasını karşılık gelen çıkış öğesinin zaman damgasıyla karşılaştırır. 1--1 eşleştirmesi olmayan çıkış dosyaları tüm giriş dosyalarıyla karşılaştırılır. Çıkış dosyası, giriş dosyası veya dosyalarından aynı yaş veya daha yeniyse bir öğe güncel olarak değerlendirilir.
+
+> [!NOTE]
+> MSBuild, giriş dosyalarını değerlendirirken, yalnızca geçerli yürütmede listenin içeriği göz önünde bulundurululur. Son derlemeden listedeki değişiklikler otomatik olarak bir hedef güncel değildir.
 
 Tüm çıkış öğeleri güncel ise, MSBuild hedefi atlar. Hedefin bu *artımlı derlemesi* , derleme hızını önemli ölçüde iyileştirebilir. Yalnızca bazı dosyalar güncel ise, MSBuild hedefi yürütür, ancak güncellik öğelerini atlar ve böylece tüm öğeleri güncel hale getirir. Bu işlem *kısmi Artımlı derleme*olarak bilinir.
 
@@ -49,7 +52,7 @@ MSBuild, hedefin yürütülüp yürütülmeyeceğini anlamak için bir hedefin `
 
 - Hedefte güncel olmayan çıkışlar yok ve atlandı. MSBuild hedefi değerlendirir ve hedef çalıştırılmışsınız gibi öğe ve özelliklerde değişiklikler yapar.
 
-Artımlı derlemeyi desteklemek için görevler, herhangi bir `Output` öğesinin `TaskParameter` öznitelik değerinin bir görev giriş parametresine eşit olduğundan emin olmalıdır. Bazı örnekler şunlardır:
+Artımlı derlemeyi desteklemek için görevler, herhangi bir `Output` öğesinin `TaskParameter` öznitelik değerinin bir görev giriş parametresine eşit olduğundan emin olmalıdır. İşte bazı örnekler:
 
 ```xml
 <CreateProperty Value="123">

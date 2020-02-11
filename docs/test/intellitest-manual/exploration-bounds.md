@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Exploration bounds
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: jillre
-ms.openlocfilehash: f6b29b8bc2a9755f5f2e2ced237a5a1ce6acfd6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 03f23aacbe95615b565dfcee54d2b620c0ae1cd9
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653220"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091840"
 ---
 # <a name="exploration-bounds"></a>Keşif sınırları
 
@@ -157,7 +157,7 @@ Araştırmadan önce karşılaşılabilecek en fazla özel durum sayısı.
 Bu araştırmanın arkasındaki mosyon, birçok hata içeren kodun araştırmasını durdurmaktır. IntelliTest kodda çok fazla hata bulursa, araştırma durdurulur.
 
 <a name="testexcludepathboundsexceeded"></a>
-## <a name="testexcludepathboundsexceeded"></a>Testexcludepathboundsexcebaşında
+## <a name="testexcludepathboundsexceeded"></a>TestExcludePathBoundsExceeded
 
 [Maxçağrılarını](#maxcalls), [maxbranches](#maxbranches), [maxstack](#maxstack)ve [maxconditions](#maxconditions) yapılandırılmış yol sınırlarını aşan yürütme yolları yok sayılır.
 
@@ -184,6 +184,6 @@ Geçerli [Testemissionfilter](#testemissionfilter) ayarına bağlı olarak, Inte
 
 Bu seçeneğin varsayılan ayarı **Testemissionbranchhits = 2**' dir. Bu, gelecekteki gerileme hatalarını saptamak için daha uygun olan daha açıklayıcı bir test paketi oluşturur.
 
-## <a name="got-feedback"></a>Geri bildirim alındı mı?
+## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 
-Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)’na gönderin.

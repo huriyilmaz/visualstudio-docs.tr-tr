@@ -10,16 +10,16 @@ helpviewer_keywords:
 - warnings, interoperability
 ms.assetid: 95de6eb3-40c4-4063-9f59-25cb70e3b2b3
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba2f717c4bdccd662764b73530d3ae416f8b95b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a1eb65f52df4b27837c00b7557db0c5e15e6c187
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649283"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091762"
 ---
 # <a name="interoperability-warnings"></a>Birlikte Çalışabilirlik Uyarıları
 
@@ -35,7 +35,7 @@ Birlikte çalışabilirlik uyarıları COM istemcileriyle etkileşimi destekler.
 | [CA1403: Otomatik yerleşim türleri COM görünebilir olmamalıdır](../code-quality/ca1403.md) | COM görünebilir bir değer türü, LayoutKind. Auto olarak ayarlanan System. Runtime. InteropServices. StructLayoutAttribute özniteliği kullanılarak işaretlenir. Bu türlerin düzeni .NET sürümleri arasında değişebilir ve bu, belirli bir düzeni bekleyen COM istemcilerini keser. |
 | [CA1404: P/Invoke ardından hemen GetLastError çağırın](../code-quality/ca1404.md) | Marshal. GetLastWin32Error yöntemine veya eşdeğer [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] GetLastError işlevine bir çağrı yapılır ve hemen önceki çağrı bir platform çağırma yöntemine değildir. |
 | [CA1405: COM görünebilir tür taban türler COM görünebilir olmalıdır](../code-quality/ca1405.md) | COM görünür türü, görünmeyen bir COM türünden türer. |
-| [CA1406: Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının](../code-quality/ca1406.md) | Visual Basic 6 COM istemcisi 64-bit tamsayıya erişemez. |
+| [CA1406: Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının](../code-quality/ca1406.md) | Visual Basic 6 COM istemcileri, 64-bit tamsayıya erişemiyor. |
 | [CA1407: COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407.md) | COM statik yöntemleri desteklemez. |
 | [CA1408: AutoDual ClassInterfaceType kullanma](../code-quality/ca1408.md) | Çift arabirim kullanan türler, belirli bir arabirim düzenine bağlanmak için istemcileri etkinleştirir. Gelecek sürümdeki değişiklikler, türün düzeni veya bazı temel türler, arayüze bağlanan COM istemcilerini kesintiye uğratır. Varsayılan olarak, ClassInterfaceAttribute özniteliği belirtilmezse, salt dağıtılan arabirim kullanılır. |
 | [CA1409: Com görünebilir türler oluşturulabilmelidir](../code-quality/ca1409.md) | Özellikle COM görünür olarak işaretlenmiş bir başvuru türü, parametreli ortak kurucu içeriyorsa ancak genel varsayılan (parametresiz) bir oluşturucuya sahip değildir. Genel varsayılan oluşturucu olmadan tür COM istemcileri tarafından oluşturulmamalıdır. |
