@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 474042f88b0bee90f2bdd61298e09c5fabfa122c
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
-ms.translationtype: MT
+ms.openlocfilehash: c99a8c08ff5969f09d2bcaae63eb4130d9813e78
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027559"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125344"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Yükleme ve bir güvenlik duvarı veya proxy sunucusunun arkasına Visual Studio ve Azure hizmetlerini kullanma
 
@@ -54,7 +54,7 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 | xamarin-downloads.azureedge.net | Android SDK paketleri indirme listesi konumu |
 | marketplace.visualstudio.com | Visual Studio uzantılarını indirme konumu |
 | \*. gallerycdn.vsassets.io  | Visual Studio uzantılarını indirme konumu |
-| VisualStudio.microsoft.com | Belge konumu |
+| visualstudio.microsoft.com | Belge konumu |
 | docs.microsoft.com | Belge konumu |
 | MSDN.microsoft.com | Belge konumu |
 | www\.microsoft.com | Belge konumu |
@@ -87,7 +87,7 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 
 ### <a name="urls-to-add-to-an-allow-list-and-ports-and-protocols-to-open"></a>Açılacak bir izin verilenler listesine ve bağlantı noktalarına ve protokollere eklenecek URL 'Ler
 
-Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hizmetlerini kullanırken ihtiyacınız olan her şeye erişiminizin olduğundan emin olmak için, bir izin verilenler listesine eklemeniz gereken URL 'Ler ve açmak isteyebileceğiniz bağlantı noktaları ve protokoller aşağıda verilmiştir.
+Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hizmetlerini kullanırken istediğiniz her şeye erişiminizin olduğundan emin olmak için, bir izin verilenler listesine eklemeniz gereken URL 'Ler ve açmak isteyebileceğiniz bağlantı noktaları ve protokoller aşağıda verilmiştir.
 
 | Hizmet veya senaryo | DNS uç noktası | Protokol | Bağlantı noktası | Açıklama |
 | - | - | - | - | - |
@@ -108,7 +108,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | GitHub depo bilgilerini | api.github.com | HTTPS | 443 | Bower paketlerini hakkında ek bilgi almak için gerekli |
 | Web Lint | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
 | Cookiecutter<br>Explorer şablonu<br>keşif <br><br>Cookiecutter <br>Proje Gezgini<br> Oluşturma | api.github.com <br>RAW.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.Python.org | HTTPS | 443<br> | Önerilen akışımız ve GitHub depolarımızdan çevrimiçi şablonları bulmaya yönelik kullanılır <br><br>Bir cookiecutter Python paket Python paket dizinini (Pypı) tek seferlik bir isteğe bağlı yükleme gerektirir bir cookiecutter şablonundan bir proje oluşturmak için kullanılan |
-| Python paketi <br>keşif<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> project <br>templates | pypi.org<br> <br>pypi.Python.org <br>Bootstrap.pypa.io<br><br>go.microsoft.com | HTTPS | 443 | Pip paketleri için arama özelliğini sağlar.<br><br>Pip eksik olup olmadığını otomatik olarak yüklemek için kullanılan <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Projekt Klasifikace<br>-Kümeleme proje <br> -Projekt Regrese <br> -PyGame PyKinect kullanma <br> -Projekt Pyvot |
+| Python paketi <br>keşif<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> proje <br>şablonları | pypi.org<br> <br>pypi.Python.org <br>Bootstrap.pypa.io<br><br>go.microsoft.com | HTTPS | 443 | Pip paketleri için arama özelliğini sağlar.<br><br>Pip eksik olup olmadığını otomatik olarak yüklemek için kullanılan <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Projekt Klasifikace<br>-Kümeleme proje <br> -Projekt Regrese <br> -PyGame PyKinect kullanma <br> -Projekt Pyvot |
 | Office web <br>eklentisi <br> Bildirim <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | HTTPS | 443 | Office web eklentileri için bildirimleri doğrulamak için kullanılır |
 | SharePoint ve <br>Office eklentileri | SharePoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | HTTPS | 443 | SharePoint Online ve Office 365 ' e SharePoint ve Office eklentilerini yayımlamak ve test etmek için kullanılır |
 | İş Akışı Yöneticisi <br>Test hizmeti<br> Host | | http | 12292 | SharePoint eklentileri iş akışları ile test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
@@ -118,7 +118,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Güncelleştirilmiş web yayımlama araçları <br>denetimler ve uzantısı <br>Önerileri | marketplace.visualstudio.com | HTTPS | 443 | İçin kullanılabilirliğini denetlemek için kullanılan güncelleştirme araçları yayımlayın. Devre dışı bırakılırsa, olası bir web yayımlama uzantısı önerilen görünmeyebilir |
 | Güncelleştirilmiş bir Azure kaynak <br>Uç nokta bilgileri oluşturma | \*.blob.core.windows.net | HTTPS | 443 | Azure kaynaklarının oluşturulmasını belirli Azure Hizmetleri için kullanılan uç noktalarını güncelleştirmek için kullanılır. Devre dışı bırakılırsa, en son indirilen veya yerleşik uç noktasında konumlar yerine kullanılır |
 | Uzaktan hata ayıklama ve <br>Uzak profil oluşturma <br>Azure Web siteleri | &#42;. cloudapp.net <br> &#42;. azurewebsites.net | | 4022 | Azure Web Siteleri'nde uzaktan hata ayıklayıcıyı eklemek için kullanılır. Devre dışı bırakılırsa, Azure Web Siteleri'nde uzaktan hata ayıklayıcı iliştirmek çalışmaz |
-| Active Directory <br>Graf | Graph.Windows.NET | HTTPS | 443 | Yeni Azure Active Directory uygulamaları sağlamak için kullanılır. Ayrıca Office 365 MSGraph - bağlı hizmet sağlayıcısı tarafından kullanılan |
+| Active Directory <br>Graph | Graph.Windows.NET | HTTPS | 443 | Yeni Azure Active Directory uygulamaları sağlamak için kullanılır. Ayrıca Office 365 MSGraph - bağlı hizmet sağlayıcısı tarafından kullanılan |
 | Azure İşlevleri <br>CLI güncelleştirme <br>İşaretli | functionscdn.azureedge.net | HTTPS | 443 | Azure işlevleri CLI'ın güncelleştirilmiş sürümlerini denetlemek için kullanılır. Devre dışı bırakılırsa, önbelleğe alınmış kopyasını (veya Azure işlevleri bileşen tarafından gerçekleştirilen kopyalama) CLI'yı yerine kullanılır |
 | Cordova | npmjs.org<br>gradle.org | HTTP/s | 80/443 | HTTP kullanılan Gradle derleme sırasında; indirmeleri için HTTPS, Cordova eklentileri projelerinde dahil etmek için kullanılır |
 | Cloud explorer | 1. &#60;clusterendpoint&#62; <br>Service Fabric <br>2. &#60;yönetim uç noktası&#62;<br>Genel bulut üs <br>3. &#60;graph uç noktası&#62;<br>Genel bulut üs<br>4. &#60;depolama hesabınızın uç noktası&#62;<br>Depolama düğümleri <br>5. &#60;azure portalı URL'leri&#62;<br>Genel bulut üs <br>6. &#60;anahtar kasası uç noktaları&#62; <br>Azure Resource Manager VM düğümleri<br>7. &#60;PublicIPAddressOfCluster&#62;<br>Service Fabric uzaktan hata ayıklama ve ETW izlemelerini | <br>1. https<br>2. https<br>3. https<br>4. https<br>5. https<br>6. https<br>7: tcp | 1. 19080<br>2. 443 <br>3. 443 <br>4. 443 <br>5. 443 <br>6. 443 <br>7. dinamik | 1. örnek: test12.eastus.cloudapp.com<br>2. abonelikleri alır ve Azure kaynaklarını alır/yönetir<br>3. Azure Stack abonelikleri alır<br>4. depolama kaynaklarını yönetir (örnek: mystorageaccount.blob.core.windows.net)<br>5. "portalda aç" bağlam menü seçeneği (Azure portal bir kaynak açar)<br>6. VM hata ayıklaması için Anahtar Kasası oluşturur ve kullanır (örnek: myvault.vault.azure.net) <br><br>7. bağlantı noktası bloğunu kümedeki düğümlerin sayısına ve kullanılabilir bağlantı noktalarına göre dinamik olarak ayırır. <br><br>Bir bağlantı noktası bloğu, en az 10 bağlantı noktaları ile düğüm sayısını üç kez almaya çalışacaktır.<br><br>Akış izlemeler için 810 bağlantı noktası bloğu alma denemesi yapılır. Bu bağlantı noktası blok birini zaten kullanılıyor, girişiminde sonraki saatleri alma vb. için yapılır. (Bağlantı noktalarından 810 büyük olasılıkla kullanılan sonra Yük Dengeleyici boş.) <br><br>Benzer şekilde, hata ayıklama için bağlantı noktaları blokları dört kümesini ayrılmıştır: <br>-connectorPort: 30398, <br>-forwarderPort: 31398, <br>-forwarderPortx86: 31399,<br>-fileUploadPort: 32398<br> |
@@ -138,7 +138,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Hata Ayıklayıcısı | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/OneCore.exe smon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.commsdl.microsoft.com/download/symbols | HTTPS | 443 | 1. <br>SSH üzerinden UNIX/MacOS 'ta .NET Core hata ayıklama için hata ayıklayıcı bitlerini indirmek için kullanılır <br><br>2. <br>Uzak Windows Docker kapsayıcısı hata ayıklaması için hata ayıklayıcı bitlerini indirmek için kullanılır<br><br> 3. .NET Framework kaynak adımlaması için kullanılır <br><br> 4. <br>(Kullanıcı tarafından opts) Nuget.org symbol Server 'da yayınlanan sembolleri indirmek için kullanılır.<br><br> 5. (Kullanıcı opvaları) MS sembolleri ve ikili dosyaları indirmek için kullanılıyorsa, dökümdeki yönetilen kodda hata ayıklama için de gerekli olabilir |
 | Visual Studio Team Services| \*. online.visualstudio.com | HTTPS | 443 | Visual Studio Online API 'Lerini çağırmak için kullanılır |
 | Xamarin Android uygulama yayımlama | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | HTTPS | 443 | Xamarin Android uygulamalarını doğrudan Visual Studio 'dan yayınlamak/karşıya yüklemek için Google Play Store hizmetiyle etkileşim kurmak için kullanılır. |
-| Azure Container Kayıt Defteri | *. azurecr.io | HTTPS | 443 | CICD ardışık düzenleri yapılandırması için Azure 'da barındırılan kapsayıcı kayıt defterlerine erişin |
+| Azure Container Registry | *. azurecr.io | HTTPS | 443 | CICD ardışık düzenleri yapılandırması için Azure 'da barındırılan kapsayıcı kayıt defterlerine erişin |
 | | | | | |
 
 ## <a name="troubleshoot-network-related-errors"></a>Ağ ile ilgili hataları giderme

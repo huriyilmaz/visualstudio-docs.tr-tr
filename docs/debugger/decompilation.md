@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: ffd5f2e4bfc13f79b519fbdf9b3cf517793cd324
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: 5087c439533aa447708d0f1bfae653054fd16089
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091935"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144780"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Hata ayıklama sırasında .NET derlemelerinden kaynak kodu oluşturma
 
@@ -80,8 +80,27 @@ Derleyici iyileştirmeleri kullanılarak derlenen bir derlemeden derlenen kodda 
 - Kesme noktaları her zaman eşleşen kaynak konumunu bağlamayabilir.
 - Adımlamayı her zaman doğru konuma ilerlemeyebilir.
 - Yerel değişkenler doğru adlara sahip olamaz.
+- Bazı değişkenler, değerlendirme için kullanılamayabilir.
 
 GitHub sorunundan daha fazla ayrıntı bulunabilir: [Ichsarpcompiler. vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901).
+
+### <a name="decompilation-reliability"></a>Derlemeyi kaldırma güvenilirliği
+
+Bir dizi derleme girişiminin görece küçük bir yüzdesi hata oluşmasına neden olabilir. Bunun nedeni ılspy 'da dizi noktası null başvuru hatasıdır.  Bu sorunları ayırarak ve derleme girişimini sorunsuz bir şekilde başarısız hale getirerek hatayı hafifledik.
+
+GitHub sorunundan daha fazla ayrıntı bulunabilir: [Ichsarpcompiler. vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901).
+
+### <a name="limitations-with-async-code"></a>Zaman uyumsuz kodlu sınırlamalar
+
+Zaman uyumsuz/await kod desenleriyle derlemeyi kaldırma modüllerinden sonuçlar tamamlanmamış veya tamamen başarısız olabilir. Zaman uyumsuz/await ve yield durumu-makinelerin ılspy uygulamasının yalnızca kısmen uygulanmış olması. 
+
+GitHub sorunu: [pdb Oluşturucu durumu](https://github.com/icsharpcode/ILSpy/issues/1422)' nda daha fazla ayrıntı bulunabilir.
+
+### <a name="just-my-code"></a>Yalnızca Kendi Kodum
+
+[Yalnızca kendi kodum (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) ayarları, Visual Studio 'nun sistem, çerçeve, kitaplık ve diğer kullanıcı olmayan çağrılar üzerinde ilermasına olanak tanır. Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıcının kodum (Kullanıcı kodu) olarak hangi kod modüllerine davranılması gerektiğini gösterir.
+
+En iyileştirilmiş veya yayın modüllerinin derlenmesi Kullanıcı olmayan kod üretir. Hata ayıklayıcı, derlenmiş Kullanıcı olmayan kodunuzda kaparsa **kaynak** penceresi görünmez. Yalnızca kendi kodum devre dışı bırakmak için **araçlar** > **Seçenekler** ' e gidin (veya **hata ayıklama** > **seçenekleri**) > **hata ayıklama** > **genel**' **i kaldırın.**
 
 ### <a name="extracted-sources"></a>Ayıklanan kaynaklar
 
