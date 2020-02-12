@@ -382,6 +382,8 @@
                   href: ide/reference/invert-conditional-logical.md
                 - name: if deyimini tersine çevirme
                   href: ide/reference/invert-if-statement.md
+                - name: Statik yerel işlev yeniden düzenleme seçenekleri
+                  href: ide/reference/static-local-function-refactor-options.md
                 - name: Bildirimi başvurunun yanına taşıma
                   href: ide/reference/move-declaration-near-reference.md
                 - name: Türü eşleşen dosyaya taşı
