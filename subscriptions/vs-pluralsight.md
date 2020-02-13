@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 2e57d3b1ede0320cdf0766e3b4ab64d67b16b808
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: f76db59053451ca58890ec055295758add482725
+ms.sourcegitcommit: 41f4f55af0176bed1ed949426929d4bdb53105a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706994"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77192422"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -54,16 +54,16 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
 
 ## <a name="eligibility"></a>Önceliği
 
-|                          Abonelik düzeyi                          |     Kanallar      |    Faydası    |   Yenilenebilir?   |
+|                          Abonelik düzeyi                          |     Kanallar      |    Avantaj    |   Yenilenebilir?   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
 |          Visual Studio Enterprise (Standart)           | VL, Azure, perakende |   6 ay    | Evet<sup>2</sup> |
 |          GitHub Enterprise ile Visual Studio Enterprise          | VL  |   6 ay    | Evet<sup>2</sup> |
 |         Visual Studio Professional (Standart)          | VL, Azure, perakende |   3 ay    | Evet<sup>2</sup> |
 |         GitHub Enterprise ile Visual Studio Professional          | VL  |   3 ay    | Evet<sup>2</sup> |
-|              Visual Studio Test Professional (Standart)              |    VL, perakende     |   3 ay    | Evet<sup>2</sup>  |
-|                      MSDN Platformları (Standart)                       |    VL, perakende     |   3 ay    | Evet<sup>2</sup>  |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Yok |       Yok       |
-|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Yok |       Yok       |
+|              Visual Studio Test Professional (Standart)              |    VL, perakende     |   Kullanılamaz    | NA  |
+|                      MSDN Platformları (Standart)                       |    VL, perakende     |   Kullanılamaz    | NA  |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Kullanılamaz |       NA       |
+|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Kullanılamaz |       NA       |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services Geliştirici, mct Software & Service, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD), Microsoft iş ortağı ağı (MPN), FTE, Imagine.*
