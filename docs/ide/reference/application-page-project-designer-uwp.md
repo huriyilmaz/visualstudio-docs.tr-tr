@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 85ee317b315f8f8d21f5a2d97d91a9950fd395f9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3c8f72d4e1d1caeacd5dfefef5310dc2cef83b92
+ms.sourcegitcommit: 83d9f2b56955f7a5267a1438bb28ef804775f88b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114399"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173084"
 ---
 # <a name="application-property-page-uwp-projects"></a>Uygulama özellik sayfası (UWP projeleri)
 
@@ -38,7 +38,7 @@ Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.Proj
 
 **Derleme bilgileri**&mdash;bu düğme seçildiğinde [derleme bilgileri iletişim kutusu](../../ide/reference/assembly-information-dialog-box.md)görüntülenir.
 
-**Paket bildirimi**&mdash;bu düğme seçildiğinde bildirim Tasarımcısı açılır. Bildirim tasarımcısına Ayrıca **Çözüm Gezgini** _Package. appxmanifest_ dosyası seçilerek de erişilebilir. Daha fazla bilgi için bkz. [bildirim Tasarımcısı ile paket yapılandırma](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
+**Paket bildirimi**&mdash;bu düğme seçildiğinde bildirim Tasarımcısı açılır. Bildirim tasarımcısına Ayrıca **Çözüm Gezgini** _Package. appxmanifest_ dosyası seçilerek de erişilebilir. Daha fazla bilgi için bkz. [bildirim Tasarımcısı ile paket yapılandırma](/windows/msix/package/packaging-uwp-apps#configure-your-project).
 
 ## <a name="targeting-section"></a>Hedefleme bölümü
 
