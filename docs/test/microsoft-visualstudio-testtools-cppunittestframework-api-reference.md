@@ -2,17 +2,17 @@
 title: Microsoft. VisualStudio. TestTools. CppUnitTestFramework API 'SI
 ms.date: 09/27/2019
 ms.topic: reference
-ms.author: mblome
+ms.author: corob
 manager: jillfra
 ms.workload:
 - multiple
-author: mikeblome
-ms.openlocfilehash: 327aa6f79f7eda6ecc3f1c0a7b2576a87287b1c0
-ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
+author: corob-msft
+ms.openlocfilehash: 8a71b6d406b7507930a5d1a7ce593a296220d5a6
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720508"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278652"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu
 
@@ -22,7 +22,7 @@ Bu konu, `Microsoft::VisualStudio::CppUnitTestFramework` ad alanının ortak üy
 
 Üst bilgi ve LIB yolları yerel bir test projesinde otomatik olarak yapılandırılır.
 
-## <a name="In_this_topic"></a> Bu konudaki
+## <a name="In_this_topic"></a>Bu konuda
 
 [CppUnitTest. h](#cppUnitTest_h)
 
@@ -640,5 +640,5 @@ public:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birim testi kod](../test/unit-test-your-code.md)
-- [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md)
+- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [C/için birim testleri yazmaC++](writing-unit-tests-for-c-cpp.md)

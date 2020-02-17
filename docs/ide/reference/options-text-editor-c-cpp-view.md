@@ -6,17 +6,17 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.View
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.View
 - VS.ToolsOptionsPages.Text_Editor.C\C++.View
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b867d81e4f0719ebf239bc89a6200fe833bc27b1
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: 95963245b15828f374e9812a9bb09d015b21a94b
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919030"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278687"
 ---
 # <a name="options-text-editor-cc-view"></a>Seçenekler, metin düzenleyici, C/C++, görünüm
 

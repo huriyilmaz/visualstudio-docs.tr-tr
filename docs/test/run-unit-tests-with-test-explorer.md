@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2a0b9a69d035db5b1d2d638d97995613b50def0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1b183c1939ed48351bc15dacff31c85af46286ad
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585450"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278521"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -23,12 +23,12 @@ Visual Studio 'dan veya üçüncü taraf birim testi projelerinden birim testler
 
 Visual Studio hem yönetilen hem de yerel kod için Microsoft birim testi çerçeveleri içerir. Ancak, test Gezgini, test Gezgini bağdaştırıcısı uygulayan herhangi bir birim test çerçevesini de çalıştırabilir. Üçüncü taraf birim testi çerçevelerini yükleme hakkında daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçeveleri yükleme](../test/install-third-party-unit-test-frameworks.md)
 
-**Test Gezgini** , bir çözümde ve üretim kodu projelerinin parçası olan test sınıflarından birden çok test projesinin testlerini çalıştırabilir. Test projeleri, farklı birim testi çerçeveleri kullanabilir. Test altındaki kod .NET için yazıldığında, hedef kodun dilinden bağımsız olarak, test projesi de .NET ' i hedefleyen herhangi bir dilde yazılabilir. Yerel C/C++ kod projeleri, bir C++ birim test çerçevesi kullanılarak test edilmelidir. Daha fazla bilgi için [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
+**Test Gezgini** , bir çözümde ve üretim kodu projelerinin parçası olan test sınıflarından birden çok test projesinin testlerini çalıştırabilir. Test projeleri, farklı birim testi çerçeveleri kullanabilir. Test altındaki kod .NET için yazıldığında, hedef kodun dilinden bağımsız olarak, test projesi de .NET ' i hedefleyen herhangi bir dilde yazılabilir. Yerel C/C++ kod projeleri, bir C++ birim test çerçevesi kullanılarak test edilmelidir. Daha fazla bilgi için bkz. [C/C++Için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
 
 ## <a name="run-tests-in-test-explorer"></a>Testleri Test Gezgini'nde çalıştırma
 
 
-Test projesi oluşturduğunuzda, testler Test Gezgini'nde görünür. Test Gezgini görünür değilse seçin **Test** Visual Studio menüsünde **Windows**ve ardından **Test Gezgini**.
+Test projesi oluşturduğunuzda, testler Test Gezgini'nde görünür. Test Gezgini görünür değilse, Visual Studio menüsünden **Test** ' i seçin, **Windows**' u ve ardından **Test Gezgini**' ni seçin.
 
 
 ::: moniker range="vs-2017"
@@ -39,7 +39,7 @@ Test projesi oluşturduğunuzda, testler Test Gezgini'nde görünür. Test Gezgi
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-Çalıştırma, yazma ve testlerinizi yeniden çalıştırın, Test Gezgini sonuçları varsayılan gruplarında görüntüler **başarısız testler**, **başarılı testler**, **Atlanan testler** ve  **Testleri Çalıştır**. Test Gezgini'nin testlerinizi gruplandırma şeklini değiştirebilirsiniz.
+Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, test Gezgini sonuçları **başarısız testler**, **başarılı**testler, **Atlanan** testler ve **çalıştırma**testleri için varsayılan gruplar halinde görüntüler. Test Gezgini'nin testlerinizi gruplandırma şeklini değiştirebilirsiniz.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, test Gezgini sonuçları varsayılan bir **Proje**, **ad alanı**ve **sınıf**gruplandırmasında görüntüler. Test Gezgini 'nin testlerinizi gruplandırma şeklini değiştirebilirsiniz.
@@ -59,7 +59,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 ::: moniker range="vs-2017"
 Tüm testler, Çözümdeki tüm testleri bir grup veya seçtiğiniz test kümesini çalıştırabilirsiniz. Aşağıdakilerden birini yapın:
 
-- Bir çözümdeki tüm testleri çalıştırmak için tercih **tümünü Çalıştır**.
+- Bir Çözümdeki tüm testleri çalıştırmak için **Tümünü Çalıştır**' ı seçin.
 
 - Varsayılan bir gruptaki tüm testleri çalıştırmak için **Çalıştır** ' ı seçin ve ardından menüdeki grubu seçin.
 
@@ -96,7 +96,7 @@ Her yerel derlemeden sonra birim testlerinizi çalıştırmak için, test Gezgin
 
 ## <a name="view-test-results"></a>Test sonuçlarını görüntüle
 
-Test Gezgini çalıştırma, yazma ve testlerinizi yeniden çalıştırın gibi sonuçları gruplarında görüntüler. **başarısız testler**, **başarılı testler**, **Atlanan testler** ve **çalıştırma Testleri**. Test Gezgini 'nin alt veya tarafındaki Ayrıntılar bölmesi, Test çalıştırmasının bir özetini görüntüler.
+Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, test Gezgini sonuçları **başarısız testler**, **başarılı**testler, **Atlanan testler** ve **çalıştırma testleri**gruplarında görüntüler. Test Gezgini 'nin alt veya tarafındaki Ayrıntılar bölmesi, Test çalıştırmasının bir özetini görüntüler.
 
 ### <a name="view-test-details"></a>Test ayrıntılarını görüntüle
 
@@ -153,19 +153,19 @@ Hiyerarşi ve gruplama düzeylerini **tanımlayabilir ve sonra** tercih ettiğin
 ::: moniker range="vs-2017"
 |Grup|Açıklama|
 |-|-----------------|
-|**Süresi**|Yürütme zamanına göre test grupları: **hızlı**, **Orta**ve **yavaş**.|
+|**Sürenin**|Yürütme zamanına göre test grupları: **hızlı**, **Orta**ve **yavaş**.|
 |**Sonucu**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Tanımladığınız kategori/değer çiftlerine göre test grupları. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
-|**Project**|Projeler adına göre test grupları.|
+|**Proje**|Projeler adına göre test grupları.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 |Grup|Açıklama|
 |-|-----------------|
-|**Süresi**|Testleri yürütme zamanına göre gruplandırır: **hızlı**, **Orta**ve **yavaş**.|
+|**Sürenin**|Testleri yürütme zamanına göre gruplandırır: **hızlı**, **Orta**ve **yavaş**.|
 |**Durum**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**, **çalıştırılmadı**|
 |**Hedef Çerçeve** | Testleri, projeleri hedeflerine göre gruplandırır |
-|**Namespace**|Testleri içerilen ad alanına göre gruplandırır.|
-|**Project**|Testleri içeren proje tarafından gruplandırır.|
+|**Uzayına**|Testleri içerilen ad alanına göre gruplandırır.|
+|**Proje**|Testleri içeren proje tarafından gruplandırır.|
 |**Sınıfı**|Testleri içerilen sınıfa göre gruplandırır.|
 ::: moniker-end
 
@@ -236,7 +236,7 @@ Sütunlar filtrelenebilir, sıralanabilir ve yeniden düzenlenebilir.
 
 * Sütunların sırasını değiştirmek için, bir sütun başlığına tıklayın ve sola veya sağa sürükleyin.
 
-* Bir sütunu sıralamak için sütun başlığına tıklayın. Her sütun sıralanamaz. Ayrıca, **SHIFT** tuşunu basılı tutarak ve ek bir sütun başlığına tıklayarak ikincil bir sütuna göre sıralama yapabilirsiniz.
+* Bir sütunu sıralamak için sütun başlığına tıklayın. Tüm sütunlar sıralanmayabilir. Ayrıca, **SHIFT** tuşunu basılı tutarak ve ek bir sütun başlığına tıklayarak ikincil bir sütuna göre sıralama yapabilirsiniz.
 
   ![Sütun sıralaması](../test/media/vs-2019/test-explorer-sort-column-16-2.png)
 ::: moniker-end
@@ -269,11 +269,11 @@ Farklı ölçütlere göre filtrelemek için:
 |Leyicisini|Açıklama|
 |-|-----------------|
 |**Nitelik**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
-|**Project**|Test projesi adlarını eşleşmeler için arar.|
+|**Proje**|Test projesi adlarını eşleşmeler için arar.|
 |**Hata Iletisi**|Eşleşmeler için başarısız Onaylamalar tarafından döndürülen Kullanıcı tanımlı hata iletilerini arar.|
 |**Dosya yolu**|Test kaynak dosyalarının tam dosya adını eşleşmeler için arar.|
 |**Tam nitelikli ad**|Test ad alanları, sınıflar ve yöntemlerin tam adını eşleşmeler için arar.|
-|**Output**|Standart çıkış (STDOUT) veya standart hata (stderr) ile yazılan Kullanıcı tanımlı hata iletilerini arar. Çıkış mesajlarını belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
+|**Çıktı**|Standart çıkış (STDOUT) veya standart hata (stderr) ile yazılan Kullanıcı tanımlı hata iletilerini arar. Çıkış mesajlarını belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Sonucu**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
@@ -282,9 +282,9 @@ Farklı ölçütlere göre filtrelemek için:
 |**Durum**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Tam nitelikli ad**|Test ad alanları, sınıflar ve yöntemlerin tam adını eşleşmeler için arar.|
-|**Project**|Test projesi adlarını eşleşmeler için arar.|
+|**Proje**|Test projesi adlarını eşleşmeler için arar.|
 |**Hedef Çerçeve**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
-|**Namespace**|Test ad alanlarını eşleşmeler için arar.|
+|**Uzayına**|Test ad alanlarını eşleşmeler için arar.|
 |**Sınıfı**|Test sınıfları adlarını eşleşmeler için arar.|
 ::: moniker-end
 
@@ -311,7 +311,7 @@ Test Gezgini, testleriniz için hata ayıklama oturumu başlatmak için kullanab
 
 ### <a name="diagnose-test-method-performance-issues"></a>Test yöntemi performans sorunlarını tanılama
 
-Bir test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil seçili test** ' i seçin. Bkz. [Performans Gezgini](../profiling/performance-explorer.md).
+Bir test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil seçili test** ' i seçin. Bkz. [izleme profili oluşturma raporu](../profiling/understanding-instrumentation-data-values.md?view=vs-2017).
 
 ### <a name="analyze-unit-test-code-coverage"></a>Birim testi kod kapsamını analiz etme
 
@@ -337,9 +337,9 @@ Bir çözümde test yöntemleri için kod kapsamını çalıştırmak için:
 
 ::: moniker-end
 
-**Kod kapsamı sonuçlarını** penceresi satır, işlevi, sınıf, ad alanı ve modül tarafından uygulanan ürünün kodu bloklarının yüzdesini görüntüler.
+**Kod kapsamı sonuçları** penceresi, satır, işlev, sınıf, ad alanı ve modül tarafından uygulanan ürün kodu bloklarının yüzdesini görüntüler.
 
-Daha fazla bilgi için [ne kadar kodun test edildiğini belirlemek için kod kapsamı kullanın](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Daha fazla bilgi için bkz. kod [kapsamını kullanarak ne kadar kodun test edildiğini belirleme](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ## <a name="test-shortcuts"></a>Test kısayolları
 
@@ -357,6 +357,6 @@ Testler test Gezgini 'nden, test üzerindeki kod düzenleyicisine sağ tıklayı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birim testi kod](../test/unit-test-your-code.md)
+- [Kodunuzun birim testi](../test/unit-test-your-code.md)
 - [64 bitlik bir işlem olarak birim testi çalıştırma](../test/run-a-unit-test-as-a-64-bit-process.md)
 - [Test Gezgini Hakkında SSS](test-explorer-faq.md)

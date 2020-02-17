@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: __Analysis_assume kullanarak ek kod bilgileri belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: __analysis_assume kullanarak ek kod bilgileri belirtme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - __analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
 caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: dfae7d858dbb462ec6a93de9eb63b1b3b2a711ab
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f2f18c9284ec96de7a7b8663aff485962d194282
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685816"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277979"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>Nasıl yapılır: __analysis_assume Kullanarak Ek Kod Bilgileri Belirtme
+# <a name="how-to-specify-additional-code-information-by-using-__analysis_assume"></a>Nasıl yapılır: __analysis_assume Kullanarak Ek Kod Bilgileri Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Analiz işlemine yardımcı olmak ve Uyarıları azaltmak C/C++ kodu için kod analizi aracı için ipuçları sağlar. Ek bilgi sağlamak için aşağıdaki işlevi kullanın:  
+Analiz işleminin ve uyarıların azaltılmasına yardımcı olacak C/C++ kod için kod analizi aracına yönelik ipuçları sağlayabilirsiniz. Ek bilgi sağlamak için aşağıdaki işlevi kullanın:  
   
  `__analysis_assume(`  `expr`  `)`  
   
- `expr` -herhangi bir ifade doğru olarak değerlendirilebilmesi için kabul edilir.  
+ `expr`-doğru olarak değerlendirilmesi için kabul edilen herhangi bir ifade.  
   
- Kod Analizi aracı ifade tarafından temsil edilen koşul true işlevi burada görünür ve ifade, örneğin, bir değişkene atama ile değiştirilinceye kadar doğrudur noktada olduğunu varsayar.  
+ Kod Analizi Aracı, ifade tarafından temsil edilen koşulun işlevin göründüğü noktada doğru olduğunu varsayar ve örneğin bir değişkene atama yaparak ifade değiştirilene kadar doğru kalır.  
   
 > [!NOTE]
-> `__analysis_assume` kod iyileştirme etkilemez. Kod Analizi aracı dışında `__analysis_assume` bir İşlemsiz tanımlanır.  
+> `__analysis_assume` kod iyileştirmeyi etkilemez. Kod Analizi Aracı dışında `__analysis_assume`, işlem olmadan tanımlanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `__analysis_assume` Kod Analizi uyarısı düzeltmek için [C6388](../code-quality/c6388.md):  
+ Aşağıdaki kod, kod analizi Uyarı [C6388](../code-quality/c6388.md)düzeltmek için `__analysis_assume` kullanır:  
   
 ```  
 #include<windows.h>  

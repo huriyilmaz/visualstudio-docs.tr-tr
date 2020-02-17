@@ -5,8 +5,8 @@ ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild logs"
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 dev_langs:
 - CSharp
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
-ms.openlocfilehash: 8e302814571a5f7f37cfe02b2750f57dacb54c25
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 07b2c5e941d31ab1be853f9a89af94462329bdf2
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461488"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278801"
 ---
 # <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>MSBuild sorunları için sorun giderme ve günlük oluşturma
 
@@ -106,7 +106,7 @@ Visual Studio IDE 'de oluşturuyorsanız (ayrıntılı çıkış penceresi ayrı
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
     ```
 
-    veya
+    or
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
@@ -116,15 +116,15 @@ MSBuild 'i çalıştırdığınız dizinde MSBuild. binlog dosyası oluşturulur
 
 ## <a name="create-a-detailed-log"></a>Ayrıntılı günlük oluşturma
 
-1. Visual Studio ana menüsünde, **Araçlar** > **Seçenekler** > **Projeler ve çözümler** >**derleme ve çalıştırma**' ya gidin.
-1. **MSBuild proje derlemesi ayrıntı düzeyini** her iki Birleşik giriş kutusunda **ayrıntılı** olarak ayarlayın. En üstteki bir denetim **Çıkış penceresi** ayrıntı düzeyi oluşturur ve ikinci bir denetim derleme sırasında her projenin ara dizininde \<oluşturulan\>ProjectName. log dosyasında ayrıntı oluşturur.
+1. Visual Studio ana menüsünde, **derleme ve çalıştırma** >**araçlar** > **Seçenekler** > **Projeler ve çözümler** ' e gidin.
+1. **MSBuild proje derlemesi ayrıntı düzeyini** her iki Birleşik giriş kutusunda **ayrıntılı** olarak ayarlayın. En üstteki bir denetim **Çıkış penceresi** ayrıntı düzeyi oluşturur ve ikinci bir denetim derleme sırasında her bir projenin ara dizininde oluşturulan \<ProjectName\>. log dosyasında ayrıntı oluşturur.
 2. Visual Studio Geliştirici komut isteminden, şu komutlardan birini girerek gerçek yol ve yapılandırma değerlerinizi değiştirin:
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
     ```
 
-    veya
+    or
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj

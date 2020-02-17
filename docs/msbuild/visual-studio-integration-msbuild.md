@@ -20,30 +20,30 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1ddb8bdbc913a72791144d5e9d29d206712a3d6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9a48725c0877110e969a98deb8c03b3181d31153
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594428"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277705"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio tümleştirmesi (MSBuild)
-Visual Studio ana [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] yönetilen projeleri yüklemek ve derlemek için. Çünkü [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesi, neredeyse her her proje için sorumlu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] biçimi başarıyla kullanılabilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]projeyi farklı bir araç ile yazılmış olsa ve özelleştirilmiş bir yapı işlemi olsa bile.
+Visual Studio, yönetilen projeleri yüklemek ve derlemek için [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] barındırır. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projeden sorumlu olduğundan, proje farklı bir araç tarafından yazılmış ve özelleştirilmiş bir yapı işlemine sahip olsa bile, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] biçimindeki neredeyse tüm projeler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]başarılı bir şekilde kullanılabilir.
 
- Bu makalede belirli yönlerini [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]'s [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] barındıran sayılacağı projeleri özelleştirirken ve *.targets* yüklemek ve derlemek istediğiniz dosyaları [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Bu emin olmanıza yardımcı olacak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IntelliSense ve iş özel projenizde hata ayıklama gibi özellikleri.
+ Bu makalede, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]yüklemek ve derlemek istediğiniz projeleri ve *. targets* dosyalarını özelleştirirken göz önünde bulundurmanız gereken [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)][!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] barındırmanın belirli yönleri açıklanmaktadır. Bunlar, IntelliSense ve hata ayıklama gibi özelliklerin özel projeniz için çalışması için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] emin olmanıza yardımcı olur.
 
- C++ projeleri hakkında daha fazla bilgi için bkz. [proje dosyalarını](/cpp/build/reference/project-files).
+ Projeler hakkında C++ daha fazla bilgi için bkz. [proje dosyaları](/cpp/build/reference/project-files).
 
 ## <a name="project-file-name-extensions"></a>Proje dosya adı uzantıları
- *MSBuild.exe* desenle eşleşen proje dosya adı uzantısını tanır *.\* Proj*. Ancak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yalnızca bir alt kümesini projeyi yükleyecek olan dile özgü proje sistemini belirler bu proje dosya adı uzantılarını tanır. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir dilden yok [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] tabanlı bir proje sistemi.
+ *MSBuild. exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *.\*proj*. Ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], bu proje dosya adı uzantılarının yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bir alt kümesini tanır. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], dilden bağımsız [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] tabanlı proje sistemine sahip değildir.
 
- Örneğin, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] proje sistemi yüklenirken *.csproj* dosyaları, ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklemek mümkün değil bir *.xxproj* dosya. Bir rastgele dil içindeki kaynak dosyaları için bir proje dosyası aynı uzantıya kullanmalısınız [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] proje dosyaları içinde yüklenen [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ Örneğin, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] proje sistemi *. csproj* dosyalarını yükler, ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir *. xxproj* dosyasını yükleyemez. Rastgele bir dildeki kaynak dosyaları için bir proje dosyası, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]yüklenecek proje dosyaları [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aynı uzantıyı kullanmalıdır.
 
 ## <a name="well-known-target-names"></a>İyi bilinen hedef adları
- Tıklayarak **derleme** komutunu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projedeki varsayılan hedef yürütülecektir. Genellikle, bu hedef ayrıca adlı `Build`. Seçme **yeniden** veya **temiz** komut aynı ada sahip bir hedef proje yürütmek çalışır. Tıklayarak **Yayımla** adlı bir hedef yürütecektir `PublishOnly` projedeki.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] içindeki **Build** komutuna tıkladığınızda projede varsayılan hedef yürütülür. Genellikle, bu hedef de `Build`olarak adlandırılır. **Yeniden oluşturma** veya **Temizleme** komutunun seçilmesi, projede aynı ada sahip bir hedefi yürütmeye çalışır. **Yayımla** ' ya tıkladığınızda, projede `PublishOnly` adlı bir hedef yürütülür.
 
 ## <a name="configurations-and-platforms"></a>Yapılandırmalar ve platformlar
- Yapılandırmaları temsil edilir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projeleri özelliklere göre gruplandırılmış bir `PropertyGroup` öğesini içeren bir `Condition` özniteliği. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Proje yapılandırmaları ve görüntülemek için platformlar listesini oluşturmak için bu koşullara bakar. Bu listeyi başarıyla çıkarmak için koşulların aşağıdakine benzer bir biçimde olmalıdır:
+ Yapılandırmaların, bir `Condition` özniteliği içeren bir `PropertyGroup` öğesinde gruplanmış Özellikler tarafından [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projelerinde temsil edilir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], görüntülenecek proje yapılandırmalarının ve platformların bir listesini oluşturmak için bu koşullara bakar. Bu listeyi başarıyla çıkarmak için koşulların aşağıdakine benzer bir biçimde olmalıdır:
 
 ```xml
 Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "
@@ -51,10 +51,10 @@ Condition=" '$(Configuration)' == 'Release' " 
 Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' "
 ```
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] üzerindeki koşullara bakar `PropertyGroup`, `ItemGroup`, `Import`, özellik ve öğeler bu amaç için.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], bu amaçla `PropertyGroup`, `ItemGroup`, `Import`, özellik ve öğe öğelerinde yer alan koşullara bakar.
 
 ## <a name="additional-build-actions"></a>Ek yapı eylemleri
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir proje dosyasında öğesi türü adını değiştirmenize izin verir **derleme eylemi** özelliği **dosya özellikleri** penceresi. **Derleme**, **EmbeddedResource**, **içerik**, ve **hiçbiri** öğe türü adları herhangi diğer öğe türü adları içinde birlikte bu menüde her zaman listelenir projenizi. Her özel öğe türü adları her zaman bu menüde kullanılabilir emin olmak için adlandırılmış bir öğe türü adları ekleyebilirsiniz. `AvailableItemName`. Örneğin, aşağıdaki proje dosyanıza ekleyerek özel bir tür ekler **JScript** aktarmadan tüm projelerde bu menüye:
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], **dosya özellikleri** penceresinin **Build Action** özelliği ile bir projedeki bir dosyanın öğe türü adını değiştirmenize izin verir. **Derleme**, **EmbeddedResource**, **içerik**ve **none** öğe türü adları her zaman projenizde olan diğer öğe türü adlarıyla birlikte bu menüde listelenir. Bu menüde her zaman özel öğe türü adlarının kullanılabilir olduğundan emin olmak için, adları `AvailableItemName`adlı bir öğe türüne ekleyebilirsiniz. Örneğin, proje dosyanıza aşağıdakileri eklemek, özel tür **JScript** 'i içeri aktarılan tüm projeler için bu menüye ekler:
 
 ```xml
 <ItemGroup>
@@ -63,45 +63,45 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 ```
 
 > [!NOTE]
-> Bazı öğe türü adları özel [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ancak bu açılır menüde listelenmez.
+> Bazı öğe türü adları [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] için özeldir, ancak bu açılan listede listelenmez.
 
 ## <a name="in-process-compilers"></a>İşlem içi derleyiciler
- Mümkün olduğunda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] işlemde sürümünü kullanmayı dener [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] performansı artırmak için derleyici. ([!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]için geçerli değildir.) Bunun düzgün çalışması için aşağıdaki koşulların karşılanması gerekir:
+ Mümkün olduğunda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], daha yüksek performans için [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] derleyicisinin işlem içi sürümünü kullanmaya çalışacaktır. ([!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]için geçerli değildir.) Bunun düzgün çalışması için aşağıdaki koşulların karşılanması gerekir:
 
-- Proje bir hedef olmalıdır adında bir görev `Vbc` için [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeleri.
+- Projenin bir hedefinde, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeleri için `Vbc` adlı bir görev olmalıdır.
 
-- `UseHostCompilerIfAvailable` Görev parametresi ayarlanmalıdır true.
+- Görevin `UseHostCompilerIfAvailable` parametresi true olarak ayarlanmalıdır.
 
 ## <a name="design-time-intellisense"></a>Tasarım zamanı IntelliSense
- IntelliSense desteği almak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir derleme bir çıktı derlemesi üretmeden önce aşağıdaki koşulların karşılanması gerekir:
+ Bir derleme bir çıkış derlemesi oluşturmadan önce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IntelliSense desteğini almak için aşağıdaki koşulların karşılanması gerekir:
 
-- Adlı bir hedef olmalıdır `Compile`.
+- `Compile`adlı bir hedef olmalıdır.
 
-- Her iki `Compile` hedefi ya da bağımlılıklarından biri çağırmalıdır derleyici görevinin projesi için gibi `Csc` veya `Vbc`.
+- `Compile` hedefi ya da bağımlılıklarından biri, proje için `Csc` veya `Vbc`gibi derleyici görevini çağırmalıdır.
 
-- Her iki `Compile` hedefi ya da bağımlılıklarından biri derleyicinin IntelliSense, özellikle tüm başvurular için gereken tüm parametreleri almasını sağlamalıdır.
+- `Compile` hedefi veya bağımlılıklarından biri, derleyicinin IntelliSense için gereken tüm parametreleri, özellikle de tüm başvuruları almasına neden olmalıdır.
 
-- Listelenen koşulların [işlem içi derleyiciler](#in-process-compilers) bölüm sağlanmalıdır.
+- [Işlem içi derleyiciler](#in-process-compilers) bölümünde listelenen koşullar sağlanmalıdır.
 
-## <a name="build-solutions"></a>Çözümleri oluşturun
- İçinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], çözüm dosyası ve proje derleme sıralaması tarafından denetlenen [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kendisi. Bir çözüm derlerken *msbuild.exe* komut satırında [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] çözüm dosyasını ayrıştırır ve proje derlemelerini sıralar. Her iki durumda da projeler ayrı olarak bağımlılık sırasında oluşturulur ve projeden projeye başvurular geçirilmez. Buna karşılık, ne zaman tek tek projeler derlendikten ile *msbuild.exe*, projeden projeye başvurular geçiş.
+## <a name="build-solutions"></a>Çözüm oluşturma
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]içinde, çözüm dosyası ve proje derleme sıralaması [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kendisi tarafından denetlenir. Komut satırında *MSBuild. exe* ile bir çözüm oluştururken [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] çözüm dosyasını ayrıştırır ve proje yapılarını sıralar. Her iki durumda da projeler ayrı olarak bağımlılık sırasında oluşturulur ve projeden projeye başvurular geçirilmez. Buna karşılık, tek tek projeler *MSBuild. exe*ile oluşturulduğunda proje başvurularına proje başvurularına çapraz bir şekilde eklenir.
 
- İçinde derlerken [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], özellik `$(BuildingInsideVisualStudio)` ayarlanır `true`. Bu, projenizdeki kullanılabilir veya *.targets* neden farklı davrandığını derleme dosyaları.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]içinde derlerken, özellik `$(BuildingInsideVisualStudio)` `true`olarak ayarlanır. Bu, projede veya *. targets* dosyalarında, derleme 'in farklı davranmasına neden olacak şekilde kullanılabilir.
 
 ## <a name="display-properties-and-items"></a>Özellikleri ve öğeleri görüntüleme
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] belirli özellik adlarını ve değerlerini tanır. Örneğin, bir projede aşağıdaki özellik neden olacak **Windows uygulama** görünmesini **uygulama türü** kutusunda **Proje Tasarımcısı**.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] belirli özellik adlarını ve değerleri tanır. Örneğin, bir projedeki aşağıdaki özellik, **Windows uygulamasının** **Proje Tasarımcısı**'ndaki **uygulama türü** kutusunda görünmesine neden olur.
 
 ```xml
 <OutputType>WinExe</OutputType>
 ```
 
- Özellik değeri içinde düzenlenmiş **Proje Tasarımcısı** ve proje dosyasına kaydedilebilir. Böyle bir özellik elle düzenlemeye tarafından geçersiz bir değer belirtilmezse [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje yüklendiğinde bir uyarı gösterir ve geçersiz değeri varsayılan bir değerle değiştirin.
+ Özellik değeri **Proje tasarımcısında** düzenlenebilir ve proje dosyasına kaydedilebilir. Bu tür bir özelliğe el ile düzenleyerek geçersiz bir değer verilirse [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], proje yüklendiğinde bir uyarı gösterir ve geçersiz değeri varsayılan bir değerle değiştirir.
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Bazı özelliklerin varsayılan değerlerini anlar. Varsayılan olmayan değerleri sahip olmadıkları sürece bu özellik proje dosyasına kalıcı olmaz.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bazı özellikler için Varsayılanları anlamıştır. Varsayılan olmayan değerleri sahip olmadıkları sürece bu özellik proje dosyasına kalıcı olmaz.
 
- Rastgele adlara sahip özellikler içinde görüntülenmez [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Rastgele özellikleri değiştirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], proje dosyasını XML düzenleyicisinde açın ve bunları el ile düzenlemeniz gerekir. Daha fazla bilgi için [Visual Studio'daki proje dosyaları düzenleme](#edit-project-files-in-visual-studio) bu konunun ilerleyen bölümlerinde.
+ Rastgele adlara sahip özellikler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]gösterilmez. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]rastgele özellikleri değiştirmek için, proje dosyasını XML düzenleyicisinde açmanız ve onları el ile düzenlemeniz gerekir. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki [Visual Studio 'da proje dosyalarını düzenleme](#edit-project-files-in-visual-studio) bölümüne bakın.
 
- Projede rastgele öğe adları ile tanımlanan öğeler varsayılan olarak görüntülenen **Çözüm Gezgini** kendi proje düğümleri altında. Bir öğeyi görüntüden gizlemek için ayarlanmış `Visible` meta verileri `false`. Örneğin, aşağıdaki öğe yapı işlemine katılır ancak içinde görüntülenmez **Çözüm Gezgini**.
+ Projesinde, rastgele öğe türü adlarıyla tanımlanmış öğeler, varsayılan olarak, Proje düğümleri altında **Çözüm Gezgini** görüntülenir. Bir öğeyi ekranda gizlemek için `Visible` meta verilerini `false`olarak ayarlayın. Örneğin, aşağıdaki öğe derleme işlemine katılır, ancak **Çözüm Gezgini**gösterilmez.
 
 ```xml
 <ItemGroup>
@@ -111,72 +111,75 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 </ItemGroup>
 ```
 
- Projeye aktarılan dosyalarda bildirilen öğeler varsayılan olarak görüntülenmez. Derleme işlemi sırasında oluşturulan öğeleri hiçbir zaman görüntülenir **Çözüm Gezgini**.
+> [!NOTE]
+> `Visible` meta veriler, projeler C++ için **Çözüm Gezgini** tarafından yok sayılır. `Visible` false olarak ayarlanmış olsa bile, öğeler her zaman gösterilir.
+
+ Projeye aktarılan dosyalarda bildirilen öğeler varsayılan olarak görüntülenmez. Yapı işlemi sırasında oluşturulan öğeler **Çözüm Gezgini**hiçbir şekilde gösterilmez.
 
 ## <a name="conditions-on-items-and-properties"></a>Koşullara öğeleri ve özellikleri
  Bir yapı sırasında tüm koşullar tam olarak dikkate alınır.
 
- Görüntülenecek özellik değerlerini belirlerken, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yapılandırmaya bağımlı farklı değerlendirilir göz önünde bulundurur özellikleri yeniden yapılandırma bağımsız olarak kabul eder. İçin özellikleri yeniden yapılandırma bağımlı olarak kabul eder [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayarlar `Configuration` ve `Platform` özellikleri uygun şekilde ve bildirir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projeyi yeniden değerlendirin. Özellikleri yeniden yapılandırma bağımsız olarak, koşulların nasıl değerlendirileceği belirsiz olarak kabul eder.
+ Görüntülenecek özellik değerlerini belirlerken, yapılandırma bağımlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Özellikler yapılandırmayı birbirinden bağımsız olarak kabul eden özelliklerden farklı şekilde değerlendirilir. Yapılandırmaya bağımlı olduğunu düşündüğü özellikler için, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] `Configuration` ve `Platform` özellikleri uygun şekilde ayarlar ve projeyi yeniden değerlendirmesini [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] söyler. Özellikleri yeniden yapılandırma bağımsız olarak, koşulların nasıl değerlendirileceği belirsiz olarak kabul eder.
 
- Öğesi içinde görüntülenip görüntülenmeyeceğini öğelerdeki koşullu ifadeler karar verme amacıyla her zaman yoksayıldı **Çözüm Gezgini**.
+ Öğelerin **Çözüm Gezgini**gösterilip gösterilmeyeceğine karar vermek amacıyla öğelerdeki Koşullu ifadeler her zaman göz ardı edilir.
 
-## <a name="debugging"></a>Hata Ayıklama
- Bul ve çıktı derlemesine başlatın ve hata ayıklayıcıyı eklemek amacıyla [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] özelliklere sahip olması `OutputPath`, `AssemblyName`, ve `OutputType` doğru şekilde tanımlanmış. Derleme işlemi derleyicinin oluşturmasıyla iliştirmek hata ayıklayıcı başarısız olur bir *.pdb* dosya.
+## <a name="debugging"></a>Hata ayıklama
+ Çıkış derlemesini bulup başlatmak ve hata ayıklayıcıyı iliştirmek için, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] `OutputPath`, `AssemblyName`ve `OutputType` doğru şekilde tanımlanmalıdır. Derleme işlemi derleyicinin bir *. pdb* dosyası oluşturmasına neden değilse, hata ayıklayıcısı iliştirilemiyor.
 
 ## <a name="design-time-target-execution"></a>Tasarım zamanı hedef yürütme
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir projeyi yüklediğinde belirli adları olan hedefleri yürütmeyi dener. Bu hedefler arasında `Compile`, `ResolveAssemblyReferences`, `ResolveCOMReferences`, `GetFrameworkPaths`, ve `CopyRunEnvironmentFiles`. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Bu hedefleri derleyicinin IntelliSense sağlamak için başlatılabilir, hata ayıklayıcının başlatılabilmesi ve Çözüm Gezgini'nde gösterilen başvuruların çözümlenebilmesi için çalıştırır. Bu hedefler mevcut değilse projeyi yüklemek ve tasarım zamanı deneyimi ancak doğru şekilde derlenmesi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tam işlevsel olmayacaktır.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], bir projeyi yüklediğinde belirli adlarla hedefleri yürütmeye çalışır. Bu hedefler `Compile`, `ResolveAssemblyReferences`, `ResolveCOMReferences`, `GetFrameworkPaths`ve `CopyRunEnvironmentFiles`içerir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bu hedefleri çalıştırarak derleyicinin IntelliSense sağlamak üzere başlatılabilmesini, hata ayıklayıcının başlatılabilir olduğunu ve Çözüm Gezgini görüntülenen başvuruların çözümlenebilmesini sağlar. Bu hedefler yoksa, proje doğru şekilde yüklenir ve oluşturulur, ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tasarım zamanı deneyimi tam olarak işlevsel olmayacaktır.
 
 ## <a name="edit-project-files-in-visual-studio"></a>Visual Studio'da proje dosyalarını düzenleme
- Düzenlenecek bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] doğrudan projesi, proje dosyası Visual Studio XML düzenleyicisinde açabilirsiniz.
+ Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesini doğrudan düzenlemek için, proje dosyasını Visual Studio XML düzenleyicisinde açabilirsiniz.
 
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Visual Studio'da bir proje dosyasının yüklemesini kaldırmak ve düzenlemek için
 
-1. İçinde **Çözüm Gezgini**, proje için kısayol menüsünü açın ve ardından **projeyi**.
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
 
-     Proje işaretlenmiş **(kullanılamıyor)** .
+     Proje işaretlendi **(kullanılamıyor)** .
 
-2. İçinde **Çözüm Gezgini**, kullanılamayan projenin kısayol menüsünü açın ve ardından **Düzenle \<proje dosyası >** .
+2. **Çözüm Gezgini**' de, kullanılamayan proje için kısayol menüsünü açın ve **\<proje Dosya > Düzenle**' yi seçin.
 
      Proje dosyası Visual Studio XML Düzenleyicisi'nde açılır.
 
 3. Düzenleyin, kaydedin ve ardından Proje dosyasını kapatın.
 
-4. İçinde **Çözüm Gezgini**, kullanılamayan projenin kısayol menüsünü açın ve ardından **projeyi**.
+4. **Çözüm Gezgini**' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **projeyi yeniden yükle**' yi seçin.
 
 ## <a name="intellisense-and-validation"></a>IntelliSense ve doğrulama
- Proje dosyalarını düzenlemek için XML düzenleyicisini kullanırken, IntelliSense ve doğrulama tarafından yönlendirilir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] şema dosyaları. Bunlar bulunabilir şema önbelleğinde yüklü  *\<Visual Studio yükleme dizini > \Xml\Schemas\1033\MSBuild*.
+ Proje dosyalarını düzenlemek için XML düzenleyicisini kullanırken, IntelliSense ve doğrulama [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] şema dosyaları tarafından çalıştırılır. Bunlar, *\<Visual Studio yükleme dizini > \Xml\schemas\10\msbuild*dizininde bulunan şema önbelleğine yüklenir.
 
- Çekirdek [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] türleri *Microsoft.Build.Core.xsd'de* ve tarafından kullanılan ortak türler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tanımlanan *Microsoft.Build.CommonTypes.xsd*. Şemaları özel öğe türü adları, özellikler ve görevler için IntelliSense ve doğrulama edinecek olmanızdır özelleştirmek için düzenleme ya da olabilir. *kullanabilmek üzere*, veya CommonTypes veya Core içeren kendi şemanızı oluşturabilirsiniz şemalar. Düzenleyicisi'ni kullanarak bunu bulmanız XML yönlendirmek için sahip olacak kendi şemanızı oluşturursanız **özellikleri** penceresi.
+ Temel [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] türleri Microsoft *. Build. Core. xsd* ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tarafından kullanılan ortak türlerde tanımlanmıştır, *Microsoft. Build. CommonTypes. xsd*dosyasında tanımlanmıştır. Şemaları, özel öğe türü adları, özellikleri ve görevleri için IntelliSense ve doğrulamaya sahip olacak şekilde özelleştirmek için *Microsoft. Build. xsd*' yi düzenleyebilir ya da CommonTypes veya Core şemalarını içeren kendi şemanızı oluşturabilirsiniz. Kendi şemanızı oluşturursanız, **Özellikler** penceresini kullanarak bulmak için XML düzenleyicisini yönlendirirsiniz.
 
 ## <a name="edit-loaded-project-files"></a>Yüklenmiş proje dosyalarını düzenleme
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Proje dosyaları ve proje dosyaları tarafından içe aktarılan dosyaların içeriğini önbelleğe alır. Bir yüklenmiş proje dosyasını düzenliyorsanız, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak, değişikliklerin etkili olması için projeyi yeniden yüklemenizi ister. Ancak yüklenmiş bir proje tarafından içe aktarılan bir dosyayı düzenlerseniz, herhangi bir yeniden yükleme istemi olmayacaktır ve kaldırma ve değişikliklerin etkili el ile yapmak için projeyi yeniden yükleyin.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje dosyaları ve proje dosyaları tarafından içeri aktarılan dosyaların içeriğini önbelleğe alır. Yüklenmiş bir proje dosyasını düzenlerseniz, değişikliklerin etkili olması için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak projeyi yeniden yüklemenizi ister. Ancak yüklenmiş bir proje tarafından içe aktarılan bir dosyayı düzenlerseniz, herhangi bir yeniden yükleme istemi olmayacaktır ve kaldırma ve değişikliklerin etkili el ile yapmak için projeyi yeniden yükleyin.
 
 ## <a name="output-groups"></a>Çıkış grupları
- İçinde tanımlanan çeşitli hedefler *Microsoft.Common.targets* sonlanan adlara sahip `OutputGroups` veya `OutputGroupDependencies`. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Bu hedefleri proje çıktılarının tam listelerini almak için çağırır. Örneğin, `SatelliteDllsProjectOutputGroup` hedef bir yapının oluşturacağı tüm uydu derlemelerin bir listesini oluşturur. Bu çıktı grupları yayımlama, dağıtım ve projeden projeye başvurular gibi özellikler tarafından kullanılır. Bunları tanımlamayan projeler yükleyecek ve oluşturacaktır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], ancak bazı özellikler düzgün çalışmayabilir.
+ *Microsoft. Common. targets* içinde tanımlanan birçok hedefin adı `OutputGroups` veya `OutputGroupDependencies`bitiyor. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], proje çıkışları için belirli listeleri almak üzere bu hedefleri çağırır. Örneğin `SatelliteDllsProjectOutputGroup` hedefi, bir derlemenin oluşturulacağı tüm uydu derlemelerinin bir listesini oluşturur. Bu çıktı grupları yayımlama, dağıtım ve projeden projeye başvurular gibi özellikler tarafından kullanılır. Onları tanımlamayan projeler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]yüklenir ve oluşturulur, ancak bazı özellikler düzgün çalışmayabilir.
 
 ## <a name="reference-resolution"></a>Başvuru çözümleme
- Başvuru çözümleme, gerçek derlemeleri bulmak için bir proje dosyasında depolanan başvuru öğelerini kullanma işlemidir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] içinde her başvurunun özelliklerini ayrıntılı göstermek için başvuru çözümlemesini tetiklemelidir **özellikleri** penceresi. Aşağıdaki liste, üç başvuru türünü ve bunların nasıl kullanıldığını açıklar.
+ Başvuru çözümleme, gerçek derlemeleri bulmak için bir proje dosyasında depolanan başvuru öğelerini kullanma işlemidir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], **Özellikler** penceresindeki her bir başvurunun ayrıntılı özelliklerini göstermek için başvuru çözümlemesini tetiklemelidir. Aşağıdaki liste, üç başvuru türünü ve bunların nasıl kullanıldığını açıklar.
 
 - Bütünleştirilmiş kod başvuruları:
 
-   Proje sistemi bir hedefi iyi bilinen adıyla çağırır `ResolveAssemblyReferences`. Bu hedef, öğe türü adı öğeleriyle üretmelidir `ReferencePath`. Bu öğelerin her biri bir öğe belirtimine sahip olmalıdır (değerini `Include` bir öğenin özniteliğini) içeren başvuru tam yolu. Öğeleri aracılığıyla aşağıdaki yeni meta veriler ek olarak geçirilen girdi öğelerinin tüm meta verilerine sahip olmanız gerekir:
+   Proje sistemi, `ResolveAssemblyReferences`iyi bilinen ada sahip bir hedef çağırır. Bu hedef, `ReferencePath`öğe türü adına sahip öğeler üretmelidir. Bu öğelerin her biri, başvurunun tam yolunu içeren bir öğe belirtimine (bir öğenin `Include` özniteliğinin değeri) sahip olmalıdır. Öğeleri aracılığıyla aşağıdaki yeni meta veriler ek olarak geçirilen girdi öğelerinin tüm meta verilerine sahip olmanız gerekir:
 
-  - `CopyLocal`, derlemenin çıktı klasörüne kopyalanıp kopyalanmayacağını belirten true veya false ayarlayın.
+  - `CopyLocal`, derlemenin çıkış klasörüne kopyalanıp kopyalanmayacağını, true veya false olarak ayarlandığını gösterir.
 
-  - `OriginalItemSpec`, başvurunun Asıl öğe belirtimini içeren.
+  - başvurunun özgün öğe belirtimini içeren `OriginalItemSpec`.
 
   - `ResolvedFrom`, .NET Framework dizininden çözümlenmişse "{TargetFrameworkDirectory}" olarak ayarlanır.
 
 - COM başvuruları:
 
-   Proje sistemi bir hedefi iyi bilinen adıyla çağırır `ResolveCOMReferences`. Bu hedef, öğe türü adı öğeleriyle üretmelidir `ComReferenceWrappers`. Bu öğelerin her biri, COM başvurusu için birlikte çalışabilirlik derlemesine giden tam yolu içeren bir öğe belirtimine sahip olmalıdır. Öğeleri girdi öğelerinin geçilen, ayrıca yeni meta veri adı ile tüm meta verilerine de sahip `CopyLocal`, derlemenin çıktı klasörüne kopyalanıp kopyalanmayacağını belirten true veya false ayarlayın.
+   Proje sistemi, `ResolveCOMReferences`iyi bilinen ada sahip bir hedef çağırır. Bu hedef, `ComReferenceWrappers`öğe türü adına sahip öğeler üretmelidir. Bu öğelerin her biri, COM başvurusu için birlikte çalışabilirlik derlemesine giden tam yolu içeren bir öğe belirtimine sahip olmalıdır. Öğelerin, ' ın çıkış klasörüne kopyalanıp kopyalanmayacağını belirten `CopyLocal`adlı yeni meta verilere ek olarak, bu öğelerin içinden geçirilen giriş öğelerinden tüm meta verileri olmalıdır.
 
 - Yerel başvurular
 
-   Proje sistemi bir hedefi iyi bilinen adıyla çağırır `ResolveNativeReferences`. Bu hedef, öğe türü adı öğeleriyle üretmelidir `NativeReferenceFile`. Öğeleri geçtiğini, meta verilerin adlı yeni bir ek girdi öğelerinin tüm meta verilerine olmalıdır `OriginalItemSpec`, başvurunun Asıl öğe belirtimini içeren.
+   Proje sistemi, `ResolveNativeReferences`iyi bilinen ada sahip bir hedef çağırır. Bu hedef, `NativeReferenceFile`öğe türü adına sahip öğeler üretmelidir. Öğelerin, başvurunun özgün öğe belirtimini içeren `OriginalItemSpec`adlı yeni bir meta veri parçasına ek olarak, geçirilen giriş öğelerinden tüm meta verilere sahip olması gerekir.
 
 ## <a name="performance-shortcuts"></a>Performans kısayolları
- Hata ayıklamayı başlatmak için Visual Studio IDE 'yi kullanırsanız (F5 tuşunu seçerek veya menü çubuğunda Hata **ayıklamayı başlatmak** > **Hata Ayıkla** ' yı seçerek) veya projenizi oluşturmak Için (örneğin, **derleme** > **derleme çözümü**), yapı işlemi performansı artırmak için hızlı bir güncelleştirme denetimi kullanır. Burada özelleştirilmiş yapıların dahili hale gelen dosyalar oluşturma bazı durumlarda, hızlı güncelleştirme kontrolü değiştirilen dosyaları düzgün tanımlamaz. Daha kapsamlı güncelleme kontrolleri gereken projeleri hızlı denetimi ortam değişkenini ayarlayarak devre dışı kapatabilir `DISABLEFASTUPTODATECHECK=1`. Alternatif olarak, proje bu projeye ya da projenin içe aktardığı bir dosya bir MSBuild özelliği olarak ayarlayabilirsiniz.
+ Hata ayıklamayı başlatmak için Visual Studio IDE 'yi kullanırsanız (F5 tuşunu seçerek veya menü çubuğunda Hata **ayıklamayı başlatmak** > **Hata Ayıkla** ' yı seçerek) veya projenizi oluşturmak Için (örneğin, **derleme** > **derleme çözümü**), yapı işlemi performansı artırmak için hızlı bir güncelleştirme denetimi kullanır. Burada özelleştirilmiş yapıların dahili hale gelen dosyalar oluşturma bazı durumlarda, hızlı güncelleştirme kontrolü değiştirilen dosyaları düzgün tanımlamaz. Daha kapsamlı güncelleştirme denetimleri gerektiren projeler, `DISABLEFASTUPTODATECHECK=1`ortam değişkenini ayarlayarak hızlı denetlemeyi kapatabilir. Alternatif olarak, proje bu projeye ya da projenin içe aktardığı bir dosya bir MSBuild özelliği olarak ayarlayabilirsiniz.
 
  Visual Studio'daki normal yapılarda, hızlı güncelleştirme denetimleri geçerli değildir ve bir komut isteminde derlemenin çağırdığınız gibi Proje derlenir.
 

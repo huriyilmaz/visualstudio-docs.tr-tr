@@ -1,78 +1,78 @@
 ---
-title: Kural kümeleri kullanma çalıştırılacak C++ kurallarını belirtmek için | Microsoft Docs
+title: Çalıştırılacak C++ kuralları belirtmek Için kural kümeleri kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: ac3877e6-5349-4c03-9541-3d5be259f1e8
 caps.latest.revision: 7
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: e8361ec9f93ff150d3fd29bce315f635bd00048b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ff105af1d817613b324e1158130457eb906c753f
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142154"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277859"
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>Çalıştırılacak C++ Kurallarını Belirtmek için Kural Kümeleri Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçinde [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] ve [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)], özel bir oluşturup *kural kümesi* Kod Analizi ile ilgili belirli proje gereksinimlerini karşılamak için. C++ özel bir kural oluşturmak için C/C++ proje Visual Studio IDE'de açık olması gerekir. Ardından bir standart bir kural kümesi kural kümesi Düzenleyicisi'nde açın ve ardından ekleyin veya belirli kuralları kaldırın ve isteğe bağlı olarak Kod Analizi kural ihlal belirlediğinde, gerçekleşen eylemi değiştirebilirsiniz.  
+[!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] ve [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]' de, kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Özel C++ bir kural kümesi oluşturmak Için, VISUAL Studio IDEC++ 'de bir C/Project açık olmalıdır. Daha sonra kural kümesi düzenleyicisinde bir standart kural kümesi açıp, belirli kuralları ekleyip kaldırarak ve isteğe bağlı olarak, kod analizi bir kuralın ihlal edildiğini belirlediğinde oluşan eylemi değiştirirsiniz.  
   
- Yeni bir özel kural oluşturmak için yeni bir dosya adını kullanarak kaydedin. Özel kural kümesi, projeye otomatik olarak atanır.  
+ Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu dosyayı kaydedersiniz. Özel kural kümesi projeye otomatik olarak atanır.  
   
-## <a name="opening-the-rule-set-editor"></a>Açma kural kümesi Düzenleyici  
+## <a name="opening-the-rule-set-editor"></a>Kural kümesi Düzenleyicisini açma  
   
-#### <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Var olan tek kural kümesinden özel bir kural oluşturmak için  
+#### <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Tek bir var olan kural kümesinden özel bir kural oluşturmak için  
   
-1. Çözüm Gezgini'nde, proje için kısayol menüsünü açın ve ardından **özellikleri**.  
+1. Çözüm Gezgini ' de, proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
-2. Üzerinde **özellikleri** sekmesini, **Kod Analizi**.  
+2. **Özellikler** sekmesinde, **Kod Analizi**' ni seçin.  
   
-3. İçinde **kural kümesi** aşağı açılan listesinde, aşağıdakilerden birini yapın:  
+3. **Kural kümesi** açılan listesinde aşağıdakilerden birini yapın:  
   
-   - Özelleştirmek istediğiniz kural kümesi seçin.  
+   - Özelleştirmek istediğiniz kural kümesini seçin.  
   
-     \- veya -  
+     \- veya-  
   
-   - Seçin  **\<Gözat … >** mevcut bir kuralı kümesini belirlemek için listesinde değil.  
+   - **\<gözatmaya seç...** listede olmayan var olan bir kural kümesini belirtmek için >.  
   
-4. Seçin **açık** kuralları kural kümesi Düzenleyicisi'nde görüntülemek için.  
+4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.  
   
-#### <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Bir kuralı değiştirmek için kural kümesi Düzenleyicisi'nde ayarlayın.  
+#### <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Kural kümesi düzenleyicisinde bir kural kümesini değiştirmek için  
   
-- Kural kümesi görünen adını değiştirmek için **görünümü** menüsünde seçin **Özellikler penceresi**. Görünen ad girin **adı** kutusu. Görünen ad dosya adından farklı olabilir dikkat edin.  
+- Kural kümesinin görünen adını değiştirmek için, **Görünüm** menüsünde **Özellikler penceresi**' ni seçin. **Ad** kutusuna görünen adı girin. Görünen adın dosya adından farklı olduğunu fark edebilirsiniz.  
   
-- Özel kural kümesi için tüm Grup kurallarını eklemek için grubunun onay kutusunu seçin. Grubun tüm kuralları kaldırmak için onay kutusunu temizleyin.  
+- Grubun tüm kurallarını özel bir kural kümesine eklemek için grubun onay kutusunu seçin. Grubun tüm kurallarını kaldırmak için onay kutusunu temizleyin.  
   
-- Özel kural kümesi için belirli bir kural eklemek için kuralın onay kutusunu seçin. Kural kural kümesinden kaldırmak için onay kutusunu temizleyin.  
+- Özel kural kümesine belirli bir kural eklemek için, kuralın onay kutusunu seçin. Kuralı kural kümesinden kaldırmak için onay kutusunu temizleyin.  
   
-- Bir kod analizi kural ihlal edildiğinde gerçekleştirilecek eylemi değiştirmek için seçin **eylem** kural için alan ve sonra aşağıdaki değerlerden birini seçin:  
+- Bir kod analizinde bir kural ihlal edildiğinde gerçekleştirilecek eylemi değiştirmek için, kural için **eylem** alanını seçin ve ardından aşağıdaki değerlerden birini seçin:  
   
      **Uyar** -bir uyarı oluşturur.  
   
      **Hata** -bir hata oluşturur.  
   
-     **Hiçbiri** -kural devre dışı bırakır. Bu eylem kural kümesi kuralı kaldırma aynıdır.  
+     **Hiçbiri** -kuralı devre dışı bırakır. Bu eylem kural kümesinden kuralı kaldırma ile aynıdır.  
   
-#### <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>Gruplandırmak için filtre veya kural kümesi Düzenleyici'sini alanları, kural kümesi Düzenleyici araç kullanarak  
+#### <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>Kural kümesi Düzenleyicisi araç çubuğunu kullanarak kural kümesi düzenleyicisinde Alanları gruplandırmak, filtrelemek veya değiştirmek için  
   
-- Tüm grupları kurallarında genişletmek için seçin **Tümünü Genişlet**.  
+- Tüm gruplardaki kuralları genişletmek için **Tümünü Genişlet**' i seçin.  
   
-- Tüm grupları kurallarında daraltmak için seçin **Daralt tüm**.  
+- Tüm gruplardaki kuralları daraltmak için **Tümünü Daralt**' ı seçin.  
   
-- Kurallar tarafından gruplandırılır alanını değiştirmek için alanı seçin **Group By** listesi. Gruplandırılmamış kuralları görüntülemeyi tercih  **\<yok >** .  
+- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için **\<yok >** seçin.  
   
-- Alan kuralı sütunlar ekleyip için seçin **sütun seçenekleri**.  
+- Kural sütunlarındaki alanları eklemek veya kaldırmak için **sütun seçenekleri**' yi seçin.  
   
-- Geçerli çözüme geçerli olmayan kuralları gizlemek için seçin **Gizle geçerli çözüme geçerli olmayan kuralları**.  
+- Geçerli çözüm için geçerli olmayan kuralları gizlemek için **geçerli çözüm için geçerli olmayan kuralları gizle**' yi seçin.  
   
-- Hata eylemi atanmış olan kuralları gizleme ve gösterme arasında geçiş yapmak için seçin **kod analiz hataları verebilen kuralları göster**.  
+- Hata eyleminin atandığı kuralları gösterme ve gizleme arasında geçiş yapmak için, **Kod Analizi hataları oluşturabilen kuralları göster**' i seçin.  
   
-- Uyarı eylemi atanmış olan kuralları gizleme ve gösterme arasında geçiş yapmak için seçin **kod analiz uyarıları üretebilen kuralları göster**.  
+- Uyarı eyleminin atandığı kuralları gösterme ve gizleme arasında geçiş yapmak için, **Kod Analizi uyarıları oluşturabilen kuralları göster**' i seçin.  
   
-- Atanan kuralları gizleme ve gösterme arasında geçiş yapmak için **hiçbiri** eylemi seçin **etkin olmayan kuralları göster**.  
+- **Hiçbiri** eyleminin atandığı kuralları gösterme ve gizleme arasında geçiş yapmak için, **etkin olmayan kuralları göster**' i seçin.  
   
-- Varsayılan kural kümeleri geçerli kural kümesine Microsoft ekleyip için seçin **alt kural kümelerini Ekle veya Kaldır**.
+- Geçerli kural kümesine Microsoft varsayılan kural kümelerini eklemek veya kaldırmak için **alt kural kümelerini Ekle veya Kaldır**' ı seçin.

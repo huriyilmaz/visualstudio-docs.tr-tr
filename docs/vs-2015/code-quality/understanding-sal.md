@@ -6,15 +6,15 @@ ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
 caps.latest.revision: 20
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: a184ad6ebc1b3fc2dc21b7a1774b37fef8d359ec
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 1c0129c6832c347e989b482acb2cf6ab9b80e60d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848462"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278446"
 ---
 # <a name="understanding-sal"></a>SAL'ı Anlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

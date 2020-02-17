@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b948aa83d5055fdf3d628a84002881eba9c91ac2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c3f5fe55a4e1afb1a9551d43d0d61ae9f76b81e4
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76112534"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275444"
 ---
 # <a name="warnings-and-errors"></a>Uyarıları ve hatalar
 
@@ -32,7 +32,7 @@ ms.locfileid: "76112534"
 * **Kısıtlama çözme**
   * [Çözüm değiştirilemez](#cannot-concretize-solution)
 
-* **Etki alanları**
+* **Etki alanları veya çalışma zamanı**
   * [Nesne oluşturmak Için yardım gerekiyor](#help-construct)
   * [Türleri bulmak Için yardım gerekiyor](#help-types)
   * [Kullanılabilir tür tahmin edildi](#usable-type-guessed)
@@ -114,7 +114,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-**PexSettingsAttributeBase**'den türetilmiş bir özniteliğin **maxconditions** seçeneğini ( [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod)gibi) düzenleyebilirsiniz. Örneğin:
+**PexSettingsAttributeBase**'den türetilmiş bir özniteliğin **maxconditions** seçeneğini ( [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod)gibi) düzenleyebilirsiniz. Örnek:
 
 ```csharp
 [PexMethod(MaxConditions=10000)]
@@ -254,7 +254,7 @@ Kısıtlamalarla eşleşen bir veya daha fazla türe işaret ederek IntelliTest 
 
 IntelliTest her türlü .NET türü için [Test girişleri oluşturur](input-generation.md) . Bir tür abstract veya Interface olduğunda, IntelliTest bu türün belirli bir uygulamasını seçmelidir. Bu seçimi yapmak için, hangi türlerin mevcut olduğunu bilmeleri gerekir.
 
-Bu uyarı gösterildiğinde, IntelliTest 'in başvurulan derlemelerin bazılarına baktığı ve bir uygulama türü bulduğu, ancak bu türü kullanması ya da başka bir yerde kullanılabilir olan daha uygun türler varsa emin değildir. IntelliTest, yalnızca bir göz attığı bir tür seçti.
+Bu uyarı gösterildiğinde, IntelliTest 'in başvurulan derlemelerin bazılarına baktığı ve bir uygulama türü bulduğu, ancak bu türü kullanması ya da başka bir yerde kullanılabilir olan daha uygun türler varsa emin olduğunu gösterir. IntelliTest, yalnızca bir göz attığı bir tür seçti.
 
 Bu uyarıyı önlemek için, IntelliTest 'in tür seçimini kabul edebilir veya ilgili bir [Pexusetype](attribute-glossary.md#pexusetype)ekleyerek diğer türleri kullanarak IntelliTest 'e yardımcı olabilirsiniz.
 

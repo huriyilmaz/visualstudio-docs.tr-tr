@@ -2,17 +2,17 @@
 title: IntelliSense için bir C++ projesi yapılandırma
 ms.date: 10/08/2018
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a909c25af3de22019327bb890da9e26bcce1c8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8c43c48a797619f86f81e219e31ccf2afab5ba87
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748587"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279319"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>IntelliSense için bir C++ projesi yapılandırma
 
@@ -38,7 +38,7 @@ Yapılarınızı Visual Studio IDE dışında çalıştırırsanız, yapıların
 
 ![VC + + Içerme dizinleri](media/vcpp-intellisense-include-paths.png)
 
-**VC_IncludePath**gibi derleme makrolarının geçerli değerlerini görmek Için dizinleri Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. **\<> Düzenle** ' yi seçin ve **makrolar** düğmesine tıklayın.
+**VC_IncludePath**gibi derleme makrolarının geçerli değerlerini görmek Için Dizin Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. **\<> Düzenle** ' yi seçin ve **makrolar** düğmesine tıklayın.
 
 ### <a name="makefile-projects"></a>Derleme görevleri dosyası projeleri
 
@@ -74,9 +74,9 @@ Etiket Ayrıştırıcı hataları **hata listesi** penceresinde görüntülenir.
 
 ## <a name="validate-project-settings-with-diagnostic-logging"></a>Tanılama günlüğü ile proje ayarlarını doğrulama
 
-IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derleyici seçeneklerini kullanıp kullanmadığını denetlemek için **araçlar > seçenekler > metin düzenleyicisi > C/C++ > Gelişmiş > gibi IntelliSense komut satırlarının tanılama günlüğünü açın Tanılama günlüğü**. Günlüğe **kaydetmeyi doğru** , **günlük düzeyini** 5 ' e (en ayrıntılı) ve **günlük filtresini** 8 ' e (IntelliSense günlüğü) ayarlayın.
+IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derleyici seçeneklerini kullanıp kullanmadığını denetlemek için **araçlar > seçenekler > metin düzenleyicisi > C/C++ > Gelişmiş > tanılama günlüğü**' nde IntelliSense komut satırlarının tanılama günlüğünü açın. Günlüğe **kaydetmeyi doğru** , **günlük düzeyini** 5 ' e (en ayrıntılı) ve **günlük filtresini** 8 ' e (IntelliSense günlüğü) ayarlayın.
 
-Çıkış Penceresi artık IntelliSense derleyicisine geçirilen komut satırlarını gösterir. Örnek bir çıktı aşağıda verilmiştir:
+Çıkış Penceresi artık IntelliSense derleyicisine geçirilen komut satırlarını gösterir. Örnek çıktı aşağıdaki gibidir:
 
 ```output
 [IntelliSense] Configuration Name: Debug|Win32
@@ -93,7 +93,7 @@ IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derle
 /Yustdafx.h
 ```
 
-Bu bilgiler, IntelliSense 'in neden yanlış bilgi sağladığını anlamanıza yardımcı olabilir. Örneğin, projenizin Içerme dizini **$ (MyVariable) \ Include**değerini içeriyorsa ve tanılama günlüğünde **/I\ınclude** öğesini içerme yolu olarak gösteriyorsa, **$ (MyVariable)** öğesinin değerlendirilmediği ve son içerme yolundan kaldırıldığı anlamına gelir. .
+Bu bilgiler, IntelliSense 'in neden yanlış bilgi sağladığını anlamanıza yardımcı olabilir. Örneğin, projenizin Içerme dizini **$ (MyVariable) \ Include**değerini içeriyorsa ve tanılama günlüğünde **/I\ınclude** öğesini içerme yolu olarak gösteriyorsa, **$ (MyVariable)** öğesinin değerlendirilmediği ve son içerme yolundan kaldırıldığı anlamına gelir.
 
 ## <a name="about-the-intellisense-build"></a>IntelliSense derlemesi hakkında
 

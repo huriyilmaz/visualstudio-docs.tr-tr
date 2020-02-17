@@ -1,6 +1,6 @@
 ---
 title: Birim testini kullanmaya başlama
-ms.date: 04/01/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72ab0a6664740f2d772d79f9c77fddfbc12fb82f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7ffbc5c6730fb4ca4d2f39732ad2a595de15bbf2
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596482"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279325"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
@@ -26,16 +26,18 @@ Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzey
 
 1. Visual Studio 'da sınamak istediğiniz projeyi açın.
 
-   Örnek birim testi gösterimi amacıyla, bu makale basit bir "Merhaba Dünya" projesini sınar. Bu tür bir projenin örnek kodu aşağıdaki gibidir:
+   Bu makalede, örnek birim testi gösterimi amacıyla, **Merhaba WorldCore**adlı basit bir "Merhaba Dünya" projesi test eder. Bu tür bir projenin örnek kodu aşağıdaki gibidir:
 
    ```csharp
-   public class Program
-   {
-       public static void Main()
-       {
-           Console.WriteLine("Hello World!");
-       }
-   }
+   namespace HelloWorldCore
+
+      public class Program
+      {
+         public static void Main()
+         {
+            Console.WriteLine("Hello World!");
+         }
+      }
    ```
 
 1. **Çözüm Gezgini**, çözüm düğümünü seçin. Ardından, üst menü çubuğundan **dosya** >  > **Yeni proje** **Ekle** ' yi seçin.
@@ -70,14 +72,48 @@ Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzey
 
 1. Birim testi yöntemine kod ekleyin.
 
-   ![Visual Studio 'da birim testi yöntemine kod ekleme](media/vs-2019/unit-test-method.png)
+   Örneğin, bir MSTest veya NUnit test projesi için aşağıdaki kodu kullanabilirsiniz.
+
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using System.IO;
+   using System;
+
+   namespace HelloWorldTests
+   {
+      [TestClass]
+      public class UnitTest1
+      {
+         private const string Expected = "Hello World!";
+         [TestMethod]
+         public void TestMethod1()
+         {
+            using (var sw = new StringWriter())
+            {
+               Console.SetOut(sw);
+               HelloWorldCore.Program.Main();
+
+               var result = sw.ToString().Trim();
+               Assert.AreEqual(Expected, result);
+            }
+         }
+      }
+   }
+   ```
 
 > [!TIP]
 > Birim testlerini oluşturma hakkında daha ayrıntılı yönergeler için bkz. [yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md).
 
 ## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
 
-1. Üst menü çubuğundan **test > ** **Windows** > **Test Gezgini** ' ni seçerek [Test Gezgini](../test/run-unit-tests-with-test-explorer.md) 'ni açın.
+1. [Test Gezgini](../test/run-unit-tests-with-test-explorer.md)'ni açın.
+
+   ::: moniker range=">=vs-2019"
+   Test Gezgini 'ni açmak için üst menü çubuğundan **test > test** **Gezgini** ' ni seçin.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   Test Gezgini 'ni açmak için üst menü çubuğundan **test >** **Windows** > **Test Gezgini** ' ni seçin.
+   ::: moniker-end
 
 1. **Tümünü Çalıştır**' a tıklayarak birim testlerinizi çalıştırın.
 
@@ -176,7 +212,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [İzlenecek yol: Oluşturma ve yönetilen kod için birim testleri çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+* [İzlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 * [Birim Testleri Oluştur komutu](create-unit-tests-menu.md)
 * [IntelliTest ile testler oluşturma](generate-unit-tests-for-your-code-with-intellitest.md)
 * [Test Gezgini ile testleri çalıştırma](run-unit-tests-with-test-explorer.md)

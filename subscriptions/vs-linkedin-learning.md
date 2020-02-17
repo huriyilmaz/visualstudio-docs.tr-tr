@@ -3,15 +3,15 @@ title: Visual Studio aboneliklerinde LinkedIn öğrenme avantajı | Microsoft Do
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/02/2019
+ms.date: 02/12/2020
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil olan LinkedIn Premium aboneliğinin bir parçası olarak dahil olan LinkedIn öğrenme avantajı hakkında bilgi edinin.
-ms.openlocfilehash: b91db8c5b8ec27e947e2c73ac59ab3b07502f9d2
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: f6c5206055835605ae529f1f07159611bcd6bf7d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099644"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278841"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde LinkedIn öğrenme avantajı
 
@@ -22,7 +22,7 @@ LinkedIn öğrenme avantajlarından yararlanmak için bir LinkedIn hesabınız o
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 LinkedIn Premium aboneliğinizi ve LinkedIn öğrenme avantajını etkinleştirmek için:
-1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)oturum açın.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
 2. Eğitim kategorisinde LinkedIn öğrenme kutucuğunu bulun ve **kodu al** bağlantısına tıklayın.
    > [!div class="mx-imgBorder"]
@@ -68,15 +68,15 @@ LinkedIn Premium aboneliğinizi ve LinkedIn öğrenme avantajını etkinleştirm
 
 ## <a name="eligibility"></a>Önceliği
 
-| Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | GitHub Enterprise ile Visual Studio Enterprise   | VL | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | 3 ay                                                            |Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
 | GitHub Enterprise ile Visual Studio Professional | VL | 3 ay      | Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 3 ay                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | 3 ay                                              | Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Yok                                                           |Yok|
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              | NA         |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Visual Studio sektör ortağı (VSIP).  Dışlar: Microsoft İş Ortağı Ağı (MPN), FTE, MCT Software & Services Geliştirici, BizSpark, Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri.*
 

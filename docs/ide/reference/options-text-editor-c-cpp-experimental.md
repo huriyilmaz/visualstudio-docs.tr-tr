@@ -6,17 +6,17 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f36d66ea46e7a0474c3b76ae000f745337fc45
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 7e239ad3d2091f334f18ec00a367fc47d5c21db3
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461379"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278703"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Seçenekler, Metin Düzenleyici, C/C++, Deneysel
 
@@ -28,7 +28,7 @@ Bu makalede, Visual Studio 2017 seçenekleri açıklanmaktadır. Visual Studio 2
 
 ::: moniker-end
 
-Bu özellik sayfasına erişmek için **CTRL**+**Q** tuşlarına basarak arama kutusunu etkinleştirin ve **deneysel**yazın. Arama, ilk birkaç harften sonra sayfayı bulur. Ayrıca, **Araçlar** > **Seçenekler** ' i ve **metin düzenleyicisini**genişleterek, ardından **C/C++** ve sonra **deneysel**' u seçerek buna de ulaşabilirsiniz.
+Bu özellik sayfasına erişmek için **Ctrl**+**Q** tuşlarına basarak arama kutusunu etkinleştirin ve **deneysel**yazın. Arama, ilk birkaç harften sonra sayfayı bulur. Ayrıca, **Araçlar** > **Seçenekler** ' i ve **metin düzenleyicisini**genişleterek, ardından **C/C++** ve sonra **deneysel**' u seçerek bu işe da ulaşabilirsiniz.
 
 Bu özellikler, Visual Studio yüklemesinde mevcuttur.
 
@@ -37,7 +37,7 @@ Bu özellikler, Visual Studio yüklemesinde mevcuttur.
 
 ## <a name="enable-predictive-intellisense"></a>Tahmine dayalı IntelliSense 'i etkinleştir
 
-Tahmine dayalı IntelliSense, yalnızca bağlamla ilgili sonuçları görmeniz için IntelliSense açılan listesinde görüntülenen sonuçların sayısını sınırlar. Örneğin, IntelliSense açılan listesini yazıp `int x =` çağırdığınızda yalnızca tamsayılar döndüren tamsayılar veya işlevler görürsünüz. Tahmine dayalı IntelliSense varsayılan olarak kapalıdır.
+Tahmine dayalı IntelliSense, yalnızca bağlamla ilgili sonuçları görmeniz için IntelliSense açılan listesinde görüntülenen sonuçların sayısını sınırlar. Örneğin, `int x =` yazıp IntelliSense açılan listesini çağırdığınızda yalnızca tamsayılar döndüren tamsayılar veya işlevler görürsünüz. Tahmine dayalı IntelliSense varsayılan olarak kapalıdır.
 
 ::: moniker range="vs-2017"
 

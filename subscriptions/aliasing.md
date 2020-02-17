@@ -3,147 +3,110 @@ title: Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma b
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 02/14/2020
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
-ms.openlocfilehash: 392b86699b1116f45ca75df3b611fff6a2aebc62
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: dff48852e566522ad01ee07bd46cda72b8e1e249
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68378028"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77276625"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
-Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)oturum açarken doğru görüntülenmeyebilir. Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
+Oturum açmak için kullanılan hesap türüne bağlı olarak, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)için oturum açarken kullanılabilir abonelikler doğru görüntülenmeyebilir. Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
 
 ## <a name="what-is-aliasing"></a>Diğer ad nedir?
 "Diğer ad" terimi, Windows 'da (veya Active Directory) oturum açmak ve e-postaya erişmek için farklı kimliklere sahip kullanıcılar anlamına gelir.
 
-Şirket, 'JohnD@contoso.com' gibi dizin oturum açma işlemi için Microsoft Online hizmetine sahip olsa da diğer adlara ve kullanıcılara 'John.Doe@contoso.com' gibi diğer adlar veya kolay adlar kullanarak e-posta hesaplarına erişebilirler. Toplu Lisanslama hizmeti Merkezi (VLSC) aracılığıyla aboneliklerini yöneten birçok müşteri için, bu, girilenJohn.Doe@contoso.come-posta adresi (' ') dizin adresiyle ('JohnD@contoso.com') eşleşmediğinden başarısız oturum açma deneyimine yol açabilir. ) "Iş veya okul hesabı" seçeneği aracılığıyla başarılı kimlik doğrulaması için gereklidir.
+Şirket, 'olivia@contoso.com' gibi dizin oturum açma işlemi için bir Microsoft Online hizmetine sahip olduğunda, diğer adlara de rastlanır, ancak kullanıcılar e-posta hesaplarına 'OliviaG@contoso.com' gibi diğer adlar veya kolay adlar kullanarak erişebilirler. Kullanıcılarınızın aboneliklerine erişmek için https://manage.visualstudio.com adresindeki Visual Studio abonelikleri yönetim portalı 'nda listelenen "oturum açma e-posta adresini" kullanarak oturum açmasını sağlayın
 
 ## <a name="as-an-administrator-what-options-do-i-have"></a>Yönetici olarak hangi seçeneklere sahip mıyım?
-Yönetici olarak, abonelerinizin üzerinde [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)başarılı bir oturum açma deneyimine sahip olmasını sağlamak için iki seçenek vardır.
-- İlk seçenek (önerilir), Toplu Lisanslama hizmeti Merkezi 'ndeki (VLSC) atanan adres olarak dizin hesabından faydalanır. Daha fazla bilgi için bu makalenin [bir dizin hesabına abone atama](#assigning-subscribers-to-a-directory-account) bölümüne bakın.
-- İkinci seçenek (daha az güvenli), abonelerin "Iş veya okul" e-posta adresini bir "kişisel" Hesapla (deyişle Microsoft hesabı veya MSA). Daha fazla bilgi için bu makaledeki [bir iş veya okul hesabını kişisel hesap olarak tanımlama](#defining-a-work-or-school-account-as-a-personal-account) bölümüne bakın.
 
-> [!NOTE]
-> Şirketiniz yeni Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com)geçirildikten sonra, her iki dizin ve e-posta adresinin abonenin bir parçası olarak sağlanmasını sağlayan yeni yönetim deneyiminden yararlanabilirsiniz. profilinizi. [Geçiş](https://support.microsoft.com/help/4013930/visual-studio-subscriptions-administrator-migration-details)hakkında daha fazla bilgi edinin.
+Abonenin hesap türüne bağlı olarak, aşağıdaki ilgili çözümü bulun:
 
-## <a name="assigning-subscribers-to-a-directory-account"></a>Bir dizin hesabına aboneler atama
-Her durumda, Toplu Lisanslama hizmeti Merkezi 'ndeki (VLSC) abonelik yöneticisinin yeni aboneler için Dizin adresini kullanması veya "mevcut" aboneler için e-posta adresini güncelleştirmesi gerekir. Dizin adresinin kullanılması, yeni abonelerin bir hoş geldiniz e-postası almayacağını ve yöneticinin aboneye bir abonelik atandığını bilgilendirmesini gerektiren anlamına geldiğini unutmayın. Aşağıdaki adımları uyguladıktan sonra, abonelere bildirimde bulunan e-posta [şablonunu](#notifying-your-subscribers-with-directory-addresses) kullanmayı ve oturum açma sürecinde yardımcı olmaya de göz ayırın.
+### <a name="work-or-school-account-upn-mismatch-issue"></a>İş veya okul hesabı UPN uyumsuzluğu sorunu
 
-### <a name="adding-new-subscribers"></a>Yeni aboneler ekleme
-Bir dizin hesabı ile yeni bir abone eklemek için lütfen bu adımları izleyin.
+Bir compnay 'nin, UPN 'nin birincil SMTP adresiyle aynı olmadığı bir etkin diretory ayarlandığında, bir Kullanıcı asıl adı (UPN) uyumsuzluğu ile uyuşmazlık olabilir. 
 
-1. [Toplu Lisanslama hizmeti Merkezi 'ni](https://www.microsoft.com/Licensing/servicecenter/default.aspx) (VLSC) ziyaret edin ve oturum açın.
-2. VLSC admin sayfasından **abonelikler** ' e ve ardından **Visual Studio abonelikleri**' ne tıklayın.
+#### <a name="how-to-detect-if-a-users-sign-in-address-has-a-upn-mismatch"></a>Kullanıcının oturum açma adresinin UPN uyumsuzluğu olup olmadığını algılama
 
-    > [!div class="mx-imgBorder"]
-    > ![Abonelikler menüsü](_img//vlsc/vlsc-subscriptions.png)
+Kullanıcının aşağıdaki adımları tamamlamasını sağlayabilirsiniz:
 
-3. Visual Studio aboneliğiyle ilişkili **sözleşme numarasına** tıklayın.
+1. Abonelik atama e-postasında bahsedilen oturum açma adresini kullanarak https://my.visualstudio.com oturum açın.  
 
-    > [!div class="mx-imgBorder"]
-    > ![Anlaşma seçin](_img/vlsc/vlsc-agreement.png)
+    > [!NOTE]
+    > Aboneliklerinde abonelik atama e-postası yoksa, yönetim portalı içinden yeniden gönderebilirsiniz.  
 
-4. **Abonelik ata**' ya tıklayın.
-5. İstenen **abonelik düzeyini**seçin.
-6. Atanacak abonelikleriniz olduğunu doğrulayın ve **İleri**' ye tıklayın.
-7. Abone ayrıntılarını ve Dizin adresini e-posta adresi alanına girip **İleri**' ye tıklayın.
-8. Abone bilgilerini doğrulayın ve **son**' a tıklayın.
-9. Aşağıdaki [şablonu](#notifying-your-subscribers-with-directory-addresses)kullanarak abonesine aboneliğin sağlandığını bildirin.
+2. **Abonelikler** sekmesine tıklayın.
+3. E-posta adresinin görüntülenen sağ üst köşede görüntülendiğini doğrulayın ve "oturum açtınız..." , abonelik atama e-postasındaki oturum açma e-posta adresiyle aynıdır.  Değilse, abonelik avantajlarına erişemez. 
 
-### <a name="updating-an-existing-subscriber"></a>Mevcut bir aboneyi güncelleştirme
-Mevcut bir aboneyi bir dizin hesabıyla güncelleştirmek için lütfen aşağıdaki adımları izleyin.
+   > [!div class="mx-imgBorder"]
+   > ![abonelikler sayfası](_img/aliasing/aliasing-subscriptions-page.png)
 
-1. [Toplu Lisanslama hizmeti Merkezi 'ni](https://www.microsoft.com/Licensing/servicecenter/default.aspx) (VLSC) ziyaret edin ve oturum açın.
-2. VLSC yönetici sayfalarından **abonelikler** ' e ve ardından **Visual Studio abonelikleri**' ne tıklayın.
-3. Visual Studio aboneliğiyle ilişkili **sözleşme numarasına** tıklayın.
-4. Arama çubuğundaki **aşağı oka** tıklayın.
-5. "E-posta adresi" alanını kullanarak aboneyi arayın.
-6. Sonuçlar listesinden abonenin **son adına** tıklayın.
-7.           **Düzenle**‘ye tıklayın.
-8. E-posta adresi alanını istenen dizin adresiyle değiştirin ve **Kaydet**' e tıklayın.
-9. Aşağıdaki e-posta şablonu kullanılarak abonelere aboneliğin sağlandığını bildirin.
+#### <a name="how-to-correct-the-upn-mismatch"></a>UPN uyuşmazlığını Düzeltme
 
-### <a name="notifying-your-subscribers-with-directory-addresses"></a>Dizin adresleriyle abonelere bildirme
-Hoş geldiniz e-postası aboneinizde başarılı bir şekilde ulaşmayacak, lütfen aşağıdaki iletiyi kopyalayıp bir e-postaya yapıştırın ve abonelere gönderin. % WORD% değerini her abone için uygun bilgilerle değiştirin.
+1. Visual Studio yönetim yönetim portalına https://manage.visualstudio.com adresinden erişin 
 
-```
------------ Copy Below (Ctrl+C) -----------
+2. UPN uyuşmazlığını sorunu olan kullanıcıyı bulun.  Çok sayıda aboneliğiniz varsa [filtre](search-license.md) özelliği bunu daha kolay hale getirir. 
 
-Hello %SUBSCRIBER NAME%
+3. Oturum açma e-posta adresini kullanıcının UPN 'si ile değiştirin.
 
-You have been assigned a Visual Studio subscription. Please visit https://my.visualstudio.com, and log in with your %DIRECTORY ADDRESS% address to activate and access your subscription.
+4. Değişiklikleri Kaydet 
 
-If you’re having trouble, please contact the support team (https://visualstudio.microsoft.com/subscriptions/support/).
+5. Kullanıcıdan abone portalının oturumunu açmasını isteyin ve UPN 'yi kullanarak tekrar oturum açın.   
 
-At the bottom of the page, select the following:
-   - Accounts, Subscriptions, and Billing Support
-   - From Issue, choose Subscription sign in support
-   - Choose the appropriate Country
-   - Select the desired Assisted Support option
+### <a name="personal-account-aliasing-issue"></a>Kişisel hesap diğer ad sorunları
 
------------ End Copy -----------
-```
+Diğer ad sorunları da kişisel hesapları etkileyebilir. 
 
-## <a name="defining-a-work-or-school-account-as-a-personal-account"></a>Bir iş veya okul hesabını kişisel hesap olarak tanımlama
-Yeni bir kullanıcı eklemek veya Toplu Lisanslama hizmeti Merkezi (VLSC) içindeki bir kullanıcının e-posta adresini güncelleştirmek için, [bir dizin hesabına abone atama](#assigning-subscribers-to-a-directory-account) bölümünde açıklanan yönergelerden yararlanın.  E-posta adresinin dizin tarafından tanınmaması durumunda, kullanıcının e-posta adresini kişisel hesap olarak tanımlamak için yeni bir hesap oluşturma işlemini adım adım yapması gerekir.  Kısa dönem için, Visual Studio abonelikleri ekibi aşağıda tanımlanan kimlik ilkesinden bir istisnayı güvenli hale getirdi, ancak bu ilkeyi kaldırmak için gereken yeteneklere yatırım yaptık.
+#### <a name="how-to-detect-if-a-personal-account-has-an-aliasing-issue"></a>Kişisel hesabın bir diğer ad sorunu olup olmadığını algılama
 
-> [!WARNING]
-> Microsoft, "Iş veya okul" kimliklerinin "kişisel" kimliklerle birleştirilmesi önerilmez.  Bu eylem, kuruluşun hesabın sahipliğini ve denetimini kaybetmesine ve çalışanın şirketten ayrıldıktan sonra bile belirli ürün veya hizmetlere erişmesine devam edebilir.  
+1. https://my.visualstudio.comoturum açın.
 
-### <a name="defining-an-email-address-as-a-personal-account"></a>Kişisel hesap olarak bir e-posta adresi tanımlama
-Aboneliğe bir abonelik atandıktan sonra, abonelik avantajlarından faydalanmak için ziyaret [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) etmesini isteyen bir e-posta gönderilir.  Oturum açmaya çalışırken, Visual Studio aboneliği oturum açma işlemi, hesabın tanınmadığını belirten bir hata vererek başarısız olur.  [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Deneyime oturum açmadan önce, abonesinden bu yönergeleri izlemesini isteyin.  Gerekirse, bir aboneliği atadıktan sonra bu [şablonu](#notifying-your-subscribers-using-personal-accounts) kullanarak abone 'nize bildirim gönderebilirsiniz.
+2. **Abonelikler** sekmesine tıklayın ve oturum açtığınız adresi denetleyin. 
 
-1. Öğesine https://my.visualstudio.com gidin ve **Yeni Microsoft hesabı oluştur**' a tıklayın.
+3. Oturum açılan e-posta adresi, Web sitesine erişmek için kullanılan e-posta adresiyle aynı değilse, hesabınız ve diğer ad arasında bir çakışma vardır. 
 
-2. Alanları doldurun:
-   - Someone@example.com Kutuya hoş geldiniz e-postasını alan e-posta adresini girin
-   - Parolanızı oluşturma
-   - Promosyon ayarlarınızı seçin
-   -           **İleri**'ye tıklayın.
+#### <a name="how-to-fix-a-personal-account-aliasing-issue"></a>Kişisel hesap diğer ad sorununu çözme
 
-3. Doğrulama adımlarını tamamlayıp **İleri**' ye tıklayın.
+Visual Studio abonelikleri platformu, birincil diğer adı abonelik ayrıntılarını gösterecek şekilde önceliklendirir.  Bu sorunu çözmek için, birincil diğer adınızla oturum açmak üzere farklı bir e-posta diğer adı oluşturmanız gerekir. 
 
-4. Yeni kullanıcıların Visual Studio profilini tamamlaması gerekebilir.
+1. [Microsoft 'ta nasıl oturum açabileceğinizi yönetmek](https://go.microsoft.com/fwlink/p/?linkid=842796)için gidin.
+2. İstenirse Microsoft hesabı oturum açın. 
+3. Hesap diğer adları ' nın altında, aboneliği atamak için kullanılan e-posta adresinin yanındaki **birincil yap** ' ı seçin. 
+4. Hesap diğer adları ' nın altında, aboneliği atamak için kullanılan e-posta adresinin yanındaki birincil yap ' ı seçin. 
+5. Visual Studio abone portalı oturumunu kapat (https://my.visualstudio.com) 
+6. Yeni birincil diğer adı kullanarak portala tekrar erişin. 
 
-5. Abonelik ve avantajlar artık görünür olmalıdır.
+### <a name="ensure-a-successful-experience-for-your-users"></a>Kullanıcılarınız için başarılı bir deneyim sağlayın
 
-### <a name="notifying-your-subscribers-using-personal-accounts"></a>Kişisel hesapları kullanarak abonelere bildirme
-Yukarıda özetlenen senaryoda, aboneizin bir "hoş geldiniz e-postası" alır, ancak diğer ad nedeniyle bu kişiler oturum açamıyor olabilir.  Yukarıdaki adımları abonelere bildirmek için aşağıdaki metni kullanabilir ve gerekirse destek seçeneklerini önerebilirsiniz.  % WORD% değerini her abone için uygun bilgilerle değiştirin.
+Yönetici olarak, abonelerinizin https://my.visualstudio.comiçin başarılı bir oturum açma deneyimine sahip olmasını sağlamaya yönelik iki seçenek vardır. 
 
-```
------------ Copy Below (Ctrl+C) -----------
+- İlk seçenek (önerilir) https://manage.visualstudio.comoturum açma adresi olarak dizin hesabından faydalanır.
+- İkinci seçenek (daha az güvenli), daha az güvenli olan ikinci seçenek, abonelerin Dizin e-posta adresinden farklı bir e-posta adresi kullanarak oturum açmalarına izin vermektir.
 
-Hello %SUBSCRIBER NAME%
+Her iki seçenek de yönetim portalında aşağıdaki adımları tamamlayarak yapılandırılır:
 
-You have been assigned a Visual Studio subscription, and may have been directed to log into https://my.visualstudio.com based on your Welcome email.  While this is the correct website for consuming benefits, our organization requires you to take a few extra steps before you can access the site.  Please follow the below instructions to help you create a “Microsoft Account” that is tied to our corporate email address.  Once these steps are completed, you will use your email address to access the Subscription benefits.
-1. Visit https://my.visualstudio.com
+1. https://manage.visualstudio.com oturum aç 
 
-2. Click Create new Microsoft Account on the right hand side
+2. Tek bir kullanıcıyı değiştirirseniz, tabloda bu kullanıcı ' yı seçin ve düzenlemek için sağ tıklayın. Bu, oturum açma e-posta adresini değiştirebileceğiniz bir panel açar.  
 
-3. Complete the Form:
-   - Use your corporate email address in the someone@example.com box
-   - Enter a password
-   - Select your promotional preference
-   - Click Next
+3. Oturum açma e-posta adresi alanında gerekli güncelleştirmeleri yapın. 
 
-4. Complete the account validation steps
+4. Kaydet ' e tıkladığınızda değişiklikler geçerli olur.  
+Bu değişiklikleri büyük miktarda kullanıcıya yapmanız gerekirse toplu düzenleme özelliğinden yararlanabilirsiniz. Bu süreç hakkında daha fazla bilgi için [abonelikleri Düzenle]] (Edit-license.md) makalesinin **toplu düzenleme kullanarak birden çok aboneyi Düzenle** bölümünü okuyun.  
 
-5. If necessary, complete the Visual Studio profile
+## <a name="next-steps"></a>Sonraki adımlar
+Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
+- [Ayrı abonelikler atama](assign-license.md)
+- [Birden çok abonelik atama](assign-license-bulk.md)
+- [Abonelikleri düzenleme](edit-license.md)
+- [Abonelikleri silme](delete-license.md)
+- [En fazla kullanımı belirleme](maximum-usage.md)
 
-6. You should now see your benefits
-
-Note:  When visiting https://my.visualstudio.com in the future, you may be prompted to select which account you’d like to use (e.g. “Work or School Account” or “Personal Account”).  After following the steps above, you will need to leverage the “Personal Account” option.
-
-If you’re having trouble, please contact the support team (https://visualstudio.microsoft.com/subscriptions/support/).
-
-At the bottom of the page, select the following:
-   - Accounts, Subscriptions, and Billing Support
-   - From Issue, choose Subscription sign in support
-   - Choose the appropriate Country
-   - Select the desired Assisted Support option
-
------------ End Copy -----------
-```
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8f99bc18f4fdc834d0c5fdc7818d945d116251e
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: dd3ccd23775c93fb7222960c4db3ae5d35eb349f
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027622"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275497"
 ---
 # <a name="common-msbuild-project-properties"></a>Ortak MSBuild proje özellikleri
 Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild 'in sağladığı *. targets* dosyalarına eklenen sık kullanılan özellikler listelenmiştir.
@@ -43,8 +43,8 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | AssemblySearchPaths | Derleme zamanı başvuru derleme çözümlemesi sırasında aranacak konumların listesi. Daha önce listelenen yollar daha sonraki girişlerden daha öncelikli olduğundan, yolların bu listede görünme sırası anlamlı. |
 | AssemblyName | Proje derlendikten sonra nihai çıkış derlemesinin adı. |
 | BaseAddress | Ana çıkış derlemesinin temel adresini belirtir. Bu özellik `/baseaddress` derleyici anahtarıyla eşdeğerdir. |
-| BaseOutputPath | Çıkış dosyası için temel yolu belirtir. Ayarlanırsa, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] `OutputPath = $(BaseOutputPath)\$(Configuration)\`kullanacaktır. Örnek sözdizimi: `<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BaseIntermediateOutputPath | Yapılandırmaya özgü tüm ara çıkış klasörlerinin oluşturulduğu en üst düzey klasör. Varsayılan değer: `obj\`. Aşağıdaki kod bir örnektir: `<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
+| BaseOutputPath | Çıkış dosyası için temel yolu belirtir. Ayarlanırsa, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] `OutputPath = $(BaseOutputPath)\$(Configuration)\`kullanacaktır. Örnek sözdizimi: `<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BuildInParallel | Multi-proc [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] kullanıldığında, proje başvurularının paralel olarak oluşturulup temizlenmediğini belirten bir Boolean değer. Varsayılan değer `true`, bu, sistemin birden çok çekirdeği veya işlemciyi varsa, bu projelerin paralel olarak derlenme anlamına gelir. |
 | BuildProjectReferences | Proje başvurularının [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]tarafından oluşturulup oluşturulmayacağını gösteren Boolean bir değer. Projenizi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamında (IDE) oluşturuyorsanız, aksi takdirde `true` otomatik olarak `false` olarak ayarlayın. başvurulan projelerin güncel olup olmadığını kontrol etmekten kaçınmak için, komut satırında `-p:BuildProjectReferences=false` belirtilebilir. |
 | CleanFile | "Temiz önbellek" olarak kullanılacak dosyanın adı. Temizleme önbelleği, temizleme işlemi sırasında silinecek oluşturulan dosyaların bir listesidir. Dosya, yapı işlemi tarafından ara çıkış yoluna konur.<br /><br /> Bu özellik yalnızca yol bilgilerine sahip olmayan dosya adlarını belirtir. |
@@ -72,8 +72,8 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | IntermediateOutputPath | Yol belirtilmediyse `BaseIntermediateOutputPath`türetilen tam ara çıkış yolu. Örneğin, *\obj\debug\\* . |
 | KeyContainerName | Tanımlayıcı ad anahtar kapsayıcısının adı. |
 | Keyorigınatorfile | Tanımlayıcı ad anahtar dosyasının adı. |
-| Msbuildprojeclarsionspath | Proje uzantılarının bulunduğu yolu belirtir. Varsayılan olarak, `BaseIntermediateOutputPath`ile aynı değeri alır. |
 | ModuleAssemblyName | Derlenen modülün içine dahil edilecek derlemenin adı. Özelliği, `/moduleassemblyname` derleyici anahtarıyla eşdeğerdir. |
+| Msbuildprojeclarsionspath | Proje uzantılarının bulunduğu yolu belirtir. Varsayılan olarak, `BaseIntermediateOutputPath`ile aynı değeri alır. |
 | NoLogo | Derleyici logosunun kapatılmasını isteyip istemediğinizi belirten bir Boole değeri. Bu özellik `/nologo` derleyici anahtarıyla eşdeğerdir. |
 | NoStdLib | Standart kitaplığa (*mscorlib. dll*) başvurulmaya engellenip engellenmeyeceğini belirten bir Boole değeri. Varsayılan değer: `false`. |
 | NoVBRuntimeReference | [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] çalışma zamanının (*Microsoft. VisualBasic. dll*) projeye başvuru olarak eklenmesi gerekip gerekmediğini belirten bir Boolean değer. |
@@ -90,13 +90,10 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | PathMap | Derleyici tarafından giden kaynak yol adlarına fiziksel yolların nasıl eşleneceğini belirtir. Bu özellik, *CSC. exe* derleyicisinin `/pathmap` anahtarıyla eşdeğerdir. |
 | Pdbdosya | Yayma yaptığınız *. pdb* dosyasının dosya adı. Bu özellik, *CSC. exe* derleyicisinin `/pdb` anahtarıyla eşdeğerdir. |
 | Platform | İçin oluşturmakta olduğunuz işletim sistemi. Geçerli değerler şunlardır "Any CPU", "x86" ve "x64". |
-| ProduceReferenceAssembly | `true` olarak ayarlandığında geçerli derleme için [başvuru derlemelerinin](/dotnet/standard/assembly/reference-assemblies) üretimini sağlayan bir Boole değeri. Bu özellik kullanılırken `Deterministic` `true` olmalıdır. Bu özellik *Vbc. exe* ve *CSC. exe* derleyicilerinin `/refout` anahtarına karşılık gelir. |
-| ProduceOnlyReferenceAssembly | Derleyiciye derlenen kod yerine yalnızca bir başvuru derlemesi yaymasını bildiren bir Boole değeri. `ProduceReferenceAssembly`ile birlikte kullanılamaz.  Bu özellik *Vbc. exe* ve *CSC. exe* derleyicilerinin `/refonly` anahtarına karşılık gelir. |
-| RemoveIntegerChecks | Tamsayı taşma hata denetimlerinin devre dışı bırakılıp başlatılmayacağını belirten bir Boole değeri. Varsayılan değer: `false`. Bu özellik *Vbc. exe* derleyicisinin `/removeintchecks` anahtarıyla eşdeğerdir. |
-| SGenUseProxyTypes | Proxy türlerinin *SGen. exe*tarafından oluşturulup oluşturulmayacağını gösteren bir Boolean değer. Bu yalnızca *GenerateSerializationAssemblies* on olarak ayarlandığında ve yalnızca .NET Framework için geçerlidir.<br /><br /> SGen hedefi, UseProxyTypes bayrağını ayarlamak için bu özelliği kullanır. Bu özellik varsayılan olarak true değerini alır ve bunu değiştirmek için bir kullanıcı arabirimi yoktur. Web hizmeti olmayan türler için serileştirme derlemesini oluşturmak üzere, bu özelliği proje dosyasına ekleyin ve *Microsoft. Common. targets* veya  *C#/vb.exe*'i içeri aktarmadan önce false olarak ayarlayın. |
-| SGenToolPath | Geçerli *SGen. exe* sürümü geçersiz kılındığında *SGen. exe* ' nin nereden alınacağını belirten isteğe bağlı bir araç yolu. Bu özellik yalnızca .NET Framework için kullanılır.|
-| StartupObject | Ana yöntemi veya alt ana yordamı içeren sınıfı veya modülü belirtir. Bu özellik `/main` derleyici anahtarıyla eşdeğerdir. |
 | ProcessorArchitecture | Derleme başvuruları çözümlendiğinde kullanılan işlemci mimarisi. Geçerli değerler şunlardır "MSIL," "x86," "amd64" veya "ia64." |
+| ProduceOnlyReferenceAssembly | Derleyiciye derlenen kod yerine yalnızca bir başvuru derlemesi yaymasını bildiren bir Boole değeri. `ProduceReferenceAssembly`ile birlikte kullanılamaz.  Bu özellik *Vbc. exe* ve *CSC. exe* derleyicilerinin `/refonly` anahtarına karşılık gelir. |
+| ProduceReferenceAssembly | `true` olarak ayarlandığında geçerli derleme için [başvuru derlemelerinin](/dotnet/standard/assembly/reference-assemblies) üretimini sağlayan bir Boole değeri. Bu özellik kullanılırken `Deterministic` `true` olmalıdır. Bu özellik *Vbc. exe* ve *CSC. exe* derleyicilerinin `/refout` anahtarına karşılık gelir. |
+| RemoveIntegerChecks | Tamsayı taşma hata denetimlerinin devre dışı bırakılıp başlatılmayacağını belirten bir Boole değeri. Varsayılan değer: `false`. Bu özellik *Vbc. exe* derleyicisinin `/removeintchecks` anahtarıyla eşdeğerdir. |
 | RootNamespace | Gömülü bir kaynağı ad yazdığınızda kullanılacak kök ad alanı. Bu ad alanı, gömülü kaynak bildirim adının bir parçasıdır. |
 | Satellite_AlgorithmId | Uydu derlemeleri oluşturulurken kullanılacak *al. exe* karma algoritmasının kimliği. |
 | Satellite_BaseAddress | Kültüre özgü uydu derlemeleri `CreateSatelliteAssemblies` hedefi kullanılarak oluşturulduğunda kullanılacak temel adres. |
@@ -117,9 +114,12 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | Satellite_Version | Uydu derlemesinin sürüm bilgilerini belirtir. |
 | Satellite_Win32Icon | Uydu derlemesine bir *. ico* simge dosyası ekler. |
 | Satellite_Win32Resource | Uydu derlemesine bir Win32 kaynağı ( *. res* dosyası) ekler. |
+| SGenToolPath | Geçerli *SGen. exe* sürümü geçersiz kılındığında *SGen. exe* ' nin nereden alınacağını belirten isteğe bağlı bir araç yolu. Bu özellik yalnızca .NET Framework için kullanılır.|
+| SGenUseProxyTypes | Proxy türlerinin *SGen. exe*tarafından oluşturulup oluşturulmayacağını gösteren bir Boolean değer. Bu yalnızca *GenerateSerializationAssemblies* on olarak ayarlandığında ve yalnızca .NET Framework için geçerlidir.<br /><br /> SGen hedefi, UseProxyTypes bayrağını ayarlamak için bu özelliği kullanır. Bu özellik varsayılan olarak true değerini alır ve bunu değiştirmek için bir kullanıcı arabirimi yoktur. Web hizmeti olmayan türler için serileştirme derlemesini oluşturmak üzere, bu özelliği proje dosyasına ekleyin ve *Microsoft. Common. targets* veya  *C#/vb.exe*'i içeri aktarmadan önce false olarak ayarlayın. |
+| StartupObject | Ana yöntemi veya alt ana yordamı içeren sınıfı veya modülü belirtir. Bu özellik `/main` derleyici anahtarıyla eşdeğerdir. |
 | SubsystemVersion | Oluşturulan yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir. Bu özellik `/subsystemversion` derleyici anahtarıyla eşdeğerdir. Bu özelliğin varsayılan değeri hakkında daha fazla bilgi için bkz. [/subsystemversion (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/subsystemversion) veya [/subsystemversion (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/subsystemversion-compiler-option). |
 | TargetCompactFramework | Oluşturmakta olduğunuz uygulamayı çalıştırmak için gereken .NET Compact Framework sürümü. Bunu belirtmek, başka türlü başvuramayacak bazı Framework derlemelerine başvurmanıza olanak sağlar. |
-| targetFrameworkVersion | Oluşturmakta olduğunuz uygulamayı çalıştırmak için gereken .NET Framework sürümü. Bunu belirtmek, başka türlü başvuramayacak bazı Framework derlemelerine başvurmanıza olanak sağlar. |
+| TargetFrameworkVersion | Oluşturmakta olduğunuz uygulamayı çalıştırmak için gereken .NET Framework sürümü. Bunu belirtmek, başka türlü başvuramayacak bazı Framework derlemelerine başvurmanıza olanak sağlar. |
 | TreatWarningsAsErrors | `true`, tüm uyarıların hata olarak işlenmesine neden olan bir Boole parametresi. Bu parametre `/nowarn` derleyici anahtarıyla eşdeğerdir. |
 | UseHostCompilerIfAvailable | `true`, derleme görevinin varsa işlem içi derleyici nesnesini kullanmasına neden olan bir Boole parametresi. Bu parametre yalnızca [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]tarafından kullanılır. |
 | Utf8Output | `true`, derleyici çıkışını UTF-8 kodlaması kullanarak günlüğe kaydettiğini belirten bir Boole parametresi. Bu parametre `/utf8Output` derleyici anahtarıyla eşdeğerdir. |

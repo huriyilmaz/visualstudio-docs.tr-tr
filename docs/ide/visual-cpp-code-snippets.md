@@ -2,19 +2,19 @@
 title: Görsel C++ kod parçacıkları
 ms.date: 11/04/2016
 ms.topic: reference
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1bcef00116e0c5f09099344926d924113e5982
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: db6ea1e233d32872322926a4d75b847ee6a49ba3
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461630"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277835"
 ---
 # <a name="visual-c-code-snippets"></a>Görsel C++ kod parçacıkları
 
@@ -30,7 +30,7 @@ Bir kod parçacığı eklemek için bir C++ kod dosyası ( *. cpp* veya *. h*) a
 
 - **Düzenle/IntelliSense** menüsünde **kod parçacığı Ekle** ' yi seçin.
 
-- Kısayol tuşlarını kullanın: **CTRL**+**K** X+
+- Kısayol tuşlarını kullanın: **Ctrl**+**K**+**X**
 
 **#İf**başlayan seçeneklerin bir listesini görmeniz gerekir. **#İf**' yi seçtiğinizde, dosyaya aşağıdaki kodun eklendiğini görmeniz gerekir:
 
@@ -48,11 +48,11 @@ Seçilen kodu çevrelemek için bir kod parçacığı kullanmak için bir satır
 
 - Bağlam menüsünü almak için sağ tıklayın ve şununla **Çevrele** ' yi seçin
 
-- **IntelliSense** **düzenleme** > menüsünde **Şununla Çevrele** ' yi seçin
+- ** > ** **IntelliSense** menüsünden **Çevrele** ' yi seçin
 
-- Klavye kullanarak şunları bas: **CTRL**+**K** S+
+- Klavye kullanarak: **Ctrl**+**K**+**S** tuşlarına basın
 
-**#İf**seçin. Şuna benzer bir şey görmeniz gerekir:
+**#İf**seçin. Şunun gibi bir görüntüyle karşılaşacaksınız:
 
 ```cpp
 #if 0
@@ -70,7 +70,7 @@ Kod parçacıkları **yöneticisine** ( **Araçlar** menüsünde) C++ gidip **di
 
 ## <a name="class-vs-classi"></a>Sınıf ve classı karşılaştırması
 
-**Sınıf** parçacığı, uygun varsayılan Oluşturucu ve yıkıcısı ile `MyClass`adlı bir sınıfın tanımını sağlar; burada Oluşturucu ve yıkıcının tanımlarının sınıfın dışında bulunduğu yer vardır:
+**Sınıf** parçacığı, uygun varsayılan Oluşturucu ve yıkıcısıyla `MyClass`adlı bir sınıfın tanımını sağlar ve burada Oluşturucu ve yıkıcının tanımlarının sınıfın dışında bulunduğu bir değer vardır:
 
 ```cpp
 class MyClass
@@ -92,7 +92,7 @@ MyClass::~MyClass()
 }
 ```
 
-**Classı** kod parçacığı ayrıca adlı `MyClass`bir sınıfın tanımını da sağlar, ancak varsayılan Oluşturucu ve yıkıcısı sınıf tanımı içinde tanımlanmıştır:
+**Classı** kod parçacığı Ayrıca `MyClass`adlı bir sınıfın tanımını sağlar, ancak varsayılan Oluşturucu ve yıkıcının sınıf tanımı içinde tanımlanması gerekir:
 
 ```cpp
 class MyClass
@@ -113,9 +113,9 @@ private:
 
 ## <a name="for-vs-forr-vs-rfor"></a>vs. öğrencilerinize vs rfor için
 
-Farklı türlerde `for` döngüler sağlayan kod parçacıkları **için** üç farklı vardır.
+Farklı türlerde `for` döngüleri sağlayan kod parçacıkları **için** üç farklı vardır.
 
-**Rfor** kod parçacığı, [Aralık tabanlı](/cpp/cpp/range-based-for-statement-cpp) bir for döngüsü (bağlantı) sağlar. Bu yapı, dizin tabanlı `for` Döngülerde tercih edilir.
+**Rfor** kod parçacığı, [Aralık tabanlı](/cpp/cpp/range-based-for-statement-cpp) bir for döngüsü (bağlantı) sağlar. Bu yapı, dizin tabanlı `for` döngülerine göre tercih edilir.
 
 ```cpp
 for (auto& i : v)
@@ -124,7 +124,7 @@ for (auto& i : v)
 }
 ```
 
-**For** kod parçacığında, koşulun `for` bir nesnenin uzunluğuna (içindeki `size_t`) göre kullanıldığı bir döngü sağlar.
+**For** kod parçacığında, koşulun bir nesnenin uzunluğuna (`size_t`) dayalı olduğu `for` bir döngüsü sağlar.
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -133,7 +133,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
-**Öğrencilerinize** kod parçacığı, koşulun bir `for` nesnenin uzunluğuna (tamsayı cinsinden) dayanmakta olduğu ters bir döngü sağlar.
+**Öğrencilerinize** kod parçacığı, koşulun bir nesnenin uzunluğuna (tamsayı cinsinden) dayanmakta olduğu bir ters `for` döngüsü sağlar.
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
@@ -152,7 +152,7 @@ class SomeClass {
 };
 ```
 
-Yıkıcı parçacığı eklerseniz, için `SomeClass`bir yıkıcı sağlar:
+Yıkıcı parçacığı eklerseniz, `SomeClass`için bir yıkıcı sağlar:
 
 ```cpp
 class SomeClass {
