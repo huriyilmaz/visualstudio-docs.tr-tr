@@ -1,5 +1,5 @@
 ---
-title: Yapıları ve sınıfları yorumlama | Microsoft Docs
+title: Yapı ve sınıflara açıklama ekleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -21,44 +21,44 @@ f1_keywords:
 - _Field_size_full_opt_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: df2e75bb3dd01d051d8fed29748e499f8f620128
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6db2202971facb0419db68c04835c8d5c848f528
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157070"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271575"
 ---
 # <a name="annotating-structs-and-classes"></a>Yapıları ve Sınıfları Yorumlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yapı ve sınıf üyeleri okuduğunuzda gibi davranan ek açıklamalar kullanarak açıklama ekleyebilirsiniz; herhangi bir işlev çağrısı veya bir parametre veya bir sonuç değeri kapsayan yapısı gerektirir. işlev girişi/çıkışı en doğru olduğu varsayılmıştır.  
+Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullanarak açıklama ekleyebilirsiniz — bir parametre çağrısı veya bir sonuç değeri olarak kapsayan yapıyı içeren herhangi bir işlev çağrısında ya da işlev girişinde/çıkışta doğru olarak kabul edilir.  
   
-## <a name="struct-and-class-annotations"></a>Yapı ve sınıf ek açıklamaları  
+## <a name="struct-and-class-annotations"></a>Struct ve sınıf ek açıklamaları  
   
 - `_Field_range_(low, high)`  
   
-     Aralık (dahil) gelen alanın bulunduğu `low` için `high`.  Eşdeğer `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` uygun önceki veya sonraki koşullarını kullanarak ek açıklamalı nesneye uygulanan.  
+     Alan, `high``low` aralığında (kapsamlı).  İlgili ön koşul veya gönderi koşulları kullanılarak açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` eşdeğerdir.  
   
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`  
   
-     Öğeleri (veya bayt) belirtilen bir yazılabilir boyut sahip bir alan `size`.  
+     `size`tarafından belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan.  
   
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
   
-     Öğeleri (veya bayt) belirtilen bir yazılabilir boyut sahip bir alan `size`ve `count` okunabilir bu öğelerin (bayt).  
+     `size`tarafından belirtilen öğeler (veya bayt) ve okunabilir olan öğelerin (bayt) `count`.  
   
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`  
   
-     Readable ve writable öğeleri (veya boyutunu bayt) tarafından belirtilen sahip bir alan `size`.  
+     `size`tarafından belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan.  
   
 - `_Struct_size_bytes_(size)`  
   
-     Readable ve writable öğeleri (veya boyutunu bayt) tarafından belirtilen sahip bir alan `size`.  
+     `size`tarafından belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan.  
   
-     Yapı ya da sınıf bildirimi için geçerlidir.  Geçerli bir nesne türü tarafından belirtilen bayt sayısı ile bildirilen türünden daha büyük olabileceğini gösterir `size`.  Örneğin:  
+     Struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size`tarafından belirtilen bayt sayısıyla, tanımlanan türden daha büyük olabileceğini gösterir.  Örnek:  
   
     ```cpp  
   
@@ -70,18 +70,18 @@ Yapı ve sınıf üyeleri okuduğunuzda gibi davranan ek açıklamalar kullanara
   
     ```  
   
-     Arabellek boyutu parametresinin bayt `pM` türü `MyStruct *` olmasını alınır:  
+     `MyStruct *` türündeki bir parametre `pM` arabellek boyutu daha sonra şu şekilde alınır:  
   
     ```cpp  
     min(pM->nSize, sizeof(MyStruct))  
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C/C++ kod hatalarını azaltmak için SAL ek açıklamalarını kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
- [SAL'yi anlama](../code-quality/understanding-sal.md)   
- [İşlev parametrelerini ve dönüş değerlerini açıklama](../code-quality/annotating-function-parameters-and-return-values.md)   
- [İşlev davranışını yorumlama](../code-quality/annotating-function-behavior.md)   
- [Kilitlenme davranışını yorumlama](../code-quality/annotating-locking-behavior.md)   
- [Açıklamanın ne zaman ve nereye uygulanacağını belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
- [İç işlevleri](../code-quality/intrinsic-functions.md)   
+ [CC++ /kod HATALARıNı azaltmak Için sal ek açıklamalarını kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [SAL  anlama](../code-quality/understanding-sal.md)  
+ [Işlev parametrelerine ve dönüş değerlerine açıklama ekleme](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [Işlev davranışına açıklama ekleme](../code-quality/annotating-function-behavior.md)   
+ [Kilitleme davranışına açıklama ekleme](../code-quality/annotating-locking-behavior.md)   
+ [Ek açıklamanın ne zaman ve nereye uygulanacağını belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
+ [Iç işlevler](../code-quality/intrinsic-functions.md)   
  [En İyi Yöntemler ve Örnekler](../code-quality/best-practices-and-examples-sal.md)

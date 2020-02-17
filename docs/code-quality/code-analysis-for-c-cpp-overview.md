@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515b9b7eb1b1a4d2dbee6329be782386b8370338
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4991a72b2761e96e143bfa33e0b55f9a4e9467c6
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806314"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271217"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ Overview için kod analizi
 
@@ -50,7 +50,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>#pragma desteği
 
-Uyarıları hata olarak değerlendirmek için `#pragma` yönergesini kullanabilirsiniz; uyarıları etkinleştirin veya devre dışı bırakın ve tek satırlık kod satırları için uyarıları gizleyin. Daha fazla bilgi için bkz. [pragma yönergeleri ve __Pragma Anahtar sözcüğü](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Uyarıları hata olarak değerlendirmek için `#pragma` yönergesini kullanabilirsiniz; uyarıları etkinleştirin veya devre dışı bırakın ve tek satırlık kod satırları için uyarıları gizleyin. Daha fazla bilgi için bkz. [pragma yönergeleri ve __pragma anahtar sözcüğü](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
 
 ## <a name="annotation-support"></a>Ek açıklama desteği
 

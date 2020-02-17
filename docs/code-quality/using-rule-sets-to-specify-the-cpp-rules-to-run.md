@@ -4,21 +4,21 @@ ms.date: 04/28/2018
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e25e28c2ff20a628058d5dfa71de0368fbe9249
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: ec2d9c812de9ec6be5ba5f42ca2a4484703d0b84
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445615"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271786"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Çalıştırılacak C++ kuralları belirtmek Için kural kümelerini kullanma
 
-Visual Studio 'da, kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Varsayılan kural kümeleri `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` ' da depolanır.
+Visual Studio 'da, kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Varsayılan kural kümeleri `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`depolanır.
 
 **Visual Studio 2017 sürüm 15,7 ve üzeri:** Herhangi bir metin düzenleyicisini kullanarak özel kural kümeleri oluşturabilir ve bunları, hangi yapı sistemini kullandığınıza bağımsız olarak komut satırı yapılarına uygulayabilirsiniz. Daha fazla bilgi için bkz. [/Analyze: RuleSet](/cpp/build/reference/analyze-code-analysis).
 
@@ -38,7 +38,7 @@ Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu
 
      \- veya-
 
-   - **@No__t-1Zat seç...** listede olmayan var olan bir kural kümesini belirtmek için >.
+   - **\<gözatmaya seç...** listede olmayan var olan bir kural kümesini belirtmek için >.
 
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
 
@@ -66,7 +66,7 @@ Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu
 
 - Tüm gruplardaki kuralları daraltmak için **Tümünü Daralt**' ı seçin.
 
-- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için **\<None >** öğesini seçin.
+- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için **\<yok >** seçin.
 
 - Kural sütunlarındaki alanları eklemek veya kaldırmak için **sütun seçenekleri**' yi seçin.
 
@@ -82,7 +82,7 @@ Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Bir metin düzenleyicisinde bir kural kümesi oluşturmak için
 
-Bir metin düzenleyicisinde özel bir kural kümesi oluşturabilir, bunu `.ruleset` uzantılı herhangi bir konumda depolayıp, [/Analyze: RuleSet](/cpp/build/reference/analyze-code-analysis) derleyici seçeneğiyle de uygulayabilirsiniz.
+Bir metin düzenleyicisinde özel bir kural kümesi oluşturabilir, `.ruleset` uzantısı olan herhangi bir konumda saklayabilir ve [/Analyze: RuleSet](/cpp/build/reference/analyze-code-analysis) derleyici seçeneğiyle ' de uygulayabilirsiniz.
 
 Aşağıdaki örnek, başlangıç noktası olarak kullanabileceğiniz temel bir kural kümesi dosyasını gösterir:
 

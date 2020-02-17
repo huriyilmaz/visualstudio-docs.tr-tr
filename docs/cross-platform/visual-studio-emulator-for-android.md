@@ -1,21 +1,23 @@
 ---
 title: Android için Visual Studio öykünücüsü | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.prod: visual-studio-dev15
+ms.date: 02/13/2020
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: 80f0104f-a4db-44dd-bd55-37bb67776c62
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d7bda9882a8f46f3b32c658db952a2eaf73d3fb7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 73dd10cf1923caa6703acc0ef9d4fde82c13f5bb
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916466"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272038"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü
 
@@ -35,7 +37,7 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
  Uygulamanızı, Android için Visual Studio öykünücüsü tarafından desteklenen Android platformları, ekran çözünürlükleri ve diğer donanım özellikleri için benzersiz bir cihaz profilinde test edebilirsiniz.
 
 ## <a name="Installing"></a>Yükleme ve kaldırma
- Yükleme
+ Yükleniyor
 
  Android için Visual Studio öykünücüsü, Visual Studio 'da bulunan platformlar arası araçların bir bileşenidir ve platformlar arası mobil geliştirme, ortak araçlar ve yazılım geliştirme setleri ' ni seçtiğinizde özel bir Visual Studio Kurulumu sırasında yüklenir. ve ardından Android için Visual Studio öykünücüsü.
 

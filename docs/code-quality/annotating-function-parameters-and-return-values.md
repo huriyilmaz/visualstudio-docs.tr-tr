@@ -123,17 +123,17 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 16e7ffb30dc7ec4ae1b78647a0964b81932617ab
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+ms.openlocfilehash: 18de1a42a72172d137215d27d9af3a9a409e9086
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879275"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271082"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>İşlev Parametrelerini ve Dönüş Değerlerini Açıklama
 Bu makalede basit işlev parametreleri için ek açıklamaların tipik kullanımları ve yapı ve sınıf işaretçileri ve birçok arabellek türü açıklanmaktadır.  Bu makalede ayrıca ek açıklamalar için ortak kullanım desenleri gösterilmektedir. İşlevlerle ilgili ek ek açıklamalar için bkz. [Işlev davranışına açıklama ekleme](../code-quality/annotating-function-behavior.md).
@@ -220,7 +220,7 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
 
      `s` öğelerinin dizisine yönelik bir işaretçi.  Öğelerin ön durumunda geçerli olması gerekmez.  Durum sonrası, `c`-TH öğesine kadar olan öğeler geçerli olmalıdır.  Boyut, öğe sayısı yerine bayt olarak biliniyorsa `_bytes_` değişken kullanılabilir.
      
-     Örneğin:
+     Örnek:
 
      ```cpp
      void *memcpy(_Out_writes_bytes_all_(s) char *p1, _In_reads_bytes_(s) char *p2, _In_ int s); 
@@ -516,7 +516,7 @@ Bir işlevin dönüş değeri bir `_Out_` parametresine benzer, ancak farklı bi
 
 - `_Struct_size_bytes_(size)`
 
-     Bir struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size`tarafından verilen bayt sayısıyla, belirtilen türden daha büyük olabileceğini gösterir.  Örneğin:
+     Bir struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size`tarafından verilen bayt sayısıyla, belirtilen türden daha büyük olabileceğini gösterir.  Örnek:
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 

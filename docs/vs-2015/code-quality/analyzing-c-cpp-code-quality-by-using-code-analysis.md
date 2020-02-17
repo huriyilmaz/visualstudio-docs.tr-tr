@@ -1,5 +1,5 @@
 ---
-title: Kod çözümlemesi ile C / C++ kod kalitesini analiz etme | Microsoft Docs
+title: Kod analizini kullanarakC++ C kodu kalitesini analiz etme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - C, code analysis
 ms.assetid: 03b8b47a-e9d8-4692-835f-2d22ec6c76a4
 caps.latest.revision: 37
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: f7820947921e584d96d7f9e7299b70410b3d0587
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c412b4df2365c4e4a910033c0b5007c77b0c7a0e
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157137"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271349"
 ---
 # <a name="analyzing-cc-code-quality-by-using-code-analysis"></a>Kod Analizi ile C/C++ Kod Kalitesini Analiz Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bulma ve kod hatalarını düzeltmek için Visual Studio Kod Analizi kullanarak C/C++ kod artırabilir.  
+Kod hatalarını bulmak ve onarmak içinC++ Visual Studio 'daki Kod analizini kullanarak C/kodunuzu geliştirebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |||  
 |-|-|  
-|[C/C++ İçin Kod Çözümlemesine Genel Bakış](../code-quality/code-analysis-for-c-cpp-overview.md)|Kod Analizi aracı özellikleri hakkında bilgi edinin.|  
-|[Hızlı Başlangıç: C/C++ için Kod Analizi](../code-quality/quick-start-code-analysis-for-c-cpp.md)|C/C++ için Kod Analizi ile ilgili temel bilgileri öğrenin.|  
-|[Çalıştırılacak C++ Kurallarını Belirtmek için Kural Kümeleri Kullanma](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md)|Proje veya çözüm üzerinde çalıştırmak için kuralları belirtin.|  
-|[C++ Temel Yönergeleri denetleyicilerini kullanma](../code-quality/using-the-cpp-core-guidelines-checkers.md)|C++ temel yönergeleri denetleyicilerini projenize ekleyin.|  
-|[Nasıl yapılır: C/C++ projeleri için Kod Analizi özelliklerini ayarlama](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md)|Kod Analizi için yapılandırma ayarları açıklanmaktadır.|  
-|[Nasıl yapılır: __Analysis_assume kullanarak ek kod bilgileri belirtme](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)|Nasıl kullanacağınızı öğrenin `__analysis_assume` Kod Analizi iyileştirmek için.|  
-|[İzlenecek yol: Kusurları için C/C++ kodunu analiz etme](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)|C/C++ proje üzerinde kod analizi gerçekleştirerek uygulamalı deneyim edinin.|  
-|[C/C++ Kod Hatalarını Azaltmak için SAL Ek Açıklamalarını Kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)|Ek açıklama özelliklerinin çağıran ve çağrılan arasındaki ihlallerini algılamak için kod analizi aracı hakkında bilgi edinin.|  
-|[C/C++ İçin Kod Analizi Uyarıları](../code-quality/code-analysis-for-c-cpp-warnings.md)|Listeler ve kod çözümleme uyarıları açıklar.|  
+|[C/C++ İçin Kod Çözümlemesine Genel Bakış](../code-quality/code-analysis-for-c-cpp-overview.md)|Kod Analizi aracının özellikleri hakkında bilgi edinin.|  
+|[Hızlı Başlangıç: C/C++ İçin Kod Çözümleme](../code-quality/quick-start-code-analysis-for-c-cpp.md)|C/C++için kod analizine ilişkin temel bilgileri öğrenin.|  
+|[Çalıştırılacak C++ Kurallarını Belirtmek için Kural Kümeleri Kullanma](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md)|Projenizde veya çözümünüzde çalıştırılacak kuralları belirtin.|  
+|[C++ Temel Yönergeleri denetleyicilerini kullanma](../code-quality/using-the-cpp-core-guidelines-checkers.md)|Projenize C++ temel kılavuz denetleyicileri ekleyin.|  
+|[Nasıl yapılır: C/C++ Projeleri için Kod Çözümleme Özelliklerini Ayarlama](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md)|Kod analizi için yapılandırma ayarlarını açıklar.|  
+|[Nasıl yapılır: __analysis_assume Kullanarak Ek Kod Bilgileri Belirtme](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)|Kod analizini geliştirmek için `__analysis_assume` nasıl kullanacağınızı öğrenin.|  
+|[İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)|Bir C/C++ proje üzerinde kod analizi gerçekleştirerek uygulamalı deneyim elde edin.|  
+|[C/C++ Kod Hatalarını Azaltmak için SAL Ek Açıklamalarını Kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)|Çağıran ve çağrılan arasındaki sözleşmenin ihlallerini algılamak için kod analizi aracının ek açıklama özellikleri hakkında bilgi edinin.|  
+|[C/C++ İçin Kod Analizi Uyarıları](../code-quality/code-analysis-for-c-cpp-warnings.md)|Kod Analizi uyarılarını listeler ve açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama kalitesini analiz etme](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)   
+ [Uygulama kalitesi  çözümleniyor](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)  
  [Yönetilen Kod Kalitesini Analiz Etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)

@@ -3,21 +3,21 @@ title: SAL'ı Anlama
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: df04186fd7524649dfe7ac89e53ca4ca907cc5c4
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: e2cb2cb263344e45d83a2b143f6c56f138f77bf5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807094"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271830"
 ---
 # <a name="understanding-sal"></a>SAL'ı Anlama
 
-Microsoft kaynak kodu ek açıklama dili (SAL), bir işlevin parametrelerini nasıl kullandığını, kendileri hakkında yaptığı varsayımları ve tamamlandığında yaptığı garanti sayısını betimleyen bir dizi ek açıklama sağlar. Ek açıklamalar `<sal.h>` üstbilgi dosyasında tanımlanmıştır. İçin C++ Visual Studio kod analizi, işlevlerinin analizini DEğIşTIRMEk için sal ek açıklamalarını kullanır. Windows sürücü geliştirme için SAL 2,0 hakkında daha fazla bilgi için bkz. [Windows sürücüleri Için sal 2,0 ek açıklamaları](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers).
+Microsoft kaynak kodu ek açıklama dili (SAL), bir işlevin parametrelerini nasıl kullandığını, kendileri hakkında yaptığı varsayımları ve tamamlandığında yaptığı garanti sayısını betimleyen bir dizi ek açıklama sağlar. Ek açıklamalar `<sal.h>`üstbilgi dosyasında tanımlanmıştır. İçin C++ Visual Studio kod analizi, işlevlerinin analizini DEğIşTIRMEk için sal ek açıklamalarını kullanır. Windows sürücü geliştirme için SAL 2,0 hakkında daha fazla bilgi için bkz. [Windows sürücüleri Için sal 2,0 ek açıklamaları](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers).
 
 Yerel olarak, C C++ ve geliştiricilerin sürekli olarak hızlı bir şekilde ifade ve ınvaryans sağlaması için yalnızca sınırlı yollar sağlar. SAL ek açıklamalarını kullanarak, bunları kullanan geliştiricilerin bunları nasıl kullanacağınızı daha iyi anlayabilmesi için işlevlerinizi daha ayrıntılı bir şekilde tanımlayabilirsiniz.
 
@@ -27,7 +27,7 @@ Yalnızca belirtilen SAL, derleyicinin kodunuzu sizin yerinize denetlemesini sa�
 
 ### <a name="sal-makes-code-more-valuable"></a>SAL, kodu daha değerli hale getirir
 
-SAL, kod tasarımınızı hem insanlar hem de kod analizi araçları için daha anlaşılır hale getirmenize yardımcı olabilir. C çalışma zamanı işlevini gösteren `memcpy` olan bu örneği göz önünde bulundurun:
+SAL, kod tasarımınızı hem insanlar hem de kod analizi araçları için daha anlaşılır hale getirmenize yardımcı olabilir. `memcpy`C çalışma zamanı işlevini gösteren bu örneği göz önünde bulundurun:
 
 ```cpp
 
@@ -49,7 +49,7 @@ Belgeler, kodunuzun, programın doğruluğunu sağlamak için belirli özellikle
 
 - Hedef arabellek en az kaynak arabelleği kadar büyük olmalıdır.
 
-Ancak, derleyici belgeleri veya resmi olmayan açıklamaları okuyamaz. İki arabellek ve `count` arasında bir ilişki olduğunu ve aynı zamanda bir ilişki hakkında etkili bir şekilde tahmin edemediğini bilmez. SAL, burada gösterildiği gibi işlevin özellikleri ve uygulanması hakkında daha fazla açıklık sağlayabilir:
+Ancak, derleyici belgeleri veya resmi olmayan açıklamaları okuyamaz. İki arabellek ve `count`arasında bir ilişki olduğunu ve aynı zamanda bir ilişki hakkında etkili bir şekilde tahmin edemediğini bilmez. SAL, burada gösterildiği gibi işlevin özellikleri ve uygulanması hakkında daha fazla açıklık sağlayabilir:
 
 ```cpp
 
@@ -154,7 +154,7 @@ void BadInCaller()
 }
 ```
 
-Bu örnekte Visual Studio Code analiz kullanıyorsanız, çağıranların `pInt` için başlatılmış bir arabelleğe null olmayan bir işaretçi iletkullandığını doğrular. Bu durumda, `pInt` işaretçisi NULL olamaz.
+Bu örnekte Visual Studio Code analizini kullanıyorsanız, çağıranların `pInt`için başlatılmış bir arabelleğe null olmayan bir işaretçi geçirdiğinden emin olur. Bu durumda `pInt` işaretçi NULL olamaz.
 
 ### <a name="example-the-_in_opt_-annotation"></a>Örnek: \_\_opt\_ ek açıklaması
 
@@ -208,7 +208,7 @@ void OutCaller()
 }
 ```
 
-Visual Studio Code çözümleme aracı, çağıranın NULL olmayan bir işaretçiyi `pInt` için bir arabelleğe geçirdiğinden ve arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrular.
+Visual Studio Code çözümleme aracı, çağıranın NULL olmayan bir işaretçiyi `pInt` arabelleğine geçirdiğinden ve arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrular.
 
 ### <a name="example-the-_out_opt_-annotation"></a>Örnek: \_Out\_opt\_ ek açıklaması
 
@@ -235,7 +235,7 @@ void OutOptCaller()
 }
 ```
 
-Visual Studio Code analizi, bu işlevin, `pInt` ' a başvurulmadan önce NULL olduğunu kontrol ettiğini ve `pInt` NULL değilse, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, bu işlevin, `pInt` başvurulmadan önce NULL olduğunu kontrol ettiğini ve `pInt` NULL olmaması durumunda, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
 ### <a name="example-the-_inout_-annotation"></a>Örnek: \_Iç\_ ek açıklaması
 
@@ -266,7 +266,7 @@ void BadInOutCaller()
 }
 ```
 
-Visual Studio Code analizi, çağıranların `pInt` için başlatılmış bir arabelleğe NULL olmayan bir işaretçi geçirmektedir ve döndürmeden önce, `pInt` ' in NULL olmadığı ve arabelleğin başlatıldığını doğrular.
+Visual Studio Code analizi, çağıranların `pInt`için başlatılmış bir arabelleğe NULL olmayan bir işaretçi geçirmektedir ve döndürülmeden önce `pInt` hala NULL değil ve arabelleğin başlatıldığını doğrular.
 
 ### <a name="example-the-_inout_opt_-annotation"></a>Örnek: \_InOut\_opt\_ ek açıklaması
 
@@ -295,7 +295,7 @@ void InOutOptCaller()
 }
 ```
 
-Visual Studio Code analizi, bu işlevin arabelleğe erişmeden önce NULL olduğunu denetlediğini ve `pInt` ' ı NULL değilse, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, bu işlevin arabelleğe erişmeden önce NULL olduğunu denetlediğini ve `pInt` NULL olmaması durumunda arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
 ### <a name="example-the-_outptr_-annotation"></a>Örnek: \_Outptr\_ ek açıklaması
 
@@ -325,7 +325,7 @@ void OutPtrCaller()
 }
 ```
 
-Visual Studio Code analizi, çağıranın `*pInt` için NULL olmayan bir işaretçi geçirdiğinden ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, çağıranın `*pInt`için NULL olmayan bir işaretçi geçirdiğinden ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
 ### <a name="example-the-_outptr_opt_-annotation"></a>Örnek: \_Outptr\_opt\_ ek açıklaması
 
@@ -357,7 +357,7 @@ void OutPtrOptCaller()
 }
 ```
 
-Visual Studio Code analizi, bu işlevin, `*pInt` ' a başvurulmadan önce NULL olduğunu kontrol ettiğini ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, bu işlevin, `*pInt` başvurulmadan önce NULL olduğunu kontrol ettiğini ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Örnek: \_out ile birlikte \_başarılı\_ ek açıklaması\_
 

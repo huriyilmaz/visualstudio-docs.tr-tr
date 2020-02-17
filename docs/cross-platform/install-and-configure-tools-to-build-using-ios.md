@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: e869a02475917f2444bedbb1bc9b7373b893d098
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 37ef83cc968276fb29ae5380544ee9c27ffd485d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846901"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272287"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>iOS kullanarak derlemeye yönelik araçları yükleme ve yapılandırma
 
@@ -28,7 +28,7 @@ ms.locfileid: "75846901"
 
 İOS kullanarak derlemek için araçları yükledikten sonra, Visual Studio ve Mac 'te iOS geliştirmesi için uzak aracıyı hızlı bir şekilde yapılandırmak ve güncellemek üzere bu makaleye başvurun.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 İOS için kod geliştirmek üzere uzak aracıyı yüklemek ve kullanmak için, önce aşağıdaki önkoşullara sahip olmanız gerekir:
 
@@ -62,9 +62,9 @@ ms.locfileid: "75846901"
 
    El ile imzalama yapmak istiyorsanız, uygulamanız için bir sağlama profili oluşturmanız gerekir. Sağlama profilleri oluşturma hakkında ayrıntılı bilgi için bkz. [bir geliştirme sağlama profili oluşturma](https://help.apple.com/developer-account/#/devf2eb157f8). 
 
-- [Node. js](https://nodejs.org/) sürüm 8.11.3 ve NPM sürüm 5.6.0
+- [Node. js](https://nodejs.org/) sürüm 12.14.1 ve NPM sürüm 6.13.4
 
-   Mac 'inizde Node. js sürüm 8.11.3 'yi yükler. Node. js paketini yüklerseniz, NPM sürüm 5.6.0 ile birlikte gelmelidir. Diğer Node. js ve NPM sürümleri, `vcremote` yüklemesinin başarısız olmasına neden olabilecek `vcremote`uzak aracıda kullanılan bazı modülleri desteklemiyor olabilir.
+   Mac 'inizde Node. js sürüm 12.14.1 'yi yükler. Node. js paketini yüklerseniz, NPM sürüm 6.13.4 ile birlikte gelmelidir. Diğer Node. js ve NPM sürümleri, `vcremote` yüklemesinin başarısız olmasına neden olabilecek `vcremote`uzak aracıda kullanılan bazı modülleri desteklemiyor olabilir. Node. js ' nin [düğüm sürümü Yöneticisi](https://nodejs.org/en/download/package-manager/#nvm)gibi bir paket Yöneticisi kullanarak yüklenmesini öneririz. Bazı modüller `sudo`kullanılırken yüklenemeyebilir, Node. js ' yi yüklemek için komut `sudo` kullanmaktan kaçının.
 
 ## <a name="Install"></a>İOS için uzak aracıyı yükler
 
@@ -74,11 +74,17 @@ Uzak aracıyı yüklemeden önce, [önkoşulları](#prerequisites) karşıladı�
 
 ### <a name="DownloadInstall"></a>Uzak aracıyı indirmek ve yüklemek için
 
-- Mac inizdeki Terminal uygulamasından şunu girin:
+- Mac inizdeki Terminal uygulamasından, kullanılmakta olan Node. js sürümünün gerekli sürüm 12.14.1 olduğunu doğrulayın. Sürümü doğrulamak için şu komutu çalıştırın:
 
-   `sudo npm install -g --unsafe-perm vcremote`
+  `node -v`
+  
+  Doğru sürüm değilse, önkoşullardan Node. js yükleme talimatlarını izlemeniz gerekebilir. Ardından Node. js ' yi yeniden başlatın.
 
-   Genel yükleme ( **-g**) anahtarı önerilir, ancak gerekli değildir.
+- Gerekli Node. js ' nin kullanımda olduğunu doğruladıktan sonra, bu Node. js sürümüne vcremote yüklemek için şu komutu çalıştırın:
+
+   `npm install -g --unsafe-perm vcremote`
+
+   Genel yükleme ( **-g**) anahtarı önerilir, ancak gerekli değildir. Genel yükleme anahtarını kullanmıyorsanız, vcremote, Terminal uygulamasındaki geçerli etkin yolun altına yüklenir.
 
    Yükleme sırasında, `vcremote` yüklenir ve geliştirici modu Mac 'inizde etkinleştirilir. [Homebrew](https://brew.sh/) ve iki NPM paketi, `vcremote-lib` ve `vcremote-utils`de yüklüdür. Yükleme tamamlandığında, atlanan isteğe bağlı bağımlılıklara ilişkin uyarıları yoksaymak güvenlidir.
 

@@ -12,24 +12,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 095fbcf35337ff2a619b6f3dcc6d5c28773ae975
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: 8fc43cef8526b2ca79bb0b88a1d56ef4f4a2a65a
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542652"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275260"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Visual Studio yüklemesi için komut satırı parametresi örnekleri
 
-Göstermek için nasıl [Visual Studio'yu yüklemek için komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md), ihtiyaçlarınıza uygun olarak özelleştirebileceğiniz bazı örnekleri aşağıda verilmiştir.
+[Visual Studio 'yu yüklemek için komut satırı parametrelerinin nasıl kullanılacağını](use-command-line-parameters-to-install-visual-studio.md)göstermek için, gereksinimlerinize uyacak şekilde özelleştirebileceğiniz birkaç örnek aşağıda verilmiştir.
 
-Her örnekte `vs_enterprise.exe`, `vs_professional.exe` ve `vs_community.exe` indirme işlemini başlatan küçük (yaklaşık 1 MB) dosyası Visual Studio önyükleyicisi ilgili sürümünü temsil eder. Farklı bir sürümü kullanıyorsanız, uygun önyükleyici adıyla değiştirin.
+Her örnekte `vs_enterprise.exe`, `vs_professional.exe` ve `vs_community.exe`, indirme işlemini başlatan küçük (yaklaşık 1 MB) bir dosya olan Visual Studio önyükleyici 'nin ilgili sürümünü temsil eder. Farklı bir sürümü kullanıyorsanız, uygun önyükleyici adıyla değiştirin.
 
 > [!NOTE]
 > Tüm komutlar, yönetimsel ayrıcalık ve işlemin yükseltilmiş isteminden başlamamışsa istemi görüntülenecek olan bir kullanıcı hesabı denetimi gerektirir.
 >
 > [!NOTE]
-> Kullanabileceğiniz `^` birden fazla satır tek bir komutta birleştirmek için komut satırının sonunda karakter. Alternatif olarak, yalnızca bu satırlara birlikte tek bir satır yerleştirebilirsiniz. PowerShell'de vurgulamasını belirtir eşdeğerdir (`` ` ``) karakter.
+> Birden çok satırı tek bir komutta birleştirmek için komut satırının sonundaki `^` karakterini kullanabilirsiniz. Alternatif olarak, yalnızca bu satırlara birlikte tek bir satır yerleştirebilirsiniz. PowerShell 'de, eş değer (`` ` ``) karakteridir.
 
 Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
 
@@ -51,7 +51,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    ```
 
   > [!NOTE]
-  > Her iki komut gereklidir. İlk komut, Visual Studio yükleyicisi güncelleştirir. İkinci komut, Visual Studio örneğini güncelleştirir. Bir kullanıcı hesabı denetimi iletişim önlemek için komut istemini yönetici olarak çalıştırın.
+  > Her iki komut de önerilir. İlk komut, Visual Studio yükleyicisi güncelleştirir. İkinci komut, Visual Studio örneğini güncelleştirir. Bir kullanıcı hesabı denetimi iletişim önlemek için komut istemini yönetici olarak çalıştırın.
 
 * Bir masaüstü Visual Studio örneğini sessiz bir şekilde, yalnızca ürün yüklendiğinde döndüren Fransızca Dil paketi yükleyin.
 
@@ -159,7 +159,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 ::: moniker range="vs-2017"
 
-Bu komut satırı parametreleri **15.7 sürümündeki yeni**. Bunlar hakkında daha fazla bilgi için bkz. [Visual Studio'yu yüklemek için komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md) sayfası.
+Bu komut satırı parametreleri **15,7 ' de yenidir**. Bunlarla ilgili daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfası.
 
 ::: moniker-end
 
@@ -183,7 +183,7 @@ Bu komut satırı parametreleri **15.7 sürümündeki yeni**. Bunlar hakkında d
 
 ::: moniker range="vs-2017"
 
-Bu komut satırı komutudur **15.9 yeni**. Bunun hakkında daha fazla bilgi için bkz. [Visual Studio'yu yüklemek için komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md) sayfası.
+Bu komut satırı komutu **15,9 sürümünde yenidir**. BT hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfası.
 
 ::: moniker-end
 
@@ -203,7 +203,7 @@ Bu komut satırı komutudur **15.9 yeni**. Bunun hakkında daha fazla bilgi içi
 
 ::: moniker range="vs-2017"
 
-Bu komut satırı parametresi **15.9 yeni**. Bunun hakkında daha fazla bilgi için bkz. [Visual Studio'yu yüklemek için komut satırı parametreleri kullanmak](use-command-line-parameters-to-install-visual-studio.md) sayfası.
+Bu komut satırı parametresi **15,9 ' de yenidir**. BT hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfası.
 
 ::: moniker-end
 

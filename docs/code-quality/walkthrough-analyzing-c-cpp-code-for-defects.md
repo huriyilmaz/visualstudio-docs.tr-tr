@@ -7,17 +7,17 @@ helpviewer_keywords:
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2154a07d498012c9c45f992ebed51b0218e823a
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 74a878b8c64955927357e45c668c4d100007d373
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75401016"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271816"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme
 
@@ -28,7 +28,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 - Uyarıyı hata olarak değerlendirin.
 - Kod hatası analizini geliştirmek için kaynak koda not ekleyin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Demo örneğinin](../code-quality/demo-sample.md)bir kopyası.
 - C/C++hakkında temel bilgiler.
@@ -39,7 +39,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
 
      Demo çözümü artık **Çözüm Gezgini**doldurur.
 
-2. Üzerinde **derleme** menüsünde tıklatın **çözümü yeniden derle**.
+2. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın.
 
      Çözüm herhangi bir hata veya uyarı olmadan oluşturulur.
 

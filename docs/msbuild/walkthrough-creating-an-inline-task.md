@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3856c658c4d3d2598b69cc9bf77f95c219b187b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1d5c40af3e60add88948f8f1c5c36abf3b980eca
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590052"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271181"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>İzlenecek yol: satır içi görev oluşturma
 MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir sınıf derlenerek oluşturulur. .NET Framework sürüm 4 ' den başlayarak, proje dosyasında görevleri satır içinde oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanız gerekmez. Daha fazla bilgi için bkz. [satır içi görevler](../msbuild/msbuild-inline-tasks.md).
@@ -74,7 +74,7 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
      <ParameterGroup />
      <Task>
        <Code Type="Fragment" Language="cs">
-         Log.LogMessage("Hello, world!", MessageImportance.High);
+         Log.LogMessage(MessageImportance.High, "Hello, world!");
        </Code>
      </Task>
    </UsingTask>
@@ -121,7 +121,7 @@ Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studi
      </ParameterGroup>
      <Task>
        <Code Type="Fragment" Language="cs">
-         Log.LogMessage(Text, MessageImportance.High);
+         Log.LogMessage(MessageImportance.High, Text);
        </Code>
      </Task>
    </UsingTask>

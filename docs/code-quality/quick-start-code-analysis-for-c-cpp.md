@@ -6,21 +6,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - C/C++ code analysis
 - code analysis,C/C++
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4beaff14e896eae15d4ce68acf35331d03203246
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 41d5c5a5ea966d1e092e7038d2fc3734c9bd9f15
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445640"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272325"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Hızlı başlangıç: C/C++ için kod analizi
 
-Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanızın kalitesini artırabilirsiniz. Bu, yaygın sorunları, iyi programlama uygulaması ihlallerini veya test aracılığıyla bulmanın zor olduğu kusurları bulmanıza yardımcı olabilir. Kod Analizi, derleyici hatalarından ve uyarılarından farklıdır, ancak sizin için veya kodunuzu kullanan diğer kişiler için hala sorun oluşturabilir.
+Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanızın kalitesini artırabilirsiniz. Bu, yaygın sorunları, iyi programlama uygulaması ihlallerini veya test aracılığıyla bulmanın zor olduğu kusurları bulmanıza yardımcı olabilir. Geçerli olan, ancak yine de siz veya kodunuzu kullanan diğer kişilerin sorunlarına neden olabilir, belirli bir kod desenleri için Kod Analizi arar çünkü kod çözümleme uyarıları derleyici hataları ve Uyarıları farklılık gösterir.
 
 ## <a name="configure-rule-sets-for-a-project"></a>Bir proje için kural kümelerini yapılandırma
 
@@ -69,11 +69,11 @@ Belirli bir uyarıyı çözümlemek için Hata Listesi uyarının başlığını
 
 Bir uyarı seçtiğinizde, uyarıya neden olan kod satırı, Visual Studio kod Düzenleyicisi 'nde vurgulanır.
 
-Sorunu anladıktan sonra kodunuzda çözebilirsiniz. Ardından, uyarının artık Hata Listesi göründüğünden ve Düzeltmelerinizin yeni bir uyarı gerçekleştirmediğinden emin olmak için kod analizini yeniden çalıştırın.
+Sorun anladıktan sonra kodunuzu çözebilirsiniz. Ardından, uyarının artık Hata Listesi göründüğünden ve Düzeltmelerinizin yeni bir uyarı gerçekleştirmediğinden emin olmak için kod analizini yeniden çalıştırın.
 
 ## <a name="suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
-Kod Analizi uyarısının düzeltilmeyeceğine karar verirken zamanlar olabilir. Uyarı çözmenin, kodunuzun gerçek hayatta herhangi bir uygulamada ortaya çıkması olasılığa göre çok fazla kaynak gerektirir. Ya da uyarıda kullanılan çözümlemenin belirli bir bağlam için uygun olmadığından emin olabilirsiniz. Uyarıları artık Hata Listesi görünmeyecek şekilde tek tek izleyebilirsiniz.
+Kod Analizi uyarısı düzeltmemeyi ne zaman karar verebilirsiniz zamanlar vardır. Uyarı çözümleme sorunu kodunuzun tüm gerçek uygulamasında ortaya çıkacağını olasılık ile ilgili çok fazla değiştirilemeyen gerektirir karar verebilirsiniz. Veya uyarıda kullanılan analiz belirli bir içerik için uygun olduğunu düşündüğünüz. Uyarıları artık Hata Listesi görünmeyecek şekilde tek tek izleyebilirsiniz.
 
 Bir uyarıyı bastırmak için:
 
@@ -83,7 +83,7 @@ Bir uyarıyı bastırmak için:
 
 3. **Iletiyi Gizle** ' yi ve ardından **kaynak '** ı seçin.
 
-   Bir ileti, kod satırı için uyarıyı belirten `#pragma warning (disable:[warning ID])` ' y i gizler.
+   Bir ileti, kod satırı için uyarıyı belirten `#pragma warning (disable:[warning ID])` ekler.
 
 ## <a name="create-work-items-for-code-analysis-warnings"></a>Kod Analizi uyarıları için iş öğeleri oluşturma
 
@@ -101,7 +101,7 @@ Visual Studio içinden hataları günlüğe kaydetmek için çalışma öğesi i
 
 ## <a name="search-and-filter-code-analysis-results"></a>Kod analizi sonuçlarını arama ve filtreleme
 
-Uyarı iletilerinin uzun listelerinde arama yapabilir ve çok projeli çözümlerde uyarıları filtreleyebilirsiniz.
+Uzun listesi uyarı iletilerini arayabilir ve çoklu proje çözümlerinde uyarıları filtreleyebilirsiniz.
 
 - **Uyarıları başlığa veya uyarı kimliğine göre filtrelemek için**: arama kutusuna anahtar sözcüğü girin.
 

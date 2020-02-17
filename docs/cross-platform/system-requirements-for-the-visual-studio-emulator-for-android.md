@@ -1,6 +1,7 @@
 ---
 title: Android için Visual Studio öykünücüsü için sistem gereksinimleri | Microsoft Docs
 ms.custom: ''
+ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
@@ -8,20 +9,21 @@ ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee89472ba4773e3b8692b293118bea154504fb55
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f1462769a4ba9929a000bca998c1fe3708908798
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916814"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272042"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Android için Visual Studio öykünücüsü sistem gereksinimleri
 
 Android için Visual Studio öykünücü Hyper-V sanallaştırma teknolojisini Windows 8 ve sonraki sürümler için bir sanal makine olarak çalışır. Öykünücüyü çalıştırmak için bilgisayarınızda bu konuda açıklandığı gibi Hyper-V çalıştırma gereksinimlerini karşılaması gerekir.
 
-Öykünücü yüklediğinizde, bu önkoşulları sessiz bir şekilde yapılandırmak Kurulum programı çalışır. Kurulum Önkoşulları başarıyla yapılandırdığında öykünücü yalnızca beklendiği gibi çalışır. Aksi takdirde bu Önkoşullar el ile etkinleştirmeniz gerekebilir. Önkoşulları el ile yapılandırmanız varsa, araçları ve adımları açıklanan adımlarıyla aynıdır [burada](/previous-versions/windows/apps/jj863509\(v=vs.105\)) Windows Phone öykünücüsü.
+Öykünücü yüklediğinizde, bu önkoşulları sessiz bir şekilde yapılandırmak Kurulum programı çalışır. Kurulum Önkoşulları başarıyla yapılandırdığında öykünücü yalnızca beklendiği gibi çalışır. Aksi takdirde bu Önkoşullar el ile etkinleştirmeniz gerekebilir. Önkoşulları el ile yapılandırmanız gerekirse, adımlar ve araçlar Windows Phone öykünücüsü için [burada](/previous-versions/windows/apps/jj863509\(v=vs.105\)) açıklanan adımlardan aynıdır.
 
 > [!IMPORTANT]
 > Kurulum programı öykünücüsü Android için Visual Studio öykünücüsü'nü çalıştıran önkoşulları denetler. Önkoşulları mevcut değildir, ancak bunları gerektirmeyen uyarıları görüntüler.
@@ -63,7 +65,7 @@ Hyper-V gereksinimleri
 ## <a name="system-requirements"></a>Sistem gereksinimleri
  Bilgisayarınız, aşağıdaki gereksinimleri karşılamalıdır:
 
-- Hyper-V desteği (bkz [Hyper-V gereksinimleri](#hyper-v-requirements))
+- Hyper-V desteği (bkz. [Hyper-v gereksinimleri](#hyper-v-requirements))
 
 - 6 GB veya daha fazla RAM.
 
@@ -107,8 +109,8 @@ Bilgisayar ve BIOS ayarları zaten Hyper-V desteklemek üzere yapılandırıldı
 
 |Gereksinim|Denetleyin ve bu gereksinim etkinleştirme|
 |-----------------|----------------------------------------------|
-|Hyper-V yüklü olmalıdır|İçin kullanılan aynı yönergeleri izleyerek [Hyper-V için Windows Phone öykünücüsü'nü etkinleştirme](/previous-versions/windows/apps/jj863509(v=vs.105)).<br /><br /> Durumunu **Hyper-V sanal makine Yönetimi** Hizmetler ek bileşeninde hizmet.|
-|Hyper-V çalıştıran gerekir.|Hizmetleri yönetme hakkında daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> -   [Başlat, Durdur, duraklatma, sürdürme veya bir hizmetini yeniden başlatın](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Bir hizmetin nasıl başlatılacağını yapılandırın](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
+|Hyper-V yüklü olmalıdır|[Windows Phone öykünücüsü Için Hyper-V](/previous-versions/windows/apps/jj863509(v=vs.105))' i etkinleştirmek için kullanılan yönergeleri izleyin.<br /><br /> Hizmetler ek bileşeninde **Hyper-V sanal makine yönetimi** hizmetinin durumunu denetleyin.|
+|Hyper-V çalıştıran gerekir.|Hizmetleri yönetme hakkında daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [hizmeti başlatma, durdurma, duraklatma, devam ettirme veya yeniden başlatma](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx) -   <br />-   [bir hizmetin nasıl başlatıldığını yapılandırmak](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
  Yerel Hyper-V Yöneticileri grubunun bir üyesi olmanız gerekir.
 

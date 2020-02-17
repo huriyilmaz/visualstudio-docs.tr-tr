@@ -2,17 +2,17 @@
 title: C++ Temel Yönergeleri denetleyicilerini kullanma
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: 762ba639c1443bb737087233d04c9e3753f2f455
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 95b3af7db7fc0e4c71d78716714031fd07dbdab5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807077"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271777"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>C++ Temel Yönergeleri denetleyicilerini kullanma
 
@@ -73,7 +73,7 @@ c:\users\username\documents\visual studio 2015\projects\corecheckexample\coreche
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Temel C++ yönergeler, daha iyi ve daha güvenli bir kod yazmanıza yardımcı olur. Ancak, bir kuralın veya profilin uygulanmaması gereken bir örneğiniz varsa, doğrudan kodda görüntülenmesini kolaydır. Aşağıdaki kod bloğunda bir kuralın ihlalini algılamasını ve raporlamasını C++ önlemek için `gsl::suppress` özniteliğini kullanabilirsiniz. Belirli kuralları bastırmak için tek tek deyimleri işaretleyebilirsiniz. Belirli bir kural numarası dahil etmeden `[[gsl::suppress(bounds)]]` yazarak tüm sınır profillerinin de görüntülenmesini sağlayabilirsiniz.
+Temel C++ yönergeler, daha iyi ve daha güvenli bir kod yazmanıza yardımcı olur. Ancak, bir kuralın veya profilin uygulanmaması gereken bir örneğiniz varsa, doğrudan kodda görüntülenmesini kolaydır. Aşağıdaki kod bloğunda bir kuralın ihlalini algılamasını C++ ve raporlanmasını önlemek için `gsl::suppress` özniteliğini kullanabilirsiniz. Belirli kuralları bastırmak için tek tek deyimleri işaretleyebilirsiniz. Belirli bir kural numarası dahil etmeden `[[gsl::suppress(bounds)]]` yazarak tüm sınır profillerinin de görüntülenmesini sağlayabilirsiniz.
 
 ## <a name="supported-rule-sets"></a>Desteklenen kural kümeleri
 C++ Temel yönergeler denetleyicisi 'ne yeni kurallar eklendikçe, önceden var olan kod için üretilen uyarı sayısı artabilir. Etkinleştirilecek kural türlerini filtrelemek için, önceden tanımlanmış kural kümelerini kullanabilirsiniz.
@@ -161,7 +161,7 @@ Microsoft C++ DERLEYICISININ GSL gösterme özniteliği için sınırlı bir des
 
 2. **Özellikleri Seç | C/C++| Komut satırı**
 
-3. **Ek seçenekler** penceresinde `/wd26400` ' i ekleyin.
+3. **Ek seçenekler** penceresinde `/wd26400`ekleyin.
 
 `/analyze-`belirterek, bir dosyanın tüm kod analizini geçici olarak devre dışı bırakmak için komut satırı seçeneğini kullanabilirsiniz. Bu, Kod analizini daha sonra yeniden etkinleştirmenizi hatırlatır ve ' */analiz ze-' ile '/Analyze ' değerini geçersiz kılan*bir uyarı oluşturur.
 
@@ -174,7 +174,7 @@ Bazen odaklanmış kod analizi yapmak ve Visual Studio IDE 'yi kullanmaya devam 
 3. Projenizi yükleyin ve özelliklerini açın.
 4. Kod analizini etkinleştirin, uygun kural kümelerini seçin, ancak kod analizi uzantılarını etkinleştirmeyin.
 5. C++ Temel kılavuz denetleyicisi ile çözümlemek istediğiniz dosyaya gidin ve özelliklerini açın.
-6. **C/C++\ komut satırı seçeneklerini** belirleyin ve`/analyze:plugin EspXEngine.dll`ekleyin
+6. **C/C++\ komut satırı seçeneklerini** belirleyin ve `/analyze:plugin EspXEngine.dll` ekleyin
 7. Önceden derlenmiş üstbilginin kullanımını devre dışı bırakın (**CC++/\ önceden derlenmiş üstbilgiler**). Uzantı altyapısı, ön derlenmiş üst bilgiden (PCH) iç bilgilerini okumaya çalışabileceğinden bu gereklidir; PCH varsayılan proje seçenekleriyle derlenirse, uyumlu olmaz.
 8. Projeyi yeniden derleyin. Ortak önceden denetim denetimleri tüm dosyalarda çalıştırılmalıdır. C++ Temel kılavuz denetleyicisi varsayılan olarak etkinleştirilmediğinden, yalnızca onu kullanmak üzere yapılandırılmış dosya üzerinde çalışmalıdır.
 
@@ -223,21 +223,21 @@ MSBuild 'e bağlı olmayan bir yapı sistemi kullanıyorsanız, denetleyiciyi yi
 Birkaç ortam değişkeni ayarlamanız ve derleyici için uygun komut satırı seçeneklerini kullanmanız gerekir. Derleyici, dizin ekleme vb. için belirli yolları aramanız gerekmiyorsa, "yerel araçlar komut Istemi" ortamı altında çalışmak daha iyidir.
 
 1. **Ortam değişkenleri**
-   - `set esp.extensions=cppcorecheck.dll` Bu, altyapıya C++ temel kılavuz modülünü yüklemesini söyler.
-   - `set esp.annotationbuildlevel=ignore` Bu, SAL ek açıklamalarını işleyen mantığı devre dışı bırakır. Ek açıklamalar, C++ temel yönergeler denetleyicisi 'nde Kod analizini etkilemez, ancak işlemleri zaman alır (bazen uzun zaman). Bu ayar isteğe bağlıdır, ancak önemle önerilir.
+   - `set esp.extensions=cppcorecheck.dll` bu, altyapıya C++ temel kılavuz modülünü yüklemesini söyler.
+   - `set esp.annotationbuildlevel=ignore`, SAL ek açıklamalarını işleyen mantığı devre dışı bırakır. Ek açıklamalar, C++ temel yönergeler denetleyicisi 'nde Kod analizini etkilemez, ancak işlemleri zaman alır (bazen uzun zaman). Bu ayar isteğe bağlıdır, ancak önemle önerilir.
    - `set caexcludepath=%include%`, standart üstbilgiler üzerinde harekete çıkabilecek uyarıları devre dışı bırakmanızı kesinlikle öneririz. Buraya daha fazla yol ekleyebilirsiniz. Örneğin, projenizdeki ortak üst bilgilerin yolu.
 2. **Komut satırı seçenekleri**
-   - `/analyze`, Kod analizini mümkün (yalnızca/Analyze: Only ve/Analyze: quiet) kullanmayı düşünün.
+   - `/analyze` Kod analizini mümkün (yalnızca/Analyze: Only ve/Analyze: quiet) kullanmayı düşünün.
    - `/analyze:plugin EspXEngine.dll` Bu seçenek, kod analizi uzantıları altyapısını önceden hızlı yükler. Bu altyapı, sırasıyla C++ temel kılavuz denetleyicisini yükler.
 
 ## <a name="use-the-guideline-support-library"></a>Kılavuz desteği kitaplığını kullanma
-Kılavuz Desteği kitaplığı, temel yönergeleri takip etmenize yardımcı olmak için tasarlanmıştır. GSL, hataya açık olan yapıları daha güvenli alternatifler ile değiştirmenize olanak tanıyan tanımlar içerir. Örneğin, `T*, length` parametresini `span<T>` türüyle değiştirebilirsiniz. GSL [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)' de kullanılabilir. Kitaplık açık kaynağıdır, bu sayede kaynakları görüntüleyebilir, yorum yapabilir veya katkıda bulunabilirsiniz. Proje [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)' de bulunabilir.
+Kılavuz Desteği kitaplığı, temel yönergeleri takip etmenize yardımcı olmak için tasarlanmıştır. GSL, hataya açık olan yapıları daha güvenli alternatifler ile değiştirmenize olanak tanıyan tanımlar içerir. Örneğin, parametrelerin `T*, length` çiftini `span<T>` türüyle değiştirebilirsiniz. GSL [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)adresinden kullanılabilir. Kitaplık açık kaynağıdır, bu sayede kaynakları görüntüleyebilir, yorum yapabilir veya katkıda bulunabilirsiniz. Proje [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)bulunabilir.
 
 ## <a name="vs2015_corecheck"></a>Visual Studio C++ 2015 projelerinde çekirdek denetim yönergelerini kullanma
 
-Visual Studio 2015 kullanıyorsanız, C++ çekirdek denetimi kod analizi kural kümeleri varsayılan olarak yüklenmez. Visual Studio 2015 ' de çekirdek denetimi kod analizi araçlarını etkinleştirebilmeniz C++ için bazı ek adımlar gerçekleştirmeniz gerekir. Microsoft, bir NuGet paketi kullanarak Visual Studio 2015 projeleri için destek sağlar. Paketin adı Microsoft. CppCoreCheck olarak adlandırılmıştır ve [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck)' de mevcuttur. Bu paket, güncelleştirme 1 ile en az Visual Studio 2015 yüklü olmasını gerektirir.
+Visual Studio 2015 kullanıyorsanız, C++ çekirdek denetimi kod analizi kural kümeleri varsayılan olarak yüklenmez. Visual Studio 2015 ' de çekirdek denetimi kod analizi araçlarını etkinleştirebilmeniz C++ için bazı ek adımlar gerçekleştirmeniz gerekir. Microsoft, bir NuGet paketi kullanarak Visual Studio 2015 projeleri için destek sağlar. Paketin adı Microsoft. CppCoreCheck olarak adlandırılmıştır ve [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck)adresinden kullanılabilir. Bu paket, güncelleştirme 1 ile en az Visual Studio 2015 yüklü olmasını gerektirir.
 
-Paket, yalnızca üst bilgi kılavuz destek kitaplığı (GSL) olan bir bağımlılık olarak başka bir paket de yüklüyor. GSL, [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)' de GitHub 'da da kullanılabilir.
+Paket, yalnızca üst bilgi kılavuz destek kitaplığı (GSL) olan bir bağımlılık olarak başka bir paket de yüklüyor. GSL, [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)'de GitHub 'da da kullanılabilir.
 
 Kod Analizi kurallarının yüklenme biçimi nedeniyle, Visual Studio 2015 içinde denetlemek istediğiniz her C++ bir projeye Microsoft. CppCoreCheck NuGet paketini yüklemelisiniz.
 

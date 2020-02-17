@@ -9,17 +9,17 @@ f1_keywords:
 helpviewer_keywords:
 - Text Editor Options dialog box, advanced
 ms.assetid: 67c82ae5-fddd-49df-baec-8e7498b156f3
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbdbadd93eec07c43aba99e40072cb6173e0e83d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2e7e031836c9762d9666a5624e78ecc7c8cc7dd9
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747839"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275204"
 ---
 # <a name="options-text-editor-cc-advanced"></a>Seçenekler, Metin Düzenleyici, C/C++, Gelişmiş
 
@@ -144,11 +144,11 @@ IntelliSense istekleri için herhangi bir anda etkin tutulacak en fazla çeviri 
 
 **#İnclude otomatik tamamlamayı devre dışı bırak**
 
-@No__t_0 deyimlerinin otomatik tamamlamayı devre dışı bırakır.
+`#include` deyimlerinin otomatik tamamlamayı devre dışı bırakır.
 
 **#İnclude otomatik olarak eğik çizgi kullan**
 
-"/" Kullanıldığında `#include` deyimlerinin otomatik tamamlanmasını tetikler. Varsayılan sınırlayıcı ters eğik çizgi ' \'. Derleyici her ikisini de kabul edebilir, bu nedenle kod tabanınızı kullanıp kullanmadığını belirtmek için bu seçeneği kullanın.
+"/" Kullanıldığında `#include` deyimlerinin otomatik tamamlanmasını tetikler. Varsayılan sınırlayıcı ters eğik çizgi '\'. Derleyici her ikisini de kabul edebilir, bu nedenle kod tabanınızı kullanıp kullanmadığını belirtmek için bu seçeneği kullanın.
 
 **Agresif üye listesini devre dışı bırak**
 
@@ -156,7 +156,7 @@ IntelliSense istekleri için herhangi bir anda etkin tutulacak en fazla çeviri 
 
 **Üye listesi anahtar sözcüklerini devre dışı bırak**
 
-@No__t_0, `class` `switch` gibi dil anahtar sözcükleri üye listesi önerilerinde görünmez.
+`void`, `class``switch` gibi dil anahtar sözcükleri üye listesi önerilerinde görünmez.
 
 **Üye listesi kod parçacıklarını devre dışı bırak**
 
