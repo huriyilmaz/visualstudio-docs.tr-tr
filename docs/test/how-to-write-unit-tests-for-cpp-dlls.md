@@ -141,7 +141,7 @@ Bu yaklaşım, izin verilen olmayan üyeleri kullanabilirsiniz, ancak testleri a
 
 1. Her birim test kodu dosyasında, test edilen projenin üst bilgileri için bir `#include` açıklaması ekleyin.
 
-2. Birim testi kod dosyalarına test sınıfları ve yöntemleri ekleyin. Örneğin:
+2. Birim testi kod dosyalarına test sınıfları ve yöntemleri ekleyin. Örnek:
 
     ```cpp
     #include "stdafx.h"
