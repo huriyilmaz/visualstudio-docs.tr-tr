@@ -27,7 +27,7 @@
 ### Araçlar
 #### [Azure DevTest bireysel kredisi](vs-azure.md)
 #### [Azure DevOps](vs-azure-devops.md)
-#### [Azure Kullandıkça Öde](vs-azure-payg.md)
+#### [Azure DevTest Kullandıkça Öde](vs-azure-payg.md)
 #### [CAST Highlight](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
 #### [Enterprise Mobility & Security](vs-ems.md)
@@ -84,7 +84,7 @@
 ### [Fazla Yüklemeler](handle-overclaimed-license.md)
 ### [En fazla kullanım](maximum-usage.md)
 ### [Süresi dolan abonelikler](handle-expired-license.md)
-### [Diğer adları kullanan aboneler](aliasing.md)
+### [Abone oturum açma senaryoları ](aliasing.md)
 ### [Kişisel e-posta ile oturum açan aboneler](personal-email-sign-ins.md)
 ### [GitHub Enterprise ile Visual Studio’yu Yönetme](assign-github.md)
 # Kaynaklar

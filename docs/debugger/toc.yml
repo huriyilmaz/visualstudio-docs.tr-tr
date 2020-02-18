@@ -16,7 +16,7 @@
       href: quickstart-debug-with-managed.md
     - name: Bir C++ uygulamasında hata ayıklama
       href: quickstart-debug-with-cplusplus.md
-    - name: ASP.NET uygulamalarının hatalarını ayıklama
+    - name: ASP.NET Core uygulamasında hata ayıklama
       href: quickstart-debug-aspnet.md
 - name: Öğreticiler
   items:

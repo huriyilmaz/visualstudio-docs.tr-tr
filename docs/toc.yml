@@ -362,6 +362,8 @@
                   href: ide/reference/convert-local-function-method.md
                 - name: foreach döngüsünü LINQ’ya dönüştürme
                   href: ide/reference/convert-foreach-linq.md
+                - name: if deyimini switch deyimine veya switch ifadesine dönüştürme
+                  href: ide/reference/convert-if-statement-to-switch-statement-or-switch-expression.md
                 - name: LINQ sorgusunu foreach deyimine dönüştürme
                   href: ide/reference/convert-linq-to-foreach.md
                 - name: Switch deyimini switch ifadesine dönüştürme
@@ -398,6 +400,8 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: Rename
                   href: ide/reference/rename.md
+                - name: Dize ilişkilendirmesini basitleştirme
+                  href: ide/reference/simplify-string-interpolation.md
                 - name: Kullanımları sıralama
                   href: ide/reference/sort-usings.md
                 - name: Birleştir veya ayır if deyimleri
