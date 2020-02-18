@@ -3,15 +3,15 @@ title: Visual Studio aboneliklerinde yazılım başlıklarını indirme | Micros
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/18/2019
+ms.date: 02/17/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: 003d27e1c8344c6c4cb22a69e06efc94238bb622
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: d6ce32b0478b145b7d1814efa3738664ee622cf5
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095406"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77439172"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
@@ -36,7 +36,7 @@ Kullanılabilir açılır menüleri kullanarak mimarinizi, dili ve dosya türün
 ### <a name="displaying-download-details"></a>İndirme ayrıntılarını görüntüleme
 Ürün adına veya **bilgi** bağlantısı ' na tıkladığınızda, bu indirmenin ayrıntıları görüntülenir ve ürünün sürüm notlarına erişim sağlanır.
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2019 indirme ayrıntıları](_img/subscriber-downloads/vs2019-info.png)
+> ![Visual Studio 2019 Yükleme ayrıntıları](_img/subscriber-downloads/vs2019-info.png)
 
 Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için **anahtarlar** sekmesine de tıklayabilirsiniz.
 > [!div class="mx-imgBorder"]
@@ -51,3 +51,9 @@ Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için *
 Ürün anahtarlarını bulma, oluşturma ve dışarı aktarma hakkında daha fazla bilgi edinmek için ürün anahtarları belgelerimize göz atın:
 - [Ürün anahtarlarına genel bakış](product-keys.md)
 - [Anahtarları bulun ve talep edin](find-keys.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)

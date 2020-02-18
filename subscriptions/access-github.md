@@ -3,15 +3,15 @@ title: Visual Studio + GitHub teklifi | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 02/17/2020
 ms.topic: conceptual
 description: Yeni Visual Studio + GitHub teklifi hakkında bilgi edinin
-ms.openlocfilehash: 09168bffbdb8caf9e6366335f5d08f5bf81573f9
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: d8507667f214430513ba2ad84bbe787e5a042899
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238144"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77439146"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio aboneliklerine giriş  
 
@@ -32,7 +32,7 @@ Kuruluşunuzda yenilemeyle ilgili olmayan bir EA varsa, mevcut Visual Studio Ent
 
 Visual Studio Enterprise, Visual Studio Professional ve GitHub Enterprise için mevcut SKU 'Lar Ayrıca kullanılabilir olmaya devam edecektir. 
 
-Avantajlar ve seçenekler hakkında daha fazla bilgi edinmek için https://visualstudio.microsoft.com/subscriptions/visual-studio-github lütfen adresini ziyaret edin. 
+Avantajlar ve seçenekler hakkında daha fazla bilgi edinmek için lütfen https://visualstudio.microsoft.com/subscriptions/visual-studio-githubziyaret edin. 
 
 ## <a name="getting-your-subscriptions"></a>Abonelikleriniz alınıyor
 
@@ -42,7 +42,7 @@ Visual Studio + GitHub Enterprise abonelikleri iki parçaya atanır:
 
 Kuruluşunuz abonelikleri satın aldığında, yöneticiler tarafından atanır. Visual Studio abonelikleri ve GitHub kurumsal abonelikleri ayrı ayrı atanır.  
 
-Visual Studio + GitHub aboneliğine atandıysanız, Visual Studio abonelik yöneticinizin size bir abonelik atandığını bildiren bir e-posta alırsınız.  Bu noktada, adresinde https://my.visualstudio.com/subscriptions görebilirsiniz.  
+Visual Studio + GitHub aboneliğine atandıysanız, Visual Studio abonelik yöneticinizin size bir abonelik atandığını bildiren bir e-posta alırsınız.  Bu noktada, https://my.visualstudio.com/subscriptions' de görebilirsiniz.  
 
 GitHub kurumsal abonelikleri ayrı olarak atandığından, şirketinizin aboneliklerini düzenlemeyi nasıl seçdiğine bağlı olarak farklı bir yöneticiden bildirim alabilirsiniz.  Ayrıca, Visual Studio aboneliği ve GitHub Enterprise aboneliğinin atanması arasında bir gecikme olabilir. bu nedenle, her ikisi de hemen kullanılabilir değilse endişe etmeyin.  GitHub abonelik atama işlemi daha karmaşıktır ve tamamlanması birkaç iş günü sürebilir.  
 
@@ -50,7 +50,7 @@ GitHub kurumsal abonelikleri ayrı olarak atandığından, şirketinizin aboneli
 
 GitHub 'a yeni başladıysanız, sizin için yararlı olabilecek bazı kaynaklar aşağıda verilmiştir:
 
-| Subject                                  | GitHub yardım konusu                                     |
+| Özne                                  | GitHub yardım konusu                                     |
 |------------------------------------------|-------------------------------------------------------|
 | Genel sorular/bilgiler          | [GitHub yardımı](https://help.github.com/en)             |
 | GitHub nedir?  Nasıl yaparım? daha fazla bilgi mı var?  | [GitHub hakkında](https://help.github.com/en/categories/about-github)                                       |
@@ -61,14 +61,14 @@ GitHub 'a yeni başladıysanız, sizin için yararlı olabilecek bazı kaynaklar
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="q--where-is-my-github-subscription"></a>Ç  GitHub aboneliğim nerede?
-Y:  GitHub aboneliğini ayarlamaya yönelik işlem biraz zaman alabilir.  Beklediğiniz ve hiç şey duymadığınız takdirde GitHub yöneticinize ulaşmak isteyebilirsiniz.  Yöneticiniz üzerinde çalışmaya devam ediyor veya sizin için bir GitHub aboneliği atamamayı seçti olabilir. 
+### <a name="q--where-is-my-github-subscription"></a>S: GitHub aboneliğim nerede?
+Y: GitHub aboneliğini ayarlamaya yönelik işlem biraz zaman alabilir.  Beklediğiniz ve hiç şey duymadığınız takdirde GitHub yöneticinize ulaşmak isteyebilirsiniz.  Yöneticiniz üzerinde çalışmaya devam ediyor veya sizin için bir GitHub aboneliği atamamayı seçti olabilir. 
 
-### <a name="q--how-do-i-reach-my-github-administrator"></a>Ç  Nasıl yaparım? GitHub yöneticime ulaşın?
-Y:  GitHub Enterprise Server kullanıyorsanız, yöneticinize bağlı olması için istemcinin altında görünen **destek** bağlantısına tıklayabilirsiniz.
+### <a name="q--how-do-i-reach-my-github-administrator"></a>S: Nasıl yaparım? GitHub yöneticime ulaşın?
+Y: GitHub Enterprise Server kullanıyorsanız, yöneticinize bağlı olması için istemcinin altında görünür olan **destek** bağlantısına tıklayabilirsiniz.
 
-### <a name="q-do-i-get-the-full-visual-studio-subscription-professional-or-enterprise-or-do-i-just-get-the-ide-with-this-offering"></a>Ç Tüm Visual Studio aboneliğini (Professional veya Enterprise) edinirim veya bu teklifi yalnızca IDE 'ye sunmalıyım?
-Y:  GitHub kurumsal aboneliğiyle birlikte, tam bir Visual Studio aboneliği alırsınız.  Bu aboneliklerde yer alan Yazılım İndirmeleri, bulut Hizmetleri, teknik destek ve iş ortağı avantajları gibi tüm avantajlardan, aboneliğin ayrı olarak satın alınıp alındığına benzer şekilde karşılaşırsınız.
+### <a name="q-do-i-get-the-full-visual-studio-subscription-professional-or-enterprise-or-do-i-just-get-the-ide-with-this-offering"></a>S: tam Visual Studio aboneliğini (Professional veya Enterprise) aldım ya da bu teklife yalnızca IDE 'yi aldım?
+Y: bir GitHub kurumsal aboneliğiyle birlikte, tam bir Visual Studio aboneliği alırsınız.  Bu aboneliklerde yer alan Yazılım İndirmeleri, bulut Hizmetleri, teknik destek ve iş ortağı avantajları gibi tüm avantajlardan, aboneliğin ayrı olarak satın alınıp alındığına benzer şekilde karşılaşırsınız.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - [GitHub yardımı](https://help.github.com/en)'nda çok çeşitli GitHub konuları dizisiyle soruların yanıtlarını bulabilirsiniz.
@@ -79,3 +79,10 @@ Y:  GitHub kurumsal aboneliğiyle birlikte, tam bir Visual Studio aboneliği al�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 GitHub 'a yeni başladıysanız [GitHub öğrenme laboratuvarına](https://lab.github.com/)göz atın. Bu, bir dizi eğlence ve pratik proje aracılığıyla size yardımcı olacak şekilde yararlı geri bildirim paylaşımı sağlar.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
+

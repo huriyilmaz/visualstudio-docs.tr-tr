@@ -3,15 +3,15 @@ title: Üretim öncesi ortamların envanterini | Visual Studio Market
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 02/17/2020
 ms.topic: conceptual
 description: Ön üretim envanterleri gerçekleştirmek için Yöneticiler hakkında bilgi edinin responsibilty
-ms.openlocfilehash: 8218b1802a6369aed00be63572c80cba7b5c29f3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0eacd177b0901d866bbb974aca81a0e77cdaf25d
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849832"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77439132"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Üretim öncesi ortam envanteri
 Visual Studio abonelikleri, cihazları yerine kullanıcıları sayarak varlık yönetimini basitleştirir.
@@ -35,3 +35,9 @@ Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](/visualstudio/)
+- [Azure DevOps belgeleri](/azure/devops/)
+- [Azure belgeleri](/azure/)
+- [Microsoft 365 belgeleri](/microsoft-365/)
