@@ -182,7 +182,7 @@ Tam olarak yazılmış bir sözcüğün sonunda Enter tuşunu seçtiğinizde bir
 
 Üye listesi için uygulanabilir olduğunda '. ' yerine '-> ' koyar.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 **Çözümlemeyi devre dışı bırak**
 
