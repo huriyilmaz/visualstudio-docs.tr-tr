@@ -75,7 +75,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    $exitCode = Start-Process -FilePath vs_enterprise.exe -ArgumentList "--installPath", "C:\VS", "--passive", "--wait" -Wait -PassThru
    ```
 
-   veya
+   or
 
    ```powershell
     $startInfo = New-Object System.Diagnostics.ProcessStartInfo

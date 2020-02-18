@@ -48,7 +48,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni** > 
 
      ![UnitTest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
 
-     Aşağıdakilere dikkat edin:
+     Şunlara dikkat edin:
 
     - Her test `TEST_METHOD(YourTestName){...}`kullanılarak tanımlanır.
 
@@ -186,7 +186,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni** > 
    }
    ```
 
-4. Çözümü oluşturun.
+4. Çözümü derleyin.
 
     Yeni test, **Test Gezgini** 'Nde, **çalıştırma testleri** düğümünde görünür.
 
