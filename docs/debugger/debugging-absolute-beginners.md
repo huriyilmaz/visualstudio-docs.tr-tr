@@ -1,7 +1,7 @@
 ---
-title: Yeni başlayanlar için hata ayıklama kodu
-description: İlk kez ayıklıyorsanız, Visual Studio ile hata ayıklama modunda uygulamanızı çalıştırmaya yardımcı olması için birkaç ilkelerini öğrenin
-ms.date: 07/06/2018
+title: Mutlak yeni başlayanlar için hata ayıklama kodu
+description: İlk kez hata ayıklaması yapıyorsanız, uygulamanızı Visual Studio ile hata ayıklama modunda çalıştırmanıza yardımcı olacak birkaç ilke öğrenin
+ms.date: 02/14/2020
 ms.topic: tutorial
 helpviewer_keywords:
 - debugger
@@ -10,92 +10,92 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f5cfe112aff36910ca4b4861d3a65cc7ea61655
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5c3cf9d5e4d72ed316344d1bda930d0416e9efe5
+ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679380"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416404"
 ---
-# <a name="how-to-debug-for-absolute-beginners"></a>Yeni başlayanlar için hata ayıklama
+# <a name="how-to-debug-for-absolute-beginners"></a>Mutlak yeni başlayanlar için hata ayıklama
 
-Başarısız, biz geliştiricilerine yazma kod her zaman ne yapması beklenen yapmaz. Bazen bu tamamen farklı bir şey yok! Bu durumda, sonraki görev nedenini anlamak için ve biz yalnızca bizim kodu saatliğine başlamanızı tutmak fikri size cazip olabilir, ancak bu çok daha kolay ve verimli bir hata ayıklama aracı kullanın veya hata ayıklayıcı için.
+Hata olmadan, yazılım geliştiricileri olarak yazdığımız kod, her zaman bunu yapması Beklendiğimiz şeyi yapmaz. Bazen tamamen farklı bir şey yapar! Bu durumda, bir sonraki görev nedenini anlamak ve yalnızca kodumuza saat için bir hata ayıklama işlemi yapmak istememize rağmen bir hata ayıklayıcı aracı ya da hata ayıklayıcının kullanılması çok daha kolay ve verimlidir.
 
-Ne yazık ki bir hata ayıklayıcı Sihirli tüm sorunlar veya "hatalar" bizim kodu ortaya çıkarabilir, bir şey değildir. *Hata ayıklama* anlamına gelir, bir hata ayıklama aracı adım adım kodunuzu çalıştırmak için bir programlama hata burada yaptığınız tam noktasını bulmak için Visual Studio'yu, ister. Daha sonra kodunuzda yapmanız gereken hangi düzeltmeler anlamak ve hata ayıklama araçları genellikle programı çalıştırmaya devam etmek için geçici değişiklik yapmanızı sağlar.
+Ne yazık ki hata ayıklayıcı, tüm sorunları veya kodlarımızda "hataları" açığa çıkarılabilecek bir şey değildir. *Hata ayıklama* , bir programlama hatası yaptığınız kesin noktayı bulmak Için Visual Studio gibi bir hata ayıklama aracında kod adım adım adımları çalıştırmanın anlamına gelir. Kodunuzda yapmanız gereken düzeltmeleri öğreniyor ve hata ayıklama araçları, programı çalıştırmaya devam edebilmeniz için genellikle geçici değişiklikler yapmanıza olanak sağlar.
 
-Bir hata ayıklayıcı etkili bir şekilde kullanarak, zaman ve bilgi edinmek için uygulama ancak sonuçta her yazılım geliştiricisinin için temel bir görevi bir yetenek olduğu. Bu makalede daha sonra hata ayıklama temel ilkelerini tanıtan ve başlamanıza yardımcı olmak için ipuçları sağlar.
+Bir hata ayıklayıcının kullanılması, her yazılım geliştiricisi için son olarak temel bir görev olan öğrenirken zaman alan bir yetenuygulamadır. Bu makalede, hata ayıklamanın temel ilkelerini tanıttık ve başlamanıza yönelik ipuçları sunarız.
 
-## <a name="clarify-the-problem-by-asking-yourself-the-right-questions"></a>Sorunu doğru soruları kendinize sorarak açıklamak
+## <a name="clarify-the-problem-by-asking-yourself-the-right-questions"></a>Doğru soruları isteyerek sorunu açıklığa kavuşturun
 
-Bu sorunu gidermek denemeden önce içine çalıştırdığınız sorunu açıklamak için yardımcı olur. Bir sorunla karşılaşırsanız zaten kodunuzda çalıştırıldığı bekliyoruz, aksi takdirde, buradan hata ayıklamak nasıl çalışıyor mıydı! Hata ayıklamaya başlamadan önce bu nedenle, çözmeye çalıştığınız sorunu tespit ettik emin olun:
+Sorunu gidermeyi denemeden önce, çalıştırdığınız sorunu açıklığa kavuşturmanıza yardımcı olur. Kodunuzda bir sorunla karşılaşmanızı bekledik, aksi takdirde hata ayıklamayı nasıl saptayacağınızı düşünüyorsunuz! Bu nedenle, hata ayıklamaya başlamadan önce, çözmeye çalıştığınız sorunu belirttiğinizden emin olun:
 
-* Ne yapmak için kodunuzu bekliyorsunuz?
+* Kodunuzun ne yapması beklensin?
 
 * Bunun yerine ne oldu?
 
-    Uygulamanız çalışırken bir hatayla (özel durum) çalıştırdıysanız, iyi bir şey olabilir! Bir özel durum kodu, genellikle bir tür hata çalışırken karşılaşılan beklenmeyen bir olaydır. Hata ayıklama aracı kodunuzda özel durumun oluştuğu tam yere alabilir ve olası düzeltmeleri araştırmanıza yardımcı olabilir.
+    Uygulamanızı çalıştırırken bir hata (özel durum) çalıştırdıysanız, bu iyi bir şey olabilir! Özel durum, kod çalıştırılırken karşılaşılan beklenmeyen bir olaydır ve genellikle bir tür hata oluşur. Hata ayıklama aracı sizi, özel durumun oluştuğu ve olası düzeltmeleri araştırmanıza yardımcı olabilecek kodunuzda tam konuma götürebilir.
 
-    Başka bir sorun oluştu, sorunun belirtisi nedir? Kodunuzda sorun oluştuğu şüpheleniyorsanız zaten? Örneğin, metin kodunuzu görüntüler, ancak metin yanlış varsa, verilerinizi bozuk veya görüntülenecek metni ayarlamak kod hata tür sahip bilirsiniz. Kodda bir hata ayıklayıcı ile Adımlama tarafından tam olarak ne zaman ve hatalı değerler atanır nasıl keşfetmek için değişkenlerinizi her değişiklik inceleyebilirsiniz.
+    Başka bir şey meydana gelirse, sorunun belirtisi nedir? Bu sorunun kodunuzda oluştuğu yerde zaten şüpheli mı? Örneğin, kodunuz bazı metinleri görüntülüyorsa, ancak metin yanlış ise, verilerinizin hatalı olduğunu veya görüntü metnini ayarlamış olan kodun bir tür hataya sahip olduğunu bilirsiniz. Bir hata ayıklayıcıdaki kodu düzenleyerek, değişkeninizdeki her değişikliği ve hatalı değerleri ne zaman ve nasıl atandığını fark edebilirsiniz.
 
-## <a name="examine-your-assumptions"></a>Bir varsayım inceleyin
+## <a name="examine-your-assumptions"></a>Varsayımlarınızı inceleyin
 
-Bir hata veya bir hata araştırma önce belirli bir sonucun yaptığınız özelliklerinin düşünün. Gizli veya bilinmeyen varsayımlar bile, bir hata ayıklayıcıda doğru sorunun nedenini düşünürken, bir sorunu tanımlama in the way of alabilirsiniz. Olası varsayımlar uzun listesi olabilir! Burada, kendinize meydan okuyun, varsayımlar istemek için bir kaç soru bulunmaktadır.
+Bir hatayı veya hatayı araştırmadan önce, belirli bir sonucu beklediğinizi düşünün. Gizli veya bilinmeyen varsayımlar, bir hata ayıklayıcıda sorun nedenlerini doğrudan ararken bile bir sorunu tanımlama yoluyla alabilir. Olası varsayımlara yönelik uzun bir listeniz olabilir! Aşağıda, varsayımlarınızı zorluk duymasını istemek için birkaç soru verilmiştir.
 
-* Doğru API (diğer bir deyişle, doğru nesne, işlevi, yöntemi veya özelliği) kullanıyor musunuz? Kullanmakta olduğunuz API mevcut düşüncelerinizi bunu yapmanız gerekebilir. (Hata ayıklayıcısı API çağrısı inceledikten sonra düzeltme doğru API'ye belirlemenize yardımcı olması için belgeler etmek gerekebilir.)
+* Doğru API 'yi (yani, doğru nesne, işlev, yöntem veya özellik) kullanıyorsunuz musunuz? Kullandığınız bir API, ne olduğunu düşündüklerini yapamayabilir. (Hata ayıklayıcıda API çağrısını inceleyerek, doğru API 'yi belirlemesine yardımcı olmak için belgelere seyahat gerektirebilir.)
 
-* Bir API doğru kullanıyorsunuz? Belki de API sağ kullanılan ancak doğru şekilde kullanmadı.
+* API 'YI doğru bir şekilde kullanıyor musunuz? Doğru API 'YI kullanmış olabilirsiniz ancak doğru şekilde kullanmadınız.
 
-* Kodunuzu herhangi bir yazım hatası içeriyor mu? Bir değişken adı basit bir yazım hatası gibi bazı yazım hataları, özellikle kullanıldıklarından önce bildirilmesi için değişkenleri gerektirmeyen dilleriyle çalışırken görmek zor olabilir.
+* Kodunuz herhangi bir yazım hatası içeriyor mu? Bir değişken adının basit bir yanlış yazım hatası gibi bazı yazım hataları, özellikle, kullanılmadan önce değişkenlerin bildirilmesini gerektirmeyen dillerle birlikte çalışırken görülmesi zor olabilir.
 
-* Kodunuzda değişiklik ve sizin gördüğünüz sorunla ilgisi olduğu varsayılır?
+* Kodunuzda bir değişiklik yaptınız ve gördüğünüz sorunla ilgili ilgisiz olduğunu varsaydınız mı?
 
-* Bir nesne veya belirli bir değere (veya belirli bir tür değeri) içeren değişkeni bekliyorsunuz farklı ne gerçekten oldu?
+* Gerçekten ne olduğunu belirten bir nesne veya değişkenin belirli bir değeri (veya belirli bir değer türünü) içermesini beklediğiniz istiyor muydunuz?
 
-* Kodun amacı biliyor musunuz? Daha fazla genellikle olduğu kod başkası hata ayıklaması zor. Kodunuzu değilse, etkili bir şekilde ayıklayabilirsiniz önce tam olarak ne yaptığını zaman öğrenme harcama gerekebilir mümkündür.
+* Kodun amacını tanıyor musunuz? Başka birinin kodunun hata ayıklaması genellikle daha zordur. Kodunuz yoksa, etkin bir şekilde Hata ayıklayabilmeniz için öncelikle kodun ne yaptığını tam olarak öğreniyor olmanız gerekebilir.
 
     > [!TIP]
-    > Kod yazarken küçükten başlayabilir ve çalışan kodla başlayın! (İyi örnek kodu buraya yararlı olur.) Bazı durumlarda, kod büyük veya karmaşık bir dizi küçük elde etmek çalıştığınız temel göreviyle gösteren kod parçasını ile başlatarak düzeltmek kolaydır. Ardından, değiştirebilir veya hatalar için her bir noktada test kodu kademeli olarak ekleyin.
+    > Kod yazarken, küçük bir başlangıç yapın ve çalıştıran kodla başlayın! (İyi örnek kod burada yararlı olur.) Bazen, elde etmek istediğiniz temel görevi gösteren küçük bir kod parçasıyla başlayarak büyük veya karmaşık bir kod kümesinin düzeltilmesi daha kolaydır. Ardından, her bir noktada hata için test etme, her bir noktada kod değiştirebilir veya test edebilirsiniz.
 
-Bir varsayım sormasını tarafından kodunuzda bir sorunu bulmak için gereken süreyi azaltabilir. Ayrıca, bir sorunu gidermek için gereken süreyi azaltabilir.
+Varsayımlarınızı sorgarak kodunuzda bir sorun bulmak için geçen süreyi azaltabilirsiniz. Ayrıca bir sorunu çözmek için geçen süreyi de azaltabilirsiniz.
 
-## <a name="step-through-your-code-in-debugging-mode-to-find-where-the-problem-occurred"></a>Hata ayıklama modunda sorunun gerçekleştiği bulmak için kodunuzu adım adım
+## <a name="step-through-your-code-in-debugging-mode-to-find-where-the-problem-occurred"></a>Sorunun nerede oluştuğunu bulmak için kodunuzda hata ayıklama moduna geçin
 
-Normal bir uygulama çalıştırdığınızda, yalnızca kod çalıştırıldıktan sonra hataları ve hatalı sonuçlar görürsünüz. Bir program ayrıca beklenmedik bir şekilde nedenini belirten olmadan sonlandırabilir.
+Bir uygulamayı normalde çalıştırdığınızda, yalnızca kod çalıştıktan sonra hatalar ve hatalı sonuçlar görürsünüz. Ayrıca, bir program neden sizi bildirmeden beklenmedik şekilde sonlandırılabilir.
 
-Bir hata ayıklayıcısı içinde bir uygulamayı çalıştıran olarak da adlandırılır *hata ayıklama modu*, hata ayıklayıcı etkin bir şekilde program çalışırken gerçekleştiği her şeyi izlediğini anlamına gelir. Ayrıca uygulamayı herhangi bir noktada durumunu inceleyin ve sonra da olduğu sürece her ayrıntısını izlemek için satır kodunuzda adım adım ilerleyin duraklatmanıza da olanak sağlar.
+Hata ayıklayıcı içinde, *hata ayıklama modu*olarak da adlandırılan bir uygulama çalıştırmak, hata ayıklayıcının program çalışırken meydana gelen her şeyi etkin bir şekilde izlediği anlamına gelir. Ayrıca, durumu incelemek için uygulamayı dilediğiniz zaman duraklatıp, ardından her ayrıntıyı olduğu gibi izlemek için kod satırlarınızın satıra göre ilerleyebileceğiniz bir işlem yapabilirsiniz.
 
-Visual Studio'da hata ayıklama modunu kullanarak girdiğiniz **F5** (veya **hata ayıklama** > **hata ayıklamayı Başlat** menü komutu veya **hata ayıklamayı Başlat**  düğmesi ![hata ayıklamayı Başlat](../debugger/media/dbg-tour-start-debugging.png "hata ayıklamayı Başlat") hata ayıklama araç çubuğundaki). Özel durumlar oluşursa, Visual Studio'nun özel durum Yardımcısı burada özel durum oluştu ve başka yararlı bilgiler sağlayan tam noktasına götürür. Kodunuza özel durumları işleme hakkında daha fazla bilgi için bkz. [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md).
+Visual ![Studio 'da,](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") hata ayıklama moduna **F5** (veya Debug > **Start** **Debug** Menu komutunu veya Debug araç çubuğunda **hata ayıklamayı Başlat düğmesine basın** ) yazın. Herhangi bir özel durum oluşursa, Visual Studio 'nun özel durum Yardımcısı sizi özel durumun gerçekleştiği kesin noktaya götürür ve diğer yararlı bilgileri sağlar. Kodunuzda özel durumların nasıl işleneceği hakkında daha fazla bilgi için bkz. [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md).
 
-Bir özel durum almadıysanız, kodunuzda sorunun aranacağı büyük olasılıkla iyi bir fikir sahip. Bu, kullandığınız *kesme noktaları* kendiniz kodunuzu daha dikkatli bir şekilde incelemek için bir fırsat vermek için hata ayıklayıcısı ile. Kesme noktaları güvenilir hata ayıklama en temel hem de temel özelliğidir. Bir kesme noktası, değişkenlerin değerleri veya bellek davranışını veya kod çalıştığı dizisi göz olabilmesi için Visual Studio çalışan kodunuzu nerede duraklatmak gösterir.
+Bir özel durum almadıysanız, büyük olasılıkla kodunuzda sorunu nerede aramanız gerektiği konusunda iyi bir fikir sahibi olabilirsiniz. Bu, kendinize kodunuzu daha dikkatli bir şekilde incelemenize olanak tanımak için hata ayıklayıcı ile *kesme noktaları* kullanırsınız. Kesme noktaları güvenilir hata ayıklama en temel hem de temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu duraklatıp, değişkenlerin değerlerine veya bellek davranışına ya da kodun çalıştığı diziye göz atabilmenizi sağlayacak şekilde belirtir.
 
-Visual Studio'da kod satırının yanındaki sol kenar boşluğunu tıklatarak hızlı bir şekilde bir kesme noktası ayarlayabilirsiniz. Veya bir satır ve ENTER tuşuna imleci **F9**.
+Visual Studio 'da, bir kod satırının yanındaki sol kenar boşluğuna tıklayarak hızlı bir kesme noktası ayarlayabilirsiniz. Ya da imleci bir satıra yerleştirip **F9**tuşuna basın.
 
-Bu kavramları göstermeye yardımcı olmak için size çeşitli hatalar zaten bazı örnek kod göz önüne almanız. Kullanıyoruz C#, ancak hata ayıklama özellikleri için Visual Basic, C++, JavaScript, Python ve diğer desteklenen dilleri geçerlidir.
+Bu kavramları göstermeye yardımcı olmak için, daha önce birkaç hata içeren bazı örnek kodlar aracılığıyla sizi ele aldık. Kullanıyoruz C#, ancak hata ayıklama özellikleri Visual Basic, C++, JavaScript, Python ve desteklenen diğer diller için geçerlidir.
 
-### <a name="create-a-sample-app-with-some-bugs"></a>(Bazı hatalar ile) örnek bir uygulama oluşturun
+### <a name="create-a-sample-app-with-some-bugs"></a>Örnek uygulama oluşturma (bazı hatalar ile)
 
-Ardından, bazı hataları olan bir uygulama oluşturacağız.
+Daha sonra, birkaç hata içeren bir uygulama oluşturacağız.
 
-1. Visual Studio yüklü ve ya da sahip **.NET masaüstü geliştirme** iş yükü veya **.NET Core çoklu platform geliştirme** iş yükü yüklenmiş, oluşturmak istediğiniz hangi uygulama türü üzerinde bağlı olarak.
+1. Oluşturmak istediğiniz uygulama türüne bağlı olarak, Visual Studio 'Nun yüklü olması ve **.net masaüstü geliştirme** iş yükü ya da **.NET Core platformlar arası geliştirme** iş yükü yüklemiş olmanız gerekir.
 
-    Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) ücretsiz yüklemek için sayfa.
+    Visual Studio 'Yu henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
 
-    İş yükünü yükleyin, ancak Visual Studio'a tıklayın, zaten gerektiğinde **Araçları** > **araçları ve özellikleri Al**. Visual Studio Yükleyicisi'ni başlatır. Seçin **.NET masaüstü geliştirme** (veya **.NET Core çoklu platform geliştirme**) iş yükü, ardından **Değiştir**.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa Araçlar **ve Özellikler al** > **Araçlar** ' a tıklayın. Visual Studio Yükleyicisi'ni başlatır. **.Net masaüstü geliştirme** (veya **.NET Core platformlar arası geliştirme**) iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 1. Visual Studio'yu açın.
 
     ::: moniker range=">=vs-2019"
-    Pencerenin başlangıç seçin **yeni bir proje oluşturma**. Tür **konsol** arama kutusuna ve ardından **konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)**. Seçin **sonraki**. Bir proje adı gibi tür **ConsoleApp FirstApp** tıklatıp **Oluştur**.
+    Başlangıç penceresinde **Yeni proje oluştur**' u seçin. Arama kutusuna **konsolunu** yazın ve **konsol uygulaması (.NET Core)** ya da **konsol uygulaması (.NET Framework)** seçeneğini belirleyin. **İleri**’yi seçin. **Consoleapp-FirstApp** gibi bir proje adı yazın ve **Oluştur**' a tıklayın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. Sol bölmesinde **yeni proje** iletişim kutusunun **Visual C#** , seçin **konsol uygulaması**, Orta bölmede seçin **konsol uygulaması (.NET framework)**  veya **konsol uygulaması (.NET Core)**. Gibi bir ad yazın **ConsoleApp FirstApp** tıklatıp **Tamam**.
+    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **görsel C#** altında **konsol uygulaması**' nı seçin ve ardından Ortadaki bölmede **konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** seçeneğini belirleyin. **Consoleapp-FirstApp** gibi bir ad yazın ve **Tamam**' a tıklayın.
     ::: moniker-end
 
-    Görmüyorsanız **konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** proje şablonu, Git **Araçları** > **araçları edinme ve Özellikleri**, Visual Studio yükleyicisi açılır. Seçin **.NET masaüstü geliştirme** iş yükü veya **.NET Core çoklu platform geliştirme** iş yükü, ardından **Değiştir**.
+    **Konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, Visual Studio yükleyicisi açan araçlar **ve Özellikler al** > **Araçlar** ' a gidin. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
-    Visual Studio Çözüm Gezgini'nde sağ bölmede görünür konsol projesi oluşturur.
+    Visual Studio, sağ bölmedeki Çözüm Gezgini görüntülenen konsol projesini oluşturur.
 
-1. İçinde *Program.cs*, tüm varsayılan kodu aşağıdaki kodla değiştirin:
+1. *Program.cs*' de, tüm varsayılan kodu şu kodla değiştirin:
 
     ```csharp
     using System;
@@ -176,15 +176,15 @@ Ardından, bazı hataları olan bir uygulama oluşturacağız.
     }
     ```
 
-    Amacımız bu kodun bir listedeki tüm galaxy ve galaxy türü uzaklık galaxy adı görüntülemektir. Hata ayıklamak için kodun amacı anlamak önemlidir. Çıkışta göstermek istiyoruz listesinden bir satır için biçim şu şekildedir:
+    Bu kod için bizim amacımız, Galaxy adını, Galaxy uzaklığını ve Galaxy türünün tümünü bir listede görüntülemektir. Hata ayıklamak için, kodun amacını anlamak önemlidir. Aşağıda, çıktıda göstermek istediğimiz listeden bir satır için biçim verilmiştir:
 
-    *galaxy adı*, *uzaklık*, *galaxy türü*.
+    *Galaxy adı*, *mesafe*, *Galaxy türü*.
 
 ### <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. Tuşuna **F5** veya **hata ayıklamayı Başlat** düğmesi ![hata ayıklamayı Başlat](../debugger/media/dbg-tour-start-debugging.png "hata ayıklamayı Başlat") hata ayıklama araç çubuğunda, Kod Düzenleyicisi'ni bulunan.
+1. **F5** tuşuna basın veya hata **ayıklamayı Başlat** düğmesine, kod düzenleyicisinin üzerinde bulunan hata ayıklama araç çubuğunda ![hata ayıklamayı başlatın](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") .
 
-    Uygulama başlatılır ve bize hata ayıklayıcı tarafından gösterilen özel durum vardır. Ancak, çıktıyı konsol penceresinde beklediğiniz olabilir. Beklenen çıktı aşağıdaki gibidir:
+    Uygulama başlar ve hata ayıklayıcı tarafından bizim için bir özel durum gösterilmez. Ancak, konsol penceresinde gördüğünüz çıktı beklediğiniz gibi değildir. Beklenen çıktı aşağıdaki gibidir:
 
     ```
     Tadpole  400,  Spiral
@@ -195,7 +195,7 @@ Ardından, bazı hataları olan bir uygulama oluşturacağız.
     Maffei 1,  Elliptical
     ```
 
-    Ancak, bunun yerine görürüz:
+    Ancak bunun yerine şu şekilde görüyoruz:
 
     ```
     Tadpole  400,  ConsoleApp_FirstApp.GType
@@ -206,11 +206,11 @@ Ardından, bazı hataları olan bir uygulama oluşturacağız.
     Maffei 1, 11,  ConsoleApp_FirstApp.GType
     ```
 
-    Çıkış ve kodumuz bakarak, biliyoruz `GType` galaxy türü depolayan sınıf adıdır. Gerçek galaxy türlerinin (örneğin, "Gönderilerinizi") göstermek çalışıyoruz sınıf adını değil!
+    Çıkışa ve kodumuza bakarak, `GType` Galaxy türünü depolayan sınıfın adı olduğunu biliyoruz. Gerçek Galaxy türünü (örneğin, "sarmal"), sınıf adını değil göstermeye çalışıyoruz!
 
-### <a name="debug-the-app"></a>Uygulamasında hata ayıklama
+### <a name="debug-the-app"></a>Uygulamada hata ayıklama
 
-1. Hala çalışıyor uygulamayla yanındaki sol kenar boşluğunu tıklayarak kesme noktası ayarlamak `Console.WriteLine` yöntem çağrısında Bu kod satırı.
+1. Uygulama çalışmaya devam ettiğinden, bu kod satırında `Console.WriteLine` yöntemi çağrısının yanındaki sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın.
 
     ```csharp
     foreach (Galaxy theGalaxy in theGalaxies)
@@ -219,49 +219,49 @@ Ardından, bazı hataları olan bir uygulama oluşturacağız.
     }
     ```
 
-    Kesme noktası ayarlarsanız, kırmızı bir nokta sol kenar boşluğunda görünür.
+    Kesme noktasını ayarladığınızda, sol kenar boşluğunda kırmızı bir nokta görünür.
 
-    Bir sorun çıktı görüyoruz olduğundan, hata ayıklayıcıya çıktı ayarlar önceki kod bakarak hata ayıklama başlayacağız.
+    Çıktıda bir sorun görtiğimiz için, hata ayıklayıcıdaki çıktıyı ayarlayan önceki koda bakarak hata ayıklamaya başlayacağız.
 
-1. Tıklayın **yeniden** ![yeniden uygulama](../debugger/media/dbg-tour-restart.png "RestartApp") hata ayıklama araç çubuğu düğmesini (**Ctrl** + **kaydırma**   +  **F5**).
+1. Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![başlat](../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL** + **SHIFT** + **F5**) düğmesine tıklayın.
 
-    Uygulama, ayarladığınız kesme noktasında duraklatır. Sarı Vurgu, hata ayıklayıcı burada duraklatıldı belirtir (kod satırının sarı henüz çalıştırılmadı).
+    Uygulama, ayarladığınız kesme noktasında duraklatılır. Sarı vurgulama, hata ayıklayıcının duraklatıldığını gösterir (sarı kod satırı henüz yürütülmemiştir).
 
-1. Üzerine `GalaxyType` sağdaki ve ardından sol tarafındaki İngiliz anahtarı simgesine değişkeni genişletin `theGalaxy.GalaxyType`. Gördüğünüz `GalaxyType` bir özellik içeriyor `MyGType`, ve özellik değerini ayarlamak `Spiral`.
+1. Sağ tarafta `GalaxyType` değişkeninin üzerine gelin ve ardından İngiliz anahtarı simgesinin solunda `theGalaxy.GalaxyType`' ı genişletin. `GalaxyType` bir özellik `MyGType`içerdiğini ve özellik değerinin `Spiral`olarak ayarlandığını görürsünüz.
 
-    ![Bir değişken inceleyin](../debugger/media/beginners-inspect-variable.png)
+    ![Bir değişkeni inceleyin](../debugger/media/beginners-inspect-variable.png)
 
-    "Gönderilerinizi" aslında konsola yazdırmak için görmeyi beklediğiniz doğru değer olan! Dolayısıyla, uygulama çalıştırılırken bu değer bu kodda erişebilirsiniz iyi bir başlangıç noktasıdır. Bu senaryoda, yanlış API'sini kullanıyoruz. Biz bu hata ayıklayıcıda kod çalıştırılırken düzeltmeyi göreceğiz.
+    "Sarmal" Aslında konsola yazdırmak beklediğiniz doğru değerdir! Bu nedenle, uygulamayı çalıştırırken bu kodda bu değere erişebiliyor olmanız iyi bir başlangıç. Bu senaryoda, yanlış API kullandık. Hata ayıklayıcıda kod çalıştırırken bunu çözebiliriz.
 
-1. Aynı kod içinde hala hata ayıklama sırasında imlecinizi sonunda put `theGalaxy.GalaxyType` ve değiştirmek için `theGalaxy.GalaxyType.MyGType`. Bu değişiklik yapabileceğiniz rağmen Kod Düzenleyicisi, bu kodu derleyebilir belirten bir hata gösterir.
+1. Aynı kodda, hala hata ayıklarken imlecinizi `theGalaxy.GalaxyType` sonuna koyun ve `theGalaxy.GalaxyType.MyGType`olarak değiştirin. Bu değişikliği yapabilseniz de, kod Düzenleyicisi bu kodu derleyemeyeceğini belirten bir hata gösterir.
 
-    ![Sözdizimi hatası](../debugger/media/beginners-edit.png)
+    ![Söz dizimi hatası](../debugger/media/beginners-edit.png)
 
-1. Tıklayın **Düzenle** içinde **Düzenle ve devam et** ileti kutusu. Bir hata iletisi artık bkz **hata listesi** penceresi. Hatayı bildiren `'object'` için bir tanım içermiyor `MyGType`.
+1. **Düzenle ve devam et** Ileti kutusunda **Düzenle** ' ye tıklayın. **Hata listesi** penceresinde şimdi bir hata mesajı görürsünüz. Hata, `'object'` `MyGType`tanımı içermediğini gösterir.
 
-    ![Sözdizimi hatası](../debugger/media/beginners-no-definition.png)
+    ![Söz dizimi hatası](../debugger/media/beginners-no-definition.png)
 
-    Türünde bir nesne ile her galaxy ayarladığımız olsa bile `GType` (sahip `MyGType` özelliği), hata ayıklayıcı tanımıyor `theGalaxy` nesne türünde bir nesne olarak `GType`. Ne var ne yok? Galaxy türünü ayarlar herhangi bir kod görünmesini istediğiniz. Bunu yaptığınızda gördüğünüz `GType` sınıfı kesinlikle bir özelliğine sahip `MyGType`, ancak bir şey doğru değildir. İlgili hata iletisi `object` ; ipucu olmasını ettik dil yorumlayıcısı türü bir nesne türü görünmektedir `object` türünde bir nesne yerine `GType`.
+    Her Galaxy 'u `GType` türünde bir nesneyle ayarladığımızda (`MyGType` özelliğine sahiptir), hata ayıklayıcı `theGalaxy` nesnesini `GType`türünde bir nesne olarak tanımaz. Ne var ne yok? Galaxy türünü ayarlayan herhangi bir koda bakmak istiyorsunuz. Bunu yaptığınızda, `GType` sınıfının kesinlikle bir `MyGType`özelliğine sahip olduğunu, ancak bir şey olmadığını görürsünüz. `object` hakkındaki hata iletisi Clue olarak açılır; Dil yorumlayıcısında tür, `GType`türünde bir nesne yerine `object` türünde bir nesne gibi görünür.
 
-1. Bulduğunuz galaxy türü ayarlamakla ilgili kodunuzu aramak, `GalaxyType` özelliği `Galaxy` sınıfı olarak belirtilen `object` yerine `GType`.
+1. Galaxy türünü ayarlamayla ilgili kodunuza bakarak, `Galaxy` sınıfının `GalaxyType` özelliğini `GType`yerine `object` olarak bulabilirsiniz.
 
     ```csharp
     public object GalaxyType { get; set; }
     ```
 
-1. Yukarıdaki kod şuna değiştirin:
+1. Yukarıdaki kodu şu şekilde değiştirin:
 
     ```csharp
     public GType GalaxyType { get; set; }
     ```
 
-1. Tıklayın **yeniden** ![yeniden uygulama](../debugger/media/dbg-tour-restart.png "RestartApp") hata ayıklama araç çubuğu düğmesini (**Ctrl** + **kaydırma**   +  **F5**) kodu yeniden derlemeniz ve yeniden başlatın.
+1. Kodu yeniden derlemek ve yeniden başlatmak için hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![başlat](../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL** + **SHIFT** + **F5**) düğmesine tıklayın.
 
-    Artık, hata ayıklayıcı duraklatır üzerinde `Console.WriteLine`, üzerine gelerek `theGalaxy.GalaxyType.MyGType`ve değer düzgün şekilde ayarlandığını bakın.
+    Artık, hata ayıklayıcı `Console.WriteLine`durakladığında, `theGalaxy.GalaxyType.MyGType`üzerine geldiğinizde ve değerin düzgün şekilde ayarlandığını görebilirsiniz.
 
-1. Sol kenar boşluğunda kesme noktası daireye tıklayarak kesme noktasını Kaldır (veya sağ tıklayıp seçin **kesme noktası** > **Sil kesme noktası**) ve tuşuna **F5** devam etmek için.
+1. Sol kenar boşluğunda kesme noktası çemberuna tıklayarak kesme noktasını kaldırın (veya sağ **tıklayıp kesme noktası > kesme** **noktasını sil**' i seçin ve sonra devam etmek için **F5** ' e basın.
 
-    Uygulama çalışır ve çıktıyı görüntüler. Artık oldukça iyi görünüyor, ancak bir şey dikkat edin. Konsol çıkışında düzensiz bir galaxy olarak görünmesi küçük Magellanic bulut galaxy bekleniyordu ancak hiç galaxy tür gösterir.
+    Uygulama çalışır ve çıktıyı görüntüler. Şimdi oldukça iyi görünüyor, ancak bir şey fark edersiniz. Küçük Magellanic bulutu Galaxy 'nin konsol çıkışında düzensiz bir Galaxy olarak gösterilmesini bekliyorduk, ancak hiç Galaxy türü göstermemektedir.
 
     ```
     Tadpole  400,  Spiral
@@ -278,55 +278,55 @@ Ardından, bazı hataları olan bir uygulama oluşturacağız.
     public GType(char type)
     ```
 
-    Bu kod galaxy türü ayarlandığı daha yakından göz atın istiyoruz olduğundan.
+    Bu kod, Galaxy türünün ayarlandığı, bu nedenle ona daha yakından bakmak istiyoruz.
 
-1. Tıklayın **yeniden** ![yeniden uygulama](../debugger/media/dbg-tour-restart.png "RestartApp") hata ayıklama araç çubuğu düğmesini (**Ctrl** + **kaydırma**   +  **F5**) yeniden başlatmak için.
+1. Yeniden başlatmak için hata ayıklama araç çubuğundaki ![uygulamayı](../debugger/media/dbg-tour-restart.png "RestartApp") **yeniden başlat** (**CTRL** + **SHIFT** + **F5**) düğmesine tıklayın.
 
-    Hata ayıklayıcı, Kesme noktasının ayarlandığı kod satırında duraklatır.
+    Hata ayıklayıcı, kesme noktasını ayarladığınız kod satırında duraklatılır.
 
-1. Üzerine `type` değişkeni. Değerini gördüğünüz `S` (karakter kodunu izleyerek). Değerini ilgilendiğiniz `I`, düzensiz galaxy türü olduğunu bildiğiniz.
+1. `type` değişkeninin üzerine gelin. `S` (karakter kodundan sonra) bir değer görürsünüz. Düzensiz bir Galaxy türü olduğunu bildiğiniz için `I`bir değerle ilgileniyorsunuz.
 
-1. Tuşuna **F5** ve üzerine `type` yeniden değişkeni. Değerini görene kadar bu adımı yineleyin `I` içinde `type` değişkeni.
+1. **F5** tuşuna basın ve `type` değişkeninin üzerine gelin. `type` değişkeninde `I` bir değer görene kadar bu adımı yineleyin.
 
-    ![Bir değişken inceleyin](../debugger/media/beginners-inspecting-data.png)
+    ![Bir değişkeni inceleyin](../debugger/media/beginners-inspecting-data.png)
 
-1. Şimdi, basın **F11** (**hata ayıklama** > **içine adımla** veya **içine adımla** hata ayıklama araç çubuğu düğmesi).
+1. Şimdi **, hata ayıklama > ** **adımla** veya hata ayıklama araç çubuğundaki **adımla** **düğmesine basın.**
 
-    **F11** aynı anda bir deyim hata ayıklayıcı ilerler (ve kodu çalıştırır). **F10** (**Step Over**) benzer bir komutu ve hem de hata ayıklayıcı kullanmayı öğrenirken son derece yararlıdır.
+    **F11** hata ayıklayıcıyı ilerletir (ve kodu yürütür). **F10** (**Adımlama**), benzer bir komuttur ve her ikisi de hata ayıklayıcıyı nasıl kullanacağınızı öğrenirken son derece yararlıdır.
 
-1. Tuşuna **F11** kod satırında durduruncaya kadar `switch` 'I' değeri ifadesi. Burada, bir yazım yanlışı kaynaklanan sorununu Temizle bakın. Burada ayarlar ilerlemek için kod beklenen `MyGType` bir düzensiz galaxy türü, ancak hata ayıklayıcı bunun yerine bu kod tamamen atlar ve üzerinde duraklatır `default` bölümünü `switch` deyimi.
+1. ' I ' değeri için `switch` deyimindeki kod satırında durana kadar **F11** tuşuna basın. Burada, bir typo 'dan kaynaklanan açık bir sorun görürsünüz. Kodun düzensiz bir Galaxy türü olarak `MyGType` ayarlandığı yere ilerletmesini bekletin, ancak bunun yerine hata ayıklayıcı bu kodu tamamen atlar ve `switch` bildiriminin `default` bölümünde duraklatılır.
 
-    ![Bir yazım yanlışı Bul](../debugger/media/beginners-typo.png)
+    ![Yazım hatası bulma](../debugger/media/beginners-typo.png)
 
-    Koda baktığınızda, bir yazım yanlışı bkz `case 'l'` deyimi. Olmalıdır `case 'I'`.
+    Koda bakarak `case 'l'` bildiriminde bir yazım hatası görürsünüz. `case 'I'` olmalıdır.
 
-1. Tıklayın kodunda `case 'l'` değiştirin `case 'I'`.
+1. `case 'l'` için koda tıklayın ve `case 'I'`ile değiştirin.
 
-1. Kesme noktasına kaldırın ve ardından **yeniden** düğmesini uygulamayı yeniden başlatın.
+1. Kesme noktasını kaldırın ve ardından uygulamayı yeniden başlatmak için **Yeniden Başlat** düğmesine tıklayın.
 
-    Artık düzeltilen hatalar ve beklediğiniz bir çıktı görmeniz!
+    Hatalar Şimdi düzeltildi ve istediğiniz çıktıyı görürsünüz!
 
-    Uygulama tamamlamak için herhangi bir tuşa basın.
+    Uygulamayı bitirebilmesi için herhangi bir tuşa basın.
 
 ## <a name="summary"></a>Özet
 
-Bir sorun gördüğünüzde, hata ayıklayıcıyı kullanın ve [adım komutları](../debugger/navigating-through-code-with-the-debugger.md) gibi **F10** ve **F11** sorunlu kod bölgesi bulunamadı.
+Bir sorun gördüğünüzde, sorun ile ilgili kod bölgesini bulmak için **F10** ve **F11** gibi bir hata ayıklayıcı ve [adım komutlarını](../debugger/navigating-through-code-with-the-debugger.md) kullanın.
 
 > [!NOTE]
-> Sorunun gerçekleştiği bölge kodu belirlenmesi zordur, sorun oluşmadan önce çalışan kod içinde bir kesme noktası ayarlayın ve sorun görene kadar adım komutları kullanın bildirimi. Ayrıca [izleme noktaları](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints) oturum iletileri **çıkış** penceresi. Tarafından günlüğe kaydedilen iletilere bakarak (ve iletileri henüz günlüğe kaydedilmiyordu tercihinize!), bölge kodu ile sorun genellikle ayırabilirsiniz. Bunu daraltmak için birkaç kez bu işlemi tekrarlamanız gerekebilir.
+> Sorunun gerçekleştiği kod bölgesini belirlemek zordur, sorun gerçekleşmeden önce çalışan kodda bir kesme noktası ayarlayın ve ardından sorun bildirimini görene kadar adım komutlarını kullanın. Ayrıca, iletileri **Çıkış** penceresinde günlüğe kaydetmek için [izlenenoktaları](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints) da kullanabilirsiniz. Günlüğe kaydedilen iletilere bakarak (ve yaşıyorsanız henüz günlüğe kaydedilmedi!), genellikle kod bölgesini sorun ile ayırabilirsiniz. Bunu daraltmak için bu işlemi birkaç kez tekrarlamanız gerekebilir.
 
-Bölge kodu ile sorun bulduğunuzda araştırmak için hata ayıklayıcı'yı kullanın. Bir sorunun nedenini bulmak için hata ayıklayıcıda uygulamanız çalışırken sorun kodu inceleyin:
+Sorun ile ilgili kod bölgesini bulduğunuzda araştırmak için hata ayıklayıcıyı kullanın. Bir sorunun nedenini bulmak için, uygulamanızı hata ayıklayıcıda çalıştırırken sorun kodunu inceleyin:
 
-* [Değişkenleri İnceleme](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) ve türü içermesi gereken değerler içeren olup olmadığını denetleyin. Hatalı bir değer görürseniz, hatalı değeri burada ayarlandı bulun (değere ayarlandığı bulmak için ihtiyacınız olabilecek ya da hata ayıklayıcıyı yeniden başlatın, bakmak [çağrı yığını](../debugger/how-to-use-the-call-stack-window.md), veya her ikisi de).
+* [Değişkenleri inceleyin](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) ve içerdikleri değer türlerini içerip içermediğini denetleyin. Hatalı bir değer bulursanız, bozuk değerin nerede ayarlandığını bulun (değerin nerede ayarlandığını bulmak için, hata ayıklayıcıyı yeniden başlatmanız, [çağrı yığınına](../debugger/how-to-use-the-call-stack-window.md)veya her ikisine birden bakmak) gerekebilir.
 
-* Uygulamanızın beklediğiniz kodu yürüten olup olmadığını denetleyin. (Örneğin, örnek uygulamada, galaxy türü düzensiz için ayarlanacak switch deyimi için kod bekliyorduk, ancak uygulama kodu yazım hatası nedeniyle atlandı.)
+* Uygulamanızın beklediği kodu yürüttüğünü denetleyin. (Örneğin, örnek uygulamada, switch ifadesinin kodunu, Galaxy türünü düzensiz olarak ayarlamak için bekliyorduk, ancak uygulama, typo nedeniyle kodu atladı.)
 
 > [!TIP]
-> Bir hata ayıklayıcısı, hataları bulmanıza yardımcı olması için kullanın. Hata ayıklama aracı hataları bulabilirsiniz *sizin için* yalnızca kodunuzun amacı biliyorsa. Bu amacı, geliştirici olarak size express, bir aracı yalnızca, kodun amacı bilemez. Yazma [birim testleri](../test/improve-code-quality.md) bunu nasıl olduğu.
+> Hataları bulmanıza yardımcı olması için bir hata ayıklayıcı kullanırsınız. Hata ayıklama aracı yalnızca kodunuzun amacını biliyor durumunda *sizin için* hata bulabilir. Bir araç, geliştirici, bu amacı ifade eden yalnızca kodunuzun amacını bilir. [Birim testlerini](../test/improve-code-quality.md) yazmak bunu nasıl yapaöğreneceksiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu makalede, birkaç genel hata ayıklama kavramları öğrendiniz. Ardından, hata ayıklayıcısı hakkında daha fazla bilgi edinmeye başlayabilirsiniz.
+Bu makalede, birkaç genel hata ayıklama kavramı öğrendiniz. Daha sonra, hata ayıklayıcı hakkında daha fazla bilgi edinmek için başlayabilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
