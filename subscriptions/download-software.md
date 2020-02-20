@@ -6,18 +6,21 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: d6ce32b0478b145b7d1814efa3738664ee622cf5
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 053e6d7171f8983def3675e42fb661172a381284
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439172"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476832"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
 
 > [!NOTE]
 > [Karşıdan yüklemeler](https://my.visualstudio.com/downloads/featured) sayfasında sizin için yalnızca aboneliğinize dahil olan indirmeler görüntülenir.  Birden fazla aboneliğiniz veya program üyeliğiniz varsa, şu anda farklı bir abonelik görüntülüyor olsanız bile, gösterilen İndirilenler **en yüksek abonelik** için olacaktır.  Örneğin, aynı oturum açma KIMLIĞIYLE ilişkili bir Visual Studio Enterprise aboneliğiniz ve bir Visual Studio Professional aboneliğiniz varsa, şu anda görüntülüyor olsanız bile, gösterilen indirmeler kurumsal aboneliğe dahil edilir. Profesyonel Abonelik avantajlarınız.
+
+> [!NOTE]
+> Office 365 ürün anahtarlarının kullanılabilirliğiyle ilgili bir sorun olduğunu biliyoruz.  Nedeni araştırıyoruz ve sorun çözüldüğünde bu makaleyi güncelleştireceğiz. 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>Nasıl yaparım? abone portalında İndirmeleri bulamıyor musunuz?
 [İndirmeler](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) sayfasını ziyaret ettiğinizde, gruplar halinde ürün türüne göre düzenlenmiş popüler indirmeleri görürsünüz.  Gösterilen popüler indirmelerden birini seçebilir veya sayfanın en üstündeki arama çubuğunu kullanarak herhangi bir ürünü arayabilirsiniz.
@@ -53,7 +56,8 @@ Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için *
 - [Anahtarları bulun ve talep edin](find-keys.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](/visualstudio/)
-- [Azure DevOps belgeleri](/azure/devops/)
-- [Azure belgeleri](/azure/)
-- [Microsoft 365 belgeleri](/microsoft-365/)
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+

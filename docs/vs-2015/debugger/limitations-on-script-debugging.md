@@ -1,5 +1,5 @@
 ---
-title: Betik hata ayıklamasında sınırlamalar | Microsoft Docs
+title: Betik hata ayıklaması sınırlamaları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,33 +18,33 @@ caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ea088eadc09d45d576dd3c9cd33e5d9e2d79fc8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f4f8f1e2fb014dc812bb5980d333e0a851f9222
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160625"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476810"
 ---
 # <a name="limitations-on-script-debugging"></a>Betik Hata Ayıklamasında Sınırlamalar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Bu konudaki sınırlamalar istemci tarafı komut dosyası hata ayıklamayı destekler.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bu konudaki sınırlamalara tabi olmak üzere istemci tarafı betikte hata ayıklamayı destekler.  
   
-## <a name="limitations-on-breakpoint-mapping-with-client-side-script"></a>Kesme noktası eşleme istemci tarafı komut dosyası ile ilgili sınırlamalar  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] istemci tarafı dosya çalışma zamanında dönüştürülür bir sunucu tarafı ASPX veya HTML dosyasında bir kesme noktası ayarlamak sağlar. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Sunucu tarafı dosyadan kesme noktası aşağıdaki sınırlamalara tabi istemci tarafındaki dosyada karşılık gelen bir kesme noktasıyla eşler:  
+## <a name="limitations-on-breakpoint-mapping-with-client-side-script"></a>Istemci tarafı betiği ile kesme noktası eşleme sınırlamaları  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], çalışma zamanında bir istemci tarafı dosyasına dönüştürülen bir sunucu tarafı ASPX veya HTML dosyasında bir kesme noktası ayarlamanıza olanak sağlar. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], kesme noktasını sunucu tarafı dosyadaki karşılık gelen bir kesme noktasına, istemci tarafı dosyasında aşağıdaki sınırlamalara bağlı olarak eşler:  
   
-- Kesme noktaları ayarlayın, içinde `<script>` engeller. Satır içi betik kesme noktaları veya `<% %>` blokları eşleştirilemez.  
+- Kesme noktaları `<script>` blokları içinde ayarlanmalıdır. Satır içi betikteki veya `<% %>` bloklardaki kesme noktaları eşlenemez.  
   
-- Sayfa için tarayıcı URL sayfa adı içermelidir. Örneğin: http://microsoft.com/default.apsx. Kesme noktası eşleme tanıyamıyor bir adresinden bir yeniden yönlendirme gibi http://microsoft.com varsayılan sayfasına.  
+- Sayfanın tarayıcı URL 'SI, sayfa adı içermelidir. Örneğin, `http://microsoft.com/default.apsx`. Kesme noktası eşlemesi varsayılan sayfaya `http://microsoft.com` gibi bir adresten yeniden yönlendirmeyi tanımaz.  
   
-- Kesme noktası ayarlayın veya bu sayfa tarafından eklenen diğer dosya tarayıcı URL değil bir ASPX denetimi (ascx) dosyası içinde belirtilen sayfasında Yöneticisi. Dahil edilen sayfaları'nda ayarlanan kesme noktaları eşlenemez.  
+- Kesme noktası, bir ASPX denetimi (ascx) dosyası, ana sayfa veya bu sayfanın içerdiği başka bir dosya içinde değil, tarayıcı URL 'sinde belirtilen sayfada ayarlanmalıdır. Dahil edilen sayfalarda ayarlanan kesme noktaları eşlenemez.  
   
-- Kesme noktaları ayarlayın `<script defer=true>` blokları eşleştirilemez.  
+- `<script defer=true>` bloklarda ayarlanan kesme noktaları eşlenemez.  
   
-- Kesme noktaları ayarlayın `<script id="">` blokları, kesme noktası eşleme yoksayar `id` özniteliği.  
+- `<script id="">` bloklarda ayarlanan kesme noktaları için, kesme noktası eşlemesi `id` özniteliğini yoksayar.  
   
 ## <a name="breakpoint-mapping-and-duplicate-lines"></a>Kesme noktası eşleme ve yinelenen satırlar  
- Sunucu tarafı ve istemci tarafı komut dosyasında karşılık gelen konum bulmak için kod her satırda bir kesme noktası eşleştirme algoritmasını inceler. Algoritma, her bir satırı benzersiz olduğunu varsayar. İki veya daha fazla satır aynı kodu içeren ve yinelenen satırlar biri üzerinde bir kesme noktası ayarlayın, kesme noktası eşleme algoritması istemci tarafı dosyasında yanlış yinelenen seçebilirsiniz. Bunu önlemek için kesme noktası burada ayarladığınız satırı için bir açıklama ekleyin. Örneğin:  
+ Sunucu tarafı ve istemci tarafı komut dosyasında karşılık gelen konumu bulmak için, kesme noktası eşleme algoritması her satırdaki kodu inceler. Algoritma, her satırın benzersiz olduğunu varsayar. İki veya daha fazla satır aynı kodu içeriyorsa ve bu yinelenen satırlardan birinde bir kesme noktası ayarlarsanız, kesme noktası eşleme algoritması, istemci tarafı dosyasında yanlış yinelemeyi seçebilir. Bunu engellemek için, kesme noktasını ayarladığınız satıra bir açıklama ekleyin. Örnek:  
   
 ```  
 i++ ;  

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Tek başına Profiler'ı yükleme | Microsoft Docs"
+title: 'Nasıl yapılır: tek başına profil oluşturucuyu yüklemek | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,49 +12,49 @@ caps.latest.revision: 29
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5923bc99906cf4bcad8ea92ad74a30470fb41a1c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 026162a2c8334c7163f9c7853d2de30e58e5939a
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432726"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476793"
 ---
-# <a name="how-to-install-the-stand-alone-profiler"></a>Nasıl yapılır: Tek başına Profiler'ı yükleme
+# <a name="how-to-install-the-stand-alone-profiler"></a>Nasıl yapılır: Bağımsız Profil Oluşturucuyu Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir komut satırı tabanlı yüklemeden çalıştırabilirsiniz bağımsız profil oluşturucuyu sağlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE. Bir bilgisayar yok ya da yüklü bir geliştirme ortamı olamaz bu durum oluşur. Örneğin, bir üretim Web sunucusunda bir geliştirme ortamı yüklememelidir.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)], [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 'yi yüklemeden çalıştırılabilen bir komut satırı tabanlı tek başına profil oluşturucu sağlar. Bu durum, bir bilgisayar bir geliştirme ortamının yüklü olmadığı veya içermediği durumlarda oluşur. Örneğin, bir üretim Web sunucusuna bir geliştirme ortamı yüklememelisiniz.  
   
 > [!NOTE]
-> ASP.NET Web sitesi için performans verilerini toplamak için bağımsız profil oluşturucuyu kullanırken [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) Çizgi aracı üzerinden önerilir [VSPerfCmd](../profiling/vsperfcmd.md) aracı.  
+> ASP.NET Web sitesi için performans verilerini toplamak üzere tek başına profil oluşturucuyu kullanırken, [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) satırı aracı [VSPerfCmd](../profiling/vsperfcmd.md) aracından önerilir.  
   
-### <a name="to-install-the-stand-alone-profiler"></a>Bağımsız profil oluşturucuyu yükleme  
+### <a name="to-install-the-stand-alone-profiler"></a>Tek başına profil oluşturucuyu yüklemek için  
   
-1. Bağımsız Profil yükleyicisini (vs_profiler.exe) bulmak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yükleme medyasında dizine \Standalone Profiler yolu içerir ve çalıştırın.  
+1. Tek başına profil yükleyicisini (vs_profiler. exe), \Tek başına profil oluşturucu yolunu içeren dizindeki [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yükleme medyasında bulun ve çalıştırın.  
   
-2. Vsintr.exe ve msdis150.dll yollarını sistem yoluna ekleyin.  
-  
-    > [!NOTE]
-    > Varsayılan yüklemede [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], vsinstr.exe ve msdis150.dll \Program Files\Visual Studio 10\Team Araçlar\Performans araçları içinde bulunur.  
-  
-3. Komut isteminde **Vsınstr**.  
+2. Vsintr. exe ve Msdis150. dll ' nin yolunu sistem yoluna ekleyin.  
   
     > [!NOTE]
-    > Vsinstr.exe yönelik kullanım bilgilerini gösterilirse, her şeyin doğru şekilde ayarlanır. Vsinstr.exe belirten bir hata göreceğiniz ya da bağımlılıklarından biri bulunamadı, cihazınızdaki yollar 2. adımda açıklandığı gibi doğru şekilde ayarlanmış olduğundan emin olun.  
+    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]varsayılan yüklemesinde vsinstr. exe ve Msdis150. dll, \Program Files\Visual Studio 10 \ Team Tools\Performance Tools konumundadır.  
   
-4. Sembol sunucusu ayarlamak, **_NT_SYMBOL_PATH** değişkenini **symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols**  
-  
-5. Sistem ortam değişkenlerini kullanarak sembol sunucunuz ayarladıktan sonra komut satırından profil oluşturucu Araçlar yeni bir komut isteminde çalıştırın. Bu, etkili olması yeni ortam değişkenlerini tanır. Komut İstemi penceresinde aşağıdaki komutu yazın:  
-  
-     **COMSPEC % Başlat**  
+3. Komut isteminde **vsinstr**yazın.  
   
     > [!NOTE]
-    > Sembol sunucusu paketi ayarlama konusunda ayrıntılı yönergeler için bkz: [nasıl yapılır: Başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md).  
+    > Vsinstr. exe kullanım bilgileri görüntüleniyorsa her şey doğru şekilde ayarlanır. Vsinstr. exe durumu veya bağımlılıklarından biri bulunamadığı için bir hata görürseniz, yollarınızın adım 2 ' de açıklandığı gibi doğru ayarlandığından emin olun.  
   
-6. Kullanım [VSPerfReport](../profiling/vsperfreport.md) aracı profil oluşturma veri (.vsp) dosyasına, semboller serileştirmek için. Kullanım **VSPerfReport userrulesdirectory packsymbols** anahtarlar. Veri dosyasına eklenmiş semboller yoksa _NT_SYMBOL_PATH ortam değişken kümesi olduğunu emin olun.  
+4. **_NT_SYMBOL_PATH** değişkeninizi `symsrv*symsrv.dll*c:\localcache* https://msdl.microsoft.com/download/symbols` olarak ayarlayarak sembol sunucusunu ayarlayın  
+  
+5. Sembol sunucunuzu sistem ortam değişkenlerini kullanarak ayarladıktan sonra, yeni bir komut isteminde komut satırı profil oluşturucu Araçları ' nı çalıştırın. Bu, yeni ortam değişkenlerinin etkili olmasına olanak sağlar. Komut istemi penceresinde aşağıdaki komutu yazın:  
+  
+     **başlatma% COMSPEC%**  
+  
+    > [!NOTE]
+    > Sembol sunucusu paketini ayarlama hakkında ayrıntılı yönergeler için bkz. [nasıl yapılır: başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md).  
+  
+6. Sembollerinizi profil oluşturma verileri (. vsp) dosyasına seri hale getirmek için [VSPerfReport](../profiling/vsperfreport.md) aracını kullanın. **VSPerfReport/summary: all/packsymbols** anahtarlarını kullanın. Veri dosyanıza eklenen semboller yoksa _NT_SYMBOL_PATH ortam değişkeni ayarlanmış olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)   
- [İzlenecek yol: Komut satırı kullanarak örnekleme profili oluşturma](../profiling/walkthrough-command-line-profiling-using-sampling.md)   
- [İzlenecek yol: Komut satırı araçları kullanarak profil oluşturma](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)   
- [Nasıl yapılır: Başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md)   
+ [Komut satırı  profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)  
+ [Izlenecek yol: örnekleme  kullanarak komut satırı profili oluşturma](../profiling/walkthrough-command-line-profiling-using-sampling.md)  
+ [Izlenecek yol: izleme  kullanarak komut satırı profili oluşturma](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)  
+ [Nasıl yapılır: Windows sembol bilgilerine başvuru](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

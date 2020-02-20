@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d034d65cd356ff44a42d10840ae064d81713457f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 11f64d2776b0d442d074c99c82287f1e7c482f1e
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587543"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506499"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Çözümleme İade İlkeleri Oluşturma veya Güncelleme
 
@@ -29,7 +29,7 @@ Kod Analizi iade ilkeleri proje ayarlarında ayarlanır ve her bir kod projesi i
 
 - Yönetilen kod için, kod analizi kurallarının bir alt kümesini içeren bir *kural kümesi* belirterek iade ilkesini ayarlarsınız.
 
-- C/C++ Code Için, Visual Studio 2017 sürüm 15,6 ve önceki sürümlerde, iade ilkesi tüm kod analizi kurallarının çalıştırılmasını gerektirir. Azure DevOps projenizdeki bireysel kod projeleri için belirli kuralları devre dışı bırakmak üzere ön işlemci yönergeleri ekleyebilirsiniz. 15,7 ve sonraki sürümlerde, çalıştırılacak kuralları belirtmek için **/Analyze: RuleSet** komutunu kullanabilirsiniz. Daha fazla bilgi için bkz. [çalıştırılacak C++ kuralları belirtmek Için kural kümelerini kullanma](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+- C/C++ Code Için, Visual Studio 2017 sürüm 15,6 ve önceki sürümlerde, iade ilkesi tüm kod analizi kurallarının çalıştırılmasını gerektirir. Azure DevOps projenizdeki bireysel kod projeleri için belirli kuralları devre dışı bırakmak üzere ön işlemci yönergeleri ekleyebilirsiniz. 15,7 ve sonraki sürümlerde, çalıştırılacak kuralları belirtmek için **/Analyze: RuleSet** komutunu kullanabilirsiniz. Daha fazla bilgi için bkz. [çalıştırılacak C++ kuralları belirtmek Için kural kümelerini kullanma](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run).
 
 Yönetilen kod için bir iade ilkesi belirttikten sonra, ekip üyeleri kod projeleri için kod analizi ayarlarını Azure DevOps proje ilkesi ayarlarına eşitleyebilir.
 

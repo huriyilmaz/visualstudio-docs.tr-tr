@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Hızlıbilgi araç ipuçlarını görüntüleme | Microsoft Docs'
+title: 'İzlenecek yol: QuickInfo araç Ipuçlarını görüntüleme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,169 +10,172 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7cb51edb41109d9664e5aeda0a5393d2cd34f38
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 3e75188c359a88bfe40a820546d7b042ecaacdac
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312427"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476945"
 ---
-# <a name="walkthrough-display-quickinfo-tooltips"></a>İzlenecek yol: Hızlıbilgi araç ipuçlarını görüntüleme
-Hızlıbilgi yöntem imzaları görüntüleyen bir IntelliSense özelliğidir ve açıklamaları bir kullanıcı işaretçiyi bir yöntem adı üzerinde taşır. Quickınfo'da açıklamaları sağlamak istediğiniz tanımlayıcıları tanımlayıp ardından, içeriği görüntülemek bir araç ipucu oluşturma dil tabanlı özellikleri gibi Hızlıbilgi uygulayabilirsiniz. Bir dil hizmeti bağlamında Hızlıbilgi tanımlayabilirsiniz kendi dosya adı uzantısı ve içerik türünü tanımlayın ve bu tür için Hızlıbilgi görüntülemek veya mevcut bir içerik türü (örneğin, "metin") için Hızlıbilgi görüntüleyebilirsiniz. Bu izlenecek yol, Hızlıbilgi görüntülemek için "metin" içerik türü gösterilmektedir.
+# <a name="walkthrough-display-quickinfo-tooltips"></a>İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle
+QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem imzalarını ve açıklamalarını görüntüleyen bir IntelliSense özelliğidir. QuickInfo gibi dil tabanlı özellikleri, hızlı bilgi açıklamaları sağlamak istediğiniz tanımlayıcıları tanımlayarak ve sonra içeriğin görüntüleneceği bir araç ipucu oluşturmak için uygulayabilirsiniz. Hızlı bilgileri bir dil hizmeti bağlamında tanımlayabilir veya kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için hızlı bilgileri görüntüleyebilir veya var olan bir içerik türü için QuickInfo görüntüleyebilirsiniz (örneğin, "metin"). Bu izlenecek yol, "metin" içerik türü için hızlı bilgi görüntülemeyi gösterir.
 
- Bu kılavuzda Hızlıbilgi örnek, bir kullanıcı, bir yöntem adı işaretçiyi hareket ettirdiğinde araç ipuçları görüntüler. Bu tasarım, dört bu arabirimlerin uygulanma gerektirir:
+ Bu kılavuzda QuickInfo örneği, bir kullanıcı işaretçiyi bir yöntem adı üzerine taşırken araç ipuçlarını görüntüler. Bu tasarım için şu dört arabirimi uygulamanız gerekir:
 
-- Kaynak arabirimi
+- kaynak arabirim
 
-- Kaynak sağlayıcı arabirimi
+- kaynak sağlayıcı arabirimi
 
-- denetleyici arabirimi
+- Denetleyici Arabirimi
 
-- Denetleyici sağlayıcı arabirimi
+- denetleyici sağlayıcı arabirimi
 
-  Kaynak ve denetleyici sağlayıcıları, Yönetilen Genişletilebilirlik Çerçevesi (MEF) bileşeni bölümleri ve kaynak ve denetleyici sınıflarını dışarı aktarmak için sorumludur ve içeri aktarma ve Hizmetleri gibi aracıları <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>, araç ipucu metni oluşturur Arabellek ve <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>, Hızlıbilgi oturumu tetikler.
+  Kaynak ve denetleyici sağlayıcıları Managed Extensibility Framework (MEF) bileşen bölümleridir ve kaynak ve denetleyici sınıflarını dışa aktarıp araç ipucu metin arabelleğini oluşturan <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>gibi hizmet ve aracıları içeri ve hızlı bilgi oturumunu tetikleyen <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>.
 
-  Bu örnekte, yöntem adları ve açıklamaları, sabit kodlanmış listesini Hızlıbilgi kaynak kullanır, ancak dil hizmeti ve dil belgeleri tam uygulamalarında, bu içeriği sağlamaktan sorumlu.
+  Bu örnekte, QuickInfo kaynağı yöntem adlarının ve açıklamalarının sabit kodlanmış bir listesini kullanır, ancak tam uygulamalarda, dil hizmeti ve dil belgeleri bu içeriği sağlamaktan sorumludur.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015'ten başlayarak, Visual Studio SDK İndirme Merkezi'nden yüklemeniz gerekmez. Visual Studio kurulumunda isteğe bağlı bir özellik eklemiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, indirme merkezinden Visual Studio SDK 'yı yüklemeniz gerekmez. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-mef-project"></a>MEF proje oluşturma
+## <a name="create-a-mef-project"></a>MEF projesi oluşturma
 
 ### <a name="to-create-a-mef-project"></a>MEF projesi oluşturmak için
 
-1. Bir C# VSIX projesi oluşturun. (İçinde **yeni proje** iletişim kutusunda **Visual C# / genişletilebilirlik**, ardından **VSIX projesi**.) Çözüm adı `QuickInfoTest`.
+1. C# VSIX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **görsel C# /genişletilebilirlik**, sonra **VSIX projesi**' ni seçin.) `QuickInfoTest`çözümü adlandırın.
 
-2. Bir düzenleyici sınıflandırıcı öğe şablonu, projeye ekleyin. Daha fazla bilgi için [bir düzenleyici öğesi şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Projeye bir düzenleyici sınıflandırıcı öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
-3. Varolan sınıf dosyaları silin.
+3. Varolan sınıf dosyalarını silin.
 
-## <a name="implement-the-quickinfo-source"></a>Quickınfo'da kaynak uygulama
- Quickınfo'da Kaynak Tanımlayıcıları ve açıklamalarının kümesini toplamak ve tanımlayıcılarından birini karşılaşıldığında, araç ipucu metin arabelleği için içerik ekleme sorumludur. Bu örnekte, tanımlayıcıların ve açıklamalarının yalnızca kaynak oluşturucuda eklenir.
+## <a name="implement-the-quickinfo-source"></a>QuickInfo kaynağını uygulama
+ QuickInfo kaynağı tanımlayıcı kümesini ve açıklamalarını toplamaktan ve tanımlayıcılardan biri ile karşılaşıldığında araç ipucu metin arabelleğine içerik eklemeye sorumludur. Bu örnekte, tanımlayıcılar ve açıklamaları yalnızca kaynak oluşturucuya eklenir.
 
-#### <a name="to-implement-the-quickinfo-source"></a>Quickınfo'da kaynak uygulamak için
+#### <a name="to-implement-the-quickinfo-source"></a>QuickInfo kaynağını uygulamak için
 
-1. Bir sınıf dosyası ekleyin ve adlandırın `TestQuickInfoSource`.
+1. Bir sınıf dosyası ekleyin ve `TestQuickInfoSource`adlandırın.
 
-2. Bir başvuru ekleyin *Microsoft.VisualStudio.Language.IntelliSense*.
+2. *Microsoft. VisualStudio. Language. IntelliSense*için bir başvuru ekleyin.
 
 3. Aşağıdaki içeri aktarmaları ekleyin.
 
      [!code-vb[VSSDKQuickInfoTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_1.vb)]
      [!code-csharp[VSSDKQuickInfoTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_1.cs)]
 
-4. Uygulayan bir sınıf bildirme <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>ve adlandırın `TestQuickInfoSource`.
+4. <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>uygulayan bir sınıf bildirin ve `TestQuickInfoSource`adlandırın.
 
      [!code-vb[VSSDKQuickInfoTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_2.vb)]
      [!code-csharp[VSSDKQuickInfoTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_2.cs)]
 
-5. Quickınfo'da kaynak sağlayıcısı, metin arabelleği ve bir dizi yöntem adlarını ve yöntem imzaları için alanlar ekleyin. Bu örnekte, yöntem adlarını ve imzalar, başlatılır `TestQuickInfoSource` Oluşturucusu.
+5. QuickInfo kaynak sağlayıcısı, metin arabelleği ve bir yöntem adları ve yöntem imzaları kümesi için alanlar ekleyin. Bu örnekte, yöntem adları ve imzalar `TestQuickInfoSource` oluşturucuda başlatılır.
 
      [!code-vb[VSSDKQuickInfoTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_3.vb)]
      [!code-csharp[VSSDKQuickInfoTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_3.cs)]
 
-6. Quickınfo'da kaynak sağlayıcısı ve metin arabelleğini ayarlar ve yöntem adlarını ve yöntem imzaları ve açıklamaları kümesini dolduran bir oluşturucu ekleyin.
+6. QuickInfo kaynak sağlayıcısını ve metin arabelleğini ayarlayan bir Oluşturucu ekleyin ve yöntem adları kümesini ve Yöntem imzalarını ve açıklamalarını doldurur.
 
      [!code-vb[VSSDKQuickInfoTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_4.vb)]
      [!code-csharp[VSSDKQuickInfoTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_4.cs)]
 
-7. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource.AugmentQuickInfoSession%2A> yöntemi. İmleç çizgi veya bir metin arabelleği sonunda ise bu örnekte, yöntem geçerli sözcüğü ya da önceki sözcüğe bulur. Word yöntemi adlarından birini kullanıyorsanız, bu yöntem adı için açıklama Hızlıbilgi içeriği eklenir.
+7. <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource.AugmentQuickInfoSession%2A> yöntemini uygulayın. Bu örnekte, yöntemi geçerli sözcüğü ya da imleç bir satırın sonunda veya bir metin arabelleği ise, önceki sözcüğü bulur. Sözcük Yöntem adlarından biri ise, bu yöntem adının açıklaması QuickInfo içeriğine eklenir.
 
      [!code-vb[VSSDKQuickInfoTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_5.vb)]
      [!code-csharp[VSSDKQuickInfoTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_5.cs)]
 
-8. Dispose() yöntemini beri uygulamalıdır <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource> uygulayan <xref:System.IDisposable>:
+8. Ayrıca, <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource> <xref:System.IDisposable>uyguladığından bir Dispose () yöntemi uygulamalısınız:
 
      [!code-vb[VSSDKQuickInfoTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_6.vb)]
      [!code-csharp[VSSDKQuickInfoTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_6.cs)]
 
-## <a name="implement-a-quickinfo-source-provider"></a>Quickınfo'da kaynak sağlayıcıyı uygulama
- Hızlıbilgi kaynak sağlayıcısı, öncelikle kendisi bir MEF Bileşeni parçası dışarı aktarma ve Hızlıbilgi kaynak örneği için kullanılır. Bir MEF Bileşeni parçası olduğundan, diğer MEF Bileşeni parçaları içeri aktarabilirsiniz.
+## <a name="implement-a-quickinfo-source-provider"></a>QuickInfo kaynak sağlayıcısı uygulama
+ QuickInfo kaynağının sağlayıcısı öncelikle kendisini bir MEF bileşeni parçası olarak dışa aktarıp QuickInfo kaynağını oluşturur. Bir MEF bileşeni parçası olduğundan, diğer MEF bileşen parçalarını içeri aktarabilir.
 
-#### <a name="to-implement-a-quickinfo-source-provider"></a>Quickınfo'da kaynak sağlayıcısını uygulamak için
+#### <a name="to-implement-a-quickinfo-source-provider"></a>Bir QuickInfo kaynak sağlayıcısı uygulamak için
 
-1. Adlı bir Hızlıbilgi kaynak sağlayıcısı bildirimini `TestQuickInfoSourceProvider` uygulayan <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider>ve ile dışarı aktarın bir <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "Araç ipucu Hızlıbilgi kaynak" bir <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> , önce "varsayılan" = ve <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin".
+1. <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider>uygulayan `TestQuickInfoSourceProvider` adlı bir QuickInfo kaynak sağlayıcısı bildirin ve bunu "ToolTip QuickInfo Source" <xref:Microsoft.VisualStudio.Utilities.NameAttribute> bir <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> Before = "default" ve bir <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "Text" ile dışarı aktarın.
 
      [!code-vb[VSSDKQuickInfoTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_7.vb)]
      [!code-csharp[VSSDKQuickInfoTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_7.cs)]
 
-2. İki Düzenleyici hizmet alma <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> ve <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>, özellikleri olarak `TestQuickInfoSourceProvider`.
+2. İki düzenleyici hizmetini, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> ve <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>`TestQuickInfoSourceProvider`özellikler olarak içeri aktarın.
 
      [!code-vb[VSSDKQuickInfoTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_8.vb)]
      [!code-csharp[VSSDKQuickInfoTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_8.cs)]
 
-3. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider.TryCreateQuickInfoSource%2A> yeni döndürülecek `TestQuickInfoSource`.
+3. Yeni bir `TestQuickInfoSource`döndürmek için <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider.TryCreateQuickInfoSource%2A> uygulayın.
 
      [!code-vb[VSSDKQuickInfoTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_9.vb)]
      [!code-csharp[VSSDKQuickInfoTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_9.cs)]
 
-## <a name="implement-a-quickinfo-controller"></a>Uygulama Hızlıbilgi denetleyicisi
- Quickınfo'da denetleyicileri Hızlıbilgi ne zaman gösterileceğini belirler. Yöntem adları birine karşılık gelen bir sözcük üzerinden işaretçisi olduğunda bu örnekte, Hızlıbilgi görünür. Quickınfo'da denetleyicisi Hızlıbilgi oturumu tetikleyen bir fare üzerine gelindiğinde kullanılacak olay işleyicisi uygular.
+## <a name="implement-a-quickinfo-controller"></a>QuickInfo denetleyicisi uygulama
+ QuickInfo denetleyicileri hızlı bilgi görüntülendiğinde belirlenir. Bu örnekte, işaretçi Yöntem adlarından birine karşılık gelen bir sözcüğün üzerindeyken QuickInfo belirir. QuickInfo denetleyicisi, bir QuickInfo oturumunu tetikleyen bir fare üzerine gelme olay işleyicisi uygular.
 
-### <a name="to-implement-a-quickinfo-controller"></a>Quickınfo'da denetleyicisi uygulamak için
+### <a name="to-implement-a-quickinfo-controller"></a>QuickInfo denetleyicisi uygulamak için
 
-1. Uygulayan bir sınıf bildirme <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController>ve adlandırın `TestQuickInfoController`.
+1. <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController>uygulayan bir sınıf bildirin ve `TestQuickInfoController`adlandırın.
 
      [!code-vb[VSSDKQuickInfoTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_10.vb)]
      [!code-csharp[VSSDKQuickInfoTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_10.cs)]
 
-2. Özel alanlar metin görünümü için metin görünümü, Hızlıbilgi oturumu ve Hızlıbilgi controller sağlayıcısı temsil metin arabelleği ekleyin.
+2. Metin görünümünde, hızlı bilgi oturumunda ve QuickInfo denetleyici sağlayıcısında temsil edilen metin arabellekleri için metin görünümü için özel alanlar ekleyin.
 
      [!code-vb[VSSDKQuickInfoTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_11.vb)]
      [!code-csharp[VSSDKQuickInfoTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_11.cs)]
 
-3. Alanları ayarlayan ve fareyi üzerine gelindiğinde kullanılacak olay işleyicisi ekler bir oluşturucu ekleyin.
+3. Alanları ayarlayan ve fare üzerine gelme olay işleyicisini ekleyen bir Oluşturucu ekleyin.
 
      [!code-vb[VSSDKQuickInfoTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_12.vb)]
      [!code-csharp[VSSDKQuickInfoTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_12.cs)]
 
-4. Quickınfo'da oturumu tetikler fare vurgulu olayı işleyicisi ekleyin.
+4. QuickInfo oturumunu tetikleyen fare üzerine gelme olay işleyicisini ekleyin.
 
      [!code-vb[VSSDKQuickInfoTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_13.vb)]
      [!code-csharp[VSSDKQuickInfoTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_13.cs)]
 
-5. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.Detach%2A> denetleyicisi metin görünümden ayrıldığında BT'nin fareyi üzerine gelindiğinde kullanılacak olay işleyicisi kaldırır. Bu nedenle yöntemi.
+5. Denetleyicinin metin görünümünden ayrıldığında fare üzerine gelme olay işleyicisini kaldırabilmesi için <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.Detach%2A> yöntemini uygulayın.
 
      [!code-vb[VSSDKQuickInfoTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_14.vb)]
      [!code-csharp[VSSDKQuickInfoTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_14.cs)]
 
-6. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.ConnectSubjectBuffer%2A> yöntemi ve <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.DisconnectSubjectBuffer%2A> boş Bu örnek yöntemler olarak yöntemi.
+6. Bu örnek için <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.ConnectSubjectBuffer%2A> yöntemini ve <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.DisconnectSubjectBuffer%2A> metodunu boş yöntemler olarak uygulayın.
 
      [!code-vb[VSSDKQuickInfoTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_15.vb)]
      [!code-csharp[VSSDKQuickInfoTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_15.cs)]
 
-## <a name="implementing-the-quickinfo-controller-provider"></a>Quickınfo'da denetleyicisi sağlayıcıyı uygulama
- Sağlayıcı Hızlıbilgi denetleyicisinin, öncelikle kendisi bir MEF Bileşeni parçası dışarı aktarma ve Hızlıbilgi denetleyici örneği için kullanılır. Bir MEF Bileşeni parçası olduğundan, diğer MEF Bileşeni parçaları içeri aktarabilirsiniz.
+## <a name="implementing-the-quickinfo-controller-provider"></a>QuickInfo denetleyici sağlayıcısını uygulama
+ QuickInfo denetleyicisi sağlayıcısı öncelikle kendisini bir MEF bileşeni parçası olarak dışa aktarıp QuickInfo denetleyicisi örneğini oluşturur. Bir MEF bileşeni parçası olduğundan, diğer MEF bileşen parçalarını içeri aktarabilir.
 
-### <a name="to-implement-the-quickinfo-controller-provider"></a>Quickınfo'da denetleyicisi sağlayıcısını uygulamak için
+### <a name="to-implement-the-quickinfo-controller-provider"></a>QuickInfo denetleyici sağlayıcısını uygulamak için
 
-1. Adlı bir sınıf bildirme `TestQuickInfoControllerProvider` uygulayan <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider>ve ile dışarı aktarın bir <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "Araç ipucu Hızlıbilgi denetleyicisinin" ve <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin":
+1. <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider>uygulayan `TestQuickInfoControllerProvider` adlı bir sınıf bildirin ve bunu "ToolTip QuickInfo Controller" <xref:Microsoft.VisualStudio.Utilities.NameAttribute> ve bir <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "Text" ile dışarı aktarın:
 
      [!code-vb[VSSDKQuickInfoTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_16.vb)]
      [!code-csharp[VSSDKQuickInfoTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_16.cs)]
 
-2. İçeri aktarma <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> özelliği olarak.
+2. <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> özellik olarak içeri aktarın.
 
      [!code-vb[VSSDKQuickInfoTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_17.vb)]
      [!code-csharp[VSSDKQuickInfoTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_17.cs)]
 
-3. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider.TryCreateIntellisenseController%2A> Hızlıbilgi denetleyicisi örnekleme yöntemi.
+3. QuickInfo denetleyicisini örnekleyerek <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider.TryCreateIntellisenseController%2A> yöntemini uygulayın.
 
      [!code-vb[VSSDKQuickInfoTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_18.vb)]
      [!code-csharp[VSSDKQuickInfoTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_18.cs)]
 
-## <a name="build-and-test-the-code"></a>Kod oluşturup test
- Bu kodu test etmek için QuickInfoTest Çözümü derleyin ve deneysel örneğinde çalıştırın.
+## <a name="build-and-test-the-code"></a>Kodu derleyin ve test edin
+ Bu kodu test etmek için QuickInfoTest çözümünü derleyin ve deneysel örnekte çalıştırın.
 
-### <a name="to-build-and-test-the-quickinfotest-solution"></a>Derleme ve QuickInfoTest çözümü test etmek için
+### <a name="to-build-and-test-the-quickinfotest-solution"></a>QuickInfoTest çözümünü derlemek ve test etmek için
 
-1. Çözümü oluşturun.
+1. Çözümü derleyin.
 
-2. Bu projede hata ayıklayıcıda çalıştırdığınızda, Visual Studio'nun ikinci bir örneğini başlatılır.
+2. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
 
-3. Bir metin dosyası ve türü "sözcüklerini içeren metin Ekle" ve "çıkarmayı" oluşturun.
+3. Bir metin dosyası oluşturun ve "Ekle" ve "çıkart" sözcüklerini içeren bir metin yazın.
 
-4. İşaretçiyi "Ekle" oluşumları birinin üzerine getirin. İmza ve açıklamasını `add` yöntemi görüntülenmesi gerekir.
+4. İşaretçiyi "Ekle" oluşumlarından birinin üzerine taşıyın. `add` yönteminin imzası ve açıklaması görüntülenmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Bağlantı bir dosya adı uzantısı için bir içerik türü](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+- [İzlenecek yol: bir içerik türünü bir dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

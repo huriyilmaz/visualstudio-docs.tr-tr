@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Son kullanıcıların yükleme yapacakları konumu belirtme | Microsoft Docs'
+title: 'Nasıl yapılır: son kullanıcıların yükleneceği konumu belirtme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,33 +18,33 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3139cb337428dfc0c14e5bae47e682ce169bc81d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 794d417d3995e35b48dc6102bfdeddfa8b992548
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159134"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476903"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Nasıl yapılır: Son Kullanıcıların Yükleme Yapacakları Konumu Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yayımlama sırasında bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama, kullanıcıların gittikleri uygulamasını indirme ve yükleme için konum değildir nerede başlangıçta yayımladığınız uygulamanın konumu. Örneğin, bazı kuruluşlarda bir geliştirici bir uygulama için bir hazırlık sunucusu yayınlayabilir ve uygulamayı bir Web sunucusuna yönetici ardından taşıyabilir.  
+Bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulaması yayımlarken, kullanıcıların uygulamayı indirmek ve yüklemek için gideceği konum, uygulamayı ilk olarak yayımladığınız konum değildir. Örneğin, bazı kuruluşlarda bir geliştirici bir uygulamayı hazırlama sunucusuna yayımlayabilir ve ardından Yönetici uygulamayı bir Web sunucusuna taşır.  
   
- Bu durumda, kullanabileceğiniz `Installation URL` kullanıcıları nereye uygulamayı indirmek için Web sunucusunu belirtmek için özellik. Bu, uygulama bildirimini güncelleştirmeleri aranacağı bilebilmesi gereklidir.  
+ Bu durumda, kullanıcıların uygulamayı indirmek için gideceleceği Web sunucusunu belirtmek için `Installation URL` özelliğini kullanabilirsiniz. Bu, uygulama bildiriminin güncelleştirmelerin nerede bakacağını bilmesini sağlamak için gereklidir.  
   
- `Installation URL` Özelliği, üzerinde ayarlanabilir **Yayımla** sayfasının **Proje Tasarımcısı**.  
+ `Installation URL` özelliği, **Proje Tasarımcısı**' nın **Yayımla** sayfasında ayarlanabilir.  
   
- **Not** `Installation URL` özelliği de ayarlanabilir kullanarak **PublishWizard**. Daha fazla bilgi için [nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+ **Göz önünde** `Installation URL` özelliği **publishwizard**kullanılarak da ayarlanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
-### <a name="to-specify-an-installation-url"></a>Bir yükleme URL'si belirtmek için  
+### <a name="to-specify-an-installation-url"></a>Yükleme URL 'SI belirtmek için  
   
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Tıklayın **Yayımla** sekmesi.  
+2. **Yayımla** sekmesine tıklayın.  
   
-3. Yükleme URL'si biçimi kullanarak tam bir URL kullanarak yükleme konumu alanına http://www.microsoft.com/ApplicationName , ya da UNC yolu biçiminde \\ \Server\ApplicationName.  
+3. Yükleme URL 'SI alanında, biçim https://www.microsoft.com/ApplicationNamekullanarak tam bir URL kullanarak yükleme konumunu veya \\\Server\applicationnamebiçimini kullanarak bir UNC yolunu girin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Visual Studio'nun dosyaları nereye kopyalayacağını belirtme](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
+ [Nasıl yapılır: Visual Studio 'Nun dosyaları nereye kopyaladığını belirtme](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
  [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)   
  [Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

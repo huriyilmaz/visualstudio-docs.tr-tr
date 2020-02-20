@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 5087c439533aa447708d0f1bfae653054fd16089
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.openlocfilehash: 46c6110cb977e3a309f27fc5a014522494f18c9a
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144780"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506520"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Hata ayıklama sırasında .NET derlemelerinden kaynak kodu oluşturma
 
@@ -82,13 +82,13 @@ Derleyici iyileştirmeleri kullanılarak derlenen bir derlemeden derlenen kodda 
 - Yerel değişkenler doğru adlara sahip olamaz.
 - Bazı değişkenler, değerlendirme için kullanılamayabilir.
 
-GitHub sorunundan daha fazla ayrıntı bulunabilir: [Ichsarpcompiler. vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901).
+GitHub sorunu: [ınetcode. Decompiler Ile vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901)hakkında daha fazla ayrıntı bulabilirsiniz.
 
 ### <a name="decompilation-reliability"></a>Derlemeyi kaldırma güvenilirliği
 
 Bir dizi derleme girişiminin görece küçük bir yüzdesi hata oluşmasına neden olabilir. Bunun nedeni ılspy 'da dizi noktası null başvuru hatasıdır.  Bu sorunları ayırarak ve derleme girişimini sorunsuz bir şekilde başarısız hale getirerek hatayı hafifledik.
 
-GitHub sorunundan daha fazla ayrıntı bulunabilir: [Ichsarpcompiler. vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901).
+GitHub sorunu: [ınetcode. Decompiler Ile vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901)hakkında daha fazla ayrıntı bulabilirsiniz.
 
 ### <a name="limitations-with-async-code"></a>Zaman uyumsuz kodlu sınırlamalar
 

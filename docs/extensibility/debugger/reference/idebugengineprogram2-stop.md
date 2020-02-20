@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::Stop | Microsoft Docs
+title: 'IDebugEngineProgram2:: durdur | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba93c88eb3d7e996b2a5f19dda605653af090c94
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9d7213dcd2484ba69caf51fdc21f52bba5bb3361
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345210"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506454"
 ---
 # <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
-Bu programa tüm iş parçacıkları durdurur.
+Bu programda çalışan tüm iş parçacıklarını sonlandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,12 +38,12 @@ int Stop();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu program bir çok program ortamında ayıklanmakta olan bu yöntem çağrılır. Bu yöntem, bu programda başka bir programı durdurma olaydan alındığında çağrılır. Bu yöntemin uygulanmasını zaman uyumsuz olması gerekir; diğer bir deyişle, tüm iş parçacıkları bu yöntem döndürmeden önce durdurulması gerekir. Bu yöntemin uygulanmasını çağırmak kadar basit [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) Bu program yöntemi.
+ Bu yöntem, bu programın bir çoklu program ortamında hata ayıklaması yapıldığında çağrılır. Başka bir programdan durdurulan bir olay alındığında bu yöntem bu programda çağırılır. Bu yöntemin uygulanması zaman uyumsuz olmalıdır; Yani, bu yöntemin döndürüldüğünden önce tüm iş parçacıklarının durdurulması gerekmez. Bu yöntemin uygulanması, bu programda [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) yöntemini çağırmak kadar basit olabilir.
 
- Hata ayıklama olay yanıt olarak bu yöntem gönderilir.
+ Program durdurulduğunda uygulayıcılar bir [IDebugStopCompleteEvent2](../../../extensibility/debugger/reference/idebugstopcompleteevent2.md) göndermelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)

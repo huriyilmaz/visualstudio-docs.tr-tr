@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e66d0d1ed8115b214b1da1654cbefdc96f7d1774
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 48fa03dec65bcdc1e6c3af94200cfb6c46907e49
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588622"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476865"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio 'da kod çalışmasını sağlama
 
@@ -24,7 +24,7 @@ Düzenleyiciyi iletişime ve bazı kodlar oluşturdunuz. Artık kodun düzgün �
 
 ## <a name="build-your-code"></a>Kodunuzu oluşturma
 
-İki temel tür yapı yapılandırması vardır: **hata ayıklama** ve **yayın**. **Hata ayıklama** yapılandırması, daha zengin bir etkileşimli çalışma zamanı hata ayıklama deneyimine olanak sağlayan daha yavaş ve daha büyük bir yürütülebilir dosya üretir. **Hata ayıklama** yürütülebilir dosyası asla gönderilmemelidir. **Yayın** yapılandırması, sevk etmek için uygun olan daha hızlı, iyileştirilmiş bir yürütülebilir dosya oluşturur (en azından derleyicinin perspektifinden). Varsayılan yapı yapılandırma **hata ayıklama**.
+İki temel tür derleme yapılandırması vardır: **hata ayıklama** ve **yayın**. **Hata ayıklama** yapılandırması, daha zengin bir etkileşimli çalışma zamanı hata ayıklama deneyimine olanak sağlayan daha yavaş ve daha büyük bir yürütülebilir dosya üretir. **Hata ayıklama** yürütülebilir dosyası asla gönderilmemelidir. **Yayın** yapılandırması, sevk etmek için uygun olan daha hızlı, iyileştirilmiş bir yürütülebilir dosya oluşturur (en azından derleyicinin perspektifinden). Varsayılan derleme yapılandırması **hata ayıklaması**.
 
 Projenizi oluşturmanın en kolay yolu **F7**tuşuna basmanız, ancak ana menüden Build > **Build Solution** öğesini **seçerek derlemeyi de** başlatabilirsiniz.
 
@@ -78,7 +78,7 @@ Visual Studio, yazarken kodu inceleyecek C# ve Visual Basic bir yerleşik [.net 
 
 ### <a name="c-code-analysis"></a>C++Kod Analizi
 
-Kodu çözümlemek C++ için [Statik kod analizini](../code-quality/quick-start-code-analysis-for-c-cpp.md)çalıştırın. Başarılı bir derlemeyi önleyen açık hataları temizledikten sonra bu uygulamayı çalıştırmanın önleminizi alarak ' ine ulaşın ve üretebilen uyarıları ele almanız biraz zaman atalım. Yolculuğuna giden bir süre sonra tasarruf edersiniz ve birkaç kod stili tekniği öğrenebilirsiniz.
+Kodu çözümlemek C++ için [Statik kod analizini](/cpp/code-quality/quick-start-code-analysis-for-c-cpp)çalıştırın. Başarılı bir derlemeyi önleyen açık hataları temizledikten sonra bu uygulamayı çalıştırmanın önleminizi alarak ' ine ulaşın ve üretebilen uyarıları ele almanız biraz zaman atalım. Yolculuğuna giden bir süre sonra tasarruf edersiniz ve birkaç kod stili tekniği öğrenebilirsiniz.
 
 Statik kod analizini başlatmak için **Alt**+**F11** tuşuna basın (veya en üstteki menüden **Çözümle** > **Kod analizini Çalıştır '** ı seçin).
 
@@ -158,11 +158,11 @@ Geçerli değerini ve başvurularını görmek için bir değişkenin üzerine g
 
 Ayrıca, Visual Studio, uygulamanızın CPU ve bellek kullanımını zaman içinde gözlemleyebileceğiniz **Tanılama araçları** penceresini görüntüler. Uygulama geliştirmede daha sonra, bu araçları, beklenmeyen ağır CPU kullanımı veya bellek ayırmayı aramak için kullanabilirsiniz. Beklenmedik ağır kullanım veya yayınlanmamış kaynaklara neden olduğunu belirlemek için **izleme** penceresi ve kesme noktaları ile birlikte kullanın. Daha fazla bilgi için bkz. [profil oluşturma Özellik turu](../profiling/profiling-feature-tour.md).
 
-## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
+## <a name="run-unit-tests"></a>Birim testleri çalıştırma
 
 Birim testleri, kod hatalarından kaynaklanan ilk savunma hattınızdır çünkü doğru şekilde tamamlandığında, tek bir "Unit" kodu ve genellikle tek bir işlevi test ederler ve tam programınızdaki hata ayıklamanın daha kolay olması gerekir. Visual Studio, hem yönetilen hem de yerel kod için Microsoft birim testi çerçeveleri 'ni kurar. Birim testleri oluşturun, bunları çalıştırmak ve bu testlerin sonuçları rapor için bir birim testi Çerçevesi'ni kullanın. Kodunuzun doğru şekilde çalışmaya devam ettiğinden emin olmak için, değişiklik yaptığınızda birim testlerini yeniden çalıştırın. Visual Studio Enterprise Edition ile, her derlemeden sonra testleri otomatik olarak çalıştırabilirsiniz.
 
-Başlamak için okuma [Intellitest ile kodunuz için birim testleri oluşturmak](../test/generate-unit-tests-for-your-code-with-intellitest.md).
+Başlamak için, [IntelliTest ile kodunuz için birim testleri oluşturma](../test/generate-unit-tests-for-your-code-with-intellitest.md)makalesini okuyun.
 
 Visual Studio 'da birim testleri hakkında daha fazla bilgi edinmek ve bunların daha iyi kalite kodu oluşturmanıza nasıl yardımcı olabileceğini öğrenmek için [birim testi temel bilgilerini](../test/unit-test-basics.md)okuyun.
 

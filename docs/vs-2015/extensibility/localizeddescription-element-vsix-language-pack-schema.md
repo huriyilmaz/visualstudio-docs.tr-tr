@@ -1,5 +1,5 @@
 ---
-title: LocalizedDescription öğesi (VSIX Dil Paketi Şeması) | Microsoft Docs
+title: LocalizedDescription öğesi (VSıX dil paketi şeması) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,17 +8,17 @@ ms.assetid: 766a1732-bbaf-4875-b276-feb42169633a
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 281f3823d22ee0e290e4b6bb32a8280f4773a592
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 49bf12f3056eb7ddb0e0afb8333a1f1893c7b954
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679903"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477026"
 ---
-# <a name="localizeddescription-element-vsix-language-pack-schema"></a>LocalizedDescription öğesi (VSIX Dil Paketi Şeması)
+# <a name="localizeddescription-element-vsix-language-pack-schema"></a>LocalizedDescription öğesi (VSıX dil paketi şeması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Gerekli. Uzantının yerelleştirilmiş bir açıklama sağlar.  
+Gereklidir. Uzantının yerelleştirilmiş açıklamasını sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,33 +33,33 @@ Gerekli. Uzantının yerelleştirilmiş bir açıklama sağlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Yok.||  
+|Yok||  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|None||  
+|Yok||  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[VSIX LanguagePack Öğesi](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Gerekli. VSIX Dil Paketi için kök öğe sağlar.|  
+|[VSIX LanguagePack Öğesi](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Gereklidir. VSıX dil paketi için kök öğesi sağlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
- Gerekli. Hedef Dil uzantısında metin açıklaması.  
+ Gereklidir. Hedef dilde uzantının metin açıklaması.  
   
 ## <a name="element-information"></a>Öğe Bilgisi  
   
 |                 |                                                           |
 |-----------------|-----------------------------------------------------------|
-|    Ad Alanı    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
-|   Şema adı   |                 VSIX Dil Paketi şeması                 |
-| Doğrulama dosyası |                VSIXLanguagePackSchema.xsd                 |
-|  Boş olabilir.   |                      Geçerli değil                       |
+|    Ad Alanı    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Şema adı   |                 VSıX dil paketi şeması                 |
+| Doğrulama dosyası |                Valtlanguagepackschema. xsd                 |
+|  Boş olabilir   |                      Uygulanamaz                       |
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSX dil paketi Şeması Başvurusu](../extensibility/vsx-language-pack-schema-reference.md)   
+ [VSX dil paketi şema başvurusu](../extensibility/vsx-language-pack-schema-reference.md)   
  [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)   
- [VSIX Uzantı Şeması 1.0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+ [VSıX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetSymbolPath | Microsoft Docs
+title: 'IDebugEngine3:: SetSymbolPath | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: da2318e9e2e30ea4cf0dce4bef6abd03aef2b0d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0fe3000804971c8bd8cbf896a592bd11b875bfa8
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352466"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506383"
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
-Yol veya hata ayıklama simgeleri arama yollarını ayarlar.
+Hata ayıklama sembolleri için aranan yolu veya yolları ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,27 +46,27 @@ int SetSymbolPath(
 ## <a name="parameters"></a>Parametreler
 
 `szSymbolSearchPath`\
-[in] Sembol arama yolu veya yolları içeren dize. Ayrıntılar için "Açıklamalar" bakın. Null olamaz.
+'ndaki Sembol arama yolunu veya yollarını içeren dize. Ayrıntılar için "açıklamalar" başlığına bakın. Null olamaz.
 
 `szSymbolCachePath`\
-[in] Burada sembolleri önbelleğe alınabilir yerel yolu içeren dize. Null olamaz.
+'ndaki Simgelerin önbelleğe alınbildiği yerel yolu içeren dize. Null olamaz.
 
 `Flags`\
-[in] Kullanılmayan; her zaman 0 olarak ayarlayın.
+'ndaki Kullanılmıyor; her zaman 0 olarak ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dize `szSymbolSearchPath` simge araması için noktalı virgülle ayırarak bir veya daha fazla yolları bir listesidir. Bu yollar, yerel bir yol, bir stil UNC yolu veya bir URL olabilir. Bu yolları farklı türlerinin bir karışımını de olabilir. UNC yolu ise (örneğin, \\\Symserver\Symbols), hata ayıklama altyapısı yolu için bir sembol sunucusu ve tarafından belirtilen yoldaki bunları önbelleğe alma, o sunucudan sembolleri değiştirebilmesi belirlemelisiniz sonra `szSymbolCachePath`.
+ Dize `szSymbolSearchPath`, sembolleri aramak için noktalı virgülle ayrılmış bir veya daha fazla yolun listesidir. Bu yollar yerel bir yol, bir UNC stili yol veya URL olabilir. Bu yollar farklı türlerin karışımı de olabilir. Yol UNC ise (örneğin \\, \Symserver\Symbols), hata ayıklama altyapısı yolun bir sembol sunucusuna olup olmadığını belirlemelidir ve bu sunucudan sembolleri yükleyip `szSymbolCachePath`belirtilen yolda önbelleğe almasını bilmelidir.
 
- Sembol yolu bir veya daha fazla önbellek konumlarını da içerebilir. Önbellekler öncelik sırasına, en yüksek öncelikli önbellek ile ilk önce listelenir ve ayrılmış * semboller. Örneğin:
+ Sembol yolu bir veya daha fazla önbellek konumu da içerebilir. Önbellekler öncelik sırasıyla, en yüksek öncelikli önbellek ve * simgelerle ayrılmış şekilde listelenir. Örnek:
 
 ```
-\\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*http://msdl.microsoft.com
+\\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*https://msdl.microsoft.com
 ```
 
- [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md) yöntemi gerçek yük sembolleri gerçekleştirir.
+ [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md) yöntemi, simgelerin gerçek yükünü gerçekleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md)

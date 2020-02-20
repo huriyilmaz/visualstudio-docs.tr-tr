@@ -2,7 +2,7 @@
 title: 'Öğretici: basit C# bir konsol uygulaması oluşturma'
 description: Visual Studio 'da bir C# konsol uygulamasının nasıl oluşturulduğunu adım adım öğrenin.
 ms.custom: seodec18, get-started
-ms.date: 03/23/2019
+ms.date: 02/18/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 740968740306bed4c2cf52191c4ff661b6247bd0
-ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+ms.openlocfilehash: e72cba384d3780c738c29698f74cbc3b4898bb04
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830003"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476720"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Öğretici: Visual Studio 'da C# basit bir konsol uygulaması oluşturma
 
@@ -28,17 +28,17 @@ ms.locfileid: "74830003"
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
-## <a name="create-a-project"></a>Proje oluştur
+## <a name="create-a-project"></a>Proje oluşturma
 
 Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
 
@@ -46,7 +46,7 @@ Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyac�
 
 1. Visual Studio 2017'yi açın.
 
-2. Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**.
+2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
    (Alternatif olarak, **Ctrl**+**SHIFT**+**N**) tuşuna basın.
 
 3. **Yeni proje** iletişim kutusunun sol bölmesinde, öğesini genişletin **C#** ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından dosya ***Hesaplayıcı***adını adlandırın.
@@ -112,7 +112,7 @@ Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyac�
 
 İlk olarak, içinde C#bazı temel tamsayı matematiğini araştıracağız. Daha sonra, temel bir Hesaplayıcı oluşturmak için kod ekleyeceğiz. Bundan sonra, hataları bulmak ve gidermek için uygulamada hata ayıklaması yapacağız. Son olarak, kodu daha verimli hale getirmek için belirginleştireceğiz.
 
-### <a name="explore-integer-math"></a>Tamsayı matematiğini inceleme
+### <a name="explore-integer-math"></a>Tamsayı matematiğini keşfet
 
 ' De C#bazı temel tamsayı matematiği ile başlayalım.
 
@@ -133,6 +133,9 @@ Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyac�
     ```
 
     Bunu yaptığınızda, Visual Studio 'daki IntelliSense özelliğinin girişi otomatik tamamlama seçeneğini sunduğunu unutmayın.
+
+    > [!NOTE]
+    > Aşağıdaki animasyon, önceki kodun yinelenmesine yönelik değildir. Yalnızca otomatik tamamlama özelliğinin nasıl çalıştığını göstermek için tasarlanmıştır.
 
     ![Visual Studio IDE 'de IntelliSense otomatik tamamlama özelliğini gösteren tamsayı matematik kodu animasyonu](./media/integer-math-intellisense.gif)
 
@@ -268,18 +271,21 @@ Ancak, uygulama yalnızca bir ondalık sonuç üretir. Uygulamanın Onlukları d
 
 Temel Hesaplayıcı uygulamamız geliştirdik, ancak kullanıcı giriş hataları gibi özel durumları işlemek için henüz başarısız oldu.
 
-Örneğin, bir sayıyı sıfıra bölmeye çalışırsanız veya uygulama sayısal bir karakter (veya tersi) beklerken bir Alfa karakteri girerseniz, uygulama çalışmayı durduruyor ve bir hata döndürür.
+Örneğin, bir sayıyı sıfıra bölmek veya uygulama sayısal bir karakter beklerken (veya tersi) bir Alfa karakteri girerseniz, uygulama çalışmayı durdurabilir, bir hata döndürebilir veya beklenmedik bir sayısal sonuç döndürebilir.
 
-Birkaç ortak kullanıcı girişi hatasını gözden geçirelim, bunları hata ayıklayıcıda bulalım ve kodda çözeceğiz.
+Birkaç ortak kullanıcı girişi hatasını gözden geçirelim, orada görüntiklerinde bunları hata ayıklayıcıda bulalım ve kodda çözme.
 
->[!TIP]
->Hata ayıklayıcı ve nasıl çalıştığı hakkında daha fazla bilgi için [Visual Studio hata ayıklayıcısı sayfasına ilk göz](../../debugger/debugger-feature-tour.md) atın.
+> [!TIP]
+> Hata ayıklayıcı ve nasıl çalıştığı hakkında daha fazla bilgi için [Visual Studio hata ayıklayıcısı sayfasına ilk göz](../../debugger/debugger-feature-tour.md) atın.
 
 ### <a name="fix-the-divide-by-zero-error"></a>"Sıfıra bölme" hatasını çözme
 
-Bir sayıyı sıfıra bölmeye çalıştığınızda konsol uygulaması donuyor. Daha sonra Visual Studio, kod düzenleyicisinde neyin yanlış olduğunu gösterir.
+Bir sayıyı sıfıra bölmeye çalıştığınızda, konsol uygulaması donabilir ve ardından kod düzenleyicisinde neyin yanlış olduğunu gösterebilir.
 
    ![Visual Studio kod Düzenleyicisi, sıfıra bölme hatasını gösterir](./media/csharp-console-calculator-dividebyzero-error.png)
+
+> [!NOTE]
+> Bazen uygulama dondurmaz ve hata ayıklayıcı sıfıra bölme hatası göstermez. Bunun yerine, uygulama sonsuz bir simge gibi beklenmedik bir sayısal sonuç döndürebilir. Aşağıdaki kod düzeltilmesi hala geçerlidir.
 
 Bu hatayı işlemek için kodu değiştirelim.
 
@@ -321,7 +327,7 @@ Tüm kodu işlemek için `program` sınıfa güventense, uygulamamızı iki sın
 
 `Calculator` sınıfı hesaplama işinin toplu işini işleymeyecektir ve `Program` sınıfı kullanıcı arabirimini ve hata yakalama işini işleymeyecektir.
 
-Haydi başlayalım.
+Başlayalım.
 
 1. Aşağıdaki kod bloğundan *sonra* her şeyi sil:
 

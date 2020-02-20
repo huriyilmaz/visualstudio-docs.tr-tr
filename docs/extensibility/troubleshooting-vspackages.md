@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94cb575969f232c9b4d60e7ddc93f9f727132951
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a231d8d02ce7432188053293684d09c7243dfd5e
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718711"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506405"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme
 Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğiniz yaygın sorunlar aşağıda verilmiştir.
@@ -27,7 +27,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
    Güvenli modda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] başlatmak için komut isteminde **devenv. exe/safemode**yazın.
 
-   Bu işlem sırasında, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] eklenen VSPackages dışında VSPackages yüklenmez.
+   Bu işlem sırasında, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]eklenen VSPackages dışında VSPackages yüklenmez.
 
 ### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Yüklenmeyen bir VSPackage sorunlarını gidermek için
 
@@ -35,7 +35,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
     Daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).
 
-2. VSPackage, Deneysel kayıt defteri kökünde çalışmayı hedeflediyse, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Deneysel sürümünü çalıştırdığınızdan emin olun.
+2. VSPackage, Deneysel kayıt defteri kökünde çalışmayı hedeflediyse, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Deneysel sürümünü çalıştırdığınızdan emin olun.
 
     Deneysel sürümü çalıştırmak için, komut penceresine şunu yazın: **devenv/rootsuffix exp**.
 
@@ -46,7 +46,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 4. VSPackage yüklemesi başarısız olan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] örneğinin **Çıkış** penceresini açın. VSPackage 'ın neden yükleme başarısız olduğuna ilişkin bilgiler bu pencerede görüntülenebilir.
 
    > [!NOTE]
-   > @No__t_1 tümleşik geliştirme ortamından (IDE) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Deneysel sürümünü başlatıyorsanız her iki sürümün de **Çıkış** penceresini inceleyin.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamından (IDE) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Deneysel sürümünü başlatıyorsanız her iki sürümün de **Çıkış** penceresini inceleyin.
 
 5. Etkinlik günlüğünü inceleyin.
 
@@ -60,13 +60,13 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
 ### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Görünür olmayan veya bir komuta tıkladığınızda hata üreten bir komutun sorunlarını gidermek için
 
-1. @No__t_0 komut Istemine aşağıdakini yazarak yeni veya değiştirilmiş menü komutlarını ve IDE 'de zaten mevcut olanları birleştirin: **devenv/rootsuffix exp/Setup**.
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] komut Istemine aşağıdakini yazarak yeni veya değiştirilmiş menü komutlarını ve IDE 'de zaten mevcut olanları birleştirin: **devenv/rootsuffix exp/Setup**.
 
-2. @No__t_0, VSPackage için UI. dll ' nin bulabileceği emin olun.
+2. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], VSPackage için UI. dll ' nin bulabileceği emin olun.
 
    1. Kayıt defterinin paketler bölümünde VSPackage 'un CLSID 'sini bulun:
 
-        HKLM\Software\Microsoft\Visual Studio \\ *\<version >* \packages
+        HKLM\Software\Microsoft\Visual Studio\\ *\<sürümü >* \packages
 
    2. SatelliteDll alt anahtarı tarafından verilen yolun doğru olduğundan emin olun.
 
@@ -99,7 +99,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
     2. Bu **sembol dosyası (. pdb) konumunu**ekleyin:
 
-         [http://msdl.microsoft.com/download/symbols](http://msdl.microsoft.com/download/symbols)
+         `https://msdl.microsoft.com/download/symbols`
 
     3. Performansı artırmak için, bir sembol önbellek klasörü belirtin, örneğin:
 
@@ -119,7 +119,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
 2. Yönetilmeyen kod için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID kayıt defteri düğümünde VSPackage CLSID 'sini bulun:
 
-    HKLM\Software\Microsoft\Visual Studio \\ *\<version >* \CLSID
+    HKLM\Software\Microsoft\Visual Studio\\ *\<sürümü >* \CLSID
 
    Inprocserver32 girişinin VSPackage dll dosyasının doğru yoluna sahip olduğundan emin olun.
 

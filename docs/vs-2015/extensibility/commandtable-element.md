@@ -13,21 +13,21 @@ ms.assetid: 15c38159-660a-4ef4-9643-aa6fcfca82a9
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 22cbe4fc34ae41f89709d5b20f2c1188edcd0de3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: bb2b874f7bbe94e383e9e7fba755dcc373a93150
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685296"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477044"
 ---
 # <a name="commandtable-element"></a>CommandTable Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-CommandTable .vsct dosyası kök öğesidir. Bu gerçek düzeni ve IDE VSPackage sağlayan komut türü tanımlayan dosyasıdır. Komutlarını, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları içerebilir. Daha fazla bilgi için [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
+CommandTable,. vsct dosyasının kök öğesidir. Bu, bir VSPackage 'ın IDE 'ye sağladığı komutların gerçek düzen ve türünü tanımlayan dosyadır. Komutlar Menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları içerebilir. Daha fazla bilgi için bkz [. Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```xml  
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema" >  
   <Extern>... </Extern>  
   <Include>... </Include>  
@@ -48,28 +48,28 @@ CommandTable .vsct dosyası kök öğesidir. Bu gerçek düzeni ve IDE VSPackage
   
 | Öznitelik |                                                                                                                   Açıklama                                                                                                                   |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   xmlns   |                                   Gerekli. XML ad alanları:<br /><br /> xmlns="<http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable>"<br /><br /> xmlns:xs="<http://www.w3.org/2001/XMLSchema>"                                   |
-| dil  | İsteğe bağlı. Language özniteliği, tüm varsayılan dili belirtmek için kullanılabilir \<dizeleri > komut tablosu öğeleri.  Dil belirtilmezse, geçerli işlemin dil kullanılır:<br /><br /> Dil = "en-us" |
+|   özniteliði   |                                   Gereklidir. XML ad alanları:<br /><br /> `xmlns="<http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable>"`<br /><br /> `xmlns:xs="<http://www.w3.org/2001/XMLSchema>"`                                   |
+| language  | İsteğe bağlı. Language özniteliği, komut tablosundaki öğelerin > Tüm \<dizelerinin varsayılan dilini belirtmek için kullanılabilir.  Dil belirtilmezse, geçerli işlemin dili kullanılacaktır:<br /><br /> Language = "en-US" |
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Extern Öğesi](../extensibility/extern-element.md)|İsteğe bağlı. Derleyici için ön işlemci yönergeleri içerir.|  
-|[Include Öğesi](../extensibility/include-element.md)|İsteğe bağlı. Derleme içinde içerecek şekilde tüm dosyalara olan yolları içerir.|  
-|[Define Öğesi](../extensibility/define-element.md)|İsteğe bağlı. Kendi ad ve değer verilen bir sembolü tanımlar.|  
-|[Commands Öğesi](../extensibility/commands-element.md)|İsteğe bağlı. Tüm diğer öğeleri içeren bir VSPackage için tüm komutları tanımlayan üst öğe.|  
-|[CommandPlacements Öğesi](../extensibility/commandplacements-element.md)|İsteğe bağlı. Komut çubuğundaki komutları yerleştirilecek nerede tanımlar.|  
-|[VisibilityConstraints Öğesi](../extensibility/visibilityconstraints-element.md)|İsteğe bağlı. Komutlar ve araç çubukları statik görünürlüğünü belirler.|  
-|[KeyBindings Öğesi](../extensibility/keybindings-element.md)|İsteğe bağlı. Kısayol tuş birleşimleri, komutları belirtir.|  
-|[UsedCommands Öğesi](../extensibility/usedcommands-element.md)|İsteğe bağlı. İsteğe bağlı olarak kendi özgün diğer VSPackage'ları tarafından desteklenen sürümüne uygulamak bir VSPackage sağlar.|  
-|[Symbols Öğesi](https://msdn.microsoft.com/f2ddd0aa-c3dd-439e-834d-28f136a27ffa)|İsteğe bağlı. Derleyici için herhangi bir sembol verilerini--GUID'leri, kimlikleri ve benzeri--içerir.|  
+|[Extern Öğesi](../extensibility/extern-element.md)|İsteğe bağlı. Derleyici için önişlemci yönergelerini içerir.|  
+|[Include Öğesi](../extensibility/include-element.md)|İsteğe bağlı. Derlemeye dahil edilecek herhangi bir dosyanın yolunu içerir.|  
+|[Define Öğesi](../extensibility/define-element.md)|İsteğe bağlı. Adı ve değeri verilen bir sembol tanımlar.|  
+|[Commands Öğesi](../extensibility/commands-element.md)|İsteğe bağlı. Tüm diğer öğeleri içeren VSPackage için tüm komutları tanımlayan üst öğe.|  
+|[CommandPlacements Öğesi](../extensibility/commandplacements-element.md)|İsteğe bağlı. Komut çubuğundaki komutların nereye yerleştirileceğini tanımlar.|  
+|[VisibilityConstraints Öğesi](../extensibility/visibilityconstraints-element.md)|İsteğe bağlı. Komutların ve araç çubuklarının statik görünürlüğünü belirler.|  
+|[KeyBindings Öğesi](../extensibility/keybindings-element.md)|İsteğe bağlı. Varsa, komutlar için kısayol tuş bileşimlerini belirtir.|  
+|[UsedCommands Öğesi](../extensibility/usedcommands-element.md)|İsteğe bağlı. Bir VSPackage 'ın, özgün olarak diğer VSPackages tarafından desteklenen kendi işlev sürümünü kullanmasına izin verir.|  
+|[Symbols Öğesi](https://msdn.microsoft.com/f2ddd0aa-c3dd-439e-834d-28f136a27ffa)|İsteğe bağlı. Derleyici için herhangi bir sembol verisi (--Guid, kimlik vb.) içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|None||  
+|Yok||  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b4c4230ca2539b55f57990b90ae33d1f53726dc
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 604863cbef5e42b31450ea09dffa56a1a00ae992
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74778732"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476895"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Nasıl yapılır: komut satırından sembol dosyası konumlarını belirtme
 İşlev adları ve satır numaraları gibi simge bilgilerini göstermek için, VSPerfReport komut satırı aracının simgeye erişimi olması gerekir (. *pdb*) profili oluşturulmuş bileşenlerin ve Windows sistem dosyalarının dosyalarını. Sembol dosyaları bir bileşen derlendiğinde oluşturulur. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md). VSPerfReport sembol dosyaları için aşağıdaki konumları otomatik olarak arar:
@@ -46,9 +46,9 @@ ms.locfileid: "74778732"
 
 2. **_NT_SYMBOL_PATH** ortam değişkenini veya VSPerfReport/SymbolPath seçeneğini ayarlamak için aşağıdaki sözdizimini kullanın:
 
-    **srv\\** * *localstore* **\*http://msdl.microsoft.com/download/symbols**
+    `srv*<LocalStore>*https://msdl.microsoft.com/download/symbols`
 
-    Burada *LocalStore* , oluşturduğunuz yerel dizinin yoludur.
+    Burada *<LocalStore>* , oluşturduğunuz yerel dizinin yoludur.
 
 ## <a name="specify-component-symbol-files"></a>Bileşen sembol dosyalarını belirt
  Profil Oluşturma Araçları arar. içinde veya profil oluşturma veri dosyasını içeren klasörde depolanan özgün konumlarında profil uygulamak istediğiniz bileşenlerin *pdb* dosyaları. **_NT_SYMBOL_PATH** veya **/SymbolPath** seçeneğine bir veya daha fazla yol ekleyerek arama yapmak için başka konumlar belirleyebilirsiniz. Yolları noktalı virgülle ayırın.
@@ -56,7 +56,9 @@ ms.locfileid: "74778732"
 ## <a name="example"></a>Örnek
  Aşağıdaki komut satırı, **_NT_SYMBOL_PATH** ortam değişkenini Windows sembol sunucusuna ve yerel dizini **c:\symbols**olarak ayarlar.
 
- **_NT_SYMBOL_PATH = SRV\*C:\symbols\*ayarlama http://msdl.microsoft.com/download/symbols**
+ ```cmd
+  set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/download/symbols
+ ```
 
  Aşağıdaki VSPerfReport komut satırı, **/SymbolPath** seçeneğini kullanarak *c:\projelersymbols* dizinini arama yoluna ekler.
 
