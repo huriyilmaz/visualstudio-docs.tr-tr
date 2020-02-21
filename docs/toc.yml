@@ -374,6 +374,8 @@
                   href: ide/reference/extract-interface.md
                 - name: Ayıklama metodu
                   href: ide/reference/extract-method.md
+                - name: Yerel işlevi ayıklama
+                  href: ide/reference/extract-local-function.md
                 - name: Parametre oluşturma
                   href: ide/reference/generate-parameter.md
                 - name: Satır içi geçici değişken
@@ -386,6 +388,8 @@
                   href: ide/reference/invert-if-statement.md
                 - name: Statik yerel işlev yeniden düzenleme seçenekleri
                   href: ide/reference/static-local-function-refactor-options.md
+                - name: Üyeyi statik yapma
+                  href: ide/reference/make-member-static.md
                 - name: Bildirimi başvurunun yanına taşıma
                   href: ide/reference/move-declaration-near-reference.md
                 - name: Türü eşleşen dosyaya taşı
