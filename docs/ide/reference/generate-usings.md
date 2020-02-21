@@ -11,22 +11,22 @@ ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: 78786e6e6e7a8e5d8a8766138cb1a54a49416f9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f3b3435e10d6bb9a71fd16b9286759b136c167f4
+ms.sourcegitcommit: ea5e02720d71185f8e27fbea205024371b0c7ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610884"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544547"
 ---
 # <a name="add-missing-usings-in-visual-studio"></a>Visual Studio 'da eksik using 'leri ekleme
 
-Bu kod üretimi için geçerlidir:
+Bu kod oluşturma için geçerlidir:
 
 - C#
 
 **Ne:** , Kopya ve yapıştırılan kod için gerekli içeri aktarmaları veya [kullanım yönergelerini](/dotnet/csharp/language-reference/keywords/using-directive) hemen eklemenizi sağlar.
 
-**Ne zaman:** Projenizde veya diğer kaynaklardaki farklı yerlerden kod kopyalamak ve yeni koda yapıştırmak yaygın bir uygulamadır. Bu hızlı eylem, kopya ve yapıştırılan kod için eksik içeri aktarmalar yönergelerini bulur ve sonra bunları eklemenizi ister.
+**Ne zaman:** Projenizde veya diğer kaynaklardaki farklı yerlerden kod kopyalamak ve yeni koda yapıştırmak yaygın bir uygulamadır. Bu hızlı eylem, kopya ve yapıştırılan kod için eksik içeri aktarmalar yönergelerini bulur ve sonra bunları eklemenizi ister. Bu kod düzeltilme Ayrıca projeden projeye başvurular da eklenebilir.
 
 **Neden:** Hızlı eylem gerekli içeri aktarmaları otomatik olarak eklediğinden, kodunuzun ihtiyaç duyduğu `using` yönergelerini el ile kopyalamanız gerekmez.
 
@@ -41,7 +41,7 @@ Bu kod üretimi için geçerlidir:
 
     ![Using deyimleri oluşturma](media/generate-using-codefix.png)
 
-3. Eksik başvuruyu eklemek için **\> \<your başvurusunu kullanmayı** seçin.
+3. Eksik başvuruyu eklemek için **\>başvurunuz \<using** seçeneğini belirleyin.
 
     ![Kullanımlar sonucu oluştur](media/generate-using-result.png)
 
