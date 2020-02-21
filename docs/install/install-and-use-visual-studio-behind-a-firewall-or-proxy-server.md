@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 129a5551d04e8e9552b6d788f066c7c9df636f67
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
-ms.translationtype: HT
+ms.openlocfilehash: 4058c75b2282b6fb77c3026c3667a470d6b9fd92
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453375"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476883"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Yükleme ve bir güvenlik duvarı veya proxy sunucusunun arkasına Visual Studio ve Azure hizmetlerini kullanma
 
@@ -54,7 +54,7 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 | xamarin-downloads.azureedge.net | Android SDK paketleri indirme listesi konumu |
 | marketplace.visualstudio.com | Visual Studio uzantılarını indirme konumu |
 | \*. gallerycdn.vsassets.io  | Visual Studio uzantılarını indirme konumu |
-| visualstudio.microsoft.com | Belge konumu |
+| VisualStudio.microsoft.com | Belge konumu |
 | docs.microsoft.com | Belge konumu |
 | MSDN.microsoft.com | Belge konumu |
 | www\.microsoft.com | Belge konumu |
@@ -108,7 +108,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | GitHub depo bilgilerini | api.github.com | https | 443 | Bower paketlerini hakkında ek bilgi almak için gerekli |
 | Web Lint | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
 | Cookiecutter<br>Explorer şablonu<br>keşif <br><br>Cookiecutter <br>Proje Gezgini<br> Oluşturma | api.github.com <br>RAW.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.Python.org | https | 443<br> | Önerilen akışımız ve GitHub depolarımızdan çevrimiçi şablonları bulmaya yönelik kullanılır <br><br>Bir cookiecutter Python paket Python paket dizinini (Pypı) tek seferlik bir isteğe bağlı yükleme gerektirir bir cookiecutter şablonundan bir proje oluşturmak için kullanılan |
-| Python paketi <br>keşif<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> proje <br>templates | pypi.org<br> <br>pypi.Python.org <br>Bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | Pip paketleri için arama özelliğini sağlar.<br><br>Pip eksik olup olmadığını otomatik olarak yüklemek için kullanılan <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Projekt Klasifikace<br>-Kümeleme proje <br> -Projekt Regrese <br> -PyGame PyKinect kullanma <br> -Projekt Pyvot |
+| Python paketi <br>keşif<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> project <br>templates | pypi.org<br> <br>pypi.Python.org <br>Bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | Pip paketleri için arama özelliğini sağlar.<br><br>Pip eksik olup olmadığını otomatik olarak yüklemek için kullanılan <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Projekt Klasifikace<br>-Kümeleme proje <br> -Projekt Regrese <br> -PyGame PyKinect kullanma <br> -Projekt Pyvot |
 | Office web <br>eklentisi <br> Bildirim <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | https | 443 | Office web eklentileri için bildirimleri doğrulamak için kullanılır |
 | SharePoint ve <br>Office eklentileri | SharePoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https | 443 | SharePoint Online ve Office 365 ' e SharePoint ve Office eklentilerini yayımlamak ve test etmek için kullanılır |
 | İş Akışı Yöneticisi <br>Test hizmeti<br> Host | | http | 12292 | SharePoint eklentileri iş akışları ile test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
@@ -135,7 +135,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Visual Studio Team Services | \*. online.visualstudio.com | https | 443 | Visual Studio Online API 'Lerini çağırmak için kullanılır |
 | JavaScript otomatik tür alımı | registry.npmjs.org | https | 443 | Popüler JavaScript kitaplıkları için IntelliSense sağlamak üzere TypeScript tür tanımlarını yüklemek için kullanılır |
 | Visual Studio abonelikleri Lisanslama hizmeti | app.vssps.visualstudio.com/apis/Licensing/ClientRights | https | 443 | Çevrimiçi etkinleştirme için lisanslama |
-| Hata Ayıklayıcısı | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/OneCore.exe smon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.commsdl.microsoft.com/download/symbols | https | 443 | 1. <br>SSH üzerinden UNIX/MacOS 'ta .NET Core hata ayıklama için hata ayıklayıcı bitlerini indirmek için kullanılır <br><br>2. <br>Uzak Windows Docker kapsayıcısı hata ayıklaması için hata ayıklayıcı bitlerini indirmek için kullanılır<br><br> 3. .NET Framework kaynak adımlaması için kullanılır <br><br> 4. <br>(Kullanıcı tarafından opts) Nuget.org symbol Server 'da yayınlanan sembolleri indirmek için kullanılır.<br><br> 5. (Kullanıcı opvaları) MS sembolleri ve ikili dosyaları indirmek için kullanılıyorsa, dökümdeki yönetilen kodda hata ayıklama için de gerekli olabilir |
+| Hata Ayıklayıcısı | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/OneCore.exe smon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | https | 443 | 1. <br>SSH üzerinden UNIX/MacOS 'ta .NET Core hata ayıklama için hata ayıklayıcı bitlerini indirmek için kullanılır <br><br>2. <br>Uzak Windows Docker kapsayıcısı hata ayıklaması için hata ayıklayıcı bitlerini indirmek için kullanılır<br><br> 3. .NET Framework kaynak adımlaması için kullanılır <br><br> 4. <br>(Kullanıcı tarafından opts) Nuget.org symbol Server 'da yayınlanan sembolleri indirmek için kullanılır.<br><br> 5. (Kullanıcı opvaları) MS sembolleri ve ikili dosyaları indirmek için kullanılıyorsa, dökümdeki yönetilen kodda hata ayıklama için de gerekli olabilir |
 | Visual Studio Team Services| \*. online.visualstudio.com | https | 443 | Visual Studio Online API 'Lerini çağırmak için kullanılır |
 | Xamarin Android uygulama yayımlama | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | https | 443 | Xamarin Android uygulamalarını doğrudan Visual Studio 'dan yayınlamak/karşıya yüklemek için Google Play Store hizmetiyle etkileşim kurmak için kullanılır. |
 | Azure Container Kayıt Defteri | *. azurecr.io | https | 443 | CICD ardışık düzenleri yapılandırması için Azure 'da barındırılan kapsayıcı kayıt defterlerine erişin |
