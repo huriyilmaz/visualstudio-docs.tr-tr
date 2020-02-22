@@ -466,8 +466,6 @@
                       href: how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md
                     - name: Tek başına bir .NET Framework bileşenini izleme ve komut satırını kullanarak profil oluşturucu ile bellek verileri toplama
                       href: how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md
-                - name: 'İzlenecek yol: Örnekleme yöntemini kullanarak komut satırı profili oluşturma'
-                  href: walkthrough-command-line-profiling-using-sampling.md
             - name: ASP.NET Web uygulamaları
               items:
                 - name: ASP.NET Web uygulamalarının komut satırından profilinin oluşturulması
