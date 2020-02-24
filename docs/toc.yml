@@ -331,6 +331,8 @@
                   href: ide/reference/generate-deconstructor.md
                 - name: Metoda parametre ekleme
                   href: ide/reference/add-parameter.md
+                - name: Oluşturucudan özel alan oluşturma
+                  href: ide/reference/generate-private-field-from-constructor.md
                 - name: Geçersiz kılma oluşturma
                   href: ide/reference/generate-override.md
                 - name: Equals ve GetHashCode metot geçersiz kılmaları oluşturma
@@ -420,10 +422,8 @@
                   href: ide/reference/use-block-body-lambda.md
                 - name: 'Kullanılmayan değer atamaları, değişkenler ve parametreler'
                   href: ide/reference/unused-values-parameters.md
-                - name: Çağrı zincirlerini sarmalama ve hizalama
-                  href: ide/reference/wrap-and-align-call-chains.md
-                - name: 'Parametreleri sarmalama, girintileme ve hizalama'
-                  href: ide/reference/wrap-align-indent-parameters.md
+                - name: 'Yeniden düzenlemeleri sarmalama, girintileme ve hizalama'
+                  href: ide/reference/wrap-indent-align-refactorings.md
             - name: 'İzlenecek yol: Kullanımdan kod oluşturma'
               href: ide/walkthrough-test-first-support-with-the-generate-from-usage-feature.md
         - name: IntelliSense
