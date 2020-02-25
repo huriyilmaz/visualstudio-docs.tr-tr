@@ -9,12 +9,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 5d6f0e54c37c394fce464b07440daa99b4dd7d5e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 9ac692c756aaa29b2b13f20eecd039154a28d80b
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188900"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558187"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
@@ -55,11 +55,11 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
 
 3. Proje şablonları listesinde **boş uygulama (Evrensel Windows)** seçeneğine tıklayın.
 
-4. **Ad** metin kutusuna `DebuggingSample` yazın.
+4. **Ad** metin kutusuna `DebuggingSample`yazın.
 
 5. **Konum** metin kutusunda projenin konumunu doğrulayın.
 
-6. **Dil** listesinde, **görsel C#** ' e tıklayın ve ardından projeyi oluşturmak için **Tamam** ' a tıklayın.
+6. **Dil** listesinde, **görsel C# **' e tıklayın ve ardından projeyi oluşturmak için **Tamam** ' a tıklayın.
 
 7. Tasarım yüzeyine sağ tıklayın ve ardından **bölünmüş** görünüme geçmek Için **kaynağı görüntüle** ' ye tıklayın.
 
@@ -103,19 +103,19 @@ XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçiml
 
 1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. Önceki `Button` `<`, hata iletisinde önerildiği şekilde bir öznitelik değil, geçerlidir. Yukarıdaki kod satırına baktığınızda, `Top` özniteliği için kapatma tırnak işaretlerinin eksik olduğunu fark edeceksiniz. Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.
 
-2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` düzgün biçimde düzenlenmiş görünüyor. Ancak, `Margin` ' ın renk kodlamasının koddaki `Margin` ' in diğer örnekleriyle eşleşmediğinden emin olun. Önceki ad/değer çiftinde (`VerticalAlignment="Top`) kapanış tırnak işaretleri eksik olduğundan, `Margin="` önceki özniteliğin değerinin bir parçası olarak okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. `Top`için kapanan tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
+2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` iyi biçimlendirilmiş gibi görünüyor. Ancak, `Margin` renk kodlamasının koddaki `Margin` diğer örneklerle eşleşmediğinden emin olun. Kapanış tırnak işaretleri önceki ad/değer çiftinde (`VerticalAlignment="Top`) olmadığından, `Margin="` önceki özniteliğin değerinin bir parçası olarak okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. `Top`için kapanan tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
 
-3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi, hatanın `Grid` nesnesinin içinde olması için kapanış **kılavuz** etiketinde (`</Grid>`) bulunur. İkinci `Button` nesnesinde kapanış etiketinin eksik olduğuna dikkat edin. Kapanış `/`ekledikten sonra **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
+3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi kapanış **kılavuz** etiketinde bulunur (`</Grid>`) ve hatanın `Grid` nesnesinin içinde olması önerilir. İkinci `Button` nesnesinde kapanış etiketi eksik olduğuna dikkat edin. Kapanış `/`ekledikten sonra **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
 
 4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. `content` `c` büyük harfle yazılmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.
 
-5. "'<http://schemas.microsoft.com/winfx/2006/xaml>' ad alanında" mame "özelliği yok." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
+5. "' MAME ' özelliği `http://schemas.microsoft.com/winfx/2006/xaml` ad alanında yok." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
 
     ![Visual Studio için Blend XAML hatalarını ayıklama](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
 
     Projenizi derlemek ve kalan hata olmadığını doğrulamak için **Ctrl**+**SHIFT**+**B** tuşlarına basın.
 
-## <a name="debug-in-visual-studio"></a>Visual Studio’da hata ayıklama
+## <a name="debug-in-visual-studio"></a>Visual Studio'da hata ayıklama
 
 Uygulamanızda kodda daha kolay hata ayıklaması yapmak için, Visual Studio 'da Blend projelerini açabilirsiniz. Visual Studio 'da bir Blend projesi açmak için **Projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio 'da Düzenle**' ye tıklayın. Visual Studio 'da hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için CTRL + SHIFT + S tuşlarına basın ve ardından Blend 'e geri dönün. Projeyi yeniden yüklemeniz istenecektir. Blend 'de çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.
 

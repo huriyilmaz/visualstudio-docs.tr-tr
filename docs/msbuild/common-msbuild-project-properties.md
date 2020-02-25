@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd3ccd23775c93fb7222960c4db3ae5d35eb349f
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: b4fd82cee49c698c9244a2851d4e671ae6a94508
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77275497"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557879"
 ---
 # <a name="common-msbuild-project-properties"></a>Ortak MSBuild proje özellikleri
 Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild 'in sağladığı *. targets* dosyalarına eklenen sık kullanılan özellikler listelenmiştir.
@@ -68,6 +68,7 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | Dosya hizalaması | Çıktı dosyasının bölümlerinin hizalanın bayt cinsinden sayısını belirtir. Geçerli değerler 512, 1024, 2048, 4096, 8192. Bu özellik `/filealignment` derleyici anahtarıyla eşdeğerdir. |
 | FrameworkPathOverride | *Mscorlib. dll* ve *Microsoft. VisualBasic. dll*dosyasının konumunu belirtir. Bu parametre, *Vbc. exe* derleyicisinin `/sdkpath` anahtarıyla eşdeğerdir. |
 | GenerateDocumentation | (C#, Visual Basic) Yapı tarafından belgelerin oluşturulup oluşturulmayacağını gösteren bir Boolean parametresi. `true`, derleme belge bilgilerini oluşturur ve bir *. xml* dosyasına, derleme görevinin oluşturduğu yürütülebilir dosyanın veya kitaplığın adıyla birlikte koyar. |
+| GenerateFullPaths | (C#) [-Fullpaths](/dotnet/csharp/language-reference/compiler-options/fullpaths-compiler-option) derleyici seçeneğini kullanarak çıkışta dosya adları için tam yollar oluşturun. |
 | GenerateSerializationAssemblies | XML serileştirme derlemelerinin, açık, otomatik veya kapalı olarak ayarlanabileceği *SGen. exe*tarafından oluşturulup oluşturulmayacağını gösterir. Bu özellik yalnızca .NET Framework hedef derlemeler için kullanılır. .NET Standard veya .NET Core Derlemeleriyle ilgili XML serileştirme derlemeleri oluşturmak için *Microsoft. XmlSerializer. Generator* NuGet paketine başvurun. |
 | IntermediateOutputPath | Yol belirtilmediyse `BaseIntermediateOutputPath`türetilen tam ara çıkış yolu. Örneğin, *\obj\debug\\* . |
 | KeyContainerName | Tanımlayıcı ad anahtar kapsayıcısının adı. |

@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b0b461fa812d6fff8c4d6a258cb9dabf8b04f6db
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ec0f211db3d9906d83d9bcf7c7a0ab79ec3e1b7f
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852302"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557831"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>Nasıl yapılır: tek başına profil oluşturucuyu yüklemek
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 'yi yüklemeden çalıştırılabilen bir komut satırı tabanlı tek başına profil oluşturucu sağlar. Bu durum, bir bilgisayar bir geliştirme ortamının yüklü olmadığı veya içermediği durumlarda oluşur. Örneğin, bir üretim Web sunucusuna bir geliştirme ortamı yüklememelisiniz.
@@ -54,7 +54,6 @@ ms.locfileid: "75852302"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)
-- [İzlenecek yol: örnekleme kullanarak komut satırı profili oluşturma](../profiling/walkthrough-command-line-profiling-using-sampling.md)
 - [İzlenecek yol: İzleme metodunu kullanarak komut satırı profili oluşturma](command-line-profiling-of-stand-alone-applications.md)
 - [Nasıl yapılır: Başvuru pencereleri sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md)
 - [VSPerfReport](../profiling/vsperfreport.md)

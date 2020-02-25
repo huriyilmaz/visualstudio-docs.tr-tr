@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Visual Studio + GitHub kurumsal teklifinde abonelikleri yönetme
-ms.openlocfilehash: 29df2d7c43f934e44b7585e975e0f77328305ba5
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 524002b875375c22da67bbf98d98f4ebc149c14b
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150139"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558147"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio aboneliklerini yönetme
 Microsoft ile kurumsal anlaşma (EA) olan müşteriler, Visual Studio Standard abonelikleri ve GitHub Enterprise 'ı birlikte getiren yeni bir abonelik teklifi satın almaya uygundur. Visual Studio abonelerinin GitHub Enterprise 'ı edinmenin kolay ve ekonomik bir yoludur. 
@@ -19,7 +19,7 @@ Microsoft ile kurumsal anlaşma (EA) olan müşteriler, Visual Studio Standard a
 Kuruluşunuz GitHub Enterprise ile Visual Studio abonelikleri satın aldığında, bunlar iki bölümden sağlanır ve yönetilir.
 
 ## <a name="manage-visual-studio-subscriptions"></a>Visual Studio aboneliklerini yönetme
-Kuruluşunuz GitHub Enterprise ile Visual Studio abonelikleri satın aldığında, aboneliklerin Visual Studio bölümü hemen sağlanır ve abonelikler Visual Studio ['da atama ve yönetim için kullanılabilir Abonelikler yönetim](https://manage.visualstudio.com) portalı. 
+Kuruluşunuz GitHub Enterprise ile Visual Studio abonelikleri satın aldığında, aboneliklerin Visual Studio bölümü hemen sağlanır ve abonelikler Visual Studio [abonelikleri yönetim](https://manage.visualstudio.com) portalı 'nda atama ve yönetim için kullanılabilir. 
 
 Abonelikleri yönetme hakkında daha fazla bilgi için şu konulara bakın:
 - [Yönetici Portalı’nı Kullanma](using-admin-portal.md)
@@ -29,7 +29,7 @@ Abonelikleri yönetme hakkında daha fazla bilgi için şu konulara bakın:
 - [Fazla Yüklemeler](handle-overclaimed-license.md)
 
 > [!Important]
-> GitHub Enterprise ile Visual Studio abonelikleri, Visual Studio abonelik yöneticileri tarafından atanmışsa ve bu aboneliklerin hiç satın alınmadıysa, bu abonelikler kuruluş içindeki GitHub Enterprise Admins 'e görünür olmayacaktır. GitHub Enterprise aboneliklerinin görünebildiğinden emin olmak için GitHub Enterprise veya Visual Studio Enterprise GitHub Enterprise aboneliğiyle **en az bir** Visual Studio Professional içeren bir satın alma, abonelikler ilk kez yapılmalıdır atanır.  
+> GitHub Enterprise ile Visual Studio abonelikleri, Visual Studio abonelik yöneticileri tarafından atanmışsa ve bu aboneliklerin hiç satın alınmadıysa, bu abonelikler kuruluş içindeki GitHub Enterprise Admins 'e görünür olmayacaktır. GitHub Enterprise aboneliklerinin görünür olmasını sağlamak için, aboneliklerin ilk kez atandığı GitHub Enterprise veya Visual Studio Enterprise ile **en az bir** Visual Studio Professional içeren bir satın alma yapılmalıdır.  
 >
 > Bu, atanan her GitHub aboneliğine ilişkin lisans gereksinimleriyle uyumlu kalmak için yönetim portalı 'nda atanan GitHub aboneliğine sahip bir Visual Studio olduğundan emin olmak için müşterinin sorumluluğundadır. aboneliğiniz.
 
@@ -42,27 +42,27 @@ GitHub, bulut tabanlı GitHub.com ya da şirket içi GitHub Enterprise Server ol
 
 ### <a name="githubcom"></a>GitHub.com 
 GitHub.com yönetimi hakkında daha fazla bilgi için lütfen [GitHub yardımı](https://help.github.com/en)'nda aşağıdaki konulara göz atın.
-- [Yardım konularının tam listesi](https://help.github.com/en)
-- [Kuruluşunuzdaki üyelikleri yönetme](https://help.github.com/en/articles/managing-membership-in-your-organization)
-> - [Kullanıcıları kuruluşunuza katmak üzere davet etme](https://help.github.com/en/articles/inviting-users-to-join-your-organization)
-> - [Kullanıcıları ekiplerden/kuruluşlardan kaldırma](https://help.github.com/en/articles/removing-a-member-from-your-organization)
-> - [Kuruluşunuzun eski bir üyesini yeniden belirten](https://help.github.com/en/articles/reinstating-a-former-member-of-your-organization)
-- [Rolleri kullanarak erişimi yönetme](https://help.github.com/en/articles/managing-peoples-access-to-your-organization-with-roles)
-- [Kullanıcıları ekiplere düzenleme](https://help.github.com/en/articles/organizing-members-into-teams)
-- [Kuruluşunuzun depolarına erişimi yönetme](https://help.github.com/en/articles/managing-access-to-your-organizations-repositories)
++ [Yardım konularının tam listesi](https://help.github.com/en)
++ [Kuruluşunuzdaki üyelikleri yönetme](https://help.github.com/en/articles/managing-membership-in-your-organization)
++ [Kullanıcıları kuruluşunuza katmak üzere davet etme](https://help.github.com/en/articles/inviting-users-to-join-your-organization)
+    - [Kullanıcıları ekiplerden/kuruluşlardan kaldırma](https://help.github.com/en/articles/removing-a-member-from-your-organization)
+    - [Kuruluşunuzun eski bir üyesini yeniden belirten](https://help.github.com/en/articles/reinstating-a-former-member-of-your-organization)
++ [Rolleri kullanarak erişimi yönetme](https://help.github.com/en/articles/managing-peoples-access-to-your-organization-with-roles)
++ [Kullanıcıları ekiplere düzenleme](https://help.github.com/en/articles/organizing-members-into-teams)
++ [Kuruluşunuzun depolarına erişimi yönetme](https://help.github.com/en/articles/managing-access-to-your-organizations-repositories)
 
 ### <a name="github-enterprise-server"></a>GitHub Enterprise Server
 GitHub yardımı, soruları yanıtlamak ve kuruluşunuzun GitHub Enterprise Server uygulamasının yönetimine ilişkin ipuçları vermek için çeşitli yönetici kılavuzlarını sağlar.
 
-- [Tüm yönetici kılavuzlarını görüntüle](https://help.github.com/en/enterprise/2.16/admin)
-- [Kullanıcı Yönetimi](https://help.github.com/en/enterprise/2.16/admin/user-management)
-> - [Kuruluşlar ve takımlar](https://help.github.com/en/enterprise/2.16/admin/user-management/organizations-and-teams)
-> > - [Kuruluşlar oluşturma](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-organizations)
-> > - [Takımlar oluşturma](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-teams)
-> > - [Takımlara kişi ekleme](https://help.github.com/en/enterprise/2.16/admin/user-management/adding-people-to-teams)
-> > - [Ekiplerden ve kuruluşlardan kişileri kaldırma](https://help.github.com/en/enterprise/2.16/admin/user-management/removing-users-from-teams-and-organizations)
-> - [Kullanıcı güvenliği](https://help.github.com/en/enterprise/2.16/admin/user-management/user-security)
-- [GitHub Enterprise Server 'ı yükleme ve yapılandırma](https://help.github.com/en/enterprise/2.16/admin/installation)
++ [Tüm yönetici kılavuzlarını görüntüle](https://help.github.com/en/enterprise/2.16/admin)
++ [Kullanıcı Yönetimi](https://help.github.com/en/enterprise/2.16/admin/user-management)
+    - [Kuruluşlar ve takımlar](https://help.github.com/en/enterprise/2.16/admin/user-management/organizations-and-teams)
+        - [Kuruluşlar oluşturma](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-organizations)
+        - [Takımlar oluşturma](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-teams)
+        - [Takımlara kişi ekleme](https://help.github.com/en/enterprise/2.16/admin/user-management/adding-people-to-teams)
+        - [Ekiplerden ve kuruluşlardan kişileri kaldırma](https://help.github.com/en/enterprise/2.16/admin/user-management/removing-users-from-teams-and-organizations)
+    - [Kullanıcı güvenliği](https://help.github.com/en/enterprise/2.16/admin/user-management/user-security)
++ [GitHub Enterprise Server 'ı yükleme ve yapılandırma](https://help.github.com/en/enterprise/2.16/admin/installation)
 
 ## <a name="support-resources"></a>Destek kaynakları
 - [GitHub yardımı](https://help.github.com/en)'nda çok çeşitli GitHub konuları dizisiyle soruların yanıtlarını bulabilirsiniz.

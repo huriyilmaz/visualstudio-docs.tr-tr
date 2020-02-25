@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a8f068099ec77f35919f880512e6c66f8e648cbe
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f8e5054b4da0122c40c3ad62cfebcace973f7b20
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918810"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558014"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce Dağıtımlarında Sunucu ve İstemci Yapılandırma Sorunları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce ve proxy kimlik doğrulaması  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], .NET Framework 3,5 ' den başlayarak Windows tümleşik proxy kimlik doğrulaması desteği sağlar. Belirli bir makine yok. yapılandırma yönergeleri gerekli değildir. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], temel veya Özet gibi diğer kimlik doğrulama protokolleri için destek sağlamaz.  
   
- Bu özelliği etkinleştirmek için .NET Framework 2,0 ' a bir düzeltme de uygulayabilirsiniz. Daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?LinkId=158730.  
+ Bu özelliği etkinleştirmek için .NET Framework 2,0 ' a bir düzeltme de uygulayabilirsiniz. Daha fazla bilgi için, [.NET Framework 2,0 ' de oluşturduğunuz bir ClickOnce uygulamasını bir ara sunucu kullanacak şekilde yapılandırılmış bir istemci bilgisayara yüklemeye çalıştığınızda hata iletisi ' ne bakın: "proxy kimlik doğrulaması gerekir"](https://support.microsoft.com/en-in/help/917952/fix-error-message-when-you-try-to-install-a-clickonce-application-that). 
   
  Daha fazla bilgi için bkz. [\<defaultProxy > öğesi (ağ ayarları)](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f).  
   
@@ -121,7 +121,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
   
 - "*" Uzantısı ve "Application/sekizli-Stream" MIME türünde bir MIME türü oluşturursanız, engellenmemiş dosya türü dosyalarının indirilmesine izin verir. (Ancak,. aspx ve. asmx gibi engellenen dosya türleri indirilemez.)  
   
-  Windows Server 'da MIME türlerini yapılandırmaya ilişkin belirli yönergeler için, Microsoft Bilgi Bankası makalesi KB326965 ' e bakın, "IIS 6,0, [https://support.microsoft.com/default.aspx?scid=kb; en-US; 326965](https://support.microsoft.com/default.aspx?scid=kb;en-us;326965)konumunda Bilinmeyen MIME türlerine sahip değildir.  
+  Windows Server 'da MIME türlerini yapılandırmaya ilişkin belirli yönergeler için bkz. [bir Web sitesine veya uygulamaya MIME türü ekleme](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application).  
   
 ## <a name="content-type-mappings"></a>İçerik türü eşlemeleri  
  HTTP üzerinden yayımlarken,. Application dosyası için içerik türü (MIME türü olarak da bilinir) "application/x-MS-Application" olmalıdır. Sunucuda [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] yüklüyse, bu sizin için otomatik olarak ayarlanır. Bu yüklü değilse, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama vroot (veya tüm sunucu) için bir MIME türü ilişkilendirmesi oluşturmanız gerekir.  

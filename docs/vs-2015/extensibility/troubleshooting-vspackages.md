@@ -11,12 +11,12 @@ ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: b092c910b0303a62289e75b168e39628cbd0314b
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: e740860046ee9d18a137dbd513202e259e90bf79
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77477002"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557977"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,7 +68,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
     1. Kayıt defterinin paketler bölümünde VSPackage 'un CLSID 'sini bulun:  
   
-         HKLM\Software\Microsoft\Visual Studio\\ *\<sürümü >* \packages  
+         HKLM\Software\Microsoft\Visual Studio\\*\<sürümü >* \packages  
   
     2. SatelliteDll alt anahtarı tarafından verilen yolun doğru olduğundan emin olun.  
   
@@ -101,13 +101,11 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
     2. Bu **sembol dosyası (. pdb) konumunu**ekleyin:  
   
-         `https://msdl.microsoft.com/download/symbols`  
+       `https://msdl.microsoft.com/download/symbols`  
   
     3. Performansı artırmak için, bir sembol önbellek klasörü belirtin, örneğin:  
-  
-        ```  
-        C:\symbols  
-        ```  
+
+       `C:\symbols`  
   
 ### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>Eksik bir VSPackage veya bağımlılıklarından biri sorunlarını gidermek için  
   
@@ -117,11 +115,11 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
   
    2. **Özellik sayfaları** Iletişim kutusundaki **Başvurular** sekmesini seçin ve tüm yolların doğru olduğundan emin olun. Alternatif olarak, başvurulan nesnelere gitmek için **nesne tarayıcısı** kullanabilirsiniz.  
   
-        Yönetilen kod için, başarısız derleme yüklerinin ayrıntılarını göstermek üzere [Fuslogvw. exe ' yi (derleme bağlama günlük Görüntüleyicisi)](https://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296) kullanabilirsiniz.  
+        Yönetilen kod için, başarısız derleme yüklerinin ayrıntılarını göstermek üzere [Fuslogvw. exe ' yi (derleme bağlama günlük Görüntüleyicisi)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) kullanabilirsiniz.  
   
 2. Yönetilmeyen kod için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID kayıt defteri düğümünde VSPackage CLSID 'sini bulun:  
   
-    HKLM\Software\Microsoft\Visual Studio\\ *\<sürümü >* \CLSID  
+    HKLM\Software\Microsoft\Visual Studio\\*\<sürümü >* \CLSID  
   
    Inprocserver32 girişinin VSPackage dll dosyasının doğru yoluna sahip olduğundan emin olun.  
   

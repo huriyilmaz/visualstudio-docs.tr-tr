@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c8d4949bc8bbef0231986d2eeedfd36a2f678ea
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 843d56482a82c2a8210de50455753c9703698503
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189161"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557850"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>İzlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu proje öğesi oluşturma
   SharePoint projeleri bir veya daha fazla SharePoint proje öğesi için kapsayıcılardır. Visual Studio 'da, kendi SharePoint proje öğesi türlerinizi oluşturup bunları bir proje şablonuyla ilişkilendirerek SharePoint proje sistemini genişletebilirsiniz. Bu kılavuzda, bir site sütunu oluşturmak için bir proje öğesi türü tanımlayacaksınız ve sonra bir site sütunu proje öğesi içeren yeni bir proje oluşturmak için kullanılabilecek bir proje şablonu oluşturacaksınız.
@@ -40,7 +40,7 @@ ms.locfileid: "73189161"
 > [!NOTE]
 > Bir dizi örnek iş akışı için bkz. [SharePoint Workflow örnekleri](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows, SharePoint ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]sürümleri.
@@ -68,7 +68,7 @@ ms.locfileid: "73189161"
 
 1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
 
-2. Menü çubuğunda **dosya**  > **Yeni**  > **Proje**' yi seçin.
+2. Menü çubuğunda **dosya** > **Yeni** > **Proje**' yi seçin.
 
 3. **Yeni proje** iletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **4,5 .NET Framework** seçildiğinden emin olun.
 
@@ -431,7 +431,7 @@ ms.locfileid: "73189161"
 
    - Her bir proje örneğine eklenen her bir dosya için `ProjectItem` öğeleri ekler.
 
-   - "<http://schemas.microsoft.com/developer/vstemplate/2005>" ad alanını kullanır. Bu çözümdeki diğer proje dosyaları "<http://schemas.microsoft.com/developer/msbuild/2003>" ad alanını kullanır. Bu nedenle, XML şeması uyarı iletileri oluşturulacaktır, ancak bu kılavuzda yoksayabilirsiniz.
+   - `http://schemas.microsoft.com/developer/vstemplate/2005`ad alanını kullanır. Bu çözümdeki diğer proje dosyaları `http://schemas.microsoft.com/developer/msbuild/2003` ad alanını kullanır. Bu nedenle, XML şeması uyarı iletileri oluşturulacaktır, ancak bu kılavuzda yoksayabilirsiniz.
 
      *. Vstemplate* dosyalarının içerikleri hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md).
 

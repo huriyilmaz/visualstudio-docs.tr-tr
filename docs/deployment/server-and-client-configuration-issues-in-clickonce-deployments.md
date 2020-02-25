@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 794b53a71a0a8215ae6bc9af47f9fe2a0ff911b5
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: b1d2512c14c0630d2268adfa465e092555150943
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806883"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557872"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce dağıtımlarında sunucu ve istemci yapılandırma sorunları
 Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağıtımınız Windows 'un tanımadığı bir dosya türünü içeriyorsa (örneğin, Microsoft Word dosyası), IIS bu dosyayı aktarmayı reddeder ve dağıtımınız başarılı olmaz.
@@ -49,7 +49,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce ve proxy kimlik doğrulaması
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], .NET Framework 3,5 ' den başlayarak Windows tümleşik proxy kimlik doğrulaması desteği sağlar. Belirli bir makine yok. yapılandırma yönergeleri gerekli değildir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], temel veya Özet gibi diğer kimlik doğrulama protokolleri için destek sağlamaz.
 
- Bu özelliği etkinleştirmek için .NET Framework 2,0 ' a bir düzeltme de uygulayabilirsiniz. Daha fazla bilgi için bkz. http://go.microsoft.com/fwlink/?LinkId=158730.
+ Bu özelliği etkinleştirmek için .NET Framework 2,0 ' a bir düzeltme de uygulayabilirsiniz. Daha fazla bilgi için, [.NET Framework 2,0 ' de oluşturduğunuz bir ClickOnce uygulamasını bir ara sunucu kullanacak şekilde yapılandırılmış bir istemci bilgisayara yüklemeye çalıştığınızda hata iletisi ' ne bakın: "proxy kimlik doğrulaması gerekir"](https://support.microsoft.com/help/917952/fix-error-message-when-you-try-to-install-a-clickonce-application-that).
 
  Daha fazla bilgi için bkz. [\<defaultProxy > öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).
 
@@ -75,7 +75,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 ```
 
 > [!NOTE]
-> Site, varsayılan kimlik bilgileriniz dışında kimlik bilgileri isterse, NTLM (NT Challenge-Response) kimlik doğrulamasını yapabilir ve güvenlik iletişim kutusunda, sağlanan kimlik bilgilerini kaydetmek isteyip istemediğiniz sorulduğunda **Tamam** ' a tıklayabilirsiniz. gelecek oturumlar. Ancak, bu geçici çözüm temel kimlik doğrulaması için çalışmaz.
+> Site, varsayılan kimlik bilgilerinizle farklı kimlik bilgileri isterse ve güvenlik iletişim kutusunda, gelecekteki oturumlarda sağlanan kimlik bilgilerini kaydetmek isteyip istemediğiniz sorulduğunda **Tamam** ' a tıkladığınızda NTLM (NT Challenge-Response) kimlik doğrulaması yapabilirsiniz. Ancak, bu geçici çözüm temel kimlik doğrulaması için çalışmaz.
 
 ## <a name="use-third-party-web-servers"></a>Üçüncü taraf Web sunucuları kullanma
  IIS dışında bir Web sunucusundan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması dağıtıyorsanız, sunucu dağıtım bildirimi ve uygulama bildirimi gibi anahtar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dosyaları için yanlış içerik türü döndürüyorsa bir sorunla karşılaşabilirsiniz. Bu sorunu çözmek için, Web sunucunuzun sunucuya yeni içerik türleri ekleme hakkında yardım belgelerine bakın ve aşağıdaki tabloda listelenen tüm dosya adı uzantısı eşlemelerinin yerinde olduğundan emin olun.
@@ -118,7 +118,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 
 - "<em>" Uzantısı ve "Application/sekizli-Stream" MIME türünde BIR MIME türü oluşturursanız, engellenmemiş dosya türü dosyalarının indirilmesine izin verir. (Ancak, *. aspx</em> ve *. asmx* gibi engellenen dosya türleri indirilemez.)
 
-  Windows Server 'da MIME türlerini yapılandırmaya ilişkin belirli yönergeler için, Microsoft Bilgi Bankası makalesi KB326965 ' e bakın, "IIS 6,0, [http://support.microsoft.com/default.aspx?scid=kb; en-US; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)konumunda Bilinmeyen MIME türlerine sahip değildir.
+  Windows Server 'da MIME türlerini yapılandırmaya ilişkin belirli yönergeler için bkz. [bir Web sitesine veya uygulamaya MIME türü ekleme](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application).
 
 ## <a name="content-type-mappings"></a>İçerik türü eşlemeleri
  HTTP üzerinden yayımlarken, *. Application* dosyası için içerik türü (MIME türü olarak da bilinir) "application/x-MS-Application" olmalıdır. Sunucuda .NET Framework 2,0 yüklüyse, bu sizin için otomatik olarak ayarlanır. Bu yüklü değilse, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama vroot (veya tüm sunucu) için bir MIME türü ilişkilendirmesi oluşturmanız gerekir.
@@ -128,7 +128,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 ## <a name="http-compression-issues"></a>HTTP sıkıştırma sorunları
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ile, akışı istemciye göndermeden önce bir veri akışını sıkıştırmak için GZIP algoritmasını kullanan bir Web sunucusu teknolojisi olan HTTP sıkıştırması kullanan İndirmeleri gerçekleştirebilirsiniz. İstemci — bu durumda [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]— dosyaları okumadan önce akışı açar.
 
- IIS kullanıyorsanız, HTTP sıkıştırmasını kolayca etkinleştirebilirsiniz. Ancak, HTTP sıkıştırmasını etkinleştirdiğinizde yalnızca belirli dosya türleri için (yani, HTML ve metin dosyaları) etkinleştirilir. Derlemeler ( *. dll*), XML ( *. xml*), dağıtım bildirimleri (.*Application*) ve uygulama bildirimleri ( *. manifest*) IÇIN sıkıştırmayı etkinleştirmek üzere, bu dosya türlerini IIS için, sıkıştırmak üzere tür listesine eklemeniz gerekir. Dosya türlerini dağıtımınıza ekleyene kadar, yalnızca metin ve HTML dosyaları sıkıştırılır.
+ IIS kullanıyorsanız, HTTP sıkıştırmasını kolayca etkinleştirebilirsiniz. Ancak, HTTP sıkıştırmasını etkinleştirdiğinizde yalnızca belirli dosya türleri için (yani, HTML ve metin dosyaları) etkinleştirilir. Derlemeler (*. dll*), XML (*. xml*), dağıtım bildirimleri (.*Application*) ve uygulama bildirimleri (*. manifest*) IÇIN sıkıştırmayı etkinleştirmek üzere, bu dosya türlerini IIS için, sıkıştırmak üzere tür listesine eklemeniz gerekir. Dosya türlerini dağıtımınıza ekleyene kadar, yalnızca metin ve HTML dosyaları sıkıştırılır.
 
  IIS hakkında ayrıntılı yönergeler için bkz. [HTTP sıkıştırması için ek belge türleri belirtme](https://support.microsoft.com/help/234497).
 

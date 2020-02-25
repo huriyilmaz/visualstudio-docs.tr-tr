@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 794d417d3995e35b48dc6102bfdeddfa8b992548
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 82181d906adc3454dfe77ef4fb21d8bdf99df16f
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476903"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557992"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Nasıl yapılır: Son Kullanıcıların Yükleme Yapacakları Konumu Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ Bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulaması yayımlar
   
 2. **Yayımla** sekmesine tıklayın.  
   
-3. Yükleme URL 'SI alanında, biçim https://www.microsoft.com/ApplicationNamekullanarak tam bir URL kullanarak yükleme konumunu veya \\\Server\applicationnamebiçimini kullanarak bir UNC yolunu girin.  
+3. Yükleme URL 'SI alanında, biçim `https://www.contoso.com/ApplicationName`kullanarak tam URL 'YI kullanarak yükleme konumunu veya `\\Server\ApplicationName`biçimini kullanarak bir UNC yolunu girin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Visual Studio 'Nun dosyaları nereye kopyaladığını belirtme](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   

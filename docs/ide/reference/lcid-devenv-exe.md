@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80c4af137edc80166d6a652c676d5607d8c2328d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595533"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557940"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -35,11 +35,11 @@ Metin, para birimi ve IDE içindeki diğer değerler için kullanılan varsayıl
 devenv {/LCID|/L} LocaleID
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 - *LocaleID*
 
-  Gerekli. Belirttiğiniz dilin Yerel ayar tanıtıcısı (LCıD).
+  Gereklidir. Belirttiğiniz dilin Yerel ayar tanıtıcısı (LCıD).
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -53,13 +53,18 @@ Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID 'Ler l
 |--------------|----------|
 |ve|2052|
 |seçenekleri yerine|1028|
-|İngilizce|1033|
+|Çekçe|1029|
+|Türkçe|1033|
 |Fransızca|1036|
 |Almanca|1031|
 |İtalyanca|1040|
 |Japonca|1041|
 |Korece|1042|
+|Lehçe|1045|
+|Portekizce (Brezilya)|1046|
+|Rusça|1049|
 |İspanyolca|3082|
+|Türkçe|1055
 
 ## <a name="example"></a>Örnek
 

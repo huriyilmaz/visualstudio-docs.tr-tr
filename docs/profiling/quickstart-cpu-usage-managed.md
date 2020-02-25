@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 92287c052282553a33222deb548609101d839291
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 8fd77fe5fc00e8c1a3b487c93a6004b2f8cf7060
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278672"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558191"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>Hızlı başlangıç: Visual Studio 'da CPU kullanım verilerini çözümlemeC#(, Visual Basic)
 
@@ -177,7 +177,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
     > [!NOTE]
     > Visual Basic, başlangıç nesnesinin `Sub Main` (**özellikler** > **uygulama** > **Başlangıç nesnesi**) olarak ayarlandığından emin olun.
 
-## <a name="step-1-collect-profiling-data"></a>1\. adım: profil oluşturma verilerini topla
+## <a name="step-1-collect-profiling-data"></a>1. adım: profil oluşturma verilerini topla
 
 1. İlk olarak, `Main` işlevindeki bu kod satırında uygulamanızda bir kesme noktası ayarlayın:
 
@@ -220,7 +220,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
 
      Bu noktada, verileri çözümlemek başlayabilirsiniz.
 
-## <a name="step-2-analyze-cpu-usage-data"></a>2\. adım: CPU kullanım verilerini çözümleme
+## <a name="step-2-analyze-cpu-usage-data"></a>2. adım: CPU kullanım verilerini çözümleme
 
 CPU kullanımı altında işlevler listesini inceleyerek, en fazla çalışmayı yapan işlevleri tanımlama ve ardından her birine daha yakından bakalım alma verilerinizi analiz etmeye başlamanızı öneririz.
 

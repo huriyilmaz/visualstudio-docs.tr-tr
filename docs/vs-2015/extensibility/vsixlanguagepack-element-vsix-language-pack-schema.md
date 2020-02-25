@@ -1,5 +1,5 @@
 ---
-title: VSIXLanguagePack öğesi (VSIX Dil Paketi Şeması) | Microsoft Docs
+title: Valtlanguagepack öğesi (VSıX dil paketi şeması) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,17 +8,17 @@ ms.assetid: 767f5c22-8b87-49ca-92aa-a7a3f026469f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9a429a97c25f9c0215f17b024d34fece20d1d8f0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e2e1df362fddeab5be98ff90460a8a1a7d4b7876
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65690703"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557995"
 ---
-# <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>VSIXLanguagePack öğesi (VSIX Dil Paketi Şeması)
+# <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>Valtlanguagepack öğesi (VSıX dil paketi şeması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Gerekli. VSIX Dil Paketi için kök öğe sağlar. VSIX Dil Paketi, bir VSIX paketi için yerelleştirilmiş yükleme bilgilerini sağlar.  
+Gereklidir. VSıX dil paketi için kök öğesi sağlar. VSıX dil paketi bir VSıX paketi için yerelleştirilmiş yükleme bilgilerini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ Gerekli. VSIX Dil Paketi için kök öğe sağlar. VSIX Dil Paketi, bir VSIX pak
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`xmlns`|VSIX Dil Paketi şeması tanımlandığı XML ad alanı.|  
+|`xmlns`|VSıX dil paketi şemasının tanımlandığı XML ad alanı.|  
   
-## <a name="xmlns-attribute"></a>xmlns özniteliğinin  
+## <a name="xmlns-attribute"></a>xmlns özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`http://schemas.microsoft.com/developer/vsx-schema-lp/2010`|Gerekli. Dil paketleri şemasını tanımlayan dosyasının konumu.|  
+|`http://schemas.microsoft.com/developer/vsx-schema-lp/2010`|Gereklidir. Dil paketleri şemasını tanımlayan dosyanın konumu.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[LocalizedName Öğesi](../extensibility/localizedname-element-vsix-language-pack-schema.md)|Gerekli. Uzantının yüklenmesini yerelleştirilmiş adı.|  
-|[LocalizedDescription Öğesi](../extensibility/localizeddescription-element-vsix-language-pack-schema.md)|Gerekli. Yerelleştirilmiş açıklama uzantısının yüklenmesi.|  
-|[MoreInfoURL Öğesi](../extensibility/moreinfourl-element-vsix-language-pack-schema.md)|İsteğe bağlı. Yerelleştirilmiş uzantısı hakkında bilgi almak için bir bağlantı.|  
-|[License Öğesi](../extensibility/license-element-vsix-language-pack-schema.md)|İsteğe bağlı. Uzantının lisans dosyası yerelleştirilmiş bir sürümünü yolu.|  
+|[LocalizedName Öğesi](../extensibility/localizedname-element-vsix-language-pack-schema.md)|Gereklidir. Yüklenecek uzantının yerelleştirilmiş adı.|  
+|[LocalizedDescription Öğesi](../extensibility/localizeddescription-element-vsix-language-pack-schema.md)|Gereklidir. Yüklenecek uzantının yerelleştirilmiş açıklaması.|  
+|[MoreInfoURL Öğesi](../extensibility/moreinfourl-element-vsix-language-pack-schema.md)|İsteğe bağlı. Uzantı hakkındaki yerelleştirilmiş bilgilere bir bağlantı.|  
+|[License Öğesi](../extensibility/license-element-vsix-language-pack-schema.md)|İsteğe bağlı. Uzantı için lisans dosyasının yerelleştirilmiş bir sürümünün yolu.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -65,12 +65,10 @@ Gerekli. VSIX Dil Paketi için kök öğe sağlar. VSIX Dil Paketi, bir VSIX pak
   
 |                 |                                                           |
 |-----------------|-----------------------------------------------------------|
-|    Ad Alanı    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
-|   Şema adı   |                 VSIX Dil Paketi şeması                 |
-| Doğrulama dosyası |                VSIXLanguagePackSchema.xsd                 |
-|  Boş olabilir.   |                            Hayır                             |
+|    Ad Alanı    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Şema adı   |                 VSıX dil paketi şeması                 |
+| Doğrulama dosyası |                Valtlanguagepackschema. xsd                 |
+|  Boş olabilir   |                            Hayır                             |
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSX dil paketi Şeması Başvurusu](../extensibility/vsx-language-pack-schema-reference.md)   
- [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)   
- [VSIX Uzantı Şeması 1.0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+ [VSX dil paketi şema başvurusu](../extensibility/vsx-language-pack-schema-reference.md) [Yerelleştirme VSIX paketleri](../extensibility/localizing-vsix-packages.md) [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))

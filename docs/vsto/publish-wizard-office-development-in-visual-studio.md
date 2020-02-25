@@ -1,5 +1,5 @@
 ---
-title: Yayımlama Sihirbazı (Visual Studio'da Office Geliştirme)
+title: Yayımlama Sihirbazı (Visual Studio 'da Office geliştirme)
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,50 +18,50 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7879ad7cf18c3d09fddbab3923296e0896688af9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5d14abdd9ba6547a3aaf131084168be2e453dd04
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447061"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558179"
 ---
-# <a name="publish-wizard-office-development-in-visual-studio"></a>Yayımlama Sihirbazı (Visual Studio'da Office Geliştirme)
-  Kullanım **Yayımlama Sihirbazı** çözüm dosyaları belirtilen bir konuma kopyalamak için bildirim dosyalarını oluşturmak ve bir Kurulum programı oluşturma.
+# <a name="publish-wizard-office-development-in-visual-studio"></a>Yayımlama Sihirbazı (Visual Studio 'da Office geliştirme)
+  Çözüm dosyalarını belirtilen bir konuma kopyalamak için **Yayımlama sihirbazını** kullanın, bildirim dosyalarını oluşturun ve bir kurulum programı oluşturun.
 
- Bu Sihirbazı'na erişmek için **derleme** menüsünde seçin **Yayımla** *SolutionName*. Ayrıca erişebileceğiniz **Yayımlama Sihirbazı** gelen **Çözüm Gezgini**. Proje düğümü için kısayol menüsünü açın ve ardından **Yayımla**.
+ Bu sihirbaza erişmek için, **Oluştur** menüsünde, *SolutionName* **Yayımla** ' yı seçin. **Yayımla sihirbazına** de **Çözüm Gezgini**erişebilirsiniz. Proje düğümü için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
 
- Aşağıdaki bölümde her bir sayfasında açıklar.
+ Aşağıdaki her bölümde, sihirbazın bir sayfası açıklanmaktadır.
 
-## <a name="where-do-you-want-to-publish-the-application"></a>Burada uygulamayı yayımlamak istiyor musunuz?
- **Bu uygulamayı yayımlamak için konumu belirtin** gerekli. Yayımlama konumunun dizinidir burada **Yayımlama Sihirbazı** derlemeden bildirimleri, derlemeleri, geçici sertifika ve diğer dosyalar gibi çözüm dosyalarını kopyalar. Bu dizine yazma erişimi olmalıdır.
+## <a name="where-do-you-want-to-publish-the-application"></a>Uygulamayı nerede yayımlamak istiyorsunuz?
+ **Bu uygulamanın yayımlanacağı konumu belirtin** Gerekli. Yayımlama konumu, **Yayımlama sihirbazının** bildirimler, derlemeler, geçici sertifika ve diğer dosyalar ile derleme gibi çözüm dosyalarını kopyaladığı dizindir. Bu dizine yazma erişiminizin olması gerekir.
 
- Bir disk yolu, dosya paylaşımı, FTP sitesi veya web sitesi URL'si bir konum yazın ya da tıklayın **Gözat** konumu için Gözat düğmesini. Yol, aşağıdaki biçimlerde olabilir:
+ Konumu bir disk yolu, dosya paylaşma, FTP sitesi veya Web sitesi URL 'SI olarak yazın veya konuma gitmek için **Araştır** düğmesine tıklayın. Yol şu biçimlerde olabilir:
 
-- Göreli veya mutlak bir yol standart Windows, aşağıdakiler gibi biçimlendirme *C:\Deploy\MyApplication* veya *\MyApplication*.
+- *C:\deploy\myapplication* veya *\MyApplication*gibi standart Windows biçiminde göreli veya mutlak bir yol.
 
-- Bir Evrensel Adlandırma Kuralı (UNC) yolu gibi  *\\\ServerName\MyApplication\\* .
+- *\\\ServerName\MyApplication\\*gibi bir evrensel adlandırma KURALı (UNC) yolu.
 
-- Gibi bir URL bir web sitesi http://www.microsoft.com/MyApplication.
+- `http://www.contoso.com/MyApplication`gibi bir Web sitesinin URL 'SI.
 
-  Varsayılan olarak, yayımlama konumdur *http://localhost/projectname/* IIS yüklü veya bunu yaparsanız yayınla\ dizini IIS yüklü.
+  Varsayılan olarak, yayımlama konumu IIS yüklüyse *http://localhost/projectname/* veya IIS yüklü değilse Yayımla \ dizinidir.
 
 > [!NOTE]
-> Hedef bilgisayarın Windows Vista çalıştırıyorsa, daha fazla ilgili önemli noktalar vardır. Yerel yayımlama seçeneğini kullanmak için Windows Vista bilgisayarda yönetici olması gerekir. Ayrıca, her zaman varsayılan konumu: *yayımlama\\*  IIS yüklü olup olmadığından bağımsız olarak dizin.
+> Hedef bilgisayarda Windows Vista çalışıyorsa daha fazla dikkat edilecek noktalar vardır. Yerel yayımlama seçeneğini kullanmak için Windows Vista bilgisayarında bir yönetici olmanız gerekir. Ayrıca, IIS 'nin yüklü olup olmamasından bağımsız olarak, varsayılan konum her zaman *yayımla\\* dizinidir.
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Son kullanıcı bilgisayarlarında varsayılan yükleme yolu nedir?
- Yükleme yolu isteğe bağlıdır. İsterseniz, yükleme yolu daha sonra ayarlayabilirsiniz. Ayrıntılar için bkz [nasıl yapılır: Office çözümünü yükleme yolunu değiştirmek](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+ Yükleme yolu isteğe bağlıdır. İsterseniz yükleme yolunu daha sonra ayarlayabilirsiniz. Ayrıntılar için bkz. [nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
 
- Yükleme yolu, son kullanıcının özelleştirme yükleyecek dizindir. Ayrıca çözüm güncelleştirmeleri denetlemek için kullanacağı yoludur. **Yayımlama Sihirbazı** çözüm yolu, girdiğiniz aynı olmadığı sürece bu konuma dağıtmaz **bu uygulamayı yayımlamak için konumu belirtin** önceki sayfada kutusu.
+ Yükleme yolu, son kullanıcının özelleştirmeyi yükleyeceksiniz. Ayrıca, çözümün güncelleştirmeleri denetlemek için kullanacağı yoldur. Uygulama, önceki sayfada **Bu uygulamayı yayımlamak için konumu belirtin** kutusunda girdiğiniz konum ile aynı değilse, **Yayımlama Sihirbazı** çözümü bu konuma dağıtmaz.
 
- **Bir Web sitesinden** , son kullanıcıların çözümü yüklemek için izleyeceği URL'sini belirtin.
+ **Bir Web sitesinden** Son Kullanıcıların çözümü yüklemek için takip edecek URL 'YI belirtin.
 
- **Bir UNC yolu veya dosya paylaşımından** , son kullanıcıların çözümü yüklemek için izleyeceği UNC yolunu belirtin.
+ **UNC yolundan veya dosya paylaşımından** Son Kullanıcıların çözümü yüklemek için takip edecek UNC yolunu belirtin.
 
- **Bir CD-ROM veya DVD-ROM** bu seçenek, bir yükleme yolu gerektirmez.
+ **BIR CD-ROM veya DVD-ROM ' d** a Bu seçenek, yükleme yolu gerektirmez.
 
- Visual Studio, CD veya DVD yazma değil. Çıktı bir CD veya DVD elle kopyalamanız gerekir.
+ Visual Studio, CD veya DVD 'yi yazamıyor. Çıktıyı el ile bir CD veya DVD 'ye kopyalamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Yayımlama Sayfası, Proje Tasarımcısı &#40;Visual Studio'da Office geliştirme&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
+- [Yayımla sayfası, Visual Studio &#40;'Da proje Tasarımcısı Office geliştirme&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
