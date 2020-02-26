@@ -13,34 +13,34 @@ helpviewer_keywords:
 - GetWinFXPath task [WPF MSBuild]
 - obtaining the path to the current .NET Framework runtime [WPF MSBuild]
 ms.assetid: b1dfb467-f3d3-47f3-83ef-af7b0e33a772
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c95e5ad882d7021b597d7ba0ad8c38177f4a5136
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 894cfe9fd6e116e983a5290e5817211182b073c7
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996502"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578620"
 ---
-# <a name="getwinfxpath-task"></a>GetWinFXPath task
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> Görev geçerli dizinin döndürür [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] çalışma zamanı.
+# <a name="getwinfxpath-task"></a>GetWinFXPath görevi
+<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görevi geçerli [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] çalışma zamanının dizinini döndürür.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |-------------------| - |
-| `WinFXPath` | İsteğe bağlı **dize** çıkış parametresi.<br /><br /> Gerçek yolunu belirtir [!INCLUDE[TLA2#tla_winfx](../msbuild/includes/tla2sharptla_winfx_md.md)] çalışma zamanı. |
-| `WinFXNativePath` | Gerekli **dize** parametresi.<br /><br /> Yerel yolu belirtir [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] çalışma zamanı. |
-| `WinFXWowPath` | Gerekli **dize** parametresi.<br /><br /> Yolunu belirtir [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] 32-bit derlemelerde **Windows üzerinde Windows** 64-bit sistemlerde modülü. |
+| `WinFXPath` | İsteğe bağlı **dize** çıkış parametresi.<br /><br /> [!INCLUDE[TLA2#tla_winfx](../msbuild/includes/tla2sharptla_winfx_md.md)] çalışma zamanının gerçek yolunu belirtir. |
+| `WinFXNativePath` | Gerekli **dize** parametresi.<br /><br /> Yerel [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] çalışma zamanının yolunu belirtir. |
+| `WinFXWowPath` | Gerekli **dize** parametresi.<br /><br /> 64 bit sistemlerde 32 bitlik **Windows** modülündeki [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] derlemelerinin yolunu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
- Varsa <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görev bir 64-bit işlemci üzerinde yürütme yaptığı **WinFXPath** parametrenin depolanan yoluna ayarlanmış **WinFXWowPath** parametre; Aksi takdirde **WinFXPath**  parametrenin depolanan yoluna ayarlanmış **WinFXNativePath** parametresi.
+ <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görevi 64 bitlik bir işlemcide yürütüle, **WinFXPath** parametresi **WinFXWowPath** parametresinde depolanan yola ayarlanır; Aksi takdirde, **WinFXPath** parametresi **WinFXNativePath** parametresinde depolanan yola ayarlanır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek nasıl kullanılacağını gösterir **GetWinFXPath** yerel yolu algılamak için görev [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] çalışma zamanı.
+ Aşağıdaki örnek, [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] çalışma zamanına ait yerel yolu algılamak için **GetWinFXPath** görevinin nasıl kullanılacağını gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -61,4 +61,4 @@ ms.locfileid: "62996502"
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Bir WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

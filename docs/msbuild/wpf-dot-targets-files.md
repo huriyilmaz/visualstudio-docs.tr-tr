@@ -1,5 +1,5 @@
 ---
-title: WPF. Hedefler dosyaları | Microsoft Docs
+title: WPF. Hedef dosyalar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - WPF .targets files [WPF MSBuild], introduction
 - WPF .targets files [WPF MSBuild]
 ms.assetid: e85a3ff4-dedd-4ff4-9b22-3a1e94755362
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c61e305868045664af7333bbb7dcce0beed54370
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: adac07fff84bf0a447875b7084a3003e61a9767d
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778068"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578176"
 ---
-# <a name="wpf-targets-files"></a>WPF .targets dosyaları
-[!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)] genişletir [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] birtakım ekleyerek [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)]-özel bir birleşik belirli görevleri *.targets* dosyası *Microsoft.WinFX.targets*. Bu dosya kümesini birleştirir [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] oluşturmak için gereken görevleri bir [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] projesi [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)].
+# <a name="wpf-targets-files"></a>WPF. targets dosyaları
+[!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)], özel bir *. targets* dosyası olan *Microsoft. WinFX. targets*içine birleştirilmiş [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)]özgü bir görev kümesini ekleyerek [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] genişletir. Bu dosya, [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)]bir [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] projesi oluşturmak için gereken [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] görevleri kümesini birleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [MSBuild .targets dosyaları](../msbuild/msbuild-dot-targets-files.md)
+- [MSBuild. targets dosyaları](../msbuild/msbuild-dot-targets-files.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
-- [WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

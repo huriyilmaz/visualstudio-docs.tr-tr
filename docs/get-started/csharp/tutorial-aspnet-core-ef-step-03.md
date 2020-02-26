@@ -1,5 +1,5 @@
 ---
-title: '3\. Adım: ASP.NET Core uygulamanızda verilerle çalışma'
+title: '3\. Adım: ASP.NET Core uygulamanızdaki verilerle çalışma'
 description: Bu video öğreticisiyle ASP.NET Core Web uygulamanızda Entity Framework Core kullanarak verilerle çalışmaya başlayın ve adım adım yönergeleri uygulayın.
 ms.custom: get-started
 ms.date: 03/31/2019
@@ -9,19 +9,19 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: e27155cd6504ab66cf52c4ddb0659a84936037a0
-ms.sourcegitcommit: 2bbcba305fd0f8800fd3d9aa16f7647ee27f3a4b
+ms.openlocfilehash: cef0db7e5615d08fb5b22c38604a24124c853ebd
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300585"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580071"
 ---
 # <a name="step-3-work-with-data-using-entity-framework"></a>3\. Adım: Entity Framework kullanarak verilerle çalışma
 
@@ -54,11 +54,11 @@ public class Game
 
 Şimdi, oyun kitaplığınızı yönetmek için kullanacağımız sayfaları oluşturmaya hazırız. Bu, ancak gerçekten başaramayabiliriz kolay bir işlemdir. İlk olarak uygulamamızda bu işlevsellikten nerede canlı olduğuna karar vermemiz gerekiyor. Web projesindeki sayfalar klasörünü açın ve yeni bir klasör ekleyin. BT *oyunları*'nı çağırın.
 
-Şimdi oyunlara sağ tıklayıp**yeni yapı iskelesi** **Ekle** > öğesini seçin. **Entity Framework (CRUD)** seçeneğini kullanarak Razor Pages seçin. CRUD "oluşturma, okuma, güncelleştirme, silme" anlamına gelir ve bu şablon, bu işlemlerin her biri için ("Tümünü Listele" sayfası ve "bir öğenin ayrıntılarını görüntüleme" sayfası dahil) sayfalar oluşturur.
+Şimdi oyunlara sağ tıklayıp > **yeni yapı Iskelesi** **Ekle** öğesini seçin. **Entity Framework (CRUD)** seçeneğini kullanarak Razor Pages seçin. CRUD "oluşturma, okuma, güncelleştirme, silme" anlamına gelir ve bu şablon, bu işlemlerin her biri için ("Tümünü Listele" sayfası ve "bir öğenin ayrıntılarını görüntüleme" sayfası dahil) sayfalar oluşturur.
 
 ![Visual Studio 2019 ASP.NET Core yapı Iskelesi sayfaları ekleme](media/vs-2019/vs2019-add-scaffold.png)
 
-Oyun modeli sınıfınızı seçin ve yeni bir veri bağlamı sınıfı eklemek için ' + ' simgesini kullanın. `AppDbContext`Adlandırın. Rest 'i varsayılan olarak bırakın ve **Ekle**' ye tıklayın.
+Oyun modeli sınıfınızı seçin ve yeni bir veri bağlamı sınıfı eklemek için ' + ' simgesini kullanın. Bunu, `AppDbContext` olarak adlandırın. Rest 'i varsayılan olarak bırakın ve **Ekle**' ye tıklayın.
 
 Oyunlar klasörünüze aşağıdaki Razor Pages eklendiğini göreceksiniz:
 
@@ -66,11 +66,11 @@ Oyunlar klasörünüze aşağıdaki Razor Pages eklendiğini göreceksiniz:
 - Delete. cshtml
 - Details. cshtml
 - Edit. cshtml
-- Index. cshtml
+- Index.cshtml
 
 ![Visual Studio 2019 ASP.NET Core Scafkatlanmış sayfalar](media/vs-2019/vs2019-scaffolded-pages.png)
 
-*Oyun* klasörüne sayfa eklemenin yanı sıra, scafkatlama işlemi *Startup.cs* sınıfma kod ekledi. Bu sınıftaki yöntemine bakarak, bu kodun eklendiğini görürsünüz: `ConfigureServices`
+*Oyun* klasörüne sayfa eklemenin yanı sıra, scafkatlama işlemi *Startup.cs* sınıfma kod ekledi. Bu sınıftaki `ConfigureServices` yöntemine bakarak bu kodun eklendiğini görürsünüz:
 
 ```csharp
 services.AddDbContext<AppDbContext>(options =>
@@ -115,11 +115,11 @@ using WebApplication1.Models;
 
 Kodunuzda WebApplication1 yerine proje adınızı kullandığınızdan emin olun.
 
-Kodun çoğu yalnızca hata işleme içindir ve uygulama çalışmadan önce EF Core `AppDbContext` erişim sağlar. Önemli satır, zaten mevcut değilse veritabanını oluşturacak `context.Database.EnsureCreated()`olan bir veritabanıdır. Artık uygulama çalıştırılmaya hazır.
+Kodun çoğu yalnızca hata işleme içindir ve uygulama çalıştırılmadan önce EF Core `AppDbContext` erişim sağlar. Önemli bir satır, zaten mevcut değilse veritabanını oluşturacak olan `context.Database.EnsureCreated()`. Artık uygulama çalıştırılmaya hazır.
 
 ## <a name="test-it-out"></a>Test et
 
-Uygulamayı çalıştırın ve adres çubuğunda öğesine `/Games` gidin. Boş bir liste sayfası görürsünüz. Koleksiyona yeni `Game` bir eklemek için **Yeni oluştur** ' a tıklayın. Formu doldurup **Oluştur**' a tıklayın. Liste görünümünde görmeniz gerekir. Tek bir kaydın ayrıntılarını görmek için **Ayrıntılar** ' a tıklayın.
+Uygulamayı çalıştırın ve adres çubuğunda `/Games` ' a gidin. Boş bir liste sayfası görürsünüz. Koleksiyona yeni bir `Game` eklemek için **Yeni oluştur** ' a tıklayın. Formu doldurup **Oluştur**' a tıklayın. Liste görünümünde görmeniz gerekir. Tek bir kaydın ayrıntılarını görmek için **Ayrıntılar** ' a tıklayın.
 
 Başka bir kayıt ekleyin. Bir kaydın ayrıntılarını değiştirmek için *Düzenle* ' ye tıklayabilir veya onu kaldırmak için **silebilirsiniz** ; bu, kaydı gerçekten silmeden önce onaylamanız istenir.
 

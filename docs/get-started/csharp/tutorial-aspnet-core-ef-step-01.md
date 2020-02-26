@@ -10,33 +10,33 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1851c497579d45aa45c36dc1cd20945ce2b9c1e1
-ms.sourcegitcommit: 6c55c40da74ed8969dcba56acbd30458fdb69c5a
+ms.openlocfilehash: d900c0f51b14450f38caf06738739daef2549235
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70977461"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580093"
 ---
 # <a name="tutorial-create-your-first-aspnet-core-app-using-entity-framework-with-visual-studio-2019"></a>Öğretici: Visual Studio 2019 ile Entity Framework kullanarak ilk ASP.NET Core uygulamanızı oluşturma
 
 Bu öğreticide, verileri kullanan bir ASP.NET Core Web uygulaması oluşturacaksınız ve Azure 'a dağıtırsınız. Bu öğretici aşağıdaki adımlardan oluşur:
 
-- [1. Adım: Visual Studio 2019 'yi yükler](#step-1-install-visual-studio-2019)
-- [2. Adım: İlk ASP.NET Core Web uygulamanızı oluşturma](tutorial-aspnet-core-ef-step-02.md)
+- [1. Adım: Visual Studio 2019 'Yi yükler](#step-1-install-visual-studio-2019)
+- [2. Adım: ilk ASP.NET Core Web uygulamanızı oluşturma](tutorial-aspnet-core-ef-step-02.md)
 - [3. Adım: Entity Framework kullanarak verilerle çalışma](tutorial-aspnet-core-ef-step-03.md)
 - [4. Adım: ASP.NET Core uygulamanızdan bir Web API 'SI kullanıma sunma](tutorial-aspnet-core-ef-step-04.md)
-- [5. Adım: ASP.NET Core uygulamanızı Azure 'a dağıtın](tutorial-aspnet-core-ef-step-05.md)
+- [5. Adım: ASP.NET Core uygulamanızı Azure 'a dağıtma](tutorial-aspnet-core-ef-step-05.md)
 
-## <a name="step-1-install-visual-studio-2019"></a>1\. Adım: Visual Studio 2019 'yi yükler
+## <a name="step-1-install-visual-studio-2019"></a>1\. Adım: Visual Studio 2019 'Yi yükler
 
-Bu video öğreticisiyle Visual Studio 2019 ' i nasıl yükleyeceğinizi ve adım adım yönergeleri öğrenin. Visual Studio 'yu önceden yüklediyseniz adım 2 ' ye [atlayın: İlk ASP.NET Core Web uygulamanızı](tutorial-aspnet-core-ef-step-02.md)oluşturun.
+Bu video öğreticisiyle Visual Studio 2019 ' i nasıl yükleyeceğinizi ve adım adım yönergeleri öğrenin. Visual Studio 'Yu önceden yüklediyseniz [2. Adım: ilk ASP.NET Core Web uygulamanızı oluşturma](tutorial-aspnet-core-ef-step-02.md)bölümüne atlayın.
 
 _Visual Studio 'Yu yüklemek ve ilk ASP.NET Core uygulamanızı oluşturmak için bu videoyu izleyin ve takip edin._
 
@@ -70,10 +70,10 @@ Yükleyici tamamlandığında Visual Studio otomatik olarak başlamalıdır. Bun
 
 ## <a name="explore-aspnet-core-project-types"></a>ASP.NET Core proje türlerini keşfet
 
-Proje adınızı ve konumunuzu seçip **Oluştur**' u seçin. Şimdi ASP.NET Core uygulamanız için kullanılacak şablonu seçin. Aşağıdaki seçeneklerden birini seçebilirsiniz:
+Proje adınızı ve konumunuzu seçip **Oluştur**' u seçin. Şimdi ASP.NET Core uygulamanız için kullanılacak şablonu seçin. Aşağıdaki seçeneklerden birini belirtebilirsiniz:
 
 - Olmamalıdır. Sıfırdan başlayıp başlayabilmenizi sağlayan boş bir proje şablonu.
-- 'SİNDEKİ. Web API 'Leri için en iyisi.
+- 'Sindeki. Web API 'Leri için en iyisi.
 - Web uygulaması. Razor Pages ile oluşturulan standart bir ASP.NET Core Web uygulaması.
 - Web uygulaması (Model-View-Controller). Model-View-Controller modelini kullanan standart bir ASP.NET Core Web uygulaması.
 - Angular.
@@ -86,7 +86,7 @@ Proje adınızı ve konumunuzu seçip **Oluştur**' u seçin. Şimdi ASP.NET Cor
 - Kimlik doğrulaması yok.
 - Bireysel kullanıcı hesapları. Bunlar yerel veya Azure tabanlı bir veritabanında depolanır.
 - İş veya okul hesapları. Bu seçenek kimlik doğrulaması için Active Directory, Azure AD veya Office 365 kullanır.
-- Windows kimlik doğrulaması. İntranet uygulamaları için uygun.
+- Windows Kimlik Doğrulaması. İntranet uygulamaları için uygun.
 
 Kimlik doğrulaması olmadan standart Web uygulaması şablonunu seçin ve **Oluştur**' a tıklayın.
 
@@ -100,4 +100,4 @@ Sonraki videoda, ilk ASP.NET Core projeniz hakkında daha fazla bilgi edineceksi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Video kılavuzsunda C# daha ayrıntılı](tutorial-aspnet-core.md) bir öğretici ile çalışmaya başlayın ve ASP.NET Core
+- [Öğretici: C# ve ASP.NET Core kullanmaya başlama](tutorial-aspnet-core.md) Video adım adım olmadan daha ayrıntılı bir öğretici

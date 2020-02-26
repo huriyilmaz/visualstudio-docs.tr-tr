@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b833d8b68af418b727861226df41c700d582805e
-ms.sourcegitcommit: d55438841123aad56a524a65332a86ad67af386b
+ms.openlocfilehash: 792b5e2d40f7299bf019fd3f9c86697bf008c391
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73599289"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578773"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>Visual Studio 'da hata ayıklama görevinizi bulma
 
@@ -103,7 +103,7 @@ Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapı
 
 ## <a name="additional-tasks"></a>Ek görevler
 
-### <a name="fix-an-exception"></a>Özel durumu çözme
+### <a name="fix-an-exception"></a>Bir özel durum düzeltme
 
 Bkz. [bir özel durumu giderme](write-better-code-with-visual-studio.md#fix-an-exception).
 
@@ -130,3 +130,7 @@ Bkz. [çalışan Işlemlere iliştirme](attach-to-running-processes-with-the-vis
 ### <a name="debug-multithreaded-applications"></a>Çok iş parçacıklı uygulamaların hatalarını ayıklama
 
 Bkz. çok [iş parçacıklı uygulamalarda hata ayıklama](debug-multithreaded-applications-in-visual-studio.md).
+
+### <a name="fix-performance-issues"></a>Performans sorunlarını çözün
+
+Bkz [. profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

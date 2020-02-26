@@ -8,20 +8,20 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60b058883e30587ed656690796732b15750b6277
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eeca594849625b548857a23b9d5c8e278dcdf07c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647441"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579298"
 ---
 # <a name="step-7-keep-pairs-visible"></a>7\. Adım: çiftleri görünür tutma
-Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (<xref:System.Windows.Forms.Timer.Start> yöntemi kullanılarak) simgeleri ortadan kaldırmamak yerine, oyunun kendisini sıfırlamasına gerek kalmadan, `firstClicked` ve `secondClicked` başvuru değişkenlerini kullanarak hiçbir etiketi takip etmeden önce Seçilen Etiketler.
+Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (<xref:System.Windows.Forms.Timer.Start> yöntemi kullanılarak) simgeleri ortadan kaldırmamak yerine, oyunun kendisini sıfırlaması gerekir. böylece, seçilen iki etiket için renkleri sıfırlamadan, `firstClicked` ve `secondClicked` başvuru değişkenlerini kullanarak hiçbir etiketi izlememek üzere oyunu sıfırlamamalıdır.
 
 ## <a name="to-keep-pairs-visible"></a>Çiftleri görünür durumda tutmak için
 
@@ -35,9 +35,9 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
 
      Yeni eklediğiniz `if` deyimin ilk satırı, Player 'ın seçtiği ilk etiketteki simgenin ikinci etiketteki simgeyle aynı olup olmadığını denetler. Simgeler aynıysa, program içindeki C# küme ayraçları veya Visual Basic içindeki `if` deyimi arasındaki üç deyimi yürütür. İlk iki deyim `firstClicked` ve `secondClicked` başvuru değişkenlerini sıfırlayın ve bu sayede etiketlerin hiçbirini izlememek üzere. (Bu iki deyimi zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinden ayırt edebilirsiniz.) Üçüncü deyim bir `return` deyimidir, bu da programa çalıştırmadan deyimlerin geri kalanını atlamasını söyler.
 
-     İçinde C#Programlama yapıyorsanız, bazı kodların tek bir eşittir işareti (`=`) kullandığını fark etmiş olabilirsiniz, ancak diğer deyimler iki eşittir işareti (`==`) kullanır. @No__t_0 neden bazı yerlerde kullanıldığını, ancak `==` başka yerlerde kullanıldığını göz önünde bulundurun.
+     İçinde C#Programlama yapıyorsanız, bazı kodların tek bir eşittir işareti (`=`) kullandığını fark etmiş olabilirsiniz, ancak diğer deyimler iki eşittir işareti (`==`) kullanır. `=` neden bazı yerlerde kullanıldığını, ancak `==` başka yerlerde kullanıldığını göz önünde bulundurun.
 
-     Bu örnek, aradaki farkı gösteren güzel bir örnektir. @No__t_0 deyimindeki parantezler arasındaki koda dikkatli bir göz atın.
+     Bu örnek, aradaki farkı gösteren güzel bir örnektir. `if` deyimindeki parantezler arasındaki koda dikkatli bir göz atın.
 
     ```vb
     firstClicked.Text = secondClicked.Text
@@ -61,7 +61,7 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
 
 2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` deyimleri yürütülür ve Return deyimleri, aşağıdaki görüntüde gösterildiği gibi, simgenin görünür kalması için, metodun zamanlayıcıyı başlatan kodu atlamasına neden olur.
 
-     Bu öğreticide oluşturduğunuz ![Game ](../ide/media/express_finishedgame.png)<br/>
+     Bu öğreticide oluşturduğunuz oyunu ![](../ide/media/express_finishedgame.png)<br/>
 *Görünür simge çiftleri Ile* ***eşleşen oyun***
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için

@@ -1,44 +1,44 @@
 ---
-title: İletme Günlükçüleri oluşturma | Microsoft Docs
+title: Iletme Günlükçüleri oluşturma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, forwarding loggers
 - MSBuild, logging
 ms.assetid: 3aebf9c8-b62c-4cb2-b2d6-8cdfcd369a24
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b63e71a3c904c6dad21f54269e336acd4291e7a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 76dd68749fc38a53daa91269ecebfdb4c53b706e
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778192"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578790"
 ---
-# <a name="create-forwarding-loggers"></a>İletme günlükçüleri oluşturma
-İletme günlükçüleri çok işlemcili bir sistemde projeler derlerken izlemek istediğiniz olayları seçin vererek günlük verimliliği artırın. İletme günlükçüleri etkinleştirerek merkezi Günlükçü aşırı yüklenilmesini, derleme zamanı yavaşlatmasını ve günlüğünüzün yığılmak istenmeyen olayları engelleyebilirsiniz.
+# <a name="create-forwarding-loggers"></a>İletme Günlükçüleri oluşturma
+Günlükçüleri iletme, çok işlemcili bir sistemde proje oluştururken izlemek istediğiniz olayları seçmenizi sağlayarak günlük verimliliğini geliştirir. Yönlendirme günlüklerini etkinleştirerek, istenmeyen olayların merkezi günlükçü 'yi önlemesini, derleme süresini yavaşlatmasını ve günlüklerinizi karışıklık almasını engelleyebilirsiniz.
 
- Bir iletme Günlükçü oluşturmak için her iki uygulama olabilir. <xref:Microsoft.Build.Framework.IForwardingLogger> arabirim ve kendi yöntemlerini el ile uygulama veya kullanın <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> sınıf ve onun önceden yapılandırılmış yöntemleri. (İkincisi çoğu uygulama için yeterli olacaktır.)
+ Bir iletme günlükçüsü oluşturmak için <xref:Microsoft.Build.Framework.IForwardingLogger> arabirimini uygulayabilir ve sonra yöntemlerini el ile uygulayabilir ya da <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> sınıfını ve önceden yapılandırılmış yöntemlerini kullanabilirsiniz. (İkincisi çoğu uygulama için yeterli olacaktır.)
 
-## <a name="register-events-and-respond-to-them"></a>Olayları kaydedin ve bunlara yanıt verin
- Birden çok işlemcili sistem üzerinde bir derleme sırasında ana yapı işlemi tarafından oluşturulan bir alt işlem ikincil derleme altyapısı tarafından bildirilen bir iletme Günlükçü derleme olayları hakkında bilgi toplar. Ardından, verdiğiniz yönergelere dayalı, Orta Günlükçü iletmek için olayları iletme Günlükçü seçer.
+## <a name="register-events-and-respond-to-them"></a>Olayları kaydetme ve onlara yanıt verme
+ Bir iletme günlükçüsü, çok işlemcili bir sistemde derleme sırasında ana yapı işlemi tarafından oluşturulan bir çalışan işlem olan ikincil derleme altyapısı tarafından bildirildikleri için derleme olayları hakkında bilgi toplar. Ardından, iletme günlükçüsü, verdiğiniz yönergelere göre merkezi günlükçü 'ye iletmek üzere olayları seçer.
 
- İletme günlükçüleri izlemek istediğiniz olayları işlemek için kaydetmeniz gerekir. Etkinliklere kaydolmak için günlükçüleri kılmalı <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> yöntemi. Bu yöntem artık isteğe bağlı bir parametre içeren `nodecount`, ayarlanabilecek işlemci sayısını sistemde. (Varsayılan değer 1'dir.)
+ İzlemek istediğiniz olayları işlemek için iletme Günlükçüleri kaydetmeniz gerekir. Olaylara kaydolmak için Günlükçüler <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> yöntemi geçersiz kılmalıdır. Bu yöntem artık sistemdeki işlemci sayısına ayarlanabilir `nodecount`isteğe bağlı bir parametre içerir. (Varsayılan olarak 1 ' dir.)
 
- Olayları izlemek için kullanabileceğiniz örnekler <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, ve <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished>.
+ İzleyebilmeniz için kullanabileceğiniz olayların örnekleri <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>ve <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished>.
 
- Birden çok işlemcili ortamda, düzensiz alınabilmesi olay iletileri olasıdır. Bu nedenle, olay işleyicisi iletme Günlükçü kullanarak olayları Değerlendirmeli ve iletmek üzere merkezi günlükçüyü yeniden yönlendirici'ye geçirmek için hangi olayları belirlemek üzere program. Bunu gerçekleştirmek için kullanabileceğiniz <xref:Microsoft.Build.Framework.BuildEventContext> sınıfı, iletmek istediğiniz olayları tanımlamaya yardımcı olmak için her ileti için ekli olduğu ve ardından olaylara adlarını geçirin <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> sınıfı (veya bir öğesinin). Bu yöntemi kullandığınızda, diğer belirli kodlama olayları gerekli değildir.
+ Çok işlemcili bir ortamda, olay iletilerinin sıra dışında alınması olasıdır. Bu nedenle, iletme günlükçüsü ' nde olay işleyicisini kullanarak olayları değerlendirmeli ve merkezi günlükçü 'ye iletmek üzere yeniden yönlendiriciye hangi olayların geçirileceğini belirlemelisiniz. Bunu gerçekleştirmek için her iletiye eklenen <xref:Microsoft.Build.Framework.BuildEventContext> sınıfını kullanarak iletmek istediğiniz olayları tanımlayabilir ve ardından olayların adlarını <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> sınıfına (veya bunun bir alt sınıfına) geçirebilirsiniz. Bu yöntemi kullandığınızda, olayları iletmek için başka bir özel kodlama gerekmez.
 
-## <a name="specify-a-forwarding-logger"></a>Bir iletme Günlükçü belirtin
- İletme Günlükçü derlemeye derlendikten sonra söylemelisiniz [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] yapılar sırasında kullanılacak. Bunu yapmak için `-FileLogger`, `-FileLoggerParameters`, ve `-DistributedFileLogger` ile birlikte geçer *MSBuild.exe*. `-FileLogger` Anahtar bildirir *MSBuild.exe* Günlükçü doğrudan bağlı. `-DistributedFileLogger` Anahtar, düğüm başına bir günlük dosyası olduğu anlamına gelir. Parametreleri iletme Günlükçü üzerinde ayarlamak için kullanın `-FileLoggerParameters` geçin. Bu ve diğer hakkında daha fazla bilgi için *MSBuild.exe* anahtarları bkz [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
+## <a name="specify-a-forwarding-logger"></a>Bir iletme günlükçüsü belirtin
+ İletme günlükçüsü bir derlemeye derlendikten sonra, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] derlemeler sırasında kullanmak üzere söylemeniz gerekir. Bunu yapmak için, `-FileLogger`, `-FileLoggerParameters`ve `-DistributedFileLogger` anahtarlarını *MSBuild. exe*ile birlikte kullanın. `-FileLogger` anahtarı *MSBuild. exe* ' ye günlükçü 'nin doğrudan bağlı olduğunu söyler. `-DistributedFileLogger` anahtarı, düğüm başına bir günlük dosyası olduğu anlamına gelir. İletme günlükçü üzerindeki parametreleri ayarlamak için `-FileLoggerParameters` anahtarını kullanın. Bu ve diğer *MSBuild. exe* anahtarları hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
 
-## <a name="multi-processor-aware-loggers"></a>Birden çok işlemciye duyarlı günlükçüler
- Çok işlemcili bir sistemde bir proje oluşturduğunuzda, her işlemci derleme iletilerden otomatik olarak birleştirilmiş bir dizisinde, araya eklemeli değil. Bunun yerine, bir ileti önceliği kullanarak gruplandırma kurmak <xref:Microsoft.Build.Framework.BuildEventContext> her iletiye sınıfı. Birden çok işlemcili oluşturma hakkında daha fazla bilgi için bkz. [çok işlemcili ortamda oturum açma](../msbuild/logging-in-a-multi-processor-environment.md).
+## <a name="multi-processor-aware-loggers"></a>Çok işlemcili oturum defterleri
+ Çok işlemcili bir sistemde bir proje oluşturduğunuzda, her işlemcideki yapı iletileri birleştirilmiş bir dizide otomatik olarak araya eklemeli. Bunun yerine, her iletiye iliştirilmiş <xref:Microsoft.Build.Framework.BuildEventContext> sınıfını kullanarak bir ileti gruplama önceliği oluşturmanız gerekir. Çok işlemcili derleme hakkında daha fazla bilgi için bkz. [Multi-Processor ortamında günlüğe kaydetme](../msbuild/logging-in-a-multi-processor-environment.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Derleme günlükleri alın](../msbuild/obtaining-build-logs-with-msbuild.md)
-- [Günlükçüleri derleme](../msbuild/build-loggers.md)
-- [Birden çok işlemcili ortamda oturum açma](../msbuild/logging-in-a-multi-processor-environment.md)
+- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Günlükçüler oluşturun](../msbuild/build-loggers.md)
+- [Çok işlemcili bir ortamda oturum açma](../msbuild/logging-in-a-multi-processor-environment.md)

@@ -1,36 +1,36 @@
 ---
-title: '11. Adım: Resim görüntüleyici uygulamanızı çalıştırın ve diğer özellikleri deneyin'
+title: '11. Adım: resim görüntüleyici uygulamanızı çalıştırma ve diğer özellikleri deneme'
 ms.date: 09/11/2019
 ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0489cce76642df0dd069e0a05e1e50b55d5d8f
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 865064bd85d45ccb24129d289b48143321486ca1
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118794"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579896"
 ---
-# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: Resim görüntüleyici uygulamanızı çalıştırın ve diğer özellikleri deneyin
+# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: resim görüntüleyici uygulamanızı çalıştırma ve diğer özellikleri deneme
 
-Resim görüntüleyici uygulamanız tamamlandı ve çalıştırılmaya hazırlanıyor. Uygulamanızı çalıştırabilir ve arka plan rengini <xref:System.Windows.Forms.PictureBox>ayarlayabilirsiniz. Daha fazla bilgi edinmek için formun rengini değiştirerek, düğmeleri ve onay kutusunu özelleştirerek ve formun özelliklerini değiştirerek uygulamayı geliştirmeyi deneyin.
+Resim görüntüleyici uygulamanız tamamlandı ve çalıştırılmaya hazırlanıyor. Uygulamanızı çalıştırabilir ve <xref:System.Windows.Forms.PictureBox>arka plan rengini ayarlayabilirsiniz. Daha fazla bilgi edinmek için formun rengini değiştirerek, düğmeleri ve onay kutusunu özelleştirerek ve formun özelliklerini değiştirerek uygulamayı geliştirmeyi deneyin.
 
 ## <a name="how-to-run-your-app-and-set-the-background-color"></a>Uygulamanızı çalıştırma ve arka plan rengini ayarlama
 
-1. **F5**' i seçin veya menü çubuğunda Hata **Ayıkla** > **Başlat hata**Ayıkla ' yı seçin.
+1. **F5**' i seçin veya menü çubuğunda hata **Ayıkla** > hata **ayıklamayı Başlat**' ı seçin.
 
 1. Bir resmi açmadan önce, **arka plan rengini ayarla** düğmesini seçin. **Renk** iletişim kutusu açılır.
 
-     ![Renk iletişim kutusu](../ide/media/express_colordialog.png)<br/>
+     ![Color iletişim kutusu](../ide/media/express_colordialog.png)<br/>
 ***Renk*** *iletişim kutusu*
 
-1. PictureBox arka plan rengini ayarlamak için bir renk seçin. Nasıl çalıştığını anlamak için `backgroundButton_Click()` (veya, `BackgroundButton_Click()`) yöntemine yakından bakın.
+1. PictureBox arka plan rengini ayarlamak için bir renk seçin. Nasıl çalıştığını anlamak için `backgroundButton_Click()` (veya `BackgroundButton_Click()`) yöntemine yakından bakın.
 
     > [!NOTE]
     > URL 'sini **Dosya Aç** iletişim kutusuna yapıştırarak Internet 'ten bir resim yükleyebilirsiniz. Arka plan renginiz görünür olduğundan, saydam bir arka plana sahip bir görüntü bulmaya çalışın.
@@ -52,9 +52,9 @@ Resim görüntüleyici uygulamanız tamamlandı ve çalıştırılmaya hazırlan
 Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 > [!div class="nextstepaction"]
-> [Öğretici 2: Süreli matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md)
+> [Öğretici 2: süreli bir matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md)
 
-Önceki öğretici adımına dönmek için bkz [. adım 10: Ek düğmeler ve onay kutusu](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)için kod yazın.
+Önceki öğretici adımına dönmek için bkz. [adım 10: ek düğmeler ve onay kutusu için kod yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

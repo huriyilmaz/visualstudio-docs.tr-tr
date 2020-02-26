@@ -9,19 +9,19 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 21959c4a0cc2b961eca43ab9724369c7aea8444b
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: 1d382e83aa9672cfdcbdca64b89be79d090f2aac
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061122"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580080"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>2\. Adım: ilk ASP.NET Core Web uygulamanızı oluşturma
 
@@ -33,7 +33,7 @@ _İlk ASP.NET Core uygulamanızı oluşturmak için bu videoyu izleyin ve takip 
 
 ## <a name="start-visual-studio-2019-and-create-a-new-project"></a>Visual Studio 2019 'yi başlatın ve yeni bir proje oluşturun
 
-Visual Studio 2019 ' u başlatın ve **Yeni proje oluştur**' a tıklayın. **ASP.NET Core Web uygulaması**' nı seçin. **Web uygulaması** şablonunu seçin ve varsayılan proje adını ve konumunu tutun. ASP.NET Core sürümüyle açılan menüde, **ASP.NET Core 2,1** veya **ASP.NET Core 2,2**' i seçin. **Oluştur**'u tıklatın. Daha ayrıntılı yönergeler için [Bu öğretici serisinde önceki videoya](tutorial-aspnet-core-ef-step-01.md)bakın.
+Visual Studio 2019 ' u başlatın ve **Yeni proje oluştur**' a tıklayın. **ASP.NET Core Web uygulaması**' nı seçin. **Web uygulaması** şablonunu seçin ve varsayılan proje adını ve konumunu tutun. ASP.NET Core sürümüyle açılan menüde, **ASP.NET Core 2,1** veya **ASP.NET Core 2,2**' i seçin. **Oluştur**’ tıklayın. Daha ayrıntılı yönergeler için [Bu öğretici serisinde önceki videoya](tutorial-aspnet-core-ef-step-01.md)bakın.
 
 ![Visual Studio 2019 ASP.NET Core projesi seçeneklerini belirleyin](media/vs-2019/vs2019-choose-aspnetcore-project.png)
 
@@ -66,7 +66,7 @@ Bu dosya, uygulama için giriş noktası işlevi görür. Uygulama çalıştır�
 
 *Program.cs* Içinde oluşturulan Web ana bilgisayarı başlangıç sınıfına başvurur ve uygulamayı yapılandırmak için yöntemlerini çağırır. ConfigureServices yöntemi, uygulamanın kullanacağı Hizmetleri ayarlamaktan sorumludur. `Configure` yöntemi, uygulamanın HTTP isteği ardışık düzenini ayarlar. Her istek bu işlem hattından geçerek her bir *Ara yazılım* ile etkileşime girer.
 
-### <a name="indexcshtml"></a>Index. cshtml
+### <a name="indexcshtml"></a>Index.cshtml
 
 Sitenin ana sayfası, bazı HTML biçimlendirmeleri ve bazı sunucu tarafı Razor kodlarını içerir. İlişkili *Index.cshtml.cs* dosyasında bulunan `IndexModel`sayfa modelini belirtmek için Razor kullanır. Ayrıca, ViewData içindeki bir değeri ayarlayarak sayfa başlığını ayarlar. Bu ViewData değeri, sayfalar klasörünün içindeki paylaşılan klasörde bulunan *\_Layout. cshtml* dosyasında okundu. Düzen dosyası pek çok Razor Pages paylaşılır ve uygulama için ortak görünüm sağlar. Her sayfanın içeriği, düzen dosyasının HTML 'si içinde işlenir.
 

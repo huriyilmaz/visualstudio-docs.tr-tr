@@ -12,31 +12,31 @@ helpviewer_keywords:
 - ResourcesGenerator task [WPF MSBuild]
 - ResourcesGenerator task [WPF MSBuild], parameters
 ms.assetid: e782bbac-9ee6-472b-8171-3ee008c77b4e
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ef54bdc3b3c692869b4883cf4f92293551a1958
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 703cd7bc3d0dd0e2229365dde39418ff32ad0a3e
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996769"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579609"
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator görevi
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> Görev bir veya daha fazla kaynak katıştırır (*.jpg*, *.ico*, *.bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimi ve diğer uzantı türleri) bir içine *.resources* dosya.
+<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> görevi bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimde ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`OutputPath`|Gerekli **dize** parametresi.<br /><br /> Çıktı dizini yolunu belirtir. Yol mutlak bir yol yoksa kök proje dizinine göreli bir yol olarak kabul edilir.|
-|`OutputResourcesFile`|Gerekli **Itaskıtem []** çıkış parametresi.<br /><br /> Oluşturulan adını ve yolunu belirtir *.resources* dosya. Yol mutlak bir yol değilse *.resources* dosyası kök proje dizinine göreli oluşturulur.|
-|`ResourcesFiles`|Gerekli **Itaskıtem []** parametresi.<br /><br /> Oluşturulan eklemek için bir veya daha fazla kaynak belirtir *.resources* dosya.|
+|`OutputPath`|Gerekli **dize** parametresi.<br /><br /> Çıkış dizininin yolunu belirtir. Yol mutlak bir yol değilse, kök proje diziniyle ilişkili bir yol olarak kabul edilir.|
+|`OutputResourcesFile`|Gerekli **ITaskItem []** çıkış parametresi.<br /><br /> Oluşturulan *. resources* dosyasının yolunu ve adını belirtir. Yol mutlak bir yol değilse, *. resources* dosyası kök proje dizinine göre oluşturulur.|
+|`ResourcesFiles`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Oluşturulan *. resources* dosyasına eklemek için bir veya daha fazla kaynak belirtir.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, oluşturur bir *.resources* tek bir dosyayla *.bmp* kaynak. *.Bmp* kaynak proje kök dizinine göreli bir dizin oluşturulur.
+ Aşağıdaki örnek, tek bir *. bmp* kaynağı ile bir *. resources* dosyası oluşturur. *. Bmp* kaynağı, proje kök dizinine göreli bir dizine üretilir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -57,4 +57,4 @@ ms.locfileid: "62996769"
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Bir WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

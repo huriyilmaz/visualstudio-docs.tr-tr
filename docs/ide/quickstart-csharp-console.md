@@ -8,33 +8,33 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 94e7a0917a07a3e36ec46b0f9e530dd55728e4ee
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 20b2cf2bf12e9b24ca12d0a73b43e4a56e8246f4
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180117"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579481"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı Başlangıç: İlk C# konsol uygulamanızı oluşturmak Için Visual Studio 'yu kullanma
+# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı başlangıç: ilk C# konsol uygulamanızı oluşturmak Için Visual Studio 'yu kullanma
 
 Visual Studio tümleşik geliştirme ortamına (IDE) bu 5-10 dakikalık bir giriş içinde, konsolunda çalışan basit C# bir uygulama oluşturacaksınız.
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
@@ -46,7 +46,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 1. Visual Studio 2017'yi açın.
 
-2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
 3. Sol bölmedeki **Yeni proje** iletişim kutusunda, öğesini genişletin **C#** ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *HelloWorld*olarak adlandırın.
 
@@ -109,19 +109,19 @@ Visual Studio, projenizde varsayılan "Merhaba Dünya" kodunu içerir.
 
 ::: moniker-end
 
-(Bunu yapmak için, "Merhaba Dünya! <xref:System.Console.WriteLine%2A> " değişmez dizesini göstermek için yöntemini çağırır. Konsol penceresinde.)
+(Bunu yapmak için, "Merhaba Dünya!" değişmez dizesini göstermek için <xref:System.Console.WriteLine%2A> yöntemini çağırır. Konsol penceresinde.)
 
    ![Şablondan varsayılan Merhaba Dünya kodunu görüntüleme](../ide/media/csharp-console-helloworld-template.png)
 
 **F5**tuşuna basarsanız, programı hata ayıklama modunda çalıştırabilirsiniz. Ancak, konsol penceresi kapanmadan önce yalnızca bir süre görünür.
 
-(Bu davranış, `Main` yöntemi tek ifadesinin yürütüldükten sonra sonlandırdığı ve bu nedenle uygulama sona erdiğinde oluşur.)
+(Bu davranış, `Main` yöntemi tek bir deyimin yürütüldükten sonra sonlandığı ve bu nedenle uygulamanın sona ermesidir.)
 
 ### <a name="add-some-code"></a>Kod ekleme
 
 Uygulamayı duraklatmak için, **ENTER**tuşuna basarak konsol penceresinin kapanmaması için bazı kodlar ekleyelim.
 
-1. <xref:System.Console.WriteLine%2A> Yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
+1. <xref:System.Console.WriteLine%2A> yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
 
    ```csharp
    Console.ReadLine();

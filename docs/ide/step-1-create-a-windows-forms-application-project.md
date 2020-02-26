@@ -5,17 +5,17 @@ ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a1c0184c11b745ef6c83c35b524884a139bc3d8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2d5e34d825d2a4d296a8a394105b412195b4e3fb
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588791"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579905"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1\. Adım: Windows Forms uygulama projesi oluşturma
 
@@ -25,7 +25,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 ## <a name="open-visual-studio-2017"></a>Visual Studio 2017 'yi açın
 
-1. Menü çubuğunda, **dosya** > **yeni** > **proje**. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
+1. Menü çubuğunda **dosya** > **Yeni** > **Proje**' yi seçin. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
      Yeni proje iletişim kutusunu ![](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje*** *iletişim kutusu*
 

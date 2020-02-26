@@ -8,17 +8,17 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 6e317f6e-ba4c-4306-8924-300b0c2f65c6
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c451b2da08fdb0b38487438a47c6285b0380627
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 881fa0d90390a059bea28cb19584381f814396d3
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647449"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579756"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>8\. Adım: oyuncunun kazandığını doğrulamak için bir yöntem ekleyin
 Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç var. Oyuncu, oynatıcı WINS 'e göre sona erdirmek için, oynatıcının kazanıldığını doğrulamak üzere bir `CheckForWinner()` yöntemi eklemeniz gerekir.
@@ -31,9 +31,9 @@ Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç 
      [!code-vb[VbExpressTutorial4Step8#10](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_1.vb)]
 
       > [!IMPORTANT]
-      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com ](../ide/media/docs-programming-language-control.png) için dil denetimi ![Programming     
+      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com](../ide/media/docs-programming-language-control.png) için programlama dili denetimi ![     
 
-     Yöntemi, <xref:System.Windows.Forms.TableLayoutPanel> her bir etikette gezinmek C# için Visual Basic içinde veya `For Each` döngüsünde başka bir `foreach` döngüsünü kullanır. Bu, arka planla eşleşip eşleşmediğini doğrulamak üzere C# her etiketin simge rengini denetlemek için eşitlik işlecini (`==` içinde `=` ve Visual Basic) kullanır. Renkler eşleşiyorsa simge görünmez halde kalır ve oyuncu kalan simgelerin tümünü eşleştirmemiştir. Bu durumda program, yöntemin geri kalanını atlamak için bir `return` ekstresi kullanır. Döngü `return` ifadesini yürütmeden tüm etiketleri alırsa, bu, formdaki tüm simgelerin eşleştirildiği anlamına gelir. Program, oyunu kazanmak için bir MessageBox gösterir ve ardından oyunun sona erdirmek için formun `Close()` yöntemini çağırır.
+     Yöntemi, <xref:System.Windows.Forms.TableLayoutPanel>her bir etikette gezinmek C# için Visual Basic içinde veya `For Each` döngüsünde başka bir `foreach` döngüsünü kullanır. Bu, arka planla eşleşip eşleşmediğini doğrulamak üzere C# her etiketin simge rengini denetlemek için eşitlik işlecini (`==` içinde `=` ve Visual Basic) kullanır. Renkler eşleşiyorsa simge görünmez halde kalır ve oyuncu kalan simgelerin tümünü eşleştirmemiştir. Bu durumda program, yöntemin geri kalanını atlamak için bir `return` ekstresi kullanır. Döngü `return` ifadesini yürütmeden tüm etiketleri alırsa, bu, formdaki tüm simgelerin eşleştirildiği anlamına gelir. Program, oyunu kazanmak için bir MessageBox gösterir ve ardından oyunun sona erdirmek için formun `Close()` yöntemini çağırır.
 
 2. Sonra, etiketin <xref:System.Windows.Forms.Control.Click> olay işleyicisinin yeni `CheckForWinner()` metodunu çağırmasını sağlayabilirsiniz. Oyuncunun seçtiği ikinci simgeyi gösterdikten hemen sonra programınızın bir kazanan olup olmadığını denetlediğinden emin olun. Aşağıdaki kodda gösterildiği gibi, seçili ikinci simgenin rengini ayarladığınız çizgiyi bulun ve ardından `CheckForWinner()` yöntemini hemen sonra çağırın.
 
@@ -42,7 +42,7 @@ Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç 
 
 3. Programı kaydedip çalıştırın. Oyunu oynayın ve tüm simgeleri eşleştirin. Kazandığınızda, program bir kutlama **MessageBox** (aşağıdaki ekran görüntüsünde gösterildiği gibi) görüntüler ve sonra kutuyu kapatır.
 
-     MessageBox ](../ide/media/express_tut4step8.png) ile ![Matching oyunu<br/>
+     MessageBox](../ide/media/express_tut4step8.png) ile eşleşen oyuna ![<br/>
 ***MessageBox*** *ile* ***eşleşen oyun***
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için

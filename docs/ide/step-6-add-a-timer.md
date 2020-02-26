@@ -8,17 +8,17 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aeb28fe7fbfbaa6e2d120fe58fdc39f188367b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23d050df688d4d1efec75245e6f48d748464170c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647496"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579317"
 ---
 # <a name="step-6-add-a-timer"></a>6\. Adım: Zamanlayıcı ekleme
 Ardından, eşleşen oyuna bir <xref:System.Windows.Forms.Timer> denetimi eklersiniz. Bir Zamanlayıcı belirtilen sayıda milisaniye bekler ve sonra *değer*olarak adlandırılan bir olayı tetikler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
@@ -27,8 +27,8 @@ Ardından, eşleşen oyuna bir <xref:System.Windows.Forms.Timer> denetimi eklers
 
 1. **Windows Form Tasarımcısı**içindeki Araç kutusundan **Zamanlayıcı** ' yı seçin ( **Bileşenler** kategorisinde) ve ardından **ENTER** tuşunu seçin veya bir zamanlayıcı denetimi eklemek için zamanlayıcıyı çift tıklayın. Aşağıdaki görüntüde gösterildiği gibi, **Süreölçer1**adlı zamanlayıcının simgesinin, formun altındaki bir alanda görünmesi gerekir.
 
-     ![Timer](../ide/media/express_timer.png)<br/>
-***Timer***
+     ![Zamanlayıcı](../ide/media/express_timer.png)<br/>
+***Zamanlayıcı***
 
     > [!NOTE]
     > Araç kutusu boş ise, araç kutusunu açmadan önce formun arkasındaki kodu değil de, form tasarımcısını seçtiğinizden emin olun.
@@ -41,9 +41,9 @@ Ardından, eşleşen oyuna bir <xref:System.Windows.Forms.Timer> denetimi eklers
      [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]
 
       > [!IMPORTANT]
-      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com ](../ide/media/docs-programming-language-control.png) için dil denetimi ![Programming
+      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com](../ide/media/docs-programming-language-control.png) için programlama dili denetimi ![
 
-     Tick olay işleyicisi üç şeyi yapar: Ilk olarak, <xref:System.Windows.Forms.Timer.Stop> yöntemini çağırarak zamanlayıcının çalışmadığından emin olur. Daha sonra, Player 'ın görünmez bir şekilde seçtiği iki etiketin simgelerini açmak için `firstClicked` ve `secondClicked` iki başvuru değişkeni kullanır. Son olarak, `firstClicked` ve `secondClicked` başvuru değişkenlerini Visual Basic içinde `null` C# ve `Nothing` sıfırlar. Programın kendini sıfırlama şekli olması nedeniyle bu adım önemlidir. Artık <xref:System.Windows.Forms.Label> denetimleri izlemediğinden, Player bir etiketi yeniden seçebilmesi için hazırdır.
+     Tick olay işleyicisi üç şeyi yapar: Ilk olarak, <xref:System.Windows.Forms.Timer.Stop> yöntemini çağırarak zamanlayıcının çalışmadığından emin olur. Daha sonra, Player 'ın görünmez bir şekilde seçtiği iki etiketin simgelerini açmak için `firstClicked` ve `secondClicked`iki başvuru değişkeni kullanır. Son olarak, `firstClicked` ve `secondClicked` başvuru değişkenlerini Visual Basic içinde `null` C# ve `Nothing` sıfırlar. Programın kendini sıfırlama şekli olması nedeniyle bu adım önemlidir. Artık <xref:System.Windows.Forms.Label> denetimleri izlemediğinden, Player bir etiketi yeniden seçebilmesi için hazırdır.
 
     > [!NOTE]
     > Zamanlayıcı nesnesi, süreölçeri Başlatan bir `Start()` yöntemi ve bunu durduran bir `Stop()` yöntemi içerir. Zamanlayıcı 'nın **etkin** özelliğini **Özellikler** penceresinde **doğru** olarak ayarladığınızda, program başladıktan hemen sonra başlatılır. Ancak **false**olarak ayarladıktan sonra, `Start()` yöntemi çağrılana kadar başlatılmaz. Normal olarak, bir Zamanlayıcı Tick olayını tekrar tekrar tekrar tetiklerler ve zaman işaretleri arasında kaç milisaniye bekleneceğini anlamak için **Interval** özelliğini kullanmaktır. Zamanlayıcının `Stop()` yönteminin Tick olayının içinde nasıl çağrıldığını fark etmiş olabilirsiniz. Bu, süreölçeri *tek bir görüntü moduna*geçirir, yani `Start()` yöntemi çağrıldığında, belirtilen aralığı bekler, tek bir Tick olayını tetikler ve sonra duraklar.

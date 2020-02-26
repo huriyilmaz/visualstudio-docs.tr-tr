@@ -1,5 +1,5 @@
 ---
-title: FileClassifier görevi | Microsoft Docs
+title: Filesınıflandırıcı görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,39 +12,39 @@ helpviewer_keywords:
 - non-localizable resources [WPF MSBuild], classifying to embed in an assembly
 - FileClassifier task [WPF MSBuild]
 ms.assetid: 14e03310-fcc0-4bb2-a84d-cda12be66367
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d9dd845a69243cd8bedb095c63f75670f39afff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cd533507e1c498ae315529bd8ab17dd175b7f836
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830177"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579686"
 ---
-# <a name="fileclassifier-task"></a>FileClassifier görevi
-<xref:Microsoft.Build.Tasks.Windows.FileClassifier> Görev bir bütünleştirilmiş kod içine katıştırılmış olarak kaynak kaynak kümesini sınıflandırır. Bir kaynak yerelleştirilebilir değil ise, ana uygulama derlemesine eklenir; Aksi takdirde, bir uydu derlemeye eklenir.
+# <a name="fileclassifier-task"></a>Filesınıflandırıcı görevi
+<xref:Microsoft.Build.Tasks.Windows.FileClassifier> görevi bir kaynak kaynakları kümesini bir derlemeye katıştırılacak şekilde sınıflandırır. Bir kaynak yerelleştirilebilir değilse, ana uygulama derlemesine katıştırılır; Aksi halde, bir uydu derlemesine katıştırılır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`CLREmbeddedResource`|Kullanılmayan.|
-|`CLRResourceFiles`|Kullanılmayan.|
-|`CLRSatelliteEmbeddedResource`|Kullanılmayan.|
-|`Culture`|İsteğe bağlı **dize** parametresi.<br /><br /> Derleme için kullanılacak kültürü belirtir. Bu değer **null** derleme yerelleştirilemeyen ise. Varsa **null**, küçük değer varsayılan değerdir **CultureInfo.InvariantCulture** döndürür.|
-|`MainEmbeddedFiles`|İsteğe bağlı **Itaskıtem []** çıkış parametresi.<br /><br /> Ana derleme gömülü yerelleştirilemeyen kaynaklar belirtir.|
-|`OutputType`|Gerekli **dize** parametresi.<br /><br /> Belirtilen kaynak dosyalarıyla katıştırmak için dosya türünü belirtir. Geçerli değerler **exe**, **winexe**, veya **Kitaplığı**.|
-|`SatelliteEmbeddedFiles`|İsteğe bağlı **Itaskıtem []** çıkış parametresi.<br /><br /> Belirtilen kültür için uydu derlemesine gömülür yerelleştirilebilir dosyaları belirtir **kültür** parametresi.|
-|`SourceFiles`|Gerekli **Itaskıtem []** parametresi.<br /><br /> Dosyaları sınıflandırmak için listesini belirtir.|
+|`CLREmbeddedResource`|Kullanılmıyor.|
+|`CLRResourceFiles`|Kullanılmıyor.|
+|`CLRSatelliteEmbeddedResource`|Kullanılmıyor.|
+|`Culture`|İsteğe bağlı **dize** parametresi.<br /><br /> Derleme için kültürü belirtir. Bu değer, derleme yerelleştirilemeyen ise **null** olabilir. **Null**ise, varsayılan değer, **CultureInfo. InvariantCulture** işlevinin döndürdüğü küçük harfli değerdir.|
+|`MainEmbeddedFiles`|İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> Ana derlemeye eklenmiş olan yerelleştirilemeyen kaynakları belirtir.|
+|`OutputType`|Gerekli **dize** parametresi.<br /><br /> Belirtilen kaynak dosyaların içine gömüleceği dosya türünü belirtir. Geçerli değerler **exe**, **winexe**veya **Library**.|
+|`SatelliteEmbeddedFiles`|İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> **Kültür** parametresi tarafından belirtilen kültürün uydu derlemesine gömülü olan yerelleştirilebilir dosyaları belirtir.|
+|`SourceFiles`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Sınıflandırılacağı dosyaların listesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
-Varsa **kültür** parametresi ayarlanmadı, kullanılarak belirtilen tüm kaynakların **Kaynakdosyalar** parametresi yerelleştirilemeyen; bir ileilişkiliolduklarısüreceAksitakdirde,bunlaryerelleştirilebilir **Yerelleştirilebilir** ayarlanan öznitelik **false**.
+**Kültür** parametresi ayarlanmamışsa **SourceFiles** parametresi kullanılarak belirtilen tüm kaynaklar yerelleştirilemeyen; Aksi takdirde, **yanlış**olarak ayarlanmış bir **yerelleştirilebilir** özniteliğiyle ilişkilendirilmedikleri müddetçe bunlar yerelleştirilebilir olur.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, tek bir kaynak dosyasını kaynak olarak sınıflandırır ve French-Canadian (fr-CA) kültür için bir uydu derlemeye katıştırır.
+Aşağıdaki örnek, tek bir kaynak dosyayı kaynak olarak sınıflandırır ve ardından Fransızca-Kanada (fr-CA) kültürü için bir uydu derlemesine katıştırır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -68,4 +68,4 @@ Aşağıdaki örnek, tek bir kaynak dosyasını kaynak olarak sınıflandırır 
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Bir WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

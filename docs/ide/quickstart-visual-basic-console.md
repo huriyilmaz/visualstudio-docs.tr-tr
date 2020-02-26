@@ -7,33 +7,33 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: c7da73ac3f47b6b63817ff905923b71e3354b06c
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 34f3dc8642e2cf8e965e2ad303bed79931d2645c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180087"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579503"
 ---
-# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Hızlı Başlangıç: Visual Basic ile Visual Studio 'da ilk konsol uygulamanızı oluşturma
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Hızlı başlangıç: Visual Basic ile Visual Studio 'da ilk konsol uygulamanızı oluşturma
 
 Visual Studio tümleşik geliştirme ortamına (IDE) bu 5-10 dakikalık bir giriş içinde, konsolunda çalışan basit bir Visual Basic uygulaması oluşturacaksınız.
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
@@ -45,7 +45,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 1. Visual Studio 2017'yi açın.
 
-2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
 3. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *HelloWorld*olarak adlandırın.
 
@@ -64,7 +64,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Bu hızlı başlangıçtaki ekran görüntüleri koyu temasını kullanır. Koyu tema kullanmayan ancak öğrenmek istiyorsanız [Düzenleyicisi ve Visual Studio IDE'yi kişiselleştirme](quickstart-personalize-the-ide.md) öğrenmek için sayfa nasıl.
+> Bu hızlı başlangıçtaki ekran görüntüleri koyu temasını kullanır. Koyu tema kullanmıyorsanız, ancak isterseniz, nasıl yapılacağını öğrenmek için [Visual STUDIO IDE ve düzenleyici 'Yi kişiselleştirme](quickstart-personalize-the-ide.md) sayfasına bakın.
 
 1. Visual Studio 2019 ' i açın.
 
@@ -99,7 +99,7 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-Visual Basic proje şablonunuzu seçip projenizi adlandırın, Visual Studio sizin için basit bir "Merhaba Dünya" uygulaması oluşturur. "Merhaba Dünya! <xref:System.Console.WriteLine%2A> " değişmez dizesini göstermek için yöntemini çağırır Konsol penceresinde.
+Visual Basic proje şablonunuzu seçip projenizi adlandırın, Visual Studio sizin için basit bir "Merhaba Dünya" uygulaması oluşturur. "Merhaba Dünya!" değişmez dizesini göstermek için <xref:System.Console.WriteLine%2A> yöntemini çağırır Konsol penceresinde.
 
 ![Şablondan varsayılan Merhaba Dünya kodunu görüntüleme](../ide/media/vb-console-helloworld-template.png)
 
@@ -107,13 +107,13 @@ IDE 'deki **HelloWorld** düğmesine tıklarsanız, programı hata ayıklama mod
 
   ![Programı hata ayıklama modunda çalıştırmak için Merhaba Dünya düğmesine tıklayın](../ide/media/vb-console-hello-world-button.png)
 
-Bunu yaptığınızda, konsol penceresi kapanmadan önce yalnızca bir süre görünür olur. Bu durum, `Main` yöntemi tek ifadesinin yürütüldükten sonra sonlandırdığı ve bu nedenle uygulamanın sona ermesidir.
+Bunu yaptığınızda, konsol penceresi kapanmadan önce yalnızca bir süre görünür olur. Bunun nedeni, `Main` yönteminin tek bir deyimin yürütüldükten sonra sonlandırdığı ve uygulamanın sona ermesidir.
 
 ### <a name="add-some-code"></a>Kod ekleme
 
 Uygulamayı duraklatmak için bazı kodlar ekleyelim ve sonra Kullanıcı girişi soralım.
 
-1. <xref:System.Console.WriteLine%2A> Yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
+1. <xref:System.Console.WriteLine%2A> yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
 
    ```vb
    Console.Write("Press any key to continue...")
@@ -122,7 +122,7 @@ Uygulamayı duraklatmak için bazı kodlar ekleyelim ve sonra Kullanıcı giriş
 
     Bu, bir tuşa basarak programı duraklatır.
 
-2. Menü çubuğunda Build**Build Solution**öğesini > seçin.
+2. Menü çubuğunda **derleme** > **Build Solution**' ı seçin.
 
    Bu, programınızı bir tam zamanında (JıT) derleyicisi tarafından ikili koda dönüştürülen bir ara dile (IL) derler.
 

@@ -10,17 +10,17 @@ apitype: COM
 helpviewer_keywords:
 - ResumeTracking
 ms.assetid: d637e019-7c50-4b0a-812e-bc822001e697
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e2ff32a4eb2218a8b3d09188c787156e484147f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bb4663013a73d88ed7c2118816007705834162c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996692"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578441"
 ---
 # <a name="resumetracking"></a>ResumeTracking
 Geçerli bağlamda izlemeyi sürdürür.
@@ -32,10 +32,10 @@ HRESULT WINAPI ResumeTracking();
 ```
 
 ## <a name="return-value"></a>Dönüş değeri
- Bir **HRESULT** ile **başarılı** izleme devam ediyor durumunda biti ayarlanmamış. **E_FAIL** izleme bağlamı kullanılabilir olmadığından ettirilemiyor, döndürülür.
+ İzleme devam ettirilirse, **başarılı** biti ayarlanmış bir **HRESULT** . Bağlam kullanılabilir olmadığından izleme sürdürülemediğinden **E_FAIL** döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *FileTracker.h*
+ **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SuspendTracking](../msbuild/suspendtracking.md)

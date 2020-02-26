@@ -8,21 +8,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d99a6ae3d2b1a2c0acfe4aee160801181c72cbe7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0d1c8cfb94b74f54eaaddd6b8d6d0fd17216b94
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994913"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77577955"
 ---
 # <a name="overview-of-tools-for-measuring-performance-in-visual-studio"></a>Visual Studio performansını ölçmek için araçlarına genel bakış
 
-Profil oluşturma ve tanılama araçları bellek ve CPU kullanımı ve diğer uygulama düzeyi sorunları tanılamanıza yardımcı olur. Bu araçları kullanarak uygulamanızı çalıştırma zamanı gibi bir süre boyunca (örneğin, değişken değerleri, işlev çağrıları ve olayları) veri toplar. Kodunuzun yürütülmesi sırasında farklı noktalarda, uygulamanızın durumunu görüntülemek ya da uygulama performansınızı son İnceleme analizini gerçekleştirin.
+Profil oluşturma ve tanılama araçları, bellek ve CPU kullanımına ilişkin sorunları ve uygulama düzeyindeki diğer sorunları tanılamanıza yardımcı olur. Bu araçları kullanarak uygulamanızı çalıştırma zamanı gibi bir süre boyunca (örneğin, değişken değerleri, işlev çağrıları ve olayları) veri toplar. Kodunuzun yürütülmesi sırasında farklı noktalarda, uygulamanızın durumunu görüntülemek ya da uygulama performansınızı son İnceleme analizini gerçekleştirin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Araçlar profil oluşturmaya ilk bakış](../profiling/profiling-feature-tour.md) uygulama performansını ölçmek için birçok farklı yönleri hakkında bilgi edinmek için.
+* Uygulama performansını ölçmenin birçok farklı yolu hakkında bilgi edinmek için [öncelikle profil oluşturma araçlarına göz atın](../profiling/profiling-feature-tour.md) .
 
-* [CPU kullanımını analiz etme](../profiling/cpu-usage.md) CPU kullanım aracı hakkında daha ayrıntılı bilgiler.
+* CPU kullanımı aracı hakkında daha ayrıntılı bilgi için [CPU kullanımını çözümleyin](../profiling/cpu-usage.md) .
 
-* [Bellek kullanımını analiz etme](../profiling/memory-usage.md) performans sorunlarını tanımlamak için.
+* Performans sorunlarını belirlemek için [bellek kullanımını çözümleyin](../profiling/memory-usage.md) .
+
+* .NET uygulamalarında performans sorunlarını belirlemek için [.NET nesne ayırma aracı 'nı kullanarak bellek kullanımını çözümleyin](../profiling/dotnet-alloc-tool.md) .

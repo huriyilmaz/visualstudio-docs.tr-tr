@@ -13,57 +13,57 @@ helpviewer_keywords:
 - build tasks using the Microsoft build engine [WPF MSBuild], compile markup and process resources
 - WPF MSBuild task reference [WPF MSBuild]
 ms.assetid: 96df0370-e50f-4ffc-9771-b12fb8721143
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 121c3da6d3e2609c1a271177e089e0f38a0d89fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84aeae06a5440bfc82eb9590919800ebcdd425d5
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778332"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578183"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild görev başvurusu
-Windows Presentation Foundation (WPF) derleme işlemi derleme görevleri işaretlemesi ve işlem kaynaklarını derlemek için görevleri de dahil olmak üzere, ek bir kümesi Microsoft build engine (MSBuild) genişletir.
+Windows Presentation Foundation (WPF) derleme işlemi, Microsoft Build Engine 'i (MSBuild), biçimlendirme ve işlem kaynaklarını derlemeye yönelik görevler de dahil olmak üzere ek bir yapı görevi kümesiyle genişletir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [FileClassifier](../msbuild/fileclassifier-task.md)
 
- Bir bütünleştirilmiş kod içine katıştırılmış olarak kaynak kaynak kümesini sınıflandırır. Bir kaynak yerelleştirilebilir değil ise, ana uygulama derlemesine eklenir; Aksi takdirde, bir uydu derlemeye eklenir.
+ Bir kaynak kaynakları kümesini bir derlemeye katıştırılacak şekilde sınıflandırır. Bir kaynak yerelleştirilebilir değilse, ana uygulama derlemesine katıştırılır; Aksi halde, bir uydu derlemesine katıştırılır.
 
 - [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)
 
- En az bir derleme oluşturur [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] projesinde sayfasına başvuruda o projede yerel olarak bildirilmiş bir tür. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya derleme işlemi başarısız olursa kaldırılır.
+ Bir projede en az bir [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] sayfası bu projede yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturur. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya yapı işlemi başarısız olursa kaldırılır.
 
 - [GetWinFXPath](../msbuild/getwinfxpath-task.md)
 
- Geçerli dizinin döndürür [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] çalışma zamanı.
+ Geçerli [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] çalışma zamanının dizinini döndürür.
 
 - [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md)
 
- Yerelleştirilemeyen dönüştürür [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] proje dosyaları için derlenmiş ikili biçimi.
+ Yerelleştirilemeyen [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] proje dosyalarını derlenmiş ikili biçime dönüştürür.
 
 - [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)
 
- İkinci geçiş işaretlemesi derleme gerçekleştirir [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] başvuru türleri aynı projedeki dosyaları.
+ Aynı projedeki türlere başvuran [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] dosyalarında ikinci geçiş biçimlendirme derlemesini gerçekleştirir.
 
 - [MergeLocalizationDirectives](../msbuild/mergelocalizationdirectives-task.md)
 
- Yerelleştirme öznitelikleri ve yorumlar veya birden fazla birleştirir [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] tüm derleme için tek bir dosya halinde ikili biçimi dosyaları.
+ Bir veya daha fazla [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- Bir veya daha fazla kaynak katıştırır (*.jpg*, *.ico*, *.bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimi ve diğer uzantı türleri) içine bir *.resources*dosya.
+ Bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimde ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
- Denetler, güncelleştirir veya tüm yerelleştirmek için benzersiz tanımlayıcıları (Uıd'leri) kaldırır [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] kaynakta bulunan öğeleri [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyaları.
+ Kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarında yer alan tüm [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] öğelerini yerelleştirmek için, benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- Ekler  **\<HostInBrowser / >** öğe uygulama bildiriminin (*\<projectname >. exe.manifest*) olduğunda bir [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] Proje oluşturulur.
+ Bir [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] projesi oluşturulduğunda, uygulama bildirimine **\<HostInBrowser/>** öğesi ekler ( *\<ProjectName >. exe. manifest*).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [MSBuild](../msbuild/msbuild.md)

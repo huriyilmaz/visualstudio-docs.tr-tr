@@ -13,22 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56ecf4cb1d777362daf381646094c20f82f30f85
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910355"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578346"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklayıcı olmadan bellek kullanımını analiz etme
 
 **Bellek kullanımı** Aracı, uygulamanızın bellek kullanımını izler. Visual Studio 'da etkin bir şekilde geliştirmekte olduğunuz senaryoların gerçek zamanlı bellek efektlerini incelemek için aracını kullanabilirsiniz. Uygulamanın bellek durumlarının ayrıntılı anlık görüntülerini alabilir ve bellek sorunlarının ana nedenlerini bulmak için anlık görüntüleri karşılaştırabilirsiniz.
 
 **Bellek kullanımı** Aracı, hata ayıklayıcı ile veya olmadan çalıştırılabilir. Aşağıdaki yönergelerde, Visual Studio **performans profil oluşturucusu**'nda hata ayıklayıcı olmadan **bellek kullanımı** aracının nasıl kullanılacağı gösterilmektedir.
-
->[!NOTE]
->- .NET Core uygulamasının bellek kullanımını ölçmek için, hata ayıklayıcı ile **bellek kullanımı** aracını kullanmanız gerekir. Yönergeler için bkz. [Visual Studio 'Da profil bellek kullanımı](memory-usage.md).
->- JavaScript veya HTML UWP uygulamalarında bellek kullanımını çözümlemek için **performans profili Oluşturucu**'Da [JavaScript bellek](../profiling/javascript-memory.md) aracını kullanın.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Bellek kullanımı tanılama oturumları
 

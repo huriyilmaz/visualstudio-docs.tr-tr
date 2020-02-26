@@ -1,5 +1,5 @@
 ---
-title: AssignCulture görevi | Microsoft Docs
+title: Atama kültür görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,37 +13,37 @@ helpviewer_keywords:
 - MSBuild, AssignCulture task
 - AssignCulture task [MSBuild]
 ms.assetid: 8f8314cc-82a6-4f16-a62d-b9f0d1d5e274
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cf6627b23f7421dc164cf13bbaab46e8d7a2577
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 393077d6391a5c1f5f4088773013538efbedc9f7
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823295"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578712"
 ---
 # <a name="assignculture-task"></a>AssignCulture görevi
-Bu görev, dosya adının bir parçası olarak geçerli bir .NET kültür tanımlayıcı dizesi içerebilir öğelerinin bir listesini kabul eder ve adlı bir meta veri içermeyen öğeleri üretir `Culture` karşılık gelen içeren kültür tanımlayıcısı. Örneğin, dosya adı *Form1.fr-fr.resx* bu görev meta verilerle aynı dosya adını içeren bir öğe oluşturur tanımlayıcı "fr-fr", katıştırılmış bir kültür bulunduğundan `Culture` eşit `fr-fr`. Görev, dosya adları listesini de dosya kaldırıldı kültürüyle üretir.
+Bu görev, dosya adının bir parçası olarak geçerli bir .NET kültür tanımlayıcı dizesi içerebilen öğelerin listesini kabul eder ve karşılık gelen kültür tanımlayıcısını içeren `Culture` adlı meta verilere sahip öğeler üretir. Örneğin, *Form1.fr-fr. resx* dosya adında gömülü bir kültür tanımlayıcısı "fr-fr" bulunur, bu nedenle bu görev, `fr-fr`eşit `Culture` aynı dosya adına sahip bir öğe üretecektir. Görev Ayrıca, dosya adından kaldırılan kültür içeren dosya adlarının listesini de oluşturur.
 
 ## <a name="task-parameters"></a>Görev parametreleri
-Parametreleri aşağıdaki tabloda açıklanmıştır `AssignCulture` görev.
+Aşağıdaki tabloda `AssignCulture` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AssignedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Alınan öğelerin listesini içeren `Files` parametresi ile bir `Culture` meta veri girdisi her öğesine eklendi.<br /><br /> Gelen öğesini varsa `Files` parametre zaten var. bir `Culture` meta veri girdisi, özgün meta veri girdisi kullanılır.<br /><br /> Yalnızca görevi atayan bir `Culture` dosya adı, geçerli kültür tanımlayıcısı içeriyorsa meta veri girdisi. Kültür tanımlayıcısı, dosya adında son iki nokta arasında olmalıdır.|
-|`AssignedFilesWithCulture`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Alt öğeleri kümesini içeren `AssignedFiles` sahip parametre bir `Culture` meta veri girdisi.|
-|`AssignedFilesWithNoCulture`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Alt öğeleri kümesini içeren `AssignedFiles` sahip olmayan bir parametre bir `Culture` meta veri girdisi.|
-|`CultureNeutralAssignedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> İçinde oluşturulan öğeler aynı listesini içeren `AssignedFiles` parametresi dışındaki kültürüyle dosya adından kaldırıldı.<br /><br /> Geçerli kültür tanımlayıcısı olması durumunda görev kültürü yalnızca dosya adını kaldırır.|
-|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Bir kültüre atamak için katıştırılmış kültür adları olan dosyaların listesini belirtir.|
+|`AssignedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> `Files` parametresinde alınan öğelerin listesini, her öğeye bir `Culture` meta veri girişi eklenerek içerir.<br /><br /> `Files` parametresindeki gelen öğe zaten bir `Culture` meta veri girişi içeriyorsa, özgün meta veri girişi kullanılır.<br /><br /> Dosya adı geçerli bir kültür tanımlayıcısı içeriyorsa, görev yalnızca bir `Culture` meta veri girişi atar. Kültür tanımlayıcısı dosya adında son iki nokta arasında olmalıdır.|
+|`AssignedFilesWithCulture`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> `Culture` meta veri girişi olan `AssignedFiles` parametresindeki öğelerin alt kümesini içerir.|
+|`AssignedFilesWithNoCulture`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> `Culture` meta veri girişi olmayan `AssignedFiles` parametresindeki öğelerin alt kümesini içerir.|
+|`CultureNeutralAssignedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Dosya adından kaldırılan kültür hariç `AssignedFiles` parametresinde üretilen öğelerin aynı listesini içerir.<br /><br /> Görev yalnızca geçerli bir kültür tanımlayıcda dosya adından kültürü kaldırır.|
+|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Bir kültürü atamak için gömülü kültür adlarına sahip dosyaların listesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
-Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension taban sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek yürütür `AssignCulture` ile görev `ResourceFiles` öğe koleksiyonu.
+ Aşağıdaki örnek, `AssignCulture` görevini `ResourceFiles` öğesi koleksiyonuyla yürütür.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -68,14 +68,14 @@ Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devrala
 </Project>
 ```
 
-Aşağıdaki tabloda, görev yürütme sonrasında çıkış öğelerin değerini açıklanmaktadır. Öğe meta verileri öğeden sonra parantez içinde gösterilmektedir.
+Aşağıdaki tabloda, görev yürütmeden sonra çıkış öğelerinin değeri açıklanmaktadır. Öğe meta verileri, öğeden sonra parantez içinde gösterilir.
 
 |Öğe koleksiyonu|İçindekiler|
 |---------------------|--------------|
-|`OutAssignedFiles`|*MyResource1.fr.resx* (Culture="fr")<br /><br /> *MyResource2.XX.resx* (ek meta veri yok)|
-|`OutAssignedFilesWithCulture`|*MyResource1.fr.resx* (Culture="fr")|
-|`OutAssignedFilesWithNoCulture`|*MyResource2.XX.resx* (ek meta veri yok)|
-|`OutCultureNeutralAssignedFiles`|*MyResource1.resx* (kültür = "fr")<br /><br /> *MyResource2.XX.resx* (ek meta veri yok)|
+|`OutAssignedFiles`|*MyResource1. fr. resx* (kültür = "fr")<br /><br /> *MyResource2. xx. resx* (ek meta veri yok)|
+|`OutAssignedFilesWithCulture`|*MyResource1. fr. resx* (kültür = "fr")|
+|`OutAssignedFilesWithNoCulture`|*MyResource2. xx. resx* (ek meta veri yok)|
+|`OutCultureNeutralAssignedFiles`|*MyResource1. resx* (kültür = "fr")<br /><br /> *MyResource2. xx. resx* (ek meta veri yok)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görevler](../msbuild/msbuild-tasks.md)

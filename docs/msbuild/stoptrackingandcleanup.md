@@ -10,20 +10,20 @@ apitype: COM
 helpviewer_keywords:
 - StopTrackingAndCleanup
 ms.assetid: 9f8c5994-2dfc-43c3-a5fb-89b2f8990429
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56f4fb82ab0e9792cadbeeea05499744e4c8ce46
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4a80fcde7aeab601791c033bd21effce175b2cb9
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939029"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579568"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
-Tüm izleme durdurur ve izleme oturumu tarafından kullanılan belleği serbest bırakır.
+Tüm izlemeyi durduruyor ve izleme oturumu tarafından kullanılan belleği serbest bırakır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT WINAPI StopTrackingAndCleanup(void);
 ```
 
 ## <a name="return-value"></a>Dönüş değeri
- Döndürür bir **HRESULT** ile **başarılı** izleme durduruldu durumunda biti ayarlanmamış.
+ İzleme durdurulmuşsa, **başarılı** biti ayarlanmış bir **HRESULT** döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *FileTracker.h*
+ **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [StartTrackingContext](../msbuild/starttrackingcontext.md)

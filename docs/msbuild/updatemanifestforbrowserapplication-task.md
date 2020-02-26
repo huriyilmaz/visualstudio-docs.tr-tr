@@ -13,32 +13,32 @@ helpviewer_keywords:
 - building XBAP projects [WPF MSBuild]
 - UpdateManifestForBrowserApplication task [WPF MSBuild], parameters
 ms.assetid: 653339f7-654b-4d64-a26a-5c9f27036895
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7b5122a54fd17c6bbe2a9aab204f5855c40e902
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a78add284a5cea966d1176645649eed19017addd
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950669"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579539"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication görevi
-<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> Görevi çalıştırılana eklemek için  **\<HostInBrowser / >** öğe uygulama bildiriminin (*\<projectname >. exe.manifest*) olduğunda bir [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] Proje oluşturulur.
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> görevi, bir > projesi oluşturulduğunda **\<HostInBrowser/>** öğesini uygulama bildirimine ( *\<ProjectName [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)]. exe. manifest*) eklemek için çalıştırılır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`ApplicationManifest`|Gerekli **Itaskıtem []** parametresi.<br /><br /> Eklemek istediğiniz uygulama bildirim dosyasının adını ve yolunu belirtir `<hostInBrowser />` öğesi.|
-|`HostInBrowser`|Gerekli **Boole** parametresi.<br /><br /> Dahil etmek için uygulama bildirimini değiştirmeniz belirtir  **\<HostInBrowser / >** öğesi. Varsa **true**, yeni bir  **\<HostInBrowser / >** öğe dahil edilir  **\<entryPoint / >** öğesi. Öğe ekleme toplu: varsa bir  **\<HostInBrowser / >** öğe zaten var, kaldırıldı veya üzerine değil. Bunun yerine, ek bir  **\<HostInBrowser / >** öğesi oluşturulur. Varsa **false**, uygulama bildirimini değiştirilmez.|
+|`ApplicationManifest`|Gerekli **ıtaskitem []** parametresi.<br /><br /> `<hostInBrowser />` öğesini eklemek istediğiniz uygulama bildirimi dosyasının yolunu ve adını belirtir.|
+|`HostInBrowser`|Gerekli **Boolean** parametresi.<br /><br /> Uygulama bildiriminin **\<HostInBrowser/>** öğesinin dahil edilip edilmeyeceğini belirtir. **True**ise, **\<EntryPoint/>** öğesine yeni bir **\<HostInBrowser/>** öğesi dahil edilir. Öğe içerme birikimlidir: bir **\<HostInBrowser/>** öğesi zaten varsa, kaldırılmaz veya üzerine yazılmaz. Bunun yerine, ek bir **\<HostInBrowser/>** öğesi oluşturulur. **False**ise, uygulama bildirimi değiştirilmez.|
 
 ## <a name="remarks"></a>Açıklamalar
- [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] kullanarak çalışan [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] dağıtımı için dağıtım ve uygulama bildirimleri, destekleyici yayımlanmalıdır. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] kullanan [GenerateApplicationManifest](generateapplicationmanifest-task.md) bir uygulama bildirimi oluşturmak için görev.
+ [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)], [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] dağıtımı kullanılarak çalıştırılır, bu nedenle destekleyici dağıtım ve uygulama bildirimleri ile yayımlanmaları gerekir. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)], bir uygulama bildirimi oluşturmak için [GenerateApplicationManifest](generateapplicationmanifest-task.md) görevini kullanır.
 
- Ardından, uygulamaya bir tarayıcıdan ek barındırılması için yapılandırmak için  **\<HostInBrowser / >** öğesi aşağıdaki örnekte gösterildiği gibi uygulama bildirimine eklenmelidir:
+ Ardından, bir uygulamayı tarayıcıdan barındırılacak şekilde yapılandırmak için, aşağıdaki örnekte gösterildiği gibi, uygulama bildirimine ek bir **\<HostInBrowser/>** öğesi eklenmelidir:
 
 ```xml
 <!--MyXBAPApplication.exe.manifest-->
@@ -54,10 +54,10 @@ ms.locfileid: "62950669"
 />
 ```
 
- <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> Görevi çalıştırılana ne zaman bir [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] projesi eklemek için yapılandırıldığında `<hostInBrowser />` öğesi.
+ <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> görevi, `<hostInBrowser />` öğesi eklemek için bir [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] projesi yapılandırıldığında çalıştırılır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek emin olmak nasıl gösterir `<hostInBrowser />` öğesi, bir uygulama bildirimi dosyasında bulunur.
+ Aşağıdaki örnek, `<hostInBrowser />` öğesinin bir uygulama bildirim dosyasına dahil edildiğini nasıl sağlamak gerektiğini gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -77,5 +77,5 @@ ms.locfileid: "62950669"
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Bir WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
 - [WPF XAML tarayıcı uygulamalarına genel bakış](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

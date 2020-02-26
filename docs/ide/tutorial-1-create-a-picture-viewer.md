@@ -5,17 +5,17 @@ ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9af5a3e8796af3aeaefae569d61e78a1039d84e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 5f1431d56516c749004cef1b35ada482a6c53446
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115086"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579715"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Öğretici 1: resim görüntüleyici oluşturma
 
@@ -26,7 +26,7 @@ Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüley
 
 Bu öğretici aşağıdaki görevlerde size kılavuzluk eder:
 
-* Yeni bir proje oluşturun.
+* Yeni bir proje oluşturma.
 
 * Bir uygulamayı test etme (hata ayıklama).
 
