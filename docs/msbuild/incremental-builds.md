@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43c739cc24d453ad4129d8cb7cc4bfbebec07aa4
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: c7283d67710a3b5b319b2d25a1c5d6535fed83b9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091827"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633726"
 ---
 # <a name="incremental-builds"></a>Artımlı derlemeler
 
@@ -79,4 +79,5 @@ MSBuild 3,5 ' den önce [CreateItem](../msbuild/createitem-task.md) görevini ku
 Bu kod, Compilera özelliğini oluşturur ve değeri yalnızca hedef yürütülürse `true`verir. Hedef atlandıysa, Compilera oluşturulmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hedefler](../msbuild/msbuild-targets.md)

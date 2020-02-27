@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66c19dbd74176babbf9e26030a68a6095992b660
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589376"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633622"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata öğesi (MSBuild)
+
 Öğe meta veri değerini içeren Kullanıcı tanımlı bir öğe meta veri anahtarı içerir. Bir öğe herhangi bir sayıda meta veri anahtar-değer çifti içerebilir.
 
  \<Proje > \<ItemGroup > \<öğesi >
@@ -35,29 +36,33 @@ ms.locfileid: "75589376"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
+
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Öğesi](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlayan Kullanıcı tanımlı bir öğe.|
+|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlayan Kullanıcı tanımlı bir öğe.|
 
 ## <a name="text-value"></a>Metin değeri
+
  Metin değeri isteğe bağlıdır.
 
  Bu metin, metin veya XML olabilen öğe meta veri değerini belirtir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, öğe `CSFile``fr` değer ile `Culture` meta verilerin nasıl ekleneceğini gösterir.
 
 ```xml
@@ -69,5 +74,6 @@ ms.locfileid: "75589376"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)

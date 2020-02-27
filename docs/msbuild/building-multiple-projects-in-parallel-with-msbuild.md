@@ -12,14 +12,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0f63ac8fa782dcb504b8bd00ad7e32ce96e1eab
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 1723fba810450fe5e31a43d63f3704ab74f455f4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917807"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634506"
 ---
 # <a name="build-multiple-projects-in-parallel-with-msbuild"></a>MSBuild ile paralel olarak birden çok proje oluşturun
+
 MSBuild 'i paralel olarak çalıştırarak birden çok projeyi daha hızlı derlemek için kullanabilirsiniz. Yapıları paralel olarak çalıştırmak için, birden çok çekirdekli veya birden çok işlemci bilgisayarında aşağıdaki ayarları kullanın:
 
 - Bir komut isteminde `-maxcpucount` anahtarı.
@@ -30,6 +31,7 @@ MSBuild 'i paralel olarak çalıştırarak birden çok projeyi daha hızlı derl
 > Bir komut satırındaki **-ayrıntı** ( **-v**) anahtarı derleme performansını da etkileyebilir. Derleme günlüğü bilgilerinizin ayrıntı düzeyi ayrıntılı veya tanılama olarak ayarlandıysa, sorun giderme için kullanılan derleme performanslarınız azalabilir. Daha fazla bilgi için bkz. [Derleme günlüklerini](../msbuild/obtaining-build-logs-with-msbuild.md) ve [komut satırı başvurusunu](../msbuild/msbuild-command-line-reference.md)alma.
 
 ## <a name="-maxcpucount-switch"></a>-maxcpucount anahtarı
+
 `-maxcpucount` anahtarını kullanırsanız veya Short için `-m`, MSBuild, paralel olarak çalıştırılabilecek belirtilen sayıda *MSBuild. exe* işlemi oluşturabilir. Bu süreçler "çalışan süreçler" olarak da bilinir. Her çalışan işlemi varsa ayrı bir çekirdek veya işlemciyi, varsa diğer kullanılabilir işlemcilerle aynı anda bir proje oluşturmak için kullanır. Örneğin, bu anahtarın "4" değerine ayarlanması, MSBuild 'in projeyi derlemek için dört çalışan işlem oluşturmasına neden olur.
 
 `-maxcpucount` anahtarını bir değer belirtmeden eklerseniz, MSBuild bilgisayardaki işlemci sayısına kadar kullanır.
@@ -43,7 +45,8 @@ msbuild.exe myproj.proj -maxcpucount:3
 ```
 
 ## <a name="buildinparallel-task-parameter"></a>BuildInParallel görev parametresi
-`BuildInParallel`, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevinde isteğe bağlı bir Boolean parametredir. `BuildInParallel` `true` ayarlandığında (varsayılan değer `true`), mümkün olduğunca fazla proje oluşturmak için birden çok çalışan işlemi oluşturulur. Bunun düzgün çalışması için `-maxcpucount` anahtarı 1 ' den büyük bir değere ayarlanmalıdır ve sistem en az çift çekirdekli ya da iki veya daha fazla işlemciye sahip olmalıdır.
+
+`BuildInParallel`, MSBuild görevinde isteğe bağlı bir Boole parametresidir. `BuildInParallel` `true` ayarlandığında (varsayılan değer `true`), mümkün olduğunca fazla proje oluşturmak için birden çok çalışan işlemi oluşturulur. Bunun düzgün çalışması için `-maxcpucount` anahtarı 1 ' den büyük bir değere ayarlanmalıdır ve sistem en az çift çekirdekli ya da iki veya daha fazla işlemciye sahip olmalıdır.
 
 Aşağıda, `BuildInParallel` parametresinin nasıl ayarlanacağı hakkında *Microsoft. Common. targets*'tan alınan bir örnek verilmiştir.
 
@@ -70,6 +73,7 @@ Aşağıda, `BuildInParallel` parametresinin nasıl ayarlanacağı hakkında *Mi
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Projeleri derlemek için birden çok işlemci kullanma](../msbuild/using-multiple-processors-to-build-projects.md)
 - [Multi-Processor-Aware Günlükçüler yazma](../msbuild/writing-multi-processor-aware-loggers.md)
 - [Derleme C++ paralelliği blogu ayarlama](https://devblogs.microsoft.com/visualstudio/tuning-c-build-parallelism-in-vs2010/)

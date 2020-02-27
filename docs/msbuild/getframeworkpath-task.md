@@ -18,17 +18,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65a96b59837d04deb0517d3ab79b3b668e036a20
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: b907194c4818ff6b867e9d15b795506ef3b77476
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579646"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634012"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath görevi
+
+.NET Framework derlemelerinin yolunu alır.
 .NET Framework derlemelerinin yolunu alır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
 Aşağıdaki tabloda `GetFrameworkPath` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -41,11 +44,13 @@ Aşağıdaki tabloda `GetFrameworkPath` görevinin parametreleri açıklanmaktad
 |`Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa, en son çerçeve derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
-.NET Framework birden çok sürümü yüklüyse, bu görev [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] üzerinde çalışmak üzere tasarlanan sürümü döndürür.
+
+.NET Framework birden çok sürümü yüklüyse, bu görev MSBuild 'in üzerinde çalışmak üzere tasarlandığı sürümü döndürür.
 
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, `FrameworkPath` özelliğindeki .NET Framework yolunu depolamak için `GetFrameworkPath` görevini kullanır.
 
 ```xml
@@ -61,5 +66,6 @@ Aşağıdaki örnek, `FrameworkPath` özelliğindeki .NET Framework yolunu depol
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

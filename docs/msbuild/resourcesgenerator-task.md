@@ -17,15 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 703cd7bc3d0dd0e2229365dde39418ff32ad0a3e
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 2b5aba45292aaa55a719eb19d6f0f6f115e8b477
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579609"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632517"
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator görevi
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> görevi bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimde ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
+
+<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> görevi bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, ikili biçimdeki XAML ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
@@ -36,6 +37,7 @@ ms.locfileid: "77579609"
 |`ResourcesFiles`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Oluşturulan *. resources* dosyasına eklemek için bir veya daha fazla kaynak belirtir.|
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, tek bir *. bmp* kaynağı ile bir *. resources* dosyası oluşturur. *. Bmp* kaynağı, proje kök dizinine göreli bir dizine üretilir.
 
 ```xml
@@ -53,6 +55,7 @@ ms.locfileid: "77579609"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF MSBuild başvurusu](../msbuild/wpf-msbuild-reference.md)
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

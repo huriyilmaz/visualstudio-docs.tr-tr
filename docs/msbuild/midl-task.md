@@ -26,17 +26,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44b51617aa28f02763cc513a4619b3bd3b041cc5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7a43975244eaf064c9ed7608fa41c16854ca140f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592158"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633479"
 ---
 # <a name="midl-task"></a>MIDL görevi
+
 Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi kaydırır. Daha fazla bilgi için bkz. [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference).
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıda, **MIDL** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
 
 - **AdditionalIncludeDirectories**
@@ -91,7 +93,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
     |-----------|--------------------------|
     |**İmza**|**/Char imzalandı**|
     |**İşaretlenmemiş**|**/Char işaretsiz**|
-    |**Ascii**|**/Char ascii7**|
+    |**ASCII**|**/Char ascii7**|
 
      Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/char** seçeneğine bakın.
 
@@ -113,7 +115,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
 
     |Değer|Komut satırı seçeneği|
     |-----------|--------------------------|
-    |**Yok**|**/hata yok**|
+    |**Seçim**|**/hata yok**|
     |**EnableCustom**|**/Error**|
     |**Tümü**|**/Error tümü**|
 
@@ -143,7 +145,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
 
      Daha fazla bilgi için, *MIDL. exe*için komut satırı yardımı 'nda ( **/?** ) **/Error numaralandırma** seçeneğine bakın.
 
-- **ErrorCheckRefPointers**
+- **Errorcheckrefişaretçiler**
 
      İsteğe bağlı **Boolean** parametresi.
 
@@ -169,8 +171,8 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
 
     |Değer|Komut satırı seçeneği|
     |-----------|--------------------------|
-    |**Yok**|**/Client yok**|
-    |**Stub**|**/Client saplama**|
+    |**Seçim**|**/Client yok**|
+    |**Saplama**|**/Client saplama**|
 
      Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Client** seçeneğine bakın.
 
@@ -184,8 +186,8 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
 
     |Değer|Komut satırı seçeneği|
     |-----------|--------------------------|
-    |**Yok**|**/Server hiçbiri**|
-    |**Stub**|**/Server saplama**|
+    |**Seçim**|**/Server hiçbiri**|
+    |**Saplama**|**/Server saplama**|
 
      Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)içindeki **/Server** seçeneğine bakın.
 
@@ -213,7 +215,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
 
      Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/h** veya **/Header** seçeneğine bakın.
 
-- **IgnoreStandardIncludePath**
+- **Ignorestandardincludepath**
 
      İsteğe bağlı **Boolean** parametresi.
 
@@ -221,7 +223,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
 
      Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)içindeki **/no_def_idir** seçeneğine bakın.
 
-- **InterfaceIdentifierFileName**
+- **Interfaceıdentifierfilename**
 
      İsteğe bağlı **dize** parametresi.
 
@@ -302,10 +304,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
     |Değer|Komut satırı seçeneği|
     |-----------|--------------------------|
     |**NotSet**|*\<yok >*|
-    |**1**|**/Zp1**|
-    |**2**|**/Zp2**|
-    |**4**|**/Zp4**|
-    |**8**|**/Zp8**|
+    |**1**|**/ZP1**|
+    |**2**|**/ZP2**|
+    |**4**|**/ZP4**|
+    |**8**|**/ZP8**|
 
      Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)' nda **/ZP** seçeneğine bakın. **/ZP** seçeneği, **/Pack** seçeneğine ve eski **/ALIGN** seçeneğine eşdeğerdir.
 
@@ -336,7 +338,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
     |Değer|Komut satırı seçeneği|
     |-----------|--------------------------|
     |**NotSet**|*\<yok >*|
-    |**Win32**|**/env Win32**|
+    |**Win**|**/env Win32**|
     |**Itanium**|**/env IA64**|
     |**X64**|**/env x64**|
 
@@ -359,7 +361,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
     |Değer|Komut satırı seçeneği|
     |-----------|--------------------------|
     |**NewFormat**|**/newtlb**|
-    |**OldFormat**|**/oldtlb**|
+    |**Eskibiçim**|**/oldtlb**|
 
      Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/newtlb** ve **/oldtlb** seçeneklerine bakın.
 
@@ -416,4 +418,5 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, *MIDL. exe*' yi 
      Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)' nda **/w** seçeneğine bakın. Ayrıca bkz. bu tablodaki **warnaserror** parametresi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

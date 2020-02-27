@@ -19,22 +19,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 797a2f80c4e634b3dcb3b0fa32c46476e32cc334
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 3c41bfc2015f29cbb73b33df3594b3a3430af3f3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578123"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630658"
 ---
 # <a name="xdcmake-task"></a>XDCMake görevi
+
 XML belge açıklaması ( *. xdc*) dosyalarını bir *. XML* dosyasında birleştiren XML belge aracı 'nı (*xdcmake. exe*) kaydırır.
 
  Kaynak kodunuzda belge açıklamaları sağladığınızda ve [/doc](/cpp/build/reference/doc-process-documentation-comments-c-cpp) derleyici seçeneğini kullanarak derlerseniz bir *. xdc* dosyası oluşturulur. C++ Daha fazla bilgi için bkz. [XDCMake başvurusu](/cpp/build/reference/xdcmake-reference), [XML belge Oluşturucu aracı özellik sayfaları](/cpp/build/reference/xml-document-generator-tool-property-pages)ve *xdcmake. exe*için komut satırı yardım seçeneği ( **/?** ).
 
 ## <a name="remarks"></a>Açıklamalar
+
  Varsayılan olarak, *xdcmake. exe* aracı birkaç komut satırı seçeneğini destekler. Ek seçenekler, **/Old** komut satırı seçeneğini belirttiğinizde desteklenir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda **XDCMake** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -50,4 +53,5 @@ XML belge açıklaması ( *. xdc*) dosyalarını bir *. XML* dosyasında birleş
 |**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.<br /><br /> İzleyici günlüğü için dizini belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

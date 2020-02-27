@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b1eb28d5a54af1708fa8d3ea7a12887174a15bb
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 102f46ec639719bb2bec70a38c6c7177c63793c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579593"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632335"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
+
 Genel iş parçacığı sayısını ayarlar ve bu sayıyı geçerli iş parçacığına atar.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,12 +33,15 @@ HRESULT WINAPI SetThreadCount(int threadCount);
 ```
 
 #### <a name="parameters"></a>Parametreler
+
 [in] `threadCount`
 
  Kullanılacak iş parçacığı sayısı.
 
 ## <a name="return-value"></a>Dönüş değeri
+
  İş parçacığı sayısı güncellendiyse, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
+
  **Üstbilgi:** *FileTracker. h*

@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4bf72509610e9d397e4b208294112fcc0975b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8c9a51fe097eb110e44b3f4bd932a26f4efb6ea6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588336"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630645"
 ---
 # <a name="zipdirectory-task"></a>ZipDirectory görevi
+
 Bir dizinin içeriğinden bir *. zip* arşivi oluşturur.
 
 >[!NOTE]
 >`ZipDirectory` görevi yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `ZipDirectory` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -45,9 +47,11 @@ Bir dizinin içeriğinden bir *. zip* arşivi oluşturur.
 |`SourceDirectory`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> İçinden bir *. zip* Arşivi oluşturulacak dizini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, bir proje derlemeden sonra çıkış dizininden bir *. zip* arşivi oluşturur.
 
 ```xml
@@ -63,5 +67,6 @@ Bir dizinin içeriğinden bir *. zip* arşivi oluşturur.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

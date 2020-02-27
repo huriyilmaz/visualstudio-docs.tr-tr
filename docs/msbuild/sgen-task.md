@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a97133892926e60adc1d9f0165415868732066ca
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4305f27435d97c346ce623a21b37f011fd8da0cd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595130"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632309"
 ---
 # <a name="sgen-task"></a>SGen görevi
+
 Belirtilen derlemedeki türler için bir XML serileştirme bütünleştirilmiş kodu oluşturur. Bu görev, XML serileştirici Oluşturucu aracı 'nı (*SGen. exe*) sarmalanmış. Daha fazla bilgi için bkz. [XML serileştirici Oluşturucu aracı (SGen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `SGen` görevinin parametreleri açıklanmaktadır.
 
 | Parametre | Açıklama |
@@ -38,21 +40,23 @@ Belirtilen derlemedeki türler için bir XML serileştirme bütünleştirilmiş 
 | `DelaySign` | İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, yalnızca ortak anahtarı derlemeye koymak istediğinizi belirtir. `false`, tam olarak imzalanan bir derleme istediğinizi belirtir.<br /><br /> `KeyFile` veya `KeyContainer` parametresiyle kullanılmamışsa bu parametrenin hiçbir etkisi yoktur. |
 | `KeyContainer` | İsteğe bağlı `String` parametresi.<br /><br /> Anahtar çifti içeren bir kapsayıcıyı belirtir. Bu, derleme bildirimine ortak anahtar ekleyerek derlemeyi imzalayacaktır. Görev daha sonra son derlemeyi özel anahtarla imzalayacaktır. |
 | `KeyFile` | İsteğe bağlı `String` parametresi.<br /><br /> Bir derlemeyi imzalamak için kullanılacak bir anahtar çifti veya ortak anahtar belirtir. Derleyici ortak anahtarı derleme bildirimine ekler ve ardından son derlemeyi özel anahtarla imzalar. |
-| `Platform` | İsteğe bağlı `String` parametresi.<br /><br /> Çıktı derlemesini oluşturmak için kullanılan derleyici platformunu alır veya ayarlar. Bu parametre `x86`, `x64`veya `anycpu`değerine sahip olabilir. Varsayılan değer `anycpu`. |
+| `Platform` | İsteğe bağlı `String` parametresi.<br /><br /> Çıktı derlemesini oluşturmak için kullanılan derleyici platformunu alır veya ayarlar. Bu parametre `x86`, `x64`veya `anycpu`değerine sahip olabilir. `anycpu` varsayılan değerdir. |
 | `References` | İsteğe bağlı `String[]` parametresi.<br /><br /> XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. |
 | `SdkToolsPath` | İsteğe bağlı `String` parametresi.<br /><br /> *Resgen. exe*gibi SDK araçlarının yolunu belirtir. |
 | `SerializationAssembly` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Oluşturulan serileştirme derlemesini içerir. |
 | `SerializationAssemblyName` | İsteğe bağlı `String` parametresi.<br /><br /> Oluşturulan serileştirme derlemesinin adını belirtir. |
 | `ShouldGenerateSerializer` | Gerekli `Boolean` parametresi.<br /><br /> `true`, SGen görevinin bir serileştirme derlemesi oluşturması gerekir. |
 | `Timeout` | İsteğe bağlı `Int32` parametresi.<br /><br /> Görev yürütülebilir dosyasının sonlandırılacağı süre (milisaniye cinsinden) sayısını belirtir. Varsayılan değer, zaman aşımı süresi olmadığını belirten `Int.MaxValue`. |
-| `ToolPath` | İsteğe bağlı `String` parametresi.<br /><br /> Görevin temel alınan yürütülebilir dosyayı (*SGen. exe*) yükleneceği konumu belirtir. Bu parametre belirtilmezse, görev, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]çalıştıran Framework sürümüne karşılık gelen SDK yükleme yolunu kullanır. |
+| `ToolPath` | İsteğe bağlı `String` parametresi.<br /><br /> Görevin temel alınan yürütülebilir dosyayı (*SGen. exe*) yükleneceği konumu belirtir. Bu parametre belirtilmezse, görev MSBuild çalıştıran Framework sürümüne karşılık gelen SDK yükleme yolunu kullanır. |
 | `Types` | İsteğe bağlı `String[]` parametresi.<br /><br /> İçin serileştirme kodu oluşturmak üzere belirli türlerin bir listesini alır veya ayarlar. SGen yalnızca bu türler için serileştirme kodu oluşturur. |
 | `UseProxyTypes` | Gerekli `Boolean` parametresi.<br /><br /> `true`, SGen görevi yalnızca XML Web hizmeti proxy türleri için serileştirme kodu oluşturur. |
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.ToolTask> sınıfından devralan <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)

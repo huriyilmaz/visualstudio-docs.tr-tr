@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b84753974eeecb8dca85035d50635d0bee47645
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 50f62704897d68b0e323b948b8f4ed7e96a10c9a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595052"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632114"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
+
 Bir izleme bağlamı başlatın.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,6 +33,7 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 ```
 
 #### <a name="parameters"></a>Parametreler
+
 [in] `intermediateDirectory`
 
  İzleme günlüğünün depolayabileceği dizin.
@@ -41,7 +43,9 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
  İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.
 
 ## <a name="return-value"></a>Dönüş değeri
+
  İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
+
  **Üstbilgi:** *FileTracker. h*

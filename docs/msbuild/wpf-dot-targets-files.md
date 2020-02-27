@@ -17,17 +17,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: adac07fff84bf0a447875b7084a3003e61a9767d
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578176"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630957"
 ---
 # <a name="wpf-targets-files"></a>WPF. targets dosyaları
-[!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)], özel bir *. targets* dosyası olan *Microsoft. WinFX. targets*içine birleştirilmiş [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)]özgü bir görev kümesini ekleyerek [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] genişletir. Bu dosya, [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)]bir [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] projesi oluşturmak için gereken [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] görevleri kümesini birleştirir.
+
+Windows Presentation Foundation (WPF), özel bir *. targets* dosyası olan *Microsoft. WinFX. targets*içine birleştirilmiş bir WPF 'e özgü görevler kümesini ekleyerek MSBuild 'i genişletir. Bu dosya, WPF 'de bir MSBuild projesi oluşturmak için gereken MSBuild görevlerinin kümesini birleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild. targets dosyaları](../msbuild/msbuild-dot-targets-files.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

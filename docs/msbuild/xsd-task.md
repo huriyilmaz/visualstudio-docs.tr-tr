@@ -20,20 +20,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31c256e02901d4f7dd7de6f14e9f650626feac25
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565792"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630788"
 ---
 # <a name="xsd-task"></a>XSD görevi
+
 Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'nı (*XSD. exe*) sarmalanmış olarak kaydırır.
 
 > [!NOTE]
 > Visual Studio 2017 ' den başlayarak C++ , *XSD. exe* için proje desteği kullanım dışıdır. *Cppcodeprovider. dll dosyasını* el ile GAC 'ye ekleyerek **Microsoft. VisualC. cppcodeprovider** API 'lerini kullanmaya devam edebilirsiniz.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda, **XSD** görevinin parametreleri açıklanmaktadır.
 
 - **AdditionalOptions**
@@ -62,7 +64,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'n
 
      **CS** C#(varsayılan olan), **vb** (Visual Basic) veya **js** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Namespace**
+- **Uzayına**
 
      İsteğe bağlı **dize** parametresi.
 
@@ -87,4 +89,5 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'n
      İzleyici günlüğü için dizini belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

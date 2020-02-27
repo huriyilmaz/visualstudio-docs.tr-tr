@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8adfa75964959e2cce61779914a52f03319ed314
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 05b9f83fa7c80769ea3c584e2885c8fb1db24176
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592145"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633466"
 ---
 # <a name="move-task"></a>Taşıma görevi
+
 Dosyaları yeni bir konuma taşıın.
 
 ## <a name="parameters"></a>Parametreler
+
  Katlama tablosu `Move` görevin parametrelerini açıklar.
 
 |Parametre|Açıklama|
@@ -38,6 +40,7 @@ Dosyaları yeni bir konuma taşıın.
 |`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Taşınacak dosyaları belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  `DestinationFolder` parametresi ya da `DestinationFiles` parametresi belirtilmelidir, ikisi birden belirtilmemelidir. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
 
  `Move` görev, istenen hedef dosyalar için gereken klasörleri oluşturur.
@@ -45,5 +48,6 @@ Dosyaları yeni bir konuma taşıın.
  Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

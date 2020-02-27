@@ -16,22 +16,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 739d444fe8ad3951e8b8f2f0026d5d986ea65c52
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2b54a63b135f844ff20b45ffac430662c4df1f19
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574788"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633843"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl yapılır: proje dosyasının adına veya konumuna başvurma
-Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan proje dosyasında kullanabilirsiniz. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], proje dosya adına ve proje ile ilgili diğer özelliklere başvuran ayrılmış özellikler sağlar. Ayrılmış özellikler hakkında daha fazla bilgi için bkz. [MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md).
+
+Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan proje dosyasında kullanabilirsiniz. MSBuild, proje dosyası adına ve proje ile ilgili diğer özelliklere başvuran ayrılmış özellikler sağlar. Ayrılmış özellikler hakkında daha fazla bilgi için bkz. [MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md).
 
 ## <a name="use-the-project-properties"></a>Proje özelliklerini kullanma
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], proje dosyalarınızda her seferinde tanımlanmaksızın kullanabileceğiniz bazı ayrılmış özellikleri sağlar. Örneğin, ayrılmış Özellik `MSBuildProjectName` proje dosyası adına bir başvuru sağlar. Ayrılmış Özellik `MSBuildProjectDirectory` proje dosyası konumuna bir başvuru sağlar.
+
+ MSBuild, proje dosyalarınızda her seferinde tanımlanmaksızın kullanabileceğiniz bazı ayrılmış özellikleri sağlar. Örneğin, ayrılmış Özellik `MSBuildProjectName` proje dosyası adına bir başvuru sağlar. Ayrılmış Özellik `MSBuildProjectDirectory` proje dosyası konumuna bir başvuru sağlar.
 
 #### <a name="to-use-the-project-properties"></a>Proje özelliklerini kullanmak için
 
-- Herhangi bir özellikle yaptığınız gibi, proje dosyasındaki özelliğine $ () gösterimiyle başvurun. Örneğin:
+- Herhangi bir özellikle yaptığınız gibi, proje dosyasındaki özelliğine $ () gösterimiyle başvurun. Örnek:
 
   ```xml
   <CSC Sources = "@(CSFile)"
@@ -47,6 +49,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 > Ayrılmış Özellikler proje dosyasında yeniden tanımlanamaz.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek proje dosyası, çıkış için adı belirtmek üzere bir ayrılmış özellik olarak proje adına başvurur.
 
 ```xml
@@ -75,6 +78,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 ```
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek proje dosyası, proje dosyası konumundaki bir dosyanın tam yolunu oluşturmak için `MSBuildProjectDirectory` ayrılmış özelliğini kullanır.
 
 ```xml
@@ -87,6 +91,9 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 </Project>
 ```
 
+Örnek, <xref:System.IO.Path.Combine*?displayProperty=fullName>statik .NET Framework yöntemini çağırmak için [Özellik işlevi](property-functions.md) sözdizimini kullanır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md)

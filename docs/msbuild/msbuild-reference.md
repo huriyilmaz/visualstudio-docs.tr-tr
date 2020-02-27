@@ -15,33 +15,33 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92d8db803dd6e20a9a1d954847b63d3a02ddd257
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 6b164d3d141c66817afd0eb88054fd9220656c0f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826542"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633271"
 ---
 # <a name="msbuild-reference"></a>MSBuild başvurusu
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]için derleme sistemidir. Aşağıdaki bağlantılar [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] başvuru bilgilerini içeren konulara yol açabilir.
+MSBuild, Visual Studio için derleme sistemidir. Aşağıdaki bağlantılar, MSBuild başvuru bilgilerini içeren konulara yol açabilir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 - [Proje dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)\
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dosya biçimini oluşturan XML öğelerini açıklar.
+ MSBuild dosya biçimini oluşturan XML öğelerini açıklar.
 
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)\
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]eklenen bazı tipik görevleri açıklar.
+ MSBuild 'e dahil edilen tipik görevlerden bazılarını açıklar.
 
 - [Koşullar](../msbuild/msbuild-conditions.md)\
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dosyalarında kullanılabilen koşulları açıklar.
+ MSBuild dosyalarında kullanılabilen koşulları açıklar.
 
 - [Koşullu yapılar](../msbuild/msbuild-conditional-constructs.md)\
  `Choose`, `When`ve `Otherwise` öğelerinin nasıl kullanılacağını açıklar.
 
 - [MSBuild ayrılmış ve iyi bilinen özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md)\
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ayrılmış özelliklerini açıklar.
+ MSBuild ayrılmış özelliklerini açıklar.
 
 - [Ortak MSBuild proje özellikleri](../msbuild/common-msbuild-project-properties.md)\
  Tüm proje türlerinde ortak olan proje özelliklerini ve genellikle belirli proje türleri tarafından kullanılan özellikleri açıklar.
@@ -50,10 +50,10 @@ ms.locfileid: "76826542"
  Tüm proje türlerinde ortak olan proje öğelerini ve genellikle belirli proje türleri tarafından kullanılan öğeleri açıklar.
 
 - [Komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)\
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. exe ile kullanılabilen bağımsız değişkenleri ve anahtarları açıklar.
+ MSBuild. exe ile kullanılabilen bağımsız değişkenleri ve anahtarları açıklar.
 
 - [. Hedef dosyaları](../msbuild/msbuild-dot-targets-files.md)\
- Açıklanır *.* [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]bulunan hedefler dosyası.
+ Açıklanır *.* MSBuild 'e dahil edilen hedefler dosyası.
 
 - [İyi bilinen öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md)\
  Her öğeyle birlikte oluşturulan meta verileri listeler.
@@ -62,10 +62,10 @@ ms.locfileid: "76826542"
  Komut satırı anahtarlarını içeren *. rsp* dosyalarını açıklar.
 
 - [Ek kaynaklar](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild)\
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Web siteleri ve haber grupları için bağlantılar sağlar.
+ MSBuild web siteleri ve haber grupları için bağlantılar sağlar.
 
 - [WPF MSBuild başvurusu](../msbuild/wpf-msbuild-reference.md)\
- Windows Presentation Foundation (WPF) için [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] hedeflerini ve görev başvurusunu içerir.
+ Windows Presentation Foundation (WPF) için bir MSBuild hedefi ve görev başvurusu içerir.
 
 - [Kaçış Için özel karakterler](../msbuild/special-characters-to-escape.md)\
  Doğru yorumlanan "kaçan" olması gereken karakterleri listeler. Kaçış dizisi, bir alternatif yorum olduğunu belirten bir karakter dizisidir.

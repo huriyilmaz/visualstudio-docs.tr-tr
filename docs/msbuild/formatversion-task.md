@@ -13,14 +13,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b36c4eb63c503132aaf434c64249e4a5fdd3872
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 250c73ce0395f278b72c18605f1666290670e20a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595260"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634116"
 ---
 # <a name="formatversion-task"></a>FormatVersion görevi
+
 Sürüm numarasına Düzeltme numarasını ekler.
 
 - Büyük/küçük harf #1: giriş: sürüm =\<tanımsız >;  Düzeltme =\<ilgilenmeyin >;   Çıkış: OutputVersion = "1.0.0.0"
@@ -30,6 +31,7 @@ Sürüm numarasına Düzeltme numarasını ekler.
 - Case #3: Input: Version = "1.0.0.0" düzeltmesini =\<ilgilenmeyin >;  Çıkış: OutputVersion = "1.0.0.0"
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `FormatVersion` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -40,8 +42,10 @@ Sürüm numarasına Düzeltme numarasını ekler.
 |`Version`|İsteğe bağlı `String` parametresi.<br /><br /> Biçimlendirilecek sürüm numarası dizesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

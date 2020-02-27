@@ -16,17 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dc5df9c4eba4195400b6a41fa50a5c88257d70e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3faa9ca73592722a950f9914437884c33122070e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566559"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633362"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild. targets dosyaları
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], yaygın senaryolar için öğeleri, özellikleri, hedefleri ve görevleri içeren birkaç *. targets* dosyası içerir. Bu dosyalar, bakım ve okunabilirlik basitleşmesi için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje dosyalarına otomatik olarak aktarılır.
 
- Projeler genellikle derleme işlemlerini tanımlamak için bir veya daha fazla *. targets* dosyasını içeri aktarır. Örneğin, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tarafından oluşturulan [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projesi *Microsoft. Common. targets*'ı Içeri aktaran *Microsoft. CSharp. targets* içeri aktarır. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] proje, bu projeye özgü öğeleri ve özellikleri tanımlar, ancak bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projesi için standart derleme kuralları içeri aktarılan *. targets* dosyalarında tanımlanır.
+MSBuild, yaygın senaryolar için öğeleri, özellikleri, hedefleri ve görevleri içeren birkaç *. targets* dosyası içerir. Bu dosyalar, bakım ve okunabilirlik basitleşmesi için Visual Studio proje dosyalarına otomatik olarak aktarılır.
+
+ Projeler genellikle derleme işlemlerini tanımlamak için bir veya daha fazla *. targets* dosyasını içeri aktarır. Örneğin, Visual C# Studio tarafından oluşturulan bir proje *Microsoft. Common. targets*'ı Içeri aktaran *Microsoft. CSharp. targets* içeri aktarır. C# Projenin kendisi bu projeye özgü öğeleri ve özellikleri tanımlar, ancak C# projenin standart yapı kuralları içeri aktarılan *. targets* dosyalarında tanımlanır.
 
  `$(MSBuildToolsPath)` değeri, bu ortak *. targets* dosyalarının yolunu belirtir. `ToolsVersion` 4,0 ise, dosyalar şu konumdadır: *\<Windowsınstallationpath > \Microsoft.NET\Framework\v4.0.30319\\*
 
@@ -37,14 +38,16 @@ ms.locfileid: "75566559"
 
 | *. targets* dosyası | Açıklama |
 |---------------------------------| - |
-| *Microsoft. Common. targets* | [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ve [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki ifadeyi içeren *Microsoft. CSharp. targets* ve *Microsoft. VisualBasic. targets* dosyaları tarafından içeri aktarılır: `<Import Project="Microsoft.Common.targets" />` |
+| *Microsoft. Common. targets* | Visual Basic ve C# projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki ifadeyi içeren *Microsoft. CSharp. targets* ve *Microsoft. VisualBasic. targets* dosyaları tarafından içeri aktarılır: `<Import Project="Microsoft.Common.targets" />` |
 | *Microsoft. CSharp. targets* | Görsel C# projeler için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki ifadeyi içeren C# görsel proje dosyaları ( *. csproj*) tarafından içeri aktarıldı: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` |
 | *Microsoft. VisualBasic. targets* | Visual Basic projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki ifadeyi içeren Visual Basic proje dosyaları ( *. vbproj*) tarafından içeri aktarıldı: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />` |
 
 ## <a name="directorybuildtargets"></a>Directory. Build. targets
+
 *Directory. Build. targets* , bir dizin altındaki projelere özelleştirmeler sağlayan Kullanıcı tanımlı bir dosyadır. **Importdirectorybuildtargets** özelliği **false**olarak ayarlanmadığı takdirde bu dosya *Microsoft. Common. targets* öğesinden otomatik olarak içeri aktarılır. Daha fazla bilgi için [yapınızı özelleştirin](customize-your-build.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İçeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

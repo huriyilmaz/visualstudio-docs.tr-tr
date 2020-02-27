@@ -18,28 +18,31 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86c689122ac0ddfd9441122fdead64ecd8049e72
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 9c7699afeb09604a437aad091f9aaf9ce624d33e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579631"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633505"
 ---
 # <a name="mergelocalizationdirectives-task"></a>Mergelocalizationyönergeleri görevi
-<xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> görevi, bir veya daha fazla [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçim dosyasının tüm derleme için tek bir dosyada yerelleştirme özniteliklerini ve açıklamalarını birleştirir.
+
+<xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> görevi, bir veya daha fazla XAML ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |------------------------------| - |
-| `GeneratedLocalizationFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçiminde tek tek dosyalar için yerelleştirme yönergeleri dosyalarının listesini belirtir. |
+| `GeneratedLocalizationFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> XAML ikili biçimindeki tek dosyalar için yerelleştirme yönergeleri dosyalarının listesini belirtir. |
 | `OutputFile` | **Dize** çıkış parametresi gerekli.<br /><br /> Derlenmiş yerelleştirme-yönergeleri derlemesinin çıkış yolunu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
-[!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] içeriğine yerelleştirme öznitelikleri ve yorumlar ekleyebilirsiniz. [!INCLUDE[TLA#tla_wpf](../msbuild/includes/tlasharptla_wpf_md.md)] yerelleştirme desteğiyle, yerelleştirme özniteliklerini ve açıklamalarını açabilir ve bunları oluşturulan derlemeden ayrı bir *. loc* dosyasına yerleştirebilirsiniz. Bunu **LocalizationPropertyStorage** özniteliğini kullanarak yapabilirsiniz. Yerelleştirme öznitelikleri ve açıklamalar ve **LocalizationPropertyStorage**hakkında daha fazla bilgi için bkz. [Yerelleştirme öznitelikleri ve açıklamaları](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
+
+XAML içeriğine yerelleştirme öznitelikleri ve yorumlar ekleyebilirsiniz. Windows Presentation Foundation (WPF) yerelleştirme desteğiyle, yerelleştirme özniteliklerini ve açıklamalarını açabilir ve bunları oluşturulan derlemeden ayrı bir *. loc* dosyasına yerleştirebilirsiniz. Bunu **LocalizationPropertyStorage** özniteliğini kullanarak yapabilirsiniz. Yerelleştirme öznitelikleri ve açıklamalar ve **LocalizationPropertyStorage**hakkında daha fazla bilgi için bkz. [Yerelleştirme öznitelikleri ve açıklamaları](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, birkaç [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçim dosyasının yerelleştirme açıklamalarını tek bir *. loc* dosyasında birleştirir.
+
+Aşağıdaki örnek, birkaç XAML ikili biçim dosyasının yerelleştirme açıklamalarını tek bir *. loc* dosyasında birleştirir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -55,6 +58,7 @@ Aşağıdaki örnek, birkaç [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sh
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF MSBuild başvurusu](../msbuild/wpf-msbuild-reference.md)
 - [WPF MSBuild görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

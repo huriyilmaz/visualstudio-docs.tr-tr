@@ -11,31 +11,34 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a6bc01ee1f692a4da0cf1921de757236651a177
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b065ea8cdaea2e2b39aa78a666ea0348f7b254ae
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593817"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633141"
 ---
 # <a name="msbuild-tasks"></a>MSBuild görevleri
-Derleme platformunun, derleme işlemi sırasında herhangi bir sayıda eylemi yürütme yeteneği olması gerekir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], bu eylemleri gerçekleştirmek için *görevleri* kullanır. Görev, atomik derleme işlemleri gerçekleştirmek için [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] tarafından kullanılan çalıştırılabilir kod birimidir.
+
+Derleme platformunun, derleme işlemi sırasında herhangi bir sayıda eylemi yürütme yeteneği olması gerekir. MSBuild, bu eylemleri gerçekleştirmek için *Görevler* kullanır. Bir görev, atomik derleme işlemleri gerçekleştirmek için MSBuild tarafından kullanılan yürütülebilir kod birimidir.
 
 ## <a name="task-logic"></a>Görev mantığı
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML proje dosyası biçimi kendi kendine derleme işlemlerini tamamen yürütemiyor, bu nedenle görev mantığının proje dosyası dışında uygulanması gerekir.
+
+ MSBuild XML proje dosyası biçimi, derleme işlemlerini kendi kendine tamamen yürütemiyor, bu nedenle görev mantığı proje dosyasının dışında uygulanmalıdır.
 
  Bir görevin yürütme mantığı, <xref:Microsoft.Build.Framework> ad alanında tanımlanan <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir .NET sınıfı olarak uygulanır.
 
- Görev sınıfı ayrıca proje dosyasındaki görevin kullanabildiği giriş ve çıkış parametrelerini de tanımlar. Görev sınıfı tarafından sunulan tüm ortak ayarlanabilir statik olmayan Özet olmayan özelliklere, [görev](../msbuild/task-element-msbuild.md) öğesinde aynı ada sahip karşılık gelen bir özniteliği yerleştirerek proje dosyasında erişilebilir.
+ Görev sınıfı ayrıca proje dosyasındaki görevin kullanabildiği giriş ve çıkış parametrelerini de tanımlar. Görev sınıfı tarafından kullanıma sunulan tüm ortak ayarlanabilir statik olmayan özellik, [görev](../msbuild/task-element-msbuild.md) öğesinde aynı ada sahip karşılık gelen bir özniteliği yerleştirerek proje dosyasındaki değerler verilebilir ve bu makalede daha sonra örneklerde gösterildiği gibi değeri ayarlayabilirsiniz.
 
  <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan yönetilen bir sınıf yazarak kendi görevinizi yazabilirsiniz. Daha fazla bilgi için bkz. [görev yazma](../msbuild/task-writing.md).
 
 ## <a name="execute-a-task-from-a-project-file"></a>Proje dosyasından bir görev yürütme
- Proje dosyanızda bir görevi yürütmeden önce, ilk olarak görevi bir görev adına uygulayan derleme içindeki türü [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesiyle eşlemeniz gerekir. Bu, proje dosyanızda bulduğunda görevin yürütme mantığını nerede arayacağı [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bilmesini sağlar.
 
- Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasında bir görevi yürütmek için, bir `Target` öğesinin alt öğesi olarak görevin adında bir öğe oluşturun. Bir görev parametreleri kabul ediyorsa, bunlar öğesinin öznitelikleri olarak geçirilir.
+ Proje dosyanızda bir görevi yürütmeden önce, ilk olarak görevi bir görev adına uygulayan derleme içindeki türü [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesiyle eşlemeniz gerekir. Bu, MSBuild 'in, proje dosyanızda bulduğunda görevin yürütme mantığını nerede arayacağı hakkında bilgi verir.
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] öğe listeleri ve Özellikler parametre olarak kullanılabilir. Örneğin, aşağıdaki kod `MakeDir` görevini çağırır ve `MakeDir` nesnesinin `Directories` özelliğinin değerini, önceki örnekte belirtilen `BuildDir` özelliğinin değerine eşit olarak ayarlar.
+ Bir MSBuild proje dosyasında bir görevi yürütmek için, bir `Target` öğesinin alt öğesi olarak görevin adında bir öğe oluşturun. Bir görev parametreleri kabul ediyorsa, bunlar öğesinin öznitelikleri olarak geçirilir.
+
+ MSBuild öğe listeleri ve özellikleri parametre olarak kullanılabilir. Örneğin, aşağıdaki kod `MakeDir` görevini çağırır ve `BuildDir` özelliğinin değerine eşit `MakeDir` nesnesinin `Directories` özelliğinin değerini ayarlar:
 
 ```xml
 <Target Name="MakeBuildDirectory">
@@ -59,12 +62,15 @@ Derleme platformunun, derleme işlemi sırasında herhangi bir sayıda eylemi y�
 ```
 
 ## <a name="included-tasks"></a>Dahil edilen görevler
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], [Copy](../msbuild/copy-task.md), dosyaları kopyalayan, dizin oluşturan [makedir](../msbuild/makedir-task.md)ve [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] kaynak kodu dosyalarını derlenen [CSC](../msbuild/csc-task.md)gibi birçok görevle birlikte gönderilir. Kullanılabilir görevlerin ve kullanım bilgilerinin tüm listesi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
+
+ MSBuild, [Copy](../msbuild/copy-task.md), dosyaları kopyalayan, dizin oluşturan [MakeDir](../msbuild/makedir-task.md)ve kaynak kodu dosyalarını derlenen C# [CSC](../msbuild/csc-task.md)gibi birçok görevle birlikte gönderilir. Kullanılabilir görevlerin ve kullanım bilgilerinin tüm listesi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
 
 ## <a name="overridden-tasks"></a>Geçersiz kılınan görevler
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] birkaç konumdaki görevleri arar. İlk konum uzantılı dosyalardır *.* .NET Framework dizinlerinde depolanan OverrideTasks. Bu dosyalardaki görevler, proje dosyasındaki görevler de dahil olmak üzere, aynı ada sahip diğer tüm görevleri geçersiz kılar. İkinci konum uzantılı dosyalardır *.* .NET Framework dizinlerindeki görevler. Görev bu konumlardan birinde bulunmazsa, proje dosyasındaki görev kullanılır.
+
+ MSBuild, çeşitli konumlarda görevler arar. İlk konum uzantılı dosyalardır *.* .NET Framework dizinlerinde depolanan OverrideTasks. Bu dosyalardaki görevler, proje dosyasındaki görevler de dahil olmak üzere, aynı ada sahip diğer tüm görevleri geçersiz kılar. İkinci konum uzantılı dosyalardır *.* .NET Framework dizinlerindeki görevler. Görev bu konumlardan birinde bulunmazsa, proje dosyasındaki görev kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild](../msbuild/msbuild.md)
 - [Görev yazma](../msbuild/task-writing.md)

@@ -25,17 +25,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9daeb5264a4bebb67cfd486a5f05708d7e025f3
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: a5794d059a17f39531a7788895b604ae0e9590ce
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578532"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633596"
 ---
 # <a name="lib-task"></a>LIB görevi
+
 Microsoft 32-bit kitaplık Yöneticisi aracını, *lib. exe*' yi kaydırır. Kitaplık Yöneticisi ortak nesne dosyası biçimi (COFF) nesne dosyaları kitaplığını oluşturur ve yönetir. Kitaplık Yöneticisi ayrıca dışarı aktarma dosyaları oluşturabilir ve dışarı aktarılan tanımlara başvuru için kitaplıkları içeri aktarabilir. Daha fazla bilgi için bkz. [LIB Reference](/cpp/build/reference/lib-reference) ve [LIB çalışıyor](/cpp/build/reference/running-lib).
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda **LIB** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi bir komut satırı seçeneğine karşılık gelir.
 
 |Parametre|Açıklama|
@@ -66,4 +68,5 @@ Microsoft 32-bit kitaplık Yöneticisi aracını, *lib. exe*' yi kaydırır. Kit
 |**Seçeneini**|İsteğe bağlı **Boolean** parametresi.<br /><br /> `true`, oturum ilerlemesiyle ilgili ayrıntıları görüntüler; Bu, eklenmekte olan *. obj* dosyalarının adlarını içerir. Bilgiler standart çıktıya gönderilir ve bir dosyaya yönlendirilebilir.<br /><br /> Daha fazla bilgi için [LIB çalışma](/cpp/build/reference/running-lib)içindeki **/verbose** seçeneğine bakın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

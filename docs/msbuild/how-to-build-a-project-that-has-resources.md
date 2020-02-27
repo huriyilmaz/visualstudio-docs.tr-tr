@@ -13,18 +13,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 626db2638912c9eaa49ea74e702c9ba24f6fd33f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a76246096eec8779ce331e93f01be5ab791d1cdb
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75576348"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633960"
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>Nasıl yapılır: kaynakları olan bir proje derleme
+
 Bir projenin yerelleştirilmiş sürümlerini oluşturuyorsanız, tüm Kullanıcı arabirimi öğelerinin farklı diller için kaynak dosyalarına ayrılması gerekir. Proje yalnızca dizeleri kullanıyorsa, kaynak dosyaları metin dosyalarını kullanabilir. Alternatif olarak, *. resx* dosyalarını kaynak dosyaları olarak da kullanabilirsiniz.
 
 ## <a name="compile-resources-with-msbuild"></a>MSBuild ile kaynakları derleme
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ile birlikte sunulan ortak görevlerin kitaplığı, *. resx* veya metin dosyalarında kaynak derlemek için kullanabileceğiniz bir `GenerateResource` görevi içerir. Bu görev, Derlenecek kaynak dosyalarını ve çıkış kaynak dosyalarının adlarını belirtmek için `OutputResources` parametresini belirten `Sources` parametresini içerir. `GenerateResource` görevi hakkında daha fazla bilgi için bkz. [GenerateResource Task](../msbuild/generateresource-task.md).
+
+MSBuild ile birlikte sunulan ortak görevlerin kitaplığı, *. resx* veya metin dosyalarında kaynak derlemek için kullanabileceğiniz bir `GenerateResource` görevi içerir. Bu görev, Derlenecek kaynak dosyalarını ve çıkış kaynak dosyalarının adlarını belirtmek için `OutputResources` parametresini belirten `Sources` parametresini içerir. `GenerateResource` görevi hakkında daha fazla bilgi için bkz. [GenerateResource Task](../msbuild/generateresource-task.md).
 
 #### <a name="to-compile-resources-with-msbuild"></a>MSBuild ile kaynakları derlemek için
 
@@ -37,6 +39,7 @@ Bir projenin yerelleştirilmiş sürümlerini oluşturuyorsanız, tüm Kullanıc
 4. `Output` öğeden oluşturulan öğeyi başka bir görevde giriş olarak kullanın.
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki kod örneği, `Output` öğesinin, `GenerateResource` görevinin `OutputResources` özniteliğinin, *Alfa. resources* ve *Beta. resources* derlenmiş kaynak dosyalarını ve bu iki dosyanın `Resources` öğesi listesine yerleştirileceğini gösterir. Bu *. resources* dosyalarını aynı ada sahip öğelerin bir koleksiyonu olarak tanımlayarak, onları [CSC](../msbuild/csc-task.md) görevi gibi başka bir görevin girişleri olarak kolayca kullanabilirsiniz.
 
 Bu görev, [Resgen. exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)için **/Compile** anahtarını kullanma ile eşdeğerdir:
@@ -53,6 +56,7 @@ Bu görev, [Resgen. exe](/dotnet/framework/tools/resgen-exe-resource-file-genera
 ```
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek proje iki görev içerir: kaynakları derlemek için `GenerateResource` görev ve hem kaynak kodu dosyalarını hem de derlenen kaynak dosyalarını derlemek için `Csc` görevi. `GenerateResource` görevi tarafından derlenen kaynak dosyaları `Resources` öğesinde depolanır ve `Csc` görevine geçirilir.
 
 ```xml
@@ -77,6 +81,7 @@ Aşağıdaki örnek proje iki görev içerir: kaynakları derlemek için `Genera
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild](../msbuild/msbuild.md)
 - [GenerateResource Görevi](../msbuild/generateresource-task.md)
 - [Csc görevi](../msbuild/csc-task.md)

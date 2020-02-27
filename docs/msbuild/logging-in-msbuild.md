@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a769f6d0b9aa847899c02c951921dc77bac21a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592197"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633557"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild'de Günlük Kaydı
+
 Günlüğe kaydetme, bir yapı ilerlemesini izlemeniz için bir yol sağlar. Günlüğe kaydetme, bir günlük dosyasındaki derleme olaylarını, iletileri, uyarıları ve hataları yakalar.
 
 ## <a name="in-this-section"></a>Bu bölümde
+
 - [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]oturum açma işleminin çeşitli yönlerini açıklar.
+ MSBuild 'de günlüğe kaydetmenin çeşitli yönlerini açıklar.
 
 - [Günlükçüler oluşturun](../msbuild/build-loggers.md)
 
@@ -42,4 +44,5 @@ Günlüğe kaydetme, bir yapı ilerlemesini izlemeniz için bir yol sağlar. Gü
  Özel iletme Günlükçüleri oluşturmayı açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) Paralel olarak çalıştırarak birden çok projenin daha hızlı bir şekilde nasıl oluşturulacağını açıklar.

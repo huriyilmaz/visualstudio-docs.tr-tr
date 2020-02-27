@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36b48529f82a908ea765151561a71c58cd2c7bc5
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 68d585361b9797bf1df9c8b0b31f8a089e9de025
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578426"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632101"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
+
 Bir kök işaretleyici belirten yanıt dosyası kullanarak izleme bağlamını başlatır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,6 +33,7 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
 ```
 
 #### <a name="parameters"></a>Parametreler
+
 [in] `intermediateDirectory`
 
  İzleme günlüğünün depolayabileceği dizin.
@@ -45,10 +47,13 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
  Kök işaretleyici içeren bir yanıt dosyasının yol adı. Kök adı bir bağlam için tüm izlemeyi gruplamak üzere kullanılır.
 
 ## <a name="return-value"></a>Dönüş değeri
+
  İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
+
  **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [StartTrackingContext](../msbuild/starttrackingcontext.md)

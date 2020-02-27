@@ -19,26 +19,28 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 312e174b1bbe0a21d155e4e6b5050e6f41dd8352
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 37692c541fb2a6e9b2ccf61083dd383e56a79766
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579553"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631529"
 ---
 # <a name="uidmanager-task"></a>Uıdmanager görevi
-<xref:Microsoft.Build.Tasks.Windows.UidManager> görevi, kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarına dahil edilen tüm [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
+
+<xref:Microsoft.Build.Tasks.Windows.UidManager> görevi, kaynak XAML dosyalarına dahil edilen tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |-------------------------| - |
-| `IntermediateDirectory` | İsteğe bağlı **dize** parametresi.<br /><br /> **MarkupFiles** parametresi tarafından belirtilen kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarını yedeklemek için kullanılan dizini belirtir. |
-| `MarkupFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> UID denetimi, güncelleştirilmesi veya kaldırılması için içerilecek kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarını belirtir. |
+| `IntermediateDirectory` | İsteğe bağlı **dize** parametresi.<br /><br /> **MarkupFiles** parametresi tarafından BELIRTILEN kaynak xaml dosyalarını yedeklemek için kullanılan dizini belirtir. |
+| `MarkupFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> UID denetimi, güncelleştirilmesi veya kaldırılması için dahil edilecek kaynak XAML dosyalarını belirtir. |
 | `Task` | Gerekli **dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Check**, **Update**veya **Remove**seçenekleridir. |
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, belirtilen kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarının uygun UID 'leri olan [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] öğeler içerdiğini denetlemek için <xref:Microsoft.Build.Tasks.Windows.UidManager> görevini kullanır.
+
+ Aşağıdaki örnek, belirtilen kaynak XAML dosyalarının uygun UID 'leri olan XAML öğeleri içerdiğini denetlemek için <xref:Microsoft.Build.Tasks.Windows.UidManager> görevini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -55,6 +57,7 @@ ms.locfileid: "77579553"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF MSBuild başvurusu](../msbuild/wpf-msbuild-reference.md)
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

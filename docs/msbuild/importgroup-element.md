@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56d3c301eb0e9b660a82b6552792a96aa5bd8596
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 76dadd1a064a64884e3ff1cd1f2431bc1b94c3c4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826594"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633739"
 ---
 # <a name="importgroup-element"></a>ImportGroup öğesi
+
   
 İsteğe bağlı bir koşul altında gruplanan `Import` öğelerinden oluşan bir koleksiyon içerir. Daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
@@ -42,9 +43,10 @@ ms.locfileid: "76826594"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -54,15 +56,16 @@ ms.locfileid: "76826594"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[İçeri Aktar](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.|
+|[İçeri Aktarma](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği `ImportGroup` öğesini gösterir.
 
 ```xml

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660f63f68435f4c4eba8d1c3dfb2438541da4841
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6da773fdf6cd84819ea0e73083995f60e3c17e2d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589298"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634090"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper görevi
+
 Bir uygulamayı ve önkoşullarını tespit etmek, indirmek ve yüklemek için otomatikleştirilmiş bir yol sağlar. Bir uygulamayı oluşturan tüm bileşenlerin ayrı yükleyicilerini tümleştiren tek bir yükleyici olarak görev yapar.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
 Aşağıda `GenerateBootstrapper` görevinin parametreleri açıklanır.
 
 - `ApplicationFile`
@@ -76,7 +78,7 @@ Aşağıda `GenerateBootstrapper` görevinin parametreleri açıklanır.
   </BootstrapperItem>
   ```
 
-   `Include` öznitelik, yüklenmesi gereken bir önkoşulun adını temsil eder. `ProductName` öğesi meta verileri isteğe bağlıdır ve paket bulunamazsa derleme altyapısı tarafından Kullanıcı dostu bir ad olarak kullanılır. Hiçbir `ApplicationFile` belirtilmediği takdirde bu öğeler giriş parametreleri [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] gerekli değildir. Uygulamanız için yüklenmesi gereken her önkoşul için bir öğe eklemelisiniz.
+   `Include` öznitelik, yüklenmesi gereken bir önkoşulun adını temsil eder. `ProductName` öğesi meta verileri isteğe bağlıdır ve paket bulunamazsa derleme altyapısı tarafından Kullanıcı dostu bir ad olarak kullanılır. `ApplicationFile` belirtilmediği takdirde bu öğeler, MSBuild giriş parametreleri gerekli değildir. Uygulamanız için yüklenmesi gereken her önkoşul için bir öğe eklemelisiniz.
 
    `BootstrapperItems` ne de `ApplicationFile` parametresi belirtilmemişse, derleme hatası ortaya kalır.
 
@@ -149,9 +151,11 @@ Aşağıda `GenerateBootstrapper` görevinin parametreleri açıklanır.
    `true`, önyükleyici belirtilen giriş önyükleyici öğelerinde XSD doğrulaması gerçekleştirir. Bu parametrenin varsayılan değeri `false`.
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, önkoşul olarak yüklenen .NET Framework 2,0 ' i yüklemiş olması gereken bir uygulamayı yüklemek için `GenerateBootstrapper` görevini kullanır.
 
 ```xml
@@ -176,5 +180,6 @@ Aşağıdaki örnek, önkoşul olarak yüklenen .NET Framework 2,0 ' i yüklemi�
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

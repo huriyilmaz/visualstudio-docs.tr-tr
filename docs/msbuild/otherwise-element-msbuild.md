@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 460a02b3e2115c7ccb91258ffe960668e64fb363
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 384886ad4292661648f5cbfde1a583d8d75b1c03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594848"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633050"
 ---
 # <a name="otherwise-element-msbuild"></a>Otherwise öğesi (MSBuild)
+
 Yalnızca tüm `When` öğelerinin koşulları `false`değerlendirmiyorsa yürütülecek kod bloğunu belirtir.
 
  \<Proje > \<\<> > seçin \<>... \<> seçin \<...
@@ -41,9 +42,11 @@ Yalnızca tüm `When` öğelerinin koşulları `false`değerlendirmiyorsa yürü
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
+
  Yok.
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -61,11 +64,13 @@ Yalnızca tüm `When` öğelerinin koşulları `false`değerlendirmiyorsa yürü
 |['Yu](../msbuild/choose-element-msbuild.md)|, Çalıştırılacak kodun bir bölümünü seçmek için alt öğeleri değerlendirir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Bir `Choose` öğesinde yalnızca bir `Otherwise` öğesi olabilir ve en son öğe olmalıdır.
 
  `Choose`, `When`ve `Otherwise` öğeleri, bir dizi olası alternatifden yürütülecek bir kod bölümü seçmek için bir yol sağlamak üzere birlikte kullanılır. Daha fazla bilgi için bkz. [koşullu yapılar](../msbuild/msbuild-conditional-constructs.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki proje, ayarlanacak `When` öğelerindeki özellik değerlerini belirlemek için `Choose` öğesini kullanır. Hem `When` öğelerin `Condition` öznitelikleri `false`olarak değerlendirilerse, `Otherwise` öğesindeki özellik değerleri ayarlanır.
 
 ```xml
@@ -114,5 +119,6 @@ Yalnızca tüm `When` öğelerinin koşulları `false`değerlendirmiyorsa yürü
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Koşullu yapılar](../msbuild/msbuild-conditional-constructs.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

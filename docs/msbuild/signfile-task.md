@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 397366a7dac601cd11dc1c70efc352edf303a92e
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 133048a5bb8103c681d8e2b84e68033c486109e1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579574"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632296"
 ---
 # <a name="signfile-task"></a>SignFile görevi
 
@@ -74,5 +74,6 @@ Belirtilen sertifikayı kullanarak belirtilen dosyayı imzalar.
 > Sertifika parmak izi, sertifikanın SHA-1 karmasıdır. Daha fazla bilgi için bkz. [Güvenilen bir kök CA SERTIFIKASıNıN SHA-1 karmasını alma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\)). Parmak izini sertifika ayrıntılarından kopyalayıp yapıştırırsanız, `SignFile` sertifikayı bulmasını engelleyebilen fazladan (3F) görünmez bir karakter dahil ettiğinizden emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

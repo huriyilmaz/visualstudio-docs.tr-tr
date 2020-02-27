@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06171f3a1543f6fa827c1b6fd477b992d099fff6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81a9c3b1c22277261276ced1940f1f2e83d11882
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590481"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634259"
 ---
 # <a name="downloadfile-task"></a>DownloadFile görevi
+
 , Hyper-metin Aktarım Protokolü 'Nü (HTTP) kullanarak belirtilen dosyaları indirir.
 
 >[!NOTE]
 >DownloadFile görevi yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `DownloadFile` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -49,9 +51,11 @@ Aşağıdaki tabloda `DownloadFile` görevinin parametreleri açıklanmaktadır.
 |`SourceUrl`|Gerekli `String` parametresi.<br /><br /> İndirilecek URL 'YI belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek bir dosyayı indirir ve projeyi oluşturmadan önce `Content` öğelerine ekler.
 
 ```xml
@@ -73,5 +77,6 @@ Aşağıdaki örnek bir dosyayı indirir ve projeyi oluşturmadan önce `Content
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

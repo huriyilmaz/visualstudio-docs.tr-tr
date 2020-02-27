@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebea7356e81cb5924919f213327816dbd69e0c7b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: bb95da599e6362ad32c0ef94dcf9c184269ddedf
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278406"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633414"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild komut satırı başvurusu
 
@@ -42,7 +42,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |--------------|-----------------|
 |`ProjectFile`|Belirttiğiniz proje dosyasında hedefleri oluşturur. Proje dosyası belirtmezseniz, MSBuild, *proj* içinde sonlanan ve bu dosyayı kullanan bir dosya adı uzantısı için geçerli çalışma dizinini arar. Ayrıca, bu bağımsız değişken için bir Visual Studio çözüm dosyası da belirtebilirsiniz.|
 
-## <a name="switches"></a>Anahtarlar
+## <a name="switches"></a>Geçişler
 
 |Anahtar|Kısa biçim|Açıklama|
 |------------|----------------|-----------------|
@@ -85,6 +85,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |-Noconsolegünlükçü|-noconlog|Varsayılan konsol günlükçüsü 'yi devre dışı bırakın ve olayları konsola kaydetme.|
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, *MyProject. proj* projesinin `rebuild` hedefini oluşturur.
 
 ```cmd
@@ -92,6 +93,7 @@ MSBuild.exe MyProject.proj -t:rebuild
 ```
 
 ## <a name="example"></a>Örnek
+
  *MSBuild. exe* ' yi, daha karmaşık derlemeler gerçekleştirmek için kullanabilirsiniz. Örneğin, bir çözümde belirli projelerin belirli hedeflerini oluşturmak için kullanabilirsiniz. Aşağıdaki örnek, proje `NotInSolutionFolder` yeniden oluşturur ve *newfolder* çözüm klasöründe olan proje `InSolutionFolder`temizler.
 
 ```cmd
@@ -99,5 +101,6 @@ msbuild SlnFolders.sln -t:NotInSolutionfolder:Rebuild;NewFolder\InSolutionFolder
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Ortak MSBuild proje özellikleri](../msbuild/common-msbuild-project-properties.md)

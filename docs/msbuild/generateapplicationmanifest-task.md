@@ -19,17 +19,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 446f4728f92d5a486afea1a7c03c8d5006690bfc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f77420c5ab269e1b0052ce6102c4e3196a3be52b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589311"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634103"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest görevi
-Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bildirimi veya yerel bildirim oluşturur. Yerel bildirim bileşeni, bileşen için benzersiz bir kimlik tanımlayarak ve bileşeni oluşturan tüm derlemeleri ve dosyaları tanımlayarak bir bileşeni tanımlar. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bildirimi, uygulamanın giriş noktasını belirterek ve uygulama güvenlik düzeyini belirterek yerel bir bildirimi genişletir.
+
+ClickOnce uygulama bildirimi veya yerel bildirim oluşturur. Yerel bildirim bileşeni, bileşen için benzersiz bir kimlik tanımlayarak ve bileşeni oluşturan tüm derlemeleri ve dosyaları tanımlayarak bir bileşeni tanımlar. ClickOnce uygulama bildirimi, uygulamanın giriş noktasını belirterek ve uygulama güvenlik düzeyini belirterek yerel bir bildirimi genişletir.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `GenerateApplicationManifest` görevinin parametreleri açıklanmaktadır.
 
 | Parametre | Açıklama |
@@ -40,7 +42,7 @@ Aşağıdaki tabloda `GenerateApplicationManifest` görevinin parametreleri aç�
 | `ConfigFile` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Hangi öğenin uygulama yapılandırma dosyasını içerdiğini belirtir. Görev yerel bir bildirim oluşturuyorsa, bu parametre yoksayılır. |
 | `Dependencies` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturulan bildirim için bağımlı derlemelerin kümesini tanımlayan bir öğe listesini belirtir. Her öğe, ek dağıtım durumu ve bağımlılık türü belirtmek için öğe meta verileri tarafından daha ayrıntılı bir şekilde açıklanabilir. Daha fazla bilgi için bkz. [öğe meta verileri](#item-metadata). |
 | `Description` | İsteğe bağlı `String` parametresi.<br /><br /> Uygulama veya bileşen için açıklama belirtir. |
-| `EntryPoint` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturulan bildirim derlemesi için giriş noktasını gösteren tek bir öğeyi belirtir.<br /><br /> [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bildirimi için, bu parametre uygulama çalıştırıldığında başlayan derlemeyi belirtir. |
+| `EntryPoint` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturulan bildirim derlemesi için giriş noktasını gösteren tek bir öğeyi belirtir.<br /><br /> ClickOnce uygulama bildirimi için, bu parametre uygulama çalıştırıldığında başlayan derlemeyi belirtir. |
 | `ErrorReportUrl` | İsteğe bağlı <xref:System.String?displayProperty=fullName> parametresi.<br /><br /> ClickOnce yüklemelerinde hata raporları sırasında iletişim kutularında görüntülenen Web sayfasının URL 'sini belirtir. |
 | `FileAssociations` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> ClickOnce dağıtım bildirimiyle ilişkili bir veya daha fazla dosya türünün listesini belirtir.<br /><br /> Dosya ilişkilendirmeleri yalnızca .NET Framework 3,5 veya üzeri hedeflenirse geçerlidir. |
 | `Files` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Bildirime dahil edilecek dosyalar. Her dosyanın tam yolunu belirtin. |
@@ -49,7 +51,7 @@ Aşağıdaki tabloda `GenerateApplicationManifest` görevinin parametreleri aç�
 | `InputManifest` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Bildirim Oluşturucu için temel olarak hizmet veren bir giriş XML belgesi gösterir. Bu, uygulama güvenliği veya özel bildirim tanımları gibi yapılandırılmış verilerin çıktı bildiriminde yansıtılmasına olanak tanır. XML belgesindeki kök öğesi asmv1 ad alanında bir derleme düğümü olmalıdır. |
 | `IsolatedComReferences` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturulan bildirimde yalıtmak için COM bileşenlerini belirtir. Bu parametre, "kayıt ücretsiz COM" dağıtımı için COM bileşenlerini yalıtma yeteneğini destekler. Standart COM kayıt tanımlarına sahip bir bildirimi otomatik olarak oluşturarak işe yarar. Ancak, bunun düzgün çalışması için COM bileşenlerinin derleme makinesinde kayıtlı olması gerekir. |
 | `ManifestType` | İsteğe bağlı `String` parametresi.<br /><br /> Oluşturulacak bildirim türünü belirtir. Bu parametre aşağıdaki değerlere sahip olabilir:<br /><br /> -   `Native`<br />-   `ClickOnce`<br /><br /> Bu parametre belirtilmezse, görev varsayılan olarak `ClickOnce`. |
-| `MaxTargetPath` | İsteğe bağlı `String` parametresi.<br /><br /> [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama dağıtımında bir dosya yolunun izin verilen en fazla uzunluğunu belirtir. Bu değer belirtilmişse, uygulamadaki her dosya yolunun uzunluğu bu sınıra karşı denetlenir. Sınırı aşan öğeler bir yapı uyarısında oluşturulur. Bu giriş belirtilmezse veya sıfırsa hiçbir denetim yapılmaz. Görev yerel bir bildirim oluşturuyorsa, bu parametre yoksayılır. |
+| `MaxTargetPath` | İsteğe bağlı `String` parametresi.<br /><br /> ClickOnce uygulama dağıtımında bir dosya yolunun izin verilen maksimum uzunluğunu belirtir. Bu değer belirtilmişse, uygulamadaki her dosya yolunun uzunluğu bu sınıra karşı denetlenir. Sınırı aşan öğeler bir yapı uyarısında oluşturulur. Bu giriş belirtilmezse veya sıfırsa hiçbir denetim yapılmaz. Görev yerel bir bildirim oluşturuyorsa, bu parametre yoksayılır. |
 | `OSVersion` | İsteğe bağlı `String` parametresi.<br /><br /> Uygulamanın gerektirdiği en düşük işletim sistemi (OS) sürümünü belirtir. Örneğin, "5.1.2600.0" değeri işletim sisteminin Windows XP olduğunu gösterir. Bu parametre belirtilmezse, en düşük desteklenen işletim .NET Framework sistemi olan Windows 98 Second Edition 'ı gösteren "4.10.0.0" değeri kullanılır. Görev yerel bir bildirim oluşturuyorsa bu giriş yok sayılır. |
 | `OutputManifest` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Oluşturulan çıkış bildirimi dosyasının adını belirtir. Bu parametre belirtilmemişse, çıkış dosyasının adı oluşturulan bildirimin kimliğinden algılanır. |
 | `Platform` | İsteğe bağlı `String` parametresi.<br /><br /> Uygulamanın hedef platformunu belirtir. Bu parametre aşağıdaki değerlere sahip olabilir:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> Bu parametre belirtilmezse, görev varsayılan olarak `AnyCPU`. |
@@ -65,6 +67,7 @@ Aşağıdaki tabloda `GenerateApplicationManifest` görevinin parametreleri aç�
 | `UseApplicationTrust` | İsteğe bağlı `Boolean` parametresi.<br /><br /> True ise `Product`, `Publisher`ve `SupportUrl` özellikleri uygulama bildirimine yazılır. |
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.GenerateManifestBase> sınıfından parametreleri devralır. Görev sınıfının parametrelerinin listesi için bkz. [görev temel sınıfı](../msbuild/task-base-class.md).
 
 `GenerateDeploymentManifest` görevinin kullanımı hakkında daha fazla bilgi için bkz. [GenerateApplicationManifest görevi](../msbuild/generateapplicationmanifest-task.md).
@@ -82,12 +85,13 @@ Bağımlılıklar ve dosyalar için girişler, her öğe için ek dağıtım dur
 |`IsDataFile`|Dosyanın bir veri dosyası olup olmadığını gösteren `Boolean` meta veri değeri. Bir veri dosyası, uygulama güncelleştirmeleri arasında geçirilme için özeldir. Bu meta veriler yalnızca dosyalar için geçerlidir. Varsayılan değer `False`.|
 
 ## <a name="example"></a>Örnek
-Bu örnek, tek bir bütünleştirilmiş koda sahip bir uygulama için dağıtım bildirimi oluşturmak üzere bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bildirimi ve `GenerateDeploymentManifest` görevi oluşturmak için `GenerateApplicationManifest` görevini kullanır. Daha sonra bildirimleri imzalamak için `SignFile` görevini kullanır.
 
-Bu, tek bir program için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimlerinin oluşturulduğu en basit olası bildirim oluşturma senaryosunu gösterir. Bildirim için derlemeden varsayılan bir ad ve kimlik algılanır.
+Bu örnek, bir ClickOnce uygulama bildirimi oluşturmak için `GenerateApplicationManifest` görevini ve tek bir bütünleştirilmiş koda sahip bir uygulama için dağıtım bildirimi oluşturmak üzere `GenerateDeploymentManifest` görevini kullanır. Daha sonra bildirimleri imzalamak için `SignFile` görevini kullanır.
+
+Bu, tek bir program için ClickOnce bildirimlerinin oluşturulduğu en basit olası bildirim oluşturma senaryosunu gösterir. Bildirim için derlemeden varsayılan bir ad ve kimlik algılanır.
 
 > [!NOTE]
-> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımı üretir.
+> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir ClickOnce dağıtımı üretir.
 >
 > [!NOTE]
 > Bu örnekteki `SignFile` görevinde kullanılan `Thumbprint` özelliği hakkında daha fazla bilgi için bkz. [SignFile görevi](../msbuild/signfile-task.md).
@@ -135,12 +139,13 @@ Bu, tek bir program için [!INCLUDE[ndptecclick](../deployment/includes/ndpteccl
 ```
 
 ## <a name="example"></a>Örnek
-Bu örnek, tek bir bütünleştirilmiş koda sahip bir uygulama için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama ve dağıtım bildirimleri oluşturmak üzere `GenerateApplicationManifest` ve `GenerateDeploymentManifest` görevlerini kullanır ve bildirimlerin adını ve kimliğini belirtin.
+
+Bu örnekte, bildirimlerin ad ve kimliğini belirterek tek bir bütünleştirilmiş koda sahip bir uygulama için ClickOnce uygulaması ve dağıtım bildirimleri oluşturmak üzere `GenerateApplicationManifest` ve `GenerateDeploymentManifest` görevleri kullanılmaktadır.
 
 Bu örnek, bildirimlerin adı ve kimliği açıkça belirtildiğinde, önceki örneğe benzerdir. Ayrıca, bu örnek yüklü bir uygulama yerine çevrimiçi bir uygulama olarak yapılandırılır.
 
 > [!NOTE]
-> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımı üretir.
+> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir ClickOnce dağıtımı üretir.
 >
 > [!NOTE]
 > Bu örnekteki `SignFile` görevinde kullanılan `Thumbprint` özelliği hakkında daha fazla bilgi için bkz. [SignFile görevi](../msbuild/signfile-task.md).
@@ -195,10 +200,11 @@ Bu örnek, bildirimlerin adı ve kimliği açıkça belirtildiğinde, önceki ö
 ```
 
 ## <a name="example"></a>Örnek
-Bu örnek, birden çok dosya ve derlemeye sahip bir uygulama için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama ve dağıtım bildirimleri oluşturmak üzere `GenerateApplicationManifest` ve `GenerateDeploymentManifest` görevlerini kullanır.
+
+Bu örnek, birden çok dosya ve derlemeye sahip bir uygulama için ClickOnce uygulaması ve dağıtım bildirimleri oluşturmak üzere `GenerateApplicationManifest` ve `GenerateDeploymentManifest` görevlerini kullanır.
 
 > [!NOTE]
-> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımı üretir.
+> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir ClickOnce dağıtımı üretir.
 >
 > [!NOTE]
 > Bu örnekteki `SignFile` görevinde kullanılan `Thumbprint` özelliği hakkında daha fazla bilgi için bkz. [SignFile görevi](../msbuild/signfile-task.md).
@@ -313,12 +319,13 @@ Bu örnek, birden çok dosya ve derlemeye sahip bir uygulama için [!INCLUDE[ndp
 ```
 
 ## <a name="example"></a>Örnek
+
 Bu örnek, yerel bileşen *Alpha. dll* ve YALıTıLMıŞ bir com bileşeni *Bravo. dll*' ye başvuran uygulama *test. exe*için yerel bir bildirim oluşturmak üzere `GenerateApplicationManifest` görevini kullanır.
 
 Bu örnek, *test. exe. manifest*dosyasını üretir, böylece uygulama xcopy olarak dağıtılabilir ve kayıt ücretsiz com avantajlarından yararlanır.
 
 > [!NOTE]
-> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımı üretir.
+> Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir ClickOnce dağıtımı üretir.
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -350,6 +357,7 @@ Bu örnek, *test. exe. manifest*dosyasını üretir, böylece uygulama xcopy ola
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [GenerateDeploymentManifest görevi](../msbuild/generatedeploymentmanifest-task.md)
 - [SignFile görevi](../msbuild/signfile-task.md)

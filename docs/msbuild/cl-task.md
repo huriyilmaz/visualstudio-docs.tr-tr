@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: effc1b51352052f4e11e42298f9e9567db30d8f1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c45f22011c32378af0690c9aee226877faf903bd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593362"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634467"
 ---
 # <a name="cl-task"></a>CL görevi
+
 , C++ *CL. exe*Microsoft derleyici aracını sarmalanmış. Derleyici yürütülebilir ( *. exe*) dosyalar, dinamik bağlantı kitaplığı ( *. dll*) dosyaları veya kod modülü ( *. netmodule*) dosyaları oluşturur. Daha fazla bilgi için bkz. [derleyici seçenekleri](/cpp/build/reference/compiler-options).
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki listede **CL** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
 
 - **AdditionalIncludeDirectories**
@@ -70,7 +72,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için/fa [,/FA (listeleme dosyası)](/cpp/build/reference/fa-fa-listing-file)içindeki **/FA** seçeneğine bakın.
 
-- **AssemblerOutput**
+- **Lerçıktıyı birleştirin**
 
    İsteğe bağlı dize parametresi.
 
@@ -82,15 +84,15 @@ ms.locfileid: "75593362"
 
   - **Assemblycode** -  **/FA**
 
-  - **AssemblyAndMachineCode** -  **/FAc**
+  - **Assemblyandmachinecode** -  **/fac**
 
-  - **AssemblyAndSourceCode** -  **/FAs**
+  - **Assemblyandsourcecode** -  **/Fas**
 
   - **Tüm** -  **/FACS**
 
     Daha fazla bilgi için/fa **,** **/fac**, **/Fas**ve/FA,/FA [(listeleme dosyası)](/cpp/build/reference/fa-fa-listing-file)içindeki **/FACS** seçeneklerine bakın.
 
-- **BasicRuntimeChecks**
+- **Basicruntimedenetimleri**
 
    İsteğe bağlı dize parametresi.
 
@@ -102,9 +104,9 @@ ms.locfileid: "75593362"
 
   - **StackFrameRuntimeCheck** -  **/RTCs**
 
-  - **UninitializedLocalUsageCheck** -  **/RTCu**
+  - **Unınitializedlocalusagecheck** -  **/RTCu**
 
-  - **EnableFastChecks** -                           **/RTC1**
+  - **Enablefastdenetimleri** -                           **/RTC1**
 
     Daha fazla bilgi için bkz. [/RTC (çalışma zamanı hata denetimleri)](/cpp/build/reference/rtc-run-time-error-checks).
 
@@ -150,7 +152,7 @@ ms.locfileid: "75593362"
 
   - **Fastcall** -                           **/gr**
 
-  - **StdCall** -                           **/Gz**
+  - **StdCall** -                           **/gz**
 
     Daha fazla bilgi için bkz. [/GD,/gr,/GV,/GZ (çağırma kuralı)](/cpp/build/reference/gd-gr-gv-gz-calling-convention).
 
@@ -164,9 +166,9 @@ ms.locfileid: "75593362"
 
   - **Varsayılan** -  *\<yok >*
 
-  - **CompileAsC** -  **/TC**
+  - **Compileasc** -  **/TC**
 
-  - **CompileAsCpp** -  **/TP**
+  - **Compileascpp** -  **/TP**
 
     Daha fazla bilgi için bkz. [/TC,/TP,/TC,/TP (kaynak dosya türünü belirtin)](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type).
 
@@ -184,13 +186,13 @@ ms.locfileid: "75593362"
 
   - **Saf** -  **/clr: Pure**
 
-  - **Safe** -  **/clr:safe**
+  - **Güvenli** -  **/clr: Safe**
 
-  - **OldSyntax** -  **/clr:oldSyntax**
+  - **Oldsyntax** -  **/clr: oldSyntax**
 
     Daha fazla bilgi için bkz. [/clr (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).
 
-- **CreateHotpatchableImage**
+- **Createhotpatchableımage**
 
    İsteğe bağlı Boolean parametresi.
 
@@ -206,11 +208,11 @@ ms.locfileid: "75593362"
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **OldStyle** -  **/Z7**
+  - **Oldstyle** -  **/Z7**
 
   - **Programdatabase** -  **/Zi**
 
-  - **EditAndContinue** -  **/ZI**
+  - **Editandcontinue** -  **/Zi**
 
     Daha fazla bilgi için bkz. [/Z7,/Zi,/ZI (hata ayıklama bilgileri biçimi)](/cpp/build/reference/z7-zi-zi-debug-information-format).
 
@@ -244,7 +246,7 @@ ms.locfileid: "75593362"
 
     Daha fazla bilgi için bkz. [/Arch (x86)](/cpp/build/reference/arch-x86).
 
-- **EnableFiberSafeOptimizations**
+- **Enablefibersafeiyileştirmeleri**
 
    İsteğe bağlı Boolean parametresi.
 
@@ -268,13 +270,13 @@ ms.locfileid: "75593362"
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **None** -  **/errorReport:none**
+  - **None** -  **/errorreport: None**
 
-  - **Prompt** -  **/errorReport:prompt**
+  - **İstem** -  **/errorreport: Prompt**
 
-  - **Queue** -  **/errorReport:queue**
+  - **Sıra** -  **/errorreport: Queue**
 
-  - **Send** -  **/errorReport:send**
+  -  -  **/errorreport: Send** **Gönder**
 
     Daha fazla bilgi için bkz. [/errorreport (iç derleyici hatalarını raporla)](/cpp/build/reference/errorreport-report-internal-compiler-errors).
 
@@ -288,11 +290,11 @@ ms.locfileid: "75593362"
 
   - **false** -  *\<None >*
 
-  - **Async** -  **/EHa**
+  - **Zaman uyumsuz** -  **/EHa**
 
-  - **Sync** -  **/EHsc**
+  -  -  **/EHsc** **eşitleme**
 
-  - **SyncCThrow** -  **/EHs**
+  - **Synccthrow** -  **/EHS**
 
     Daha fazla bilgi için bkz. [/Eh (özel durum işleme modeli)](/cpp/build/reference/eh-exception-handling-model).
 
@@ -336,11 +338,11 @@ ms.locfileid: "75593362"
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Precise** -  **/fp:precise**
+  - **Kesin** -  **/FP: kesin**
 
   - **Katı** -  **/FP: Strict**
 
-  - **Fast** -  **/fp:fast**
+  - **Hızlı** -  **/FP: Fast**
 
     Daha fazla bilgi için bkz. [/FP (kayan nokta davranışını belirt)](/cpp/build/reference/fp-specify-floating-point-behavior).
 
@@ -384,7 +386,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için bkz. [/doc (işlem belgeleri açıklamaları) (CC++/)](/cpp/build/reference/doc-process-documentation-comments-c-cpp). Ayrıca bkz. bu tablodaki **Xmlbelgeadı** parametresi.
 
-- **IgnoreStandardIncludePath**
+- **Ignorestandardincludepath**
 
    İsteğe bağlı `Boolean` parametresi.
 
@@ -404,7 +406,7 @@ ms.locfileid: "75593362"
 
   - **Devre dışı** -  **/Ob0**
 
-  - **OnlyExplicitInline** -  **/Ob1**
+  - **Yalnızca açıkça satır içi** -  **/OB1**
 
   - **Anyuygun** -  **/Ob2**
 
@@ -456,7 +458,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için bkz. [/zl (varsayılan kitaplık adını atla)](/cpp/build/reference/zl-omit-default-library-name).
 
-- **OmitFramePointers**
+- **Omitframeişaretçiler**
 
    İsteğe bağlı `Boolean` parametresi.
 
@@ -472,7 +474,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için bkz. [/OpenMP (openmp 2,0 desteğini etkinleştir)](/cpp/build/reference/openmp-enable-openmp-2-0-support).
 
-- **En iyi duruma getirme**
+- **İyileştirme**
 
    İsteğe bağlı **dize** parametresi.
 
@@ -514,7 +516,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için bkz. [/Yıc (ön derlenmiş üstbilgi dosyası oluştur)](/cpp/build/reference/yc-create-precompiled-header-file) ve [/yu (önceden derlenmiş üst bilgi dosyası kullan)](/cpp/build/reference/yu-use-precompiled-header-file).
 
-- **PrecompiledHeaderOutputFile**
+- **Precompiledheaderçıktıdosyası**
 
    İsteğe bağlı **dize** parametresi.
 
@@ -596,7 +598,7 @@ ms.locfileid: "75593362"
 
   - **Multithreadeddll** -  **/md**
 
-  - **MultiThreadedDebugDLL** -  **/MDd**
+  - **Multithreadeddebugdll** -  **/MDD**
 
     Daha fazla bilgi için bkz. [/MD,/MT,/LD (çalışma zamanı kitaplığını kullan)](/cpp/build/reference/md-mt-ld-use-run-time-library).
 
@@ -648,15 +650,15 @@ ms.locfileid: "75593362"
 
   - **Varsayılan** -  **/ZP1**
 
-  - **1Byte** -  **/Zp1**
+  - 1 **bayt** -  **/ZP1**
 
-  - **2Bytes** -  **/Zp2**
+  - **2Bayt** -  **/ZP2**
 
-  - **4Bytes** -  **/Zp4**
+  - 4 **bayt** -  **/ZP4**
 
-  - **8Bytes** -  **/Zp8**
+  - **8Bayt** -  **/ZP8**
 
-  - **16Bytes** -  **/Zp16**
+  - **16Bytes** -  **/zp16**
 
     Daha fazla bilgi için bkz. [/Zp (struct üye hizalaması)](/cpp/build/reference/zp-struct-member-alignment).
 
@@ -724,7 +726,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için bkz. [/FC (kaynak kodu dosyasının Tanılamadaki Tam yolu)](/cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics).
 
-- **UseUnicodeForAssemblerListing**
+- **Useunicodefor, Lerlist**
 
    İsteğe bağlı `Boolean` parametresi.
 
@@ -762,7 +764,7 @@ ms.locfileid: "75593362"
 
    Daha fazla bilgi için bkz. [/GL (tüm program iyileştirmesi)](/cpp/build/reference/gl-whole-program-optimization).
 
-- **XMLDocumentationFileName**
+- **Xmlbelgeadı**
 
    İsteğe bağlı `String` parametresi.
 
@@ -801,4 +803,5 @@ ms.locfileid: "75593362"
    Daha fazla bilgi için bu tablodaki **TLogReadFiles** ve **TLogWriteFiles** parametrelerine bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

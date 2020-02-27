@@ -13,17 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 947a1df101a169b7bdad4efda74cab1ae042964a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9aa052a0fd2216d5f3d85e99794d9ac883a09e2d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594974"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631698"
 ---
 # <a name="tooltaskextension-base-class"></a>ToolTaskExtension temel sınıfı
+
 Birçok görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Utilities.ToolTask> sınıfından devralan <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından devralınır. Bu devralma zinciri, bunlardan türetilen görevlere birkaç parametre ekler. Bu parametreler bu belgede listelenmiştir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda temel sınıfların parametreleri açıklanmaktadır.
 
 | Parametre | Açıklama |
@@ -41,10 +43,11 @@ Birçok görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından de
 | <xref:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance%2A> | İsteğe bağlı `String` parametresi.<br /><br /> Standart çıkış akışından metnin günlüğe kaydedileceği önem. |
 | <xref:Microsoft.Build.Utilities.ToolTask.Timeout%2A> | Sanal isteğe bağlı `Int32` parametresi.<br /><br /> Görev yürütülebilir dosyasının sonlandırılacağı süre (milisaniye cinsinden) sayısını belirtir. Varsayılan değer, zaman aşımı süresi olmadığını belirten `Int.MaxValue`. Zaman aşımı süresi milisaniyedir. |
 | <xref:Microsoft.Build.Utilities.ToolTask.ToolExe%2A> | Sanal isteğe bağlı `string` parametresi.<br /><br /> Projeler, bir ToolName 'yi geçersiz kılmak için bunu uygulayabilir. Görevler, ToolName 'yi korumak için bunu geçersiz kılabilir. |
-| <xref:Microsoft.Build.Utilities.ToolTask.ToolPath%2A> | İsteğe bağlı `string` parametresi.<br /><br /> Görevin temel alınan yürütülebilir dosyayı yüklediği konumu belirtir. Bu parametre belirtilmezse, görev, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]çalıştıran Framework sürümüne karşılık gelen SDK yükleme yolunu kullanır. |
+| <xref:Microsoft.Build.Utilities.ToolTask.ToolPath%2A> | İsteğe bağlı `string` parametresi.<br /><br /> Görevin temel alınan yürütülebilir dosyayı yüklediği konumu belirtir. Bu parametre belirtilmezse, görev MSBuild 'i çalıştıran Framework sürümüne karşılık gelen SDK yükleme yolunu kullanır. |
 | <xref:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor%2A> | İsteğe bağlı `bool` parametresi.<br /><br /> `true`olarak ayarlandığında, bu görev komut satırı için bir toplu iş dosyası oluşturur ve komutu doğrudan yürütmek yerine komut işlemcisini kullanarak yürütür. |
 | <xref:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution%2A> | İsteğe bağlı `bool` parametresi.<br /><br /> `true`olarak ayarlandığında, bu görev, görevi çalıştırıldığında düğümü verir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

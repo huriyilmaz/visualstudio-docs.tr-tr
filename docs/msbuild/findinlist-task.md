@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 650683c047f7df6422e25ef5b23201a2660b3125
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 915265a775f572467ad1296499bdd3201adc1f8b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591131"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634155"
 ---
 # <a name="findinlist-task"></a>FindInList görevi
+
 Belirtilen listede, eşleşen itemspec 'e sahip bir öğe bulur.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda, [Findinlist görevinin](../msbuild/findinlist-task.md)parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -39,8 +41,10 @@ Belirtilen listede, eşleşen itemspec 'e sahip bir öğe bulur.
 |`MatchFileNameOnly`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, itemspec 'in yalnızca dosya adı bölümüyle eşleşir; Aksi takdirde, tüm itemspec ile eşleştirin. Varsayılan değer `true`.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

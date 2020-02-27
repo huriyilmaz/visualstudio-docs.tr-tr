@@ -17,14 +17,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd533507e1c498ae315529bd8ab17dd175b7f836
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579686"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634194"
 ---
 # <a name="fileclassifier-task"></a>Filesınıflandırıcı görevi
+
 <xref:Microsoft.Build.Tasks.Windows.FileClassifier> görevi bir kaynak kaynakları kümesini bir derlemeye katıştırılacak şekilde sınıflandırır. Bir kaynak yerelleştirilebilir değilse, ana uygulama derlemesine katıştırılır; Aksi halde, bir uydu derlemesine katıştırılır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
@@ -41,9 +42,11 @@ ms.locfileid: "77579686"
 |`SourceFiles`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Sınıflandırılacağı dosyaların listesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 **Kültür** parametresi ayarlanmamışsa **SourceFiles** parametresi kullanılarak belirtilen tüm kaynaklar yerelleştirilemeyen; Aksi takdirde, **yanlış**olarak ayarlanmış bir **yerelleştirilebilir** özniteliğiyle ilişkilendirilmedikleri müddetçe bunlar yerelleştirilebilir olur.
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, tek bir kaynak dosyayı kaynak olarak sınıflandırır ve ardından Fransızca-Kanada (fr-CA) kültürü için bir uydu derlemesine katıştırır.
 
 ```xml
@@ -64,6 +67,7 @@ Aşağıdaki örnek, tek bir kaynak dosyayı kaynak olarak sınıflandırır ve 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF MSBuild başvurusu](../msbuild/wpf-msbuild-reference.md)
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

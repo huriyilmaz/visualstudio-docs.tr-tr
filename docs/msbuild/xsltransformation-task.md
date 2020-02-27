@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90b56d3b36545ecfe97015fc301ce3ce72e781ba
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 84bc83f60d133dcaf22c9fa690357fa2624adabd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588375"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630801"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation görevi
+
 Bir XSLT veya derlenmiş XSLT kullanarak bir XML girişini dönüştürür ve çıkış cihazına veya bir dosyaya çıktılar verir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `XslTransformation` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -40,8 +42,10 @@ Bir XSLT veya derlenmiş XSLT kullanarak bir XML girişini dönüştürür ve ç
 |`XslInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> XSLT giriş dosyasını belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

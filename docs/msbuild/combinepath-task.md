@@ -16,18 +16,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a52e0d770a535b0fa7d29a379a7f6aba63e62d78
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 533f87eba9032efa7dc60ac682bbe400cb640727
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593349"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634441"
 ---
 # <a name="combinepath-task"></a>CombinePath görevi
-Belirtilen yolları tek bir yol olarak birleştirir.
 
+Belirtilen yolları tek bir yol olarak birleştirir.
 ## <a name="task-parameters"></a>Görev parametreleri
+
  Aşağıdaki tabloda [CombinePath görevinin](../msbuild/combinepath-task.md)parametreleri açıklanmaktadır.
+
 
 |Parametre|Açıklama|
 |---------------|-----------------|
@@ -36,8 +38,10 @@ Belirtilen yolları tek bir yol olarak birleştirir.
 |`CombinedPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan Birleşik yol.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -22,22 +22,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26891fa67616b1796499722e03a764da2a8fd7d6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0a06849c2aa0f4ec0203a7209ffc78be438dba9e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589272"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633388"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild koşullu yapılar
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], [seçim](../msbuild/choose-element-msbuild.md), [ne zaman](../msbuild/when-element-msbuild.md)ve [otherwise](../msbuild/otherwise-element-msbuild.md) öğelerinden birini kullanarak veya işlemek için bir mekanizma sağlar.
+
+MSBuild,/veya öğesini [Seç](../msbuild/choose-element-msbuild.md), [ne zaman](../msbuild/when-element-msbuild.md)ve [otherwise](../msbuild/otherwise-element-msbuild.md) öğeleri ile işlemek için bir mekanizma sağlar.
 
 ## <a name="use-the-choose-element"></a>Seçme öğesini kullanın
+
  `Choose` öğesi, bir `true`değerlendirilene kadar yukarıdan aşağıya doğru sırayla test edilen `Condition` özniteliklere sahip bir dizi `When` öğesi içerir. Birden fazla `When` öğesi `true`değerlendirilirse, yalnızca ilki kullanılır. Varsa bir `Otherwise` öğesi, bir `When` öğesindeki hiçbir koşul `true`olarak değerlendiriliyorsa değerlendirilir.
 
  `Choose` öğeleri `Project`, `When` ve `Otherwise` öğeleri için alt öğe olarak kullanılabilir. `When` ve `Otherwise` öğeleri `ItemGroup`, `PropertyGroup`veya `Choose` alt öğelerine sahip olabilir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek,/veya işleme için `Choose` ve `When` öğelerini kullanır. Projenin özellikleri ve öğeleri `Configuration` özelliğinin değerine bağlı olarak ayarlanır.
 
 ```xml
@@ -77,6 +80,7 @@ ms.locfileid: "75589272"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öğe seç (MSBuild)](../msbuild/choose-element-msbuild.md)
 - [Ne zaman öğesi (MSBuild)](../msbuild/when-element-msbuild.md)
 - [Otherwise öğesi (MSBuild)](../msbuild/otherwise-element-msbuild.md)

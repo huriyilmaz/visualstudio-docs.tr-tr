@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78aef20a322ad3743ed1cb89955654456dff670e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f588ae1b32b8b8d47d6323ee32d02c9053a3de32
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591456"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634220"
 ---
 # <a name="exec-task"></a>Yürütme görevi
+
 Belirtilen bağımsız değişkenleri kullanarak belirtilen programı veya komutu çalıştırır.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `Exec` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -48,13 +50,15 @@ Aşağıdaki tabloda `Exec` görevinin parametreleri açıklanmaktadır.
 |`WorkingDirectory`|İsteğe bağlı `String` parametresi.<br /><br /> Komutun çalıştırılacağı dizini belirtir.<br /><br />Varsayılan: projenin geçerli çalışma dizini.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu görev, gerçekleştirmek istediğiniz iş için belirli bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevi kullanılabilir olmadığında yararlıdır. Ancak, daha belirli bir görevden farklı olarak `Exec` görevi, çalıştığı aracın veya komutun sonucuna göre ek işlem veya koşullu işlemler yapılamaz.
+
+Bu görev, gerçekleştirmek istediğiniz iş için belirli bir MSBuild görevi kullanılabilir olmadığında yararlıdır. Ancak, daha belirli bir görevden farklı olarak `Exec` görevi, çalıştığı aracın veya komutun sonucuna göre ek işlem veya koşullu işlemler yapılamaz.
 
 `Exec` görevi, doğrudan bir işlemi çağırmak yerine *cmd. exe* ' yi çağırır.
 
 Bu belgede listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.ToolTask> sınıfından devralan <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, bir komutu çalıştırmak için `Exec` görevini kullanır.
 
 ```xml
@@ -71,5 +75,6 @@ Aşağıdaki örnek, bir komutu çalıştırmak için `Exec` görevini kullanır
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -17,15 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c65bafd9183c97efa7595c10d7bdb3641c5f75f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8a704744032c5dea70246463a816ba8e1f5c84e8
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595143"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632478"
 ---
 # <a name="sdk-element-msbuild"></a>SDK öğesi (MSBuild)
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje SDK 'sına başvurur.
+
+MSBuild proje SDK 'sına başvurur.
 
  \<Proje > \<SDK >
 
@@ -37,9 +38,10 @@ ms.locfileid: "75595143"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -47,15 +49,17 @@ ms.locfileid: "75595143"
 |`Version`|İsteğe bağlı öznitelik.<br /><br /> Proje SDK 'sının sürümü|
 
 ### <a name="child-elements"></a>Alt öğeleri
+
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: MSBuild proje SDK 'sına başvurma](../msbuild/how-to-use-project-sdk.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

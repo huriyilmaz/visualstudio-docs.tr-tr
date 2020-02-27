@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd21d7da710a82d9396766971244aa5f7f9bbd4d
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 8064ce4c13419238ca5877893a731d2ac53afb25
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278799"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633648"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup öğesi (MSBuild)
-Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesinde kullanılan her öğe, bir `ItemGroup` öğesinin alt öğesi olarak belirtilmelidir.
+
+Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. Bir MSBuild projesinde kullanılan her öğe, bir `ItemGroup` öğesinin alt öğesi olarak belirtilmelidir.
 
 \<Proje > \<ItemGroup >
 
@@ -41,6 +42,7 @@ Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri küm
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
 Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
@@ -60,10 +62,11 @@ Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri küm
 
 | Öğe | Açıklama |
 | - | - |
-| [Proje](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 | [Hedef](../msbuild/target-element-msbuild.md) | .NET Framework 3,5 ' den başlayarak, `ItemGroup` öğesi bir `Target` öğesi içinde bulunabilir. Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki kod örneği, Kullanıcı tanımlı öğe koleksiyonlarını `Res` ve bir `ItemGroup` öğesinin içinde bildirildiği `CodeFiles` gösterir. `Res` öğesi koleksiyonundaki öğelerin her biri Kullanıcı tanımlı bir alt [ItemMetadata](../msbuild/itemmetadata-element-msbuild.md) öğesi içerir.
 
 ```xml
@@ -84,6 +87,7 @@ Aşağıdaki kod örneği, Kullanıcı tanımlı öğe koleksiyonlarını `Res` 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)
 - [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)

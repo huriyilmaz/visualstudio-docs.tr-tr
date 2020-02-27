@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99970bfbc955fe972d5e3c9a4e38ae6f57e0e0bf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597431"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632959"
 ---
 # <a name="property-element-msbuild"></a>Property öğesi (MSBuild)
-Kullanıcı tanımlı özellik adı ve değeri içerir. Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesinde kullanılan her özellik, bir `PropertyGroup` öğesinin alt öğesi olarak belirtilmelidir.
+
+Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde kullanılan her özelliğin, bir `PropertyGroup` öğesinin alt öğesi olarak belirtilmesi gerekir.
 
  \<Proje > \<PropertyGroup >
 
@@ -37,15 +38,17 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir [!INCLUDE[vstecmsbui
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
+
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
@@ -55,14 +58,17 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir [!INCLUDE[vstecmsbui
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Özellikler için gruplandırma öğesi.|
 
 ## <a name="text-value"></a>Metin değeri
+
  Metin değeri isteğe bağlıdır.
 
  Bu metin, özellik değerini belirtir ve XML içerebilir.
 
 ## <a name="remarks"></a>Açıklamalar
+
  Özellik adları yalnızca ASCII karakterleri ile sınırlıdır. Özellik değerleri, "`$(`" ve "`)`" arasında özellik adı girilerek projede başvurulur. Örneğin, `builddir` özelliğinde `build`değeri varsa `$(builddir)\classes`, *build\classes*olarak çözümlenir. Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod, `Version` özelliği boşsa `Optimization` özelliğini `false` ve `DefaultVersion` özelliğini `1.0` olarak ayarlar.
 
 ```xml
@@ -73,5 +79,6 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir [!INCLUDE[vstecmsbui
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 481be1f0e9c5444e56c95b13e938cda1d541af71
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bcb9404b8c68171f0695b33c285582f5e4c5b4ec
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566903"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630931"
 ---
 # <a name="when-element-msbuild"></a>Ne zaman öğesi (MSBuild)
+
 Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir.
 
  \<Proje > \<\<> > seçin \<>... \<> seçin \<...
@@ -41,9 +42,10 @@ Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir.
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -64,11 +66,13 @@ Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir.
 |[Öğe seç (MSBuild)](../msbuild/choose-element-msbuild.md)|, Çalıştırılacak kodun bir bölümünü seçmek için alt öğeleri değerlendirir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  `Condition` özniteliği true olarak değerlendirilirse, `When` öğesinin alt `ItemGroup` ve `PropertyGroup` öğeleri yürütülür ve sonraki tüm `When` öğeleri atlanır.
 
  `Choose`, `When`ve `Otherwise` öğeleri, bir dizi olası alternatifden yürütülecek bir kod bölümü seçmek için bir yol sağlamak üzere birlikte kullanılır. Daha fazla bilgi için bkz. [koşullu yapılar](../msbuild/msbuild-conditional-constructs.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki proje, ayarlanacak `When` öğelerindeki özellik değerlerini belirlemek için `Choose` öğesini kullanır. Hem `When` öğelerin `Condition` öznitelikleri `false`olarak değerlendirilerse, `Otherwise` öğesindeki özellik değerleri ayarlanır.
 
 ```xml
@@ -117,5 +121,6 @@ Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Koşullu yapılar](../msbuild/msbuild-conditional-constructs.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

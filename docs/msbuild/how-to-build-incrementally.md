@@ -12,22 +12,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 949ec0622dd19ef906d4c3a40a2ddadac2b75065
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e4911bb131f5c5c878b82865b3dee61fd7bedbe1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75575906"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634168"
 ---
 # <a name="how-to-build-incrementally"></a>Nasıl yapılır: Artımlı derleme
-Büyük bir proje oluşturduğunuzda, daha önce, hala güncel olan bileşenlerin önceden oluşturulmaması önemlidir. Tüm hedefler her seferinde derlenmişse, her derleme tamamlanması uzun sürer. Artımlı derlemeleri etkinleştirmek için (yalnızca önceden oluşturulmamış olan hedefleri veya güncel olmayan hedefleri yeniden oluşturur), [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]), giriş dosyalarının zaman damgalarına çıkış dosyalarının zaman damgalarına göre karşılaştırabilir ve bir hedefi atlayıp atlaya, derlemeyi veya kısmen yeniden oluşturmayı belirleyebilirsiniz. Ancak, girişler ve çıktılar arasında bire bir eşleme olmalıdır. Bu doğrudan eşlemeyi belirlemek için hedefleri etkinleştirmek üzere dönüşümleri kullanabilirsiniz. Dönüşümler hakkında daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
+
+Büyük bir proje oluşturduğunuzda, daha önce, hala güncel olan bileşenlerin önceden oluşturulmaması önemlidir. Tüm hedefler her seferinde derlenmişse, her derleme tamamlanması uzun sürer. Artımlı derlemeleri etkinleştirmek için (yalnızca, eski veya güncel olmayan hedeflerin oluşturulduğu derlemeler yeniden oluşturulur), Microsoft Build Engine (MSBuild) giriş dosyalarının zaman damgalarını çıkış dosyalarının zaman damgalarına göre karşılaştırabilir ve bir hedefin atlanıp oluşturulup oluşturulmayacağını veya kısmen yeniden oluşturulduğunu belirleme. Ancak, girişler ve çıktılar arasında bire bir eşleme olmalıdır. Bu doğrudan eşlemeyi belirlemek için hedefleri etkinleştirmek üzere dönüşümleri kullanabilirsiniz. Dönüşümler hakkında daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
 
 ## <a name="specify-inputs-and-outputs"></a>Girişleri ve çıkışları belirtin
+
 Girdiler ve çıktılar proje dosyasında belirtilmişse bir hedef artımlı olarak oluşturulabilir.
 
 #### <a name="to-specify-inputs-and-outputs-for-a-target"></a>Bir hedefin girişlerini ve çıkışlarını belirtmek için
 
-- `Target` öğesinin `Inputs` ve `Outputs` özniteliklerini kullanın. Örneğin:
+- `Target` öğesinin `Inputs` ve `Outputs` özniteliklerini kullanın. Örnek:
 
   ```xml
   <Target Name="Build"
@@ -35,7 +37,7 @@ Girdiler ve çıktılar proje dosyasında belirtilmişse bir hedef artımlı ola
       Outputs="hello.exe">
   ```
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], giriş dosyalarının zaman damgalarını, çıkış dosyalarının zaman damgalarına göre karşılaştırabilir ve bir hedefi atlayıp atlaya, derlemeyi veya kısmen yeniden derlemeyi belirleyebilirsiniz. Aşağıdaki örnekte, `@(CSFile)` öğesi listesindeki herhangi bir dosya *Hello. exe* dosyasından daha yeniyse, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] hedef çalışacaktır; Aksi takdirde, atlanacak:
+MSBuild, giriş dosyalarının zaman damgalarını çıkış dosyalarının zaman damgalarına göre karşılaştırabilir ve bir hedefi atlayıp atlaya, derlemeyi veya kısmen yeniden oluşturmayı belirleyebilirsiniz. Aşağıdaki örnekte, `@(CSFile)` öğesi listesindeki herhangi bir dosya *Hello. exe* dosyasından daha yeniyse, MSBuild hedefi çalıştıracaktır; Aksi takdirde, atlanacak:
 
 ```xml
 <Target Name="Build"
@@ -51,11 +53,12 @@ Girdiler ve çıktılar proje dosyasında belirtilmişse bir hedef artımlı ola
 Bir hedefte giriş ve çıkış belirtildiğinde her bir çıktı yalnızca bir girişle eşlenir ya da çıktılar ve girişler arasında doğrudan eşleme olmaz. Önceki [CSC görevinde](../msbuild/csc-task.md), örneğin, *Hello. exe*çıkışı tek bir giriş ile eşlenemez; bunların tümüne bağlıdır.
 
 > [!NOTE]
-> Girişler ve çıktılar arasında doğrudan eşleme olmayan bir hedef, her zaman bir girişin bir kısmı değiştiyse [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] hangi çıktıların yeniden oluşturulması gerektiğini belirleyemediği için her zaman her çıktının yalnızca bir giriş ile eşleşebileceği bir hedeften daha fazla bilgi oluşturur.
+> Girişler ve çıktılar arasında doğrudan eşleme olmayan bir hedef, MSBuild, bazı girişlerin değişmesi durumunda hangi çıktıların yeniden oluşturulması gerektiğini belirleyemediği için her zaman her çıktının yalnızca bir giriş ile eşleşebileceği bir hedeften daha fazla bilgi oluşturur.
 
 Örneğin, [LC görevi](../msbuild/lc-task.md)gibi çıktılar ve girişler arasında doğrudan eşlemeyi tanımlayabilmeniz gereken görevler, bir dizi girişin bir çıkış derlemesini üreten [CSC](../msbuild/csc-task.md) ve [vbc](../msbuild/vbc-task.md)gibi görevlerden farklı olarak Artımlı derlemeler için uygundur.
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, bir kuramsal yardım sistemi için yardım dosyaları oluşturan bir proje kullanır. Proje, kaynak *. txt* dosyalarını, daha sonra, yardım sistemi tarafından kullanılan son *. help* dosyasını oluşturmak üzere XML meta veri dosyalarıyla birlikte bulunan ara *. Content* dosyalarına dönüştürerek işe yarar. Proje aşağıdaki kuramsal görevleri kullanır:
 
 - `GenerateContentFiles`: *. txt* dosyalarını *. Content* dosyalarına dönüştürür.
@@ -67,7 +70,7 @@ Proje, `GenerateContentFiles` görevindeki girişler ve çıktılar arasında bi
 Bu proje dosyası hem `Convert` hem de `Build` hedeflerini içerir. `GenerateContentFiles` ve `BuildHelp` görevleri, her hedefin artımlı olarak oluşturulması için sırasıyla `Convert` ve `Build` hedeflerine yerleştirilir. `Output` öğesini kullanarak, `GenerateContentFiles` görevinin çıktıları `ContentFile` öğe listesine yerleştirilir ve burada `BuildHelp` görevi için giriş olarak kullanılabilirler. `Output` öğesinin bu şekilde kullanılması, her bir görevde ayrı ayrı öğeleri veya öğe listelerini el ile listelemebilmeniz için bir görevden alınan çıktıları otomatik olarak başka bir görevin girişleri olarak sağlar.
 
 > [!NOTE]
-> `GenerateContentFiles` hedefi artımlı olarak derleyebilir olsa da, bu hedefin tüm çıkışları her zaman `BuildHelp` hedefinin girdileri olarak gereklidir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], `Output` öğesini kullandığınızda bir hedeften gelen tüm çıktıları otomatik olarak başka bir hedef için giriş olarak sağlar.
+> `GenerateContentFiles` hedefi artımlı olarak derleyebilir olsa da, bu hedefin tüm çıkışları her zaman `BuildHelp` hedefinin girdileri olarak gereklidir. MSBuild, `Output` öğesini kullandığınızda bir hedefin tüm çıktılarını otomatik olarak başka bir hedef için giriş olarak sağlar.
 
 ```xml
 <Project DefaultTargets="Build"
@@ -102,6 +105,7 @@ Bu proje dosyası hem `Convert` hem de `Build` hedeflerini içerir. `GenerateCon
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hedefler](../msbuild/msbuild-targets.md)
 - [Target öğesi (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Dönüşümler](../msbuild/msbuild-transforms.md)

@@ -10,20 +10,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d46b2042755df9f9f0e1abcb43c07a5318c92593
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 69f5ba2627e2d659665fa0bd3fbf706f9cad5573
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595156"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632569"
 ---
 # <a name="resolve-assemblies-at-design-time"></a>Tasarım zamanında derlemeleri çözümleyin
+
 Başvuru **Ekle** iletişim kutusunun **.net** sekmesi aracılığıyla bir derlemeye başvuru eklediğinizde, başvuru bir ara başvuru derlemesine işaret eder; diğer bir deyişle, tüm tür ve imza bilgilerini içeren, ancak herhangi bir kod içermesi gerekmeyen bir derlemedir. **.Net** sekmesi .NET Framework çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler. Ayrıca, üçüncü taraflar tarafından kullanılan kayıtlı AssemblyFoldersEx klasörlerindeki çalışma zamanı derlemelerine karşılık gelen başvuru derlemelerini listeler.
 
 ## <a name="multi-targeting"></a>Çoklu hedefleme
- [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)], ortak dil çalışma zamanı (CLR) sürüm 2,0 veya sürüm 4 ' te çalışan .NET Framework sürümlerini hedeflemenizi sağlar. Bu sürümler 2,0, 3,0, 3,5, 4, 4,5, ve 4.5.1 sürümlerini ve Silverlight sürümlerini 1,0, 2,0 ve 3,0 içerir .NET Framework. CLR sürüm 2,0 veya sürüm 4 ' ü temel alan yeni bir .NET Framework sürümü yayınlanmışsa, Framework bir hedefleme paketi kullanılarak yüklenebilir ve Visual Studio 'da otomatik olarak bir hedef olarak görünür.
+
+ Visual Studio, .NET Framework birden çok sürümünde çalışan .NET Framework sürümlerini hedeflemenizi sağlar. Yeni bir .NET Framework sürümü yayınlandığında, Framework bir hedefleme paketi kullanılarak yüklenebilir ve Visual Studio 'da otomatik olarak bir hedef olarak görünür.
 
 ## <a name="how-type-resolution-works"></a>Tür çözümlemenin çalışması
+
  Çalışma zamanında, CLR GAC 'ye, *bin* dizinine ve herhangi bir yoklama yoluna bakarak derlemedeki türleri çözümler. Bu, Fusion yükleyicisi tarafından işlenir. Ancak, Fusion yükleyici ne aradıklarını nasıl bilir? Bu, uygulama yapılandırıldığında tasarım zamanında yapılan bir çözüme bağlıdır.
 
  Derleme sırasında derleyici, başvuru derlemelerini kullanarak uygulama türlerini çözümler. .NET Framework sürümleri 2,0, 3,0, 3,5, 4, 4,5 ve 4.5.1 sürümlerinde, .NET Framework yüklendiğinde başvuru derlemeleri yüklenir.

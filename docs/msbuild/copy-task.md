@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31ec191345e1a232e79a2eea21563bf41e5d555c
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 28fd0033f5ef6f83ca29432f95d6b635fcd36116
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558157"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634376"
 ---
 # <a name="copy-task"></a>Kopyalama görevi
+
 Dosyaları, dosya sisteminde yeni bir konuma kopyalar.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `Copy` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -47,6 +49,7 @@ Aşağıdaki tabloda `Copy` görevinin parametreleri açıklanmaktadır.
 |`UseHardlinksIfPossible`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Eğer `true` ise, dosyaları kopyalamak yerine kopyalanan dosyalar için Sabit Bağlantılar oluşturur.|
 
 ## <a name="warnings"></a>Uyarılar
+
 Aşağıdakiler dahil olmak üzere uyarılar günlüğe kaydedilir:
 
 - `Copy.DestinationIsDirectory`
@@ -66,11 +69,13 @@ Aşağıdakiler dahil olmak üzere uyarılar günlüğe kaydedilir:
 - `Copy.RemovingReadOnlyAttribute`
 
 ## <a name="remarks"></a>Açıklamalar
+
 `DestinationFolder` veya `DestinationFiles` parametresinin belirtilmesi gerekir, ancak ikisi birden belirtilmemelidir. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
 
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, `MySourceFiles` öğesi koleksiyonundaki öğeleri *C:\myproject\destination*klasörüne kopyalar.
 
 ```xml
@@ -91,6 +96,7 @@ Aşağıdaki örnek, `MySourceFiles` öğesi koleksiyonundaki öğeleri *C:\mypr
 ```
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, yinelemeli bir kopyalamanın nasıl gerçekleştirileceğini gösterir. Bu proje, dizin yapısını koruyarak tüm dosyaları özyinelemeli olarak *C:\mysourcetree* 'den *c:\mydestinationtree*içine kopyalar.
 
 ```xml
@@ -111,5 +117,6 @@ Aşağıdaki örnek, yinelemeli bir kopyalamanın nasıl gerçekleştirileceğin
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

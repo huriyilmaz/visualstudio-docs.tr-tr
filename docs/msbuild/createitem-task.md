@@ -18,20 +18,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b722604249b9c395f06bb038102d731fafe2efc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4364e6c3f637fdf2c3e02a52d3163e5cdd8a5861
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590078"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634337"
 ---
 # <a name="createitem-task"></a>CreateItem görevi
+
 Öğe koleksiyonlarını giriş öğeleriyle doldurur. Bu, öğelerin bir listeden diğerine kopyalanmasını sağlar.
 
 > [!NOTE]
 > Bu görev kullanım dışıdır. .NET Framework 3,5 ' den başlayarak, öğe grupları [hedef](../msbuild/target-element-msbuild.md) öğelerin içine yerleştirilebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
-## <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+## <a name="attributes"></a>Öznitelikler
+
  Aşağıdaki tabloda `CreateItem` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -42,9 +44,11 @@ ms.locfileid: "75590078"
 |`PreserveExistingMetadata`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `True`, zaten yoksa ek meta verileri uygulayın.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, öğe koleksiyonu `MySourceItems``MySourceItemsWithMetadata` adlı yeni bir öğe koleksiyonu oluşturur. `CreateItem` görevi, yeni öğe koleksiyonunu `MySourceItems` öğesindeki öğelerle doldurur. Daha sonra, yeni koleksiyondaki her bir öğeye `Hello` değeri olan `MyMetadata` adlı ek bir meta veri girişi ekler.
 
  Görev yürütüldükten sonra `MySourceItemsWithMetadata` öğesi koleksiyonu, her ikisi de `MyMetadata`meta veri girdileriyle birlikte *FILE1. resx* ve *dosya2. resx*öğelerini içerir. `MySourceItems` öğesi koleksiyonu değiştirilmez.
@@ -77,5 +81,6 @@ ms.locfileid: "75590078"
 |`MySourceItemsWithMetadata`|*FILE1. resx* (`MyMetadata="Hello"`)<br /><br /> *dosya2. resx* (`MyMetadata="Hello"`)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

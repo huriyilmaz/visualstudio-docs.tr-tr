@@ -12,18 +12,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 369584a815f671c8b7b4f8a99a5280626b493104
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8cbcf47ec83e1b900ba94ab3842c2cfa63fdcc5d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595000"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631846"
 ---
 # <a name="task-writing"></a>Görev yazma
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. Görevler, hedefler ' de yer alır. Tipik görevler kitaplığı [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]eklenmiştir ve kendi görevlerinizi de oluşturabilirsiniz. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]eklenen görevlerin Kitaplığı hakkında daha fazla bilgi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
+
+Görevler, derleme işlemi sırasında çalışan kodu sağlar. Görevler, hedefler ' de yer alır. Tipik görevler kitaplığı MSBuild 'e dahildir ve ayrıca kendi görevlerinizi de oluşturabilirsiniz. MSBuild 'e dahil edilen görevlerin Kitaplığı hakkında daha fazla bilgi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
 
 ## <a name="tasks"></a>Görevler
- Görev örnekleri, bir veya daha fazla dosyayı kopyalayan, bir dizin oluşturan [MakeDir](../msbuild/makedir-task.md)ve [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] kaynak kodu dosyalarını derleyen [CSC](../msbuild/csc-task.md) ['yi içerir.](../msbuild/copy-task.md) Her görev, *Microsoft. Build. Framework. dll* derlemesinde tanımlanan <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir .NET sınıfı olarak uygulanır.
+
+ Görev örnekleri, bir veya daha fazla dosyayı kopyalayan, bir dizin oluşturan [MakeDir](../msbuild/makedir-task.md)ve kaynak kodu dosyalarını derleyen C# [CSC](../msbuild/csc-task.md) ['yi içerir.](../msbuild/copy-task.md) Her görev, *Microsoft. Build. Framework. dll* derlemesinde tanımlanan <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir .NET sınıfı olarak uygulanır.
 
  Bir görevi uygularken kullanabileceğiniz iki yaklaşım vardır:
 
@@ -60,7 +62,7 @@ namespace MyTasks
 </Project>
 ```
 
- Görevler çalıştırıldığında, görev sınıfında .NET özellikleri oluşturursanız proje dosyasından de giriş alabilir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], görevin `Execute` metodunu çağırmadan önce bu özellikleri hemen ayarlar. Bir dize özelliği oluşturmak için, şöyle bir görev kodu kullanın:
+ Görevler çalıştırıldığında, görev sınıfında .NET özellikleri oluşturursanız proje dosyasından de giriş alabilir. MSBuild, bu özellikleri görevin `Execute` yöntemi çağrılmadan hemen önce ayarlar. Bir dize özelliği oluşturmak için, şöyle bir görev kodu kullanın:
 
 ```csharp
 using System;
@@ -92,14 +94,16 @@ namespace MyTasks
 ```
 
 ## <a name="register-tasks"></a>Görevleri Kaydet
- Bir proje bir görevi çalıştıracaksanız, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görev sınıfını içeren derlemenin nasıl bulunacağını bilmelidir. Görevler [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)kullanılarak kaydedilir.
 
- *Microsoft. Common. Tasks* [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dosyası, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]ile sağlanan tüm görevleri kaydeden bir `UsingTask` öğelerinin listesini içeren bir proje dosyasıdır. Bu dosya, her proje oluşturulurken otomatik olarak eklenir. *Microsoft. Common. Tasks* ' de kayıtlı bir görev aynı zamanda geçerli proje dosyasında kayıtlıysa, geçerli proje dosyası önceliklidir; diğer bir deyişle, aynı ada sahip olan kendi görevinizdeki varsayılan görevi geçersiz kılabilirsiniz.
+ Bir proje bir görevi çalıştıracaksanız, MSBuild 'in görev sınıfını içeren derlemeyi nasıl bulacağınızı bilmelidir. Görevler [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)kullanılarak kaydedilir.
+
+ MSBuild dosyası *Microsoft. Common. Tasks* , MSBuild ile sağlanan tüm görevleri kaydeden `UsingTask` öğelerinin listesini içeren bir proje dosyasıdır. Bu dosya, her proje oluşturulurken otomatik olarak eklenir. *Microsoft. Common. Tasks* ' de kayıtlı bir görev aynı zamanda geçerli proje dosyasında kayıtlıysa, geçerli proje dosyası önceliklidir; diğer bir deyişle, aynı ada sahip olan kendi görevinizdeki varsayılan görevi geçersiz kılabilirsiniz.
 
 > [!TIP]
-> *Microsoft. Common. görevlerinin*içeriğini görüntüleyerek [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sağlanan görevlerin bir listesini görebilirsiniz.
+> *Microsoft. Common. görevlerinin*Içeriğini görüntüleyerek MSBuild ile sağlanan görevlerin bir listesini görebilirsiniz.
 
 ## <a name="raise-events-from-a-task"></a>Bir görevden olay oluştur
+
  Göreviniz <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilirse, kayıtlı Günlükçüler tarafından yakalanıp gösterilecek olayları yükseltmek için <xref:Microsoft.Build.Utilities.Task> sınıfında aşağıdaki yardımcı yöntemlerden herhangi birini kullanabilirsiniz:
 
 ```csharp
@@ -132,6 +136,7 @@ public class SimpleTask : ITask
 ```
 
 ## <a name="require-task-parameters-to-be-set"></a>Görev parametrelerinin ayarlanması gerekiyor
+
  Belirli görev özelliklerini "gerekli" olarak işaretleyebilirsiniz. böylece, görevi çalıştıran herhangi bir proje dosyasının bu özelliklerin değerlerini ayarlaması gerekir, aksi durumda derleme başarısız olur. `[Required]` özniteliğini, görevdeki .NET özelliğine aşağıdaki şekilde uygulayın:
 
 ```csharp
@@ -141,9 +146,9 @@ public string RequiredProperty { get; set; }
 
  `[Required]` özniteliği, <xref:Microsoft.Build.Framework> ad alanındaki <xref:Microsoft.Build.Framework.RequiredAttribute> tarafından tanımlanır.
 
-## <a name="how-includevstecmsbuildextensibilityinternalsincludesvstecmsbuild_mdmd-invokes-a-task"></a>[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevi nasıl çağırır
+## <a name="how-msbuild-invokes-a-task"></a>MSBuild bir görevi nasıl çağırır
 
-Bir görevi çağırırken [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] önce görev sınıfını örnekleyerek, sonra proje dosyasındaki görev öğesinde ayarlanan görev parametreleri için o nesnenin özellik ayarlayıcıları ' nı çağırır. Görev öğesi bir parametre belirtmezse veya öğede belirtilen ifade boş bir dize olarak değerlendirilirse, Özellik ayarlayıcısı çağrılmaz.
+Bir görevi çağırırken, MSBuild önce görev sınıfını örnekleyerek, ardından bu nesnenin proje dosyasındaki görev öğesinde ayarlanan görev parametreleri için özellik ayarlayıcıları ' nı çağırır. Görev öğesi bir parametre belirtmezse veya öğede belirtilen ifade boş bir dize olarak değerlendirilirse, Özellik ayarlayıcısı çağrılmaz.
 
 Örneğin, projede
 
@@ -163,13 +168,13 @@ Bir görev, parametre özelliği ayarlayıcısı çağrısının herhangi bir g�
 
 ### <a name="task-parameter-types"></a>Görev parametresi türleri
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], `string`, `bool`, `ITaskItem` ve `ITaskItem[]`türündeki özellikleri yerel olarak işler. Bir görev farklı türde bir parametreyi kabul ederse [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], `string` (tüm özellik ve öğe başvuruları) hedef türüne dönüştürmek için <xref:System.Convert.ChangeType%2A> çağırır. Herhangi bir giriş parametresi için dönüştürme başarısız olursa, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir hata yayar ve görevin `Execute()` yöntemini çağırmaz.
+MSBuild yerel olarak `string`, `bool`, `ITaskItem` ve `ITaskItem[]`türündeki özellikleri işler. Bir görev farklı türde bir parametreyi kabul ediyorsa, MSBuild, `string` (tüm özellik ve öğe başvuruları genişletilmiş) hedef türüne dönüştürmek için <xref:System.Convert.ChangeType%2A> çağırır. Herhangi bir giriş parametresi için dönüştürme başarısız olursa, MSBuild bir hata yayar ve görevin `Execute()` yöntemini çağırmaz.
 
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıfı, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilen bir görevi gösterir. Bu görev, başarılı olduğunu belirten `true`döndürür.
+Aşağıdaki C# sınıf, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilen bir görevi gösterir. Bu görev, başarılı olduğunu belirten `true`döndürür.
 
 ### <a name="code"></a>Kod
 
@@ -194,7 +199,7 @@ namespace SimpleTask1
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıfı, <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir görevi gösterir. Bu görev, başarılı olduğunu belirten `true`döndürür.
+Aşağıdaki C# sınıf, <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir görevi gösterir. Bu görev, başarılı olduğunu belirten `true`döndürür.
 
 ### <a name="code"></a>Kod
 
@@ -230,7 +235,7 @@ namespace SimpleTask2
 
 ### <a name="description"></a>Açıklama
 
-Bu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıfı, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilen bir görevi gösterir. Gerekli bir dize özelliğine sahiptir ve tüm kayıtlı Günlükçüler tarafından görüntülenen bir olay oluşturur.
+Bu C# sınıf, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilen bir görevi gösterir. Gerekli bir dize özelliğine sahiptir ve tüm kayıtlı Günlükçüler tarafından görüntülenen bir olay oluşturur.
 
 ### <a name="code"></a>Kod
 

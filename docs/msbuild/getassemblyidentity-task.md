@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7aaa963da3f17265da6ebeaed4d30cfe75aa533c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a09bd4955cee6e50368f7155fb2e03c2c1758bf
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593271"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634025"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity görevi
+
 Belirtilen dosyalardaki derleme kimliklerini alır ve kimlik bilgilerini çıkarır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
 Aşağıdaki tabloda `GetAssemblyIdentity` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -37,11 +39,13 @@ Aşağıdaki tabloda `GetAssemblyIdentity` görevinin parametreleri açıklanmak
 |`AssemblyFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Kimlikleri alınacak dosyaları belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 `Assemblies` parametresine göre çıkış öğeleri `Version`, `PublicKeyToken`ve `Culture`adlı öğe meta veri girdilerini içerir.
 
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, `MyAssemblies` öğesinde belirtilen dosyaların kimliğini alır ve bunları `MyAssemblyIdentities` öğesine verir.
 
 ```xml
@@ -58,5 +62,6 @@ Aşağıdaki örnek, `MyAssemblies` öğesinde belirtilen dosyaların kimliğini
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

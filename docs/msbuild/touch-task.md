@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d34d8edca64987f9b6c4648bef1f239aca4d5ba
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 873783196a3eebdaca9cc4278b091e084c1488b0
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594948"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631659"
 ---
 # <a name="touch-task"></a>Dokunma görevi
+
 Dosyaların erişim ve değiştirme zamanlarını ayarlar.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `Touch` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -40,9 +42,11 @@ Dosyaların erişim ve değiştirme zamanlarını ayarlar.
 |`TouchedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Başarıyla dokunmayan öğelerin koleksiyonunu içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `Files` öğesi koleksiyonunda belirtilen dosyaların erişim ve değiştirilme zamanlarını değiştirmek için `Touch` görevini kullanır ve başarıyla dokunulmayan dosyaların listesini `FilesTouched` öğesi koleksiyonuna koyar.
 
 ```xml
@@ -64,5 +68,6 @@ Dosyaların erişim ve değiştirme zamanlarını ayarlar.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

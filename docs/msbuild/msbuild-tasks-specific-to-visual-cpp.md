@@ -15,21 +15,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f7d8465b2078d4c0c1ce86894edb834581596d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6393e771f9e9ed862d21397dabacdb3f3808c386
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593830"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633154"
 ---
 # <a name="msbuild-tasks-specific-to-c"></a>Öğesine özgü MSBuild görevleriC++
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ Yüklendiğinde, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]ile yüklenenlere ek olarak aşağıdaki görevler kullanılabilir. Daha fazla bilgi için bkz. [MSBuildC++() genel bakış](/cpp/build/msbuild-visual-cpp-overview).
+
+Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ Yüklendiğinde, MSBuild ile yüklenenlere ek olarak aşağıdaki görevler kullanılabilir. Daha fazla bilgi için bkz. [MSBuildC++() genel bakış](/cpp/build/msbuild-visual-cpp-overview).
 
  Her görevin parametrelerine ek olarak, her görevin aşağıdaki parametreleri de vardır.
 
 | Parametre | Açıklama |
 |-------------------| - |
-| `Condition` | İsteğe bağlı `String` parametresi.<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısının bu görevin yürütülüp yürütülmeyeceğini belirlemede kullandığı `Boolean` ifadesi. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]tarafından desteklenen koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md). |
+| `Condition` | İsteğe bağlı `String` parametresi.<br /><br /> MSBuild altyapısının bu görevin yürütülüp yürütülmeyeceğini belirlemede kullandığı bir `Boolean` ifadesi. MSBuild tarafından desteklenen koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md). |
 | `ContinueOnError` | İsteğe bağlı parametre. , Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** ya da **true**. Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir<br />-   **Errportadcontinue**. Bir görev başarısız olduğunda, `Target` öğesi ve derleme içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.<br />-   **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda,`Target` öğesi ve derleme içindeki kalan görevler yürütülmez ve tüm `Target` öğesi ve derleme başarısız olduğu kabul edilir.<br /><br /> 4,5 öncesindeki .NET Framework sürümleri yalnızca `true` ve `false` değerlerini destekliyordu.<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ### <a name="related-topics"></a>İlgili konular

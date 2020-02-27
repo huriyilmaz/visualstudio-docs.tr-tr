@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33912df490b148c91c2a0d152f979bd6149d8ae3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4d97b727dcba8cd16fe97ee33764947797c36db7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566078"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634142"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath görevi
+
 Belirtilen öğe koleksiyonundaki hangi öğelerin belirtilen klasörün içinde veya altında olan yollara sahip olduğunu belirler.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `FindUnderPath` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -40,9 +42,11 @@ Aşağıdaki tabloda `FindUnderPath` görevinin parametreleri açıklanmaktadır
 |`UpdateToAbsolutePaths`|İsteğe bağlı `Boolean` parametresi.<br /><br /> True ise, çıkış öğelerinin yolları mutlak yollar olacak şekilde güncelleştirilir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, `MyFiles` öğesinde yer alan dosyaların `SearchPath` özelliği tarafından belirtilen yolun altında bulunan yollara sahip olup olmadığını anlamak için `FindUnderPath` görevini kullanır. Görev tamamlandıktan sonra, `FilesNotFoundInPath` öğesi *FILE1. txt* dosyasını içerir ve `FilesFoundInPath` öğesi *dosya2. txt* dosyasını içerir.
 
 ```xml
@@ -73,6 +77,7 @@ Aşağıdaki örnek, `MyFiles` öğesinde yer alan dosyaların `SearchPath` öze
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)

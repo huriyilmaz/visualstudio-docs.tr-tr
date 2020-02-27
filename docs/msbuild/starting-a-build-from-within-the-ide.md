@@ -10,22 +10,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01ce9401174a26d58b7ef88d536a24bfb9017154
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f8c4792590565c027a316ed95abb067faa30f5dc
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595091"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632127"
 ---
 # <a name="start-a-build-from-within-the-ide"></a>IDE içinden derleme başlatma
+
 Özel proje sistemleri, derlemeleri başlatmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> kullanmalıdır. Bu makalede, bu gereksinimin nedenleri açıklanmaktadır ve yordam özetlenmektedir.
 
 ## <a name="parallel-builds-and-threads"></a>Paralel derlemeler ve iş parçacıkları
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], genel kaynaklara erişim için ortam gerektiren paralel derlemelere izin verir. Proje sistemleri derlemeleri zaman uyumsuz olarak çalıştırabilir, ancak bu tür sistemler, çağrı geri göndermeler içerisinden derleme işlevlerini çağırmamalıdır.
+
+ Visual Studio, genel kaynaklara erişim için ortam gerektiren paralel derlemelere izin verir. Proje sistemleri derlemeleri zaman uyumsuz olarak çalıştırabilir, ancak bu tür sistemler, çağrı geri göndermeler içerisinden derleme işlevlerini çağırmamalıdır.
 
  Proje sistemi ortam değişkenlerini değiştirirse, derleme için Nodebenzeşimini OutOfProc olarak ayarlaması gerekir. Bu gereksinim, işlem içi düğümü gerektirdiğinden ana bilgisayar nesnelerini kullanamayacağı anlamına gelir.
 
 ## <a name="use-ivsbuildmanageraccessor"></a>IVsBuildManagerAccessor kullanın
+
  Aşağıdaki kod, bir proje sisteminin bir derlemeyi başlatmak için kullanabileceği bir yöntemi özetler:
 
 ```csharp

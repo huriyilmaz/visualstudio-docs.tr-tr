@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c69ee5758d5c6e513af853a8d7589057c6537956
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 79686132adce043b4864d545f0912564709cfe2c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566429"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631984"
 ---
 # <a name="target-element-msbuild"></a>Target öğesi (MSBuild)
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sırayla yürütebilmesi için bir görev kümesi içerir.
+
+MSBuild 'in sırayla yürütülmesi için bir görev kümesi içerir.
 
  \<Proje > \<hedefi >
 
@@ -51,9 +52,10 @@ ms.locfileid: "75566429"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -72,7 +74,7 @@ ms.locfileid: "75566429"
 
 | Öğe | Açıklama |
 | - | - |
-| [Görev](../msbuild/task-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevin örneğini oluşturur ve yürütür. Hedefte sıfır veya daha fazla görev olabilir. |
+| [Görev](../msbuild/task-element-msbuild.md) | MSBuild görevi örneğini oluşturur ve yürütür. Hedefte sıfır veya daha fazla görev olabilir. |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Kullanıcı tanımlı `Property` öğeleri kümesi içerir. .NET Framework 3,5 ' den başlayarak `Target` bir öğe `PropertyGroup` öğeleri içerebilir. |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Kullanıcı tanımlı `Item` öğeleri kümesi içerir. .NET Framework 3,5 ' den başlayarak `Target` bir öğe `ItemGroup` öğeleri içerebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md). |
 | [OnError](../msbuild/onerror-element-msbuild.md) | Başarısız bir görevin `ContinueOnError` özniteliği Errportadstop (veya `false`) ise, bir veya daha fazla hedefin yürütülmesine neden olur. Bir hedefte sıfır veya daha fazla `OnError` öğe olabilir. `OnError` öğeler varsa, bu öğelerin `Target` öğesindeki son öğeler olması gerekir.<br /><br /> `ContinueOnError` özniteliği hakkında daha fazla bilgi için bkz. [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). |
@@ -81,10 +83,11 @@ ms.locfileid: "75566429"
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
- Yürütülecek ilk hedef çalışma zamanında belirtilir. Hedeflerin diğer hedeflere bağımlılıkları olabilir. Örneğin, dağıtım hedefi, derleme için bir hedefe bağlıdır. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısı, bağımlılıkları `DependsOnTargets` özniteliğinde göründükleri sırada (soldan sağa) yürütür. Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md).
+
+ Yürütülecek ilk hedef çalışma zamanında belirtilir. Hedeflerin diğer hedeflere bağımlılıkları olabilir. Örneğin, dağıtım hedefi, derleme için bir hedefe bağlıdır. MSBuild altyapısı, bağımlılıkları `DependsOnTargets` özniteliğinde göründükleri sırada (soldan sağa) yürütür. Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md).
 
  MSBuild içeri aktarma-sipariş bağımlıdır ve belirli bir `Name` özniteliğiyle bir hedefin son tanımı kullanılan tanımdır.
 
@@ -101,6 +104,7 @@ ms.locfileid: "75566429"
  MSBuild 4 ' den önce, bir `Target` `Outputs`aynı öğeye birden fazla başvuru eklendiğinde, bu yinelenen öğeler kaydedilir. Çok sayıda çıkış ve birçok proje bağımlılığı bulunan çok büyük derlemelerde, yinelenen öğeler hiçbir kullanım olmadığından büyük miktarda bellek harcanmasına neden olur. `KeepDuplicateOutputs` özniteliği `true`olarak ayarlandığında, bu yinelemeler kaydedilir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, `Csc` görevini yürüten bir `Target` öğesini gösterir.
 
 ```xml
@@ -118,5 +122,6 @@ ms.locfileid: "75566429"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hedefler](../msbuild/msbuild-targets.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

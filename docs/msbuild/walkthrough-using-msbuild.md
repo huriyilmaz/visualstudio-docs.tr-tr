@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d874d8b9c96cc8cc58466bb42d8ac189e1aabc11
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c3e3f0ec3938136370daf15954d8c13da5905ba4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567300"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631087"
 ---
 # <a name="walkthrough-use-msbuild"></a>İzlenecek yol: MSBuild kullanma
 
@@ -43,7 +43,7 @@ MSBuild 'i Visual Studio 'dan veya **komut penceresinden**çalıştırabilirsini
     **Ad** kutusuna `BuildApp` yazın. Çözüm için bir **konum** girin, örneğin, *D:\\* . **Çözüm**, **çözüm adı** (**BuildApp**) ve **Framework**için varsayılanları kabul edin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **Windows Masaüstü** ** > ' ni genişletin C#**  ve **Windows Forms uygulama (.NET Framework)** öğesini seçin. Ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Windows Masaüstü** ** > ' ni genişletin C#**  ve **Windows Forms uygulama (.NET Framework)** öğesini seçin. Ardından **Tamam**' ı seçin.
 
     **Ad** kutusuna `BuildApp` yazın. Çözüm için bir **konum** girin, örneğin, *D:\\* . **Çözüm için dizin oluştur** (seçili), **kaynak denetimine Ekle** (seçili değil) ve **çözüm adı** (**BuildApp**) için varsayılanları kabul edin.
     ::: moniker-end
@@ -192,6 +192,7 @@ MSBuild, bir yapının hedeflerini izler ve her bir hedefin birden kereden fazla
  Daha sonra proje dosyasında veya proje dosyasında daha sonra içe aktarılan dosyada görünür, ardından TargetFrameworkVersion "v3.5" yeni değerini alır.
 
 ## <a name="examine-a-property-value"></a>Özellik değerini İnceleme
+
  Özelliğin değerini almak için özellik adının PropertyName'in olduğu aşağıdaki söz dizimini kullanın:
 
 ```xml
@@ -411,6 +412,7 @@ Her satırda bir tane Derleme öğesi görüntülemek için taşıma dönüşler
     ```
 
 ### <a name="include-exclude-and-wildcards"></a>Dahil etme, dışlama ve joker karakterler
+
  Öğe türüne öğe eklemek için Include özniteliğiyle birlikte "*", "\*\*" ve "?" joker karakterlerini kullanabilirsiniz. Örneğin,
 
 ```xml
@@ -486,6 +488,7 @@ Hariç Tutma özniteliği, sadece Dahil Etme özniteliği tarafından her iki ö
     ```
 
 ## <a name="item-metadata"></a>Öğe meta verileri
+
  Öğeler, İçe Aktarma ve Hariç Tutma özniteliklerinden toplanan bilgilere ek olarak meta verileri içerebilir. Bu meta veriler, öğeler hakkında yalnızca öğe değerinden daha fazla bilgi gerektiren görevler tarafından kullanılabilir.
 
  Öğe meta verileri, öğenin bir alt öğesi olarak meta verilerin adı ile bir öğe oluşturularak proje dosyasında bildirilir. Bir öğe sıfır veya daha fazla meta veri değerine sahip olabilir. Örneğin aşağıdaki CSFile öğesi, "Fr" değeri olan Kültür meta verisine sahiptir:

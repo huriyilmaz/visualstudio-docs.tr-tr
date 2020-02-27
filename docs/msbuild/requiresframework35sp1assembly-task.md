@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d94d6ab4840163e8379e53da435a97a69381aed
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: caefe0887ca23cd4cee60c3a4ba2a6133e9893df
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578477"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632777"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly görevi
+
 Uygulamanın .NET Framework 3,5 SP1 gerektirip gerektirmediğini belirler.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `RequiresFramework35SP1Assembly` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -44,8 +46,10 @@ Uygulamanın .NET Framework 3,5 SP1 gerektirip gerektirmediğini belirler.
 |`TargetFrameworkVersion`|İsteğe bağlı `String` parametresi.<br /><br /> Bu uygulamanın hedeflediği .NET Framework sürümünü belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

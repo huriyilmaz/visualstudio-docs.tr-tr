@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 011cc16dd965b952aa382c46f01d09fcc41bc02e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3cc2e97a3024d768861a1967705137415a0d3aa2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592171"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633544"
 ---
 # <a name="makedir-task"></a>MakeDir görevi
+
 Dizinler ve gerekirse herhangi bir üst dizin oluşturur.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `MakeDir` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -37,9 +39,11 @@ Aşağıdaki tabloda `MakeDir` görevinin parametreleri açıklanmaktadır.
 |`DirectoriesCreated`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan dizinler. Bazı dizinler oluşturulamayabilir, bu, `Directories` parametresine iletilen tüm öğeleri içermeyebilir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki kod örneği, `OutputDirectory` özelliği tarafından belirtilen dizini oluşturmak için `MakeDir` görevini kullanır.
 
 ```xml
@@ -58,5 +62,6 @@ Aşağıdaki kod örneği, `OutputDirectory` özelliği tarafından belirtilen d
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

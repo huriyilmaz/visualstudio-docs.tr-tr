@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b71f214a745222956c7dc9d582cc7fb2f1cfc427
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: bf982200b8e65e404325bdbd189ff3b0f2daebac
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579695"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634246"
 ---
 # <a name="endtrackingcontext"></a>EndTrackingContext
+
 Geçerli izleme bağlamını sonlandırın.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,10 +33,13 @@ HRESULT WINAPI EndTrackingContext();
 ```
 
 ## <a name="return-value"></a>Dönüş değeri
+
 İzleme bağlamı sonlandırıldıysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
+
 **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [StartTrackingContext](../msbuild/starttrackingcontext.md)

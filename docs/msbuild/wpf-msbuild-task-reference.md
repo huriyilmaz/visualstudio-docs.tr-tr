@@ -18,52 +18,55 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84aeae06a5440bfc82eb9590919800ebcdd425d5
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 70d994e32b717ff566a2e38acee732c7525d1bb0
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578183"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630853"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild görev başvurusu
+
 Windows Presentation Foundation (WPF) derleme işlemi, Microsoft Build Engine 'i (MSBuild), biçimlendirme ve işlem kaynaklarını derlemeye yönelik görevler de dahil olmak üzere ek bir yapı görevi kümesiyle genişletir.
 
 ## <a name="in-this-section"></a>Bu bölümde
+
 - [FileClassifier](../msbuild/fileclassifier-task.md)
 
  Bir kaynak kaynakları kümesini bir derlemeye katıştırılacak şekilde sınıflandırır. Bir kaynak yerelleştirilebilir değilse, ana uygulama derlemesine katıştırılır; Aksi halde, bir uydu derlemesine katıştırılır.
 
 - [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)
 
- Bir projede en az bir [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] sayfası bu projede yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturur. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya yapı işlemi başarısız olursa kaldırılır.
+ Bir projede en az bir XAML sayfası bu projede yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturur. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya yapı işlemi başarısız olursa kaldırılır.
 
 - [GetWinFXPath](../msbuild/getwinfxpath-task.md)
 
- Geçerli [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] çalışma zamanının dizinini döndürür.
+ Geçerli .NET Framework çalışma zamanının dizinini döndürür.
 
 - [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md)
 
- Yerelleştirilemeyen [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] proje dosyalarını derlenmiş ikili biçime dönüştürür.
+ Yerelleştirilemeyen XAML proje dosyalarını derlenmiş ikili biçime dönüştürür.
 
 - [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)
 
- Aynı projedeki türlere başvuran [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] dosyalarında ikinci geçiş biçimlendirme derlemesini gerçekleştirir.
+ Aynı projedeki türlere başvuran XAML dosyalarında ikinci geçiş biçimlendirme derlemesini gerçekleştirir.
 
 - [MergeLocalizationDirectives](../msbuild/mergelocalizationdirectives-task.md)
 
- Bir veya daha fazla [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
+ Bir veya daha fazla XAML ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- Bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ikili biçimde ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
+ Bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, ikili biçimdeki XAML ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
- Kaynak [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] dosyalarında yer alan tüm [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] öğelerini yerelleştirmek için, benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
+ Kaynak XAML dosyalarında yer alan tüm XAML öğelerini yerelleştirmek için, benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- Bir [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] projesi oluşturulduğunda, uygulama bildirimine **\<HostInBrowser/>** öğesi ekler ( *\<ProjectName >. exe. manifest*).
+ Bir XAML tarayıcı uygulaması (XBAP) projesi yapılandırıldığında, uygulama bildirimine **\<HostInBrowser/>** öğesini ekler ( *\<ProjectName >. exe. manifest*).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild](../msbuild/msbuild.md)

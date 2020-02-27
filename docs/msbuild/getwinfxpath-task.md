@@ -18,29 +18,32 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 894cfe9fd6e116e983a5290e5817211182b073c7
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: ab8e15cef722e935dde322072f6834ba00be8bc5
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578620"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633973"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath görevi
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görevi geçerli [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] çalışma zamanının dizinini döndürür.
+
+<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görevi, geçerli .NET çalışma zamanının dizinini döndürür.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |-------------------| - |
-| `WinFXPath` | İsteğe bağlı **dize** çıkış parametresi.<br /><br /> [!INCLUDE[TLA2#tla_winfx](../msbuild/includes/tla2sharptla_winfx_md.md)] çalışma zamanının gerçek yolunu belirtir. |
-| `WinFXNativePath` | Gerekli **dize** parametresi.<br /><br /> Yerel [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] çalışma zamanının yolunu belirtir. |
-| `WinFXWowPath` | Gerekli **dize** parametresi.<br /><br /> 64 bit sistemlerde 32 bitlik **Windows** modülündeki [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] derlemelerinin yolunu belirtir. |
+| `WinFXPath` | İsteğe bağlı **dize** çıkış parametresi.<br /><br /> .NET çalışma zamanının gerçek yolunu belirtir. |
+| `WinFXNativePath` | Gerekli **dize** parametresi.<br /><br /> Yerel .NET çalışma zamanının yolunu belirtir. |
+| `WinFXWowPath` | Gerekli **dize** parametresi.<br /><br /> 64 bit sistemlerde 32 bitlik **Windows** modülündeki .net derlemelerinin yolunu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
+
  <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görevi 64 bitlik bir işlemcide yürütüle, **WinFXPath** parametresi **WinFXWowPath** parametresinde depolanan yola ayarlanır; Aksi takdirde, **WinFXPath** parametresi **WinFXNativePath** parametresinde depolanan yola ayarlanır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] çalışma zamanına ait yerel yolu algılamak için **GetWinFXPath** görevinin nasıl kullanılacağını gösterir.
+
+ Aşağıdaki örnekte, .NET çalışma zamanına ait yerel yolu algılamak için **GetWinFXPath** görevinin nasıl kullanılacağı gösterilmektedir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -57,6 +60,7 @@ ms.locfileid: "77578620"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF MSBuild başvurusu](../msbuild/wpf-msbuild-reference.md)
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

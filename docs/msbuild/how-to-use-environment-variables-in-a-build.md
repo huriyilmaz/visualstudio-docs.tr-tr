@@ -12,18 +12,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d66fb73972a81e421b6e7343e549b0ef3069001
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574424"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633791"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma
+
 Projeleri oluştururken, genellikle proje dosyasında veya projenizi oluşturan dosyalarda olmayan bilgileri kullanarak yapı seçeneklerini ayarlamak gerekir. Bu bilgiler genellikle ortam değişkenlerinde depolanır.
 
 ## <a name="reference-environment-variables"></a>Başvuru ortamı değişkenleri
- Tüm ortam değişkenleri, özellikler olarak [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) proje dosyasında kullanılabilir.
+
+ Tüm ortam değişkenleri, özellikler olarak Microsoft Build Engine (MSBuild) proje dosyasında kullanılabilir.
 
 > [!NOTE]
 > Proje dosyası bir ortam değişkeniyle aynı ada sahip bir özelliğin açık tanımını içeriyorsa, proje dosyasındaki özelliği ortam değişkeninin değerini geçersiz kılar.
@@ -46,6 +48,7 @@ Projeleri oluştururken, genellikle proje dosyasında veya projenizi oluşturan 
     > Özellik adları büyük/küçük harfe duyarlı değildir, bu nedenle hem `$(ToolsPath)` hem de `$(TOOLSPATH)` aynı özelliğe veya ortam değişkenine başvurur.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki proje dosyası dizinlerin konumunu belirtmek için ortam değişkenlerini kullanır.
 
 ```xml
@@ -63,6 +66,7 @@ Projeleri oluştururken, genellikle proje dosyasında veya projenizi oluşturan 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
 - [Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

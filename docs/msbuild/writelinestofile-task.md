@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf7f36d0876b1f757dee1a752c8461745783a21e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595338"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630671"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile görevi
+
 Belirtilen öğelerin yollarını belirtilen metin dosyasına yazar.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
  Aşağıdaki tabloda `WriteLinestoFile` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -40,11 +42,13 @@ Belirtilen öğelerin yollarını belirtilen metin dosyasına yazar.
 |`WriteOnlyWhenDifferent`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, varsa, belirtilen hedef dosya, görevin yazmasıyla kıyaslamak için ilk olarak okunacaktır. Özdeş ise, dosya diske yazılmaz ve zaman damgası korunacaktır.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  `Overwrite` `true`, yeni bir dosya oluşturur, içeriği dosyaya yazın ve sonra dosyayı kapatır. Hedef dosya zaten varsa, üzerine yazılır. `Overwrite` `false`, içeriği dosyaya ekler, zaten mevcut değilse hedef dosyayı oluşturur.
 
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `MyItems` öğesi koleksiyonundaki öğelerin yollarını `MyTextFile` öğesi koleksiyonu tarafından belirtilen dosyaya yazmak için `WriteLinesToFile` görevini kullanır.
 
 ```xml
@@ -92,5 +96,6 @@ dotnet %~dp0$(AssemblyName).dll %*
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

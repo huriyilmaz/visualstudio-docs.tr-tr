@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 730e7d317ffa3fd5a450978f35659df3fe5629f3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3da51c16645d0c44128b0a5fe1b19053062673c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573670"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633700"
 ---
 # <a name="item-element-msbuild"></a>Item öğesi (MSBuild)
-Kullanıcı tanımlı bir öğe ve onun meta verilerini içerir. Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesinde kullanılan her öğe, bir `ItemGroup` öğesinin alt öğesi olarak belirtilmelidir.
+
+Kullanıcı tanımlı bir öğe ve onun meta verilerini içerir. Bir MSBuild projesinde kullanılan her öğe, bir `ItemGroup` öğesinin alt öğesi olarak belirtilmelidir.
 
 \<Proje > \<ItemGroup > \<öğesi >
 
@@ -41,6 +42,7 @@ Kullanıcı tanımlı bir öğe ve onun meta verilerini içerir. Bir [!INCLUDE[v
 ```
 
 ## <a name="specify-metadata-as-attributes"></a>Meta verileri öznitelik olarak belirt
+
 MSBuild 15,1 veya sonraki sürümlerde, geçerli öznitelik listesiyle çakışmayan bir ada sahip tüm meta veriler, isteğe bağlı olarak bir öznitelik olarak ifade edilebilir.
 
 Örneğin, NuGet paketlerinin listesini belirtmek için normalde aşağıdaki söz dizimi gibi bir şey kullanırsınız.
@@ -62,9 +64,10 @@ Ancak, `Version` meta verilerini aşağıdaki sözdiziminde olduğu gibi bir öz
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -90,13 +93,15 @@ Ancak, `Version` meta verilerini aşağıdaki sözdiziminde olduğu gibi bir öz
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Öğeler için gruplandırma öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 `Item` öğeleri, derleme sistemine girdileri tanımlar ve Kullanıcı tanımlı koleksiyon adlarına göre öğe koleksiyonları halinde gruplandırılır. Bu öğe koleksiyonları, yapı işlemi adımlarını gerçekleştirmek için koleksiyonlardaki ayrı öğeleri kullanan [Görevler](../msbuild/msbuild-tasks.md)için parametre olarak kullanılabilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 @ (\<myType >) gösterimini kullanmak, \<myType > türünde öğelerin toplanmasını, noktalı virgülle ayrılmış dizeler listesine genişletmenizi ve bir parametreye geçirilmesini sağlar. Parametre `string`türünde ise, parametrenin değeri noktalı virgülle ayırarak öğelerin listesidir. Parametre bir dizeler diziyse (`string[]`), her öğe noktalı virgül konumunu temel alarak diziye eklenir. Görev parametresi <xref:Microsoft.Build.Framework.ITaskItem>`[]`türünde ise, değer, eklenen tüm meta verilerle birlikte öğe koleksiyonunun içeriğidir. Noktalı virgül dışında bir karakter kullanarak her öğeyi sınırlandırmak için @ (\<myType >, '\<separator > ') sözdizimini kullanın.
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] altyapısı, `*` ve `?` gibi joker karakterleri ve/\*\*/\* *. cs*gibi özyinelemeli joker karakterleri değerlendirebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
+MSBuild altyapısı, `*` ve `?` gibi joker karakterleri ve */\*\*/\*. cs*gibi özyinelemeli joker karakterleri değerlendirebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 ## <a name="examples"></a>Örnekler
+
 Aşağıdaki kod örneği, `CSFile`türünde iki öğenin nasıl bildirilemeyeceğini gösterir. Belirtilen ikinci öğe, `HelloWorld`olarak ayarlanmış `MyMetadata` meta veriler içeriyor.
 
 ```xml
@@ -119,6 +124,7 @@ Aşağıdaki kod örneği, bir glob aracılığıyla eklenen *somefile.cs* adlı
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öğeler](../msbuild/msbuild-items.md)
 - [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)

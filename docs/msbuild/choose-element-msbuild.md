@@ -19,14 +19,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 966e942fbd32841bbfe0a429c8623da09dcbbd0f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c4f699b4ffc9372af0c803d094390544932d652b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593375"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634480"
 ---
 # <a name="choose-element-msbuild"></a>Öğe seç (MSBuild)
+
 , Değerlendirmek için bir `ItemGroup` öğe ve/veya `PropertyGroup` öğeleri kümesi seçmek üzere alt öğeleri değerlendirir.
 
  \<Proje > \<\<> > seçin \<>... \<> seçin \<...
@@ -41,9 +42,11 @@ ms.locfileid: "75593375"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
+
  Yok.
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -58,13 +61,15 @@ ms.locfileid: "75593375"
 | Öğe | Açıklama |
 | - | - |
 | [Güvenmiyorsanız](../msbuild/otherwise-element-msbuild.md) | Tüm `When` öğelerinin koşulları `false`değerlendirmiyorsa yürütülecek kod bloğunu belirtir. |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 | [Oluşturulurken](../msbuild/when-element-msbuild.md) | Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
+
  `Choose`, `When`ve `Otherwise` öğeleri, bir dizi olası alternatifden yürütülecek bir kod bölümü seçmek için bir yol sağlamak üzere birlikte kullanılır. Daha fazla bilgi için bkz. [koşullu yapılar](../msbuild/msbuild-conditional-constructs.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki proje, ayarlanacak `When` öğelerindeki özellik değerlerini belirlemek için `Choose` öğesini kullanır. Hem `When` öğelerin `Condition` öznitelikleri `false`olarak değerlendirilerse, `Otherwise` öğesindeki özellik değerleri ayarlanır.
 
 ```xml
@@ -113,5 +118,6 @@ ms.locfileid: "75593375"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Koşullu yapılar](../msbuild/msbuild-conditional-constructs.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

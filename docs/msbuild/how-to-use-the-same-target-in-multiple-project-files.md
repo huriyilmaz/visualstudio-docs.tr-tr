@@ -11,31 +11,34 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50a4b756e0f0926e6c0ccd1a68ab44b7bc13e25c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1b7b36a829e2e406ecd3f10ba3a2b588c6f7df25
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574064"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633765"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma
-Birkaç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyası oluşturduysanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmanız gerektiğini fark edebilirsiniz. Her proje dosyasındaki bu görevlerin veya hedeflerin tüm açıklamalarını eklemek yerine, bir hedefi ayrı bir proje dosyasında kaydedebilir ve sonra bu projeyi, hedefi kullanmak için gereken diğer bir projeye içeri aktarabilirsiniz.
 
+Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmanız gerektiğini fark edebilirsiniz. Her proje dosyasındaki bu görevlerin veya hedeflerin tüm açıklamalarını eklemek yerine, bir hedefi ayrı bir proje dosyasında kaydedebilir ve sonra bu projeyi, hedefi kullanmak için gereken diğer bir projeye içeri aktarabilirsiniz.
 ## <a name="use-the-import-element"></a>Içeri aktarma öğesini kullanın
- `Import` öğesi, başka bir proje dosyasına bir proje dosyası eklemek için kullanılır. İçeri aktarılmakta olan proje dosyası geçerli bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyası olmalı ve iyi biçimlendirilmiş XML içermelidir. `Project` özniteliği içeri aktarılan proje dosyasının yolunu belirtir. `Import` öğesi hakkında daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+
+ `Import` öğesi, başka bir proje dosyasına bir proje dosyası eklemek için kullanılır. İçeri aktarılmakta olan proje dosyası geçerli bir MSBuild proje dosyası olmalı ve iyi biçimlendirilmiş XML içermelidir. `Project` özniteliği içeri aktarılan proje dosyasının yolunu belirtir. `Import` öğesi hakkında daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+`Import` öğesi, başka bir proje dosyasına bir proje dosyası eklemek için kullanılır. İçeri aktarılmakta olan proje dosyası geçerli bir MSBuild proje dosyası olmalı ve iyi biçimlendirilmiş XML içermelidir. `Project` özniteliği içeri aktarılan proje dosyasının yolunu belirtir. `Import` öğesi hakkında daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
 #### <a name="to-import-a-project"></a>Bir projeyi içeri aktarmak için
 
 1. İçeri aktarılan projedeki Özellikler ve öğeler için parametre olarak kullanılan proje dosyasını içeri aktarma, tüm özellikler ve öğeler ' i tanımlayın.
 
-2. Projeyi içeri aktarmak için `Import` öğesini kullanın. Örneğin:
+2. Projeyi içeri aktarmak için `Import` öğesini kullanın. Örnek:
 
      `<Import Project="MyCommon.targets"/>`
 
 3. `Import` öğeden sonra, içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.
 
 ## <a name="order-of-evaluation"></a>Değerlendirme sırası
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir `Import` öğesine ulaştığında, içeri aktarılan proje `Import` öğesi konumundaki içeri aktarma projesine etkin bir şekilde eklenir. Bu nedenle, `Import` öğesinin konumu Özellikler ve öğelerin değerlerini etkileyebilir. İçeri aktarılan proje tarafından ayarlanan özellikleri ve öğeleri ve içeri aktarılan projenin kullandığı özellikleri ve öğeleri anlamak önemlidir.
+
+ MSBuild bir `Import` öğesine ulaştığında, içeri aktarılan proje, `Import` öğesinin konumundaki içeri aktarma projesine etkin bir şekilde eklenir. Bu nedenle, `Import` öğesinin konumu Özellikler ve öğelerin değerlerini etkileyebilir. İçeri aktarılan proje tarafından ayarlanan özellikleri ve öğeleri ve içeri aktarılan projenin kullandığı özellikleri ve öğeleri anlamak önemlidir.
 
  Proje oluşturulduğunda tüm özellikler önce değerlendirilir ve ardından öğeler gelir. Örneğin, aşağıdaki XML içeri aktarılan proje dosyasını *MyCommon. targets*olarak tanımlar:
 
@@ -81,6 +84,7 @@ Birkaç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild
 3. Proje dosyasında, içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, ikinci kod örneği içe aktardığı *MyCommon. targets* dosyasını gösterir. *. Targets* dosyası, derlemeyi yapılandırmak için içeri aktarma projesinden özellikleri değerlendirir.
 
 ```xml
@@ -99,6 +103,7 @@ Birkaç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild
 ```
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği *MyCommon. targets* dosyasını içeri aktarır.
 
 ```xml
@@ -112,5 +117,6 @@ Birkaç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İçeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md)
 - [Hedefler](../msbuild/msbuild-targets.md)

@@ -12,23 +12,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 921b5d2d4aad7cfe48b7f6cc9cb802fde9520e19
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 178dfcaf0bdf8296fd271cb7c4e5dd0bbd251d7f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585264"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633934"
 ---
 # <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>Nasıl yapılır: MSBuild. exe kullanarak çözümlerde belirli hedefleri derleme
+
 Bir çözümde belirli projelerin belirli hedeflerini oluşturmak için *MSBuild. exe* ' yi kullanabilirsiniz.
 
-#### <a name="to-build-a-specific-target-of-a-specific-project-in-a-solution"></a>Bir çözümde belirli bir projenin belirli bir hedefini oluşturmak için
+## <a name="to-build-a-specific-target-of-a-specific-project-in-a-solution"></a>Bir çözümde belirli bir projenin belirli bir hedefini oluşturmak için
 
 1. Komut satırında `MSBuild.exe <SolutionName>.sln`yazın; burada `<SolutionName>` yürütmek istediğiniz hedefi içeren çözümün dosya adına karşılık gelir.
 
 2. `-target:` anahtar \<ProjectName >:\<TargetName > biçiminde bir hedef belirtin. Proje adı `%`, `$`, `@`, `;`, `.`, `(`, `)`veya `'`karakterlerinden birini içeriyorsa, bunları belirtilen hedef adında bir `_` ile değiştirin.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `NotInSlnFolder` projenin `Rebuild` hedefini yürütür ve sonra *newfolder* çözüm klasöründe bulunan `InSolutionFolder` projesinin `Clean` hedefini yürütür.
 
 ```cmd
@@ -42,6 +44,7 @@ Sizin için kullanılabilir seçenekleri incelemek isterseniz, MSBuild tarafınd
 Bu iç görünüme ihtiyaç duymadığınız takdirde bu ortam değişkeni kümesiyle derleme. Bu ayar, çözümünüzde proje oluşturma sorunlarına neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

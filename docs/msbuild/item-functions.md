@@ -10,17 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65ca003375e54248852f5942bd2b5f62fe21a06c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af4fb872206611ea5eb1aa93b7aa759615b56e41
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573800"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633687"
 ---
 # <a name="item-functions"></a>Öğe işlevleri
-MSBuild 4,0 ' den başlayarak, görev ve hedeflerdeki kod, projedeki öğeler hakkında bilgi almak için öğe işlevlerini çağırabilir. Bu işlevler ayrı () öğeleri almayı basitleştirir ve öğeler aracılığıyla döngüden daha hızlıdır.
+
+Görev ve hedeflerdeki kod, projedeki öğeler hakkında bilgi almak için (MSBuild 4,0 ve üzeri) öğe işlevlerini çağırabilir. Bu işlevler ayrı öğeler almayı basitleştirir ve öğeler aracılığıyla döngüden daha hızlıdır.
 
 ## <a name="string-item-functions"></a>Dize öğesi işlevleri
+
 Herhangi bir öğe değerinde çalıştırmak için .NET Framework dize yöntemleri ve özellikleri kullanabilirsiniz. <xref:System.String> yöntemler için yöntem adını belirtin. <xref:System.String> özellikler için, "get_" sonra özellik adını belirtin.
 
 Birden çok dizeye sahip öğeler için, dize yöntemi veya özelliği her bir dizede çalışır.
@@ -49,6 +51,7 @@ Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gö
 ```
 
 ## <a name="intrinsic-item-functions"></a>İç öğe işlevleri
+
 Aşağıdaki tabloda, öğeler için kullanılabilen iç işlevler listelenmiştir.
 
 |İşlev|Örnek|Açıklama|
@@ -100,4 +103,5 @@ Aşağıdaki örnek, iç öğe işlevlerinin nasıl kullanılacağını gösterm
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öğeler](../msbuild/msbuild-items.md)

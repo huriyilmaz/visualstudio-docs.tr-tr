@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76f808c14b8459abfb3bf9c531cfff496932836c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d17dde15fdfcc00890338eadf603f02352697363
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566377"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631880"
 ---
 # <a name="task-element-msbuild"></a>Task öğesi (MSBuild)
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevin örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta olan görevin adına göre belirlenir.
+
+MSBuild görevi örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta olan görevin adına göre belirlenir.
 
  \<Proje > \<hedefi >
 
@@ -39,9 +40,10 @@ ms.locfileid: "75566377"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -53,20 +55,22 @@ ms.locfileid: "75566377"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Output](../msbuild/output-element-msbuild.md)|Projedeki çıkışları proje dosyasında depolar. Bir görevde sıfır veya daha fazla öğe `Output` olabilir.|
+|[Çıktı](../msbuild/output-element-msbuild.md)|Projedeki çıkışları proje dosyasında depolar. Bir görevde sıfır veya daha fazla öğe `Output` olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Hedef](../msbuild/target-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] görevler için kapsayıcı öğesi. |
+| [Hedef](../msbuild/target-element-msbuild.md) | MSBuild görevleri için kapsayıcı öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
- Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasındaki `Task` öğesi bir görevin örneğini oluşturur, üzerinde özellikleri ayarlar ve yürütür. `Output` öğesi, proje dosyasında başka bir yerde kullanılacak olan özellikler veya öğelerde çıkış parametrelerini depolar.
+
+ MSBuild proje dosyasındaki `Task` öğesi bir görevin örneğini oluşturur, üzerinde özellikleri ayarlar ve yürütür. `Output` öğesi, proje dosyasında başka bir yerde kullanılacak olan özellikler veya öğelerde çıkış parametrelerini depolar.
 
  Bir görevin üst `Target` [öğesinde herhangi bir](../msbuild/onerror-element-msbuild.md) II öğesi varsa, görev başarısız olursa ve `ContinueOnError` `false`bir değere sahipse bunlar yine de değerlendirilir. Görevler hakkında daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, [Csc görev](../msbuild/csc-task.md) sınıfının bir örneğini oluşturur, özelliklerin altıyı ayarlar ve görevi yürütür. Yürütmeden sonra, nesnesinin `OutputAssembly` özelliğinin değeri, `FinalAssemblyName`adlı bir öğe listesine yerleştirilir.
 
 ```xml
@@ -84,6 +88,7 @@ ms.locfileid: "75566377"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

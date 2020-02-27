@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3d5f9e402750978b1201c6b2a5b1ef0659e8789
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f20fdb4cd809e422bc33535f3143b45db99842f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593674"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633349"
 ---
 # <a name="msbuild-glossary"></a>MSBuild sözlüğü
 
@@ -88,10 +88,10 @@ Proje dosyası \
 Proje dosyası, derlemeyi denetleyen MSBuild betiğini içerir. Proje dosyaları genellikle *. csproj* veya *. vbproj*gibi *proj*ile biten bir dosya uzantısına sahiptir. Proje dosyaları, özellik dosyalarını ve hedef dosyaları içeri aktarabilir.
 
 özelliði
-Özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Daha fazla bilgi için [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 Özellik, ortam \
-Ortam özelliği, aynı ada sahip bir sistem ortam değişkeninin değerine otomatik olarak başlatılan bir özelliktir. Daha fazla bilgi için [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Ortam özelliği, aynı ada sahip bir sistem ortam değişkeninin değerine otomatik olarak başlatılan bir özelliktir. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 Özellik dosyası \
 Özellik dosyası, derleme kılavuzunu oluşturan genellikle özellik gruplarını ve öğe gruplarını içeren bir proje dosyasıdır. Kurala göre, *. props*dosya uzantısına sahiptir. Özellik dosyaları genellikle ilişkili proje dosyalarının başlangıcında içeri aktarılır.
@@ -107,16 +107,16 @@ Ortam özelliği, aynı ada sahip bir sistem ortam değişkeninin değerine otom
 Daha fazla bilgi için bkz. [özellik işlevleri](../msbuild/property-functions.md).
 
 Özellik, Genel \
-Genel özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Genel Özellikler bir komut isteminde veya bir [MSBuild görevinin](../msbuild/msbuild-task.md)`Properties` özniteliği kullanılarak ayarlanır ve bir yapılandırmanın değerlendirme aşamasında değiştirilemez. Daha fazla bilgi için [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Genel özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Genel Özellikler bir komut isteminde veya bir [MSBuild görevinin](../msbuild/msbuild-task.md)`Properties` özniteliği kullanılarak ayarlanır ve bir yapılandırmanın değerlendirme aşamasında değiştirilemez. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 Özellik, yerel \
 Yerel bir özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Bu terim yalnızca genel özellik olmayan bir özelliği ayırt etmek için kullanılır.
 
 Özellik, kayıt defteri \
-Bir kayıt defteri özelliğinin bir sistem kayıt defteri alt anahtarının değerini okuyan özel bir sözdizimi kullanılarak ayarlanan bir değeri vardır. Daha fazla bilgi için [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Bir kayıt defteri özelliğinin bir sistem kayıt defteri alt anahtarının değerini okuyan özel bir sözdizimi kullanılarak ayarlanan bir değeri vardır. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 Özellik, ayrılmış \
-Ayrılmış bir özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Ayrılmış Özellikler otomatik olarak önceden tanımlanmış değerler olarak başlatılır. Daha fazla bilgi için [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Ayrılmış bir özellik, yapı işlemini denetlemek için kullanılan bir anahtar-değer çiftidir. Ayrılmış Özellikler otomatik olarak önceden tanımlanmış değerler olarak başlatılır. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 Proje-kapsam \
 Proje kapsamı, örneğin, yalnızca içeren proje dosyasında ve içeri aktardığı herhangi bir projede görünür olan yerel bir özellik gibi bir MSBuild nesnesini tanımlar.
@@ -161,7 +161,7 @@ Hedef dosya \
 Hedef dosya, genellikle derlemeyi rehberlik eden hedefleri ve görevleri içeren bir proje dosyasıdır. Kurala göre, *. targets*dosya uzantısına sahiptir. Hedef dosyalar genellikle ilişkili proje dosyalarının sonuna aktarılır.
 
 görevinin
-Görevler, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projelerin derleme işlemleri gerçekleştirmek için kullandığı çalıştırılabilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derleyebilir veya bir dış araç çalıştırabilir. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
+Görevler, MSBuild projelerinin derleme işlemlerini gerçekleştirmek için kullandığı yürütülebilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derleyebilir veya bir dış araç çalıştırabilir. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
 Dönüşümler
 Dönüşüm, bir öğe koleksiyonunun diğerine bire bir dönüştürmedir. Bir dönüştürme, öğe koleksiyonlarını dönüştürmek için bir projenin etkinleştirilmesinin yanı sıra, bir hedefin giriş ve çıkışları arasında doğrudan eşlemeyi belirlemesine olanak sağlar. Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).

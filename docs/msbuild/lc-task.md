@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86525b2c4ddcf36ca85feee31f89f0003f1f9775
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8cea0ca4e6562ccc626bf52ad74dfa75b4f118f9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590832"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633609"
 ---
 # <a name="lc-task"></a>LC görevi
+
 . *Licx* dosyasından bir *. License* dosyası üreten *LC. exe*' yi kaydırır. *LC. exe*hakkında daha fazla bilgi için bkz. [LC. exe (lisans derleyicisi)](/dotnet/framework/tools/lc-exe-license-compiler).
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `LC` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -44,6 +46,7 @@ Aşağıdaki tabloda `LC` görevinin parametreleri açıklanmaktadır.
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.ToolTask> sınıfından devralan <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, lisansları derlemek için `LC` görevini kullanır.
 
 ```xml
@@ -67,5 +70,6 @@ Aşağıdaki örnek, lisansları derlemek için `LC` görevini kullanır.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

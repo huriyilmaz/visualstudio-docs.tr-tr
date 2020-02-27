@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb91ffd6ad626a148c3f3ad71c307fc0d0df2c75
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ead738042b15c955aadb458c527253f3759b934e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585905"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633232"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile MSBuild satır içi görevleri
+
 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)' ye benzer şekilde, roslyncodetaskfactory, iç satır görevleri olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için platformlar arası Roslyn derleyicileri kullanır.  RoslynCodeTaskFactory görevlerinin hedefi .NET Standard ve .NET Framework ve .NET Core çalışma zamanlarının yanı sıra Linux ve Mac OS gibi diğer platformlar üzerinde de çalışabilir.
 
 >[!NOTE]
 >RoslynCodeTaskFactory yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile bir satır içi görevin yapısı
+
  RoslynCodeTaskFactory satır içi görevleri, .NET Standard hedeflemediği tek fark olan [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)ile aynı şekilde bildirilmiştir.  Satır içi görev ve onu içeren `UsingTask` öğesi, genellikle bir *. targets* dosyasına dahil edilir ve gerektiği şekilde diğer proje dosyalarına içeri aktarılır. Temel bir satır içi görev aşağıda verilmiştir. Hiçbir şey yapmediğine dikkat edin.
 
 ```xml
@@ -68,6 +70,7 @@ ms.locfileid: "75585905"
 > `Task` öğesinin içerdiği öğeler, görev fabrikasına, bu durumda kod görev fabrikasına özgüdür.
 
 ### <a name="code-element"></a>Kod öğesi
+
 `Task` öğesi içinde görünecek Son alt öğe `Code` öğesidir. `Code` öğesi, bir görevde derlenmek istediğiniz kodu içerir veya konumlandırır. `Code` öğesine yerleştirdiğiniz öğe, görevi nasıl yazmak istediğinize bağlıdır.
 
 `Language` özniteliği, kodunuzun yazıldığı dili belirtir. Kabul edilebilir değerler C#, Visual Basic için `vb` `cs`.
@@ -87,7 +90,8 @@ Alternatif olarak, görevin kodunu içeren bir dosyanın konumunu belirtmek içi
 > [!NOTE]
 > Kaynak dosyada görev sınıfını tanımlarken, sınıf adı karşılık gelen [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesinin `TaskName` özniteliğiyle kabul etmelidir.
 
-## <a name="hello-world"></a>Merhaba Dünya
+## <a name="hello-world"></a>Hello World
+
  RoslynCodeTaskFactory ile daha sağlam bir satır içi görev aşağıda verilmiştir. HelloWorld görevinde "Hello, World!" görüntülenir Varsayılan hata günlüğü cihazında, genellikle sistem konsolu veya Visual Studio **çıktı** penceresidir. Örnekteki `Reference` öğesi yalnızca çizim için dahil edilmiştir.
 
 ```xml
@@ -125,6 +129,7 @@ HelloWorld *. targets*adlı bir dosyaya HelloWorld görevini kaydedebilir ve ard
 ```
 
 ## <a name="input-and-output-parameters"></a>Giriş ve çıkış parametreleri
+
  Satır içi görev parametreleri bir `ParameterGroup` öğesinin alt öğeleridir. Her parametre, kendisini tanımlayan öğenin adını alır. Aşağıdaki kod `Text`parametresini tanımlar.
 
 ```xml
@@ -162,6 +167,7 @@ Parametrelerde bu özniteliklerin bir veya daha fazlası olabilir:
 `Code` öğesinde `Fragment` veya `Method``Type` özniteliği varsa, özellikler her parametre için otomatik olarak oluşturulur. Aksi halde, özellikler, görev kaynak kodunda açıkça bildirilmelidir ve parametre tanımlarıyla tam olarak eşleşmesi gerekir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki satır içi görev bazı iletileri günlüğe kaydeder ve bir dize döndürür.
 
 ```xml
@@ -254,5 +260,6 @@ Bu satır içi görevler, yolları birleştirebilir ve dosya adını alabilir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [İzlenecek yol: satır içi görev oluşturma](../msbuild/walkthrough-creating-an-inline-task.md)

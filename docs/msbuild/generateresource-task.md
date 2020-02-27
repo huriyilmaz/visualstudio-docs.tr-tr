@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0e83cc04b309a940f5aa4c5a36099f10afddcc3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: dd5946612889e98b3b90f2ee3cb8665c43827a5e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594806"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634064"
 ---
 # <a name="generateresource-task"></a>GenerateResource görevi
+
 *. Txt* ve *. resx* (XML tabanlı kaynak biçimi) dosyalarını ve ortak dil çalışma zamanı ikili *. resources* dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemelerine derlenen. Bu görev genellikle *. txt* veya *. resx* dosyalarını *. resources* dosyalarına dönüştürmek için kullanılır. `GenerateResource` görevi [Resgen. exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)' ye benzer.
 
 ## <a name="parameters"></a>Parametreler
+
 Aşağıdaki tabloda `GenerateResource` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -61,6 +63,7 @@ Aşağıdaki tabloda `GenerateResource` görevinin parametreleri açıklanmaktad
 |`UseSourcePath`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, girdi dosyasının dizininin göreli dosya yollarını çözümlemek için kullanılacağını belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 *. Resx* dosyaları diğer kaynak dosyalarına bağlantılar içerebileceğinden, çıkışların güncel olup olmadığını görmek için *. resx* ve *. resources* dosya zaman damgalarını karşılaştırmak yeterlidir. Bunun yerine, `GenerateResource` görevi *. resx* dosyalarındaki bağlantıları izler ve bağlantılı dosyaların zaman damgasını de denetler. Bu, genellikle `GenerateResource` görevi içeren hedef üzerinde `Inputs` ve `Outputs` özniteliklerini kullanmamalıdır, çünkü aslında çalışması gerektiği zaman atlanmasına neden olabilir.
 
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
@@ -68,6 +71,7 @@ Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microso
 .NET 3,5 projelerini hedeflemek için MSBuild 4,0 ' i kullanırken, derleme x86 kaynaklarında başarısız olabilir. Bu sorunu geçici olarak çözmek için, hedefi bir AnyCPU derlemesi olarak oluşturabilirsiniz.
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, `Resx` öğesi koleksiyonu tarafından belirtilen dosyalardan *. resources* dosyaları oluşturmak için `GenerateResource` görevini kullanır.
 
 ```xml
@@ -95,5 +99,6 @@ Derlemenin myAssembly olarak adlandırıldığını varsayarsak, aşağıdaki ko
 \<LogicalName > meta verileri olmadan, kaynak *MyAssembly. myResource. resources*olarak adlandırılır.  Bu örnek yalnızca Visual Basic ve Visual C# derleme işlemi için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

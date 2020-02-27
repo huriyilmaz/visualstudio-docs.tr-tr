@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd27951390cf86712f846fada2835c4d87ec7fe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 90fbd517608c9c36db0b1035f296b9d9402abddd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594857"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633037"
 ---
 # <a name="output-element-msbuild"></a>Output öğesi (MSBuild)
+
 Öğe ve özelliklerde görev çıkış değerlerini depolar.
 
  \<Proje > \<hedef > \<> \<) >
@@ -39,9 +40,10 @@ ms.locfileid: "75594857"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -51,15 +53,17 @@ ms.locfileid: "75594857"
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
+
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Görev](../msbuild/task-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] bir görevin örneğini oluşturur ve yürütür. |
+| [Görev](../msbuild/task-element-msbuild.md) | MSBuild görevi örneğini oluşturur ve yürütür. |
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, bir `Target` öğesinin içinde yürütülen `Csc` görevi gösterir. Görev parametrelerine geçirilen öğeler ve özellikler bu örneğin kapsamı dışında bildirilmiştir. Çıkış parametresindeki `OutputAssembly` değeri `FinalAssemblyName` öğesinde depolanır ve çıkış parametresindeki `BuildSucceeded` değeri `BuildWorked` özelliğinde depolanır. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
 ```xml
@@ -80,5 +84,6 @@ ms.locfileid: "75594857"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

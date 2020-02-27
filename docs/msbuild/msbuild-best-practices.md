@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1aee1a6ae3abc06846523df9470ad75d316a50b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d3605109519dccaafa1367464bd8c2385df5e93e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592093"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633427"
 ---
 # <a name="msbuild-best-practices"></a>MSBuild en iyi yöntemleri
+
 MSBuild betikleri yazmak için aşağıdaki en iyi yöntemleri öneririz:
 
 - Varsayılan özellik değerleri, varsayılan değeri komut satırında geçersiz kılınabilen bir özellik bildirerek değil, `Condition` özniteliği kullanılarak en iyi şekilde işlenir. Örneğin,
@@ -32,4 +33,5 @@ MSBuild betikleri yazmak için aşağıdaki en iyi yöntemleri öneririz:
 - Öğeleri seçtiğinizde Joker karakterlerden kaçının. Bunun yerine, dosyaları açıkça belirtin. Bu, dosya ekleme veya silme sırasında oluşabilecek hataların izlenmesini kolaylaştırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md)

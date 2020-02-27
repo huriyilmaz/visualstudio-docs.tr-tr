@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac4e04c1a75fe7afdebc984381e17d7e55913fd4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 45b255f782390cfc478ac2f7bce58170e4e2b268
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594987"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631854"
 ---
 # <a name="taskbody-element-msbuild"></a>TaskBody öğesi (MSBuild)
+
 Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
  \<Project > \<UsingTask > \<TaskBody >
@@ -35,9 +36,10 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -47,15 +49,16 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Veri|`TaskBody` etiketleri arasındaki metin, `TaskFactory`harfine gönderilir.|
+|Veriler|`TaskBody` etiketleri arasındaki metin, `TaskFactory`harfine gönderilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]görevleri kaydetmek için bir yol sağlar. Bir projede sıfır veya daha fazla öğe `UsingTask` olabilir. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | MSBuild 'e görevleri kaydetmek için bir yol sağlar. Bir projede sıfır veya daha fazla öğe `UsingTask` olabilir. |
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `Evaluate` özniteliğiyle `TaskBody` öğesinin nasıl kullanılacağını gösterir.
 
 ```xml
@@ -72,6 +75,7 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

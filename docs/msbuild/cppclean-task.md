@@ -19,17 +19,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 827014e04c23239274e31b994fd0178cbe8e5883
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 331a96c7cd67b933e521e3fe5f2d7a909ffa5d03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596079"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634350"
 ---
 # <a name="cppclean-task"></a>CPPClean Görevi
+
 Bir C++ proje oluşturulduğunda MSBuild tarafından oluşturulan geçici dosyaları siler. Derleme dosyalarını silme işlemi *Temizleme*olarak bilinir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda **CPPClean** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -37,8 +39,9 @@ Bir C++ proje oluşturulduğunda MSBuild tarafından oluşturulan geçici dosyal
 |**DeletedFiles**|İsteğe bağlı `ITaskItem[]` çıkış parametresi.<br /><br /> Görevler tarafından tüketilen ve yayılan MSBuild çıkış dosyası öğelerinin dizisini tanımlar.|
 |**DoDelete**|İsteğe bağlı **Boolean** parametresi.<br /><br /> `true`, geçici derleme dosyalarını temizleyin.|
 |**FilePatternsToDeleteOnClean**|Gerekli `String` parametresi.<br /><br /> Temizleyen dosyaların dosya uzantılarının noktalı virgülle ayrılmış bir listesini belirtir.|
-|**FilesExcludedFromClean**|İsteğe bağlı `String` parametresi.<br /><br /> Temizleyememelidir dosyaların noktalı virgülle ayrılmış bir listesini belirtir.|
+|**Filesexcludedfromcyalın**|İsteğe bağlı `String` parametresi.<br /><br /> Temizleyememelidir dosyaların noktalı virgülle ayrılmış bir listesini belirtir.|
 |**FoldersToClean**|Gerekli `String` parametresi.<br /><br /> Temizleyen dizinlerin noktalı virgülle ayrılmış bir listesini belirtir. Tam veya göreli bir yol belirtebilirsiniz ve yol joker karakter simgesini (*) içerebilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

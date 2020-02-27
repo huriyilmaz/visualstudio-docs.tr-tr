@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 49e248ee0e5537ae54957695ca698b041fc1ce8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2503040e074a62422d4c7c904f5ad3a2bd84d6c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567286"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631035"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 ' teki yenilikler
 
@@ -39,6 +39,7 @@ MSBuild artık [.NET Core SDK](https://www.microsoft.com/net/download/core) bir 
 - `SDK35ToolsPath` ve `SDK40ToolsPath` özellikleri, Visual Studio 'nun bu sürümüyle paketlenmiş .NET Framework SDK 'ya işaret noktasıdır (örneğin, 4. X araçları için 10.0 A).
 
 ## <a name="updates"></a>Güncelleştirmeler
+
 - [Proje öğesinin](../msbuild/project-element-msbuild.md) yeni bir `SDK` özniteliği vardır. Ayrıca `Xmlns` özniteliği artık isteğe bağlıdır. `SDK` özniteliği hakkında daha fazla bilgi için bkz. [nasıl yapılır: MSBuild proje SDK](../msbuild/how-to-use-project-sdk.md)'larını, [paketleri, metapaketleri ve çerçeveleri](/dotnet/core/packages) ve [eklemeleri .NET Core için csproj biçiminde](/dotnet/core/tools/csproj)kullanma.
 - Hedeflerin dışında [öğe öğesi](../msbuild/item-element-msbuild.md) yeni bir `Update` özniteliğine sahiptir. Ayrıca, `Remove` özniteliği üzerinde kısıtlama ortadan kaldırılmıştır.
 - *Directory. Build. props* , bir dizin altındaki projelere özelleştirmeler sağlayan Kullanıcı tanımlı bir dosyadır. Özellik `ImportDirectoryBuildTargets` **false**olarak ayarlanmadığı takdirde bu dosya *Microsoft. Common. props* öğesinden otomatik olarak içeri aktarılır. *Directory. Build. targets* , *Microsoft. Common. targets*tarafından içeri aktarılır.
@@ -49,7 +50,8 @@ MSBuild artık [.NET Core SDK](https://www.microsoft.com/net/download/core) bir 
 - `EnsureTrailingSlash`, bir yol zaten yoksa bir yola sonuna eğik çizgi ekler.
 - `NormalizePath`, yol öğelerini birleştirir ve çıkış dizesinin geçerli işletim sistemi için doğru dizin ayırıcı karakterlerine sahip olmasını sağlar.
 - `NormalizeDirectory` yol öğelerini birleştirir, sonunda eğik çizgi sağlar ve çıkış dizesinin geçerli işletim sistemi için doğru dizin ayırıcı karakterlerine sahip olmasını sağlar.
-- `GetPathOfFileAbove` dosyanın yolunu hemen önceki bir şekilde döndürür. Arama için işlevsel olarak eşdeğerdir `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
+- `GetPathOfFileAbove` dosyanın yolunu hemen önceki bir şekilde döndürür. Çağırma `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />` işlevsel olarak eşdeğerdir
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MSBuild](../msbuild/msbuild.md)

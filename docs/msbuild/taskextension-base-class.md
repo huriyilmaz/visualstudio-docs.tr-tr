@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58410d1a2dbb2fc477915ac78e30a67b525e59f0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c3dc771f16c7077549ba06d5cdda422319554d40
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594961"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631711"
 ---
 # <a name="taskextension-base-class"></a>TaskExtension temel sınıfı
+
 Birçok görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından devralınır. Bu devralma zinciri, bunlardan türetilen görevlere birkaç parametre ekler. Bu parametreler bu belgede listelenmiştir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda temel sınıfların parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -38,5 +40,6 @@ Birçok görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından de
 |<xref:Microsoft.Build.Tasks.TaskExtension.Log%2A>|İsteğe bağlı <xref:Microsoft.Build.Utilities.TaskLoggingHelper> salt okunurdur parametresi.<br /><br /> Görev günlüğü yöntemlerini içeren bir `TaskLoggingHelperExtension` nesnesi alır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd62738a89b38adb6cd01d6a33d661e95144d34
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bc50379563a85ce9c76f3d45b9d70c1f784eaf5a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565272"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631256"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask öğesi (MSBuild)
+
 Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi, görev uygulamasını içeren derlemeye eşler.
 
  \<Proje > \<UsingTask >
@@ -43,9 +44,10 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 > Özellikler ve öğelerin aksine, bir `TaskName` için geçerli olan *ilk* `UsingTask` öğesi kullanılacaktır; görevleri geçersiz kılmak için, mevcut bir `UsingTask` *önce* yeni bir tanımlamanız gerekir.
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -66,9 +68,10 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
+
  Ortam değişkenlerine, komut satırı özelliklerine, proje düzeyi özelliklerine ve proje düzeyi öğelere, doğrudan veya içeri aktarılan bir proje dosyası aracılığıyla proje dosyasında içerilen `UsingTask` öğelerinde başvurulabilir. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
 > [!NOTE]
@@ -77,6 +80,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
  MSBuild 4,0 ' de, görevler kullanılarak *. overridetask* dosyaları yüklenebilir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `AssemblyName` özniteliğiyle `UsingTask` öğesinin nasıl kullanılacağını gösterir.
 
 ```xml
@@ -93,6 +97,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 ```
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `AssemblyFile` özniteliğiyle `UsingTask` öğesinin nasıl kullanılacağını gösterir.
 
 ```xml
@@ -101,6 +106,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

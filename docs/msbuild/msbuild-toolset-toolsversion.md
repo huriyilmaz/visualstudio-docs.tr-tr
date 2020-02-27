@@ -13,18 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af4816440c2eb285a0f30db50e18108ce79265f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b6aaa6309e04f5143b70ff233c0b621ab2350b9c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593814"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633128"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild Araç Takımı (ToolsVersion)
 
 MSBuild bir uygulama oluşturmak için bir görev, hedef ve araç araç kümesi kullanır. Genellikle, bir MSBuild Araç Takımı *Microsoft. Common. Tasks* dosyasını, *Microsoft. Common. targets* dosyasını ve *CSC. exe* ve *Vbc. exe*gibi derleyicileri içerir. Çoğu araç kümesi, .NET Framework birden fazla sürümüne ve birden fazla sistem platformuna uygulama derlemek için kullanılabilir. Ancak, MSBuild 2,0 araç takımı yalnızca .NET Framework 2,0 ' i hedeflemek için kullanılabilir.
 
 ## <a name="toolsversion-attribute"></a>Araçları sürüm özniteliği
+
 ::: moniker range=">=vs-2019"
  Proje dosyasındaki [Proje](../msbuild/project-element-msbuild.md) öğesindeki `ToolsVersion` özniteliğinde araç takımını belirtin. Aşağıdaki örnek, projenin MSBuild "Current" araç takımı kullanılarak oluşturulması gerektiğini belirtir.
 
@@ -62,7 +63,7 @@ MSBuild bir uygulama oluşturmak için bir görev, hedef ve araç araç kümesi 
 
  `MSBuildToolsPath` değerini özel bir araç kümesi tanımlayarak değiştirebilirsiniz. Daha fazla bilgi için bkz. [Standart ve özel araç takımı yapılandırması](../msbuild/standard-and-custom-toolset-configurations.md).
 
- Komut satırında bir çözüm oluşturduğunuzda ve `ToolsVersion` *MSBuild. exe*için bir belirleme belirttiğinizde, çözümdeki her proje kendi kendine `ToolsVersion` belirtsebiletümprojelerveproje-projebağımlılıklarıbunagöreoluşturulur `ToolsVersion`. Her proje temelinde `ToolsVersion` değerini tanımlamak için, bkz. [araçları sürüm ayarlarını geçersiz kılma](../msbuild/overriding-toolsversion-settings.md).
+ Komut satırında bir çözüm oluşturduğunuzda ve *MSBuild. exe*için bir `ToolsVersion` belirttiğinizde, çözümdeki her bir proje kendi `ToolsVersion`belirtse bile, tüm projeler ve proje-proje bağımlılıkları bu `ToolsVersion`göre oluşturulur. Her proje temelinde `ToolsVersion` değerini tanımlamak için, bkz. [araçları sürüm ayarlarını geçersiz kılma](../msbuild/overriding-toolsversion-settings.md).
 
  `ToolsVersion` özniteliği, proje geçişi için de kullanılır. Örneğin, Visual Studio 2010 ' de bir Visual Studio 2008 projesi açarsanız proje dosyası, araçları sürümü = "4.0" olarak güncelleştirilir. Daha sonra Visual Studio 2008 ' de bu projeyi açmayı denerseniz, yükseltilen `ToolsVersion` tanımaz ve bu nedenle projeyi özniteliği hala 3,5 olarak ayarlanmış gibi oluşturur.
 

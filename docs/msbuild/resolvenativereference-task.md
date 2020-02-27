@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 417c4536f13aa90505ec5e69b2719219af0d7e81
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 64b76b31e96947914c9a641ed4ceb23c7761eb85
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595169"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632686"
 ---
 # <a name="resolvenativereference-task"></a>ResolveNativeReference görevi
+
 Yerel başvuruları çözümler. <xref:Microsoft.Build.Tasks.ResolveNativeReference> sınıfını uygular. Bu sınıf, doğrudan kodunuzdan kullanılması amaçlanmayan .NET Framework altyapısını destekler.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
  Aşağıdaki tabloda `ResolveNativeReference` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -43,8 +45,10 @@ Yerel başvuruları çözümler. <xref:Microsoft.Build.Tasks.ResolveNativeRefere
 |`NativeReferences`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Win32 yerel derleme başvurularını alır veya ayarlar.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

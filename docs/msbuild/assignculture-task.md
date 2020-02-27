@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 393077d6391a5c1f5f4088773013538efbedc9f7
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: aa9f7bb47efefa3f7a1d4cf52cbfa5891602956f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578712"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634571"
 ---
 # <a name="assignculture-task"></a>AssignCulture görevi
+
 Bu görev, dosya adının bir parçası olarak geçerli bir .NET kültür tanımlayıcı dizesi içerebilen öğelerin listesini kabul eder ve karşılık gelen kültür tanımlayıcısını içeren `Culture` adlı meta verilere sahip öğeler üretir. Örneğin, *Form1.fr-fr. resx* dosya adında gömülü bir kültür tanımlayıcısı "fr-fr" bulunur, bu nedenle bu görev, `fr-fr`eşit `Culture` aynı dosya adına sahip bir öğe üretecektir. Görev Ayrıca, dosya adından kaldırılan kültür içeren dosya adlarının listesini de oluşturur.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
 Aşağıdaki tabloda `AssignCulture` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -40,9 +42,11 @@ Aşağıdaki tabloda `AssignCulture` görevinin parametreleri açıklanmaktadır
 |`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Bir kültürü atamak için gömülü kültür adlarına sahip dosyaların listesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `AssignCulture` görevini `ResourceFiles` öğesi koleksiyonuyla yürütür.
 
 ```xml
@@ -78,5 +82,6 @@ Aşağıdaki tabloda, görev yürütmeden sonra çıkış öğelerinin değeri a
 |`OutCultureNeutralAssignedFiles`|*MyResource1. resx* (kültür = "fr")<br /><br /> *MyResource2. xx. resx* (ek meta veri yok)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

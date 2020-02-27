@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fbe0dbda58a0c57cacd64c40b66cc640b779bca
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d021bdb485846749ea2c7e9dfe483e09738fda46
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593323"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633999"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath görevi
-[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]yolunu alır.
 
+Windows yazılım geliştirme seti (SDK) yolunu alır.
 ## <a name="task-parameters"></a>Görev parametreleri
+
+Aşağıdaki tabloda `GetFrameworkSdkPath` görevinin parametreleri açıklanmaktadır.
 Aşağıdaki tabloda `GetFrameworkSdkPath` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -39,10 +41,12 @@ Aşağıdaki tabloda `GetFrameworkSdkPath` görevinin parametreleri açıklanmak
 |`Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Herhangi bir sürüm varsa, en son .NET SDK 'nın yolunu içerir. Aksi takdirde `String.Empty`döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
+
 Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `SdkPath` özelliğindeki [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] yolunu depolamak için `GetFrameworkSdkPath` görevini kullanır.
+
+Aşağıdaki örnek, `SdkPath` özelliğindeki Windows SDK yolunu depolamak için `GetFrameworkSdkPath` görevini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -58,5 +62,6 @@ Aşağıdaki örnek, `SdkPath` özelliğindeki [!INCLUDE[winsdkshort](../debugge
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

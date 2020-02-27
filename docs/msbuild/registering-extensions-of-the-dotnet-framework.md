@@ -12,14 +12,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1957bae45504e5654b3ed63c9fa0821a7f4c8758
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e7f79e04cc9afb4238c9f6292a99da684066a7d5
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596768"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632868"
 ---
 # <a name="register-extensions-of-the-net-framework"></a>.NET Framework uzantılarını Kaydet
+
 .NET Framework belirli bir sürümünü genişleten bir derleme geliştirebilirsiniz. Derlemenin Visual Studio **başvuruları Ekle** iletişim kutusunda görünmesini etkinleştirmek için, onu içeren klasörü sistem kayıt defterine eklemeniz gerekir.
 
  Örneğin, Trey Research şirketinin .NET Framework 4 ' ü genişleten bir kitaplık geliştirdiğini ve bir proje .NET Framework 4 ' ü hedeflediğinde **Başvuru Ekle** iletişim kutusunda kitaplık derlemelerinin görünmesini istediğini varsayalım. Ayrıca, derlemelerin 32 bit bilgisayarda çalışan 32 bitlik derlemeler veya bir 64 bit bilgisayarda çalışan 64 bit derlemeler olduğunu ve *C:\TreyResearch\Extensions4\\* klasörüne yükleneceğini varsayın.
@@ -32,4 +33,5 @@ ms.locfileid: "75596768"
  32 bitlik bir derlemeyi 64 bit bilgisayara kaydetmek için Wow6432 düğümünü kullanın, örneğin: **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\** .
 
 ### <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Studio tümleştirmesi](../msbuild/visual-studio-integration-msbuild.md)

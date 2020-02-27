@@ -11,22 +11,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65f0558e26583961d94ce380b59a60ecca45987b
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 0c332fb67e96bdfea0059de11441da7c32871633
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578527"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633570"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>Çok işlemcili bir ortamda oturum açma
+
 MSBuild 'in birden çok işlemciyi kullanma yeteneği, proje derleme süresini büyük ölçüde azaltabilir, ancak günlüğe kaydetmeye karmaşıklık de ekler. Tek işlemcili bir ortamda, günlükçü gelen olayları, iletileri, uyarıları ve hataları öngörülebilir ve sıralı bir şekilde işleyebilir. Ancak, çok işlemcili bir ortamda, çeşitli kaynaklardan gelen olaylar aynı anda veya sıra dışında gelebilir. MSBuild, yeni bir çok işlemcili Günlükçü sağlar ve özel "iletme Günlükçüleri" oluşturmayı sağlar.
 
 ## <a name="log-multiple-processor-builds"></a>Birden çok işlemci derlemelerini günlüğe kaydet
+
 Çok işlemcili veya çok çekirdekli bir sistemde bir veya daha fazla proje oluşturduğunuzda, tüm projeler için MSBuild derleme olayları aynı anda oluşturulur. Olay verilerinin bir Avalanche, günlükçü üzerinde aynı anda veya sıra dışında gelebilir. Bu, günlükçü 'yi açabilir ve derleme sürelerinin artmasına, yanlış günlükçü çıktısına ya da bozuk bir yapıya neden olabilir. Bu sorunları gidermek için, MSBuild günlükçüsü sıra dışı olayları işleyebilir ve olayları ve bunların kaynaklarını ilişkilendirebilir.
 
 Özel bir iletme günlükçüsü oluşturarak günlüğe kaydetme verimliliğini daha da artırabilirsiniz. Özel iletme günlükçüsü, izlemek istediğiniz olayları, yapılandırmadan önce seçmenize izin vererek bir filtre görevi görür. Özel bir iletme günlükçüsü kullandığınızda, istenmeyen olaylar günlükçüyü etkilemez, günlüklerinizi kalabalıklığı veya yavaş derleme süreleriyle başa çıkıyor.
 
 ### <a name="central-logging-model"></a>Merkezi günlük modeli
+
 MSBuild, çok işlemcili yapılar için "Merkezi günlük model" kullanır. Merkezi günlük modelinde, *MSBuild. exe* ' nin bir örneği, birincil derleme işlemi veya "Merkezi düğüm" olarak görev yapar. *MSBuild. exe*' nin veya "ikincil düğümlerin" ikincil örnekleri merkezi düğüme eklenir. Merkezi düğüme bağlı olan tüm ILogger tabanlı Günlükçüler, "Merkezi oturum defterleri" olarak bilinir ve ikincil düğümlere bağlı olan Günlükçüler "ikincil günlüğe kaydetme" olarak bilinir.
 
 Bir derleme gerçekleştiğinde, ikincil Günlükçüler kendi olay trafiğini merkezi günlükçülere yönlendirir. Olaylar birkaç ikincil düğümden kaynaklandığından, veriler merkezi düğüme aynı anda ulaşır ancak araya eklemeli. Olaydan projeye ve olaydan hedefe başvuruları çözümlemek için, olay bağımsız değişkenleri ek derleme olay bağlamı bilgilerini içerir.
@@ -41,6 +44,7 @@ public interface INodeLogger: ILogger
 ```
 
 ### <a name="distributed-logging-model"></a>Dağıtılmış günlük modeli
+
 Merkezi günlük modelinde çok fazla sayıda proje oluşturulduğunda olduğu gibi, çok fazla gelen ileti trafiği, sistemi takip eden ve derleme performansını azaltan merkezi düğümü tahmin edebilir.
 
 Bu sorunu azaltmak için, MSBuild Ayrıca, iletme Günlükçüleri oluşturmanıza izin vererek Merkezi günlük modelini genişleten bir "Dağıtılmış günlük modeli" sağlar. Bir iletme günlükçüsü, ikincil düğüme iliştirilir ve gelen derleme olaylarını bu düğümden alır. İletme günlükçüsü, olayları filtreleyebilmesi ve sonra yalnızca istenen olanları merkezi düğüme iletmesinin dışında normal bir günlükçü gibi olur. Bu, merkezi düğümdeki ileti trafiğini azaltır ve bu nedenle daha iyi performans sunar.
@@ -60,6 +64,7 @@ Bir iletme günlükçüsü içindeki olayları iletmek için <xref:Microsoft.Bui
 Daha fazla bilgi için bkz. [iletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md).
 
 ### <a name="attaching-a-distributed-logger"></a>Dağıtılmış günlükçü iliştirme
+
 Bir komut satırı derlemesinde dağıtılmış bir günlükçü eklemek için `-distributedlogger` (ya da Short için `-dl`) anahtarını kullanın. Günlükçü türleri ve sınıflarının adlarını belirtme biçimi, dağıtılmış bir günlükçü iki günlük sınıfından oluşur: bir iletme günlükçüsü ve bir merkezi günlükçüsü olması dışında `-logger` anahtarıyla aynıdır. Aşağıda, dağıtılmış bir günlükçü ekleme örneği verilmiştir:
 
 ```cmd
@@ -71,5 +76,6 @@ Culture=neutral
 Bir yıldız işareti (*) `-dl` anahtarındaki iki günlükçü adını ayırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Günlükçüler oluşturun](../msbuild/build-loggers.md)
 - [İletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md)

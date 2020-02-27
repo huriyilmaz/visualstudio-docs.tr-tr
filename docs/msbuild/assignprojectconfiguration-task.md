@@ -13,24 +13,26 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95f61858bfcdf0f54c4f786e1b1064707b57c68c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b5159b73058c73c925cae644c2e3ddd2bc84ac41
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593453"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634558"
 ---
 # <a name="assignprojectconfiguration-task"></a>Atama ProjectConfiguration görevi
+
 Bu görev bir liste yapılandırma dizelerini kabul eder ve bunları belirtilen projelere atar.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
  Aşağıdaki tabloda `AssignProjectConfiguration` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`SolutionConfigurationContents`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Her proje için bir proje yapılandırması içeren bir XML dizesi içerir. Yapılandırma, adlandırılmış projelere atanır.|
-|`DefaultToVcxPlatformMapping`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> *. Vcxproj* dosyaları tarafından kullanılan çoğu tür tarafından kullanılan platform adlarından gelen, noktalı virgülle ayrılmış bir eşleşme listesi içerir.<br /><br /> Örneğin:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
-|`VcxToDefaultPlatformMapping`|İsteğe Bağlı<br /><br /> `string` çıktı parametresi.<br /><br /> *. Vcxproj* platform adlarından, çoğu tür tarafından kullanılan platform adlarına yapılan eşlemelerin noktalı virgülle ayrılmış bir listesini içerir.<br /><br /> Örneğin:<br /><br /> `"Win32=AnyCPU;X64=X64"`|
+|`DefaultToVcxPlatformMapping`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> *. Vcxproj* dosyaları tarafından kullanılan çoğu tür tarafından kullanılan platform adlarından gelen, noktalı virgülle ayrılmış bir eşleşme listesi içerir.<br /><br /> Örnek:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
+|`VcxToDefaultPlatformMapping`|İsteğe bağlı<br /><br /> `string` çıktı parametresi.<br /><br /> *. Vcxproj* platform adlarından, çoğu tür tarafından kullanılan platform adlarına yapılan eşlemelerin noktalı virgülle ayrılmış bir listesini içerir.<br /><br /> Örnek:<br /><br /> `"Win32=AnyCPU;X64=X64"`|
 |`CurrentProjectConfiguration`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Geçerli projenin yapılandırmasını içerir.|
 |`CurrentProjectPlatform`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Geçerli projenin platformunu içerir.|
 |`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|İsteğe bağlı `bool` çıkış parametresi.<br /><br /> Başvuruların proje yapılandırmasında devre dışı bırakılmış olsa bile oluşturulması gerektiğini belirten bir bayrak içerir.|
@@ -41,8 +43,10 @@ Bu görev bir liste yapılandırma dizelerini kabul eder ve bunları belirtilen 
 |`UnassignedProjects`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Önceden çözümlenmiş çıkış listesi kullanılarak çözülemeyen proje başvuru öğelerinin listesini içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

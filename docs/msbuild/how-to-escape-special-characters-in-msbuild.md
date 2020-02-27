@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955739372605b9e4f9fe58f73669322e2724de31
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f9958ae93e2605ad3c89decb4ac9fabc18102148
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595013"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633882"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>Nasıl yapılır: MSBuild 'de özel karakterleri kaçış
 
-Belirli karakterlerin [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyalarında özel anlamları vardır. Karakter örnekleri arasında noktalı virgül (`;`) ve yıldız işareti (`*`) bulunur. Bu özel karakterlerin tüm listesi için bkz. [MSBuild özel karakterler](../msbuild/msbuild-special-characters.md).
+Belirli karakterlerin MSBuild proje dosyalarında özel anlamı vardır. Karakter örnekleri arasında noktalı virgül (`;`) ve yıldız işareti (`*`) bulunur. Bu özel karakterlerin tüm listesi için bkz. [MSBuild özel karakterler](../msbuild/msbuild-special-characters.md).
 
 Bu özel karakterleri bir proje dosyasında değişmez değer olarak kullanmak için, `%<xx>`sözdizimi kullanılarak belirtilmelidir; burada `<xx>` karakterin ASCII onaltılık değerini temsil eder.
 
@@ -34,7 +34,7 @@ Bu özel karakterleri bir proje dosyasında değişmez değer olarak kullanmak i
 <Compile Include="MyFile.cs;MyClass.cs"/>
 ```
 
-Adında noktalı virgül içeren bir öğe bildirmek istiyorsanız, noktalı virgülden çıkmak ve [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] iki ayrı öğe bildirmesinin önlenmesi için `%<xx>` sözdizimini kullanmanız gerekir. Örneğin, aşağıdaki öğe noktalı virgülden çıkar ve `MyFile.cs;MyClass.cs`adlı bir öğe bildirir.
+Adında noktalı virgül içeren bir öğe bildirmek istiyorsanız, noktalı virgülden çıkmak ve MSBuild 'in iki ayrı öğeyi bildirmesinin önüne geçmek için `%<xx>` sözdizimini kullanmanız gerekir. Örneğin, aşağıdaki öğe noktalı virgülden çıkar ve `MyFile.cs;MyClass.cs`adlı bir öğe bildirir.
 
 ```xml
 <Compile Include="MyFile.cs%3BMyClass.cs"/>

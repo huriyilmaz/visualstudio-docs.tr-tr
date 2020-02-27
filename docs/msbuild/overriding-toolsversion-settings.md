@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1706d0e82139da5962fbb43610cdecd6b1477ad1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 13c33f0ef43707390aa32d4c26c0380a8a32883e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590494"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633024"
 ---
 # <a name="override-toolsversion-settings"></a>Araçları sürüm ayarlarını geçersiz kıl
+
 Proje ve çözümlerin araç takımını üç şekilde değiştirebilirsiniz:
 
 1. Komut satırından proje veya çözüm oluştururken `-ToolsVersion` anahtarını (veya Short için `-tv`) kullanarak.
@@ -28,7 +29,8 @@ Proje ve çözümlerin araç takımını üç şekilde değiştirebilirsiniz:
 3. Çözüm içindeki bir projede `$(ProjectToolsVersion)` özelliğini ayarlayarak. Bu, diğer projelerden farklı bir araç takımı sürümüne sahip bir çözümde proje oluşturmanıza olanak sağlar.
 
 ## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>Komut satırı derlemelerindeki projelerin ve çözümlerin araçları sürüm ayarlarını geçersiz kılın
- Visual Studio projeleri genellikle proje dosyasında belirtilen bir araçları sürümü ile derlense de, bu değeri geçersiz kılmak ve projeleri ve proje-proje bağımlılıklarını farklı bir araç kümesiyle oluşturmak için komut satırında `-ToolsVersion` (veya `-tv`) anahtarını kullanabilirsiniz. Örneğin:
+
+ Visual Studio projeleri genellikle proje dosyasında belirtilen bir araçları sürümü ile derlense de, bu değeri geçersiz kılmak ve projeleri ve proje-proje bağımlılıklarını farklı bir araç kümesiyle oluşturmak için komut satırında `-ToolsVersion` (veya `-tv`) anahtarını kullanabilirsiniz. Örnek:
 
 ```cmd
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
@@ -39,6 +41,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
  Komut satırında `-tv` anahtarını kullanırken, isteğe bağlı `$(ProjectToolsVersion)` olarak, çözümdeki diğer projelerden farklı bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir bir araçları sürümü değeri ile oluşturmak için
 
 ## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>MSBuild görevinin araçları sürümü parametresini kullanarak, araçları sürüm ayarlarını geçersiz kılın
+
  MSBuild görevi, bir projenin başka bir proje oluşturması için birincil anlamına gelir. MSBuild görevini, projede belirtilenden farklı bir araçları sürümüne sahip bir proje oluşturmak üzere etkinleştirmek için, `ToolsVersion`adlı isteğe bağlı bir görev parametresi sağlar. Aşağıdaki örnek, bu parametrenin nasıl kullanılacağını gösterir:
 
 1. *ProjectA. proj* adlı ve aşağıdaki kodu içeren bir dosya oluşturun:
@@ -95,6 +98,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     ```
 
 ## <a name="order-of-precedence"></a>Öncelik sırası
+
  `ToolsVersion` belirlenmesi için kullanılan en yüksekten en düşüğe öncelik sırası:
 
 1. MSBuild görevinde, varsa, projeyi oluşturmak için kullanılan `ToolsVersion` özniteliği.
@@ -124,6 +128,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     4. Aksi takdirde, geçerli `ToolsVersion`kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [Araç Takımı (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)

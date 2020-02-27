@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1057743732c8dfc7ebb05bc9cbc108d61b2e234c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 94f2d88aa19bf01ebe6f25c7d80772c812abcc59
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597418"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632972"
 ---
 # <a name="projectextensions-element-msbuild"></a>Projecısions öğesi (MSBuild)
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyalarının[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] olmayan bilgiler içermesini sağlar. `ProjectExtensions` öğesinin içindeki her şey [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]tarafından yok sayılır.
+
+MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. `ProjectExtensions` öğesi içindeki her şey MSBuild tarafından yok sayılacak.
 
  \<Proje > \<Projecbir >
 
@@ -39,24 +40,29 @@ ms.locfileid: "75597418"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
- Yok.
+### <a name="attributes"></a>Öznitelikler
+
+ None
 
 ### <a name="child-elements"></a>Alt öğeleri
- Yok.
+
+ None
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
- Bir [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesinde yalnızca bir `ProjectExtensions` öğesi kullanılabilir.
+
+ MSBuild projesinde yalnızca bir `ProjectExtensions` öğesi kullanılabilir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, bir `ProjectExtensions` öğesinde depolanan tümleşik geliştirme ortamının bilgilerini gösterir.
 
 ```xml
@@ -72,5 +78,6 @@ ms.locfileid: "75597418"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

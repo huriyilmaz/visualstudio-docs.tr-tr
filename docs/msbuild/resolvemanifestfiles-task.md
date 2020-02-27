@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ebbc2a036700c26ccd6ca3bec7b235722432e9f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2628f06ac4eafc7d57123460771793005597b039
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595182"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632699"
 ---
 # <a name="resolvemanifestfiles-task"></a>ResolveManifestFiles görevi
+
 Derleme işlemindeki aşağıdaki öğeleri bildirim oluşturma için dosyalara çözümler: oluşturulan öğeler, bağımlılıklar, uydu, içerik, hata ayıklama sembolleri ve belgeler.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `ResolveManifestFiles` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -47,8 +49,10 @@ Derleme işlemindeki aşağıdaki öğeleri bildirim oluşturma için dosyalara 
 |`TargetFrameworkVersion`|İsteğe bağlı `String` parametresi.<br /><br /> Hedef .NET Framework sürümünü belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76596d752ae2e552088fff607142abb215e9147b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fef5a84285afdaa429606937f3e537863b060ec8
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595078"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632167"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>Standart ve özel araç takımı yapılandırması
+
 MSBuild Araç Takımı, bir uygulama projesi oluşturmak için kullanabileceğiniz görevlere, hedeflere ve araçlara yönelik başvurular içerir. MSBuild standart bir araç takımı içerir, ancak özel araç kümeleri de oluşturabilirsiniz. Araç takımını belirtme hakkında daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md)
 
 ## <a name="standard-toolset-configurations"></a>Standart araç takımı yapılandırması
@@ -29,7 +30,7 @@ MSBuild Araç Takımı, bir uygulama projesi oluşturmak için kullanabileceğin
 |ToolsVersion|Araç takımı yolu (Msbuildaraçları yolu veya MSBuildBinPath derleme özelliğinde belirtilen şekilde)|
 |------------------| - |
 |2,0|*\<Windows yükleme yolu > \Microsoft.Net\Framework\v2.0.50727\\*|
-|3.5|*\<Windows yükleme yolu > \Microsoft.NET\Framework\v3.5\\*|
+|3,5|*\<Windows yükleme yolu > \Microsoft.NET\Framework\v3.5\\*|
 |4.0|*\<Windows yükleme yolu > \Microsoft.NET\Framework\v4.0.30319\\*|
 |Geçerli|*\<Visual Studio yükleme yolu > \MSBuild\Current\bin*|
 
@@ -43,7 +44,7 @@ MSBuild Araç Takımı, bir uygulama projesi oluşturmak için kullanabileceğin
 |ToolsVersion|Araç takımı yolu (Msbuildaraçları yolu veya MSBuildBinPath derleme özelliğinde belirtilen şekilde)|
 |------------------| - |
 |2,0|*\<Windows yükleme yolu > \Microsoft.Net\Framework\v2.0.50727\\*|
-|3.5|*\<Windows yükleme yolu > \Microsoft.NET\Framework\v3.5\\*|
+|3,5|*\<Windows yükleme yolu > \Microsoft.NET\Framework\v3.5\\*|
 |4.0|*\<Windows yükleme yolu > \Microsoft.NET\Framework\v4.0.30319\\*|
 |15,0|*\<Visual Studio yükleme yolu > \MSBuild\15.0\bin*|
 
@@ -59,6 +60,7 @@ Visual Studio 2017 ve sonraki sürümleri, MSBuild yolu için bir kayıt defteri
 |**\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\ Msbuild\tools\versions\4.0\\** |**Msbuildaraçları yolu**|**.NET Framework 4 yüklemesi yolu**|
 
 ### <a name="sub-toolsets"></a>Alt araç kümeleri
+
  Önceki tablodaki kayıt defteri anahtarının bir alt anahtarı varsa, MSBuild bunu üst araç takımından yolu geçersiz kılan bir alt araç takımının yolunu belirlemede kullanır. Aşağıdaki alt anahtar bir örnektir:
 
  **\ HKEY_LOCAL_MACHINE \Software\microsoft\msbuild\tools\versions\12.0\12.0**
@@ -71,7 +73,8 @@ Visual Studio 2017 ve sonraki sürümleri, MSBuild yolu için bir kayıt defteri
 > Bu ayarları değiştirmekten kaçınmanızı öneririz. Bununla birlikte, sonraki bölümde açıklandığı gibi kendi ayarlarınızı ekleyebilir ve bilgisayar genelindeki özel araç takımı tanımlarını tanımlayabilirsiniz.
 
 ## <a name="custom-toolset-definitions"></a>Özel araç takımı tanımları
- Standart bir araç takımı derleme gereksinimlerinizi yerine getirmiyorsa, özel bir araç takımı oluşturabilirsiniz. Örneğin, [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projeleri oluşturmak için ayrı bir sisteme sahip olmanız gereken bir derleme Laboratuvarı senaryonuz olabilir. Özel bir araç kümesi kullanarak, proje oluştururken veya *MSBuild. exe*' yi çalıştırdığınızda `ToolsVersion` özniteliğine özel değerler atayabilirsiniz. Bunu yaparak, bu dizindeki *. targets* dosyalarını içeri aktarmak için `$(MSBuildToolsPath)` özelliğini ve bu araç takımını kullanan herhangi bir proje için kullanılabilecek kendi özel araç takımı özelliklerinizi tanımlamayı de kullanabilirsiniz.
+
+ Standart bir araç takımı derleme gereksinimlerinizi yerine getirmiyorsa, özel bir araç takımı oluşturabilirsiniz. Örneğin, proje derlemek C++ için ayrı bir sisteme sahip olmanız gereken bir derleme Laboratuvarı senaryonuz olabilir. Özel bir araç kümesi kullanarak, proje oluştururken veya *MSBuild. exe*' yi çalıştırdığınızda `ToolsVersion` özniteliğine özel değerler atayabilirsiniz. Bunu yaparak, bu dizindeki *. targets* dosyalarını içeri aktarmak için `$(MSBuildToolsPath)` özelliğini ve bu araç takımını kullanan herhangi bir proje için kullanılabilecek kendi özel araç takımı özelliklerinizi tanımlamayı de kullanabilirsiniz.
 
  *MSBuild. exe* için yapılandırma dosyasında özel bir araç kümesi belirtin (veya kullanıyorsanız, MSBuild altyapısını barındıran özel araç için). Örneğin, *MSBuild. exe* için yapılandırma dosyası, *mycustomaraç*kümesi adlı bir araç takımını tanımlamak üzere kullandıysanız aşağıdaki araç kümesi tanımını içerebilir.
 
@@ -99,7 +102,7 @@ Visual Studio 2017 ve sonraki sürümleri, MSBuild yolu için bir kayıt defteri
 > [!NOTE]
 > Doğru okunalmak için, `<configuration>` bölümündeki ilk alt bölüm olmalıdır `<configSections>`.
 
- `ToolsetConfigurationSection`, özel yapılandırma için herhangi bir MSBuild ana bilgisayarı tarafından kullanılabilen özel bir yapılandırma bölümüdür. Özel bir araç kümesi kullanıyorsanız, yapılandırma dosyası girdilerini sağlama dışında bir konağın derleme altyapısını başlatmak için bir şey yapması gerekmez. Kayıt defterindeki girişleri tanımlayarak, *MSBuild. exe*, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ve MSBuild 'in tüm konakları için geçerli olan bilgisayar genelindeki araç kümelerini belirtebilirsiniz.
+ `ToolsetConfigurationSection`, özel yapılandırma için herhangi bir MSBuild ana bilgisayarı tarafından kullanılabilen özel bir yapılandırma bölümüdür. Özel bir araç kümesi kullanıyorsanız, yapılandırma dosyası girdilerini sağlama dışında bir konağın derleme altyapısını başlatmak için bir şey yapması gerekmez. Kayıt defterindeki girişleri tanımlayarak, *MSBuild. exe*, Visual Studio ve MSBuild 'in tüm konakları için geçerli olan bilgisayar genelindeki araç kümelerini belirtebilirsiniz.
 
 > [!NOTE]
 > Bir yapılandırma dosyası, kayıt defterinde zaten tanımlanmış olan bir `ToolsVersion` ayarlarını tanımlıyorsa, iki tanım birleştirilmez. Yapılandırma dosyasındaki tanım önceliklidir ve bu `ToolsVersion` kayıt defterindeki ayarlar yoksayılır.
@@ -113,4 +116,5 @@ Visual Studio 2017 ve sonraki sürümleri, MSBuild yolu için bir kayıt defteri
   Ayrıca, Msbuildaraçları Path özelliğini eklemek için kullandığınız söz dizimini kullanarak yapılandırma dosyasına özel, araçları sürümüne özel özellikler ekleyebilirsiniz. Bu özel özellikleri proje dosyası için kullanılabilir hale getirmek için, yapılandırma dosyasında belirtilen değerin adı ile aynı adı kullanın. Yapılandırma dosyasında araç kümelerini tanımlayabilir, ancak alt araç kümelerini tanımlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Araç Takımı (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)

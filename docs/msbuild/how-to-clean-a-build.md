@@ -13,26 +13,28 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d183026ffdfce3ada7fc96c29c83570ee18c694
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6b7848189c866481e6e97d05d95b5fb97a3d4893
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585225"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633921"
 ---
 # <a name="how-to-clean-a-build"></a>Nasıl yapılır: derlemeyi Temizleme
-Bir derlemeyi temizlediğinizde, tüm ara ve çıkış dosyaları silinir ve yalnızca proje ve bileşen dosyalarından bırakılır. Proje ve bileşen dosyalarından, ara ve çıkış dosyalarının yeni örnekleri derlenebilir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ile birlikte sunulan ortak görevlerin kitaplığı, sistem komutlarını çalıştırmak için kullanabileceğiniz bir [Exec](../msbuild/exec-task.md) görevi içerir. Görevler Kitaplığı hakkında daha fazla bilgi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
+
+Bir derlemeyi temizlediğinizde, tüm ara ve çıkış dosyaları silinir ve yalnızca proje ve bileşen dosyalarından bırakılır. Proje ve bileşen dosyalarından, ara ve çıkış dosyalarının yeni örnekleri derlenebilir. 
 
 ## <a name="create-a-directory-for-output-items"></a>Çıkış öğeleri için dizin oluşturma
+
  Varsayılan olarak, bir projeyi derlerken oluşturulan *. exe* dosyası proje ve kaynak dosyalarla aynı dizine yerleştirilir. Ancak, genellikle çıkış öğeleri ayrı bir dizinde oluşturulur.
 
-#### <a name="to-create-a-directory-for-output-items"></a>Çıkış öğeleri için bir dizin oluşturmak için
+### <a name="to-create-a-directory-for-output-items"></a>Çıkış öğeleri için bir dizin oluşturmak için
 
 1. Dizinin konumunu ve adını tanımlamak için `Property` öğesini kullanın. Örneğin, proje ve kaynak dosyalarını içeren dizinde *Builtapp* adlı bir dizin oluşturun:
 
      `<builtdir>BuiltApp</builtdir>`
 
-2. Dizin yoksa, dizini oluşturmak için [MakeDir](../msbuild/makedir-task.md) görevini kullanın. Örneğin:
+2. Dizin yoksa, dizini oluşturmak için [MakeDir](../msbuild/makedir-task.md) görevini kullanın. Örnek:
 
      ```xml
      <MakeDir Directories = "$(builtdir)"
@@ -40,18 +42,20 @@ Bir derlemeyi temizlediğinizde, tüm ara ve çıkış dosyaları silinir ve yal
      ```
 
 ## <a name="remove-the-output-items"></a>Çıkış öğelerini kaldır
+
  Ara ve çıkış dosyalarının yeni örnekleri oluşturmadan önce, ara ve çıkış dosyalarının önceki tüm örneklerini temizlemek isteyebilirsiniz. Bir dizin ve bir diskten içerdiği tüm dosya ve dizinleri silmek için [RemoveDir](../msbuild/removedir-task.md) görevini kullanın.
 
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Dizinde bulunan bir dizini ve tüm dosyaları kaldırmak için
 
-- Dizini kaldırmak için `RemoveDir` görevini kullanın. Örneğin:
+- Dizini kaldırmak için `RemoveDir` görevini kullanın. Örnek:
 
      `<RemoveDir Directories="$(builtdir)" />`
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği projesi, bir dizini ve içerdiği tüm dosya ve dizinleri silmek için `RemoveDir` görevi kullanan yeni bir hedef `Clean`içerir. Ayrıca, bu örnekte `Compile` hedefi, derleme temizlendiğinde silinen çıkış öğeleri için ayrı bir dizin oluşturur.
 
- `Compile`, varsayılan hedef olarak tanımlanır ve bu nedenle farklı bir hedef veya hedef belirtmediğiniz sürece otomatik olarak kullanılır. Farklı bir hedef belirtmek için komut satırı anahtar **hedefini** kullanırsınız. Örneğin:
+ `Compile`, varsayılan hedef olarak tanımlanır ve bu nedenle farklı bir hedef veya hedef belirtmediğiniz sürece otomatik olarak kullanılır. Farklı bir hedef belirtmek için komut satırı anahtar **hedefini** kullanırsınız. Örnek:
 
  `msbuild <file name>.proj -target:Clean`
 
@@ -100,7 +104,7 @@ Bir derlemeyi temizlediğinizde, tüm ara ve çıkış dosyaları silinir ve yal
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Exec görevi](../msbuild/exec-task.md)
+
 - [MakeDir görevi](../msbuild/makedir-task.md)
 - [RemoveDir Görevi](../msbuild/removedir-task.md)
 - [Csc görevi](../msbuild/csc-task.md)

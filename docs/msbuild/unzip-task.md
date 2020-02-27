@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3b02108e2ee47a31ced196643bf917b3b63c1c6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d331fda05e8655be0536a1e83d8309ae8c060b1f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594909"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631516"
 ---
 # <a name="unzip-task"></a>Sıkıştırılmış görev
+
 Belirtilen konuma bir *. zip* arşivi olarak UnZIP.
 
 >[!NOTE]
 >`Unzip` görevi yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `Unzip` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -46,9 +48,11 @@ Belirtilen konuma bir *. zip* arşivi olarak UnZIP.
 |`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Sıkıştırmayı açmak için bir veya daha fazla dosyayı belirtir. Birden çok dosya belirtirken aynı klasöre göre sıkıştırıldı.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, bir arşivi kaldırır ve salt okunurdur dosyanın üzerine yazar.
 
 ```xml
@@ -66,5 +70,6 @@ Belirtilen konuma bir *. zip* arşivi olarak UnZIP.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 215092d7fbcee8ec30210dd8332bc6ae5b7ad412
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 25e410ba3122e0065f92186195ee5a82d6a55c2f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578284"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631348"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest görevi
+
 Bir bildirimde seçili özellikleri güncelleştirir ve yeniden imzalar.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `UpdateManifest` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -37,8 +39,10 @@ Bir bildirimde seçili özellikleri güncelleştirir ve yeniden imzalar.
 |`OutputManifest`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Güncelleştirilmiş özellikleri içeren bildirimi belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Tabloda listelenen parametrelere ek olarak, bu görev <xref:Microsoft.Build.Utilities.Task> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [görev temel sınıfı](../msbuild/task-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

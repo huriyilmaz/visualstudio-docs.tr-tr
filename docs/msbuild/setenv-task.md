@@ -19,26 +19,29 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59523e3f6b12eb5921235efcf15d7937a14e7247
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c5df538e7eb86a20dfc06e6e6558bded577ba3d2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595104"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632387"
 ---
 # <a name="setenv-task"></a>SetEnv Görevi
+
 Belirtilen ortam değişkeninin değerini ayarlar veya siler.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda **SetEnv** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**Ad**|Gerekli **dize** parametresi.<br /><br /> Ortam değişkeninin adı.|
+|**Adı**|Gerekli **dize** parametresi.<br /><br /> Ortam değişkeninin adı.|
 |**OutputEnvironmentVariable**|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> **Ad** parametresiyle belirtilen ortam değişkenine atanan değeri içerir.|
 |**Koy**|Zorunlu `Boolean` parametresi.<br /><br /> `true`, **değer** parametresinin değerini, **ad** parametresiyle belirtilen ortam değişkeni değerinden önce birleştirir ve sonra sonucu ortam değişkenine atar. `false`, ortam değişkenine yalnızca **Value** parametresinin değerini atar.|
 |**Hedef**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir ortam değişkeninin depolandığı konumu belirtir. "Kullanıcı" veya "makine" belirtin.<br /><br /> Daha fazla bilgi için bkz. [EnvironmentVariableTarget numaralandırması](xref:System.EnvironmentVariableTarget).|
 |**Değer**|İsteğe bağlı **dize** parametresi.<br /><br /> **Name** parametresiyle belirtilen ortam değişkenine atanan değer. **Değer** boşsa ve değişken varsa, değişken silinir. Değişken yoksa, işlem gerçekleştirilemediği halde bir hata oluşmaz.<br /><br /> Daha fazla bilgi için bkz. [Environment:: SetEnvironmentVariable yöntemi](xref:System.Environment.SetEnvironmentVariable%2A).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e37c57119f74b9ab5f3157c6b88f9405799a2e82
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 32ce6fcad3897443f178c45d84e16f4cff44ab03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596105"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634389"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath görevi
+
 Göreli yolu veya başvuruyu mutlak bir yola dönüştürür.
 
 ## <a name="task-parameters"></a>Görev parametreleri
+
  Aşağıdaki tabloda `ConvertToAbsolutePath` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -37,8 +39,10 @@ Göreli yolu veya başvuruyu mutlak bir yola dönüştürür.
 |`AbsolutePaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Geçirilen öğeler için mutlak yolların listesi.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -19,27 +19,31 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66b1bf1eb222d70c18bfb94c65dddd2903864c68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a2247240ae0992c8275520ec5d7bf94d98ae1053
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591118"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631217"
 ---
 # <a name="vcmessage-task"></a>VCMessage görevi
+
 Bir derleme sırasında uyarı ve hata iletilerini günlüğe kaydeder.
 
 ## <a name="remarks"></a>Açıklamalar
+
  Bu görev, projeler için C++ MSBuild uygulamaya yardımcı olur ve Kullanıcı tarafından çağrılması amaçlanmamıştır. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda **VCMessage** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |**Bağımsız Değişkenler**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek iletilerin noktalı virgülle ayrılmış listesi.|
 |**Kod**|Gerekli **dize** parametresi.<br /><br /> İletiyi niteleyen bir hata numarası.|
-|**Türü**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek ileti türünü belirtir. Bir uyarı iletisi oluşturmak için "uyarı" ya da bir hata iletisi oluşturmak için "hata" belirtin.|
+|**Tür**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek ileti türünü belirtir. Bir uyarı iletisi oluşturmak için "uyarı" ya da bir hata iletisi oluşturmak için "hata" belirtin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5bfe09fec169495afa5b58a41f7c9f1b9bacfad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573475"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633635"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup öğesi (MSBuild)
+
 `ItemDefinitionGroup` öğesi, varsayılan olarak, projedeki tüm öğelere uygulanan meta veri değerleri olan öğe tanımları kümesini tanımlamanızı sağlar. ItemDefinitionGroup, [CreateItem görevi](../msbuild/createitem-task.md) ve [CreateProperty görevini](../msbuild/createproperty-task.md)kullanma ihtiyacını ortadan ortadan alır. Daha fazla bilgi için bkz. [öğe tanımları](../msbuild/item-definitions.md).
 
 \<Proje > \<ItemDefinitionGroup >
@@ -40,9 +41,10 @@ ms.locfileid: "75573475"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
 Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -52,15 +54,16 @@ ms.locfileid: "75573475"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Öğesi](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlar. Bir `ItemDefinitionGroup`sıfır veya daha fazla `Item` öğe olabilir.|
+|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlar. Bir `ItemDefinitionGroup`sıfır veya daha fazla `Item` öğe olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyasının gerekli kök öğesi. |
+| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki kod örneği, bir ItemDefinitionGroup içinde, k ve n olmak üzere iki meta veri öğesi tanımlar. Bu örnekte, "m" meta verileri "i" öğesi tarafından açıkça tanımlanmadığından "m" varsayılan meta verileri "i" öğesine uygulanır. Ancak, "n" meta verileri "i" öğesi tarafından zaten tanımlandığından "i" varsayılan meta verileri "i" öğesine uygulanmıyor.
 
 ```xml
@@ -82,5 +85,6 @@ Aşağıdaki kod örneği, bir ItemDefinitionGroup içinde, k ve n olmak üzere 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)

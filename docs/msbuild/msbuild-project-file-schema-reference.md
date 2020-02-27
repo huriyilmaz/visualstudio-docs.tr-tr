@@ -15,24 +15,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4a0ef3fc6fe446ccda5479c95301d71efa84be4
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 4f8a59349540492cd441f1eb3fa63ed520c0e8cd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77557809"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633284"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild proje dosyası şema başvurusu
 
-Tüm [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML şema öğelerinin kullanılabilir özniteliklerini ve alt öğelerini içeren bir tablo sağlar.
+Tüm MSBuild XML şema öğelerinin kullanılabilir özniteliklerini ve alt öğelerini içeren bir tablo sağlar.
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], derleme altyapısına ne tür derlemeyi ve nasıl oluşturulacağını bildirmek için proje dosyalarını kullanır. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje dosyaları, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML şemasına bağlı olan XML dosyalarıdır. Bu bölüm [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]için XML şema tanımı (*. xsd*) dosyasını belgeler.
+ MSBuild, derleme altyapısına ne tür derlemeyi ve nasıl oluşturulacağını bildirmek için proje dosyalarını kullanır. MSBuild proje dosyaları, MSBuild XML şemasına bağlı XML dosyalarıdır. Bu bölüm, MSBuild için XML şema tanımı ( *. xsd*) dosyasını belgeler.
 
 MSBuild proje dosyasındaki şema bağlantısı Visual Studio 2017 ve üzeri sürümlerde gerekli değildir. Varsa, Visual Studio 'nun sürümünden bağımsız olarak ` http://schemas.microsoft.com/developer/msbuild/2003` olmalıdır.
 
 ## <a name="msbuild-xml-schema-elements"></a>MSBuild XML şema öğeleri
 
- Aşağıdaki tabloda, tüm [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML şema öğeleri alt öğeleri ve öznitelikleriyle birlikte listelenmektedir.
+ Aşağıdaki tabloda, tüm MSBuild XML şeması öğeleri alt öğeleri ve öznitelikleriyle birlikte listelenmektedir.
 
 |Öğe|Alt öğeleri|Öznitelikler|
 |-------------|--------------------|----------------|

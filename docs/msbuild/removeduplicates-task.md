@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 235f96b3d67b0ad2e3c3bd1c486c5c9f2eeb86c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596014"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632790"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates görevi
+
 Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `RemoveDuplicates` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -37,11 +39,13 @@ Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.
 |`Inputs`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Yinelenen öğelerin kaldırılacağı öğe koleksiyonu.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Bu görev, büyük/küçük harfe duyarlıdır ve yinelenenleri belirlerken öğe meta verilerini karşılaştırmaz.
 
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, `MyItems` öğesi koleksiyonundan yinelenen öğeleri kaldırmak için `RemoveDuplicates` görevini kullanır. Görev tamamlandığında `FilteredItems` öğesi koleksiyonu bir öğe içerir.
 
 ```xml
@@ -90,6 +94,7 @@ Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 686640cbe3c93cbe3d938cd3025a77129c829bd7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d1b17ded468e262d4f636ed5494081adab7b8c5f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595117"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632257"
 ---
 # <a name="special-characters-to-escape"></a>Kaçış için özel karakterler
+
 Özel karakterler yalnızca kullanıldıkları bağlamda özel anlam içeriyorsa kaçışmalıdır. Örneğin, yıldız işareti (*) yalnızca bir öğe tanımının "Içerme" ve "hariç tutma" özniteliklerinde veya <xref:Microsoft.Build.Tasks.CreateItem>çağrısında özel bir karakterdir. Diğer tüm durumlarda, yıldız işareti sabit bir yıldız işareti olarak değerlendirilir. Proje dosyalarında herhangi bir yerde yıldız işaretleri gerekmez, ancak bunu yapmak zarar vermez.
 
  Özel karakterin yerine%\<xx > gösterimini kullanın; burada \<xx >, ASCII karakterinin onaltılı değerini temsil eder. Örneğin, bir yıldız işareti (*) sabit karakter olarak kullanmak için `%2A`değerini kullanın.
@@ -45,5 +46,6 @@ ms.locfileid: "75595117"
 > Bazı senaryolarda, `Exec` bir görevde kullanırken olduğu gibi çift tırnak (") karakterlerini kaçış gerekebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: MSBuild 'de özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

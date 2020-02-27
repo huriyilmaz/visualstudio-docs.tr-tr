@@ -12,20 +12,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 013cf211fe9fdfb8fef07c5ac757fa5f4b35a521
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 83a5d0c9dec280633d0a39573581c083e6ddd4d8
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75577284"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633674"
 ---
 # <a name="item-metadata-in-target-batching"></a>Hedef toplu işleme içindeki öğe meta verileri
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], bir derleme hedefinin giriş ve çıkışları üzerinde bağımlılık Analizi gerçekleştirme yeteneğine sahiptir. Hedefin giriş veya çıkış çıkışları güncel olduğunu tespit ederseniz, hedef atlanır ve derleme devam eder. `Target` öğeleri, bağımlılık analizi sırasında incelenecek öğeleri belirtmek için `Inputs` ve `Outputs` özniteliklerini kullanır.
 
-Bir hedef, giriş veya çıkış olarak toplanmış öğeleri kullanan bir görev içeriyorsa, hedefin `Target` öğesi, zaten güncel olan öğelerin toplu işlerini atlayıp [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] etkinleştirmek için `Inputs` veya `Outputs` özniteliklerinde toplu işlem kullanmalıdır.
+MSBuild, bir derleme hedefinin giriş ve çıkışları üzerinde bağımlılık Analizi gerçekleştirme yeteneğine sahiptir. Hedefin giriş veya çıkış çıkışları güncel olduğunu tespit ederseniz, hedef atlanır ve derleme devam eder. `Target` öğeleri, bağımlılık analizi sırasında incelenecek öğeleri belirtmek için `Inputs` ve `Outputs` özniteliklerini kullanır.
+
+Bir hedef, giriş veya çıkış olarak toplanmış öğeleri kullanan bir görev içeriyorsa, hedefin `Target` öğesi, zaten güncel olan öğelerin toplu işlerini atlamak için MSBuild 'i etkinleştirmek üzere `Inputs` veya `Outputs` özniteliklerinde toplu işlem kullanmalıdır.
 
 ## <a name="batch-targets"></a>Toplu iş hedefleri
-Aşağıdaki örnek, `Culture` öğesi meta verilerine bağlı olarak iki toplu iş içine bölünen `Res` adlı bir öğe listesi içerir. Bu toplu işlerin her biri, her toplu iş için bir çıkış derlemesi oluşturan `AL` görevine geçirilir. `Target` öğesinin `Outputs` özniteliğinde toplu işlem kullandığınızda [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], hedefi çalıştırmadan önce her bir toplu iş öğesinin güncel olup olmadığını belirleyebilir. Hedef toplu işlem kullanılmadan, her iki öğe de hedef her yürütüldüğünde görev tarafından çalıştırılır.
+
+Aşağıdaki örnek, `Culture` öğesi meta verilerine bağlı olarak iki toplu iş içine bölünen `Res` adlı bir öğe listesi içerir. Bu toplu işlerin her biri, her toplu iş için bir çıkış derlemesi oluşturan `AL` görevine geçirilir. `Target` öğesinin `Outputs` özniteliğinde toplu işlem kullanarak, MSBuild, hedefi çalıştırmadan önce her bir toplu iş öğesinin güncel olup olmadığını belirleyebilir. Hedef toplu işlem kullanılmadan, her iki öğe de hedef her yürütüldüğünde görev tarafından çalıştırılır.
 
 ```xml
 <Project
@@ -66,7 +68,8 @@ Aşağıdaki örnek, `Culture` öğesi meta verilerine bağlı olarak iki toplu 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: Artımlı derleme](../msbuild/how-to-build-incrementally.md)
-- [Toplu İşleme](../msbuild/msbuild-batching.md)
+- [İşlem grubu oluşturma](../msbuild/msbuild-batching.md)
 - [Target öğesi (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Görev toplu işlem içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md)

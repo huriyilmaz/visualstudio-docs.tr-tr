@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b9c32681af56595f8b00feab4979a3ec45f1588
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: e84007c9a10618c6d757a36debe58c272302fa3e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578697"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634038"
 ---
 # <a name="generatetrustinfo-task"></a>GenerateTrustInfo görevi
+
 Temel bildirimden ve `TargetZone` ve `ExcludedPermissions` parametrelerinden uygulama güvenini oluşturur.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `GenerateTrustInfo` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -38,8 +40,10 @@ Temel bildirimden ve `TargetZone` ve `ExcludedPermissions` parametrelerinden uyg
 |`TrustInfoFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> çıktı parametresi.<br /><br /> Uygulama güvenlik güveni bilgilerini içeren dosyayı belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

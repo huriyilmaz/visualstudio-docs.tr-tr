@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42fcd289f5258fde7ae8f17a9e19a25427fe6885
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: b79bd8eb3f7d813e3acd091ce5f2ffbc7b3eeb49
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278347"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632764"
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference görevi
+
 İkinci ve `n`TH bağımlılıkları dahil olmak üzere belirtilen derlemelere bağlı tüm derlemeleri belirler.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `ResolveAssemblyReference` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -78,6 +80,7 @@ ms.locfileid: "77278347"
 |`TargetProcessorArchitecture`|İsteğe bağlı `String` parametresi.<br /><br /> Tercih edilen hedef işlemci mimarisi. Genel bütünleştirilmiş kod önbelleği (GAC) başvurularını çözümlemek için kullanılır.<br /><br /> Bu parametre `x86`, `IA64`veya `AMD64`değerine sahip olabilir.<br /><br /> Bu parametre yoksa, görev önce çalışmakta olan işlemin mimarisiyle eşleşen derlemeleri kabul eder. Hiçbir derleme bulunamazsa, görev GAC 'de `MSIL` `ProcessorArchitecture` veya `ProcessorArchitecture` değeri olmayan derlemeleri kabul eder.|
 
 ## <a name="warnings"></a>Uyarılar
+
  Aşağıdaki uyarılar günlüğe kaydedilir:
 
 - `ResolveAssemblyReference.TurnOnAutoGenerateBindingRedirects`
@@ -101,8 +104,10 @@ ms.locfileid: "77278347"
 - `ResolveAssemblyReference.UnificationByFrameworkRetarget`
 
 ## <a name="remarks"></a>Açıklamalar
+
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

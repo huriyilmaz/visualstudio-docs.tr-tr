@@ -8,20 +8,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f8f1bc76789ef80c1138efb94bda42442702c05
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe2955feb50a28e5ba631cdeddd169973a42ed25
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596352"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633895"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Nasıl yapılır: hedefleri ve görevleri yapılandırma
+
+Seçilen MSBuild görevleri, geliştirme bilgisayarının ortamından bağımsız olarak, hedefdukları ortamda çalışmak üzere ayarlanabilir. Örneğin, 32 bit mimarisini hedefleyen bir uygulama oluşturmak için 64 bitlik bir bilgisayar kullandığınızda, seçilen görevler 32-bit işlemde çalıştırılır.
 Seçilen MSBuild görevleri, geliştirme bilgisayarının ortamından bağımsız olarak, hedefdukları ortamda çalışmak üzere ayarlanabilir. Örneğin, 32 bit mimarisini hedefleyen bir uygulama oluşturmak için 64 bitlik bir bilgisayar kullandığınızda, seçilen görevler 32-bit işlemde çalıştırılır.
 
 > [!NOTE]
 > Bir derleme görevi görsel C# veya Visual Basic gibi bir .net dilinde yazılmışsa ve yerel kaynakları veya araçları kullanmıyorsa, bu durumda herhangi bir hedef bağlamda uyarlama olmadan çalıştırılır.
 
 ## <a name="usingtask-attributes-and-task-parameters"></a>Görev özniteliklerini ve görev parametrelerini using
+
 Aşağıdaki `UsingTask` öznitelikleri, belirli bir yapı işlemindeki bir görevin tüm işlemlerini etkiler:
 
 - Varsa `Runtime` özniteliği, ortak dil çalışma zamanı (CLR) sürümünü ayarlar ve şu değerlerden herhangi birini gerçekleştirebilir: `CLR2`, `CLR4`, `CurrentRuntime`veya `*` (herhangi bir çalışma zamanı).
@@ -74,6 +77,7 @@ MSBuild bir görevi çalıştırmadan önce, aynı hedef bağlamına sahip eşle
 ```
 
 ## <a name="task-factories"></a>Görev fabrikaları
+
 MSBuild, bir görev çalıştırmadan önce geçerli yazılım bağlamında çalışmak üzere belirlenmiş olup olmadığını denetler. Görev bu şekilde belirlendiyse, MSBuild onu geçerli işlemde çalıştıran AssemblyTaskFactory öğesine geçirir; Aksi halde, MSBuild, görevi hedef bağlamla eşleşen bir işlemde çalıştıran TaskHostFactory 'ye geçirir. Geçerli bağlam ve hedef bağlam eşleşse bile, `TaskFactory` `TaskHostFactory`ayarlayarak bir görevi işlem dışı (yalıtım, güvenlik veya diğer nedenlerle) çalıştırmaya zorlayabilirsiniz.
 
 ```xml
@@ -84,6 +88,7 @@ MSBuild, bir görev çalıştırmadan önce geçerli yazılım bağlamında çal
 ```
 
 ## <a name="phantom-task-parameters"></a>Hayalet görev parametreleri
+
 Diğer görev parametreleri gibi `MSBuildRuntime` ve `MSBuildArchitecture` derleme özelliklerinden de ayarlanabilir.
 
 ```xml
@@ -108,4 +113,5 @@ Diğer görev parametrelerinden farklı olarak, `MSBuildRuntime` ve `MSBuildArch
 > Görev parametreleri, görev ana bilgisayarı bağlamında değil, üst düğüm bağlamında değerlendirilir. Çalışma zamanı veya mimariye bağımlı ( *Program dosyaları* konumu gibi) ortam değişkenlerine üst düğümle eşleşen değer değerlendirilir. Ancak, aynı ortam değişkeni doğrudan görev tarafından okunmalıdır, görev ana bilgisayarı bağlamında doğru olarak değerlendirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hedefleri ve görevleri yapılandırma](../msbuild/configuring-targets-and-tasks.md)

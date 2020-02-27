@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bb4663013a73d88ed7c2118816007705834162c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 248bb5e5e01b8209f826478e90b2c60b70922987
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578441"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632504"
 ---
 # <a name="resumetracking"></a>ResumeTracking
+
 Geçerli bağlamda izlemeyi sürdürür.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,10 +33,13 @@ HRESULT WINAPI ResumeTracking();
 ```
 
 ## <a name="return-value"></a>Dönüş değeri
+
  İzleme devam ettirilirse, **başarılı** biti ayarlanmış bir **HRESULT** . Bağlam kullanılabilir olmadığından izleme sürdürülemediğinden **E_FAIL** döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
+
  **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SuspendTracking](../msbuild/suspendtracking.md)

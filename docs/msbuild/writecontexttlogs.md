@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5c0793cc6d9f11cd1074c5cd0091687b154c069
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: cf34ff63b00cf523ba9ef704f4417be4d5cdbf77
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579463"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630711"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
+
 Geçerli bağlam için günlük dosyalarını yazar.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,6 +33,7 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
 ```
 
 #### <a name="parameters"></a>Parametreler
+
 [in] `intermediateDirectory`
 
  İzleme günlüğünün depolayabileceği dizin.
@@ -41,10 +43,13 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
  Günlük dosyası adının kök adı.
 
 ## <a name="return-value"></a>Dönüş değeri
+
  İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
+
  **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WriteAllTLogs](../msbuild/writealltlogs.md)

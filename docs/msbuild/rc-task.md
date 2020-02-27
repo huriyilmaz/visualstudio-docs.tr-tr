@@ -22,17 +22,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2bcc37446fe5b627ec789bc04461ea643e30575
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578490"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632920"
 ---
 # <a name="rc-task"></a>RC görevi
+
 Microsoft Windows Kaynak derleyicisi aracı *rc. exe*' yi sarmalanmış. **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak ( *. res*) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda RC görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
 
 |Parametre|Açıklama|
@@ -51,4 +53,5 @@ Microsoft Windows Kaynak derleyicisi aracı *rc. exe*' yi sarmalanmış. **RC** 
 |**UndefinePreprocessorDefinitions**|Önişlemci sembolünü tanımlama.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/u** seçeneğine bakın. Ayrıca bkz. bu tablodaki **PreprocessorDefinitions** .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

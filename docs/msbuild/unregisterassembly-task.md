@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22be291184ebf02ae0455f5b4656b1dec976dc89
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578292"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631503"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly görevi
+
 Belirtilen derlemelerin COM birlikte çalışma amacıyla kaydını siler. [RegisterAssembly görevinin](../msbuild/registerassembly-task.md)ters işlemini gerçekleştirir.
 
 ## <a name="parameters"></a>Parametreler
+
  Aşağıdaki tabloda `UnregisterAssembly` görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
@@ -38,11 +40,13 @@ Belirtilen derlemelerin COM birlikte çalışma amacıyla kaydını siler. [Regi
 |`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Belirtilen bütünleştirilmiş koddan belirtilen tür kitaplığının kaydını siler. **Note:**  Bu parametre yalnızca tür kitaplığı dosya adı derleme adından farklıysa gereklidir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Bu görevin başarılı olabilmesi için derlemenin mevcut olması gerekmez. Mevcut olmayan bir derlemenin kaydını silmeye çalışırsanız, görev bir uyarıyla başarılı olur. Bu durum, kayıt defterinden derleme kaydını kaldırmak için bu görevin bir işi olduğu için oluşur. Derleme yoksa, kayıt defterinde değildir ve bu nedenle görev başarılı olur.
 
  Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:System.MarshalByRefObject> sınıfından devralan <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> sınıfından parametreleri devralır. `MarshalByRefObject` sınıfı, <xref:Microsoft.Build.Utilities.Task> sınıfıyla aynı işlevselliği sağlar, ancak kendi uygulama etki alanında oluşturulabilir.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, varsa, `OutputPath` ve `FileName` özellikleriyle belirtilen yoldaki derlemenin kaydını silmek için `UnregisterAssembly` görevini kullanır.
 
 ```xml
@@ -61,6 +65,7 @@ Belirtilen derlemelerin COM birlikte çalışma amacıyla kaydını siler. [Regi
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [RegisterAssembly görevi](../msbuild/registerassembly-task.md)
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
