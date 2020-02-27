@@ -1,20 +1,20 @@
 ### YamlMime:Landing
 title: Visual Studio hata ayıklayıcısı belgeleri
-summary: Visual Studio hata ayıklayıcısı programınızın çalışma zamanı davranışını gözlemlemenize ve sorun bulmanıza yardımcı olur.
+summary: Visual Studio hata ayıklayıcısı, programınızın çalışma zamanı davranışlarını gözlemleyip sorunları bulmanıza yardımcı olur.
 metadata:
   title: Visual Studio'da Hata Ayıklama
-  description: Visual Studio kullanarak uygulama ve kod hatalarını ayıklama hakkında bilgi edinin.
+  description: Uygulama ve kod hatalarını ayıklamak için Visual Studio kullanma hakkında bilgi edinin.
   ms.topic: landing-page
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/20/2019
-  ms.openlocfilehash: c98bb7851b2b959e078c954cd8f11b1d4151ce0b
-  ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-  ms.translationtype: MT
+  ms.openlocfilehash: 7bb755fc13215b7087a0023a8e2a19442415092b
+  ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72349687"
+  ms.lasthandoff: 02/25/2020
+  ms.locfileid: "77579269"
 landingContent:
 - title: Hata ayıklama hakkında
   linkLists:
@@ -38,9 +38,9 @@ landingContent:
       url: getting-started-with-the-debugger-cpp.md
     - text: Visual Basic’te hata ayıklamayı öğrenin
       url: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
-    - text: Hata ayıklayıcı > Python kodunu çalıştırın >
+    - text: Hata ayıklayıcıda Python kodu çalıştırma >>
       url: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
-- title: Duraklat ve kodu gider
+- title: Duraklatma ve koda gitme
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -60,7 +60,7 @@ landingContent:
       url: watch-and-quickwatch-windows.md
     - text: Çağrı yığınını görüntüleme
       url: how-to-use-the-call-stack-window.md
-- title: Hata ayıklayıcıyla daha derin ilerleyin
+- title: Hata ayıklayıcısıyla ayrıntılara gitme
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -72,11 +72,11 @@ landingContent:
       url: debug-live-azure-applications.md
     - text: Hata ayıklayıcıya ne göstereceğini söyleme
       url: using-the-debuggerdisplay-attribute.md
-    - text: Uzaktan hata ayıklama
-      url: remote-debugging.md
+    - text: Performans sorunları hatalarını ayıklama >>
+      url: ../profiling/profiling-feature-tour.md
 - title: İşbirliği
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Live Share > ile kodu yazma ve hata ayıklama >
+    - text: Live Share ile kod yazma ve kodlarda hata ayıklama >>
       url: /visualstudio/liveshare/use/vs
