@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/26/2020
 ms.topic: conceptual
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: a9bb8e1d96b3448a4ba803b7e6348057635950b4
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: ae16c64f90f90b820332e0ee7f1753a8dd6e5c32
+ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634635"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652826"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -102,9 +102,9 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 Y: Hayır-gruptaki herkes aynı aboneliği alır. 
 
 ### <a name="q-can-i-edit-subscriber-details-of-individuals-added-in-an-azure-ad-group"></a>S: bir Azure AD grubuna eklenen kişilerin abone ayrıntılarını düzenleyebilir miyim?  
-Y: Hayır – bireysel bir abonenin bilgilerini değiştirmek Için bunları Azure AD güvenlik grubundan kaldırmanız ve ayrı ayrı tek bir aboneliğe atamanız gerekir.  
+Y: Hayır-bireysel bir abonenin bilgilerini değiştirmek Için bunları Azure AD güvenlik grubundan kaldırmanız ve ayrı ayrı tek bir aboneliğe atamanız gerekir.  
 
-### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-add-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>S: birini Azure AD güvenlik grubumu ekledim, ancak bunları abonelikler yönetim portalı 'nda eklemem ve bir aboneliği yok. Neden?  
+### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-added-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>S: birini Azure AD güvenlik grubumu ekledim, ancak bunları abonelikler yönetim portalına ekledim ve bir aboneliği yok. Neden?  
 Y: kuruluşunuzun Azure AD 'yi nasıl yapılandırdığına bağlı olarak, kullanıcının eklenebilmesi için en fazla 24 saat gecikmeyle karşılaşabilirsiniz. 24 saatten uzun bir süredir, [desteğe başvurun](https://visualstudio.microsoft.com/support/support-overview-vs).  
 
 

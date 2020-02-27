@@ -3,18 +3,18 @@ title: Hata ayıklarken XAML özelliklerini İnceleme | Microsoft Docs
 ms.date: 11/12/2019
 ms.topic: conceptual
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 61893e06f79b14b95ebb5b923eca581b047d979b
-ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
+ms.openlocfilehash: 36246f959aa49e49aa84defc203075f163c67118
+ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74072751"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706413"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme 
 
@@ -31,7 +31,7 @@ Aşağıdaki yapılandırmalarda bu araçları kullanabilirsiniz:
 
 Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını kullanmaya başlayalım. Düğmeye her tıkladığınızda, listeye başka bir öğe eklenir. Çift numaralı öğeler gri renklendirilir ve tek sayılı öğeler sarı renktedir.
 
-### <a name="create-the-project"></a>Projeyi oluşturma
+### <a name="create-the-project"></a>Proje oluşturma
 
 1. C# Yeni bir WPF uygulaması (**dosya** > **Yeni** > **projesi**oluşturun, ardındanC# "WPF" yazın ve **wpf uygulaması (.NET Core)** ya da **WPF uygulaması (.NET Framework)** seçin. **TestXaml**olarak adlandırın.
 
@@ -74,7 +74,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
    }
    ```
 
-1. Projeyi derleyin ve hata ayıklamayı başlatın. (Derleme yapılandırması, yayın değil, hata ayıklama olmalıdır. Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).)
+1. Projeyi oluşturmak ve hata ayıklamaya başlayın. (Derleme yapılandırması, yayın değil, hata ayıklama olmalıdır. Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).)
 
    Pencere geldiğinde, çalışan uygulamanız içinde uygulama içi araç çubuğunun göründüğünü görmeniz gerekir.
 
@@ -115,7 +115,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 1. **Canlı görsel ağaca** dönün ve ikinci liste kutusu öğesini seçin. **Canlı Özellik Gezgini** , **Içerik** alanının "Item2" olduğunu ve **arka plan** > **renk** alanının **#FFD3D3D3** (temaya bağlı olarak) olduğunu göstermelidir.
 
    > [!NOTE]
-   > **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin `Color = {BindingExpression}` gibi bir bağlama üzerinden ayarlandığı anlamına gelir. Yeşil kenarlık, değerin `Color = {StaticResource MyBrush}` gibi bir kaynak kullanılarak ayarlandığı anlamına gelir.
+   > **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin `Color = {BindingExpression}`gibi bir bağlama üzerinden ayarlandığı anlamına gelir. Yeşil kenarlık, değerin `Color = {StaticResource MyBrush}`gibi bir kaynak kullanılarak ayarlandığı anlamına gelir.
 
    XAML gerçek yapısı, muhtemelen doğrudan ilgilenmediğiniz çok sayıda öğeye sahiptir ve kodun iyi olduğunu bilmiyorsanız, aradığınız şeyi bulmak için ağaçta gezinmek için bir sabit zaman olabilir. Bu nedenle, **canlı görsel ağaç** , incelemek istediğiniz öğeyi bulmanıza yardımcı olmak için uygulamanın kullanıcı arabirimini kullanmanıza olanak sağlayan birkaç yol içerir.
 

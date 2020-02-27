@@ -3,18 +3,18 @@ title: Blend 'de XAML hatalarını ayıklama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 9ac692c756aaa29b2b13f20eecd039154a28d80b
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 04bd4540de47ec8a9da86069acb33770f9c800b8
+ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558187"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706373"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
@@ -59,7 +59,7 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
 
 5. **Konum** metin kutusunda projenin konumunu doğrulayın.
 
-6. **Dil** listesinde, **görsel C# **' e tıklayın ve ardından projeyi oluşturmak için **Tamam** ' a tıklayın.
+6. **Dil** listesinde, **görsel C#** ' e tıklayın ve ardından projeyi oluşturmak için **Tamam** ' a tıklayın.
 
 7. Tasarım yüzeyine sağ tıklayın ve ardından **bölünmüş** görünüme geçmek Için **kaynağı görüntüle** ' ye tıklayın.
 

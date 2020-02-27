@@ -8,12 +8,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: abd8ba039f9f6a19f5c028e05c03151c090e304c
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 69c576f34b73ec99edd231d39e8bfa8ea661f2ff
+ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631009"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652813"
 ---
 # <a name="whats-new-in-msbuild-160"></a>MSBuild 16,0 ' deki yenilikler
 
@@ -21,7 +21,7 @@ Bu makalede, MSBuild 16,0 ' deki güncelleştirilmiş özellikler ve özellikler
 
 ## <a name="changed-path"></a>Değiştirilen yol
 
- MSBuild, Visual Studio 'nun her bir sürümünde *\Current* klasörüne yüklenir. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\Current\Enterprise\MSBuild*. MSBuild: [vssetup. PowerShell](https://github.com/Microsoft/vssetup.powershell)' i bulmak Için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
+ MSBuild, Visual Studio 'nun her bir sürümünde *\Current* klasörüne yüklenir ve yürütülebilir dosyalar *\Bin* klasörüdür. Örneğin, Visual Studio 2019 Community ile yüklenen *MSBuild. exe* yolu *C:\Program Files (x86) \Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe* şeklindedir ve MSBuild: [vssetup. PowerShell](https://github.com/Microsoft/vssetup.powershell)' i bulmak için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
 
 ## <a name="changed-properties"></a>Değiştirilen özellikler
 

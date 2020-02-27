@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f1b0e774d70c5787a7221aa0dfa7b0834dac7e3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e7ddf87f5fa9f937c0272e37f3a6b4aba29f2d6c
+ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588297"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652800"
 ---
 # <a name="customize-your-build"></a>Derlemenizi özelleştirme
 
@@ -188,6 +188,72 @@ MSBuild bir çözüm dosyası oluşturduğunda, önce onu bir proje dosyasına d
  </Target>
 </Project>
 ```
+
+## <a name="customize-all-net-builds"></a>Tüm .NET derlemelerini özelleştirin
+
+Bir yapı sunucusu korunurken, sunucudaki tüm derlemeler için MSBuild ayarlarını küresel olarak yapılandırmanız gerekebilir.  Prensibi, genel *Microsoft. Common. targets* veya *Microsoft. Common. props* dosyalarını değiştirebilir, ancak daha iyi bir yoldur. Belirli bir proje türünün (tüm C# projeler gibi) tüm yapılarını, bazı MSBuild özelliklerini kullanarak ve belirli özel `.targets` ve `.props` dosyaları ekleyerek etkileyebilirsiniz.
+
+MSBuild veya Visual C# Studio yüklemesiyle yönetilen tüm veya Visual Basic yapılarını etkilemek için özel bir dosya oluşturun. *Microsoft. Common. targets* veya *Custom. After. Microsoft. Common.* targets, *Microsoft. Common. targets*ya da bir dosya *Custom* . before. Microsoft. Common. props ya da özel *. After. Microsoft. Common. props* , *Microsoft. Common. props*'dan önce veya sonra işlenecek özelliklerle birlikte çalışır.
+
+Aşağıdaki MSBuild özelliklerini kullanarak bu dosyaların konumlarını belirtebilirsiniz:
+
+- CustomBeforeMicrosoftCommonProps
+- CustomBeforeMicrosoftCommonTargets
+- CustomAfterMicrosoftCommonProps
+- CustomAfterMicrosoftCommonTargets
+- CustomBeforeMicrosoftCSharpProps
+- CustomBeforeMicrosoftVisualBasicProps
+- CustomAfterMicrosoftCSharpProps
+- CustomAfterMicrosoftVisualBasicProps
+- CustomBeforeMicrosoftCSharpTargets
+- CustomBeforeMicrosoftVisualBasicTargets
+- CustomAfterMicrosoftCSharpTargets
+- CustomAfterMicrosoftVisualBasicTargets
+
+Bu özelliklerin *ortak* sürümleri hem hem de C# Visual Basic projelerini etkiler. Bu özellikleri MSBuild komut satırında ayarlayabilirsiniz.
+
+```cmd
+msbuild /p:CustomBeforeMicrosoftCommonTargets="C:\build\config\Custom.Before.Microsoft.Common.Targets" MyProject.csproj
+```
+
+En iyi yaklaşım senaryonuza bağlıdır. Adanmış bir yapı sunucunuz varsa ve belirli hedeflerin bu sunucuda yürütülen uygun proje türünün tüm yapılarında her zaman yürütülememesini sağlamak istiyorsanız, genel bir özel `.targets` veya `.props` dosyası kullanmak anlamlı olur.  Özel hedeflerin yalnızca belirli koşullar geçerli olduğunda yürütmesini istiyorsanız, başka bir dosya konumu kullanın ve MSBuild komut satırındaki uygun MSBuild özelliğini yalnızca gerektiğinde ayarlayarak bu dosyanın yolunu ayarlayın.
+
+> [!WARNING]
+> Visual Studio, eşleşen türde herhangi bir projeyi her oluşturduğunda MSBuild klasöründe bulursa, özel `.targets` veya `.props` dosyalarını kullanır. Bu, istenmeyen sonuçlara neden olabilir ve yanlış yapıldıysa, Visual Studio 'nun bilgisayarınızda derleme yeteneğini devre dışı bırakabilir.
+
+## <a name="customize-all-c-builds"></a>Tüm C++ derlemeleri Özelleştir
+
+Projeler C++ için, önceden bahsedilen özel `.targets` ve `.props` dosyaları yok sayılır. Projeler C++ için, her platform için `.targets` dosyaları oluşturabilir ve bunları bu platformlar için uygun içeri aktarma klasörlerine yerleştirebilirsiniz.
+
+*Microsoft. cpp. Win32. targets*Win32 platformu `.targets` dosyası aşağıdaki `Import` öğesini içerir:
+
+```xml
+<Import Project="$(VCTargetsPath)\Platforms\Win32\ImportBefore\*.targets"
+        Condition="Exists('$(VCTargetsPath)\Platforms\Win32\ImportBefore')"
+/>
+```
+
+Aynı dosyanın ucunun yakınında benzer bir öğe vardır:
+
+```xml
+<Import Project="$(VCTargetsPath)\Platforms\Win32\ImportAfter\*.targets"
+        Condition="Exists('$(VCTargetsPath)\Platforms\Win32\ImportAfter')"
+/>
+```
+
+*%ProgramFiles32%\MSBuild\Microsoft.Cpp\v {Version} \ platformları\*diğer hedef platformlar için benzer içeri aktarma öğeleri var.
+
+`.targets` dosyasını platforma göre uygun klasöre yerleştirdikten sonra, MSBuild dosyanızı bu platform için her C++ yapıya aktarır. Gerekirse, birden çok `.targets` dosyası yerleştirebilirsiniz.
+
+### <a name="specify-a-custom-import-on-the-command-line"></a>Komut satırında özel bir içeri aktarma belirtin
+
+Bir C++ projenin belirli bir derlemesi için dahil etmek istediğiniz özel `.targets`, bir veya her ikisini de komut satırında `ForceImportBeforeCppTargets` ve `ForceImportAfterCppTargets` ayarlayın.
+
+```cmd
+msbuild /p:ForceImportBeforeCppTargets="C:\build\config\Custom.Before.Microsoft.Cpp.Targets" MyCppProject.vcxproj
+```
+
+Genel ayar için (bir yapı sunucusundaki bir platforma yönelik tüm C++ derlemeleri etkilemek, söylemek için) iki yöntem vardır. İlk olarak, bu özellikleri her zaman ayarlanmış bir sistem ortam değişkeni kullanarak ayarlayabilirsiniz. Bu, MSBuild her zaman ortamı okuduğundan ve tüm ortam değişkenlerine yönelik özellikler oluşturduğunda (veya geçersiz kılındığından), bu işe yarar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

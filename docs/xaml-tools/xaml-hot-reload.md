@@ -6,18 +6,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xaml edit and continue
 - xaml hot reload
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f1232620d40a26c894b6b2f38fc7d8c10a44c405
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d977d79ce55bdd3abcb467d7bf7518b88bad7402
+ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450935"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706366"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Visual Studio 'da XAML etkin yeniden yüklemesine sahip XAML kodunu yazma ve hata ayıklama
 
@@ -50,12 +50,12 @@ XAML sık yeniden yükleme 'nin bilinen kısıtlamaları aşağıda verilmiştir
 
 |Sınırlama|WPF|UWP|Notlar|
 |-|-|-|-|
-|Uygulama çalışırken denetimlere yönelik bağlantı olayları|Desteklenmez|Desteklenmez|Bkz. hata: *olayın başarısız olduğundan emin olun*. WPF 'de, var olan bir olay işleyicisine başvurabilirsiniz. UWP uygulamalarında, var olan bir olay işleyicisine başvurulması desteklenmez.|
-|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 güncelleştirme 2 ' den itibaren desteklenir|Desteklenir|Örnek: `StaticResource` olarak kullanmak için bir kaynak sözlüğüne `SolidColorBrush` ekleme.</br>Note: statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> Kaynak sözlüğünü değiştirme `Source` özelliği.|
-|Uygulama çalışırken projenize yeni denetimler, sınıflar, pencereler veya diğer dosyalar ekleme|Desteklenmez|Desteklenmez|Yok.|
-|NuGet paketlerini yönetme (paket ekleme/kaldırma/güncelleştirme)|Desteklenmez|Desteklenmez|Yok.|
+|Uygulama çalışırken denetimlere yönelik bağlantı olayları|Desteklenmiyor|Desteklenmiyor|Bkz. hata: *olayın başarısız olduğundan emin olun*. WPF 'de, var olan bir olay işleyicisine başvurabilirsiniz. UWP uygulamalarında, var olan bir olay işleyicisine başvurulması desteklenmez.|
+|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 güncelleştirme 2 ' den itibaren desteklenir|Destekleniyor|Örnek: `StaticResource`olarak kullanmak için bir `SolidColorBrush` kaynak sözlüğüne ekleme.</br>Note: statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> Kaynak sözlüğü `Source` Özelliği değiştiriliyor.|
+|Uygulama çalışırken projenize yeni denetimler, sınıflar, pencereler veya diğer dosyalar ekleme|Desteklenmiyor|Desteklenmiyor|None|
+|NuGet paketlerini yönetme (paket ekleme/kaldırma/güncelleştirme)|Desteklenmiyor|Desteklenmiyor|None|
 |{X:Bind} biçimlendirme uzantısını kullanan veri bağlamasını değiştirme|Yok|Visual Studio 2019 ' den itibaren desteklenir|Bu, Windows 10 sürüm 1809 (derleme 10.0.17763) gerektirir. Visual Studio 2017 veya önceki sürümlerde desteklenmez.|
-|X:Uid yönergelerinin değiştirilmesi desteklenmiyor|Yok|Desteklenmez|Yok.|
+|X:Uid yönergelerinin değiştirilmesi desteklenmiyor|Yok|Desteklenmiyor|None|
 
 ## <a name="error-messages"></a>Hata iletileri
 
@@ -69,5 +69,5 @@ XAML sık yükleme 'yi kullanırken aşağıdaki hatalarda gelebiliriz.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [XAML dinamik yeniden yükleme sorunlarını giderme](xaml-hot-reload-troubleshooting.md)
-* [Xamarin. Forms için XAML Hot reload](/xamarin/xamarin-forms/xaml/hot-reload)
+* [Xamarin.Forms için XAML Çalışırken Yeniden Yükleme](/xamarin/xamarin-forms/xaml/hot-reload)
 * [Düzenle ve Devam Et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
