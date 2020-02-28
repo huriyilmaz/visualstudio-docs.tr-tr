@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 1c4358fb1ceef0773a29c6860ee7b670c2d021b1
-  ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+  ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
+  ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/15/2020
-  ms.locfileid: "77265561"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904067"
 highlightedContent:
   items:
   - title: Kurulum ve yükleme
@@ -150,7 +150,7 @@ additionalContent:
       url: ../profiling/index.yml
     - title: Genişletme
       summary: Geliştirme deneyiminizi iyileştirmek için Visual Studio IDE’ye kendi işlevlerinizi ekleyin.
-      url: ../extensibility/index.md
+      url: ../extensibility/index.yml
     - title: Veri
       summary: Her yerde (yerel veya bulut) herhangi bir veritabanına veya hizmete bağlanan uygulamalar oluşturun.
       url: ../data-tools/accessing-data-in-visual-studio.md
@@ -202,7 +202,7 @@ additionalContent:
     - title: Diğer araç takımları
       links:
       - text: Visual Studio uzantısı geliştirme
-        url: ../extensibility/index.md
+        url: ../extensibility/index.yml
       - text: C++ ile Linux geliştirme
         url: /cpp/linux/
       - text: .NET Core platformlar arası geliştirme
