@@ -1,5 +1,5 @@
 ---
-title: Uzaktan hata ayıklama Uzak IIS bilgisayarında ASP.NET Core | Microsoft Docs
+title: Uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -10,27 +10,28 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 48c5d365c632deb4d654d5115a141ba9933d7a6f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: f3741f9b510450dabfea5c1df4eec4b2e0868b26
+ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63410237"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181145"
 ---
-# <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio'da bir uzak IIS bilgisayarda uzaktan hata ayıklama ASP.NET Core
-IIS'ye dağıtılan bir ASP.NET uygulamasında hata ayıklamak için yükleme ve uzak Araçlar, uygulamanızın dağıtıldığı bilgisayarda çalıştırın ve ardından Visual Studio'dan çalışan uygulamanıza ekleyin.
+# <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio 'da uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core
+
+IIS 'ye dağıtılan ASP.NET Core bir uygulamada hata ayıklamak için, uzak araçları uygulamanızı dağıttığınız bilgisayara yükleyip çalıştırın ve ardından Visual Studio 'dan çalışan uygulamanıza bağlayın.
 
 ![Uzaktan hata ayıklayıcı bileşenleri](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
 
-Bu kılavuz, ayarlamak ve bir Visual Studio ASP.NET Core yapılandırmak, IIS'ye dağıtma ve Visual Studio uzaktan hata ayıklayıcı ekleme açıklanmaktadır. Uzaktan hata ayıklama için ASP.NET 4.5.2, bkz: [IIS bilgisayarında uzaktan hata ayıklama ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md). Ayrıca, dağıtabilir ve Azure kullanarak IIS üzerinde hata ayıklayın. Azure App Service için kolayca dağıtabilir ve hatalarını ayıklama, uzaktan hata ayıklayıcıyı kullanarak IIS ve önceden yapılandırılmış bir örneğinde [Snapshot Debugger](../debugger/debug-live-azure-applications.md) ya da [Haya ayıklayıcı Sunucu Gezgini'nden](../debugger/remote-debugging-azure.md).
+Bu kılavuzda, Visual Studio ASP.NET Core ayarlama ve yapılandırma, IIS 'ye dağıtma ve Visual Studio 'dan uzaktan hata ayıklayıcı iliştirme açıklanır. Uzaktan hata ayıklama ASP.NET 4.5.2 için, bkz. [BIR IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md). Ayrıca, Azure kullanarak IIS 'de dağıtabilir ve hata ayıklayabilirsiniz. Azure App Service için, önceden yapılandırılmış IIS ve uzaktan hata ayıklayıcı örneğini [Snapshot Debugger](../debugger/debug-live-azure-applications.md) kullanarak veya [Sunucu Gezgini hata ayıklayıcıyı ekleyerek](../debugger/remote-debugging-azure.md)kolayca dağıtabilir ve hata ayıklayabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
-Visual Studio 2019 bu makaledeki adımları izlemeniz gerekir.
+Visual Studio 2019, bu makalede gösterilen adımları izlemek için gereklidir.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Visual Studio 2017, bu makaledeki adımları tamamlayabilmeniz için gereklidir.
+Visual Studio 2017, bu makalede gösterilen adımları izlemek için gereklidir.
 ::: moniker-end
 
 Bu yordamlar bu sunucu yapılandırmaları üzerinde test edilmiştir:
@@ -39,52 +40,52 @@ Bu yordamlar bu sunucu yapılandırmaları üzerinde test edilmiştir:
 
 ## <a name="network-requirements"></a>Ağ gereksinimleri
 
-Bir proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmiyor. Ülkeler yüksek gecikme süresi veya çevirmeli, Internet gibi düşük bant genişliği bağlantı üzerinden veya Internet üzerinden hata ayıklama önerilmez ve başarısız olabilir veya edilemeyecek kadar yavaş. Gereksinimlerinin tam listesi için bkz. [gereksinimleri](../debugger/remote-debugging.md#requirements_msvsmon).
+Bir proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmiyor. Ülkeler yüksek gecikme süresi veya çevirmeli, Internet gibi düşük bant genişliği bağlantı üzerinden veya Internet üzerinden hata ayıklama önerilmez ve başarısız olabilir veya edilemeyecek kadar yavaş. Gereksinimlerin tüm listesi için bkz. [gereksinimler](../debugger/remote-debugging.md#requirements_msvsmon).
 
 ## <a name="app-already-running-in-iis"></a>Zaten IIS içinde çalışan uygulama?
 
 Bu makalede, temel bir Windows server IIS yapılandırmasını ayarlama ve uygulamayı Visual Studio'dan dağıtma adımlarını içerir. Sunucu bileşenleri yüklü, uygulamanın doğru şekilde çalıştırabilir ve uzaktan hata ayıklama için hazır olduğunu istedi emin olmak için bu adımları dahildir.
 
-* Uygulamanızı IIS çalıştıran ve yalnızca istiyorsanız uzaktan hata ayıklayıcı indir ve hata ayıklama başlatmak için Git [indirin ve Windows Server'da uzak Araçları'nı yükleme](#BKMK_msvsmon).
+* Uygulamanız IIS 'de çalışıyorsa ve yalnızca uzaktan hata ayıklayıcıyı indirmek ve hata ayıklamayı başlatmak istiyorsanız, [Windows Server 'da uzak araçları indirme ve yükleme](#BKMK_msvsmon)bölümüne gidin.
 
 * Emin olmak için Yardım istiyorsanız uygulamanızı, dağıtılan, ayarlanır ve böylece hata ayıklaması yapabilirsiniz, IIS'de doğru çalışmasını, bu konudaki tüm adımları izleyin.
 
-## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>Visual Studio bilgisayarında ASP.NET Core uygulaması oluşturun
+## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>Visual Studio bilgisayarında ASP.NET Core uygulamasını oluşturma
 
-1. Yeni bir ASP.NET Core web uygulaması oluşturun. 
+1. Yeni bir ASP.NET Core Web uygulaması oluşturun. 
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 içinde yazın **Ctrl + Q** arama kutusunu açmak için şunu yazın **asp.net**, seçin **şablonları**, ardından **yeni ASP.NET Core Web uygulaması oluşturma** . Görüntülenen iletişim kutusunda, projeyi adlandırın **MyASPApp**ve ardından **Oluştur**. Ardından, **Web uygulaması (Model-View-Controller)** ve ardından **Oluştur**.
+    Visual Studio 2019 ' de **CTRL + Q** yazarak arama kutusunu açın, **ASP.net**yazın, **Şablonlar**' ı seçin ve sonra **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, projeyi **Myaspapp**olarak adlandırın ve ardından **Oluştur**' u seçin. Ardından **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017'de seçin **Dosya > Yeni > Proje**, ardından **Visual C# > Web > ASP.NET Core Web uygulaması**. ASP.NET Core şablonları bölümünde **Web uygulaması (Model-View-Controller)**. ASP.NET Core 2.1 seçili olduğundan emin olun, **Docker desteğini etkinleştir** seçilmezse ve **kimlik doğrulaması** ayarlanır **kimlik doğrulaması yok**. Projeyi adlandırın **MyASPApp**.
+    Visual Studio 2017 ' de **dosya > yeni > proje**' yi seçin ve **ardından C# Visual > Web > ASP.NET Core Web uygulaması**' nı seçin. ASP.NET Core Şablonları bölümünde **Web uygulaması (Model-View-Controller)** öğesini seçin. ASP.NET Core 2,1 ' nin seçildiğinden emin olun, **Docker desteğinin etkinleştirilmesi** ve **kimlik** doğrulamasının **kimlik doğrulaması yok**olarak ayarlandığından emin olun. Projeyi **Myaspapp**olarak adlandırın.
     ::: moniker-end
 
-4. About.cshtml.cs dosyasını açın ve bir kesim noktası `OnGet` yöntemi (eski şablonlarda, bunun yerine HomeController.cs açın ve kesme noktası kümesinde `About()` yöntemi).
+4. About.cshtml.cs dosyasını açın ve `OnGet` yöntemde bir kesme noktası ayarlayın (eski şablonlarda, bunun yerine HomeController.cs ' yi açın ve `About()` yönteminde kesme noktasını ayarlayın).
 
-## <a name="bkmk_configureIIS"></a> Yükleme ve Windows Server'da IIS yapılandırma
+## <a name="bkmk_configureIIS"></a>Windows Server 'da IIS 'yi yükleyip yapılandırma
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
 ## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server'da tarayıcınızın güvenlik ayarlarını güncelleştirin
 
-(Varsayılan olarak etkindir) Internet Explorer Artırılmış Güvenlik Yapılandırması etkinse, bazı web sunucusu bileşenlerini yükleme sağlamak için Güvenilen siteler bazı etki alanları eklemek gerekebilir. Güvenilen siteler giderek ekleme **Internet Seçenekleri > Güvenlik > Güvenilen siteler > siteleri**. Aşağıdaki etki alanlarını ekleyin.
+(Varsayılan olarak etkindir) Internet Explorer Artırılmış Güvenlik Yapılandırması etkinse, bazı web sunucusu bileşenlerini yükleme sağlamak için Güvenilen siteler bazı etki alanları eklemek gerekebilir. Güvenilen siteleri, **güvenlik > güvenilen siteler > siteleri > Internet seçeneklerine**giderek ekleyin. Aşağıdaki etki alanlarını ekleyin.
 
 - Microsoft.com
 - go.microsoft.com
 - download.microsoft.com
 - IIS.NET
 
-Yazılımı indirdiğinizde, çeşitli web sitesi komut dosyaları ve kaynakları yüklemeye izin vermek için istekleri alabilirsiniz. Bu kaynaklardan bazıları, gerekli değildir, ancak sürecini basitleştirmek için tıklatın **Ekle** istendiğinde.
+Yazılımı indirdiğinizde, çeşitli web sitesi komut dosyaları ve kaynakları yüklemeye izin vermek için istekleri alabilirsiniz. Bu kaynaklardan bazıları gerekli değildir, ancak işlemi basitleştirmek için istendiğinde **Ekle** ' ye tıklayın.
 
-## <a name="install-aspnet-core-on-windows-server"></a>Windows Server üzerinde ASP.NET Core yükleme
+## <a name="install-aspnet-core-on-windows-server"></a>Windows Server 'a ASP.NET Core yüklemesi
 
-1. Yükleme [.NET Core Windows Server barındırma](https://aka.ms/dotnetcore-2-windowshosting) barındıran sistemde paket. Paket, .NET Core çalışma zamanı, .NET Core kitaplığı ve ASP.NET Core modülü yükler. Daha fazla ayrıntılı yönergeler için bkz: [IIS yayımlama](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration).
+1. [.NET Core Windows Server barındırma](https://aka.ms/dotnetcore-2-windowshosting) paketi 'ni barındırma sistemine yükler. Paket, .NET Core çalışma zamanı, .NET Core kitaplığı ve ASP.NET Core modülünü de yüklüyor. Daha ayrıntılı yönergeler için bkz. IIS 'de [Yayımlama](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration).
 
     > [!NOTE]
-    > Sistem, Internet bağlantısı yoksa, alma ve yükleme *[Microsoft Visual C++ 2015 yeniden dağıtılabilir](https://www.microsoft.com/download/details.aspx?id=53840)* .NET Core Windows Server barındırma paketini yüklemeden önce.
+    > Sistemin bir Internet bağlantısı yoksa, .NET Core Windows Server barındırma paketi 'ni yüklemeden önce *[Microsoft Visual C++ 2015 Redistributable](https://www.microsoft.com/download/details.aspx?id=53840)* 'ı edinin ve yükleme.
 
-3. Sistemi yeniden başlatın (veya yürütme **net stop olan /y** ardından **net start w3svc** sistem YOLUNU bir değişiklik almak için bir komut isteminden).
+3. Sistemi yeniden başlatın (veya **net stop was/y** ' i yürütün ve ardından sistem yolunda bir değişiklik yapmak için bir komut isteminden net **start w3svc** ' i çalıştırın).
 
 ## <a name="choose-a-deployment-option"></a>Bir dağıtım seçeneği seçin
 
@@ -99,7 +100,7 @@ IIS uygulama dağıtmak için yardıma gereksinim duyarsanız, bu seçenekleri g
 Bu seçeneği kullanabilirsiniz. Visual Studio'ya içeri aktarma ve yayımlama ayarları dosyası oluşturun.
 
 > [!NOTE]
-> Bu dağıtım yöntemi, Web dağıtımı kullanır. Web dağıtımı el ile Visual Studio ayarları içeri aktarma yerine yapılandırmak istiyorsanız, barındırma sunucuları için Web dağıtımı 3.6 yerine Web dağıtma 3.6 yükleyebilirsiniz. Ancak, Web dağıtımı el ile yapılandırırsanız, sunucuda bir uygulama klasör izinleri ve doğru değerleri ile yapılandırıldığından emin olun gerekecektir (bkz [yapılandırma ASP.NET Web sitesi](#BKMK_deploy_asp_net)).
+> Bu dağıtım yöntemi, Web dağıtımı kullanır. Web dağıtımı el ile Visual Studio ayarları içeri aktarma yerine yapılandırmak istiyorsanız, barındırma sunucuları için Web dağıtımı 3.6 yerine Web dağıtma 3.6 yükleyebilirsiniz. Ancak Web Dağıtımı el ile yapılandırırsanız, sunucudaki bir uygulama klasörünün doğru değerler ve izinlerle yapılandırıldığından emin olmanız gerekir (bkz. [configure ASP.NET Web site](#BKMK_deploy_asp_net)).
 
 ### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>Yükleme ve Windows Server üzerinde barındırma sunucuları için Web dağıtımı yapılandırma
 
@@ -113,38 +114,38 @@ Bu seçeneği kullanabilirsiniz. Visual Studio'ya içeri aktarma ve yayımlama a
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlayacaktır. Uygulamayı Visual Studio'dan başlatılmazsa, IIS'de uygulamayı başlatın. ASP.NET Core için uygulama havuzu için alan emin olmamız gerekiyor. **DefaultAppPool** ayarlanır **yönetilen kod yok**.
+Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlayacaktır. Uygulamayı Visual Studio'dan başlatılmazsa, IIS'de uygulamayı başlatın. ASP.NET Core için, **DefaultAppPool** için uygulama havuzu alanının **yönetilen kod yok**olarak ayarlandığından emin olmanız gerekir.
 
-1. İçinde **ayarları** iletişim kutusu, tıklayarak hata ayıklamayı etkinleştir **sonraki**, seçin bir **hata ayıklama** yapılandırma ve ardından **ek dosyaları Kaldır Hedef** altında **dosya yayımlama** seçenekleri.
+1. **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
 
     > [!NOTE]
-    > Yayın yapılandırması seçerseniz, hata ayıklama devre dışı *web.config* yayımladığınızda, dosya.
+    > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *Web. config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
-1. Tıklayın **Kaydet** ve sonra uygulamayı yeniden yayımlayın.
+1. **Kaydet** ' e tıklayın ve uygulamayı yeniden yayımlayın.
 
 ## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>(İsteğe bağlı) Yerel bir klasöre yayımlayarak dağıtma
 
-RoboCopy, Powershell kullanarak IIS uygulama kopyalamak istediğiniz veya dosyaları el ile kopyalamak isterseniz, uygulamanızı dağıtmak için bu seçeneği kullanabilirsiniz.
+Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya dosyaları el ile kopyalamak istiyorsanız uygulamanızı dağıtmak için bu seçeneği kullanabilirsiniz.
 
-### <a name="BKMK_deploy_asp_net"></a> Windows Server bilgisayarında ASP.NET Web sitesi yapılandırma
+### <a name="BKMK_deploy_asp_net"></a>Windows Server bilgisayarında ASP.NET Core Web sitesini yapılandırma
 
-1. Windows Gezgini'ni açın ve yeni bir klasör oluşturun **C:\Publish**, ASP.NET projesi daha sonra dağıtacağınız.
+1. Windows Gezgini 'ni açın ve yeni bir klasör oluşturun **, burada**ASP.NET Core projeyi daha sonra dağıtacaksınız.
 
-2. Zaten açık değilse, açmak **Internet Information Services (IIS) Yöneticisi'ni**. (Sunucu Yöneticisi'nin sol bölmesinde, seçin **IIS**. Sunucuya sağ tıklayıp **Internet Information Services (IIS) Yöneticisi'ni**.)
+2. Zaten açık değilse, **Internet Information Services (IIS) Yöneticisi**' ni açın. (Sunucu Yöneticisi sol bölmesinde **IIS**' yi seçin. Sunucuya sağ tıklayın ve **Internet Information Services (IIS) Yöneticisi**' ni seçin.)
 
-3. Altında **bağlantıları** sol bölmede, Git **siteleri**.
+3. Sol bölmedeki **Bağlantılar** ' ın altında, **siteler**' e gidin.
 
-4. Seçin **varsayılan Web sitesi**, seçin **temel ayarları**, ayarlayıp **fiziksel yolu** için **C:\Publish**.
+4. **Varsayılan Web sitesini**seçin, **temel ayarlar**' ı seçin ve **fiziksel yolu** **C:\publish**olarak ayarlayın.
 
-4. Sağ **varsayılan Web sitesi** düğümünü seçip alt **uygulama Ekle**.
+4. **Varsayılan Web sitesi** düğümüne sağ tıklayın ve **Uygulama Ekle**' yi seçin.
 
-5. Ayarlama **diğer** alanı **MyASPApp**, uygulama havuzu varsayılan değeri kabul edin (**DefaultAppPool**) ve **fiziksel yolu** için **C:\Publish**.
+5. **Diğer ad** alanını **Myaspapp**olarak ayarlayın, varsayılan uygulama havuzunu (**DefaultAppPool**) kabul edin ve **fiziksel yolu** **C:\publish**olarak ayarlayın.
 
-6. Altında **bağlantıları**seçin **uygulama havuzları**. Açık **DefaultAppPool** ve uygulama havuzu alanın ayarlanacağı **yönetilen kod yok**.
+6. **Bağlantılar**altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve uygulama havuzu alanını **yönetilen kod olmadan**ayarlayın.
 
-7. Yeni site IIS Yöneticisi'nde sağ tıklayın, seçin **düzenleme izinleri**ve o IUSR, IIS_IUSRS veya web uygulamasına erişim Okuma & yürütme hakları olan yetkili bir kullanıcı için yapılandırılan kullanıcı emin olun.
+7. IIS Yöneticisi 'nde yeni siteye sağ tıklayın, **Izinleri Düzenle**' yi seçin ve Web uygulamasına erişim için yapılandırılmış ıusr, IIS_IUSRS veya kullanıcının okuma & yürütme haklarına sahip yetkili bir kullanıcı olduğundan emin olun.
 
-    Bu kullanıcılara erişim birini görmüyorsanız, okuma ve yürütme hakları olan bir kullanıcı olarak IUSR'yi eklemek için adımları inceleyin.
+    Erişim izni olan bu kullanıcılardan birini görmüyorsanız, okuma & yürütme hakları olan bir kullanıcı olarak ıUSR ekleme adımlarını izleyin.
 
 ### <a name="publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>Yayımlama ve uygulamayı yayımlayarak bir yerel klasöre Visual Studio'dan dağıtma
 
@@ -152,57 +153,57 @@ Ayrıca, yayımlama ve dosya sistemi veya diğer araçları kullanarak uygulamay
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-## <a name="BKMK_msvsmon"></a> İndirme ve Windows Server'da uzak araçları yükleme
+## <a name="BKMK_msvsmon"></a>Windows Server 'da uzak araçları indirme ve yükleme
 
-Visual Studio sürümünüzle eşleşen uzak Araçlar sürümü indirin.
+Visual Studio sürümünüz ile eşleşen uzak araçların sürümünü indirin.
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-## <a name="BKMK_setup"></a> Windows Server'da uzaktan hata ayıklayıcı ayarlama
+## <a name="BKMK_setup"></a>Windows Server 'da uzaktan hata ayıklayıcı 'yı ayarlama
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> Gerektiğinde ek kullanıcılar için izinler eklemek için kimlik doğrulama modunu değiştirmek veya bağlantı noktası numarası için uzaktan hata ayıklayıcı değilse [uzaktan hata ayıklayıcı yapılandırma](../debugger/remote-debugging.md#configure_msvsmon).
+> Ek kullanıcılar için izinler eklemeniz gerekiyorsa, kimlik doğrulama modunu veya uzaktan hata ayıklayıcı bağlantı noktası numarasını değiştirin, bkz. [Uzaktan hata ayıklayıcıyı yapılandırma](../debugger/remote-debugging.md#configure_msvsmon).
 
-Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında daha fazla bilgi için bkz: [uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırmak](../debugger/remote-debugging.md#bkmk_configureService).
+Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi için bkz. [Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma](../debugger/remote-debugging.md#bkmk_configureService).
 
-## <a name="BKMK_attach"></a> Visual Studio bilgisayardan ASP.NET uygulamasına ekleme
+## <a name="BKMK_attach"></a>Visual Studio bilgisayarından ASP.NET uygulamasına iliştirme
 
-1. Visual Studio bilgisayarda hata ayıklamaya çalıştığınız çözümü açın (**MyASPApp** , bu makaledeki tüm adımları izlediğinizden emin).
-2. Visual Studio'da **hata ayıklama > iliştirme** (Ctrl + Alt + P).
+1. Visual Studio bilgisayarda, hata ayıklamaya çalıştığınız çözümü açın (Bu makaledeki tüm adımları takip ediyorsanız,**Myaspapp** ).
+2. Visual Studio 'da, **Işleme eklemek > hata ayıkla** ' ya tıklayın (Ctrl + Alt + P).
 
     > [!TIP]
-    > Visual Studio 2017 ve sonraki sürümlerinde, daha önce ekli kullanarak aynı işleme iliştirebilirsiniz **hata ayıklama > İliştir...** (Shift + Alt + P).
+    > Visual Studio 2017 ve sonraki sürümlerinde, **hata ayıkla > işlem...** (SHIFT + alt + P) kullanarak daha önce eklediğiniz işleme yeniden iliştirebilirsiniz.
 
-3. Niteleyici alanın ayarlanacağı  **\<uzak bilgisayar adı >** basın **Enter**.
+3. Niteleyici alanını **\<uzak bilgisayar adı >** olarak ayarlayın ve **ENTER**tuşuna basın.
 
-    Visual Studio biçiminde görünür bilgisayar adı gerekli bağlantı noktası eklediğini doğrulayın:  **\<uzak bilgisayar adı >: bağlantı noktası**
+    Visual Studio 'Nun gerekli bağlantı noktasını, şu biçimde görünen bilgisayar adına eklediğinden emin olun: **\<uzak bilgisayar adı >:p ort**
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 üzerinde görmelisiniz  **\<uzak bilgisayar adı >: 4024**
+    Visual Studio 2019 ' de **\<uzak bilgisayar adı > görmeniz gerekir: 4024**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017'de görmelisiniz  **\<uzak bilgisayar adı >: 4022**
+    Visual Studio 2017 ' de **\<uzak bilgisayar adı > görmeniz gerekir: 4022**
     ::: moniker-end
     Bağlantı noktası gereklidir. Bağlantı noktası numarasını görmüyorsanız, el ile ekleyin.
 
-4. Tıklayın **Yenile**.
-    Bazı işlemler görünür görmelisiniz **kullanılabilir işlemler** penceresi.
+4. **Yenile**'ye tıklayın.
+    **Kullanılabilir süreçler** penceresinde bazı işlemlerin göründüğünü görmeniz gerekir.
 
-    Herhangi bir işlem görmüyorsanız (bağlantı noktası gereklidir) uzak bilgisayar adı yerine IP adresini kullanarak deneyin. Kullanabileceğiniz `ipconfig` IPv4 adresini almak için komut satırında.
+    Herhangi bir işlem görmüyorsanız (bağlantı noktası gereklidir) uzak bilgisayar adı yerine IP adresini kullanarak deneyin. IPv4 adresini almak için, bir komut satırında `ipconfig` kullanabilirsiniz.
 
-    Kullanmak istiyorsanız **Bul** düğmesini gerekebilir [açın UDP bağlantı noktası 3702](#bkmk_openports) sunucusunda.
+    **Bul** düğmesini kullanmak istiyorsanız, sunucuda [UDP bağlantı noktası 3702](#bkmk_openports) ' u açmanız gerekebilir.
 
-5. Denetleme **tüm kullanıcıların işlemlerini göster**.
+5. **Tüm kullanıcıların süreçlerini göster**' i işaretleyin.
 
-6. Uygulamanızı hızlı bir şekilde bulmak için işlem adı ilk harflerini yazın.
+6. Uygulamanızı hızlı bir şekilde bulmak için işlem adınızın ilk harfini yazın.
 
-    * Seçin **dotnet.exe**.
+    * **DotNet. exe**' yi seçin.
 
-      Birden çok işlem gösteren varsa **dotnet.exe**, kontrol **kullanıcı adı** sütun. Bazı senaryolarda **kullanıcı adı** sütunda görüntülenir, uygulama havuzu adı gibi **IIS APPPOOL\DefaultAppPool**. Uygulama havuzu bakın, doğru işlemi tanıtmak için kolay bir yolunu yeni bir uygulama havuzu ayıklamak istediğiniz uygulama örneği için adlandırılmış bir gruptur ve ardından kolay bulabileceğinizi **kullanıcı adı** sütun.
+      **DotNet. exe**' yi gösteren birden çok Işlem varsa **Kullanıcı adı** sütununu kontrol edin. Bazı senaryolarda, **Kullanıcı adı** sütunu **IIS APPPOOL\DefaultAppPool**gibi uygulama havuzu adınızı gösterir. Uygulama havuzunu görürseniz doğru süreci belirlemenin kolay bir yolu, hata ayıklamak istediğiniz uygulama örneği için yeni bir adlandırılmış uygulama havuzu oluşturmak ve ardından bunu **Kullanıcı adı** sütununda kolayca bulabilirsiniz.
 
-    * IIS bazı senaryolarda, uygulama adınız işlem listesinde gibi bulabilirsiniz **MyASPApp.exe**. Bunun yerine bu işleme iliştirilebilir.
+    * Bazı IIS senaryolarında, uygulama adınızı **Myaspapp. exe**gibi işlem listesinde bulabilirsiniz. Bunun yerine bu işleme ekleyebilirsiniz.
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")
@@ -211,49 +212,49 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında daha fa
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")
     ::: moniker-end
 
-7. Tıklayın **ekleme**.
+7. **Ekle**' ye tıklayın.
 
-8. Uzak bilgisayarın Web sitesini açın. Bir tarayıcıda Git **http://\<uzak bilgisayar adı >**.
+8. Uzak bilgisayarın Web sitesini açın. Bir tarayıcıda, **http://\<uzak bilgisayar adı >** ' na gidin.
 
     ASP.NET web sayfası görmeniz gerekir.
 
-9. Çalışan ASP.NET uygulama bağlantısını tıklayın **hakkında** sayfası.
+9. Çalışan ASP.NET uygulamasında **hakkında** sayfasına tıklayın.
 
     Visual Studio'da kesme noktasına isabet.
 
-## <a name="bkmk_openports"></a> Sorun giderme: Windows Server üzerinde gerekli bağlantı noktalarını açma
+## <a name="bkmk_openports"></a>Sorun giderme: gerekli bağlantı noktalarını Windows Server 'da aç
 
 Çoğu ayarlar ASP.NET ve uzaktan hata ayıklayıcı yüklemesi tarafından gerekli bağlantı noktalarının açıldığından. Ancak, bağlantı noktalarının açık olduğunu doğrulamak gerekebilir.
 
 > [!NOTE]
-> Bir Azure sanal makinesinde aracılığıyla bağlantı noktalarını açmanız gerekir [ağ güvenlik grubu](/azure/virtual-machines/windows/nsg-quickstart-portal).
+> Bir Azure VM 'de, bağlantı noktalarını [ağ güvenlik grubu](/azure/virtual-machines/windows/nsg-quickstart-portal)üzerinden açmanız gerekir.
 
 Gerekli bağlantı noktaları:
 
 * 80 - IIS için gerekli
 ::: moniker range=">=vs-2019"
-* 4024 - gerekli Visual Studio 2019 ' uzaktan hata ayıklama için (bkz [uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md) daha fazla bilgi için).
+* 4024-Visual Studio 2019 uzaktan hata ayıklama için gereklidir (daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md) ).
 ::: moniker-end
 ::: moniker range="vs-2017"
-* 4022 - gerekli Visual Studio 2017'den uzaktan hata ayıklama için (bkz [uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md) daha fazla bilgi için).
+* 4022-Visual Studio 2017 uzaktan hata ayıklama için gereklidir (daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md) ).
 ::: moniker-end
-* UDP 3702 - (isteğe bağlı) bulma bağlantı sağlar, **Bul** düğme Visual Studio uzaktan hata ayıklayıcı eklerken.
+* UDP 3702-(Isteğe bağlı) bulma bağlantı noktası, Visual Studio 'da uzaktan hata ayıklayıcıya eklerken **bul** düğmesine erişmenizi sağlar.
 
-1. Windows Server üzerindeki bir bağlantı noktasını açmak için Aç **Başlat** menüsünde **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı**.
+1. Windows Server 'da bir bağlantı noktasını açmak için **Başlat** menüsünü açın, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı**araması yapın.
 
-2. Ardından **gelen kuralları > Yeni Kural > bağlantı noktası**ve ardından **sonraki**. (UDP 3702 için seçin **giden kuralları** yerine.)
+2. Sonra **gelen kuralları yeni kural > bağlantı noktası >** seçin ve ardından **İleri**' ye tıklayın. (UDP 3702 için bunun yerine **giden kurallar** ' ı seçin.)
 
-3. Altında **belirli yerel bağlantı noktaları**, bağlantı noktası numarasını girin, tıklayın **sonraki**.
+3. **Belirli yerel bağlantı noktaları**altında, bağlantı noktası numarasını girin, **İleri**' ye tıklayın.
 
-4. Tıklayın **bağlantıya izin**, tıklayın **sonraki**.
+4. **Bağlantıya Izin ver**' e tıklayın, **İleri**' ye tıklayın.
 
-5. İçin bağlantı noktasını etkinleştirmek ve bir veya daha fazla ağ türlerini seçmek **sonraki**.
+5. Bağlantı noktası için etkinleştirilecek bir veya daha fazla ağ türü seçin ve **İleri**' ye tıklayın.
 
-    Seçtiğiniz türü, uzak bilgisayarın bağlı olduğu ağ içermelidir.
-6. Ad ekleyin (örneğin, **IIS**, **Web dağıtımı**, veya **msvsmon**) tıklayın ve gelen kuralı için **son**.
+    Seçtiğiniz tür, uzak bilgisayarın bağlı olduğu ağı içermelidir.
+6. Gelen kuralı için adı (örneğin, **IIS**, **Web dağıtımı**veya **msvsmon**) ekleyin ve **son**' a tıklayın.
 
-    Yeni kuralınıza kuralları gelen veya giden kuralları listesinde görmeniz gerekir.
+    Yeni kuralınızı gelen kurallar veya giden kurallar listesinde görmeniz gerekir.
 
-    Windows Güvenlik Duvarı yapılandırma hakkında ayrıntılı bilgi isterseniz bkz [uzaktan hata ayıklama için Windows Güvenlik Duvarı Yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+    Windows Güvenlik Duvarı 'nı yapılandırma hakkında daha fazla bilgi edinmek istiyorsanız bkz. [Uzaktan hata ayıklama Için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
 
 3. Diğer gerekli bağlantı noktaları için ek kurallar oluşturun.
