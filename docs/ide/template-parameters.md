@@ -10,20 +10,20 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 582c87eee2586eab12f70e2d27341987e7cb7e2a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585892"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169371"
 ---
 # <a name="template-parameters"></a>Şablon parametreleri
 
-Şablon örneği başlatıldığında, şablonunuzda değerleri değiştirebilirsiniz. Bu işlevini ayarlamak için kullanın *şablon parametreleri*. Şablon parametresi sınıf adları ve şablonda ad alanları gibi değerleri değiştirmek için kullanılabilir. Şablon Sihirbazı, bir kullanıcı yeni bir öğe ekler veya proje bu parametreler, arka planda çalışır.
+Şablon örneği başlatıldığında, şablonunuzda değerleri değiştirebilirsiniz. Bu işlevi ayarlamak için *şablon parametreleri*kullanın. Şablon parametresi sınıf adları ve şablonda ad alanları gibi değerleri değiştirmek için kullanılabilir. Şablon Sihirbazı, bir kullanıcı yeni bir öğe ekler veya proje bu parametreler, arka planda çalışır.
 
 ## <a name="declare-and-enable-template-parameters"></a>Şablon parametrelerini bildir ve Etkinleştir
 
-Şablon parametreleri biçimi $ içinde bildirilen*parametre*$. Örneğin:
+Şablon parametreleri $*Parameter*$ biçiminde bildirilmiştir. Örneğin:
 
 - $safeprojectname$
 
@@ -33,9 +33,9 @@ ms.locfileid: "75585892"
 
 ### <a name="enable-parameter-substitution-in-templates"></a>Şablonlarda parametre değişimini etkinleştir
 
-1. İçinde *.vstemplate* dosya, şablonunu bulun `ProjectItem` parametre değiştirme etkinleştirmek istediğiniz öğeye karşılık gelen öğe.
+1. Şablonun *. vstemplate* dosyasında, parametre değişimini etkinleştirmek istediğiniz öğeye karşılık gelen `ProjectItem` öğesini bulun.
 
-1. Ayarlama `ReplaceParameters` özniteliği `ProjectItem` öğesine `true`.
+1. `ProjectItem` öğesinin `ReplaceParameters` özniteliğini `true`olarak ayarlayın.
 
 1. Proje öğesi için kod dosyasında, uygun yerlerde parametreleri içerir. Örneğin, aşağıdaki parametre güvenli proje adı ad alanında bir dosya için kullanıldığını belirtir:
 
@@ -50,8 +50,8 @@ Aşağıdaki tabloda, herhangi bir şablon tarafından kullanılabilecek ayrılm
 |Parametre|Açıklama|
 |---------------|-----------------|
 |clrversion|Geçerli sürümü ortak dil çalışma zamanı (CLR).|
-|ext_ *|Üst şablonun değişkenlerine başvurmak için `ext_` önekini herhangi bir parametreye ekleyin. Örneğin: `ext_safeprojectname`.|
-|1-10 GUID|' % S'projesi bir proje dosyasında GUID değiştirmek için kullanılan bir GUID. En fazla 10 benzersiz GUID'ler belirtebilirsiniz (örneğin, `guid1`).|
+|ext_ *|Üst şablonun değişkenlerine başvurmak için `ext_` önekini herhangi bir parametreye ekleyin. Örneğin, `ext_safeprojectname`.|
+|1-10 GUID|' % S'projesi bir proje dosyasında GUID değiştirmek için kullanılan bir GUID. En fazla 10 benzersiz GUID belirtebilirsiniz (örneğin, `guid1`).|
 |ItemName|Parametrenin kullanıldığı dosyanın adı.|
 |MachineName|Geçerli bilgisayar adı (örneğin, Computer01).|
 |ProjectName|Proje oluşturulduğunda Kullanıcı tarafından girilen ad.|
@@ -60,25 +60,25 @@ Aşağıdaki tabloda, herhangi bir şablon tarafından kullanılabilecek ayrılm
 |safeitemname|`itemname` ile aynıdır, ancak tüm güvenli olmayan karakterler ve boşluklar alt çizgi karakterleriyle değiştirilmiştir.|
 |safeitemrootname|`safeitemname`ile aynı.|
 |safeprojectname|Proje oluşturulduğunda Kullanıcı tarafından belirtilen ad ve tüm güvenli olmayan karakterler ve boşluklar kaldırıldı.|
-|zaman|GG/AA/YYYY biçiminde geçerli saati 00:00:00.|
-|Belirtilmedisolutionname|Çözüm adı. "Çözüm dizini oluşturma" işaretlendiğinde `specifiedSolutionName` çözüm adına sahip. "Çözüm dizini oluşturma" işaretli olduğunda `specifiedSolutionName` boştur.|
+|time|GG/AA/YYYY biçiminde geçerli saati 00:00:00.|
+|belirtilmedisolutionname|Çözüm adı. "Çözüm dizini oluştur" işaretlendiğinde `specifiedsolutionname` çözüm adı vardır. "Çözüm dizini oluştur" işaretli olmadığında `specifiedsolutionname` boştur.|
 |USERDOMAIN|Geçerli kullanıcı etki alanı.|
-|userName|Geçerli kullanıcı adı.|
+|kullanıcı adı|Geçerli kullanıcı adı.|
 |webnamespace|Geçerli Web sitesinin adı. Bu parametre, web formu şablonda benzersiz sınıf isimleri güvence altına almak için kullanılır. Web sitesi web sunucusunun kök dizininde ise, bu şablon parametresi web sunucusunun kök dizinine çözümler.|
-|Yıl|YYYY biçiminde geçerli yıl.|
+|yıl|YYYY biçiminde geçerli yıl.|
 
 > [!NOTE]
 > Şablon parametreleri büyük/küçük harfe duyarlıdır.
 
 ## <a name="custom-template-parameters"></a>Özel şablon parametreleri
 
-Kendi şablon parametreleri ve değerleri, ek parametre değiştirme sırasında kullanılan ayrılmış varsayılan şablon parametreleri olarak belirtebilirsiniz. Daha fazla bilgi için [CustomParameters öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md).
+Kendi şablon parametreleri ve değerleri, ek parametre değiştirme sırasında kullanılan ayrılmış varsayılan şablon parametreleri olarak belirtebilirsiniz. Daha fazla bilgi için bkz. [CustomParameters öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md).
 
 ## <a name="example-use-the-project-name-for-a-file-name"></a>Örnek: Proje adı için bir dosya adı kullanın.
 
-Bir parametre kullanarak proje öğeleri için değişken dosya adlarını belirtebilirsiniz `TargetFileName` özniteliği.
+`TargetFileName` özniteliğinde bir parametre kullanarak proje öğeleri için değişken dosya adları belirtebilirsiniz.
 
-Aşağıdaki örnek, bir yürütülebilir dosyanın adını tarafından belirtilen proje adı kullandığını belirtir `$projectname$`.
+Aşağıdaki örnek, bir yürütülebilir dosya adının `$projectname$`tarafından belirtilen proje adını kullandığını belirtir.
 
 ```xml
 <TemplateContent>
@@ -106,7 +106,7 @@ namespace $safeprojectname$
 }
 ```
 
-İçinde *.vstemplate* dosya için proje şablonu, dahil `ReplaceParameters="true"` dosyasına başvurduğunuzda özniteliği:
+Proje şablonu için *. vstemplate* dosyasında, dosyaya başvurduğunuzda `ReplaceParameters="true"` özniteliği ekleyin:
 
 ```xml
 <TemplateContent>
@@ -119,7 +119,7 @@ namespace $safeprojectname$
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: şablonda parametreleri ikame etme](how-to-substitute-parameters-in-a-template.md)
+- [Nasıl yapılır: şablonda parametreleri değiştirme](how-to-substitute-parameters-in-a-template.md)
 - [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md)
-- [Nasıl yapılır: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
+- [Nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
 - [Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

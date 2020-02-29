@@ -14,16 +14,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 301b829341eeb859030afabbf2225ea833e99a22
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ec257d67530692fc885d971e21136c10e7a271f6
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587686"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167801"
 ---
 # <a name="design-warnings"></a>Tasarım uyarıları
 
-Tasarım uyarıları [.net tasarım yönergelerine](/dotnet/standard/design-guidelines/)uygunluğunu destekler.
+Tasarım uyarıları [.NET Framework Tasarım yönergelerine](/dotnet/standard/design-guidelines/)uygunluğunu destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
@@ -31,7 +31,7 @@ Tasarım uyarıları [.net tasarım yönergelerine](/dotnet/standard/design-guid
 | - | - |
 | [CA1000: Genel türlerde statik üyeleri belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | [CA1001: Atılabilir alanlara sahip olan türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf, System. IDisposable türünde bir örnek alanı bildirir ve uygular ve sınıf IDisposable uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
-| [CA1002: Genel listeleri gösterme](../code-quality/ca1002.md) | System.Collections.Generic.List < (biri \<(T >) >) değil devralma performans için tasarlanmış bir genel koleksiyondur. Bu nedenle, Liste herhangi bir sanal üyeyi içermiyor. Bunun yerine devralma için tasarlanmış genel koleksiyonlar maruz kalmalıdır. |
+| [CA1002: Genel listeleri gösterme](../code-quality/ca1002.md) | System. Collections. Generic. List < (\<(T >) >), devralma değil, performans için tasarlanan genel bir koleksiyondur. Bu nedenle, Liste herhangi bir sanal üyeyi içermiyor. Bunun yerine devralma için tasarlanmış genel koleksiyonlar maruz kalmalıdır. |
 | [CA1003: Genel olay işleyici örnekleri kullan](../code-quality/ca1003.md) | Bir tür, imzası iki parametre (ilk bir nesne ve ikinci olarak EventArgs 'a atanabilen bir tür) içeren void döndüren bir temsilci içerir ve kapsayan bütünleştirilmiş kod 2,0 .NET Framework hedefler. |
 | [CA1004: Genel metotlar tür parametresi sağlamalıdır](../code-quality/ca1004.md) | Tip argümanının açıkça özelleştirilmesi yerine yöntemi geçen argüman tipiyle tanımlanan genel yöntemin nasıl tip argümanı olduğunun sonucudur. Çıkarımı etkinleştirmek için bir genel yöntem parametre imzası yöntem türü parametresi gibi aynı türde bir parametre içermelidir. Bu durumda, tip bağımsız değişkeninin belirtilmesine gerek yoktur. Tüm tür parametreleri için çıkarımı kullandığınızda, genel ve genel olmayan örnek yöntemleri çağırma söz dizimi aynıdır; Bu, genel yöntemlerin kullanılabilirliğini basitleştirir. |
 | [CA1005: Genel türlerde aşırı parametrelerden kaçının](../code-quality/ca1005.md) | Daha çok tip parametresi, genel tip içerir, bilmek daha zordur ve hangi tip parametrelerinin temsil ettiğini anımsamak zordur. Genellikle tek bir tür parametresiyle, List\<T > ve belirli durumlarda iki tür parametresi ile birlikte, sözlük\<TKey, TValue > olarak açıktır. Ancak, iki parametreden fazla parametre varsa, birçok kullanıcı için zorluk derecesi artar. |
@@ -88,7 +88,7 @@ Tasarım uyarıları [.net tasarım yönergelerine](/dotnet/standard/design-guid
 | [CA1061: Taban sınıf yöntemlerini gizlemeyin](../code-quality/ca1061.md) | Basit türdeki bir yöntem türetilmiş türdeki adlandırılmış yöntem tarafından gizlenmiştir, türetilmiş yöntemin parametre imzası yalnızca türetilmiş türleri ve karşılık gelen temel yöntemin parametre imzası daha zayıf türlerine göre farklı olduğunda temel türde bir yöntemin türetilmiş türle aynı adlı yöntem olarak gizlidir. |
 | [CA1062: Genel yöntemlerin bağımsız değişkenlerini doğrulayın](../code-quality/ca1062.md) | Dışarıdan görünen yöntemlerin null'a karşı denetlenmesi için geçirilen tüm başvuru bağımsız değişkenleri. |
 | [CA1063: IDisposable'ı doğru uygulayın](../code-quality/ca1063.md) | Tüm IDisposable türleri Dispose kalıbını doğru uygulamalıdır. |
-| [CA1064: Özel durumlar genel olmamalıdır](../code-quality/ca1064.md) | Bir iç özel durum yalnızca kendi iç kapsamı içinde görülebilir. İç kapsam dışında kalan özel durumlardan sonra, sadece basit istisnalar istisna yakalamak için kullanılabilir. İç özel durum öğesinden devralınan <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, veya <xref:System.ApplicationException?displayProperty=fullName>, harici kod özel durum ne olduğunu bilmek yeterli bilgiye sahip değildir. |
+| [CA1064: Özel durumlar genel olmamalıdır](../code-quality/ca1064.md) | Bir iç özel durum yalnızca kendi iç kapsamı içinde görülebilir. İç kapsam dışında kalan özel durumlardan sonra, sadece basit istisnalar istisna yakalamak için kullanılabilir. İç özel durum <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>veya <xref:System.ApplicationException?displayProperty=fullName>devralınmışsa, dış kodun özel durumla ne yapacaklarından haberdar olmak için yeterli bilgileri olmayacaktır. |
 | [CA1065: Beklenmedik konumlarda özel durumlar tetiklemeyin](../code-quality/ca1065.md) | İstisna atılmasını beklemeyen yöntem bir istisna atar. |
 | [CA1068: CancellationToken parametreleri en son gelmelidir](../code-quality/ca1068.md) | Bir yöntem, son parametre olmayan CancellationToken parametresine sahiptir. |
 | [CA2210: Derlemelerin tanımlayıcı adı geçerli olmalıdır](../code-quality/ca2210.md) | Güçlü ad oynanmış derlemeyi bilmeden yükleyerek istemcileri korur. Güçlü adı olmayan derlemeler oldukça sınırlı sayıda senaryo dışında kullanılmamalıdır. Düzgün imzalanmamış derlemeleri paylaşırsanız veya dağıtırsanız, derleme aslı bozuabilir, ortak dil çalışma zamanı derlemeyi yükleyemeyebilir veya kullanıcı kendi bilgisayarındaki doğrulamayı devre dışı bırakabilir. |

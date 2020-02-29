@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61a8cce68a55f6db26de7754bdfc9dda196c457a
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: 9c26c35c09353d740f6db9745222bb66db40e7ba
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091790"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167760"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Natvis çerçevesini kullanarak hata C++ ayıklayıcıda nesnelerin özel görünümlerini oluşturma
 
@@ -94,6 +94,30 @@ Visual Studio hata ayıklayıcı, *. natvis* dosyalarını C++ projelere otomati
 >[!NOTE]
 >Bir *. pdb* 'den yüklenen Natvis kuralları yalnızca *. pdb* 'nin başvurduğu modüllerde bulunan türlere uygulanır. Örneğin, *Module1. pdb* `Test`adlı bir tür için Natvis girişi varsa, bu yalnızca *Module1. dll*içindeki `Test` sınıfı için geçerlidir. Başka bir modül de `Test`adlı bir sınıfı tanımlıyorsa, *Module1. pdb* Natvis girdisi buna uygulanmaz.
 
+**Bir *. natvis* dosyasını bir VSIX paketi aracılığıyla yüklemek ve kaydetmek için:**
+
+Bir VSıX paketi, *. natvis* dosyalarını yükleyebilir ve kaydedebilir. Nerede yüklendiğine bakılmaksızın, tüm kayıtlı *. natvis* dosyaları hata ayıklama sırasında otomatik olarak alınır.
+
+1. *. Natvis* dosyasını VSIX paketine dahil edin. Örneğin, aşağıdaki proje dosyası için:
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+     <ItemGroup>
+       <VSIXSourceItem Include="Visualizer.natvis" />
+     </ItemGroup>
+   </Project>
+   ```
+
+2. *. Natvis* dosyasını *Source. Extension. valtmanifest* dosyasına kaydedin:
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+     <Assets>
+       <Asset Type="NativeVisualizer" Path="Visualizer.natvis"  />
+     </Assets>
+   </PackageManifest>
+   ```
+
 ### <a name="BKMK_natvis_location"></a>Natvis dosya konumları
 
 Birden çok projeye uygulanmasını istiyorsanız, *. natvis* dosyalarını Kullanıcı dizininize veya bir sistem dizinine ekleyebilirsiniz.
@@ -104,19 +128,21 @@ Birden çok projeye uygulanmasını istiyorsanız, *. natvis* dosyalarını Kull
 
 2. Yüklü C++ bir proje veya üst düzey çözümdeki *. natvis* dosyaları. Bu grup, sınıf kitaplıkları C++ da dahil olmak üzere tüm yüklü projeleri içerir, ancak diğer dillerdeki projeler içermez.
 
+3. Herhangi bir *. natvis* dosyası, bir VSIX paketi aracılığıyla yüklenir ve kaydedilir.
+
 ::: moniker range="vs-2017"
 
-3. Kullanıcıya özgü Natvis dizini (örneğin, *%userprofile%\, Visual Studio 2017 \ Görselleştiriciler*).
+4. Kullanıcıya özgü Natvis dizini (örneğin, *%userprofile%\, Visual Studio 2017 \ Görselleştiriciler*).
 
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
 
-3. Kullanıcıya özgü Natvis dizini (örneğin, *%userprofile%\, Studio 2019 \ Görselleştiriciler*).
+4. Kullanıcıya özgü Natvis dizini (örneğin, *%userprofile%\, Studio 2019 \ Görselleştiriciler*).
 
 ::: moniker-end
 
-4. Sistem genelindeki Natvis dizini ( *%VSInstallDir%\common7\packages\debugger\görselleştiriciler*). Bu dizin, Visual Studio ile yüklenen *. natvis* dosyalarını içerir. Yönetici izinleriniz varsa, bu dizine dosyalar ekleyebilirsiniz.
+5. Sistem genelindeki Natvis dizini ( *%VSInstallDir%\common7\packages\debugger\görselleştiriciler*). Bu dizin, Visual Studio ile yüklenen *. natvis* dosyalarını içerir. Yönetici izinleriniz varsa, bu dizine dosyalar ekleyebilirsiniz.
 
 ## <a name="modify-natvis-files-while-debugging"></a>Hata ayıklarken. Natvis dosyalarını değiştirme
 
@@ -682,7 +708,7 @@ UIVisualizer öğesine bir örnek aşağıda verilmiştir:
 </Type>
 ```
 
- Bellek içi bit eşlemler görüntülemek için kullanılan [görüntü izleme](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017) uzantısında bir `UIVisualizer` örneğini görebilirsiniz.
+ Bellek içi bit eşlemler görüntülemek için kullanılan [görüntü izleme](https://marketplace.visualstudio.com/search?term=%22Image%20Watch%22&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) uzantısında bir `UIVisualizer` örneğini görebilirsiniz.
 
 ### <a name="BKMK_CustomVisualizer"></a>CustomVisualizer öğesi
  `CustomVisualizer`, Visual Studio Code 'da görselleştirmeleri denetlemek için yazdığınız VSıX uzantısını belirten bir genişletilebilirlik noktasıdır. VSıX uzantıları yazma hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).

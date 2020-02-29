@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 92e027b58d1a05d77055048872c38f45939cbfe0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 71d2fe83690e55d49bb23bffb09de91c8f7534b6
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587452"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167630"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
@@ -78,7 +78,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 - **Scope** -uyarının gizlendiği hedef. Hedef belirtilmemişse, özniteliğinin hedefine ayarlanır. Desteklenen [kapsamlar](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope) şunları içerir:
 
-  - `module`-bu kapsam bir derlemeye karşı uyarıları göstermez. Tüm proje için geçerli olan genel bir gizleme.
+  - [`module`](#module-suppression-scope) -bu kapsam bir derlemeye karşı uyarıları göstermez. Tüm proje için geçerli olan genel bir gizleme.
 
   - `resource`-(yalnızca[eski FxCop](../code-quality/static-code-analysis-for-managed-code-overview.md) ) bu kapsam, modülün parçası olan kaynak dosyalarına yazılan tanılama bilgilerinde uyarıları bastırır (derleme). Bu kapsam, yalnızca kaynak dosyaları analiz eden C#Roslyn Çözümleyicisi tanılaması için/vb derleyicileri tarafından okunamaz/dikkate alınmıyor.
 
@@ -174,9 +174,17 @@ Genel düzey gizlemeler, açıkça sağlanmış Kullanıcı kaynağıyla eşleş
 > [!NOTE]
 > `Target` her zaman tam olarak nitelenmiş öğe adını içerir.
 
-## <a name="global-suppression-file"></a>Genel gizleme dosyası
+### <a name="global-suppression-file"></a>Genel gizleme dosyası
 
 Genel gizleme dosyası, bir hedef belirtmeyen küresel düzeyde gizlemeler veya gizlemeleri olan gizlemeleri korur. Örneğin, derleme düzeyi ihlallerin gizlemeleri bu dosyada depolanır. Ayrıca, bir form arkasındaki kod için proje düzeyi ayarları kullanılamadığından bazı ASP.NET gizlemeleri bu dosyada depolanır. **Hata listesi** penceresinde **Gizle** komutunun **Proje gizleme dosyasını** ilk kez seçtiğinizde, genel bir gizleme dosyası oluşturulur ve projenize eklenir.
+
+### <a name="module-suppression-scope"></a>Modül gizleme kapsamı
+
+**Modül** kapsamını kullanarak derlemenin tamamında kod kalitesi ihlallerini gizleyebilirsiniz.
+
+Örneğin, _Globalsuppressions_ proje dosyanızdaki aşağıdaki öznitelik bir ASP.NET Core projesi Için ConfigureAwait ihlaline neden olacak:
+
+`[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2007:Consider calling ConfigureAwait on the awaited task", Justification = "ASP.NET Core doesn't use thread context to store request context.", Scope = "module")]`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

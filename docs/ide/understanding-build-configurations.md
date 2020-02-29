@@ -26,12 +26,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b472ca78d36247a76bf397989f48e04230ccd7d
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: a37d4fa5dc92253b94dc64590c9df5fec7703ceb
+ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027609"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904171"
 ---
 # <a name="understand-build-configurations"></a>Derleme yapılandırmalarını anlama
 
@@ -44,7 +44,7 @@ Projelerinizi farklı ayarlarla oluşturmanız gerektiğinde derleme yapılandı
 
 Oluşturulan çıkış dosyalarının depolandığı yapılandırma ve platform denetimi. Normalde, Visual Studio projenizi oluşturduğunda çıktı, etkin yapılandırma (örneğin, *bin/Debug/x86*) adlı bir proje alt klasörüne yerleştirilir, ancak bunu değiştirebilirsiniz.
 
-Çözüm ve proje düzeyinde kendi yapı yapılandırmalarınızı oluşturabilirsiniz. Çözüm yapılandırması, yapılandırma etkin olduğunda hangi projelerin yapıya ekleneceğini belirler. Yalnızca etkin çözüm yapılandırmasında belirtilen projeler oluşturulur. Proje yapılandırması, projeyi oluştururken hangi derleme ayarlarının ve derleyici seçeneklerinin kullanıldığını belirler.
+Çözüm ve proje düzeyinde kendi yapı yapılandırmalarınızı oluşturabilirsiniz. Çözüm yapılandırması, yapılandırma etkin olduğunda hangi projelerin yapıya ekleneceğini belirler. Yalnızca etkin çözüm yapılandırmasında belirtilen projeler oluşturulur. Configuration Manager birden çok hedef platform seçildiyse, o platformda uygulanan tüm projeler oluşturulur. Proje yapılandırması, projeyi oluştururken hangi derleme ayarlarının ve derleyici seçeneklerinin kullanıldığını belirler.
 
 Bir yapılandırma oluşturmak, seçmek, değiştirmek veya silmek için **Configuration Manager**kullanabilirsiniz. Açmak için, menü çubuğunda **Configuration Manager** > **Oluştur** ' u seçin veya arama kutusuna **yapılandırma** yazın. Bir yapılandırma seçmek veya **Configuration Manager**açmak için **Standart** araç çubuğundaki **çözüm yapılandırmaları** listesini de kullanabilirsiniz.
 
@@ -70,6 +70,12 @@ Etkin çözüm yapılandırması, IDE için de bağlam sağlar. Örneğin, bir p
 Bir projenin hedeflediği yapılandırma ve platform, derleme ayarlarını ve derlendiklerinde kullanılacak derleyici seçeneklerini belirtmek için birlikte kullanılır. Bir proje, her yapılandırma ve platformun birleşimi için farklı ayarlara sahip olabilir. Bir projenin özelliklerini değiştirmek için **Çözüm Gezgini**' de proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  Proje Tasarımcısı 'nın **Build** sekmesinin en üstünde, yapı ayarlarını düzenlemek için etkin bir yapılandırma seçin.
 
 ![Proje Tasarımcısı yapılandırması](media/understanding-build-configurations/project-designer-configuration.png)
+
+## <a name="building-multiple-configurations"></a>Birden çok yapılandırma oluşturma
+
+**Build** > **Build Solution** komutunu kullanarak bir çözüm oluşturduğunuzda, Visual Studio yalnızca etkin yapılandırmayı oluşturur. Bu çözüm yapılandırmasında belirtilen tüm projeler oluşturulmuştur ve oluşturulan tek proje yapılandırması, Visual Studio 'da araç çubuğunda gösterilen etkin çözüm yapılandırmasında ve etkin çözüm platformunda belirtidir. Örneğin, **Hata Ayıkla** ve **x86**. Diğer tanımlı yapılandırma ve platformlar derlenmez.
+
+Tek bir eylemde birden çok yapılandırma ve platform oluşturmak istiyorsanız, Visual Studio 'da **build** > **Batch Build** seçeneğini kullanabilirsiniz. Bu özelliğe erişmek için **Ctrl**+**Q** tuşlarına basarak arama kutusunu açın ve `Batch build`girin. Toplu derleme tüm proje türleri için kullanılamaz. Bkz. [nasıl yapılır: aynı anda birden çok yapılandırma oluşturma](how-to-build-multiple-configurations-simultaneously.md).
 
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Visual Studio proje yapılandırmasını nasıl atar
 

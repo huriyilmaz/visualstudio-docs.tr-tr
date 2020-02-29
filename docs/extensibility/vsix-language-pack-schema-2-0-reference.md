@@ -11,12 +11,12 @@ ms.assetid: 2a2932bc-cdbe-4d32-91fa-a3e0474f9098
 ms.author: zorio
 author: zoeyr
 manager: jillfra
-ms.openlocfilehash: fe6d4bd9e82950d77925dda1560b5c204633d392
-ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
+ms.openlocfilehash: f97fd5aee27cdc97cf6eb5731da9fad9cb999e18
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739324"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169345"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSıX dil paketi şeması 2,0 başvurusu
 
@@ -24,11 +24,11 @@ VSıX dil paketi şeması, VSıX paketleri için yerelleştirilmiş yükleme bil
 
 ## <a name="language-pack-schema"></a>Dil paketi şeması
 
-Dil paketi dosyasının kök öğesi, dil paketi biçiminin `<PackageLanguagePackManifest>`sürümü olan öğesinin `Version`bir özniteliğiyle birlikte bulunur. Bu makalede, `Version` özniteliği değere `Version="2.0.0"`ayarlanarak bildirimde belirtilen dil paketi biçiminin 2,0 sürümü açıklanır. Kök öğesi tam olarak bir alt `<Metadata>` öğe içeriyor.
+Dil paketi dosyasının kök öğesi, dil paketi biçiminin sürümü olan bir `Version`özniteliğiyle `<PackageLanguagePackManifest>`. Bu makalede, `Version` özniteliği `Version="2.0.0"`değer olarak ayarlanarak bildirimde belirtilen dil paketi biçiminin 2,0 sürümü açıklanır. Kök öğesi tam olarak bir alt `<Metadata>` öğesi içeriyor.
 
 ### <a name="packagelanguagepackmanifest-element"></a>PackageLanguagePackManifest öğesi
 
-`<PackageLanguagePackManifest>` Öğesi içinde aşağıdaki öğe var olmalıdır:
+`<PackageLanguagePackManifest>` öğesi içinde aşağıdaki öğe var olmalıdır:
 
 |Başlık|Açıklama|
 |-----------|-----------------|
@@ -36,7 +36,7 @@ Dil paketi dosyasının kök öğesi, dil paketi biçiminin `<PackageLanguagePac
 
 ### <a name="metadata-element"></a>Metadata öğesi
 
-`<Metadata>` Öğesi içinde aşağıdaki öğelere sahip olabilirsiniz:
+`<Metadata>` öğesi içinde aşağıdaki öğelere sahip olabilirsiniz:
 
 |Başlık|Açıklama|
 |-----------|-----------------|
@@ -53,7 +53,7 @@ Dil paketi dosyasının kök öğesi, dil paketi biçiminin `<PackageLanguagePac
 <?xml version="1.0" encoding="utf-8"?>
 <PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <DisplayName>Arbol de Familia</LocalizedName>
+    <DisplayName>Arbol de Familia</DisplayName>
     <Description> Esta extensión pone control personalizado en la caja de herramientas por manejar información de familia.</Description>
     <MoreInfo> http://www.contoso.com/products/es/ArbolDeFamilia.htm</MoreInfo>
     <License>Eula.rtf</License>

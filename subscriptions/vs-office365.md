@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Visual Studio aboneliklerine dahil edilen Office 365 Pro Plus avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 4ff521651e25fd1ad73bd629a111c7f8378fbfe3
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: 4f8ad514cae626e824171937cd627b110980dbca
+ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036727"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904158"
 ---
 # <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365 Pro Plus
 
@@ -76,14 +76,15 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresi
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 - Visual Studio IDE, Azure DevOps veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinizden emin olun:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure DevTest bireysel kredisi](vs-azure.md) Office için uygulama geliştirmeyi planlıyorsanız, [Office geliştirici aboneliğinizi](vs-office-dev.md) etkinleştirmek isteyeceksiniz
 
-## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](/visualstudio/)
-- [Azure DevOps belgeleri](/azure/devops/)
-- [Azure belgeleri](/azure/)
-- [Microsoft 365 belgeleri](/microsoft-365/)
