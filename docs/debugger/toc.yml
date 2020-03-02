@@ -280,12 +280,14 @@
           href: remote-debugging-aspnet-on-a-remote-iis-computer.md
         - name: IIS bilgisayarında ASP.NET hatalarını uzaktan ayıklama
           href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
-        - name: Azure’da ASP.NET hatalarını uzaktan ayıklama
+        - name: Azure’da ASP.NET Core hatalarını uzaktan ayıklama
           href: remote-debugging-azure.md
         - name: 'Uzaktan C# veya Visual Basic projesi hatası ayıklama'
           href: remote-debugging-csharp.md
         - name: C++ projesinin hatalarını uzaktan ayıklama
           href: remote-debugging-cpp.md
+        - name: Linux’ta .NET Core hatalarını uzaktan ayıklama
+          href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: Uzaktan hata ayıklayıcı bağlantı noktası atamaları
           href: remote-debugger-port-assignments.md
         - name: Windows Güvenlik Duvarı’nı uzaktan hata ayıklama için yapılandırma

@@ -1,0 +1,78 @@
+### YamlMime:Landing
+title: Visual Studio Genişletilebilirliği
+summary: Visual Studio genişletilebilirliği hakkında bilgi edinin.
+metadata:
+  title: Visual Studio Genişletilebilirliği
+  description: Visual Studio’yu genişletmeyi öğrenin.
+  ms.topic: landing-page
+  ms.date: 02/24/2020
+  author: madskristensen
+  ms.author: madsk
+  manager: jillfra
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.openlocfilehash: e37a713b133d76bbd3d0e3fa4363238d58407ce4
+  ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77910878"
+landingContent:
+- title: Başlarken
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Visual Studio SDK’yı Yükleme
+      url: /visualstudio/extensibility/installing-the-visual-studio-sdk/
+  - linkListType: overview
+    links:
+    - text: Visual Studio uzantıları yazma
+      url: https://devblogs.microsoft.com/visualstudio/getting-started-writing-visual-studio-extensions
+  - linkListType: tutorial
+    links:
+    - text: 'İlk uzantınızı oluşturma: Merhaba Dünya'
+      url: /visualstudio/extensibility/extensibility-hello-world
+- title: Genişletme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Menüler ve Komutlar
+      url: /visualstudio/extensibility/extending-menus-and-commands
+    - text: Araç Pencereleri
+      url: /visualstudio/extensibility/extending-and-customizing-tool-windows
+    - text: Düzenleyici ve Diller
+      url: /visualstudio/extensibility/editor-and-language-service-extensions
+    - text: Dil Sunucusu Protokolü
+      url: /visualstudio/extensibility/language-server-protocol
+    - text: Ayarlar ve Seçenekler
+      url: /visualstudio/extensibility/extending-user-settings-and-options
+- title: Kaynaklar
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Visual Studio Genişletilebilirliği örnekleri
+      url: https://github.com/Microsoft/VSSDK-Extensibility-Samples
+  - linkListType: learn
+    links:
+    - text: ExtendVS Gitter topluluğu
+      url: https://gitter.im/Microsoft/extendvs
+    - text: Visual Studio Blogunda Genişletilebilirlik
+      url: https://devblogs.microsoft.com/visualstudio/tag/extensions/
+- title: Uzantıları gönderme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Uzantı yayımlama
+      url: /visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension
+    - text: Komut satırı yayımlama
+      url: /visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension-via-command-line
+    - text: Özel galeriler
+      url: https://devblogs.microsoft.com/visualstudio/create-a-private-gallery-for-self-hosted-visual-studio-extensions
+- title: Yenilikleri keşfetme
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio 2019 SDK
+      url: /visualstudio/extensibility/whats-new-visual-studio-2019-sdk
+    - text: Visual Studio 2017 SDK
+      url: /visualstudio/extensibility/what-s-new-in-the-visual-studio-2017-sdk
