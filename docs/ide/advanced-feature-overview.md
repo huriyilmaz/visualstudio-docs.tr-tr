@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3ece317d753cb5c4b0b4e5b0e02707a088e8917
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f65ce2b986114dc553b87db846262c931d74b4c0
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591742"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235205"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 'nun özellikleri
 
@@ -84,7 +84,7 @@ Visual Studio 'Yu kullanarak macOS, Linux ve Windows için uygulama ve Oyunlar, 
 
 - Unity için Visual Studio Araçları kullanarak 2B ve 3B Oyunlar C# oluşturun. [](../cross-platform/visual-studio-tools-for-unity.md)
 
-- İOS, C++ Android ve Windows cihazları için yerel uygulamalar oluşturun. [ C++ Platformlar arası geliştirme için](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md)kullanarak iOS, Android ve Windows için oluşturulan kitaplıklarda ortak kod paylaşma.
+- İOS, C++ Android ve Windows cihazları için yerel uygulamalar oluşturun. [ C++ Platformlar arası geliştirme için](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development)kullanarak iOS, Android ve Windows için oluşturulan kitaplıklarda ortak kod paylaşma.
 
 - Android [öykünücüsüyle](../cross-platform/visual-studio-emulator-for-android.md)Android uygulamaları dağıtın, test edin ve hatalarını ayıklayın.
 
@@ -96,7 +96,7 @@ Visual Studio 'Yu kullanarak macOS, Linux ve Windows için uygulama ve Oyunlar, 
 
 Visual Studio 'daki **SQL Server Nesne Gezgini** , SQL Server Management Studio benzer veritabanı nesnelerinizin bir görünümünü sağlar. SQL Server Nesne Gezgini, açık hacimsiz veritabanı yönetimi ve tasarım işi yapmanızı sağlar. İş örnekleri, tablo verilerini düzenlemenizi, şemaları karşılaştırmayı, SQL Server Nesne Gezgini ' den çok bağlamsal menüler kullanarak sorguları yürütmeyi ve daha fazlasını içerir.
 
-![SQL Server Object Explorer](../ide/media/vs2015_sqlobjectexplorer.png)
+![SQL Server Nesne Gezgini](../ide/media/vs2015_sqlobjectexplorer.png)
 
 ## <a name="debug-test-and-improve-your-code"></a>Hata ayıklama, test etme ve kodunuzu geliştirme
 

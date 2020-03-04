@@ -3,15 +3,15 @@ title: Kullanıcı atamalarını ve işlem emirlerini izleme | Visual Studio Mar
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için Yöneticiler ' responsibilty hakkında bilgi edinin.
-ms.openlocfilehash: bf7fcdb2fae2ad6d354c4320ec26c4f1025766dd
-ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
+ms.openlocfilehash: c7dc2b55b3e9d1d1aea6b2712dbeb96316f48e7a
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967333"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235231"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamasını ve işlem emirlerini izleme
 Visual Studio abonelikleri yöneticilerinin, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki ana hatlarıyla belirtilen zamanlamada yapılan kullanımlar için Visual Studio kullanımını ve işlem emirlerini izlemesi beklenmektedir. Yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
@@ -36,6 +36,12 @@ Açık Lisans ve açık değer gibi programlar aracılığıyla veya aylık olar
 ## <a name="enterprise-mpsa-and-select-agreements"></a>Enterprise, MPSA ve Select anlaşmaları
 Microsoft Kurumsal sözleşmeleri (EA), MPSA ve Select Plus sözleşmeleri, Visual Studio yazılımlarını zaman içinde nasıl kullanacağınızı ve lisanslayabilmeniz için size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını sözleşme dönemi boyunca belirlenen maksimum kullanım sayısına getirmek için yıllık bir doğru sırada olmalıdır.
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Yönetici sorumlulukları](admin-responsibilities.md)
@@ -43,7 +49,3 @@ Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
 
-## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio belgeleri](/visualstudio/)
-- [Azure belgeleri](/azure/)
-- [Azure DevOps](/azure/devops/)

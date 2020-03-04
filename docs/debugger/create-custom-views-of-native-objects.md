@@ -1,7 +1,7 @@
 ---
 title: C++ nesnelerinin özel görünümlerini oluşturma
 description: Visual Studio 'Nun hata ayıklayıcıda yerel türleri görüntüleme biçimini özelleştirmek için Natvis çerçevesini kullanın
-ms.date: 10/31/2018
+ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
 - natvis
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c26c35c09353d740f6db9745222bb66db40e7ba
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 064761d87b9aa851e40cf906e7734a3578dcad1a
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78167760"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234975"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Natvis çerçevesini kullanarak hata C++ ayıklayıcıda nesnelerin özel görünümlerini oluşturma
 
@@ -262,7 +262,7 @@ Aşağıdaki örnekte, görselleştirme yalnızca `BaseClass` türü için geçe
 
 #### <a name="priority-attribute"></a>Priority özniteliği
 
-İsteğe bağlı `Priority` özniteliği, tanım ayrıştıramazsa alternatif tanımların kullanılacağı sırayı belirtir. `Priority` olası değerleri şunlardır: `Low`, `MediumLow`,`Medium`, `MediumHigh`ve `High`. Varsayılan değer `Medium` şeklindedir. `Priority` özniteliği yalnızca aynı *. natvis* dosyasındaki öncelikler arasında ayrım yapar.
+İsteğe bağlı `Priority` özniteliği, tanım ayrıştıramazsa alternatif tanımların kullanılacağı sırayı belirtir. `Priority` olası değerleri şunlardır: `Low`, `MediumLow`,`Medium`, `MediumHigh`ve `High`. Varsayılan değer: `Medium`. `Priority` özniteliği yalnızca aynı *. natvis* dosyasındaki öncelikler arasında ayrım yapar.
 
 Aşağıdaki örnek öncelikle 2015 STL ile eşleşen girişi ayrıştırır. Bu, ayrıştıramazsa, STL 'nin 2013 sürümü için alternatif girişi kullanır:
 
@@ -537,7 +537,10 @@ Hata ayıklayıcı, `NextPointer` ve `ValueNode` ifadelerini, üst liste türü 
 `ValueNode` boş bırakılabilir veya `LinkedListItems` düğümüne başvurmak için `this` kullanabilirsiniz.
 
 #### <a name="customlistitems-expansion"></a>CustomListItems genişletmesi
+
 `CustomListItems` genişletmesi, Hashtable gibi bir veri yapısına geçiş yapmak için özel mantık yazmanızı sağlar. Değerlendirmek için gereken her şeye yönelik ifadeleri kullanan C++ veri yapılarını görselleştirmek için `CustomListItems` kullanın, ancak `ArrayItems`, `IndexListItems`veya `LinkedListItems`için Mold 'ı tam olarak uydurmayın.
+
+`Exec`, genişletmeyle tanımlanan değişkenleri ve nesneleri kullanarak `CustomListItems` genişletmenin içinde kod yürütmek için kullanabilirsiniz. `Exec`ile mantıksal işleçler, aritmetik işleçler ve atama işleçlerini kullanabilirsiniz. İfade değerlendirici tarafından desteklenen [hata ayıklayıcı iç işlevleri](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) dışında, işlevleri değerlendirmek için `Exec` kullanamazsınız. C++
 
 `CAtlMap` için aşağıdaki Görselleştirici, `CustomListItems` uygun olan harika bir örnektir.
 
@@ -569,24 +572,6 @@ Hata ayıklayıcı, `NextPointer` ve `ValueNode` ifadelerini, üst liste türü 
     </Expand>
 </Type>
 ```
-
-`Exec`, genişletmeyle tanımlanan değişkenleri ve nesneleri kullanarak `CustomListItems` genişletmenin içinde kod yürütmek için kullanabilirsiniz. `Exec`ile mantıksal işleçler, aritmetik işleçler ve atama işleçlerini kullanabilirsiniz. İşlevleri değerlendirmek için `Exec` kullanamazsınız.
-
-`CustomListItems` aşağıdaki iç işlevleri destekler:
-
-- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, `wcsncmp`, `_strnicmp`, `_wcsnicmp`, `memcmp`, `memicmp`, `wmemcmp`, `strchr`, `wcschr`, `memchr`, `wmemchr`, `strstr`, `wcsstr`, `__log2`, `__findNonNull`
-- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, `DynamicMemberLookup`, `DecodePointer`, `DynamicCast`
-- `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
-- `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
-- `ConcurrencyArray_OperatorBracket_tidx // Concurrency::array<>::operator[tiled_index<>] and operator(tiled_index<>)`
-- `ConcurrencyArrayView_OperatorBracket_idx // Concurrency::array_view<>::operator[index<>] and operator(index<>)`
-- `ConcurrencyArrayView_OperatorBracket_int // Concurrency::array_view<>::operator(int, int, ...)`
-- `ConcurrencyArrayView_OperatorBracket_tidx // Concurrency::array_view<>::operator[tiled_index<>] and operator(tiled_index<>)`
-- `Stdext_HashMap_Int_OperatorBracket_idx`
-- `Std_UnorderedMap_Int_OperatorBracket_idx`
-- `TreeTraverse_Init // Initializes a new tree traversal`
-- `TreeTraverse_Next // Returns nodes in a tree`
-- `TreeTraverse_Skip // Skips nodes in a pending tree traversal`
 
 #### <a name="BKMK_TreeItems_expansion"></a>Ağaç öğeleri genişletmesi
  Görselleştirilmiş tür bir ağacı temsil ediyorsa, hata ayıklayıcı ağaca yol açabilir ve bir `TreeItems` düğümü kullanarak alt öğelerini görüntüleyebilir. Bir `TreeItems` düğümü kullanarak `std::map` türünün görselleştirmesi aşağıda verilmiştir:
@@ -696,7 +681,7 @@ UIVisualizer öğesine bir örnek aşağıda verilmiştir:
 
 - Bir `ServiceId` - `Id` öznitelik çifti bir `UIVisualizer`tanımlar. `ServiceId`, görselleştiricisi paketinin sunduğu hizmetin GUID 'sidir. `Id`, bir hizmet birden fazla sağlıyorsa görselleştiricilerin farklılaştırır. Yukarıdaki örnekte, aynı görselleştiricisi hizmeti iki Görselleştiriciler sağlar.
 
-- `MenuName` özniteliği, hata ayıklayıcıdaki büyüteç simgesinin yanında açılan kutuda görüntülenecek Görselleştirici adını tanımlar. Örneğin:
+- `MenuName` özniteliği, hata ayıklayıcıdaki büyüteç simgesinin yanında açılan kutuda görüntülenecek Görselleştirici adını tanımlar. Örnek:
 
   ![UIVisualizer menü kısayol menüsü](../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer menü kısayol menüsü")
 

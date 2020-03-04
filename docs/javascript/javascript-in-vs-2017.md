@@ -12,17 +12,16 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: wilkelly
 manager: jillfra
-monikerRange: vs-2017
-ms.openlocfilehash: 653b2576b0076d02f2e18cedc6f9f9890fd98fe5
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 2a0d3657843dcf282e5c9aab8609efe5f9611965
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888655"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234962"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017’de JavaScript
 
-JavaScript, Visual Studio 'da birinci sınıf bir dildir. Visual Studio IDE'de JavaScript kodu yazarken standart düzenleme yardımlarının (kod parçacıkları, IntelliSense, vb.) çoğunu veya tümünü kullanabilirsiniz. Birçok uygulama türü ve hizmeti için JavaScript kodu yazabilirsiniz.
+JavaScript, Visual Studio'da birinci sınıf bir dildir. Visual Studio IDE'de JavaScript kodu yazarken standart düzenleme yardımlarının (kod parçacıkları, IntelliSense, vb.) çoğunu veya tümünü kullanabilirsiniz. Birçok uygulama türleri ve hizmetler için JavaScript kodu yazabilirsiniz.
 
 > [!NOTE]
 > Microsoft 'un JavaScript API başvurusunu docs.microsoft.com adresinden MDN karşılıklarına yeniden yönlendirerek [MDN Web belgelerini](https://developer.mozilla.org/en-US/) Web 'in tek durağı olan bir geliştirme kaynağı haline getirme konusunda topluluk genelinde çaba harcadık. Ayrıntılar için bu [duyuruya](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)bakın.
@@ -261,7 +260,7 @@ Bildirim (`.d.ts`) [dosya yazma hakkında](http://www.typescriptlang.org/docs/ha
 Yeni dil hizmeti bir yürütme altyapısı yerine statik analizler tarafından desteklenmediğinden (farklar hakkında bilgi edinmek için [Bu sorunu](https://github.com/Microsoft/TypeScript/issues/4789) okuyun), artık algılanamayan birkaç JavaScript deseni vardır.
 En yaygın olarak kullanılan desenler "daha fazla" modeldir.
 Şu anda dil hizmeti, bildirimde daha sonra bulunan özelliklere sahip nesneler üzerinde IntelliSense sağlayamaz.
-Örneğin:
+Örnek:
 
 ```js
 var obj = {};

@@ -1,6 +1,6 @@
 ---
 title: Hata Ayıklayıcıdaki İfadeler | Microsoft Docs
-ms.date: 02/07/2018
+ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.expressions
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6040988961e918c66ed08e7620607d100b2e07fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b05bc8de6db15261a9861867bc93a398b60bf0d0
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736209"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235009"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki ifadeler
 Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.
@@ -32,7 +32,7 @@ Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü*
 Aşağıdaki bölümlerde, Visual Studio tarafından desteklenen diller için ifade değerlendirmesinin sınırlamaları açıklanmaktadır.
 
 ## <a name="f-expressions-are-not-supported"></a>F#ifadeler desteklenmiyor
-F#ifadeler tanınmıyor. Kod hata ayıklaması F# yapıyorsanız, ifadeleri bir hata ayıklayıcı penceresine veya iletişim kutusuna C# girmeden önce ifadelerinizi sözdizimine çevirmeniz gerekir. İfadelerini F# C#' den ' a çevirirken, tek`=`C# F# kullandığında eşitlik için test etmek üzere`==`işlecini kullandığını unutmayın.
+F#ifadeler tanınmıyor. Kod hata ayıklaması F# yapıyorsanız, ifadeleri bir hata ayıklayıcı penceresine veya iletişim kutusuna C# girmeden önce ifadelerinizi sözdizimine çevirmeniz gerekir. İfadelerini F# C#' den ' a çevirirken, tek `=`C# F# kullandığında eşitlik için test etmek üzere `==` işlecini kullandığını unutmayın.
 
 ## <a name="c-expressions"></a>C++İfadelerde
 İçindeki C++ifadelerle bağlam işleçlerini kullanma hakkında daha fazla bilgi için bkz. [Bağlam işleciC++()](../debugger/context-operator-cpp.md).
@@ -100,11 +100,11 @@ Hata ayıklayıcı iç işlevleri:
 |Alan|İç işlevler|
 |----------|-------------------------|
 |**Dize uzunluğu**|strlen, wcslen, strnlen, wcsnlen|
-|**Dize karşılaştırması**|strcmp, wcscmp, stricmp, _stricmp, _strcmpi, wcsıcmp, _wcscmpi, _wcsnıcmp, strncmp, wcsncmp, strnıcmp, wcsnıcmp|
-|**Dize arama**|strchr, wcschr, strstr, wcsstr|
-|**Win**|GetLastError (), TlsGetValue ()|
-|**Windows 8**|WindowsGetStringLen (), Windowsgetstrıngrawbuffer ()<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
-|**Malın**|__log2<br /><br /> Belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış olan günlük 2 değerini döndürür.|
+|**Dize karşılaştırması**|strcmp, wcscmp, stricmp, _stricmp, _strcmpi, wcsıcmp, _wcscmpi, _wcsnicmp, strncmp, wcsncmp, strnıcmp, wcsnıcmp|
+|**Dize arama**|strchr, wcschr, memchr, wmemchr, strstr, wcsstr|
+|**Win**|GetLastError, TlsGetValue|
+|**Windows 8**|WindowsGetStringLen, Windowsgetstrıngrawbuffer<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
+|**Çeşitli**|__log2//, belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış 2 günlük tabanı döndürür.<br /><br />__findNonNull, Decodehstrıng, Windowscompareordinal, Roınspectcapturedstackbacktrace, CoDecodeProxy, GetEnvBlockLength, Decodewinrtkısıttedexception, DynamicMemberLookup, DecodePointer, DynamicCast<br /><br />Stdext_HashMap_Int_OperatorBracket_idx, Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//concurrency:: Array < >:: operator [Dizin < >] ve işleç (Dizin < >)<br /><br />ConcurrencyArray_OperatorBracket_int//concurrency:: Array < >:: operator (int, int,...)<br /><br />ConcurrencyArray_OperatorBracket_tidx//concurrency:: Array < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />ConcurrencyArrayView_OperatorBracket_idx//concurrency:: array_view < >:: operator [Index < >] and işleci (Dizin < >)<br /><br />ConcurrencyArrayView_OperatorBracket_int//concurrency:: array_view < >:: operator (int, int,...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//concurrency:: array_view < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />Yeni bir ağaç geçişi TreeTraverse_Init//başlatır<br /><br />Bir ağaçtaki düğümleri TreeTraverse_Next//döndürür<br /><br />Bekleyen bir ağaç geçişinin içindeki düğümleri TreeTraverse_Skip//atlıyor|
 
 ## <a name="ccli---unsupported-expressions"></a>C++/CLı-desteklenmeyen Ifadeler
 

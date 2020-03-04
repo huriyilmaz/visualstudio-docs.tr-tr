@@ -3,20 +3,21 @@ title: Visual Studio aboneliklerinde atama vurgusu avantajı | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/30/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerinde bulunan atama vurgusu avantajı hakkında bilgi edinin
-ms.openlocfilehash: c985a4ae4c1cdcf5c034293d2848a764d6be3d24
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: 7b06800bd53e2843015f3f3509a4a2c7e0eae671
+ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983745"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78257182"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atama vurgulaması avantajı
-Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörüler olması gerekir. Visual Studio Enterprise aboneler, atama vurgulaması sayesinde uygulama kaynak kodlarını hızla tarayarak Azure 'a geçiş için uygulamalarının bulut hazırlığını tanımlayabilir ve bir geçiş sırasında ve sonrasında uygulamasının ilerlemesini izleyebilir.
+Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörüler olması gerekir. ATAMA vurgulaması sayesinde, Visual Studio aboneleri, Azure 'a geçiş için uygulamalarının bulut hazırlığını belirlemek üzere uygulama kaynak kodunu hızla tarayabilir ve bir geçiş sırasında ve sonrasında uygulamasının ilerlemesini izler.
 
-Visual Studio Enterprise aboneler, her abone için en fazla beş uygulama için SAÇıLMASı için tek aylık ücretsiz bir abonelik alabilir.
+- Visual Studio Enterprise aboneler, kullanıcıların beş adede kadar uygulamayı değerlendirmesine olanak tanıyan, CAST vurgulamada ücretsiz, tam bir özellik aboneliği alabilir.
+- Visual Studio Professional aboneler, bir uygulamanın üç aya göre değerlendirmesine izin veren benzer bir abonelik alabilir.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
@@ -26,7 +27,7 @@ Visual Studio Enterprise aboneler, her abone için en fazla beş uygulama için 
    > [!div class="mx-imgBorder"]
    > ![CAST vurgu avantajı kutucuğu](_img/vs-cast-highlight/vs-cast-highlight-tile.png)
 
-0. Kodunuzun başarıyla alındığını bildiren bir ileti görürsünüz.  **Etkinleştir**' e tıklayın, bu noktada, etkinleştirme işlemine devam EDEBILECEĞINIZ atama vurgusu sayfasına yönlendirilirsiniz.  (Şimdi etkinleştirmeyi tercih ederseniz, abonelik portalındaki atama vurgusu kutucuğuna her zaman geri dönebilirsiniz.  "Kod al" bağlantısı "etkinleştir" olarak değişir ve tıklatmak etkinleştirme işlemini sürdürür.)
+0. Kodunuzun başarıyla alındığını bildiren bir ileti görürsünüz.  **Etkinleştir**' e tıklayın. (Şimdi etkinleştirmeyi tercih ederseniz, abonelik portalındaki atama vurgusu kutucuğuna her zaman geri dönebilirsiniz.  "Kod al" bağlantısı "etkinleştir" olarak değişir ve tıklatmak etkinleştirme işlemini sürdürür.)
 
 0. Aboneliğinizin özelliklerini keşfedebileceğiniz atama vurgusu sayfasına yönlendirilirsiniz.  Hesabınızı oluşturmaya hazırsanız, iletişim bilgilerinizi Web formunda sağlamanız ve **Gönder**' e tıklamanız yeterlidir.
 
@@ -40,7 +41,7 @@ Visual Studio Enterprise aboneler, her abone için en fazla beş uygulama için 
 
 0. ATAMA ekibi isteğinizi değerlendirir ve hesabınızın oluşturulmasını sonlandırmak için sizinle iletişim kuracaktır.
 
-0. Ayrıca, isteğiniz alındığını teyit eden CAST 'dan aşağıdaki e-postayı alacaksınız.
+0. Ayrıca, isteğiniz alındığını teyit eden CAST 'dan aşağıdaki e-postayı alacaksınız.  (Bu örnek, kurumsal aboneler tarafından alınan e-postayı gösterir.)
 
    > *Microsoft Visual Studio Enterprise müşterileri için özel bir teklif sunmak üzere, atama vurgulaması için 30 günlük erişimi etkinleştirme isteğiniz için teşekkür ederiz!*
    >
@@ -73,16 +74,16 @@ Visual Studio Enterprise aboneler, her abone için en fazla beş uygulama için 
    > Aldığınız e-postadaki etkinleştirme bağlantısına tıkladığınızdan emin olun.  Aksi takdirde, atama vurgusu aboneliğinize erişemezsiniz. E-postayı gelen kutunuzda görmüyorsanız, istenmeyen posta klasörlerinizi denetlediğinizden emin olun.
 
 ## <a name="eligibility"></a>Önceliği
-| Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | 30 gün boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | 30 gün boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                             |  Yok          |
-| GitHub Enterprise ile Visual Studio Professional | VL                                       | Yok                                                             |  Yok          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  Yok           |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
-| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Yok  | Yok |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | Yok |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Üç ay boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | Üç ay boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
+| GitHub Enterprise ile Visual Studio Professional | VL                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok           |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
+| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
 <sup>1</sup>  *şunları içerir: iş için değil (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine*
 
@@ -98,6 +99,12 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresi
 
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredilerinizi kullanmak için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ziyaret edin ve araçlar kategorisindeki Azure kutucuğuna tıklayın.

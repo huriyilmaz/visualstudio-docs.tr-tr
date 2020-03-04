@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/20/2019
 ms.topic: conceptual
 description: Abonelik yöneticilerinin sorumlulukları hakkında bilgi edinin.
-ms.openlocfilehash: 05b1a66eb6589f1d0d9502a754f67d0f9c31424f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 1faa257278d1a477720d73271c6487d5d1618d8e
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851885"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235164"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Yönetici sorumluluklarına genel bakış
 Yönetici olarak, kuruluşunuz için abonelikleri yönetebilirsiniz.  Yönetici rolü Ayrıca, aboneliklerin lisans koşullarına uygun olarak yönetildiğinden emin olmak için sorumlulukları taşır. Bu makalede, yönetici rolünün sorumlulukları, avantajları ve sınırlamaları özetlenmektedir.
@@ -34,6 +34,12 @@ Visual Studio abonelikleri, geliştirme ekibi üyelerinin diğer yazılımları 
 | Üretim ortamları için tasarlanmamıştır | Visual Studio abonelikleri yazılımı, son kullanıcılar tarafından kabul testi veya geri bildirim, bir üretim veritabanına bağlanan ortam, olağanüstü durum kurtarmayı destekleyen bir ortam dahil olmak üzere üretim ortamları için lisanslanır. üretim yedeklemesi veya en yüksek etkinlik dönemlerinde üretim için kullanılır. Buna özel durumlar, [Visual Studio lisanslama teknik incelemesine](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)göre belirtilen belirli abonelik düzeyleri için özel avantajlar içerir.                                                                                            |
 | Lisans yeniden atama                     | Bir Kullanıcı takımdan çıktığında ve artık lisans gerektirdiğinde, 90 gün geçtikten sonra lisansı yeniden atayabilirsiniz. Bir lisansı yeniden atadığınızda, zaten kullanılmış olan tüm ürün anahtarları kullanılabilir olmaya devam eder, ancak değiştirilmez. Kurumsal anlaşmalar (EA) olan kuruluşlar için, özgün kullanıcı tarafından kullanılan Pluralaltim eğitimi gibi tüm avantajlar sıfırlanır.                                                                                                                                                                                                                                                 |
 | Son kullanıcılar için özel durum                  | Yazılım geliştirme projesinin sonunda, son kullanıcılar tipik olarak bir uygulamayı gözden geçirir ve sürüm için gerekli ölçütlere uyup uymadığını tespit edin. Bu işleme Kullanıcı kabul testi (UAT) adı verilir. İş destekleyicisi veya ürün yöneticisi gibi takım üyeleri, son kullanıcılar için proxy olarak davranabilir. Visual Studio aboneliğine sahip olmayan son kullanıcılar, yazılımın kullanımı, tüm Visual Studio lisanslama koşullarına uygun değilse, UıAT için yazılıma erişebilirler. Birincil rolü tasarlayan, geliştiren veya test eden birisinin, "Son Kullanıcı" olarak nitelendiriyor olması çok nadir bir durumdur. |
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:

@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ecc14e4dc98caa17ac3849e9231ab17491f2acc8
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.openlocfilehash: 416926742da427ba7ff18c6fa07de6477361cfa3
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73428779"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235086"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node. js ve Express uygulaması oluşturma
 
@@ -24,17 +24,17 @@ Node. js ve Express kullanarak Visual Studio geliştirmesi için bu öğreticide
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
 > * Kod ekleme
@@ -69,13 +69,15 @@ Express, Web uygulamaları oluşturmak için Node. js için sunucu çatısı ola
     Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Seçin **Node.js geliştirme** iş yükü, ardından **Değiştir**.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     ![Node.js iş yükü VS yükleyicisi](../ide/media/quickstart-nodejs-workload.png)
 
 * Node.js çalışma zamanı yüklü olması gerekir.
 
-    LTS sürümünden yüklü yoksa, yükleme [Node.js](https://nodejs.org/en/download/) Web sitesi. Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılayan değil, projenizi yüklü çalışma zamanı özellikleri sayfasında başvurmak için yapılandırabilirsiniz (bir proje oluşturduğunuzda, proje düğümüne sağ tıklayın ve seçin **özellikleri**).
+    Yüklü değilse, dış çerçeveler ve kitaplıklar ile en iyi uyumluluk için [Node. js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yüklemenizi öneririz. Node. js, 32-bit ve 64-bit mimariler için oluşturulmuştur. Visual Studio 'daki Node. js Araçları, Node. js iş yüküne dahil edilmiştir, her iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node. js yükleyicisi yalnızca aynı anda yüklü olan birini destekler.
+    
+    Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve **Node. exe yolunu**ayarlayın). Node. js ' nin genel bir yüklemesini kullanabilir veya Node. js projelerinizdeki her bir yerel yorumlayıcı yolunu belirtebilirsiniz. 
 
     Bu öğretici Node. js 8.10.0 ile test edilmiştir.
 
@@ -87,13 +89,13 @@ Bu öğreticide, Node. js ve Express uygulaması için kod içeren basit bir pro
 
 1. Visual Studio'yu açın.
 
-1. Yeni bir proje oluşturun.
+1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
     Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve ardından **Yeni bir temel Azure Node. js Express 4 uygulaması** (JavaScript) seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede, **temel Azure Node. js Express 4 uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede, **temel Azure Node. js Express 4 uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
     ::: moniker-end
     **Temel Azure Node. js Express 4 uygulama** projesi şablonunu görmüyorsanız **Node. js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
@@ -103,7 +105,7 @@ Bu öğreticide, Node. js ve Express uygulaması için kod içeren basit bir pro
 
     (1), **Yeni proje** iletişim kutusunda verdiğiniz adı kullanarak projenizde **kalın** olarak vurgulanır. Dosya sisteminde bu proje, proje klasörünüzdeki bir *. njsproj* dosyası tarafından temsil edilir. Projeye sağ tıklayıp **Özellikler**' i seçerek projeyle ilişkili özellikleri ve ortam değişkenlerini ayarlayabilirsiniz. Proje dosyası Node. js proje kaynağında özel değişiklikler yapmadığından, diğer geliştirme araçlarıyla gidiş dönüşü yapabilirsiniz.
 
-    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Tarafından temsil edilen bir çözüm, bir *.sln* dosya diskte, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
+    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Disk üzerinde *. sln* dosyası tarafından temsil edilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
     (3) NPM düğümü yüklü NPM paketlerini gösterir. Bir iletişim kutusu kullanarak NPM paketlerini aramak ve yüklemek için NPM düğümüne sağ tıklayabilir veya *Package. JSON* ' daki ayarları kullanarak paketleri yükleyip güncelleyebilir ve NPM düğümündeki Seçenekler ' e sağ tıklayın.
 
@@ -113,7 +115,7 @@ Bu öğreticide, Node. js ve Express uygulaması için kod içeren basit bir pro
 
 1. **NPM** düğümünü açın ve tüm gerekli NPM paketlerinin mevcut olduğundan emin olun.
 
-    Tüm paketler (ünlem simgesi) eksikse, sağ tıklayabilirsiniz **npm** düğümünü seçip **eksik npm paketlerini yükle**.
+    Herhangi bir paket eksikse (ünlem işareti simgesi), **NPM** düğümüne sağ tıklayıp **eksik NPM paketlerini yüklemeyi**seçebilirsiniz.
 
 ## <a name="add-some-code"></a>Kod ekleme
 
@@ -270,4 +272,4 @@ Bu öğreticiyi tamamlamak Tebrikler!
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Uygulamayı Linux App Service'e dağıtma](../javascript/publish-nodejs-app-azure.md)
+> [Uygulamayı Linux 'a dağıtma App Service](../javascript/publish-nodejs-app-azure.md)

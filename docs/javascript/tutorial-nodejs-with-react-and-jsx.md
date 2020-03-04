@@ -12,18 +12,18 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: faf418155708ebc577efea57ed3352953a8d577d
-ms.sourcegitcommit: 5920a8b0c68350f11eabc1652a19b04d0196881a
+ms.openlocfilehash: f60cd71f1dda4e401acef1db9ccd8c5a0be2b961
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75622565"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235099"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node. js ve tepki verme uygulaması oluşturma
 
 Visual Studio, kolayca bir Node. js projesi oluşturmanıza, IntelliSense ve Node. js ' nin desteklediği diğer yerleşik özelliklerle karşılaşmanızı sağlar. Visual Studio için bu öğreticide, bir Visual Studio şablonundan bir Node. js web uygulaması projesi oluşturacaksınız. Daha sonra, yanıt verme kullanarak basit bir uygulama oluşturursunuz.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
 > * NPM paketleri Ekle
@@ -35,7 +35,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 İşte size bazı önemli kavramlara yol açmaya yönelik hızlı bir SSS.
 
-### <a name="what-is-nodejs"></a>Node.js nedir?
+### <a name="what-is-nodejs"></a>Node. js nedir?
 
 Node. js, JavaScript sunucu tarafını yürüten sunucu tarafı bir JavaScript çalışma zamanı ortamıdır.
 
@@ -55,7 +55,7 @@ JSX, genellikle UI öğelerini tanımlamaya tepki vererek kullanılan bir JavaSc
 
 Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde paketler. Ayrıca diğer kaynakları ve varlıkları dönüştürebilir veya paketleyebilir. Genellikle Babel veya TypeScript gibi bir derleyicinin basit JavaScript 'e derleyin JSX veya TypeScript kodunu belirtmek için kullanılır.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio yüklü ve Node. js geliştirme iş yüküne sahip olmanız gerekir.
 
@@ -66,7 +66,7 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
     Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Seçin **Node.js geliştirme** iş yükü, ardından **Değiştir**.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     ![Node.js iş yükü VS yükleyicisi](../ide/media/quickstart-nodejs-workload.png)
 
@@ -74,15 +74,17 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
 
     Bu öğretici sürüm 10.16.0 ile test edilmiştir.
 
-    LTS sürümünden yüklü yoksa, yükleme [Node.js](https://nodejs.org/en/download/) Web sitesi. Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılayan değil, projenizi yüklü çalışma zamanı özellikleri sayfasında başvurmak için yapılandırabilirsiniz (bir proje oluşturduğunuzda, proje düğümüne sağ tıklayın ve seçin **özellikleri**).
+    Yüklü değilse, dış çerçeveler ve kitaplıklar ile en iyi uyumluluk için [Node. js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yüklemenizi öneririz. Node. js, 32-bit ve 64-bit mimariler için oluşturulmuştur. Visual Studio 'daki Node. js Araçları, Node. js iş yüküne dahil edilmiştir, her iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node. js yükleyicisi yalnızca aynı anda yüklü olan birini destekler.
+    
+    Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve **Node. exe yolunu**ayarlayın). Node. js ' nin genel bir yüklemesini kullanabilir veya Node. js projelerinizdeki her bir yerel yorumlayıcı yolunu belirtebilirsiniz. 
 
-## <a name="create-a-project"></a>Proje oluştur
+## <a name="create-a-project"></a>Proje oluşturma
 
 İlk olarak, bir Node. js web uygulaması projesi oluşturun.
 
 1. Visual Studio'yu açın.
 
-1. Yeni bir proje oluşturun.
+1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
     Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve **boş Node. js web uygulaması-JavaScript**' i seçin. (Bu öğretici TypeScript derleyicisini kullanıyor olsa da, adımlar **JavaScript** şablonuyla başlamanız gerekir.)
@@ -90,7 +92,7 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
     Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede **boş Node. js web uygulaması**' nı seçin, **Nodejswebappblank**adını yazın ve ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede **boş Node. js web uygulaması**' nı seçin, **Nodejswebappblank**adını yazın ve ardından **Tamam**' ı seçin.
     ::: moniker-end
     **Boş Node. js web uygulaması** proje şablonunu görmüyorsanız **Node. js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
@@ -100,7 +102,7 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
 
     (1), **Yeni proje** iletişim kutusunda verdiğiniz adı kullanarak projenizde **kalın** olarak vurgulanır. Dosya sisteminde bu proje, proje klasörünüzdeki bir *. njsproj* dosyası tarafından temsil edilir. Projeye sağ tıklayıp **Özellikler**' i seçerek projeyle ilişkili özellikleri ve ortam değişkenlerini ayarlayabilirsiniz. Proje dosyası Node. js proje kaynağında özel değişiklikler yapmadığından, diğer geliştirme araçlarıyla gidiş dönüşü yapabilirsiniz.
 
-    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Tarafından temsil edilen bir çözüm, bir *.sln* dosya diskte, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
+    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Disk üzerinde *. sln* dosyası tarafından temsil edilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
     (3) NPM düğümü yüklü NPM paketlerini gösterir. Bir iletişim kutusu kullanarak NPM paketlerini aramak ve yüklemek için NPM düğümüne sağ tıklayabilir veya *Package. JSON* ' daki ayarları kullanarak paketleri yükleyip güncelleyebilir ve NPM düğümündeki Seçenekler ' e sağ tıklayın.
 
@@ -114,10 +116,10 @@ Bu uygulama, doğru bir şekilde çalışması için birkaç NPM modülü gerekt
 
 * react
 * tepki verme-Dom
-* express
+* çaba
 * yol
 * TS-yükleyici
-* typescript
+* TypeScript
 * Web paketi
 * webpack-cli
 
@@ -168,9 +170,9 @@ Bu uygulama, doğru bir şekilde çalışması için birkaç NPM modülü gerekt
 Bu adımlarda, projenize dört yeni dosya eklersiniz.
 
 * *App. TSX*
-* *webpack-config.js*
+* *WebPack-config. js*
 * *index. html*
-* *tsconfig.json*
+* *tsconfig. JSON*
 
 Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğu uygulamalarda, genellikle dosyaları alt klasörlere ekler ve göreli yol başvurularını uygun şekilde ayarlayabilirsiniz.)
 
@@ -370,7 +372,7 @@ Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling
 
 1. *Server. js*' de, bir kesme noktası ayarlamak için `staticPath` bildiriminin solundaki cilt paya tıklayın:
 
-    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
     Kesme noktaları güvenilir hata ayıklama en temel hem de temel özelliğidir. Bir kesme noktası değişkenlerin değerleri veya bellek davranışını göz olabilmesi için Visual Studio çalışan kodunuzu nereye askıya almanız ya da bir dal kod getting run olup olmadığını gösterir.
 
@@ -441,13 +443,13 @@ Bu senaryo için Chrome ' ı kullanın.
 
     *App-Bundle. js*için, aşağıdaki çizimde gösterildiği gibi `render()` işlevindeki kesme noktasını ayarlayın:
 
-    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Transpiled *App-Bundle. js* dosyasında `render()` işlevini bulmak için **CTRL**+**F** (**Düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
 
     *App. TSX*için, `return` deyimindeki `render()` işlevinin içinde kesme noktası ayarlayın.
 
-    ![Bir kesme noktası belirleyin](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
+    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
 
 2. Kesme noktasını *. TSX* dosyasında ( *App-Bundle. js*yerine) ayarlıyorsanız, *WebPack-config. js*' yi güncelleştirmeniz gerekir. Aşağıdaki kodu değiştirin:
 
@@ -497,10 +499,10 @@ Bu senaryo için Chrome ' ı kullanın.
     ::: moniker range=">=vs-2019"
     Aşağıdaki örnekte bunun Microsoft Edge (Kmıum) tarayıcısı için nasıl göründüğü gösterilmektedir.
 
-    ![İşleme ekle öğesi kullanılarak bir işleme eklenirken tek bir işlem için verileri gösterir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
+    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![İşleme ekle öğesi kullanılarak bir işleme eklenirken tek bir işlem için verileri gösterir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
+    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
     Visual Studio 'da DOM Gezgini ve JavaScript konsolu açıldığında hata ayıklayıcının doğru şekilde eklenmiş olduğunu bilirsiniz. Bu hata ayıklama araçları, Microsoft Edge için Chrome Geliştirici Araçları ve F12 araçlarına benzerdir.
     ::: moniker-end
@@ -526,4 +528,4 @@ Bu senaryo için Chrome ' ı kullanın.
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Uygulamayı Linux App Service'e dağıtma](../javascript/publish-nodejs-app-azure.md)
+> [Uygulamayı Linux 'a dağıtma App Service](../javascript/publish-nodejs-app-azure.md)

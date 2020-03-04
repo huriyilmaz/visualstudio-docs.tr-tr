@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f605f9a7e07d485b4b1cb3835d53e4c4823fe7c
-ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
+ms.openlocfilehash: f2f00cde0c2ea3fad79c0f5ef75f3c33ad7afc22
+ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78181125"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78257195"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
 Visual Studio hata ayıklayıcı bir yerel veya uzak bilgisayarda çalışan bir işleme ekleyebilirsiniz. İşlem çalıştıktan sonra, **işleme** eklemek > **Hata Ayıkla** ' yı seçin ya da Visual Studio 'da **CTRL**+**alt**+**P** tuşlarına basın ve hata ayıklayıcıyı işleme eklemek için **İşleme İliştir** iletişim kutusunu kullanın.
@@ -229,7 +229,7 @@ Eklemek üzere bir çalışan işlemi hızlı bir şekilde seçmek için, Visual
 |Desteklenen uygulama türleri için yerel bir IIS sunucusunda istemci tarafı betikte hata ayıklama |**İşlemek Için İliştir** kullanın|*Chrome. exe*, *microsoftedgecp. exe*veya *iexplore. exe*|Komut dosyası hata ayıklaması etkinleştirilmelidir. Chrome için Ayrıca, hata ayıklama modunda Chrome ' ı çalıştırmanız ve **iliştirme** alanında **WebKit Code** ' u seçmeniz gerekir.|
 |Yerel makinede bir C#, Visual Basic veya C++ uygulamasında hata ayıklama|Standart hata ayıklama (**F5**) veya **İşleme İliştir**|*\<AppName >. exe*|Çoğu senaryoda standart hata ayıklama kullanın ve **Işleme iliştirilemiyor**.|
 |Uzaktan hata ayıklama bir Windows masaüstü uygulaması|Uzak Araçlar|Yok| Bkz. [Uzaktan hata C# ayıklama a veya Visual Basic uygulaması](../debugger/remote-debugging-csharp.md) veya [bir C++ uygulamada uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
-|Linux 'ta .NET Core hatalarını ayıklama|**İşlemek Için İliştir** kullanın|*DotNet. exe*|SSH kullanmak için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Linux Docker kapsayıcısı kullanmak için bkz. [Linux Docker kapsayıcısında çalışan bir Işleme iliştirme](#BKMK_Docker_Attach).|
+|Linux 'ta .NET Core hatalarını ayıklama|**İşlemek Için İliştir** kullanın|*DotNet. exe*|SSH kullanmak için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). |
 |Hata Ayıklayıcı olmadan uygulamayı başlattıktan sonra yerel makine üzerinde bir ASP.NET uygulamasında hata ayıklama|**İşlemek Için İliştir** kullanın|*ııexpress. exe*|Bu yük uygulamanızı hale getirmek yardımcı olabilecek daha hızlı gibi (örneğin) profili oluşturulurken. |
 |Başka bir sunucu işlemi desteklenen uygulama türlerinde hata ayıklama|Sunucu uzakta ise uzak Araçlar 'ı kullanın ve **Işleme ekleyin**|*Chrome. exe*, *iexplore. exe*veya diğer süreçler|Gerekirse, Kaynak İzleyicisi işlemi belirlemenize yardımcı olması için kullanın. Bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).|
 |Uzaktan hata ayıklama, bir evrensel Windows uygulamasında (UWP), OneCore, HoloLens ve IOT uygulaması|Yüklenen uygulama paketinin hatalarını ayıklama|Yok|Bkz. **Işleme İliştir** kullanmak yerine [yüklü uygulama paketinin hatalarını ayıkla](debug-installed-app-package.md)|
