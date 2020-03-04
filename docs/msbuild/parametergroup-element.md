@@ -16,14 +16,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28d6def203a819d41a420899663d1a974612c631
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 8c06b9c530d3fff0fdfa429df633daaa4dde8c52
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77632998"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263099"
 ---
-# <a name="parametergroup-element"></a>ParameterGroup Öğesi
+# <a name="parametergroup-element"></a>ParameterGroup öğesi
 
 Bir `UsingTask` `TaskFactory`tarafından oluşturulan görevde mevcut olacak parametrelerin isteğe bağlı bir listesini içerir. Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
@@ -66,9 +66,9 @@ Bir `UsingTask` `TaskFactory`tarafından oluşturulan görevde mevcut olacak par
               <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>
              ...
 </ParameterGroup>
-       <TaskBody Evaluate="true">
-      ... Task factory-specific data ...
-       </TaskBody>
+       <Task Evaluate="true">
+       ... Task factory-specific data ...
+       </Task>
 </UsingTask>
 ```
 

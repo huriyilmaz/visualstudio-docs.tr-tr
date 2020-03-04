@@ -3,28 +3,32 @@ title: Visual Studio aboneliklerine lisans atama | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/24/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 4ebec96f488a480ccd9b96387f2656aadd6ba2f9
-ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
+ms.openlocfilehash: 3d444f930d1fab166d437911b5609caf75cad09e
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76892187"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263323"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
 
-Kullanıcı grupları için, abonelikleri birer birer atayabilirsiniz veya [toplu ekleme](assign-license-bulk.md) özelliğini kullanarak abone listelerini ve abonelik bilgilerini hızlıca ve kolayca karşıya yükleyebilirsiniz.
+Kullanıcı grupları için, abonelikleri nasıl atayacağınızı gösteren seçimleriniz vardır.  
+- Her seferinde bir abonelik atayabilirsiniz.
+- Ayrıca [toplu ekleme](assign-license-bulk.md) özelliğini kullanarak abone listelerini ve abonelik bilgilerini hızlıca ve kolayca karşıya yükleyebilirsiniz.
+- Kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa, Kullanıcı gruplarına abonelik atamak için Azure AD gruplarını kullanabilirsiniz.  (Bu özellik aşamalar halinde dağıtılır ve kuruluşunuz tarafından hemen kullanılamayabilir.)
+
 
 ## <a name="add-a-single-subscriber"></a>Tek bir abone ekleme
-Abonelik avantajlarına erişebilmeleri için yeni bir kullanıcıya bir Visual Studio abonelik lisansı atama hakkında daha fazla bilgiyi burada bulabilirsiniz.
+Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yeni bir kullanıcıya atama hakkında daha fazla bilgiyi burada bulabilirsiniz.
 
 1. [Yönetim portalında](https://manage.visualstudio.com)oturum açın.
-2. Tek bir Visual Studio abonesi için bir lisans atamak için, tablonun en üstünde bulunan **Ekle**' yi seçin.
+2. Tek bir Visual Studio abonesi 'na bir lisans atamak için, tablonun en üstünde bulunan **Ekle**' yi seçin ve **bireysel abone**' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![tek bir abone](media/add-single-subscriber.png) ekleyin
+   > ![tek bir abone](_img/assign-license-add/add-subscriber-individual.png) ekleyin
 3. Yeni abone için form alanlarına bilgi girin. Kuruluşunuz Azure Active Directory kullanıyorsa, **ad** alanı geçerli dizininizde kişileri bulmak için arama işlevi olarak davranır, böylece arama sonuçlarından doğru kullanıcıyı seçebilirsiniz. Bu kişiyi seçtikten sonra, oturum açma e-postası ve bildirim e-postası otomatik olarak doldurulur.
    > [!div class="mx-imgBorder"]
    > ![abone ayrıntıları](_img/assign-license-add/subscriber-details.png)
@@ -44,7 +48,15 @@ Abonelik avantajlarına erişebilmeleri için yeni bir kullanıcıya bir Visual 
 ## <a name="resend-assignment-emails"></a>Atama e-postalarını yeniden gönder
 Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomatik olarak yeni aboneye gönderilir. Abone ' i seçip üst menüdeki yeniden **Gönder** düğmesine tıklayarak atama e-postasını dilediğiniz zaman gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için, aboneleri seçerken **CTRL** tuşunu basılı tutun.  Yeniden **Gönder** düğmesine tıkladığınızda, bu abonelere yeniden göndermek istediğinizi onaylamanızı isteyen bir iletişim kutusu görürsünüz.  
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
+
 ## <a name="next-steps"></a>Sonraki adımlar
 - Eklemek için çok sayıda kullanıcı mı var?  [Birden çok aboneye](assign-license-bulk.md)abonelik atamayı öğrenin.
 - Yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
+
 

@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6a8b380791cbb8adcc43b363e5f0a332935e131
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 5fe9f052c10f31c4db0f8bf09f273be5814ff732
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631113"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263142"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma
 
@@ -154,8 +154,6 @@ Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# C
 > ```xml
 > <Compile Include="*.cs" />
 > ```
->
-> Ancak, kaynak dosyalar eklenirse veya silinirse hata ayıklamayı ve seçmeli hedefleri daha zor hale getiren joker karakter karakterlerinin kullanımını önermiyoruz.
 
 ## <a name="extend-the-path-to-include-msbuild"></a>Yolu MSBuild 'i içerecek şekilde genişletin
 
@@ -361,7 +359,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 
      *\Bin\\* klasörünün *MSBuildSample* uygulamasını içerdiğini doğrulamak Için, tür **dir bin**.
 
-## <a name="build-incrementally"></a>Artımlı olarak derleyin
+## <a name="build-incrementally"></a>Artımlı olarak derleme
 
  MSBuild 'i yalnızca hedef dosya veya hedefin bağımlı olduğu hedef dosyalar değiştiyse bir hedef oluşturmak için söyleyebilirsiniz. MSBuild, değiştirilip değiştirilmediğini anlamak için bir dosyanın zaman damgasını kullanır.
 

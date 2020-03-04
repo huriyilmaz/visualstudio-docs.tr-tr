@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3605109519dccaafa1367464bd8c2385df5e93e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 91b2e157ee64f5e4d91bc75a5d6f8d65d4312862
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633427"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263155"
 ---
 # <a name="msbuild-best-practices"></a>MSBuild en iyi yöntemleri
 
@@ -30,7 +30,7 @@ MSBuild betikleri yazmak için aşağıdaki en iyi yöntemleri öneririz:
 </MyProperty>
 ```
 
-- Öğeleri seçtiğinizde Joker karakterlerden kaçının. Bunun yerine, dosyaları açıkça belirtin. Bu, dosya ekleme veya silme sırasında oluşabilecek hataların izlenmesini kolaylaştırır.
+- Genel olarak, öğeler ' i seçerken joker karakter kullanmaktan kaçının. Bunun yerine, dosyaları açıkça belirtin. Bunun nedeni çoğu proje türünde, MSBuild, öğeleri ekleme veya kaldırma gibi çeşitli zamanlarda joker karakter genişlettiğinden, beklenmeyen davranışlara neden olabilir. Bunun bir özel durumu, joker karakterleri doğru şekilde işlemek .NET Core SDK stil projelerinde olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

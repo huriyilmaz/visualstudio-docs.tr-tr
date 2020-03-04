@@ -1,5 +1,5 @@
 ---
-title: TaskBody öğesi (MSBuild) | Microsoft Docs
+title: UsingTask öğesi (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -8,31 +8,31 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- TaskBody element [MSBuild]
-- <TaskBody> element [MSBuild]
+- Task element [MSBuild]
+- <Task> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45b255f782390cfc478ac2f7bce58170e4e2b268
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 36644a6b21092361d92dba5f0886eb4198884995
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631854"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263194"
 ---
-# <a name="taskbody-element-msbuild"></a>TaskBody öğesi (MSBuild)
+# <a name="task-element-of-usingtask-msbuild"></a>UsingTask öğesi (MSBuild)
 
 Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<Project > \<UsingTask > \<TaskBody >
+ \<Proje > \<UsingTask > \<görevi >
 
 ## <a name="syntax"></a>Sözdizimi
 
 ```xml
-<TaskBody Evaluate="true/false" />
+<Task Evaluate="true/false" />
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
@@ -49,7 +49,7 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Veriler|`TaskBody` etiketleri arasındaki metin, `TaskFactory`harfine gönderilir.|
+|Veriler|`Task` etiketleri arasındaki metin, `TaskFactory`harfine gönderilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -59,7 +59,7 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `Evaluate` özniteliğiyle `TaskBody` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki örnek, `Evaluate` özniteliğiyle `Task` öğesinin nasıl kullanılacağını gösterir.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -68,9 +68,9 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
               <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>
               ...
 </ParameterGroup>
-       <TaskBody Evaluate="true">
-      ... Task factory-specific data ...
-       </TaskBody>
+       <Task Evaluate="true">
+       ... Task factory-specific data ...
+       </Task>
 </UsingTask>
 ```
 

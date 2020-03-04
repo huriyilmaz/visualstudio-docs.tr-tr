@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc50379563a85ce9c76f3d45b9d70c1f784eaf5a
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 2d977892956c90fd88ff913b9c9300b0176323a4
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631256"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263129"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask öğesi (MSBuild)
 
@@ -53,7 +53,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 |---------------|-----------------|
 |`AssemblyName`|`AssemblyName` özniteliği ya da `AssemblyFile` özniteliği gereklidir.<br /><br /> Yüklenecek derlemenin adı. `AssemblyName` özniteliği kesin adlandırılmış derlemeler kabul eder, ancak güçlü adlandırma gerekli değildir. Bu özniteliğin kullanılması, .NET 'teki <xref:System.Reflection.Assembly.Load%2A> yöntemi kullanılarak bir derlemeyi yüklemeye eşdeğerdir.<br /><br /> `AssemblyFile` özniteliği kullanılırsa bu özniteliği kullanamazsınız.|
 |`AssemblyFile`|`AssemblyName` ya da `AssemblyFile` özniteliği gereklidir.<br /><br /> Derlemenin dosya yolu. Bu öznitelik, tam yolları veya göreli yolları kabul eder. Göreli yollar, `UsingTask` öğesinin bildirildiği proje dosyasının veya hedef dosyanın dizinine göre belirlenir. Bu özniteliğin kullanılması, .NET 'teki <xref:System.Reflection.Assembly.LoadFrom%2A> yöntemi kullanılarak bir derlemeyi yüklemeye eşdeğerdir.<br /><br /> `AssemblyName` özniteliği kullanılırsa bu özniteliği kullanamazsınız.|
-|`TaskFactory`|İsteğe bağlı öznitelik.<br /><br /> Derlemede, belirtilen `Task` adının örneklerini oluşturmaktan sorumlu sınıfı belirtir.  Kullanıcı, görev fabrikasının görevi oluşturmak için aldığı ve kullandığı bir alt öğe olarak bir `TaskBody` da belirtebilir. `TaskBody` içeriği, görev fabrikasına özeldir.|
+|`TaskFactory`|İsteğe bağlı öznitelik.<br /><br /> Derlemede, belirtilen `Task` adının örneklerini oluşturmaktan sorumlu sınıfı belirtir.  Kullanıcı, görev fabrikasının görevi oluşturmak için aldığı ve kullandığı bir alt öğe olarak bir `Task` da belirtebilir. `Task` içeriği, görev fabrikasına özeldir.|
 |`TaskName`|Gerekli öznitelik.<br /><br /> Bir derlemeden başvurulacak görevin adı. Belirsizlikleri mümkünse, bu öznitelik her zaman tam ad alanları belirtmelidir. Belirsizlikleri varsa, MSBuild rastgele bir eşleşme seçer ve bu beklenmedik sonuçlara neden olabilir.|
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 
@@ -90,9 +90,9 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
               <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>
               ...
 </ParameterGroup>
-       <TaskBody>
+       <Task>
       ... Task factory-specific data ...
-       </TaskBody>
+       </Task>
 </UsingTask>
 ```
 
