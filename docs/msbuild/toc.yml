@@ -233,9 +233,9 @@
               href: sdk-element-msbuild.md
             - name: Target öğesi
               href: target-element-msbuild.md
-            - name: Task öğesi
+            - name: Target’ın görev öğesi
               href: task-element-msbuild.md
-            - name: TaskBody öğesi
+            - name: UsingTask’in görev öğesi
               href: taskbody-element-msbuild.md
             - name: UsingTask öğesi
               href: usingtask-element-msbuild.md
