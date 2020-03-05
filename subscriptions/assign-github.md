@@ -3,15 +3,15 @@ title: Visual Studio + GitHub kurumsal teklifi | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 description: Visual Studio + GitHub kurumsal teklifinde abonelikleri yönetme
-ms.openlocfilehash: 524002b875375c22da67bbf98d98f4ebc149c14b
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: e48b047862daa80452e1b2128dc74fee8bd1039e
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558147"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263337"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio aboneliklerini yönetme
 Microsoft ile kurumsal anlaşma (EA) olan müşteriler, Visual Studio Standard abonelikleri ve GitHub Enterprise 'ı birlikte getiren yeni bir abonelik teklifi satın almaya uygundur. Visual Studio abonelerinin GitHub Enterprise 'ı edinmenin kolay ve ekonomik bir yoludur. 
@@ -31,7 +31,7 @@ Abonelikleri yönetme hakkında daha fazla bilgi için şu konulara bakın:
 > [!Important]
 > GitHub Enterprise ile Visual Studio abonelikleri, Visual Studio abonelik yöneticileri tarafından atanmışsa ve bu aboneliklerin hiç satın alınmadıysa, bu abonelikler kuruluş içindeki GitHub Enterprise Admins 'e görünür olmayacaktır. GitHub Enterprise aboneliklerinin görünür olmasını sağlamak için, aboneliklerin ilk kez atandığı GitHub Enterprise veya Visual Studio Enterprise ile **en az bir** Visual Studio Professional içeren bir satın alma yapılmalıdır.  
 >
-> Bu, atanan her GitHub aboneliğine ilişkin lisans gereksinimleriyle uyumlu kalmak için yönetim portalı 'nda atanan GitHub aboneliğine sahip bir Visual Studio olduğundan emin olmak için müşterinin sorumluluğundadır. aboneliğiniz.
+> Bu, atanan her GitHub aboneliği için, Visual Studio abonelikleri yönetim portalı 'nda atanmış GitHub aboneliğine sahip bir Visual Studio olduğundan emin olmaya yönelik bir sorumluluktur. Bu abonelik için lisans gereksinimleri.
 
 ## <a name="manage-github-enterprise-subscriptions"></a>GitHub Enterprise aboneliklerini yönetme
 GitHub Enterprise abonelikleri satın alındığında, GitHub 'a erişecek ve yöneticileri tanımlayan kuruluşları oluşturmaya ve yapılandırmaya yardımcı olmak üzere müşteriler ile GitHub iş ortakları yapılır.  Bu Yöneticiler daha sonra yöneticiler olarak ayarlandıklarından bir bildirim alır.  
@@ -71,5 +71,20 @@ GitHub yardımı, soruları yanıtlamak ve kuruluşunuzun GitHub Enterprise Serv
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 - GitHub Enterprise için [Teknik destek](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) alın.   
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
+Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
+- [Ayrı abonelikler atama](assign-license.md)
+- [Birden çok abonelik atama](assign-license-bulk.md)
+- [Abonelikleri düzenleme](edit-license.md)
+- [Abonelikleri silme](delete-license.md)
+- [En fazla kullanımı belirleme](maximum-usage.md)
+
 Visual Studio aboneliklerini GitHub Enterprise ile yönetme hakkında daha fazla bilgi için Visual Studio [abonelikleri Yönetici portalı](https://visualstudio.microsoft.com/subscriptions-administration/)' na göz atın.
+
+

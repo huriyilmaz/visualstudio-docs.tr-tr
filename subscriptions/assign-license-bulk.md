@@ -3,21 +3,20 @@ title: Visual Studio abonelikleri için Kullanıcı gruplarına lisans atama | M
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 02/26/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: ae16c64f90f90b820332e0ee7f1753a8dd6e5c32
-ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
+ms.openlocfilehash: c8ea294f0e4b2b4deae18e2f5644bf08fff0dfc2
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652826"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263350"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
 
 Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullanabilir veya kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa Azure AD gruplarını kullanabilirsiniz. Bu makalede her iki seçenek için de işlem açıklanacaktır. 
-
 
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>Abonelik atamak için toplu ekleme kullanma
 1. https://manage.visualstudio.comadresindeki Visual Studio abonelikleri yönetim portalında oturum açın.
@@ -59,19 +58,16 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
    > [!div class="mx-imgBorder"]
    > birden çok abonelerin karşıya yüklenmesi başarılı olursa ![onay iletisi](media/bulk-add-template-success.png)
 
-## <a name="use-azure-ad-groups-to-assign-subscriptions"></a>Azure AD gruplarını kullanarak abonelik atama 
-Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını kolaylaştırır. Abonelikler yönetim portalına Azure AD güvenlik grupları ekleyebilirsiniz. Bu, gruptaki tüm bireylere bir abonelik atanmasını güvence altına alacak. Daha kolay hale getirmek için, bireyler kuruluştan ayrıldığınızda ve Azure AD 'den kaldırıldığında, aboneliklerde erişimleri de kaldırılır.
-
-> [!NOTE]
-> Bu özellik, aşamalar halinde dağıtılmakta olduğundan, kuruluşunuz için hemen kullanılabilirlik olmayabilir.   
+## <a name="use-azure-active-directory-groups-to-assign-subscriptions"></a>Abonelikler atamak için Azure Active Directory grupları kullanma 
+Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını kolaylaştırır. Abonelikler yönetim portalına Azure Active Directory güvenlik grupları ekleyebilirsiniz. Bu, gruptaki tüm bireylere bir abonelik atanmasını güvence altına acaktır. Daha kolay hale getirmek için, bireyler kuruluştan ayrıldığınızda ve Azure Active Directory kaldırıldığında, aboneliklerde erişimleri de kaldırılır. 
 
 > [!IMPORTANT]
 > Aboneler eklemek için Azure AD gruplarının kullanımı için aşağıdaki sınırlamalar geçerlidir:
 > - Grupların en az bir üye içermesi gerekir.  Boş gruplar desteklenmiyor.
-> - Gruplar 1.000 'den az kullanıcı içermelidir.
-> - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor.
-> - Yalnızca güvenilen anlaşmalar desteklenir.
-> - Grubun tüm üyelerinin Azure AD hesabıyla ilişkilendirilmiş bir e-posta adresi olmalıdır.
+> - Gruplar 1.000 'den az kullanıcı içermelidir 
+> - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor
+> - Yalnızca güvenilen anlaşmalar desteklenir
+> - Grubun tüm üyelerinin Azure AD hesabıyla ilişkili bir e-posta adresi olmalıdır
 
 
 1. [https://manage.visualstudio.com](https://manage.visualstudio.com)adresindeki Visual Studio abonelikleri Yönetim Portalı ' nda oturum açın.
@@ -117,6 +113,4 @@ Y: kuruluşunuzun Azure AD 'yi nasıl yapılandırdığına bağlı olarak, kull
 ## <a name="next-steps"></a>Sonraki adımlar
 - Eklemek için yalnızca bir veya iki abone mi var?  [Tek Kullanıcı Ekle](assign-license.md) 'ye göz atın
 - Yardıma mı ihtiyacınız var? [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
-
-
 

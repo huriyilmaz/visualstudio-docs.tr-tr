@@ -1,6 +1,6 @@
 ---
 title: XAML Tasarımcısı’na genel bakış
-ms.date: 07/31/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 f1_keywords:
 - VS.XamlDesigner
@@ -12,18 +12,21 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 912468cf95b7b5a4b611fb568048c2ba62cc635d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a2a0e25779df1e0b91a69518dc2257119e33cca4
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593003"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263357"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma
 
 Visual Studio ve Visual Studio için Blend XAML Tasarımcısı, WPF, UWP ve Xamarin. Forms uygulamaları gibi XAML tabanlı uygulamalar tasarlamanıza yardımcı olacak görsel bir arabirim sağlar. Araç kutusu penceresinden (Visual Studio için Blend varlıklar penceresi) denetimleri sürükleyerek ve Özellikler penceresi özellikleri ayarlayarak uygulamalarınız için Kullanıcı arabirimleri oluşturabilirsiniz. Ayrıca, XAML XAML görünümünde doğrudan düzenleyebilirsiniz.
 
 İleri düzey kullanıcılar için, XAML Tasarımcısı bile [özelleştirebilirsiniz](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md).
+
+> [!NOTE]
+> Xamarin. Forms bir XAML tasarımcısını desteklemez. Xamarin. Forms XAML Usıs 'nizi görüntülemek ve uygulama çalışırken bunları düzenlemek için, Xamarin. Forms için XAML etkin yeniden yükleme ' yi kullanın. Daha fazla bilgi için bkz. [Xamarin. Forms Için xaml Hot reload (Önizleme)](/xamarin/xamarin-forms/xaml/hot-reload/) sayfası.
 
 ## <a name="xaml-designer-workspace"></a>XAML Tasarımcısı çalışma alanı
 
@@ -87,7 +90,7 @@ Kılavuz çizgilerini gösteren yaslama kılavuzunu görüntüler veya gizler. K
 
 **Kılavuz çizgilerine yaslamayı aç/kapat**
 
-**Kılavuz çizgilerine yaslaması** etkinleştirilirse, çalışma yüzeyinde bir öğe sürüklediğinizde, öğesi en yakın yatay ve dikey kılavuz çizgilerine göre hizalanacaktır.
+**Kılavuz çizgilerine yaslaması** etkinleştirilirse, bir öğe, çalışma yüzeyine sürüklediğinizde en yakın yatay ve dikey kılavuz çizgilerine göre hizalanacaktır.
 
 **Çalışma yüzeyi arka planını aç**
 
@@ -113,7 +116,7 @@ Visual Studio 'daki belge anahattı penceresi, Visual Studio için Blend [nesnel
 
 - Çalışma yüzeyinde tüm öğeleri hiyerarşik yapısını görüntüleyin.
 
-- Öğeleri değiştirmek için öğeleri seçin (örneğin, hiyerarşide hiyerarşi içine taşıyın veya Özellikler penceresi özelliklerini ayarlayın). Daha fazla bilgi için bkz. [XAML Tasarımcısı öğelerle çalışma](../xaml-tools/working-with-elements-in-xaml-designer.md).
+- Öğeleri değiştirebilmeniz için öğeleri seçin. Örneğin, bunları hiyerarşide etrafında taşıyabilir veya Özellikler penceresi özelliklerini ayarlayabilirsiniz. Daha fazla bilgi için bkz. [XAML Tasarımcısı öğelerle çalışma](../xaml-tools/working-with-elements-in-xaml-designer.md).
 
 - Denetimleri olan öğeler için şablonları oluşturup yeniden açın.
 
@@ -124,7 +127,7 @@ Nesneler ve Zaman Çizelgesi penceresini Visual Studio için Blend görüntülem
 
 ![Visual Studio 'da belge anahattı penceresi](media/document-outline-window.png)
 
-Belge ana hat/Nesneler ve Zaman Çizelgesi penceresindeki ana görünüm bir belge hiyerarşisini ağaç yapısında görüntüler. Belge anahattının hiyerarşik yapısını kullanarak belgeyi farklı ayrıntı düzeylerinde inceleyebilir ve öğeleri listedir veya gruplar halinde kilitler ve gizleyebilirsiniz. Bunlar belge ana hat/Nesneler ve Zaman Çizelgesi penceresinde kullanılabilen seçeneklerdir:
+Belge ana hat/Nesneler ve Zaman Çizelgesi penceresindeki ana görünüm bir belge hiyerarşisini ağaç yapısında görüntüler. Belge anahattının hiyerarşik yapısını kullanarak belgeyi farklı ayrıntı düzeylerinde inceleyebilir ve öğeleri listedir veya gruplar halinde kilitler ve gizleyebilirsiniz. Belge ana hat/Nesneler ve Zaman Çizelgesi penceresinde aşağıdaki seçenekler mevcuttur:
 
 **Göster/gizle**
 
