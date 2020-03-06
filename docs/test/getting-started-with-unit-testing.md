@@ -1,6 +1,6 @@
 ---
 title: Birim testini kullanmaya başlama
-ms.date: 02/13/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ffbc5c6730fb4ca4d2f39732ad2a595de15bbf2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 90c3cbdee722c4cf12c515f06659cc03f3179e1e
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77279325"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289860"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
@@ -22,7 +22,7 @@ Kod durumunu korumak, kod kapsamını sağlamak ve müşterilerinizin yapabilmes
 
 ## <a name="create-unit-tests"></a>Birim testleri oluşturma
 
-Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzeyde açıklanmaktadır.
+Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 
 1. Visual Studio 'da sınamak istediğiniz projeyi açın.
 
@@ -72,7 +72,7 @@ Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzey
 
 1. Birim testi yöntemine kod ekleyin.
 
-   Örneğin, bir MSTest veya NUnit test projesi için aşağıdaki kodu kullanabilirsiniz.
+   Örneğin, bir MSTest projesi için aşağıdaki kodu kullanabilirsiniz.
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -101,8 +101,42 @@ Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzey
    }
    ```
 
+   Ya da bir NUnit projesi için aşağıdaki kodu kullanabilirsiniz.
+
+   ```csharp
+   using using NUnit.Framework;
+   using System.IO;
+   using System;
+
+   namespace HelloWorldTests
+   {
+      [TestClass]
+      public class Tests
+      {
+         private const string Expected = "Hello World!";
+
+         [SetUp]
+         public void Setup()
+         {
+         }
+         [Test]
+         public void TestMethod1()
+         {
+            using (var sw = new StringWriter())
+            {
+               Console.SetOut(sw);
+               HelloWorldCore.Program.Main();
+
+               var result = sw.ToString().Trim();
+               Assert.AreEqual(Expected, result);
+            }
+         }
+      }
+   }
+   ```
+
 > [!TIP]
-> Birim testlerini oluşturma hakkında daha ayrıntılı yönergeler için bkz. [yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md).
+> Birim testleri oluşturma hakkında daha fazla bilgi için bkz. [yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md).
 
 ## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
 
