@@ -18,11 +18,11 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 70cc3c81c426ec55d0afb36360155786ec97d937
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918977"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409991"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -176,9 +176,9 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
  Örneğin, Lucerne Şimdi akşam yemeği Web sitesinde gerçekleştirilen ve bunları gerçekleştiren görevleri anlamak için aşağıdaki kullanım örneği diyagramını oluşturur:
 
- ![UML Kullanım durumu diyagramı](../modeling/media/uml-usecase.png "UML_UseCase")
+ ![UML Kullanım örneği diyagramı](../modeling/media/uml-usecase.png "UML_UseCase")
 
- **UML Kullanım durumu diyagramı**
+ **UML Kullanım örneği diyagramı**
 
  Aşağıdaki etkinlik diyagramı, bir müşteri şimdi akşam yemeği Web sitesinde bir sipariş oluşturduğunda adımların akışını açıklar. Bu sürümde, açıklamaları role göre düzenleyen, bu sürümde rolleri ve satır *kulvarları*oluştur öğelerini belirler:
 
@@ -203,7 +203,7 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
  Örneğin, aşağıdaki kullanım durumu diyagramı yeni gereksinimi göstermek için yeni bir "Gözden geçirme yazma" kullanım durumu içerir. Daha kolay tanımlama için diyagramda Turuncu renkle vurgulanır:
 
- ![UML Kullanım durumu diyagramı](../modeling/media/uml-writerev.png "UML_WriteRev")
+ ![UML Kullanım örneği diyagramı](../modeling/media/uml-writerev.png "UML_WriteRev")
 
  **UML Kullanım örneği diyagramı**
 
@@ -365,7 +365,7 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
 - [Sürüm denetimini kullanma](/azure/devops/repos/tfvc/overview?view=azure-devops)
 
-- [Uygulamayı oluşturun](/azure/devops/pipelines/index)
+- [Uygulamayı oluşturma](/azure/devops/pipelines/index)
 
 ## <a name="UpdatingSystem"></a>Görselleştirme ve modelleme kullanarak sistemi güncelleştirme
  Lucerne ve Dinner Now ödeme sistemlerini tümleştirmelidir. Aşağıdaki bölümlerde, Visual Studio 'daki modelleme diyagramları bu görevi gerçekleştirmelerine yardımcı olur:
@@ -643,7 +643,7 @@ Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlar
 
      Derlenmiş koda hızlı bir genel bakış için, boş bir kod haritası oluşturun ve ardından derleme dosyalarını veya ikili dosyaları harita yüzeyine sürükleyin.
 
-- Belirli kod veya çözüm öğelerini araştırmak için, görselleştirmek istediğiniz öğeleri ve ilişkileri seçmek üzere Çözüm Gezgini kullanın. Daha sonra yeni bir eşleme oluşturabilir veya seçili öğeleri var olan bir haritaya ekleyebilirsiniz. Bkz: [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md).
+- Belirli kod veya çözüm öğelerini araştırmak için, görselleştirmek istediğiniz öğeleri ve ilişkileri seçmek üzere Çözüm Gezgini kullanın. Daha sonra yeni bir eşleme oluşturabilir veya seçili öğeleri var olan bir haritaya ekleyebilirsiniz. Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
 
 - Haritayı keşfetmenize yardımcı olması için düzeni, yapmak istediğiniz görev türlerine uygun olacak şekilde yeniden düzenleyin.
 
