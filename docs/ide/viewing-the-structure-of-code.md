@@ -26,11 +26,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b73a4660c9e0dad66ceb73c04852601765174264
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594207"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409968"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>Farklı araç pencerelerini kullanarak kodun yapısını görüntüleme
 
@@ -119,7 +119,7 @@ Ana bölmede, yöntemine ve yönteminden yapılan çağrılar görüntülenir ve
 |**Tanıma Git**|Bir yöntemin orijinal tanımına gider.|
 |**Tüm başvuruları bul**|Seçili yönteme ait tüm başvuruları projede bulur.|
 |**Kopyala**|Seçili düğümü kopyalar (alt düğümleri değil).|
-|**Yenileme**|Bilgileri yeniler.|
+|**Yenileyebilir**|Bilgileri yeniler.|
 
 ## <a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
 
@@ -200,9 +200,9 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |||
 |-|-|
 |**Hızlı Eylemler ve yeniden düzenlemeler**||
-|**Rename**||
+|**Yeniden Adlandır**||
 |**Ekleme dosyalarının grafiğini oluştur**||
-|**Tanıma göz at**||
+|**Açıklama Özeti**||
 |**Tanıma Git**|Tanımı (veya kısmi sınıflar için tanımları) bulur ve **sonuçları bul** penceresinde görüntüler.|
 |**Bildirime git**||
 |**Tüm başvuruları bul**|Çözümdeki türe veya üyeye başvuruları bulur.|
@@ -211,8 +211,8 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |**Testleri Çalıştır**|Projede birim testleri varsa, seçilen kod için testleri çalıştırır.|
 |**Hata ayıklama testleri**||
 |**Ilı**|Bir kesme noktası (veya izleme noktası) ekler.|
-|**İmlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
-|**Kod parçacığı**||
+|**Imlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
+|**Gösterildiği**||
 |**Kes**, **Kopyala**, **Yapıştır**||
 |**Ek Açıklama**||
 |**Anahat Oluşturma**|Standart ana hat komutları.|

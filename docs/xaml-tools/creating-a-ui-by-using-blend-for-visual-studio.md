@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f2b9f38d83befcf49ecd3de8da3a2cd26ff3ab46
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593010"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409885"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Visual Studio için Blend genel bakış
 
-Visual Studio için Blend tasarım XAML tabanlı Windows ve Web uygulamalarına yardımcı olur. Visual Studio aynı temel XAML tasarım deneyimini sunar ve animasyon ve davranışlarla gibi gelişmiş görevler için görsel tasarımcılar ekler. Blend ve Visual Studio arasında bir karşılaştırma için bkz. [Visual Studio ve Visual Studio için Blend tasarım XAML](../xaml-tools/designing-xaml-in-visual-studio.md).
+Visual Studio için Blend tasarım XAML tabanlı Windows ve Web uygulamalarına yardımcı olur. Visual Studio aynı temel XAML tasarım deneyimini sunar ve animasyon ve davranışlarla gibi gelişmiş görevler için görsel tasarımcılar ekler. Blend ve Visual Studio arasında bir karşılaştırma için bkz. [Visual Studio 'DA xaml tasarlama ve Visual Studio için Blend](../xaml-tools/designing-xaml-in-visual-studio.md).
 
-Visual Studio için Blend, Visual Studio'nun bir bileşenidir. Blend, yüklemek için **Visual Studio yükleyicisi** seçin ya da **Evrensel Windows platformu geliştirme** veya **.NET Masaüstü geliştirmesinden** iş yükü. Bu iş yüklerinin hem de Visual Studio bileşeni için Blend içerir.
+Visual Studio için Blend, Visual Studio'nun bir bileşenidir. Blend 'yi yüklemek için **Visual Studio Yükleyicisi** **Evrensel Windows platformu geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin. Bu iş yüklerinin hem de Visual Studio bileşeni için Blend içerir.
 
 ![UWP iş yükü bileşenleri](media/installer-uwp.png)&nbsp;&nbsp;&nbsp;&nbsp;![.NET masaüstü geliştirme iş yükü bileşenleri](media/installer-dotnet-desktop.png)
 
@@ -29,7 +29,7 @@ Visual Studio için Blend yeniyseniz, çalışma alanının benzersiz özellikle
 
 ## <a name="tools-panel"></a>Araçlar paneli
 
-Kullanabileceğiniz **Araçları** uygulamanızdaki nesneleri oluşturup değiştirmesi Visual Studio için blend'de paneli. **Araçlar** paneli, bir *. xaml* dosyanız açık olduğunda xaml tasarımcısının sol tarafında görünür.
+Uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için Blend **Araçlar** panelini kullanabilirsiniz. **Araçlar** paneli, bir *. xaml* dosyanız açık olduğunda xaml tasarımcısının sol tarafında görünür.
 
 Bir araç seçerek ve farenizle çalışma yüzeyi üzerinde çizim nesneleri oluşturun.
 
@@ -42,7 +42,7 @@ Bir araç seçerek ve farenizle çalışma yüzeyi üzerinde çizim nesneleri ol
 
 ### <a name="selection-tools"></a>Seçim araçları
 
-Nesneleri ve yolları seçin. Kullanım **doğrudan seçim** iç içe geçmiş nesnelerde ve yol kesimleri seçme aracı.
+Nesneleri ve yolları seçin. İç içe geçmiş nesneler ve yol kesimleri seçmek için **doğrudan seçim** aracını kullanın.
 
 ### <a name="view-tools"></a>Görünüm Araçları
 

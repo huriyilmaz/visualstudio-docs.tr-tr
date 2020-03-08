@@ -14,11 +14,11 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408503"
 ---
 # <a name="language-conventions"></a>Dil kuralları
 
@@ -109,7 +109,7 @@ Bu bölümdeki stil kuralları hem hem de C# Visual Basic için geçerlidir.
   - DotNet\_Style\_\_gösterilen\_tercih eder tuple_names
   - DotNet\_Style\_\_\_anonim\_tür\_çıkarmayı tercih eder member_names
   - DotNet\_Style\_\_otomatik\_özellikleri tercih et
-  - DotNet\_Style\_\_tercih\_null\_\_\_
+  - DotNet\_Style\_\_tercih\_null\_\_\_\_\_
   - DotNet\_Style\_\_atama üzerinde\_koşullu\_ifade\_tercih eder
   - DotNet\_Style\_\_Return\_koşullu\_ifade\_tercih eder
   - DotNet\_Style\_bileşik\_atamasını\_tercih eder
@@ -785,7 +785,7 @@ Public ReadOnly Property Age As Integer
 End Property
 ```
 
-#### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>DotNet\_Style\_\_tercih\_null\_\_\_
+#### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>DotNet\_Style\_\_tercih\_null\_\_\_\_\_
 
 |||
 |-|-|
@@ -1063,7 +1063,7 @@ Bu bölümdeki stil kuralları yalnızca için C# geçerlidir.
   - CSharp\_Style\_var\_\_tür\_is_apparent
   - CSharp\_Style\_var_elsewhere
 - [İfade gövdeli üyeler](#expression-bodied-members)
-  - csharp\_style\_expression\_bodied_methods
+  - CSharp\_Style\_ifade\_bodied_methods
   - CSharp\_Style\_ifade\_bodied_constructors
   - CSharp\_Style\_ifade\_bodied_operators
   - CSharp\_Style\_ifade\_bodied_properties
@@ -1077,9 +1077,9 @@ Bu bölümdeki stil kuralları yalnızca için C# geçerlidir.
 - [Satır içi değişken bildirimleri](#inlined-variable-declarations)
   - CSharp\_stili\_satır içine alınmış\_variable_declaration
 - [İfade düzeyi tercihleri](#c-expression-level-preferences)
-  - csharp\_prefer\_simple\_default_expression
+  - CSharp\_\_basit\_tercih eder default_expression
 - ["Null" Denetim tercihleri](#c-null-checking-preferences)
-  - csharp\_style\_throw_expression
+  - CSharp\_Style\_throw_expression
   - CSharp\_Style\_koşullu\_delegate_call
 - [Kod bloğu tercihleri](#code-block-preferences)
   - CSharp\_prefer_braces
@@ -1190,7 +1190,7 @@ csharp_style_expression_bodied_lambdas = true:silent
 csharp_style_expression_bodied_local_functions = false:silent
 ```
 
-#### <a name="csharp_style_expression_bodied_methods"></a>csharp\_style\_expression\_bodied_methods
+#### <a name="csharp_style_expression_bodied_methods"></a>CSharp\_Style\_ifade\_bodied_methods
 
 |||
 |-|-|
@@ -1463,7 +1463,7 @@ Bu bölümdeki stil kuralları, ifade düzeyi tercihlerine önem vermez.
 csharp_prefer_simple_default_expression = true:suggestion
 ```
 
-#### <a name="csharp_prefer_simple_default_expression"></a>csharp\_prefer\_simple\_default_expression
+#### <a name="csharp_prefer_simple_default_expression"></a>CSharp\_\_basit\_tercih eder default_expression
 
 Bu stil kuralı, derleyicinin ifadenin türünü çıkardığı zaman [varsayılan değer ifadeleri için`default` değişmez](/dotnet/csharp/language-reference/operators/default#default-literal) değeri kullanılarak ilgilidir.
 
@@ -1498,7 +1498,7 @@ csharp_style_throw_expression = true:suggestion
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-#### <a name="csharp_style_throw_expression"></a>csharp\_style\_throw_expression
+#### <a name="csharp_style_throw_expression"></a>CSharp\_Style\_throw_expression
 
 |||
 |-|-|
@@ -1889,4 +1889,4 @@ switch (x)
 
 - [Biçimlendirme kuralları](editorconfig-formatting-conventions.md)
 - [Adlandırma kuralları](editorconfig-naming-conventions.md)
-- [Kodlama kuralı ayarlarına EditorConfig için .NET](editorconfig-code-style-settings-reference.md)
+- [EditorConfig için .NET kodlama kuralı ayarları](editorconfig-code-style-settings-reference.md)

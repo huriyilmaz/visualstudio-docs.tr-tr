@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: e5a3248d3f081bcab08c08110d305f0aa6235817
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591612"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409533"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Dinamik sembolik yürütme kullanarak giriş oluşturma
 
@@ -129,10 +129,10 @@ IntelliTest, ilginç program davranışlarını tetiklemek için gereken diziler
 
 [PexChoose](static-helper-classes.md#pexchoose) statik sınıfı, bir teste ek girişler elde etmek için kullanılabilir ve [parametreli modülleri](#parameterized-mocks)uygulamak için kullanılabilir.
 
-## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
+## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 
-Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)’na gönderin.
 
-## <a name="further-reading"></a>Daha fazla bilgi için
+## <a name="further-reading"></a>Daha fazla bilgi
 
 * [Nasıl çalışır?](https://devblogs.microsoft.com/devops/smart-unit-tests-a-mental-model/)
