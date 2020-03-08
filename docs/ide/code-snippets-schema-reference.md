@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22f84fbe5188e74acbf24256444ad11dd9c64347
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585437"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410130"
 ---
 # <a name="code-snippets-schema-reference"></a>Kod parçacıkları şema başvurusu
 
@@ -62,7 +62,7 @@ Bir metin değeri gereklidir. Bu metin kod parçacığının yazarını belirtir
 
 Kısa kod blokları için bir kapsayıcı sağlar.
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar sözcükler
 
 `Code` öğenin metninde kullanılabilecek iki ayrılmış sözcük vardır: `$end$` ve `$selected$`. `$end$`, kod parçacığı eklendikten sonra imlecin yerleştirileceği konumu işaretler. `$selected$`, çağrıldığında, çağrıldığında kod parçacığına eklenecek metni temsil eder. Örneğin, şunları içeren bir kod parçacığı verilmiştir:
 
@@ -104,7 +104,7 @@ Kod öğesinin yapısı aşağıda verilmiştir:
 
 Bir metin değeri gereklidir. Bu metin, kod parçacığı kod dosyasına eklendiğinde kullanabileceğiniz değişmez değerler ve nesnelerle birlikte kodu belirtir.
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 Kod öğesi için kullanılabilen üç öznitelik vardır:
 
@@ -316,7 +316,7 @@ Bir `Literal` veya `Object` öğesi için benzersiz bir tanımlayıcı belirtir.
 
 Bir metin değeri gereklidir. Bu metin, nesne veya değişmez değer için benzersiz tanımlayıcıyı belirtir.
 
-## <a name="import-element"></a>İçeri aktarma öğesi
+## <a name="import-element"></a>Import öğesi
 
 Bir IntelliSense kod parçacığı tarafından kullanılan içeri aktarılan ad alanlarını belirtir.
 
@@ -632,7 +632,7 @@ Nesnenin türünü belirtir. `Object` öğesi, kod parçacığı için gereken a
 | - |-----------------|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object-element)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
-Bir metin değeri gereklidir. Bu metin nesnenin türünü belirtir. Örneğin:
+Bir metin değeri gereklidir. Bu metin nesnenin türünü belirtir. Örnek:
 
 ```xml
 <Type>System.Data.SqlClient.SqlConnection</Type>

@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 898eb0eb1489d83e97ec9f0a5b38b475bda0199d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450417"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409375"
 ---
 # <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da dll 'leri hataC#ayıklama C++(,, F#Visual Basic,)
 
@@ -82,7 +82,7 @@ C/C++ projeler için, çıktı klasörüne kopyalamak yerine, proje özellik say
 
 1. **Bağlayıcı** > **giriş** > **ek bağımlılıklar**' ın altında LIB dosyaları için tam yolu ve dosya adını belirtin.
 
-1. Seçin **Tamam**.
+1. **Tamam**’ı seçin.
 
 Proje ayarları hakkında C++ daha fazla bilgi için bkz. [Windows C++ Özellik sayfası başvurusu](/cpp/build/reference/property-pages-visual-cpp).
 
@@ -115,13 +115,13 @@ DLL 'yi çağıran uygulama şunları yapabilir:
 
 - Çağıran uygulama için projeyi açın ve hata **ayıkla** > hata **ayıklamayı Başlat** ' ı seçerek veya **F5**tuşuna basarak hata ayıklamayı başlatın.
 
-  veya
+  or
 
 - Zaten dağıtılan ve test ya da üretim bilgisayarında çalışan bir uygulamaya iliştirme. Web sitelerindeki veya Web Apps 'teki dll 'Ler için bu yöntemi kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: çalışan bir Işleme iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
 Çağıran uygulamada hata ayıklamaya başlamadan önce, DLL 'de bir kesme noktası ayarlayın. Bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md). DLL kesme noktası isabet edildiğinde, kodu adım adım ilerleyerek her satırdaki eylemi gözlemleyerek yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../debugger/navigating-through-code-with-the-debugger.md).
 
-Hata ayıklama sırasında, uygulamanın yüklediği dll ve *. exe* dosyalarını doğrulamak için **modüller** penceresini kullanabilirsiniz. Açmak için **modülleri** hata ayıklarken, penceresinde **hata ayıklama** > **Windows** > **modülleri**. Daha fazla bilgi için bkz. [nasıl yapılır: modüller penceresini kullanma](../debugger/how-to-use-the-modules-window.md).
+Hata ayıklama sırasında, uygulamanın yüklediği dll ve *. exe* dosyalarını doğrulamak için **modüller** penceresini kullanabilirsiniz. **Modüller** penceresini açmak için hata ayıklama sırasında **Windows** > **modülleri** > **Hata Ayıkla** ' yı seçin. Daha fazla bilgi için bkz. [nasıl yapılır: modüller penceresini kullanma](../debugger/how-to-use-the-modules-window.md).
 
 ### <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a>Hemen penceresini kullanma
 
