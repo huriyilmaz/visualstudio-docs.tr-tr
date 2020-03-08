@@ -3,15 +3,15 @@ title: Abonelikler yönetim portalını kullanmaya başlama | Visual Studio Mark
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/07/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: b7a6d93e3c284e3778d9574eb86c4e998324c559
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: cc8a815317f46e01260f38e3ba974f89d928e49a
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850536"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408918"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
@@ -25,7 +25,7 @@ Visual Studio abonelikleri yönetim portalını kullanırken bu noktaları göz 
 - **Abonelikler arasında abonelikleri paylaşmayın.** Abonelikler adlandırılmış bireylere atanmalıdır.  Takımlara abonelikler atamaya izin verilmez.  Abonelik avantajlarının tamamını veya bir kısmını (geliştirme ve test için yazılım, Microsoft Azure, e-öğrenme vb.) kullanan herkese bir abonelik atamanız gerekir.
 
 ## <a name="the-subscribers-page"></a>Aboneler sayfası
-Abonelikler atadıktan sonra, aboneler sekmesi aşağıdakiler dahil olmak üzere abonelere ilişkin ayrıntılı bilgiler sağlar:
+Abonelikleri atadıktan sonra, aboneleri Yönet sekmesi, aboneler hakkında aşağıdakiler de dahil olmak üzere ayrıntılı bilgiler sağlar:
 - Her abonenin adı ve soyadı.
 - Bu kullanıcının e-posta adresi.
 - Kendisine atanmış olan abonelik düzeyi.
@@ -37,12 +37,14 @@ Abonelikler atadıktan sonra, aboneler sekmesi aşağıdakiler dahil olmak üzer
 - Yönetim portalından atama iletişim e-postası için kendi dil tercihi.
 - Oturum açma dışındaki iletişimler için kullanılan farklı bir e-posta adresi için isteğe bağlı alan.
 
-Bu sayfanın sol tarafında, her sözleşme için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgiler görebilirsiniz.
+Sayfanın sol üst kısmında, bir abonelik atamasına genel bakış, anlaşma ayrıntıları ve en yüksek kullanım raporu açığa çıkarmak için seçebileceğiniz çeşitli simgeler vardır.
+
+Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, üstteki simgeye tıklayarak slayt panelini etkinleştirin.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio abonelikleri Yönetici portalı aboneleri sayfası](_img/using-admin-portal/subscribers-page.png)
 
 ## <a name="the-details-page"></a>Ayrıntılar sayfası
-Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için Ayrıntılar sekmesini seçin. Anlaşma Durumu, satın alma hesabı, kuruluş ayrıntıları, süper yönetici ve diğer ilgili bilgileri gösterir.
+Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, anlaşma ayrıntıları sekmesini görmek üzere ikinci simgeyi seçin. Bu bölmede, anlaşma Durumu, satın alma hesabı, kuruluş ayrıntıları, süper Yöneticiler ve diğer ilgili bilgiler gösterilir.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio abonelikleri yönetim portalı ayrıntıları sayfası](_img/using-admin-portal/details-page.png)
 
@@ -52,6 +54,12 @@ Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için Ayrıntı
 - [Visual Studio IDE özelliklerini karşılaştırma](https://visualstudio.microsoft.com/vs/compare)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Yönetici sorumluluklarına genel bakış](admin-responsibilities.md)
@@ -59,3 +67,4 @@ Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
 - Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
+

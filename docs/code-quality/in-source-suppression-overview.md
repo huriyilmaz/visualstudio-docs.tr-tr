@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d2fe83690e55d49bb23bffb09de91c8f7534b6
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 67bb0d7ca38d4312dc2a1f1e7a8f50d0102a328a
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78167630"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408727"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
@@ -92,6 +92,8 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 - **Target** -uyarının bastırılmakta olduğu hedefi belirtmek için kullanılan bir tanımlayıcı. Tam nitelikli bir öğe adı içermelidir.
 
+Visual Studio 'da uyarıları gördüğünüzde, [genel gizleme dosyasına bir gizleme ekleyerek](../code-quality/use-roslyn-analyzers.md#suppress-violations)`SuppressMessage` örneklerini görüntüleyebilirsiniz. Gizleme özniteliği ve gerekli özellikleri bir önizleme penceresinde görünür.
+
 ## <a name="suppressmessage-usage"></a>SuppressMessage kullanımı
 
 Kod Analizi uyarıları <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğinin uygulandığı düzeyde bastırılır. Örneğin, öznitelik derleme, modül, tür, üye veya parametre düzeyinde uygulanabilir. Bunun amacı, gizleme bilgilerinin ihlalin gerçekleştiği koda sıkı bir şekilde tam olarak daha katı bir biçimde.
@@ -147,15 +149,6 @@ public class Animal
 }
 ```
 
-## <a name="generated-code"></a>Oluşturulan kod
-
-Yönetilen kod derleyicileri ve bazı üçüncü taraf araçları, hızlı kod geliştirmeyi kolaylaştırmak için kod üretir. Kaynak dosyalarda görünen derleyici tarafından oluşturulan kod genellikle `GeneratedCodeAttribute` özniteliğiyle işaretlenir.
-
-Kod Analizi uyarılarını ve oluşturulan kod için hataları bastırıp bastırmayacağını seçebilirsiniz. Bu tür uyarıları ve hataları gösterme hakkında daha fazla bilgi için bkz. [nasıl yapılır: üretilen kod uyarılarını gösterme](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
-
-> [!NOTE]
-> Kod Analizi, tüm derlemeye veya tek bir parametreye uygulandığında `GeneratedCodeAttribute` yoksayar.
-
 ## <a name="global-level-suppressions"></a>Küresel düzeyde gizlemeler
 
 Yönetilen Kod Analizi Aracı, derleme, modül, tür, üye veya parametre düzeyinde uygulanan `SuppressMessage` özniteliklerini inceler. Ayrıca, kaynaklara ve ad alanlarına karşı ihlalleri da tetikler. Bu ihlallerin genel düzeyde uygulanması ve kapsamı belirlenmiş ve hedeflenmiş olması gerekir. Örneğin, aşağıdaki ileti bir ad alanı ihlalini bastırır:
@@ -185,6 +178,22 @@ Genel gizleme dosyası, bir hedef belirtmeyen küresel düzeyde gizlemeler veya 
 Örneğin, _Globalsuppressions_ proje dosyanızdaki aşağıdaki öznitelik bir ASP.NET Core projesi Için ConfigureAwait ihlaline neden olacak:
 
 `[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2007:Consider calling ConfigureAwait on the awaited task", Justification = "ASP.NET Core doesn't use thread context to store request context.", Scope = "module")]`
+
+## <a name="generated-code"></a>Oluşturulan kod
+
+Yönetilen kod derleyicileri ve bazı üçüncü taraf araçları, hızlı kod geliştirmeyi kolaylaştırmak için kod üretir. Kaynak dosyalarda görünen derleyici tarafından oluşturulan kod genellikle `GeneratedCodeAttribute` özniteliğiyle işaretlenir.
+
+Kaynak kodu Analizi (FxCop çözümleyicileri) için, projenizin veya çözümünüzün kökündeki [. editorconfig](../code-quality/configure-fxcop-analyzers.md) dosyasını kullanarak oluşturulan koddaki iletileri bastırın. Oluşturulan kodla eşleştirmek için bir dosya kalıbı kullanın. Örneğin, * *. Designer.cs* dosyalarında CS1591 uyarılarını dışlamak için bunu yapılandırma dosyasında kullanın.
+
+``` cmd
+[*.designer.cs]
+dotnet_diagnostic.CS1591.severity = none
+```
+
+Eski kod analizi için, kod analizi uyarılarını ve üretilen kod hatalarını bastırıp bastırmayacağını seçebilirsiniz. Bu tür uyarıları ve hataları gösterme hakkında daha fazla bilgi için bkz. [nasıl yapılır: üretilen kod uyarılarını gösterme](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
+
+> [!NOTE]
+> Kod Analizi, tüm derlemeye veya tek bir parametreye uygulandığında `GeneratedCodeAttribute` yoksayar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

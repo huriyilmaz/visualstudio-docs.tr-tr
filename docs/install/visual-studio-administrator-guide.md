@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9f4b044cddee59254e0b4f5198e75e3fa774aab7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 7fd8e886a4f770238c00ef881748388f93281074
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114212"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409684"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio yönetici kılavuzu
 
@@ -107,13 +107,21 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
 ## <a name="step-4---deploy-updates"></a>4\. adım-güncelleştirmeleri dağıtma
 
-* [En son güncelleştirmeleri içeren ağ konumunuza Yenile](update-a-network-installation-of-visual-studio.md?view=vs-2019) Visual Studio, kullandığınız komutunu çalıştırarak güncelleştirilmiş bileşenleri eklemek için düzenli olarak adım 1.
+* Güncelleştirilmiş bileşenleri eklemek için düzenli olarak 1. adımda kullandığınız komutu çalıştırarak, Visual Studio 'Nun [en son güncelleştirmeleriyle ağ konumunuzu yenileyin](update-a-network-installation-of-visual-studio.md?view=vs-2019) .
 
   Visual Studio 'Yu bir güncelleştirme betiği kullanarak güncelleştirebilirsiniz. Bunu yapmak için [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) komut satırı parametresini kullanın.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>5\. adım-(Isteğe bağlı) Visual Studio araçlarını kullanma
 
-Yardımcı olacak çeşitli araçlar sunuyoruz [algılamak ve yüklü Visual Studio Örnekleri yönetme](tools-for-managing-visual-studio-instances.md?view=vs-2019) istemci makinelerinde.
+İstemci makinelerde [yüklü Visual Studio örneklerini tespit etmenize ve yönetmenize](tools-for-managing-visual-studio-instances.md?view=vs-2019) yardımcı olacak çeşitli araçlar sunulmaktadır.
+
+## <a name="advanced-configuration"></a>Gelişmiş yapılandırma
+
+Varsayılan olarak, Visual Studio yüklemesi, hata listesi F1 ve kod bağlantıları 'ndaki Bing aramalarına özel tür ekleme imkanı sunar. Visual Studio 'Yu, ilke ile aşağıdaki kayıt defteri anahtarının değerini değiştirerek, arama mekanizmanın herhangi bir özel kullanıcı türünü dahil etme özelliğini devre dışı bırakacak şekilde yapılandırabilirsiniz:
+
+**"Putcustomtypeınbingsearch" DWORD 0**
+
+Kayıt defteri, özel kayıt kovanının * Software\Microsoft\VisualStudio\16.0_ {InstanceId} \ Roslyn\ınternal\diagnostics\* dizininde bulunur. Kayıt defteri kovanının nasıl açılacağı hakkında yönergeler için bkz. [Visual Studio örneği için kayıt defterini düzenlemeyle](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
@@ -146,13 +154,21 @@ Yardımcı olacak çeşitli araçlar sunuyoruz [algılamak ve yüklü Visual Stu
 
 ## <a name="step-4---deploy-updates"></a>4\. adım-güncelleştirmeleri dağıtma
 
-* [En son güncelleştirmeleri içeren ağ konumunuza Yenile](update-a-network-installation-of-visual-studio.md?view=vs-2017) Visual Studio, kullandığınız komutunu çalıştırarak güncelleştirilmiş bileşenleri eklemek için düzenli olarak adım 1.
+* Güncelleştirilmiş bileşenleri eklemek için düzenli olarak 1. adımda kullandığınız komutu çalıştırarak, Visual Studio 'Nun [en son güncelleştirmeleriyle ağ konumunuzu yenileyin](update-a-network-installation-of-visual-studio.md?view=vs-2017) .
 
   Visual Studio 'Yu bir güncelleştirme betiği kullanarak güncelleştirebilirsiniz. Bunu yapmak için [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) komut satırı parametresini kullanın.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>5\. adım-(Isteğe bağlı) Visual Studio araçlarını kullanma
 
-Yardımcı olacak çeşitli araçlar sunuyoruz [algılamak ve yüklü Visual Studio Örnekleri yönetme](tools-for-managing-visual-studio-instances.md?view=vs-2017) istemci makinelerinde.
+İstemci makinelerde [yüklü Visual Studio örneklerini tespit etmenize ve yönetmenize](tools-for-managing-visual-studio-instances.md?view=vs-2017) yardımcı olacak çeşitli araçlar sunulmaktadır.
+
+## <a name="advanced-configuration"></a>Gelişmiş yapılandırma
+
+Varsayılan olarak, Visual Studio yüklemesi, hata listesi F1 ve kod bağlantıları 'ndaki Bing aramalarına özel tür ekleme imkanı sunar. Visual Studio 'Yu, ilke ile aşağıdaki kayıt defteri anahtarının değerini değiştirerek, arama mekanizmanın herhangi bir özel kullanıcı türünü dahil etme özelliğini devre dışı bırakacak şekilde yapılandırabilirsiniz:
+
+**"Putcustomtypeınbingsearch" DWORD 0**
+
+Kayıt defteri, özel kayıt kovanının * Software\Microsoft\VisualStudio\15.0_ {InstanceId} \ Roslyn\ınternal\diagnostics\* dizininde bulunur. Kayıt defteri kovanının nasıl açılacağı hakkında yönergeler için bkz. [Visual Studio örneği için kayıt defterini düzenlemeyle](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
@@ -161,7 +177,7 @@ Yardımcı olacak çeşitli araçlar sunuyoruz [algılamak ve yüklü Visual Stu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Komut satırı parametresi örnekleri](command-line-parameter-examples.md)
-* [Visual Studio'yu çevrimdışı yükleme için gerekli sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
+* [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
 * [Yükleme yapılandırmasını içeri veya dışarı aktarma](import-export-installation-configurations.md)
 * [Visual Studio Kurulum arşivleri](https://devblogs.microsoft.com/setup/tag/vs2017/)
 * [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)

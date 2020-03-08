@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13c0731781efec98a117c11a7172645c46028af3
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: cbec3c7c020bae0e94bc16bdb1fe9740a36a93ae
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633167"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865329"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild görev başvurusu
 
@@ -37,15 +37,15 @@ Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağı
 
 - [Görev temel sınıfı](../msbuild/task-base-class.md)
 
- <xref:Microsoft.Build.Utilities.Task> sınıfından türetilen görevlere birkaç parametre ekler.
+ <xref:Microsoft.Build.Utilities.Task> sınıfından türetilen görevlere birkaç parametre ekler. Doğrudan kullanılmaya yönelik değildir.
 
 - [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md)
 
- <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından türetilen görevlere birkaç parametre ekler.
+ <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından türetilen görevlere birkaç parametre ekler. Doğrudan kullanılmaya yönelik değildir.
 
 - [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md)
 
- <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından türetilen görevlere birkaç parametre ekler.
+ <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfından türetilen görevlere birkaç parametre ekler. Doğrudan kullanılmaya yönelik değildir.
 
 - [AL (derleme bağlayıcı) görevi](../msbuild/al-assembly-linker-task.md)
 
