@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Yeni Visual Studio + GitHub teklifi hakkında bilgi edinin
-ms.openlocfilehash: 5ae209bc0f6b3dcef99f15abd2cfb67d65f655d0
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: f8cfe09d6c9dc7608684ccf80238db4ac066fc20
+ms.sourcegitcommit: c8b979a56c95e43cf8ae92b6c3c9570db59a8e58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476745"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894393"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio aboneliklerine giriş  
 
@@ -77,12 +77,14 @@ Y: bir GitHub kurumsal aboneliğiyle birlikte, tam bir Visual Studio aboneliği 
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 - GitHub Enterprise için [Teknik destek](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) alın.   
 
-## <a name="next-steps"></a>Sonraki adımlar
-GitHub 'a yeni başladıysanız [GitHub öğrenme laboratuvarına](https://lab.github.com/)göz atın. Bu, bir dizi eğlence ve pratik proje aracılığıyla size yardımcı olacak şekilde yararlı geri bildirim paylaşımı sağlar.
-
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
 - [Azure belgeleri](https://docs.microsoft.com/azure/)
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Sonraki adımlar
+GitHub 'a yeni başladıysanız [GitHub öğrenme laboratuvarına](https://lab.github.com/)göz atın. Bu, bir dizi eğlence ve pratik proje aracılığıyla size yardımcı olacak şekilde yararlı geri bildirim paylaşımı sağlar.
+
+
 
