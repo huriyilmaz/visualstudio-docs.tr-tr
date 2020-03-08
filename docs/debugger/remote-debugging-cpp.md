@@ -18,11 +18,11 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0173ed557afa47129e0cc92d9ef9b2d94a7b198f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730319"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409398"
 ---
 # <a name="remote-debugging-a-c-project-in-visual-studio"></a>Visual Studio 'da C++ bir projede uzaktan hata ayıklama
 Farklı bir bilgisayardaki Visual Studio uygulamasında hata ayıklamak için, uygulamanızı dağıtacağınız bilgisayara Uzak araçları yükleyip çalıştırın, projenizi Visual Studio 'dan uzak bilgisayara bağlanacak şekilde yapılandırın ve ardından uygulamanızı dağıtıp çalıştırın.
@@ -33,17 +33,17 @@ Evrensel Windows uygulamaları (UWP) ile ilgili uzaktan hata ayıklama hakkında
 
 ## <a name="requirements"></a>Gereksinimler
 
-Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' den başlayarak daha yeni (telefon değil) ve Windows Server sürümlerinde desteklenir. Gereksinimlerin tüm listesi için bkz. [gereksinimler](../debugger/remote-debugging.md#requirements_msvsmon).
+Desteklenen Windows 7 ve daha yeni uzaktan hata ayıklayıcı (telefon değil) ve Windows Server 2008 Service Pack 2'ile başlayan Windows Server sürümleri. Gereksinimlerin tüm listesi için bkz. [gereksinimler](../debugger/remote-debugging.md#requirements_msvsmon).
 
 > [!NOTE]
-> Proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmez. Yüksek gecikme veya düşük bant genişliğine sahip bir bağlantı (örneğin, Internet veya ülkeler arasında Internet üzerinden) için hata ayıklama önerilmez ve başarısız olabilir veya aşırı derecede yavaş olabilir.
+> Bir proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmiyor. Ülkeler yüksek gecikme süresi veya çevirmeli, Internet gibi düşük bant genişliği bağlantı üzerinden veya Internet üzerinden hata ayıklama önerilmez ve başarısız olabilir veya edilemeyecek kadar yavaş.
 
 ## <a name="download-and-install-the-remote-tools"></a>Uzak araçları indirme ve yükleme
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
 > [!TIP]
-> Bazı senaryolarda, uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırmak en etkili olabilir. Daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırma](../debugger/remote-debugging.md#fileshare_msvsmon).
+> Bazı senaryolarda, uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırma en verimli olabilir. Daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırma](../debugger/remote-debugging.md#fileshare_msvsmon).
 
 ## <a name="BKMK_setup"></a>Uzaktan hata ayıklayıcıyı ayarlama
 
@@ -57,7 +57,7 @@ Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' de
 
 1. **Mymfc** ADLı bir MFC uygulaması oluşturun.
 
-2. @No__t_1 başlangıcında **MainFrm. cpp**gibi kolayca erişilen uygulamada herhangi bir yere bir kesme noktası ayarlayın.
+2. `CMainFrame::OnCreate`başlangıcında **MainFrm. cpp**gibi kolayca erişilen uygulamada herhangi bir yere bir kesme noktası ayarlayın.
 
 3. Çözüm Gezgini, projeye sağ tıklayın ve **Özellikler**' i seçin. **Hata ayıklama** sekmesini açın.
 
@@ -70,9 +70,9 @@ Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' de
    |Ayar|Değer|
    |-|-|
    |Uzak komut|C:\remotetemp\mymfc.exe|
-   |Çalışma dizini|C:\remotetemp|
+   |Çalışma Dizini|C:\remotetemp|
    |Uzak sunucu adı|MJO-DL:*BağlantıNoktasıNumarası*|
-   |Bağlanma|Windows kimlik doğrulaması ile uzaktan|
+   |Bağlantı|Windows kimlik doğrulaması ile uzaktan|
    |Hata ayıklayıcı türü|Yalnızca yerel|
    |Dağıtım dizini|Ni c:\remotetemp|
    |Dağıtılacak ek dosyalar|C:\data\mymfcdata.exe.|
@@ -102,7 +102,7 @@ Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' de
 
     Alternatif olarak, dosyaları projenize dahil edebilir ve her bir dosyanın **Özellikler** sayfasında **içerik** özelliğini **Evet** olarak ayarlayabilirsiniz. Bu dosyalar, **uzak Windows hata ayıklayıcı** sayfasında belirtilen **dağıtım dizinine** kopyalanır. Ayrıca, **dosya kopyalamak** Için **öğe türünü** değiştirebilir ve dosyaların **dağıtım dizininin**bir alt klasörüne kopyalanması gerekiyorsa ek özellikler belirtebilirsiniz.
 
-## <a name="set-up-debugging-with-remote-symbols"></a>Uzak simgelerle hata ayıklamayı ayarlama
+## <a name="set-up-debugging-with-remote-symbols"></a>Uzak simgeleri ile hata ayıklamayı kurma
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 

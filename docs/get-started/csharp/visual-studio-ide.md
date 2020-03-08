@@ -12,11 +12,11 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: da164414cfcca9631eaf59b5e2f6044e70ac9cc5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594870"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409448"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio IDE 'ye hoş geldiniz | C\#
 
@@ -26,7 +26,7 @@ ms.locfileid: "75594870"
 
 Visual Studio 'Yu C# geliştiricilere uyarlanmış ortam ayarlarını kullanacak şekilde yapılandıralim.
 
-1. Menü çubuğunda, **Araçları** > **içeri ve dışarı aktarma ayarları**.
+1. Menü çubuğunda **araçlar** > **Içeri ve dışarı aktarma ayarları**' nı seçin.
 
 2. **Ayarları içeri ve dışarı aktarma sihirbazında**, ilk sayfadaki **tüm ayarları Sıfırla** ' yı seçin ve ardından **İleri**' yi seçin.
 
@@ -36,7 +36,7 @@ Visual Studio 'Yu C# geliştiricilere uyarlanmış ortam ayarlarını kullanacak
 
 5. **Sıfırlama Tamam** sayfasında **Kapat**' ı seçin.
 
-IDE'yi kişiselleştirme diğer yollar hakkında bilgi edinmek için [kişiselleştirme Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bilgi edinmek için bkz. [Visual Studio 'Yu kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -50,6 +50,6 @@ Bu tanıtıcı makaleler biriyle boyunca izleyerek daha fazla Visual Studio'ı k
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- Bulma [daha fazla Visual Studio özellikleri](../../ide/advanced-feature-overview.md)
-- Ziyaret [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
-- Okuma [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/)
+- [Daha fazla Visual Studio özelliği](../../ide/advanced-feature-overview.md) bulun
+- [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/) ziyaret edin
+- [Visual Studio blogunu](https://devblogs.microsoft.com/visualstudio/) okuyun

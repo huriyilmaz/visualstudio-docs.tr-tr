@@ -14,11 +14,11 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 6f81cc32604abe6d90ac0d263574e97df35c63bd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593518"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409019"
 ---
 # <a name="whats-new-for-design-in-visual-studio-2017"></a>Visual Studio 2017’de tasarıma yönelik yenilikler
 
@@ -30,7 +30,7 @@ ms.locfileid: "75593518"
 
 Yazma deneyimi, bağımlılık doğrulamasını daha keşfedilebilir ve daha erişilebilir hale getirmek üzere değiştirilmiştir. Terminoloji "katman diyagramı" iken "bağımlılık diyagramı" olarak değiştirildi.
 
-**Mimarisi** menüsü artık, doğrudan bir bağımlılık diyagramı oluşturmak için bir komut içerir:
+**Mimari** menüsünde artık doğrudan bir bağımlılık diyagramı oluşturmak için bir komut bulunur:
 
 ![Canlı bağımlılık öğede mimari menüsü](media/dep-validation-whatsnew-02.png)
 
@@ -40,7 +40,7 @@ Katman özelliği adları ve açıklamaları daha anlamlı hale getirmek için d
 
 Her diyagramı her kaydedişinizde çözümdeki geçerli kod için analiz sonuçlarında yaptığınız değişikliklerin etkisini hemen görürsünüz. **Bağımlılıkları doğrula** komutunun tamamlanmasını beklemeniz gerekmez.
 
-Daha fazla ayrıntı için [bu blog gönderisini](https://devblogs.microsoft.com/devops/live-architecture-dependency-validation-in-visual-studio-15-preview-5/).
+Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/live-architecture-dependency-validation-in-visual-studio-15-preview-5/)bakın.
 
 ## <a name="uml-designers-have-been-removed"></a>UML tasarımcılarına kaldırıldı
 
@@ -61,17 +61,17 @@ UML tasarımcıları Visual Studio 'dan kaldırılmıştır.
 
 UML tasarımcılarına önemli bir kullanıcı varsa, UML ihtiyaçlarınız için alternatif bir aracı üzerinde karar sırada Visual Studio 2015 veya önceki sürümlerini kullanmaya devam edebilirsiniz.
 
-Daha fazla ayrıntı için [bu blog gönderisini](https://devblogs.microsoft.com/devops/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/).
+Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)bakın.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="a-nameversionsupport-edition-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport" />Mimari ve Modelleme Araçları sürüm desteği
+## <a name="a-nameversionsupport-edition-support-for-architecture-and-modeling-tools"></a>mimari ve modelleme araçları için <a name="VersionSupport" />Edition desteği
 
 Visual Studio çeşitli sürümlerde kullanılabilir. Bunların tümü, mimari ve Modelleme Araçları için destek sağlar. Aşağıdaki tabloda her bir aracı kullanılabilirliğini gösterir.
 
-|**Özelliği**|**Enterprise edition**|**Professional sürümü**|**Community sürümü**|
+|**Özellik**|**Kurumsal sürüm**|**Professional sürümü**|**Topluluk sürümü**|
 |-|-|-|-|
-|**Kod haritaları**|Evet|Yalnızca okuma kod haritalarını destekler, kod filtreleme, yeni genel düğüm ekleme ve seçimden yeni yönlendirilmiş grafik oluşturma eşler.|-|
-|**Bağımlılık diyagramları**|Evet|Yalnızca bağımlılık diyagramlarını okuma destekler.|Yalnızca bağımlılık diyagramlarını okuma destekler.|
-|**Yönlendirilmiş grafikleri** (DGML diyagramları)|Evet|Evet|Evet|
-|**Kod kopyası**|Evet|-|-|
+|**Kod eşlemeleri**|Yes|Yalnızca okuma kod haritalarını destekler, kod filtreleme, yeni genel düğüm ekleme ve seçimden yeni yönlendirilmiş grafik oluşturma eşler.|-|
+|**Bağımlılık diyagramları**|Yes|Yalnızca bağımlılık diyagramlarını okuma destekler.|Yalnızca bağımlılık diyagramlarını okuma destekler.|
+|**Yönlendirilmiş grafikler** (DGML diyagramları)|Yes|Yes|Yes|
+|**Kod kopyası**|Yes|-|-|

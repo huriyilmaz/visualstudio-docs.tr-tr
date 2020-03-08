@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: bcdef95935c0522c8b93a972d7f44fbd7632c53b
-ms.sourcegitcommit: b02c40c1ba193e38b5ace14590a6d57590d3270f
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012618"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409652"
 ---
 # <a name="create-r-projects-in-visual-studio"></a>Visual Studio 'da R projeleri oluşturma
 
@@ -24,8 +24,8 @@ Projeler her zaman bir Visual Studio *çözümü*içinde yönetilir ve bu, bir d
 ## <a name="creating-a-new-r-project"></a>Yeni bir R projesi oluşturma
 
 1. Visual Studio'yu açın.
-1. **Dosya > Yeni > projesi** seçin (**CTRL**+ **+ Shift**+**N**)
-1. **Şablonlar** > **R**altında "R proje" seçeneğini belirleyin, projeye bir ad ve konum verin ve **Tamam**' ı seçin:
+1. **Dosya > yeni > projesi** seçin (**Ctrl**+**SHIFT**+**N**)
+1. **Şablonlar** > **R**altında "r Project" seçeneğini belirleyin, projeye bir ad ve konum verin ve **Tamam**' ı seçin:
 
     ![Visual Studio 'da R için yeni proje iletişim kutusu (VS2017 ' de RTVS)](media/getting-started-01-new-project.png)
 
@@ -33,20 +33,20 @@ Bu komut, boş bir betiği olan bir proje oluşturur *. R* dosyası düzenleyici
 
 ![Şablondan oluşturulan bir R projesinin içeriği](media/projects-template-results.png)
 
-*. Rhistory* [R etkileşim](interactive-repl-for-r-in-visual-studio.md) penceresine girdiğiniz komutları kaydeder. **R araçları** > Windowsgeçmişi > komutuyla adanmış bir geçmiş penceresi açabilirsiniz. Bu pencerede, geçmiş içeriğini temizlemek için bir araç çubuğu düğmesi ve bağlam menüsü öğeleri bulunur.
+*. Rhistory* [R etkileşim](interactive-repl-for-r-in-visual-studio.md) penceresine girdiğiniz komutları kaydeder. **R araçları** > **Windows** > **History** komutuyla ayrılmış bir geçmiş penceresi açabilirsiniz. Bu pencerede, geçmiş içeriğini temizlemek için bir araç çubuğu düğmesi ve bağlam menüsü öğeleri bulunur.
 
 *Rproject. rproj* dosyası, başka bir şekilde Visual Studio tarafından yönetilmeyen belirli R-özel proje ayarlarını tutar:
 
 | Özellik | Varsayılan | Açıklama |
 | --- | --- | --- |
 | Sürüm | 1.0 | Projeyi oluşturmak için kullanılan Visual Studio için R Araçları sürümü. |
-| RestoreWorkspace | Varsayılan | Önceki çalışma alanı değişkenlerini `.RData` proje dizinindeki dosyadan otomatik olarak yükle. |
-| SaveWorkspace | Varsayılan | Proje kapatılırken geçerli çalışma alanı değişkenlerini `.RData` proje dizinindeki dosyaya kaydedin. |
-| AlwaysSaveHistory | Varsayılan | Projeyi kapatırken, geçerli etkileşimli pencere geçmişini `.RHistory` proje dizinindeki dosyaya kaydet. |
-| EnableCodeIndexing | Evet | Kod aramalarını hızlandırmak için bir arka plan dizin oluşturma görevinin çalıştırılıp çalıştırılmayacağını belirler. |
-| UseSpacesForTab | Evet | Düzenleyicide **sekme** tuşuna basıldığında boşluk (Evet) veya sekme karakteri (Hayır) eklemek isteyip istemediğinizi belirler. |
+| RestoreWorkspace | Varsayılan | Önceki çalışma alanı değişkenlerini proje dizinindeki `.RData` dosyasından otomatik olarak yükle. |
+| SaveWorkspace | Varsayılan | Bir projeyi kapatırken proje dizinindeki `.RData` dosyasına geçerli çalışma alanı değişkenlerini kaydedin. |
+| AlwaysSaveHistory | Varsayılan | Bir projeyi kapatırken proje dizinindeki `.RHistory` dosyasına geçerli etkileşimli pencere geçmişini kaydet. |
+| EnableCodeIndexing | Yes | Kod aramalarını hızlandırmak için bir arka plan dizin oluşturma görevinin çalıştırılıp çalıştırılmayacağını belirler. |
+| UseSpacesForTab | Yes | Düzenleyicide **sekme** tuşuna basıldığında boşluk (Evet) veya sekme karakteri (Hayır) eklemek isteyip istemediğinizi belirler. |
 | NumSpacesForTab | 2 | UseSpacesForTab Evet ise eklenecek boşluk sayısı. |
-| Encoding | UTF-8 | Dosyalar için `.R` varsayılan kodlama. |
+| Encoding | UTF-8 | `.R` dosyaları için varsayılan kodlama. |
 | RnwWeave | Sweave | RNW dosyası dalgalı olarak kullanılacak paket. |
 | LaTeX | pdfLaTeX | Rmarki 'YI PDF 'ye dönüştürürken kullanılacak kitaplık. |
 
@@ -56,21 +56,21 @@ Var olan bir klasörünüz varsa *.* Bir projede yönetmek istediğiniz R dosyal
 
 1. Önceki bölümde olduğu gibi Visual Studio 'da yeni bir proje oluşturun.
 1. Dosyalarınızı proje klasörüne kopyalayın.
-1. Visual Studio Çözüm Gezgini, projeye sağ tıklayın,**Varolan öğe** **Ekle** > ' yi seçin ve eklemek istediğiniz dosyalara gidin. Bu dosyalar, **Tamam ' ı**seçtikten sonra proje ağacınızdaki görünür.
-1. Kodu alt klasörlere düzenlemek için projeye sağ tıklayın, önce**Yeni klasör** **Ekle** > ' yi seçin, sonra dosyalarınızı bu klasöre kopyalayın ve adım 3 ' te mevcut öğeleri ekleyin.
+1. Visual Studio Çözüm Gezgini, projeye sağ tıklayın, > **Varolan öğe** **Ekle** ' yi seçin ve eklemek istediğiniz dosyalara gidin. Bu dosyalar, **Tamam ' ı**seçtikten sonra proje ağacınızdaki görünür.
+1. Kodu alt klasörlere düzenlemek için projeye sağ tıklayın, önce > **Yeni klasör** **Ekle** ' yi seçin, sonra dosyalarınızı bu klasöre kopyalayın ve adım 3 ' te mevcut öğeleri ekleyin.
 
-## <a name="project-properties"></a>Proje Özellikleri
+## <a name="project-properties"></a>Proje özellikleri
 
 Proje özelliği sayfalarını açmak için **Çözüm Gezgini** içinde projeye sağ tıklayın ve **Özellikler**' i seçin veya **Proje > (proje adı) Özellikler** menü öğesini seçin. Açılan pencere, proje özelliklerini görüntüler:
 
 | Tab | Özellik | Açıklama |
 | --- | --- | --- |
-| Çalıştır | Başlangıç dosyası | **Kaynak başlangıç dosyası** komutuyla çalışan dosyanın adı, **F5** **,**  > hata ayıklama**başlatması** **veya** > hata ayıklama başlatma**hatası olmadan Başlat**. Projedeki dosyaya sağ tıklayıp **Başlangıç R betiği olarak ayarla** ' yı seçtiğinizde, başlangıç dosyası olarak da ayarlanır. |
+| Çalıştırın | Başlangıç dosyası | **Kaynak başlangıç dosyası** komutuyla çalışan dosyanın adı, **F5** **, hata ayıklama > ** **Başlat** **veya hata ayıklama > ** hata ayıklama **olmadan Başlat**. Projedeki dosyaya sağ tıklayıp **Başlangıç R betiği olarak ayarla** ' yı seçtiğinizde, başlangıç dosyası olarak da ayarlanır. |
 | | Çalıştırmada R Etkileşim Sıfırla | Projeyi çalıştırırken etkileşimli pencerenin çalışma alanındaki tüm değişkenleri temizler. Bunun yapılması, bazı çalışma alanı içeriklerinin daha fazla çalışılmasından emin olmasını garanti eder. |
 | | Uzak proje yolu | Uzak bir çalışma alanının yolu. |
 | | Çalıştırma sırasında dosyaları aktar | **Dosya aktarımına**bağlı proje dosyalarının her çalıştırma ile uzak çalışma alanına kopyalanıp kopyalanmayacağını belirtir. |
 | | Aktarılacak dosyalar | Bir uzak çalışma alanına kopyalanacak belirli dosyaları belirten dosya adları ve joker karakterler, **çalışma sırasında dosya aktar** seçildiyse seçilir. |
-| Ayarlar | (Settings. R dosyası) | R Project ayarları ayarlarından geliyor *. r* veya * *. Projenin içinde bulunan Settings. R* dosyaları. Hiçbir ayar dosyası yoksa, değişken ekleyebilir, sayfayı kaydedebilir ve varsayılan *ayarlar. R* dosyası sizin için oluşturulur. Ayrıca, **Dosya** > **Yeni öğe Ekle** menü komutu aracılığıyla projeye ayarlar dosyası ekleyebilirsiniz. <br/> Ayarlar R kodu olarak depolanır ve dosyanın başka modüller çalıştırılmadan önce kaynağı oluşturulabilir ve bu sayede ortam önceden tanımlanmış ayarlarla önceden dolduruluyor. |
+| Ayarlar | (Settings. R dosyası) | R Project ayarları ayarlarından geliyor *. r* veya * *. Projenin içinde bulunan Settings. R* dosyaları. Hiçbir ayar dosyası yoksa, değişken ekleyebilir, sayfayı kaydedebilir ve varsayılan *ayarlar. R* dosyası sizin için oluşturulur. Ayrıca **dosya** > **Yeni öğe Ekle** menü komutu aracılığıyla projeye ayarlar dosyası ekleyebilirsiniz. <br/> Ayarlar R kodu olarak depolanır ve dosyanın başka modüller çalıştırılmadan önce kaynağı oluşturulabilir ve bu sayede ortam önceden tanımlanmış ayarlarla önceden dolduruluyor. |
 
 ## <a name="r-specific-project-commands"></a>R 'e özgü proje komutları
 
@@ -80,16 +80,16 @@ Visual Studio projeleri, sağ tıklama menüsü ve **Proje** menüsü aracılı�
 | --- | --- |
 | Çalışma dizinini burada ayarla | R Etkileşim pencerenin çalışma dizinini proje klasörüne ayarlar ve bu da bir proje içindeki herhangi bir alt klasörde kullanılabilir. |
 | Içeren klasörü aç | Seçili dosyanın konumundaki Windows Gezgini 'ni açar. |
-| R betiği Ekle | Yeni bir oluşturur ve açar *. R* dosyası varsayılan bir ada sahiptir. Oluşturmak için**Yeni öğe** **Ekle** > komutunu da kullanabilirsiniz *. R* dosyalarının yanı sıra diğer birçok dosya türünü de vardır. Bkz. [R-özel öğe şablonları](#r-specific-item-templates). |
-| R Markdown Ekle | Yeni *. RMD* belgesi oluşturur ve varsayılan adla açar. Ayrıca,**Yeni öğe** **Ekle** > komutunu da *. RMD* dosyalarının yanı sıra diğer birçok dosya türünü oluşturmak için de kullanabilirsiniz. Bkz. [R-özel öğe şablonları](#r-specific-item-templates).  |
+| R betiği Ekle | Yeni bir oluşturur ve açar *. R* dosyası varsayılan bir ada sahiptir. Oluşturmak için > **Yeni öğe** **Ekle** komutunu da kullanabilirsiniz *. R* dosyalarının yanı sıra diğer birçok dosya türünü de vardır. Bkz. [R-özel öğe şablonları](#r-specific-item-templates). |
+| R Markdown Ekle | Yeni *. RMD* belgesi oluşturur ve varsayılan adla açar. Ayrıca, *. RMD* dosyalarının yanı sıra diğer birçok dosya türünü de oluşturmak Için > **Yeni öğe** **Ekle** komutunu da kullanabilirsiniz. Bkz. [R-özel öğe şablonları](#r-specific-item-templates).  |
 | Saklı yordamları Yayımla | R betiklerinizde bulunan saklı yordamları yayımlamak için bir işlem başlatır. Bkz. [SQL Server saklı yordamlarla çalışma](integrating-sql-server-with-r.md#work-with-sql-server-stored-procedures). |
 
 ## <a name="r-specific-item-templates"></a>R 'e özgü öğe şablonları
 
-RTVS, belirli dosya türleri için bir dizi şablon içerir. Bir R projesine sağ tıklayıp**Yeni öğe** **Ekle** > ' yi seçerek, **Proje** > **Ekle yeni öğe**' yi seçerek veya **Dosya** > **Yeni**  > 'yikullanarakşablonlaraerişebilirsiniz. **Dosyasına** ve **R** sekmesini seçerek. Bir şablonu keşfetmenin en iyi yolu, yeni bir proje oluşturmak ve her türde dosya eklemek.
+RTVS, belirli dosya türleri için bir dizi şablon içerir. Bir R projesine sağ **tıklayıp > ** **Yeni öğe**Ekle ' yi seçerek, **Proje** > **Yeni öğe Ekle**' yi seçerek veya **Dosya** > **Yeni** > **dosyası** ve **R** sekmesini seçerek şablonlara erişebilirsiniz. Bir şablonu keşfetmenin en iyi yolu, yeni bir proje oluşturmak ve her türde dosya eklemek.
 
 > [!Note]
-> **Yeni öğe** **Ekle** > komutu ayrıca tabloda listelenmeyen genel dosya türlerini görüntüler; **Dosya** > **Yeni** > **Dosya** , bu türler genel olarak değilsekme.
+>  > **Yeni öğe** **Ekle** komutu ayrıca tabloda listelenmeyen genel dosya türlerini görüntüler; **dosya** > **Yeni** > **Dosya** ile ilgili türler **genel** sekmesinde yer alır.
 
 | Dosya türü | Açıklama |
 | --- | --- |
@@ -106,7 +106,7 @@ RTVS, belirli dosya türleri için bir dizi şablon içerir. Bir R projesine sa�
 
 Visual Studio çözümleri, ilgili projeleri tek bir mantıksal yerde toplamak ve yönetmek için kullanışlı bir yer sağlar. Çözümler, kodunuzu organize etmenize ve takımlar içinde işbirliğini kolaylaştırır.
 
-Aşağıdaki örnekte çözüm, R ve Azure Machine Learning kullanılarak oluşturulmuş bir model ve bir Python/scikit-öğren projesi, yoğun hesaplama çalışması için modüller içeren bir C++ proje, veri yönetimi IÇIN bir SQL projesi ve bir Python/ Sonucu yayımlayan Web sitesi için şişe projesi:
+Aşağıdaki örnekte çözüm, R ve Azure Machine Learning kullanılarak oluşturulmuş bir model ve bir Python/scikit-öğren projesi, yoğun hesaplama çalışması için modüller içeren bir C++ proje, veri yönetimi IÇIN bir SQL projesi ve sonucu yayımlayan Web sitesi Için bir Python/şişe projesi içerir:
 
 ![Bir çözümde birden çok ilgili projeyi gösteren Visual Studio Çözüm Gezgini](media/projects-polyglot.png)
 

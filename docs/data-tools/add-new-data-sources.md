@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 555d32eb295e944060d2efe0b843e9d157b7c675
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587062"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408561"
 ---
 # <a name="add-new-data-sources"></a>Yeni veri kaynağı ekleme
 
@@ -90,7 +90,7 @@ Aşağıdaki hizmet türlerinden bir veri kaynağı oluşturabilirsiniz:
 
 - [WCF Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
 
-- Web hizmetleri
+- Web Hizmetleri
 
     > [!NOTE]
     > **Veri kaynakları** penceresinde görünen öğeler, hizmetin döndürdüğü verilere bağımlıdır. Bazı hizmetler, **veri kaynağı Yapılandırma Sihirbazı** için bağlanabilir nesneler oluşturmak için yeterli bilgi sağlamayabilir. Örneğin, hizmet türsüz bir veri kümesi döndürürse, Sihirbazı tamamladığınızda **veri kaynakları** penceresinde hiçbir öğe görünmez. Bunun nedeni, türsüz veri kümelerinin bir şema sağlamamasını ve bu nedenle Sihirbazın veri kaynağını oluşturmak için yeterli bilgilere sahip olmamasından kaynaklanır.

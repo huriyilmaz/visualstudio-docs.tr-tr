@@ -7,29 +7,29 @@ ms.date: 07/30/2019
 ms.topic: conceptual
 description: Azure DevOps 'u bir Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
 ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983686"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408869"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps 'da, aboneliğinize bir avantaj olarak dahil olan bir dizi özelliği kullanabilirsiniz. Bu aynı özellikleri, bir üye olduğunuz her bir Azure DevOps kuruluşunda, organizasyonu oluşturduğunuz veya başka bir kişi tarafından eklenmeksizin kullanabilirsiniz.
 
-## <a name="sign-in"></a>Oturum Aç
+## <a name="sign-in"></a>Oturum aç
 Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs-alternate-identity.md)etkinleştirmek için kullandığınız kimliği kullanarak oturum açtığınızda, bunu otomatik olarak tanıyacağız.  Bu şekilde, hem kişisel hesabınızı hem de iş ya da okul hesabınızı kullanarak Azure DevOps 'a erişmenize olanak tanıyan bir iş veya okul hesabı (Visual Studio, Office 365 veya şirket veya okul ağınız için oturum açarken kullandığınız) da ekleyebilirsiniz.
 
 [Ücretsiz bir Azure DevOps organizasyonu için kaydolun](https://visualstudio.microsoft.com/team-services/)
 
 ## <a name="eligibility"></a>Önceliği
-| Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Evet          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel)                                                            |  Evet          |
-| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel)                                                            |  Evet          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Evet          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Evet          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Yes          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel)                                                            |  Yes          |
+| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel)                                                            |  Yes          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Yes          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Yes          |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıM (NFR), en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (Enterprise), BIZSPARK, mct Software & Services Geliştirici, FTE. Dışlar: MCT yazılım & Hizmetleri, Imagine.*

@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklayıcıdaki ifadeler | Microsoft Docs
+title: Hata Ayıklayıcıdaki İfadeler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,54 +28,54 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3999737a2fad04c9b513722ae11608574a72c410
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158490"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78406331"
 ---
 # <a name="expressions-in-the-debugger"></a>Hata Ayıklayıcıdaki İfadeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio hata ayıklayıcı bir ifade girdiğinizde çalışan ifade değerlendiricilerini içerir **QuickWatch** iletişim kutusu, **Watch** penceresinde veya **hemen** penceresi. İş yerinizde de ifade değerlendiricilerini olan **kesme noktaları** penceresi ve hata ayıklayıcı içindeki diğer pek çok yerde.  
+Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.  
   
- Aşağıdaki bölümlerde farklı dillerde ifadeler hakkında ayrıntılar verir.  
+ Aşağıdaki bölümler, farklı dillerdeki ifadelerle ilgili ayrıntıları sağlar.  
   
-## <a name="f-expressions-are-not-supported"></a>F#ifadeler desteklenmez.  
- F#ifadeleri tanınmıyor. Hata ayıklaması yapıyorsanız F# kod, gereksinim, ifadelere çevrilecek C# deyimler bir hata ayıklayıcı penceresini ya da iletişim kutusuna ulaşmadan önce söz dizimi. Gelen ifadeleri Çevir ne zaman F# için C#, unutmayın mutlaka C# kullanır `==` eşitlik için test etmek için işleci sırada F# tek kullanır `=`.  
+## <a name="f-expressions-are-not-supported"></a>F#ifadeler desteklenmiyor  
+ F#ifadeler tanınmıyor. Kod hata ayıklaması F# yapıyorsanız, ifadeleri bir hata ayıklayıcı penceresine veya iletişim kutusuna C# girmeden önce ifadelerinizi sözdizimine çevirmeniz gerekir. İfadelerini F# C#' den ' a çevirirken, tek `=`C# F# kullandığında eşitlik için test etmek üzere `==` işlecini kullandığını unutmayın.  
   
-## <a name="c-expressions"></a>C++ deyimleri  
- C++ ifadeleri bağlamı işleçleri kullanma hakkında daha fazla bilgi için bkz: [bağlam işleci (C++)](../debugger/context-operator-cpp.md).  
+## <a name="c-expressions"></a>C++İfadelerde  
+ İçindeki C++ifadelerle bağlam işleçlerini kullanma hakkında daha fazla bilgi için bkz. [Bağlam işleciC++()](../debugger/context-operator-cpp.md).  
   
-### <a name="unsupported-expressions-in-c"></a>C++'ta desteklenmeyen ifadeler  
+### <a name="unsupported-expressions-in-c"></a>İçinde desteklenmeyen IfadelerC++  
   
 #### <a name="constructors-destructors-and-conversions"></a>Oluşturucular, Yıkıcılar ve dönüştürmeler  
- Açıkça veya dolaylı olarak, bir nesne için bir oluşturucu veya yıkıcı çağrılamıyor. Örneğin, aşağıdaki ifade açıkça bir oluşturucu çağırır ve bir hata mesajıyla sonuçlanır:  
+ Açıkça veya örtük olarak bir nesne için bir Oluşturucu ya da yıkıcı çağrılamaz. Örneğin, aşağıdaki ifade açıkça bir oluşturucuyu çağırır ve bir hata iletisiyle sonuçlanır:  
   
 ```cpp  
 my_date( 2, 3, 1985 )  
 ```  
   
- Dönüştürme hedefi bir sınıf ise bir dönüştürme işlevi çağrılamıyor. Böyle bir dönüştürme, bir nesnenin yapımı içerir. Örneğin, varsa `myFraction` örneğidir `CFraction`, işlev dönüştürme işleci tanımlar `FixedPoint`, aşağıdaki ifade hatayla sonuçlanır:  
+ Dönüştürmenin hedefi bir sınıf ise, bir dönüştürme işlevi çağrılamaz. Böyle bir dönüştürme bir nesnenin oluşturulmasını içerir. Örneğin, `myFraction` dönüştürme işlevi işleci `FixedPoint`tanımlayan `CFraction`bir örneğidir, aşağıdaki ifade bir hatayla sonuçlanır:  
   
 ```cpp  
 (FixedPoint)myFraction  
 ```  
   
- Yeni bir çağrı veya delete işleçleri olamaz. Örneğin, aşağıdaki ifade desteklenmez:  
+ New veya delete işleçlerini çağrılamaz. Örneğin, aşağıdaki ifade desteklenmez:  
   
 ```cpp  
 new Date(2,3,1985)  
 ```  
   
 #### <a name="preprocessor-macros"></a>Önişlemci makroları  
- Önişlemci makroları hata ayıklayıcıda desteklenmiyor. Örneğin, bir sabiti `VALUE` olarak bildirilir: `#define VALUE 3`, kullanamazsınız `VALUE` içinde **izleme** penceresi. Bu sınırlama önlemek için değiştirmelisiniz `#define`numaralandırmalar ile kullanıcının ve mümkün olduğunda çalışır.  
+ Önişlemci makroları hata ayıklayıcıda desteklenmez. Örneğin, bir sabit `VALUE` şöyle bildirilirse: `#define VALUE 3`, **izleme** penceresinde `VALUE` kullanamazsınız. Bu sınırlamayı önlemek için `#define`, mümkün olan her durumda Enum ve işlevlerle değiştirmelisiniz.  
   
-### <a name="using-namespace-declarations"></a>ad alanı bildirimi kullanarak  
- Kullanamazsınız `using namespace` bildirimleri.  Bir tür adı veya değişken geçerli bir ad alanı dışında erişmek için tam adı kullanmanız gerekir.  
+### <a name="using-namespace-declarations"></a>ad alanı bildirimlerini kullanma  
+ `using namespace` bildirimleri kullanamazsınız.  Geçerli ad alanı dışındaki bir tür adına veya değişkenine erişmek için tam adı kullanmanız gerekir.  
   
 ### <a name="anonymous-namespaces"></a>Anonim ad alanları  
- Anonim ad desteklenmez. Aşağıdaki kodu varsa, ekleme yapamazsınız `test` için izleme penceresinde:  
+ Anonim ad alanları desteklenmez. Aşağıdaki koda sahipseniz, izleme penceresine `test` ekleyemezsiniz:  
   
 ```cpp  
 namespace mars   
@@ -94,33 +94,33 @@ int main()
   
 ```  
   
-### <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> Durumunu korumak üzere hata ayıklayıcı iç işlevleri kullanma  
- Hata ayıklayıcı iç işlevleri size uygulama durumunu değiştirmeden ifadelerinde belirli C/C++ işlevleri çağırmak için bir yol sağlar.  
+### <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a>Durumu korumak için hata ayıklayıcı iç işlevlerini kullanma  
+ Hata ayıklayıcı iç işlevleri, uygulamanın durumunu değiştirmeden ifadelerde belirli C/C++ işlevleri çağırmak için bir yol sağlar.  
   
  Hata ayıklayıcı iç işlevleri:  
   
-- Güvenli olması garanti: hata ayıklayıcı iç işlev yürütülürken bozuk olmadıklarından ayıklanmakta olan işlem.  
+- Güvenli olduğu garanti edilir: bir hata ayıklayıcı iç işlevinin yürütülmesi, hataları ayıklanan işlemi bozmaz.  
   
-- Hatta burada yan etkileri ve işlev değerlendirmesi izin verilmeyen senaryolarda tüm ifadelerde izin verilir.  
+- Yan etkileri ve işlev değerlendirmesinin izin verilmediği senaryolarda bile tüm ifadelerde izin verilir.  
   
-- Normal işlev çağrıları bir mini döküm hata ayıklama gibi mümkün olmadığı senaryolarda çalışır.  
+- Bir mini döküm dosyasında hata ayıklama gibi normal işlev çağrılarının mümkün olmadığı senaryolarda çalışın.  
   
-  Hata ayıklayıcı iç işlevleri da değerlendirilirken ifadeleri daha kullanışlı hale getirebilirsiniz. Örneğin, `strncmp(str, “asd”)` bir kesme noktası koşulu yazmak kolaydır `str[0] == ‘a’ && str[1] == ‘s’ && str[2] == ‘d’`. )  
+  Hata ayıklayıcı iç işlevleri ayrıca değerlendirme ifadelerin daha kullanışlı olmasını sağlayabilir. Örneğin, `strncmp(str, “asd”)` kesme noktasında `str[0] == ‘a’ && str[1] == ‘s’ && str[2] == ‘d’`daha kolay yazılması çok daha kolaydır. )  
   
 |Alan|İç işlevler|  
 |----------|-------------------------|  
 |**Dize uzunluğu**|strlen, wcslen, strnlen, wcsnlen|  
-|**Dize karşılaştırması**|strcmp wcscmp, stricmp, _stricmp, _strcmpi, wcsicmp, _wcscmpi, _wcsnicmp, strncmp, wcsncmp, strnicmp, wcsnicmp|  
+|**Dize karşılaştırması**|strcmp, wcscmp, stricmp, _stricmp, _strcmpi, wcsıcmp, _wcscmpi, _wcsnicmp, strncmp, wcsncmp, strnıcmp, wcsnıcmp|  
 |**Dize arama**|strchr, wcschr, strstr, wcsstr|  
-|**Win32**|GetLastError(), TlsGetValue()|  
-|**Windows 8**|WindowsGetStringLen(), WindowsGetStringRawBuffer()<br /><br /> Bu işlevler, Windows 8 üzerinde çalıştırılması ayıklanmakta olan işlem gerekir. Bir Windows 8 cihazında döküm dosyalarında hata ayıklanırken ayrıca Visual Studio bilgisayarı olmasını gerektirir Windows 8 çalıştıran. Ancak, Windows 8 cihazını uzaktan ayıklıyorsanız, Visual Studio bilgisayarı Windows 7 çalışabilir.|  
-|**Çeşitli**|__log2<br /><br /> Günlük taban 2 daha düşük en yakın tamsayıya yuvarlanır, belirtilen bir tamsayı döndürür.|  
+|**Win**|GetLastError (), TlsGetValue ()|  
+|**Windows 8**|WindowsGetStringLen(), WindowsGetStringRawBuffer()<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|  
+|**Çeşitli**|__log2<br /><br /> Belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış olan günlük 2 değerini döndürür.|  
   
-## <a name="ccli---unsupported-expressions"></a>C++/ CLI - desteklenmeyen ifadeler  
+## <a name="ccli---unsupported-expressions"></a>C++/CLı-desteklenmeyen Ifadeler  
   
-- İşaretçiler içeren atamaları veya kullanıcı tanımlı atamalar desteklenmez.  
+- İşaretçileri veya Kullanıcı tanımlı yayınları içeren yayınlar desteklenmez.  
   
-- Nesne karşılaştırma ve ataması desteklenmez.  
+- Nesne karşılaştırma ve atama desteklenmiyor.  
   
 - Aşırı yüklenmiş işleçler ve aşırı yüklenmiş işlevler desteklenmez.  
   
@@ -128,61 +128,61 @@ int main()
   
 - `Sizeof` işleci desteklenmiyor.  
   
-## <a name="c---unsupported-expressions"></a>C# - desteklenmeyen ifadeler  
+## <a name="c---unsupported-expressions"></a>C#-Desteklenmeyen Ifadeler  
   
 ### <a name="dynamic-objects"></a>Dinamik nesneler  
- Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. Ne zaman, uygulayan nesneler <xref:System.Dynamic.IDynamicMetaObjectProvider> İzleme penceresinde bir dinamik görünüm düğümü eklenir değerlendirilir. Dinamik görünüm düğümü, nesne üyelerini gösterir ancak üye değerlerinin düzenlenmesine izin vermez.  
+ Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. <xref:System.Dynamic.IDynamicMetaObjectProvider> uygulayan nesneler izleme penceresi değerlendirildiğinde dinamik bir görünüm düğümü eklenir. Dinamik görünüm düğümü nesne üyelerini gösterir ancak üyelerin değerlerini düzenlememe izin vermez.  
   
- Dinamik nesneler aşağıdaki özellikleri desteklenmez:  
+ Dinamik nesnelerin aşağıdaki özellikleri desteklenmez:  
   
-- Bileşik işleçleri `+=`, `-=`, `%=`, `/=`, ve `*=`  
+- Bileşik işleçler `+=`, `-=`, `%=`, `/=`ve `*=`  
   
-- Sayısal yayınları ve tür bağımsız değişkeni atamaları dahil olmak üzere birçok yayınları  
+- Sayısal yayınlar ve tür bağımsız değişken yayınları dahil olmak üzere çok sayıda yayını  
   
-- Yöntem çağrıları ikiden fazla bağımsız değişken  
+- İkiden fazla bağımsız değişkenle Yöntem çağrıları  
   
-- Özellik alıcılar ikiden fazla bağımsız değişken  
+- İkiden fazla bağımsız değişkene sahip Özellik alıcıları  
   
-- Özellik ayarlayıcılarına bağımsız değişken  
+- Bağımsız değişkenlerle özellik ayarlayıcıları  
   
-- Bir dizin oluşturucu için atama  
+- Dizin oluşturucuya atama  
   
-- Boole işleçleri `&&` ve `||`  
+- `&&` ve `||` Boole işleçleri  
   
 ### <a name="anonymous-methods"></a>Anonim Yöntemler  
- Yeni anonim yöntemler oluşturulması desteklenmiyor.  
+ Yeni anonim yöntemlerin oluşturulması desteklenmez.  
   
-## <a name="visual-basic---unsupported-expressions"></a>Visual Basic - desteklenmeyen ifadeler  
+## <a name="visual-basic---unsupported-expressions"></a>Visual Basic-desteklenmeyen Ifadeler  
   
 ### <a name="dynamic-objects"></a>Dinamik nesneler  
- Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. Ne zaman, uygulayan nesneler <xref:System.Dynamic.IDynamicMetaObjectProvider> İzleme penceresinde bir dinamik görünüm düğümü eklenir değerlendirilir. Dinamik görünüm düğümü, nesne üyelerini gösterir ancak üye değerlerinin düzenlenmesine izin vermez.  
+ Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. <xref:System.Dynamic.IDynamicMetaObjectProvider> uygulayan nesneler izleme penceresi değerlendirildiğinde dinamik bir görünüm düğümü eklenir. Dinamik görünüm düğümü nesne üyelerini gösterir ancak üyelerin değerlerini düzenlememe izin vermez.  
   
- Dinamik nesneler aşağıdaki özellikleri desteklenmez:  
+ Dinamik nesnelerin aşağıdaki özellikleri desteklenmez:  
   
-- Bileşik işleçleri `+=`, `-=`, `%=`, `/=`, ve `*=`  
+- Bileşik işleçler `+=`, `-=`, `%=`, `/=`ve `*=`  
   
-- Sayısal yayınları ve tür bağımsız değişkeni atamaları dahil olmak üzere birçok yayınları  
+- Sayısal yayınlar ve tür bağımsız değişken yayınları dahil olmak üzere çok sayıda yayını  
   
-- Yöntem çağrıları ikiden fazla bağımsız değişken  
+- İkiden fazla bağımsız değişkenle Yöntem çağrıları  
   
-- Özellik alıcılar ikiden fazla bağımsız değişken  
+- İkiden fazla bağımsız değişkene sahip Özellik alıcıları  
   
-- Özellik ayarlayıcılarına bağımsız değişken  
+- Bağımsız değişkenlerle özellik ayarlayıcıları  
   
-- Bir dizin oluşturucu için atama  
+- Dizin oluşturucuya atama  
   
-- Boole işleçleri `&&` ve `||`  
+- `&&` ve `||` Boole işleçleri  
   
-### <a name="local-constants"></a>Yerel sabitleri  
- Yerel sabitleri desteklenmez.  
+### <a name="local-constants"></a>Yerel sabitler  
+ Yerel sabitler desteklenmez.  
   
-### <a name="import-aliases"></a>İçeri aktarma diğer adları  
+### <a name="import-aliases"></a>Diğer adları içeri aktar  
  İçeri aktarma diğer adları desteklenmez.  
   
 ### <a name="variable-declarations"></a>Değişken bildirimleri  
- Windows Hata Ayıklayıcı'daki yeni açık değişkenleri bildiremezsiniz. Ancak, yeni örtük değişkenler içinde atayabilirsiniz **hemen** penceresi. Bu örtük değişkenler hata ayıklama oturumu için kapsamlı ve hata ayıklayıcının dışında erişilebilir değildir. Örneğin, deyim `o = 5` örtük olarak yeni bir değişken oluşturur `o` ve 5 değerini atayın. Bu örtük değişkenler türlerinin **nesne** sürece türü, hata ayıklayıcı tarafından çıkarılan.  
+ Hata ayıklayıcı Windows 'da açık yeni değişkenler bildiremezsiniz. Bununla birlikte, **hemen** penceresi içinde yeni örtük değişkenler atayabilirsiniz. Bu örtük değişkenler hata ayıklama oturumunun kapsamına alınır ve hata ayıklayıcının dışında erişilebilir değildir. Örneğin, `o = 5` örtük olarak `o` yeni bir değişken oluşturur ve 5 değerini bu değere atar. Türü hata ayıklayıcı tarafından çıkarsanmadığı takdirde bu tür örtük değişkenler **Object** türündedir.  
   
-### <a name="unsupported-keywords"></a>Desteklenmeyen anahtar sözcükleri  
+### <a name="unsupported-keywords"></a>Desteklenmeyen anahtar sözcükler  
   
 - `AddressOf`  
   
@@ -212,10 +212,10 @@ int main()
   
 - `With`  
   
-- Namespace veya modül düzeyinde anahtar sözcükler gibi `End Sub` veya `Module`.  
+- `End Sub` veya `Module`gibi ad alanı veya modül düzeyi anahtar sözcükleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C++ içindeki Biçim belirticileri](../debugger/format-specifiers-in-cpp.md)   
+   [ C++ içindeki biçim belirticileri](../debugger/format-specifiers-in-cpp.md)  
  [Bağlam işleci (C++)](../debugger/context-operator-cpp.md)   
- [C# içindeki Biçim belirticileri](../debugger/format-specifiers-in-csharp.md)   
+   [ C# içindeki biçim belirticileri](../debugger/format-specifiers-in-csharp.md)  
  [Sözde değişkenler](../debugger/pseudovariables.md)

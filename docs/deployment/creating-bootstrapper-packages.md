@@ -21,11 +21,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0f84f91ebedd47df8c0804adee35dcbec18d8551
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806938"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409587"
 ---
 # <a name="create-bootstrapper-packages"></a>Önyükleyici paketleri oluşturma
 Kurulum programı, Windows Installer ( *. msi*) dosyaları ve yürütülebilir programlar gibi yeniden dağıtılabilir bileşenleri tespit etmek ve yüklemek için yapılandırılabilecek genel bir yükleyicidir. Yükleyici, önyükleyici olarak da bilinir. Bileşenin yüklenmesini yönetmek için meta verileri belirten bir XML bildirimleri kümesi aracılığıyla programlanır.  ClickOnce için **Önkoşullar** iletişim kutusunda görünen her yeniden dağıtılabilir bileşen veya önkoşul, bir önyükleyici paketidir. Önyükleyici paketi, önkoşulun nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur.
@@ -70,7 +70,7 @@ veya, Visual Studio 'nun eski sürümleri için
 *\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
 ```
 
-veya
+or
 
 ```
 *\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*

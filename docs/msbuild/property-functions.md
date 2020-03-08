@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb4c44b4e642ff1137df7f0afe02502224060a64
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77632946"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410035"
 ---
 # <a name="property-functions"></a>Özellik işlevleri
 
@@ -275,7 +275,7 @@ Aşağıdaki kayıt defteri görünümleri kullanılabilir:
 |RegistryView. Registry64|64 bit uygulama kayıt defteri görünümü.|
 |RegistryView. Default|Uygulamanın üzerinde çalıştığı işlemle eşleşen kayıt defteri görünümü.|
 
-Aşağıda bir örnek verilmiştir.
+Bir örnek verilmiştir.
 
  ```
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))

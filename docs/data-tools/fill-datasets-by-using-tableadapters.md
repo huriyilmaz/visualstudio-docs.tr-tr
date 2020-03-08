@@ -20,11 +20,11 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: a79f7b781944bb93a60794e748eefb9375723384
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586633"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408747"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>TableAdapter'ları kullanarak veri kümelerini doldurma
 
@@ -35,7 +35,7 @@ TableAdapter bileşeni, bir veri kümesini bir veya daha fazla sorgu ya da belir
 
 TableAdapter işlemleri hakkında ayrıntılı bilgi için doğrudan şu konulardan birine atlayabilirsiniz:
 
-|Konu|Açıklama|
+|Konu başlığı|Açıklama|
 |-----------|-----------------|
 |[TableAdapter’lar oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md)|TableAdapters oluşturmak ve yapılandırmak için tasarımcıları kullanma|
 |[Parametreleştirilmiş TableAdapter sorguları oluşturma](../data-tools/create-parameterized-tableadapter-queries.md)|Kullanıcıların TableAdapter yordamlarına veya sorgularına bağımsız değişkenler vermesini sağlama|
@@ -52,7 +52,7 @@ TableAdapters, bir veritabanına bağlanan, sorguları veya saklı yordamları �
 
 ![İstemci uygulamasında veri akışı](../data-tools/media/clientdatadiagram.gif)
 
-TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, TableAdapter sınıfları <xref:System.Data.DataSet>iç içe geçmiş sınıfları olarak oluşturulmaz. Her veri kümesine özgü ayrı ad alanlarında bulunur. Örneğin, `NorthwindDataSet`adlı bir veri kümeniz varsa, `NorthwindDataSet` <xref:System.Data.DataTable>ile ilişkili olan TableAdapters, `NorthwindDataSetTableAdapters` ad alanında olur. Belirli bir TableAdapter bağdaştırıcısına program aracılığıyla erişmek için TableAdapter'ın yeni bir örneğini bildirmeniz gerekir. Örneğin:
+TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, TableAdapter sınıfları <xref:System.Data.DataSet>iç içe geçmiş sınıfları olarak oluşturulmaz. Her veri kümesine özgü ayrı ad alanlarında bulunur. Örneğin, `NorthwindDataSet`adlı bir veri kümeniz varsa, `NorthwindDataSet` <xref:System.Data.DataTable>ile ilişkili olan TableAdapters, `NorthwindDataSetTableAdapters` ad alanında olur. Belirli bir TableAdapter bağdaştırıcısına program aracılığıyla erişmek için TableAdapter'ın yeni bir örneğini bildirmeniz gerekir. Örnek:
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
