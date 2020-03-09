@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d5c4e8f39ff77779985536e53d98ddc2785b109b
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911499"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409325"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
 Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D olaylarını araştırmak için Visual Studio Grafik Çözümleyicisi 'deki grafik olay listesini kullanın.
@@ -34,9 +34,9 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 
 |Direct3D 12 kuyruğu|Renk|
 |-----------------------|-----------|
-|İşleme kuyruğu|renkli|
-|İşlem kuyruğu|renkle|
-|Kopyalama kuyruğu|Al|
+|İşleme kuyruğu|Renkli|
+|İşlem kuyruğu|Renkle|
+|Kopyalama kuyruğu|Orange|
 
  Direct3D 11 birden çok kuyruğu kullanıma sunmadığından, bir Direct3D 11 uygulaması yakalamayla çalışırken olay listesinde olaylar renk kodlanmamış.
 
@@ -55,7 +55,7 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
  Olaylar listesini yalnızca adları belirli anahtar sözcükleri içeren olayları içerecek şekilde filtrelemek için, **grafik olay listesi** penceresinin sağ üst köşesinde bulunan arama kutusunu kullanabilirsiniz. Önceki çizimde gösterildiği gibi `Vertex`gibi tek bir anahtar sözcük veya `Draw;Primitive`gibi noktalı virgülle ayrılmış bir liste kullanarak birden çok anahtar sözcük belirtebilirsiniz. Bu, adlarında `Draw` ya da `Primitive` olan olaylarla eşleşir. Aramalar, boşluk ile duyarlıdır — Örneğin, `VSSet` ve `VS Set` farklı aramalardır; bu nedenle, aramaları dikkatle ayarladığınızdan emin olun.
 
 ### <a name="moving-between-draw-calls"></a>Çizim çağrıları arasında dolaşma
- `Draw` çağrılarının incelenmesi özellikle önemli olduğundan, bir **sonraki çizim çağrısına git** ' i kullanabilir ve çizim Için **grafik olay listesi** penceresinin sol üst köşesinde bulunan **önceki çizim çağrı düğmelerine gidebilirsiniz** — hızlı bir şekilde çağırır.
+ `Draw` çağrılarının incelenmesi özellikle önemli olduğundan, **sonraki çizim aramasına git** ' i kullanarak, çizim çağrılarını hızla bulmak ve aralarında gezinmek Için **grafik olay listesi** penceresinin sol üst köşesinde bulunan **önceki çizim çağrı düğmelerine gidebilirsiniz** .
 
 ### <a name="links-to-graphics-objects"></a>Grafik nesnelerine bağlantılar
  Belirli grafik olaylarını anlamak için, Direct3D 'nin geçerli durumu veya olay tarafından başvurulan Direct3D nesneleri hakkında ek bilgilere ihtiyaç duyabilirsiniz. Birçok olay, daha fazla ayrıntı için izleyebileceğiniz bu bilgilere bağlantılar sağlar.
@@ -94,7 +94,7 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 |Bir olay grubunu Sonlandır|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
 |Olay işaretleyicisi oluşturma|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|
 
- Direct3D sürümünüzün desteklediği bu API 'lerden herhangi birini kullanabilirsiniz. Örneğin, Direct3D 11,1 API 'sini hedefliyorsanız, bir olay işaretleyicisi oluşturmak için `SetMarker` ya da `D3DPerf_SetMarker` kullanabilirsiniz, ancak yalnızca Direct3D 11.2 'de kullanılabilir olduğundan `SetMarkerInt` değil, aynı uygulamada farklı Direct3D sürümlerini destekleenler de karışıyor.
+ Direct3D sürümünüzün desteklediği bu API 'lerden herhangi birini kullanabilirsiniz. Örneğin, Direct3D 11,1 API 'sini hedefliyorsanız, bir olay işaretleyicisi oluşturmak için `SetMarker` ya da `D3DPerf_SetMarker` kullanabilirsiniz, `SetMarkerInt` ancak yalnızca Direct3D 11.2 'de kullanılabilir olduğundan, farklı Direct3D sürümlerini destekleenler de aynı uygulamada de karıştırabilirsiniz.
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
@@ -105,9 +105,9 @@ Visual Studio 2017 ve üzeri, **kaynak geçmişi** penceresini içerir.  **Olay 
 
 Bu pencere, etkinlik listesindeki seçili öğenin geçmişini görüntülemenize olanak sağlar.  Üstteki açılan menü, geçmişini görüntülemek için diğer öğeleri seçmek üzere kullanılabilir.  Pencerenin üst yarısında **çerçeve kurulum olayları**bulunur.  Bunlar, *oluşturma* türü kategorisine giren olaylardır ve genellikle kaynağı başlatıp oluşturan çağrılardır.  Pencerenin alt yarısında **çerçeve olayları** bölümü bulunur.  Bunlar, kaynağın kullanımı sırasında oluşan normal okuma ve yazma olaylardır.
 
-| Sütunuyla | Açıklama |
+| Sütun | Açıklama |
 |-----------| - |
-| **Türüyle** | Girişin türünü gösterir, genellikle *oluşturun*, *okuyun* ve *yazın*. |
+| **Tür** | Girişin türünü gösterir, genellikle *oluşturun*, *okuyun* ve *yazın*. |
 | **Görünümü** | Bu anda kaynağın bir küçük resmini gösterir.  Söz konusu zamanda kaynağın Ayrıntılar görünümünü açmak için küçük resme çift tıklayın. |
 | **Event** | Olayı oluşturan oluşan yöntem çağrısını gösterir.  Her öğe için herhangi bir ek geçmiş, uygun satıra ![izle simgesi](media/gfx_watch.png) izleme simgesi seçilerek görüntülenebilir.  Ayrıca, yukarıdaki ekran görüntüsünde `m_commandList` gibi mavi metinde çizilen herhangi bir öğe daha fazla ayrıntı için seçilebilir. |
 

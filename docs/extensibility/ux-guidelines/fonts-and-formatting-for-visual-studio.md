@@ -1,5 +1,5 @@
 ---
-title: Yazı tipleri ve Visual Studio için biçimlendirme | Microsoft Docs
+title: Visual Studio için yazı tipleri ve biçimlendirme | Microsoft Docs
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
@@ -9,26 +9,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8634ab15a10b59fc21de390e0633d6d91793616d
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67891034"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409077"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Yazı tipleri ve Visual Studio için biçimlendirme
-## <a name="BKMK_TheEnvironmentFont"></a> Ortam yazı tipi
- Visual Studio içindeki tüm yazı tiplerini özelleştirme için kullanıcıya sunulmalıdır. Bu temelde aracılığıyla gerçekleştirilir **yazı tipleri ve renkler** sayfasını **Araçlar > Seçenekler** iletişim. Yazı tipi ayarlarını üç ana kategoride şunlardır:
+## <a name="BKMK_TheEnvironmentFont"></a>Ortam yazı tipi
+ Visual Studio içindeki tüm yazı tiplerini özelleştirme için kullanıcıya sunulmalıdır. Bu, öncelikle **araçlar > seçenekleri** Iletişim kutusundaki **yazı tipleri ve renkler** sayfasından yapılır. Yazı tipi ayarlarını üç ana kategoride şunlardır:
 
-- **Ortam yazı tipi** -IDE (tümleşik geliştirme ortamı) için birincil iletişim kutuları, menüler, araç pencereleri ve belge pencereleri de dahil olmak üzere tüm arabirimi öğeleri için kullanılan yazı. Varsayılan olarak, ortam yazı tipi 9 pt Segoe UI'Windows ' ın geçerli sürümlerinde gibi görünen bir sistem yazı tipini bağlıdır. Bir yazı tipi için tüm arabirim öğeleri kullanılarak, bir IDE genelinde tutarlı bir yazı tipi görünümü sağlamaya yardımcı olur.
+- **Ortam yazı tipi** -iletişim kutuları, menüler, araç pencereleri ve belge pencereleri dahil olmak üzere tüm arabirim öğeleri IÇIN kullanılan IDE (tümleşik geliştirme ortamı) için birincil yazı tipi. Varsayılan olarak, ortam yazı tipi 9 pt Segoe UI'Windows ' ın geçerli sürümlerinde gibi görünen bir sistem yazı tipini bağlıdır. Bir yazı tipi için tüm arabirim öğeleri kullanılarak, bir IDE genelinde tutarlı bir yazı tipi görünümü sağlamaya yardımcı olur.
 
-- **Metin düzenleyici** -yüzey kod ve diğer metin tabanlı düzenleyiciler Metin Düzenleyicisi'nde özelleştirilebilir olduğunu öğeleri sayfasında **Araçlar > Seçenekler**.
+- **Metin düzenleyici** -kod ve diğer metin tabanlı düzenleyicilerde yüzey olan öğeler, **Araçlar > seçeneklerindeki**metin düzenleyici sayfasında özelleştirilebilir.
 
-- **Özel koleksiyonlar** -kullanıcı arabirimi öğeleri özelleştirmesini tasarımlarına için özel yazı tipleri kullanıma sunan Tasarımcı windows yüzey kendi Ayarları sayfasında **Araçlar > Seçenekler**.
+- Kendi arabirim öğelerinin Kullanıcı özelleştirmesini sunan **belirli koleksiyonlar** -tasarımcı pencereleri, **Araçlar > seçeneklerinde**kendi ayarlar sayfasında tasarım yüzeyine özgü yazı tiplerini açığa çıkarır.
 
 ### <a name="editor-font-customization-and-resizing"></a>Düzenleyici yazı tipi özelleştirme ve yeniden boyutlandırma
  Kullanıcıların genellikle büyütün veya boyutunun ve/veya genel kullanıcı arabirimi bağımsız kendi tercih göre düzenleyici metin rengi yakınlaştırma. Ortam yazı tipi, şirket içinde ya da bir düzenleyici/designer'ın bir parçası olarak görünebilir öğeleri kullanıldığından, bu yazı tipi sınıflandırmalar biri değiştiğinde Beklenen davranış dikkat edin önemlidir.
 
- Görünür kullanıcı Arabirimi öğeleri parçası Düzenleyicisi ancak olan oluştururken *içerik*, öğeleri tahmin edilebilir bir biçimde yeniden boyutlandırın. böylece ortam yazı tipini ve metin yazı kullanmak önemlidir.
+ Düzenleyicide görüntülenen ancak *içeriğin*parçası olmayan kullanıcı arabirimi öğeleri oluştururken, öğelerin öngörülebilir bir şekilde yeniden boyutlandırılması için metin yazı tipi değil, ortam yazı tipinin kullanılması önemlidir.
 
 1. Kod metin düzenleyicide kod metin yazı tipi ayarla yeniden boyutlandırabilir ve düzenleyici metin yakınlaştırma düzeyi için yanıt.
 
@@ -36,14 +36,14 @@ ms.locfileid: "67891034"
 
     - Metin bağlam menüleri
 
-    - Bir düzenleyici kenarlığı metinde bölmesine gidin ve ampul menü metni, Hızlı Bul Düzenleyicisi bölmesinde gibi
+    - Açık ampul menü metni, hızlı bul Düzenleyicisi bölmesi gibi bir düzenleyici kenarlığı içindeki metinler ve bölmedeki gezinti bölmesi
 
-    - Etiket metni iletişim kutularında, benzer **dosyalarda Bul** veya **yeniden düzenleyin**
+    - İletişim kutularındaki, **dosyalarda bul** veya yeniden **Düzenle** gibi etiket metni
 
 ### <a name="accessing-the-environment-font"></a>Ortam yazı tipi erişme
- Yöntemini çağırarak, WinForms ya da yerel kod içinde ortam yazı tipi erişilebilir `IUIHostLocale::GetDialogFont` arabirimden sorgulama sonra `SID_SUIHostLocale` hizmeti.
+ Yerel veya WinForms kodunda, `SID_SUIHostLocale` hizmetinden arabirim sorgulandıktan sonra Yöntem `IUIHostLocale::GetDialogFont` çağırarak ortam yazı tipine erişilebilir.
 
- Windows Presentation Foundation (WPF) iletişim penceresi sınıfınızı kabuğun türetilen `DialogWindow` sınıfı yerine WPF'nin `Window` sınıfı.
+ Windows Presentation Foundation (WPF) için, iletişim kutusu pencere sınıfınızı, uygulamanın WPF `Window` sınıfı yerine kabuğun `DialogWindow` sınıfından türetirsiniz.
 
  XAML içinde kod şöyle görünür:
 
@@ -59,7 +59,7 @@ ms.locfileid: "67891034"
 </ui:DialogWindow>
 ```
 
-arka plan kod:
+Arka plan kodu:
 
 ```csharp
 internal partial class WebConfigModificationWindow : DialogWindow
@@ -67,9 +67,9 @@ internal partial class WebConfigModificationWindow : DialogWindow
 }
 ```
 
- (Değiştir `Microsoft.VisualStudio.Shell.11.0` MPF dll geçerli sürümüyle.)
+ (`Microsoft.VisualStudio.Shell.11.0` MPF dll 'nin geçerli sürümüyle değiştirin.)
 
- İletişim kutusunu görüntülemek için çağrı "`ShowModal()`" sınıfındaki `ShowDialog()`. `ShowModal()` Kabuğu'nda doğru kalıcı duruma ayarlar, iletişim kutusunun üst penceresine ve benzeri ortalanır sağlar.
+ İletişim kutusunu göstermek için `ShowDialog()`üzerindeki sınıfta "`ShowModal()`" çağırın. `ShowModal()`, kabukta doğru kalıcı durumu ayarlar, iletişim kutusunun üst pencerede ortalanmasını sağlar ve bu şekilde devam eder.
 
  Kod aşağıdaki gibidir:
 
@@ -78,24 +78,24 @@ MyWindow window = new MyWindow();
 window.ShowModal()
 ```
 
- `ShowModal` bool döndürür? (boş değer atanabilir Boolean) ile `DialogResult`, kullanılabilen gerekirse. Dönüş değeri ile iletişim kapatılırsa true **Tamam**.
+ `ShowModal` bool döndürüyor mu? (null yapılabilir Boolean) `DialogResult`, gerekirse kullanılabilir. İletişim kutusu **Tamam**ile kapalıysa dönüş değeri true olur.
 
- Bir iletişim kutusu değil ve barındırılan bazı WPF UI kendi görüntülemek gerekiyorsa `HwndSource`, bir açılan pencere veya Win32/WinForms üst penceresine WPF alt penceresi gibi ayarlamanız gerekir `FontFamily` ve `FontSize` kök öğesinde, bir WPF öğesi. (Kabuk ana penceresinde özelliklerini ayarlar, ancak bunlar geçmiş devralınır değil bir `HWND`). Kaynakları, özellikleri, şöyle bağlanabilir sağlar:
+ Bir iletişim kutusu olmayan ve bir Win32/WinForms ana penceresinin WPF alt penceresi gibi kendi `HwndSource`barındırılan bir WPF Kullanıcı arabirimini görüntülemesi gerekiyorsa, WPF öğesinin kök öğesinde `FontFamily` ve `FontSize` ayarlamanız gerekir. (Kabuk ana penceredeki özellikleri ayarlar, ancak `HWND`bir daha devralınmaz). Kaynakları, özellikleri, şöyle bağlanabilir sağlar:
 
 ```xaml
 <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
 <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
 ```
 
-### <a name="BKMK_Formatting"></a> Biçimlendirme (ölçeklendirme/kalın) başvurusu
- Bazı iletişim kutularını kalın olarak belirli bir metin veya dışında ortam yazı tipi boyutu gerektirir. Daha önce yazı tiplerini ortam yazı tipi daha büyük olarak kodlandıysa "`environment font +2`" ya da benzer. Sağlanan kod parçacıkları yüksek DPI monitör desteği ve görünen metin her zaman doğru boyut ve Ağırlık (açık veya Semilight gibi) göründüğünden emin olun.
+### <a name="BKMK_Formatting"></a>Biçimlendirme (ölçeklendirme/cıvamanı) başvurusu
+ Bazı iletişim kutularını kalın olarak belirli bir metin veya dışında ortam yazı tipi boyutu gerektirir. Daha önce, ortam yazı tipinde daha büyük yazı tiplerinin "`environment font +2`" veya benzer olarak kodlanmıştı. Belirtilen kod parçacıklarını kullanmak yüksek DPı izleyicileri destekleyecektir ve görüntü metninin her zaman doğru boyutta ve ağırlığa (ışık veya Semilight gibi) göründüğünden emin olur.
 
 > [!NOTE]
-> Biçimlendirme uygulamak için önce bulunan yönergeleri takip ettiğiniz sağlayın [metin stili](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle). **
+> Biçimlendirmeyi uygulamadan önce, [metin stilinde](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)bulunan kılavuzu takip edin. * *
 
  Ortam yazı tipi ölçeklendirmek için TextBlock ya da belirtildiği gibi bir etiket stilini ayarlayın. Her biri, doğru kullanıldığında, bu kod parçacıkları uygun boyut ve Ağırlık çeşitlemeleri dahil olmak üzere doğru yazı tipi oluşturur.
 
- Burada "`vsui`" ad alanı başvurusu `Microsoft.VisualStudio.Shell`:
+ Burada "`vsui`", ad alanı `Microsoft.VisualStudio.Shell`bir başvurudur:
 
 ```xaml
 xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
@@ -103,21 +103,21 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visual
 
 #### <a name="375-environment-font--light"></a>%375 ortam yazı tipi + açık
 
-**Aşağıdaki gibi görünür:** 34 pt Segoe UI Light
+**Şöyle görünür:** 34 PT Segoe UI ışık
 
 ::: moniker range="vs-2017"
 
-**Kullanım için:** (nadir) benzersiz markalı kullanıcı Arabirimi, gibi başlangıç sayfası
+Başlangıç sayfasında olduğu gibi: (nadir) benzersiz markalı Kullanıcı arabirimi **Için kullanın**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-**Kullanım için:** (nadir) benzersiz markalı kullanıcı Arabirimi
+**Kullanım için:** (nadir) benzersiz markalı Kullanıcı arabirimi
 
 ::: moniker-end
 
-**Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+**Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -126,7 +126,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey);
 ```
 
-**XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın.
+**XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın.
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">TextBlock: 375 Percent Scaling</TextBlock> 
@@ -134,9 +134,9 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="310-environment-font--light"></a>%310 ortam yazı tipi + açık
- **Aşağıdaki gibi görünür:** 28 pt Segoe UI Light **kullanın:** büyük imza iletişim başlıklar, ana raporlarda başlığı
+ **Şöyle görünür:** 28 PT Segoe UI hafif **Kullanım:** büyük imza iletişim kutusu başlıkları, raporlardaki ana başlık
 
- **Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+ **Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -145,7 +145,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironment310PercentFontSizeStyleKey);
 ```
 
- **XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın.
+ **XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın.
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">TextBlock: 310 Percent Scaling</TextBlock> 
@@ -153,9 +153,9 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="200-environment-font--semilight"></a>% 200'ortam yazı tipi + Semilight
- **Aşağıdaki gibi görünür:** 18 punto Georgia Segoe UI Semilight **kullanın:** başlıklar, küçük ve orta ölçekli kutularındaki başlıkları
+ **Şöyle görünür:** 18 NK Segoe UI Semilight **kullanımı:** alt başlıklar, küçük ve orta iletişim kutularındaki başlıklar
 
- **Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+ **Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -164,7 +164,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironment200PercentFontSizeStyleKey);
 ```
 
- **XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın:
+ **XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey}}">TextBlock: 200 Percent Scaling</TextBlock> 
@@ -172,9 +172,9 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="155-environment-font"></a>%155 ortam yazı tipi
- **Aşağıdaki gibi görünür:** 14 pt Segoe UI **kullanın:** belgede bölüm başlıkları yanı sıra kullanıcı Arabirimi veya raporları
+ **Şöyle görünür:** 14 NK Segoe UI **kullanımı:** belge ve Kullanıcı arabirimi veya raporlardaki bölüm başlıkları
 
- **Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+ **Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -183,7 +183,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironment155PercentFontSizeStyleKey);
 ```
 
- **XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın:
+ **XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey}}">TextBlock: 155 Percent Scaling</TextBlock> 
@@ -191,9 +191,9 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="133-environment-font"></a>% 133 ortam yazı tipi
- **Aşağıdaki gibi görünür:** 12 pt Segoe UI **kullanın:** imza iletişim kutuları ve belge daha küçük bir alt başlıklar yanı sıra, kullanıcı Arabirimi
+ **Şöyle görünür:** 12 nk Segoe UI **kullanımı:** imza iletişim kutularında daha küçük alt başlıklar ve belge iyi kullanıcı arabirimi
 
- **Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+ **Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -202,7 +202,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironment133PercentFontSizeStyleKey);
 ```
 
- **XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın:
+ **XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey}}">TextBlock: 133 Percent Scaling</TextBlock> 
@@ -210,9 +210,9 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="122-environment-font"></a>%122 ortam yazı tipi
- **Aşağıdaki gibi görünür:** 11 pt Segoe UI **kullanın:** bölüm başlıkları imza iletişim kutuları, üst düğümleri ağaç görünümünde, dikey sekme gezinme
+ **Şöyle görünür:** 11 pt Segoe UI **kullanım için:** imza iletişim kutularındaki bölüm başlıkları, ağaç görünümündeki üst düğümler, dikey sekme gezintisi
 
- **Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+ **Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -221,7 +221,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironment122PercentFontSizeStyleKey);
 ```
 
- **XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın:
+ **XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey}}">TextBlock: 122 Percent Scaling</TextBlock> 
@@ -229,9 +229,9 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="environment-font--bold"></a>Ortam yazı tipi + kalın
- **Olarak görünür:** kalın 9 pt Segoe UI **kullanın:** etiketleri ve imza iletişim kutuları, raporlar ve belge içinde alt başlıklar yanı sıra kullanıcı Arabirimi
+ **Şöyle görünür:** kalın 9 nk Segoe UI **kullanımı:** imza iletişim kutularında, raporlarda ve belge iyi Kullanıcı arabirimindeki Etiketler ve alt başlıklar
 
- **Yordam kodu:** Burada `textBlock` önceden tanımlanmış bir TextBlock olduğu ve `label` önceden tanımlanmış bir etiket bulunur:
+ **Yordamsal kod:** `textBlock`, daha önce tanımlanmış bir TextBlock ve `label` önceden tanımlanmış bir etikettir:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -240,7 +240,7 @@ label.SetResourceReference(Label.StyleProperty,  
         VsResourceKeys.LabelEnvironmentBoldStyleKey);
 ```
 
- **XAML:** Bir TextBlock veya gösterildiği gibi bir etiket stilini ayarlayın:
+ **XAML:** TextBlock veya Label stilini gösterildiği gibi ayarlayın:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironmentBoldStyleKey}}"> Bold TextBlock</TextBlock> 
@@ -250,7 +250,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ### <a name="localizable-styles"></a>Yerelleştirilebilir stilleri
  Bazı durumlarda, çevirmenlerin kalın metin Doğu Asya dilleri için kaldırma gibi farklı yerel ayarlar için yazı tipi stillerini değiştirmeniz gerekecektir. Yazı tipi stillerini yerelleştirmesi mümkün kılmak için bu stilleri .resx dosyasının içinde olması gerekir. Bunu gerçekleştirmek ve yine de Visual Studio form Tasarımcısı'nda yazı tipi stilleri düzenlemek için en iyi yolu, tasarım zamanında yazı tipi stillerini açıkça ayarlamaktır. Bu tüm yazı tipi nesnesi oluşturur ve üst yazı tipi devralma sonu görünebilir olsa da, yalnızca FontStyle özelliğine yazı ayarlamak için kullanılır.
 
- İletişim formun yeteneklerinizi çözümüdür `FontChanged` olay. İçinde `FontChanged` olay, tüm denetimler yol ve yazı tipleriyle ayarlanmış olup olmadığını denetleyin. Ayarlanırsa, formun yazı tipi ve denetimin önceki yazı tipi stili göre yeni bir yazı tipiyle değiştirin. Bu kod örneğidir:
+ Çözüm, iletişim kutusu formunun `FontChanged` olayını kanca. `FontChanged` olayında tüm denetimlere kılavuzluk eder ve yazı tipinin ayarlanmış olup olmadığını kontrol edin. Ayarlanırsa, formun yazı tipi ve denetimin önceki yazı tipi stili göre yeni bir yazı tipiyle değiştirin. Bu kod örneğidir:
 
 ```csharp
 private void Form1_FontChanged(object sender, System.EventArgs e)
@@ -286,22 +286,22 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 }
 ```
 
- Bu kodu kullanmadan, formun yazı tipi güncelleştirildiğinde, yazı tipi denetimleri de güncelleştirir garanti eder. İletişim kutusunun bir örneğini almak başarısız olabilir çünkü bu yöntem Ayrıca formun oluşturucudan çağrılmalıdır `IUIService` ve `FontChanged` olay asla harekete. Takma `FontChanged` yeni yazı tipi iletişim kutusu zaten açık olsa bile dinamik olarak çekmek iletişim kutularını izin verir.
+ Bu kodu kullanmadan, formun yazı tipi güncelleştirildiğinde, yazı tipi denetimleri de güncelleştirir garanti eder. İletişim kutusu bir `IUIService` örneğini almak için başarısız olabileceğinden ve `FontChanged` olay hiçbir şekilde tetiklenmeyeceğinden, bu yöntem formun oluşturucusundan de çağrılmalıdır. `FontChanged` birleştirme, iletişim kutularının zaten açık olsa bile yeni yazı tipini dinamik olarak seçmesine olanak tanır.
 
 ### <a name="testing-the-environment-font"></a>Test ortamı yazı tipi
- Kullanıcı Arabirimi ortam yazı tipi kullanarak ve boyutu ayarlara uyar sağlamak için açık **araçları > Seçenekler > ortam > yazı tipleri ve renkler** altında "Ortam yazı tipi" seçin "ayarlarını göster:" açılan menü.
+ Kullanıcı arabiriminizdeki ortam yazı tipini kullandığından ve boyut ayarlarına indiğinden emin olmak için **araçlar > seçenekler > ortam > yazı tipi ve renkler** ' i açın ve "ayarları göster:" açılan menüsünden "ortam yazı tipi" ni seçin.
 
- ![Araçlar yazı tipleri ve renkler ayarlarında &gt; Seçenekleri iletişim kutusu](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "a_OptionsFonts 0201")<br />Araçlar yazı tipleri ve renkler ayarlarında &gt; Seçenekleri iletişim kutusu
+ ![Araçlar &gt; seçenekleri iletişim kutusunda yazı tipi ve renk ayarları](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />Araçlar &gt; seçenekleri iletişim kutusunda yazı tipi ve renk ayarları
 
- Yazı tipi çok varsayılandan farklı bir değere ayarlayın. Bu, UI güncelleştirilmediği belirginleştirmek için Serif (gibi "Times yeni Roman") ile bir yazı tipi seçin ve çok büyük bir boyuta ayarlayın. Ardından ortamın uyar emin olmak için kullanıcı Arabirimi test edin. Lisans iletişim kutusunu kullanarak bir örnek aşağıda verilmiştir:
+ Yazı tipi çok varsayılandan farklı bir değere ayarlayın. Hangi kullanıcı arabiriminin güncelleştirmediğinden emin olmak için, serıfs ("Times New Roman" gibi) bir yazı tipi seçin ve çok büyük bir boyut ayarlayın. Ardından ortamın uyar emin olmak için kullanıcı Arabirimi test edin. Lisans iletişim kutusunu kullanarak bir örnek aşağıda verilmiştir:
 
- ![Ortam yazı tipi uymaz UI metni örneği](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "b_WrongFontDialog 0201")<br />Ortam yazı tipi uymaz UI metni örneği
+ ![Ortam yazı tipine yönelik olmayan UI metni örneği](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />Ortam yazı tipine yönelik olmayan UI metni örneği
 
  Bu durumda, "Kullanıcı bilgileri" ve "Ürün bilgileri" yazı uyarak değil. Bazı durumlarda bu bir açık bir tasarım seçiminin olabilir ancak açık yazı tipi redline belirtimleri bir parçası olarak belirtilmediği takdirde bir hata olabilir.
 
- Yazı tipi sıfırlamak için "kullanımı" altında Varsayılanlar **Araçlar > Seçenekler > ortam > yazı tipleri ve renkler**.
+ Yazı tipini sıfırlamak için, Araçlar > Seçenekler altında "Varsayılanları Kullan" seçeneğine tıklayın **> ortam > yazı tipi ve renk**.
 
-## <a name="BKMK_TextStyle"></a> Metin stili
+## <a name="BKMK_TextStyle"></a>Metin stili
  Metin stili yazı tipi boyutu, ağırlığı ve büyük/küçük harf ifade eder. Uygulama Kılavuzu için bkz. [ortam yazı tipi](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
 
 ### <a name="text-casing"></a>Metin büyük/küçük harf
@@ -329,9 +329,9 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ##### <a name="title-case"></a>İlk harfler büyük
  Başlık, hangi çoğunu veya tümünü bir tümce içinde bir kelimelerin ilk harflerini büyük harfe stil durumdur. Visual Studio'da ilk harfler büyük dahil olmak üzere birçok öğeleri için kullanılır:
 
-- **Araç ipuçları.** Örnek: "Seçili öğeleri preview"
+- **'Lerin.** Örnek: "seçili öğeleri Önizle"
 
-- **Sütun üstbilgileri.** Örnek: "Sistem yanıt"
+- **Sütun başlıkları.** Örnek: "sistem yanıtı"
 
 - **Menü öğeleri.** Örnek: "Tümünü Kaydet"
 
@@ -340,36 +340,36 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 |Büyük harfe|Açıklamalar ve örnekler|
 |---------------|---------------------------|
 |Tüm adlar||
-|Tüm fiiller|"Is" ve "olması için" diğer biçimleri gibi|
-|Tüm zarflar|"Den" ve "," dahil olmak üzere|
-|Tüm sıfat|"This" ve "," dahil olmak üzere|
-|Tüm zamirler|İyelik eki dahil olmak üzere "," de "Olduğu gibi" gelebildiği, bir kısaltma "," ve fiili "is"|
+|Tüm fiiller|"Dir" ve diğer "to" biçimleri dahil|
+|Tüm zarflar|"Than" ve "ne" dahil|
+|Tüm sıfat|"This" ve "This" dahil|
+|Tüm zamirler|"It" ve "pronoun", "It" ve "The" gibi|
 |Bölümleri konuşma ne olursa olsun, ilk ve son sözcükler||
-|Fiili ifade parçası olan edat|"Tüm Windows kapatmadan" veya "sisteminin kapatılmasını"|
+|Fiili ifade parçası olan edat|"Tüm pencereler kapatılıyor" veya "sistem kapatılıyor"|
 |Tüm harflerini bir kısaltma|HTML, XML, URL, IDE, RGB|
 |İkinci bir isim veya uygun sıfat ise ya da eşit ağırlık sözcükler varsa bir bileşik sözcük word|Çapraz, ön Microsoft yazılım okuma/yazma erişimi, çalışma zamanı|
 
-|Küçük|Örnekler|
+|Küçük harf|Örnekler|
 |---------------|--------------|
 |Bir bileşik sözcük başka bir konuşma bölümü veya ilk sözcük değiştirerek bir participle ise ikinci sözcüğü|Sınav zamanı kapatması nasıl yapılır konuları|
 |Bir başlık ilk sözcük olmadığı sürece, makaleler|bir,|
 |Koordinat bağlaçlar|Ayrıca, ancak, nor, veya|
 |Edat sözcükten oluşan dört veya daha az harf fiili tümcecik dışında|içine, üzerine olarak için üzerinde en üstüne çıkış,|
-|"Hedef" bir çizilmesinin ifadeye kullanıldığında|"Sabit Disk biçimine"|
+|Sonsuz bir ifade içinde kullanıldığında "to"|"Sabit diskinizi biçimlendirme"|
 
 ##### <a name="sentence-case"></a>Normal tümce düzeni
  Cümle, yazma, cümlenin yalnızca ilk sözcük büyük harfle, tüm uygun isimleri ve gelebildiği birlikte için standart büyük/küçük harf yöntemidir "I." Genel olarak, cümle okumak özellikle olduğunda içerik bir makine tarafından çevrilir dünya çapında bir kitle için daha kolay olur. Cümle için kullanın:
 
-1. **Durum çubuğu iletileri.** Bu basit, kısa ve durum bilgileri sağlar. Örnek: "Proje dosyası yükleniyor"
+1. **Durum çubuğu iletileri.** Bu basit, kısa ve durum bilgileri sağlar. Örnek: "proje dosyası yükleniyor"
 
-2. **Diğer tüm kullanıcı Arabirimi öğeleri**dahil etiketleri, onay kutuları, radyo düğmeleri ve liste kutusu öğeleri. Örnek: "Tüm öğeler listeden seçin"
+2. Etiketler, onay kutuları, radyo düğmeleri ve liste kutusu öğeleri dahil **tüm diğer kullanıcı arabirimi öğeleri**. Örnek: "listedeki tüm öğeleri seç"
 
 ### <a name="text-formatting"></a>Metin biçimlendirme
- Visual Studio 2013'te biçimlendirme varsayılan metin tarafından denetlenir [ortam yazı tipi](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont). Bu hizmet bir IDE (tümleşik geliştirme ortamı) boyunca tutarlı yazı tipi görünümünü sağlar ve kullanıcılarınız için tutarlı bir deneyim sağlamak için kullanmalısınız.
+ Visual Studio 2013 varsayılan metin biçimlendirmesi [, ortam yazı tipi](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)tarafından denetlenir. Bu hizmet bir IDE (tümleşik geliştirme ortamı) boyunca tutarlı yazı tipi görünümünü sağlar ve kullanıcılarınız için tutarlı bir deneyim sağlamak için kullanmalısınız.
 
  Visual Studio yazı tipi hizmet tarafından kullanılan varsayılan boyutu, Windows gelir ve 9 pt görünür.
 
- Ortam yazı tipinin biçimlendirme uygulayabilirsiniz. Bu konu, nasıl ve nerede kapsar stilleri kullanmak için. Uygulama bilgileri için başvurmak [ortam yazı tipi](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
+ Ortam yazı tipinin biçimlendirme uygulayabilirsiniz. Bu konu, nasıl ve nerede kapsar stilleri kullanmak için. Uygulama bilgileri için [ortam yazı tipine](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)bakın.
 
 #### <a name="bold-text"></a>Kalın metin
  Kalın metin, Visual Studio'da gerektiğinde kullanılır ve için ayrılmış olması gerekir:
@@ -380,7 +380,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 - Özellikler araç penceresinde geçersiz kılınmış değerleri
 
-- Visual Basic Düzenleyicisi açılır listelerindeki belirli olaylar
+- Visual Basic Düzenleyicisi aşağı açılan listelerindeki belirli olaylar
 
 - Belge Anahattı web sayfaları için sunucu tarafından oluşturulan içeriği
 
@@ -403,20 +403,20 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 - Mevcut Visual Studio markası renkleri, öncelikli olarak ana mor #FF68217A başlıklarının rengi faydalanın.
 
-- Renk başlıklarında kullanırken uymalısınız [Windows renk yönergeleri](/windows/desktop/uxguide/vis-color)Karşıtlık oranı ve diğer erişilebilirlik konuları dahil olmak üzere.
+- Başlıklarda renk kullanırken, kontrast oranı ve diğer Erişilebilirlik konuları dahil olmak üzere [Windows renk yönergelerine](/windows/desktop/uxguide/vis-color)uymalısınız.
 
 ### <a name="font-size"></a>Yazı tipi boyutu
  Visual Studio kullanıcı Arabirimi tasarımı, daha fazla boşluk ile daha açık bir görünümünü sunar. Mümkünse, chrome ve başlık çubukları sınırlı veya kaldırılan. Bilgi yoğunluklu Visual Studio'da bir gereksinim olsa da, tipografi önemli olan, daha açık satır aralığı ve yazı tipi boyutu ve ağırlıklarını çeşitlemesi Otomasyona olmaya devam eder.
 
  Aşağıdaki tablolarda, tasarım ayrıntıları ve kullanılan Visual Studio'da görünen yazı tipleri için görsel örnekler içerir. Boyut ve Ağırlık, Semilight veya görünümlerini kodlanmış ışığı gibi bazı görünen yazı tipi farklılıklar vardır.
 
- Tüm görüntü yazı tipleri için kod parçacıkları uygulama bulunabilir [(ölçeklendirme/kalın) başvuru biçimlendirme](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting).
+ Tüm görüntüleme yazı tiplerinin uygulama kodu parçacıkları [Biçimlendirme (ölçeklendirme/cıvaleme) başvurusunda](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting)bulunabilir.
 
 #### <a name="375-environment-font--light"></a>%375 ortam yazı tipi + açık
 
 |||
 |-|-|
-|**Kullanım:** Nadir. Benzersiz markalı yalnızca kullanıcı Arabirimi.<br /><br /> **Yapın:**<br /><br /> -Cümle kullanma<br />-Her zaman hafif kullanın<br /><br /> **Yapma:**<br /><br /> -Kullanımı için kullanıcı Arabirimi dışında imza başlangıç sayfası gibi kullanıcı Arabirimi<br />-Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 34 pt Segoe UI Light<br /><br /> **Görsel örnek:**<br /><br /> *Şu anda kullanılmıyor. Visual Studio 2017 başlangıç sayfası kullanılabilir.*|
+|**Kullanım:** Nadiren. Benzersiz markalı yalnızca kullanıcı Arabirimi.<br /><br /> **Gösterme**<br /><br /> -Cümle kullanma<br />-Her zaman hafif kullanın<br /><br /> **Yapma:**<br /><br /> -Kullanımı için kullanıcı Arabirimi dışında imza başlangıç sayfası gibi kullanıcı Arabirimi<br />-Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 34 PT Segoe UI ışık<br /><br /> **Görsel örnek:**<br /><br /> *Şu anda kullanılmıyor. Visual Studio 2017 başlangıç sayfasında kullanılabilir.*|
 
 #### <a name="310-environment-font--light"></a>%310 ortam yazı tipi + açık
 
@@ -424,7 +424,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -Daha büyük başlıkta imza iletişim kutuları<br />-Ana rapor başlığı<br /><br /> **Yapın:**<br /><br /> -Cümle kullanma<br />-Her zaman hafif kullanın<br /><br /> **Yapma:**<br /><br /> -Kullanımı için kullanıcı Arabirimi dışında imza başlangıç sayfası gibi kullanıcı Arabirimi<br />-Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 28 pt Segoe UI Light<br /><br /> **Görsel örnek:**<br /><br /> ![%310 ortam yazı tipi örneği &#43; ışık başlık](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202 a_EF310")|
+|**Kullanımıyla**<br /><br /> -Daha büyük başlıkta imza iletişim kutuları<br />-Ana rapor başlığı<br /><br /> **Gösterme**<br /><br /> -Cümle kullanma<br />-Her zaman hafif kullanın<br /><br /> **Yapma:**<br /><br /> -Kullanımı için kullanıcı Arabirimi dışında imza başlangıç sayfası gibi kullanıcı Arabirimi<br />-Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 28 PT Segoe UI ışık<br /><br /> **Görsel örnek:**<br /><br /> ![%310 ortam yazı tipi &#43; hafif başlığına örnek](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|
 
 ::: moniker-end
 
@@ -432,7 +432,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -Daha büyük başlıkta imza iletişim kutuları<br />-Ana rapor başlığı<br /><br /> **Yapın:**<br /><br /> -Cümle kullanma<br />-Her zaman hafif kullanın<br /><br /> **Yapma:**<br /><br /> -Kullanımı için kullanıcı Arabirimi imza UI dışında<br />-Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 28 pt Segoe UI Light<br /><br /> **Görsel örnek:**<br /><br /> ![%310 ortam yazı tipi örneği &#43; ışık başlık](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202 a_EF310")|
+|**Kullanımıyla**<br /><br /> -Daha büyük başlıkta imza iletişim kutuları<br />-Ana rapor başlığı<br /><br /> **Gösterme**<br /><br /> -Cümle kullanma<br />-Her zaman hafif kullanın<br /><br /> **Yapma:**<br /><br /> -İmza Kullanıcı arabirimi dışında kullanıcı arabirimi için kullanın<br />-Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 28 PT Segoe UI ışık<br /><br /> **Görsel örnek:**<br /><br /> ![%310 ortam yazı tipi &#43; hafif başlığına örnek](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|
 
 ::: moniker-end
 
@@ -440,37 +440,37 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -Başlıklar<br />-Küçük ve orta ölçekli kutularındaki başlıklar<br /><br /> **Yapın:**<br /><br /> -Cümle kullanma<br />-Her zaman Semilight ağırlık kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 18 punto Georgia Segoe UI Semillight<br /><br /> **Görsel örnek:**<br /><br /> ![% 200'ortam yazı tipi örneği &#43; Semilight](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202 b_EF200")|
+|**Kullanımıyla**<br /><br /> -Başlıklar<br />-Küçük ve orta ölçekli kutularındaki başlıklar<br /><br /> **Gösterme**<br /><br /> -Cümle kullanma<br />-Her zaman Semilight ağırlık kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 18 NK Segoe UI Semillight<br /><br /> **Görsel örnek:**<br /><br /> ![%200 ortam yazı tipi &#43; örneği](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202-b_EF200")|
 
 #### <a name="155-environment-font"></a>%155 ortam yazı tipi
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -Belgedeki bölüm başlıkları yanı sıra kullanıcı Arabirimi<br />-Raporlar<br /><br /> **Yapın:** Cümle kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 14 pt Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Örnek %155 ortam yazı tipi başlığının](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202 c_EF155")|
+|**Kullanımıyla**<br /><br /> -Belgedeki bölüm başlıkları yanı sıra kullanıcı Arabirimi<br />-Raporlar<br /><br /> **Şunları yapın:** Tümce durumunu kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 14 NK Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![%155 ortam yazı tipi başlığının örneği](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|
 
 #### <a name="133-environment-font"></a>% 133 ortam yazı tipi
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -İmza iletişim kutularındaki daha küçük bir alt başlıklar<br />-Daha küçük alt başlıklar belgedeki yanı sıra kullanıcı Arabirimi<br /><br /> **Yapın:** Cümle kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 12 pt Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Örnek %133 ortam yazı tipi başlığının](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202 d_EF133")|
+|**Kullanımıyla**<br /><br /> -İmza iletişim kutularındaki daha küçük bir alt başlıklar<br />-Daha küçük alt başlıklar belgedeki yanı sıra kullanıcı Arabirimi<br /><br /> **Şunları yapın:** Tümce durumunu kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 12 nk Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![%133 ortam yazı tipi başlığının örneği](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202-d_EF133")|
 
 #### <a name="122-environment-font"></a>%122 ortam yazı tipi
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -İmza iletişim kutularındaki bölüm başlıkları<br />-Ağaç görünümünde üst düğümleri<br />-Dikey sekme gezinme<br /><br /> **Yapın:** Cümle kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Aşağıdaki gibi görünür:** 11 pt Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Örnek %122 ortam yazı tipi başlığının](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202 e_EF122")|
+|**Kullanımıyla**<br /><br /> -İmza iletişim kutularındaki bölüm başlıkları<br />-Ağaç görünümünde üst düğümleri<br />-Dikey sekme gezinme<br /><br /> **Şunları yapın:** Tümce durumunu kullanın<br /><br /> **Yapma:**<br /><br /> -Kalın, italik veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Şöyle görünür:** 11 pt Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![%122 ortam yazı tipi başlığının örneği](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202-e_EF122")|
 
 #### <a name="environment-font--bold"></a>Ortam yazı tipi + kalın
 
 |||
 |-|-|
-|**Kullanım:**<br /><br /> -Etiketler ve imza iletişim kutularındaki alt başlıklar<br />-Etiketler ve raporlarında alt başlıklar<br />-Etiketler ve belge içinde alt başlıklar yanı sıra, kullanıcı Arabirimi<br /><br /> **Yapın:**<br /><br /> -Cümle kullanma<br />-Kalın ağırlık kullanma<br /><br /> **Yapma:**<br /><br /> -Yatık veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Olarak görünür:** kalın 9 pt Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Ortam yazı tipi örneği &#43; kalın başlık](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|
+|**Kullanımıyla**<br /><br /> -Etiketler ve imza iletişim kutularındaki alt başlıklar<br />-Etiketler ve raporlarında alt başlıklar<br />-Etiketler ve belge içinde alt başlıklar yanı sıra, kullanıcı Arabirimi<br /><br /> **Gösterme**<br /><br /> -Cümle kullanma<br />-Kalın ağırlık kullanma<br /><br /> **Yapma:**<br /><br /> -Yatık veya Kalın İtalik<br />-Gövde metni kullan<br />-Visual Studio standart denetimleri kullanın<br />-Araç pencerelerini kullanma|**Şöyle görünür:** cıvaded 9 PT Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Ortam yazı tipi &#43; kalın başlığına örnek](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202-f_EFB")|
 
 #### <a name="environment-font"></a>Ortam yazı tipi
 
 |||
 |-|-|
-|**Kullanım:** Diğer tüm metni<br /><br /> **Yapın:** Cümle kullanın<br /><br /> **Yapma:** Yatık veya Kalın İtalik|**Aşağıdaki gibi görünür:** 9 pt Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Ortam yazı tipi örneği](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202 g_EF")|
+|**Kullanım:** Diğer tüm metinler<br /><br /> **Şunları yapın:** Tümce durumunu kullanın<br /><br /> **Değil:** İtalik veya kalın italik|**Şöyle görünür:** 9 nk Segoe UI<br /><br /> **Görsel örnek:**<br /><br /> ![Ortam yazı tipi örneği](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202-g_EF")|
 
 ### <a name="padding-and-spacing"></a>Doldurma ve aralık
  Başlıklar, bunları uygun vurgulamak için onları boşluk gerektirir. Bu alanı noktası boyutu ve yatay bir kuralı ya da ortam yazı tipi metin satırı gibi başlık yaklaştı diğerlerine bağlı olarak değişir.
@@ -483,5 +483,5 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSDN: Fonts (Windows)](/windows/desktop/uxguide/vis-fonts)
-- [MSDN: Kullanıcı arabirimi metinlerini (Windows)](/windows/desktop/uxguide/text-ui)
+- [MSDN: fontlar (Windows)](/windows/desktop/uxguide/vis-fonts)
+- [MSDN: Kullanıcı arabirimi metni (Windows)](/windows/desktop/uxguide/text-ui)
