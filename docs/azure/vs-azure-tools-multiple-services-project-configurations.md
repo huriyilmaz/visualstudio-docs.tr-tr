@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 7b9df8c5609c92a6b6631d1ed9fdda8d65e9b605
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911804"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408699"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Visual Studio'da Azure projenizi birden çok hizmet yapılandırması kullanacak şekilde yapılandırma
 
@@ -39,7 +39,7 @@ Değişikliklerden etkilenen `ServiceConfiguration.*.cscfg` dosyasını seçer. 
 
 **Örnek** sayısı özelliğini hizmetin bu rol için çalışması gereken örnek sayısına ayarlayın.
 
-**VM boyutu** özelliğini **çok küçük**, **küçük**, **Orta**, **büyük**veya çok **büyük**olarak ayarlayın.  Daha fazla bilgi için bkz. [Cloud Services boyutları](/azure/cloud-services/cloud-services-sizes-specs).
+**VM boyutu** özelliğini **çok küçük**, **küçük**, **Orta**, **büyük**veya çok **büyük**olarak ayarlayın.  Daha fazla bilgi için bkz. [Bulut Hizmetlerinin Boyutları](/azure/cloud-services/cloud-services-sizes-specs).
 
 ### <a name="startup-action-web-role-only"></a>Başlangıç eylemi (yalnızca Web rolü)
 
@@ -49,7 +49,7 @@ Bu özelliği, Visual Studio 'Nun HTTP uç noktaları veya HTTPS uç noktaları 
 
 Zaten bir HTTPS uç noktası eklediyseniz, HTTPS uç noktası seçeneği varsayılan olarak etkindir ve Visual Studio, hata ayıklamaya başladığınızda, HTTP uç noktanızın bir tarayıcısına ek olarak, her iki başlatma seçeneğinin de etkinleştirildiğinden bu uç nokta için bir tarayıcı başlatır.
 
-### <a name="diagnostics"></a>Tanılamalar
+### <a name="diagnostics"></a>Tanılama
 
 Varsayılan olarak, Web rolü için tanılama etkindir. Azure bulut hizmeti projesi ve depolama hesabı yerel depolama öykünücüsünü kullanacak şekilde ayarlanır. Azure 'a dağıtmaya hazırsanız, bunun yerine Azure Storage 'ı kullanmak için Oluşturucu düğmesini ( **...** ) seçebilirsiniz. Tanılama verilerini depolama hesabına isteğe bağlı olarak veya otomatik olarak zamanlanmış aralıklarla aktarabilirsiniz. Azure Tanılama hakkında daha fazla bilgi için bkz. [azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirme](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
