@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b05bc8de6db15261a9861867bc93a398b60bf0d0
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: 4ab66f288ad8442b6f2b5aab3499e2c1f3857632
+ms.sourcegitcommit: c8b979a56c95e43cf8ae92b6c3c9570db59a8e58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78235009"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78925383"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki ifadeler
 Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.
@@ -99,12 +99,12 @@ Hata ayıklayıcı iç işlevleri:
 
 |Alan|İç işlevler|
 |----------|-------------------------|
-|**Dize uzunluğu**|strlen, wcslen, strnlen, wcsnlen|
-|**Dize karşılaştırması**|strcmp, wcscmp, stricmp, _stricmp, _strcmpi, wcsıcmp, _wcscmpi, _wcsnicmp, strncmp, wcsncmp, strnıcmp, wcsnıcmp|
-|**Dize arama**|strchr, wcschr, memchr, wmemchr, strstr, wcsstr|
-|**Win**|GetLastError, TlsGetValue|
-|**Windows 8**|WindowsGetStringLen, Windowsgetstrıngrawbuffer<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
-|**Çeşitli**|__log2//, belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış 2 günlük tabanı döndürür.<br /><br />__findNonNull, Decodehstrıng, Windowscompareordinal, Roınspectcapturedstackbacktrace, CoDecodeProxy, GetEnvBlockLength, Decodewinrtkısıttedexception, DynamicMemberLookup, DecodePointer, DynamicCast<br /><br />Stdext_HashMap_Int_OperatorBracket_idx, Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//concurrency:: Array < >:: operator [Dizin < >] ve işleç (Dizin < >)<br /><br />ConcurrencyArray_OperatorBracket_int//concurrency:: Array < >:: operator (int, int,...)<br /><br />ConcurrencyArray_OperatorBracket_tidx//concurrency:: Array < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />ConcurrencyArrayView_OperatorBracket_idx//concurrency:: array_view < >:: operator [Index < >] and işleci (Dizin < >)<br /><br />ConcurrencyArrayView_OperatorBracket_int//concurrency:: array_view < >:: operator (int, int,...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//concurrency:: array_view < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />Yeni bir ağaç geçişi TreeTraverse_Init//başlatır<br /><br />Bir ağaçtaki düğümleri TreeTraverse_Next//döndürür<br /><br />Bekleyen bir ağaç geçişinin içindeki düğümleri TreeTraverse_Skip//atlıyor|
+|**Dize uzunluğu**|[strlen, wcslen](https://docs.microsoft.com/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l), [strnlen, wcsnlen](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnlen-strnlen-s)|
+|**Dize karşılaştırması**|[strcmp, wcscmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strcmp-wcscmp-mbscmp), [stricmp, wcsıcmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/stricmp-wcsicmp), [_stricmp, _strcmpi, _wcsicmp, _wcscmpi](https://docs.microsoft.com/cpp/c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l), [strncmp, wcsncmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l), [strnıcmp, wcsnıcmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnicmp-wcsnicmp), [_strnicmp, _wcsnicmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l)|
+|**Dize arama**|[strchr, wcschr](https://docs.microsoft.com/cpp/c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l), [memchr, wmemchr](https://docs.microsoft.com/cpp/c-runtime-library/reference/memchr-wmemchr), [strstr, wcsstr](https://docs.microsoft.com/cpp/c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l)|
+|**Win**|[Codecodeproxy](https://docs.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-codecodeproxy), [DecodePointer](https://docs.microsoft.com/previous-versions/bb432242%28v%3dvs.85%29), [GetLastError](https://docs.microsoft.com/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror), [TlsGetValue](https://docs.microsoft.com/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)|
+|**Windows 8**|[Roınspectcapturedstackbacktrace](https://docs.microsoft.com/windows/win32/api/roerrorapi/nf-roerrorapi-roinspectcapturedstackbacktrace), [windowscomparestringordinal](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowscomparestringordinal), [windowsgetstringlen](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowsgetstringlen), [windowsgetstrıngrawbuffer](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer)<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
+|**Çeşitli**|__log2//, belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış 2 günlük tabanı döndürür.<br /><br />__findNonNull, DecodeHString, Decodewinrtkısıttedexception, DynamicCast, DynamicMemberLookup, GetEnvBlockLength<br /><br />Stdext_HashMap_Int_OperatorBracket_idx, Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//concurrency:: Array < >:: operator [Dizin < >] ve işleç (Dizin < >)<br /><br />ConcurrencyArray_OperatorBracket_int//concurrency:: Array < >:: operator (int, int,...)<br /><br />ConcurrencyArray_OperatorBracket_tidx//concurrency:: Array < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />ConcurrencyArrayView_OperatorBracket_idx//concurrency:: array_view < >:: operator [Index < >] and işleci (Dizin < >)<br /><br />ConcurrencyArrayView_OperatorBracket_int//concurrency:: array_view < >:: operator (int, int,...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//concurrency:: array_view < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />Yeni bir ağaç geçişi TreeTraverse_Init//başlatır<br /><br />Bir ağaçtaki düğümleri TreeTraverse_Next//döndürür<br /><br />Bekleyen bir ağaç geçişinin içindeki düğümleri TreeTraverse_Skip//atlıyor|
 
 ## <a name="ccli---unsupported-expressions"></a>C++/CLı-desteklenmeyen Ifadeler
 

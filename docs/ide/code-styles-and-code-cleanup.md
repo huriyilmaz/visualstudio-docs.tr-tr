@@ -11,18 +11,18 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585411"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408493"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 
 Bir [Editorconfig dosyası](#code-styles-in-editorconfig-files)kullanarak proje başına kod stili ayarları tanımlayabilir veya metin düzenleyici [ **seçenekleri** sayfasında](#code-styles-in-the-options-dialog-box)Visual Studio 'da düzenlediğiniz tüm kodlar için. Kod C# Için, Visual Studio 'Yu **Code Cleanup** (Visual Studio 2019) ve **Format Document** (Visual Studio 2017) komutlarını kullanarak bu kod stili tercihlerini uygulamak üzere de yapılandırabilirsiniz.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz: [Mac için Visual Studio'daki Düzenleyici davranışı](/visualstudio/mac/editor-behavior).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio Içindeki düzenleyici davranışı](/visualstudio/mac/editor-behavior)bölümüne bakın.
 
 ## <a name="code-styles-in-editorconfig-files"></a>EditorConfig dosyalarındaki kod stilleri
 
@@ -38,7 +38,7 @@ EditorConfig dosyanızı el ile doldurabilir veya Visual Studio **seçenekleri**
 
 ## <a name="code-styles-in-the-options-dialog-box"></a>Seçenekler iletişim kutusundaki kod stilleri
 
-Kod stili tercihleri, **Araçlar** menüsünden **Seçenekler** iletişim kutusu açılarak C# tüm ve Visual Basic projeleriniz için ayarlanabilir. İçinde **seçenekleri** iletişim kutusunda **metin düzenleyici** > [**C#** veya **temel**] > **kod stili**  >  **Genel**.
+Kod stili tercihleri, **Araçlar** menüsünden **Seçenekler** iletişim kutusu açılarak C# tüm ve Visual Basic projeleriniz için ayarlanabilir. **Seçenekler** iletişim kutusunda, **metin Düzenleyicisi** **C#** > [veya **temel**] > **kod stili** > **genel**' i seçin.
 
 Listedeki her bir öğe seçildiğinde tercih önizlemesini sunar:
 
@@ -104,5 +104,5 @@ Kod stili ayarlarınızın bir dosyayı her kaydedişinizde uygulanmasını isti
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hızlı Eylemler](../ide/quick-actions.md)
-- [Kodlama kuralı ayarlarına EditorConfig için .NET](../ide/editorconfig-code-style-settings-reference.md)
+- [EditorConfig için .NET kodlama kuralı ayarları](../ide/editorconfig-code-style-settings-reference.md)
 - [Düzenleyici davranışı (Mac için Visual Studio)](/visualstudio/mac/editor-behavior)

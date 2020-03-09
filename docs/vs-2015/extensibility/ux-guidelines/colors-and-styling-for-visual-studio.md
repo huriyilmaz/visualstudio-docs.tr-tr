@@ -9,11 +9,11 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0330ef80fc1127893590ef8d326cb5b8e0cf0160
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291610"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410079"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Renkler ve stil Visual Studio için
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "74291610"
 ## <a name="BKMK_TheVSColorService"></a>Vscrenkli hizmeti
  Visual Studio VSColor hizmeti veya kabuk renk hizmeti olarak da bilinir bir ortam rengi hizmeti sağlar. Bu hizmet, kullanıcı Arabirimi öğeleri renk değerlerini ayarlamak için her bir Tema renkleri içeren bir ad-değer rengi bağlamak sağlar. Renkleri otomatik olarak geçerli bir kullanıcı tarafından seçilen tema yansıtacak şekilde değişir ve böylece kullanıcı Arabirimi ortam rengi hizmetine bağlı yeni temalarınızı gelecekte Visual Studio sürümlerini tümleştirme VSColor hizmeti tüm kullanıcı Arabirimi öğeleri için kullanılmalıdır.
 
-### <a name="how-the-service-works"></a>Hizmeti nasıl çalışır?
+### <a name="how-the-service-works"></a>Bu hizmet nasıl çalışır?
  Ortam renk hizmet için kullanıcı Arabirimi bileşeninin .pkgdef VSColors tanımlanan okur. Bu VSColors 'a daha sonra XAML biçimlendirme veya kodunda başvurulur ve **IVsUIShell5. GetThemedColor** ya da bir DynamicResource eşlemesi aracılığıyla yüklenir.
 
  ![Ortam renk hizmeti mimarisi](../../extensibility/ux-guidelines/media/0302-a-environmentcolorservicearchitecture.png "0302-a_EnvironmentColorServiceArchitecture")
@@ -258,7 +258,7 @@ protected override void Dispose(bool disposing)
 
 ## <a name="BKMK_ChoosingHighContrastColors"></a>Yüksek Karşıtlık renkleri seçme
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Windows, metin ve arka plan görüntüleri, renk karşıtlığını artırmak birçok yüksek karşıtlık sistem düzeyindeki temayla öğeler ekranda farklı daha görünür hale kullanır. Erişilebilirlik nedeniyle, kullanıcılar yüksek karşıtlıklı tema arasında geçiş yaptığınızda Visual Studio arabirimi öğeleri doğru bir şekilde yanıt vermesini önemlidir.
 
  Sistem renkleri olması, yüksek karşıtlıklı tema için kullanılabilir. Sisteminizi rengi adları seçerken, aşağıdaki ipuçlarını unutmayın:
@@ -325,7 +325,7 @@ protected override void Dispose(bool disposing)
 
 ## <a name="BKMK_ExposingColorsForEndUsers"></a>Son kullanıcılar için renkleri gösterme
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Bazen, son kullanıcının bir kod Düzenleyicisi'ni veya tasarım yüzeyine, oluşturduğunuz gibi kullanıcı arabirimini özelleştirme olanak tanıyan isteyebilirsiniz. Bunu yapmanın en yaygın yolu, **araçlar > seçenekleri** iletişim kutusunu kullanmaktır. Özel denetimler gerektiren çok özelleştirilmiş bir kullanıcı arabirimi yoksa, özelleştirmeyi kullanmanın en kolay yolu, iletişim kutusunun **ortam** bölümündeki **yazı tipi ve renkler** sayfasıdır. Özelleştirme için oluşturduğunuz her öğe için ön plan rengini, arka plan rengi veya her ikisini birden değiştirmek kullanıcı seçebilir.
 
 ### <a name="building-a-vspackage-for-your-customizable-colors"></a>Özelleştirilebilir, renk için bir VSPackage'ı oluşturma
@@ -348,7 +348,7 @@ protected override void Dispose(bool disposing)
 
  Kayıt defteri iki değerlerle doldurun:
 
-|Name|Type|Veriler|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
 |Kategori|REG_SZ|GUID|Kategori tanımlamak için oluşturulmuş bir GUID|
 |Paket|REG_SZ|GUID|Kategori destekleyen VSPackage hizmeti GUİD'si|
@@ -360,7 +360,7 @@ protected override void Dispose(bool disposing)
 
  Kayıt defteri iki değerlerle doldurun:
 
-|Name|Type|Veriler|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
 |Kategori|REG_SZ|GUID|Kategori tanımlamak için oluşturulmuş bir GUID|
 |Paket|REG_SZ|GUID|Kategori destekleyen VSPackage hizmeti GUİD'si|
@@ -424,7 +424,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
     "NameID"=dword:00000064
 ```
 
- **NOTUN**
+ **NOT:**
 
 - "Nameıd" paketinizdeki yerelleştirilmiş kategori adı kaynak kimliği =
 

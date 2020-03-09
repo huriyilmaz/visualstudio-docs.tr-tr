@@ -16,15 +16,15 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: bc31b6c5286e5d02d5fd6d4da441a001f190de90
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115379"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410097"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio 'nun ağ yüklemesi oluşturma
 
-Genellikle, bir kuruluş Yöneticisi istemci iş istasyonlarına dağıtmak için bir ağ yüklemesi noktası oluşturur. Visual Studio 'Yu, tüm ürün güncelleştirmeleriyle birlikte tek bir klasöre kadar, ilk yükleme için dosyaları önbelleğe alma olanağı sağlayacak şekilde tasarladık. (Bu işlem, ayrıca olarak adlandırılır _bir düzen oluşturma_.)
+Genellikle, bir kuruluş Yöneticisi istemci iş istasyonlarına dağıtmak için bir ağ yüklemesi noktası oluşturur. Visual Studio 'Yu, tüm ürün güncelleştirmeleriyle birlikte tek bir klasöre kadar, ilk yükleme için dosyaları önbelleğe alma olanağı sağlayacak şekilde tasarladık. (Bu işleme de _düzen oluşturma_adı verilir.)
 
 Böylece istemci iş istasyonları, aynı ağ konumunu en son hizmet güncelleştirmesi güncelleştirilmemiş olmasanız bile yükleme yönetmek için kullanabilirsiniz biz bunu yaptık.
 
@@ -43,8 +43,8 @@ Kurulum çalıştırılabiliriniz&mdash;veya daha belirli bir şekilde,&mdash;ö
 
 | Sürüm | Kısaltın |
 |-------------|-----------------------|
-|Visual Studio Enterprise | **vs_enterprise.exe** |
-|Visual Studio Professional | **vs_professional.exe** |
+|Visual Studio Enterprise | **vs_enterprise. exe** |
+|Visual Studio Professional | **vs_professional. exe** |
 |Visual Studio Derleme Araçları   | **vs_buildtools. exe** |
 
 Desteklenen diğer bootstrapdenetleyicileri **vs_feedbackclient. exe**, **vs_TeamExplorer. exe**, **vs_testagent. exe**, **vs_testcontroller. exe**ve **vs_testprofessional. exe**' yi içerir.
@@ -57,8 +57,8 @@ Kurulum çalıştırılabilir&mdash;veya daha belirgin bir şekilde,&mdash;bir �
 
 |Sürüm | İndir|
 |-------------|-----------------------|
-|Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
-|Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+|Visual Studio Enterprise | [**vs_enterprise. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+|Visual Studio Professional | [**vs_professional. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
 | Visual Studio Derleme Araçları   | [**vs_buildtools. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 
 Desteklenen diğer bootstrapdenetleyicileri [vs_TeamExplorer. exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe), [vs_testagent. exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)ve [vs_testcontroller. exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe)' yi içerir.
@@ -76,7 +76,7 @@ Bu adımı tamamlamak için bir internet bağlantısı olması gerekir. Tüm dil
    > Tamamen Visual Studio düzeni en az 35 GB disk alanı gerektirir ve indirmek biraz zaman alabilir. Yalnızca yüklemek istediğiniz bileşenleri içeren bir düzen oluşturma hakkında ayrıntılı bilgi için [ağ yerleşimini özelleştirme](#customize-the-network-layout) bölümüne bakın.
    >
    > [!TIP]
-   > İndirme dizininize komutu çalıştırdığınızdan emin olun. Genellikle, bu `C:\Users\<username>\Downloads` Windows 10 çalıştıran bir bilgisayarda.
+   > İndirme dizininize komutu çalıştırdığınızdan emin olun. Genellikle, bu, Windows 10 çalıştıran bir bilgisayarda `C:\Users\<username>\Downloads`.
 
 - Visual Studio Enterprise'ı çalıştırın:
 
@@ -88,7 +88,7 @@ Bu adımı tamamlamak için bir internet bağlantısı olması gerekir. Tüm dil
 
 ## <a name="modify-the-responsejson-file"></a>Response.json dosyasını değiştirme
 
-Kurulumu çalıştırdığınızda kullanılan varsayılan değerleri ayarlamak için response.json değiştirebilirsiniz.  Örneğin, yapılandırabileceğiniz `response.json` dosyasını otomatik olarak seçilen iş yüklerini belirli bir dizi seçin. Bkz: [otomatikleştirmek Visual Studio yükleme yanıt dosyası ile](automated-installation-with-response-file.md) Ayrıntılar için.
+Kurulumu çalıştırdığınızda kullanılan varsayılan değerleri ayarlamak için response.json değiştirebilirsiniz.  Örneğin, otomatik olarak seçilen belirli bir iş yükü kümesini seçmek için `response.json` dosyasını yapılandırabilirsiniz. Ayrıntılar için bkz. [Visual Studio yüklemesini bir yanıt dosyasıyla otomatikleştirin](automated-installation-with-response-file.md) .
 
 Ayrıca, Visual Studio önyükleyici ile bir yanıt. JSON dosyasıyla eşleştirmeniz sırasında hata oluşturan bir sorunla karşılaşırsanız, ne yapacaklarına ilişkin daha fazla bilgi için [Visual Studio 'yu yüklediğinizde veya kullanırken ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) sayfasında "üst işlemden ID ayrıştırılamadı" bölümüne bakın.
 
@@ -121,12 +121,12 @@ xcopy /e c:\VSLayout \\server\products\VS2019
 
 ## <a name="customize-the-network-layout"></a>Ağ yerleşimini özelleştirme
 
-Ağ düzeninize özelleştirmek için kullanabileceğiniz birkaç seçenek vardır. Yalnızca belirli bir dizi içeren bir kısmi düzeni oluşturabilirsiniz [dil yerel](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales), [iş yükleri, bileşenler ve önerilen ya da isteğe bağlı bağımlılıklarını](workload-and-component-ids.md). Bu, istemci iş istasyonlarına yalnızca bir iş yükü alt kümesini dağıtacağınızı biliyorsanız yararlı olabilir. Düzeni özelleştirmek için tipik komut satırı parametreleri şunlardır:
+Ağ düzeninize özelleştirmek için kullanabileceğiniz birkaç seçenek vardır. Yalnızca belirli bir [dil yerel](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)ayarı, [iş yükleri, bileşenler ve önerilen ya da isteğe bağlı bağımlılıklarını](workload-and-component-ids.md)içeren kısmi bir düzen oluşturabilirsiniz. Bu, istemci iş istasyonlarına yalnızca bir iş yükü alt kümesini dağıtacağınızı biliyorsanız yararlı olabilir. Düzeni özelleştirmek için tipik komut satırı parametreleri şunlardır:
 
-* `--add` belirtmek için [iş yükü veya Bileşen kimlikleri](workload-and-component-ids.md). <br>Varsa `--add` kullanıldığında, yalnızca bu iş yüklerinin ve bileşenlerin belirtilen `--add` indirilir.  `--add` kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
-* `--includeRecommended` Belirtilen iş yükü kimlikleri için önerilen tüm bileşenleri eklemek için
-* `--includeOptional` Belirtilen iş yükü kimlikleri için tüm önerilen ve isteğe bağlı bileşenleri eklemek için.
-* `--lang` belirtmek için [dil yerel](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales).
+* [iş yükünü veya bileşen kimliklerini](workload-and-component-ids.md)belirtmek için `--add`. <br>`--add` kullanılırsa, yalnızca `--add` ile belirtilen iş yükleri ve bileşenler indirilir.  `--add` kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
+* Belirtilen iş yükü kimlikleri için önerilen tüm bileşenleri dahil `--includeRecommended`
+* Belirtilen iş yükü kimlikleri için tüm önerilen ve isteğe bağlı bileşenleri dahil etmek `--includeOptional`.
+* [dil yerel ayarlarını](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)belirtmek için `--lang`.
 
 Özel bir kısmi düzen oluşturma bazı örnekleri aşağıda verilmiştir.
 
@@ -222,11 +222,11 @@ Yöneticiler, bir yükleme betiğinin bir parçası istemci iş istasyonlarında
 > Bir hatayı engellemek için, tam düzen yolunuz 80 karakterden az olduğundan emin olun.
 
 > [!TIP]
-> Bir toplu iş dosyası bir parçası olarak çalıştırıldığında `--wait` seçeneği sağlar `vs_enterprise.exe` işlem çıkış kodu döndürür önce yükleme işlemi tamamlanana kadar bekler.
+> Bir toplu iş dosyasının parçası olarak yürütüldüğünde `--wait` seçeneği, `vs_enterprise.exe` işleminin, yükleme tamamlanmadan önce, bir çıkış kodu döndürene kadar bekleyip beklememesini sağlar.
 >
-> Daha fazla tamamlanmış bir yüklemeyi eylemleri gerçekleştirmek Kurumsal Yönetici isterse kullanışlıdır (örneğin, [yüklemenin başarılı olabilmesi için bir ürün anahtarını uygulayan](automatically-apply-product-keys-when-deploying-visual-studio.md)) ancak yükleme işlemek için tamamlanıncaya kadar beklemeniz gerekir Bu yükleme dönüş kodu.
+> Bu, bir Kurumsal Yönetici tamamlanmış bir yüklemede daha fazla eylem gerçekleştirmek istiyorsa (örneğin, [başarılı bir yüklemeye bir ürün anahtarı uygulamak](automatically-apply-product-keys-when-deploying-visual-studio.md)için), ancak yükleme işleminin bu yüklemeden dönüş kodunu işlemesini beklemesi gereken durumlarda yararlıdır.
 >
-> Kullanmıyorsanız, `--wait`, `vs_enterprise.exe` işlem çıkar önce yükleme tamamlandıktan ve yükleme işleminin durumunu temsil etmez, hatalı çıkış kodu döndürür.
+> `--wait`kullanmıyorsanız, yükleme tamamlanmadan önce `vs_enterprise.exe` işlemi çıkar ve yükleme işleminin durumunu temsil etmeyen yanlış bir çıkış kodu döndürür.
 >
 
 ::: moniker range="vs-2019"
@@ -235,20 +235,20 @@ Yöneticiler, bir yükleme betiğinin bir parçası istemci iş istasyonlarında
 >
 ::: moniker-end
 
-Bir düzenden yükleme sırasında düzeninde yüklü içeriği alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunu kullanın, düzende eksik herhangi bir içerik indirmesini önlemek istiyorsanız `--noWeb` seçeneği. Varsa `--noWeb` kullanılır ve düzenini seçili yüklenmesi başarısız kurulum için herhangi bir içeriği eksik.
+Bir düzenden yükleme sırasında düzeninde yüklü içeriği alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmasını engellemek istiyorsanız `--noWeb` seçeneğini kullanın. `--noWeb` kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
 
 > [!IMPORTANT]
 > `--noWeb` seçeneği, Visual Studio kurulumunun güncelleştirmeleri denetlemesini durdurmaz. Daha fazla bilgi için bkz. [ağ tabanlı Visual Studio dağıtımlarının güncelleştirmelerini denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
 
 ### <a name="error-codes"></a>Hata kodları
 
-Kullandıysanız `--wait` parametresi ve ardından işlemi sonucuna bağlı olarak `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
+`--wait` parametresini kullandıysanız, işlem sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 
 ## <a name="update-a-network-install-layout"></a>Ağ yüklemesi yerleşimini güncelleştirme
 
-Ürün güncelleştirmeleri kullanılabilir oldukça isteyebilirsiniz [ağ yükleme düzeni güncelleştirme](update-a-network-installation-of-visual-studio.md) güncelleştirilmiş paket birleştirmek için.
+Ürün güncelleştirmeleri kullanılabilir hale geldiğinde, güncelleştirilmiş paketleri eklemek için [ağ yüklemesi mizanpajını güncelleştirmek](update-a-network-installation-of-visual-studio.md) isteyebilirsiniz.
 
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>Önceki bir Visual Studio sürümü için düzen oluşturma
 
@@ -278,9 +278,9 @@ Visual Studio 'nun daha eski bir sürümü için bir düzen oluşturmanız gerek
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>Çevrimdışı yükleyicinizi için destek alma
 
-Çevrimdışı yüklemenizle ilgili bir sorun yaşarsanız, bunu bilmek istiyoruz. Bize en iyi yolu kullanmaktır [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracı. Bu aracı, bize tanılayın ve sorunu çözmeye yardımcı olmak için ihtiyacımız olan günlükleri ve telemetri gönderebilir.
+Çevrimdışı yüklemenizle ilgili bir sorun yaşarsanız, bunu bilmek istiyoruz. Bize anlatmak için en iyi yol, [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanmaktır. Bu aracı, bize tanılayın ve sorunu çözmeye yardımcı olmak için ihtiyacımız olan günlükleri ve telemetri gönderebilir.
 
-Ayrıca sunuyoruz bir [ **canlı sohbet** ](https://visualstudio.microsoft.com/vs/support/#talktous) yüklemeyle ilgili sorunlar için destek seçeneği (yalnızca İngilizce).
+Ayrıca, yüklemeyle ilgili sorunlar için [**canlı sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği sunuyoruz.
 
 Diğer destek seçenekleri, çok sahibiz. Bir liste için bkz. [geri bildirim](../ide/feedback-options.md) sayfamız.
 
@@ -289,7 +289,7 @@ Diğer destek seçenekleri, çok sahibiz. Bir liste için bkz. [geri bildirim](.
 - [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
 - [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
 - [Visual Studio 'Yu yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md)
-- [Ağ tabanlı Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
+- [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
 - [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
 - [Bakım temeliyle Visual Studio 'Yu güncelleştirme](update-servicing-baseline.md)
 - [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)

@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1176232eb3354a9b425e9432eb83037367ee7706
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596248"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408480"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Seçenekler iletişim kutusu: metin Düzenleyicisi \> C# \> kod stili \> biçimlendirme
 
@@ -63,8 +63,8 @@ Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için *
 |Etiketle|Açıklama|İlgili EditorConfig ve Araçlar > seçenekleri kuralları|
 |-----------|-----------------|-----------------|-----------------|
 |**Tüm C# biçimlendirme kurallarını Uygula (girintileme, kaydırma, Aralık)**|**Biçim belgesi** komutu her zaman biçimlendirme sorunlarını düzeltir. Bu ayar değiştirilemez.| [Core EditorConfig seçenekleri](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig biçimlendirme seçenekleri](../../ide/editorconfig-formatting-conventions.md)<br/><br/>**Araçlar** > **Seçenekler** > **metin Düzenleyicisi** > **C#**  > **biçimlendirme** > [**girintileme** veya **yeni çizgiler** veya **boşluk** ya da **kaydırma**]|
-|**Biçimlendirme sırasında ek kod temizlemeyi gerçekleştir**|Seçildiğinde, **Edit. FormatDocument** komutunda belirtilen kurallara ilişkin düzeltmeleri uygular.| YOK |
-|**Gereksiz kullanımları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde gereksiz `using` yönergeleri kaldırır.| YOK |
+|**Biçimlendirme sırasında ek kod temizlemeyi gerçekleştir**|Seçildiğinde, **Edit. FormatDocument** komutunda belirtilen kurallara ilişkin düzeltmeleri uygular.| Yok |
+|**Gereksiz kullanımları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde gereksiz `using` yönergeleri kaldırır.| Yok |
 |**Using deyimlerini Sırala**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde `using` yönergeleri sıralar.| dotnet_sort_system_directives_first<br/><br/>**Araçlar** > **Seçenekler** > **metin Düzenleyicisi** > **C#**  > **Gelişmiş** >  **' sistem ' yönergelerini sıralama, using deyimlerini sıralarken** |
 |**Tek satırlı denetim deyimleri için küme ayraçları Ekle/Kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde tek satırlık denetim deyimlerine küme ayraçları ekler veya kaldırır.| csharp_prefer_braces<br/><br/>**Araçlar** > **Seçenekler** > **metin düzenleyici** > **C#**  > **kod stili** > **kod bloğu tercihleri** > , **küme ayraçlarını tercih et** |
 |**Erişilebilirlik değiştiricileri Ekle**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde eksik erişilebilirlik değiştiricileri ekler.| dotnet_style_require_accessibility_modifiers |
@@ -76,8 +76,8 @@ Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için *
 |**Nesne/koleksiyon başlatma tercihlerini Uygula**|Seçildiğinde nesne ve koleksiyon başlatıcıları, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunca kullanılır.| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>**Araçlar** > **Seçenekler** > **metin düzenleyici** > **C#**  > **kod stili** > **Ifade tercihleri** > **nesne Başlatıcısı tercih et** veya **koleksiyon başlatıcısı tercih et** |
 |**' This. ' nitelik tercihlerini Uygula**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde `this.` tercihleri uygular.| [Bunun. nitelik Düzenleyicisi yapılandırma seçenekleri](../../ide/editorconfig-language-conventions.md#this-and-me)<br/><br/>**Araçlar** > **Seçenekler** > **metin düzenleyici** > **C#**  > **kod stili** >  **' this. ' tercihleri** |
 |**Mümkünse özel alanları ReadOnly yap**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunca özel alanlar `readonly` olur.| dotnet_style_readonly_field<br/><br/>**Araçlar** > **Seçenekler** > **metin düzenleyicisi** > **C#**  > **kod stili** > **alan tercihleri** > **salt okunur tercih et** |
-|**Gereksiz yayınları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunda gereksiz yayınları kaldırır.| YOK |
-|**Kullanılmayan değişkenleri kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde kullanılmayan değişkenleri kaldırır.| YOK |
+|**Gereksiz yayınları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunda gereksiz yayınları kaldırır.| Yok |
+|**Kullanılmayan değişkenleri kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde kullanılmayan değişkenleri kaldırır.| Yok |
 
 ![Visual Studio 'da için C# kod temizleme ayarları](media/format-document-settings.png)
 
