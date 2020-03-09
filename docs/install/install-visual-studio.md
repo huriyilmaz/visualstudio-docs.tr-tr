@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Yükle
+title: Visual Studio yükleme
 titleSuffix: ''
 description: Visual Studio, adım adım yüklemeyi öğrenin.
 ms.date: 12/13/2019
@@ -21,13 +21,13 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: d8e6e3a857c9bbf5577cf395f698f64cfb11bddc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114576"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409751"
 ---
-# <a name="install-visual-studio"></a>Visual Studio Yükle
+# <a name="install-visual-studio"></a>Visual Studio yükleme
 
 ::: moniker range="vs-2019"
 
@@ -42,17 +42,17 @@ Visual Studio'yu yüklemek için yeni bir yolunu Hoş Geldiniz! Bu sürümde, ya
 ::: moniker-end
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz: [Mac için Visual Studio](/visualstudio/mac/installation/).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Install Mac için Visual Studio](/visualstudio/mac/installation/).
 
 ::: moniker range="vs-2019"
 
-Else bu sürümdeki yenilikler hakkında daha fazla bilgi edinmek istiyorsunuz? Bkz. bizim [sürüm notları](/visualstudio/releases/2019/release-notes/).
+Else bu sürümdeki yenilikler hakkında daha fazla bilgi edinmek istiyorsunuz? [Sürüm notlarımıza](/visualstudio/releases/2019/release-notes/)bakın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Else bu sürümdeki yenilikler hakkında daha fazla bilgi edinmek istiyorsunuz? Bkz. bizim [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
+Else bu sürümdeki yenilikler hakkında daha fazla bilgi edinmek istiyorsunuz? [Sürüm notlarımıza](/visualstudio/releasenotes/vs2017-relnotes)bakın.
 
 ::: moniker-end
 
@@ -64,7 +64,7 @@ Visual Studio yükleme başlamadan önce:
 
 ::: moniker range="vs-2017"
 
-1. Denetleme [sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs). Bu gereksinimleri bilgisayarınıza Visual Studio 2017 destekleyip desteklemediğini bilmenize yardımcı olur.
+1. [Sistem gereksinimlerini](/visualstudio/productinfo/vs2017-system-requirements-vs)denetleyin. Bu gereksinimleri bilgisayarınıza Visual Studio 2017 destekleyip desteklemediğini bilmenize yardımcı olur.
 
 1. En son Windows güncelleştirmelerini uygulayın. Bu güncelleştirmeler, bilgisayarınızda Visual Studio için en son güvenlik güncelleştirmelerini hem gerekli sistem bileşenlerine sahip olun.
 
@@ -76,7 +76,7 @@ Visual Studio yükleme başlamadan önce:
 
 ::: moniker range="vs-2019"
 
-1. Denetleme [sistem gereksinimleri](/visualstudio/releases/2019/system-requirements). Bu gereksinimler, bilgisayarınızın Visual Studio 2019 ' i destekleyip desteklemediğini bilmenizi sağlamaya yardımcı olur.
+1. [Sistem gereksinimlerini](/visualstudio/releases/2019/system-requirements)denetleyin. Bu gereksinimler, bilgisayarınızın Visual Studio 2019 ' i destekleyip desteklemediğini bilmenizi sağlamaya yardımcı olur.
 
 1. En son Windows güncelleştirmelerini uygulayın. Bu güncelleştirmeler, bilgisayarınızda Visual Studio için en son güvenlik güncelleştirmelerini hem gerekli sistem bileşenlerine sahip olun.
 
@@ -88,7 +88,7 @@ Visual Studio yükleme başlamadan önce:
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 ile yan yana Visual Studio'nun önceki sürümlerini çalıştıran hakkında sorular için bkz [Visual Studio uyumluluk ayrıntıları](/visualstudio/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases).
+Visual Studio 'nun önceki sürümlerini Visual Studio 2017 ile yan yana çalıştırma hakkında sorularınız için [Visual Studio uyumluluk ayrıntılarına](/visualstudio/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases)bakın.
 
 ::: moniker-end
 
@@ -121,15 +121,15 @@ Bunu yapmak için, aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sü
 
 Visual Studio Yükleyicisi yüklemek için önyükleyici dosyasını çalıştırın. Bu yeni basit yükleyici, Visual Studio 'Yu yüklemek ve özelleştirmek için ihtiyacınız olan her şeyi içerir.
 
-1. Öğesinden, **indirir** klasöründe eşleşen veya benzer bir aşağıdaki dosyalar önyükleyici çift tıklayın:
+1. **İndirmeler** klasöründen, eşleşen önyükleyiciyi çift tıklayın veya aşağıdaki dosyalardan birine benzer:
 
-   * **vs_community.exe** Visual Studio Community için
-   * **vs_professional.exe** Visual Studio Professional
-   * **vs_enterprise.exe** için Visual Studio Enterprise
+   * Visual Studio Community için **vs_community. exe**
+   * Visual Studio Professional için **vS_professional. exe**
+   * Visual Studio Enterprise için **vs_enterprise. exe**
 
    Bir kullanıcı hesabı denetimi bildirimi alırsanız **Evet**' i seçin.
 
-2. Microsoft onaylamak için isteriz [lisans koşulları](https://visualstudio.microsoft.com/license-terms/) ve Microsoft [gizlilik bildirimi](https://privacy.microsoft.com/privacystatement). Seçin **devam**.
+2. Microsoft [Lisans koşulları](https://visualstudio.microsoft.com/license-terms/) ' nı ve Microsoft [Gizlilik bildirimi](https://privacy.microsoft.com/privacystatement)' ni kabul etmeniz istenir. **Devam**' ı seçin.
 
    ![Lisans koşulları ve gizlilik bildirimi](media/privacy-and-license-terms.png "Microsoft lisans koşulları ve gizlilik bildirimi")
 
@@ -166,7 +166,7 @@ Yükleyici yüklendikten sonra bu özellik kümeleri seçerek yüklemenizi özel
  ::: moniker-end
 
 > [!TIP]
-> Yüklemeden sonra herhangi bir zamanda iş yükleri veya başlangıçta yüklenmedi bileşenleri yükleyebilirsiniz. Visual Studio'nun varsa **Araçları** > **araçları ve özellikleri Al...**  Visual Studio yükleyicisi açılır. Veya açık **Visual Studio yükleyicisi** Başlat menüsünden. Buradan, yüklemek istediğiniz iş yüklerini veya bileşenleri seçebilirsiniz. Ardından **Değiştir**' i seçin.
+> Yüklemeden sonra herhangi bir zamanda iş yükleri veya başlangıçta yüklenmedi bileşenleri yükleyebilirsiniz. Visual Studio açıksa **Araçlar** ' a gidin > **Araçlar ve Özellikler al...** bu Visual Studio yükleyicisi açılır. Ya da, Başlat menüsünden **Visual Studio yükleyicisi** açın. Buradan, yüklemek istediğiniz iş yüklerini veya bileşenleri seçebilirsiniz. Ardından **Değiştir**' i seçin.
 
 ## <a name="step-5---choose-individual-components-optional"></a>5\. adım-tek tek bileşenleri seçin (Isteğe bağlı)
 
@@ -202,13 +202,13 @@ Varsayılan olarak, yükleyici programı ilk kez çalıştığında işletim sis
 
 ### <a name="change-the-installer-language-from-the-command-line"></a>Komut satırından yükleyici dilini değiştirme
 
-Varsayılan dilini değiştirme başka bir komut satırından yükleyiciyi çalıştırarak yoludur. Örneğin, aşağıdaki komutu kullanarak İngilizce olarak çalıştırmak için yükleyici zorlayabilirsiniz: `vs_installer.exe --locale en-US`. Yükleyici, sonraki açışınızda çalıştırdığınızda bu ayar hatırlanır. Aşağıdaki Dil belirteçler yükleyici destekler: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-IT, ja-jp, ko-kr, pl-pl, pt-br, ru-ru ve tr-tr.
+Varsayılan dilini değiştirme başka bir komut satırından yükleyiciyi çalıştırarak yoludur. Örneğin, aşağıdaki komutu kullanarak yükleyiciyi Ingilizce çalışmaya zorlayabilirsiniz: `vs_installer.exe --locale en-US`. Yükleyici, sonraki açışınızda çalıştırdığınızda bu ayar hatırlanır. Aşağıdaki Dil belirteçler yükleyici destekler: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-IT, ja-jp, ko-kr, pl-pl, pt-br, ru-ru ve tr-tr.
 
 ## <a name="step-7---select-the-installation-location-optional"></a>7\. adım-yükleme konumunu seçin (Isteğe bağlı)
 
 ::: moniker range="vs-2017"
 
-**15.7 sürümündeki yeni**: artık Visual Studio yükleme ayak izini sistem sürücünüzde azaltabilir. İndirme önbelleğini, paylaşılan bileşenler, SDK'ları ve araçları farklı sürücülere taşıma ve Visual Studio en hızlı çalışan sürücüde korumak seçebilirsiniz.
+**15,7 ' deki yenilikler**: artık, sistem sürücünüzdeki Visual Studio 'nun yükleme ayak izini azaltabilirsiniz. İndirme önbelleğini, paylaşılan bileşenler, SDK'ları ve araçları farklı sürücülere taşıma ve Visual Studio en hızlı çalışan sürücüde korumak seçebilirsiniz.
 
   ![Visual Studio 2017-yükleme konumlarını değiştirme](media/installation-options-by-location.png "Yükleme konumunu değiştirme")
 
@@ -266,4 +266,4 @@ Daha fazla bilgi için bkz. [yükleme konumlarını seçme](change-installation-
 * [Visual Studio'yu kaldırma](uninstall-visual-studio.md)
 * [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
-* [Mac için Visual Studio'yu yükleyin](/visualstudio/mac/installation)
+* [Mac için Visual Studio yüklensin](/visualstudio/mac/installation)

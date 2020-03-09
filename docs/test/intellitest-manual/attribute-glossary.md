@@ -10,17 +10,17 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 00d8b24d26237a3c7b4130eba4614b5ea7b7eccd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594311"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409532"
 ---
 # <a name="attribute-glossary"></a>Öznitelik sözlüğü
 
 ## <a name="attributes-by-namespace"></a>Ad alanına göre öznitelikler
 
-* **Microsoft.Pex.Framework**
+* **Microsoft. Pex. Framework**
   * [PexAssumeNotNull](#pexassumenotnull)
   * [PexClass](#pexclass)
   * [PexGenericArguments](#pexgenericarguments)
@@ -30,14 +30,14 @@ ms.locfileid: "75594311"
 * **Microsoft. Pex. Framework. Settings**
   * [PexAssemblySettings](#pexassemblysettings)
 
-* **Microsoft.Pex.Framework.Instrumentation**
+* **Microsoft. Pex. Framework. Instrumentation**
   * [PexAssemblyUnderTest](#pexassemblyundertest)
   * [PexInstrumentAssembly](#pexinstrumentassemblyattribute)
 
 * **Microsoft. Pex. Framework. using**
   * [PexUseType](#pexusetype)
 
-* **Microsoft.Pex.Framework.Validation**
+* **Microsoft. Pex. Framework. doğrulaması**
   * [PexAllowedException](#pexallowedexception)
   * [PexAllowedExceptionFromAssembly](#pexallowedexceptionfromassembly)
   * [PexAllowedExceptionFromType](#pexallowedexceptionfromtype)
