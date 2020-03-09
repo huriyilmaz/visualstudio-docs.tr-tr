@@ -9,11 +9,11 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 843829c56fcbd2f5c558d7c4a8b14a660a431eac
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558224"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410548"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Görüntüler ve Visual Studio için simgeler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
