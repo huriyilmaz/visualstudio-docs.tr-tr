@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 08501d71400a0df139022f04e68573d0dd1449d1
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661917"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409922"
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio 'da Python seçenekleri
 
@@ -48,7 +48,7 @@ Ayrıca **metin düzenleyicisi** > **Python** > **Gelişmiş** sekmesinde ve **m
 | --- | --- | --- |
 | **Sanal ortamlar oluştururken Çıkış Penceresi göster**| Açık | **Çıkış** penceresinin görünmesini engellemek için işaretini kaldırın. |
 | **Paketleri yüklerken veya kaldırırken Çıkış Penceresi göster** | Açık | **Çıkış** penceresinin görünmesini engellemek için işaretini kaldırın. |
-| **Ortam oluşturmak için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı *requirements. txt* veya *Environment. yıml* dosyası içeren bir proje açtığında, Visual Studio sırasıyla sanal ortam veya Conda ortamı oluşturma önerilerini içeren bir bilgi çubuğu görüntüler. Varsayılan genel ortamı kullanmak yerine. |
+| **Ortam oluşturmak için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı *requirements. txt* veya *Environment. yıml* dosyasını içeren bir proje açtığında, Visual Studio varsayılan genel ortamı kullanmak yerine, sırasıyla sanal ortam veya Conda ortamı oluşturma önerilerine sahip bir bilgi çubuğu görüntüler. |
 | **Paketleri yüklemek için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı *requirements. txt* dosyasını içeren bir proje açtığında (ve varsayılan genel ortamı kullanmıyorsanız), Visual Studio bu gereksinimleri geçerli ortamda yüklü paketlerle karşılaştırır. Herhangi bir paket eksikse, Visual Studio bu bağımlılıkları yüklemek için bir istem görüntüler. |
 | **Paket yöneticilerini her zaman yönetici olarak çalıştır** | Kapalı | Tüm ortamlarda `pip install` ve benzer Paket Yöneticisi işlemlerini her zaman yükseltir. Paketler yüklenirken, ortam dosya sisteminin *C:\Program Files*gibi korumalı bir alanında yer alıyorsa, Visual Studio yönetici ayrıcalıkları ister. Bu istem içinde, yalnızca bir ortam için install komutunu her zaman yükseltmeyi seçebilirsiniz. Bkz. [Paketler sekmesi](python-environments-window-tab-reference.md#packages-tab). |
 | **İlk kullanımda tamamlanma DB 'yi otomatik olarak oluştur** | Açık | *Bir IntelliSense veritabanı kullanılırken Visual Studio 2017 sürüm 15,5 ve önceki sürümleri ve sonraki sürümler için geçerlidir.* Onu kullanan kodu yazdığınızda, bir kitaplık için veritabanının tamamlanmasını önceliklendirir. Daha fazla bilgi için bkz. [IntelliSense sekmesi](python-environments-window-tab-reference.md?view=vs-2017#intellisense-tab). |
@@ -73,7 +73,7 @@ Ayrıca **metin düzenleyicisi** > **Python** > **Gelişmiş** sekmesinde ve **m
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Conda çalıştırılabilir yolu** | adet | Python iş yüküne dahil olan varsayılan Miniconda yüklemesine güvenmek yerine *Conda. exe* yürütülebilir dosyasının tam yolunu belirtir. Burada başka bir yol verilirse, bu, kayıt defterinde belirtilen varsayılan yüklemeden ve diğer tüm Conda. exe yürütülebilir dosyalarının önüne geçer. Anaconda veya Miniconda 'ın daha yeni bir sürümünü el ile yüklüyorsanız veya varsayılan 64-bit dışında bir 32-bit ayırıcı kullanmak istiyorsanız bu ayarı değiştirebilirsiniz. |
+| **Conda çalıştırılabilir yolu** | (boş) | Python iş yüküne dahil olan varsayılan Miniconda yüklemesine güvenmek yerine *Conda. exe* yürütülebilir dosyasının tam yolunu belirtir. Burada başka bir yol verilirse, bu, kayıt defterinde belirtilen varsayılan yüklemeden ve diğer tüm Conda. exe yürütülebilir dosyalarının önüne geçer. Anaconda veya Miniconda 'ın daha yeni bir sürümünü el ile yüklüyorsanız veya varsayılan 64-bit dışında bir 32-bit ayırıcı kullanmak istiyorsanız bu ayarı değiştirebilirsiniz. |
 
 ![Python seçenekleri iletişim kutusu, dil sunucusu sekmesi](media/options-conda.png)
 
@@ -118,7 +118,7 @@ Ayrıca **metin düzenleyicisi** > **Python** > **Gelişmiş** sekmesinde ve **m
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Betikleri** | yok | Tüm ortamlarda **etkileşimli** Windows için uygulanacak başlangıç betikleri için genel bir klasör belirtir. Bkz. [Başlangıç betikleri](python-environments-window-tab-reference.md#startup-scripts). Ancak, bu özelliğin şu anda çalışmadığına not edin. |
+| **Betikler** | yok | Tüm ortamlarda **etkileşimli** Windows için uygulanacak başlangıç betikleri için genel bir klasör belirtir. Bkz. [Başlangıç betikleri](python-environments-window-tab-reference.md#startup-scripts). Ancak, bu özelliğin şu anda çalışmadığına not edin. |
 | **Yukarı/aşağı okları geçmişe gider** | Açık | **Etkileşimli** penceredeki geçmiş arasında gezinmek için ok tuşlarını kullanır. Bunun yerine **etkileşimli** pencerenin çıktısı içinde gezinmek için ok tuşlarını kullanmak üzere bu ayarı temizleyin. |
 | **Tamamlama modu** | **Yalnızca işlev çağrıları olmayan ifadeleri değerlendir** | **Etkileşimli** penceredeki bir ifadede kullanılabilir üyeleri belirleme işlemi, geçerli tamamlanmamış ifadenin değerlendirilmesi gerektirebilir, bu da yan etkiler veya işlevlerin birden çok kez çağrılmasına neden olabilir. Varsayılan ayar, **yalnızca işlev çağrıları olmadan ifadeleri değerlendir** işlevi çağıran ifadeleri hariç tutar, ancak diğer ifadeleri değerlendirir. Örneğin, `a.b` değerlendirir ancak `a().b`vermez.  **Ifadeleri hiçbir şekilde değerlendirme** , öneriler için yalnızca normal IntelliSense altyapısı kullanılarak tüm yan etkileri engeller. **Tüm Ifadeleri değerlendir** , yan etkilerden bağımsız olarak öneriler almak için tüm ifadeyi değerlendirir. |
 | **Statik analiz önerilerini gizle** | Kapalı | Ayarlandığında, yalnızca ifade hesaplanarak elde edilen önerileri görüntüler. **Tamamlama modu** değeri ile birleştirildiğinde **ifadeleri hiçbir şekilde değerlendirirse** **etkileşimli** pencerede hiçbir yararlı tamamlama görünmez. |
@@ -133,7 +133,7 @@ Ayrıca **metin düzenleyicisi** > **Python** > **Gelişmiş** sekmesinde ve **m
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
 | **Türden tamamlanmış işlemleri devre dışı bırak** | Kapalı | Visual Studio IntelliSense normalde, her ikisi de Python 2 ve Python 3 için standart kitaplık ve üçüncü taraf kitaplıklar için tür ipuçları bulmak üzere yazı tipinde (bir *. Pyi* dosyaları kümesi) paketlenmiş bir sürümünü kullanır. Bu seçeneğin ayarlanması, paketlenmiş yazı davranışını devre dışı bırakır. |
-| **Özel Türleştirilmiş yol** | adet | Ayarlanırsa, Visual Studio paketlenmiş sürümü yerine bu yoldaki yazı dosyalarını kullanır. **Türden tamamlanmayı devre dışı bırak** ayarlandıysa yoksay. |
+| **Özel Türleştirilmiş yol** | (boş) | Ayarlanırsa, Visual Studio paketlenmiş sürümü yerine bu yoldaki yazı dosyalarını kullanır. **Türden tamamlanmayı devre dışı bırak** ayarlandıysa yoksay. |
 
 ![Python seçenekleri iletişim kutusu, dil sunucusu sekmesi](media/options-language-server.png)
 

@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: f743df63ce779b90f728fd69622f621c8a2169d5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587595"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408603"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -178,7 +178,7 @@ CA3061 | URL 'ye göre şema eklemeyin
 [CA3147](ca3147.md) | Fiil Işleyicilerini Validate Antiforgery belirteci Ile işaretle
 [CA5350](ca5350.md) | Zayıf Şifreleme Algoritmaları Kullanmayın
 [CA5351](ca5351.md) | Bozuk şifreleme algoritmaları kullanmayın
-CA5358 | Güvenli olmayan şifre modlarını kullanma
+CA5358 | Güvenli Olmayan Şifreleme Modlarını Kullanmayın
 CA5359 | Sertifika doğrulamasını devre dışı bırakma
 CA5360 | Seri durumdan çıkarma sırasında tehlikeli yöntemleri çağırmayın
 CA5361 | Sağlam şifreleme için SChannel kullanımını devre dışı bırakma
