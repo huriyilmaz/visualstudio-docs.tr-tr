@@ -10,9 +10,9 @@
         - name: Genel Bakış
           displayName: 'roslyn analyzers, source analysis'
           href: roslyn-analyzers-overview.md
-        - name: Yükleme
+        - name: Kaynak kodu çözümleyicilerini yükleme
           href: install-roslyn-analyzers.md
-        - name: Yapılandırma
+        - name: Kaynak kodu çözümleyicilerini yapılandırma
           href: use-roslyn-analyzers.md
         - name: Kod analizini devre dışı bırakma
           href: disable-code-analysis.md
@@ -22,27 +22,24 @@
           href: analyzers-faq.md
         - name: FxCop çözümleyicileri
           items:
-            - name: Genel Bakış
-              displayName: fxcop analyzers
-              href: fxcop-analyzers.yml
-            - name: Yükleme
+            - name: FxCop çözümleyicilerini yükleme
               href: install-fxcop-analyzers.md
-            - name: Yapılandırma
+            - name: FxCop çözümleyicilerine geçiş yapma
               items:
-                - name: Genel Bakış
+                - name: Eski analizden FxCop çözümleyicilerine geçiş
+                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+                - name: SSS
+                  href: fxcop-analyzers-faq.md
+                - name: Taşınan kurallar
+                  href: fxcop-rule-port-status.md
+            - name: FxCop çözümleyicilerini yapılandırma
+              items:
+                - name: Kuralları ve projeleri yapılandırma
                   href: configure-fxcop-analyzers.md
                 - name: Kapsam seçenekleri
                   href: fxcop-analyzer-options.md
                 - name: Kural kategorisini etkinleştirme
                   href: analyzer-rule-sets.md
-            - name: SSS
-              href: fxcop-analyzers-faq.md
-        - name: Eski analizden FxCop çözümleyicilerine geçiş
-          items:
-            - name: Genel Bakış
-              href: fxcop-analyzers.yml
-            - name: Taşınan kurallar
-              href: fxcop-rule-port-status.md
     - name: Eski analiz
       items:
         - name: Genel Bakış
@@ -50,8 +47,8 @@
           href: static-code-analysis-for-managed-code-overview.md
         - name: Eski analiz kılavuzu
           href: walkthrough-analyzing-managed-code-for-code-defects.md
-        - name: Geçiş
-          href: fxcop-analyzers.yml
+        - name: FxCop çözümleyicilerine geçiş yapma
+          href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
         - name: Eski analizi el ile çalıştırma
           href: how-to-run-code-analysis-manually-for-managed-code.md
         - name: Yapılandırma
