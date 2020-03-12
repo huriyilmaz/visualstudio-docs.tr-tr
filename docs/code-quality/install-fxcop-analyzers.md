@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06362bcf00bc35fdef701e26fe03694b038e88b1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 78935673dbf57f75988d4c0a9e862b11e2fe855f
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587465"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937525"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Visual Studio 'da FxCop çözümleyicileri 'ni yükler
 
@@ -32,7 +32,7 @@ Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerde, [Microsoft. CodeAnalysi
 
    ![Visual Studio 'da Özellikler sayfasından FxCop çözümleyicileri paketini yükler](media/install-fxcop-properties-page.png)
 
-2. **Yükle**'yi seçin.
+2. **Yükle**’yi seçin.
 
    Visual Studio, Microsoft. Codeçözümleyiciler. Fxcopçözümleyiciler paketinin en son sürümünü yüklüyor. Derlemeler, **Çözüm Gezgini** > **çözümleyiciler**altında görüntülenir.
 
@@ -156,4 +156,4 @@ Uzantının yüklenip yüklenmediğini denetlemek isterseniz, uzantıları **yö
 
 - [Visual Studio 'da kod Çözümleyicileri 'ne genel bakış](../code-quality/roslyn-analyzers-overview.md)
 - [Visual Studio 'da kod Çözümleyicileri kullanma](../code-quality/use-roslyn-analyzers.md)
-- [Eski çözümleyicinden kod Çözümleyicileri 'ne geçiş](../code-quality/fxcop-analyzers.yml)
+- [Eski çözümleyicinden kod Çözümleyicileri 'ne geçiş](../code-quality/migrate-from-legacy-analysis-to-fxcop-analyzers.md)

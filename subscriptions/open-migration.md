@@ -3,15 +3,15 @@ title: Müşteriler için Visual Studio aboneliklerini yöneten iş ortakları |
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/21/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: İş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
-ms.openlocfilehash: 2dba1491bd7472e1de824433ce534503de0b37be
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 53f19b76d79bb7f2e6246c9f5b2866bbf9262dfe
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850554"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947072"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteri adına abonelikleri yöneten iş ortakları
 Visual Studio [abonelikleri yönetim portalı](https://manage.visualstudio.com)'nda abonelikleri yönetmek için, izlenmesi gereken birkaç adım vardır. İşlem şu şekilde olacaktır:
@@ -21,7 +21,7 @@ Visual Studio [abonelikleri yönetim portalı](https://manage.visualstudio.com)'
 
 ## <a name="existing-partners-adding-a-new-license"></a>Mevcut iş ortakları yeni lisans ekliyor
 Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)zaten erişimi olan iş ortakları için geçerlidir, ancak yönetilmesi gereken Visual Studio abonelikleri Ile açık lisanslar siparişi yerleştirmiş olur.  İş ortaklarının yeni lisans eklemesi adımları:
-- https://manage.visualstudio.com oturum açın.
+- https://manage.visualstudio.comoturum açın.
 - Sözleşme açılan listesini seçin ve **+ yeni açık lisans**seçeneğinin bulunduğu en alta kaydırın.
 - Açılır panelde, anlaşmada bulunan Yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu işaretleyin ve ardından **Gönder**' e tıklayın.
 
@@ -41,8 +41,8 @@ Bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak
 
 
 ## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>Visual Studio abonelikleri yönetim portalını doğrudan ziyaret eden yeni iş ortakları
-Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Aşağıdaki adımları uygulayın:
-- https://manage.visualstudio.com ziyaret edin.
+Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları uygulayın:
+- https://manage.visualstudio.comziyaret edin.
 - Tanınan bir Kullanıcı değilsiniz hatası alıyorsunuz.
 - **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder**' e tıklayın.
 
@@ -53,6 +53,12 @@ Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](ht
 - [Visual Studio Lisanslama Teknik İncelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Toplu Lisanslama Hükümleri](https://www.microsoft.com/licensing/product-licensing/products.aspx)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Abonelikleri yönetmek için Visual Studio [abonelikleri yönetim portalını](https://manage.visualstudio.com) ziyaret edin.

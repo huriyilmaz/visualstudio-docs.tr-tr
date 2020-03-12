@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f743df63ce779b90f728fd69622f621c8a2169d5
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.openlocfilehash: fccd167bfafd4c27895b01927aaabc1e77eab91c
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408603"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78945907"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -40,6 +40,7 @@ Kural Kimliği | Başlık
 [CA1017](ca1017-mark-assemblies-with-comvisibleattribute.md) | Derlemeleri ComVisible ile işaretle
 [CA1018](ca1018-mark-attributes-with-attributeusageattribute.md) | Öznitelikleri AttributeUsageAttribute ile işaretle
 [CA1019](ca1019-define-accessors-for-attribute-arguments.md) | Öznitelik bağımsız değişkenleri için erişimciler tanımlayın
+[CA1021](ca1021.md) | out parametrelerinden kaçının
 [CA1024](ca1024-use-properties-where-appropriate.md) | Uygun yerlerde özellikleri kullanın
 [CA1027](ca1027-mark-enums-with-flagsattribute.md) | Sabit listelerini FlagsAttribute ile işaretleyin
 [CA1028](ca1028-enum-storage-should-be-int32.md) | Sabit Listesi depolaması Int32 olmalıdır

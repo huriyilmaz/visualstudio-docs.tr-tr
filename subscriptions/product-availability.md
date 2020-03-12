@@ -3,15 +3,15 @@ title: Visual Studio aboneliklerinde Yazılım İndirmeleri için ürün kullan�
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio abonelikleri için yazılım indirmelerinde ürün kullanılabilirliği hakkında bilgi edinin
-ms.openlocfilehash: bf75f9638807b823fb72c4e23f69d0204fcec5de
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 30dd3a216274e189d4d1afe2321bd1db7b66fb94
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706821"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947092"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Yazılım İndirmeleri için ürün kullanılabilirliği
 Abone avantajlarınızın bir parçası olarak, çok çeşitli yazılım indirmelerine erişiminiz vardır.
@@ -36,6 +36,12 @@ Belirli ürünlerin aboneler tarafından sunulmamasının birkaç nedeni vardır
 > Aynı e-posta adresiyle ilişkili birden fazla aboneliğiniz varsa, sizin için kullanabileceğiniz yazılım başlıkları sahip olduğunuz **en yüksek** düzey aboneliğe göre belirlenir.  Örneğin, bir Visual Studio Enterprise aboneliğiniz ve bir Visual Studio Test Professional aboneliğiniz varsa, aboneliğin hangi abonelikte bağımsız olarak Visual Studio Enterprise abonelikte yer alan yazılım başlıklarına de erişebilirsiniz. Şu anda abonelikler portalında kullanılıyor. 
 
 Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresinize atanan tüm abonelikleri görmek için [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) bağlanın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Bazı Yazılım İndirmeleri, yüklemek ve etkinleştirmek için bir ürün anahtarı gerektirebilir.  Ürün anahtarlarınızı edinme ve yönetme hakkında ayrıntılı bilgi için [ürün anahtarları](product-keys.md) makalemize göz atın. 

@@ -3,15 +3,15 @@ title: Visual Studio aboneliklerinde yazılım başlıklarını indirme | Micros
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 02/17/2020
+ms.date: 03/07/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: 053e6d7171f8983def3675e42fb661172a381284
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 062454a6f5af4a0452b55bd632986f426347eab5
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476832"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937489"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
@@ -50,14 +50,22 @@ Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için *
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 talep ürün anahtarları](_img/subscriber-downloads/vs2019-claim-keys.png)
 
-## <a name="next-steps"></a>Sonraki adımlar
-Ürün anahtarlarını bulma, oluşturma ve dışarı aktarma hakkında daha fazla bilgi edinmek için ürün anahtarları belgelerimize göz atın:
-- [Ürün anahtarlarına genel bakış](product-keys.md)
-- [Anahtarları bulun ve talep edin](find-keys.md)
-
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
 - [Azure belgeleri](https://docs.microsoft.com/azure/)
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Sonraki adımlar
+Ürün anahtarlarını bulma, talep etme ve dışarı aktarma hakkında daha fazla bilgi edinmek için ürün anahtarları belgelerimize göz atın:
+- [Ürün anahtarlarına genel bakış](product-keys.md)
+- [Anahtarları bulun ve talep edin](find-keys.md)
+
+Gibi diğer harika avantajlardan nasıl yararlanalabileceğinizi öğrenin:
+- [Azure DevTest bireysel kredisi](vs-azure.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Visual Studio IDE](vs-ide-benefit.md)
+
+
+
 

@@ -3,15 +3,15 @@ title: Terminal Hizmetleri aracılığıyla Internet gösterileri 'nı desteklem
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Terminal Hizmetleri aracılığıyla Internet gösterileri 'nı desteklemek ve RDS erişimini etkinleştirmek için ürün anahtarları kullanmayı öğrenin
-ms.openlocfilehash: 19faa64b7eeaebc1b92ca965f686795b31e00e7e
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: c02bce8fe098c75f0405fdd4e9ba5f0f143401fa
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493376"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937456"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Terminal Hizmetleri aracılığıyla Internet gösterileri
 Visual Studio aboneliği sayesinde, son kullanıcılara, Terminal Hizmetleri (Windows Server 2003 veya Windows Server 2008) veya Uzak Masaüstü Hizmetleri (Windows Server 2008 R2 ve üzeri) aracılığıyla programlarınızın Internet gösterimlerine erişim izni verebilirsiniz. En fazla 200 anonim kullanıcı, gösteriminizi bu şekilde aynı anda erişebilir. Tanıtımın üretim verilerini kullanmamalıdır. Visual Studio aboneleri, uygulamalarını son kullanıcılara gösterecek şekilde lisanslanır. Terminal Hizmetleri (TS) veya Uzak Masaüstü Hizmetleri (RDS) kullanan bu Internet tanıtımı, Visual Studio aboneliği olmayan son kullanıcıların, yazılımın görsel olarak lisanslanması durumunda tanıtım uygulamasıyla etkileşime girebileceği tek senaryodur. Studio abonelikleri.
@@ -34,7 +34,14 @@ Son kullanıcılar, aşağıdaki koşullar karşılandığında RDS aracılığ�
 - Uygulama gösterileri için 200 adede kadar eşzamanlı kullanıcı bağlantısı kullanılabilir.
 - Kullanıcı bağlantılarını etkinleştirmek için ürün anahtarları bir Visual Studio abonesi tarafından alınmalıdır.
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Server belgeleri](https://docs.microsoft.com/windows-server/)
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
-RDS dağıtımı için yardıma ihtiyacınız varsa, ' de **Uzak Masaüstü Hizmetleri (RDS) 2012 oturum dağıtımında** https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/bg-p/AskPerf çok parçalı blog serisine göz atın. 
+RDS dağıtımı için yardıma ihtiyacınız varsa, https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/bg-p/AskPerfkonumundaki **Uzak Masaüstü Hizmetleri (RDS) 2012 oturum dağıtımında** çok parçalı blog serisine göz atın. 
 
 Sorularınız varsa lütfen [Microsoft Uzak Masaüstü Services forumunu](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)ziyaret edin.

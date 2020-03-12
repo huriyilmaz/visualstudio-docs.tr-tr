@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 69b1bccf20c242965462b807b2a1b64d3c60d671
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
-ms.translationtype: MT
+ms.openlocfilehash: d6ecbfc3917898de1b55a6a1e1edc411d8b01234
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590830"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78968215"
 ---
 Visual Studio *Tümleşik geliştirme ortamı* , kod düzenlemek, hatalarını ayıklamak ve derlemek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma paneliyle bulunur. Bir tümleşik geliştirme ortamı (IDE) birçok yönüyle yazılım geliştirme için kullanılabilen zengin bir programdır. Standart Düzenleyici ve hata ayıklayıcı sağladığımız çoğu IDE'ler sağlamanızı, Visual Studio yazılım geliştirme işlemini kolaylaştırmak için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve daha birçok özellik içerir.
 
@@ -47,7 +47,7 @@ Bu görüntü, büyük olasılıkla kullanacağınız birkaç anahtar araç penc
 
 Windows ve Mac için Visual Studio kullanılabilir [Mac için Visual Studio](/visualstudio/mac/) , Visual Studio 2017 ile aynı özelliklerin çoğuna sahiptir ve platformlar arası ve mobil uygulamalar geliştirmek için iyileştirilmiştir. Bu makalede Visual Studio 2017'in Windows sürümünde odaklanır.
 
-Visual Studio 2017'in üç sürüm bulunur: Community, Professional ve Enterprise. Her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Visual Studio 2017 IDEs 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) .
+Visual Studio 2017'in üç sürüm bulunur: Community, Professional ve Enterprise. Her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Visual Studio 2017 sürümlerini karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) .
 
 ::: moniker-end
 
@@ -55,7 +55,7 @@ Visual Studio 2017'in üç sürüm bulunur: Community, Professional ve Enterpris
 
 Windows ve Mac için Visual Studio kullanılabilir [Mac için Visual Studio](/visualstudio/mac/) , Visual Studio 2019 ile aynı özelliklerin çoğuna sahiptir ve platformlar arası ve mobil uygulamalar geliştirmek için iyileştirilmiştir. Bu makalede, Visual Studio 2019 ' nin Windows sürümü ele alınmaktadır.
 
-Visual Studio 2019: Community, Professional ve Enterprise 'ın üç sürümü vardır. Her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Visual Studio Ides 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) .
+Visual Studio 2019: Community, Professional ve Enterprise 'ın üç sürümü vardır. Her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Visual Studio sürümlerini karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) .
 
 ::: moniker-end
 
@@ -166,7 +166,7 @@ Visual Studio 'Yu ilk kez açtığınızda, isteğe bağlı olarak Microsoft hes
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio’yu açın.
+1. Visual Studio'yu açın.
 
 1. Menü çubuğunda **dosya** > **Yeni** > **Proje**' yi seçin.
 
@@ -232,7 +232,7 @@ Visual Studio 'Yu ilk kez açtığınızda, isteğe bağlı olarak Microsoft hes
 
 ::: moniker range=">=vs-2019"
 
-1. Visual Studio’yu açın.
+1. Visual Studio'yu açın.
 
    Başlangıç penceresi, bir depoyu kopyalamaya, yeni bir projeyi açmaya veya yepyeni bir proje oluşturmaya yönelik çeşitli seçeneklerle birlikte görüntülenir.
 

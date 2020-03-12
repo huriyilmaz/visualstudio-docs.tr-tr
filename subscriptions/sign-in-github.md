@@ -3,15 +3,15 @@ title: GitHub hesabınızla Visual Studio aboneliklerinde oturum açma | Microso
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/11/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: GitHub hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: ffafd3821112a62ec1f86666f8c0fe6571bbb335
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.openlocfilehash: a0a2f69ab3cbab3fdf6c35d9407a59a7c7d49eb1
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75944192"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947090"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>GitHub hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
 
@@ -62,6 +62,12 @@ Y: account.microsoft.com ' un [Güvenlik sekmesine](https://account.microsoft.co
 
 #### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>S: kayıt açmak için GitHub hesabımı kullanmaya çalışıyorum, ancak bunun yerine kullandığım bir Microsoft kimliği zaten var.  Ne oluyor?
 Y: GitHub hesabınızda bir Azure Active Directory e-posta adresiniz varsa, bu, Azure 'a erişebilen ve GitHub kodunuzu kullanarak CI işlem hatlarını çalıştıran bir Microsoft kimliğiniz zaten var demektir. Bu hesabın kullanılması, Azure kaynaklarınızın ve derleme işlem hatlarınızın kurumsal sınırlarınızda kalmasını sağlar. Bununla birlikte, kişisel işler gerçekleştiriyorsanız, bu hesaba her zaman erişebilmenizi sağlamak için GitHub hesabınıza kişisel bir e-posta adresi koymayı öneririz. Bunu yaptıktan sonra yeniden oturum açmayı deneyin ve iş veya okul hesabınızda oturum açmanız istendiğinde **farklı bir e-posta adresi kullan** ' ı seçin. Bu, kişisel e-posta adresini kullanarak yeni bir Microsoft hesabı oluşturmanızı sağlar.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Abonelikler portalında başarıyla oturum açtıktan sonra, https://my.visualstudio.com/benefits avantajlar sayfasını ziyaret etmenizi ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.  

@@ -3,15 +3,15 @@ title: Visual Studio aboneliklerini yönetme
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/17/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: a8a58cd3fca2443ca84db712cbd2a356351d4499
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.openlocfilehash: 97220a64c72d37d53eccbaba5c8e79697f2f25ab
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408882"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78968012"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -112,3 +112,17 @@ Y: satın alma kanalına bağlı olarak Microsoft, müşteri verilerini farklı 
 > [!NOTE]
 > - Microsoft hesabınızı veya Azure AD 'yi kapatmayı seçerseniz, kişisel verileriniz hemen anonimleştirilir.
 > - Etkin abonelikleriniz varsa tüm kişisel verilerinizi tam olarak kaldırmayacak.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Sonraki adımlar
+Kuruluşunuz için abonelikleri yönetiyoruz musunuz?  Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin:
+- [Ayrı abonelikler atama](assign-license.md)
+- [Birden çok abonelik atama](assign-license-bulk.md)
+- [Abonelikleri düzenleme](edit-license.md)
+- [Abonelikleri silme](delete-license.md)
+- [En fazla kullanımı belirleme](maximum-usage.md)

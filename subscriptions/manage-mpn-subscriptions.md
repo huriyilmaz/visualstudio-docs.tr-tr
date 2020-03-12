@@ -3,15 +3,15 @@ title: Microsoft İş Ortağı Ağı (MPN) ile sunulan Visual Studio abonelikler
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: MPN iş ortakları için son kullanıcılarınıza Visual Studio abonelikleri atama.
-ms.openlocfilehash: 544987556b33358865fc785db7e86d455942a430
-ms.sourcegitcommit: 9186dc1af846ef2236ca78d4facf399c253ab5f7
+ms.openlocfilehash: 5fbd69d3d50364f331a0529c51877fba25f83a84
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/26/2019
-ms.locfileid: "75492912"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947134"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) ile sunulan Visual Studio aboneliklerini yönetme
 Bir uzmanlığa sahip olan veya MPN 'de Eylem Paketi satın alan iş ortakları, Visual Studio aboneliklerini kullanmaya uygundur. Bu abonelikler Kullanıcı başına lisanslanır ve yalnızca iş ortağı şirketi için çalışan belirli bir adlandırılmış kullanıcıya atandığında geçerlidir.
@@ -59,7 +59,13 @@ Microsoft Eylem Paketi abonesi ve Visual Studio abonelikleri
   > Visual Studio abonelikleri için teknik Iletişim rolü gereklidir
   - Pg 8: uzmanlığa sahip Iş ortakları için Visual Studio abonelikleri atama
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneler ve program yöneticileri, aboneliklere erişen aboneler ile ilgili sorunları çözmek için doğrudan Microsoft İş Ortağı Ağı destek ekibiyle çalışmalıdır. Yardım için [Iş ortakları desteği](https://partner.microsoft.com/support) sayfasını ziyaret edin. (MPN oturum açma kimlik bilgileriniz gerekecektir.)
 
-https://r.search.yahoo.com/_ylt=AwrWnKI73ARewjwA1C0PxQt.; _ylu = X3oDMTEyN2cxcTlwBGNvbG8DZ3ExBHBvcwMxBHZ0aWQDQjg0OTJfMQRzZWMDc3I-/RV = 2/RE = 1577405628/RO = 10/RU = https %3 a %2 f %2 f assetsprod. Microsoft. com% 2fmpn% 2fProgram-Administrator-Guide-to-Software-and-Online-Services-avantajlar/RK = 2/RS = xsA5OL. 9t6QqJlvFYZ3OPnZkC_k-
+

@@ -3,15 +3,15 @@ title: Microsoft İş Ortağı Ağı (MPN) iş ortaklarına sunulan Visual Studi
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Hangi aboneliklerin sunulmakta olduğuna, hangi kuralların uygulanacağını ve MPN ' de kaç abonelik sunulacağı hakkında ayrıntılar.
-ms.openlocfilehash: 1a103f76b56df72b5829f9ce87f587070519726e
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: ddafa2daef34d4a23de448235ffa186c1bb27319
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281704"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947047"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) iş ortaklarına sunulan Visual Studio abonelikleri
 
@@ -33,7 +33,7 @@ Bir iş ortağı bir uzmanlığa sahip olduğunda (gümüş veya altın düzeyde
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | Uygulama Geliştirme                     | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | Bulut müşterisi Ilişki yönetimi      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
-| Bulut Platformu                              | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
+| Bulut platformu                              | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | Bulut verimliliği                          | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | DevOps                                      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri                |
 
@@ -74,6 +74,13 @@ MPN aracılığıyla sunulan Visual Studio abonelikleri sayesinde, lisanslı kul
 - [MPN Program Yöneticisi Kılavuzu](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) -MPN çalışanlarına Visual Studio abonelikleri atama hakkında yönergeler içerir.
 - [MPN çalışanlarına Visual Studio abonelikleri atama](manage-mpn-subscriptions.md)
 - [Kullanım koşulları](https://www.microsoft.com/useterms/) -MPN aracılığıyla sunulan Visual Studio abonelikleri, Visual Studio abonelikleri için olmayan (NFR) EULA 'ya tabidir.
+
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

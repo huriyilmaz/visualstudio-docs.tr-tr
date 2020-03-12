@@ -3,15 +3,15 @@ title: Üretim öncesi ortamların envanterini | Visual Studio Market
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 02/17/2020
+ms.date: 03/06/2020
 ms.topic: conceptual
 description: Ön üretim envanterleri gerçekleştirmek için Yöneticiler hakkında bilgi edinin responsibilty
-ms.openlocfilehash: 4dec93101cb7399da3cd493af38c0559f0ed9dee
-ms.sourcegitcommit: c8b979a56c95e43cf8ae92b6c3c9570db59a8e58
+ms.openlocfilehash: 722c72acde9ff0b1f7bcfc0c394a1e016c84b719
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894371"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937471"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Üretim öncesi ortam envanteri
 Visual Studio abonelikleri, cihazları yerine kullanıcıları sayarak varlık yönetimini basitleştirir.
