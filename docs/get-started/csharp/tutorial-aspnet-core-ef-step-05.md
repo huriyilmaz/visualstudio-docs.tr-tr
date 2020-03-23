@@ -1,6 +1,6 @@
 ---
-title: "5\\. Adım: ASP.NET Core uygulamanızı Azure 'a dağıtma"
-description: Bu video öğreticisiyle ASP.NET Core Web uygulamanızı Azure 'a dağıtın ve adım adım yönergeler.
+title: "Adım 5: ASP.NET Çekirdek Uygulamanızı Azure'a Dağıtma"
+description: Bu video eğitimi ve adım adım talimatlarla ASP.NET Core Web Uygulamanızı Azure'a dağıtın.
 ms.custom: get-started
 ms.date: 03/31/2019
 ms.technology: vs-ide-general
@@ -17,72 +17,72 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: dc13dbdadb0c9bca25a816b15c5a99039bff454c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77580023"
 ---
-# <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>5\. Adım: ASP.NET Core uygulamanızı Azure 'a dağıtma
+# <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>Adım 5: ASP.NET Core uygulamanızı Azure'a dağıtın
 
-ASP.NET Core uygulamanızı ve veritabanını Azure 'a dağıtmak için aşağıdaki adımları izleyin.
+ASP.NET Core uygulamanızı ve veritabanını Azure'a dağıtmak için aşağıdaki adımları izleyin.
 
-_İlk ASP.NET Core uygulamanızı Azure 'a dağıtmak için bu videoyu izleyin ve takip edin._
+_Bu videoyu izleyin ve ilk ASP.NET Core uygulamanızı Azure'a dağıtmak için takip edin._
 
 > [!VIDEO https://www.youtube.com/embed/n8wz_f5_4wI]
 
 ## <a name="open-your-project"></a>Projenizi açın
 
-ASP.NET Core uygulamanızı Visual Studio 2019 ' de açın. Uygulamanın, [Bu öğretici serisinin 4. adımında](tutorial-aspnet-core-ef-step-04.md)yapılandırıldığı gibi EF Core ve çalışan BIR Web API 'si ile ayarlanmış olması gerekir.
+Visual Studio 2019'da ASP.NET Core uygulamanızı açın. Uygulama zaten EF Core ve çalışan bir web API ile kurmak kullanarak olmalıdır, [bu öğretici serisiadım 4](tutorial-aspnet-core-ef-step-04.md)olarak yapılandırılmıştır.
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
-Çözüm Gezgini ' nde projeye sağ tıklayın ve **Yayımla**' yı seçin. **App Service** varsayılan ayarlarını bırakın ve **Yeni oluştur** ' a tıklayın ve **Yayımla** düğmesine tıklayın. Henüz bir Azure hesabınız yoksa **ücretsiz Azure hesabınızı oluşturun** ve kısa kayıt işlemini doldurun.
+Çözüm gezgininde projeye sağ tıklayın ve **Yayımla'yı**seçin. **Uygulama Hizmeti'nin** varsayılan ayarlarını bırakın ve **Yeni Oluştur'u oluşturun** ve **Yayımla** düğmesini tıklatın. Zaten bir Azure hesabınız yoksa, Ücretsiz **Azure Hesabınızı Oluştur'u** tıklatın ve kısa kayıt işlemini tamamlayın.
 
-SQL Server ekleyin. Yönetici Kullanıcı adı ve parola belirtin.
+BIR SQL Server ekleyin. Yönetici kullanıcı adı ve parola belirtin.
 
-![Visual Studio 2019 Azure SQL Server oluşturma](media/vs-2019/vs2019-azure-sql-server.png)
+![Visual Studio 2019 Azure SQL Server Oluştur](media/vs-2019/vs2019-azure-sql-server.png)
 
-Application Insights ekleyin.
+Uygulama Öngörüleri ekleyin.
 
-Devam etmek için **Oluştur** düğmesine tıklayın.
+Devam etmek için **Oluştur** düğmesini tıklatın.
 
-![Visual Studio 2019 yeni Azure App Service oluştur](media/vs-2019/vs2019-azure-create-new-app-service.png)
+![Visual Studio 2019 Yeni Azure Uygulama Hizmeti Oluştur](media/vs-2019/vs2019-azure-create-new-app-service.png)
 
-## <a name="exploring-the-azure-portal-and-your-hosted-app"></a>Azure portal ve barındırılan uygulamanızı keşfetme
+## <a name="exploring-the-azure-portal-and-your-hosted-app"></a>Azure portalını ve barındırılan uygulamanızı keşfetme
 
-App Service oluşturulduktan sonra siteniz tarayıcıda başlatılır. Yükleme sırasında, Azure portal App Service de bulabilirsiniz. App Service için kullanılabilen seçenekleri araştırırken, uygulamayı başlatıp durdurduğunuz bir **genel bakış** bölümü bulacaksınız.
+Uygulama hizmeti oluşturulduktan sonra siteniz bir tarayıcıda başlatılır. Yükleme sırasında Uygulama Hizmetini Azure portalında da bulabilirsiniz. Uygulama hizmetiniz için kullanılabilir seçenekleri incelerken, uygulamayı başlatıp durdurabileceğiniz bir **Genel Bakış** bölümü bulacaksınız.
 
-![Azure App Service seçenekleri](media/vs-2019/vs2019-azure-app-service-menu-options.png)
+![Azure Uygulama Hizmeti Seçenekleri](media/vs-2019/vs2019-azure-app-service-menu-options.png)
 
 ### <a name="scalability"></a>Ölçeklenebilirlik
 
-Uygulamanın ölçeğini de ölçeklendirmeye yönelik seçenekleri inceleyebilirsiniz. Ölçeği artırma, uygulamanızı barındıran her örneğe verilen kaynakları artırmayı gösterir. Ölçeği genişletme, uygulamanızı barındıran örnek sayısını artırmayı ifade eder. Uygulamanız için otomatik ölçeklendirmeyi yapılandırabilir, bu, uygulamanızı yüklemek için kullanılan örnek sayısını otomatik olarak artıracak ve yükleme düşürültikten sonra bunları azalttıracaksınız.
+Uygulamayı ölçeklendirme seçeneklerini inceleyebilir ve dışarı çıkarabilirsiniz. Ölçekleme, uygulamanızı barındıran her örne verilen kaynakları artırmak anlamına gelir. Ölçekleme, uygulamanızı barındıran örneklerin sayısını artırmak anlamına gelir. Uygulamanız için otomatik ölçeklendirmeyi yapılandırabilirsiniz, bu da yüklemeye yanıt olarak uygulamanızı barındırmak için kullanılan örnek sayısını otomatik olarak artırır ve yük azaldıktan sonra bunları azaltabilirsiniz.
 
 ### <a name="security-and-compliance"></a>Güvenlik ve uyumluluk
 
-Uygulamamızı Azure kullanarak barındırmanın bir diğer avantajı da güvenlik ve uyumluluk. Azure App Service ISO, SOC ve PCI uyumluluğu sağlar. Azure Active Directory veya Kullanıcı kimliğini Twitter, Facebook, Google veya Microsoft gibi sosyal oturumlarla doğrulamak için seçim yapabiliriz. IP kısıtlamaları oluşturabilir, hizmet kimliklerini yönetebilir, özel etki alanları ekleyebilir ve uygulama için SSL 'yi destekleyebilir, Ayrıca uygulamanın içeriği, yapılandırması ve veritabanının geri yüklenebilen arşiv kopyaları ile yedeklemeler yapılandırabilirsiniz. Bu özelliklere kimlik doğrulama/yetkilendirme, kimlik, yedeklemeler ve SSL ayarları menü seçeneklerinde erişilir.
+Uygulamamızı Azure'u kullanarak barındırmanın bir diğer avantajı da güvenlik ve uyumluluktır. Azure Uygulama Hizmeti ISO, SOC ve PCI uyumluluğu sağlar. Azure Active Directory veya Twitter, Facebook, Google veya Microsoft gibi sosyal girişlerle kullanıcıların kimliğini doğrulamayı seçebiliriz. IP kısıtlamaları oluşturabilir, hizmet kimliklerini yönetebilir, özel etki alanları ekleyebilir ve uygulama için SSL'yi destekleyebilir ve uygulamanın içeriğinin, yapılandırmasının ve veritabanının geri alınabilir arşiv kopyalarıyla yedeklemeleri yapılandırabiliriz. Bu özelliklere Kimlik Doğrulama / Yetkilendirme, Kimlik, yedekleme ve SSL Ayarları menü seçeneklerinden erişilir.
 
 ### <a name="deployment-slots"></a>Dağıtım yuvaları
 
-Genellikle bir uygulama dağıttığınızda, uygulama yeniden başlatılırken küçük bir kesinti süresi vardır. Dağıtım yuvaları, ayrı bir hazırlama örneğine veya örnek kümesine dağıtmanıza izin vererek ve bunları üretime değiştirmeden önce bu sorunu ortadan kaldırarak bu sorundan kaçının. Takas yalnızca anında ve sorunsuz trafik yeniden yönlendirmesinin. Değiştirme sonrasında üretimde herhangi bir sorun varsa, her zaman en son iyi üretim eyaletinizi geri getirebilirsiniz.
+Bir uygulamayı dağıttığınızda sık sık, uygulama yeniden başlatılırken küçük bir kapalı kalma süresi vardır. Dağıtım Yuvaları, ayrı bir evreleme örneğine veya örnek kümesine dağıtmanıza ve bunları üretime değiştirmeden önce ısıtmanıza izin vererek bu sorundan kaçınır. Takas sadece anlık ve sorunsuz bir trafik yönlendirmesi. Takastan sonra üretimde herhangi bir sorun varsa, her zaman bilinen son iyi üretim durumunuza geri dönebilirsiniz.
 
-## <a name="update-connection-string"></a>Bağlantı dizesini Güncelleştir
+## <a name="update-connection-string"></a>Bağlantı dizelerini güncelleştirme
 
-Varsayılan olarak Azure, yeni bir uygulamanın yeni SQL Server veritabanına bağlantısını, `DefaultConnection`adlı bir bağlantı dizesi kullanacak şekilde bekliyor. Şu anda bu öğretici serisinde daha önce oluşturduğumuz uygulama `AppDbContext`adlı bir bağlantı dizesi kullanır. Bunu *appSettings. JSON* ve *Startup.cs* içinde değiştirmemiz ve uygulamayı yeniden dağıtmanız gerekir.
+Varsayılan olarak Azure, yeni bir uygulamanın yeni SQL Server veritabanına `DefaultConnection`bağlantısını kullanarak . Şu anda bu öğretici seride daha önce `AppDbContext`oluşturduğumuz uygulama . Bunu *appsettings.json* ve *Startup.cs'da* değiştirmemiz ve uygulamayı yeniden dağıtmamız gerekiyor.
 
-## <a name="test-the-app-running-in-azure"></a>Azure 'da çalışan uygulamayı test etme
+## <a name="test-the-app-running-in-azure"></a>Azure'da çalışan uygulamayı test edin
 
-*/Games* yoluna gidin ve yeni bir oyun ekleyebilmeniz ve listelenmiş olarak görebilmeniz gerekir. Ardından, */Swagger* yoluna gidin ve uygulamanın API 'sinin çalıştığını onaylamak için burada Web API uç noktalarını kullanabilmeniz gerekir.
+*/Games* yoluna gidin ve yeni bir oyun eklemek ve listelenen görmek gerekir. Ardından, */swagger* yoluna gidin ve uygulamanın API de çalıştığını onaylamak için oradan web API uç noktalarını kullanmak gerekir.
 
-Tebrikler! Bu video öğreticisi serisini tamamladınız!
+Tebrikler! Bu video öğretici serisi tamamladınız!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-ASP.NET Core uygulamalarının bu ücretsiz kaynaklarla nasıl mimariyle ilgili daha fazla bilgi edinin.
+Bu ücretsiz kaynaklarla Core uygulamalarını nasıl ASP.NET nasıl tasarlayıp tasarlayacakları hakkında daha fazla bilgi edinin.
 
-[ASP.NET Core uygulama mimarisi](https://dotnet.microsoft.com/learn/web/aspnet-architecture)
+[ASP.NET Temel Uygulama Mimarisi](https://dotnet.microsoft.com/learn/web/aspnet-architecture)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio ile Azure 'da ASP.NET Core uygulaması yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2)
+- [Visual Studio ile Azure'da ASP.NET Core uygulaması yayınlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2)

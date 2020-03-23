@@ -1,5 +1,5 @@
 ---
-title: IDE içinden derleme başlatma | Microsoft Docs
+title: IDE içinden Bir Yapı Başlatma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f8c4792590565c027a316ed95abb067faa30f5dc
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632127"
 ---
-# <a name="start-a-build-from-within-the-ide"></a>IDE içinden derleme başlatma
+# <a name="start-a-build-from-within-the-ide"></a>IDE içinden bir yapı başlatın
 
-Özel proje sistemleri, derlemeleri başlatmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> kullanmalıdır. Bu makalede, bu gereksinimin nedenleri açıklanmaktadır ve yordam özetlenmektedir.
+Özel proje sistemleri, yapılar başlatmak için kullanmanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> gerekir. Bu makalede, bu gereksinimin nedenleri açıklanır ve yordamı özetler.
 
-## <a name="parallel-builds-and-threads"></a>Paralel derlemeler ve iş parçacıkları
+## <a name="parallel-builds-and-threads"></a>Paralel yapılar ve iş parçacıkları
 
- Visual Studio, genel kaynaklara erişim için ortam gerektiren paralel derlemelere izin verir. Proje sistemleri derlemeleri zaman uyumsuz olarak çalıştırabilir, ancak bu tür sistemler, çağrı geri göndermeler içerisinden derleme işlevlerini çağırmamalıdır.
+ Visual Studio, ortak kaynaklara erişim için arabuluculuk gerektiren paralel yapılara izin verir. Proje sistemleri yapıları eş zamanlı olarak çalıştırabilir, ancak bu tür sistemler geri arama içinden yapı işlevleri ni çağırmamalıdır.
 
- Proje sistemi ortam değişkenlerini değiştirirse, derleme için Nodebenzeşimini OutOfProc olarak ayarlaması gerekir. Bu gereksinim, işlem içi düğümü gerektirdiğinden ana bilgisayar nesnelerini kullanamayacağı anlamına gelir.
+ Proje sistemi ortam değişkenlerini değiştirirse, yapının Düğüm'ünü OutOfProc olarak ayarlamalıdır. Bu gereksinim, proc düğümü gerektirdiğinden ana bilgisayar nesnelerini kullanamayacağınız anlamına gelir.
 
-## <a name="use-ivsbuildmanageraccessor"></a>IVsBuildManagerAccessor kullanın
+## <a name="use-ivsbuildmanageraccessor"></a>IVSBuildManagerAccessor'u kullanın
 
- Aşağıdaki kod, bir proje sisteminin bir derlemeyi başlatmak için kullanabileceği bir yöntemi özetler:
+ Aşağıdaki kod, proje sisteminin bir yapıyı başlatmak için kullanabileceği bir yöntemi özetleyilmektedir:
 
 ```csharp
 

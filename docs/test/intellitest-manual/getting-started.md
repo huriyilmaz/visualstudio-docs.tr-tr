@@ -1,5 +1,5 @@
 ---
-title: IntelliTest 'e giriş
+title: IntelliTest'e Giriş
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,27 +10,27 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 113233c985053cfe838f385a36ec59cc211bfcb9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591664"
 ---
-# <a name="get-started-with-microsoft-intellitest"></a>Microsoft IntelliTest ile çalışmaya başlama
+# <a name="get-started-with-microsoft-intellitest"></a>Microsoft IntelliTest ile başlayın
 
-* IntelliTest ile ilk kez bu ise:
-  * [Channel 9 videosunu](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest) izleyin
-  * [MSDN Magazine 'te bu genel bakışı](https://msdn.microsoft.com/magazine/dn904672.aspx) okuyun
+* Bu IntelliTest ile ilk kez ise:
+  * Kanal [9 videosunu](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest) izleyin
+  * [MSDN Dergisi hakkında](https://msdn.microsoft.com/magazine/dn904672.aspx) bu genel bakışı okuyun
   * [belgelerimizi](../../test/generate-unit-tests-for-your-code-with-intellitest.md) okuyun
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/intellitest) sorularınızı sorun
-* Bu başvurunun geri kalanını okuyun
-* Bu sayfayı hızlı başvuru için Yazdır
+* [Stack Taşma](https://stackoverflow.com/questions/tagged/intellitest) ile ilgili sorularınızı sorun
+* Bu başvuru kılavuzunun geri kalanını okuyun
+* Hızlı başvuru için bu sayfayı yazdırın
 
 ## <a name="important-attributes"></a>Önemli öznitelikler
 
-* [PexClass](attribute-glossary.md#pexclass) , **PUT** içeren bir türü işaretler
-* [PexMethod](attribute-glossary.md#pexmethod) bir **PUT** 'i işaretler
-* [Pexassumenotnull](attribute-glossary.md#pexassumenotnull) , null olmayan bir parametreyi işaretler
+* [PexClass](attribute-glossary.md#pexclass) **PUT** içeren bir türü işaretler
+* [PexMethod](attribute-glossary.md#pexmethod) bir **PUT** işaretleri
+* [PexAssumeNotNull](attribute-glossary.md#pexassumenotnull) null olmayan bir parametre işaretler
 
 ```csharp
 using Microsoft.Pex.Framework;
@@ -44,20 +44,20 @@ public partial class FooTest {
 }
 ```
 
-* [Pexassemblyundertest](attribute-glossary.md#pexassemblyundertest) bir test projesini bir projeye bağlar
-* [PexInstrumentAssembly](attribute-glossary.md#pexinstrumentassemblyattribute) , işaretlemek için bir derlemeyi belirtir
+* [PexAssemblyUnderTest](attribute-glossary.md#pexassemblyundertest) bir test projesini projeye bağlar
+* [PexInstrumentAssembly](attribute-glossary.md#pexinstrumentassemblyattribute) enstrüman için bir montaj belirtir
 
 ```csharp
 [assembly: PexAssemblyUnderTest("MyAssembly")] // also instruments "MyAssembly"
 [assembly: PexInstrumentAssembly("Lib")]
 ```
 
-## <a name="helper-classes"></a>Önemli statik yardımcı sınıfları
+## <a name="important-static-helper-classes"></a><a name="helper-classes"></a>Önemli statik yardımcı sınıflar
 
-* [Pexvarsay](static-helper-classes.md#pexassume) varsayımları değerlendirir (giriş filtresi)
-* [Pexonaylama](static-helper-classes.md#pexassert) onayları değerlendirir
-* [PexChoose](static-helper-classes.md#pexchoose) yeni seçimler oluşturur (ek girişler)
-* [Pexgözlemleme](static-helper-classes.md#pexobserve) , canlı değerleri oluşturulan testlere kaydeder
+* [PexAssume](static-helper-classes.md#pexassume) varsayımları değerlendirir (giriş filtreleme)
+* [PexAssert](static-helper-classes.md#pexassert) iddiaları değerlendirir
+* [PexChoose](static-helper-classes.md#pexchoose) yeni seçenekler (ek girişler) oluşturur
+* [PexObserve](static-helper-classes.md#pexobserve) oluşturulan testlere canlı değerleri günlükleri
 
 ```csharp
 [PexMethod]
@@ -72,6 +72,6 @@ void StaticHelpers(Foo target) {
 }
 ```
 
-## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
+## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 
-Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)’na gönderin.

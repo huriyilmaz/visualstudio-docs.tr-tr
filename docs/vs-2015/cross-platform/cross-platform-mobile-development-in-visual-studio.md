@@ -9,168 +9,168 @@ caps.latest.revision: 66
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 1efc8ea7f40c3098e681cc80ac90789b629630a9
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918289"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302492"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio’da Platformlar Arası Mobil Geliştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio kullanarak Android, iOS ve Windows cihazlar için uygulamalar oluşturabilirsiniz.  Uygulamanızı tasarlarken, araçları Visual Studio'da bağlı hizmetler Application ınsights'ı Office 365 ve Azure App Service gibi kolayca eklemek için kullanın.
+Visual Studio'u kullanarak Android, iOS ve Windows cihazları için uygulamalar oluşturabilirsiniz.  Uygulamanızı tasarlarken, Office 365, Azure Uygulama Hizmeti ve Uygulama Öngörüleri gibi bağlantılı hizmetleri kolayca eklemek için Visual Studio'da araçları kullanın.
 
- C# ve .NET Framework, HTML ve JavaScript veya C++ kullanarak uygulamalarınızı oluşturun. Kod, dizeler, resimleri paylaşın ve kullanıcı arabiriminin bazı durumlarda bile.
+ C# ve .NET Framework, HTML ve JavaScript veya C++'ı kullanarak uygulamalarınızı oluşturun. Kodu, dizeleri, görüntüleri ve hatta bazı durumlarda kullanıcı arabirimini paylaşın.
 
- Oyun veya derinlikli bir grafik uygulaması oluşturmak istiyorsanız, Unity için Visual Studio Araçları'nı yükleyin ve tüm Visual Studio ile Unity uygulamaları için popüler platformlar arası oyun/grafik altyapısı ve geliştirme ortamı, güçlü üretkenlik özellikleri keyfini çıkarın, iOS, Android, Windows ve diğer platformlarda çalıştırın.
+ Bir oyun veya sürükleyici grafik uygulaması oluşturmak istiyorsanız, Unity için Visual Studio araçlarını yükleyin ve iOS, Android, Windows ve diğer platformlarda çalışan uygulamalar için popüler platformlar arası oyun/grafik motoru ve geliştirme ortamı olan Visual Studio with Unity'nin tüm güçlü üretkenlik özelliklerinin keyfini çıkarın.
 
  **Bu makalede:**
 
-- [Android, iOS ve Windows (.NET Framework) için uygulama oluşturma](#NET)
+- [Android, iOS ve Windows (.NET Framework) için bir uygulama oluşturma](#NET)
 
-  - [Android, iOS ve Windows, bir tek kod tabanından hedef](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#AndroidHTML)
+  - [Android, iOS ve Windows'u tek bir kod tabanından hedefleme](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#AndroidHTML)
 
-  - [Windows 10 cihazlarını hedefleyin](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#WindowsHTML)
+  - [Hedef Windows 10 cihazları](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#WindowsHTML)
 
-- [Android, iOS ve Windows (HTML/JavaScript) için uygulama oluşturma](#HTML)
+- [Android, iOS ve Windows (HTML/JavaScript) için bir uygulama oluşturma](#HTML)
 
-- [Android ve Windows (C++) için uygulama oluşturma](#CPP)
+- [Android ve Windows (C++) için bir uygulama oluşturma](#CPP)
 
-- [Unity için Visual Studio araçları kullanarak Android, iOS ve Windows için platformlar arası oyun oluşturun](#Unity)
+- [Unity için Visual Studio araçlarını kullanarak Android, iOS ve Windows için bir çapraz platform oyunu oluşturun](#Unity)
 
-## <a name="NET"></a> Android, iOS ve Windows (.NET Framework) için uygulama oluşturma
- ![Cihazlar](../cross-platform/media/homedevices.png "HomeDevices")
+## <a name="build-an-app-for-android-ios-and-windows-net-framework"></a><a name="NET"></a>Android, iOS ve Windows (.NET Framework) için bir uygulama oluşturma
+ ![Cihazlar](../cross-platform/media/homedevices.png "AnasayfaCihazlar")
 
- Xamarin ile kod ve hatta kullanıcı Arabirimi paylaşımı aynı çözüm içinde Android, iOS ve Windows hedefleyebilirsiniz.
+ Xamarin ile Android, iOS ve Windows'u aynı çözümde, kod paylaşımında ve hatta UI'de hedefleyebilirsiniz.
 
-|**Daha fazla bilgi**|
+|**Daha fazlasını öğrenin**|
 |--------------------|
-|[Visual Studio yükleme](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
+|[Visual Studio Yükle](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
 |[Visual Studio'da Xamarin hakkında bilgi edinin](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
-|[Visual Studio ve Xamarin](../cross-platform/visual-studio-and-xamarin.md) (MSDN Kitaplığı)|
-|[Xamarin uygulamalarıyla uygulama yaşam döngüsü yönetimi (ALM)](../cross-platform/application-lifecycle-management-alm-with-xamarin-apps.md) (MSDN Kitaplığı)|
-|[Visual Studio'da Evrensel Windows uygulamaları hakkında bilgi edinin](https://www.visualstudio.com/vs/universal-windows-platform/) (VisualStudio.com)|
-|[Swift ve C# arasındaki benzerlikleri hakkında bilgi edinin](https://aka.ms/scposter) (download.microsoft.com)|
-|[Android için Visual Studio öykünücüsü öğrenin](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
+|[Visual Studio ve Xamarin](../cross-platform/visual-studio-and-xamarin.md) (MSDN Kütüphanesi)|
+|[Xamarin uygulamalarıyla Uygulama Yaşam Döngüsü Yönetimi (ALM)](../cross-platform/application-lifecycle-management-alm-with-xamarin-apps.md) (MSDN Kütüphanesi)|
+|[Visual Studio'daki evrensel Windows uygulamaları hakkında bilgi edinin](https://www.visualstudio.com/vs/universal-windows-platform/) (VisualStudio.com)|
+|[Swift ve C#](https://aka.ms/scposter) (download.microsoft.com) arasındaki benzerlikler hakkında bilgi edinin|
+|[Android için Visual Studio Emülatörü](https://visualstudio.microsoft.com/vs/msft-android-emulator/) hakkında bilgi edinin (VisualStudio.com)|
 
-### <a name="AndroidHTML"></a> Android, iOS ve Windows, bir tek kod tabanından hedef
- Kullanarak Android, iOS ve Windows için yerel uygulamalar oluşturabilirsiniz C# veya F# (Visual Basic şu anda desteklenmiyor).  Başlamak için Visual Studio 2015'i yükleyin, seçin **özel** seçeneği yükleyicide ve seçeneğinin altındaki kutuyu **platformlar arası mobil geliştirme > C# / .NET (Xamarin)** . İle başlayabilirsiniz [Xamarin yükleyici](https://www.xamarin.com/download), Xamarin için Visual Studio 2013 yüklemek için gereklidir.
+### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a>Android, iOS ve Windows'u tek bir kod tabanından hedefleme
+ C# veya F# (Visual Basic şu anda desteklenmez) kullanarak Android, iOS ve Windows için yerel uygulamalar oluşturabilirsiniz.  Başlamak için Visual Studio 2015'i yükleyin, yükleyicide **Özel** seçeneğini seçin ve **Çapraz Platform Mobil Geliştirme > C#/.NET (Xamarin)** altındaki kutuyu işaretleyin. Ayrıca Visual Studio 2013 için Xamarin yüklemek için gerekli olan [Xamarin Installer](https://www.xamarin.com/download)ile başlayabilirsiniz.
 
- Visual Studio 2015'i zaten varsa, yükleyici'den çalıştırın **Denetim Masası > Programlar ve Özellikler** ve aynı **özel** Xamarin için bir seçenek olarak yukarıdaki.
+ Visual Studio 2015 yüklüyse, **Denetim Masası > Program ve Özellikleri'nden** yükleyiciyi çalıştırın ve Xamarin için yukarıdaki gibi aynı **Özel** seçeneği seçin.
 
- İşiniz bittiğinde, proje şablonları görünür **yeni proje** iletişim kutusu. "Xamarin" üzerinde yalnızca aramak için Xamarin şablonları bulmanın en kolay yolu olan
+ İşi bittiğinde, proje şablonları **Yeni Proje** iletişim kutusunda görünür. Xamarin şablonlarını bulmanın en kolay yolu "Xamarin"de arama yapmaktır.
 
- Xamarin yerel Android, iOS ve Windows işlevselliğini .NET nesneleri olarak kullanıma sunar. Bu nedenle, uygulamalarınızı yerel API'lere ve yerel kullanıcı denetimleri tam erişime sahiptir ve bunlar yalnızca, yerel platform dillerde yazılan uygulamaları olarak duyarlı.
+ Xamarin, Android, iOS ve Windows'un yerel işlevselliğini .NET nesneleri olarak ortaya çıkarır. Böylece uygulamalarınız yerel API'lere ve yerel kullanıcı denetimlerine tam erişime sahiptir ve bunlar da yerel platform dillerinde yazılmış uygulamalar kadar duyarlıdır.
 
- Bir proje oluşturduğunuzda, tüm Visual Studio üretkenlik özelliklerinden faydalanabilirsiniz. Örneğin, sayfa oluşturmak için bir tasarımcı kullanır ve yerel API'lere mobil platformlarda keşfetmek için IntelliSense kullanın. Uygulamanızı çalıştırın ve nasıl göründüğüne bakmak hazır olduğunuzda, Android veya Android SDK öykünücüsü için Visual Studio öykünücüsü'nü kullanın, Windows uygulamaları yerel olarak çalıştırma veya Windows uygulamalarını Windows Phone öykünücü üzerinde çalıştırın. Tethered Android ve Windows cihazları doğrudan da kullanabilirsiniz. İOS projeleri için bir mac'e bağlanın ve Visual Studio'dan Mac öykünücüyü başlatın veya tethered bir cihaza bağlayın.
+ Bir proje oluşturduktan sonra Visual Studio'nun tüm üretkenlik özelliklerinden yararlanırsınız. Örneğin, sayfalarınızı oluşturmak için bir tasarımcı kullanır sınız ve mobil platformların yerel API'lerini keşfetmek için IntelliSense'i kullanırsınız. Uygulamanızı çalıştırmaya ve nasıl göründüğünü görmeye hazır olduğunuzda, Android veya Android SDK emülatörü için Visual Studio Emülatörü kullanabilir, Windows uygulamalarını yerel olarak çalıştırabilir veya Windows Phone emülatöründe Windows uygulamalarını çalıştırabilirsiniz. Bağlı Android ve Windows cihazlarını doğrudan da kullanabilirsiniz. iOS projeleri için ağa bağlı bir Mac'e bağlanın ve Visual Studio'dan Mac emülatörü başlatın veya bağlı bir aygıta bağlanın.
 
-#### <a name="design-one-set-of-pages-that-render-across-all-devices-by-using-xamarinforms"></a>Bir Xamarin.Forms kullanarak tüm cihazlarda oluşturan sayfalar kümesini tasarlama
- Uygulama tasarımınızı karmaşıklığına bağlı olarak, kullanarak oluşturmayı düşünebilirsiniz *Xamarin.Forms* şablonlarında **Mobile Apps** grup proje şablonları. Xamarin.Forms, Android, iOS ve Windows arasında paylaşabilirsiniz tek bir arabirim oluşturmanıza imkan tanıyan bir UI araç takımıdır.  Xamarin.Forms çözümü derlediğinizde, bir Android uygulaması, bir iOS uygulaması ve bir Windows uygulaması elde edersiniz. Daha fazla ayrıntı için [Xamarin ile mobil geliştirme hakkında bilgi edinin](../cross-platform/learn-about-mobile-development-with-xamarin.md).
+#### <a name="design-one-set-of-pages-that-render-across-all-devices-by-using-xamarinforms"></a>Xamarin.Forms kullanarak tüm cihazlarda işlenen bir sayfa kümesi tasarla
+ Uygulama tasarımınızın karmaşıklığına bağlı olarak, proje şablonları Mobil **Uygulamalar** grubunda *Xamarin.Forms* şablonlarını kullanarak bu tasarımı oluşturmayı düşünebilirsiniz. Xamarin.Forms, Android, iOS ve Windows arasında paylaşabileceğiniz tek bir arabirim oluşturmanıza olanak tanıyan bir Ara bilgi aracı araç setidir.  Bir Xamarin.Forms çözümü derlediğinizde, bir Android uygulaması, bir iOS uygulaması ve bir Windows uygulaması alırsınız. Daha fazla bilgi için [Xamarin ile mobil geliştirme hakkında bilgi](../cross-platform/learn-about-mobile-development-with-xamarin.md)edinin.
 
-#### <a name="ShareHTML"></a> Android, iOS ve Windows uygulamaları arasında kod paylaşma
- Xamarin.Forms kullanmıyorsanız ve her platform için ayrı ayrı tasarlamak seçerseniz, çoğu kullanıcı Arabirimi olmayan kodunuzun platformu projelerinde (Android, iOS ve Windows) arasında paylaşabilirsiniz. Bu, iş mantığı, bulut tümleştirme, veritabanı erişimi veya .NET Framework'ü hedefleyen herhangi bir kod içerir. Paylaşamazsınız yalnızca kodu belirli bir platformu hedefleyen kodudur.
+#### <a name="share-code-between-android-ios-and-windows-apps"></a><a name="ShareHTML"></a>Android, iOS ve Windows uygulamaları arasında kod paylaşma
+ Xamarin.Forms kullanmıyorsanız ve her platform için ayrı ayrı tasarım yapmayı seçiyorsanız, UI olmayan kodlarınızın çoğunu platform projeleri (Android, iOS ve Windows) arasında paylaşabilirsiniz. Bu, herhangi bir iş mantığını, bulut tümleştirmesini, veritabanı erişimini veya .NET Framework'u hedefleyen diğer kodları içerir. Paylaşamadığınız tek kod, belirli bir platformu hedefleyen koddur.
 
- ![Windows, iOs ve Android kullanıcı arabirimi ile kod paylaşma](../cross-platform/media/sharecode.png "ShareCode")
+ ![Windows, iOs ve Android UI arasında kod paylaşma](../cross-platform/media/sharecode.png "Paylaşım Kodu")
 
- Paylaşılan bir proje, taşınabilir sınıf kitaplığı projesi veya her ikisini de kullanarak kodunuzu paylaşabilir. Daha fazla iyi bir paylaşılan projede veya bazı kod yapar bazı kod uygun bir taşınabilir sınıf kitaplığı projesi içinde anlamlıdır bulabilirsiniz.
+ Paylaşılan bir projeyi, Taşınabilir Sınıf Kitaplığı projesini veya her ikisini de kullanarak kodunuzu paylaşabilirsiniz. Paylaşılan bir projede bazı kodların en uygun olduğunu ve bazı kodların Taşınabilir Sınıf Kitaplığı projesinde daha mantıklı olduğunu görebilirsiniz.
 
-|**Daha fazla bilgi**|
+|**Daha fazlasını öğrenin**|
 |--------------------|
-|Paylaşılan projeler, taşınabilir sınıf kitaplığı projeleri veya her ikisini de kullanarak kodunuzu paylaşmak isteyip istemediğinizi seçin.<br /><br /> [Platformlar arasında kod paylaşımını](https://devblogs.microsoft.com/dotnet/sharing-code-across-platforms/) (.NET Framework blogu)<br /><br /> [Paylaşım kod seçeneklerini](/xamarin/cross-platform/app-fundamentals/code-sharing) (Xamarin)<br /><br /> [Kod paylaşma seçenekleri .NET Framework ile](https://msdn.microsoft.com/library/dn720832.aspx) (MSDN Kitaplığı)|
+|Paylaşılan projeleri, Taşınabilir Sınıf Kitaplığı projelerini veya her ikisini kullanarak kodunuzu paylaşıp paylaşmayacağınızı seçin.<br /><br /> [Platformlar arasında kod paylaşımı](https://devblogs.microsoft.com/dotnet/sharing-code-across-platforms/) (.NET Framework blog)<br /><br /> [Kod Seçeneklerini Paylaşma](/xamarin/cross-platform/app-fundamentals/code-sharing) (Xamarin)<br /><br /> [.NET Framework](https://msdn.microsoft.com/library/dn720832.aspx) (MSDN Kitaplığı) ile kod paylaşım seçenekleri|
 
-### <a name="WindowsHTML"></a> Windows 10 cihazlarını hedefleyin
- ![Windows cihazları](../cross-platform/media/windowsdevices.png "WindowsDevices")
+### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a>Hedef Windows 10 cihazları
+ ![Windows Cihazları](../cross-platform/media/windowsdevices.png "WindowsCihazlar")
 
- Windows 10 cihazları olan tüm tekliflerden hedefleyen tek bir uygulama oluşturmak istiyorsanız, bir evrensel Windows uygulaması oluşturun. Tek bir proje kullanarak uygulama tasarlayın ve hangi cihaz ne olursa olsun, bunları görüntülemek için kullanılır, sayfalar düzgün bir şekilde işlenir.
+ Windows 10 cihazlarının tüm genişliğini hedefleyen tek bir uygulama oluşturmak istiyorsanız, evrensel bir Windows uygulaması oluşturun. Uygulamayı tek bir proje kullanarak tasarlarsınız ve sayfalarınız bunları görüntülemek için hangi cihaz kullanılırsa kullanılsın düzgün bir şekilde işlenir.
 
- Evrensel Windows uygulaması proje şablonu ile başlayın. Sayfalarınızı görsel olarak tasarlamanıza ve bunları çeşitli cihaz türleri için görünme görmek için bir önizleme penceresini açın. Nasıl bir cihazda bir sayfa görünür kullanmak istemiyorsanız, sayfanın ekran boyutu, çözüm ya da yatay veya dikey modu gibi çeşitli yönleriyle daha iyi uyacak şekilde en iyi duruma getirebilirsiniz. Tüm bu, Visual Studio'da sezgisel araç pencereleri ve kolayca erişilebilen menü seçeneklerini kullanarak yapabilirsiniz. Kodunuz uygulama ve adım çalıştırmaya hazır olduğunuzda, tüm aygıt benzetmeleri ve simülatörleri farklı cihaz türleri için birlikte bulunan bir açılan listedeki bulabilirsiniz **standart** araç çubuğu.
+ Evrensel bir Windows uygulaması proje şablonuyla başlayın. Sayfalarınızı görsel olarak tasarlayın ve ardından çeşitli aygıt türleri için nasıl göründüklerini görmek için bunları önizleme penceresinde açın. Bir sayfanın aygıtta nasıl göründüğünü beğenmezseniz, sayfayı ekran boyutuna, çözünürlüğe veya yatay veya dikey mod gibi çeşitli yönlendirmelere daha iyi uyacak şekilde optimize edebilirsiniz. Tüm bunları Visual Studio'da sezgisel araç pencerelerini ve kolayca erişilebilen menü seçeneklerini kullanarak yapabilirsiniz. Uygulamanızı çalıştırmaya ve kodunuzu aşmaya hazır olduğunuzda, farklı türdeki aygıtların tüm cihaz emülatörlerini ve simülatörlerini **Standart** araç çubuğunda bulunan tek bir açılır listede bir arada bulabilirsiniz.
 
- Windows 10 oldukça yeni olduğundan Windows 8.1 hedefleyen proje şablonları da bulabilirsiniz. İstediğiniz ve uygulamanızı Windows 10 telefonlar, tabletler ve bilgisayarlar üzerinde çalışır, bu proje şablonları kullanabilirsiniz. Ancak, Windows 8.1 çalıştıran tüm cihazlara otomatik alırsınız Windows 10 yükseltme, bu nedenle özel nedenlerin neden yerine hedef Windows 8.1 olmadığı sürece, Windows 10'u hedefleyen proje şablonları kullanmanızı öneririz.
+ Windows 10 oldukça yeniolduğundan, Windows 8.1'i hedefleyen proje şablonlarını da bulabilirsiniz. İsterseniz bu proje şablonlarını kullanabilirsiniz ve uygulamanız Windows 10 telefonlarda, tabletlerde ve bilgisayarlarında çalışır. Ancak, Windows 8.1 çalıştıran tüm aygıtlar Windows 10'a otomatik yükseltme alır, bu nedenle Windows 8.1'i hedeflemek için belirli nedenlerden önce niz yoksa, Windows 10'u hedefleyen proje şablonlarını kullanmanızı öneririz.
 
-|**Daha fazla bilgi**|
+|**Daha fazlasını öğrenin**|
 |--------------------|
-|[Evrensel Windows uygulamaları hakkında bilgi edinin](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx) (Windows Geliştirici Merkezi)|
-|[İlk uygulamanızı bir derleme](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx) (Windows Geliştirici Merkezi)|
+|[Evrensel Windows uygulamaları hakkında bilgi edinin](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx) (Windows Geliştirme Center)|
+|[İlkinizi oluşturun](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx) (Windows Geliştirme Merkezi)|
 |[Evrensel Windows Platformu (UWP) için uygulama geliştirme](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)|
-|[Evrensel Windows Platformu (UWP) uygulamaları geçirme](../misc/migrate-apps-to-the-universal-windows-platform-uwp.md)|
+|[Uygulamaları Evrensel Windows Platformu’na (UWP) geçirme](../misc/migrate-apps-to-the-universal-windows-platform-uwp.md)|
 
-## <a name="HTML"></a> Android, iOS ve Windows (HTML/JavaScript) için uygulama oluşturma
- ![Cihazlar](../cross-platform/media/homedevices.png "HomeDevices")
+## <a name="build-an-app-for-android-ios-and-windows-htmljavascript"></a><a name="HTML"></a>Android, iOS ve Windows (HTML/JavaScript) için bir uygulama oluşturma
+ ![Cihazlar](../cross-platform/media/homedevices.png "AnasayfaCihazlar")
 
- Bir web geliştiricisi olduğunuzu ve HTML ve JavaScript ile ilgili bilgi sahibi olduğunuz, Apache Cordova için Visual Studio araçları kullanarak Windows, Android ve iOS hedefleyebilirsiniz. Bu uygulamalar, tüm üç platformlar hedefleyebilir ve bunları en alışık olduğunuz işlemleri ve becerileri kullanarak oluşturun.
+ Bir web geliştiricisiyseniz ve HTML ve JavaScript'e aşinaysanız, Apache Cordova için Visual Studio Araçlarını kullanarak Windows, Android ve iOS'u hedefleyebilirsiniz. Bu uygulamalar üç platformu da hedefleyebilir ve en çok aşina olduğunuz becerileri ve süreçleri kullanarak bunları oluşturabilirsiniz.
 
- Apache Cordova eklenti modeli içeren bir çerçevedir. Bu eklenti modeli, tüm üç platformları (Android, iOS ve Windows), yerel cihaz özelliklerine erişmek için kullanabileceğiniz tek bir JavaScript API'si sağlar.
+ Apache Cordova bir eklenti modeli içeren bir çerçevedir. Bu eklenti modeli, her üç platformun (Android, iOS ve Windows) yerel aygıt özelliklerine erişmek için kullanabileceğiniz tek bir JavaScript API sağlar.
 
- Bu API'ler, platformlar arası olduğundan, tüm üç platformlar arasında yazma çoğu paylaşabilirsiniz. Bu, geliştirme ve Bakım maliyetlerinizi azaltır. Ayrıca, baştan başlatmaya gerek yoktur. Web uygulamalarının diğer türleri oluşturduysanız, herhangi bir şekilde yeniden tasarlayıp tasarlayamayacağınızı veya değiştirmek zorunda kalmadan, bu dosyaları ile Cordova uygulamanızı paylaşabilirsiniz.
+ Bu API'ler çapraz platform olduğundan, yazdıklarının çoğunu üç platform arasında paylaşabilirsiniz. Bu, geliştirme ve bakım maliyetlerinizi azaltır. Ayrıca, sıfırdan başlamaya gerek yok. Başka web uygulamaları oluşturduysanız, bu dosyaları herhangi bir şekilde değiştirmek veya yeniden tasarlamak zorunda kalmadan Cordova uygulamanızla paylaşabilirsiniz.
 
- ![Çok&#45;cihazlı karma uygulamalar](../cross-platform/media/multidevicehybridapps.png "Multidevicehybridaps")
+ ![Çoklu&#45;Cihazı Hibrit Uygulamaları](../cross-platform/media/multidevicehybridapps.png "MultiDeviceHybridApps")
 
- Başlamak için Visual Studio 2015'i yükleyin ve seçin **HTML/JavaScript (Apache Cordova)** Kurulum sırasında özellik. Visual Studio 2013 kullanıyorsanız, Apache Cordova uzantısı için Visual Studio Araçları yükleyin. Her iki durumda da, Cordova araçları, çok platformlu uygulamanızı oluşturmak için gerekli tüm üçüncü taraf yazılımlarını otomatik olarak yükler.
+ Başlamak için Visual Studio 2015'i yükleyin ve kurulum sırasında **HTML/JavaScript (Apache Cordova)** özelliğini seçin. Visual Studio 2013 kullanıyorsanız, Apache Cordova uzantısı için Visual Studio Araçlarını yükleyin. Her iki şekilde de, Cordova araçları çok platformlu uygulamanızı oluşturmak için gereken tüm üçüncü taraf yazılımlarını otomatik olarak yükler.
 
- Uzantıyı yükledikten sonra Visual Studio'yu açın ve oluşturma bir **boş uygulama (Apache Cordova)** proje. Ardından, JavaScript veya Typescript kullanarak uygulamanızı geliştirebilirsiniz. Uygulamanızı genişletmek için eklentilerini da ekleyebilir ve kod yazarken IntelliSense içinde eklentiler API'lerinden görünür.
+ Uzantıyı yükledikten sonra Visual Studio'yu açın ve boş bir **uygulama (Apache Cordova)** projesi oluşturun. Ardından, JavaScript veya Typescript kullanarak uygulamanızı geliştirebilirsiniz. Ayrıca uygulamanızın işlevselliğini genişletmek için eklentiler ekleyebilirsiniz ve kod yazarken eklentilerden gelen API'ler IntelliSense'de görünür.
 
- Kodunuz uygulama ve adım çalıştırmaya hazır olduğunuzda, Apache Ripple öykünücü, Visual Studio öykünücü (Android veya Windows Phone), bir tarayıcı veya bilgisayarınıza doğrudan bağlı bir cihaz gibi bir öykünücü seçin. Ardından, uygulamanızı başlatın. Bir Windows bilgisayarda uygulama geliştiriyorsanız, hatta üzerinde çalıştırabilirsiniz. Bu seçeneklerin tümü Visual Studio Araçları'nın bir parçası olarak Visual Studio ile Apache Cordova için oluşturulur.
+ Uygulamanızı çalıştırmaya ve kodunuzu aşmaya hazır olduğunuzda, Apache Ripple emülatörü veya Visual Studio Emülatörü (Android veya Windows Phone), bir tarayıcı veya doğrudan bilgisayarınıza bağladığınız bir aygıt gibi bir emülatör seçin. Ardından uygulamanızı başlatın. Uygulamanızı bir Windows PC'de geliştiriyorsanız, uygulamanızı bu bilgisayarda bile çalıştırabilirsiniz. Tüm bu seçenekler, Apache Cordova için Visual Studio Tools'un bir parçası olarak Visual Studio'da bulunmaktadır.
 
- Evrensel Windows uygulamaları oluşturma Visual Studio'da hala kullanılabilir proje şablonları bu nedenle yalnızca Windows cihazları hedefleyen planlıyorsanız, bunları kullanan çekinmeyin. Daha sonra Android ve iOS platformlarını karar verirseniz, her zaman bir Cordova projesi için kod bağlantı noktası. Bu API kullanan herhangi bir kod yeniden kullanabilmesi WinJS API'leri, açık kaynak sürümü vardır. Bu, gelecekte diğer platformları hedefleyen planlıyorsanız, Apache Cordova için Visual Studio Araçları ile başlamanızı öneririz belirtti.
+ Evrensel Windows uygulamaları oluşturmak için proje şablonları Visual Studio'da hala mevcuttur, bu nedenle yalnızca Windows aygıtlarını hedeflemeyi planlıyorsanız bunları kullanmaktan çekinmeyin. Android ve iOS'u daha sonra hedeflemeye karar verirseniz, kodunuzu her zaman bir Cordova projesine bağlayabilirsiniz. WinJS API'lerinin açık kaynak sürümleri vardır, böylece bu API'leri tüketen tüm kodları yeniden kullanabilirsiniz. Bununla birlikte, gelecekte diğer platformları hedeflemeyi planlıyorsanız, Apache Cordova için Visual Studio Tools ile başlamanızı öneririz.
 
-|**Daha fazla bilgi**|
+|**Daha fazlasını öğrenin**|
 |--------------------|
-|[Visual Studio yükleme](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[Apache Cordova için Visual Studio Araçları ile çalışmaya başlama](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) (taco.visualstudio.com)|
-|[Android için Visual Studio öykünücüsü öğrenin](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
+|[Visual Studio Yükle](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
+|[Apache Cordova için Visual Studio Tools (taco.visualstudio.com) ile başlayın](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017)|
+|[Android için Visual Studio Emülatörü](https://visualstudio.microsoft.com/vs/msft-android-emulator/) hakkında bilgi edinin (VisualStudio.com)|
 
-## <a name="CPP"></a> Android ve Windows (C++) için uygulama oluşturma
- ![Android,&#43; &#43; iOS ve Windows için derlemek için C kullanın](../cross-platform/media/cross-plat-cpp-intro-image.png "Cross_Plat_CPP_Intro_Image")
+## <a name="build-an-app-for-android-and-windows-c"></a><a name="CPP"></a>Android ve Windows (C++) için bir uygulama oluşturma
+ ![Android, iOS ve Windows için oluşturmak için C&#43;&#43; kullanın](../cross-platform/media/cross-plat-cpp-intro-image.png "Cross_Plat_CPP_Intro_Image")
 
- İlk olarak Visual Studio 2015 ve Visual C++ platformlar arası mobil geliştirme araçlarını yükleyin. Ardından, Android veya Windows hedefleyen bir uygulama için bir yerel etkinlik uygulaması oluşturabilirsiniz. İOS hedefleyen C++ şablonları henüz kullanıma sunulmamıştır. Ve ardından bunları bir platformlar arası statik veya dinamik paylaşılan kitaplık kullanarak arasında kod paylaşma, Android ve Windows aynı çözüm içinde hedefleyebilirsiniz.
+ İlk olarak, Cross Platform Mobil Geliştirme araçları için Visual Studio 2015 ve Visual C++'ı yükleyin. Ardından, Android için yerel bir etkinlik uygulaması veya Windows'u hedefleyen bir uygulama oluşturabilirsiniz. iOS'u hedefleyen C++ şablonları henüz kullanılamıyor. İsterseniz Android ve Windows'u aynı çözümde hedefleyebilir ve ardından çapraz platform statik veya dinamik paylaşılan kitaplığı kullanarak aralarında kod paylaşabilirsiniz.
 
- Gelişmiş grafik işleme, oyun gibi her türlü gerektiren Android için bir uygulama oluşturmak ihtiyacınız varsa yapmak için C++ kullanabilirsiniz. İle başlayan **Native-Activity uygulaması (Android)** proje. Bu proje, Clang araç zinciri için tam destek sunar.
+ Android için oyun gibi her türlü gelişmiş grafik manipülasyonu gerektiren bir uygulama oluşturmanız gerekiyorsa, bunu yapmak için C++'yı kullanabilirsiniz. **Yerel Etkinlik Uygulaması (Android)** projesiyle başlayın. Bu proje Clang araç zinciri için tam destek vardır.
 
  ![Yerel etkinlik proje şablonu](../cross-platform/media/cross-plat-cpp-native.png "Çapraz Plat_CPP_Native")
 
- Uygulamanızı çalıştırın ve nasıl göründüğüne bakmak hazır olduğunuzda, Android için Visual Studio öykünücüsü'nü kullanın. Bu hızlı, güvenilir ve kolay yükleme ve yapılandırma.
+ Uygulamanızı çalıştırmaya ve nasıl göründüğünü görmeye hazır olduğunuzda, Android için Visual Studio Emülatörü kullanın. Hızlı, güvenilir ve kurulumu ve yapılandırılması kolaydır.
 
- Ayrıca, C++ ve evrensel Windows uygulaması proje şablonunu kullanarak Windows 10 cihazları olan tüm tekliflerden hedefleyen bir uygulama oluşturabilirsiniz. Bu konuda hakkında daha fazla bilgiyi [hedef Windows 10 cihazları](#WindowsHTML) bu konuda daha önce görünen bölümü.
+ Ayrıca, C++ ve evrensel bir Windows uygulaması proje şablonu kullanarak Windows 10 cihazlarının tüm genişliğini hedefleyen bir uygulama da oluşturabilirsiniz. Bu konuda daha önce bu konuda görünen [Hedef Windows 10 aygıtları](#WindowsHTML) bölümünde daha fazla bilgi edinin.
 
- Bir statik veya dinamik paylaşılan kitaplık oluşturarak, Android ve Windows arasında C++ kod paylaşabilirsiniz.
+ Statik veya dinamik paylaşılan kitaplık oluşturarak Android ve Windows arasında C++ kodunu paylaşabilirsiniz.
 
  ![Statik ve dinamik paylaşılan kitaplıklar](../cross-platform/media/cross-plat-cpp-libraries.png "Cross_Plat_CPP_Libraries")
 
- Bir Windows veya Android projesi, daha önce bu bölümde açıklanan olanlar gibi bu kitaplığı kullanabilir. Ayrıca, bir uygulamada, Xamarin, Java veya yönetilmeyen DLL işlevlerini çağırma olanak sağlayan herhangi bir dil kullanarak yapı raporlarını kullanabilirsiniz.
+ Bu kitaplığı, bu bölümde daha önce açıklananlar gibi bir Windows veya Android projesinde tüketebilirsiniz. Ayrıca, Xamarin, Java veya yönetilmeyen bir DLL'deki işlevleri çağırmanızı sağlayan herhangi bir dilde kullanarak oluşturduğunuz bir uygulamada da tüketebilirsiniz.
 
- Bu kitaplıklara kod yazarken, Android ve Windows platformlarını yerel API'leri keşfetmek için IntelliSense'i kullanabilirsiniz. Kesme noktaları, kodu adımlama ve bulabilir ve tüm hata ayıklayıcı'nın Gelişmiş özelliklerine kullanarak sorunları düzeltmek için bu kitaplık projeleri, Visual Studio hata ayıklayıcıyla tamamen tümleştirilmiştir.
+ Bu kitaplıklara kod yazarken, Android ve Windows platformlarının yerel API'lerini keşfetmek için IntelliSense'i kullanabilirsiniz. Bu kitaplık projeleri Visual Studio hata ayıklayıcıile tamamen entegre edilmiştir, böylece kesme noktaları ayarlayabilir, koda adım atabilir ve hata ayıklayıcının tüm gelişmiş özelliklerini kullanarak sorunları bulabilir ve düzeltebilirsiniz.
 
-|**Daha fazla bilgi**|
+|**Daha fazlasını öğrenin**|
 |--------------------|
-|[Visual Studio'yu indirin.](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[Visual C++ platformlar arası mobil geliştirme araçlarını yükleyin.](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Kitaplığı)|
-|[C++ birden çok platformu hedefleyecek şekilde kullanma hakkında daha fazla bilgi edinin.](https://www.visualstudio.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[Neleri gerekir ve ardından Android için bir yerel etkinlik uygulaması oluşturma yükleme](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Kitaplığı)|
-|[Android için Visual Studio öykünücüsü öğrenin](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
-|[C++ kodu ile Android ve Windows uygulamaları paylaşma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/) (VisualStudio.com)|
-|[C++ platformlar arası mobil geliştirme örnekleri](https://msdn.microsoft.com/library/dn707596.aspx) (MSDN Kitaplığı)|
-|[C++ için ek platformlar arası mobil geliştirme örnekleri](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=android&f%5B1%5D.Type=ProgrammingLanguage&f%5B1%5D.Value=C%2B%2B&f%5B1%5D.Text=C%2B%2B) (code.msdn)|
+|[Visual Studio'yı indirin.](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
+|[Platformötesi Mobil Geliştirme araçları için Visual C++ 'yı yükleyin.](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Kütüphanesi)|
+|[Birden çok platformu hedeflemek için C++ kullanma hakkında daha fazla bilgi edinin.](https://www.visualstudio.com/vs/cplusplus-mdd/) (VisualStudio.com)|
+|[İhtiyacınız olanı yükleyin ve ardından Android için yerel etkinlik uygulaması oluşturun](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Kitaplığı)|
+|[Android için Visual Studio Emülatörü](https://visualstudio.microsoft.com/vs/msft-android-emulator/) hakkında bilgi edinin (VisualStudio.com)|
+|[C++ kodunu Android ve Windows uygulamalarıyla paylaşma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/) (VisualStudio.com)|
+|[C++](https://msdn.microsoft.com/library/dn707596.aspx) (MSDN Kitaplığı) için platform ötesi mobil geliştirme örnekleri|
+|[C++](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=android&f%5B1%5D.Type=ProgrammingLanguage&f%5B1%5D.Value=C%2B%2B&f%5B1%5D.Text=C%2B%2B) (code.msdn) için ek çapraz platform mobil geliştirme örnekleri|
 
-## <a name="Unity"></a> Unity için Visual Studio araçları kullanarak Android, iOS ve Windows için platformlar arası oyun oluşturun
- Unity için Visual Studio Araçları, Visual Studio'nun güçlü kod düzenleme, üretkenlik ve hata ayıklama araçları ile tümleştirilir. Visual Studio için ücretsiz bir uzantı *Unity*, popüler platformlar arası oyun/grafik altyapısı ve Windows, iOS, Android ve web dahil olmak üzere diğer platformları hedefleyen modern uygulamalar için geliştirme ortamı.
+## <a name="build-a-cross-platform-game-for-android-ios-and-windows-by-using-visual-studio-tools-for-unity"></a><a name="Unity"></a>Unity için Visual Studio araçlarını kullanarak Android, iOS ve Windows için bir çapraz platform oyunu oluşturun
+ Visual Studio Tools for Unity, Visual Studio'nun güçlü kod düzenleme, üretkenlik ve hata ayıklama araçlarını *Windows,* iOS, Android ve web gibi diğer platformları hedefleyen sürükleyici uygulamalar için popüler platformlar arası oyun/grafik motoru ve geliştirme ortamı yla birleştiren Visual Studio için ücretsiz bir uzantıdır.
 
  ![VSTU geliştirme ortamı](../cross-platform/media/vstu-overview.png "VSTU_Overview")
 
- Visual Studio Araçları ile Unity (VSTU), oyun ve düzenleyici betikleri C# dilinde yazın ve ardından, güçlü bir hata ayıklayıcı hataları bulma ve düzeltme için Visual Studio kullanabilirsiniz. VSTU en son sürümünü Unity 5 için destek getirir ve Unity'nın ShaderLab gölgelendirici dili için söz dizimi renklendirme, daha iyi eşitlemesi Unity, daha zengin hata ayıklama ve geliştirilmiş kod oluşturma için MonoBehavior Sihirbazı'nı içerir. VSTU, Unity proje dosyalarınızı, konsol iletileri ve daha az zaman için ve Unity Düzenleyicisi'nden kod yazarken geçiş ayırmasına oyununuzu Visual Studio'ya başlatma özelliğini de getirir.
+ Visual Studio Tools for Unity (VSTU) ile Visual Studio'yu kullanarak C#'da oyun ve editör komut dosyaları yazabilir ve ardından hataları bulmak ve düzeltmek için güçlü hata ayıklama aracını kullanabilirsiniz. VSTU'nun en son sürümü Unity 5'e destek getirir ve Unity'nin ShaderLab gölgeli dili için sözdizimi boyama, Unity ile daha iyi senkronizasyon, daha zengin hata ayıklama ve MonoBehavior sihirbazı için geliştirilmiş kod oluşturma içerir. VSTU ayrıca Unity proje dosyalarınızı, konsol mesajlarınızı ve oyununuzu Visual Studio'ya başlatabilme yeteneğinizi de getirir, böylece kod yazarken Unity Editor'a geçiş yapmak için daha az zaman harcayabilirsiniz.
 
- Oyununuzu Unity ve Unity için Visual Studio Araçları ile oluşturmaya hemen başlayın.
+ Birlik ve Görsel Stüdyo Araçları ile oyununuzu bugün oluşturmaya başlayın.
 
-|**Daha fazla bilgi**|
+|**Daha fazlasını öğrenin**|
 |--------------------|
-|[Unity Visual Studio ile oyun oluşturma hakkında daha fazla bilgi edinin](https://www.visualstudio.com/features/unitytools-vs.aspx)|
-|[Unity için Visual Studio Araçları hakkında daha fazla bilgiyi](../cross-platform/visual-studio-tools-for-unity.md) (MSDN Kitaplığı)|
-|[Unity için Visual Studio Araçları kullanmaya başlayın](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) (MSDN Kitaplığı)|
-|[Son geliştirmeler hakkında Unity 2.0 önizlemesi için Visual Studio Araçları okuma](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) (Visual Studio blogu)|
-|[Unity 2.0 önizlemesi için Visual Studio Araçları için bir tanıtım izleyin](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (Video)|
-|[Unity hakkında bilgi edinin](https://unity.com/) (Unity Web sitesi)|
+|[Visual Studio ile Unity oyunları oluşturma hakkında daha fazla bilgi edinin](https://www.visualstudio.com/features/unitytools-vs.aspx)|
+|[Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) (MSDN Library) hakkında daha fazla bilgi edinin|
+|[Unity için Visual Studio Araçlarını kullanmaya başlayın](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) (MSDN Kitaplığı)|
+|[Unity 2.0 Önizleme için Visual Studio Tools en son geliştirmeleri hakkında bilgi edinin](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) (Visual Studio blog)|
+|[Unity 2.0 Önizleme için Visual Studio Tools'a bir video girişi izleyin](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (Video)|
+|[Unity (Unity](https://unity.com/) web sitesi) hakkında bilgi edinin|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Visual Studio projesi için Office 365 API ekleme](https://msdn.microsoft.com/library/office/dn605899\(v=office.15\).aspx)
-- [Azure mobil hizmetler](https://msdn.microsoft.com/library/dn720832\(v=vs.110\).aspx)
-- [Application Insights](/azure/application-insights/app-insights-overview)
+- [Visual Studio projesine Office 365 API'lerini ekleme](https://msdn.microsoft.com/library/office/dn605899\(v=office.15\).aspx)
+- [Azure Mobile Hizmetleri](https://msdn.microsoft.com/library/dn720832\(v=vs.110\).aspx)
+- [Uygulama Bilgileri](/azure/application-insights/app-insights-overview)

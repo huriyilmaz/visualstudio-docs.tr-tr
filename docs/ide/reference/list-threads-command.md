@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1b36b8f4d9970d94eb83c47b59e85d01f932589
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595494"
 ---
 # <a name="list-threads-command"></a>İş Parçacıklarını Listele Komutu
@@ -30,13 +30,13 @@ Geçerli programdaki iş parçacıklarının listesini görüntüler.
 Debug.ListThreads [index]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 `index`
 
-İsteğe bağlı. Geçerli iş parçacığı olarak dizini tarafından bir iş parçacığı seçer.
+İsteğe bağlı. Geçerli iş parçacığı olmak için dizin tarafından bir iş parçacığı seçer.
 
 ## <a name="remarks"></a>Açıklamalar
-Belirtildiğinde `index` bağımsız değişkeni, belirtilen iş parçacığını geçerli iş parçacığı olarak işaretler. Geçerli iş parçacığının yanındaki listede bir yıldız işareti (*) görüntülenir.
+Belirtildiğinde, `index` bağımsız değişken belirtilen iş parçacığı geçerli iş parçacığı olarak işaretler. Geçerli iş parçacığının yanındaki listede yıldız işareti (*) görüntülenir.
 
 ## <a name="example"></a>Örnek
 
@@ -46,9 +46,9 @@ Belirtildiğinde `index` bağımsız değişkeni, belirtilen iş parçacığın�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çağrı Yığınını Listele Komutu](../../ide/reference/list-call-stack-command.md)
+- [Liste Çağrı Yığını Komutu](../../ide/reference/list-call-stack-command.md)
 - [Ayrıştırılmış Kodu Listele Komutu](../../ide/reference/list-disassembly-command.md)
-- [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
+- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

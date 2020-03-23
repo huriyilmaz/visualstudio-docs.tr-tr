@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: projeleri hedef platformlar için yapılandırma'
+title: 'Nasıl yapilir: Projeleri hedef platformlara yapılandırma'
 ms.date: 08/16/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -19,58 +19,58 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9cbe4bc3f982ae18b9f85fe8bf5c21495c98beee
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76112545"
 ---
-# <a name="how-to-configure-projects-to-target-platforms"></a>Nasıl yapılır: projeleri hedef platformlar için yapılandırma
+# <a name="how-to-configure-projects-to-target-platforms"></a>Nasıl yapilir: Projeleri hedef platformlara yapılandırma
 
-Visual Studio uygulamalarınızı 64 bit platformlar da dahil olmak üzere, farklı platformları hedeflemek için ayarlamanıza olanak tanır. Visual Studio 64-bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](/dotnet/framework/64-bit-apps).
+Visual Studio, uygulamalarınızı 64 bit platformlar da dahil olmak üzere farklı platformları hedeflayacak şekilde ayarlamanızı sağlar. Visual Studio'da 64 bit platform desteği hakkında daha fazla bilgi için [64 bit uygulamalara](/dotnet/framework/64-bit-apps)bakın.
 
-## <a name="target-platforms-with-the-configuration-manager"></a>Configuration Manager ile hedef platformları
+## <a name="target-platforms-with-the-configuration-manager"></a>Configuration Manager ile hedef platformlar
 
-**Configuration Manager** , projenizde hedeflemek üzere yeni bir platform eklemek için bir yol sağlar. Visual Studio 'ya dahil olan platformlardan birini seçerseniz, projenizin özellikleri seçili platform için projenizi oluşturmak üzere değiştirilir.
+**Configuration Manager,** projenizle hedefe hızlı bir şekilde yeni bir platform eklemeniz için bir yol sağlar. Visual Studio ile birlikte verilen platformlardan birini seçerseniz, projenizin özellikleri, projenizi seçili platform için oluşturmak üzere değiştirilir.
 
-### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Bir projeyi 64 bitlik bir platformu hedefleyecek şekilde yapılandırmak için
+### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Bir projeyi 64 bit platform hedeflenebilmek için yapılandırmak için
 
-1. Menü çubuğunda > **Configuration Manager** **Oluştur** ' u seçin.
+1. Menü çubuğunda**Yapı Yapılandırma Yöneticisi'ni** **seçin.** > 
 
-2. **Etkin çözüm platformu** listesinde, çözümün hedeflenecek 64 bitlik bir platform seçin ve sonra **Kapat** düğmesini seçin.
+2. Etkin **çözüm platformu** listesinde, çözüm için hedef için 64 bit lik bir platform seçin ve ardından **Kapat** düğmesini seçin.
 
-    1. İstediğiniz Platform **etkin çözüm platformu** listesinde görünmüyorsa, **Yeni**' yi seçin.
+    1. İstediğiniz platform **Etkin çözüm platformu** listesinde görünmüyorsa, **Yeni'yi**seçin.
 
-         **Yeni çözüm platformu** iletişim kutusu görüntülenir.
+         **Yeni Çözüm Platformu** iletişim kutusu görüntülenir.
 
-    2. **Yazın veya yeni platform listesini seçin** , **x64**öğesini seçin.
+    2. Türü veya yeni platform listesini **seçin,** **x64**seçin.
 
         > [!NOTE]
-        > Yapılandırmanıza yeni bir ad verirseniz, **Proje tasarımcısında** ayarları doğru platformu hedefleyecek şekilde değiştirmeniz gerekebilir.
+        > Yapılandırmanıza yeni bir ad verirseniz, doğru platformu hedeflemek için **Proje Tasarımcısı'ndaki** ayarları değiştirmeniz gerekebilir.
 
-    3. Ayarları geçerli platform yapılandırmasından kopyalamak istiyorsanız, seçin ve sonra **Tamam** düğmesini seçin.
+    3. Ayarları geçerli bir platform yapılandırmasından kopyalamak istiyorsanız, bunu seçin ve ardından **Tamam** düğmesini seçin.
 
-64 bitlik platformu hedefleyen tüm projeler için özellikler güncellenir ve projenin sonraki derlemesi 64 bit platformlar için iyileştirilir.
+64 bit platformu hedefleyen tüm projelerin özellikleri güncelleştirilir ve projenin bir sonraki yapısı 64 bit platformlar için optimize edilir.
 
-## <a name="target-platforms-in-the-project-designer"></a>Proje tasarımcısında hedef platformlar
+## <a name="target-platforms-in-the-project-designer"></a>Proje Tasarımcısı'nda hedef platformlar
 
-**Proje Tasarımcısı** Ayrıca, projenizle farklı platformları hedeflemek için bir yol sağlar. **Yeni çözüm platformu** iletişim kutusundaki listede yer alan platformlardan birini seçmek çözümünüz için çalışmazsa, özel bir yapılandırma adı oluşturabilir ve **Proje tasarımcısında** ayarları değiştirerek doğru platformu hedefleyebilirsiniz.
+**Proje Tasarımcısı,** projenizle farklı platformları hedeflemenin de bir yolunu sağlar. **Yeni Çözüm Platformu** iletişim kutusunda ki listede yer alan platformlardan birini seçmek çözümünüz için işe yaramazsa, özel bir yapılandırma adı oluşturabilir ve doğru platformu hedeflemek için Project **Designer'daki** ayarları değiştirebilirsiniz.
 
-Bu görevin gerçekleştirilmesi, kullanmakta olduğunuz programlama diline göre farklılık gösterir. Daha fazla bilgi için aşağıdaki bağlantılara bakın:
+Bu görevi gerçekleştirmek, kullanmakta olduğunuz programlama diline göre değişir. Daha fazla bilgi için aşağıdaki bağlantılara bakın:
 
-- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeleri için bkz. [/Platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform).
+- Projeler [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] için bkz: [/platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform).
 
-- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projeleri için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md).
+- Projeler [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] için Yapı [sayfasına, Proje Tasarımcısına (C#)](../ide/reference/build-page-project-designer-csharp.md)bakın.
 
-- [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projeleri için bkz. [/clr (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).
+- Projeler [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] için bkz: [/clr (Ortak Dil Çalışma Zamanı derlemesi).](/cpp/build/reference/clr-common-language-runtime-compilation)
 
-## <a name="manually-editing-the-project-file"></a>Proje dosyasını el ile Düzenle
+## <a name="manually-editing-the-project-file"></a>Proje dosyasını el ile düzenleme
 
-Bazen, bazı özel yapılandırma için proje dosyasını el ile düzenlemeniz gerekir. Örneğin, aşağıdaki örnekte olduğu gibi, iki farklı platformda farklı bir başvuru gibi IDE 'de belirtime koşullarınız vardır.
+Bazen, bazı özel yapılandırma için proje dosyasını el ile düzenlemeniz gerekir. Aşağıdaki örnekte olduğu gibi, iki farklı platform için farklı bir başvuru gibi IDE'de belirtilemeyen koşullar varsa, buna bir örnektir.
 
-### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>Örnek: x86 ve x64 derlemelerine ve DLL 'Lere başvurma
+### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>Örnek: X86 ve x64 montajları ve DL'lere başvurma
 
-Hem x86 hem de x64 sürümlerine sahip bir .NET bütünleştirilmiş kodu veya DLL 'SI olabilir. Projenizi bu başvuruları kullanacak şekilde ayarlamak için, önce başvuruyu ekleyin, ardından proje dosyasını açın ve sonra hem yapılandırmaya hem de hedef platforma başvuran bir koşula sahip bir `ItemGroup` eklemek için projeyi düzenleyin.  Örneğin, başvurduğunuz ikilinin ClassLibrary1 olduğunu ve hata ayıklama ve sürüm yapılandırmalarının yanı sıra x86 ve x64 sürümleri için farklı yollar bulunduğunu varsayalım.  Ardından, aşağıdaki gibi, tüm ayar birleşimleriyle dört `ItemGroup` öğesi kullanın:
+Hem x86 hem de x64 sürümleri olan bir .NET derlemeniz veya DLL'niz olabilir. Projenizi bu başvuruları kullanacak şekilde ayarlamak için önce başvuruyu ekleyin ve ardından proje `ItemGroup` dosyasını açın ve hem yapılandırmaya hem de hedef platforma başvuran bir koşul eklemek için onu düzenlemeyi sağlayın.  Örneğin, başvurduğunuz ikilinin ClassLibrary1 olduğunu ve Hata Ayıklama ve Sürüm yapılandırmalarının yanı sıra x86 ve x64 sürümleri için farklı yollar olduğunu varsayalım.  Ardından, aşağıdaki `ItemGroup` gibi tüm ayar kombinasyonlarını içeren dört öğe kullanın:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -109,15 +109,15 @@ Hem x86 hem de x64 sürümlerine sahip bir .NET bütünleştirilmiş kodu veya D
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Visual Studio 2017 ' de proje dosyasını düzenlemeden önce projeyi kaldırmanız gerekir. Projeyi kaldırmak için proje düğümüne sağ tıklayın ve **Projeyi Kaldır**' ı seçin. Düzenlemeler tamamlandığında, değişiklikleri kaydedin ve proje düğümüne sağ tıklayıp **projeyi yeniden yükle**' yi seçerek projeyi yeniden yükleyin.
+> Visual Studio 2017'de, proje dosyasını düzenlemesi için önce projeyi boşaltmanız gerekir. Projeyi boşaltmak için proje düğümüne sağ tıklayın ve **Projeyi Boşalt'ı**seçin. Düzenleme yapıldığında, değişikliklerinizi kaydedin ve proje düğümüne sağ tıklayarak ve **Projeyi Yeniden Yükle'yi**seçerek projeyi yeniden yükleyin.
 ::: moniker-end
 
-Proje dosyası hakkında daha fazla bilgi için bkz. [MSBuild proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md).
+Proje dosyası hakkında daha fazla bilgi için [MSBuild proje dosyası şeması başvurusuna](../msbuild/msbuild-project-file-schema-reference.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme platformlarını anlama](../ide/understanding-build-platforms.md)
-- [/Platform (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
-- [64 bitlik uygulamalar](/dotnet/framework/64-bit-apps)
-- [Visual Studio IDE 64 bit desteği](../ide/visual-studio-ide-64-bit-support.md)
+- [/platform (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
+- [64 bit uygulamalar](/dotnet/framework/64-bit-apps)
+- [Visual Studio IDE 64-Bit desteği](../ide/visual-studio-ide-64-bit-support.md)
 - [Proje dosyasını anlama](/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file)

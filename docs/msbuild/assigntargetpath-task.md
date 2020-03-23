@@ -1,5 +1,5 @@
 ---
-title: Atamatargetpath görevi | Microsoft Docs
+title: AtamaTargetPath Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,33 +14,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e2d825c0c08ffeba1449954ed310644dd4437840
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634545"
 ---
-# <a name="assigntargetpath-task"></a>Atamatargetpath görevi
+# <a name="assigntargetpath-task"></a>TargetPath görevini atayın
 
-Bu görev, bir dosya listesi kabul eder ve önceden belirtilmediyse `<TargetPath>` öznitelikleri ekler.
+Bu görev dosyaların listesini kabul `<TargetPath>` eder ve zaten belirtilmemişse öznitelikler ekler.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
-Aşağıdaki tabloda `AssignTargetPath` görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda görevparametreleri `AssignTargetPath` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`RootFolder`|İsteğe bağlı `string` giriş parametresi.<br /><br /> Hedef bağlantıları içeren klasörün yolunu içerir.|
-|`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` giriş parametresi.<br /><br /> Gelen dosya listesini içerir.|
-|`AssignedFiles`|İsteğe bağlı<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Dosyaların elde edilen listesini içerir.|
+|`RootFolder`|İsteğe bağlı `string` giriş parametresi.<br /><br /> Hedef bağlantıları içeren klasöre giden yolu içerir.|
+|`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` giriş parametresi.<br /><br /> Gelen dosya listesini içerir.|
+|`AssignedFiles`|İsteğe bağlı<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Ortaya çıkan dosya listesini içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir projeyi yapılandırmak için `AssignTargetPath` görevini yürütür.
+Aşağıdaki örnek, bir `AssignTargetPath` projeyi yapılandırma görevini yürütür.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

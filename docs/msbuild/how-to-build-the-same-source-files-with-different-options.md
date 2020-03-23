@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme | Microsoft Docs'
+title: 'Nasıl Yapılsın: Farklı Seçeneklerle Aynı Kaynak Dosyaları Oluşturma | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,25 +14,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c31da244e5c264bb81498c6091aefce7e6318bb2
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633947"
 ---
-# <a name="how-to-build-the-same-source-files-with-different-options"></a>Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme
+# <a name="how-to-build-the-same-source-files-with-different-options"></a>Nasıl yapılı: Farklı seçeneklerle aynı kaynak dosyaları oluşturma
 
-Proje oluştururken, aynı bileşenleri farklı derleme seçenekleriyle sık sık derleyebilirsiniz. Örneğin, simge bilgileriyle bir hata ayıklama derlemesi veya sembol bilgisi olmadan bir yayın derlemesi oluşturabilirsiniz, ancak iyileştirmeler etkin hale getirebilirsiniz. Ya da bir projeyi x86 veya x64 gibi belirli bir platformda çalıştırmak için oluşturabilirsiniz. Tüm bu durumlarda, çoğu yapı seçeneği aynı kalır; yapı yapılandırmasını denetlemek için yalnızca birkaç seçenek değiştirilmiştir. MSBuild ile, farklı yapı yapılandırmalarının oluşturulması için özellikleri ve koşulları kullanırsınız.
+Projeler oluştururken, sık sık farklı yapı seçenekleriyle aynı bileşenleri derlersiniz. Örneğin, simge bilgileri yle birlikte bir hata ayıklama yapısı veya simge bilgisi olmayan ancak optimizasyonlar etkinleştirilmiş bir sürüm yapısı oluşturabilirsiniz. Veya x86 veya x64 gibi belirli bir platformda çalışacak bir proje oluşturabilirsiniz. Tüm bu durumlarda, yapı seçeneklerinin çoğu aynı kalır; yapı yapılandırmasını denetlemek için yalnızca birkaç seçenek değiştirilir. MSBuild ile, farklı yapı yapılandırmaları oluşturmak için özellikleri ve koşulları kullanırsınız.
 
 ## <a name="use-properties-to-control-build-settings"></a>Yapı ayarlarını denetlemek için özellikleri kullanma
 
-`Property` öğesi, bir proje dosyasında, geçici bir dizinin konumu gibi birkaç kez başvurulan bir değişkeni tanımlar veya hata ayıklama derlemesi ve bir yayın derlemesi gibi çeşitli yapılandırmalarda kullanılan özelliklerin değerlerini ayarlar. Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Öğe, `Property` geçici bir dizinin konumu gibi bir proje dosyasında birkaç kez başvurulan veya Hata Ayıklama yapısı ve Sürüm yapısı gibi çeşitli yapılandırmalarda kullanılan özelliklerin değerlerini ayarlamak için birkaç kez başvurulan bir değişken tanımlar. Özellikler hakkında daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
 
-Proje dosyasını değiştirmek zorunda kalmadan, yapınızı yapılandırmayı değiştirmek için özellikleri kullanabilirsiniz. `Property` öğesinin ve `PropertyGroup` öğesinin `Condition` özniteliği, özelliklerinin değerini değiştirmenize izin verir. MSBuild koşulları hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).
+Proje dosyasını değiştirmek zorunda kalmadan yapınızın yapılandırmasını değiştirmek için özellikleri kullanabilirsiniz. Öğenin `Condition` ve öğenin `PropertyGroup` özniteliği özelliklerin değerini değiştirmenizi sağlar. `Property` MSBuild koşulları hakkında daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.
 
 ### <a name="to-set-a-group-of-properties-that-depends-on-another-property"></a>Başka bir özelliğe bağlı bir özellik grubu ayarlamak için
 
-- Bir `PropertyGroup` öğesinde şuna benzer bir `Condition` özniteliği kullanın:
+- Aşağıdakilere `Condition` benzer bir `PropertyGroup` öğede bir öznitelik kullanın:
 
   ```xml
   <PropertyGroup Condition="'$(Flavor)'=='DEBUG'">
@@ -41,21 +41,21 @@ Proje dosyasını değiştirmek zorunda kalmadan, yapınızı yapılandırmayı 
   </PropertyGroup>
   ```
 
-### <a name="to-define-a-property-that-depends-on-another-property"></a>Başka bir özelliğe bağımlı olan bir özellik tanımlamak için
+### <a name="to-define-a-property-that-depends-on-another-property"></a>Başka bir özelliğe bağlı bir özelliği tanımlamak için
 
-- Bir `Property` öğesinde şuna benzer bir `Condition` özniteliği kullanın:
+- Aşağıdakilere `Condition` benzer bir `Property` öğede bir öznitelik kullanın:
 
   ```xml
   <DebugType Condition="'$(Flavor)'=='DEBUG'">full</DebugType>
   ```
 
-## <a name="specify-properties-on-the-command-line"></a>Komut satırında özellikleri belirtin
+## <a name="specify-properties-on-the-command-line"></a>Komut satırındaki özellikleri belirtin
 
-Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan sonra, projenizi her oluşturduğunuzda bu konfigürasyonları değiştirme olanağına sahip olmanız gerekir. MSBuild, **-Property** veya **-p** anahtarı kullanılarak komut satırında özelliklerin belirtilmesini sağlayarak bu yeteneği sağlar.
+Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan sonra, projenizi her oluşturduğunuzda bu yapılandırmaları değiştirme yeteneğine sahip olmanız gerekir. MSBuild bu **yeteneği, -özellik** veya **-p** anahtarı nı kullanarak komut satırında özelliklerin belirtilmesine izin vererek sağlar.
 
-### <a name="to-set-a-project-property-at-the-command-line"></a>Komut satırında bir proje özelliği ayarlamak için
+### <a name="to-set-a-project-property-at-the-command-line"></a>Komut satırında proje özelliği ayarlamak için
 
-- Özellik ve özellik değeri ile **-Property** anahtarını kullanın. Örnek:
+- Özellik ve özellik değeri ile **-özellik** anahtarını kullanın. Örnek:
 
   ```cmd
   msbuild file.proj -property:Flavor=Debug
@@ -69,7 +69,7 @@ Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan s
 
 ### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>Komut satırında birden fazla proje özelliği belirtmek için
 
-- Özellik ve özellik değerleriyle birden çok kez **-Property** veya **-p** anahtarı kullanın ya da bir **-Property** veya **-p** anahtarı kullanın ve birden çok özelliği noktalı virgülle ayırın (;). Örnek:
+- **-özellik** veya **-p** anahtarını özellik ve özellik değerleriyle birden çok kez kullanın veya bir **-özellik** veya **-p** anahtarı kullanın ve birden çok özelliği yarı kolonlu (;). Örnek:
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug;Platform=x86
@@ -81,23 +81,23 @@ Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan s
   msbuild file.proj -p:Flavor=Debug -p:Platform=x86
   ```
 
-  Ortam değişkenleri de özellikler olarak değerlendirilir ve MSBuild tarafından otomatik olarak eklenir. Ortam değişkenlerini kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir derlemede ortam değişkenlerini kullanma](../msbuild/how-to-use-environment-variables-in-a-build.md).
+  Ortam değişkenleri de özellik olarak kabul edilir ve msbuild tarafından otomatik olarak dahil edilir. Çevre değişkenlerini kullanma hakkında daha fazla bilgi için [bkz: Yapıdaki ortam değişkenlerini kullanma.](../msbuild/how-to-use-environment-variables-in-a-build.md)
 
-  Komut satırında belirtilen özellik değeri, proje dosyasında aynı özellik için ayarlanan herhangi bir değere göre önceliklidir ve proje dosyasındaki değer, bir ortam değişkeninde değeri öncelikli olarak alır.
+  Komut satırında belirtilen özellik değeri, proje dosyasındaki aynı özellik için ayarlanan değerden önce gelir ve proje dosyasındaki değer bir ortam değişkenindeki değerden önce gelir.
 
-  Bu davranışı bir proje etiketinde `TreatAsLocalProperty` özniteliğini kullanarak değiştirebilirsiniz. Bu öznitelikle listelenen özellik adları için, komut satırında belirtilen özellik değeri proje dosyasındaki değerden önceliklidir. Bu konunun ilerleyen kısımlarında bir örnek bulabilirsiniz.
+  Proje etiketindeki `TreatAsLocalProperty` özniteliği kullanarak bu davranışı değiştirebilirsiniz. Bu öznitelikile listelenen özellik adları için, komut satırında belirtilen özellik değeri proje dosyasındaki değerden önce gelmez. Daha sonra bu konuda bir örnek bulabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneğinde, "Merhaba Dünya" projesi, hata ayıklama derlemesi ve yayın derlemesi oluşturmak için kullanılabilecek iki yeni özellik grubu içerir.
+Aşağıdaki kod örneği, "Hello World" projesi, hata ayıklama yapısı ve Sürüm yapısı oluşturmak için kullanılabilecek iki yeni özellik grubu içerir.
 
-Bu projenin hata ayıklama sürümünü oluşturmak için şunu yazın:
+Bu projenin hata ayıklama sürümünü oluşturmak için şunları yazın:
 
 ```cmd
 msbuild consolehwcs1.proj -p:flavor=debug
 ```
 
-Bu projenin perakende sürümünü oluşturmak için şunu yazın:
+Bu projenin perakende sürümünü oluşturmak için şunları yazın:
 
 ```cmd
 msbuild consolehwcs1.proj -p:flavor=retail
@@ -157,9 +157,9 @@ msbuild consolehwcs1.proj -p:flavor=retail
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte `TreatAsLocalProperty` özniteliğinin nasıl kullanılacağı gösterilmektedir. `Color` özelliği, proje dosyasında `Blue` bir değere sahiptir ve komut satırında `Green`. Proje etiketinde `TreatAsLocalProperty="Color"`, komut satırı özelliği (`Green`) proje dosyasında tanımlanan özelliği (`Blue`) geçersiz kılmaz.
+Aşağıdaki örnek, özniteliğin `TreatAsLocalProperty` nasıl kullanılacağını göstermektedir. Özelliğin `Color` proje `Blue` dosyasında ve `Green` komut satırında bir değeri vardır. Proje `TreatAsLocalProperty="Color"` etiketinde , komut satırı özelliği`Green`( ) proje dosyasında tanımlanan özelliği geçersiz kılmaz (`Blue`).
 
-Projeyi derlemek için aşağıdaki komutu girin:
+Projeyi oluşturmak için aşağıdaki komutu girin:
 
 ```cmd
 msbuild colortest.proj -t:go -property:Color=Green
@@ -189,7 +189,7 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md)

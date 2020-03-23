@@ -12,35 +12,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d2d08b45d913270bdc43c01b0baf92abc3589927
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592249"
 ---
-# <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>Nasıl yapılır: Microsoft Office belgeye sınıf diyagramı öğeleri kopyalama
+# <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>Nasıl kullanılır: Sınıf diyagramı öğelerini Microsoft Office belgesine kopyalama
 
-Bir .NET sınıf diyagramı 'ndan ( *. CD* dosyası) diğer belgelere şekil kopyalayabilirsiniz. Yapıştırdığınız belge türüne göre şeklin veya temel kodunun bir kopyasını alacaksınız. Modelleme projesindeki UML Sınıf Diyagramlarından şekil kopyalamak için bkz. [diyagramları görüntü olarak dışarı aktarma](../../modeling/export-diagrams-as-images.md).
+Şekilleri .NET sınıf diyagramından *(.cd* dosyası) diğer belgelere kopyalayabilirsiniz. Yapıştırdığınız belgetürüne bağlı olarak şeklin veya temel kodunun bir kopyasını alırsınız. Modelleme projesindeki UML sınıf diyagramlarından şekilleri kopyalamak [için, dışa](../../modeling/export-diagrams-as-images.md)aktarma diyagramlarını görüntü olarak görün.
 
-## <a name="copy-a-single-element"></a>Tek bir öğeyi Kopyala
+## <a name="copy-a-single-element"></a>Tek bir öğeyi kopyalama
 
-Şekle sağ tıklayın ve **görüntüyü Kopyala**' yı seçin.
+Şekli sağ tıklatın ve **Resim Kopyala'yı**seçin.
 
-## <a name="copy-several-elements"></a>Birkaç öğeyi Kopyala
+## <a name="copy-several-elements"></a>Birkaç öğekopyalama
 
 1. Diyagramda kopyalamak istediğiniz şekilleri seçin.
 
-2. Seçiminize sağ tıklayın ve **görüntüyü Kopyala**' yı seçin.
+2. Seçiminizi sağ tıklatın ve **Resim Kopyala'yı**seçin.
 
-## <a name="copy-all-the-elements-in-a-class-diagram"></a>Sınıf diyagramındaki tüm öğeleri Kopyala
+## <a name="copy-all-the-elements-in-a-class-diagram"></a>Sınıf diyagramındaki tüm öğeleri kopyalama
 
-1. Diyagram yüzeyine sağ tıklayın ve **Tümünü Seç**' i seçin veya **CTRL + A**tuşlarına basın.
+1. Diyagram yüzeyine sağ tıklayın ve **Tümü Seç'i**seçin veya **Ctrl + A tuşuna**basın.
 
-2. **Düzenle** menüsünde **görüntüyü Kopyala**' yı seçin.
+2. **Edit** menüsünde **Resmi Kopyala'yı**seçin.
 
-**Resmi Kopyala**yerine **Kopyala** seçeneğini de belirleyebilirsiniz. **Kopya** görüntüyü normal bir bit eşlem olarak kopyalar. **Görüntüyü Kopyala** , görüntüyü vektör tabanlı bir görüntü olarak kopyalar, bu da çoğu Office uygulaması için daha iyidir.
+**Görüntü Kopyala**yerine **Kopyala'yı** da seçebilirsiniz. **Görüntüyü** normal bir bit eşlemi olarak kopyalayın. **Copy Image,** görüntüyü çoğu Office uygulaması için daha iyi olan vektör tabanlı bir görüntü olarak kopyalar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: sınıf diyagramlarını yazdırma](how-to-print-class-diagrams.md)
-- [Nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma](how-to-export-class-diagrams-as-images.md)
+- [Nasıl yapılı: Sınıf diyagramlarını yazdırma](how-to-print-class-diagrams.md)
+- [Nasıl yapilir: Sınıf diyagramlarını görüntü olarak dışa aktarma](how-to-export-class-diagrams-as-images.md)

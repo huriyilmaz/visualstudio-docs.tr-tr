@@ -1,5 +1,5 @@
 ---
-title: Dağıtıma genel bakış | Microsoft Docs
+title: Dağıtıma genel bakış | Microsoft Dokümanlar
 ms.custom: seodec18
 ms.date: 06/22/2018
 ms.topic: overview
@@ -14,111 +14,111 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b7c322b960360231c2e8a1d2aa1a9920bbcf5521
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263311"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79302002"
 ---
-# <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio'da dağıtımına genel bakış
+# <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio'da dağıtıma genel bakış
 
 Bir uygulamayı, hizmeti ya da bileşeni dağıtarak bunu diğer bilgisayarlardaki, cihazlardaki, sunuculardaki ya da buluttaki yükleme için dağıtmış olursunuz. İhtiyacınız olan dağıtım türü için uygun yöntemi Visual Studio'da seçebilirsiniz.
 
-Birçok ortak uygulama türleri için Visual Studio'daki Çözüm Gezgini'nde, uygulama doğrudan dağıtabilirsiniz. Bu özellik, hızlı bir tur bkz [dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md).
+Birçok yaygın uygulama türü için, uygulamanızı visual studio'daki Solution Explorer'dan dağıtabilirsiniz. Bu özelliğin hızlı bir turu için [dağıtıma ilk bakışta](../deployment/deploying-applications-services-and-components.md)bakın.
 
-![Yayımlama seçeneği](../deployment/media/quickstart-publish-azure.png)
+![Yayımlama seçeneği ni seçin](../deployment/media/quickstart-publish-azure.png)
 
-## <a name="what-publishing-options-are-right-for-me"></a>Hangi Yayımlama seçenekleri benim için uygun?
+## <a name="what-publishing-options-are-right-for-me"></a>Hangi yayın seçenekleri benim için doğru?
 
-Öğesinden, Visual Studio içinde uygulamaları için doğrudan aşağıdaki hedefleri yayımlanabilir:
+Visual Studio içinden, uygulamalar doğrudan aşağıdaki hedeflere yayınlanabilir:
 
-- [Azure uygulama hizmeti](#azure-app-service)
-- [Azure sanal makineleri](#azure-virtual-machines)
+- [Azure Uygulama Hizmeti](#azure-app-service)
+- [Azure Sanal Makineler](#azure-virtual-machines)
 - [Dosya sistemi](#file-system)
-- [Özel hedefleri (IIS, FTP, vb.) ](#custom-targets-iis-ftp), tüm isteğe bağlı web sunucuları içerir.
+- Tüm rasgele web sunucularını içeren [özel hedefler (IIS, FTP, vb.)](#custom-targets-iis-ftp)
 
-Üzerinde **Yayımla** sekmesi, mevcut bir yayımlama profili seçin, var olan bir içeri aktarma veya aşağıda açıklanan seçenekler kullanılarak yeni bir tane oluşturun. Farklı uygulama türleri için IDE'de yayımlama seçeneklerini gezinmek için bkz: [dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md).
+**Yayımla** sekmesinde, varolan bir yayımlama profilini seçebilir, varolan bir profili içe aktarabilir veya burada açıklanan seçenekleri kullanarak yeni bir profil oluşturabilirsiniz. Farklı uygulama türleri için IDE'deki yayımlama seçeneklerini gezmek için [dağıtıma ilk bakışta](../deployment/deploying-applications-services-and-components.md)bakın.
 
-## <a name="azure-app-service"></a>Azure uygulama hizmeti
+## <a name="azure-app-service"></a>Azure App Service
 
-[Azure App Service](/azure/app-service/app-service-web-overview) ve [Linux üzerinde App Service'te](/azure/app-service/containers/app-service-linux-intro) yardımcı altyapısına bakım uygulama olmadan çeşitli ölçeklenebilir web uygulamaları ve Hizmetleri hızlı bir şekilde oluşturun.
+[Linux'taki](/azure/app-service/containers/app-service-linux-intro) [Azure Uygulama Hizmeti](/azure/app-service/app-service-web-overview) ve Uygulama Hizmeti, geliştiricilerin altyapıyı korumadan çeşitli ölçeklenebilir web uygulamaları ve hizmetleri hızla oluşturmalarına yardımcı olur.
 
-Ne kadar güç bir App Service bilgisayar seçerek sahip belirlemek bir [katmanı veya planı fiyatlandırması](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) içeren App Service için. Birden çok Web sahip olduğunuz uygulamalar (ve diğer uygulama türleri) paylaşmak aynı App Service fiyatlandırma katmanını değiştirme olmadan. Örneğin, aynı App Service üzerinde birlikte geliştirme, hazırlama ve üretim Web apps'te barındırabilir.
+Bir Uygulama Hizmetinin ne kadar bilgi işlem gücüne sahip olduğunu, bir fiyatlandırma katmanı seçerek veya dahili Uygulama Hizmeti için [plan yaparak](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) belirlersiniz. Fiyatlandırma katmanını değiştirmeden aynı Uygulama Hizmetini birden çok Web uygulamasının (ve diğer uygulama türlerinin) paylaşmasını sağlayabilirsiniz. Örneğin, geliştirme, evreleme ve üretim Web uygulamalarını aynı Uygulama Hizmeti'nde birlikte barındırabilirsiniz.
 
-Azure'da sanal makineler bulutta barındırılan bir App Service çalışır, ancak bu sanal makineler, sizin için yönetilir. Bir App Service her uygulamada benzersiz bir atanacak \*. azurewebsites.net URL'SİYLE; özel etki alanı adlarını siteye atamaya izin ver tüm fiyatlandırma katmanlarına ücretsiz dışında.
+Bir Uygulama Hizmeti Azure'da bulutbarındırılan sanal makinelerde çalışır, ancak bu sanal makineler sizin için yönetilir. Bir Uygulama Hizmeti'ndeki her uygulamaya \*benzersiz bir .azurewebsites.net URL atanır; Ücretsiz dışındaki tüm fiyatlandırma katmanları siteye özel alan adları atanmasına izin verir.
 
-### <a name="when-to-choose-azure-app-service"></a>Ne zaman Azure App Service'ı seçin
+### <a name="when-to-choose-azure-app-service"></a>Azure Uygulama Hizmeti ne zaman seçilir?
 
-- Internet üzerinden erişilebilen bir web uygulamasını dağıtmak istiyorsanız.
-- Yeniden dağıtmaya gerek kalmadan web uygulamanızı talebe göre otomatik olarak ölçeklendirmek istiyorsunuz.
-- (Yazılım güncelleştirmeleri dahil), sunucu altyapısını korumak istemezsiniz.
-- Makine düzeyinde özelleştirmeler, web uygulamanızı barındıran sunucularda gerekmez.
+- Internet üzerinden erişilebilen bir web uygulaması dağıtmak istiyorsunuz.
+- Yeniden dağıtmaya gerek kalmadan web uygulamanızı isteğe göre otomatik olarak ölçeklendirmek istiyorsunuz.
+- Sunucu altyapısını (yazılım güncelleştirmeleri dahil) korumak istemezsinüz.
+- Web uygulamanızı barındıran sunucularda makine düzeyinde özelleştirmelere gerek yoktur.
 
-> Azure App Service, kendi veri merkezinizde veya diğer şirket içi bilgisayarları kullanmak istiyorsanız, bunu kullanarak yapabilirsiniz [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
+> Azure Uygulama Hizmetini kendi veri merkezinizde veya diğer şirket içi bilgisayarlarda kullanmak istiyorsanız, [bunu Azure Yığını'nı](https://azure.microsoft.com/overview/azure-stack/)kullanarak yapabilirsiniz.
 
-App Service'e yayımlama hakkında daha fazla bilgi için bkz. [hızlı başlangıç - Azure App Service'e yayımlama](quickstart-deploy-to-azure.md) ve [hızlı başlangıç - Linux için ASP.NET Core yayımlama](quickstart-deploy-to-linux.md).
+Uygulama Hizmeti'ne yayımlama hakkında daha fazla bilgi için Bkz. Quickstart - Azure App Service ve [Quickstart'ta yayımla](quickstart-deploy-to-azure.md) [- Linux'ASP.NET Çekirdek yayımlayın.](quickstart-deploy-to-linux.md)
 
-## <a name="azure-virtual-machines"></a>Azure sanal makineleri
+## <a name="azure-virtual-machines"></a>Azure Sanal Makineler
 
-[Azure sanal makineleri (VM'ler)](https://azure.microsoft.com/documentation/services/virtual-machines/) oluşturmak ve bulutta bilgi işlem kaynaklarını herhangi bir sayıda yönetmenize olanak tanır. Tüm yazılım ve güncelleştirmeler vm'lerde sorumluluğunu üstlenerek, bunları gerektiğinde, uygulamanız tarafından istenen kadar özelleştirebilirsiniz. İstenen sürece her birine atanan IP adresini korur ve sanal makineleri Uzak Masaüstü aracılığıyla doğrudan erişebilirsiniz.
+[Azure Sanal Makineler (VM'ler),](https://azure.microsoft.com/documentation/services/virtual-machines/) buluttaki herhangi bir sayıda bilgi işlem kaynağı oluşturmanıza ve yönetmenize izin tanır. VM'ler üzerindeki tüm yazılım ve güncelleştirmelerin sorumluluğunu üstlenerek, bunları uygulamanızın gerektirdiği kadar özelleştirebilirsiniz. Sanal makinelere doğrudan Uzak Masaüstü üzerinden erişebilirsiniz ve her biri atandığı IP adresini istediğiniz sürece koruyacaktır.
 
-Sanal makinelerde barındırılan bir uygulamanın ölçeklendirilmesi talebe göre ek VM'ler'kurmak dönen ve ardından gerekli yazılımı dağıtmak içerir. Bu ek düzeyi denetimi sağlar, farklı genel bölgelerde farklı şekilde ölçeklendirin. Örneğin, uygulamanızın çalışanlar bölge ofisi çeşitli çalışıyorsa Vm'lerinizi bu bölgelerde, büyük olasılıkla maliyetleri azaltma çalışanların sayısını göre ölçeklendirebilirsiniz.
+Sanal makinelerde barındırılan bir uygulamayı ölçekleme, talebe göre ek VM'ler döndürmeyi ve gerekli yazılımı dağıtmayı içerir. Bu ek denetim düzeyi, farklı genel bölgelerde farklı ölçeklendirme yapmanızı sağlar. Örneğin, uygulamanız çeşitli bölgesel ofislerde çalışanlara hizmet veriyorsa, VM'lerinizi bu bölgelerdeki çalışan sayısına göre ölçeklendirerek maliyetleri düşürebilirsiniz.
 
-Ek bilgi için bkz [ayrıntılı karşılaştırma](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) Azure App Service, Azure sanal makineler ve Visual Studio'da özel seçeneğini kullanarak dağıtım hedefi olarak kullanabileceğiniz diğer Azure hizmetleri arasında.
+Daha fazla bilgi için, Visual Studio'daki Özel seçeneğini kullanarak dağıtım hedefi olarak kullanabileceğiniz Azure Uygulama Hizmeti, Azure Sanal Makineleri ve diğer Azure hizmetleri arasındaki [ayrıntılı karşılaştırmaya](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) bakın.
 
-### <a name="when-to-choose-azure-app-virtual-machines"></a>Ne zaman Azure uygulama sanal makineleri seçin
+### <a name="when-to-choose-azure-app-virtual-machines"></a>Azure Uygulama Sanal Makineleri ne zaman seçilir?
 
-- Tam Denetim kullanım ömrüne yönelik atanmış IP adresleri Internet üzerinden erişilebilir olan bir web uygulamasını dağıtmak istiyorsanız.
-- Sunucularınız üzerinde belirli ağ yapılandırmaları, disk bölümleri ve benzeri, özel bir veritabanı sistemi gibi ek yazılımlar içeren makine düzeyinde özelleştirmeler gerekir.
-- Web uygulamanızı ölçeklendirme denetim ince bir düzey kullanmanız gerekir.
+- Internet üzerinden erişilebilen ve atanan IP adreslerinin kullanım ömrü üzerinde tam denetime sahip bir web uygulaması dağıtmak istiyorsunuz.
+- Özel leştirilmiş veritabanı sistemi, belirli ağ yapılandırmaları, disk bölümleri vb. gibi ek yazılımları içeren sunucularınızda makine düzeyinde özelleştirmelere ihtiyacınız vardır.
+- Web uygulamanızın ölçekleme üzerinde iyi bir düzeyde kontrol istiyorum.
 - Başka bir nedenle uygulamanızı barındıran sunuculara doğrudan erişmeniz gerekir.
 
-> Azure sanal makineler, kendi veri merkezinizde veya diğer şirket içi bilgisayarları kullanmak istiyorsanız, bunu kullanarak yapabilirsiniz [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
+> Azure Sanal Makineleri kendi veri merkezinizde veya diğer şirket içi bilgisayarlarda kullanmak istiyorsanız, [bunu Azure Yığını'nı](https://azure.microsoft.com/overview/azure-stack/)kullanarak yapabilirsiniz.
 
 ## <a name="file-system"></a>Dosya sistemi
 
-Yalnızca belirli bir klasöre kendi bilgisayarınıza uygulamanızın dosyaları kopyalamak, dosya sistemine dağıtma anlamına gelir. Bu, test amacıyla veya bilgisayar bir sunucu da çalışıyorsa, sınırlı sayıda kişiler tarafından kullanılmak üzere uygulamayı dağıtmak için en sık kullanılır. Hedef klasör, ağda paylaşılan sonra dosya sistemine dağıtma web uygulama dosyaları kişilere ardından belirli sunuculara dağıtabileceğiniz kullanılabilir yapabilirsiniz.
+Dosya sistemine dağıtmak, uygulamanızın dosyalarını kendi bilgisayarınızdaki belirli bir klasöre kopyalamak anlamına gelir. Bu genellikle sınama amacıyla veya bilgisayar da bir sunucu çalıştırıyorsa sınırlı sayıda kişi tarafından kullanılmak üzere uygulama dağıtmak için kullanılır. Hedef klasör bir ağda paylaşılırsa, dosya sistemine dağıtılacak şekilde dağıtılmak, web uygulama dosyalarını belirli sunuculara dağıtabilecek diğer kişiler tarafından kullanılabilir hale getirebilir.
 
-Çalıştıran bir sunucu herhangi bir yerel makine uygulamanızı Internet veya Intranet nasıl yapılandırıldığına bağlı olarak ve bağlı olduğu ağlar üzerinden kullanılabilir hale getirebilirsiniz. (Bir bilgisayar doğrudan Internet'e bağlanmanız durumunda, dış güvenlik tehditlerine karşı korumak özellikle dikkatli olun.) Bu makineleri yönetmek için yazılım ve donanım yapılandırmaları, tam denetim sizdedir.
+Sunucu çalıştıran tüm yerel makineler, nasıl yapılandırıldığına ve bağlı olduğu ağlara bağlı olarak uygulamanızı Internet veya Intranet üzerinden kullanılabilir hale getirebilir. (Bir bilgisayarı doğrudan Internet'e bağlarsanız, bilgisayarı dış güvenlik tehditlerinden korumak için özellikle dikkatli olun.) Bu makineleri yönettiğiniz için, yazılım ve donanım yapılandırmalarını tamamen siz yönetirsiniz.
 
-Herhangi bir nedenle (örneğin, makine erişimi), Azure App Service veya Azure sanal makineler gibi bulut hizmetlerini kullanmadan erişemezseniz, kullanabileceğiniz unutmayın [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) kendi veri merkezinizde. Azure Stack, yönetmek ve Azure App Service ve Azure sanal makineler bilgi işlem kaynaklarında henüz her şeyi şirket içi tutarken kullanmanıza olanak sağlar.
+Herhangi bir nedenle (makine erişimi gibi) Azure Uygulama Hizmeti veya Azure Sanal Makineleri gibi bulut hizmetlerini kullanamıyorsanız, [Azure Yığınını](https://azure.microsoft.com/overview/azure-stack/) kendi veri merkezinizde kullanabileceğinizi unutmayın. Azure Yığını, bilgi işlem kaynaklarını Azure Uygulama Hizmeti ve Azure Sanal Makineleri aracılığıyla yönetmenize ve kullanmanıza olanak sağlarken, her şeyi şirket içinde tutmanıza olanak tanır.
 
-### <a name="when-to-choose-file-system-deployment"></a>Ne zaman dosya sistemi dağıtımı seçin
+### <a name="when-to-choose-file-system-deployment"></a>Dosya sistemi dağıtımı ne zaman seçilir?
 
-- Yalnızca bir dosya paylaşımına, başkalarının da farklı sunuculara dağıtacak dağıtırsınız.
-- Yalnızca yerel test dağıtımını ihtiyacınız vardır.
-- İnceleyin ve potansiyel olarak uygulama dosyalarının bağımsız olarak başka bir dağıtım hedefe göndermeden önce değiştirmek istiyorsunuz.
+- Uygulamayı yalnızca başkalarının farklı sunuculara dağıtacağı bir dosya paylaşımına dağıtmanız gerekir.
+- Yalnızca yerel bir test dağıtımına ihtiyacınız vardır.
+- Başka bir dağıtım hedefine göndermeden önce uygulama dosyalarını bağımsız olarak incelemek ve değiştirmek istiyorsunuz.
 
-Daha fazla bilgi için [hızlı başlangıç - bir yerel klasöre dağıtma](quickstart-deploy-to-local-folder.md)
+Daha fazla bilgi için [Bkz. Hızlı Başlangıç - Yerel bir klasöre dağıt](quickstart-deploy-to-local-folder.md)
 
-## <a name="custom-targets-iis-ftp"></a>Özel hedefleri (IIS, FTP)
+## <a name="custom-targets-iis-ftp"></a>Özel hedefler (IIS, FTP)
 
-Özel bir hedef uygulamanızı Azure App Service, Azure sanal makineler veya yerel dosya sistemi dışında bir hedef dağıtmanıza olanak tanır. Bir dosya sistemi veya diğer bulut Hizmetleri dahil olmak üzere erişim sahibi herhangi başka bir sunucuya (Internet veya Intranet) dağıtabilirsiniz. Web ile çalışabilir dağıtın (dosya veya. ZIP) ve FTP.
+Özel bir hedef, uygulamanızı Azure Uygulama Hizmeti, Azure Sanal Makineleri veya yerel dosya sistemi dışındaki bir hedefe dağıtmanızı sağlar. Diğer bulut hizmetleri de dahil olmak üzere, bir dosya sistemine veya erişiminiz olan başka bir sunucuya (Internet veya Intranet) dağıtılabilir. Bu web dağıtmak (dosyaları veya . ZIP) ve FTP.
 
-Bir özel hedef seçerken, Visual Studio, bir profil adı ve sonra toplama ek ister **bağlantı** hedef sunucuya veya konumu, bir site adı ve kimlik bilgileri gibi bilgileri. Aşağıdaki davranışları denetleyebileceğiniz **ayarları** sekmesinde:
+Özel bir hedef seçerken, Visual Studio bir profil adı ister ve ardından hedef sunucu veya konum, site adı ve kimlik bilgileri dahil olmak üzere ek **Bağlantı** bilgileri toplar. **Ayarlar** sekmesinde aşağıdaki davranışları denetleyebilirsiniz:
 
 - Dağıtmak istediğiniz yapılandırma.
-- Varolan dosyalar'ı hedefinizden kaldırılıp kaldırılmayacağını belirtir.
-- Yayımlama sırasında ön derleme verilmeyeceğini belirtir.
-- App_Data klasöründeki dosyaları dışarıda dağıtımından verilmeyeceğini belirtir.
+- Varolan dosyaların hedeften kaldırılıp kaldırılmayacağı.
+- Yayımlama sırasında önceden derlenip hazırlanılmayacağı.
+- App_Data klasöründeki dosyaların dağıtımdan çıkarılıp çıkarılmayacağı.
 
-Farklı ayarlarla profillerini yönetmek edinerek Visual Studio, herhangi bir sayıda özel dağıtım profilleri oluşturabilirsiniz.
+Visual Studio'da istediğiniz sayıda Özel dağıtım profili oluşturarak profilleri farklı ayarlarla yönetmeyi mümkün kullanabilirsiniz.
 
-### <a name="when-to-choose-custom-deployment"></a>Ne zaman özel bir dağıtım seçin
+### <a name="when-to-choose-custom-deployment"></a>Özel dağıtım ne zaman seçilir?
 
-- Bulut Hizmetleri URL'ler erişilebilen Azure dışında bir sağlayıcı kullanıyorsunuz.
-- Visual Studio içinden kullanın veya bu şekilde Azure hesaplarınızı için doğrudan bağlı olanları dışında kimlik bilgileri kullanarak dağıtmak istediğiniz.
-- Dağıttığınız her zaman hedeften dosyaları silmek istediğiniz.
+- Url'ler aracılığıyla erişilebilen Azure dışındaki bir sağlayıcıda bulut hizmetlerini kullanıyorsunuz.
+- Visual Studio'da kullandığınız kimlik bilgileri veya doğrudan Azure hesaplarınıza bağlı kimlik bilgileri dışında dağıtmak istiyorsunuz.
+- Her dağıtyaptığınızda hedefteki dosyaları silmek istiyorsunuz.
 
-Daha fazla bilgi için [hızlı başlangıç - bir web sitesine dağıtma](quickstart-deploy-to-a-web-site.md)
+Daha fazla bilgi için Bkz. [Hızlı Başlangıç - Bir web sitesine dağıt](quickstart-deploy-to-a-web-site.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Öğretici:
+Öğreticiler:
 
-- [Yayımla aracı ile .NET Core uygulamasını dağıtma](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Azure'a bir ASP.NET core uygulaması yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Yayımlama aracıyla bir .NET Core uygulaması dağıtma](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Azure'da ASP.NET bir çekirdek uygulama yayınlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Visual C++ üzerinde Dağıtım](/cpp/windows/deployment-in-visual-cpp)
-- [UWP uygulamaları dağıtma](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Web dağıtımı kullanarak Azure'da bir Node.js uygulaması yayımlama](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Python uygulamasını Azure App Service'e yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [UWP uygulamalarını dağıtma](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Web Dağıtımı'nı kullanarak Azure'da bir Düğüm.js uygulaması yayınlama](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Python uygulamasını Azure Uygulama Hizmetinde yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)

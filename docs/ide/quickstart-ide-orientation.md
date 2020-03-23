@@ -1,5 +1,5 @@
 ---
-title: Visual Studio IDE turu
+title: Görsel Stüdyo IDE Turu
 titleSuffix: ''
 ms.date: 02/21/2019
 ms.topic: quickstart
@@ -9,39 +9,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 490d3edddd35ad5d72733824e3af41888839e946
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75596976"
 ---
-# <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Hızlı Başlangıç: Visual Studio IDE ilk bakış
+# <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Quickstart: Visual Studio IDE ilk bakış
 
-Bu 5-10 dakikalık bir giriş Visual Studio tümleşik geliştirme ortamı (IDE), biz windows, menüler ve diğer kullanıcı Arabirimi özellikleri bazıları ilişkin tura katılın.
+Visual Studio entegre geliştirme ortamı (IDE) için bu 5-10 dakikalık giriş, bazı pencereler, menüler ve diğer UI özellikleri bir tur alırsınız.
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) gidin ve ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads) gidin ve ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-## <a name="start-page"></a>Başlangıç sayfası
+## <a name="start-page"></a>Başlangıç Sayfası
 
-Visual Studio 'Yu açtıktan sonra ilk olarak **Başlangıç sayfası büyük olasılıkla başlangıç sayfasıdır**. **Başlangıç sayfası** "hub" komut bulmanıza ve proje dosyalarını daha hızlı ihtiyacınız yardımcı olmak için tasarlanmıştır. **Son** projeleri ve klasörleri, çalıştığınız üzerinde son bölümünde görüntülenir. Altında **yeni proje**, ortaya çıkarmak için bir bağlantıya tıklayabilirsiniz **yeni proje** iletişim kutusu veya altında **açın**, bir var olan kod proje veya klasör açabilirsiniz. Sağ tarafta en güncel Geliştirici haberlerini oluşan akışını ' dir.
+Visual Studio'yu açtıktan sonra göreceğiniz ilk şey büyük olasılıkla **Başlangıç Sayfasıdır.** **Başlangıç Sayfası,** ihtiyacınız olan komutları ve proje dosyalarını daha hızlı bulmanıza yardımcı olmak için bir "hub" olarak tasarlanmıştır. **Son** bölümde, son zamanlarda üzerinde çalıştığınız projeler ve klasörler görüntülenir. **Yeni proje**altında, **Yeni Proje** iletişim kutusunu açmak için bir bağlantıyı tıklatabilir veya **Aç**altında, varolan bir kod projesi veya klasörü açabilirsiniz. Sağtarafta en son geliştirici haberleri bir besleme.
 
-![Visual Studio'da başlangıç sayfası](media/start-page.png)
+![Visual Studio'da Başlangıç Sayfası](media/start-page.png)
 
-Kapatırsanız **başlangıç sayfası** ve tekrar görmek istiyorsanız, buradan yeniden **dosya** menüsü.
+**Başlangıç Sayfasını** kapatıp yeniden görmek isterseniz, **Dosya** menüsünden yeniden açabilirsiniz.
 
-![Visual Studio'da Dosya menüsü](media/quickstart-IDE-file-menu-large.png)
+![Visual Studio'da dosya menüsü](media/quickstart-IDE-file-menu-large.png)
 
 ::: moniker-end
 
@@ -49,156 +49,156 @@ Kapatırsanız **başlangıç sayfası** ve tekrar görmek istiyorsanız, burada
 
 ## <a name="start-window"></a>Başlangıç penceresi
 
-Visual Studio 'Yu açtıktan sonra ilk olarak göreceğiniz şey başlangıç penceresidir. Başlangıç penceresi, "koda ulaşmak" için daha hızlı yardımcı olacak şekilde tasarlanmıştır. Kodu kopyalama veya kullanıma alma, mevcut bir projeyi veya çözümü açma, yeni bir proje oluşturma veya yalnızca bazı kod dosyalarını içeren bir klasörü açma seçeneklerine sahiptir.
+Visual Studio'yu açtıktan sonra göreceğiniz ilk şey başlangıç penceresidir. Başlangıç penceresi, "koda daha hızlı girmenize" yardımcı olmak için tasarlanmıştır. Kodu klonlama veya kullanıma verme, varolan bir proje yi veya çözümü açma, yeni bir proje oluşturma veya yalnızca bazı kod dosyaları içeren bir klasörü açma seçenekleri vardır.
 
-[Visual Studio 2019 ' de ![başlangıç penceresi](media/vs-2019/start-window-labeled.png)](media/vs-2019/start-window-labeled.png#lightbox)
+[![Visual Studio 2019'da başlangıç penceresi](media/vs-2019/start-window-labeled.png)](media/vs-2019/start-window-labeled.png#lightbox)
 
-Visual Studio 'Yu ilk kez kullanıyorsanız, son projeler listeniz boş olur.
+Visual Studio'yu ilk kez kullanıyorsanız, son proje listeniz boş olacaktır.
 
-MSBuild tabanlı olmayan kod tabanlarında çalışıyorsanız, Visual Studio 'da kodunuzu açmak için **yerel klasör aç** seçeneğini kullanacaksınız. Daha fazla bilgi için [kod Visual Studio'da projeler veya çözümler olmadan geliştirme](develop-code-in-visual-studio-without-projects-or-solutions.md). Aksi takdirde, yeni bir proje oluşturabilir veya GitHub ya da Azure DevOps gibi bir kaynak sağlayıcıdan proje kopyalayabilirsiniz.
+MSBuild tabanlı olmayan codebases ile çalışıyorsanız, Visual Studio'da kodunuzu açmak için **yerel klasör** aç seçeneğini kullanırsınız. Daha fazla bilgi için visual [studio'da proje veya çözüm olmadan kod geliştir'e](develop-code-in-visual-studio-without-projects-or-solutions.md)bakın. Aksi takdirde, GitHub veya Azure DevOps gibi bir kaynak sağlayıcıdan yeni bir proje oluşturabilir veya proje klonlayabilirsiniz.
 
-**Kod olmadan devam et** seçeneği, Visual Studio geliştirme ortamını belirli bir proje veya kod yüklenmeden yalnızca açar. Bir [live share](/visualstudio/liveshare/) oturumuna katmak veya hata ayıklama için bir işleme iliştirmek üzere bu seçeneği belirleyebilirsiniz. Başlangıç penceresini kapatmak ve IDE 'yi açmak için **ESC** tuşuna da basabilirsiniz.
+**Kodsuz Devam** seçeneği, Visual Studio geliştirme ortamını belirli bir proje veya kod yüklenmeden açar. [Canlı Paylaşım](/visualstudio/liveshare/) oturumuna katılmak veya hata ayıklama işlemine eklemek için bu seçeneği seçebilirsiniz. Ayrıca başlangıç penceresini kapatmak ve IDE'yi açmak için **Esc** tuşuna basabilirsiniz.
 
 ::: moniker-end
 
-## <a name="create-a-project"></a>Proje oluştur
+## <a name="create-a-project"></a>Proje oluşturma
 
-Visual Studio'nun özellikleri keşfetmeye devam etmek için yeni bir proje oluşturalım.
+Visual Studio'nun özelliklerini keşfetmeye devam etmek için yeni bir proje oluşturalım.
 
 ::: moniker range="vs-2017"
 
-1. Üzerinde **başlangıç sayfası**, arama kutusuna altında **yeni proje**, yazın **konsol** adında içeren "konsol" Bu proje türleri listesini filtrelemek için.
+1. Başlangıç **Sayfasında,** **Yeni proje**altındaki arama kutusunda, kendi adlarında "konsol" bulunan proje türlerinin listesini filtrelemek için **konsola** yazın.
 
-   ![Visual Studio Başlangıç sayfasında Proje şablonlarında Ara](media/start-page-search-templates.png)
+   ![Visual Studio Başlangıç Sayfasında proje şablonlarını ara](media/start-page-search-templates.png)
 
-   Visual Studio, çeşitli yardımcı olacak proje şablonları, hızlı bir şekilde kodlama başlama sağlar. C# **Konsol uygulaması (.NET Core)** proje şablonu seçin. (Visual Basic, C++, Javascript veya diğer dil Geliştirici kullanıyorsanız alternatif olarak, bir projeyi bu dillerden birinde oluşturun çekinmeyin. Biz göz atan kullanıcı Arabirimi için tüm programlama dillerinde benzer.)
+   Visual Studio, hızlı bir şekilde kodlamaya başlamanıza yardımcı olan çeşitli proje şablonları sağlar. C# **Console App (.NET Core)** proje şablonu seçin. (Alternatif olarak, Visual Basic, C++, Javascript veya başka bir dil geliştiricisiyseniz, bu dillerden birinde bir proje oluşturmaktan çekinmeyin. Bakacağız UI tüm programlama dilleri için benzer.)
 
-1. İçinde **yeni proje** görüntülenen iletişim kutusunda varsayılan proje adını kabul edin ve **Tamam**.
+1. Görünen **Yeni Proje** iletişim kutusunda varsayılan proje adını kabul edin ve **Tamam'ı**seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinde yeni **bir proje oluştur'u**seçin.
 
-   **Yeni bir proje oluşturur**yazılı bir iletişim kutusu açılır. Burada, bir proje şablonunu arayabilir, filtreleyebilir ve seçebilirsiniz. Ayrıca, son kullanılan proje şablonlarının bir listesini gösterir.
+   **Yeni bir proje oluştur**yazan bir iletişim kutusu açılır. Burada, bir proje şablonunu arayabilir, filtreleyebilir ve seçebilirsiniz. Ayrıca, en son kullandığınız proje şablonlarınızın listesini de gösterir.
 
-1. Üstteki arama kutusunda, proje türleri listesini, adında "konsol" içeren olanlarla filtrelemek için **konsol** yazın. **C#** **Dil** seçicisinden (veya seçtiğiniz başka bir dilde) arama sonuçlarını daha da belirginleştirin.
+1. Üstteki arama kutusunda, proje türlerinin listesini adlarında "konsol" bulunanlara filtrelemek için **konsola** yazın. **Dil** seçiciden **C#** (veya seçtiğiniz başka bir dil) seçerek arama sonuçlarını daha da hassaslaştırın.
 
-   ![Visual Studio 2019 'de yeni proje iletişim kutusu](media/vs-2019/create-a-new-project.png)
+   ![Visual Studio 2019'da yeni proje iletişim kutusu](media/vs-2019/create-a-new-project.png)
 
-1. Visual Basic, veya C# F# diliniz olarak seçtiyseniz **konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin. (Farklı bir dil seçtiyseniz, herhangi bir şablonu seçmeniz yeterlidir. Biz göz atan kullanıcı Arabirimi için tüm programlama dillerinde benzer.)
+1. Diliniz olarak C#, Visual Basic veya F# seçtiyseniz, **Konsol Uygulaması (.NET Core)** şablonunu seçin ve **ardından İleri'yi**seçin. (Farklı bir dil seçtiyseniz, herhangi bir şablon seçmenniz. Bakacağız UI tüm programlama dilleri için benzer.)
 
-1. **Yeni projenizi yapılandırın** sayfasında varsayılan proje adını ve konumunu kabul edin ve **Oluştur**' u seçin.
+1. Yeni **proje sayfanızı Yapılandır'da** varsayılan proje adını ve konumunu kabul edin ve ardından **Oluştur'u**seçin.
 
 ::: moniker-end
 
-   Proje oluşturulur ve bir dosya adlı *Program.cs* açılır **Düzenleyicisi** penceresi. **Düzenleyici** , dosyaların içeriğini gösterir ve kodlarınızın çoğunun Visual Studio 'da çalışmasını istediğiniz yerdir.
+   Proje oluşturulur ve *Program.cs* adlı bir dosya **Düzenleyici** penceresinde açılır. **Editör** dosyaların içeriğini gösterir ve Visual Studio'da kodlama çalışmalarınızın çoğunu nerede yapacağınız yerdir.
 
-   ![Visual Studio Düzenleyicisi](media/editor.png)
+   ![Visual Studio Editörü](media/editor.png)
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
-**Çözüm Gezgini**, genellikle Visual Studio'nun sağ tarafta olduğu gösterir, dosya ve klasörlerin hiyerarşi grafik gösterimi proje, çözüm veya kod klasörü. Hiyerarşi göz atabilir ve bir dosyaya gidin **Çözüm Gezgini**.
+Genellikle Visual Studio'nun sağ tarafında bulunan **Solution Explorer,** projenizdeki, çözümünüzdeki veya kod klasörünüzdeki dosya ve klasörhiyerarşisinin grafiksel bir gösterimini gösterir. Hiyerarşiye göz atabilir ve **Çözüm Gezgini'ndeki**bir dosyaya gidebilirsiniz.
 
-![Visual Studio'daki Çözüm Gezgini'nde](media/quickstart-IDE-solution-explorer.png)
+![Visual Studio'da Çözüm Gezgini](media/quickstart-IDE-solution-explorer.png)
 
 ## <a name="menus"></a>Menüler
 
-Visual Studio'nun üst menü çubuğu komutlarını kategoriler halinde gruplandırır. Örneğin, **proje** menüsü, içinde çalışmakta olduğunuz projeye ilgili komutları içerir. Üzerinde **Araçları** menüsünde seçerek Visual Studio nasıl davranacağını özelleştirebileceğiniz **seçenekleri**, veya özelliklerini seçerek yüklemenize ekleyin **araçları ve özellikleri Al**.
+Visual Studio gruplarının üst kısmındaki menü çubuğu kategorilere ayrılır. Örneğin, **Proje** menüsü nde çalıştığınız projeyle ilgili komutlar içerir. **Araçlar** menüsünde, **Seçenekler'i**seçerek Visual Studio'nun nasıl bir şekilde nasıl hissettiğini özelleştirebilir veya Araçları ve **Özellikleri Al'ı**seçerek yüklemenize özellikler ekleyebilirsiniz.
 
 ::: moniker range="vs-2017"
 
-![Visual Studio 2017 ' de menü çubuğu](media/quickstart-IDE-menu-bar.png)
+![Visual Studio 2017 menü çubuğu](media/quickstart-IDE-menu-bar.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-![Visual Studio 2019 ' de menü çubuğu](media/vs-2019/menu-bar.png)
+![Visual Studio 2019'da menü çubuğu](media/vs-2019/menu-bar.png)
 
 ::: moniker-end
 
 ## <a name="error-list"></a>Hata Listesi
 
-**Görünüm** menüsünü seçip **hata listesi** **hata listesi** penceresini açın.
+**Görünüm** menüsünü seçerek **Hata Listesi** penceresini ve ardından **Hata Listesi'ni**açın.
 
-**Hata listesi** hata, uyarı ve kodunuzu geçerli durumuna ilişkin ileti gösterir. Hataları (örneğin, bir eksik küme ayracı veya noktalı virgül) dosyanızı veya herhangi bir projeniz varsa, bunlar burada listelenen.
+**Hata Listesi,** kodunuzu geçerli durumuna ilişkin hataları, uyarıyı ve iletileri gösterir. Dosyanızda veya projenizde herhangi bir yerde herhangi bir hata (örneğin eksik ayraç veya yarı sütun gibi) varsa, bunlar burada listelenir.
 
-![Visual Studio hata listesi](media/quickstart-IDE-error-list.png)
+![Visual Studio'da Hata Listesi](media/quickstart-IDE-error-list.png)
 
 ## <a name="output-window"></a>Çıktı penceresi
 
-**Çıkış** çıkış penceresi şunu gösterir, iletileri projenizi oluşturma ve kaynak denetimi sağlayıcınız.
+**Çıktı** penceresi, projenizi oluşturmaktan ve kaynak denetim sağlayıcınızdan gelen çıktı iletilerini gösterir.
 
-Şimdi projeyi görmek için bazı derleme çıkışı. Gelen **derleme** menüsünde seçin **Çözümü Derle**. **Çıkış** penceresi otomatik olarak odağa gelir ve derleme başarılı iletisini görüntüler.
+Biraz yapı çıktısı görmek için projeyi oluşturalım. **Yapı** menüsünden **Çözüm Oluştur'u**seçin. **Çıktı** penceresi otomatik olarak odak alır ve başarılı bir yapı iletisi görüntüler.
 
-![Visual Studio çıktı penceresinde](media/build-output-minimal.png)
+![Visual Studio'da çıkış penceresi](media/build-output-minimal.png)
 
 ## <a name="search-box"></a>Arama kutusu
 
-Arama kutusu, Visual Studio 'da çok daha fazla şeye gitmeniz için hızlı ve kolay bir yoldur. Yapmak istediğiniz ilgili metin girebilir ve onu metne ait seçenekler listesini göstereceğiz. Örneğin, tam olarak ne yapı yapıyor ek bilgileri görüntülemek için derleme çıkışın ayrıntı düzeyini artırmak istediğiniz düşünün. İşte, nasıl yapabilir:
+Arama kutusu Visual Studio hemen hemen her şeyi gezinmek için hızlı ve kolay bir yoldur. Ne yapmak istediğinizle ilgili bazı metinler girebilirsiniz ve bu metinle ilgili seçeneklerin listesini gösterir. Örneğin, yapının tam olarak ne yaptığıyla ilgili ek ayrıntıları görüntülemek için yapı çıktısının ayrıntılılığını artırmak istediğinizi düşünün. Bunu şu şekilde yapabilirsiniz:
 
 ::: moniker range="vs-2017"
 
-1. IDE 'nin sağ üst köşesindeki **Hızlı başlatma** arama kutusunu bulun. (Alternatif olarak, erişmek için **Ctrl**+**Q** tuşlarına basın.)
+1. IDE'nin sağ üst kısmındaki **Hızlı Başlat** arama kutusunu bulun. (Alternatif olarak, erişmek için **Ctrl**+**Q** tuşuna basın.)
 
-2. Arama kutusuna **ayrıntı düzeyi** yazın. Görüntülenen sonuçlardan seçin **projeler ve çözümler--> derleme ve çalıştırma** altında **seçenekleri** kategorisi.
+2. Arama kutusuna **ayrıntılı lık** yazın. Görüntülenen sonuçlararasından, Seçenekler kategorisi altında **Projeler ve Çözümler > Oluştur ve Çalıştır'ı** seçin. **Options**
 
-   ![Visual Studio 2017 'de Hızlı Başlat arama kutusu](media/quickstart-IDE-quick-launch.png)
+   ![Visual Studio 2017'de hızlı başlatma arama kutusu](media/quickstart-IDE-quick-launch.png)
 
-   **Seçenekleri** iletişim kutusu açılır **derleme ve çalıştırma** seçenekler sayfası.
+   **Seçenekler** iletişim kutusu Yap **ve Çalıştır** seçenekleri sayfasına açılır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. IDE 'nin üst kısmındaki arama kutusunu etkinleştirmek için **Ctrl**+**Q** tuşlarına basın.
+1. IDE'nin üst kısmındaki arama kutusunu etkinleştirmek için **Ctrl**+**Q** tuşuna basın.
 
-2. Arama kutusuna **ayrıntı düzeyi** yazın. Görünen sonuçlardan **MSBuild ayrıntı düzeyini Değiştir**' i seçin.
+2. Arama kutusuna **ayrıntılı lık** yazın. Görüntülenen sonuçlardan **MSBuild ayrıntılılığını değiştir'i**seçin.
 
-   ![Visual Studio 2019 'de arama kutusu](media/vs-2019/quick-launch-verbosity.png)
+   ![Visual Studio 2019'da arama kutusu](media/vs-2019/quick-launch-verbosity.png)
 
-   **Seçenekleri** iletişim kutusu açılır **derleme ve çalıştırma** seçenekler sayfası.
+   **Seçenekler** iletişim kutusu Yap **ve Çalıştır** seçenekleri sayfasına açılır.
 
 ::: moniker-end
 
-3. Altında **MSBuild proje oluşturması çıkış ayrıntısı**, seçin **Normal**ve ardından **Tamam**.
+3. **MSBuild proje altında çıkış ayrıntılı olarak yapı,** **Normal'i**seçin ve sonra **Tamam'ı**tıklatın.
 
-4. Sağ tıklayarak projeyi yeniden derleyin **ConsoleApp1** projesi **Çözüm Gezgini** seçip **yeniden** bağlam menüsünden.
+4. **Solution Explorer'daki** **ConsoleApp1** projesine sağ tıklayarak ve bağlam menüsünden **Yeniden Oluştur'u** seçerek projeyi yeniden oluşturun.
 
-   Bu süre **çıkış** penceresi, hangi dosyalar dahil olmak üzere nerede kopyalanan yapı işleminden daha ayrıntılı günlük kaydı gösterir.
+   Bu kez **Çıktı** penceresi, hangi dosyaların nerede kopyalandığı da dahil olmak üzere yapı işleminden daha ayrıntılı günlüğe kaydetmeyi gösterir.
 
-   ![Visual Studio'da ayrıntılı yapı çıktısı](media/build-output-verbose.png)
+   ![Visual Studio'da verbose çıkış oluşturmak](media/build-output-verbose.png)
 
-## <a name="send-feedback-menu"></a>Menü geri bildirim gönder
+## <a name="send-feedback-menu"></a>Geri Bildirim Gönder menüsü
 
-Visual Studio kullanırken herhangi bir sorunla karşılaşmanız gerekir ya da ürünü geliştirme hakkında önerileriniz varsa, Visual Studio penceresinin üst kısmındaki **geri bildirim gönder** menüsünü kullanabilirsiniz.
+Visual Studio'yu kullanırken herhangi bir sorunla karşılaşırsanız veya ürünü nasıl geliştireceğiniz konusunda önerileriniz varsa, Visual Studio penceresinin üst kısmındaki **Geri Bildirim Gönder** menüsünü kullanabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-![Visual Studio 2017 ' de geri bildirim menüsü gönder](media/quickstart-IDE-send-feedback.png)
+![Visual Studio 2017'de Geri Bildirim Gönder menüsü](media/quickstart-IDE-send-feedback.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-![Visual Studio 2019 ' de geri bildirim menüsü gönder](media/vs-2019/send-feedback-menu.png)
+![Visual Studio 2019'da Geri Bildirim Gönder menüsü](media/vs-2019/send-feedback-menu.png)
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio kullanıcı arabirimi ile tanışın özelliklerinin birkaçı adresindeki inceledik. Daha iyi keşfedilebilmesi için:
+Kullanıcı arabirimini tanımak için Visual Studio'nun özelliklerinden sadece birkaçına baktık. Daha fazla keşfetmek için:
 
 > [!div class="nextstepaction"]
-> [Kod Düzenleyicisi hakkında bilgi edinin](../get-started/tutorial-editor.md)
+> [Kod düzenleyicisi hakkında bilgi edinin](../get-started/tutorial-editor.md)
 
 > [!div class="nextstepaction"]
 > [Projeler ve çözümler hakkında bilgi edinin](../get-started/tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio IDE genel bakış](../get-started/visual-studio-ide.md)
-- [Visual Studio 'nun daha fazla özelliği](../ide/advanced-feature-overview.md)
-- [Tema ve yazı tipi renkleri değiştirme](../ide/quickstart-personalize-the-ide.md)
+- [Visual Studio IDE'ye Genel Bakış](../get-started/visual-studio-ide.md)
+- [Visual Studio'nun diğer özellikleri](../ide/advanced-feature-overview.md)
+- [Tema ve yazı tipi renklerini değiştirme](../ide/quickstart-personalize-the-ide.md)

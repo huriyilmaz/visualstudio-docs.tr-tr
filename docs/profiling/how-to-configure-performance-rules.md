@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: performans kurallarını yapılandırma | Microsoft Docs'
+title: 'Nasıl Yapılandırılır: Performans Kurallarını Yapılandırma | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,29 +12,29 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: c9bb9b07a0ae1fa19ae48408aa34a9dfb6577b6e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779018"
 ---
-# <a name="how-to-configure-performance-rules"></a>Nasıl yapılır: performans kurallarını yapılandırma
-Visual Studio 'nun performans uyarıları Profil Oluşturma Araçları programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca, daha yararlı veriler toplamak için koleksiyon yöntemlerini değiştirmeniz gerekebilecek anlamına da gelebilir. Performans uyarıları bir profil oluşturma oturumunda otomatik olarak oluşturulur ve profil oluşturma veri dosyası [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]açıldığında **hata listesi** penceresinde görüntülenir. Belirli uyarılar ilgilendiğiniz senaryolar için uygulanmayabilir ve bazı uyarılar doğru şekilde oluşturulabilir. Belirli uyarıları göstermek veya gizlemek için performans uyarılarını yapılandırabilirsiniz.
+# <a name="how-to-configure-performance-rules"></a>Nasıl yapılır: Performans kurallarını yapılandırma
+th Visual Studio Profil Oluşturma Araçları'nın performans uyarıları, profilli bir uygulamada program yürütmesini yavaşlatabilecek sorunları gösterir. Uyarılar, daha yararlı veriler toplamak için toplama yöntemlerini değiştirmeniz gerekebileceğini de gösterebilir. Performans uyarıları bir profil oluşturma oturumunda otomatik olarak oluşturulur ve bir profil oluşturma veri [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]dosyası açıldığında Hata **Listesi** penceresinde görünür. Bazı uyarılar ilgilendiğiniz senaryolar için geçerli olmayabilir ve bazı uyarılar yanlış yükseltilebilir. Belirli uyarıları göstermek veya gizlemek için performans uyarılarını yapılandırabilirsiniz.
 
-### <a name="to-configure-profiler-performance-warnings"></a>Profil Oluşturucu performans uyarılarını yapılandırmak için
+### <a name="to-configure-profiler-performance-warnings"></a>Profil oluşturucu performans uyarılarını yapılandırmak için
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. **Performans araçları**' nı genişletin ve ardından **kurallar**' a tıklayın.
+2. **Performans Araçlarını**Genişlet ve **Ardından Kurallar'ı**tıklatın.
 
-3. Bir uyarıyı etkinleştirmek veya devre dışı bırakmak için, uyarı **kimliği** ve adının yanındaki onay kutusunu işaretleyin veya temizleyin.
+3. Bir uyarıyı etkinleştirmek veya devre dışı ksaymak için uyarı **kimliği** ve adının yanındaki onay kutusunu seçin veya temizleyin.
 
-4. Bir kuralın warzil düzeyini belirtmek için kuralın yanındaki **eylem** hücresine tıklayın ve sonra uyarı düzeyine tıklayın.
+4. Bir kuralın savaşan düzeyini belirtmek için, kuralın yanındaki **Eylem** hücresini tıklatın ve ardından uyarı düzeyini tıklatın.
 
-    - **Devre dışı** -kuralı devre dışı bırakır (kural kimliği 'nin yanındaki onay kutusunun temizlenmesiyle aynıdır).
+    - **Devre dışı -** kuralı devre dışı eder (bu, kural kimliğinin yanındaki onay kutusunu temizlemekle aynıdır).
 
-    - **Uyarı** -kuralı uyarı olarak görüntüler.
+    - **Uyarı** - bir uyarı olarak kural görüntüler.
 
-    - **Hata** -yürütme profili oluşturma ve kuralı hata olarak görüntüleme.
+    - **Hata** - profil oluşturma yürütme durur ve bir hata olarak kural görüntüler.
 
-    - **Bilgi** -kuralı yalnızca bilgi olarak görüntüler.
+    - **Bilgi** - kuralı yalnızca bilgi olarak görüntüler.

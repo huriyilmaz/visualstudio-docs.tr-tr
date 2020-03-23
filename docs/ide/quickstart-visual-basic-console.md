@@ -1,6 +1,6 @@
 ---
-title: Visual Basic ile ilk konsol uygulamanızı oluşturma
-description: Visual Studio 'da Visual Basic, adım adım ile basit bir Merhaba Dünya konsol uygulaması oluşturmayı öğrenin.
+title: Visual Basic ile ilk konsol uygulamanızı oluşturun
+description: Visual Studio'da Visual Basic ile adım adım basit bir Hello World konsol uygulaması oluşturmayı öğrenin.
 ms.custom: seodec18
 ms.date: 03/23/2019
 ms.technology: vs-ide-general
@@ -15,130 +15,130 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 34f3dc8642e2cf8e965e2ad303bed79931d2645c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579503"
 ---
-# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Hızlı başlangıç: Visual Basic ile Visual Studio 'da ilk konsol uygulamanızı oluşturma
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Quickstart: Visual Basic ile Visual Studio'da ilk konsol uygulamanızı oluşturun
 
-Visual Studio tümleşik geliştirme ortamına (IDE) bu 5-10 dakikalık bir giriş içinde, konsolunda çalışan basit bir Visual Basic uygulaması oluşturacaksınız.
+Visual Studio entegre geliştirme ortamına (IDE) 5-10 dakikalık bu girişte, konsolda çalışan basit bir Visual Basic uygulaması oluşturursunuz.
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
+Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) gidin ve ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads) gidin ve ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-İlk olarak, Visual Basic uygulama projesi oluşturacaksınız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
+İlk olarak, bir Visual Basic uygulama projesi oluşturursunuz. Proje türü, daha bir şey eklemeden önce ihtiyacınız olan tüm şablon dosyalarıyla birlikte gelir!
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio 2017'yi açın.
 
-2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
+2. Üst menü çubuğundan **Yeni** > **New** > **Dosya Yı**seçin.
 
-3. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *HelloWorld*olarak adlandırın.
+3. Sol bölmedeki **Yeni Proje** iletişim kutusunda **Visual Basic'i**genişletin ve **ardından .NET Core'u**seçin. Orta bölmede Konsol **Uygulaması'nı (.NET Core)** seçin. Sonra proje *HelloWorld*adını .
 
-   ![Visual Studio IDE 'de yeni proje iletişim kutusundaki konsol uygulaması (.NET Core) proje şablonu](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
+   ![Visual Studio IDE'deki Yeni Proje iletişim kutusunda Konsol Uygulaması (.NET Core) proje şablonu](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
-     **Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Yeni proje** Iletişim kutusunun sol bölmesindeki **Aç Visual Studio yükleyicisi** bağlantısına tıklayın.
+     **Konsol Uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Yeni Proje** iletişim kutusunun sol bölmesinde Görsel **Stüdyo Yükleyici** Aç bağlantısını tıklatın.
 
-   ![Yeni proje iletişim kutusundan Visual Studio Yükleyicisi aç bağlantısına tıklayın](../ide/media/vb-open-visual-studio-installer-hello-world.png)
+   ![Yeni Proje iletişim kutusundan Görsel Stüdyo Yükleyiciaç'ı Aç bağlantısını tıklayın](../ide/media/vb-open-visual-studio-installer-hello-world.png)
 
-     Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+     Visual Studio Installer başlattı. **.NET Core çapraz platform geliştirme** iş yükünü seçin ve sonra **Değiştir'i**seçin.
 
-     ![Visual Studio Yükleyicisi .NET Core platformlar arası geliştirme iş yükü](../ide/media/dot-net-core-xplat-dev-workload.png)
+     ![.NET Core platform ötesi geliştirme iş yükü Visual Studio Installer'da](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Bu hızlı başlangıçtaki ekran görüntüleri koyu temasını kullanır. Koyu tema kullanmıyorsanız, ancak isterseniz, nasıl yapılacağını öğrenmek için [Visual STUDIO IDE ve düzenleyici 'Yi kişiselleştirme](quickstart-personalize-the-ide.md) sayfasına bakın.
+> Bu Quickstart'taki ekran ekranlarından bazıları karanlık teonu kullanır. Karanlık temayı kullanmıyorsanız ancak kullanmak istiyorsanız, nasıl yapılacağını öğrenmek için [Visual Studio IDE ve Editor](quickstart-personalize-the-ide.md) sayfasını Kişiselleştir sayfasına bakın.
 
-1. Visual Studio 2019 ' i açın.
+1. Görsel Stüdyo 2019'u açın.
 
-1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinde yeni **bir proje oluştur'u**seçin.
 
-   ![' Yeni proje oluştur ' penceresini görüntüleyin](../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   !['Yeni proje oluşturma' penceresini görüntüleme](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **Visual Basic** ' yi seçin ve ardından platform listesinden **Windows** ' u seçin. 
+1. Yeni **proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, Dil listesinden **Visual Basic'i** seçin ve ardından Platform listesinden **Windows'u** seçin. 
 
-   Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   Dil ve platform filtrelerini uyguladıktan sonra **Konsol Uygulaması (.NET Core)** şablonunu seçin ve **sonra İleri'yi**seçin.
 
-   ![Konsol uygulaması için Visual Basic şablonu seçin (.NET Framework)](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-console-net-core-filtered.png)
+   ![Konsol Uygulaması için Visual Basic şablonu (.NET Framework) seçeneğini seçin](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-console-net-core-filtered.png)
 
    > [!NOTE]
-   > **Konsol uygulaması (.NET Core)** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
+   > **Konsol Uygulaması (.NET Core)** şablonunu görmüyorsanız, yeni **bir proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisinde, daha **fazla araç ve özellik yükle** bağlantısını seçin.
    >
-   > ![' Yeni proje oluştur ' penceresindeki ' daha fazla araç ve özellik yüklemesi ' ' ne aradığınızı bulma ' iletisi bağlantısı](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > !['Yeni proje oluştur' penceresindeki 'Aradığınızı bulamıyor' iletisinden 'Daha fazla araç ve özellik yükleyin' bağlantısı](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > Sonra, Visual Studio Yükleyicisi **.NET Core platformlar arası geliştirme** iş yükünü seçin.
+   > Ardından, Visual Studio Installer'da **.NET Core çapraz platform geliştirme** iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi .NET Core platformlar arası geliştirme iş yükü](../get-started/media/dot-net-core-xplat-dev-workload.png)
+   > ![.NET Core platform ötesi geliştirme iş yükü Visual Studio Installer'da](../get-started/media/dot-net-core-xplat-dev-workload.png)
    >
-   > Bundan sonra Visual Studio Yükleyicisi **Değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin. Ardından, bu "[Proje oluşturma](#create-a-project)" yordamında 2. adıma geri dönün.
+   > Bundan sonra Visual Studio Installer'daki **Değiştir** düğmesini seçin. Çalışmanızı kaydetmeniz istenebilir; eğer öyleyse, bunu yapın. Ardından, iş yükünü yüklemeye **devam** et'i seçin. Daha sonra, bu "[Proje oluştur](#create-a-project)" yordamındaki 2.
 
-1. **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *WhatIsYourName* yazın veya girin. Ardından **Oluştur**' u seçin.
+1. Yeni **proje pencerenizi Yapılandır'da** **Proje adı** kutusuna *WhatIsYourName* yazın veya girin. Ardından **Oluştur'u**seçin.
 
-   ![' yeni projenizi yapılandırın ' penceresinde, ' WhatIsYourName ' projenizi adlandırın](../get-started/visual-basic/media/vs-2019/vb-name-your-project-whatname.png)
+   !['Yeni projenizi yapılandır' penceresinde, projenize 'WhatIsYourName' adını](../get-started/visual-basic/media/vs-2019/vb-name-your-project-whatname.png)
 
-   Visual Studio yeni projenizi açar.
+   Visual Studio yeni projenizi açıyor.
 
 ::: moniker-end
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-Visual Basic proje şablonunuzu seçip projenizi adlandırın, Visual Studio sizin için basit bir "Merhaba Dünya" uygulaması oluşturur. "Merhaba Dünya!" değişmez dizesini göstermek için <xref:System.Console.WriteLine%2A> yöntemini çağırır Konsol penceresinde.
+Visual Basic proje şablonunuzu seçtikten ve projenize isim verdikten sonra Visual Studio sizin için basit bir "Hello World" uygulaması oluşturur. Bu kelime <xref:System.Console.WriteLine%2A> dizesini görüntülemek için yöntem çağırır "Merhaba Dünya!" konsol penceresinde.
 
-![Şablondan varsayılan Merhaba Dünya kodunu görüntüleme](../ide/media/vb-console-helloworld-template.png)
+![Varsayılan Hello World kodunu şablondan görüntüleme](../ide/media/vb-console-helloworld-template.png)
 
-IDE 'deki **HelloWorld** düğmesine tıklarsanız, programı hata ayıklama modunda çalıştırabilirsiniz.
+IDE'deki **HelloWorld** düğmesini tıklatırsanız, programı Hata Ayıklama modunda çalıştırabilirsiniz.
 
-  ![Programı hata ayıklama modunda çalıştırmak için Merhaba Dünya düğmesine tıklayın](../ide/media/vb-console-hello-world-button.png)
+  ![Programı Hata Ayıklama modunda çalıştırmak için Merhaba Dünya düğmesini tıklatın](../ide/media/vb-console-hello-world-button.png)
 
-Bunu yaptığınızda, konsol penceresi kapanmadan önce yalnızca bir süre görünür olur. Bunun nedeni, `Main` yönteminin tek bir deyimin yürütüldükten sonra sonlandırdığı ve uygulamanın sona ermesidir.
+Bunu yaptığınızda, konsol penceresi kapanmadan önce yalnızca bir an görünür. Yöntem, tek `Main` bir deyim yürütülmeden sonra sona erdirir ve böylece uygulama sona erer, çünkü bu olur.
 
-### <a name="add-some-code"></a>Kod ekleme
+### <a name="add-some-code"></a>Bazı kod ekleme
 
-Uygulamayı duraklatmak için bazı kodlar ekleyelim ve sonra Kullanıcı girişi soralım.
+Uygulamayı duraklatmak için bazı kodlar ekleyelim ve ardından kullanıcı girişi isteyelim.
 
-1. <xref:System.Console.WriteLine%2A> yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
+1. <xref:System.Console.WriteLine%2A> Aramadan hemen sonra yönteme aşağıdaki kodu ekleyin:
 
    ```vb
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
 
-    Bu, bir tuşa basarak programı duraklatır.
+    Bu, bir tuşa basana kadar programı duraklatlar.
 
-2. Menü çubuğunda **derleme** > **Build Solution**' ı seçin.
+2. Menü çubuğunda **Yapı** > **Çözümünü**seçin.
 
-   Bu, programınızı bir tam zamanında (JıT) derleyicisi tarafından ikili koda dönüştürülen bir ara dile (IL) derler.
+   Bu, programınızı tam zamanında (JIT) derleyici tarafından ikili koda dönüştürülen bir ara dile (IL) dönüştürür.
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Araç çubuğundaki **HelloWorld** düğmesine tıklayın.
+1. Araç çubuğundaki **HelloWorld** düğmesini tıklatın.
 
-   ![Programı araç çubuğundan çalıştırmak için Merhaba Dünya düğmesine tıklayın](../ide/media/vb-console-hello-world-button.png)
+   ![Programı araç çubuğundan çalıştırmak için Hello World düğmesini tıklatın](../ide/media/vb-console-hello-world-button.png)
 
 2. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
-   ![Merhaba Dünya gösteren konsol penceresi ve devam etmek için herhangi bir tuşa basın](../ide/media/vb-console-hello-world-press-any-key.png)
+   ![Hello World'u gösteren konsol penceresi ve devam etmek için herhangi bir tuşa basın](../ide/media/vb-console-hello-world-press-any-key.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu hızlı başlangıcı tamamladığınızda Tebrikler! Visual Basic ve Visual Studio IDE hakkında biraz öğrenilen umuyoruz. Daha fazla bilgi edinmek için aşağıdaki öğreticiye geçin.
+Bu Quickstart'ı tamamladığınız için tebrikler! Biz Visual Basic ve Visual Studio IDE hakkında biraz öğrendim umuyoruz. Daha fazla bilgi edinmek için aşağıdaki öğreticiye devam edin.
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da Visual Basic kullanmaya başlama](../get-started/visual-basic/tutorial-console.md)
+> [Visual Studio'da Visual Basic ile başlayın](../get-started/visual-basic/tutorial-console.md)

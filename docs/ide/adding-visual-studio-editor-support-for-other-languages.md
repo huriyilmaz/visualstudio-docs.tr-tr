@@ -1,5 +1,5 @@
 ---
-title: Diğer diller için düzenleyici desteği eklendi
+title: Diğer diller için düzenleyici desteği ekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,34 +17,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d4fafaf9356d8862808e1ac6ad125207d71769b5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590884"
 ---
-# <a name="add-visual-studio-editor-support-for-other-languages"></a>Diğer diller için Visual Studio Düzenleyicisi desteği Ekle
+# <a name="add-visual-studio-editor-support-for-other-languages"></a>Diğer diller için Visual Studio düzenleyici desteği ekleme
 
-Okuma ve farklı bir bilgisayara dil arasında gezinme Visual Studio Düzenleyicisi'ni nasıl destekler ve diğer diller için Visual Studio Düzenleyicisi desteği nasıl ekleyebileceğinizi öğrenin.
+Visual Studio düzenleyicisinin farklı bilgisayar dillerinde okumayı ve gezinmeyi nasıl desteklediği ve diğer diller için Visual Studio düzenleyici desteği ni nasıl ekleyebileceğiniz hakkında bilgi edinin.
 
-## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>Söz dizimi renklendirme ve deyim tamamlama gitmek için destek
+## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>Sözdizimi renklendirme, ekstre tamamlama ve destek için gezinme
 
-Visual Studio Düzenleyicisi söz dizimi renklendirme, deyim tamamlama (IntelliSense olarak da bilinir) gibi özellikleri ve _gitmek için_ daha kolayca yazma, okuma ve kodunuzu düzenleyin yardımcı olabilir. Aşağıdaki ekran görüntüsünde, Perl komut dosyasını Visual Studio'da düzenleme bir örnek gösterilmektedir. Söz dizimi, otomatik olarak renklendirilir. Örneğin, kod içindeki açıklamalar yeşil renktedir kodudur siyah yolları kırmızı ve deyimleri mavi. Visual Studio Düzenleyicisi söz dizimi renklendirme desteklediği herhangi bir dil için otomatik olarak uygular. Ayrıca, bilinen dil anahtar sözcüğü veya nesne girmeye başladığınızda, deyim tamamlama olası deyimleri ve nesnelerin bir listesini görüntüler. Deyim tamamlama daha hızlı ve kolay bir şekilde kod yazmanıza yardımcı olabilir.
+Görsel Stüdyo düzenleyicisindeki sözdizimi renklendirme, ifade tamamlama (IntelliSense olarak da bilinir) ve _Gezinme ye_ gibi özellikler kodunuzu daha kolay yazmanıza, okumanıza ve değiştirmenize yardımcı olabilir. Aşağıdaki ekran görüntüsü Visual Studio'da bir Perl komut dosyası düzenleme bir örnek gösterir. Sözdizimi otomatik olarak renklenir. Örneğin, koddaki açıklamalar yeşil renkli, kod siyah, yollar kırmızı ve deyimler mavidir. Visual Studio düzenleyicisi, desteklediği herhangi bir dile otomatik olarak sözdizimi renklendirme uygular. Ayrıca, bilinen bir dil anahtar sözcüğü veya nesnesini girmeye başladığınızda, deyim tamamlama olası deyimlerin ve nesnelerin listesini görüntüler. Ekstre tamamlama, kod yazmayı daha hızlı ve kolay bir şekilde yazmanıza yardımcı olabilir.
 
-![Perl komut söz dizimi renklendirme](../ide/media/vside_perledit.png)
+![Perl komut dosyasında sözdizimi renklendirme](../ide/media/vside_perledit.png)
 
-Visual Studio şu anda sağlar söz dizimi renklendirme ve temel deyim tamamlama desteği aşağıdaki dillerde kullanarak [TextMate dil bilgileri](https://manual.macromates.com/en/language_grammars). En sevdiğiniz dil tabloda değilse, bunu ekleyebilirsiniz&mdash;endişelenmeyin.
+Visual Studio şu anda [TextMate Grammars](https://manual.macromates.com/en/language_grammars)kullanarak aşağıdaki diller için sözdizimi renklendirme ve temel deyim tamamlama desteği sağlar. En sevdiğiniz dil tabloda yoksa, endişelenmeyin&mdash;ekleyebilirsiniz.
 
 |||||||
 |-|-|-|-|-|-|
-|BAT|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|Git|JavaDoc|Objective-C|ShaderLab|C#|
+|Yarasa|F#|Java|Markdown|Pas|Visual Basic|
+|Clojure|Başlayın|JavaDoc|Objective-C|ShaderLab|C#|
 |CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|DAHA AZ|Python|SQL|VBNet|
-|{1&gt;CSS&lt;1}|INI|LUA|R|Swift|{1&gt;XML&lt;1}|
+|CoffeeScript|HTML|Daha az|Python|SQL|VBNet|
+|CSS|INI|Lua|R|Swift|XML|
 |Docker|Jade|Marka|Ruby|TypeScript|YAML|
 
-Söz dizimi renklendirme ve temel deyim tamamlama ek olarak, Visual Studio de denilen bir özelliği olan [gitmek için](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Bu özellik, kod dosyalarında, dosya yollarında ve kod sembollerine hızlıca arama yapmanızı sağlar. Visual Studio aşağıdaki dillerde gitmek için destek sağlar.
+Sözdizimi renklendirme ve temel ifade tamamlama ek olarak, Visual Studio da [için git](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/)adlı bir özelliği vardır. Bu özellik, kod dosyalarını, dosya yollarını ve kod sembollerini hızla aramanızı sağlar. Visual Studio, aşağıdaki diller için Gezinme desteği sağlar.
 
 - C#
 
@@ -56,39 +56,39 @@ Söz dizimi renklendirme ve temel deyim tamamlama ek olarak, Visual Studio de de
 
 - Visual Basic
 
-- Git
+- Başlayın
 
 - Java
 
 - PHP
 
-Bu dosya türlerini belirli bir dil henüz yüklenmemiştir desteği özellikleri açıklandığı gibi daha önce bile sahiptir. Bazı diller için özelleştirilmiş desteğini yükleme, IntelliSense gibi ek dil desteği veya ampuller gibi diğer Gelişmiş dil özellikleri sağlayabilir.
+Bu dosya türlerinin tümü, belirli bir dilin desteği henüz yüklenmemiş olsa bile daha önce açıklanan özelliklere sahiptir. Bazı diller için özel destek yüklemek, IntelliSense veya ampuller gibi diğer gelişmiş dil özellikleri gibi ek dil desteği sağlayabilir.
 
-## <a name="add-support-for-non-supported-languages"></a>Desteklenmeyen dilleri desteği ekleme
+## <a name="add-support-for-non-supported-languages"></a>Desteklenmeyen diller için destek ekleme
 
-Visual Studio, [TextMate Grammars](https://manual.macromates.com/en/language_grammars)kullanarak düzenleyicide dil desteği sağlar. En sevdiğiniz programlama diliniz Şu anda Visual Studio düzenleyicisinde desteklenmiyorsa, önce Web&mdash;dil için bir TextMate paketi zaten mevcut olabilir. Bir tane bulamıyorsanız, dil dilbilgisi ve kod parçacıkları için bir TextMate paketi oluşturarak kendiniz için destek ekleyebilirsiniz.
+Visual [Studio, TextMate Grammars'ı](https://manual.macromates.com/en/language_grammars)kullanarak editörde dil desteği sağlar. En sevdiğiniz programlama dili şu anda Visual Studio düzenleyicisinde desteklenmiyorsa, öncelikle web'de&mdash;dil için bir TextMate paketinde arama yapın. Ancak bulamıyorsanız, dil gramerleri ve parçacıklar için bir TextMate paket modeli oluşturarak kendiniz destek ekleyebilirsiniz.
 
-Visual Studio aşağıdaki klasörde yeni TextMate dil bilgileri ekleyin:
+Visual Studio için yeni TextMate Gramerlerini aşağıdaki klasöre ekleyin:
 
-*%userprofile%\\.vs\Extensions*
+*%userprofile%\\.vs\Uzantılar*
 
-Bu temel yol altında, durumunuza uygulandıklarında aşağıdaki klasörleri ekleyin:
+Bu temel yolun altında, durumunuza uygulanıyorsa aşağıdaki klasörleri ekleyin:
 
-|Klasör adı|Açıklama|
+|Klasör Adı|Açıklama|
 |-----------------|-----------------|
-|\\ *\<dil adı >*|Dil klasörü. Değiştirin  *\<dil adı >* dil adı. Örneğin, *\Matlab*.|
-|*\Syntaxes*|Dilbilgisi klasör. Dil bilgisi içeren *.json* dil için gibi dosyaları *Matlab.json*.|
-|*\Snippets*|Kod parçacıklarının klasör. Dili için kod parçacıkları içerir.|
+|\\*\<dil adı>*|Dil klasörü. * \<dil adını>* dilin adı ile değiştirin. Örneğin, *\Matlab*.|
+|*\Sözdizimi*|Dilbilgisi klasörü. *Matlab.json*gibi dil için dilbilgisi *.json* dosyalarını içerir.|
+|*\Parçacıklar*|Parçacıklar klasörü. Dil için parçacıklar içerir.|
 
-Windows içinde *% USERPROFILE %* yolunu Çözümler: *c:\Users\\\<kullanıcı adı >* . *Uzantılar* klasörü sisteminizde yoksa, oluşturmanız gerekir. Klasör zaten varsa, gizlenir.
+Windows'da *%kullanıcı profili %yol* üzerinde çözer: *\\\<c:\Kullanıcılar kullanıcı adı>. * *Sisteminizde Uzantılar* klasörü yoksa, bunu oluşturmanız gerekir. Klasör zaten varsa, gizlenir.
 
 > [!TIP]
-> Düzenleyicide açık dosyalarınız varsa, TextMate dilbilgisi ekledikten sonra söz dizimi vurgulamasını görmek için bunları kapatıp yeniden açmanız gerekir.
+> Düzenleyicide açık olan dosyalarınız varsa, TextMate Gramerleri ekledikten sonra sözdizimi vurgulamasını görmek için dosyaları kapatmanız ve yeniden açmanız gerekir.
 
-TextMate dilbilgisi oluşturma hakkında daha fazla bilgi için bkz. [TextMate-dil dilbilgisi-giriş](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) ve [bir TextMate paketi Için nasıl dil dilbilgisi ve özel tema oluşturma hakkında notlar](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
+TextMate Gramerlerinin nasıl oluşturulacaaçık bilgi için [TextMate - Introduction to Language Grammars](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) ve Notes hakkında bir [Metin Arkadaşı Paketi için Dil Dilbilgisi ve Özel Tema oluşturma](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)hakkında bilgi alın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil sunucusu protokol uzantısı ekleme](../extensibility/adding-an-lsp-extension.md)
+- [Dil Sunucusu Protokolü uzantısı ekleme](../extensibility/adding-an-lsp-extension.md)
 - [İzlenecek Yol: Kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
-- [İzlenecek yol: Görüntü deyim tamamlama](../extensibility/walkthrough-displaying-statement-completion.md)
+- [Walkthrough: Görüntü deyimi tamamlama](../extensibility/walkthrough-displaying-statement-completion.md)

@@ -1,5 +1,5 @@
 ---
-title: '5\. Adım: etiket başvuruları ekleme'
+title: 'Adım 5: Etiket referansları ekleme'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de89d7194425e1a8cba9e11f2734372d80b256b3
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579335"
 ---
-# <a name="step-5-add-label-references"></a>5\. Adım: etiket başvuruları ekleme
-Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu anda program oyuncunun seçtiği tüm etiketleri göstermektedir. Ancak bunun değişmesini sağlayacağız. İlk etiket seçildikten sonra program etiketin simgesini göstermelidir. İkinci etiket seçildikten sonra iki simgeyi de kısa bir süre göstermeli ve ardından iki simgeyi de tekrar gizlemelidir. Programınız artık ilk olarak hangi etiket denetiminin seçili olduğunu ve *başvuru değişkenlerini*kullanarak ikinci seçili olduğunu izler.
+# <a name="step-5-add-label-references"></a>Adım 5: Etiket referansları ekleme
+Programın, oyuncunun seçtiği Etiket denetimlerini izlemesi gerekir. Şu anda program oyuncunun seçtiği tüm etiketleri göstermektedir. Ancak bunun değişmesini sağlayacağız. İlk etiket seçildikten sonra program etiketin simgesini göstermelidir. İkinci etiket seçildikten sonra iki simgeyi de kısa bir süre göstermeli ve ardından iki simgeyi de tekrar gizlemelidir. Programınız artık *referans değişkenleri*kullanılarak hangi Etiket denetiminin ilk sırada seçildiğini ve hangilerinin ikinci seçildiğini takip edecektir.
 
 ## <a name="to-add-label-references"></a>Etiket başvuruları eklemek için
 
@@ -31,28 +31,28 @@ Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu and
      [!code-csharp[VbExpressTutorial4Step5#5](../ide/codesnippet/CSharp/step-5-add-label-references_1.cs)]
 
      > [!IMPORTANT]
-     > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com](../ide/media/docs-programming-language-control.png) için programlama dili denetimi ![
+     > C# kodu snippet'ini veya Visual Basic kod snippet'ini görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dil kontrolü](../ide/media/docs-programming-language-control.png)
 
-     Bu başvuru değişkenleri formunuza nesneleri eklemek için (<xref:System.Windows.Forms.Timer> nesneleri, <xref:System.Collections.Generic.List%601> nesneleri ve <xref:System.Random> nesneleri gibi), daha önce kullandığınız deyimlere benzer şekilde görünür. Ancak, bu deyimler iki deyimden birinde kullanılan `new` anahtar sözcük olmadığından, formda iki ek etiket denetiminin görünmesine neden olmaz. `new` anahtar sözcüğü olmadan hiçbir nesne oluşturulmaz. `firstClicked` ve `secondClicked` başvuru değişkenleri olarak adlandırılmaktadır: yalnızca izleme (veya, başvuru) nesneleri.
+     Bu başvuru değişkenleri, formunuza nesneler (nesneler, <xref:System.Windows.Forms.Timer> <xref:System.Collections.Generic.List%601> nesneler ve <xref:System.Random> nesneler gibi) eklemek için daha önce kullandığınız ifadelere benzer. Ancak, bu ifadeler, iki ifadenin hiçbirinde anahtar kelime kullanılmadığından, `new` formda iki ek Etiket denetiminin görünmesine neden olmaz. `new` Anahtar kelime olmadan hiçbir nesne oluşturulmaz. Bu nedenle `firstClicked` ve `secondClicked` referans değişkenleri denir: Onlar sadece izlemek (veya, bakın) Etiket nesneleri.
 
-     Bir değişken bir nesneyi izlememediğinde, özel bir ayrılmış değere ayarlanır: içinde C# `null` ve Visual Basic `Nothing`. Bu nedenle, program başlatıldığında `firstClicked` ve `secondClicked` `null` veya `Nothing`olarak ayarlanır, bu da değişkenlerin herhangi bir şeyi izlememediği anlamına gelir.
+     Bir değişken bir nesneyi takip etmiyorsa, özel bir ayrılmış `null` değere ayarlanır: C# ve `Nothing` Visual Basic'te. Yani, program başladığında, `firstClicked` her `secondClicked` ikisi `null` de `Nothing`ve ayarlanır ya da , hangi değişkenler bir şey takip olmadığı anlamına gelir.
 
-2. <xref:System.Windows.Forms.Control.Click> olay işleyicinizi yeni `firstClicked` başvuru değişkenini kullanacak şekilde değiştirin. `label_Click()` olay işleyicisi yönteminde (`clickedLabel.ForeColor = Color.Black;`) son ifadeyi kaldırın ve bunu izleyen `if` ifadesiyle değiştirin. (Yorumu ve tüm `if` deyiminizi eklediğinizden emin olun.)
+2. Yeni `firstClicked` <xref:System.Windows.Forms.Control.Click> başvuru değişkenini kullanmak için olay işleyicinizi değiştirin. Olay işleyicisi `label_Click()` yöntemindeki son`clickedLabel.ForeColor = Color.Black;`deyimi kaldırın ( `if` ) ve aşağıdaki deyimle değiştirin. (Yorumu ve tüm `if` ifadeyi eklediğinizden emin olun.)
 
      [!code-vb[VbExpressTutorial4Step5#6](../ide/codesnippet/VisualBasic/step-5-add-label-references_2.vb)]
      [!code-csharp[VbExpressTutorial4Step5#6](../ide/codesnippet/CSharp/step-5-add-label-references_2.cs)]
 
 3. Programınızı kaydedin ve çalıştırın. Etiket denetimlerinden birini seçtiğinizde ilgili denetimin simgesi görünür.
 
-4. Bir sonraki etiket denetimini seçin ve hiçbir olay gerçekleşmediğine dikkat edin. Program, Player 'ın seçtiği ilk etiketi zaten takip ediyor, bu nedenle `firstClicked` `null` veya `Nothing` ' C# de Visual Basic eşit değil. `if` deyiminiz, `null` veya `Nothing`eşit olup olmadığını anlamak için `firstClicked` denetlediğinde, olmadığını bulur ve `if` deyimindeki deyimleri yürütmez. Bu nedenle, aşağıdaki görüntüde gösterildiği gibi, yalnızca seçilen ilk simge siyah ' ü etkinleştirir ve diğer simgeler görünmez hale gelir.
+4. Bir sonraki etiket denetimini seçin ve hiçbir olay gerçekleşmediğine dikkat edin. Program zaten oyuncunun seçtiği ilk etiketi takip ediyor, `firstClicked` bu nedenle `null` C# veya `Nothing` Visual Basic'te eşit değildir. `if` Ekstreniz `firstClicked` eşit `null` `Nothing`olup olmadığını belirlemek için kontrol ettiğinde, bunun eşit olmadığını fark eder ve `if` deyimdeki ifadeleri yürütmez. Bu nedenle, yalnızca seçilen ilk simge siyaha döner ve aşağıdaki resimde gösterildiği gibi diğer simgeler görünmezdir.
 
-     tek bir simge](../ide/media/express_tut4step5.png) eşleşen oyun ![<br/>
-***Eşleşen oyun*** *bir simge gösteriyor*
+     ![Tek bir simgeyi gösteren eşleştirme oyunu](../ide/media/express_tut4step5.png)<br/>
+***Bir*** simge *gösteren* eşleştirme oyunu
 
-     Bu durumu, bir **Zamanlayıcı** denetimi ekleyerek öğreticinin bir sonraki adımında düzeltireceksiniz.
+     Bir **Zamanlayıcı** denetimi ekleyerek öğreticinin bir sonraki adımında bu durumu düzelteceksiniz.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz. 6. **[Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md)** .
+- Bir sonraki öğretici adıma gitmek için **[bkz: Adım 6: Zamanlayıcı ekleyin.](../ide/step-6-add-a-timer.md)**
 
-- Önceki öğretici adımına dönmek için, bkz. [Adım 4: Her Etikete Click olay Işleyicisi ekleme](../ide/step-4-add-a-click-event-handler-to-each-label.md).
+- Önceki öğretici adıma dönmek için [bkz: Adım 4: Her etikete bir Tıklama olay işleyicisi ekleyin.](../ide/step-4-add-a-click-event-handler-to-each-label.md)

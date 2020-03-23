@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 535906d8b8d7f8ba0c2984d22ceead18a0d47c2d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569211"
 ---
 # <a name="go-to-command"></a>Git Komutu
@@ -29,16 +29,16 @@ ms.locfileid: "75569211"
 Edit.GoTo [linenumber]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 `linenumber`\
-İsteğe bağlı. Gidilecek satırın numarasını temsil eden bir tamsayı.
+İsteğe bağlı. Gidilen satır ın sayısını temsil eden bir sonda.
 
 ## <a name="remarks"></a>Açıklamalar
-Satır numaralandırması bir kerede başlar. `linenumber` değeri bir değerinden küçükse, ilk satır görüntülenir. `linenumber` değeri son satırın sayısından büyükse, son satır görüntülenir.
+Satır numaralandırma bir'de başlar. Değeri birden `linenumber` azsa, ilk satır görüntülenir. Değeri son `linenumber` satırın sayısından büyükse, son satır görüntülenir.
 
-`linenumber` için bir değer belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
+Bir `linenumber` değer belirtilmemişse, **Satıra Git** iletişim kutusu görüntülenir.
 
-Bu komutun diğer adı Sayfayln 'dir.
+Bu komutun diğer adı GoToLn'dur.
 
 ## <a name="example"></a>Örnek
 
@@ -48,7 +48,7 @@ Bu komutun diğer adı Sayfayln 'dir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
+- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

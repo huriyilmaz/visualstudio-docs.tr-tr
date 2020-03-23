@@ -1,5 +1,5 @@
 ---
-title: DA0018:32 bit uygulama, işlem yönetilen bellek sınırlarında çalışıyor | Microsoft Docs
+title: 'DA0018: 32 bit Uygulama işlem yönetilen bellek sınırları | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,59 +14,59 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: d7bebd25f499131b4beda109ebb9ac468c2435b1
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74780071"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: işlem tarafından yönetilen bellek sınırlarında çalışan 32 bit uygulama
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: İşlem tarafından yönetilen bellek sınırlarında çalışan 32 bit Uygulama
 
 |||
 |-|-|
-|Kural Kimliği|DA0018|
-|Kategori|Profil Oluşturma Araçları kullanımı|
-|Profil oluşturma yöntemi|Aşağıdakine|
-|İleti|Yönetilen bellek ayırmaları, 32 bitlik bir işlem için varsayılan sınıra yaklaşmıştır. Uygulamanız bellek ile bağlantılı olabilir.|
+|Kural Id|DA0018|
+|Kategori|Profil Oluşturma Araçları Kullanımı|
+|Profil oluşturma yöntemi|Örnekleme|
+|İleti|32 bit işlem için varsayılan sınıra yaklaşan yönetilen bellek ayırmaları. Başvurunuz belleğe bağlı olabilir.|
 |Kural türü|Uyarı|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET bellek veya kaynak çekişme yöntemlerini kullanarak profil yaptığınızda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 
-## <a name="cause"></a>Sebep
- Profil oluşturma işlemi sırasında toplanan sistem verileri, .NET Framework bellek yığınlarının, yönetilen yığınlardaki 32 bitlik bir işlemde ulaşabileceği en büyük boyutu approached gösterir. Bu en büyük boyut, varsayılan değerdir. Özel baytlar için ayrılabilecek işlem adres alanının Toplam miktarına bağlıdır. Bildirilen değer, profili oluşturulmuş işlem etkinken Heap 'ler için gözlenen en yüksek değerdir. .NET bellek profili oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün ve yönetilen kaynakların uygulama tarafından kullanımını en iyi duruma getirme işlemini yapın.
+## <a name="cause"></a>Nedeni
+ Profil oluşturma işlemi sırasında toplanan sistem verileri,.NET Framework bellek yığınlarının yönetilen yığınların 32 bitlik bir işlemde ulaşabileceği maksimum boyuta yaklaştığını gösterir. Bu maksimum boyut varsayılan bir değerdir. Özel baytlar için ayrılabilen işlem adresi alanının toplam tutarıesas alınarak belirlenir. Bildirilen değer, profilli işlem etkinken yığınların en yüksek gözlenen değeridir. .NET bellek profil oluşturma yöntemini kullanarak yeniden profil oluşturmayı ve yönetilen kaynakların uygulama tarafından kullanımını en iyi duruma çıkarmayı düşünün.
 
- Yönetilen yığınlardaki boyut varsayılan sınıra yaklaşımında, otomatik atık toplama işleminin daha sık çağrılması gerekebilir. Bu, bellek yönetiminin ek yükünü artırır.
+ Yönetilen Yığınlar'ın boyutu varsayılan sınıra yaklaştığında, otomatik çöp toplama işleminin daha sık çağrılması gerekebilir. Bu, bellek yönetiminin genel ini artırır.
 
- Kural yalnızca 32 bit makinelerde çalışan 32 bitlik uygulamalar için ateşlenir.
+ Kural yalnızca 32 bit makinelerde çalışan 32 bit uygulamalar için yangınlar.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Microsoft .NET ortak dil çalışma zamanı (CLR), uygulamanın artık kullandığı nesnelerden belleği geri kazanmak için çöp toplayıcı kullanan bir otomatik bellek yönetim mekanizması sağlar. Çöp toplayıcı, çok sayıda ayırmaların kısa süreli olduğu varsayımına bağlı olarak, oluşturma odaklı bir şekilde yapılır. Örneğin, yerel değişkenler kısa süreli olmalıdır. Yeni oluşturulan nesneler nesil 0 ' da (Gen 0) başlar ve sonra bir atık toplama çalıştırmasını sürdüren 1. nesil ve son olarak uygulama bunları kullanıyorsa 2. nesil 'e geçiş yapılır.
+ Microsoft .NET ortak dil çalışma zamanı (CLR), uygulamanın artık kullanmadığı nesnelerden bellek geri almak için bir çöp toplayıcısı kullanan otomatik bir bellek yönetim mekanizması sağlar. Çöp toplayıcı, birçok ayırmanın kısa ömürlü olduğu varsayımına dayanarak nesil odaklıdır. Yerel değişkenler, örneğin, kısa ömürlü olmalıdır. Yeni oluşturulan nesneler nesil 0 'da (gen 0) başlar ve çöp toplama çalışmasından sağ kurtulduklarında nesil 1'e doğru ilerlerler ve uygulama hala kullanıyorsa nesil 2'ye geçiş yaparlar.
 
- 85 KB 'den büyük olan yönetilen nesneler büyük nesne yığınında ayrılır. Bunlar, daha az sıklıkta çöp toplamaya ve daha küçük nesnelerden daha küçük nesnelere tabidir. büyük nesneler, daha kalıcı oldukları ve en sık ayrılan küçük nesneler ile kalıcı ve büyük nesneleri karıştırmanın yığının en kötü saçılması durumunda olduğu varsayıldığı için ayrı olarak yönetilir.
+ 85 KB'den büyük yönetilen nesneler, daha küçük nesnelere göre daha az sıklıkta çöp toplama ve sıkıştırmatabi oldukları Büyük Nesne Yığını'na ayrılır. daha kalıcı oldukları ve kalıcı ve büyük nesneleri sık ayrılan küçük nesnelerle karıştırmanın yığının en kötü döküm parçalanmasına neden olabileceği nden, büyük nesneler ayrı ayrı yönetilir.
 
- Yönetilen yığınların toplam boyutu varsayılan sınıra yaklaşıyorsa, bellek yönetiminin ek yükü genellikle uygulamanın yanıt hızını ve ölçeklenebilirliğini etkilemek için başlayabileceği noktaya kadar artar.
+ Yönetilen yığınların toplam boyutu varsayılan sınıra yaklaştıkça, bellek yönetiminin yükü genellikle uygulamanın yanıt verme yeteneğini ve ölçeklenebilirliğini etkilemeye başlabildiği noktaya yükselir.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. Tüm Heap 'ler ve **Toplam kaydedilmiş bayt** SÜTUNLARıNDA **.net clr belleği\\# bayt** bulun. Yönetilen bellek ayırmanın diğer aşamalara göre daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleme. **Tüm Heap sütunlarındaki # bytes** değerlerini, **.NET CLR\\bellekte**bildirilen çöp toplama hızına ve bu durumda, yönetilen bellek ayırmaları deseninin çöp toplama oranını etkileyip etkilemediğini tespit etmek için .NET CLR belleği\\# of gen **1**koleksiyonlarının, .NET CLR hafıza **\\ve net 2 koleksiyon** sütunlarının sayısını karşılaştırın.
+## <a name="how-to-investigate-a-warning"></a>Bir uyarı nasıl araştırılı
+ [Markalar](../profiling/marks-view.md) görünümüne gitmek için Hata Listesi penceresindeki iletiyi çift tıklatın. Tüm Yığınlar ve **# Toplam taahhüt bayt** **sütunlarında\\.NET CLR Bellek # Bayt** bulun. Yönetilen bellek ayırmanın diğer aşamalardan daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleyin. **Tüm Heaps sütunundaki # Bayt** değerlerini Gen **0 Koleksiyonlarının .NET CLR\\Bellek # (Gen 0 Koleksiyonlarının .NET CLR Bellek #**) ve .NET CLR Bellek # gen 1 Koleksiyonları'nda bildirilen çöp toplama oranıyla karşılaştırın ve yönetilen bellek ayırmalarının deseninin çöp toplama oranını etkileyip etkilemediğini belirlemek için Gen 2 Collections sütunlarının **.NET\\CLR** **Belleklerini\\**karşılaştırın.
 
- .NET Framework bir uygulamada, ortak dil çalışma zamanı, yönetilen yığınların toplam boyutunu, bir işlem adres alanının özel alan boyutunun en büyük boyutundan biraz daha az bir olacak şekilde sınırlandırır. 32 bit makinede çalışan 32 bitlik işlemler için 2 GB, işlem adres alanının özel bölümünün üst sınırını temsil eder. Yönetilen yığınların toplam boyutu varsayılan sınırına yaklaşımak üzere başladığında, bellek yönetiminin ek yükü artabilir ve uygulama performansı azalabilir.
+ Bir .NET Framework uygulamasında, ortak dil çalışma süresi yönetilen yığınların toplam boyutunu, bir işlem adresi alanının özel alan bölümünün maksimum boyutunun yarısından biraz daha azıyla sınırlar. 32 bit makinede çalışan 32 bit işlem için 2 GB, işlem adresi alanının özel bölümünün üst sınırını temsil eder. Yönetilen Yığınlar'ın toplam boyutu varsayılan sınırına yaklaşmaya başladığında, belleği yönetme yükü artabilir ve uygulama performansı düşebilir.
 
- Aşırı yönetilen bellek ek yükü bir sorun ise, şu seçeneklerden birini göz önünde bulundurun:
+ Aşırı yönetilen bellek yükü bir sorunsa, aşağıdaki seçeneklerden birini göz önünde bulundurun:
 
-- Uygulamanın yönetilen bellek kaynakları kullanımını iyileştirme
+- uygulamanın yönetilen bellek kaynaklarını kullanımını optimize etme
 
-   veya
+   -veya-
 
-- 32 bitlik bir işlem için maksimum sanal bellek boyutundaki mimari kısıtlamalarını hafifetmek için gereken adımları alma
+- 32 bit lik bir işlem için sanal belleğin maksimum boyutundaki mimari kısıtlamaları hafifletmek için adımlar atmak
 
-  Uygulamanın yönetilen bellek kaynakları kullanımını iyileştirmek için, yönetilen bellek ayırma verilerini bir .NET bellek ayırma profil oluşturma çalıştırmasında toplayın. Uygulamanın bellek ayırma düzenlerini anlamak için [.net bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md) raporlarını gözden geçirin.
+  Uygulamanın yönetilen bellek kaynaklarını kullanımını en iyi duruma getirmek için ,.NET Bellek Ayırma profil oluşturma çalışmasında yönetilen bellek ayırma verilerini toplayın. Uygulamanın bellek ayırma desenini anlamak için [.NET Bellek Veri Görünümleri](../profiling/dotnet-memory-data-views.md) raporlarını gözden geçirin.
 
-  Programın veri nesnelerinin neslin oluşturulması ve daha sonra geri kazanılmakta olduğunu öğrenmek için [nesne ömrü görünümünü](../profiling/object-lifetime-view.md) kullanın.
+  Programın veri nesnelerinden hangisinin nesile aktarıldığını ve oradan geri alındığını belirlemek için [Nesne Yaşam Boyu Görünümü'ni](../profiling/object-lifetime-view.md) kullanın.
 
-  Bu ayırmalara neden olan yürütme yolunu öğrenmek için [ayırmalar görünümünü](../profiling/dotnet-memory-allocations-view.md) kullanın.
+  Bu [ayırmalarla](../profiling/dotnet-memory-allocations-view.md) sonuçlanan yürütme yolunu belirlemek için Ayırmalar Görünümünü kullanın.
 
-  Çöp toplama performansını geliştirme hakkında daha fazla bilgi için MSDN Web sitesindeki .NET Framework Teknik makale, [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) bölümüne bakın.
+  Çöp toplama performansını nasıl artırılabilenler hakkında daha fazla bilgi için MSDN Web sitesindeki .NET Framework teknik makalesi, [Çöp Toplayıcı Temelleri ve Performans İpuçları'na](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) bakın.
 
-  Bir işlem adres alanının özel bölümünün boyutundaki sanal bellek kısıtlamalarından mimari rahatını kazanmak için, bu 32 bit işlemi 64 bit bir makinede çalıştırmayı deneyin.  64 bit makinede 32 bitlik bir işlem, 4 GB 'a kadar özel sanal bellek elde edebilir.
+  İşlem adres alanının özel bölümünün boyutundaki sanal bellek kısıtlamalarından mimari rahatlama sağlamak için, bu 32 bit işlemi 64 bit makinede çalıştırmayı deneyin.  64 bit makinedeki 32 bit işlem, 4 GB'a kadar özel sanal bellek elde edebilir.
 
-  64 bit makinede çalışan 64 bitlik bir işlem, 8 TB 'a kadar sanal bellek elde edebilir. Uygulamayı yerel bir 64 bit uygulama olarak yürütülecek şekilde yeniden oluşturmayı düşünün. Bu kural yalnızca bilgi amaçlıdır ve düzeltici eylem gerektirmeyebilir.
+  64 bit bir makinede çalışan 64 bit işlem, 8 TB'a kadar sanal bellek elde edebilir. Uygulamayı yerel 64 bit uygulama olarak yürütmek üzere yeniden derlemeyi düşünün. Bu kural yalnızca bilgi içindir ve düzeltici eylem gerektirmeyebilir.

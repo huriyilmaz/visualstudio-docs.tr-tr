@@ -1,5 +1,5 @@
 ---
-title: Web Performans Testi Düzenleyicisi için özel HTTP Gövde Düzenleyicisi oluşturma
+title: Web Performans Testi Düzenleyicisi için özel HTTP gövde düzenleyicisi oluşturun
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,60 +9,60 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: efc9a959fa02b62583e7bf366e8c580b2876a4a1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589207"
 ---
-# <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Nasıl yapılır: bir özel HTTP Gövde Düzenleyicisi için Web Performans Testi Düzenleyicisi oluşturma
+# <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Nasıl?
 
-Dize gövdesi içeriğini veya bir web hizmeti isteği, örneğin SOAP, REST, asmx, wcf, RIA ve diğer web hizmeti istek türlerinin ikili gövde içeriğini düzenlemenize olanak sağlayan özel bir içerik düzenleyici oluşturabilirsiniz.
+Soap, REST, asmx, wcf, RIA ve diğer web hizmeti isteği türleri gibi, dize gövdesi içeriğini veya bir web hizmeti isteğinin ikili gövde içeriğini oluşturmanızı sağlayan özel bir içerik düzenleyicisi oluşturabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Bu tür düzenleyicileri uygulayabilirsiniz:
+Bu tür editörleri uygulayabilirsiniz:
 
-- **Dize içerik Düzenleyicisi** bu kullanılarak uygulanan <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> arabirimi.
+- **String içerik düzenleyicisi** Bu <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> arabirim kullanılarak uygulanır.
 
-- **İkili içerik Düzenleyicisi** bu kullanılarak uygulanan <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirimi.
+- **İkili içerik düzenleyicisi** Bu <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirim kullanılarak uygulanır.
 
-Bu arabirimler bulunan <xref:Microsoft.VisualStudio.TestTools.WebTesting> ad alanı.
+Bu arabirimler <xref:Microsoft.VisualStudio.TestTools.WebTesting> ad alanında bulunur.
 
-## <a name="create-a-windows-control-library-project"></a>Bir Windows Denetim Kitaplığı projesi oluşturun
+## <a name="create-a-windows-control-library-project"></a>Windows Denetim Kitaplığı projesi oluşturma
 
-1. Visual Studio 'da yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Proje **Messagedüzenleyicilerini**adlandırın.
+1. Visual Studio'da yeni bir **Windows Forms Control Library** projesi oluşturun. **ProjeMessageEditors**adı .
 
-   Proje yeni çözüme eklenir ve <xref:System.Windows.Forms.UserControl> adlı *UserControl1.cs* Tasarımcı içinde sunulur.
+   Proje yeni çözüme eklenir ve <xref:System.Windows.Forms.UserControl> *tasarımcıda* UserControl1.cs adlı bir şekilde sunulur.
 
-1. Gelen **araç kutusu**altında **ortak denetimleri** kategorisi bir <xref:System.Windows.Forms.RichTextBox> UserControl1 yüzeyine sürükleyin.
+1. Ortak **Denetimler** kategorisi altında araç <xref:System.Windows.Forms.RichTextBox> **kutusundan,** Bir'i UserControl1'in yüzeyine sürükleyin.
 
-1. Eylem etiket karakterini seçin (![akıllı etiket karakterini](../test/media/vs_winformsmttagglyph.gif)) sağ üst köşesindeki <xref:System.Windows.Forms.RichTextBox> denetlemek ve ardından seçin ve **üst kapsayıcıya Yerleştir**.
+1. Denetimin sağ üst köşesindeki eylem![etiketi glyph 'i (Smart Tag](../test/media/vs_winformsmttagglyph.gif)Glyph) seçin ve ardından Üst **Kapsayıcı'da**seçip Sabitleyin. <xref:System.Windows.Forms.RichTextBox>
 
-1. İçinde **Çözüm Gezgini**, Windows Forms kitaplık projesini sağ tıklatın ve seçin **özellikleri**.
+1. **Çözüm Gezgini'nde,** Windows Forms Library projesine sağ tıklayın ve **Özellikler'i**seçin.
 
-1. İçinde **özellikleri**seçin **uygulama** sekmesi.
+1. **Özellikler'de,** **Uygulama** sekmesini seçin.
 
-1. **Hedef çerçeve** açılan listesinde .NET Framework 4 (veya üzeri) öğesini seçin.
+1. Hedef **çerçeve** açılır listesinde .NET Framework 4 (veya sonraki) seçeneğini belirleyin.
 
-1. **Hedef Framework değişikliği** iletişim kutusu görüntülenir.
+1. **Hedef Çerçeve Değişikliği** iletişim kutusu görüntülenir.
 
-1. Seçin **Evet**.
+1. **Evet'i**seçin.
 
-1. İçinde **Çözüm Gezgini**, sağ **başvuruları** düğümünü seçip alt **Başvuru Ekle**.
+1. **Çözüm Gezgini'nde,** **Başvurular** düğümüne sağ tıklayın ve **Referans Ekle'yi**seçin.
 
 1. **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-1. Seçin. **NET** sekmesinde, aşağı kaydırın ve seçin **Microsoft.VisualStudio.QualityTools.WebTestFramework** seçip **Tamam**.
+1. Seçin . **NET** sekmesi, aşağı kaydırın ve **Microsoft.VisualStudio.QualityTools.WebTestFramework** seçin ve sonra **Tamam**seçin.
 
-1. Varsa **Görünüm Tasarımcısı** içinde hala açık değilse **Çözüm Gezgini**, sağ **UserControl1.cs** seçip **Görünüm Tasarımcısı**.
+1. **Görünüm Tasarımcısı** hala açık değilse, **Çözüm Gezgini'nde** **UserControl1.cs** sağ tıklatın ve ardından **Tasarımcıyı Görüntüle'yi**seçin.
 
-1. Tasarım yüzeyinde, sağ tıklayıp **kodu görüntüle**.
+1. Tasarım yüzeyinde, Sağ tıklayın ve **Kodu Görüntüle'yi**seçin.
 
-1. (İsteğe bağlı) Sınıf ve oluşturucu adını UserControl1'den, örneğin, MessageEditorControl gibi anlamlı bir ad ile değiştirin:
+1. (İsteğe bağlı) Sınıfın ve oluşturucunun adını UserControl1'den anlamlı bir ada (örneğin, MessageEditorControl: MessageEditorControl) değiştirin:
 
     > [!NOTE]
-    > Örnek MessageEditorsControl kullanır.
+    > Örnek, MessageEditorControl'u kullanır.
 
     ```csharp
     namespace MessageEditors
@@ -77,7 +77,7 @@ Bu arabirimler bulunan <xref:Microsoft.VisualStudio.TestTools.WebTesting> ad ala
     }
     ```
 
-1. Alma ve RichTextBox1 metni ayarlama etkinleştirmek için aşağıdaki özellikleri ekleyin. <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> Arabirimi EditString ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> EditByteArray öğesini kullanır:
+1. RichTextBox1'de metnin alınıp ayarlanmasını etkinleştirmek için aşağıdaki özellikleri ekleyin. Arayüz <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> EditString <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> ve EditByteArray kullanır:
 
     ```csharp
     public String EditString
@@ -105,37 +105,37 @@ Bu arabirimler bulunan <xref:Microsoft.VisualStudio.TestTools.WebTesting> ad ala
     }
     ```
 
-## <a name="add-a-class-to-the-windows-control-library-project"></a>Windows Denetim Kitaplığı projesine bir sınıf ekleyin
+## <a name="add-a-class-to-the-windows-control-library-project"></a>Windows Denetim Kitaplığı projesine sınıf ekleme
 
-Projeye bir sınıf ekleyin. Uygulamak için kullanılacak <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirimleri.
+Projeye bir sınıf ekleyin. Bu <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arayüzleri uygulamak için kullanılacaktır.
 
 **Bu yordamdaki koda genel bakış**
 
-MessageEditorControl <xref:System.Windows.Forms.UserControl> oluşturulan önceki yordamı messageEditorControl örneği olarak oluşturulur:
+Önceki yordamda <xref:System.Windows.Forms.UserControl> oluşturulan MessageEditorControl iletiDüzenleyici Denetim olarak anında verilir:
 
 ```csharp
 private MessageEditorControl messageEditorControl
 ```
 
-MessageEditorControl örneği tarafından oluşturulan eklenti iletişiminin içinde barındırılır <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.CreateEditor*> yöntemi. Ayrıca, messageEditorControl'un <xref:System.Windows.Forms.RichTextBox> içerikle doldurulur <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>. Sürece eklentinin oluşumu ancak oluşamaz <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> döndürür `true`. Bu Düzenleyicide <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> döndürür `true` varsa <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> içinde <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> "xml" içerir.
+MessageEditorControl <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.CreateEditor*> örneği, yöntem tarafından oluşturulan eklenti iletişim kutusunda barındırılır. Ayrıca, iletiEditorControl's <xref:System.Windows.Forms.RichTextBox> içindekilerle <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>doldurulur. Ancak, döndürülmedikçe <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> `true`eklentinin oluşturulması gerçekleşemez. Bu editör <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> durumunda, içinde `true` "xml" <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> varsa döndürür.
 
-Dize gövdesinin düzenlenmesi tamamlandığında ve kullanıcı **Tamam** eklenti iletişim kutusundaki <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.GetNewValue*> düzenlenmiş metni bir dize ve güncelleştirme olarak almak için çağrılan **dize gövdesi** Web isteği Test performans Düzenleyicisi.
+Dize gövdesinin düzenlenmesi tamamlandığında ve kullanıcı eklenti iletişim kutusunda **Tamam'ı** tıklattığında, <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.GetNewValue*> düzenlenen metni dize olarak almak ve Web Test Performans Düzenleyicisi'ndeki istekte **String Gövdesini** güncelleştirmek için çağrılır.
 
-### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>Bir sınıf oluşturun ve ıtringhttpbodyeditorplugin arabirimini uygulayın
+### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>Bir sınıf oluşturun ve IStringHttpBodyEditorPlugin arabirimini uygulayın
 
-1. İçinde **Çözüm Gezgini**, Windows Forms Denetim Kitaplığı projesini sağ tıklatın ve seçin **Yeni Öğe Ekle**.
+1. **Çözüm Gezgini'nde,** Windows Forms Control Library projesine sağ tıklayın ve Yeni **Öğe Ekle'yi**seçin.
 
    **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
 
-2. Seçin **sınıfı**.
+2. **Sınıf'ı**seçin.
 
-3. İçinde **adı** metin kutusunda, sınıf için anlamlı bir ad yazın örneğin, `MessageEditorPlugins`.
+3. **Ad** metin kutusuna, sınıf için anlamlı bir ad `MessageEditorPlugins`yazın, örneğin.
 
-4. Seçin **ekleme**.
+4. **Ekle'yi**seçin.
 
-   Class1 projeye eklenir ve Kod Düzenleyicisi üzerinde sunulur.
+   Sınıf1 projeye eklenir ve Kod Düzenleyicisi'nde sunulur.
 
-5. Kod Düzenleyicisi 'nde aşağıdaki `using` ifadesini ekleyin:
+5. Kod düzenleyicisinde aşağıdaki `using` ifadeyi ekleyin:
 
     ```csharp
     using Microsoft.VisualStudio.TestTools.WebTesting;
@@ -190,27 +190,27 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve kullanıcı **Tamam** eklen
     }
     ```
 
-## <a name="add-a-ibinaryhttpbodyeditorplugin-to-the-class"></a>Sınıfa bir IBinaryHttpBodyEditorPlugin ekleyin
+## <a name="add-a-ibinaryhttpbodyeditorplugin-to-the-class"></a>Sınıfa Bir IBinaryHttpBodyEditorPlugin ekleyin
 
-Uygulama <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirimi.
+<xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirimini gerçekleştirin.
 
 **Bu yordamdaki koda genel bakış**
 
-İçin kod uygulaması <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirimi benzer <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> önceki yordamda işlenen. Ancak, ikili dosya sürümü bir dize yerine ikili verileri işlemek için bayt dizisini kullanır.
+<xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> Arabirim in kod uygulaması önceki <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> yordamda kapsanana benzer. Ancak, ikili sürüm, bir dize yerine ikili verileri işlemek için bir dizi bayt kullanır.
 
-MessageEditorControl <xref:System.Windows.Forms.UserControl> oluşturulan MessageEditorControl örneği olarak ilk yordam örneği:
+İlk yordamda <xref:System.Windows.Forms.UserControl> oluşturulan MessageEditorControl, messageEditorControl olarak anında verilir:
 
 ```csharp
 private MessageEditorControl messageEditorControl
 ```
 
-MessageEditorControl örneği tarafından oluşturulan eklenti iletişiminin içinde barındırılır <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.CreateEditor*> yöntemi. Ayrıca, messageEditorControl'un <xref:System.Windows.Forms.RichTextBox> içerikle doldurulur <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>. Sürece eklentinin oluşumu ancak oluşamaz <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> döndürür `true`. Bu Düzenleyicide <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> döndürür `true` varsa <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> içinde <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> "msbin1" içerir.
+MessageEditorControl <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.CreateEditor*> örneği, yöntem tarafından oluşturulan eklenti iletişim kutusunda barındırılır. Ayrıca, iletiEditorControl's <xref:System.Windows.Forms.RichTextBox> içindekilerle <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>doldurulur. Ancak, döndürülmedikçe <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> `true`eklentinin oluşturulması gerçekleşemez. Bu editör <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> durumunda, içinde `true` "msbin1" <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> varsa döndürür.
 
-Dize gövdesinin düzenlenmesi tamamlandığında ve kullanıcı **Tamam** eklenti iletişim kutusundaki <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.GetNewValue*> düzenlenmiş metni bir dize ve güncelleştirme olarak almak için çağrılan **BinaryHttpBody.Data** istek Web Test performans Düzenleyicisi'nde.
+Dize gövdesinin düzenlenmesi tamamlandığında ve kullanıcı eklenti iletişim kutusunda **Tamam'ı** tıklattığında, <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.GetNewValue*> düzenlenen metni dize olarak almak ve Web Test Performans Düzenleyicisi'ndeki istekte **BinaryHttpBody.Data'yı** güncelleştirmek için çağrılır.
 
 ### <a name="to-add-the-ibinaryhttpbodyeditorplugin-to-the-class"></a>IBinaryHttpBodyEditorPlugin'i sınıfa eklemek için
 
-- Msbin1MessageEditor sınıfını için önceki yordamda eklenen XmlMessageEditor sınıfının altına aşağıdaki kodu yazın veya kopyalayın <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> arabirim ve gereken yöntemleri uygulamak:
+- Msbin1MessageEditor sınıfını arabirimden <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> anında çıkarmak ve gerekli yöntemleri uygulamak için önceki yordamda eklenen XmlMessageEditor sınıfının altında aşağıdaki kodu yazın veya kopyalayın:
 
     ```csharp
     /// <summary>
@@ -262,40 +262,40 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve kullanıcı **Tamam** eklen
         }
     ```
 
-## <a name="build-and-deploy-the-plug-ins"></a>Derleme ve eklentileri dağıtma
+## <a name="build-and-deploy-the-plug-ins"></a>Eklentileri oluşturma ve dağıtma
 
-1. Üzerinde **derleme** menüsünde seçin **derleme \<Windows Form Denetim Kitaplığı proje adı >** .
+1. **Yapı** menüsünde, **Yapı \<Windows Form Denetim Kitaplığı proje adı>'yi **seçin.
 
 2. Visual Studio'nun tüm örneklerini kapatın.
 
    > [!NOTE]
-   > Visual Studio kapatıldıktan emin olur *.dll* kopyalamak denemeden önce dosya kilitli değil.
+   > Visual Studio'yu kapatmak, kopyalamaya çalışmadan önce *.dll* dosyasının kilitli olmadığından emin olur.
 
-3. Elde edilen *. dll* dosyasını projenizin *bin\Debug* klasöründen (örneğin, *messagedüzenleyiciler. dll*) *%ProgramFiles%\Microsoft Visual Studio\2017\\\<Edition > \Common7\IDE\PrivateAssemblies\WebTestPlugins*'e kopyalayın.
+3. Sonuç *.dll* dosyasını projenizin *bin\debug* klasöründen (örneğin, *MessageEditors.dll)* *%ProgramFiles%\Microsoft Visual\\\<Studio\2017 sürümüne kopyalayın>\Common7\IDE\PrivateAssemblies\WebTestPlugins*.
 
 4. Visual Studio'yu açın.
 
-   *.Dll* artık Visual Studio ile kayıtlıdır.
+   *.dll* artık Visual Studio'ya kayıtlı.
 
-## <a name="verify-the-plug-ins-using-a-web-performance-test"></a>Bir Web performans testi kullanarak eklentileri doğrulayın
+## <a name="verify-the-plug-ins-using-a-web-performance-test"></a>Web Performans Testi kullanarak eklentileri doğrulama
 
 1. Bir test projesi oluşturun.
 
-2. Web performans testi oluşturma ve bir web hizmetine tarayıcıda bir URL girin.
+2. Bir web performans testi oluşturun ve tarayıcıya bir URL girin.
 
-3. Kaydı bitirdikten sonra Web Performans Testi Düzenleyicisi'nde, web hizmeti isteğini genişletin ve seçin ya da bir **dize gövdesi** veya **ikili gövde**.
+3. Web Performans Testi Düzenleyicisi'nde kaydı tamamladığınızda, web hizmeti isteğini genişletin ve String **Gövdesi** veya **İkili Gövde'yi**seçin.
 
-4. **Özellikler** penceresinde, dize gövdesi veya ikili gövde ' yi seçin ve üç nokta **(...)** simgesini seçin.
+4. **Özellikler** penceresinde, String Body veya İkili Gövde'yi seçin ve elipsleri **seçin (...)**.
 
-   **HTTP Gövde verisini Düzenle** iletişim kutusu görüntülenir.
+   HTTP Body Data iletişim kutusunu **edit** görüntülenir.
 
-5. Artık verileri düzenleyebilir ve seçin **Tamam**. Bu içeriği güncelleştirmek için uygun GetNewValue yöntemini çağırır <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>.
+5. Artık verileri ve **Tamam'ı**seçebilirsiniz. Bu, içindekileri güncelleştirmek için geçerli GetNewValue yöntemini <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>çağırır.
 
-## <a name="compile-the-code"></a>Kod derleme
+## <a name="compile-the-code"></a>Kodu derleme
 
-Windows Denetim Kitaplığı projesi için hedeflenen çerçevenin .NET Framework 4.5 olduğunu doğrulayın. Varsayılan olarak, Windows Denetim Kitaplığı projeleri, eklenmesi, Microsoft.VisualStudio.QualityTools.WebTestFramework başvurusunun eklenmesine izin vermez .NET Framework 4.5 istemci çerçevesini hedefler.
+Windows Denetim Kitaplığı projesi için hedeflenen çerçevenin .NET Framework 4.5 olduğunu doğrulayın. Varsayılan olarak, Windows Denetim Kitaplığı projeleri Microsoft.VisualStudio.QualityTools.WebTestFramework başvurusu eklenmesine izin vermez .NET Framework 4.5 Istemci çerçevesini hedefleyin.
 
-Daha fazla bilgi için [uygulama sayfası, Proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md).
+Daha fazla bilgi için [Uygulama sayfasına, proje tasarımcısına (C#)](../ide/reference/application-page-project-designer-csharp.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -304,10 +304,10 @@ Daha fazla bilgi için [uygulama sayfası, Proje Tasarımcısı (C#)](../ide/ref
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Nasıl yapılır: istek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md)
-- [Kodu bir web performans testi için özel bir ayıklama kuralı](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
-- [Kodu bir web performans testi için özel doğrulama kuralı](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [Nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
-- [Oluşturma ve bir kodlanmış web performans testini çalıştırma](../test/generate-and-run-a-coded-web-performance-test.md)
-- [Nasıl yapılır: Web Performans Test Sonuçları Görüntüleyicisi için bir Visual Studio eklentisi oluşturma](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)
+- [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Nasıl yapilir: İstek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md)
+- [Web performans testi için özel bir çıkarma kuralı kodlama](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Web performans testi için özel doğrulama kuralını kodlama](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
+- [Nasıl yapılsın: Yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
+- [Kodlanmış web performans testi oluşturma](../test/generate-and-run-a-coded-web-performance-test.md)
+- [Nasıl yapIlir: Web Performans Testi Sonuçları Görüntüleyicisi için Visual Studio eklentisi oluşturma](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)

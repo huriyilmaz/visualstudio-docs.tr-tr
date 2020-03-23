@@ -1,5 +1,5 @@
 ---
-title: Derleme hata ayıklama görevleri Tasks.vs.JSON launch.vs.json kullanarak özelleştirme
+title: Görevleri kullanarak yapı hata ayıklama görevlerini özelleştirme.vs.json launch.vs.json
 ms.date: 02/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,45 +14,45 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e912459f45086b1bf5f96a9458f006354e982ffd
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76542691"
 ---
-# <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Yapı özelleştirme ve hata ayıklama için "Klasör Aç" geliştirme görevleri
+# <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"Açık Klasör" geliştirme için yapı ve hata ayıklama görevlerini özelleştirme
 
-Visual Studio, birçok farklı dillerde çalıştırma bilir ve kod tabanlarında, ancak her şeyi çalıştırma bilmez. Varsa, [kod klasörü açılır](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) içinde Visual Studio ve Visual Studio kodunuzu çalıştırmak nasıl bilir, herhangi bir ek yapılandırma hemen çalıştırabilirsiniz.
+Visual Studio birçok farklı dil ve kod tabanını nasıl çalıştıracağını bilir, ancak her şeyi nasıl çalıştıracağını bilmez. Visual Studio'da [bir kod klasörü açtıysanız](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) ve Visual Studio kodunuzu nasıl çalıştırabileceğinizi biliyorsa, ek yapılandırma olmadan hemen çalıştırabilirsiniz.
 
-Özel derleme araçları, Visual Studio tanımadığı bir kod temelinde kullanıyorsa, çalıştırmak ve Visual Studio kod hatalarını ayıklamak için bazı yapılandırma ayrıntılarını sağlamak gerekir. Visual Studio tanımlayarak, kodunuzu derlemek nasıl toplamasını *derleme görevleri*. Bir tane oluşturabilirsiniz veya daha fazla dil kendi kodunu derleme ve çalıştırma için gereken tüm öğeleri belirtmek için Görevler oluşturun. Hemen hemen istediğiniz her şeyi yapabilirsiniz, isteğe bağlı görevleri de oluşturabilirsiniz. Örneğin, bir görev bir klasörün içeriğini listelemek için veya bir dosyayı yeniden adlandırmak için oluşturabilirsiniz.
+Codebase, Visual Studio'nun tanımadığı özel yapı araçları kullanıyorsa, Visual Studio'da kodu çalıştırmak ve hata ayıklamak için bazı yapılandırma ayrıntıları sağlamanız gerekir. Visual Studio'ya yapı görevlerini tanımlayarak kodunuzu nasıl *oluşturabileceğinizi*bildirirsiniz. Bir dilin kodunu oluşturmak ve çalıştırmak için gereken tüm öğeleri belirtmek için bir veya daha fazla yapı görevi oluşturabilirsiniz. Ayrıca, istediğiniz hemen hemen her şeyi yapabilecek rasgele görevler de oluşturabilirsiniz. Örneğin, bir klasörün içeriğini listelemek veya bir dosyayı yeniden adlandırmak için bir görev oluşturabilirsiniz.
 
-Özelleştirme aşağıdakileri kullanarak, proje daha az kod tabanı *.json* dosyaları:
+Aşağıdaki *.json* dosyalarını kullanarak projesiz kod tabanınızı özelleştirin:
 
 |Dosya adı|Amaç|
 |-|-|
-|*tasks.vs.json*|Özel derleme komutları ve derleyici anahtarları rastgele (olmayan-ilgili derleme) belirtmek görevleri.<br>**Çözüm Gezgini** sağ tıklama menü öğesi **görevleri Yapılandır**' ı kullanarak erişilir.|
-|*launch.vs.json*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Çözüm Gezgini** menü öğesi **hata ayıklama ve başlatma ayarları**' na sağ tıklayın.|
+|*görevler.vs.json*|Özel yapı komutları ve derleyici anahtarları ve rasgele (yapı yla ilgili olmayan) görevleri belirtin.<br>**Çözüm Gezgini** sağ tık menü öğesi **Yapılandırma Görevleri**üzerinden erişilen .|
+|*launch.vs.json*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Solution Explorer** sağ tıkmenü öğesi **Hata Ayıklama ve Başlatma Ayarları**üzerinden erişilen .|
 
-Bunlar *.json* dosyaları adlı gizli bir klasörde bulunan *.vs* temelinizin kök klasöründeki. *Tasks.vs.json* ve *launch.vs.json* dosyalarının oluşturulduğu Visual Studio tarafından bir gerektiği şekilde ya da seçtiğinizde **yapılandırma görevleri** veya **hata ayıklama ve başlatma ayarları** bir dosya veya klasör üzerinde **Çözüm Gezgini**. Bunlar *.json* dosyaları, kullanıcılar bunları kaynak denetimine kaydetmeye genellikle istemediğinden gizlidir. Ancak, kaynak denetimine denetlemek istiyorsanız, dosyaları burada görünür temelinizin, kök sürükleyin.
+Bu *.json* dosyaları, codebase kök klasöründe *.vs* adlı gizli bir klasörde bulunur. *Tasks.vs.json* ve *launch.vs.json* dosyaları Visual Studio tarafından, **Solution Explorer'daki**bir dosya veya klasörde **Görevleri Yapılandırveya** **Hata Ayıklama ve Başlatma Ayarlarını** seçtiğinizde gerektiğinde oluşturulur. Kullanıcılar genellikle bunları kaynak denetiminde denetlemek istemediğinden bu *.json* dosyaları gizlenir. Ancak, bunları kaynak denetiminde denetlemek istiyorsanız, dosyaları görünür oldukları kod tabanınızın köküne sürükleyin.
 
 > [!TIP]
-> Visual Studio'da gizli dosyaları görüntülemek için seçin **tüm dosyaları göster** düğmesini **Çözüm Gezgini** araç çubuğu.
+> Visual Studio'daki gizli dosyaları görüntülemek için Çözüm **Gezgini** araç çubuğundaki **Tüm Dosyaları Göster** düğmesini seçin.
 
-## <a name="define-tasks-with-tasksvsjson"></a>Tasks.vs.json ile görevleri tanımlama
+## <a name="define-tasks-with-tasksvsjson"></a>Görevleri görevlerle tanımlama.vs.json
 
-Derleme betikleri veya geçerli çalışma alanınızda doğrudan IDE'de görev olarak çalıştırarak olması dosyalarda dış diğer işlemleri otomatik hale getirebilirsiniz. Bir dosya veya klasörü sağ tıklatıp seçerek yeni bir görev yapılandırabileceğiniz **yapılandırma görevleri**.
+Komut dosyalarını veya diğer dış işlemleri, geçerli çalışma alanınızdaki dosyalarda doğrudan IDE'de görev olarak çalıştırarak otomatikleştirebilirsiniz. Bir dosyaveya klasöre sağ tıklayarak ve **Görevleri Yapılandır'ı**seçerek yeni bir görevi yapılandırabilirsiniz.
 
-![Görevler menüsü yapılandırın](../ide/media/customize-configure-tasks-menu.png)
+![Görevleri Yapılandırma menüsü](../ide/media/customize-configure-tasks-menu.png)
 
-Oluşturur (veya açılır) *tasks.vs.json* dosyası *.vs* klasör. Bu dosyada bir yapı görevi veya rastgele bir görev tanımlayabilir ve sonra **Çözüm Gezgini** sağ tıklama menüsünde bunu verdiğiniz adı kullanarak çağırabilirsiniz.
+Bu, *.vs* klasöründe *tasks.vs.json* dosyasını oluşturur (veya açar). Bu dosyada bir yapı görevi veya rasgele görev tanımlayabilir ve ardından Çözüm **Gezgini** sağ tıklama menüsünden verdiğiniz adı kullanarak bu görevi çağırabilirsiniz.
 
-Özel görevleri, dosyalara veya belirli bir türdeki tüm dosyalar için eklenebilir. Örneğin, "Paketleri geri yükle" görev için NuGet paket dosyaları yapılandırılabilir veya tüm kaynak dosyaları, tüm bir lint gibi statik analiz yer alan bir görev için yapılandırılabilir *.js* dosyaları.
+Özel görevler tek tek dosyalara veya belirli bir türdeki tüm dosyalara eklenebilir. Örneğin, NuGet paket dosyaları bir "Paketleri Geri Yükleme" görevi olacak şekilde yapılandırılabilir veya tüm kaynak dosyaları tüm *.js* dosyaları için linter gibi statik bir çözümleme görevi olacak şekilde yapılandırılabilir.
 
-### <a name="define-custom-build-tasks"></a>Özel derleme görevleri tanımlama
+### <a name="define-custom-build-tasks"></a>Özel yapı görevlerini tanımlama
 
-Ardından kod temelinizde özel derleme araçları, Visual Studio tanımadığı kullanıyorsa, çalıştırın ve bazı yapılandırma adımları tamamlayana kadar Visual Studio code hata ayıklama yapılamıyor. Visual Studio sağlar *derleme görevleri* nasıl oluşturulacağını, Visual Studio söyleyebilirsiniz, yeniden oluşturun ve kodunuzu temiz. *Tasks.vs.json* görev dosyası Visual Studio iç geliştirme döngüsünü özel derleme araçlarını temelinizde tarafından kullanılan tüm çiftler oluşturun.
+Codebase'iniz Visual Studio'nun tanımadığı özel yapı araçları kullanıyorsa, bazı yapılandırma adımlarını tamamlayana kadar Visual Studio'da kodu çalıştırıp hata ayıklayamazsınız. Visual Studio, Visual Studio'ya kodunuzu nasıl oluşturacağınızı, yeniden oluşturacağınızı ve temizleyeceğiniz için oluşturma *görevleri* sağlar. *Görevler.vs.json* oluşturma görev dosyası çiftler Visual Studio iç geliştirme döngü codebase tarafından kullanılan özel yapı araçları.
 
-Bir tek oluşan bir kod temeli göz önünde bulundurun C# adlı dosya *hello.cs*. *Derleme görevleri dosyası* böyle bir kod temeli için şöyle görünebilir:
+*hello.cs*adlı tek bir C# dosyasından oluşan bir kod tabanı düşünün. Böyle bir kod tabanı için *makefile* aşağıdaki gibi görünebilir:
 
 <!-- markdownlint-disable MD010 -->
 ```makefile
@@ -73,7 +73,7 @@ bin:
 ```
 <!-- markdownlint-enable MD010 -->
 
-İçin böyle bir *derleme görevleri dosyası* temiz yapı içerir ve hedefleri yeniden, aşağıdaki tanımlayabilirsiniz *tasks.vs.json* dosya. Bu derleme, yeniden oluşturma ve NMAKE derleme aracı olarak kullanarak, kod tabanının Temizleme için üç derleme görevleri içerir.
+Yapı, temizleme ve yeniden oluşturma hedefleri içeren böyle bir *makefile* için aşağıdaki görevleri *tanımlayabilirsiniz.vs.json* dosyası. Yapı aracı olarak NMAKE'yi kullanarak kod tabanını oluşturmak, yeniden oluşturmak ve temizlemek için üç yapı görevi içerir.
 
 ```json
 {
@@ -117,20 +117,20 @@ bin:
 }
 ```
 
-*Tasks. vs. JSON*içinde derleme görevleri tanımladıktan sonra, **Çözüm Gezgini**ilgili dosyalara sağ tıklama menüsü (bağlam menüsü) öğeleri eklenir. Bu örnekte, "derleme", "yeniden" ve "temiz" seçeneklerini herhangi bağlam menüsüne eklenen *derleme görevleri dosyası* dosyaları.
+Görevlerde yapı görevlerini tanımladıktan *sonra.vs.json*, Ek sağ tıklama menüsü (bağlam menüsü) öğeleri **Çözüm Gezgini'ndeki**ilgili dosyalara eklenir. Bu örnekiçin, "yapı", "yeniden oluşturma" ve "temiz" seçenekleri herhangi bir *makefile* dosyasının bağlam menüsüne eklenir.
 
-![derleme görevleri dosyası bağlam menüsü yapı ile yeniden oluşturun ve temizleme](media/customize-build-rebuild-clean.png)
+![yapı, yeniden oluşturma ve temiz ile dosya bağlam menüsü oluşturma](media/customize-build-rebuild-clean.png)
 
 > [!NOTE]
-> Komutlar bağlam menüsünden görünür **yapılandırma görevleri** nedeniyle komutunu kendi `contextType` ayarları. Bunlar yapı bölümünde bağlam menüsünü ortasında görünmesi için "derleme", "yeniden" ve "temiz" derleme komutlardır.
+> `contextType` Komutlar, ayarları nedeniyle Görevleri **Yapılandır** komutu altındaki bağlam menüsünde görünür. "yapı", "yeniden oluşturma" ve "temiz" yapı komutlarıdır, bu nedenle bağlam menüsünün ortasındaki yapı bölümünde görünürler.
 
-Bu seçeneklerden birini seçtiğinizde, görevi yürütür. Çıktı görünür **çıkış** penceresi ve derleme hatalarını görünür **hata listesi**.
+Bu seçeneklerden birini seçtiğinizde, görev yürütülür. **Çıktı Çıktı** penceresinde görünür ve yapı hataları **Hata Listesinde**görünür.
 
-### <a name="define-arbitrary-tasks"></a>İsteğe bağlı görevleri tanımlama
+### <a name="define-arbitrary-tasks"></a>Rasgele görevleri tanımlama
 
-İsteğe bağlı görevleri tanımlayabilirsiniz *tasks.vs.json* hemen hemen istediğiniz her şeyi yapmak için dosya. Örneğin, şu anda seçili dosyanın adını görüntülemek için bir görev tanımlayabilirsiniz **çıkış** penceresinde veya belirtilen dizindeki dosyaların listesi.
+*Görevler.vs.json* dosyasında istediğiniz her şeyi yapmak için rasgele görevler tanımlayabilirsiniz. Örneğin, **çıktı** penceresinde şu anda seçili dosyanın adını görüntülemek veya dosyaları belirtilen bir dizinde listelemek için bir görev tanımlayabilirsiniz.
 
-Aşağıdaki örnekte gösterildiği bir *tasks.vs.json* tek bir görevi tanımlayan dosya. Çağrıldığında görev şu anda seçili dosya adını görüntüler *.js* dosya.
+Aşağıdaki örnek, tek bir görevi tanımlayan *bir görevler.vs.json* dosyasını gösterir. Çağrıldığızaman, görev şu anda seçili *.js* dosyasının dosya adını görüntüler.
 
 ```json
 {
@@ -147,18 +147,18 @@ Aşağıdaki örnekte gösterildiği bir *tasks.vs.json* tek bir görevi tanıml
 }
 ```
 
-- `taskName` sağ tıklama menüsünde görüntülenen adı belirtir.
-- `appliesTo` hangi dosyaların komutu gerçekleştirilebilir belirtir.
-- `command` Özellik çağrılacak komutu belirtir. Bu örnekte, `COMSPEC` ortam değişkeni komut satırı Yorumlayıcı, genellikle tanımlamak için kullanılan *cmd.exe*.
-- `args` Özelliği, çağrılan komutun geçirilecek bağımsız değişkenleri belirtir.
-- `${file}` Makrosu alır seçili dosyasında **Çözüm Gezgini**.
+- `taskName`sağ tıklama menüsünde görünen adı belirtir.
+- `appliesTo`komutun hangi dosyalarda gerçekleştirilebileceğini belirtir.
+- Özellik `command` çağırmak için komut belirtir. Bu örnekte, `COMSPEC` ortam değişkeni komut satırı yorumlayıcı, genellikle *cmd.exe*tanımlamak için kullanılır.
+- Özellik, `args` çağrılan komuta geçirilecek bağımsız değişkenleri belirtir.
+- `${file}` Makro, **Çözüm Gezgini'nde**seçili dosyayı alır.
 
-Kaydettikten sonra *tasks.vs.json*, herhangi bir sağ tıklayabilirsiniz *.js* dosya klasöründe ve seçin **Yankı filename**. Dosya adı görüntülenen **çıkış** penceresi.
+*tasks.vs.json'u*kurtardıktan sonra klasördeki herhangi bir *.js* dosyasına sağ tıklayabilir ve **Yankı dosya adını**seçebilirsiniz. Dosya adı **Çıktı** penceresinde görüntülenir.
 
 > [!NOTE]
-> Kod temelinizde içermiyorsa, bir *tasks.vs.json* dosyası oluşturmak için kullanabileceğiniz bir seçerek **yapılandırma görevleri** bir dosyaya sağ tıklayın veya bağlam menüsünden **Çözüm Gezgini**.
+> Kod tabanınız bir görev *içermiyorsa.vs.json* dosyası, **Solution Explorer'daki**bir dosyanın sağ tıklama veya bağlam menüsünden **Görevleri Yapılandır'ı** seçerek bir tane oluşturabilirsiniz.
 
-Alt klasörleri ve dosyaları listeleyen bir görevi bir sonraki örnekte tanımlar *bin* dizin.
+Sonraki örnek, *depo* gözü dizininin dosyalarını ve alt klasörlerini listeleyen bir görevi tanımlar.
 
 ```json
 {
@@ -176,66 +176,66 @@ Alt klasörleri ve dosyaları listeleyen bir görevi bir sonraki örnekte tanım
 }
 ```
 
-- `${outDir}` ilk özel bir makro önce tanımlanan `tasks` blok. Ardından çağrıldığı `args` özelliği.
+- `${outDir}``tasks` önce bloktan önce tanımlanan özel bir makrodur. Daha sonra `args` özellik denir.
 
-Bu görev, tüm dosyalar için geçerlidir. Bağlam menüsünde herhangi bir dosyayı açtığınızda **Çözüm Gezgini**, görevin adı **listesi çıkışları** menüsünün altında görüntülenir. Seçeneğini belirlediğinizde **listesi çıkışları**, içeriğini *bin* dizin listelenir **çıkış** Visual Studio'daki.
+Bu görev tüm dosyalar için geçerlidir. **Çözüm Gezgini'ndeki**herhangi bir dosyadaki bağlam menüsünü açtığınızda, görevin ad **Listesi Çıktıları** menünün alt kısmında görünür. **Liste Çıktıları'nı**seçtiğinizde, *depo gözü* dizininin içeriği Visual Studio'daki **Çıktı** penceresinde listelenir.
 
-![Rastgele görevde bağlam menüsü](../ide/media/customize-arbitrary-task-menu.png)
+![Bağlam menüsünde rasgele görev](../ide/media/customize-arbitrary-task-menu.png)
 
-### <a name="settings-scope"></a>Ayar kapsamı
+### <a name="settings-scope"></a>Ayarlar kapsamı
 
-Birden çok *tasks.vs.json* dosyaları kök ve alt dizinleri bir kod temeli bulunabilir. Bu tasarım, kod tabanının farklı dizinlerde farklı bir davranış sahip olacak esneklik sağlar. Visual Studio toplar veya kod temeli, tüm dosyalarını aşağıdaki sırayla öncelik ayarları geçersiz kılar:
+Bir kod tabanının kökünde ve alt dizinde birden çok *görev.vs.json* dosyası bulunabilir. Bu tasarım, esnekliğin kod tabanının farklı alt dizinlerinde farklı davranışlara sahip olmasını sağlar. Visual Studio, kod tabanı boyunca ayarları toplar veya geçersiz kılar ve dosyaları aşağıdaki sırada öncelike göre belirler:
 
-- Kök klasör ayarları dosyaları *.vs* dizin.
-- Bir ayar hesaplanan burada dizin.
-- Kadar tüm kök dizini geçerli dizinin üst dizini.
-- Ayarlar dosyaları kök dizini.
+- Kök klasörün *.vs* dizinindeki ayarlar dosyaları.
+- Ayarın hesaplandığı dizin.
+- Geçerli dizinin ana dizini, kök dizine kadar.
+- Kök dizinindeki ayarlar dosyaları.
 
-Bu toplama kuralları *Tasks. vs. JSON*için geçerlidir. Diğer dosyasındaki ayarları nasıl toplanır hakkında daha fazla bilgi için bu makalede söz konusu dosya için ilgili bölümüne bakın.
+Bu toplama kuralları görevler için *geçerlidir.vs.json*. Diğer dosyadaki ayarların nasıl toplanmış olduğu hakkında bilgi için, bu makaledeki dosyaiçin ilgili bölüme bakın.
 
-### <a name="properties-for-tasksvsjson"></a>Tasks.vs.json özellikleri
+### <a name="properties-for-tasksvsjson"></a>Görevler için özellikler.vs.json
 
-Bu bölümde bazı içinde belirtebileceğiniz özellikler açıklanmaktadır *tasks.vs.json*.
+Bu bölümde, görevlerde belirtebileceğiniz bazı özellikler *açıklanır.vs.json*.
 
-#### <a name="appliesto"></a>AppliesTo
+#### <a name="appliesto"></a>Appliesto
 
-Görevler için herhangi bir dosya veya klasör adını belirterek oluşturabileceğiniz `appliesTo` alan, örneğin `"appliesTo": "hello.js"`. Aşağıdaki dosya maskesi değerleri kullanılabilir:
-
-|||
-|-|-|
-|`"*"`| Görev tüm dosyaları ve klasörleri çalışma alanında kullanılabilir|
-|`"*/"`| Görev, çalışma alanındaki tüm klasörler için kullanılabilir|
-|`"*.js"`| görevi, uzantılı tüm dosyaları kullanılabilir *.js* çalışma|
-|`"/*.js"`| görevi, uzantılı tüm dosyaları kullanılabilir *.js* çalışma alanı kökünde|
-|`"src/*/"`| tüm alt görevi kullanılabilir *src* klasörü|
-|`"makefile"`| tüm görev *derleme görevleri dosyası* çalışma alanındaki dosyalara|
-|`"/makefile"`| görevi, yalnızca kullanılabilir *derleme görevleri dosyası* çalışma alanı kökünde|
-
-#### <a name="macros-for-tasksvsjson"></a>Tasks.vs.json makroları
+Herhangi bir dosya veya klasör için, `appliesTo` örneğin, `"appliesTo": "hello.js"`alana adını belirterek görev oluşturabilirsiniz. Aşağıdaki dosya maskeleri değer olarak kullanılabilir:
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| herhangi bir ortam değişkeni (örneğin, ${env. belirtir YOL}, ${env.COMSPEC} vb.) için geliştirici komut istemi ayarlayın. Daha fazla bilgi için [Visual Studio için geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs).|
-|`${workspaceRoot}`| Çalışma alanı klasörün tam yolu (örneğin, *C:\sources\hello*)|
-|`${file}`| Dosya veya bu görevi karşı çalıştırmak için Seçili klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js*)|
-|`${relativeFile}`| Dosya veya klasörün göreli yolunu (örneğin, *src\hello.js*)|
-|`${fileBasename}`| Yol ve uzantı olmadan dosyasının adı (örneğin, *hello*)|
-|`${fileDirname}`| Dosya adı hariç dosyasının tam yolu (örneğin, *C:\sources\hello\src*)|
-|`${fileExtname}`| Seçili dosya uzantısını (örneğin, *.js*)|
+|`"*"`| görev çalışma alanındaki tüm dosya ve klasörler için kullanılabilir|
+|`"*/"`| görev çalışma alanındaki tüm klasörler için kullanılabilir|
+|`"*.js"`| görev çalışma alanında uzantısı *.js* ile tüm dosyalar için kullanılabilir|
+|`"/*.js"`| görev çalışma alanının kökünde uzantısı *.js* ile tüm dosyalar için kullanılabilir|
+|`"src/*/"`| görev *src* klasörünün tüm alt klasörleri için kullanılabilir|
+|`"makefile"`| görev çalışma alanındaki tüm *makefile* dosyaları için kullanılabilir|
+|`"/makefile"`| görev yalnızca çalışma alanının kökündeki *makefile* için kullanılabilir|
 
-## <a name="configure-debugging-with-launchvsjson"></a>Launch.vs.JSON ile hata ayıklamayı Yapılandır
+#### <a name="macros-for-tasksvsjson"></a>Görevler için makrolar.vs.json
 
-CMake projelerini hata ayıklama için yapılandırmak için bkz. [CMake hata ayıklama oturumlarını yapılandırma](/cpp/build/configure-cmake-debugging-sessions).
+|||
+|-|-|
+|`${env.<VARIABLE>}`| Herhangi bir ortam değişkenini belirtir (örneğin, ${env. PATH}, ${env.COMSPEC} vb.) geliştirici komut istemi için ayarlanır. Daha fazla bilgi [için Visual Studio için Geliştirici komut istemine](/dotnet/framework/tools/developer-command-prompt-for-vs)bakın.|
+|`${workspaceRoot}`| Çalışma alanı klasörüne tam yol (örneğin, *C:\sources\hello)*|
+|`${file}`| Bu görevi çalıştırmak için seçilen dosya veya klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js)*|
+|`${relativeFile}`| Dosya veya klasöre göreli yol (örneğin, *src\hello.js)*|
+|`${fileBasename}`| Yol veya uzantı olmadan dosyanın adı (örneğin, *merhaba)*|
+|`${fileDirname}`| Dosya adı hariç dosyaya tam yol (örneğin, *C:\sources\hello\src)*|
+|`${fileExtname}`| Seçili dosyanın uzantısı (örneğin, *.js)*|
 
-1. Yapılandırmak için hata ayıklama için de codebase **Çözüm Gezgini** seçin **hata ayıklama ve başlatma ayarları** yürütülebilir dosyanızın sağ tıklayın veya bağlam menüsünde menü öğesi.
+## <a name="configure-debugging-with-launchvsjson"></a>Launch.vs.json ile hata ayıklama yapılandırma
 
-   ![Hata ayıklama ve başlatma ayarları bağlam menüsü](media/customize-debug-launch-menu.png)
+Hata ayıklama için CMake projelerini yapılandırmak için [bkz.](/cpp/build/configure-cmake-debugging-sessions)
 
-1. İçinde **bir hata ayıklayıcı seçin** iletişim kutusu, bir seçenek belirleyin ve ardından **seçin** düğmesi.
+1. Hata ayıklama için kod tabanınızı yapılandırmak **için, Solution Explorer'da** yürütülebilir dosyanızın sağ tıklama veya bağlam menüsünden **Hata Ayıklama ve Başlat Ayarları** menüsüöğesini seçin.
 
-   ![Hata ayıklayıcı iletişim kutusunu seçin](media/customize-select-a-debugger.png)
+   ![Hata Ayıklama ve Başlatma Ayarları bağlam menüsü](media/customize-debug-launch-menu.png)
 
-   Varsa *launch.vs.json* dosya önceden yoksa, oluşturulur.
+1. Hata **Ayıklama** iletişim kutusunu seç kutusunda bir seçenek seçin ve ardından **Seç** düğmesini seçin.
+
+   ![Hata ayıklama iletişim kutusu seçin](media/customize-select-a-debugger.png)
+
+   *Launch.vs.json* dosyası zaten yoksa oluşturulur.
 
    ```json
    {
@@ -251,20 +251,20 @@ CMake projelerini hata ayıklama için yapılandırmak için bkz. [CMake hata ay
    }
    ```
 
-1. Ardından, yürütülebilir dosyaya sağ tıklayarak **Çözüm Gezgini**ve **başlangıç öğesi olarak ayarla**.
+1. Ardından, **Solution Explorer'da**çalıştırılabilir dosyaya sağ tıklayın ve **Başlangıç Öğesi olarak ayarla'yı**seçin.
 
-   Yürütülebilir kod temelinizde ve hata ayıklama için başlangıç öğesi olarak tanımlanan **Başlat** yürütülebilir dosyanın adını yansıtacak şekilde düğmenin Başlıkta yapılan değişiklikleri.
+   Yürütülebilir kod tabanınız için başlangıç öğesi olarak belirlenir ve hata ayıklama **Başlat** düğmesinin başlığı, çalıştırılabilir inizin adını yansıtacak şekilde değişir.
 
    ![Özelleştirilmiş Başlat düğmesi](media/customize-start-button.png)
 
-   Seçeneğini belirlediğinizde **F5**, hata ayıklayıcısını başlatan ve herhangi bir kesme noktasında durur zaten ayarlamadınız. Alıştığınız hata ayıklayıcı windows kullanılabilir ve çalışır.
+   **F5'i**seçtiğinizde, hata ayıklama başlatılır ve önceden ayarlamış olabileceğiniz herhangi bir kesme noktasında durur. Tüm tanıdık hata ayıklama pencereleri mevcuttur ve işlevseldir.
 
    > [!IMPORTANT]
-   > Açık klasör projelerindeki özel derleme ve hata ayıklama görevleri hakkında ek ayrıntılar için bkz. [Visual Studio 'da derleme C++ sistemleri için klasör açma desteği.](/cpp/build/open-folder-projects-cpp) C++
+   > C++ açık klasör projelerindeki özel yapı ve hata ayıklama görevleri hakkında ek ayrıntılar için [Visual Studio'da C++ yapı sistemleri için Açık Klasör desteğine](/cpp/build/open-folder-projects-cpp)bakın.
 
-### <a name="specify-arguments-for-debugging"></a>Hata ayıklama için bağımsız değişkenlerini belirtme
+### <a name="specify-arguments-for-debugging"></a>Hata ayıklama için bağımsız değişkenleri belirtin
 
-Hata ayıklama için geçirmek için komut satırı bağımsız değişkenlerini belirtebilirsiniz *launch.vs.json* dosya. Bağımsız değişken Ekle `args` , aşağıdaki örnekte gösterildiği gibi dizi:
+*Launch.vs.json* dosyasında hata ayıklama için geçmek için komut satırı bağımsız değişkenleri belirtebilirsiniz. Aşağıdaki örnekte `args` gösterildiği gibi, dizideki bağımsız değişkenleri ekleyin:
 
 ```json
 {
@@ -286,33 +286,33 @@ Hata ayıklama için geçirmek için komut satırı bağımsız değişkenlerini
 }
 ```
 
-Bu dosyayı kaydettiğinizde, yeni yapılandırmayı adı hata ayıklama hedefi aşağı açılan listesinde görünür ve hata ayıklayıcıyı başlatmak için bunu seçebilirsiniz. İstediğiniz gibi birçok hata ayıklama yapılandırması oluşturabilirsiniz.
+Bu dosyayı kaydettiğinizde, yeni yapılandırmanın adı hata ayıklama hedef açılır listesinde görünür ve hata ayıklama başlatmak için seçebilirsiniz. İstediğiniz kadar hata ayıklama yapılandırması oluşturabilirsiniz.
 
-![Hata ayıklama yapılandırmaları aşağı açılan listesi](media/customize-debug-configurations.png)
+![Hata ayıklama yapılandırmaları açılır liste](media/customize-debug-configurations.png)
 
 > [!NOTE]
-> `configurations` Dizi özelliğinde *launch.vs.json* iki dosya konumlarından okuma&mdash;codebase kök dizinini ve *.vs* dizin. Bir çakışma varsa, öncelik değeri verilir *.vs\launch.vs.json*.
+> `configurations` *launch.vs.json'daki* dizi özelliği iki dosya&mdash;noktasından kod tabanının kök dizini ve *.vs* dizininden okunur. Çakışma varsa, öncelik *.vs\launch.vs.json*değeriverilir.
 
 ## <a name="additional-settings-files"></a>Ek ayarlar dosyaları
 
-Üç ek olarak *.json* bu konuda açıklanan dosyalarını, Visual Studio ayrıca okur ayarları bazı ek dosyalardan kod tabanınızdaki varsa.
+Visual Studio, bu konuda açıklanan üç *.json* dosyasına ek olarak, kod tabanınızda varsa bazı ek dosyaların ayarlarını da okur.
 
 ### <a name="vscodesettingsjson"></a>.vscode\settings.json
 
-Visual Studio sınırlı ayarları adlı bir dosyadan okur *settings.json*, adlı bir dizinde ise *.vscode*. Bu işlev için sağlanır, kod tabanlarında daha önce Visual Studio Code'da geliştirilmiştir. Şu anda yalnızca ayarının okuma *.vscode\settings.json* olduğu `files.exclude`, dosyaları görsel olarak Çözüm Gezgini ve bazı arama Araçları'ndan filtreler.
+Visual *Studio, settings.json*adlı bir dosyadan sınırlı ayarları okur, *eğer .vscode*adlı bir dizindeyse. Bu işlevsellik, daha önce Visual Studio Code'da geliştirilmiş kod tabanları için sağlanır. Şu anda *,vscode\settings.json* adresinden okunan tek ayar, Solution Explorer'da ve bazı arama araçlarında dosyaları görsel olarak filtreleyen bir ayardır. `files.exclude`
 
-Herhangi bir sayıda olabilir *.vscode\settings.json* temelinizde dosyaları. Bu dosyadan okunan ayarları üst dizini de uygulanır *.vscode* ve tüm alt dizinlerinde.
+Codebase'inizde herhangi bir sayıda *.vscode\settings.json* dosyası olabilir. Bu dosyadan okunan ayarlar *.vscode'un* ana dizinine ve tüm alt dizinlerine uygulanır.
 
 ### <a name="gitignore"></a>.gitignore
 
-*.gitignore* dosyaları yoksaymak için hangi dosyaların Git bildirmek için kullanılır; diğer bir deyişle, dosyaları ve dizinleri iade etmek istemediğiniz. *.gitignore* ayarları kod tabanının tüm geliştiricilere paylaşılabilir böylece dosyaları bir kod temeli genellikle birlikte parçası olarak. Visual Studio okur desenleri *.gitignore* dosyaları öğeleri filtrelemek için görsel olarak ve bazı arama araçları.
+*.gitignore* dosyaları Git'e hangi dosyaları yoksayması gerektiğini söylemek için kullanılır; diğer bir deyişle, hangi dosyaları ve dizinleri iade etmek istemiyorum. *.gitignore* dosyaları genellikle bir kod tabanının parçası olarak dahil edilir, böylece ayarlar kod tabanının tüm geliştiricileri ile paylaşılabilir. Visual Studio öğeleri görsel olarak ve bazı arama araçlarından filtrelemek için *.gitignore* dosyalarındaki desenleri okur.
 
-Ayarları okuma *.gitignore* dosya, kendi ana dizini ve tüm alt dizinleri için uygulanır.
+*.gitignore* dosyasından okunan ayarlar, ana dizinine ve tüm alt dizinlere uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeler veya çözümler olmadan kod geliştirme](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+- [Proje veya çözüm olmadan kod geliştirme](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [C++ için Klasör projelerini açma](/cpp/build/open-folder-projects-cpp)
-- [İçin CMake projeleriC++](/cpp/build/cmake-projects-in-visual-studio)
+- [C++ için CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)
 - [NMAKE başvurusu](/cpp/build/reference/nmake-reference)
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)

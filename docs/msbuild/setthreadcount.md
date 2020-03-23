@@ -1,5 +1,5 @@
 ---
-title: SetThreadCount | Microsoft Docs
+title: SetThreadCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 apiname:
@@ -16,15 +16,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 102f46ec639719bb2bec70a38c6c7177c63793c1
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632335"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 
-Genel iş parçacığı sayısını ayarlar ve bu sayıyı geçerli iş parçacığına atar.
+Genel iş parçacığı sayısını ayarlar ve geçerli iş parçacığına bu sayıyı atar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ HRESULT WINAPI SetThreadCount(int threadCount);
 
 #### <a name="parameters"></a>Parametreler
 
-[in] `threadCount`
+[içinde]`threadCount`
 
  Kullanılacak iş parçacığı sayısı.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
- İş parçacığı sayısı güncellendiyse, **başarılı** biti ayarlanmış bir **HRESULT** .
+ İş parçacığı sayısı **güncelleştirildiyse, BAŞARILI** bit kümesine sahip bir **HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker. h*
+ **Üstbilgi:** *FileTracker.h*

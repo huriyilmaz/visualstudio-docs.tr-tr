@@ -1,5 +1,5 @@
 ---
-title: Öğe Işlevleri | Microsoft Docs
+title: Öğe Fonksiyonları | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +11,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: af4fb872206611ea5eb1aa93b7aa759615b56e41
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633687"
 ---
 # <a name="item-functions"></a>Öğe işlevleri
 
-Görev ve hedeflerdeki kod, projedeki öğeler hakkında bilgi almak için (MSBuild 4,0 ve üzeri) öğe işlevlerini çağırabilir. Bu işlevler ayrı öğeler almayı basitleştirir ve öğeler aracılığıyla döngüden daha hızlıdır.
+Görevlerdeki ve hedeflerdeki kod, projedeki öğeler hakkında bilgi almak için madde işlevlerini çağırabilir (MSBuild 4.0 ve sonraki durumlarda). Bu işlevler farklı öğeler almayı kolaylaştırır ve öğeler arasında döngü yapmaktan daha hızlıdır.
 
 ## <a name="string-item-functions"></a>Dize öğesi işlevleri
 
-Herhangi bir öğe değerinde çalıştırmak için .NET Framework dize yöntemleri ve özellikleri kullanabilirsiniz. <xref:System.String> yöntemler için yöntem adını belirtin. <xref:System.String> özellikler için, "get_" sonra özellik adını belirtin.
+Herhangi bir madde değeri üzerinde çalışmak için .NET Framework'deki dize yöntemlerini ve özelliklerini kullanabilirsiniz. Yöntemler <xref:System.String> için yöntem adını belirtin. Özellikler <xref:System.String> için özellik adını "get_"den sonra belirtin.
 
-Birden çok dizeye sahip öğeler için, dize yöntemi veya özelliği her bir dizede çalışır.
+Birden çok dize olan öğeler için dize yöntemi veya özelliği her dize üzerinde çalışır.
 
 Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gösterilmektedir.
 
@@ -50,24 +50,24 @@ Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gö
   -->
 ```
 
-## <a name="intrinsic-item-functions"></a>İç öğe işlevleri
+## <a name="intrinsic-item-functions"></a>Içsel madde fonksiyonları
 
-Aşağıdaki tabloda, öğeler için kullanılabilen iç işlevler listelenmiştir.
+Aşağıdaki tabloda öğeler için kullanılabilir içsel işlevleri listelenmektedir.
 
 |İşlev|Örnek|Açıklama|
 |--------------|-------------|-----------------|
 |`Count`|`@(MyItem->Count())`|Öğelerin sayısını döndürür.|
-|`DirectoryName`|`@(MyItem->DirectoryName())`|Her öğe için `Path.DirectoryName` eşdeğerini döndürür.|
-|`Distinct`|`@(MyItem->Distinct())`|Farklı `Include` değerlerine sahip öğeleri döndürür. Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Farklı `itemspec` değerlerine sahip öğeleri döndürür. Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`Reverse`|`@(MyItem->Reverse())`|Öğeleri ters sırada döndürür.|
-|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Herhangi bir öğenin belirtilen meta veri adı ve değerine sahip olup olmadığını belirtmek için bir `boolean` döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Meta verileri işaretsiz öğeleri döndürür. Yalnızca `itemspec` korunur.|
-|`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|Verilen meta veri adına sahip öğeleri döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`Metadata`|`@(MyItem->Metadata("MetadataName"))`|Meta veri adına sahip meta verilerin değerlerini döndürür.|
-|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|Verilen meta veri adı ve değerine sahip öğeleri döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`DirectoryName`|`@(MyItem->DirectoryName())`|Her madde `Path.DirectoryName` için eşdeğerini verir.|
+|`Distinct`|`@(MyItem->Distinct())`|Farklı `Include` değerlere sahip öğeleri döndürür. Meta veriler yoksayılır. Karşılaştırma büyük/küçük harf duyarsız.|
+|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Farklı `itemspec` değerlere sahip öğeleri döndürür. Meta veriler yoksayılır. Karşılaştırma büyük/küçük harf duyarlıdır.|
+|`Reverse`|`@(MyItem->Reverse())`|Maddeleri ters sırada döndürür.|
+|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Herhangi `boolean` bir öğenin verilen meta veri adı ve değerine sahip olup olmadığını belirtmek için a döndürür. Karşılaştırma büyük/küçük harf duyarsız.|
+|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Meta verileri temizlenmiş öğeleri döndürür. Sadece `itemspec` korunur.|
+|`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|Verilen meta veri adı olan öğeleri döndürür. Karşılaştırma büyük/küçük harf duyarsız.|
+|`Metadata`|`@(MyItem->Metadata("MetadataName"))`|Meta veri adı olan meta verilerin değerlerini döndürür.|
+|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|Verilen meta veri adı ve değerine sahip öğeleri döndürür. Karşılaştırma büyük/küçük harf duyarsız.|
 
-Aşağıdaki örnek, iç öğe işlevlerinin nasıl kullanılacağını göstermektedir.
+Aşağıdaki örnek, içsel madde işlevlerinin nasıl kullanılacağını gösterir.
 
 ```xml
 <ItemGroup>

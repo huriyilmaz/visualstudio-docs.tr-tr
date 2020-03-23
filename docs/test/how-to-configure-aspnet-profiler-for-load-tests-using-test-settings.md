@@ -1,5 +1,5 @@
 ---
-title: Yük testleri için ASP.NET Profiler'ı yapılandırma
+title: Yük Testleri için ASP.NET Profil oluşturun
 ms.date: 10/13/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,57 +9,57 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0132401df33bd65d7e328307167b6c228155bb42
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78169397"
 ---
-# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio'da test ayarlarını kullanarak yük testleri için ASP.NET profil oluşturucuyu yapılandırma
+# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio'daki test ayarlarını kullanarak yük testleri için ASP.NET profil oluşturucusu yapılandırın
 
-ASP.NET Profil Oluşturucu bilgi toplamak için ASP.NET profiler tanılama veri bağdaştırıcısı'nı kullanabilirsiniz. Bu tanılama veri bağdaştırıcısı, ASP.NET uygulamaları için performans verilerini toplar.
+ASP.NET profilci bilgilerini toplamak için ASP.NET profiloluşturucu tanıveri bağdaştırıcısını kullanabilirsiniz. Bu tanılama veri bağdaştırıcısı ASP.NET uygulamalar için performans verileri toplar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Bu tanılama veri bağdaştırıcısı Microsoft Test Yöneticisi'ni kullanarak çalıştırılan testler için kullanılamaz. ASP.NET Profiler tanılama bağdaştırıcısı, Visual Studio Enterprise gerektiren bir yalnızca, Web siteleri kullanan yük testleriyle kullanabilirsiniz.
+> Bu tanılama veri bağdaştırıcısı, Microsoft Test Manager kullanılarak çalıştırılan testler için kullanılamaz. Yalnızca web sitelerini kullanarak yük testleri ile ASP.NET Profiler tanı bağdaştırıcısını kullanabilirsiniz, bu da Visual Studio Enterprise gerektirir.
 
-ASP.NET profiler tanılama veri bağdaştırıcısı, bir yük testi çalıştırdığınızda, uygulama katmanından ASP.NET Profil Oluşturucu verileri toplamanıza olanak tanır. Uzun yük testleri, örneğin, bir saatten daha uzun yük testleri için profil oluşturucu çalıştırmamanız gerekir. Profil oluşturucu dosyası büyüyebilir olmasıdır belki de yüz megabayt. Bunun yerine, ayrıntılı performans sorunlarını tanılama avantajı hala erişmenizi sağlayan ASP.NET profil oluşturucuyu kullanarak kısa yük testleri çalıştırın.
+ASP.NET profil oluşturucu tanıveri bağdaştırıcısı, bir yük testi çalıştırdığınızda uygulama katmanından ASP.NET profil oluşturucu verileri toplamanızı sağlar. Profil oluşturucuyu uzun yük testleri için çalıştırmamalısınız, örneğin, bir saatten uzun süren yükleme testleri. Profil oluşturucu dosyasının büyük, belki de yüzlerce megabayt olabiliyor olmasıdır. Bunun yerine, yine de performans sorunları derin tanı yarar verecektir ASP.NET profilleyici kullanarak daha kısa yük testleri çalıştırın.
 
 > [!NOTE]
-> ASP.NET profiler tanılama veri bağdaştırıcısı Internet Information Services (IIS) işleminin profilini. Bu nedenle, bir geliştirme web sunucusuna karşı çalışmaz. Yük testinizde Web sitesinin profilini çıkarmak için IIS'in çalıştığı makineye bir test aracısı yüklemek zorunda. Test aracısı yük oluşturmayacak ancak yalnızca koleksiyon için bir aracı olacak. Daha fazla bilgi için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
+> ASP.NET profilci tanıveri bağdaştırıcısı Internet Information Services (IIS) işlemini profiller. Bu nedenle, bir geliştirme web sunucusuna karşı çalışmaz. Yükleme testinizdeki web sitesinin profilini çıkarmak için, IIS'nin çalıştırdığı makineye bir test aracısı yüklemeniz gerekir. Test aracısı yük oluşturmaz, ancak yalnızca toplama aracısı olur. Daha fazla bilgi için [bkz.](../test/lab-management/install-configure-test-agents.md)
 
-Daha fazla bilgi için bkz. [nasıl yapılır: dağıtılmış yük testi için test ayarı oluşturma](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md).
+Daha fazla bilgi için [bkz: Dağıtılmış yük testi için test ayarı oluşturun.](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
 
-## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>Test ayarlarınız için ASP.NET Profiler'ı yapılandırma
+## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>Test ayarlarınız için ASP.NET profil oluşturucuyu yapılandırın
 
-Bu yordamdaki adımları gerçekleştirmeden önce, Visual Studio 'dan test ayarlarınızı açmanız ve **veri ve tanılama** sayfasını seçmeniz gerekir.
+Bu yordamdaki adımları gerçekleştirmeden önce Visual Studio'dan test ayarlarınızı açmanız ve **Veri ve Tanılama** sayfasını seçmeniz gerekir.
 
-1. ASP.NET Profil Oluşturucu verileri toplamak için kullanılacak rolü seçin.
+1. ASP.NET profil oluşturucu verilerini toplamak için kullanılacak rolü seçin.
 
     > [!WARNING]
-    > Bu rol, bir web sunucusu olmalıdır.
+    > Bu rol bir web sunucusu olmalıdır.
 
-2. ASP.NET profil oluşturma verilerini toplamayı etkinleştirmek için **ASP.net Profiler** ' ı seçin ve ardından **Yapılandır**' ı seçin.
+2. Profil oluşturma verilerinin ASP.NET toplamayı etkinleştirmek için **ASP.NET Profiler'ı** seçin ve sonra **Yapıl'ı**seçin.
 
-     ASP.NET profil oluşturma veri koleksiyonu yapılandırmak için iletişim kutusu görüntülenir.
+     Profil oluşturma veri toplama ASP.NET yapılandırmak için iletişim kutusu görüntülenir.
 
-3. **Profil Oluşturucu örnekleme aralığı**içinde, ASP.NET profil oluşturma örnekleri almak arasında kaç tane DURDURULMAYAN CPU saati döngüsünü belirten bir değer yazın.
+3. **Profiler Örnekleme aralığında,** profil oluşturma örnekleri nin alınması arasında kaç tane durdurulmayan CPU saat döngüsünün ASP.NET kadar bekleyeceklerini gösteren bir değer yazın.
 
-4. Katman etkileşimi profil oluşturmayı etkinleştirmek için **katman etkileşim profilini etkinleştir**' i seçin.
+4. Katman etkileşimi profilini etkinleştirmek için **Katman Etkileşimprofiloluşturmayı Etkinleştir'i**seçin.
 
-     Katman etkileşimi profili oluşturma, her bir yapıt için Web sunucusuna gönderilen isteklerin sayısını (örneğin, *MyPage. aspx* veya *CompanyLogo. gif*) ve her bir isteğe hizmet vermek için geçen süreyi sayar. Ayrıca, katman etkileşim profili oluşturma ve hangi ADO.NET bağlantı sayfası isteğin bir parçası olarak kullanılan kaç sorguları ve saklı yordam çağrılarını bu isteği hizmet parçası olarak dahil edilen toplar.
+     Katman etkileşimi profil oluşturma, her yapı için web sunucusuna gönderilen istek sayısını (örneğin, *MyPage.aspx* veya *CompanyLogo.gif)* ve her isteğe hizmet vermek için geçen süreyi sayar. Ayrıca, katman etkileşimi profil oluşturma, sayfa isteğinin bir parçası olarak hangi ADO.NET bağlantıların kullanıldığını ve bu isteğe hizmet in bir parçası olarak kaç sorgu ve depolanan yordam çağrısının yürütüldedildiğini toplar.
 
-     İki farklı ayarlar, zamanlama bilgilerinin toplanır:
+     İki farklı zamanlama bilgisi kümesi toplanır:
 
-    - Her web isteğini bakım için zamanlama bilgileri (Min, Max, ortalama ve toplam).
+    - Her web isteğine hizmet vermek için zamanlama bilgileri (Min, Max, Average ve Total).
 
-    - Her sorguyu yürütmek için zamanlama bilgileri (Min, Max, ortalama ve toplam).
+    - Her sorguyu yürütmenin zamanlama bilgileri (Min, Max, Average ve Total).
 
-Bir test ayarında yapılandırılan ASP.NET profiler tanılama veri bağdaştırıcısı ile ASP.NET profil oluşturma ASP.NET web uygulamanızı şirket verilerini toplayabilir.
+Test ayarınızda yapılandırılan ASP.NET profil oluşturucu suyla, artık ASP.NET web uygulamanızda ASP.NET profil oluşturma verileri toplayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Test ayarlarını kullanarak tanılama bilgilerini topla](../test/collect-diagnostic-information-using-test-settings.md)
-- [Nasıl yapılır: dağıtılmış yük testi için test ayarı oluşturma](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
+- [Test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md)
+- [Nasıl? Dağıtılmış yük testi için test ayarı oluşturma](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)

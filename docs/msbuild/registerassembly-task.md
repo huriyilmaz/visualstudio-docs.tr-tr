@@ -1,5 +1,5 @@
 ---
-title: RegisterAssembly görevi | Microsoft Docs
+title: RegisterAssembly Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,34 +19,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c95606a00e86ffd187162e444f2c710c5cc3a0e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632894"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly görevi
 
-Belirtilen derleme içindeki meta verileri okur ve gerekli girdileri kayıt defterine ekler ve bu da COM istemcilerinin saydam olarak .NET Framework sınıfları oluşturmalarına olanak tanır. Bu görevin davranışı, [Regasm. exe (derleme kayıt aracı)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)ile benzerdir, ancak aynı değildir.
+Belirtilen derlemeiçindeki meta verileri okur ve kayıt defterine gerekli girişleri ekler, bu da COM istemcilerinin .NET Framework sınıflarını saydam olarak oluşturmasını sağlar. Bu görevin [davranışı, Regasm.exe (Montaj Kayıt aracı)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)ile aynı, ancak aynı değildir.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda `RegisterAssembly` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `RegisterAssembly` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Assemblies`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> COM 'a kaydedilecek derlemeleri belirtir.|
-|`AssemblyListFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> `RegisterAssembly` görevi ve [UnregisterAssembly](../msbuild/unregisterassembly-task.md) görevi arasındaki durum hakkında bilgi içerir. Bu bilgiler `UnregisterAssembly` görevin, `RegisterAssembly` görevinde kaydettirilemedi bir derlemenin kaydını silmeye çalışmasını engeller.|
-|`CreateCodeBase`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, kayıt defterinde, genel derleme önbelleğinde yüklü olmayan bir derlemenin dosya yolunu belirten bir kod temeli girişi oluşturur. Sonrasında genel derleme önbelleğine kaydettiriyor olduğunuz derlemeyi yükleyecekseniz bu seçeneği belirtmemelisiniz.|
-|`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Belirtilen derlemeden oluşturulacak tür kitaplığını belirtir. Oluşturulan tür kitaplığı, derleme içinde tanımlanan erişilebilir türlerin tanımlarını içerir. Tür kitaplığı yalnızca aşağıdaki koşullardan biri doğru olduğunda üretilir:<br /><br /> -Bu ada sahip bir tür kitaplığı bu konumda yok.<br />-Bir tür kitaplığı var, ancak geçirilen derlemeden daha eski.<br /><br /> Tür kitaplığı geçilen derlemeden daha yeniyse, yeni bir tane oluşturulmaz, ancak derleme yine de kaydedilir.<br /><br /> Bu parametre belirtilmişse, `Assemblies` parametresi ile aynı sayıda öğe olması gerekir, aksi takdirde görev başarısız olur. Hiçbir giriş belirtilmemişse, görev varsayılan olarak derlemenin adı olur ve öğenin uzantısını *. tlb*olarak değiştirir.|
+|`Assemblies`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> COM'a kaydedilecek derlemeleri belirtir.|
+|`AssemblyListFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Görev ve [Kayıt Dışı Montaj](../msbuild/unregisterassembly-task.md) görevi arasındaki durum hakkında bilgi içerir. `RegisterAssembly` Bu bilgiler, `UnregisterAssembly` görevin göreve kaydolmayan `RegisterAssembly` bir derlemeyi silmeye çalışmasının önüne çıkar.|
+|`CreateCodeBase`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`genel derleme önbelleğinde yüklü olmayan bir derleme için dosya yolunu belirten kayıt defterinde bir codebase girişi oluşturur. Sonrasında genel derleme önbelleğine kaydettiriyor olduğunuz derlemeyi yükleyecekseniz bu seçeneği belirtmemelisiniz.|
+|`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Belirtilen derlemeden oluşturmak üzere tür kitaplığını belirtir. Oluşturulan tür kitaplığı, derlemeiçinde tanımlanan erişilebilir türlerin tanımlarını içerir. Tür kitaplığı yalnızca aşağıdaki koşullardan biri doğruysa oluşturulur:<br /><br /> - Bu konumda bu adı taşıyan bir tür kitaplığı yok.<br />- Bir tür kitaplığı var, ancak meclisten daha eski.<br /><br /> Tür kitaplığı meclisten daha yeniyse, yenisi oluşturulmaz, ancak derleme yine de kaydedilir.<br /><br /> Bu parametre belirtilirse, `Assemblies` parametreyle aynı sayıda öğeye sahip olması gerekir veya görev başarısız olur. Giriş belirtilmemişse, görev varsayılan olarak derlemenin adına gelecek ve öğenin *uzantısını .tlb*olarak değiştirecektir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `MyAssemblies` öğesi koleksiyonu tarafından belirtilen derlemeyi kaydetmek için `RegisterAssembly` görevini kullanır.
+ Aşağıdaki örnek, `RegisterAssembly` `MyAssemblies` madde koleksiyonu tarafından belirtilen derlemeyi kaydetmek için görevi kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

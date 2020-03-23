@@ -1,5 +1,5 @@
 ---
-title: Yük testi sonuçları karşılaştırma
+title: Yük testi sonuçlarını karşılaştırma
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,40 +10,40 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f85800ea59545ad64a821d1bb8c003ba6eef8c26
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589350"
 ---
-# <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>Rapor yük testi sonuçlarını test karşılaştırmaları veya eğilim analizi
+# <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>Test karşılaştırmaları veya eğilim analizi için rapor yükü testleri sonuçları
 
-İki veya daha fazla test sonucunu temel alan Microsoft Excel yük testi raporları oluşturabilirsiniz.
+İki veya daha fazla test sonucuna dayanan Microsoft Excel yük testi raporları oluşturabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Yük testi raporlarının iki türü kullanılabilir:
+İki tür yük testi raporu mevcuttur:
 
-- Karşılaştırmayı Çalıştır&mdash;tabloları ve çubuk grafikleri kullanarak yan yana karşılaştırma verileri görüntüleyen aslında iki raporlar bu rapor eder.
+- Karşılaştırma&mdash;yı çalıştırBu rapor, tablolar ve çubuk grafikler kullanarak yan yana karşılaştırma verilerini görüntüleyen iki rapordur.
 
-- Eğilim&mdash;, iki veya daha fazla rapor eğilim çözümlemesi oluşturabilirsiniz. Çizgi grafikler kullanarak sonuçlar görüntülenir.
+- Eğilim&mdash;İki veya daha fazla rapor üzerinde eğilim çözümlemesi oluşturabilirsiniz. Sonuçlar satır grafikleri kullanılarak görüntülenir.
 
-Başarım verisini hissedarlarla paylaşmak ve genel performansı ve sistem durumu iyiye iletmek için her iki rapor kullanılabilir ya da daha da kötüsü.
+Her iki rapor da performans verilerini hissedarlarla paylaşmak ve sistemin genel performansının ve sağlığının iyiye mi yoksa kötüye mi gidiyorsa iletmek için kullanılabilir.
 
-Rapor tanımları yük testi veritabanında depolanır. Rapor kaydedildiğinde, rapor için tanım veritabanında kaydedilir ve daha sonra yeniden kullanılabilir.
+Rapor tanımları yük testi veritabanında depolanır. Bir rapor kaydedildiğinde, raporun tanımı veritabanına kaydedilir ve daha sonra yeniden kullanılabilir.
 
-Ayrıca, elektronik tablo dosyasını, hissedarların raporu görmek için veritabanına bağlanmak zorunda değilsiniz için hissedarlarla paylaşılabilir.
+Ayrıca, elektronik tablo dosyası hissedarlarla paylaşılabilir, böylece hissedarlar raporu görmek için veritabanına bağlanmak zorunda kalmaz.
 
 > [!NOTE]
-> Bir yük testine yorum eklerseniz, bunlar Excel raporunda görüntülenir.
+> Bir yük testine yorum eklerseniz, bunlar Excel raporunda görünür.
 
 ## <a name="tasks"></a>Görevler
 
 |Görevler|İlişkili konular|
 |-|-|
-|**Performans ve stres rapor oluşturma:** Microsoft Excel kullanarak yük ve web performans testlerinizi üzerinde raporlar oluşturabilirsiniz.|- [Nasıl yapılır: oluşturma yük testi başarım raporları kullanarak Microsoft Excel](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
-|**El ile Microsoft Word'ı kullanarak performans ve stres rapor oluşturma:** raporları, yük ve web performans testleri el ile özeti, tablo ve graf verilerini bir Microsoft Word belgesine yapıştırarak oluşturabilirsiniz.|- [Nasıl yapılır: Microsoft Word kullanılarak bir yük testi başarım raporunu el ile oluşturma](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|
+|**Performans ve stres raporu oluşturun:** Microsoft Excel'i kullanarak yük ve web performans testleri hakkında raporlar oluşturabilirsiniz.|- [Nasıl? Microsoft Excel'i kullanarak yük testi performans raporları oluşturma](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
+|**Microsoft Word'ü kullanarak el ile performans ve stres raporu oluşturun:** Özet, tablo ve grafik verilerini bir Microsoft Word belgesine kopyalayıp yapıştırarak yük ve web performans testlerinize ilişkin raporlar oluşturabilirsiniz.|- [Nasıl yapIlir: Microsoft Word'ü kullanarak bir yük testi performans raporu el ile oluşturma](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

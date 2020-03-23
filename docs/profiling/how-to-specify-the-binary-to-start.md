@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: başlatılacak Ikiliyi belirtme | Microsoft Docs'
+title: "Nasıl Yapılsın: Başlamak için İkili'yi Belirtin | Microsoft Dokümanlar"
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,27 +15,27 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: fd3379b9769cfd6bfe1335b12545e635a9bde782
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778693"
 ---
-# <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: başlatılacak ikiliyi belirtme
+# <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: Başlatma için ikili dosya belirtme
 
-Dll 'Ler gibi ikili dosyaların profilini almak için, **\<hedef > Özellik sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgi, DLL projesinin çağıran uygulamayı bulabileceği yeri gösterir.
+DL'ler gibi profil ikilileri için ** \<Hedef> Özellik Sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgiler, DLL projesinin arama uygulamasını nerede bulabileceğini gösterir.
 
-1. **Performans Gezgini**, hedef ikiliye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+1. **Performans Gezgini'nde,** hedef ikiliyi sağ tıklatın ve ardından **Özellikler'i**tıklatın.
 
-2. **Özellik sayfaları** iletişim kutusunda, **başlatma** özellikleri ' ne tıklayın.
+2. Özellik **Sayfaları** iletişim kutusunda Başlat **özelliklerini** tıklatın.
 
-3. **Proje özelliklerini geçersiz kıl** onay kutusunu seçin.
+3. Geçersiz **Kılma proje özellikleri** onay kutusunu seçin.
 
-4. **Başlatılacak yürütülebilir** metin kutusunda dosya konumunu belirtin.
+4. **Başlatılabilir** metin kutusunda, dosya konumunu belirtin.
 
-5. **Bağımsız değişkenler** metin kutusunda, uygulamayı başlatmak için gereken bağımsız değişkenleri belirtin.
+5. Bağımsız **değişkenler** metin kutusunda, uygulamayı başlatmak için gereken bağımsız değişkenleri belirtin.
 
-6. **Çalışma dizini** metin kutusunda dizin konumunu belirtin.
+6. Çalışma **dizini** metin kutusunda, dizin konumunu belirtin.
 
 7. **Tamam**'a tıklayın.
 

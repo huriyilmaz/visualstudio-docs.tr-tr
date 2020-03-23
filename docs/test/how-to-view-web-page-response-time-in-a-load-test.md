@@ -1,5 +1,5 @@
 ---
-title: Bir yük testinde sayfa yanıt süresi
+title: Yük Testinde Sayfa Yanıt Süresi
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,88 +11,88 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cf8bc1205658899a51cf1a50e83a9a8b34034b25
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594345"
 ---
-# <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Nasıl yapılır: Yük Testi Çözümleyicisi kullanarak bir yük testinde web sayfası yanıt süresini görüntüleme
+# <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Nasıl yapilir: Yük Testi Çözümleyicisini kullanarak yük testinde web sayfası yanıt süresini görüntüleme
 
-Her web sayfasının yüklenmesi için geçen süreyi olarak da bilinen *yanıt süresi*. Web performans testi oluşturduğunuzda, web performans testinde web sayfası her istek için yanıt süresi hedefi ayarlayabilirsiniz.
+Her web sayfasının yüklenmesi için gereken süre *yanıt süresi*olarak bilinir. Bir web performans testi oluşturduğunuzda, web performans testinizdeki her web sayfası isteği için bir yanıt süresi hedefi ayarlayabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Bir yük testi içinde web performans testinizi yoğunluk altında çalıştırırsanız, her sayfa için aşağıdaki bilgileri analiz etmek mümkün olacaktır:
+Web performans testinizi bir yük testinde stres altında çalıştırın, her sayfa için aşağıdaki bilgileri analiz edebilirsiniz:
 
-- Sayfa için ortalama yanıt süresi.
+- Sayfanın ortalama yanıt süresi.
 
-- Sayfanın yanıt süresi hedefi karşılayan test yinelemeleri yüzdesi.
+- Sayfanın yanıt süresi hedefini karşılayan test yinelemelerinin yüzdesi.
 
-- Tablolar veya grafikler görünümünde kullanarak web sayfası yanıt sürelerini analiz edebilirsiniz **Yük Testi Çözümleyicisi**:
+- Yük Testi Çözümleyicisi'ndeki Tablolar görünümünü veya Grafikler **Load Test Analyzer**görünümünü kullanarak web sayfası yanıt sürelerini analiz edebilirsiniz:
 
-- Tablo görünümünde Web sayfası yanıt sürelerini analiz etme
+- Tablo görünümünde web sayfası yanıt sürelerini analiz etme
 
-- Grafik görünümünde Web sayfası yanıt sürelerini analiz etme
+- Grafikler görünümünde web sayfası yanıt sürelerini analiz etme
 
-## <a name="view-response-time-data-in-a-table"></a>Bir tablodaki yanıt süresi verilerini görüntüleyin
+## <a name="view-response-time-data-in-a-table"></a>Yanıt süresi verilerini tabloda görüntüleme
 
-1. İçinde **Yük Testi Çözümleyicisi**, seçin **tabloları** araç çubuğundaki tablo kılavuzunu görüntülendiğinden emin olun.
+1. Yük **Testi Çözümleyicisi'nde,** tablo ızgarasının görüntülendiğinden emin olmak için araç çubuğundaki **Tablolar'ı** seçin.
 
-2. İçinde **tablo** aşağı açılan liste kutusunda **sayfaları**.
+2. **Tablo** açılır liste kutusunda **Sayfalar'ı**seçin.
 
-3. Veriler her sayfa için kılavuz görüntülenir. Normalde, aşağıdaki sütunlar görüntülenir.
+3. Her sayfanın verileri ızgarada görüntülenir. Aşağıdaki sütunlar normalde görüntülenir.
 
-   |Sütun başlığı|Açıklama|
+   |Sütun Başlığı|Açıklama|
    |-|-|
-   |**Sayfa**|Web sayfasının adı.|
-   |**Senaryo**|Senaryonun adı. Birden fazla senaryo web performans testiniz varsa önemlidir.|
-   |**Test**|Web performans testi adı. Birden fazla web performans yük testi varsa önemlidir.|
-   |**Ağ**|Ağ türü.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**Toplam**|Web sayfası için yapılan isteklerinin toplam sayısı. Tüm yinelemeler yük testinde toplamdır.|
-   |**Dosyaya Kaydet**|Ortalama sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**Min**|En küçük sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**ORTANCA**|Ortalama sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**%90**|Yanıt süresi için 90. yüzdebirlik. Bu, %90 sayfa bu sayıdan daha hızlı yanıt ve %10 sayfalarının daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**%95**|95. yüzdebirlik için yanıt süresi. Bu %95 sayfa bu sayıdan daha hızlı yanıt ve %5 sayfalarının daha yavaş yanıt verdiğini gösterir.|
-   |**% 99**|99. yüzdebirlik dilimde için yanıt süresi. Bu sayfaları %99 bu sayıdan daha hızlı yanıt ve %1 sayfalarının daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**en fazla**|En fazla sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**Std sapma**|Varsayılan olarak, standart sapma verileri toplanmaz. İçinde bu verileri toplamak için **Yük Testi Düzenleyicisi**altında **çalıştırma ayarları** düğümünün değiştirmek için çalışma ayarı düğümünü seçin. İçinde **özellikleri** penceresinde için **Zamanlama Ayrıntıları Deposu** özelliği, select **AllIndividualDetails**.|
-   |**Sayfa saati**|Web sayfası için yapılan tüm istekleri için ortalama yanıt süresi.|
-   |**Hedef**|Sayfa saati hedefi. Bu sayfa için sabit bir değerdir. **Not:** sayfa saati hedefi, web performans testinde istek için hedef yalnızca tanımlanmış olduğunda görüntülenir.|
-   |**% Toplantı hedefi**|Web sayfası için yanıt süresi hedefi karşılayan yapılan isteklerin yüzdesi.|
+   |**Sayfası**|Web sayfasının adı.|
+   |**Senaryo**|Senaryonun adı. Web performans testinizde birden fazla senaryo varsa önemlidir.|
+   |**Test**|Web performans testinin adı. Yük testinizde birden fazla web performans testi varsa önemlidir.|
+   |**Ağ**|Ağ türü.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**Toplam**|Web sayfası için yapılan toplam istek sayısı. Bu, yük testindeki tüm yinelemelerin toplamıdır.|
+   |**Ave**|Ortalama sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**Dk**|Minimum sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**Medyan**|Ortanca sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**90%**|Yanıt süresi için yüzde 90. Bu, sayfaların %90'ının bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %10'unun daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**95%**|Yanıt süresi için yüzde 95. Bu, sayfaların %95'inin bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %5'inin daha yavaş yanıt verdiğini gösterir.|
+   |**%99**|Yanıt süresi için yüzde 99. Bu, sayfaların %99'unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %1'inin daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**Max**|Maksimum sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**Std Dev**|Varsayılan olarak, standart sapma verileri toplanmaz. Bu verileri toplamak için, **Çalıştır Ayarları** düğümünün altındaki Yük Testi Düzenleyicisi'nde, değiştirmek için çalıştır ayar düğümünü seçin. **Load Test Editor** **Özellikler** penceresinde, Zamanlama **Ayrıntıları Depolama** özelliği için **AllIndividualDetails'ı**seçin.|
+   |**Sayfa Saati**|Web sayfası için yapılan tüm isteklerin ortalama yanıt süresi.|
+   |**Hedef**|Sayfa zaman hedefi. Bu sayfa için sabit bir değerdir. **Not:**  Sayfa Süresi Hedefi yalnızca web performans testinde istek için hedef tanımlandığında görüntülenir.|
+   |**% Toplantı Hedefi**|Yanıt süresi hedefini karşılayan web sayfası için yapılan isteklerin yüzdesi.|
 
-   Daha fazla bilgi için [yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümlemek](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+   Daha fazla bilgi için bkz: [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)et.
 
-## <a name="view-response-time-data-in-a-graph"></a>Yanıt süresi verilerini bir grafikte görüntüleme
+## <a name="view-response-time-data-in-a-graph"></a>Yanıt süresi verilerini grafikte görüntüleme
 
-Yanıt süresi verilerini nasıl Yük testiniz sırasında zamanla değişeceğini görmek için bir grafik de görüntüleyebilirsiniz. Test çalışırken (örneğin, adım yükü düzenini kullanıyorsanız), yük düzeni artarsa bu özellikle yararlıdır. Daha fazla bilgi için [düzenleme yük desen modeli sanal kullanıcı etkinliği](../test/edit-load-patterns-to-model-virtual-user-activities.md).
+Ayrıca, yük testiniz sırasında zaman içinde nasıl değiştiğini görmek için yanıt süresi verilerini grafikte görüntüleyebilirsiniz. Bu, özellikle test devam ettikçe yük deseniniz artarsa (örneğin, adım yük modelini kullanıyorsanız) kullanışlıdır. Daha fazla bilgi [için, sanal kullanıcı etkinliklerini modellemek için yük desenlerini düzenle'ye](../test/edit-load-patterns-to-model-virtual-user-activities.md)bakın.
 
-Bir yanıt süresi verilerini görüntülemek için:
+Yanıt süresi verilerini grafikte görüntülemek için:
 
-1. İçinde **Yük Testi Çözümleyicisi**, seçin **grafikleri** araç çubuğundaki graf görüntülendiğinden emin olun.
+1. Yük **Testi Çözümleyicisi'nde,** grafiğin görüntülendiğinden emin olmak için araç çubuğundaki **Grafikler'i** seçin.
 
-2. İçinde **sayaçları** penceresi içinde ilginizi senaryo düğümünü genişletin (örneğin, `Scenario1`).
+2. **Sayaçlar** penceresinde, ilgilendiğiniz senaryonun düğümlerini genişletin (örneğin, `Scenario1`).
 
-3. Web performans testi, ilgilendiğiniz düğümünü genişletin.
+3. İlgilendiğiniz web performans testinin düğümlerini genişletin.
 
-4. Düğümü genişletmek **sayfaları**.
+4. Düğüm **Sayfalarını**genişletin.
 
-5. Hangi ilgilendiğiniz sayfayı düğümünü genişletin.
+5. İlgilendiğiniz sayfanın düğümlerini genişletin.
 
-6. Sağ **% toplantı hedefi sayfaları** seçip **grafik üzerinde sayaç Göster**.
+6. **% Sayfaları Toplantı Hedefi'ni** sağ tıklatın ve ardından **Grafikte Sayacı Göster'i**seçin.
 
-    Verileri grafiğe eklenir.
+    Veriler grafiğe eklenir.
 
-7. Seçim **Ortalama sayfa zamanı**, **sayfa yanıt süresi hedefi**ve **Toplam sayfa**için önceki adımı tekrarlayın.
+7. (İsteğe bağlı) **Sayfa Saati, Sayfa**Yanıt Süresi **Hedefi**ve Toplam **Sayfalar**için önceki adımı yineleyin.
 
    > [!NOTE]
-   > **Sayfa yanıt süresi hedefi** sabittir.
+   > **Sayfa Yanıt Süresi Hedefi** sabittir.
 
-   Daha fazla bilgi için [Çözümle yük testi sonuçlarını grafik görünümünde](../test/analyze-load-test-results-in-the-graphs-view.md).
+   Daha fazla bilgi için bkz: [Grafikler görünümünde yük testi sonuçlarını analiz](../test/analyze-load-test-results-in-the-graphs-view.md)et.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümleyin](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
-- [Nasıl yapılır: erişim yük testi sonuçlarını çözümleme](../test/how-to-access-load-test-results-for-analysis.md)
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz etme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
+- [Nasıl yapılı: Analiz için yük testi sonuçlarına erişin](../test/how-to-access-load-test-results-for-analysis.md)
+- [Yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

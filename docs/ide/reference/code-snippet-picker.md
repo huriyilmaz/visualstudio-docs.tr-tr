@@ -14,49 +14,49 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb03da430f43bbfd5c7398c147560a9c823f8811
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570498"
 ---
 # <a name="code-snippet-picker"></a>Kod Parçacığı Seçici
 
-Visual Studio Code Düzenleyicisi, birkaç fare tıklamasına izin veren bir **kod parçacığı seçici** sağlar ve bu sayede, etkin belgeye kullanıma hazırlanmış kod blokları ekleyebilirsiniz.
+Visual Studio Code Editor, birkaç fare tıklaması yla etkin belgeye hazır kod blokları eklemenize olanak tanıyan bir **Kod Snippet Seçici** sağlar.
 
-**Kod parçacığı seçiciyi** görüntüleme yordamı, kullanmakta olduğunuz dile göre değişir.
+**Kod Snippet Picker'ı** görüntüleme yordamı kullandığınız dile göre değişir.
 
-- Visual Basic, kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve kod **parçacığı Ekle**' yi seçin.
+- Visual Basic - Kısayol menüsünü görüntülemek için Kod Düzenleyicisi'nde istenilen konuma sağ tıklayın ve **Snippet Ekle'yi**seçin.
 
-- C#-Kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve kod parçacığı veya **çevreleme** **Ekle** ' ye tıklayın.
+- C# - Kısayol menüsünü görüntülemek için Kod Düzenleyicisi'nde istenilen konuma sağ tıklayın ve **Snippet Ekle** veya **Surround With'e**tıklayın.
 
-- C++- **Kod parçacığı seçici** kullanılamıyor.
+- C++ - **Kod Snippet Picker** kullanılamıyor.
 
-- F#- **Kod parçacığı seçici** kullanılamıyor.
+- F# - **Kod Snippet Picker** kullanılamıyor.
 
-- JavaScript-kod düzenleyicisinde istenen konuma sağ tıklayıp kısayol menüsünü görüntüleyin ve kod parçacığı veya **çevreleme** **Ekle** ' ye tıklayın.
+- JavaScript - Kısayol menüsünü görüntülemek için Kod Düzenleyicisi'nde istenilen konuma sağ tıklayın ve **Ekle Snippet** veya **Surround With'e**tıklayın.
 
-- XML: kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
+- XML - Kısayol menüsünü görüntülemek için Kod Düzenleyicisi'nde istenilen konuma sağ tıklayın ve **Ekle Snippet** veya **Surround With'e**tıklayın.
 
-- HTML: kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
+- HTML - Kısayol menüsünü görüntülemek için Kod Düzenleyicisi'nde istenilen konuma sağ tıklayın ve **Ekle Snippet** veya **Surround With'e**tıklayın.
 
-- SQL-kod düzenleyicisinde istenen konuma sağ tıklayıp kısayol menüsünü görüntüleyin ve **kod parçacığı Ekle**' ye tıklayın.
+- SQL - Kısayol menüsünü görüntülemek için Kod Düzenleyicisi'nde istenilen konuma sağ tıklayın ve **Snippet Ekle'yi**tıklatın.
 
-Çoğu Visual Studio geliştirme dilinde, kod **parçacığı seçicisinin** XML kod parçacığı dosyalarını taradığı klasör listesine klasörler eklemek Için **kod parçacıkları Yöneticisi** ' ni kullanabilirsiniz. Ayrıca, listeye eklemek için kendi kod parçacıklarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: kod parçacığı oluşturma](../../ide/walkthrough-creating-a-code-snippet.md).
+Çoğu Visual Studio geliştirme dillerinde, **Kod Snippet Picker'ın** XML parçacık dosyaları için taradığı klasör listesine klasör eklemek için **Kod Parçacıkları Yöneticisi'ni** kullanabilirsiniz. Ayrıca listeye eklemek için kendi parçacıklarınızı da oluşturabilirsiniz. Daha fazla bilgi için [Walkthrough: Kod parçacığı oluşturma'](../../ide/walkthrough-creating-a-code-snippet.md)ya bakın.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
 Öğe Adı
 
-**Öğe listesinde**seçilen öğenin adını görüntüleyen düzenlenebilir bir metin alanı. İstediğiniz öğe için artımlı bir arama gerçekleştirmek üzere bu alana adını yazmaya başlayın. **Öğe listesinde**istenen öğe seçilene kadar harfler eklemeye devam edin.
+**Öğe Listesinde**seçilen öğenin adını görüntüleyen editable metin alanı. İstediğiniz öğe için artımlı bir arama gerçekleştirmek için, adını bu alana yazmaya başlayın. **Öğe Listesinde**istenilen öğe seçilene kadar harf eklemeye devam edin.
 
-Öğe listesi
+Öğe Listesi
 
-Ekleme için kullanılabilen kod parçacıklarının listesi veya kod parçacıkları içeren klasörlerin listesi. Bir kod parçacığı eklemek veya bir klasörü genişletmek için istediğiniz öğeyi seçin ve ENTER tuşuna basın.
+Ekleme için kullanılabilen kod parçacıklarının listesi veya kod parçacıkları içeren klasörlerin listesi. Bir parçacık eklemek veya bir klasörü genişletmek için istediğiniz öğeyi seçin ve Enter tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod Parçacıkları İçin En İyi Uygulamalar](../../ide/best-practices-for-using-code-snippets.md)
-- [Visual Basic IntelliSense kod parçacıkları](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [Visual Basic IntelliSense Kod Parçacıkları](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
 - [Kodda Yer İşaretleri Ayarlama](../../ide/setting-bookmarks-in-code.md)
 - [Nasıl Yapılır: Şununla Çevrele Kod Parçacıklarını Kullanma](../../ide/how-to-use-surround-with-code-snippets.md)

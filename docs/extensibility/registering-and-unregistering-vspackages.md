@@ -1,5 +1,5 @@
 ---
-title: Kaydetme ve kaydını VSPackages | Microsoft Docs
+title: VSPackages'in Kaydedilmesi ve Kaydının Silinmesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 701700ba9d5c6db1e5858a2419e1b2c0fa950ae5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334301"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303185"
 ---
-# <a name="register-and-unregister-vspackages"></a>Kaydolun ve VSPackage kaydı
-Öznitelik bir VSPackage'ı kaydetmek için kullandığınız ancak
+# <a name="register-and-unregister-vspackages"></a>VSPackages'ı kaydetme ve kayıt dışı
+Bir VSPackage'ı kaydetmek için öznitelikleri kullanırsınız, ancak
 
-## <a name="register-a-vspackage"></a>VSPackage kaydetme
- Yönetilen VSPackages kaydını denetlemek için öznitelikleri kullanabilirsiniz. Tüm kayıt bilgileri içerdiği bir *.pkgdef* dosya. Dosya tabanlı kayıt hakkında daha fazla bilgi için bkz. [CreatePkgDef yardımcı programı](../extensibility/internals/createpkgdef-utility.md).
+## <a name="register-a-vspackage"></a>VSPackage kaydedin
+ Yönetilen VSPackages kaydını denetlemek için öznitelikleri kullanabilirsiniz. Tüm kayıt bilgileri *bir .pkgdef* dosyasında bulunur. Dosya tabanlı kayıt hakkında daha fazla bilgi için [CreatePkgDef yardımcı programı'na](../extensibility/internals/createpkgdef-utility.md)bakın.
 
- Aşağıdaki kod, VSPackage'ı kaydetmek için standart kayıt öznitelikleri kullanmayı gösterir.
+ Aşağıdaki kod, VSPackage'ınızı kaydetmek için standart kayıt özniteliklerinin nasıl kullanılacağını gösterir.
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -35,16 +35,16 @@ public sealed class BasicPackage : Package
 }
 ```
 
-## <a name="unregister-an-extension"></a>Bir uzantı kaydı
- Çok sayıda farklı VSPackage'ları ile denemeler ve bunları deneysel örneği kaldırmak istiyorsanız, yalnızca çalıştırabilirsiniz **sıfırlama** komutu. Aranacak **Visual Studio Deneysel örneğini sıfırlama** başlangıç sayfasında, bilgisayarın veya komut satırından şu komutu çalıştırın:
+## <a name="unregister-an-extension"></a>Uzantını kayıt dışı
+ Birçok farklı VSPackages ile deneme ler yapmaya başladıysanız ve bunları deneme örneğinden kaldırmak istiyorsanız, **sıfırlama** komutunu çalıştırabilirsiniz. Bilgisayarınızın başlangıç sayfasında **Visual Studio Deneme Örneğini Sıfırla'yı** arayın veya bu komutu komut satırından çalıştırın:
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp
 ```
 
- Git, Visual Studio geliştirme örneğinde yüklü olduğu bir uzantıyı kaldırmak istiyorsanız, **Araçları** > **Uzantılar ve güncelleştirmeler**, uzantı bulabilir ve tıklayın **Kaldırma**.
+ Visual Studio geliştirme örneğinize yüklediğiniz bir uzantıyı kaldırmak istiyorsanız, **Araçlar** > **Uzantıları ve Güncelleştirmeleri'ne**gidin, uzantıyı bulun ve **Kaldır'ı**tıklatın.
 
- Bazı nedenlerden dolayı bu yöntemlerin hiçbiri uzantısını kaldırmayı en başarılı olursa komut satırından VSPackage derleme gibi kaydını kaldırabilirsiniz:
+ Bu yöntemlerden herhangi biri uzantıyı kaldırmayı başarırsa, KOMUT satırından VSPackage derlemesini aşağıdaki gibi çıkarabilirsiniz:
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>
@@ -52,13 +52,13 @@ public sealed class BasicPackage : Package
 
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>
 
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Bir uzantıyı kaydetmek için bir özel kayıt özniteliği kullanın
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Uzantıyı kaydetmek için özel kayıt özniteliği kullanma
 
-Bazı durumlarda Uzantınız için yeni bir kayıt öznitelik oluşturmanız gerekebilir. Yeni kayıt defteri anahtarlarını ekleyin veya yeni değerleri mevcut anahtarlar eklemek için kaydı öznitelikleri kullanabilirsiniz. Yeni öznitelik öğesinden türetilmelidir <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, ve onu geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> ve <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> yöntemleri.
+Bazı durumlarda uzantınız için yeni bir kayıt özniteliği oluşturmanız gerekebilir. Yeni kayıt defteri anahtarları eklemek veya varolan anahtarlara yeni değerler eklemek için kayıt özniteliklerini kullanabilirsiniz. Yeni öznitelik türemelisiniz <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, ve bu <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> ve <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> yöntemleri geçersiz kılmak gerekir.
 
 ### <a name="create-a-custom-attribute"></a>Özel bir öznitelik oluşturma
 
-Aşağıdaki kod, yeni bir kayıt öznitelik oluşturma işlemini gösterir.
+Aşağıdaki kod, yeni bir kayıt özniteliğinin nasıl oluşturultuğugösteriyi gösterir.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
@@ -67,11 +67,11 @@ public class CustomRegistrationAttribute : RegistrationAttribute
 }
 ```
 
- <xref:System.AttributeUsageAttribute> Öznitelik sınıflarında program öğesi (sınıf, yöntem vb.), öznitelik ilgilidir, onu birden çok kez kullanılıp kullanılamayacağı ve devralınabilir olup olmadığını belirtmek için kullanılır.
+ Öznitelik <xref:System.AttributeUsageAttribute> sınıflarında, özniteliğin ilgili olduğu program öğesini (sınıf, yöntem, vb.) belirtmek, birden fazla kez kullanılıp kullanılamayacağı ve devralınıp alınamayacağını belirtmek için kullanılır.
 
-### <a name="create-a-registry-key"></a>Bir kayıt defteri anahtarı oluşturma
+### <a name="create-a-registry-key"></a>Kayıt defteri anahtarı oluşturma
 
-Aşağıdaki kodda, özel öznitelik oluşturur bir **özel** Kaydedilmekte VSPackage'ı için anahtarı altındaki alt anahtar.
+Aşağıdaki kodda, özel öznitelik, kayıtlı olan VSPackage için anahtarın altında **özel** bir alt anahtar oluşturur.
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)
@@ -95,9 +95,9 @@ public override void Unregister(RegistrationContext context)
 }
 ```
 
-### <a name="create-a-new-value-under-an-existing-registry-key"></a>Mevcut bir kayıt defteri anahtarı altında yeni bir değer oluşturma
+### <a name="create-a-new-value-under-an-existing-registry-key"></a>Varolan bir kayıt defteri anahtarı altında yeni bir değer oluşturma
 
-Var olan bir anahtar için özel değerler ekleyebilirsiniz. Aşağıdaki kod, bir VSPackage kayıt anahtarı için yeni değer eklemek gösterilmektedir.
+Varolan bir anahtara özel değerler ekleyebilirsiniz. Aşağıdaki kod, VSPackage kayıt anahtarına nasıl yeni bir değer ekleyeceğinizi gösterir.
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)

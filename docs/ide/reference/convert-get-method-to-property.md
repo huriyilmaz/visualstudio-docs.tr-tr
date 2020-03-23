@@ -1,50 +1,53 @@
 ---
-title: Get metodunu özelliğe Dönüştür; özelliği Get yöntemine Dönüştür
-ms.date: 01/26/2018
+title: Get yöntemini özelliğe dönüştürün; özelliği Get yöntemine dönüştürün
+ms.date: 03/10/2020
 ms.topic: reference
 ms.devlang: csharp
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6e3807f3902cbd0d2718f249f15cd268fb81ac51
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af507a8b437a20e3d4f4807d582abab6f9a12e27
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75570238"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094202"
 ---
-# <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Get metodunu özelliğe dönüştürme / özelliği için Get yöntemini yeniden düzenlemeler dönüştürün
+# <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Yöntem refactorings almak için özellik / Dönüştür metod alameti dönüştürme
 
-Bu yeniden düzenlemeler geçerlidir:
+Bu refactorings için geçerlidir:
 
 - C#
 
+- Visual Basic
+
 ## <a name="convert-get-method-to-property"></a>Get metodunu özelliğe dönüştürme
 
-**Ne:** , bir özellik (ve kümesi yönteminizi isteğe bağlı olarak) bir Get yöntemi dönüştürmenize olanak sağlar.
+**Ne:** Get yöntemini bir özelliğe (ve isteğe bağlı olarak Set yönteminize) dönüştürmenizi sağlar.
 
-**Ne zaman:** herhangi bir mantık içermeyen bir Get yöntemi vardır.
+**Ne zaman:** Herhangi bir mantık içermeyen bir Get yönteminiz var.
 
-### <a name="how-to"></a>Nasıl Yapılır Konuları
+### <a name="how-to"></a>Nasıl yapılır
 
-1. Get yöntemi adınızı imleci yerleştirin.
+1. İmlecinizi Get metodu adınıza yerleştirin.
 
 1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** seçin ve menü **özelliğiyle yöntemi Değiştir** gelen önizleme penceresi açılır.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Çarpanlara Yönelikler** menüsünü tetiklemek ve Önizleme penceresinden özellik ile değiştir **yöntemini** seçin.
    - **Fare**
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** seçin ve menü **özelliğiyle yöntemi Değiştir** gelen önizleme penceresi açılır.
+      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresi açılır penceresinden özellik ile değiştir **yöntemini** seçin.
 
-1. (İsteğe bağlı) Set yöntemi varsa, ayrıca kümesi yönteminizi şu anda seçerek dönüştürebilirsiniz **değiştirin Get yöntemini ve özellik kümesi yöntemiyle**.
+1. (İsteğe bağlı) Bir Set yönteminiz varsa, şu anda Get **yöntemini değiştir ve özelliği olan yöntemi ayarla yöntemini**seçerek Set yönteminizi de dönüştürebilirsiniz.
 
-1. Mutlu kodu Önizleme'de bir değişiklik varsa, basın **Enter** veya düzeltmeyi menüsünü tıklatın ve değişiklikler uygulanır.
+1. Kod önizlemesindeki değişiklikten memnunsanız, menüden **Enter** tuşuna basın veya düzeltmeyi tıklatın ve değişiklikler tamamlanır.
 
 Örnek:
 
@@ -66,24 +69,24 @@ public int MyValue
 }
 ```
 
-## <a name="convert-property-to-get-method"></a>Özellik Get yönteme Dönüştür
+## <a name="convert-property-to-get-method"></a>Özelliği Get yöntemine dönüştürme
 
-**Ne:** bir özellik için bir Get yöntemi dönüştürmenize olanak tanır.
+**Ne:** Bir özelliği Get yöntemine dönüştürmenizi sağlar
 
-**Ne zaman:** birden fazla hemen ayarlama ve bir değer alma içeren bir özelliğe sahiptir
+**Ne zaman:** Hemen ayar ve değer almaktan daha fazlasını içeren bir özelliğiniz var
 
-### <a name="how-to"></a>Nasıl Yapılır Konuları
+### <a name="how-to"></a>Nasıl yapılır
 
-1. Get yöntemi adınızı imleci yerleştirin.
+1. İmlecinizi Get metodu adınıza yerleştirin.
 
 1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **yöntemleriyle özelliğini değiştirin** gelen önizleme penceresi açılır.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Çarpanlara Yönelikmenü'yü** tetiklemek ve Önizleme penceresinden **yöntemlerle özelliği değiştir'i** seçin.
    - **Fare**
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **yöntemleriyle özelliğini değiştirin** gelen önizleme penceresi açılır.
+      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **yöntemlerle özelliği değiştir'i** seçin.
 
-1. Mutlu kodu Önizleme'de bir değişiklik varsa, basın **Enter** veya düzeltmeyi menüsünü tıklatın ve değişiklikler uygulanır.
+1. Kod önizlemesindeki değişiklikten memnunsanız, menüden **Enter** tuşuna basın veya düzeltmeyi tıklatın ve değişiklikler tamamlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

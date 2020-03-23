@@ -1,6 +1,6 @@
 ---
-title: "4\\. Adım: ASP.NET Core uygulamanızdan bir Web API 'SI gösterme"
-description: Bu video öğreticisiyle ASP.NET Core Web uygulamanıza bir Web API 'SI ekleyin ve adım adım yönergeleri uygulayın.
+title: 'Adım 4: ASP.NET Core App bir web API açığa'
+description: Bu video eğitimi ve adım adım talimatlarla ASP.NET Core Web Uygulamanıza bir web API ekleyin.
 ms.custom: get-started
 ms.date: 02/13/2020
 ms.technology: vs-ide-general
@@ -17,33 +17,33 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: 5ea9468bdf86986ab542fb1cabc873c9aeb75fd6
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77580044"
 ---
-# <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>4\. Adım: ASP.NET Core uygulamanızdan bir Web API 'SI kullanıma sunma
+# <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>Adım 4: ASP.NET Core uygulamanızdan bir web API'si açığa çıkarma
 
-Mevcut ASP.NET Core uygulamanıza bir Web API 'SI eklemek için bu adımları izleyin.
+Mevcut ASP.NET Core uygulamanıza bir web API eklemek için aşağıdaki adımları izleyin.
 
-_İlk ASP.NET Core uygulamanıza Web API desteği eklemek için bu videoyu izleyin ve takip edin._
+_Bu videoyu izleyin ve ilk ASP.NET Core uygulamanıza web API desteği eklemek için takip edin._
 
 > [!VIDEO https://www.youtube.com/embed/o_fYPOsAXts]
 
 ## <a name="open-your-project"></a>Projenizi açın
 
-ASP.NET Core uygulamanızı Visual Studio 2019 ' de açın. Uygulama, [Bu öğretici serisinin 3. adımında](tutorial-aspnet-core-ef-step-03.md)yapılandırıldığı gibi model türlerinizi yönetmek için zaten EF Core kullanıyor olmalıdır.
+Visual Studio 2019'da ASP.NET Core uygulamanızı açın. Uygulama zaten model türleri yönetmek için EF Core kullanıyor olmalıdır, [bu öğretici serisinin adım 3](tutorial-aspnet-core-ef-step-03.md)olarak yapılandırılmıştır.
 
 ## <a name="add-an-api-controller"></a>API denetleyicisi ekleme
 
-Projeye sağ tıklayın ve *API*adlı yeni bir klasör ekleyin. Sonra bu klasöre sağ tıklayıp > **yeni yapı Iskelesi öğesi** **Ekle** ' yi seçin. **Entity Framework kullanarak, eylemler Içeren API denetleyicisi ' ni seçin.** Şimdi var olan bir model sınıfını seçin ve **Ekle**' ye tıklayın.
+Projeye sağ tıklayın ve *Api*adı verilen yeni bir klasör ekleyin. Ardından, bu klasöre sağ tıklayın ve**Yeni İskele Öğe** **ekle'yi** > seçin. **Varlık Çerçevesi'ni kullanarak eylemlerle API Denetleyicisi'ni seçin.** Şimdi varolan bir model sınıfı seçin ve **Ekle'yi**tıklatın.
 
-![Visual Studio 2019 ASP.NET Core Scafkatlanmış API denetleyicisi](media/vs-2019/vs2019-add-scaffold-api.png)
+![Visual Studio 2019 ASP.NET Çekirdek İskele API Denetleyicisi](media/vs-2019/vs2019-add-scaffold-api.png)
 
 ## <a name="reviewing-the-generated-controller"></a>Oluşturulan denetleyiciyi gözden geçirme
 
-Oluşturulan kod yeni bir denetleyici sınıfı içerir. Sınıf tanımının en üstünde iki öznitelik bulunur.
+Oluşturulan kod yeni bir denetleyici sınıfı içerir. Sınıf tanımının en üstünde iki öznitelik vardır.
 
 ```csharp
 [Route("api/[controller]")]
@@ -51,9 +51,9 @@ Oluşturulan kod yeni bir denetleyici sınıfı içerir. Sınıf tanımının en
 public class GamesController : ControllerBase
 ```
 
-İlki, bu denetleyicideki eylemlerin yolunu belirtir `api/[controller]` bu, denetleyicinin adlandırılmasıdır `GamesController` yol `api/Games`olur.
+İlki, bu denetleyicideki `api/[controller]` eylemlerin rotasını, denetleyicinin adı `GamesController` ise rota nın `api/Games`.
 
-`[ApiController]`ikinci özniteliği, sınıfa bazı yararlı doğrulamalar ekler; örneğin, her eylem yönteminin kendi `[Route]` özniteliğini içerir.
+İkinci öznitelik, `[ApiController]`, her eylem yöntemi kendi `[Route]` özniteliği ni içermesini sağlamak gibi sınıfa bazı yararlı doğrulamalar ekler.
 
 ```csharp
 public class GamesController : ControllerBase
@@ -66,7 +66,7 @@ public class GamesController : ControllerBase
     }
 ```
 
-Denetleyici, oluşturucusuna geçirilen mevcut `AppDbContext`kullanır. Her eylem, uygulamanın verileriyle çalışmak için bu alanı kullanır.
+Denetleyici, varolan `AppDbContext`, kendi oluşturucuiçine geçirilen kullanır. Her eylem, uygulamanın verileriyle çalışmak için bu alanı kullanır.
 
 ```csharp
 // GET: api/Games
@@ -77,7 +77,7 @@ public IEnumerable<Game> GetGame()
 }
 ```
 
-İlk yöntem, `[HttpGet]` özniteliği kullanılarak belirtilen basit bir GET isteğidir. Hiçbir parametre alır ve veritabanındaki tüm oyunların listesini döndürür.
+İlk yöntem, öznitelik kullanılarak `[HttpGet]` belirtildiği gibi basit bir GET isteğidir. Hiçbir parametre alır ve veritabanındaki tüm oyunların bir listesini döndürür.
 
 ```csharp
 // GET: api/Games/5
@@ -100,7 +100,7 @@ public async Task<IActionResult> GetGame([FromRoute] int id)
 }
 ```
 
-Sonraki yöntem, rotada bir `/` sonraki yola eklenecek `{id}` belirtir. bu nedenle, tam yol, üstteki açıklamada gösterildiği gibi `api/Games/5` gibi bir şey olacaktır. `id` girişi, yöntemindeki `id` parametresine eşlenir. Yöntemi içinde, model geçersizse, bir `BadRequest` sonucu döndürülür. Aksi halde, EF, belirtilen `id`eşleşen kaydı bulmaya çalışacaktır. `NotFound` sonuç döndürülürse, aksi takdirde uygun `Game` kaydı döndürülür.
+Bir sonraki yöntem, `{id}` tam rotanın üstteki yorumda gösterildiği `/` gibi `api/Games/5` bir şey olması için aşağıdaki rotaya eklenecek olan rotada belirtilir. Giriş, `id` yöntemdeki `id` parametreye eşlenir. Yöntemin içinde, model geçersizse, `BadRequest` bir sonuç döndürülür. Aksi takdirde, EF sağlanan `id`kayıt eşleşen bulmaya çalışacaktır. Sonuç `NotFound` döndürülemezse, aksi takdirde uygun `Game` kayıt döndürülür.
 
 ```csharp
 // PUT: api/Games/5
@@ -139,7 +139,7 @@ public async Task<IActionResult> PutGame([FromRoute] int id, [FromBody] Game gam
 }
 ```
 
-Sonra, güncelleştirme gerçekleştirmek için API 'ye yapılan bir `[HttpPut]` isteği kullanılır. Yeni `Game` kayıt isteğin gövdesinde verilmiştir. Bazı doğrulama ve hata denetimi gerçekleştirilir ve her şey başarılı olursa veritabanındaki kayıt, isteğin gövdesinde belirtilen değerlerle güncelleştirilir. Aksi takdirde uygun bir hata yanıtı döndürülür.
+Ardından, `[HttpPut]` güncelleştirmeleri gerçekleştirmek için API'ye yapılan bir istek kullanılır. Yeni `Game` kayıt, isteğin gövdesinde sağlanır. Bazı doğrulama ve hata denetimi gerçekleştirilir ve her şey başarılı olursa veritabanındaki kayıt isteğin gövdesinde sağlanan değerlerle güncelleştirilir. Aksi takdirde uygun bir hata yanıtı döndürülür.
 
 ```csharp
 // POST: api/Games
@@ -158,7 +158,7 @@ public async Task<IActionResult> PostGame([FromBody] Game game)
 }
 ```
 
-Sisteme yeni kayıtlar eklemek için bir `[HttpPost]` isteği kullanılır. `[HttpPut]`gibi, kayıt, isteğin gövdesine eklenir. Geçerliyse, EF Core kaydı veritabanına ekler ve eylem güncelleştirilmiş kaydı (veritabanı oluşturulan KIMLIĞIYLE birlikte) ve API 'deki kayda yönelik bir bağlantıyı döndürür.
+Sisteme `[HttpPost]` yeni kayıtlar eklemek için bir istek kullanılır. , `[HttpPut]`kayıt isteğigövdesine eklenir. Geçerliyse, EF Core kaydı veritabanına ekler ve eylem güncelleştirilmiş kaydı (veritabanı tarafından oluşturulan kimliğiyle) ve API'deki kayda bağlantı döndürür.
 
 ```csharp
 // DELETE: api/Games/5
@@ -183,15 +183,15 @@ public async Task<IActionResult> DeleteGame([FromRoute] int id)
 }
 ```
 
-Son olarak, bir `[HttpDelete]` yolu, bir kaydı silmek için KIMLIK ile kullanılır. İstek geçerliyse ve belirtilen KIMLIĞE sahip bir kayıt varsa EF Core veritabanından silin.
+Son olarak, bir `[HttpDelete]` kaydı silmek için kimlikiçeren bir rota kullanılır. İstek geçerliyse ve verilen kimliğiiçeren bir kayıt varsa, EF Core bu isteği veritabanından siler.
 
-## <a name="adding-swagger"></a>Swagger ekleniyor
+## <a name="adding-swagger"></a>Swagger ekleme
 
-Swagger, bir ASP.NET Core uygulamasına bir dizi hizmet ve ara yazılım olarak eklenebilen bir API belgeleri ve test aracıdır. Bunu yapmak için projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Ardından, **Araştır**' a tıklayın, `Swashbuckle.AspNetCore`arama yapın ve 4.0.1 sürümünü yüklemelisiniz.
+Swagger, bir ASP.NET Core uygulamasına bir hizmet kümesi ve ara yazılım olarak eklenebilen bir API dokümantasyon ve test aracıdır. Bunu yapmak için projeye sağ tıklayın ve **NuGet Paketlerini Yönet'i**seçin. Ardından, **Gözat'ı,** aramayı `Swashbuckle.AspNetCore`ve 4.0.1 sürümünü yükleyin'i tıklatın.
 
-![Visual Studio 2019 NuGet 'Den swashbuckle ekleme](media/vs-2019/vs2019-nuget-swashbuckle.png)
+![Visual Studio 2019 Nuget Gönderen Swashbuckle ekle](media/vs-2019/vs2019-nuget-swashbuckle.png)
 
-Yüklendikten sonra `Startup.cs` açın ve `ConfigureServices` yönteminin sonuna aşağıdakini ekleyin:
+Yüklendikten sonra, `Startup.cs` açık ve `ConfigureServices` yöntemin sonuna aşağıdaki ekleyin:
 
 ```csharp
 services.AddSwaggerGen(c =>
@@ -200,9 +200,9 @@ services.AddSwaggerGen(c =>
 });
 ```
 
-Ayrıca dosyanın üst kısmına `using Swashbuckle.AspNetCore.Swagger;` eklemeniz gerekir.
+Ayrıca dosyanın üst `using Swashbuckle.AspNetCore.Swagger;` kısmında eklemeniz gerekir.
 
-Ardından, aşağıdaki `UseMvc`önce `Configure` yöntemine ekleyin:
+Ardından, `Configure` yönteme hemen önce `UseMvc`aşağıdakileri ekleyin:
 
 ```csharp
 // Enable middleware to serve generated Swagger as a JSON endpoint.
@@ -216,19 +216,19 @@ app.UseSwaggerUI(c =>
 });
 ```
 
-Artık uygulamanızı derleyip çalıştırabilmelisiniz. Tarayıcıda, adres çubuğunda `/swagger` ' a gidin. Uygulamanızın API uç noktaları ve modellerinin bir listesini görmeniz gerekir. 
+Artık uygulamanızı oluşturup çalıştırabilmelisiniz. Tarayıcıda adres `/swagger` çubuğuna gidin. Uygulamanızın API uç noktalarının ve modellerinin listesini görmeniz gerekir. 
 
-![Visual Studio 2019 Swagger sayfası tarayıcıda](media/vs-2019/vs2019-swagger-browser.png)
+![Visual Studio 2019 Tarayıcıda Swagger Sayfası](media/vs-2019/vs2019-swagger-browser.png)
 
-Oyunlar altında bir uç noktaya tıklayın ve sonra farklı uç noktaların nasıl davranacağını görmek için `Try it out` ve `Execute`.
+Oyunlar altında bir bitiş `Try it out` noktası `Execute` tıklatın, sonra ve farklı uç noktaları nasıl hissettiğini görmek için.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir sonraki videoda, uygulamanızı Azure 'a dağıtmayı öğreneceksiniz.
+Bir sonraki videoda, uygulamanızı Azure'a nasıl dağıtacağınız öğrenilir.
 
-[5. Adım: ASP.NET Core uygulamanızı Azure 'a dağıtma](tutorial-aspnet-core-ef-step-05.md)
+[Adım 5: ASP.NET Çekirdek Uygulamanızı Azure'a Dağıtma](tutorial-aspnet-core-ef-step-05.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Swashbuckle ve ASP.NET Core kullanmaya başlama](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
-- [Swagger/Openapı ile Web API Yardım sayfaları ASP.NET Core](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)
+- [Swashbuckle ve ASP.NET Core ile Başlarken](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
+- [ASP.NET Core web API yardım sayfaları Swagger / OpenAPI ile](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)

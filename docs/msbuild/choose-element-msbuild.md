@@ -1,5 +1,5 @@
 ---
-title: Öğe seç (MSBuild) | Microsoft Docs
+title: Öğe (MSBuild) Seçin | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -20,17 +20,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c4f699b4ffc9372af0c803d094390544932d652b
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634480"
 ---
-# <a name="choose-element-msbuild"></a>Öğe seç (MSBuild)
+# <a name="choose-element-msbuild"></a>Öğeyi seçin (MSBuild)
 
-, Değerlendirmek için bir `ItemGroup` öğe ve/veya `PropertyGroup` öğeleri kümesi seçmek üzere alt öğeleri değerlendirir.
+Değerlendirilecek bir `ItemGroup` öğe ve/veya `PropertyGroup` öğe kümesi seçmek için alt öğeleri değerlendirir.
 
- \<Proje > \<\<> > seçin \<>... \<> seçin \<...
+ \<Proje \<> \< \<>'> Ne Zaman> Seçin ... \<Aksi \<takdirde>> seçin ...
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,24 +53,24 @@ ms.locfileid: "77634480"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Güvenmiyorsanız](../msbuild/otherwise-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Tüm `When` öğelerinin koşulları `false`olarak değerlendirilmezse, değerlendirilecek kod `PropertyGroup` ve `ItemGroup` öğelerinin bloğunu belirtir. Bir `Choose` öğesinde sıfır veya bir `Otherwise` öğesi olabilir ve bu, son öğe olmalıdır.|
-|[Oluşturulurken](../msbuild/when-element-msbuild.md)|Gerekli öğe.<br /><br /> Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir. Bir `Choose` öğesinde bir veya daha fazla `When` öğesi olabilir.|
+|[Aksi takdir -de](../msbuild/otherwise-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Tüm `When` öğelerin koşulları `PropertyGroup` nın `ItemGroup` değerlendirilmesi durumunda değerlendirmek için `false`kod ve öğeler bloğu belirtir. Bir `Choose` öğede sıfır `Otherwise` veya bir öğe olabilir ve bu son öğe olmalıdır.|
+|[Tesis](../msbuild/when-element-msbuild.md)|Gerekli öğe.<br /><br /> Öğenin seçilen olası bir `Choose` kod bloğunu belirtir. Bir `Choose` öğede bir `When` veya daha fazla öğe olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Güvenmiyorsanız](../msbuild/otherwise-element-msbuild.md) | Tüm `When` öğelerinin koşulları `false`değerlendirmiyorsa yürütülecek kod bloğunu belirtir. |
+| [Aksi takdir -de](../msbuild/otherwise-element-msbuild.md) | Tüm `When` öğelerin koşulları değerlendirirse, yürütülecek kod `false`bloğunu belirtir. |
 | [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
-| [Oluşturulurken](../msbuild/when-element-msbuild.md) | Seçilecek `Choose` öğesi için olası bir kod bloğu belirtir. |
+| [Tesis](../msbuild/when-element-msbuild.md) | Öğenin seçilen olası bir `Choose` kod bloğunu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- `Choose`, `When`ve `Otherwise` öğeleri, bir dizi olası alternatifden yürütülecek bir kod bölümü seçmek için bir yol sağlamak üzere birlikte kullanılır. Daha fazla bilgi için bkz. [koşullu yapılar](../msbuild/msbuild-conditional-constructs.md).
+ `Choose`, `When`ve `Otherwise` öğeler, olası alternatifler bir dizi yürütmek için kod bir bölümünü seçmek için bir yol sağlamak için birlikte kullanılır. Daha fazla bilgi için [Koşullu yapılara](../msbuild/msbuild-conditional-constructs.md)bakın.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki proje, ayarlanacak `When` öğelerindeki özellik değerlerini belirlemek için `Choose` öğesini kullanır. Hem `When` öğelerin `Condition` öznitelikleri `false`olarak değerlendirilerse, `Otherwise` öğesindeki özellik değerleri ayarlanır.
+ Aşağıdaki proje, `Choose` ayarlanacak öğelerdeki özellik değerleri `When` kümesini seçmek için öğeyi kullanır. Her `Condition` iki `When` öğenin öznitelikleri `false`değerlendirirse, `Otherwise` öğedeki özellik değerleri ayarlanır.
 
 ```xml
 <Project

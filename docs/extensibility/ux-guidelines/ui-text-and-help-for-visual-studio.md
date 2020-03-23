@@ -1,5 +1,5 @@
 ---
-title: Visual Studio için Kullanıcı arabirimi metni ve yardımı | Microsoft Docs
+title: Görsel Stüdyo için Kullanıcı Arabirimi Metin ve Yardım | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
@@ -9,317 +9,317 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c0477a0e1994e9c3b94df13ace4c1f3b4df51039
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409118"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303129"
 ---
-# <a name="ui-text-and-help-for-visual-studio"></a>UI metni ve Visual Studio için Yardım
-## <a name="BKMK_UITextAndTerminology"></a>UI metni ve terminolojisi
- Anlaşılır metin etkin kullanıcı Arabirimi için çok önemlidir. Yazılım kullanıcıları eğilimli okumak için ilk olarak, yani bu görevi tamamlamak için en uygun etiketler. Statik metin daha az sıklık ile okunur. Planı iş oturumlarını yaklaşık bu sırada kullanıcı arabiriminin bir okuma ardından pencerenin tamamını bir hızlı tarama başlatmak kullanıcılar için:
+# <a name="ui-text-and-help-for-visual-studio"></a>Visual Studio İçin UI Metni ve Yardımı
+## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a>UI metin ve terminoloji
+ Anlaşılır metin etkili Kullanıcı Bira sı için çok önemlidir. Yazılım kullanıcıları önce etiketleri, yani eldeki görevi tamamlamakla en alakalı olanları okuma eğilimindedirler. Statik metin daha az sıklıkta okunur. Kullanıcıların çalışma oturumlarına tüm pencerenin hızlı bir tararmasını ve ardından kullanıcı aralarının bu yaklaşık sırada okunmasını planlayın:
 
-1. Merkezi'ndeki etkileşimli denetimleri
+1. Merkezdeki etkileşimli denetimler
 
-2. Yürütme düğmeleri
+2. Düğmeleri işleme
 
-3. Etkileşimli denetimleri başka bir yerde
+3. Başka bir yerde bulunan etkileşimli denetimler
 
-4. Ana yönergeleri
+4. Ana talimatlar
 
-5. Ek açıklamaları
+5. Ek açıklamalar
 
-6. Pencere Başlığı
+6. Pencere başlığı
 
-7. Ana gövdesi içinde başka bir statik metin
+7. Ana gövdedeki diğer statik metin
 
-### <a name="usage-patterns-for-ui-text"></a>UI metni için kullanım desenleri
+### <a name="usage-patterns-for-ui-text"></a>Kullanıcı Arabirimi metni için kullanım desenleri
 
 #### <a name="title-bar-text"></a>Başlık çubuğu metni
- Başlık çubuğu metni UI kökenli komut eşleşmesi gerekir.
+ Başlık çubuğu metni, Kullanıcı Bira'yı oluşturan komutla eşleşmelidir.
 
-#### <a name="instructional-text-helper-text"></a>Açıklayıcı metni (Yardımcısı metin)
- Bazı iletişim kutularında, pencere veya sayfa yapmanız gerekenler açıklamak için belirgin ana yönergeler sağlamak yararlıdır. Bu bazen "Yardımcısı text." adlandırılır
+#### <a name="instructional-text-helper-text"></a>Öğretim metni (yardımcı metin)
+ Bazı iletişim kutularında, pencerede veya sayfada ne yapılacağını açıklamak için ünesi olan ana yürütümler sağlamak yararlılık taşır. Bu bazen "yardımcı metin" olarak adlandırılır.
 
-##### <a name="writing-style-rules-for-helper-text"></a>Stil kuralları Yardımcısı metin yazma
+##### <a name="writing-style-rules-for-helper-text"></a>Yardımcı metin için stil kuralları yazma
 
-- Belirgin açıklamak değildir. Kesinlikle gerekli olmadıkça, eğitici metin içermez.
+- Bariz olanı açıklama. Kesinlikle gerekli olmadıkça, öğretim metnini içermez.
 
-- Eğitici metin her zaman iletişim kutusunun en üstünde yer alır ve gerçekleştirilen görev başvurmanız gerekir.
+- Öğretim metni her zaman iletişim kutusunun en üstüne yerleştirilir ve gerçekleştirilen göreve başvurulmalıdır.
 
-- Tam olarak kullanıcılara yapmak için ihtiyaçları açıklayın. Aşırı iletişim ve yedeklilik kaçının.
+- Kullanıcılara tam olarak ne yapmaları gerektiğini açıklayın. Aşırı iletişim ve artıklıktan kaçının.
 
-- Her pencere gözden geçirin ve yinelenen sözcükleri ve ifadeleri ortadan kaldırın.
+- Her pencereyi gözden geçirin ve yinelenen sözcükleri ve deyimleri ortadan kaldırın.
 
-- Eğitici metin kısa tutun. Daha fazla bilgi gerekli belirli kullanıcılar veya senaryoları ise, daha sonra ayrıntılı kavramsal çevrimiçi konusuna bağlantı sağlamak.
+- Öğretici metni kısa tutun. Belirli kullanıcılar veya senaryolar için daha fazla bilgi gerekiyorsa, ayrıntılı bir kavramsal çevrimiçi konuya bağlantı sağlayın.
 
-- Metninizi yazın, böylece her sözcük ağırlık tutar ve gereklidir.
+- Her kelimenin ağırlığını ve gerekliliğini sağlayacak şekilde metninizi yazın.
 
-- [Kullanıcı arabirimi metni](/windows/desktop/uxguide/text-ui) ve [stili ve tonu](/windows/desktop/uxguide/text-style-tone)için mevcut Microsoft kılavuzunu izleyin.
+- [Kullanıcı Arabirimi Metin](/windows/desktop/uxguide/text-ui) ve [Stil ve Ton](/windows/desktop/uxguide/text-style-tone)için varolan Microsoft kılavuzunu izleyin.
 
-#### <a name="supplemental-instructions"></a>Ek yönergeler
- Ek yönergeler kullanıcı denetimleri anlamak veya gruplandırmaları denetim yardımcı olacak ek bilgileri sağlayın. Bu, İpucu metin girişi denetimi bekleniyor hangi biçimde anlamak için gerekli de içerebilir. Ek yönergeler tedbirli şekilde kullanın. Kullanıcının yaptıkları seçimin kollarını tam olarak anlayamayabileceği durumlar için onları ayırın.
+#### <a name="supplemental-instructions"></a>Ek talimatlar
+ Ek yönergeler, kullanıcının denetimleri veya denetim gruplandırmalarını anlamasına yardımcı olan ek bilgiler sağlar. Bu, giriş denetiminin hangi biçimde beklediğini anlamak için gerekli ipucu metnini de içerebilir. Ek talimatları dikkatli kullanın. Kullanıcının yaptıkları seçimin sonuçlarını tam olarak anlayamayacağı durumlar için ayırın.
 
- ![Visual Studio 'da ek metin](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
+ ![Visual Studio'da ek metin](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
 
- **Visual Studio 'da ek metin**
+ **Visual Studio'da ek metin**
 
- ![Visual Studio 'da ek metin](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
+ ![Visual Studio'da ek metin](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
 
- **Visual Studio 'da ek metin**
+ **Visual Studio'da ek metin**
 
-#### <a name="infotips"></a>InfoTips
- Genellikle, açıklayıcı metni kullanıcı Arabiriminde yerleşik yerleştirmek için çok uzun olabilir veya deneyimli kullanıcılar için dağınıklık gibi HİSSEDİYORSUNUZ yalnızca yeni kullanıcılar için yararlı olabilir. Bu durumda, bir bilgi ipucu altında bir araç ipucu olarak eğitici/bilgilendirici metin yerleştirilmelidir.
+#### <a name="infotips"></a>Bilgi İpuçları
+ Genellikle, öğretim metni Kullanıcı Bir Arada'nda yerinde konumlandırmak için çok uzun olabilir veya yalnızca yeni kullanıcılar için yararlı olabilir, deneyimli kullanıcılara dağınıklık hissi. Bu durumda, öğretim/bilgilendirme metni Bilgi İpucu altında araç ucu olarak yerleştirilmelidir.
 
- InfoTips belirgin olarak ilgili ve henüz örtük belirli bilgi ipucu simgesi kullanması gereken denetimleri yerleştirilmelidir.
+ InfoTips, ilişkili oldukları denetimlerin yakınına yerleştirilmeli ve göze batan henüz fark edilebilen belirli InfoTip simgesini kullanmalıdır.
 
- ![Visual Studio 'da InfoTip Ipucu](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
+ ![Visual Studio'da Bilgi İpucu](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
 
- **Visual Studio 'da bilgi Ipucu örneği**
+ **Visual Studio'da Bilgi İpucu Örneği**
 
-##### <a name="writing-style-rules-for-infotips"></a>InfoTips için yazma stil kuralları
+##### <a name="writing-style-rules-for-infotips"></a>InfoTips için stil kuralları yazma
 
-- InfoTips tam cümle yazın. Bunlar, belirli fiillere, cümle ve bitiş için noktalama işaretleri gerektirir.
+- InfoTips'i tam cümleler olarak yazın. Belirli fiiller, tümce durumu ve noktalama işaretleri nin bitmesi gerekir.
 
-- Ana yönerge veya bilgi desteklemek üzere InfoTips kullanın. Buradaki ana fikir yazmayı yalnızca farklı sözcük kullanıyorsanız, bir bilgi ipucu gerekmez.
+- Ana talimatınızı veya bilgilerinizi tamamlamak için InfoTips'i kullanın. Ana fikri yeniden ifade etmek için farklı sözcükler kullanıyorsanız, Bilgi İpucu'na ihtiyacınız yoktur.
 
-- InfoTips ve tatlı kısa tutun. Küçük kelimeleri ve düz, gündelik dil destekler ve kullanıcı teşvik eder.
+- InfoTips kısa ve tatlı tutun. Kullanıcıyı destekleyen ve teşvik eden küçük kelimeler ve sade, günlük dil kullanın.
 
-- [Kullanıcı arabirimi metni](/windows/desktop/uxguide/text-ui) ve [stili ve tonu](/windows/desktop/uxguide/text-style-tone)için mevcut Microsoft kılavuzunu izleyin.
+- [Kullanıcı Arabirimi Metin](/windows/desktop/uxguide/text-ui) ve [Stil ve Ton](/windows/desktop/uxguide/text-style-tone)için varolan Microsoft kılavuzunu izleyin.
 
-#### <a name="control-labels"></a>Denetim etiketleri
- Denetim etiketleri kısa, kısa olmalı ve [denetimler Için Windows Masaüstü Kılavuzu](/windows/desktop/uxguide/controls)' nu izlemelidir.
+#### <a name="control-labels"></a>Kontrol etiketleri
+ Denetim etiketleri kısa, kısa olmalı ve [Denetimler için Windows Masaüstü kılavuzunu](/windows/desktop/uxguide/controls)izlemeli.
 
- Kullanıcı arabiriminde Denetim etiketi biçimi ve yerleştirme hakkında daha fazla bilgi için, [Visual Studio 'Nun düzenine](../../extensibility/ux-guidelines/layout-for-visual-studio.md)bakın.
+ Kullanıcı arabirimi içindeki denetim etiketi biçimi ve yerleşimi hakkında daha fazla bilgi için [Visual Studio için Düzen'e](../../extensibility/ux-guidelines/layout-for-visual-studio.md)bakın.
 
 #### <a name="help-links"></a>Yardım bağlantıları
- Yardım bağlantıları ya da eğitici metin veya gövdesini kullanıcı arabiriminin yerleştirilebilir. Yardım bağlantılarını olması veya iç iletişim kutuları başlatın.
+ Yardım bağlantıları, öğretim metniiçinde veya Kullanıcı Arabirimi'nin gövdesine yerleştirilebilir. Bunlar Yardım'a bağlantılar olabilir veya dahili iletişim kurabilir.
 
 ##### <a name="visual-style-rules-for-help-links"></a>Yardım bağlantıları için görsel stil kuralları
 
-- Doğru ortamı renkleri için köprüler kullanın. Düzgün stil uygulanmış bir köprü kısaca tıklandığında kırmızı yanar değil. Bunu görürseniz, ardından bu ortam renkleri kullanılmayan göstergesidir.
+- Köprüler için doğru ortam renklerini kullanın. Düzgün bir şekilde şekillendirilmiş bir köprü tıklatıldığında kısa bir süre kırmızı yanıp sönmez. Bunu görürseniz, ortam renklerinin kullanılmadığının bir göstergesidir.
 
-- Alt çizgi, üzerine gelindiğinde veya bağlantı bir paragraf içinde ne zaman katıştırılmış yalnızca kullanılmalıdır.
+- Altı çizili altı çizili her yerde veya bağlantı bir paragrafa katıştırıldığında kullanılmalıdır.
 
-- Köprüler için görsel ve etkileşim stilleri hakkında ayrıntılı bilgi için düğmeler ve köprüler bakın.
+- Köprüler için görsel ve etkileşim stilleri hakkında daha ayrıntılı bilgi için Düğmeler ve köprülere bakın.
 
-##### <a name="writing-style-rules-for-help-links"></a>Yardım bağlantıları için yazma stil kuralları
+##### <a name="writing-style-rules-for-help-links"></a>Yardım bağlantıları için stil kuralları yazma
 
-- İletişim kutularını başlatma sırasında üç nokta standartları korumak: gezinme, görev ek kullanıcı Arabirimi gerektiriyorsa, üç nokta için hiçbir üç nokta.
+- İletişim kurarak, elipsler için standartları koruyun: gezinme için elips yok, görev ek ui gerektiriyorsa elipsler.
 
-     ![Visual Studio 'da yardım bağlantısı](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601-e_HelpLink")
+     ![Visual Studio'da Yardım bağlantısı](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601-e_HelpLink")
 
-     **Yardım bağlantısındaki üç nokta (...), görevin ek kullanıcı arabirimi gerektirdiğini gösterir.**
+     **Yardım bağlantısındaki bir elips (...) görevin ek web-posta aracı gerektireceğini gösterir.**
 
-- Bağlantılar, kullanıcının amacı olmadığı için "öğreneni" ile başlamamalıdır. Kullanıcının istediği belirli bir soruya yanıt, genel bir eğitim alma.
+- Bağlantılar kullanıcının amacı olmadığı için "Öğren" ile başlamamalıdır. Kullanıcı belirli bir soruyu yanıtlamak, genel bir eğitim almak değil istiyor.
 
-- Böylece bunlar konu yanıtlayacak soru sorun, tümcecik Yardım bağlar.
+- Sorunun yanıtlayacakları soruyu sorabilmeleri için yardım bağlantılarını ifade edin.
 
-     Yanlış: "Windows Azure Mobile Services fiyatlandırması hakkında daha fazla bilgi edinin"
+     Yanlış: "Windows Azure Mobil Hizmetler fiyatlandırması hakkında daha fazla bilgi edinin"
 
-     Doğru: "Windows Azure Mobile Services için hangi fiyatlandırma seçenekleri mevcuttur?"
+     Doğru: "Windows Azure Mobil Hizmetleri için hangi fiyatlandırma seçenekleri kullanılabilir?"
 
-- Bağlantı metninde hiçbir şekilde *tıklama... seçeneğini* kullanmayın.
+- Bağlantı metnine *Click...* seçeneğini asla kullanmayın.
 
-- "Burada" sözcüğünü hiçbir şekilde bağlamayın. Yalnızca köprülü word sesli bazı ekran okuyucular için sorunlu budur.
+- Asla sadece "burada" kelimesini bağlamayın. Bu, yalnızca köprübağlantılı sözcüğü seslendirecek bazı ekran okuyucular için sorunludur.
 
-     Yanlış **: "Windows**Azure hakkında bilgi edinin Mobile Services
+     Yanlış: "Windows Azure Mobil Hizmetleri hakkında bilgi **bulabilirsiniz "**
 
-     Doğru: "Windows Azure Mobile Services için hangi fiyatlandırma seçenekleri mevcuttur?"
+     Doğru: "Windows Azure Mobil Hizmetleri için hangi fiyatlandırma seçenekleri kullanılabilir?"
 
-- Yardım bağlantıları için doğru yazma stili hakkında daha fazla bilgi için bkz. [Yardım Için Windows Masaüstü Kılavuzu](/windows/desktop/uxguide/winenv-help).
+- Yardım bağlantıları için doğru yazma stili hakkında daha fazla bilgi için [Yardım için Windows Masaüstü kılavuzuna](/windows/desktop/uxguide/winenv-help)bakın.
 
 #### <a name="hint-text"></a>İpucu metni
- İpucu metni, bir denetimi veya denetim altına filigran olarak görüntülenir. Doğru biçimlendirme uygun VSColors belirteci kullanılarak uygulanacak `Environment.GrayText`.
+ İpucu metin, denetim içinde veya denetimin altında filigran olarak görünür. Uygun VSColors belirteci kullanılarak doğru biçimlendirme `Environment.GrayText`uygulanacaktır.
 
- Bu, çok sayıda formu görünebilir.
+ Çeşitli şekillerde görünebilir.
 
-- Denetim etiketinin yerine:
+- Kontrol etiketi yerine:
 
-     ![Visual Studio 'da ipucu metni](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
+     ![Visual Studio'da ipucu metni](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
 
-- Bir eylem ile yönergeler verir:
+- Bir fiille, talimatlar vererek:
 
-     ![Visual Studio 'da ipucu metni](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
+     ![Visual Studio'da ipucu metni](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
 
-- Gerekli bir giriş gösteren metin ile:
+- Gerekli girişi gösteren metinle:
 
-     ![Visual Studio 'da ipucu metni](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
+     ![Visual Studio'da ipucu metni](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
 
 #### <a name="watermark-text"></a>Filigran metni
- Boş bir tasarım yüzeyine bir metin ne yapmak yanı sıra diğer ilgili pencerelerde uygunsa açmak için bağlantılar sağlar belirtmeniz gerekir:
+ Boş bir tasarım yüzeyinde, metin ne yapacağını belirtmeli ve uygunsa diğer ilgili pencereleri açmak için bağlantılar sağlamalıdır:
 
- ![Visual Studio 'da filigran metni](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "0601-i_WatermarkText")
+ ![Visual Studio'da filigran metni](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "0601-i_WatermarkText")
 
- **Visual Studio 'da filigran metni örneği**
+ **Visual Studio filigran metin örneği**
 
-### <a name="common-terminology"></a>Sık kullanılan terimler
+### <a name="common-terminology"></a>Yaygın terminoloji
 
-|Süre|Açıklama|Açıklama|
+|Sözleşme Dönemi|Açıklama|Açıklama|
 |----------|-----------------|-------------|
-|Oturum açma / Oturumu Kapat|Fiilleri maliyetle aynı anlamda ile web kimlik doğrulaması web özelliği içinde temsil etmek için kullanılır. İstemcileri, bu kez en üst düzey bir kavram IDE kullanıcı bağlantısı, lisanslama ve dolaşım gibi daha üst düzey özellikleri ile tüm diğer bağlantılar kullanılamaz sağlayan bir üst düzey kimliğini temsil eder ve imzalama için kullanırız.|Üst düzey IDE kullanıcı temsil ettiğinden IDE kullanıcı temsil eden bir oturum açma / oturum fiili yalnızca özelliğidir.|
-|Connect / bağlantısını kes|Burada bir özellik bir çevrimiçi hizmet tek bir bağlantı tutar yerlerde kullanın.|Sunucu Gezgini, burada yalnızca bir etkin Azure bağlantı bir zaman olabilir, Bağlan/bağlantısını kes örneğidir.|
-|Ekle / Kaldır|Olmayan yıkıcı. Ekleme veya bir listeden kaldırma işlevini kullanın.|TFS Bağlantı Yöneticisi sunucu listesi iletişim kutusu Ekle/Kaldır örneğidir.|
-|Sil|Yıkıcı. Yalnızca kaldırılan öğe kalıcı olarak atılacak veya diskten silindikçe kullanın.|Sonuç diskten bir dosya silindiğinde "Sil" genellikle bir istemi gerektirir.|
+|Oturum Aç / Oturum Aç|Fiiller, kimlik doğrulamayı bir web özelliğinde temsil etmek için web ile eş anlamlı olarak kullanılır. İstemciler içinde, bunu, diğer tüm bağlantılarda bulunmayan dolaşım ve lisanslama gibi üst düzey özellikler sağlayan üst düzey bir kimliği temsil eden IDE kullanıcı bağlantısına oturum açma ve devre dışı oturum açma için üst düzey bir kavram olarak kullanırız.|IDE Kullanıcısı, üst düzey IDE kullanıcısını temsil ettiği için bir oturum açma / imzalama fiilini temsil etmesi gereken tek özelliktir.|
+|Bağlan / Kes|Bir özelliğin çevrimiçi bir hizmete tek bir bağlantı nın bulunduğu yerlerde kullanın.|Aynı anda yalnızca bir etkin Azure bağlantınız olabileceği Sunucu Gezgini, Bağlan/Bağlantıyı Kesme'ye bir örnektir.|
+|Ekle / Kaldır|Zarar vermeyen. Bir şeyi listeden eklerken veya kaldırırken kullanın.|TFS Connection Manager sunucu listesi iletişim kutusu Ekle/Kaldır'A bir örnektir.|
+|Sil|Yıkıcı. Yalnızca kaldırılan öğe diskten kalıcı olarak atıldığında veya silindiğinde kullanın.|Sonuç bir dosyayı diskten siliyorsa, genellikle "Sil" bir istem gerektirir.|
 
 ## <a name="error-messages"></a>Hata iletileri
 
 ### <a name="overview"></a>Genel Bakış
- Hataları gerçekleşir. Kullanıcı neler yapabileceğinizi kısıtlamaları ayarlama kaçınılabilir hata iletileri engelleyen bir mantıklı ilk adımıdır. Ancak, bir hata oluştuğunda, bu iyi-yazılan hata iletisi sorunu azaltmaya yönelik uzun yol gidebilirsiniz. Hata iletileri tartışmaya zaman uyumlu ve çözülmesi gereken bir sorunu gösterir çünkü kullanıcı, görür bildirim en önemli türlerinden biridir. Kullanıcılar, kötü yazılmış hata iletileri hatalarının nedenini karar vermek için kendi ve tüm olası çözümleri bırakın.
+ Hatalar olur. Kullanıcının yapabileceklerine ilişkin sınırlamalar ayarlamak, önlenebilir hata iletilerini önlemede mantıklı bir ilk adımdır. Ancak, bir hata oluştuğunda, iyi yazılmış bir hata iletisi sorunu azaltma yönünde uzun bir yol kat edebilir. Hata iletileri, eşzamanlı oldukları ve çözülmesi gereken bir sorunu gösterdiğinden, kullanıcının gördüğü en önemli bildirim türlerinden biridir. Kötü yazılmış hata iletileri, kullanıcıların hataların ve olası çözümlerin nedenini belirlemelerini sağlar.
 
- Kullanıcılar için aşırı kullanılmasına dikkat veya değer kullanıcıyı eklemek yalnızca gerekli iletileri yazma deneyimi için hata iletileri kafa karıştırıcı durabilir. Yalnızca bir bildirim iletisi ise alternatif bir sunu'ni kullanın.
+ Kullanıcılar aşırı kullanılan veya kafa karıştırıcı hata iletilerine dikkat etmeyi bırakabilir, bu nedenle yalnızca kullanıcı deneyimine değer katan gerekli iletileri yazın. İleti yalnızca bir bildirimse, alternatif bir sunu kullanın.
 
-### <a name="rules-for-creating-an-error-message"></a>Bir hata iletisi oluşturmak için kurallar
+### <a name="rules-for-creating-an-error-message"></a>Hata iletisi oluşturma kuralları
 
-- Hata iletileri oluştururken, izleyici için uygun hata düzeyini seçin. Kullanıcı alabilir, bir eylem varsa sağlamak için basit özetlerini hedeflenir. Durumu kullanıcı bilmeniz gerekmez. herhangi bir şey yoktur.
+- Hata iletileri oluşturmakta, hedef kitle için uygun hata düzeyini seçin. Varsa, kullanıcının uygulayabileceği bir eylemi sağlayan basit özetleri hedefleyin. Kullanıcının bilmesi gerekmeyen hiçbir şeyi belirtmeyin.
 
-- Yapıcı Yardımı sağlarız. Okuma ve yönerge içeren bir hata iletisi üzerinde işlem yapma daha kolaydır.
+- Yapıcı yardım sağlayın. Yönerge içeren bir hata iletisini okumak ve hareket etmek daha kolaydır.
 
 - Çift negatif kullanmayın.
 
-- Her iki otomatikleştirilmiş gerçekleştirmek ve el ile dil bilgisi ve yazım denetimi, yazdığınız herhangi bir hata iletisi denetleyin.
+- Yazdığınız herhangi bir hata iletisi üzerinde hem otomatik hem de el ile dilbilgisi ve yazım denetimi gerçekleştirin.
 
-- Karmaşık hata iletileri için sıralı iletişimleri kaçının. Hiçbir zaman F1 birleştirme için hata iletisini kullanın. İleti yeterli olur.
+- Karmaşık hata iletileri için sıralı iletişimlerden kaçının. Hata iletisi için asla F1 bağlantısı kullanmayın. İletinin kendisi yeterli olmalıdır.
 
-- Doğru simgesini kullanın.
+- Doğru simgeyi kullanın.
 
-- "Sil" ve "Iptal" gibi açık seçeneklere sahip düğmeleri daha kolay anlaşılır hale getirin ve kullanın.
+- "Sil" ve "İptal Et" gibi net seçenekleri olan soruların anlaşılmasını ve kullanılmasını kolaylaştırın.
 
-- Uyarılar için ne devam etmeden adımlamayla olacağı hakkında açık olun. Düğmeleri adımlamayla belirtmeniz gerekir.
+- Uyarılar için, işlemin sonucunun ne olacağı konusunda açık olun. Düğmeler sonucu göstermelidir.
 
-- Hatalar için kullanıcı sorunu gidermek için neler yapabileceğini açıklayın. Düğmeler eylem olmalıdır veya "Kapat" deyin. Bir hata iletisi için "Tamam" düğmesini kullanmayın.
+- Hatalar için, kullanıcının sorunu gidermek için neler yapabileceğini açıklayın. Düğmeler eylem olmalı veya "Kapat" demelidir. Hata iletisi için "Tamam" düğmesi kullanmayın.
 
-- Kendinize bir hata iletisi oluşturulurken sorun gereken bazı sorular:
+- Bir hata iletisi kurarken kendinize sormanız gereken bazı sorular:
 
-  - Kullanıcı başına bu hata sorunu çözmek nasıl ekleyeceğimi?
+  - Kullanıcı bu hatayla sorunu tek başına nasıl çözeceğini bulabilir mi?
 
-  - Kullanıcı, bu hata olarak aynı sözlük kullanıyor mu?
+  - Kullanıcı bu hatayla aynı kelime dağarcığı kullanıyor mu?
 
-  - Bu hata belirsiz veya birden çok durumlarda paylaşılan? Nasıl bu durumda, kullanıcıların ihtiyacı olan çözümü kılavuzu?
+  - Bu hata ambigious veya birden çok durumda paylaşılan mı? Eğer öyleyse, kullanıcıları ihtiyaç duydukları çözüme nasıl yönlendirirsiniz?
 
-#### <a name="build-errors"></a>Derleme hataları
- Visual Studio bir yazılım geliştirme aracı olduğundan, bileşenlerinin çoğunda geliştirici işini ikili biçime dönüştürmek için bir derleme, dönüştürme veya kodlama adımı vardır. Derleyici yanlış yazılmış dosyaları işleyemezlerse veya derleyici seçenekleri doğru şekilde ayarlanmayacaksa, bu dönüşümler hatalara neden olabilir.
+#### <a name="build-errors"></a>Yapı hataları
+ Visual Studio bir yazılım geliştirme aracı olduğundan, bileşenlerinin çoğu geliştiricinin çalışmasını ikili forma dönüştürmek için bir derleme, dönüştürme veya kodlama adımına sahiptir. Derleyici yanlış yazılmış dosyaları işleyemediğinde veya derleyici seçenekleri doğru ayarlanamadığında bu dönüşümler hatalara neden olabilir.
 
- Visual Studio kullanıcılarına devasa bir derleme hatalarını çözme geliştirme saat sayısı ayırabilirsiniz. Hataları bağımlılıkları veya ne zaman hata iletileri kötü, hangi, hatanın kaynağını ortaya çıkarmak zorlaştırabilir yazılır olduğunda bu çözümleme süresini artırır.
+ Visual Studio kullanıcıları yapı hatalarını çözmek için çok sayıda geliştirme saati harcayabilirler. Bu çözümleme süresi, hatalar bağımlılıkları olduğunda veya hata iletileri kötü yazıldığında artar ve bu da hatanın kaynağını ortaya çıkarmakta zorlanabilir.
 
- Bu nedenle ilk yerinde Visual Studio oluşmaz otomatik tamamlama sağlar en iyi derleme hataları olan ve IntelliSense dalgalı çizgiler. Şema doğrulayıcılar ve benzer araçları aynı türde bir geri bildirim sağlayın. Bu mekanizmalar proaktif olarak biçimlendirilmiş kod, derleme hataları olasılığını lessening oluşturmak için Kullanıcı Kılavuzu.
+ En iyi yapı hataları ilk etapta meydana gelmez olanlar, Visual Studio AutoComplete ve IntelliSense squiggles sağlar neden olmasıdır. Şema doğrulayıcıları ve benzeri araçlar aynı tür geri bildirim sağlar. Bu mekanizmalar, kullanıcıyı iyi biçimlendirilmiş kod lar oluşturması için proaktif olarak yönlendirerek yapı hataları olasılığını azaltıyor.
 
- Visual Studio araç penceresi burada kullanıcılar okuyabilir ve belge pencerelerini meydana gelen hatalara gezinmek sağlar. Böylece kullanıcı, hızla kod büyük miktarlarda gidin ve doğrudan sorun konuma gidin, klavye kısayollarını sağlanır. Visual Studio, her yapı hatası kullanıcıya hata hakkında daha ayrıntılı bilgi sağlayan bir Yardım konusu için doğrudan çalışabilmeniz için belirli bir Yardım anahtar sözcüğü/bağlam Kimliğine bağlanması de sağlar.
+ Visual Studio, kullanıcıların belge pencerelerinde oluşan hataları okuyup gezinebilecekleri bir araç penceresi sağlar. Klavye kısayolları, kullanıcının büyük miktarda kodda hızla gezinmesi ve doğrudan sorunun konumuna gideabilmesi için sağlanır. Visual Studio ayrıca, kullanıcının hata hakkında daha ayrıntılı bilgi veren bir Yardım konusuna doğrudan gidebilmeleri için her yapı hatasının belirli bir Yardım anahtar kelime/bağlam kimliğine bağlanmasını sağlar.
 
- Yazma NET, kısa ve öz derleme hataları:
+ Açık, kısa yapı hataları yazın:
 
-- Çok az sayıda derleyici jargon ile ilgili sorunu açıklayan **düz dil kullanın** . Bir yapı hatası metnini aşırı teknik olmamalıdır.
+- Çok az veya hiç derleyici jargon ile sorunu açıklayan **düz dil kullanın.** Yapı hatası metni aşırı teknik olmamalıdır.
 
-- **Olası nedenler ana hattı.** Örneğin, "(özellik): (değer) ' bildiriminde özellik ve değer arasında iki nokta eksik."
+- **Olası nedenleri anahat.** Örneğin, "'(özellik) : (değer)' bildirimindeki özellik ve değer arasında bir iki nokta üst üste eksik."
 
-- Olası düzeltmeleri hakkında ayrıntılar verir. Yeterli alan yoksa, ek ayrıntılar karşılık gelen Yardım konusunu yerleştirilebilir.
+- Olası düzeltmeler hakkında ayrıntılı bilgi verin. Yeterli alan yoksa, ilgili Yardım konusuna ek ayrıntılar eklenebilir.
 
-### <a name="components-of-a-well-written-error-message"></a>İyi yazılmış hata iletisinin bileşenleri
+### <a name="components-of-a-well-written-error-message"></a>İyi yazılmış bir hata iletisinin bileşenleri
 
-#### <a name="use-the-shell-dialog-service-for-error-messages"></a>Hata iletileri Kabuk iletişim hizmeti kullanın.
- Kabuk iletişim hizmetinin kullanılması, tek tek öğelerde büyük değişiklikler yapmadan iletinin görünüşünü, özellikle de yazı tiplerini denetlemenize olanak tanır. **IErrorInfo** mekanizmalarını kullanın ve **ısuishell:: SetErrorInfo/ReportErrorInfo**kullanarak bunları raporlayın.
+#### <a name="use-the-shell-dialog-service-for-error-messages"></a>Hata iletileri için kabuk iletişim hizmetini kullanın.
+ Kabuk iletişim hizmetini kullanmak, tek tek öğelerde önemli değişiklikler olmadan iletinin görünümünü, özellikle de yazı tiplerini denetlemenize olanak tanır. **IErrorInfo** mekanizmalarını kullanın ve **IVsUIShell kullanarak bildirin::SetErrorInfo/ReportErrorInfo**.
 
-#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Etkili ve uygun bildirim sunu seçin.
- Kalıcı bir iletişim kutusu (zaman uyumlu bildirim) veri kaybını önlemek için Acil eylem gerekli kritik bir uyarı ile kullanın. Kritik simgelerini hangi ileti okuma olmadan kapatma, olumsuz sonuçlara yol açabilir durumlar için ayrılmıştır. Veri kaybı Uyarısı Düzeyi yanıt gerektiren kritik bir durumdur. Kritik simgesi aşırı kullanımını önem derecesini kullanıcılara desensitizes. Hata iletisi bilgilendirme ise, kalıcı bir iletişim kutusu (zaman uyumsuz bildirim) alternatifleri düşünün.
+#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Etkili ve uygun bir bildirim sunumu seçin.
+ Veri kaybını önlemek için acil eylem gerekiyorsa, kritik bir uyarı içeren bir modal iletişim kutusu kullanın (senkron bildirim). Kritik simgeler, iletinin okumadan kapatılmasının olumsuz sonuçlara yol açabileceği durumlar için ayrılmıştır. Veri kaybı, alarm düzeyinde yanıt gerektiren kritik bir durumdur. Kritik simgenin aşırı kullanımı, kullanıcıları önemine karşı duyarsızlaştırıyor. Hata iletisi bilgi amaçlıysa, modal iletişim kutusuna (asynchronous bildirimi) alternatifleri göz önünde bulundurun.
 
-#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>Neden bir teknik açıklama yerine sorun oluştu, temiz, birleştiren bir açıklama sağlayın.
- Teknik Ayrıntılar açıklama kullanıcılarla overburdening bunları hata iletileri yok saymak büyük olasılıkla yapar. İyi Mesajlaşma örnekleri:
+#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>Sorunun teknik bir açıklama yerine neden oluştuğuna ilişkin temiz ve kısa bir açıklama sağlayın.
+ Kullanıcılara açıklamadaki teknik ayrıntıları aşırı yüklemek, hata iletilerini yok sayma olasılığını artıracaktır. İyi mesajlaşma örnekleri:
 
-- "İstenen dosya açılamıyor."
+- "İstenen dosya açılmıyor."
 
-- "Internet bağlantısı kurulamıyor."
+- "Internet'e bağlanamıyor."
 
-#### <a name="provide-information-about-how-to-fix-the-problem"></a>Sorunun çözümü hakkında bilgi sağlar.
- Sorunu gidermek nasıl kullanıcı öneriler sunar. Öneri yok ise kullanıcıyla dürüst olun. Teknik destek veya topluluk desteği gibi diğer çevrimiçi kaynakları doğrudan bağlantıları verilmektedir. Kullanıcılar, sorunla ilgili belirli çevrimiçi bilgi işaret edecek şekilde deneyin. Hata kimliği için kullanıcıların belirli bir hata hakkında bir tartışma iş parçacığına bağlama göz önünde bulundurun. İyi Mesajlaşma örnekleri:
+#### <a name="provide-information-about-how-to-fix-the-problem"></a>Sorunun nasıl giderilen hakkında bilgi sağlayın.
+ Sorunu nasıl çözeceğime ilgili kullanıcıönerileri sunun. Herhangi bir öneri niz varsa kullanıcıya karşı dürüst olun. Teknik destek veya topluluk desteği gibi alternatif çevrimiçi kaynaklara doğrudan bağlantılar sağlayın. Kullanıcıları sorunla ilgili belirli çevrimiçi bilgilere yönlendirmeye çalışın. Bir hata kimliği için, kullanıcıları bu belirli hatayla ilgili bir tartışma iş parçacığına bağlamayı düşünün. İyi mesajlaşma örnekleri:
 
-- "Internet'e bağlı ve bu işlemi yeniden deneyin emin olun."
+- "Internet'e bağlı olduğundan emin olun ve bu işlemi yeniden deneyin."
 
-- "Dosyasının varolduğunu ve ürünü açma izniniz olduğundan emin olun."
+- "Dosyanın var olduğundan ve dosyayı açma izniniz olduğundan emin olun."
 
-#### <a name="write-a-message-that-is-short-and-to-the-point"></a>Kısa ve noktasına olduğunu belirten bir ileti yazın.
- Bir hata iletisi bir çözüme bildirimde bulunabilir, açıklayabilir ve sunabilir, ancak yine de çok fazla sözcük olduğunda yok sayılır. Tek bir çözüm ayrıntıları düğmeyle aşamalı açığa kullanmaktır. Örneğin, kısa bir açıklama/çözüm verin ve ardından ayrıntılar düğmesine altında daha fazla ayrıntı yerleştirin. Hata hakkında daha fazla bilgi okumak kullanıcılar'ı seçerseniz, bunlar bunu yapabilirsiniz.
+#### <a name="write-a-message-that-is-short-and-to-the-point"></a>Kısa ve noktaya kadar bir ileti yazın.
+ Bir hata iletisi bir çözümü bildirebilir, açıklayabilir ve sunabilir, ancak çok sözcüklüyse yine de yoksayılabilir. Bir çözüm ayrıntılar düğmesi ile aşamalı açıklama kullanmaktır. Örneğin, kısa bir açıklama/çözüm verin ve ardından ayrıntılar düğmesinin altına daha fazla ayrıntı koyun. Kullanıcılar hata hakkında daha fazla bilgi okumayı seçerse, bunu yapabilirler.
 
- İleti dilde olmalıdır:
+ İletideki dil şöyle olmalıdır:
 
-- **Etki alanı uygun.** Kullanıcı anlayacaksınız dil kullanın. Müşterilerimizin geliştiriciler olsa da, bunlar genellikle sahibiz terminoloji ve bağlam yok.
+- **Etki alanına uygun.** Kullanıcının anlayacağı dili kullanın. Müşterilerimiz geliştiriciler olsa da, genellikle sahip olduğumuz bağlam ve terminolojiye sahip değildirler.
 
-- **Belirli.** Belirsiz ifadesi önlemek ve belirli adları ve konumları katılan nesnelerin verin. Örneğin, "karakteri geçersiz gibi" bir hata iletisi yararlı değildir. Hangi karakter? "Dosya bulunamadı." Hangi dosya?
+- **Belirli.** Belirsiz ifadelerden kaçının ve ilgili nesnelerin belirli adlarını ve konumlarını verin. Örneğin, "karakter geçersizdir" gibi bir hata iletisi yararlı değildir. Hangi karakter? "Dosya bulunamadı." Hangi dosya?
 
-- **Korkusuz.** Kullanıcı sorumlu veya onları stupid düşünüyorsanız kullanmayın. Tehlikeli ya da rahatsız edici dil kaçının (KILL, yürütün, önemli, geçersiz sonlandırma). Çok shouting olarak görülür ve olarak okunabilir değil tüm harfleri büyük metin kaçının. Anıları kullanmayın.
+- **Nazik.** Kullanıcıyı suçlamayın ya da aptal hissetmelerini etmeyin. Düşmanca veya saldırgan dillerden kaçının (öldürmek, yürütmek, sonlandırmak, ölümcül, yasadışı). Genellikle bağırma olarak görülen ve okunabilen olmayan büyük harfli metinden kaçının. Mizah kullanma.
 
-- **Düzeltmeye.** Yazım ve dil bilgisi (hatta alfalar içinde) kullanın. Yazım hatası okuyucunuz ve marifetiyle.
+- **Doğru.** Doğru yazım ve dilbilgisi (alfalarda bile) kullanın. Yazım hataları profesyonellik dışı ve utanç verici.
 
-- **Bağlamsal olarak uygun.** Uygun düğme metni kullanın. "Tamam" düğmesini kullanmaktan kaçının ve bunun yerine "Continue" veya "Yes/No" kullanın.
+- **Bağlamsal olarak uygun.** Uygun düğme metnini kullanın. "Tamam" düğmesinden kaçının ve bunun yerine "Continue" veya "Yes/No" düğmesini kullanın.
 
 ### <a name="error-message-examples"></a>Hata iletisi örnekleri
 
-|İyi|hatalı|
+|İyi|Kötü|
 |----------|---------|
-|"Çevirdiğiniz sayı artık hizmette değil. Lütfen numarayı denetleyin ve operatör için bir kez daha çevirin veya 0 çevirin. "|-"Hata (449): Geçersiz sayı"<br />-"İşlenmemiş özel durum hatası işlemin başarıyla tamamlandığını gösteriyor."<br /><br /> ![Visual Studio 'da hatalı hata iletisi](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602-a_ErrorDialog")|
+|"Aradığınız numara artık kullanımda değil. Lütfen numarayı kontrol edin ve tekrar arayın veya operatör için 0'ı arayın."|- "Hata (449): Yasadışı numara"<br />- "Bu işlenmemiş özel durum hatası, işlemin başarıyla tamamlandığını gösterir."<br /><br /> ![Visual Studio'da hatalı hata iletisi](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602-a_ErrorDialog")|
 
-## <a name="accessing-help"></a>Yardımı'na erişme
+## <a name="accessing-help"></a>Yardıma Erişim
 
 ### <a name="overview"></a>Genel Bakış
- MSDN belgelerinde yanı sıra, Visual Studio kullanıcı, kullanıcı arabiriminde yardımcı olmak üzere çeşitli erişim noktaları vardır. Bu erişim noktaları sürekli kullanılabilir olmasını sağlamak için ortamı tarafından sunulan Yardım sistemi yararlanmak özellik takımı gerekir. Bu erişim noktaları şunlardır:
+ MSDN'deki belgelere ek olarak, Visual Studio kullanıcısı kullanıcıya UI'de yken yardımcı olmak için çeşitli erişim noktalarına sahiptir. Bu erişim noktalarının sürekli olarak kullanılabildiğinden emin olmak için özellik ekiplerinin ortam tarafından sunulan Yardım sisteminden yararlanması gerekir. Bu erişim noktaları şunlardır:
 
-- **İletişim kutularında yönerge ve ek metin.** Yön veya açıklaması, üzerinde yüzey veya üzerine bilgi ipucu simgesinin üzerine gelindiğinde kullanılabilen kullanıcı Arabirimi sağlayan statik metin.
+- **Diyaloglarda öğretici ve tamamlayıcı metin.** Kullanıcı Arabirimi yüzeyinde veya bir InfoTip simgesinin üzerinde gezinmede bulunan yön veya açıklama veren statik metin.
 
-- **F1 yardımı** (yalnızca Düzenleyici). Visual Studio düzenleyicisi içinde bir kullanıcı herhangi bir zamanda F1 tuşuna bastığınızda geçerli seçime belirli bir Yardım konusu çıkarır, güvenebilir. F1 ile ilgili konuları ilgili ve bilgilendirici olduğundan emin olun.
+- **F1 Yardım** (yalnızca düzenleyici). Visual Studio düzenleyicisi içinde, bir kullanıcı f1 tuşuna basarak geçerli seçime özgü bir Yardım konusunu gündeme getireceğine güvenebilir. F1 ile ilişkili konuların uygun ve bilgilendirici olduğundan emin olun.
 
-- **Yardım konularına yönelik köprüler.** Bir iletişim kutusu, araç penceresi ya da kullanıcı bir teknoloji, özellik veya bir görevi gerçekleştirmek nasıl bilgi hakkında daha fazla yardımcı olmak için bir konu başlatan tasarım yüzeyine içinde köprü.
+- **Yardım konularına köprüler.** Bir iletişim kutusu, araç penceresi veya tasarım yüzeyi içindeki bir köprü, kullanıcıya bir görevi nasıl tamamlayacakları hakkında daha fazla bilgi edinmesinde yardımcı olmak için bir konu başlatır.
 
-- **Akıllı Etiketler ve yapı iletişimleri gibi yardımcı UI mekanizmaları.** Bu mekanizmalar kullanıcı UI öğesi anlaşılmasına yardımcı veya akıllı etiketler veya Oluşturucu iletişim kutuları gibi bir görev.
+- **Akıllı etiketler ve oluşturma iletişim leri gibi Yardımcı UI mekanizmaları.** Bu mekanizmalar kullanıcıya kullanıcıya kullanıcının kullanıcıyı bir Kullanıcı Aracı öğesini anlamasında yardımcı olur veya akıllı etiketler veya oluşturucu iletişim kutuları gibi bir görevi kolaylaştırır.
 
-- **UI yardım düğmeleri** (kullanım dışı). F1 Yardımı ilgili konuya erişmenizi başlık çubuğunda görünür bir göstergesi.
+- **UI Yardım düğmeleri** (amortismana uğradı). Başlık çubuğunda, ilgili F1 Yardım konusuna erişim sağlayan görünür bir gösterge.
 
 ### <a name="text"></a>Metin
 
-#### <a name="instructional-and-supplemental-text-in-dialogs"></a>Yönerge ve ek metin kutularındaki
- Karmaşık görevleri desteklemek iletişim kutularında, iletişim kutusunun veya karmaşık denetimlerde yakın üst genellikle kullanıcı Arabirimi içinde eğitici metin vermek için bir gereksinim olabilir. Stil yazma hakkında daha fazla bilgi için bkz. [Kullanıcı arabirimi metni ve terminolojisi](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) .
+#### <a name="instructional-and-supplemental-text-in-dialogs"></a>Diyaloglarda öğretici ve tamamlayıcı metin
+ Karmaşık görevleri destekleyen iletişim kutularında, kullanıcı arabirimi içinde genellikle iletişim kutusunun üst kısmında veya karmaşık denetimlerin yakınında öğretim metni verilmesi gerekebilir. Yazma stili yle ilgili ayrıntılar için [Kullanıcı Arabirimi metni ve terminolojisi](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) için bkz.
 
-#### <a name="infotips"></a>InfoTips
- Genellikle, eğitici metin kullanıcı arabiriminde bir yerde konumlandırmak için çok uzun olabilir veya deneyimli kullanıcılar için dağınıklık gibi HİSSEDİYORSUNUZ yalnızca yeni kullanıcılar için yararlı olabilir. Bu durumda, bir bilgi ipucu altında bir araç ipucu olarak eğitici/bilgilendirici metin yerleştirilmelidir.
+#### <a name="infotips"></a>Bilgi İpuçları
+ Genellikle, öğretim metni Kullanıcı BirA'da yerini yerleştirmek için çok uzun olabilir veya yalnızca yeni kullanıcılar için yararlı olabilir, deneyimli kullanıcılara yığılmayı hisseder. Bu durumda, öğretim/bilgilendirme metni Bilgi İpucu altında araç ucu olarak yerleştirilmelidir.
 
- InfoTips belirgin olarak ilgili ve henüz örtük belirli bilgi ipucu simgesi kullanması gereken denetimleri yerleştirilmelidir.
+ InfoTips, ilişkili oldukları denetimlerin yakınına yerleştirilmeli ve göze batan henüz fark edilebilen belirli InfoTip simgesini kullanmalıdır.
 
- ![Visual Studio 'da InfoTip Ipucu](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
+ ![Visual Studio'da Bilgi İpucu](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
 
- **Visual Studio 'da bilgi Ipucu örneği**
+ **Visual Studio'da Bilgi İpucu Örneği**
 
-### <a name="interactive-help-mechanisms"></a>Etkileşimli yardım mekanizmaları
+### <a name="interactive-help-mechanisms"></a>Etkileşimli Yardım mekanizmaları
 
 #### <a name="f1-help"></a>F1 Yardımı
- F1 Yardımı gerekiyor, içinde bir düzenleyici veya tasarım yüzeyine ancak Visual Studio ortamında değil başka bir yerde.
+ F1 Yardım bir editör veya tasarım yüzeyi içinde gereklidir, ancak Visual Studio ortamında başka bir yerde değil.
 
-#### <a name="hyperlinks-to-help-topics"></a>Köprüler Yardım konuları
- Köprüler, bir eylemi gerçekleştirmek, IDE içinde gidin veya Yardım bir tarayıcıda başlatmak için kullanılabilir. Görsel ve düzen yönergeleri için dil ve 07.10.01 düğmeleri ve köprüleriyle ilgili ayrıntılar için bkz. [Kullanıcı arabirimi metni ve terimleri](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) .
+#### <a name="hyperlinks-to-help-topics"></a>Yardım konularına köprüler
+ Köprüler bir eylem gerçekleştirmek, IDE içinde gezinmek veya bir tarayıcıda Yardım başlatmak için kullanılabilir. Dil ve 07.10.01 Düğmeleri ve görsel ve düzen yönergeleri için köprüler hakkında ayrıntılı bilgi için Kullanıcı Arabirimi metni ve [terminolojisi](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) için bkz.
 
-#### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>(Kullanım dışı) iletişim başlık çubuğu düğmeleri [?] Yardım
- Çoğunlukla, iletişim kutuları, başlık çubuğunda Yardımı [?] düğmeleri kullanım dışı bırakılmıştır. Kullanıcı Arabirimi konuları artık doc modelimizi parçasıdır ve bu nedenle olmayabilir bağlamak için uygun bir konu. Aslında başlık çubuğu düğme F1 Yardımı ile aynı şeyi edildi ve artık iletişim kutularında gereklidir. Köprüler yeni kullanıcı Arabiriminde daha yaygın olarak kullanılan karşın bazı durumlarda, bu hala daha fazla kavramsal ya da yordam bilgisi kullanılabilir olduğunu bir gösterge kullanılabilir.
+#### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>İletişim kutusu çubuklarındaki Yardım [?] düğmeleri (amortismana uğradı)
+ Çoğunlukla, iletişim lerin başlık çubuğundaki Yardım [?] düğmeleri küçümsenen. UI konuları artık doküman modelimizin bir parçası değildir ve bu nedenle bağlantı için ilgili bir konu olmayabilir. Esasen, başlık çubuğu düğmesi F1 Yardım ile aynı şey, ve artık diyaloglar gerekli değildir. Bazı durumlarda, köprüler daha yaygın olarak yeni kullanıcı arabirimi'nde kullanılmasına rağmen, bu hala daha fazla kavramsal veya yordamsal bilgi nin mevcut olduğunun bir göstergesi olarak kullanılabilir.
 
-##### <a name="dialogs-created-through-the-environment"></a>Ortamı üzerinden oluşturulan iletişim kutuları
- Birçok kabuk iletişim kutusu, **Vbdialogboxparam** işlevi aracılığıyla oluşturulur. Bu paylaşılan işlev **Yardım** düğmesini iletişim kutusu 'ndan öğesine taşımaya yardımcı olacak şekilde **güncelleştirildi.** Geriye dönük bir mimari korurken düğmesi uyumlu ve genişletilebilir.
+##### <a name="dialogs-created-through-the-environment"></a>Çevre üzerinden oluşturulan iletişim kutuları
+ **VBDialogBoxParam** işlevi aracılığıyla birçok kabuk iletişim kutusu oluşturulur. Bu paylaşılan işlev, **Yardım** düğmesini iletişim kutusundan **?** geriye dönük uyumlu ve genişletilebilir bir mimari korurken düğmesini.
 
- Özellikle, **Vbdialogboxparam** IşLEVI, kimliği **IDHELP** (9) veya etiket **Yardım** veya **& yardım**olan bir düğmenin iletişim şablonuna bakar. Bir Yardım düğmesi bulunursa, gizlenir ve **ws_ex_contexthelp** stili iletişim kutusuna eklenir ve **Bu, öğesini yerleştiriyor.** iletişim kutusunun başlık çubuğunda düğme.
+ Özellikle, **VBDialogBoxParam** işlevi, kimliği **IDHELP** (9) veya etiketi Yardım veya **&** **Yardım** olan bir düğmenin iletişim şablonuna bakar. Yardım düğmesi bulunursa, gizlenir ve iletişim kutusuna **WS_EX_CONTEXTHELP** stili eklenir, aşağıdakileri **yerleştirir?** iletişim kutusunun başlık çubuğundaki düğme.
 
- İletişim kutusu oluşturulduğunda iletişim kutusu proc öğesini bir yığına gönderir ve iletişim kutusunu, **Iletişimpreproc**adlı bir işlem öncesi iletişim kutusu proc ile çağırır. Ne zaman **?** düğmesine tıklandığında, iletişim kutusuna **SC_CONTEXTHELP** **WM_SYSCOMMAND** gönderir. **Dialogpreproc** bu komutu yakalar ve özgün iletişim kutusu proc öğesine geçirilen bir **wm_help** iletisiyle değiştirir.
+ İletişim oluşturulduğunda, iletişim proc'unu bir yığın üzerine iter ve **dialogPreProc**adlı bir ön işlem iletişim proc'u ile iletişim kutusunu çağırır. Ne **zaman?** düğmesine tıklanırsa, **WM_SYSCOMMAND** iletişim kutusuna **WM_SYSCOMMAND SC_CONTEXTHELP** gönderir. **DialogPreProc** bu komutu yakalar ve özgün iletişim proc geçirilir **WM_HELP** bir ileti, değiştirir.
 
- Çoğu ortam oluşturulan iletişim kutuları, iletişim kutusunda Yardım düğmesine sahip. İletişim kutusu görüntülendiğinde, Yardım düğmesi otomatik olarak gizlenir ve yalnızca **?** Düğme çalışır. **Mi?** Düğme hiç olmadığı kadar kaldırıldı veya değiştirildi Windows, bu çözümü hızlı bir şekilde geri özgün Yardım düğmelere taşımanızı sağlar.
+ Ortam tarafından oluşturulan iletişim kutularının çoğunda iletişim kutusunda Yardım düğmesi vardır. İletişim kutusu görüntülendiğinde, Yardım düğmesi otomatik olarak gizlenir ve **yalnızca?** düğmesi çalışır. Eğer? **?** düğmesi Windows'da hiç kaldırılır veya değiştirilirse, bu çözüm hızlı bir şekilde orijinal Yardım düğmelerine geri dönmenizi sağlar.
 
- Bu çözüm, hatalara neden olabilecek dört varsayımlarda bulunur:
+ Bu çözüm, hatalara neden olabilecek dört varsayım yapar:
 
-- İletişim kutusunun Yardım düğmesi **IDHELP** (9) ' dir.
+- İletişim kutusunun yardım düğmesi **IDHELP** 'dir (9).
 
-- Yardım düğmesi gizlenir doğru iletişim kutusu görünür.
+- Yardım düğmesi gizlendiğinde iletişim kutusu doğru görünür.
 
-- İletişim kutusu, kendi winproc yerine değil.
+- İletişim, winproc'un yerini almaz.
 
-- İletişim kutusu içinde başka bir iletişim kutusu ekli değil.
+- İletişim, başka bir iletişim kutusunun içine katıştırılmış değil.
 
-  İletişim kutusu Msenv içinde bulunuyorsa ve **Vbdialogboxparam**kullanmıyorsa, kendi işleyicinizi uygulamadan önce **vbdialogboxparam** ' ı araştırın.
+  İletişiminiz msenv içinde bulunuyorsa ve **VBDialogBoxParam**kullanmıyorsa, kendi işleyicinizi uygulamadan önce **VBDialogBoxParam'dan** yararlanmayı araştırın.
 
 ##### <a name="dialogs-created-through-other-packages"></a>Diğer paketler aracılığıyla oluşturulan iletişim kutuları
- Msenv dışında bulunan iletişim kutuları için kendi çözümünüzü uygulayabilirsiniz. İçinde VSPackage paylaşılan iletişim kutusu sınıfı için için başlık çubuğu düğmesini taşıma veya bir işleyici her iletişim kutusunda uygulama göz önünde bulundurun. Aşağıdaki kod, başlamanıza yardımcı olmak için bir uygulama bir skeleton şöyledir:
+ Msenv dışında ikamet eden iletişim için kendi çözümünüzü uygulayabilirsiniz. VSPackage'ınızdaki paylaşılan bir iletişim sınıfı için düğmeyi başlık çubuğuna taşımayı veya her iletişim kutusunda bir işleyici uygulamayı düşünün. Aşağıdaki kod, başlamanıza yardımcı olacak bir uygulamaiskeletidir:
 
 ```
 struct DLGPROCITEM
@@ -375,8 +375,8 @@ INT_PTR CALLBACK DialogPreProc(HWND hwndDlg, UINT uMsg,
 }
 ```
 
-##### <a name="help-buttons-in-managed-code"></a>Yönetilen kodda Yardım düğmeleri
- Pencere başlık çubuğu Yardım düğmesinin varsayılan davranışı geçersiz kılma, yönetilen kodda kolaydır. Aşağıda bu davranışını gösteren bir tam bir tanıtım uygulamasıdır. Esas olarak, formunuzun **WndProc** metodunu geçersiz kılmanız ve ardından **SC_CONTEXTHELP** bir Ileti yakalandığı zaman F1 Yardım isteklerini tetiketmeniz gerekir.
+##### <a name="help-buttons-in-managed-code"></a>Yönetilen koddaki yardım düğmeleri
+ Pencere başlığı çubuğunu geçersiz kılmak Yardım düğmesinin varsayılan davranışını yönetilen kodda kolayca alır. Aşağıda bu davranışı gösteren tam bir demo uygulamasıdır. Özünde, formunuzun **WndProc** yöntemini geçersiz kılmanız ve **SC_CONTEXTHELP** bir ileti ele geçirildiğinde F1 yardım isteklerini kapatmanız gerekir.
 
 ```
 using System;

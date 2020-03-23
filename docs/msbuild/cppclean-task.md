@@ -1,5 +1,5 @@
 ---
-title: CPPClean görevi | Microsoft Docs
+title: CPPClean Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,15 +20,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 331a96c7cd67b933e521e3fe5f2d7a909ffa5d03
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634350"
 ---
 # <a name="cppclean-task"></a>CPPClean Görevi
 
-Bir C++ proje oluşturulduğunda MSBuild tarafından oluşturulan geçici dosyaları siler. Derleme dosyalarını silme işlemi *Temizleme*olarak bilinir.
+Bir C++ projesi oluşturulurken MSBuild'in oluşturduğu geçici dosyaları siler. Yapı dosyalarını silme işlemi *temizleme*olarak bilinir.
 
 ## <a name="parameters"></a>Parametreler
 
@@ -36,11 +36,11 @@ Bir C++ proje oluşturulduğunda MSBuild tarafından oluşturulan geçici dosyal
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**DeletedFiles**|İsteğe bağlı `ITaskItem[]` çıkış parametresi.<br /><br /> Görevler tarafından tüketilen ve yayılan MSBuild çıkış dosyası öğelerinin dizisini tanımlar.|
-|**DoDelete**|İsteğe bağlı **Boolean** parametresi.<br /><br /> `true`, geçici derleme dosyalarını temizleyin.|
-|**FilePatternsToDeleteOnClean**|Gerekli `String` parametresi.<br /><br /> Temizleyen dosyaların dosya uzantılarının noktalı virgülle ayrılmış bir listesini belirtir.|
-|**Filesexcludedfromcyalın**|İsteğe bağlı `String` parametresi.<br /><br /> Temizleyememelidir dosyaların noktalı virgülle ayrılmış bir listesini belirtir.|
-|**FoldersToClean**|Gerekli `String` parametresi.<br /><br /> Temizleyen dizinlerin noktalı virgülle ayrılmış bir listesini belirtir. Tam veya göreli bir yol belirtebilirsiniz ve yol joker karakter simgesini (*) içerebilir.|
+|**Silinen Dosyalar**|İsteğe bağlı `ITaskItem[]` çıktı parametresi.<br /><br /> Görevler tarafından tüketilebilen ve yayılabilen bir dizi MSBuild çıktı dosyası öğesi tanımlar.|
+|**DoDelete**|İsteğe bağlı **Boolean** parametresi.<br /><br /> Eğer, `true`geçici yapı dosyalarını temizleyin.|
+|**FilePatternstodeleteonClean**|Gerekli `String` parametre.<br /><br /> Temizleyecek dosyaların dosya uzantılarının yarı sütunlu sınırlı bir listesini belirtir.|
+|**FilesExcludedFromClean**|İsteğe bağlı `String` parametre.<br /><br /> Temizlenmemesi gereken yarı sütunlu sınırlı bir dosya listesi belirtir.|
+|**KlasörlerToClean**|Gerekli `String` parametre.<br /><br /> Temizleyecek yarı sütunlu dizinler listesini belirtir. Tam veya göreceli bir yol belirtebilirsiniz ve yol joker karakter simgesini (*) içerebilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

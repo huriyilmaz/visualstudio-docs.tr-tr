@@ -1,5 +1,5 @@
 ---
-title: MSBuild Koşulları | Microsoft Docs
+title: MSBuild Koşulları | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,31 +17,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2e69e5c8fc7404c0c313774271fd07b6315e5270
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633375"
 ---
-# <a name="msbuild-conditions"></a>MSBuild Koşulları
+# <a name="msbuild-conditions"></a>MSBuild koşulları
 
-MSBuild, `Condition` özniteliğine izin verildiğinde uygulanabilen belirli bir koşul kümesini destekler. Aşağıdaki tabloda bu koşullar açıklanmaktadır.
+MSBuild, bir öznitelik izin verilen her `Condition` yerde uygulanabilecek belirli bir koşul kümesini destekler. Aşağıdaki tabloda bu koşullar açıklanmaktadır.
 
 |Koşul|Açıklama|
 |---------------|-----------------|
-|'`stringA`' = = '`stringB`'|`stringA` `stringB`eşitse `true` olarak değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Basit alfasayısal dize veya Boole değerleri için tek tırnak gerekmez. Ancak boş değerler için tek tırnak gereklidir.|
-|'`stringA`'! = '`stringB`'|`stringA` `stringB`eşitse `true` değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Basit alfasayısal dize veya Boole değerleri için tek tırnak gerekmez. Ancak boş değerler için tek tırnak gereklidir.|
-|\<, >, \<=, > =|İşleçlerin sayısal değerlerini karşılaştırır. İlişkisel değerlendirme true ise `true` döndürür. İşlenenler, bir ondalık ya da onaltılık sayıya dönüşebilmelidir. Onaltılık sayıların "0x" ile başlaması gerekir. **Note:**  XML 'de, `<` ve `>` karakterlerin kaçışlı olması gerekir. Sembol `<` `&lt;`olarak temsil edilir. Sembol `>` `&gt;`olarak temsil edilir.|
-|Var ('`stringA`')|`stringA` adında bir dosya veya klasör varsa `true` olarak değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Basit alfasayısal dize veya Boole değerleri için tek tırnak gerekmez. Ancak boş değerler için tek tırnak gereklidir.|
-|Hastrailingeðik çizgi ('`stringA`')|Belirtilen dize, geriye doğru eğik çizgi (\\) veya eğik çizgi (/) karakteri içeriyorsa `true` olarak değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dize veya Boole değerleri için tek tırnak gerekmez. Ancak boş değerler için tek tırnak gereklidir.|
-|!|İşlenen `false`değerlendirilirse `true` olarak değerlendirilir.|
-|And|Her iki işlenen de `true`değerlendirmesi `true` olarak değerlendirilir.|
-|Veya|İşlenenlerin en az biri `true`olarak değerlendirilirse `true` olarak değerlendirilir.|
-|()|İçinde yer alan ifadeler `true`olarak değerlendiriyorsa `true` değerlendirilen gruplandırma mekanizması.|
-|$if $ (% Expression%), $else $, $endif $|Belirtilen `%expression%` geçirilen özel şablon parametresinin dize değeriyle eşleşip eşleşmediğini denetler. `$if$` koşulu `true`olarak değerlendirilirse, deyimleri çalıştırılır; Aksi takdirde `$else$` koşulu denetlenir. `$else$` koşul `true`ise, deyimleri çalıştırılır; Aksi takdirde, `$endif$` koşulu ifade değerlendirmesini sonlandırır.<br /><br /> Kullanım örnekleri için bkz. [Visual Studio proje/öğe şablonu parametre mantığı](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic).|
+|'`stringA`' == '`stringB`'|Eğer eşitse `true` `stringA` `stringB`değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|'`stringA`' != '`stringB`'|`true` Eğer `stringB`eşit `stringA` değilse değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|\<, >, \<=, >=|Operandların sayısal değerlerini değerlendirir. İlişkisel değerlendirme doğruysa döndürür. `true` Operands ondalık veya hexadecimal sayı değerlendirmek gerekir. Hexadecimal sayılar "0x" ile başlamalıdır. **Not:**  XML'de, karakterler `<` `>` ve kaçılmalıdır. Sembol `<` olarak `&lt;`temsil edilir. Sembol `>` olarak `&gt;`temsil edilir.|
+|Var('`stringA`')|Ada `stringA` `true` sahip bir dosya veya klasörün var olup olmadığını değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|HasTrailingSlash('`stringA`')|Belirtilen dize, geriye doğru çizgi ( `true` )\\veya ileri eğik çizgi (/) karakteri nin olup olmadığını değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|!|Operand'ın `true` değerlendirilip `false`değerlendirmeme.|
+|And|Her iki `true` operands değerlendirmek `true`eğer değerlendirir.|
+|Veya|Operandlardan en az birinin .'a `true` `true`göre değerlendirilip değerlendirmeyeceklerini değerlendirir.|
+|()|İçerde yer alan `true` ifadelerin `true`değerlendirilmesi için değerlendiren gruplandırma mekanizması.|
+|$if$ ( %ifade% ), $else$, $endif$|Belirtilen `%expression%` özel şablon parametresinin dize değeriyle eşleşip eşleşmediğini denetler. `$if$` Koşul , ifadeleri `true`çalıştırılır; aksi `$else$` takdirde, durum kontrol edilir. `$else$` Koşul `true`ise , ifadeleri çalıştırılır; aksi takdirde, durum ifade değerlendirmesini `$endif$` sona erdirer.<br /><br /> Kullanım örnekleri için [Visual Studio proje/öğe şablonu parametre mantığına](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic)bakın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Koşullu yapılar](../msbuild/msbuild-conditional-constructs.md)
-- [İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)
+- [Walkthrough: Sıfırdan bir MSBuild proje dosyası oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)

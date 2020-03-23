@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma | Microsoft Docs'
+title: Yapıda Çevre Değişkenlerini Kullanma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633791"
 ---
-# <a name="how-to-use-environment-variables-in-a-build"></a>Nasıl yapılır: bir derlemede ortam değişkenlerini kullanma
+# <a name="how-to-use-environment-variables-in-a-build"></a>Nasıl kullanılır: Yapıda ortam değişkenlerini kullanma
 
-Projeleri oluştururken, genellikle proje dosyasında veya projenizi oluşturan dosyalarda olmayan bilgileri kullanarak yapı seçeneklerini ayarlamak gerekir. Bu bilgiler genellikle ortam değişkenlerinde depolanır.
+Proje oluştururken, genellikle proje dosyasında olmayan bilgileri veya projenizi oluşturan dosyaları kullanarak yapı seçenekleri ayarlamak gerekir. Bu bilgiler genellikle ortam değişkenlerinde depolanır.
 
-## <a name="reference-environment-variables"></a>Başvuru ortamı değişkenleri
+## <a name="reference-environment-variables"></a>Referans ortamı değişkenleri
 
- Tüm ortam değişkenleri, özellikler olarak Microsoft Build Engine (MSBuild) proje dosyasında kullanılabilir.
+ Tüm ortam değişkenleri Microsoft Build Engine (MSBuild) proje dosyasında özellik olarak kullanılabilir.
 
 > [!NOTE]
-> Proje dosyası bir ortam değişkeniyle aynı ada sahip bir özelliğin açık tanımını içeriyorsa, proje dosyasındaki özelliği ortam değişkeninin değerini geçersiz kılar.
+> Proje dosyası, çevre değişkeni ile aynı ada sahip bir özelliğin açık bir tanımını içeriyorsa, proje dosyasındaki özellik ortam değişkeninin değerini geçersiz kılar.
 
-#### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild projesinde ortam değişkenini kullanmak için
+#### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild projesinde ortam değişkeni kullanmak için
 
-- Ortam değişkenine, proje dosyanızda bildirildiği bir değişkenle aynı şekilde başvurun. Örneğin, aşağıdaki kod BIN_PATH ortam değişkenine başvurur:
+- Proje dosyanızda bildirilen bir değişkenle aynı şekilde ortam değişkenine başvurun. Örneğin, aşağıdaki kod BIN_PATH ortamı değişkenine başvurur:
 
    `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`
 
-  Ortam değişkeni ayarlanmamışsa bir özellik için varsayılan değer sağlamak üzere bir `Condition` özniteliği kullanabilirsiniz.
+  Ortam değişkeni `Condition` ayarlanmadıysa, bir özellik için varsayılan değer sağlamak için bir öznitelik kullanabilirsiniz.
 
 #### <a name="to-provide-a-default-value-for-a-property"></a>Bir özellik için varsayılan değer sağlamak için
 
-- Değeri yalnızca özelliğin değeri yoksa ayarlamak için bir özellik üzerinde `Condition` özniteliği kullanın. Örneğin, aşağıdaki kod, `ToolsPath` özelliğini yalnızca `ToolsPath` ortam değişkeni ayarlanmamışsa *c:\Tools* olarak ayarlar:
+- Yalnızca `Condition` özelliğin değeri yoksa değeri ayarlamak için özellik üzerinde bir öznitelik kullanın. Örneğin, aşağıdaki kod `ToolsPath` özelliği yalnızca ortam değişkeni `ToolsPath` ayarlı değilse *c:\tools* olarak ayarlar:
 
      `<ToolsPath Condition="'$(TOOLSPATH)' == ''">c:\tools</ToolsPath>`
 
     > [!NOTE]
-    > Özellik adları büyük/küçük harfe duyarlı değildir, bu nedenle hem `$(ToolsPath)` hem de `$(TOOLSPATH)` aynı özelliğe veya ortam değişkenine başvurur.
+    > Özellik adları büyük/küçük harf `$(ToolsPath)` `$(TOOLSPATH)` duyarlı değildir, bu nedenle her ikisi de ve aynı özellik veya ortam değişkenine başvurur.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki proje dosyası dizinlerin konumunu belirtmek için ortam değişkenlerini kullanır.
+ Aşağıdaki proje dosyası, dizinlerin konumunu belirtmek için ortam değişkenlerini kullanır.
 
 ```xml
 <Project DefaultTargets="FakeBuild">
@@ -67,6 +67,6 @@ Projeleri oluştururken, genellikle proje dosyasında veya projenizi oluşturan 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
-- [Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
+- [Nasıl yapılı: Farklı seçeneklerle aynı kaynak dosyaları oluşturma](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

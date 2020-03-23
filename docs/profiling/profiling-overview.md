@@ -1,5 +1,5 @@
 ---
-title: Performansını ölçmek için araçlarına genel bakış | Microsoft Docs
+title: Performansı ölçme araçlarına genel bakış | Microsoft Dokümanlar
 ms.custom: seodec18
 ms.date: 03/27/2018
 ms.topic: overview
@@ -9,22 +9,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c0d1c8cfb94b74f54eaaddd6b8d6d0fd17216b94
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77577955"
 ---
-# <a name="overview-of-tools-for-measuring-performance-in-visual-studio"></a>Visual Studio performansını ölçmek için araçlarına genel bakış
+# <a name="overview-of-tools-for-measuring-performance-in-visual-studio"></a>Visual Studio'da performansı ölçme araçlarına genel bakış
 
-Profil oluşturma ve tanılama araçları, bellek ve CPU kullanımına ilişkin sorunları ve uygulama düzeyindeki diğer sorunları tanılamanıza yardımcı olur. Bu araçları kullanarak uygulamanızı çalıştırma zamanı gibi bir süre boyunca (örneğin, değişken değerleri, işlev çağrıları ve olayları) veri toplar. Kodunuzun yürütülmesi sırasında farklı noktalarda, uygulamanızın durumunu görüntülemek ya da uygulama performansınızı son İnceleme analizini gerçekleştirin.
+Profil oluşturma ve tanılama araçları, bellek ve CPU kullanımına ilişkin sorunları ve uygulama düzeyindeki diğer sorunları tanılamanıza yardımcı olur. Bu araçlarla, uygulamanızı çalıştırdığınız süre gibi bir süre boyunca veri (değişken değerler, işlev çağrıları ve olaylar gibi) birikirsiniz. Kodunuzun yürütülmesi sırasında uygulamanızın durumunu farklı noktalarda görüntüleyebilir veya uygulama performansınızın ölüm sonrası analizini gerçekleştirebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Uygulama performansını ölçmenin birçok farklı yolu hakkında bilgi edinmek için [öncelikle profil oluşturma araçlarına göz atın](../profiling/profiling-feature-tour.md) .
+* Uygulama performansını ölçmenin birçok farklı yolu hakkında bilgi edinmek için [profil oluşturma araçlarına ilk bakışta bakın.](../profiling/profiling-feature-tour.md)
 
-* CPU kullanımı aracı hakkında daha ayrıntılı bilgi için [CPU kullanımını çözümleyin](../profiling/cpu-usage.md) .
+* [CPU kullanım](../profiling/cpu-usage.md) aracı hakkında daha ayrıntılı bilgi için CPU kullanımını analiz edin.
 
-* Performans sorunlarını belirlemek için [bellek kullanımını çözümleyin](../profiling/memory-usage.md) .
+* Performans darboğazlarını belirlemek için [bellek kullanımını analiz edin.](../profiling/memory-usage.md)
 
-* .NET uygulamalarında performans sorunlarını belirlemek için [.NET nesne ayırma aracı 'nı kullanarak bellek kullanımını çözümleyin](../profiling/dotnet-alloc-tool.md) .
+* .NET uygulamalarındaki performans darboğazlarını belirlemek için [.NET Nesne Ayırma aracını kullanarak bellek kullanımını analiz edin.](../profiling/dotnet-alloc-tool.md)

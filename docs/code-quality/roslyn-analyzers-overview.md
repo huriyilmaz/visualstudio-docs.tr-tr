@@ -1,5 +1,5 @@
 ---
-title: Roslyn Çözümleyicileri kullanarak kod analizi
+title: Roslyn analizörlerini kullanarak kod analizi
 ms.date: 10/03/2019
 ms.topic: overview
 helpviewer_keywords:
@@ -12,89 +12,89 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34225858e88f4ee969f0e51013bcdb04812d425f
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.openlocfilehash: 78a47cb2a5aefd7d20e0b8087f5f3ad735716175
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144765"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79431286"
 ---
-# <a name="overview-of-source-code-analyzers"></a>Kaynak kodu Çözümleyicileri 'ne genel bakış
+# <a name="overview-of-source-code-analyzers"></a>Kaynak kod çözümleyicileri genel bakış
 
-.NET Compiler Platform ("Roslyn") kod Çözümleyicileri stil, kalite C# ve bakım, tasarım ve diğer sorunlar için veya Visual Basic kodunuzu inceler.
+.NET Derleyici Platformu ("Roslyn") kod çözümleyicileri C# veya Visual Basic kodunuzu stil, kalite ve sürdürülebilirlik, tasarım ve diğer sorunlar için inceler.
 
-- Bazı çözümleyiciler, Visual Studio 'da yerleşik olarak bulunur. Bu çözümleyiciler için tanılama KIMLIĞI veya kodu ıdexxxx biçimindedir, örneğin, IDE0067. Bu yerleşik çözümleyiciler çoğu [kod stilini](../ide/code-styles-and-code-cleanup.md)inceler ve [metin düzenleyici seçenekleri sayfasında](../ide/code-styles-and-code-cleanup.md) veya bir [editorconfig dosyasında](../ide/editorconfig-code-style-settings-reference.md)tercihleri yapılandırabilirsiniz. Çeşitli yerleşik çözümleyiciler kod kalitesine bakar.
+- Bazı analizörler Visual Studio için inşa edilmiştir. Bu çözümleyiciler için tanılama kimliği veya kodu, örneğin IDE0067 biçimi ne dir. Bu yerleşik çözümleyicilerin çoğu [kod stilini](../ide/code-styles-and-code-cleanup.md)inceler ve [metin düzenleyicisi seçenekleri sayfasında](../ide/code-styles-and-code-cleanup.md) veya [EditorConfig dosyasında](../ide/editorconfig-code-style-settings-reference.md)tercihleri yapılandırabilirsiniz. Bir avuç yerleşik çözümleyici kod kalitesine bakar.
 
-- NuGet paketi veya Visual Studio uzantısı olarak ek çözümleyiciler yükleyebilirsiniz. Örneğin:
+- NuGet paketi veya Visual Studio uzantısı olarak ek çözümleyiciler yükleyebilirsiniz. Örnek:
 
-  - [FxCop çözümleyicileri](../code-quality/install-fxcop-analyzers.md), Microsoft 'un önerilen kod kalitesi Çözümleyicileri
-  - [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [xUnit Çözümleyicileri](https://www.nuget.org/packages/xunit.analyzers/)ve [sonar Çözümleyicisi](https://www.nuget.org/packages/SonarAnalyzer.CSharp/) gibi üçüncü taraf Çözümleyicileri
+  - [FxCop analizörleri](../code-quality/install-fxcop-analyzers.md), Microsoft'un önerilen kod kalitesi analizörleri
+  - [StyleCop,](https://www.nuget.org/packages/StyleCop.Analyzers/) [Roslynator,](https://www.nuget.org/packages/Roslynator.Analyzers/) [XUnit Analizörleri](https://www.nuget.org/packages/xunit.analyzers/)ve [Sonar Analizör](https://www.nuget.org/packages/SonarAnalyzer.CSharp/) gibi üçüncü taraf analizörleri
 
-Kural ihlalleri bir çözümleyici tarafından bulunursa, bunlar kod düzenleyicisinde (sorunlu kod altında bir *dalgalı çizgi* olarak) ve hata listesi penceresinde raporlanır.
+Kural ihlalleri bir çözümleyici tarafından bulunursa, kod düzenleyicisinde (rahatsız edici kod altında *bir kıvrım* olarak) ve Hata Listesi penceresinde bildirilir.
 
-Birçok çözümleyici kuralı veya *tanılaması*, sorunu gidermek için uygulayabileceğiniz bir veya daha fazla ilişkili *kod düzeltmesiyle* birlikte bulunabilir. Visual Studio 'da yerleşik olarak bulunan çözümleyici tanılamaları, ilişkili bir kod düzeltmesine sahiptir. Kod düzeltmeleri, ampul simgesi menüsünde diğer [hızlı eylem](../ide/quick-actions.md)türleriyle birlikte gösterilir. Bu kod düzeltmeleri hakkında daha fazla bilgi için bkz. [Genel Hızlı Eylemler](../ide/common-quick-actions.md).
+Birçok çözümleyici kuralı veya *tanılama,* sorunu düzeltmek için uygulayabileceğiniz bir veya daha fazla ilişkili *kod düzeltmeleri* vardır. Visual Studio'da yerleşik çözümleyici tanılamanın her birinin ilişkili bir kod düzeltmesi vardır. Kod düzeltmeleri, ampul simgesi menüsünde diğer [Hızlı İşlemtürleri](../ide/quick-actions.md)ile birlikte gösterilir. Bu kod düzeltmeleri hakkında bilgi için [Ortak Hızlı Eylemler'e](../ide/common-quick-actions.md)bakın.
 
-![Çözümleyici ihlali ve hızlı eylem kodu onarımı](../code-quality/media/built-in-analyzer-code-fix.png)
+![Çözümleyici ihlali ve Hızlı Eylem kodu düzeltme](../code-quality/media/built-in-analyzer-code-fix.png)
 
-## <a name="source-code-analysis-versus-legacy-analysis"></a>Kaynak kodu analizi ve eski analiz karşılaştırması
+## <a name="source-code-analysis-versus-legacy-analysis"></a>Kaynak kodu analizi ve eski analiz
 
-Roslyn çözümleyicilerine göre kaynak analizi, yönetilen kod için [eski Analizi](../code-quality/code-analysis-for-managed-code-overview.md) yerine koyar. Eski analiz kurallarının birçoğu zaten Roslyn kod Çözümleyicileri olarak yeniden yazıldı. .NET Core ve .NET Standard projeleri gibi daha yeni proje şablonları için eski analizler de kullanılamaz.
+Roslyn çözümleyicileri tarafından kaynak analizi yönetilen kod için [eski çözümleme](../code-quality/code-analysis-for-managed-code-overview.md) değiştirir. Eski analiz kurallarının çoğu roslyn kod çözümleyicileri olarak yeniden yazılmıştır. .NET Core ve .NET Standard projeleri gibi yeni proje şablonları için eski çözümleme bile mevcut değildir.
 
-Eski analiz kuralı ihlallerine benzer şekilde, kaynak kodu çözümleme ihlalleri Visual Studio 'daki Hata Listesi penceresinde görüntülenir. Ayrıca, kaynak kodu çözümleme ihlalleri, kod Düzenleyicisi 'nde, sorunlu kodun altında *dalgalı çizgiler* olarak da görünür. Dalgalı çizginin rengi kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#rule-severity) bağlıdır. Aşağıdaki görüntüde, bir kırmızı, bir yeşil ve bir gri&mdash;üç ihlal gösterilmektedir:
+Eski çözümleme kuralı ihlalleri gibi, kaynak kodu çözümleme ihlalleri de Visual Studio'daki Hata Listesi penceresinde görünür. Buna ek olarak, kaynak kodu çözümleme ihlalleri de kod düzenleyicisinde rahatsız edici kod altında *kıvrımlar* olarak gösterir. Dalgalı rengi kuralın [önem ayarına](../code-quality/use-roslyn-analyzers.md#rule-severity) bağlıdır. Aşağıdaki resimde,&mdash;biri kırmızı, biri yeşil ve bir gri olmak üzere üç ihlal gösterilmektedir:
 
-![Visual Studio 'da kod düzenleyicisinde dalgalı çizgiler](media/diagnostics-severity-colors.png)
+![Visual Studio'daki kod düzenleyicisinde squiggles](media/diagnostics-severity-colors.png)
 
-Kod Çözümleyicileri, derleme zamanında kodu inceleyerek eski analizler gibi, ancak yazarken da canlı olur. [Tam çözüm analizini](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#toggle-full-solution-analysis)etkinleştirirseniz kod Çözümleyicileri, düzenleyicide açık olmayan kod dosyalarının tasarım zamanı analizini de sağlar.
+Kod çözümleyicileri, etkinse eski çözümleme gibi, yapı zamanında kodu inceler, ancak siz yazarken de yaşar. Canlı kod çözümlemesi kapsamını yalnızca geçerli belgeyi, tüm açık belgeleri veya çözümün tamamını yürütmek üzere yapılandırabilirsiniz. [Bkz. Nasıl Yapılacağını: Canlı kod çözümlemesi kapsamını yapılandırın.](./configure-live-code-analysis-scope-managed-code.md)
 
 > [!TIP]
-> Kod Çözümleyicileri içindeki derleme zamanı hataları ve uyarıları yalnızca çözümleyiciler bir NuGet paketi olarak yüklenirse gösterilir. Yerleşik çözümleyiciler (örneğin, IDE0067 ve IDE0068) derleme sırasında hiçbir şekilde çalıştırılmadı.
+> Kod çözümleyicilerinden gelen oluşturma zamanı hataları ve uyarıları yalnızca çözümleyiciler NuGet paketi olarak yüklenirse gösterilir. Yerleşik çözümleyiciler (örneğin, IDE0067 ve IDE0068) yapı sırasında çalışmaz.
 
-Yalnızca Roslyn kod Çözümleyicileri, eski analizler tarafından aynı tür sorunları rapor etmez, ancak dosya veya projenizde ihlalin bir veya bütün tekrarlarını düzeltmenize olanak sağlar. Bu eylemlere *kod düzeltmeleri*denir. Kod düzeltmeleri IDE 'ye özgüdür; Visual Studio 'da, bunlar [hızlı eylemler](../ide/quick-actions.md)olarak uygulanır. Tüm çözümleyici tanılamaları ilişkili bir kod düzeltmesine sahip değildir.
+Roslyn kod çözümleyicileri yalnızca eski çözümlemenin yaptığı aynı tür sorunları bildirmekle birlikte, dosyanızdaki veya projenizdeki ihlalin bir veya tüm olaylarını düzeltmenizi kolaylaştırır. Bu *eylemlere kod düzeltmeleri*denir. Kod düzeltmeleri IDE'ye özgü; Visual Studio'da [Hızlı Eylemler](../ide/quick-actions.md)olarak uygulanırlar. Tüm çözümleyici tanılama ilişkili bir kod düzeltmesi vardır.
 
 > [!NOTE]
->  > **çalıştırma kodu analizini** **Çözümle** menü seçeneği yalnızca eski analizler için geçerlidir.
+> Visual Studio 2019 16.5 sürümüöncesinde, **Çözümkodu** > **Analizi** menüsü eski çözümlemesi yürütür. Visual Studio 2019 16.5'i başlatan **Run Code Analysis** menüsü, seçilen proje veya çözüm için Roslyn tabanlı çözümleyicileri yürütür.
 
-Hata Listesi kod Çözümleyicileri ve eski analizin ihlallerini birbirinden ayırt etmek için **araç** sütununa bakın. Araç değeri **Çözüm Gezgini**içindeki çözümleyici derlemelerinden biriyle eşleşiyorsa (örneğin, **Microsoft. Codequality. çözümleyiciler**), Ihlal bir kod çözümleyicisinden gelir. Aksi takdirde, ihlalin eski analizler.
+Hata Listesindeki kod çözümleyicilerinden gelen ihlalleri ve eski çözümlemesi birbirinden ayırt etmek için **Araç** sütununa bakın. Araç değeri **Çözüm Gezgini'ndeki**çözümleyici derlemelerinden biriyle eşleşiyorsa , örneğin **Microsoft.CodeQuality.Analyzeers**, ihlal bir kod çözümleyicisinden gelir. Aksi takdirde, ihlal eski analiz kaynaklanmaktadır.
 
-![Hata Listesi araç sütunu](media/code-analysis-tool-in-error-list.png)
+![Hata Listesindeki araç sütunu](media/code-analysis-tool-in-error-list.png)
 
 > [!TIP]
-> Bir proje dosyasındaki **RunCodeAnalysis** MSBuild özelliği yalnızca eski analiz için geçerlidir. Çözümleyiciler yüklerseniz, derleme sonrasında eski çözümlemenin çalıştırılmasını engellemek için **RunCodeAnalysis** öğesini proje dosyanızda **false** olarak ayarlayın.
+> Proje dosyasındaki **RunCodeAnalysis** MSBuild özelliği yalnızca eski çözümleme için geçerlidir. Çözümleyiciler yüklerseniz, eski çözümlemenin yapıdan sonra çalışmasını önlemek için **RunCodeAnalysis'i** proje dosyanızda **false** olarak ayarlayın.
 >
 > ```xml
 > <RunCodeAnalysis>false</RunCodeAnalysis>
 > ```
 
-## <a name="nuget-package-versus-vsix-extension"></a>NuGet paketi ve VSıX uzantısı
+## <a name="nuget-package-versus-vsix-extension"></a>NuGet paketi vsix uzantısı karşı
 
-Roslyn kod Çözümleyicileri, bir NuGet paketi aracılığıyla proje başına yüklenebilir. Bazıları Visual Studio uzantısı olarak da kullanılabilir, bu durumda Visual Studio 'da açtığınız tüm çözümler için geçerlidir. Bu iki çözümleyici [yükleme](../code-quality/install-roslyn-analyzers.md)yöntemi arasında bazı önemli davranış farklılıkları vardır.
+Roslyn kod analizörleri bir NuGet paketi üzerinden proje başına yüklenebilir. Bazıları Visual Studio uzantısı olarak da mevcuttur, bu durumda Visual Studio'da açtığınız herhangi bir çözüm için geçerlidir. [Çözümleyicileri yüklemek](../code-quality/install-roslyn-analyzers.md)için bu iki yöntem arasında bazı temel davranış farklılıkları vardır.
 
 ### <a name="scope"></a>Kapsam
 
-Çözümleyiciler Visual Studio uzantısı olarak yüklerseniz, çözüm düzeyinde ve Visual Studio 'nun tüm örneklerine uygulanır. Çözümleyicileri, tercih edilen yöntemi olan bir NuGet paketi olarak yüklerseniz, yalnızca NuGet paketinin yüklendiği proje için geçerlidir. Ekip ortamlarında, NuGet paketleri olarak yüklenen çözümleyiciler, o projede çalışan *tüm geliştiriciler* için kapsamdadır.
+Çözümleyicileri Visual Studio uzantısı olarak yüklerseniz, çözüm düzeyinde ve Visual Studio'nun tüm örneklerine uygulanırlar. Çözümleyicileri tercih edilen yöntem olan NuGet paketi olarak yüklerseniz, bunlar yalnızca NuGet paketinin yüklendiği projeye uygulanır. Ekip ortamlarında, NuGet paketi olarak yüklenen çözümleyiciler, bu proje üzerinde çalışan *tüm geliştiriciler* için kapsamdadır.
 
-### <a name="build-errors"></a>Derleme hataları
+### <a name="build-errors"></a>Yapı hataları
 
-Komut satırı veya bir sürekli tümleştirme (CI) yapısının parçası olarak, derleme zamanında uygulanan kuralların uygulanmasını sağlamak için, Çözümleyicileri bir NuGet paketi olarak yükler. Çözümleyici uyarıları ve hataları, çözümleyiciler bir uzantı olarak yüklerseniz derleme raporunda gösterilmez.
+Komut satırı aracılığıyla veya sürekli tümleştirme (CI) oluşturmanın bir parçası olarak dahil olmak üzere, oluşturma zamanında uygulanan kuralların olması için çözümleyicileri NuGet paketi olarak yükleyin. Çözümleyici uyarılarını ve hatalarını, çözümleyicileri uzantı olarak yüklerseniz yapı raporunda gösterilmez.
 
-Aşağıdaki görüntüde, bir çözümleyici kuralı ihlali içeren bir proje derlemeden komut satırı derleme çıkışı gösterilmektedir:
+Aşağıdaki resimde, çözümleyici kural ihlali içeren bir proje oluşturma komut satırı yapı çıktısı gösterilmektedir:
 
-![Kural ihlali ile MSBuild çıkışı](media/command-line-build-analyzers.png)
+![Kural ihlali ile MSBuild çıktısı](media/command-line-build-analyzers.png)
 
-### <a name="rule-severity"></a>Kural önem derecesi
+### <a name="rule-severity"></a>Kural şiddeti
 
-Visual Studio uzantısı olarak yüklenen çözümleyiciler arasından kuralların önem derecesini yapılandıramazsınız. [Kural önem derecesini](../code-quality/use-roslyn-analyzers.md#rule-severity)yapılandırmak için Çözümleyicileri bir NuGet paketi olarak yükler.
+Visual Studio uzantısı olarak yüklenen çözümleyicilerden kuralların önem derecesini yapılandıramazsınız. [Kural önem derecesini](../code-quality/use-roslyn-analyzers.md#rule-severity)yapılandırmak için çözümleyicileri NuGet paketi olarak yükleyin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da kod Çözümleyicileri yüklemesi](../code-quality/install-roslyn-analyzers.md)
+> [Visual Studio'ya kod çözümleyicileri yükleme](../code-quality/install-roslyn-analyzers.md)
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da kod Çözümleyicileri kullanma](../code-quality/use-roslyn-analyzers.md)
+> [Visual Studio'da kod çözümleyicilerini kullanma](../code-quality/use-roslyn-analyzers.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümleyiciler SSS](analyzers-faq.md)
-- [Kendi kod çözümleyicinizi yazma](../extensibility/getting-started-with-roslyn-analyzers.md)
-- [.NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)
+- [Çözümleyiciler hakkında SSS](analyzers-faq.md)
+- [Kendi kod çözümleyicinizi yazın](../extensibility/getting-started-with-roslyn-analyzers.md)
+- [.NET Compiler Platform SDK’sı](/dotnet/csharp/roslyn-sdk/)

@@ -1,6 +1,6 @@
 ---
 title: Kapsayıcılar için bilinen sorunlar
-description: Windows kapsayıcısına Visual Studio Derleme Araçları yüklediğinizde oluşabilecek bilinen sorunlar hakkında daha fazla bilgi edinin.
+description: Visual Studio Build Tools'u bir Windows kapsayıcısına yüklediğinizde oluşabilecek bilinen sorunlar hakkında daha fazla bilgi edinin.
 ms.date: 02/18/2020
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,48 +13,48 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: a864f1ef623197a44c7d816b051efd0106e86ece
-ms.sourcegitcommit: b873fce7ba40d825fcb59555360c002bbfcecd9e
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77611133"
 ---
 # <a name="known-issues-for-containers"></a>Kapsayıcılar için bilinen sorunlar
 
-Visual Studio 'Yu bir Docker kapsayıcısına yüklerken bazı sorunlar vardır.
+Visual Studio'u Docker konteynerine yüklerken birkaç sorun vardır.
 
 ## <a name="windows-container"></a>Windows kapsayıcısı
 
-Windows kapsayıcısına Visual Studio Derleme Araçları yüklediğinizde aşağıdaki bilinen sorunlar oluşur.
+Visual Studio Build Tools'u bir Windows kapsayıcısına yüklediğinizde aşağıdaki bilinen sorunlar oluşur.
 
 ::: moniker range="vs-2017"
 
-* Visual Studio 'Yu Microsoft/windowsservercore: 10.0.14393.1593 görüntüsüne göre bir kapsayıcıya yükleyemezsiniz. 10.0.14393 önce veya sonrasında Windows sürümleriyle etiketlenen görüntülerin çalışması gerekir.
+* Visual Studio'u görüntü microsoft/windowsservercore:10.0.14393.1593 tabanlı bir kapsayıcıya yükleyemezsiniz. 10.0.14393'ten önce veya sonra Windows sürümleriyle etiketlenmiş resimler çalışmalıdır.
 
-* Windows SDK sürüm 10.0.14393 veya önceki bir sürümü yükleyemezsiniz. Bazı paketler yüklenemez ve bu paketlere bağlı olan iş yükleri çalışmayacak.
+* Windows SDK sürümünü 10.0.14393 veya daha önce yükleyemezsiniz. Bazı paketler yüklenmez ve bu paketlere bağlı iş yükleri çalışmaz.
 
 ::: moniker-end
 
-* Görüntüyü oluştururken `-m 2GB` (veya daha fazla) geçirin. Bazı iş yükleri, yüklendiğinde varsayılan 1 GB 'den daha fazla bellek gerektirir.
-* Docker 'ı varsayılan 20 GB 'tan daha büyük diskleri kullanacak şekilde yapılandırın.
-* Komut satırında `--norestart` geçirin. Bu yazma itibariyle, kapsayıcı içinden bir Windows kapsayıcısını yeniden başlatmaya çalışmak konağa `ERROR_TOO_MANY_OPEN_FILES` döndürür.
-* Görüntünüzü doğrudan Microsoft/windowsservercore 'a dayandırırsanız .NET Framework düzgün şekilde yüklenemeyebilir ve hiçbir yüklemesi hatası belirtilmez. Yönetilen kod, yüklemesi tamamlandıktan sonra çalışmayabilir. Bunun yerine, görüntünüzü [Microsoft/DotNet-Framework: 4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) veya üzeri bir sürüme dayandırın. Örnek olarak, aşağıdaki gibi MSBuild ile derlerken bir hata görebilirsiniz:
+* Görüntüyü `-m 2GB` oluştururken (veya daha fazla) geçirin. Bazı iş yükleri yüklendiğinde varsayılan 1 GB'tan daha fazla bellek gerektirir.
+* Docker'ı varsayılan 20 GB'tan daha büyük diskler kullanacak şekilde yapılandırın.
+* Komut `--norestart` satırını iletin. Bu yazı dan itibaren, kapsayıcı içinden bir Windows `ERROR_TOO_MANY_OPEN_FILES` kapsayıcıyeniden başlatmaya çalışırken ana bilgisayara döner.
+* Resminizi doğrudan microsoft/windowsservercore'a temel alarsanız, .NET Framework düzgün yüklenmeyebilir ve yükleme hatası belirtilmeyebilir. Yönetilen kod yükleme tamamlandıktan sonra çalışmayabilir. Bunun yerine, resminizi [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) veya sonraki temeller. Örnek olarak, MSBuild ile oluştururken aşağıdakilere benzer bir hata görebilirsiniz:
 
-  > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets (84, 5): hata MSB6003: belirtilen "csc. exe" görev çalıştırılabilir dosyası çalıştırılamadı. Dosya veya derleme ' System. ıO. FileSystem, Version = 4.0.1.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ' veya onun bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.
+  > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets(84,5): hata MSB6003: Belirtilen görev yürütülebilir "csc.exe" çalıştırılamamadı. Dosya veya montaj 'System.IO.FileSystem, Sürüm=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' veya bağımlılıklarından birini yükleyemedi. Sistem belirtilen dosyayı bulamıyor.
 
 ::: moniker range="vs-2017"
 
-* Visual Studio 2017 sürüm 15,8 veya önceki bir sürümü (herhangi bir ürün) mcr.microsoft.com/windows/servercore:1809 veya üzeri bir sürüme yükleyemezsiniz. Daha fazla bilgi edinmek için bkz. https://aka.ms/setup/containers/servercore1809.
+* Visual Studio 2017 sürümünü 15.8 veya daha önce (herhangi bir ürün) mcr.microsoft.com/windows/servercore:1809 veya daha sonra yükleyemezsiniz. Daha fazla bilgi edinmek için bkz. https://aka.ms/setup/containers/servercore1809.
 
 ::: moniker-end
 
-## <a name="build-tools-container"></a>Derleme araçları kapsayıcısı
+## <a name="build-tools-container"></a>Yapı Araçları konteyneri
 
-Yapı araçları kapsayıcısını kullandığınızda aşağıdaki bilinen sorunlar ortaya çıkabilir. Sorunların giderilmiş olup olmadığını veya bilinen diğer sorunlar olup olmadığını görmek için https://developercommunity.visualstudio.comziyaret edin.
+Yapı Araçları kapsayıcısı kullandığınızda aşağıdaki bilinen sorunlar oluşabilir. Sorunların giderilip düzeltilmedigini veya bilinen diğer https://developercommunity.visualstudio.comsorunlar olup olmadığını görmek için ziyaret edin.
 
-* IntelliTrace bir kapsayıcı içindeki [bazı senaryolarda](https://github.com/Microsoft/vstest/issues/940) çalışmayabilir.
-* Docker for Windows eski sürümlerinde, varsayılan kapsayıcı görüntü boyutu yalnızca 20 GB olur ve derleme araçlarına sığmıyor. Görüntü boyutunu 127 GB veya daha fazla olacak şekilde [değiştirmek için yönergeleri](/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) izleyin.
-Bir disk alanı sorununu doğrulamak için daha fazla bilgi için günlük dosyalarına bakın. Disk alanı tükeniyor olmanız durumunda `vslogs\dd_setup_<timestamp>_errors.log` dosyanız şunları içerir: 
+* IntelliTrace, kapsayıcı içindeki [bazı senaryolarda](https://github.com/Microsoft/vstest/issues/940) çalışmayabilir.
+* Windows için Docker'ın eski sürümlerinde varsayılan kapsayıcı görüntü boyutu yalnızca 20 GB'dır ve Yapı Araçları'na uymaz. Görüntü boyutunu 127 GB veya daha [fazlasına değiştirmek için yönergeleri](/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) izleyin.
+Bir disk alanı sorununu onaylamak için, daha fazla bilgi için günlük dosyalarını denetleyin. Disk `vslogs\dd_setup_<timestamp>_errors.log` alanınız biterse dosyanız aşağıdakileri içerir: 
 ```
 Pre-check verification: Visual Studio needs at least 91.99 GB of disk space. Try to free up space on C:\ or change your target drive.
 Pre-check verification failed with error(s) :  SizePreCheckEvaluator.
@@ -65,4 +65,4 @@ Pre-check verification failed with error(s) :  SizePreCheckEvaluator.
 
 * [Derleme Araçlarını Bir Kapsayıcıya Yükleme](build-tools-container.md)
 * [Kapsayıcılar için İleri Düzey Örnek](advanced-build-tools-container.md)
-* [Visual Studio Derleme Araçları iş yükü ve bileşen kimlikleri](workload-component-id-vs-build-tools.md)
+* [Visual Studio Build Tools iş yükü ve bileşen ilikleri](workload-component-id-vs-build-tools.md)

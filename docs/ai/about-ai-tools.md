@@ -1,8 +1,8 @@
 ---
-title: Visual Studio için AI araçları
+title: Görsel Stüdyo için AI Araçları
 titleSuffix: ''
-description: Visual Studio için AI araçlarına genel bakış
-keywords: AI, Visual Studio
+description: Visual Studio için AI Araçlarına Genel Bakış
+keywords: ai, görsel stüdyo
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -11,39 +11,39 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c16a51381a1ef22d780f7d3c2b26821d7029e8f
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75915966"
 ---
 # <a name="visual-studio-tools-for-ai"></a>AI için Visual Studio Araçları
 
-Visual Studio Tools for AI derin öğrenme/AI çözümlerini derlemek, test etmek ve dağıtmak için bir uzantıdır. Veri hazırlama ve model eğitimi işlerinin farklı bilgi işlem hedeflerine saydam olarak gönderilmesi dahil, ancak bunlarla sınırlı olmamak üzere güçlü deneme özellikleri için Azure Machine Learning ile sorunsuz bir şekilde tümleşir. Ayrıca, özel ölçümler ve çalıştırma geçmişi izleme için destek sağlar ve veri bilimi reproducibility ve denetimini etkinleştirir. Kurumsal olarak hazırlanma işbirliği, diğer kişilerle proje üzerinde güvenle çalışmasına izin verin.
+AI için Visual Studio Tools, Deep Learning / AI çözümleri oluşturmak, test etmek ve dağıtmak için bir uzantısıdır. Veri hazırlama ve model eğitim işlerinin farklı bilgi işlem hedeflerine şeffaf bir şekilde gönderilmesi de dahil ancak bunlarla sınırlı olmamak üzere sağlam deneme özellikleri için Azure Machine Learning ile sorunsuz bir şekilde entegre olur. Ayrıca, özel ölçümler için destek sağlar ve geçmiş izleme çalıştırmak, veri bilimi tekrarlanabilirlik ve denetim sağlayan. Kurumsal hazır işbirliği, güvenli bir şekilde diğer insanlarla proje üzerinde çalışmak için izin.
 
-[Microsoft Cognitive Toolkit (CNTK)](/cognitive-toolkit/), [Google TensorFlow](https://www.tensorflow.org)veya diğer derin öğrenme çerçevelerinden yararlanarak, derin öğrenme ile çalışmaya hemen başlayın.
+[Microsoft Cognitive Toolkit (CNTK)](/cognitive-toolkit/), [Google TensorFlow](https://www.tensorflow.org), veya diğer derin öğrenme çerçeveleri bugün kullanarak derin öğrenme ile başlayın.
 
-## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>Derin öğrenme modelleri ve AI çözümleri geliştirin, hatalarını ayıklayın ve dağıtın
-Günümüzde AI yeniliklerini hızlandırmak için Visual Studio 'nun üretkenlik özelliklerini kullanın. Sözdizimi vurgulama, IntelliSense ve metin otomatik biçimlendirme gibi yerleşik kod düzenleyici özelliklerini kullanın. Yerel değişkenlerde ve modellerde adım adım hata ayıklamayı kullanarak derin öğrenme uygulamanızı yerel ortamınızda etkileşimli bir şekilde test edebilirsiniz.
+## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>Derin öğrenme modelleri ve AI çözümleri geliştirin, hata ayıklama yapın ve dağıtın
+Bugün AI inovasyonunu hızlandırmak için Visual Studio'nun üretkenlik özelliklerini kullanın. Sözdizimi vurgulama, IntelliSense ve metin otomatik biçimlendirme gibi yerleşik kod düzenleyici özelliklerini kullanın. Yerel değişkenler ve modeller üzerinde hata ayıklama yoluyla adım kullanarak yerel ortamda derin öğrenme uygulamanızı etkileşimli olarak test edebilirsiniz.
 
-![derin öğrenme IDE](media/about/ide.png)
+![derin öğrenme ide](media/about/ide.png)
 
-## <a name="get-started-quickly-with-the-azure-machine-learning-sample-gallery"></a>Azure Machine Learning örnek Galerisi ile hızlıca çalışmaya başlayın
-Visual Studio Tools for AI, CNTK, TensorFlow, MMLSpark ve daha fazlasını kullanarak örnek denemeleri galerisine göz atmayı kolaylaştırmak için Azure Machine Learning ile tümleşiktir.
+## <a name="get-started-quickly-with-the-azure-machine-learning-sample-gallery"></a>Azure Machine Learning Sample Gallery ile hızlı bir şekilde başlayın
+CNTK, TensorFlow, MMLSpark ve daha fazlasını kullanarak örnek denemeler galerisine göz atmayı kolaylaştırmak için Azure Machine Learning ile entegre edilmiştir.
 
-![örnek gezgin](media/about/gallery.png)
+![örnek explorer](media/about/gallery.png)
 
-[Örnek galerisinden proje oluşturma hakkında daha fazla bilgi edinin](create-project-gallery.md)
+[Örnek galeriden proje oluşturma hakkında daha fazla bilgi edinin](create-project-gallery.md)
 
-## <a name="scale-out-deep-learning-model-training-andor-inferencing-to-the-cloud"></a>Derin öğrenme modeli eğitiminin ölçeğini genişletme ve/veya buluta sınırlama
-Bu uzantı, modelleri yerel bilgisayarınızda eğmenizi kolaylaştırır veya Azure Machine Learning ile tümleştirmemiz kullanarak işleri buluta gönderebilirsiniz. Spark kümeleri, Azure GPU sanal makineleri ve daha fazlası gibi farklı işlem hedeflerine işler gönderebilirsiniz.
+## <a name="scale-out-deep-learning-model-training-andor-inferencing-to-the-cloud"></a>Derin öğrenme modeli eğitimini ve/veya buluta çıkarmasını ölçeklendirin
+Bu uzantı, yerel bilgisayarınızdaki modelleri eğitmenizi kolaylaştırır veya Azure Machine Learning ile tümleştirmemizi kullanarak işlerinizi buluta gönderebilirsiniz. İşleri Kıvılcım kümeleri, Azure GPU sanal makineleri ve daha fazlası gibi farklı bilgi işlem hedeflerine gönderebilirsiniz.
 
-![işi gönder](media/about/submitjobs.png)
+![iş gönder](media/about/submitjobs.png)
 
-[Bulutta eğitim modelleri hakkında daha fazla bilgi edinin](tensorflow-vm.md)
+[Buluttaki eğitim modelleri hakkında daha fazla bilgi edinin](tensorflow-vm.md)
 
-## <a name="supported-operating-systems"></a>Supported Operating Systems
-Şu anda bu uzantı Windows 64 bit işletim sistemlerini destekler.
+## <a name="supported-operating-systems"></a>Desteklenen İşletim Sistemleri
+Şu anda bu uzantı Windows 64-bit işletim sistemlerini destekler.
 
 ## <a name="support"></a>Destek
-Bu uzantıya yönelik destek, [GitHub sorun izleyici](https://github.com/Microsoft/vs-tools-for-ai/issues)' de verilmiştir. Bir hata raporu veya özellik önerisi gönderebilir ve tartışmalara katılabilirsiniz.
+Bu uzantı için destek [Bizim GitHub Sorun Tracker](https://github.com/Microsoft/vs-tools-for-ai/issues)sağlanır. Bir hata raporu veya özellik önerisi gönderebilir ve tartışmalara katılabilirsiniz.

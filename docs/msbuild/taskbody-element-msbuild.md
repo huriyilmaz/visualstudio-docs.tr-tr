@@ -1,5 +1,5 @@
 ---
-title: UsingTask öğesi (MSBuild) | Microsoft Docs
+title: UsingTask (MSBuild) Görev Öğesi | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 36644a6b21092361d92dba5f0886eb4198884995
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263194"
 ---
-# <a name="task-element-of-usingtask-msbuild"></a>UsingTask öğesi (MSBuild)
+# <a name="task-element-of-usingtask-msbuild"></a>UsingTask (MSBuild) görev öğesi
 
-Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Bir'e `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için [Bkz. UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<Proje > \<UsingTask > \<görevi >
+ \<Proje \<> Görev \<> Görev>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,23 +43,23 @@ Bir `UsingTask` `TaskFactory`geçirilen verileri içerir. Daha fazla bilgi için
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Evaluate`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`, MSBuild tüm iç öğeleri değerlendirir ve görev örneği oluşturulduğunda bilgileri `TaskFactory` geçirmeden önce öğeleri ve özellikleri genişletir.|
+|`Evaluate`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`MSBuild, herhangi bir iç öğeyi değerlendirirse ve bilgileri görevin `TaskFactory` anında ne zaman geçtiğine geçmeden önce öğeleri ve özellikleri genişletir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Veriler|`Task` etiketleri arasındaki metin, `TaskFactory`harfine gönderilir.|
+|Veriler|`Task` Etiketler arasındaki metin harfi harfine `TaskFactory`.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | MSBuild 'e görevleri kaydetmek için bir yol sağlar. Bir projede sıfır veya daha fazla öğe `UsingTask` olabilir. |
+| [Usingtask](../msbuild/usingtask-element-msbuild.md) | MSBuild'te görevleri kaydetmek için bir yol sağlar. Bir projede sıfır `UsingTask` veya daha fazla öğe olabilir. |
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `Evaluate` özniteliğiyle `Task` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki örnek, öznitelik `Task` ile `Evaluate` öğenin nasıl kullanılacağını gösterir.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">

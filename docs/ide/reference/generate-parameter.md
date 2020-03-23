@@ -1,40 +1,43 @@
 ---
-title: Parametre yeniden düzenleme oluştur
-ms.date: 06/19/2019
+title: Parametre refactoring oluşturma
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: e95e76c35afdb8cdbe38c8b33329734ba68361b1
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 372a3f705e5e85c0edb31a754105f61056402b9f
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67329102"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094342"
 ---
-# <a name="generate-parameter"></a>Parametre oluştur
+# <a name="generate-parameter"></a>Parametre oluşturma
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Bir yöntem parametresi otomatik olarak oluşturur.
+- Visual Basic
 
-**ne zaman:** Geçerli bağlamda mevcut değil ve bir hata alırsanız bir yöntem içinde bir değişken başvuru; bir parametre bir kod düzeltme oluşturabilirsiniz. 
+**Ne:** Otomatik olarak bir yöntem parametresi oluşturur.
 
-**Neden:** Metot imzasını bağlamını kaybetmeden hızlı bir şekilde değiştirebilirsiniz.
+**Ne zaman:** Geçerli bağlamda var olmayan bir yöntemde bir değişkene başvurur ve bir hata alırsınız; kod düzeltmesi olarak bir parametre oluşturabilirsiniz. 
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+**Neden:** Bağlamı kaybetmeden yöntem imzanı hızla değiştirebilirsiniz.
 
-1. Değişken adı ve ENTER tuşuna imlecinizi **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-1. Seçin **parametresi oluşturmak**.
+## <a name="how-to"></a>Nasıl yapılır
 
-   ![Parametre oluştur](media/generate-parameter.png) 
+1. İmlecinizi değişken adına yerleştirin ve **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+1. **Parametre oluştur'u**seçin.
+
+   ![Parametre oluşturma](media/generate-parameter.png) 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

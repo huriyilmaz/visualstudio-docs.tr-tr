@@ -9,39 +9,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f4a3aec047238786a60b1261415acccfed521695
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589441"
 ---
-# <a name="how-to-export-a-shader"></a>Nasıl yapılır: gölgelendiriciyi dışarı aktarma
+# <a name="how-to-export-a-shader"></a>Nasıl yapılır: Gölgeli dışa aktarma
 
-Bu makalede, uygulamanızda kullanabilmeniz için bir yönlendirilmiş grafik gölgelendirici dili (DGSL) gölgelendiriciyi dışarı aktarmak üzere **Gölgelendirici Tasarımcısının** nasıl kullanılacağı gösterilmektedir.
+Bu makalede, uygulamanızda kullanabilmeniz için Yönlendirilmiş Grafik Shader Dili (DGSL) shader'ı dışa aktarmak için **Shader Designer'ın** nasıl kullanılacağı gösterilmektedir.
 
 ## <a name="export-a-shader"></a>Gölgelendiriciyi dışarı aktarma
 
-Gölgelendirici tasarımcısını kullanarak bir gölgelendirici oluşturduktan ve uygulamanızda kullanabilmeniz için, bunu grafik API 'nizin anlayacağı bir biçimde dışarı aktarmanız gerekir. Farklı ihtiyaçları karşılamak için bir gölgelendiriciyi farklı yollarla dışarı aktarabilirsiniz.
+Shader Designer'ı kullanarak bir gölgelendirme oluşturduktan ve uygulamanızda kullanmadan önce, grafik API'nizin anladığı bir biçimde dışa aktarmanız gerekir. Farklı gereksinimleri karşılamak için farklı şekillerde bir gölgeli dışa aktarabilirsiniz.
 
-1. Visual Studio 'da bir **Görsel Gölgelendirici Grafiği (. dgsl)** dosyası açın.
+1. Visual Studio'da **Visual Shader Graph (.dgsl)** dosyalarını açın.
 
-     Açmak için bir **Görsel Gölgelendirici Grafiği (. dgsl)** dosyanız yoksa, [nasıl yapılır: temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)bölümünde açıklandığı gibi bir tane oluşturun.
+     Açmak için **Görsel Shader Graph (.dgsl)** dosyanız yoksa, nasıl açıklanırsa bir dosya [oluşturun: Temel bir renk shader oluşturun.](../designers/how-to-create-a-basic-color-shader.md)
 
-2. **Gölgelendirici Tasarımcısı** araç çubuğunda **Gelişmiş** > **dışarı** **Aktar > dışarı aktar '** ı seçin. **Gölgelendiriciyi dışarı aktar** iletişim kutusu görünür.
+2. **Shader Designer** araç çubuğunda **Gelişmiş** > **Dışa Aktarma** > **Olarak'ı**seçin. Dışa Aktarma **Shader** iletişim kutusu görüntülenir.
 
-3. **Farklı kaydet türü** aşağı açılan listesinde, dışarı aktarmak istediğiniz biçimi seçin.
+3. Açılan yazı **listesinde Kaydet'te,** dışa aktarmak istediğiniz biçimi seçin.
 
      Seçebileceğiniz biçimler şunlardır:
 
-     **HLSL piksel gölgelendiricisi (\*. hlsl)** Gölgelendiriciyi üst düzey gölgelendirici dili (HLSL) kaynak kodu olarak dışa aktarır. Bu seçenek, bir uygulamaya dağıtıldıktan sonra bile gölgelendiriciyi daha sonra değiştirmeyi mümkün kılar. Bu, son kullanıcı sorunlarına göre kodun hata ayıklamasının ve düzeltme ekinin değiştirilmesini kolaylaştırır, ancak bir kullanıcının bir rekabet oyunundaki bir avantaj elde etmek gibi, gölgelendiriciyi istenmeyen yollarla değiştirmesini da kolaylaştırır. Ayrıca, gölgelendirici yükleme süresini de artırabilir.
+     **HLSL Piksel Shader (\*.hlsl)** Shader'ı Yüksek Düzeyli Shader Dili (HLSL) kaynak kodu olarak dışa aktarım. Bu seçenek, bir uygulamada dağıtıldıktan sonra bile gölgeyi daha sonra değiştirmeyi mümkün kılar. Bu, kodu son kullanıcı sorunlarına göre hata ayıklamayı ve düzeltmeyi kolaylaştırabilir, ancak kullanıcının gölgeparçanızı istenmeyen şekillerde değiştirmesini de kolaylaştırır(örneğin, rekabetçi bir oyunda haksız bir avantaj elde etmek). Ayrıca gölgeleyicinin yükleme süresini de artırabilir.
 
-     **Derlenmiş piksel gölgelendiricisi (\*. CSO)** Gölgelendiriciyi HLSL bayt olarak dışa aktarır. Bu seçenek, bir uygulamaya dağıtıldıktan sonra bile gölgelendiriciyi daha sonra değiştirmeyi mümkün kılar. Bu, son kullanıcı sorunlarına göre kodun hata ayıklamasını ve düzeltme ekini daha kolay hale getirir, ancak gölgelendirici önceden derlendiğinden, gölgelendirici uygulama tarafından yüklendiğinde ek çalışma zamanı ek yüküne neden olmaz. Yeterli nitelikli kullanıcılar gölgelendiriciyi istenmeyen yollarla değiştirebilir, ancak gölgelendirici derlenerek bunu önemli ölçüde daha zor hale getirebilirsiniz.
+     **Derlenmiş Piksel\*Shader ( .cso)** Shader'i HLSL bytecode olarak dışa aktarım. Bu seçenek, bir uygulamada dağıtıldıktan sonra bile gölgeyi daha sonra değiştirmeyi mümkün kılar. Bu, kodu son kullanıcı sorunlarına göre hata ayıklamayı ve düzeltmeyi kolaylaştırabilir, ancak gölgeli önceden derlendiğinden, gölgeleyici uygulama tarafından yüklendiğinde fazladan çalışma süresi ek yüküne neden olmaz. Yeterince yetenekli kullanıcılar hala istenmeyen şekillerde shader değiştirebilirsiniz, ancak shader derleme bu önemli ölçüde daha zor hale getirir.
 
-     **Üst bilgi (\*. h) C++**  Gölgelendiriciyi, HLSL bytecode içeren bir bayt dizisini tanımlayan C stili bir üstbilgi olarak dışa aktarır. Bu seçenek, düzeltmenin test etmek için uygulamanın yeniden derlenmesi gerektiğinden, son kullanıcı sorunlarına göre kodun hata ayıklamasını ve düzeltme ekini oluşturmak için daha fazla zaman alabilir. Ancak, bu seçenek mümkün olmasa da, bir uygulamada dağıtıldıktan sonra gölgelendiriciyi değiştirmek zor olsa da, gölgelendiriciyi istenmeyen yollarla değiştirmek isteyen bir kullanıcıya çok fazla zorluk gösterir.
+     **C++ Üstbilgi\*( .h)** Shader'ı HLSL bayt kodu içeren bir bayt dizisini tanımlayan C stili üstbilgi olarak dışa aktarım. Bu seçenek, düzeltmeyi test etmek için uygulamanın yeniden derlemesi gerektiğinden, kodu hata ayıklama ve son kullanıcı sorunlarına göre düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi düzeltmeyi daha fazla zaman alabilir. Ancak, bu seçenek, bir uygulamada dağıtıldıktan sonra gölgeleyiciyi değiştirmeyi zorlaştırdığından, gölgeyi istenmeyen şekillerde değiştirmek isteyen bir kullanıcıya en büyük zorluk getirir.
 
-4. **Dosya adı** Birleşik giriş kutusunda, dışarıya aktarılmış gölgelendirici için bir ad belirtin ve ardından **Kaydet** düğmesini seçin.
+4. Dosya **adı** açılan kutusunda, dışa aktarılan gölgeleyici için bir ad belirtin ve sonra **Kaydet** düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)
-- [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
+- [Nasıl yapılır: Temel renk shader oluşturma](../designers/how-to-create-a-basic-color-shader.md)
+- [Shader Tasarımcısı](../designers/shader-designer.md)

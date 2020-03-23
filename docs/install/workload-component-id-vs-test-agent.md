@@ -1,12 +1,12 @@
 ---
-title: Visual Studio Test Aracısı iş yükü ve bileşen kimlikleri
+title: Visual Studio Test Aracısı iş yükü ve bileşen itlietkileri
 titleSuffix: ''
-description: Otomatik testleri çalıştırmak ve uzaktan yük testleri için Visual Studio iş yükü ve Bileşen kimlikleri kullanın
+description: Otomatik testleri ve yükleme testlerini uzaktan çalıştırmak için Visual Studio iş yükünü ve bileşen bilgisayarlarını kullanma
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 03/16/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55aea29b-1066-4e5a-aa99-fc87d4efb6d5
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bec1795b831ffc522b42984b74320505a774acb9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 114fdf5fb5f123b021ff7b53078bbe2e929c9db9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114346"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437532"
 ---
 # <a name="visual-studio-test-agent-component-directory"></a>Visual Studio Test Aracısı bileşen dizini
 
@@ -47,7 +47,7 @@ ms.locfileid: "76114346"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-* [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
-* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
+* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
   * [Komut satırı parametresi örnekleri](command-line-parameter-examples.md)
-* [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio'nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)

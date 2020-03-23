@@ -1,5 +1,5 @@
 ---
-title: GetFileHash görevi | Microsoft Docs
+title: GetFileHash Görev | Microsoft Dokümanlar
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -16,34 +16,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8f3de9a4f2fe848e1cbd41e14e82498845ca2cf
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77578655"
 ---
-# <a name="getfilehash-task"></a>GetFileHash görevi
+# <a name="getfilehash-task"></a>GetFileHash görev
 
-Bir dosyanın veya dosya kümesinin içeriklerinin sağlama toplamlarını hesaplar.
+Bir dosyanın veya dosya kümesinin içeriğinin denetimlerini hesaplar.
 
-Bu görev 15,8 ' ye eklenmiştir, ancak 16,0 ' nin altındaki MSBuild sürümleri için kullanmak üzere [geçici bir çözüm](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) gerektirir.
+Bu görev 15.8'de eklendi, ancak 16.0'ın altındaki MSBuild sürümleri için kullanmak için geçici [bir geçici çözüm](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) gerektirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda `GetFileHash` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `GetFileHash` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br />Karma hale getirilen dosyalar.|
-|`Items`|<xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br />Dosya karması olarak ayarlanan ek meta verileri içeren `Files` girişi.|
-|`Hash`|`String` çıktı parametresi.<br /><br />Dosyanın karması. Bu çıktı yalnızca tam olarak bir öğe geçirilirse ayarlanır.|
-|`Algorithm`|İsteğe bağlı `String` parametresi.<br /><br />Algoritma. İzin verilen değerler: `SHA256`, `SHA384`, `SHA512`. Varsayılan = `SHA256`.|
-|`MetadataName`|İsteğe bağlı `String` parametresi.<br /><br />Her öğede karma 'in depolandığı meta veri adı. `FileHash` değerini varsayılan olarak alır.|
-|`HashEncoding`|İsteğe bağlı `String` parametresi.<br /><br />Oluşturulan karmaları için kullanılacak kodlama. `hex` değerini varsayılan olarak alır. İzin verilen değerler = `hex`, `base64`.|
+|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br />Dosyalanacak.|
+|`Items`|<xref:Microsoft.Build.Framework.ITaskItem>`[]`çıkış parametresi.<br /><br />Dosya `Files` karmasına ek meta veri kümesi içeren giriş.|
+|`Hash`|`String`çıkış parametresi.<br /><br />Dosyanın karma. Bu çıktı yalnızca tam olarak bir öğe geçtiyse ayarlanır.|
+|`Algorithm`|İsteğe bağlı `String` parametre.<br /><br />Algoritma. İzin verilen `SHA256` `SHA384`değerler: , , `SHA512`. Varsayılan `SHA256`= .|
+|`MetadataName`|İsteğe bağlı `String` parametre.<br /><br />Karmanın her öğede depolandığı meta veri adı. Varsayılan `FileHash`değer.|
+|`HashEncoding`|İsteğe bağlı `String` parametre.<br /><br />Oluşturulan hashes için kullanılacak kodlama. Varsayılan `hex`değer. İzin verilen `hex` `base64`değerler = , .|
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `FilesToHash` öğelerinin sağlama toplamını öğrenmek ve yazdırmak için `GetFileHash` görevini kullanır.
+Aşağıdaki `FilesToHash` örnekte, `GetFileHash` öğelerin denetim umlarını belirlemek ve yazdırmak için görev kullanır.
 
 ```xml
 <Project>

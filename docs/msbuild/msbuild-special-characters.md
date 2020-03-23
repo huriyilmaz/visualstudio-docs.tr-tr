@@ -1,5 +1,5 @@
 ---
-title: MSBuild özel karakterler | Microsoft Docs
+title: MSBuild Özel Karakterler | Microsoft Dokümanlar
 ms.date: 06/12/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fdc9024db06fe27fab5dfdf9589300a6eb671368
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633219"
 ---
 # <a name="msbuild-special-characters"></a>MSBuild özel karakterleri
 
-MSBuild belirli bağlamlarda özel kullanım için bazı karakterleri ayırır. Bu karakterleri yalnızca ayrıldıkları bağlamda kullanmak istiyorsanız, bu karakterleri atlamanız gerekir. Örneğin, bir yıldız işareti yalnızca bir öğe tanımının `Include` ve `Exclude` özniteliklerinde ve `CreateItem`çağrılarında özel anlamları vardır. Bir yıldız işareti bu bağlamların birinde bir yıldız işareti olarak görünmesini istiyorsanız, bunu atlamanız gerekir. Diğer her bağlamda, görünmesini istediğiniz yere yıldız işareti yazmanız yeterlidir.
+MSBuild, belirli bağlamlarda özel kullanım için bazı karakterler ayırır. Bu tür karakterlerden sadece bu tür karakterleri tam anlamıyla saklı oldukları bağlamda kullanmak istiyorsanız kaçabilirsiniz. Örneğin, yıldız işaretinin yalnızca madde `Include` tanımının `Exclude` özniteliklerinde ve ''ye `CreateItem`yapılan aramalarda özel bir anlamı vardır. Yıldız işaretinin bu bağlamlardan birinde yıldız işareti olarak görünmesini istiyorsanız, ondan kaçmalısınız. Diğer tüm bağlamlarda, yıldız işaretinin görünmesini istediğiniz yere yazmanız gereken yıldız işaretini yazmanız.
 
- Özel bir karakteri atlamak için%\<xx > sözdizimini kullanın; burada \<xx >, karakterin ASCII onaltılık değerini temsil eder. Daha fazla bilgi için bkz. [nasıl yapılır: MSBuild 'teki özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md).
+ Özel bir karakterden kaçmak için,\<xx> \<karakterin ASCII hexadecimal değerini temsil ettiği sözdizimini % xx> kullanın. Daha fazla bilgi için [bkz: MSBuild'teki özel karakterlerden kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md).
 
 ## <a name="special-characters"></a>Özel karakterler
 
- Aşağıdaki tabloda MSBuild özel karakterleri listelenmiştir:
+ Aşağıdaki tabloda MSBuild özel karakterleri listele:
 
-|**İnde**|**ASCII**|**Ayrılmış kullanım**|
+|**Karakter**|**Ascıı**|**Ayrılmış kullanım**|
 |-------------------|---------------|------------------------|
-|%|%25|Meta verilere başvuruluyor|
+|%|%25|Meta verilere başvurma|
 |$|%24|Başvuru özellikleri|
-|@|%40|Öğe listelerine başvurma|
+|@|%40|Madde listelerine başvurma|
 |'|%27|Koşullar ve diğer ifadeler|
-|;|% 3B|Liste ayırıcısı|
-|?|% 3F|`Include` ve `Exclude` özniteliklerindeki dosya adları için joker karakter|
-|*|%2A|`Include` ve `Exclude` özniteliklerindeki dosya adlarında kullanılacak joker karakter|
+|;|%3B|Liste ayırıcı|
+|?|%3F|Dosya adları `Include` ve `Exclude` öznitelikleri için Joker karakter|
+|*|%2A|Dosya adlarında ve `Include` `Exclude` özniteliklerde kullanılmak üzere Joker karakter|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

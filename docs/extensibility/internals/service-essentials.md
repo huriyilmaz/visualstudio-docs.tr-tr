@@ -1,5 +1,5 @@
 ---
-title: Hizmet temelleri | Microsoft Docs
+title: Hizmet Esasları | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8817ca48ff0a3f44a973986a173e647ce89c662c
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409712"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303241"
 ---
 # <a name="service-essentials"></a>Hizmet Temel Bileşenleri
-Hizmet iki VSPackages arasında bir sözleşmedir. Bir VSPackage, başka bir VSPackage kullanması için belirli bir arabirim kümesi sağlar. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], diğer VSPackages 'e hizmet sağlayan VSPackages koleksiyonudur.
+Hizmet, iki VSPackages arasındaki bir sözleşmedir. Bir VSPackage, başka bir VSPackage'ın tüketilmesi için belirli bir arayüz kümesi sağlar. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]kendisi diğer VSPackages hizmetleri sağlayan VSPackages bir koleksiyondur.
 
- Örneğin, SVsActivityLog hizmetini kullanarak, etkinlik günlüğüne yazmak için kullanabileceğiniz bir ıtransactedtivitylog arabirimi elde edebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../../extensibility/how-to-use-the-activity-log.md).
+ Örneğin, Etkinlik günlüğüne yazmak için kullanabileceğiniz bir IVsActivityLog arabirimi elde etmek için SVsActivityLog hizmetini kullanabilirsiniz. Daha fazla bilgi için [bkz: Etkinlik Günlüğü'nün kullanımı.](../../extensibility/how-to-use-the-activity-log.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], kayıtlı olmayan bazı yerleşik hizmetler de sağlar. VSPackages, hizmet geçersiz kılma sağlayarak yerleşik veya diğer Hizmetleri değiştirebilir. Her hizmet için yalnızca bir hizmete geçersiz kılmaya izin verilir.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ayrıca kayıtlı olmayan bazı yerleşik hizmetler de sağlar. VSPackages bir hizmet geçersiz kılma sağlayarak yerleşik veya diğer hizmetlerin yerini alabilir. Herhangi bir hizmet için yalnızca bir hizmet geçersiz kılmaya izin verilir.
 
- Hizmetlerin bulunabilirliği yok. Bu nedenle, kullanmak istediğiniz bir hizmetin hizmet tanımlayıcısını (SID) bilmeniz ve hangi arabirimlerin sağladığını bilmeniz gerekir. Hizmet için başvuru belgeleri bu bilgileri sağlar.
+ Servislerin keşfedilebilirliği yoktur. Bu nedenle, tüketmek istediğiniz bir hizmetin hizmet tanımlayıcısını (SID) bilmeniz ve hangi arabirimleri sağladığını bilmeniz gerekir. Hizmet için başvuru belgeleri bu bilgileri sağlar.
 
-- Hizmetler sağlayan VSPackages, hizmet sağlayıcıları olarak adlandırılır.
+- Hizmet sağlayan VSPackages'e hizmet sağlayıcılar denir.
 
-- Diğer VSPackages 'e sunulan hizmetlere küresel hizmetler denir.
+- Diğer VSPackages'e sağlanan hizmetlere global hizmetler denir.
 
-- Yalnızca bunları uygulayan VSPackage veya oluşturduğu herhangi bir nesne için kullanılabilen hizmetler yerel hizmetler olarak adlandırılır.
+- Yalnızca bunları uygulayan VSPackage'da veya oluşturduğu herhangi bir nesneye kullanılabilen hizmetlere yerel hizmetler denir.
 
-- Diğer paketler tarafından sunulan yerleşik hizmetleri veya hizmetleri değiştiren hizmetler, hizmet geçersiz kılma olarak adlandırılır.
+- Diğer paketler tarafından sağlanan yerleşik hizmetlerin veya hizmetlerin yerini alan hizmetlere hizmet geçersiz kılma denir.
 
-- Hizmetler veya hizmet geçersiz kılmaları, isteğe bağlı olarak yüklenir, diğer bir deyişle, hizmet sağlayıcısı, sağladığı hizmet başka bir VSPackage tarafından istendiğinde yüklenir.
+- Hizmetler veya hizmet geçersiz kılar, isteğe bağlı olarak yüklenir, yani hizmet sağlayıcı, sağladığı hizmet başka bir VSPackage tarafından istendiğinde yüklenir.
 
-- İsteğe bağlı yüklemeyi desteklemek için bir hizmet sağlayıcı, genel hizmetlerini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]kaydeder. Daha fazla bilgi için bkz. [nasıl yapılır: hizmet sağlama](../../extensibility/how-to-provide-a-service.md).
+- İsteğe bağlı yüklemeyi desteklemek için, bir hizmet [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]sağlayıcısı küresel hizmetlerini . Daha fazla bilgi için [bkz: Hizmet sağlayın.](../../extensibility/how-to-provide-a-service.md)
 
-- Bir hizmeti elde ettikten sonra, istenen arabirimi almak için [QueryInterface](/cpp/atl/queryinterface) (yönetilmeyen kod) veya atama (yönetilen kod) kullanın, örneğin:
+- Bir hizmet aldıktan sonra, örneğin istenen arabirimi elde etmek için [QueryInterface](/cpp/atl/queryinterface) (yönetilmeyen kod) veya döküm (yönetilen kod) kullanın:
 
   ```vb
   TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)
@@ -48,35 +48,35 @@ Hizmet iki VSPackages arasında bir sözleşmedir. Bir VSPackage, başka bir VSP
   GetService(typeof(SVsActivityLog)) as IVsActivityLog;
   ```
 
-- Yönetilen kod, türüne göre bir hizmete başvurur, yönetilmeyen kod ise bir hizmete GUID tarafından başvurur.
+- Yönetilen kod türüne göre bir hizmete başvururken, yönetilmeyen kod GUID tarafından bir hizmete başvurur.
 
-- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir VSPackage yüklediğinde, genel hizmetlere VSPackage erişimi sağlamak için bir hizmet sağlayıcısını VSPackage 'a geçirir. Bu, VSPackage olarak adlandırılır.
+- VSPackage yüklendiğinde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage'a küresel hizmetlere erişim sağlamak için bir servis sağlayıcısından VSPackage'a geçer. Bu VSPackage "siting" olarak adlandırılır.
 
-- VSPackages, oluşturdukları nesneler için hizmet sağlayıcıları olabilir. Örneğin, bir form, çerçeveye bir renk hizmeti isteği gönderebilir ve bu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]isteği geçirebilir.
+- VSPackages oluşturdukları nesneler için hizmet sağlayıcılar olabilir. Örneğin, bir form, çerçevesine renk hizmeti için istek gönderebilir ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]bu istek .
 
-- Derin iç içe geçmiş veya hiç yerleştirilmemiş yönetilen nesneler, küresel hizmetlere doğrudan erişim için <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> çağırabilir.
+- Derin denli iç içe olan veya hiç sited olmayan <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> yönetilen nesneler, genel hizmetlere doğrudan erişim için çağrıda bulunabilir.
 
 <a name="how-to-use-getglobalservice"></a>
 
-## <a name="use-getglobalservice"></a>GetGlobalService kullanma
+## <a name="use-getglobalservice"></a>GetGlobalService'i kullanma
 
-Bazen bir araç penceresi veya denetim kapsayıcısından bir hizmet almanız ya da başka bir hizmet sağlayıcı ile istediğiniz hizmet hakkında bilgi sahibi olmaması gerekebilir. Örneğin, bir denetim içinden etkinlik günlüğüne yazmak isteyebilirsiniz. Bu ve diğer senaryolar hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri sorun giderme](../../extensibility/how-to-troubleshoot-services.md).
+Bazen bir araç penceresinden veya sited edilmemiş bir denetim kapsayıcısından veya istediğiniz hizmet hakkında bilgi olmayan bir hizmet sağlayıcısıyla sited'den hizmet almanız gerekebilir. Örneğin, bir denetim içinden etkinlik günlüğüne yazmak isteyebilirsiniz. Bu ve diğer senaryolar hakkında daha fazla bilgi için [bkz.](../../extensibility/how-to-troubleshoot-services.md)
 
-Statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> yöntemini çağırarak Visual Studio Hizmetleri 'nin çoğunu edinebilirsiniz.
+Statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> yöntemi arayarak çoğu Visual Studio hizmeti alabilirsiniz.
 
-<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>, paketten türetilen herhangi bir VSPackage ilk kez başlatılan önbelleğe alınmış bir hizmet sağlayıcısına bağlıdır. Bu koşulun karşılandığından emin olmanız gerekir, aksi takdirde boş bir hizmet için hazır olun.
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>Paketten türetilen herhangi bir VSPackage ilk kez başlatılan önbelleğe alınmış bir hizmet sağlayıcısına güvenir. Bu koşulun yerine getirildiğini garanti etmeli veya başka bir hizmetiçin hazır olmalısınız.
 
-Neyse ki, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> çoğu zaman doğru şekilde çalışmaktadır.
+Neyse <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> ki, çoğu zaman doğru çalışır.
 
-- Bir VSPackage yalnızca başka bir VSPackage için bilinen bir hizmet sağlıyorsa, hizmeti sağlayan VSPackage, hizmeti sağlayan VSPackage yüklenmeden önce oluşur.
+- Bir VSPackage yalnızca başka bir VSPackage tarafından bilinen bir hizmet sağlıyorsa, hizmeti isteyen VSPackage, hizmeti sağlayan VSPackage yüklenmeden önce sitede yerlenir.
 
-- Bir VSPackage tarafından bir araç penceresi oluşturulduysa, aracı penceresi oluşturulmadan önce VSPackage oluşur.
+- Bir araç penceresi BIR VSPackage tarafından oluşturulursa, araç penceresi oluşturulmadan önce VSPackage sited edilir.
 
-- Bir denetim kapsayıcısı VSPackage tarafından oluşturulan bir araç penceresi tarafından barındırılıyorsa, Denetim kapsayıcısı oluşturulmadan önce VSPackage kullanılır.
+- Bir kontrol kapsayıcısı VSPackage tarafından oluşturulan bir araç penceresi tarafından barındırılırsa, kontrol kapsayıcısı oluşturulmadan önce VSPackage sitelenir.
 
-### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Bir araç penceresi veya Denetim kapsayıcısı içinden bir hizmet almak için
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Bir araç penceresi veya kontrol kapsayıcısı içinden hizmet almak için
 
-- Oluşturucuya, araç penceresine veya denetim kapsayıcısına bu kodu ekleyin:
+- Bu kodu oluşturucuya, araç penceresine veya denetim konteynerine ekleyin:
 
     ```csharp
     IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -90,7 +90,7 @@ Neyse ki, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> çoğu
     End If
     ```
 
-    Bu kod, bir SVsActivityLog hizmeti alır ve bunu etkinlik günlüğüne yazmak için kullanılabilecek bir ıtransactedtivitylog arabirimine yayınlar. Bir örnek için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../../extensibility/how-to-use-the-activity-log.md).
+    Bu kod bir SVsActivityLog hizmeti alır ve etkinlik günlüğüne yazmak için kullanılabilecek bir IVsActivityLog arabirimine atar. Örneğin, [bkz.](../../extensibility/how-to-use-the-activity-log.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

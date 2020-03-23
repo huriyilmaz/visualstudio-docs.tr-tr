@@ -10,59 +10,59 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: f4caebfdc4e61b683e0f1407d1522f6da2328fcf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591079"
 ---
-# <a name="how-to-create-project-templates"></a>Nasıl yapılır: Proje şablonları oluşturma
+# <a name="how-to-create-project-templates"></a>Nasıl yapılı: Proje şablonları oluşturma
 
-Bu konuda bir şablon kullanarak nasıl oluşturabileceğiniz gösterilmektedir **şablonu Dışarı Aktarma Sihirbazı**, şablonunuzda paketleri bir *.zip* dosya.
+Bu konu, şablonunuzu *.zip* dosyasında paketlereden **Dışa Aktarma Şablonu Sihirbazı'nı**kullanarak şablon oluşturmayı gösterir.
 
-## <a name="use-the-export-template-wizard"></a>Şablonu dışarı aktarma Sihirbazı 'Nı kullanma
+## <a name="use-the-export-template-wizard"></a>Dışa Aktarma Şablonu Sihirbazı'nı kullanma
 
 1. Bir proje oluşturun.
 
     > [!NOTE]
-    > Bir proje adlandırma şablon kaynağını ne zaman yalnızca geçerli tanımlayıcı karakterler kullanın. Aksi takdirde, şablondan oluşturulan projelerde derleme hataları oluşabilir. Geçerli tanımlayıcı karakterler hakkında daha fazla bilgi için bkz. [bildirilen öğe adları (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) veya [tanımlayıcıları (C++)](/cpp/cpp/identifiers-cpp). Alternatif olarak, [şablon parametreleri](../ide/template-parameters.md) "güvenli" adları sınıflar ve ad alanları için kullanılacak.
+    > Şablonun kaynağı olacak bir projeyi adlandırırken yalnızca geçerli tanımlayıcı karakterleri kullanın. Aksi takdirde, şablondan oluşturulan projelerde derleme hataları oluşabilir. Geçerli tanımlayıcı karakterler hakkında daha fazla bilgi için, [Bildirilen öğe adları (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) veya [Tanımlayıcılar (C++)](/cpp/cpp/identifiers-cpp)bakın. Alternatif olarak, sınıflar ve ad alanları için "güvenli" adlar kullanmak için [Şablon parametrelerini](../ide/template-parameters.md) kullanabilirsiniz.
 
-2. Bir şablon olarak dışarı hazır olana kadar proje düzenleyin. Örneğin, burada parametre değişikliğini gerçekleşmesi belirtmek için kod dosyalarını düzenlemek isteyebilirsiniz. Bkz: [nasıl yapılır: şablonda parametreleri ikame etme](../ide/how-to-substitute-parameters-in-a-template.md).
+2. Şablon olarak dışa aktarılacak hazır olana kadar projeyi edin. Örneğin, parametre değişiminin nerede yapılması gerektiğini belirtmek için kod dosyalarını da nızı dinlemek isteyebilirsiniz. [Bkz. Nasıl: Şablondaki parametreleri değiştirin.](../ide/how-to-substitute-parameters-in-a-template.md)
 
-3. Üzerinde **proje** menüsünde seçin **şablonu dışarı aktar**.
+3. **Proje** menüsünde **Dışa Aktarma Şablonu'nu**seçin.
 
-   **Şablonu Dışarı Aktarma Sihirbazı** açılır.
+   **Dışa Aktarma Şablonu Sihirbazı** açılır.
 
-4. Üzerinde **seçtiğiniz şablon türüne** sayfasında **proje şablonu**. İçin bir şablonu dışarı aktarma ve ardından istediğiniz projeyi seçin **sonraki**.
+4. Şablon **Türü Seç** sayfasında **Proje Şablonu'nu**seçin. Şablona aktarmak istediğiniz projeyi seçin ve sonra **İleri'yi**seçin.
 
 ::: moniker range="vs-2017"
 
-5. Üzerinde **şablon seçenekleri** şablonunuz için bir ad ve isteğe bağlı bir açıklama, simge ve önizleme görüntüsü girin. Bu öğe görünmez **yeni proje** iletişim kutusu. Seçin **son**.
+5. Şablon **Seçeneklerini Seç** sayfasında şablonunuz için bir ad ve isteğe bağlı açıklama, simge ve önizleme resmi girin. Bu öğeler Yeni **Proje** iletişim kutusunda görünür. **Son**’u seçin.
 
-   Proje içine aktarılır bir *.zip* dosya belirtilen çıkış konumda ve, seçili olduğunda, Visual Studio'ya içeri aktarıldı.
+   Proje bir *.zip* dosyasına dışa aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse Visual Studio'ya aktarılır.
 
-Şablonunuzda bulmak için **yeni proje** iletişim kutusunda **yüklü** ve ardından karşılık gelen kategoriyi genişletmek `ProjectType` öğesinde *.vstemplate*dosya. Örneğin, bir *.vstemplate* içeren dosya `<ProjectType>CSharp</ProjectType>` altında görünür **yüklü** > **Visual C#** , varsayılan olarak. Şablonunuzu yalnızca bu dizinde bir klasör oluşturduktan ve yerleştirme, şablonun bir alt proje türü düzenleyebilirsiniz *.zip* içindeki dosya. Daha fazla bilgi için [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+Şablonunuzu **Yeni Proje** iletişim kutusunda bulmak için **Yüklü'yi** genişletin ve ardından `ProjectType` *.vstemplate* dosyasındaki öğeye karşılık gelen kategoriyi genişletin. Örneğin, yüklü > **Visual C#** **altında**varsayılan olarak `<ProjectType>CSharp</ProjectType>` bir *.vstemplate* dosyası görüntülenir. Şablonunuzu, bu dizinde bir klasör oluşturarak ve şablonunuzun *.zip* dosyasını içine yerleştirerek proje türünün bir alt dizininde düzenleyebilirsiniz. Daha fazla bilgi için [bkz: Şablonları bulma ve düzenleme.](../ide/how-to-locate-and-organize-project-and-item-templates.md)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. Üzerinde **şablon seçenekleri** şablonunuz için bir ad ve isteğe bağlı bir açıklama, simge ve önizleme görüntüsü girin. Bu öğeler yeni bir proje oluşturduğunuz iletişim kutusunda görünür. Seçin **son**.
+5. Şablon **Seçeneklerini Seç** sayfasında şablonunuz için bir ad ve isteğe bağlı açıklama, simge ve önizleme resmi girin. Bu öğeler, yeni bir proje oluşturduğunuz iletişim kutusunda görünür. **Son**’u seçin.
 
-   Proje içine aktarılır bir *.zip* dosya belirtilen çıkış konumda ve, seçili olduğunda, Visual Studio'ya içeri aktarıldı.
+   Proje bir *.zip* dosyasına dışa aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse Visual Studio'ya aktarılır.
 
-Yeni bir proje oluşturduğunuz iletişim kutusunda şablonunuzu bulmak için bunu ada göre arayın veya listede ilerleyin. (Dil veya proje türüne göre filtreleme, Kullanıcı şablonları için şu anda mümkün değildir.)
+Şablonunuzu yeni bir proje oluşturduğunuz iletişim kutusunda bulmak için, ada göre arayın veya listede ilerleyin. (Şu anda kullanıcı şablonları için dil veya proje türüne göre filtreleme mümkün değildir.)
 
 ::: moniker-end
 
-## <a name="other-ways-to-create-project-templates"></a>Proje şablonları oluşturmak için diğer yolları
+## <a name="other-ways-to-create-project-templates"></a>Proje şablonları oluşturmanın diğer yolları
 
-Projeyi bir klasöre oluşturan dosyaları toplayıp, uygun meta verilerle bir *. vstemplate* XML dosyası oluşturarak proje şablonlarını el ile oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: web şablonlarını elle oluşturma](../ide/how-to-manually-create-web-templates.md).
+Projeyi oluşturan dosyaları bir klasörde toplayarak ve uygun meta verilere sahip bir *.vstemplate* XML dosyası oluşturarak proje şablonlarını el ile oluşturabilirsiniz. Daha fazla bilgi için [bkz: Web şablonlarını el ile oluşturun.](../ide/how-to-manually-create-web-templates.md)
 
-Visual Studio SDK yüklenmiş ise, tamamlanan şablon dağıtımı için bir VSIX dosyası kullanarak kayabilir **VSIX projesi** şablonu. Daha fazla bilgi için bkz. [VSIX proje şablonunu kullanmaya başlama](../extensibility/getting-started-with-the-vsix-project-template.md).
+Visual Studio SDK yüklüyse, **VSIX Project** şablonu kullanarak tamamlanmış şablonu dağıtım için vsix dosyasına sarabilirsiniz. Daha fazla bilgi için [VSIX proje şablonuna başlayın.](../extensibility/getting-started-with-the-vsix-project-template.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
-- [VSIX proje şablonunu kullanmaya başlama](../extensibility/getting-started-with-the-vsix-project-template.md)
+- [Nasıl yapılı: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
+- [VSIX proje şablonu yla başlayın](../extensibility/getting-started-with-the-vsix-project-template.md)

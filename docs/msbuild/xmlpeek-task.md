@@ -1,5 +1,5 @@
 ---
-title: XmlPeek görevi | Microsoft Docs
+title: XmlPeek Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,32 +16,63 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59bc42bd438d80bbaf0ff45cd1c95447961cd437
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: c5a76bf033fa3eb85f0626478b965285f32e5fb6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77630633"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094660"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek görevi
 
-XML dosyasından XPath sorgusuyla belirtilen değerleri döndürür.
+XML dosyasından XPath Sorgusu tarafından belirtilen değerleri döndürür.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda `XmlPeek` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `XmlPeek` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Namespaces`|İsteğe bağlı `String` parametresi.<br /><br /> XPath sorgu önekleri için ad alanlarını belirtir.|
-|`Query`|İsteğe bağlı `String` parametresi.<br /><br /> XPath sorgusunu belirtir.|
-|`Result`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
-|`XmlContent`|İsteğe bağlı `String` parametresi.<br /><br /> XML girişini bir dize olarak belirtir.|
-|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> XML girişini dosya yolu olarak belirtir.|
+|`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu önekleri için ad alanlarını belirtir.|
+|`Query`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgusunu belirtir.|
+|`Result`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
+|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini dize olarak belirtir.|
+|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+
+
+
+## <a name="example"></a>Örnek
+
+Burada okumak için örnek `settings.config` bir XML dosyası:
+
+```xml
+<appSettings>
+  <add key="ProjectFolder" value="S1" />
+</appSettings>
+```
+
+Bu örnekte, okumak `value`istiyorsanız, aşağıdaki gibi kod kullanın:
+
+```xml
+<Target Name="BeforeBuild">
+    <XmlPeek XmlInputPath="settings.config" Query="appSettings/add[@key='ProjectFolder']/@value">
+        <Output TaskParameter="Result" ItemName="value" />
+    </XmlPeek>
+    <Message Text="Using project folder @(value)." Importance="high" />
+    <PropertyGroup>
+        <ProjectFolder>@(value)</ProjectFolder>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Projects\$(ProjectFolder)\Controls\Control1.ascx.cs">
+            <SubType>ASPXCodeBehind</SubType>
+        </Compile>
+    </ItemGroup>
+</Target>
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: UpdateManifest görevi | Microsoft Docs
+title: UpdateManifest Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,30 +17,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25e410ba3122e0065f92186195ee5a82d6a55c2f
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631348"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest görevi
 
-Bir bildirimde seçili özellikleri güncelleştirir ve yeniden imzalar.
+Seçili özellikleri bir bildirimde güncelleştirir ve istifa eder.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda `UpdateManifest` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `UpdateManifest` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`ApplicationManifest`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Uygulama bildirimini belirtir.|
-|`ApplicationPath`|Gerekli `String` parametresi.<br /><br /> Uygulama bildiriminin yolunu belirtir.|
-|`InputManifest`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Güncelleştirilecek bildirimi belirtir.|
-|`OutputManifest`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Güncelleştirilmiş özellikleri içeren bildirimi belirtir.|
+|`ApplicationManifest`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Uygulama bildirimini belirtir.|
+|`ApplicationPath`|Gerekli `String` parametre.<br /><br /> Uygulama bildiriminin yolunu belirtir.|
+|`InputManifest`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Güncelleştirmek için manifestoyu belirtir.|
+|`OutputManifest`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıktı parametresi.<br /><br /> Güncelleştirilmiş özellikleri içeren bildirimi belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere ek olarak, bu görev <xref:Microsoft.Build.Utilities.Task> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [görev temel sınıfı](../msbuild/task-base-class.md).
+ Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Utilities.Task> sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [Görev taban sınıfına](../msbuild/task-base-class.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

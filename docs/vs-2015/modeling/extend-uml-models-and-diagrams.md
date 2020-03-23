@@ -1,5 +1,5 @@
 ---
-title: UML modellerini ve Diyagramları Genişletme | Microsoft Docs
+title: UML modellerini ve diyagramlarını genişletin | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -13,110 +13,110 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849799"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302331"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>UML modellerini ve diyagramları genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araçlarını genişletebilmeniz için kullanabileceğiniz farklı yollar özetlenmektedir. Hangi Visual Studio sürümlerinin her model türünü ve aracını desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Bu konu, Visual Studio ile birlikte verilen UML modelleme araçlarını genişletmenin farklı yollarını özetler. Visual Studio'nun hangi sürümlerinin her model türünü ve aracını desteklediğini görmek [için mimari ve modelleme araçları için Sürüm desteğine](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)bakın.
 
- Aşağıdaki örnek senaryoda Fabrikam, Havaalanı Bagaj işleme sistemlerini tasarlar ve kurar. Bir havaalanı projesinden sonrakine, temel ekipman ve bunu denetleyen yazılımda birçok benzerlikler vardır. Ancak, taşıyıcı belts, iade masaları, depolama alanı bölmeleri ve diğer paket işleme donanımının yapılandırması gibi birçok farklı etken de vardır.
+ Aşağıdaki örnek senaryoda Fabrikam havaalanı bagaj taşıma sistemleri tasarlar ve kurar. Bir havaalanı projesinden diğerine, temel ekipman ve onu kontrol eden yazılımda birçok benzerlik vardır. Ancak, konveyör bantları, checkin masaları, depolama kutuları ve diğer çanta taşıma ekipmanları nın konfigürasyonu gibi büyük ölçüde değişen çeşitli faktörler de vardır.
 
- Yeni bir proje başlatırken fabrikam ekibi, bu gereksinimleri kendi müşterileri arasında tartışmaya yardımcı olmak için bir UML modeli oluşturur. Bu kullanıcılar, her bir ekipman parçasını temsil eden nesne düğümleri ile, her bir ekipman parçasını temsil eden bir veya daha fazla sayıda UML modeli, sistem kodunu doğrudan temsil etmez.
+ Fabrikam ekibi, yeni bir projeye başlarken, bu gereksinimleri kendi aralarında ve müşterileriyle tartışmalarına yardımcı olacak bir UML modeli oluşturur. Her ekipman parçasını temsil eden nesne düğümleri ile çantaların akışını temsil etmek için etkinlik diyagramları kullanırlar. UML modeli doğrudan sistemin kodunu temsil etmez.
 
- Fabrikam 'ın araçlar ekibi, geliştirme ekiplerine yardımcı olmak için bir dizi geliştirme yapar. Aşağıdaki bölümlerde, tanımlayabilmeniz gereken farklı uzantı türleri açıklanır. Bu tekniklerin birçoğunu tek bir Visual Studio uzantısı içinde birleştirebilirsiniz.
+ Fabrikam'ın araç ekibi geliştirme ekiplerine yardımcı olmak için bir dizi geliştirme yapar. Aşağıdaki bölümlerde tanımlayabileceğiniz farklı uzantı türlerini açıklayınız. Bu tekniklerden birkaçını tek bir Visual Studio uzantısında birleştirebilirsiniz.
 
- Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://msdn.microsoft.com/vstudio/ff859492).
+ Daha fazla bilgi için, bu videoya bakın: video YA ![TIK](../data-tools/media/playvideo.gif "Videoyu Oynat")[I Serisi: UML Araçları ve Genişletilebilirlik](https://msdn.microsoft.com/vstudio/ff859492).
 
-## <a name="Requirements"></a> Gereksinimleri
+## <a name="requirements"></a><a name="Requirements"></a>Gereksinim -leri
 
-- [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
+- [Görsel Stüdyo SDK](../extensibility/visual-studio-sdk.md).
 
-- [Visual Studio 2015 Için modelleme SDK](https://www.microsoft.com/download/details.aspx?id=48148).
+- [Visual Studio 2015 için Modelleme SDK](https://www.microsoft.com/download/details.aspx?id=48148).
 
 ## <a name="profiles"></a>Profiller
- Profiller UML öğelerinde stereotipler ve ek özellikler tanımlamanızı sağlar.
+ Profiller, UML öğelerinde stereotipleri ve ek özellikleri tanımlamanıza izin sağlar.
 
- Fabrikam 'ın araç geliştiricileri, «taşıyıcı bandı» ve «checkin masası» gibi Etkinlik diyagramlarındaki nesne düğümlerinde stereotipler tanımlar. Bir takım üyesi bir etkinlik diyagramı kullanarak Bagaj işleme düzeni oluşturduğunda, artık stereotipleri her bir düğümün hangi türde bir temsil ettiğini belirtecek şekilde ayarlayabilirler. Araç geliştiricileri bazı stereotiplerde ek özellikler tanımlar, böylece kullanıcılar bir taşıyıcı bandın kapasitesi ve bir iade masasının kullanımı gibi değerleri kaydedebilir.
+ Fabrikam'ın araç geliştiricileri, «konveyör bandı» ve «checkin masası» gibi etkinlik diyagramlarının nesne düğümleri üzerinde stereotipler tanımlar. Bir ekip üyesi bir etkinlik diyagramı kullanarak bir bagaj taşıma şeması oluşturduğunda, artık her düğümün ne tür bir ekipmanı temsil ettiğini belirtmek için stereotipler ayarlayabilir. Araç geliştiricileri, kullanıcıların konveyör bandının kapasitesi ve iade masasının teslimi gibi değerleri kaydedebilmeleri için bazı stereotiplerde ek özellikler tanımlar.
 
- Daha fazla bilgi için bkz. [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md).
+ Daha fazla bilgi için [uml'u genişletmek için profil tanımlayın'a](../modeling/define-a-profile-to-extend-uml.md)bakın.
 
-## <a name="custom-toolbox-items"></a>Özel araç kutusu öğeleri
- Özel araç kutusu öğesi bir diyagramda tanımladığınız prototipten bir öğe veya öğe grubu oluşturur. Örneğin, belirli bir renk veya stereotipe veya bir tasarım modelini temsil eden bir sınıf ve ilişkilendirmeler grubuna kullanım durumları oluşturan bir araç oluşturabilirsiniz. Bu araç kutusu öğelerini Visual Studio uzantılarına ekleyebilir ve bunları diğer kullanıcılara dağıtabilirsiniz.
+## <a name="custom-toolbox-items"></a>Özel Araç Kutusu Öğeleri
+ Özel bir araç kutusu öğesi, diyagramda tanımladığınız bir prototipten bir öğe veya öğe grubu oluşturur. Örneğin, belirli bir renk veya stereotipteki kullanım örnekleri veya tasarım deseni temsil eden bir grup sınıf ve ilişkilendirme oluşturan bir araç oluşturabilirsiniz. Bu araç kutusu öğelerini Visual Studio uzantılarına ekleyebilir ve diğer kullanıcılara dağıtabilirsiniz.
 
- Daha fazla bilgi için bkz. [Özel Modelleme Araç kutusu öğesi tanımlama](../modeling/define-a-custom-modeling-toolbox-item.md).
+ Daha fazla bilgi için [bkz.](../modeling/define-a-custom-modeling-toolbox-item.md)
 
 ## <a name="validation"></a>Doğrulama
- Bir UML modelinin belirtilen kısıtlamalara uygun olduğundan emin olmak için kurallar tanımlayabilirsiniz.
+ UML modelinin belirtilen kısıtlamalara uyduğından emin olmak için kurallar tanımlayabilirsiniz.
 
- Fabrikam 'ın araç geliştiricileri, takım üyelerinin Bagaj işleme modellerinde basit hatalardan kaçınmanıza yardımcı olacak kurallar tanımlar. Örneğin, bir iade etme masası doğrudan bir depolama sepetine bağlanamaz. Aralarında en az bir taşıyıcı bant olmalıdır.
+ Fabrikam'ın araç geliştiricileri, ekip üyelerinin bagaj taşıma modellerinde basit hatalardan kaçınmalarına yardımcı olacak kurallar tanımlar. Örneğin, iade masası doğrudan bir depolama kutusuna bağlanamaz. En azından aralarında bir konveyör bandı olmalı.
 
- Daha fazla bilgi için bkz. [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).
+ Daha fazla bilgi için [UML modelleri için doğrulama kısıtlamalarını tanımla'ya](../modeling/define-validation-constraints-for-uml-models.md)bakın.
 
 ## <a name="menu-commands"></a>Menü Komutları
- Kullanıcıların bir UML diyagramında öğelere sağ tıklayıp çağırabileceği komutları tanımlayabilirsiniz. Komutlar modeli ve diyagramları güncelleştirebilir veya [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başka işlemler gerçekleştirebilir.
+ UML diyagramında sağ tıklatarak kullanıcıların çağırabileceği komutları tanımlayabilirsiniz. Komutlar modeli ve diyagramları güncelleştirebilir veya [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]'deki diğer işlemleri gerçekleştirebilir.
 
- Fabrikam, bir iade masası oluşturma ve onu seçili bir taşıyıcı bandına bağlama veya bir diyagramı şirketin düzen kurallarına göre yeniden düzenleme gibi sık gerçekleştirilen işlemleri otomatikleştirmek için menü komutlarını tanımlar.
+ Fabrikam, iade masası oluşturmak ve seçili bir konveyör bandına bağlamak veya diyagramı şirketin düzen kurallarına göre yeniden düzenlemek gibi sık gerçekleştirilen işlemleri otomatikleştirmek için menü komutlarını tanımlar.
 
- Bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
+ Bkz. [Modelleme diyagramında menü komutunu tanımlayın.](../modeling/define-a-menu-command-on-a-modeling-diagram.md)
 
 ## <a name="gestures"></a>Hareketler
- Kullanıcıların Başlatan komutları bir diyagram öğesine çift tıklayarak ya da diyagramdaki bir diyagrama veya bir öğeye sürükleyerek tanımlayabilirsiniz. Diğer UML diyagramlarından, Visual Studio 'nun diğer bölümlerinden veya diğer uygulamalardan veya Windows Gezgini 'nden (veya dosya Gezgini 'nden) sürüklenen öğeler ile ilgilenebilmeniz gereken komutlar tanımlayabilirsiniz.
+ Kullanıcıların başlattığı komutları bir diyagram öğesini çift tıklatarak veya diyagramdaki bir diyagrama veya öğeye sürükleyerek tanımlayabilirsiniz. Diğer UML diyagramlarından, Visual Studio'nun diğer bölümlerinden veya diğer uygulamalardan veya Windows Gezgini'nden (veya Dosya Gezgini) sürüklenen öğelerle başa çıkabilen komutlar tanımlayabilirsiniz.
 
- Fabrikam ekip üyeleri, bir belirtim gibi bir dosyayı Windows masaüstünden sürükleyerek herhangi bir model öğesiyle ilişkilendirebilir. Araç geliştiricileri, bir dosya yolu özelliği olan herhangi bir öğe sağlayan bir stereotip ve bir dosya bir öğe üzerinde bırakıldığında stereotipi ve dosya yolunu ayarlayan bir hareket tanımladı.
+ Fabrikam ekip üyeleri, belirtim gibi bir dosyayı Windows masaüstünden sürükleyerek herhangi bir model öğesiyle ilişkilendirebilir. Araç geliştiricileri, herhangi bir öğeyi dosya yolu özelliğiyle sağlayan bir stereotip ve bir dosya öğenin üzerine bırakıldığında stereotipi ve dosya yolunu ayarlayan bir hareket tanımlamıştır.
 
- Daha fazla bilgi için bkz. [Modelleme diyagramında hareket Işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md).
+ Daha fazla bilgi için [bkz.](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)
 
-## <a name="responding-to-changes"></a>Değişikliklere yanıt verme
- Modeldeki değişikliklere yanıt veren kodu, Kullanıcı eylemlerinin veya diğer program kodu tarafından mı kaynaklanabileceğini yazabilirsiniz.
+## <a name="responding-to-changes"></a>Değişikliklere Yanıt Verme
+ Kullanıcı eylemleri veya başka bir program kodu ndan kaynaklanan modeldeki değişikliklere yanıt veren kod yazabilirsiniz.
 
- Fabrikam 'ın geliştiricileri, kendi stereotipine bağlı bir öğenin rengini otomatik olarak ayarlayan kodu oluşturur. Bu, kullanıcıların modellerdeki öğelerle oynanan farklı rolleri ayırt etmelerini kolaylaştırır.
+ Fabrikam'ın geliştiricileri, klişesine bağlı bir öğenin rengini otomatik olarak ayarlayan kod lar oluşturur. Bu, kullanıcıların modellerdeki öğelerin oynadığı farklı rolleri ayırt etmesini kolaylaştırır.
 
- Daha fazla bilgi için bkz. [nasıl yapılır: UML modeldeki değişikliklere yanıt verme](../misc/how-to-respond-to-changes-in-a-uml-model.md).
+ Daha fazla bilgi için [bkz: UML Modelindeki Değişikliklere Yanıt](../misc/how-to-respond-to-changes-in-a-uml-model.md)ver.
 
-## <a name="model-bus"></a>Model veri yolu
- Model veri yolu, başka bir diyagramdan veya başka bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısından bir diyagrama veya modele erişmenizi sağlar. Bunun yanı sıra, birden fazla kişinin aynı anda birleştirilmiş modelde çalışabilmesi için birden fazla model arasında bilgi yaymanızı sağlar.
+## <a name="model-bus"></a>Model Otobüs
+ Model Veri Günü, bir diyagrama veya modele [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] başka bir diyagramdan veya başka bir Uzantıdan erişmenizi sağlar. Diğer şeylerin yanı sıra, bu birden fazla model arasında bilgi yaymak için izin verir, böylece birkaç kişi aynı anda kombine modeli üzerinde çalışabilir.
 
- Fabrikam, Bagaj işleme donanımını göstermek için Etkinlik diyagramlarındaki öğeleri kullanır. Her bir ekipman öğesi, başka bir modelde olabilen başka bir diyagramda daha ayrıntılı bir belirtime sahip olabilir. Bagaj akış diyagramındaki doğrulama kısıtlamaları, donatımın ilgili özelliklerini diğer diyagramlardan alabilir. Diğer diyagramların başvuruları, stereotiplerde tanımlanan ek özelliklerde depolanır.
+ Fabrikam, bagaj taşıma ekipmanlarını temsil etmek için etkinlik diyagramlarında elemanlar kullanır. Her ekipman öğesi, başka bir modelde olabilecek başka bir diyagramda daha ayrıntılı bir belirtime sahip olabilir. Bagaj akış diyagramındaki doğrulama kısıtlamaları, ekipmanın ilgili özelliklerini diğer diyagramlardan alabilir. Diğer diyagramlara yapılan başvurular stereotiplerde tanımlanan ek özelliklerde depolanır.
 
- Daha fazla bilgi için bkz. [UML modellerini diğer modeller ve araçlarla tümleştirme](../modeling/integrate-uml-models-with-other-models-and-tools.md).
+ Daha fazla bilgi için [UML modellerini diğer modeller ve araçlarla tümleştir'e](../modeling/integrate-uml-models-with-other-models-and-tools.md)bakın.
 
 ## <a name="generation"></a>Nesil
- Bir modelden program kodu, betikler, konfigürasyonlar, belgeler, yeni modeller veya diğer yapıtlar oluşturabilirsiniz.
+ Bir modelden, program kodu, komut dosyaları, yapılandırmalar, belgeler, yeni modeller veya diğer yapılar oluşturabilirsiniz.
 
- Fabrikam 'ın tasarlayan Bagaj sistemlerinde, program kodunun büyük bölümü bir projeden sonrakine aynı olur. Ana değişken en önemli değeri, Havaalanı çevresindeki bagaj akışının planlayıcıdır. Tasarım ekibinin ilk birkaç projesi deneyimiyle karşılaşdıktan sonra, araç geliştiricileri Bagaj akış modelinden, değişken program kodunun ve Kullanıcı belgeleri gibi diğer dosyaların çoğunun oluşturduğu bir şablon oluşturur. Bu, her yeni proje için geliştirme süresini ve hata oranını önemli ölçüde azaltır.
+ Fabrikam'ın tasarladığı bagaj sistemlerinde, program kodunun çoğu bir projeden diğerine aynıdır. Önemli değişken yönü havaalanı etrafında bagaj akışı planıdır. Tasarım ekibi ilk birkaç projesinin deneyimini yaşadıktan sonra, araç geliştiricileri bagaj akışı modelinden değişken program kodunun ve kullanıcı belgeleri gibi diğer dosyaların çoğunu oluşturan bir şablon oluşturur. Bu, her yeni proje için geliştirme süresini ve hata oranını önemli ölçüde azaltır.
 
- Daha fazla bilgi için bkz. [UML modelden dosya oluşturma](../modeling/generate-files-from-a-uml-model.md).
+ Daha fazla bilgi için [uml modelinden dosya oluştur'a](../modeling/generate-files-from-a-uml-model.md)bakın.
 
-## <a name="team-foundation-server-integration"></a>Team Foundation Server Tümleştirme
- İş öğelerini model öğelerine bağlayabilir ve bağlantılı öğelere programlı bir şekilde erişebilirsiniz.
+## <a name="team-foundation-server-integration"></a>Takım Vakfı Sunucu Entegrasyonu
+ Çalışma öğelerini model öğelerine bağlayabilir ve bağlı öğelere programlı olarak erişebilirsiniz.
 
- Fabrikam 'ın araç geliştiricileri, her Havaalanı projesi için bir iş zamanlaması üreten bir araç yazar. Zamanlamadaki iş öğeleri model öğeleriyle bağlantılıdır.
+ Fabrikam'ın araç geliştiricileri, her havaalanı projesi için bir çalışma programı oluşturan bir araç yazar. Zamanlamadaki çalışma öğeleri model öğelerine bağlıdır.
 
- Daha fazla bilgi için bkz. [iş öğesi bağlantı Işleyicisini tanımlama](../modeling/define-a-work-item-link-handler.md).
+ Daha fazla bilgi için [bkz.](../modeling/define-a-work-item-link-handler.md)
 
-## <a name="tools-that-update-models"></a>Modelleri güncelleştiren Araçlar
- UML modellerini yükleyeabilecek tek başına uygulamalar ve Visual Studio uzantıları oluşturabilirsiniz.
+## <a name="tools-that-update-models"></a>Modelleri Güncelleyen Araçlar
+ UML modellerini yükleyebilen tek başına uygulamalar ve Visual Studio uzantıları oluşturabilirsiniz.
 
- Fabrikam geliştiricileri, modeli okuyan ve modelin her öğesinde çalışmanın ilerleme durumunu raporlar üreten bir araç oluşturur.
+ Fabrikam'ın geliştiricileri bir modeli okuyan ve modelin her öğesi üzerinde çalışmanın ilerleme raporları oluşturan bir araç oluşturur.
 
- Daha fazla bilgi için bkz. [program kodunda BIR UML modeli okuma](../modeling/read-a-uml-model-in-program-code.md).
+ Daha fazla bilgi için [bkz.](../modeling/read-a-uml-model-in-program-code.md)
 
-## <a name="domain-specific-languages"></a>Etki alanına özgü diller
- Belirli türde bir modeli sıklıkla kullandığınız yerde, etki alanına özgü bir dil oluşturmak yararlı olabilir. Bu, işletmenizin ihtiyaçlarını UML modelden daha yakından uydurmak için yapılabilir, ancak bunu oluşturmak ve sürdürmek için daha fazla çaba gerektirir. Daha fazla bilgi için bkz. [Visual Studio Için modelleme sdk-etki alanına özgü diller](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md).
+## <a name="domain-specific-languages"></a>Etki Alanına Özgü Diller
+ Belirli bir model türünü sık sık kullandığınızda, etki alanına özgü bir dil oluşturmak yararlı olabilir. Bu, iş ihtiyaçlarınıza bir UML modelinden daha yakın bir şekilde uyacak şekilde yapılabilir, ancak bunu oluşturmak ve sürdürmek için daha fazla çaba gerektirir. Daha fazla bilgi için [Visual Studio - Etki Alanına Özel Diller için Modelleme SDK'ya](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)bakın.
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
 |**Kategori**|**Bağlantılar**|
 |------------------|---------------|
-|**Videolar**|![video MSDN bağlantısı-](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://msdn.microsoft.com/vstudio/ff859492)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo") [kanalı 9 ' a bağlantı: VISUAL Studio ile UML](https://channel9.msdn.com/posts/clinted/)|
-|**Forumlar**|-   [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://msdn.microsoft.com/architecture/default.aspx)|
+|**Videolar**|![video](../data-tools/media/playvideo.gif "Videoyu Oynat") [MSDN bağlantı Nasıl Serisi mi: UML Araçları ve Genişletilebilirlik](https://msdn.microsoft.com/vstudio/ff859492)<br /><br /> ![video](../data-tools/media/playvideo.gif "Videoyu Oynat") Kanal 9 [bağlantı: VISUAL Studio ile UML](https://channel9.msdn.com/posts/clinted/)|
+|**Forumlar**|-   [Visual Studio Visualization & Modelleme Araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio Visualization & Modelleme SDK (DSL Araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Bloglar**|[Visual Studio ALM + Team Vakfı Server Blog](https://blogs.msdn.com/b/visualstudioalm)|
+|**Teknik Makaleler ve Dergiler**|[MSDN Mimarlık Merkezi](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modelleme genişletilebilirliği için uygulama API başvurunuz](../modeling/api-reference-for-uml-modeling-extensibility.md) [için modeller oluşturma](../modeling/create-models-for-your-app.md)
+ [UML Modelleme Genişletilebilirliği için](../modeling/api-reference-for-uml-modeling-extensibility.md) [uygulama API](../modeling/create-models-for-your-app.md) Başvurusu için modeller oluşturun

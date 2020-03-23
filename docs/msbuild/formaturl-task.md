@@ -1,5 +1,5 @@
 ---
-title: FormatUrl görevi | Microsoft Docs
+title: FormatUrl Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,28 +17,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fcd4ed0c60d615f0c213e1af5099c5e94a9b485
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634129"
 ---
 # <a name="formaturl-task"></a>FormatUrl görevi
 
-URL 'YI doğru URL biçimine dönüştürür.
+URL'yi doğru URL biçimine dönüştürür.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda `FormatUrl` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `FormatUrl` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`InputUrl`|İsteğe bağlı `String` parametresi.<br /><br /> Biçimlendirilecek URL 'YI belirtir.|
-|`OutputUrl`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Biçimlendirilen URL 'YI belirtir.|
+|`InputUrl`|İsteğe bağlı `String` parametre.<br /><br /> URL'yi biçimlendirmek için belirtir.|
+|`OutputUrl`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Biçimlendirilmiş URL'yi belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

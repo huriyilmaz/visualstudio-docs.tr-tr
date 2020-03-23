@@ -2,22 +2,22 @@
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/02/2019
+ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 0066837f2cbd64fb88cdbf57290eebf0a04bd114
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: 040a168f45afff9111426aac57cafc32a05c1b12
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76159621"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437496"
 ---
-Bu sayfadaki tablolarda, komut satırından Visual Studio 'Yu yüklemek için kullanabileceğiniz veya VSıX bildiriminde bir bağımlılık olarak belirtebileceğiniz kimlikler listelenmektedir. Visual Studio güncelleştirmelerini yayınlarız, ek bileşenler ekleyeceğiz.
+Bu sayfadaki tablolar, Visual Studio'yu komut satırından yüklemek için kullanabileceğiniz veya VSIX bildiriminde bağımlılık olarak belirtebileceğiniz künyeleri listeler. Visual Studio'ya güncellemeler yayınladığımızda ek bileşenler ekleyeceğiz.
 
-Ayrıca sayfa hakkında aşağıdakileri unutmayın:
+Ayrıca sayfa hakkında aşağıdaki leri unutmayın:
 
-* Her iş yükü, izlediği iş yükü kimliği ve iş yükü için kullanılabilir olan bileşenlerin bir tablo, kendi bölümü vardır.
-* Varsayılan olarak, **gerekli** bileşenleri, iş yükünü yüklediğinizde yüklenir.
-* Kullanmayı tercih ederseniz de yükleyebilirsiniz **önerilen** ve **isteğe bağlı** bileşenleri.
-* Her türlü iş yükü ile bağlı olmayan ek bileşenleri listeleyen bir bölüm de ekledik.
+* Her iş yükünün kendi bölümü vardır ve ardından iş yükü kimliği ve iş yükü için kullanılabilir bileşenlerin bir tablosu vardır.
+* Varsayılan olarak, iş yükünü yüklediğinizde **Gerekli** bileşenler yüklenir.
+* İsterseniz, **Önerilen** ve **İsteğe Bağlı** bileşenleri de yükleyebilirsiniz.
+* Ayrıca, herhangi bir iş yüküne bağlı olmayan ek bileşenleri listeleyen bir bölüm ekledik.

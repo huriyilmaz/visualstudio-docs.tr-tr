@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: proje dosyasının adına veya konumuna başvurma | Microsoft Docs'
+title: 'Nasıl Yapilir: Proje Dosyasının Adı veya Konumu | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,23 +17,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2b54a63b135f844ff20b45ffac430662c4df1f19
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633843"
 ---
-# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl yapılır: proje dosyasının adına veya konumuna başvurma
+# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl yapilir: Proje dosyasının adını veya konumunu başvurun
 
-Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan proje dosyasında kullanabilirsiniz. MSBuild, proje dosyası adına ve proje ile ilgili diğer özelliklere başvuran ayrılmış özellikler sağlar. Ayrılmış özellikler hakkında daha fazla bilgi için bkz. [MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md).
+Kendi mülkünüzü oluşturmak zorunda kalmadan proje dosyasındaki projenin adını veya konumunu kullanabilirsiniz. MSBuild, proje dosya adı ve projeyle ilgili diğer özelliklere başvurulan ayrılmış özellikler sağlar. Ayrılmış özellikler hakkında daha fazla bilgi için [MSBuild ayrılmış ve iyi bilinen özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)bakın.
 
 ## <a name="use-the-project-properties"></a>Proje özelliklerini kullanma
 
- MSBuild, proje dosyalarınızda her seferinde tanımlanmaksızın kullanabileceğiniz bazı ayrılmış özellikleri sağlar. Örneğin, ayrılmış Özellik `MSBuildProjectName` proje dosyası adına bir başvuru sağlar. Ayrılmış Özellik `MSBuildProjectDirectory` proje dosyası konumuna bir başvuru sağlar.
+ MSBuild, proje dosyalarınızda her seferinde tanımlamadan kullanabileceğiniz bazı ayrılmış özellikler sağlar. Örneğin, ayrılmış özellik `MSBuildProjectName` proje dosya adı için bir başvuru sağlar. Ayrılmış özellik, `MSBuildProjectDirectory` proje dosyası konumuna bir başvuru sağlar.
 
 #### <a name="to-use-the-project-properties"></a>Proje özelliklerini kullanmak için
 
-- Herhangi bir özellikle yaptığınız gibi, proje dosyasındaki özelliğine $ () gösterimiyle başvurun. Örnek:
+- Proje dosyasındaki özelliği, herhangi bir mülkte olduğu gibi $() gösterimi ile başvurun. Örnek:
 
   ```xml
   <CSC Sources = "@(CSFile)"
@@ -41,16 +41,16 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
   </CSC>
   ```
 
-  Ayrılmış bir özellik kullanmanın bir avantajı, proje dosya adında yapılan tüm değişikliklerin otomatik olarak eklenmesine olanak sağlar. Projeyi bir sonraki oluşturduğunuzda, çıkış dosyası, sizin bölüminizdeki başka bir eylemde bulunması gereken yeni bir ada sahip olacaktır.
+  Ayrılmış bir özellik kullanmanın bir avantajı, proje dosya adı ndaki değişikliklerin otomatik olarak dahil edilmesidir. Projeyi bir sonraki oluşturduğunuzda, çıktı dosyası nda başka bir işlem gerektirmeden yeni ad verecektir.
 
-  Dosya veya Proje başvurularında özel karakterlerin kullanımı hakkında daha fazla bilgi için bkz. [MSBuild özel karakterler](../msbuild/msbuild-special-characters.md).
+  Dosya veya proje başvurularında özel karakterlerin kullanımı hakkında daha fazla bilgi için [MSBuild özel karakterlerine](../msbuild/msbuild-special-characters.md)bakın.
 
 > [!NOTE]
-> Ayrılmış Özellikler proje dosyasında yeniden tanımlanamaz.
+> Ayrılmış özellikler proje dosyasında yeniden tanımlanamaz.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek proje dosyası, çıkış için adı belirtmek üzere bir ayrılmış özellik olarak proje adına başvurur.
+ Aşağıdaki örnek proje dosyası, çıktının adını belirtmek için proje adını ayrılmış bir özellik olarak başvurur.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -79,7 +79,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek proje dosyası, proje dosyası konumundaki bir dosyanın tam yolunu oluşturmak için `MSBuildProjectDirectory` ayrılmış özelliğini kullanır.
+ Aşağıdaki örnek proje dosyası, proje dosyası konumundaki bir dosyaya tam yol oluşturmak için `MSBuildProjectDirectory` ayrılmış özelliği kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -91,9 +91,9 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 </Project>
 ```
 
-Örnek, <xref:System.IO.Path.Combine*?displayProperty=fullName>statik .NET Framework yöntemini çağırmak için [Özellik işlevi](property-functions.md) sözdizimini kullanır.
+Örnek, statik [Property function](property-functions.md) .NET Framework yöntemini <xref:System.IO.Path.Combine*?displayProperty=fullName>çağırmak için Özellik işlevi sözdizimini kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBuild](../msbuild/msbuild.md)
-- [MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md)
+- [Msbuild](../msbuild/msbuild.md)
+- [MSBuild ayrılmış ve iyi bilinen özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)

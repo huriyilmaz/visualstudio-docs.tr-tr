@@ -1,65 +1,65 @@
 ---
-title: Microsoft ürün ve hizmet sözleşmesi 'nde (MPSA) Visual Studio abonelikleri | Microsoft Docs
+title: Microsoft Ürün ve Hizmet Sözleşmesinde (MPSA)' daki Visual Studio abonelikleri| Microsoft Dokümanlar
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
+description: Microsoft Ürün ve Hizmet Sözleşmesinde (MPSA) Visual Studio abonelikleri
 ms.openlocfilehash: e4416bfab95bd7d1c38c392bfbf9efee9a06fc7f
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78410255"
 ---
-# <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
-MPSA programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio abonelikleri Yöneticisi olmaya ve kullanıcılarınıza abonelik atamadan önce bilmeniz gereken birkaç nokta vardır. Zaten yönetici olarak ayarladıysanız, doğrudan Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com/)gidebilirsiniz.
+# <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft Ürün ve Hizmet Sözleşmesinde (MPSA) Visual Studio abonelikleri
+MPSA programı aracılığıyla Visual Studio Abonelikleri satın aldıysanız, Visual Studio abonelikleri yöneticisi olmadan ve kullanıcılarınıza abonelik atamadan önce dikkat edilmesi gereken birkaç şey vardır. Zaten bir yönetici olarak kurulduysanız, doğrudan Visual Studio abonelikleri [Yönetim Portalı'na](https://manage.visualstudio.com/)gidebilirsiniz.
 
-MPSA müşterileri artık, Toplu Lisanslama hizmeti Merkezi 'ne (VLSC) benzer işlevleri destekleyen [Iş Merkezi](https://businessaccount.microsoft.com/Customer)adlı yeni bir portalda MPSA aracılığıyla satın alınan varlıkları yönetebilir. Bunlar, lisans özetinizi, siparişlerinizi, yüklemelerinizi, anahtarlarınızı, kullanıcılarınızı vb. görüntülemeyi içerir. Ancak, MPSA 'daki Visual Studio abonelikleri Cloud Services benzer şekilde davranır. Iş Merkezi aynı zamanda Microsoft hesapları (MSA) yerine oturum açmak için iş hesapları kullanır. Kuruluşunuz Office 365 veya Azure Active Directory gibi bulut Hizmetleri kullanıyorsa ve e-postanız bu iki hizmetin bir parçasıysa, zaten bir iş hesabıdır. Bu, mevcut parolanızla Iş Merkezi 'ne kaydetmenizi sağlar. Kuruluşunuz bulut hizmetlerini kullanmıyor ve e-postanız bir iş hesabı değilse, Iş merkezine kaydolmak için kullanabilirsiniz.
+MPSA müşterileri artık MPSA aracılığıyla satın alınan [varlıkları,](https://businessaccount.microsoft.com/Customer)Toplu LisansLama Hizmet Merkezi'ne (VLSC) benzer işlevleri destekleyen İş Merkezi adlı yeni bir portalda yönetiyor. Bunlar arasında Lisans Özetinizi, Siparişlerinizi, İndirmelerinizi, Anahtarlarınızı, Kullanıcılarınızı vb. görüntülemeniz yer alır. Ancak, MPSA'daki Visual Studio abonelikleri Bulut Hizmetleri'ne çok benzer. İş Merkezi, Microsoft Hesapları (MSA) yerine oturum açma için iş hesaplarını da kullanır. Kuruluşunuz Office 365 veya Azure Etkin Dizini gibi bulut hizmetlerini kullanıyorsa ve e-postanız bu iki hizmetten birinin parçasıysa, bu zaten bir iş hesabıdır. Bu, mevcut şifrenizle İş Merkezi'ne kaydolmanızı sağlar. Kuruluşunuz bulut hizmetlerini kullanmıyorsa ve e-postanız bir iş hesabı değilse, bu hizmeti İş Merkezi'ne kaydolmak için kullanabilirsiniz.
 
-Ayrıca, Visual Studio abonelikleri [Yönetim Portalı](https://manage.visualstudio.com/) , bir Visual Studio abonelikleri Yöneticisi olduktan sonra aboneliklerin abonelere atanacağı yerdir. MPSA 'da, Visual Studio aboneliklerinin Visual Studio abonelikleri yönetim portalı olan ilgili yönetim portalına sağlanması gerekir. Bunu yapmak için satın alma hesabınızı bir kiracıyla (örn. contoso.onmicrosoft.com) ilişkilendirmeniz gerekir.
+Buna ek olarak, Visual Studio abonelikleri [Yönetim Portalı,](https://manage.visualstudio.com/) Visual Studio abonelikleri yöneticisi olduktan sonra abonelere aboneliklerin atanacağı yerdir. MPSA'da Visual Studio abonelikleri, Visual Studio Abonelikleri Yönetim Portalı olan ilgili yönetim portallarına sağlanmalıdır. Bunu yapmak için Satınalma Hesabınızı kiracıyla ilişkilendirmeniz gerekir (örn. contoso.onmicrosoft.com).
 
-Kiracıların yönettiği iki tür kiracılar ve yönetilmeyen kiracılar olduğunu lütfen unutmayın. Yönetilen kiracı, kuruluş içindeki Yöneticiler tarafından zaten yönetilen bir kiracıya başvurur.
+Yönetilen kiracılar ve yönetilmeyen kiracılar olmak gibi iki tür kiracı olduğunu lütfen unutmayın. Yönetilen kiracı, kuruluş içindeki yöneticiler tarafından zaten yönetilen bir kiracıyı ifade eder.
 
-Yönetilmeyen kiracı, hiçbir yönetici atanmamış ve Office 365 gibi çevrimiçi hizmetler için kullanılabilir olmayan bir kiracıya sahip değildir. Yönetilmeyen kiracılar iş merkezine iş hesabı olmayan bir e-posta ile kaydedilirken de oluşturulur. Iş merkezine kaydolurken bir parola oluşturmanız istenirse, e-postanız iş hesabı olmadığı ve yönetilmeyen bir kiracı oluşturduğu anlamına gelir.
+Yönetilmeyen bir kiracı, herhangi bir yönetici atanmadan kiracıdır ve Office 365 gibi Çevrimiçi Hizmetler için kullanılamaz. Yönetilmeyen kiracılar, Iş Merkezi'ne iş hesabı olmayan bir e-postayla kaydolurken de oluşturulur. İş Merkezi'ne kaydolurken parola oluşturmanız istenirse, bu e-postanızın bir iş hesabı olmadığı ve yönetilmeyen bir kiracı oluşturduğu anlamına gelir.
 
-Kiracı ilişkilendirmesini tamamlamadan önce Visual Studio abonelikleri yöneticisi olmak için gereken birkaç gereksinim/adım aşağıda verilmiştir.
+Kiracı ilişkilendirmesini tamamlamadan önce Visual Studio Abonelikleri yöneticisi olmak için gereken birkaç gereksinim/adım aşağıda veda edilmiştir.
 
-## <a name="pre-tenant-association-managed-tenant"></a>Kiracı öncesi ilişkilendirme (yönetilen kiracı)
-- Iş merkezinde kayıtlı bir kullanıcı olmanız gerekir.
-- Bir Kullanıcı Yöneticisi (en az) veya bir parçası olduğunuz kiracının içinde genel yönetici olmanız gerekir. (Şirketiniz zaten Cloud Services kullanıyorsa bu geçerlidir). Her iki rolün de bir Visual Studio abonelikleri Yöneticisi olması gerekir.
-- Satın alma hesabınızı kiracınızla ilişkilendirebilmek için bir parçası olan kiracıda bir genel yönetici olmanız gerekir.
-- Iş Merkezi 'nde bir hesap yöneticisi veya hesap yöneticisi olmanız gerekir.
-- [Azure](https://portal.azure.com/) 'daki Kullanıcı profilinizde (ve diğer herhangi bir Kullanıcı) bulunan "ülke veya bölge" alanının, bölgenize (ör. ABD, CA, vb.) bağlı olarak uygun şekilde doldurulması gerekir. 
-
-> [!NOTE]
-> Visual Studio abonelikleri yöneticileri yapmak istediğiniz tüm kullanıcıların, yalnızca 2 ve 5 ölçütlerine uyması gereken Iş merkezinde kullanıcılar olması gerekmez.
-
-Yukarıdaki kriterleri karşıladıktan sonra, aşağıdaki adımları izleyerek satın alma hesabınızı kiracınızla ilişkilendirmeye devam edebilirsiniz.
-1. [Iş merkezinde](https://businessaccount.microsoft.com/Customer)oturum açın.
-2. **Hesap** sekmesine tıklayın ve **etki alanlarını ilişkilendir**' i seçin.
-3. **Satın alma hesabınızı** seçin (birden fazla varsa).
-4. **Kiracınızı** (ör. contoso.onmicrosoft.com) seçin.
-5. **Etki alanını ilişkilendir**' e tıklayın.
-
-İlişkilendirmede, ölçütlere uyan tüm kullanıcılar genellikle dakikalar içinde Visual Studio abonelikleri Yöneticisi olarak temin eder. Ancak, 24 saate kadar zaman alabilir. Kiracınız sağlandıktan sonra Visual Studio abonelikleri yönetim portalına erişebileceksiniz. Bu, 24 saatten uzun sürerse lütfen şu adımları kullanarak MPSA desteğine başvurun:
-1. https://www.microsoft.com/licensing/mpsa/default Bağlan
-2. Sayfanın üst kısmındaki **daha fazla** menüye tıklayın. 
-3. **Destek** seçin
-4. **Lisans desteğini** seçin
-5. Gereksinimlerinize en uygun destek seçeneğini belirleyin. 
+## <a name="pre-tenant-association-managed-tenant"></a>Ön kiracı derneği (yönetilen kiracı)
+- İş Merkezi'ne kayıtlı bir kullanıcı olmalısınız.
+- Parçası olduğunuz kiracının içinde Kullanıcı Yöneticisi (en azından) veya Global Yönetici olmalısınız. (Şirketiniz bulut hizmetlerini zaten kullanıyorsa bu geçerlidir). Visual Studio abonelikleri yöneticisi olmak için her iki rolün de gereklidir.
+- Satınalma Hesabınızı kiracınızla ilişkilendirebilmek için kiracıda Global Yönetici olmalısınız.
+- İş Merkezi'nde Hesap Yöneticisi veya Hesap Yöneticisi olmalısınız.
+- [Azure'daki](https://portal.azure.com/) kullanıcı profilinizdeki (ve diğer tüm kullanıcı) "Ülke veya Bölge" alanının bölgenize (ABD, CA, vb.) bağlı olarak uygun şekilde doldurulması gerekir. 
 
 > [!NOTE]
-> 2 ve 5. adımlarda (ilişkilendirmeden sonra) ölçütlere uyan yeni kullanıcılar varsa MPSA desteğiyle iletişim kurmanız gerekir. MPSA desteği, yeni Visual Studio abonelikleri yöneticilerini sağlamaya yönelik yardım sağlayacaktır.
+> Visual Studio abonelikleri yapmak istediğiniz kullanıcıların Yalnızca 2 ve 5 kriterlerini karşılamaları gerektiğinden, İş Merkezi'nde kullanıcı olmaları gerekmez.
 
-## <a name="tenant-association-unmanaged"></a>Kiracı ilişkilendirmesi (yönetilmeyen)
-Iş merkezine, yukarıda açıklandığı gibi, iş hesabı olmayan ("Azure AD" Azure Active Directory kayıtlı değil) bir e-posta ile kaydolduysanız, kiracı ilişkilendirmesi biraz farklı olur. "Etki alanı alma" olarak adlandırılan işlemleri gerçekleştirmeniz gerekecektir. Bu işlem sırasında, kiracınızı Yönetilmeyenden yönetilene değiştirecek genel yönetici yaparsınız.
+Yukarıdaki kriterleri karşıladıktan sonra aşağıdaki adımları izleyerek Satın Alma Hesabınızı kiracınızla ilişkilendirmeye devam edebilirsiniz.
+1. [İş Merkezi'ne](https://businessaccount.microsoft.com/Customer)giriş yapın.
+2. **Hesap** sekmesine tıklayın ve **Etki Alanlarını Ilişkilendir'i**seçin.
+3. **Satınalma Hesabınızı** seçin (birden fazla hesabınız varsa).
+4. **Kiracınızı** seçin (yani contoso.onmicrosoft.com).
+5. **Etki Alanını Ilişkilendir'i**tıklatın.
 
-Bu işlemle ilgili daha ayrıntılı bir açıklama için [hızlı başlangıç kılavuzlarını](https://www.microsoft.com/Licensing/existing-customer/business-center-training-and-resources.aspx)kullanabilirsiniz. Lütfen *"Kurulum ve çevrimiçi hizmetlerinizi kullanma"* adlı Kılavuzu indirerek bir etki alanı alma sırasında size rehberlik edecek şekilde indirin. Bu işlem tamamlandıktan sonra, satın alma hesabınız kiracınızla de ilişkilendirilir.
+İlişkilendirme üzerine, ölçütleri karşılayan tüm kullanıcılar genellikle birkaç dakika içinde Visual Studio abonelikleri yöneticileri olarak sağlanacaktır. Ancak, zaman zaman 24 saat kadar sürebilir. Kiracınız tedarik edildikten sonra Visual Studio Abonelikleri Yönetim Portalı'na erişebileceksiniz. Bu işlem 24 saatten uzun sürerse, lütfen aşağıdaki adımları kullanarak MPSA Desteği'ne başvurun:
+1. Bağlantı kurunhttps://www.microsoft.com/licensing/mpsa/default
+2. Sayfanın üst kısmındaki **Diğer** menüsünü tıklatın. 
+3. **Destek** Seçin
+4. **Lisanslama desteği** seçin
+5. İhtiyaçlarınıza en uygun destek seçeneğini seçin. 
 
 > [!NOTE]
-> Etki alanı alma işlemini tamamladıktan sonra, kiracı Ilişkilendirmesi (yönetilen) bölümündeki beş adımdan oluşan ölçütlere uymalısınız. Ölçütler karşılandıktan sonra, yalnızca ek Visual Studio abonelikleri yöneticileri sağlamak için MPSA desteğiyle iletişim kurmanız gerekir.
+> 2 ve 5 adımlarında (ilişkilendirmeden sonra) ölçütleri karşılayan yeni kullanıcılar varsa, MPSA Desteği'ne başvurmanız gerekir. MPSA Desteği, yeni Visual Studio Abonelikleri yöneticilerinin sağlanmasına yardımcı olacaktır.
+
+## <a name="tenant-association-unmanaged"></a>Kiracı ilişkilendirme (yönetilmeyen)
+İş Merkezi'ne iş hesabı olmayan bir e-postayla (Azure Etkin Dizini "Azure AD"'de kayıtlı olmayan) kaydolduysanız, kiracı ilişkisi biraz farklı olacaktır. "Etki alanı devralma" adı verilen şeyi gerçekleştirmeniz gerekir. Bu işlem sırasında kendinizi, kiracınızı yönetilmeyenden yönetilene çevirecek Olan Küresel Yönetici yapacaksınız.
+
+Bu işlem için daha ayrıntılı bir açıklama için [Hızlı Başlangıç kılavuzlarını](https://www.microsoft.com/Licensing/existing-customer/business-center-training-and-resources.aspx)kullanabilirsiniz. Lütfen bir etki alanı devralma yoluyla size rehberlik edecek *"Kurulum ve Çevrimiçi Hizmetleri nizi Kullanın"* adlı kılavuzu indirin. Bu tamamlandığında Satın Alma Hesabınız da kiracınızla ilişkilendirilecektir.
+
+> [!NOTE]
+> Etki alanı devralma işlemini tamamladıktan sonra, Ön Kiracı İlişkisi (Yönetilen) bölümündeki beş adımdaki ölçütlere uymanız gerekir. Ölçütler karşılandıktan sonra, ek Visual Studio abonelikleri yöneticilerini sağlamak için yalnızca MPSA Destek ile iletişime geçmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
@@ -69,8 +69,8 @@ Bu işlemle ilgili daha ayrıntılı bir açıklama için [hızlı başlangıç 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
-- [Ayrı abonelikler atama](assign-license.md)
+- [Tek tek abonelikler atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [Abonelikleri silme](delete-license.md)
-- [En fazla kullanımı belirleme](maximum-usage.md)
+- [Maksimum kullanımı belirleme](maximum-usage.md)

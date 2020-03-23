@@ -1,5 +1,5 @@
 ---
-title: ResourcesGenerator görevi | Microsoft Docs
+title: ResourcesGenerator Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,27 +18,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2b5aba45292aaa55a719eb19d6f0f6f115e8b477
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632517"
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator görevi
 
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> görevi bir veya daha fazla kaynağı ( *. jpg*, *. ico*, *. bmp*, ikili biçimdeki XAML ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
+Görev, <xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> bir veya daha fazla kaynağı *(.jpg*, *.ico*, *.bmp*, ikili biçimde XAML ve diğer uzantı türleri) *bir .resources* dosyasına yerlebir eder.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`OutputPath`|Gerekli **dize** parametresi.<br /><br /> Çıkış dizininin yolunu belirtir. Yol mutlak bir yol değilse, kök proje diziniyle ilişkili bir yol olarak kabul edilir.|
-|`OutputResourcesFile`|Gerekli **ITaskItem []** çıkış parametresi.<br /><br /> Oluşturulan *. resources* dosyasının yolunu ve adını belirtir. Yol mutlak bir yol değilse, *. resources* dosyası kök proje dizinine göre oluşturulur.|
-|`ResourcesFiles`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Oluşturulan *. resources* dosyasına eklemek için bir veya daha fazla kaynak belirtir.|
+|`OutputPath`|Gerekli **String** parametresi.<br /><br /> Çıktı dizininin yolunu belirtir. Yol mutlak bir yol değilse, kök proje dizinine göre bir yol olarak kabul edilir.|
+|`OutputResourcesFile`|Gerekli **ITaskItem[]** çıkış parametresi.<br /><br /> Oluşturulan *.resources* dosyasının yolunu ve adını belirtir. Yol mutlak bir yol değilse, *.kaynaklar* dosyası kök proje dizinine göre oluşturulur.|
+|`ResourcesFiles`|Gerekli **ITaskItem[]** parametresi.<br /><br /> Oluşturulan *.resources* dosyasına katıştırmak için bir veya daha fazla kaynak belirtir.|
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, tek bir *. bmp* kaynağı ile bir *. resources* dosyası oluşturur. *. Bmp* kaynağı, proje kök dizinine göreli bir dizine üretilir.
+ Aşağıdaki örnek, tek bir *.bmp* kaynağı olan bir *.resources* dosyası oluşturur. *.bmp* kaynağı, proje kök diziniyle göreli bir dizine oluşturulur.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -60,4 +60,4 @@ ms.locfileid: "77632517"
 - [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

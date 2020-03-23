@@ -1,43 +1,46 @@
 ---
-title: Oluşturucudan özel alan oluştur
-ms.date: 02/19/2020
+title: Oluşturucudan özel alan oluşturma
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8ef4188216b669b30b7af9bd725ec432bcd0a774
-ms.sourcegitcommit: 3c105990656cd509062ce60e52e776c794f6305d
+ms.openlocfilehash: 4eb5dd39d0fb2d4cd9ba8ade0d0408d6e36a4854
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77527663"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094023"
 ---
-# <a name="generate-private-field-from-constructor"></a>Oluşturucudan özel alan oluştur
+# <a name="generate-private-field-from-constructor"></a>Oluşturucudan özel alan oluşturma
 
-Bu yeniden düzenleme için geçerlidir: 
+Bu yeniden düzenleme aşağıdakiler için geçerlidir: 
 
 - C# 
 
-**Ne:** Bir oluşturucudan özel bir alan oluşturun. 
+- Visual Basic
 
-**Ne zaman:** Bir oluşturucudan hızlıca bir özel alan eklemek istiyorsunuz.
+**Ne:** Bir oluşturucudan özel alan oluşturun. 
 
-**Neden:** Özel alanlar yazmak zaman alıcı ve tekrarlı olabilir. Bu yeniden düzenlemenin kullanılması hızlıdır ve programı daha sağlam hale getirir.
+**Ne zaman:** Hızlı bir şekilde bir oluşturucu özel bir alan eklemek istiyorum.
+
+**Neden:** Özel alanlar yazmak zaman alıcı ve yinelenen olabilir. Bu refactoring kullanarak hızlı ve program daha sağlam hale getirir.
 
 ## <a name="how-to"></a>Nasıl yapılır 
 
-1. İmlecinizi Oluşturucu içindeki parametre adına yerleştirin.
+1. İmlecinizi oluşturucunun içindeki parametre adı üzerine yerleştirin.
 
-2. **Ctrl**+tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
    
-3. **Alan oluşturma ve başlatma**seçeneğini belirleyin.
+3. Alan Oluşturma **ve başlatma**seçeneğini seçin.
 
-   ![Oluşturucudan özel alan oluştur](media/generate-private-field-from-constructor.png)
+   ![Oluşturucudan özel alan oluşturma](media/generate-private-field-from-constructor.png)
 
 ## <a name="see-also"></a>Ayrıca bkz. 
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

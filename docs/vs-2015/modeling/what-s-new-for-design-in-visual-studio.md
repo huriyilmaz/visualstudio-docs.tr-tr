@@ -1,5 +1,5 @@
 ---
-title: Tasarım&#39;için yenilikler
+title: Tasarım için yenilikler&#39;
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -14,68 +14,68 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6c68db12f8ecea523327250fec1f600639a2f267
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659240"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302373"
 ---
-# <a name="whats-new-for-design-in-visual-studio-in-visual-studio-2015"></a>Visual Studio 2015 ' de Visual Studio 'daki tasarımdaki yenilikler
+# <a name="whats-new-for-design-in-visual-studio-in-visual-studio-2015"></a>Visual Studio 2015'te Visual Studio'da tasarım için yenilikler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Visual Studio 'nun bu sürümü, kodu daha iyi anlamanıza ve tasarlamanıza yardımcı olması için aşağıdaki geliştirmeleri içerir.
+Visual Studio'nun bu sürümü, kodu daha iyi anlamanıza ve tasarlamanıza yardımcı olacak aşağıdaki geliştirmeleri içerir.
 
  **Kod haritaları ve bağımlılık grafikleri**
 
- Visual Studio Enterprise, kodunuzda belirli bağımlılıkları anlamak istediğinizde kod haritaları oluşturarak bunları görselleştirin. Daha sonra, kodunuzun yanında görüntülenen Haritayı kullanarak bu ilişkilere gidebilirsiniz. Kod haritaları, kod çalışırken veya hata ayıkladığınızda koddaki yerinizi izlemenize yardımcı olabilir, bu nedenle kodunuzun tasarımı hakkında daha fazla bilgi edinirken daha az kod okuyacaksınız.
+ Visual Studio Enterprise'da, kodunuzda belirli bağımlılıkları anlamak istediğinizde, kod eşlemleri oluşturarak bunları görselleştirin. Daha sonra, kodunuzun yanında görünen haritayı kullanarak bu ilişkilerde gezinebilirsiniz. Kod haritaları, çalışırken veya kod ayıklama sırasında koddaki yerinizi izlemenize de yardımcı olabilir, böylece kodunuzu tasarımı hakkında daha fazla bilgi edinirken daha az kod okursunuz.
 
- Son (RTM) sürümünde, komutları seçme, düzenleme, yönetme ve grup içeriklerinin yerleşimini değiştirme ile ilgili bölümlere gruplandırarak, kod öğeleri ve bağlantılarının kısayol menülerini kullanımı çok daha kolay hale aldık. Ayrıca, test projelerinin diğer projelerden farklı bir stilde görüntülendiğine ve haritadaki öğelerin simgelerini daha uygun sürümlere güncelleştirdiğine dikkat edin.
+ Son (RTM) sürümünde, kod öğeleri ve bağlantıları için kısayol menülerini, grup içeriğinin seçilmesi, düzenlenmesi, yönetimi ve düzenini değiştirme yle ilgili bölümlere komutları gruplandırmak tarafından kullanımı çok daha kolay hale getirdik. Test projelerinin diğer projelerden farklı bir tarzda görüntülendiğine ve haritadaki öğelerin simgelerini daha uygun sürümlere güncellediğimize de dikkat edin.
 
- ![Seçili öğeleri yeni kod haritasında göster](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
+ ![Seçili öğeleri yeni bir kod haritasında gösterme](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
 
- Diğer geliştirmeler şunları içerir:
+ Diğer iyileştirmeler şunlardır:
 
-- **İyileştirilmiş yukarıdan aşağı diyagramlar**. Orta ila büyük Visual Studio çözümleri için artık çözümünüze yönelik daha kullanışlı bir kod Haritası almak için basitleştirilmiş bir mimari menüsü kullanabilirsiniz. Çözümünüzün derlemeleri, çözüm klasörlerine göre gruplandırılır, böylece bunları bağlamda görebilir ve çözümü yapılandırırken yerleştirdiğiniz çabadan yararlanabilirsiniz. Proje ve derleme başvurularını hemen görürsünüz, daha sonra bağlantı türleri görüntülenir. Ayrıca, çözümünüzün dışındaki derlemeler daha kompakt bir şekilde gruplandırılır.
+- **Geliştirilmiş yukarıdan aşağıya diyagramlar.** Orta ve büyük Visual Studio çözümleri için, çözüm için daha kullanışlı bir kod eşlemleri elde etmek için artık basitleştirilmiş bir Mimari menüsünü kullanabilirsiniz. Çözümderlemeleriniz çözüm klasörlerine göre gruplandırılır, böylece bunları bağlam içinde görebilir ve çözümü yapılandırmak için sarf ettiğiniz çabadan yararlanabilirsiniz. Proje ve derleme başvurularını hemen görürsünüz ve ardından bağlantı türleri görüntülenir. Buna ek olarak, çözümünüz dışındaki montajlar daha kompakt bir şekilde gruplandırılır.
 
-- **Test projeleri farklı stillenmiştir ve filtrelenebilir**. Artık farklı stillendirilmiş olduklarından, haritadaki test projelerini daha kolay ve hızlı bir şekilde tanımlayabilirsiniz. Ayrıca, uygulamanın çalışma koduna odaklanabilmeniz için filtrelenebilir.
+- **Test Projeleri farklı tarz ve filtre olabilir.** Artık test projelerini harita üzerinde daha kolay ve hızlı bir şekilde tanımlayabilirsiniz, çünkü bunlar farklı şekilde şekillendirilmiştir. Uygulamanın çalışma koduna odaklanabilmeniz için filtrede de olabilir.
 
-- **Basitleştirilmiş dış bağımlılık bağlantıları**. Bağımlılık bağlantıları artık System. Object, System. ValueType, System. Enum ve System. Delegate öğesinden devralmayı temsil etmez ve bu da kod haritanızda dış bağımlılıkları görmeyi kolaylaştırır.
+- **Basitleştirilmiş dış bağımlılık bağlantıları.** Bağımlılık bağlantıları artık System.Object, System.ValueType, System.Enum ve System.Delegate'den gelen kalıtımı temsil etmez ve bu da kod haritanızdaki dış bağımlılıkları görmenizi kolaylaştırır.
 
-- **' Bağımlılık bağlantılarında detaya gitme ', filtreleri hesaba götürür**. Bir bağımlılık bağlantısına katkılarını anlamak için, bu kullanışlı bir diyagramı genişleterek yararlı bir diyagram alırsınız. Diyagram daha az dağınık ve seçtiğiniz bağlantı filtreleme seçeneklerini dikkate alır.
+- **'Bağımlılık bağlantılarına giriş' filtreleri dikkate alır.** Bağımlılık bağlantısına yapılan katkıları anlamak için genişletirken kullanışlı ve net bir diyagram elde edeyim. Diyagram daha az karmaşıktır ve seçtiğiniz bağlantı filtreleme seçeneklerini dikkate alır.
 
-- **Kod öğeleri bağlamlarıyla birlikte bir kod haritasına eklenir**. Diyagramlar artık bağlamlarıyla göründüğünden (gerekirse filtreleyebileceğiniz derleme ve çözüm klasörüne kadar), Çözüm Gezgini, Sınıf Görünümü Nesne Tarayıcısı; öğesinden kod öğelerini Sürükleyip bırakırken daha kullanışlı diyagramlar alırsınız. Çözüm Gezgini öğeleri seçerken veya kod eşlemesinde göster ' i seçerken.
+- **Kod öğeleri bağlamları ile bir kod eşlemi eklenir.** Diyagramlar artık bağlamlarıyla (gerekirse filtreuygulayabileceğiniz derleme ve çözüm klasörüne kadar) göründüğünden, Çözüm Gezgini, Sınıf Görünümü, Nesne Tarayıcısı'ndan kod öğelerini sürükleyip bırakırken daha kullanışlı diyagramlar elde elabilirsiniz; veya Solution Explorer'daki öğeleri seçerken ve Kod Haritasında Göster'i seçerken.
 
-- **Reaktif kod haritalarını daha hızlı alın**. Sürükle ve bırak işlemleri anında sonuç verir ve düğümler arasındaki bağlantılar, düğümü genişletme veya daha fazla düğüm isteme gibi sonraki Kullanıcı tarafından başlatılan işlemleri etkilemeden çok daha hızlı bir şekilde oluşturulur. Çözüm oluşturmadan kod eşlemeleri oluşturduğunuzda, tüm köşe durumları (derlemeler derlenmediği gibi) artık işlenir.
+- **Reaktif kod eşlemlerini daha hızlı alın.** Sürükle ve bırak işlemleri hemen bir sonuç üretir ve düğümler arasındaki bağlantılar, bir düğümü genişletme veya daha fazla düğüm isteme gibi sonraki kullanıcı tarafından başlatılan işlemleri etkilemeden çok daha hızlı bir şekilde oluşturulur. Çözümü oluşturmadan kod eşlemleri oluşturduğunuzda, derlemeler oluşturulmamagibi tüm köşe örnekleri artık işlenir.
 
-- **Çözümünüzü yeniden oluşturmayı atlayın.** Diyagramlar oluştururken ve düzenlenirken daha iyi performans sağlar.
+- **Çözümünüzü yeniden oluşturmayı atlayın.** Diyagramlar oluştururken ve düzenlerken daha iyi performans sağlar.
 
-- **Kod öğesi düğümlerini ve gruplarını filtreleyin**. Kendi kategorilerine göre kod öğelerini göstererek veya gizleyerek ve kod öğelerini çözüm klasörlerine, derlemelere, ad alanlarına, proje klasörlerine ve türlerine göre gruplandırarak haritalarınızı hızlıca kolayca kaldırabilirsiniz.
+- **Filtre kodu öğesi düğümleri ve grupları**. Kod öğelerini kendi kategorilerine göre göstererek veya gizleyerek ve kod öğelerini çözüm klasörlerine, derlemelere, ad alanlarına, proje klasörlerine ve türlerine göre gruplandırarak haritalarınızı hızla dağınıklayabilirsiniz.
 
-- **Diyagramları daha kolay okunabilir hale getirmek için Ilişkileri filtreleyin**. Artık bağlantı filtrelemesi, çapraz grup bağlantıları için de geçerlidir. Bu, filtre penceresiyle birlikte çalışarak önceki sürümlerden daha az zorlanmaya neden olur.
+- **Diyagramların okunmasını kolaylaştırmak için ilişkileri filtreleyin.** Bağlantı filtreleme artık çapraz grup bağlantıları için de geçerlidir, bu da filtre penceresiyle çalışmayı önceki sürümlere göre daha az müdahaleci yapar.
 
-- **Sınıf görünümü ve nesne tarayıcısı diyagram oluşturun**. Dosyaları ve derlemeleri Sınıf Görünümü ve Nesne Tarayıcısı Windows ' a yeni veya var olan bir haritaya sürükleyip bırakın.
+- **Sınıf Görünümü ve Nesne Tarayıcısından diyagramlar oluşturun.** Sınıf Görünümü ve Nesne Tarayıcısı pencerelerinden dosyaları ve derlemeleri yeni veya varolan bir haritaya sürükleyin ve bırakın.
 
-  Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
+  Çözümlerinizde [Harita bağımlılıklarına](../modeling/map-dependencies-across-your-solutions.md)bakın.
 
   **Bu sürümdeki diğer tasarım ve modelleme değişiklikleri:**
 
-- **Katman diyagramları**. Sınıf Görünümü ve Nesne Tarayıcısı kullanarak bu diyagramları güncelleştirin. Yazılım tasarımı gereksinimlerini karşılamak için, yazılım için istenen bağımlılıkları anlatmak üzere katman diyagramlarını kullanın. Bu kısıtlamalara uymayan kodu bularak ve sonraki kodu bu taban çizgisiyle doğrulayarak kodu bu tasarımla tutarlı tutun.
+- **Katman diyagramları.** Bu diyagramları Sınıf Görünümü ve Nesne Tarayıcısı'nı kullanarak güncelleştirin. Yazılım tasarım gereksinimlerini karşılamak için, yazılımınız için istenen bağımlılıkları açıklamak için katman diyagramları kullanın. Bu kısıtlamaları karşılamayan kod bularak ve gelecekteki kodu bu taban çizgisiyle doğrulayarak kodu bu tasarımla tutarlı tutun.
 
-- **UML diyagramları**. Artık Koddan UML sınıf diyagramları ve sıra diyagramları oluşturamazsınız. Ancak, yeni UML öğelerini kullanarak bu diyagramları yine de oluşturabilirsiniz.
+- **UML diyagramları**. Artık koddan UML sınıf diyagramları ve sıralı diyagramlar oluşturamaz. Ama yine de yeni UML öğeleri kullanarak bu diyagramları oluşturun.
 
-- **Mimari Gezgini**. Artık diyagramlar oluşturmak için Mimari Gezgini 'ni kullanamazsınız. Ancak Çözüm Gezgini kullanmaya devam edebilirsiniz.
+- **Mimari Explorer**. Diyagramlar oluşturmak için mimari gezgini artık kullanamazsınız. Ancak Çözüm Gezgini'ni kullanmaya devam edebilirsiniz.
 
-## <a name="VersionSupport"></a>Mimari ve modelleme araçları için sürüm desteği
+## <a name="edition-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport"></a>Mimari ve modelleme araçları için sürüm desteği
 
-Visual Studio 2015 çeşitli sürümlerde kullanılabilir. Bunların hepsi mimari ve modelleme araçları için destek sağlamaz. Aşağıdaki tabloda her aracın kullanılabilirliği gösterilmektedir.
+Visual Studio 2015 çeşitli sürümleri mevcuttur. Bunların hepsi mimari ve modelleme araçları için destek sağlamaz. Aşağıdaki tablo, her aracın kullanılabilirliğini gösterir.
 
-|**Özellik**|**Kuruluşunuzdaki**|**FF**|**Topluluk**|**Çaba**|
+|**Özellik**|**Enterprise**|**Professional**|**Topluluk**|**Express**|
 |-----------------|--------------------|----------------------|-------------------|-----------------|
-|**Kod eşlemeleri**|Evet|Yalnızca kod eşlemelerini okumayı ve filtrelemeyi, yeni genel düğümleri eklemeyi ve bir seçimden yeni bir yönlendirilmiş grafik oluşturmayı destekler.|-|-|
-|**UML sınıf diyagramları**|Evet|-|-|-|
-|**UML sıralı diyagramlar**|Evet|-|-|-|
-|**UML Kullanım örneği diyagramları**|Evet|-|-|-|
-|**UML etkinlik diyagramları**|Evet|-|-|-|
+|**Kod haritaları**|Evet|Yalnızca kod eşlemlerini okumayı ve filtrelemeyi, yeni genel düğümler eklemeyi ve seçimden yeni bir Yönlendirilmiş Grafik oluşturmayı destekler.|-|-|
+|**UML Sınıf diyagramları**|Evet|-|-|-|
+|**UML Sıra diyagramları**|Evet|-|-|-|
+|**UML Kullanım Örneği diyagramları**|Evet|-|-|-|
+|**UML Etkinlik diyagramları**|Evet|-|-|-|
 |**UML Bileşen diyagramları**|Evet|-|-|-|
 |**Katman diyagramları**|Evet|-|-|-|
-|**Yönlendirilmiş grafikler** (DGML diyagramları)|Evet|Evet|-|-|
-|**Kod kopyası**|Evet|-|-|-|
+|**Yönlendirilmiş Grafikler** (DGML diyagramları)|Evet|Evet|-|-|
+|**Kod klon**|Evet|-|-|-|

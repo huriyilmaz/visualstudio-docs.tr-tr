@@ -1,5 +1,5 @@
 ---
-title: Kod değişikliklerini ön İzle
+title: Önizleme kodu değişiklikleri
 ms.date: 12/16/2016
 ms.topic: conceptual
 author: TerryGLee
@@ -10,23 +10,23 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: f45b186153b4cc046d35fd941f6a80e108476fc0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585775"
 ---
-# <a name="preview-changes-window"></a>Değişiklikleri Önizle penceresi
+# <a name="preview-changes-window"></a>Değişiklikleri Önizleme penceresi
 
-Çeşitli kullanırken *hızlı Eylemler* veya *yeniden düzenleme* Visual Studio Araçları, mümkündür genellikle kabul etmeden önce projenize yapılmasına giden değişiklik önizlemesi yap. **Değişiklikleri Önizle** penceresi, burada yapılır.  Örneğin, işte **Değişiklikleri Önizle** ne bir yeniden adlandırma yeniden düzenleme sırasında değiştirilecek gösteren penceresi bir C# proje:
+Visual Studio'da çeşitli *Hızlı Eylemler* veya *Yeniden Düzenleme* araçlarını kullanırken, bunları kabul etmeden önce projenizde yapılacak değişiklikleri önizlemek genellikle mümkündür. **Önizleme Değişiklikleri** penceresi bunun yapıldığı yerdir.  Örneğin, bir C# projesinde yeniden adlandırma refactor sırasında nelerin değiştirileceğini gösteren **Önizleme Değişiklikleri** penceresi aşağıda verilmiştir:
 
 ![Değişiklikleri Önizleme](media/previewchanges.png)
 
-Pencerenin üst kısmında, her bir onay kutusu ile değiştirilecek özel satırları gösterir. Denetleyin veya yalnızca belirli satırlarını yeniden düzenleme seçmeli olarak uygulamak isterseniz her onay kutusunun işaretini kaldırın.
+Pencerenin üst yarısı, her biri bir onay kutusuyla değiştirilecek belirli satırları gösterir. Yeniden düzenlemeyi yalnızca belirli satırlara seçerek uygulamak istiyorsanız, her onay kutusunu işaretleyebilir veya işaretleyebilirsiniz.
 
-Alt pencerenin yarısını vurgulanmış etkilenen alanları ile değiştirilecek proje biçimlendirilmiş koddan gösterir. Pencerenin üst kısmında belirli bir satırı seçerek karşılık gelen bir satır alt yarı vurgular. Bu hızlı bir şekilde uygun satıra atla ve çevreleyen kod görmenizi sağlar.
+Pencerenin alt yarısı, etkilenen alanlar vurgulanırken, değiştirilecek projedeki biçimlendirilmiş kodu gösterir. Pencerenin üst yarısındaki belirli satırı seçmek, alt yarısındaki ilgili satırı vurgular. Bu, uygun satıra hızla atlamanızı ve çevredeki kodu görmenizi sağlar.
 
-Değişiklikleri gözden geçirdikten sonra **Uygula** bu değişiklikleri kaydetmek için düğme ya da tıklayın **iptal** şeyler oldukları gibi bırakmak için düğme.
+Değişiklikleri inceledikten sonra, bu değişiklikleri işlemek için **Uygula** düğmesini tıklatın veya işleri olduğu gibi bırakmak için **İptal** düğmesini tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

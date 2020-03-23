@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: derleme çıkış dizinini değiştirme'
+title: 'Nasıl yapilir: Yapı çıktı dizini değiştirme'
 ms.date: 05/15/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -12,40 +12,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 37342796f2dd94138136bb837cf6007d19d350c4
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114258"
 ---
-# <a name="how-to-change-the-build-output-directory"></a>Nasıl yapılır: derleme çıkış dizinini değiştirme
+# <a name="how-to-change-the-build-output-directory"></a>Nasıl yapilir: Yapı çıktı dizini değiştirme
 
-Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ayıklama, yayın veya her ikisi için) konumunu belirtebilirsiniz.
+Projeniz tarafından oluşturulan çıktının konumunu yapılandırma başına olarak (hata ayıklama, sürüm veya her ikisi için) belirtebilirsiniz.
 
 ## <a name="change-the-build-output-directory"></a>Derleme çıkış dizinini değiştirme
 
-1. Projenin özellik sayfalarını açmak için **Çözüm Gezgini** içindeki proje düğümüne sağ tıklayın ve **Özellikler**' i seçin.
+1. Projenin özellik sayfalarını açmak için **Solution Explorer'daki** proje düğümüne sağ tıklayın ve **Özellikler'i**seçin.
 
-2. Proje türüne göre uygun sekmeyi seçin:
+2. Proje türünüze göre uygun sekmeyi seçin:
 
-   - İçin C#, **derleme** sekmesini seçin.
+   - C# için **Yapı** sekmesini seçin.
    - Visual Basic için **Derle** sekmesini seçin.
-   - Veya C++ JavaScript için **genel** sekmesini seçin.
+   - C++ veya JavaScript için **Genel** sekmesini seçin.
 
-3. Üstteki yapılandırma açılır penceresinde çıkış dosyası konumunu değiştirmek istediğiniz yapılandırmayı (**hata ayıklama**, **yayın**veya **tüm yapılandırmalar**) seçin.
+3. Üstteki yapılandırma açılır ayında, değiştirmek istediğiniz çıktı dosyası konumunu **(Hata Ayıklama,** **Serbest Bırakma**veya **Tüm Yapılandırmalar)** yapılandırmayı seçin.
 
-4. Sayfada, proje türüne göre farklılık gösteren&mdash;çıkış yolu girişini bulun:
+4. Proje türünüze bağlı olarak&mdash;farklı olduğu sayfada çıktı yolu girişini bulun:
 
-   - Ve JavaScript projeleri C# için **çıkış yolu**
-   - Visual Basic projeleri için **derleme çıkış yolu**
-   - Görsel C++ projeler için **çıkış dizini**
+   - C# ve JavaScript projeleri için **çıkış yolu**
+   - Visual Basic projeleri için **çıktı yolu oluşturma**
+   - Visual C++ projeleri için **çıktı dizini**
 
-   Çıkış oluşturmak için yolu yazın (kök proje dizinine mutlak veya göreli) veya bunun yerine bu klasöre gitmek için **Gözden** geçirme ' yi seçin.
+   Çıktı oluşturmak için yolu yazın (mutlak veya kök proje dizinine göre) veya bunun yerine bu klasöre göz atmak için **Gözat'ı** seçin.
 
    ![Visual Studio C# projesi için çıkış yolu özelliği](media/output-path.png)
    
    > [!NOTE]
-   > Bazı projeler varsayılan olarak yapı yolundaki Framework ve Runtime içerir. Bunu değiştirmek için **Çözüm Gezgini**' de proje düğümüne sağ tıklayın, **Proje dosyasını Düzenle**' yi seçin ve aşağıdakileri ekleyin:
+   > Bazı projeler varsayılan olarak yapı yolunda çerçeve ve çalışma süresi içerir. Bunu değiştirmek **için, Çözüm Gezgini'ndeki**proje düğümüne sağ tıklayın, **Proje Dosyasını Edit'i**seçin ve aşağıdakileri ekleyin:
    > ```xml
    > <PropertyGroup>
    >   <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -54,12 +54,12 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
    > ```
 
 > [!TIP]
-> Çıktı belirttiğiniz konuma oluşturulmadığından, Visual Studio menü çubuğunda ilgili yapılandırmayı (örneğin, **hata ayıklama** veya **Sürüm**) oluştururken emin olun.
+> Çıktı belirttiğiniz konuma oluşturulmuyorsa, Visual Studio'nun menü çubuğunda seçerek ilgili yapılandırmayı (örneğin Hata **Ayıklama** veya **Sürüm)** oluşturduğunuzdan emin olun.
 >
-> ![Visual Studio 2019 ' de derleme yapılandırma Seçicisi](media/build-configuration-chooser.png)
+> ![Visual Studio 2019'da yapılandırma seçici oluşturun](media/build-configuration-chooser.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md)
-- [Genel özellik sayfası (proje)](/cpp/build/reference/general-property-page-project)
+- [Yapı sayfası, Proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md)
+- [Genel Mülkiyet sayfası (proje)](/cpp/build/reference/general-property-page-project)
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

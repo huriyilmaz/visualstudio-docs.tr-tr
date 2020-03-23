@@ -1,5 +1,5 @@
 ---
-title: '8\. Adım: testi özelleştirme'
+title: 'Adım 8: Testi özelleştirin'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,22 +14,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e568a9fa844802ddab934264cbc316d3514fe577
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579372"
 ---
-# <a name="step-8-customize-the-quiz"></a>8\. Adım: testi özelleştirme
+# <a name="step-8-customize-the-quiz"></a>Adım 8: Testi özelleştirin
 
-Öğreticinin son bölümünde, testi özelleştirmenin ve daha önce öğrendiklerinizi genişletmenin bazı yollarını keşfedeceksiniz. Örneğin, programın yanıtın hiç bir kesir olmadığı rastgele bölüm sorunları nasıl oluşturduğunu düşünün. Daha fazla bilgi edinmek için `timeLabel` denetimini farklı bir renkle açın ve sınava ipucu sunun.
+Öğreticinin son bölümünde, testi özelleştirmenin ve zaten öğrendiklerinizi genişletmenin bazı yollarını keşfedeceksiniz. Örneğin, programın, yanıtın hiçbir zaman bir kesir olmayan rasgele bölme sorunlarını nasıl oluşturduğunu düşünün. Daha fazla bilgi `timeLabel` edinmek için denetimi farklı bir renge çevirin ve sınava girene bir ipucu verin.
 
 > [!NOTE]
-> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
+> Bu konu temel kodlama kavramları hakkında bir öğretici serisinin bir parçasıdır. [Öğreticiye](../ide/tutorial-2-create-a-timed-math-quiz.md)genel bir bakış için bkz.
 
 ## <a name="to-customize-the-quiz"></a>Testi özelleştirmek için
 
-- Bir test içinde yalnızca beş saniye kaldığında, **BackColor** özelliğini ayarlayarak **timeLabel** denetimini kırmızıya dönüştürün.
+- Sınavda yalnızca beş saniye kaldığında, **BackColor** özelliğini ayarlayarak **zaman Etiket** denetimini kırmızıya çevirin.
 
   ```csharp
   timeLabel.BackColor = Color.Red;
@@ -41,12 +41,12 @@ ms.locfileid: "77579372"
 
   [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-  Test üzerindeyken rengi sıfırlayın.
+  Sınav bittiğinde rengi sıfırla.
 
-- Bir <xref:System.Windows.Forms.NumericUpDown> denetimine doğru yanıt girildiğinde, bir sesi oynatarak sınava ipucu sunun. (Her denetimin <xref:System.Windows.Forms.NumericUpDown.ValueChanged> olayı için bir olay işleyicisi yazmanız gerekir ve bu, her bir test, denetimin değerini değiştirdiğinde ateşlenir.)
+- Doğru yanıt bir denetime girildiğinde bir ses çalarak <xref:System.Windows.Forms.NumericUpDown> sınav anına bir ipucu verin. (Her denetimolayı <xref:System.Windows.Forms.NumericUpDown.ValueChanged> için bir olay işleyicisi yazmanız gerekir ve bu olay, sınav alıcısı denetimin değerini değiştirdiğinde yanar.)
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğreticiye gitmek için bkz. **[öğretici 3: eşleşen oyun oluşturma](../ide/tutorial-3-create-a-matching-game.md)** .
+- Bir sonraki öğreticiye gitmek için **[Bkz. Öğretici 3: Eşleşen bir oyun oluşturun.](../ide/tutorial-3-create-a-matching-game.md)**
 
-- Önceki öğretici adımına dönmek için bkz. [7. Adım: çarpma ve bölme sorunları ekleme](../ide/step-7-add-multiplication-and-division-problems.md).
+- Önceki öğretici adıma dönmek için [bkz.](../ide/step-7-add-multiplication-and-division-problems.md)

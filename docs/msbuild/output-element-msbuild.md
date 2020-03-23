@@ -1,5 +1,5 @@
 ---
-title: Output öğesi (MSBuild) | Microsoft Docs
+title: Çıktı Elemanı (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 90fbd517608c9c36db0b1035f296b9d9402abddd
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633037"
 ---
-# <a name="output-element-msbuild"></a>Output öğesi (MSBuild)
+# <a name="output-element-msbuild"></a>Çıkış elemanı (MSBuild)
 
-Öğe ve özelliklerde görev çıkış değerlerini depolar.
+Görev çıktı değerlerini maddelerde ve özelliklerde depolar.
 
- \<Proje > \<hedef > \<> \<) >
+ \<Proje \<> \<Hedef \<görev> Çıktı>>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,10 +47,10 @@ ms.locfileid: "77633037"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`TaskParameter`|Gerekli öznitelik.<br /><br /> Görevin çıkış parametresinin adı.|
-|`PropertyName`|`PropertyName` ya da `ItemName` özniteliği gereklidir.<br /><br /> Görevin çıkış parametre değerini alan özellik. Projeniz daha sonra $ (\<PropertyName >) söz dizimine sahip özelliğe başvurabilir. Bu özellik adı yeni bir özellik adı veya projede zaten tanımlanmış bir ad olabilir.<br /><br /> `ItemName` de kullanılıyorsa bu öznitelik kullanılamaz.|
-|`ItemName`|`PropertyName` ya da `ItemName` özniteliği gereklidir.<br /><br /> Görevin çıkış parametre değerini alan öğe. Projeniz daha sonra @ (\<ItemName >) söz dizimine sahip öğeye başvuru yapabilir. Öğe adı yeni bir öğe adı ya da projede zaten tanımlanmış bir ad olabilir. Öğe adı varolan bir öğe olduğunda, çıkış parametresi değerleri var olan öğeye eklenir. <br /><br /> `PropertyName` de kullanılıyorsa bu öznitelik kullanılamaz.|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`TaskParameter`|Gerekli öznitelik.<br /><br /> Görevin çıktı parametresinin adı.|
+|`PropertyName`|Ya `PropertyName` öznitelik `ItemName` gereklidir.<br /><br /> Görevin çıktı parametre değerini alan özellik. Projeniz daha sonra $(PropertyName\<>) sözdizimi ile tesise başvuruda bulunabilir. Bu özellik adı yeni bir özellik adı veya projede zaten tanımlanmış bir ad olabilir.<br /><br /> Bu öznitelik de `ItemName` kullanılıyorsa kullanılamaz.|
+|`ItemName`|Ya `PropertyName` öznitelik `ItemName` gereklidir.<br /><br /> Görevin çıktı parametre değerini alan madde. Projeniz daha sonra öğeye @(ItemName\<>) sözdizimi ile başvuruda bulunabilir. Madde adı yeni bir madde adı veya projede zaten tanımlanmış bir ad olabilir. Madde adı varolan bir öğe olduğunda, çıktı parametre değerleri varolan öğeye eklenir. <br /><br /> Bu öznitelik de `PropertyName` kullanılıyorsa kullanılamaz.|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -60,11 +60,11 @@ ms.locfileid: "77633037"
 
 | Öğe | Açıklama |
 | - | - |
-| [Görev](../msbuild/task-element-msbuild.md) | MSBuild görevi örneğini oluşturur ve yürütür. |
+| [Görev](../msbuild/task-element-msbuild.md) | MSBuild görevinin bir örneğini oluşturur ve yürütür. |
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, bir `Target` öğesinin içinde yürütülen `Csc` görevi gösterir. Görev parametrelerine geçirilen öğeler ve özellikler bu örneğin kapsamı dışında bildirilmiştir. Çıkış parametresindeki `OutputAssembly` değeri `FinalAssemblyName` öğesinde depolanır ve çıkış parametresindeki `BuildSucceeded` değeri `BuildWorked` özelliğinde depolanır. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
+ Aşağıdaki kod örneği, `Csc` bir `Target` öğenin içinde yürütülmekte olan görevi gösterir. Görev parametrelerine geçirilen maddeler ve özellikler bu örneğin kapsamı dışında beyan edilir. `OutputAssembly` Çıktı parametresinden gelen değer `FinalAssemblyName` maddede depolanır ve çıktı parametresinden `BuildSucceeded` gelen değer `BuildWorked` özellikte depolanır. Daha fazla bilgi için [Görevler'e](../msbuild/msbuild-tasks.md)bakın.
 
 ```xml
 <Target Name="Compile" DependsOnTargets="Resources">

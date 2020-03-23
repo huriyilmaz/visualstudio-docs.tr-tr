@@ -1,49 +1,52 @@
 ---
 title: Using deyimleri oluşturma
-ms.date: 02/19/2019
+ms.date: 03/10/2020
 ms.topic: reference
-author: kendrahavens
-ms.author: kehavens
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: f3b3435e10d6bb9a71fd16b9286759b136c167f4
-ms.sourcegitcommit: ea5e02720d71185f8e27fbea205024371b0c7ceb
+ms.openlocfilehash: 903b160bac0e8096062e09fd78ff4c92c46cf8ee
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544547"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094312"
 ---
-# <a name="add-missing-usings-in-visual-studio"></a>Visual Studio 'da eksik using 'leri ekleme
+# <a name="add-missing-usings-in-visual-studio"></a>Visual Studio'da eksik kullanmalar ekleme
 
 Bu kod oluşturma için geçerlidir:
 
 - C#
 
-**Ne:** , Kopya ve yapıştırılan kod için gerekli içeri aktarmaları veya [kullanım yönergelerini](/dotnet/csharp/language-reference/keywords/using-directive) hemen eklemenizi sağlar.
+- Visual Basic
 
-**Ne zaman:** Projenizde veya diğer kaynaklardaki farklı yerlerden kod kopyalamak ve yeni koda yapıştırmak yaygın bir uygulamadır. Bu hızlı eylem, kopya ve yapıştırılan kod için eksik içeri aktarmalar yönergelerini bulur ve sonra bunları eklemenizi ister. Bu kod düzeltilme Ayrıca projeden projeye başvurular da eklenebilir.
+**Ne:** Kopyala ve yapıştırılmış kod için gerekli içeri aktarımları veya [yönergeleri hemen](/dotnet/csharp/language-reference/keywords/using-directive) eklemenizi sağlar.
 
-**Neden:** Hızlı eylem gerekli içeri aktarmaları otomatik olarak eklediğinden, kodunuzun ihtiyaç duyduğu `using` yönergelerini el ile kopyalamanız gerekmez.
+**Ne zaman:** Projenizdeki veya diğer kaynaklardaki farklı yerlerden kod kopyalayıp yeni koda yapıştırmak yaygın bir uygulamadır. Bu Hızlı Eylem, kopyala ve yapıştırılmış kod için eksik içeri alma yönergelerini bulur ve sonra bunları eklemenizi ister. Bu kod düzeltmesi, projeden projeye başvurular da ekleyebilir.
 
-## <a name="add-missing-usings-refactoring"></a>Eksik using 'leri yeniden düzenleme Ekle
+**Neden:** Hızlı Eylem gerekli içeri aktarımları otomatik olarak eklediklerinden, `using` kodunuzu ihtiyaç duyduğu yönergeleri el ile kopyalamanız gerekmez.
 
-1. Kodu bir dosyadan kopyalayın ve gerekli `using` yönergeleri dahil etmeden yeni bir dosyaya yapıştırın. Ortaya çıkan hata, eksik `using` yönergelerini ekleyen bir kod düzeltmesine eşlik eder.
+## <a name="add-missing-usings-refactoring"></a>Eksik kullanır refactoring ekleme
+
+1. Kodu bir dosyadan kopyalayın ve gerekli `using` yönergeleri dahil etmeden yenibir dosyaya yapıştırın. Ortaya çıkan hata, eksik `using` yönergeleri ekleyen bir kod düzeltmesi ile birlikte verilir.
 
     > [!NOTE]
-    > **Araçlar > seçenekler > metin düzenleyicisi > C# yönergeleri kullanarak Gelişmiş > >** bu öneriyi etkinleştirmeniz gerekir.
+    > Bu öneriyi Araçlar **> Seçenekleri > Metin Düzenleyicisi > C# > Gelişmiş > Kullanma Yönergeleri'nde**etkinleştirmeniz gerekir.
 
-2. CTRL + seçeneğini belirleyin. **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü açmak için.
+2. Ctrl+'yı seçin. **Hızlı Eylemler ve Refactorings** menüsünü açmak için.
 
     ![Using deyimleri oluşturma](media/generate-using-codefix.png)
 
-3. Eksik başvuruyu eklemek için **\>başvurunuz \<using** seçeneğini belirleyin.
+3. **Başvurunuzu \<\>kullanarak** seçin ; eksik başvuruyu ekleyin.
 
-    ![Kullanımlar sonucu oluştur](media/generate-using-result.png)
+    ![Kullanarak sonuç oluşturma](media/generate-using-result.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

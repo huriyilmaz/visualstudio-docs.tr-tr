@@ -1,5 +1,5 @@
 ---
-title: Yük testi sonuçlarını çözümleme
+title: Yük Testi Sonuçlarının Analizi
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,43 +11,43 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9300dd1ebeaee9d87d2527dbc49fa66e319970c1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591248"
 ---
-# <a name="analyze-load-test-results-using-the-load-test-analyzer"></a>Yük Testi Çözümleyicisi kullanarak yük testi sonuçlarını çözümleme
+# <a name="analyze-load-test-results-using-the-load-test-analyzer"></a>Yük Testi Çözümleyicisini kullanarak yük testi sonuçlarını analiz edin
 
-Performans sorunlarını bulmak, hataları belirlemek ve kullandığınızda uygulamanızda geliştirmeleri ölçebilirsiniz **Yük Testi Çözümleyicisi**.
+**Yük Testi Çözümleyicisini**kullandığınızda darboğazları bulun, hataları belirleyin ve uygulamanızdaki gelişmeleri ölçün.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Bu şekilde yük testi sonuçlarını çözümleyin:
+Yük testi sonuçlarını şu şekilde analiz edin:
 
-- Bir yük testi çalıştırılırken izleyin.
+- Çalışırken bir yük testini izleyin.
 
-- Tamamlandıktan sonra yükleme testini çözümleme.
+- Bir yük testini tamamlandıktan sonra analiz edin.
 
-- Önceki yükleme testinden sonuçları görüntüleyin.
+- Önceki bir yükleme testinin sonuçlarını görüntüleyin.
 
-Ayrıca, iki veya daha fazla katılımcılarıyla paylaşmak eğilim analizi raporları karşılaştırma raporları da oluşturabilirsiniz. Bkz: [raporlama yük testleri için test karşılaştırmaları veya eğilim analizi sonuçları](../test/compare-load-test-results.md).
+Ayrıca, eğilim çözümlemesi için iki veya daha fazla raporu hissedarlarla paylaşmak üzere karşılaştıran raporlar da oluşturabilirsiniz. Bkz. [Test karşılaştırmaları veya eğilim analizi için yük testleri sonuçlarını raporlama.](../test/compare-load-test-results.md)
 
-Visual Studio Enterprise veya komut satırından yük testinizi çalıştırın olup olmadığını ve tek bir bilgisayarda veya uzak bir makine üzerinde yük testi çalışıp şu görevleri gerçekleştirebilirsiniz.
+Bu görevleri, visual studio enterprise'dan veya komut satırından çalıştırıp çalıştırmadığınızı ve yük testinizi tek bir bilgisayarda veya uzak bir makinede çalıştırıp çalıştırmadığınızı tamamlayabilirsiniz.
 
-## <a name="differences-between-analyzing-a-running-and-a-completed-load-test"></a>Bir çalışan ve tamamlanmış bir yük testi arasındaki farklar
+## <a name="differences-between-analyzing-a-running-and-a-completed-load-test"></a>Çalışan ve tamamlanmış yük testini çözümleme arasındaki farklar
 
-Bir yük testi çalıştırdığınızda **Yük Testi Çözümleyicisi** yük testinize ve zaman testin başlatıldığı zaman adı ile birlikte ayrı bir sekmede görüntüler (örneğin, **LoadTest1 [12:40 PM]** ). Bir yük testi çalıştığında, performans sayacı verilerini daha küçük bir kümesi bellekte tutulur. Bu veri kümesi, Yük testiniz çalışırken izleyebilirsiniz. Bir yük testi tamamlandıktan sonra veritabanından veri kümesini analiz edebilirsiniz. Hangi verilerin bir yük testi çalıştırdığında ve hangi test yükleme gördüğünüz verileri tamamlandı görüntülenen farklar vardır. Örneğin, yük testi tamamlanana kadar yüzde 90'ını ve yüzde 95 yanıt süresi verilerini hesaplanmaz. Bazı farklılıklar da işlevleri ve verileri çözümlemek kullanılabilen araçların oluşur.
+Bir yük testi çalıştırdığınızda, **Yük Testi Çözümleyicisi,** yük testinin adı ve testin başlatıldık zamanıyla birlikte ayrı bir sekmede görüntülenir (örneğin, **LoadTest1 [12:40 PM]**). Bir yük testi çalıştığında, performans sayacı verilerinin daha küçük bir kümesi bellekte tutulur. Yük testiniz çalıştığında bu veri kümesini izleyebilirsiniz. Bir yük testi tamamlandıktan sonra, veritabanından tam veri kümesini çözümleyebilirsiniz. Bir yük testi çalıştığında hangi verilerin görüntülendiği ve yük testi tamamlandıktan sonra görebileceğiniz verilerde farklılıklar vardır. Örneğin, yük testi tamamlanana kadar yüzde 90 ve yüzde 95 yanıt süresi verileri hesaplanmaz. Verileri çözümlemek için kullanılabilen araçların işlevselliğinde de bazı farklılıklar oluşur.
 
-Yük testi çalıştırdığınızda, iki görünüm mevcuttur: **grafikleri** görünümü ve **tabloları** görünümü. **Grafikleri** görünümü, toplanan grafiği performans sayaçları için sağlar. **Tabloları** görünümü her testler, sayfalar, işlemleri ve toplanan istekleri hakkında bilgi sağlar. Hataları listeleyen bir tablo ayrıca Al
+Yük testini çalıştırdığınızda, iki görünüm kullanılabilir: **Grafikler** görünümü ve **Tablolar** görünümü. **Grafikler** görünümü, toplanan performans sayaçlarını grafikle yapmanızı sağlar. **Tablolar** görünümü, toplanan testlerin, sayfaların, hareketlerin ve isteklerin her biri hakkında bilgi verir. Ayrıca hataları listeleyen bir tablo alırsınız.
 
-Yük testi çalıştırması tamamlandığında, varsayılan olarak **özeti** görünümü görüntülenir. Arasında geçiş yapabilirsiniz **özeti**, **grafikleri**, **tabloları**, ve **ayrıntıları** araç çubuğu kullanılarak görünümleri. **Yük Testi Çözümleyicisi** yerleştirilebilir ya da normal Visual Studio pencere düzenleme yöntemlerini kullanarak kayan nokta ayarlayın. Tamamlanan yük testi çalışmaları analiz ederken, birden çok olabilir **Yük Testi Çözümleyici** açık karşılaştırmak için aynı anda farklı yük testi çalıştırır.
+Varsayılan olarak, yük testi çalışması tamamlandığında **Özet** görünümü görüntülenir. Araç çubuğunu kullanarak **Özet,** Grafikler, **Tablolar**ve **Ayrıntılar** **görünümleri**arasında geçiş yapabilirsiniz. **Yük Testi Çözümleyicisi,** her zamanki Visual Studio pencere işleme tekniklerini kullanarak sabitlenebilir veya yüzdürmek üzere ayarlanabilir. Tamamlanan yük testi çalıştırmalarını analiz ettiğinizde, farklı yük testi çalıştırmalarını karşılaştırmak için aynı anda birden çok **Yük Testi Çözümleyicisi** açılabilir.
 
 ## <a name="tasks"></a>Görevler
 
 |Görevler|İlişkili konular|
 |-|-|
-|**Yük testi sonuçlarını erişme:** Yük Testi Düzenleyicisi'nden bir yük testi çalıştırdığınızda, yük testi sonuçları otomatik olarak açmak ve yük testi görüntülenen **Yük Testi Çözümleyicisi**.|-   [Nasıl yapılır: erişim yük testi sonuçlarını çözümleme](../test/how-to-access-load-test-results-for-analysis.md)|
-|**Yük testinize analiz Notları Ekle:** çözümlemenizi, Yük testiniz için yorum ekleyebilirsiniz. Açıklamalar, yükleme testi sonucuyla birlikte kalıcı olarak depolanır. Ayrıca girdiğiniz açıklamayı görüntüler **açıklama** yük testi ile ilişkili olan sütun **yönetme testi sonuçlarını Aç ve** Yük Testi Düzenleyicisi iletişim kutusunda.<br /><br /> Daha fazla bilgi için [nasıl yapılır: erişim yük testi sonuçlarını analiz](../test/how-to-access-load-test-results-for-analysis.md).<br /><br /> Ayrıca, bir Excel raporunu yük test sonuçları oluşturduğunuzda yorumları görüntülenir.<br /><br /> Daha fazla bilgi için [raporlama yük testleri için test karşılaştırmaları veya eğilim analizi sonuçları](../test/compare-load-test-results.md).||
-|**Yük testi sonuçlarını çözümleme:** veri yük testinin eriştikten sonra sonuç verileri analiz edebilirsiniz. Sonuçları hızlı bir şekilde anlamak için yükleme testi özetini görüntüleyebilirsiniz. Yükleme testi özetini kısa ve kolay okunur bir biçimde anahtar sonuçları gösterilmektedir.<br /><br /> Yükleme testi özetini yazdırabilir. Bu, proje katılımcılarına sonuçları iletişim kurarken güvenli kılar.<br /><br /> Sonuçlarında grafikler ve Tablolar'ı kullanarak yük testi sonuçlarını ayrıntılarını analiz edebilirsiniz. Bunlar **hataları**, **sayfaları**, **istekleri**, **SQL İzleme**, **testleri**,  **Eşikleri**, ve **işlemleri**.|-   [Yük testi sonuçları özetine genel bakış](../test/load-test-results-summary-overview.md)<br />-   [Nasıl yapılır: web sayfası yanıtını görüntüleme](../test/how-to-view-web-page-response-time-in-a-load-test.md)<br />-   [Eşik kuralı ihlallerini çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)<br />-   [Grafik görünümünde yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md)<br />-   [Yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümleyin](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)|
-|**Performans sorunlarını yalıtmak için yük testi sonuçlarınızda Sanal Kullanıcı etkinliğini çözümleme:** sanal kullanıcı aktivite grafiği, bir yük testi sırasında sanal kullanıcıların ne yapmakta olduğunuz görselleştirmek için kullanabilirsiniz. Bu, bir CPU ani veya İsteği/sn bırakmaları yalıtmak ve hangi testler veya sayfaları bu ani ve kaldırma işlemlerine sırasında çalışan belirlemek yardımcı olabilir.|-   [Ayrıntılar görünümünde sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)|
+|**Yük testinizin sonuçlarına erişim:** Yük Testi Düzenleyicisi'nden bir yük testi çalıştırdığınızda, yük testi sonuçları otomatik olarak açılır ve çalışan yük testi **Yük Testi Çözümleyicisi'nde**görüntülenir.|-   [Nasıl yapılı: Analiz için yük testi sonuçlarına erişin](../test/how-to-access-load-test-results-for-analysis.md)|
+|**Yük testinize analiz notları ekleyin:** Analizinizi yaparken yükleme testinize yorum ekleyebilirsiniz. Açıklamalar, yük testi sonucuyla birlikte kalıcı olarak depolanır. Girdiğiniz açıklama, Yükle Test Düzenleyicisi'ndeki Test Sonuçlarını **Aç ve Yönet** iletişim kutusunda ki yük testiyle ilişkili **Açıklama** sütununda da görüntülenir.<br /><br /> Daha fazla bilgi için [bkz: Çözümleme için yük testi sonuçlarına erişin.](../test/how-to-access-load-test-results-for-analysis.md)<br /><br /> Ayrıca, yük testi sonuçları için bir Excel raporu oluşturduğunuzda açıklamalar görüntülenir.<br /><br /> Daha fazla bilgi için, [test karşılaştırmaları veya eğilim çözümlemesi için yük testleri sonuçlarını raporlama'ya](../test/compare-load-test-results.md)bakın.||
+|**Yük testinizin sonuçlarını analiz etmek:** Yük testi çalıştırma verilerine eriştinkten sonra, elde edilen verileri çözümleyebilirsiniz. Sonuçları hızlı bir şekilde anlamak için Yük Testi Özeti'ni görüntüleyebilirsiniz. Yük testi özeti, anahtar sonuçlarını kompakt ve kolay okunabilmektedir.<br /><br /> Yük testi özetini yazdırabilirsiniz. Bu, sonuçları hissedarlara iletdiğinizde kullanımı kolaylaştırır.<br /><br /> Sonuçlardaki grafikleri ve tabloları kullanarak yük testi sonuçlarınızın ayrıntılarını analiz edebilirsiniz. Bunlar **Hatalar,** **Sayfalar,** **İstekler,** **SQL İzleme,** **Testler,** **Eşikler**ve **Hareketler**içerir.|-   [Yük testi sonuçları özetine genel bakış](../test/load-test-results-summary-overview.md)<br />-   [Nasıl yapılır: Web sayfası yanıtını görüntüleme](../test/how-to-view-web-page-response-time-in-a-load-test.md)<br />-   [Eşik kural ihlallerini çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)<br />-   [Grafikler görünümünde yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-in-the-graphs-view.md)<br />-   [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz etme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)|
+|**Performans sorunlarını yalıtmak için yük testi sonuçlarınızdaki sanal kullanıcı etkinliğini çözümleme:** Sanal kullanıcıların yükleme testi sırasında ne yaptığını görselleştirmek için Sanal Kullanıcı Etkinlik Grafiği'ni kullanabilirsiniz. Bu, cpu'daki ani artışları yalıtmanıza veya istek/sn'deki düşüşleri yalıtmanıza ve bu ani artışlar ve düşmeler sırasında hangi testlerin veya sayfaların çalıştığını belirlemenize yardımcı olabilir.|-   [Ayrıntılar görünümünde sanal kullanıcı etkinliğini analiz etme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)|

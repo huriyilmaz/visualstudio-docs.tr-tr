@@ -1,5 +1,5 @@
 ---
-title: C++IntelliSense
+title: C++ IntelliSense
 ms.date: 10/08/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -8,103 +8,103 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c0d1be12f733a858bf223fb1dce6a091c0dc6c50
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594220"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense özellikleri
 
-IntelliSense, kodlamayı daha kolay hale getirmek için bir özellik kümesine verilen addır. İçin C++ IntelliSense, tek başına dosyalar ve C++ projenin parçası olan dosyalar için de kullanılabilir. Platformlar arası projelerde, bazı IntelliSense özellikleri, bir Android veya iOS bağlamında olsanız bile, paylaşılan kod projesindeki *. cpp* ve *. c* dosyalarında kullanılabilir.
+IntelliSense, kodlamayı daha kullanışlı hale getiren bir dizi özelliğe verilen bir addır. IntelliSense for C++ tek başına dosyaların yanı sıra C++ projesinin bir parçası olan dosyalar için de kullanılabilir. Platformlar arası projelerde, Android veya iOS bağlamında olsanız bile paylaşılan kod projesinde *.cpp* ve *.c* dosyalarında bazı IntelliSense özellikleri bulunur.
 
-Bu makalede C++ IntelliSense özelliklerine genel bakış sunulmaktadır. Projenizi IntelliSense için yapılandırma ve sorunları giderme hakkında daha fazla bilgi için bkz. [IntelliSense için C++ proje yapılandırma](visual-cpp-intellisense-configuration.md).
+Bu makalede, C++ IntelliSense özelliklerine genel bir bakış sağk. Projenizi IntelliSense için nasıl yapılandırılabildiğiniz ve sorunları nasıl gidereceğiniz hakkında bilgi için Bkz. [IntelliSense için bir C++ projesini yapılandırma.](visual-cpp-intellisense-configuration.md)
 
-## <a name="intellisense-features-in-c"></a>İçindeki IntelliSense özellikleriC++
+## <a name="intellisense-features-in-c"></a>C++'da IntelliSense özellikleri
 
-IntelliSense, kodlamayı daha kolay hale getirmek için bir özellik kümesine verilen addır. Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse tamamı **Seçenekler** iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. böylece, **metin düzenleyici** ** > C++**  **Gelişmiş** > . **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
+IntelliSense, kodlamayı daha kullanışlı hale getiren bir dizi özelliğe verilen bir addır. Farklı kişilerin neyin uygun olduğu konusunda farklı fikirleri olduğundan, IntelliSense özelliklerinin hemen hemen tümü, **Text Editor** > **C/C++** > **Advanced**altında **Seçenekler** iletişim kutusunda etkinleştirilebilir veya devre dışı tutulabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
 
-![Araç seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
+![Araç Seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
 
-IntelliSense 'e erişmek için aşağıdaki görüntüde gösterilen menü öğelerini ve klavye kısayollarını kullanabilirsiniz.
+IntelliSense'e erişmek için aşağıdaki resimde gösterilen menü öğelerini ve klavye kısayollarını kullanabilirsiniz.
 
 ![IntelliSense menüsü](../ide/media/vs2015_cpp_intellisense_menu.png)
 
 ## <a name="statement-completion-and-member-list"></a>Ekstre tamamlama ve üye listesi
 
-Bir anahtar sözcük, tür, işlev, değişken adı veya derleyicinin tanıdığı diğer program öğesini yazmaya başladığınızda, düzenleyici sizin için sözcüğü tamamlamayı önerir.
+Derleyicinin tanıdığı bir anahtar kelime, tür, işlev, değişken adı veya başka bir program öğesi yazmaya başladığınızda, düzenleyici sözcüğü sizin için tamamlamayı teklif eder.
 
-Simgelerin ve anlamlarıyla ilgili bir liste için, bkz. [sınıf görünümü ve nesne tarayıcısı simgeleri](../ide/class-view-and-object-browser-icons.md).
+Simgelerin ve anlamlarının listesi için [Sınıf Görünümü ve Nesne Tarayıcı simgelerine](../ide/class-view-and-object-browser-icons.md)bakın.
 
-![Visual C&#43; &#43; tamamlanmış sözcük penceresi](../ide/media/vs2015_cpp_complete_word.png)
+![Görsel C&#43;&#43; Word'&#43;&#43; Tamamla penceresi](../ide/media/vs2015_cpp_complete_word.png)
 
-Üye listesini ilk kez çağırdığınızda, yalnızca geçerli bağlam için erişilebilen üyeleri gösterir. Bundan sonra **Ctrl**+**J** tuşlarına basarsanız, erişilebilirliğinden bağımsız olarak tüm üyeleri gösterir. Üçüncü kez çağırırsanız, daha geniş bir program öğeleri listesi gösterilir. **Seçenekler** iletişim kutusunda, **metin düzenleyici** > **C++ C/**  > **genel** > **otomatik liste üyeleri**' nin altındaki üye listesini devre dışı bırakabilirsiniz.
+Üye listesini ilk kez çağırdığınızda, yalnızca geçerli bağlam için erişilebilir olan üyeleri gösterir. Bundan sonra **Ctrl**+**J** tuşuna baslarsanız, erişilebilirlik ne olursa olsun tüm üyeleri gösterir. Üçüncü kez çağırırsanız, program öğelerinin daha da geniş bir listesi gösterilir. **Text Editor** > **C/C++** > **Genel** > **Otomatik liste üyeleri**altında **Seçenekler** iletişim kutusundaki üye listesini kapatabilirsiniz.
 
-![Visual C&#43; &#43; üye listesi](../ide/media/vs2015_cpp_list_members.png)
+![Visual C&#43;&#43; Üye Listesi](../ide/media/vs2015_cpp_list_members.png)
 
 ## <a name="parameter-help"></a>Parametre yardımı
 
-Bir işlev çağrısının açma ayracı veya bir sınıf şablonu değişken bildiriminde açılı ayraç yazdığınızda, düzenleyici, işlevin veya oluşturucunun her bir aşırı yüklemesiyle ilgili parametre türleriyle küçük bir pencere gösterir. "Current" parametresi imleç konumuna göre&mdash;&mdash;kalın. **Seçenekler** iletişim kutusunda parametre bilgilerini devre dışı bırakmak için **metin düzenleyici** > **C/C++**  > **genel** > **parametre bilgileri**' ni kullanabilirsiniz.
+Bir işlev çağrısının açılış ayraçını veya sınıf şablonu değişken bildirimine açı ayracı yazdığınızda, düzenleyici işlevin veya oluşturucunun her yükü için parametre türlerine sahip küçük bir pencere gösterir. İmleç konumuna&mdash;&mdash;dayalı "geçerli" parametresi kalın renktedir. **Metin**  > **Düzenleyicisi C/C++** > **Genel** > **Parametre bilgileri**altında Seçenekler iletişim kutusundaki parametre bilgilerini kapatabilirsiniz. **Text Editor**
 
-![Visual C&#43; &#43; parametresi yardımı](../ide/media/vs_2015_cpp_param_help.png)
+![Görsel C&#43;&#43; Parametre Yardımı](../ide/media/vs_2015_cpp_param_help.png)
 
 ## <a name="quick-info"></a>Hızlı Bilgi
 
-Fare imlecini bir değişken üzerine getirdiğinizde, tür bilgilerini ve türün tanımlandığı üstbilgiyi gösteren küçük bir pencere satır içi görüntülenir. İşlevin imzasını görmek için bir işlev çağrısının üzerine gelin. **Seçenekler** iletişim kutusunda, **metin Düzenleyicisi** > **C++ C/**  > **Gelişmiş** > **otomatik hızlı bilgi**' nın altında bulunan hızlı bilgileri devre dışı bırakabilirsiniz.
+Fare imlecini bir değişkenin üzerine gonttunuzda, tür bilgilerini ve türün tanımlandığı üstbilgiyi gösteren küçük bir pencere satır içinde görünür. İşlevin imzasını görmek için bir işlev çağrısının üzerine titreyin. Metin > **Düzenleyicisi C/C++** > **Advanced** > Auto **Text Editor****Quick Info** **altında, Seçenekler** iletişim kutusunda Hızlı Bilgi'yi kapatabilirsiniz.
 
-![Visual C&#43; &#43; QuickInfo](../ide/media/vs2015_cpp_quickinfo.png)
+![Visual C&#43;&#43; QuickInfo](../ide/media/vs2015_cpp_quickinfo.png)
 
-## <a name="error-squiggles"></a>Hata dalgalı çizgiler
+## <a name="error-squiggles"></a>Hata squiggles
 
-Dalgalı çizgiler bir program öğesi (değişken, anahtar sözcük, küme ayracı, tür adı vb.) altında bir hata veya koddaki olası bir hataya dikkat edin. Bir iletme bildirimi yazdığınızda, uygulamayı yazmanız gerektiğini hatırlatmak için yeşil bir dalgalı çizgi görünür. Şu anda etkin olmayan kodda bir hata olduğunda, örneğin Windows bağlamında çalışırken, ancak Android bağlamında bir hata olabilecek bir öğe girdiğinizde, bir paylaşılan projede mor renkli bir çizgi görünür. Kırmızı dalgalı çizgi, bir derleyici hatasını veya bir uyarı ile uğraşmanız gereken etkin kodda uyarı olduğunu gösterir.
+Bir program öğesi (değişken, anahtar kelime, ayraç, tür adı vb.) altında dalgalanır, dikkatinizi koddaki bir hataya veya olası hataya çeker. Uygulamayı hala yazmanız gerektiğini hatırlatmak için bir ileri bildirimi yazdığınızda yeşil bir kıvrım belirir. Paylaşılan bir projede, örneğin Windows bağlamında çalışırken ancak Android bağlamında hata olacak bir şey girdiğinizde, şu anda etkin olmayan bir kod hatası olduğunda mor bir dalgalı belirir. Kırmızı dalgalı bir derleyici hata veya uyarı ile uğraşmak gerekir etkin kod gösterir.
 
-![Visual C&#43; &#43; hatası dalgalı çizgiler](../ide/media/vs2015_cpp_error_quiggles.png)
+![Görsel C&#43;&#43; hata squiggles](../ide/media/vs2015_cpp_error_quiggles.png)
 
 ### <a name="code-colorization-and-fonts"></a>Kod renklendirme ve yazı tipleri
 
-Varsayılan renkler ve yazı tipleri, **Seçenekler** iletişim kutusunda, **ortam** > **yazı tipleri ve renkler**altında değiştirilebilir. Yalnızca düzenleyiciden değil, burada birçok UI penceresi için yazı tiplerini değiştirebilirsiniz. " C++ C++" İle başlamak için özel ayarlar diğer ayarlar tüm diller içindir.
+Varsayılan renkler ve yazı **tipleri,** **Çevre** > **Yazı Tipleri ve Renkler**altında Seçenekler iletişim kutusunda değiştirilebilir. Burada birçok UI penceresi için yazı tiplerini değiştirebilirsiniz, sadece düzenleyici değil. C++'a özgü ayarlar "C++" ile başlar; diğer ayarlar tüm diller içindir.
 
-## <a name="cross-platform-intellisense"></a>Platformlar arası IntelliSense
+## <a name="cross-platform-intellisense"></a>Platform ötesi IntelliSense
 
-Paylaşılan bir kod projesinde, Android bağlamında çalışırken bile dalgalı çizgiler gibi bazı IntelliSense özellikleri kullanılabilir. Etkin olmayan bir projede hataya neden olacak bir kod yazarsanız, IntelliSense hala dalgalı çizgiler gösterir, ancak geçerli bağlamdaki hatalar için dalgalı çizgiler 'den farklı bir renkte yer alırlar.
+Paylaşılan bir kod projesinde, Android bağlamında çalışırken bile squiggles gibi bazı IntelliSense özellikleri kullanılabilir. Etkin olmayan bir projede hataya neden olacak bazı kodlar yazarsanız, IntelliSense hala dalgalı bir şekilde gösterir, ancak bunlar geçerli bağlamdaki hatalar için squiggles'dan farklı bir renktedir.
 
-Android ve iOS için derlemek üzere yapılandırılmış bir OpenGLES uygulaması düşünün. Çizim, düzenlenmekte olan paylaşılan kodu gösterir. Bu görüntüde, etkin proje **iOS. StaticLibrary**'dir:
+Android ve iOS için yapılandırılacak bir OpenGLES Uygulamasını düşünün. Resimde paylaşılan kod düzenleniyor. Bu resimde, etkin proje **iOS.StaticLibrary**:
 
-![etkin proje olarak iOS seçilidir.](../ide/media/intellisensecppcrossplatform2.png)
+![iOS etkin proje olarak seçilir.](../ide/media/intellisensecppcrossplatform2.png)
 
 Aşağıdakilere dikkat edin:
 
-- `__ANDROID__` iOS projesi için tanımlanmadığı için, 6. satırdaki `#ifdef` dalı, etkin olmayan bir bölgeyi göstermek için gridir.
+- iOS projesi için `#ifdef` `__ANDROID__` tanımlanmadığından, satır 6'daki dal etkin olmayan bir bölgeyi belirtmek için gri renkte dir.
 
-- 11. satırdaki tebrik değişkeni, artık kırmızı renkli bir çizgi olan `HELLO`tanımlayıcı ile başlatılır. Bunun nedeni, şu anda etkin olan iOS projesinde tanımlı `HELLO` tanımlayıcı değildir.
+- Satır 11'deki karşılama `HELLO`değişkeni, şimdi kırmızı bir dalgalı olan tanımlayıcı ile başharfe işlenir. Bunun nedeni, şu anda `HELLO` etkin olan iOS projesinde tanımlayıcı nın tanımlanmamış olmasıdır.
 
-- Bu tanımlayıcı (Şu anda) etkin olmayan **Android. NativeActivity** projesinde tanımlanmadığı için, 12. satırın tanımlayıcı üzerinde mor renkli bir çizgi vardır `BYE`. Bu satır iOS etkin proje olduğunda derlense de, Android etkin proje olduğunda derlenmez. Bu paylaşılan kod olduğundan, geçerli etkin yapılandırmada derlense de kodu düzeltmeniz gerekir.
+- Bu tanımlayıcı (şu anda) etkin olmayan `BYE` **Android.NativeActivity** projesinde tanımlanmadığından Satır 12'de tanımlayıcıda mor bir dalgalı lık vardır. Ios etkin proje olduğunda bu satır derlese de, Android etkin proje olduğunda derlemeolmaz. Bu paylaşılan kod olduğundan, şu anda etkin yapılandırmada derlenmiş olsa bile kodu düzeltmeniz gerekir.
 
-Etkin projeyi Android olarak değiştirirseniz dalgalı çizgiler değişikliği:
+Etkin projeyi Android olarak değiştirirseniz, dalgalı geçişler:
 
-- `__ANDROID__` Android projesi için tanımlandığından, 8. satırdaki `#else` dalı, etkin olmayan bir bölgeyi gösterecek şekilde gri renkte.
+- `#else` Android projesi için tanımlandığı için, 8. `__ANDROID__`
 
-- 11. satırdaki tebrik değişkeni, mor renkli bir çizgi olan tanımlayıcı `HELLO`ile başlatılır. Bunun nedeni, şu anda etkin olmayan iOS projesinde tanımlı `HELLO` tanımlayıcı değildir.
+- Satır 11'deki karşılama değişkeni, mor bir `HELLO`dalgalı olan tanımlayıcı ile başharfe işlenir. Bunun nedeni, `HELLO` şu anda etkin olmayan iOS projesinde tanımlayıcı nın tanımlanmamış olmasıdır.
 
-- Bu tanımlayıcı etkin projede tanımlanmadığı için, 12. satırda `BYE` tanımlayıcı üzerinde kırmızı renkli bir çizgi vardır.
+- Bu tanımlayıcı etkin projede tanımlanmadığından Satır 12'nin tanımlayıcısında `BYE` kırmızı bir dalgalı lık vardır.
 
-## <a name="intellisense-for-stand-alone-files"></a>Tek başına dosyalar için IntelliSense
+## <a name="intellisense-for-stand-alone-files"></a>Bağımsız dosyalar için IntelliSense
 
-Herhangi bir projenin dışında tek bir dosya açtığınızda IntelliSense 'i yine de kullanmaya devam edersiniz. **Seçenekler** iletişim kutusunda, özel IntelliSense özelliklerini etkinleştirebilir veya devre dışı bırakabilirsiniz, **metin düzenleyici** ** > C++**  **Gelişmiş** > . IntelliSense 'i bir projenin parçası olmayan tek dosyalar için yapılandırmak üzere, **proje dışı dosyalar Için IntelliSense ve gözatma** bölümüne bakın.
+Herhangi bir projenin dışında tek bir dosyayı açtığınızda, yine de IntelliSense olsun. **Text Editor** > **C/C++** > **Advanced** **altında, Seçenekler** iletişim kutusunda belirli IntelliSense özelliklerini etkinleştirebilir veya devre dışı kullanabilirsiniz. Projenin parçası olmayan tek dosyalar için IntelliSense'i yapılandırmak **için IntelliSense'i arayın ve proje dışı dosyalar bölümüne göz atın.**
 
-![Visual C&#43; &#43; tek dosya IntelliSense](../ide/media/vs2015_cpp_single_file_intellisense.png)
+![Görsel C&#43;&#43; tek dosya intellisense](../ide/media/vs2015_cpp_single_file_intellisense.png)
 
-Varsayılan olarak, tek dosya IntelliSense yalnızca üst bilgi dosyalarını bulmak için standart içerme dizinlerini kullanır. Daha fazla dizin eklemek için, **çözüm** düğümündeki kısayol menüsünü açın ve aşağıdaki çizimde gösterildiği gibi, dizini **hata ayıklama kaynak kodu** listesine ekleyin:
+Varsayılan olarak, tek dosya IntelliSense yalnızca üstbilgi dosyalarını bulmak için standart dahil dizinleri kullanır. Ek dizinler eklemek **için, Çözüm** düğümündeki kısayol menüsünü açın ve aşağıdaki çizimde gösterildiği gibi dizininizi **Hata Ayıklama Kaynak Kodu** listesine ekleyin:
 
-![Üst bilgi dosyasına bir yol ekleniyor.](../ide/media/intellisensedebugyourcode.jpg)
+![Üstbilgi dosyasına yol ekleme.](../ide/media/intellisensedebugyourcode.jpg)
 
-## <a name="enable-or-disable-features"></a>Özellikleri etkinleştirme veya devre dışı bırakma
+## <a name="enable-or-disable-features"></a>Özellikleri etkinleştirme veya devre dışı
 
-Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse tamamı **Seçenekler** iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. böylece, **metin düzenleyici** ** > C++**  **Gelişmiş** > . **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
+Farklı kişilerin neyin uygun olduğu konusunda farklı fikirleri olduğundan, IntelliSense özelliklerinin hemen hemen tümü, **Text Editor** > **C/C++** > **Advanced**altında **Seçenekler** iletişim kutusunda etkinleştirilebilir veya devre dışı tutulabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
 
-![Araç seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
+![Araç Seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IntelliSense Kullanma](../ide/using-intellisense.md)
-- [IntelliSense için C++ bir proje yapılandırma](visual-cpp-intellisense-configuration.md)
+- [IntelliSense için bir C++ projesi yapılandırma](visual-cpp-intellisense-configuration.md)

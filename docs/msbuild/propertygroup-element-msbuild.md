@@ -1,5 +1,5 @@
 ---
-title: PropertyGroup öğesi (MSBuild) | Microsoft Docs
+title: PropertyGroup Öğesi (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b94cf266be81b81aca9c83fe8d29b9777ee9114b
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632933"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup öğesi (MSBuild)
 
-Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğeleri kümesi içerir. MSBuild projesinde kullanılan her `Property` öğesi bir `PropertyGroup` öğesinin alt öğesi olmalıdır.
+Kullanıcı tanımlı [Özellik](../msbuild/property-element-msbuild.md) öğeleri kümesi içerir. BIR `Property` MSBuild projesinde kullanılan her öğe `PropertyGroup` bir öğenin alt öğesi olmalıdır.
 
- \<Proje > \<PropertyGroup >
+ \<Proje \<> PropertyGroup>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,13 +48,13 @@ Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğele
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|Koşul|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Özellik](../msbuild/property-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Özellik değerini içeren Kullanıcı tanımlı özellik adı. Bir `PropertyGroup` öğesinde sıfır veya daha fazla *özellik* öğesi olabilir.|
+|[Özellik](../msbuild/property-element-msbuild.md)|İsteğe bağlı öğe.<br /><br /> Özellik değerini içeren kullanıcı tanımlı özellik adı. Bir `PropertyGroup` öğede sıfır veya daha fazla *Özellik* öğesi olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -64,7 +64,7 @@ Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğele
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, bir koşula bağlı olarak özelliklerin nasıl ayarlanacağını gösterir. Bu örnekte, `CompileConfig` özelliğinin değeri `DEBUG`, `OutputPath` öğesinin içindeki `Optimization`, `Obfuscate`ve `PropertyGroup` özellikleri ayarlanır.
+ Aşağıdaki kod örneği, bir koşula göre özelliklerinasıl ayarlanır gösterir. Bu `CompileConfig` örnekte, özelliğin değeri `DEBUG`, `Optimization`, `Obfuscate`, `OutputPath` , ve `PropertyGroup` öğenin içindeki özellikleri ayarlanır.
 
 ```xml
 <PropertyGroup Condition="'$(CompileConfig)' == 'DEBUG'" >

@@ -1,5 +1,5 @@
 ---
-title: Proje öğesi (MSBuild) | Microsoft Docs
+title: Proje Öğesi (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: df9eff3e941cc21aaa71c2779a72084e12e8e590
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632985"
 ---
 # <a name="project-element-msbuild"></a>Proje öğesi (MSBuild)
@@ -58,27 +58,27 @@ MSBuild proje dosyasının gerekli kök öğesi.
 
 | Öznitelik | Açıklama |
 |------------------------| - |
-| `DefaultTargets` | İsteğe bağlı öznitelik.<br /><br /> Hedef belirtilmemişse, varsayılan hedef veya hedefler, yapı giriş noktası olarak kullanılır. Birden çok hedef noktalı virgül (;) Ted.<br /><br /> `DefaultTargets` özniteliğinde veya MSBuild komut satırında hiçbir varsayılan hedef belirtilmemişse, [Içe aktarma](../msbuild/import-element-msbuild.md) öğeleri değerlendirildikten sonra motor proje dosyasındaki ilk hedefi yürütür. |
-| `InitialTargets` | İsteğe bağlı öznitelik.<br /><br /> `DefaultTargets` özniteliğinde veya komut satırında belirtilen hedeflerden önce çalıştırılacak başlangıç hedefi veya hedefleri. Birden çok hedef noktalı virgül (`;`) ile ayrılır. Birden fazla içeri aktarılan dosya `InitialTargets`tanımladıysa, belirtilen tüm hedefler içeri aktarmaların karşılaştığı sırada çalıştırılır. |
-| `Sdk` | İsteğe bağlı öznitelik. <br /><br /> . Proj dosyasına eklenen örtük Içeri aktarma deyimleri oluşturmak için kullanılacak SDK adı ve isteğe bağlı sürüm. Sürüm belirtilmemişse, MSBuild varsayılan bir sürümü çözümlemeye çalışır.  Örneğin, `<Project Sdk="Microsoft.NET.Sdk" />` veya `<Project Sdk="My.Custom.Sdk/1.0.0" />`. |
-| `ToolsVersion` | İsteğe bağlı öznitelik.<br /><br /> Araç kümesi MSBuild 'in sürümü, $ (MSBuildBinPath) ve $ (Msbuildaraçları yolu) değerlerini belirlemede kullanır. |
-| `TreatAsLocalProperty` | İsteğe bağlı öznitelik.<br /><br /> Genel olarak değerlendirilmeyecek Özellik adları. Bu öznitelik, belirli komut satırı özelliklerinin bir proje veya hedefler dosyasında ve sonraki tüm içeri aktarmalarda ayarlanan özellik değerlerini geçersiz kılmasını önler. Birden çok özellik noktalı virgül (;) Ted.<br /><br /> Normal olarak, genel özellikler proje veya hedefler dosyasında ayarlanan özellik değerlerini geçersiz kılar. Özellik `TreatAsLocalProperty` değerinde listeleniyorsa, genel özellik değeri bu dosyada ve sonraki tüm içeri aktarmalarda ayarlanan özellik değerlerini geçersiz kılmaz. Daha fazla bilgi için bkz. [nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları oluşturma](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Note:**  **-Property** (veya **-p**) anahtarını kullanarak bir komut isteminde genel özellikleri ayarlarsınız. Ayrıca, MSBuild görevinin `Properties` özniteliğini kullanarak, çok projeli bir derlemede alt projeler için genel özellikleri ayarlayabilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [MSBuild görevi](../msbuild/msbuild-task.md). |
-| `xmlns` | İsteğe bağlı öznitelik.<br /><br /> Belirtildiğinde `xmlns` özniteliği `http://schemas.microsoft.com/developer/msbuild/2003`değerine sahip olmalıdır. |
+| `DefaultTargets` | İsteğe bağlı öznitelik.<br /><br /> Hedef belirtilmemişse, varsayılan hedef veya hedef yapının giriş noktası olmayı hedefler. Birden fazla hedef yarı kolonlu (;) Sınırlandırılmış.<br /><br /> Öznitelik veya MSBuild komut `DefaultTargets` satırında varsayılan hedef belirtilmemişse, [akit](../msbuild/import-element-msbuild.md) öğeleri değerlendirildikten sonra motor proje dosyasındaki ilk hedefi yürütür. |
+| `InitialTargets` | İsteğe bağlı öznitelik.<br /><br /> Öznitelikte veya komut satırında `DefaultTargets` belirtilen hedeflerden önce çalıştırılacak ilk hedef veya hedefler. Birden fazla hedef yarı-kolon (`;`) sınırlıdır. Birden çok içe `InitialTargets`aktarılan dosya tanımlanırsa, söz konusu tüm hedefler, içe aktarma sırasına göre çalıştırılır. |
+| `Sdk` | İsteğe bağlı öznitelik. <br /><br /> .proj dosyasına eklenen örtülü Alma deyimleri oluşturmak için kullanılacak SDK adı ve isteğe bağlı sürüm. Sürüm belirtilmemişse, MSBuild varsayılan sürümü çözmeye çalışır.  Örneğin `<Project Sdk="Microsoft.NET.Sdk" />` veya `<Project Sdk="My.Custom.Sdk/1.0.0" />` olabilir. |
+| `ToolsVersion` | İsteğe bağlı öznitelik.<br /><br /> MSBuild Araç Seti sürümü $(MSBuildBinPath) ve $(MSBuildToolsPath) değerlerini belirlemek için kullanır. |
+| `TreatAsLocalProperty` | İsteğe bağlı öznitelik.<br /><br /> Genel olarak kabul edilmeyecek özellik adları. Bu öznitelik, belirli komut satırı özelliklerinin proje veya hedef dosyasında ve sonraki tüm içe almalarda ayarlanan özellik değerlerini geçersiz kılmasını önler. Birden fazla özellik yarı-kolon (;) Sınırlandırılmış.<br /><br /> Normalde, genel özellikler proje veya hedef dosyasında ayarlanan özellik değerlerini geçersiz kılar. Özellik `TreatAsLocalProperty` değerde listelenmişse, genel özellik değeri bu dosyada ayarlanan özellik değerlerini ve sonraki tüm içeri aktarımları geçersiz kılmaz. Daha fazla bilgi için [bkz: Farklı seçeneklerle aynı kaynak dosyaları oluşturun.](../msbuild/how-to-build-the-same-source-files-with-different-options.md) **Not:**  **-özellik** (veya **-p)** anahtarını kullanarak genel özellikleri komut isteminde ayarlarsınız. Ayrıca, MSBuild görevinin özniteliğini `Properties` kullanarak çok projeli bir yapıdaki alt projeler için genel özellikleri ayarlayabilir veya değiştirebilirsiniz. Daha fazla bilgi için [MSBuild görevine](../msbuild/msbuild-task.md)bakın. |
+| `xmlns` | İsteğe bağlı öznitelik.<br /><br /> Belirtildiğinde, `xmlns` öznitelik `http://schemas.microsoft.com/developer/msbuild/2003`. |
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 | Öğe | Açıklama |
 | - | - |
-| ['Yu](../msbuild/choose-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> , Değerlendirmek için bir `ItemGroup` öğe ve/veya `PropertyGroup` öğeleri kümesi seçmek üzere alt öğeleri değerlendirir. |
-| [İçeri Aktarma](../msbuild/import-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Proje dosyasının başka bir proje dosyasını içeri aktarmasını sağlar. Bir projede sıfır veya daha fazla öğe `Import` olabilir. |
-| [ImportGroup](../msbuild/importgroup-element.md) | İsteğe bağlı öğe.<br /><br /> İsteğe bağlı bir koşul altında gruplanan `Import` öğelerinden oluşan bir koleksiyon içerir. |
-| [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Ayrı öğeler için bir gruplandırma öğesi. Öğeler [Item](../msbuild/item-element-msbuild.md) öğesi kullanılarak belirtilir. Bir projede sıfır veya daha fazla öğe `ItemGroup` olabilir. |
-| [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Varsayılan olarak, projedeki tüm öğelere uygulanan meta veri değerleri olan öğe tanımları kümesini tanımlamanızı sağlar. ItemDefinitionGroup, `CreateItem` görevi ve `CreateProperty` görevini kullanma gereksinimizin yerini alır. |
-| [ProjectExtensions](../msbuild/projectextensions-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> MSBuild olmayan bilgilerin MSBuild proje dosyasında kalıcı hale getirilmesi için bir yol sağlar. Bir projede sıfır veya bir `ProjectExtensions` öğe olabilir. |
-| [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Ayrı özellikler için bir gruplandırma öğesi. Özellikler, [özellik](../msbuild/property-element-msbuild.md) öğesi kullanılarak belirtilir. Bir projede sıfır veya daha fazla öğe `PropertyGroup` olabilir. |
-| ['Sının](../msbuild/sdk-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> MSBuild proje SDK 'sına başvurur.  Bu öğe SDK özniteliğine alternatif olarak kullanılabilir. |
-| [Hedef](../msbuild/target-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Sırayla yürütülecek MSBuild için bir görev kümesi içerir. Görevler, [görev](../msbuild/task-element-msbuild.md) öğesi kullanılarak belirtilir. Bir projede sıfır veya daha fazla öğe `Target` olabilir. |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> MSBuild 'e görevleri kaydetmek için bir yol sağlar. Bir projede sıfır veya daha fazla öğe `UsingTask` olabilir. |
+| [Seçin:](../msbuild/choose-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Değerlendirilecek bir `ItemGroup` öğe ve/veya `PropertyGroup` öğe kümesi seçmek için alt öğeleri değerlendirir. |
+| [İçeri Aktarma](../msbuild/import-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Proje dosyasının başka bir proje dosyasını içe aktarmasını sağlar. Bir projede sıfır `Import` veya daha fazla öğe olabilir. |
+| [İthalat Grubu](../msbuild/importgroup-element.md) | İsteğe bağlı öğe.<br /><br /> İsteğe bağlı `Import` bir koşul altında gruplandırılmış öğeler topluluğu içerir. |
+| [ıtemgroup](../msbuild/itemgroup-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Tek tek öğeler için bir gruplandırma öğesi. Öğeler [Öğe](../msbuild/item-element-msbuild.md) öğesi kullanılarak belirtilir. Bir projede sıfır `ItemGroup` veya daha fazla öğe olabilir. |
+| [ıtemdefinitiongroup](../msbuild/itemdefinitiongroup-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Varsayılan olarak, projedeki tüm öğelere uygulanan meta veri değerleri olan Madde Tanımları kümesini tanımlamanızı sağlar. ItemDefinitionGroup, görev ve görevin `CreateItem` kullanılması gereksiniminin `CreateProperty` yerini alır. |
+| [Proje Uzantıları](../msbuild/projectextensions-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> MSBuild proje dosyasında MSBuild olmayan bilgileri kalıcı olarak sürdürmek için bir yol sağlar. Projede sıfır veya `ProjectExtensions` bir öğe olabilir. |
+| [Propertygroup](../msbuild/propertygroup-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Tek tek özellikler için bir gruplandırma öğesi. Özellikler [Özellik](../msbuild/property-element-msbuild.md) öğesi kullanılarak belirtilir. Bir projede sıfır `PropertyGroup` veya daha fazla öğe olabilir. |
+| [Sdk](../msbuild/sdk-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> Bir MSBuild projesi SDK'ya başvurur.  Bu öğe Sdk özniteliğine alternatif olarak kullanılabilir. |
+| [Hedef](../msbuild/target-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> MSBuild'in sırayla çalıştırılaması için bir dizi görev içerir. Görevler [Görev](../msbuild/task-element-msbuild.md) öğesi kullanılarak belirtilir. Bir projede sıfır `Target` veya daha fazla öğe olabilir. |
+| [Usingtask](../msbuild/usingtask-element-msbuild.md) | İsteğe bağlı öğe.<br /><br /> MSBuild'te görevleri kaydetmek için bir yol sağlar. Bir projede sıfır `UsingTask` veya daha fazla öğe olabilir. |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -86,7 +86,7 @@ MSBuild proje dosyasının gerekli kök öğesi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme](../msbuild/how-to-specify-which-target-to-build-first.md)
+- [Nasıl yapılır: İlk hangi hedefi oluşturacaklarını belirtin](../msbuild/how-to-specify-which-target-to-build-first.md)
 - [Komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)

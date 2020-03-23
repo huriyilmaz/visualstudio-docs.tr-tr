@@ -1,5 +1,5 @@
 ---
-title: Yük testi API'si
+title: Yük Testi API
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,57 +11,57 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3d949b8c73bb155b2e6fe4900c54c6d5314d26c4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588817"
 ---
-# <a name="how-to-use-the-load-test-api"></a>Nasıl yapılır: yük testi API'si kullanma
+# <a name="how-to-use-the-load-test-api"></a>Nasıl kullanılır: Yük testi API'sini kullanın
 
-Visual Studio Yük testi denetlemek veya geliştiren bir yük testi eklentileri destekler. Yük testi eklentileri olan kullanıcı tanımlı uygulayan sınıflar <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> arabirimi bulunan <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ad alanı. Yük testi eklentileri, özel bir yük testi denetimi için gibi bir sayaç veya hata eşiğine ulaşıldığında bir yük testi iptal ediliyor izin verin. Özellikleri kullanın <xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> almak veya yük testi parametrelerine kullanıcıdan ayarlamak için sınıf tanımlanan kod. Olayları kullanın <xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> yük testi çalışırken, bildirimler için temsilciler eklemek için sınıfı.
+Visual Studio, yük testini kontrol eden veya geliştirebilen yük testi eklentilerini destekler. Yük testi eklentileri, <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ad alanında bulunan arabirimi uygulayan kullanıcı tanımlı sınıflardır. Yük testi eklentileri, sayaç veya hata eşiği karşılandığında yük testinin iptali gibi özel yük testi denetimine olanak sağlar. Kullanıcı tanımlı <xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> koddan yük testi parametrelerini almak veya ayarlamak için sınıftaki özellikleri kullanın. Yük testi çalışırken <xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> bildirimler için temsilci eklemek için sınıftaki olayları kullanın.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!TIP]
-> İncelemek için Nesne Tarayıcısı kullanmanız <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ad alanı. Visual C# ve Visual Basic düzenleyicileri ad alanındaki sınıflarla kodlamak için IntelliSense desteği sunar.
+> Ad alanını incelemek için <xref:Microsoft.VisualStudio.TestTools.LoadTesting> nesne tarayıcısını kullanın. Hem Visual C# hem de Visual Basic editörleri, ad alanındaki sınıflarla kodlama için IntelliSense desteği sunar.
 
-Web performans testleri için eklentileri de oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md) ve [nasıl yapılır: istek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md).
+Ayrıca web performans testleri için eklentiler oluşturabilirsiniz. Daha fazla bilgi için [bkz: Web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md) ve [nasıl yapIlec: İstek düzeyi eklentisi oluşturun.](../test/how-to-create-a-request-level-plug-in.md)
 
 ## <a name="to-use-the-loadtesting-namespace"></a>LoadTesting ad alanını kullanmak için
 
-1. Bir web performansı ve yük testi içeren bir yük testi projesi açın.
+1. Bir yük testi içeren bir web performansı ve yük testi projesi açın.
 
-2. Visual C# veya Visual Basic kitaplık projesi sınama çözümünüze ekleyin.
+2. Test çözümünüze Visual C# veya Visual Basic sınıf kitaplığı projesi ekleyin.
 
-3. Bir başvuru, sınıf kitaplığı projesi için web performansı ve yük testi projesi ekleyin.
+3. Sınıf kitaplığı projesine web performansına bir başvuru ekleyin ve yükleme testi projesine ekleyin.
 
-4. Sınıf kitaplığı projesinde gt;Microsoft.VisualStudio.QualityTools.LoadTestFramework & DLL'ye bir başvuru ekleyin.
+4. Sınıf Kitaplığı projesinde Microsoft.VisualStudio.QualityTools.LoadTestFramework DLL adresine bir başvuru ekleyin.
 
-5. Sınıf kitaplığı projesinde yer alan sınıf dosyasında, ekleme bir `using` bildirimi <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ad alanı.
+5. Sınıf kitaplığı projesinde bulunan sınıf dosyasında, `using` <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ad alanı için bir deyim ekleyin.
 
-6. Uygulayan bir ortak sınıf oluşturun <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> arabirimi.
+6. <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> Arabirimi uygulayan ortak bir sınıf oluşturun.
 
-7. Projeyi oluşturun.
+7. Projeyi derleyin.
 
-8. Yeni Yük testi kullanarak Yük Testi Düzenleyicisi eklentisini ekleyin:
+8. Load Test Editor'u kullanarak yeni yük testi eklentisini ekleyin:
 
-    1. Yük testi kök düğümüne sağ tıklayın ve ardından **Yük Testi Eklentisi Ekle**.
+    1. Yük testinin kök düğümüne sağ tıklayın ve ardından **Yükle Testi Eklentisi Ekle'yi**seçin.
 
-    2. **Yük Testi Eklentisi Ekle** iletişim kutusu görüntülenir.
+    2. **Yükle Testi Eklentisi** iletişim kutusu görüntülenir.
 
-    3. İçinde **özelliklerini çili eklenti** bölmesinde, çalışma zamanında kullanmak eklenti için başlangıç değerlerini ayarlayın.
+    3. **Seçili eklenti** bölmesinin Özellikleri'nde, eklentinin çalışma zamanında kullanması için ilk değerleri ayarlayın.
 
         > [!NOTE]
-        > Eklentilerinizi istediğiniz kadar çok özelliği kullanıma sunabilirsiniz. Bunları ortak, ayarlanabilir ve tamsayı, Boole veya dize gibi bir temel tür yapmanız yeterlidir. Yük Testi Eklentisi özelliklerini de düzenleyebilirsiniz daha sonra kullanarak **özellikleri** penceresi.
+        > Eklentilerinizden istediğiniz kadar özellik ortaya çıkarabilirsiniz. Bunları herkese açık, ayarlanabilir ve Tamsayı, Boolean veya String gibi bir taban türüne ait hale getirin. Ayrıca, **Özellikler** penceresini kullanarak yük testi eklentiözelliklerini daha sonra da edinebilirsiniz.
 
-9. Yük testinizi çalıştırın.
+9. Load testinizi çalıştırın.
 
-     Bir uygulama için <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>, bkz: [nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md).
+     Bir uygulama <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>için , [bkz.](../test/how-to-create-a-load-test-plug-in.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting>
-- [Özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Nasıl yapılır: web başarım testi API'si kullanma](../test/how-to-use-the-web-performance-test-api.md)
-- [Nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
+- [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Nasıl kullanılır: Web performans testi API'sini kullanın](../test/how-to-use-the-web-performance-test-api.md)
+- [Nasıl yapılsın: Yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)

@@ -18,36 +18,36 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: c06f9f7dc7e5a672e3fd5da3f3fc834fe223a783
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585424"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
-Kod parçacıkları, sağ tıklama menüsü (bağlam menüsü) komutu veya kısayol tuşlarının birleşimini kullanarak bir kod dosyasına eklenebilen yeniden kullanılabilir kod bloklarında yer alabilir. Genellikle `try-finally` veya `if-else` blokları gibi yaygın olarak kullanılan kod blokları içerirler, ancak tüm sınıfları veya yöntemleri eklemek için kullanılabilirler.
+Kod parçacıkları, sağ tıklatma menüsü (bağlam menüsü) komutu veya anahtarlıkların birleşimi kullanılarak kod dosyasına eklenebilen küçük yeniden kullanılabilir kod bloklarıdır. Genellikle, örneğin veya `try-finally` `if-else` bloklar gibi yaygın olarak kullanılan kod blokları içerir, ancak tüm sınıfları veya yöntemleri eklemek için kullanılabilir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kod parçacıkları (Mac için Visual Studio)](/visualstudio/mac/snippets).
+> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için [Kod parçacıklarına (Mac için Visual Studio)](/visualstudio/mac/snippets)bakın.
 
-Kod parçacıkları,, Visual Basic, XML ve T-SQL dahil C#olmak C++üzere çok sayıda dilde kullanılabilir ve birkaç kez ad verebilir. Bir dile ait kullanılabilir tüm yüklü parçacıkları görüntülemek için, **Araçlar** menüsünden **kod parçacıkları Yöneticisi 'ni** açın (veya **ctrl**+**K**, **CTRL**+**B**) tuşlarına basın ve üstteki açılan menüden dili seçin.
+C#, C++, Visual Basic, XML ve T-SQL gibi çok sayıda dil için kod parçacıkları kullanılabilir. Bir dil için mevcut tüm yüklü parçacıkları görüntülemek için **Araçlar** menüsünden **Kod Parçacıkları Yöneticisi'ni** açın (veya **Ctrl**+**K**, **Ctrl**+**B**tuşuna basın), ve üstteki açılır menüden dili seçin.
 
-![Kod parçacıkları Yöneticisi iletişim kutusu](media/code-snippets-manager.png)
+![Kod Parçacıkları Yöneticisi iletişim kutusu](media/code-snippets-manager.png)
 
 Kod parçacıklarına aşağıdaki genel yollarla erişilebilir:
 
-- Menü çubuğunda **düzenle** > **IntelliSense** ' i seçin > **kod parçacığı Ekle**
+- Menü çubuğunda**IntelliSense** > **Ekle Snippet'i** **Edit'i** > seçin
 
-- Kod düzenleyicisindeki sağ tıklama veya bağlam menüsünde kod **parçacığı** > kod **parçacığı Ekle** ' yi seçin.
+- Kod düzenleyicisindeki sağ tıklatma veya bağlam menüsünden **Snippet** > **Ekle Snippet'i** seçin
 
-- Klavyeden **ctrl**+**K**,**CTRL**+**X** tuşlarına basın
+- Klavyeden **Ctrl**+**K**,**Ctrl**+**X** tuşlarına basın
 
-## <a name="expansion-snippets-and-surround-with-snippets"></a>Genişleme parçacıkları ve surround-kod parçacıkları
+## <a name="expansion-snippets-and-surround-with-snippets"></a>Genişletme parçacıkları ve surround-snippets ile
 
-Visual Studio 'da, belirtilen bir ekleme noktasına eklenen ve bir kod parçacığı kısayolunun yanı sıra (yalnızca ve yalnızca) kod parçacığı kısayolunu ve birlikte çevrelemeyi (C# yalnızca ve C++ yalnızca) içerebilen bir kod parçacığı olan iki tür kod parçacığı vardır.
+Visual Studio'da iki tür kod parçacığı vardır: belirli bir ekleme noktasına eklenen ve bir snippet kısayolu yerine dizilebilecek genişletme parçacıkları ve seçili bir kod bloğunun etrafına eklenen parçacıklarla (yalnızca C# ve C++) surround.
 
-Genişletme kod parçacığına bir örnek: C# tryf kısayolunun bir try-finally bloğu eklemek için kullanılır:
+Genişletme parçacığı örneği: C#'da try-finally bloğunu eklemek için kısayol tryf kullanılır:
 
 ```csharp
 try
@@ -60,9 +60,9 @@ finally
 }
 ```
 
-Kod penceresinin sağ tıklama menüsünde (bağlam menüsü) kod **parçacığı Ekle** ' **C#** ye tıklayıp, ardından `tryf`yazıp **Tab**tuşuna basarak bu kod parçacığını ekleyebilirsiniz. Ya da `tryf` yazabilir ve **Tab** tuşuna iki kez basabilirsiniz.
+Bu snippet'i kod penceresinin sağ tıklama menüsüne (bağlam menüsü) **Ekle'yi** tıklatarak ekleyebilirsiniz, ardından `tryf` **Visual C#** yazın ve sonra **Sekme tuşuna**basabilirsiniz. Veya `tryf` **Sekme'yi** iki kez yazıp basabilirsiniz.
 
-Kısayol `if` C++ , bir ekleme kod parçacığı ya da surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçerseniz (örneğin `return FALSE;`) ve sonra > **Ile çevrelemeyi** **seçerseniz, kod**parçacığı satır etrafında genişletilir:
+Surround ile snippet örneği: C++'da kısayol `if` ekleme snippeti veya surround-with snippet olarak kullanılabilir. Bir kod satırı `return FALSE;`seçerseniz (örneğin), ve sonra Surround **With'i** > **seçerseniz,** parçacık satır ın etrafında genişletilir:
 
 ```cpp
 if (true)
@@ -71,13 +71,13 @@ if (true)
 }
 ```
 
-## <a name="snippet-replacement-parameters"></a>Kod parçacığı değiştirme parametreleri
+## <a name="snippet-replacement-parameters"></a>Snippet değiştirme parametreleri
 
-Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true`, uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
+Parçacıklar, yazdığınız kesin kodu sığdırmak için değiştirmeniz gereken yer tutucular olan değiştirme parametreleri içerebilir. Önceki örnekte, `true` uygun koşulla değiştireceğiniz yedek bir parametre yer alır. Yaptığınız değiştirme, parçacıktaki aynı değiştirme parametresinin her örneği için yinelenir.
 
-Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için, Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden kod parçacığı **ekle** ** > kod parçacığı öğesini** seçin. Ardından, **Özellikler, yordamlar, olaylar** > **bir özellik tanımlamak** > **kod düzenlerini** seçin.
+Örneğin, Visual Basic'te bir özellik ekleyen bir kod parçacığı vardır. Parçacık eklemek için Visual Basic kod dosyasındaki sağ tıklatma veya bağlam menüsünden **Snippet** > **Ekle Snippet'i** seçin. Daha sonra, **Kod Desenleri** > **Özellikleri, Yordamlar, Olaylar** > **Bir Özellik tanımlayın**seçin.
 
-![Özellik tanımlamak için kod parçacığı menüsü](media/code-snippets-vb-property.png)
+![Özellik Tanımla için kod snippet menüsü](media/code-snippets-vb-property.png)
 
 Aşağıdaki kod eklenir:
 
@@ -93,15 +93,15 @@ Public Property NewProperty() As String
 End Property
 ```
 
-`newPropertyValue` `m_property`olarak değiştirirseniz `newPropertyValue` her örneği değiştirilir. Özellik bildiriminde `Int` `String` değiştirirseniz, set yöntemindeki değer de `Int`olarak değiştirilir.
+Değiştirirseniz, `newPropertyValue` her örneği `newPropertyValue` değiştirilir. `m_property` Özellik `String` `Int` bildiriminde değiştirilirseniz, ayarlanan yöntemdeki değer de `Int`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
-- [Nasıl yapılır: kod parçacıklarını dağıtma](../ide/how-to-distribute-code-snippets.md)
-- [Kod parçacıkları kullanmak için en iyi uygulamalar](../ide/best-practices-for-using-code-snippets.md)
+- [Walkthrough: Kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
+- [Nasıl yapılır: Kod parçacıklarını dağıtma](../ide/how-to-distribute-code-snippets.md)
+- [Kod parçacıklarını kullanmak için en iyi uygulamalar](../ide/best-practices-for-using-code-snippets.md)
 - [Sorun giderme parçacıkları](../ide/troubleshooting-snippets.md)
-- [C#kod parçacıkları](../ide/visual-csharp-code-snippets.md)
-- [C++kod parçacıkları](../ide/visual-cpp-code-snippets.md)
+- [C# kod parçacıkları](../ide/visual-csharp-code-snippets.md)
+- [C++ kod parçacıkları](../ide/visual-cpp-code-snippets.md)
 - [Kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md)
 - [Kod parçacıkları (Mac için Visual Studio)](/visualstudio/mac/snippets)

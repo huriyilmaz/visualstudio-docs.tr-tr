@@ -1,35 +1,35 @@
 ---
-title: Abone portalı içinden abonelik yöneticinize başvurun
+title: Abone Portalı içinden abonelik yöneticinize başvurun
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/07/2020
 ms.topic: conceptual
-description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
+description: Soru veya sorunlarla ilgili yardım için abonelik yöneticinize nasıl başvurarak iletişim kurabilirsiniz öğrenin.
 ms.openlocfilehash: 20122b94d59b7b2c3fbe437531cd439341e6b2dd
-ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78937536"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Abonelik yöneticinizden yardım alın
-Visual Studio aboneliğiniz sizin veya okulunuz tarafından size sağlanmışsa, size bir abonelik Yöneticisi veya "Yönetici" tarafından atanmıştı.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.
+Visual Studio aboneliğiniz size iş veya okul tarafından sağlanıyorsa, size bir abonelik yöneticisi veya "yönetici" tarafından atanmış olma olasılığı yüksektir.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirme olanağınızın olup olmadığını belirleyebilir ve aboneliğinizle ilgili diğer işlevleri gerçekleştirebilir.
 
-Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yöneticinizin kim olduğunu farkında olmayabilirsiniz, bu sayede nereden yardım alınacağını bilmek zor olabilir.  Yönetici ile iletişim kurmaya yardımcı olması için abone portalına yeni bir özellik ekledik.   
+Birçok kuruluşun boyutu ve karmaşıklığı göz önüne alındığında, yöneticinizin kim olduğunun farkında olmayabilirsiniz, bu nedenle nereden yardım alacağınızı bilmek zor olabilir.  Yöneticinizle iletişim kurmanıza yardımcı olmak için abone portalına yeni bir özellik ekledik.   
 
-## <a name="how-to-contact-your-admin"></a>Yöneticinizle iletişim kurma
-1. Abone portalında https://my.visualstudio.com oturum açın
+## <a name="how-to-contact-your-admin"></a>Yöneticinizle nasıl iletişim kurabilirsiniz?
+1. At abone portalında oturum açınhttps://my.visualstudio.com
 2. **Abonelikler** sekmesine tıklayın. 
-3. Sağ üst köşedeki **yöneticime başvur** düğmesine tıklayın. 
+3. Sağ üstteki **Yöneticime İletişim** düğmesini tıklayın. 
    > [!div class="mx-imgBorder"]
-   > ![Yöneticimde Iletişime geçin](_img/contact-my-admin/contact-my-admin-button.png)
-4. Yöneticinizin iletisini girin.
-5. Yöneticinize gönderilen iletinin bir kopyasını almak isterseniz, **bir kopya gönder** onay kutusuna tıklayın. 
-6. Son olarak, **Gönder**' e tıklayın.
+   > ![Yöneticime Ulaşın](_img/contact-my-admin/contact-my-admin-button.png)
+4. Yöneticiniz için iletiyi girin.
+5. Yöneticinize gönderilen iletinin bir kopyasını almak istiyorsanız, bana **bir kopya** onay kutusu gönder'i tıklatın. 
+6. Son olarak **Send**Gönder'i tıklatın.
 
 > [!NOTE]
-> **Süper Yöneticiler:**  "Yöneticime başvur" isteklerinin gönderildiği e-posta adresini ayarlamak için, [sözleşme tercihlerinde](admin-prefs.md#contact-email-address)bu adresi belirtin.
+> **Süper yöneticiler:**  "Yöneticime Başvurun" isteklerinin gönderildiği e-posta adresini ayarlamak için, bu adresi [Sözleşme Tercihleri'nde](admin-prefs.md#contact-email-address)belirtin.
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
@@ -41,10 +41,10 @@ Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yön
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Daha önce yapmadıysanız, Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu avantajların etkinleştirilmesi önerilir:
-- [Visual Studio IDE](vs-ide-benefit.md)
+Bunu daha önce yapmadıysanız, Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu avantajları etkinleştirmenizi öneririz:
+- [Görsel Stüdyo IDE](vs-ide-benefit.md)
 - [Azure](vs-azure.md)
 - [Azure DevOps](vs-azure-devops.md)
 
-Bu avantajlar ve daha fazlası https://my.visualstudio.com/benefits' de bulunabilir.
+Bu faydaları ve daha https://my.visualstudio.com/benefitsbulunabilir .
 

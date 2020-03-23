@@ -15,165 +15,165 @@ ms.workload:
 author: kendrahavens
 manager: jillfra
 ms.openlocfilehash: cec8ea3ea091ab1ea65bcad2bd4cca139fd74042
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75846818"
 ---
-# <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Gezgini hakkında SSS
+# <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Explorer SSS
 ::: moniker range=">=vs-2019"
 
-## <a name="where-is-group-by-traits-in-visual-studio-2019"></a>Visual Studio 2019 ' de grup nitelikleri nerede?
-Bu nitelik gruplandırması bir sütun olacak şekilde taşındı. Visual Studio 2019 sürüm 16,2 ' deki çok katmanlı ve özelleştirilebilir hiyerarşiyle, nitelikleri gereksiz görsel karmaşıklık yaratan bir gruplandırma olarak da dahil ettik. Bu tasarımla ilgili geri bildirimde kesinlikle dinleme yaptık! https://developercommunity.visualstudio.com/content/problem/588029/no-longer-able-to-group-by-trait-in-test-explorer.html
+## <a name="where-is-group-by-traits-in-visual-studio-2019"></a>Visual Studio 2019'da Özellikler'e göre grup nerede?
+Bu Özellik gruplandırmabir sütun olarak taşındı. Visual Studio 2019 sürüm 16.2'deki çok katmanlı ve özelleştirilebilir hiyerarşi ile, bir gruplama olarak özelliklerin gereksiz görsel karmaşıklık yarattığını düşündük. Biz kesinlikle bu tasarım geribildirim dinliyoruz! https://developercommunity.visualstudio.com/content/problem/588029/no-longer-able-to-group-by-trait-in-test-explorer.html
 
-Şimdilik, test Gezgini 'ndeki sütuna sağ tıklayıp sütunlar ' ı seçebilirsiniz. Nitelik sütununu kontrol edin ve test Gezgini 'nde görünür. Artık bu sütunu, ilgilendiğiniz nitelikleri filtreleyerek filtreleyebilirsiniz.
+Şimdilik, Test Gezgini'ndeki sütuna sağ tıklayıp Sütunlar'ı seçebilirsiniz. Özellik sütununa bakın ve Test Gezgini'nde görünecektir. Artık bu sütunu ilgilendiğiniz özelliklere göre filtreleyebilirsiniz.
 
-nitelik sütununu filtrelemek ![nitelik sütununu](media/vs-2019/trait-column.png)
-![görüntüleyin](media/vs-2019/trait-column-filter.png)
+![Özellik sütununa](media/vs-2019/trait-column.png)
+![filtre uygulayın özellik sütunu](media/vs-2019/trait-column-filter.png)
 ::: moniker-end
 
 ## <a name="dynamic-test-discovery"></a>Dinamik test bulma
 
-**Test Gezgini, dinamik olarak tanımlanan sınamalarımı bulmıyor. (Örneğin, bu özel bağdaştırıcılar, özel nitelikler, #ifdefs vb.) Bu testleri nasıl keşfedebilirim?**
+**Test Gezgini dinamik olarak tanımlanmış testlerimi keşfetmiyor. (Örneğin, teoriler, özel adaptörler, özel özellikler, #ifdefs, vb.) Bu testleri nasıl keşfedebilirim?**
 
 ::: moniker range=">=vs-2019"
-Derleme tabanlı bulma çalıştırmak için projenizi derleyin.
+Derleme tabanlı keşfi çalıştırmak için projenizi oluşturun.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Projenizi derleyin ve **araçlar** > **Seçenekler** > **Test**' de derleme tabanlı bulmanın açık olduğundan emin olun.
+**Projenizi** > oluşturun ve Araçlar **Seçenekleri** > **Testi'nde**montaj tabanlı keşfin açık olduğundan emin olun.
 ::: moniker-end
-[Gerçek zamanlı test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) kaynak tabanlı test bulma. Çalışma zamanında tanımlandıklarından, bu, özel bağdaştırıcılar, özel nitelikler, `#ifdef` deyimlerini ve daha fazlasını kullanan testleri bulamaz. Bir derleme, bu testler doğru bir şekilde bulunması gereklidir. Visual Studio 2017 sürüm 15.6 ve daha sonra derleme tabanlı bulma (Geleneksel Bulucu) yalnızca derlemeler sonra çalışır. Bu yöntem gerçek zamanlı test bulma işleminin, düzenlerken mümkün olduğunca çok testleri ayarlama ve derleme tabanlı bulma, dinamik olarak tanımlanan testleri, derleme sonrası görünmesini sağlar. Gerçek zamanlı test bulma, yanıt hızını iyileştirir, ancak yine de bir derlemeden sonra tam ve kesin sonuçlar almanızı sağlar.
+[Gerçek zamanlı test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) kaynak tabanlı test bulma. Çalışma zamanında tanımlandıkları için teorileri, özel bağdaştırıcıları, özel özellikleri, `#ifdef` ifadeleri ve daha fazlasını kullanan testleri keşfedemez. Bu testlerin doğru bir şekilde bulunabilmek için bir yapı gereklidir. Visual Studio 2017 sürüm 15.6 ve sonraki sürümlerinde, montaj tabanlı keşif (geleneksel kaşif) yalnızca yapılardan sonra çalışır. Bu ayar, gerçek zamanlı test bulmanın siz düzenlerken olabildiğince çok test bulduğu anlamına gelir ve derleme tabanlı bulma, bir yapıdan sonra dinamik olarak tanımlanmış testlerin görünmesini sağlar. Gerçek zamanlı test bulma yanıt geliştirir, ama yine de bir yapı sonra tam ve kesin sonuçlar elde etmenizi sağlar.
 
-## <a name="test-explorer--plus-symbol"></a>Test Gezgini '+' (sembolü artı)
+## <a name="test-explorer--plus-symbol"></a>Test Gezgini '+' (artı) simgesi
 
-**Ne yaptığını '+' (artı) Test Gezgini ortalama ilk satırda görünen simge?**
+**Test Gezgini'nin üst satırında görünen '+' (artı) sembolü ne anlama gelir?**
 
-' + ' (Artı) simgesi, derleme tabanlı bulma çalıştığında bir derlemeden sonra daha fazla testin bulunabileceğini gösterir. Test projenizde algılanan dinamik olarak tanımlanmışsa bu simge görünür.
+'+' (artı) sembolü, derleme tabanlı keşif çalıştığında bir yapıdan sonra daha fazla testin keşfedilen olabileceğini gösterir. Projenizde dinamik olarak tanımlanmış testler algılanırsa bu sembol görüntülenir.
 
-![Artı özet satırı simgesi](media/testex-plussymbol.png)
+![Artı sembolü özet satırı](media/testex-plussymbol.png)
 
 ::: moniker range="vs-2017"
-## <a name="assembly-based-discovery"></a>Derleme tabanlı bulma
+## <a name="assembly-based-discovery"></a>Montaj tabanlı keşif
 
-**Derleme tabanlı bulma artık projem için çalışmıyor. Nasıl yaparım? yeniden açılsın mı?**
+**Derleme tabanlı keşif artık projem için çalışmıyor. Nasıl açabilirim?**
 
-**Araçlar** > **Seçenekler** > **Test** ' e gidin ve **derleme sonrasında oluşturulan derlemelerin testlerini ek olarak bul** kutusunu işaretleyin.
+**Araçlar** > **Seçenekleri** > **Testi'ne** gidin ve **yapılardan sonra yerleşik derlemelerin testlerini ek olarak keşfetmek** için kutuyu işaretleyin.
 
-![Derleme tabanlı seçeneği](media/testex-toolsoptions.png)
+![Derleme tabanlı seçenek](media/testex-toolsoptions.png)
 ::: moniker-end
 
 ## <a name="real-time-test-discovery"></a>Gerçek zamanlı test bulma
 
-**Testler, projem oluşturmaya gerek kalmadan yazarken test Gezgini 'nde görünür. Ne değişti?**
+**Testleri şimdi test gezgini ben yazarken görünür, benim proje oluşturmak zorunda kalmadan. Ne değişti?**
 
-Bu özelliğin adı [gerçek zamanlı test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/). Testleri bulmak ve Test Gezgini, projenizi oluşturmaya gerek kalmadan gerçek zamanlı olarak doldurmak için Roslyn çözümleyicinizi kullanır. Yer veya özel nitelikler gibi dinamik olarak tanımlanmış testlerin test bulma davranışı hakkında daha fazla bilgi için bkz. [dinamik test bulma](#dynamic-test-discovery).
+Bu özellik [Gerçek zamanlı test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/)olarak adlandırılır. Projenizi oluşturmanıza gerek kalmadan testleri bulmak ve Test Gezgini'ni gerçek zamanlı olarak doldurmak için bir Roslyn çözümleyicisi kullanır. Teoriler veya özel özellikler gibi dinamik olarak tanımlanmış testler için test bulma davranışı hakkında daha fazla bilgi için [Dinamik test keşfine](#dynamic-test-discovery)bakın.
 
 ## <a name="real-time-test-discovery-compatibility"></a>Gerçek zamanlı test bulma uyumluluğu
 
-**Gerçek zamanlı Test bulma, hangi diller ve test çerçeveleri kullanabilir miyim?**
+**Hangi diller ve test çerçeveleri Gerçek Zamanlı Test Bulma'yı kullanabilir?**
 
-[Gerçek zamanlı test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) yalnızca yönetilen diller için çalışır (C# ve Visual Basic), bu yana Roslyn derleyicisi kullanılarak oluşturulmuştur. Şimdilik, gerçek zamanlı test bulma yalnızca xUnit, NUnit ve MSTest çerçeveleri çalışır.
+[Gerçek zamanlı test bulma,](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) Roslyn derleyicisi kullanılarak üretildiği için yalnızca yönetilen dillerde (C# ve Visual Basic) çalışır. Şimdilik, gerçek zamanlı test bulma yalnızca xUnit, NUnit ve MSTest çerçeveleri için çalışır.
 
 ## <a name="test-explorer-logs"></a>Test Gezgini günlükleri
 
-**Test Gezgini için nasıl günlüklerini kapatırım?**
+**Test Gezgini için günlükleri nasıl açabilirim?**
 
-Gidin **Araçları** > **seçenekleri** > **Test** ve günlüğe kaydetme bölümü bulun.
+**Araçlar** > **Seçenekleri** > **Testi'ne** gidin ve GünlükLe bölümünü buradan bulun.
 
 ## <a name="uwp-test-discovery"></a>UWP test bulma
 
-**Neden testlerimi uygulamamı dağıtabilirim kadar bulunmayan UWP projelerinde?**
+**Uygulamamı dağıtana kadar UWP projelerindeki testlerim neden keşfedilmedi?**
 
-Uygulama dağıtıldığında UWP testler farklı bir çalışma zamanı hedef. Bu, doğru bir şekilde UWP projeleri için testleri bulmak için yalnızca derleme, ancak ayrıca dağıtmanız gerektiğini anlamına gelir.
+UWP testleri, uygulama dağıtıldığında farklı bir çalışma süresini hedeflemeyi hedeflemez. Bu, UWP projeleri için testleri doğru bulmak için yalnızca projenizi oluşturmanız değil, aynı zamanda dağıtmanız gerektiği anlamına gelir.
 
 ## <a name="test-explorer-sorting"></a>Test Gezgini sıralama
 
-**Sıralama test sonuçlarını hiyerarşi Görünümü'nde nasıl çalışır?**
+**Sıralama testi sonuçları hiyerarşi görünümünde nasıl çalışır?**
 
-Hiyerarşi görünümü alfabetik olarak öğesine test sonucuna göre sıralar. Diğer grubun ayarlarını normalde test sonuçlarını sonucuna göre sıralama ve alfabetik olarak. Aşağıdaki görüntüde karşılaştırma için seçenekleri tarafından farklı bir gruba bakın. Tasarım hakkında geri bildirim sağlayabilirsiniz [bu GitHub sorunu içinde](https://github.com/Microsoft/vstest/issues/1425).
+Hiyerarşi görünümü, sonuçları yerine testleri alfabetik olarak sıralar. Diğer grup ayarlarına göre normalde sonuç ve sonra alfabetik test sonuçlarını sıralamak. Karşılaştırma için aşağıdaki resimdeki seçeneklere göre farklı gruba bakın. [Bu GitHub sayısında](https://github.com/Microsoft/vstest/issues/1425)tasarım hakkında geri bildirim sağlayabilirsiniz.
 
-![SortingExamples](media/testex-sortingex.png)
+![Sıralama Örnekleri](media/testex-sortingex.png)
 
 ## <a name="test-explorer-hierarchy-view"></a>Test Gezgini hiyerarşi görünümü
 
-**Hiyerarşi görünümünde, üst düğüm Gruplandırmaların yanında başarılı, başarısız, atlandı ve çalıştırılmadı simgeleri yok. Bu simgeler ne anlama geliyor?**
+**Hiyerarşi görünümünde, geçti, başarısız, atlanır ve üst düğüm gruplandırmaları yanında simgeleri çalıştırılamadı. Bu simgeler ne anlama geliyor?**
 
-Proje ve Namespace sınıfını gruplandırmaları yanındaki simge, o grup içindeki testlerin durumunu gösterir. Aşağıdaki tabloya bakın.
+Project, Namespace ve Class gruplandırmalarının yanındaki simgeler, bu gruplandırmadaki testlerin durumunu gösterir. Aşağıdaki tabloya bakın.
 
-![Test Gezgini hiyerarşi simgeleri](media/testex-hierarchyicons.png)
+![Gezgin Hiyerarşi Simgelertest](media/testex-hierarchyicons.png)
 
 ## <a name="search-by-file-path"></a>Dosya yoluna göre arama
 
-**Test Gezgini arama kutusuna artık "Dosya yolu" filtresi var.**
+**Test Gezgini arama kutusunda artık bir "Dosya Yolu" filtresi yok.**
 
-**Test Gezgini** arama kutusundaki dosya yolu filtresi, Visual Studio 2017 sürüm 15,7 ' de kaldırılmıştır. Bu özelliğin kullanımı düşük ve test Gezgini bu özelliği bırakarak test yöntemlerini hızlı bir şekilde alabilir. Bu değişiklik, geliştirme akışınızı keser, hakkında geri bildirim göndererek bize [Geliştirici topluluğu](https://developercommunity.visualstudio.com/).
+**Test Gezgini** arama kutusundaki dosya yolu filtresi Visual Studio 2017 sürüm 15.7'de kaldırıldı. Bu özellik düşük kullanıma sahipti ve Test Gezgini bu özelliği dışarıda bırakarak test yöntemlerini daha hızlı alabilir. Bu değişiklik geliştirme akışınızı kesintiye uğrayırsa, [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/)hakkında geri bildirim göndererek bize bildirin.
 
-## <a name="remove-undocumented-interfaces"></a>Belgelenmemiş arabirimleri Kaldır
+## <a name="remove-undocumented-interfaces"></a>Belgelenmemiş arabirimleri kaldırma
 
-**Visual Studio 2019 ' de test ile ilgili bazı API 'Ler artık mevcut değildir. Ne değişti?**
+**Testle ilgili bazı API'ler Visual Studio 2019'da artık mevcut değildir. Ne değişti?**
 
-Visual Studio 2019 ', bazı test penceresi daha önce genel olarak işaretlenmiş, ancak hiçbir zaman resmi olarak belgelenen API'leri kaldırılacak. Bunlar, "Visual Studio uzantısı maintainers erken bir uyarı vermek için 2017'de kullanım dışı"olarak işaretlenmiş. Bizim bilgi için çok az sayıda uzantıları bu API'leri bulundu ve bir bağımlılık bunlar üzerinde gerçekleştirilen. Bunlar `IGroupByProvider`, `IGroupByProvider<T>`, `KeyComparer`, `ISearchFilter`, `ISearchFilterToken`, `ISearchToken`, ve `SearchFilterTokenType`. Bu değişiklik uzantınızı etkiliyorsa, üzerinde bir hatayı dosyalama bize [Geliştirici topluluğu](https://developercommunity.visualstudio.com).
+Visual Studio 2019'da, daha önce herkese açık olarak işaretlenmiş ancak resmi olarak belgelenmemiş bazı test penceresi API'leri kaldırılacaktır. Visual Studio 2017'de uzatmacılarına erken uyarı vermek için "amortismana uğradılar" olarak işaretlendiler. Bilgimiz için, çok az uzantıları bu API'ler bulmuş ve onlara bir bağımlılık almıştır. Bunlar `IGroupByProvider`arasında `IGroupByProvider<T>` `KeyComparer`, `ISearchFilter` `ISearchFilterToken`, `ISearchToken`, `SearchFilterTokenType`, , , ve . Bu değişiklik uzantınızı etkiliyorsa, Geliştirici [Topluluğu'na](https://developercommunity.visualstudio.com)bir hata doldurarak bize bildirin.
 
-## <a name="test-adapter-nuget-reference"></a>Test bağdaştırıcısı NuGet başvurusu
+## <a name="test-adapter-nuget-reference"></a>Test adaptörü NuGet referansı
 
-**Visual Studio 2017 sürüm 15,8 testlerimi bulunan, ancak yürütme yok.**
+**Visual Studio 2017 sürüm 15.8'de testlerim keşfedildi, ancak yürütmeyin.**
 
-Tüm test projelerinde, .csproj dosyasında kendi .NET test bağdaştırıcısı NuGet başvuru içermelidir. Hizmet sağlanmıyorsa aşağıdaki test çıkışı projede derleme sonrası bulma bir test bağdaştırıcısı uzantısı tarafından başlatılır veya kullanıcı seçili testleri çalıştırmayı dener görünür:
+Tüm test projeleri .NET test bağdaştırıcısı NuGet başvurularını .csproj dosyasına içermelidir. Bunu yapmazlarsa, bir test bağdaştırıcısı uzantısı tarafından keşfe başladıktan sonra veya kullanıcı seçili testleri çalıştırmaya çalışırsa, projede aşağıdaki test çıktısı görüntülenir:
 
-**Test projesi {} hiçbir .NET NuGet bağdaştırıcısına başvurmuyor. Test bulma veya yürütme bu proje için çalışmayabilir. Çözümdeki her bir .NET Test projesinde NuGet test bağdaştırıcılarına başvurmak için önerilir.**
+**Test {} projesi herhangi bir .NET NuGet bağdaştırıcısına başvurulmaz. Test bulma veya yürütme bu proje için çalışmayabilir. Çözümdeki her bir .NET test projesinde NuGet test bağdaştırıcılarına başvurulması önerilir.**
 
-Test bağdaştırıcısı uzantılarından kullanmak yerine, projeleri test bağdaştırıcısı NuGet paketlerini kullanmak için gerekli değildir. Bu gereksinim, büyük ölçüde performansı artırır ve daha az sorunları ile sürekli tümleştirme neden olur. .NET Test bağdaştırıcısı uzantısı kullanımdan kaldırma hakkında daha fazla bilgiyi [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension).
+Test bağdaştırıcıuzantıları kullanmak yerine, projelerin test bağdaştırıcısı NuGet paketlerini kullanması gerekir. Bu gereksinim performansı büyük ölçüde artırır ve sürekli tümleştirme ile ilgili daha az soruna neden olur. .NET Test Adaptörü Uzantısı amortismanı hakkında daha fazla bilgi [için yayın notlarında](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension).
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> NUnit 3 test bağdaştırıcısı'na yükseltemedi olan ve NUnit 2 Test bağdaştırıcısı kullanıyorsanız, bu yeni Visual Studio sürümünde 15,8 bulma davranışı kapatabilirsiniz **Araçları** > **seçenekleri**  >  **Test**.
+> NUnit 2 Test Bağdaştırıcısını kullanıyorsanız ve NUnit 3 test bağdaştırıcısına geçiremiyorsanız, **Araçlar** > **Seçenekleri** > **Testi'ndeki**Visual Studio sürüm 15.8'deki bu yeni keşif davranışını kapatabilirsiniz.
 
-![Araçlar seçeneklerinde Gezgini bağdaştırıcısı davranışını sınama](media/testex-adapterbehavior.png)
+![Araçlar seçeneklerinde Explorer Bağdaştırıcısı davranışını test edin](media/testex-adapterbehavior.png)
 ::: moniker-end
 
 ## <a name="uwp-testcontainer-was-not-found"></a>UWP TestContainer bulunamadı
 
-**UWP testleriniz artık Visual Studio 2017 sürüm 15,7 ve sonrasında yürütülmiyor.**
+**UWP testlerim artık Visual Studio 2017 sürüm 15.7 ve sonraki sürümlerde yürütülmemektedir.**
 
-Son UWP test projeleri, test uygulamaları tanımlamak için daha iyi performans sağlayan bir test platformu yapı özelliğini belirtin. Visual Studio 15.7 Sürüm önce başlatıldı bir UWP test projesi varsa, bu hatayı görebilirsiniz **çıkış** > **testleri**:
+Son UWP test projeleri, test uygulamalarını tanımlamak için daha iyi performans sağlayan bir test platformu oluşturma özelliği belirtir. Visual Studio sürüm 15.7'den önce başharfe çevrilmiş bir UWP test projeniz varsa, **Çıktı** > **Testleri'nde**bu hatayı görebilirsiniz:
 
-**System. AggregateException: bir veya daha fazla hata oluştu. System. InvalidOperationException >---: aşağıdaki TestContainer bulunamadı {} Microsoft. VisualStudio. TestWindow. Controller. TestContainerProvider \<Gettestcontainsilinebilir Sync > d__61. MoveNext ()**
+**System.AggregateException: Bir veya daha fazla hata oluştu. ---> System.InvalidOperationException: Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider {} \<GetTestContainerAsync>d__61.MoveNext() adresinde aşağıdaki TestContainer bulunamadı**
 
 Bu hatayı düzeltmek için:
 
-- Aşağıdaki kodu kullanarak, test projesi yapı özelliği güncelleştirin:
+- Test proje oluşturma özelliğinizi aşağıdaki kodu kullanarak güncelleştirin:
 
 ```XML
 <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
 ```
 
-- Aşağıdaki kodu kullanarak TestPlatform SDK sürümü güncelleştir:
+- TestPlatform SDK sürümünü aşağıdaki kodu kullanarak güncelleyin:
 
 ```XML
 <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
 ```
 
-## <a name="using-feature-flags"></a>Özellik bayraklarını kullanarak
+## <a name="using-feature-flags"></a>Özellik bayraklarını kullanma
 
-**Yeni test özellikleri denemek için özellik bayraklarını üzerinde nasıl kapatabilir miyim?**
+**Yeni test özelliklerini denemek için özellik bayraklarını nasıl açabilirim?**
 
-Özellik bayrakları, ürün özellikleri resmi olarak sevk etmeden önce geri bildirim sağlamak ister misiniz kullanıcılar avid Deneysel veya tamamlanmamış bölümlerini göndermeye kullanılır. Bunlar, IDE deneyimi kararlılığını. Yalnızca güvenli geliştirme ortamlarında, sanal makineler gibi bunları kullanın. Özellik bayrakları her zaman kullanın--your-kendi-riskli ayarlarıdır. Deneysel özellikler ile etkinleştirebilirsiniz [özellik bayraklarını uzantısı](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.FeatureFlagsExtension), veya Geliştirici komut istemi aracılığıyla.
+Özellik bayrakları, özelliklerin resmi olarak sevkinden önce geri bildirimde bulunan hevesli kullanıcılara ürünün deneysel veya bitmemiş parçalarını sevk etmek için kullanılır. IDE deneyiminizi bozabilir. Bunları yalnızca sanal makineler gibi güvenli geliştirme ortamlarında kullanın. Özellik bayrakları her zaman kendi risk ayarlarınızı kullanır. [Özellik bayrakları uzantısı](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.FeatureFlagsExtension)ile veya geliştirici komut istemi aracılığıyla deneysel özellikleri açabilirsiniz.
 
-![Özellik bayrağı uzantısı](media/testex-featureflag.png)
+![Özellik Bayrağı Uzantısı](media/testex-featureflag.png)
 
-Visual Studio Geliştirici komut istemi üzerinden bir özellik bayrağını etkinleştirmek için aşağıdaki komutu kullanın. Yol, Visual Studio makinenizde yüklü olduğu için ve kayıt defteri anahtarı istediğiniz özellik bayrağını değiştirin.
+Visual Studio geliştirici komut istemi aracılığıyla bir özellik bayrağını açmak için aşağıdaki komutu kullanın. Görsel Stüdyo'nun makinenizde yüklü olduğu yolu değiştirin ve kayıt defteri anahtarını istediğiniz özellik bayrağıyla değiştirin.
 
 ```shell
 vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise" HKLM FeatureFlags\TestingTools\UnitTesting\HierarchyView Value dword 1
 ```
 
 > [!NOTE]
-> Dword sonra 1 yerine 0 değerini kullanarak aynı komutla bayrağı kapatabilirsiniz.
+> Dword'den sonra 1 yerine 0 değerini kullanarak bayrağı aynı komutla kapatabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
-- [Oluşturma ve mevcut koda yönelik birim testleri çalıştırma](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
-- [Birim testi kod](unit-test-your-code.md)
-- [Canlı birim testi ile ilgili SSS](live-unit-testing-faq.md)
+- [Varolan kod için birim testleri oluşturma ve çalıştırma](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
+- [Birim kodunuzu test edin](unit-test-your-code.md)
+- [Canlı ünite testi SSS](live-unit-testing-faq.md)

@@ -1,5 +1,5 @@
 ---
-title: VerifyFileHash görevi | Microsoft Docs
+title: VerifyFileHash Görev | Microsoft Dokümanlar
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -16,32 +16,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53819a642edcdf0419dd445ac32dbde8d14ffb22
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77579528"
 ---
-# <a name="verifyfilehash-task"></a>VerifyFileHash görevi
+# <a name="verifyfilehash-task"></a>VerifyFileHash görev
 
-Bir dosyanın beklenen dosya karmasıyla eşleştiğini doğrular. Karma eşleşmezse, görev başarısız olur.
+Bir dosyanın beklenen dosya karmaile eşleştiğini doğrular. Karma eşleşmiyorsa, görev başarısız olur.
 
-Bu görev 15,8 ' ye eklenmiştir, ancak 16,0 ' nin altındaki MSBuild sürümleri için kullanmak üzere [geçici bir çözüm](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) gerektirir.
+Bu görev 15.8'de eklendi, ancak 16.0'ın altındaki MSBuild sürümleri için kullanmak için geçici [bir geçici çözüm](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) gerektirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda `VerifyFileHash` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `VerifyFileHash` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`File`|Gerekli `String` parametresi.<br /><br />Karma hale getirilen ve doğrulanacak dosya.|
-|`Hash`|Gerekli `String` parametresi.<br /><br />Dosyanın beklenen karması.|
-|`Algorithm`|İsteğe bağlı `String` parametresi.<br /><br />Algoritma. İzin verilen değerler: `SHA256`, `SHA384`, `SHA512`. Varsayılan = `SHA256`.|
-|`HashEncoding`|İsteğe bağlı `String` parametresi.<br /><br />Oluşturulan karmaları için kullanılacak kodlama. `hex` değerini varsayılan olarak alır. İzin verilen değerler = `hex`, `base64`.|
+|`File`|Gerekli `String` parametre.<br /><br />Dosya nın işlenebilir ve doğrulanması gerekir.|
+|`Hash`|Gerekli `String` parametre.<br /><br />Dosyanın beklenen karma.|
+|`Algorithm`|İsteğe bağlı `String` parametre.<br /><br />Algoritma. İzin verilen `SHA256` `SHA384`değerler: , , `SHA512`. Varsayılan `SHA256`= .|
+|`HashEncoding`|İsteğe bağlı `String` parametre.<br /><br />Oluşturulan hashes için kullanılacak kodlama. Varsayılan `hex`değer. İzin verilen `hex` `base64`değerler = , .|
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, kendi sağlama toplamını doğrulamak için `VerifyFileHash` görevini kullanır.
+Aşağıdaki örnek, `VerifyFileHash` görevi kendi checksum doğrulamak için kullanır.
 
 ```xml
 <Project>
@@ -61,7 +61,7 @@ Aşağıdaki örnek, kendi sağlama toplamını doğrulamak için `VerifyFileHas
 </Project>
 ```
 
-MSBuild 16,5 ve üzeri sürümlerde, karma ile eşleşmediği zaman, denetim akışı için bir koşul olarak karma karşılaştırma kullanıyorsanız, aşağıdaki kodu kullanarak uyarının bir iletiye indirgenmesini sağlayabilirsiniz:
+MSBuild 16.5 ve sonraki zamanlarda, karma eşleşmiyorsa yapının başarısız olmasını istemiyorsanız (örneğin, karma karşılaştırmayı denetim akışı için bir koşul olarak kullanıyorsanız), uyarıyı aşağıdaki kodu kullanarak bir iletiye indirebilirsiniz:
 
 ```xml
   <PropertyGroup>

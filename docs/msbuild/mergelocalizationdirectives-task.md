@@ -1,5 +1,5 @@
 ---
-title: Mergelocalizationyönergeleri görevi | Microsoft Docs
+title: BirleştirmeYerelleştirme Yönergeleri Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,30 +19,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c7699afeb09604a437aad091f9aaf9ce624d33e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633505"
 ---
-# <a name="mergelocalizationdirectives-task"></a>Mergelocalizationyönergeleri görevi
+# <a name="mergelocalizationdirectives-task"></a>BirleştirmeYerelleştirme Yönergeleri görev
 
-<xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> görevi, bir veya daha fazla XAML ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
+Görev, <xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> bir veya daha fazla XAML ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |------------------------------| - |
-| `GeneratedLocalizationFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> XAML ikili biçimindeki tek dosyalar için yerelleştirme yönergeleri dosyalarının listesini belirtir. |
-| `OutputFile` | **Dize** çıkış parametresi gerekli.<br /><br /> Derlenmiş yerelleştirme-yönergeleri derlemesinin çıkış yolunu belirtir. |
+| `GeneratedLocalizationFiles` | Gerekli **ITaskItem[]** parametresi.<br /><br /> XAML ikili biçiminde tek tek dosyalar için yerelleştirme yönergeleri dosyalarının listesini belirtir. |
+| `OutputFile` | Gerekli **String** çıkış parametresi.<br /><br /> Derlenen yerelleştirme yönergeleri derlemesinin çıkış yolunu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-XAML içeriğine yerelleştirme öznitelikleri ve yorumlar ekleyebilirsiniz. Windows Presentation Foundation (WPF) yerelleştirme desteğiyle, yerelleştirme özniteliklerini ve açıklamalarını açabilir ve bunları oluşturulan derlemeden ayrı bir *. loc* dosyasına yerleştirebilirsiniz. Bunu **LocalizationPropertyStorage** özniteliğini kullanarak yapabilirsiniz. Yerelleştirme öznitelikleri ve açıklamalar ve **LocalizationPropertyStorage**hakkında daha fazla bilgi için bkz. [Yerelleştirme öznitelikleri ve açıklamaları](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
+XAML içeriğine yerelleştirme öznitelikleri ve açıklamalar ekleyebilirsiniz. Windows Sunu Temeli (WPF) yerelleştirme desteğiyle, yerelleştirme özniteliklerini ve açıklamalarını silebilir ve bunları oluşturulan derlemeden ayrı bir *.loc* dosyasına koyabilirsiniz. Bunu **YerelleştirmeÖzellik Depolama** özniteliğini kullanarak yapabilirsiniz. Yerelleştirme öznitelikleri ve açıklamaları ve **YerelleştirmeÖzellik Depolama**hakkında daha fazla bilgi için [bkz.](/dotnet/framework/wpf/advanced/localization-attributes-and-comments)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, birkaç XAML ikili biçim dosyasının yerelleştirme açıklamalarını tek bir *. loc* dosyasında birleştirir.
+Aşağıdaki örnek, birkaç XAML ikili biçimli dosyanın yerelleştirme yorumlarını tek bir *.loc* dosyasında birleştirir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -63,4 +63,4 @@ Aşağıdaki örnek, birkaç XAML ikili biçim dosyasının yerelleştirme açı
 - [WPF MSBuild görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [MSBuild görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

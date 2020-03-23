@@ -25,43 +25,43 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77f224a6e3a1b12ed17799ddf6a2fc5c23f5d4cc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591040"
 ---
-# <a name="how-to-manage-editor-modes"></a>Nasıl yapılır: Düzenleyici modlarını yönetme
+# <a name="how-to-manage-editor-modes"></a>Nasıl yapılsın: Editör modlarını yönetme
 
-Visual Studio Kod Düzenleyicisi'ni çeşitli görüntüleme modlarında görüntüleyebilirsiniz.
+Visual Studio kod düzenleyicisini çeşitli ekran modlarında görüntüleyebilirsiniz.
 
 > [!NOTE]
-> İletişim kutuları ve menü komutları gördüğünüz, etkin ayarlarınıza ve sürüm bağlı olarak bu makalede açıklanan olanlardan farklı olabilir. Ayarlarınızı, örneğin değiştirileceğini **genel** veya **Visual C++** ayarları seçebilirsiniz **Araçları** > **içeri ve dışarı aktarma ayarları**ve ardından **tüm ayarları Sıfırla**.
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürüme bağlı olarak bu makalede açıklananlardan farklı olabilir. Ayarlarınızı değiştirmek için, örneğin **Genel** veya **Görsel C++** ayarlarını değiştirmek **için, Araçlar** > **İçe Ve Dışa Aktar Ayarlarını**seçin ve ardından **tüm ayarları sıfırla'yı**seçin.
 
 ## <a name="enable-full-screen-mode"></a>Tam ekran modunu etkinleştirme
 
-Tüm araç pencerelerini Gizle ve belge pencereleri etkinleştirerek görüntülemek seçebileceğiniz **tam ekran** modu.
+Tüm araç pencerelerini gizlemeyi ve **tam ekran** modunu etkinleştirerek yalnızca belge pencerelerini görüntülemeyi seçebilirsiniz.
 
-- Tuşuna **Alt**+**Shift**+**Enter** girin ya da çıkmak için **tam ekran** modu.
+- **Tam Ekran** moduna girmek veya çıkmak için **Alt**+**Shift**+**Enter** tuşuna basın.
 
-     --veya--
+     -- veya --
 
-- Komutu Yürüt `View.Fullscreen` içinde **komut** penceresi.
+- **Komut** penceresinde `View.Fullscreen` komutu sorun.
 
-## <a name="enable-virtual-space-mode"></a>Sanal alan modu etkinleştir
+## <a name="enable-virtual-space-mode"></a>Sanal alan modunu etkinleştirme
 
-İçinde **sanal adres alanı** modu, her kod satırının sonunda boşluklar eklenir. Kodunuzu yanındaki tutarlı bir noktada açıklamaları yerleştirmek için bu seçeneği belirleyin.
+**Sanal Alan** modunda, boşluklar her kod satırının sonuna eklenir. Yorumları kodunuzun yanında tutarlı bir noktada konumlandırmak için bu seçeneği belirleyin.
 
-1. Seçin **seçenekleri** gelen **Araçları** menüsü.
+1. **Araçlar** menüsünden **Seçenekler'i** seçin.
 
-2. Genişletin **metin düzenleyici** klasöründe ve **tüm diller** bu seçeneği genel olarak ayarlayın ya da belirli bir dil klasörü seçin. Örneğin, yalnızca Visual Basic'te satır numaralarını etkinleştirmek için tercih **temel** > **metin düzenleyici** düğümü.
+2. Metin **Düzenleyicisi** klasörünü genişletin ve bu seçeneği genel olarak ayarlamak için **Tüm Diller'i** seçin veya belirli bir dil klasörünü seçin. Örneğin, yalnızca Visual Basic'te satır numaralarını açmak için **Temel** > **Metin Düzenleyicisi** düğümini seçin.
 
-3. Seçin **genel** seçenekleri altında **ayarları**seçin **sanal boşluğu etkinleştir**.
+3. **Genel** seçenekleri seçin ve **Ayarlar'ın**altında Sanal **Alanı Etkinleştir'i**seçin.
 
     > [!NOTE]
-    > **Sanal adres alanı** etkin **sütun seçimi** modu. Zaman **sanal adres alanı** modu etkin değil, ekleme noktasını bir satır sonundan sonraki ilk karakteri için doğrudan taşır.
+    > **Sanal Alan** **Sütun Seçimi** modunda etkinleştirilir. **Sanal Alan** modu etkinleştirilemediğinde, ekleme noktası doğrudan bir satırın sonundan sonrakinin ilk karakterine taşınır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md)
-- [Yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
+- [Yazı Tipleri ve Renkler, Çevre, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

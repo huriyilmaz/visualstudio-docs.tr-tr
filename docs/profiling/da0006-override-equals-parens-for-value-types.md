@@ -1,5 +1,5 @@
 ---
-title: 'DA0006: değer türleri için Equals () öğesini geçersiz kıl | Microsoft Docs'
+title: 'DA0006: Değer türleri için Geçersiz Kılma Eşittir() | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,29 +15,29 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9e097d6d8c9a7b82fac53fd37951644eb7eb5e59
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779538"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006: Değer türleri için Eşittir()'lerin üzerine yaz
 
 |||
 |-|-|
-|Kural Kimliği|DA0006|
-|Kategori|.NET Framework kullanımı|
-|Profikenme yöntemleri|Aşağıdakine|
-|İleti|Değer türlerinde Equals ve eşitlik işlecini geçersiz kılın.|
+|Kural Id|DA0006|
+|Kategori|.NET Çerçeve Kullanımı|
+|Profiiling yöntemleri|Örnekleme|
+|İleti|Değer türlerinde Eşitleri ve eşitlik işlecini geçersiz kılın.|
 |Messge türü|Uyarı|
 
-## <a name="cause"></a>Sebep
- Eşittir yöntemine veya bir ortak değer türünün eşitlik işleçlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Daha verimli bir yöntem uygulamayı düşünün.
+## <a name="cause"></a>Nedeni
+ Eşitler yöntemine yapılan çağrılar veya ortak değer türündeki eşitlik işleçleri profil oluşturma verilerinin önemli bir kısmıdır. Daha verimli bir yöntem uygulamayı düşünün.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Değer türleri için, eşittir devralınan uygulama <xref:System.Reflection> kitaplığını kullanır ve bu türdeki tüm alanların içeriğini karşılaştırır. Yansıma hesaplama açısından pahalıdır ve her alan için eşitlik karşılaştırma gereksiz olabilir. Kullanıcıların örnekleri karşılaştırmasını veya sıralamasını veya onları karma tablo anahtarları olarak kullanmasını bekleliyorsanız, değer türü eşittir değerini uygulamalıdır. Programlama diliniz işleç aşırı yüklemesini destekliyorsa eşitlik ve eşitsizlik işleçleri de bir uygulama sağlamalısınız.
+ Değer türleri için, Eşitler'in devralınan uygulaması <xref:System.Reflection> kitaplığı kullanır ve türdeki tüm alanların içeriğini karşılaştırır. Yansıma hesaplama açısından pahalıdır ve her alan için eşitlik karşılaştırma gereksiz olabilir. Kullanıcıların örnekleri karşılaştırmasını veya sıralamasını veya bunları karma tablo anahtarları olarak kullanmasını bekliyorsanız, değer türünüz Eşittir'leri uygulamalıdır. Programlama diliniz operatör aşırı yüklemesini destekliyorsa, eşitlik ve eşitsizlik işleçlerinin uygulanmasını da sağlamanız gerekir.
 
- Eşit ve eşitlik operatörlerinin nasıl geçersiz kılındığı hakkında daha fazla bilgi için bkz. [Equals ve eşitlik işleci (= =) uygulamak Için yönergeler](/dotnet/standard/design-guidelines/equality-operators).
+ Eşitleri ve eşitlik işleçlerini nasıl geçersiz kılacakları hakkında daha fazla bilgi için, [Eşitleri ve Eşitlik Operatörlerini Uygulama Yönergeleri'ne (==)](/dotnet/standard/design-guidelines/equality-operators)bakın.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Eşittir ve eşitlik işleçlerini uygulamayla ilgili bir örnek için, bkz. kod analizi kuralı [CA1815: geçersiz kılma Equals ve değer türlerinde işleç eşittir](../code-quality/ca1815.md)
+## <a name="how-to-investigate-a-warning"></a>Bir uyarı nasıl araştırılı
+ Eşitler ve eşitlik işleçleri uygulama örneği için, kod çözümleme kuralı [CA1815 bakın: Geçersiz kılma eşittir ve işleç eşittir değer türlerinde eşittir](../code-quality/ca1815.md)
