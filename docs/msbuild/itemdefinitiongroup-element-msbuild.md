@@ -1,5 +1,5 @@
 ---
-title: ItemDefinitionGroup öğesi (MSBuild) | Microsoft Docs
+title: ItemDefinitionGroup Öğesi (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633635"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup öğesi (MSBuild)
 
-`ItemDefinitionGroup` öğesi, varsayılan olarak, projedeki tüm öğelere uygulanan meta veri değerleri olan öğe tanımları kümesini tanımlamanızı sağlar. ItemDefinitionGroup, [CreateItem görevi](../msbuild/createitem-task.md) ve [CreateProperty görevini](../msbuild/createproperty-task.md)kullanma ihtiyacını ortadan ortadan alır. Daha fazla bilgi için bkz. [öğe tanımları](../msbuild/item-definitions.md).
+Öğe, `ItemDefinitionGroup` varsayılan olarak projedeki tüm öğelere uygulanan meta veri değerleri olan madde tanımları kümesini tanımlamanızı sağlar. ItemDefinitionGroup [CreateItem görev](../msbuild/createitem-task.md) ve [CreateProperty görev](../msbuild/createproperty-task.md)kullanma gereksinimi yerini alır. Daha fazla bilgi için [Madde tanımlarına](../msbuild/item-definitions.md)bakın.
 
-\<Proje > \<ItemDefinitionGroup >
+\<Proje \<> ItemDefinitionGroup>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,13 +48,13 @@ ms.locfileid: "77633635"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik. Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Condition`|İsteğe bağlı öznitelik. Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlar. Bir `ItemDefinitionGroup`sıfır veya daha fazla `Item` öğe olabilir.|
+|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işleminin girdilerini tanımlar. Bir 'de sıfır `Item` veya `ItemDefinitionGroup`daha fazla öğe olabilir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -64,7 +64,7 @@ ms.locfileid: "77633635"
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, bir ItemDefinitionGroup içinde, k ve n olmak üzere iki meta veri öğesi tanımlar. Bu örnekte, "m" meta verileri "i" öğesi tarafından açıkça tanımlanmadığından "m" varsayılan meta verileri "i" öğesine uygulanır. Ancak, "n" meta verileri "i" öğesi tarafından zaten tanımlandığından "i" varsayılan meta verileri "i" öğesine uygulanmıyor.
+Aşağıdaki kod örneği, bir ItemDefinitionGroup'ta m ve n olmak üzere iki meta veri öğesi tanımlar. Bu örnekte, "m" meta verileri Madde "i" olarak uygulanır, çünkü meta veri "m" Madde "i" tarafından açıkça tanımlanmamıştır. Ancak, varsayılan meta veri "n" Madde "i" uygulanmaz, çünkü meta veri "n" zaten Madde "i" tarafından tanımlanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

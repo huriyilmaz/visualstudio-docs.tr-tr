@@ -1,39 +1,39 @@
 ---
-title: Arama ve filtreleme | Microsoft Docs
+title: Arama ve filtreleme | Microsoft Dokümanlar
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Yöneticilerin yönetim portalında bireysel aboneleri veya grupları nasıl bulabileceğinizi öğrenin.
+description: Yöneticilerin Yönetim Portalı'nda tek tek aboneleri veya grupları nasıl bulabileceğini öğrenin.
 ms.openlocfilehash: ab6e680747e7c4c216315bad02e0373bb8fe271c
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78408973"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde aboneleri arama ve filtreleme
-Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanızı sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtreleyebilirsiniz.
+Visual Studio Abonelikleri Yönetim Portalı, çeşitli kriterlere göre belirli bir abone alt kümesini bulmanızı sağlar. Abone listesini ada, e-posta adresine, abonelik düzeyine ve diğer bilgilere göre filtreleyebilirsiniz.
 
 ## <a name="to-filter-the-subscriber-list"></a>Abone listesini filtrelemek için
-1. Belirli bir abone grubunu aramak için **filtre** sekmesini seçin.
+1. Belirli bir abone grubunu aramak için **Filtre** sekmesini seçin.
    > [!div class="mx-imgBorder"]
-   > abone listesi aramak için filtre ![seçin](_img/search-filter/filter-list.png)
+   > ![Abone listesinde arama yapmak için Filtre'yi seçin](_img/search-filter/filter-list.png)
 
-2. Aramanızın temeli olarak kullanmak istediğiniz ölçütleri girin ve sonra yeniden **Filtrele** ' yi seçin.
+2. Aramanızın temeli olarak kullanmak istediğiniz ölçütleri girin ve ardından yeniden **Filtrele'yi** seçin.
    > [!div class="mx-imgBorder"]
-   > ![abone verilerini filtrelemek için kullanılabilir alanları kullanın](media/filter-subscribers.png)
+   > ![Abone verilerini filtrelemek için kullanılabilir alanları kullanma](media/filter-subscribers.png)
 
-   Abone listeniz, seçtiğiniz ölçütlere göre eşleşir.  Her bir alan için sıralama düzenini değiştirmek üzere filtrelenmiş sonuçların başlıklarına tıklayabilirsiniz.  
+   Abone listeniz seçtiğiniz ölçütle eşleşir.  Her alanın sıralama sırasını değiştirmek için filtre uygulanmış sonuçların başlıklarını tıklatabilirsiniz.  
    > [!NOTE]
-   > **Ad** alanı adı ilk ada göre sıralanır.
+   > **Ad** alanı ilk ada göre sıralanır.
 
-   **Filtre simgesinin** vurgulandığını ve bir filtrenin uygulandığını unutmayın.  **Açık bir filtre** seçeneği de görüntülenir. 
+   **Filtre** simgesinin bir filtrenin uygulandığını belirten vurgulandığına dikkat edin.  **Açık filtre** seçeneği de görüntülenir. 
 
-3. Filtreyi temizlemek ve filtrelenmemiş listeyi geri yüklemek için sağ üst köşedeki **Filtreyi temizle** sekmesine tıklayın. 
+3. Filtreyi temizlemek ve filtreuygulanmamış listeyi geri yüklemek için sağ üstteki filtre sekmesini **temizleyin.** 
    > [!div class="mx-imgBorder"]
-   > ![abone listesinden filtreyi temizleyin](_img/search-filter/clear-filter.png)
+   > ![Filtreyi abone listesinden temizleme](_img/search-filter/clear-filter.png)
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -44,7 +44,7 @@ Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belir
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Bir abonenin nasıl bulunacağını öğrenmiş olduğunuza göre, aboneliğini nasıl [düzenleyeceğinizi](edit-license.md) öğrenin.
-- Yönetim portalını kullanma konusunda yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
+- Artık bir aboneyi nasıl bulacağınızı bildiğinize göre, aboneliğini nasıl [dörde lacağınızı](edit-license.md) öğrenin.
+- Yönetim Portalı'nı kullanarak yardıma mı ihtiyacınız var?  İletişim [Görsel Stüdyo İdaresi ve Abonelikler Destek](https://visualstudio.microsoft.com/support/support-overview-vs).
 
 

@@ -1,5 +1,5 @@
 ---
-title: GetFrameworkPath Görevi | Microsoft Docs
+title: GetFrameworkPath Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,39 +19,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b907194c4818ff6b867e9d15b795506ef3b77476
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634012"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath görevi
 
-.NET Framework derlemelerinin yolunu alır.
-.NET Framework derlemelerinin yolunu alır.
+.NET Framework derlemelerine giden yolu alır.
+.NET Framework derlemelerine giden yolu alır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
-Aşağıdaki tabloda `GetFrameworkPath` görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda görevparametreleri `GetFrameworkPath` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`FrameworkVersion11Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 1,1 derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
-|`FrameworkVersion20Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 2,0 derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
-|`FrameworkVersion30Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 3,0 derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
-|`FrameworkVersion35Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 3,5 derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
-|`FrameworkVersion40Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 4,0 derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
-|`Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa, en son çerçeve derlemelerinin yolunu içerir. Aksi takdirde `null`döndürür.|
+|`FrameworkVersion11Path`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Varsa, çerçeve sürümü 1.1 derlemelerine giden yolu içerir. Aksi `null`takdirde döner.|
+|`FrameworkVersion20Path`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Varsa, çerçeve sürümü 2.0 derlemelerine giden yolu içerir. Aksi `null`takdirde döner.|
+|`FrameworkVersion30Path`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Varsa, çerçeve sürümü 3.0 derlemelerine giden yolu içerir. Aksi `null`takdirde döner.|
+|`FrameworkVersion35Path`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Varsa, çerçeve sürümü 3.5 derlemelerine giden yolu içerir. Aksi `null`takdirde döner.|
+|`FrameworkVersion40Path`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Varsa, çerçeve sürümü 4.0 derlemelerine giden yolu içerir. Aksi `null`takdirde döner.|
+|`Path`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Varsa, en son çerçeve derlemelerine giden yolu içerir. Aksi `null`takdirde döner.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework birden çok sürümü yüklüyse, bu görev MSBuild 'in üzerinde çalışmak üzere tasarlandığı sürümü döndürür.
+.NET Framework'ün birkaç sürümü yüklenirse, bu görev MSBuild'in çalıştırmak üzere tasarladığı sürümü döndürür.
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `FrameworkPath` özelliğindeki .NET Framework yolunu depolamak için `GetFrameworkPath` görevini kullanır.
+Aşağıdaki `GetFrameworkPath` örnekte, `FrameworkPath` .NET Framework'e giden yolu özellikte depolamak için görev kullanılmıştır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -1,5 +1,5 @@
 ---
-title: Görev yazma | Microsoft Docs
+title: Görev Yazma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,27 +13,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8cbcf47ec83e1b900ba94ab3842c2cfa63fdcc5d
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631846"
 ---
 # <a name="task-writing"></a>Görev yazma
 
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. Görevler, hedefler ' de yer alır. Tipik görevler kitaplığı MSBuild 'e dahildir ve ayrıca kendi görevlerinizi de oluşturabilirsiniz. MSBuild 'e dahil edilen görevlerin Kitaplığı hakkında daha fazla bilgi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
+Görevler, yapı işlemi sırasında çalışan kodu sağlar. Görevler hedeflerde bulunur. Tipik görevler kitaplığı MSBuild ile birlikte verilir ve kendi görevlerinizi de oluşturabilirsiniz. MSBuild ile birlikte verilen görevler kitaplığı hakkında daha fazla bilgi için [Görev başvurusuna](../msbuild/msbuild-task-reference.md)bakın.
 
 ## <a name="tasks"></a>Görevler
 
- Görev örnekleri, bir veya daha fazla dosyayı kopyalayan, bir dizin oluşturan [MakeDir](../msbuild/makedir-task.md)ve kaynak kodu dosyalarını derleyen C# [CSC](../msbuild/csc-task.md) ['yi içerir.](../msbuild/copy-task.md) Her görev, *Microsoft. Build. Framework. dll* derlemesinde tanımlanan <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir .NET sınıfı olarak uygulanır.
+ Görevlere örnek olarak, bir veya daha fazla dosyayı kopyalayan [Kopya,](../msbuild/copy-task.md)dizin oluşturan [MakeDir](../msbuild/makedir-task.md)ve C# kaynak kod dosyalarını derleyen [Csc](../msbuild/csc-task.md)verilebilir. Her görev, *Microsoft.Build.Framework.dll* <xref:Microsoft.Build.Framework.ITask> derlemesinde tanımlanan arabirimi uygulayan bir .NET sınıfı olarak uygulanır.
 
  Bir görevi uygularken kullanabileceğiniz iki yaklaşım vardır:
 
-- <xref:Microsoft.Build.Framework.ITask> arabirimini doğrudan uygulayın.
+- Arayüzü <xref:Microsoft.Build.Framework.ITask> doğrudan uygulayın.
 
-- *Microsoft. Build. Utilities. dll* derlemesinde tanımlanan <xref:Microsoft.Build.Utilities.Task>yardımcı sınıfından sınıfınızı türetirsiniz. Görev ITask 'ı uygular ve bazı ITask üyelerinin varsayılan uygulamalarını sağlar. Ayrıca günlüğe kaydetme daha kolay.
+- *Microsoft.Build.Utilities.dll* <xref:Microsoft.Build.Utilities.Task>derlemesinde tanımlanan yardımcı sınıftan sınıfınızı türetin. Görev ITask uygular ve bazı ITask üyelerinin varsayılan uygulamalarını sağlar. Ayrıca, günlüğe kaydetme daha kolaydır.
 
-Her iki durumda da, görev çalıştırıldığında çağrılan yöntemi olan `Execute`adlı bir yöntemi sınıfınıza eklemeniz gerekir. Bu yöntem hiçbir parametre alır ve `Boolean` bir değer döndürür: görev başarılı olduysa veya `false` `true`. Aşağıdaki örnek, hiçbir eylem gerçekleştirmeyen ve `true`döndüren bir görevi gösterir.
+Her iki durumda da, görev çalıştığında `Execute`çağrılan yöntem olan sınıfına adlı bir yöntem eklemeniz gerekir. Bu yöntem hiçbir parametre `Boolean` almaz `true` ve bir değer `false` döndürür: görev başarılı ysa veya başarısız olduysa. Aşağıdaki örnekte, hiçbir eylem gerçekleştirmeden `true`ve döndüren bir görev gösterilmektedir.
 
 ```csharp
 using System;
@@ -52,7 +52,7 @@ namespace MyTasks
 }
 ```
 
- Şu proje dosyası bu görevi çalıştırır:
+ Aşağıdaki proje dosyası bu görevi çalıştırır:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -62,7 +62,7 @@ namespace MyTasks
 </Project>
 ```
 
- Görevler çalıştırıldığında, görev sınıfında .NET özellikleri oluşturursanız proje dosyasından de giriş alabilir. MSBuild, bu özellikleri görevin `Execute` yöntemi çağrılmadan hemen önce ayarlar. Bir dize özelliği oluşturmak için, şöyle bir görev kodu kullanın:
+ Görevler çalıştırıldığında, görev sınıfında .NET özellikleri oluşturursanız proje dosyasından da giriş alabilirler. MSBuild, görev `Execute` yöntemini çağırmadan hemen önce bu özellikleri ayarlar. Bir dize özelliği oluşturmak için, görev kodunu kullanın:
 
 ```csharp
 using System;
@@ -83,7 +83,7 @@ namespace MyTasks
 }
 ```
 
- Aşağıdaki proje dosyası bu görevi çalıştırır ve `MyProperty` verilen değere ayarlar:
+ Aşağıdaki proje dosyası bu görevi `MyProperty` çalıştırır ve verilen değere ayarlar:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -93,18 +93,18 @@ namespace MyTasks
 </Project>
 ```
 
-## <a name="register-tasks"></a>Görevleri Kaydet
+## <a name="register-tasks"></a>Görevleri kaydetme
 
- Bir proje bir görevi çalıştıracaksanız, MSBuild 'in görev sınıfını içeren derlemeyi nasıl bulacağınızı bilmelidir. Görevler [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)kullanılarak kaydedilir.
+ Bir proje bir görevi çalıştıracaksa, MSBuild görev sınıfını içeren derlemeyi nasıl bulacağını bilmelidir. Görevler [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)kullanılarak kaydedilir.
 
- MSBuild dosyası *Microsoft. Common. Tasks* , MSBuild ile sağlanan tüm görevleri kaydeden `UsingTask` öğelerinin listesini içeren bir proje dosyasıdır. Bu dosya, her proje oluşturulurken otomatik olarak eklenir. *Microsoft. Common. Tasks* ' de kayıtlı bir görev aynı zamanda geçerli proje dosyasında kayıtlıysa, geçerli proje dosyası önceliklidir; diğer bir deyişle, aynı ada sahip olan kendi görevinizdeki varsayılan görevi geçersiz kılabilirsiniz.
+ MSBuild dosyası *Microsoft.Common.Tasks,* MSBuild ile birlikte `UsingTask` verilen tüm görevleri kaydeden öğelerin listesini içeren bir proje dosyasıdır. Bu dosya, her projeyi kurarken otomatik olarak dahil edilir. *Microsoft.Common.Tasks'de* kayıtlı bir görev de geçerli proje dosyasında kayıtlıysa, geçerli proje dosyası önceliklidir; diğer bir diğer adıyla, aynı ada sahip kendi görevinizle varsayılan bir görevi geçersiz kılabilirsiniz.
 
 > [!TIP]
-> *Microsoft. Common. görevlerinin*Içeriğini görüntüleyerek MSBuild ile sağlanan görevlerin bir listesini görebilirsiniz.
+> *Microsoft.Common.Tasks'in*içeriğini görüntüleyerek MSBuild ile birlikte verilen görevlerin listesini görebilirsiniz.
 
-## <a name="raise-events-from-a-task"></a>Bir görevden olay oluştur
+## <a name="raise-events-from-a-task"></a>Görevden olayları yükseltme
 
- Göreviniz <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilirse, kayıtlı Günlükçüler tarafından yakalanıp gösterilecek olayları yükseltmek için <xref:Microsoft.Build.Utilities.Task> sınıfında aşağıdaki yardımcı yöntemlerden herhangi birini kullanabilirsiniz:
+ Göreviniz <xref:Microsoft.Build.Utilities.Task> yardımcı sınıftan geliyorsa, herhangi bir kayıtlı kaydedici tarafından yakalanacak ve görüntülenecek olayları yükseltmek için <xref:Microsoft.Build.Utilities.Task> sınıftaki aşağıdaki yardımcı yöntemlerden birini kullanabilirsiniz:
 
 ```csharp
 public override bool Execute()
@@ -116,7 +116,7 @@ public override bool Execute()
 }
 ```
 
- Göreviniz doğrudan <xref:Microsoft.Build.Framework.ITask> uygularsa bu tür olayları yine de oluşturabilirsiniz, ancak IBuildEngine arabirimini kullanmanız gerekir. Aşağıdaki örnek, ITask uygulayan ve özel bir olay başlatan bir görevi gösterir:
+ Göreviniz doğrudan <xref:Microsoft.Build.Framework.ITask> uygulanıyorsa, bu tür olayları yine de yükseltebilirsiniz, ancak IBuildEngine arabirimini kullanmanız gerekir. Aşağıdaki örnek, ITask'ı uygulayan ve özel bir olay yükselten bir görev gösterir:
 
 ```csharp
 public class SimpleTask : ITask
@@ -135,20 +135,20 @@ public class SimpleTask : ITask
 }
 ```
 
-## <a name="require-task-parameters-to-be-set"></a>Görev parametrelerinin ayarlanması gerekiyor
+## <a name="require-task-parameters-to-be-set"></a>Görev parametrelerinin ayarlanmasını zorunlu kılmasını gerektirin
 
- Belirli görev özelliklerini "gerekli" olarak işaretleyebilirsiniz. böylece, görevi çalıştıran herhangi bir proje dosyasının bu özelliklerin değerlerini ayarlaması gerekir, aksi durumda derleme başarısız olur. `[Required]` özniteliğini, görevdeki .NET özelliğine aşağıdaki şekilde uygulayın:
+ Görevi çalıştıran herhangi bir proje dosyasının bu özellikler için değerler ayarlaması veya yapının başarısız olması için belirli görev özelliklerini "gerekli" olarak işaretleyebilirsiniz. Görevinizdeki `[Required]` .NET özelliğine özniteliği aşağıdaki gibi uygulayın:
 
 ```csharp
 [Required]
 public string RequiredProperty { get; set; }
 ```
 
- `[Required]` özniteliği, <xref:Microsoft.Build.Framework> ad alanındaki <xref:Microsoft.Build.Framework.RequiredAttribute> tarafından tanımlanır.
+ Öznitelik `[Required]` <xref:Microsoft.Build.Framework> ad alanında <xref:Microsoft.Build.Framework.RequiredAttribute> tanımlanır.
 
-## <a name="how-msbuild-invokes-a-task"></a>MSBuild bir görevi nasıl çağırır
+## <a name="how-msbuild-invokes-a-task"></a>MSBuild bir görevi nasıl çağırır?
 
-Bir görevi çağırırken, MSBuild önce görev sınıfını örnekleyerek, ardından bu nesnenin proje dosyasındaki görev öğesinde ayarlanan görev parametreleri için özellik ayarlayıcıları ' nı çağırır. Görev öğesi bir parametre belirtmezse veya öğede belirtilen ifade boş bir dize olarak değerlendirilirse, Özellik ayarlayıcısı çağrılmaz.
+Bir görevi çağırırken, MSBuild önce görev sınıfını anında ayarlar, ardından proje dosyasındaki görev öğesinde ayarlanan görev parametreleri için bu nesnenin özellik ayarlayıcılarını çağırır. Görev öğesi bir parametre belirtmezse veya öğede belirtilen ifade boş bir dize için değerlendirirse, özellik ayarlayıcısı çağrılmaz.
 
 Örneğin, projede
 
@@ -162,19 +162,19 @@ Bir görevi çağırırken, MSBuild önce görev sınıfını örnekleyerek, ard
 </Project>
 ```
 
-yalnızca `Input3` ayarlayıcısı çağrılır.
+yalnızca ayarlayıcı `Input3` denir.
 
-Bir görev, parametre özelliği ayarlayıcısı çağrısının herhangi bir göreli sırasına bağlı olmamalıdır.
+Bir görev parametre-özellik ayarlayıcı çağırma herhangi bir göreli sıraya bağlı olmamalıdır.
 
 ### <a name="task-parameter-types"></a>Görev parametresi türleri
 
-MSBuild yerel olarak `string`, `bool`, `ITaskItem` ve `ITaskItem[]`türündeki özellikleri işler. Bir görev farklı türde bir parametreyi kabul ediyorsa, MSBuild, `string` (tüm özellik ve öğe başvuruları genişletilmiş) hedef türüne dönüştürmek için <xref:System.Convert.ChangeType%2A> çağırır. Herhangi bir giriş parametresi için dönüştürme başarısız olursa, MSBuild bir hata yayar ve görevin `Execute()` yöntemini çağırmaz.
+MSBuild `string`yerel olarak türü , `bool` `ITaskItem` ve `ITaskItem[]`. Bir görev farklı bir türdeki bir parametreyi <xref:System.Convert.ChangeType%2A> kabul ederse, MSBuild (tüm özellik ve madde başvuruları genişletildiğinde) hedef türüne dönüştürmeyi `string` çağırır. Dönüştürme herhangi bir giriş parametresi için başarısız olursa, MSBuild bir hata `Execute()` yayan ve görevin yöntemini çağırmaz.
 
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki C# sınıf, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilen bir görevi gösterir. Bu görev, başarılı olduğunu belirten `true`döndürür.
+Bu aşağıdaki C# <xref:Microsoft.Build.Utilities.Task> sınıfı, yardımcı sınıftan kaynaklanan bir görev gösterir. Bu görev, başarılı olduğunu gösteren döndürür. `true`
 
 ### <a name="code"></a>Kod
 
@@ -199,7 +199,7 @@ namespace SimpleTask1
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki C# sınıf, <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir görevi gösterir. Bu görev, başarılı olduğunu belirten `true`döndürür.
+Bu aşağıdaki C# sınıfı <xref:Microsoft.Build.Framework.ITask> arabirimi uygulayan bir görev gösterir. Bu görev, başarılı olduğunu gösteren döndürür. `true`
 
 ### <a name="code"></a>Kod
 
@@ -235,7 +235,7 @@ namespace SimpleTask2
 
 ### <a name="description"></a>Açıklama
 
-Bu C# sınıf, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından türetilen bir görevi gösterir. Gerekli bir dize özelliğine sahiptir ve tüm kayıtlı Günlükçüler tarafından görüntülenen bir olay oluşturur.
+Bu C# <xref:Microsoft.Build.Utilities.Task> sınıfı, yardımcı sınıftan türeyen bir görevi gösterir. Gerekli bir dize özelliği vardır ve tüm kayıtlı kaydediciler tarafından görüntülenen bir olay yükseltir.
 
 ### <a name="code"></a>Kod
 
@@ -245,7 +245,7 @@ Bu C# sınıf, <xref:Microsoft.Build.Utilities.Task> yardımcı sınıfından t�
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki örnek, SimpleTask3 önceki örnek görevi çağıran bir proje dosyası gösterir.
+Aşağıdaki örnekte, önceki örnek görev olan SimpleTask3'ün çağıran bir proje dosyası gösterilmektedir.
 
 ### <a name="code"></a>Kod
 

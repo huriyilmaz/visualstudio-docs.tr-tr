@@ -1,5 +1,5 @@
 ---
-title: Bir yük testi eklentisi oluşturma
+title: Yük Testi Eklentisi Oluşturma
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,88 +13,88 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 97952f65d78f7204410d07b90e0e538fb8499116
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589129"
 ---
-# <a name="how-to-create-a-load-test-plug-in"></a>Nasıl yapılır: bir yük testi eklentisi oluşturma
+# <a name="how-to-create-a-load-test-plug-in"></a>Nasıl yapılsın: Yük testi eklentisi oluşturma
 
-Bir yük testi, yük testi çalışırken, farklı zamanlarda kodu çalıştırmak için eklenti oluşturabilirsiniz. Yerleşik yük testi işlevselliğini değiştirmenize veya üzerine genişletmek için bir eklenti oluşturun. Örneğin, ayarlamak veya yük testi çalışırken yük testi düzeni değiştirmek için bir yük testi eklentisi kod yazabilirsiniz. Bunu yapmak için devralınan bir sınıf oluşturmanız <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> arabirimi. Bu sınıf uygulamalıdır <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin.Initialize*> bu arabirimin yöntemi. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>.
+Yük testi çalışırken kodu farklı zamanlarda çalıştırmak için bir yük testi eklentisi oluşturabilirsiniz. Yerleşik yük testinin işlevselliğini genişletmek veya değiştirmek için bir eklenti oluşturursunuz. Örneğin, yük testi çalışırken yük testi deseni ayarlamak veya değiştirmek için bir yük testi eklentisini kodlayabilirsiniz. Bunu yapmak için <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> arabirimi devralan bir sınıf oluşturmanız gerekir. Bu sınıf bu <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin.Initialize*> arabirimin yöntemini uygulamalıdır. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>.
 
 > [!TIP]
-> Web performans testleri için eklentileri de oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md).
+> Ayrıca web performans testleri için eklentiler oluşturabilirsiniz. Daha fazla bilgi için [bkz: Web performans testi eklentisi oluşturun.](../test/how-to-create-a-web-performance-test-plug-in.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 <!-- markdownlint-disable MD003 MD020 -->
-## <a name="to-create-a-load-test-plug-in-in-c"></a>' De bir yük testi eklentisi oluşturmak içinC#
+## <a name="to-create-a-load-test-plug-in-in-c"></a>C'de yük testi eklentisi oluşturmak için #
 <!-- markdownlint-enable MD003 MD020 -->
 
-1. Bir web performansı ve bir web performans testi içeren bir yük testi projesi açın.
+1. Web performans testi içeren bir web performansı ve yükleme testi projesi açın.
 
-2. Bir yük testi test projesine ekleyin ve bir web performans testi çalıştırmak için yapılandırın.
+2. Test projesine bir yük testi ekleyin ve bir web performans testi çalıştırmak için yapılandırın.
 
-     Daha fazla bilgi için [hızlı başlangıç: yük testi projesi oluşturma](../test/quickstart-create-a-load-test-project.md).
+     Daha fazla bilgi için [bkz: Quickstart: Bir yük testi projesi oluşturun.](../test/quickstart-create-a-load-test-project.md)
 
-3. Çözüme yeni bir **sınıf kitaplığı** projesi ekleyin. ( **Çözüm Gezgini**, çözüme sağ tıklayın ve **Ekle** ' yi seçin ve ardından **Yeni proje**' yi seçin.)
+3. Çözüme yeni bir **Sınıf Kitaplığı** projesi ekleyin. (Çözüm **Gezgini'nde,** çözüme sağ tıklayın ve **Ekle'yi** seçin ve ardından **Yeni Proje'yi**seçin.)
 
-4. İçinde **Çözüm Gezgini**, sağ **başvuruları** seçin ve yeni sınıf kitaplığı klasöründe **Başvuru Ekle**.
+4. **Çözüm Gezgini'nde,** yeni sınıf kitaplığındaki **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle'yi**seçin.
 
    **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-5. Seçin **.NET** sekmesinde, aşağı kaydırın ve ardından **gt;Microsoft.VisualStudio.QualityTools.LoadTestFramework &** .
+5. **.NET** sekmesini seçin, aşağı kaydırın ve ardından **Microsoft.VisualStudio.QualityTools.LoadTestFramework'i**seçin.
 
-6. **Tamam**’ı seçin.
+6. **Tamam'ı**seçin.
 
-   Başvuru **gt;Microsoft.VisualStudio.QualityTools.LoadTestFramework &** eklenir **başvuru** klasöründe **Çözüm Gezgini**.
+   **Microsoft.VisualStudio.QualityTools.LoadTestFramework** başvurusu **Solution Explorer'daki** **Başvuru** klasörüne eklenir.
 
-7. İçinde **Çözüm Gezgini**web performansının üst düğümünü sağ tıklatın ve yük testi seçin ve eklentisini eklemek istediğiniz yük testini içeren test projesi yük **Başvuru Ekle**.
+7. **Çözüm Gezgini'nde,** yük testi eklentisini eklemek istediğiniz yük testini içeren web performansı ve yük testi projesinin üst düğümünü sağ tıklatın ve **Başvuru Ekle'yi**seçin.
 
-   **Başvuru Ekle iletişim kutusu görüntülenir**.
+   **Başvuru Ekle iletişim kutusu görüntülenir.**
 
-8. Seçin **projeleri** sekmesini ve sınıf kitaplığı Projesi'ni seçin.
+8. **Projeler** sekmesini seçin ve Sınıf Kitaplığı Projesi'ni seçin.
 
-9. **Tamam**’ı seçin.
+9. **Tamam'ı**seçin.
 
-10. İçinde **Kod Düzenleyicisi**, ekleme bir `using` bildirimi <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ad alanı.
+10. Kod <xref:Microsoft.VisualStudio.TestTools.LoadTesting> **Düzenleyicisi'nde,** ad alanı için bir `using` deyim ekleyin.
 
-11. Uygulama <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> sınıf kitaplığı projesinde oluşturulan sınıf için arabirim. Örnek uygulama için aşağıdaki örnek bölümüne bakın.
+11. Sınıf <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> Kitaplığı projesinde oluşturulan sınıfın arabirimini uygulayın. Örnek uygulama için aşağıdaki Örnek bölümüne bakın.
 
-12. Kodu yazdıktan sonra yeni projeyi derleyin.
+12. Kodu yazdıktan sonra yeni projeyi oluşturun.
 
-13. Yük testinin üst düğümünü sağ tıklatın ve ardından **Yük Testi Eklentisi Ekle**.
+13. Yük testinin üst düğümüne sağ tıklayın ve ardından **Yükle Testi Eklentisi Ekle'yi**seçin.
 
-     **Yük Testi Eklentisi Ekle** iletişim kutusu görüntülenir.
+     **Yükle Testi Eklentisi** iletişim kutusu görüntülenir.
 
-14. Altında **bir eklenti seçin**seçin, yük testi eklentisi sınıfı.
+14. **Bir eklenti seç'in**altında, yük testi eklentisınıfını seçin.
 
-15. İçinde **özelliklerini çili eklenti** bölmesinde, çalışma zamanında kullanmak eklenti için başlangıç değerlerini ayarlayın.
+15. **Seçili eklenti** bölmesinin Özellikleri'nde, eklentinin çalışma zamanında kullanması için ilk değerleri ayarlayın.
 
     > [!NOTE]
-    > Eklentilerinizi istediğiniz sayıda özelliği getirebilir; bunları yalnızca genel, ayarlanabilir ve tam sayı, Boole veya dize gibi bir temel türden yapın. Ayrıca web performans testi eklentisi özelliklerini daha sonra kullanarak değiştirebileceğiniz **özellikleri** penceresi.
+    > Eklentilerinizden istediğiniz kadar özellik ortaya çıkarabilirsiniz; onları herkese açık, ayarlanabilir ve Tamsayı, Boolean veya String gibi bir taban türüne ait hale getirin. Özellikler **penceresini** kullanarak web performans testi eklentiözelliklerini daha sonra değiştirebilirsiniz.
 
-16. **Tamam**’ı seçin.
+16. **Tamam'ı**seçin.
 
-     Eklenti eklenir **yük testi eklentileri** klasör.
+     Eklenti, **Yük Testi Eklentileri** klasörüne eklenir.
 
     > [!WARNING]
-    > Bir web performans testi ya da eklentisini kullanan yük testi çalıştırdığınızda aşağıdakine benzer bir hata alabilirsiniz:
+    > Eklentinizi kullanan bir web performans testi veya yükleme testi çalıştırdığınızda aşağıdakilere benzer bir hata alabilirsiniz:
     >
-    > **İstek başarısız: \<eklenti > olayında özel durum: dosya veya derleme '\<"eklenti adı". dll dosyası >, sürüm =\<n. n. n. n >, kültür = neutral, PublicKeyToken = null ' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.**
+    > **İstek başarısız oldu: Eklenti> olayında \<özel durum:\<Dosya veya derleme ' "Eklenti adı".dll dosyası>, Sürüm=\<n.n.n>, Culture=neutral, PublicKeyToken=null' veya bağımlılıklarından birini yükleyemedi. Sistem belirtilen dosyayı bulamıyor.**
     >
-    > Eklentilerinizi birine kod değişikliği yapmanız ve yeni bir DLL sürümü oluşturursanız Bunun nedeni **(sürüm = 0.0.0.0)** , ancak eklenti hala özgün eklenti sürümüne başvuruyor. Bu sorunu gidermek için şu adımları izleyin:
+    > Bunun nedeni, eklentilerinizden herhangi birinde kod değişiklikleri yapar ve yeni bir DLL sürümü **(Sürüm=0.0.0.0)** oluşturursanız, ancak eklenti hala orijinal eklenti sürümüne başvurur. Bu sorunu gidermek için aşağıdaki adımları izleyin:
     >
-    > 1. Web performansı ve yük testi projesi içinde başvurularda bir uyarı görürsünüz. Kaldırın ve Başvuruyu eklenti DLL'nizden yeniden ekleyin.
-    > 2. Test veya uygun konumdan eklentiyi kaldırın ve yeniden ekleyin.
+    > 1. Web performansı ve yükleme testi projenizde, başvurularda bir uyarı görürsünüz. Başvuruyu çıkarın ve eklentiniz DLL'ye yeniden ekleyin.
+    > 2. Eklentiyi testinizden veya uygun konumdan çıkarın ve sonra geri ekleyin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod LoadTestFinished olayı gerçekleştikten sonra özel kod çalıştıran bir yük testi eklentisi gösterir. Bir ileti kutusu açık olduğundan bu kod, uzak bir makinede test aracısı üzerinde çalıştırılan ve test aracısı localhost SMTP hizmeti yüklü olmayan, yük testi "Sürüyor" durumunda kalır.
+Aşağıdaki kod, LoadTestFinished olayı gerçekleştikten sonra özel kod çalıştıran bir yük testi eklentisini gösterir. Bu kod uzak bir makinede bir test aracısı üzerinde çalıştırılırsa ve test aracısının yerel barındırma SMTP hizmeti yoksa, ileti kutusu açık olacağı için yük testi "Devam Ediyor" durumunda kalır.
 
 > [!NOTE]
-> Aşağıdaki kodu üzere System.Windows.Forms başvurusu eklemeniz gerekir.
+> Aşağıdaki kod, System.Windows.Forms'a bir başvuru eklemenizi gerektirir.
 
 ```csharp
 using System;
@@ -139,7 +139,7 @@ namespace LoadTestPluginTest
 }
 ```
 
-Sekiz olayları, özel kod ile yük testi çalıştırmak için eklenti yük testinde işlenebilen bir yük testi ile ilişkilidir. Yük testi farklı sürelerde erişmeyi olaylarının bir listesi verilmiştir:
+Sekiz olay, yük testi ile özel kod çalıştırmak için yük testi eklentisinde işlenebilen bir yük testi ile ilişkilidir. Aşağıda, yük testi çalışmasının farklı dönemlerine erişim sağlayan olayların bir listesi vereme
 
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest.LoadTestStarting>
 
@@ -160,5 +160,5 @@ Sekiz olayları, özel kod ile yük testi çalıştırmak için eklenti yük tes
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>
-- [Özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Nasıl yapılır: Web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md)
+- [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Nasıl yapilir: Web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md)

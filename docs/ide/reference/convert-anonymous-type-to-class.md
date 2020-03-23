@@ -1,44 +1,47 @@
 ---
-title: Anonim tür sınıfına Dönüştür
-ms.date: 02/13/2019
+title: Anonim Türü Sınıfa Dönüştür
+ms.date: 03/10/2020
 ms.topic: reference
-author: kendrahavens
-ms.author: kehavens
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: f29e31fb87d8b18e7f5a46d16f90217ee08d51f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2379ce588eeb4773e562f630ade37e28d7f17315
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968551"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094283"
 ---
 # <a name="convert-anonymous-type-to-class"></a>Anonim türü sınıfa dönüştürme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Anonim bir tür sınıfına Dönüştür.
+- Visual Basic
 
-**ne zaman:** Bir sınıfta oluşturmaya devam etmek istiyor anonim bir tür var.
+**Ne:** Anonim bir türü sınıfa dönüştürün.
 
-**Neden:** Anonim türler yalnızca bunları yerel olarak kullanıyorsanız, kullanışlıdır. Kodunuzu büyüdükçe, bunları bir sınıfa tanıtmak için kolay bir yol sağlamak kullanışlı bir özelliktir.
+**Ne zaman:** Bir sınıfta geliştirmeye devam etmek istediğiniz anonim bir türüniz var.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+**Neden:** Anonim türleri yalnızca yerel olarak kullanıyorsanız yararlıdır. Kodunuz büyüdükçe, onları bir sınıfa tanıtmanın kolay bir yolunun olması güzeldir.
 
-1. İmlecinizi, anonim bir tür içinde yerleştirin.
-2. Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+## <a name="how-to"></a>Nasıl yapılır
 
-   ![Anonim tür sınıfına Dönüştür](media/convert-anon-to-class.png)
+1. İmlecinizi anonim bir türe yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-2. Tuşuna **Enter** yeniden düzenleme kabul etmek için.
+   ![Anonim Türü Sınıfa Dönüştür](media/convert-anon-to-class.png)
 
-   ![Anonim tür kabul sınıfına Dönüştür](media/convert-anon-to-class-complete.png)
+2. Yeniden düzenlemeyi kabul etmek için **Enter** tuşuna basın.
+
+   ![Anonim Türü Kabul Edilen Sınıfa Dönüştür](media/convert-anon-to-class-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

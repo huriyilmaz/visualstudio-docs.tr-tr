@@ -1,5 +1,5 @@
 ---
-title: Visual Studio için Blend Özellik turu
+title: Visual Studio özellik turu için Blend
 titleSuffix: ''
 ms.date: 07/31/2019
 ms.topic: conceptual
@@ -11,76 +11,76 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f2b9f38d83befcf49ecd3de8da3a2cd26ff3ab46
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409885"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301673"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Visual Studio için Blend genel bakış
 
-Visual Studio için Blend tasarım XAML tabanlı Windows ve Web uygulamalarına yardımcı olur. Visual Studio aynı temel XAML tasarım deneyimini sunar ve animasyon ve davranışlarla gibi gelişmiş görevler için görsel tasarımcılar ekler. Blend ve Visual Studio arasında bir karşılaştırma için bkz. [Visual Studio 'DA xaml tasarlama ve Visual Studio için Blend](../xaml-tools/designing-xaml-in-visual-studio.md).
+Visual Studio için Blend, XAML tabanlı Windows ve Web uygulamaları tasarlamanıza yardımcı olur. Visual Studio ile aynı temel XAML tasarım deneyimini sağlar ve animasyonlar ve davranışlar gibi gelişmiş görevler için görsel tasarımcılar ekler. Blend ve Visual Studio arasında bir karşılaştırma için, [Visual Studio Tasarım XAML ve Visual Studio için Blend](../xaml-tools/designing-xaml-in-visual-studio.md)bakın.
 
-Visual Studio için Blend, Visual Studio'nun bir bileşenidir. Blend 'yi yüklemek için **Visual Studio Yükleyicisi** **Evrensel Windows platformu geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin. Bu iş yüklerinin hem de Visual Studio bileşeni için Blend içerir.
+Visual Studio için Blend Visual Studio bir bileşenidir. Blend'i yüklemek için **Visual Studio Installer'da** **Evrensel Windows Platformu geliştirmeyi** veya **.NET masaüstü geliştirme** iş yükünü seçin. Bu iş yüklerinin her ikisi de Visual Studio için Karışım bileşenini içerir.
 
 ![UWP iş yükü bileşenleri](media/installer-uwp.png)&nbsp;&nbsp;&nbsp;&nbsp;![.NET masaüstü geliştirme iş yükü bileşenleri](media/installer-dotnet-desktop.png)
 
-Visual Studio için Blend yeniyseniz, çalışma alanının benzersiz özellikleri ile aşina olmak için bir dakikanızı ayırın. Bu konu üzerinde hızlı bir tura alır.
+Visual Studio için Blend'te yeniyseniz, çalışma alanının benzersiz özelliklerini tanımak için bir dakikanızı ayırın. Bu konu hızlı bir tur götürür.
 
 ## <a name="tools-panel"></a>Araçlar paneli
 
-Uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için Blend **Araçlar** panelini kullanabilirsiniz. **Araçlar** paneli, bir *. xaml* dosyanız açık olduğunda xaml tasarımcısının sol tarafında görünür.
+Uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için **Karışım'daki Araçlar** panelini kullanabilirsiniz. *.xaml* dosyanız açıkolduğunda **Araçlar** paneli XAML tasarımcısının sol tarafında görünür.
 
-Bir araç seçerek ve farenizle çalışma yüzeyi üzerinde çizim nesneleri oluşturun.
+Bir araç seçerek ve fare ile artboard üzerinde çizim nesneleri oluşturun.
 
-![Visual Studio için Blend Araçlar paneli](media/blend-tools-panel.png)
+![Visual Studio için Blend araçlar paneli](media/blend-tools-panel.png)
 
 > [!TIP]
-> **Araçlar** panelindeki araçlardan bazılarının çeşitleri vardır. Örneğin, dikdörtgen yerine bir elips veya çizgi seçebilirsiniz. Bu farklılıklara erişmek için, araç üzerinde sağ tıklayın veya tıklayın ve basılı tutun.
+> **Araçlar** panelindeki bazı araçlarda varyasyonlar vardır, örneğin, dikdörtgen yerine bir elips veya çizgi seçebilirsiniz. Bu varyasyonlara erişmek için, sağ tıklatın veya tıklatın ve aracı basılı tutun.
 >
-> ![Visual Studio için Blend çeşitlemeleri Şekil aracı](media/blend-rectangle-tool-variations.png)
+> ![Visual Studio için Blend'teki şekil aracı varyasyonları](media/blend-rectangle-tool-variations.png)
 
 ### <a name="selection-tools"></a>Seçim araçları
 
-Nesneleri ve yolları seçin. İç içe geçmiş nesneler ve yol kesimleri seçmek için **doğrudan seçim** aracını kullanın.
+Nesneleri ve yolları seçin. İç içe nesneler ve yol segmentleri seçmek için **Doğrudan Seçim** aracını kullanın.
 
-### <a name="view-tools"></a>Görünüm Araçları
+### <a name="view-tools"></a>Araçları görüntüleme
 
-Kaydırma ve yakınlaştırma gibi çalışma yüzeyi görünümünü ayarlayın.
+Kaydırma ve yakınlaştırma gibi artboard'un görünümünü ayarlayın.
 
 ### <a name="brush-tools"></a>Fırça araçları
 
-Bir nesnenin görsel öznitelikleriyle (örneğin, fırçayı dönüştürme veya gradyan uygulama) çalışın.
+Fırçayı dönüştürme veya degrade uygulama gibi bir nesnenin görsel öznitelikleriyle çalışın.
 
 ### <a name="object-tools"></a>Nesne araçları
 
-Çalışma yüzeyinde, yollar, şekiller, düzen bölmeleri, metin ve denetimler gibi en yaygın nesneleri çizin.
+Yollar, şekiller, düzen panelleri, metin ve denetimler gibi en yaygın nesneleri resim tahtasına çizin.
 
 ### <a name="asset-tools"></a>Varlık araçları
 
-Varlıklar penceresine erişin ve kütüphanedeki en son kullanılan varlığı görüntüleyin.
+Varlıklar penceresine erişin ve kitaplıktan en son kullanılan varlığı gösterin.
 
 ## <a name="assets-window"></a>Varlıklar penceresi
 
-**Varlıklar** penceresi, tüm kullanılabilir denetimleri Içerir ve Visual Studio 'Daki **araç kutusuna** benzerdir. Denetimlere ek olarak, **varlıklar** penceresinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz. **Varlıklar** penceresini açmak Için > **varlıklar penceresini** **görüntüle** ' yi seçin veya **CTRL**+**alt**+**X**tuşlarına basın.
+**Varlıklar** penceresi tüm kullanılabilir denetimleri içerir ve Visual Studio'daki **Araç Kutusu'na** benzer. Denetimlere ek olarak, stiller, ortam, davranışlar ve efektler de dahil olmak üzere **Varlıklar** penceresinde resim panonuza ekleyebileceğiniz her şeyi bulacaksınız. **Varlıklar** penceresini açmak için**Varlıklar Penceresini** **Görüntüle'yi** > seçin veya **Ctrl**+**Alt**+**X**tuşuna basın.
 
-![Visual Studio için Blend varlıklar penceresi](media/blend-assets-window.png)
+![Visual Studio için Blend Varlıklar penceresi](media/blend-assets-window.png)
 
-- Varlık listesini filtrelemek için **varlıkları ara** kutusuna metin girin.
-- Sağ üstteki düğmeleri kullanarak, varlıkların kılavuz modu ve liste modu görünümü görünümü arasında geçiş yapın.
+- Varlıklar listesini filtrelemek için **Arama Varlıkları** kutusuna metin girin.
+- Sağ üstteki düğmeleri kullanarak Varlıkların Grid modu ve Liste modu görünümü arasında geçiş yapın.
 
 ## <a name="objects-and-timeline-window"></a>Nesneler ve Zaman Çizelgesi penceresi
 
-Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu pencereyi kullanın. **Nesneler ve zaman çizelgesi** penceresini açmak Için > **belge anahattını** **görüntüle** ' yi seçin. Visual Studio 'daki [Belge Anahattı penceresinde](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) sunulan işlevlere ek olarak, Visual Studio için Blend nesneler ve zaman çizelgesi pencerenin sağ tarafta bir zaman çizelgesi bileşim alanı vardır. Animasyonları oluştururken ve düzenlediğinizde zaman çizelgesini kullanın.
+Resim tahtanızdaki nesneleri düzenlemek ve isterseniz onları canlandırmak için bu pencereyi kullanın. **Nesneler ve Zaman Çizelgesi** penceresini açmak için Belge**Anahattını** **Görüntüle'yi** > seçin. Visual Studio'daki Belge [Anahat penceresinde](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) sağlanan işlevsellik lere ek olarak, Visual Studio için Karışım'daki Nesneler ve Zaman Çizelgesi penceresinde sağda bir zaman çizelgesi kompozisyon alanı vardır. Animasyonlar oluştururken ve düzenlerken zaman çizelgesini kullanın.
 
-![Animasyon modundaki nesne ve zaman çizelgesi penceresi](media/storyboard-timeline.png)
+![Animasyon modunda Nesne ve Zaman Çizelgesi penceresi](media/storyboard-timeline.png)
 
-Görsel taslağa ilişkili düğmeleri kullanma ![Visual Studio için Blend film şeridi düğmeleri](media/storyboard-buttons.png) Film şeridi oluşturmak, silmek, kapatmak veya seçmek için. Zaman çizelgesini görüntülemek ve ana kareleri taşımak için sağdaki zaman çizelgesi bileşim alanını kullanın.
+Film şeridiyle ilgili düğmeleri kullanma ![Visual Studio için Blend'te storyboard düğmeleri](media/storyboard-buttons.png) bir film şeridi oluşturmak, silmek, kapatmak veya seçmek için. Zaman çizelgesini görüntülemek ve anahtar kareleri taşımak için sağdaki Zaman Çizelgesi kompozisyonu alanını kullanın.
 
-Kullanılabilir işlevsellik hakkında daha fazla bilgi edinmek için penceredeki her bir düğmenin üzerine gelin.
+Kullanılabilir işlevsellik hakkında daha fazla bilgi edinmek için penceredeki her düğmenin üzerine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nesnelere animasyon ekleme](../xaml-tools/animate-objects-in-xaml-designer.md)
-- [Şekiller ve yollar çizme](../xaml-tools/draw-shapes-and-paths.md)
+- [Şekiller ve yollar çizin](../xaml-tools/draw-shapes-and-paths.md)
 - [Visual Studio ve Visual Studio İçin Blend Uygulamalarında XAML Tasarlama](../xaml-tools/designing-xaml-in-visual-studio.md)

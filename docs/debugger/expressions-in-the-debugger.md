@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklayıcıdaki İfadeler | Microsoft Docs
+title: Hata ayıklamadaki ifadeler | Microsoft Dokümanlar
 ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
@@ -20,52 +20,52 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4ab66f288ad8442b6f2b5aab3499e2c1f3857632
-ms.sourcegitcommit: c8b979a56c95e43cf8ae92b6c3c9570db59a8e58
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78925383"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302170"
 ---
-# <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki ifadeler
-Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.
+# <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklama daki ifadeler
+Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusuna, **İzleme** penceresine veya **Hemen** penceresine bir ifade girdiğinizde çalışan ifade değerlendiricileriçerir. İfade değerlendiriciler, **Kesme Noktaları** penceresinde ve hata ayıklayıcıdaki diğer birçok yerde de iş başındadır.
 
-Aşağıdaki bölümlerde, Visual Studio tarafından desteklenen diller için ifade değerlendirmesinin sınırlamaları açıklanmaktadır.
+Aşağıdaki bölümlerde Visual Studio tarafından desteklenen diller için ifade değerlendirme sınırlamaları açıklanmaktadır.
 
-## <a name="f-expressions-are-not-supported"></a>F#ifadeler desteklenmiyor
-F#ifadeler tanınmıyor. Kod hata ayıklaması F# yapıyorsanız, ifadeleri bir hata ayıklayıcı penceresine veya iletişim kutusuna C# girmeden önce ifadelerinizi sözdizimine çevirmeniz gerekir. İfadelerini F# C#' den ' a çevirirken, tek `=`C# F# kullandığında eşitlik için test etmek üzere `==` işlecini kullandığını unutmayın.
+## <a name="f-expressions-are-not-supported"></a>F# ifadeleri desteklenmiyor
+F# ifadeleri tanınmaz. F# kodunu hata ayıklıyorsanız, ifadeleri hata ayıklama penceresine veya iletişim kutusuna girmeden önce ifadelerinizi C# sözdizimine çevirmeniz gerekir. İfadeleri F#'dan C#'a çevirdiğinizde, C#'ın `==` eşitliği test etmek için işleci kullandığını, F#'nın ise tekini `=`kullandığını unutmayın.
 
-## <a name="c-expressions"></a>C++İfadelerde
-İçindeki C++ifadelerle bağlam işleçlerini kullanma hakkında daha fazla bilgi için bkz. [Bağlam işleciC++()](../debugger/context-operator-cpp.md).
+## <a name="c-expressions"></a>C++ İfadeleri
+C++'da ifadelerle bağlam işleçlerini kullanma hakkında bilgi için [bkz.](../debugger/context-operator-cpp.md)
 
-### <a name="unsupported-expressions-in-c"></a>İçinde desteklenmeyen IfadelerC++
+### <a name="unsupported-expressions-in-c"></a>C++'da Desteklenmeyen İfadeler
 
-#### <a name="constructors-destructors-and-conversions"></a>Oluşturucular, Yıkıcılar ve dönüştürmeler
-Açıkça veya örtük olarak bir nesne için bir Oluşturucu ya da yıkıcı çağrılamaz. Örneğin, aşağıdaki ifade açıkça bir oluşturucuyu çağırır ve bir hata iletisiyle sonuçlanır:
+#### <a name="constructors-destructors-and-conversions"></a>Yapıcılar, yıkıcılar ve dönüşümler
+Bir nesne için açık veya kapalı olarak bir oluşturucu veya yıkıcı çağıramazsınız. Örneğin, aşağıdaki ifade açıkça bir oluşturucu çağırır ve bir hata iletisi ile sonuçlanır:
 
 ```C++
 my_date( 2, 3, 1985 )
 ```
 
-Dönüştürmenin hedefi bir sınıf ise, bir dönüştürme işlevi çağrılamaz. Böyle bir dönüştürme bir nesnenin oluşturulmasını içerir. Örneğin, `myFraction` dönüştürme işlevi işleci `FixedPoint`tanımlayan `CFraction`bir örneğidir, aşağıdaki ifade bir hatayla sonuçlanır:
+Dönüştürmenin hedefi bir sınıfsa, dönüşüm işlevini çağıramazsınız. Böyle bir dönüştürme bir nesnenin yapımını içerir. Örneğin, dönüşüm `myFraction` işlevi işleci `CFraction` `FixedPoint`tanımlayan bir , örneği ise, aşağıdaki ifade bir hatayla sonuçlanır:
 
 ```C++
 (FixedPoint)myFraction
 ```
 
-New veya delete işleçlerini çağrılamaz. Örneğin, aşağıdaki ifade desteklenmez:
+Yeni veya silme operatörlerini arayamaz sınız. Örneğin, aşağıdaki ifade desteklenmez:
 
 ```C++
 new Date(2,3,1985)
 ```
 
-#### <a name="preprocessor-macros"></a>Önişlemci makroları
-Önişlemci makroları hata ayıklayıcıda desteklenmez. Örneğin, bir sabit `VALUE` şöyle bildirilirse: `#define VALUE 3`, **izleme** penceresinde `VALUE` kullanamazsınız. Bu sınırlamayı önlemek için `#define`, mümkün olan her durumda Enum ve işlevlerle değiştirmelisiniz.
+#### <a name="preprocessor-macros"></a>Önişlemci Makroları
+Hata ayıklamada önişlemci makroları desteklenmez. Örneğin, bir sabit `VALUE` şu şekilde `#define VALUE 3`bildirilirse: , `VALUE` **Watch** penceresinde kullanamazsınız. Bu sınırlamayı önlemek için, mümkün olduğunca enums ve fonksiyonlar ile 's değiştirmelisiniz. `#define`
 
 ### <a name="using-namespace-declarations"></a>ad alanı bildirimlerini kullanma
-`using namespace` bildirimleri kullanamazsınız.  Geçerli ad alanı dışındaki bir tür adına veya değişkenine erişmek için tam adı kullanmanız gerekir.
+Bildirimleri `using namespace` kullanamazsınız.  Geçerli ad alanının dışında bir tür adı veya değişkene erişmek için tam nitelikli adı kullanmanız gerekir.
 
 ### <a name="anonymous-namespaces"></a>Anonim ad alanları
-Anonim ad alanları desteklenmez. Aşağıdaki koda sahipseniz, izleme penceresine `test` ekleyemezsiniz:
+Anonim ad alanları desteklenmez. Aşağıdaki koda sahipseniz, saat `test` penceresine ekleyemezsiniz:
 
 ```C++
 namespace mars
@@ -84,95 +84,95 @@ int main()
 
 ```
 
-### <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a>Durumu korumak için hata ayıklayıcı iç işlevlerini kullanma
-Hata ayıklayıcı iç işlevleri, uygulamanın durumunu değiştirmeden ifadelerde belirli C/C++ işlevleri çağırmak için bir yol sağlar.
+### <a name="using-debugger-intrinsic-functions-to-maintain-state"></a><a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a>Durumu korumak için hata ayıklama içsel işlevleri kullanma
+Hata ayıklama içsel işlevleri, uygulamanın durumunu değiştirmeden ifadelerde belirli C/C++ işlevlerini çağırmanın bir yolunu verir.
 
-Hata ayıklayıcı iç işlevleri:
+Hata ayıklama içsel fonksiyonlar:
 
-- Güvenli olduğu garanti edilir: bir hata ayıklayıcı iç işlevinin yürütülmesi, hataları ayıklanan işlemi bozmaz.
+- Güvenli olduğu garanti edilir: hata ayıklama içsel işlevi yürütmek debugged ediliyor işlemi bozmaz.
 
-- Yan etkileri ve işlev değerlendirmesinin izin verilmediği senaryolarda bile tüm ifadelerde izin verilir.
+- Yan etkilere ve fonksiyon değerlendirmesine izin verilmeyen senaryolarda bile tüm ifadelere izin verilir.
 
-- Bir mini döküm dosyasında hata ayıklama gibi normal işlev çağrılarının mümkün olmadığı senaryolarda çalışın.
+- Normal işlev çağrılarının mümkün olmadığı senaryolarda (örneğin, bir minidump hata ayıklama gibi) çalışın.
 
-  Hata ayıklayıcı iç işlevleri ayrıca değerlendirme ifadelerin daha kullanışlı olmasını sağlayabilir. Örneğin, `strncmp(str, "asd")` kesme noktasında `str[0] == 'a' && str[1] == 's' && str[2] == 'd'`daha kolay yazılması çok daha kolaydır. )
+  Hata ayıklama içsel işlevler de ifadeleri değerlendirmeyi daha kullanışlı hale getirebilir. Örneğin, `strncmp(str, "asd")` bir kesme noktası durumunda yazmak çok `str[0] == 'a' && str[1] == 's' && str[2] == 'd'`daha kolaydır. )
 
 |Alan|İç işlevler|
 |----------|-------------------------|
 |**Dize uzunluğu**|[strlen, wcslen](https://docs.microsoft.com/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l), [strnlen, wcsnlen](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnlen-strnlen-s)|
-|**Dize karşılaştırması**|[strcmp, wcscmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strcmp-wcscmp-mbscmp), [stricmp, wcsıcmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/stricmp-wcsicmp), [_stricmp, _strcmpi, _wcsicmp, _wcscmpi](https://docs.microsoft.com/cpp/c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l), [strncmp, wcsncmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l), [strnıcmp, wcsnıcmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnicmp-wcsnicmp), [_strnicmp, _wcsnicmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l)|
+|**Dize karşılaştırması**|[strcmp, wcscmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strcmp-wcscmp-mbscmp), [stricmp, wcsicmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/stricmp-wcsicmp), [_stricmp, _strcmpi, _wcsicmp, _wcscmpi](https://docs.microsoft.com/cpp/c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l), [strncmp, wcsncmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l), [strnicmp, wcsnicmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnicmp-wcsnicmp), [_strnicmp, _wcsnicmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l)|
 |**Dize arama**|[strchr, wcschr](https://docs.microsoft.com/cpp/c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l), [memchr, wmemchr](https://docs.microsoft.com/cpp/c-runtime-library/reference/memchr-wmemchr), [strstr, wcsstr](https://docs.microsoft.com/cpp/c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l)|
-|**Win**|[Codecodeproxy](https://docs.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-codecodeproxy), [DecodePointer](https://docs.microsoft.com/previous-versions/bb432242%28v%3dvs.85%29), [GetLastError](https://docs.microsoft.com/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror), [TlsGetValue](https://docs.microsoft.com/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)|
-|**Windows 8**|[Roınspectcapturedstackbacktrace](https://docs.microsoft.com/windows/win32/api/roerrorapi/nf-roerrorapi-roinspectcapturedstackbacktrace), [windowscomparestringordinal](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowscomparestringordinal), [windowsgetstringlen](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowsgetstringlen), [windowsgetstrıngrawbuffer](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer)<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
-|**Çeşitli**|__log2//, belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış 2 günlük tabanı döndürür.<br /><br />__findNonNull, DecodeHString, Decodewinrtkısıttedexception, DynamicCast, DynamicMemberLookup, GetEnvBlockLength<br /><br />Stdext_HashMap_Int_OperatorBracket_idx, Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//concurrency:: Array < >:: operator [Dizin < >] ve işleç (Dizin < >)<br /><br />ConcurrencyArray_OperatorBracket_int//concurrency:: Array < >:: operator (int, int,...)<br /><br />ConcurrencyArray_OperatorBracket_tidx//concurrency:: Array < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />ConcurrencyArrayView_OperatorBracket_idx//concurrency:: array_view < >:: operator [Index < >] and işleci (Dizin < >)<br /><br />ConcurrencyArrayView_OperatorBracket_int//concurrency:: array_view < >:: operator (int, int,...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//concurrency:: array_view < >:: operator [tiled_index < >] and işleci (tiled_index < >)<br /><br />Yeni bir ağaç geçişi TreeTraverse_Init//başlatır<br /><br />Bir ağaçtaki düğümleri TreeTraverse_Next//döndürür<br /><br />Bekleyen bir ağaç geçişinin içindeki düğümleri TreeTraverse_Skip//atlıyor|
+|**Win32**|[CoDecodeProxy](https://docs.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-codecodeproxy), [DecodePointer](https://docs.microsoft.com/previous-versions/bb432242%28v%3dvs.85%29), [GetLastError](https://docs.microsoft.com/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror), [TlsGetValue](https://docs.microsoft.com/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)|
+|**Windows 8**|[RoInspectCapturedStackBackTrace](https://docs.microsoft.com/windows/win32/api/roerrorapi/nf-roerrorapi-roinspectcapturedstackbacktrace), [WindowsCompareStringOrdinal](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowscomparestringordinal), [WindowsGetStringLen](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowsgetstringlen), [WindowsGetStringRawBuffer](https://docs.microsoft.com/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer)<br /><br /> Bu işlevler, Windows 8'de çalıştırılmak üzere debugged olan işlemi gerektirir. Windows 8 aygıtından oluşturulan döküm dosyalarının hata ayıklanması, Visual Studio bilgisayarının Windows 8 çalıştırılmasını da gerektirir. Ancak, bir Windows 8 aygıtını uzaktan hata ayıklıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
+|**Çeşitli**|__log2 // Belirtilen bir tamsaın günlük tabanını verir, en yakın alt tamsayıya yuvarlanır.<br /><br />__findNonNull, DecodeHString, DecodeWinRTRestrictedException, DynamicCast, DynamicMemberLookup, GetEnvBlockLength<br /><br />Stdext_HashMap_Int_OperatorBracket_idx, Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx // Eşzamanlılık::dizi<>::operator[index<>] ve operator(index<>)<br /><br />ConcurrencyArray_OperatorBracket_int // Eşzamanlılık::dizi<>::operator(int, int, ...)<br /><br />ConcurrencyArray_OperatorBracket_tidx // Eşzamanlılık::dizi<>::operator[tiled_index<>] ve operatör(tiled_index<>)<br /><br />ConcurrencyArrayView_OperatorBracket_idx // Eşzamanlılık::array_view<>::operator[index<>] ve operator(index<>)<br /><br />ConcurrencyArrayView_OperatorBracket_int // Eşzamanlılık::array_view<>::operator(int, int, ...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx // Eşzamanlılık::array_view<>::operator[tiled_index<>] ve operatör(tiled_index<>)<br /><br />TreeTraverse_Init // Yeni bir ağaç geçişini başlatma<br /><br />TreeTraverse_Next // Ağaçtaki düğümleri döndürür<br /><br />TreeTraverse_Skip // Bekleyen bir ağaç geçişinde düğümleri atlar'|
 
-## <a name="ccli---unsupported-expressions"></a>C++/CLı-desteklenmeyen Ifadeler
+## <a name="ccli---unsupported-expressions"></a>C++/CLI - Desteklenmeyen İfadeler
 
-- İşaretçileri veya Kullanıcı tanımlı yayınları içeren yayınlar desteklenmez.
+- İşaretçileri veya kullanıcı tanımlı dökümleri içeren dökümler desteklenmez.
 
-- Nesne karşılaştırma ve atama desteklenmiyor.
+- Nesne karşılaştırması ve atama desteklenmez.
 
-- Aşırı yüklenmiş işleçler ve aşırı yüklenmiş işlevler desteklenmez.
+- Aşırı yüklenen operatörler ve aşırı yüklü işlevler desteklenmez.
 
-- Kutulama ve kutudan çıkarma desteklenmez.
+- Kutulama ve unboxing desteklenmez.
 
-- `Sizeof` işleci desteklenmiyor.
+- `Sizeof`işleci desteklenmez.
 
-## <a name="c---unsupported-expressions"></a>C#-Desteklenmeyen Ifadeler
+## <a name="c---unsupported-expressions"></a>C# - Desteklenmeyen İfadeler
 
-### <a name="dynamic-objects"></a>Dinamik nesneler
-Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. <xref:System.Dynamic.IDynamicMetaObjectProvider> uygulayan nesneler izleme penceresi değerlendirildiğinde dinamik bir görünüm düğümü eklenir. Dinamik görünüm düğümü nesne üyelerini gösterir ancak üyelerin değerlerini düzenlememe izin vermez.
+### <a name="dynamic-objects"></a>Dinamik Nesneler
+Statik olarak dinamik olarak yazılan hata ayıklama ifadelerinde değişkenler kullanabilirsiniz. Uygulayan <xref:System.Dynamic.IDynamicMetaObjectProvider> nesneler İzleme penceresinde değerlendirildiğinde Dinamik Görünüm düğümü eklenir. Dinamik Görünüm düğümü nesne üyelerini gösterir, ancak üyelerin değerlerini düzenlemeye izin vermez.
 
 Dinamik nesnelerin aşağıdaki özellikleri desteklenmez:
 
-- Bileşik işleçler `+=`, `-=`, `%=`, `/=`ve `*=`
+- Bileşik işleçleri `+=`, `-=`, `%=`, `/=`, ve`*=`
 
-- Sayısal yayınlar ve tür bağımsız değişken yayınları dahil olmak üzere çok sayıda yayını
+- Sayısal dökümler ve yazı bağımsız değişken dökümleri de dahil olmak üzere birçok döküm
 
-- İkiden fazla bağımsız değişkenle Yöntem çağrıları
+- Yöntem ikiden fazla bağımsız değişkeni olan çağrıları
 
-- İkiden fazla bağımsız değişkene sahip Özellik alıcıları
+- İkiden fazla bağımsız değişkeni olan özellik getters
 
-- Bağımsız değişkenlerle özellik ayarlayıcıları
+- Bağımsız değişkenleri olan özellik ayarlayıcıları
 
-- Dizin oluşturucuya atama
+- Dizin leyiciye atama
 
-- `&&` ve `||` Boole işleçleri
+- Boolean `&&` operatörleri ve`||`
 
 ### <a name="anonymous-methods"></a>Anonim Yöntemler
 Yeni anonim yöntemlerin oluşturulması desteklenmez.
 
-## <a name="visual-basic---unsupported-expressions"></a>Visual Basic-desteklenmeyen Ifadeler
+## <a name="visual-basic---unsupported-expressions"></a>Visual Basic - Desteklenmeyen İfadeler
 
-### <a name="dynamic-objects"></a>Dinamik nesneler
-Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. <xref:System.Dynamic.IDynamicMetaObjectProvider> uygulayan nesneler izleme penceresi değerlendirildiğinde dinamik bir görünüm düğümü eklenir. Dinamik görünüm düğümü nesne üyelerini gösterir ancak üyelerin değerlerini düzenlememe izin vermez.
+### <a name="dynamic-objects"></a>Dinamik Nesneler
+Statik olarak dinamik olarak yazılan hata ayıklama ifadelerinde değişkenler kullanabilirsiniz. Watch penceresinde uygulanan <xref:System.Dynamic.IDynamicMetaObjectProvider> nesneler değerlendirildiğinde Dinamik Görünüm düğümü eklenir. Dinamik Görünüm düğümü nesne üyelerini gösterir, ancak üyelerin değerlerini düzenlemeye izin vermez.
 
 Dinamik nesnelerin aşağıdaki özellikleri desteklenmez:
 
-- Bileşik işleçler `+=`, `-=`, `%=`, `/=`ve `*=`
+- Bileşik işleçleri `+=`, `-=`, `%=`, `/=`, ve`*=`
 
-- Sayısal yayınlar ve tür bağımsız değişken yayınları dahil olmak üzere çok sayıda yayını
+- Sayısal dökümler ve yazı bağımsız değişken dökümleri de dahil olmak üzere birçok döküm
 
-- İkiden fazla bağımsız değişkenle Yöntem çağrıları
+- Yöntem ikiden fazla bağımsız değişkeni olan çağrıları
 
-- İkiden fazla bağımsız değişkene sahip Özellik alıcıları
+- İkiden fazla bağımsız değişkeni olan özellik getters
 
-- Bağımsız değişkenlerle özellik ayarlayıcıları
+- Bağımsız değişkenleri olan özellik ayarlayıcıları
 
-- Dizin oluşturucuya atama
+- Dizin leyiciye atama
 
-- `&&` ve `||` Boole işleçleri
+- Boolean `&&` operatörleri ve`||`
 
-### <a name="local-constants"></a>Yerel sabitler
+### <a name="local-constants"></a>Yerel Sabitler
 Yerel sabitler desteklenmez.
 
-### <a name="import-aliases"></a>Diğer adları içeri aktar
-İçeri aktarma diğer adları desteklenmez.
+### <a name="import-aliases"></a>Diğer Adları İthalat
+Alma takma adları desteklenmez.
 
-### <a name="variable-declarations"></a>Değişken bildirimleri
-Hata ayıklayıcı Windows 'da açık yeni değişkenler bildiremezsiniz. Bununla birlikte, **hemen** penceresi içinde yeni örtük değişkenler atayabilirsiniz. Bu örtük değişkenler hata ayıklama oturumunun kapsamına alınır ve hata ayıklayıcının dışında erişilebilir değildir. Örneğin, `o = 5` örtük olarak `o` yeni bir değişken oluşturur ve 5 değerini bu değere atar. Türü hata ayıklayıcı tarafından çıkarsanmadığı takdirde bu tür örtük değişkenler **Object** türündedir.
+### <a name="variable-declarations"></a>Değişken Bildirimler
+Hata ayıklama pencerelerinde açık yeni değişkenler bildiremezsiniz. Ancak, **Hemen** penceresi içinde yeni örtük değişkenler atayabilirsiniz. Bu örtük değişkenler hata ayıklama oturumuna göre kapsamlıdır ve hata ayıklama nın dışında erişilemez. Örneğin, deyim `o = 5` örtülü olarak yeni bir `o` değişken oluşturur ve 5 değerini ona atar. Tür hata ayıklama tarafından çıkarılamıyorsa, bu tür örtük değişkenler **nesne** türündendir.
 
-### <a name="unsupported-keywords"></a>Desteklenmeyen anahtar sözcükler
+### <a name="unsupported-keywords"></a>Desteklenmeyen Anahtar Kelimeler
 
 - `AddressOf`
 
@@ -202,10 +202,10 @@ Hata ayıklayıcı Windows 'da açık yeni değişkenler bildiremezsiniz. Bununl
 
 - `With`
 
-- `End Sub` veya `Module`gibi ad alanı veya modül düzeyi anahtar sözcükleri.
+- Ad alanı veya modül düzeyindeanahtar kelimeler, gibi `End Sub` veya `Module`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Dilinde Biçim Belirticileri](../debugger/format-specifiers-in-cpp.md)
-- [Bağlam İşleci (C++)](../debugger/context-operator-cpp.md)
-- [C# Dilinde Biçim Belirticileri](../debugger/format-specifiers-in-csharp.md)
-- [Sözde değişkenler](../debugger/pseudovariables.md)
+- [C++'da Biçimlendirme](../debugger/format-specifiers-in-cpp.md)
+- [Bağlam İşlemesi (C++)](../debugger/context-operator-cpp.md)
+- [C'deki Biçimlendirmeler #](../debugger/format-specifiers-in-csharp.md)
+- [Sözde Değişkenler](../debugger/pseudovariables.md)

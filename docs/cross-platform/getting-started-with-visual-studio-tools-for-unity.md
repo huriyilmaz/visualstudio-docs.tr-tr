@@ -1,5 +1,5 @@
 ---
-title: Unity için Visual Studio Araçları kullanmaya başlama | Microsoft Docs
+title: Unity için Visual Studio Araçları ile Başlarken | Microsoft Dokümanlar
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
@@ -11,86 +11,86 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: c22b9c25f95ea26f2cdaf5c2035fb7a373123241
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408805"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302275"
 ---
-# <a name="get-started-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları kullanmaya başlayın
+# <a name="get-started-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Tools ile başlayın
 
 ## <a name="install-visual-studio"></a>Visual Studio yükleme
 
-### <a name="unity-bundled-installation"></a>Unity ile birlikte yükleme
+### <a name="unity-bundled-installation"></a>Birlik birlikte yükleme
 
-Unity 2018.1 itibarıyla Visual Studio, Unity için varsayılan C# betik düzenleyicisidir ve Unity Hub yükleme aracının yanı sıra Unity Download Assistant'ta mevcuttur.
+Unity 2018.1 ile başlayan Visual Studio, Unity için varsayılan C# komut dosyası düzenleyicisidir ve Unity Download Assistant'ın yanı sıra Unity Hub yükleme aracına da dahildir.
 
-- [Store.Unity.com](https://store.unity.com/)adresinden Unity 'yi indirin.
+- [store.unity.com'dan](https://store.unity.com/)Unity indirin.
 
-Yükleme sırasında Visual Studio'nun, Unity ile yüklenecek bileşenler listesinde işaretlendiğinden emin olun:
+Yükleme sırasında Visual Studio'nun Unity ile yüklenmesi gereken bileşenler listesinde işaretlendiğinden emin olun:
 
-#### <a name="unity-hub"></a>Unity Hub
+#### <a name="unity-hub"></a>Birlik Merkezi
 
-![Unity hub'ı yükleme](media/vstu_unity-hub.png)
+![unity hub kurulumu](media/vstu_unity-hub.png)
 
-#### <a name="unity-download-assistant"></a>Unity Yükleme Yardımcısı
+#### <a name="unity-download-assistant"></a>Birlik İndirme Asistanı
 
-![Unity Yükleme Yardımcısı'nı yükleme](media/vstu_download-assistant.png)
+![unity download asistan yükleme](media/vstu_download-assistant.png)
 
-#### <a name="check-for-updates-to-visual-studio"></a>Visual Studio güncelleştirmelerini denetleme
+#### <a name="check-for-updates-to-visual-studio"></a>Visual Studio için güncellemeleri kontrol edin
 
-Unity yüklemenize dahil olan Visual Studio sürümü, en son sürüm olmayabilir. En son araçlara ve özelliklere erişiminiz olduğundan emin olmak için güncelleştirmeleri denetlemeniz önerilir.
+Unity yüklemenize dahil olan Visual Studio sürümü en son sürüm olmayabilir. En son araçlara ve özelliklere erişebildiğinizden emin olmak için güncelleştirmeleri denetlemeniz önerilir.
 
 - [Visual Studio’yu güncelleştirme](../install/update-visual-studio.md)
 
 ### <a name="manual-installation"></a>El ile yükleme
 
-Visual Studio 2017 zaten yüklüyse veya el ile yüklemeyi tercih ederseniz Visual Studio yükleyicisini çalıştırın.
+Visual Studio 2017 yüklüyse veya el ile yüklemeyi tercih ediyorsanız, Visual Studio yükleyicisini çalıştırın.
 
 1. [Visual Studio yükleyicisini indirin](../install/install-visual-studio.md)veya zaten yüklüyse açın.
 
-1. İstediğiniz Visual Studio sürümünüz için **Değiştir** (zaten yüklüyse) veya **yükleme** (yeni yüklemeler için) seçeneğine tıklayın.
+1. Visual Studio'nun istediğiniz sürümü için **Değiştir** (zaten yüklüyse) veya **Yükle** 'yi (yeni yüklemeler için) tıklatın.
 
-1. **Iş yükleri** sekmesinde, **mobil & oyunları** bölümüne kaydırın ve Unity iş yüküyle **oyun geliştirmeyi** seçin.
+1. İş **Yükleri** sekmesinde, **Mobil & Oyun** bölümüne gidin ve Unity iş **yüküyle Oyun geliştirme öğesini** seçin.
 
-    ![Unity iş yükü](media/vstu_unity-workload.png)
+    ![Birlik iş yükü](media/vstu_unity-workload.png)
 
-1. Yükleyici penceresinin sağ alt köşesinde bulunan **Değiştir** (zaten yüklüyse) veya **yükleme** (yeni yüklemeler için) seçeneğine tıklayın.
+1. Yükleyici penceresinin sağ alt köşesinde **Değiştir** (zaten yüklüyse) veya **Yükle'yi** (yeni yüklemeler için) tıklatın.
 
-## <a name="configure-unity-for-use-with-visual-studio"></a>Unity'yi Visual Studio ile kullanım için yapılandırma
+## <a name="configure-unity-for-use-with-visual-studio"></a>Visual Studio ile kullanım için Birliği Yapılandır
 
-Unity 2018.1 itibarıyla Visual Studio, Unity'de varsayılan dış kod düzenleyicisi olmalıdır. Bunu onaylayabilir veya dış betik düzenleyicisini Visual Studio'nun belirli bir sürümü olarak değiştirebilirsiniz:
+Unity 2018.1 ile başlayan Visual Studio, Unity'de varsayılan dış komut dosyası düzenleyicisi olmalıdır. Bunu onaylayabilir veya harici komut dosyası düzenleyicisini Visual Studio'nun belirli bir sürümüyle değiştirebilirsiniz:
 
-1. **Düzenle** menüsünden **Tercihler** ' i seçin.
+1. **Edit** menüsünden **Tercihler'i** seçin.
 
-   ![Tercihler'i seçme](media/vstu_unity-preferences.png)
+   ![Tercihleri Seçin](media/vstu_unity-preferences.png)
 
-2. Tercihler iletişim kutusunda **dış araçlar** sekmesini seçin.
+2. Tercihler iletişim kutusunda Dış **Araçlar** sekmesini seçin.
 
-3. **Dış betik Düzenleyicisi** açılan listesinden, listede varsa, Istediğiniz Visual Studio sürümünü seçin, aksi takdirde, **araştır...** ' ı seçin.
+3. Harici **Komut Dosyası Düzenleyicisi** açılır listesinden, listelenirse Visual Studio'nun istediğiniz sürümünü seçin, aksi takdirde **Gözat'ı seçin...**.
 
-   ![Visual Studio'yu seçme](media/vstu_unity-external-tools.png)
+   ![Visual Studio'yı seçin](media/vstu_unity-external-tools.png)
 
-4. Eğer **gözatamıyorum...** seçilirse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv. exe**' yi seçin. Ardından **Aç**' a tıklayın.
+4. **Browse...** seçildiyse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv.exe'yi**seçin. Sonra **Aç'ı**tıklatın.
 
-   ![Aç'ı seçin](media/vstu_browse-for-application.png)
+   ![Aç'ı Seçin](media/vstu_browse-for-application.png)
 
-5. **Dış betik Düzenleyicisi** listesinde Visual Studio seçildikten sonra, **Düzenleyici iliştirme** onay kutusunun seçili olduğundan emin olun.
+5. Visual Studio **Dış Komut Dosyası Düzenleyicisi** listesinde seçildikten **sonra, Düzenleyici Ekleme** onay kutusunun seçildiğini onaylayın.
 
-6. Yapılandırma işlemini gerçekleştirmek için **Tercihler** iletişim kutusunu kapatın.
+6. Yapılandırma işlemini tamamlamak için **Tercihler** iletişim kutusunu kapatın.
 
 ## <a name="support-for-older-versions"></a>Eski sürümler için destek
 
- Unity için Visual Studio Araçları'nı Visual Studio Market'ten indirip yükleyin. Visual Studio sürümünüz için doğru paketi yüklemeniz gerekir.
+ Visual Studio Marketplace'ten Visual Studio Tools for Unity'yi indirin ve kurun. Visual Studio sürümünüz için doğru paketi yüklemeniz gerekir.
 
 - Visual Studio 2015 Community, Visual Studio 2015 Professional veya Visual Studio 2015 Enterprise için:
 
-   [Unity için Visual Studio 2015 araçlarını indirin](https://marketplace.visualstudio.com/items?itemName=SebastienLebreton.VisualStudio2015ToolsforUnity)
+   [Visual Studio 2015 Birlik Araçları İndir](https://marketplace.visualstudio.com/items?itemName=SebastienLebreton.VisualStudio2015ToolsforUnity)
 
 > [!NOTE]
-> Unity için Visual Studio Araçları, Unity 5.2 veya sonraki bir sürümünün yanı sıra Visual Studio Community, Professional, Premium ya da Enterprise gibi uzantıları destekleyen bir Visual Studio sürümü gerektirir. Unity 'nin yüklemesinde Unity için Visual Studio Araçları etkinleştirildiğini doğrulamak için, **Yardım** menüsünde **Unity hakkında** ' yı seçin ve iletişim kutusunun sol alt kısmındaki "Unity için Microsoft Visual Studio Araçları" metnini arayın.
-> Unity](media/vstu_about-unity.png) hakkında ![
+> Visual Studio Tools for Unity 5.2 ve üzeri araçların yanı sıra Visual Studio Community, Professional, Premium veya Enterprise gibi uzantıları destekleyen bir Visual Studio sürümü gerektirir. Unity yüklemenizde Visual Studio Tools for Unity'nin etkin olduğunu doğrulamak için Yardım **menüsünden** **Birlik Hakkında'yı** seçin ve iletişim kutusunun sol alt kısmındaki "Microsoft Visual Studio Tools for Unity enabled" metnini arayın.
+> ![hakkında Birlik](media/vstu_about-unity.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
- Visual Studio 'da Unity projenizde çalışma ve hata ayıklama hakkında bilgi edinmek için bkz. [Unity için Visual Studio Araçları](../cross-platform/using-visual-studio-tools-for-unity.md).
+ Visual Studio'da Unity projenizle nasıl çalışacağınızı ve hata ayıklamayı öğrenmek [için Visual Studio Tools for Unity bölümüne](../cross-platform/using-visual-studio-tools-for-unity.md)bakın.

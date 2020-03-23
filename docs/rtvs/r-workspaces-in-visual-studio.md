@@ -1,6 +1,6 @@
 ---
 title: R çalışma alanları
-description: Visual Studio'da çalışma alanlarını kullanarak R kodunu çalıştığı denetlemek nasıl.
+description: Visual Studio'da çalışma alanlarını kullanarak R kodunun nerede çalıştığını denetleme.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,127 +9,127 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 97ce4f226c39a20ad41c5977f800aa178450c69c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62998794"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302653"
 ---
-# <a name="control-where-r-code-runs-with-workspaces"></a>R kodu ile çalışma çalıştığı denetimi
+# <a name="control-where-r-code-runs-with-workspaces"></a>Çalışma alanlarıyla R kodunun nerede çalıştığını denetleme
 
-Bir çalışma alanında R araçları için Visual Studio (RTVS) bir R oturumu, hangi hem yerel hem de uzak bilgisayarlarda oluşabilir çalıştığı yapılandırmanıza olanak sağlar. Amacı, potansiyel olarak daha güçlü bulut tabanlı bilgisayarlar yararlanmak olanağı sunan bir karşılaştırılabilir kullanıcı deneyimi ile çalışmak için izin vermektir.
+R Tools for Visual Studio 'daki (RTVS) çalışma alanı, hem yerel hem de uzak bilgisayarlarda gerçekleşebilecek bir R oturumunun nerede çalıştığını yapılandırmanızı sağlar. Amaç, karşılaştırılabilir bir kullanıcı deneyimiyle üzerinde çalışmanızı sağlamaktır, bu da size daha güçlü bulut tabanlı bilgisayarlardan yararlanma olanağı sağlar.
 
-Açmak için **çalışma alanları** penceresinde kullanım **R Araçları** > **Windows** > **çalışma alanları** komutu veya tuşlarına basın **Ctrl**+**9**.
+**Çalışma Alanları** penceresini açmak için **R Tools** > **Windows** > **Çalışma Alanları** komutunu kullanın veya **Ctrl**+**9**tuşuna basın.
 
-![Çalışma alanları penceresinde (VS2017) Visual Studio için R araçları](media/workspaces-window.png)
+![Visual Studio için R Tools'ta Çalışma Alanları penceresi (VS2017)](media/workspaces-window.png)
 
-Bu pencerede, yeşil onay işareti RTVS bağlandığı etkin çalışma gösterir. Mavi bir oku seçerek, etkin çalışma ayarlar. Her bir çalışma alanının sağ ayarları (dişli) simgesini adı, konumu ve komut satırı bağımsız değişkenleri değiştirmenize izin verir. Kırmızı X el ile eklenen bir çalışma alanı kaldırır.
+Bu pencerede, yeşil onay işareti RTVS bağlı olduğu etkin çalışma alanı gösterir. Mavi ok seçilmesi etkin çalışma alanını ayarlar. Her çalışma alanının sağındaki ayarlar (dişli) simgesi, adını, konumunu ve komut satırı bağımsız değişkenlerini değiştirmenize olanak tanır. Kırmızı X, el ile eklenen çalışma alanını kaldırır.
 
-## <a name="save-and-reset-a-workspace"></a>Kaydet ve bir çalışma alanını sıfırlama
+## <a name="save-and-reset-a-workspace"></a>Çalışma alanını kaydetme ve sıfırlama
 
-Bir projeyi kapatıp, varsayılan olarak, çalışma durumu RTVS kaydetmez. Bu davranışı değiştirebilirsiniz ancak aracılığıyla [çalışma alanı seçeneklerini](options-for-r-tools-in-visual-studio.md#workspace).
+Varsayılan olarak, bir projeyi kapatıp yeniden açtığınızda RTVS çalışma alanı durumundan tasarruf etmez. Ancak, [Çalışma Alanı seçenekleri](options-for-r-tools-in-visual-studio.md#workspace)aracılığıyla bu davranışı değiştirebilirsiniz.
 
-**R Araçları** > **oturumu** > **sıfırlama** komut ve etkileşimli pencerede sıfırlama araç çubuğu düğmesini ayrıca herhangi bir çalışma alanı durumunu Sıfırla saat. Uzak çalışma alanları ile sıfırlama ilk etkili toplanan tüm dosyaları siler bir uzak sunucuya bağlanırken oluşturulan kullanıcı profili siler.
+**Etkileşimli** > penceredeki R Tools**Session** > **Reset** komutu ve sıfırlama araç çubuğu düğmesi de çalışma alanı durumunu her zaman sıfırlar. Uzak çalışma alanlarında sıfırlama, uzak sunucuya ilk bağlanırken oluşturulan kullanıcı profilini siler ve bu da orada biriken dosyaları etkin bir şekilde siler.
 
 ## <a name="local-workspaces"></a>Yerel çalışma alanları
 
-Bilgisayarınızda yüklü olan tüm R yorumlayıcılarını yerel çalışma alanlarını listeler.
+Yerel çalışma alanları listesi, bilgisayarınıza yüklediğiniz tüm R yorumlayıcılarını görüntüler.
 
-Visual Studio başlatıldığında bakarak yüklediğiniz R sürümleri otomatik olarak algılamak çalışır **HKEY_LOCAL_MACHINE\Software\R çekirdek\\**  kayıt defteri anahtarı. Bu denetim yalnızca başlangıçta yapıldığı için yeni İnterpret R yüklerseniz, Visual Studio'yu yeniden başlatmanız gerekir.
+Visual Studio başladığında, **HKEY_LOCAL_MACHINE\Software\R-Core\\ ** kayıt defteri anahtarına bakarak yüklediğiniz R sürümlerinin tümlerini otomatik olarak algılamaya çalışır. Bu denetim yalnızca başlangıçta yapıldığından, yeni bir R yorumlayıcısı yüklerseniz Visual Studio'yı yeniden başlatmanız gerekir.
 
-Standart dışı bir şekilde (örneğin, yalnızca bir yükleyici çalıştırmak yerine bir klasöre dosyalar kopyalanıyor) yüklü olan R yorumlayıcıyı RTVS algılayamayabilir. Bu durumda, el ile yeni bir yerel R çalışma alanı gibi oluşturun:
+RTVS standart olmayan bir şekilde yüklenmiş bir R yorumlayıcısı algılayamayabilir (örneğin, dosyaları yükleyici çalıştırmak yerine bir klasöre kopyalarken). Bu durumda, el ile aşağıdaki gibi yeni bir yerel R Çalışma Alanı oluşturun:
 
-1. Seçin **Ekle** çalışma alanları penceresinde düğmesine.
-1. Yeni çalışma alanı için bir ad girin.
-1. İçeren bir R kök klasörün yolunu girin *bin* klasöründe RTVS başladığında yorumlayıcısı geçirilecek herhangi isteğe bağlı komut satırı bağımsız değişkenleri yanı sıra bir yorumlayıcıya sahip.
-1. Seçin **Kaydet** bitirdiğinizde.
+1. Çalışma Alanları penceresinde **Ekle** düğmesini seçin.
+1. Yeni Çalışma Alanı için bir ad girin.
+1. RTVS başlatıldığında yorumlayıcıya geçmek için isteğe bağlı komut satırı bağımsız değişkenleriyle birlikte, yorumlayıcıyla birlikte *çöp kutusu* klasörünü içeren R kök klasörüne giden yolu girin.
+1. İşiniz bittiğinde **Kaydet**’i seçin.
 
 ![Yeni bir çalışma alanı ekleme](media/workspaces-add-new.png)
 
 ## <a name="remote-workspaces"></a>Uzak çalışma alanları
 
-Uzak çalışma alanlarını bir uzak bilgisayar üzerinde bir R oturumuna bağlamanızı sağlar. (Bkz [uzak çalışma alanlarını ayarlayın](setting-up-remote-r-workspaces.md) bir bilgisayar bu amaç için nasıl yapılandıracağınızı öğrenmek için.)
+Uzak çalışma alanları, uzak bir bilgisayardaki Bir R oturumuna bağlanmanızı sağlar. (Bkz. Bu amaçla bir bilgisayarı yapılandırmak için [uzak çalışma alanları ayarlayın.)](setting-up-remote-r-workspaces.md)
 
-Visual Studio otomatik olarak algılamıyor uzak çalışma alanlarını, bunları kullanarak el ile eklemelisiniz **Ekle** önceki bölümde açıklandığı gibi çalışma alanları penceresinde düğmesi. Bu durumda, uzak bilgisayarın URI yerine yerel bir yol girin.
+Visual Studio uzak çalışma alanlarını otomatik olarak algılamaz, bu nedenle önceki bölümde açıklandığı gibi Çalışma Alanları penceresindeki **Ekle** düğmesini kullanarak bunları el ile eklemeniz gerekir. Bu durumda, yerel bir yol yerine uzak bilgisayarın URI'sini girin.
 
 > [!Important]
-> Uzak çalışma alanlarını bir URI tarafından tanımlanan, *HTTPS protokolünü kullanmalıdır* gizliliği ve uzak bilgisayar ile iletişimde bütünlüğünü sağlamak için. Visual Studio, HTTPS desteklemeyen bir uzak bilgisayara bağlanamıyor.
+> Uzak çalışma alanları, uzak bilgisayarla iletişimin gizliliğini ve bütünlüğünü sağlamak için *HTTPS protokolünü kullanması gereken* bir URI tarafından tanımlanır. Visual Studio, HTTPS'yi desteklemeyen uzak bir bilgisayara bağlanamaz.
 
 > [!Note]
-> Uzak çalışma alanlarını etkili bir şekilde Önizleme aşamasındadır. Biz, dosya eşitleme sorunun gelecekteki bir yayın için daha iyi bir uygulama üzerinde çalışıyorsanız ve fikirlerinizi ve geri bildirim Hoş Geldiniz.
+> Uzak çalışma alanları etkin bir şekilde önizlemededir. Biz gelecekteki bir sürüm için dosya eşitleme sorunu daha iyi bir uygulama üzerinde çalışıyoruz ve fikir lerinizi ve geribildirim bekliyoruz.
 
-## <a name="remote-workspace-logon"></a>Uzak çalışma alanı oturum açma
+## <a name="remote-workspace-logon"></a>Uzak Çalışma Alanı Girişi
 
-Uzak çalışma alanına bir kullanıcı adı ve parolayla oturum açma kullanmanız gerekir.
+Uzak çalışma alanına giriş yapmak için bir kullanıcı adı ve parola kullanmanız gerekir.
 
-### <a name="logon-to-windows-workspace"></a>Windows çalışma alanına oturum açma
+### <a name="logon-to-windows-workspace"></a>Windows çalışma alanına giriş
 
-Kurulum, etki alanı hesabı kullanmak için uzak makine ise bir uzak çalışma alanına erişmek için etki alanı oturum açma kullanabilirsiniz. Bunun olmaması durumunda kullanmak zorunda `machine-name\username` uzak makinede bir makine hesabı kullanarak oturum açmak için biçim.
+Uzak makineniz etki alanı hesabınızı kullanmak üzere düzenese, uzak bir çalışma alanına erişmek için etki alanı oturumunu kullanabilirsiniz. Değilse, o zaman uzak makine `machine-name\username` üzerinde bir makine hesabı kullanarak oturum açmak için biçimini kullanmanız gerekir.
 
-### <a name="logon-to-linux-workspace"></a>Linux çalışma alanına oturum açma
+### <a name="logon-to-linux-workspace"></a>Linux çalışma alanına giriş
 
-Oturum açmak için bir linux hesabı kullanımı `<<unix>>\username` biçimi. Örneğin, bir hesap adına göre varsa `ruser`, kullanıcı adı olarak yazmanız sonra `<<unix>>\ruser`.
+Linux hesabı kullanım `<<unix>>\username` formatında oturum açmak için. Örneğin, ada `ruser`göre bir hesabınız varsa, kullanıcı adını `<<unix>>\ruser`.
 
-## <a name="switch-between-workspaces"></a>Çalışma alanları arasında geçiş yapın
+## <a name="switch-between-workspaces"></a>Çalışma alanları arasında geçiş
 
-RTVS aynı anda yalnızca tek bir çalışma alanına bağlı. İlişkili çalışma alanı, küçük yeşil bir onay işareti çalışma alanları penceresinde ile belirtilir. Varsayılan olarak, RTVS önceki bir oturumda son açık yerel çalışma alanına bağlar.
+RTVS aynı anda yalnızca tek bir çalışma alanına bağlıdır. Bağlı çalışma alanı, Çalışma Alanları penceresindeküçük bir yeşil onay işaretiyle gösterilir. Varsayılan olarak, RTVS önceki oturumdaki son açık yerel çalışma alanına bağlanır.
 
-Etkin çalışma alanı değiştirmek için istediğiniz çalışma alanını yanındaki mavi oku seçin. Bunun yapılması oturumunuzun kaydetmenizi ister geçerli çalışma sonlandırır ve ardından yeni bir tane geçer.
+Etkin çalışma alanını değiştirmek için, istenen çalışma alanının yanındaki mavi oku seçin. Bunu yapmak, oturumunuzu kaydetmenizi ister, geçerli çalışma alanını sonlandırır ve sonra yenisine geçer.
 
 > [!Tip]
-> Kaydetme devre dışı bırakmak için komut istemi, select **R Araçları** > **seçenekleri** ayarlayın ve komut **çalışma alanları geçmeden önce onay iletişim kutusunu göster** seçeneği`No`. Bkz: [çalışma alanı seçeneklerini](options-for-r-tools-in-visual-studio.md#workspace).
+> Kayıt istemini devre dışı bırakabilmek **için, R Araçları** > **Seçenekleri** komutunu seçin ve çalışma alanları seçeneğini ' ne geçmeden önce onay iletişim **kutusunu göster'i** `No`ayarlayın. Bkz. [Çalışma Alanı seçenekleri.](options-for-r-tools-in-visual-studio.md#workspace)
 
-Kaldırılıyor, veya deftere kullanılamaz RTVS oluşturulmaması bir uzak çalışma alanına herhangi bir çalışma alanına bağlı bir yerel çalışma alanı geçmek çalışır. Sonuç olarak, kodu etkileşimli pencerede girin veya aksi halde kodu çalıştırmak çalıştığınızda bir hata görebilirsiniz:
+Kaldırılmamış yerel bir çalışma alanına veya kullanılamadığı uzak bir çalışma alanına geçmeye çalışırsanız, RTVS herhangi bir çalışma alanına bağlı olmayabilir. Sonuç olarak, etkileşimli pencereye kod girdiğinizde veya başka bir şekilde kodu çalıştırmayı denediğinizde bir hata görebilirsiniz:
 
-![Çalışma alanı için RTVS bağlı olduğunda hata](media/workspaces-disconnected-interactive-window.png)
+![RTVS'ye hiçbir çalışma alanı bağlı olmadığında hata](media/workspaces-disconnected-interactive-window.png)
 
-Bunu düzeltmek için çalışma alanları penceresinde başka bir çalışma alanına geçin. Çalışma alanı varsa, İnterpret R yüklemeniz gerekir. Ayrıca, Visual Studio çalışırken yorumlayıcıyı yüklediyseniz, Visual Studio'yu yeniden başlatmayı deneyebilirsiniz.
+Bunu düzeltmek için Çalışma Alanları penceresindebaşka bir çalışma alanına geçin. Boş çalışma alanı yoksa, bir R yorumlayıcısı yüklemeniz gerekir. Visual Studio çalışırken bir tercüman yüklediyseniz Visual Studio'yı yeniden başlatmayı da deneyebilirsiniz.
 
-### <a name="switch-to-a-remote-workspace"></a>Bir uzak çalışma alanına geçin
+### <a name="switch-to-a-remote-workspace"></a>Uzak bir çalışma alanına geçme
 
-RTVS bir uzak çalışma alanına bağlanırken kimlik bilgilerini ister ve ardından (güvenli Windows kimlik bilgileri kasası kullanarak) bu kimlik bilgilerinin sonraki oturumlar için önbelleğe alır. Uzak sunucu ile iletişimi güvenli bir şekilde (gereklidir) HTTPS gerçekleştirilir.
+RTVS, uzak bir çalışma alanına ilk bağlandığınızda kimlik bilgilerini ister, ardından bu kimlik bilgilerini (güvenli Windows Kimlik Bilgileri Dolabını kullanarak) sonraki oturumlar için önbelleğe alırsa. Uzak sunucu ile iletişim daha sonra https üzerinden güvenli bir şekilde yapılır (gereklidir).
 
-Sunucu yapılandırmasına bağlı olarak, "uzak R Hizmetleri tarafından sunulan güvenlik sertifikası (name) makinesi gerçekten de bağlandığınız kanıtlamak bize izin vermiyor." okuyan, bağlanırken uyarı sertifika görebilirsiniz.
+Sunucunun yapılandırmasına bağlı olarak, bağlanırken şöyle bir sertifika uyarısı görebilirsiniz: "Uzak R Hizmetleri tarafından sunulan güvenlik sertifikası, gerçekten makineye (ad) bağlandığınızı kanıtlamamıza izin vermiyor."
 
-![Bir uzak çalışma alanına bağlanırken otomatik olarak imzalanan bir sertifika Uyarısı](media/workspaces-remote-self-signed-certificate-warning.png)
+![Uzak bir çalışma alanına bağlanırken kendi imzalı sertifika uyarısı](media/workspaces-remote-self-signed-certificate-warning.png)
 
-Sertifika için RTVS, bağlanmaya çalıştığınız bilgisayarın tarafından sunulan bir belgedir. Sertifika, o bilgisayardaki URI tanımlar bir alan içeriyor. Sertifika URI'de ve sunucunun güvenliği tehlikeye girmiş olabilecek olduğunu gösteren bilgisayara bağlanmak için kullanılan URI arasında bir uyuşmazlık RTVS algıladığında bir uyarı görüntülenir.
+Sertifika, bağlanmaya çalıştığınız bilgisayar tarafından RTVS'ye sunulan bir belgedir. Sertifika, o bilgisayarın URI'sini tanımlayan bir alan içerir. Uyarı, RTVS sertifikadaki URI ile bilgisayara bağlanmak için kullanılan URI arasında bir uyumsuzluk algıladığında görünür ve sunucunun güvenliğinin tehlikeye atılmış olabileceğini gösterir.
 
-Ancak, bu uyarı ayrıca görünür bir *otomatik olarak imzalanan sertifika* güvenilen bir sağlayıcı birinden kullanmak yerine uzak bilgisayarda HTTPS'yi etkinleştirmek için kullanıldı. Daha fazla bilgi için [uzak çalışma alanlarını ayarlayın](setting-up-remote-r-workspaces.md).
+Ancak, bu uyarı, güvenilir bir sağlayıcıdan kullanmak yerine uzak bilgisayarda HTTPS'yi etkinleştirmek için *kendi imzalı* bir sertifika kullanıldıysa da görünür. Daha fazla bilgi için [bkz.](setting-up-remote-r-workspaces.md)
 
-## <a name="directories-on-local-and-remote-computers"></a>Yerel ve uzak bilgisayarlarda dizinleri
+## <a name="directories-on-local-and-remote-computers"></a>Yerel ve uzak bilgisayarlardaki dizinler
 
-Varsayılan olarak, geçerli çalışma dizininize yerel bir çalışma alanında yeni bir R yorumlayıcı başlattığınızda olduğu *%userprofile%\Documents*. Dizini kullanarak istediğiniz zaman değiştirebilirsiniz **R Araçları** > **çalışma dizini** komutlar, veya ile Visual Studio Çözüm Gezgini'nde projeye sağ ve gibikomutlarseçme **Çalışma dizini buraya ayarlayın**.
+Varsayılan olarak, yerel bir çalışma alanında yeni bir R yorumlayıcısı başlattığınızda, geçerli çalışma dizini *%userprofile%\Documents*olur. **R Tools** > **Working Directory** komutlarını kullanarak veya Visual Studio Solution Explorer'da bir projeyi sağ tıklatarak ve Burada Çalışma **Dizini Ayarla**gibi komutları seçerek istediğiniz zaman dizini değiştirebilirsiniz.
 
-Uzak bir bilgisayarda ilk kez bağlandığınızda, RTVS çalışma dizinini ayarlar için bir kullanıcı profili kimlik bilgileri temelinde otomatik olarak oluşturur. *belgeleri* klasörü altında bu profili. Bu klasör, aynı kimlik bilgilerini kullanan tüm sonraki uzak oturumlar için kullanılır.
+Uzak bir bilgisayara ilk bağlandığınızda, RTVS otomatik olarak kimlik bilgilerinize dayalı bir kullanıcı profili oluşturur ve bu da çalışma dizini bu profilin altındaki *Belgeler* klasörüne ayarlar. Bu klasör, aynı kimlik bilgilerini kullanan sonraki tüm uzak oturumlar için kullanılır.
 
-Sonuç olarak, kodunuzun çalıştığı tam konumu, yerel ve uzak çalışma alanları arasında değişebilir. Böylece kodunuzun çalışma alanı arasında taşınabilir olduğundan kodunuzda, ardından her zaman veri dosyaları ve gibi göreli yollar kullanın.
+Sonuç olarak, kodlarınızın çalıştığı tam konum yerel ve uzak çalışma alanları arasında farklılık görebilir. Ardından, kodunuzda, kodunuzu çalışma alanlarında taşınabilir olacak şekilde veri dosyalarına ve bu şekilde göreli yollar kullanın.
 
-Ayrıca, uzak çalışma alanları ile çalışma dizinindeki tüm dosyalar aynı kullanıcı profili oturumlar arasında değiştirilmez olduğunu unutmayın. Daha önce belirtildiği gibi kullanarak bu dosyaları silebilirsiniz **R Araçları** > **oturumu** > **sıfırlama** komutu (ya da Sıfırla düğmesini Etkileşimli pencere) bir uzak çalışma alanı kullanarak. Bu komut, kullanıcı profili yeniden bağlandığınızda, yeniden sunucudan siler.
+Uzak çalışma alanlarında, çalışma dizinindeki tüm dosyaların aynı kullanıcı profili için oturumlar arasında yerinde kaldığını da unutmayın. Daha önce de belirtildiği gibi, uzak bir çalışma alanı kullanırken **R Tools** > **Session** > **Reset** komutunu (veya etkileşimli penceredeki sıfırlama düğmesini) kullanarak bu dosyaları silebilirsiniz. Bu komut, yeniden bağlandığınızda yeniden oluşturulan sunucudan kullanıcı profilini yine siler.
 
-## <a name="copy-project-files-to-remote-workspaces"></a>Uzak çalışma alanları için proje dosyaları Kopyala
+## <a name="copy-project-files-to-remote-workspaces"></a>Proje dosyalarını uzak çalışma alanlarına kopyalama
 
-Bile bir uzak çalışma alanı kullanırken R projeleri Visual Studio ile çalışırken, yerel bilgisayarda her zaman en son proje dosyalarını sahiptir. Bir projeyi Visual (genellikle bu projeyi içeren bir çözüm açılırken anlamına gelir) Studio'da açtığınızda, projenin içeriği tamamen yerel bilgisayarda bulunan diğer bir deyişle, RTVS varsayar. Uzak çalışma alanı, etkin ve tüm proje dosyaları için yalnızca geçici bir ana bilgisayardır koddan çıktı. Bu, örneğin, kullanarak bir dosya yüklenirken anlamına `source` etkileşimli pencerede, bu dosya zaten yolunda bir uzak bilgisayarda sağladığınız veya uzak İnterpret R geçerli çalışma dizininde olması gerekir olmalıdır (ile ayarlamak`setwd()`</c2>işlevi).
+Visual Studio'da R projeleri ile çalışırken, uzak bir çalışma alanı kullanıyorsanız bile yerel bilgisayar her zaman en son proje dosyalarına sahiptir. Diğer bir deyişle, Visual Studio'da bir proje açtığınızda (genellikle bu projeyi içeren bir çözüm açmak anlamına gelir), RTVS projenin içeriğinin tamamen yerel bilgisayarda bulunduğunu varsayar. Uzak çalışma alanı, aslında, projenin dosyaları ve koddan herhangi bir çıktı için geçici bir ana bilgisayardır. Bu, örneğin, etkileşimli pencerede `source` bir dosya yüklerken, bu dosyanın sağladığınız yolda uzak bilgisayarda zaten olması gerektiği veya uzak R yorumlayıcısının `setwd()` (işlevle birlikte ayarlanmış) geçerli çalışma dizininde olması gerektiği anlamına gelir.
 
-Dosyalar uzak sunucuya şu şekilde kopyalanır:
+Dosyalar aşağıdaki gibi uzak sunucuya kopyalanır:
 
-- Etkileşimli pencere üzerinden uzaktan dosyalarıyla çalışmak için önce bunları el ile Çözüm Gezgini'nde, dosyaları (veya proje) sağ tıklatıp seçerek kopyalamanız gerekir **kaynak seçili**. Tek tek dosyalar için sunucu üzerindeki çalışma dizinine kopyalanana; bir proje kopyalarken RTVS proje için bir klasör oluşturur.
+- Etkileşimli pencereden dosyalarla uzaktan çalışmak için, önce Solution Explorer'da bu dosyaları (veya projeyi) sağ tıklatarak ve **Kaynak Seçili'ni**seçerek dosyaları el ile kopyalamanız gerekir. Tek tek dosyalar için, sunucudaki çalışma dizinine kopyalanırlar; bir proje kopyalarken, RTVS proje için bir klasör oluşturur.
 
-- Dosyaları daha sonra Çözüm Gezgini'nde ve ardından seçerek kopyalayabilirsiniz **seçili kaynak dosyaları (s)**. Bu eylem, bunları etkileşimli pencereye yükler ve orada çalışır. Oturum, bir uzak bilgisayara bağlıysa, dosyalar var. önce kopyalanır.
+- Ayrıca, Solution Explorer'da sonrayı seçip **kaynak seçili dosyaları(lar)** seçerek dosyaları kopyalayabilirsiniz. Bu eylem onları etkileşimli pencereye yükler ve orada çalıştırır. Oturum uzak bir bilgisayara bağlıysa, dosyalar önce orada kopyalanır.
 
-- Ne zaman RTVS bir uzak çalışma alanına bağlı ve tuşuna **F5**seçin **hata ayıklama** > **hata ayıklamayı Başlat**, veya aksi takdirde varsayılan RTVS kodunuzu çalıştırmaya başlayın Projenin dosya uzak çalışma alanına otomatik olarak kopyalar (aşağıda bu davranışını denetlemek için bakın).
+- RTVS uzak bir çalışma alanına bağlandığında ve **F5**tuşuna bastığınızda, **Hata Ayıklama** > **Başlatma Hata Ayıklama'yı**seçin veya kodunuzu çalıştırmaya başlayın, RTVS varsayılan olarak projenin dosyasını otomatik olarak uzak çalışma alanına kopyalar (bu davranışı nasıl kontrol edebilirsiniz) bölümüne bakın.
 
-- Sunucuda zaten mevcut olan tüm dosyaların üzerine yazılır.
+- Sunucuda zaten var olan tüm dosyalar üzerine yazılır.
 
 > [!Note]
-> Tüm R işlev çağrıları RTVS güvenilir bir şekilde müdahale edemez çünkü gibi işlevleri çağırma `source()` veya `runApp()` (Shiny uygulamalarını için) etkileşimli pencereye mu *değil* dosyaları uzak çalışma alanına kopyalayın.
+> RTVS tüm R işlev çağrılarını güvenilir bir `source()` şekilde `runApp()` engelleyemediğinden, etkileşimli penceredeki (Shiny uygulamaları için) gibi arama işlevleri dosyaları uzak çalışma alanına *kopyalamaz.*
 
-[Proje Özellikleri](r-projects-in-visual-studio.md#project-properties) Denetim dosyalarını bir projesi RTVS kopyalar olup çalıştırın ve tam olarak hangi dosyalar kopyalanır. Bu sayfayı açmak için seçmeniz **proje** > **(ad) özellikleri** menü komutu ya da Çözüm Gezgini'nde ve select projeyi sağ **özellikleri**.
+[Proje özellikleri,](r-projects-in-visual-studio.md#project-properties) bir proje çalıştırıldığında RTVS'nin dosyaları kopyalayıp kopyalamadığını ve tam olarak hangi dosyaların kopyalanmasını denetler. Bu sayfayı açmak için **Project** > **(name) Properties** menüsü komutunu seçin veya Solution Explorer'da projeyi sağ tıklatın ve **Özellikler'i**seçin.
 
-![Proje Özellikleri sekmesi ile dosya aktarımı çalıştırma ayarları](media/workspaces-remote-file-transfer-filter-settings.png)
+![Proje özellikleri dosya aktarım ayarlarıyla sekme çalışır](media/workspaces-remote-file-transfer-filter-settings.png)
 
-Burada, **aktarım çalışma dosyalarını** özellik RTVS proje dosyaları otomatik olarak kopyalar olup olmadığını belirler. **Dosyaları aktarmak için** sonra tam olarak hangi dosyaların aktarılır filtreleri değer. Yalnızca kopyalamak için varsayılandır *. R*, *. Rmd*, *.sql*, *.md*, ve *.cpp* dosyaları. Bu davranış, yanlışlıkla sunucu her çalıştırma ile büyük veri dosyalarını kopyalamak önler.
+Burada, **çalıştırılan özellikteki Aktarım dosyaları,** RTVS'nin proje dosyalarını otomatik olarak kopyalayıp kopyalamayacağını belirler. Değer **aktaracak dosyalar,** sonra tam olarak hangi dosyaların aktarıldığını filtreler. Varsayılan yalnızca *kopyalamaktır. R*, *. Rmd*, *.sql*, *.md*, ve *.cpp* dosyaları. Bu davranış, her çalıştırmada büyük veri dosyalarını yanlışlıkla sunucuya kopyalamaktan kaçınır.
 
-## <a name="copy-files-from-a-remote-workspace"></a>Dosyaları bir uzak çalışma alanından Kopyala
+## <a name="copy-files-from-a-remote-workspace"></a>Dosyaları uzak bir çalışma alanından kopyalama
 
-R betiğinizi dosyaları sunucu üzerinde oluşturursa, bu dosyaları kullanarak istemciyi yeniden kopyalayabilirsiniz `rtvs::fetch_file` işlevi. Bu işlev, en az, uzak bilgisayarınıza kopyalamak istediğiniz dosya yolunu ve isteğe bağlı olarak, bilgisayarınızda hedef yolu kabul eder. Bir yol belirtmezseniz, dosya olarak kopyalanır, *%userprofile%\Downloads* klasör.
+R komut dosyanız sunucuda dosya oluşturuyorsa, `rtvs::fetch_file` bu dosyaları işlevi kullanarak istemciye geri kopyalayabilirsiniz. Bu işlev, en azından bilgisayarınıza kopyalamak istediğiniz dosyaya giden uzak yolu ve isteğe bağlı olarak bilgisayarınızdaki hedef yolu kabul eder. Bir yol belirtmezseniz, dosya *%userprofile%\Downloads* klasörüne kopyalanır.

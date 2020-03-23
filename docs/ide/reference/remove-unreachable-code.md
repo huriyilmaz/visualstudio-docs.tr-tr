@@ -1,47 +1,50 @@
 ---
-title: Erişilemeyen kodları yeniden düzenleme Kaldır
-ms.date: 01/26/2018
+title: Erişilemene bilen kod yeniden düzenlemeyi kaldırma
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62002e78513ecb6ebaefd8130255471d6ba93d0c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cd827870f07fb3161674d287d20f266942e61afe
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565493"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093985"
 ---
-# <a name="remove-unreachable-code-refactoring"></a>Erişilemeyen kodları yeniden düzenleme Kaldır
+# <a name="remove-unreachable-code-refactoring"></a>Erişilemene bilen kod yeniden düzenlemeyi kaldırma
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** hiçbir zaman yürütülecek kodu kaldırır.
+- Visual Basic
 
-**Ne zaman:** programınızda Bu kod parçacığı gereksiz yapmadan bir kod parçacığı için yol yok.
+**Ne:** Asla yürütülmeyecek kodu kaldırır.
 
-**Neden:** geliştirmek okunabilirlik ve sürdürülebilirliği gereksiz kod kaldırarak ve hiçbir zaman yürütülür.
+**Ne zaman:** Programınızın bir kod parçacığına giden yolu yoktur ve bu da kod parçacıkını gereksiz kılar.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+**Neden:** Gereksiz olan ve hiçbir zaman yürütülmeyecek kodu kaldırarak okunabilirliği ve bakımı geliştirin.
 
-1. İmlecinizi, erişilemeyen soluk çıkış kodu herhangi bir yere yerleştirebilirsiniz:
+## <a name="how-to"></a>Nasıl yapılır
 
-![Soluk erişilemeyen kod](media/unreachablecode-faded-cs.png)
+1. İmlecinizi erişilenebilen soluk çıkış koduna yerleştirin:
+
+![Soluk erişilemez kod](media/unreachablecode-faded-cs.png)
 
 1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **erişilemeyen kodları kaldırma** gelen önizleme penceresi açılır.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Faktörler** menüsünü tetiklemek ve Önizleme penceresinden **erişilemeyen kodu kaldır'ı** seçin.
    - **Fare**
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **erişilemeyen kodları kaldırma** gelen önizleme penceresi açılır.
+      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **erişilemeyen kodu kaldır'ı** seçin.
 
-1. Değişiklik ile tamamladığınızda basın **Enter** veya düzeltmeyi menüsünde tıklatın ve değişiklikler uygulanır.
+1. Değişiklikten memnun olduğunuzda, menüdeki düzeltmeyi **Girin'e** veya düzeltmeye tıklayın ve değişiklikler işlenir.
 
 Örnek:
 

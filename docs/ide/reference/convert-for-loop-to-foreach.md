@@ -1,86 +1,89 @@
 ---
-title: For döngüsünü foreach ifadesine dönüştürmek için kodu yeniden düzenleme
-ms.date: 05/10/2018
+title: For döngüsüne dönüştürülecek refaktör kodu
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3539bae5bb2174fa4728fb8b277cce4ce9c48eb9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af52761f5cb199c7f842d01589c35501898b09aa
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75570251"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094599"
 ---
-# <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>For döngüsü ve foreach ifadesi arasında dönüştürmek için yeniden düzenleme
+# <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>For döngüsü ile foreach deyimi arasında dönüştürmeyi yeniden düzenleme
 
-Bu makalede, iki döngü yapısı arasında dönüştürme yapan hızlı eylemler yeniden düzenlemeler açıklanır. Kodunuzda bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsü ve [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesi arasında geçiş yapmak isteyebileceğiniz bazı nedenleri içerir.
+Bu makalede, iki döngü yapıları arasında dönüştüren Hızlı Eylemler refactorings açıklanır. Kodunuzda [for](/dotnet/csharp/language-reference/keywords/for) döngüsü ile [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimi arasında geçiş yapmak isteyebileceğin bazı nedenler içerir.
 
-## <a name="convert-a-for-loop-to-a-foreach-statement"></a>For döngüsünü foreach ifadesine Dönüştür
+## <a name="convert-a-for-loop-to-a-foreach-statement"></a>For döngüsüne foreach deyimini dönüştürme
 
-Kodunuzda bir [for](/dotnet/csharp/language-reference/keywords/for) Loop varsa, bu yeniden düzenlemeyi bir [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesine dönüştürmek için kullanabilirsiniz.
+Kodunuzda [for](/dotnet/csharp/language-reference/keywords/for) döngüsü varsa, bu yeniden düzenlemeyi [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimine dönüştürmek için kullanabilirsiniz.
 
-Bu yeniden düzenleme için geçerlidir:
-
-- C#
-
-> [!NOTE]
-> **ForEach** hızlı eylemine Dönüştür yeniden düzenlemesi yalnızca üç bölümden [oluşan Döngülerde](/dotnet/csharp/language-reference/keywords/for) kullanılabilir: Başlatıcı, koşul ve yineleyici.
-
-### <a name="why-convert"></a>Neden dönüştürme
-
-[For](/dotnet/csharp/language-reference/keywords/for) döngüsünü [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesine dönüştürmek isteyebileceğiniz nedenler şunlardır:
-
-- Bir dizin olarak, öğelere erişmek için bir dizin olması dışında yerel döngü değişkenini döngü içinde kullanamazsınız.
-
-- Kodunuzu basitleştirmek ve Başlatıcı, koşul ve yineleyici bölümlerindeki mantık hatalarının olasılığını azaltmak istiyorsunuz.
-
-### <a name="how-to-use-it"></a>Kullanımı
-
-1. Giriş işaretini `for` anahtar sözcüğüne yerleştirin.
-
-1. Tuşuna **Ctrl**+ **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwsürücü simgesine](../media/screwdriver-icon.png) simgesine tıklayın.
-
-   ![Foreach menüsüne Dönüştür](media/convert-to-foreach.png)
-
-1. **' Foreach ' olarak Dönüştür**' ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
-
-## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Foreach ifadesini for döngüsüne Dönüştür
-
-Bir [foreach (C#)](/dotnet/csharp/language-reference/keywords/foreach-in) veya [her biri için... Sonraki (Visual Basic)](/dotnet/visual-basic/language-reference/statements/for-each-next-statement) deyiminizde, bu yeniden düzenlemeyi bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek için kullanabilirsiniz.
-
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-### <a name="why-convert"></a>Neden dönüştürme
+> [!NOTE]
+> Foreach Hızlı Eylem refactoring **dönüştürün** yalnızca üç bölümden oluşan döngüler [için](/dotnet/csharp/language-reference/keywords/for) kullanılabilir: bir baş harf, durum ve yineleyici.
 
-[Foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesini bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek isteyebileceğiniz nedenler şunlardır:
+### <a name="why-convert"></a>Neden dönüştürmek
 
-- Yalnızca öğeye erişenden daha fazla bilgi için döngü içinde yerel döngü değişkenini kullanmak istiyorsunuz.
+[For](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek isteyebileceğin [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) nedenler şunlardır:
 
-- [Çok boyutlu bir dizide yineleme](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) yapılır ve dizi öğeleri üzerinde daha fazla denetim istiyorsunuz.
+- Öğelere erişmek için bir dizin dışında döngü içindeki yerel döngü değişkenini kullanmazsınız.
 
-### <a name="how-to-use-it"></a>Kullanımı
+- Kodunuzu basitleştirmek ve baş harf, koşul ve yineleyici bölümlerindeki mantık hataları olasılığını azaltmak istiyorsunuz.
 
-1. Giriş işaretini `foreach` veya `For Each` anahtar sözcüğüne yerleştirin.
+### <a name="how-to-use-it"></a>Nasıl kullanılır?
 
-1. Tuşuna **Ctrl**+ **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwsürücü simgesine](../media/screwdriver-icon.png) simgesine tıklayın.
+1. Caret'inizi anahtar `for` kelimeye yerleştirin.
 
-   ![Menüye Dönüştür](media/convert-to-for.png)
+1. **Ctrl**+tuşuna**basın.** veya kod dosyasının kenar boşluğundaki tornavida ![simgesi](../media/screwdriver-icon.png) simgesine tıklayın.
 
-1. **' For ' olarak Dönüştür '** ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
+   ![Foreach menüsüne dönüştürün](media/convert-to-foreach.png)
 
-1. Yeniden düzenleme yeni bir yineleme sayısı değişkeni tanıtıldığı için, düzenleyicinin sağ üst köşesinde **Yeniden Adlandır** kutusu görünür. Değişken için farklı bir ad seçmek istiyorsanız, yazın ve **ENTER tuşuna basın** veya **Yeniden Adlandır** kutusuna **Uygula** ' yı seçin. Yeni bir ad seçmek istemiyorsanız, **ESC** tuşuna basın veya **Yeniden Adlandır** kutusunu kapatmak için **Uygula** ' yı seçin.
+1. **'Foreach' için Dönüştür'ü**seçin. Veya, [Değişiklikleri Önizleme](../../ide/preview-changes.md) iletişim kutusunu açmak için Değişiklikleri **Önizleyin'i** seçin ve ardından **Uygula'yı**seçin.
+
+## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Foreach deyimini for döngüsüne dönüştürme
+
+Eğer bir [foreach (C# veya](/dotnet/csharp/language-reference/keywords/foreach-in) [Her biri için varsa ... Kodunuzda sonraki (Visual Basic)](/dotnet/visual-basic/language-reference/statements/for-each-next-statement) deyimi, bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek için bu refactoring kullanabilirsiniz.
+
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+
+- C#
+
+- Visual Basic
+
+### <a name="why-convert"></a>Neden dönüştürmek
+
+[Foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimini [for](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek isteyebileceğin nedenler şunlardır:
+
+- Öğeye erişmekten daha fazlası için döngü içindeki yerel döngü değişkenini kullanmak istiyorsunuz.
+
+- Çok [boyutlu bir dizi aracılığıyla yinelediğiniz](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) ve dizi öğeleri üzerinde daha fazla denetim istiyorsunuz.
+
+### <a name="how-to-use-it"></a>Nasıl kullanılır?
+
+1. Caret'inizi `For Each` anahtar `foreach` kelimeye yerleştirin.
+
+1. **Ctrl**+tuşuna**basın.** veya kod dosyasının kenar boşluğundaki tornavida ![simgesi](../media/screwdriver-icon.png) simgesine tıklayın.
+
+   ![Menü için dönüştürün](media/convert-to-for.png)
+
+1. **'for' olarak dönüştür'ü**seçin. Veya, [Değişiklikleri Önizleme](../../ide/preview-changes.md) iletişim kutusunu açmak için Değişiklikleri **Önizleyin'i** seçin ve ardından **Uygula'yı**seçin.
+
+1. Yeniden düzenleme yeni bir yineleme sayısı değişkeni tanıdığından, **Yeniden adlandırma** kutusu editörün sağ üst köşesinde görünür. Değişken için farklı bir ad seçmek istiyorsanız, bunu yazın ve sonra **Enter** tuşuna basın veya **Yeniden Adlandır** kutusunda **Uygula'yı** seçin. Yeni bir ad seçmek istemiyorsanız, **Yeniden Adlandır** kutusunu kapatmak için **Esc** tuşuna basın veya **Uygula'yı** seçin.
 
 > [!NOTE]
-> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar** > **Seçenekler** > **metin Düzenleyicisi** **C#**  > **kod stili** > **genel** >  **\'var olan tercihleri** > veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
+> C# için, bu yeniden faktörler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür veya [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki açık veya örtülü tür, kapsamda bulunan kod stili ayarlarına bağlıdır. Bu özel kod stili **ayarları, Araçlar** > **Seçenekleri** > **Metin Düzenleyicisi** > **C#** > **Code Style** > **General** > **\'var' tercihleri**altında makine düzeyinde veya [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler'de**kod stili ayarını değiştirirseniz, değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

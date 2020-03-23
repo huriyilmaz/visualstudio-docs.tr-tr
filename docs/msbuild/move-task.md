@@ -1,5 +1,5 @@
 ---
-title: Görevi taşı | Microsoft Docs
+title: Görev Taşı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,35 +17,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 05b9f83fa7c80769ea3c584e2885c8fb1db24176
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633466"
 ---
 # <a name="move-task"></a>Taşıma görevi
 
-Dosyaları yeni bir konuma taşıın.
+Dosyaları yeni bir konuma taşır.
 
 ## <a name="parameters"></a>Parametreler
 
- Katlama tablosu `Move` görevin parametrelerini açıklar.
+ Foling tablosu görevin parametrelerini `Move` açıklar.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DestinationFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Kaynak dosyaların taşınacağı dosyaların listesini belirtir. Bu listenin `SourceFiles` parametresinde belirtilen listeye bire bir eşleme olması beklenir. Diğer bir deyişle, `SourceFiles` belirtilen ilk dosya `DestinationFiles`belirtilen ilk konuma taşınır ve bu şekilde devam eder.|
-|`DestinationFolder`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Dosyaları taşımak istediğiniz dizini belirtir.|
-|`MovedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Başarıyla taşınan öğeleri içerir.|
-|`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, salt okuma dosyaları olarak işaretlenseler bile dosyaların üzerine yazar.|
-|`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Taşınacak dosyaları belirtir.|
+|`DestinationFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Kaynak dosyaları taşımak için dosyaların listesini belirtir. Bu listenin `SourceFiles` parametrede belirtilen listeye bire bir eşleme olması beklenir. Diğer bir deyişle, belirtilen `SourceFiles` ilk dosya belirtilen `DestinationFiles`ilk konuma taşınır ve benzeri.|
+|`DestinationFolder`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Dosyaları taşımak istediğiniz dizini belirtir.|
+|`MovedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Başarıyla taşınan öğeleri içerir.|
+|`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Yalnızca `true`okunur dosya olarak işaretlenmiş olsalar bile dosyaların üzerine yazarsa.|
+|`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Taşımak için dosyaları belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- `DestinationFolder` parametresi ya da `DestinationFiles` parametresi belirtilmelidir, ikisi birden belirtilmemelidir. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
+ `DestinationFolder` Parametre veya `DestinationFiles` parametre belirtilmelidir, ancak her ikisi de belirtilmemelidir. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
 
- `Move` görev, istenen hedef dosyalar için gereken klasörleri oluşturur.
+ Görev, `Move` istenen hedef dosyalar için gerekli klasörleri oluşturur.
 
- Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

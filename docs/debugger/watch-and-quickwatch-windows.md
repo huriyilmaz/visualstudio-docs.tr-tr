@@ -1,5 +1,5 @@
 ---
-title: Değişkenler üzerinde bir izleme ayarlama | Microsoft Docs
+title: Değişkenlere saat ayarlama | Microsoft Dokümanlar
 ms.custom: seodec18
 ms.date: 10/11/2018
 ms.topic: conceptual
@@ -18,25 +18,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea3d2a1e82e92473859fef29754fbb831cf3685b
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409355"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302009"
 ---
-# <a name="watch-variables-with-watch-windows-and-quickwatch"></a>İzleme ve QuickWatch değişkenlerle izleyin
+# <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Watch windows ve QuickWatch ile değişkenleri izleyin
 
-Hata ayıklarken, değişkenleri ve ifadeleri izlemek için Windows 'u ve **hızlı Izlemeyi** **İzle** ' yi kullanabilirsiniz. Windows, yalnızca hata ayıklama oturumu sırasında kullanılabilir.
+Hata ayıklama yaparken, değişkenleri ve ifadeleri izlemek için **Watch** pencerelerini ve **QuickWatch'u** kullanabilirsiniz. Pencereler yalnızca hata ayıklama oturumu sırasında kullanılabilir.
 
-**İzleme** pencereleri, hata ayıklama sırasında her seferinde birkaç değişken görüntüleyebilir. **QuickWatch** iletişim kutusu her seferinde tek bir değişken görüntüler ve hata ayıklamanın devam edebilmesi için kapatılması gerekir.
+**İzleme** pencereleri hata ayıklama sırasında aynı anda birden fazla değişken görüntüleyebilir. **QuickWatch** iletişim kutusu aynı anda tek bir değişken görüntüler ve hata ayıklama devam etmeden önce kapatılmalıdır.
 
-Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
+Bu kod hata ayıklama denedim ilk kez ise, bu makalede geçmeden önce mutlak yeni başlayanlar ve [Hata Ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) için Hata [Ayıklama](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
 
-## <a name="observe-variables-with-a-watch-window"></a>İzleme penceresi değişkenleri gözlemleyin
+## <a name="observe-variables-with-a-watch-window"></a>Saat penceresi olan değişkenleri gözlemleme
 
-Birden fazla **Gözcü** penceresi açabilir ve bir **izleme** penceresinde birden fazla değişken gözlemleyebilirsiniz.
+Birden fazla **İzleme** penceresi açabilir ve Bir **Saat** penceresinde birden fazla değişken gözlemleyebilirsiniz.
 
-Örneğin, aşağıdaki kodda `a`, `b`ve `c` değerlerinde bir izleme ayarlamak için:
+Örneğin, `a`, , `b`, ve `c` aşağıdaki kod değerleri bir saat ayarlamak için:
 
 ```C++
 int main()
@@ -58,85 +58,85 @@ int main()
 
 ```
 
-1. Sol kenar boşluğunda, **hata ayıkla** > **kesme noktası**' nı seçerek veya **F9**tuşuna basarak `c = a + b;` satırında bir kesme noktası ayarlayın.
+1. Sol kenar boşluğuna `c = a + b;` tıklayarak, **Hata Ayıklama** > **Kesme Noktası'nı**seçerek veya **F9**tuşuna basarak satırda bir kesme noktası ayarlayın.
 
-1. Hata ayıklamayı **başlatmak** > yeşil **Başlangıç** okunu veya **Hata Ayıkla** ' yı seçerek hata ayıklamayı başlatın veya **F5**tuşuna basın. Yürütme kesme noktasında duraklatır.
+1. Yeşil **Başlat** oku veya **Hata Ayıklama** > **Başlangıç Hata Ayıklama'yı**seçerek hata ayıklamaya başlayın veya **F5 tuşuna**basın. Yürütme kesme noktasında duraklar.
 
-1. **Hata ayıkla** > **Windows** > **İzle** ** > Izle**' yi seçerek veya **CTRL**+**alt**+**W** > **1**tuşlarına basarak bir **Gözcü** penceresi açın.
+1. **Hata Ayıklama** > **Windows** > **Watch** > Watch 1'i seçerek veya **Ctrl**+**Alt**+**W** > **1'e**basarak **Bir İzleme** **penceresi**açın.
 
-   Windows **2**, **3**veya **4**' ü seçerek daha fazla **izleme** penceresi açabilirsiniz.
+   Windows **2,** **3**veya **4'ünü**seçerek ek **İzle** pencereleri açabilirsiniz.
 
-1. **İzle** penceresinde boş bir satır seçin ve değişken `a`yazın. `b` ve `c`için aynısını yapın.
+1. **İzleme** penceresinde boş bir satır seçin ve `a`değişken yazın. Için aynı `b` şeyi `c`yapın ve.
 
-   ![Değişkenleri izle](../debugger/media/watchvariables.png "WatchVariables")
+   ![Değişkenleri izleme](../debugger/media/watchvariables.png "WatchVariables")
 
-1. **Hata** ayıklama > **adımla** ' yı seçerek veya ilerlemek için gerektiğinde **F11** tuşuna basarak hata ayıklamaya devam edin. **İzleme** penceresindeki değişken değerleri, `for` döngüsünde yineleme yaparken değişir.
+1. Hata **Ayıklama** > **Adım Adım'ı** seçerek veya ilerlemek için gerektiğinde **F11** tuşuna basarak hata ayıklamaya devam edin. **Döngü** boyunca yinelediğiniz `for` şekilde İzleme penceresindeki değişken değerleri değişir.
 
 >[!NOTE]
->Yalnızca C++ için
->- Bir değişken veya değişken adını kullanan bir ifade bağlamını nitelemeniz gerekebilir. İşlevi, kaynak dosya veya bir değişkenin bulunduğu modül bağlamıdır. Bağlamı nitelemeniz gerekiyorsa, **izleme** penceresindeki **ad** içindeki [BağlamC++işleci ()](../debugger/context-operator-cpp.md) sözdizimini kullanın.
+>Yalnızca C++ için,
+>- Değişken adının bağlamını veya değişken adı kullanan bir ifadeyi nitelemeniz gerekebilir. Bağlam, bir değişkenin bulunduğu işlev, kaynak dosya veya modüldür. Bağlamı nitelemeniz gerekiyorsa, **Saat** penceresindeki **Ad'daki** [bağlam işleci (C++)](../debugger/context-operator-cpp.md) sözdizimini kullanın.
 >
->- Kayıt adları ve değişken adlarını$kullanarak \<Kaydet **&nbsp;ad >** veya@kaydet \<**adını** **İzle** penceresindeki **ada**&nbsp;kaydedebilirsiniz. Daha fazla bilgi için bkz. [sözde değişkenler](../debugger/pseudovariables.md).
+>- ** $ \<Kayıt adını>&nbsp;** kullanarak kayıt adları ve değişken adları ekleyebilir **Watch** veya **Name** ** @ \<&nbsp;** Saat penceresindeki Ad'a>kayıt adı ekleyebilirsiniz. Daha fazla bilgi için [Pseudovariables'e](../debugger/pseudovariables.md)bakın.
 
-## <a name="use-expressions-in-a-watch-window"></a>İfadeleri İzleme penceresinde kullanma
+## <a name="use-expressions-in-a-watch-window"></a>İzleme penceresinde ifadeleri kullanma
 
-Hata ayıklayıcı tarafından tanınan geçerli bir ifadeyi bir **Gözcü** penceresinde gözlemleyebilirsiniz.
+**Saat** penceresinde hata ayıklayıcı tarafından tanınan geçerli bir ifadeyi gözlemleyebilirsiniz.
 
-Örneğin, önceki bölümdeki kod için, **izleme** penceresine `(a + b + c) / 3` girerek üç değerin ortalamasını alabilirsiniz:
+Örneğin, önceki bölümdeki kod `(a + b + c) / 3` **için, İzleme** penceresine girerek üç değerin ortalamasını alabilirsiniz:
 
-![Gözcü ifadesi](../debugger/media/watchexpression.png "Gözcü ifadesi")
+![İfadeyi izleyin](../debugger/media/watchexpression.png "İfadeyi izleyin")
 
-**İzleme** penceresindeki ifadeleri değerlendirmek için kurallar, kod dilinde ifadeleri değerlendirme kurallarıyla genellikle aynıdır. Bir ifade söz dizimi hatası varsa, Kod Düzenleyicisi olduğu gibi aynı derleyici hatası bekler. Örneğin, yukarıdaki ifadedeki bir yazım hatası, **Gözcü** penceresinde bu hatayı üretir:
+**İzleme** penceresindeki ifadeleri değerlendirme kuralları genellikle kod dilindeki ifadeleri değerlendirme kurallarıyla aynıdır. Bir ifadede sözdizimi hatası varsa, kod düzenleyicisindeki yle aynı derleyici hatasını bekleyin. Örneğin, önceki ifadedeki bir yazım hatası Bu hatayı **İzle** penceresinde üretir:
 
-![İzleme ifadesi hatası](../debugger/media/watchexpressionerror.png "İzleme ifadesi hatası")
+![İfade hatasini izleme](../debugger/media/watchexpressionerror.png "İfade hatasini izleme")
 
-**İzleme** penceresinde iki dalgalı çizgili bir daire simgesi görünebilir. Bu simge, hata ayıklayıcı olası iş parçacıkları arası bağımlılık nedeniyle ifadeyi değerlendirmez anlamına gelir. Diğer iş parçacıklarını geçici olarak çalıştırmayı uygulamanıza kod değerlendirme gerektirir, ancak kesme modunda olduğundan, uygulamanızı tüm iş parçacıkları genellikle durdurulur. Diğer iş parçacıklarını geçici olarak çalışmasına izin vererek olabilir beklenmeyen etkileri durumunu uygulamanızı ve hata ayıklayıcı kesme noktaları ve bu iş parçacıklarında özel durumlar gibi olayları yoksay.
+**İzleme** penceresinde iki dalgalı çizgi simgesiiçeren bir daire görünebilir. Bu simge, hata ayıklamanın olası bir çapraz iş parçacığı bağımlılığı nedeniyle ifadeyi değerlendirmediği anlamına gelir. Kodun değerlendirilmesi, uygulamanızdaki diğer iş parçacıklarının geçici olarak çalışmasını gerektirir, ancak kesme modunda olduğunuz için uygulamanızdaki tüm iş parçacıkları genellikle durdurulur. Diğer iş parçacıklarının geçici olarak çalışmasına izin vermek uygulamanızın durumu üzerinde beklenmeyen etkilere neden olabilir ve hata ayıklayan bu iş parçacıklarındaki kesme noktaları ve özel durumlar gibi olayları yok sayabilir.
 
 ::: moniker range=">= vs-2019" 
-## <a name="search-in-the-watch-window"></a>izleme penceresi arama
+## <a name="search-in-the-watch-window"></a>İzleme penceresinde arama
 
-Her pencerenin üzerindeki arama çubuğunu kullanarak, **izleme** penceresinin Ad, değer ve tür sütunlarında anahtar sözcük arayabilirsiniz. Bir arama yürütmek için ENTER tuşuna basın veya oklardan birini seçin. Devam eden bir aramayı iptal etmek için arama çubuğundaki "x" simgesini seçin.
+Her pencerenin üzerindeki arama çubuğunu kullanarak **İzleme** penceresinin Ad, Değer ve Tür sütunlarında anahtar kelimeleri arayabilirsiniz. ENTER tuşuna basın veya aramayı yürütmek için oklardan birini seçin. Devam eden bir aramayı iptal etmek için, arama çubuğundaki "x" simgesini seçin.
 
-Bulunan eşleşmeler arasında gezinmek için sol ve sağ okları (sırasıyla SHIFT + F3 ve F3) kullanın.
+Bulunan eşleşmeler arasında gezinmek için sol ve sağ okları (sırasıyla Shift+F3 ve F3) kullanın.
 
-![Gözcü penceresinde ara](../debugger/media/ee-search-watch.png "Gözcü penceresinde ara")
+![İzleme Penceresinde Ara](../debugger/media/ee-search-watch.png "İzleme Penceresinde Ara")
 
-Aramanızı daha fazla veya daha az kapsamlı hale getirmek için, **izleme** penceresinin en üstündeki **arama daha derin** açılan listesini kullanarak iç içe geçmiş nesnelerde kaç düzey derinlikte arama yapmayı istediğinizi seçin. 
+Aramanızı daha fazla veya daha az kapsamlı hale getirmek için, iç içe nesnelerde kaç seviye derinliğinde arama yapmak istediğinizi seçmek için **Watch** penceresinin üst kısmındaki **Daha Derin Arama** açılır penceresini kullanın. 
 
-## <a name="pin-properties-in-the-watch-window"></a>izleme penceresi özellikleri sabitleme
+## <a name="pin-properties-in-the-watch-window"></a>İzleme penceresindeki özellikleri sabitleme
 
 >[!NOTE]
-> Bu özellik .NET Core 3,0 veya üzeri sürümlerde desteklenir.
+> Bu özellik .NET Core 3.0 veya daha yüksek olarak desteklenir.
 
-İzleme penceresi,, **Pininceleyi Özellikler** aracıyla nesneleri hızla inceleyebilirsiniz.  Bu aracı kullanmak için bir özelliğin üzerine gelin ve görüntülenen sabitleme simgesini seçin ya da sağ tıklayın ve ortaya çıkan bağlam menüsünde **üyeyi sık kullanılanlara sabitle** seçeneğini belirleyin.  Bu özelliği nesnenin özellik listesinin en üstüne, özellik adı ve değeri ise **değer** sütununda görüntülenir.  Bir özelliği kaldırmak için, PIN simgesini yeniden seçin veya bağlam menüsünde **üyeyi sık kullanılanlara ayır** seçeneğini belirleyin.
+**Sabitlenebilir Özellikler** aracıyla Nesneleri İzleme penceresindeki özelliklerine göre hızlı bir şekilde inceleyebilirsiniz.  Bu aracı kullanmak için, bir özelliğin üzerine gidip görünen veya sağ tıklayan pin simgesini seçin ve ortaya çıkan bağlam menüsünde **Favori seçeneği olarak Üye Pin'i** seçin.  Bu, bu özelliği nesnenin özellik listesinin en üstüne kabarcıklar ve özellik adı ve değeri **Değer** sütununda görüntülenir.  Bir özelliği niçin yeniden pin simgesini seçin veya bağlam menüsünde **Sık Kullanılan seçeneğini Unpin Seçeneğini** belirleyin.
 
-![izleme penceresi özellikleri sabitleme](../debugger/media/basic-pin-watch.gif "izleme penceresi özellikleri sabitleme")
+![İzleme penceresindeki özellikleri sabitleme](../debugger/media/basic-pin-watch.gif "İzleme penceresindeki özellikleri sabitleme")
 
-Ayrıca, izleme penceresi nesnenin özellik listesini görüntülerken özellik adlarını açıp sabitlenmemiş özellikleri filtreleyebilirsiniz.  İzleme penceresinin üstündeki araç çubuğunda bulunan düğmeleri seçerek her iki seçeneğe da erişebilirsiniz.
+Ayrıca, nesnenin özellik listesini İzleme penceresinde görüntülerken özellik adlarını geçiş yapabilir ve sabitlenmemiş özellikleri filtreleyebilirsiniz.  Saat penceresinin üzerindeki araç çubuğundaki düğmeleri seçerek her iki seçenede de erişebilirsiniz.
 
 ::: moniker-end
 
-### <a name="bkmk_refreshWatch"></a>İzleme değerlerini Yenile
+### <a name="refresh-watch-values"></a><a name="bkmk_refreshWatch"></a>Saat değerlerini yenile
 
-Bir ifade değerlendirildiğinde bir yenileme simgesi (dairesel ok) **izleme** penceresinde görünebilir. Yenileme simgesi bir hata veya güncel değil bir değeri gösterir.
+Bir ifade değerlendirildiğinde **İzleme** penceresinde bir yenileme simgesi (dairesel ok) görünebilir. Yenileme simgesi bir hatayı veya güncel olmayan bir değeri gösterir.
 
-Değer yenilemek için yenile simgesini seçin veya Ara çubuğuna basın. Hata ayıklayıcısı ifadeyi yeniden dener. Ancak, değil istediğiniz veya ifade değeri Hesaplandı neden değildi bağlı olarak yeniden değerlendirmek kullanabilirsiniz.
+Değeri yenilemek için yenile simgesini seçin veya boşluk çubuğuna basın. Hata ayıklama, ifadeyi yeniden değerlendirmeye çalışır. Ancak, değerin neden değerlendirilmediğine bağlı olarak ifadeyi istemeyebilirsiniz veya yeniden değerlendirebilirsiniz.
 
-Yenileme simgesinin üzerine gelin veya ifadenin değerlendirilmemesi nedeniyle **değer** sütununa bakın. Nedenler şunlardır:
+Yenileme simgesinin üzerine dokunun veya ifadenin değerlendirilmemesinin nedeni için **Değer** sütununa bakın. Nedenleri şunlardır:
 
-- İfade, önceki örnekte olduğu gibi değerlendirilen gibi bir hata oluştu. Bir zaman aşımı oluşabilir veya bir değişken kapsam dışına olabilir.
+- Önceki örnekte olduğu gibi ifade değerlendirilirken bir hata oluştu. Bir zaman acısı oluşabilir veya bir değişken kapsam dışında olabilir.
 
-- Uygulamasında bir yan etkisi tetikleyebilir bir işlev çağrısı ifadesi var. Bkz. [ifade yan etkileri](#bkmk_sideEffects).
+- İfade, uygulamada bir yan etkiyi tetikleyebilecek bir işlev çağrısına sahiptir. Bkz. [İfade yan etkileri](#bkmk_sideEffects).
 
-- Özellikler ve örtük işlev çağrılarını otomatik olarak değerlendirilmesini devre dışı bırakıldı.
+- Özelliklerin ve örtülü işlev çağrılarının otomatik değerlendirilmesi devre dışı bırakılır.
 
-Özellikler ve örtük işlev çağrılarının otomatik değerlendirilmesi devre dışı bırakıldığı için Yenile simgesi görüntülenirse, **araç** > **seçeneklerinde** **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir** ' i seçerek etkinleştirebilirsiniz > **genel**olarak **hata ayıklama** > .
+Özelliklerin ve örtülü işlev çağrılarının otomatik olarak değerlendirilmesi devre dışı bırakıldığıiçin yenileme simgesi görünüyorsa, **Genel Araçlar** > **Seçenekleri** > **Hata Ayıklama'da** > özellik **değerlendirmesini ve diğer örtülü işlev çağrılarını etkinleştir'i** seçerek bunu etkinleştirebilirsiniz.**General**
 
-Yenile simgesini kullanarak göstermek için:
+Yenileme simgesini kullanarak göstermek için:
 
-1. **Araçlar** > **Seçenekler** > **hata ayıklama** > **genel**olarak, **özellik değerlendirmesini etkinleştir ve diğer örtük işlev çağrılarını etkinleştir** onay kutusunu temizleyin.
+1. Genel**General**Araç**Ayıklama** > **Araçlar'da** >  **Tools** >  **özellik değerlendirmesini etkinleştir ve diğer örtülü işlev çağrıları** onay kutusunu temizleyin.
 
-1. Aşağıdaki kodu girin ve **Gözcü** penceresinde `list.Count` özelliği üzerinde bir izleme ayarlayın.
+1. Aşağıdaki kodu girin ve **İzleme** `list.Count` penceresine, özellik üzerinde bir saat ayarlayın.
 
    ```csharp
    static void Main(string[] args)
@@ -147,36 +147,36 @@ Yenile simgesini kullanarak göstermek için:
    }
    ```
 
-1. Hata ayıklama başlatılamıyor. **Gözcü** penceresinde aşağıdaki iletiye benzer bir şey gösterilir:
+1. Hata ayıklamaya başla. **İzleme** penceresi aşağıdaki iletiye benzer bir şey gösterir:
 
-   ![Izlemeyi Yenile](../debugger/media/refreshwatch.png "Izlemeyi Yenile")
+   ![İzle yenile](../debugger/media/refreshwatch.png "İzle yenile")
 
-1. Değer yenilemek için yenile simgesini seçin veya Ara çubuğuna basın. Hata ayıklayıcı ifade reevaluates.
+1. Değeri yenilemek için yenile simgesini seçin veya boşluk çubuğuna basın. Hata ayıklama ifadeyi yeniden değerlendirir.
 
-### <a name="bkmk_sideEffects"></a>İfade yan etkileri
+### <a name="expression-side-effects"></a><a name="bkmk_sideEffects"></a>Ekspresyon yan etkileri
 
-Bazı ifadelerin değerlendirilmesi bir değişkenin değerini değiştirebilir veya aksi halde uygulamanızı durumunu etkiler. Örneğin, aşağıdaki ifadeyi değerlendirmek `var1`değerini değiştirir:
+Bazı ifadeleri değerlendirmek bir değişkenin değerini değiştirebilir veya uygulamanızın durumunu etkileyebilir. Örneğin, aşağıdaki ifadeyi değerlendirmek aşağıdaki `var1`ifadenin değerini değiştirir:
 
 ```csharp
 var1 = var2
 ```
 
-Bu kod, [yan etkiye](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))neden olabilir. Yan etkileri hata ayıklama uygulamanızı çalışır değiştirerek güçleştirebilir.
+Bu kod bir [yan etkiye](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))neden olabilir. Yan etkiler, uygulamanızın çalışma şeklini değiştirerek hata ayıklamayı zorlaştırabilir.
 
-Yan etkileri olan bir ifade, yalnızca ilk önce onu girdiğinizde bir kez değerlendirilir. Bundan sonra ifade, **Gözcü** penceresinde gri renkte görünür ve daha fazla değerlendirme devre dışı bırakılır. Araç ipucu veya **değer** sütunu, ifadenin bir yan etkiye neden olduğunu açıklar. Değerin yanında görüntülenen yenile simgesini seçerek yeniden değerlendirme zorlayabilirsiniz.
+Yan etkileri olan bir ifade, ilk girdiğinizde yalnızca bir kez değerlendirilir. Bundan sonra, ifade **İzleme Penceresi'nde** gri görünür ve diğer değerlendirmeler devre dışı bırakılır. Araç ipucu veya **Değer** sütunu, ifadenin bir yan etkiye neden olduğunu açıklar. Değerin yanında görünen yenileme simgesini seçerek yeniden değerlendirmeyi zorlayabilirsiniz.
 
-Yan etkileri atamasını önlemek için bir yol otomatik İşlev değerlendirmesi açmaktır. **Araçlar** > **Seçenekler** > **hata ayıklama** > **genel**olarak, **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir**seçimini kaldırın.
+Yan etkileri atama önlemek için bir yolu otomatik fonksiyon değerlendirmesi kapatmaktır. **Genel Araç** > **Ayıklama** > Araçlar**Seçenekleri'nde** > **özellik** **değerlendirmesini ve diğer örtülü işlev çağrılarını seçin.**
 
-C# Yalnızca, özellikler veya örtük işlev çağrılarının değerlendirmesi kapalıyken, **izleme** penceresindeki bir değişken **adına** **AC** biçim değiştiricisi ekleyerek değerlendirmeyi zorlayabilirsiniz. [Içindeki C#biçim belirticilerine ](../debugger/format-specifiers-in-csharp.md)bakın.
+Yalnızca C# için, özelliklerin veya örtülü işlev çağrılarının değerlendirilmesi kapatıldığında, **Saat** penceresindeki **bir** ad değişkenine **ac** biçimi değiştiricisini ekleyerek değerlendirmeyi zorlayabilirsiniz. [C# format belirteçleri](../debugger/format-specifiers-in-csharp.md)bakın.
 
-## <a name="bkmk_objectIds"></a>İzleme penceresi nesne kimliklerini kullanın (C# ve Visual Basic)
+## <a name="use-object-ids-in-the-watch-window-c-and-visual-basic"></a><a name="bkmk_objectIds"></a>İzleme penceresinde Nesne İngilizcesi Kullanma (C# ve Visual Basic)
 
-Bazen, belirli bir nesneyi davranışını gözlemlemek istediğiniz. Örneğin, bu değişken kapsam dışına geçti sonra bir yerel değişkeni tarafından başvurulan nesne izlemek isteyebilirsiniz. C# Ve Visual Basic, başvuru türlerinin belirli örnekleri Için nesne kimlikleri oluşturabilir ve bunları **izleme** penceresinde ve kesme noktası koşullarında kullanabilirsiniz. Nesne Kimliği hizmetlerinde hata ayıklama ortak dil çalışma zamanı tarafından (CLR) oluşturulan ve nesnesiyle ilişkili.
+Bazen belirli bir nesnenin davranışını gözlemlemek istersiniz. Örneğin, bu değişken kapsam dışına çıktıktan sonra yerel bir değişken tarafından başvurulan bir nesneyi izlemek isteyebilirsiniz. C# ve Visual Basic'te, belirli başvuru türleri için Nesne İngilizcesi oluşturabilir ve bunları **Watch** penceresinde ve kesme noktası koşullarında kullanabilirsiniz. Nesne Kimliği, ortak dil çalışma zamanı (CLR) hata ayıklama hizmetleri tarafından oluşturulur ve nesneyle ilişkilidir.
 
 > [!NOTE]
-> Nesne kimlikleri nesnenin çöp olarak toplanacak engellemek yoksa zayıf başvurular oluşturun. Bunlar, yalnızca geçerli hata ayıklama oturumu için geçerli olur.
+> Nesne işleri, nesnenin toplanmasını engellemeyen zayışlı açıklamalar oluşuyor. Bunlar yalnızca geçerli hata ayıklama oturumu için geçerlidir.
 
-Aşağıdaki kodda `MakePerson()` yöntemi yerel bir değişken kullanarak bir `Person` oluşturur:
+Aşağıdaki kodda, `MakePerson()` yöntem yerel `Person` bir değişken kullanarak oluşturur:
 
 ```csharp
 class Person
@@ -211,59 +211,59 @@ public class Program
 }
 ```
 
-`DoSomething()` yönteminde `Person` adını öğrenmek için, **İzle** penceresindeki `Person` nesne kimliğine bir başvuru ekleyebilirsiniz.
+Yöntemdeki nin adını bulmak **için, Saat** penceresindeki `Person` Nesne Kimliği'ne bir başvuru ekleyebilirsiniz. `Person` `DoSomething()`
 
-1. `Person` nesnesi oluşturulduktan sonra kodda bir kesme noktası ayarlayın.
+1. `Person` Nesne oluşturulduktan sonra kodda bir kesme noktası ayarlayın.
 
-1. Hata ayıklama başlatılamıyor.
+1. Hata ayıklamaya başla.
 
-1. Yürütme kesme noktasında durakladığında, **Windows** > **Yereller** > **Hata Ayıkla** ' yı seçerek **Yereller** penceresini açın.
+1. Yürütme kesme noktasında duraklattığında, **Hata Ayıklama** > **Windows** > **Locals'ı**seçerek **Yereller** penceresini açın.
 
-1. **Yereller** penceresinde `Person` değişkenine sağ TıKLAYıP **nesne kimliğini yap**' ı seçin.
+1. **Yereller** penceresinde, değişkeni `Person` sağ tıklatın ve Nesne Kimliği **Yap'ı**seçin.
 
-   Bir dolar işareti ( **$** ) ve **Locals** penceresinde, nesne kimliği olan bir sayı görmeniz gerekir.
+   Bir dolar işareti (**$**) artı Nesne Kimliği olan **Locals** penceresinde bir numara görmeniz gerekir.
 
-1. Nesne kimliğini sağ tıklayıp **Gözcü Ekle**' yi seçerek, nesne kimliğini **izleme** penceresine ekleyin.
+1. Nesne Kimliği'ne sağ tıklayarak ve **İzle Ekle'yi**seçerek Nesne Kimliğini **İzleme** penceresine ekleyin.
 
-1. `DoSomething()` yönteminde başka bir kesme noktası ayarlayın.
+1. `DoSomething()` Yöntemde başka bir kesme noktası ayarlayın.
 
-1. Hata ayıklamaya devam et. `DoSomething()` yönteminde Yürütme durakladığında, **Gözcü** penceresi `Person` nesnesini görüntüler.
+1. Hata ayıklama devam edin. Yöntemde yürütme duraklattığında, **İzleme** penceresi `Person` nesneyi görüntüler. `DoSomething()`
 
    > [!NOTE]
-   > Nesnenin özelliklerini görmek isterseniz, `Person.Name`gibi **araçlar** > **seçenekler** ' i > **hata ayıklama** > **genel** > **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir**' i etkinleştirmeniz gerekir.
+   > Nesnenin özelliklerini görmek `Person.Name`istiyorsanız , Araçlar **Tools** > **Seçenekleri** > **Hata Ayıklama** > **Genel** > Özellik değerlendirme ve diğer örtülü işlev çağrıları seçerek özellik**değerlendirmesini**etkinleştirmelisiniz.
 
 ## <a name="dynamic-view-and-the-watch-window"></a>Dinamik Görünüm ve İzleme penceresi
 
-Bazı betik dilleri (örneğin, JavaScript veya Python) dinamik veya [Duck](https://en.wikipedia.org/wiki/Duck_typing) yazısı kullanır ve .net sürüm 4,0 ve üzeri, normal hata ayıklama pencerelerinin gözleneceği nesneleri destekler.
+Bazı komut dosyası dilleri (örneğin, JavaScript veya Python) dinamik veya [ördek](https://en.wikipedia.org/wiki/Duck_typing) yazma ve .NET sürüm 4.0 kullanır ve daha sonra normal hata ayıklama pencerelerinde gözlemlemek zor nesneleri destekler.
 
-**Gözcü** penceresi, bu nesneleri <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimini uygulayan türlerden oluşturulan dinamik nesneler olarak görüntüler. Dinamik Nesne düğümleri, dinamik dinamik Nesne üyelerini gösterir, ancak üye değerlerinin düzenlenmesine izin verme.
+**İzleme** penceresi bu <xref:System.Dynamic.IDynamicMetaObjectProvider> nesneleri, arabirimi uygulayan türlerden oluşturulan dinamik nesneler olarak görüntüler. Dinamik nesne düğümleri dinamik nesnelerin dinamik üyelerini gösterir, ancak üye değerlerin düzenlenmesine izin vermez.
 
-**Dinamik görünüm** değerlerini yenilemek için, dinamik nesne düğümünün yanındaki [Yenile simgesini](#bkmk_refreshWatch) seçin.
+Dinamik **Görünüm** değerlerini yenilemek için dinamik nesne düğümünün yanındaki [yenileme simgesini](#bkmk_refreshWatch) seçin.
 
-Bir nesnenin yalnızca **dinamik görünümünü** görüntülemek Için, **izleme** penceresindeki dinamik nesne adından sonra **dinamik** bir Biçim belirleyicisi ekleyin:
+Yalnızca bir nesne için **Dinamik Görünüm'ü** görüntülemek için, **İzleme** penceresindeki dinamik nesne adından sonra **dinamik** bir biçim belirtici ekleyin:
 
-- İçin C#: `ObjectName, dynamic`
-- Visual Basic için: `$dynamic, ObjectName`
+- C#için:`ObjectName, dynamic`
+- Visual Basic için:`$dynamic, ObjectName`
 
 >[!NOTE]
->- Bir C# sonraki kod satırına adımlamak için hata ayıklayıcı **dinamik görünümdeki** değerleri otomatik olarak yeniden değerlendirmez.
->- Visual Basic hata ayıklayıcı **Dinamik görünüm**aracılığıyla eklenen ifadeleri otomatik olarak yeniler.
->- **Dinamik bir görünümün** üyelerini değerlendirmek [yan etkilere](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))sahip olabilir.
+>- C# hata ayıklayıcı, bir sonraki kod satırına adım attığınızda **Dinamik Görünüm'deki** değerleri otomatik olarak yeniden değerlendirmez.
+>- Visual Basic hata **ayıkleyici, Dinamik Görünüm**üzerinden eklenen ifadeleri otomatik olarak yeniler.
+>- **Dinamik Görünüm** üyelerinin değerlendirilmesi [yan etkileri](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))olabilir.
 
-**Bir nesneyi dinamik bir nesneye bağlayan yeni bir izleme değişkeni eklemek için:**
+**Nesneyi dinamik bir nesneye atan yeni bir saat değişkeni eklemek için:**
 
-1. **Dinamik görünümün**herhangi bir alt öğesine sağ tıklayın.
-1. **Gözcü Ekle**' yi seçin. `object.name` `((dynamic) object).name` olur ve yeni bir **Gözcü** penceresinde görünür.
+1. **Dinamik Görünüm'ün**herhangi bir çocuğuna sağ tıklayın.
+1. **İzle Ekle'yi**seçin. Olur `object.name` `((dynamic) object).name` ve yeni bir **İzle** penceresinde görünür.
 
-Hata ayıklayıcı Ayrıca, nesnenin **Dinamik görünüm** alt düğümünü **ekler penceresine ekler** . Hata ayıklama sırasında **oto** penceresini açmak Için **hata ayıkla** > **Windows** > **oto**' ı seçin.
+Hata ayıklama, nesnenin **Dinamik Görünüm** alt düğümüne **De ekler.** **Otomatik Hata** ayıklama sırasında Otomatik Ler penceresini açmak için Hata **Ayıklama** > **Windows** > **Autos'u**seçin.
 
-**Dinamik görünüm** , com nesneleri için hata ayıklamayı da geliştirir. Hata ayıklayıcı, **System. __ComObject**SARMALANAN bir com nesnesine geldiğinde, nesne için dinamik bir **Görünüm** düğümü ekler.
+**Dinamik Görünüm,** COM nesneleri için hata ayıklamayı da geliştirir. Hata ayıklayıcı **System.__ComObject'a**sarılmış bir COM nesnesine ulaştığında, nesne için **Dinamik Görünüm** düğümü ekler.
 
-## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>Tek bir değişken veya QuickWatch ifadesiyle gözlemleyin
+## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>QuickWatch ile tek bir değişkeni veya ifadeyi gözlemleyin
 
-**QuickWatch** kullanarak tek bir değişkeni gözlemleyebilirsiniz.
+Tek bir değişkeni gözlemlemek için **QuickWatch'u** kullanabilirsiniz.
 
-Örneğin, aşağıdaki kodu:
+Örneğin, aşağıdaki kod için:
 
 ```csharp
 static void Main(string[] args)
@@ -278,32 +278,32 @@ static void Main(string[] args)
 }
 ```
 
-`a` değişkenini gözlemlemek için,
+Değişkeni `a` gözlemlemek için,
 
-1. `a = a + b;` satırında bir kesme noktası ayarlayın.
+1. `a = a + b;` Hatta bir kesme noktası ayarlayın.
 
-1. Hata ayıklama başlatılamıyor. Yürütme kesme noktasında duraklatır.
+1. Hata ayıklamaya başla. Yürütme kesme noktasında duraklar.
 
-1. Koddaki değişkeni `a` seçin.
+1. Koddaki `a` değişkeni seçin.
 
-1. **Quickwatch** > **Hata Ayıkla** ' yı seçin, **SHIFT**+**F9**tuşuna basın veya sağ tıklayıp **hızlı izleme**' yi seçin.
+1. **Hata Ayıklama** > **QuickWatch'u**seçin, **Shift**+**F9**tuşuna basın veya sağ tıklayın ve **QuickWatch'u**seçin.
 
-   **QuickWatch** iletişim kutusu görüntülenir. `a` değişkeni, **değeri** **1**olan **ifade** kutusudur.
+   **QuickWatch** iletişim kutusu görüntülenir. `a` Değişken, **1** **değeri** olan **İfade** kutusundadır.
 
    ![QuickWatch değişkeni](../debugger/media/quickwatchvariable.png "QuickWatch değişkeni")
 
-1. Değişkeni kullanarak bir ifadeyi değerlendirmek için, **ifade** kutusuna `a + b` gibi bir ifade yazın ve yeniden değerlendir ' **i seçin.**
+1. Değişkeni kullanarak bir ifadeyi değerlendirmek `a + b` **için, İfade** kutusundaki gibi bir ifade yazın ve **Yeniden Değerlendir'i**seçin.
 
    ![QuickWatch ifadesi](../debugger/media/quickwatchexpression.png "QuickWatch ifadesi")
 
-1. **Hızlı** bir şekilde **izleme penceresine değişken** veya Ifade eklemek için, **Gözcü Ekle**' yi seçin.
+1. **QuickWatch'tan** **Saati İzle** penceresine değişken veya ifade eklemek için **İzle Ekle'yi**seçin.
 
-1. **QuickWatch** penceresini kapatmak için **Kapat** ' ı seçin. (**QuickWatch** kalıcı bir iletişim kutusu olduğundan, açık olduğu sürece hata ayıklamaya devam edemeyeceğinizi.)
+1. **QuickWatch** penceresini kapatmak için **Kapat'ı** seçin. (**QuickWatch** bir modal iletişim kutusudur, bu nedenle açık olduğu sürece hata ayıklama devam edemez.)
 
-1. Hata ayıklamaya devam et. Değişkeni, **Gözcü** penceresinde gözlemleyebilirsiniz.
+1. Hata ayıklama devam edin. **Saati** penceresinde değişkeni gözlemleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklama nedir?](../debugger/what-is-debugging.md)
 - [Hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md)
-- [Hata ayıklama bölümüne ilk bakış](../debugger/debugger-feature-tour.md)
+- [Hata ayıklama ilk bakış](../debugger/debugger-feature-tour.md)
 - [Hata ayıklayıcısı pencereleri](../debugger/debugger-windows.md)

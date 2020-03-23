@@ -1,5 +1,5 @@
 ---
-title: ParameterGroup Öğesi | Microsoft Docs
+title: ParametreGrup Elemanı | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c06b9c530d3fff0fdfa429df633daaa4dde8c52
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263099"
 ---
-# <a name="parametergroup-element"></a>ParameterGroup öğesi
+# <a name="parametergroup-element"></a>ParametreGrup öğesi
 
-Bir `UsingTask` `TaskFactory`tarafından oluşturulan görevde mevcut olacak parametrelerin isteğe bağlı bir listesini içerir. Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Bir `UsingTask` `TaskFactory`. tarafından oluşturulan görevde bulunacak parametrelerin isteğe bağlı bir listesini içerir. Daha fazla bilgi için [Bkz. UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<Proje > \<UsingTask > \<ParameterGroup >
+ \<Proje \<> ParametreGrup>> \<KullanmaGörev
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,17 +47,17 @@ Bir `UsingTask` `TaskFactory`tarafından oluşturulan görevde mevcut olacak par
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Parametresinin](../msbuild/parameter-element.md)|Bir `UsingTask` `TaskFactory`tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içerir. Öğesinin adı parametrenin adıdır.|
+|[Parametre](../msbuild/parameter-element.md)|Bir `UsingTask` `TaskFactory`. tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içerir. Öğenin adı parametrenin adıdır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | MSBuild 'e görevleri kaydetmek için bir yol sağlar. Bir projede sıfır veya daha fazla öğe `UsingTask` olabilir. |
+| [Usingtask](../msbuild/usingtask-element-msbuild.md) | MSBuild'te görevleri kaydetmek için bir yol sağlar. Bir projede sıfır `UsingTask` veya daha fazla öğe olabilir. |
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `ParameterGroup` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki örnek, öğenin `ParameterGroup` nasıl kullanılacağını gösterir.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">

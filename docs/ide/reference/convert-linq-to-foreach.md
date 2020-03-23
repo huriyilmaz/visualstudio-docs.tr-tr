@@ -1,45 +1,48 @@
 ---
-title: LINQ sorgusunu foreach ifadesine dönüştürmek için kodu yeniden düzenleme
-description: Sorgu sözdiziminde yazılmış herhangi bir LINQ sorgusunu foreach ifadesine Dönüştür.
-ms.date: 05/15/2018
+title: LINQ sorgusunun foreach deyimine dönüştürülmesi için yeniden düzenleme kodu
+description: Sorgu sözdiziminde yazılmış herhangi bir LINQ sorgusunun foreach deyimine dönüştürülmesi.
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: bb2cdf96d7f7829ff6a6d1394160548da2adae7f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6e1b24cb8406ff29659eb79d1d9fa856db628b89
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595754"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094086"
 ---
-# <a name="refactoring-to-convert-linq-to-a-foreach-statement"></a>LINQ öğesini foreach ifadesine dönüştürmek için yeniden düzenleme
+# <a name="refactoring-to-convert-linq-to-a-foreach-statement"></a>LINQ'yi foreach deyimine dönüştürmek için yeniden düzenleme
 
-[LINQ sorgu söz dizimini](/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq) [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesine dönüştürmek için bu yeniden düzenlemeyi kullanın.
+[LINQ sorgu sözdizimini](/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq) [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimine dönüştürmek için bu yeniden düzenlemeyi kullanın.
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-## <a name="how-to-use-it"></a>Kullanımı
+- Visual Basic
 
-1. `from`başlayarak LINQ sorgusunun tamamını seçin.
+## <a name="how-to-use-it"></a>Nasıl kullanılır?
+
+1. `from`'den başlayarak linq sorgusunun tamamını seçin.
 
    > [!NOTE]
-   > Bu yeniden düzenleme, yalnızca sorgu söz dizimi ile ifade edilen LINQ sorgularını dönüştürmek için kullanılabilir ve Yöntem sözdizimi değildir.
+   > Bu yeniden düzenleme yalnızca yöntem sözdizimi ile ifade edilen LINQ sorgularını dönüştürmek için kullanılabilir.
 
-1. Tuşuna **Ctrl**+ **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![screwsürücü simgesine](../media/screwdriver-icon.png) simgesine tıklayın.
+1. **Ctrl**+tuşuna**basın.** veya kod dosyasının kenar boşluğundaki tornavida ![simgesi simgesini](../media/screwdriver-icon.png) tıklatın.
 
-   ![LINQ to foreach hızlı eylemler menüsünü Dönüştür](media/convert-linq-to-foreach.png)
+   ![LINQ'yi her hızlı işlem menüsüne dönüştürün](media/convert-linq-to-foreach.png)
 
-1. **' Foreach ' olarak Dönüştür**' ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
+1. **'Foreach' için Dönüştür'ü**seçin. Veya, [Değişiklikleri Önizleme](../../ide/preview-changes.md) iletişim kutusunu açmak için Değişiklikleri **Önizleyin'i** seçin ve ardından **Uygula'yı**seçin.
 
 > [!NOTE]
-> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, `foreach` döngüsünün yineleme değişkeni için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar** > **Seçenekler** > **metin Düzenleyicisi** **C#**  > **kod stili** > **genel** >  **\'var olan tercihleri** > veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
+> C# için, bu refactorings tarafından oluşturulan kod [var](/dotnet/csharp/language-reference/keywords/var) `foreach` döngü yineleme değişkeni için açık bir tür veya var kullanır. Oluşturulan koddaki açık veya örtülü tür, kapsamda bulunan kod stili ayarlarına bağlıdır. Bu özel kod stili **ayarları, Araçlar** > **Seçenekleri** > **Metin Düzenleyicisi** > **C#** > **Code Style** > **General** > **\'var' tercihleri**altında makine düzeyinde veya [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler'de**kod stili ayarını değiştirirseniz, değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

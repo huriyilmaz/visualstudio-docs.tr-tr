@@ -1,59 +1,62 @@
 ---
 title: Birleştir veya ayır if deyimleri
-ms.date: 06/12/2019
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 405ccd4bc0197ce06aa14982a16dc02f6d13a537
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: a3b42f83faacda6be34b282150cf4fb4c0f379f1
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160722"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093695"
 ---
 # <a name="split-or-merge-if-statements"></a>Birleştir veya ayır if deyimleri
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** **Ne:** Bölme ve birleştirme [varsa](/dotnet/csharp/language-reference/keywords/if-else) deyimleri.
+- Visual Basic
 
-**ne zaman:** Bölmek istediğiniz bir `if` kullanan deyimi `&&` veya `||` işleçleri iç içe bir `if` deyimi veya birleştirme bir `if` deyimi bir dış `if` deyimi.
+**Ne: Ne:** **What:** Bölme veya birleştirme [eğer](/dotnet/csharp/language-reference/keywords/if-else) ifadeleri.
 
-**Neden:** Stil tercih bir konudur.  
+**Ne zaman:** Veya `if` `&&` `||` işleçleri iç içe olan bir `if` deyime kullanan bir `if` deyimi `if` bölmek veya bir deyimle dış deyimle birleştirmek istiyorsunuz.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+**Neden:** Bu bir stil tercihi meselesi.  
 
-Bölmek istiyorsanız `if` deyimi:
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi, `if` deyimi tarafından `&&` veya `||` işleci.
+İfadeyi `if` bölmek isterseniz:
 
-2. Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+1. İmlecinizi ekstreye `if` `&&` yerleştirin `||` veya operatör tarafından.
 
-    ![Bölünmüş If deyimi](../media/split-if-statement.png)
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-3. Seçin **iç içe geçmiş if bölme deyimleri**.
+    ![Bölünmüş If Deyimi](../media/split-if-statement.png)
 
-    ![Bölünmüş If deyimi tamamlandı](../media/split-if-statement-complete.png)
+3. **İfadeler iç içe yse Bölün'i**seçin.
 
-İç birleştirmek istiyorsanız `if` dış deyimiyle `if` deyimi: 
+    ![İfade Tamamlandıysa Böl](../media/split-if-statement-complete.png)
 
-1. İmlecinizi iç `if` anahtar sözcüğü.
+İç `if` deyimi dış `if` ifadeyle birleştirmek istiyorsanız: 
 
-2. Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+1. İmlecinizi iç `if` anahtar kelimeye yerleştirin.
 
-    ![Merge deyimi](../media/merge-if-statement.png)
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-3. Seçin **birleştirme ile dış if deyimi**.
+    ![If Bildirimini Birleştir](../media/merge-if-statement.png)
 
-    ![Varsa birleştirme tamamlandı deyimi](../media/merge-if-statement-complete.png)
+3. **Dışife ile Birleştir'i**seçin.
+
+    ![İfade Tamamlandıysa Birleştir](../media/merge-if-statement-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

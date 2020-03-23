@@ -1,5 +1,5 @@
 ---
-title: DownloadFile görevi | Microsoft Docs
+title: DownloadFile Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -23,40 +23,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81a9c3b1c22277261276ced1940f1f2e83d11882
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634259"
 ---
 # <a name="downloadfile-task"></a>DownloadFile görevi
 
-, Hyper-metin Aktarım Protokolü 'Nü (HTTP) kullanarak belirtilen dosyaları indirir.
+Hyper-Text Transfer Protocol (HTTP) kullanarak belirtilen dosyaları karşıdan yükler.
 
 >[!NOTE]
->DownloadFile görevi yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
+>DownloadFile görevi yalnızca MSBuild 15.8 ve üzeri olarak kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda `DownloadFile` görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda görevparametreleri `DownloadFile` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DestinationFileName`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametresi<br /><br /> İndirilen dosya için kullanılacak ad.  Varsayılan olarak, dosya adı `SourceUrl` veya uzak sunucudan türetilir.|
-|`DestinationFolder`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Dosyanın indirileceği hedef klasörü belirtir.  Yoksa, klasör oluşturulmadıysa.|
-|`DownloadedFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> İndirilen dosyayı belirtir.|
-|`Retries`|İsteğe bağlı `Int32` parametresi.<br /><br /> Önceki tüm denemeler başarısız olursa kaç kez indirilmek gerektiğini belirtir. Varsayılan olarak sıfırdır.|
-|`RetryDelayMilliseconds`|İsteğe bağlı `Int32` parametresi.<br /><br /> Gerekli yeniden denemeler arasındaki gecikme süresi (milisaniye olarak) belirtir. Varsayılan olarak 5000 ' dir.|
-|`SkipUnchangedFiles`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, değiştirilmemiş dosyaların indirilmesini atlar. `true` değerini varsayılan olarak alır. `DownloadFile` görevi, uzak sunucuya göre aynı boyutta ve en son değiştirme zamanına sahip olmaları durumunda dosyaları değişmeden kabul eder. <br /><br />**Note:**  Tüm HTTP sunucularının dosyaların son değiştirilme tarihini belirtmesi, dosyanın yeniden indirilmesine neden olur.|
-|`SourceUrl`|Gerekli `String` parametresi.<br /><br /> İndirilecek URL 'YI belirtir.|
+|`DestinationFileName`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre<br /><br /> İndirilen dosya için kullanılacak ad.  Varsayılan olarak, dosya adı veya `SourceUrl` uzak sunucudan türetilmiştir.|
+|`DestinationFolder`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Dosyayı karşıdan yüklemek için hedef klasörü belirtir.  Klasör yoksa oluşturulursa.|
+|`DownloadedFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> çıktı parametresi.<br /><br /> İndirilen dosyayı belirtir.|
+|`Retries`|İsteğe bağlı `Int32` parametre.<br /><br /> Önceki tüm denemeler başarısız olduysa, kaç kez karşıdan yükleme girişiminde bulununcaya çalışılır. Varsayılan olarak sıfırdır.|
+|`RetryDelayMilliseconds`|İsteğe bağlı `Int32` parametre.<br /><br /> Gerekli yeniden denemeler arasındaki gecikmeyi milisaniye cinsinden belirtir. Varsayılan olarak 5000'e kadar.|
+|`SkipUnchangedFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`değişmeden dosyaların karşıdan yüklenir. Varsayılan `true`değer. Görev, `DownloadFile` dosyaların uzak sunucuya göre aynı boyuta ve aynı son değiştirilen süreye sahipse değişmediğini düşünür. <br /><br />**Not:**  Tüm HTTP sunucuları dosyaların son değiştirilmiş tarihini gösterir dosyanın yeniden indirilmesine neden olur.|
+|`SourceUrl`|Gerekli `String` parametre.<br /><br /> İndirmek için URL'yi belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir dosyayı indirir ve projeyi oluşturmadan önce `Content` öğelerine ekler.
+Aşağıdaki örnek bir dosyaindirir ve projeyi oluşturmadan önce `Content` öğelere içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

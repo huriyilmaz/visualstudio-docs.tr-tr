@@ -1,41 +1,44 @@
 ---
-title: IntelliSense menüsü üzerinden normal ifade tamamlama
-ms.date: 06/10/2019
+title: IntelliSense menüsü ile Regex tamamlama
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 75110432f9bba35ce02588032b9a41dece01056b
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 68b5cb480184a287d9fcb088b0a74ac9d607f3f2
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033413"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093865"
 ---
-# <a name="regex-completion-through-intellisense-menu"></a>IntelliSense menüsü üzerinden normal ifade tamamlama
+# <a name="regex-completion-through-intellisense-menu"></a>IntelliSense menüsü ile Regex tamamlama
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** IntelliSense menüsü üzerinden normal ifade (regex) tamamlama.
+- Visual Basic
 
-**ne zaman:** Normal bir ifade ile Yardım IntelliSense'de yazmak istediğiniz. IntelliSense, temel tamamlama ve hangi her bir normal ifade karakterleri ortalama dair bir açıklama sağlar. 
+**Ne:** IntelliSense menüsü ile normal ifade (regex) tamamlama.
 
-**Neden:** Yazma regex zordur ve IntelliSense, yazmanıza yardımcı olabilir.
+**Ne zaman:** IntelliSense yardımıyla düzenli bir ifade yazmak istiyorum. IntelliSense size temel tamamlama ve regex karakterlerin her ne anlama geldiğini bir açıklama verir. 
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+**Neden:** Regex yazmak zordur ve IntelliSense bunu yazmanıza yardımcı olabilir.
 
-1. İmlecinizi, normal ifade dizesini yerleştirin.
-2. Tuşuna **Ctrl**+**alanı** tetikleyiciye **IntelliSense** menüsü.
-3. Regex dizenizi eklemek istediğiniz karakteri seçin.
+## <a name="how-to"></a>Nasıl yapılır
 
-   ![Normal ifade tamamlama IntelliSense](../media/regex-completion-intellisense.png)
+1. İmlecinizi regex dizesinde yerleştirin.
+2. **IntelliSense** menüsünü tetiklemek için **Ctrl**+**Space** tuşuna basın.
+3. Regex dizenize eklemek istediğiniz karakteri seçin.
+
+   ![Regex Tamamlama IntelliSense](../media/regex-completion-intellisense.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: VCMessage görevi | Microsoft Docs
+title: VCMessage Görevi | Microsoft Dokümanlar
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -20,29 +20,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2247240ae0992c8275520ec5d7bf94d98ae1053
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631217"
 ---
 # <a name="vcmessage-task"></a>VCMessage görevi
 
-Bir derleme sırasında uyarı ve hata iletilerini günlüğe kaydeder.
+Yapı sırasında uyarı ve hata iletilerini günlüğe kaydeder.
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, projeler için C++ MSBuild uygulamaya yardımcı olur ve Kullanıcı tarafından çağrılması amaçlanmamıştır. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
+ Bu görev, C++ projeleri için MSBuild'in uygulanmasına yardımcı olur ve kullanıcı tarafından çağrılması amaçlanmamıştır. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda **VCMessage** görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki **tabloda VCMessage** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**Bağımsız Değişkenler**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek iletilerin noktalı virgülle ayrılmış listesi.|
-|**Kod**|Gerekli **dize** parametresi.<br /><br /> İletiyi niteleyen bir hata numarası.|
-|**Tür**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek ileti türünü belirtir. Bir uyarı iletisi oluşturmak için "uyarı" ya da bir hata iletisi oluşturmak için "hata" belirtin.|
+|**Bağımsız Değişkenler**|İsteğe bağlı **String** parametresi.<br /><br /> Görüntülenecek iletilerin yarı sütunlu sınırlı listesi.|
+|**Kod**|Gerekli **String** parametresi.<br /><br /> İletiyi nitelendiren bir hata numarası.|
+|**Tür**|İsteğe bağlı **String** parametresi.<br /><br /> Yayılacak ileti türünü belirtir. Uyarı iletisi yatsın diye "Uyarı" veya hata iletisi yontmak için "Hata" belirtin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

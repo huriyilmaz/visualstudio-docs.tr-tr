@@ -1,44 +1,47 @@
 ---
-title: Anonim tür, demet için Dönüştür
-ms.date: 02/13/2019
+title: Anonim Türü Tuple'a Dönüştür
+ms.date: 03/10/2020
 ms.topic: reference
-author: kendrahavens
-ms.author: kehavens
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6f5dd8e53ed2e0695370a1cdcb837609be30035
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7e89c5b5a05900fe42af62ef87f70292e94e662
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968590"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094272"
 ---
 # <a name="convert-anonymous-type-to-tuple"></a>Anonim türü tanımlama grubuna dönüştürme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Anonim bir tür, demet için dönüştürün.
+- Visual Basic
 
-**ne zaman:** Bir tanımlama grubu olarak niteleyen anonim bir tür var.
+**Ne:** Anonim bir türü tuple'a dönüştürün.
 
-**Neden:** [Diziler](/dotnet/csharp/tuples) sözdiziminizin basit tutmak için yararlıdır. Bu hızlı eylem bu yararlanmak kolaylaştırır C# özelliği.
+**Ne zaman:** Tuple olarak nitelendirilen isimsiz bir türün var.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+**Neden:** [Tuples](/dotnet/csharp/tuples) sözdiziminizi hafif tutmada yardımcı olur. Bu hızlı eylem, bu C# özelliğinden yararlanmayı kolaylaştırır.
 
-1. İmlecinizi, anonim bir tür içinde yerleştirin.
-2. Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+## <a name="how-to"></a>Nasıl yapılır
 
-   ![Anonim tür, demet için Dönüştür](media/convert-anon-to-tuple.png)
+1. İmlecinizi anonim bir türe yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-2. Tuşuna **Enter** yeniden düzenleme kabul etmek için.
+   ![Anonim Türü Tuple'a Dönüştür](media/convert-anon-to-tuple.png)
 
-   ![Anonim tür, demet için Dönüştür](media/convert-anon-to-tuple-complete.png)
+2. Yeniden düzenlemeyi kabul etmek için **Enter** tuşuna basın.
+
+   ![Anonim Türü Tuple'a Dönüştür](media/convert-anon-to-tuple-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

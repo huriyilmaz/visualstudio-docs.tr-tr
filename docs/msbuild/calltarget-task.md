@@ -1,5 +1,5 @@
 ---
-title: CallTarget görevi | Microsoft Docs
+title: CallTarget Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,39 +16,41 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 831153a734fa88c045f7b8397db0a033e53862c7
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 26d29c236b89172ab6dc456be97016b98f2cae19
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634493"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094563"
 ---
 # <a name="calltarget-task"></a>CallTarget görevi
 
-Proje dosyası içinde belirtilen hedefleri çağırır.
+Proje dosyasında belirtilen hedefleri çağırır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda `CallTarget` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `CallTarget` açıklanmaktadır.
 
 | Parametre | Açıklama |
 |---------------------------| - |
-| `RunEachTargetSeparately` | İsteğe bağlı `Boolean` giriş parametresi.<br /><br /> `true`, MSBuild altyapısı her hedef için bir kez çağırılır. `false`, tüm hedefleri oluşturmak için MSBuild altyapısına bir kez çağırılır. Varsayılan değer: `false`. |
-| `TargetOutputs` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Tüm oluşturulan hedeflerin çıkışlarını içerir. |
-| `Targets` | İsteğe bağlı `String[]` parametresi.<br /><br /> Derlenecek hedefi veya hedefleri belirtir. |
-| `UseResultsCache` | İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, önbelleğe alınan sonuç varsa döndürülür.<br /><br /> **Göz önünde** Bir MSBuild görevi çalıştırıldığında, çıktısı derleme öğelerinin listesi olarak bir kapsamda (ProjectFileName, GlobalProperties) [TargetNames] önbelleğe alınır. |
+| `RunEachTargetSeparately` | İsteğe bağlı `Boolean` giriş parametresi.<br /><br /> MSBuild `true`motoru hedef başına bir kez çağrılırsa. Eğer `false`, MSBuild motoru bir kez tüm hedefleri oluşturmak için denir. Varsayılan değer: `false`. |
+| `TargetOutputs` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Tüm inşa edilen hedeflerin çıktılarını içerir. |
+| `Targets` | İsteğe bağlı `String[]` parametre.<br /><br /> Oluşturmak için hedef veya hedefleri belirtir. |
+| `UseResultsCache` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa, `true`önbelleğe alınmış sonuç varsa döndürülür.<br /><br /> **Not** Bir MSBuild görevi çalıştırıldığında, çıktısı yapı öğeleri listesi olarak bir kapsamda (ProjectFileName, GlobalProperties)[TargetNames] önbelleğe alır. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- `Targets` belirtilen bir hedef başarısız olursa ve `RunEachTargetSeparately` `true`, görev kalan hedefleri oluşturmaya devam eder.
+ Belirtilen bir hedef `Targets` başarısız `RunEachTargetSeparately` `true`olursa ve başarısız olursa, görev kalan hedefleri oluşturmaya devam eder.
 
- Varsayılan hedefleri derlemek istiyorsanız, [MSBuild görevini](../msbuild/msbuild-task.md) kullanın ve `Projects` parametresini `$(MSBuildProjectFile)`değerine ayarlayın.
+ Varsayılan hedefleri oluşturmak istiyorsanız, [MSBuild görevini](../msbuild/msbuild-task.md) kullanın ve `Projects` parametreyi `$(MSBuildProjectFile)`' ye eşit olarak ayarlayın
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+MsBuild, kullanırken, `CallTarget`çağrılan hedefi, çağrıldığı kapsamın aksine, yeni bir kapsamda değerlendirir. Bu, çağrılan hedefteki herhangi bir öğe ve özellik değişikliğinin çağıran hedef tarafından görülemeden olduğu anlamına gelir.  Aramayı hedefe bilgi aktarmak için `TargetOutputs` çıktı parametresini kullanın.
+
+ Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek `CallOtherTargets`içinden `TargetA` çağırır.
+ Aşağıdaki örnek `TargetA` içeriden `CallOtherTargets`çağırır.
 
 ```xml
 <Project DefaultTargets="CallOtherTargets"
@@ -68,4 +70,4 @@ Proje dosyası içinde belirtilen hedefleri çağırır.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Hedefler](../msbuild/msbuild-targets.md)
+- [Hedef](../msbuild/msbuild-targets.md)

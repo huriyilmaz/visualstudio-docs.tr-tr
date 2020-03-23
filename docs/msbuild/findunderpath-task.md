@@ -1,5 +1,5 @@
 ---
-title: FindUnderPath görevi | Microsoft Docs
+title: Findunderpath Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,35 +19,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d97b727dcba8cd16fe97ee33764947797c36db7
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634142"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath görevi
 
-Belirtilen öğe koleksiyonundaki hangi öğelerin belirtilen klasörün içinde veya altında olan yollara sahip olduğunu belirler.
+Belirtilen madde koleksiyonundaki hangi öğelerin belirtilen klasörün içinde veya altında olan yolları olduğunu belirler.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda `FindUnderPath` görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda görevparametreleri `FindUnderPath` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Yolları `Path` parametresi tarafından belirtilen yol ile karşılaştırılacak olan dosyaları belirtir.|
-|`InPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Belirtilen yolun altında bulunan öğeleri içerir.|
-|`OutOfPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Belirtilen yolda bulunmayan öğeleri içerir.|
-|`Path`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Başvuru olarak kullanılacak klasör yolunu belirtir.|
-|`UpdateToAbsolutePaths`|İsteğe bağlı `Boolean` parametresi.<br /><br /> True ise, çıkış öğelerinin yolları mutlak yollar olacak şekilde güncelleştirilir.|
+|`Files`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Yolları `Path` parametre tarafından belirtilen yol ile karşılaştırıldığında gereken dosyaları belirtir.|
+|`InPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Belirtilen yolun altında bulunan öğeleri içerir.|
+|`OutOfPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Belirtilen yolun altında bulunmayan öğeleri içerir.|
+|`Path`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Başvuru olarak kullanılacak klasör yolunu belirtir.|
+|`UpdateToAbsolutePaths`|İsteğe bağlı `Boolean` parametre.<br /><br /> Doğruysa, çıktı öğelerinin yolları mutlak yollar olarak güncelleştirilir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `MyFiles` öğesinde yer alan dosyaların `SearchPath` özelliği tarafından belirtilen yolun altında bulunan yollara sahip olup olmadığını anlamak için `FindUnderPath` görevini kullanır. Görev tamamlandıktan sonra, `FilesNotFoundInPath` öğesi *FILE1. txt* dosyasını içerir ve `FilesFoundInPath` öğesi *dosya2. txt* dosyasını içerir.
+Aşağıdaki örnek, `FindUnderPath` `MyFiles` öğede bulunan dosyaların `SearchPath` özellik tarafından belirtilen yolun altında var olan yolları olup olmadığını belirlemek için görevi kullanır. `FilesNotFoundInPath` Görev tamamlandıktan sonra, öğe *File1.txt* dosyasını `FilesFoundInPath` içerir ve öğe *File2.txt* dosyasını içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

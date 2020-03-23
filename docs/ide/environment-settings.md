@@ -8,17 +8,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 780f9e6cdd3a2b30a8cc5ce31b0c8cc61a6d5e55
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588583"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79301883"
 ---
 # <a name="environment-settings-for-visual-studio"></a>Visual Studio için ortam ayarları
 
-Visual Studio 'Yu ilk kez açtığınızda, bir ayar koleksiyonu seçerek en iyi şekilde yaptığınız geliştirme türü için geliştirme ortamını en iyi hale getirebilirsiniz. Her koleksiyon, klavye kısayolları, pencere düzenleri, proje ve öğe şablonları gibi öğeleri ve komut görünürlüğünü iyileştirir.
+Visual Studio'yu ilk kez açtığınızda, bir ayarlar koleksiyonu seçerek geliştirme ortamını en çok yaptığınız geliştirme türü için optimize edebilirsiniz. Her koleksiyon klavye kısayolları, pencere düzenleri, proje ve öğe şablonları ve komut görünürlüğü gibi öğeleri en iyi duruma getirin.
 
-Aşağıdaki ayar koleksiyonları mevcuttur:
+Aşağıdaki ayarlar koleksiyonları mevcuttur:
 
 - Genel
 - JavaScript
@@ -26,27 +26,27 @@ Aşağıdaki ayar koleksiyonları mevcuttur:
 - Visual C#
 - Visual C++
 - Web Geliştirme
-- Web geliştirme (yalnızca kod)
+- Web Geliştirme (Yalnızca Kod)
 
-## <a name="reset-settings"></a>Ayarları Sıfırla
+## <a name="reset-settings"></a>Ayarları sıfırlama
 
-Visual Studio 'Yu ilk kez açtıktan sonra geliştirme ayarlarınızı değiştirmek için şu adımları izleyin:
+Visual Studio'yu ilk kez açtıktan sonra geliştirme ayarlarınızı değiştirmek için aşağıdaki adımları izleyin:
 
-1. Menü çubuğundan ayarları içeri ve dışarı aktarma **ayarlarını**açmak için **Araçlar** **' ı** seçin > .
+1. **İçe Ve Dışa**Aktar Ayarları Sihirbazı'nı açmak için menü çubuğundan **Araçları** > **İçe Ve Dışa Aktar'ı** seçin.
 
-1. **Ayarları içeri ve dışarı aktarma sihirbazında**, **tüm ayarları Sıfırla**' yı seçin ve ardından **İleri**' yi seçin.
+1. **Ayarve Alma Ayarları**Sihirbazı'nda **tüm ayarları sıfırla'yı**seçin ve sonra **İleri'yi**seçin.
 
-   ![Visual Studio 'da ayarları içeri ve dışarı aktarma Sihirbazı](media/reset-all-settings.png)
+   ![Visual Studio'da Alma ve Dışa Aktarma Ayarları Sihirbazı](media/reset-all-settings.png)
 
-1. **Geçerli ayarları Kaydet** sayfasında, **Evet** veya **Hayır**' ı seçin ve ardından **İleri**' yi seçin.
+1. Geçerli **Ayarları Kaydet** sayfasında **Evet** veya **Hayır**'ı seçin ve sonra **İleri'yi**seçin.
 
-1. **Varsayılan ayarlar koleksiyonunu seçin** sayfasında, bir koleksiyon seçin ve ardından **son**' u seçin.
+1. Varsayılan **Ayarlar Koleksiyonu'nu seçin** sayfasında bir koleksiyon seçin ve ardından **Bitir'i**seçin.
 
-   ![Visual Studio 'da ayarlar koleksiyonları](media/settings-collections.png)
+   ![Visual Studio'da ayarlar koleksiyonları](media/settings-collections.png)
 
-1. **Sıfırlama Tamam** sayfasında **Kapat**' ı seçin.
+1. **Tamamla'yı Sıfırla** sayfasında **Kapat'ı**seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birden çok bilgisayar üzerinde ayarları eşitler](synchronized-settings-in-visual-studio.md)
-- [Visual Studio IDE'yi kişiselleştirme](personalizing-the-visual-studio-ide.md)
+- [Ayarları birden çok bilgisayarda eşitleme](synchronized-settings-in-visual-studio.md)
+- [Visual Studio IDE'yi kişiselleştirin](personalizing-the-visual-studio-ide.md)

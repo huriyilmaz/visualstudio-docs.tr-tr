@@ -1,8 +1,8 @@
 ---
 title: npm paketlerini yönetme
-description: Visual Studio Node.js paket yöneticisini (npm) kullanarak paketleri yönetmenize yardımcı olur.
+description: Visual Studio, Node.js paket yöneticisini (npm) kullanarak paketleri yönetmenize yardımcı olur
 ms.custom: seodec18
-ms.date: 06/06/2018
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
@@ -12,77 +12,135 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: de92c3f1f0d0e29d1ba2dfaf5d536a42e636be2c
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.openlocfilehash: dba657d30eedef26337c708e7ede6c5ab85ed4cc
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409452"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79550001"
 ---
-# <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio'da npm paketlerini yönetme
+# <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio'da npm paketlerini yönetin
 
-npm yükleme ve Node.js uygulamalarınızda kullanım için paketleri yönetme sağlar. NPM 'yi tanımıyorsanız ve daha fazla bilgi edinmek istiyorsanız [NPM belgelerine](https://docs.npmjs.com/)gidin.
+npm, Node.js uygulamalarınızda kullanılmak üzere paketleri yüklemenize ve yönetmenize olanak tanır. Visual Studio, npm ile etkileşimde bulunmayı ve ui veya doğrudan npm komutları vermeyi kolaylaştırır. NPM'ye aşina değilseniz ve daha fazla bilgi edinmek istiyorsanız, [npm belgelerine](https://docs.npmjs.com/)gidin.
 
-Visual Studio, npm ve sorunu npm komutları ile kullanıcı Arabirimi aracılığıyla ya da doğrudan etkileşim kurmak kolaylaştırır. Aşağıdaki yöntemleri kullanabilirsiniz:
-* [Paketleri Çözüm Gezgini 'dan yükler](#npmInstallWindow)
-* [Yüklü paketleri Çözüm Gezgini yönetin](#solutionExplorer)
-* [Node. js etkileşimli penceresindeki `.npm` komutunu kullanın](#interactive)
-
-Bu özellikler birlikte çalışarak proje sistemiyle ve projedeki *Package. JSON* dosyasıyla eşitlenir.
+NPM ile Visual Studio entegrasyonu proje türünüze bağlı olarak farklıdır.
+* [Node.js](#nodejs-projects)
+* [ASP.NET Core](#aspnet-core-projects)
+* [Klasörü aç (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md)
 
 > [!Important]
-> NPM, proje kökünde *node_modules* klasörü ve *Package. JSON* bekliyor. Uygulamanızın klasör yapısı farklıysa, Visual Studio 'Yu kullanarak NPM paketlerini yönetmek istiyorsanız klasör yapınızı güncelleştirmeniz gerekir.
+> npm proje kökünde *node_modules* klasörü ve *package.json* bekliyor. Uygulamanızın klasör yapısı farklıysa, Visual Studio'yı kullanarak npm paketlerini yönetmek istiyorsanız klasör yapınızı değiştirmeniz gerekir.
 
 > [!NOTE]
-> Mevcut NPM projeleri için, **mevcut Node. js kod** çözümü şablonunu kullanın.
+> Varolan Node.js projeleri için, projenizde npm'yi etkinleştirmek için **Varolan Düğüm.js kodu** çözüm şablonunu kullanın.
 
-## <a name="npmInstallWindow"></a>Paketleri Çözüm Gezgini 'dan yükler
+## <a name="nodejs-projects"></a>Düğüm.js projeleri
 
-Npm paket yükleme penceresi npm paketlerini yüklemek için en kolay yoludur. Bu pencereye erişmek için, projedeki **NPM** düğümüne sağ tıklayın ve **Yeni NPM paketleri yüklensin**' i seçin.
+Node.js projeleri için aşağıdaki yöntemlerden birini kullanın:
+* [Solution Explorer'dan paketleri yükleme](#npmInstallWindow)
+* [Solution Explorer'dan yüklü paketleri yönetme](#solutionExplorer)
+* [Düğüm.js Etkileşimli Pencere'deki `.npm` komutu kullanın](#interactive)
 
-![Çözüm Gezgini'nden yeni npm paketini yükleme](../javascript/media/solution-explorer-install-package.png)
+Bu özellikler birlikte çalışır ve projedeki proje sistemi ve *package.json* dosyasıyla senkronize olur.
 
-Bu pencerede bir paket için arama seçenekleri belirtin ve yükleyin.
+### <a name="install-packages-from-solution-explorer-nodejs"></a><a name="npmInstallWindow"></a>Solution Explorer'dan paket yükleme (Node.js)
 
-![Arama npm paketi](../javascript/media/search-package.png)
+Node.js projeleri için npm paketlerini yüklemenin en kolay yolu npm paket yükleme penceresinden geçer. Bu pencereye erişmek için projedeki **npm** düğümüne sağ tıklayın ve **Yeni npm Paketleri Yükle'yi**seçin.
 
-* **Bağımlılık türü** - **Standart**, **geliştirme**ve **isteğe bağlı** paketler arasında tercih edin. Standart belirtir paketi bir çalışma zamanı bağımlılık olduğunu geliştirme paket yalnızca olduğunu belirten ancak geliştirme sırasında gerekli.
-* **Package. JSON öğesine Ekle** -Bu seçenek kullanım dışıdır
-* **Seçili sürüm** -yüklemek istediğiniz paketin sürümünü seçin.
-* **Diğer NPM bağımsız değişkenleri** -diğer standart NPM bağımsız değişkenlerini belirtin. Örneğin, sürümler listesinde kullanılamayan belirli bir sürümü yüklemek için `@~0.8` gibi bir sürüm değeri girebilirsiniz.
+![Çözüm gezgininden yeni npm paketi yükleme](../javascript/media/solution-explorer-install-package.png)
 
-Çıktı penceresinde npm sekmesinde Yükleme ilerlemesini görebilirsiniz. Bu işlem biraz zaman alabilir.
+Bu pencerede bir paket arayabilir, seçenekleri belirtebilir ve yükleyebilirsiniz.
+
+![npm paketini ara](../javascript/media/search-package.png)
+
+* **Bağımlılık türü** - **Standart,** **Geliştirme**ve **İsteğe Bağlı** paketler arasında seçim. Standart, paketin çalışma zamanı bağımlılığı olduğunu belirtirken, Geliştirme paketin yalnızca geliştirme sırasında gerekli olduğunu belirtir.
+* **package.json ekle** - Bu seçenek amortismana
+* **Seçili sürüm** - Yüklemek istediğiniz paketin sürümünü seçin.
+* **Diğer npm bağımsız değişkenleri** - Diğer standart npm bağımsız değişkenlerini belirtin. Örneğin, sürüm listesinde bulunmayan belirli `@~0.8` bir sürümü yüklemek gibi bir sürüm değeri girebilirsiniz.
+
+Yüklemenin ilerlemesini **Çıkış** **penceresinden npm** çıkışında görebilirsiniz. Bu işlem biraz zaman alabilir.
+
+![npm çıktı](../javascript/media/npm-output.png)
 
 > [!TIP]
-> Arama sorgusunu ilgilendiğiniz kapsama göre ön bekleyen paketler için arama yapabilirsiniz, örneğin, Mocha için TypeScript tanım dosyalarını aramak üzere `@types/mocha` yazın. Ayrıca, TypeScript için tür tanımlarını yüklerken, NPM bağımsız değişkeni alanına `@ts2.6` ekleyerek tardığınızda TypeScript sürümünü belirtebilirsiniz.
+> Arama sorgusunu ilgilendiğiniz kapsamda ön satarak kapsamlı paketleri arayabilirsiniz, örneğin `@types/mocha` mocha için TypeScript tanım dosyalarını aramak için yazın. Ayrıca, TypeScript için tür tanımları yüklerken, npm bağımsız değişken alanına `@ts2.6` ekleyerek hedeflediğiniz TypeScript sürümünü belirtebilirsiniz.
 
-## <a name="solutionExplorer"></a>Çözüm Gezgini yüklü paketleri yönetme
+### <a name="manage-installed-packages-in-solution-explorer-nodejs"></a><a name="solutionExplorer"></a>Yüklü paketleri Çözüm Gezgini'nde yönetme (Node.js)
 
-npm paketlerini, Çözüm Gezgini'nde gösterilir. **NPM** düğümündeki girişler *Package. JSON* dosyasındaki bağımlılıkları taklit ediyor.
+npm paketleri Solution Explorer'da gösterilir. **npm** düğümü altındaki girişler *package.json* dosyasındaki bağımlılıkları taklit ediyor.
 
-![Arama npm paketi](../javascript/media/solution-explorer-status.png)
+![npm paketini ara](../javascript/media/solution-explorer-status.png)
 
 ### <a name="package-status"></a>Paket durumu
-* ![Yüklü paketleri](../javascript/media/installed-npm.png) -Yüklü ve listelenen package.json
-* ![yabancı paket](../javascript/media/extraneous-npm.png)-yüklendi, ancak Package. JSON içinde açıkça listelenmemiş.
-* ![Paket eksik](../javascript/media/missing-npm.png) -Not yüklendi, ancak listelenen Package.json'da
 
-Aşağıdaki eylemlerden birini gerçekleştirmek için bir paket düğümüne veya **NPM** düğümüne sağ tıklayın:
-* *Package. JSON* içinde listelenen **eksik paketleri yükler**
-* **Paketleri** en son sürüme Güncelleştir
-* **Bir paketi kaldırın** ve *Package. JSON* öğesinden kaldırın
+* ![Yüklü paket](../javascript/media/installed-npm.png) - Yüklendi ve package.json listelenen
+* ![Yabancı paket](../javascript/media/extraneous-npm.png) - Yüklü, ancak açıkça package.json listelenen değil
+* ![Eksik paket](../javascript/media/missing-npm.png) - Yüklü değil, ancak package.json listelenen
 
-## <a name="interactive"></a>Node. js etkileşimli penceresinde. NPM komutunu kullanın
+Aşağıdaki eylemlerden birini yapmak için bir paket düğümüne veya **npm** düğümüne sağ tıklayın:
+* *paket.json'da* listelenen **eksik paketleri yükleyin**
+* Paketleri en son sürüme **güncelleştirin**
+* **Paketi kaldırın** ve *package.json'dan* kaldırın
 
-NPM komutlarını yürütmek için Node. js etkileşimli penceresindeki `.npm` komutunu da kullanabilirsiniz. Pencereyi açmak için Çözüm Gezgini içinde projeye sağ tıklayın ve **Node. js etkileşimli penceresini aç**' ı seçin.
+### <a name="use-the-npm-command-in-the-nodejs-interactive-window-nodejs"></a><a name="interactive"></a>Düğüm.js İnteraktif Pencere'deki .npm komutunu (Node.js) kullanın
 
-Pencerede, paketi yüklemek için aşağıdaki gibi komutları kullanabilirsiniz:
+NPM `.npm` komutlarını yürütmek için Düğüm.js Interactive Window'daki komutu da kullanabilirsiniz. Pencereyi açmak için Solution Explorer'da projeyi sağ tıklatın ve **Node.js Etkileşimli Pencereaç'ı**seçin.
+
+Pencerede, bir paket yüklemek için aşağıdaki gibi komutları kullanabilirsiniz:
 
 `.npm install azure@4.2.3`
 
  > [!Tip]
- > Varsayılan olarak, projenizin giriş dizininde npm yürütülür. Çözümünüz içinde birden çok proje varsa, köşeli ayraç içinde adı veya projesinin yolunu belirtin.
+ > Varsayılan olarak, npm projenizin ev dizininde yürütülür. Çözümünüzde birden çok proje varsa, projenin adını veya yolunu parantez içinde belirtin.
  > `.npm [MyProjectNameOrPath] install azure@4.2.3`
 
  > [!Tip]
- > Projeniz bir Package. JSON dosyası içermiyorsa, varsayılan girdilerle yeni bir Package. JSON dosyası oluşturmak için `.npm init -y` kullanın.
+ > Projenizde bir package.json dosyası yoksa, `.npm init -y` varsayılan girişleri olan yeni bir package.json dosyası oluşturmak için kullanın.
+
+ ## <a name="aspnet-core-projects"></a>ASP.NET Çekirdek projeleri
+
+ASP.NET Core projeleri gibi projeler için, projenize npm desteğini entegre edebilir ve paketleri yüklemek için npm'yi kullanabilirsiniz.
+* [Projeye npm desteği ekleme](#npmAdd)
+* [paket.json kullanarak paketleri yükleyin](#npmInstallPackage)
+
+>[!NOTE]
+> ASP.NET Core projeleri için, istemci tarafındaki JavaScript ve CSS dosyalarını yüklemek için npm yerine [Kitaplık Yöneticisi](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) veya iplik de kullanabilirsiniz.
+
+### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>Projeye npm desteği ekleme (ASP.NET Core)
+
+Projenizde zaten bir package.json dosyası yoksa, projeye bir *paket.json* dosyası ekleyerek bir etkin npm desteği ekleyebilirsiniz.
+
+1. Dosyayı eklemek için Solution Explorer'da projeyi sağ tıklatın ve**Yeni Öğe** **Ekle'yi** > seçin. **npm Yapılandırma Dosyası'nı**seçin, varsayılan adı kullanın ve **Ekle'yi**tıklatın.
+
+   ![Projenize package.json ekle](../javascript/media/npm-add-package-json.png)
+
+1. `dependencies` *package.json'un*bir veya `devDependencies` daha fazla npm paketini ekleyin. Örneğin, dosyaya aşağıdakileri ekleyebilirsiniz:
+
+   ```json
+   "devDependencies": {
+      "gulp": "4.0.2",
+      "@types/jquery": "3.3.33"
+   }
+   ```
+
+Dosyayı kaydettiğinizde Visual Studio, Solution Explorer'daki **Bağımlılıklar / npm** düğümü altında paketi ekler. Düğümü görmüyorsanız, **package.json'a** sağ tıklayın ve **Paketleri Geri Yükle'yi**seçin.
+
+>[!NOTE]
+> Bazı senaryolarda, Solution Explorer, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle bir npm paketinin *package.json* ile eşitlenmemiş olduğunu gösterebilir. Örneğin, paket yüklendiğinde yüklü değilmiş gibi görünebilir. Çoğu durumda, *package.json'u*silerek Solution Explorer'ı güncelleştirebilirsiniz, Visual Studio'yu yeniden başlatabilir ve bu makalede daha önce açıklandığı gibi *package.json* dosyasını yeniden ekleyebilirsiniz.
+
+### <a name="install-packages-using-packagejson-aspnet-core"></a><a name="npmInstallPackage"></a>package.json (ASP.NET Core) kullanarak paketleri yükleyin
+
+NPM dahil projeler için, kullanarak `package.json`npm paketleri yapılandırabilirsiniz. Çözüm Gezgini'ndeki npm düğümüne sağ tıklayın ve **Open package.json'u**seçin.
+
+![npm paketini ara](../javascript/media/npm-add-package.png)
+
+in in *package.json'daki* IntelliSense, bir npm paketinin belirli bir sürümünü seçmenize yardımcı olur.
+
+![npm paketini ara](../javascript/media/npm-add-package-intellisense.png)
+
+Dosyayı kaydettiğinizde Visual Studio, Solution Explorer'daki **Bağımlılıklar / npm** düğümü altında paketi ekler. Düğümü görmüyorsanız, **package.json'a** sağ tıklayın ve **Paketleri Geri Yükle'yi**seçin.
+
+Bir paketi yüklemek birkaç dakika sürebilir. **Çıkış** penceresinde **npm** çıkışına geçerek paket yüklemesinde ilerlemeyi denetleyin.
+
+![npm çıktı](../javascript/media/npm-output.png)
+

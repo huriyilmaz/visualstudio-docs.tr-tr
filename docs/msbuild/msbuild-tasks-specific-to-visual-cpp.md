@@ -1,5 +1,5 @@
 ---
-title: '| Öğesine C++ özgü MSBuild görevleri Microsoft Docs'
+title: C++ Özel MSBuild Görevleri | Microsoft Dokümanlar
 ms.date: 03/10/2019
 ms.topic: reference
 dev_langs:
@@ -16,51 +16,51 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6393e771f9e9ed862d21397dabacdb3f3808c386
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633154"
 ---
-# <a name="msbuild-tasks-specific-to-c"></a>Öğesine özgü MSBuild görevleriC++
+# <a name="msbuild-tasks-specific-to-c"></a>C++'a özgü MSBuild görevleri
 
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ Yüklendiğinde, MSBuild ile yüklenenlere ek olarak aşağıdaki görevler kullanılabilir. Daha fazla bilgi için bkz. [MSBuildC++() genel bakış](/cpp/build/msbuild-visual-cpp-overview).
+Görevler, yapı işlemi sırasında çalışan kodu sağlar. C++ yüklendiğinde, MSBuild yüklü görevlere ek olarak aşağıdaki görevler kullanılabilir. Daha fazla bilgi için [MSBuild (C++) genel bakış](/cpp/build/msbuild-visual-cpp-overview)bakın.
 
- Her görevin parametrelerine ek olarak, her görevin aşağıdaki parametreleri de vardır.
+ Her görev için parametrelere ek olarak, her görev de aşağıdaki parametrelere sahiptir.
 
 | Parametre | Açıklama |
 |-------------------| - |
-| `Condition` | İsteğe bağlı `String` parametresi.<br /><br /> MSBuild altyapısının bu görevin yürütülüp yürütülmeyeceğini belirlemede kullandığı bir `Boolean` ifadesi. MSBuild tarafından desteklenen koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md). |
-| `ContinueOnError` | İsteğe bağlı parametre. , Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** ya da **true**. Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir<br />-   **Errportadcontinue**. Bir görev başarısız olduğunda, `Target` öğesi ve derleme içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.<br />-   **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda,`Target` öğesi ve derleme içindeki kalan görevler yürütülmez ve tüm `Target` öğesi ve derleme başarısız olduğu kabul edilir.<br /><br /> 4,5 öncesindeki .NET Framework sürümleri yalnızca `true` ve `false` değerlerini destekliyordu.<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md). |
+| `Condition` | İsteğe bağlı `String` parametre.<br /><br /> `Boolean` MSBuild altyapısının bu görevin yürütülüp yürütülmeyeceğini belirlemek için kullandığı ifade. MSBuild tarafından desteklenen koşullar hakkında bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın. |
+| `ContinueOnError` | İsteğe bağlı parametre. Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** veya **doğru**. Bir görev başarısız olduğunda, [Hedef](../msbuild/target-element-msbuild.md) öğe ve yapıdaki sonraki görevler yürütmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir<br />-   **HataandContinue**. Bir görev başarısız olduğunda, `Target` öğe ve yapı sonraki görevler yürütmeye devam eder ve görevden tüm hatalar hata olarak kabul edilir.<br />-   **ErrorAndStop** veya **false** (varsayılan). Bir görev başarısız olduğunda,`Target` öğe ve yapıda kalan görevler yürütülmez ve tüm `Target` öğe ve yapı başarısız olmuş olarak kabul edilir.<br /><br /> .NET Framework'ün 4.5'ten önceki `true` `false` sürümleri yalnızca değerleri ve değerleri desteklemişti.<br /><br /> Daha fazla bilgi için [bkz: Görevlerdeki hataları yoksay.](../msbuild/how-to-ignore-errors-in-tasks.md) |
 
 ### <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[BscMake görevi](../msbuild/bscmake-task.md)|Microsoft tarayıcı bilgi Bakımı yardımcı programı aracını (*bscmake. exe*) sarar.|
-|[CL görevi](../msbuild/cl-task.md)|C++ Derleyici aracını sarmalanmış (*CL. exe*).|
-|[CPPClean görevi](../msbuild/cppclean-task.md)|Bir C++ proje oluşturulduğunda MSBuild tarafından oluşturulan geçici dosyaları siler.|
-|[ClangCompile görevi](../msbuild/clangcompile-task.md)|C++ Derleyici aracını (*Clang. exe*) sarmalanmış.|
-|[CustomBuild görevi](../msbuild/custombuild-task.md)|C++ Derleyici aracını sarmalanmış (*cmd. exe*).|
-|[FXC görevi](../msbuild/fxc-task.md)|Yapı sürecinde HLSL gölgelendirici derleyicileri kullanın.|
-|[GetOutOfDateItems](../msbuild/getoutofdateitems-task.md)|Eski tlogs dosyalarını okur, yeni tlogs yazar ve güncel olmayan öğe kümesi döndürür. (yardımcı görev)|
-|[GetOutputFileName](../msbuild/getoutputfilename-task.md)|Yalnızca çıkış dizini veya tam dosya adı ya da hiçbir şey belirtilmesine izin veren CL ve diğer araçların çıkış dosyası adını alır. (yardımcı görev)|
-|[LıB görevi](../msbuild/lib-task.md)|Microsoft 32-bit kitaplık Yöneticisi aracını (*lib. exe*) sarmalanmış.|
-|[Bağlantı görevi](../msbuild/link-task.md)|C++ Bağlayıcı aracını sarmalanmış (*LINK. exe*).|
-|[MıDL görevi](../msbuild/midl-task.md)|Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını (*MIDL. exe*) kaydırır.|
-|[MT görevi](../msbuild/mt-task.md)|Microsoft bildirim aracı 'nı (*mt. exe*) kaydırır.|
-|[MultiToolTask görevi](../msbuild/multitooltask-task.md)|Açıklama yok.|
+|[BscGörev yap](../msbuild/bscmake-task.md)|Microsoft Gözatma Bilgi Bakım Programı aracını sarar (*bscmake.exe*).|
+|[CL görevi](../msbuild/cl-task.md)|C++ derleyici aracını *(cl.exe)* sarar.|
+|[CPPClean görevi](../msbuild/cppclean-task.md)|Bir C++ projesi oluşturulurken MSBuild'in oluşturduğu geçici dosyaları siler.|
+|[ClangCompile görevi](../msbuild/clangcompile-task.md)|C++ derleyici aracını sarar (*clang.exe*).|
+|[CustomBuild görevi](../msbuild/custombuild-task.md)|C++ derleyici aracını sarar (*cmd.exe*).|
+|[FXC görevi](../msbuild/fxc-task.md)|Yapı işleminde HLSL shader derleyicilerini kullanın.|
+|[GetOutOfDate Öğeler](../msbuild/getoutofdateitems-task.md)|Eski tlogları okur, yeni tloglar yazar ve güncel olmayan öğeler kümesini döndürür. (yardımcı görev)|
+|[GetOutputFileName](../msbuild/getoutputfilename-task.md)|Cl ve yalnızca çıktı dizini veya tam dosya adı veya hiçbir şey belirtmeye izin veren diğer araçlar için çıktı dosya adı alır. (yardımcı görev)|
+|[LIB görevi](../msbuild/lib-task.md)|Microsoft 32-Bit Kitaplık Yöneticisi aracını *(lib.exe)* sarar.|
+|[Bağlantı görevi](../msbuild/link-task.md)|C++ bağlayıcı aracını sarar (*link.exe*).|
+|[MIDL görevi](../msbuild/midl-task.md)|Microsoft Arabirim Tanımı Dili (MIDL) derleyici aracını *(midl.exe)* sarar.|
+|[MT görevi](../msbuild/mt-task.md)|Microsoft Manifest Aracını *(mt.exe)* sarar.|
+|[MultiToolTask görevi](../msbuild/multitooltask-task.md)|Tarifi yok.|
 |[ParallelCustomBuild görevi](../msbuild/parallelcustombuild-task.md)|[CustomBuild görevinin](../msbuild/custombuild-task.md)paralel örneklerini çalıştırın.|
-|[RC görevi](../msbuild/rc-task.md)|Microsoft Windows Kaynak derleyicisi aracı 'nı (*rc. exe*) kaydırır.|
-|[SetEnv Görevi](../msbuild/setenv-task.md)|Belirtilen ortam değişkeninin değerini ayarlar veya siler.|
-|[TrackedVCToolTask temel sınıfı](../msbuild/trackedvctooltask-base-class.md)|[Vctooltask](../msbuild/vctooltask-base-class.md)'dan devralır.|
-|[VCMessage görevi](../msbuild/vcmessage-task.md)|Bir derleme sırasında uyarı iletilerini ve hata iletilerini günlüğe kaydeder. (Genişletilebilir değil. Yalnızca iç kullanım.)|
-|[VCToolTask temel sınıfı](../msbuild/vctooltask-base-class.md)|[ToolTask](/dotnet/api/microsoft.build.utilities.tooltask)'dan devralır.|
-|[XDCMake görevi](../msbuild/xdcmake-task.md)|XML belge açıklaması ( *. xdc*) dosyalarını bir *. XML* dosyasında birleştiren XML belge aracı 'nı (*xdcmake. exe*) kaydırır.|
-|[XSD görevi](../msbuild/xsd-task.md)|Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'nı (*XSD. exe*) sarmalanmış olarak kaydırır. *Aşağıdaki nota bakın.*|
+|[RC görevi](../msbuild/rc-task.md)|Microsoft Windows Kaynak Derleyici aracını sarar (*rc.exe*).|
+|[SetEnv görev](../msbuild/setenv-task.md)|Belirli bir ortam değişkeninin değerini ayarlar veya siler.|
+|[Paletli VCToolTask taban sınıfı](../msbuild/trackedvctooltask-base-class.md)|[VCToolTask'tan](../msbuild/vctooltask-base-class.md)devralır.|
+|[VCMessage görevi](../msbuild/vcmessage-task.md)|Yapı sırasında uyarı iletilerini ve hata iletilerini günlüğe kaydeder. (Uzatılamaz. Yalnızca dahili kullanım.)|
+|[VCToolTask taban sınıfı](../msbuild/vctooltask-base-class.md)|[ToolTask'tan](/dotnet/api/microsoft.build.utilities.tooltask)devralır.|
+|[XDCMake görevi](../msbuild/xdcmake-task.md)|XML belge yorumunu (*.xdc*) dosyalarını bir *.xml* dosyasında birleştiren XML Dokümantasyon aracını *(xdcmake.exe)* sarar.|
+|[XSD görevi](../msbuild/xsd-task.md)|Bir kaynaktan şema veya sınıf dosyaları üreten XML Şema Tanımı aracını *(xsd.exe)* sarar. *Aşağıdaki nota bakın.*|
 |[MSBuild başvurusu](../msbuild/msbuild-reference.md)|MSBuild sisteminin öğelerini açıklar.|
-|[Görevler](../msbuild/msbuild-tasks.md)|Bir yapı oluşturmak için birleştirilebilecek kod birimleri olan görevleri açıklar.|
+|[Görevler](../msbuild/msbuild-tasks.md)|Bir yapı oluşturmak için birleştirilebilen kod birimleri olan görevleri açıklar.|
 |[Görev yazma](../msbuild/task-writing.md)|Bir görevin nasıl oluşturulacağını açıklar.|
 
 > [!NOTE]
-> Visual Studio 2017 ' den başlayarak C++ , *XSD. exe* için proje desteği kullanım dışıdır. *Cppcodeprovider. dll dosyasını* el ile GAC 'ye ekleyerek **Microsoft. VisualC. cppcodeprovider** API 'lerini kullanmaya devam edebilirsiniz.
+> Visual Studio 2017'den itibaren *xsd.exe* için C++ proje desteği azalmaktadır. Gac'a *CppCodeProvider.dll'yi* el ile ekleyerek **Microsoft.VisualC.CppCodeProvider** API'lerini kullanmaya devam edebilirsiniz.

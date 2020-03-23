@@ -1,38 +1,38 @@
 ---
-title: Visual Studio test denetleyicisi 2019 iş yükü ve bileşen kimlikleri
+title: Visual Studio Test Controller 2019 iş yükü ve bileşen ilikleri
 titleSuffix: ''
-description: Otomatik testleri birden fazla makineye dağıtmak için Visual Studio iş yükü ve Bileşen kimlikleri kullanın
+description: Otomatik testleri birden çok makineye dağıtmak için Visual Studio iş yükünü ve bileşen d'lerini kullanma
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 5f7a003d11f9db26e9c2deb95deb641ee2e730a7
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: 3b1a3cc6d1e9a7bac24a9a64845bdb43e4a6739a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76159712"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437476"
 ---
-## <a name="test-controller"></a>Test denetleyicisi
+## <a name="test-controller"></a>Test Denetleyicisi
 
-**ID:** Microsoft.VisualStudio.Workload.TestController
+**Kimlik Numarası:** Microsoft.VisualStudio.Workload.TestController
 
-**Açıklama:** otomatik testleri birden çok makineye dağıtma
+**Açıklama:** Otomatik testleri birden çok makineye dağıtma
 
-### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından bulunan bileşenler
+### <a name="components-included-by-this-workload"></a>Bu iş yükü tarafından dahil edilen bileşenler
 
-Bileşen kimliği | Name | Sürüm | Bağımlılık türü
+Bileşen Kimliği | Adı | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Test denetleyicisi temel özellikleri | 16.0.28315.86 | Gerekli
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Test Controller temel özellikleri | 16.0.28315.86 | Gerekli
 
-## <a name="unaffiliated-components"></a>Kullanıcıyla bağlantılı olmayan bileşenleri
+## <a name="unaffiliated-components"></a>Bağlı olmayan bileşenler
 
-Bu, her türlü iş yükü ile dahil edilmez, ancak tek bir bileşeni olarak seçilebilir bileşenlerdir.
+Bunlar, iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilen bileşenlerdir.
 
-Bileşen kimliği | Name | Sürüm
+Bileşen Kimliği | Adı | Sürüm
 --- | --- | ---
 yok | yok | yok
