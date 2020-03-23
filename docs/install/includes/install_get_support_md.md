@@ -7,20 +7,20 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: a2a8a5bc03baf51f684777f39f0815699c6c77af
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76159057"
 ---
 ## <a name="get-support"></a>Destek alın
 
-Bazı durumlarda sorunlar. Visual Studio yüklemeniz başarısız olursa, adım adım yönergeler için bkz. [Visual Studio yüklemesinde sorun giderme ve yükseltme sorunları](../troubleshooting-installation-issues.md) .
+Bazen işler ters gidebilir. Visual Studio yüklemeniz başarısız olursa, [Visual Studio yüklemesi ve](../troubleshooting-installation-issues.md) adım adım yönlendirme için sorunları yükseltme sorunu konusuna bakın.
 
-Ayrıca sunuyoruz bir [ **canlı sohbet** ](https://visualstudio.microsoft.com/vs/support/#talktous) yüklemeyle ilgili sorunlar için destek seçeneği (yalnızca İngilizce).
+Ayrıca, yüklemeyle ilgili sorunlar için [**canlı sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği de sunuyoruz.
 
-Birkaç diğer destek seçenekleri şunlardır:
+Birkaç destek seçeneği daha şunlardır:
 
-* Ürün sorunları bize bildirin [sorun bildir](../../ide/how-to-report-a-problem-with-visual-studio.md) hem de Visual Studio yükleyicisi Visual Studio IDE içinde görünen bir araç.
-* Özellik önerin, ürün sorunları izlemek ve sorularınıza cevap bulun [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/).
-* Kullanım, [GitHub](https://github.com/) ABD ve diğer Visual Studio geliştiriciler konuşabilir hesabı [Gitter Topluluğu'nda Visual Studio konuşma](https://gitter.im/Microsoft/VisualStudio).
+* Ürün sorunlarını hem Visual Studio Installer'da hem de Visual Studio IDE'de görünen [Bir Sorun Bildir](../../ide/how-to-report-a-problem-with-visual-studio.md) aracı aracılığıyla bize bildirin.
+* Bir özellik önerin, ürün sorunlarını izleyin ve [Visual Studio Developer Community'de](https://developercommunity.visualstudio.com/)yanıtları bulun.
+* [Github](https://github.com/) hesabınızı bizimle ve [Gitter topluluğundaki Visual Studio sohbetindeki](https://gitter.im/Microsoft/VisualStudio)diğer Visual Studio geliştiricileri ile konuşmak için kullanın.

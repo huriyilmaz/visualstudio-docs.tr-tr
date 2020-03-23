@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme | Microsoft Docs'
+title: 'Nasıl Yapılsın: İlk Hangi Hedefin Oluşturulabildiğini Belirt | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,70 +13,70 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e008e3181cd7c633179f35e7639265a2495fafe2
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633804"
 ---
-# <a name="how-to-specify-which-target-to-build-first"></a>Nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme
+# <a name="how-to-specify-which-target-to-build-first"></a>Nasıl yapılır: İlk hangi hedefi oluşturacaklarını belirtin
 
-Proje dosyası, projenin nasıl oluşturulduğunu tanımlayan bir veya daha fazla `Target` öğesi içerebilir. Microsoft Build Engine (MSBuild) altyapısı, bulduğu ilk projeyi ve tüm bağımlılıkları oluşturur; proje dosyası bir `DefaultTargets` özniteliği, bir `InitialTargets` özniteliği veya **hedef anahtar kullanılarak** komut satırında belirtilir.
+Proje dosyası, projenin nasıl `Target` oluşturulabileceğini tanımlayan bir veya daha fazla öğe içerebilir. Microsoft Build Engine (MSBuild) altyapısı, proje dosyası bir `DefaultTargets` öznitelik, öznitelik `InitialTargets` veya hedef **-hedef** anahtarı nı kullanarak komut satırında belirtilmediği sürece bulduğu ilk projeyi ve herhangi bir bağımlılık oluşturur.
 ## <a name="use-the-initialtargets-attribute"></a>InitialTargets özniteliğini kullanma
 
- `Project` öğesinin `InitialTargets` özniteliği, hedefler komut satırında veya `DefaultTargets` özniteliğinde belirtilmiş olsa bile önce çalıştırılacak hedefi belirtir.
-`Project` öğesinin `InitialTargets` özniteliği, hedefler komut satırında veya `DefaultTargets` özniteliğinde belirtilmiş olsa bile önce çalıştırılacak hedefi belirtir.
+ Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTargets` belirtilmiş olsa bile, öğenin özniteliği ilk çalışacak bir hedef belirtir.
+Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTargets` belirtilmiş olsa bile, öğenin özniteliği ilk çalışacak bir hedef belirtir.
 
-#### <a name="to-specify-one-initial-target"></a>Bir başlangıç hedefi belirtmek için
+#### <a name="to-specify-one-initial-target"></a>Bir ilk hedef belirtmek için
 
-- `Project` öğesinin `InitialTargets` özniteliğinde varsayılan hedefi belirtin. Örnek:
+- Öğenin özniteliği `InitialTargets` içinde varsayılan hedefi belirtin. `Project` Örnek:
 
    `<Project InitialTargets="Clean">`
 
-  Hedefleri sırayla listeleyerek `InitialTargets` özniteliğinde birden fazla başlangıç hedefi belirtebilir ve her hedefi ayırmak için noktalı virgül kullanabilirsiniz. Listedeki hedefler sırayla çalıştırılır.
+  Hedefleri sırayla listeleyerek ve `InitialTargets` her hedefi ayırmak için bir yarı sütun kullanarak öznitelikte birden fazla ilk hedef belirtebilirsiniz. Listedeki hedefler sırayla çalıştırılacaktır.
 
 #### <a name="to-specify-more-than-one-initial-target"></a>Birden fazla ilk hedef belirtmek için
 
-- `Project` öğesinin `InitialTargets` özniteliğinde, noktalı virgülle ayırarak ilk hedefleri listeleyin. Örneğin, `Clean` hedefini ve sonra `Compile` hedefini çalıştırmak için şunu yazın:
+- İlk hedefleri, yarı iki nokta ile `InitialTargets` ayrılmış, öğenin özniteliği listele. `Project` Örneğin, `Clean` hedefi çalıştırmak için ve `Compile` ardından hedefi, yazın:
 
      `<Project InitialTargets="Clean;Compile">`
 
-## <a name="use-the-defaulttargets-attribute"></a>DefaultTargets özniteliğini kullanma
+## <a name="use-the-defaulttargets-attribute"></a>Varsayılan Hedefler özniteliğini kullanma
 
- `Project` öğesinin `DefaultTargets` özniteliği, bir hedef açıkça komut satırında belirtilmemişse, hangi hedefin veya hedeflerin derlenmediğini belirtir. Hedefler hem `InitialTargets` hem de `DefaultTargets` özniteliklerde belirtilirse ve komut satırında hiçbir hedef belirtilmemişse, MSBuild, `InitialTargets` özniteliğinde belirtilen hedefleri ve ardından `DefaultTargets` özniteliğinde belirtilen hedefleri çalıştırır.
+ Bir `DefaultTargets` hedef komut `Project` satırında açıkça belirtilmemişse, öğenin özniteliği hangi hedefin veya hedeflerin oluşturulmadığını belirtir. Hedefler `InitialTargets` hem `DefaultTargets` özniteliklerde hem de özniteliklerde belirtilirse ve komut satırında `InitialTargets` hedef belirtilmemişse, MSBuild öznitelikte `DefaultTargets` belirtilen hedeflertarafından izlenen öznitelikte belirtilen hedefleri çalıştırUr.
 
 #### <a name="to-specify-one-default-target"></a>Bir varsayılan hedef belirtmek için
 
-- `Project` öğesinin `DefaultTargets` özniteliğinde varsayılan hedefi belirtin. Örnek:
+- Öğenin özniteliği `DefaultTargets` içinde varsayılan hedefi belirtin. `Project` Örnek:
 
    `<Project DefaultTargets="Compile">`
 
-  Hedefleri sırayla listeleyerek `DefaultTargets` özniteliğinde birden fazla varsayılan hedef belirtebilir ve her hedefi ayırmak için noktalı virgül kullanabilirsiniz. Listedeki hedefler sırayla çalıştırılır.
+  Hedefleri sırayla listeleyerek ve `DefaultTargets` her hedefi ayırmak için bir yarı sütun kullanarak öznitelikte birden fazla varsayılan hedef belirtebilirsiniz. Listedeki hedefler sırayla çalıştırılacaktır.
 
 #### <a name="to-specify-more-than-one-default-target"></a>Birden fazla varsayılan hedef belirtmek için
 
-- `Project` öğesinin `DefaultTargets` özniteliğinde, noktalı virgülle ayırarak varsayılan hedefleri listeleyin. Örneğin, `Clean` hedefini ve sonra `Compile` hedefini çalıştırmak için şunu yazın:
+- Öğenin özniteliği olarak, `DefaultTargets` yarı iki nokta ile ayrılmış varsayılan hedefleri listele. `Project` Örneğin, `Clean` hedefi çalıştırmak için ve `Compile` ardından hedefi, yazın:
 
      `<Project DefaultTargets="Clean;Compile">`
 
-## <a name="use-the--target-switch"></a>-Target anahtarını kullanma
+## <a name="use-the--target-switch"></a>Hedef Anahtarını kullanma
 
- Proje dosyasında varsayılan bir hedef tanımlanmamışsa veya bu varsayılan hedefi kullanmak istemiyorsanız, farklı bir hedef belirtmek için anahtar **-hedef** komut satırını kullanabilirsiniz. **-Target** anahtarıyla belirtilen hedef veya hedefler, `DefaultTargets` özniteliği tarafından belirtilen hedefler yerine çalıştırılır. `InitialTargets` özniteliğinde belirtilen hedefler her zaman önce çalıştırılır.
+ Proje dosyasında varsayılan bir hedef tanımlanmamışsa veya bu varsayılan hedefi kullanmak istemiyorsanız, farklı bir hedef belirtmek için komut satırı anahtarı **-hedefini** kullanabilirsiniz. **Öznitelik** te `DefaultTargets` belirtilen hedefler yerine -hedef anahtarı ile belirtilen hedef veya hedefler çalıştırılır. Öznitelikte `InitialTargets` belirtilen hedefler her zaman önce çalışır.
 
-#### <a name="to-use-a-target-other-than-the-default-target-first"></a>Önce varsayılan hedeften farklı bir hedef kullanmak için
+#### <a name="to-use-a-target-other-than-the-default-target-first"></a>Önce varsayılan hedef dışında bir hedef kullanmak için
 
-- Hedefi, **-target** komut satırı anahtarını kullanarak ilk hedef olarak belirtin. Örnek:
+- **-target** komut satırı anahtarını kullanarak hedefi ilk hedef olarak belirtin. Örnek:
 
      `msbuild file.proj -target:Clean`
 
-#### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>Önce varsayılan hedefleri dışında birkaç hedefi kullanmak için
+#### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>Önce varsayılan hedefler dışında birkaç hedef kullanmak için
 
-- Hedefleri, **-target** komut satırı anahtarını kullanarak noktalı virgül veya virgülle ayırarak listeleyin. Örnek:
+- **-target** komut satırı anahtarını kullanarak, yarı kolon veya virgülle ayrılan hedefleri listele. Örnek:
 
      `msbuild <file name>.proj -t:Clean;Compile`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBuild](../msbuild/msbuild.md)
-- [Hedefler](../msbuild/msbuild-targets.md)
-- [Nasıl yapılır: derlemeyi Temizleme](../msbuild/how-to-clean-a-build.md)
+- [Msbuild](../msbuild/msbuild.md)
+- [Hedef](../msbuild/msbuild-targets.md)
+- [Nasıl yapılsın: Yapıyı temizleme](../msbuild/how-to-clean-a-build.md)

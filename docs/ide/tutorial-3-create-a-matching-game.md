@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici 3: eşleşen oyun oluşturma'
+title: 'öğretici 3: eşleşen bir oyun oluşturma'
 ms.date: 10/16/2019
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 ms.topic: tutorial
@@ -10,24 +10,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 619c21f4878f2e421ee5ac5ea76a68cd6e6bc337
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579710"
 ---
-# <a name="tutorial-3-create-a-matching-game"></a>Öğretici 3: eşleşen oyun oluşturma
+# <a name="tutorial-3-create-a-matching-game"></a>öğretici 3: eşleşen bir oyun oluşturma
 
 Bu öğreticide, oyuncunun gizli simge çiftlerini eşleştirmesi gereken bir eşleştirme oyunu oluşturuyorsunuz.
 
 > [!NOTE]
-> Bu öğretici hem hem C# de Visual Basic, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanırsınız.
+> Bu öğretici hem C# hem de Visual Basic'i kapsar, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanın.
 
-Bu öğretici aşağıdaki görevlerde size kılavuzluk eder:
+Bu öğretici aşağıdaki görevleri size yol sağlar:
 
-- Simgeleri gibi nesneleri bir <xref:System.Collections.Generic.List%601> nesnesinde depolayın.
+- Simgeler gibi nesneleri bir <xref:System.Collections.Generic.List%601> nesnede depolayın.
 
-- Bir listedeki öğeler arasında yinelemek C# için, içinde bir `foreach` döngüsü veya `For Each` Visual Basic döngüsü kullanın.
+- Listedeki `foreach` öğeleri tekrarlamak `For Each` için C# veya Visual Basic'teki bir döngü yü kullanın.
 
 - Başvuru değişkenlerini kullanarak bir formun durumunu takip edin.
 
@@ -35,32 +35,32 @@ Bu öğretici aşağıdaki görevlerde size kılavuzluk eder:
 
 - Geriye doğru sayan ve başlatılmasının ardından bir olayı kesin olarak tetikleyen bir zamanlayıcı hazırlayın.
 
-Bitirdiğinizde, uygulamanız aşağıdaki görüntüye benzer görünmelidir:
+İşlemi tamamladığınızda, uygulamanız aşağıdaki resme benzer olmalıdır:
 
 ![Bu öğreticide oluşturduğunuz oyun](../ide/media/express_finishedgame.png)
 
-## <a name="tutorial-links"></a>Öğretici bağlantıları
+## <a name="tutorial-links"></a>Öğretici bağlantılar
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[1. Adım: proje oluşturma ve formunuza tablo ekleme](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|Projeyi oluşturarak ve denetimleri düzgün şekilde hizalı tutmak için bir `TableLayoutPanel` denetimi ekleyerek başlayın.|
-|[2. Adım: rastgele bir nesne ve simge listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|Simgelerin bir listesini oluşturmak için bir `Random` nesnesi ve `List` nesnesi ekleyin.|
-|[3. Adım: her etikete rastgele bir simge atama](../ide/step-3-assign-a-random-icon-to-each-label.md)|Her oyunun farklı olması için simgeleri `Label` denetimlerine rastgele atayın.|
-|[4. Adım: Her Etikete Click olay işleyicisi ekleme](../ide/step-4-add-a-click-event-handler-to-each-label.md)|Tıklanan etiketin rengini değiştiren `Click` bir olay işleyicisi ekleyin.|
-|[5. Adım: etiket başvuruları ekleme](../ide/step-5-add-label-references.md)|Hangi etiketlere tıklandığını takip etmek için başvuru değişkenleri ekleyin.|
-|[6. Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md)|Oyunda geçen süreyi takip etmek için forma bir zamanlayıcı ekleyin.|
-|[7. Adım: çiftleri görünür tutma](../ide/step-7-keep-pairs-visible.md)|Eşleşen bir çift seçilirse, simge çiftlerini görünür durumda tutun.|
-|[8. Adım: oyuncunun kazandığını doğrulamak için bir yöntem ekleyin](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)|Oyuncunun kazanıp kazanılmadığını doğrulamak için bir `CheckForWinner()` yöntemi ekleyin.|
-|[9. Adım: diğer özellikleri deneme](../ide/step-9-try-other-features.md)|Simgeleri ve renkleri değiştirme, kılavuz ekleme ve ses ekleme gibi diğer özellikleri deneyin. Tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.|
+|[Adım 1: Proje oluşturma ve forma tablo ekleme](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|Projeyi oluşturarak ve `TableLayoutPanel` denetimleri düzgün hizalamak için bir denetim ekleyerek başlayın.|
+|[Adım 2: Rastgele bir nesne ve simgelerin listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|Simgelerin `Random` listesini `List` oluşturmak için bir nesne ve nesne ekleyin.|
+|[Adım 3: Her etikete rastgele bir simge atama](../ide/step-3-assign-a-random-icon-to-each-label.md)|Her oyun farklı olacak şekilde `Label` simgeleri denetimlere rasgele atayın.|
+|[Adım 4: Her etikete bir tıklama olay işleyicisi ekleme](../ide/step-4-add-a-click-event-handler-to-each-label.md)|Tıklanan `Click` etiketin rengini değiştiren bir olay işleyicisi ekleyin.|
+|[Adım 5: Etiket referansları ekleme](../ide/step-5-add-label-references.md)|Hangi etiketlere tıklandığını takip etmek için başvuru değişkenleri ekleyin.|
+|[Adım 6: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md)|Oyunda geçen süreyi takip etmek için forma bir zamanlayıcı ekleyin.|
+|[Adım 7: Çiftleri görünür tutun](../ide/step-7-keep-pairs-visible.md)|Eşleşen bir çift seçilirse, simge çiftlerini görünür durumda tutun.|
+|[Adım 8: Oyuncunun kazanıp kazanmadığını doğrulamak için bir yöntem ekleyin](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)|Oyuncunun `CheckForWinner()` kazanıp kazanmadığını doğrulamak için bir yöntem ekleyin.|
+|[Adım 9: Diğer özellikleri deneyin](../ide/step-9-try-other-features.md)|Simgeleri ve renkleri değiştirme, kılavuz ekleme ve ses ekleme gibi diğer özellikleri deneyin. Tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.|
 
-Ayrıca harika, ücretsiz video öğrenimi kaynakları da mevcuttur. İçinde C#programlama hakkında daha fazla bilgi edinmek için bkz [ C# . temel bilgiler: mutlak yeni başlayanlar için geliştirme](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners). Visual Basic 'da programlama hakkında daha fazla bilgi için bkz. [Visual Basic temelleri: mutlak yeni başlayanlar Için geliştirme](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners).
+Ayrıca büyük, ücretsiz video öğrenme kaynakları sizin için kullanılabilir. C#'da programlama hakkında daha fazla bilgi edinmek [için C# temellerine bakın: Yeni başlayanlar için geliştirme.](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) Visual Basic'te programlama hakkında daha fazla bilgi edinmek [için Visual Basic temellerine bakın: Mutlak yeni başlayanlar için geliştirme.](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Öğreticiye başlamak için, 1. **[Adım: proje oluşturma ve formunuza tablo ekleme](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)** ile başlayın.
+Öğreticiye başlamak için Adım 1 ile **[başlayın: Bir proje oluşturun ve formunuza bir tablo ekleyin.](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Diğer C# öğreticiler](/visualstudio/get-started/csharp/)
-* [Visual Basic öğreticileri](/visualstudio/get-started/visual-basic/)
-* [C++izleyin](/cpp/get-started/tutorial-console-cpp)
+* [Diğer C# eğitimleri](/visualstudio/get-started/csharp/)
+* [Visual Basic eğitimleri](/visualstudio/get-started/visual-basic/)
+* [C++ eğitimleri](/cpp/get-started/tutorial-console-cpp)

@@ -1,5 +1,5 @@
 ---
-title: Bir Web performans testi eklentisi oluşturma
+title: Web Performans Testi Eklentisi Oluşturma
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,56 +12,56 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cc2eeafa41b953f9d853c7ff435a6a9706ae73ca
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589116"
 ---
-# <a name="how-to-create-a-web-performance-test-plug-in"></a>Nasıl yapılır: web performans testi eklentisi oluşturma
+# <a name="how-to-create-a-web-performance-test-plug-in"></a>Nasıl yapilir: Web performans testi eklentisi oluşturma
 
-Web performans testleri eklentileri yalıtmak ve ana bildirim deyimleri, web performans testinde dışındaki kod yeniden kullanımını etkinleştirin. Özelleştirilmiş web performans testi eklentisi web performans testini çalıştırma gibi bazı kod çağırmak için bir yol sunar. Web performans testi eklentisi, her test yinelemesi için bir kez çalıştırılır. Testi Eklentisi PreRequest veya PostRequest yöntemlerini geçersiz kılarsanız, ayrıca, bu istek eklentileri önce veya sonra her bir istek sırasıyla çalışır.
+Web performans testleri eklentileri, web performans testinizdeki ana bildirimekst ifadelerinin dışında kodu yalıtmanızı ve yeniden kullanmanıza olanak tanır. Özelleştirilmiş bir web performans testi eklentisi, web performans testi çalıştırılırken bazı kodları aramanın bir yolunu sunar. Web performans testi eklentisi, her test yinelemesi için bir kez çalıştırılır. Ayrıca, test eklentisinde Ön İstek veya PostRequest yöntemlerini geçersiz kılarsanız, bu istek eklentileri sırasıyla her istekten önce veya sonra çalışır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Kendi sınıftan türetme tarafından özelleştirilmiş web performans testi eklentisi oluşturabilirsiniz <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> temel sınıfı.
+<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> Taban sınıftan kendi sınıfınızı türeterek özelleştirilmiş bir web performans testi eklentisi oluşturabilirsiniz.
 
-Özelleştirilmiş web performans testi eklentileri en az miktarda bir büyük bir web performans testleri üzerinde denetim düzeyini elde etmek için kod yazmanızı sağlayan bir web performans testleri kaydetmiş olduğunuz kullanabilirsiniz. Ancak, bunları kodlanmış web performans testleri ile de kullanabilirsiniz. Daha fazla bilgi için [oluştur ve Çalıştır kodlanmış web performans testi](../test/generate-and-run-a-coded-web-performance-test.md).
+Kaydettiğiniz web performans testleri ile özelleştirilmiş web performans testi eklentileri kullanabilirsiniz, bu da web performans testleriniz üzerinde daha fazla denetim düzeyi elde etmek için en az miktarda kod yazmanıza olanak tanır. Ancak, kodlanmış web performans testleri ile de kullanabilirsiniz. Daha fazla bilgi için [bkz.](../test/generate-and-run-a-coded-web-performance-test.md)
 
 > [!NOTE]
-> Ayrıca, yük testi eklentileri de oluşturabilirsiniz. Bkz. [nasıl yapılır: yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md).
+> Ayrıca yük testi eklentileri oluşturabilirsiniz. [Bkz. Nasıl: Yük testi eklentisi oluşturun.](../test/how-to-create-a-load-test-plug-in.md)
 
 ## <a name="to-create-a-custom-web-performance-test-plug-in"></a>Özel bir web performans testi eklentisi oluşturmak için
 
-1. Bir web performansı ve bir web performans testi içeren bir yük testi projesi açın.
+1. Web performans testi içeren bir web performansı ve yükleme testi projesi açın.
 
-2. İçinde **Çözüm Gezgini**, çözüme sağ tıklayın ve seçin **Ekle** seçip **yeni proje**.
+2. **Çözüm Gezgini'nde,** çözüme sağ tıklayın ve **Ekle'yi** seçin ve ardından **Yeni Proje'yi**seçin.
 
-3. Yeni bir **sınıf kitaplığı** projesi oluşturun.
+3. Yeni bir **Sınıf Kitaplığı** projesi oluşturun.
 
-   Yeni sınıf kitaplığı projesi eklenir **Çözüm Gezgini** ve yeni bir sınıf görünür **Kod Düzenleyicisi**.
+   Yeni sınıf kitaplık projesi **Solution Explorer'a** eklenir ve kod **düzenleyicisinde**yeni sınıf görüntülenir.
 
-4. İçinde **Çözüm Gezgini**, sağ **başvuruları** seçin ve yeni sınıf kitaplığı klasöründe **Başvuru Ekle**.
+4. **Çözüm Gezgini'nde,** yeni sınıf kitaplığındaki **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle'yi**seçin.
 
    **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-5. Seçin **.NET** sekmesinde, aşağı kaydırın ve seçin **Microsoft.VisualStudio.QualityTools.WebTestFramework**
+5. **.NET** sekmesini seçin, aşağı kaydırın ve **Microsoft.VisualStudio.QualityTools.WebTestFramework'i** seçin
 
-6. **Tamam**’ı seçin.
+6. **Tamam'ı**seçin.
 
-     Başvuru **Microsoft.VisualStudio.QualityTools.WebTestFramework** eklenir **başvuru** klasöründe **Çözüm Gezgini**.
+     **Microsoft.VisualStudio.QualityTools.WebTestFramework** başvurusu **Solution Explorer'daki** **Başvuru** klasörüne eklenir.
 
-7. İçinde **Çözüm Gezgini**, web performans en üst düğüme sağ tıklayın ve web performans testi seçin ve eklentisini eklemek istediğiniz yük testini içeren test projesi yük **Add Reference**.
+7. **Çözüm Gezgini'nde,** web performans testi eklentisini eklemek istediğiniz yük testive yükleme testi projesinin üst düğümüne sağ tıklayın ve **Referans Ekle'yi**seçin.
 
-8. **Başvuru Ekle iletişim kutusu görüntülenir**.
+8. **Başvuru Ekle iletişim kutusu görüntülenir.**
 
-9. Seçin **projeleri** sekmenize **sınıf kitaplığı projesi**.
+9. **Projeler** sekmesini seçin ve **Sınıf Kitaplığı Projesi'ni**seçin.
 
-10. **Tamam**’ı seçin.
+10. **Tamam'ı**seçin.
 
-11. İçinde **Kod Düzenleyicisi**, eklentinizin kodunu yazın. İlk olarak, türetilen yeni bir ortak sınıf oluşturun <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>.
+11. Kod **Düzenleyicisi'nde**eklentinizin kodunu yazın. İlk olarak, türetilmiştir yeni bir <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>ortak sınıf oluşturun.
 
-12. Bir veya daha fazla olay işleyicileri içinde kod uygulayın. Örnek uygulama için aşağıdaki örnek bölümüne bakın.
+12. Olay işleyicilerinden biri veya daha fazlası içinde kod uygulayın. Örnek uygulama için aşağıdaki Örnek bölümüne bakın.
 
     - <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs>
 
@@ -79,40 +79,40 @@ Kendi sınıftan türetme tarafından özelleştirilmiş web performans testi ek
 
     - <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostTransactionEventArgs>
 
-13. Kodu yazdıktan sonra yeni projeyi derleyin.
+13. Kodu yazdıktan sonra yeni projeyi oluşturun.
 
-14. Bir web performans testi açın.
+14. Web performans testi açın.
 
-15. Web performans testi eklentisini eklemek için **Web Testi Eklentisi Ekle** araç.
+15. Web performans testi eklentisini eklemek için araç çubuğuna **Web Testi Eklentisi Ekle'yi** seçin.
 
-     **Web Testi Eklentisi Ekle** iletişim kutusu görüntülenir.
+     **Web Test Eklentisi Eklentisi** iletişim kutusu görüntülenir.
 
-16. Altında **bir eklenti seçin**seçin, web performans testi eklentisi sınıfı.
+16. **Eklenti seç'in**altında, web performans testi eklentisi sınıfınızı seçin.
 
-17. İçinde **özelliklerini çili eklenti** bölmesinde, çalışma zamanında kullanmak eklenti için başlangıç değerlerini ayarlayın.
+17. **Seçili eklenti** bölmesinin Özellikleri'nde, eklentinin çalışma zamanında kullanması için ilk değerleri ayarlayın.
 
     > [!NOTE]
-    > Eklentilerinizi istediğiniz sayıda özelliği getirebilir; bunları yalnızca genel, ayarlanabilir ve tam sayı, Boole veya dize gibi bir temel türden yapın. Özellikler penceresini kullanarak web başarım testi eklentisi özelliklerini daha sonra da değiştirebilirsiniz.
+    > Eklentilerinizden istediğiniz kadar özellik ortaya çıkarabilirsiniz; onları herkese açık, ayarlanabilir ve Tamsayı, Boolean veya String gibi bir taban türüne ait hale getirin. Özellikler penceresini kullanarak web performans testi eklentiözelliklerini daha sonra değiştirebilirsiniz.
 
-18. **Tamam**’ı seçin.
+18. **Tamam'ı**seçin.
 
-     Eklenti eklenir **Web testi eklentileri** klasör.
+     Eklenti, **Web Test Eklentileri** klasörüne eklenir.
 
     > [!WARNING]
-    > Bir web performans testi ya da eklentisini kullanan yük testi çalıştırdığınızda aşağıdakine benzer bir hata alabilirsiniz:
+    > Eklentinizi kullanan bir web performans testi veya yükleme testi çalıştırdığınızda aşağıdakilere benzer bir hata alabilirsiniz:
     >
-    > **İstek başarısız: \<eklenti > olayında özel durum: dosya veya derleme '\<"eklenti adı". dll dosyası >, sürüm =\<n. n. n. n >, kültür = neutral, PublicKeyToken = null ' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.**
+    > **İstek başarısız oldu: Eklenti> olayında \<özel durum:\<Dosya veya derleme ' "Eklenti adı".dll dosyası>, Sürüm=\<n.n.n>, Culture=neutral, PublicKeyToken=null' veya bağımlılıklarından birini yükleyemedi. Sistem belirtilen dosyayı bulamıyor.**
     >
-    > Eklentilerinizi birine kod değişikliği yapmanız ve yeni bir DLL sürümü oluşturursanız Bunun nedeni **(sürüm = 0.0.0.0)** , ancak eklenti hala özgün eklenti sürümüne başvuruyor. Bu sorunu gidermek için şu adımları izleyin:
+    > Bunun nedeni, eklentilerinizden herhangi birinde kod değişiklikleri yapar ve yeni bir DLL sürümü **(Sürüm=0.0.0.0)** oluşturursanız, ancak eklenti hala orijinal eklenti sürümüne başvurur. Bu sorunu gidermek için aşağıdaki adımları izleyin:
     >
-    > 1. Web performansı ve yük testi projesi içinde başvurularda bir uyarı görürsünüz. Kaldırın ve Başvuruyu eklenti DLL'nizden yeniden ekleyin.
-    > 2. Test veya uygun konumdan eklentiyi kaldırın ve yeniden ekleyin.
+    > 1. Web performansı ve yükleme testi projenizde, başvurularda bir uyarı görürsünüz. Başvuruyu çıkarın ve eklentiniz DLL'ye yeniden ekleyin.
+    > 2. Eklentiyi testinizden veya uygun konumdan çıkarın ve sonra geri ekleyin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, bir öğe ekleyen bir özelleştirilmiş web performans testi eklentisi oluşturur <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> temsil eden test yinelemesi.
+Aşağıdaki kod, test yinelemesini temsil <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> eden öğeye bir öğe ekleyen özelleştirilmiş bir web performans testi eklentisi oluşturur.
 
-Web performans testi çalıştırdıktan sonra bunu kullanarak eklenti adlı eklenen öğeyi gördüğünüz **TestIteratnionNumber** içinde **bağlam** sekmesinde **Web Performans Sonuçları Görüntüleyicisi** .
+Web performans testini çalıştırdıktan sonra, bu eklentiyi kullanarak **Web Performans Sonuçları Görüntüleyici'de** **Bağlam** sekmesinde **TestIteratnionNumber** adlı eklenen öğeyi görebilirsiniz.
 
 ```csharp
 using System;
@@ -166,9 +166,9 @@ namespace SampleRules
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>
-- [Özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Nasıl yapılır: istek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md)
-- [Kodu bir web performans testi için özel bir ayıklama kuralı](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
-- [Kodu bir web performans testi için özel doğrulama kuralı](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [Nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
-- [Oluşturma ve bir kodlanmış web performans testini çalıştırma](../test/generate-and-run-a-coded-web-performance-test.md)
+- [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Nasıl yapilir: İstek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md)
+- [Web performans testi için özel bir çıkarma kuralı kodlama](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Web performans testi için özel doğrulama kuralını kodlama](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
+- [Nasıl yapılsın: Yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
+- [Kodlanmış web performans testi oluşturma](../test/generate-and-run-a-coded-web-performance-test.md)

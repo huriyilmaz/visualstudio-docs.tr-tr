@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Profil Oluşturma Araçları çağrısı Izleme raporu oluşturma | Microsoft Docs'
+title: 'Nasıl Yapilir: Profil Oluşturma Araçları Arama İzleme Raporu | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,32 +13,32 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b184310d837193679a1a5eacf2fbae4ecf29caa
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778992"
 ---
-# <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Nasıl yapılır: profil oluşturma araçları çağrı izleme raporu oluşturma
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları için *çağrı izleme raporu* , her giriş için zamanlama bilgilerini, uygulamanızın işlevlerine ve her bir çıkış noktasına, işleviniz tarafından yapılan her çağrıya yönelik olarak listeler. Çağrı izleme raporları yalnızca izleme yöntemiyle toplandıysa profil oluşturma verileri için kullanılabilir.
+# <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Nasıl yapılır: Profil oluşturma araçları çağrı izleme raporu oluşturma
+Profil Oluşturma Araçları için *arama izleme raporu,* uygulamanızın işlevlerine her giriş ve çıkış noktası için zamanlama bilgilerini ve işleviniz tarafından diğer işlevlere yapılan her aramayı listeler. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Arama izleme raporları, yalnızca enstrümantasyon yöntemiyle toplanmışsa, verilerin profilini çıkarmak için kullanılabilir.
 
 > [!NOTE]
-> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]içinde çağrı izleme raporları görüntüleyemezsiniz. Bir virgülle ayrılmış değer oluşturmak için **VSPerfReport** komut satırı aracını kullanmanız gerekir (. *CSV*) veya. *XML* dosyası. Bu araç hakkında daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).
+> Arama izleme raporlarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' da görüntüleyemezsiniz. Virgülden ayrılmış bir değer oluşturmak için **VSPerfReport** komut satırı aracını kullanmanız gerekir (.* csv*) veya . *xml* dosyası. Bu araç hakkında daha fazla bilgi için [VSPerfReport'a](../profiling/vsperfreport.md)bakın.
 
-### <a name="to-create-a-call-trace-report"></a>Bir çağrı izleme raporu oluşturmak için
+### <a name="to-create-a-call-trace-report"></a>Çağrı izleme raporu oluşturmak için
 
-1. Bir **komut istemi** penceresi açın.
+1. Komut **İstemi penceresi** açın.
 
-2. Komut satırında, aşağıdaki komutu yazın:
+2. Komut isteminde aşağıdaki komutu yazın:
 
-     *Araçları yolu* **VSPerfReport** *vspfile*  **/calltrace [/XML]**
+     *ToolsPath* **VSPerfReport** *VSPFile*  **/CallTrace [/Xml]**
 
     |||
     |-|-|
-    |*Araçları yolu*|Profil Oluşturma Araçları komut satırı araçlarının yolu. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|
-    |*VSPFile*|Profil oluşturma verileri (. *VSP* veya. *vsps*) dosyasýný. Tam ve kısmi yollar kabul edilir.|
-    |Xml|XML biçimli bir rapor oluşturur.|
+    |*ToolsPath*|Profil Oluşturma Araçları komut satırı araçlarının yolu. Daha fazla bilgi için [bkz.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)|
+    |*VSPDosyası*|Profil oluşturma verileri (.* vsp* veya . *vsps*) Dosya. Tam ve kısmi yollar kabul edilir.|
+    |Xml|XML biçimlendirilmiş bir rapor oluşturur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
-- [Profil araçları API 'Leri](../profiling/profiling-tools-apis.md)
+- [Nasıl yapılır: Windows (ETW) verileri için Olay İzlemesini Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+- [Profil oluşturma araçları API'leri](../profiling/profiling-tools-apis.md)

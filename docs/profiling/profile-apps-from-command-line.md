@@ -1,6 +1,6 @@
 ---
-title: Komut satırından performansı ölçme
-description: Komut satırından uygulamanızdaki CPU performansını ve yönetilen bellek kullanımını ölçün.
+title: Performans komut satırından ölçme
+description: Uygulamanızdaki CPU performansını ve yönetilen bellek kullanımını komut satırından ölçün.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.topic: conceptual
@@ -15,70 +15,70 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
 ms.openlocfilehash: c109e2ae1db28f8e08ed7c34a7ee0871a6efe670
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77558125"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Komut satırından uygulama performansını ölçme
 
-Komut satırı araçlarını kullanarak bir uygulamayla ilgili performans bilgilerini toplayabilirsiniz.
+Komut satırı araçlarını kullanarak uygulama hakkında performans bilgileri toplayabilirsiniz.
 
-Bu makalede açıklanan örnekte, Microsoft Notepad için performans bilgilerini topladığınızda, ancak aynı yöntem herhangi bir işlemi profilde de kullanılabilir.
+Bu makalede açıklanan örnekte, Microsoft Not Defteri için performans bilgileri toplarsınız, ancak aynı yöntem herhangi bir işlemin profilini çıkarmak için kullanılabilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio 2019 Preview 3 veya sonraki sürümleri
+* Visual Studio 2019 Önizleme 3 veya sonraki sürümleri
 
-* Komut satırı araçlarıyla benzerlik
+* Komut satırı araçlarına aşinalık
 
-## <a name="collect-performance-data"></a>Performans verilerini topla
+## <a name="collect-performance-data"></a>Performans verilerini toplama
 
-Visual Studio tanılama CLı araçları kullanılarak profil oluşturma işlemi, toplayıcı aracılarından biri ile birlikte profil oluşturma aracını bir işleme ekleyerek işe yarar. Profil oluşturma aracını eklediğinizde, araç durduruluncaya kadar profil oluşturma verilerini yakalayan ve depolayan bir tanılama oturumuna başlarsınız ve bu, verilerin bir *. diagsession* dosyasına aktarılmasıdır. Ardından, sonuçları çözümlemek için bu dosyayı Visual Studio 'da açabilirsiniz.
+Visual Studio Diagnostics CLI araçlarını kullanarak profil oluşturma, profil oluşturma aracını, toplayıcı ajanlardan biriyle birlikte bir işleme ekleyerek çalışır. Profil oluşturma aracını eklediğinizde, araç durdurulana kadar profil oluşturma verilerini yakalayan ve depolayan ve bu noktada verilerin *bir .diagsession* dosyasına aktarıldığı bir tanılama oturumu başlarsınız. Daha sonra sonuçları analiz etmek için Visual Studio bu dosyayı açabilirsiniz.
 
-1. Not defteri 'ni başlatın ve sonra işlem KIMLIĞINI (PID) almak için Görev Yöneticisi 'Ni açın. Görev Yöneticisi 'nde, **Ayrıntılar** sekmesinde PID 'yi bulun.
+1. Not Defteri'ni başlatın ve işlem kimliğini (PID) almak için Görev Yöneticisi'ni açın. Görev Yöneticisi'nde **Ayrıntılar** sekmesinde PID'yi bulun.
 
-1. Bir komut istemi açın ve koleksiyon Aracısı yürütülebiliri ile dizinde geçiş yapın, genellikle burada.
+1. Bir komut istemi açın ve genellikle burada, koleksiyon aracısı çalıştırılabilir dizin değiştirin.
 
    ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\```
 
-1. Aşağıdaki komutu yazarak *Vsdiagnostics. exe* ' yi başlatın.
+1. Aşağıdaki komutu yazarak *VSDiagnostics.exe'yi* başlatın.
 
    ```cmd
    VSDiagnostics.exe start <id> /attach:<pid> /loadConfig:<configFile>
    ```
 
-   Dahil olması gereken bağımsız değişkenler şunlardır:
+   Dahil edilmesi gereken bağımsız değişkenler şunlardır:
 
-   * \<*kimliği*> koleksiyon oturumunu tanımlar. KIMLIK 1-255 arasında bir sayı olmalıdır.
-   * \<*pıd*>, profil atamak istediğiniz işlemin PID 'si, bu örnekte 1. ADıMDA bulduğunuz PID.
-   * \<*configfile*>, başlatmak istediğiniz koleksiyon aracısının yapılandırma dosyası. Daha fazla bilgi için bkz. [aracılar Için yapılandırma dosyaları](#config_file).
+   * \<*id*> Toplama oturumunu tanımlar. Kimlik 1-255 arasında bir numara olmalıdır.
+   * \<*pid*>, profilini istediğiniz işlemin PID, bu durumda adım 1 bulunan PID
+   * \<*configFile*>, başlatmak istediğiniz toplama aracısı için yapılandırma dosyası. Daha fazla bilgi [için aracılar için Yapılandırma dosyalarına](#config_file)bakın.
 
-1. Not defteri 'ni yeniden boyutlandırın veya bazı ilgi çekici profil bilgilerinin toplandığından emin olmak için buna bir şey yazın.
+1. Not Defteri'ni yeniden boyutlandırın veya bazı ilginç profil oluşturma bilgilerinin toplandıktan emin olmak için bir şey yazın.
 
-1. Aşağıdaki komutu yazarak koleksiyon oturumunu durdurun ve çıktıyı bir dosyaya gönderin.
+1. Toplama oturumunu durdurun ve aşağıdaki komutu yazarak çıktıyı bir dosyaya gönderin.
 
    ```cmd
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. Önceki komuttan dosya çıktısına gidin ve toplanan bilgileri incelemek için Visual Studio 'da açın.
+1. Önceki komuttan dosya çıktısına gidin ve toplanan bilgileri incelemek için Visual Studio'da açın.
 
-## <a name="config_file"></a>Aracı yapılandırma dosyaları
+## <a name="agent-configuration-files"></a><a name="config_file"></a>Aracı yapılandırma dosyaları
 
-Koleksiyon aracıları, ölçmeye çalıştığınız seçeneğe bağlı olarak farklı veri türlerini toplamanızı sağlayan, değiştirilebilir bileşenlerdir.
+Toplama Aracıları, ölçmeye çalıştığınız şeye bağlı olarak farklı veri türlerini toplayan değiştirilebilir bileşenlerdir.
 
-Kolaylık olması için, bu bilgileri bir aracı yapılandırma dosyasında saklayabilirsiniz. Yapılandırma dosyası, en az *. dll* ve com CLSID adını içeren bir *. JSON* dosyasıdır. Aşağıdaki klasörde bulabileceğiniz örnek yapılandırma dosyaları aşağıda verilmiştir:
+Kolaylık sağlamak için, bu bilgileri aracı yapılandırma dosyasında depolayabilirsiniz. Yapılandırma dosyası, *.dll* ve COM CLSID adını en az içeren bir *.json* dosyasıdır. Aşağıdaki klasörde bulabileceğiniz örnek yapılandırma dosyaları aşağıda verilmiştir:
 
 ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
-* [CPU kullanımı](../profiling/cpu-usage.md) profil oluşturma aracı için toplanan verilere karşılık gelen cpukullanım yapılandırması (temel/yüksek/düşük).
-* [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md)için toplanan verilere karşılık gelen DotNetObjectAlloc yapılandırması (temel/düşük).
+* [CPU](../profiling/cpu-usage.md) Kullanım profil oluşturma aracı için toplanan verilere karşılık gelen CpuKullanım yapılandırmaları (Taban/Yüksek/Düşük).
+* DotNetObjectAlloc yapılandırmaları (Base/Low), [.NET Nesne Ayırma aracı](../profiling/dotnet-alloc-tool.md)için toplanan verilere karşılık gelir.
 
-Taban/düşük/yüksek yapılandırma örnekleme hızına başvurur. Örneğin, düşük değer 100 örnek/saniye ve yüksek 4000 örnek/saniye.
+Taban/Düşük/Yüksek yapılandırmalar örnekleme oranına başvurur. Örneğin, Düşük 100 örnek/saniye ve Yüksek 4000 örnek/saniyedir.
 
-*Vsdiagnostics. exe* aracının bir koleksiyon aracısıyla çalışması için, uygun aracı IÇIN hem dll hem de com CLSID gerektirir ve aracının ek yapılandırma seçenekleri de olabilir. Yapılandırma dosyası olmadan bir aracı kullanıyorsanız, aşağıdaki komutta biçimini kullanın.
+*VSDiagnostics.exe* aracının bir toplama aracısıyla çalışması için, uygun aracı için hem DLL hem de COM CLSID gerekir ve aracının da ek yapılandırma seçenekleri olabilir. Yapılandırma dosyası olmayan bir aracı kullanıyorsanız, aşağıdaki komuttaki biçimi kullanın.
 
 ```cmd
 VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
@@ -86,4 +86,4 @@ VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;
 
 ## <a name="permissions"></a>İzinler
 
-Yükseltilmiş izinler gerektiren bir uygulamayı profil oluşturma için, bunu yükseltilmiş bir komut isteminden yapmanız gerekir.
+Yüksek izinler gerektiren bir uygulamanın profilini çıkarmak için, bunu yükseltilmiş bir komut isteminden yapmanız gerekir.

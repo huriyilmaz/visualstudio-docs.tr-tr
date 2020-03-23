@@ -8,26 +8,26 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: a043c2e1e79d629b32d46f0f54d233cd0ea9cb54
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594259"
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Visual Studio'da kod oluşturma özellikleri
 
-Visual Studio oluşturmak, düzeltme ve kodu yeniden düzenleme yardımcı olabilecek çok sayıda yolu vardır.
+Visual Studio'nun kod oluşturmanıza, düzeltmenize ve yeniden düzenlemenize yardımcı olmasının birçok yolu vardır.
 
 ## <a name="features"></a>Özellikler
 
-- Kullanabileceğiniz [kod parçacıkları](../ide/code-snippets.md) gibi bir şablon eklemek için bir [geçiş](/dotnet/csharp/language-reference/keywords/switch) blok veya [enum](/dotnet/csharp/language-reference/keywords/enum) bildirimi.
+- [Anahtar](/dotnet/csharp/language-reference/keywords/switch) bloğu veya [enum](/dotnet/csharp/language-reference/keywords/enum) bildirimi gibi bir şablon eklemek için [kod parçacıklarını](../ide/code-snippets.md) kullanabilirsiniz.
 
-- Kullanabileceğiniz [hızlı Eylemler](../ide/quick-actions.md) sınıfları ve özellikleri gibi bir kod oluşturmak veya bir yerel değişken ekleme. Hızlı eylemler için de kullanabilirsiniz [kodu geliştirecek](../ide/common-quick-actions.md), örneğin kaldırma gereksiz atamalar ve kullanılmayan değişkenler veya değişkenleri erişmeden önce null denetimleri Ekle.
+- Sınıflar ve özellikler gibi kod lar oluşturmak veya yerel bir değişken tanıtmak için [Hızlı Eylemler'i](../ide/quick-actions.md) kullanabilirsiniz. Ayrıca, [kodu geliştirmek](../ide/common-quick-actions.md)için Hızlı Eylemler'i (örneğin gereksiz dökümleri ve kullanılmayan değişkenleri kaldırmak veya değişkenlere erişmeden önce null denetimleri eklemek) için de kullanabilirsiniz.
 
-- Yapabilecekleriniz [yeniden düzenleme, kod](../ide/refactoring-in-visual-studio.md) bir değişken yeniden adlandırmak için Yöntem parametreleri yeniden Sırala veya bir tür, dosya adı ile eşitlemek birkaçıdır.
+- Bir değişkeni yeniden adlandırmak, yöntem parametrelerini yeniden adlandırmak için [kodu yeniden düzenleyebilir](../ide/refactoring-in-visual-studio.md) veya bir türü dosya adı ile eşitlemek için birkaç ını adlandırabilirsiniz.
 
 > [!NOTE]
-> Bazı özellikler yalnızca bulunan her dil hizmeti Visual Studio'da kendi kod oluşturma özellikleri sağlar. böylece C#, ve her ikisinde de kullanılabilir bazıları C# ve Visual Basic.
+> Visual Studio'daki her dil hizmeti kendi kod oluşturma özelliklerini sağlar, bu nedenle bazı özellikler yalnızca C#'da kullanılabilir ve bazıları hem C# hem de Visual Basic'te kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77557940"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
-Metin, para birimi ve IDE içindeki diğer değerler için kullanılan varsayılan dili ayarlar.
+IDE içindeki metin, para birimi ve diğer değerler için kullanılan varsayılan dili ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,21 +37,21 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
-- *LocaleID*
+- *Localeıd*
 
-  Gereklidir. Belirttiğiniz dilin Yerel ayar tanıtıcısı (LCıD).
+  Gereklidir. Belirttiğiniz dilin yerel tanımlayıcısı (LCID).
 
 ## <a name="remarks"></a>Açıklamalar
 
-IDE 'yi yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcıdır ve IDE, bu değişikliği **araçlar** > **seçenekler** > **ortam** > **Uluslararası ayarlar** > **dil** kutusunda gösterir.
+IDE yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında devam eder ve IDE bu değişikliği **Araçlar** > **Seçenekleri** > **Ortamı** > **Uluslararası Ayarlar** > **Dili** kutusunda gösterir.
 
-Belirtilen dil sisteminizde yoksa `/LCID` anahtarı yok sayılır.
+Belirtilen dil sisteminizde kullanılamıyorsa, `/LCID` anahtar yoksayılır.
 
-Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID 'Ler listelenmiştir.
+Aşağıdaki tabloda Visual Studio tarafından desteklenen dillerin LCID'leri listelenir.
 
 |Dil|LCID|
 |--------------|----------|
-|ve|2052|
+|Çince (Basitleştirilmiş)|2052|
 |seçenekleri yerine|1028|
 |Çekçe|1029|
 |Türkçe|1033|
@@ -68,7 +68,7 @@ Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID 'Ler l
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, IDE 'yi Ingilizce kaynak dizeleri ile yükler.
+Bu örnek, IDE'yi İngilizce kaynak dizeleriyle yükler.
 
 ```shell
 devenv /LCID 1033

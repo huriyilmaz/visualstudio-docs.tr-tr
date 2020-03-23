@@ -1,5 +1,5 @@
 ---
-title: Profil oluşturma araçları rapor görünümlerini Yalnızca kendi kodum görüntüleyecek şekilde filtrele
+title: Profil oluşturma araçlarını yalnızca Kodum'u görüntülemek için görünümleri filtreleme
 ms.date: 02/15/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -9,32 +9,32 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: db43caeb00ef8348eb1a7dd584c1b0b52001bc3f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778966"
 ---
-# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>Nasıl yapılır: Yalnızca kendi kodum göstermek için profil araçları rapor görünümlerini filtreleme
+# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>Nasıl yapilir: Profil oluşturma araçlarını yalnızca Kodum'u görüntülemek için görünümleri filtrele
 
-Visual Studio yalnızca uygulamış olduğunuz kodu görüntülemesi için performans raporları için filtreleme sağlar. Yalnızca kendi kodum adlı bu özellik varsayılan olarak etkindir. **Seçenekler** iletişim kutusundaki **yalnızca kendi kodum** seçeneği aracılığıyla yapılandırılır.
+Visual Studio, yalnızca uyguladığınız kodu görüntüleyebilmeleri için performans raporları için filtreleme sağlar. Yalnızca Kodum adlı bu özellik varsayılan olarak etkinleştirilir. **Seçenekler** iletişim kutusundaki **Yalnızca Kodum** seçeneği aracılığıyla yapılandırılır.
 
-## <a name="to-enable-just-my-code"></a>Yalnızca kendi kodum etkinleştirmek için
+## <a name="to-enable-just-my-code"></a>Just Kodumu etkinleştirmek için
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. **Seçenekler** iletişim kutusunda, **performans araçları** ' nı genişletin ve **genel** düğümünü seçin.
+2. **Seçenekler** iletişim kutusunda, **Performans Araçları'nı** genişletin ve ardından **Genel** düğümü seçin.
 
-3. **Genel ayarlar**altında, **Etkinleştir yalnızca kendi kodum** onay kutusunu seçin.
+3. **Genel ayarlar**altında, Yalnızca Kodum onay kutusunu **etkinleştir'i** seçin.
 
-## <a name="to-disable-just-my-code"></a>Yalnızca kendi kodum devre dışı bırakmak için
+## <a name="to-disable-just-my-code"></a>Sadece Kodumu devre dışı kıtır
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. **Seçenekler** iletişim kutusunda, **performans araçları** ' nı genişletin ve **genel** düğümünü seçin.
+2. **Seçenekler** iletişim kutusunda, **Performans Araçları'nı** genişletin ve ardından **Genel** düğümü seçin.
 
-3. **Genel ayarlar**altında, **yalnızca kendi kodum etkinleştir** onay kutusunu temizleyin.
+3. **Genel ayarlar**altında, Sadece Kodum onay kutusunu **etkinleştir'i** temizleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans araçları rapor görünümlerini özelleştirme](../profiling/customizing-performance-tools-report-views.md)
+[Performans araçlarını rapor görünümlerini özelleştirme](../profiling/customizing-performance-tools-report-views.md)

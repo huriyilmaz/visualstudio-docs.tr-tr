@@ -1,5 +1,5 @@
 ---
-title: 'DA0001: birleştirmeleri için StringBuilder kullanın | Microsoft Docs'
+title: 'DA0001: Concatenations için StringBuilder kullanın | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,31 +15,31 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d93de6ce901bfe4d72628f778b18420beb5ebee
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779512"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Birleştirmeler için StringBuilder kullanın
 
 |||
 |-|-|
-|Kural Kimliği|DA0001|
-|Kategori|.NET Framework kullanımı|
-|Profil oluşturma yöntemleri|Aşağıdakine<br /><br /> İzleme|
-|İleti|Dize birleştirmeleri için StringBuilder kullanmayı düşünün|
-|İleti türü|Uyarı|
+|Kural Id|DA0001|
+|Kategori|.NET Çerçeve Kullanımı|
+|Profil oluşturma yöntemleri|Örnekleme<br /><br /> İzleme|
+|İleti|String concatenations için StringBuilder kullanmayı düşünün|
+|Mesaj türü|Uyarı|
 
-## <a name="cause"></a>Sebep
- System. String. Concat çağrısı, profil oluşturma verilerinin önemli bir orandır. Birden çok kesimden dizeler oluşturmak için <xref:System.Text.StringBuilder> sınıfını kullanmayı düşünün.
+## <a name="cause"></a>Nedeni
+ System.String.Concat'e yapılan aramalar profil oluşturma verilerinin önemli bir kısmıdır. Birden çok <xref:System.Text.StringBuilder> kesimden dizeleri oluşturmak için sınıfı kullanmayı düşünün.
 
 ## <a name="rule-description"></a>Kural açıklaması
- <xref:System.String> nesne sabittir. Bu nedenle, dizedeki tüm değişiklikler yeni bir dize nesnesi ve özgün bir çöp toplama oluşturur. Bu davranış, String. Concat öğesini açık bir şekilde çağırıp veya + ya da + = gibi dize birleştirme işleçlerini kullanın. Bu yöntemler sık sık çağrılırsa (örneğin, sıkı bir döngüde bir dizeye karakterler eklendiğinde) program performansı azalabilir.
+ Bir <xref:System.String> nesne değişmez. Bu nedenle, dize herhangi bir değişiklik yeni bir dize nesnesi ve özgün çöp toplama oluşturur. String.Concat'i açıkça çağırıp çağırmadığınız veya + veya +=. Bu yöntemler sık çağrıldığında (örneğin, karakterlerin sıkı bir döngü içinde bir dizeye eklenmesi gibi) program performansı düşebilir.
 
- StringBuilder sınıfı kesilebilir bir nesnedir ve System. String 'ten farklı olarak, bu sınıfın bir örneğini değiştiren StringBuilder üzerindeki yöntemlerin çoğu aynı örneğe bir başvuru döndürür. Bir StringBuilder örneğine karakter ekleyebilir veya metin ekleyebilir ve yeni bir örnek ayırma ve özgün örneği silme gereksinimi olmadan örnekteki karakterleri kaldırabilir veya değiştirebilirsiniz.
+ StringBuilder sınıfı mutable bir nesnedir ve System.String'in aksine, StringBuilder'da bu sınıfın bir örneğini değiştiren yöntemlerin çoğu aynı örne bir başvuru döndürer. StringBuilder örneğine karakter ekleyebilir veya metin ekleyebilir ve yeni bir örnek ayırmaya ve özgün örneği silmeye gerek kalmadan örnekteki karakterleri kaldırabilir veya değiştirebilirsiniz.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Örnekleme profili verilerinin [Işlev ayrıntıları görünümüne](../profiling/function-details-view.md) gitmek için **hata listesi** penceresindeki iletiye çift tıklayın. Dize bitişinin en sık kullanımını yapan programın bölümlerini bulun. Sık kullanılan dize birleştirme işlemleri dahil olmak üzere karmaşık dize düzenlemeleri için StringBuilder sınıfını kullanın.
+## <a name="how-to-investigate-a-warning"></a>Bir uyarı nasıl araştırılı
+ Örnekleme profili verilerinin [İşlev Ayrıntıları Görünümü'ne](../profiling/function-details-view.md) gitmek için **Hata Listesi** penceresindeki iletiyi çift tıklatın. Programın dize birleşmesini en sık kullanan bölümlerini bulun. Sık sık dize concatenation işlemleri de dahil olmak üzere karmaşık dize işlemeleri için StringBuilder sınıfını kullanın.
 
- Dizeler ile çalışma hakkında daha fazla bilgi için, Microsoft desenleri ve uygulamalar kitaplığındaki [yönetilen kod performansını artırma başlıklı Bölüm 5](/previous-versions/msp-n-p/ff647790(v=pandp.10)) ' ın [dize işlemleri](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) bölümü.
+ Dizeleri ile nasıl çalışacağı hakkında daha fazla bilgi için, Bölüm 5 [String İşlemleri](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) bölümü - Microsoft Desenler ve Uygulamalar kitaplığında Yönetilen Kod [Performansını İyileştirme.](/previous-versions/msp-n-p/ff647790(v=pandp.10))

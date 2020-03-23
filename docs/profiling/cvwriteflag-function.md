@@ -1,5 +1,5 @@
 ---
-title: CvWriteFlag işlevi | Microsoft Docs
+title: CvWriteFlag Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3a5a388c8f838f182d2f1f3d3f56f84b8fbf10e6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62936686"
 ---
-# <a name="cvwriteflag-function"></a>CvWriteFlag işlevi
-Bayrak eşzamanlılık görselleştiricisi izleme dosyasına yazar.
+# <a name="cvwriteflag-function"></a>CvWriteFlag fonksiyonu
+Eşzamanlı Görüntüleyici izleme dosyasına bir bayrak yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -63,25 +63,25 @@ HRESULT CvWriteFlagExVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList` Bağımsız değişken listesi.
+ `argList`Bağımsız değişkenler listesi.
 
- `category` Kategori.
+ `category`Kategori.
 
- `level` Önem düzeyi.
+ `level`Önem düzeyi.
 
- `pMarkerSeries` Geçerli işaret serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
- `pMessage` İleti biçimi dizesi. NULL olamaz.
+ `pMessage`İleti biçimi dizesi. NULL olamaz.
 
-## <a name="return-value"></a>Dönüş değeri
- İletinin başarılı bir şekilde yazıldığında S_OK. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+## <a name="return-value"></a>Döndürülen değer
+ İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
  **Unicode:** CvWriteFlagExW, CvWriteFlagExVW
 
- <strong>ANSI:</strong>CvWriteFlagExA, CvWriteFlagExVA
+ <strong>ANSI:</strong> CvWriteFlagExA, CvWriteFlagExVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

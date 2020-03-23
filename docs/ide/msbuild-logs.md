@@ -1,5 +1,5 @@
 ---
-title: MSBuild sorunları için sorun giderme ve günlük oluşturma
+title: MSBuild sorunları için sorun giderme ve günlükoluşturma
 ms.date: 06/27/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -16,37 +16,37 @@ ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
 ms.openlocfilehash: 07b2c5e941d31ab1be853f9a89af94462329bdf2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77278801"
 ---
-# <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>MSBuild sorunları için sorun giderme ve günlük oluşturma
+# <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>MSBuild sorunları için sorun giderme ve günlükoluşturma
 
-Aşağıdaki yordamlar Visual Studio projenizde derleme sorunlarını tanılamanıza yardımcı olabilir ve gerekirse, araştırma için Microsoft 'a göndermek üzere bir günlük oluşturabilir.
+Aşağıdaki yordamlar Visual Studio projenizde sorun oluşturmatanısına ve gerekirse, araştırma için Microsoft'a gönderilecek bir günlük oluşturmanıza yardımcı olabilir.
 
-## <a name="a-property-value-is-ignored"></a>Özellik değeri yoksayıldı
+## <a name="a-property-value-is-ignored"></a>Özellik değeri yoksayılır
 
-Bir proje özelliği belirli bir değere ayarlanmış gibi görünüyorsa, ancak derleme üzerinde hiçbir etkisi yoksa, aşağıdaki adımları izleyin:
+Bir proje özelliği belirli bir değere ayarlanmış gibi görünüyorsa, ancak yapı üzerinde hiçbir etkisi yoksa, aşağıdaki adımları izleyin:
 
-1. Visual Studio sürümünüze karşılık gelen Visual Studio Geliştirici Komut İstemi açın.
-1. Çözüm yolu, yapılandırmanız ve proje adınız için değerleri değiştirdikten sonra aşağıdaki komutu çalıştırın:
+1. Open the Visual Studio Developer Command Prompt that corresponds to your version of Visual Studio.
+1. Çözüm yolunuz, yapılandırmanız ve proje adınız için değerleri yerine geçtikten sonra aşağıdaki komutu çalıştırın:
 
     ```cmd
     msbuild /p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /pp:out.xml MyProject.vcxproj
     ```
 
-    Bu komut bir "önceden işlenmiş" MSBuild proje dosyası (out. xml) oluşturur. Nerede tanımlandığını görmek için bu dosyada belirli bir özelliği arayabilirsiniz.
+    Bu komut bir "önceden işlenmiş" msbuild proje dosyası (out.xml) üretir. Bu dosyanın tanımlandığı yeri görmek için belirli bir özelliği arayabilirsiniz.
 
-Bir özelliğin son tanımı, yapılandırmanın tükettiği şeydir. Özellik iki kez ayarlanırsa ikinci değer birincinin üzerine yazar. Ayrıca, MSBuild projeyi çeşitli geçişlerde değerlendirir:
+Bir özelliğin son tanımı, yapının tükettiği şeydir. Özellik iki kez ayarlanırsa, ikinci değer ilkinin üzerine yazar. Ayrıca, MSBuild projeyi birkaç geçişte değerlendirir:
 
-- PropertyGroups ve Imports
+- PropertyGroups ve İthalat
 - ItemDefinitionGroups
-- ItemGroups
+- Öğe Grupları
 - Hedefler
 
-Bu nedenle, aşağıdaki sıra verilmiştir:
+Bu nedenle, aşağıdaki sırayla verilir:
 
 ```xml
 <PropertyGroup>
@@ -65,11 +65,11 @@ Bu nedenle, aşağıdaki sıra verilmiştir:
 </PropertyGroup>
 ```
 
-"Dosyam. txt" öğesi için "MyMetadata" değeri, derleme sırasında "B" olarak değerlendirilir ("A" değil ve boş değil)
+"MyFile.txt" öğesi için "MyMetadata" değeri yapı sırasında "B" olarak değerlendirilecektir ("A" değil ve boş değil)
 
-## <a name="incremental-build-is-building-more-than-it-should"></a>Artımlı derleme şundan daha fazla oluşturuyor
+## <a name="incremental-build-is-building-more-than-it-should"></a>Artımlı yapı olması gerekenden daha fazla inşa ediyor
 
-MSBuild, bir projeyi veya proje öğesini gereksiz şekilde yeniden derlense, ayrıntılı veya ikili derleme günlüğü oluşturun. Gereksiz yere oluşturulmuş veya derlenen dosyanın günlüğünde arama yapabilirsiniz. Çıktı aşağıdakine benzer olacaktır:
+MSBuild gereksiz yere bir proje veya proje öğesi yeniden oluşturuyorsa, ayrıntılı veya ikili bir yapı günlüğü oluşturun. Yapılan veya gereksiz yere derlenen dosya için günlük arama yapabilirsiniz. Çıktı şuna benzer:
 
 ```output
   Task "CL"
@@ -89,7 +89,7 @@ MSBuild, bir projeyi veya proje öğesini gereksiz şekilde yeniden derlense, ay
   Debug\Project1.tlog\CL.write.1.tlog
 ```
 
-Visual Studio IDE 'de oluşturuyorsanız (ayrıntılı çıkış penceresi ayrıntı düzeyi ile), **Çıkış penceresi** her projenin güncel olmayan nedenini görüntüler:
+Visual Studio IDE'de (ayrıntılı çıkış penceresi ayrıntılı olarak yapılı) bina oluşturuyorsanız, **Çıkış Penceresi** her projenin neden güncel olmadığını gösterir:
 
 ```output
 1>------ Up-To-Date check: Project: Project1, Configuration: Debug Win32 ------
@@ -97,10 +97,10 @@ Visual Studio IDE 'de oluşturuyorsanız (ayrıntılı çıkış penceresi ayrı
 1>Project is not up-to-date: build input 'f:\test\project1\project1\project1.h' was modified after the last build finished.
 ```
 
-## <a name="create-a-binary-msbuild-log"></a>İkili MSBuild günlüğü oluşturma
+## <a name="create-a-binary-msbuild-log"></a>İkili msbuild günlüğü oluşturma
 
-1. Visual Studio sürümünüz için Geliştirici Komut İstemi açın
-1. Komut isteminden aşağıdaki komutlardan birini çalıştırın. (Gerçek projenizi ve yapılandırma değerlerinizi kullanmayı unutmayın.):
+1. Visual Studio sürümünüz için Geliştirici Komut Komut Ustem'ini açın
+1. Komut isteminden aşağıdaki komutlardan birini çalıştırın. (Gerçek proje ve yapılandırma değerlerinizi kullanmayı unutmayın.):
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
@@ -112,13 +112,13 @@ Visual Studio IDE 'de oluşturuyorsanız (ayrıntılı çıkış penceresi ayrı
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
     ```
 
-MSBuild 'i çalıştırdığınız dizinde MSBuild. binlog dosyası oluşturulur. [MSBuild yapılandırılmış günlük görüntüleyicisini](http://www.msbuildlog.com/)kullanarak bunu görüntüleyebilir ve arayabilirsiniz.
+MSBuild'i çalıştırdığınız dizinde bir Msbuild.binlog dosyası oluşturulur. [Msbuild Yapılandırılmış Günlük Görüntüleyici'yi](http://www.msbuildlog.com/)kullanarak görüntüleyebilir ve arayabilirsiniz.
 
-## <a name="create-a-detailed-log"></a>Ayrıntılı günlük oluşturma
+## <a name="create-a-detailed-log"></a>Ayrıntılı bir günlük oluşturma
 
-1. Visual Studio ana menüsünde, **derleme ve çalıştırma** >**araçlar** > **Seçenekler** > **Projeler ve çözümler** ' e gidin.
-1. **MSBuild proje derlemesi ayrıntı düzeyini** her iki Birleşik giriş kutusunda **ayrıntılı** olarak ayarlayın. En üstteki bir denetim **Çıkış penceresi** ayrıntı düzeyi oluşturur ve ikinci bir denetim derleme sırasında her bir projenin ara dizininde oluşturulan \<ProjectName\>. log dosyasında ayrıntı oluşturur.
-2. Visual Studio Geliştirici komut isteminden, şu komutlardan birini girerek gerçek yol ve yapılandırma değerlerinizi değiştirin:
+1. Visual Studio ana menüsünden, **Araçlar** > **Seçenekleri** > **Projeler ve Çözümleri** >**Oluştur ve Çalıştır'a**gidin.
+1. Her iki açılan kutuda **ayrıntılı** **olarak Msbuild proje oluşturma ayrıntılı** ayarlayın. **Üstteki, Çıkış Penceresinde** yapı ayrıntılılığını denetler ve ikincisi proje adı \<\>.log dosyasında yapı özbosity oluşturur.
+2. Visual Studio geliştirici komut isteminden, gerçek yol ve yapılandırma değerlerinizi yerine bu komutlardan birini girin:
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
@@ -130,4 +130,4 @@ MSBuild 'i çalıştırdığınız dizinde MSBuild. binlog dosyası oluşturulur
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj
     ```
 
-    MSBuild 'i çalıştırdığınız dizinde MSBuild. log dosyası oluşturulur.
+    Msbuild'i çalıştırdığınız dizinde bir Msbuild.log dosyası oluşturulur.

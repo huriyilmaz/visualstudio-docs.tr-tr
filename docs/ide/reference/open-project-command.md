@@ -16,15 +16,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 97c1034fbbafa04af2d62526fdbb48812d64e050
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565818"
 ---
-# <a name="open-project-command"></a>Proje Aç komutu
+# <a name="open-project-command"></a>Proje komutunu aç
 
-Mevcut bir projeyi veya çözümü açar.
+Varolan bir projeyi veya çözümü açar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,24 +32,24 @@ Mevcut bir projeyi veya çözümü açar.
 File.OpenProject filename
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `filename`
 
-Gerekli. Açılacak proje veya çözümün tam yolu ve dosya adı.
+Gereklidir. Projenin veya çözümün tam yol ve dosya adı açılır.
 
 > [!NOTE]
-> `filename` bağımsız değişkeninin sözdizimi, boşluk içeren yolların tırnak işaretleri kullanmasını gerektirir.
+> Bağımsız değişkenin `filename` sözdizimi, boşluk içeren yolların tırnak işaretleri kullanmasını gerektirir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Otomatik tamamlama, yazarken doğru yolu ve dosya adını bulmaya çalışır.
+Otomatik tamamlama, siz yazarken doğru yolu ve dosya adını bulmaya çalışır.
 
-Hata ayıklanırken bu komut kullanılamaz.
+Hata ayıklama sırasında bu komut kullanılamaz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Visual Basic projesi **test1**açar:
+Aşağıdaki örnek, Visual Basic proje **Test1'i**açar:
 
 ```cmd
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"
@@ -59,5 +59,5 @@ Aşağıdaki örnek, Visual Basic projesi **test1**açar:
 
 - [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Bul/Komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)

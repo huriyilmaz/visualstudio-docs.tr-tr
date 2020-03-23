@@ -1,5 +1,5 @@
 ---
-title: ItemMetadata öğesi (MSBuild) | Microsoft Docs
+title: ItemMetadata Element (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633622"
 ---
-# <a name="itemmetadata-element-msbuild"></a>ItemMetadata öğesi (MSBuild)
+# <a name="itemmetadata-element-msbuild"></a>ItemMetaveri öğesi (MSBuild)
 
-Öğe meta veri değerini içeren Kullanıcı tanımlı bir öğe meta veri anahtarı içerir. Bir öğe herhangi bir sayıda meta veri anahtar-değer çifti içerebilir.
+Madde meta veri değerini içeren kullanıcı tanımlı madde meta veri anahtarı içerir. Bir öğenin herhangi bir sayıda meta veri anahtar değeri çifti olabilir.
 
- \<Proje > \<ItemGroup > \<öğesi >
+ \<Proje \<> ItemGroup> \<Madde>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,7 +43,7 @@ ms.locfileid: "77633622"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -53,17 +53,17 @@ ms.locfileid: "77633622"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlayan Kullanıcı tanımlı bir öğe.|
+|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işleminin girdilerini tanımlayan kullanıcı tanımlı bir öğe.|
 
 ## <a name="text-value"></a>Metin değeri
 
  Metin değeri isteğe bağlıdır.
 
- Bu metin, metin veya XML olabilen öğe meta veri değerini belirtir.
+ Bu metin, metin veya XML olabilecek madde meta veri değerini belirtir.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, öğe `CSFile``fr` değer ile `Culture` meta verilerin nasıl ekleneceğini gösterir.
+ Aşağıdaki kod örneği, öğeye `Culture` `fr` `CSFile`değer içeren meta verilerin nasıl ekleyeceğini gösterir.
 
 ```xml
 <ItemGroup>

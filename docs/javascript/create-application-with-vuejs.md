@@ -1,6 +1,6 @@
 ---
-title: Node.js kullanarak bir Vue.js uygulaması oluşturma
-description: Vue.js framework kullanarak Visual Studio'da Node.js uygulamaları oluşturun
+title: Node.js kullanarak bir Vue.js uygulaması oluşturun
+description: Vue.js çerçevesini kullanarak Visual Studio'da Düğüm.js uygulamaları oluşturabilirsiniz
 ms.custom: seodec18
 ms.date: 07/06/2018
 ms.topic: conceptual
@@ -13,101 +13,101 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: af781f5735a3539d8b0e2d098bb9252bc60193fc
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "70180274"
 ---
-# <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için node.js araçları kullanarak Vue.js uygulama oluşturma
+# <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için Node.js Tools kullanarak bir Vue.js uygulaması oluşturun
 
-Visual Studio, [Vue. js](https://vuejs.org/) çerçevesiyle JavaScript ya da TypeScript içindeki uygulama geliştirmeyi destekler.
+Visual Studio, JavaScript veya TypeScript'te [Vue.js](https://vuejs.org/) çerçevesi ile uygulama geliştirmeyi destekler.
 
-Aşağıdaki yeni özellikleri, Visual Studio'da Vue.js uygulama geliştirmeyi destekler:
+Aşağıdaki yeni özellikler Visual Studio'da Vue.js uygulama geliştirmeyi desteklemektadır:
 
-* Betik, stil ve şablon bloklarında desteği *.vue* dosyaları
-* Tanıma `lang` özniteliği *.vue* dosyaları
-* VUE.js proje ve dosya şablonları
+* *.vue* dosyalarındaki Komut Dosyası, Stil ve Şablon blokları için destek
+* `lang` *.vue* dosyalarındaki özniteliğin tanınması
+* Vue.js proje ve dosya şablonları
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio 2017 sürüm 15,8 veya sonraki bir sürümün yüklü olması ve **Node. js geliştirme** iş yüküne sahip olmanız gerekir.
+* Visual Studio 2017 sürüm 15.8 veya daha sonraki bir sürümü yüklü ve **Node.js geliştirme** iş yükü olmalıdır.
 
     > [!IMPORTANT]
-    > Bu makale, yalnızca Visual Studio 2017 sürüm 15,8 ' den başlayarak kullanılabilen özellikleri gerektirir.
+    > Bu makale, yalnızca Visual Studio 2017 sürüm 15.8'den başlayarak kullanılabilen özellikler gerektirir.
 
     ::: moniker range=">=vs-2019"
-    Gerekli bir sürüm yüklü değilse, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' i yükleme.
+    Gerekli bir sürüm zaten yüklenmediyse Visual [Studio 2019'u](https://visualstudio.microsoft.com/downloads)yükleyin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+    Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) gidin ve ücretsiz olarak yükleyin.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. Seçin **Node.js geliştirme** iş yükü, ardından **Değiştir**.
+    İş yükünü yüklemeniz gerekiyorsa ancak visual studio'ya zaten sahipseniz, **Visual** > Studio Installer'ı açan**Araçlar Ve Özellikler...'** a gidin. **Düğüm.js geliştirme** iş yükünü seçin ve sonra **Değiştir'i**seçin.
 
-* ASP.NET Core projesi oluşturmak için ASP.NET ve web geliştirme ve .NET Core çoklu platform geliştirme iş yükleri yüklü olması gerekir.
+* ASP.NET Core projesini oluşturmak için ASP.NET ve web geliştirme ve .NET Core platform lar arası geliştirme iş yüklerini yüklü yormuş olmalısınız.
 
-* Node.js çalışma zamanı yüklü olması gerekir.
+* Düğüm.js çalışma saatini yüklemelisiniz.
 
-    LTS sürümünden yüklü yoksa, yükleme [Node.js](https://nodejs.org/en/download/) Web sitesi. Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi yüklü çalışma zamanı özellikleri sayfasında başvurmak için yapılandırabilirsiniz. (Bir proje oluşturduğunuzda, proje düğümüne sağ tıklayın ve seçin **özellikleri**).
+    Yüklü değilseniz, [Node.js](https://nodejs.org/en/download/) web sitesinden LTS sürümünü yükleyin. Genel olarak, Visual Studio yüklenen Node.js çalışma süresini otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi özellikler sayfasındayüklü çalışma süresine başvurmak üzere yapılandırabilirsiniz. (Bir proje oluşturduktan sonra, proje düğümüne sağ tıklayın ve **Özellikler'i**seçin).
 
-## <a name="create-a-vuejs-project-using-a-template"></a>Bir şablon kullanarak Vue.js projesi oluşturma
+## <a name="create-a-vuejs-project-using-a-template"></a>Şablon kullanarak Bir Vue.js projesi oluşturma
 
-Yeni bir proje oluşturmak için yeni Vue.js şablonları kullanabilirsiniz. Şablon kullanımı başlamanın en kolay yoludur. Ayrıntılı adımlar için bkz. [ilk Vue.js uygulamanızı oluşturmak için Visual Studio](../javascript/quickstart-vuejs-with-nodejs.md).
+Yeni bir proje oluşturmak için yeni Vue.js şablonlarını kullanabilirsiniz. Şablonun kullanımı başlamak için en kolay yoldur. Ayrıntılı adımlar [için ilk Vue.js uygulamanızı oluşturmak için Visual Studio'u kullanın'](../javascript/quickstart-vuejs-with-nodejs.md)a bakın.
 
-## <a name="create-a-vuejs-project-with-aspnet-core-and-the-vue-cli"></a>ASP.NET Core ve Vue CLI ile bir Vue.js projesi oluşturma
+## <a name="create-a-vuejs-project-with-aspnet-core-and-the-vue-cli"></a>ASP.NET Core ve Vue CLI ile bir Vue.js projesi oluşturun
 
-VUE.js hızla yapı iskelesi projeleri için resmi bir CLI sağlar. Uygulamanızı oluşturmak için CLI'yı kullanmak istiyorsanız, geliştirme ortamınızı ayarlamak için bu makaledeki adımları izleyin.
+Vue.js hızlı iskele projeleri için resmi bir CLI sağlar. Uygulamanızı oluşturmak için CLI'yi kullanmak istiyorsanız, geliştirme ortamınızı ayarlamak için bu makaledeki adımları izleyin.
 
 > [!IMPORTANT]
-> Bu adımları biraz deneyim Vue.js framework ile zaten sahip olduğunuzu varsaymaktadır. Aksi takdirde, lütfen [Vue.js](https://vuejs.org/) altyapısı hakkında daha fazla bilgi edinmek için.
+> Bu adımlar zaten Vue.js çerçeve ile bazı deneyime sahip olduğunu varsayalım. Değilse, çerçeve hakkında daha fazla bilgi edinmek için [lütfen Vue.js](https://vuejs.org/) adresini ziyaret edin.
 
 ### <a name="create-a-new-aspnet-core-project"></a>Yeni bir ASP.NET Core projesi oluşturma
 
-Bu örnekte, boş bir ASP.NET Core uygulaması (C#) kullanın. Ancak, çeşitli projeler ve programlama dilleri arasından seçebilirsiniz.
+Bu örnekiçin, boş bir ASP.NET Çekirdek Uygulaması (C#) kullanırsınız. Ancak, çeşitli projeler ve programlama dilleri arasından seçim yapabilirsiniz.
 
-#### <a name="create-an-empty-project"></a>Boş bir proje oluşturun
+#### <a name="create-an-empty-project"></a>Boş proje oluşturma
 
-1. Visual Studio 'Yu açın ve yeni bir proje oluşturun.
+1. Visual Studio'u açın ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **asp.net**yazıp **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, **istemci uygulaması**adını yazın ve ardından **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama kutusunu açmak için **Ctrl + Q** yazın, **asp.net**yazın, ardından yeni bir ASP.NET Core Web **Uygulaması oluştur'u**seçin. Görünen iletişim kutusunda, **istemci**adı uygulamasını yazın ve ardından **Oluştur'u**seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan seçin **dosya** > **yeni** > **proje**. **Yeni proje** iletişim kutusunun sol bölmesinde, **görsel C#** ' i genişletin ve ardından **Web**' i seçin. Orta bölmede **ASP.NET Core Web uygulaması**' nı seçin, **istemci uygulaması**adını yazın ve ardından **Tamam**' ı seçin.
+    Üst menü çubuğundan **Yeni** > **New** > **Dosya Yı**seçin. **Yeni Proje** iletişim kutusunun sol bölmesinde **Visual C#** seçeneğini genişletin ve **ardından Web'i**seçin. Orta bölmede, **Core Web Application ASP.NET**seçin , adı **istemci-app**yazın , ve sonra **Tamam**seçin.
     ::: moniker-end
 
-    Görmüyorsanız **ASP.NET Core Web uygulaması** proje şablonu, yüklemelisiniz **ASP.NET ve web geliştirme** iş yükü ve. **NET Core** geliştirme iş yükü ilk. Workload(s) yüklemek için tıklayın **açık Visual Studio yükleyicisi** sol bölmesinde bağlantıyı **yeni proje** iletişim kutusu (seçin **dosya**  >  **Yeni** > **proje**). Visual Studio Yükleyicisi'ni başlatır. Gerekli iş yüklerini seçin.
+    **ASP.NET Çekirdek Web Uygulaması** proje şablonu görmüyorsanız, ASP.NET ve web **geliştirme** iş yükünü ve . **Önce NET Core** geliştirme iş yükü. İş yükünü(ler) yüklemek için, **Yeni Proje** iletişim kutusunun sol bölmesinde Görsel **Stüdyo Yükleyici** Aç bağlantısını tıklatın **(Dosya** > **Yeni** > **Proje'yi**seçin). Visual Studio Installer başlattı. Gerekli iş yüklerini seçin.
 
-1. Seçin **boş**ve ardından **Tamam**.
+1. **Boş'u**seçin ve ardından **Tamam'ı**tıklatın.
 
-    Visual Studio Çözüm Gezgini'nde (sağ bölme) açar Proje oluşturur.
+    Visual Studio, Solution Explorer'da (sağ bölme) açılan projeyi oluşturur.
 
-#### <a name="configure-the-project-startup-file"></a>Proje başlangıç dosyasını yapılandırın
+#### <a name="configure-the-project-startup-file"></a>Proje başlatma dosyasını yapılandırma
 
-* Dosyayı açmak *./Startup.cs*ve yapılandırma yöntemine aşağıdaki satırları ekleyin:
+* *./Startup.cs*dosyasını açın ve Yapılandırma yöntemine aşağıdaki satırları ekleyin:
 
     ```csharp
     app.UseDefaultFiles(); // Enables default file mapping on the web root.
     app.UseStaticFiles(); // Marks files on the web root as servable.
     ```
 
-### <a name="install-the-vue-cli"></a>' % S'vue CLI yükleme
+### <a name="install-the-vue-cli"></a>vue CLI'yi yükleyin
 
-CLI vue npm modülünü yüklemek için bir komut istemi açıp `npm install --g vue-cli` veya `npm install -g @vue/cli` (şu anda beta sürümündeki) sürüm 3.0 için.
+Vue-cli npm modüllerini yüklemek için bir `npm install --g vue-cli` komut `npm install -g @vue/cli` istemi ve yazın veya sürüm 3.0 (şu anda beta da) açın.
 
 ### <a name="scaffold-a-new-client-application-using-the-vue-cli"></a>İskele vue CLI kullanarak yeni bir istemci uygulaması
 
-1. Komut istemine gidin ve geçerli dizini, proje kök klasörüne değiştirin.
+1. Komut istemine gidin ve geçerli dizini proje kök klasörünüz olarak değiştirin.
 
-1. Tür `vue init webpack client-app` ve ek soruları yanıtlamak için istendiğinde adımları izleyin.
+1. Ek `vue init webpack client-app` soruları yanıtlamak istendiğinde adımları yazın ve izleyin.
 
     > [!NOTE]
-    > *. Vue* dosyaları için, dönüştürme yapmak Için WebPack veya bir yükleyiciyle benzer bir çerçeve kullanmanız gerekir. TypeScript ve Visual Studio, *. Vue* dosyalarını derlemeyi bilmez. Aynı paket paketleme için de geçerlidir; TypeScript, ES2015 modüllerinin (yani, `import` ve `export` deyimlerinin) tarayıcıya yüklenecek tek bir son *. js* dosyasına nasıl dönüştürüleceğini bilmez. Burada, WebPack burada en iyi seçenektir. MSBuild kullanarak bu işlemi Visual Studio 'Nun içinden bir sürücüye yönlendirmek için Visual Studio şablonundan başlamanız gerekir. Mevcut olduğunda, yerleşik Vue. js geliştirme için ASP.NET şablonu yoktur.
+    > *.vue* dosyaları için, dönüşüm yapmak için WebPack veya bir yükleyici ile benzer bir çerçeve kullanmanız gerekir. TypeScript ve Visual Studio *.vue* dosyalarını nasıl derlenen bilmez. Aynı sıfat, donatçıiçin de geçerlidir; TypeScript, ES2015 modüllerini (yani `import` ve `export` deyimleri) tarayıcıda yüklemek üzere tek bir son *.js* dosyasına nasıl dönüştürüldüğünü bilmiyor. Yine, WebPack burada en iyi seçimdir. Bu işlemi MSBuild'i kullanarak Visual Studio'nun içinden yönlendirmek için Visual Studio şablonundan başlamanız gerekir. Şu anda, Vue.js geliştirme in-the-box için ASP.NET bir şablon yoktur.
 
-#### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>Web yapılandırmasını wwwroot oluşturulmuş dosyaları çıkış değiştirin
+#### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>Web paketi yapılandırmasını, yerleşik dosyaları wwwroot'a çıktıracak şekilde değiştirin
 
-* *./Client-App/config/Index.js*dosyasını açın ve `build.index` değiştirin ve Wwwroot yolu olarak `build.assetsRoot`:
+* *./client-app/config/index.js*dosyasını açın ve `build.index` `build.assetsRoot` wwwroot yolunu değiştirin:
 
     ```js
     // Template for index.html
@@ -117,40 +117,40 @@ CLI vue npm modülünü yüklemek için bir komut istemi açıp `npm install --g
     assetsRoot: path.resolve(__dirname, '../../wwwroot'),
     ```
 
-#### <a name="indicate-the-project-to-build-the-client-app-each-time-that-a-build-is-triggered"></a>Her derleme tetiklendiğinde istemci uygulamasını derlemek için projeyi belirtin
+#### <a name="indicate-the-project-to-build-the-client-app-each-time-that-a-build-is-triggered"></a>Bir yapı tetikleninher tetikleninher olduğunda istemci uygulamasını oluşturmak için projeyi göster
 
-1. Visual Studio'da Git **proje** > **özellikleri** > **Build Events**.
+1. Visual Studio'da **Project** > **Properties** > **Build Events'e**gidin.
 
-1. Üzerinde **derleme öncesi olay komut satırı**, türü `npm --prefix ./client-app run build`.
+1. **Önceden yapılan olay komut satırında**, yazın. `npm --prefix ./client-app run build`
 
-#### <a name="configure-webpacks-output-module-names"></a>Web'ın çıktı modül adlarını yapılandırın
+#### <a name="configure-webpacks-output-module-names"></a>Webpack'in çıktı modülü adlarını yapılandırma
 
-* *./Client-App/Build/WebPack.Base.conf.js*dosyasını açın ve çıkış özelliğine aşağıdaki özellikleri ekleyin:
+* *./client-app/build/webpack.base.conf.js*dosyasını açın ve çıktı özelliğine aşağıdaki özellikleri ekleyin:
 
     ```js
     devtoolModuleFilenameTemplate: '[absolute-resource-path]',
     devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
     ```
 
-### <a name="add-typescript-support-with-the-vue-cli"></a>Vue CLI ile TypeScript desteği eklendi
+### <a name="add-typescript-support-with-the-vue-cli"></a>Vue CLI ile TypeScript desteği ekle
 
-Bu adımlar vue-şu anda beta sürümünde olan CLI 3.0 gerektirir.
+Bu adımlar şu anda beta vue-cli 3.0 gerektirir.
 
-1. Komut istemine gidin ve geçerli dizin proje kök klasörüyle değiştirin.
+1. Komut istemine gidin ve geçerli dizini proje kökü klasörüne değiştirin.
 
-1. Tür `vue create client-app`ve ardından **özellikleri el ile seçin**.
+1. Yazın `vue create client-app`ve ardından **Özellikleri El Ile Seçin.**
 
-1. Seçin **Typescript**ve ardından diğer istenen seçenekleri belirleyin.
+1. **Typescript'i**seçin ve ardından istenen diğer seçenekleri seçin.
 
 1. Kalan adımları izleyin ve soruları yanıtlayın.
 
-#### <a name="configure-a-vuejs-project-for-typescript"></a>TypeScript için Vue.js proje yapılandırma
+#### <a name="configure-a-vuejs-project-for-typescript"></a>TypeScript için Bir Vue.js projesini yapılandırma
 
-1. *./Client-App/tsconfig.exe* dosyasını açın ve derleyici seçeneklerine `noEmit:true` ekleyin.
+1. *./client-app/tsconfig.json* dosyasını açın `noEmit:true` ve derleyici seçeneklerine ekleyin.
 
-    Bu seçenek ayarlayarak, projenizi Visual Studio'da derleyin her zaman karmaşık hale getirmekten kaçının.
+    Bu seçeneği ayarlayarak, Visual Studio'da her oluşturduğunuzda projenizi darmadağın etmekten kaçınırsınız.
 
-1. Sonra, *./Client-App/* içinde *Vue. config. js* dosyası oluşturun ve aşağıdaki kodu ekleyin.
+1. Ardından, *./client-app/* dosyasında *bir vue.config.js* dosyası oluşturun ve aşağıdaki kodu ekleyin.
 
     ```js
     module.exports = {
@@ -165,13 +165,13 @@ Bu adımlar vue-şu anda beta sürümünde olan CLI 3.0 gerektirir.
     };
     ```
 
-    Yukarıdaki kod, Web yapılandırır ve wwwroot klasörü ayarlar.
+    Önceki kod webpaketini yapılandırır ve wwwroot klasörünü ayarlar.
 
-#### <a name="build-with-vue-cli-30"></a>VUE-cli 3.0 ile derleme
+#### <a name="build-with-vue-cli-30"></a>Vue-cli 3.0 ile inşa edin
 
-Vue-CLI 3,0 ile ilgili bilinmeyen bir sorun, yapı sürecinin otomatikleştirilmesine engel olabilir. Wwwroot klasörünü yenilemeye her seferinde, komutunu istemci uygulaması klasöründe `npm run build` çalıştırmanız gerekir.
+Vue-cli 3.0 ile bilinmeyen bir sorun yapı işleminin otomatikleştirilmesiengelleyebilir. Wwwroot klasörünü her yenilemeye çalıştığınızda, istemci uygulaması `npm run build` klasöründeki komutu çalıştırmanız gerekir.
 
-Alternatif olarak, ASP.NET proje özelliklerini kullanarak Vue-CLI 3,0 projesini derleme öncesi bir olay olarak oluşturabilirsiniz. Projeye sağ tıklayın, **Özellikler**' i seçin ve **derleme sekmesine, derleme** **öncesi olay komut satırı** metin kutusuna aşağıdaki komutları ekleyin.
+Alternatif olarak, ASP.NET proje özelliklerini kullanarak bir ön yapı olay olarak vue-cli 3.0 proje oluşturabilirsiniz. Projeyi sağ tıklatın, **Özellikler'i**seçin ve Yapı **sekmesine,** **Önceden Yapı olay komut satırı** metin kutusuna aşağıdaki komutları ekleyin.
 
 ``` cmd
 cd ./client-app
@@ -181,10 +181,10 @@ cd ../
 
 ## <a name="limitations"></a>Sınırlamalar
 
-* `lang` öznitelik yalnızca, JavaScript ve TypeScript dilleri de destekler. Kabul edilen değerler şunlardır: js, jsx, ts ve tsx.
-* `lang` öznitelik, şablon veya stil etiketler ile çalışmaz.
-* Hata ayıklamayı engelleyen *.vue* dosyaları, önceden işlenmiş doğası nedeniyle desteklenmiyor.
-* TypeScript tanımıyor *.vue* modülleri olarak dosyaları. TypeScript ne söylemek için aşağıdaki gibi bir kod içeren bir dosyayı duyduğunuz *.vue* dosyaları aramak gibi (vue-cli 3.0 şablonu bu dosya zaten içerir).
+* `lang`öznitelik yalnızca JavaScript ve TypeScript dillerini destekler. Kabul edilen değerler şunlardır: js, jsx, tsx ve tsx.
+* `lang`öznitelik şablon veya stil etiketleri ile çalışmıyor.
+* *.vue* dosyalarındaki komut dosyası bloklarının hata ayıklanması, önceden işlenmiş yapısı nedeniyle desteklenmez.
+* TypeScript *.vue* dosyalarını modül olarak tanımaz. TypeScript'e *.vue* dosyalarının nasıl göründüğünü söylemek için aşağıdaki gibi kod içeren bir dosyaya ihtiyacınız vardır (vue-cli 3.0 şablonu zaten bu dosyayı içerir).
 
     ```js
     // ./client-app/vue-shims.d.ts
@@ -194,10 +194,10 @@ cd ../
     }
     ```
 
-* Komutu çalıştırmadan `npm run build` proje özelliklerinde bir derleme öncesi olay vue-cli 3.0 kullanırken işe yaramazsa gibi.
+* Vue-cli 3.0 kullanırken komutu `npm run build` proje özelliklerinde önceden inşa olayı olarak çalıştırmak çalışmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Vue Başlarken Kılavuzu](https://vuejs.org/v2/guide).
+- [Vue kılavuzu başlar](https://vuejs.org/v2/guide).
 - [Vue CLI projesi](https://github.com/vuejs/vue-cli).
-- [Web paketi yapılandırma belgeleri](https://webpack.js.org/configuration/).
+- [Webpack yapılandırma belgeleri](https://webpack.js.org/configuration/).

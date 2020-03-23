@@ -1,5 +1,5 @@
 ---
-title: Bir dosya adı bir türüyle eşleşecek şekilde yeniden adlandırın
+title: Bir türle eşleşecek şekilde dosya adını yeniden adlandır
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -11,59 +11,59 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5b7a42a174fecd078e804f2ab3c35fbe442364a6
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594402"
 ---
-# <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Bir dosya adı veya türü bir yeniden düzenleme için bir dosya adı için bir tür eşitleme
+# <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Bir türü dosya adıyla veya dosya adıyla tür yeniden düzenlemeyle eşitleme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** bir tür dosya adı eşleşecek şekilde yeniden adlandırın ya da bir dosya adı içerdiği türüyle eşleşecek şekilde yeniden adlandırmak sağlar.
+**Ne:** Dosya adıyla eşleşecek bir türü yeniden adlandırmanızı veya içerdiği türle eşleşecek şekilde bir dosya adını yeniden adlandırmanızı sağlar.
 
-**Ne zaman:** bir dosya veya türü yeniden adlandırmış ve karşılık gelen dosya ya da türü eşleşecek şekilde güncelleştirildi henüz yapmadıysanız.
+**Ne zaman:** Bir dosyanın veya yazın adını yeniden adlandırdın ve ilgili dosyayı veya türü eşleşecek şekilde henüz güncelleştirmediniz.
 
-**Neden:** farklı bir ad veya tam tersi, aradığınızı bulmak zor, bir dosya türü verme. Türü veya dosya adı yeniden adlandırarak kodu daha okunabilir ve giderek daha kolay hale gelir.
+**Neden:** Bir türü farklı bir ada veya tam tersi bir dosyaya yerleştirmek, aradığınızı bulmak zordur. Türü veya dosya adını yeniden adlandırarak, kod daha okunabilir ve gezinmek daha kolay hale gelir.
 
 > [!NOTE]
-> Bu yeniden düzenleme, .NET Standard ve .NET Core projeleri için henüz kullanılamaz.
+> Bu yeniden düzenleme henüz .NET Standard ve .NET Core projeleri için kullanılamaz.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. Vurgulama veya eşitlenecek türü adını metin imleci yerleştirin:
+1. Eşitlemek için metin imlecini türün adının içine vurgulayın veya yerleştirin:
 
    - C#:
 
-       ![Vurgulanan kodu:C#](media/synctype-highlight-cs.png)
+       ![Vurgulanan kod - C #](media/synctype-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu - Visual Basic](media/synctype-highlight-vb.png)
+       ![Vurgulanan kod - Visual Basic](media/synctype-highlight-vb.png)
 
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **için dosyayı yeniden adlandır *TypeName*.cs** önizleme penceresi açılan menüsü'nden burada *TypeName* seçtiğiniz türünün adı.
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve seçin **yeniden adlandırmak için türü _Filename_**  önizleme penceresi açılan menüsü'nden burada *Filename* geçerli dosya adıdır.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Çarpanlara Yönelikler** menüsünü tetiklemek ve *TypeName'in* seçtiğiniz türün adı olduğu Önizleme penceresi açılır penceresinden ** *TypeName*.cs** dosyasına yeniden adlandır'ı seçin.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Çarpanlara Ayırmalar** menüsünü tetiklemek ve Dosya *Adının* geçerli dosyanın adı olduğu Önizleme penceresinden **Dosya _Adı'na_ Yeniden Ad** türünü seçin.
    - **Fare**
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** seçin ve menü **için dosyayı yeniden adlandır *TypeName*.cs** önizleme penceresi açılan menüsü'nden burada *TypeName* seçtiğiniz türünün adı.
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menü ve seçin **yeniden adlandırma türü _Filename_**  önizleme penceresi açılan menüsü'nden burada  *Filename* geçerli dosya adıdır.
+      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve *TypeName* seçtiğiniz türün adı nın olduğu Önizleme penceresi açılır penceresinden ** *TypeName*.cs'ye yeniden adlandır dosyasını** seçin.
+      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Dosya *Adı'nın* geçerli dosyanın adı olduğu Önizleme penceresi açılır penceresinden **Dosya _Adı'na_ Yeniden Ad** Türünü Yeniden Adlandır'ı seçin.
 
-   Türe veya dosya yeniden adlandırılır.
+   Tür veya dosya yeniden adlandırılır.
 
-   - C#: Aşağıdaki örnekte, dosyanın **MyClass.cs** adlandırıldı **MyNewClass.cs** tür adıyla eşleşecek şekilde.
+   - C#: Aşağıdaki örnekte, **MyClass.cs** dosya, tür adı yla eşleşecek **şekilde MyNewClass.cs** olarak yeniden adlandırılmıştır.
 
-       ![Satır içi sonucuC#](media/synctype-result-cs.png)
+       ![Satır çizgisi sonuç C #](media/synctype-result-cs.png)
 
-   - Visual Basic: Aşağıdaki örnekte, dosyanın **Employee.vb** adlandırıldı **Person.vb** tür adıyla eşleşecek şekilde.
+   - Visual Basic: Aşağıdaki örnekte, **Employee.vb** dosyası, tür adı ile eşleşecek şekilde **Person.vb** olarak yeniden adlandırılmıştır.
 
-       ![Satır içi sonucu Visual Basic](media/synctype-result-vb.png)
+       ![Satır çizgisi sonuç Visual Basic](media/synctype-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

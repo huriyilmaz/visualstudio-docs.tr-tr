@@ -1,5 +1,5 @@
 ---
-title: Bir yük testi için çalıştırma ayarları ekleme
+title: Yük Testine Çalıştırma Ayarları Ekleme
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +10,17 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: adcb50d2c6800c5ce64ab2b7cf16ce9d2a25aaaa
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584510"
 ---
-# <a name="how-to-add-additional-run-settings-to-a-load-test"></a>Nasıl yapılır: bir yük testine ek çalışma ayarları ekleme
+# <a name="how-to-add-additional-run-settings-to-a-load-test"></a>Nasıl yapılır: Yük testine ek çalışma ayarları ekleme
 
-Çalıştırma ayarları yük testinin çeşitli diğer ayarları belirleyin. Bunlar, test sonuçları koleksiyon ayrıntı düzeyi ve test çalıştığında toplanan sayaç kümeleri süresini içerir. Oluşturun ve her bir yük testi için birden çok çalışma ayarlarını depolamak ve ardından test çalıştırması sırasında kullanmak için belirli bir ayar seçin. İlk çalıştırma ayarı kullanarak yük testi oluşturduğunuzda, yük testinize eklenir **Yeni Yük Testi Sihirbazı**.
+Yük testinin çalışma ayarları çeşitli diğer ayarları belirler. Bunlar, testin süresini, sonuç toplama ayrıntı düzeyini ve test çalıştığında toplanan sayaç kümelerini içerir. Her yük testi için birden çok çalıştırma ayarı oluşturabilir ve depolayabilir ve testi çalıştırdığınızda kullanmak üzere belirli bir ayar seçebilirsiniz. **Yeni Yük Testi Sihirbazı'nı**kullanarak yük testinizi oluştururken ilk çalıştırma ayarı yük testinize eklenir.
 
-Yük testi farklı koşullar altında çalıştırabilmeniz için daha fazla yük testinize farklı özellik ayarları ile çalışma ayarları ekleyebilirsiniz. Örneğin, yeni bir test ayarı ekleyin ve farklı bir örnek hızı kullanabilir veya bir uzun çalıştırma süresi belirtin. Ayar etkin olarak işaretleyerek kullanmaya çalıştığı belirtmeniz gerekir ve yalnızca bir çalışma ayarı teker teker kullanabilirsiniz.
+Farklı koşullar altında yük testini çalıştırabilmeniz için farklı özellik ayarlarıyla yük testinize daha fazla çalıştırma ayarı ekleyebilirsiniz. Örneğin, yeni bir test ayarı ekleyebilir ve farklı bir örnek hızı kullanabilir veya daha uzun bir çalışma süresi belirtebilirsiniz. Aynı anda yalnızca bir çalıştırma ayarı kullanabilirsiniz ve etkin olarak işaretleyerek hangi çalışma ayarını kullanacağınızı belirtmeniz gerekir.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -28,26 +28,26 @@ Yük testi farklı koşullar altında çalıştırabilmeniz için daha fazla yü
 
 1. Bir yük testi açın.
 
-2. (İsteğe bağlı) Genişletin **çalıştırma ayarları** klasör.
+2. (İsteğe bağlı) Çalışma **Ayarları** klasörünü genişletin.
 
-3. Sağ **çalıştırma ayarları** klasörü ve select **çalıştırma ayarları Ekle**.
+3. Ayarlar'ı **Çalıştır** klasörüne sağ tıklayın ve **Çalıştır Ayarları Ekle'yi**seçin.
 
-     Yeni bir çalışma ayarı eklenir **çalıştırma ayarları** klasör.
+     **Çalışma Ayarları** klasörüne yeni bir çalışma ayarı eklenir.
 
-4. Üzerinde **görünümü** menüsünde seçin **Özellikler penceresi**.
+4. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
 
-     **Özellikleri** seçili çalışma ayarı için özelliklerle penceresi görüntülenir.
+     **Özellikler** penceresi, seçili çalıştırma ayarı özellikleriyle görüntülenir.
 
-5. İçinde **özellikleri** penceresinde metin kutusunu kullanın **adı** ayar bir adı çalıştırılmasına vermek özelliği çalışma ayarı amacı tanımlar (örneğin, **Çalıştır ayarını: beş dakika çalıştırma** ).
+5. **Özellikler** penceresinde, yeni çalıştırma ayarı için **Ad** özelliğinin metin kutusunu kullanarak çalıştırma ayarının amacını açıklayan bir ad verin (örneğin, **Çalıştır Ayarı: Beş dakikalık çalışma).**
 
-6. Kullanım **özellikleri** çalıştırma ayarlarını değiştirmek için penceresi. Örneğin, çalışma süresini **00:05:00** testiniz için beş dakika çalıştırılacak.
+6. Çalışma ayarlarını değiştirmek için **Özellikler** penceresini kullanın. Örneğin, testinizi beş dakika çalıştırmak için çalışma süresini **00:05:00** olarak değiştirin.
 
     > [!NOTE]
-    > Çalıştırma ayarları özellikleri ve açıklamalarının tam listesi için bkz: [yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md).
+    > Çalıştırma ayarları özelliklerinin ve açıklamalarının tam listesi [için, Yükle testi çalıştırma ayarları özelliklerine](../test/load-test-run-settings-properties.md)bakın.
 
-     Eklenen çalıştırın ayarını etkin olarak kullanmak istediğiniz artık belirtebilirsiniz. Daha fazla bilgi için [nasıl yapılır: çalışma ayarları yük testi için etkin seçmek](../test/how-to-select-the-active-run-setting-for-a-load-test.md).
+     Artık eklenen çalıştırma ayarını etkin olarak ayarlayarak kullanmak istediğinizi belirtebilirsiniz. Daha fazla bilgi için [bkz: Yük testi için etkin çalışma ayarını seçin.](../test/how-to-select-the-active-run-setting-for-a-load-test.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yük testi çalıştırma ayarlarını yapılandırma](../test/configure-load-test-run-settings.md)
-- [Sayaç kümelerini ve eşik kurallarını bilgisayarlar için bir yük testi içinde belirtin.](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Yük testindeki bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtin](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)

@@ -1,5 +1,5 @@
 ---
-title: '8\. Adım: resim göster düğmesi olay işleyicisi için kod yazma'
+title: 'Adım 8: Resim düğmesi olay işleyicisi için kod yazma'
 ms.date: 08/30/2019
 ms.assetid: 07f4ec00-cda4-42f4-98bb-37edc7167de7
 ms.topic: tutorial
@@ -14,84 +14,84 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d74c9ecda0e3ab23c1f2ab1cb2180a60701c069a
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579812"
 ---
-# <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>8\. Adım: resim göster düğmesi olay işleyicisi için kod yazma
+# <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Adım 8: Resim düğmesi olay işleyicisi için kod yazma
 
-Bu adımda, **bir resim göster** düğmesini aşağıdaki gibi çalışır hale getirebilirsiniz:
+Bu adımda, **Resim Göster** düğmesini aşağıdaki gibi çalıştırın:
 
-- Kullanıcı bu düğmeyi seçtiğinde, uygulama bir <xref:System.Windows.Forms.OpenFileDialog> kutusunu açar.
+- Bir kullanıcı bu düğmeyi seçtiğinde, <xref:System.Windows.Forms.OpenFileDialog> uygulama bir kutu açar.
 
-- Bir Kullanıcı bir resim dosyası açarsa, uygulama bu resmi <xref:System.Windows.Forms.PictureBox>gösterir.
+- Bir kullanıcı bir resim dosyası açarsa, <xref:System.Windows.Forms.PictureBox>uygulama bu resmi .
 
-IDE 'de kod yazmanıza yardımcı olan, IntelliSense adlı güçlü bir araç vardır. Kod yazdığınızda, IDE girdiğiniz kısmi sözcüklerin önerilen tamamlarla bir kutu açar.
+IDE kod yazmanıza yardımcı olan IntelliSense adında güçlü bir araca sahiptir. Kod yazarken, IDE girdiğiniz kısmi sözcükler için önerilen tamamlamaları içeren bir kutu açar.
 
-IntelliSense, daha sonra ne yapmak istediğinizi belirlemeyi dener ve listeden seçtiğiniz son öğeyi otomatik olarak atlar. Listede gezinmek için yukarı veya aşağı okları kullanabilir veya seçimleri daraltmak için harfleri yazmaya devam edebilirsiniz. İstediğiniz seçeneği gördüğünüzde, seçmek için **sekme** tuşunu seçin. Veya gerekmiyorsa, önerileri yoksayabilirsiniz.
+IntelliSense bir sonraki adımda ne yapmak istediğinizi belirlemeye çalışır ve otomatik olarak listeden seçtiğiniz son öğeye atlar. Listede taşımak için yukarı veya aşağı okları kullanabilir veya seçenekleri daraltmak için harfler yazmaya devam edebilirsiniz. İstediğiniz seçimi gördüğünüzde, seçmek için **Sekme** anahtarını seçin. Veya gerekli değilse önerileri yoksayabilirsiniz.
 
-## <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>Resim göster düğmesi olay işleyicisi için kod yazmak için
+## <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>Resim düğmesi olay işleyicisi için kod yazmak için
 
-1. **Windows Form Tasarımcısı** gidin ve **resim göster** düğmesine çift tıklayın. IDE hemen kod tasarımcısına gider ve imlecinizi, daha önce eklediğiniz `showButton_Click()` (alternatif olarak `ShowButton_Click()`) yönteminin içine taşımaktır.
+1. Windows **Forms Designer'a** gidin ve **resim göster** düğmesini çift tıklatın. IDE hemen kod tasarımcısına gider ve imlecinizi daha önce `showButton_Click()` eklediğiniz `ShowButton_Click()`(alternatif olarak) yöntemin içinde olacak şekilde hareket ettirir.
 
-1. İki küme ayracı `{ }`arasındaki boş satıra bir `i` yazın. (Visual Basic `Private Sub...` ve `End Sub`arasında boş satıra yazın.) Aşağıdaki görüntüde gösterildiği gibi bir **IntelliSense** penceresi açılır.
+1. İki `i` ayraç arasındaki boş çizgiye `{ }`bir tane yazın. (Visual Basic'te, boşluk arasındaki `Private Sub...` `End Sub`boş satıra yazın.) Aşağıdaki resimde gösterildiği gibi Bir **IntelliSense** penceresi açılır.
 
-    ![Visual C&#35; Code ile IntelliSense](../ide/media/express_ifintellisense.png)
-
-    > [!NOTE]
-    > Kodunuz, "camelCase" harflerine olay işleyicilerini görüntülemeyebilir.
-
-1. **IntelliSense** penceresi `if`sözcük vurgulaması gerekir. (Yoksa, küçük bir `f`girin ve bu işlem olur.) **IntelliSense** penceresinin yanındaki bir *araç ipucu* kutusunun Açıklama, **If ifadesi için kod parçacığı**gibi göründüğünü fark edebilirsiniz. (Visual Basic araç ipucu, bunun bir parçacık olduğunu ancak biraz farklı bir ifade olduğunu da belirtir.) Bu kod parçacığını kullanmak istiyorsanız, kodunuza `if` eklemek için **sekme** tuşunu seçin. Sonra `if` parçacığı kullanmak için **Tab** tuşunu yeniden seçin. (Başka bir yerde tercih ederseniz **IntelliSense** penceresi kaybolduysa, `i` üzerine geri yazıp yeniden yazın ve **IntelliSense** penceresi tekrar açılır.)
-
-    ![Visual C&#35; kodu](../ide/media/express_highlighttrue.png)
-
-### <a name="use-intellisense-to-enter-more-code"></a>Daha fazla kod girmek için IntelliSense kullanın
-
-Daha sonra, bir **Dosya Aç** iletişim kutusunu açmak için daha fazla kod girmek üzere IntelliSense 'i kullanırsınız. Kullanıcı **Tamam** düğmesini seçerse, PictureBox kullanıcının seçtiği dosyayı yükler. Aşağıdaki adımlarda kodun nasıl girilmesi gösterilmektedir ve birçok adım olsa da yalnızca birkaç tuş vuruşu vardır:
-
- 1. Kod parçacığında **doğru** seçili metinle başlayın. Üzerine yazmak için `op` yazın. (Visual Basic, ilk Cap ile başlayıp `Op`yazın.)
-
- 1. **IntelliSense** penceresi açılır ve **OpenFileDialog1**görüntüler. Seçmek için **sekme** tuşunu seçin. (Visual Basic bir başlangıç üst sınırı ile başlar, bu nedenle **OpenFileDialog1**görürsünüz. **OpenFileDialog1** seçildiğinden emin olun.)
-
-     `OpenFileDialog`hakkında daha fazla bilgi için bkz. [OpenFileDialog](<xref:System.Windows.Forms.OpenFileDialog>).
-
- 1. Bir nokta (`.`) yazın (birçok programcı bu noktayı çağırır.) **OpenFileDialog1**sonrasında bir nokta yazdığınızdan, bir **IntelliSense** penceresi açılır ve tüm **OpenFileDialog** bileşeni özellikleri ve yöntemleri ile doldurulur. Bunlar, **Windows Form Tasarımcısı**' de seçerken **Özellikler** penceresinde görüntülenen özelliklerden aynıdır. Ayrıca, bileşene bir şeyler (bir iletişim kutusu aç gibi) yapacağını söyleyen yöntemler de seçebilirsiniz.
+    ![Görsel C&#35; kodu ile IntelliSense](../ide/media/express_ifintellisense.png)
 
     > [!NOTE]
-    > **IntelliSense** penceresi her iki özelliği ve yöntemi gösterebilir. Neyin gösterilmekte olduğunu belirlemek için, **IntelliSense** penceresindeki her öğenin sol tarafındaki simgeye bakın. Her yöntemin yanında bir bloğun görüntüsünü ve her bir özelliğin yanındaki bir wrana (ya da Spanner) görüntüsünü görürsünüz. Her olayın yanında bir şimşek simgesi de vardır. <br><br>Görüntülenen simgeler aşağıda verilmiştir:<br><br>![yöntemi simgesi](../ide/media/express_iconmethod.png)<br>![Özellik simgesi](../ide/media/express_iconproperty.png)<br>![olay simgesi](../ide/media/express_iconevent.png)
+    > Kodunuz olay işleyicilerini "camelCase" harflerinde görüntülemeyebilir.
 
- 1. `ShowDialog` yazın (büyük/küçük harfe dönüştürme, IntelliSense için önemli değildir). `ShowDialog()` yöntemi **Dosya Aç** iletişim kutusunu gösterecektir. Pencerede **ShowDialog**vurgulandıktan sonra **sekme** tuşunu seçin. Ayrıca, "ShowDialog" ifadesini vurgulayabilir ve yardım almak için **F1** tuşunu seçebilirsiniz.
+1. **IntelliSense** penceresi sözcüğü `if`vurgulamalıdır. (Değilse, bir küçük `f`harf girin ve o olacaktır.) **IntelliSense** penceresinin yanındaki *araç ipucu* kutusunun açıklamayla nasıl göründüğüne dikkat edin, **if deyimi için Kod parçacığı.** (Visual Basic'te, araç ipucu bunun bir parçacık olduğunu, ancak biraz farklı ifadeler le birlikte olduğunu belirtir.) Bu parçacığı kullanmak istiyorsanız, bu nedenle kodunuza eklemek `if` için **Sekme** anahtarını seçin. Ardından, snippet'i kullanmak için Sekme tuşunu yeniden seçin. **Tab** `if` (Başka bir yeri seçtiyseniz ve **IntelliSense** pencereniz `i` kaybolduysa, arka boşluğu n için ilerler ve yeniden yazarsanız, **IntelliSense** penceresi yeniden açılır.)
 
-    `ShowDialog()` yöntemi hakkında daha fazla bilgi edinmek için bkz. [ShowDialog yöntemi](<xref:System.Windows.Forms.Form.ShowDialog%2A>).
+    ![Görsel C&#35; kodu](../ide/media/express_highlighttrue.png)
 
- 1. Bir denetim veya bileşen üzerinde bir yöntem kullandığınızda ( *bir yöntemi çağırmak*olarak adlandırılır), parantez eklemeniz gerekir. Bu nedenle, `ShowDialog`içinde "g" den hemen sonra açma ve kapatma parantezleri girin: `()` şimdi "openFileDialog1. ShowDialog ()" şeklinde görünmelidir.
+### <a name="use-intellisense-to-enter-more-code"></a>Daha fazla kod girmek için IntelliSense'i kullanın
 
-    > [!NOTE]
-    > Yöntemler, herhangi bir uygulamanın önemli bir parçasıdır ve bu öğretici, yöntemlerin kullanılması için çeşitli yollar göstermiştir. Bir bileşenin yöntemini çağırmak için, **OpenFileDialog** bileşenin `ShowDialog()` yöntemini nasıl adlandırmış olursunuz. Bir Kullanıcı bir düğme seçtiğinde bir iletişim kutusu ve resim açan `showButton_Click()` yöntemi olarak, uygulamanızın sizin oluşturduğunuz gibi işlemler yapmasını sağlamak için kendi yöntemlerinizi oluşturabilirsiniz.
+Ardından, **Dosya Aç** iletişim kutusunu açmak için daha fazla kod girmek için IntelliSense'i kullanırsınız. Kullanıcı **Tamam** düğmesini seçerse, PictureBox kullanıcının seçtiği dosyayı yükler. Aşağıdaki adımlar kodun nasıl girilen gösteriş ve birçok adım olmasına rağmen, bu sadece birkaç tuş vuruşu' s:
 
- 1. İçin C#, bir boşluk ekleyin ve ardından iki eşittir işareti (`==`) ekleyin. Visual Basic için bir boşluk ekleyin ve sonra tek bir eşittir işareti (`=`) kullanın. (C# ve Visual Basic farklı eşitlik işleçleri kullanın.)
+ 1. Seçili metin snippet **doğru** ile başlayın. Üzerine `op` yazmak için yazın. (Visual Basic'te, bir başlangıç kapağıyla `Op`başlarsınız, bu nedenle yazın.)
 
- 1. Başka bir boşluk ekleyin. Bunu yaptığınızda, başka bir **IntelliSense** penceresi açılır. `DialogResult` yazın ve eklemek için **sekme** tuşunu seçin.
+ 1. **IntelliSense** penceresi açılır ve **openFileDialog1**görüntüler. Seçmek için **Sekme** tuşunu seçin. (Visual Basic'te, bir başlangıç kapağıyla başlar, böylece **OpenFileDialog1'i**görürsünüz. **OpenFileDialog1'in** seçildiğinden emin olun.)
 
-    > [!NOTE]
-    > Bir yöntemi çağırmak için kod yazdığınızda bazen bir değer döndürür. Bu durumda, **OpenFileDialog** bileşeninin <xref:System.Windows.Forms.CommonDialog.ShowDialog> yöntemi bir <xref:System.Windows.Forms.DialogResult> değeri döndürür. DialogResult, iletişim kutusunda ne olduğunu belirten özel bir değerdir. Bir **OpenFileDialog** bileşeni, kullanıcının **Tamam** veya **iptal**' i seçmelerini sağlayabilir, bu nedenle `ShowDialog()` yöntemi `DialogResult.OK` veya `DialogResult.Cancel`döndürür.
+     Hakkında `OpenFileDialog`daha fazla bilgi edinmek için [OpenFileDialog'a](<xref:System.Windows.Forms.OpenFileDialog>)bakın.
 
- 1. DialogResult değeri **IntelliSense** penceresini açmak için bir nokta yazın. `O` harfini girin ve **Tamam 'ı**eklemek için **sekme** tuşunu seçin.
-
-    DialogResult hakkında daha fazla bilgi edinmek için bkz. [DialogResult](<xref:System.Windows.Forms.DialogResult>).
+ 1. Bir dönem`.`yazın ( ) (Birçok programcı buna nokta der.) **OpenFileDialog1'den**hemen sonra bir nokta yazdığınız için, **OpenFileDialog** bileşeninin tüm özellikleri ve yöntemleriyle doldurulmuş bir **IntelliSense** penceresi açılır. Bunlar, **Windows Forms Designer'da**seçtiğinizde **Özellikler** penceresinde görünen özelliklerle aynıdır. Bileşene bir şeyler yapmasını söyleyen yöntemler de seçebilirsiniz (iletişim kutusunu açmak gibi).
 
     > [!NOTE]
-    > Kodun ilk satırı tamamlanmalıdır. İçin C#, aşağıdakine benzer olmalıdır.
+    > **IntelliSense** penceresi size hem özellikleri hem de yöntemleri gösterebilir. Gösterilenleri belirlemek için, **IntelliSense** penceresindeki her öğenin sol tarafındaki simgeye bakın. Her yöntemin yanında bir blok görüntüsü ve her özelliğin yanında bir anahtar (veya anahtar) görüntüsü görürsünüz. Ayrıca her olayın yanında bir şimşek simgesi vardır. <br><br>Görünen simgeler şunlardır:<br><br>![Yöntem simgesi](../ide/media/express_iconmethod.png)<br>![Özellik simgesi](../ide/media/express_iconproperty.png)<br>![Olay simgesi](../ide/media/express_iconevent.png)
+
+ 1. Yazmaya `ShowDialog` başlayın (büyük harf IntelliSense için önemsizdir). Yöntem, `ShowDialog()` **Dosyayı Aç** iletişim kutusunu gösterir. Pencere **ShowDialog'u**vurguladıktan sonra **Sekme** anahtarını seçin. Ayrıca "ShowDialog"u vurgulayabilir ve yardım almak için **F1** tuşunu seçebilirsiniz.
+
+    Yöntem hakkında daha `ShowDialog()` fazla bilgi edinmek için [ShowDialog Yöntemi'ne](<xref:System.Windows.Forms.Form.ShowDialog%2A>)bakın.
+
+ 1. Bir denetim veya bileşen üzerinde bir yöntem kullandığınızda *(yöntem çağırma*olarak adlandırılır), parantez eklemeniz gerekir. Yani hemen sonra açılış ve kapanış parantez girin `ShowDialog` `()` "g" içinde: Şimdi "openFileDialog1.ShowDialog()" gibi görünmelidir.
+
+    > [!NOTE]
+    > Yöntemler herhangi bir uygulamanın önemli bir parçasıdır ve bu öğretici yöntemleri kullanmak için çeşitli yollar göstermiştir. **OpenFileDialog** bileşeninin `ShowDialog()` yöntemini nasıl adlandırdığınız gibi bir şey yapmasını söylemek için bir bileşenin yöntemini arayabilirsiniz. Uygulamanızın şu anda oluşturduğunuz yöntem gibi, bir iletişim kutusunu ve `showButton_Click()` bir kullanıcı bir düğme yi seçtiğinde bir resim açan yöntem gibi bir şeyler yapmasını sağlamak için kendi yöntemlerinizi oluşturabilirsiniz.
+
+ 1. C# için bir boşluk ekleyin ve sonra`==`iki eşit işaret ekleyin ( ). Visual Basic için bir boşluk ekleyin ve ardından`=`tek bir eşit işareti kullanın ( ). (C# ve Visual Basic farklı eşitlik işleçleri kullanır.)
+
+ 1. Başka bir alan ekleyin. Bunu yapar yapmaz, başka bir **IntelliSense** penceresi açılır. Yazmaya `DialogResult` başlayın ve eklemek için **Sekme** anahtarını seçin.
+
+    > [!NOTE]
+    > Bir yöntemi çağırmak için kod yazdığınızda, bazen bir değer döndürür. Bu durumda, **OpenFileDialog** bileşeninin <xref:System.Windows.Forms.CommonDialog.ShowDialog> yöntemi <xref:System.Windows.Forms.DialogResult> bir değer döndürür. DialogResult, iletişim kutusunda neler olduğunu size belirten özel bir değerdir. **OpenFileDialog** bileşeni, kullanıcının **Ok** veya **İptal'i** `ShowDialog()` seçmesine `DialogResult.OK` neden `DialogResult.Cancel`olabilir, bu nedenle yöntemi ya da .
+
+ 1. DialogResult değeri **IntelliSense** penceresini açmak için bir nokta yazın. Harfi `O` girin ve **Tamam**eklemek için **Sekme** tuşunu seçin.
+
+    DialogResult hakkında daha fazla bilgi edinmek için [DialogResult'a](<xref:System.Windows.Forms.DialogResult>)bakın.
+
+    > [!NOTE]
+    > İlk kod satırı tamamlanmış olmalıdır. C# için aşağıdakilere benzer olmalıdır.
     >
     >  `if (openFileDialog1.ShowDialog() == DialogResult.OK)`
     >
-    >  Visual Basic için aşağıdaki olmalıdır.
+    >  Visual Basic için aşağıdaki ler olmalıdır.
     >
     >  `If OpenFileDialog1.ShowDialog() = DialogResult.OK Then`
 
- 1. Şimdi bir kod satırı ekleyin. Yazabilir (veya kopyalayabilir ve yapıştırabilirsiniz), ancak eklemek için IntelliSense kullanmayı düşünün. IntelliSense ile ne kadar tanıdık olduğunu öğrenin, kendi kodunuzu daha hızlı yazabilirsiniz. Son `showButton_Click()` yönteminiz aşağıdaki koda benzemelidir.
+ 1. Şimdi bir kod satırı daha ekle. Yazabilir (veya kopyalayıp yapıştırabilirsiniz), ancak eklemek için IntelliSense'i kullanmayı düşünün. IntelliSense'e ne kadar aşina ysanız, kendi kodunuzu o kadar hızlı yazabilirsiniz. Son `showButton_Click()` yönteminiz aşağıdaki koda benzer olmalıdır.
 
     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
@@ -101,11 +101,11 @@ Daha sonra, bir **Dosya Aç** iletişim kutusunu açmak için daha fazla kod gir
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Sonraki öğretici adımına gitmek için bkz. **[adım 9: İnceleme, yorum ve test kodunuzu test](../ide/step-9-review-comment-and-test-your-code.md)** etme.
+* Bir sonraki öğretici adıma gitmek için **[Bkz. Adım 9: Kodunuzu gözden geçirin, yorumyapın ve test edin.](../ide/step-9-review-comment-and-test-your-code.md)**
 
-* Önceki öğretici adımına dönmek için, bkz. [7. Adım: formunuza iletişim kutusu bileşenleri ekleme](../ide/step-7-add-dialog-components-to-your-form.md).
+* Önceki öğretici adıma dönmek için [bkz: Adım 7: Formunuza iletişim bileşenleri ekleyin.](../ide/step-7-add-dialog-components-to-your-form.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: Zamanlanmış matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [öğretici 3: eşleşen bir oyun oluşturma](tutorial-3-create-a-matching-game.md)

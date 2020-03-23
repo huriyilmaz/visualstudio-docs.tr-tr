@@ -1,5 +1,5 @@
 ---
-title: WriteContextTLogs | Microsoft Docs
+title: WriteContextTLogs | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -16,15 +16,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cf34ff63b00cf523ba9ef704f4417be4d5cdbf77
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77630711"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 
-Geçerli bağlam için günlük dosyalarını yazar.
+Geçerli bağlam için günlük dosyaları yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,21 +34,21 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
 
 #### <a name="parameters"></a>Parametreler
 
-[in] `intermediateDirectory`
+[içinde]`intermediateDirectory`
 
- İzleme günlüğünün depolayabileceği dizin.
+ İzleme günlüğünün depolandığı dizini.
 
-[in] `tlogRootName`
+[içinde]`tlogRootName`
 
- Günlük dosyası adının kök adı.
+ Günlük dosya adının kök adı.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
- İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
+ İzleme bağlamı **oluşturulduysa, BAŞARILI** bit kümesine sahip bir **HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker. h*
+ **Üstbilgi:** *FileTracker.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: C++ DLL'leri için birim testleri yazma
+title: C++ DL'ler için Birim testleri yazma
 ms.date: 05/01/2019
 ms.topic: conceptual
 ms.author: corob
@@ -8,140 +8,140 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: 856bc21fdee8945ddcd97e3978f46af0008af616
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77279279"
 ---
-# <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio'da C++ DLL'leri için birim testleri yazma
+# <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio'da C++ DL'ler için birim testleri yazın
 
-DLL kodu, test etmek istediğiniz işlevleri dışa aktarır, bağlı olarak test etmek için birkaç yolu vardır. Aşağıdaki yöntemlerden birini seçin:
+DLL kodunu sınamak istediğiniz işlevleri dışa mı dışa aktarmadığına bağlı olarak, sınamanın birkaç yolu vardır. Aşağıdaki yollardan birini seçin:
 
-**Birim testleri yalnızca dll 'den aktarılmış işlevleri çağırır:** [C/C++için yazma birim testlerinde](writing-unit-tests-for-c-cpp.md)açıklandığı şekilde ayrı bir test projesi ekleyin. Test projesinde DLL projesinden bir başvuru ekleyin.
+**Birim testleri yalnızca DLL'den dışa aktarılan işlevleri çağırır:** [C/C++ için Yazma birimi testlerinde](writing-unit-tests-for-c-cpp.md)açıklandığı gibi ayrı bir test projesi ekleyin. Test projesinde, DLL projesine bir başvuru ekleyin.
 
-[DLL projesinden içe aktarılmış işlevlere başvurma](#projectRef)yordamına gidin.
+Yordamı git [DLL projesinden dışa aktarılan işlevlere başvurmak](#projectRef)için.
 
-**DLL, bir. exe dosyası olarak oluşturulmuştur:** Ayrı bir test projesi ekleyin. Bu çıkış nesnesi dosyasına bağlayın.
+**DLL bir .exe dosyası olarak oluşturulmuştur:** Ayrı bir test projesi ekleyin. Çıktı nesnesi dosyasına bağla.
 
-[Testleri nesne veya kitaplık dosyalarına bağlamak için](#objectRef)yordama gidin.
+Testleri nesne [veya kitaplık dosyalarına bağlamak için yordamı](#objectRef)gidin.
 
-**Birim Testlerı dll 'den verilmeyen üye olmayan işlevleri çağırır ve DLL statik kitaplık olarak oluşturulabilir:** DLL projesini bir *. lib* dosyasına derlenmek üzere değiştirin. Test altındaki projeye başvuran ayrı bir test projesi ekleyin.
+**Birim testleri, DLL'den dışa aktarılmayan üye olmayan işlevleri çağırır ve DLL statik kitaplık olarak oluşturulabilir:** DLL projesini *.lib* dosyasına derlenebilecek şekilde değiştirin. Test altında projeye başvuran ayrı bir test projesi ekleyin.
 
-Bu yaklaşım, izin verilen olmayan üyeleri kullanabilirsiniz, ancak testleri ayrı bir projede hala devam testlerinizi avantajına sahiptir.
+Bu yaklaşım, testlerinizin dışa aktarılmaz üyeleri kullanmasına izin vermenin, ancak testleri ayrı bir projede tutmanın avantajına sahiptir.
 
-[DLL 'yi bir statik kitaplığa değiştirme](#staticLink)yordamına gidin.
+[DLL'yi statik kitaplık](#staticLink)olarak değiştirmek için yordama gidin.
 
-**Birim testleri, verilmeyen üye olmayan işlevleri çağırmalıdır ve kodun bir dinamik bağlantı kitaplığı (dll) olarak oluşturulması gerekir:** Birim testlerini ürün koduyla aynı projeye ekleyin.
+**Birim testleri dışa aktarılmayan üye olmayan işlevleri çağırmalı ve kod dinamik bağlantı kitaplığı (DLL) olarak oluşturulmalıdır:** Birim testlerini ürün koduyla aynı projeye ekleyin.
 
-[Aynı projedeki birim testlerini ekleme](#sameProject)yordamına gidin.
+Aynı projeye [birim testleri eklemek](#sameProject)için yordamı gidin.
 
 ## <a name="create-the-tests"></a>Testleri oluşturma
 
-### <a name="staticLink"></a>DLL 'yi bir statik kitaplığa dönüştürmek için
+### <a name="to-change-the-dll-to-a-static-library"></a><a name="staticLink"></a>DLL'yi statik kitaplık olarak değiştirmek için
 
-- Testlerinizi DLL proje tarafından dışa aktarılmaz üyeleri kullanmalıdır ve test altındaki projeye bir dinamik kitaplık olarak oluşturulduysa, bir statik kitaplığa dönüştürmeyi düşünün.
+- Testleriniz dll projesi tarafından dışa aktarılmaz üyeleri kullanması gerekiyorsa ve test altındaki proje dinamik bir kitaplık olarak oluşturulmuşsa, bunu statik bir kitaplık olarak dönüştürmeyi düşünün.
 
-  1. **Çözüm Gezgini**' de, test altındaki projenin kısayol menüsünde **Özellikler**' i seçin. Proje **özellikleri** penceresi açılır.
+  1. **Çözüm Gezgini'nde,** test altındaki projenin kısayol menüsünde **Özellikler'i**seçin. Proje **Özellikleri** penceresi açılır.
 
-  2. **Yapılandırma özellikleri** > **genel**' i seçin.
+  2. **Yapılandırma Özellikleri** > **Genel'i**seçin.
 
-  3. **Yapılandırma türünü** **statik kitaplık (. lib)** olarak ayarlayın.
+  3. **Yapılandırma Türünü** **Statik Kitaplık (.lib)** olarak ayarlayın.
 
-  [Testleri nesne veya kitaplık dosyalarına bağlama](#objectRef)yordamıyla devam edin.
+  Testleri nesne [veya kitaplık dosyalarına bağlamak için](#objectRef)yordamı ile devam edin.
 
-### <a name="projectRef"></a>Test projesinden içe aktarılmış DLL işlevlerine başvurmak için
+### <a name="to-reference-exported-dll-functions-from-the-test-project"></a><a name="projectRef"></a>Test projesinden dışa aktarılan DLL işlevlerine başvurmak için
 
-- Ardından DLL proje test etmek istediğiniz işlevleri dışa aktarır, kod projesine test projesinden bir başvuru ekleyebilirsiniz.
+- DLL projesi sınamak istediğiniz işlevleri dışa vuruyorsa, test projesinden kod projesine bir başvuru ekleyebilirsiniz.
 
-  1. Yerel birim testi projesi oluşturun.
+  1. Yerel Birim Test Projesi oluşturun.
 
       ::: moniker range="vs-2019"
 
-      1. **Dosya** menüsünde **Yeni** > **Proje**' yi seçin. **Yeni Proje Ekle** Iletişim kutusunda **dil** ' i ayarlayın C++ ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini**seçin.
+      1. **Dosya** menüsünde **Yeni** > **Proje'yi**seçin. Yeni **Proje Ekle** iletişim kutusunda **Dil'i** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **Yerel Birim Test Projesi'ni**seçin.
 
       ::: moniker-end
 
       ::: moniker range="vs-2017"
 
-      1. **Dosya** menüsünde, **Yeni** > **projesi** > **Visual C++**  > **Test** >  **C++ birim testi projesi**' ni seçin.
+      1. **Dosya** menüsünde **Yeni** > **Proje** > **Görsel C++** > **Test** > **C++ Birim Test Projesi'ni**seçin.
 
       ::: moniker-end
 
-  1. **Çözüm Gezgini**, test projesine sağ tıklayın ve ardından > **başvuru** **Ekle** ' yi seçin.
+  1. **Çözüm Gezgini'nde,** test projesine sağ tıklayın, ardından**Başvuru** **Ekle'yi** > seçin.
 
-  1. **Projeler**ve ardından sınanacak proje ' yi seçin.
+  1. **Projeler'i**ve ardından test edilecek projeyi seçin.
 
        **Ekle** düğmesini seçin.
 
-  1. Test projesi için Özellikler'de test edilen projenin konumunu ek içerik dizinlerine ekleyin.
+  1. Test projesinin özelliklerinde, test altındaki projenin konumunu İçdizim'e ekleyin.
 
-       **Yapılandırma özellikleri** > **VC + + dizinler** > **dizinleri içer**' i seçin.
+       **Yapılandırma Özellikleri** > **VC++ Dizinleri** > **Et Dizinleri**seçin.
 
-       **Düzenle**' yi seçin ve ardından test altında projenin üstbilgi dizinini ekleyin.
+       **Edit'i**seçin ve ardından projenin üstbilgi dizinini test altında ekleyin.
 
-  [Birim testlerini yazmak](#addTests)için gidin.
+  Birim [testleri yaz' a](#addTests)gidin.
 
-### <a name="objectRef"></a>Testleri nesne veya kitaplık dosyalarına bağlamak için
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>Testleri nesne veya kitaplık dosyalarına bağlamak için
 
-- DLL test etmek istediğiniz işlevleri dışa aktarmaz, Output *. obj* veya *. lib* dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz.
+- DLL test etmek istediğiniz işlevleri dışa aktarmazsa, test projesinin bağımlılıklarına *.obj* veya *.lib* dosyası çıktısını ekleyebilirsiniz.
 
-  1. Yerel birim testi projesi oluşturun.
+  1. Yerel Birim Test Projesi oluşturun.
 
       ::: moniker range="vs-2019"
 
-      1. **Dosya** menüsünde **Yeni** > **Proje**' yi seçin. **Yeni Proje Ekle** Iletişim kutusunda **dil** ' i ayarlayın C++ ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini**seçin.
+      1. **Dosya** menüsünde **Yeni** > **Proje'yi**seçin. Yeni **Proje Ekle** iletişim kutusunda **Dil'i** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **Yerel Birim Test Projesi'ni**seçin.
 
       ::: moniker-end
 
       ::: moniker range="vs-2017"
 
-      1. **Dosya** menüsünde, **Yeni** > **projesi** > **Visual C++**  > **Test** >  **C++ birim testi projesi**' ni seçin.
+      1. **Dosya** menüsünde **Yeni** > **Proje** > **Görsel C++** > **Test** > **C++ Birim Test Projesi'ni**seçin.
 
       ::: moniker-end
 
-  2. **Çözüm Gezgini**, test projesinin kısayol menüsünde **Özellikler**' i seçin.
+  2. **Çözüm Gezgini'nde**, test projesinin kısayol menüsünde **Özellikler'i**seçin.
 
-  3. **Ek bağımlılıklar** >  > **bağlayıcı** >  **yapılandırma özellikleri** ' ni seçin.
+  3. **Yapılandırma Özellikleri** > **Bağlayıcı** > **Girişi** > **Ek Bağımlılıkları**seçin.
 
-       **Düzenle**' yi seçin ve **. obj** veya **. lib** dosyalarının adlarını ekleyin. Tam yol adlarını kullanmayın.
+       **Edit'i**seçin ve **.obj** veya **.lib** dosyalarının adlarını ekleyin. Tam yol adlarını kullanmayın.
 
-  4. **Yapılandırma özellikleri** > **bağlayıcı** > **genel** > **Ek kitaplık dizinleri**' ni seçin.
+  4. **Yapılandırma Özellikleri** > **Bağlantı Genel** > **General** > **Ek Kitaplık Dizinleri**seçin.
 
-       **Düzenle**' yi seçin ve **. obj** veya **. lib** dosyalarının dizin yolunu ekleyin. Genellikle test edilen projenin derleme klasörü içindeki yoldur.
+       **Edit'i**seçin ve **.obj** veya **.lib** dosyalarının dizin yolunu ekleyin. Yol genellikle test altındaki projenin yapı klasöründedir.
 
-  5. **Yapılandırma özellikleri** > **VC + + dizinler** > **dizinleri içer**' i seçin.
+  5. **Yapılandırma Özellikleri** > **VC++ Dizinleri** > **Et Dizinleri**seçin.
 
-       **Düzenle**' yi seçin ve ardından test altında projenin üstbilgi dizinini ekleyin.
+       **Edit'i**seçin ve ardından projenin üstbilgi dizinini test altında ekleyin.
 
-  [Birim testlerini yazmak](#addTests)için gidin.
+  Birim [testleri yaz' a](#addTests)gidin.
 
-### <a name="sameProject"></a>Aynı projeye birim testleri eklemek için
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>Aynı projeye birim testleri eklemek için
 
-1. Üst bilgiler ve birim testi için gerekli olan kitaplık dosyalarını içerecek şekilde ürün kodu proje özelliklerini değiştirin.
+1. Birim sınama için gerekli olan üstbilgi ve kitaplık dosyalarını içerecek şekilde ürün kodu proje özelliklerini değiştirin.
 
-   1. **Çözüm Gezgini**' de, test altındaki projenin kısayol menüsünde, **Özellikler**' i seçin. Proje **özellikleri** penceresi açılır.
+   1. **Çözüm Gezgini'nde,** test altındaki projenin kısayol menüsünde **Özellikler'i**seçin. Proje **Özellikleri** penceresi açılır.
 
-   2.  > **VC + + dizinleri** **yapılandırma özellikleri** ' ni seçin.
+   2. **Yapılandırma Özellikleri** > **VC++ Dizinleri'ni**seçin.
 
-   3. Dahil et ve kitaplık dizinlerini düzenleyin:
+   3. Ekle ve Kitaplık dizinlerini edin:
 
        |Dizin|Özellik|
        |-|-|
-       |**Dizinleri dahil et** | **$ (VCInstallDir) UnitTest\include; $ (IncludePath)**|
-       |**Kitaplık dizinleri** | **$ (VCInstallDir) UnitTest\lib; $ (LibraryPath)**|
+       |**Dizinleri Dahil Et** | **$(VCInstallDir)UnitTest\include;$(IncludePath)**|
+       |**Kütüphane Dizinleri** | **$(VCInstallDir)UnitTest\lib;$(LibraryPath)**|
 
-2. Bir C++ birim testi dosyası ekleyin:
+2. C++ Birim Test dosyası ekle:
 
-   - **Çözüm Gezgini**, projenin kısayol menüsünde, **Ekle** > **Yeni öğe** >  **C++ birim testi**' ni seçin.
+   - **Solution Explorer'da,** projenin kısayol menüsünde Yeni**Öğe** > **C++ Birim Testi** **Ekle'yi** > seçin.
 
-   [Birim testlerini yazmak](#addTests)için gidin.
+   Birim [testleri yaz' a](#addTests)gidin.
 
-## <a name="addTests"></a>Birim testlerini yazma
+## <a name="write-the-unit-tests"></a><a name="addTests"></a>Birim testlerini yazma
 
-1. Her birim test kodu dosyasında, test edilen projenin üst bilgileri için bir `#include` açıklaması ekleyin.
+1. Her birim test kodu dosyasında, test altındaki projenin üstbilgileri için bir `#include` deyim ekleyin.
 
-2. Birim testi kod dosyalarına test sınıfları ve yöntemleri ekleyin. Örnek:
+2. Birim test kodu dosyalarına test sınıfları ve yöntemleri ekleyin. Örnek:
 
     ```cpp
     #include "stdafx.h"
@@ -161,19 +161,19 @@ Bu yaklaşım, izin verilen olmayan üyeleri kullanabilirsiniz, ancak testleri a
     }
     ```
 
-## <a name="run-the-tests"></a>Testleri çalıştırın
+## <a name="run-the-tests"></a>Testleri çalıştırma
 
-1. **Test** menüsünde **Windows** > **Test Gezgini**' ni seçin.
+1. **Test** menüsünde **Windows** > **Test Gezgini'ni**seçin.
 
-1. Tüm testleriniz pencerede görünmüyorsa, **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Derle** veya **yeniden oluştur**' u seçerek test projesi oluşturun.
+1. Tüm testleriniz pencerede görünmüyorsa, **Çözüm Gezgini'ndeki** düğümünü sağ tıklayarak ve **Yap** veya **Yeniden Oluştur'u**seçerek test projesini oluşturun.
 
-1. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Bir test etkin kesme noktaları ile hata ayıklama modunda çalıştırmak dahil, diğer seçenekler için sağ tıklayın.
+1. **Test Gezgini'nde,** **Tümünü Çalıştır'ı**seçin veya çalıştırmak istediğiniz belirli testleri seçin. Kesme noktaları etkinleştirilmiş hata ayıklama modunda çalıştırmak da dahil olmak üzere diğer seçenekler için bir teste sağ tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C/için birim testleri yazmaC++](writing-unit-tests-for-c-cpp.md)
-- [Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu](../test/microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
+- [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md)
+- [Microsoft.VisualStudio.TestTools.CppUnitTestFramework API Başvuru](../test/microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
 - [Yerel kodda hata ayıklama](../debugger/debugging-native-code.md)
-- [İzlenecek yol: dinamik bağlantı kitaplığı oluşturma ve kullanma (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
-- [İçeri ve dışarı aktarma](/cpp/build/importing-and-exporting)
-- [Hızlı başlangıç: Test Gezgini ile test temelli geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [Walkthrough: Dinamik bağlantı kitaplığı oluşturma ve kullanma (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
+- [İthalat ve ihracat](/cpp/build/importing-and-exporting)
+- [Quickstart: Test Gezgini ile test odaklı geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)

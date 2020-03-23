@@ -13,79 +13,79 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4f4ca1def334241999445e3f11cf142aa426d962
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75566780"
 ---
-# <a name="settings-page-project-designer"></a>Ayarlar sayfası, proje Tasarımcısı
+# <a name="settings-page-project-designer"></a>Ayarlar sayfası, Proje Tasarımcısı
 
-Projenin uygulama ayarlarını belirtmek için proje Tasarımcısı ' nın **Ayarlar** sayfasını kullanın. Uygulama ayarları, uygulamanız için özellik ayarlarını ve diğer bilgileri dinamik olarak depolamanızı ve almanızı sağlar. Ayrıca, bir istemci bilgisayarda özel uygulama ve Kullanıcı tercihlerini korumanıza olanak sağlar. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme](../managing-application-settings-dotnet.md).
+Projenin uygulama ayarlarını belirtmek için Proje Tasarımcısı'nın **Ayarlar** sayfasını kullanın. Uygulama ayarları, uygulamanız için özellik ayarlarını ve diğer bilgileri dinamik olarak depolamanızı ve almanızı sağlar. Ayrıca, istemci bilgisayarda özel uygulama ve kullanıcı tercihlerini korumanızı da sağlar. Daha fazla bilgi için [bkz.](../managing-application-settings-dotnet.md)
 
-**Ayarlar** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** > **Özellikler**' i seçin. Proje Tasarımcısı göründüğünde, **Ayarlar** sekmesini seçin.
+**Ayarlar** sayfasına erişmek için **Çözüm Gezgini'nde**bir proje düğümü seçin ve ardından **Project** > **Properties'i**seçin. Proje Tasarımcısı göründüğünde **Ayarlar** sekmesini seçin.
 
-## <a name="header-bar"></a>Başlık çubuğu
+## <a name="header-bar"></a>Üstbilgi çubuğu
 
-**Ayarlar** sayfasının en üstündeki üst bilgi çubuğu çeşitli denetimler içerir:
+**Ayarlar** sayfasının üst kısmındaki üstbilgi çubuğunda çeşitli denetimler bulunmaktadır:
 
-**Yapacak**
+**Eşitlemek**
 
-**Synchronize** , uygulamanın çalışma zamanında veya hata ayıklama sırasında kullandığı kullanıcı kapsamlı ayarları, tasarım zamanında tanımlanan varsayılan değerlerinde geri yükler. Verileri geri yüklemek için, proje verilerinden değil, çalışma zamanı tarafından oluşturulan uygulamaya özgü dosyaları diskten kaldırın.
+**Eşitleme,** uygulamanın çalışma zamanında veya hata ayıklama sırasında tasarım zamanında tanımlandığı gibi varsayılan değerlerine yaptığı kullanıcı kapsamı ayarlarını geri yükler. Verileri geri yüklemek için, proje verilerinden değil, çalışma zamanı oluşturulan uygulamaya özgü dosyaları diskten kaldırın.
 
-**Web ayarlarını yükle**
+**Web Ayarlarını Yükleyin**
 
-**Web ayarlarını yükle** ayarı, kimliği doğrulanmış bir kullanıcı için veya anonim kullanıcılar için ayarları yüklemeniz sağlayan bir **oturum açma** iletişim kutusu görüntüler. Bu düğme yalnızca, **Hizmetler** sayfasında istemci uygulama hizmetleri 'ni etkinleştirdiğinizde ve bir **Web ayarları hizmet konumu**belirtmişseniz etkindir.
+**Yük Web Ayarları,** kimlik doğrulaması yapılan bir kullanıcı veya anonim kullanıcılar için ayarları yüklemenizi sağlayan bir **Giriş** iletişim kutusu görüntüler. Bu düğme yalnızca **Hizmetler** sayfasında istemci uygulama hizmetlerini etkinleştirdiğinizde ve **Web ayarları hizmet konumunu**belirttiğinizde etkinleştirilir.
 
-**Kodu görüntüle**
+**Kodu Görüntüle**
 
-Projeler C# Için **kodu görüntüle** düğmesi, *Settings.cs* dosyasındaki kodu görüntülemenize olanak sağlar. Bu dosya, `Settings` nesnesinde belirli olayları işleyebilmenizi sağlayan `Settings` sınıfını tanımlar. Visual Basic dışındaki dillerde, Kullanıcı ayarlarını kalıcı hale getirmek için bu sarmalayıcı sınıfının `Save` yöntemini açıkça çağırmanız gerekir. Bunu genellikle ana formun **Kapanış** olay işleyicisinde yapabilirsiniz. `Save` yöntemine yapılan çağrının bir örneği aşağıda verilmiştir:
+C# projeleri için **Kodu Görüntüle** *düğmesi, Settings.cs* dosyasındaki kodu görüntülemenizi sağlar. Bu dosya, `Settings` `Settings` nesne üzerinde belirli olayları işlemenize olanak tanıyan sınıfı tanımlar. Visual Basic dışındaki dillerde, kullanıcı ayarlarını sürdürmek için bu sarıcı sınıfının `Save` yöntemini açıkça aramalısınız. Bunu genellikle ana formun **Kapanış** olay işleyicisinde yaparsınız. Aşağıdaki `Save` yönteme bir çağrı örneği:
 
 ```csharp
 Properties.Settings.Default.Save();
 ```
 
-Visual Basic projeleri için, **kodu görüntüle** düğmesi *Settings. vb* dosyasındaki kodu görüntülemenize olanak sağlar. Bu dosya, `My.Settings` nesnesinde belirli olayları işleyebilmenizi sağlayan `MySettings` sınıfını tanımlar. `My.Settings` nesnesini kullanarak uygulama ayarlarına erişme hakkında daha fazla bilgi için bkz. [Access Application Settings](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
+Visual Basic projeleri **için, Görünüm Kodu** düğmesi *Ayarlar.vb* dosyasındaki kodu görüntülemenizi sağlar. Bu dosya, `MySettings` `My.Settings` nesne üzerinde belirli olayları işlemenize olanak tanıyan sınıfı tanımlar. Nesneyi kullanarak uygulama ayarlarına erişim `My.Settings` hakkında daha fazla bilgi için [Access uygulama ayarlarına](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)bakın.
 
-Uygulama ayarlarına erişme hakkında daha fazla bilgi için bkz. [Windows Forms Için uygulama ayarları](/dotnet/framework/winforms/advanced/application-settings-for-windows-forms).
+Uygulama ayarlarına erişim hakkında daha fazla bilgi [için Windows Formları uygulama ayarlarına](/dotnet/framework/winforms/advanced/application-settings-for-windows-forms)bakın.
 
-**Erişim değiştiricisi**
+**Erişim değiştirici**
 
-**Erişim değiştirici** düğmesi, Visual Studio 'nun C# *Settings.Designer.cs* veya *Settings. Designer. vb*içinde oluşturduğu `Properties.Settings` (ın) veya `My.Settings` (Visual Basic) yardımcı sınıflarının erişim düzeyini belirtir.
+**Access değiştirici** düğmesi, Visual Studio'nun `Properties.Settings` `My.Settings` *Settings.Designer.cs* veya *Settings.Designer.vb'de*oluşturduğu (C#) veya (Visual Basic'te) yardımcı sınıflarının erişim düzeyini belirtir.
 
-Görsel C# projelerde, erişim değiştiricisi **iç** veya **genel**olabilir.
+Visual C# projeleri için erişim değiştirici **Dahili** veya **Genel**olabilir.
 
-Visual Basic projeleri için, erişim değiştiricisi **arkadaş** veya **genel**olabilir.
+Visual Basic projeleri için erişim değiştiricisi **Arkadaş** veya **Ortak**olabilir.
 
-Varsayılan olarak, bu ayar **dahili** C# ve Visual Basic **arkadaşdır** . Visual Studio, **iç** veya **arkadaş**olarak yardımcı sınıflar oluşturduğunda, yürütülebilir ( *. exe*) uygulamalar, sınıf kitaplıklarına ( *. dll* dosyaları) eklediğiniz kaynak ve ayarlara erişemez. Kaynak ve ayarları bir sınıf kitaplığından paylaşmanız gerekiyorsa, erişim değiştiricisini **Public**olarak ayarlayın.
+Varsayılan olarak, ayar C#'da **İç ve** Visual Basic'te **Arkadaş'tır.** Visual Studio **Dahili** veya **Arkadaş**olarak yardımcı sınıflar oluşturduğunda , yürütülebilir (*.exe*) uygulamaları sınıf kitaplıklarına *(.dll* dosyaları) eklediğiniz kaynaklara ve ayarlara erişemez. Bir sınıf kitaplığından kaynakları ve ayarları paylaşmanız gerekiyorsa, erişim değiştiriciyi **Genel**olarak ayarlayın.
 
-Ayarlar yardımcı sınıfları hakkında daha fazla bilgi için bkz. [uygulama ayarlarını yönetme](../managing-application-settings-dotnet.md).
+Ayarlar yardımcı sınıfları hakkında daha fazla bilgi için uygulama [ayarlarını yönet'e](../managing-application-settings-dotnet.md)bakın.
 
-## <a name="settings-grid"></a>Ayarlar Kılavuzu
+## <a name="settings-grid"></a>Ayarlar ızgarası
 
-**Ayarlar Kılavuzu** , uygulama ayarlarını yapılandırmak için kullanılır. Bu kılavuz şu sütunları içerir:
+**Ayarlar Kılavuz** uygulama ayarlarını yapılandırmak için kullanılır. Bu Kılavuz aşağıdaki sütunları içerir:
 
-**Ad**
+**Adı**
 
-Uygulama ayarının adını bu alana girin.
+Bu alana uygulama ayarı adını girin.
 
-**Türü**
+**Tür**
 
-Ayar için bir tür seçmek üzere açılır listeyi kullanın. En sık kullanılan türler, örneğin **dize**, **(bağlantı dizesi)** ve **System. Drawing. Font**gibi açılan listede görüntülenir. Listenin sonuna kadar **bul** ' u seçerek ve ardından **bir tür Seç** iletişim kutusunda bir tür seçerek başka bir tür seçebilirsiniz. Bir tür seçtikten sonra, açılan listedeki ortak türlere eklenir (yalnızca geçerli çözüm için).
+Ayar için bir tür seçmek için açılır listeyi kullanın. En sık kullanılan türler açılır listede görünür, örneğin, **String**, **(Bağlantı dizesi)** ve **System.Drawing.Font**. Listenin sonunda **Gözat'ı** seçerek ve ardından **Tür Seç** iletişim kutusundan bir tür seçerek başka bir tür seçebilirsiniz. Bir tür seçtikten sonra, açılır listedeki ortak türlere eklenir (yalnızca geçerli çözüm için).
 
 **Kapsam**
 
-**Uygulama** veya **Kullanıcı**seçin.
+**Uygulama** veya **Kullanıcı'yı**seçin.
 
-Bağlantı dizeleri gibi uygulama kapsamlı ayarlar uygulamayla ilişkilendirilir. Kullanıcılar, çalışma zamanında uygulama kapsamlı ayarları değiştiremezler.
+Bağlantı dizeleri gibi uygulama kapsamı ayarları uygulamayla ilişkilidir. Kullanıcılar çalışma zamanında uygulama kapsamı ayarlarını değiştiremez.
 
-Sistem yazı tipleri gibi kullanıcı kapsamlı ayarların Kullanıcı tercihleri için kullanılması amaçlanmıştır. Kullanıcılar, çalışma zamanında bunları değiştirebilir.
+Sistem yazı tipleri gibi kullanıcı kapsamı namına ayarların kullanıcı tercihleri için kullanılması amaçlanmıştır. Kullanıcılar bunları çalışma zamanında değiştirebilir.
 
 **Değer**
 
-Uygulama ayarıyla ilişkili veri veya değer. Örneğin, ayar bir yazı tipi ise, değeri **Verdana, 9.75 PT, Style = kalın**olabilir.
+Uygulama ayarı ile ilişkili veri veya değer. Örneğin, ayar bir yazı tipi ise, değeri **Verdana, 9.75pt, style=Bold**olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama ayarlarını yönet](../managing-application-settings-dotnet.md)
+- [Uygulama ayarlarını yönetme](../managing-application-settings-dotnet.md)
 - [Uygulama ayarlarına erişim (Visual Basic)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)

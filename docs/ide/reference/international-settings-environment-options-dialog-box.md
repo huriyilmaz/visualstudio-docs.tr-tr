@@ -18,23 +18,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1526e1c49636f4883392caa63966714625d066d6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595520"
 ---
-# <a name="options-dialog-box-environment--international-settings"></a>Seçenekler iletişim kutusu: ortam \> uluslararası ayarlar
+# <a name="options-dialog-box-environment--international-settings"></a>Seçenekler iletişim kutusu: \> Ortam Uluslararası Ayarlar
 
-Uluslararası Ayarlar sayfası, makinenizde tümleşik geliştirme ortamının (IDE) birden çok dil sürümüne sahip olduğunuzda varsayılan dili değiştirmenize olanak sağlar. Bu iletişim kutusuna, **Araçlar** menüsünden **Seçenekler** ' i ve ardından **ortam** klasöründen **Uluslararası ayarlar** ' ı seçerek erişebilirsiniz.
+Uluslararası Ayarlar sayfası, makinenizde tümleşik geliştirme ortamının (IDE) birden fazla dil sürümü yüklü olduğunda varsayılan dili değiştirmenize olanak tanır. **Araçlar** menüsünden **Seçenekler'i** seçip ardından **Ortam** klasöründen **Uluslararası Ayarlar'ı** seçerek bu iletişim kutusuna erişebilirsiniz.
 
 **Dil**
 
-Yüklü ürün dili sürümleri için kullanılabilir dilleri listeler. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows Ile aynı**olarak değiştirilir.
+Yüklenen ürün dili sürümleri için kullanılabilir dilleri listeler. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows ile aynı**olarak değiştirilir.
 
 > [!CAUTION]
-> Birden çok dilin yüklü olduğu bir sistemde, Visual C++ derleme araçları (CL. exe, LINK. exe, nmake. exe, bscmake. exe ve ilgili dosyalar) bu ayardan etkilenmez. Bu araçlar, yüklenen son dilin sürümünü kullanır. Visual C++ derleme araçları uydu dll modelini kullanmadığından, daha önce yüklenen dile yönelik derleme araçlarının üzerine yazılır.
+> Birden çok dilyüklü bir sistemde Visual C++ oluşturma araçları (cl.exe, link.exe, nmake.exe, bscmake.exe ve ilgili dosyalar) bu ayardan etkilenmez. Bu araçlar yüklenen son dil için sürümü kullanır. Visual C++ yapı araçları uydu DLL modelini kullanmadığından, önceden yüklenen diliçin yapı araçları üzerine yazılır.
 
 ### <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil paketlerini yükler](../../install/install-visual-studio.md#step-6---install-language-packs-optional)
+- [Dil paketlerini yükleme](../../install/install-visual-studio.md#step-6---install-language-packs-optional)

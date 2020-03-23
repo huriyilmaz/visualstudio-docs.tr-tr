@@ -1,52 +1,52 @@
 ---
-title: Mac için Visual Studio güncelleştiriliyor
-description: Mac için Visual Studio güncelleştirme ve önizleme yayınlarına erişme yönergeleri.
+title: Mac için Visual Studio'nun güncellenmesi
+description: Mac için Visual Studio'yı güncelleme ve önizleme sürümlerine erişim yönergeleri.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
 ms.openlocfilehash: ccfcf04816727800501dada64e73d6ce35876674
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984544"
 ---
-# <a name="update-visual-studio-for-mac"></a>Güncelleştirme Mac için Visual Studio
+# <a name="update-visual-studio-for-mac"></a>Mac için Visual Studio'yı güncelleştirin
 
-Mac için Visual Studio, IDE ve desteklenen çerçeveler için düzenli aralıklarla güncelleştirmeleri dağıtır. Bu güncelleştirmeler yeni özellikler, geliştirmeler ve hata düzeltmeleri biçiminde olabilir.
+Mac için Visual Studio, IDE ve desteklenen çerçeveler için güncelleştirmeleri düzenli olarak dağıtır. Bu güncelleştirmeler yeni özellikler, geliştirmeler ve hata düzeltmeleri şeklinde olabilir.
 
-Mac için Visual Studio, bu en son sürümleri almak için iki kanal sağlar:
+Mac için Visual Studio bu son sürümleri almak için iki kanal sağlar:
 
-* **Kararlı** -kapsamlı olarak sınanmış güncelleştirmeler sağlar. Bu kanal en iyi geliştirme deneyimi için önerilir.
-* **Önizleme** -kararlı kanalda sürüm için aday olan güncelleştirmelere erken erişim sağlar. Bu sürümler günlük kullanım için güvenilir olmayabilir.
+* **Kararlı** - Kapsamlı olarak test edilmiş güncelleştirmeler sağlar. Bu kanal en iyi geliştirme deneyimi için önerilir.
+* **Önizleme** - Kararlı Kanal'da yayımlanmaya aday olan güncelleştirmelere erken erişim sağlar. Bu sürümler günlük kullanım için güvenilir olmayabilir.
 
 ## <a name="checking-for-updates"></a>Güncelleştirmeleri denetleme
 
-Yeni güncelleştirmeleri denetlemek, kanalları değiştirmek ve güncelleştirmeleri indirmek ve yüklemek için **Visual Studio Güncelleştirici** kutusunu kullanabilirsiniz.
+Yeni güncelleştirmeleri denetlemek, kanalları değiştirmek ve güncelleştirmeleri indirip yüklemek için **Visual Studio Updater** kutusunu kullanabilirsiniz.
 
-**Visual Studio güncelleştiricisi**'ni açmak Için, Visual Studio 'ya göz atın **> güncelleştirmeleri denetleyin**:
+**Visual Studio Updater**açmak için , Visual Studio göz **> Güncellemeler için kontrol edin:**
 
 ![Güncelleştirme seçeneğini denetle](media/update-image1.png)
 
-Bu, Güncelleştirici kutusunu görüntüler:
+Bu, güncelleyici kutusunu görüntüler:
 
-![Güncelleştirici kutusu](media/update-image2.png)
+![güncelleyici kutusu](media/update-image2.png)
 
-## <a name="changing-the-updater-channel"></a>Güncelleştirici kanalını değiştirme
+## <a name="changing-the-updater-channel"></a>Updater kanalını değiştirme
 
-Kanalı değiştirmek için Kanal açılan listesinden seçin ve **Kanal değiştir düğmesine**basın:
+Kanalı değiştirmek için kanal açılır ve Kanal **Değiştir düğmesine**basın:
 
-![Kanal açılan öğesini Değiştir](media/update-image3.png)
+![Kanal açılır değiştirme](media/update-image3.png)
 
 ## <a name="downloading-and-installing-updates"></a>Güncelleştirmeleri indirme ve yükleme
 
-Kanalları değiştirmek yeni güncelleştirmelerin indirme işlemini otomatik olarak başlatır.
+Kanal değiştirme, yeni güncelleştirmelerin karşıdan yüklenme işlemini otomatik olarak başlatır.
 
-**Otomatik olarak denetleme**seçeneğini belirlediyseniz, yeni güncelleştirmelerin kullanılabildiğini bildirmek üzere Mac için Visual Studio açık olduğunda Güncelleştirici kutusu açılır. Yeni indirmeler bu kutu göründüğünde makinenize otomatik olarak indirilbaşlayacaktır.
+**Otomatik olarak Denetleme**seçeneğini seçtiyseniz, Yeni güncelleştirmelerin mevcut olduğunu bildirmek için Mac için Visual Studio açık olduğunda güncelleyici kutusu açılır. Bu kutu görüntülendiğinde yeni indirmeler otomatik olarak makinenize indirilmeye başlar.
 
-Güncelleştirmeleri yüklemeye başlamak için **Yeniden Başlat ve güncelleştirmeleri yükleme** düğmesini seçin:
+Güncelleştirmeleri yüklemeye başlamak için **Güncelleştirmeleri Yeniden Başlat ve Yükle** düğmesini seçin:
 
 ![Güncelleştirmeleri yüklemeye başlamak için düğme](media/update-image4.png)
 
@@ -54,8 +54,8 @@ Yüklenmesi gereken bileşenlere bağlı olarak, ek lisansları kabul etmeniz ve
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Güncelleştirici ile ilgili sorunlarınız varsa, [Güncelleştirici sorun giderme](updater-troubleshooting.md) Kılavuzu 'ndaki adımları izleyerek deneyin.
+Güncelleyiciyle ilgili sorunlarınız varsa, [Updater Sorun Giderme](updater-troubleshooting.md) kılavuzundaki adımları izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'Yu güncelleştirme (Windows üzerinde)](/visualstudio/install/update-visual-studio)
+- [Visual Studio'yı güncelleştir (Windows'da)](/visualstudio/install/update-visual-studio)

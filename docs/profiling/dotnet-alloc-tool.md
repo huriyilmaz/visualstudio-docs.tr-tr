@@ -1,5 +1,5 @@
 ---
-title: .NET nesneleri için bellek kullanımını analiz etme | Microsoft Docs
+title: .NET nesneleri için bellek kullanımını analiz et | Microsoft Dokümanlar
 ms.date: 12/9/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,94 +10,94 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 9518ffd618a6d82505feca33b37b5151a3a9f961
-ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75898471"
 ---
-# <a name="analyze-memory-usage-using-the-net-object-allocation-tool"></a>.NET nesne ayırma aracı 'nı kullanarak bellek kullanımını analiz etme
+# <a name="analyze-memory-usage-using-the-net-object-allocation-tool"></a>.NET Nesne Ayırma aracını kullanarak bellek kullanımını analiz edin
 
-Uygulamanızın kullandığı bellek miktarını ve hangi kod yollarının .NET nesne ayırma aracı kullanılarak en fazla bellek ayırabileceğini görebilirsiniz.
+.NET Nesne Ayırma aracını kullanarak uygulamanızın ne kadar bellek kullandığını ve en çok belleği hangi kod yollarını ayırdığını görebilirsiniz.
 
-Aracı çalıştırdıktan sonra, en fazla bellek miktarını alan çağrı ağacının köküne geri geçirebilmeniz için nesnelerin ayrıldığı işlev yürütme yollarını görebilirsiniz.
+Aracı çalıştırdıktan sonra, en çok bellek alan çağrı ağacının köküne kadar izleyebilmeniz için nesnelerin tahsis edildiği işlev yürütme yollarını görebilirsiniz.
 
 ## <a name="setup"></a>Kurulum
 
-1. Performans profil oluşturucuyu (**alt + f2)** Visual Studio 'da açın.
-2.  **.NET nesne ayırma izleme** onay kutusunu seçin.
+1. Visual Studio'da Performans Profilleyicisini **(Alt + F2)** açın.
+2.  **.NET Nesne Ayırma İzleme** onay kutusunu seçin.
 
-![DIAG hub 'ı](../profiling/media/diaghub.png "DIAG hub 'ı")
+![Diag Hub](../profiling/media/diaghub.png "Diag Hub")
 
 > [!NOTE]
-> Başlangıç projesi varsayılan olarak **analiz hedefi** olarak seçilidir, ancak bu işlem çalışan işlem, yürütülebilir dosyalar, çalışan uygulamalar ve yükleme **hedefi** açılır menüsünü açıp kullanılabilir seçeneklerden seçim yaparak yüklü uygulamalar olarak değiştirilebilir.
+> Başlangıç projesi varsayılan olarak **Çözüm hedefi** olarak seçilir, ancak bu işlem, çalıştırılabilir ler, uygulamaları çalıştıran ve yüklü uygulamalara değiştirilebilir, Hedef Açılır Menüsünü **Değiştir** menüsünü açıp kullanılabilir seçeneklerden seçim yaparak.
 
-   .NET nesne ayırma aracı şu anda, açılan menü ile yürütülebilir dosyaları desteklememektedir. Aracı kullanmak için exe proje sisteminden gitmeniz gerekir. Bunu yapmak için, geçerli çözümünüzü kapatın (**dosya** -> **çözümü kapat**) ve ardından **Dosya** -> **bir proje veya çözüm açın** ->. exe dosyanızı seçin.
+   .NET Nesne Ayırma aracı şu anda açılır menü üzerinden yürütülebilir leri desteklemiyor. Aracı kullanmak için exe proje sisteminden geçmeniz gerekir. Bunu yapmak için geçerli çözümünüzü **(Dosya** -> **Kapatma Çözümü)** kapatın ve ardından **Dosya** -> **Aç'a bir proje veya çözüm** (> .exe dosyanızı seçin.
 
-![Analiz hedefi](../profiling/media/analysistarget.png "Analiz hedefi")
+![Analiz Hedefi](../profiling/media/analysistarget.png "Analiz Hedefi")
 
-3. Aracı çalıştırmak için **Başlat** düğmesine tıklayın.
+3. Aracı çalıştırmak için **Başlat** düğmesini tıklatın.
 
-![Toplamayı durdur](../profiling/media/stopcollection.png "Toplamayı durdur")
+![Toplamayı Durdur](../profiling/media/stopcollection.png "Toplamayı Durdur")
 
-4. Araç çalışmaya başladıktan sonra uygulamanızdaki istenen senaryoya gidin ve ardından **toplamayı durdur** ' a basın veya verilerinizi görmek için uygulamanızı kapatın.
-5. **Ayırma** sekmesine tıklayın ve aşağıda gösterilene benzer bir görüntü görmeniz gerekir.
+4. Araç çalışmaya başladığında, uygulamanızda istediğiniz senaryoyu gözden geçirin, ardından **Stop Collection** tuşuna basın veya verilerinizi görmek için uygulamanızı kapatın.
+5. **Tahsis sekmesine** tıkladığınızda, aşağıda gösterilene benzer bir resim görmeniz gerekir.
 
-![Ayırmasını](../profiling/media/allocation.png "ayırma")
+![Ayırma](../profiling/media/allocation.png "Ayırma")
 
-Tebrikler! Artık nesnelerin bellek ayırmayı analiz edebilirsiniz.
+Tebrikler! Artık nesnelerin bellek tahsisini çözümleyebilirsiniz.
 
-## <a name="understand-your-data"></a>Verilerinizi anlayın
+## <a name="understand-your-data"></a>Verilerinizi Anlayın
 
 ### <a name="collection"></a>Koleksiyon
 
 ![Koleksiyon](../profiling/media/collection.png "Koleksiyon")
 
-Koleksiyon görünümü çöp toplama sırasında kaç tane nesnenin toplandığını ve kaç tane korunduğunu görmenizi sağlar. Bu görünüm, toplanan ve nesneleri türe göre görselleştirmek için birkaç pasta grafik de sağlar.
+Koleksiyon görünümü, çöp toplama sırasında kaç nesnenin toplandığını ve kaç nesnenin tutulduğunu görmenizi sağlar. Bu görünüm, toplanan ve hayatta kalan nesneleri türüne göre görselleştirmek için birkaç pasta grafiği de sağlar.
 
-- **Toplanan** sütunda çöp toplayıcısının toplandığı nesne sayısı gösterilir.
-- **Kalan** sütun, çöp toplayıcı çalıştırıldıktan sonra kalan nesne sayısını gösterir.
+- **Toplanan** sütun, çöp toplayıcının topladığı nesne sayısını gösterir.
+- **Hayatta kalan** sütun, çöp toplayıcı çalıştırıldıktan sonra hayatta kalan nesnelerin sayısını gösterir.
 
-### <a name="allocation"></a>ayırma
+### <a name="allocation"></a>Ayırma
 
-![Ayırma genişletildi](../profiling/media/allocationexpanded.png "Ayırma genişletildi")
+![Tahsisat Genişletildi](../profiling/media/allocationexpanded.png "Tahsisat Genişletildi")
 
-Ayırma görünümü, bellek ayıran nesnelerin konumunu ve bu nesnelerin ne kadar bellek ayırışını görmenizi sağlar.
+Ayırma görünümü, bellek ayıran nesnelerin konumunu ve bu nesnelerin ne kadar bellek ayırdığını görmenizi sağlar.
 
-- **Ad** sütunu, bellek kullanan çeşitli sınıfların ve yapıların bir listesidir. Sütun içindeki her öğe, bu kategori içinde bellek alan öğeler varsa genişletilebilen bir düğümdür. (Yalnızca**ayırma** görünümü)
-- **Toplam (ayırmalar)** sütunu, bellek kullanan belirli bir ayırma türü içindeki nesne sayısını gösterir. (**Ayırma**, **çağrı ağacı**ve **işlevler** görünümü)
-- **Kendi kendine (ayırmalar)** sütunu, bellek oluşturan tek bir öğe içindeki nesne sayısını gösterir. (**Ayırma**, **çağrı ağacı**ve **işlevler** görünümü)
-- Bu sütunların üçü sıralanabilir. **Ad** sütunu söz konusu olduğunda, öğeler alfabetik olarak sıralanır (ileri veya geri). **Toplam** ve **kendi kendine (ayırmalar)** , sayısal olarak (artan veya decreasingly) sıralayabilirsiniz.
-- **Toplam Boyut (bayt)** ve **kendine ait boyut (bayt)** sütunları varsayılan olarak açık değildir. Bunları etkinleştirmek için, **ad**, **Toplam** veya **kendine (ayırmalar)** sütunlarına sağ tıklayın ve sonra **Toplam boyut** ve **kendi boyut** seçenekleri ' ne tıklayarak grafiğe ekleyin. İki sütun **Toplam (ayırmalar)** ve **kendi kendine (ayırmalar)** benzerdir, ancak belleği oluşturan nesnelerin sayısını göstermek yerine, bu nesnelerin toplam bellek miktarını bayt cinsinden gösterir. [Yalnızca ayırma görünümü]
+- **Ad** sütunu, bellek alan çeşitli sınıfların ve yapıların bir listesidir. Sütun içindeki her öğe, bu kategoride bellek alan öğeler varsa genişletilebilen bir düğümdür. ( Yalnızca**tahsisat** görünümü)
+- **Toplam (Ayırmalar)** sütunu, bellek alan belirli bir ayırma türündeki nesne sayısını gösterir. (**Ayırma**, **Çağrı Ağacı**ve **Fonksiyonlar** Görünümü)
+- **Benlik (Ayırmalar)** sütunu, bellek alan tek bir öğeiçindeki nesnelerin sayısını gösterir. (**Ayırma**, **Çağrı Ağacı**ve **Fonksiyonlar** Görünümü)
+- Bu sütunların üçü de sıralanabilir. **Ad** sütunu söz konusu olduğunda, öğeler alfabetik olarak sıralanır (ileri veya geri). **Toplam** ve **Öz (Ayırmalar)** için, sayısal olarak sıralayabilirsiniz (giderek veya azalan).
+- **Toplam Boyut (Bayt)** ve **Öz Boyut (Bayt) sütunları** varsayılan olarak açık değildir. Bunları etkinleştirmek için **Ad,** **Toplam** veya **Öz (Ayırmalar) sütunlarına** sağ tıklayın ve ardından grafiğe eklemek için **Toplam Boyut** ve Öz **Boyut** seçeneklerini tıklatın. İki sütun, bellek alan nesnelerin sayısını göstermek yerine, bu nesnelerin aldığı baytlarda toplam bellek miktarını göstermeleri dışında **Toplam (Ayırmalar)** ve **Öz (Ayırmalar)** benzer. [Yalnızca ayırma görünümü]
 
-### <a name="call-tree"></a>Çağrı ağacı
+### <a name="call-tree"></a>Çağrı Ağacı
 
-![Çağrı ağacı](../profiling/media/calltree.png "Çağrı ağacı")
+![Çağrı Ağacı](../profiling/media/calltree.png "Çağrı Ağacı")
 
-**Çağrı ağacı** görünümü, çok fazla bellek ayıran nesneleri içeren işlev yürütme yollarını görmenizi sağlar.
+**Çağrı Ağacı** görünümü, çok fazla bellek ayıran nesneler içeren işlev yürütme yollarını görmenizi sağlar.
 
-- **İşlev adı** sütunu, İnceleme yaptığınız düğüm düzeyine göre bellek ayıran nesneleri içeren işlevin işlemini veya adını gösterir.
-- **Toplam** ve **kendine (ayırmalar)** sütunları, **ayırma** görünümüyle aynı bilgileri gösterir.
+- **İşlev adı** sütunu, incelediğiniz düğümün düzeyine bağlı olarak bellek ayıran nesneleri içeren işlevin işlemini veya adını gösterir.
+- **Toplam** ve **Öz (Ayırmalar) sütunları,** **Ayırma** görünümüyle aynı bilgileri gösterir.
 - **Modül adı** sütunu, çağıran işlevi veya işlemi içeren modülü gösterir.
 
-![Etkin yol](../profiling/media/hotpath.png "Etkin yol")
+![Sıcak Yol](../profiling/media/hotpath.png "Sıcak Yol")
 
-- **Etkin yolu genişlet** düğmesi, bellek ayıran çok sayıda nesne içeren bir işlev yürütme patika vurgular. Algoritma, Kullanıcı tarafından seçilen bir düğümden başlar ve en fazla ayırmaların yolunu vurgular ve bu da bir kullanıcıyı araştırmasına kılavuzluk ediyor.
-- **Etkin yolu göster** düğmesi, **etkin yolun**bir parçası olduğunu belirten yangın simgelerindeki açık veya kapalı olarak geçiş yapar.
+- **Genişle Sıcak Yolu Genişlet** düğmesi, bellek ayıran çok sayıda nesne içeren bir işlev yürütme yolunu vurgular. Algoritma, kullanıcı tarafından seçilen bir ilgi düğümünde başlar ve çoğu ayırmanın yolunu vurgular ve kullanıcıyı araştırmalarında yönlendirir.
+- **Sıcak Yolu Göster** düğmesi, hangi düğümün Hot **Path'in**bir parçası olduğunu gösteren alev simgelerini veya açmalarını gösterir.
 
 ### <a name="functions"></a>İşlevler
 
-![İşlevler](../profiling/media/functions.png "İşlevler")
+![Işlev](../profiling/media/functions.png "İşlevler")
 
-**İşlevler** görünümü, bellek ayıran işlemleri, modülleri ve işlevleri gösterir.
+**İşlevler** görünümü, belleği ayıran işlemleri, modülleri ve işlevleri gösterir.
 
-- **Ad** sütunu, en üst düzey düğümler olarak işlemi gösterir. İşlemlerin altında modüller, modüller altında ise işlevlerdir.
-- **Toplam** ve **kendine (ayırmalar)** sütunları, **ayırma** görünümüyle aynı bilgileri gösterir.
+- **Ad** sütunu işlemleri en üst düzey düğümler olarak gösterir. Altında modüller ve modüller altında fonksiyonlar vardır.
+- **Toplam** ve **Öz (Ayırmalar) sütunları,** **Ayırma** görünümüyle aynı bilgileri gösterir.
 
-**Ayırmalar**, **çağrı ağacı**ve **işlev** görünümleri tümünü **göster yalnızca kendi kodum**, **yerel kodu göster**ve **arama** seçenekleri içerir:
+**Ayırmalar**, **Çağrı Ağacı**ve **Fonksiyonlar** görünümleri yalnızca **Kodumu Göster,** **Yerel Kodu göster**ve **Arama** seçeneklerini içerir:
 
-![Filtre çubuğu](../profiling/media/filterbar.png "Filtre çubuğu")
+![Filtre Çubuğu](../profiling/media/filterbar.png "Filtre Çubuğu")
 
-- Kullanıcı kodunun odaklanabilmesi için sistemleri, çerçeveleri ve diğer kullanıcı olmayan kodu ve **[External Code]** çerçevelerine yönelik olarak **göster yalnızca kendi kodum** . Daha fazla bilgi için bkz. [yalnızca kendi kodum Kullanıcı kodunda hata ayıklama](../debugger/just-my-code.md).
-- **Yerel kodu göster** seçildiğinde, Kullanıcı olmayan kod dahil olmak üzere analiz hedefi içindeki yerel kodu gösterir.
-- **Filtre kutusu** , sağladığınız parametreye göre **ad** veya **işlev adı** sütununu filtrelemenizi sağlar. Yalnızca alana yazmanız gerekir ve yalnızca belirtilen dizeyi içeren türleri göstermek için tablo filtrelemelidir.
+- **Yalnızca Kodum'u göster** sistemleri, çerçeveleri ve diğer kullanıcı dışı kodları ve **[Dış Kod]** çerçevelerini daraltarak kullanıcı koduna odaklanabiliyor. Daha fazla bilgi [için, Yalnızca Kodum ile Hata Ayıklama kullanıcı koduna](../debugger/just-my-code.md)bakın.
+- **Yerel Kodu Göster,** seçilirse kullanıcı kodu olmayan lar da dahil olmak üzere analiz hedefi içinde yerel kodu gösterir.
+- **Filtre kutusu,** sağladığınız parametreye göre **Ad** veya **İşlev adı** sütununu filtrelemenize olanak tanır. Sadece alanı yazın ve tablo sağlanan dize içeren yalnızca türleri göstermek için aşağı filtre gerekir.

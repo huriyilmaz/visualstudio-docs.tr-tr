@@ -1,5 +1,5 @@
 ---
-title: Property öğesi (MSBuild) | Microsoft Docs
+title: Özellik Öğesi (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632959"
 ---
-# <a name="property-element-msbuild"></a>Property öğesi (MSBuild)
+# <a name="property-element-msbuild"></a>Özellik öğesi (MSBuild)
 
-Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde kullanılan her özelliğin, bir `PropertyGroup` öğesinin alt öğesi olarak belirtilmesi gerekir.
+Kullanıcı tanımlı bir özellik adı ve değeri içerir. MSBuild projesinde kullanılan her özellik, bir `PropertyGroup` öğenin alt öğesi olarak belirtilmelidir.
 
- \<Proje > \<PropertyGroup >
+ \<Proje \<> PropertyGroup>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,7 +45,7 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde k
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -55,21 +55,21 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde k
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Özellikler için gruplandırma öğesi.|
+|[Propertygroup](../msbuild/propertygroup-element-msbuild.md)|Özellikler için gruplandırma öğesi.|
 
 ## <a name="text-value"></a>Metin değeri
 
  Metin değeri isteğe bağlıdır.
 
- Bu metin, özellik değerini belirtir ve XML içerebilir.
+ Bu metin özellik değerini belirtir ve XML içerebilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
- Özellik adları yalnızca ASCII karakterleri ile sınırlıdır. Özellik değerleri, "`$(`" ve "`)`" arasında özellik adı girilerek projede başvurulur. Örneğin, `builddir` özelliğinde `build`değeri varsa `$(builddir)\classes`, *build\classes*olarak çözümlenir. Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+ Özellik adları yalnızca ASCII chars ile sınırlıdır. Özellik değerleri , " ve "`$(``)`arasına özellik adı yerleştirilerek projeye başvurulmaktadır. Örneğin, `$(builddir)\classes` `builddir` özellik değeri `build` *olsaydı\sınıflar oluşturmak*için çözer. Özellikler hakkında daha fazla bilgi için [MSBuild özelliklerine](../msbuild/msbuild-properties.md)bakın.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod, `Version` özelliği boşsa `Optimization` özelliğini `false` ve `DefaultVersion` özelliğini `1.0` olarak ayarlar.
+ Aşağıdaki kod, `Optimization` `Version` özelliğin `false` boş `DefaultVersion` `1.0` olup olmadığını ve özelliği ayarlar.
 
 ```xml
 <PropertyGroup>

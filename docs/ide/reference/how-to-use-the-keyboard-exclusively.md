@@ -1,7 +1,7 @@
 ---
-title: Fare olmadan Visual Studio 'Yu kullanma
+title: Visual Studio'u faresiz kullanma
 titleSuffix: ''
-description: Yalnızca klavyeyi kullanarak Visual Studio tümleşik geliştirme ortamı (IDE) içinde nasıl gezinme ve kod yazacağınız hakkında bilgi edinin.
+description: Yalnızca klavyeyi kullanarak Visual Studio tümleşik geliştirme ortamında (IDE) nasıl kod gezinecek ve yazabilirsiniz öğrenin.
 ms.date: 05/10/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,85 +17,85 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3b1beb2ccb6b3e3e2b74ed7deaf2f31443ee2466
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569029"
 ---
-# <a name="how-to-use-the-keyboard-exclusively"></a>Klavye kullanımı özel
+# <a name="how-to-use-the-keyboard-exclusively"></a>Klavyeyi özel olarak kullanma
 
-Klavye kısayolları, Visual Studio IDE 'de gezinmek ve kod yazmak daha kolay hale gelir. Bu makalede, klavye kısayollarını daha verimli bir şekilde kullanabilmeniz için birkaç yol ele almaktadır.
+Klavye kısayolları Visual Studio IDE'de gezinmeyi ve kod yazmayı kolaylaştırabilir. Bu makalede, klavye kısayollarını daha etkili kullanmanın birkaç yolu incelenir.
 
-Visual Studio 'da komut kısayol tuşlarının tam listesi için bkz. [varsayılan klavye kısayolları](../../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Visual Studio'daki komut kısayol tuşlarının tam listesi için [Varsayılan klavye kısayolları'na](../../ide/default-keyboard-shortcuts-in-visual-studio.md)bakın.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 2017 blog gönderisine yönelik erişilebilirlik geliştirmeleri](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) .
+> Erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 blog gönderisinde Erişilebilirlik geliştirmelerine](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) bakın.
 
 ::: moniker-end
 
 > [!NOTE]
-> Ayarlarınıza veya kullandığınız Visual Studio sürümüne bağlı olarak, gördüğünüz iletişim kutuları ve menü komutları yardım bölümünde açıklananlardan farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [ayarlarına](../environment-settings.md#reset-settings).
+> Ayarlarınıza veya kullandığınız Visual Studio sürümüne bağlı olarak, gördüğünüz iletişim kutuları ve menü komutları Yardım'da açıklananlardan farklı olabilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünde **Ayarlar İçe Ve Dışa Aktar'ı** seçin. Daha fazla bilgi [için, ayarları Sıfırla'ya](../environment-settings.md#reset-settings)bakın.
 
-## <a name="toolbox-controls"></a>Araç kutusu denetimleri
+## <a name="toolbox-controls"></a>Araç kutusu kontrolleri
 
-Araç kutusu üzerinde fare kullanmadan bir form veya tasarımcıya denetim eklemek için:
+Fareyi kullanmadan bir forma veya tasarımcıya Araç Kutusu üzerinde denetim eklemek için:
 
-1. Menü çubuğunda **görünüm** > **araç kutusu**' nu seçin.
+1. Menü çubuğunda**Araç Kutusunu** **Görüntüle'yi** > seçin.
 
-2. **Araç kutusu** sekmesindeki bölümler arasında Ilerlemek için **CTRL**+**yukarı oku** veya **CTRL**+**aşağı ok** tuşlarını kullanın.
+2. **Araç Kutusu** sekmesindeki bölümler arasında hareket etmek için **Ctrl**+**Yukarı ok** veya **Ctrl**+**Down ok** tuşlarını kullanın.
 
-3. Bir bölümdeki denetimler arasında gezinmek için **yukarı ok** tuşunu veya **aşağı ok** tuşunu kullanın.
+3. Bir bölümdeki denetimler arasında hareket etmek için **Yukarı ok** tuşunu veya **Aşağı ok** tuşunu kullanın.
 
-4. Denetimi seçtikten sonra, denetimi forma veya tasarımcıya eklemek için **ENTER** tuşunu kullanın.
+4. Denetimi seçtikten sonra, denetimi forma veya tasarımcıya eklemek için **Enter** tuşunu kullanın.
 
 ## <a name="dialog-box-options"></a>İletişim kutusu seçenekleri
 
-Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarlarını yalnızca klavyeyi kullanarak değiştirmek için:
+İletişim kutusundaki seçenekler arasında ilerlemek ve yalnızca klavyeyi kullanarak seçenek ayarlarını değiştirmek için:
 
-1. İletişim kutusundaki denetimlerde yukarı ve aşağı gitmek için **sekme** veya **SHIFT**+**sekmesini** kullanın.
+1. İletişim kutusundaki denetimler arasında yukarı ve aşağı taşımak için **Sekme** veya **Kaydırma**+**Sekmesi'ni** kullanın.
 
 2. Seçenek ayarlarını değiştirmek için:
 
-   - Radyo düğmeleri için, seçimi değiştirmek için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
+   - Radyo düğmeleri için seçimi değiştirmek için **Yukarı ok** ve Aşağı **ok** tuşlarını kullanın.
 
-   - Onay kutuları için, seçmek veya seçimini kaldırmak üzere **Ara çubuğuna** basın.
+   - Onay kutuları için, seçmek veya seçmek için **Spacebar** tuşuna basın.
 
-   - Aşağı açılan listelerde, öğeleri göstermek için **alt**+**aşağı oku** kullanın ve sonra seçili öğeyi değiştirmek Için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
+   - Açılan listeler için öğeleri görüntülemek için **Alt**+**Aşağı ok'u** kullanın ve ardından seçili öğeyi değiştirmek için **Yukarı ok** ve Aşağı **ok** tuşlarını kullanın.
 
-   - Düğmeler için, çağırmak için **ENTER** ' u seçin.
+   - Düğmeler için çağırmak için **Enter'u** seçin.
 
-   - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki açılan listede, öğeleri göstermek için **shıft**+**alt**+**aşağı oku** kullanın ve ardından **yukarı ok** ve **aşağı ok** tuşlarını kullanarak seçili öğeyi değiştirin.
+   - Izgaralar için, gezinmek için ok tuşlarını kullanın. Kılavuzlarda açılan listeler için, öğeleri görüntülemek için Alt**Alt**+**Aşağı oku** **kaydır'ı**+kullanın ve ardından seçili öğeyi değiştirmek için **Yukarı ok** ve Aşağı **ok** tuşlarını kullanın.
 
 ## <a name="navigate-between-windows-and-files"></a>Pencereler ve dosyalar arasında gezinme
 
-- Bir düzenleyici veya tasarımcıda dosyalar arasında geçiş yapmak için **Ctrl**+**Tab** klavye kısayolunu seçerek IDE Gezginini seçili **etkin dosyalarla** görüntüleyin. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
+- Bir düzenleyici veya tasarımcıdaki dosyalar arasında ilerlemek için, **Etkin Dosyalar** seçili IDE Gezgini'ni görüntülemek için **Ctrl**+**Tab** klavye kısayolu'nu seçin. Vurgulanan dosyaya gitmek için **Enter** tuşunu seçin.
 
-- Sabitlenmiş araç pencereleri arasında gezinmek için, **Alt**+**F7** klavye kısayolunu seçerek IDE Gezginini seçili **etkin araç pencereleri** ile görüntüleyin. Vurgulanan pencereye gitmek için **ENTER** tuşunu seçin.
+- Kenetlenmiş araç pencereleri arasında ilerlemek için, **Etkin Araç Windows** seçili IDE Gezgini'ni görüntülemek için **Alt**+**F7** klavye kısayolu'nu seçin. Vurgulanan pencereye gitmek için **Enter** tuşunu seçin.
 
-## <a name="move-and-dock-tool-windows"></a>Araç pencerelerini taşı ve Yerleştir
+## <a name="move-and-dock-tool-windows"></a>Araç pencerelerini taşıma ve yerleştirme
 
-1. Taşımak istediğiniz araç penceresine gidin ve odağı sunun.
+1. Hareket etmek istediğiniz araç penceresine gidin ve ona odaklanın.
 
-2. **Pencere** menüsünde, **dockable** seçeneğini belirleyin.
+2. **Pencere** menüsünde **Takılabilir** seçeneğini seçin.
 
-3. **Alt**+**Ara çubuğuna**basın ve ardından **Taşı**' yı seçin.
+3. **Alt**+**Spacebar tuşuna**basın ve ardından **Taşı'yı**seçin.
 
-   Yerleştirme Kılavuzu elmas görünür.
+   Yerleştirme kılavuzu elması görüntülenir.
 
 4. Pencereyi yeni bir konuma taşımak için ok tuşlarını kullanın.
 
-   Ok tuşlarını kullanırken fare işaretçisi pencereyle birlikte gider.
+   Ok tuşlarını kullanırken fare işaretçisi pencereyle birlikte hareket eder.
 
-5. Yeni konuma ulaşıldığında, fare işaretçisini kılavuz baklava yerinin doğru kısmına taşımak için ok tuşlarını kullanın.
+5. Yeni konuma ulaştığınızda, fare işaretçisini kılavuz elması'nın doğru bölümünün üzerine taşımak için ok tuşlarını kullanın.
 
-   Yeni yerleştirme konumunda araç penceresinin ana hattı görüntülenir.
+   Araç penceresinin anahattı yeni yerleştirme konumunda görüntülenir.
 
-6. Tuşuna **girin**.
+6. **Enter**'a basın.
 
-   Araç penceresi yeni yerleştirme konumunda yer içine yapışır.
+   Araç penceresi yeni yerleştirme konumunda yerine yapışıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,37 +1,37 @@
 ---
 title: Mac için Visual Studio ile VoiceOver kullanma
-description: Mac için Visual Studio ile macOS VoiceOver gezintisini kullanma
+description: Mac için Visual Studio ile macOS VoiceOver navigasyonunu kullanma
 author: alanjclark
 ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 590C325D-AAD0-4889-B1DB-A1090BBFBE89
 ms.openlocfilehash: 8f5cfc4c05ed3911370782185475b23112207c62
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985070"
 ---
 # <a name="using-voiceover-with-visual-studio-for-mac"></a>Mac için Visual Studio ile VoiceOver kullanma
 
-Bir ekran okuyucusu gerektiren kullanıcılar macOS VoiceOver 'tan faydalanır. Mac için Visual Studio ortak VoiceOver komutları kullanılarak erişilebilir.
+Ekran okuyucuya ihtiyaç duyan kullanıcılar macOS VoiceOver'dan yararlanacaktır. Mac için Visual Studio'ya ortak VoiceOver komutları kullanılarak erişilebilir.
 
-## <a name="how-to-enable-and-use-voiceover"></a>Nasıl yapılır: VoiceOver etkinleştirme ve kullanma
+## <a name="how-to-enable-and-use-voiceover"></a>Nasıl kullanılır: VoiceOver'ı etkinleştirme ve kullanma
 
-VoiceOver 'i etkinleştirmek veya devre dışı bırakmak için F5 'e basın  **&#8984;**
+**F5'&#8984;** VoiceOver tuşuna basın etkinleştirmek veya devre dışı kılabilir
 
-VoiceOver komutları, bu kılavuzda, **VO** 'Nin **VoiceOver yardımcı** uygulamasındaki değiştirici kümesine başvurduğu **VO _tuşu_**  olarak görünür. Varsayılan değiştirici **⌃ ⌥**' dir. Örneğin, VoiceOver değiştiriciye bağlı olarak **VO** , **⌃ ⌥ d**anlamına gelir. İmleç anahtarlarına, **← → ↑ ↓**olarak başvurulur.
+VoiceOver komutları vo ** _anahtarı_ ** olarak bu kılavuzda görünür, böylece **VO** **VoiceOver Utility** uygulamasında ayarlanan değiştirici anlamına gelir. Varsayılan değiştirici **, "100"** Örneğin, VoiceOver değiştiricinize bağlı **olarak, VO M** **, "M "** anlamına gelir. İmleç tuşları **na ← → ↑ .**
 
-## <a name="useful-voiceover-commands"></a>Faydalı VoiceOver komutları
+## <a name="useful-voiceover-commands"></a>Yararlı VoiceOver komutları
 
-Mac için Visual Studio için bazı yaygın VoiceOver komutlarının listesi aşağıda verilmiştir:
+Burada Mac için Visual Studio için bazı ortak VoiceOver komutları bir listesi:
 
 |Özellik|Açıklama|Kısayol|
 |-------|-----------|--------|
-|Gidin|Kullanıcı arabiriminin tüm öğelerine git|**VO →**, **VO ←**|
-|Gidin|UI öğelerinin içine veya dışına adımla|**VO ⇧ ↓**, **VO ⇧ ↑**|
-|Etkileşim|Odadaki denetimi seçme veya bunlarla etkileşim kurma|**VO ␣**|
-|Etkileşim|Mac için Visual Studio menü çubuğuyla etkileşim kurma|**VO**|
+|Gidin|UI'nin tüm öğelerinde gezinme|**VO→**, **VO←**|
+|Gidin|UI öğelerine veya bunların dışına adım atma|**VO',** **VO'↑**|
+|Etkileşim|Odaktaki denetimi seçme veya bunlarla etkileşimde|**VO' su**|
+|Etkileşim|Mac menü çubuğu için Visual Studio ile etkileşim|**VO M**|
 
 > [!TIP]
-> VoiceOver kullanma hakkında daha fazla bilgi edinmek ve komutların kapsamlı bir listesini almak için lütfen [Apple 'ın VoiceOver kullanmaya başlama kılavuzuna](https://support.apple.com/en-us/guide/voiceover-guide/welcome/web)bakın.
+> VoiceOver ve kapsamlı bir komut listesi nin kullanımı hakkında daha fazla bilgi için lütfen [Apple'ın Seslendirme Başlangıç Kılavuzu'na](https://support.apple.com/en-us/guide/voiceover-guide/welcome/web)bakın.

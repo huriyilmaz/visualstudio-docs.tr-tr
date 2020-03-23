@@ -21,80 +21,80 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 973e08ca6555f7da7873d3068e2794b8d34e3640
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569445"
 ---
-# <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: ortam \> genel
+# <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: \> Çevre Genel
 
-Bu sayfayı, tümleşik geliştirme ortamı (IDE) için diğer seçenekler arasında renk temalarını, durum çubuğu ayarlarını ve dosya uzantısı ilişkilendirmelerini değiştirmek için kullanın. **Seçenekler** Iletişim kutusuna **Araçlar** menüsünü açıp **Seçenekler**' i seçip, **ortam** klasörünü açıp **genel** sayfasını seçerek erişebilirsiniz. Bu sayfa listede görünmezse, **Seçenekler** iletişim kutusundaki **tüm ayarları göster** onay kutusunu seçin.
+Tümleşik geliştirme ortamı (IDE) için diğer seçeneklerin yanı sıra renk temalarını, durum çubuğu ayarlarını ve dosya uzantısı ilişkilendirmelerini değiştirmek için bu sayfayı kullanın. **Araçlar** menüsünü açarak, **Seçenekler'i**seçerek, **Çevre** klasörünü açarak ve ardından **Genel** sayfayı seçerek **Seçenekler** iletişim kutusuna erişebilirsiniz. Bu sayfa listede görünmüyorsa, **Seçenekler** iletişim kutusundaki **tüm ayarları göster** onay kutusunu seçin.
 
-## <a name="visual-experience"></a>Görsel deneyim
+## <a name="visual-experience"></a>Görsel Deneyim
 
-**Renk teması**
+**Renk Teması**
 
-IDE için **mavi**, **hafif**, **koyu**veya **mavi (ekstra kontrast)** renk temasını seçin.
+IDE için **Mavi,** **Açık,** **Koyu**veya **Mavi (Ekstra Kontrast)** renk temayı seçin.
 
-[Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) **Visual Studio Color teması düzenleyicisini** indirip yükleyerek, önceden tanımlanmış ek temalar yükleyebilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra, **renk teması** liste kutusunda ek renk temaları görüntülenir.
+[Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)Marketplace'ten **Visual Studio Color Tema Düzenleyicisini** indirip kurarak özel temalar oluşturabilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra Renk **Teması** listesi kutusunda ek renk temaları görünür.
 
-**Menü çubuğuna başlık durumu Stili Uygula**
+**Başlık büyük/küçük harf stilini menü çubuğuna uygulama**
 
-Menüler, varsayılan olarak başlık durumu stili kullanır. Bunun yerine tüm büyük harf stillerini kullanmak için bu seçeneğin işaretini kaldırın.
+Menülerde varsayılan olarak başlık örneği stili kullanılır. Bunun yerine tüm büyük harf stilini kullanmak için bu seçeneğin işaretlerini kaldırın.
 
 ::: moniker range=">=vs-2019"
 
-**Farklı pikseller içeren ekranlar için işlemeyi iyileştirin (yeniden başlatma gerektirir)**
+**Farklı piksel yoğunluklarına sahip ekranlar için oluşturmayı optimize edin (yeniden başlatmayı gerektirir)**
 
-Bu seçenek, inç başına nokta (DPI) tanıma (veya *PMA*) için bir veya devre dışı bırakır. PMA etkinleştirildiğinde, Visual Studio Kullanıcı arabirimi, birden çok monitöre dahil olmak üzere herhangi bir izleyici görüntü ölçek faktörü ve DPı yapılandırmasında net görünür. PMA 'yı etkinleştirmek için Windows 10 Nisan 2018 güncelleştirmesi veya üzeri ve .NET Framework 4,8 veya üzeri bir sürüme sahip olmanız gerekir. (Bu iki önkoşul karşılanmazsa Bu seçenek gri renkte görünür.)
+Bu seçenek, inç başına monitör başına noktalar (DPI) farkındalığı (veya *PMA)* sağlar veya devre dışı eder. PMA etkinleştirildiğinde, Visual Studio kullanıcı arabirimi, birden çok monitör de dahil olmak üzere tüm monitör ekran ölçeği faktöründe ve DPI yapılandırmasında net görünür. PMA'yı etkinleştirmek için Windows 10 Nisan 2018 Güncelleştirmesi veya sonrası ve .NET Framework 4.8 veya daha sonra olmanız gerekir. (Bu iki ön koşul karşılanmazsa bu seçenek soluk olarak görünür.)
 
 > [!TIP]
-> - Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini**belirten bir ayarı vardır. **Farklı piksel denikler seçeneği işaretli ekranlarda en iyileştirme için Işlemeyi en uygun hale getirmeniz** durumunda, bu Windows ayarı **Açık** bir etkiye sahip olur.
-> - Windows 10 ' da bir **Program uyumluluğu sorun giderici**de bulunur. Bu sorun gidericiyi kullanarak Visual Studio 'nun görünümünü gidermeye çalışmamız önerilmez.
+> - Windows 10'da, **Windows'un uygulamaları bulanık olmaması için düzeltmeye çalışalım**diyor. **Farklı piksel yoğunlukları** seçeneği işaretlenmiş ekranlar için Optimize render varsa, Windows ayarını **açmanın** ihmal edilebilir bir etkisi vardır.
+> - Windows 10 da bir **Program Uyumluluk Sorun Giderici**içerir. Bu sorun gidericiyi kullanarak Visual Studio'nun görünümünü düzeltmeye çalışmanızı önermiyoruz.
 
 ::: moniker-end
 
-**İstemci performansına göre görsel deneyimi otomatik olarak ayarla**
+**İstemci performansına göre görsel deneyimi otomatik olarak ayarlama**
 
-Visual Studio 'Nun ayarlamayı otomatik olarak ayarlama veya ayarlamayı açık olarak ayarlama gibi belirtir. Bu ayarlama, renklerin degradeden düz renklere görüntüsünü değiştirebilir veya menülerde veya açılan pencerelerin animasyonların kullanımını kısıtlayabilir.
+Visual Studio'nun görsel deneyime ayarlamayı otomatik olarak ayarlayıp ayarlamadığını veya ayarlamayı açıkça ayarlayıp ayarlamadığınızı belirtir. Bu ayarlama renk ekranını degradelerden düz renklere değiştirebilir veya menülerde veya açılır pencerelerde animasyon kullanımını kısıtlayabilir.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini**belirten bir ayarı vardır. Visual Studio, monitörünüzde bulanık **görünürse, bu ayarın etkinleştirilmesi** önerilir. [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' a yükseltmeyi göz önünde bulundurun. Bu, büyük ölçüde geliştirilmiş görüntüleme netliği olan, her/inç bir uygulama için ekran başına nokta olarak geliştirilmiştir.
+> Windows 10'da, **Windows'un uygulamaları bulanık olmaması için düzeltmeye çalışalım**diyor. Visual Studio monitörünüzde bulanık görünüyorsa bu ayarı **açmanız** önerilir. Inç başına bir monitör başına nokta farkında uygulama olduğu için önemli ölçüde geliştirilmiş olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)yükseltme düşünün.
 
 ::: moniker-end
 
-**Zengin istemci deneyimini etkinleştir**
+**Zengin istemci deneyimini etkinleştirin**
 
-Degradeler ve animasyonlar dahil olmak üzere Visual Studio 'nun tam görsel deneyimini sunar. Uzak Masaüstü bağlantıları veya daha eski grafik bağdaştırıcılar kullanılırken bu seçeneği temizleyin çünkü bu özellikler bu durumlarda düşük performansa sahip olabilir. Bu seçenek yalnızca, **istemci seçeneğine göre görsel deneyimi otomatik olarak ayarla** seçeneğini belirlediğinizde kullanılabilir.
+Degradeler ve animasyonlar da dahil olmak üzere Visual Studio'nun tam görsel deneyimini sağlar. Uzak Masaüstü bağlantılarını veya eski grafik bağdaştırıcılarını kullanırken bu seçeneği temizleyin, çünkü bu özellikler bu gibi durumlarda düşük performansa sahip olabilir. Bu seçenek, yalnızca istemci seçeneğine **göre görsel deneyimi otomatik olarak ayarla'yı** temizlediğinizde kullanılabilir.
 
-**Kullanılabiliyorsa, donanım grafik hızlandırmasını kullanın**
+**Varsa donanım grafik hızlandırma kullanma**
 
-Yazılım hızlandırma yerine, varsa, donanım grafik hızlandırmasını kullanır.
+Yazılım hızlandırma yerine varsa donanım grafik ivmesi kullanır.
 
 ## <a name="other"></a>Diğer
 
-**Pencere menüsünde gösterilecek Öğeler**
+**Pencere menüsünde gösterilen öğeler**
 
-**Pencere** menüsünün Windows listesinde görüntülenen pencerelerin sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10 ' dur.
+**Pencere** menüsünün Windows listesinde görünen pencere sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur.
 
 **Son kullanılan listelerde gösterilen öğeler**
 
-**Dosya** menüsünde görünen en son kullanılan proje ve dosya sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10 ' dur. Bu, son kullanılan projeleri ve dosyaları almanın kolay bir yoludur.
+**Dosya** menüsünde görünen en son kullanılan proje ve dosyaların sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur. Bu, son kullanılan projeleri ve dosyaları almak için kolay bir yoldur.
 
-**Durum çubuğunu göster**
+**Durum çubuğugöster**
 
-Durum çubuğunu görüntüler. Durum çubuğu IDE penceresinin alt kısmında bulunur ve devam eden işlemlerin ilerleme durumuyla ilgili bilgileri görüntüler.
+Durum çubuğunu görüntüler. Durum çubuğu IDE penceresinin alt kısmında yer alır ve devam eden işlemlerin ilerlemesi hakkında bilgi görüntüler.
 
-**Kapat düğmesi yalnızca etkin araç penceresini etkiler**
+**Kapat düğmesi yalnızca etkin araç pencerelerini etkiler**
 
-**Kapat** düğmesine tıklandığında, yalnızca odağı olan araç penceresinin kapalı olduğunu ve yerleşik küme içindeki araç pencerelerinin tümünü değil ' i belirtir. Varsayılan olarak, bu seçenek seçilidir.
+**Kapat** düğmesi tıklatıldığında, yalnızca odak noktası olan araç penceresinin kapatılmış olduğunu ve docked kümesindeki tüm araç pencerelerinin olmadığını belirtir. Varsayılan olarak, bu seçenek seçilidir.
 
-**Otomatik Gizle düğmesi yalnızca etkin araç penceresini etkiler**
+**Otomatik Gizle düğmesi yalnızca etkin araç pencerelerini etkiler**
 
-**Otomatik Gizle** düğmesine tıklandığında, yalnızca odağı olan araç penceresinin, yerleşik küme içindeki araç pencerelerinin hepsi değil otomatik olarak gizlendiğini belirtir. Varsayılan olarak, bu seçenek seçili değildir.
+**Otomatik Gizle** düğmesi tıklatıldığında, yalnızca odak noktası olan araç penceresinin otomatik olarak gizlendiğini ve kenetlenmiş kümedeki tüm araç pencerelerinin gizlenmediğini belirtir. Varsayılan olarak, bu seçenek seçilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

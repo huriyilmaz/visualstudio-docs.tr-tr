@@ -1,5 +1,5 @@
 ---
-title: Yakınlaştırma Denetimi (iş parçacıkları görünümü) | Microsoft Docs
+title: Yakınlaştırma Denetimi (İş Parçacığı Görünümü) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb1521623880712211ea04e5c572c7cf4bd85133
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62960166"
 ---
-# <a name="zoom-control-threads-view"></a>Yakınlaştırma Denetimi (iş parçacıkları görünümü)
-Yakınlaştırma, belirli ilgi alanlarına odaklanabilmeniz için zaman çizelgesinde yakınlaştırma ve uzaklaştırma yardımcı olacak bir kaydırıcı denetimidir. Zaman Çizelgesi Görünümü Merkezi'nde bu denetimi yakınlaştırır olduğundan, ilgi alanı, yakınlaştırma önce Merkezi.
+# <a name="zoom-control-threads-view"></a>Yakınlaştırma denetimi (iş parçacığı görünümü)
+Yakınlaştırma denetimi, belirli ilgi çekici alanlara odaklanabilmeniz için zaman çizelgesini yakınlaştırmanıza ve uzaklaştırmanıza yardımcı olan bir kaydırıcıdır. Bu denetim zaman çizelgesi görünümünün merkezine yakınlaştırdığından, yakınlaştırmadan önce ilgi alanını ortala.
 
-## <a name="zoom-in-by-dragging-in-the-timeline-view"></a>Zaman Çizelgesi Görünümü'nde sürükleyerek Yakınlaştır
- Zaman Çizelgesi Görünümü'nde sürükleyerek yakınlaştırma sarı renkle vurgulanır bir alanı oluşturur. Fare düğmesini bıraktığınızda, zaman çizelgesi görünümü seçili aralıkta yakınlaştırır.
+## <a name="zoom-in-by-dragging-in-the-timeline-view"></a>Zaman çizelgesi görünümünde sürükleyerek yakınlaştırma
+ Zaman çizelgesi görünümünde sürükleyerek yakınlaştırma, sarı ile vurgulanan bir alan oluşturur. Fare düğmesini serbest bıraktığınızda, zaman çizelgesi görünümü seçili aralığı yakınlaştırır.
 
-## <a name="zoom-in-and-out-by-using-the-mouse-wheel"></a>Fare tekerleğini kullanarak yakınlaştırabilir
- (Fare odağa sahip sağlamak üzere) zaman çizelgesi üzerinde herhangi bir noktaya tıklayın ve sonra basın **Ctrl** ve fare tekerleğini (içinde iletme yakınlaştırır; geriye dönük yakınlaştırır kullanıma) taşıyın.
+## <a name="zoom-in-and-out-by-using-the-mouse-wheel"></a>Fare tekerleğini kullanarak yakınlaştırın ve uzaklaştırın
+ Zaman çizelgesindeki herhangi bir noktaya tıklayın (fare odağı olduğundan emin olmak için) ve ardından **Ctrl** tuşuna basın ve fare tekerleğine basın (ileri yakınlaştırır; geriye doğru yakınlaştırır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kanalları Yönet](../profiling/manage-channels.md)
-- [Ölçüm modu açık/kapalı](../profiling/measure-mode-on-off.md)
-- [İş Parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)
-- [Kullanım Gezgini](../profiling/utilization-navigator.md)
+- [Kanalları yönetme](../profiling/manage-channels.md)
+- [Ölçme modu a/kapalı](../profiling/measure-mode-on-off.md)
+- [İş parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)
+- [Kullanım navigasyon](../profiling/utilization-navigator.md)

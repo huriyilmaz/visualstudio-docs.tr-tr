@@ -1,5 +1,5 @@
 ---
-title: 'DA0503: Işlemin profili oluşturulan ortalama çalışma kümesi sayısı | Microsoft Docs'
+title: 'DA0503: Profilde Tutulan İşlem için Baytlarda Ortalama Çalışma Seti | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,36 +14,36 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c9d309d7bf10cee07cc30c4568d2dfa59d1be56
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777456"
 ---
-# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: işlemin profili oluşturulan ortalama çalışma kümesi bayt cinsinden
+# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Profillenenekadar baytlarda ayarlanan ortalama çalışma
 
 |||
 |-|-|
-|Kural Kimliği|DA0503|
-|Kategori|Kaynak Izleme|
+|Kural Id|DA0503|
+|Kategori|Kaynak İzleme|
 |Profil oluşturma yöntemi|Tümü|
-|İleti|Bu bilgiler yalnızca bilgi için toplanmıştı. Işlem çalışma kümesi sayacı, profil oluşturduğunuz işlem tarafından fiziksel bellek kullanımını ölçer. Bildirilen değer tüm ölçüm aralıklarında hesaplanan ortalama değerdir.|
-|Kural türü|Bilgisi|
+|İleti|Bu bilgiler yalnızca bilgi için toplanmış. İşlem Çalışma Kümesi karşı, profil oluşturma işleminize göre fiziksel bellek kullanımını ölçer. Bildirilen değer, tüm ölçüm aralıkları üzerinden hesaplanan ortalamadır.|
+|Kural türü|Bilgi|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET bellek veya kaynak çekişme yöntemlerini kullanarak profil yaptığınızda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Bu ileti, işlemin Şu anda kullandığı ortalama fiziksel bellek miktarını bayt (çalışma kümesi) olarak bildirir. İşlem çalışma kümesi, şu anda fiziksel bellekte bulunan işlem adres alanından sayfaları temsil eder.
+ Bu ileti, işlemin şu anda baytlarda (çalışma kümesi) kullanmakta olduğu ortalama fiziksel bellek miktarını bildirir. İşlem çalışma kümesi, şu anda fiziksel bellekte bulunan işlem adresi alanından sayfaları temsil eder.
 
- Raporlanan değer, paylaşılan bellek segmentlerinden işleme başvurduğu yerleşik sayfaları içerir. İşlemin başvurduğu paylaşılan DLL 'Ler, sayılan paylaşılan bellek kesimlerine dahil edilir. İşlem çalışma kümesinin değeri, paylaşılan bellek kesimleri nedeniyle işlemin ayırdığı sanal bellek miktarından daha yüksek olabilir.
+ Bildirilen değer, işlemin başlettiği paylaşılan bellek bölümlerinden yerleşik sayfaları içerir. İşlem başvurularının sayılan paylaşılan bellek segmentlerine dahil edildiği paylaşılan DL'ler. İşlem çalışma kümesinin değeri, paylaşılan bellek bölümleri nedeniyle işlemin ayırdığı sanal bellek miktarından daha yüksek olabilir.
 
- Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıklarının ortalaması olarak belirlenir.
+ Bildirilen değer, profillenen işlemin etkin olduğu tüm ölçüm aralıklarının ortalamasıdır.
 
- İşlem çalışma kümesinin boyutu, işlemin etkin bir şekilde ne kadar sanal bellek kullandığını yansıtır. Ayrıca, uygulamayı çalıştırmak için kullanılabilir fiziksel bellek miktarı (veya RAM) ve diğer çalışan işlemlerden bu fiziksel bellek için çekişmeden da etkilenir. Fiziksel bellek kısıtlandığından, işlem çalışma kümesinin değeri, işlem çalışma kümelerinden oldukça etkin olmayan sayfaları düzenli olarak kırparak, işletim sistemleri, etkin süreçler genelinde bellek kullanımını dengelemeye çalıştığı için apt ' dir.
+ İşlem çalışma kümesinin boyutu, işlemin etkin olarak ne kadar sanal bellek kullandığını yansıtır. Ayrıca, diğer çalışan işlemlerden bu fiziksel bellek için uygulama ve çekişme çalıştırmak için kullanılabilir fiziksel bellek (veya RAM) miktarı etkilenir. Fiziksel bellek kısıtlanmışsa, işletim sistemleri, işlem çalışma kümelerinden oldukça etkin olmayan sayfaları düzenli aralıklarla kırparak bellek kullanımını etkin süreçler arasında dengelemeye çalıştığından, işlem çalışma kümesinin değeri önemli ölçüde değişir.
 
- İşlem çalışma kümeleri hakkında daha fazla bilgi için bkz. MSDN 'nin Windows bellek yönetimi belgelerindeki [çalışma kümesi](/windows/win32/memory/working-set) .
+ İşlem çalışma kümeleri hakkında daha fazla bilgi için, MSDN'nin Windows Bellek Yönetimi belgelerinde [Çalışma Kümesi'ne](/windows/win32/memory/working-set) bakın.
 
-## <a name="how-to-use-rule-data"></a>Kural verilerini kullanma
- Programın farklı sürümlerinin veya derlemelerin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için kural değerini kullanın.
+## <a name="how-to-use-rule-data"></a>Kural verileri nasıl kullanılır?
+ Farklı sürümlerin veya programın yapılarının performansını karşılaştırmak veya farklı profil oluşturma senaryoları altında uygulamanın performansını anlamak için kural değerini kullanın.
 
- Profil oluşturma verilerinin [Işaretler görünümü](../profiling/marks-view.md) görünümüne gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. **Process\working kümesini** ve **bellek \ Sayfa/sn** sütunlarını bulun. İki sütunu karşılaştırın ve daha fazla sayfalama GÇ etkinliğiyle ilişkili olarak görünen program yürütmesinin belirli aşamaları olup olmadığını saptayın.
+ Profil oluşturma verilerinin [İşaretler Görünümü](../profiling/marks-view.md) görünümüne gitmek için Hatalar Listesi penceresindeki iletiyi çift tıklatın. **İşlem\Çalışma Kümesini** ve **Bellek\Sayfalar/sn** sütunlarını bulun. İki sütunu karşılaştırın ve artan sayfalama IO etkinliğiyle ilişkili görünen program yürütmesinin belirli aşamaları olup olmadığını belirleyin.

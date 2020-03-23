@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac469b913b03dec9389b3f44121c2e80d87d30b3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590143"
 ---
-# <a name="how-to-export-class-diagrams-as-images"></a>Nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma
+# <a name="how-to-export-class-diagrams-as-images"></a>Nasıl yapilir: Sınıf diyagramlarını görüntü olarak dışa aktarma
 
-Projedeki koddan oluşturduğunuz bir sınıf diyagramını dışarı aktarmak için, diyagramı görüntü olarak kaydedin. Bunun yerine UML sınıf diyagramlarını dışarı aktarmak istiyorsanız bkz. [diyagramları görüntü olarak dışarı aktarma](../../modeling/export-diagrams-as-images.md).
+Projede koddan oluşturduğunuz sınıf diyagramını dışa aktarmak için diyagramı görüntü olarak kaydedin. Uml sınıf diyagramlarını dışa aktarmak istiyorsanız, [dışa aktarma diyagramlarını görüntü olarak](../../modeling/export-diagrams-as-images.md)görün.
 
-## <a name="export-a-diagram"></a>Bir diyagramı dışarı aktarma
+## <a name="export-a-diagram"></a>Diyagramı dışa aktarma
 
-1. Sınıf diyagramı ( *. CD*) dosyanızı açın.
+1. Sınıf diyagramınızı (*.cd*) dosyanızı açın.
 
-2. **Sınıf diyagramı** menüsünde veya Diyagram yüzeyi kısayol menüsünde **Diyagramı görüntü olarak dışarı aktar**' ı seçin.
+2. Sınıf **Diyagramı** menüsünden veya diyagram yüzey kısayol **menüsünden, Resim Olarak Diyagramı Dışa Aktar'ı**seçin.
 
-3. Diyagram seçin.
+3. Bir diyagram seçin.
 
 4. İstediğiniz biçimi seçin.
 
-5. Dışarı aktarmayı silmek için **dışarı aktar** ' ı seçin.
+5. Dışa aktarmayı bitirmek için **Dışa** Aktarma'yı seçin.
 
-Diğer belgelerden bağlantılı dışarı aktarılmış görüntüleri otomatik olarak güncelleştirmek için, Visual Studio 'da diyagramı yeniden dışarı aktarın.
+Diğer belgelere bağlı dışa aktarılan görüntüleri otomatik olarak güncelleştirmek için diyagramı Visual Studio'da yeniden dışa aktarın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: sınıf diyagramlarını yazdırma](how-to-print-class-diagrams.md)
+- [Nasıl Yapılsın: Sınıf Diyagramlarını Yazdır](how-to-print-class-diagrams.md)
 - [Sınıf Diyagramları ile Çalışma](designing-and-viewing-classes-and-types.md)

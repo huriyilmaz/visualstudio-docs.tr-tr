@@ -1,5 +1,5 @@
 ---
-title: Web performans testi API'si
+title: Web Performans Testi API
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,63 +10,63 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e869bc46997ffb6ebecae2aa3e49c3cb6b2582fa
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594350"
 ---
-# <a name="how-to-use-the-web-performance-test-api"></a>Nasıl yapılır: web başarım testi API'si kullanma
+# <a name="how-to-use-the-web-performance-test-api"></a>Nasıl kullanılır: Web performans testi API'sini kullanın
 
-Web performans testleri için kod yazabilirsiniz. Web performans testi API'si, kodlanmış web performans testleri, web performans testi eklentileri, istek eklentileri, istekler, ayıklama kuralları ve doğrulama kurallarını oluşturmak için kullanılır. Bu türleri oluşturan sınıfları, bu API temel sınıflardır. Bu API diğer türleri oluşturulmasını desteklemek için kullanılan <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTest>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequest>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>, ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> nesneleri. Kullandığınız <xref:Microsoft.VisualStudio.TestTools.WebTesting> özelleştirilmiş oluşturmak için ad alanı web performans testleri.
+Web performans testleriniz için kod yazabilirsiniz. Web performans testi API, kodlanmış web performans testleri, web performans testi eklentileri, istek eklentileri, istekler, çıkarma kuralları ve doğrulama kuralları oluşturmak için kullanılır. Bu türleri oluşturan sınıflar bu API'deki temel sınıflardır. Bu API'deki diğer türler, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTest> <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequest> <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> , ve nesneleri oluşturmayı desteklemek için kullanılır. <xref:Microsoft.VisualStudio.TestTools.WebTesting> Özelleştirilmiş web performans testleri oluşturmak için ad alanını kullanırsınız.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Web performans testi API, program aracılığıyla oluşturma ve bildirim temelli web performans testlerini kaydetmek için de kullanabilirsiniz. Bunu yapmak için <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer> sınıfları.
+Ayrıca, bildirimsel web performans testlerini programlı bir şekilde oluşturmak ve kaydetmek için web performans testi API'sini de kullanabilirsiniz. Bunu yapmak için, <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer> ve sınıfları kullanın.
 
 > [!TIP]
-> İncelemek için Nesne Tarayıcısı kullanmanız <xref:Microsoft.VisualStudio.TestTools.WebTesting> ad alanı. Visual C# ve Visual Basic düzenleyicileri ad alanındaki sınıflarla kodlamak için IntelliSense desteği sunar.
+> Ad alanını incelemek için <xref:Microsoft.VisualStudio.TestTools.WebTesting> nesne tarayıcısını kullanın. Hem Visual C# hem de Visual Basic editörleri, ad alanındaki sınıflarla kodlama için IntelliSense desteği sunar.
 
-Yük testleri için eklentileri de oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: yük testi API'si kullanma](../test/how-to-use-the-load-test-api.md) ve [nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md).
+Yük testleri için eklentiler de oluşturabilirsiniz. Daha fazla bilgi için [bkz: Yük testi API'sini ve](../test/how-to-use-the-load-test-api.md) [Nasıl Kullanılır: Yük testi eklentisi oluşturun.](../test/how-to-create-a-load-test-plug-in.md)
 
-## <a name="to-use-the-webtesting-namespace"></a>WebTesting ad alanını kullanmak için
+## <a name="to-use-the-webtesting-namespace"></a>WebTest ad alanını kullanmak için
 
-1. Bir web performansı ve bir web performans testi içeren bir yük testi projesi açın.
+1. Web performans testi içeren bir web performansı ve yükleme testi projesi açın.
 
-2. Visual C# veya Visual Basic kitaplık projesi sınama çözümünüze ekleyin.
+2. Test çözümünüze Visual C# veya Visual Basic sınıf kitaplığı projesi ekleyin.
 
-3. Bir başvuru, sınıf kitaplığı projesi için web performansı ve yük testi projesi ekleyin.
+3. Sınıf kitaplığı projesine web performansına bir başvuru ekleyin ve yükleme testi projesine ekleyin.
 
-4. Sınıf kitaplığı projesinde Microsoft.VisualStudio.QualityTools.WebTestFramework DLL'ye bir başvuru ekleyin.
+4. Sınıf kitaplığı projesinde Microsoft.VisualStudio.QualityTools.WebTestFramework DLL adresine bir başvuru ekleyin.
 
-5. Sınıf kitaplığı projesinde bulunan sınıf dosyası ekleyin bir `using` bildirimi <xref:Microsoft.VisualStudio.TestTools.WebTesting> ad alanı.
+5. Sınıf kitaplığı projesinde bulunan sınıf `using` <xref:Microsoft.VisualStudio.TestTools.WebTesting> dosyasında, ad alanı için bir deyim ekleyin.
 
-6. Uygulayan bir sınıf oluşturma <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> arabirimi.
+6. <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> Arabirimi uygulayan bir sınıf oluşturun.
 
-7. Projeyi oluşturun.
+7. Projeyi derleyin.
 
-8. Web Performans Testi Düzenleyicisi'ni kullanarak yeni web performans testi eklentisi ekleyin:
+8. Web Performans Testi Düzenleyicisi'ni kullanarak yeni web performans testi eklentisini ekleyin:
 
-    1. Seçin **Web Testi Eklentisi Ekle** araç.
+    1. Araç çubuğunda **Web Testi Eklentisi Ekle'yi** seçin.
 
-         **Web Testi Eklentisi Ekle** iletişim kutusu görüntülenir.
+         **Web Test Eklentisi Eklentisi** iletişim kutusu görüntülenir.
 
-    2. Altında **bir eklenti seçin**seçin, web performans testi eklentisi sınıfı.
+    2. **Eklenti seç'in**altında, web performans testi eklentisi sınıfınızı seçin.
 
-    3. İçinde **özelliklerini çili eklenti** bölmesinde, çalışma zamanında kullanmak eklenti için başlangıç değerlerini ayarlayın.
+    3. **Seçili eklenti** bölmesinin Özellikleri'nde, eklentinin çalışma zamanında kullanması için ilk değerleri ayarlayın.
 
         > [!NOTE]
-        > Eklentilerinizi istediğiniz sayıda özelliği getirebilir; bunları yalnızca genel, ayarlanabilir ve tam sayı, Boole veya dize gibi bir temel türden yapın. Özellikler penceresini kullanarak web başarım testi eklentisi özelliklerini daha sonra da düzenleyebilirsiniz.
+        > Eklentilerinizden istediğiniz kadar özellik ortaya çıkarabilirsiniz; onları herkese açık, ayarlanabilir ve Tamsayı, Boolean veya String gibi bir taban türüne ait hale getirin. Özellikler penceresini kullanarak web performans testi eklentiözelliklerini daha sonra da edinebilirsiniz.
 
-    4. **Tamam**’ı seçin.
+    4. **Tamam'ı**seçin.
 
 9. Web performans testinizi çalıştırın.
 
-     Örnek uygulaması için <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>, bkz: [nasıl yapılır: web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md).
+     Örnek bir uygulama <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>için , [bkz.](../test/how-to-create-a-web-performance-test-plug-in.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting>
-- [Özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Nasıl yapılır: yük testi API'si kullanma](../test/how-to-use-the-load-test-api.md)
-- [Nasıl yapılır: web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md)
+- [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Nasıl kullanılır: Yük testi API'sini kullanın](../test/how-to-use-the-load-test-api.md)
+- [Nasıl yapilir: Web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Yük testi: Web önbelleği verilerini kullanarak Sanal Kullanıcı yüzdesini ayarla'
+title: 'Yük testi: Web önbelleği verilerini kullanarak sanal kullanıcı yüzdesi ayarlama'
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,47 +9,47 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8cac3368d0f03c268e086cc8636f1175a15effdd
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113366"
 ---
-# <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Nasıl yapılır: web önbellek verilerini kullanan sanal kullanıcıların yüzdesini belirtme
+# <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Nasıl kullanılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtin
 
-İle yükleme testinizi oluşturduktan sonra **Yeni Yük Testi Sihirbazı**, senaryoları özelliklerini kullanarak test ihtiyaçlarınızı ve hedeflerinizi karşılayacak şekilde değiştirebilirsiniz **Yük Testi Düzenleyicisi**. Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
+**Yeni Yük Testi Sihirbazı**ile yük testinizi oluşturduktan sonra, Yük Testi Düzenleyicisi'ni kullanarak test ihtiyaçlarınızı ve hedeflerinizi karşılayacak senaryo özelliklerini değiştirebilirsiniz. **Load Test Editor** Yük testi senaryo özelliklerinin ve açıklamalarının tam listesi için [bkz.](../test/load-test-scenario-properties.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Yeni kullanıcıların yüzdesini** özelliği ayarlandığında **özellikleri** penceresi. Yük testi senaryosu özelliklerini Düzenle **Yük Testi Düzenleyicisi**.
+**Yeni Kullanıcıların Özelliğinin Yüzdesi** **Özellikler** penceresinde ayarlanır. Yük Testi Düzenleyicisi'nde **Load Test Editor**yük testi senaryo özelliklerini edin.
 
-**Yeni kullanıcıların yüzdesini** özelliği bir web tarayıcısı tarafından gerçekleştirilen yük testi taklit eden önbelleğe almayı biçimini etkiler. Varsayılan olarak, **yeni kullanıcıların yüzdesini** özelliği % 0'a ayarlayın. Varsa değerini **yeni kullanıcıların yüzdesini** özelliği, % 100'e ayarlandığında, her web performans testi yük testi çalıştırma gibi ilk kullanıcı Web sitesine kabul edilir kullanan herhangi bir içerik Web sitesinden kendi tarayıcı önbelleğinden yok Önceki ziyaretler. Bu nedenle, tüm istekler görüntüleri gibi tüm bağımlı istekleri dahil olmak üzere web testinde indirilir.
+**Yeni Kullanıcıların Özelliğiyüzdesi,** yük testinin bir web tarayıcısı tarafından gerçekleştirilecek önbelleğe alma şeklini etkiler. Varsayılan olarak, **yeni Kullanıcıların özelliğiyüzdesi** %0 olarak ayarlanır. **Yeni Kullanıcılar özelliğinin yüzdesi** değeri %100 olarak ayarlanmışsa, bir yük testinde çalıştırılabilen her web performans testi, önceki ziyaretlerden tarayıcı önbelleğinde web sitesinden herhangi bir içeriğe sahip olmayan web sitesine ilk kez kullanıcı olarak kabul edilir. Böylece, resimler gibi tüm bağımlı istekler de dahil olmak üzere web testindeki tüm istekler indirilir.
 
 > [!NOTE]
-> İsteklerin önbelleğe aynı kaynağa birden çok kez web testinde istendiğinde yüklenmez.
+> Aynı önbelleğe uygun kaynak bir web testinde birden fazla kez istendiğinde, istekler karşıdan yüklenmez.
 
-Yük testi çok sayıda görüntü sahip olma olasılıkları dönüş kullanıcılar sahip bir Web sitesi ise ve diğer önbelleğe içerik yerel olarak, ardından bir ayar için % 100 önbelleğe **yeni kullanıcıların yüzdesini** özelliği daha fazla oluşturacağını karşıdan yükleme isteği gerçek hayat oluşacak. Bu durumda, kullanıcılar ilk kez Web sitesinin ve ayarlama ziyaretler sitenize yüzdesini tahmin etmelidir **yeni kullanıcıların yüzdesini** özelliği uygun şekilde.
+Yerel olarak önbelleğe alınmış görüntülere ve diğer önbelleğe getirilebilir içeriğe sahip önemli sayıda iade kullanıcısı olan bir web sitesini yük testine tabi yoruyorsanız, **yeni Kullanıcıların özelliğinin yüzdesi** için %100'lük bir ayar gerçek dünya kullanımında oluşacak olandan daha fazla indirme isteği oluşturur. Bu durumda, web sitenize yapılan ziyaretlerin yüzdesini tahmin etmeli ve web sitesini ilk kez kullananlardan gelen ziyaretlerin yüzdesini buna göre **yeni Kullanıcılar özelliğine** göre ayarlamalısınız.
 
 ## <a name="to-specify-the-percentage-of-new-users-for-a-scenario"></a>Bir senaryo için yeni kullanıcıların yüzdesini belirtmek için
 
 1. Bir yük testi açın.
 
-     **Yük Testi Düzenleyicisi** görünür. Yük testi ağacında görüntülenir.
+     **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi **senaryoları** klasörü için yeni kullanıcı yüzde değeri değiştirmek istediğiniz senaryoyu düğümünü seçin.
+2. Yük testi ağaçları **Senaryolar** klasöründe, yeni kullanıcı yüzdesi değerini değiştirmek istediğiniz senaryo düğümünü seçin.
 
-3. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
+3. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
 
-     Senaryonun kategoriler ve özellikler görüntülenir **özellikleri** penceresi.
+     Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-4. Değerini **yeni kullanıcıların yüzdesini** birkaç yeni kullanıcıların yüzdesi için girerek özelliği.
+4. Yeni kullanıcıların yüzdesi için bir sayı girerek **Yeni Kullanıcılar özelliğinin yüzdesi** değerini ayarlayın.
 
-5. Özelliği değiştirmeyi bitirdikten sonra seçin **Kaydet** üzerinde **dosya** menüsü. Daha sonra yeni kullanarak yük testlerini çalıştırabilirsiniz **yeni kullanıcıların yüzdesini** değeri.
+5. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet'i** seçin. Daha sonra yeni Yeni Kullanıcı **Yüzdesi** değerini kullanarak yük testinizi çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını edin](../test/edit-load-test-scenarios.md)
 - [İzlenecek yol: Yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
-- [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)
-- [Model sanal kullanıcı etkinlikleri için yük desenlerini düzenleme](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md)
+- [Sanal kullanıcı etkinliklerini modellemek için yük modellerini düzenleme](../test/edit-load-patterns-to-model-virtual-user-activities.md)

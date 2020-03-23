@@ -9,37 +9,37 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 031caa0f1bccb2c3f57dbbc89b4dd7d311928b77
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567560"
 ---
 # <a name="customize-project-and-item-templates"></a>Proje ve öğe şablonlarını özelleştirme
 
-Proje ve öğe şablonlarını bile oluşturduktan sonra daha fazla gereksinimlerinizi karşılayacak şekilde özelleştirebilirsiniz.
+Proje ve öğe şablonları oluşturulduktan sonra bile, bunları gereksinimlerinizi karşılamak üzere daha da özelleştirebilirsiniz.
 
-## <a name="customizations"></a>Özelleştirmeleri
+## <a name="customizations"></a>Özelleştirmeler
 
 Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:
 
-- Değiştirin ve var olan bir şablonu kullanıcı şablon olarak dışarı aktarın.
+- Varolan bir şablonu kullanıcı şablonu olarak değiştirin ve dışa aktarın.
 
-   Daha fazla bilgi için [nasıl yapılır: mevcut şablonları güncelleştirme](../ide/how-to-update-existing-templates.md).
+   Daha fazla bilgi için [bkz: Varolan şablonları güncelleştirin.](../ide/how-to-update-existing-templates.md)
 
-- Özel Parametreler mevcut değerleri değiştirmek için bir şablona geçirin.
+- Varolan değerleri değiştirmek için özel parametreleri şablona geçirin.
 
-   Daha fazla bilgi için [nasıl yapılır: şablonda parametreleri ikame etme](../ide/how-to-substitute-parameters-in-a-template.md).
+   Daha fazla bilgi için [bkz: Şablondaki parametreleri değiştirin.](../ide/how-to-substitute-parameters-in-a-template.md)
 
-- Şablonlardan proje oluşturma sihirbazları özelleştirin.
+- Şablonlardan proje oluşturan sihirbazları özelleştirin.
 
-   Daha fazla bilgi için [nasıl yapılır: sihirbazları proje şablonlarıyla (genişletilebilirlik) kullanma](../extensibility/how-to-use-wizards-with-project-templates.md).
+   Daha fazla bilgi için [bkz: Proje şablonları (genişletilebilirlik) ile sihirbazları kullanın.](../extensibility/how-to-use-wizards-with-project-templates.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılır: şablonlarda sorun giderme](../ide/how-to-troubleshoot-templates.md)
-- [Nasıl yapılır: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
-- [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Nasıl yapılı: Şablonları sorun giderme](../ide/how-to-troubleshoot-templates.md)
+- [Nasıl yapılı: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
+- [Nasıl yapılı: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>

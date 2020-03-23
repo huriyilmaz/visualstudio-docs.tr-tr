@@ -1,43 +1,46 @@
 ---
-title: Dize ilişkilendirmeyi basitleştirme
-ms.date: 02/12/2020
+title: Dize ilişkilendirmesini basitleştirme
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15f034b0ecf46e19681f3b74e4137a2de9e9d950
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: a8b0fd53164cb98921b111d49fa04a76c9d0d8a8
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77280756"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094299"
 ---
-# <a name="simplify-string-interpolation-refactoring"></a>Dize ilişkilendirme yeniden düzenlemesi Basitleştir
+# <a name="simplify-string-interpolation-refactoring"></a>Dize enterpolasyon refactoring basitleştirin
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Bir [dize ilişkilendirmeyi](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation)basitleştirmenizi sağlar.
+- Visual Basic
 
-**Ne zaman:** Basitleştirilen bir dize ilişkilendirmeden sahipsiniz.
+**Ne:** Bir [dize enterpolasyon](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation)basitleştirmenizi sağlar.
 
-**Neden:** Bir dize ilişkilendirmesiyle basitleştirmek, daha fazla açıklık ve kısa sözdizimi sağlayabilir. Bu yeniden düzenleme aracı, el ile yapmak yerine görevi otomatik olarak gerçekleştirir.
+**Ne zaman:** Basitleştirilebilen bir dize enterpolasyonvar.
+
+**Neden:** Bir dize enterpolasyon basitleştirilmesi daha fazla netlik ve kısa sözdizimi sağlayabilir. Bu yeniden düzenleme aracı, görevi el ile yapmak yerine otomatik olarak gerçekleştirir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Giriş işaretini dize ilişkilendirme üzerine yerleştirin:
+1. Caret'inizi dize enterpolasyonuna yerleştirin:
 
-2. **Ctrl**+tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-3. **Ilişkilendirmeyi Basitleştir** ' i seçin
+3. **Enterpolasyonu Basitleştir'i** seçin
 
-    ![Dize ilişkilendirmeyi basitleştirme](media/simplify-string-interpolation.png)
+    ![Dize ilişkilendirmesini basitleştirme](media/simplify-string-interpolation.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

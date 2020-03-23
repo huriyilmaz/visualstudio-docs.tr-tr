@@ -1,5 +1,5 @@
 ---
-title: Eşitleme zamanı | Microsoft Docs
+title: Senkronizasyon Süresi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ae73f7b9a9838a006dce47bf44b0ed46aa0b84fa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62965316"
 ---
-# <a name="synchronization-time"></a>Eşitleme saati
-Bu segmentlerde faaliyet zaman çizelgesi, eşitleme sınıflandırılmış bir kez engelleme ile ilişkilidir. Bir iş parçacığı eşitlemede engellendi olarak işaretlendiğinde, bunlardan birini gösterilir:
+# <a name="synchronization-time"></a>Eşitleme süresi
+Zaman çizelgesindeki bu kesimler, Eşitleme olarak kategorize edilen engelleme süreleri ile ilişkilidir. Bir iş parçacığı eşitleme üzerinde engellenmiş olarak işaretlendiğinde, şu konulardan biri ima edilir:
 
-- İş parçacığının yürütülmesini iyi bilinen bir iş parçacığı eşitleme API çağrısında gibi neden olmuş olabilir `EnterCriticalSection()` veya `WaitForSingleObject()`.
+- İş parçacığının yürütülmesi gibi `EnterCriticalSection()` iyi bilinen bir iş parçacığı eşitleme API `WaitForSingleObject()`için bir çağrı neden olabilir veya .
 
-- API eşleştirme algoritmasını tamamen kapsamlı olamaz ve eşitleme, ilkel engelleyen bir temel çekirdek ulaştığından çağrısında bir çerçeve yığın çünkü sonunda bu nedenle diğer kategorilere eşleştirilebilir bazı API'leri de görünebilir Bu kategoriyi eşlendi.
+- API eşleştirme algoritması tamamen kapsamlı olamaz ve bu nedenle diğer kategorilerle eşlenebilir bazı API'ler de eşitleme olarak görünebilir, çünkü çağrı yığınındaki bir çerçeve sonunda temel bir çekirdek engelleme ilkel bu kategoriye eşlenir.
 
-  Bir iş parçacığı engelleme olayı temel nedenini anlamak için engelleme çağrı yığınları ve profil raporlarını dikkatle inceleyin.
+  İş parçacığı engelleme olayının altında yatan nedeni anlamak için, engelleme çağrı yığınlarını ve profil raporlarını dikkatle inceleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İş Parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)
+- [İş parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)

@@ -1,33 +1,33 @@
 ---
 title: Sürüm Denetimi
-description: Mac için Visual Studio git ve alt sürüm kullanma.
+description: Mac için Visual Studio'da Git ve Subversion'u kullanma.
 ms.topic: overview
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
 ms.openlocfilehash: 9206ab892ef125706ab16f9a739fe88a52f5c242
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70108107"
 ---
 # <a name="version-control"></a>Sürüm denetimi
 
-Sürüm denetimi, birçok farklı sürümde dosya yönetmeye yönelik bir sistemdir ve yazılım geliştirme ' de genellikle birçok geliştirici tarafından katkıda bulunur. Herhangi bir sürüm denetim sisteminin (_VCS_) asıl amacı, tüm kullanıcıların kod temeli üzerinde aynı anda çalışmasını sağlayan bir çözüm buladır.
+Sürüm denetimi, birçok farklı sürüm üzerinden dosya yönetimi için bir sistemdir ve - yazılım geliştirmede - genellikle birçok geliştirici tarafından katkıda bulunulan bir sistemdir. Herhangi bir sürüm kontrol sisteminin _(VCS)_ temel amacı, tüm kullanıcıların kod tabanı üzerinde aynı anda çalışmasını sağlayan bir çözüm bulmaktır.
 
-Herhangi bir sürüm denetim sisteminin çekirdeğine, bir dosyasunucusuna benzer şekilde, tüm farklı dosyalar için merkezi veri deposu görevi gören bir depodur. Bununla birlikte, bir dosya sunucusunun aksine depo, projenin tüm geçmişini ve yapılan tüm düzeltmeleri içerir.
+Herhangi bir sürüm kontrol sisteminin özünde bir _depo_, tüm farklı dosyalar için merkezi veri deposu olarak hareket eder - bir dosya sunucusuna benzer. Ancak, bir dosya sunucusunun aksine, depo projenin tüm geçmişini ve yapılan tüm düzeltmeleri içerir.
 
-Depo Merkezi veri deposunuysa, her bir kullanıcının verilerin yerel bir deposuna sahip olması ve üzerinde çalışmasına izin verilmesi gerekir. Buna _çalışma kopyası_denir. Mac için Visual Studio çalışma kopyanız, makinenizde herhangi bir yerel dizin gibi görünür, böylece herhangi bir dosyayı okuyup yazabilir. Ancak, Mac için Visual Studio sürüm denetimi sistem tümleştirmesi olduğundan, IDE 'den çıkmadan alt sürüm ve git 'i kullanabilirsiniz.
+Depo merkezi veri deposuysa, her kullanıcının verilerin yerel bir deposuna sahip olması ve bu da üzerinde çalışmalarına olanak sağlar. Buna çalışan _kopya_denir. Mac için Visual Studio'da çalışan kopyanız, makinenizdeki diğer yerel dizinler gibi görünür ve dosyalardan herhangi birini okumanızı ve yazmanızı sağlar. Ancak, Mac için Visual Studio Sürüm denetim sistemi entegrasyonu na sahip olduğundan, IDE'den ayrılmadan Subversion ve Git'i kullanabilirsiniz.
 
-Alt sürüm merkezi bir sürüm denetim sistemidir. Bu, kullanıcıların herhangi bir dosyanın herhangi bir sürümünü denetleyebileceği tüm dosya ve düzeltmeleri içeren tek bir sunucu olduğu anlamına gelir. Dosyalar uzak bir alt sürüm deposundan kullanıma alındığı zaman, Kullanıcı o anda deponun anlık görüntüsünü alır.
+Subversion merkezi bir sürüm kontrol sistemi, hangi kullanıcıların herhangi bir dosyanın herhangi bir sürümünü kontrol edebilirsiniz tüm dosyaları ve düzeltmeleri içeren tek bir sunucu olduğu anlamına gelir. Dosyalar uzak bir Subversion deposundan kullanıma alındığında, kullanıcı o anda deponun anlık görüntüsünü alır.
 
-Git, ekiplerin aynı belgelerde aynı anda çalışmasına izin veren bir dağıtılmış sürüm denetim sistemidir. Git ile tüm dosyaları içeren tek bir sunucu olabilir, ancak bu Merkezi kaynaktan bir depo kullanıma alındığı zaman tüm deponun makinenize yerel olarak klonlanmış olması gerekir.
+Git, ekiplerin aynı belgeler üzerinde aynı anda çalışmasını sağlayan dağıtılmış bir sürüm kontrol sistemidir. Git ile tüm dosyaları içeren tek bir sunucu olabilir, ancak bu merkezi kaynaktan bir depo kullanıma alındığında tüm depo yerel olarak makinenize klonlanır.
 
 ## <a name="basic-concepts"></a>Temel Kavramlar
 
-Mac için Visual Studio hem git hem de alt sürüm denetim sistemleri için destek sağlar. Aşağıdaki makalelerde git ve alt sürüm depolarının Mac için Visual Studio aracılığıyla ayarlanması ve değişiklikleri gözden geçirme, yürütme ve gönderme gibi basit işlevsellikler de araştırmaktadır.
+Mac için Visual Studio hem Git hem de Subversion sürüm kontrol sistemleri için destek sağlar. Aşağıdaki makaleler, Mac için Visual Studio aracılığıyla Git ve Subversion depoları kurmanın yanı sıra değişiklikleri gözden geçirme, taahhüt etme ve zorlama gibi basit işlevleri de inceler.
 
 * [Git Deposu Ayarlama](set-up-git-repository.md)
 * [Git ile çalışma](working-with-git.md)
@@ -36,4 +36,4 @@ Mac için Visual Studio hem git hem de alt sürüm denetim sistemleri için dest
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio 'da sürüm denetimi (Windows üzerinde)](/visualstudio/version-control/)
+* [Visual Studio'da sürüm denetimi (Windows'da)](/visualstudio/version-control/)

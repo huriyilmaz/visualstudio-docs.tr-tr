@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 51e3341082ff354fc8bc87a89b3d7bc56e4e7887
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569861"
 ---
-# <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv. exe)
+# <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv.exe)
 
-**Visual Studio 2019 sürüm 16,1 için yeni**
+**Visual Studio 2019 sürümü 16.1 için yeni**
 
-Herhangi bir proje yüklemeden belirtilen çözümü açar. Daha fazla bilgi için bkz. [Visual Studio 'Da filtrelenmiş çözümler](../filtered-solutions.md).
+Belirtilen çözümü herhangi bir proje yüklemeden açar. Daha fazla bilgi için [Visual Studio'daki Filtreli çözümlere](../filtered-solutions.md)bakın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,15 +30,15 @@ Herhangi bir proje yüklemeden belirtilen çözümü açar. Daha fazla bilgi iç
 devenv /DoNotLoadProjects SolutionName
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 *SolutionName*
 
-Gerekli. Açılacak çözümün tam yolu ve adı.
+Gereklidir. Açılacak çözümün tam yolu ve adı.
 
 ## <a name="example"></a>Örnek
 
-Örnek, herhangi bir proje yüklemeden hayal ln. sln çözümünü açar.
+Örnek, mySln.sln çözümlerini herhangi bir proje yüklemeden açar.
 
 ```shell
 devenv /donotloadprojects MySln.sln
@@ -46,5 +46,5 @@ devenv /donotloadprojects MySln.sln
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da filtrelenmiş çözümler](../filtered-solutions.md)
+- [Visual Studio'da filtrelenmiş çözümler](../filtered-solutions.md)
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)

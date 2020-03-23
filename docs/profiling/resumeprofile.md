@@ -1,5 +1,5 @@
 ---
-title: ResumeProfile | Microsoft Docs
+title: Özgeçmiş Profili | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3d65d5fcf8961493c2b780453f2143de788551a5
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778316"
 ---
 # <a name="resumeprofile"></a>ResumeProfile
-`ResumeProfile` yöntemi, belirtilen profil oluşturma düzeyi için askıya alma/bekleme sayacını azaltır.
+Yöntem, `ResumeProfile` belirtilen profil oluşturma düzeyi için Askıya Al/Devam sayacını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,46 +32,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
 #### <a name="parameters"></a>Parametreler
  `Level`
 
- Performans veri koleksiyonunun uygulanabileceğini gösteren profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** Numaralandırıcılar, performans verileri koleksiyonunun uygulanabileceği üç düzeyden birini göstermek için kullanılabilir:
+ Performans veritoplamanın uygulanabileceği profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** sayısallaştırıcılar, performans veri toplamanın uygulanabileceği üç seviyeden birini belirtmek için kullanılabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırmasında tüm işlem ve iş parçacıklarını etkiler.|
-|PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin parçası olan tüm iş parçacıklarını etkiler.|
-|PROFILE_THREADLEVEL|İş parçacığı profil oluşturma düzeyi ayarı belirtilen iş parçacığını etkiler.|
+|PROFILE_GLOBALLEVEL|Genel düzey ayarı profil oluşturma çalışmasındaki tüm işlemleri ve iş parçacıklarını etkiler.|
+|PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin bir parçası olan tüm iş parçacıklarını etkiler.|
+|PROFILE_THREADLEVEL|İş parçacığı profil oluşturma Düzeyi ayarı belirtilen iş parçacığı etkiler.|
 
  `dwId`
 
  Sistem tarafından oluşturulan işlem veya iş parçacığı tanımlayıcısı.
 
-## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
- İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
+## <a name="property-valuereturn-value"></a>Özellik değeri/iade değeri
+ İşlev, **numaralandırma PROFILE_COMMAND_STATUS** kullanarak başarı veya başarısızlığı gösterir. İade değeri aşağıdakilerden biri olabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi KIMLIĞI yok.|
+|PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi kimliği yok.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Belirtilen profil oluşturma düzeyi yok.|
-|PROFILE_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır.|
-|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profil oluşturma işlev çağrısı, profil oluşturma düzeyi veya çağrının ve düzeyin birleşimi henüz uygulanmadı.|
-|PROFILE_OK|Çağrı başarılı oldu.|
+|PROFILE_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında NEVER olarak ayarlandı.|
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profil oluşturma işlevi çağrısı, profil oluşturma düzeyi veya çağrı ve düzey kombinasyonu henüz uygulanmadı.|
+|PROFILE_OK|Arama başarılı oldu.|
 
 ## <a name="remarks"></a>Açıklamalar
- Askıya alma/sürdürülme sayacının başlangıç değeri 0 ' dır. Her SuspendProfile çağrısı, askıya alma/sürdürülme sayısına 1 ekler; Her ResumeProfile çağrısı 1 ' i çıkartır.
+ Askıya Alma/Devam sayacının başlangıç değeri 0'dır. Askıya Alma Profili'ne yapılan her çağrı Askıya Alma/Devam sayısına 1 ekler; ResumeProfile'a her çağrı 1'i çıkarır.
 
- Askıya alma/sürdürülme sayısı 0 ' dan büyükse, düzeyin askıya alma/bırakma durumu kapalı olur. Sayı 0 ' dan küçük veya buna eşit olduğunda, askıya alma/bekleme durumu açık olur.
+ Askıya Alma/Devam sayısı 0'dan büyükolduğunda, düzeyiçin Askıya Al/Devam durumu KAPALIOLUR. Sayım 0'dan küçük veya eşit olduğunda, Askıya Alma/Devam durumu AÇILDIR.
 
- Başlat/Durdur durumu ve askıya alma/bekleme durumu her ikisi de olduğunda, düzeyin profil oluşturma durumu açık olur. Bir iş parçacığının profili oluşturmak için, iş parçacığının genel, işlem ve iş parçacığı düzeyi durumları açık olmalıdır.
+ Başlat/Durdur durumu ve Askıya Alma/Devam durumu her ikisi de A.B.D. olduğunda, düzeyin profil oluşturma durumu A.B.D. Bir iş parçacığının profilinin atAbilmesi için iş parçacığının genel, işlem ve iş parçacığı düzeyi durumlarını niçin on olması gerekir.
 
-## <a name="net-framework-equivalent"></a>.NET Framework eşdeğeri
- *Microsoft. VisualStudio. Profiler. dll*
+## <a name="net-framework-equivalent"></a>.NET Çerçeve eşdeğeri
+ *Microsoft.VisualStudio.Profiler.dll*
 
-## <a name="function-information"></a>İşlev bilgileri
- Üst bilgi: *VSPerf. h* içinde bildiriliyor
+## <a name="function-information"></a>Fonksiyon bilgileri
+ Üstbilgi: *VSPerf.h'de* beyan edile
 
- İçeri aktarma kitaplığı: *VSPerf. lib*
+ İthalat kitaplığı: *VSPerf.lib*
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, ResumeProfile işlevi gösterilmektedir. Örnek, [PROFILE_CURRENTID](../profiling/profile-currentid.md)tarafından tanımlanan aynı iş parçacığı veya Işlem için SuspendProfile yöntemine yapılan bir çağrının yapıldığını varsayar.
+ Aşağıdaki örnekte ResumeProfile işlevi gösteriş verilmiştir. Örnek, AskProfile yöntemine çağrı nın [PROFILE_CURRENTID](../profiling/profile-currentid.md)tarafından tanımlanan aynı iş parçacığı veya işlem için yapıldığını varsayar.
 
 ```cpp
 void ExerciseResumeProfile()
@@ -104,4 +104,4 @@ void ExerciseResumeProfile()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profilci API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)

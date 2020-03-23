@@ -16,27 +16,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ba237b9c763421287e3878a6a98f59032bfd092
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590780"
 ---
-# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı bir koleksiyon ilişkilendirmesini görselleştirme
+# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Nasıl yapilir: Sınıf Tasarımcısı'nda bir koleksiyon ilişkisini görselleştirin
 
-Diğer türlerin koleksiyonları olan özellikler ve alanlar, sınıf diyagramında bir koleksiyon ilişkisi olarak görüntülenebilir. Bir alan veya özelliği sahip olan sınıfı alanın türüne bağlayan bir çizgi olarak görüntüleyen düzenli bir ilişkilendirmeden farklı olarak, bir koleksiyon ilişkisi, sahip olan sınıfı toplanan türe bağlayan bir çizgi olarak görüntülenir.
+Diğer türlerin koleksiyonları olan özellikler ve alanlar, sınıf diyagramında koleksiyon ilişkilendirme olarak görüntülenebilir. Bir alanı veya özelliği, sahip olan sınıfı alan türüne bağlayan bir çizgi olarak görüntüleyen normal bir ilişkilendirmeden farklı olarak, toplama ilişkilendirme, sahip olan sınıfı toplanan türe bağlayan bir çizgi olarak görüntülenir.
 
-## <a name="to-create-a-collection-association"></a>Bir koleksiyon ilişkilendirmesi oluşturmak için
+## <a name="to-create-a-collection-association"></a>Koleksiyon ilişkisi oluşturmak için
 
-1. Kod içinde, türü kesin olarak belirlenmiş bir koleksiyon olan bir özellik veya alan oluşturun.
+1. Kod olarak, türü güçlü bir şekilde yazılan bir koleksiyon olan bir özellik veya alan oluşturun.
 
-2. Sınıf diyagramında sınıfı genişleterek Özellikler ve alanlar gösterilir.
+2. Sınıf diyagramında, özelliklerive alanları gösterilecek şekilde sınıfı genişletin.
 
-3. Sınıfında alan veya özelliğe sağ tıklayın ve **koleksiyon ilişkilendirmesi olarak göster**' i seçin.
+3. Sınıfta, alan veya özellik sağ tıklayın ve **Koleksiyon Birliği olarak göster'i**seçin.
 
-Özellik veya alan, toplanan türe bağlanan bir ilişkilendirme çizgisi olarak gösterilir.
+Özellik veya alan toplanan türe bağlanan bir ilişkilendirme satırı olarak gösterilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: türler arasında Ilişkilendirme oluşturma](how-to-create-associations-between-types.md)
-- [Sınıfları ve türleri tasarlama](designing-and-viewing-classes-and-types.md)
+- [Nasıl yapılacağını: Türler Arasında İlişkilendirme Oluşturma](how-to-create-associations-between-types.md)
+- [Sınıfları ve Türleri Tasarlama](designing-and-viewing-classes-and-types.md)

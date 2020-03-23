@@ -1,5 +1,5 @@
 ---
-title: Satırlar görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+title: Satır Görünümü - .NET Bellek Örnekleme Verileri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,54 +12,54 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 503b3753f4f4fdc98f39804ec767277d7685d0d7
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774086"
 ---
-# <a name="lines-view---net-memory-sampling-data"></a>Satırlar görünümü-.NET Bellek Örnekleme verileri
-Örnekleme yöntemini kullanan .NET bellek ayırma profil oluşturma verileri için Satırlar Görünümü profil oluşturma çalışması sırasında belleği ayrılan deyimleri listeler. Sütunlar ayrıca, ayırma boyutunu ve sayısını da içerir.
+# <a name="lines-view---net-memory-sampling-data"></a>Satır Görünümü - .NET Bellek örnekleme verileri
+Örnekleme yöntemini kullanan .NET bellek ayırma profil oluşturma verilerinin Satırlar görünümü, profil oluşturma çalışması sırasında bellek ayıran ifadeleri listeler. Sütunlar ayrıca ayırmaların boyutunu ve sayısını da içerir.
 
- Bir kaynak dosyasında, bir ifade kaynak dosyada birden fazla satıra yayılabilir ve tek bir satır birden fazla ifade içerebilir.
+ Kaynak dosyada, bir deyim kaynak dosyada birden fazla satıra yayılabilir ve tek bir satır birden fazla deyim içerebilir.
 
- Bir ifade aşağıdaki şekilde tanımlanır:
+ Bir deyim aşağıdaki ler tarafından tanımlanır:
 
-- Function ifadesini içeren kaynak dosya.
+- İşlev deyimini içeren kaynak dosya.
 
-- İfadesini içeren işlev.
+- İfadeyi içeren işlev.
 
-- Deyimin başladığı kaynak satır.
+- İfadenin başladığı kaynak satırı.
 
-- Deyimin başladığı kaynak satırdaki karakter.
+- İfadenin başladığı kaynak satırdaki karakter.
 
-- Deyimin bittiği kaynak satır.
+- İfadenin sona erdiği kaynak satırı.
 
-- Deyimin bittiği kaynak satırdaki karakter.
+- İfadenin sona erdiği kaynak satırdaki karakter.
 
-  Satır adı sütunu, tanımlayıcı verilerinin sıralanabilir bir birleştirmesini sağlar.
+  Satır Adı sütunu tanımlayıcı verilerinin tasnif edilebilir bir bir bir araya aksamasağlar.
 
-  Tanım olarak, bir ifade diğer işlevleri çağırmaz. Bu nedenle, yalnızca dışlamalı değerler listelenir.
+  Tanım olarak, bir deyim diğer işlevleri çağırmaz. Bu nedenle, yalnızca özel değerler listelenir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**İşlem KIMLIĞI**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
-|**İşlem adı**|İşlemin adı.|
-|**Modül adı**|Deyimin bulunduğu modülün adı.|
-|**Modül yolu**|Deyimin bulunduğu modülün yolu.|
-|**Kaynak dosya**|İfadesini içeren kaynak dosya.|
-|**İşlev adı**|Deyimin bulunduğu işlevin adı.|
-|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**İşlev adresi**|İşlevin başlangıç adresi.|
-|**Kaynak satırı başlangıç**|Ayırma gerçekleştiği kaynak dosyadaki başlangıç satırı numarası.|
-|**Kaynak satır sonu**|Ayırma gerçekleştiği kaynak dosyadaki bitiş satırı numarası.|
-|**Kaynak karakter başlangıcı**|Ayırmanın gerçekleştiği kaynak dosya satırındaki başlangıç karakterinin boşluğu.|
-|**Kaynak karakter sonu**|Ayırma gerçekleştiği kaynak dosya satırındaki bitiş karakterinin boşluğu.|
-|**Satır adı**|Aşağıdaki sözdizimine sahip satır için profil oluşturucu tarafından oluşturulan bir tanımlayıcı:`Source File` **; [** `Line Number Start` **,** `Character Start` **]->; [** `Line Number Start,Character Start` **]**|
-|**Dışlamalı ayırmalar**|Bu satırda oluşturulan toplam nesne sayısı.|
-|**Dışlamalı ayırmalar%**|Bu satırda ayrılan profil oluşturma çalıştırmasında oluşturulan tüm nesnelerin yüzdesi.|
-|**Dışlamalı baytlar**|Bu satırda ayrılan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
-|**Dışlamalı bayt yüzdesi**|Bu satırda ayrılan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
+|**İşlem Kimliği**|Profil oluşturma çalışmasının işlem kimliği (PID).|
+|**İşlem Adı**|Sürecin adı.|
+|**Modül Adı**|İfadeyi içeren modülün adı.|
+|**Modül Yolu**|İfadeyi içeren modülün yolu.|
+|**Kaynak Dosya**|İfadeyi içeren kaynak dosya.|
+|**Fonksiyon Adı**|İfadeyi içeren işlevin adı.|
+|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
+|**Fonksiyon Adresi**|İşlevin başlangıç adresi.|
+|**Kaynak Satırı Başlangıç**|Ayırmanın gerçekleştiği kaynak dosyadaki başlangıç satır numarası.|
+|**Kaynak Satır Sonu**|Ayırmanın gerçekleştiği kaynak dosyadaki bitiş satır numarası.|
+|**Kaynak Karakter Başlangıç**|Ayırmanın gerçekleştiği kaynak dosya satırındaki başlangıç karakterinin mahsup edilmesi.|
+|**Kaynak Karakter Sonu**|Ayırmanın gerçekleştiği kaynak dosya satırındaki bitiş karakterinin mahsup edilmesi.|
+|**Satır Adı**|Aşağıdaki sözdizimi ile çizginin profil oluşturucu tarafından oluşturulan`Source File`tanımlayıcısı:**;[** `Line Number Start` **,**,`Character Start`**]->; [**`Line Number Start,Character Start`**]**|
+|**Özel Tahsisler**|Bu satırda oluşturulan nesnelerin toplam sayısı.|
+|**Özel Tahsisatlar %**|Profil oluşturma çalışmasında oluşturulan tüm nesnelerin yüzdesi bu satırda ayrıldı.|
+|**Özel Baytlar**|Bu satırda ayrılan profil oluşturma çalışmasında ayrılan tüm bellek baytlarının yüzdesi.|
+|**Özel Bayt %**|Bu satırda ayrılan profil oluşturma çalışmasında ayrılan tüm bellek baytlarının yüzdesi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)

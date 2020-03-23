@@ -1,5 +1,5 @@
 ---
-title: Projecısions öğesi (MSBuild) | Microsoft Docs
+title: ProjectExtensions Öğesi (MSBuild) | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 94f2d88aa19bf01ebe6f25c7d80772c812abcc59
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632972"
 ---
-# <a name="projectextensions-element-msbuild"></a>Projecısions öğesi (MSBuild)
+# <a name="projectextensions-element-msbuild"></a>ProjectExtensions öğesi (MSBuild)
 
-MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. `ProjectExtensions` öğesi içindeki her şey MSBuild tarafından yok sayılacak.
+MSBuild proje dosyalarının MSBuild olmayan bilgileri içermesine izin verir. Bir `ProjectExtensions` öğenin içindeki her şey MSBuild tarafından yoksayılır.
 
- \<Proje > \<Projecbir >
+ \<Proje \<> ProjeUzantıları>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -59,11 +59,11 @@ MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. `Proj
 
 ## <a name="remarks"></a>Açıklamalar
 
- MSBuild projesinde yalnızca bir `ProjectExtensions` öğesi kullanılabilir.
+ Bir `ProjectExtensions` MSBuild projesinde yalnızca bir öğe kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, bir `ProjectExtensions` öğesinde depolanan tümleşik geliştirme ortamının bilgilerini gösterir.
+ Aşağıdaki kod örneği, bir `ProjectExtensions` öğede depolanan tümleşik geliştirme ortamından gelen bilgileri gösterir.
 
 ```xml
 <ProjectExtensions>
@@ -80,4 +80,4 @@ MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. `Proj
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)

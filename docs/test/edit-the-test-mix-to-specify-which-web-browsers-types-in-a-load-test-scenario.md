@@ -12,75 +12,75 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 394331ae06760e0547cfc2b5a37a6dcd357e3614
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114527"
 ---
-# <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Bir yük testi senaryosuna hangi web tarayıcısı türlerini belirtmek için test karışımını düzenleyin
+# <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Yükleme testi senaryosunda hangi web tarayıcılarının türlerini belirlemek için test karışımını düzenleme
 
-*Tarayıcı karışımı* yük testi senaryosunda daha gerçekçi yükleme benzetimi yapmak için bir yol sağlar. Yükleme yerine tek tek web tarayıcısı heterojen bir web tarayıcı karışımını kullanarak oluşturulur. Uygulamalarınızla kullanılacak web tarayıcıları daha yakın bir yaklaşığını oluşturursunuz.
+*Tarayıcı karışımı,* yük testi senaryosunda yükü daha gerçekçi bir şekilde simüle etmek için bir yol sağlar. Yük tek bir web tarayıcısı yerine web tarayıcılarının heterojen bir karışımı kullanılarak oluşturulur. Uygulamalarınızda kullanılacak web tarayıcılarının daha yakın bir tahminini oluşturursunuz.
 
-Tarayıcı karışımı, bir yük testi senaryosunda belirli bir web tarayıcı türü çalıştıran sanal kullanıcının olasılığını belirtir. Bir yük testi oluşturduğunuzda, yükü birden fazla web tarayıcısı üzerinden oluşturulur benzetimini yapmak isteyebilirsiniz. Sağlanan web tarayıcıları kümesinden Karışıma bir web tarayıcısı türü eklediğinizde, bir web performans testi tarafından gönderilen her HTTP isteği için seçilen web tarayıcısı ilişkili üstbilgileri kümesi eklenir.
+Tarayıcı karışımı, yükleme testi senaryosunda belirli bir web tarayıcısı türünü çalıştıran sanal bir kullanıcının olasılığını belirtir. Bir yük testi oluşturduğunuzda, yükün birden fazla web tarayıcısı aracılığıyla oluşturulduğunu simüle etmek isteyebilirsiniz. Sağlanan web tarayıcıları kümesinden karışıma bir web tarayıcısı türü eklediğinizde, seçilen web tarayıcısı için ilişkili üstbilgi kümesi, bir web performans testi tarafından gönderilen her HTTP isteğine eklenir.
 
-Tarayıcı karışımı diğer karışımı seçenekleri gibi çalışır. Bir web tarayıcı türü, tarayıcı karışımını tabanlı bir sanal kullanıcı rastgele ilişkilidir. Bu kullanıcının karışımında belirtilen olasılığa dayalı belirli bir web tarayıcısında, testler.
+Tarayıcı karışımı diğer karışım seçenekleri gibi çalışır. Bir web tarayıcısı türü, tarayıcı karışımına bağlı olarak sanal bir kullanıcıyla rasgele ilişkilendirilir. Bu kullanıcının testleri, karışımda belirttiğiniz olasılığı temel alan belirli bir web tarayıcısında çalıştırılır.
 
-Tarayıcı karışımı belirttikten sonra daha sonra ekleyebilir ve web tarayıcı türleri Karışıma kaldırın. Tarayıcı karışımı dağıtımını karıştırma denetimini kullanarak da değiştirebilirsiniz. Karıştırma denetimini bir senaryo tarayıcılarda dağıtımını kolayca ayarlamanıza olanak tanır.
+Bir tarayıcı karışımı belirttikten sonra, daha sonra karışıma web tarayıcısı türlerini ekleyebilir ve kaldırabilirsiniz. Ayrıca, karıştırma denetimini kullanarak tarayıcı karışımının dağıtımını da değiştirebilirsiniz. Karışım denetimi, bir senaryoda tarayıcıların dağıtımını kolayca ayarlamanızı sağlar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="add-new-browsers-to-a-scenario"></a>Bir senaryo için yeni tarayıcı ekleme
+## <a name="add-new-browsers-to-a-scenario"></a>Senaryoya yeni tarayıcılar ekleme
 
-### <a name="to-add-new-browsers-to-a-scenario"></a>Yeni tarayıcılar bir senaryoya eklemek için
+### <a name="to-add-new-browsers-to-a-scenario"></a>Senaryoya yeni tarayıcılar eklemek için
 
-1. Belirtme işleminde bir senaryo için tarayıcı karışımını seçerken **Ekle**.
+1. Bir senaryo için tarayıcı karışımı nı belirtme sürecinde yken **Ekle'yi**seçin.
 
-     Yeni bir tarayıcı giriş kılavuza eklenir.
+     Kılavuza yeni bir tarayıcı girişi eklenir.
 
     > [!NOTE]
-    > Görüntülenecek **Tarayıcı Karışımını Düzenle** iletişim kutusu, varolan bir senaryoyu sağ tıklayın ve ardından **Tarayıcı Karışımını Düzenle**.
+    > **Tarayıcı Karıştır'ı Edit** iletişim kutusunu görüntülemek için varolan bir senaryoyu sağ tıklatın ve ardından **Tarayıcı Karışımını Edit'i**seçin.
 
-2. İçinde **tarayıcı türü** sütununda yeni giriş için oku seçin ve istenen tarayıcı türü seçin.
+2. Tarayıcı **Türü** sütununda, yeni giriş için oku seçin ve istediğiniz tarayıcı türünü seçin.
 
 3. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın.
 
-4. Tarayıcılar eklemeyi tamamladığınızda, seçin **Tamam**.
+4. Tarayıcı eklemeyi bitirdiğinizde **Tamam'ı**seçin.
 
-## <a name="remove-browsers-from-a-scenario"></a>Tarayıcılar senaryodan Kaldır
+## <a name="remove-browsers-from-a-scenario"></a>Tarayıcıları senaryodan kaldırma
 
-### <a name="to-remove-browsers-from-a-scenario"></a>Tarayıcılar senaryodan kaldırmak için
+### <a name="to-remove-browsers-from-a-scenario"></a>Tarayıcıları bir senaryodan kaldırmak için
 
 1. Bir yük testi açın.
 
-2. Bir tarayıcı kaldırın ve ardından istediğiniz senaryoyu **Tarayıcı Karışımını Düzenle**.
+2. Tarayıcıyı kaldırmak istediğiniz senaryoyu sağ tıklatın ve ardından **Tarayıcı Karışımını Edit'i**seçin.
 
-     **Tarayıcı Karışımını Düzenle** iletişim kutusu görüntülenir.
+     **Tarayıcı Karıştır'ı Edit** iletişim kutusu görüntülenir.
 
-3. Kılavuzda tarayıcı seçin ve sonra **Kaldır**.
+3. Kılavuzdaki tarayıcıyı seçin ve ardından **Kaldır'ı**seçin.
 
 4. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın.
 
-5. Tarayıcıları kaldırma işlemini tamamladığınızda, seçin **Tamam**.
+5. Tarayıcıları kaldırmayı bitirdiğinizde **Tamam'ı**seçin.
 
-## <a name="about-the-mix-control"></a>Karışım denetimi hakkında
+## <a name="about-the-mix-control"></a>Karışım kontrolü hakkında
 
-Karıştırma denetimini testleri, tarayıcı türleri veya bir yük testi senaryosuna ağ türleri arasında dağıtılmış yük yüzdesi ayarlamanızı sağlar. Yüzde değerleri kaydırıcılar hareket ettirilerek ayarlanır. Tarayıcı türleri için karışımı ayarlamak, bir yük testi senaryosunda belirli tarayıcı türü çalıştıran sanal kullanıcının olasılığını belirtir.
+Karışım denetimi, bir yük testi senaryosunda testler, tarayıcı türleri veya ağ türleri arasında dağıtılan yük yüzdesini ayarlamanızı sağlar. Yüzde değerleri kaydırıcılar hareket ettirilerek ayarlanır. Tarayıcı türleri için karışımı ayarlamak, yükleme testi senaryosunda belirli bir tarayıcı türü çalıştıran sanal bir kullanıcının olasılığını belirtir.
 
-Bir kaydırıcı taşıdığınızda, tüm kullanılabilir öğeleri yüzde değerlerini değiştirin. İkiden fazla öğe varsa, ekleme veya kaldırma miktarı diğer öğeler arasında eşit olarak dağıtılır. Bu davranışı geçersiz kılmak mümkündür. Belirli bir öğe için kilit sütunundaki onay kutusunu seçerseniz, o öğe için belirtilen yüzde değerini kilitlersiniz. Ardından, bir kaydırıcıyı taşıdığınızda, ekleme veya kaldırma miktarı yalnızca kilidi kalan tüm öğeleri uygulanır.
+Bir kaydırıcıyı taşıdığınızda, kullanılabilir tüm öğelerin yüzde değerleri değişir. İkiden fazla öğeniz varsa, eklediğiniz veya kaldırdığınız tutar diğer öğeler arasında eşit olarak dağıtılır. Bu davranışı geçersiz kılmak mümkündür. Belirli bir öğe için kilit sütunundaki onay kutusunu seçerseniz, o öğe için belirtilen yüzde değerini kilitlersiniz. Daha sonra, bir kaydırıcıyı taşıdığınızda, eklediğiniz veya kaldırdığınız tutar yalnızca kalan kilitsiz öğelere uygulanır.
 
-**Dağıt** düğmesi tüm öğeler arasında eşit yüzde değerlerini ayırmak için kullanılır. Örneğin, üç öğeye sahipseniz seçme **Dağıt** yüzde değerlerini 34, 33 ve 33 olarak ayarlar.
+**Dağıt** düğmesi, yüzde değerlerini tüm öğeler arasında eşit olarak ayırmak için kullanılır. Örneğin, üç öğeniz varsa, **Dağıt'ı** seçerek yüzde değerlerini 34, 33 ve 33 olarak ayarlar.
 
 > [!WARNING]
 > **Dağıt** düğmesi kilitli olan öğeleri geçersiz kılar.
 
-Yüzde değerlerini doğrudan yazmak mümkündür **%** Kaydırıcıları kullanmak yerine sütun. Bir yüzde değeri doğrudan giriyorsanız, diğer öğeler otomatik olarak ayarlar değil.
+Kaydırıcıları kullanmak yerine yüzde değerlerini **%** doğrudan sütuna yazmak da mümkündür. Doğrudan yüzde değeri girerseniz, diğer öğeler otomatik olarak ayarlanmaz.
 
 > [!NOTE]
-> Toplam % 100 eklemez veya girilen yüzde değerleri kaydırıcılar devre dışı **%** ondalıksa sütun.
+> Toplam %100'e kadar eklenmediği veya **%** sütuna girilen yüzde değerleri ondalık değerler olduğunda kaydırıcılar devre dışı bırakılır.
 
-Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini oldukları gibi kabul etmeniz veya geri gidip onları ayarlamanız istenir. Oldukları gibi bunları kabul etmeyi seçerseniz, % 100 olarak dağıtılır.  Örneğin, iki öğeniz varsa ve el ile bunları %80 ve % 40 olarak ayarlarsanız, ilk öğeye (120 bölünmüş 80) % 66.67 ayarlayın ve ikinci öğe %33.33 (40 120 bölünmüş) ayarlayın.
+Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini oldukları gibi kabul etmeniz veya geri gidip onları ayarlamanız istenir. Onları oldukları gibi kabul etmeyi seçerseniz, bunlar %100'e eşit olarak eşit olarak değerlendirilecektir.  Örneğin, iki öğeniz varsa ve bunları el ile %80 ve %40 olarak ayarlarsanız, ilk öğe %66,67 (80 120'ye bölünür) olarak ayarlanır ve ikinci öğe %33,33 (40 bölünerek 120'ye bölünür).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını edin](../test/edit-load-test-scenarios.md)

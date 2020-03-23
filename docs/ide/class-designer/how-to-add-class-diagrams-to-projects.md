@@ -12,71 +12,71 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87a6c1e996d820724138b6bf38c6440193a4c26b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588843"
 ---
-# <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapılır: projelere sınıf diyagramları ekleme
+# <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapilir: Projelere sınıf diyagramları ekleme
 
-Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek için, Visual Basic veya C# C++ projenize bir sınıf diyagramı ekleyin. Projedeki kodun farklı kısımlarını görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
+Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden oluşturmak için C#, Visual Basic veya C++ projenize bir sınıf diyagramı ekleyin. Projede kodun farklı bölümlerini görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
 
-Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları oluşturamazsınız. UML sınıf diyagramları oluşturmak için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../../modeling/what-s-new-for-design-in-visual-studio.md).
+Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları oluşturamazsınız. UML sınıf diyagramları oluşturmak için [bkz.](../../modeling/what-s-new-for-design-in-visual-studio.md)
 
-## <a name="install-the-class-designer-component"></a>Sınıf Tasarımcısı bileşenini yükler
+## <a name="install-the-class-designer-component"></a>Sınıf Tasarımcısı bileşenini yükleme
 
 **Sınıf Tasarımcısı** bileşenini yüklemediyseniz, yüklemek için aşağıdaki adımları izleyin.
 
-1. Windows Başlat menüsünden **Visual Studio yükleyicisi** açın veya **Araçlar** ' ı seçerek Visual Studio 'daki menü çubuğundan **Araçlar ve Özellikler alın** > .
+1. Visual Studio **Installer'ı** Windows Başlat menüsünden veya Visual Studio'daki menü çubuğundan **Araçlar** > **Al Araçları ve Özellikleri'ni** seçerek açın.
 
-   **Visual Studio yükleyicisi** açılır.
+   **Visual Studio Installer** açılır.
 
-1. **Ayrı bileşenler** sekmesini seçin ve ardından **kod araçları** kategorisine gidin.
+1. Bireysel **bileşenleri** sekmesini seçin ve ardından **Kod araçları** kategorisine gidin.
 
-1. **Sınıf Tasarımcısı** seçin ve ardından **Değiştir**' i seçin.
+1. **Sınıf Tasarımcısı'nı** seçin ve sonra **Değiştir'i**seçin.
 
-   ![Sınıf Tasarımcısı bileşeni Visual Studio Yükleyicisi](media/class-designer-component.png)
+   ![Visual Studio Installer'da Sınıf Tasarımcısı bileşeni](media/class-designer-component.png)
 
-   **Sınıf Tasarımcısı** bileşen yüklenmeye başlıyor.
+   **Sınıf Tasarımcısı** bileşeni yüklemeye başlar.
 
-## <a name="add-a-blank-class-diagram-to-a-project"></a>Projeye boş bir sınıf diyagramı ekleme
+## <a name="add-a-blank-class-diagram-to-a-project"></a>Projeye boş sınıf diyagramı ekleme
 
-1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve ardından > **Yeni öğe** **Ekle** ' yi seçin. Ya da **Ctrl**+**SHIFT**+**A**'ya basın.
+1. **Çözüm Gezgini'nde,** proje düğümüne sağ tıklayın ve ardından**Yeni Öğe** **Ekle'yi** > seçin. Veya **Ctrl**+**Shift**+**A tuşuna**basın.
 
-   **Yeni öğe Ekle** iletişim kutusu açılır.
+   **Yeni Öğe Ekle** iletişim kutusu açılır.
 
-2. **Ortak öğeleri** **genel** > genişletin ve ardından şablon listesinden **sınıf diyagramı** ' nı seçin. Görsel C++ projelerde, **sınıf diyagramı** şablonunu bulmak için **yardımcı program** kategorisine bakın.
+2. **Ortak Öğeler** > **Genel'i**genişletin ve ardından şablon listesinden Sınıf **Diyagramı'nı** seçin. Visual C++ projeleri için **Sınıf Diyagramı** şablonuna bakmak için **Yardımcı Program** kategorisine bakın.
 
    > [!NOTE]
-   > **Sınıf diyagramı** şablonunu görmüyorsanız, Visual Studio için **Sınıf Tasarımcısı** bileşenini yüklemek için [adımları izleyin](#install-the-class-designer-component) .
+   > **Sınıf Diyagramı şablonunu** görmüyorsanız, Visual Studio için **Sınıf Tasarımcısı** bileşenini yüklemek için aşağıdaki [adımları izleyin.](#install-the-class-designer-component)
 
-   Sınıf diyagramı Sınıf Tasarımcısı açılır ve **Çözüm Gezgini** *. CD* uzantılı bir dosya olarak görünür. **Araç kutusu**' ndan şekilleri ve çizgileri diyagrama sürükleyebilirsiniz.
+   Sınıf diyagramı Sınıf Tasarımcısı'nda açılır ve **Solution Explorer'da** *.cd* uzantısı olan bir dosya olarak görünür. Şekilleri ve çizgileri **Toolbox'tan**diyagrama sürükleyebilirsiniz.
 
 Birden fazla sınıf diyagramı eklemek için bu yordamdaki adımları yineleyin.
 
-## <a name="add-a-class-diagram-based-on-existing-types"></a>Varolan türlere göre bir sınıf diyagramı ekleyin
+## <a name="add-a-class-diagram-based-on-existing-types"></a>Varolan türleri temel alan sınıf diyagramı ekleme
 
-**Çözüm Gezgini**, bir sınıf dosyasının bağlam menüsünü açın (sağ tıklayın) ve ardından **sınıf diyagramını görüntüle**' yi seçin.
+**Çözüm Gezgini'nde,** sınıf dosyasının bağlam menüsünü açın (sağ tıklatın) ve ardından **Sınıf Diyagramı Görüntüle'yi**seçin.
 
-veya
+-veya-
 
-**Sınıf görünümü**, ad alanı veya tür bağlam menüsünü açın ve ardından **sınıf diyagramını görüntüle**' yi seçin.
+**Sınıf**Görünümü'nde, ad alanı veya tür bağlam menüsünü açın ve ardından **Sınıf Diyagramını Görüntüle'yi**seçin.
 
 > [!TIP]
-> **Sınıf görünümü** açık değilse, **Görünüm** menüsünden **sınıf görünümü** açın.
+> **Sınıf Görünümü** açık değilse, **Görünüm** menüsünden **Sınıf Görünümü'nü** açın.
 
-## <a name="to-display-the-contents-of-a-complete-project-in-a-class-diagram"></a>Bir sınıf diyagramında tüm projenin içeriğini görüntüleme
+## <a name="to-display-the-contents-of-a-complete-project-in-a-class-diagram"></a>Tam bir projenin içeriğini sınıf diyagramında görüntülemek için
 
-**Çözüm Gezgini** veya sınıf görünümü ' de projeye sağ tıklayın ve **görüntüle**' yi seçin ve ardından **sınıf diyagramını görüntüle**' yi seçin.
+**Çözüm Gezgini** veya Sınıf Görünümü'nde projeyi sağ tıklatın ve **Görünüm'i**seçin, ardından **Sınıf Diyagramını Görüntüle'yi**seçin.
 
-Otomatik doldurulmuş bir sınıf diyagramı oluşturulur.
+Otomatik doldurulan sınıf diyagramı oluşturulur.
 
 > [!NOTE]
 > Sınıf Tasarımcısı .NET Core projelerinde kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Sınıf Tasarımcısı kullanarak tür oluşturma](how-to-create-types.md)
-- [Nasıl yapılır: varolan türleri görüntüleme](how-to-view-existing-types.md)
-- [Sınıfları ve türleri tasarlama ve görüntüleme](designing-and-viewing-classes-and-types.md)
+- [Nasıl? Sınıf Tasarımcısını kullanarak türleri oluşturma](how-to-create-types.md)
+- [Nasıl yapılı: Varolan türleri görüntüleme](how-to-view-existing-types.md)
+- [Tasarım ve görünüm sınıfları ve türleri](designing-and-viewing-classes-and-types.md)

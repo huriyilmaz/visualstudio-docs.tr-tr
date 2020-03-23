@@ -1,6 +1,6 @@
 ---
 title: IntelliTrace ile anlık görüntüleri görüntüleme
-description: Geçmiş uygulama durumunu incelemek için IntelliTrace geri adım kullanın
+description: Geçmiş uygulama durumunu incelemek için IntelliTrace adım geri kullanın
 ms.date: 09/20/2018
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,18 +11,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 767181ce917e4cbef69001e07a018e20c89a01f8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "65676442"
 ---
-# <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise-c-visual-basic-c"></a>IntelliTrace geri adım atma (Visual Studio Enterprise) ile anlık görüntüleri görüntüle (C#, Visual Basic, C++)
+# <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise-c-visual-basic-c"></a>IntelliTrace adım geri (Visual Studio Enterprise) (C#, Visual Basic, C++) ile anlık görüntüleri görüntüleyin
 
-**IntelliTrace geri adım** otomatik olarak adım olay her bir kesme noktası ve hata ayıklayıcı uygulamanızın anlık görüntüsünü alır. Kaydedilen anlık görüntü, önceki kesme noktaları veya adımlara geri dönün ve daha önce olduğu gibi uygulama durumunu görüntülemek etkinleştirin. IntelliTrace geri adım atma önceki uygulama durumu görmek istiyorsanız ancak hata ayıklamayı yeniden başlatın veya istenen uygulama durumu yeniden istemediğiniz durumlarda size zaman kazandırabilir.
+**IntelliTrace adım geri** otomatik olarak her kesme noktası ve hata ayıklama adım olay uygulamanızın bir anlık alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın durumunu geçmişte olduğu gibi görüntülemenizi sağlar. IntelliTrace adım geri önceki uygulama durumunu görmek istediğinizde zaman kazandırabilir, ancak hata ayıklama yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemiyorum.
 
-Gidin ve anlık görüntüleri kullanarak görüntüle **adım geriye dönük** ve **İleri** hata ayıklama araç çubuğu düğmeleri. Bu düğmeler görünen olaylar gidin **olayları** sekmesinde **tanılama araçları** penceresi.
+Hata Ayıklama araç çubuğundaki **Geri Adım** ve **İleri Adım** düğmelerini kullanarak anlık görüntüleri gezebilir ve görüntüleyebilirsiniz. Bu düğmeler, **Tanılama Araçları** penceresindeki **Olaylar** sekmesinde görünen olaylarda gezinir.
 
-![Geri ve İleri düğmelerini adım](../debugger/media/intellitrace-step-back-icons-description.png  "adım geri ve İleri düğmelerini")
+![İleri adım ve İleri Düğmeler](../debugger/media/intellitrace-step-back-icons-description.png  "İleri adım ve İleri düğmeleri")
 
-Daha fazla bilgi için [IntelliTrace kullanarak önceki uygulama durumlarını incelemek](../debugger/view-historical-application-state.md).
+Daha fazla bilgi için Bkz. [IntelliTrace'i kullanarak önceki uygulama durumlarını inceleyin.](../debugger/view-historical-application-state.md)

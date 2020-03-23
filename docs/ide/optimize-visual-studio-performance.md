@@ -1,5 +1,5 @@
 ---
-title: Visual Studio yavaşsa performansı
+title: Visual Studio yavaşsa performansı artırın
 titleSuffix: ''
 ms.date: 04/11/2018
 ms.topic: conceptual
@@ -13,45 +13,45 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 6495e8506e12c0c5e5f878a23c609fe53a401bde
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597002"
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio performansını iyileştirme
 
-Bu makalede, Visual Studio'nun yavaş çalıştığından bulursanız denemek için bazı öneriler sağlar. Ayrıca bir göz atabilirsiniz [Visual Studio performans ipuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md) performansı konusunda daha fazla öneri için.
+Bu makalede, Visual Studio yavaş çalışıyor bulursanız denemek için bazı öneriler sağlar. Ayrıca Visual Studio performans ipuçları ve performansı artırmak için nasıl daha fazla öneri için [püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md) bir göz atabilirsiniz.
 
-## <a name="upgrade-visual-studio"></a>Visual Studio 'Yu yükseltme
+## <a name="upgrade-visual-studio"></a>Görsel Stüdyo'u Yükselt
 
-Şu anda Visual Studio 2015 kullanıyorsanız, gelişmiş performansını öğrenmek için [Visual studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) veya [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 'ı ücretsiz indirin. Çözümler, diğer alanlardaki performans geliştirmeleriyle, Visual Studio 2015 ' den üç kata kadar daha hızlı yüklenir. Visual Studio 2017 ve Visual Studio 2019, Visual Studio 2015 ile yan yana uyumlu olduğundan, bunu deneyerek hiçbir şey kaybetmezsiniz.
+Şu anda Visual Studio 2015 kullanıyorsanız, geliştirilmiş performansını ücretsiz olarak visual [studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) veya [Visual Studio 2019'u](https://visualstudio.microsoft.com/downloads) indirin. Çözümler Visual Studio 2015'e göre 2-3 kat daha hızlı yüklenir ve diğer alanlarda da performans iyileştirmeleri vardır. Visual Studio 2017 ve Visual Studio 2019, Visual Studio 2015 ile yan yana uyumludur, bu nedenle bunu deneyerek hiçbir şey kaybetmezsiniz.
 
 ::: moniker range="vs-2017"
 
-Zaten Visual Studio 2017 kullanıyorsanız, sürüm 15,6 veya üzerini çalıştırdığınızdan emin olun. Veri çözümleri için iki veya üç kez sürüm 15.6 daha hızlı yükleneceğiyle olduğunu gösterir. İndirdiği [burada](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download).
+Visual Studio 2017'yi zaten kullanıyorsanız, sürüm 15.6 veya sonraki sürümlerini çalıştırdığınızdan emin olun. Veriler, çözümlerin sürüm 15.6'da iki veya üç kata kadar daha hızlı yüklenirken gösterir. [Buradan](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)indirin.
 
 ::: moniker-end
 
 ## <a name="extensions-and-tool-windows"></a>Uzantılar ve araç pencereleri
 
-Visual Studio yavaşlamasıdır yüklü uzantılar olabilir. Performansı artırmak için uzantıları yönetme hakkında daha fazla yardım için bkz: [performansını artırmak için uzantı ayarları değiştir](../ide/optimize-visual-studio-startup-time.md#extensions).
+Visual Studio'u yavaşlatan uzantılar yüklü olabilir. Performansı artırmak için uzantıları yönetme konusunda yardım için, [performansı artırmak için uzantı ayarlarını değiştir'e](../ide/optimize-visual-studio-startup-time.md#extensions)bakın.
 
-Benzer şekilde, Visual Studio yavaşlamasıdır araç pencereleri olabilir. Araç pencereleri yönetme hakkında daha fazla yardım için bkz: [performansını artırmak için araç penceresi ayarlarını değiştir](../ide/optimize-visual-studio-startup-time.md#tool-windows).
+Benzer şekilde, Visual Studio'u yavaşlatan araç pencereniz olabilir. Takım pencerelerini yönetme konusunda yardım [için, performansı artırmak için araç penceresi ayarlarını değiştir'e](../ide/optimize-visual-studio-startup-time.md#tool-windows)bakın.
 
 ## <a name="hardware"></a>Donanım
 
-Donanım yükseltme hakkında düşünüyorsanız, ek RAM veya daha hızlı bir CPU performans üzerindeki etkisini daha fazla katı hal sürücüsü (SSD) sahiptir.
+Donanımınızı yükseltmeyi düşünüyorsanız, katı hal sürücüsü (SSD) performans üzerinde ek RAM veya daha hızlı bir CPU'dan daha fazla etkiye sahiptir.
 
-Bir SSD eklerseniz, en iyi performans için bir sabit disk sürücüsü (HDD) aksine bu sürücüyü Windows yükleyin. Visual Studio çözümünüzü sürücü konumunu kadar önemli görünmüyor.
+Bir SSD eklerseniz, en iyi performans için bir sabit disk sürücüsü (HDD) yerine windows'u o sürücüye yükleyin. Visual Studio çözümlerinizin sürücü konumu o kadar da önemli görünmüyor.
 
-Ayrıca, çözümünüze bir USB sürücüsünden çalıştırmayın. HDD veya SSD kopyalayın.
+Ayrıca, çözümünüzü bir USB sürücüden çalıştırmayınız. HDD veya SSD'nize kopyalayın.
 
 ## <a name="help-us-improve"></a>Geliştirmemize yardımcı olun
 
-Geri bildiriminiz geliştirmemize yardımcı olur. Kullanım **sorun bildir** özelliğini "kaydı bir izleme" ve bize gönderin. Geri bildirim simgesini seçin **hızlı başlatma**, ya da seçin **yardımcı** > **geri bildirim gönder** > **sorunbildir** menü çubuğundan. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
+Geri bildiriminiz gelişmemize yardımcı olur. Bir izlemeyi "kaydetmek" ve bize göndermek için **Sorun Bildir** özelliğini kullanın. **QuickLaunch'ın**yanındaki geri bildirim simgesini seçin veya menü çubuğundan**Geri Bildirim** > Gönder'e **Yardım** > **Et'i** seçin. Daha fazla bilgi için [Visual Studio ile ilgili bir sorunu nasıl bildirin.](../ide/how-to-report-a-problem-with-visual-studio.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans İpuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md)
-- [Visual Studio blogu - Visual Studio 2017 sürüm 15.6 ile daha hızlı yük çözümleri](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [Performans ipuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md)
+- [Visual Studio blog - Visual Studio 2017 sürümü 15.6 ile çözümleri daha hızlı yükleyin](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

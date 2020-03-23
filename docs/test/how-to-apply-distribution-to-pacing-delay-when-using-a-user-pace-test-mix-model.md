@@ -1,5 +1,5 @@
 ---
-title: Yük testi için Ilerleme gecikmesine dağıtım uygulayın
+title: Yük testi için Pacing Delay'a Dağıtım Uygula
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,52 +9,52 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 953c1ac4cb6e0f87d2a36080cc751ea26f66d63e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114496"
 ---
-# <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Nasıl yapılır: Kullanıcı hız testi karışımı modeli için İlerleme Gecikmesine Dağıtım uygulama
+# <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Nasıl yapılır: Kullanıcı hızı testi karışımı modeli için pacing gecikmesine dağıtım uygulayın
 
-**Yeni Yük Testi Sihirbazı**kullanarak yük testinizi oluşturduktan sonra, senaryonun özelliklerini test ihtiyaçlarınızı ve hedeflerinizi karşılayacak şekilde değiştirmek için Yük Testi Düzenleyicisi kullanabilirsiniz.
+**Yeni Yük Testi Sihirbazı'nı**kullanarak yük testinizi oluşturduktan sonra, test gereksinimlerinizi ve hedeflerinizi karşılamak için senaryonun özelliklerini değiştirmek için Yük Testi Düzenleyicisini kullanabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Adımlama Gecikmesine Dağıtım Uygula** özelliği **Özellikler** penceresi kullanılarak ayarlanır. Yük testi senaryosu özellikleri Yük Testi Düzenleyicisi kullanılarak değiştirilir.
+**Pacing Delay özelliğine Uygula Dağıtımı,** **Özellikler** penceresi kullanılarak ayarlanır. Yük testi senaryo özellikleri Yük Testi Düzenleyicisi kullanılarak değiştirilir.
 
 > [!NOTE]
-> **Adımlama Gecikmesine Dağıtım Uygula** özelliği, yalnızca *Yük testi karışımı* Kullanıcı adımına göre yapılandırıldıysa geçerlidir. Daha fazla bilgi için bkz. [test çalıştıran bir Sanal Kullanıcı olasılığını belirtmek için metin karışımı modellerini düzenleme](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
+> **Pacing Delay özelliğine Uygula Dağıtımı,** yalnızca *yük testi karışımı* kullanıcı hızına göre yapılandırılırsa geçerlidir. Daha fazla bilgi için, test [çalıştıran sanal bir kullanıcının olasılığını belirtmek için metin karışımı modellerini edit'e](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)bakın.
 
-**Adımlama Gecikmesine Dağıtım Uygula** değeri true veya false olarak ayarlanabilir:
+**Pacing Delay'a Dağıtım Uygula** değeri doğru veya yanlış olarak ayarlanabilir:
 
-- **Doğru**: senaryo, **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına testler** sütununda belirtilen normal istatistiksel dağıtım gecikmelerini uygular. Daha fazla bilgi için bkz. [test çalıştıran bir Sanal Kullanıcı olasılığını belirtmek için metin karışımı modellerini düzenleme](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
+- **True**: Senaryo, **Test Mix** iletişim kutusundaki **Kullanıcı Başına Saat Başına Testler** sütunundaki değere göre belirtilen normal istatistiksel dağılım gecikmelerini uygular. Daha fazla bilgi için, test [çalıştıran sanal bir kullanıcının olasılığını belirtmek için metin karışımı modellerini edit'e](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)bakın.
 
-     Örneğin, test kümesi için test **karışımını düzenle** iletişim kutusunda saat başına iki kullanıcı olarak **saat başına Kullanıcı başına** test olduğunu varsayalım. **Ilerleme Gecikmesine Dağıtım Uygula** özelliği **true**olarak ayarlanırsa, testler arasındaki bekleme süresine normal istatistiksel bir dağıtım uygulanır. Testler, saat başına iki test çalıştırmaya devam eder, ancak aralarında 30 dakikalık bir gecikme olması gerekmez. İlk test dört dakika sonra, ikinci test 45 dakika sonra çalışabilir.
+     Örneğin, test kümesi için Test Mix'i **düzenleme** iletişim kutusunda saat **başına kullanıcı başına testler** insaatini varsayalım. **Pacing Delay özelliğine Dağıtım Uygula** **True**olarak ayarlanırsa, testler arasındaki bekleme süresine normal bir istatistiksel dağılım uygulanır. Testler yine de saatte iki test çalıştıracaktır, ancak aralarında mutlaka 30 dakika gecikme olmayacaktır. İlk test dört dakika sonra, ikinci test ise 45 dakika sonra çalıştırılabilir.
 
-- **Yanlış**: testler, **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına testler** sütunundaki değer için belirttiğiniz hızda çalışır. Daha fazla bilgi için bkz. [test çalıştıran bir Sanal Kullanıcı olasılığını belirtmek için metin karışımı modellerini düzenleme](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
+- **False**: Testleri **Test Mix** iletişim kutusunda Ki Saat **Başına Kullanıcı Başına Testler** sütununda değer için belirlediğiniz hızda çalışır. Daha fazla bilgi için, test [çalıştıran sanal bir kullanıcının olasılığını belirtmek için metin karışımı modellerini edit'e](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)bakın.
 
-     Örneğin, test kümesi için test **karışımını düzenle** iletişim kutusunda saat başına iki kullanıcı olarak **saat başına Kullanıcı başına** test olduğunu varsayalım. **Adımlama Gecikmesine Dağıtım Uygula** özelliği **false**olarak ayarlandıysa, testleriniz çalıştırıldığında hiçbir zaman yöntemi verirsiniz. Test her 30 dakikada bir çalışacaktır. Bu, saat başına iki test yürütmenizi sağlar.
+     Örneğin, test kümesi için Test Mix'i **düzenleme** iletişim kutusunda saat **başına kullanıcı başına testler** insaatini varsayalım. **Pacing Delay özelliğine Uygula Dağıtımı** **False**olarak ayarlanmışsa, testleriniz çalışırken hiçbir serbestlik vermiyorsunuz. Test her 30 dakikada bir çalışır. Bu, saatte iki test yürütmenizi sağlar.
 
-## <a name="to-specify-the-apply-distribution-to-pacing-delay-property-setting-for-a-scenario"></a>Bir senaryo için Adımlama Gecikmesine Dağıtım Uygula özellik ayarını belirtmek için
+## <a name="to-specify-the-apply-distribution-to-pacing-delay-property-setting-for-a-scenario"></a>Bir senaryo için Pacing Delay özellik ayarına Dağıtım Uygula'yı belirtmek için
 
 1. Bir yük testi açın.
 
-   **Yük Testi Düzenleyicisi** görünür. Yük testi ağacında görüntülenir.
+   **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi ağacının **senaryolar** klasöründe, hız dağıtımını uygulamak istediğiniz senaryo düğümünü seçin.
+2. Yük testi ağacının **Senaryolar** klasöründe, pacing dağılımı uygulamak istediğiniz senaryo düğümünü seçin.
 
-3. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
+3. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
 
-   Kategoriler ve özellikler bu senaryonun görüntülenen **özellikleri** penceresi.
+   Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-4. **Adımlama Gecikmesine Dağıtım Uygula**için özellik değeri ' nde, **doğru** veya **yanlış**' ı seçin.
+4. **Pacing Delay'a Dağıtım Uygula'nın**özellik değerinde, **Doğru** veya **Yanlış'ı**seçin.
 
-5.  > **Dosya** **Kaydet**' i seçin. Artık yük testinizi, yeni bir **adım adım gecikme değerine dağıtım Uygula** değeriyle çalıştırabilirsiniz.
+5. **Dosya** > **Kaydet'i**seçin. Artık yük testinizi yeni **Pacing Delay değerine Uygula Dağıtımı** ile çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını edin](../test/edit-load-test-scenarios.md)
 - [İzlenecek yol: Yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
-- [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)
+- [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md)

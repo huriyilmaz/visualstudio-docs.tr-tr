@@ -1,5 +1,5 @@
 ---
-title: '4\. Adım: TableLayoutPanel denetimi ile formunuzu düzenleme'
+title: 'Adım 4: TabloDüzeniPanel denetimi ile formunuzu düzene sürün'
 ms.date: 08/30/2019
 ms.assetid: 61acde79-e115-4bad-bb06-1fbe37717a3e
 ms.topic: tutorial
@@ -11,90 +11,90 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d827077266adbe0a1ba8cabd1f19ae6d815df833
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579388"
 ---
-# <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>4\. Adım: TableLayoutPanel denetimi ile formunuzu düzenleme
+# <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>Adım 4: TabloDüzeniPanel denetimi ile formunuzu düzene sürün
 
-Bu adımda formunuza bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi eklersiniz. TableLayoutPanel, daha sonra ekleyeceğiniz formdaki denetimleri düzgün şekilde hizalamaya yardımcı olur.
+Bu adımda, formunuza bir <xref:System.Windows.Forms.TableLayoutPanel> denetim eklersiniz. TableLayoutPanel, daha sonra ekleyeceğiniz formda denetimleri düzgün bir şekilde hizalamanıza yardımcı olur.
 
-## <a name="how-to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>TableLayoutPanel denetimi ile formunuzu düzenleme
+## <a name="how-to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>TabloDüzeniPanel denetimi ile formunuzu nasıl döşeyin?
 
-1. Visual Studio IDE 'nin sol tarafında, **araç kutusu** sekmesini seçin. (alternatif olarak, menü çubuğundan > **araç kutusunu** **görüntüle** ' yi seçin veya **CTRL**+**alt**+**X**tuşlarına basın.)
+1. Visual Studio IDE'nin sol **tarafında, Araç Kutusu** sekmesini seçin. (Alternatif olarak, menü çubuğundan**Araç Kutusunu** **Görüntüle'yi** > seçin veya **Ctrl**+**Alt**+**X**tuşuna basın .)
 
-1. Aşağıdaki ekran görüntüsünde gösterildiği gibi, açmak için **kapsayıcılar** grubunun yanındaki küçük üçgen sembolünü seçin.
+1. Aşağıdaki ekran görüntüsünde gösterildiği gibi, açmak için **Kapsayıcılar** grubunun yanındaki küçük üçgen simgesini seçin.
 
-     ![kapsayıcılar grubu](../ide/media/express_toolbox.png)<br>
-***Kapsayıcılar*** *grubu*
+     ![Konteynerler grubu](../ide/media/express_toolbox.png)<br>
+***Konteynerler*** *grubu*
 
-1. Formunuza düğmeler, onay kutuları ve Etiketler gibi denetimler ekleyebilirsiniz. **Araç kutusunda**TableLayoutPanel denetimine çift tıklayın. (Veya, denetimi araç kutusu ' ndan form üzerine sürükleyebilirsiniz.) Bunu yaptığınızda, IDE, aşağıdaki ekran görüntüsünde gösterildiği gibi formunuza bir TableLayoutPanel denetimi ekler.
+1. Formunuza düğmeler, onay kutuları ve etiketler gibi denetimler ekleyebilirsiniz. **Araç Kutusundaki**TableLayoutPanel denetimini çift tıklatın. (Veya denetimi araç kutusundan forma sürükleyebilirsiniz.) Bunu yaptığınızda, IDE aşağıdaki ekran görüntüsünde gösterildiği gibi formunuza bir TableLayoutPanel denetimi ekler.
 
-     TableLayoutPanel denetimi](../ide/media/express_formtablelayout.png) ![<br>
-***TableLayoutPanel*** *denetimi*
-
-    > [!NOTE]
-    > TableLayoutPanel ' i ekledikten sonra, formunuzda **TableLayoutPanel görevleri**başlıklı bir pencere görünürse, kapatmak için formun içinde herhangi bir yeri seçin. Bu pencere hakkında daha sonra öğreticide daha fazla bilgi edineceksiniz.
-
-     **Araç kutusu** , sekmesini seçerken formunuzu nasıl genişlettiğine ve bunun dışında herhangi bir yeri seçtikten sonra kapandığına dikkat edin. Bu, IDE 'deki otomatik gizleme özelliğidir. Pencerenin sağ üst köşesinde yer alan raptiye simgesini seçerek otomatik gizlemeyi açıp bir yere kilitlemek için bu öğeyi etkinleştirebilir veya devre dışı bırakabilirsiniz. Raptiye simgesi aşağıdaki gibi görünür.
-
-     ![raptiye simgesi](../ide/media/express_pushpintoolbox.png)<br>
-***Raptiye*** *simgesi*
-
-1. Bu öğeyi seçerek TableLayoutPanel 'in seçili olduğundan emin olun. Aşağıdaki ekran görüntüsünde gösterildiği gibi, **Özellikler** penceresinin en üstündeki açılan listeye bakarak hangi denetimin seçildiğini doğrulayabilirsiniz.
-
-     TableLayoutPanel denetimini gösteren ![Özellikler penceresi](../ide/media/express_controlspropwin.png)<br>
-***TableLayoutPanel*** *denetimini* gösteren ***Özellikler*** *penceresi*
-
-1. **Özellikler** penceresinde araç çubuğundan **alfabetik** düğmesini seçin. Bu **, Özellikler penceresindeki özellikler** listesini alfabetik sırada sıralar ve bu öğreticide özellikleri bulmayı kolaylaştırır.
-
-1. Denetim Seçicisi, **Özellikler** penceresinin üst kısmındaki açılan bir listesidir. Bu örnekte, `tableLayoutPanel1` adlı bir denetimin seçili olduğunu gösterir. **Windows Form Tasarımcısı** bir alanı seçerek veya denetim seçicinden seçim yaparak denetimleri seçebilirsiniz.
-
-   TableLayoutPanel seçili olduğuna göre **Dock** özelliğini bulun ve **yok**olarak ayarlanması gereken **Yerleştir**' i seçin. Değerin yanında bir açılan okun göründüğünü unutmayın. Oku seçin ve ardından aşağıdaki ekran görüntüsünde gösterildiği gibi **doldur** düğmesini (ortadaki büyük düğme) seçin.
-
-     ![seçili Özellikler penceresi](../ide/media/express_docktable.png)<br>
-***Doldur*** *seçiliyken* ***Özellikler*** *penceresi*
-
-     Visual Studio 'ya *yerleştirme* , BIR pencerenin IDE 'deki başka bir pencere veya alana Eklenme anlamına gelir. Örneğin, **Özellikler** penceresi, Visual Studio&mdash;içinde yerleştirilmemiş ve serbest kayabilecek&mdash;takılabilir veya **Çözüm Gezgini**'e göre yerleştirilmiş olabilir.
-
-1. ' Yi **doldurmak**Için TableLayoutPanel **Dock** özelliğini ayarladıktan sonra, panelin formun tamamını doldurduğuna dikkat edin. Formu yeniden boyutlandırırsanız, TableLayoutPanel sabitlenmiş kalır ve kendisini sığacak şekilde yeniden boyutlandırır.
+     ![TabloDüzeniPanel kontrolü](../ide/media/express_formtablelayout.png)<br>
+***TabloDüzeniPanel*** *kontrolü*
 
     > [!NOTE]
-    > TableLayoutPanel Microsoft Office Word 'de bir tablo gibi çalışmaktadır: satırlar ve sütunlar bulunur ve tek bir hücre birden çok satıra ve sütuna yayılabilir. Her hücre bir denetim (bir düğme, onay kutusu veya etiket gibi) tutabilir. TableLayoutPanel ' de en üstteki satırın tamamını kapsayan bir <xref:System.Windows.Forms.PictureBox> denetimi, sol alt hücresinde bir <xref:System.Windows.Forms.CheckBox> denetimi ve sağ alt hücresindeki dört <xref:System.Windows.Forms.Button> denetimi olmalıdır.
+    > TableLayoutPanel'inizi ekledikten sonra, **tabloDüzeniPanel Görevleri**başlığıyla formunuzun içinde bir pencere beliriyorsa, formun içinde herhangi bir yeri seçin ve kapatAbilirsiniz. Bu pencere hakkında daha sonra öğreticide daha fazla bilgi edineceksiniz.
 
-1. Şu anda TableLayoutPanel 'in iki eşit boyutta satırı ve iki eşit boyutlu sütunu vardır. En üstteki satır ve sağ sütunun her ikisi de daha büyük olacak şekilde bunları yeniden boyutlandıralım. **Windows Form Tasarımcısı**, TableLayoutPanel ' i seçin. Sağ üst köşede, aşağıdaki gibi görünen küçük bir siyah üçgen düğmesi vardır.
+     **Sekmeyi** seçtiğinizde Araç Kutusu'nun formunuzu kapsayacak şekilde nasıl genişlediğini ve bunun dışında herhangi bir yeri seçtikten sonra nasıl kapandığını öğrenin. Bu, IDE'deki Otomatik Gizleme özelliğidir. Otomatik Gizle'yi geçiş yapmak ve yerine kilitlemek için pencerenin sağ üst köşesindeki toka simgesini seçerek pencerelerden herhangi biri için açabilir veya kapatabilirsiniz. Toka simgesi aşağıdaki gibi görünür.
 
-     ![üçgen düğme](../ide/media/express_iconblacktriangle.gif)<br>
-***Üçgen*** *düğme*
+     ![Pushpin simgesi](../ide/media/express_pushpintoolbox.png)<br>
+***Pushpin*** *simgesi*
 
-     Bu düğme, denetimin özelliklerini otomatik olarak ayarlamanıza yardımcı olan görevler olduğunu gösterir.
+1. TableLayoutPanel'in seçilerek seçildiğinden emin olun. Aşağıdaki ekran görüntüsünde gösterildiği gibi **Özellikler** penceresinin üst kısmındaki açılır listeye bakarak hangi denetimin seçildiğini doğrulayabilirsiniz.
 
-1. Aşağıdaki ekran görüntüsünde gösterildiği gibi, denetimin görev listesini göstermek için üçgeni seçin.
+     ![TabloDüzeniPanel denetimini gösteren özellikler penceresi](../ide/media/express_controlspropwin.png)<br>
+***TabloDüzeniPanel*** *denetimini gösteren* ***özellikler*** penceresi *control*
 
-     TableLayoutPanel görevleri ![](../ide/media/express_tablepanel.png)<br>
-***TableLayoutPanel*** *görevleri*
+1. **Özellikler** penceresindeki araç çubuğundaki **Alfabetik** düğmeyi seçin. Bu, **Özellikler** penceresindeki özelliklerin listesini alfabetik sıraya göre sıralar ve bu da bu öğreticideki özellikleri bulmayı kolaylaştırır.
 
-1. **Sütun ve satır stilleri** penceresini göstermek için **satırları ve sütunları Düzenle** görevini seçin. **Sütun1**' yi seçin ve yüzde düğmesinin seçili olduğundan emin olun ve **yüzde** kutusuna **15** girerek **boyutunu yüzde 15** olarak ayarlayın. (Bu, sonraki bir öğreticide kullanacağınız bir <xref:System.Windows.Forms.NumericUpDown> denetimidir.) **Sütun2** 'yi seçin ve yüzde 85 olarak ayarlayın. Pencere kapandığı için **Tamam** düğmesini henüz seçmeyin. (Ancak bunu yaparsanız, görev listesini kullanarak yeniden açabilirsiniz.)
+1. Denetim seçici, **Özellikler** penceresinin üst kısmındaki açılır listedir. Bu örnekte, çağrılan `tableLayoutPanel1` bir denetimin seçildiğini gösterir. **Denetimleri Windows Forms Designer'da** bir alan seçerek veya denetim seçiciden seçerek seçebilirsiniz.
 
-     TableLayoutPanel sütun ve satır stilleri ![](../ide/media/vs_tablelayoutpanel_setup.png)<br>
-***TableLayoutPanel*** *sütunu ve satır stilleri*
+   TableLayoutPanel seçildiğine göre, **Dock** özelliğini bulun ve **Yok**olarak ayarlanmalıdır Dock **seçin**. Değerin yanında açılır ok göründüğüne dikkat edin. Oku seçin ve ardından aşağıdaki ekran görüntüsünde gösterildiği gibi **Dolgu** düğmesini (ortadaki büyük düğme) seçin.
 
-1. **Sütun ve satır stilleri** penceresinin en üstündeki **göster** açılan listesinden **Satırlar**' ı seçin. **Row1** değerini yüzde 90 ve **Row2** olarak ayarlayın.
+     ![Fill seçili özellikler penceresi](../ide/media/express_docktable.png)<br>
+***Properties*** ***Fill*** *seçili* *özellikler penceresi*
 
-1. **Tamam** düğmesini seçin. TableLayoutPanel, artık büyük bir üst satıra, küçük bir alt satıra, küçük bir sol sütuna ve büyük bir sağ sütuna sahip olmalıdır. (TableLayoutPanel içindeki satırları ve sütunları formda **tableLayoutPanel1** seçerek ve sonra satır ve sütun kenarlıklarını sürükleyerek yeniden boyutlandırabilirsiniz.)
+     Visual Studio'da *yerleştirme,* Bir pencerenin IDE'deki başka bir pencereye veya alana bağlı olması anlamına gelir. Örneğin, **Özellikler** penceresi, Visual Studio&mdash;&mdash;içinde bekar ve serbest çeşnili olan sabitlenebilir veya **Solution Explorer'a**sabitlenebilir.
 
-     yeniden boyutlandırılan TableLayoutPanel ile ![Form1](../ide/media/vs_formafterlayoutpanel.png)<br>
-***Form1*** *(resim Görüntüleyicisi) yeniden boyutlandırılmış* ***TableLayoutPanel***
+1. TableLayoutPanel **Dock** özelliğini **Dolduracak**şekilde ayarladıktan sonra, panelin formun tamamını doldurduğunu fark edin. Formu yeniden boyutlandırsanız, TableLayoutPanel sabitkalır ve kendisini sığacak şekilde yeniden boyutlandırIr.
+
+    > [!NOTE]
+    > TabloDüzeni Panel Microsoft Office Word'de bir tablo gibi çalışır: Satırlar ve sütunlar vardır ve tek bir hücre birden çok satır ve sütuna yayılabilir. Her hücre bir denetimi (düğme, onay kutusu veya etiket gibi) tutabilir. TableLayoutPanel'inizin <xref:System.Windows.Forms.PictureBox> tüm üst satırını kapsayan bir <xref:System.Windows.Forms.CheckBox> denetimi, sol alt hücresinde <xref:System.Windows.Forms.Button> bir denetime ve sağ alt hücresinde dört denetime sahip olması gerekir.
+
+1. Şu anda TableLayoutPanel'de iki eşit boyutlu satır ve iki eşit boyutlu sütun bulunmaktadır. Üst satır ve sağ sütun çok daha büyük olacak şekilde onları yeniden boyutlandıralım. **Windows Forms Designer'da**TableLayoutPanel'i seçin. Sağ üst köşede aşağıdaki gibi görünen küçük bir siyah üçgen düğmesi vardır.
+
+     ![Üçgen düğmesi](../ide/media/express_iconblacktriangle.gif)<br>
+***Üçgen*** *düğmesi*
+
+     Bu düğme, denetimin özelliklerini otomatik olarak ayarlamanıza yardımcı olan görevleri olduğunu gösterir.
+
+1. Aşağıdaki ekran görüntüsünde gösterildiği gibi denetimin görev listesini görüntülemek için üçgeni seçin.
+
+     ![TabloDüzeniPanel görevleri](../ide/media/express_tablepanel.png)<br>
+***TabloDüzeniPanel*** *görevleri*
+
+1. Sütun ve **Satır Stilleri** penceresini görüntülemek için Satırları **ve Sütunları Edin** görevini seçin. **Sütun1'i**seçin ve **Yüzde** düğmesinin seçildiğinden emin olarak boyutunu yüzde **15'e** ayarlayın ve **Yüzde** kutusuna 15 girin. (Bu, daha <xref:System.Windows.Forms.NumericUpDown> sonraki bir öğreticide kullanacağınız bir denetimdir.) **Sütun2'yi** seçin ve yüzde 85 olarak ayarlayın. Pencere kapanacağı için **henüz Tamam** düğmesini seçmeyin. (Ancak bunu yaparsanız, görev listesini kullanarak yeniden açabilirsiniz.)
+
+     ![TabloDüzeniPanel sütun ve satır stilleri](../ide/media/vs_tablelayoutpanel_setup.png)<br>
+***TabloDüzeniPanel*** *sütun ve satır stilleri*
+
+1. **Sütun ve Satır Stilleri** penceresinin üst kısmındaki açılır listedeki **Göster** listesinden **Satırlar'ı**seçin. **Row1'i** yüzde 90'a, **Satır2'yi** yüzde 10'a ayarlayın.
+
+1. **Tamam** düğmesini seçin. TableLayoutPanel'inizin artık büyük bir üst satır, küçük bir alt satır, küçük bir sol sütun ve büyük bir sağ sütunu olmalıdır. (TabloDüzeniPanel'deki satırları ve sütunları, **tabloDüzeniPanel1'i** formda seçip satır ve sütun kenarlıklarını sürükleyerek yeniden boyutlandırabilirsiniz.)
+
+     ![Yeniden boyutlandırılmış TabloDüzeniPanel ile Form1](../ide/media/vs_formafterlayoutpanel.png)<br>
+***Form1*** *(Resim Görüntüleyici) yeniden boyutlandırılmış* ***TableLayoutPanel*** ile
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Sonraki öğretici adımına geçmek için, bkz. **[5. Adım: Formunuza denetim ekleme](../ide/step-5-add-controls-to-your-form.md)** .
+* Bir sonraki öğretici adıma gitmek için **[bkz: Adım 5: Formunuza denetimler ekleyin.](../ide/step-5-add-controls-to-your-form.md)**
 
-* Önceki öğretici adımına dönmek için bkz. 3. [Adım: form özelliklerinizi ayarlama](../ide/step-3-set-your-form-properties.md).
+* Önceki öğretici adıma dönmek için [bkz.](../ide/step-3-set-your-form-properties.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: Zamanlanmış matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [öğretici 3: eşleşen bir oyun oluşturma](tutorial-3-create-a-matching-game.md)

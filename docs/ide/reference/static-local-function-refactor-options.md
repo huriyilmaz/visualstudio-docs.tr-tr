@@ -12,60 +12,60 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: c297457c910c484c05c974c581e89c75e0ad44e5
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77144831"
 ---
-# <a name="static-local-function-refactorings-and-quick-actions"></a>Statik yerel işlev yeniden düzenlemeler ve hızlı eylemler
+# <a name="static-local-function-refactorings-and-quick-actions"></a>Statik yerel fonksiyon refactorings ve Hızlı Eylemler
 
-Bu makalede, statik yerel işlevlerle ilgili iki üretkenlik özelliği özetlenmektedir. , Yerel bir işlevi statik hale getiren ve diğeri değişkenleri statik bir yerel işleve geçirmek için kod üreten hızlı bir eylem olan bir yeniden düzenleme işlemidir.
+Bu makalede, statik yerel işlevler ile ilgili iki verimlilik özellikleri özetler. Bunlardan biri, yerel bir işlevi statik kılan bir yeniden düzenleme, diğeri ise değişkenleri statik yerel işleve geçirmek için kod üreten hızlı eylemdir.
 
 ## <a name="make-local-function-static"></a>Yerel işlevi statik yap
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Yerel bir işlevi statik hale getirir ve işlevin dışında tanımlanan değişkenlerde işlevin bildirimine ve çağrılarına geçirir.
+**Ne:** Yerel bir işlevi statik yapar ve işlev in deklarasyonu ve çağrıları için işlev dışında tanımlanan değişkenler geçer.
 
 **Ne zaman:** Yerel işlevinizin statik olmasını ve tüm değişkenlerin işlev kapsamında tanımlanmasını istiyorsunuz.
 
-**Neden:** Statik yerel işlevler okunabilirliği artırır: belirli bir kodun yalıtılmış olduğunu bilmek, anlaşılması, yeniden okunması ve yeniden kullanılması kolaylaşır. Statik yerel işlevler, bir sınıfın yalnızca tek bir yöntemde çağrılan statik bir işlevle kirletmesini engellemek için kapsam sağlar.
+**Neden:** Statik yerel işlevler okunabilirliği artırır: belirli kodun yalıtılmış olduğunu bilmek, anlamayı, yeniden okumayı ve yeniden kullanmayı kolaylaştırır. Statik yerel işlevler, yalnızca tek bir yöntemde çağrılan statik bir işleçle bir sınıfı kirletmesini önlemek için kapsam sağlar.
 
 ### <a name="how-to"></a>Nasıl yapılır
 
-1. Giriş işaretini yerel işlev adına yerleştirin.
+1. Caret'inizi yerel işlev adına yerleştirin.
 
-2. **Ctrl**+tuşuna basın **.** (nokta) **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetikleyin.
+2. **Ctrl**+tuşuna**basın.** (dönem) Hızlı **Eylemler ve Refactorings** menüsünü tetiklemek için.
 
    ![Yerel işlevi statik yap](media/make-local-function-static.png)
 
-3. **Yerel ' static ' Işlevini yap** ' ı seçin.
+3. **Yerel işlevi 'statik' yap'ı seçin.**
 
-## <a name="pass-variable-explicitly-in-a-static-local-function"></a>Değişkeni statik bir yerel işlevde açıkça geçir
+## <a name="pass-variable-explicitly-in-a-static-local-function"></a>Statik yerel fonksiyonda değişkeni açıkça geçirin
 
-Bu hızlı eylem şu şekilde geçerlidir:
+Bu Hızlı Eylem aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Bir değişkeni açıkça yerel bir statik işleve geçirir.
+**Ne:** Bir değişkeni açıkça yerel statik bir işleve geçirir.
 
-**Ne zaman:** Yerel bir işlevin statik olmasını, ancak hala onun dışında başlatılan değişkenleri kullanmasını istiyorsunuz.
+**Ne zaman:** Yerel bir işlevin statik olmasını istiyorsunuz, ancak yine de bunun dışında başlaşılan değişkenleri kullanıyorsunuz.
 
-**Neden:** Statik yerel işlevlerin kullanılması yalnızca programın belirli bir bağlamında bildirilip belirtilebilecek ve çağrılabilecek olduğunu bildiğinden okuyucular için açıklama sağlar. Değişkenleri bu bağlam dışında tanımlama esnekliği sağlar, ancak yine de statik yerel işleve bağımsız değişken olarak geçirebilirsiniz.
+**Neden:** Statik yerel işlevlerin kullanılması, yalnızca programın belirli bir bağlamında bildirilip çağrılabileceğini bildikleri için okuyuculara açıklık sağlar. Değişkenleri bu bağlam Dışında tanımlamak için esneklik sağlar, ancak yine de bunları statik yerel işleve bağımsız değişken olarak geçirebilmeyi sağlar.
 
 ### <a name="how-to"></a>Nasıl yapılır
 
-1. Giriş işaretini statik yerel işlevde kullanıldığı değişkene yerleştirin.
+1. Caret'inizi statik yerel fonksiyonda kullanıldığı değişkene yerleştirin.
 
-2. **Ctrl**+tuşuna basın **.** (nokta) **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetikleyin.
+2. **Ctrl**+tuşuna**basın.** (dönem) Hızlı **Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-   ![Değişkeni statik yerel işlevde açıkça geçir](media/pass-variable-explicitly-static-local-function.png)
+   ![Statik yerel fonksiyonda değişkeni açıkça geçirin](media/pass-variable-explicitly-static-local-function.png)
 
 3. **Değişkeni yerel statik işlevde açıkça geçir** seçeneğini belirleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

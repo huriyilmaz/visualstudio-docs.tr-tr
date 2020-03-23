@@ -1,6 +1,6 @@
 ---
-title: Bir yerel değişken ekleme
-description: Varolan bir ifadeyi değiştirmek için yerel bir değişken oluşturun. İfadeyi seçin, sağ tıklayın ve hızlı eylemler ve yeniden düzenlemeler menüsünü seçin, ' expression ' ' ın (tüm oluşumlar) için yerel Ekle ' yi seçin.
+title: Yerel değişkeni tanıtın
+description: Varolan bir ifadenin yerine yerel bir değişken oluşturun. İfadeyi seçin, sağ tıklayın ve Hızlı Eylemler ve Yeniden Faktörler menüsünü seçin, 'ifade' için yerel tanıt'ı seçin.
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -9,13 +9,13 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0fbd5ed752b28cc3f8c0dd734ed2b3ce09e80b78
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568821"
 ---
-# <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio'da bir yerel değişken ekleme
+# <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio'da yerel bir değişkeni tanıtın
 
 Bu kod oluşturma için geçerlidir:
 
@@ -23,53 +23,53 @@ Bu kod oluşturma için geçerlidir:
 
 - Visual Basic
 
-**Ne:** hemen var olan bir ifade değiştirmek için bir yerel değişken oluşturmanıza olanak tanır.
+**Ne:** Varolan bir ifadeyi değiştirmek için hemen yerel bir değişken oluşturmanıza olanak tanır.
 
-**Ne zaman:** yerel bir değişkende olsaydı, kolayca daha sonra yeniden kullanılabilen kodlarla koda sahip.
+**Ne zaman:** Yerel bir değişkende olsaydı daha sonra kolayca yeniden kullanılabilecek bir kodunuz vardır.
 
-**Neden:** kopyalayın ve sonra işlemi gerçekleştirmek, sonucu yerel bir değişkende depolar ve yerel bir değişken boyunca kullanmanız daha iyi ancak kodu çeşitli konumlarda kullanmak için birden çok kez yapıştırın.
+**Neden:** Kodu çeşitli konumlarda kullanmak için birden çok kez kopyalayıp yapıştırabilirsiniz, ancak işlemi bir kez gerçekleştirmek, sonucu yerel bir değişkende depolamak ve yerel değişkeni kullanmak daha iyi olacaktır.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. Yeni bir yerel değişkene atamak istediğiniz ifade vurgulayın.
+1. Yeni bir yerel değişkene atamak istediğiniz ifadeyi vurgulayın.
 
    - C#:
 
-       ![Vurgulanmış kodu C#](media/local-highlight-cs.png)
+       ![Vurgulanan kod C #](media/local-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu VB](media/local-highlight-vb.png)
+       ![Vurgulanan kod VB](media/local-highlight-vb.png)
 
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
    - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - &nbsp; ![Screwdriver](media/screwdriver.png) Sol kenar boşluğunda görüntülenen simge, metin imleç zaten vurgulanan ifade ile satırda varsa görüntülenir.
+      - Hızlı Eylemler ve **Yeniden Faktörler** menüsünü sağ tıklatın ve seçin.
+      - &nbsp; ![Tornavida](media/screwdriver.png) metin imleci vurgulanan ifadeyle zaten çizgideyse sol kenar boşluğunda görünen simge.
 
-   ![Yerel Önizleme Ekle](media/local-preview-cs.png)
+   ![Yerel önizlemeyi tanıtın](media/local-preview-cs.png)
 
-3. Açılan menüden **' expression ' için yerel (tüm oluşumlar) Ekle '** yi seçin.
+3. Açılan menüden **'ifade' için yerel tanıt 'ı seçin.**
 
    > [!TIP]
-   > Kullanım **değişiklik önizlemesi** Önizleme pencerenin alt kısmındaki bağlantı [tüm değişiklikleri görmek için](../../ide/preview-changes.md) , oluşturulacak, seçim yapmadan önce.
+   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) önizleme penceresinin altındaki Önizleme **değişiklikleri** bağlantısını kullanın.
 
-   Yerel değişken, kullanımdan çıkarılan türü ile oluşturulur. Yeni yerel değişkeni, yeni bir ad verin.
+   Yerel değişken, kullanımından çıkarılan türle oluşturulur. Yeni yerel değişkene yeni bir ad verin.
 
    - C#:
 
-       ![C# arabirimi sonucu uygulayın](media/local-result-cs.png)
+       ![Arabirim sonucunu C uygulayın #](media/local-result-cs.png)
 
    - Visual Basic:
 
-       ![Uygulama arabirimi sonucu VB](media/local-result-vb.png)
+       ![Arayüz sonucunu vb uygulayın](media/local-result-vb.png)
 
    > [!NOTE]
-   > Kullanabileceğiniz **.. .all oluşumlarını...**  menü seçeneğini seçili ifadesi, yalnızca özellikle vurgulanmış bir her örneğini değiştirin.
+   > Kullanabilirsiniz **... tüm oluşumları ...** yalnızca özellikle vurgulamış olduğunuz ifadeyi değil, seçili ifadenin her örneğini değiştirmek için menü seçeneği.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod oluşturma](../code-generation-in-visual-studio.md)
-- [Değişiklikleri Önizle](../../ide/preview-changes.md)
+- [Değişiklikleri önizleme](../../ide/preview-changes.md)

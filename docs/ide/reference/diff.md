@@ -13,13 +13,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bb74501c15e961d8da8e1e29dd0d9979c79a305
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570095"
 ---
-# <a name="diff-devenvexe"></a>/Diff (devenv. exe)
+# <a name="diff-devenvexe"></a>/Diff (devenv.exe)
 
 İki dosyayı karşılaştırır. Farklar özel bir Visual Studio penceresinde görüntülenir.
 
@@ -29,31 +29,31 @@ ms.locfileid: "75570095"
 devenv /Diff SourceFile TargetFile [SourceDisplayName [TargetDisplayName]]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
-- *Kaynakdosya*
+- *Kaynak Dosya*
 
-  Gerekli. Karşılaştırılacak ilk dosyanın tam yolu ve adı.
+  Gereklidir. Karşılaştırılacak ilk dosyanın tam yolu ve adı.
 
-- *Hedefdosya*
+- *Hedef Dosya*
 
-  Gerekli. Karşılaştırılacak ikinci dosyanın tam yolu ve adı.
+  Gereklidir. Karşılaştırılacak ikinci dosyanın tam yolu ve adı.
 
-- *Kaynağıngörünenadı*
+- *SourceDisplayName*
 
-  İsteğe bağlı. İlk dosyanın görünen adı.
+  İsteğe bağlı. İlk dosyanın görüntü adı.
 
-- *Hedefingörünenadı*
+- *TargetDisplayName*
 
-  İsteğe bağlı. İkinci dosyanın görünen adı.
+  İsteğe bağlı. İkinci dosyanın görüntü adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-IDE 'nin bir örneği zaten açıksa, dosya karşılaştırması geçerli IDE 'deki bir sekmede görüntülenir.
+IDE'nin bir örneği zaten açıksa, dosya karşılaştırması geçerli IDE'deki bir sekmede görüntülenir.
 
 ## <a name="example"></a>Örnek
 
-İlk örnek, görünen adlarını değiştirmeden iki dosyayı karşılaştırır. İkinci örnek, her iki görüntü adını değiştirirken dosyaları karşılaştırır. Üçüncü ve dördüncü örnekler iki dosyayı karşılaştırır, ancak bir diğer adı yalnızca ilk dosyaya veya ikinci dosyaya uygular.
+İlk örnek, iki dosyayı görüntü adlarını değiştirmeden karşılaştırır. İkinci örnek, her iki görüntü adlarını değiştirirken dosyaları karşılaştırır. Üçüncü ve dördüncü örnekler iki dosyayı karşılaştırır, ancak yalnızca ilk dosyaya veya ikinci dosyaya takma ad uygular.
 
 ```shell
 devenv /diff File1.txt File2.txt

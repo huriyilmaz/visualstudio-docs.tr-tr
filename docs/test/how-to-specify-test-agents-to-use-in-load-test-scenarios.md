@@ -1,5 +1,5 @@
 ---
-title: Yük testi senaryolarında kullanılacak Test aracıları belirtme
+title: Yük Testi Senaryolarında Kullanılacak Test Aracılarını Belirtin
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,60 +13,60 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d23d565752d81bff960027090ddaaf88e9d78ed5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588934"
 ---
-# <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Nasıl yapılır: test belirtin yükleme kullanılacak aracı test senaryoları
+# <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Nasıl kullanılır: Yük testi senaryolarında kullanılacak test aracılarını belirtme
 
-Kullanarak yük testi oluşturduktan sonra **Yeni Yük Testi Sihirbazı**, kullanabileceğiniz **Yük Testi Düzenleyicisi** test ihtiyaçlarınızı ve hedeflerinizi karşılayacak şekilde değiştirmek için.
+**Yeni Yük Testi Sihirbazı'nı**kullanarak yük testinizi oluşturduktan sonra, test gereksinimlerinizi ve hedeflerinize ulaşmak için senaryo özelliklerini değiştirmek için Yük Testi Düzenleyicisi'ni kullanabilirsiniz. **Load Test Editor**
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
+> Yük testi senaryo özelliklerinin ve açıklamalarının tam listesi için [bkz.](../test/load-test-scenario-properties.md)
 
-Aracıları kullanarak belirtilen **Yük Testi Düzenleyicisi** değiştirmek için **kullanılacak aracılar** özelliğinde **özellikleri** penceresi.
+Aracılar, **Özellikler** penceresindeki özelliği kullanacak **aracıları** değiştirmek için **Yük Testi Düzenleyicisi** kullanılarak belirtilir.
 
-Senaryonuz denetleyicileri kullanıyorsanız ve uzaktan test yükü çalıştırmak için aracıları kullanmak istediğiniz aracıları belirtebilirsiniz. Örneğin, performans eğilimlerini analiz ederken tutarlılık sağlamak için belirli bir aracı kümesi belirtmek isteyebilirsiniz. Benzeşim var. böylece arasında hangi betiklerin çalıştıkları ve aracıyı bulunduğu Ayrıca, aracıların coğrafi olarak, dağıtılabilir.
+Yük testini uzaktan çalıştırmak için denetleyicileri ve aracıları kullanıyorsanız, senaryonuzun kullanmasını istediğiniz aracıları belirtebilirsiniz. Örneğin, performans eğilimlerini analiz ederken tutarlılığı korumak için belirli bir aracı kümesi belirtmek isteyebilirsiniz. Ayrıca, aracılar coğrafi olarak dağıtılabilir, böylece çalıştırdıkları komut dosyaları ile aracının bulunduğu yer arasında bir benzerlik vardır.
 
 > [!TIP]
-> Bir aracı uzak sitede fiziksel olarak koyarak yerine, başka bir yavaş bir ağa benzetmek için ağ öykünmesini kullanabilmek için seçenektir. Daha fazla bilgi için [sanal ağ türlerini belirtme](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+> Bir aracıyı uzak siteye fiziksel olarak yerleştirmek yerine, başka bir seçenek de yavaş ağı taklit etmek için ağ öykünme kullanmaktır. Daha fazla bilgi için [bkz.](../test/specify-virtual-network-types-in-a-load-test-scenario.md)
 
-Daha fazla bilgi için [Test denetleyicileri ve test aracılarını](configure-test-agents-and-controllers-for-load-tests.md).
+Daha fazla bilgi için test [denetleyicileri ve test aracıları'na](configure-test-agents-and-controllers-for-load-tests.md)bakın.
 
-Diğer bir neden olan bazı, tümü değil, aracıları belirli bir senaryo için gerekli olan yüklü yazılımlar olabilir.
+Başka bir nedeni, bazı, ancak tüm değil, aracılar belirli bir senaryo için gerekli olan yazılım yüklü olabilir.
 
-Aracı seçimi test ayarlarında rollerini kullanarak çalışan belirli bir testi için kontrol edebilirsiniz. Daha fazla bilgi için [test ayarlarını kullanarak tanılama bilgi toplayan](../test/collect-diagnostic-information-using-test-settings.md).
+Test ayarlarındaki rolleri kullanarak belirli bir test çalışması için aracı seçimini denetleyebilirsiniz. Daha fazla bilgi için bkz. [Test ayarlarını kullanarak tanı bilgilerini topla.](../test/collect-diagnostic-information-using-test-settings.md)
 
-Bir test aracısı makineye CPU kullanımı yüzde 75'inden daha vardır veya yüzde 10'den az kullanılabilir fiziksel bellek varsa, aracı makinenin yük testinizde bir darboğaz haline gelmediğinden emin olmak için Yük testiniz için daha fazla aracı ekleyin.
+Bir test aracısı makinesinde yüzde 75'ten fazla CPU kullanımı varsa veya fiziksel belleğin yüzde 10'undan azı varsa, aracı makinenin yük testinizdeki darboğaz haline getirmediğinden emin olmak için yükleme testinize daha fazla aracı ekleyin.
 
-## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>Bir senaryo için kullanılacak aracı belirtmek için
+## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>Bir senaryo için kullanılacak aracıları belirtmek için
 
 1. Bir yük testi açın.
 
-     **Yük Testi Düzenleyicisi** görünür. Yük testi ağacında görüntülenir.
+     **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi **senaryoları** klasöründe kullanılacak aracı belirtmek istediğiniz senaryoyu düğümünü seçin.
+2. Yük testi ağaçları **Senaryolar** klasöründe, kullanılacak aracıları belirtmek istediğiniz senaryo düğümünü seçin.
 
-3. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
+3. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
 
-     Kategoriler ve özellikler bu senaryonun görüntülenen **özellikleri** penceresi.
+     Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-4. Metin kutusunda **kullanılacak aracılar** özellik, senaryo çalışabilir aracıların listesini yazın.
+4. Aracıların Kullanım Özelliği için metin **kutusuna,** senaryonun çalıştırılabileceği aracıların listesini yazın.
 
-     Aracıları ayrılmalıdır virgüllerle, örneğin "**agent1'e, birim testi Agent2, Aracı3**". Özellik boş bırakılırsa, senaryo kullanılabilir tüm aracılar kullanması gerektiğini belirtir.
+     Aracılar virgülle ayrılmalıdır, örneğin "**Agent1, Agent2, Agent3**". Özelliği boş bırakmak, senaryonun kullanılabilir tüm aracıları kullanması gerektiğini belirtir.
 
     > [!NOTE]
-    > **Kullanılacak aracılar** özelliği yerel çalışmalar için yoksayılır. Belirtilen aracıların hiçbiri uzaktan çalıştırmalar için **kullanılacak aracılar** var, testlerin senaryoda çalışmaz.
+    > Özelliği **Kullanacak Aracılar** yerel çalıştırmalar için yoksayılır. Uzaktan çalıştırmalarda, **Kullanılacak Aracılar'da** belirtilen aracıların hiçbiri yoksa, senaryodaki testler çalışmaz.
 
-5. Özellik değiştirdikten sonra seçin **Kaydet** üzerinde **dosya** menüsü. Ardından, yeni kullanarak yük testi çalıştırabilirsiniz **kullanılacak aracılar** değeri.
+5. Özelliği değiştirdikten sonra **Dosya** menüsünde **Kaydet'i** seçin. Daha sonra yeni **Aracılar kullanmak** değeri kullanarak yük testi çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını edin](../test/edit-load-test-scenarios.md)
 - [İzlenecek yol: Yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
-- [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)
+- [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md)

@@ -1,6 +1,6 @@
 ---
-title: Node.js REPL kullanma
-description: Visual Studio Node.js çalışma zamanı ile etkileşim kurmaya yönelik destek sağlar.
+title: Düğüm.js REPL kullanın
+description: Visual Studio, Node.js çalışma süresi ile etkileşim için destek sağlar
 ms.date: 12/04/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -12,40 +12,40 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: faed930c60869010f740cf0a1e118a40299ce782
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62840684"
 ---
-# <a name="work-with-the-nodejs-interactive-window"></a>Node.js etkileşimli penceresi ile çalışma
+# <a name="work-with-the-nodejs-interactive-window"></a>Node.js etkileşimli penceresi ile çalışın
 
-Visual Studio için node.js araçları yüklü Node.js çalışma zamanı için etkileşimli bir pencere içerir. Bu pencere, JavaScript kodu girin ve sonuçları hemen görmenize yanı sıra geçerli proje ile etkileşim kurmak için npm komutları yürütmek sağlar. Etkileşimli olarak da bilinen REPL penceresidir (**R**okunur /**E**valuate /**P**azdır **L**oop).
+Visual Studio için Node.js Tools yüklü Düğüm.js çalışma zamanı için etkileşimli bir pencere içerir. Bu pencere, JavaScript kodunu girmenizi ve sonuçları hemen görmenizi ve geçerli projeyle etkileşimde bulunduğunuz npm komutlarını yürütmenizi sağlar. Etkileşimli pencere repl olarak da bilinir **(R**ead/**E**valuate/**P**rint **L**oop).
 
-## <a name="open-the-interactive-window"></a>Etkileşimli penceresini açın
+## <a name="open-the-interactive-window"></a>Etkileşimli pencereyi açma
 
-Etkileşimli pencere, Çözüm Gezgini'nde Node.js proje düğümünü sağ tıklatıp seçerek açabilirsiniz **Node.js etkileşimli penceresini aç**.
+Solution Explorer'daki Düğüm.js proje düğümüne sağ tıklayarak ve **Open Node.js Interactive Window'u**seçerek etkileşimli pencereyi açabilirsiniz.
 
-![Node.js etkileşimli pencerede proje bağlam menüsü](../javascript/media/interactivewindow-open-from-project.png)
+![Proje bağlammenüsünde Düğüm.js etkileşimli pencere](../javascript/media/interactivewindow-open-from-project.png)
 
-Node.js etkileşimli penceresi açmak için varsayılan kısayol tuşları **[CTRL] + K, N**. Veya araç penceresini seçerek açabilirsiniz **görünümü** > **Windows** > **Node.js etkileşimli penceresi**.
+Düğüm.js etkileşimli pencereyi açmak için varsayılan kısa yol tuşları **[CTRL] + K, N**. Veya**Windows** > Düğümlerini **Görüntüle'yi** > seçerek pencereyi araç çubuğundan**açabilirsiniz.**
 
-## <a name="use-the-repl"></a>REPL kullanma
+## <a name="use-the-repl"></a>REPL'yi kullanma
 
-Açılan sonra komutları girebilirsiniz.
+Açıldıktan sonra komutları girebilirsiniz.
 
-![Node.js etkileşimli penceresi](../javascript/media/interactivewindow.png)
+![Düğüm.js etkileşimli pencere](../javascript/media/interactivewindow.png)
 
-Etkileşimli pencere, bildirdiğiniz herhangi bir JavaScript işlevinden bunları ayırt etmek için bir nokta önek ile başlayan birkaç yerleşik komutlar vardır. Aşağıdaki komutlar desteklenir:
+Etkileşimli pencere, beyan ettiğiniz herhangi bir JavaScript işlevinden ayırt etmek için nokta önekiyle başlayan birkaç yerleşik komuta sahiptir. Aşağıdaki komutlar desteklenir:
 
-**.CLS, .clear** Düzenleyicisi penceresinin geçmiş ve yürütme bağlamı dokunmadan, içeriği temizler.
+**.cls, .açık** Düzenleyici penceresinin içeriğini temizler ve geçmiş ve yürütme bağlamını bozulmadan bırakır.
 
-**.Help** belirtilmezse Yardım belirtilen komut ya da tüm kullanılabilir komutları ve tuş bağlamaları'görüntüler.
+**.yardım** Belirtilen komutta veya varsa tüm kullanılabilir komutlarda ve anahtar bağlamalarında yardım görüntüler.
 
-**.info** kullanılan geçerli Node.js hakkında bilgi yürütülebilir gösterir getirin.
+**.info** Çalıştırılabilen geçerli düğüm.js hakkındaki bilgileri gösterir.
 
-**.npm** npm komutunu çalıştırır. Çözüm birden fazla proje içeriyorsa, kullanarak hedef projeyi belirtin `.npm [projectname] <npm arguments>`.
+**.npm** NPM komutu çalıştırın. Çözüm birden fazla proje içeriyorsa, hedef `.npm [projectname] <npm arguments>`projeyi kullanarak belirtin.
 
-**.reset** yürütme ortamını ilk durumuna, Canlı geçmişi sıfırlar.
+**.sıfırlama** Yürütme ortamını ilk duruma sıfırlar, geçmişi korur.
 
-**.Save** geçerli REPL oturumunu bir dosyaya kaydeder.
+**.kaydet** Geçerli REPL oturumunu bir dosyaya kaydeder.

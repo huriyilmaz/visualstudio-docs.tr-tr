@@ -1,5 +1,5 @@
 ---
-title: İşlevler görünümü-çekişme verileri | Microsoft Docs
+title: İşlevler Görünümü - Çekişme Verileri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,40 +12,40 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 5874ffc7b4d304d1eaacd78032d657fe6ff31d94
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74780058"
 ---
-# <a name="functions-view---contention-data"></a>İşlevler görünümü-çekişme verileri
-Çekişme verilerinin Işlevler rapor görünümü, profil oluşturma çalıştırması sırasında yürütmenin engellendiği profil oluşturma çalıştırmasında işlevleri listeler.
+# <a name="functions-view---contention-data"></a>İşlevler Görünümü - çekişme verileri
+Çekişme verilerinin İşlevler rapor görünümü, profil oluşturma çalışması sırasında yürütülmesi engellenen profil oluşturma çalışmasındaki işlevleri listeler.
 
- Aşağıdaki tabloda, eşzamanlılık yöntemi kullanılarak toplanan bir profil oluşturma veri dosyasının Işlevler görünümünde görüntülenen değerler açıklanmaktadır.
+ Aşağıdaki tabloda eşzamanlılık yöntemi kullanılarak toplanan profil oluşturma veri dosyasının İşlevler görünümünde görüntülenen değerler açıklanır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı engellenme süresi**|Bu işlevin, işlevin gövdesinde kod yürütmeyi engellediği zaman miktarı. İşlev tarafından çağrılan işlevlerde engellenen süre dahil değildir.|
-|**Dışlamalı engellenme süresi yüzdesi**|Bu işlevin dışlamalı engellenme süresi olan profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
-|**Dışlamalı çekişmeler**|Bu işlevin, işlevin gövdesinde kod yürütmeyi engellediği sayı. İşlev tarafından çağrılan işlevlerde çekişmeler dahil değildir.|
-|**Dışlamalı çekişmeler yüzdesi**|Profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi, bu işlevin özel çekişmeleri.|
-|**İşlev adresi**|İşlevin adresi.|
-|**İşlev adı**|İşlevin tam adı.|
-|**Kapsamlı engellenme süresi**|Bu işlevin veya bu işlev tarafından çağrılan bir işlevin yürütülmesi engellendi.|
-|**Kapsamlı engellenme süresi%**|Profil oluşturma çalıştırmasında, bu işlevin veya modülün içinde engellenmiş süresi olan tüm engellenen sürenin yüzdesi.|
-|**Kapsamlı çekişmeler**|Bu işlevin veya bu işlev tarafından çağrılan bir işlevin kaç kez yürütülenmediği.|
-|**Kapsamlı çekişmeler yüzdesi**|Bu işlevin veya modülün dahil olduğu, profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
-|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül adı**|İşlevi içeren modülün adı.|
-|**Modül yolu**|İşlevi içeren modülün yolu.|
-|**İşlem KIMLIĞI**|İşlevin yürütüldüğü işlemin işlem KIMLIĞI (PID).|
-|**İşlem adı**|İşlemin adı.|
-|**Kaynak dosya**|Bu işlevin tanımını içeren kaynak dosya.|
+|**Özel Engellenen Süre**|Bu işlevin işlevin gövdesinde kod yürütmesinin engellendiği süre. İşlev tarafından çağrılan işlevlerde engellenen süre dahil edilmez.|
+|**Özel Engellenen Süre %**|Profil oluşturma çalışmasındaki tüm engellenen sürenin yüzdesi, bu işlevin münhasır engellenen zamanıydı.|
+|**Özel Çekişmeler**|Bu işlevin işlevin gövdesinde kod yürütmesi kaç kez engellendi. İşlev tarafından çağrılan işlevlerde çekişmeler dahil edilmez.|
+|**Özel Çekişmeler %**|Profil oluşturma çalışmasındaki tüm çekişmelerin yüzdesi bu işlevin özel çekişmeleriydi.|
+|**Fonksiyon Adresi**|Fonksiyonun adresi.|
+|**Fonksiyon Adı**|İşlevin tam nitelikli adı.|
+|**Kapsayıcı Engellenen Süre**|Bu işlevin veya bu işlev tarafından çağrılan bir işlevin yürütülmesi engellenen süre.|
+|**Kapsayıcı Engellenen Süre %**|Profil oluşturma çalışmasındaki tüm engellenen sürenin yüzdesi, bu işlevin veya modülün engellenen süresini kapsayıcıdır.|
+|**Kapsayıcı Çekişmeler**|Bu işlevin veya bu işlev tarafından çağrılan bir işlevin yürütülmesinin engellenme sayısı.|
+|**Kapsayıcı Çekişmeler %**|Profil oluşturma çalışmasındaki tüm çekişmelerin yüzdesi, bu işlevin veya modülün kapsayıcı çekişmeleriydi.|
+|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
+|**Modül Adı**|İşleviçeren modülün adı.|
+|**Modül Yolu**|İşleviçeren modülün yolu.|
+|**İşlem Kimliği**|İşlevin yürütüldettiği işlemin işlem kimliği (PID).|
+|**İşlem Adı**|Sürecin adı.|
+|**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
-- [İşlevler Görünümü](../profiling/functions-view.md)
-- [İşlevler görünümü-izleme](../profiling/functions-view-dotnet-memory-instrumentation-data.md)
-- [İşlevler Görünümü-Örnekleme](../profiling/functions-view-dotnet-memory-sampling-data.md)
-- [İşlevler Görünümü](../profiling/functions-view-instrumentation-data.md)
-- [İşlevler Görünümü](../profiling/functions-view-sampling-data.md)
+- [Nasıl kullanılır: Rapor Görünümü sütunlarını özelleştir](../profiling/how-to-customize-report-view-columns.md)
+- [Fonksiyonlar Görünümü](../profiling/functions-view.md)
+- [Fonksiyonlar Görünümü - enstrümantasyon](../profiling/functions-view-dotnet-memory-instrumentation-data.md)
+- [Fonksiyonlar Görünümü - örnekleme](../profiling/functions-view-dotnet-memory-sampling-data.md)
+- [Fonksiyonlar Görünümü](../profiling/functions-view-instrumentation-data.md)
+- [Fonksiyonlar Görünümü](../profiling/functions-view-sampling-data.md)

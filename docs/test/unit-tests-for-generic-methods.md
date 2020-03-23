@@ -11,40 +11,40 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 2158c889aefc85c908aa9ee42d45858fd11d557e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590819"
 ---
 # <a name="unit-tests-for-generic-methods"></a>Genel metotlar için birim testleri
 
-Diğer yöntemleri için tam olarak yaptığınız gibi genel metotlar için birim testleri oluşturabilirsiniz. Aşağıdaki bölümler ve örnekleri, genel metotlar için birim testleri oluşturma hakkında bilgi sağlar.
+Genel yöntemler için birim testleri oluşturabilirsiniz, tıpkı diğer yöntemlerde yaptığınız gibi. Aşağıdaki bölümlerde genel yöntemler için birim testleri oluşturma hakkında bilgi ve örnekler verilmiştir.
 
-## <a name="type-arguments-and-type-constraints"></a>Tür bağımsız değişkeni ve tür kısıtlamaları
+## <a name="type-arguments-and-type-constraints"></a>Yazı bağımsız değişkenleri ve tür kısıtlamaları
 
-Ne zaman Visual Studio'nun oluşturduğu genel bir sınıf için bir birim testi gibi `MyList<T>`, iki yöntem oluşturur: bir genel yardımcı ve bir test yöntemi. Varsa `MyList<T>` bir veya daha fazla tür kısıtlamaları var, tür bağımsız değişkeni tür kısıtlamaları karşılaması gerekir. İzin verilen tüm girişleri için beklendiği gibi genel test works altında kod emin olmak için test yöntemini test etmek istediğiniz tüm kısıtlamalar ile genel yardımcı yöntemi çağırır.
+Visual Studio genel bir sınıf için bir birim `MyList<T>`testi oluşturduğunda, örneğin, iki yöntem oluşturur: genel bir yardımcı ve bir test yöntemi. Bir `MyList<T>` veya daha fazla tür kısıtlaması varsa, tür bağımsız değişkeni tüm tür kısıtlamalarını karşılamalıdır. Test altındaki genel kodun tüm izin verilen girişler için beklendiği gibi çalıştığından emin olmak için, test yöntemi test etmek istediğiniz tüm kısıtlamaları içeren genel yardımcı yöntemi çağırır.
 
 ## <a name="examples"></a>Örnekler
-Aşağıdaki örnekler, genel türler için birim testleri gösterir:
+Aşağıdaki örnekler, jenerikler için birim testlerini göstermektedir:
 
-- [Düzenleme oluşturulan test kodu](#EditingGeneratedTestCode). Bu örnekte oluşturulan Test kodu ve Test kodu düzenlenmiş iki bölümü vardır. Bu genel bir yöntemi yararlı test yönteme oluşturulan ham test kodu düzenleme gösterir.
+- [Oluşturulan test kodunu edin.](#EditingGeneratedTestCode) Bu örnekte oluşturulan test kodu ve düzenlenen test kodu olmak üzere iki bölüm vardır. Genel bir yöntemden oluşturulan ham test kodunun yararlı bir test yöntemine nasıl dönüştürülür şekilde yapılacağını gösterir.
 
-- [Bir tür kısıtlaması kullanın](#TypeConstraintNotSatisfied). Bu örnek, bir tür kısıtlaması kullanan bir genel yöntem için birim testi gösterir. Bu örnekte, tür kısıtlaması karşılanmıyor.
+- [Bir tür kısıtlaması kullanın.](#TypeConstraintNotSatisfied) Bu örnek, tür kısıtlaması kullanan genel bir yöntem için bir birim testi gösterir. Bu örnekte, tür kısıtlaması tatmin edilmez.
 
-### <a name="EditingGeneratedTestCode"></a> Örnek 1: Oluşturulan test kodu düzenleme
-Bu bölümdeki test kodu adlı bir test altındaki kod yöntemi test `SizeOfLinkedList()`. Bu yöntem, bağlantılı listesinde düğüm sayısını belirten bir tamsayı döndürür.
+### <a name="example-1-editing-generated-test-code"></a><a name="EditingGeneratedTestCode"></a>Örnek 1: Oluşturulan test kodunu düzenleme
+Bu bölümdeki test kodu, test altında bir `SizeOfLinkedList()`kod yöntemini sınar. Bu yöntem, bağlı listedeki düğüm sayısını belirten bir tamsayı döndürür.
 
-Visual Studio Enterprise tarafından oluşturulan gibi ilk kod örneği bölümde oluşturulan Test kodu, düzenlenmemiş test kodu gösterir. ' % S'bölümünde düzenlenen Test kodu, ikinci örnek, iki farklı veri türleri için SizeOfLinkedList yöntemi çalışmasını test nasıl yapabileceğiniz gösterir `int` ve `char`.
+Oluşturulan Test Kodu bölümündeki ilk kod örneği, Visual Studio Enterprise tarafından oluşturulan düzenlenmemiş test kodunu gösterir. Düzenlenen Test Kodu bölümündeki ikinci örnek, iki farklı veri türü için SizeOfLinkedList yönteminin işleyişini `int` `char`nasıl test edebileceğini gösterir ve .
 
-Bu kod, iki yöntem göstermektedir:
+Bu kod iki yöntemi göstermektedir:
 
-- bir test yardımcı yöntem `SizeOfLinkedListTestHelper<T>()`. Varsayılan olarak, bir test yardımcı yöntem adını "TestHelper" vardır.
+- bir test yardımcı `SizeOfLinkedListTestHelper<T>()`yöntemi, . Varsayılan olarak, bir test yardımcısı yönteminin adında "TestHelper" vardır.
 
-- bir test yöntemi `SizeOfLinkedListTest()`. Her test yönteminin TestMethod özniteliği ile işaretlenir.
+- bir test `SizeOfLinkedListTest()`yöntemi, . Her test yöntemi TestYöntemi özniteliği ile işaretlenir.
 
 #### <a name="generated-test-code"></a>Oluşturulan test kodu
-Aşağıdaki test kodunu kaynaklandığı `SizeOfLinkedList()` yöntemi. Bu düzenlenmemiş oluşturulan test olduğundan, doğru test SizeOfLinkedList yöntemi için değiştirilmelidir.
+`SizeOfLinkedList()` Yöntemden aşağıdaki test kodu oluşturuldu. Bu düzenlenmemiş oluşturulan test olduğundan, SizeOfLinkedList yöntemini doğru bir şekilde sınamak için değiştirilmesi gerekir.
 
 ```csharp
 public void SizeOfLinkedListTestHelper<T>()
@@ -65,30 +65,30 @@ public void SizeOfLinkedListTest()
 }
 ```
 
-Önceki kodda, genel tür parametresidir `GenericParameterHelper`. Aşağıdaki örnekte gösterildiği gibi belirli veri türlerini sağlamak üzere düzenleyebilirsiniz ancak bu bildirimi düzenleme olmadan test çalıştırabilirsiniz.
+Önceki kodda, genel tür parametresi `GenericParameterHelper`. Aşağıdaki örnekte gösterildiği gibi, belirli veri türlerini sağlamak için düzenleyebilirsiniz, ancak bu deyimi düzenlemeden testi çalıştırabilirsiniz.
 
 #### <a name="edited-test-code"></a>Düzenlenen test kodu
-Aşağıdaki kodda, test yöntemi ve test yardımcı yöntemi başarıyla test kodu test altındaki yöntemi okunmaları düzenlenmiş `SizeOfLinkedList()`.
+Aşağıdaki kodda, test yöntemi ve test yardımcısı yöntemi, kod altında test yöntemini `SizeOfLinkedList()`başarıyla test etmek için düzenlendi.
 
 ##### <a name="test-helper-method"></a>Test yardımcı yöntemi
-Test yardımcı yöntemi, 1 ile 5. adım olarak etiketlenmiş kod satırlarına karşılık gelen aşağıdaki adımları gerçekleştirir.
+Test yardımcısı yöntemi, adım 1'den adım 5'e kadar etiketli koddaki satırlara karşılık gelen aşağıdaki adımları gerçekleştirir.
 
-1. Genel olarak bağlı bir liste oluşturun.
+1. Genel bir bağlantılı liste oluşturun.
 
-2. Dört düğüm bağlı listeye ekleyin. Bu düğümler içeriğini veri türü bilinmiyor.
+2. Bağlı listeye dört düğüm ekleyin. Bu düğümlerin içeriğinin veri türü bilinmiyor.
 
-3. Bağlantılı listesinin beklenen boyut değişkene atayın `expected`.
+3. Bağlı listenin beklenen boyutunu değişkene `expected`atayın.
 
-4. İşlem bağlantılı liste gerçek boyutuna ve değişkene atayın `actual`.
+4. Bağlı listenin gerçek boyutunu hesaplayın ve değişkene `actual`atayın.
 
-5. Karşılaştırma `actual` ile `expected` bir onay deyimi içinde. Gerçek beklenen eşit değilse, test başarısız olur.
+5. Bir `actual` `expected` Assert deyimiyle karşılaştırın. Gerçek beklenene eşit değilse, test başarısız olur.
 
 ##### <a name="test-method"></a>Test yöntemi
-Test yöntemi SizeOfLinkedListTest adlı test çalıştırdığınızda, çağrılan kod derlenir. Bu adım 6 ve 7. adım olarak etiketlenmiş kod satırlarına karşılık gelen aşağıdaki adımları gerçekleştirir.
+Test yöntemi, SizeOfLinkedListTest adlı testi çalıştırdığınızda çağrılan koda derlenir. Adım 6 ve adım 7 etiketli koddaki satırlara karşılık gelen aşağıdaki adımları gerçekleştirir.
 
-1. Belirtin `<int>` test için çalıştığını doğrulamak için test yardımcı yöntemini çağırdığınızda `integer` değişkenleri.
+1. Testin değişkenler için çalıştığını doğrulamak için `<int>` `integer` test yardımcısı yöntemini ne zaman çağırdığınızı belirtin.
 
-2. Belirtin `<char>` test için çalıştığını doğrulamak için test yardımcı yöntemini çağırdığınızda `char` değişkenleri.
+2. Testin değişkenler için çalıştığını doğrulamak için `<char>` `char` test yardımcısı yöntemini ne zaman çağırdığınızı belirtin.
 
 ```csharp
 public void SizeOfLinkedListTestHelper<T>()
@@ -115,14 +115,14 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> Her zaman SizeOfLinkedListTest test çalıştırmaları, kendi TestHelper yöntemi iki kez çağrılır. Onay deyimi geçirmek test için her zaman true olarak değerlendirilmesi gerekir. Test başarısız olursa, arama, belirtilen olup olmadığını, açık olmayabilecek `<int>` veya belirtilen çağrı `<char>` başarısız olmasına neden. Yanıt bulmak için çağrı yığınını incelemek veya test yönteminizde kesme noktaları ayarlayın ve ardından test çalıştırılırken hata ayıklama. Daha fazla bilgi için [nasıl yapılır: ASP.NET çözümü'nde bir test çalıştırılırken hata ayıklama](https://msdn.microsoft.com/Library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b).
+> SizeOfLinkedListTest testi her çalıştığında, TestHelper yöntemi iki kez çağrılır. İddia deyimi, testin geçmesi için her seferinde doğru olarak değerlendirilmelidir. Test başarısız olursa, belirtilen aramanın mı yoksa `<int>` belirtilen `<char>` aramanın başarısız olmasına neden olup olmadığı belli olmayabilir. Yanıtı bulmak için, arama yığınını inceleyebilir veya test yönteminizde kesme noktaları ayarlayabilir ve testi çalıştırırken hata ayıklama sağlayabilirsiniz. Daha fazla bilgi için [bkz: ASP.NET çözümünde bir test çalıştırırken hata ayıklama.](https://msdn.microsoft.com/Library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b)
 
-### <a name="TypeConstraintNotSatisfied"></a> Örnek 2: bir tür kısıtlaması kullanma
-Bu örnek, bir birim testi karşılanmadı bir tür kısıtlaması kullanan bir genel yöntem için gösterir. İlk bölüm, kod test altındaki kod projesi gösterir. Tür kısıtlaması vurgulanır.
+### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a>Örnek 2: Bir tür kısıtlaması kullanma
+Bu örnek, memnun olmayan bir tür kısıtlaması kullanan genel bir yöntem için bir birim testi gösterir. İlk bölümde, test altındaki kod projesinin kodu gösterilmektedir. Tür kısıtlaması vurgulanır.
 
 İkinci bölümde test projesinden kod gösterilmektedir.
 
-#### <a name="code-under-test-project"></a>Test altındaki kod projesi
+#### <a name="code-under-test-project"></a>Kod-under-test projesi
 
 ```csharp
 using System;
@@ -156,11 +156,11 @@ namespace ClassLibrary2
 
 #### <a name="test-project"></a>Test projesi
 
-Tüm yeni oluşturulan birim testlerinde olduğu gibi yetersiz olmayan Assert deyimleri yararlı sonuçlar döndürebilir sağlamak için bu birim testi eklemeniz gerekir. Bunları TestMethod özniteliği ile işaretlenmiş yöntem, ancak bu test için adında "TestHelper" yöntem eklemeyin `DataTestHelper<T>()`.
+Yeni oluşturulan tüm birim testlerinde olduğu gibi, yararlı sonuçlar döndürmesi için bu birim testine sonuçsuz Assert ifadeleri eklemeniz gerekir. Bunları TestMethod özniteliği ile işaretlenmiş yönteme değil, bu test için adı verilen `DataTestHelper<T>()`"TestHelper" yöntemine eklersiniz.
 
-Bu örnekte, genel tür parametresi `T` kısıtlamasına sahip `where T : Employee`. Bu kısıtlama test yönteminde karşılanmıyor. Bu nedenle, `DataTest()` yöntemi içeren uyarıları gereksinim üzerinde yerleştirilen tür kısıtlaması sağlamak için bir onay deyimi `T`. Bu onay deyimi ileti aşağıdaki gibidir: `("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
+Bu örnekte, genel tür `T` parametresi kısıtlamavardır. `where T : Employee` Bu kısıtlama test yönteminde karşılanmaz. Bu nedenle, `DataTest()` yöntem, üzerine `T`yerleştirilen tür kısıtlamasını sağlama gereksinimine karşı sizi uyaran bir Assert deyimi içerir. Bu Assert deyiminin iletisi aşağıdaki gibidir:`("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
 
-Diğer bir deyişle, çağırdığınızda `DataTestHelper<T>()` yöntemi test yönteminden `DataTest()`, türünde bir parametre geçmelidir `Employee` veya türetilmiş bir sınıf `Employee`.
+Başka bir deyişle, `DataTestHelper<T>()` yöntemtest yöntemini aradiğinizde, `DataTest()`bir tür `Employee` parametresini veya türetilmiş bir sınıfı geçmeniz `Employee`gerekir.
 
 ```csharp
 using ClassLibrary2;
@@ -196,4 +196,4 @@ namespace TestProject1
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birim testi kod](../test/unit-test-your-code.md)
+- [Birim kodunuzu test edin](../test/unit-test-your-code.md)

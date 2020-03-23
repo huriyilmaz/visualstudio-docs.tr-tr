@@ -15,27 +15,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a46ad971fa9b68de25b55c6c4c882f29c71d6b68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592262"
 ---
-# <a name="how-to-add-comments-to-class-diagrams"></a>Nasıl yapılır: Sınıf Diyagramlarına Açıklamalar ekleme
+# <a name="how-to-add-comments-to-class-diagrams"></a>Nasıl yapılsın: Sınıf diyagramlarına açıklama ekleme
 
-Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini kullanabilirsiniz. Açıklama şeklinin, metin yazabileceğiniz bir özelliği, **metni**vardır. Açıklama şekilleri yalnızca Diyagram yüzeyinde bulunur ve kodda değildir.
+Sınıf diyagramlarına açıklama yapmak için açıklama şekilleri kullanabilirsiniz. Yorum şeklinin metin yazabileceğiniz tek bir özelliği vardır, **Metin.** Açıklama şekilleri yalnızca diyagram yüzeyinde bulunur, kodda bulunmaz.
 
-**Sınıf Tasarımcısı**içindeki sınıf diyagramı görünümünde bir yorum bulunur. İkinci bir sınıf diyagramını aynı proje üzerine açarsanız, ilk görünümde oluşturduğunuz açıklamalar görünmez. Bir diyagramı silerseniz, içerdiği yorumların tümü de silinir.
+Bir açıklama **Sınıf Tasarımcısı**sınıf diyagramı görünümünde bulunur. Aynı projeye ikinci sınıf bir diyagram açarsanız, ilk görünümde oluşturduğunuz açıklamalar görünmez. Bir diyagramı silerseniz, içerdiği tüm yorumlar da silinir.
 
-Bir yorum şeklini yeniden boyutlandırabilirsiniz, ancak arka plan rengi, yazı tipi veya yazı tipi boyutu gibi görünüşünün diğer yönlerini değiştiremezsiniz.
+Bir açıklama şeklini yeniden boyutlandırabilirsiniz, ancak görünümünün arka plan rengi, yazı tipi veya yazı tipi boyutu gibi diğer yönlerini değiştiremezsiniz.
 
-## <a name="to-add-a-comment"></a>Açıklama eklemek için
+## <a name="to-add-a-comment"></a>Yorum eklemek için
 
-1. **Sınıf Tasarımcısı araç kutusundan** bir açıklamayı sınıf diyagramı üzerine sürükleyin.
+1. **Sınıf Tasarımcısı Araç Kutusu'ndan** gelen bir yorumu sınıf diyagramına sürükleyin.
 
-2. Diyagramdaki yeni açıklama şekline tıklayın ve istediğiniz metni yazın.
+2. Diyagramdaki yeni yorum şeklini tıklatın ve istediğiniz metni yazın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sınıf diyagramları ile çalışma](designing-and-viewing-classes-and-types.md)
-- [Nasıl yapılır: sınıf diyagramlarını özelleştirme](how-to-customize-class-diagrams.md)
+- [Sınıf Diyagramları ile Çalışma](designing-and-viewing-classes-and-types.md)
+- [Nasıl? Sınıf Diyagramlarını Özelleştir](how-to-customize-class-diagrams.md)

@@ -1,5 +1,5 @@
 ---
-title: Gelişmiş ayarlar Iletişim kutusu (eşzamanlılık görselleştiricisi) | Microsoft Docs
+title: Gelişmiş Ayarlar İletişim Kutusu (Eşzamanlı Görüntüleyici) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,78 +11,78 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fa9d6658ae14c4b84aae9361f73e4701e758f975
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72911218"
 ---
-# <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Gelişmiş ayarlar iletişim kutusu (eşzamanlılık görselleştiricisi)
-Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını kontrol edebilirsiniz.  İletişim kutusunda semboller, Yalnızca kendi kodum, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler bulunur.
+# <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Gelişmiş Ayarlar iletişim kutusu (Eşzamanlı Görüntüleyici)
+Eşzamanlılık Görselleştiricisi'ndeki **Gelişmiş Ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını denetleyebilirsiniz.  İletişim kutusunda semboller, Just My Code, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler vardır.
 
 ## <a name="symbols"></a>Simgeleri
- Eşzamanlılık görselleştiricisi, Visual Studio hata ayıklayıcı ile aynı sembol ayarlarını kullanır. Eşzamanlılık görselleştiricisi, performans verileriyle ilişkili çağrı yığınlarını çözümlemek için ayarları kullanır.  İzleme işlerken eşzamanlılık görselleştiricisi, Ayarlar sayfasında belirtilen sembol sunucularına erişir.  Bu verilere bir ağ üzerinden erişildiğinde izleme işlemi yavaşlar.  Sembolleri çözümlemek için gereken süre miktarını azaltmak için sembolleri yerel olarak önbelleğe alabilirsiniz. Semboller indirildiyse, Visual Studio bu dosyaları yerel önbellekten yükler.
+ EşzamanlıLık Görselleştiricisi, Visual Studio Debugger ile aynı sembol ayarlarını kullanır. Eşzamanlılık Görselleştiricisi, performans verileriyle ilişkili çağrı yığınlarını çözmek için ayarları kullanır.  İzlemeleri işlerken, EşzamanlıLık Görselleştiricisi ayarlar sayfasında belirtilen sembol sunucularına erişir.  Bu verilere ağ üzerinden erişildiğinde, izleme işleme yavaşlar.  Sembolleri çözmek için gereken süreyi azaltmak için sembolleri yerel olarak önbelleğe alabilirsiniz. Semboller karşıdan yüklenmişse, Visual Studio bunları yerel önbellekten yükler.
 
 ## <a name="just-my-code"></a>Yalnızca Kendi Kodum
- Varsayılan olarak, Yalnızca kendi kodum kümesidir. *exe* ve. Visual Studio 'daki geçerli çözümle ilişkili *DLL* dosyaları. Eşzamanlılık görselleştiricisi, çağrı yığınlarını filtrelemek için Yalnızca kendi kodum özelliğini kullandığınızda bu dosya kümesini değerlendirir. Yalnızca kendi kodum sekmesinde, içeren dizinleri ekleyebilirsiniz. *exe* ve. Yalnızca kendi kodum için eşzamanlılık görselleştiricisi tarafından kullanılan konumlara *DLL* dosyaları.
+ Varsayılan olarak, Sadece Kodum kümesidir. *exe* ve . Visual Studio'daki geçerli çözümle ilişkili *dll* dosyaları. Eşzamanlılık Görselleştiricisi, çağrı yığınlarını filtrelemek için Kodum özelliğini kullandığınızda bu dosya kümesini değerlendirir. Yalnızca Kodum sekmesinde, '' içeren dizinler ekleyebilirsiniz. *exe* ve . *dll* dosyaları Eşzamanlılık Görselleştiricisi'nin Yalnızca Kodum için kullandığı konumlara yönlendirir.
 
- Öğesinin yolları. *exe* ve. izleme toplandığında *DLL* dosyaları izleme dosyasında depolanır.  Bu ayarın değiştirilmesi, daha önce toplanan izlemeleri etkilemez.
+ Yolların yolları. *exe* ve . *dll* dosyaları, izleme toplandığında izleme dosyasında depolanır.  Bu ayarı değiştirmek, önceden toplanan izlemeleri etkilemez.
 
-## <a name="buffering"></a>Ara
- Eşzamanlılık görselleştiricisi bir izleme toplarken Windows için olay Izleme (ETW) kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](/windows/win32/etw/event-tracing-portal) ve [EVENT_TRACE_PROPERTIES yapısı](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties).
+## <a name="buffering"></a>Tamponlama
+ Eşzamanlılık Görselleştiricisi, bir izleme topladığı zaman Windows için Olay İzleme (ETW) kullanır.  ETW, olayları depolarken çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları tüm durumlarda en uygun olmayabilir ve bazı durumlarda, kayıp olaylar gibi sorunlara neden olabilir.  ETW arabellek ayarlarını yapılandırmak için Arabelleğe Alma sekmesini kullanabilirsiniz. Daha fazla bilgi için [olay izleme](/windows/win32/etw/event-tracing-portal) ve [EVENT_TRACE_PROPERTIES yapısına](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties)bakın.
 
-## <a name="filter"></a>Filtrele
- Filtre sekmesinde, eşzamanlılık görselleştiricisi tarafından toplanan olay kümesini seçebilirsiniz. Olayların bir alt kümesini seçmek raporlarda görüntülenen veri türlerini sınırlar, her izlemenin boyutunu azaltır ve izlemeleri işlemek için gereken süreyi azaltır.
+## <a name="filter"></a>Filtre
+ Filtre sekmesinde, EşzamanlıLık Görselleştiricisi'nin topladığı olaylar kümesini seçebilirsiniz. Olayların bir alt kümesinin seçilmesi, raporlarda görüntülenen veri türlerini sınırlar, her izlemenin boyutunu azaltır ve izlemeleri işlemek için gereken süreyi azaltır.
 
 ### <a name="clr-events"></a>CLR olayları
- Ortak dil çalışma zamanı (CLR) tarafından oluşturulan olaylar, yönetilen çağrı yığınlarını çözümlemek için eşzamanlılık Görselleştiricisini etkinleştirir.  CLR olayları koleksiyonunu devre dışı bırakırsanız, izleme boyutu azaltılır ancak bazı çağrı yığınları çözümlenmeyecektir.  Sonuç olarak, bazı CPU iş parçacığı etkinlikleri yanlış kategorilere ayrılmıştır.
+ Ortak Dil Çalışma Zamanı (CLR) tarafından oluşturulan olaylar, Eşzamanlılık Görselleştiricisinin yönetilen çağrı yığınlarını çözmesini sağlar.  CLR olaylarının koleksiyonunu devre dışı düşürürseniz, izleme boyutu azalır, ancak bazı çağrı yığınları çözülmez.  Sonuç olarak, bazı CPU iş parçacığı etkinliği yanlış kategorize edilebilir.
 
-### <a name="collect-for-native-processes"></a>Yerel süreçler için topla
- Varsayılan olarak, CLR olayları yalnızca, yerel işlemler için genellikle gereksiz olduklarından, yönetilen bir işlem profili oluşturulduğunda toplanır.  Bazı durumlarda (örneğin, yerel bir işlem CLR 'yi barındırdığında), yerel bir işlem için CLR olayları toplamanız gerekebilir.  Bu durumda, **Yerel süreçler Için topla** onay kutusunu seçin.
+### <a name="collect-for-native-processes"></a>Yerel işlemler için toplama
+ Varsayılan olarak, CLR olayları yalnızca yönetilen bir işlem profilli olduğunda toplanır, çünkü bunlar normalde yerel işlemler için gereksizdir.  Bazı durumlarda (örneğin, yerel bir işlem CLR'yi barındırırken), yerel bir işlem için CLR olayları toplamanız gerekebilir.  Bu durumda, **Yerel İşlemler için Topla** onay kutusunu seçin.
 
-### <a name="disable-rundown-events"></a>Özet olaylarını devre dışı bırak
- CLR iki sağlayıcıdan olay oluşturur: çalışma zamanı ve Özeti.  CLR çalışma zamanı olaylarını toplamak istiyorsanız ancak Özet olayları toplamayı önlemek istiyorsanız, Özet **olaylarını devre dışı bırak** onay kutusunu seçin.  Bu, koleksiyon tarafından oluşturulan izleme dosyasının boyutunu azaltır, ancak bazı yığınlar çözümlenmeyebilir. Daha fazla bilgi için bkz. [CLR ETW sağlayıcıları](/dotnet/framework/performance/clr-etw-providers).
+### <a name="disable-rundown-events"></a>Özeti devre dışı
+ CLR iki sağlayıcıdan olaylar oluşturur: çalışma süresi ve özeti.  CLR çalışma zamanı olaylarını toplamak, ancak eski olayları toplamaktan kaçınmak istiyorsanız, **Özeti Devre Dışı Düşür** onay kutusunu seçin.  Bu, koleksiyon tarafından oluşturulan izleme dosyasının boyutunu azaltır, ancak bazı yığınlar çözülmeyebilir. Daha fazla bilgi için [CLR ETW Sağlayıcıları'na](/dotnet/framework/performance/clr-etw-providers)bakın.
 
 ### <a name="sample-events"></a>Örnek olaylar
- Örnek olayları, iş parçacığı yürütme ile ilişkili çağrı yığınlarını toplamak için kullanabilirsiniz. Bu olaylar, geçerli işlemde yürütülen iş parçacıkları için her milisaniyeye göre yaklaşık olarak toplanır. Örnek olaylar koleksiyonunu devre dışı bırakırsanız, toplanan izlemenin boyutu azaltılır, ancak iş parçacığı yürütme ile ilişkili çağrı yığınlarını görüntüleyemezsiniz.
+ İş parçacığı yürütme ile ilişkili çağrı yığınları toplamak için örnek olayları kullanabilirsiniz. Bu olaylar, geçerli işlemde çalıştırılan iş parçacıkları için milisaniyede yaklaşık bir kez toplanır. Örnek olayların koleksiyonunu devre dışı düşürürseniz, toplanan izlemenin boyutu azalır, ancak iş parçacığı yürütmeyle ilişkili çağrı yığınlarını görüntüleyemezsiniz.
 
-### <a name="gpu-events"></a>GPU olayları
- GPU olayları DirectX tarafından oluşturulan olaylardır. GPU olayları koleksiyonunu devre dışı bırakırsanız, toplanan izlemenin boyutu azaltılır, ancak kullanım görünümünde veya Iş parçacığı görünümündeki DirectX motoru etkinliğinde herhangi bir GPU etkinliğini görüntüleyemezsiniz.
+### <a name="gpu-events"></a>GPU etkinlikleri
+ GPU olayları DirectX tarafından oluşturulan olaylardır. GPU olaylarının koleksiyonunu devre dışı düşürürseniz, toplanan izlemenin boyutu azalır, ancak Kullanım görünümünde herhangi bir GPU Etkinliği veya İş İş parçacığı görünümünde DirectX Engine etkinliğini görüntüleyemezsiniz.
 
-### <a name="file-io-events"></a>Dosya g/ç olayları
- Dosya g/ç olayları, geçerli işlem adına disk erişimlerini temsil eder.  Dosya g/ç olaylarını devre dışı bırakırsanız, izlemenin boyutu azalır, ancak Iş parçacıkları görünümü disk kanalları veya disk Işlemleriyle ilgili herhangi bir bilgi bildirmeyecektir.
+### <a name="file-io-events"></a>Dosya G/Ç olayları
+ Dosya G/Ç olayları, geçerli işlem adına diske erişimi temsil eder.  Dosya G/Ç olaylarını devre dışı düşürürseniz, izlemenin boyutu küçülür, ancak İş Parçacıkları Görünümü disk kanalları veya Disk İşlemleri hakkında herhangi bir bilgi bildirmez.
 
-## <a name="markers"></a>İmleçleri
- **İşaretleyiciler** sekmesinde, eşzamanlılık görselleştiricisi içinde işaret olarak gösterilen etw sağlayıcıları kümesini yapılandırabilirsiniz.  Ayrıca, Işaret koleksiyonunu önem düzeyi ve ETW kategorisine göre filtreleyebilirsiniz.  [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsanız ve kendi işaretleyici sağlayıcınızı kullanıyorsanız, Iş parçacıkları görünümünde görünmesi için buraya kaydolabilirsiniz.
+## <a name="markers"></a>İşaretler
+ **İşaretçiler** sekmesinde, Eşzamanlılık Görselleştiricisinde İşaretçiler olarak gösterilen ETW sağlayıcıları kümesini yapılandırabilirsiniz.  İşaretçi koleksiyonunu önem düzeyine ve ETW kategorisine göre de filtreleyebilirsiniz.  [Eşzamanlı Görselleştirici SDK](../profiling/concurrency-visualizer-sdk.md) kullanıyorsanız ve kendi Marker sağlayıcınızı kullanıyorsanız, Iş Parçacıkları Görünümü'nde görünmesi için buraya kaydedebilirsiniz.
 
-### <a name="add-a-new-provider"></a>Yeni Sağlayıcı Ekle
- Kodunuz [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsa veya <xref:System.Diagnostics.Tracing.EventSource> KURALıNı izleyen ETW olayları oluşturursa, bu olayları bu iletişim kutusuna kaydederek eşzamanlılık görselleştiricisi içinde görüntüleyebilirsiniz.
+### <a name="add-a-new-provider"></a>Yeni bir sağlayıcı ekleme
+ Kodunuz Eşzamanlı [Görselleştirici SDK](../profiling/concurrency-visualizer-sdk.md) kullanıyorsa veya <xref:System.Diagnostics.Tracing.EventSource> kuralı izleyen ETW olayları oluşturuyorsa, bu olayları bu iletişim kutusuna kaydederek Eşzamanlılık Görselleştiricisinde görüntüleyebilirsiniz.
 
- **Ad** alanına sağlayıcı tarafından oluşturulan olay türlerini açıklayan bir ad girin.  **GUID** alanına, bu sağlayıcıyla ilişkili GUID değerini girin. (Bir GUID, her ETW sağlayıcısıyla ilişkilendirilir.)
+ **Ad** alanında, sağlayıcı tarafından oluşturulan olay türlerini açıklayan bir ad girin.  **GUID** alanında, bu sağlayıcıyla ilişkili GUID'i girin. (BIR GUID her ETW sağlayıcısıile ilişkilidir.)
 
- İsteğe bağlı olarak, Bu sağlayıcıdan, kategoriye veya önem düzeyine göre olayların filtreleneceğini belirtebilirsiniz.  Eşzamanlılık Görselleştiricisi SDK kategorilerine göre filtrelemek için kategori alanını kullanabilirsiniz.  Bunu yapmak için, bir dizi kategori veya kategori aralığı girin.  Bu, geçerli sağlayıcıdaki gösterilecek olay kategorilerini belirtir.  <xref:System.Diagnostics.Tracing.EventSource> sağlayıcısı ekliyorsanız, ETW anahtar sözcüğüne göre filtrelemek için kategori alanını kullanabilirsiniz.  Anahtar sözcüğü bir bit maskesi olduğundan, maskede hangi bitlerin ayarlandığını belirtmek için virgülle ayrılmış tamsayılar dizesini kullanabilirsiniz. Örneğin, "1, 2" ilk ve ikinci bitleri ayarlar ve bu, ondalık olarak 6 ' ya çevirir.
+ İsteğe bağlı olarak, kategori veya önem düzeyine bağlı olarak bu sağlayıcıdan gelen olayları filtreleyip filtrelemeyeceğiniz belirtebilirsiniz.  Eşzamanlı Görselleştirici SDK kategorilerini temel almak için kategori alanını kullanabilirsiniz.  Bunu yapmak için, virgülle sınırlandırılmış kategoriler veya kategoriler aralıkları dizisini girin.  Bu, gösterilen geçerli sağlayıcıdaki olayların kategorilerini belirtir.  Bir <xref:System.Diagnostics.Tracing.EventSource> sağlayıcı ekliyorsanız, Kategori alanını ETW anahtar kelimesine göre filtrelemek için kullanabilirsiniz.  Anahtar kelime bir bitmaskesi olduğundan, maskedeki hangi bitlerin ayarlanabileceğini belirtmek için virgülle sınırlı bir tamsayı dizesini kullanabilirsiniz. Örneğin, "1,2" birinci ve ikinci bitleri ayarlar ve bu ondalık olarak 6'ya çevirir.
 
- Önem düzeyi listesini, önemli veya ETW düzeyi belirtilen değerden daha az olan olayları filtrelemek için kullanabilirsiniz.
+ Önem düzeyi listesini, önem taşıyan olayları veya belirtilen değerden daha az Olan ETW düzeyini filtrelemek için kullanabilirsiniz.
 
-### <a name="configure-an-existing-provider"></a>Mevcut bir sağlayıcıyı yapılandırma
- Mevcut bir sağlayıcıyla ilişkili ayarları düzenlemek için listeden seçin ve ardından **Sağlayıcıyı Düzenle** düğmesini seçin.  Ad, GUID ve filtreleme ayarlarını değiştirebilirsiniz.
+### <a name="configure-an-existing-provider"></a>Varolan bir sağlayıcıyı yapılandırma
+ Varolan bir sağlayıcıyla ilişkili ayarları sağlamak için, listede seçin ve ardından **sağlayıcıyı edin** düğmesini seçin.  Ad, GUID ve filtreleme ayarlarını değiştirebilirsiniz.
 
-### <a name="filter-marker-data-out-of-concurrency-visualizer-reports"></a>Eşzamanlılık görselleştiricisi raporlarının işaret verilerini filtreleme
- Belirli bir sağlayıcının verilerinin gelecek izlemelerde görünmesini istemiyorsanız, kaldırmak istediğiniz sağlayıcının yanındaki onay kutusunu temizleyin.
+### <a name="filter-marker-data-out-of-concurrency-visualizer-reports"></a>Eşzamanlılık Visualizer raporlarından filtre işaretçisi verileri
+ Belirli bir sağlayıcının verilerinin gelecekteki izlemelerde görünmesini istemiyorsanız, kaldırmak istediğiniz sağlayıcının yanındaki onay kutusunu temizleyin.
 
 ## <a name="files"></a>Dosyalar
- **Dosyalar** sekmesinde, izleme dosyalarının her toplanışında depolanacağı dizini belirtebilirsiniz.  Eşzamanlılık görselleştiricisi topladığı her izleme için dört dosya üretir:
+ **Dosyalar** sekmesinde, her izleme toplandığında izleme dosyalarının depolandığı dizini belirtebilirsiniz.  Eşzamanlılık Görselleştiricisi topladığı her izleme için dört dosya oluşturur:
 
-- Çekirdek modu olay izleme günlüğü (ETL) dosyası (<em>.</em> Kernel. etl *)
+- Çekirdek modu olay izleme günlüğü (ETL) dosyası (<em>.</em> çekirdek.etl*)
 
-- Kullanıcı modu olay izleme günlük dosyası (<em>.</em> User. etl *)
+- Bir kullanıcı modu olay izleme günlüğü dosyası (<em>.</em> user.etl*)
 
-- Eşzamanlılık görselleştiricisi veri dosyası (<em>.</em> CVData *)
+- Eşzamanlı Görüntüleyici Veri dosyası (<em>.</em> CVData*)
 
-- Eşzamanlılık görselleştiricisi Izleme dosyası (<em>.</em> CVTrace *)
+- Eşzamanlı Görüntüleyici İzleme dosyası (<em>.</em> CVTrace*)
 
-  İki ETL dosyası ham izleme verilerini depolar ve iki eşzamanlılık görselleştiricisi dosyası işlenen verileri depolar.  Ham ETL dosyaları genellikle bir izleme işlendikten sonra kullanılmaz.  **Analiz sonrasında olay Izleme günlüğü (ETL) dosyalarını sil** onay kutusu seçildiğinde, diskinizde depolanan izleme verisi miktarı azalır.
+  İki ETL dosyası ham izleme verilerini, iki Eşzamanlı Görselleştirici dosya ise işlenmiş verileri depolar.  Ham ETL dosyaları genellikle bir izleme işlendikten sonra kullanılmaz.  Analiz onay kutusunun **ardından Olay İzleme Günlüğü (ETL) dosyalarını** sil'i seçmek, diskinizde depolanan izleme verisi miktarını azaltır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yalnızca kendi kodum](../profiling/just-my-code-threads-view.md)
-- [Eşzamanlılık görselleştiricisi işaretçileri](../profiling/concurrency-visualizer-markers.md)
+- [Sadece benim kodum](../profiling/just-my-code-threads-view.md)
+- [Eşzamanlı Görselleştirici işaretleri](../profiling/concurrency-visualizer-markers.md)

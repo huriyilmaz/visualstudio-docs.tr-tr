@@ -10,27 +10,27 @@ manager: jillfra
 author: TerryGLee
 ms.author: tglee
 ms.openlocfilehash: 48c93cf8abeb573a3a75e6825a8400355c133f2b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597015"
 ---
 # <a name="f1-help"></a>F1 yardımı
 
-Aradığınız şeyi bulamadık gibi görünüyor ve özür dileriz. Bu sayfanın altındaki düğmeler aracılığıyla geri bildirim bırakarak iyileştirmemize yardımcı olabilirsiniz.
+Görünüşe göre aradığın şeyi bulamadık ve özür diliyoruz. Bu sayfanın altındaki düğmelerden geri bildirim bırakarak geliştirmemize yardımcı olabilirsiniz.
 
 ## <a name="cursor-position"></a>İmleç konumu
 
-Bir anahtar sözcük veya API adı hakkında F1 yardımı arıyorsanız, **F1**tuşuna basmadan önce imlecin sözcüğün içinde veya hemen sağına konumlanıldığından emin olun. Yine de çalışmazsa, [faydalı bağlantılar](#useful-links) listesinden seçim yapın veya https://docs.microsoft.com arama yapın.
+Bir anahtar kelime veya API adında F1 yardımı arıyorsanız, imlecin **F1**tuşuna basmadan önce sözcüğün içinde veya hemen sağında yer aldığından emin olun. Bu hala işe yaramazsa, [yararlı bağlantılar](#useful-links) listesinden seçin https://docs.microsoft.comveya bir arama yapın.
 
 ## <a name="useful-links"></a>Yararlı bağlantılar
 
-- [.NET API tarayıcısı](/dotnet/api/)ile ilgili başvuru belgelerini arayın.
-- Yardım C# için [ C# kılavuza](/dotnet/csharp/index)bakın.
-- Visual Basic Yardım için [Visual Basic kılavuzuna](/dotnet/visual-basic/)bakın.
-- Yardım F# için [ F# kılavuza](/dotnet/fsharp/)bakın.
-- Python yardımı için bkz. [Visual Studio 'Da Python](../../python/overview-of-python-tools-for-visual-studio.md).
-- Yardım C++ için bkz [ C++ . Visual Studio 'da](/cpp/visual-cpp-in-visual-studio).
-- Visual Studio hakkında daha fazla bilgi için bkz. [Visual Studio 'ya genel bakış](../../get-started/visual-studio-ide.md).
-- Visual Studio metin Düzenleyicisi hakkında yardım için bkz. [kod düzenleyicisini kullanma](../../ide/writing-code-in-the-code-and-text-editor.md).
+- [.NET API tarayıcıda](/dotnet/api/)başvuru belgelerini arayın.
+- C# yardımı için [C# kılavuzuna](/dotnet/csharp/index)bakın.
+- Visual Basic yardımı için [Visual Basic kılavuzuna](/dotnet/visual-basic/)bakın.
+- F# yardımı için [F# kılavuzuna](/dotnet/fsharp/)bakın.
+- Python yardım için Visual [Studio Python](../../python/overview-of-python-tools-for-visual-studio.md)bakın.
+- C++ yardımı için [Visual Studio'da C++ 'a](/cpp/visual-cpp-in-visual-studio)bakın.
+- Visual Studio hakkında daha fazla bilgi için [Visual Studio'ya genel bakış](../../get-started/visual-studio-ide.md)bilgisi ne bakın.
+- Visual Studio metin düzenleyicisi hakkında yardım için [bkz.](../../ide/writing-code-in-the-code-and-text-editor.md)

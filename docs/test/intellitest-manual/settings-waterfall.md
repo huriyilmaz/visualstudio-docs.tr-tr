@@ -1,5 +1,5 @@
 ---
-title: Ayarlar şelale | Microsoft IntelliTest geliştirici test aracı
+title: Ayarlar şelale | Microsoft IntelliTest Geliştirici Test Aracı
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +10,23 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 95a2029cee1fd13241aba727f671a164d7272543
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591586"
 ---
 # <a name="settings-waterfall"></a>Ayarlar şelalesi
 
-Ayarlar şelale kavramı, kullanıcının **derlemeyi**, **armatürü**ve **araştırma** düzeyinde ayarları belirleyebileceği anlamına gelir:
+Ayarları şelale kavramı kullanıcı **Montaj,** **Fikstür**ve **Keşif** düzeyinde ayarları belirtebilirsiniz anlamına gelir:
 
-* Assembly- [Pexassemblysettings](attribute-glossary.md#pexassemblysettings)
-* Fixture- [PexClass](attribute-glossary.md#pexclass)
-* Araştırma- [Pexaraştırması Ationattributebase](attribute-glossary.md#pexexplorationattributebase)
+* Montaj - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
+* Fikstür - [PexClass](attribute-glossary.md#pexclass)
+* Keşif - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
 
-**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win&mdash;bir ayar **derleme** ve **armadeğer** düzeylerinde **tanımlandıysa, bu ayarlar kullanılır** .
+**Montaj** düzeyinde belirtilen ayarlar, bu montaj altındaki tüm demirbaşları ve keşifleri etkiler. **Fikstür** seviyesinde belirtilen ayarlar, bu fikstür altındaki tüm keşifleri etkiler. **Montaj** ve&mdash; **Fikstür** seviyelerinde bir ayar tanımlanırsa, **Fikstür** ayarları kullanılırsa alt ayarlar kazanır.
 
-Bazı ayarların **derleme** düzeyi veya **armatürü** düzeyine özgü olduğunu unutmayın.
+Bazı ayarların **Montaj** düzeyine veya **Fikstür** düzeyine özgü olduğunu unutmayın.
 
 **Örnek**
 
@@ -46,6 +46,6 @@ namespace MyTests
 }
 ```
 
-## <a name="got-feedback"></a>Geri bildirim göndermek mi istiyorsunuz?
+## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 
-Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)’na gönderin.

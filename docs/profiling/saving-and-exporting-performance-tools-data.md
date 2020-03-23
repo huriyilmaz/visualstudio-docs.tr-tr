@@ -1,5 +1,5 @@
 ---
-title: Performans araçları verilerini kaydetme ve dışarı aktarma | Microsoft Docs
+title: Performans Araçları Verilerini Kaydetme ve Dışa Aktarma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,81 +12,81 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 729dc2e28446420dd2590e132b7ec8a5444fcb9c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773905"
 ---
 # <a name="save-and-export-performance-tools-data"></a>Performans araçları verilerini kaydetme ve dışarı aktarma
-Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı aktarılacağı açıklanır.
+Bu makalede, performans veri dosyalarının nasıl kaydedilip dışa aktarılacak şekilde kaydedilen ve dışa aktarılabilmek açıklanmaktadır.
 
-## <a name="how-to-save-performance-data-files-as-analyzed-report-files"></a>Nasıl yapılır: performans veri dosyalarını çözümlenmiş rapor dosyaları olarak kaydetme
- Profil oluşturma verilerinin filtrelenmiş veya filtrelenmemiş görünümlerini kaydedebilirsiniz (. *VSP*) Çözümlenmiş rapor (. *vsps*) dosyaları. Analiz edilen rapor dosyası rapor görünümü penceresinde görüntülenebilir ve orijinalden önemli ölçüde küçüktür. *VSP* dosyası. Ancak, bir ' a ait verilere filtre uygulayamazsınız. *vsps* dosyası. Dosyayı tümleşik geliştirme ortamında (IDE) açmadan Performans Gezgini analiz edilen bir rapor dosyası oluşturabilir veya öğesini açıp filtrelemeniz sağlayabilirsiniz. *VSP* dosyası ve sonra sonuçları kaydedin.
+## <a name="how-to-save-performance-data-files-as-analyzed-report-files"></a>Nasıl kullanılır: Performans veri dosyalarını çözümlenmiş rapor dosyaları olarak kaydetme
+ Profil oluşturma verilerinin filtrelenmiş veya filtrelenmemiş görünümlerini kaydedebilirsiniz (.* vsp*) dosyaları analiz raporu olarak (.* vsps*) dosyaları. Çözümlenen rapor dosyası Rapor görünümü penceresinde görüntülenebilir ve orijinaldosyadan önemli ölçüde daha küçüktür. *vsp* dosyası. Ancak, bir ' in verilerine bir filtre uygulayamazsınız. *vsps* dosyası. Tümleşik geliştirme ortamında (IDE) dosyayı açmadan Performans Gezgini'nden çözümlenmiş bir rapor dosyası oluşturabilir veya 'yi açıp filtreleyebilirsiniz. *vsp* dosya ve sonra sonuçları kaydedin.
 
-#### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>Analiz edilen bir performans raporunu Performans Gezgini kaydetmek için
+#### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>Çözümlenmiş bir performans raporunu Performans Gezgini'nden kaydetmek için
 
-1. **Raporlar**' ın altında, analiz etmek istediğiniz profil oluşturma veri dosyasına sağ tıklayın ve ardından **Çözümlenmiş**' e tıklayın.
+1. **Raporlar**altında, çözümlemek istediğiniz profil oluşturma veri dosyasını sağ tıklatın ve ardından **Çözümlü Kaydet'i**tıklatın.
 
-2. **Çözümlenen verileri kaydet** iletişim kutusunda, dizini belirtin ve ardından dosya adını yazın.
+2. **Çözümlenmiş Verileri Kaydet** iletişim kutusunda, dizini belirtin ve ardından dosya adını yazın.
 
-3. Kaydet ' e tıklayın **.**
+3. **Kaydet'i tıklatın.**
 
-#### <a name="to-save-an-analyzed-performance-report-from-the-report-view-window"></a>Analiz edilen bir performans raporunu rapor görünümü penceresinden kaydetme
+#### <a name="to-save-an-analyzed-performance-report-from-the-report-view-window"></a>Çözümlenmiş bir performans raporunu Rapor görünümü penceresinden kaydetmek için
 
-1. Profil oluşturma verilerini açın (. *VSP*) dosyasını rapor görünümü penceresinde görebilirsiniz.
+1. Profil oluşturma verilerini açın (.* vsp*) dosyası Rapor görünümü penceresinde.
 
-2. Seçim Verilere filtre uygulayın. Daha fazla bilgi için bkz. [Performans raporu görünüm filtresi](../profiling/performance-report-view-filter.md).
+2. (İsteğe bağlı) Verilere filtre uygulayın. Daha fazla bilgi için Bkz. [Performans raporu görünüm filtresi.](../profiling/performance-report-view-filter.md)
 
-3. Rapor görünümü penceresi araç çubuğunda **analiz kaydet** ' e tıklayın.
+3. Rapor görünümü penceresinde **Çözümle çözümle'yi tıklatın.**
 
-4. **Çözümlenen verileri kaydet** iletişim kutusunda, dizini belirtin ve ardından dosya adını yazın.
+4. **Çözümlenmiş Verileri Kaydet** iletişim kutusunda, dizini belirtin ve ardından dosya adını yazın.
 
-5. Kaydet ' e tıklayın **.**
+5. **Kaydet'i tıklatın.**
 
-## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>Nasıl yapılır: profil araçları raporlarını bir. xml veya. csv dosyasına dışarı aktarma
- ' Dan bir veya daha fazla rapor görünümü dışarı aktarabilirsiniz. *VSP* dosyası veya bir. *vsps* profil oluşturma veri dosyası virgülle ayrılmış veya bir XML dosyası olarak. Dışarı aktarmadan önce rapor görünümü penceresindeki verileri filtreleyebilir veya tüm veri dosyasının rapor görünümlerini **Performans Gezgini** penceresinden dışarı aktarabilirsiniz.
+## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>Nasıl yapilir: Profil oluşturma araçları raporlarını bir .xml veya .csv dosyasına dışa aktarma
+ Bir veya daha fazla rapor görünümü dışa aktarabilirsiniz. *vsp* dosyası veya . *vsps* profil oluşturma veri dosyası ya virgül delimited veya bir XML dosyası olarak. Dışa aktarmadan önce Rapor görünümü penceresindeki verileri filtreleyebilir veya **Performans Gezgini** penceresinden tüm veri dosyasının rapor görünümlerini dışa aktarabilirsiniz.
 
 > [!NOTE]
-> Ayrıca, seçili satırları, sekme ile ayrılmış değerler olarak rapor görünümü penceresinden kopyalayabilir ve yapıştırabilirsiniz.
+> Ayrıca, seçili satırları Rapor görünümü penceresinden sekme ayrılmış değerler olarak kopyalayıp yapıştırabilirsiniz.
 
-#### <a name="to-export-performance-reports-from-the-performance-explorer-window"></a>Performans Gezgini penceresinden performans raporlarını dışarı aktarmak için
+#### <a name="to-export-performance-reports-from-the-performance-explorer-window"></a>Performans Gezgini penceresinden performans raporları dışa aktarmak için
 
-1. **Performans Gezgini**, raporu seçin ve ardından sağ tıklayıp **dışarı aktar**' ı seçin.
+1. **Performans Gezgini'nde,** raporu seçin ve sonra sağ tıklatın ve **Dışa Aktar'ı**seçin.
 
-     **Raporu dışarı aktar** iletişim kutusu görünür.
+     **Dışa** Aktarma Raporu iletişim kutusu görüntülenir.
 
-2. Dışarı aktarmak istediğiniz rapor görünümlerini seçin.
+2. Dışa aktarmak istediğiniz rapor görünümlerini seçin.
 
-3. **Ile önek raporu**' nun altında, rapor adına eklemek istediğiniz öneki belirtin.
+3. **Önek raporu**altında, rapor adına eklemek istediğiniz önek belirtin.
 
-4. **Verdiğiniz rapor konumu**altında, dizini belirtin.
+4. **Dışa Aktarılan rapor konumu**altında, dizini belirtin.
 
-5. **Aktarılmış rapor biçimi**altında (virgülle sınırlandırılmış) (\*. csv\)veya XML verisi (\*. xml\)seçin.
+5. **Dışa aktarılan rapor biçimi**altında ,\*select (Virgül le sınırlı) ( .csv\)veya XML Verileri (\*.xml\).
 
-6. **Dışarı aktar**' a tıklayın.
+6. **Dışarı aktar**'a tıklayın.
 
-     Her rapor görünümü, \<önek > _\<rapor görünümü adı > olarak adlandırılan ayrı bir dosyaya kaydedilir.\<CSV&#124;XML >
+     Her rapor görünümü, rapor görünümü adı \<>\<>_ öneki adlı ayrı bir dosyaya kaydedilir. \<csv&#124;xml>
 
-#### <a name="to-export-performance-reports-from-the-report-view-window"></a>Performans raporlarını rapor görünümü penceresinden dışarı aktarmak için
+#### <a name="to-export-performance-reports-from-the-report-view-window"></a>Rapor görünümü penceresinden performans raporları dışa aktarmak için
 
-1. Öğesini açın. Rapor Görünümü penceresinde *VSP* dosyası.
+1. Açın. rapor görünümü penceresinde *vsp* dosyası.
 
-2. Seçim Verilere filtre uygulayın. Daha fazla bilgi için bkz. [Performans raporu görünüm filtresi](../profiling/performance-report-view-filter.md).
+2. (İsteğe bağlı) Verilere filtre uygulayın. Daha fazla bilgi için Bkz. [Performans raporu görünüm filtresi.](../profiling/performance-report-view-filter.md)
 
-3. Rapor görünümü penceresi araç çubuğunda **raporu dışarı aktar** ' a tıklayın.
+3. Rapor görünümü araç çubuğunda **Dışa** Aktar Raporu'nu tıklatın.
 
-4. Dışarı aktarmak istediğiniz rapor görünümlerini seçin.
+4. Dışa aktarmak istediğiniz rapor görünümlerini seçin.
 
-5. **Ile önek raporu**' nun altında, rapor adına eklemek istediğiniz öneki belirtin.
+5. **Önek raporu**altında, rapor adına eklemek istediğiniz önek belirtin.
 
-6. **Verdiğiniz rapor konumu**altında, dizini belirtin.
+6. **Dışa Aktarılan rapor konumu**altında, dizini belirtin.
 
-7. **Aktarılmış rapor biçimi**altında (virgülle sınırlandırılmış) (\*. csv) veya XML verisi (\*. xml) seçeneğini belirleyin.
+7. **Dışa Aktarılan rapor biçimi**altında ,\*(Virgül lesınırlı) (.csv) veya XML Verileri (.xml)\*seçin.
 
-8. **Dışarı aktar**' a tıklayın.
+8. **Dışarı aktar**'a tıklayın.
 
-     Her rapor görünümü, \<önek > _\<rapor görünümü adı > olarak adlandırılan ayrı bir dosyaya kaydedilir.\<CSV&#124;XML >
+     Her rapor görünümü, rapor görünümü adı \<>\<>_ öneki adlı ayrı bir dosyaya kaydedilir. \<csv&#124;xml>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans Gezgini](../profiling/performance-explorer.md)

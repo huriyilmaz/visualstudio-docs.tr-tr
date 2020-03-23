@@ -1,5 +1,5 @@
 ---
-title: StopProfile | Microsoft Docs
+title: StopProfile | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: a5492d2bbd33e6b250b564532c929234d748506c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778238"
 ---
 # <a name="stopprofile"></a>StopProfile
-`StopProfile` işlevi, belirtilen profil oluşturma düzeyi için sayacı 0 (kapalı) olarak ayarlar.
+İşlev, `StopProfile` belirtilen profil oluşturma düzeyi için sayacı 0 (kapalı) olarak ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,46 +32,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 #### <a name="parameters"></a>Parametreler
  `Level`
 
- Performans veri koleksiyonunun uygulanabileceğini gösteren profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** Numaralandırıcılar, performans verileri koleksiyonunun uygulanabileceği üç düzeyden birini göstermek için kullanılabilir:
+ Performans veritoplamanın uygulanabileceği profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** sayısallaştırıcılar, performans veri toplamanın uygulanabileceği üç seviyeden birini belirtmek için kullanılabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırmasında tüm işlem ve iş parçacıklarını etkiler.|
-|PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin parçası olan tüm iş parçacıklarını etkiler.|
-|PROFILE_THREADLEVEL|İş parçacığı profil oluşturma düzeyi ayarı belirtilen iş parçacığını etkiler.|
+|PROFILE_GLOBALLEVEL|Genel düzey ayarı profil oluşturma çalışmasındaki tüm işlemleri ve iş parçacıklarını etkiler.|
+|PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin bir parçası olan tüm iş parçacıklarını etkiler.|
+|PROFILE_THREADLEVEL|İş parçacığı profil oluşturma Düzeyi ayarı belirtilen iş parçacığı etkiler.|
 
  `dwId`
 
  Sistem tarafından oluşturulan işlem veya iş parçacığı tanımlayıcısı.
 
-## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
- İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
+## <a name="property-valuereturn-value"></a>Özellik değeri/iade değeri
+ İşlev, **numaralandırma PROFILE_COMMAND_STATUS** kullanarak başarı veya başarısızlığı gösterir. İade değeri aşağıdakilerden biri olabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi KIMLIĞI yok.|
+|PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi kimliği yok.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Belirtilen profil oluşturma düzeyi yok.|
-|PROFILE_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır.|
-|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profil oluşturma işlev çağrısı, profil oluşturma düzeyi veya çağrının ve düzeyin birleşimi henüz uygulanmadı.|
-|PROFILE_OK|Çağrı başarılı oldu.|
+|PROFILE_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında NEVER olarak ayarlandı.|
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profil oluşturma işlevi çağrısı, profil oluşturma düzeyi veya çağrı ve düzey kombinasyonu henüz uygulanmadı.|
+|PROFILE_OK|Arama başarılı oldu.|
 
 ## <a name="remarks"></a>Açıklamalar
- StartProfile ve StopProfile, profil oluşturma düzeyi için Başlat/Durdur durumunu denetler. Başlat/Durdur varsayılan değeri 1 ' dir. Başlangıç değeri kayıt defterinde değiştirilebilir. Her StartProfile çağrısı, 1 ' e başlar veya durdurulur; Her StopProfile çağrısı bunu 0 olarak ayarlar.
+ Profil oluşturma düzeyi için Start Profile ve StopProfile başlat/durdur durumunu denetler. Başlat/Durdur varsayılan değeri 1'dir. Başlangıç değeri kayıt defterinde değiştirilebilir. StartProfile'a her çağrı Başlat/Durdur'u 1 olarak ayarlar; StopProfile'a her çağrı 0 olarak ayarlar.
 
- Başlat/Durdur 0 ' dan büyükse, düzeyin başlangıç/durdurma durumu açık olur. 0 ' dan küçük veya buna eşit olduğunda, Başlat/Durdur durumu KAPALıDıR.
+ Başlat/Durdur 0'dan büyükolduğunda, düzeyiçin Başlat/Durdur durumu A.B.D. 0'dan küçük veya eşit olduğunda, Başlat/Durdur durumu KAPALIDIR.
 
- Başlat/Durdur durumu ve askıya alma/bekleme durumu her ikisi de olduğunda, düzeyin profil oluşturma durumu açık olur. Bir iş parçacığının profili oluşturmak için, iş parçacığının genel, işlem ve iş parçacığı düzeyi durumları açık olmalıdır.
+ Başlat/Durdur durumu ve Askıya Alma/Devam durumu her ikisi de A.B.D. olduğunda, düzeyin profil oluşturma durumu A.B.D. Bir iş parçacığının profilinin atAbilmesi için iş parçacığının genel, işlem ve iş parçacığı düzeyi durumlarını On olmalıdır.
 
-## <a name="net-framework-equivalent"></a>.NET Framework eşdeğeri
- Microsoft. VisualStudio. Profiler. dll
+## <a name="net-framework-equivalent"></a>.NET Çerçeve eşdeğeri
+ Microsoft.VisualStudio.Profiler.dll
 
-## <a name="function-information"></a>İşlev bilgileri
- Üst bilgi: VSPerf. h içinde bildiriliyor
+## <a name="function-information"></a>Fonksiyon bilgileri
+ Üstbilgi: VSPerf.h'de beyan edile
 
- İçeri aktarma kitaplığı: VSPerf. lib
+ İthalat kitaplığı: VSPerf.lib
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, StopProfile yöntemi gösterilmektedir. Örnek, [PROFILE_CURRENTID](../profiling/profile-currentid.md)tarafından tanımlanan aynı iş parçacığı veya Işlem Için StartProfile yöntemine yapılan çağrının yapıldığını varsayar.
+ Aşağıdaki örnekte StopProfile yöntemi gösteriş gösteriş. Örnek, startprofile yöntemine bir çağrı PROFILE_CURRENTID [tarafından](../profiling/profile-currentid.md)tanımlanan aynı iş parçacığı veya işlem için yapıldığını varsayar.
 
 ```cpp
 void ExerciseStopProfile()
@@ -108,4 +108,4 @@ void ExerciseStopProfile()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profilci API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)

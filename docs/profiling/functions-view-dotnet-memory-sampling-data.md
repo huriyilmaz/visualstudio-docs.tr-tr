@@ -1,5 +1,5 @@
 ---
-title: İşlevler görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+title: Fonksiyonlar Görünümü - .NET Bellek Örnekleme Verileri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: cce13da0c2dfee61d70da8bc288d1f0ff4690deb
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74780045"
 ---
-# <a name="functions-view---net-memory-sampling-data"></a>İşlevler görünümü-.NET Bellek Örnekleme verileri
-Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verilerinin Işlevleri, profil oluşturma çalışması sırasında belleği ayrılan işlevleri listeler ve ayırma boyutunu ve sayısını raporlar.
+# <a name="functions-view---net-memory-sampling-data"></a>İşlevler Görünüm - .NET bellek örnekleme verileri
+Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verilerinin İşlevler görünümü, profil oluşturma çalışması sırasında belleği ayıran işlevleri listeler ve ayırmaların boyutunu ve sayısını bildirir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**İşlem KIMLIĞI**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
-|**İşlem adı**|İşlemin adı.|
-|**Modül adı**|İşlevi içeren modülün adı.|
-|**Modül yolu**|İşlevi içeren modülün yolu.|
-|**Kaynak dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**İşlev adı**|İşlevin tam adı.|
-|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**İşlev adresi**|İşlevin adresi.|
-|**Kapsamlı ayırmalar**|Bu işlevde ve onun alt işlevlerinde ayrılan toplam nesne sayısı.|
-|**Kapsamlı ayırmalar%**|Bu işlevin kapsamlı ayırmaları olan profil oluşturma çalıştırmasında ayrılan tüm nesnelerin yüzdesi.|
-|**Dışlamalı ayırmalar**|İşlev, çağrı yığınının en üstünde doğrudan yürütüldüğü zaman oluşturulan nesne sayısı. Bu sayı alt işlevlerde oluşturulmuş nesneleri içermez.|
-|**Dışlamalı ayırmalar%**|Bu işlevin özel ayırmaları olan profil oluşturma çalıştırmasında ayrılan tüm nesnelerin yüzdesi.|
-|**Kapsamlı baytlar**|Bu işlev ve alt işlevleri tarafından ayrılan bellek bayt sayısı.|
-|**Dahil edilen baytlar%**|Bu işlevin kapsamlı baytları olan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
-|**Dışlamalı baytlar**|Bu işlev tarafından ayrılan ancak alt işlevlerine göre olmayan belleğin bayt sayısı.|
-|**Dışlamalı bayt yüzdesi**|Bu işlevin özel baytları olan profil oluşturma çalıştırmasında ayrılan tüm bellek baytlarının yüzdesi.|
+|**İşlem Kimliği**|Profil oluşturma çalışmasının işlem kimliği (PID).|
+|**İşlem Adı**|Sürecin adı.|
+|**Modül Adı**|İşleviçeren modülün adı.|
+|**Modül Yolu**|İşleviçeren modülün yolu.|
+|**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
+|**Fonksiyon Adı**|İşlevin tam nitelikli adı.|
+|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
+|**Fonksiyon Adresi**|Fonksiyonun adresi.|
+|**Kapsayıcı Tahsisatlar**|Bu işlevde ayrılan nesnelerin toplam sayısı ve alt işlevleri.|
+|**Kapsayıcı Tahsisler %**|Profil oluşturma çalışmasında ayrılan tüm nesnelerin yüzdesi, bu işlevin kapsayıcı ayırmalarıydı.|
+|**Özel Tahsisler**|İşlev çağrı yığınının üst kısmında doğrudan yürütüldüğünde oluşturulan nesnelerin sayısı. Bu sayı, alt işlevlerde oluşturulan nesneleri içermez.|
+|**Özel Tahsisatlar %**|Profil oluşturma çalışmasında ayrılan tüm nesnelerin yüzdesi, bu işlevin özel ayırmalarıdır.|
+|**Dahil Baytlar**|Bu işlev ve alt işlevleri tarafından ayrılan bellek baytlarının sayısı.|
+|**Dahil Bayt %**|Profil oluşturma çalışmasında ayrılan ve bu işlevin kapsayıcı baytları olan tüm bellek baytlarının yüzdesi.|
+|**Özel Baytlar**|Bu işlev tarafından ayrılan ancak alt işlevleri tarafından değil, bellek baytlarının sayısı.|
+|**Özel Bayt %**|Profil oluşturma çalışmasında ayrılan ve bu işlevin münhasır baytları olan tüm bellek baytlarının yüzdesi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İşlevler görünümü-izleme](../profiling/functions-view-dotnet-memory-instrumentation-data.md)
-- [İşlevler Görünümü](../profiling/functions-view-sampling-data.md)
-- [İşlevler Görünümü](../profiling/functions-view-instrumentation-data.md)
+- [Fonksiyonlar Görünümü - enstrümantasyon](../profiling/functions-view-dotnet-memory-instrumentation-data.md)
+- [Fonksiyonlar Görünümü](../profiling/functions-view-sampling-data.md)
+- [Fonksiyonlar Görünümü](../profiling/functions-view-instrumentation-data.md)

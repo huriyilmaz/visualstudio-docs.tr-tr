@@ -1,5 +1,5 @@
 ---
-title: FormatVersion görevi | Microsoft Docs
+title: FormatVersiyon Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,36 +14,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 250c73ce0395f278b72c18605f1666290670e20a
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634116"
 ---
 # <a name="formatversion-task"></a>FormatVersion görevi
 
-Sürüm numarasına Düzeltme numarasını ekler.
+Düzeltme numarasını sürüm numarasına ekler.
 
-- Büyük/küçük harf #1: giriş: sürüm =\<tanımsız >;  Düzeltme =\<ilgilenmeyin >;   Çıkış: OutputVersion = "1.0.0.0"
+- Case #1: Giriş:\<Sürüm= tanımlanmamış>;  Revizyon=\<> umurumda değil;   Çıktı: OutputVersion="1.0.0.0"
 
-- Case #2: Input: Version = "1.0.0. *" Revision = "5" çıkış: OutputVersion = "1.0.0.5"
+- Örnek #2: Giriş: Sürüm="1.0.0.*" Revision="5" Çıktı: OutputVersion="1.0.0.5"
 
-- Case #3: Input: Version = "1.0.0.0" düzeltmesini =\<ilgilenmeyin >;  Çıkış: OutputVersion = "1.0.0.0"
+- Case #3: Giriş: Sürüm="1.0.0.0"\<Revizyon=> umurumda değil;  Çıktı: OutputVersion="1.0.0.0"
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda `FormatVersion` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `FormatVersion` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`FormatType`|İsteğe bağlı `String` parametresi.<br /><br /> Biçim türünü belirtir.<br /><br /> -"Sürüm" = sürüm.<br />-"Path" = "." yerine "_";|
-|`OutputVersion`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Düzeltme numarasını içeren çıkış sürümünü belirtir.|
-|`Revision`|İsteğe bağlı `Int32` parametresi.<br /><br /> Sürüme eklenecek düzeltmeyi belirtir.|
-|`Version`|İsteğe bağlı `String` parametresi.<br /><br /> Biçimlendirilecek sürüm numarası dizesini belirtir.|
+|`FormatType`|İsteğe bağlı `String` parametre.<br /><br /> Biçim türünü belirtir.<br /><br /> - "Sürüm" = sürüm.<br />- "Yol" = "_ ile "." yerine;|
+|`OutputVersion`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Düzeltme numarasını içeren çıktı sürümünü belirtir.|
+|`Revision`|İsteğe bağlı `Int32` parametre.<br /><br /> Sürüme eklemek için düzeltmeyi belirtir.|
+|`Version`|İsteğe bağlı `String` parametre.<br /><br /> Biçimlendirmesürüm numarası dizesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
