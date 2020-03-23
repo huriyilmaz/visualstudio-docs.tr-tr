@@ -1,5 +1,5 @@
 ---
-title: TensorBoard ile izleme
+title: TensorBoard ile Monitör
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c05c9b802a490596fe69256c4ccc8dc5cb047c7
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72777419"
 ---
-# <a name="monitor-with-tensorboard"></a>TensorBoard ile izleme
+# <a name="monitor-with-tensorboard"></a>TensorBoard ile Monitör
 
-Masorboard ile model eğitimi ilerlemesini görselleştirebilirsiniz.
+TensorBoard ile model eğitim ilerlemenizi görselleştirebilirsiniz.
 
-1. Projenize sağ tıklayın ve **TensorBoard Çalıştır**' a tıklayın. ardından, çıkış tablosu günlüklerinizin dizinini seçin.
+1. Projenizi sağ tıklatın ve **TensorBoard Çalıştır'ı**tıklatın; ardından, çıkış TensorBoard günlüklerinizin dizinini seçin.
 
-    ![tensorboard Çalıştır](media/monitor-tensorboard/run-tensorboard.png)
+    ![çalışma tensorboard](media/monitor-tensorboard/run-tensorboard.png)
 
-2. Hatanın zaman içinde azaldığını, yani kaliteyi geliştirdiğine dikkat edin.
+2. Zaman içinde azalan hataya dikkat edin, bu da kalitenin iyileştiği anlamına gelir.
 
-    ![tensorboard Çalıştır](media/monitor-tensorboard/tensorboard.png)
+    ![çalışma tensorboard](media/monitor-tensorboard/tensorboard.png)

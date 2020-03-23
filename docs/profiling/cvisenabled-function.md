@@ -1,5 +1,5 @@
 ---
-title: Cvısenabled işlevi | Microsoft Docs
+title: CvisEnabled Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 92763e352d04d5aa3e88a68bad7adfcd05897027
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62945420"
 ---
-# <a name="cvisenabled-function"></a>Cvısenabled işlevi
-Tüm oturum belirtilen ETW sağlayıcısı etkin olup olmadığını belirler.
+# <a name="cvisenabled-function"></a>CvIsEnabled fonksiyonu
+Herhangi bir oturumun belirtilen ETW sağlayıcısını etkinleştirip etkinleştirmediğini belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,17 +38,17 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `category` Kategori.
+ `category`Kategori.
 
- `level` Önem düzeyi.
+ `level`Önem düzeyi.
 
- `pProvider` Geçerli sağlayıcı nesnesi. NULL olamaz.
+ `pProvider`Geçerli sağlayıcı nesnesi. NULL olamaz.
 
-## <a name="return-value"></a>Dönüş değeri
- Sağlayıcı etkinse S_OK. Sağlayıcı şu anda devre dışı bırakılırsa S_FALSE. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen ve ardından S_OK/S_FALSE denetlemek için FAILED makrosunu kullanın.
+## <a name="return-value"></a>Döndürülen değer
+ Sağlayıcı şu anda etkinse S_OK. Sağlayıcı şu anda devre dışı bırakılmışsa S_FALSE. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için FAILED makrosu kullanın ve ardından S_OK/S_FALSE denetleyin.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

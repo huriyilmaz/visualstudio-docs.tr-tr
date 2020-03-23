@@ -1,5 +1,5 @@
 ---
-title: XAML uygulamalarında kaynak tüketimini analiz etme
+title: XAML uygulamalarında kaynak tüketimini analiz edin
 ms.custom: seodec18
 ms.date: 11/01/2018
 ms.topic: conceptual
@@ -10,121 +10,121 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: a368a9b8f6d25753993a2cc10ea9ca94734d6709
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128284"
 ---
-# <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Kaynak tüketimi ve kullanıcı Arabirimi iş parçacığı etkinliği (XAML) analiz edin
+# <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Kaynak tüketimini ve UI iş parçacığı etkinliğini (XAML) analiz edin
 
-Kullanım **uygulama zaman çizelgesi** ilgili XAML uygulamalarında performans sorunlarını bulup düzeltme uygulama etkileşimi profil oluşturucu. Bu araç, uygulamanın kaynak tüketimi ayrıntılı bir görünümünü göstererek XAML uygulama performansını artırmak yardımcı olur. (Düzen ve işleme), UI çerçevelerinin hazırlanması, ağ ve disk isteklerine hizmet uygulamanız tarafından ve uygulama başlatma, sayfa yükleme gibi senaryolar için harcanan süre çözümleyebilir ve Windows yeniden boyutlandırın.
+XAML uygulamalarında uygulama etkileşimi ile ilgili performans sorunlarını bulmak ve düzeltmek için **Uygulama Zaman Çizelgesi** profiloluşturcını kullanın. Bu araç, uygulamaların kaynak tüketiminin ayrıntılı bir görünümünü göstererek XAML uygulama performansını artırmaya yardımcı olur. Uygulamanızın Kullanıcı Arabirimi çerçeveleri (düzen ve işleme), servis ağı ve disk istekleri ni hazırlamave Uygulama Başlatma, Sayfa Yükleme ve Windows yeniden boyutlandırma gibi senaryolarda harcadığı zamanı çözümleyebilirsiniz.
 
-**Uygulama zaman çizelgesi** ile başlayabilir araçları biri **hata ayıklama** > **performans Profiler** komutu.
+**Uygulama Zaman Çizelgesi** **Hata Ayıklama** > **Performans Profilleyici** komutu ile başlatabileceğiniz araçlardan biridir.
 
-Bu aracının yerini alır **XAML UI yanıtlama hızı** tanılama araç takımı Visual Studio 2013'ün bir parçası olan aracı.
+Bu araç, Visual Studio 2013 tanı aracının bir parçası olan **XAML UI Responsiveness** aracının yerini alır.
 
-Aşağıdaki platformlarda bu aracı kullanabilirsiniz:
+Bu aracı aşağıdaki platformlarda kullanabilirsiniz:
 
-- Evrensel Windows uygulamaları (üzerinde Windows 10)
+- Evrensel Windows uygulamaları (Windows 10'da)
 - Windows 8.1
-- Windows Presentation Foundation (.Net 4.0 ve üzeri)
-- Windows 7
+- Windows Sunum Vakfı (.Net 4.0 ve üzeri)
+- Windows 7
 
 > [!NOTE]
-> Toplama ve CPU kullanım verileri ve enerji tüketimi verilerini ile birlikte analiz **ApplicationTimeline** veri. Bkz: [profil oluşturma araçları ile veya hata ayıklayıcı olmadan çalıştırın](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+> **ApplicationTimeline** verileriyle birlikte CPU kullanım verilerini ve enerji tüketim verilerini toplayabilir ve analiz edebilirsiniz. Bkz. [Hata ayıklayıcılı veya hata ayıklayıcısız profil oluşturma araçlarını çalıştırın.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
 
-## <a name="collect-application-timeline-data"></a>Uygulama zaman çizelgesi verilerini topla
+## <a name="collect-application-timeline-data"></a>Uygulama zaman çizelgesi verilerini toplama
 
-Yerel makinenize, bağlı cihaz, Visual Studio simulatorunda veya öykünücüleri veya uzak cihaz üzerinde uygulamanızın yanıt verme hızı profilini oluşturabilirsiniz. Bkz: [profil oluşturma araçları ile veya hata ayıklayıcı olmadan çalıştırın](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Uygulamanızın yanıt verme yeteneğini yerel makinenizde, bağlı cihazınızda, Visual Studio simülatörünüzde veya emülatörlerinde veya uzak bir cihazda profilleyebilirsiniz. Bkz. [Hata ayıklayıcılı veya hata ayıklayıcısız profil oluşturma araçlarını çalıştırın.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
 
 > [!TIP]
-> Mümkünse, uygulamayı doğrudan cihazda çalıştırın. Uygulama performansı gözlenen veya bir Uzak Masaüstü Bağlantısı cihazdaki gerçek performansın aynı olmayabilir. Öte yandan, Visual Studio uzak Araçlar'ı kullanarak veri toplama, performans verileri etkilemez.
+> Mümkünse uygulamayı doğrudan cihazda çalıştırın. Simülatörde veya uzak bir masaüstü bağlantısı nda gözlenen uygulama performansı, aygıttaki gerçek performansla aynı olmayabilir. Öte yandan, Visual Studio Remote Tools'u kullanarak veri toplamak performans verilerini etkilemez.
 
 Temel adımlar şunlardır:
 
 1. XAML uygulamanızı açın.
 
-2. Tıklayın **hata ayıklama / performans Profiler**. Profil oluşturma araçları .diagsession penceresinde listesini görmeniz gerekir.
+2. **Hata Ayıklama / Performans Profiloluştur'u**tıklatın. .diagsession penceresinde profil oluşturma araçlarının listesini görmeniz gerekir.
 
-3. Seçin **uygulama zaman çizelgesi** ve ardından **Başlat** pencerenin alt kısmındaki.
+3. **Uygulama Zaman Çizelgesi'ni** seçin ve ardından pencerenin altındaki **Başlat'ı** tıklatın.
 
    > [!NOTE]
-   > Çalıştırmak için izninizi isteyen bir kullanıcı hesabı denetimi penceresinde görebilirsiniz *Vsetwcollector.exe'yi*. **Evet**'i tıklayın.
+   > *VsEtwCollector.exe'yi*çalıştırmak için izninizi isteyen bir Kullanıcı Hesabı Denetimi penceresi görebilirsiniz. **Evet'i**tıklatın.
 
-4. Uygulamanızda performans verilerini toplamak için profil oluşturma ilgilendiğiniz senaryonun çalıştırın.
+4. Performans verileri toplamak için uygulamanızda profil oluşturmayla ilgilendiğiniz senaryoyu çalıştırın.
 
-5. Profil oluşturmayı durdurmak için .diagsession penceresine geçin ve **Durdur** pencerenin üst kısmındaki.
+5. Profil oluşturmayı durdurmak için .diagsession penceresine geri dön ve pencerenin üst kısmında **Dur'u** tıklatın.
 
    Visual Studio toplanan verileri analiz eder ve sonuçları görüntüler.
 
-   ![Zaman Çizelgesi profil oluşturucu rapor](../profiling/media/timeline_base.png "TIMELINE_Base")
+   ![Zaman çizelgesi profilleyici raporu](../profiling/media/timeline_base.png "TIMELINE_Base")
 
-## <a name="analyze-timeline-profiling-data"></a>Zaman Çizelgesi profil oluşturma verilerini analiz edin
+## <a name="analyze-timeline-profiling-data"></a>Zaman çizelgesi profil oluşturma verilerini analiz etme
 
 Profil oluşturma verilerini topladıktan sonra analizinizi başlatmak için aşağıdaki adımları kullanabilirsiniz:
 
-1. İlgili bilgileri görüntülemek **UI iş parçacığı kullanımı** ve **görsel üretilen iş (FPS)** grafikler ve zaman çizelgesi gezinti çubuklarını çözümlemek istediğiniz bir zaman aralığını seçmek için kullanın.
+1. **Kullanıcı Arabirimi iş parçacığı kullanımı** ve Görsel iş gücü **(FPS)** grafiklerinde bilgileri görüntüleyin ve ardından çözümlemek istediğiniz bir zaman aralığı seçmek için zaman çizelgesi gezinti çubuklarını kullanın.
 
-2. Bilgileri kullanarak **UI iş parçacığı kullanımı** veya **görsel üretilen iş (FPS)** grafikler, ayrıntıları inceleyin **zaman çizelgesi ayrıntıları** olası bulmak için neden için yanıt verme hızını seeming herhangi eksiği.
+2. **Kullanıcı Arabirimi iş parçacığı kullanımı** veya Görsel iş parçacığı **(FPS)** grafiklerinde yer alan bilgileri kullanarak, yanıt verme eksikliğinin olası nedenlerini bulmak için **Zaman Çizelgesi ayrıntıları** görünümündeki ayrıntıları inceleyin.
 
-### <a name="BKMK_Report_scenarios_categories_and_events"></a> Rapor senaryoları, kategoriler ve olaylar
+### <a name="report-scenarios-categories-and-events"></a><a name="BKMK_Report_scenarios_categories_and_events"></a>Senaryoları, kategorileri ve olayları bildirme
 
-**Uygulama zaman çizelgesi** araç senaryoları, kategoriler ve XAML performansıyla ilgili olayları için zamanlama verileri görüntüler.
+**Uygulama Zaman Çizelgesi** aracı, XAML performansıyla ilgili senaryolar, kategoriler ve olaylar için zamanlama verilerini görüntüler.
 
-### <a name="BKMK_Diagnostic_session_timeline"></a> Tanılama oturumu zaman çizelgesi
+### <a name="diagnostic-session-timeline"></a><a name="BKMK_Diagnostic_session_timeline"></a>Tanılama oturumu zaman çizelgesi
 
-![Performans ve tanılama zaman çizelgesi](../profiling/media/diaghub_timelinewithusermarks.png "DIAGHUB_TimelineWithUserMarks")
+![Performans ve Tanılama zaman çizelgesi](../profiling/media/diaghub_timelinewithusermarks.png "DIAGHUB_TimelineWithUserMarks")
 
-Sayfanın üst cetvel profili oluşturulan bilgiler için zaman çizelgesini gösterir. Bu zaman çizelgesi hem de geçerli **UI iş parçacığı kullanımı** grafiği ve **görsel üretilen iş** grafiği. Zaman çizelgesinin bir bölümü seçmek için, zaman çizelgesindeki gezinti çubuklarını sürükleyerek raporun kapsamını daraltabilirsiniz.
+Sayfanın üst kısmındaki cetvel, profilli bilgilerin zaman çizelgesini gösterir. Bu zaman çizelgesi hem **UI iş parçacığı kullanım** grafiği hem de Görsel iş parçacığı **grafiği** için geçerlidir. Zaman çizelgesinin bir bölümü seçmek için, zaman çizelgesindeki gezinti çubuklarını sürükleyerek raporun kapsamını daraltabilirsiniz.
 
-Zaman Çizelgesi Ayrıca, eklediğiniz kullanıcı işaretlerini ve uygulamanın etkinleştirme yaşam döngüsü olaylarını da görüntüler.
+Zaman çizelgesi, eklediğiniz kullanıcı işaretlerini ve uygulamanın etkinleştirme yaşam döngüsü etkinliklerini de görüntüler.
 
-### <a name="BKMK_UI_thread_utilization_graph"></a> UI iş parçacığı kullanım grafiği
+### <a name="ui-thread-utilization-graph"></a><a name="BKMK_UI_thread_utilization_graph"></a>UI iş parçacığı kullanım grafiği
 
-![CPU kullanım grafiği](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")
+![CPU Kullanım Grafiği](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")
 
-**UI iş parçacığı kullanımı (%)** grafiğidir göreli harcanan süreyi bir kategori için bir koleksiyon aralığı sırasında görüntüleyen bir çubuk grafiği.
+**UI iş parçacığı kullanımı (%)** grafiği, bir toplama aralığı sırasında bir kategoride harcanan zaman miktarını gösteren bir çubuk grafiğidir.
 
-### <a name="BKMK_Visual_throughput_FPS_graph"></a> Görsel üretilen iş (FPS) grafiği
+### <a name="visual-throughput-fps-graph"></a><a name="BKMK_Visual_throughput_FPS_graph"></a>Görsel iş artışı (FPS) grafiği
 
-![Görsel üretilen iş grafiklerini](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")
+![Görsel iş elde grafiği](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")
 
-**Görsel üretilen iş (FPS)** çizgi grafiği, uygulama için kullanıcı Arabirimi ve kompozisyon iş parçacığında saniyedeki kare sayısını (FPS) gösterir.
+**Visual throughput (FPS)** çizgi grafiği, ui'deki saniye karelerini (FPS) ve uygulamanın kompozisyon iş parçacığını gösterir.
 
-### <a name="BKMK_Timeline_details_"></a> Zaman Çizelgesi ayrıntıları
+### <a name="timeline-details"></a><a name="BKMK_Timeline_details_"></a>Zaman çizelgesi ayrıntıları
 
-Ayrıntılar görünümü, çözümleme rapor zamanınızın çoğunu burada harcadığınız ' dir. UI çerçevesi alt sistemi veya CPU kullanılan sistem bileşeni tarafından kategorilere uygulamanız tarafından CPU kullanımını gösterir.
+Ayrıntılar görünümü, zamanınızın çoğunu raporu analiz ederek harcadığınız yerdir. Kullanıcı-ı Oi Framework alt sistemi veya CPU'yu tüketen sistem bileşeni tarafından kategorize edilen uygulamanızın CPU kullanımını gösterir.
 
-Aşağıdakiler desteklenir:
+Aşağıdaki olaylar desteklenir:
 
 |||
 |-|-|
-|**Ayrıştırma**|XAML dosyaları ayrıştırma ve oluşturma nesneleri için harcanan süre.<br /><br /> Genişleyen bir **ayrıştırma** düğümünde **zaman çizelgesi ayrıntıları** kök olay nedeniyle ayrıştırıldı tüm XAML dosyaları bağımlılık zincirini görüntüler. Bu ipucu, gereksiz dosya ayrıştırma ve nesne oluşturma performans duyarlı senaryolarda tanımlamak ve bunları en iyi duruma olanak tanır.|
-|**Düzen**|Büyük uygulamalar, öğeleri binlerce aynı anda ekranda gösterilebilir. Bu görüntü, düşük kullanıcı Arabirimi kare hızı ve gelenlere kötü uygulama yanıt hızını neden olabilir. Düzen olayı doğru şekilde her bir öğe yerleştirme maliyetini belirler (diğer bir deyişle, harcanan süre düzenleyin, ölçü, ApplyTemplate, ArrangeOverride ve MeasureOverride). Ayrıca, bölüm düzeni pass sürdü visual ağaçları oluşturur. Bu görselleştirme hangi mantıksal ağaçları Ayıkla veya diğer erteleme mekanizmaları, Düzen geçişi en iyi duruma getirmek için değerlendirilecek belirlemek için kullanabilirsiniz.|
-|**İşleme**|Ekranda çizim XAML öğeleri için geçen süre.|
-|**BEN / 0**|Harcanan süre yerel diskten veya erişilir ağ kaynaklarına veri alma [Microsoft Windows Internet (WinINet) API](/windows/desktop/WinInet/portal).|
-|**Uygulama kodu**|Ayrıştırma veya Düzenle ilişkili olmayan (kullanıcı) uygulama kodu yürütürken harcanan süre.|
-|**XAML diğer**|XAML çalışma zamanı kodu yürütürken harcanan süre.|
+|**Ayrıştı -rma**|XAML dosyalarını ayrıştarak ve nesneleri oluşturmak için harcanan zaman.<br /><br /> **Zaman Çizelgesi ayrıntılarındaki** **Ayrıştırma** düğümünü genişletmek, kök olayı nedeniyle ayrıştırılan tüm XAML dosyalarının bağımlılık zincirini görüntüler. Bu ipucu, performansa duyarlı senaryolarda gereksiz dosya ayrıştırma ve nesne oluşturma belirlemenizi ve bunları en iyi duruma getirmenizi sağlar.|
+|**Düzen**|Büyük uygulamalarda, binlerce öğe aynı anda ekranda gösterilebilir. Bu ekran, düşük kullanıcı bir Kullanıcı-ı Oi kare hızına ve buna bağlı olarak kötü uygulama yanıt verme oranına neden olabilir. Düzen olayı, her öğeyi (yani Düzenleme, Ölçü, ApplyTemplate, ArrangeOverride ve MeasureOverride'da harcanan süre) düzenlemenin maliyetini doğru bir şekilde belirler. Ayrıca, Düzen geçişinde yer alan görsel ağaçları da oluşturur. Bu görselleştirmeyi, hangi mantıksal ağaçları budamak için belirleyebileceğinizi belirlemek veya düzen geçişinizi optimize etmek için diğer erteleme mekanizmalarını değerlendirmek için kullanabilirsiniz.|
+|**İşleme**|XAML öğelerini ekrana çizmek için harcanan süre.|
+|**I/0**|Yerel diskten veya [Microsoft Windows Internet (WinINet) API'si](/windows/desktop/WinInet/portal)aracılığıyla erişilen ağ kaynaklarından veri almak için harcanan zaman.|
+|**Uygulama Kodu**|Ayrıştırma veya düzenle ilgili olmayan uygulama (kullanıcı) kodunu yürütmek için harcanan süre.|
+|**Xaml Diğer**|XAML çalışma zamanı kodunu yürütmek için harcanan süre.|
 
 > [!TIP]
-> Seçin **CPU kullanımı** ile birlikte aracı **uygulama zaman çizelgesi** aracı, UI iş parçacığında yürütülen görünümü uygulama yöntemler için profil oluşturmayı başlat. Uzun süre çalışan uygulama kodu taşımak için bir arka plan iş parçacığı UI yanıtlama hızını artırabilir.
+> Kullanıcı Arabirimi iş parçacığında çalıştırılabilen uygulama yöntemlerini görüntülemek için profil oluşturmayı **başlattığınızda, Uygulama Zaman Çizelgesi** aracıyla birlikte CPU **Kullanımı** aracını seçin. Uzun süredir çalışan uygulama kodunu arka plan iş parçacığına taşımak UI yanıt verme yeteneğini artırabilir.
 
-#### <a name="BKMK_Customizing_Timeline_details_"></a> Zaman Çizelgesi ayrıntıları özelleştirme
+#### <a name="customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a>Zaman Çizelgesi ayrıntılarını özelleştirme
 
-Kullanım **zaman çizelgesi ayrıntıları** sıralama, filtreleme ve açıklamalarını belirtmek için araç **zaman çizelgesi ayrıntıları** girişleri görüntüleyin.
+Zaman **Çizelgesi** **ayrıntıları** görüntüleme girişlerini sıralamak, filtrelemek ve belirtmeleri için Zaman Çizelgesi ayrıntıları araç çubuğunu kullanın.
 
 |||
 |-|-|
-|**Sıralama ölçütü**|Başlangıç zamanı veya olayları uzunluğunu göre sıralayın.|
-|![Çerçeve tarafından olayları grup](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Ekler veya bir üst düzey kaldırır **çerçeve** olayları çerçeve tarafından gruplandırır kategorisi.|
-|![Filtre zaman çizelgesi ayrıntıları listesi](../profiling/media/timeline_filter.png "TIMELINE_Filter")|Listeyi seçili kategorilerdeki ve olayları uzunluğunu göre filtreler.|
-|![Zaman Çizelgesi ayrıntıları bilgilerini özelleştirin](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|Ek açıklamalar olayları belirtmenize olanak sağlar.|
+|**Göre Sırala**|Başlangıç saatine veya olayların uzunluğuna göre sıralayın.|
+|![Olayları çerçeveye göre gruplandırma](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Olayları çerçeveye göre gruplayan üst düzey bir **Çerçeve** kategorisi ekler veya kaldırır.|
+|![Filtre zaman çizelgesi ayrıntıları listesi](../profiling/media/timeline_filter.png "TIMELINE_Filter")|Listeyi seçili kategorilere ve olayların uzunluğuna göre filtreler.|
+|![Zaman çizelgesi ayrıntılarını özelleştir](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|Olaylara ek açıklamaları belirtmenizi sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF Ekip Blogu: WPF uygulamaları için yeni UI performans Analizi Aracı](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
-- [C++, C# ve Visual Basic kullanarak UWP uygulamaları için en iyi performans](/previous-versions/windows/apps/hh750313\(v\=win.10\))
-- [WPF uygulama performansını iyileştirin](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
-- [Visual Studio profil oluşturma](../profiling/index.yml)
-- [Araçlar profil oluşturmaya ilk bakış](../profiling/profiling-feature-tour.md)
+- [WPF takım günlüğü: WPF uygulamaları için yeni kullanıcı arabirimi performans analizi aracı](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
+- [C++, C#ve Visual Basic kullanarak UWP uygulamaları için en iyi performans uygulamaları](/previous-versions/windows/apps/hh750313\(v\=win.10\))
+- [WPF uygulama performansını optimize edin](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
+- [Visual Studio'da Profil Oluşturma](../profiling/index.yml)
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

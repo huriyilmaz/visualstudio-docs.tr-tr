@@ -1,5 +1,5 @@
 ---
-title: 'span:: ~ span yok Edicisi | Microsoft Docs'
+title: span::~span Yıkıcı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9b7174418267a77cc668ab0a79092fc7daefbf58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62979672"
 ---
-# <a name="spanspan-destructor"></a>span:: ~ span yok Edicisi
+# <a name="spanspan-destructor"></a>span::~span yıkıcı
 
-Yok eder `span` nesne ve kaynaklarını serbest bırakır.
+Nesneyi `span` yok eder ve kaynaklarını serbest bırakır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,9 +31,9 @@ Yok eder `span` nesne ve kaynaklarını serbest bırakır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Header:** *cvmarkersobj.h*
+**Başlık:** *cvmarkersobj.h*
 
-**Namespace:** CONCURRENCY::Diagnostic
+**Ad alanı:** Eşzamanlılık::diagnostik
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

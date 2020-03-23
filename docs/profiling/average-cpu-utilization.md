@@ -1,5 +1,5 @@
 ---
-title: Ortalama CPU kullanımı | Microsoft Docs
+title: Ortalama CPU Kullanımı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 01557fb378f03ffd033495ca42024c1143e67187
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62777004"
 ---
 # <a name="average-cpu-utilization"></a>Ortalama CPU kullanımı
-Profilli işlemin işleminin süresi için sistemin mantıksal çekirdek ortalama kullanımını gösterir. Graf, belirli bir zamanda hangi belirli çekirdek etkindir göstermez. Örneğin, iki çekirdek her belirli bir süre için % 50 kapasitesine çalıştırıyorsanız, bu görünüm kullanılan bir mantıksal çekirdek gösterilir.
+Profillenmiş işlemin işlem süresince sistemin mantıksal çekirdeklerinin ortalama kullanımını gösterir. Grafik, belirli bir anda hangi çekirdeğin etkin olduğunu göstermez. Örneğin, iki çekirdeğin her biri belirli bir süre için %50 kapasiteyle çalışıyorsa, bu görünüm kullanılan bir mantıksal çekirdeği gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çekirdekler Görünümü](../profiling/cores-view.md)

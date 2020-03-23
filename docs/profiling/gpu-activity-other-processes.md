@@ -1,5 +1,5 @@
 ---
-title: GPU etkinliği (diğer işlemler) | Microsoft Docs
+title: GPU Etkinliği (Diğer Süreçler) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +12,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a502590c20fce1455d9259ae681178d9cd48e33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969508"
 ---
 # <a name="gpu-activity-other-processes"></a>GPU Etkinliği (Diğer İşlemler)
-**GPU etkinliği (diğer işlemler)** kesimlerinde eşzamanlılık görselleştiricisi iş parçacıkları görünümü zaman GPU işleme sistemdeki diğer işlemleri adına istekleri bir kez temsil eder. Bu istekler GPU doğrudan bellek erişimi (DMA) paketleri gönderilir.  Bir segmenti uzunluğunu paket GPU tarafından işlendiği süreyi temsil eder.
+Eşzamanlılık Görselleştiricisinin İş Parçacıkları görünümündeki **GPU Etkinliği (Diğer İşlemler)** segmentleri, GPU'nun sistemdeki diğer işlemler adına istekleri işlediği zamanları temsil eder. Bu istekler GPU'ya doğrudan bellek erişimi (DMA) paketleri olarak gönderilir.  Bir kesimin uzunluğu, paketin GPU tarafından işlendiği süreyi gösterir.
 
- Seçtiğinizde, bu tür bir segment, rapor üzerinde **geçerli** sekmesini işlenmiş paketi hakkında bilgileri görüntüler.  Bu bilgiler, DirectX altyapısı, paketi gönderilen işlem ve paket işlemek için gereken zamanı ile ilişkili donanım kuyruğundaki paket beklenen süre miktarını içerir.
+ Bu tür bir kesimi seçtiğinizde, **Geçerli** sekmesindeki rapor işlenen paketle ilgili bilgileri görüntüler.  Bilgiler, paketin DirectX altyapısıyla ilişkili donanım kuyruğunda beklediği süreyi, paketi gönderen işlemi ve paketi işlemek için gereken süreyi içerir.

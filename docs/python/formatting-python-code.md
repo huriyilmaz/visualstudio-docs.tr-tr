@@ -1,6 +1,6 @@
 ---
-title: Python kodu biçimlendirme
-description: Visual Studio otomatik olarak Python kodu aralığı, deyimleri, sarmalama ve açıklamalar gibi biçimlendirebilirsiniz.
+title: Python kodunu biçimlendir
+description: Visual Studio, boşluk, deyimler, sarma ve açıklamalar dahil olmak üzere Python kodunu otomatik olarak yeniden biçimleyebilir.
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,90 +11,90 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 6e95d05c3fbc0dd46d235c7480bd4a9caa48947e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62957547"
 ---
-# <a name="format-python-code"></a>Python kodu biçimlendirme
+# <a name="format-python-code"></a>Python kodunu biçimlendir
 
-Visual Studio, hızlı bir şekilde önceden yapılandırılmış biçimlendirme seçeneklerini eşleşecek şekilde yeniden biçimlendirme kodu sağlar.
+Visual Studio, önceden yapılandırılmış biçimlendirme seçeneklerini eşleştirmek için kodu hızla yeniden biçimlendirmenizi sağlar.
 
-- Bir seçim biçimlendirmek için: seçin **Düzenle** > **Gelişmiş** > **seçimi Biçimlendir** veya basın **Ctrl** + **E** > **F**.
-- Tüm dosya biçimine: seçin **Düzenle** > **Gelişmiş** > **belgeyi Biçimlendir** veya basın **Ctrl** + **E** > **D**.
+- Seçimi biçimlendirmek için:**Gelişmiş** > **Biçim Seçimini** **Edit'i** > seçin veya **Ctrl**+**E** > **F**tuşuna basın.
+- Dosyanın tamamını biçimlendirmek için: > **Gelişmiş** > Biçim**Belgesini** **Edit'i**seçin veya **Ctrl**+**E** > **D**tuşuna basın.
 
-Seçenekleri aracılığıyla ayarlanır **Araçları** > **seçenekleri** > **metin düzenleyici** > **Python**  >  **Biçimlendirme** ve onun iç içe geçmiş sekmeler. Seçmenize gerek **tüm ayarları göster** görünmesini Bu seçenekler için:
+Seçenekler **Araçlar** > **Seçenekleri** > Metin**Düzenleyicisi** > **Text Editor** > Python**Biçimlendirme** ve iç içe sekmeleri aracılığıyla ayarlanır. Bu seçeneklerin görünmesi için **tüm ayarları göster'i** seçmeniz gerekir:
 
-![Biçimlendirme seçenekleri Visual Studio'da Python](media/options-editor-formatting.png)
+![Visual Studio'da Python biçimlendirme seçenekleri](media/options-editor-formatting.png)
 
-Biçimlendirme seçenekleri varsayılan olarak ayarlanmış bir üst eşleştirilecek [CESARETLENDİRİCİ 8 Stil Kılavuzu](https://www.python.org/dev/peps/pep-0008/). **Genel** sekmesini biçimlendirme uygulandığında belirler; diğer üç sekme ayarları, bu makalede açıklanmıştır.
+Varsayılan olarak biçimlendirme seçenekleri [PEP 8 stil kılavuzunun](https://www.python.org/dev/peps/pep-0008/)bir üst kümesiyle eşleşecek şekilde ayarlanır. **Genel** sekmesi biçimlendirmenin ne zaman uygulanacağı belirlenir; diğer üç sekme için ayarlar bu makalede açıklanmıştır.
 
-[Visual Studio'da Python desteği](installing-python-support-in-visual-studio.md) de faydalı ekler [ **dolgu açıklama paragraf** ](#fill-comment-paragraph-command) komutunu **Düzenle**  >   **Gelişmiş** bir sonraki bölümde açıklandığı gibi menüsü.
+[Visual Studio'daki Python desteği,](installing-python-support-in-visual-studio.md) daha sonraki bir bölümde açıklandığı gibi **Gelişmiş'i Edit** > **Advanced** menüsüne yararlı [**Dolgu Yorum Paragrafı**](#fill-comment-paragraph-command) komutunu da ekler.
 
-## <a name="spacing"></a>Aralığı
+## <a name="spacing"></a>Aralık
 
-**Aralık** denetimler burada boşluklar eklenir veya çeşitli dil yapılarının kaldırıldı. Her bir seçeneğin üç olası değer vardır:
+Çeşitli dil yapılarının etrafına boşlukların eklendiği veya kaldırıldığı **boşluk** denetimleri. Her seçeneğin üç olası değeri vardır:
 
-- Denetleme: aralık uygulanan sağlar.
-- Temizlenmiş: herhangi bir boşluğu kaldırır.
-- Belirsiz: özgün biçimlendirme yerinde bırakır.
+- Kontrol: aralığın uygulanmasını sağlar.
+- Temizlendi: herhangi bir boşluk kaldırır.
+- Belirsiz: özgün biçimlendirmeyi yerinde bırakır.
 
-Örnek çeşitli seçenekleri için aşağıdaki tabloda verilmiştir:
+Çeşitli seçeneklere örnekler aşağıdaki tablolarda verilmiştir:
 
 | Sınıf tanımları seçeneği | İşaretli | Temizlenmiş |
 | --- | --- | --- |
-| **Tabanları listesi ile bir sınıf bildirimin adı arasındaki boşluk Ekle** | `class X (object): pass` | `class X(object): pass` |
-| **Tabanları listesi parantezlerinin içine boşluk Ekle** | `class X( object ): pass` | `class X(object): pass` |
-| **Boş tabanları listesi parantezlerinin içine boşluk Ekle** | `class X( ): pass` | `class X(): pass` |
+| **Sınıf bildiriminin adı ve üslistesi arasına boşluk ekleme** | `class X (object): pass` | `class X(object): pass` |
+| **Üsler listesi parantez içinde boşluk ekleme** | `class X( object ): pass` | `class X(object): pass` |
+| **Boş bazlar listesi paranteziçinde boşluk ekleme** | `class X( ): pass` | `class X(): pass` |
 
 <br/>
 
 | İşlev tanımları seçeneği | İşaretli | Temizlenmiş |
 | --- | --- | --- |
-| **Bir işlev bildiriminin adı ve parametre listesi arasına boşluk Ekle** | `def X (): pass` | `def X(): pass` |
-| **Parametre listesi parantezlerinin içine boşluk Ekle** | `def X( a, b ): pass` | `def X(a, b): pass` |
-| **Boş parametre listesi parantezlerinin içine boşluk Ekle** | `def X( ): pass` | `def X(): pass` |
-| **Varsayılan parametre değerlerini '=' çevresinde boşluk Ekle** | `includes X(a = 42): pass` | `includes X(a=42): pass` |
-| **Dönüş ek açıklama işleçlerden önce ve sonra boşluk Ekle** | `includes X() -> 42: pass` | `includes X()->42: pass` |
+| **İşlev bildiriminin adı ve parametre listesi arasına boşluk ekleme** | `def X (): pass` | `def X(): pass` |
+| **Parametre listesi paranteziçinde boşluk ekleme** | `def X( a, b ): pass` | `def X(a, b): pass` |
+| **Boş parametre listesi paranteziçinde boşluk ekleme** | `def X( ): pass` | `def X(): pass` |
+| **Varsayılan parametre değerlerinde '=' etrafında boşluk ekleme** | `includes X(a = 42): pass` | `includes X(a=42): pass` |
+| **İade ek açıklama işleçleri önce ve sonra boşluk ekleme** | `includes X() -> 42: pass` | `includes X()->42: pass` |
 
 <br/>
 
-| İşleçler seçeneği | İşaretli | Temizlenmiş |
+| Operatörler seçeneği | İşaretli | Temizlenmiş |
 | --- | --- | --- |
-| **İkili işleçler etrafına boşluklar Ekle** | `a + b` | `a+b` |
-| **Atamalar etrafına boşluklar Ekle** | `a = b` | `a=b` |
+| **İkili işleçler etrafında boşluk ekleme** | `a + b` | `a+b` |
+| **Atamaların etrafına boşluk ekleme** | `a = b` | `a=b` |
 
 <br/>
 
-| İfade boşluk seçeneği | İşaretli | Temizlenmiş |
+| İfade aralığı seçeneği | İşaretli | Temizlenmiş |
 | --- | --- | --- |
-| **Bir işlev çağrısı kişinin adı ve bağımsız değişken listesinin arasına boşluk Ekle** | `X ()` | `X()` |
-| **Boş bağımsız değişken listesi parantezlerinin içine boşluk Ekle** | `X( )` | `X()` |
-| **Bağımsız değişken listesi parantezlerinin içine boşluk ekleyin** | `X( a, b )` | `X(a, b)` |
-| **İfade parantezlerinin içine boşluk ekleyin** | `( a )` | `(a)` |
-| **Boş demet parantezlerinin içine boşluk Ekle** | `( )` | `()` |
-| **Tanımlama grubu parantezlerinin içine boşluk Ekle** | `( a, b )` | `(a, b)` |
-| **Boş köşeli ayraçların içine boşluk Ekle** | `[ ]` | `[]` |
-| **Listelerin köşeli ayraçlar içine boşluk Ekle** | `[ a, b ]` | `[a, b]` |
-| **Açma köşeli ayraç önce boşluk Ekle** | `x [i]` | `x[i]` |
-| **Köşeli ayraçlar içine boşluk Ekle** | `x[ i ]` | `x[i]` |
+| **İşlev çağrısının adı ve bağımsız değişken listesi arasına boşluk ekleme** | `X ()` | `X()` |
+| **Boş bağımsız değişken listesi paranteziçinde boşluk ekleme** | `X( )` | `X()` |
+| **Bağımsız değişken listesi paranteziçinde boşluk ekleme** | `X( a, b )` | `X(a, b)` |
+| **İfade parantezi içinde boşluk ekleme** | `( a )` | `(a)` |
+| **Boş tuple parantez içinde boşluk ekleme** | `( )` | `()` |
+| **Tuple parantez içinde boşluk ekleme** | `( a, b )` | `(a, b)` |
+| **Boş kare köşeli ayraçlar içinde boşluk ekleme** | `[ ]` | `[]` |
+| **Listelerin kare ayraçlarına boşluk ekleme** | `[ a, b ]` | `[a, b]` |
+| **Kare ayraç açmadan önce boşluk ekleme** | `x [i]` | `x[i]` |
+| **Kare ayraçlar içinde boşluk ekleme** | `x[ i ]` | `x[i]` |
 
 <br/>
 
 ## <a name="statements"></a>Deyimler
 
-**Deyimleri** seçenekleri denetlemek diğer Pythonic formlar çeşitli açıklamaalarını otomatik yeniden yazma.
+**Deyimler** seçenekleri, çeşitli deyimlerin daha Pythonik formlara otomatik olarak yeniden yazılmasının denetimine.
 
-| Seçenek | Biçimlendirme önce | Biçimlendirme sonrasında |
+| Seçenek | Biçimlendirmeden önce | Biçimlendirmeden sonra |
 | --- | --- | --- |
-| **İçeri aktarılan modülleri yeni satıra Yerleştir** | `import sys, pickle` | `import sys`<br/>`import pickle` |
-| **Gereksiz noktalı Kaldır** | `x = 42;` | `x = 42` |
-| **Birden çok deyim yeni satırlara Yerleştir** | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
+| **İthal modülleri yeni hatta yerleştirin** | `import sys, pickle` | `import sys`<br/>`import pickle` |
+| **Gereksiz yarım kolonları kaldırın** | `x = 42;` | `x = 42` |
+| **Yeni satırlara birden çok deyim yerleştirme** | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
 
-## <a name="wrapping"></a>Sarmalama
+## <a name="wrapping"></a>Kaydırma
 
-**Sarmalama** , ayarlamanıza imkan sağlar **en fazla açıklama genişlik** (varsayılan: 80). Varsa **kaydırma çok geniş açıklamalar** seçeneği ayarlanır, Visual Studio, en fazla genişlik aşmayacak şekilde açıklamaları yeniden biçimlendirir.
+**Sarma,** Maksimum **yorum genişliğini** ayarlamanızı sağlar (varsayılan değer 80'dir). Çok **geniş** bir seçenek olan Kaydırma yorumları ayarlanırsa, Visual Studio yorumları bu maksimum genişliği aşmamak için yeniden biçimlenir.
 
 ```python
 # Wrapped to 40 columns
@@ -107,11 +107,11 @@ Biçimlendirme seçenekleri varsayılan olarak ayarlanmış bir üst eşleştiri
 # There should be one-- and preferably only one --obvious way to do it.
 ```
 
-## <a name="fill-comment-paragraph-command"></a>Yorum paragraf komutu doldurun
+## <a name="fill-comment-paragraph-command"></a>Açıklama Paragrafı komutunu doldur
 
-**Düzen** > **Gelişmiş** > **dolgu açıklama paragraf** (**Ctrl**+**E**  >  **P**) yeniden akış ve kısa çizgiler birbirine birleştirmek ve uzun olanlarla bozucu açıklama metni biçimlendirir.
+**Edit**+**E** > **P****Advanced****Ctrl****Fill Comment Paragraph** Gelişmiş Dolgu Yorum Paragrafı (Ctrl E P) yeniden akışlarını ve yorum metnini biçimlendirin, kısa satırları birleştirin ve uzun satırları ayırın. >  > 
 
-Örneğin:
+Örnek:
 
 ```python
 # foo
@@ -119,7 +119,7 @@ Biçimlendirme seçenekleri varsayılan olarak ayarlanmış bir üst eşleştiri
 # baz
 ```
 
-yapılan değişiklikler:
+değişiklikler:
 
 ```python
 # foo bar baz
@@ -129,7 +129,7 @@ yapılan değişiklikler:
 # This is a very long long long long long long long long long long long long long long long long long long long comment
 ```
 
-yapılan değişiklikler:
+değişiklikler:
 
 ```python
 # This is a very long long long long long long long long long long long long

@@ -1,5 +1,5 @@
 ---
-title: UI işleme zamanı | Microsoft Docs
+title: UI İşlem Süresi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 391b4582d03e32e738f0eade823326e72a662a43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "63004462"
 ---
-# <a name="ui-processing-time"></a>UI işleme zamanı
-Bu segmentlerde faaliyet zaman çizelgesi UI işleme sınıflandırılmış bir kez engelleme ile ilişkilidir. Bu, bir iş parçacığı Windows iletileri Pompalama veya diğer kullanıcı arabirimi (UI) iş yapılırken anlamına gelir. Bu süre boyunca, bir iş parçacığı UI işleme Concurrency Visualizer sayımını bir API'de engellendi. API'leri gibi `GetMessage()` ve `MsgWaitForMultipleObjects()` bu gruba girer.
+# <a name="ui-processing-time"></a>UI işlem süresi
+Zaman çizelgesindeki bu kesimler, UI Processing olarak kategorize edilen engelleme süreleri ile ilişkilidir. Bu, bir iş parçacığının Windows iletileri pompaladığını veya diğer kullanıcı arabirimi (UI) çalışmasını gerçekleştirdiği anlamına gelir. Bu süre zarfında, EşzamanlıLık Görselleştiricisi'nin UI İşleme olarak saydığı bir API'de bir iş parçacığı engellendi. API'ler `GetMessage()` `MsgWaitForMultipleObjects()` gibi ve bu gruba düşmek.
 
- Önceden tanımlanmış hiçbir engelleme API belirlenirse, çağrı yığınları ve profil raporlarını gecikmesi temel nedenlerini belirlemek için gözden geçirin.
+ Önceden tanımlanmış bir engelleme API'si tanımlanmamışsa, gecikmenin altında yatan nedenleri belirlemek için arama yığınlarını ve profil raporlarını gözden geçirin.
 
- UI işleme kategorisi, GUI uygulamalarının yanıtlama anlamanıza yardımcı olur ve kullanıcı Arabirimi yanıt hızı üzerinde bağlı uygulamalarda tercih edilir. Örneğin, bir uygulama kullanıcı Arabirimi iş parçacığında UI işleme % 100 sürede tutarsa büyük olasılıkla yanıt veriyor. Ancak, UI iş parçacığı diğer kategorilerde büyük miktarda zaman harcıyorsa, kök nedeni arayın ve iş parçacığı UI olmayan kategorilerindeki azaltma seçenekleri göz önünde bulundurun.
+ Kullanıcı Arabirimi İşleme kategorisi GUI uygulamalarının yanıt verme yeteneğini anlamanıza yardımcı olur ve Kullanıcı Arabirimi yanıt verme durumuna bağlı uygulamalarda istenir. Örneğin, bir uygulamadaki Kullanıcı Arabirimi iş parçacığı Kullanıcı Arabirimi İşleminde %100 zaman elde ederse, büyük olasılıkla yanıt verir. Ancak, UI iş parçacığı diğer kategorilerde önemli ölçüde zaman harcıyorsa, kök nedenleri arayın ve bu iş parçacığı üzerinde UI olmayan kategorileri azaltmak için seçenekleri düşünün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

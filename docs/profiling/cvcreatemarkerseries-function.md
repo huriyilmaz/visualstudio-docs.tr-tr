@@ -1,5 +1,5 @@
 ---
-title: CvCreateMarkerSeries işlevi | Microsoft Docs
+title: CvCreateMarkerSeries Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eb3ef4d928aaac57f39a48e5be212c1148ef58eb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552687"
 ---
-# <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries işlevi
-İşaret için belirli bir sağlayıcı oluşturur.
+# <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries fonksiyonu
+Belirli bir sağlayıcı için işaretçi serisi oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,21 +39,21 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pProvider` Cvınitprovider tarafından önceden başlatılan sağlayıcı nesnesi. NULL olamaz.
+ `pProvider`Sağlayıcı nesnesi daha önce CvInitProvider tarafından başolarak lanse edilir. NULL olamaz.
 
- `pSeriesName` İşaret seri adı. NULL olamaz, ancak boş dizeye izin verilir.
+ `pSeriesName`İşaretleyici serisi adı. NULL olamaz, ancak boş dize izin verilir.
 
- `ppMarkerSeries` İşaret serisi bağlam depolayacak bir çıkış değişkeni adresi. NULL olamaz.
+ `ppMarkerSeries`Marker serisi bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
 
-## <a name="return-value"></a>Dönüş değeri
- S_OK işaret serisi başarıyla oluşturulduğunda veya hata kodu var. durumda tüm hatalar. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+## <a name="return-value"></a>Döndürülen değer
+ S_OK işaretleyici serisi başarıyla oluşturulduğunda veya herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
  **Unicode:** CvCreateMarkerSeriesW
 
- **ANSI:** CvCreateMarkerSeriesA
+ **ANSI:** CvCreateMarkerSeriesa
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

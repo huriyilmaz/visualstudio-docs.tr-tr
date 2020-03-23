@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2017 ' de profil oluşturma yenilikleri | Microsoft Docs
+title: Visual Studio 2017'de Profil Oluşturmada Yenilikler | Microsoft Dokümanlar
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,27 +14,27 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 0512c6e95f0a26184593f7af5ba08c31c33a3299
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128334"
 ---
-# <a name="whats-new-in-profiling-tools-in-includevs_dev15miscincludesvs_dev15_mdmd"></a>İçindeki profil oluşturma araçlarındaki yenilikler[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>Profil oluşturma araçlarındaki yenilikler[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
-Tanılama araçları, uygulamanızda düzeltilmesi gereken sorunları belirlemenize yardımcı olacak yeni görselleştirmeler içerir. Tanılama araçları artık ASP.NET uygulamaları için destek içerir.
+Tanılama Araçları, uygulamanızda düzeltilmesi gereken sorunları belirlemenize yardımcı olacak yeni görselleştirmeler içerir. Tanılama Araçları artık ASP.NET uygulamaları için destek içerir.
 
-Daha fazla bilgi için [sürüm notlarına [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
+Daha fazla bilgi için [Yayın [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]notları'na ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
 
-Performans analiziniz için önemli alanlara odaklanmanıza yardımcı olan araçlara bir **Özet** sekmesi eklenmiştir. Bu sekme, kaç olay oluştuğunu gösterir, yığının anlık görüntülerini almanızı sağlar ve CPU kullanımı veri toplamayı hızlıca etkinleştirmenizi sağlar. Bu görünümde tüm [Application Insights](/azure/azure-monitor/app/visual-studio) veya [UI çözümleme](/visualstudio/releasenotes/vs2017-relnotes) olayları gösterilir. Ayrıca, Visual Studio Enterprise için de bu görünüm IntelliTrace olaylarını gösterir.
+Performans çözümlemesiniz için önemli alanlara odaklanmanıza yardımcı olan araçlara bir **Özet** sekmesi eklendi. Bu sekme, kaç olayın oluştuğunu gösterir, yığının anlık görüntülerini almanızı sağlar ve CPU kullanım veri toplamayı hızla etkinleştirmenizi sağlar. Bu görünüm, uygulama [öngörülerini](/azure/azure-monitor/app/visual-studio) veya [Kullanıcı Gçözümlemesi](/visualstudio/releasenotes/vs2017-relnotes) olaylarını gösterir. Buna ek olarak, Visual Studio Enterprise için, bu görünüm de IntelliTrace olayları gösterir.
 
-![Tanılama araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
+![Tanılama Araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
 
-CPU kullanım aracında, performans sorunlarına neden olabilecek işlevleri belirlemenize yardımcı olacak [Yeni görselleştirmeler](../profiling/Beginners-Guide-to-Performance-Profiling.md) vardır. Yeni **arayan/çağrılan** görünümü seçili bir işleve ve bu işlevden yapılan işlev çağrılarının maliyetlerini araştırmanıza olanak sağlar.
+CPU kullanım aracı, performans sorunlarına neden olma olasılığı en yüksek işlevleri belirlemenize yardımcı olacak [yeni görselleştirmelere](../profiling/Beginners-Guide-to-Performance-Profiling.md) sahiptir. Yeni **Arayan/Callee** görünümü, seçili bir işleve yapılan işlev çağrılarının maliyetlerini araştırmanıza olanak tanır.
 
-![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee-2.png "Diagtoolscallerçağrılan")
+![Tanılama Araçları arayan callee görünümü](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da profil](../profiling/index.yml)
-- [Araçlar profil oluşturmaya ilk bakış](../profiling/profiling-feature-tour.md)
+- [Visual Studio'daki Profil](../profiling/index.yml)
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

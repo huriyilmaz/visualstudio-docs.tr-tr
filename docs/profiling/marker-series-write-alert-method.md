@@ -1,5 +1,5 @@
 ---
-title: marker_series::write_alert yöntemi | Microsoft Docs
+title: marker_series::write_alert Yöntemi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 635f767f97ea3d237aeff843e99735eccae31efc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62831390"
 ---
-# <a name="markerserieswritealert-method"></a>marker_series::write_alert yöntemi
-Bir uyarı eşzamanlılık görselleştiricisi izleme dosyasına yazar.
+# <a name="marker_serieswrite_alert-method"></a>marker_series::write_alert yöntemi
+Eşzamanlı Lık Görselleştiricisi izleme dosyasına bir uyarı yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,12 +32,12 @@ void write_alert(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_Format` Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğeleri ile karıştırılmış, metin içeren bir bileşik biçimlendirme dizesi.
+ `_Format`Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle karışık metin içeren bileşik biçim dizesi.
 
 ## <a name="requirements"></a>Gereksinimler
- **Header:** *cvmarkersobj.h*
+ **Başlık:** *cvmarkersobj.h*
 
- **Namespace:** CONCURRENCY::Diagnostic
+ **Ad alanı:** Eşzamanlılık::diagnostik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [marker_series class](../profiling/marker-series-class.md)
+- [marker_series sınıfı](../profiling/marker-series-class.md)

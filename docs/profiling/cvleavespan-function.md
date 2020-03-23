@@ -1,5 +1,5 @@
 ---
-title: CvLeaveSpan işlevi | Microsoft Docs
+title: CvLeaveSpan Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 776c24777403b9d88de31e11d0c28fe104666600
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62974123"
 ---
-# <a name="cvleavespan-function"></a>CvLeaveSpan işlevi
-Aralığın sonunu işaretler.
+# <a name="cvleavespan-function"></a>CvLeaveSpan fonksiyonu
+Açık aralığının sonunu işaretler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,13 +31,13 @@ HRESULT CvLeaveSpan(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pSpan` CvEnterSpan * önceki çağrı tarafından döndürülen nesne yayılır. NULL olamaz.
+ `pSpan`Önceki aramayla CvEnterSpan*'a döndürülen yayılma nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
- İletinin başarılı bir şekilde yazıldığında S_OK. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+ İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

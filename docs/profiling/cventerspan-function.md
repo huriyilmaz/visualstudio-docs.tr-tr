@@ -1,5 +1,5 @@
 ---
-title: CvEnterSpan işlevi | Microsoft Docs
+title: CvEnterspan Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,14 +25,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d501f7c1e75f5b63c82c34f2dc0a4913d7a88c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552638"
 ---
-# <a name="cventerspan-function"></a>CvEnterSpan işlevi
-Yeni bir aralık başlangıcını işaretler.
+# <a name="cventerspan-function"></a>CvEnterSpan fonksiyonu
+Yeni bir yayılma nın başlangıcını işaretler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -102,27 +102,27 @@ HRESULT CvEnterSpanExVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList` Bağımsız değişken listesi.
+ `argList`Bağımsız değişkenler listesi.
 
- `category` Aralığın kategorisi
+ `category`Yayılma alanının kategorisi
 
- `level` Aralık önem düzeyi.
+ `level`Açıklığın önem düzeyi.
 
- `pMarkerSeries` Geçerli işaret serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
- `pMessage` İleti biçimi dizesi. NULL olamaz.
+ `pMessage`İleti biçimi dizesi. NULL olamaz.
 
- `ppSpan` Elde edilen aralık nesnesini tutacak bir değişken adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.
+ `ppSpan`Elde edilen yayılma nesnesini tutacak değişkenin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- İletinin başarılı bir şekilde yazıldığında S_OK. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+ İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
  **Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW
 
  **ANSI:** CvEnterSpanA, CvEnterSpanVA, CvEnterSpanExA, CvEnterSpanExVW
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

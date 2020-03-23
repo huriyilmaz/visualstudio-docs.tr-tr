@@ -1,5 +1,5 @@
 ---
-title: C Kitaplık Başvurusu | Microsoft Docs
+title: C Kütüphane Başvurusu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 570c3c1cfa4ee42b0b7262b92fba3c936297387c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440262"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "64826681"
 ---
-# <a name="c-library-reference"></a>C Kitaplık Başvurusu
-Bu bölümde, eşzamanlılık görselleştiricisi SDK'si için başvuru bilgileri içerir.
+# <a name="c-library-reference"></a>C kitaplık başvurusu
+Bu bölümde Eşzamanlı Görüntüleyici SDK için referans bilgileri bulunmaktadır.
 
 > [!NOTE]
-> C dil standardı bir alt çizgiyle başlayan tanımlayıcılar kullanımını ayırır (`_`) karakteri, kütüphane gibi uygulamalar için. Kodunuzda altı çizili ile başlayan adları kullanmayın. Öğe adları bu kurala uymayan garantili değildir ve gelecekte değişikliğe tabi olduğu kodun çalışma biçiminin serbest bırakır. Bu nedenlerden dolayı bu tür kod öğeleri bu belgelerden çıkarılır.
+> C dil standardı, kitaplıklar gibi uygulamalar için alt`_`() karakteriyle başlayan tanımlayıcıların kullanımını saklı tutar. Kodunuzda alt bir alt noktayla başlayan adları kullanmayın. Adları bu kuralı izleyen kod öğelerinin davranışı garanti edilmez ve gelecek sürümlerde değişebilir. Bu nedenlerden dolayı, bu tür kod öğeleri bu belgelerden atlanır.

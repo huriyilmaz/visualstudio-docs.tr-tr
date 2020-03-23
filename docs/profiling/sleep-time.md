@@ -1,5 +1,5 @@
 ---
-title: Bekleme süresi | Microsoft Docs
+title: Uyku Süresi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: be2d566228367e2cdb07aecc2d73eaf82a6d961f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62980219"
 ---
-# <a name="sleep-time"></a>Bekleme süresi
-Bu segmentlerde faaliyet zaman çizelgesi uyku kategorilere ayrılır engelleme zamanı ile ilişkilidir. Uyku kategori, bir iş parçacığı, mantıksal çekirdek gönüllü verdiği ve herhangi bir çalışma yapılması anlamına gelir. Bu süre boyunca, bir iş parçacığı eşzamanlılık görselleştiricisi uyku sayılıyor bir API'de engellendi. API'leri gibi `Sleep()` ve `SwitchToThread()` bu gruba girer.
+# <a name="sleep-time"></a>Uyku süresi
+Zaman çizelgesindeki bu kesimler, Uyku olarak sınıflandırılan engelleme süresiyle ilişkilidir. Uyku kategorisi, bir iş parçacığının mantıksal çekirdeğini gönüllü olarak vazgeçtiği ve hiçbir iş yapmadığını gösterir. Bu süre zarfında, EşzamanlıLık Görselleştiricisi Uyku olarak saydığı bir API'de bir iş parçacığı engellendi. API'ler `Sleep()` `SwitchToThread()` gibi ve bu gruba düşmek.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İş Parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)
+- [İş parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)

@@ -1,107 +1,107 @@
 ---
-title: Hata ayıklama - veri görselleştirmeleri
-description: Hata ayıklama, programlama, ortak ve gerekli bir parçasıdır. Mac için Visual Studio kolay hata ayıklama yapmak için özellikleri içeren tam bir paketi içerir. Bu makalede, hata ayıklayıcı'daki nesneleri inceleyerek görüntülenebilir farklı veri görselleştirmeleri bakar.
+title: Hata Ayıklama - Veri Görselleştirmeleri
+description: Hata ayıklama, programlamanın yaygın ve gerekli bir parçasıdır. Mac için Visual Studio, hata ayıklamayı kolaylaştırmak için bir dizi özellik içerir. Bu makalede, hata ayıklama nesneleri denetlenirken görüntülenebilir farklı veri görselleri bakar.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
 ms.openlocfilehash: 14696040160dfc33f89b7647fb73b116b41afa16
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67691739"
 ---
 # <a name="data-visualizations"></a>Veri görselleştirmeleri
 
-Mac için Visual Studio kullanıcı Arabirimi hata ayıklama sırasında görselleştirmelerin bir değişken, alan veya özellik değerlerini sağlayan, hata ayıklayıcı desteği içerir. Bu veri görselleştiriciler veri genişletilmiş bir sürümünü gösterir ve örneğin bir renk yapı rengini gösteren bilinen yapıları, geliştiricilerin sağlar.
+Mac için Visual Studio hata ayıklayıcı için ui desteği içerir, hata ayıklama sırasında bir değişken, alan veya özellik değerlerinin görselleştirmeleri izin. Bu veri görselleştiricileri verilerin genişletilmiş bir sürümünü gösterir ve geliştiricilerin bilinen yapıları denetlemesine izin verir, örneğin bir renk yapısının rengini gösterir.
 
-Hata ayıklama, görselleştiriciler **yerel** doldurma değeri sağında kullanıcı satırın geldiğinde görüntülenen Önizleme simgesine tıklayarak görüntülenebilir:
+Hata ayıklama **Yerel** pad'deki görselleştiriciler, kullanıcı satırın üzerinde gezinirken değerin sağında görünen önizleme simgesine tıklayarak görüntülenebilir:
 
-![Yerel paneli](media/data-visualizations-image9.png)
+![Yerel Pad](media/data-visualizations-image9.png)
 
-Mac için Visual Studio'da hata ayıklama sırasında aşağıdaki listede kullanılabilir yeni görselleştirmeler birçoğu arar
+Aşağıdaki liste, Mac için Visual Studio'da hata ayıklama yaparken kullanılabilen yeni görselleştirmelerin çoğuna bakmaktadır.
 
-## <a name="point"></a>Noktası
-Bir nokta/noktayı gösteren PointF veya CGPoint iOS ve Mac, hata ayıklama panelinde X ve Y değerleri gösteren bir tanımlama grubu şu şekilde işlenir:
+## <a name="point"></a>Nokta
+iOS ve Mac'teki Bir Nokta/PointF veya CGPoint, hata ayıklama defterindeki X ve Y değerlerini gösteren bir tuple olarak işlenir:
 
-![Noktası Görselleştirme](media/data-visualizations-image10.png)
+![Nokta Görselleştirme](media/data-visualizations-image10.png)
 
 ## <a name="size"></a>Boyut
-Bir boyut/SizeF veya CGSize iOS ve Mac bir dikdörtgen işlenir. Çizildiğinde bir boyut 250 büyüdükçe kadar ölçeklendirme piksel, bu noktada, ayarlayacaktır dikdörtgen en büyük boyut 250 piksel:
+iOS ve Mac'teki Boyut/SizeF veya CGSize dikdörtgen olarak işlenir. Bir boyut 250 px'i geçene kadar ölçeklenir ve bu noktada dikdörtgeni en büyük boyutla 250 px olarak ölçeklendirir:
 
-[Görselleştirme boyutu](media/data-visualizations-image11.png)
+[Boyut Görselleştirme](media/data-visualizations-image11.png)
 
 ## <a name="rectangle"></a>Dikdörtgen
-Bir dikdörtgen/RectangleF veya CGRect iOS ve Mac, boyutları ve özgün görüntüler. Benzer şekilde boyutu, çizildiğinde bir boyut 250 büyüdükçe kadar ölçeklendirme px:
+iOS ve Mac'te bir Dikdörtgen/Dikdörtgen F veya CGRect boyutları ve kökeni görüntüler. Boyut'a benzer şekilde, bir boyut 250 px'i geçene kadar ölçekle çizilir:
 
 ![Dikdörtgen Görselleştirme](media/data-visualizations-image12.png)
 
-## <a name="coordinate"></a>Koordinatı
-Koordinatları merkezine sabitlenmiş konumunu bir haritada çizilir:
+## <a name="coordinate"></a>Koordinat
+Koordinatlar bir harita üzerinde çizilir ve konum merkeze sabitlenir:
 
-[Koordinat Görselleştirme](media/data-visualizations-image13.png)
+[Görselleştirmeyi Koordine Edin](media/data-visualizations-image13.png)
 
 ## <a name="color"></a>Renk
-Bu renk Önizleme, RGBA bileşenleri, Hue doygunluğu açıklık değerleri ve rengini onaltılık değerini gösteren UIColor CGColor ve renk özellikleri görüntüler:
+Bu, renk önizlemesini, RGBA bileşenlerini, Ton Doygunluk-Hafiflik değerlerini ve rengin büyü değerini gösteren UIColor, CGColor ve Renk özelliklerini görüntüler:
 
 ![Renk Görselleştirme](media/data-visualizations-image14.png)
 
 ## <a name="images"></a>Görüntüler
 
-Medya en fazla 250 olan bir maksimum boyut için ölçeklendirme işlenecek, piksel ve görüntü 250 aştığında uyacak şekilde ayarlanacaktır piksel:
+Ortam, maksimum 250 px boyutuna kadar ölçeklendirilecek ve görüntü 250 px'i aştığında sığacak şekilde ölçeklendirilir:
 
 ![Görüntü Görselleştirme](media/data-visualizations-image15.png)
 
-## <a name="bezier-curves"></a>Bezier eğrileri
+## <a name="bezier-curves"></a>Bezier Eğrileri
 
-Görselleştiriciyi görüntüleyecek bir `NSBezierPath`:
+Görselleştirici bir `NSBezierPath`görüntüleyecek:
 
-![Bezier eğrisi Görselleştirme](media/data-visualizations-image16.png)
+![Bezier Eğrisi Görselleştirme](media/data-visualizations-image16.png)
 
 ## <a name="string"></a>Dize
 
-100'den az karakter dizesi, bir önizleme olmadan tam görüntülenir. Uzun dizeler tam önizleme olarak görüntülenir. Dizeleri düzenlenebilir ve görselleştiricisi Önizleme veya dize değeri aşağıda gösterilen Düzenleyicisi'nde düzenlenmesi dize değeri sağlayan bir düzenleme düğmesi eşlik:
+100'den az karakterden oluşan bir dize önizleme olmadan tam olarak görüntülenir. Daha uzun dizeleri önizlemede tam olarak görüntülenir. Dizeleri düzenlenebilir ve görselleştiricibir düzenleme düğmesi ile birlikte, dize değerinin önizlemede veya String Value Editor'da aşağıda gösterildiği şekilde düzenlenmesine izin verir:
 
 ![Dize Görselleştirme](media/data-visualizations-image17.png)
 
-### <a name="small-strings"></a>Küçük dizeleri:
-![Küçük dize Görselleştirme](media/data-visualizations-image18.png)]
+### <a name="small-strings"></a>Küçük Dizeleri:
+![Küçük Dize Görselleştirme](media/data-visualizations-image18.png)]
 
-### <a name="medium-length-strings"></a>Orta uzunluklu dizeler:
-![Orta dize Görselleştirme](media/data-visualizations-image19.png)
+### <a name="medium-length-strings"></a>Orta uzunlukta Dizeleri:
+![Orta Dize Görselleştirme](media/data-visualizations-image19.png)
 
-### <a name="editor"></a>Düzenleyen:
+### <a name="editor"></a>Düzenleyicisi:
 
-![Düzenleyici Görselleştirme](media/data-visualizations-image21.png)
+![Editör Görselleştirme](media/data-visualizations-image21.png)
 
-## <a name="ienumerable"></a>IEnumerable
+## <a name="ienumerable"></a>ıenumerable
 
-IEnumerable tüm değerleri sıralar; değerlerin her birinin tıklayarak görüntülenebilir **Göster** değerleri düğmesi. IEnumerable seçeneği gibi nesnelerin değerlerini görüntülemez `Array`, `ArrayList`, `List<>`, `Dictionary<,>` bunlar kendi hata ayıklama görselleştiricileri sahip.
+Tüm değerleri sayısalolarak gösterir; değerleri **Göster** düğmesine tıklayarak her birinin değerleri görüntülenebilir. İzlenebilir seçenek, bu kendi hata ayıklayıcı görselleştiriciler `List<>` `Dictionary<,>` olduğu gibi , , `Array` `ArrayList`, gibi nesneler için değerleri görüntülemez.
 
-![IEnumerable Görselleştirme](media/data-visualizations-image22.png)
+![İzlenebilir Görselleştirme](media/data-visualizations-image22.png)
 
 ## <a name="other-visualizers"></a>Diğer Görselleştiriciler
 
-Kendi satır içi görselleştiriciler de bazı diğer türleri aşağıda listelenmiştir:
+Kendi sıralı görselleştiricileri olan diğer bazı türler aşağıda listelenmiştir:
 
 ![Diğer Görselleştirme](media/data-visualizations-image23.png)
 
 * **Temel Türler**
-  * Bu basit türü ham değeri gösterir.
-* **Sabit listesi**
-  * Bu numaralama türü niteleyici olmayan alan değeri görüntüler.
-* **Tanımlama grubu**
-  * (,) Biçiminde görüntülenir
+  * Bu, ilkel türün ham değerini gösterir.
+* **Sabit Listesi**
+  * Bu, enum Türü niteleyicisi olmadan alan değerini görüntüler.
+* **Tuple**
+  * Biçimde görüntülenir (,)
 * **Null**
   * "Null" değerini gösterir.
 * **URL**
-  * Bu tıklanabilir köprü görüntüler.
-* **IntPtr**
-  * Bu IntPtr bir sayının onaltılık gösterimini görüntüler.
+  * Bu, tıklanabilir bir köprü görüntüler.
+* **ıntptr**
+  * Bu IntPtr bir hexadecimal temsilgörüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Değişkenleri Otolar ve yerel öğeler pencerelerinde (Windows için Visual Studio) denetleyin](/visualstudio/debugger/autos-and-locals-windows)
-- [(Windows için Visual Studio) görselleştiricide dizelerini görüntüle](/visualstudio/debugger/string-visualizer-dialog-box)
+- [Otomatik ve Yerel pencerelerdeki değişkenleri inceleyin (Windows'ta Visual Studio)](/visualstudio/debugger/autos-and-locals-windows)
+- [Dizeleri görselleştiricide görüntüleyin (Windows'ta Visual Studio)](/visualstudio/debugger/string-visualizer-dialog-box)

@@ -1,5 +1,5 @@
 ---
-title: CvWriteMessage işlevi | Microsoft Docs
+title: CvWriteMessage Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -27,14 +27,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea9fd21c346a61939683ee05e3cb9ef3123cc03d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62936666"
 ---
-# <a name="cvwritemessage-function"></a>CvWriteMessage işlevi
-Eşzamanlılık görselleştiricisi izleme dosyasının bir ileti yazar.
+# <a name="cvwritemessage-function"></a>CvWriteMessage fonksiyonu
+Eşzamanlı Görüntüleyici izleme dosyasına bir ileti yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -93,25 +93,25 @@ HRESULT CvWriteMessageExVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList` Bağımsız değişken listesi.
+ `argList`Bağımsız değişkenler listesi.
 
- `category` Aralığın kategorisi
+ `category`Yayılma alanının kategorisi
 
- `level` Aralık önem düzeyi.
+ `level`Açıklığın önem düzeyi.
 
- `pMarkerSeries` Geçerli işaret serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
- `pMessage` İleti biçimi dizesi. NULL olamaz.
+ `pMessage`İleti biçimi dizesi. NULL olamaz.
 
-## <a name="return-value"></a>Dönüş değeri
- İletinin başarılı bir şekilde yazıldığında S_OK. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+## <a name="return-value"></a>Döndürülen değer
+ İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
  **Unicode:** CvWriteMessageW, CvWriteMessageVW, CvWriteMessageExW, CvWriteMessageExVW
 
  **ANSI:** CvWriteMessageA, CvWriteMessageVA, CvWriteMessageExA, CvWriteMessageExVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

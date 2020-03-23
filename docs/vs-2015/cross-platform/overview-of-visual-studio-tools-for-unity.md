@@ -1,5 +1,5 @@
 ---
-title: Unity için Visual Studio Araçları genel bakış | Microsoft Docs
+title: Birlik için Görsel Stüdyo Araçlarına Genel Bakış | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-unity-tools
@@ -9,62 +9,62 @@ caps.latest.revision: 6
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: ba5447301c3a5581d35825ed91c17b3c9f50015f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74298749"
 ---
 # <a name="overview-of-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçlarına Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde, Özellikler Unity için Visual Studio Araçları teklifler ve Unity ile daha üretken olmak için bunları nasıl kullanabileceğiniz hakkında daha fazla bilgi edineceksiniz.  
+Bu bölümde, Visual Studio Tools for Unity'nin sunduğu özellikler ve Unity ile daha üretken olmak için bunları nasıl kullanabileceğiniz hakkında daha fazla bilgi edineceksiniz.  
   
- Unity için Visual Studio Araçları (*VSTU*) Ile Visual Studio 'yu kullanarak içindeki C# oyun ve düzenleyici betikleri yazabilir ve ardından hataları bulmak ve onarmak için güçlü hata ayıklayıcıyı kullanabilirsiniz. VSTU 'nın en son sürümü, Unity 'nin ShaderLab gölgelendirici dili, daha iyi hata ayıklayıcı görselleştirmeleri ve MonoBehavior Sihirbazı için geliştirilmiş kod oluşturma için Sözdizimi renklendirmesi içerir. VSTU, Unity proje dosyalarınızı, konsol iletileri ve daha az zaman için ve Unity Düzenleyicisi'nden kod yazarken geçiş ayırmasına oyununuzu Visual Studio'ya başlatma özelliğini de getirir.  
+ Visual Studio Tools for Unity *(VSTU)* ile Visual Studio'yu kullanarak C#'da oyun ve editör komut dosyaları yazabilir ve ardından hataları bulmak ve düzeltmek için güçlü hata ayıklama aracını kullanabilirsiniz. VSTU'nun en son sürümü, Unity'nin ShaderLab gölgeli dili, daha iyi hata ayıklayıcı görselleştirmeleri ve MonoBehavior sihirbazı için geliştirilmiş kod oluşturma için sözdizimi boyama içerir. VSTU ayrıca Unity proje dosyalarınızı, konsol mesajlarınızı ve oyununuzu Visual Studio'ya başlatabilme yeteneğinizi de getirir, böylece kod yazarken Unity Editor'a geçiş yapmak için daha az zaman harcayabilirsiniz.  
   
  Bu özellikler hakkında daha fazla bilgi edinmek için okumaya devam edin.  
   
-## <a name="integration-with-unity"></a>Unity ile tümleştirme  
- Unity Düzenleyicisi ve Visual Studio ile her zaman arasında geçiş yapmak zorunda kaldıysanız üretkenlik Enhancer Unity için Visual Studio Araçları. Unity için Visual Studio Araçları, Visual Studio 'dan çıkmadan çalışmanın devam etmesini kolaylaştırır.  
+## <a name="integration-with-unity"></a>Birlik ile Bütünleşme  
+ Unity editörü ve Visual Studio arasında sürekli geçiş yapmak zorunda olsaydınız, Visual Studio Tools for Unity üretkenlik artırıcı olmazdı. Bu nedenle Visual Studio Tools for Unity, Visual Studio'dan ayrılmadan iş yapmayı kolaylaştırır.  
   
-- **Unity Proje Gezgini** , Unity Düzenleyicisi 'nde görüntülenen aynı hiyerarşiyi kullanarak tüm Unity projenizi Visual Studio içinde görüntüler.  
+- **Unity Project Explorer,** Unity düzenleyicisinde görüntülenen hiyerarşiyi kullanarak görsel stüdyodaki tüm Birlik projenizi görüntüler.  
   
-- Unity konsol tümleştirmesi, Visual Studio 'nun hata penceresi içinde Unity konsolunun çıktısını görüntüler.  
+- Unity konsol entegrasyonu, Visual Studio'nun hata penceresinin hemen içinde Unity konsolundan çıktı görüntüler.  
   
-- Visual Studio 'dan oyununuzda hata ayıklamayı başlatın; Unity 'ye geri dönmek için yalnızca F5 tuşuna basın.  
+- Visual Studio'dan oyununuzu hata ayıklamaya başlayın – Unity'ye geri dönmenize gerek yok, sadece F5 tuşuna basın.  
   
-## <a name="superior-debugging"></a>Üstün hata ayıklama  
- Tek başına veya Unity düzenleyicisinde çalışıp çalışmadığını bağımsız olarak, betiklerinizde C# ve DLL 'lerde hata ayıklamak Için Visual Studio 'nun güçlü hata ayıklayıcısını Unity oyununuza bağlayın. Visual Studio 'da beklediğinizi tüm hata ayıklama özelliklerini kullanabilirsiniz.  
+## <a name="superior-debugging"></a>Üstün Hata Ayıklama  
+ İster tek başına ister Unity editöründe bağımsız olarak çalıştırılsın, C# komut dosyalarınızı ve DL'lerinizi hata ayıklamak için Visual Studio'nun güçlü hata ayıklayıcısını Unity oyununa bağlayın. Visual Studio'dan beklediğiniz tüm hata ayıklama özelliklerini kullanabilirsiniz.  
   
 - Koşullu kesme noktaları da dahil olmak üzere kesme noktaları.  
   
-- İzleme penceresinde karmaşık ifadeleri takip edin.  
+- İzleme penceresindekarmaşık ifadeleri değerlendirin.  
   
-- Değişkenleri ve bağımsız değişkenleri inceleyin ve değerlerini değiştirin.  
+- Değişkenlerin ve bağımsız değişkenlerin değerini inceleyin ve değiştirin.  
   
-- Karmaşık nesnelerde ve veri yapılarında detaya gidin.  
+- Karmaşık nesnelere ve veri yapılarına ayrıntılı bilgi verin.  
   
-  Hatta, ağınızdaki başka bir makinede çalışırken Unity oyununuzda hata ayıklayabilirsiniz.  
+  Ağınızdaki başka bir makinede çalışırken Unity oyununuzu bile hata ayıklayabilirsiniz.  
   
 ## <a name="productivity"></a>Üretkenlik  
- Visual Studio 'nun ' de C#kod yazma ve yeniden düzenleme verimliliğine ek olarak, Unity için Visual Studio Araçları Unity geliştiricileri için ek üretkenlik özellikleri sağlar.  
+ Visual Studio'nun C#'da kod yazma ve yeniden düzenleme için kurduğu üretkenliğe ek olarak, Visual Studio Tools for Unity geliştiricileri için ekstra üretkenlik özellikleri sağlar.  
   
-- Unity 'nin ShaderLab dili için sözdizimi renklendirme, hata haline gelmeden önce gölgelendiricilerde hata almanıza yardımcı olur. Yalnızca Visual Studio 'da ShaderLab dosyalarınızı açmanız yeterlidir.  
+- Unity'nin ShaderLab dili için sözdizimi boyama, gölgeli lerinizdeki hataları hata olmadan önce tespit etmenize yardımcı olur. ShaderLab dosyalarınızı Visual Studio'da açmanız.  
   
-- MonoBehavior Sihirbazı, Unity davranışlarının bir listesine gözatmanızı sağlar ve alışık olabileceğiniz davranışlar için ortak kod oluşturur. CTRL + SHIFT + e tuşlarına basın.  
+- MonoBehavior sihirbazı, Birlik davranışları listesine göz atmanıza olanak tanır ve aşina olmadığınız davranışlar için ortak kod oluşturur. CTRL+SHIFT+M tuşuna basın.  
   
-- En çok kullandığınız Unity davranışlarına alışdıktan sonra Hızlı MonoBehavior Sihirbazı bunları parmaklarınızın sağına koyar. CTRL + ALT + Q tuşlarına basın.  
+- En çok kullandığınız Birlik davranışlarına aşina olduğunuzda, Hızlı MonoBehavior sihirbazı bunları parmaklarınızın ucuna getirir. CTRL+ALT+Q tuşuna basın.  
   
-- Visual Studio 'da Unity belgelerine erişin. Hakkında bilgi edinmek istediğiniz API çağrısını vurgulayın, sonra CTRL + ALT + M, CTRL + H tuşlarına basın.  
+- Visual Studio'dan Unity belgelerine erişin. Öğrenmek istediğiniz API çağrısını vurgulayın, ardından CTRL+ALT+M, CTRL+H tuşlarına basın.  
   
-- Klavye kısayollarıyla tüm bu özelliklere ve daha fazlasına erişin.  
+- Klavye kısayolları ile tüm bu özelliklere ve daha fazlasına erişin.  
   
-## <a name="visual-studio-tools-for-unity-api"></a>Unity API için Visual Studio Araçları  
- Unity için Visual Studio Araçları, belirtilen API 'Leri kullanarak davranışını özelleştirin ve genişletin.  
+## <a name="visual-studio-tools-for-unity-api"></a>Unity API için Visual Studio araçları  
+ Sağlanan API'leri kullanarak Visual Studio Tools for Unity davranışını özelleştirin ve genişletin.  
   
-- Unity için Visual Studio Araçları, bir günlük geri çağırması kaydederek Unity konsolunun Visual Studio 'ya akışını sağlayabilir. Bilgileri günlüğe kaydetmek için kullandığınız düzenleyici betikleriniz varsa, iletilerinizi Visual Studio 'ya göndermek için aynı geri aramaya takabilirsiniz. Daha fazla bilgi için günlük geri çağırma örneğine bakın.  
+- Visual Studio Tools for Unity, Unity konsoluna akış yapabilmesi için günlük geri arama kaydeder. Bilgileri kaydeden düzenleyici komut dosyalarınız varsa, iletilerinizi Visual Studio'ya göndermek için bunları aynı geri arama ya da bu komut dosyasına takabilirsiniz. Daha fazla bilgi için, Geri Arama Günlüğü örneğine bakın.  
   
-- Unity stili geri çağırma ProjectFileGeneration kullanarak, Unity için Visual Studio Araçları proje dosyalarını nasıl üretkullanabileceğinizi değiştirebilirsiniz. Daha fazla bilgi için bkz. proje dosyası oluşturma örneği.  
+- Unity stili geri arama ProjectFileGeneration'ı kullanarak Visual Studio Tools for Unity proje dosyalarını nasıl oluşturduğunu değiştirebilirsiniz. Daha fazla bilgi için Proje Dosyası Oluşturma örneğine bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Unity giriş sayfası](https://unity.com/)
+ [Birlik Ana Sayfası](https://unity.com/)

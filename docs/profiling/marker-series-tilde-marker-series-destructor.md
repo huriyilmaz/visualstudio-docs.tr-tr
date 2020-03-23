@@ -1,5 +1,5 @@
 ---
-title: 'marker_series:: ~ marker_series yok Edicisi | Microsoft Docs'
+title: marker_series::~marker_series Yıkıcı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9de1d51eb99fa6914f792ed4c34668f861caee02
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62831377"
 ---
-# <a name="markerseriesmarkerseries-destructor"></a>marker_series:: ~ marker_series yok Edicisi
-Marker_series nesnesini yok eder ve ayrılan tüm kaynakları serbest bırakır.
+# <a name="marker_seriesmarker_series-destructor"></a>marker_series::~marker_series yıkıcı
+marker_series nesneyi yok eder ve ayrılan tüm kaynakları salar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,9 +29,9 @@ Marker_series nesnesini yok eder ve ayrılan tüm kaynakları serbest bırakır.
 ```
 
 ## <a name="requirements"></a>Gereksinimler
- **Header:** *cvmarkersobj.h*
+ **Başlık:** *cvmarkersobj.h*
 
- **Namespace:** CONCURRENCY::Diagnostic
+ **Ad alanı:** Eşzamanlılık::diagnostik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [marker_series class](../profiling/marker-series-class.md)
+- [marker_series sınıfı](../profiling/marker-series-class.md)

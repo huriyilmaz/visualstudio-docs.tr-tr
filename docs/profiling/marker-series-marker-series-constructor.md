@@ -1,5 +1,5 @@
 ---
-title: marker_series::marker_series Oluşturucusu | Microsoft Docs
+title: marker_series::marker_series Yapıcı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5178b2cebdfa4246256aef6334e026ef091fa553
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62831419"
 ---
-# <a name="markerseriesmarkerseries-constructor"></a>marker_series::marker_series Oluşturucusu
-Yeni bir örneğini başlatır `marker_series` sınıfı.
+# <a name="marker_seriesmarker_series-constructor"></a>marker_series::marker_series yapıcı
+`marker_series` sınıfının yeni bir örneğini başlatır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,14 +39,14 @@ marker_series(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_SeriesName` Oluşturulacak dizinin adı.
+ `_SeriesName`Oluşturulacak serinin adı.
 
- `_ProviderGuid` Seri sağlayıcısı GUID.
+ `_ProviderGuid`Seri sağlayıcısının GUID'i.
 
 ## <a name="requirements"></a>Gereksinimler
- **Header:** *cvmarkersobj.h*
+ **Başlık:** *cvmarkersobj.h*
 
- **Namespace:** CONCURRENCY::Diagnostic
+ **Ad alanı:** Eşzamanlılık::diagnostik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [marker_series class](../profiling/marker-series-class.md)
+- [marker_series sınıfı](../profiling/marker-series-class.md)

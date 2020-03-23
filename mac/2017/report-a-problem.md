@@ -1,71 +1,71 @@
 ---
 title: Mac için Visual Studio ile ilgili bir sorun bildirin
-description: Mac için Visual Studio kullanırken önerileri veya rapor sorunları deneyimli hale getirme
+description: Mac için Visual Studio'yi kullanırken karşılaşılan önerilerde bulunma veya sorunları bildirme.
 ms.topic: troubleshooting
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/16/2018
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
 ms.openlocfilehash: 3513f4e120db3bab61348f0ee1f0f452d09ded15
-ms.sourcegitcommit: aeb1a1135dd789551e15aa5124099a5fe3f0f32b
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "66501005"
 ---
-# <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Mac için Visual Studio'da bir sorun bildirme
+# <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Mac için Visual Studio'da bir sorun nasıl bildirilir?
 
-Mac için Visual Studio ile ilgili bir sorun yaşarsanız, bunu bilmek istiyoruz. Sorunu bildirme işte [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) böylece biz de tanılayın ve düzeltin.
+Mac için Visual Studio ile ilgili bir sorun la karşılaşırsanız, bu konuda bilmek istiyoruz. Tanı koyabilmemiz ve düzeltebilmemiz için sorunu [Geliştirici Topluluğu'na](https://developercommunity.visualstudio.com/spaces/41/index.html) şu şekilde bildirebilirsiniz.
 
-## <a name="how-to-report-a-problem"></a>Bir sorun bildirme
+## <a name="how-to-report-a-problem"></a>Sorun bildirme
 
-Mac için Visual Studio için bir sorun bildirmek için Mac için Visual Studio rapordan başlatmak için en iyi seçenek olan Mac için Visual Studio aracılığıyla raporlama raporda otomatik olarak dahil edilecek tanılama bilgileri sağlar. (Örneğin bir kilitlenme) nedeniyle Mac için Visual Studio kullanamıyorsanız, doğrudan sorunu bildirebilirsiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/problem/post.html?space=41) site.
+Mac için Visual Studio için bir sorunu bildirmek için en iyi seçenek, Raporu Mac için Visual Studio'dan başlatmaktır. Mac için Visual Studio aracılığıyla raporlama, tanılama bilgilerinin rapora otomatik olarak eklenmesini sağlar. Visual Studio for Mac'i kullanamıyorsanız (örneğin, bir kilitlenme nedeniyle), sorunu doğrudan [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/problem/post.html?space=41) sitesinde bildirebilirsiniz.
 
-Mac için Visual Studio ile ilgili bir sorun bildirmek için seçin **Yardım > bir sorun bildirmek** menü çubuğundan:
+Mac için Visual Studio ile ilgili bir sorunu bildirmek için, menü çubuğundan **Sorun Bildir'> Yardım'ı** seçin:
 
-![bir sorun bağlantı raporu](media/report-problem-image1.png)
+![bir sorun bağlantısını bildirme](media/report-problem-image1.png)
 
-1. Oturumunuz değil, seçin **oturum**; aşağıdaki ekran görüntüsünde gösterildiği gibi araç sağ tarafında olduğu. Oturum açın ekrandaki yönergeleri izleyin.
+1. Oturum açmadıysanız Oturum **Aç'ı**seçin; aşağıdaki ekran görüntüsünde gösterildiği gibi, aracın sağ tarafındadır. Oturum açmayönergelerini ekranda izleyin.
 
-    !["Oturum Aç" düğmesi ile iletişim](media/report-problem-image2.png)
+    !["oturum açma" düğmesi ile iletişim kutusu](media/report-problem-image2.png)
 
-    Oturum açtığınızda, karşılaştığınız bir sorunu bildirebilir. Oy verebilirsiniz veya gördüğünüz herhangi bir sorun üzerinde yorum gönderildi.
+    Oturum açken, karşılaştığınız bir sorunu bildirebilirsiniz. Ayrıca, yayınlanmış gördüğünüz diğer sorunları oylayabilir veya yorum yapabilirsiniz.
 
-1. Oturum açtıktan sonra bildirilen sorunları ve çözümleri görmek mümkün olmayacak **ardından sorunlar ve çözümleri** ekranı
+1. Oturum imzaladıktan sonra, bildirilen sorunlarınızı ve çözümlerinizi **takip edilen sorunlar ve çözümler** ekranında görebilirsiniz
 
-    ![bildirilen sorunları listesi](media/report-problem-image3.png)
+    ![bildirilen sorunların listesi](media/report-problem-image3.png)
 
-1. Mac için Visual Studio sorununuz için arama yapın ve başkalarının bunu bildiren, görmek için bir arabirim sağlar. Birisi bildirdi yaparsanız, başlığa tıklayarak ve "yukarı-bize bildirmek için oy".
+1. Mac için Visual Studio, sorununuzu aramak ve başkalarının bunu rapor edip etmeyişebilip bildirmeyini görmek için bir arayüz sağlar. Birisi bunu bildirdiyse, bize bildirmek için başlığı tıklayabilir ve "yukarı oy" olabilirsiniz.
    > [!NOTE]
-   > Aramak için arama kutusunu ve ENTER'a tıklayın, arama terimlerini girin veya arama simgesine basın.
+   > Arama yapmak için arama terimlerinizi arama kutusuna girin ve Enter'u tıklatın veya Arama simgesine basın.
 
-   ![Arama ve benzer sorunlar için oy](media/report-problem-image4.png)
+   ![Benzer sorunları arama ve oy kullanma](media/report-problem-image4.png)
 
-1. Karşılaştığınız sorun bulamazsanız seçin **yeni bir sorun bildirmek** ekran tarafında.
+1. Karşılaştığınız sorunu bulamazsanız, ekranın yanında **Yeni Bir Sorun Bildir'i** seçin.
 
    > [!NOTE]
-   > **Yeni bir sorun bildirmek** yalnızca düğmesinin arabirimi Mac için Visual Studio için geliştirici topluluğu. Doğrudan bir sorun raporlayamaz [Geliştirici topluluğu](https://developercommunity.visualstudio.com/) Web sitesi.
+   > **Yeni Sorun Bildir** düğmesi yalnızca Geliştirici Topluluğu için Mac arabirimi için Visual Studio'da görünür. Bir sorunu doğrudan [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/) web sitesinde bildiremezsiniz.
 
-1. Yönlendirecek doğru Visual Studio Mac takım için bize yardımcı olacak sorun için açıklayıcı bir başlık oluşturun.
+1. Mac ekibi için doğru Visual Studio'ya yönlendirmemize yardımcı olan sorun için açıklayıcı bir başlık oluşturun.
 
 1. Bize ek ayrıntılar verin ve mümkünse sorunu yeniden oluşturma adımlarını sağlayın.
 
-   ![Yeni sorun bildirin](media/report-problem-image5.png)
+   ![Yeni bir sorun bildirme](media/report-problem-image5.png)
 
-1. Seçin **sonraki** taşımak için **eklerde** sekmesi. Burada, Microsoft'a göndermek için geçerli ekranınızın yakalayabilirsiniz. Günlük dosyası eklemek için tıklayın ![ekleme günlükleri](media/report-problem-attach-logs.png) simgesini veya ek ekran görüntüleri ve diğer dosyaları eklemek için tıklayın ![ekleme dosyası](media/report-problem-attach-file.png) simgesi.
+1. **Ekler ekle** sekmesine geçmek için **İleri'yi** seçin. Burada, Microsoft'a göndermek için geçerli ekranınızı yakalayabilirsiniz. Günlük dosyaları eklemek için ![Günlükler](media/report-problem-attach-logs.png) Ekle simgesine tıklayın veya ek ekran görüntüleri ![ve](media/report-problem-attach-file.png) diğer dosyalar eklemek için Dosya Ekle simgesine tıklayın.
 
-   ![Sorun raporu Mac için Visual Studio ekran ekleme](media/report-problem-image6.png)
+   ![Mac sorun raporu için Visual Studio'ya ekran görüntüsü ekleme](media/report-problem-image6.png)
 
-1. Seçin **Gönder** birlikte herhangi bir görüntü raporunuzu gönderin ve günlük dosyaları.
+1. Raporunuzu göndermek için herhangi bir resim ve günlük dosyasıyla birlikte **Gönder'i** seçin.
 
-   Hangi verinin toplanması hakkında daha fazla bilgi için bkz: [topladığımız veriler](/visualstudio/ide/developer-community-privacy#data-we-collect).
+   Hangi verilerin toplandığı hakkında bilgi için, [topladığımız Verilere](/visualstudio/ide/developer-community-privacy#data-we-collect)bakın.
 
-## <a name="search-for-solutions-or-provide-feedback"></a>Çözümler için arama yapın veya geri bildirimde bulunun
+## <a name="search-for-solutions-or-provide-feedback"></a>Çözüm arama veya geri bildirim sağlama
 
-İstemiyorsanız veya Mac için Visual Studio bir sorunu bildirmek için kullanılamaz sorun zaten bildirildi ve gönderilen çözüm üzerinde imkanı yoktur [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) sayfası.
+Bir sorunu bildirmek için Visual Studio'yu Mac için kullanmak istemiyorsanız veya kullanamıyorsanız, sorunun zaten bildirilmiş olma olasılığı ve [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) sayfasında bir çözüm yayınlanma olasılığı vardır.
 
-Rapor, ancak bir özellik önermek istediğiniz bir sorun yoksa yoktur, bir yer çok. Daha fazla bilgi için [özellik önerin](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) sayfası.
+Bildirmek için bir sorun yoksa ancak bir özellik önermek istiyorsanız, bunun için de bir yer vardır. Daha fazla bilgi için [bir özellik öner](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) sayfasına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Windows üzerinde) Visual Studio sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+- [Visual Studio ile ilgili bir sorunu bildirme (Windows'ta)](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)

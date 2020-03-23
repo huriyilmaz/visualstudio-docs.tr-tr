@@ -1,5 +1,5 @@
 ---
-title: Tanılama Namespace | Microsoft Docs
+title: tanılama Namespace | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 03671f314dca3c016f9524bcb246b74e0eb1f837
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970090"
 ---
-# <a name="diagnostic-namespace"></a>Tanılama ad alanı
-`diagnostics` Ad alanı için eşzamanlılık görselleştiricisi işaretleyicileri yayma işlevselliği sağlar.
+# <a name="diagnostic-namespace"></a>tanılama ad alanı
+Ad `diagnostics` alanı, EşzamanlıLık Görselleştirici işaretçileri yayan işlevsellik sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,21 +32,21 @@ namespace diagnostic;
 
 ### <a name="classes"></a>Sınıflar
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |----------|-----------------|
-|[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayları seri bir kanalı temsil eder.|
-|[span Sınıfı](../profiling/span-class.md)|Uygulamanın bir aşama tanımlar.|
+|[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayların seri kanalını temsil eder.|
+|[span Sınıfı](../profiling/span-class.md)|Uygulamanın bir aşamasını tanımlar.|
 
 ### <a name="enumerations"></a>Numaralandırmalar
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |----------|-----------------|
-|[marker_importance Sabit Listesi](../profiling/marker-importance-enumeration.md)|Eşzamanlılık görselleştiricisi işaretleyicisi önem düzeyini temsil eder.|
+|[marker_importance Sabit Listesi](../profiling/marker-importance-enumeration.md)|Eşzamanlı Görselleştirici işaretleyicisinin önem düzeyini temsil eder.|
 
 ## <a name="requirements"></a>Gereksinimler
- **Header:** *cvmarkersobj.h*
+ **Başlık:** *cvmarkersobj.h*
 
- **Namespace:** Eşzamanlılık
+ **Ad alanı:** Eşzamanlılık
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)
+- [Eşzamanlı ad alanı (Eşzamanlılık Görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)

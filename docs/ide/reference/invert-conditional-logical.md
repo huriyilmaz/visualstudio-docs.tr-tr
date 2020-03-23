@@ -11,36 +11,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3931ae53fc29b0ffd8b8b6e96951a0f4786ff756
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531683"
 ---
-# <a name="invert-conditional-expressions-and-conditional-andor-operators"></a>Koşullu ifadeleri ve koşullu ters çevir ve/veya işleçler
+# <a name="invert-conditional-expressions-and-conditional-andor-operators"></a>Koşullu ifadeleri ve koşullu VE/VEYA işleçlerini ters çevirin
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 - Visual Basic
 
-**Ne:** Bir koşullu ifade veya koşullu ters olanak tanır ve/veya işleci.
+**Ne:** Koşullu bir ifadeyi veya koşullu ve/VEYA işlecinizi ters çevirmenizi sağlar.
 
-**ne zaman:** Bir koşullu ifade veya koşullu ve/veya ters işleci, daha iyi anlaşılması.
+**Ne zaman:** Ters çevrilmişse daha iyi anlaşılabilecek koşullu bir ifadeye veya koşullu VE/VEYA operatörünüz var.
 
-**Neden:** Bir ifade veya koşullu ters çevirme ve/veya el ile operatör daha uzun sürer ve büyük olasılıkla hatalara. Bu kod düzeltmesi bu otomatik olarak yeniden düzenleme yapmanıza yardımcı olur.
+**Neden:** Bir ifadeyi veya koşullu VE/VEYA işlecinin elle ters çevrilmesi çok daha uzun sürebilir ve büyük olasılıkla hatalara neden olabilir. Bu kod düzeltmesi, bu yeniden düzenlemeyi otomatik olarak yapmanıza yardımcı olur.
 
-## <a name="invert-conditional-expressions-and-conditional-andor-operators-refactoring"></a>Koşullu ifadeleri ve koşullu ters çevir ve/veya çıkarma işleçleri
+## <a name="invert-conditional-expressions-and-conditional-andor-operators-refactoring"></a>Koşullu ifadeleri ve koşullu VE/OR operatörlerini yeniden düzenlemeyi tersine çevirin
 
-1. Bir koşullu ifade veya koşullu imleci yerleştirin ve/veya işleci.
-2. Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-3. Seçin **renkleri ters çevirme koşullu** veya **Değiştir ' & &' ile ' ||'**
+1. İmlecinizi koşullu bir ifadeye veya koşullu ve/VEYA işlecine yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+3. **Koşullu Ters Çevir'i** seçin veya **'&&'yi '||' ile değiştir'i değiştirin**
 
-    ![Koşullu ters çevir](media/invert-conditional.png)
+    ![Koşullu ters çevirme](media/invert-conditional.png)
 
-    ![Koşullu ters çevir](media/invert-logical-operator.png)
+    ![Koşullu ters çevirme](media/invert-logical-operator.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
-- [.NET Geliştiricileri için İpuçları](../csharp-developer-productivity.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)
+- [.NET Geliştiricileri için ipuçları](../csharp-developer-productivity.md)

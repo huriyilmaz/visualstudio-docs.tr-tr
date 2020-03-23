@@ -1,5 +1,5 @@
 ---
-title: Çözüm Gezgini için iç içe geçme kurallar dosyası
+title: Çözüm Gezgini için dosya iç içe geçme kuralları
 ms.date: 05/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,107 +9,107 @@ author: angelosp
 ms.author: angelpe
 manager: jillfra
 ms.openlocfilehash: a36ca2535785f72756ad66a69c2ebe4d7d5a373b
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "67587023"
 ---
 # <a name="file-nesting-in-solution-explorer"></a>Çözüm Gezgini’nde dosya iç içe yerleştirme
 
-**Çözüm Gezgini** Yuvalar ilgili dosyaları düzenlemek ve daha kolay bulmak yardımcı olmak için. Bir projeye bir Windows Forms formu eklerseniz, örneğin, form için kod dosyasını formda aşağıda iç içe yerleştirilmiş **Çözüm Gezgini**. ASP.NET Core projelerinde, bir adım daha fazla dosya iç içe yerleştime alınabilir. Arasında dosya iç içe geçme önayarlarını seçebilirsiniz **kapalı**, **varsayılan**, ve **Web**. Ayrıca [nasıl dosyaları iç içe özelleştirme](#customize-file-nesting) veya [çözüm ve proje özgü ayarları oluşturma](#create-project-specific-settings).
+**Çözüm Gezgini,** ilgili dosyaları düzenlemeye yardımcı olmak ve bulmalarını kolaylaştırmak için yuvaları. Örneğin, bir projeye Windows Forms formu eklerseniz, formun kod dosyası **Çözüm Gezgini'ndeki**formun altına iç içe geçer. ASP.NET Core projelerinde, dosya iç içe geçme bir adım daha ileri alınabilir. Dosya iç içe geçme ön kümeleri **Kapalı**, **Varsayılan**ve **Web**arasında seçim yapabilirsiniz. Ayrıca, [dosyaların iç içe nasıl iç içe olduğunu özelleştirebilir](#customize-file-nesting) veya [çözüme özgü ve projeye özgü ayarlar oluşturabilirsiniz.](#create-project-specific-settings)
 
 > [!NOTE]
-> Şu anda özelliğidir yalnızca ASP.NET Core projeleri için desteklenir.
+> Özellik şu anda yalnızca ASP.NET Core projeleri için desteklenir.
 
-## <a name="file-nesting-options"></a>Dosya iç içe geçmiş seçenekleri
+## <a name="file-nesting-options"></a>Dosya iç içe geçme seçenekleri
 
-![Açma/kapatma iç içe dosya kapatma düğmesi](media/filenesting_onoff.png)
+![Dosya iç içe geçmeyi açma/kapatma düğmesi](media/filenesting_onoff.png)
 
-Özelleştirilmiş olmayan dosya iç içe yerleştirme için kullanılabilir seçenekler şunlardır:
+Özelleştirilmemiş dosya iç içe geçme için kullanılabilir seçenekler şunlardır:
 
-* **Kapalı**: Bu seçenek, tüm iç içe yerleştirme içermeyen dosyaları düz bir listesini sağlar.
+* **Kapalı**: Bu seçenek, herhangi bir iç içe geçmeden dosyaların düz bir listesini verir.
 
-* **Varsayılan**: Bu seçenek size davranışı iç içe varsayılan dosya **Çözüm Gezgini**. Belirtilen proje türü için hiçbir ayar varsa, projede hiçbir dosya iç içe geçirilmiştir. İç içe geçme ayarlarını, örneğin, bir web projesi için mevcut durumunda uygulanır.
+* **Varsayılan**: Bu **seçenek, Çözüm Gezgini'nde**varsayılan dosya iç içe geçme davranışını sağlar. Belirli bir proje türü için ayar yoksa, projedeki hiçbir dosya iç içe geçmez. Ayarlar varsa, örneğin bir web projesi için iç içe geçme uygulanır.
 
-* **Web**: Bu seçenek geçerli **Web** geçerli Çözümdeki tüm projelere iç içe geçme davranışı dosya. Çok sayıda kurallarına sahiptir ve gözden geçirin ve düşüncelerinizi bize etmenizi öneririz. Bu seçenekle alın Dosya iç içe geçme davranış yalnızca birkaç örnek aşağıdaki ekran görüntüsünde vurgulanmıştır:
+* **Web**: Bu seçenek, geçerli çözümdeki tüm projelere **Web** dosyası iç içe geçme davranışını uygular. Çok sayıda kuralı var ve bunu kontrol etmenizi ve ne düşündüğünüzü bize söylemenizi öneririz. Aşağıdaki ekran görüntüsü, bu seçenekle elde ettiğiniz dosya iç içe geçme davranışının yalnızca birkaç örneğini vurgular:
 
    ![Çözüm Gezgini’nde dosya iç içe yerleştirme](media/filenesting.png)
 
-## <a name="customize-file-nesting"></a>Dosya iç içe yerleştime özelleştirme
+## <a name="customize-file-nesting"></a>Dosya iç içe geçmeyi özelleştirme
 
-Kullanıma hazır alma beğenmezseniz isteyin ayarları iç içe geçme, kendi özel dosya oluşturabilirsiniz **Çözüm Gezgini** dosyaları iç içe nasıl. İstediğiniz ve bunları istediğiniz gibi arasında geçiş yapabilirsiniz sayıda özel dosya iç içe geçme ayar ekleyebilirsiniz. Yeni bir özel ayarı oluşturmak için boş bir dosya ile başlayabilirsiniz veya kullanabileceğiniz **Web** , başlangıç noktası olarak ayarlar:
+Kutudan çıkanları beğenmezseniz, **Solution Explorer'a** dosyaları nasıl iç içe geçirirseniz öğreten kendi özel dosya iç içe geçme ayarlarınızı oluşturabilirsiniz. İstediğiniz kadar özel dosya iç içe geçme ayarı ekleyebilirsiniz ve istediğiniz gibi aralarında geçiş yapabilirsiniz. Yeni bir özel ayar oluşturmak için boş bir dosyayla başlayabilir veya Başlangıç noktanız olarak **Web** ayarlarını kullanabilirsiniz:
 
 ![Özel dosya iç içe geçme kuralları ekleme](media/filenesting_addcustom.png)
 
-Kullanmanızı öneririz **Web** şeyle zaten işlevleri çalışmak daha kolay olduğundan, başlangıç ayarlarını gelin. Kullanırsanız **Web** ayarları, başlangıç noktası olarak *. filenesting.json* dosya şu dosyaya benzer görünür:
+Zaten çalışan bir şeyle çalışmak daha kolay **olduğundan, Web** ayarlarını başlangıç noktanız olarak kullanmanızı öneririz. **Web** ayarlarını başlangıç noktanız olarak kullanırsanız, *.filenesting.json* dosyası aşağıdaki dosyaya benzer görünür:
 
-![Özel ayarlar için temel olarak iç içe kuralları varolan dosyayı kullan](media/filenesting_editcustom.png)
+![Özel ayarlar için temel olarak varolan dosya iç içe geçme kurallarını kullanma](media/filenesting_editcustom.png)
 
-Şimdi düğüm üzerinde odaklanın **dependentFileProviders** ve onun alt düğümleri. Her alt düğümü, dosyaları yerleştirmek için Visual Studio'yu kullanabilirsiniz kural türüdür. Örneğin, **aynı dosya adı, ancak farklı bir uzantıya sahip** kuralı bir türüdür. Kullanılabilir kurallar şunlardır:
+Düğüm **bağımlısıFileProviders** ve alt düğümlerine odaklanalım. Her alt düğüm, Visual Studio'nun dosyaları yuvalamak için kullanabileceği bir kural türüdür. Örneğin, **aynı dosya adına sahip, ancak farklı bir uzantı** kural türüdür. Mevcut kurallar şunlardır:
 
-* **extensionToExtension**: İç içe yerleştirmek için bu kural türü kullanmak *file.js* altında *file.ts*
+* **extensionToExtension**: *file.js'yi* *file.ts* altında yuvalamak için bu kural türünü kullanın
 
-* **fileSuffixToExtension**: İç içe yerleştirmek için bu kural türü kullanmak *dosya vsdoc.js* altında *file.js*
+* **fileSuffixToExtension**: *dosya-vsdoc.js* *dosya.js* altında yuva için kural bu tür kullanın
 
-* **addedExtension**: İç içe yerleştirmek için bu kural türü kullanmak *file.html.css* altında *file.html*
+* **addedExtension**: *file.html.css* *dosya.html* altında yuva için kural bu tür kullanın
 
-* **pathSegment**: İç içe yerleştirmek için bu kural türü kullanmak *jquery.min.js* altında *jquery.js*
+* **pathSegment**: *jquery.min.js altında jquery.min.js* yuva için kural bu tür kullanın *jquery.js*
 
-* **allExtensions**: İç içe yerleştirmek için bu kural türü kullanmak *dosya.* * altında *file.js*
+* **allExtensions**: Dosyayı yuvalamak için bu tür bir kural *kullanın.* * *altında file.js*
 
-* **fileToFile**: İç içe yerleştirmek için bu kural türü kullanmak *bower.json* altında *.bowerrc*
+* **fileToFile**: *.bowerrc* altında *bower.json* yuva için kural bu tür kullanın
 
 ### <a name="the-extensiontoextension-provider"></a>ExtensionToExtension sağlayıcısı
 
-Bu sağlayıcı belirli dosya uzantılarını kullanarak dosya iç içe geçme kuralları tanımlamanıza olanak sağlar. Aşağıdaki örnek göz önünde bulundurun:
+Bu sağlayıcı, belirli dosya uzantılarını kullanarak dosya iç içe geçme kurallarını tanımlamanızı sağlar. Aşağıdaki örneği inceleyin:
 
-![extentionToExtension örnek kural](media/filenesting_extensiontoextension.png) ![extentionToExtension örnek etkisi](media/filenesting_extensiontoextension_effect.png)
+![extentionToExtension örnek kuralları](media/filenesting_extensiontoextension.png) ![extentionToExtension örnek etkisi](media/filenesting_extensiontoextension_effect.png)
 
-* *Cart.js* altında iç içe *cart.ts* ilk nedeniyle **extensionToExtension** kuralı
+* *cart.js* ilk **uzantısıToExtension** kuralı nedeniyle *cart.ts* altında iç içe
 
-* *Cart.js* altında iç içe *cart.tsx* çünkü **.ts** önce gelen **.tsx** kuralları ve ayrıca bir üst yalnızca olabilir
+* *cart.js* *cart.tsx* altında iç içe değildir çünkü **.tss** kurallarda **.tsx'ten** önce gelir ve yalnızca bir ebeveyn olabilir
 
-* *Light.css* altında iç içe *light.sass* ikinci nedeniyle **extensionToExtension** kuralı
+* *light.css* ikinci **uzantısıToExtension** kuralı nedeniyle *light.sass* altında iç içe
 
-* *Home.HTML* altında iç içe *home.md* üçüncü nedeniyle **extensionToExtension** kuralı
+* *home.html* üçüncü **uzantısıToExtension** kuralı nedeniyle *home.md* altında iç içe
 
-### <a name="the-filesuffixtoextension-provider"></a>FileSuffixToExtension sağlayıcısı
+### <a name="the-filesuffixtoextension-provider"></a>DosyaSuffixToExtension sağlayıcısı
 
-Bu sağlayıcının gibi çalışıp **extensionToExtension** tek fark dosyanın uzantısı yerine sonek kuralı bakan olan ile sağlayıcısı. Aşağıdaki örnek göz önünde bulundurun:
+Bu sağlayıcı, yalnızca kural yalnızca uzantısı yerine dosyanın soneki bakar olmak, **uzantıToExtension** sağlayıcısı gibi çalışır. Aşağıdaki örneği inceleyin:
 
-![fileSuffixToExtension örnek kural](media/filenesting_filesuffixtoextension.png) ![fileSuffixToExtension örnek etkisi](media/filenesting_filesuffixtoextension_effect.png)
+![dosyaSuffixToExtension örnek kuralları](media/filenesting_filesuffixtoextension.png) ![dosyaSuffixToExtension örnek etkisi](media/filenesting_filesuffixtoextension_effect.png)
 
-* *Portal vsdoc.js* altında iç içe *portal.js* nedeniyle **fileSuffixToExtension** kuralı
+* *portal-vsdoc.js* **dosyasuffixToExtension** kuralı nedeniyle *portal.js* altında iç içe
 
-* Her bir kural yönüyle aynı şekilde çalışır **extensionToExtension**
+* kuralın her yönü **extensionToExtension** ile aynı şekilde çalışır
 
-### <a name="the-addedextension-provider"></a>AddedExtension sağlayıcısı
+### <a name="the-addedextension-provider"></a>addedExtension sağlayıcısı
 
-Bu sağlayıcı ek uzantısız dosya altında ek uzantılı dosyalar gömer. Ek uzantı yalnızca tam dosya adının sonunda yer alabilir.
+Bu sağlayıcı, ek bir uzantı olmadan dosyanın altında ek bir uzantı ile dosyaları yuvaları. Ek uzantı yalnızca tam dosya adının sonunda görünebilir.
 
-Aşağıdaki örnek göz önünde bulundurun:
+Aşağıdaki örneği inceleyin:
 
-![addedExtension örnek kural](media/filenesting_addedextension.png) ![addedExtension örnek etkisi](media/filenesting_addedextension_effect.png)
+![addedExtension örnek kuralları](media/filenesting_addedextension.png) ![addedExtension örnek efekti](media/filenesting_addedextension_effect.png)
 
-* *File.HTML.css* altında iç içe *file.html* nedeniyle **addedExtension** kuralı
+* *file.html.css* **addedExtension** kuralı nedeniyle *dosya.html* altında iç içe
 
 > [!NOTE]
-> Herhangi bir dosya uzantısı için belirtmeyin `addedExtension` kural; tüm dosya uzantıları otomatik olarak uygular. Diğer bir deyişle, herhangi bir dosya ile aynı adı ve uzantısı başka bir dosya olarak artı ek uzantı son diğer dosya altında yer alıyor. Bu sağlayıcıya yalnızca belirli etkisini sınırlamak olamaz dosya uzantıları.
+> `addedExtension` Kural için herhangi bir dosya uzantısı belirtmezsiniz; tüm dosya uzantıları için otomatik olarak geçerlidir. Diğer bir deyişle, başka bir dosya yla aynı ad ve uzantıya sahip herhangi bir dosya artı uçtaki ek uzantı diğer dosyanın altına yer alar. Bu sağlayıcının etkisini sadece belirli dosya uzantılarıyla sınırlayamazsınız.
 
 ### <a name="the-pathsegment-provider"></a>PathSegment sağlayıcısı
 
-Bu sağlayıcı ek uzantısız dosya altında ek uzantılı dosyalar gömer. Ek uzantı yalnızca tam dosya adı ortasını görünür.
+Bu sağlayıcı, ek bir uzantısı olmayan bir dosyanın altında ek bir uzantı ile dosyaları yuvaları. Ek uzantı yalnızca tam dosya adının ortasında görünebilir.
 
-Aşağıdaki örnek göz önünde bulundurun:
+Aşağıdaki örneği inceleyin:
 
-![pathSegment örnek kural](media/filenesting_pathsegment.png) ![pathSegment örnek etkisi](media/filenesting_pathsegment_effect.png)
+![pathSegment örnek kuralları](media/filenesting_pathsegment.png) ![pathSegment örnek efekti](media/filenesting_pathsegment_effect.png)
 
-* *JQuery.Min.js* altında iç içe *jquery.js* nedeniyle **pathSegment** kuralı
+* *jquery.min.js* **yol Segment** kuralı nedeniyle *jquery.js* altında iç içe
 
 > [!NOTE]
-> - Herhangi bir belirli dosya uzantısı için belirtmezseniz `pathSegment` kural, tüm dosya uzantıları için geçerlidir. Diğer bir deyişle, aynı ada ve yanı sıra ortasında ek bir uzantı olarak başka bir dosya uzantısı ile herhangi bir dosya başka bir dosyayı altında yer alıyor.
-> - Etkisini sınırlayabilirsiniz `pathSegment` kural aşağıdaki şekilde belirterek belirli dosya uzantıları:
+> - `pathSegment` Kural için belirli bir dosya uzantısı belirtmezseniz, bu kural tüm dosya uzantıları için geçerlidir. Diğer bir deyişle, başka bir dosya yla aynı ada ve uzantıya sahip herhangi bir dosya artı ortada ek bir uzantı diğer dosyanın altına yer alar.
+> - Kuralın `pathSegment` etkisini aşağıdaki şekilde belirterek belirli dosya uzantılarıyla sınırlandırabilirsiniz:
 >
 >    ```json
 >    "pathSegment": {
@@ -124,51 +124,51 @@ Aşağıdaki örnek göz önünde bulundurun:
 >    }
 >    ```
 
-### <a name="the-allextensions-provider"></a>AllExtensions sağlayıcısı
+### <a name="the-allextensions-provider"></a>allExtensions sağlayıcısı
 
-Bu sağlayıcı, uzantıyı ancak aynı temel dosya adı olan dosyalar için dosya iç içe geçme kuralları tanımlamanıza olanak sağlar. Aşağıdaki örnek göz önünde bulundurun:
+Bu sağlayıcı, herhangi bir uzantı sıdamadan aynı temel dosya adı olan dosyalar için dosya iç içe geçme kurallarını tanımlamanıza olanak tanır. Aşağıdaki örneği inceleyin:
 
-![allExtensions örnek kural](media/filenesting_allextensions.png) ![allExtensions örnek etkisi](media/filenesting_allextensions_effect.png)
+![allExtensions örnek kuralları](media/filenesting_allextensions.png) ![allExtensions örnek efekti](media/filenesting_allextensions_effect.png)
 
-* *Template.cs* ve *template.doc* altında iç içe *template.tt* nedeniyle **allExtensions** kuralı.
+* *template.cs* ve *template.doc,* **tüm Uzantılar** kuralı nedeniyle *template.tt* altında iç içe dir.
 
-### <a name="the-filetofile-provider"></a>FileToFile sağlayıcısı
+### <a name="the-filetofile-provider"></a>fileToFile sağlayıcısı
 
-Bu sağlayıcı, tüm dosya adları üzerinde dayalı dosya iç içe geçme kuralları tanımlamanıza olanak sağlar. Aşağıdaki örnek göz önünde bulundurun:
+Bu sağlayıcı, dosya tüm adlarını temel alan dosya iç içe geçme kurallarını tanımlamanızı sağlar. Aşağıdaki örneği inceleyin:
 
-![fileToFile örnek kural](media/filenesting_filetofile.png) ![fileToFile örnek etkisi](media/filenesting_filetofile_effect.png)
+![fileToFile örnek kuralları](media/filenesting_filetofile.png) ![fileToFile örnek efekti](media/filenesting_filetofile_effect.png)
 
-* *.bowerrc* altında iç içe *bower.json* nedeniyle **fileToFile** kuralı
+* *.bowerrc* **fileToFile** kuralı nedeniyle *bower.json* altında iç içe
 
 ### <a name="rule-order"></a>Kural sırası
 
-Sıralama her özel ayarlar dosyanızı bölümünde önemlidir. Hangi kuralları çalıştırılır yukarı veya aşağı içine taşıyarak sırasını değiştirebilirsiniz **dependentFileProvider** düğümü. Örneğin, yapan bir kuralı varsa **file.js** üst **file.ts** ve yapan başka bir kural **file.coffee** üst **file.ts**, üç dosya mevcut olduğunda dosyasında göründükleri sırayla iç içe geçme davranışını belirler. Bu yana **file.ts** yalnızca bir üste sahip olabilmesidir, hangi kural ilk WINS yürütür.
+Sipariş, özel ayarlar dosyanızın her bölümünde önemlidir. Kurallar, **bağlı FileProvider** düğümünün içinde yukarı veya aşağı hareket ettirerek kuralların yürütülme sırasını değiştirebilirsiniz. Örneğin, **file.js'yi** **file.ts'nin** üst öğesi yapan bir kuralınız ve **dosya.kahveyi** **file.ts'nin**üst öğesi yapan başka bir kuralınız varsa, dosyada göründükleri sıra, üç dosya da bulunduğunda iç içe geçme davranışını belirler. **File.ts** yalnızca bir ebeveyne sahip olabileceğinden, hangi kural ilk kazanır yürütürse.
 
-Sıralama da kural bölümlerin kendileri yalnızca bir bölümü içindeki dosyalar için önemlidir. Dosyalarının bir çiftini dosya iç içe geçmiş bir kuralla eşleşiyor hemen sonra diğer kurallardan daha da aşağı dosyasında göz ardı edilir ve sonraki çift dosya işlenebilir.
+Sıralama, kural bölümleri için de önemlidir, sadece bir bölümdeki dosyalar için değil. Bir dosya çifti bir dosya iç içe geçme kuralıyla eşleşir eşleşmez, dosyadaki diğer kurallar yoksayılır ve bir sonraki dosya çifti işlenir.
 
 ### <a name="file-nesting-button"></a>Dosya iç içe geçme düğmesi
 
-Aynı düğmeye aracılığıyla kendi özel ayarlar dahil olmak üzere, tüm ayarlarını yönetebilirsiniz **Çözüm Gezgini**:
+Kendi özel ayarlarınız da dahil olmak üzere tüm ayarları **Çözüm Gezgini'ndeki**aynı düğmeyle yönetebilirsiniz:
 
 ![Özel dosya iç içe geçme kurallarını etkinleştirme](media/filenesting_activatecustom.png)
 
-## <a name="create-project-specific-settings"></a>Projeye özgü ayarları oluşturma
+## <a name="create-project-specific-settings"></a>Projeye özel ayarlar oluşturma
 
-Her çözüm ve proje sağ tıklama menüsünü (bağlam menüsü) aracılığıyla çözüm ve proje özgü ayarları oluşturabilirsiniz:
+Her çözüm ve projenin sağ tıklama menüsünden (bağlam menüsü) çözüme ve projeye özgü ayarlar oluşturabilirsiniz:
 
-![Çözüm ve proje özel iç içe geçme kuralları](media/filenesting_solutionprojectspecific.png)
+![Çözüm ve projeye özel iç içe geçme kuralları](media/filenesting_solutionprojectspecific.png)
 
-Çözüm ve proje özgü ayarları, etkin Visual Studio ayarları ile birleştirilir. Örneğin, bir boş projeye özgü ayarları dosyasına sahip olabilir ancak **Çözüm Gezgini** hala dosyaları iç içe. İç içe geçme davranışı, çözüme özel ayarlar veya Visual Studio ayarları kullanıma sunulacaktır. İç içe dosya ayarları birleştirmek için öncelik verilmiştir: Visual Studio > çözüm > Proje.
+Çözüme özel ve projeye özel ayarlar, etkin Visual Studio ayarlarıyla birleştirilir. Örneğin, projeye özgü boş bir ayarlar dosyanız olabilir, ancak **Solution Explorer** hala dosyaları iç içe alıyor. İç içe geçme davranışı çözüme özgü ayarlardan veya Visual Studio ayarlarından geliyor. Dosya iç içe geçme ayarlarını birleştirmenin önceliği şudur: Visual Studio > Solution > Project.
 
-Seçeneğini etkinleştirerek dosyalar disk üzerinde mevcut olsa bile, çözüm ve proje özgü ayarları yok saymak için Visual Studio söyleyebilirsiniz **çözüm ve proje ayarlarını Yoksay** altında **Araçları**  >  **Seçenekleri** > **ASP.NET Core** > **dosya iç içe geçme**.
+Visual Studio'ya, dosyalar diskte olsa bile çözüme özgü ve projeye özgü ayarları yoksaymasını, Temel**Dosya İçi Yerleştirme**ASP.NET **Araçlar** > **Seçenekleri** > **ASP.NET Core** > altında **çözüm ve proje ayarlarını yok sayma** seçeneğini etkinleştirerek söyleyebilirsiniz.
 
-Bunun tersini yapmak ve bildirmek için Visual Studio *yalnızca* ayarlayarak çözüme özel veya projeye özgü ayarları kullanın **kök** düğüme **true**. Visual Studio, o düzeydeki dosyaları birleştirme durdurur ve dosyalarla hiyerarşisinde yukarı daha yüksek birleştirme değil.
+Tam tersini yapabilir ve Visual Studio'ya **kök** düğümünü **doğru**ayarlayarak *yalnızca* çözüme özgü veya projeye özgü ayarları kullanmasını söyleyebilirsiniz. Visual Studio dosyaları bu düzeyde birleştirmeyi durdurur ve hiyerarşinin yukarısı dosyalarla birleştirmez.
 
-Çözüm ve proje özgü ayarları, kaynak denetimi ve bunları paylaşabilirsiniz kod temeli üzerinde çalışır ekibin tamamı denetlenebilir.
+Çözüme özgü ve projeye özgü ayarlar kaynak denetiminde denetlenebilir ve kod tabanında çalışan tüm ekip bunları paylaşabilir.
 
-## <a name="disable-file-nesting-rules-for-a-project"></a>Bir proje için dosya iç içe geçme kurallarını devre dışı bırakın
+## <a name="disable-file-nesting-rules-for-a-project"></a>Proje için dosya iç içe geçme kurallarını devre dışı bırakmayı
 
-Kullanarak varolan genel dosya iç içe geçme kurallarını belirli çözümlerin veya projelerin için devre dışı bırakabilirsiniz **Kaldır** yerine bir sağlayıcı için eylem **ekleme**. Örneğin, bir proje için aşağıdaki ayarları kod eklerseniz tüm **pathSegment** bu belirli bir proje için genel olarak bulunabilir kuralları devre dışı bırakılır:
+Belirli çözümler veya projeler için varolan genel dosya iç içe geçme **kurallarını, ekle**yerine sağlayıcı için **kaldırma** eylemini kullanarak devre dışı kullanabilirsiniz. Örneğin, bir projeye aşağıdaki ayarlar kodunu eklerseniz, bu belirli proje için genel olarak var olabilecek tüm **yolSegment** kuralları devre dışı bırakılır:
 
 ```json
 "dependentFileProviders": {
@@ -180,5 +180,5 @@ Kullanarak varolan genel dosya iç içe geçme kurallarını belirli çözümler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)
-- [Visual Studio'da projeler ve çözümler](solutions-and-projects-in-visual-studio.md)
+- [IDE'yi kişiselleştirin](../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio'da çözümler ve projeler](solutions-and-projects-in-visual-studio.md)

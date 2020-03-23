@@ -1,5 +1,5 @@
 ---
-title: Performans Gezgini penceresi | Microsoft Docs
+title: Performans Gezgini Penceresi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,44 +14,44 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: a365892f606da90c608e43b7ccce73b902ec0e98
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772445"
 ---
 # <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 
-Visual Studio IDE 'deki **Performans Gezgini** penceresi, visual Studio profil oluşturma araçları kullanarak performans oturumlarını yapılandırıp başlatabilmenizi sağlar. Pencereyi açmanız gerekiyorsa [performans profili oluşturmak Için yeni başlayanlar kılavuzundaki](../profiling/beginners-guide-to-cpu-sampling.md)yönergeleri izleyin.
+Visual Studio IDE'deki **Performans Gezgini** penceresi, Visual Studio Profil Oluşturma Araçlarını kullanarak performans oturumlarını yapılandırmanızı ve başlatmanızı sağlar. Pencereyi açmanız gerekiyorsa, performans [profilleme için Yeni Başlayanlar kılavuzundaki](../profiling/beginners-guide-to-cpu-sampling.md)yönergeleri izleyin.
 
-## <a name="performance-explorer-toolbar"></a>Performans Gezgini araç çubuğu
+## <a name="performance-explorer-toolbar"></a>Performans Gezgini Araç Çubuğu
 
-**Performans Gezgini** araç çubuğunda aşağıdaki seçenekler mevcuttur:
+Aşağıdaki seçenekler **Performans Gezgini** araç çubuğunda kullanılabilir:
 
-- **Performansı Başlatma Sihirbazı** -performans Gezgini penceresine yeni bir performans oturumu eklemek Için performans sihirbazını görüntüler.
+- **Performans Sihirbazı Başlat** - Performans Gezgini penceresine yeni bir performans oturumu eklemek için Performans Sihirbazı'nı görüntüler.
 
-- **Yeni performans oturumu** -performans Gezgini penceresine boş bir performans oturumu ekler.
+- **Yeni Performans Oturumu** - Performans Gezgini penceresine boş bir performans oturumu ekler.
 
-- **Başlat** - **Başlat** komut düğmesi listesi, profil oluşturma işleminin hemen etkinleştirildiği (**profil oluşturma ile başlatma**) veya profil oluşturma askıya alınmış olarak (profil**oluşturma duraklatılmış şekilde başlatma**) hedef uygulamayı başlatmanıza olanak sağlar.
+- **Başlat** - **Başlat** komut düğmesi listesi, profil oluşturma özelliğini hemen etkinleştiren hedef uygulamayı başlatmanızı sağlar (**Profil oluşturma ile başlatın**) veya profil oluşturma askıya alınarak ( Profil oluşturma**duraklatıldı)** ile başlatın.
 
-- **Yöntem** -oturumun profil oluşturma yönteminin örnekleme veya izleme olup olmadığını belirtir.
+- **Yöntem** - Oturumun profiloluşturma yönteminin örnekleme mi yoksa enstrümantasyon mu olduğunu belirtir.
 
-- **Durdur** -hedef uygulamayı ve profil oluşturucuyu hemen çıkar.
+- **Stop** - Hedef uygulamadan ve profilleyiciden hemen çıkar.
 
-- **İliştir/ayır** -profil oluşturucunun ekleneceği çalışan bir işlem seçmek Için **Işleme profil oluşturucuyu Ekle** iletişim kutusunu görüntüler.
+- **Ekle/Ayırma** - Profil oluşturucuyu takmak için çalışan bir işlem seçmek **için Profilciyi İşleme** iletişim kutusuna ekle görüntülenir.
 
 ## <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 
-**Performans Gezgini** pencere, bir veya daha fazla performans oturumunun ikili dosyalarını ve rapor veri dosyalarını görüntüleyen bir ağaç denetimi içerir.
+**Performans Gezgini** penceresi, ikili leri görüntüleyen ve bir veya daha fazla performans oturumunun veri dosyalarını bildiren bir ağaç denetimi içerir.
 
-- **Oturum adı** -ağaç denetiminin kökü, oturumun adını içerir. Oturum özelliklerini ayarlamak için oturum adına sağ tıklayın veya hedef uygulamayı ve profil oluşturucuyu başlatın.
+- **Oturum Adı** - Ağaç denetiminin kökü oturumun adını içerir. Oturum özelliklerini ayarlamak veya hedef uygulamayı ve profil oluşturucuyu başlatmak için oturum adını sağ tıklatın.
 
-- **Hedefler** -oturumda profili oluşturulacak ikili dosyaların adlarını görüntüler. Bir ikili, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projesi veya Web sitesi eklemek veya kaldırmak için **hedefler** ' e sağ tıklayın. Tek bir ikilinin özelliklerini ayarlamak için bir hedef adına sağ tıklayın.
+- **Hedefler** - Oturumda profili verilecek ikili lerin adlarını görüntüler. İkili, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje veya Web sitesi eklemek veya kaldırmak için **Hedefler'i** sağ tıklatın. Tek tek ikili özellikleri ayarlamak için bir hedef adı sağ tıklatın.
 
-- **Raporlar** -oturum için oluşturulan profil oluşturucu veri dosyalarının adlarını görüntüler. Mevcut bir raporu eklemek veya iki profil oluşturucu veri dosyasını karşılaştırmak için **raporlar** ' a sağ tıklayın. Profil Oluşturucu veri dosyasını açmak, kaldırmak veya dışarı aktarmak için bir rapor adına sağ tıklayın.
+- **Raporlar** - Oturum için oluşturulan profil oluşturucu veri dosyalarının adlarını görüntüler. Varolan bir rapor eklemek veya iki profil oluşturucu veri dosyasını karşılaştırmak için **Raporlar'ı** sağ tıklatın. Profil oluşturucu veri dosyasını açmak, kaldırmak veya dışa aktarmak için rapor adını sağ tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Veri toplamayı denetlemek](../profiling/controlling-data-collection.md)
-[performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
-[genel bakış](../profiling/overviews-performance-tools.md)
+[Veri](../profiling/overviews-performance-tools.md)
+[Toplamayı Kontrol Eden](../profiling/controlling-data-collection.md) Performans[Oturumlarını Yapılandırmaya](../profiling/configuring-performance-sessions.md)Genel Bakış
+

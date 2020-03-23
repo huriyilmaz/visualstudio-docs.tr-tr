@@ -1,5 +1,5 @@
 ---
-title: Çekirdek görünümü | Microsoft Docs
+title: Çekirdek Görünümü | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 99b26b913a42a563e0226ff2697b947684dfec53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553064"
 ---
 # <a name="cores-view"></a>Çekirdekler Görünümü
-**Çekirdekler görünümü** iş parçacığı için mantıksal işlemci çekirdeği nasıl eşlendi gösterir (seçin **Çözümle** > **eşzamanlılık görselleştiricisi** başlatmak için Eşzamanlılık görselleştiricisi). Bu görünüm sunucu uygulamaları yazıyorsanız, iş parçacığı benzeşimini veya iş parçacığı havuzu Yönetimi'ni kullanarak önbellek performansını iyileştirmenize yardımcı olabilir. Da burada iş parçacığı benzeşimini kullanımını çekirdek arası geçiş sorununu worsened durumlarda incelemenize yardımcı olabilir. Çekirdekler görünümü, grafik ve bir gösterge olmak üzere iki bölümden sahiptir.
+**Çekirdek Görünümü,** iş parçacığı yürütmenin mantıksal işlemci çekirdeklerine nasıl eşlandığını gösterir (eşzamanlılık görselleştiricisini başlatmak için**Eşzamanlılık Görselleştiricisini** **Çözümle'yi** > seçin). Sunucu uygulamaları yazıyorsanız, bu görünüm iş parçacığı afiyeti veya iş parçacığı havuzu yönetimini kullanarak önbellek performansını en iyi duruma getirmenize yardımcı olabilir. Ayrıca, iş parçacığı yakınlığı nın kullanımının çekirdekler arası geçiş sorununu daha da kötüleştirdiği durumları incelemenize de yardımcı olabilir. Cores View iki bölümden, bir grafik ve bir göstergeden oluşur.
 
- Graf y ekseni ve x eksenindeki zaman mantıksal çekirdek gösterir. Graftaki her iş parçacığı benzersiz bir renk sahiptir; böylece zamanla Çekirdekte hareketini izleyebilirsiniz. İş parçacıkları Bu grafikte gösterge alanında seçerek filtreleyebilirsiniz.
+ Grafik, y ekseninde mantıksal çekirdekleri ve x ekseninde zamanı gösterir. Grafikteki her iş parçacığı, zaman içinde çekirdekler üzerindeki hareketini izleyebilmeniz için benzersiz bir renge sahiptir. Bu grafikteki iş parçacıklarını gösterge alanında seçerek filtreleyebilirsiniz.
 
- Açıklama alanına grafikte her renk girişi var. Her giriş, iş parçacığı rengi ve adı, çapraz-çekirdek bağlam anahtarları sayısı, toplam bağlam anahtarları sayısı ve çekirdekleri çaprazlayan bağlam anahtarlarının yüzdesi gösterilmektedir. Gösterge, azalan olarak çekirdekler arası bağlam anahtarları sayısına göre sıralanır. Görüntülenen zaman aralığı içinde yürütülen iş parçacıkları listeler.  Yakınlaştırma veya kaydırma listesi güncelleştirilir.
+ Gösterge alanı, grafikteki her renk için bir girişe sahiptir. Her giriş iş parçacığı rengini ve adını, çekirdekler arası bağlam anahtarlarının sayısını, toplam bağlam anahtarlarını ve çekirdekleri geçen bağlam anahtarlarının yüzdesini gösterir. Gösterge, azalan sırada, çapraz çekirdek bağlam anahtarlarının sayısına göre sıralanır. Yalnızca görüntülenen zaman aralığında çalıştırılan iş parçacıklarını listeler.  Yakınlaştırırsanız veya kaydırdığınızda liste güncelleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık görselleştiricisi](../profiling/concurrency-visualizer.md)

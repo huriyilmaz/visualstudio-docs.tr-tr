@@ -1,6 +1,6 @@
 ---
-title: (Windows) Azure App Service'te Python'u yapılandırma
-description: Nasıl Azure App Service ve yapılandırma web uygulamaları için bu yorumlayıcı düzgün bir şekilde başvurmak için bir Python yorumlayıcısı ve kütüphaneler yükleyin.
+title: Azure Uygulama Hizmetinde Python'u Yapılandırma (Windows)
+description: Azure Uygulama Hizmeti'ne Python yorumlayıcısı ve kitaplıkları nasıl yüklenir ve web uygulamalarını bu yorumculu yorumlayıcıya düzgün bir şekilde yönlendirecek şekilde yapılandırma.
 ms.date: 01/07/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -12,43 +12,43 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 7ffe0de939eba8af38c132fc3de5c96a9499e3f0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62535988"
 ---
-# <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>(Windows) Azure App Service'te bir Python ortamını kurma
+# <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure Uygulama Hizmeti'nde (Windows) Python ortamı nasıl ayarlanır?
 
 > [!Important]
-> Microsoft kullanım dışı Python uzantıları için Windows üzerinde App Service'te doğrudan bir dağıtım için kullanıldığından bu makalede açıklanan şekilde [Linux üzerinde App Service'te](publishing-python-web-applications-to-azure-from-visual-studio.md).
+> Microsoft, [Linux'ta App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)doğrudan dağıtım lehine bu makalede açıklandığı gibi Windows App Service için Python uzantıları küçümsülvardır.
 
-[Azure App Service](https://azure.microsoft.com/services/app-service/) REST API'leri kullanarak kendi istemciler veya olayla tetiklenen işlem tarafından kullanılan bir tarayıcı aracılığıyla erişilen siteleri oldukları olup, hizmet olarak platform sunan web uygulamaları için. App Service uygulamaları uygulamak için Python'ı kullanarak tam olarak destekler.
+[Azure Uygulama Hizmeti,](https://azure.microsoft.com/services/app-service/) ister bir tarayıcı üzerinden erişilen siteler olsun, ister kendi istemcileriniz tarafından kullanılan REST API'leri veya olay tetikleyici işlemler olsun, web uygulamaları için hizmet olarak platform olarak bir tekliftir. Uygulama Hizmeti, uygulamaları uygulamak için Python'u kullanmayı tamamen destekler.
 
-Azure App Service için özelleştirilebilir Python desteği App Service bir dizi sağlanan *site uzantıları* her Python çalışma zamanını belirli bir sürümünü içerir. Bu makalede açıklandığı gibi bu ortama doğrudan ardından istenen herhangi bir paket yükleyebilirsiniz. App Service ortamında özelleştirerek, web uygulaması projelerinde paketler korumak veya uygulama kodu ile karşıya yüklemeniz gerekmez.
+Azure Uygulama Hizmeti için özelleştirilebilir Python desteği, her biri Python çalışma zamanının belirli bir sürümünü içeren bir Uygulama Hizmeti *sitesi uzantısı* kümesi olarak sağlanır. Daha sonra, bu makalede açıklandığı gibi, istenen paketleri doğrudan bu ortama yükleyebilirsiniz. Uygulama Hizmeti'ndeki ortamı özelleştirerek, web uygulaması projelerinizdeki paketleri korumanız veya uygulama koduyla yüklemeniz gerekmez.
 
 > [!Tip]
-> App Service varsayılan olarak Python 2.7 ve Python 3.4: kök klasörleri sunucusuna yüklenmiş olsa da, özelleştirme veya bu ortamlarda paketleri yüklemek ya da kendi varlığını temel bağlı olmalıdır. Bunun yerine, bu makalede açıklandığı gibi sizin denetlediğiniz bir site uzantısı yararlanmalıdır.
+> Uygulama Hizmeti varsayılan olarak Sunucudaki kök klasörlere Yüklü Python 2.7 ve Python 3.4'e sahip olsa da, bu ortamlarda paketleri özelleştiremez veya yükleyemezsiniz ve bunların varlığına bağlı olamazsınız. Bunun yerine, bu makalede açıklandığı gibi, denetlediğiniz bir site uzantısı na güvenmeniz gerekir.
 
-## <a name="choose-a-python-version-through-the-azure-portal"></a>Azure portalı üzerinden bir Python sürümünü seçin
+## <a name="choose-a-python-version-through-the-azure-portal"></a>Azure portalı üzerinden bir Python sürümü seçin
 
-1. Web uygulamanız için bir App Service, Azure portalda oluşturun.
-1. App Service'nın sayfasında kaydırarak **geliştirme araçları** bölümünden **uzantıları**, ardından **+ Ekle**.
-1. İstediğiniz Python sürümünü içeren bir uzantı listesinde aşağı kaydırın:
+1. Azure portalında web uygulamanız için bir Uygulama Hizmeti oluşturun.
+1. Uygulama Hizmeti'nin sayfasında, Geliştirme **Araçları** bölümüne gidin, **Uzantılar'ı**seçin, ardından **+ Ekle'yi**seçin.
+1. Listede aşağı doğru istediğiniz Python sürümünü içeren uzantıya gidin:
 
-    ![Azure portal gösteren Python uzantıları](media/python-on-azure-extensions.png)
+    ![Python uzantılarını gösteren azure portalı](media/python-on-azure-extensions.png)
 
     > [!Tip]
-    > Python daha eski bir sürümü gerekir ve site uzantıları listelendiği görmüyorsanız, yine de Azure Resource Manager üzerinden sonraki bölümde açıklandığı gibi yükleyebilirsiniz.
+    > Python'un eski bir sürümüne ihtiyacınız varsa ve site uzantılarında listelenmezseniz, bir sonraki bölümde açıklandığı gibi Azure Kaynak Yöneticisi aracılığıyla yüklemeye devam edebilirsiniz.
 
-1. Uzantıyı seçin, yasal koşulları kabul edin ve ardından seçin **Tamam**.
-1. Yükleme tamamlandığında, portalda bir bildirim görüntülenir.
+1. Uzantıyı seçin, yasal koşulları kabul edin ve sonra **Tamam'ı**seçin.
+1. Yükleme tamamlandığında portalda bir bildirim görüntülenir.
 
-## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager aracılığıyla bir Python sürümünü seçin
+## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Azure Kaynak Yöneticisi aracılığıyla bir Python sürümü seçin
 
-Bir App Service ile bir Azure Resource Manager şablonu dağıtıyorsanız, site uzantısı, kaynak olarak ekleyin. Özellikle, uzantı iç içe geçmiş bir kaynak olarak görünür (bir `resources` altında nesne `resources`) türüyle `siteextensions` ve adından [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22).
+Azure Kaynak Yöneticisi şablonuyla bir Uygulama Hizmeti dağıtıyorsanız, site uzantısını kaynak olarak ekleyin. Özellikle, uzantı, [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22)türü `siteextensions` ve `resources` adı `resources`ile iç içe bir kaynak (altında bir nesne) olarak görünür.
 
-Bir başvuru ekledikten sonra Örneğin `python361x64` (şablonunuz şöyle görünebileceğini Python 3.6.1 x 64), (ihmal bazı özellikler):
+Örneğin, `python361x64` (Python 3.6.1 x64) bir başvuru ekledikten sonra, şablonunuzun aşağıdaki gibi görünebilir (bazı özellikler atlanmıştır):
 
 ```json
 "resources": [
@@ -74,33 +74,33 @@ Bir başvuru ekledikten sonra Örneğin `python361x64` (şablonunuz şöyle gör
   }
 ```
 
-## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>Web.config Python yorumlayıcınıza işaret edecek şekilde ayarlayın
+## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>Python yorumlayıcısını işaret etmek için web.config'i ayarlayın
 
-Site uzantısı (aracılığıyla, portal veya Azure Resource Manager şablonu) yükledikten sonra sonraki uygulamanızın üzerine *web.config* Python yorumlayıcısının dosya. *Web.config* dosya nasıl bunu HttpPlatform (önerilir) veya Fastcgı Python istekleri işleyeceğini hakkında App Service üzerinde çalışan (7 +) IIS web sunucusuna bildirir.
+Site uzantısını yükledikten sonra (portal veya Azure Kaynak Yöneticisi şablonu aracılığıyla), uygulamanızın *web.config* dosyasını Python yorumlayıcısına yönlendirin. *web.config* dosyası, App Service'te çalışan IIS (7+) web sunucusuna Python isteklerini HttpPlatform (önerilir) veya FastCGI aracılığıyla nasıl işlemesi gerektiği konusunda talimat verir.
 
-Başlamak site uzantının tam yolu bularak *python.exe*, ardından oluşturup uygun *web.config* dosya.
+Site uzantısı *python.exe*için tam yol bularak başlayın, sonra oluşturmak ve uygun *web.config* dosyası değiştirin.
 
-### <a name="find-the-path-to-pythonexe"></a>Python.exe yolunu bulun
+### <a name="find-the-path-to-pythonexe"></a>python.exe yolunu bul
 
-Python site uzantısı altında sunucuda yüklü *d:\home* Python sürümü ve mimarisi için uygun bir klasörde (söz konusu olduğunda bazı eski sürümleri hariç). Örneğin, Python 3.6.1 x64 yüklenir *d:\home\python361x64*. Tam Python yorumlayıcısının yolu ise *d:\home\python361x64\python.exe*.
+Python site uzantısı *d:\home* altında sunucuda Python sürümü ve mimarisine uygun bir klasörde yüklenir (birkaç eski sürümler hariç). Örneğin, Python 3.6.1 x64 *d:\home\python361x64*yüklenir. Python yorumlayıcısına giden tam yol *d:\home\python361x64\python.exe*' dir.
 
-App Service'inizde belirli yolu görmek için seçin **uzantıları** App Service sayfasında, listeden sonra uzantıyı seçin.
+Uygulama Hizmetinizde belirli yolu görmek için, App Service **sayfasındaki Uzanlar'ı** seçin ve ardından listedeki uzantıyı seçin.
 
-![Azure App Service'te uzantı listesi](media/python-on-azure-extension-list.png)
+![Azure Uygulama Hizmeti'ndeki uzantı listesi](media/python-on-azure-extension-list.png)
 
-Bu eylem yolunu içeren uzantının açıklama sayfasını açar:
+Bu eylem, uzantın yolu içeren açıklama sayfasını açar:
 
-![Azure App Service'te uzantı ayrıntıları](media/python-on-azure-extension-detail.png)
+![Azure Uygulama Hizmeti'nde uzantı ayrıntıları](media/python-on-azure-extension-detail.png)
 
-Yol uzantısı görmekte sorun varsa, el ile konsolunu kullanarak buna bulabilirsiniz:
+Uzantınca yolunu görmekte sorun yaşıyorsanız, konsolu kullanarak el ile bulabilirsiniz:
 
-1. App Service sayfanızda seçin **geliştirme araçları** > **konsol**.
-1. Komutu girdikten `ls ../home` veya `dir ..\home` gibi üst düzey uzantıları klasörleri görmek için *Python361x64*.
-1. Gibi bir komut girin `ls ../home/python361x64` veya `dir ..\home\python361x64` bunu içerdiğini doğrulamak için *python.exe* ve diğer yorumlayıcı dosyaları.
+1. Uygulama Hizmeti sayfanızda **Geliştirme Araçları** > **Konsolu'nu**seçin.
+1. Komutu `ls ../home` girin `dir ..\home` veya *Python361x64*gibi üst düzey uzantıları klasörlerini görmek için.
+1. *Python.exe* `dir ..\home\python361x64` ve diğer yorumlayıcı dosyaları içerdiğini doğrulamak için bir `ls ../home/python361x64` komut girin.
 
-### <a name="configure-the-httpplatform-handler"></a>HttpPlatform işleyiciyi yapılandırmanız
+### <a name="configure-the-httpplatform-handler"></a>HttpPlatform işleyicisini yapılandırma
 
-HttpPlatform modülü soket bağlantılarının doğrudan tek başına Python işlem geçirir. Bu geçiş, gibi ancak bir yerel web sunucusu çalıştıran bir başlangıç betiği gerektiren herhangi bir web sunucusu çalıştırmanızı sağlar. Betikte belirttiğiniz `<httpPlatform>` öğesinin *web.config*burada `processPath` özniteliği işaret site uzantının Python yorumlayıcısı ve `arguments` özniteliği işaret betiğinizi ve herhangi bir bağımsız değişken için sağlamak istiyorsanız:
+HttpPlatform modülü soket bağlantılarını doğrudan bağımsız bir Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir web sunucusunu çalıştırmanızı sağlar, ancak yerel bir web sunucusu çalıştıran bir başlangıç komut dosyası gerektirir. Komut dosyasını `<httpPlatform>` *web.config*öğesinde belirtirsiniz, `processPath` öznitelik site uzantısının Python yorumlayıcısına `arguments` ve öznitelik komut dosyanıza ve sağlamak istediğiniz bağımsız değişkenlere işaret eder:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -123,11 +123,11 @@ HttpPlatform modülü soket bağlantılarının doğrudan tek başına Python i�
 </configuration>
 ```
 
-`HTTP_PLATFORM_PORT` Burada gösterilen ortam değişkeni, yerel sunucu, localhost bağlantılarından dinleyecek bağlantı noktasını içerir. Bu örnek ayrıca istenirse, bu durumda, başka bir ortam değişkeni oluşturma işlemini gösterir `SERVER_PORT`.
+Burada `HTTP_PLATFORM_PORT` gösterilen ortam değişkeni, yerel sunucunuzun localhost'tan gelen bağlantılar için dinlemesi gereken bağlantı noktasını içerir. Bu örnek, bu durumda, `SERVER_PORT`istenirse başka bir ortam değişkeninin nasıl oluşturulacak olduğunu da gösterir.
 
-### <a name="configure-the-fastcgi-handler"></a>Fastcgı işleyici yapılandırın
+### <a name="configure-the-fastcgi-handler"></a>FastCGI işleyicisini yapılandırın
 
-Fastcgı talep düzeyinde çalışır bir arabirimdir. IIS gelen bağlantıları alır ve her birinde çalışan bir WSGI uygulama isteğini iletir ya da daha kalıcı bir Python işler. [Wfastcgı paket](https://pypi.io/project/wfastcgi) önceden yüklenmiş ve yapılandırılmış her Python site uzantısı ile kolayca kod ekleyerek etkinleştirebilirsiniz *web.config* ister temel bir web uygulaması için aşağıda gösterilen öğeleri Bottle çerçevesi. Unutmayın tam yolları *python.exe* ve *wfastcgi.py* yerleştirilir `PythonHandler` anahtarı:
+FastCGI istek düzeyinde çalışan bir arayüzdür. IIS gelen bağlantıları alır ve her isteği bir veya daha fazla kalıcı Python işlemlerinde çalışan bir WSGI uygulamasına iletir. [Wfastcgi paketi](https://pypi.io/project/wfastcgi) önceden yüklenmiş ve her Python site uzantısı ile yapılandırılmış, böylece kolayca *web.config* şişe çerçevedayalı bir web uygulaması için aşağıda gösterilen gibi kodu ekleyerek etkinleştirebilirsiniz. *Python.exe* ve *wfastcgi.py* için tam yolların `PythonHandler` anahtara yerleştirildiğini unutmayın:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -148,59 +148,59 @@ Fastcgı talep düzeyinde çalışır bir arabirimdir. IIS gelen bağlantıları
 </configuration>
 ```
 
-`<appSettings>` Burada bulunmaktadır uygulamanıza kullanılabilir ortam değişkenleri olarak tanımlanan:
+Burada `<appSettings>` tanımlanan ortam değişkenleri olarak uygulamanız için kullanılabilir:
 
-- Değeri `PYTHONPATH` genişletilmiş serbestçe ancak uygulamanızın kök içermelidir.
-- `WSGI_HANDLER` bir WSGI uygulaması alınabilir, uygulamanızdan işaret etmelidir.
-- `WSGI_LOG` İsteğe bağlı ancak uygulamanızın hatalarını ayıklamak için önerilen değerdir.
+- Değer `PYTHONPATH` serbestçe uzatılabilir, ancak uygulamanızın kökünü içermelidir.
+- `WSGI_HANDLER`uygulamanızdan içe aktarılabilir bir WSGI uygulamasına işaret etmelidir.
+- `WSGI_LOG`isteğe bağlıdır, ancak uygulamanızın hata ayıklanması için önerilir.
 
-Bkz: [azure'a Yayımla](publishing-python-web-applications-to-azure-from-visual-studio.md) hakkında daha fazla ayrıntı için *web.config* içeriği Bottle, Flask ve Django web uygulamaları.
+Şişe, Flask ve Django web uygulamaları için *web.config* içerikleri hakkında ek ayrıntılar için [Azure'a Yayımla'ya](publishing-python-web-applications-to-azure-from-visual-studio.md) bakın.
 
 ## <a name="install-packages"></a>Paketleri yükleme
 
-Yüklü bir site uzantısı aracılığıyla Python yorumlayıcısı Python ortamınızı yalnızca bir parçasıdır. Büyük olasılıkla, o ortamda farklı paketleri yüklemeniz gerekir.
+Site uzantısı üzerinden yüklenen Python yorumlayıcısı Python ortamınızın yalnızca bir parçasıdır. Büyük olasılıkla bu ortamda da farklı paketler yüklemeniz gerekir.
 
-Paketler, doğrudan sunucu ortamında yüklemek için aşağıdaki yöntemlerden birini kullanın:
+Paketleri doğrudan sunucu ortamına yüklemek için aşağıdaki yöntemlerden birini kullanın:
 
 | Yöntemler | Kullanım |
 | --- | --- |
-| [Azure App Service Kudu Konsolu](#azure-app-service-kudu-console) | Etkileşimli olarak paketleri yükler. Paketleri saf Python olmalıdır veya tekerlekleri yayımlamanız gerekir. |
-| [Kudu REST API](#kudu-rest-api) | Paket yüklemesi otomatikleştirmek için kullanılabilir.  Paketleri saf Python olmalıdır veya tekerlekleri yayımlamanız gerekir. |
-| Uygulama ile paket | Projenize doğrudan paketleri yüklemek ve uygulamanızın bir parçası değilmiş gibi bunları App Service'e dağıtırsınız. Bağımlılık bağlı olarak sahip olduğunuz ve ne sıklıkta bunları güncelleştirin, bu yöntem giderek bir çalışma dağıtım en kolay yolu olabilir. Olun kitaplıkları sunucuda Python sürümü ile eşleşmesi gerekir, aksi takdirde belirsiz dağıtımdan sonra görüyorsunuz. Site uzantıları tam olarak üzerinde python.org yayımlanan bu sürümler aynıdır App Service'te Python sürümleri, yerel geliştirme için uyumlu bir sürümünü kolayca edinebileceği olduğundan, Bununla birlikte. |
-| Sanal ortamlar | Desteklenmez. Bunun yerine, paketleme kullanmak ve ayarlamak `PYTHONPATH` paket konumunu gösterecek şekilde ortam değişkeni. |
+| [Azure App Service Kudu konsolu](#azure-app-service-kudu-console) | Paketleri etkileşimli olarak yükler. Paketler saf Python olmalı veya tekerlekleri yayımlamalıdır. |
+| [Kudu REST API](#kudu-rest-api) | Paket yüklemesini otomatikleştirmek için kullanılabilir.  Paketler saf Python olmalı veya tekerlekleri yayımlamalıdır. |
+| Uygulama yla paketle | Paketleri doğrudan projenize yükleyin ve uygulamanızın bir parçasıymış gibi Uygulama Hizmeti'ne dağıtın. Kaç tane bağımlılığınız olduğu ve bunları ne sıklıkta güncelleştirdiğinize bağlı olarak, bu yöntem çalışma dağıtımını başlatmanın en kolay yolu olabilir. Kitaplıkların sunucudaki Python sürümüyle eşleşmesi gerektiğini, aksi takdirde dağıtımdan sonra belirsiz hatalar gördüğünüzü unutmayın. Bununla ilgili olarak, Python'un App Service site uzantılarındaki sürümleri python.org'da yayımlanan sürümlerle tamamen aynı olduğundan, yerel geliştirme için uyumlu bir sürümünü kolayca edinebilirsiniz. |
+| Sanal ortamlar | Desteklenmiyor. Bunun yerine, bundling `PYTHONPATH` kullanın ve paketlerin konumuna işaret etmek için ortam değişkenini ayarlayın. |
 
-### <a name="azure-app-service-kudu-console"></a>Azure App Service Kudu Konsolu
+### <a name="azure-app-service-kudu-console"></a>Azure App Service Kudu konsolu
 
-[Kudu konsolunu](https://github.com/projectkudu/kudu/wiki/Kudu-console) uygulama hizmeti sunucusunun ve dosya sistemi doğrudan, yükseltilmiş bir komut satırı erişimi sağlar. Bu, hem bir değerli hata ayıklama aracıdır ve paketlerin yüklenmesi gibi CLI işlemleri sağlar.
+[Kudu konsolu,](https://github.com/projectkudu/kudu/wiki/Kudu-console) App Service sunucusuna ve dosya sistemine doğrudan ve yüksek komut satırı erişimi sağlar. Bu hem değerli bir hata ayıklama aracıdır hem de paketleri yüklemek gibi CLI işlemlerine olanak tanır.
 
-1. Açık Kudu Azure portalında App Service sayfanızdan seçerek **geliştirme araçları** > **Gelişmiş Araçlar**, ardından seçerek **Git**. Temel uygulama hizmeti URL'NİZLE dışında aynı olan bir URL bu eylemin gittiği `.scm` eklenir. Örneğin, temel URL'niz `https://vspython-test.azurewebsites.net/` Kudu üzerinde ise `https://vspython-test.scm.azurewebsites.net/` (Bu, yer işareti ekleyebilirsiniz):
+1. Geliştirme Araçları > **Gelişmiş** **Araçları'nı**seçerek Azure portalındaki Uygulama Hizmeti sayfanızdan Kudu'yu açın ve ardından **Git'i**seçin. Bu eylem, `.scm` eklenen ler dışında temel Uygulama Hizmeti URL'nizle aynı olan bir URL'ye yönlendirilir. Örneğin, temel URL'niz `https://vspython-test.azurewebsites.net/` Kudu'daysa `https://vspython-test.scm.azurewebsites.net/` (yer imi yapabilirsiniz):
 
-    ![Azure App Service için Kudu Konsolu](media/python-on-azure-console01.png)
+    ![Azure Uygulama Hizmeti için Kudu konsolu](media/python-on-azure-console01.png)
 
-1. Seçin **hata ayıklama konsoluna** > **CMD** Python yüklemenizi gidin ve ne kitaplıkları zaten var olup konsolunu açın.
+1. Python yüklemenize girebileceğiniz ve hangi kitaplıkların zaten orada olduğunu görebileceğiniz konsolu açmak için **Hata Ayıklama konsolu** > **CMD'yi** seçin.
 
 1. Tek bir paket yüklemek için:
 
-    a. Paket gibi yüklemek istediğiniz klasöre Python yükleme gidin *d:\home\python361x64*.
+    a. Paketi yüklemek istediğiniz Python yüklemeklasörüne gidin, örneğin *d:\home\python361x64*.
 
-    b. Kullanım `python.exe -m pip install <package_name>` paket yükleme.
+    b. Paketi `python.exe -m pip install <package_name>` yüklemek için kullanın.
 
-    ![Azure App Service için Kudu Konsolu aracılığıyla bottle yükleme örneği](media/python-on-azure-console02.png)
+    ![Azure Uygulama Hizmeti için Kudu konsolundan şişe yükleme örneği](media/python-on-azure-console02.png)
 
-1. Dağıttıysanız, bir *requirements.txt* sunucuya uygulamanız için zaten bu gereksinimleri aşağıda gösterildiği gibi yükleyin:
+1. Uygulamanız için bir *gereksinim.txt'yi* sunucuya zaten dağıttıysanız, tüm bu gereksinimleri aşağıdaki gibi yükleyin:
 
-    a. Paket gibi yüklemek istediğiniz klasöre Python yükleme gidin *d:\home\python361x64*.
+    a. Paketi yüklemek istediğiniz Python yüklemeklasörüne gidin, örneğin *d:\home\python361x64*.
 
-    b. Komutunu çalıştırın `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt`.
+    b. `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt` komutunu çalıştırın.
 
-    Kullanarak *requirements.txt* tam paketinizi ayarlayın, her ikisi de, yerel olarak hem de sunucu yeniden oluşturulması kolay olduğu için önerilir. Konsolunda herhangi bir değişiklik dağıttıktan sonra ziyaret hatırlamak *requirements.txt* ve komutu yeniden çalıştırın.
+    Tam paket kümenizi hem yerel olarak hem de sunucuda yeniden oluşturmak kolay olduğundan *requirements.txt* kullanılması önerilir. *Gereksinimleri.txt* herhangi bir değişiklik dağıttıktan sonra konsolu ziyaret etmeyi unutmayın ve komutu yeniden çalıştırın.
 
 > [!Note]
-> Yoktur C Derleyici App Service, tüm paketler için tekerlek yerel uzantı modüllerini ile yüklemeniz gerekir. Birçok popüler paketleri kendi tekerlekleri sağlar. Olmayan paketleri kullanmak `pip wheel <package_name>` yerel geliştirme bilgisayarınıza ve sitenizde tekerleği yüklersiniz. Bir örnek için bkz. [requirements.txt ile gerekli paketleri yönetme](managing-required-packages-with-requirements-txt.md).
+> App Service'te C derleyicisi bulunmadığından, yerel uzatma modüllerine sahip paketler için tekerleği yüklemeniz gerekir. Birçok popüler paketler kendi tekerlekleri sağlar. Kullanmayan paketler için, `pip wheel <package_name>` yerel geliştirme bilgisayarınızda kullanın ve ardından tekerleği sitenize yükleyin. Örneğin, [gereksinimlere sahip gerekli paketleri yönet'e bakın.txt](managing-required-packages-with-requirements-txt.md).
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 
-Kudu konsolunu Azure portalı üzerinden kullanmak yerine, komutları uzaktan Kudu REST API aracılığıyla komutu göndererek çalıştırabilirsiniz `https://yoursite.scm.azurewebsites.net/api/command`. Örneğin, yükleme için `bottle` paket, aşağıdaki JSON sonrası `/api/command`:
+Kudu konsolunu Azure portalı üzerinden kullanmak yerine, komutları Kudu REST API'ye `https://yoursite.scm.azurewebsites.net/api/command`göndererek uzaktan çalıştırabilirsiniz. Örneğin, `bottle` paketi yüklemek için aşağıdaki JSON'u şu şekilde `/api/command`gönderin:
 
 ```json
 {
@@ -209,6 +209,6 @@ Kudu konsolunu Azure portalı üzerinden kullanmak yerine, komutları uzaktan Ku
 }
 ```
 
-Komutlar ve kimlik doğrulaması hakkında daha fazla bilgi için bkz. [Kudu belgeleri](https://github.com/projectkudu/kudu/wiki/REST-API).
+Komutlar ve kimlik doğrulama hakkında bilgi için [Kudu belgelerine](https://github.com/projectkudu/kudu/wiki/REST-API)bakın.
 
-Kimlik bilgilerini kullanarak atabilirsiniz `az webapp deployment list-publishing-profiles` aracılığıyla Azure CLI komutunu (bkz [az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles)). Kudu komutları gönderme için bir yardımcı kitaplık kullanılabilir [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
+Azure CLI aracılığıyla `az webapp deployment list-publishing-profiles` komutu kullanarak kimlik bilgilerini de görebilirsiniz [(bkz. az webapp dağıtımı).](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles) GitHub'da Kudu komutlarını deftere [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)nakletmek için yardımcı kitaplık kullanılabilir.

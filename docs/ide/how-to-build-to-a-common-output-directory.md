@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ortak çıkış dizinine derleme'
+title: 'Nasıl yapılsın: Ortak bir çıktı dizinine yapılı'
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -14,27 +14,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a1e669789d2117b4bd2ee550dfffb147e46620c4
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68416749"
 ---
-# <a name="how-to-build-to-a-common-output-directory"></a>Nasıl yapılır: Ortak çıkış dizinine derleme
+# <a name="how-to-build-to-a-common-output-directory"></a>Nasıl yapılsın: Ortak bir çıktı dizinine yapılı
 
-Varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çözüm içindeki her bir projeyi çözüm içindeki kendi klasöründe oluşturur. Tüm çıktıları aynı klasöre yerleştirilecek şekilde zorlamak için, projelerinizin yapı çıkış yollarını değiştirebilirsiniz.
+Varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] her projeyi çözüm içinde kendi klasöründe bir çözüm oluşturur. Tüm çıktıları aynı klasöre yerleştirilmesi ne zorlamak için projelerinizin yapı çıktı yollarını değiştirebilirsiniz.
 
-## <a name="to-place-all-solution-outputs-in-a-common-directory"></a>Tüm çözüm çıkışlarını ortak bir dizine yerleştirmek için
+## <a name="to-place-all-solution-outputs-in-a-common-directory"></a>Tüm çözüm çıktılarını ortak bir dizine yerleştirmek için
 
-1. Çözümdeki bir projeye tıklayın.
+1. Çözümde bir projeye tıklayın.
 
-2. **Proje** menüsünde **Özellikler**' e tıklayın.
+2. **Proje** menüsünde **Özellikler'i**tıklatın.
 
-3. Projenin türüne bağlı olarak, **derleme** sekmesine veya **derleme** sekmesine tıklayın ve **Çıkış yolunu** Çözümdeki tüm projeler için kullanılacak bir klasöre ayarlayın.
+3. Projenin türüne bağlı olarak, **Derle** sekmesine veya **Yapı** sekmesine tıklayın ve **Çıktı yolunu** çözümdeki tüm projeler için kullanılacak bir klasöre ayarlayın.
 
 4. Çözümdeki tüm projeler için 1-3 adımlarını yineleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
-- [Nasıl yapılır: Derleme çıkış dizinini değiştirme](../ide/how-to-change-the-build-output-directory.md)
+- [Nasıl yapilir: Yapı çıktı dizini değiştirme](../ide/how-to-change-the-build-output-directory.md)

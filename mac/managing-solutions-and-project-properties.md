@@ -1,51 +1,51 @@
 ---
 title: Proje ve Çözüm Özelliklerini Yönetme
-description: Bu makaleler, Mac için projeler ve çözümler Visual Studio'da özelliklerini yönetmek nasıl açıklar
+description: Bu makale, Mac için Visual Studio'daki projelerin ve çözümlerin özelliklerini nasıl yöneteceklerini açıklar
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 75247EB8-323A-4AFD-A451-6703A03D5D1F
 ms.openlocfilehash: 514792804515541b7e4f64359a08e9c6093c5018
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67692879"
 ---
 # <a name="managing-project-and-solution-properties"></a>Proje ve Çözüm Özelliklerini Yönetme
 
 ## <a name="project-options"></a>Proje seçenekleri
 
-Proje seçenekleri, her proje için özeldir ve proje nasıl yazılır, yerleşik ve çalıştırma etkiler. (Bu kullanıcıya özgü seçenekleri ayarlar) Mac tercihleri ve (hangi çözümün tamamını seçeneklerini ayarlama) çözüm seçenekleri için Visual Studio ile karşılaştırır. Diğer geliştiriciler oluşturabilir ve doğru projeyi çalıştırın, proje seçenekleri proje (.csproj) dosyasında depolanır. Belirli proje seçenekleri dosyanın biçimlendirmesini ödün vermeden aynı belge üzerinde çalışmak birçok geliştiricinin sağlar.
+Proje seçenekleri her projeye özgüdür ve projenin nasıl yazıldığı, inşa edilip çalıştırıldığını etkiler. Bu, Mac Tercihleri için Visual Studio (kullanıcıya özel seçenekleri ayarlar) ve Çözüm seçenekleriyle (tüm çözüm için seçenekler ayarlayan) ile tezat ayarı. Proje seçenekleri proje (.csproj) dosyasında depolanır, böylece diğer geliştiriciler projeyi doğru bir şekilde oluşturabilir ve çalıştırabilir. Belirli proje seçeneklerine sahip olmak, birçok geliştiricinin dosyanın biçimlendirmesini tehlikeye atmadan aynı belge üzerinde çalışmasına olanak tanır.
 
-Mac için Visual Studio'da proje Seçenekleri'ni açmak için proje adına çift tıklayın veya bağlam menüsünü açmak için sağ tıklayın ve ardından **seçenekleri**:
+Mac için Visual Studio'da Proje seçeneklerini açmak için proje adını çift tıklatın veya bağlam menüsünü açmak için sağ tıklatın ve **ardından Seçenekler'i**seçin:
 
-![Bağlam menüsü seçeneği](media/projects-and-solutions-image2.png)
+![Bağlam Menüsünde Seçenek](media/projects-and-solutions-image2.png)
 
-Düzenlenebilir seçenekleri, çalıştırın ve kaynak kodu ve sürüm denetimi kümesi oluşturmak için seçenekleri içerir.
+Kullanılabilir seçenekler, kaynak kodu ve sürüm denetimi oluşturma, çalıştırma ve ayarlama seçeneklerini içerir.
 
-Proje seçenekleri beş farklı kategoride düzenlenmiştir:
+Proje seçenekleri beş farklı kategoride düzenlenir:
 
-* **Genel** -proje adını, açıklamasını ve varsayılan Namespace projenin konumunu yanı sıra, burada ayarlanan gibi bilgileri.
-* **Derleme** -Bu, geliştiricilerin ayarlama veya taşınabilir sınıf kitaplıkları için PCL profillerini değiştirme olanak tanır. Ayrıca sağlar özel komutlar, yapılandırmaları, derleyici seçenekleri ayarlamak için. Çıkış yolu ve derleme adı da buradan ayarlanabilir.
-* **Çalıştırma** -Bu, proje başına temelinde özel çalıştırma yapılandırmaları oluşturmanıza olanak sağlar.
-* **Kaynak kodu** - Bu, birçok farklı dosya türleri biçimlendirme denetlemenize olanak tanır ve adlandırma kuralları. Ayrıca varsayılan üst bilgi stil ve adlandırma ilkeleri burada ayarlayabilirsiniz.
-* **Sürüm denetimi** -bu sürüm denetimi projenizle kullanırken işleme iletisi stili düzenlemenizi sağlar.
+* **Genel** - Ad, Açıklama ve Varsayılan Ad Alanı gibi proje bilgileri, projenin Konumu ile birlikte burada ayarlanır.
+* **Yapı** - Bu, geliştiricilerin Taşınabilir Sınıf Kitaplıkları için PCL profillerini ayarlamasına veya değiştirmesine olanak tanır. Ayrıca özel komutlar, yapılandırmalar, derleyici seçenekleri ayarlanacak sağlar. Çıktı yolu ve montaj adı da burada ayarlanabilir.
+* **Çalıştır** - Bu, proje başına özel çalıştırma yapılandırmaları oluşturmanıza olanak tanır.
+* **Kaynak Kodu** - Bu, birçok farklı dosya türlerinin biçimlendirmesini ve adlandırma kurallarını denetlemenize olanak tanır. Ayrıca adlandırma ilkeleri ve varsayılan üstbilgi stilleri burada ayarlayabilirsiniz.
+* **Sürüm Denetimi** - Bu, projenizle Sürüm Denetimi'ni kullanırken iletinin stilini düzenlemeye olanak tanır.
 
-Her proje, platforma bağlı olarak belirli proje seçenekleri içerebilir. Örneğin, aşağıdaki görüntüde gösterildiği gibi bir Xamarin.Android projesi Android için ilgili seçeneğe sahiptir (örneğin, bağlayıcı seçenekleri) derleme ve uygulamayı (örneğin, izinleri):
+Her proje, platforma bağlı olarak belirli proje seçenekleri içerebilir. Örneğin, aşağıdaki resimde gösterildiği gibi bir Xamarin.Android projesinde Android yapısı (bağlayıcı seçenekleri gibi) ve Uygulama (izinler gibi) ile ilgili seçenekler vardır:
 
-![Android projesi seçenekleri](media/projects-and-solutions-image5.png)
+![Android Proje Seçenekleri](media/projects-and-solutions-image5.png)
 
-Xamarin.iOS paket grubu imzalama - gerekli sağlama profilinin gibi ilgili seçeneklerini içerir:
+Xamarin.iOS'un paket imzalamayla ilgili seçenekleri vardır - örneğin kullanılacak gerekli sağlama profili gibi:
 
-![iOS projesi seçenekleri](media/projects-and-solutions-image6.png)
+![iOS Proje Seçenekleri](media/projects-and-solutions-image6.png)
 
-## <a name="solution-options"></a>Çözüm seçenekleri
+## <a name="solution-options"></a>Çözüm Seçenekleri
 
-Çözüm seçenekleri gibi proje seçenekleri, ancak tüm çözümleri kapsamını kapsar. Derleme ayarları, kod stilleri ve sürüm denetimi, biçimlendirme, yazar bilgileri için bir yol sağlarlar ve başlangıç projesi çözümdeki atamak bir yol sağlar.  Çözüm Seçenekleri iletişim kutusunun yanından erişilebilen **Proje > çözüm seçenekleri** menü öğesi, gelen **seçenekleri** çözüm panelinde veya çift tıklatarak çözümdeki bağlam menüsü öğesi Çözümde, çözüm bölmesi:
+Çözüm seçenekleri Proje seçenekleri gibidir, ancak tüm Çözümlerin kapsamını kapsar. Yazar bilgilerini ayarlamak, ayarlar oluşturmak, kod biçimlendirme stilleri ve sürüm denetimi sağlamak ve Çözüm'de başlangıç projesini atamanın bir yolunu sağlarlar.  Çözüm Seçenekleri iletişim kutusuna Project **> Çözüm Seçenekleri** menü öğesinden, Çözüm defterindeki **Seçenekler** bağlam ı menü öğesinden veya Çözüm Defteri'ndeki Çözüm'e çift tıklayarak erişilebilir:
 
-![Çözüm seçenekleri](media/projects-and-solutions-image7.png)
+![Çözüm Seçenekleri](media/projects-and-solutions-image7.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Proje ve çözüm özelliklerini (Windows için Visual Studio) yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+* [Proje ve çözüm özelliklerini yönetme (Windows'ta Visual Studio)](/visualstudio/ide/managing-project-and-solution-properties)

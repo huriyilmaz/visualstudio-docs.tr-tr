@@ -1,5 +1,5 @@
 ---
-title: İş parçacığı özet raporu başına | Microsoft Docs
+title: Konu Başına Özet Raporu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,21 +13,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ab5e88db9f539dd79482044ab3834b27a6b1747
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62794332"
 ---
-# <a name="per-thread-summary-report"></a>Her iş parçacığı özet raporu
-Bu çubuk grafik, mevcut görülebilir zaman aralığında her etkinlik kategorisinde görünür her bir iş parçacığı harcadığı zamanı oranını gösterir. İş parçacığını yürütmeye "Yürütme" anlamına gelir; diğer tüm kategorileri, iş parçacığı bir şey beklediğini anlamına gelir.
+# <a name="per-thread-summary-report"></a>İş parçacığı özet raporu başına
+Bu çubuk grafiği, şu anda görünür zaman aralığında her gizli iş parçacığının her etkinlik kategorisinde harcadığı süre oranını gösterir. "Yürütme" iş parçacığı nın yürütüldettiği anlamına gelir; diğer tüm kategoriler iş parçacığı bir şey bekliyor anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yürütme zamanı (iş parçacıkları görünümü)](../profiling/execution-time-threads-view.md)
-- [G/ç zamanı (iş parçacıkları görünümü)](../profiling/i-o-time-threads-view.md)
-- [Bellek yönetimi zamanı](../profiling/memory-management-time.md)
-- [Önalım zamanı](../profiling/preemption-time.md)
-- [Bekleme süresi](../profiling/sleep-time.md)
-- [Eşitleme saati](../profiling/synchronization-time.md)
-- [UI işleme zamanı](../profiling/ui-processing-time.md)
+- [Yürütme süresi (İş Parçacığı Görünümü)](../profiling/execution-time-threads-view.md)
+- [G/Ç zamanı (İş Parçacıkları Görünümü)](../profiling/i-o-time-threads-view.md)
+- [Bellek yönetimi süresi](../profiling/memory-management-time.md)
+- [Preemption süresi](../profiling/preemption-time.md)
+- [Uyku süresi](../profiling/sleep-time.md)
+- [Eşitleme süresi](../profiling/synchronization-time.md)
+- [UI işlem süresi](../profiling/ui-processing-time.md)
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

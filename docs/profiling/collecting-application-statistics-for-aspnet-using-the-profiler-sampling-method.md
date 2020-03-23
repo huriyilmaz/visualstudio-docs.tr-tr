@@ -1,5 +1,5 @@
 ---
-title: ASP.NET Web Apps için istatistikleri toplayın | Microsoft Docs
+title: ASP.NET web uygulamaları için istatistik toplama | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,44 +13,44 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: a2cae807a8d833cf2653ea23616eeb819673229e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773250"
 ---
-# <a name="collect-statistics-for-aspnet-web-apps"></a>ASP.NET Web Apps için istatistikleri toplama
+# <a name="collect-statistics-for-aspnet-web-apps"></a>web uygulamaları ASP.NET için istatistik toplama
 
-Bu bölümde, **VSPerfASPNETCmd** ve **VSPerfCmd** komut satırı aracı ve örnekleme profili oluşturma yöntemi kullanılarak bir ASP.NET Web uygulaması için performans istatistikleri toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
-
-> [!NOTE]
-> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+Bu **bölümde, VSPerfASPNETCmd** ve **VSPerfCmd** komut satırı aracını ve örnekleme profil oluşturma yöntemini kullanarak ASP.NET bir Web uygulaması için performans istatistikleri toplama yordamları ve seçenekleri açıklanmaktadır.
 
 > [!NOTE]
-> **VSPerfCmd** Aracı, profil oluşturmayı duraklatma ve sürdürme ve Işlemci ve Windows performans sayaçlarından ek veri toplama dahil olmak üzere profil oluşturma araçları işlevselliğine erişim sağlar. bu işlevselliğe ihtiyaç duymadığınızda **VSPerfASPNETCmd** komut satırı aracını kullanmanız gerekir. **VSPerfASPNETCmd** komut satırı aracı, tek başına profil oluşturucuyu kullanarak ASP.NET Web sitelerini profil oluştururken tercih edilen yöntemdir. [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracı ile karşılaştırıldığında, hiçbir ortam değişkeninin ayarlanması gerekmez ve bilgisayarın yeniden başlatılması gerekmez. Daha fazla bilgi için bkz. [VSPerfASPNETCmd Ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).
+> Windows 8 ve Windows Server 2012'deki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturucusu bu platformlarda veri toplama şeklinde önemli değişiklikler gerektiriyordu. UWP uygulamaları da yeni toplama teknikleri gerektirir. [Windows 8 ve Windows Server 2012 uygulamalarında Performans Araçları'na](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)bakın.
 
-## <a name="common-tasks"></a>Ortak görevler
+> [!NOTE]
+> **VSPerfCmd** aracı, profil oluşturmayı duraklatma ve devam ettirme ve işlemci ve Windows performans sayaçlarından ek veri toplama gibi Profil Oluşturma Araçları işlevine tam erişim sağlar, ancak bu işlevselliğe ihtiyacınız olmadığında **VSPerfASPNETCmd** komut satırı aracını kullanmanız gerekir. **VSPerfASPNETCmd** komut satırı aracı, tek başına profil oluşturma ASP.NET Web sitelerini tek başına profilyaparken tercih edilen yöntemdir. [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracıyla karşılaştırıldığında, ortam değişkenlerinin ayarlanması gerekmez ve bilgisayarın yeniden başlatılması gerekmez. Daha fazla bilgi [için, VSPerfASPNETCmd ile Hızlı web sitesi profilleme](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)bakın.
 
-|Görev|İlgili Içerik|
+## <a name="common-tasks"></a>Genel görevler
+
+|Görev|İlgili İçerik|
 |----------|---------------------|
-|**Profil oluşturucuyu bir ASP.NET uygulamasına iliştirme**|-   [nasıl yapılır: uygulama istatistikleri toplamak için profil oluşturucuyu bir ASP.NET Web uygulamasına iliştirme](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)|
+|**Profil oluşturucuyu ASP.NET uygulamasına takın**|-   [Nasıl yapilir: Uygulama istatistiklerini toplamak için profil oluşturucuyu ASP.NET bir web uygulamasına ekleme](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
-### <a name="profile-aspnet-web-applications"></a>ASP.NET Web uygulamaları profili
+### <a name="profile-aspnet-web-applications"></a>Web uygulamaları ASP.NET profil
 
-|Görev|İlgili Içerik|
+|Görev|İlgili İçerik|
 |----------|---------------------|
-|**İzleme yöntemini kullanarak profil**|[izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md) -   |
-|**Profil bellek ayırma ve çöp toplama**|[bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md) -   |
-|**Profil kaynağı çekişmesi ve iş parçacığı etkinliği**|-   [eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
+|**Enstrümantasyon yöntemini kullanarak profil**|-   [Enstrümantasyon kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
+|**Profil bellek ayırma ve çöp toplama**|-   [Bellek verilerini toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
+|**Profil kaynak çekişmesi ve iş parçacığı etkinliği**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
 
-### <a name="sample-method"></a>Örnek Yöntem
+### <a name="sample-method"></a>Örnek yöntem
 
-|Görev|İlgili Içerik|
+|Görev|İlgili İçerik|
 |----------|---------------------|
-|**Tek başına (istemci) uygulamalar profili**|[örnekleme kullanarak uygulama Istatistiklerini toplama](../profiling/collecting-application-statistics-for-stand-alone-applications.md) -   |
-|-   **profili Hizmetleri**|[örnekleme kullanarak uygulama Istatistiklerini toplama](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md) -   |
+|**Profil tek başına (istemci) uygulamaları**|-   [Örneklemeyi kullanarak uygulama istatistiklerini toplama](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
+|-   **Profil hizmetleri**|-   [Örneklemeyi kullanarak uygulama istatistiklerini toplama](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|
 
-### <a name="analyze-sampling-data-views-and-reports"></a>Örnekleme veri görünümlerini ve raporlarını çözümleyin
+### <a name="analyze-sampling-data-views-and-reports"></a>Örnekleme veri görünümlerini ve raporlarını analiz
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)

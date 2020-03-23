@@ -1,74 +1,74 @@
 ---
-title: Visual Studio aboneliğinde Azure Community destek avantajı | Microsoft Docs
+title: Visual Studio Aboneliğinde Azure Topluluk Desteği avantajı | Microsoft Dokümanlar
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
-description: Seçili Visual Studio aboneliklerine dahil edilen Azure Community destek avantajı hakkında bilgi edinin.
+description: Belirli Visual Studio aboneliklerinde yer alan Azure Topluluk Desteği avantajı hakkında bilgi edinin.
 ms.openlocfilehash: 32a1c962e238bfc5ab8083ff643a99a77b699925
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "73983760"
 ---
-# <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Community destek forumu
-Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibinden doğrudan yardım alın.  Azure Community avantajı, Azure ile ilgili konularda odaklanan bir forum koleksiyonuna erişmenizi sağlar.
+# <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Topluluk Desteği forumu
+Azure Topluluğu üzerinden belirli destek forumlarında doğrudan Azure ekibinden yardım alın.  Azure Topluluğu avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmenizi sağlar.
 
 ## <a name="available-topics"></a>Kullanılabilir konular
 
 |                                       |                                                    |                                      |
 |---------------------------------------|----------------------------------------------------|--------------------------------------|
-| [Cloud Services (Web ve çalışan rolleri)](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredevelopment&filter=alltypes&sort=lastpostdesc) | [Azure ağı (DNS, Traffic Manager, VPN, VNET)](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesVirtualNetwork&filter=alltypes&sort=lastpostdesc) | [Azure App Service Web Apps](https://social.msdn.microsoft.com/forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)         |
-| [Azure SQL veritabanı](https://social.msdn.microsoft.com/Forums/home?forum=ssdsgetstarted&filter=alltypes&sort=lastpostdesc)                    | [Azure Active Directory](https://social.msdn.microsoft.com/forums/home?forum=WindowsAzureAD&filter=alltypes&sort=lastpostdesc)                             | [Azure Service Bus](https://social.msdn.microsoft.com/forums/home?forum=servbus&filter=alltypes&sort=lastpostdesc)                    |
+| [Bulut Hizmetleri (Web ve Çalışan Rolleri)](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredevelopment&filter=alltypes&sort=lastpostdesc) | [Azure Ağ (DNS, Trafik Yöneticisi, VPN, VNET)](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesVirtualNetwork&filter=alltypes&sort=lastpostdesc) | [Azure Uygulama Hizmeti - Web Uygulamaları](https://social.msdn.microsoft.com/forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)         |
+| [Azure SQL Veritabanı](https://social.msdn.microsoft.com/Forums/home?forum=ssdsgetstarted&filter=alltypes&sort=lastpostdesc)                    | [Azure Active Directory](https://social.msdn.microsoft.com/forums/home?forum=WindowsAzureAD&filter=alltypes&sort=lastpostdesc)                             | [Azure Servis Veri Servisi](https://social.msdn.microsoft.com/forums/home?forum=servbus&filter=alltypes&sort=lastpostdesc)                    |
 | [Azure Depolama](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)                         | [Azure API Management](https://social.msdn.microsoft.com/Forums/home?forum=azureapimgmt&filter=alltypes&sort=lastpostdesc)                               | [Azure DevTest Labs](https://social.msdn.microsoft.com/forums/home?forum=AzureDevTestLabs&filter=alltypes&sort=lastpostdesc)                   |
-| [Azure HDInsight](https://social.msdn.microsoft.com/Forums/azure/home?forum=hdinsight&filter=alltypes&sort=lastpostdesc)                       | [Azure Web siteleri](https://social.msdn.microsoft.com/Forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)                                     | [Azure Mobile Apps](https://social.msdn.microsoft.com/forums/home?forum=azuremobile&filter=alltypes&sort=lastpostdesc)                    |
-| [Azure Multi-Factor Authentication](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazureactiveauthentication&filter=alltypes&sort=lastpostdesc)     | [Fiyatlandırma ve faturalandırma](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazurepurchasing&filter=alltypes&sort=lastpostdesc)                                | [Azure Scripting & komut satırı araçları](https://social.msdn.microsoft.com/forums/home?forum=azurescripting&filter=alltypes&sort=lastpostdesc) |
+| [Azure HDInsight](https://social.msdn.microsoft.com/Forums/azure/home?forum=hdinsight&filter=alltypes&sort=lastpostdesc)                       | [Azure Web Siteleri](https://social.msdn.microsoft.com/Forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)                                     | [Azure Mobile Apps](https://social.msdn.microsoft.com/forums/home?forum=azuremobile&filter=alltypes&sort=lastpostdesc)                    |
+| [Azure Çok Faktörlü Kimlik Doğrulama](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazureactiveauthentication&filter=alltypes&sort=lastpostdesc)     | [Fiyatlandırma ve Faturalama](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazurepurchasing&filter=alltypes&sort=lastpostdesc)                                | [Azure Komut Dosyası & Komut Satırı Araçları](https://social.msdn.microsoft.com/forums/home?forum=azurescripting&filter=alltypes&sort=lastpostdesc) |
 | [Azure Yönetim Portalı](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuremanagement&filter=alltypes&sort=lastpostdesc)               | [Azure Backup](https://social.msdn.microsoft.com/forums/home?forum=windowsazureonlinebackup&filter=alltypes&sort=lastpostdesc)                                       | [Azure Stack](https://social.msdn.microsoft.com/forums/home?forum=AzureStack&filter=alltypes&sort=lastpostdesc)                          |
-| [Azure sanal makineleri](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)                | [Azure Site Recovery](https://social.msdn.microsoft.com/forums/home?forum=hypervrecovmgr&filter=alltypes&sort=lastpostdesc)                                | [Azure Marketi](https://social.msdn.microsoft.com/forums/home?forum=DataMarket&filter=alltypes&sort=lastpostdesc)                    |
+| [Azure Sanal Makineler](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)                | [Azure Site Kurtarma](https://social.msdn.microsoft.com/forums/home?forum=hypervrecovmgr&filter=alltypes&sort=lastpostdesc)                                | [Azure Market](https://social.msdn.microsoft.com/forums/home?forum=DataMarket&filter=alltypes&sort=lastpostdesc)                    |
 
 ## <a name="get-started"></a>Kullanmaya başlayın
-Azure Community 'yi kullanmaya başlamak kolaydır.
-1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)oturum açın.
+Azure Topluluğu'na başlamak kolaydır.
+1. Oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)aç.
 
-2. Destek bölümünde Azure Community kutucuğunu bulun ve **Yardım al** bağlantısına tıklayın.
+2. Destek bölümünde Azure Topluluğu döşemesini bulun ve **Yardım Al** bağlantısını tıklatın.
     > [!div class="mx-imgBorder"]
-    >Azure Community kutucuğunu ![](_img/vs-azure-community/vs-azure-community-tile.png)
+    >![Azure Topluluk Döşemesi](_img/vs-azure-community/vs-azure-community-tile.png)
 
-3. Kullanılabilir forumlardan oluşan bir liste görürsünüz.  Seçtiğiniz foruma tıklamanız yeterlidir.
+3. Kullanılabilir forumların bir listesini görürsünüz.  Sadece seçtiğiniz foruma tıklayın.
     > [!div class="mx-imgBorder"]
-    > Azure Community forumları ![](_img/vs-azure-community/vs-azure-community-forums.png)
+    > ![Azure Topluluk Forumları](_img/vs-azure-community/vs-azure-community-forums.png)
 
-4. Forum dahilinde konuları ve yanıtları görüntüleyebilir, sorunuzun yanıtlarını arayabilir veya yeni bir soru gönderebilirsiniz.
+4. Forum içinde, konuları ve yanıtları görüntüleyebilir, sorunuza yanıt arayabilir veya yeni bir soru gönderebilirsiniz.
     > [!div class="mx-imgBorder"]
-    > Azure Community örnek ![](_img/vs-azure-community/vs-azure-community-example.png)
+    > ![Azure Topluluk Örneği](_img/vs-azure-community/vs-azure-community-example.png)
 
-## <a name="eligibility"></a>Önceliği
-Azure Community avantajının kullanılabilirliği, aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
+## <a name="eligibility"></a>Uygunluk
+Azure Topluluğu avantajının kullanılabilirliği, aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
 
-|                                          Abonelik düzeyi                                           |     Kanallar      |    Faydası    | Yenilenebilir? |
+|                                          Abonelik Düzeyi                                           |     Kanallar      |    Avantaj    | Yenilen -ebilir? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (Standart)                           | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                           GitHub Enterprise ile Visual Studio Enterprise                           | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                          Visual Studio Professional (Standart)                          | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                              Visual Studio Test Professional (Standart)                               |    VL, perakende     |   Bir yıl    |    Evet     |
-|                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Bir yıl    |    Evet     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Yok |     Hayır     |
+|                           Visual Studio Enterprise (Standart)                           | VL, Azure, Perakende |   Bir yıl    |    Evet     |
+|                           GitHub Enterprise ile Visual Studio Enterprise                           | VL, Azure, Perakende |   Bir yıl    |    Evet     |
+|                          Visual Studio Professional (Standart)                          | VL, Azure, Perakende |   Bir yıl    |    Evet     |
+|                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, Perakende |   Bir yıl    |    Evet     |
+|                              Visual Studio Test Professional (Standart)                               |    VL, Perakende     |   Bir yıl    |    Evet     |
+|                                       MSDN Platformları (Standart)                                       |    VL, Perakende     |   Bir yıl    |    Evet     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Kullanılamaz |     Hayır     |
 
-<sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Microsoft FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio sektör ortağı (VSIP), BizSpark, Imagine, Microsoft Sertifikalı TRAINER (MCT)*
+<sup>1</sup>  *Içerir: Satış için değil (NFR), Microsoft FTE, En Değerli Profesyonel (MVP), Bölge Direktörü (RD), Visual Studio Sanayi Ortağı (VSIP), BizSpark, Imagine, Microsoft Certified Trainer (MCT)*
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, Visual Studio 'Yu satın almaya yönelik farklı seçenekleri araştırmak için [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) gitmesi önerilir.
+> Microsoft artık Cloud Subscriptions'da Visual Studio Professional Annual abonelikleri ve Visual Studio Enterprise Annual abonelikleri sunamaz. Mevcut müşterilerin aboneliklerini yenileme, artırma, azaltma veya iptal etme deneyimi ve yeteneğinde herhangi bir değişiklik olmayacaktır. Yeni müşteriler Visual Studio [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) satın almak için farklı seçenekleri keşfetmek için gitmek için teşvik edilir.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresinize atanan tüm abonelikleri görmek için [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) bağlanın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) atanan tüm abonelikleri görmek için bağlanın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla nız olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
-## <a name="support-resources"></a>Destek kaynakları
-- Diğer Azure Community kaynakları için lütfen Azure Community [desteği sayfasını](https://azure.microsoft.com/support/forums/)ziyaret edin.
+## <a name="support-resources"></a>Destek Kaynakları
+- Diğer Azure Topluluğu kaynakları için lütfen Azure Topluluk [Desteği sayfasını](https://azure.microsoft.com/support/forums/)ziyaret edin.
 - [Azure belgeleri](/azure/).
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım mı gerekiyor?  Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.
-- Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+- Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalandırma konusunda yardıma mı ihtiyacınız var?  İletişim Görsel Studio [Abonelikleri Destek](https://visualstudio.microsoft.com/subscriptions/support/).
+- Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Birçok Visual Studio aboneliğinin Azure DevTest tek kredisi ile birlikte geldiğinden emin misiniz?  Nasıl [etkinleştireceğinizi](vs-azure.md) öğrenin.
+Birçok Visual Studio aboneliğinin Azure DevTest bireysel kredisi ile birlikte geldiğini biliyor muydunuz?  Sizinkini nasıl [etkinleştireceklerini](vs-azure.md) öğrenin.

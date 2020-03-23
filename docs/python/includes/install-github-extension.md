@@ -1,12 +1,12 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 62fc9607b6f54dc90d4eb8864cba3a0fb1e74779
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "68185931"
 ---
-VS'nin içinden GitHub depolarından çalışmak için Visual Studio için GitHub uzantısı'nı yüklemeniz gerekir. Bunu yapmak için Visual Studio Yükleyicisi'ni çalıştırın, **Değiştir**seçip **tek tek bileşenler** sekmesi. Ekranı aşağı kaydırarak **kod Araçları** bölümünden **Visual Studio için GitHub uzantısı**seçip **Değiştir**.
+VS içinden GitHub depoları ile çalışmak için Visual Studio için GitHub Uzantısı'nı yüklemeniz gerekir. Bunu yapmak için Visual Studio yükleyicisini çalıştırın, **Değiştir'i**seçin ve **Tek tek bileşenler** sekmesini seçin. Kod **araçları** bölümüne aşağı kaydırın, Visual Studio **için GitHub uzantısını**seçin ve **Değiştir'i**seçin.
 
-![GitHub uzantısı VS yükleyici seçme](../media/installation-github-extension.png)
+![VS yükleyicisinde GitHub uzantısını seçme](../media/installation-github-extension.png)

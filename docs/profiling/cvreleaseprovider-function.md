@@ -1,5 +1,5 @@
 ---
-title: CvReleaseProvider işlevi | Microsoft Docs
+title: CvReleaseProvider Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0008b7476290558c098b2241fde5c9b209933a0a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62974052"
 ---
-# <a name="cvreleaseprovider-function"></a>CvReleaseProvider işlevi
-İşaretleyici sağlayıcısını yayınlar. İşaretleyici sağlayıcısını serbest bu sağlayıcı dizi önceden oluşturulmuş işaret etkilemez. İşaret serisi CvReleaseMarkerSeries çağrı tarafından ayrı ayrı serbest bırakılması gerekir. Sağlayıcı yayımlamayı hatası bellek sızıntısına neden olur.
+# <a name="cvreleaseprovider-function"></a>CvReleaseProvider fonksiyonu
+İşaretleyici sağlayıcısını serbest bırakır. İşaretleyici sağlayıcısının serbest bırakılması, bu sağlayıcının daha önce oluşturulmuş işaretçi serisini etkilemez. Marker serisi CvReleaseMarkerSeries çağrısı ile ayrı olarak serbest bırakılmalıdır. Sağlayıcının serbest bırakılamaması bellek sızıntısına neden olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,13 +31,13 @@ HRESULT CvReleaseProvider(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pProvider` Sağlayıcı bağlamı. NULL olamaz.
+ `pProvider`Sağlayıcı bağlamı. NULL olamaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
- S_OK sağlayıcısı başarıyla serbest bırakıldı veya hata kodu var. durumda tüm hatalar. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+ Sağlayıcı başarıyla serbest bırakıldığında veya herhangi bir hata olması durumunda hata kodu S_OK. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

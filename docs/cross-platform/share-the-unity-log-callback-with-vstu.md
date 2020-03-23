@@ -1,5 +1,5 @@
 ---
-title: VSTU ile Unity günlük geri çağırması paylaşma | Microsoft Docs
+title: Unity Log Callback'i VSTU ile paylaşın | Microsoft Dokümanlar
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
@@ -11,17 +11,17 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: aa8a4a229102a6a9439ffb36582cd03e322a086b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62815671"
 ---
-# <a name="share-the-unity-log-callback-with-vstu"></a>VSTU ile Unity günlük geri çağrısı paylaşma
-Unity için Visual Studio Araçları, Unity'nin konsolunu Visual Studio'ya aktarabilmek için Unity'ye bir günlük geri çağrısı kaydeder. Düzenleyici betiklerinizi Unity ile aynı zamanda günlük geri kaydolursanız, geri çağırma işleminizi VSTU geri çağırma etkileyebilir. Bu olasılığını önlemek için `VisualStudioIntegration.LogCallback` VSTU ile işbirliği yapmayı olay.
+# <a name="share-the-unity-log-callback-with-vstu"></a>Unity günlük geri aramasını VSTU ile paylaşın
+Visual Studio Tools for Unity konsolunu Visual Studio'ya aktarabilmek için Unity ile günlük geri arama kaydeder. Düzenleyici komut dosyalarınız da Unity ile günlük geri arama sıyrıkları kaydederse, VSTU geri araması geri aramanızı etkileyebilir. Bu olasılığı önlemek `VisualStudioIntegration.LogCallback` için, vstu ile işbirliği yapmak için olayı kullanın.
 
 ## <a name="demonstrates"></a>Gösteriler
- Unity için Visual Studio Araçları tarafından oluşturulan Unity günlük geri çağırması paylaşma yapma.
+ Visual Studio Tools for Unity tarafından oluşturulan Unity Log Callback nasıl paylaşılır?
 
 ## <a name="example"></a>Örnek
 

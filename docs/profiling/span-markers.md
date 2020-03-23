@@ -1,5 +1,5 @@
 ---
-title: Span işaretçileri | Microsoft Docs
+title: Yayılma İşaretleyicileri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,27 +11,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c69b48a5b1b551e2e29b9aa10e7f68ff0df0e379
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62980992"
 ---
-# <a name="span-markers"></a>Kapsam işaretleyicileri
-Aralık işaret uygulama anlamlı bir aşamasını temsil eder. Örneğin, belirli bir çalışma öğesini işleniyor zaman aralığını temsil etmek için bir aralık kullanabilirsiniz. Uzunluğu, karşılık gelen uygulaması aşaması süresince temsil eder. Bu örnekte, bir aralık eşzamanlılık görselleştiricisi içinde gösterilmiştir:
+# <a name="span-markers"></a>Yayılma işaretleri
+Yayılma işaretçisi, uygulamanın anlamlı bir aşamasını temsil eder. Örneğin, belirli bir çalışma öğesinin işlendiği bir zaman aralığını temsil etmek için bir yayılma alanı kullanabilirsiniz. Uzunluğu, ilgili uygulama aşamasının süresini gösterir. Bu resimde Eşzamanlılık Görselleştiricisi'nde bir yayılma gösterir:
 
- ![Eşzamanlılık görselleştiricisi de aralık bir işaret](../profiling/media/cvmarkerspan.png "CVMarkerSpan") bir aralık işaretçisi eşzamanlılık görselleştiricisi
+ ![Eşzamanlılık Görselleştiricisi'nde bir yayılma işareti](../profiling/media/cvmarkerspan.png "CVMarkerSpan") Eşzamanlılık Görselleştiricisi'nde bir yayılma işareti
 
-## <a name="span-category"></a>Aralık kategorisi
- Aralık işaret kategori bağlı olarak beş farklı renkler biriyle görüntülenir. Beşten fazla kategorileri varsa renkleri yinelenir. Kategori herhangi bir tamsayı olabilir. Bu örnekte, beş renkleri gösterilmiştir:
+## <a name="span-category"></a>Yayılma alanı kategorisi
+ Bir yayılma işareti, kategorisine bağlı olarak beş farklı renkte görüntülenir. Beşten fazla kategori varsa renkler yinelenir. Kategori herhangi bir sonda olabilir. Bu resimde beş olası renk gösterilmektedir:
 
- ![Farklı kategorilerdeki beş yayılma](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory") ilk beş aralık kategorilerin renkleri
+ ![Farklı kategorilerde beş açıklık](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory") İlk beş açıklık kategorisinin renkleri
 
-## <a name="span-aggregation-markers"></a>Toplama işaretleyicileri
- Bazen aralık işaretçileri bunu birbirine yakın bunlar ayrı ayrı çekilemez eşzamanlılık görselleştiricisi içinde oluşur. Bu oluştuğunda, bir gri *aralık toplama işaret* temsil olarak temel alınan yayılma gösterilir. Bu simgeler biri üzerinde işaretçiyi getirdiğinizde araç ipucu temsil edilen temel alınan yayılma sayısını görüntüler. Yayılma görüntülemek için yakınlaştırın. Tüm yakınlaştırmak ve yine de aralık toplama işaret alın, temel alınan aralık işaretçilerini görüntüleyebileceğiniz [işaretçiler raporu](../profiling/markers-report.md). Bu örnekte, aralık toplama işaret gösterilmiştir:
+## <a name="span-aggregation-markers"></a>Yayılma agrega işaretleri
+ Bazen yayılma işaretçileri Eşzamanlılık Görselleştiricisinde birbirine o kadar yakın olur ki tek tek çizilemezler. Bu durumda, temel açıklıkları temsil eden gri bir *yayılma işareti* gösterilir. İşaretçiyi bu simgelerden birine dayadığınızda, bir araç ucu temsil edilen temel yayılma sayısını görüntüler. Yayılma açıklıklarını görüntülemek için yakınlaştırın. Tüm yol yakınlaştırır ve hala bir yayılma ağıl işaretçisi alırsanız, [Işaretçiler Raporu'nda](../profiling/markers-report.md)temel yayılma işaretçilerini görüntüleyebilirsiniz. Bu resimde bir yayılma işareti gösterir:
 
- ![Bir toplama eşzamanlılık görselleştiricisi işaretçisi span](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate") aralık toplama işaretçisi
+ ![EşzamanlıLık Görselleştiricisi'nde bir toplam yayılma işareti](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate") Bir yayılma toplama işaretçisi
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Eşzamanlılık görselleştiricisi işaretleyicileri](../profiling/concurrency-visualizer-markers.md)
+- [Eşzamanlı Görselleştirici işaretleri](../profiling/concurrency-visualizer-markers.md)
 - [Eşzamanlılık Görselleştiricisi SDK](../profiling/concurrency-visualizer-sdk.md)

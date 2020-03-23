@@ -1,6 +1,6 @@
 ---
-title: Python arama yollarını nasıl uygulanır
-description: Visual Studio, ortamlar ve sistem genelinde değişkenleri kullanmaktan kaçınmak için projeleri için arama yollarını belirtmek daha fazla belirli bir araçları sağlar.
+title: Python arama yolları nasıl uygulanır?
+description: Visual Studio, sistem genelindeki değişkenleri kullanmaktan kaçınmak için ortamlar ve projeler için arama yolları belirlemek için daha özel bir araç sağlar.
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,44 +11,44 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 37ce9d7b1853dfecc9e0ec33ca08c3c3fa0571e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62428451"
 ---
-# <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio, Python arama yollarını nasıl kullanır?
+# <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio Python arama yollarını nasıl kullanır?
 
-Tipik Python kullanımla `PYTHONPATH` ortam değişkeni (veya `IRONPYTHONPATH`, vs.) Modülü dosyaları için varsayılan arama yolu sağlar. Diğer bir deyişle, kullandığınızda bir `from <name> import...` veya `import <name>` deyimi, Python, eşleşen bir ad için sırayla aşağıdaki konumlarda arar:
+Tipik Python kullanımında, ortam `PYTHONPATH` `IRONPYTHONPATH`değişkeni (veya, vb.) modül dosyaları için varsayılan arama yolunu sağlar. Diğer bir deyişle, `from <name> import...` bir `import <name>` veya deyim kullandığınızda, Python eşleşen bir ad için aşağıdaki konumları arar:
 
-1. Python'ın yerleşik modül.
-1. Kullanmakta olduğunuz Python kodu içeren klasör.
-1. "Geçerli bir ortam değişkeni tarafından tanımlanan modülü arama yolunu" olarak. (Bkz [modül arama yolu](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) ve [ortam değişkenlerini](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH) Python belgeleri core'da.)
+1. Python'un dahili modülleri.
+1. Çalıştırdığınız Python kodunu içeren klasör.
+1. "Modül arama yolu" olarak ilgili ortam değişkeni tarafından tanımlanır. (Temel Python belgelerindeki [Modül Arama Yolu](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) ve Çevre [değişkenlerine](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH) bakın.)
 
-Visual Studio arama path ortam değişkenine bile tüm sistem için değişkeni ayarlandığında ancak yok sayar. Göz ardı edilir, aslında, tam olarak *çünkü* tüm sistem için ayarlanır ve bu nedenle otomatik olarak yanıtlanan bazı sorular başlatır: Başvurulan modül Python 2.7 veya Python 3.6 + yöneliktir? Standart kitaplık modülleri geçersiz olacak? Bu davranışı kullanan bir geliştiricidir yoksa bir kötü amaçlı geçirme girişimi mı?
+Visual Studio, değişken tüm sistem için ayarlanmış olsa bile, arama yolu ortamı değişkenini yok sayar. Aslında tam *olarak* tüm sistem için ayarlandığı için göz ardı edilir ve böylece otomatik olarak yanıtlanamayan bazı soruları gündeme getirir: Başvurulan modüller Python 2.7 veya Python 3.6+ için midir? Standart kütüphane modüllerini geçersiz kılacaklar mı? Geliştirici bu davranışın farkında mı yoksa kötü amaçlı bir kaçırma girişimi mi?
 
-Visual Studio, bu nedenle doğrudan hem ortamları ve projelerinde arama yollarını belirtmek için bir yol sağlar. Çalıştırın ya da Visual Studio'da hata ayıklama kodu değerini arama yollarını alır `PYTHONPATH` (ve diğer eşdeğer değişkenleri). Arama yolları ekleyerek, Visual Studio o konumlardaki kitaplıkları inceler ve IntelliSense veritabanları için gerektiğinde derler (Visual Studio 2017 sürüm 15.5 ve önceki; veritabanı oluşturmak biraz zaman alabilir kitaplıkları sayısına bağlı olarak).
+Visual Studio böylece arama yollarını doğrudan hem ortamlarda hem de projelerde belirtmek için bir araç sağlar. Visual Studio'da çalıştırdığınız veya hata ayıkladığınız `PYTHONPATH` kod, (ve diğer eşdeğer değişkenler) değerindearama yolları alır. Visual Studio, arama yolları ekleyerek bu konumlardaki kitaplıkları inceler ve gerektiğinde onlar için IntelliSense veritabanları oluşturur (Visual Studio 2017 sürüm 15.5 ve daha önce; veritabanının oluşturulması kitaplık sayısına bağlı olarak biraz zaman alabilir).
 
-Bir arama yolu eklemek için Git **Çözüm Gezgini**, proje düğümünü, sağ **arama yollarını**seçin **klasörü için arama yolu Ekle**:
+Arama yolu eklemek **için, Çözüm Gezgini'ne**gidin, proje düğümünüzü genişletin, **Arama Yolları'na**sağ tıklayın, **Arama Yoluna Klasör Ekle'yi**seçin:
 
 ::: moniker range="vs-2017"
-![Çözüm Gezgini'nde arama yollarında arama yolu komutuna klasörü Ekle](media/search-paths-command.png)
+![Çözüm Gezgini'nde Arama Yollarında Arama Yolu komutuna Klasör ekleme](media/search-paths-command.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Çözüm Gezgini'nde arama yollarında arama yolu komutuna klasörü Ekle](media/search-paths-command-2019.png)
+![Çözüm Gezgini'nde Arama Yollarında Arama Yolu komutuna Klasör ekleme](media/search-paths-command-2019.png)
 ::: moniker-end
 
-Bu komut ardından dahil etmek için klasörü seçin, bir tarayıcı görüntüler.
+Bu komut, daha sonra eklemek için klasörü seçtiğiniz bir tarayıcı görüntüler.
 
-Varsa, `PYTHONPATH` ortam değişkeni zaten istediğiniz klasörleri içeren, kullanın **ise PYTHONPATH eklemek için arama yollarını** kullanışlı bir kısayol olarak.
+Ortam `PYTHONPATH` değişkeniniz zaten istediğiniz klasör(ler)i içeriyorsa, **pythonpath'i arama yollarına** uygun bir kısayol olarak ekleyin'i kullanın.
 
-Visual Studio bu yollar klasörleri arama yollarını eklendikten sonra projeyle ilişkili her ortam için kullanır. (Hatalar ortamı Python 3'te temel alır ve Python 2.7 modülleri için bir arama yolu eklemek çalışırsanız görebilirsiniz.)
+Klasörler arama yollarına eklendikten sonra, Visual Studio bu yolları projeyle ilişkili herhangi bir ortam için kullanır. (Ortam Python 3'ü temel alıyorsa ve Python 2.7 modüllerine bir arama yolu eklemeye çalışıyorsanız hatalar görebilirsiniz.)
 
-İle dosyaları bir *.zip* veya *.egg* uzantısı eklenebilir arama yolları seçerek **Zip arşivine arama yolu Ekle** komutu. Klasörlerle olduğu gibi bu dosyaların içeriğini taranan ve IntelliSense için kullanılabilir.
+*.zip* veya *.egg* uzantılı dosyalar, **Arama Yolu'na Zip Arşivi Ekle** komutunu seçerek arama yolu olarak da eklenebilir. Klasörlerde olduğu gibi, bu dosyaların içeriği taranır ve IntelliSense'e sunulmuştur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da Python ortamlarını yönetme](managing-python-environments-in-visual-studio.md)
 - [Proje için yorumlayıcıyı seçme](selecting-a-python-environment-for-a-project.md)
-- [Bağımlılıklar için Requirements.txt dosyasını kullanma](managing-required-packages-with-requirements-txt.md)
-- [Python ortamları penceresi başvurusu](python-environments-window-tab-reference.md)
+- [Bağımlılıklar için requirements.txt kullanın](managing-required-packages-with-requirements-txt.md)
+- [Python Ortamları pencere başvurusu](python-environments-window-tab-reference.md)

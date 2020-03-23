@@ -1,5 +1,5 @@
 ---
-title: Deconstructor hızlı Eylem oluştur
+title: Dekonstrüktör hızlı eylem oluşturma
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -10,46 +10,46 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5a3a89d15d05b44575fede98d3043d706b24c1d9
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531892"
 ---
-# <a name="generate-a-deconstructor-in-visual-studio"></a>Visual Studio'da bir deconstructor oluşturun
+# <a name="generate-a-deconstructor-in-visual-studio"></a>Visual Studio'da dekonstrüktör oluşturma
 
 Bu kod oluşturma için geçerlidir:
 
 - C#
 
-**Ne:** Metot taslağı için yeni bir deconstructor hemen oluşturmanıza olanak sağlar.
+**Ne:** Hemen yeni bir deconstructor için yöntem saplama oluşturmanızı sağlar.
 
-**ne zaman:** Düzgün türüne otomatik olarak Ayrıştır istiyorsunuz.
+**Ne zaman:** Türünüzün düzgün bir şekilde yapısızlaştırılmasını istiyorsunuz.
 
-**Neden:** Bir deconstructor el ile yazabilirsiniz, ancak bu özellik saplama sizin için doğru out parametreleri ile oluşturur.
+**Neden:** El ile bir deconstructor yazabilirsiniz, ancak bu özellik doğru çıkış parametreleri ile sizin için saplama oluşturur.
 
-## <a name="generate-a-deconstructor"></a>Bir deconstructor oluştur
+## <a name="generate-a-deconstructor"></a>Bir dekonstrüktör oluşturun
 
-1. İstenen çıkış belirtilen parametrelerle yeni bir türü bildirin. Bildirim eşleştirme hiçbir deconstruct örneği bulunamadığında bu bildirim hataya neden olur.
+1. İstenilen çıkış parametreleri belirtilen yeni bir tür bildirin. Bu bildirim, bildirgenizle eşleşen bir deconstruct örneği bulunamadığında hataya neden olur.
 
-   ![Eksik deconstructor hatası](media/deconstruct.png)
+   ![Eksik dekonstrüktör hatası](media/deconstruct.png)
 
-2. Aşağıdaki adımlardan birini uygulayın:
+2. Aşağıdaki adımlardan birini izleyin:
 
    - **Klavye**
-      - İmleç, bildirimi, Ctrl + seçin. Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+      - Bildiriminizdeki imleçle Ctrl+'yı seçin. **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
    - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - Seçin ![Tornavida](media/screwdriver.png) boş bir satıra sınıfında metin imleci ise sol kenar boşluğunda görünür simge.
+      - Hızlı Eylemler ve **Yeniden Faktörler** menüsünü sağ tıklatın ve seçin.
+      - Şunu seçerek: ![Tornavida](media/screwdriver.png) metin imleci sınıftaki boş satırda zaten duruyorsa, sol kenar boşluğunda görünen simge.
 
-      ![Deconstructor kod düzeltme](media/deconstruct-codefix.png)
+      ![Deconstructor kod düzeltmesi oluşturma](media/deconstruct-codefix.png)
 
-3. Seçin **'MyInternalClass.Deconstruct' metodunu üret** deconstructor oluşturulacak.
+3. Dekonstrüktör oluşturmak için **'MyInternalClass.Deconstruct' yöntemini** oluştur'u seçin.
 
-   ![Sonuçta elde edilen deconstructor kod](media/deconstruct-result.png)
+   ![Ortaya çıkan dekonstrüktör kodu](media/deconstruct-result.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod oluşturma](../code-generation-in-visual-studio.md)
-- [Değişiklikleri Önizle](../../ide/preview-changes.md)
+- [Değişiklikleri önizleme](../../ide/preview-changes.md)
 - [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)

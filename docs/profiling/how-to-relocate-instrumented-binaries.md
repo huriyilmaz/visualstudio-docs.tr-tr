@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Işaretlenmiş Ikililerin konumunu değiştirme | Microsoft Docs'
+title: 'Nasıl Yapılır: Enstrümanlı İkilileri BaşkabirE Taşıyın | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,27 +16,27 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: cddbb0b3e27b841441937b7256ea32d722e25f5e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774906"
 ---
-# <a name="how-to-relocate-instrumented-binaries"></a>Nasıl yapılır: işaretlenmiş ikililerin konumunu değiştirme
+# <a name="how-to-relocate-instrumented-binaries"></a>Nasıl yapılır: Enstrümanlı ikilileri taşıma
 
-İzleme sırasında, uygulama performansını ölçmek için, yoklamalar ikiliye eklenir. İşaretlenmiş ikilinin yeniden konumlandırmaya seçerek, özgün ikilinin bir kopyası işaretlenir ve belirtilen konuma konur. Profil oluşturucunun özgün ikilinizi yeniden adlandırmasına istemiyorsanız bu seçenek faydalıdır. İkili yeniden konumlandırılıp, ikilinin orijinal sürümünün üzerine yazılır.
+Enstrümantasyon sırasında, problar uygulama performansını ölçmek için ikili içine eklenir. Enstrümantasyonlu ikilinin yerini değiştirmeyi seçerek, orijinal ikilinin bir kopyası enstrümantelenir ve belirtilen konuma yerleştirilir. Profil oluşturucunun özgün ikili adınızı yeniden adlandırmasını istemiyorsanız, bu seçenek yararlıdır. İkili yerle bir edilmezse, ikilinin özgün sürümü üzerine yazılır.
 
-## <a name="to-relocate-instrumented-binary"></a>İşaretlenmiş ikilinin yerini değiştirmek için
+## <a name="to-relocate-instrumented-binary"></a>Enstrümantingli ikili nin yerini değiştirmek için
 
-1. **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+1. **Performans Gezgini'nde,** performans oturumuna sağ tıklayın ve ardından **Özellikler'i**tıklatın.
 
-2. **Özellik sayfalarında** **ikili** Özellikler ' e tıklayın.
+2. Özellik **Sayfalarında,** **İkili** özelliklerini tıklatın.
 
-3. **İşaretlenmiş ikilileri Yeniden Konumlandır** onay kutusunu seçin.
+3. **Araçlı ikilileri yeniden kutuya** yerleştirin'i seçin.
 
-4. Belgelenmiş ikili için konumu belirtin.
+4. Enstrümantasyonlu ikilinin konumunu belirtin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Vsinstr](../profiling/vsinstr.md)
-[performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
+[Performans oturumlarını](../profiling/configuring-performance-sessions.md)
+[yapılandırVSInstr](../profiling/vsinstr.md)

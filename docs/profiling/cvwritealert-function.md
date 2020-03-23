@@ -1,5 +1,5 @@
 ---
-title: CvWriteAlert işlevi | Microsoft Docs
+title: CvWriteAlert Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b7cc2316168d14c6c996c4d55065771c85ffdfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62989781"
 ---
-# <a name="cvwritealert-function"></a>CvWriteAlert işlevi
-Bir uyarı eşzamanlılık görselleştiricisi izleme dosyasına yazar.
+# <a name="cvwritealert-function"></a>CvWriteAlert fonksiyonu
+Eşzamanlı Lık Görselleştiricisi izleme dosyasına bir uyarı yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -55,21 +55,21 @@ HRESULT CvWriteAlertVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList` Bağımsız değişken listesi.
+ `argList`Bağımsız değişkenler listesi.
 
- `pMarkerSeries` Geçerli işaret serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
- `pMessage` İleti biçimi dizesi. NULL olamaz.
+ `pMessage`İleti biçimi dizesi. NULL olamaz.
 
-## <a name="return-value"></a>Dönüş değeri
- İletinin başarılı bir şekilde yazıldığında S_OK. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+## <a name="return-value"></a>Döndürülen değer
+ İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
  **Unicode:** CvWriteAlertW, CvWriteAlertVW
 
  **ANSI:** CvWriteAlertA, CvWriteAlertVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

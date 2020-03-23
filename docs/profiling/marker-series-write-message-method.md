@@ -1,5 +1,5 @@
 ---
-title: marker_series::write_message yöntemi | Microsoft Docs
+title: marker_series::write_message Yöntemi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: be6194936264d6038c4dc1e26b5d05f539f0dc6a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62830908"
 ---
-# <a name="markerserieswritemessage-method"></a>marker_series::write_message yöntemi
-Eşzamanlılık görselleştiricisi izleme dosyasının bir ileti yazar.
+# <a name="marker_serieswrite_message-method"></a>marker_series::write_message yöntemi
+Eşzamanlı Görüntüleyici izleme dosyasına bir ileti yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,16 +48,16 @@ void write_message(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_Format` Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğeleri ile karıştırılmış, metin içeren bir bileşik biçimlendirme dizesi.
+ `_Format`Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle karışık metin içeren bileşik biçim dizesi.
 
- `_Importance` Önem düzeyi.
+ `_Importance`Önem düzeyi.
 
- `_Category` Category.Importance düzeyi.
+ `_Category`Kategori.Önem düzeyi.
 
 ## <a name="requirements"></a>Gereksinimler
- **Header:** *cvmarkersobj.h*
+ **Başlık:** *cvmarkersobj.h*
 
- **Namespace:** CONCURRENCY::Diagnostic
+ **Ad alanı:** Eşzamanlılık::diagnostik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [marker_series class](../profiling/marker-series-class.md)
+- [marker_series sınıfı](../profiling/marker-series-class.md)

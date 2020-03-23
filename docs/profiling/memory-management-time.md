@@ -1,5 +1,5 @@
 ---
-title: Bellek yönetimi zamanı | Microsoft Docs
+title: Bellek Yönetimi Süresi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 442973edb18e75bafda8a9397eac799286c69dfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62963787"
 ---
-# <a name="memory-management-time"></a>Bellek yönetimi zamanı
-Bu segmentlerde faaliyet zaman çizelgesi, bellek yönetimi sınıflandırılmış bir kez engelleme ile ilişkilidir. Bu senaryo, bir iş parçacığı bir bellek yönetimi işlemi gibi disk belleği ile ilişkili bir olay tarafından engellendiğini anlamına gelir. Bu süre boyunca, bir iş parçacığı eşzamanlılık görselleştiricisi bellek yönetimi sayılıyor bir API veya çekirdek durumda engellendi. Bunlar, sayfalama ve bellek ayırma gibi olayları içerir.
+# <a name="memory-management-time"></a>Bellek yönetimi süresi
+Zaman çizelgesindeki bu kesimler, Bellek Yönetimi olarak kategorize edilen engelleme süreleri ile ilişkilidir. Bu senaryo, bir iş parçacığı nın Paging gibi bir bellek yönetimi işlemiyle ilişkili bir olay tarafından engellendiğini gösterir. Bu süre zarfında, EşzamanlıLık Görselleştiricisi bellek yönetimi olarak saydığı bir API veya çekirdek durumunda bir iş parçacığı engellendi. Bunlar, sayfalama ve bellek ayırma gibi olayları içerir.
 
- Bellek yönetimi sınıflandırılmış blokları temel nedenleri daha iyi anlamak için profil raporlarını ve ilişkili çağrı yığınları inceleyin.
+ Bellek Yönetimi olarak sınıflandırılan blokların altında yatan nedenleri daha iyi anlamak için ilişkili çağrı yığınlarını ve profil raporlarını inceleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

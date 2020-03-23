@@ -1,34 +1,34 @@
 ---
 title: Düzenleyici Temaları
-description: Bu makalede, düzenleyici temasını düzenlemek veya Mac için Visual Studio'da kendi eklemek açıklanır
+description: Bu makalede, editörün temasını nasıl dizeniz veya Mac için Visual Studio'da kendi temanızı nasıl ekleyeceğiniz açıklanmaktadır
 author: cobey
 ms.author: cobey
 ms.date: 11/06/2018
 ms.assetid: 4C1B7952-CD45-4132-AD6B-01CF993D83F8
 ms.openlocfilehash: 0c9c58f8da76b09055c1f2b70cd05a44890ce22c
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67691628"
 ---
-# <a name="editor-themes"></a>Düzenleyici temaları
+# <a name="editor-themes"></a>Editör temaları
 
-Düzenleyici temaları, herhangi bir Mac için Visual Studio'da varsayılan olarak sağlanan 10 renk düzenleri değiştirilebilir **Visual Studio > Tercihler > Metin Düzenleyicisi > Renk temaları** menü seçenekleri:
+Editör temaları Visual **Studio > Tercihleri > Metin Editörü > Renk Temaları** menü seçenekleri aracılığıyla Mac için Visual Studio varsayılan olarak sağlanan 10 renk şemaları herhangi biri değiştirilebilir:
 
-![Renk teması seçimi](media/source-editor-image17.png)
+![Renk Tema Seçimi](media/source-editor-image17.png)
 
-## <a name="adding-new-themes"></a>Yeni tema ekleme
+## <a name="adding-new-themes"></a>Yeni temalar ekleme
 
-Desteklenen biçimlerden birinde olması koşuluyla yeni renk temaları eklenebilir:
+Desteklenen biçimlerden birinde olmaları koşuluyla yeni renk temaları eklenebilir:
 
-* Visual Studio (`.vssettings`)
-* Xamarin Studio (`.json`)
-* TextMate (`.tmTheme`)
+* Görsel Stüdyo`.vssettings`( )
+* Xamarin Stüdyo`.json`( )
+* Metin Arkadaşı`.tmTheme`( )
 
-Bulunamadı veya yeni bir tema oluşturduğunuza ve yerel makinenize indirilen sonra aşağıdaki adımları uygulayarak ekleyin:
+Yeni bir tema bulduktan veya oluşturduktan ve yerel makinenize indirdikten sonra, aşağıdaki adımları yaparak bu temayı ekleyin:
 
-1. Seçin **Ekle** düğmesi renk temaları seçeneği iletişim kutusunda:  ![Renk teması ekleyin](media/source-editor-image20.png)
-2. Temanın tuşuna basın ve yerel makine üzerinde göz atma **açık**.
-3. Tema önceden yüklenmiş listesine alt kısmına eklenir. Tema önizlemek için onu seçin: ![Renk teması Önizleme](media/source-editor-image21.png)
-4. Temayı uygulamak için basın **Tamam** düğmesi.
+1. Renk Temaları Seçeneği iletişim kutusunda **Ekle** düğmesini seçin: ![Renk Teması Ekle](media/source-editor-image20.png)
+2. Yerel makinenizdeki tema için göz atın ve **Aç**tuşuna basın.
+3. Tema, önceden yüklenmiş temalar listesinin altına eklenir. Temayı önizlemek için seçin: ![Renk Teması Önizleme](media/source-editor-image21.png)
+4. Temayı uygulamak için **Tamam** düğmesine basın.

@@ -1,5 +1,5 @@
 ---
-title: marker_series::is_enabled yöntemi | Microsoft Docs
+title: marker_series::is_enabled Yöntemi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22a7baa08a29cd77506e48762179118b3bbb2d1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "63002756"
 ---
-# <a name="markerseriesisenabled-method"></a>marker_series::is_enabled yöntemi
-Tüm oturum sağlayıcısı etkin olmadığını belirler.
+# <a name="marker_seriesis_enabled-method"></a>marker_series::is_enabled yöntemi
+Herhangi bir oturumun sağlayıcıyı etkinleştirip etkinleştirdiğini belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ bool is_enabled(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_Importance` Önem düzeyi.
+ `_Importance`Önem düzeyi.
 
- `_Category` Kategori.
+ `_Category`Kategori.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
 ## <a name="requirements"></a>Gereksinimler
- **Header:** *cvmarkersobj.h*
+ **Başlık:** *cvmarkersobj.h*
 
- **Namespace:** CONCURRENCY::Diagnostic
+ **Ad alanı:** Eşzamanlılık::diagnostik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [marker_series class](../profiling/marker-series-class.md)
+- [marker_series sınıfı](../profiling/marker-series-class.md)

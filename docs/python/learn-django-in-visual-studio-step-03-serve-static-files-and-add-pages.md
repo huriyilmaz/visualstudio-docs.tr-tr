@@ -1,7 +1,7 @@
 ---
-title: Django Öğreticisi 3. adımda Visual Studio, statik dosyalar ve sayfalar öğrenin
+title: Visual Studio adım 3, statik dosya ve sayfalar django öğretici öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri, özellikle statik dosyaları işleme, uygulamaya sayfaları ekleyin ve şablonu devralma gösterimi bağlamında Django temel bilgileri bir kılavuz
+description: Visual Studio projeleri bağlamında Django temellerinin bir walkthrough, özellikle statik dosyaları hizmet nasıl gösteren, uygulamaya sayfaları eklemek ve şablon devralma kullanın
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,45 +12,45 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 54a80ef606a553846ef5be7a86ed4183f3ffde57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "62958267"
 ---
-# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>3. Adım: Statik dosyaları işleme, sayfalar eklemek ve şablonu devralma kullanın
+# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>Adım 3: Statik dosyalara hizmet edin, sayfa ekleyin ve şablon kalıtımını kullanın
 
-**Önceki adım sayısı: [Görünümleri ve şablonların ile bir Django uygulaması oluşturma](learn-django-in-visual-studio-step-02-create-an-app.md)**
+**Önceki adım: [Görünümler ve sayfa şablonları içeren bir Django uygulaması oluşturma](learn-django-in-visual-studio-step-02-create-an-app.md)**
 
-Bu öğreticinin önceki adımlarında müstakil HTML tek bir sayfayla en az bir Django uygulaması oluşturulacağını öğrendiniz. Modern web uygulamaları, ancak genellikle birçok sayfaları oluşan ve olun tutarlı bir stil ve davranışı sağlamak için CSS ve JavaScript dosyaları gibi paylaşılan kaynakları.
+Bu öğreticinin önceki adımlarında, tek bir bağımsız HTML sayfasıyla en az Bir Django uygulaması oluşturmayı öğrendiniz. Ancak modern web uygulamaları genellikle birçok sayfadan oluşur ve tutarlı stil ve davranış sağlamak için CSS ve JavaScript dosyaları gibi paylaşılan kaynaklardan yararlanılır.
 
-Bu adımda, şunların nasıl yapılır:
+Bu adımda, nasıl öğreneceksiniz:
 
 > [!div class="checklist"]
-> - Hızlı bir şekilde uygun Demirbaş kod ile farklı türdeki yeni dosyaları eklemek için Visual Studio öğe şablonları kullanın (adım 3 - 1)
-> - (3-2. adım) statik dosyaları sunmak için Django projesi yapılandırma
-> - (3-3. adım) uygulamaya ek sayfalar ekleme
-> - (Adım 3-4) sayfalar arasında kullanılan bir üst bilgi ve gezinti çubuğu oluşturmak için şablon devralma kullanın
+> - Kullanışlı ortak kodla farklı türde yeni dosyaları hızla eklemek için Visual Studio öğe şablonlarını kullanın (adım 3-1)
+> - Statik dosyalara hizmet edecek Şekilde Django projesini yapılandırın (adım 3-2)
+> - Uygulamaya ek sayfa ekleme (adım 3-3)
+> - Sayfalar arasında kullanılan bir üstbilgi ve gezinme çubuğu oluşturmak için şablon kalıbı kullanma (adım 3-4)
 
-## <a name="step-3-1-become-familiar-with-item-templates"></a>3-1. adım: Öğe şablonları ile aşina
+## <a name="step-3-1-become-familiar-with-item-templates"></a>Adım 3-1: Öğe şablonlarını tanıma
 
-Bir Django uygulaması geliştirirken, genellikle çok daha fazla Python, HTML, CSS ve JavaScript dosyaları ekleyin. Her dosya türü için (diğer dosyaları ister *web.config* dağıtımı için ihtiyacınız olan), Visual Studio'nun sağladığı uygun [öğe şablonları](python-item-templates.md) başlamanıza yardımcı olmak için.
+Bir Django uygulaması geliştirdikçe, genellikle çok daha fazla Python, HTML, CSS ve JavaScript dosyaları eklersiniz. Her dosya türü için (ve dağıtım için ihtiyaç duyabileceğiniz *web.config* gibi diğer dosyalar için), Visual Studio başlamanız için kullanışlı [öğe şablonları](python-item-templates.md) sağlar.
 
-Kullanılabilir şablonlar görmek için Git **Çözüm Gezgini**, select öğesi oluşturmak istediğiniz klasörü sağ tıklatın **Ekle** > **yeni öğe**:
+Kullanılabilir şablonları görmek için **Çözüm Gezgini'ne**gidin , öğeyi oluşturmak istediğiniz klasöre sağ tıklayın,**Yeni Öğe** **Ekle'yi** > seçin:
 
-![Visual Studio'da yeni öğesi ekleme](media/django/step03-add-new-item-dialog.png)
+![Visual Studio'da yeni öğe iletişim kutusu ekleme](media/django/step03-add-new-item-dialog.png)
 
-Bir şablonu kullanmak için istediğiniz şablonu seçin, dosya için bir ad belirtin ve seçin **Tamam**. Bu şekilde otomatik olarak öğe ekleme dosyası Visual Studio projenize ekler ve kaynak denetimi için değişiklikleri işaretler.
+Şablon kullanmak için istenen şablonu seçin, dosya için bir ad belirtin ve **Tamam'ı**seçin. Bu şekilde bir öğe eklemek, dosyayı Visual Studio projenize otomatik olarak ekler ve kaynak denetimi değişikliklerini işaretler.
 
-### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Soru: Nasıl Visual Studio, öğe şablonları sunmaya bilir?
+### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Soru: Visual Studio hangi öğe şablonlarının sunacağını nasıl biliyor?
 
-Yanıt: Visual Studio Proje dosyası (*.pyproj*) bir Python projesi olarak işaretleyen bir proje türü tanımlayıcısı içeriyor. Visual Studio, proje türü için uygun olan öğe şablonları göstermek için bu tür tanımlayıcısı kullanır. Bu şekilde bloblarda her sıralamak için sormadan türleri pek çok proje için Visual Studio öğe şablonları zengin sağlayabilirsiniz.
+Cevap: Visual Studio proje dosyası (*.pyproj*) python projesi olarak işaretleyen bir proje türü tanımlayıcısı içerir. Visual Studio, yalnızca proje türüne uygun öğe şablonlarını göstermek için bu tür tanımlayıcıyı kullanır. Bu şekilde, Visual Studio her zaman bunları sıralamak için sormadan birçok proje türleri için öğe şablonları zengin bir dizi sağlayabilir.
 
-## <a name="step-3-2-serve-static-files-from-your-app"></a>3-2. adım: Uygulamanızdan statik dosyaları işleme
+## <a name="step-3-2-serve-static-files-from-your-app"></a>Adım 3-2: Uygulamanızdan statik dosyalara hizmet
 
-Python (herhangi bir çerçeveyi kullanarak) ile oluşturulmuş bir web uygulaması, Python dosyalarınızın her zaman web ana bilgisayarın sunucu üzerinde çalışan ve bir kullanıcının bilgisayarına hiçbir zaman iletilmez. Ana sunucu olarak yalnızca sunar diğer dosyaları, Bununla birlikte, CSS ve JavaScript gibi tarayıcı tarafından özel olarak kullanıldığından-bunlar istenen ne zaman açıktır. Bu tür dosyalar "statik" dosyaları olarak adlandırılır ve Django bunları otomatik olarak, kod yazmaya gerek sunabilirsiniz.
+Python ile oluşturulmuş bir web uygulamasında (herhangi bir çerçeve kullanarak), Python dosyalarınız her zaman web barındırıcının sunucusunda çalışır ve hiçbir zaman kullanıcının bilgisayarına aktarılmez. Ancak CSS ve JavaScript gibi diğer dosyalar yalnızca tarayıcı tarafından kullanılır, bu nedenle ana bilgisayar sunucusu istendiğinde olduğu gibi sunar. Bu tür dosyalar "statik" dosyalar olarak adlandırılır ve Django bunları herhangi bir kod yazmaya gerek kalmadan otomatik olarak teslim edebilir.
 
-Varsayılan olarak uygulama statik dosyaları sunmak için yapılandırılmış bir Django projesi *statik* Django projenin bu satırları sayesinde klasöründe *settings.py*:
+Bir Django projesi, Django projesinin *settings.py*bu satırlar sayesinde, uygulamanın *statik* klasöründen statik dosyaları sunmak için varsayılan olarak yapılandırılır:
 
 ```python
 # Static files (CSS, JavaScript, Images)
@@ -61,15 +61,15 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 ```
 
-İçinde herhangi bir klasör yapısının kullanarak dosyaları düzenlediğiniz *statik* ister ve sonra dosyalara başvurmak için bu klasörün içinde göreli yollar kullanın. Bu işlem göstermek için aşağıdaki adımları uygulamaya bir CSS dosyası ekleyin ve ardından bu stil kullanmak *index.html* şablonu:
+İstediğiniz *statik* içindeki herhangi bir klasör yapısını kullanarak dosyaları düzenleyebilir ve ardından dosyalara başvurmak için bu klasöriçindeki göreli yolları kullanabilirsiniz. Bu işlemi göstermek için, aşağıdaki adımlar uygulamaya bir CSS dosyası ekleyin ve ardından *index.html* şablonundaki stil sayfasını kullanın:
 
-1. İçinde **Çözüm Gezgini**, sağ **HelloDjangoApp** seçin Visual Studio proje klasöründe **Ekle** > **Yeniklasör**ve klasörünü adlandırın `static`.
+1. **Solution Explorer'da**Visual Studio projesindeki **HelloDjangoApp** klasörüne sağ tıklayın, Yeni `static`klasör**ekle'yi** **Add** > seçin ve klasöre isim vereyim.
 
-1. Sağ **statik** klasörü ve select **Ekle** > **yeni öğe**. Görüntülenen iletişim kutusunda, seçmek **stil sayfası** şablonu, dosya adı `site.css`seçip **Tamam**. **Site.css** dosya projesinde görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünmelidir:
+1. **Statik** klasöre sağ tıklayın ve Yeni öğe **ekle'yi** > **New item**seçin. Görünen iletişim **kutusunda, Stylesheet** şablonu seçin, dosyayı `site.css`adlandırın ve **Tamam'ı**seçin. **site.css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki resme benzer görünmelidir:
 
-    ![Çözüm Gezgini'nde görüldüğü gibi statik dosya yapısı](media/django/step03-static-file-structure.png)
+    ![Çözüm Gezgini'nde gösterildiği gibi statik dosya yapısı](media/django/step03-static-file-structure.png)
 
-1. Öğesinin içeriğini değiştirin *site.css* aşağıdaki kodla ve dosyayı kaydedin:
+1. *site.css* içeriğini aşağıdaki kodla değiştirin ve dosyayı kaydedin:
 
     ```css
     .message {
@@ -78,7 +78,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
     }
     ```
 
-1. Uygulamanın içeriğini değiştirin *templates/HelloDjangoApp/index.html* değiştirir aşağıdaki kod ile dosya `<strong>` ile 2. adımda kullanılan öğe bir `<span>` başvuran `message` stil sınıf. Bu şekilde bir stil sınıfını kullanarak öğeyi stil çok daha fazla esneklik sağlar. (Henüz taşıdıysanız *index.html* içinde alt *şablonları* VS 2017 15.7 kullanırken ve daha önce başvurmak [şablon namespacing](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing) 2-4. adımda.)
+1. Uygulamanın *templates/HelloDjangoApp/index.html* dosyasının içeriğini, adım 2'de kullanılan `<strong>` öğeyi `message` stil sınıfına `<span>` başvuran bir öğeyle değiştiren aşağıdaki kodla değiştirin. Stil sınıfını bu şekilde kullanmak, öğeyi şekillendirmede size çok daha fazla esneklik sağlar. (VS 2017 15.7 ve daha öncelerini kullanırken *index.html'i* *şablonlarda* bir alt klasöre taşıtmadıysanız, 2-4 adımdaki [şablon ad aralığına](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing) bakın.)
 
     ```html
     <html>
@@ -93,32 +93,32 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
     </html>
     ```
 
-1. Sonuçları görmek için projeyi çalıştırın. İşiniz bittiğinde sunucusunu durdurmak ve isterseniz kaynak denetimi için yaptığınız değişiklikleri kaydedin (açıklandığı şekilde [2. adım](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)).
+1. Sonuçları gözlemlemek için projeyi çalıştırın. Yapıldığında sunucuyu durdurun ve değişikliklerinizi kaynak denetimine işleyin [(adım 2'de](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)açıklandığı gibi).
 
-### <a name="question-what-is-the-purpose-of-the--load-staticfiles--tag"></a>Soru: {% Yük staticfiles %} etiketi? amacı nedir
+### <a name="question-what-is-the-purpose-of-the--load-staticfiles--tag"></a>Soru: {% yük statik dosyaları %} etiketinin amacı nedir?
 
-Yanıt: `{% load staticfiles %}` Satır öğeleri gibi statik dosyalar başvuran önce gerekli `<head>` ve `<body>`. Bu bölümde gösterilen örnekte, "staticfiles" kullanmanıza olanak sağlayan olan özel Django şablon etiket kümesine, başvuruyor `{% static %}` sözdizimi statik dosyaya başvurmuyor.  Olmadan `{% load staticfiles %}`, uygulama çalıştığında bir özel durum görürsünüz.
+Cevap: `{% load staticfiles %}` Satır gibi `<head>` elemanlar statik dosyalara `<body>`atıfta önce gereklidir ve . Bu bölümde gösterilen örnekte, "staticfiles" statik dosyalara başvurmak için `{% static %}` sözdizimini kullanmanıza olanak tanıyan özel bir Django şablon etiketi kümesini ifade eder.  Olmadan, `{% load staticfiles %}`uygulama çalıştığında bir özel durum görürsünüz.
 
-### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Soru: Statik dosyaları düzenlemek için tüm kuralları var mıdır?
+### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Soru: Statik dosyaları düzenlemek için herhangi bir kural var mı?
 
-Yanıt: Diğer CSS, JavaScript ve HTML dosyaları ekleyebilirsiniz, *statik* klasör ancak istediğiniz. Statik dosyaları düzenlemek için normal bir şekilde adlandırılmış alt klasörlerde oluşturmaktır *yazı tipleri*, *betikleri*, ve *içeriği* (için stil sayfaları ve diğer dosyaları). Her durumda, bu klasörleri dosyasına göreli yolda unutmayın `{% static %}` başvuruları.
+Cevap: *Statik* klasörünüze istediğiniz gibi diğer CSS, JavaScript ve HTML dosyalarını ekleyebilirsiniz. Statik dosyaları düzenlemenin tipik bir yolu, *yazı tipleri,* *komut dosyaları*ve *içerik* (stil sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır. Her durumda, bu klasörleri başvurularda `{% static %}` dosyaya göreli yola eklemeyi unutmayın.
 
-## <a name="step-3-3-add-a-page-to-the-app"></a>3-3. adım: Uygulamaya bir sayfa ekleyin
+## <a name="step-3-3-add-a-page-to-the-app"></a>Adım 3-3: Uygulamaya sayfa ekleme
 
-Uygulamaya başka bir sayfa ekleme aşağıdaki anlamına gelir:
+Uygulamaya başka bir sayfa eklemek aşağıdaki anlamına gelir:
 
 - Görünümü tanımlayan bir Python işlevi ekleyin.
-- Sayfanın işaretleme için bir şablon ekleyin.
-- Django projenin için gerekli yönlendirme ekleme *urls.py* dosya.
+- Sayfanın biçimlendirmesi için bir şablon ekleyin.
+- Django projesinin *urls.py* dosyasına gerekli yönlendirmeyi ekleyin.
 
-Aşağıdaki adımları giriş sayfasından, ilgili sayfada bağlantılara ve "HelloDjangoApp" proje "Hakkında" sayfasında ekleyin:
+Aşağıdaki adımlar "HelloDjangoApp" projesine bir "Hakkında" sayfası ve ana sayfadan bu sayfaya bağlantılar ekleyin:
 
-1. İçinde **Çözüm Gezgini**, sağ **şablonları/HelloDjangoApp** klasörüne **Ekle** > **yeni öğe**seçin **HTML sayfası** öğe şablonu, dosya adı `about.html`seçip **Tamam**.
+1. **Solution Explorer'da** **şablonlar/HelloDjangoApp** klasörüne sağ tıklayın,**Yeni öğe** **ekle'yi** > seçin, `about.html`HTML **Sayfa** öğesi şablonu seçin, dosyayı adlandırın ve **Tamam'ı**seçin.
 
     > [!Tip]
-    > Varsa **yeni öğe** komutu görünmezse **Ekle** menüsünde, böylece Visual Studio hata ayıklama modundan çıkar Sunucu durduruldu emin olun.
+    > Yeni **Öğe** Komutu **Ekle** menüsünde görünmüyorsa, Visual Studio'nun hata ayıklama modundan çıkması için sunucuyu durdurduğunuzdan emin olun.
 
-1. Öğesinin içeriğini değiştirin *about.html* aşağıdaki işaretlemeyle (sizin yerine giriş sayfasına açık bağlantı 3-4. adımda basit bir gezinti):
+1. *about.html'in* içeriğini aşağıdaki biçimlendirmeyle değiştirin (ana sayfadaki açık bağlantıyı adım 3-4'te basit bir gezinme çubuğuyla değiştirirsiniz):
 
     ```html
     <html>
@@ -134,7 +134,7 @@ Aşağıdaki adımları giriş sayfasından, ilgili sayfada bağlantılara ve "H
     </html>
     ```
 
-1. Uygulamanın açın *views.py* adlı bir işlev eklemek ve dosya `about` şablonu kullanan:
+1. Uygulamanın *views.py* dosyasını açın ve `about` şablonu kullanan bir işlev ekleyin:
 
     ```python
     def about(request):
@@ -148,45 +148,45 @@ Aşağıdaki adımları giriş sayfasından, ilgili sayfada bağlantılara ve "H
         )
     ```
 
-1. Django projenin açın *urls.py* dosyasını açıp aşağıdaki satırı ekleyin `urlPatterns` dizisi:
+1. Django projesinin *urls.py* dosyasını açın ve `urlPatterns` diziye aşağıdaki satırı ekleyin:
 
     ```python
     url(r'^about$', HelloDjangoApp.views.about, name='about'),
     ```
 
-1. Açık *templates/HelloDjangoApp/index.html* dosyasını açıp aşağıdaki satırı ekleyin `<body>` hakkında sayfasına bağlantı için öğe (yeniden, bu bağlantıyı 3-4. adımda bir gezinti çubuğuyla değiştirin):
+1. *templates/HelloDjangoApp/index.html* dosyasını açın ve Hakkında `<body>` sayfaya bağlantı vermek için öğenin altına aşağıdaki satırı ekleyin (yine, bu bağlantıyı adım 3-4'te bir gezinme çubuğuyla değiştirirsiniz):
 
     ```html
     <div><a href="about">About</a></div>
     ```
 
-1. Kullanarak dosyaları kaydetme **dosya** > **Tümünü Kaydet** basın veya menü komutu **Ctrl**+**Shift** + **S**. (Visual Studio'da proje çalıştıran dosyaları otomatik olarak kaydeder gibi teknik olarak, bu adım gerek yoktur. Bununla birlikte, işte hakkında bilgi edinmek için iyi bir komutu bu kadar!)
+1. **Dosya** > **Kaydet Tüm** menü komutunu kullanarak tüm dosyaları kaydedin veya **Ctrl**+**Shift**+**S**tuşuna basın. (Teknik olarak, Visual Studio'da proje yi çalıştıran bu adım akadar değil, dosyaları otomatik olarak kaydeder. Yine de, bilmek iyi bir komut!)
 
-1. Sonuçları inceleyin ve sayfalar arasında gezinti denetlemek için projeyi çalıştırın. Sunucunun işiniz bittiğinde kapatın.
+1. Sonuçları gözlemlemek ve sayfalar arasında gezinmeyi denetlemek için projeyi çalıştırın. Bittiğinde sunucuyu kapatın.
 
-### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>Soru: Giriş sayfasına bağlantı için "Index" kullanarak çalıştım, ancak işe yaramadı. Neden?
+### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>Soru: Ana sayfaya bağlantı için "dizin" kullanmayı denedim, ancak işe yaramadı. Neden?
 
-Yanıt: Görünüm işlevi içinde olsa bile *views.py* adlı `index`, Django projesinin desenleri yönlendirme URL *urls.py* dosya, "Index" dizesiyle eşleşen normal bir ifade içermiyor. O dizeyi eşleştirilecek desen için başka bir girdi eklemeniz gerekir `^index$`.
+Cevap: *views.py* görünüm işlevi adlandırılmış `index`olsa da, Django projesinin *urls.py* dosyasındaki URL yönlendirme desenleri dize "dizin" dizeyle eşleşen düzenli bir ifade içermez. Bu dizeyle eşleşebilmek için desen `^index$`için başka bir giriş eklemeniz gerekir.
 
-Sonraki bölümde gösterildiği gibi çok kullanmak en iyisidir `{% url '<pattern_name>' %}` başvurmak için sayfası şablonu etiketinde *adı* içinde büyük/küçük harf Django oluşturan uygun URL'yi sizin için bir desen,. Örneğin, `<div><a href="home">Home</a></div>` içinde *about.html* ile `<div><a href="{% url 'index' %}">Home</a></div>`. 'Dizin' kullanımını çalışır burada ilk URL deseni çünkü *urls.py* aslında 'dizin' adlı (tarafından virtue, `name='index'` bağımsız değişkeni). 'Ana' İkinci desen başvurmak için kullanabilirsiniz.
+Bir sonraki bölümde gösterildiği gibi, bir desenin `{% url '<pattern_name>' %}` *adına* başvurmak için sayfa şablonundaki etiketi kullanmak çok daha iyidir ve bu durumda Django sizin için uygun URL'yi oluşturur. Örneğin, `<div><a href="home">Home</a></div>` *about.html'i* `<div><a href="{% url 'index' %}">Home</a></div>`' yi . 'Dizin' kullanımı burada çalışır, çünkü *urls.py'daki* ilk URL deseni aslında 'dizin' `name='index'` (bağımsız değişken indeks' olarak adlandırılır). İkinci modele başvurmak için 'ev' de kullanabilirsiniz.
 
-## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>3-4. adım: Bir üst bilgi ve gezinti çubuğu oluşturmak için şablon devralma kullanın
+## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>Adım 3-4: Üstbilgi ve gezinme çubuğu oluşturmak için şablon kalıbı kullanma
 
-Açık Gezinti bağlantıları her sayfada sahip olmak yerine modern web uygulamaları genellikle bir marka başlığı ve en önemli sayfa bağlantılarının, açılır menüler ve benzeri sağlayan bir gezinti çubuğunu kullanın. Üst bilgi ve gezinti çubuğunda aynı olan tüm sayfalara emin olmak için ancak her sayfası şablonu aynı kodu yinelemek istediğiniz yok. Bunun yerine, tek bir yerde tüm sayfaları ortak parçalarını tanımlamak istersiniz.
+Modern web uygulamaları, her sayfada açık gezinme bağlantılarına sahip olmak yerine genellikle bir marka üstbilgive en önemli sayfa bağlantıları, açılır menüler ve benzeri sağlayan bir gezinti çubuğu kullanır. Üstbilgi ve gezinme çubuğunun tüm sayfalarda aynı olduğundan emin olmak için, her sayfa şablonunda aynı kodu yinelemek istemezsiniz. Bunun yerine, tüm sayfalarınızın ortak bölümlerini tek bir yerde tanımlamak istiyorsunuz.
 
-Django'nın şablon oluşturma sistemi belirli öğeleri birden çok şablon tarafından yeniden kullanmak için iki yol sağlar: içerir ve devralma.
+Django'nun baştan çıkarıcı sistemi, belirli öğeleri birden çok şablon arasında yeniden kullanmak için iki araç sağlar: içerir ve devralma.
 
-- *İçerir* başvurulan şablonun söz dizimini kullanarak belirli bir yerde eklediğiniz diğer sayfası şablonları `{% include <template_path> %}`. Dinamik olarak kod yolu değiştirmek istiyorsanız, bir değişken de kullanabilirsiniz. İçeren bir sayfa gövdesinde genellikle paylaşılan şablondaki sayfasında belirli bir konumda çekmek için kullanılır.
+- *Sözdizimini* `{% include <template_path> %}`kullanarak başvuru şablonuna belirli bir yere eklediğiniz diğer sayfa şablonları içerir. Yolu kodda dinamik olarak değiştirmek istiyorsanız, bir değişken de kullanabilirsiniz. İçerekler genellikle sayfadaki belirli bir konumda paylaşılan şablonu çekmek için bir sayfanın gövdesinde kullanılır.
 
-- *Devralma* kullanan `{% extends <template_path> %}` başına sayfa şablonunun üzerine sonra başvuran şablon oluşturur paylaşılan, temel bir şablonu belirtin. Devralma, gezinti çubuğunda bir paylaşılan düzeni tanımlamak için yaygın olarak kullanılır ve başvuran şablonlar yalnızca eklemek veya adlı temel şablon, belirli alanları değiştirmek için uygulamanın sayfaları, diğer yapıları *blokları*.
+- `{% extends <template_path> %}` *Devralma,* başvuru şablonunun üzerine inşa ettiği paylaşılan temel şablonu belirtmek için sayfa şablonunun başında kullanır. Devralma genellikle, başvuru şablonlarının *yalnızca blok*adı verilen temel şablonun belirli alanlarını eklemesi veya değiştirmesi gerektiği gibi, bir uygulamanın sayfaları için paylaşılan düzeni, gezinme çubuğunu ve diğer yapıları tanımlamak için kullanılır.
 
-Her iki durumda da `<template_path>` uygulamanın göreli olan *şablonları* klasörü (`../` veya `./` de izin verilir).
+Her iki `<template_path>` durumda da, uygulamanın *şablonlar* `../` klasörüne göredir (veya `./` ayrıca izin verilir).
 
-Bir temel şablon kullanımını engeller betimleyen `{% block <block_name> %}` ve `{% endblock %}` etiketler. Başvuran bir şablon daha sonra aynı blok ada sahip etiketler kullanılıyorsa, blok içeriği bu temel şablonu geçersiz.
+Temel şablon, blokları kullanarak `{% block <block_name> %}` ve `{% endblock %}` etiketleri gösterir. Yönlendiren bir şablon aynı blok ada sahip etiketler kullanıyorsa, engelleme içeriği temel şablonunkini geçersiz kılar.
 
-Aşağıdaki adımlarda, devralma gösterilmektedir:
+Aşağıdaki adımlar kalıtım gösterir:
 
-1. Uygulamanın *şablonları/HelloDjangoApp* klasöründe yeni bir HTML dosyası oluşturun (kullanarak **Ekle** > **yeni öğe** bağlam menüsü veya **Ekle**  >  **HTML sayfası**) olarak adlandırılan *layout.html*ve içeriğini biçimlendirme ile değiştirin. Bu şablon "içerik" adlı bir bloğu, tüm bu başvuran sayfalar ihtiyacı değiştirin, içerdiğini görebilirsiniz:
+1. Uygulamanın *şablonları/HelloDjangoApp* klasöründe, *düzen.html*adı verilen yeni bir HTML dosyası **(Yeni öğe** bağlamı **ekle** > menüsünü kullanarak veya**HTML Sayfası** **Ekle'yi** > kullanarak) oluşturun ve içeriğini aşağıdaki biçimlendirmeyle değiştirin. Bu şablonun, yönlendiren sayfaların değiştirmesi gereken tek şey olan "içerik" adlı bir blok içerdiğini görebilirsiniz:
 
     ```html
     <!DOCTYPE html>
@@ -216,7 +216,7 @@ Aşağıdaki adımlarda, devralma gösterilmektedir:
     </html>
     ```
 
-1. Uygulamanın aşağıdaki stilleri ekleme *static/site.css* dosyası (esnek tasarım göstermek bu adımları uygulamayı denemeden değildir; bu yalnızca bir ilgi çekici sonuç üretmek için stillerdir):
+1. Uygulamanın *statik/site.css* dosyasına aşağıdaki stilleri ekleyin (bu izlenecek yol burada duyarlı tasarımı göstermeye çalışmıyor; bu stiller sadece ilginç bir sonuç oluşturmak içindir):
 
     ```css
     .navbar {
@@ -248,7 +248,7 @@ Aşağıdaki adımlarda, devralma gösterilmektedir:
     }
     ```
 
-1. Değiştirme *templates/HelloDjangoApp/index.html* temel şablona başvurun ve içerik bloğu yok saymak için. Devralma kullanarak, bu şablon basit olacağını görebilirsiniz:
+1. Temel şablona başvurmak ve içerik bloğunu geçersiz kılmak için *templates/HelloDjangoApp/index.html* değiştirin. Devralma kullanarak bu şablonun basitleştiğini görebilirsiniz:
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}
@@ -257,7 +257,7 @@ Aşağıdaki adımlarda, devralma gösterilmektedir:
     {% endblock %}
     ```
 
-1. Değiştirme *templates/HelloDjangoApp/about.html* ayrıca temel şablona başvurun ve içerik bloğu yok saymak için:
+1. Temel şablona başvurmak ve içerik bloğunu geçersiz kılmak için *templates/HelloDjangoApp/about.html* değiştirin:
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}
@@ -266,21 +266,21 @@ Aşağıdaki adımlarda, devralma gösterilmektedir:
     {% endblock %}
     ```
 
-1. Sonuçları görmek için sunucu çalıştırın. Sunucunun işiniz bittiğinde kapatın.
+1. Sonuçları gözlemlemek için sunucuyu çalıştırın. Bittiğinde sunucuyu kapatın.
 
-    ![Gezinti çubuğunu gösteren çalışan uygulama](media/django/step03-nav-bar.png)
+    ![Gezinme çubuğunu gösteren uygulama çalıştırma](media/django/step03-nav-bar.png)
 
-1. Önemli değişiklikler uygulamaya yapılan, tekrar iyi birer olmasıdır [kaynak denetimine değişikliklerinizi işleyin](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control).
+1. Uygulamada önemli değişiklikler yaptığınız için, [değişikliklerinizi kaynak denetimine işlemek için](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)yine iyi bir zaman.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Tam Django Web projesi şablonunu kullanma](learn-django-in-visual-studio-step-04-full-django-project-template.md)
+> [Tam Django Web Projesi şablonunu kullanma](learn-django-in-visual-studio-step-04-full-django-project-template.md)
 
-## <a name="go-deeper"></a>Daha ayrıntılı şekilde inceleyin
+## <a name="go-deeper"></a>Daha derine inin
 
-- [Web uygulamasını Azure App Service'e dağıtma](publishing-python-web-applications-to-azure-from-visual-studio.md)
-- [Django uygulamanız yazma, Bölüm 3 (görünümleri)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com)
-- Daha fazla özellik denetim akışı gibi Django şablonları için bkz: [Django şablonu dil](https://docs.djangoproject.com/en/2.0/ref/templates/language/) (docs.djangoproject.com)
-- Kullanma hakkında tam bilgi `{% url %}` etiketlemek için bkz: [url](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) içinde [yerleşik şablon etiketleri ve Django şablonları başvurusu için filtreler](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/) (docs.djangoproject.com)
-- Öğretici kaynak kodu github'da: [Microsoft/python-örnek-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- [Web uygulamasını Azure Uygulama Hizmetine dağıtma](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [İlk Django uygulaması, bölüm 3 (görünümler)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com) yazma
+- Denetim akışı gibi Django şablonlarının daha fazla özelliği için Bkz. [Django şablon dili](https://docs.djangoproject.com/en/2.0/ref/templates/language/) (docs.djangoproject.com)
+- `{% url %}` Etiketi kullanma hakkında ayrıntılı bilgi için, [Django şablonları başvurusu için Yerleşik şablon etiketleri ve filtreleri](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/) içindeki [url'ye](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) bakın (docs.djangoproject.com)
+- GitHub'da Öğretici kaynak kodu: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

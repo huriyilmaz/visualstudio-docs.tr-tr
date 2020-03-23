@@ -1,5 +1,5 @@
 ---
-title: Yönerge Işaretçileri (IP) görünümü | Microsoft Docs
+title: Yönerge İşaretçileri (IP) Görünümü | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,22 +19,22 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c90d070a3b7125143eda5fd8666b1a4f64312b3
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778641"
 ---
 # <a name="instruction-pointers-ips-view"></a>Yönerge İşaretçileri (IP) Görünümü
-Yönerge Işaretçileri görünümü örnekleme profili oluşturma sırasında yürütülen belirli talimatları görmenizi sağlar.
+Yönerge İşaretçileri görünümü, örnekleme profil oluşturma sırasında yürütülen belirli yönergeleri görmenizi sağlar.
 
- Bu görünüm, izleme profili oluşturma sırasında kullanılamaz.
+ Bu görünüm enstrümantasyon profilleme sırasında kullanılamaz.
 
- Örnekleme profili verileri için, IP 'Ler görünümü, örnek toplandığında doğrudan yürütülen bir işlevdeki yönergeleri tanımlar.
+ Profil verilerini örneklemek için IP'ler görünümü, örnek toplandığında doğrudan çalıştırılan bir işlevdeki yönergeleri tanımlar.
 
- .NET bellek verileri için satırlar görünümü bellek ayıran yönergeleri tanımlar.
+ .NET bellek verileri için, Satırlar görünümü belleği ayıran yönergeleri tanımlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)
-- [Yönerge Işaretçileri (IP) görünümü-örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
+- [Yönerge İşaretçileri (IP) Görünümü - örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-contention-data.md)

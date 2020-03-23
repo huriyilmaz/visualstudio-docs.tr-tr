@@ -1,5 +1,5 @@
 ---
-title: Performans raporuna genel bakış | Microsoft Docs
+title: Performans Raporu Genel Bakış | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,85 +14,85 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 517156677a6d3711fa5dc2e4a15629a55229cfe2
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772238"
 ---
-# <a name="performance-report-overview"></a>Performans raporuna genel bakış
-Bir performans oturumunun profil oluşturma verilerini, Visual Studio Team System Development Edition tümleşik geliştirme ortamının (IDE) **Performans raporu** penceresinde görüntüleyebilirsiniz. Profil oluşturma verileri. vsp ve. vsps dosyalarına kaydedilir. Rapor görünümü pencereleri, uygulama performansı sorunlarını görüntülemenizi ve analiz etmenize olanak tanır.
+# <a name="performance-report-overview"></a>Performans Raporu'na genel bakış
+Visual Studio Team System Development Edition tümleşik geliştirme ortamının (IDE) **Performans Raporu** penceresinde performans oturumunun profil oluşturma verilerini görüntüleyebilirsiniz. Profil oluşturma verileri .vsp ve .vsps dosyalarına kaydedilir. Rapor görünümü pencereleri, uygulama performansı sorunlarını görüntülemenize ve çözümlemenize olanak tanır.
 
 > [!CAUTION]
-> Profil oluşturma veri dosyası, bilgisayar adı, işletim sistemi sürümü, dosya yolları, bellek bilgileri ve diğer bilgisayar kurulum bilgileri gibi hassas bilgileri içerir. Verilerin dağıtılması üzerinde, hem yerel hem de tam denetim korumanız gerekir. *VSP* biçimi ve öğesine aktarıldığında. *CSV* veya. *XML* dosyası.
+> Profil oluşturma veri dosyası, bilgisayar adı, işletim sisteminin sürümü, dosya yolları, bellek bilgileri ve diğer bilgisayar kurulum bilgileri gibi hassas bilgileri içerir. Hem kendi yerel hem de, verilerin dağıtımı üzerinde sıkı kontrol sağlamalısınız. *vsp* biçimi ve ne zaman bir . *csv* veya bir . *xml* dosyası.
 >
-> Olay izleme verileri performans oturumunun bir parçası olarak toplanırsa, olay izleme günlüğünde ek bilgiler görünebilir (. *ETL*) dosyası. Bu bilgiler, etki alanınızı ve Kullanıcı adınızı içerir; Bu nedenle, günlük dosyasının dağıtılması üzerinde kesin denetim korumanız gerekir.
+> Olay izleme verileri performans oturumunun bir parçası olarak toplanırsa, olay izleme günlüğünde (.* etl*) dosyası. Bu bilgiler etki alanınızı ve kullanıcı adınızı içerir; bu nedenle, günlük dosyasının dağıtımı üzerinde sıkı denetim sağlamalısınız.
 
-## <a name="performance-report-window"></a>Performans raporu penceresi
- Performans raporu penceresi, performans verilerini görüntülemek, yönetmek ve filtrelemek için kullanılan ve özelleştirilebilir bir sorgu denetimi içeren bir araç penceresidir.
+## <a name="performance-report-window"></a>Performans Raporu penceresi
+ Performans Raporu penceresi, performans verilerini görüntülemek, yönetmek ve filtrelemek için kullanılan ve özelleştirilebilir bir sorgu denetimi içeren bir araç penceresidir.
 
- Performans raporu penceresinin ana araç çubuğunda her bir görünüme erişebilirsiniz. **Geçerli görünüm** listesinin yanındaki oka tıklayarak kullanılabilir olan ayrı görünümleri görüntüleyin ve seçin.
+ Performans Raporu penceresinin ana araç çubuğunda her görünüme erişebilirsiniz. Kullanılabilir görünümleri görüntülemek ve seçmek için **Geçerli Görünüm** listesinin yanındaki oku tıklatın.
 
- Performans raporu penceresi aşağıdaki veri görünümlerini sağlar:
+ Performans Raporu penceresi aşağıdaki veri görünümlerini sağlar:
 
 ### <a name="summary-view"></a>Özet Görünümü
- Profil oluşturma verileri varsayılan olarak Özet görünümünde görüntülenir. Bu görünüm, performans sorunlarına yönelik araştırmanızın bir başlangıç noktasıdır. Özet görünümündeki her satırdan, işleve veya modül adına sağ tıklayarak daha ayrıntılı görünümlere geçebilirsiniz. Daha fazla bilgi için bkz. [Özet görünümü](../profiling/summary-view.md).
+ Varsayılan olarak, profil oluşturma verileri Özet görünümünde görüntülenir. Bu görünüm, performans sorunları yla ilgili araştırmanızda bir başlangıç noktasıdır. Özet görünümündeki her satırdan, işlev veya modül adını sağ tıklatarak daha ayrıntılı görünümlere geçebilirsiniz. Daha fazla bilgi için [Özet Görünümü'ne](../profiling/summary-view.md)bakın.
 
 ### <a name="callercallee-view"></a>Arayan/Aranan görünümü
- Arayan/çağrılan görünümü tek bir işlev için çağrı ağacı görüntüler. Görünüm üç parçaya ayrılmıştır:
+ Arayan/Callee görünümü, tek bir işlev için bir çağrı ağacı görüntüler. Görünüm üç bölüme ayrılmıştır:
 
-- Hedef işlev, görünümün ortasında görüntülenir.
+- Hedef işlev görünümün ortasında görüntülenir.
 
-- İşlevi (çağıranlar) çağıran işlevler, hedef işlevin üzerinde görüntülenir.
+- İşlev (arayanlar) olarak adlandırılan işlevler hedef işlevin üzerinde görüntülenir.
 
-- Hedef işlev (Callet 'ler) tarafından çağrılan işlevler hedefin altında görüntülenir.
+- Hedef işlev (callees) tarafından çağrılan işlevler hedefin altında görüntülenir.
 
-  Çağrılan listede veya aranan listesinde herhangi bir işleve çift tıklayarak farklı bir işlev seçebilirsiniz. Daha fazla bilgi için bkz. [arayan/çağrılan görünümü](../profiling/caller-callee-view.md).
+  Çağrılan listedeki veya çağrı listesindeki herhangi bir işlevi çift tıklatarak farklı bir işlev seçebilirsiniz. Daha fazla bilgi için [Bkz. Arayan/Callee Görünümü.](../profiling/caller-callee-view.md)
 
 ### <a name="call-tree-view"></a>Çağrı Ağacı Görünümü
- Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri ve bu işlev çağrıları ile ilgili performans verilerini listeler.
+ Çağrı Ağacı görünümü, profilli uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, aradığı tüm işlevleri ve bu işlev çağrılarıyla ilgili performans verilerini listeler.
 
- Çağrı ağacı görünümü Ayrıca en çok kullanılan veya en sık örneklendiği bir işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu göstermek için, işlevine sağ tıklayın ve ardından **etkin yolu genişlet**' e tıklayın. Daha fazla bilgi için bkz. [çağrı ağacı görünümü](../profiling/call-tree-view.md).
+ Çağrı Ağacı görünümü, en çok zaman tüketilen veya en sık örneklenmiş bir işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu görüntülemek için işlevi sağ tıklatın ve ardından **Sıcak Yolu Genişlet'i**tıklatın. Daha fazla bilgi için [Bkz. Çağrı Ağacı Görünümü.](../profiling/call-tree-view.md)
 
 ### <a name="process-view"></a>İşlem Görünümü
- Işlem görünümü, profili oluşturulan her işlem ve iş parçacığı için performans verilerini görüntüler. Daha fazla bilgi için bkz. [Işlem görünümü](../profiling/process-view.md).
+ İşlem görünümü, profillenmiş her işlem ve iş parçacığı için performans verilerini görüntüler. Daha fazla bilgi için [Bkz. İşlem Görünümü.](../profiling/process-view.md)
 
 ### <a name="modules-view"></a>Modüller Görünümü
- Modüller görünümü projedeki modülleri listeler ve her modül için profil oluşturma verilerini gösterir. İşlev profil oluşturma verilerini göstermek için modül adını genişletin veya daraltın. Veriler örnekleme kullanılarak toplandığında, kaynak kodu satırı ve yönerge işaretçisi profil oluşturma verileri de mevcuttur. Daha fazla bilgi için bkz. [modüller görünümü](../profiling/modules-view.md).
+ Modüller görünümü projedeki modülleri listeler ve her modül için profil oluşturma verilerini sunar. İşlev profil oluşturma verilerini görüntülemek için modül adını genişletin veya daraltın. Veriler örnekleme kullanılarak toplandığında, kaynak kod satırı ve yönerge işaretçisi profil oluşturma verileri de kullanılabilir. Daha fazla bilgi için [Modüller Görünümü'ne](../profiling/modules-view.md)bakın.
 
 ### <a name="functions-view"></a>İşlevler Görünümü
- Işlevler görünümü profil oluşturma sırasında çağrılan işlevleri listeler. Daha fazla bilgi için bkz. [Işlevler görünümü](../profiling/functions-view.md).
+ İşlevler görünümü profil oluşturma sırasında çağrılan işlevleri listeler. Daha fazla bilgi için [Bkz. İşlevler Görünümü.](../profiling/functions-view.md)
 
-### <a name="line-view"></a>Satır görünümü
- Satırlar Görünümü Örnekleme profili oluşturma sırasında yürütülen belirli kaynak kodu satırlarını görüntülemenize olanak sağlar. Daha fazla bilgi için bkz. [çizgiler görünümü](../profiling/lines-view.md).
+### <a name="line-view"></a>Çizgi Görünümü
+ Satırlar görünümü, örnekleme profil oluşturma sırasında yürütülen belirli kaynak kodu satırlarını görüntülemenizi sağlar. Daha fazla bilgi için [Bkz. Satır Görünümü.](../profiling/lines-view.md)
 
-### <a name="instruction-pointer-ip-view"></a>Yönerge Işaretçisi (IP) görünümü
- Yönerge Işaretçisi görünümü örnekleme profili oluşturma sırasında yürütülen belirli yönergeleri görüntülemenize olanak sağlar. Daha fazla bilgi için bkz. [yönerge işaretçileri (IP) görünümü](../profiling/instruction-pointers-ips-view.md).
+### <a name="instruction-pointer-ip-view"></a>Yönerge İşaretçisi (IP) Görünümü
+ Yönerge İşaretçisi görünümü, profil oluşturma sırasında yürütülen belirli yönergeleri görüntülemenizi sağlar. Daha fazla bilgi için [Bkz. Yönerge İşaretçileri (IP) Görünümü.](../profiling/instruction-pointers-ips-view.md)
 
-### <a name="allocation-view"></a>Ayırma görünümü
- **Performans oturumu** özellikleri Iletişim kutusunun **genel** sayfasında **.NET nesne ayırmayı topla** seçilmişse, ayırma görünümü kullanılabilir. [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)konusuna bakın. Ayırma görünümü, uygulama veya bileşen tarafından ayrılan .NET nesnelerini listeler. Bir nesne satırı genişletildiğinde, bir çağrı ağacı görüntülenir. Çağrı ağacı, nesnesinin oluşturulmasına neden olan yürütme yollarını gösterir. Ayrıca, çağrı ağacındaki her bir işlev için kapsamlı ve dışlamalı ayırma sayısı hakkında bilgiler de görüntülenir. Ayırma görünümü Ayrıca en fazla nesne sayısını tahsis eden bir işlevin yürütme yolunu genişletebilir ve vurgulayabilir. En etkin yolu göstermek için, işlevine sağ tıklayın ve ardından **etkin yolu genişlet**' e tıklayın. Daha fazla bilgi için bkz. [.net bellek ayırma ve ömür verileri](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md) ve [ayırma görünümü](../profiling/dotnet-memory-allocations-view.md)toplama.
+### <a name="allocation-view"></a>Tahsisat Görünümü
+ **Performans Oturumu** özellikleri iletişim kutusunun **Genel** sayfasında **Topla .NET nesne ayırması** seçiliyse Tahsisat görünümü kullanılabilir. Bkz. [Performans oturumuna genel bakış.](../profiling/performance-session-overview.md) Tahsisat görünümü, uygulama veya bileşen tarafından ayrılan .NET nesnelerini listeler. Nesne satırı genişletildiğinde, bir çağrı ağacı görüntülenir. Çağrı ağacı, nesnenin oluşturulmasıyla sonuçlanan yürütme yollarını gösterir. Arama ağacındaki her işlev için kapsayıcı ve özel ayırma sayısı hakkında da bilgiler görüntülenir. Ayırma görünümü, en çok sayıda nesne ayıran bir işlevin yürütme yolunu da genişletebilir ve vurgulayabilir. En etkin yolu görüntülemek için işlevi sağ tıklatın ve ardından **Sıcak Yolu Genişlet'i**tıklatın. Daha fazla bilgi için [bkz.](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md) [Allocations View](../profiling/dotnet-memory-allocations-view.md)
 
-### <a name="objects-lifetime-view"></a>Nesne ömrü görünümü
- **Performans oturumu** özellikleri Iletişim kutusunun **genel** sayfasında **.NET nesne ayırma bilgilerini topla** ve **Ayrıca .NET nesne yaşam süresi bilgilerini topla** seçilirse, nesne ömrü görünümü kullanılabilir.
+### <a name="objects-lifetime-view"></a>Nesneler Ömür Boyu Görünümü
+ **Performans Oturumu** özellikleri iletişim kutusunun **Genel** sayfasında **.NET nesne ayırma bilgilerini topla** ve **ayrıca .NET nesne yaşam boyu bilgilerini toplavarsa** Object Lifetime görünümü kullanılabilir.
 
- Nesne ömrü görünümü her bir türün toplam örnek sayısını ve her bir çöp toplama oluşturmada toplanan nesne sayısını görüntüler. Daha fazla bilgi için bkz. [nesne ömrü görünümü](../profiling/object-lifetime-view.md).
+ Object Lifetime görünümü, her türdeki toplam örnek sayısını ve her çöp toplama oluşturma da toplanan nesne sayısını görüntüler. Daha fazla bilgi için [Object Lifetime View'a](../profiling/object-lifetime-view.md)bakın.
 
-## <a name="customizable-filter-control"></a>Özelleştirilebilir filtre denetimi
+## <a name="customizable-filter-control"></a>Özelleştirilebilir filtre kontrolü
  Özelleştirilebilir filtre denetimi aşağıdaki seçeneklere sahiptir:
 
-- **Içeri aktarma filtresi** -önceden kaydedilmiş bir özel sorgu alır.
+- **Filtreyi Aktar** - daha önce kaydedilmiş özel bir sorgu alır.
 
-- **Dışarı aktarma filtresi** -özel sorguyu belirtilen konuma kaydeder.
+- **Dışa Aktarma Filtresi** - özel sorguyu belirtilen konuma kaydeder.
 
-- **Sorguyu Yürüt** -sorguyu özel sorgu denetiminde gösterildiği gibi çalıştırır.
+- **Sorguyu Yürüt** - sorguyu özel sorgu denetiminde gösterildiği gibi çalıştırın.
 
-- **Sorguyu durdur** -çalıştıran bir sorgunun yürütülmesini durdurur. Hiçbir sorgu çalışmıyorsa bu düğme kullanılamaz.
+- **Sorgu'u Durdur** - çalışan bir sorgunun yürütülmesini durdurur. Sorgu çalışmıyorsa bu düğme kullanılamaz.
 
-- **Sorguyu göster** -özel sorgu denetimini gösterir/gizler.
+- **Sorguyu Göster** - özel sorgu denetimini gösterir/gizler.
 
-- **Çözümlenme** -raporu, geçerli analiziyle birlikte. vsps dosyası olarak kaydeder.
+- **Analiz kaydet** - raporu .vsps dosyası olarak geçerli çözümlemesi ile birlikte kaydeder.
 
-- **Dışarı aktar** -geçerli raporu ' de kaydeder. CVS-biçimli veya. Farklı görünümleri kaydetme seçenekleriyle, XML biçimli dosya.
+- **Dışa aktarma** - geçerli raporu . CVS biçimli veya . XML biçimli dosya, farklı görünümleri kaydetmek için seçenekleri ile.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)

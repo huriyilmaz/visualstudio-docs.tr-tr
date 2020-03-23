@@ -1,5 +1,5 @@
 ---
-title: Yürütme Profil raporu | Microsoft Docs
+title: Yürütme Profili Raporu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25886ad4f7c31ea02c8dab2d45d8709a362a5a69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969998"
 ---
 # <a name="execution-profile-report"></a>Yürütme Profil Raporu
-Yürütme Profil raporu geleneksel örnekleme profilidir. Örnekleri yaklaşık her milisaniyelik zaman bir iş parçacığı bir mantıksal çekirdek üzerinde çalışıyor ve örnek yığınları birikmiş kümesini harmanlama tarafından eşzamanlılık görselleştiricisi tipik çağrı ağacını oluşturur dönemlerde alınır. Bu tablodaki verileri geçerli zaman aralığını ve gizli dizileri ve uygulanabilir bu filtreler tarafından etkilenebilir:
+Yürütme Profil Raporu geleneksel bir örnekleme profilidir. Örnekler, bir iş parçacığının mantıksal bir çekirdek üzerinde çalışırken olduğu dönemlerde yaklaşık her milisaniyede bir alınır ve Eşzamanlılık Görselleştiricisi, birikmiş örnek yığınları kümesini harmanlayarak tipik bir çağrı ağacı oluşturur. Bu tablodaki veriler geçerli zaman aralığı ve gizli iş parçacıkları ve uygulanabilecek bu filtreler den etkilenebilir:
 
-- Yalnızca kendi kodum seçili ise, yalnızca kullanıcı kodunu ve kullanıcı kodu aşağıda bir düzey olan yığın çerçevelerini gösterilmektedir.
+- Yalnızca Kodum seçilirse, yalnızca kullanıcı koduna sahip yığın çerçeveleri ve kullanıcı kodunun altında bir düzey gösterilir.
 
-- Gürültü azaltma değeri ayarlarsanız, rapordan çıktıklarında belirtilen sıklıkta filtrelenir daha az olan yığınları Harmanlanmış
+- Gürültü azaltma değeri ayarlanırsa, belirtilen frekanstan daha az olan harmanlanmış yığınlar rapordan filtrelenir
 
-  Aşağıdaki tabloda, raporda sütunları gösterir.
+  Aşağıdaki tabloda raporda sütunlar gösterilmektedir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|Ad|İşlev adı çağrı yığınının her düzeyi.|
-|Kapsamlı örnekler|Çağrı yığını ağacı bu düzeye toplanan tüm yığınları için toplanan örneklerin toplam sayısı. Bu işlev için dışlamalı örnekler ve kapsamlı sayaçları tüm alt düğümlerin toplamını kapsamlı sayıdır.|
-|Dışlamalı örnekler|Bu işlev çağrı yığınının en alt düzeyin olduğu toplanan örneklerin toplam sayısı.|
-|% Dahil|Kapsamlı örnekler sütununda gösterilen toplam örneklerin yüzdesi. Yüzde iki ondalık basamağa yuvarlanır.|
-|% Özel|Dışlamalı örnekler sütununda gösterilen toplam örneklerin yüzdesi. Yüzde iki ondalık basamağa yuvarlanır.|
-|Ayrıntılar|İşlev tam adı. Kullanılabilir olduğunda bu satır sayısını içerir.|
+|Adı|Çağrı yığınının her düzeyi için işlevin adı.|
+|Dahil numuneler|Çağrı yığını ağacının bu düzeyine yuvarlanan tüm yığınlar için toplanan toplam örnek sayısı. Kapsayıcı sayı, bu işlev için özel örneklerin ve tüm alt düğümleri için kapsayıcı sayaçların toplamıdır.|
+|Özel Örnekler|Bu işlevin çağrı yığınının en düşük düzeyi olduğu toplanan örneklerin toplam sayısı.|
+|% Dahil|Kapsayıcı örnekler sütununda gösterilen toplam örneklerin yüzdesi. Yüzdeler iki ondalık basamak lara yuvarlanır.|
+|% Özel|Özel örnekler sütununda gösterilen toplam örneklerin yüzdesi. Yüzdeler iki ondalık basamak lara yuvarlanır.|
+|Ayrıntılar|Fonksiyonun tam nitelikli adı. Bu, kullanılabilir olduğunda satır sayısını içerir.|
 
- Bu raporu tablosu görülebilir [yürütme zamanı (iş parçacıkları görünümü)](../profiling/execution-time-threads-view.md) görünümü.
+ Bu rapor tablosu Yürütme [süresi (İş Parçacıkları Görünümü)](../profiling/execution-time-threads-view.md) görünümünde görülebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

@@ -1,6 +1,6 @@
 ---
-title: Python kodu yeniden düzenleyin
-description: Visual Studio tanımlayıcıları yeniden adlandırarak Python kodu yeniden düzenleme içeri aktarmalar ekleme yöntemleri ayıklama kolaylaştırır ve kullanılmayan kaldırma içeri aktarır.
+title: Refactor Python kodu
+description: Visual Studio, tanımlayıcıları yeniden adlandırarak, yöntemleri ayıklayarak, içeri alma eklemeyi ve kullanılmayan içeri aktarımları kaldırarak Python kodunu yeniden düzenlemeyi kolaylaştırır.
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,72 +11,72 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: db1a551e20c597f98052471910bcb696c878675f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62429904"
 ---
-# <a name="refactor-python-code"></a>Python kodu yeniden düzenleyin
+# <a name="refactor-python-code"></a>Refactor Python kodu
 
-Visual Studio otomatik olarak dönüştürmek ve Python kaynak kodunuzu Temizleme için çeşitli komutlar sağlar:
+Visual Studio, Python kaynak kodunuzu otomatik olarak dönüştürmek ve temizlemek için çeşitli komutlar sağlar:
 
-- [Yeniden adlandırma](#rename) seçilen bir sınıf, yöntem veya değişken adı yeniden adlandırır.
-- [Extrahovat metodu](#extract-method) seçilen kod yeni bir yöntem oluşturur
-- [İçeri aktarma eklemek](#add-import) eksik bir içeri aktarma eklemek için bir akıllı etiket sağlar
-- [Kullanılmayan içeri aktarmaları Kaldır](#remove-unused-imports) kullanılmayan içeri aktarmaları kaldırır
+- Seçili bir sınıfı, yöntemi veya değişken adını [yeniden adlandır](#rename)
+- [Ayıklama yöntemi](#extract-method) seçili koddan yeni bir yöntem oluşturur
+- [İçe aktarma ekle,](#add-import) eksik bir alma eklemek için akıllı etiket sağlar
+- [Kullanılmayan içeri aktarımları kaldırma](#remove-unused-imports) kullanılmayan içeriakları kaldırır
 
-## <a name="rename"></a>Rename
+## <a name="rename"></a>Yeniden Adlandır
 
-1. Seçin ve yeniden adlandırmak istediğiniz tanımlayıcısı sağ **Yeniden Adlandır**, o tanımlayıcıda giriş işaretini yerleştirin veya seçin **Düzenle** > **yeniden düzenleyin**  >  **Yeniden Adlandır** menü komutu (**F2**).
-2. İçinde **Yeniden Adlandır** görüntülenen iletişim tanıtıcısı ve seçin için yeni bir ad girin **Tamam**:
+1. Yeniden adlandırmak ve yeniden **adlandırmak**istediğiniz tanımlayıcıyı sağ tıklatın veya bu tanımlayıcıyı bu tanımlayıcıya yerleştirin ve **Yeniden** > **Düzenleme** > **Menüsü** komutunu **(F2)** seçin.
+2. Görünen **Yeniden Adlandır** iletişim kutusunda, tanımlayıcının yeni adını girin ve **Tamam'ı**seçin:
 
-   ![Yeni bir tanımlayıcı ad sor yeniden adlandır](media/code-refactor-rename-1.png)
+   ![Yeni identifer adı için komut istemini yeniden adlandırma](media/code-refactor-rename-1.png)
 
-3. Sonraki iletişim kutusunda, dosyaları ve kodunuzu yeniden adlandırma uygulanacağı durumlarda seçin; Değişikliğinizi önizlemek için herhangi tek bir örneğine seçin:
+3. Bir sonraki iletişim kutusunda, kodunuzdaki dosyaları ve örnekleri seçin; belirli değişikliği önizlemek için herhangi bir örneği seçin:
 
-   ![Yeniden adlandırma değişiklikleri uygulamak yeri seçmek için iletişim kutusu](media/code-refactor-rename-2.png)
+   ![Değişikliklerin uygulanacağı yeri seçmek için iletişim kutusunu yeniden adlandır](media/code-refactor-rename-2.png)
 
-4. Seçin **Uygula** kaynak kod dosyalarınızı değişiklik yapma. (Bu eylem geri alınabilir.)
+4. Kaynak kod dosyalarınızda değişiklik yapmak için **Uygula'yı** seçin. (Bu eylem geri alınabilir.)
 
 ## <a name="extract-method"></a>Ayıklama metodu
 
-1. Kod veya ayrı bir yöntem ayıklamak için ifade satırları seçin.
-2. Seçin **Düzenle** > **yeniden düzenleme** > **yöntemi Ayıkla** menü komutu ya da türü **Ctrl** + **R** > **M**.
-3. Görüntülenen iletişim kutusunda, ayıklayın ve herhangi bir kapanış değişkeni konumu gösteren yeni bir yöntem adı girin. Değişkenleri Kapatılmak üzere işaretli değil yöntem bağımsız değişkenleri ile etkinleştirilir:
+1. Ayrı bir yönteme ayıklamak için kod satırlarını veya ifadeyi seçin.
+2.  > **Refactor****Extract yöntemini** **edit** > et komutunu seçin veya **Ctrl**+**R** > **M**yazın.
+3. Görünen iletişim kutusunda, yeni bir yöntem adı girin, onu nereye ayıklamak için belirtin ve kapatma değişkenlerini seçin. Kapatma için seçilmedimişdeğişkenler yöntem bağımsız değişkenlerine dönüştürüldü:
 
-   ![İletişim yöntemi Ayıkla](media/code-refactor-extract-method-1.png)
+   ![Ayıklama yöntemi iletişim kutusu](media/code-refactor-extract-method-1.png)
 
-4. Seçin **Tamam** ve kodu uygun şekilde değiştirilir:
+4. **Tamam'ı** seçin ve kod buna göre değiştirilir:
 
-   ![Yöntemi ayıklama etkisi](media/code-refactor-extract-method-2.png)
+   ![Bir yöntem ayıklamanın etkisi](media/code-refactor-extract-method-2.png)
 
-## <a name="add-import"></a>İçeri aktarma ekleyin
+## <a name="add-import"></a>Alma ekle
 
-Giriş işaretini bir tanımlayıcıda oturumda bilgi türü yerleştirdiğinizde, Visual Studio komutlarının gerekli bir Akıllı Etiket Ekle (kod solundaki ampul simgesini) sağlar. `import` veya `from ... import` deyimi:
+Bakıcıyı tür bilgisi olmayan bir tanımlayıcıya yerleştirdiğinizde, Visual Studio komutları gerekli `import` veya `from ... import` ifadeyi ekleyen akıllı bir etiket (kodun solundaki ampul simgesi) sağlar:
 
-![İçeri aktarma akıllı etiket ekleme](media/code-refactor-add-import-1.png)
+![Alma akıllı etiketi ekleme](media/code-refactor-add-import-1.png)
 
-Visual Studio sunar `import` en üst düzey paketler ve geçerli proje ve standart kitaplık modülleri için tamamlamalar. Visual Studio'nun sunduğu `from ... import` modülü üyelerinin yanı sıra alt modüller ve subpackages için tamamlamalar. Tamamlamalar, İşlevler, sınıflar veya dışarı aktarılan verileri içerir. İki seçenekten birini seçerek ekler deyime dosyasının en üstüne diğer içeri aktarmalar sonra ya da mevcut bir uygulamasına `from ... import` aynı modül zaten içeri aktarılmış IF ifadesi.
+Visual Studio, mevcut proje ve standart kitaplıkta üst düzey paketler ve modüller için tamamlamalar sunmaktadır. `import` Visual Studio `from ... import` ayrıca alt modüller ve alt paketlerin yanı sıra modül üyeleri için de tamamlanmalar sunmaktadır. Tamamlamalar işlevleri, sınıfları veya dışa aktarılan verileri içerir. Her iki seçeneğin seçilmesi, diğer içeri almalardan sonra ifadeyi `from ... import` dosyanın en üstüne veya aynı modül zaten içe aktarılırsa varolan bir ekstreye ekler.
 
-![Bir içeri aktarma ekleme sonucu](media/code-refactor-add-import-2.png)
+![Alma ekleme nin sonucu](media/code-refactor-add-import-2.png)
 
-Visual Studio, diğerinin içine alınır ancak içeri aktarma yapmak Modül alt olmayan modüller gibi bir modülde gerçekte tanımlanmayan üyeleri filtrelemek çalışır. Örneğin, birçok modülleri kullanan `import sys` yerine `from xyz import sys`, içeri aktarma tamamlama görmüyor `sys` modülleri eksik olması durumunda bile diğer modüllerden bir `__all__` dışlar üye `sys`.
+Visual Studio, bir modülde gerçekte tanımlanmayan, başka bir modüle içe aktarılan ancak içe aktarmayı yapan modülün çocukları olmayan modüller gibi üyeleri filtrelemeye çalışır. Örneğin, birçok modül `import sys` yerine `from xyz import sys`, bu yüzden modülleri hariç `sys` `__all__` `sys`bir üye eksik olsa bile diğer modüllerden içe aktarma için bir tamamlanma görmüyorum.
 
-Benzer şekilde, Visual Studio diğer modüllerden veya yerleşik ad alanı içeri aktarılan işlevleri filtreler. Örneğin bir modülü içeri aktarır `settrace` işlevini `sys` ardından aldığınız, o modülden teorik modülü. Ancak kullanmak en iyisidir `import settrace from sys` doğrudan ve Visual Studio, özellikle o ifadeyi sunar.
+Benzer şekilde, Visual Studio diğer modüllerden veya yerleşik ad alanından alınan işlevleri filtreler. Örneğin, bir modül `settrace` işlevi `sys` modülden aktarırsa, teorik olarak bu modülden içe aktarabilirsiniz. Ama doğrudan kullanmak `import settrace from sys` en iyisidir, ve bu yüzden Visual Studio özellikle bu ifadeyi sunuyor.
 
-Son olarak, bir normal dışlanıp ancak diğer değerleri, (adı modülünde bir değer örneğin atandığından) dahil, Visual Studio hala sahip alma dışlar. Bu davranış, değeri, başka bir modülde tanımlandı ve bu nedenle ek atama dışa verilmediğinden ayrıca bir kukla değer olabilir çünkü olarak aktarılması olmamalıdır varsayar.
+Son olarak, bir şey normalde dışlanmış olacak ancak dahil edilecek başka değerler varsa (örneğin, ad modülde bir değer atandığı için), Visual Studio yine de içe aktarmayı hariç tutar. Bu davranış, başka bir modülde tanımlandığı için değerin dışa aktarılmaması gerektiğini varsayar ve bu nedenle ek atama, dışa aktarılmayan sahte bir değer olabilir.
 
-## <a name="remove-unused-imports"></a>Kullanılmayan içeri aktarmaları Kaldır
+## <a name="remove-unused-imports"></a>Kullanılmayan içeri aktarımları kaldırma
 
-Kod yazarken, sonunda daha kolaydır `import` deyimleri hiç kullanılmayan modüller için. Visual Studio kodunuzu analiz eder, çünkü otomatik olarak belirleyebilir olup olmadığını bir `import` deyimi, içeri aktarılan ad ifade oluştuğu kapsamı içinde aşağıdaki mı kullanıldığına bakarak gereklidir.
+Kod yazarken, hiç kullanılmayan modüller `import` için deyimlerle birlikte olmak kolaydır. Visual Studio kodunuzu çözümlediği için, alınan `import` adın deyimin oluştuğu yerin altındaki kapsam içinde kullanılıp kullanılmadığına bakarak bir deyimin gerekli olup olmadığını otomatik olarak belirleyebilir.
 
-Herhangi bir yeri seçin ve Düzenleyici içinde sağ **içeri aktarmaları Kaldır**, size sağlayan kaldırmak için seçenekleri **tüm kapsamlar** veya yalnızca **geçerli kapsamdaki**:
+Düzenleyicinin herhangi bir yerine sağ tıklayın ve **Tüm Kapsamlardan** veya yalnızca **Geçerli Kapsam'tan**kaldırma seçenekleri sunan **İçeriak**Kaldır'ı seçin:
 
-![İçeri aktarmalar menü Kaldır](media/code-refactor-remove-imports-1.png)
+![İçeri aktarım menüsünü kaldırma](media/code-refactor-remove-imports-1.png)
 
-Visual Studio, ardından kod uygun değişiklikleri yapar:
+Visual Studio daha sonra kodiçin uygun değişiklikleri yapar:
 
-![İçeri aktarmalar'ı kaldırmanın etkisi](media/code-refactor-remove-imports-2.png)
+![İthalatı kaldırmanın etkisi](media/code-refactor-remove-imports-2.png)
 
-Visual Studio için denetim akışı hesaplamaz dikkat edin. önce bir adı kullanarak bir `import` deyimi adı aslında kullanıldıysa olarak kabul edilir. Visual Studio ayrıca yoksayar tüm `from __future__` alır, bir sınıf tanımı içinde de gerçekleştirilen içeri aktarmalar `from ... import *` deyimleri.
+Visual Studio'nun kontrol akışını hesaba katmadığını unutmayın; bir deyim önce `import` bir ad kullanarak aslında ad kullanılmış gibi kabul edilir. Visual Studio ayrıca `from __future__` tüm içeri almaları, bir sınıf tanımı içinde `from ... import *` gerçekleştirilen içeri aktarımları ve deyimleri de yok sayar.

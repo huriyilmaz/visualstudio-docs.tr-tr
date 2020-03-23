@@ -1,5 +1,5 @@
 ---
-title: Görünür zaman çizelgesi profili | Microsoft Docs
+title: Görünür Zaman Çizelgesi Profili | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 352651be28f178272caaad9a01070dc9d7357d79
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62823471"
 ---
 # <a name="visible-timeline-profile"></a>Görünür zaman çizelgesi profili
-Görünür zaman çizelgesi profili iş parçacığı engelleme görünüm için istatistiksel bilgiler ve raporlar için bağlantılar sağlar. Yakınlaştırma, uzaklaştırma, yatay kaydırma, Kanallar Gizle veya kanalları Göster olarak etkin göstergesi sayıları şu anda Görünümü'nde nedir yansıtacak şekilde değiştirin. Göstergeye bir öğe hakkında bir rapor görüntülemek için öğeyi tıklatın.
+İş Parçacığı Engelleme Görünümü için Görünür Zaman Çizelgesi Profili istatistiksel bilgiler ve raporlara bağlantılar sağlar. Yakınlaştırdıkça, uzaklaştırDın, yatay kaydırma, kanalları gizledikçe veya kanalları gösterirken, etkin göstergedeki sayılar şu anda görüntülenen leri yansıtacak şekilde değişir. Gösterge'deki bir öğeyle ilgili bir raporu görüntülemek için öğeyi tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

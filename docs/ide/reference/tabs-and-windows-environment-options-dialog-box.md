@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0bd6358189c3bd39bad57332f87dfe8c43894cd0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72645036"
 ---
-# <a name="options-dialog-box-environment--tabs-and-windows"></a>Seçenekler iletişim kutusu: ortam \> sekmeler ve pencereler
+# <a name="options-dialog-box-environment--tabs-and-windows"></a>Seçenekler iletişim kutusu: \> Ortam Sekmeleri ve Windows
 
-Sekmeli pencerelerin Düzenleyici bölmesinde nasıl davrandığına ve araç pencerelerinin nasıl davrandığına ilişkin seçenekleri ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)
+Sekmeli pencerelerin düzenleyici bölmesinde nasıl bir şekilde nasıl bir şekilde nasıl kullandığı ve araç pencerelerinde nasıl nasıl bir şekilde nasıl bir şekilde nasıl bir şekilde kullanıldığına yönelik seçenekleri ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için [Visual Studio'daki pencere düzenlerini özelleştir'e](../../ide/customizing-window-layouts-in-visual-studio.md) bakın

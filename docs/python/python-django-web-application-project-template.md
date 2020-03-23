@@ -1,6 +1,6 @@
 ---
-title: Python Django web projesi şablonu
-description: Visual Studio ile Python Django web uygulamalarını hızlı oluşturulması için kapsamlı bir şablon sağlayın.
+title: Python için Django web proje şablonu
+description: Visual Studio Python ile Django web uygulamalarının hızlı oluşturulması için kapsamlı bir şablon sağlar.
 ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,55 +11,55 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 136c03ef11071e5d548e36e45a6a541cffce1469
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62784887"
 ---
 # <a name="django-web-project-template"></a>Django web projesi şablonu
 
-[Django](https://www.djangoproject.com/) , hızlı, güvenli ve ölçeklenebilir bir web geliştirme için tasarlanan yüksek düzeyli bir Python altyapısıdır. Visual Studio'da Python desteği, yapıyı bir Django tabanlı bir web uygulamasının ayarlamak için birçok proje şablonları sağlar. Visual Studio'da bir şablon kullanmak için **dosya** > **yeni** > **proje**"Django" için arama yapın ve listeden  **Django Web projesi boş**, **Django Web projesi**, ve **yoklamalar Django Web projesi** şablonları. Bkz: [öğrenin Django öğretici](learn-django-in-visual-studio-step-01-project-and-solution.md) tüm şablonları kılavuz.
+[Django,](https://www.djangoproject.com/) hızlı, güvenli ve ölçeklenebilir web geliştirme için tasarlanmış üst düzey bir Python çerçevesidir. Visual Studio'daki Python desteği, Django tabanlı bir web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio'da şablon kullanmak **için,** > "Django" için Dosya**Yeni** > **Projesi'ni**seçin ve **Boş Django Web Projesi, Django Web** **Projesi**ve **Anketler Django Web Project** şablonlarından seçin. Tüm şablonların gözden geçirimi için [Django'yu Öğrenin öğreticisini](learn-django-in-visual-studio-step-01-project-and-solution.md) görün.
 
-Visual Studio, Django projeleri için IntelliSense sağlar:
+Visual Studio, Django projeleri için tam IntelliSense sağlar:
 
-- Bağlam değişkenleri şablona geçirildi:
+- Şablona geçirilen bağlam değişkenleri:
 
     ![Bağlam değişkenleri için IntelliSense](media/template-django-intellisense.png)
 
-- Etiketleme ve için hem yerleşik olanları filtreleme ve kullanıcı tanımlı:
+- Hem yerleşik hem de kullanıcı tanımlı için etiketleme ve filtreleme:
 
-    ![Etiketleri ve filtreler için IntelliSense](media/template-django-intellisense-filter.png)
+    ![Etiketler ve filtreler için IntelliSense](media/template-django-intellisense-filter.png)
 
-- Sözdizimi: Katıştırılmış CSS ve JavaScript için renklendirme
+- Gömülü CSS ve JavaScript için sözdizimi boyama:
 
     ![CSS IntelliSense](media/template-django-intellisense-css.png)
 
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
-Visual Studio ayrıca sağlar tam [hata ayıklama desteği](debugging-python-in-visual-studio.md) Django projeleri için:
+Visual Studio ayrıca Django projeleri için tam [hata ayıklama desteği](debugging-python-in-visual-studio.md) sağlar:
 
-![Kesme noktaları](media/template-django-debugging.png)
+![Kesme Noktaları](media/template-django-debugging.png)
 
-Django projelerin aracılığıyla yönetilen tipik kendi *manage.py* dosyasını Visual Studio izlediği varsayılır. Giriş noktası olarak bu dosyayı kullanarak durdurursanız, proje dosyası temelde bölün. Bu durumda için ihtiyacınız [projeden varolan dosyaları yeniden](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) olmadan bir Django projesi olarak işaretleniyor.
+Django projelerinin *manage.py* dosyası üzerinden yönetilmesi tipik tir, bu da Visual Studio'nun takip ettiği bir varsayımdır. Bu dosyayı giriş noktası olarak kullanmayı bırakırsanız, proje dosyasını temelolarak kırarsınız. Bu durumda, projeyi Django projesi olarak işaretlemeden [varolan dosyalardan yeniden oluşturmanız](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) gerekir.
 
-## <a name="django-management-console"></a>Django Yönetim Konsolu
+## <a name="django-management-console"></a>Django yönetim konsolu
 
-Django Yönetim Konsolu çeşitli komutlara üzerinden erişilen **proje** menüsü veya projeye sağ tıklayarak **Çözüm Gezgini**.
+Django yönetim konsoluna **Proje** menüsündeki çeşitli komutlarla veya **Solution Explorer'daki**projeye sağ tıklayarak erişilir.
 
-- **Django Kabuğu'nu açın**: uygulama Bağlamınızı Modellerinizi yönetmenize olanak sağlayan bir kabuk açılır:
+- **Açık Django Shell**: Uygulama bağlamınızda modellerinizi işlemenizi sağlayan bir kabuk açar:
 
-    ![Açık Django Kabuk komutu sonuçları](media/template-django-console-shell.png)
+    ![Açık Django Shell komutunun sonuçları](media/template-django-console-shell.png)
 
-- **Django eşitleme DB**: yürütür `manage.py syncdb` içinde bir **etkileşimli** penceresi:
+- **Django Sync DB** `manage.py syncdb` : **Etkileşimli** bir pencerede yürütür:
 
-    ![Django eşitleme DB komutunun sonucu](media/template-django-console-sync-db.png)
+    ![Django Sync DB komutunun sonucu](media/template-django-console-sync-db.png)
 
-- **Statik toplamak**: yürütür `manage.py collectstatic --noinput` tarafından belirtilen yol için tüm statik dosyaları kopyalamak için `STATIC_ROOT` içinde *settings.py*.
+- **Collect Static**: `manage.py collectstatic --noinput` tüm statik dosyaları `STATIC_ROOT` *settings.py.*
 
-    ![Toplama statik komutunun sonucu](media/template-django-console-collect-static.png)
+    ![Statik topla komutunun sonucu](media/template-django-console-collect-static.png)
 
-- **Doğrulama**: yürütür `manage.py validate`, hangi raporların tarafından belirtilen yüklü modellerindeki herhangi bir doğrulama hatası `INSTALLED_APPS` içinde *settings.py*:
+- **Validate**: `manage.py validate` `INSTALLED_APPS` *settings.py:*
 
     ![Doğrulama komutunun sonucu](media/template-django-console-validate.png)
 

@@ -1,5 +1,5 @@
 ---
-title: Yürütme zamanı (iş parçacıkları görünümü) | Microsoft Docs
+title: Yürütme Süresi (İş Parçacığı Görünümü) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac0cf2a60fd194176b7cd9091f4e7dc7a758006f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969920"
 ---
-# <a name="execution-time-threads-view"></a>Yürütme zamanı (iş parçacıkları görünümü)
-İş parçacığı etkin bir sistemde bir mantıksal çekirdek çalışmaları yaparken bu segmentlerde faaliyet iş parçacıkları görünümü zaman çizelgesi yürütme zamanı temsil eder.
+# <a name="execution-time-threads-view"></a>Yürütme süresi (İş Parçacığı Görünümü)
+İş Parçacığı Görünümü zaman çizelgesindeki bu kesimler, iş parçacığının sistemdeki mantıksal bir çekirdek üzerinde etkin bir şekilde çalışma yaptığı yürütme süresini temsil eder.
 
- İş parçacığı durumu değişiklikleri çekirdek bağlam anahtar olayları algılanır. Olay izleme için Windows (ETW), her bir milisaniyeden kısa örnek yığınları yakalar. Çok kısa yeşil Segmentte hiç örnek alındıktan mümkündür. Bu nedenle, bazı kısa yürütme kesimlerinin hiçbir çağrı yığını gösterebilir.
+ İş parçacığı durumundaki değişiklikler çekirdek bağlam geçiş olayları aracılığıyla algılanır. Windows için Olay İzleme (ETW) her milisaniyede bir örnek yığınları yakalar. Çok kısa yeşil bir segmentte, hiçbir örnek alınması mümkündür. Bu nedenle, bazı kısa yürütme segmentleri hiçbir çağrı yığını gösterebilir.
 
- Yürütme bölütü tıkladığınızda, Concurrency Visualizer tıklayarak konumuna yakın bir örnek yığını görüntüler. Bu örnek yığın konumunu siyah bir okla gösterilen ya da giriş işaretini bir zaman çizelgesi ve örnek yığını üzerinde görünür **geçerli** sekmesi.
+ Bir yürütme kesimini tıklattığınızda, Eşzamanlılık Görselleştiricisi, tıklamanın konumuna en yakın örnek yığını görüntüler. Bu örnek yığının konumu, zaman çizelgesinin üzerinde siyah bir ok veya bakım ile gösterilir ve örnek yığını **Geçerli** sekmesinde görüntülenir.
 
- Geçerli görünümdeki tüm yürütme kesimlerinin geleneksel örnekleme profil görmek için tıklayın **yürütme** görünür zaman çizelgesi profili içinde.
+ Geçerli görünümdeki tüm yürütme bölümleri için geleneksel bir örnekleme profili görmek için Görünür Zaman Çizelgesi Profili'nde **Yürütme'yi** tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yürütme Profil Raporu](../profiling/execution-profile-report.md)

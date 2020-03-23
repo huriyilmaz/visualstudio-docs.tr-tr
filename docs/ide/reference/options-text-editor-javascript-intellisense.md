@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e3d030e028332bd57afe66eee31c888713721212
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68605974"
 ---
-# <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Seçenekler iletişim kutusu: Metin düzenleyici \> JavaScript \> IntelliSense
+# <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Seçenekler iletişim kutusu: \> Metin \> DüzenleyicijavaScript IntelliSense
 
-JavaScript için IntelliSense davranışını etkileyen ayarları değiştirmek için **Seçenekler** Iletişim kutusunun **IntelliSense** sayfasını kullanın. **IntelliSense** sayfasına, menü çubuğunda **Araçlar** > **Seçenekler** ' i ve ardından **metin Düzenleyicisi** > **JavaScript/TypeScript** > IntelliSense ' i genişleterek erişebilirsiniz **.**
+JavaScript için **IntelliSense'in** davranışını etkileyen ayarları değiştirmek için **Seçenekler** iletişim kutusunun IntelliSense sayfasını kullanın. Menü çubuğunda **Araç** > **Seçenekleri'ni** seçip **Metin DüzenleyicijavaScript/TypeScript** > **JavaScript/TypeScript** > **IntelliSense'i** genişleterek **IntelliSense** sayfasına erişebilirsiniz.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -34,47 +34,47 @@ IntelliSense deyim tamamlama davranışını değiştirmek için bu seçenekleri
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-**Yalnızca Tab veya ENTER tuşlarını kullanarak işleyin**
+**Yalnızca Işlemek için Sekme veya Enter'u kullanın**
 
-Bu onay kutusunu seçtiğinizde, JavaScript kod Düzenleyicisi, yalnızca **sekmeyi** seçtikten veya anahtarı **girdikten** sonra tamamlama listesinde seçilmiş öğeler içeren deyimleri ekler. Bu onay kutusunun işaretini kaldırdığınızda nokta, virgül, iki nokta, açık parantez ve açık küme ayracı ({) gibi diğer karakterler de seçili öğelerle deyimler eklenebilir.
+Bu onay kutusunu seçtiğinizde, JavaScript kod düzenleyicisi, yalnızca **Sekme** veya **Enter** tuşunu seçtikten sonra tamamlama listesinde seçilen öğelerle ifadeleri ekler. Bu onay kutusunu n için ilerlettiğinizde, nokta, virgül, üst üste, açık parantez ve açık ayraç ({) gibi diğer karakterler de seçili öğelerle deyimleri ekleyebilir.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 Farklı JavaScript projesi türleri için kapsamda olan IntelliSense .js türlerini belirtmek için bu seçenekleri kullanabilirsiniz. IntelliSense başvuruları normalde, genel nesneler için IntelliSense desteği sağlamak amacıyla kullanılır. Bu sayfayı, çalışma zamanında yüklenmesi gereken komut dosyalarının yüklenme sırasını ayarlamak ve IntelliSense uzantı dosyalarını eklemek için de kullanabilirsiniz.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-**Başvuru grupları**
+**Referans grupları**
 
 Bu seçenek başvuru grubu türünü belirtir. Üç başvuru grubu desteklenir:
 
 Belirli IntelliSense .js dosyalarının farklı JavaScript projeleri için kapsamda olduğunu belirtmek için önceden tanımlı başvuru gruplarını kullanabilirsiniz. Dört başvuru grubu mevcuttur:
 
-- JavaScript kullanan uygulamalar için [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] örtük (Windows sürümü). Bu gruba eklenen dosyalar, JavaScript kullanan uygulamalar için [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] kod Düzenleyicisi 'nde açılan her. js dosyası için kapsamdadır.
+- Örtülü (Windows *sürümü),* JavaScript kullanan uygulamalar için. [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] Bu gruba dahil olan dosyalar, JavaScript kullanan uygulamalar için Kod [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] Düzenleyicisi'nde açılan her .js dosyası için kapsamdadır.
 
 - Örtük (Web); HTML5 projeleri için. Bu grupta yer alan dosyalar, bu proje türleri için Kod Düzenleyicisi'nde açılan her .js dosyası için kapsama girer.
 
-- HTML5 Web çalışanları için adanmış çalışan başvuru grupları. Bu grupta belirtilen dosyalar, bir adanmış çalışan başvuru grubuna dair açık başvuru içeren .js dosyaları için kapsama girer.
+- HTML5 web çalışanları için özel işçi başvuru grupları. Bu grupta belirtilen dosyalar, bir adanmış çalışan başvuru grubuna dair açık başvuru içeren .js dosyaları için kapsama girer.
 
 - Genel; diğer JavaScript proje türleri için.
 
 **Dahil edilen dosyalar**
 
-Bu seçenek, dil hizmetinin bağlamına dosyaların yüklendiği sırayı belirtir. Sıralamayı, **Kaldır**, **Yukarı taşı**ve **aşağı taşı** düğmelerini kullanarak yapılandırabilirsiniz. IntelliSense'in düzgün çalışması için, bir diğer dosyaya bağımlı olan dosya söz konusu bu diğer dosyadan sonra yüklenmelidir.
+Bu seçenek, dil hizmetinin bağlamına dosyaların yüklendiği sırayı belirtir. **Kaldır**, **Yukarı Taşı**ve Aşağı **Taşı** düğmelerini kullanarak siparişi yapılandırabilirsiniz. IntelliSense'in düzgün çalışması için, bir diğer dosyaya bağımlı olan dosya söz konusu bu diğer dosyadan sonra yüklenmelidir.
 
 > [!CAUTION]
 > Bir nesne iki veya daha fazla örtük başvuruda koşulsuz olarak tanımlanırsa, nesneyi tanımlamak için bu listedeki son başvuru kullanılır.
 
-**Gruba bir başvuru ekleyin**
+**Gruba referans ekleme**
 
 Bu seçenek, uygun dosyaların bulunduğu yere giderek ek IntelliSense .js dosyalarını eklemek için bir yol sağlar.
 
-**Çeşitli dosyalar projesindeki dosyalar için Uzak başvuruları (ör. http://) İndir**
+**Çeşitli dosyalar projesindeki dosyalar için uzaktan referansları (örn. http://) indirin**
 
-Bu onay kutusu seçildiğinde ve bir proje bağlamı dışında açılmış bir JavaScript dosyanız varsa, Visual Studio IntelliSense bilgilerini sağlamak amacıyla dosyada başvurulan uzak JavaScript dosyalarını indirir. Bu seçenek işaretliyse, JavaScript dosyanıza bir başvuru olarak dahil edildiğinde dosyalar indirilir.
+Bu onay kutusu seçildiğinde ve bir proje bağlamı dışında açılmış bir JavaScript dosyanız varsa, Visual Studio IntelliSense bilgilerini sağlamak amacıyla dosyada başvurulan uzak JavaScript dosyalarını indirir. Bu seçenek seçilirse, Dosyalar JavaScript dosyanıza referans olarak eklediğinizde karşıdan yüklenir.
 
 > [!NOTE]
-> Web projeleri için, projenizde başvurulan uzak dosyalar varsayılan olarak indirilir.
+> Web projeleri için, projenizde başvurulan uzak dosyalar varsayılan olarak karşıdan yüklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Örnekleme veri değerlerini anlama | Microsoft Docs
+title: Örnekleme Veri Değerlerini Anlama | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,45 +12,45 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 289f92deaceca32a44249ed77c17187743a34fa4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778056"
 ---
 # <a name="understand-sampling-data-values"></a>Örnekleme veri değerlerini anlama
 
-Visual Profil Oluşturma Araçları Studio 'nun *örnekleme* profili oluşturma yöntemi, bilgisayar işlemcisini ayarlanan aralıklarla keser ve işlev çağrı yığınını toplar. *Çağrı yığını* , işlemcide yürütülen işlevlerle ilgili bilgileri depolayan dinamik bir yapıdır.
+Visual Studio Profil Oluşturma Araçları'nın *örnekleme* profil oluşturma yöntemi, bilgisayar işlemcisini belirli aralıklarla keser ve işlev çağrı yığınını toplar. *Çağrı yığını,* işlemcide çalıştırılabilen işlevler hakkında bilgi depolayan dinamik bir yapıdır.
 
-Profil Oluşturucu analizi, işlemcinin hedef işlemde kod yürütmediğini belirler. İşlemci hedef işlemde kod yürütülemiyor, örnek atılır.
+Profil oluşturucu çözümlemesi, işlemcinin hedef işlemde kod yürütüp yürütmediğini belirler. İşlemci hedef işlemde kodu yürütmiyorsa, örnek atılır.
 
-İşlemci hedef kodu yürütüp, profil oluşturucu çağrı yığınında her bir işlevin örnek sayılarını arttırır. Örneğin alındığı sırada, çağrı yığınında yalnızca bir işlev şu anda kodu yürütüyor. Yığındaki diğer işlevler, alt öğelerinin dönebilmeleri için bekleyen işlev çağrılarının hiyerarşisinde üstlerdir.
+İşlemci hedef kodu çalıştırıyorsa, profiloluşturucu çağrı yığınındaki her işlev için örnek sayar. Örnek alındığı sırada, arama yığınındaki yalnızca bir işlev şu anda kodu yürütmüş durumdadır. Yığındaki diğer işlevler, çocuklarının geri dönmesini bekleyen işlev çağrıları hiyerarşisindeki ebeveynlerdir.
 
-Örnek olay için, profil oluşturucu Şu anda yönergelerini yürüten işlevin *dışlamalı* örnek sayısını artırır. Dışlamalı bir örnek aynı zamanda işlevin toplam (*kapsamlı*) örneklerinin bir parçası olduğundan, şu anda etkin olan işlevin kapsamlı örnek sayısı da artırılır.
+Örnek olay için profiloluşturucu, yönergelerini yürüten işlevin *özel* örnek sayısını artar. Özel bir örnek de işlevin toplam *(kapsayıcı)* örneklerinin bir parçası olduğundan, şu anda etkin olan işlevin kapsayıcı örnek sayısı da artar.
 
- Profiler, Çağrı yığınındaki diğer tüm işlevlerin dahil edilen örnek sayısını artırır.
+ Profil oluşturucu, çağrı yığınındaki diğer tüm işlevlerin dahil örnek sayısını artımlar.
 
-## <a name="inclusive-samples"></a>Kapsamlı örnekler
+## <a name="inclusive-samples"></a>Dahil numuneler
 
-Hedef işlevin yürütülmesi sırasında toplanan örneklerin toplam sayısı.
+Hedef işlevin yürütülmesi sırasında toplanan toplam örnek sayısı.
 
 Bu, işlev kodunun doğrudan yürütülmesi sırasında toplanan örnekleri ve hedef işlev tarafından çağrılan alt işlevlerin yürütülmesi sırasında toplanan örnekleri içerir.
 
-## <a name="exclusive-samples"></a>Dışlamalı örnekler
+## <a name="exclusive-samples"></a>Özel numuneler
 
-Hedef işlevin yönergelerinin doğrudan yürütülmesi sırasında toplanan örneklerin sayısı.
+Hedef işlevin yönergelerinin doğrudan yürütülmesi sırasında toplanan örnek sayısı.
 
-Dışlamalı örnekler, hedef işlev tarafından çağrılan işlevlerin yürütülmesi sırasında toplanan örnekleri içermez.
+Özel örnekler, hedef işlev tarafından çağrılan işlevlerin yürütülmesi sırasında toplanan örnekleri içermez.
 
-## <a name="inclusive-percent"></a>Kapsamlı yüzde
+## <a name="inclusive-percent"></a>Dahil yüzdesi
 
-Profil oluşturma çalıştırmasında, işlevin veya veri aralığının kapsamlı örnekleri olan toplam kapsamlı örnek sayısının yüzdesi.
+Profil oluşturma çalışmasındaki toplam dahil örnek sayısının yüzdesi, işlev in veya veri aralığının kapsayıcı örnekleridir.
 
-## <a name="exclusive-percent"></a>Dışlamalı yüzde
+## <a name="exclusive-percent"></a>Özel yüzde
 
-Profil oluşturma çalıştırmasında, işlevin veya veri aralığının özel örnekleri olan toplam dışlamalı örnek sayısının yüzdesi.
+Profil oluşturma çalışmasındaki toplam özel örnek sayısının yüzdesi, işlevin veya veri aralığının özel örnekleridir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Nasıl yapılır: koleksiyon yöntemlerini seçme](../profiling/how-to-choose-collection-methods.md)
-[performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)
+[Nasıl yapılır: Toplama yöntemlerini](../profiling/how-to-choose-collection-methods.md)
+seçin[Performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)

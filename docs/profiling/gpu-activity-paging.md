@@ -1,5 +1,5 @@
 ---
-title: GPU etkinliği (disk belleği) | Microsoft Docs
+title: GPU Etkinliği (Sayfalama) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8bd28c7b41a01992ad52fa343b098b0a02460806
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969621"
 ---
 # <a name="gpu-activity-paging"></a>GPU Etkinliği (Disk Belleği)
-**GPU etkinliği (disk belleği)** üzerinde kesim **iş parçacıkları** sekmesinde temsil saatleri zaman GPU işleme sayfalandırma istekleri.  Bir segmenti uzunluğunu GPU doğrudan bellek erişimi (DMA) disk belleği paket işliyordu süreyi temsil eder. Genellikle, disk belleği paketleri bellek CPU ve GPU arasında aktarımı ile ilişkilidir.
+**İş parçacıkları** sekmesindeki **GPU Etkinliği (Sayfalama)** segmentleri, GPU'nun sayfalama isteklerini işlediğindeki zamanları temsil eder.  Bir kesimin uzunluğu, GPU'nun doğrudan bellek erişimi (DMA) çağrı paketini işleme sayılma süresini gösterir. Genellikle, sayfalama paketleri CPU ve GPU arasında bellek transferi ile ilişkilidir.
 
- Seçtiğinizde, bir GPU sayfalama segment, rapor üzerinde **geçerli** sekmesini işlenmiş DMA paket hakkında bilgileri görüntüler. Bu, DirectX altyapısı, DMA paket gönderilen işlem ve paket işlemek için gerekli olan zamanı ile ilişkili donanım kuyruğundaki, beklenen süre miktarını içerir.
+ Bir GPU sayfalama kesimi seçtiğinizde, **Geçerli** sekmesindeki rapor işlenen DMA paketi yle ilgili bilgileri görüntüler. Buna DirectX altyapısıyla ilişkili donanım kuyruğunda beklediği süre, DMA paketini gönderen işlem ve paketi işlemek için gereken süre dahildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanım Görünümü](../profiling/utilization-view.md)

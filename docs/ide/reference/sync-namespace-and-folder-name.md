@@ -1,5 +1,5 @@
 ---
-title: Eşitleme ad alanı ve klasör adı
+title: Ad alanı ile klasör adını eşitleme
 ms.date: 06/12/2019
 ms.topic: reference
 author: mikadumont
@@ -10,32 +10,32 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: d7073edaf6ecc261c58bf1e5607323b9214c5ed0
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "67160728"
 ---
-# <a name="sync-namespace-and-folder-name"></a>Eşitleme ad alanı ve klasör adı
+# <a name="sync-namespace-and-folder-name"></a>Ad alanı ile klasör adını eşitleme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Eşitleme ad alanı ve klasör adı.
+**Ne:** Ad alanını ve klasör adını eşitleyin.
 
-**ne zaman:** Yeni bir klasöre bir dosya sürükleyerek çözümünüzü bölümlerini yeniden oluşturma istiyorsunuz. 
+**Ne zaman:** Bir dosyayı yeni bir klasöre sürükleyerek çözümünüzün bölümlerini yeniden yeniden architectyapmak istiyorsunuz. 
 
-**Neden:** Ad alanınız güncel yeni klasör yapınız ile tutar emin olmanız gerekir.
+**Neden:** Ad alanınızın yeni klasör yapınızla güncel olduğundan emin olmak istiyorsunuz.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi, ad alanınızın adını yerleştirin.
-2. Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-3. Seçin **değişiklik ad alanına \<klasör adı >** .
+1. İmlecinizi ad alanı adına yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+3. **Ad alanını klasör \<adı>değiştir'i **seçin.
 
-   ![Eşitleme Namespace ve klasör adı](media/sync-namespace-and-folder-name.png)
+   ![Eşitleme Ad Alanı Ve Klasör Adı](media/sync-namespace-and-folder-name.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

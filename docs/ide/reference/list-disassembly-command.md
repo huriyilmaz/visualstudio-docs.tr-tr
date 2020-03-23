@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aaeab2e65088b8f1bfce3a6a12f8cd66c3245b75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72747931"
 ---
 # <a name="list-disassembly-command"></a>Ayrıştırılmış Kodu Listele Komutu
-Hata ayıklama işlemini başlatır ve hataların nasıl işleneceğini belirtmenizi sağlar.
+Hata ayıklama işlemini başlatir ve hataların nasıl işleneceğini belirtmenize olanak tanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,31 +32,31 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ```
 
 ## <a name="switches"></a>Anahtarlar
-Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
+Her anahtar tam formu veya kısa bir form kullanılarak çağrılabilir.
 
-/Count: `number` [veya]/c: `number` [veya]/length: `number` [veya]/l: `number`
+/count: `number` [veya] /c: `number` [veya] `number` /length: [veya] /l:`number`
 
-İsteğe bağlı. Görüntülenecek yönerge sayısı. Varsayılan değer 8 ' dir.
+İsteğe bağlı. Görüntülenecek yönerge sayısı. Varsayılan değer 8'dir.
 
-/endadddress: `expression` [veya]/e: `expression`
+/endaddress: `expression` [veya] /e:`expression`
 
-İsteğe bağlı. Ayrıştırılmış kodun durdurulacağı adres.
+İsteğe bağlı. Sökmeyi durduracak adres.
 
-/codebytes: `yes`&#124; `no` [veya]/bytes: `yes`&#124; `no` [veya]/b: `yes`&#124; `no`
+/codebaytlar:`yes` `no`&#124;[veya] /bayt:`yes`&#124;`no` [veya] /b:`yes`&#124;`no`
 
-İsteğe bağlı. Kod baytlarının görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer `no`.
+İsteğe bağlı. Kod baytlarının gösterip görüntülemeyeceğini gösterir. Varsayılan değer. `no`
 
-/Source: `yes`&#124; `no` [veya]/s: `yes`&#124; `no`
+/kaynak:`yes` `no`&#124;[veya]`yes` /s:&#124;`no`
 
-İsteğe bağlı. Kaynak kodun görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer `no`.
+İsteğe bağlı. Kaynak kodunun görüntülenip görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer. `no`
 
-/symbolnames: `yes`&#124; `no` [veya]/names: `yes`&#124; `no` [veya]/n: `yes`&#124; `no`
+/sembolnames:`yes` `no`&#124;[veya]`yes` /adlar:&#124;`no` `yes` [veya] /n:&#124;`no`
 
-İsteğe bağlı. Sembol adlarının görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer `yes`.
+İsteğe bağlı. Sembol adlarının gösterip görüntülemeyeceğini gösterir. Varsayılan değer. `yes`
 
- [/linenumbers: `yes`&#124; `no`]
+ [/satır`yes` numaraları: `no`&#124;]
 
-İsteğe bağlı. Kaynak kodla ilişkili satır numaralarının görüntülenmesine izin vermez. /Linenumbers anahtarını kullanmak için/Source anahtarı `yes` bir değere sahip olmalıdır.
+İsteğe bağlı. Kaynak koduyla ilişkili satır numaralarının görüntülenmesini sağlar. /kaynak anahtarının /linenumbers `yes` anahtarını kullanma değeri olmalıdır.
 
 ## <a name="example"></a>Örnek
 
@@ -66,9 +66,9 @@ Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çağrı Yığınını Listele Komutu](../../ide/reference/list-call-stack-command.md)
-- [İş Parçacıklarını Listele Komutu](../../ide/reference/list-threads-command.md)
-- [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
+- [Liste Çağrı Yığını Komutu](../../ide/reference/list-call-stack-command.md)
+- [Liste Konuları Komutu](../../ide/reference/list-threads-command.md)
+- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

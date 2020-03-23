@@ -1,5 +1,5 @@
 ---
-title: Dışarı aktarma düğmesi (eşzamanlılık görselleştiricisi) | Microsoft Docs
+title: Dışa Aktarma Düğmesi (EşzamanlıLık Görselleştiricisi) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 50c5aed4f12cc5bef9bc50c2a41009de4e6ad811
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969907"
 ---
-# <a name="export-button-concurrency-visualizer"></a>Dışarı aktarma düğmesi (eşzamanlılık görselleştiricisi)
-**Dışarı** düğmesini etkinleştirir, çağrı yığını olarak dışarı aktarmak bir. *CSV* kendi kayıtlarınız için veya Microsoft Excel gibi başka bir aracı ile kullanım için dosya.
+# <a name="export-button-concurrency-visualizer"></a>Dışa aktarma düğmesi (Eşzamanlı Görselleştirici)
+**Dışa Aktarma** düğmesi, çağrı yığınını ' olarak dışa aktarmanızı sağlar. kendi kayıtlarınız için veya Microsoft Excel gibi başka bir araçla kullanmak için *csv* dosyası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık görselleştiricisi](../profiling/concurrency-visualizer.md)

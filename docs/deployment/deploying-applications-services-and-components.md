@@ -1,6 +1,6 @@
 ---
 title: Dağıtıma ilk bakış
-description: Visual Studio 'dan uygulama dağıtma seçenekleriniz hakkında bilgi edinin.
+description: Visual Studio'dan uygulama dağıtma seçenekleriniz hakkında bilgi edinin.
 ms.custom: mvc
 ms.date: 01/29/2019
 ms.topic: quickstart
@@ -24,135 +24,135 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 006ecdffd7b109c32f7063fee5f454e43c6c4597
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72806921"
 ---
-# <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma ilk bakış
+# <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio'da dağıtıma ilk bakış
 
-Bir uygulama, hizmet veya bileşen dağıtarak, diğer bilgisayarlara, aygıtlara veya sunuculara ya da buluta yükleme için dağıtırsınız. İhtiyacınız olan dağıtım türü için uygun yöntemi Visual Studio'da seçebilirsiniz. (Birçok uygulama türü, burada açıklanmayan komut satırı dağıtımı gibi diğer dağıtım araçlarını destekler.)
+Bir uygulamayı, hizmeti veya bileşeni dağıtarak, uygulamayı diğer bilgisayarlara, aygıtlarda veya sunucularda veya bulutta yüklemek üzere dağıtırsınız. İhtiyacınız olan dağıtım türü için uygun yöntemi Visual Studio'da seçebilirsiniz. (Birçok uygulama türü, burada tanımlanmayan komut satırı dağıtımı gibi diğer dağıtım araçlarını destekler.)
 
-Adım adım dağıtım yönergeleri için hızlı başlangıç ve öğreticiler bölümüne bakın. Dağıtım seçeneklerine genel bakış için bkz. [hangi yayımlama seçenekleri bana uygun?](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me).
+Adım adım dağıtım yönergeleri için Hızlı Başlangıçlar ve Öğreticiler'e bakın. Dağıtım seçeneklerine genel bakış için [bkz.](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)
 
 ## <a name="deploy-to-local-folder"></a>Yerel klasöre dağıt
 
-Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için başka bir aracın kullanıldığı hazırlanmış bir dağıtıma başlamak için kullanılır.
+Yerel bir klasöre dağıtım genellikle sınama veya son dağıtım için başka bir aracın kullanıldığı aşamalı bir dağıtımı başlatmak için kullanılır.
 
-- **ASP.net**, **ASP.NET Core**, **Node. js**, **Python**ve. **NET Core**: yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+- **ASP.NET**, **ASP.NET Çekirdek**, **Düğüm.js**, **Python**, ve . **NET Core**: Yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Tam olarak sunulan seçenekler uygulama türüne bağlıdır. Çözüm Gezgini'nde projenize sağ tıklayın ve **Yayımla'yı**seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **yeni profil oluştur'u**tıklatmanız gerekir.) Ardından **Klasör'ü**seçin. Daha fazla bilgi için [bkz.](quickstart-deploy-to-local-folder.md)
 
-    ![Yayımla ' yı seçin](../deployment/media/quickstart-publish.png)
+    ![Yayımla'yı Seçin](../deployment/media/quickstart-publish.png)
 
-- **Windows Masaüstü** Bir Windows masaüstü uygulamasını ClickOnce dağıtımını kullanarak bir klasöre yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# ve Visual Basic). /CLI C++için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+- **Windows masaüstü** ClickOnce dağıtımını kullanarak bir Windows masaüstü uygulamasını bir klasöre yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için ClickOnce (C# ve Visual Basic) [kullanarak bir masaüstü uygulamasını dağıt'a](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) bakın. C++/CLI için [ClickOnce kullanarak yerel bir uygulama dağıt'a](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) bakın veya C/C++ için Kurulum projesini kullanarak yerel bir uygulamayı [dağıt'a](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)bakın.
 
-## <a name="publish-to-azure"></a>Azure'a Yayımlama
+## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-- **ASP.net**, **ASP.NET Core**, **Python**ve **Node. js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
+- **ASP.NET**, **ASP.NET Core**, **Python**ve **Node.js**: Aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux (kapsayıcıları kullanarak) yayımlayın.
 
-  - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
+  - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Ardışık Hatları](/azure/devops/pipelines/get-started-yaml?view=azdevops)ile Azure DevOps'leri kullanın.
 
-  - Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'da **Yayımla** aracını kullanın.
+  - Uygulamaların tek seferlik (veya manuel) dağıtımı için Visual Studio'da **Yayımla** aracını kullanın.
 
-  Sunucunun daha özelleştirilmiş yapılandırmasını sağlayan dağıtım için, uygulamayı bir Azure sanal makinesine dağıtmak üzere **Yayımla** aracını da kullanabilirsiniz.
+  Sunucunun daha özelleştirilmiş yapılandırmasını sağlayan dağıtım için, uygulamaları bir Azure Sanal Makinesine dağıtmak için **Yayımla** aracını da kullanabilirsiniz.
 
-  **Yayımla** aracını kullanmak için Çözüm Gezgini ' de projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yeni Profil oluştur**' a tıklamanız gerekir.) Yayımla iletişim kutusunda **App Service** veya **Azure sanal makineler**' i seçin ve ardından yapılandırma adımlarını izleyin.
+  **Yayımla** aracını kullanmak için Solution Explorer'da projeyi sağ tıklatın ve **Yayımla'yı**seçin. (Daha önce herhangi bir yayımlama profili yapılandırıldıysanız, **yeni profil oluştur'u**tıklatmanız gerekir.) Yayımla iletişim kutusunda, **Uygulama Hizmeti** veya Azure **Sanal Makineleri'ni**seçin ve ardından yapılandırma adımlarını izleyin.
 
-  ![Azure App Service seçin](../deployment/media/quickstart-publish-azure.png "Azure App Service seçin")
+  ![Azure Uygulama Hizmeti'ni seçin](../deployment/media/quickstart-publish-azure.png "Azure Uygulama Hizmeti'ni seçin")
 
-  Visual Studio 2017 sürüm 15,7 ' den başlayarak, **Linux için App Service**ASP.NET Core uygulamaları dağıtabilirsiniz.
+  Visual Studio 2017 sürüm 15.7'den başlayarak, ASP.NET Core uygulamalarını **Linux için App Service'e**dağıtabilirsiniz.
 
-  Python uygulamaları için Ayrıca, [Azure App Service Için Python-yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)konusuna bakın.
+  Python uygulamaları için python [- Azure Uygulama Hizmetine yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)da bakın.
 
-  Hızlı bir giriş için bkz. [Azure 'Da yayımlama](quickstart-deploy-to-azure.md) ve [Linux 'ta yayımlama](quickstart-deploy-to-linux.md). Ayrıca bkz. [Azure 'da ASP.NET Core uygulama yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs). Git kullanarak dağıtım için bkz. [Git Ile Azure 'A sürekli ASP.NET Core dağıtımı](/aspnet/core/publishing/azure-continuous-deployment).
+  Hızlı bir giriş için [bkz.](quickstart-deploy-to-azure.md) [Publish to Linux](quickstart-deploy-to-linux.md) Ayrıca, bkz. [Azure'da bir ASP.NET Core uygulaması yayımla.](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs) Git'i kullanarak dağıtım için, [Core'un Git ile Azure ASP.NET'a Sürekli dağıtımına](/aspnet/core/publishing/azure-continuous-deployment)bakın.
 
-  Azure App Service yayımlama profilini Visual Studio 'ya aktarma hakkında daha fazla bilgi için bkz. [Yayımlama ayarlarını Içeri aktarma ve Azure 'a dağıtma](../deployment/tutorial-import-publish-settings-azure.md).
+  Azure Uygulama Hizmeti'nden Visual Studio'ya yayımlama profili alma hakkında daha fazla bilgi [için, Yayımlama Ayarlarını İçe Aktar ve Azure'a dağıt'a](../deployment/tutorial-import-publish-settings-azure.md)bakın.
 
   > [!NOTE]
-  > Henüz bir Azure hesabınız yoksa, [buradan kaydolabilirsiniz](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio).
+  > Zaten bir Azure hesabınız yoksa, [buradan kaydolabilirsiniz.](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)
 
-## <a name="publish-to-web-or-deploy-to-network-share"></a>Web 'de yayımlama veya ağ paylaşımında dağıtma
+## <a name="publish-to-web-or-deploy-to-network-share"></a>Ağ paylaşımı için Web'de yayımlama veya dağıtma
 
-- **ASP.net**, **ASP.NET Core**, **Node. js**ve **Python**: FTP veya Web dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
+- **ASP.NET**, **ASP.NET Core**, **Node.js**ve **Python**: FtP veya Web Dağıtımı'nı kullanarak bir web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için [bkz.](quickstart-deploy-to-a-web-site.md)
 
-    Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yeni Profil oluştur**' a tıklamanız gerekir.) Yayımla aracında istediğiniz seçeneği belirleyin ve yapılandırma adımlarını izleyin.
+    Çözüm Gezgini'nde projeyi sağ tıklatın ve **Yayımla'yı**seçin. (Daha önce herhangi bir yayımlama profili yapılandırıldıysanız, **yeni profil oluştur'u**tıklatmanız gerekir.) Yayımla aracında, istediğiniz seçeneği seçin ve yapılandırma adımlarını izleyin.
 
-    ![IIS, FTP, vb. seçin.](../deployment/media/quickstart-publish-iis-ftp.png)
+    ![IIS, FTP, vb seçin.](../deployment/media/quickstart-publish-iis-ftp.png)
 
-    Visual Studio 'da bir yayımlama profilini içeri aktarma hakkında bilgi için bkz. [Yayımlama ayarlarını Içeri aktarma ve IIS 'e dağıtma](../deployment/tutorial-import-publish-settings-iis.md).
+    Visual Studio'da yayımlama profili alma hakkında daha fazla bilgi [için, Yayımlama ayarlarını içe aktar Ve IIS'ye dağıtın.](../deployment/tutorial-import-publish-settings-iis.md)
 
-    Ayrıca, ASP.NET uygulamalarını ve hizmetlerini çeşitli yollarla dağıtabilirsiniz. Daha fazla bilgi için bkz. [ASP.NET Web uygulamaları ve hizmetleri dağıtma](/aspnet/mvc/overview/deployment/).
+    Uygulamaları ve hizmetleri ASP.NET de çeşitli yollarla dağıtabilirsiniz. Daha fazla bilgi için bkz: [ASP.NET web uygulamaları ve hizmetleri dağıtma.](/aspnet/mvc/overview/deployment/)
 
-- **Windows Masaüstü** ClickOnce dağıtımını kullanarak bir Windows masaüstü uygulamasını bir Web sunucusuna veya ağ dosya paylaşımında yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# ve Visual Basic). /CLI C++için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+- **Windows masaüstü** ClickOnce dağıtımını kullanarak bir Windows masaüstü uygulamasını bir web sunucusunda veya ağ dosyası paylaşımında yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için ClickOnce (C# ve Visual Basic) [kullanarak bir masaüstü uygulamasını dağıt'a](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) bakın. C++/CLI için [ClickOnce kullanarak yerel bir uygulama dağıt'a](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) bakın veya C/C++ için Kurulum projesini kullanarak yerel bir uygulamayı [dağıt'a](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)bakın.
 
-## <a name="publish-to-microsoft-store"></a>Microsoft Store yayımlama
+## <a name="publish-to-microsoft-store"></a>Microsoft Mağazası'nda yayımla
 
-Visual Studio 'dan Microsoft Store dağıtım için uygulama paketleri oluşturabilirsiniz.
+Visual Studio'dan Microsoft Mağazası'na dağıtım için uygulama paketleri oluşturabilirsiniz.
 
-- **UWP**: uygulamanızı paketleyebilir ve menü öğelerini kullanarak dağıtabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio kullanarak UWP uygulaması paketleme](/windows/uwp/packaging/packaging-uwp-apps).
+- **UWP**: Uygulamanızı paketleyebilir ve menü öğelerini kullanarak dağıtabilirsiniz. Daha fazla bilgi için [Visual Studio'yı kullanarak Bir UWP uygulamasını](/windows/uwp/packaging/packaging-uwp-apps)Paketle'ye bakın.
 
     ![Uygulama paketi oluşturma](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Windows Masaüstü**: Microsoft Store Visual Studio 2017 sürüm 15,4 ' den başlayarak dağıtım yapabilirsiniz. Bunu yapmak için, bir Windows uygulama paketleme projesi oluşturarak başlayın. Daha fazla bilgi için bkz. [Microsoft Store için bir masaüstü uygulaması paketleme](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
+- **Windows masaüstü**: Visual Studio 2017 sürüm 15.4'ten başlayarak Microsoft Mağazası'na dağıtabilirsiniz. Bunu yapmak için bir Windows Uygulama Paketleme Projesi oluşturarak başlayın. Daha fazla bilgi için [Microsoft Mağazası için bir masaüstü uygulamasını paketle'ye](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)bakın.
 
-    ![Masaüstü uygulaması paketleme](../deployment/media/feature-tour-desktop-bridge.png)
+    ![Masaüstü uygulamasını paketle](../deployment/media/feature-tour-desktop-bridge.png)
 
-## <a name="deploy-net-packages-to-nugetorg"></a>NuGet.org 'e .NET paketleri dağıtma
+## <a name="deploy-net-packages-to-nugetorg"></a>NuGet.org .NET paketlerini dağıtma
 
-Paketlenmiş kodu, derlenen kodu içeren "paketlere" (dll olarak) ve bu paketleri kullanan projelerde gereken diğer içeriklere birlikte dağıtmak için, Visual Studio 'Yu kullanarak, son dağıtım komutunu vermek üzere NuGet paketini ve bir CLı aracını oluşturabilirsiniz.
+Paketlenmiş kodu, bu paketleri tüketen projelerde gereken diğer içerikle birlikte derlenmiş kod (DL olarak) içeren "paketlere" dağıtmak için, Visual Studio'yu kullanarak NuGet paketini ve son dağıtım komutunu vermek için bir CLI aracı oluşturabilirsiniz.
 
-- [.NET Standard paketi oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
-- [.NET Framework paketi oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)
+- [Bir .NET Standart paketi oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+- [Bir .NET Framework paketi oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)
 
-## <a name="deploy-to-a-device-uwp"></a>Cihaza dağıtma (UWP)
+## <a name="deploy-to-a-device-uwp"></a>Aygıta dağıtma (UWP)
 
-Bir cihazda test için UWP uygulaması dağıtıyorsanız bkz. [Visual Studio 'da uzak MAKINEDE UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md).
+Bir aygıtta test etmek için bir UWP uygulaması dağıtıyorsanız, [Visual Studio'daki uzak bir makinede UWP uygulamalarını çalıştır'a](../debugger/run-windows-store-apps-on-a-remote-machine.md)bakın.
 
-## <a name="create-an-installer-package-windows-desktop"></a>Yükleyici paketi oluşturma (Windows Masaüstü)
+## <a name="create-an-installer-package-windows-desktop"></a>Yükleyici paketi oluşturma (Windows masaüstü)
 
-[ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) 'ın sağlayabileceğinden daha karmaşık bir masaüstü uygulaması yüklemesi gerekiyorsa, bir Windows Installer PAKETI (MSI veya exe yükleme dosyası) veya özel bir önyükleyici oluşturabilirsiniz.
+[ClickOnce'nin](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) sağlayabileceğinden daha karmaşık bir masaüstü uygulaması yüklemesi gerekiyorsa, bir Windows Installer paketi (MSI veya EXE yükleme dosyası) veya özel bir bootstrapper oluşturabilirsiniz.
 
-- [WIX araç takımı uzantısı](https://marketplace.visualstudio.com/items?itemName=WixToolset.WiXToolset)kullanılarak MSI tabanlı bir yükleyici paketi oluşturulabilir. Bu bir komut satırı araç takımıdır.
+- MsI tabanlı bir yükleyici paketi [WiX Araç Seti Uzantısı](https://marketplace.visualstudio.com/items?itemName=WixToolset.WiXToolset)kullanılarak oluşturulabilir. Bu bir komut satırı araç kümesidir.
 
    ::: moniker range=">=vs-2019"
-   Visual Studio 2019 için [Wix araç takımı Visual Studio 2019 uzantısını](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension)alın.
+   Visual Studio 2019 için [WiX Toolset Visual Studio 2019 Uzantısı'nı](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension)alın.
    ::: moniker-end
 
-- Esnek dönem yazılımından [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) KULLANıLARAK bir MSI veya exe yükleyici paketi oluşturulabilir. InstallShield, Visual Studio 2017 ve sonraki sürümlerle kullanılabilir (Community Edition desteklenmiyor). InstallShield Limited Edition 'ın artık Visual Studio 'Ya dahil edilmediğini ve Visual Studio 2017 ve sonraki sürümlerinde desteklenmediğini unutmayın; gelecekteki kullanılabilirlik hakkında [Esnek dönem yazılımlarla](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) görüşün.
+- Flexera Software'den [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) kullanılarak bir MSI veya EXE yükleyici paketi oluşturulabilir. InstallShield Visual Studio 2017 ve sonraki sürümlerinde kullanılabilir (Community Edition desteklenmez). InstallShield Limited Edition'ın artık Visual Studio'ya dahil olmadığını ve Visual Studio 2017 ve sonraki sürümlerinde desteklenmediğini unutmayın; gelecekteki kullanılabilirlik hakkında [Flexera Software](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) ile kontrol edin.
 
-- Bir MSI veya EXE yükleyici paketi, bir kurulum projesi (VDPROJ) kullanılarak oluşturulabilir. Bu seçeneği kullanmak için [Visual Studio yükleyicisi projeleri uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)yükler.
+- Bir MSI veya EXE yükleyici paketi bir Kurulum projesi (vdproj) kullanılarak oluşturulabilir. Bu seçeneği kullanmak için [Visual Studio Installer Projects uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)yükleyin.
 
-- Ayrıca, önyükleyici olarak bilinen genel bir yükleyiciyi yapılandırarak masaüstü uygulamalarına yönelik Önkoşul bileşenlerini yükleyebilirsiniz. Daha fazla bilgi için bkz. [uygulama dağıtımı önkoşulları](../deployment/application-deployment-prerequisites.md).
+- Ayrıca, bootstrapper olarak bilinen genel bir yükleyiciyi yapılandırarak masaüstü uygulamaları için ön koşul bileşenleri ni yükleyebilirsiniz. Daha fazla bilgi için [Bkz. Uygulama Dağıtım Ön koşulları.](../deployment/application-deployment-prerequisites.md)
 
-## <a name="deploy-to-test-lab"></a>Test laboratuvarına dağıt
+## <a name="deploy-to-test-lab"></a>Test laboratuarına dağıtın
 
-Uygulamalarınızı sanal ortamlara dağıtarak daha gelişmiş geliştirme ve test olanağı sağlayabilirsiniz. Daha fazla bilgi için bkz. [Laboratuvar ortamında test](../test/lab-management/using-a-lab-environment-for-your-application-lifecycle.md)etme.
+Uygulamalarınızı sanal ortamlara dağıtarak daha gelişmiş geliştirme ve sınama sağlayabilirsiniz. Daha fazla bilgi için [laboratuvar ortamında sına'ya](../test/lab-management/using-a-lab-environment-for-your-application-lifecycle.md)bakın.
 
 ## <a name="continuous-deployment"></a>Sürekli dağıtım
 
-Uygulamanızın sürekli dağıtımını etkinleştirmek için Azure Pipelines kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines/index?view=vsts) ve [Azure 'a dağıtma](/azure/devops/deploy-azure/index?view=vsts).
+Uygulamanızın sürekli olarak dağıtılmasını sağlamak için Azure Ardışık Hatlar'ı kullanabilirsiniz. Daha fazla bilgi için [Azure Ardışık Hatları'na](/azure/devops/pipelines/index?view=vsts) bakın ve [Azure'a dağıtın.](/azure/devops/deploy-azure/index?view=vsts)
 
 ## <a name="deploy-a-sql-database"></a>SQL veritabanı dağıtma
 
-- [Hedef platformu değiştirme ve veritabanı projesi yayımlama (SQL Server Veri Araçları (SSDT))](/sql/ssdt/how-to-change-target-platform-and-publish-a-database-project)
+- [Hedef platformu değiştirin ve bir veritabanı projesi yayımlayın (SQL Server Data Tools (SSDT))](/sql/ssdt/how-to-change-target-platform-and-publish-a-database-project)
 
-- [Analysis Services projesi dağıtma (SSAS)](/sql/analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project)
+- [Analiz Hizmetleri Projesi (SSAS) Dağıtma](/sql/analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project)
 
-- [Integration Services (SSIS) projelerini ve paketlerini dağıtma](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)
+- [Entegrasyon Hizmetleri (SSIS) projelerini ve paketlerini dağıtma](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)
 
-- [Oluşturma ve yerel bir veritabanına dağıtma](/sql/ssdt/how-to-build-and-deploy-to-a-local-database)
+- [Yerel bir veritabanı oluşturma ve dağıtma](/sql/ssdt/how-to-build-and-deploy-to-a-local-database)
 
 ## <a name="deployment-for-other-app-types"></a>Diğer uygulama türleri için dağıtım
 
 | Uygulama türü | Dağıtım Senaryosu | Bağlantı |
 | --- | --- | --- |
-| **Office uygulaması** | Office için bir eklentiyi Visual Studio 'dan yayımlayabilirsiniz. | [Office eklentisini dağıtma ve yayımlama](https://dev.office.com/docs/add-ins/publish/publish) |
-| **WCF veya OData hizmeti** | Diğer uygulamalar, bir Web sunucusuna dağıttığınız WCF RıA hizmetlerini kullanabilir. | [WCF Veri Hizmetleri geliştirme ve dağıtma](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
-| **LightSwitch** | LightSwitch artık Visual Studio 2017 ' den itibaren desteklenmemektedir, ancak Visual Studio 2015 ve önceki sürümlerden yine de dağıtılabilir. | [LightSwitch uygulamalarını dağıtma](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
+| **Office uygulaması** | Visual Studio'dan Office için bir eklenti yayımlayabilirsiniz. | [Office eklentinizi dağıtma ve yayımlama](https://dev.office.com/docs/add-ins/publish/publish) |
+| **WCF veya OData hizmeti** | Diğer uygulamalar, bir web sunucusuna dağıttığınız WCF RIA hizmetlerini kullanabilir. | [WCF Veri Hizmetleri geliştirme ve dağıtma](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
+| **LightSwitch** | LightSwitch, Visual Studio 2017'den itibaren artık desteklenmez, ancak Visual Studio 2015 ve önceki yıllardan itibaren dağıtılabilir. | [LightSwitch Uygulamalarını Dağıtma](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, farklı uygulamalar için Dağıtım seçeneklerine hızlı bir bakış gerçekleşecektir.
+Bu eğitimde, farklı uygulamalar için dağıtım seçeneklerine hızlıca göz attınız.
 
 > [!div class="nextstepaction"]
-> [Benim için hangi yayımlama seçenekleri uygun?](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)
+> [Hangi yayın seçenekleri benim için doğru?](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)

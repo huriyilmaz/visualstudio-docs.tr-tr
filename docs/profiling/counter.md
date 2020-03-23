@@ -1,5 +1,5 @@
 ---
-title: Sayaç | Microsoft Docs
+title: Sayaç | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: aa4b4cdb-e6ea-433a-9579-56f3785e1385
@@ -10,20 +10,20 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9e2f1684257ed39560fa0ea049d3296a6e45cdd7
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779486"
 ---
 # <a name="counter"></a>Sayaç
-**Sayaç** seçeneği, işlemci (donanım) performans sayaçlarından verileri toplar.
+**Sayaç** seçeneği işlemci (donanım) performans sayaçlarından veri toplar.
 
-- Örnekleme profil oluşturma yöntemini kullanırken, **sayaç** on yonga performans sayacını ve örnekleme aralığı olarak kullanılacak sayaç olaylarının sayısını belirtir. Örnekleme kullanırken yalnızca bir sayaç belirtebilirsiniz.
+- Örnekleme profil oluşturma yöntemini kullanırken, **Counter** çip üzerinde performans sayacını ve örnekleme aralığı olarak kullanılacak sayaç olaylarının sayısını belirtir. Örnekleme kullanırken yalnızca bir sayaç belirtebilirsiniz.
 
-- İzleme profili oluşturma yöntemini kullanırken, önceki ve geçerli koleksiyon olayları arasındaki aralıkta gerçekleşen sayaç olaylarının sayısı profil oluşturucu raporlarında ayrı alanlar olarak listelenir. Birden çok **sayaç** seçeneği, izleme kullanırken belirtilebilir.
+- Enstrümantasyon profil oluşturma yöntemini kullanırken, önceki ve geçerli toplama olayları arasındaki aralıkta oluşan sayaç olaylarının sayısı profil oluşturucu raporlarında ayrı alanlar olarak listelenir. Enstrümantasyon kullanırken birden çok **Sayaç** seçeneği belirtilebilir.
 
-  Her işlemci türünün kendi donanım performans sayacı kümesi vardır. Profil Oluşturucu, neredeyse tüm işlemciler için ortak olan genel performans sayaçları kümesini tanımlar. Bilgisayarınızdaki genel ve işlemciye özgü sayaçları listelemek için VSPerfCmd **QueryCounters** komutunu kullanın.
+  Her işlemci türünün kendi donanım performans sayaçları kümesi vardır. Profil oluşturucu, hemen hemen tüm işlemciler için ortak olan genel performans sayaçları kümesini tanımlar. Bilgisayarınızdaki genel ve işlemciye özgü sayaçları listelemek için VSPerfCmd **QueryCounters** komutunu kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,25 +36,25 @@ VSPerfCmd.exe /Start:Method /Counter:Name[,Reload[,FriendlyName]][/Counter:Name[
 ```
 
 #### <a name="parameters"></a>Parametreler
- sayacın adını `Name`. Bilgisayardaki kullanılabilir sayaçların adlarını listelemek için VSPerfCmd. exe **/QueryCounters** seçeneğini kullanın.
+ `Name`Tezgâhın adı. Bilgisayardaki kullanılabilir sayaçların adlarını listelemek için VSPerfCmd.exe **/QueryCounters** seçeneğini kullanın.
 
- Örnekleme aralığındaki sayaç olaylarının sayısını `Reload`. , İzleme yöntemiyle birlikte kullanmayın.
+ `Reload`Örnekleme aralığındaki sayaç olaylarının sayısı. Enstrümantasyon yöntemiile kullanmayın.
 
- `FriendlyName` (Isteğe bağlı) profil oluşturucu raporlarının ve görünümlerinin sütun başlıklarında `Name` yerine kullanılacak dize.
+ `FriendlyName`(İsteğe bağlı) Profil oluşturucu raporlarının `Name` ve görünümlerinin sütun üstbilgilerinin yerine kullanılacak dize.
 
 ## <a name="required-options"></a>Gerekli seçenekler
- Sayaç seçeneği, yalnızca aşağıdaki seçeneklerden biriyle kullanılabilir:
+ Sayaç seçeneği yalnızca aşağıdaki seçeneklerden biriyle kullanılabilir:
 
- **Başlat:** `Trace`, izleme yöntemini kullanmak için profil oluşturucuyu başlatır.
+ **Başlangıç:** `Trace` Enstrümantasyon yöntemini kullanmak için profiloluşturucuyu başlatır.
 
- **Başlat:** `AppName` belirtilen uygulamayı ve profil oluşturucuyu başlatır. Örnekleme yöntemini kullanmak için profil oluşturucunun başlatılmış olması gerekir.
+ **Başlatma:** `AppName` Belirtilen uygulamayı ve profiloluşturucuyu başlatır. Örnekleme yöntemini kullanmak için profil oluşturucu nun başlatılması gerekir.
 
- **Attach:** `PID` profil oluşturucuyu başlatır ve işlem kimliği tarafından belirtilen işleme iliştirir. Örnekleme yöntemini kullanmak için profil oluşturucunun başlatılmış olması gerekir.
+ **Ekle:** `PID` Profiloluşturciyi başlatır ve işlem kimliğiyle belirtilen işleme bağlar. Örnekleme yöntemini kullanmak için profil oluşturucu nun başlatılması gerekir.
 
 ## <a name="example"></a>Örnek
- Örnekleme yöntemi örneği, genel Profiler sayacı Nonıtteddöngüleri her 1000 tekrarından uygulamanın nasıl örneklendiğini gösterir.
+ Örnekleme yöntemi örneği, genel profil oluşturucu NonHaltedCycles'ın her 1000 olayında bir uygulamanın nasıl örneklenilen olduğunu gösterir.
 
- İzleme yöntemi örneği, L2InstructionFetches sayacı olaylarını toplamak için profil oluşturucuyu nasıl başlatacağınızı gösterir. L2InstructionFetches sayaç adı işlemciye özeldir.
+ Enstrümantasyon yöntemi örneği, l2InstructionFetches sayaç olaylarını toplamak için profilleyicinin nasıl başharfe atınır olduğunu gösterir. L2InstructionFetches sayaç adı işlemciye özgüdür.
 
 ```cmd
 ; Sample Method Example
@@ -67,6 +67,6 @@ VSPerfCmd.exe /Start:Trace /Output:TestApp.exe.vsp /Counter:L2InstructionFetches
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil tek başına uygulamalar](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [Web uygulamaları ASP.NET profil](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Çekirdekler görünümü Yakınlaştırma aracı | Microsoft Docs
+title: Cores View Zoom Aracı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c6862493de844ad8108009a2103752122114ae6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553051"
 ---
-# <a name="cores-view-zoom-tool"></a>Çekirdekler görünümü Yakınlaştırma aracı
-Yakınlaştırma, belirli ilgi alanlarına odaklanabilmeniz için zaman çizelgesinde yakınlaştırma ve uzaklaştırma olanak sağlayan bir kaydırıcı denetimidir. Bu denetim üzerinde geçerli görünüm merkezinin yakınlaştırır, ekranı önce görünümü şekilde ayarlayın.
+# <a name="cores-view-zoom-tool"></a>Cores Görünüm Yakınlaştırma aracı
+Yakınlaştırma denetimi, belirli ilgi çekici alanlara odaklanabilmeniz için zaman çizelgesini yakınlaştırmanızı ve uzaklaştırmanızı sağlayan bir kaydırıcıdır. Bu denetim geçerli görünümün ortasını yakınlaştırır, bu nedenle yakınlaştırmadan önce görünümü ayarlayın.
 
-## <a name="other-ways-to-zoom"></a>Yakınlaştırmak için diğer yolları
+## <a name="other-ways-to-zoom"></a>Yakınlaştırmanın diğer yolları
 
-- Yakınlaştırmayı: Zaman Çizelgesi Görünümü'nde bir alan seçmek için sürükleyin. Fare düğmesini bıraktığınızda, zaman çizelgesi görünümü seçili aralıkta yakınlaştırır.
+- Yakınlaştırma: Zaman çizelgesi görünümünde bir alan seçmek için sürükle. Fare düğmesini serbest bıraktığınızda, zaman çizelgesi görünümü seçili aralığı yakınlaştırır.
 
-- Yakınlaştırma ve uzaklaştırma: Zaman çizelgesi üzerinde gelin ve sonra basın **Ctrl** fare tekerleğini taşırken.
+- Yakınlaştırma ve uzaklaştırma: Zaman çizelgesinin üzerine geçin ve fare tekerleğihareket ederken **Ctrl** tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çekirdekler Görünümü](../profiling/cores-view.md)

@@ -1,6 +1,6 @@
 ---
 title: Linux App Service’e bir Node.js uygulaması yayımlama
-description: Azure 'da Visual Studio 'da oluşturulan Node. js uygulamalarını Linux App Service yayımlayabilirsiniz
+description: Visual Studio'da oluşturulan Node.js uygulamalarını Azure'da Linux Uygulama Hizmeti'ne yayınlayabilirsiniz
 ms.date: 11/22/2019
 ms.topic: tutorial
 ms.devlang: javascript
@@ -12,149 +12,149 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: c304aca5171e1addab9a941105f11fb534eaa5ff
-ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74474021"
 ---
-# <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Bir Node. js uygulamasını Azure 'da yayımlama (Linux App Service)
+# <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Bir Düğüm.js uygulamasını Azure'da yayımla (Linux Uygulama Hizmeti)
 
-Bu öğreticide, basit bir Node. js uygulaması oluşturma ve Azure 'da yayımlama görevi gösterilmektedir.
+Bu öğretici, basit bir Düğüm.js uygulaması oluşturma ve Azure'da yayımlama görevi nde size yol sunar.
 
-Bir Node. js uygulamasını Azure 'a yayımlarken birkaç seçenek vardır. Bunlar arasında Azure App Service, Kubernetes ile yönetim için Azure Container Service (AKS) bir VM çalıştıran bir VM, Docker kullanan bir kapsayıcı örneği ve daha fazlası bulunur. Bu seçeneklerin her biri hakkında daha fazla bilgi için bkz. [COMPUTE](https://azure.microsoft.com/product-categories/compute/).
+Bir Düğüm.js uygulamasını Azure'a yayınlarken birkaç seçenek vardır. Bunlar arasında seçtiğiniz bir işletim sistemi çalıştıran bir VM olan Azure Uygulama Hizmeti, Kubernetes ile yönetim için Azure Konteyner Hizmeti (AKS), Docker kullanan bir Konteyner Örneği ve daha fazlası yer almaktadır. Bu seçeneklerin her biri hakkında daha fazla bilgi için [Bilgi İşlem'e](https://azure.microsoft.com/product-categories/compute/)bakın.
 
-Bu öğretici için, uygulamayı [Linux App Service](/azure/app-service/containers/app-service-linux-intro)'ye dağıtırsınız.
-Linux App Service, Node. js uygulamasını çalıştırmak için bir Linux Docker kapsayıcısı dağıtır (Windows üzerinde IIS 'nin arkasındaki Node. js uygulamalarını çalıştıran Windows App Service aksine).
+Bu öğretici için uygulamayı [Linux Uygulama Hizmeti'ne](/azure/app-service/containers/app-service-linux-intro)dağıtabilirsiniz.
+Linux App Service, Node.js uygulamasını çalıştırmak için bir Linux Docker kapsayıcısı dağıtır (Windows'da IIS'in arkasındaki Node.js uygulamalarını çalıştıran Windows Uygulama Hizmeti'nin aksine).
 
-Bu öğreticide, Visual Studio için Node.js Araçları yüklenen bir şablondan başlayan bir Node. js uygulaması oluşturma, kodu GitHub 'daki bir depoya gönderme ve sonra Azure Web portalı aracılığıyla bir Azure App Service sağlama GitHub deposu. Azure App Service sağlamak ve kodu yerel bir git deposundan göndermek için komut satırını kullanmak için bkz. [Node. js uygulaması oluşturma](/azure/app-service/containers/quickstart-nodejs).
+Bu öğretici, Visual Studio için Node.js Tools ile yüklü bir şablondan başlayarak bir Düğüm.js uygulamasının nasıl oluşturulabileceğini, kodu GitHub'daki bir depoya nasıl itebileceğinizi ve azure web portalı üzerinden azure uygulama hizmeti sağlamanın nasıl GitHub deposu. Azure Uygulama Hizmeti'ni sağlamak ve kodu yerel bir Git deposundan itmek için komut satırını kullanmak için [bkz.](/azure/app-service/containers/quickstart-nodejs)
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
-> * Kod için bir GitHub deposu oluşturun
-> * Azure 'da Linux App Service oluşturma
-> * Linux 'a dağıtma
+> * Kod için Bir GitHub deposu oluşturma
+> * Azure'da Linux Uygulama Hizmeti Oluşturma
+> * Linux'a dağıtın
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio yüklü ve Node. js geliştirme iş yüküne sahip olmanız gerekir.
+* Visual Studio yüklü ve Node.js geliştirme iş yükünü yüklü olmalıdır.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
+    Visual Studio 2019'u henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads/) gidin ve ücretsiz olarak yükleyin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
+    Visual Studio 2017'yi henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads/) gidin ve ücretsiz olarak yükleyin.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    İş yükünü yüklemeniz gerekiyorsa ancak visual studio'ya zaten sahipseniz, **Visual** > Studio Installer'ı açan**Araçlar Ve Özellikler...'** a gidin. **Düğüm.js geliştirme** iş yükünü seçin ve sonra **Değiştir'i**seçin.
 
-    ![Node.js iş yükü VS yükleyicisi](../ide/media/quickstart-nodejs-workload.png)
+    ![VS Yükleyici'de Düğüm.js iş yükü](../ide/media/quickstart-nodejs-workload.png)
 
-* Node.js çalışma zamanı yüklü olması gerekir.
+* Düğüm.js çalışma saatini yüklemelisiniz.
 
-    Yüklü değilse, [Node. js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yükleyebilirsiniz. Genel olarak, Visual Studio yüklü Node.js çalışma zamanı otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayıp **Özellikler**' i seçin).
+    Yüklü değilseniz, [Node.js](https://nodejs.org/en/download/) web sitesinden LTS sürümünü yükleyin. Genel olarak, Visual Studio yüklenen Node.js çalışma süresini otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi özellikler sayfasındaki yüklü çalışma süresine başvurmak üzere yapılandırabilirsiniz (proje oluşturduktan sonra, proje düğümüne sağ tıklayın ve **Özellikler'i**seçin).
 
-## <a name="create-a-nodejs-project-to-run-in-azure"></a>Azure 'da çalıştırmak için bir Node. js projesi oluşturma
+## <a name="create-a-nodejs-project-to-run-in-azure"></a>Azure'da çalışacak bir Düğüm.js projesi oluşturma
 
 1. Visual Studio'yu açın.
 
 1. Yeni bir TypeScript Express uygulaması oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve ardından **Yeni temel Azure Node. js Express 4 uygulaması** (TypeScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama kutusunu açmak için **Ctrl + Q** yazın, **Düğüm.js**yazın, ardından **yeni Temel Azure Düğümleri Express 4 uygulaması (TypeScript) oluştur'u** seçin. Görünen iletişim kutusunda **Oluştur'u**seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde **TypeScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede, **temel Azure Node. js Express 4 uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
+    Üst menü çubuğundan **Yeni** > **New** > **Dosya Yı**seçin. **Yeni Proje** iletişim kutusunun sol bölmesinde, **TypeScript'i**genişletin, ardından **Düğüm.js'yi**seçin. Orta bölmede, **Temel Azure Düğümü.js Express 4 uygulamasını**seçin, ardından **Tamam'ı**seçin.
 
-    ![Yeni bir TypeScript Express uygulaması oluşturun](../javascript/media/azure-ts-express-app.png)
+    ![Yeni bir TypeScript Express uygulaması oluşturma](../javascript/media/azure-ts-express-app.png)
     ::: moniker-end
-    **Temel Azure Node. js Express 4 uygulama** projesi şablonunu görmüyorsanız **Node. js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
+    **Temel Azure Düğümü.js Express 4 uygulama** projesi şablonunu görmüyorsanız, Düğüm **geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı talimatlar için [Önkoşullar'a](#prerequisites)bakın.
 
-    Visual Studio projeyi oluşturur ve Çözüm Gezgini (sağ bölme) içinde açar.
+    Visual Studio projeyi oluşturur ve Solution Explorer'da (sağ bölme) açar.
 
-1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın ve her şeyin beklendiği gibi çalıştığından emin olun.
+1. Uygulamayı oluşturmak ve çalıştırmak ve her şeyin beklendiği gibi çalışmasını sağlamak için **F5** tuşuna basın.
 
-1. Proje için yerel bir git deposu oluşturmak üzere **dosya** > **kaynak denetimine Ekle** ' yi seçin.
+1. Proje için yerel bir Git deposu oluşturmak için**kaynak denetimine** **Dosya** > Ekle'yi seçin.
 
-    Bu noktada, Express çerçevesini kullanan ve TypeScript 'te yazılan bir Node. js uygulaması çalışıyor ve yerel kaynak denetimine iade edildi.
+    Bu noktada, Express çerçevesini kullanan ve TypeScript'te yazılı olan bir Düğüm.js uygulaması çalışıyor ve yerel kaynak denetimine giriş iyor.
 
-1. Sonraki adımlara geçmeden önce projeyi istediğiniz gibi düzenleyin.
+1. Sonraki adımlara geçmeden önce projeyi istediğiniz gibi edin.
 
-## <a name="push-code-from-visual-studio-to-github"></a>Visual Studio 'dan GitHub 'a kod gönderme
+## <a name="push-code-from-visual-studio-to-github"></a>Visual Studio'dan GitHub'a itme kodu
 
-Visual Studio için GitHub 'ı ayarlamak için:
+Visual Studio için GitHub'ı kurmak için:
 
-1. [Visual Studio Için GitHub uzantısının](https://visualstudio.github.com/) , **uzantılar ve güncelleştirmeler** > menü öğesi **araçları** kullanılarak yüklendiğinden ve etkinleştirildiğinden emin olun.
+1. [Visual Studio için GitHub Uzantısı'nın](https://visualstudio.github.com/) menü öğesi **Araçlar** > Uzantıları ve**Güncellemeleri**kullanılarak yüklü ve etkin olduğundan emin olun.
 
-2. Menüden **görünüm** > **diğer pencereler** > **GitHub**' ı seçin.
+2. Menüden**Diğer Windows** > **GitHub'ı** **Görüntüle'yi** > seçin.
 
     GitHub penceresi açılır.
 
-3. GitHub penceresinde **Başlarken** düğmesini görmüyorsanız **Dosya** > **kaynak denetimine Ekle** ' ye tıklayın ve Kullanıcı arabiriminin güncelleştirilmesini bekleyin.
+3. GitHub penceresinde Başlat **düğmesini** görmüyorsanız, **Kaynak** > **Denetimine Dosya Ekle'yi** tıklatın ve Kullanıcı Arasını'nın güncelmesini bekleyin.
 
-    ![GitHub penceresini açın](../javascript/media/azure-github-get-started.png)
+    ![GitHub penceresini açma](../javascript/media/azure-github-get-started.png)
 
-4. **Başlarken**' e tıklayın.
+4. **Başlayın**'a tıklayın.
 
-    Zaten GitHub 'a bağlıysanız, araç kutusu aşağıdaki çizime benzer şekilde görünür.
+    Zaten GitHub'a bağlıysanız, araç kutusu aşağıdaki çizime benzer görünür.
 
-    ![GitHub depo ayarları](../javascript/media/azure-github-publish.png)
+    ![GitHub repo ayarları](../javascript/media/azure-github-publish.png)
 
-5. Yayımlanacak yeni deponun alanlarını tamamlayıp **Yayımla**' ya tıklayın.
+5. Yayımlanacak yeni deponun alanlarını tamamlayın ve sonra **Yayımla'yı**tıklatın.
 
-    Birkaç dakika sonra, "depo başarıyla oluşturuldu" belirten bir başlık görüntülenir.
+    Birkaç dakika sonra, "Repository başarıyla oluşturuldu" belirten bir afiş görüntülenir.
 
-    Sonraki bölümde, bu depodan Linux üzerinde bir Azure App Service nasıl yayımlayacağınızı öğreneceksiniz.
+    Bir sonraki bölümde, bu depodan Linux'taki bir Azure Uygulama Hizmetine nasıl yayınlayacağınızı öğreneceksiniz.
 
-## <a name="create-a-linux-app-service-in-azure"></a>Azure 'da Linux App Service oluşturma
+## <a name="create-a-linux-app-service-in-azure"></a>Azure'da Linux Uygulama Hizmeti Oluşturma
 
-1. [Azure Portal](https://portal.azure.com)oturum açın.
+1. [Azure portalında](https://portal.azure.com)oturum açın.
 
-2. Sol taraftaki hizmetler listesinden **uygulama hizmetleri** ' ni seçin ve ardından **Ekle**' ye tıklayın.
+2. Soldaki hizmetler listesinden **Uygulama Hizmetleri'ni** seçin ve sonra **Ekle'yi**tıklatın.
 
-3. Gerekirse, yeni bir kaynak grubu oluşturun ve yeni uygulamayı barındırmak için plan App Service.
+3. Gerekirse, yeni uygulamayı barındırmak için yeni bir Kaynak Grubu ve Uygulama Hizmeti planı oluşturun.
 
-4. **Işletim sistemini** **Linux**'a ayarladığınızdan emin olun ve **çalışma zamanı yığınını** çizimde gösterildiği gibi gerekli Node. js sürümüne ayarlayın.
+4. **İşletim sistemi'ni** **Linux'a**ayarladıktan ve **Runtime Stack'i** resimde gösterildiği gibi gerekli Node.js sürümüne ayarladıktan emin olun.
 
-    ![Linux App Service oluşturma](../javascript/media/azure-create-appservice-annotated.png)
+    ![Linux Uygulama Hizmeti Oluşturma](../javascript/media/azure-create-appservice-annotated.png)
 
-5. App Service oluşturmak için **Oluştur** ' a tıklayın.
+5. Uygulama Hizmetini oluşturmak için **Oluştur'u** tıklatın.
 
-    Dağıtım birkaç dakika sürebilir.
+    Dağıtmak birkaç dakika sürebilir.
 
-6. Dağıtıldıktan sonra, **uygulama ayarları** bölümüne gidin ve `SCM_SCRIPT_GENERATOR_ARGS` adı ve `--node`değeri olan bir ayar ekleyin.
+6. Dağıtıldıktan **sonra, Uygulama ayarları** bölümüne gidin ve bir ad `SCM_SCRIPT_GENERATOR_ARGS` ve `--node`değeri olan bir ayar ekleyin.
 
     ![Uygulama ayarları](../javascript/media/azure-script-generator-args.png)
 
     > [!WARNING]
-    > App Service dağıtım işlemi, deneyebileceğiniz ve çalıştırılacak uygulama türünü belirleyen bir buluşsal yöntem kümesi kullanır. Bir. dağıtılan içerikte *bir dosya dosyası* algılanırsa, MSBuild tabanlı bir projenin dağıtılmakta olduğunu varsayacaktır. Yukarıda eklenen ayar bu mantığı geçersiz kılar ve açıkça bunun bir Node. js uygulaması olduğunu belirtir. Bu ayar olmadan, Node. js uygulaması,. *sln* dosyası, App Service dağıtılan deponun bir parçasıdır.
+    > Uygulama Hizmeti dağıtım işlemi, hangi uygulama türünü deneyeceğini ve çalıştıracağını belirlemek için bir dizi buluşsal uygulama kullanır. Eğer bir . *sln* dosyası dağıtılan içerikte algılanır, msbuild tabanlı bir projenin dağıtıldığını varsayar. Yukarıda eklenen ayar bu mantığı geçersiz kılar ve bunun bir Düğüm.js uygulaması olduğunu açıkça belirtir. Bu ayar olmadan, Düğüm.js uygulaması . *sln* dosyası, App Service'e dağıtılan deponun bir parçasıdır.
 
-7. **Uygulama ayarları**' nın altında, adı `WEBSITE_NODE_DEFAULT_VERSION` ve `8.9.0`değeri olan başka bir ayar ekleyin.
+7. **Uygulama ayarları**altında, bir ad `WEBSITE_NODE_DEFAULT_VERSION` ve değeri `8.9.0`ile başka bir ayar ekleyin.
 
-8. Dağıtıldıktan sonra, App Service açın ve **dağıtım seçenekleri**' ni seçin.
+8. Dağıtıldıktan sonra Uygulama Hizmeti'ni açın ve **Dağıtım seçeneklerini**seçin.
 
     ![Dağıtım seçenekleri](../javascript/media/azure-deployment-options.png)
 
-9. **Kaynak Seç**' e tıklayın ve ardından **GitHub**' ı seçin ve ardından gerekli izinleri yapılandırın.
+9. **Kaynak Seç'i**tıklatın ve ardından **GitHub'ı**seçin ve ardından gerekli izinleri yapılandırın.
 
     ![GitHub izinleri](../javascript/media/azure-choose-source.png)
 
-10. Yayımlanacak depoyu ve dalı seçin ve ardından **Tamam**' ı seçin.
+10. Yayımlanmak üzere depo yu ve dalını seçin ve ardından **Tamam'ı**seçin.
 
     ![Linux App Service’e yayımlama](../javascript/media/azure-repo-and-branch.png)
 
-    **Dağıtım seçenekleri** sayfası eşitleme sırasında görüntülenir.
+    **Eşitleme** sırasında dağıtım seçenekleri sayfası görüntülenir.
 
     ![GitHub ile dağıtma ve eşitleme](../javascript/media/azure-deployment-options-sync.png)
 
-    Eşitleme tamamlandıktan sonra bir onay işareti görünür.
+    Eşitleme tamamlandıktan sonra bir onay işareti görüntülenir.
 
-    Site artık GitHub deposundan Node. js uygulamasını çalıştırıyor ve Azure App Service için oluşturulan URL 'den (varsayılan olarak, ". azurewebsites.net" tarafından izlenen Azure App Service verilen ad) erişilebilir.
+    Site artık GitHub deposundan Node.js uygulamasını çalıştırıyor ve Azure Uygulama Hizmeti için oluşturulan URL'den erişilebilir (varsayılan olarak Azure Uygulama Hizmeti'ne verilen ad ve ardından ".azurewebsites.net").
 
-## <a name="modify-your-app-and-push-changes"></a>Uygulamanızı değiştirin ve değişiklikleri gönderin
+## <a name="modify-your-app-and-push-changes"></a>Uygulamanızı değiştirin ve değişiklikleri itin
 
-1. Burada gösterilen kodu, satır `app.use('/users', users);`sonra *app. TS* ' de ekleyin. Bu, */API*URL 'sinde bir REST API ekler.
+1. Satırdan `app.use('/users', users);`sonra *app.ts'de* gösterilen kodu buraya ekleyin. Bu URL */ api*bir REST API ekler.
 
     ```typescript
     app.use('/api', (req, res, next) => {
@@ -162,27 +162,27 @@ Visual Studio için GitHub 'ı ayarlamak için:
     });
     ```
 
-2. Kodu derleyin ve yerel olarak test edin, sonra iade edin ve GitHub 'a gönderin.
+2. Kodu oluşturun ve yerel olarak test edin, sonra iade edin ve GitHub'a itin.
 
-    Azure portal, GitHub deposunda yapılan değişiklikleri algılamak birkaç dakika sürer ve ardından dağıtımın yeni bir eşitlemesi başlar. Bu, aşağıdaki resme benzer şekilde görünür.
+    Azure portalında, GitHub reposundaki değişiklikleri algılamak birkaç dakika sürer ve ardından dağıtımın yeni bir eşitlemi başlar. Bu aşağıdaki çizime benzer.
 
-    ![Değiştir ve Eşitle](../javascript/media/azure-changes-detected.png)
+    ![Değiştirme ve eşitleme](../javascript/media/azure-changes-detected.png)
 
-3. Dağıtım tamamlandıktan sonra ortak siteye gidin ve URL 'ye */API* ekleyin. JSON yanıtı döndürülür.
+3. Dağıtım tamamlandıktan sonra genel siteye gidin ve URL'ye */api* ekleyin. JSON yanıtı geri döner.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-* Node. exe işlemi (yani, işlenmeyen bir özel durum oluşursa), kapsayıcı yeniden başlatılır.
-* Kapsayıcı başladığında, Node. js işlemini nasıl başlatacağınızı anlamak için çeşitli buluşsal yöntemler aracılığıyla çalışır. Uygulamanın ayrıntıları [Generatestartupcommand. js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js)' de görülebilir.
-* Araştırmalar için SSH aracılığıyla çalışan kapsayıcıya bağlanabilirsiniz. Bu, Azure portal kullanılarak kolayca yapılır. App Service seçin ve **geliştirme araçları** bölümü altında **SSH** 'ye ulaşıncaya kadar araç listesini aşağı kaydırın.
-* Sorun gidermeye yardımcı olmak için, App Service için **tanılama günlükleri** ayarlarına gidin ve **Docker kapsayıcı günlüğü** ayarını **dosya sistemine**çevirin. Günlükler */Home/LogFiles/* _docker. log * altındaki kapsayıcıda oluşturulur ve SSH veya FTP kullanılarak kutudan erişilebilir.
-* Varsayılan olarak atanmış *. azurewebsites.net URL 'SI yerine siteye özel bir etki alanı adı atanabilir. Daha ayrıntılı bilgi için bkz. [özel etki alanı eşleme](/azure/app-service/app-service-web-tutorial-custom-domain)konusu.
-* Üretime geçmeden önce daha fazla test için bir hazırlama sitesine dağıtım en iyi uygulamadır. Bunun nasıl yapılandırılacağı hakkında ayrıntılı bilgi için, [hazırlama ortamları oluşturma](/azure/app-service/web-sites-staged-publishing)konusuna bakın.
-* Daha sık sorulan sorular için [Linux 'ta App Service](/azure/app-service/containers/app-service-linux-faq) bakın.
+* Düğüm.exe işlemi ölürse (diğer bir şekilde işlenmemiş bir özel durum oluşursa), kapsayıcı yeniden başlatılır.
+* Konteyner başlatıldığında, Node.js işlemini nasıl başlatacağını bulmak için çeşitli buluşsal çalışmalardan geçer. Uygulamanın ayrıntıları [generateStartupCommand.js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js)adresinde görülebilir.
+* İncelemeler için SSH üzerinden çalışan konteynere bağlanabilirsiniz. Bu, Azure portalı kullanılarak kolayca yapılır. Uygulama Hizmeti'ni seçin ve **Geliştirme Araçları** bölümündesi altında **SSH'ye** ulaşana kadar araç listesini aşağı kaydırın.
+* Sorun gidermeye yardımcı olmak için, Uygulama Hizmeti için **Tanılama günlükleri** ayarlarına gidin ve **Docker Konteyner günlüğe kaydetme** ayarını **Kapalı'dan** **Dosya Sistemi'ne**değiştirin. Günlükler */home/LogFiles/*_docker.log* altındaki kapta oluşturulur ve Kutudan SSH veya FTP(S) kullanılarak erişilebilir.
+* Varsayılan olarak atanan *.azurewebsites.net URL yerine siteye özel bir etki alanı adı atanabilir. Daha fazla bilgi için, konu [Haritası Özel Etki Alanı](/azure/app-service/app-service-web-tutorial-custom-domain)bakın.
+* Üretime geçmeden önce daha fazla test için bir evreleme alanına dağıtmak en iyi yöntemdir. Bunu nasıl yapılandırılabiliyorum, [evreleme ortamlarını oluştur](/azure/app-service/web-sites-staged-publishing)konusuna bakın.
+* Daha sık sorulan sorular için [Linux SSS'deki Uygulama Hizmeti'ne](/azure/app-service/containers/app-service-linux-faq) bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir Linux App Service oluşturmayı ve bir Node. js uygulamasını hizmete dağıtmayı öğrendiniz. Linux App Service hakkında daha fazla bilgi edinmek isteyebilirsiniz.
+Bu eğitimde, bir Linux Uygulama Hizmeti oluşturmayı ve bir Düğüm.js uygulamasını hizmete nasıl dağıttığını öğrendiniz. Linux Uygulama Hizmeti hakkında daha fazla bilgi edinmek isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Linux App Service](/azure/app-service/containers/app-service-linux-intro)
+> [Linux Uygulama Hizmeti](/azure/app-service/containers/app-service-linux-intro)

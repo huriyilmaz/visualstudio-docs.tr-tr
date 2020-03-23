@@ -1,5 +1,5 @@
 ---
-title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac) | Microsoft Docs
+title: Log'u Değiştir (Unity için Visual Studio Tools, Mac) | Microsoft Dokümanlar
 ms.custom: ''
 ms.date: 12/02/2019
 ms.technology: vs-unity-tools
@@ -11,631 +11,631 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: fe317d446ddc9196df02dfafcf0397f8815574c3
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74771549"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)
 
-Unity için Visual Studio Araçları değişiklik günlüğü.
+Unity için Visual Studio Tools değişiklik günlüğü.
 
 ## <a name="2420"></a>2.4.2.0
 
-Yayın 3 Aralık 2019
+Yayınlanma Aralık 3, 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Kullanıcı tanımlı arabirimler ile sabit Tanılamalar.
+  - Kullanıcı tanımlı arabirimlerle sabit tanılama.
 
-  - Hatalı biçimlendirilmiş ifadelerle hızlı araç ipuçları düzeltildi.
+  - Hatalı biçimlendirilmiş ifadeleriçeren hızlı araç uçları düzeltildi.
   
 ## <a name="2410"></a>2.4.1.0
 
-Yayın tarihi, 6 Kasım 2019
+Yayınlanma Kasım 6, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity arka plan işlemlerine yönelik destek eklendi. (Hata ayıklayıcı alt işlem yerine ana işleme otomatik olarak bağlanabilir).
+  - Unity arka plan işlemleri için destek eklendi. (Hata ayıklama, alt işlem yerine ana işleme otomatik olarak bağlanabilir).
 
-  - Unity iletileri için ilgili belgeleri görüntüleyen bir hızlı araç ipucu eklendi.
+  - İlişkili belgeleri görüntüleyen Birlik iletileri için hızlı bir araç ipucu eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Gelişmiş ikili ve çağırma ifadeleriyle etiket karşılaştırma Çözümleyicisi `UNT0002` düzeltildi.
+  - Gelişmiş ikili ve `UNT0002` çağırma ifadeleri ile etiket karşılaştırma çözümleyicisi düzeltildi.
 
-### <a name="deprecated-features"></a>Kullanım dışı Özellikler
+### <a name="deprecated-features"></a>Amortismana Küçümsülen Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity için Visual Studio Araçları, yalnızca Visual Studio 2017 + desteğine sahip olur.
+  - İleriye dönük olarak, Visual Studio Tools for Unity sadece Visual Studio 2017+'yı destekleyecektir.
 
 ## <a name="2400"></a>2.4.0.0
 
-Yayımlanma tarihi, 15 Ekim 2019
+Yayınlanma Tarihi: 15 Ekim 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Tüm Unity iletileri için `IDE0060` (kullanılmamış parametre) için supprescursor eklendi.
+  - Tüm Unity iletileri için (kullanılmayan parametre) için `IDE0060` bir bastırıcı eklendi.
 
-  - `TooltipAttribute`etiketli alanlar için hızlı araç ipucu eklendi. (Bu, bu alanı kullanarak basit bir get erişimcisi için de çalışır).
+  - `TooltipAttribute`' ile etiketlenen alanlar için hızlı bir araç ipucu eklendi (Bu da bu alanı kullanarak basit bir erişimci almak için çalışacaktır).
 
 ## <a name="2330"></a>2.3.3.0
 
-Yayın tarihi, 23 Eylül 2019
+Yayınlanma Eylül 23, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - IDE 'nin kullanılmayan parametreleri kaldırmak üzere hızlı bir çözüm göstermesini engellemek için, IDE0060 için yeni bir supprescursor eklendi.
-    - `IDE0060`için `USP0005`: Unity iletileri Unity çalışma zamanı tarafından çağrılır.
+  - Kullanılmayan parametreleri kaldırmak için IDE'nin hızlı düzeltme göstermesini önlemek için IDE0060 için yeni bir bastırıcı eklendi.
+    - `USP0005`for `IDE0060`: Birlik iletileri Birlik çalışma zamanı tarafından çağrılır.
 
 ## <a name="2320"></a>2.3.2.0
 
-Yayın tarihi, 16 Eylül 2019
+Yayınlanma Eylül 16, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity 'ye özgü yeni Tanılamalar ekleyerek, Visual Studio 'nun Unity projelerine yönelik olduğunu anlama konusunu sunuyoruz. Unity projeleri için geçerli olmayan genel C# tanılamalarını gizleyerek IDE’yi daha akıllı hale getirdik. Örneğin, IDE, bir Inspector değişkenini `readonly` olarak değiştirmek için bir hızlı onarım göstermez ve bu, değişkenleri Unity düzenleyicisinde değiştirmenize engel olur.
-    - `UNT0001`: Unity iletileri, boş olsalar bile çalışma zamanı tarafından çağrılır, Unity çalışma zamanına göre uncesseray işlemesini önlemek için bunları bildirmeyin.
-    - `UNT0002`: dize eşitlik kullanılarak etiket karşılaştırması yerleşik CompareTag yönteminden daha yavaştır.
-    - `UNT0003`: tür güvenliği için GetComponent 'un genel biçiminin kullanımı tercih edilir.
-    - `UNT0004`: güncelleştirme iletisi çerçeve hızına bağımlıdır ve Time. deltaTime yerine Time. fixedDeltaTime kullanın.
-    - `UNT0005`: FixedUpdate iletisi çerçeve hızına bağımsızdır ve Time. fixedDeltaTime yerine Time. deltaTime kullanmalıdır.
-    - `UNT0006`: Bu Unity iletisi için yanlış bir yöntem imzası algılandı.
-    - `UNT0007`: Unity, null birleştirme ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecini geçersiz kılar.
-    - `UNT0008`: Unity, null yayılmayla uyumsuz olan Unity nesneleri için null karşılaştırma işlecini geçersiz kılar.
-    - `UNT0009`: bir sınıfa ınitializeonload özniteliği uygulanırken statik bir Oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
-    - `UNT0010`: MonoBehaviours yalnızca AddComponent () kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
-    - `UNT0011`: ScriptableObject yalnızca CreateInstance () kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
-    - `IDE0029`için `USP0001`: Unity nesneleri null birleştirme kullanmamalıdır.
-    - `IDE0031`için `USP0002`: Unity nesneleri null yayma kullanmamalıdır.
-    - `IDE0051`için `USP0003`: Unity iletileri Unity çalışma zamanı tarafından çağrılır.
-    - `IDE0044`için `USP0004`: SerializeField özniteliğine sahip alanlar ReadOnly yapılmamalıdır.
+  - Visual Studio'nun Birlik projelerine özel yeni tanılamalar ekleyerek Birlik projeleri için sahip olduğu anlayışı derinleştirdik. Unity projeleri için geçerli olmayan genel C# tanılamalarını gizleyerek IDE’yi daha akıllı hale getirdik. Örneğin, IDE, Unity Editor'daki değişkeni değiştirmenizi engelleyecek `readonly` bir denetçi değişkenini değiştirmek için hızlı düzeltme göstermez.
+    - `UNT0001`: Birlik iletileri boş olsalar bile çalışma zamanına göre çağrılır, Unity çalışma süresine göre kesintisiz işlemeden kaçınmak için bunları bildirmeyin.
+    - `UNT0002`: Dize eşitliği ni kullanarak etiket karşılaştırması yerleşik CompareTag yönteminden daha yavaştır.
+    - `UNT0003`: GetComponent'in genel formunun kullanımı tip güvenliği için tercih edilir.
+    - `UNT0004`: İletiyi güncelleştirme klitime bağlıdır ve Time.fixedDeltaTime yerine Time.deltaTime'ı kullanmalıdır.
+    - `UNT0005`: FixedUpdate iletisi çerçeve hızından bağımsızdır ve Time.deltaTime yerine Time.fixedDeltaTime kullanmalıdır.
+    - `UNT0006`: Bu Birlik iletisi için yanlış yöntem imzası algılandı.
+    - `UNT0007`: Unity, null coalescing ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecigeçersiz.
+    - `UNT0008`: Unity, null yayma ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecigeçersiz kılar.
+    - `UNT0009`: InitializeOnLoad özniteliğini bir sınıfa uygularken statik bir oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
+    - `UNT0010`: MonoBehaviours yalnızca AddComponent() kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
+    - `UNT0011`: ScriptableObject yalnızca CreateInstance() kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
+    - `USP0001`için `IDE0029`: Birlik nesneleri null coalescing kullanmamalıdır.
+    - `USP0002`for `IDE0031`: Unity nesneleri null yayılımı kullanmamalıdır.
+    - `USP0003`for `IDE0051`: Birlik iletileri Birlik çalışma zamanı tarafından çağrılır.
+    - `USP0004`for `IDE0044`: SerializeField özniteliği olan alanlar yalnızca okunmamalıdır.
 
 ## <a name="2310"></a>2.3.1.0
 
-Yayımlanma tarihi 4 Eylül 2019
+Yayınlanma Eylül 4, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Daha iyi tür görüntüleme desteği eklendi, örn. `List'1[[System.Object, <corlib...>]]`yerine `List<object>`.
+  - Daha iyi tür ekranı için destek `List<object>` eklendi, yani `List'1[[System.Object, <corlib...>]]`.
 
-  - İşaretçi üye erişimi için destek eklendi, yani `p->data->member`.
+  - İşaretçi üye erişimi için destek `p->data->member`eklendi, yani.
 
-  - Dizi başlatıcılarda örtük dönüştürmeler için destek eklendi, yani `new byte [] {1,2,3,4}`.
+  - Dizi başharflerinde örtük dönüşümler için destek `new byte [] {1,2,3,4}`eklendi, yani .
 
-  - Bayt dizileri ve dizeleri incelenirken Onaltılı düzenleyici desteği eklendi.
+  - Bayt dizilerini ve dizeleri incelerken hex düzenleyicisi için destek eklendi.
 
 ## <a name="2300"></a>2.3.0.0
 
-Yayın tarihi 13 Ağustos 2019
+Yayınlanma 13 Ağustos 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Özel durumlarla düzeltilen Adımlama sorunları.
+  - Özel durumlar dışında basamak sorunları düzeltildi.
 
-  - Sözde tanımlayıcıların ($exception gibi) sabit değerlendirmesi.
+  - Sözde tanımlayıcıların ($exception gibi) sabit değerlendirilmesi.
 
-  - Geçersiz adreslerin başvurusu kaldırılırken kilitlenmeyi önleyin.  
+  - Geçersiz adresleri derefered ederken kilitlenmeyi önleyin.  
 
-  - Kaldırılmış AppDomain 'ler ile ilgili sorun düzeltildi.
+  - Boşaltılan etki alanlarıyla ilgili sorun giderildi.
 
 ## <a name="2200"></a>2.2.0.0
 
-Yayın tarihi, 25 Temmuz 2019
+Yayınlanma 25 Temmuz 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - IntPtr türleriyle düzeltilen İnceleme.
+  - IntPtr tipleri ile sabit denetim.
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Catch noktaları ve işlev kesme noktalarının sabit işlenmesi.
+  - Catchpoints ve işlev kesme noktalarının sabit kullanımı.
 
 ## <a name="2130"></a>2.1.3.0
 
-Yayın tarihi, 9 Temmuz 2019
+Yayınlanma Tarihi: 9 Temmuz 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Özel durumların yakalamak için destek eklendi.
+  - Özel durumların alt sınıflarını yakalamak için destek eklendi.
 
-  - MDS Protokolü 2,51 için destek eklendi.
+  - MDS protokolü 2.51 için destek eklendi.
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
   - Asmdef dosyaları için destek eklendi.
 
-  - Şablondan bir dosya eklendiğinde yeniden adlandırma moduna geçin (Unity Düzenleyicisi davranışını taklit etmek için).
+  - Bir dosya şablondan eklendiğinde (Unity Editor davranışını taklit etmek için) yeniden adlandırma moduna geçin.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity oynatıcılarla iletişim kurulurken hatalı biçimlendirilmiş iletilerin işlenmesi düzeltildi.
+  - Unity Players ile iletişim kurarken hatalı biçimlendirilmiş iletilerin sabit kullanımı.
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - İfadelerde ad alanlarını sabit olarak işleme.
+  - İfadelerde ad alanlarının işlenmesi düzeltildi.
 
 ## <a name="2120"></a>2.1.2.0
 
-Yayın 2 Temmuz 2019
+Yayınlanma Tarihi: 2 Temmuz 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Ayrıştırılamayan ifadelerle düzeltilen hata raporlaması.
+  - Ayrıştırılamaz ifadelerle hata raporlaması düzeltildi.
 
 ## <a name="2110"></a>2.1.1.0
 
-Yayın tarihi, 27 Haziran 2019
+Yayınlanma Haziran 27, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Monodavranış API 'SI 2019,1 olarak güncelleştirildi.
+  - 2019.1 için Güncelleştirilmiş MonoBehaviour API.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Sabit Unity Proje Gezgini performansı.
+  - Unity Project Explorer performansı düzeltildi.
 
-  - Hafif derleme etkinleştirildiğinde, çıktının düzeltilme uyarıları ve hataları düzeltildi.
+  - Hafif yapı etkinleştirildiğinde çıktıya raporlama uyarıları ve hataları düzeltildi.
 
-  - Sabit basit derleme performansı.
+  - Hafif yapı performansı düzeltildi.
 
 ## <a name="2100"></a>2.1.0.0
 
-Yayın tarihi 20 Haziran 2019
+Yayınlanma Haziran 20, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - IntelliSense hatalarının ve uyarılarının kullanımı açısından Unity projelerinin tam derlemesini devre dışı bıraktı. Aslında Unity, dahili olarak hangi Unity 'nin yaptığını temsil eden sınıf kitaplığı projeleri içeren bir Visual Studio çözümü oluşturur. Bu şekilde, Visual Studio 'daki derlemenin sonucu, derleme işlem hattı kapalıyken Unity tarafından hiçbir şekilde kullanılmaz veya alınmaz. Visual Studio 'da oluşturma işlemi yalnızca hiçbir şey için kaynakları tüketiyor. Kendisine bağlı araçlara veya kuruluma sahip olduğunuz için tam bir yapıya ihtiyacınız varsa, bu iyileştirmeyi devre dışı bırakabilirsiniz (Unity için ayarlar/araçlar/projelerin tam derlemesini devre dışı bırak).
+  - IntelliSense hatalarını ve uyarılarını kullanmak lehine, Unity projeleri için tam yapıyı devre dışı bıraktı. Nitekim Birlik, Birlik'in dahili olarak ne yaptığını temsil eden sınıf kitaplığı projeleri ile Visual Studio çözümü oluşturur. Bununla birlikte, Visual Studio'daki yapının sonucu, derleme boru hattı kapalı olduğu için Unity tarafından asla kullanılmaz veya alınmaz. Visual Studio'da bina oluşturmak boşuna kaynak tüketmektir. Araçlarınız veya buna bağlı bir kurulumunuz olduğu için tam bir yapıya ihtiyacınız varsa, bu optimizasyonu devre dışı kullanabilirsiniz (Ayarlar/Unity araçları/projelerin tam oluşturmasını devre dışı kullanabilirsiniz).
   
-  - UPE içinde Unity paketleri için destek eklendi. Yalnızca başvurulan paketler (`Packages` klasöründe manifest. JSON kullanılarak) ve yerel paketler (`Packages` klasörüne katıştırılmış) görünür.
+  - UPE'de Birlik paketleri için destek eklendi. Yalnızca Başvurulan paketler `Packages` (klasörde manifest.json kullanılarak) ve `Packages` Yerel paketler (klasöre katıştırılmış) görünür.
 
 ## <a name="2021"></a>2.0.2.1
 
-Yayımlanma tarihi 30 Mayıs 2019
+Yayınlanma Mayıs 30, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
   - Unity yürütme hedefleri için özel simge eklendi.
 
 ## <a name="2020"></a>2.0.2.0
 
-Yayın 2 Nisan 2019
+Yayınlanma Nisan 2, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Kayıt sırasında Unity 'nin varlık veritabanının otomatik olarak yenilenmesi için destek eklendi. Bu, varsayılan olarak etkindir ve Visual Studio 'da bir betiği kaydederken Unity tarafında yeniden derleme tetikleyecektir. Kayıt sırasında Unity 'nin Assetveritabanını yenilemek için Tools\Options\Tools içinde bu özelliği devre dışı bırakabilirsiniz.
+  - Unity'nin varlık veritabanını otomatik olarak yenilemek için destek eklendi. Bu varsayılan olarak etkinleştirilir ve Visual Studio'da bir komut dosyası kaydederken Unity tarafında bir yeniden derlemetetikletir. Bu özelliği Araçlar\Seçenekler\Birlik Için Araçlar\Unity\Refresh Unity'nin Varlık Veritabanında kaydedebilirsiniz.
 
-  - Çevrimdışı belgeler için tercih edilen Unity yüklemesinin ayarlanmasına yönelik destek eklendi.
+  - Çevrimdışı belgeler için tercih edilen birlik yüklemesi ayarlamak için destek eklendi.
 
-  - Yeni düzenleyici için bağlam menüsü eklendi.
+  - Yeni Düzenleyici için bağlam menüsü eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Boş çerçevelerle sabit derleme filtrelemesi ve çerçeve incelemesi.
+  - Boş çerçevelerle montaj filtresi ve çerçeve denetimi düzeltildi.
 
 ## <a name="2011"></a>2.0.1.1
  
- Yayın tarihi 26 Mart 2019
+ Yayınlanma Mart 26, 2019
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Yalnızca bu çok özel yayın için mono varsayılan ve yalnızca kullanılabilir hata ayıklayıcı 'yı geçici olarak yapın.
+  - Bu çok özel sürüm için Mono'yu geçici olarak varsayılan ve yalnızca kullanılabilir hata ayıklama haline getirin.
 
 ## <a name="2006"></a>2.0.0.6
 
-Yayın tarihi 26 Mart 2019
+Yayınlanma Mart 26, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - "Unity 'ye Ekle ve Yürüt" desteği eklendi.
+  - "Birlik ve Oyun ataşmak" için destek eklendi.
 
 ## <a name="2005"></a>2.0.0.5
 
-Yayımlanma tarihi, 20 Mart 2019
+Yayınlanma Mart 20, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
   - Çözüm dosyasını işlerken dış özellikleri koruyun.
   
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Diğer ad nitelenmiş adlar için destek eklendi (şimdilik yalnızca genel ad alanı). Bu nedenle, ifade değerlendirici artık genel:: Namespace. Type biçimini kullanarak türleri kabul ediyor.
+  - Takma ad nitelikli adlar için destek eklendi (şimdilik yalnızca genel ad alanı). Yani ifade değerlendiricisi şimdi genel form kullanarak türleri kabul ediyor::namespace.type.
 
-  - `pointer[index]` form için, işaretçi başvuru `*(pointer+index)` form ile özdeş olan destek eklendi.
+  - İşaretçi `pointer[index]` dereference `*(pointer+index)` formuyla anlamsal olarak aynı olan form için destek eklendi.
 
 ## <a name="2004"></a>2.0.0.4
 
-Yayımlanma tarihi, 5 Mart 2019
+Yayınlanma Mart 5, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - `ScriptableObject` API 'SI güncelleştirildi.
+  - API'yi `ScriptableObject` güncelleştirildi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
   - Ad alanları şablonlardan kaldırıldı.
 
 ## <a name="2003"></a>2.0.0.3
  
- Yayımlanma tarihi, 5 Mart 2019
+ Yayınlanma Mart 5, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - Ortak ve serileştirilmiş alanlar artık uyarılara neden olmaz. Bu iletileri oluşturan Unity projelerinde `CS0649` ve `IDE0051` derleyici uyarılarını otomatik olarak gizliyoruz.
+  - Genel ve serihale alan artık uyarılara neden olmaz. Bu iletileri oluşturan Unity `CS0649` `IDE0051` projelerindeki ve derleyici uyarılarını otomatik olarak bastırdık.
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Bir Unity işlemi çalışıyorsa, belirli bir örneğe İliştirilmek için uyar.
+  - Bir Birlik işlemi çalışıyorsa, belirli bir örne eklemek için komut istemi.
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
   - Yerel işlevler için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Eski protokol sürümleri kullanılırken adlandırılmış bağımsız değişkenlerde özel öznitelik okuma düzeltildi.
+  - Eski protokol sürümlerini kullanırken adlandırılmış bağımsız değişkenlerde okuma özel özniteliği düzeltildi.
 
 ## <a name="2002"></a>2.0.0.2
 
-Yayımlanma tarihi 4 Şubat 2019
+Yayınlanma Şubat 4, 2019
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Monodavranış API 'SI güncelleştirildi.
+  - MonoBehaviour API'si güncelleştirildi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Hata ayıklayıcıda temel değerler ayarı düzeltildi.
+  - Hata ayıklamada ilkel değerler ayarlı sabit.
 
 ## <a name="2001"></a>2.0.0.1
 
-Yayın tarihi 4 Aralık 2018
+Yayınlanma Tarihi: 4 Aralık 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Sabit yükleme paketi kendi kendine kapsama.
+  - Sabit kurulum paketi kendi kendini kapsama.
 
 ## <a name="2000"></a>2.0.0.0
- Yayın tarihi 4 Aralık 2018
+ Yayınlanma Tarihi: 4 Aralık 2018
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Mac üzerindeki Unity hata ayıklayıcı, Windows 'daki aynı Core Unity hata ayıklayıcısıyla değiştirildi.
+  - Mac'teki Unity hata ayıklamasını Windows'tan aynı çekirdekli Unity hata ayıklamayla değiştirdi.
 
-  - İfade değerlendirmesi için NRefactory 'ın Roslyn tarafından değiştirildiği yer.
+  - İfade değerlendirmesi için Roslyn lehine NRefactory değiştirildi.
 
-  - İşaretçiler için destek eklendi: başvuru, atama ve işaretçi aritmetiği (Bu, hem Unity 2018.2 + hem de yeni çalışma zamanı için gereklidir).
+  - İşaretçiler için ek destek: dereference, döküm ve işaretçi aritmetik (hem Unity 2018.2+ hem de yeni çalışma süresi gereklidir).
 
-  - Dizi işaretçisi görünümü (içinde C++olduğu gibi) için destek eklendi. Bir işaretçi ifadesi alın, sonra da bir virgül ve görmek istediğiniz öğe sayısını ekleyin.
+  - Dizi işaretçisi görünümü için destek eklendi (C++'daki gibi). İşaretçi ifadesini alın ve virgül ve görmek istediğiniz öğe sayısını tamamlayın.
 
-  - Zaman uyumsuz yapılar için destek eklendi.
+  - Async yapıları için destek eklendi.
 
   - Sözde değişkenler (özel durum ve nesne tanımlayıcıları) için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Hatalı biçimlendirilmiş veya desteklenmeyen ifadelerle ifade değerlendirmesi düzeltildi.
+  - Yanlış biçimlendirilmiş veya desteklenmeyen ifadeler ile sabit ifade değerlendirmesi.
 
 ## <a name="1700"></a>1.7.0.0
 
-Yayın tarihi, 13 Kasım 2018
+Yayınlanma Kasım 13, 2018
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Ekleme iletişim kutusuna daha fazla istemci bilgisi (IP, makine adı) eklendi.
+  - Ekle iletişim kutusuna daha fazla istemci bilgisi (IP, makine adı) eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Unity 'nin hata ayıklayıcı altyapısı ile iletişim kurmak için kullanılan kitaplıkta bir kilitlenme düzeltildi, özellikle ' Unity 'ye Ekle ' veya oyunu yeniden başlatma sırasında, Visual Studio veya Unity dondurma
+  - Unity'nin hata ayıklayıcı motoruyla iletişim kurmak için kullanılan kütüphanedeki bir kilitlenme giderildi ve özellikle 'Birliğe Ekle' tuşuna basarken veya oyunu yeniden başlatırken Visual Studio veya Unity dondurdu.
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Başka bir varsayılan düzenleyici seçildiğinde, sabit Unity eklentisi etkinleştirmesi.
+  - Başka bir varsayılan düzenleyici seçildiğinde Unity eklentisi etkinleştirme düzeltildi.
 
-  - Sabit Unity dosya şablonu oluşturma.
+  - Unity dosya şablonu oluşturma düzeltildi.
 
 ## <a name="1602"></a>1.6.0.2
 
-Yayın tarihi, 24 Temmuz 2018
+Yayınlanma Tarihi: 24 Temmuz 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity tarafından düzeltilen bir Unity performans hatası için geçici çözümü geri alındı.
+  - Unity tarafından düzeltilmiş bir Unity performans hatası için geçici çözüm geri alındı.
 
 ## <a name="1601"></a>1.6.0.1
 
-Yayın tarihi 10 Temmuz 2018
+Yayınlanma 10 Temmuz 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Sabit gölgelendirici kodu coloration desteği.
+  - Shader kodu renklendirme desteği düzeltildi.
 
 ## <a name="1600"></a>1.6.0.0
 
-Yayın tarihi 26 Haziran 2018
+Yayınlanma Haziran 26, 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **'Nı**
+- **Sihirbaz:**
 
-  - OnApplicationFocus iletisi ile sabit yazım hatası.
+  - OnApplicationFocus iletisi ile yazım hatası düzeltildi.
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - Unity performans hatası için geçici geçici çözüm: proje oluştururken Cache Monoadaları.
+  - Bir Unity performans hatası için geçici geçici çözüm: proje oluştururken Önbellek MonoIslands.
 
-  - Yeni Unity çalışma zamanı kullanılırken taşınabilir pdb 'yi artık mdb 'ye dönüştürmeyin.
+  - Yeni Unity çalışma süresini kullanırken taşınabilir pdb'yi artık mdb'ye dönüştürün.
 
 ## <a name="1502"></a>1.5.0.2
 
-Yayın tarihi 18 Nisan 2018
+Yayınlanma Nisan 18, 2018
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Temel gölgelendirici kodu tamamlama desteği eklendi.
+  - Temel Shader kod tamamlama desteği eklendi.
 
-  - Gölgelendirici dosyalarında yorumların geçiş için destek eklendi.
+  - Shader dosyalarında yorumları niçin değiştirin.
 
 ## <a name="1501"></a>1.5.0.1
 
-Yayın tarihi, 28 Mart 2018
+Yayınlanma Mart 28, 2018
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity proje Gezgininde ek şablonlar için destek eklendi.
+  - Unity Project Explorer'da ek şablonlar için destek eklendi.
 
 ## <a name="1500"></a>1.5.0.0
 
-Yayımlanma tarihi 21 Mart 2018
+Yayınlanma Tarihi: 21 Mart 2018
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - USB üzerinden bağlı Android oyuncularını algılama ve ekleme desteği eklendi.
+  - USB üzerinden bağlanan Android oynatıcıların algılanması ve bağlanması için destek eklendi.
 
 ## <a name="1403"></a>1.4.0.3
 
-Yayımlanma tarihi, 5 Mart 2018
+Yayınlanma Mart 5, 2018
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - Unity 2018,1 ' de yeni proje Oluşturucu desteği eklendi.
+  - Birlik 2018.1'de yeni proje jeneratörüne destek eklendi.
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Adanmış ayarlar için seçenek paneli eklendi.
+  - Özel ayarlar için seçenek paneli eklendi.
 
 ## <a name="1402"></a>1.4.0.2
 
-24 Ocak 2018 ' de yayınlandı
+Yayınlanma Ocak 24, 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - Sabit mono sürümü algılama.
+  - Mono sürüm algılaması düzeltildi.
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - 2018,1 ve eklenti etkinleştirme ile ilgili sabit zamanlama sorunları.
+  - 2018.1 ve eklenti etkinleştirme ile zamanlama sorunları giderildi.
 
-  - Yeni bir oynatıcı algılanırken uyarı düzeltildi.
+  - Yeni bir oyuncu algılarken bildirimler düzeltildi.
 
 ## <a name="1401"></a>1.4.0.1
 
-Yayın tarihi, 23 Ocak 2018
+Yayınlanma Ocak 23, 2018
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Çift tıklama üzerinde klasörleri sabit Genişlet/Daralt
+  - Çift tıklatıldığında klasörleri Genişlet/Daralt düzeltildi
 
 ## <a name="1400"></a>1.4.0.0
 
-Yayın tarihi, 13 Aralık 2017
+Yayınlanma 13 Aralık 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
   - .NET Standard için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Otomatik pdb 'den mdb hata ayıklama sembol dönüştürme.
+  - mdb hata ayıklama sembolü dönüştürme için otomatik pdb düzeltildi.
 
 ## <a name="1301"></a>1.3.0.1
 
-Yayın tarihi, 12 Aralık 2017
+Yayınlanma 12 Aralık 2017
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - EditorPrefs. GetBool öğesine yapılan dolaylı çağrı, dizi boyutunu değiştirmeye çalışırken Inspector 'ı etkiliyor.
+  - Array Boyutunu değiştirmeye çalışırken denetçiyi etkileyen EditorPrefs.GetBool'a dolaylı arama düzeltildi.
 
-- **'Nı**
+- **Sihirbaz:**
 
-  - Yöntemi eklemeden önce Roslyn bağlamını yenileyin.
+  - Yöntem eklemeden önce roslyn bağlamı yenileyin.
 
 ## <a name="1300"></a>1.3.0.0
 
-Yayımlanma tarihi, 20 Kasım 2017
+Yayınlanma Kasım 20, 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **'Nı**
+- **Sihirbaz:**
 
-  - "Unity iletisi uygulama" Sihirbazı eklendi.
+  - "Birlik iletisi uygula" sihirbazı eklendi.
 
-  - Mac 7,4 ' de yeni tamamlanma API 'SI için destek eklendi.
+  - Mac 7.4 için VS yeni tamamlama API için destek eklendi.
 
 ## <a name="1200"></a>1.2.0.0
 
-Yayın tarihi, 23 Ekim 2017
+Yayınlanma Tarihi: 23 Ekim 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Taşınabilir hata ayıklama sembol dosyaları için destek eklendi.
+  - Taşınabilir hata ayıklama simgesi dosyaları için destek eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - Derleme dosya adına yanlışlıkla eklenmiş ek. dll uzantısı düzeltildi.
+  - Montaj dosya adına yanlış eklenen ekstra .dll uzantısı düzeltildi.
 
-  - Varsayılan olarak ' true ' olduğundan AllowAttachedDebuggingOfEditor Unity bayrağını zorlamayın.
+  - Varsayılan artık 'true' olduğu için AllowAttachedDebuggingOfEditor Unity bayrağını zorlamayın.
 
 ## <a name="1103"></a>1.1.0.3
 
-Yayın tarihi, 23 Ekim 2017
+Yayınlanma Tarihi: 23 Ekim 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - .NET 4,6 profili için destek eklendi.
+  - .NET 4.6 profili için destek eklendi.
 
 ## <a name="1102"></a>1.1.0.2
 
-Yayın tarihi, 8 Ağustos 2017
+Yayınlanma 8 Ağustos 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Hangi Unity 'nin iliştirilemiyor olduğundan emin olmak için işleme İliştir iletişim kutusunu başlatın.
+  - Hangi Birliğe ekleyeceğinden emin değilse, işlem iletişim kutusuna eklemeyi başlatın.
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - Unity 5,6 kullanıldığında her zaman güvenli olmayan derleme anahtarını etkinleştirin.
+  - Unity 5.6 kullanıldığında her zaman güvenli olmayan derleme anahtarını etkinleştirin.
 
 ## <a name="1101"></a>1.1.0.1
 
-Yayın tarihi 20 Temmuz 2017
+Yayınlanma Tarihi: 20 Temmuz 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
   - Yerelleştirilmiş kaynaklar için destek eklendi.
 
 ## <a name="1100"></a>1.1.0.0
 
-Yayımlanma tarihi, 12 Temmuz 2017
+Yayınlanma 12 Temmuz 2017
 
-### <a name="new-features"></a>Yeni özellikler
+### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - İşleme Ekle penceresi aracılığıyla oyunculara ve düzenleyicilere ekleme desteği eklendi.
+  - İşleme Ekle penceresinden oyunculara ve editörlere iliştirme desteği eklendi.
 
-- **Proje oluşturma:**
+- **Proje Oluşturma:**
 
-  - MCS. rsp dosyalarıyla düzeltilen derleme adı başvuruları.
+  - Mcs.rsp dosyaları ile sabit montaj adı başvuruları.
 
-  - Assembly. JSON derleme birimleri için destek eklendi.
+  - assembly.json derleme birimleri için destek eklendi.
 
-  - API düzeyleriyle düzeltilen tanımlar.
+  - Sabit API düzeyleri ile tanımlar.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Derlerken düzeltilen gölgelendirici hata iletisi.
+  - Derleme yaparken gölgeli hata iletisi düzeltildi.
 
 ## <a name="1001"></a>1.0.0.1
 
-Yayımlanma tarihi 4 Mayıs 2017
+Yayınlanma Mayıs 4, 2017
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Karma ve normal projelerle sabit etkin belge izleme.
+  - Karma ve düzenli projelerle etkin belge takibi düzeltildi.
 
 ## <a name="1000"></a>1.0.0.0
 
-Yayımlanma tarihi 3 Mayıs 2017
+Yayınlanma Mayıs 3, 2017

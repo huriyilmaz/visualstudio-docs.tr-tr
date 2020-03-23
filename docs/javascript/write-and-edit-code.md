@@ -1,6 +1,6 @@
 ---
-title: JavaScript geliştiricileri için düzenleme giriş
-description: Bu giriş Kod Düzenleyicisi'nde Visual Studio için Visual Studio anlamak daha kolay JavaScript kodu yazma ve gezinme yapar yollardan bazılarını gösterir.
+title: JavaScript geliştiricileri için düzenlemeye giriş
+description: Visual Studio'daki kod düzenleyicisine yapılan bu giriş, Visual Studio'nun JavaScript kodunu yazmayı, gezinmeyi ve anlamayı kolaylaştırdığı bazı yollardan bazılarını gösterir.
 ms.date: 12/13/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -11,102 +11,102 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 111100038817d16d4655271f648aeb076bf1e9af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62840852"
 ---
-# <a name="learn-to-use-the-code-editor"></a>Kod Düzenleyicisi'ni kullanmayı öğrenin
+# <a name="learn-to-use-the-code-editor"></a>Kod düzenleyicisini kullanmayı öğrenin
 
-Bu kısa giriş Kod Düzenleyicisi'nde Visual Studio için Visual Studio yazma, gezinme ve kodu daha kolay anlama yapar yollarından bazıları inceleyeceğiz.
+Visual Studio'daki kod düzenleyicisine kısa bir giriş te, Visual Studio'nun kodu yazmayı, gezinmeyi ve anlamayı kolaylaştırdığı bazı yollara bakacağız.
 
 > [!TIP]
-> Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) ücretsiz yüklemek için sayfa. Uygulama geliştirme yaptığınız türüne bağlı olarak, yüklemeniz gerekebilir **Node.js geliştirme iş yükü** Visual Studio ile.
+> Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads/) gidin ve ücretsiz olarak yükleyin. Yaptığınız uygulama geliştirme türüne bağlı olarak, Visual Studio ile **Düğüm.js geliştirme iş yükünü** yüklemeniz gerekebilir.
 
-Bu makalede, zaten JavaScript geliştirme ile ilgili bilgi sahibi olduğunuz kabul edilmektedir. Siz değilseniz, öğreticiye bakın gibi öneririz [bir Node.js ve Express uygulaması oluşturma](../javascript/tutorial-nodejs.md) ilk.
+Bu makalede, JavaScript geliştirme aşina olduğunuzu varsayar. Eğer değilseniz, önce [Bir Düğüm Oluştur ve Express uygulaması](../javascript/tutorial-nodejs.md) gibi bir öğreticiye bakmanızı öneririz.
 
-## <a name="add-a-new-project-file"></a>Yeni bir proje dosyanıza ekleyin
+## <a name="add-a-new-project-file"></a>Yeni bir proje dosyası ekleme
 
-Yeni dosyaları projenize eklemek için IDE kullanabilirsiniz.
+Projenize yeni dosyalar eklemek için IDE'yi kullanabilirsiniz.
 
-1. Projenizi Visual Studio'da açın, bir klasör veya Çözüm Gezgini'nde (sağ bölme), proje düğümünü sağ tıklatın ve seçin **Ekle** > **yeni öğe**.
+1. Projeniz Visual Studio'da açıkken, Solution Explorer'daki bir klasöre veya proje düğümünüze sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin.
 
-1. İçinde **yeni dosya** iletişim kutusunun **genel** kategorisi gibi eklemek istediğiniz dosya türünü seçin **JavaScript dosyası**ve ardından **Aç** .
+1. **Genel** kategori altında **yeni dosya** iletişim kutusunda, **JavaScript Dosyası**gibi eklemek istediğiniz dosya türünü seçin ve sonra **Aç'ı**seçin.
 
-    Yeni dosyayı projenize eklenir ve düzenleyicide açılır.
+    Yeni dosya projenize eklenir ve düzenleyicide açılır.
 
-## <a name="use-intellisense-to-complete-words"></a>Sözcükleri tamamlamak için IntelliSense kullanma
+## <a name="use-intellisense-to-complete-words"></a>Sözcükleri tamamlamak için IntelliSense'i kullanın
 
-IntelliSense, kodlamaya, her bir kaynaktır. Bu, kullanılabilir üyeler bir türü veya farklı bir yöntem aşırı yüklemeleri için parametre ayrıntıları hakkında bilgi gösterebilirsiniz. Aşağıdaki kodda yazarken `Router()`, geçirebileceğiniz bağımsız değişken türlerini görmek. Bu imza Yardımı çağrılır.
+IntelliSense, kodlama yaparken paha biçilmez bir kaynaktır. Bir yöntemin farklı aşırı yükleri için bir türün kullanılabilir üyeleri veya parametre ayrıntıları hakkında bilgi gösterebilir. Aşağıdaki kodda, yazarken, `Router()`geçebileceğiniz bağımsız değişken türlerini görürsünüz. Buna imza yardımı denir.
 
 ![IntelliSense kullanma](../javascript/media/write-code-signature-checking.png)
 
-IntelliSense, bunu ayırt etmek için yeterli sayıda karakter girdikten sonra bir sözcük tamamlamak için de kullanabilirsiniz. İmlecinizi sonra koyarsanız `data` aşağıdaki kod ve türü string `get`, IntelliSense gösterir, tanımlı işlevler önceki kodda ya da tanımlanmış projenize eklediğiniz bir üçüncü taraf Kitaplığı'nda.
+Ayrıca, bir sözcüğü ayrıştırmak için yeterli karakter yazdıktan sonra bir sözcüğü tamamlamak için De IntelliSense'i kullanabilirsiniz. İmlecinizi aşağıdaki kod `data` ve yazıdaki `get`dizeden sonra koyarsanız, IntelliSense size kodda daha önce tanımlanan veya projenize eklediğiniz bir üçüncü taraf kitaplığında tanımlanan işlevleri gösterir.
 
 ![IntelliSense kullanma](../javascript/media/write-code-intellisense.png)
 
-Programlama öğelerin üzerine geldiğinizde IntelliSense de, türleri hakkında bilgi gösterebilirsiniz.
+IntelliSense, programlama öğelerinin üzerinde gezinirken türler hakkında da bilgi gösterebilir.
 
-IntelliSense bilgilerini sağlamak için TypeScript dil hizmeti kullanabilirsiniz *d.ts* dosyaları ve JSDoc açıklamaları. En yaygın JavaScript kitaplıkları için *d.ts* dosyaları otomatik olarak alındı. IntelliSense bilgilerinin nasıl alındığını hakkında daha fazla ayrıntı için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md?toc=/visualstudio/javascript/toc.json)
+IntelliSense bilgilerini sağlamak için, dil hizmeti TypeScript *d.ts* dosyalarını ve JSDoc yorumlarını kullanabilir. En yaygın JavaScript kitaplıkları *için, d.ts* dosyaları otomatik olarak elde edilir. IntelliSense bilgilerinin nasıl elde edilen hakkında daha fazla bilgi için [JavaScript IntelliSense'e](../ide/javascript-intellisense.md?toc=/visualstudio/javascript/toc.json) bakın
 
-## <a name="check-syntax"></a>Sözdizimini denetle
+## <a name="check-syntax"></a>Sözdizimini denetleme
 
-Dil hizmeti Eslint'i söz dizimi denetimini ve linting sağlamak için kullanır. Sözdizimi denetimi düzenleyicide seçme seçeneklerini ayarlamak gerekiyorsa **Araçları** > **seçenekleri** > **JavaScript/TypeScript**  >  **Linting**. Genel Eslint'i yapılandırma dosyasına işaret linting seçenekleri.
+Dil hizmeti sözdizimi denetimi ve linting sağlamak için ESLint kullanır. Düzenleyicide sözdizimi denetimi için seçenekler ayarlamanız gerekiyorsa, **Araçlar** > **Seçenekleri** > **JavaScript/TypeScript** > **Linting'i**seçin. Linting seçenekleri sizi genel ESLint yapılandırma dosyasına yönlendirer.
 
-Aşağıdaki kodda, yeşil sözdizimi (yeşil dalgalı çizgiler) ifade vurgulaması bakın. Söz dizimi vurgulama üzerine gelin.
+Aşağıdaki kodda, ifadede yeşil sözdizimi vurgulama (yeşil dalgalı) görürsünüz. Sözdizimi vurgulama üzerinde gezinmek.
 
-![Görünüm söz dizimi hatası](../javascript/media/write-code-syntax-checking.png)
+![Sözdizimi hatasini görüntüleme](../javascript/media/write-code-syntax-checking.png)
 
-Bu ileti son satırının dil hizmeti virgül bekleniyor bildirir (`,`). Yeşil dalgalı bir uyarı gösterir. Kırmızı dalgalı çizgiler bir hata gösterir.
+Bu iletinin son satırı, dil hizmetinin virgül`,`beklediğini söyler ( ). Yeşil dalgalı bir uyarı gösterir. Kırmızı dalgalı bir hata olduğunu gösterir.
 
-Alt bölmede tıklayabilirsiniz **hata listesi** uyarı ve dosya adı ve satır numarası ile birlikte bir açıklama görmek için sekmesinde.
+Alt bölmede, dosya adı ve satır numarasıyla birlikte uyarı ve açıklamayı görmek için **Hata Listesi** sekmesini tıklatabilirsiniz.
 
-![Hata Listesi görünümü](../javascript/media/write-code-error-list.png)
+![Hata listesini görüntüleme](../javascript/media/write-code-error-list.png)
 
-Bu kod, virgülle ekleyerek düzeltebilirsiniz (`,`) önce `"data"`.
+Virgül ( )`,`eklenerek bu `"data"`kodu düzeltebilirsiniz.
 
-## <a name="comment-out-code"></a>Kodu açıklama
+## <a name="comment-out-code"></a>Yorum kodu
 
-Visual Studio menü çubuğunda altında düğmelerden araç çubuğunda, kodu daha üretken olmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu açıp kapatabilirsiniz ([IntelliSense](../ide/using-intellisense.md) yöntemleri, diğerlerinin arasında eşleşen bir listesini görüntüleyen bir kodlama yardımcısıdır) artırın veya bir satır girintisini Azalt veya istemediğiniz kod açıklama derlemek. Bu bölümde, biz bazı kodu açıklama.
+Visual Studio'daki menü çubuğunun altındaki düğme satırı olan araç çubuğu, kodladığınız da daha üretken hale getirmenize yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu geçiştirebilirsiniz[(IntelliSense,](../ide/using-intellisense.md) diğer şeylerin yanı sıra eşleşen yöntemlerin listesini görüntüleyen), bir satır girintisini artıran veya azaltan veya derlemek istemediğiniz kodu oluşturan bir kodlama yardımıdır. Bu bölümde, bazı kod lar hakkında yorum yapacağız.
 
-Bir veya daha fazla satır Kod Düzenleyicisi'nde seçin ve sonra **Seçilen satırdan yorum** düğmesi ![düğmesi yorum](../javascript/media/write-code-comment-out.png) araç. Klavyeyi kullanmak isterseniz, basın **Ctrl**+**K**, **Ctrl**+**C**.
+Düzenleyicide bir veya daha fazla kod satırı seçin ve ardından ![araç](../javascript/media/write-code-comment-out.png) **çubuğundaki seçili satırlar** düğmesine yorum yapın düğmesini seçin. Klavyeyi kullanmayı tercih ederseniz **Ctrl**+**K**, **Ctrl**+**C**tuşuna basın.
 
-JavaScript açıklama karakterleri `//` kodu açıklama eklemek için seçili her satırın başına eklenir.
+JavaScript yorum karakterleri, `//` kodu açıklama yapmak için seçilen her satırın başına eklenir.
 
-## <a name="collapse-code-blocks"></a>Kod bloğu Daralt
+## <a name="collapse-code-blocks"></a>Kod bloklarını daraltma
 
-Bazı bölgelerde kod görünümünü sekmenize Düzen vermenize gerek duyarsanız, daraltabilirsiniz. Küçük bir gri kutu içine eksi işareti ile bir işlevin ilk satırın kenar boşluğunda seçin. Veya, klavye kullanıcısıysanız, herhangi bir oluşturucu kodunu ve ENTER tuşuna imleci **Ctrl**+**M**, **Ctrl**+**M** .
+Bazı kod bölgelerinin görünümünü zedelemeniz gerekiyorsa, bunu daraltabilirsiniz. Bir işlevin ilk satırının kenar boşluğunda eksi işareti bulunan küçük gri kutuyu seçin. Veya, klavye kullanıcısıysanız, imleci oluşturucu kodun herhangi bir yerine yerleştirin ve **Ctrl**+M , **Ctrl**+**M****M**tuşlarına basın.
 
-![Anahat oluşturma Daralt düğmesi](../javascript/media/write-code-collapse-code.png)
+![Daraltma düğmesini anahat oluşturma](../javascript/media/write-code-collapse-code.png)
 
-Üç nokta ve ardından yalnızca ilk satırı, kod bloğu daraltır (`...`). Kod bloğunu tekrar artırmak için artık bir artı işareti veya tuşuna basın aynı gri kutusunda tıklayın **Ctrl**+**M**, **Ctrl**+**M**  yeniden. Bu özelliğin adı [anahat](../ide/outlining.md) ve uzun işlevler veya tüm sınıflar daraltma özellikle yararlı olur.
+Kod bloğu sadece ilk satıra çöker, ardından bir`...`elips ( ). Kod bloğunu yeniden genişletmek için, içinde artı işareti olan aynı gri kutuyu tıklatın veya **Ctrl**+**M**, **Ctrl**+**M** tuşlarına tekrar basın. Bu özellik [Anahat lama](../ide/outlining.md) olarak adlandırılır ve özellikle uzun işlevleri veya tüm sınıfları daraltırken kullanışlıdır.
 
-## <a name="view-definitions"></a>Tanımları görüntüle
+## <a name="view-definitions"></a>Tanımları görüntüleme
 
-Visual Studio Düzenleyicisi, türü, işlev, vb. tanımını incelemek kolaylaştırır. Örneğin seçerek tanımını içeren dosyayı gitmek için bir yolu olan **Tanıma Git** herhangi bir programlama öğesine başvurulur. İçinde çalışmakta olduğunuz odağınızı uzağa dosya hareket etmediği bir bile daha hızlı yolu [Özet tanım](../ide/go-to-and-peek-definition.md#peek-definition). Şimdi tanımda Özet `render` aşağıdaki örnekte yöntemi.
+Visual Studio editörü, bir tür, işlev, vb. tanımını incelemeyi kolaylaştırır. Bunun bir yolu, örneğin programlama öğesinin başvuruldettiği her yerde **Tanıma Git'i** seçerek tanımı içeren dosyaya gitmektir. Odak noktanızı çalıştığınız dosyadan uzağa taşımayan daha hızlı bir yol [Peek Definition'ı](../ide/go-to-and-peek-definition.md#peek-definition)kullanmaktır. Aşağıdaki örnekte yöntemin tanımına `render` bakalım.
 
-Sağ `render` ve **Özet tanım** içerik menüsünde. Veya basın **Alt**+**F12**.
+İçerik menüsünden `render` **Peek Tanımı'na** sağ tıklayın ve seçeneğini belirleyin. Veya, **Alt**+**F12 tuşuna**basın.
 
-   Tanımını bir açılır pencere görünür `render` yöntemi. Açılır pencere veya hatta göz at peeked kodun başka bir tür tanımı içinde gezinebilirsiniz.
+   `render` Metnin tanımıyla birlikte açılır pencere görüntülenir. Açılır pencere içinde gezinebilir, hatta gözetlenen koddan başka bir türün tanımına göz atabilirsiniz.
 
-   ![Özet tanım penceresi](../javascript/media/write-code-peek-definition.png)
+   ![Peek tanım penceresi](../javascript/media/write-code-peek-definition.png)
 
-Açılır pencerenin sağ üst köşedeki "x" işareti olan küçük kutusunu seçerek baktı tanım penceresini kapatın.
+Açılan pencerenin sağ üst kısmında "x" yazan küçük kutuyu seçerek gözetlenen tanım penceresini kapatın.
 
 ## <a name="use-code-snippets"></a>Kod parçacıkları kullanma
 
-Visual Studio sağlar yararlı *kod parçacıkları* kod bloklarında kullanılan yaygın olarak hızla ve kolayca oluşturmak için kullanabilirsiniz. [Kod parçacıkları](../ide/code-snippets.md) JavaScript dahil olmak üzere farklı programlama dili için kullanılabilir. Ekleyelim bir `for` kod dosyanıza döngü.
+Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir şekilde oluşturmak için kullanabileceğiniz yararlı *kod parçacıkları* sağlar. [JavaScript](../ide/code-snippets.md) de dahil olmak üzere farklı programlama dilleri için kod parçacıkları kullanılabilir. Kod dosyanıza `for` bir döngü ekleyelim.
 
-İmlecinizi, kod parçacığını eklemek, sağ tıklayın ve istediğiniz **kod parçacığı** > **parçacık Ekle**.
+İmlecinizi snippet'i eklemek istediğiniz yere yerleştirin, sağ tıklatın ve **Snippet** > **Ekle Snippet'i**seçin.
 
-![Visual Studio'da kod parçacığı](../javascript/media/write-code-insert-snippet.png)
+![Visual Studio'da Kod parçacığı](../javascript/media/write-code-insert-snippet.png)
 
-Bir **parçacık Ekle** Kutusu Düzenleyicisi'nde görüntülenir. Seçin **genel** ve çift tıklatarak **için** listedeki bir öğe.
+Editörde Bir **Ekle Snippet** kutusu görünür. **Genel'i** seçin ve ardından listedeki **öğe için** çift tıklatın.
 
-![İçin kod parçacığı bir for döngüsü Visual Studio'da](../javascript/media/write-code-insert-snippet-for-loop.png)
+![Visual Studio'da for döngüsü için kod snippet](../javascript/media/write-code-insert-snippet-for-loop.png)
 
-Bu ekler `for` kodunuzda döngü kod parçacığı:
+Bu, `for` döngü snippet'ini kodunuza ekler:
 
 ```javascript
 for (var i = 0; i < length; i++) {
@@ -114,13 +114,13 @@ for (var i = 0; i < length; i++) {
 }
 ```
 
-Kullanılabilir kod parçacıkları seçerek dilinizi göz atabilirsiniz **Düzenle** > **IntelliSense** > **parçacık Ekle**ve ardından Dilinizin klasör seçme.
+**IntelliSense** > **Insert Snippet'i** **edit'i** > seçip dilinizin klasörünü seçerek diliniz için kullanılabilir kod parçacıklarına bakabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod parçacıkları](../ide/code-snippets.md)
-- [Kod gidin](../ide/navigating-code.md)
-- [Anahat Oluşturma](../ide/outlining.md)
+- [Kodda gezinme](../ide/navigating-code.md)
+- [Anahat](../ide/outlining.md)
 - [Tanıma ve Özet Tanıma Gitme](../ide/go-to-and-peek-definition.md)
-- [Yeniden Düzenleme](../ide/refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../ide/refactoring-in-visual-studio.md)
 - [IntelliSense kullanma](../ide/using-intellisense.md)

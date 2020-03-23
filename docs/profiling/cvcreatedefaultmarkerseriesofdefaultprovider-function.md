@@ -1,5 +1,5 @@
 ---
-title: CvCreateDefaultMarkerSeriesOfDefaultProvider işlevi | Microsoft Docs
+title: cvcreatedefaultmarkerseriesofdefaultprovider fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1a13174b2991b7c69535a6d1910f761890397818
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552700"
 ---
-# <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>CvCreateDefaultMarkerSeriesOfDefaultProvider işlevi
-Varsayılan işaret varsayılan sağlayıcı dizi oluşturur.
+# <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>CvCreateDefaultMarkerSeriesOfDefaultProvider fonksiyonu
+Varsayılan sağlayıcının varsayılan işaretçi dizisini oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,15 +32,15 @@ HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `ppProvider` Nesne değişkeni sağlayıcı adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.
+ `ppProvider`Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
- `ppMarkerSeries` İşaret serisi nesne değişkeni adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.
+ `ppMarkerSeries`Marker serisi nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
-## <a name="return-value"></a>Dönüş değeri
- Hem sağlayıcı hem de işaret serisi başarıyla oluşturulmuş veya hata kodu var. durumda herhangi bir hata olduğunda S_OK. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+## <a name="return-value"></a>Döndürülen değer
+ Herhangi bir hata olması durumunda hem sağlayıcı hem de işaretçi serisi başarıyla oluşturulduğunda veya hata kodu S_OK. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

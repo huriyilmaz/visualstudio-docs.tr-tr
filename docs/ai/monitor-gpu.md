@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: f455a1cbfbad58ebe724c879837e161954cf4be2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62560954"
 ---
-# <a name="monitoring-gpu-utilization"></a>GPU kullanımı izleme
+# <a name="monitoring-gpu-utilization"></a>GPU Kullanımının İzlenmesi
 
-Uzak Linux makineleri GPU kullanımını izlemek için:
+Uzak Linux makinelerinin GPU kullanımını izlemek için:
 
-1. İçinde **Sunucu Gezgini**, genişletme **uzak makinede**.
-2. **Sağ** izlemek istediğiniz uzak makine.
+1. **Sunucu Gezgini'nde**Uzak **Makineleri**genişletin.
+2. İzlemek istediğiniz uzak makineye **sağ tıklayın.**
 
-    ![GPU ısı Haritası](media/monitor-gpu/gpu-heatmap-0.png)
+    ![gpu ısı haritası](media/monitor-gpu/gpu-heatmap-0.png)
 
-3. Tıklayın **Göster ısı Haritası**.
+3. **Isı Haritasını Göster'i**tıklatın.
 
-    ![GPU ısı Haritası](media/monitor-gpu/heatmap.png)
+    ![gpu ısı haritası](media/monitor-gpu/heatmap.png)

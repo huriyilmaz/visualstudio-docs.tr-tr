@@ -1,6 +1,6 @@
 ---
-title: Hızlı Başlangıç - var olan koddan bir Python projesi oluşturma
-description: Bu hızlı başlangıçta, mevcut bir klasörden uygun bir şablon kullanarak Python için bir Visual Studio projesi oluşturun.
+title: Quickstart - Varolan koddan bir Python projesi oluşturma
+description: Bu hızlı başlangıçta, kullanışlı bir şablon kullanarak varolan bir klasörden Python için bir Visual Studio projesi oluşturursunuz.
 ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
@@ -11,30 +11,30 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 8fbbd8c49ecc367a0dd01d9ab775735b93174fe6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "62429098"
 ---
-# <a name="quickstart-create-a-python-project-from-existing-code"></a>Hızlı Başlangıç: Varolan koddan bir Python projesi oluşturma
+# <a name="quickstart-create-a-python-project-from-existing-code"></a>Hızlı başlatma: Varolan koddan bir Python projesi oluşturma
 
-Kaydederler [Visual Studio'da Python desteği yüklü](installing-python-support-in-visual-studio.md), varolan bir Python kodu bir Visual Studio projesine getirmek kolaydır.
+[Visual Studio'ya Python desteğini yükledikten](installing-python-support-in-visual-studio.md)sonra, varolan Python kodunu Visual Studio projesine katmak kolaydır.
 
 > [!Important]
-> Burada açıklanan işlemi taşıma veya kopyalama orijinal kaynak dosyalarına desteklemez. Bir kopya ile çalışmak istiyorsanız, klasörü ilk çoğaltma.
+> Burada açıklanan işlem özgün kaynak dosyalarını hareket ettirmez veya kopyalamaz. Bir kopyayla çalışmak istiyorsanız, önce klasörü çoğaltın.
 
 [!INCLUDE[project-from-existing](includes/project-from-existing.md)]
 
-İsterseniz, tuşlarına basarak programı çalıştırın **Ctrl**+**F5** veya seçerek **hata ayıklama** > **ayıklamadanBaşla**.
+İstenirse, **Ctrl**+**F5** tuşuna basarak veya Hata Ayıklama Başlatma'yı hata ayıklama olmadan **seçerek** > programı**çalıştırın.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Öğretici: Visual Studio'da Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Öğretici: Visual Studio Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [El ile var olan bir Python yorumlayıcısı tanımlayın](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
-- [Visual Studio 2015'te ve daha önce Python desteğini yükleme](installing-python-support-in-visual-studio.md)
-- [Yükleme konumları](installing-python-support-in-visual-studio.md#install-locations)
+- [Varolan bir Python yorumlayıcıyı el ile tanımlama](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Visual Studio 2015 ve önceki gün Python desteğini yükleyin](installing-python-support-in-visual-studio.md)
+- [Konumları yükleme](installing-python-support-in-visual-studio.md#install-locations)

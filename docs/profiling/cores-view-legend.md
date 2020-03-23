@@ -1,5 +1,5 @@
 ---
-title: Çekirdekler görünümü göstergesi | Microsoft Docs
+title: Cores View Legend | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,27 +13,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8ea3184fbcd3561b88521f7dbdf4bf44c925150d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553169"
 ---
-# <a name="cores-view-legend"></a>Çekirdekler görünümü göstergesi
-Çekirdekler görünümü göstergesi, renk ve ada göre her bir iş parçacığı tanımlar. Çekirdekler arası bağlam anahtarları, toplam bağlam anahtarları ve çekirdekleri çaprazlayan bağlam anahtarlarının yüzdesi sayılarını gösteren sütunları içerir. Gösterge satırlarda azalan olarak çekirdekler arası bağlam anahtarları sayısına göre sıralanır.
+# <a name="cores-view-legend"></a>Cores View efsanesi
+Cores View göstergesi her iş parçacığını renk ve ada göre tanımlar. Çekirdekler arası bağlam anahtarları, toplam bağlam anahtarları ve çekirdekleri geçen bağlam anahtarlarının yüzdesi için sayıları gösteren sütunlar içerir. Göstergedeki satırlar, azalan sırada, çekirdekler arası bağlam anahtarlarının sayısına göre sıralanır.
 
- Satırları zaman çizelgesinde görüntülenen iş parçacıklarının filtrelemek için göstergeyi seçebilirsiniz. Seçili iş parçacıklarını zaman çizelgesinde gösterilir. Hiçbir satır seçtiyseniz, tüm satırları zaman çizelgesinde gösterilir.
+ Zaman çizelgesinde görüntülenen iş parçacıklarını filtrelemek için göstergedeki satırları seçebilirsiniz. Zaman çizelgesinde yalnızca seçili iş parçacıkları gösterilir. Satır seçili değilse, tüm satırlar zaman çizelgesinde gösterilir.
 
- Çekirdekler arası bağlam maliyet ek yükü ve performans, daha fazla aynı mantıksal Çekirdeğinde kalan anahtarlar geçer. İçerik geçişi sırasında işlemci kayıtları kaydedilir ve geri, işletim sistemi çekirdek kod yürütülür, çeviri arabelleğinde arabellek girişleri yüklenene ve işlemci işlem hattı temizlenir. Çekirdekler arası bağlam anahtarları, verileri önbelleğe almak için bu iş parçacığı başka bir çekirdek üzerinde geçerli olmadığından diğer bağlam anahtarları daha pahalı bile olabilir. Buna karşılık, bir iş parçacığı üzerine önceden çalışan çekirdek bağlam anahtarlı ise yararlı verileri önbelleğe hala olduğunu büyük olasılıkla olur. Çekirdekler arası bağlam anahtarları artırılmış iş parçacığını yönetmek denemeleridir benzeşimi ve performansı düştü, bu sorunu gidermek etkinleştirilip etkinleştirilmeyeceğini göz önünde bulundurun. İş parçacığı benzeşimini ortadan kaldırarak başlatın ve sonra elde edilen çekirdek arası davranışını gözlemleyin.
+ Çapraz çekirdekli bağlam anahtarları, aynı mantıksal çekirdekte kalan anahtarlardan daha fazla ek yükü ve performansa mal olabilir. Bağlam anahtarları sırasında, işlemci kayıtları kaydedilir ve geri yüklenir, işletim sistemi çekirdeği kodu yürütülür, çeviri arabellek girişleri yeniden yüklenir ve işlemci ardışık düzeneği temizlenir. Önbellek verileri başka bir çekirdekteki bu iş parçacığı için geçerli olmadığından, çapraz çekirdekli bağlam anahtarları diğer bağlam anahtarlarından daha pahalı olabilir. Buna karşılık, bir iş parçacığı daha önce çalıştırdığı çekiüzerine bağlam açıksa, yararlı verilerin hala önbellekte olması olasıdır. İş parçacığı afiyetini ve performansı yönetme girişimleri yle çekirdekler arası bağlam anahtarları artırıldığında, bu sorunu giderip ele almamayı düşünün. İş parçacığı yakınlığını ortadan kaldırarak başlayın ve ardından ortaya çıkan çapraz çekirdek davranışını gözlemleyin.
 
- Aşağıdaki tabloda, gösterge öğeleri açıklar.
+ Aşağıdaki tabloda gösterge öğeleri açıklanmaktadır.
 
 |Öğe|Tanım|
 |-------------|----------------|
-|İş parçacığı adı|İş parçacığı rengini önceki çekirdekler zaman çizelgesi ve iş parçacığı adını gösterir.|
-|Çekirdekler arası bağlam anahtarları|İçerik Geçişi için de bir mantıksal çekirdekten diğerine geçiş bir iş parçacığı sayısı. Bir işlemci zar diğerine dışında aynı çağırmayı kalmak yerine çapraz çekirdekler arası bağlam anahtarları arasında ayrım yapmaz.|
-|Toplam bağlam geçişi|İçerik geçişi sırasında örnekleme süresi boyunca belirli bir iş parçacığı için toplam sayısı. Bir iş parçacığı bağlamından (örneğin, yürütme eşitleme) bir içerik anahtarı her değiştiğinde sayılır.|
-|Çekirdekleri Çaprazlayan bağlam anahtarlarının yüzdesi|Çekirdekler arası bağlam geçişleri sayısı, toplam bağlam anahtarları tarafından bölünmesiyle yüzdesi olarak hesaplanır. Daha yüksek bu yüzdesi, daha fazla çekirdekler arası bağlam yükü genel etkisini bu belirli iş parçacığının performansını geçer.|
+|İş Parçacığı Adı|Önceki çekirdek zaman çizelgesinde iş parçacığının rengini ve bu iş parçacığının adını gösterir.|
+|Çapraz Çekirdek Liyak Anahtarları|Bir mantıksal çekirdekten diğerine de geçiş yapan bir iş parçacığı için bağlam anahtarları. Bir işlemciden diğerine geçen çapraz çekirdekli bağlam anahtarları ile aynı kalıpta kalanlar arasında ayrım yapmaz.|
+|Toplam Bağlam Anahtarları|Örnekleme döneminde belirli bir iş parçacığı için toplam bağlam anahtarları. Bir iş parçacığı bağlamı her değiştirdiğinde (örneğin, yürütmeden eşitlemeye kadar) bir bağlam anahtarı sayılır.|
+|Çekirdekleri ÇaprazLayan Bağlam Anahtarlarının Yüzdesi|Çekirdekler arası bağlam anahtarlarının sayısını toplam bağlam anahtarlarının sayısına bölerek yüzde olarak hesaplanır. Bu yüzde ne kadar yüksekse, çekirdekler arası bağlamın genel yükü bu özel iş parçacığının performansını değiştirir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çekirdekler Görünümü](../profiling/cores-view.md)

@@ -1,5 +1,5 @@
 ---
-title: Bir şablondan bir yapay ZEKA proje oluşturma
+title: Şablondan bir AI projesi oluşturma
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -8,36 +8,36 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b537d80b8db9150c6804aff2ee3de0e6c879bb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62546745"
 ---
-# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio'da bir şablondan bir yapay ZEKA projesi oluşturma
+# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio'daki şablondan bir AI projesi oluşturma
 
-Kaydederler [yapay ZEKA için Visual Studio Araçları yüklü](installation.md), çeşitli şablonları kullanarak yeni bir yapay ZEKA projesi oluşturmak daha kolaydır.
+[AI için Visual Studio Tools'u yükledikten](installation.md)sonra, çeşitli şablonlar kullanarak yeni bir AI projesi oluşturmak kolaydır.
 
-1. Visual Studio'yu başlatın.
+1. Visual Studio’yu başlatın.
 
-2. Seçin **Dosya > Yeni > Proje** (Ctrl + Shift + N). İçinde **yeni proje** iletişim, arama "**yapay ZEKA Araçları**" ve istediğiniz şablonu seçin. Bir şablon seçerek hangi şablon sağlar kısa bir açıklama görüntüler unutmayın.
+2. **Yeni > Projesi> Dosya'yı** (Ctrl+Shift+N) seçin. Yeni **Proje** iletişim kutusunda , "**AI Araçları**" için arama yapın ve istediğiniz şablonu seçin. Şablon seçmenin şablonun sağladığı kısa bir açıklamayı görüntülediğini unutmayın.
 
-    ![Python şablonu içeren VS2017 yeni proje iletişim kutusu](media/create-project/new-ai-project.png)
+    ![PYTHON şablonu ile VS2017 Yeni Proje iletişim kutusu](media/create-project/new-ai-project.png)
 
-3. Bu hızlı başlangıçta seçin "**TensorFlow uygulama**" şablonu, projeye bir ad (örneğin, "MNIST") ve konum verin ve seçin **Tamam**.
+3. Bu Quickstart için "**TensorFlow Application**" şablonu'nu seçin, projeye bir ad ("MNIST" gibi) ve konum verin ve **Tamam'ı**seçin.
 
-4. Visual Studio Proje dosyası oluşturur (bir `.pyproj` diskteki dosyanın) birlikte şablon tarafından açıklanan diğer dosyaları. "TensorFlow uygulama" şablonuyla proje projeniz gibi aynı adlı bir dosya içeriyor. Dosya varsayılan olarak Visual Studio düzenleyicisinde açın.
+4. Visual Studio, şablontarafından açıklandığı `.pyproj` gibi diğer dosyalarla birlikte proje dosyasını (diskteki bir dosya) oluşturur. "TensorFlow Application" şablonuyla proje, projenizle aynı adlı bir dosya içerir. Dosya varsayılan olarak Visual Studio düzenleyicisinde açıktır.
 
-    ![Python uygulaması şablonu kullanılarak elde edilen proje](media/create-project/new-tensorflowapp.png)
+    ![Python Application şablonunu kullanırken ortaya çıkan proje](media/create-project/new-tensorflowapp.png)
 
-5. Kod, TensorFlow, numpy sys ve işletim sistemi dahil olmak üzere birden çok kitaplık zaten içeri aktarır dikkat edin. Ayrıca, uygulama hazır kolayca giriş eğitim verileri, çıkış modelleri ve günlük dosyalarının konumunu değiştirme etkinleştirmek için giriş bazı bağımsız değişkenler ile başlar. Birden çok işlem bağlamlarının (Azure dosya paylaşımı üzerindeki, yerel geliştirme kutusunda IE farklı dizin), iş göndermek için bu params yararlıdır.
+5. Kodun zaten TensorFlow, numpy, sys ve os dahil olmak üzere çeşitli kütüphaneler alır unutmayın. Ayrıca, giriş eğitim verilerinin, çıktı modellerinin ve günlük dosyalarının konumunu kolayca değiştirmeyi etkinleştirmek için uygulamanızı bazı giriş bağımsız değişkenleriyle hazır hale getirerek başlatır. Bu paramlar, işlerinizi birden çok bilgi işlem bağlamına (yani yerel dev kutunuzda Azure Dosya Paylaşımı'ndakinden farklı dizin) gönderdiğinizde yararlıdır.
 
-6. Projenizi bu giriş parametreleri için komut satırı bağımsız değişkenleri otomatik olarak geçirerek uygulamanızda hata ayıklama kolaylaştırmak için oluşturulan bazı özellikler de vardır. **Sağ tıklayın** projenizi seçip **özellikleri**
+6. Projenizde, komut satırı bağımsız değişkenlerini bu giriş parametrelerine otomatik olarak geçirerek uygulamanızın hata sını kolayca ayıklamayı kolaylaştırmak için oluşturulan bazı özellikler de vardır. Projenizi **sağ tıklatın** ve **Özellikler'i** seçin
 
     ![Özellikler](media/create-project/project-properties.png)
 
-7. Tıklayın **hata ayıklama** betik bağımsız değişkenleri otomatik olarak görmek için sekmesinde eklendi. bunları girişinizi bulunduğu ve depolanan çıkış istediğiniz gerektiği gibi değiştirebilir.
+7. Komut Dosyası Bağımsız Değişkenlerini otomatik olarak eklenenleri görmek için **Hata Ayıklama** sekmesini tıklatın. bunları gerektiğinde giriş verilerinizin bulunduğu ve çıktınızın depolanmış olmasını istediğiniz yere değiştirebilirsiniz.
 
     ![Özellikler](media/create-project//project-properties_1.png)
 
-8. Ctrl + F5'e basarak veya seçerek programı çalıştırın **hata ayıklama > hata ayıklama olmadan Başlat** menüsünde. Sonuçları konsol penceresinde görüntülenir.
+8. Ctrl+F5 tuşuna basarak veya menüde Hata **Ayıklama olmadan Başlat > Hata** Ayıklama'yı seçerek programı çalıştırın. Sonuçlar bir konsol penceresinde görüntülenir.

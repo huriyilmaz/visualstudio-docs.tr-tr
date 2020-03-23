@@ -1,5 +1,5 @@
 ---
-title: Kanallar (iş parçacıkları görünümü) | Microsoft Docs
+title: Kanallar (İş Parçacığı Görünümü) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,39 +13,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 94ac6e9e85a2d7dd504b2d2bd83bd1bbdb265ea0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62776783"
 ---
-# <a name="channels-threads-view"></a>Kanallar (iş parçacıkları görünümü)
-Eşzamanlılık görselleştiricisi kanalları dört tür gösterir: iş parçacığı kanalları, disk kanalları, işaret Kanallar ve GPU kanalları.
+# <a name="channels-threads-view"></a>Kanallar (iş parçacığı görünümü)
+Eşzamanlılık Görselleştiricisi dört tür kanal gösterir: iş parçacığı kanalları, disk kanalları, işaretkanalları ve GPU kanalları.
 
-## <a name="thread-channels"></a>İş parçacığı kanallar
- Bir iş parçacığı kanalı, renk, yalnızca bir iş parçacığı tarafından iş parçacığı durumu gösterir. Verilen iş parçacığı için Başlat işlevi, kanal adına duraklattığımda görüntülenir. Eşzamanlılık görselleştiricisi çeşitli türden iş parçacıklarıyla algılar. En yaygın türü aşağıdaki tabloda gösterilmektedir.
+## <a name="thread-channels"></a>İş parçacığı kanalları
+ İş parçacığı kanalı, yalnızca bir iş parçacığı için iş parçacığı durumunu renk olarak gösterir. Kanal adını duraklattığınızda, verilen iş parçacığının başlangıç işlevi görüntülenir. Eşzamanlılık Görselleştiricisi çeşitli iş parçacığı türleri algılar. En yaygın türler aşağıdaki tabloda gösterilmiştir.
 
 |||
 |-|-|
-|Ana iş parçacığı|Uygulama başlangıç iş parçacığı.|
-|Çalışan iş parçacığı|Uygulamanın ana iş parçacığı tarafından oluşturulmuş bir iş parçacığı.|
-|CLR çalışan iş parçacığı|Ortak dil çalışma (CLR) tarafından oluşturulan çalışan iş parçacığı.|
-|Hata ayıklayıcı Yardımcısı|Visual Studio hata ayıklayıcı tarafından oluşturulan çalışan iş parçacığı.|
-|ConcRT iş parçacığı|Microsoft eşzamanlılık çalışma zamanı tarafından oluşturulan bir iş parçacığı.|
-|GDI iş parçacığı|Varsayılmaktadır tarafından oluşturulmuş bir iş parçacığı.|
-|OLE/RPC iş parçacığı|Bir RPC iş parçacığı oluşturulmuş bir iş parçacığı.|
-|RPC iş parçacığı|Bir RPC iş parçacığı oluşturulmuş bir iş parçacığı.|
-|Winsock iş parçacığı|Winsock iş parçacığı oluşturulmuş bir iş parçacığı.|
-|İş parçacığı havuzu|CLR iş parçacığı havuzu tarafından oluşturulmuş bir iş parçacığı.|
+|Ana iş parçacığı|Uygulamayı başlatan iş parçacığı.|
+|İşçi iş parçacığı|Uygulama ana iş parçacığı tarafından oluşturulan bir iş parçacığı.|
+|CLR İşçi İş Parçacığı|Ortak dil çalışma zamanı (CLR) tarafından oluşturulan bir alt iş parçacığı.|
+|Hata Ayıklayıcı Yardımcısı|Visual Studio hata ayıklama tarafından oluşturulan bir işçi iş parçacığı.|
+|ConcRT İplik|Microsoft Concurrency Runtime tarafından oluşturulan bir iş parçacığı.|
+|GDI Konu|GDIPlus tarafından oluşturulan bir iş parçacığı.|
+|OLE/RPC İş Parçacığı|RPC İşçi İş parçacığı olarak oluşturulan bir iş parçacığı.|
+|RPC İş Parçacığı|RPC İş parçacığı olarak oluşturulan bir iş parçacığı.|
+|Winsock Konu|Winsock Thread olarak oluşturulan bir iş parçacığı.|
+|Konu Havuzu|CLR İş Parçacığı Havuzu tarafından oluşturulan bir iş parçacığı.|
 
-## <a name="disk-channels"></a>Disk kanallar
- Disk kanalları, fiziksel bilgisayardaki sürücüleri karşılık gelir. Okuma ve yazma işlemleri için farklı bir kanal sistem üzerindeki her fiziksel sürücü olduğundan, her sürücü iki kanal içerir. Disk numaralarını çekirdek cihaz adlara karşılık gelir. Bir disk kanal yalnızca diskte etkinliği olup olmadığını gösterilir.
+## <a name="disk-channels"></a>Disk kanalları
+ Disk kanalları bilgisayardaki fiziksel sürücülere karşılık gelir. Sistemdeki her fiziksel sürücü için Okuma ve Yazma işlemleri için ayrı kanallar bulunduğundan, her sürücünün iki kanalı vardır. Disk numaraları çekirdek aygıt adlarına karşılık gelir. Bir disk kanalı yalnızca diskte etkinlik varsa gösterilir.
 
-## <a name="marker-channels"></a>İşaret kanallar
- İşaret kanalları, uygulama ve kullandığı kitaplıkları tarafından oluşturulan olayları karşılık gelir. Örneğin, görev paralel kitaplığı, paralel desenler kitaplığı ve C++ AMP işaretçileri olarak görüntülenen olayları oluşturur. Kanal açıklaması yanında görüntülenen bir iş parçacığı kimliği ile ilişkili her işaret kanalıdır. Olayı oluşturan iş parçacığı kimliği tanımlar. Kanal açıklaması, olaylar için olay izleme Windows (ETW) sağlayıcısı adını içerir. Kanal, olaylarından görüntülerse [eşzamanlılık görselleştiricisi SDK'si](../profiling/concurrency-visualizer-sdk.md), seri adı da görüntülenir.
+## <a name="marker-channels"></a>İşaretleyici kanalları
+ İşaretleyici kanalları, uygulama tarafından oluşturulan olaylara ve kullandığı kitaplıklara karşılık gelir. Örneğin, Görev Paralel Kitaplığı, Paralel Desenler Kitaplığı ve C++ AMP işaretçiolarak görüntülenen olaylar oluşturur. Her işaretçi kanalı, kanalın açıklamasının yanında görüntülenen bir iş parçacığı kimliğiyle ilişkilidir. Kimlik, olayı oluşturan iş parçacığı tanımlar. Kanalın açıklaması, olayları oluşturan Windows için Olay İzleme (ETW) sağlayıcısının adını içerir. Kanal [Eşzamanlı Görselleştirici SDK'daki](../profiling/concurrency-visualizer-sdk.md)olayları görüntülerse, dizi adı da görüntülenir.
 
-## <a name="gpu-channels"></a>GPU kanallar
- GPU kanalları sistemde DirectX 11 etkinliği hakkındaki bilgileri görüntüler.  Grafik kartı ile ilişkili her DirectX altyapısı, ayrı bir kanalı vardır.  Tek tek parçaları DMA paket işlenmesi için harcanan zamanı temsil eder.
+## <a name="gpu-channels"></a>GPU kanalları
+ GPU kanalları sistemde DirectX 11 etkinliği hakkında bilgi görüntüler.  Grafik kartıyla ilişkili her DirectX motorunun ayrı bir kanalı vardır.  Tek tek segmentler, Bir DMA paketini işlemek için harcanan zamanı temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İş Parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)
+- [İş parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)

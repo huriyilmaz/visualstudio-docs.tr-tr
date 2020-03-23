@@ -1,26 +1,26 @@
 ---
 ms.openlocfilehash: 8adac174fbc78778e7154a205088fb9e9a57ae4a
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "68143544"
 ---
 
-1. Visual Studio'da açın ASP.NET projesi bulunduğu bilgisayarda, Çözüm Gezgini'nde projeye sağ tıklayıp seçin **Yayımla**.
+1. Visual Studio'da ASP.NET projeyi açtığınız bilgisayarda, Solution Explorer'daki projeyi sağ tıklatın ve **Yayımla'yı**seçin.
 
-1. Tüm yayımlama profilleri, daha önce yapılandırdıysanız **Yayımla** bölmesi görünür. Tıklayın **yeni profil oluşturma**.
+1. Yayımlama profillerini daha önce yapılandırmışsanız, **Yayımla** bölmesi görüntülenir. **Yeni profil oluştur'u**tıklatın.
 
-1. İçinde **yayımlama hedefi seçin** iletişim kutusu, tıklayın **profilini içeri aktarma**.
+1. **Yayımlama hedef** iletişim kutusunu seç'te **Profili İçe Aktar'ı**tıklatın.
 
-    ![Seçin yayımlama](../../deployment/media/tutorial-publish-tool-import-profile.png)
+    ![Yayımla'yı Seçin](../../deployment/media/tutorial-publish-tool-import-profile.png)
 
-1. Önceki bölümde oluşturduğunuz yayımlama ayarları dosyası konumuna gidin.
+1. Önceki bölümde oluşturduğunuz yayımlama ayarları dosyasının konumuna gidin.
 
-1. İçinde **yayımlama ayarları dosyasını içeri aktar** iletişim kutusu gidin ve önceki bölümde oluşturduğunuz profili seçin ve tıklayın **açık**.
+1. Ayarlar **Dosyasını Al** kutusunu içe gidin ve önceki bölümde oluşturduğunuz profili seçin ve **Aç'ı**tıklatın.
 
-    Visual Studio dağıtım işlemi başlar ve ilerleme durumunu ve sonuçları çıktı penceresini gösterir.
+    Visual Studio dağıtım işlemini başlatır ve Çıktı penceresi ilerleme ve sonuçları gösterir.
 
-    Herhangi bir dağıtım hataları alırsanız, tıklayın **ayarları** ayarlarını düzenlemek için. Ayarları değiştirin ve tıklayın **doğrulama** yeni ayarlarını test etmek için. Ana bilgisayar adı bulunamıyorsa, ana bilgisayar adı yerine IP adresi deneyin **sunucu** ve **hedef URL** alanları.
+    Herhangi bir dağıtım hatası alırsanız, ayarları yeniden yapmak için **Ayarlar'ı** tıklatın. Yeni ayarları test etmek için ayarları değiştirin ve **Doğrula'yı** tıklatın. Ana bilgisayar adı bulunamazsa, **Sunucu** ve **Hedef URL** alanlarında ana bilgisayar adı yerine IP adresini deneyin.
 
-    ![Yayımla aracı ayarlarını düzenleyin](../../deployment/media/tutorial-configure-publish-settings-in-tool.png)
+    ![Yayımlama aracındaki ayarları düzenleme](../../deployment/media/tutorial-configure-publish-settings-in-tool.png)

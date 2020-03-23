@@ -1,7 +1,7 @@
 ---
-title: Flask Öğreticisi 5. adımında Visual Studio, proje şablonu yoklamalar öğrenin
+title: Visual Studio adım 5, Anketler proje şablonu Flask öğretici öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri, özellikle yoklamalar Flask Web projesi ve polls – Webový projekt Flask/Jade şablonları özelliklerinin bağlamında Flask temel bilgileri bir kılavuz.
+description: Visual Studio projeleri bağlamında Flask temelleri bir walkthrough, özellikle Anketler Flask Web Projesi ve Anketler Flask / Yeşim Web Projesi şablonları özellikleri.
 ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,71 +12,71 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: c540dfef9d2d46bb621432b3e37438e0b6b07298
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70154891"
 ---
-# <a name="step-5-use-the-polls-flask-web-project-template"></a>5\. Adım: Flask Web projesi şablonunu yoklayıp kullanın
+# <a name="step-5-use-the-polls-flask-web-project-template"></a>Adım 5: Anketler Flask Web Projesi şablonu kullanın
 
-**Önceki adım: [Tam Flask Web projesi şablonunu kullanın](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
+**Önceki adım: [Flask Web Project şablonuna tam olarak kullanın](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
 
-Visual Studio'nun "Flask Web projesi" şablonu anladım artık "Yoklamalar Flask Web üzerinde aynı kod tabanının yapılar projesi", üçüncü Flask şablonu bakabilirsiniz.
+Visual Studio'nun "Flask Web Project" şablonundan anlayınca, artık aynı kod tabanını temel alan üçüncü Flask şablonu olan "Polls Flask Web Project"e bakabilirsiniz.
 
-Bu adımda şunların nasıl yapılır:
+Bu adımda nasıl öğrenirsiniz:
 
 > [!div class="checklist"]
-> - Şablondan proje oluşturma ve veritabanı başlatılamıyor (adım 5 - 1)
-> - Veri modelleri (5-2. adım) Anlama
-> - Yedekleme veri deposu (5-3. adım) Anlama
-> - Yoklama sonuçları ve ayrıntı görünümleri (5-4. adım) Anlama
+> - Şablondan bir proje oluşturun ve veritabanını başlatma (adım 5-1)
+> - Veri modellerini anlama (adım 5-2)
+> - Destek veri depolarını anlama (adım 5-3)
+> - Anket ayrıntılarını ve sonuç görünümlerini anlama (adım 5-4)
 
-Visual Studio kullanarak uygulamanın aynısını üretir, ancak Jade uzantı Jinja şablon oluşturma altyapısı için kullanır. "Windows Flask/Jade polls – Webový projekt" şablonu da sağlar. Ayrıntılar için bkz [adım 4 - Flask/Jade Web projesi şablonu](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template).
+Visual Studio aynı uygulamayı üreten "Polls Flask/Jade Web Project" şablonu da sağlar, ancak Jinja cazip motoru için Yeşim uzantısını kullanır. Ayrıntılar için Bkz. [Adım 4 - Flask/Jade Web Project şablonu.](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template)
 
 ## <a name="step-5-1-create-the-project"></a>Adım 5-1: Projeyi oluşturma
 
-1. Visual Studio'da Git **Çözüm Gezgini**, sağ **LearningFlask** daha önce Bu öğretici ve seçme içinde oluşturulan çözüm **Ekle**  >   **Yeni proje**. (Alternatif olarak, yeni bir çözüm kullanmak istiyorsanız, seçin **dosya** > **yeni** > **proje** yerine.)
+1. Visual Studio'da **Solution Explorer'a**gidin, bu eğitimde daha önce oluşturulan **LearningFlask** çözümüne sağ tıklayın ve**Yeni Proje** **Ekle'yi** > seçin. (Alternatif olarak, yeni bir çözüm kullanmak istiyorsanız, bunun yerine **Dosya** > **Yeni** > **Projesi'ni** seçin.)
 
-1. Yeni Proje iletişim kutusunda, aramak ve seçmek **yoklamalar Flask Web projesi** şablon "FlaskPolls" proje arayın ve seçin **Tamam**.
+1. Yeni proje iletişim kutusunda, **Polls Flask Web Project** şablonunu arayın ve seçin, projeyi "FlaskPolls" olarak adlandırın ve **Tamam'ı**seçin.
 
-1. Diğer proje şablonları gibi Visual Studio'da, "Yoklamalar Flask Web projesi" şablonu içeren bir *requirements.txt* dosya, Visual Studio bu bağımlılıkların yükleneceği sorar. Seçeneğini **sanal bir ortama yükleme**hem de **sanal ortama ekleme** iletişim kutusunda **Oluştur** Varsayılanları kabul etmek için. ("Yoklamalar Flask/Jade Web Proje" de pyjade gerektirir; bu şablon, Flask ve bunun yanı sıra azure depolama ve pymongo paketleri gerektirir.)
+1. Visual Studio'daki diğer proje şablonları gibi, "Polls Flask Web Project" şablonu bir *requirements.txt* dosyası içerir, Visual Studio bu bağımlılıkları nereye yükleyebileceğinizi sorar. Seçeneği seçin, **sanal ortama yükle**ve Sanal Ortam **Ekle** iletişim kutusunda varsayılanları kabul etmek için **Oluştur'u** seçin. (Bu şablon flask yanı sıra azure depolama ve pymongo paketleri gerektirir; "Anketler Flask / Yeşim Web Projesi" de pyjade gerektirir.)
 
-1. Ayarlama **FlaskPolls** proje bu projeye sağ tıklayarak Visual Studio çözümü için varsayılan olarak **Çözüm Gezgini** seçerek **başlangıçprojesiolarakayarla**. Gösterilen başlangıç projesi içinde hata ayıklayıcısını başlattığınızda nelerin çalıştırılacağını kalın.
+1. **Solution Explorer'daki** projeyi sağ tıklatarak ve **Başlangıç Projesi olarak Set'i**seçerek **FlaskPolls** projesini Visual Studio çözümü için varsayılan olarak ayarlayın. Kalın olarak gösterilen başlangıç projesi, hata ayıklamayı başlattığınızda çalıştırılan şeydir.
 
-1. Seçin **hata ayıklama** > **hata ayıklamayı Başlat** (**F5**) veya **Web sunucusu** server çalıştırmak için araç çubuğunda:
+1. **Hata Ayıklama** > **Hata Ayıklama** **(F5)** seçeneğini belirleyin veya sunucuyu çalıştırmak için araç çubuğundaki **Web Sunucusu** düğmesini kullanın:
 
-    ![Web sunucusu araç çubuğu düğmesi Visual Studio'da çalıştırın.](media/django/run-web-server-toolbar-button.png)
+    ![Visual Studio'da web sunucusu araç çubuğu düğmesini çalıştırın](media/django/run-web-server-toolbar-button.png)
 
-1. Şablon tarafından oluşturulan uygulama hakkında ev ve kişi, üst gezinti çubuğunda kullanma arasında gezinmek üç sayfa vardır. Bir veya iki uygulamanın farklı kısımlarını incelemek için dakika alın (hakkında ve ilgili kişi sayfaları "Flask Web projesi" için çok benzer ve daha ayrıntılı olarak ele değildir).
+1. Şablon tarafından oluşturulan uygulama, üst gezinme çubuğunu kullanarak arasında gezindiğiniz Ana Sayfa, Hakkında ve İletişim olmak üzere üç sayfadan oluşur. Uygulamanın farklı bölümlerini incelemek için bir veya iki dakika ayırın (Hakkında ve İletişim sayfaları "Flask Web Project"e çok benzer ve daha fazla tartışılmaz).
 
-    ![Polls – Flask Web projesi uygulamasının tam görünümü](media/flask/step06-full-app-view.png)
+    ![Polls Flask Web Project uygulamasının tam görünümü](media/flask/step06-full-app-view.png)
 
-1. Giriş sayfasında **örnek yoklamalar Oluştur** düğmesi başlatır açıklanan üç farklı yoklamalar uygulamanın veri deposuyla *models/samples.json* sayfası. Varsayılan olarak, uygulama, uygulama her başlatıldığında sıfırlanır (gösterildiği gibi hakkında sayfasında), bir bellek içi veritabanı kullanır. Uygulama, ayrıca bu makalenin sonraki bölümlerinde açıklandığı gibi Azure depolama ve Mongo DB ile çalışmak için kodu içerir.
+1. Ana sayfada, **Örnek Anketler Oluştur** düğmesi, *models/samples.json* sayfasında açıklanan üç farklı anketle uygulamanın veri deposunu başlangıç olarak sunar. Varsayılan olarak, uygulama her başlatıldığında sıfırlanan bir bellek veritabanı (About sayfasında gösterildiği gibi) kullanır. Uygulama, bu makalede daha sonra açıklandığı gibi Azure Depolama ve Mongo DB ile çalışmak için kod da içerir.
 
-1. Veri deposu başlattık sonra (kısa tutmak için gezinti çubuğunda ve altbilgi atlanır) giriş sayfasında gösterildiği gibi farklı yoklamalarda oy verebilirsiniz:
+1. Veri deposunun başlatılmasını yaptıktan sonra, ana sayfada gösterildiği gibi farklı anketlerde oy verebilirsiniz (gezinme çubuğu ve altbilgi kısalık için atlanır):
 
-    ![Veri deposu başlatıldıktan sonra yoklamalar uygulamasının görünümü](media/flask/step06-polls-initialized.png)
+    ![Veri deposu nun başlatılmasından sonra Anketler uygulamasının görünümü](media/flask/step06-polls-initialized.png)
 
-1. Bir yoklama seçerek, belirli seçimlerini görüntüler:
+1. Bir anket seçmek, belirli seçeneklerini görüntüler:
 
-    ![Bir yoklama için oy arabirimi](media/flask/step06-polls-voting-interface.png)
+    ![Anket için oylama arabirimi](media/flask/step06-polls-voting-interface.png)
 
-1. Oy sonra uygulama sonuçları sayfası gösterilir ve tekrar oy kullanmanıza olanak sağlar:
+1. Oy kullandıktan sonra, uygulama bir sonuç sayfası gösterir ve yeniden oy kullanmanızı sağlar:
 
-    ![Oy sonra Sonuçlar Görünümü](media/flask/step06-polls-results.png)
+    ![Oylamadan sonra sonuç görünümü](media/flask/step06-polls-results.png)
 
-1. İzleyen bölümlerde için uygulamayı bırakabilirsiniz.
+1. Takip eden bölümler için uygulamayı çalışır durumda bırakabilirsiniz.
 
-    Uygulamayı durdurmak istiyorsanız ve [değişiklikleri kaynak denetimine](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control), ilk açın **değişiklikleri** sayfasını **Takım Gezgini**, sanal ortam (klasörünü sağ tıklatın büyük olasılıkla **env**) seçip **bu yerel öğeleri Yoksay**.
+    Uygulamayı durdurmak ve kaynak [denetiminde değişiklikler yapmak](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)istiyorsanız, önce **Team Explorer'da** **Değişiklikler** sayfasını açın , sanal ortam için klasörü sağ tıklatın (muhtemelen **env),** ve **bu yerel öğeleri yoksay'ı**seçin.
 
-### <a name="examine-the-project-contents"></a>Proje içeriğini inceleyin
+### <a name="examine-the-project-contents"></a>Proje içeriğini inceleme
 
-Önce belirtildiği gibi. neleri kadarını "Yoklamalar Flask Web projesi" şablonu (ve "Windows Flask/Jade polls – Webový projekt" şablonu) oluşturulmuş bir projeyi Visual Studio'daki diğer proje şablonları incelediniz, bilgi sahibi olmanız gerekir. Ek adımlar bu makalede daha önemli değişiklikler ve eklemeler, veri modelleri ve ek görünümler özetler.
+Daha önce de belirtildiği gibi. Visual Studio'daki diğer proje şablonlarını araştırdıysanız, "Polls Flask Web Project" şablonundan (ve "Polls Flask/Jade Web Project" şablonundan) oluşturulan bir projede ne varsa, tanıdık olmalıdır. Bu makaledeki ek adımlar, daha önemli değişiklikleri ve eklemeleri, yani veri modellerini ve ek görünümleri özetler.
 
 ## <a name="step-5-2-understand-the-data-models"></a>Adım 5-2: Veri modellerini anlama
 
-Uygulama için veri modellerini yoklama ve tanımlanan seçim adlı Python sınıflardır *modelleri /\_\_init\_\_.py*. Bir yoklama seçim örneklerinin bir koleksiyonunu temsil kullanılabilir yanıtları soru temsil eder. Bir yoklama sayısı (herhangi bir seçim için) oy ve görünümleri oluşturmak için kullanılan istatistiklerini hesaplamak için bir yöntem de tutar:
+Uygulamanın veri modelleri, Poll and Choice adlı Python sınıflarıdır ve *modellerde/\_\_init\_\_.py'de*tanımlanır. Anket, Seçim örnekleri koleksiyonunun kullanılabilir yanıtları temsil ettiği bir soruyu temsil eder. Anket ayrıca toplam oy sayısını (herhangi bir seçim için) ve görünüm oluşturmak için kullanılan istatistikleri hesaplama yöntemini de korur:
 
 ```python
 class Poll(object):
@@ -108,22 +108,22 @@ class Choice(object):
         self.votes_percentage = None
 ```
 
-Bu veri modelleri sonraki adımda açıklanan veri depolarını yedekleme farklı türleriyle çalışmak uygulamanın görünüm sağlayan genel özetlerdir.
+Bu veri modelleri, uygulamanın görünümlerinin bir sonraki adımda açıklanan farklı destek veri depolarına karşı çalışmasını sağlayan genel soyutlamalardır.
 
-## <a name="step-5-3-understand-the-backing-data-stores"></a>Adım 5-3: Veri depolarını yedeklemeyi anlama
+## <a name="step-5-3-understand-the-backing-data-stores"></a>Adım 5-3: Destek veri depolarını anlama
 
-"Windows Flask polls – Webový projekt" şablonu ile oluşturulan uygulama, bellek, Azure tablo depolama veya Mongo DB veritabanına bir veri deposuna karşı çalıştırabilirsiniz.
+"Polls Flask Web Project" şablonu tarafından oluşturulan uygulama bellekte, Azure tablo depolamasında veya Mongo DB veritabanında bir veri deposuna karşı çalıştırılabilir.
 
-Veri depolama mekanizmasını gibi çalışır:
+Veri depolama mekanizması aşağıdaki gibi çalışır:
 
-1. Depo türü aracılığıyla belirtilen `REPOSITORY_NAME` "bellek", "azuretablestore" veya "mongodb" için ayarlanan ortam değişkeni. Bir bit kod *settings.py* varsayılan olarak "bellek" kullanarak adını alır. Yedekleme deposu değiştirmek istiyorsanız, ortam değişkenini ayarlamak ve uygulamayı yeniden başlatmanız gerekir.
+1. Depo türü, "bellek", `REPOSITORY_NAME` "azuretablestore" veya "mongodb" olarak ayarlanabilen ortam değişkeni aracılığıyla belirtilir. *settings.py'daki* bir kod, varsayılan olarak "bellek" kullanarak adı alır. Destek mağazasını değiştirmek istiyorsanız, ortam değişkenini ayarlamanız ve uygulamayı yeniden başlatmanız gerekir.
 
     ```python
     from os import environ
     REPOSITORY_NAME = environ.get('REPOSITORY_NAME', 'memory')
     ```
 
-1. *Settings.py* ardından başlatır kod bir `REPOSITORY_SETTINGS` nesne. Azure tablo depolama veya kara DB kullanmak istiyorsanız, önce bu veri depoları başka bir yerde başlatın, ardından gerekir uygulama Mağazası'na nasıl bağlanacaklarını gerekli ortam değişkenlerini ayarlayın:
+1. *settings.py* kodu daha sonra `REPOSITORY_SETTINGS` bir nesneyi başharfe ait hale Azure tablo deposunu veya Mondo DB'yi kullanmak istiyorsanız, önce bu veri depolarını başka bir yerde başlatmanız, ardından uygulamaya mağazaya nasıl bağlanış yapılacağını söyleyen gerekli ortam değişkenlerini ayarlamanız gerekir:
 
     ```python
     if REPOSITORY_NAME == 'azuretablestorage':
@@ -145,7 +145,7 @@ Veri depolama mekanizmasını gibi çalışır:
         raise ValueError('Unknown repository.')
     ```
 
-1. İçinde *views.py*, uygulamayı başlatmak için bir Üreteç yöntemi çağıran bir `Repository` veri deposunun adı ve ayarları kullanarak nesne:
+1. *views.py'* de uygulama, veri deposunun `Repository` adını ve ayarlarını kullanarak bir nesneyi başlatmayı fabrika yöntemi olarak çağırır:
 
     ```python
     from FlaskPolls.models import PollNotFound
@@ -155,7 +155,7 @@ Veri depolama mekanizmasını gibi çalışır:
     repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
     ```
 
-1. `factory.create_repository` Yöntemi içinde bulunan *models\factory.py*, hangi yalnızca uygun depoyu modülü içe aktarır ve ardından oluşturur bir `Repository` örneği:
+1. Yöntem `factory.create_repository` *modelleri bulunur\factory.py*, sadece uygun depo modülü ithal, sonra bir `Repository` örnek oluşturur:
 
     ```python
     def create_repository(name, settings):
@@ -174,20 +174,20 @@ Veri depolama mekanizmasını gibi çalışır:
         return Repository(settings)
     ```
 
-1. Uygulamaları `Repository` her veri deposuna özel bir sınıf içinde bulunabilir *models\azuretablestorage.py*, *models\mongodb.py*, ve *models\memory.py* . Azure depolama uygulaması, azure depolama paketinden kullanır; Mongo DB uygulaması pymongo paketi kullanır. 5-1. adımda da belirtildiği gibi her iki paketi de proje şablonunun içerdiği *requirements.txt* dosya. Ayrıntıları keşfetmek için okuyucu bir alıştırma olarak kalır.
+1. Her veri deposuna özgü `Repository` sınıfın uygulamaları *modeller\azuretablestorage.py,* *models\mongodb.py*ve *models\memory.py*bulunabilir. Azure depolama uygulaması azure depolama paketini kullanır; Mongo DB uygulaması pymongo paketini kullanır. Adım 5-1'de belirtildiği gibi, her iki paket de proje şablonunun *gereksinimleri.txt* dosyasına dahildir. Ayrıntıları keşfetmek okuyucu için bir egzersiz olarak bırakılır.
 
-Kısacası, `Repository` sınıfı veri deposu özelliklerini özetler ve uygulama ortam değişkenlerini seçin ve kullanmak için üç uygulamalarının hangi yapılandırmak için çalışma zamanında kullanır.
+Kısacası, `Repository` sınıf veri deposunun özelliklerini soyutlar ve uygulama, üç uygulamadan hangisini kullanacağını seçmek ve yapılandırmak için çalışma zamanında ortam değişkenlerini kullanır.
 
-Bu nedenle isterseniz, aşağıdaki adımları proje şablonu tarafından sağlanan üç değerinden farklı bir veri deposu desteği ekleyin:
+Aşağıdaki adımlar, istenirse, proje şablonu tarafından sağlanan üç veri deposundan farklı bir veri deposu için destek ekler:
 
-1. Kopyalama *memory.py* yeni bir dosya için temel arabirimi olması `Repository` sınıfı.
-1. Kullanmakta olduğunuz veri deposunda uygun olarak bu sınıfın uygulaması değiştirin.
-1. Değiştirme *factory.py* diğerine eklemek için `elif` çalışmasını eklenen veri deponuz için bir ad tanır ve uygun modülü içe aktarır.
-1. Değiştirme *settings.py* başka bir ad tanımak için `REPOSITORY_NAME` ortam değişkeni ve başlatmak için `REPOSITORY_SETTINGS` uygun şekilde.
+1. Sınıfın *memory.py* temel arabirimine sahip olmak için memory.py `Repository` yeni bir dosyaya kopyalayın.
+1. Sınıfın uygulamasını, kullanmakta olduğunuz veri deposuna uygun olarak değiştirin.
+1. Eklenen *factory.py* veri deponuzun adını tanıyan ve uygun modülü içe aktaran başka bir `elif` servis talebi eklemek için factory.py değiştirin.
+1. Ortam değişkenindeki `REPOSITORY_NAME` başka bir adı tanımak `REPOSITORY_SETTINGS` ve buna göre baş harfe getirmek için *settings.py* değiştirin.
 
-### <a name="seed-the-data-store-from-samplesjson"></a>Samples.json veri deposundan temel
+### <a name="seed-the-data-store-from-samplesjson"></a>Data deposunu samples.json'dan tohumla
 
-Uygulama giriş sayfası iletiyi gösterecek şekilde hiçbir anketler, başlangıçta tüm seçilen veri deposu içeren **kullanılabilir hiçbir yoklamalar** ile birlikte **örnek yoklamalar Oluştur** düğmesi. Ancak, düğmeyi seçin, sonra kullanılabilir olup olmadığını yoklar görüntülemek için görünümü değiştirir. Bu anahtar koşullu etiketleri üzerinden gerçekleşir *templates\index.html* (bazı boş satırları verilmemiştir):
+Başlangıçta, seçilen herhangi bir veri deposunda anket bulunmadığından, uygulamanın ana sayfası **Örnek Anketler Oluştur** düğmesiyle birlikte yok etme **iletisini** gösterir. Ancak düğmeyi seçtikten sonra, görünüm kullanılabilir anketleri görüntülemek için değişir. Bu anahtar *şablonlar\index.html* (kısalık için atlanan bazı boş satırlar) koşullu etiketler ilerler:
 
 ```html
 {% extends "layout.html" %}
@@ -216,9 +216,9 @@ Uygulama giriş sayfası iletiyi gösterecek şekilde hiçbir anketler, başlang
 {% endblock %}
 ```
 
-`polls` Şablon değişkeni gelen çağrısından `repository.get_polls`, döndüren bir şey veri deposu başlatılana kadar.
+Şablondaki `polls` `repository.get_polls`değişken, veri deposu başaçılana kadar hiçbir şey döndürmeyen bir çağrıdan gelir.
 
-Seçme **örnek yoklamalar Oluştur** düğmesi /seed URL'sine gider. Bu rota için işleyici tanımlanan *views.py*:
+**Örnek Anketler Oluştur** düğmesini seçmek /seed URL'sine yönlendirilir. Bu rotanın işleyicisi *views.py*tanımlanır:
 
 ```python
 @app.route('/seed', methods=['POST'])
@@ -228,21 +228,21 @@ def seed():
     return redirect('/')
 ```
 
-Çağrı `repository.add_sample_polls()` sona eriyor belirli birinde `Repository` seçilen veri deponuz için uygulamaları. Her uygulama çağrıları `_load_samples_json` yöntemi bulunan *modelleri\_\_init\_\_.py* yüklenecek *models\samples.json* dosyası belleğe, ardından gerekli oluşturmak için bu verileri yinelenir `Poll` ve `Choice` veri deposundaki nesne.
+Arama, `repository.add_sample_polls()` seçtiğiniz veri deposu için `Repository` belirli uygulamalardan birinde sona erer. Her uygulama `_load_samples_json` *\_\_modelleri\_\_init .py* bulunan yöntemi *çağırır modelleri\samples.json* dosyasını belleğe yüklemek için, `Poll` sonra `Choice` gerekli ve nesneleri veri deposunda oluşturmak için bu verileri üzerinden yineler.
 
-Bu işlem tamamlandıktan sonra `redirect('/')` deyiminde `seed` yöntemi giriş sayfasına götürür. Çünkü `repository.get_polls` artık koşullu etiketleri bir veri nesnesi döndürür *templates\index.html* artık yoklamalar içeren bir tablo oluşturur.
+Bu işlem tamamlandıktan `redirect('/')` sonra, `seed` yöntemdeki deyim ana sayfaya geri döner. Artık `repository.get_polls` bir veri nesnesi döndürdeğinden, *şablonlar\index.html'deki* koşullu etiketler artık anketleri içeren bir tablo işler.
 
-### <a name="question-how-does-one-add-new-polls-to-the-app"></a>Unuza Uygulamaya yeni bir yoklamaları nasıl ekler?
+### <a name="question-how-does-one-add-new-polls-to-the-app"></a>Soru: Uygulamaya nasıl yeni anketler eklenir?
 
-Yanıtınıza Proje şablonu aracılığıyla belirtilen uygulama, yoklamaları ekleme veya düzenlemeyle ilgili bir tesis içermez. Değiştirebileceğiniz *models\samples.json* yeni başlatma verilerini oluşturmak için ancak bunun yapılması veri deposunu sıfırlama anlamına. Düzenleme özellikleri uygulamak için genişletmek gereken `Repository` sınıf arabirimi gerekli oluşturmak için yöntemleri ile `Choice` ve `Poll` örnekleri, bu yöntemleri kullanan ek sayfalarında sonra bir kullanıcı Arabirimi uygulayın.
+Yanıt: Proje şablonu aracılığıyla sağlanan uygulama, anket ekleme veya düzenleme olanağı içermez. Yeni başlatma verileri oluşturmak için *models\samples.json'u* değiştirebilirsiniz, ancak bunu yapmak veri deposunu sıfırlamak anlamına gelir. Düzenleme özelliklerini uygulamak için, gerekli `Repository` `Choice` ve `Poll` örnekleri oluşturmak için sınıf arabirimini yöntemlerle genişletmeniz ve ardından bu yöntemleri kullanan ek sayfalarda bir web-i ii uygulamanız gerekir.
 
-## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>Adım 5-4: Yoklama ayrıntılarını ve sonuçlar görünümlerini anlayın
+## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>Adım 5-4: Anket ayrıntılarını ve sonuç görünümlerini anlama
 
-Çoğu "Yoklamalar Flask Web projesi" ve "Windows Flask/Jade polls – Webový projekt" şablonları tarafından üretilen görünümlerini hakkında ve iletişim için görünümleri gibi sayfa, "Flask Web projesi" (veya "Webový projekt Flask/Jade") şablonu tarafından oluşturulan görünümler, çalıştığınız oldukça benzer ile Bu öğreticide daha önce. Önceki bölümde ayrıca başlatma düğmesini veya yoklamalar listesini göstermek için giriş sayfasına nasıl uygulandığını öğrendiniz.
+"Polls Flask Web Project" ve "Polls Flask/Jade Web Project" şablonları tarafından oluşturulan görünümlerin çoğu, Bu eğitimde daha önce birlikte çalıştığınız "Flask Web Project" (veya "Flask/Jade Web Project") şablonu tarafından oluşturulan görünümlere oldukça benzerdir. Önceki bölümde, başlangıç düğmesini veya anket listesini göstermek için ana sayfanın nasıl uygulandığını da öğrendiniz.
 
-Burada kalan tek bir yoklama sonuçları görünümünü ve oylama (Ayrıntılar) incelemektir.
+Burada kalan tek bir anketin oy verme (ayrıntıları) ve sonuç görünümünü incelemektir.
 
-Giriş sayfasından bir yoklama seçtiğinizde, uygulama için URL /poll/ gider\<anahtarı\> burada *anahtar* olduğundan anket için benzersiz tanımlayıcısı. İçinde *views.py* gördüğünüz gibi `details` işlevi bu URL hem GET hem de istekleri için yönlendirmeyi işler atanır. Bu kullanarak görebilirsiniz `<key>` URL rota hem hiçbir yolu bu formun aynı işleve eşlenir ve işlevi bu aynı ada sahip bir değişken oluşturur:
+Ana sayfadan bir anket seçtiğinizde, uygulama URL/poll/\<\> *anahtarına* doğru identifer olarak yönlendirilir. *views.py,* işlevin `details` hem GET hem de istekler için bu URL yönlendirmesini işlemek üzere atandığını görebilirsiniz. Ayrıca, URL rotasında kullanmanın, `<key>` bu formun herhangi bir rotasını aynı işleve eşlediğini ve aynı adıtaşıyan işleviçin bir bağımsız değişken oluşturduğunu da görebilirsiniz:
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -266,7 +266,7 @@ def details(key):
     )
 ```
 
-Bir yoklama (GET istekleri) göstermek için bu işlevi yalnızca üzerine çağırır *templates\details.html*, yoklama 's yinelenir `choices` dizi, her biri için bir radyo düğmesi oluşturma.
+Bir anket (GET isteklerini) göstermek için, bu işlev yalnızca anketin `choices` dizisini yineleyen *template\details.html'i*çağırır ve her biri için bir radyo düğmesi oluşturur.
 
 ```html
 {% extends "layout.html" %}
@@ -296,9 +296,9 @@ Bir yoklama (GET istekleri) göstermek için bu işlevi yalnızca üzerine çağ
 {% endblock %}
 ```
 
-Çünkü **oy** düğmeye sahip `type="submit"`, seçerek oluşturan bir POST isteği geri yönlendirilir aynı URL'ye `details` bir kez daha işlev. Bu kez, ancak bu seçimi form verileri ayıklar ve için /results/ yönlendiren\<seçim\>.
+Oy **düğmesi** `type="submit"`, seçerek bir POST isteği işlevine bir kez daha yönlendirilen `details` aynı URL'ye geri oluşturur. Ancak bu kez, form verilerinden seçimi ayıklar ve /results/choice'a\<\>yönlendirir.
 
-/Results/\<anahtarı\> URL yönlendirileceğini ardından `results` işlevi *views.py*, daha sonra Anket'ın çağıran `calculate_stats` yöntemi ve gösteren *templates\results.html* işleme için:
+/results/\<key\> URL daha sonra `results` *views.py*işlevine yönlendirilir , daha `calculate_stats` sonra anketin yöntemini çağırır ve oluşturma için *template\results.html* kullanır:
 
 ```python
 @app.route('/results/<key>')
@@ -314,7 +314,7 @@ def results(key):
     )
 ```
 
-*Results.html* şablonu, bölüm yalnızca yoklama 's seçenekleri yinelenir ve her biri için bir ilerleme çubuğu oluşturur:
+*Results.html* şablonu, kendi payına, sadece anketin seçimleri ile yinelenir ve her biri için bir ilerleme çubuğu oluşturur:
 
 ```html
 {% extends "layout.html" %}
@@ -346,14 +346,14 @@ def results(key):
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!Note]
-> Visual Studio çözümünüzü kaynak denetimine Bu öğretici boyunca yürüten, artık başka bir işleme yapmak için iyi bir zamandır. Çözümünüz GitHub 'daki öğretici kaynak kodu ile eşleşmelidir: [Microsoft/Python-Örnek-vs-Learning-Flask](https://github.com/Microsoft/python-sample-vs-learning-flask).
+> Bu öğretici boyunca kaynak kontrolü için Visual Studio çözüm taahhüt oldum, şimdi başka bir taahhüt yapmak için iyi bir zaman. Çözümünüz GitHub'daki öğretici kaynak koduyla eşleşmelidir: [Microsoft/python-sample-vs-learning-flask.](https://github.com/Microsoft/python-sample-vs-learning-flask)
 
-Artık Visual Studio'da "Boş Flask Web projesi", "[/Jade] Flask Web projesi" ve "Windows Flask [/Jade] polls – Webový projekt" şablonları tamamen incelediniz. Flask kullanarak şablonları, görünümleri ve yönlendirme gibi tüm temellerini öğrendiğinize göre ve yedekleme veri deposu kullanmayı gördünüz. Artık bir web uygulaması tüm görünümleri ve gereksinim modelleri kendi kullanmaya başlamak mümkün olması gerekir.
+Visual Studio'da "Blank Flask Web Project", "Flask[/Jade] Web Project" ve "Polls Flask[/Jade] Web Project" şablonlarının tamamını araştırdınız. Görünümleri, şablonları ve yönlendirmeyi kullanma gibi Flask'ın tüm temel lerini öğrendiniz ve destek veri depolarını nasıl kullanacağınızı gördünüz. Artık ihtiyacınız olan herhangi bir görünüm ve modelile kendi web uygulamaüzerinde başlamak gerekir.
 
-Bir web uygulaması geliştirme bilgisayarınızda çalışan uygulamayı müşterileriniz için kullanılabilir hale getirme, tek bir adımdır. Sonraki adımlar, aşağıdaki görevleri şunlardır:
+Geliştirme bilgisayarınızda bir web uygulaması çalıştırmak, uygulamayı müşterilerinizin kullanımına sunmayı sağlamanın yalnızca bir adımıdır. Sonraki adımlar aşağıdaki görevleri içerebilir:
 
-- Web uygulamasını Azure App Service gibi bir üretim sunucusuna dağıtın. Bkz: [Azure App Service'e yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md).
+- Web uygulamasını Azure Uygulama Hizmeti gibi bir üretim sunucusuna dağıtın. Bkz. [Azure Uygulama Hizmetinde Yayımla](publishing-python-web-applications-to-azure-from-visual-studio.md).
 
-- PostgreSQL, MySQL ve SQL Server'ın (her biri Azure üzerinde barındırılabilir) gibi başka bir üretim düzeyinde veri deposunu kullanan bir depo uygulaması ekleyin. Ayrıca [Python için Azure SDK'sı](/azure/python/) Cosmos DB yanı sıra tablo ve BLOB'ları gibi Azure depolama hizmetleriyle çalışmaya.
+- PostgreSQL, MySQL ve SQL Server gibi başka bir üretim düzeyinde veri deposu kullanan (tümü Azure'da barındırılan) bir depo uygulaması ekleyin. [Python için Azure SDK'yı,](/azure/python/) tablolar ve lekeler gibi Azure depolama hizmetlerinin yanı sıra Cosmos DB ile çalışmak için de kullanabilirsiniz.
 
-- Azure DevOps gibi bir hizmette bir sürekli tümleştirme/sürekli dağıtım işlem hattı ayarlayın. Kaynak denetimi (aracılığıyla Azure depoları veya GitHub ya da başka bir yerde) ile çalışma ek olarak, otomatik olarak yayın için bir önkoşul olarak birim testlerinizi çalıştırmak için bir Azure DevOps projesi yapılandırabilir ve ayrıca işlem hattı için bir hazırlık sunucusu dağıtmak için yapılandırma üretim ortamına dağıtmadan önce ek sınar. Ayrıca, Azure DevOps çözümlerini App Insights gibi izleme ile tümleşir ve Çevik planlama araçları ile tüm döngüyü kapatır. Daha fazla bilgi için bkz. [Python için BIR CI/CD işlem hattı oluşturma Azure DevOps Projeleri](/azure/devops-project/azure-devops-project-python?view=vsts) ve ayrıca genel [Azure DevOps belgeleri](/azure/devops/?view=vsts).
+- Azure DevOps gibi bir hizmette sürekli tümleştirme/sürekli dağıtım ardışık bir şekilde ayarlayın. Kaynak denetimiyle (Azure Repos veya GitHub veya başka bir yerden) çalışmaya ek olarak, birim testlerinizi serbest bırakma için ön koşul olarak otomatik olarak çalıştıracak bir Azure DevOps Projesi'ni yapılandırabilir ve ayrıca ardışık hattı bir evreleme sunucusuna dağıtacak şekilde yapılandırabilirsiniz. üretime dağıtmadan önce ek testler. Ayrıca Azure DevOps, App Insights gibi izleme çözümleriyle bütünleşir ve çevik planlama araçlarıyla tüm döngüyü kapatır. Daha fazla bilgi için, [Azure DevOps Projeleri ile Python için bir CI/CD ardışık alanı oluşturma](/azure/devops-project/azure-devops-project-python?view=vsts) ve ayrıca genel Azure [DevOps belgeleri](/azure/devops/?view=vsts)ne bakın.

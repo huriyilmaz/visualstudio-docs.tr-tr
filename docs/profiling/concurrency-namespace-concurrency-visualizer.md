@@ -1,5 +1,5 @@
 ---
-title: Eşzamanlılık Namespace (eşzamanlılık görselleştiricisi) | Microsoft Docs
+title: Eşzamanlılık Namespace (Eşzamanlı Lık Görselleştiricisi) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 258cb5964946d5dbf136463538905d970346b8df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "63001074"
 ---
-# <a name="concurrency-namespace-concurrency-visualizer"></a>Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi)
-`Concurrency` Size işlevleri erişmek için eşzamanlılık çalışma zamanı C++ için eşzamanlı programlama çerçevesi ve ad alanı sınıflar sağlar. Daha fazla bilgi için [eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime).
+# <a name="concurrency-namespace-concurrency-visualizer"></a>Eşzamanlı ad alanı (Eşzamanlılık Görselleştiricisi)
+Ad `Concurrency` alanı, C++'ın eşzamanlı programlama çerçevesi olan Eşzamanlı Çalışma Süresi'ne erişmenizi sağlayan sınıflar ve işlevler sağlar. Daha fazla bilgi için [Eşzamanlılık Çalışma Zamanı'na](/cpp/parallel/concrt/concurrency-runtime)bakın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,12 +32,12 @@ namespace Concurrency;
 
 ### <a name="namespaces"></a>Ad Alanları
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |----------|-----------------|
-|[Tanılama Ad Alanı](../profiling/diagnostic-namespace.md)|`diagnostics` Ad alanı için eşzamanlılık görselleştiricisi işaretleyicileri yayma işlevselliği sağlar.|
+|[Tanılama Ad Alanı](../profiling/diagnostic-namespace.md)|Ad `diagnostics` alanı, EşzamanlıLık Görselleştirici işaretçileri yayan işlevsellik sağlar.|
 
 ## <a name="requirements"></a>Gereksinimler
  **Başlık:** cvmarkersobj.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C Kitaplık Başvurusu](../profiling/c-library-reference.md)
+- [C kitaplık başvurusu](../profiling/c-library-reference.md)

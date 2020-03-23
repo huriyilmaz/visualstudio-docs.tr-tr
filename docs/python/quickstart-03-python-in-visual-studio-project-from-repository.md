@@ -1,6 +1,6 @@
 ---
-title: Hızlı Başlangıç - Python kodu bir depoyu kopyalamak
-description: Bu hızlı başlangıçta, Visual Studio Takım Gezgini kullanarak Python koans depoyu kopyalayarak Visual Studio'da Python projesi oluşturun.
+title: Quickstart - Python kodunun deposunu klonlama
+description: Bu hızlı başlangıçta, Visual Studio Team Explorer'ı kullanarak Python koans deposunu klonlayarak Visual Studio'da bir Python projesi oluşturursunuz.
 ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
@@ -10,78 +10,78 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 446c2622c01e1b127347a668e199e3e6e6e0b1c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 5d0363626748588b6f4058e197f0d6796ece51ee
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62430681"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "64543147"
 ---
-# <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>Hızlı Başlangıç: Visual Studio'da Python kodunun bir depoyu kopyalama
+# <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>Quickstart: Visual Studio'da Python kodunun deposunu klonlayın
 
-Kaydederler [Visual Studio'da Python desteği yüklü](installing-python-support-in-visual-studio.md), Visual Studio için GitHub uzantısı ekleyebilirsiniz. Uzantı, kolayca Python kodu bir depoyu kopyalamak ve buradan gelen IDE içinde bir proje oluşturun olanak tanır. Her zaman de komut satırında depoları kopyalayın ve ardından Visual Studio'da çalışma.
+[Visual Studio'ya Python desteğini yükledikten](installing-python-support-in-visual-studio.md)sonra Visual Studio için GitHub Uzantısı'nı ekleyebilirsiniz. Uzantı, Python kodunun deposunu kolayca klonlamanızı ve IDE içinden bir proje oluşturmanızı sağlar. Her zaman komut satırında da depoları klonlayabilir ve daha sonra Visual Studio'da onlarla çalışabilirsiniz.
 
-## <a name="install-the-github-extension-for-visual-studio"></a>Visual Studio için GitHub uzantısı yükleme
+## <a name="install-the-github-extension-for-visual-studio"></a>Visual Studio için GitHub Uzantısını yükleyin
 
 [!INCLUDE[install-github-extension](includes/install-github-extension.md)]
 
-## <a name="work-with-github-in-visual-studio"></a>Visual Studio'da GitHub ile çalışma
+## <a name="work-with-github-in-visual-studio"></a>Visual Studio'da GitHub ile çalışın
 
-1. Visual Studio'yu başlatın.
+1. Visual Studio’yu başlatın.
 
-1. Seçin **görünümü** > **Takım Gezgini** açmak için **Takım Gezgini** penceresi içinde GitHub ya da Azure depoları bağlanabilir, ya da bir depoyu kopyalayın. (Görmüyorsanız **Connect** gösterilen sayfası aşağıda, bu sayfasına götürür üst araç çubuğunda Tak simgeyi seçin.)
+1. GitHub veya Azure Repos'a bağlanabileceğiniz veya bir depoyu klonlayabildiğiniz **Takım Gezgini** penceresini açmak için Takım Gezgini'ni **Görüntüle'yi** > **Team Explorer** seçin. (Aşağıda gösterilen **Bağlan** sayfasını görmüyorsanız, sizi o sayfaya götüren üst araç çubuğundaki fiş simgesini seçin.)
 
-    ![Takım Gezgini penceresini gösteren Azure depoları, GitHub ve bir depoyu kopyalama](media/team-explorer.png)
+    ![Azure Repos, GitHub ve bir depoyu klonlama gösteren takım gezgini penceresi](media/team-explorer.png)
 
-1. Altında **yerel Git depoları**seçin **kopya** komutunu ve ardından girin `https://github.com/gregmalcolm/python_koans` kopyalanan dosyalar için bir klasör URL alanına girin ve seçin **kopya** düğmesi.
+1. **Yerel Git Depoları** **altında, Klon** komutunu seçin, ardından URL alanına girin, `https://github.com/gregmalcolm/python_koans` klonlanan dosyalar için bir klasör girin ve **Klon** düğmesini seçin.
 
     > [!Tip]
-    > Belirttiğiniz klasör **Takım Gezgini** kopyalanan dosyalar almak için tam klasördür. Farklı `git clone` bir klonda oluşturma komutu, **Takım Gezgini** depo adı ile otomatik olarak bir alt klasör oluşturmaz.
+    > **Takım Gezgini'nde** belirttiğiniz klasör, klonlanan dosyaları almak için tam klasördür. Komutun `git clone` aksine, **Team Explorer'da** bir klon oluşturmak otomatik olarak deponun adını içeren bir alt klasör oluşturmaz.
 
-1. Kopyalama tamamlandıktan sonra depo adı görünür **yerel Git depoları** listesi. Depo panoya gidin, adına çift tıklayarak **Takım Gezgini**.
+1. Klonlama tamamlandığında, depo adı **Yerel Git Depoları** listesinde görünür. **Takım**Gezgini'ndeki depo panosuna gitmek için bu adı çift tıklatın.
 
-1. Altında **çözümleri**seçin **yeni**.
+1. **Çözümler**altında, **Yeni'yi**seçin.
 
-    ![Takım Gezgini penceresinde, bir kopya yeni proje oluşturma](media/team-explorer-new-project.png)
+    ![Takım gezgini penceresi, klondan yeni bir proje oluşturma](media/team-explorer-new-project.png)
 
-1. İçinde **yeni proje** görüntülenen iletişim gidin **Python** dili (veya "Python" araması) seçin **ilk mevcut Python kodu**, proje için bir ad belirtin ayarlama **konumu** depo ve select aynı klasöre **Tamam**. Açılan sihirbazda seçin **son**.
+1. Görünen **Yeni Proje** iletişim kutusunda, **Python** diline gidin (veya "Python"da arama yapın), **Varolan Python Kodundan**seçin, proje için bir ad belirtin, **Konum'u** depoyla aynı klasöre ayarlayın ve **Tamam'ı**seçin. Görünen sihirbazda **Finish'i**seçin.
 
-1. Seçin **görünümü** > **Çözüm Gezgini** menüsünde.
+1. Menüden**Çözüm Gezgini'ni** **Görüntüle'yi** > seçin.
 
-1. İçinde **Çözüm Gezgini**, genişletin **python3** düğümünü sağ **contemplate_koans.py**seçip **başlangıç dosyası olarak ayarla**. Bu adım, Visual Studio projeyi çalışırken kullanması gereken hangi dosya söyler.
+1. **Çözüm Gezgini'nde** **python3** düğümünü genişletin, **contemplate_koans.py'ye**sağ tıklayın ve **Başlangıç Dosyası olarak Ayarla'yı**seçin. Bu adım Visual Studio'ya projeyi çalıştırırken hangi dosyayı kullanması gerektiğini söyler.
 
-1. Seçin **proje** > **Koans özellikleri** menüden **genel** sekmesini tıklatıp ayarlamak **çalışma dizini** için " python3 ". Başlangıç dosyası konumu yerine Proje kök dizinini Visual Studio varsayılan olarak çalışma dizinini ayarlar nedeniyle bu adım gereklidir (*python3\contemplate_koans.py*, proje özelliklerinde de görebileceğiniz gibi). Program kodu için bir dosya arar *koans.txt* çalışma klasöründe, bu nedenle bu değer değiştirmeden gördüğünüz bir çalışma zamanı hatası.
+1. Menüden **Project** > **Koans Properties'i** seçin, **Genel** sekmesini seçin ve **Çalışma Dizini'ni** "python3" olarak ayarlayın. Bu adım, varsayılan olarak Visual Studio başlangıç dosyasının konumu yerine proje köküne çalışma dizini ayarlar çünkü *(python3\contemplate_koans.py*, proje özellikleri de görebilirsiniz). Program kodu çalışma klasöründe bir dosya *koans.txt* arar, bu nedenle bu değeri değiştirmeden bir çalışma zamanı hatası bakın.
 
-    ![Python projesi için çalışma dizini ayarlama](media/projects-set-working-directory.png)
+    ![Python projesi için çalışma dizinini ayarlama](media/projects-set-working-directory.png)
 
-1. Tuşuna **Ctrl**+**F5** veya **hata ayıklama** > **hata ayıklama olmadan Başlat** programı çalıştırmak için. Görürseniz bir **FileNotFoundError** için *koans.txt*, önceki adımda açıklandığı gibi ayarlar çalışma dizini kontrol edin.
+1. **Ctrl**+**F5** tuşuna basın veya programı çalıştırmak için Hata Ayıklama olmadan **Hata Ayıklama** > **Başlat'ı** seçin. *Koans.txt*için bir **FileNotFoundError** görürseniz, önceki adımda açıklandığı gibi çalışma dizini ayarını denetleyin.
 
-1. Program başarıyla çalıştırıldığında 17 satırında bir onaylama işlemi hatası görüntüler *python3/koans/about_asserts.py*. Bu kasıtlıdır: program öğretmeyi sorununuz tarafından Python kasıtlı tüm hataları düzeltin tasarlanmıştır. (Daha fazla ayrıntı bulunur [Ruby Koans](https://rubykoans.com/), Python Koans ilham.)
+1. Program başarılı bir şekilde çalıştığında, *python3/koans/about_asserts.py*satırında bir iddia hatası görüntüler. Bu kasıtlı: program tüm kasıtlı hataları düzeltmek zorunda Python öğretmek için tasarlanmıştır. (Daha fazla bilgi [Ruby Koans](https://rubykoans.com/)bulunur , Hangi Python Koans ilham.)
 
-    ![İlk Python koans programının çıktısı](media/koans-output.png)
+    ![Python koans programından ilk çıktı](media/koans-output.png)
 
-1. Açık *python3/koans/about_asserts.py* buna giderek **Çözüm Gezgini** ve dosyaya çift tıklayın. Satır numaraları, düzenleyicide varsayılan olarak görünmez dikkat edin. Bunu değiştirmek için seçin **Araçları** > **seçenekleri**seçin **tüm ayarları göster** iletişim kutusunun alt kısmında gidin **metin düzenleyicisi**   >  **Python** > **genel** seçip **satır numaraları**:
+1. **Solution Explorer'da** gezinmeve dosyayı çift tıklatarak *python3/koans/about_asserts.py'yi* açın. Satır numaralarının varsayılan olarak düzenleyicide görünmediğini unutmayın. Bunu değiştirmek için **Araçlar** > **Seçenekleri'ni**seçin, iletişim kutusunun altındaki tüm **ayarları göster'i** seçin, ardından Text **Editor** > **Python** > **General'a** gidin ve **Satır numaralarını**seçin:
 
-    ![Satır numarası Python dosyaları açma](media/options-general-line-numbers.png)
+    ![Python dosyaları için satır numarasını açma](media/options-general-line-numbers.png)
 
-1. Değiştirerek bir hatayı düzeltmek `False` 17 satırında bağımsız değişken `True`. Satır şöyle:
+1. Satır 17'deki `False` bağımsız değişkeni `True`'' ye değiştirerek hatayı düzeltin Satır aşağıdaki gibi okunmalıdır:
 
     ```python
     self.assertTrue(True) # This should be True
     ```
 
-1. Programı yeniden çalıştırın. Visual Studio, hataları hakkında sizi uyarır, yanıt **Evet** kod çalıştırmaya devam etmek için. Daha sonra ilk onay geçirir ve sonraki koan üzerinde programı durdurur bakın. Hataları ve program düzeltme devam etmek istediğiniz gibi yeniden.
+1. Programı yeniden çalıştırın. Visual Studio sizi hatalar konusunda uyarırsa, kodu çalıştırmaya devam etmek için **Evet** ile yanıt verin. Daha sonra ilk çek geçer ve program sonraki koan üzerinde durur bakın. Hataları ve programı istediğiniz gibi düzeltmeye devam edin.
 
 > [!Important]
-> Bu hızlı başlangıçta oluşturduğunuz doğrudan bir kopyasını *python_koans* github deposu. Böyle bir depo yazarı doğrudan değişikliklerden korunur, bu nedenle değişiklikleri depoya denemesi başarısız oluyor. Uygulamada, geliştiriciler bunun yerine kendi GitHub hesabına bir tür bir depo çatalını oluşturmanız, değişiklikleri yapın ve ardından bu değişiklikleri özgün depoya göndermek için çekme istekleri oluşturun. Kendi çatalınızı varsa, daha önce kullanılan özgün depo URL'si yerine URL'sini kullanın.
+> Bu Quickstart'ta, GitHub'daki *python_koans* deposunun doğrudan bir klonunu oluşturdunuz. Böyle bir depo, yazarı tarafından doğrudan değişikliklere karşı korunur, bu nedenle depoda değişiklik yapmaya çalışmak başarısız olur. Uygulamada, geliştiriciler bunun yerine kendi GitHub hesabına böyle bir depo çatal, orada değişiklik yapmak ve daha sonra özgün deposuna bu değişiklikleri göndermek için çekme istekleri oluşturmak. Kendi çatalınız olduğunda, daha önce kullanılan orijinal depo URL'si yerine URL'sini kullanın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Öğretici: Visual Studio'da Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Öğretici: Visual Studio Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [El ile var olan bir Python yorumlayıcısı tanımlayın](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
-- [Visual Studio 2015'te ve daha önce Python desteğini yükleme](installing-python-support-in-visual-studio.md)
-- [Yükleme konumları](installing-python-support-in-visual-studio.md#install-locations)
+- [Varolan bir Python yorumlayıcıyı el ile tanımlama](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Windows'da Visual Studio'da Python desteği nasıl yüklenir?](installing-python-support-in-visual-studio.md)
+- [Konumları yükleme](installing-python-support-in-visual-studio.md#install-locations)

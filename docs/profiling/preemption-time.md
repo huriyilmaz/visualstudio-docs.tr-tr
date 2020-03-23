@@ -1,5 +1,5 @@
 ---
-title: Önalım zamanı | Microsoft Docs
+title: Preemption Zaman | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,22 +13,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de7a02f7247e09876bc4598d44fc1c395161ebc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62935899"
 ---
-# <a name="preemption-time"></a>Önalım zamanı
-Bu segmentlerde faaliyet zaman çizelgesi ön alım kategorilere engelleme zamanı ile ilişkilidir. Bu kategori, bir iş parçacığı çıkış aşağıdaki nedenlerden biri nedeniyle geçiş, gelir:
+# <a name="preemption-time"></a>Preemption süresi
+Zaman çizelgesindeki bu kesimler, Ön alım olarak sınıflandırılan engelleme süresiyle ilişkilidir. Bu kategori, bir iş parçacığının şu nedenlerden biri nedeniyle kapatıldığı anlamına gelir:
 
-- Zamanlayıcı daha yüksek öncelikli iş parçacığı kullanarak değiştirildi.
+- Zamanlayıcı daha yüksek bir öncelik iş parçacığı kullanarak yerini aldı.
 
-- İş parçacığının yürütme kuantum süresi doldu ve diğer iş parçacıklarını yürütmek hazır.
+- İş parçacığının yürütme kuantum süresi doldu ve diğer iş parçacıkları yürütmeye hazırdı.
 
-  Bu süre boyunca, bir iş parçacığı eşzamanlılık görselleştiricisi ön alım sayılıyor bir çekirdek bekleme nedeni tarafından engellendi. Ön alım segmentler mantıksal çekirdek dışında bir iş parçacığı gönderildiğinde ve yürütme iş parçacığı devam ettiğinde bitmelidir.
+  Bu süre zarfında, bir iş parçacığı Concurrency Visualizer Ön-emption olarak sayıyor bir çekirdek bekleme nedeni tarafından engellendi. Ön alım segmentleri, bir iş parçacığı mantıksal bir çekirdekten dışarı itildiğinde başlar ve bu iş parçacığı yürütmeye devam ettiğinde sona erer.
 
-  Araç İpucu biterse bir kesim için ön alım neden iş parçacığı ve işlem adını görüntüler. Ancak, bu üstlenmesinden iş parçacığı ve işlem gerçekten preempted dönem çalıştığını göstermez.
+  Önceden boşaltılan bir kesimin araç ucu, ön boşalmaya neden olan işlemin veya iş parçacığının adını görüntüler. Ancak, bu, devralan işlemin veya iş parçacığının aslında önceden engellenen dönem boyunca işlediği anlamına gelmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

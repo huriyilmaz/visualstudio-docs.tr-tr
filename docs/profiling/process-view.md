@@ -1,5 +1,5 @@
 ---
-title: İşlem görünümü | Microsoft Docs
+title: Süreç Görünümü | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,30 +18,30 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: da3097c276557238e6f5b521f6f7d3231434cd10
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772182"
 ---
 # <a name="process-view"></a>İşlem Görünümü
-Işlem görünümü, profil oluşturma çalışması sırasında yürütülen işlemler ve iş parçacıkları için profil oluşturma verilerini görüntüler.
+İşlem görünümü, profil oluşturma çalışması sırasında yürütülen işlemler ve iş parçacıkları için profil oluşturma verilerini görüntüler.
 
- Süreçler ada göre listelenir. İş parçacıkları, kendilerini oluşturan işlemin alt düğümleri olarak listelenir. İş parçacıkları, bir sembol yoksa, iş parçacığını Başlatan işlev veya **[ntdll. dll]** etiketi tarafından adlandırılır.
+ İşlemler ada göre listelenir. İş parçacıkları, onları oluşturan işlemin alt düğümleri olarak listelenir. İş parçacıkları, sözcük parçacığını başlatan işlevle veya sembol yoksa **[ntdll.dll]** etiketiyle adlandırılır.
 
- Sütun eklemek veya kaldırmak için, görünümü sağ tıklayın ve ardından **sütun Ekle/Kaldır**' ı seçin. Ayrıca, bir sütun adına tıklayarak verileri sıralayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md).
+ Sütun eklemek veya kaldırmak için görünüme sağ tıklayın ve ardından **Sütun Ekle/Kaldır'ı**seçin. Ayrıca, bir sütun adını tıklatarak verileri sıralayabilirsiniz. Daha fazla bilgi için [bkz: Rapor görünümü sütunlarını özelleştirin.](../profiling/how-to-customize-report-view-columns.md)
 
- Işlem görünümünün sütunları, örnekleme ve izleme yöntemleri kullanılarak oluşturulan veriler ve .NET bellek verileri içeren veriler için aynıdır. Aşağıdaki tabloda sütun değerleri açıklanmaktadır.
+ İşlem görünümü sütunları, örnekleme ve enstrümantasyon yöntemleri kullanılarak oluşturulan veriler ve .NET bellek verilerini içeren veriler için aynıdır. Aşağıdaki tabloda sütun değerleri açıklanmaktadır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Benzersiz KIMLIK**|İşlem veya iş parçacığı için benzersiz olan profil oluşturucu tarafından oluşturulan bir tanımlayıcı.|
-|**NUMARASıNı**|İşlemin veya iş parçacığının sistem tarafından oluşturulan tanıtıcısı.|
-|**Ad**|İşlemin veya iş parçacığının adı.|
-|**Başlangıç zamanı**|Profil oluşturmanın başından işlemin veya iş parçacığının başlangıcına kadar geçen milisaniye veya işlemci döngüsü sayısı.|
-|**Bitiş zamanı**|Profil oluşturmanın başından işlemin veya iş parçacığının sonuna kadar geçen milisaniye veya işlemci döngüsü sayısı.|
+|**Benzersiz Kimlik**|İşleme veya iş parçacığına özgü bir profil oluşturucu tarafından oluşturulan tanımlayıcı.|
+|**Kimliği**|İşlemin veya iş parçacığının sistem tarafından oluşturulan tanımlayıcısı.|
+|**Adı**|İşlemin veya iş parçacığının adı.|
+|**Başlangıç Zamanı**|Profil oluşturmanın başlangıcından işlemin veya iş parçacığının başlangıcına kadar milisaniye veya işlemci döngülerinin sayısı.|
+|**Bitiş Saati**|Profil oluşturmanın başlangıcından işlemin veya iş parçacığının sonuna kadar milisaniye veya işlemci döngülerinin sayısı.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)
-- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
-- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)
+- [Enstrümantasyon yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
+- [.NET bellek veri görünümleri](../profiling/dotnet-memory-data-views.md)

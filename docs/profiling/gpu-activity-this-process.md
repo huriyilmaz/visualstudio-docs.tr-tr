@@ -1,5 +1,5 @@
 ---
-title: GPU etkinliği (Bu işlem) | Microsoft Docs
+title: GPU Etkinliği (Bu İşlem) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +12,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 68e85fc44977a3d9756965de12e25d13d62dbb89
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969544"
 ---
 # <a name="gpu-activity-this-process"></a>GPU Etkinliği (Bu İşlem)
-**GPU etkinliği (Bu işlem)** kesimlerinde eşzamanlılık görselleştiricisi'ndeki iş parçacıkları görünümü zaman GPU işlem istekleri geçerli işlem adına bir kez temsil eder. Bu istekler GPU'ya doğrudan bellek erişimi (DMA) paketleri gönderilir. Segment uzunluğunu GPU DMA paket adına geçerli işlem işleme zamanı temsil eder.
+Eşzamanlılık Görselleştiricisi'ndeki İş Parçacıkları görünümündeki **GPU Etkinliği (Bu İşlem)** segmentleri, GPU'nun geçerli işlem adına istekleri işlediği zamanları temsil eder. Bu istekler doğrudan bellek erişimi (DMA) paketleri olarak GPU'ya gönderilir. Bir kesimin uzunluğu, GPU'nun geçerli işlem adına bir DMA paketini işlediği zamanı gösterir.
 
- Üzerinde GPU etkinliği segment, raporun seçtiğinizde **geçerli** sekmesini işlenmiş DMA paket hakkında bilgileri görüntüler. Bu bilgiler, DirectX altyapısı, paketi gönderilen işlem ve paket işlemek için gereken zamanı ile ilişkili donanım kuyruğundaki paket beklenen süre miktarını içerir. Geçerli işlemin dışında bir işlem GPU DMA paketi fiziksel olarak gönderilen. Eşzamanlılık görselleştiricisi, başka bir işlem geçerli işlemin adına GPU iş gönderildiğinde algılayabilir.
+ GPU etkinlik kesimini seçtiğinizde, **Geçerli** sekmesindeki rapor işlenen DMA paketi yle ilgili bilgileri görüntüler. Bu bilgiler, paketin DirectX altyapısıyla ilişkili donanım kuyruğunda beklediği süreyi, paketi gönderen işlemi ve paketi işlemek için gereken süreyi içerir. Geçerli işlem dışındaki bir işlem DMA paketini fiziksel olarak GPU'ya göndermiş olabilir. Eşzamanlılık Görselleştiricisi, başka bir işlemin geçerli işlem adına GPU'ya ne zaman iş gönderdiğini algılayabilir.

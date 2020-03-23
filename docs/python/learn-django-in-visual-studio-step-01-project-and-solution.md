@@ -1,7 +1,7 @@
 ---
-title: Django öğreticide Visual Studio, 1. adım, Django temel bilgileri öğrenin
+title: Visual Studio, adım 1, Django temelleri Django öğretici öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında Django temel bilgileri bir kılavuz, Django geliştirme için Visual Studio destek gösteren sağlar.
+description: Visual Studio projeleri bağlamında Django temellerinin bir walkthrough, Destek Visual Studio Gösteren Django gelişimi için sağlar.
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,203 +12,203 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: b41ed3901cd4ad18a1b52ddbdc7ee6fd82cb5380
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "62962257"
 ---
-# <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio'da Django web çerçevesi ile çalışmaya başlama
+# <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio'daki Django web çerçevesi ile başlayın
 
-[Django](https://www.djangoproject.com/) , hızlı, güvenli ve ölçeklenebilir bir web geliştirme için tasarlanan yüksek düzeyli bir Python altyapısıdır. Bu öğretici, Django tabanlı web uygulamaları oluşturulmasını kolaylaştırmak için Visual Studio sağlayan proje şablonları bağlamında Django framework açıklar.
+[Django,](https://www.djangoproject.com/) hızlı, güvenli ve ölçeklenebilir web geliştirme için tasarlanmış üst düzey bir Python çerçevesidir. Bu öğretici, Visual Studio'nun Django tabanlı web uygulamalarının oluşturulmasını kolaylaştırmak için sağladığı proje şablonları bağlamında Django çerçevesini inceler.
 
-Bu öğreticide, şunların nasıl yapılır:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 
 > [!div class="checklist"]
-> - (1. adım) "Boş Django Web projesi" şablonu kullanarak bir Git deposunda bir temel Django projesi oluşturma
-> - Bir sayfa ile bir Django uygulaması oluşturma ve bir şablonu (2. adım) kullanarak bu sayfa işleme
-> - Statik dosyaları işleme, sayfalar eklemek ve şablonu devralma (3. adım) kullanın
-> - Django Web projesi şablonu sayfaları ve duyarlı tasarım (4. adım) ile bir uygulama oluşturmak için kullanın
-> - Kullanıcılar (5. adım) kimlik doğrulaması
-> - Modelleri, veritabanı geçişlerini ve özelleştirmeleri yönetim arabirimi (6. adım) kullanan bir uygulamayı oluşturmak için yoklamalar Django Web projesi şablonu kullanın
+> - "Boş Django Web Projesi" şablonu (adım 1) kullanarak Git deposunda temel bir Django projesi oluşturun
+> - Tek sayfalı bir Django uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (adım 2)
+> - Statik dosyalara hizmet, sayfa ekleme ve şablon kalıtımını kullanma (adım 3)
+> - Birden fazla sayfaya ve duyarlı tasarıma sahip bir uygulama oluşturmak için Django Web Project şablonuna bakın (adım 4)
+> - Kullanıcıları kimlik doğrulaması (adım 5)
+> - Modelleri, veritabanı geçişlerini ve yönetim arabirimine özelleştirmeler kullanan bir uygulama oluşturmak için Polls Django Web Project şablonuna kullanın (adım 6)
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio 2017 veya sonraki bir sürümü Windows aşağıdaki seçeneklerle:
-  - **Python geliştirme** iş yükü (**iş yükü** yükleyici sekmede). Yönergeler için [Visual Studio'da Python yükleme desteği](installing-python-support-in-visual-studio.md).
-  - **Git için Windows** ve **Visual Studio için GitHub uzantısı** üzerinde **tek tek bileşenler** sekmesinde altında **kod Araçları**.
+- Visual Studio 2017 veya daha sonra Windows'da aşağıdaki seçeneklerle:
+  - **Python geliştirme** iş yükü (Yükleyicideki**iş yükü** sekmesi). Talimatlar için Visual [Studio'da Python desteğini yükleyin'](installing-python-support-in-visual-studio.md)e bakın.
+  - **Kod araçları**altında **Tek tek bileşenler** sekmesinde Visual Studio için Windows ve **GitHub Uzantısı** için **Git.**
 
-Ayrıntılar (özellikle farklı Django framework'ün önceki sürümleriyle) bu öğreticideki açıklanan gelen değişiklik gösterebilir Django proje şablonları da Visual Studio için Python Araçları'nın tüm eski sürümleri dahil edilmiştir.
+Django proje şablonları visual studio için Python Tools'un önceki tüm sürümleriyle birlikte verilir, ancak ayrıntılar bu öğreticide tartışılandan farklı olabilir (özellikle Django çerçevesinin önceki sürümlerinde farklıdır).
 
-Python geliştirme Visual Studio şu anda Mac için desteklenmiyor Mac ve Linux üzerinde kullanma [Python uzantı Visual Studio code'da](https://code.visualstudio.com/docs/python/python-tutorial).
+Python geliştirme şu anda Visual Studio for Mac'te desteklenmez. Mac ve [Linux'ta Visual Studio Code'daki Python uzantısını](https://code.visualstudio.com/docs/python/python-tutorial)kullanın.
 
 ### <a name="visual-studio-projects-and-django-projects"></a>"Visual Studio projeleri" ve "Django projeleri"
 
-Django terminolojisinde, bir "Django projesi" uygulamalarının yanı sıra"tam web uygulaması oluşturmak için bir web ana bilgisayarı için dağıttığınız bir veya daha fazla" birkaç site düzeyli yapılandırma dosyalarından oluşur. Django projesi birden fazla uygulama içerebilir ve aynı uygulamanın birden fazla Django projelerinde olabilir.
+Django terminolojisinde, bir "Django projesi" tam bir web uygulaması oluşturmak için bir web barındırma ağına dağıttığınız bir veya daha fazla "uygulama" ile birlikte birkaç site düzeyinde yapılandırma dosyasından oluşur. Bir Django projesi birden fazla uygulama içerebilir ve aynı uygulama birden fazla Django projesinde olabilir.
 
-Django projesi birden fazla uygulamalarının yanı sıra kendi bölümü için bir Visual Studio projesi içerebilir. Bu öğreticide yalnızca bir "projesine" başvuran her basitleştirmek amacıyla, Visual Studio projeye başvuruyor. Web uygulaması "Proje Django" bölümünü gösterir, "Django projesi" özellikle kullanır.
+Bir Visual Studio projesi, kendi payına, birden fazla uygulama ile birlikte Django proje içerebilir. Basitlik uğruna, ne zaman bu öğretici sadece bir "proje" anlamına gelir, visual studio proje atıfta bulunuyor. Web uygulamasının "Django projesi" bölümüne atıfta bulunduğunda, özellikle "Django projesi"ni kullanır.
 
-Bu öğretici boyunca her biri tek bir Django uygulaması içeren üç ayrı Django projeler içeren tek bir Visual Studio çözüm oluşturacaksınız. Aynı çözümdeki projeleri tutarak, kolayca geri ve İleri karşılaştırma için farklı dosyalar arasında geçiş yapabilirsiniz.
+Bu eğitim boyunca, her biri tek bir Django uygulaması içeren üç ayrı Django projesi içeren tek bir Visual Studio çözümü oluşturacaksınız. Projeleri aynı çözümde tutarak, karşılaştırma için farklı dosyalar arasında kolayca geçiş yapabilirsiniz.
 
-## <a name="step-1-1-create-a-visual-studio-project-and-solution"></a>1-1. adım: Visual Studio'nun proje ve çözüm oluşturma
+## <a name="step-1-1-create-a-visual-studio-project-and-solution"></a>Adım 1-1: Visual Studio projesi ve çözümü oluşturun
 
-Django ile komut satırından çalışırken, genellikle bir proje çalıştırarak başlattığınız `django-admin startproject <project_name>` komutu. Visual Studio'da "Boş Django Web projesi" şablonu kullanarak bir Visual Studio Proje ve çözüm aynı yapısında sağlar.
+Komut satırından Django ile çalışırken, genellikle komutu `django-admin startproject <project_name>` çalıştırarak bir proje başlarsınız. Visual Studio'da "Blank Django Web Project" şablonu kullanılarak visual studio projesi ve çözümü içinde aynı yapı yı sağlar.
 
-1. Visual Studio'da **dosya** > **yeni** > **proje**"Django" için arama yapın ve seçin **boş Django Web projesi**  şablonu. (Şablon da altında bulunan **Python** > **Web** sol taraftaki listede.)
+1. Visual Studio'da **Dosya** > **Yeni** > **Projesi'ni**seçin, "Django"yu arayın ve Boş **Django Web Projesi** şablonunu seçin. (Şablon, sol listede **Python** > **Web** altında da bulunur.)
 
-    ![Boş Django Web projesi için Visual Studio'da yeni proje iletişim kutusu](media/django/step01-new-blank-project.png)
+    ![Blank Django Web Projesi için Visual Studio'da yeni proje iletişim kutusu](media/django/step01-new-blank-project.png)
 
-1. İletişim kutusunun altındaki alanlara (önceki grafikte gösterildiği gibi) aşağıdaki bilgileri girin ve ardından **Tamam**:
+1. İletişim kutusunun altındaki alanlara aşağıdaki bilgileri girin (önceki grafikte gösterildiği gibi), **tamam'ı**seçin:
 
-    - **Adı**: Visual Studio projenin adını ayarlayın **BasicProject**. Bu ad Django projesi için de kullanılır.
-    - **Konum**: Visual Studio çözüm ve proje oluşturmak bir konum belirtin.
-    - **Çözüm**: varsayılan olarak bu denetimi bırakın **yeni çözüm oluşturma** seçeneği.
-    - **Çözüm adı**: kümesine **LearningDjango**, bu çözüm için uygun birden çok proje için bir kapsayıcı olarak Bu öğreticide.
-    - **Çözüm için dizin oluştur**: (Varsayılan) bırakın.
-    - **Yeni Git deposu oluşturma**: Çözüm oluşturduğunda, Visual Studio yerel bir Git deposu oluşturur (varsayılan olarak temizleyin olan) bu seçeneği seçin. Bu seçeneği görmüyorsanız, Visual Studio Yükleyicisi'ni çalıştırın ve ekleme **Git için Windows** ve **Visual Studio için GitHub uzantısı** üzerinde **tek tek bileşenler** sekmesi altında **kod Araçları**.
+    - **Adı**: Visual Studio projesinin adını **BasicProject**olarak ayarlayın. Bu ad, Django projesi için de kullanılır.
+    - **Konum**: Visual Studio çözüm ve proje oluşturmak için bir konum belirtin.
+    - **Çözüm**: Bu denetim kümesini varsayılan olarak bırakın Yeni çözüm seçeneği **oluştur.**
+    - **Çözüm adı**: Bu öğretici birden fazla proje için bir konteyner olarak çözüm için uygun olan **LearningDjango,** ayarlayın.
+    - **Çözüm için dizin oluşturma**: Set (varsayılan) bırak.
+    - **Yeni Git deposu oluşturun**: Visual Studio'nun çözümü oluşturduğunda yerel bir Git deposu oluşturması için bu seçeneği (varsayılan olarak açık) seçin. Bu seçeneği görmüyorsanız, Visual Studio yükleyicisini çalıştırın ve **Kod araçları**altında **Tek tek bileşenler** sekmesine Windows için Git ve Visual Studio **için** **Git'i** ekleyin.
 
-1. Kısa bir süre sonra Visual Studio, bir iletişim bildiren ile ister **dış paketleri bu proje gerektirir** (aşağıda gösterilmiştir). Şablonun içerdiği için bu iletişim kutusu görünür bir *requirements.txt* en son Django 1.x paketini başvuran dosya. (Seçmek **gerekli paketleri Göster** tam bağımlılıkları görmek için.)
+1. Bir süre sonra, Visual Studio **bu projenin dış paketler gerektirdiğini** belirten bir iletişim kutusu yla sizi ister (aşağıda gösterilmiştir). Şablon en son Django 1.x paketine başvuran bir *requirements.txt* dosyası içerdiğinden bu iletişim kutusu görüntülenir. (Tam bağımlılıkları görmek için **gerekli paketleri göster'i** seçin.)
 
-    ![Komut istemi bildiren proje dış paketleri gerektiriyor](media/django/step01-requirements-prompt-install-myself.png)
+    ![Projenin dış paketler gerektirdiğini belirten komut istemi](media/django/step01-requirements-prompt-install-myself.png)
 
-1. Seçeneğini **ben bunları kendim yükler**. Size kısa süre içinde kaynak denetiminden hariç tutuldu emin olmak için sanal ortamı oluşturun. (Ortam her zaman oluşturulabilir *requirements.txt*.)
+1. **Ben onları kendim yükleyeceğim**seçeneğini seçin. Kaynak denetiminin dışında olduğundan emin olmak için kısa süre içinde sanal ortamı oluşturursunuz. (Ortam her zaman *requirements.txt*oluşturulabilir.)
 
-## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>1-2. adım: Git denetimleri incelemek ve uzak bir depoyu Yayımla
+## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>Adım 1-2: Git denetimlerini inceleyin ve uzak bir depoda yayımlayın
 
-Seçtiğiniz çünkü **yeni Git deposu Oluştur** içinde **yeni proje** iletişim kutusunda, projeyi zaten yerel kaynak denetimine oluşturma işlemi tamamlandıktan hemen sonra. Bu adımda, Visual Studio'nun Git denetimleriyle planladığınızdan ve **Takım Gezgini** kaynak denetimiyle çalışma penceresi.
+**Yeni Proje** iletişim kutusunda yeni Git **deposu oluştur'u** seçtiğiniziçin, oluşturma işlemi tamamlanır tamamlanmaz proje zaten yerel kaynak denetimine adanmıştır. Bu adımda, Visual Studio'nun Git denetimlerini ve kaynak denetimiyle çalıştığınız **Team Explorer** penceresini tanıtAbilirsiniz.
 
-1. Visual Studio ana penceresinde alt köşesine Git denetimleri inceleyin. Soldan sağa, bu denetimlerin gönderilmemiş işlemeler, kaydedilmemiş değişiklikler, deponun ve güncel dalınızın adını göster:
+1. Visual Studio ana penceresinin alt köşesindeki Git denetimlerini inceleyin. Soldan sağa, bu denetimler itilmemiş taahhütleri, işlenmemiş değişiklikleri, deponun adını ve geçerli dalı gösterir:
 
-    ![Visual Studio penceresinde Git denetimleri](media/django/step01-git-controls.png)
+    ![Visual Studio penceresinde git denetimleri](media/django/step01-git-controls.png)
 
     > [!Note]
-    > Seçmezseniz **yeni Git deposu Oluştur** içinde **yeni proje** iletişim kutusunda, Git denetimlerini göster yalnızca bir **kaynak denetimine Ekle** yerel oluşturan komutu Depo.
+    > **Yeni Proje** iletişim kutusunda **yeni Git deposu oluştur'u** seçmezseniz, Git denetimleri yalnızca yerel bir depo oluşturan kaynak **denetimine ekle** komutunu gösterir.
     >
-    > ![Ekleme kaynak denetimi Visual Studio'da görünür bir depo oluşturduysanız değil](media/django/step01-git-add-to-source-control.png)
+    > ![Kaynak Denetimine Ekle, bir depo oluşturmadıysanız Visual Studio'da görünür](media/django/step01-git-add-to-source-control.png)
 
-1. Değişiklikleri düğmeyi seçin ve Visual Studio açar, **Takım Gezgini** penceresinde **değişiklikleri** sayfası. Yeni oluşturulan projeye zaten kaynak denetimi otomatik olarak kabul edilen olduğundan tüm bekleyen değişiklikleri görmüyorum.
+1. Değişiklikler düğmesini seçin ve Visual Studio **Değişiklikler** sayfasında **Team Explorer** penceresini açar. Yeni oluşturulan proje zaten kaynak denetimine otomatik olarak bağlı olduğundan, bekleyen değişiklikleri görmezsiniz.
 
-    ![Değişiklikler sayfasında Takım Gezgini penceresi](media/django/step01-team-explorer-changes.png)
+    ![Değişiklikler sayfasında Kiteam Gezgini penceresi](media/django/step01-team-explorer-changes.png)
 
-1. Visual Studio durum çubuğunda gönderilmemiş işlemeler düğmeyi seçin (yukarı ok ile **2**) açmak için **eşitleme** sayfasını **Takım Gezgini**. Yerel bir depo olduğundan, sayfa depo farklı uzak depoya yayımlamak için kolay seçenekler sunar.
+1. Visual Studio durum çubuğunda, Takım Gezgini'nde **Eşitleme** sayfasını açmak için itilmemiş **Team Explorer**commits düğmesini **(2**ile yukarı ok) seçin. Yalnızca yerel bir deponuz olduğundan, sayfa depoyu farklı uzak depolara yayımlamak için kolay seçenekler sağlar.
 
-    ![Takım Gezgini penceresini gösteren Git deposu için kullanılabilir seçenekleri kaynak denetimi](media/django/step01-team-explorer.png)
+    ![Kaynak denetimi için kullanılabilir Git deposu seçeneklerini gösteren Takım Gezgini penceresi](media/django/step01-team-explorer.png)
 
-    Kendi projeleriniz için hangi hizmetin seçebilirsiniz. Bu öğreticide burada öğreticinin tamamlanmış örnek kodu korunur, GitHub kullanımı gösterilmiştir [Microsoft/python-örnek-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django) depo.
+    Kendi projeleriniz için istediğiniz hizmeti seçebilirsiniz. Bu öğretici, öğretici için tamamlanan örnek kodun [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django) deposunda muhafaza edildiği GitHub kullanımını gösterir.
 
-1. Herhangi bir seçerken **Yayımla** denetimleri **Takım Gezgini** daha fazla bilgi için ister. Örneğin, Bu öğretici için örnek yayımlarken, havuz ilk olarak, bu durumda oluşturulması gerekiyordu **uzak depoya itme** seçeneği, deponun URL'si ile kullanıldı.
+1. **Yayımlama** denetimlerinden birini seçerken, **Takım Gezgini** daha fazla bilgi için sizden istenir. Örneğin, bu öğretici için örnek yayımlarken, önce deponun kendisinin oluşturulması gerekir, bu durumda deponun URL'si ile **Uzak Depoya Push** seçeneği kullanılmıştır.
 
-    ![Var olan bir uzak depoya gönderilirken için Takım Gezgini penceresi](media/django/step01-push-to-github.png)
+    ![Varolan bir uzak depoya itmek için Takım Gezgini penceresi](media/django/step01-push-to-github.png)
 
-    Varolan bir depo yoksa **GitHub Yayımla** ve **Azure DevOps için anında iletme** seçenekleri sağlar, doğrudan Visual Studio içinde oluşturun.
+    Varolan bir deponuz yoksa, **GitHub'a Yayımla** ve **Azure DevOps'e Itme** seçenekleri doğrudan Visual Studio içinden bir depo oluşturmanıza izin vermez.
 
-1. Bu öğreticide çalışırken, düzenli aralıklarla denetimlerini işlemeyi ve göndermeyi değişiklikler Visual Studio kullanarak önleminizi. Bu öğretici size uygun noktalarda anımsatır.
+1. Bu öğretici ile çalışırken, değişiklikleri işlemek ve itmek için Visual Studio'daki denetimleri periyodik olarak kullanma alışkanlığı edinin. Bu öğretici size uygun noktalarda hatırlatıyor.
 
 > [!Tip]
-> İçinde hızlıca gezinmek için **Takım Gezgini**, üst seçin (okuyan **değişiklikleri** veya **anında iletme** yukarıdaki resimlerdeki) kullanılabilir sayfalarının açılır menüsünü görmek için.
+> **Ekip Gezgini**içinde hızla gezinmek için, kullanılabilir sayfaların açılır menüsünü görmek için üstbilgi (yukarıdaki resimlerde **Değişiklikleri** veya **İde'** i okuyan) üstbilgiyi seçin.
 
-### <a name="question-what-are-some-advantages-of-using-source-control-from-the-beginning-of-a-project"></a>Soru: Kaynak denetiminden bir proje başına kullanmanın bazı avantajları nelerdir?
+### <a name="question-what-are-some-advantages-of-using-source-control-from-the-beginning-of-a-project"></a>Soru: Bir projenin başlangıcından itibaren kaynak denetimi kullanmanın bazı avantajları nelerdir?
 
-Yanıt: Öncelikle, özellikle uzak bir depo da kullanıyorsanız, en başından itibaren kaynak denetimini kullanarak projenizin bir normal site dışında yedekleme sağlar. Bir proje üzerinde yalnızca koruma aksine bir yerel dosya sistemi kaynak denetimi ayrıca tam değişiklik geçmişini ve kolay tek bir dosyayı veya tüm proje önceki durumuna geri döndürme olanağı sağlar. Bu değişiklik geçmişini gerilemeleri (test hatalarını) nedenini belirlemeye yardımcı olur. Ayrıca, kaynak denetimi birden çok kişinin üzerinde çalışıyorsanız bir proje yönettiği gibi üzerine yazar ve çakışma çözümü sağlar gereklidir. Son olarak, temelde bir Otomasyon biçimi olan kaynak denetimi, iyi derlemeleri otomatikleştirme, test ve yayın yönetimi için ayarlar. DevOps için bir proje kullanarak ilk adımı gerçekten olduğu ve engelleri girişe kadar düşük olduğundan, gerçekten başına kaynak denetiminden kullanmamak için bir neden yoktur.
+Cevap: Her şeyden önce, kaynak denetimini baştan kullanarak, özellikle uzaktan bir depo kullanıyorsanız, projenizin düzenli bir şirket dışı yedeklemesini sağlar. Yalnızca yerel bir dosya sisteminde bir projeyi sürdürmenin aksine, kaynak denetimi aynı zamanda tam bir değişiklik geçmişi ve tek bir dosyayı veya tüm projeyi önceki duruma geri çevirme kolay bir şekilde sağlar. Bu değişiklik geçmişi gerilemelerin (test hataları) nedenini belirlemeye yardımcı olur. Ayrıca, birden çok kişi bir proje üzerinde çalışıyorsa, kaynak denetimi, üzerine yazılar yönetir ve çakışma çözümü sağlar esastır. Son olarak, temelde bir otomasyon biçimi olan kaynak denetimi, yapı, test ve sürüm yönetimini otomatikleştirmek için sizi iyi ayarlar. Bu gerçekten bir proje için DevOps kullanarak ilk adım, ve giriş engelleri çok düşük olduğundan, gerçekten başından itibaren kaynak kontrolü kullanmamak için hiçbir neden yoktur.
 
-Daha fazla açıklaması için kaynak denetimi Otomasyonu olarak bkz [gerçekte kaynak: DevOps rolü, depolarda](https://msdn.microsoft.com/magazine/mt763232), bir makale MSDN magazine'de mobil uygulamalar için yazılan, web uygulamaları için de geçerlidir.
+Otomasyon olarak kaynak kontrolü hakkında daha fazla tartışma için, the [Source of Truth: The Role of Positories in DevOps](https://msdn.microsoft.com/magazine/mt763232)( MSDN Magazine dergisinde web uygulamaları için de geçerli olan mobil uygulamalar için yazılmış bir makale) başlıklı makaleye bakın.
 
-### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Soru: Visual Studio otomatik-yeni bir proje uygulamadan gelen engelleyebilir miyim?
+### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Soru: Visual Studio'nun yeni bir projeyi otomatik olarak gerçekleştirmesini engelleyebilir miyim?
 
-Yanıt: Evet. Otomatik Tamamlama devre dışı bırakmak için Git **ayarları** sayfasını **Takım Gezgini**seçin **Git** > **genel ayarları**temizleyin Etiketli seçeneği **değişiklikleri Birleştirmeden sonra varsayılan olarak**, ardından **güncelleştirme**.
+Cevap: Evet. Otomatik commit devre dışı kalmak için, **Team** **Explorer'da Ayarlar** sayfasına gidin , **Git** > **Global ayarlarını**seçin, **varsayılan olarak birleştirdikten sonra değişiklikleri gerçekleştir**seçeneğini temizleyin, ardından **Güncelleştir'i**seçin.
 
-## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>1-3. adım: Sanal ortam oluşturma ve kaynak Denetimi'nden çıkar
+## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>Adım 1-3: Sanal ortamı oluşturun ve kaynak denetiminden hariç tutun
 
-Projeniz için yapılandırdığınız kaynak denetimi, proje için gerekli Django paketlerini içeren sanal bir ortam oluşturabilirsiniz. Ardından **Takım Gezgini** ortamın klasör, kaynak denetiminden hariç tutmak için.
+Artık projeniz için kaynak denetimini yapılandırdığınıza göre, proje için gerekli Django paketlerini içeren sanal ortamı oluşturabilirsiniz. Daha **sonra,** çevre klasörünü kaynak denetiminden dışlamak için Team Explorer'ı kullanabilirsiniz.
 
-1. İçinde **Çözüm Gezgini**, sağ **Python ortamları** düğümünü seçip alt **sanal ortama ekleme**.
+1. **Çözüm Gezgini'nde** **Python Ortamları** düğümüne sağ tıklayın ve Sanal Ortam **Ekle'yi**seçin.
 
-    ![Çözüm Gezgini'nde sanal ortam komut ekleme](media/django/step01-add-virtual-environment-command.png)
+    ![Solution Explorer'da Sanal ortam komutu ekleme](media/django/step01-add-virtual-environment-command.png)
 
-1. Bir **sanal ortama ekleme** iletişim kutusu açılır, iletisini ile **requirements.txt dosyasını bulduk.** Bu ileti, Visual Studio, sanal ortamı yapılandırmak için bu dosyayı kullandığını gösterir.
+1. **Bir Virtual Environment Ekle** iletişim kutusu görüntülenir ve bir ileti ile **gereksinimlerin bir dosyaolduğunu söyleriz.txt dosyası.** Bu ileti, Visual Studio'nun sanal ortamı yapılandırmak için bu dosyayı kullandığını gösterir.
 
-    ![Sanal ortama Ekle iletişim kutusu requirements.txt iletisi](media/django/step01-add-virtual-environment-found-requirements.png)
+    ![requirements.txt iletisi ile sanal ortam iletişim kutusu ekleme](media/django/step01-add-virtual-environment-found-requirements.png)
 
-1. Seçin **Oluştur** Varsayılanları kabul etmek için. (İsterseniz, sanal ortamın adı yalnızca alt klasörünü adını değiştiren değiştirebilirsiniz ancak `env` standart bir kuraldır.)
+1. Varsayılanları kabul etmek için **Oluştur'u** seçin. (İsterseniz sanal ortamın adını değiştirebilirsiniz, bu da alt klasörünün adını `env` değiştirir, ancak standart bir kuraldır.)
 
-1. Visual Studio indirmeleri ve paketleri, yani Django için kadar alt klasörler hakkında birkaç bin dosya içinde genişletme yükler için yönetici ayrıcalıkları onayı istenirse, sonra birkaç dakika bekleyin! Visual Studio ilerleme durumunu görebilirsiniz **çıkış** penceresi. Beklerken, soru bölümlerde düşünerek.
+1. İstenirse yönetici ayrıcalıklarına izin verin, visual studio paketleri indirirken ve yüklerken birkaç dakika sabırlı olun, bu da Django için binlerce dosyayı yaklaşık birkaç alt klasörde genişletmek anlamına gelir! Visual Studio **Çıktı** penceresinde ilerlemeyi görebilirsiniz. Beklerken, takip eden Soru bölümlerini düşün.
 
-1. Visual Studio Git denetimlere (durum çubuğunda) değişiklik göstergesini seçin (gösteren **99&#42;**) açan **değişiklikleri** sayfasını **Takım Gezgini**.
+1. Visual Studio Git denetimlerinde (durum çubuğunda), **Team Explorer'da** **Değişiklikler** sayfasını açan değişiklik göstergesini **(&#42;99'u **gösterir) seçin.
 
-    Sanal ortam oluşturma, değişiklikleri binin getirildi, ancak siz (veya herhangi başka bir proje kopyalama) ortamdan her zaman yeniden oluşturabilirsiniz çünkü bunların hiçbirine kaynak denetiminde eklemeniz gerekmez *requirements.txt* .
+    Binlerce değişiklik getiren sanal ortamı oluşturmak, ancak siz (veya projeyi klonlayan herhangi bir kişi) her zaman *gereksinimleri.txt*çevreyi yeniden oluşturabilirsiniz, çünkü kaynak denetimine herhangi birini eklemeniz gerekmez.
 
-    Sanal ortam hariç tutmak için sağ **env** klasörü ve select **bu yerel öğeleri Yoksay**.
+    Sanal ortamı dışlamak için **env** klasörünü sağ tıklatın ve **bu yerel öğeleri yoksay'ı**seçin.
 
-    ![Kaynak denetim değişikliklerini sanal bir ortamda yoksayılıyor](media/django/step01-ignore-local-items.png)
+    ![Kaynak denetimi değişikliklerinde sanal ortamı yoksayma](media/django/step01-ignore-local-items.png)
 
-1. Sanal ortam hariç sonra yalnızca kalan proje dosyasına değişiklikler ve *.gitignore*. *.Gitignore* dosya sanal ortam klasörü için eklenen bir giriş içerir. Bir farkı görmek için dosyaya çift tıklayın
+1. Sanal ortamı dışladıktan sonra, geriye kalan tek değişiklik proje dosyasında ve *.gitignore'dedir.* *.gitignore* dosyası, sanal ortam klasörü için ek bir giriş içerir. Diff görmek için dosyayı çift tıklatabilirsiniz.
 
-1. Bir işleme iletisi girin ve seçin **tümünü işle** düğmesine ve ardından işlemeler isterseniz, uzak depoya gönderin.
+1. İletiyi girin ve **Tümünü İşle** düğmesini seçin, ardından isterseniz iletileri uzaktan deponuza basın.
 
-### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>Soru: Sanal ortam oluşturmak neden istiyor musunuz?
+### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>Soru: Neden sanal bir ortam oluşturmak istiyorum?
 
-Yanıt: Bir sanal ortam, uygulamanızın tam bağımlılıkları ayırmak için harika bir yoludur. Bu yalıtım global Python ortamı içinde çakışmaları önler ve test etme ve işbirliği kolaylık sağlar. Bir uygulama geliştirirken zaman içinde neredeyse şaşmaz biçimde birçok yararlı Python paketlerini getirin. Projeye özgü sanal bir ortamda paketleri tutarak, projenin kolayca güncelleştirebilirsiniz *requirements.txt* kaynak denetimine dahil bu ortamı tanımlayan dosya. Proje, derleme sunucuları, dağıtım sunucuları ve diğer geliştirme bilgisayarlar dahil olmak üzere diğer herhangi bir bilgisayar için kopyalanan yalnızca kullanarak ortama yeniden oluşturmak daha kolaydır *requirements.txt* (neden olduğu ortam kaynak denetiminde olması gerekmez). Daha fazla bilgi için [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
+Yanıt: Sanal ortam, uygulamanızın tam bağımlılıklarını yalıtmak için harika bir yoldur. Bu tür yalıtım, küresel Python ortamındaki çakışmaları önler ve hem test hem de işbirliğine yardımcı olur. Zaman içinde, bir uygulama geliştirdikçe, her zaman birçok yararlı Python paketi getirirsiniz. Paketleri projeye özgü bir sanal ortamda tutarak, kaynak denetimine dahil edilen ortamı açıklayan projenin *gereksinimleri.txt* dosyasını kolayca güncelleştirebilirsiniz. Proje, yapı sunucuları, dağıtım sunucuları ve diğer geliştirme bilgisayarları da dahil olmak üzere diğer bilgisayarlara kopyalandığında, yalnızca *gereksinimleri.txt* kullanarak ortamı yeniden oluşturmak kolaydır (bu nedenle ortamın kaynak denetiminde olması gerekmez). Daha fazla bilgi için [bkz.](selecting-a-python-environment-for-a-project.md#use-virtual-environments)
 
-### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: Kaynak denetimine zaten kararlıdır sanal bir ortama nasıl kaldırabilirim?
+### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: Kaynak denetimine adanmış bir sanal ortamı nasıl kaldıracağım?
 
-Yanıt: İlk olarak, Düzenle, *.gitignore* klasörü dışlamak için dosya: sonunda açıklamayı içeren bölümü bulun `# Python Tools for Visual Studio (PTVS)` ve sanal ortam klasörü için yeni bir satır ekleyin `/BasicProject/env`. (Visual Studio dosyayı göstermiyor çünkü **Çözüm Gezgini**, kullanarak doğrudan açmak **dosya** > **açın**  >   **Dosya** menü komutu. Dosyasını da açabilirsiniz **Takım Gezgini**: üzerinde **ayarları** sayfasında **depo ayarları**Git **yoksayma ve öznitelik dosyaları** bölümüne ve ardından **Düzenle** yanındaki bağlantı **.gitignore**.)
+Cevap: İlk olarak, klasörü hariç tutmak için *.gitignore* dosyanızı düzenleyin: açıklama `# Python Tools for Visual Studio (PTVS)` ile sonunda bölümü bulmak `/BasicProject/env`ve sanal ortam klasörü için yeni bir satır ekleyin, gibi . (Visual Studio **dosyayı Solution Explorer'da**göstermediği için **File** > **Dosyayı Aç** > **File** menüsü komutunu kullanarak doğrudan açın. Ayrıca **Takım Gezgini'nden**dosyayı açabilirsiniz: **Ayarlar** **sayfasında, Ayarlar Ayarlarını**seçin, Dosyaları **Yoksay &** bölümüne gidin, ardından **.gitignore'in**yanındaki **Edit** bağlantısını seçebilirsiniz .)
 
-İkinci olarak, bir komut penceresi açın, gibi klasöre gidin *BasicProject* sanal ortam klasörü gibi içeren *env*, çalıştırıp `git rm -r env`. Ardından komut satırından bu değişiklikleri işleyebilir (`git commit -m 'Remove venv'`) veya gelen gerçekleştirmeyi **değişiklikleri** sayfasının **Takım Gezgini**.
+İkinci olarak, bir komut penceresi açın, *env*gibi sanal ortam klasörü içeren `git rm -r env` *BasicProject* gibi klasöre gidin ve çalıştırın . Ardından bu değişiklikleri komut satırından (`git commit -m 'Remove venv'`) veya **Team Explorer'ın** **Değişiklikler** sayfasından gerçekleştirin.
 
-## <a name="step-1-4-examine-the-boilerplate-code"></a>1-4. adım: Ortak kod İnceleme
+## <a name="step-1-4-examine-the-boilerplate-code"></a>Adım 1-4: Ortak plaka kodunu inceleyin
 
-Proje oluşturma işlemi tamamlandıktan sonra ortak Django proje kodu inceleyin (olduğu yeniden CLI komutu tarafından oluşturulan aynı `django-admin startproject <project_name>`).
+Proje oluşturma tamamlandıktan sonra, ortak Django proje kodunu inceleyin (yine CLI `django-admin startproject <project_name>`komutu tarafından oluşturulan aynıdır).
 
-1. Projenizde köküdür *manage.py*, Visual Studio Proje başlangıç dosyası olarak otomatik olarak ayarlayan Django komut satırı yönetim yardımcı programı. Kullanarak komut satırı yardımcı programını çalıştırın `python manage.py <command> [options]`. Ortak Django görevler için Visual Studio uygun menü komutlarını sağlar. Projeye sağ **Çözüm Gezgini** seçip **Python** listesini görmek için. Bu öğretici sırasında bu komutlardan bazıları karşılaştığınız.
+1. Proje kökünüzde *manage.py*, Visual Studio'nun proje başlangıç dosyası olarak otomatik olarak ayarladığının Django komut satırı yönetim yardımcı programıdır. Komut satırındaki yardımcı programı `python manage.py <command> [options]`. Sık kullanılan Django görevleri için Visual Studio kullanışlı menü komutları sağlar. **Solution Explorer'da** projeyi sağ tıklatın ve listeyi görmek için **Python'u** seçin. Bu öğretici süresince bu komutlardan bazılarıyla karşılaşırsınız.
 
-    ![Bir Python Django komutları proje bağlam menüsü](media/django/step01-django-commands-menu.png)
+    ![Python proje bağlam menüsünde Django komutları](media/django/step01-django-commands-menu.png)
 
-2. Projenizde bir klasör proje ile aynı adlandırılır. Bu temel Django proje dosyalarını içerir:
+2. Projenizde projeyle aynı adlı bir klasör bulunur. Bu temel Django proje dosyaları içerir:
 
-   - *__init.PY*: Python bu klasör bir Python paketi olduğunu söyler. boş bir dosya.
-   - *wsgi.PY*: hizmet projenizi WSGI uyumlu web sunucuları için bir giriş noktası. Genellikle bu dosyanın şu şekilde bırakın-web sunucuları için üretim kancaları sağladığı aynıdır.
-   - *Settings.PY*: bir web uygulaması geliştirme sırasında değiştiren Django projesi için ayarları içerir.
-   - *URLs.PY*: geliştirme sırasında da değiştirmeniz Django projesi için içindekiler tablosu içerir.
+   - *__init.py*: Python'a bu klasörün bir Python paketi olduğunu söyleyen boş bir dosya.
+   - *wsgi.py*: WSGI uyumlu web sunucuları için projenize hizmet vermek için bir giriş noktası. Üretim web sunucuları için kancasağlar genellikle olarak bu dosyayı bırakın.
+   - *settings.py*: bir web uygulaması geliştirme süresince değiştirdiğiniz Django projesi için ayarlar içerir.
+   - *urls.py*: Django projesi için de geliştirme aşamasında değiştirdiğiniz bir içerik tablosu içerir.
 
-     ![Çözüm Gezgini'nde proje dosyaları Django](media/django/step01-django-project-in-solution-explorer.png)
+     ![Solution Explorer'daki Django proje dosyaları](media/django/step01-django-project-in-solution-explorer.png)
 
-3. Daha önce belirtildiği gibi Visual Studio şablonu da ekler bir *requirements.txt* dosyası projenize Django paket bağımlılığı belirterek. Bu dosyanın varlığını ilk proje oluştururken bir sanal ortam oluşturmak için davet ' dir.
+3. Daha önce de belirtildiği gibi, Visual Studio şablonu da Django paket bağımlılığı nı belirten projenize bir *requirements.txt* dosyası ekler. Bu dosyanın varlığı, projeyi ilk oluştururken sizi sanal bir ortam oluşturmaya davet eden şeydir.
 
-### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Soru: Diğer paketleri yüklediğimde sonra Visual Studio requirements.txt dosyasını bir sanal ortam oluşturabilir miyim?
+### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Soru: Visual Studio diğer paketleri yükledikten sonra sanal ortamdan bir requirements.txt dosyası oluşturabilir mi?
 
-Yanıt: Evet. Genişletin **Python ortamları** düğümünün sanal ortamınıza sağ tıklatın ve seçin **Generovat requirements.txt** komutu. Bu komutu düzenli olarak kullanmak için iyi ortamı değiştirin ve değişiklikleri işleme *requirements.txt* kaynak denetimine bağımlı bu ortamda herhangi bir kod değişikliği birlikte. Bir yapı sunucusunda sürekli tümleştirmeyi ayarlama, ortamı değiştirmek her dosya ve değişiklikleri oluşturmanız gerekir.
+Cevap: Evet. Python **Ortamları** düğümünü genişletin, sanal ortamınıza sağ tıklayın ve **requirements.txt oluştur** komutunu seçin. Ortamı değiştirirken bu komutu düzenli aralıklarla kullanmak ve *gereksinimler.txt'de* bu ortama bağlı diğer kod değişiklikleriyle birlikte kaynak denetimine değişiklikler yapmak iyidir. Bir yapı sunucusunda sürekli tümleştirme ayarlarsanız, dosyayı oluşturmalı ve ortamı her değiştirdiğinizde değişiklikler gerçekleştirmeniz gerekir.
 
-## <a name="step-1-5-run-the-empty-django-project"></a>1-5. adım: Boş Django projeyi Çalıştır
+## <a name="step-1-5-run-the-empty-django-project"></a>Adım 1-5: Boş Django projesini çalıştırın
 
-1. Visual Studio'da **hata ayıklama** > **hata ayıklamayı Başlat** (**F5**) veya **Web sunucusu** (araç çubuğunda gördüğünüz bir tarayıcı farklılık gösterebilir):
+1. Visual Studio'da **Hata** > **Ayıklama Başlatma Hata Ayıklama** **(F5)** seçeneğini belirleyin veya araç çubuğundaki **Web Sunucusu** düğmesini kullanın (gördüğünüz tarayıcı değişebilir):
 
-    ![Web sunucusu araç çubuğu düğmesi Visual Studio'da çalıştırın.](media/django/run-web-server-toolbar-button.png)
+    ![Visual Studio'da web sunucusu araç çubuğu düğmesini çalıştırın](media/django/run-web-server-toolbar-button.png)
 
-1. Çalıştıran bir sunucuda anlamına gelir komutu çalıştırılarak `manage.py runserver <port>`, Django'nın yerleşik geliştirme sunucusu başlatır. Visual Studio diyorsa **hata ayıklayıcı başlatılamadı** sahip herhangi bir başlangıç dosyası hakkında bir ileti ile sağ **manage.py** içinde **Çözüm Gezgini** seçip**Başlangıç dosyası olarak ayarla**.
+1. Sunucuyu çalıştırmak, Django'nun yerleşik geliştirme sunucusunu başlatan komutu `manage.py runserver <port>`çalıştırmak anlamına gelir. Visual Studio, başlangıç dosyası olmamasıyla ilgili bir iletiyle **hata ayıklamaya başlayamadığını söylüyorsa,** **Solution Explorer'da** **manage.py** sağ tıklatın ve Başlangıç Dosyası **olarak ayarla'yı**seçin.
 
-1. Sunucuyu başlatın görüntüler, aynı zamanda sunucu günlüğü'nü açın bir konsol penceresi görürsünüz. Visual Studio otomatik olarak bir tarayıcı açar `http://localhost:<port>`. Ancak, Django projesi hiçbir uygulama olduğundan, Django ne kadar kullandığınız düzgün çalıştığını onaylamak için yalnızca bir varsayılan sayfasını gösterir:
+1. Sunucuyu başlattığınızda, sunucu günlüğünü de görüntüleyen bir konsol penceresinin açık olduğunu görürsünüz. Visual Studio otomatik olarak `http://localhost:<port>`bir tarayıcı yı açar. Ancak Django projesinde uygulama bulunmadığından, Django şimdiye kadar sahip olduğunuz şeyin iyi çalıştığını kabul etmek için yalnızca varsayılan bir sayfa gösterir:
 
-    ![Django projesi varsayılan görünüm](media/django/step01-first-run-success.png)
+    ![Django proje varsayılan görünümü](media/django/step01-first-run-success.png)
 
-1. İşiniz bittiğinde, konsol penceresini kapatarak veya kullanarak sunucuyu Durdur **hata ayıklama** > **hata ayıklamayı Durdur** Visual Studio'daki komutu.
+1. İşlem bittiğinde, konsol penceresini kapatarak veya Visual Studio'daki **Hata** > **Ayıklama Hata Ayıklama** Komutunu kullanarak sunucuyu durdurun.
 
-### <a name="question-is-django-a-web-server-as-well-as-a-framework"></a>Soru: Django web sunucusu gibi bir çerçeve mi?
+### <a name="question-is-django-a-web-server-as-well-as-a-framework"></a>Soru: Django bir web sunucusu yanı sıra bir çerçeve mi?
 
-Yanıt: Evet ve Hayır. Django geliştirme amacıyla kullanılan bir yerleşik web sunucusu yok. Bu web sunucusu gibi ne zaman web uygulamasını yerel olarak çalıştırdığınızda neler kullanılır Visual Studio'da hata ayıklama. Ancak, bir web konağına dağıttığınızda, Django bunun yerine ana bilgisayarın web sunucusunu kullanır. *Wsgi.py* modülü Django projesinde, üretim sunucularına takma üstlenir.
+Cevap: Evet ve hayır. Django geliştirme amaçlı kullanılan yerleşik bir web sunucusu var. Bu web sunucusu, Visual Studio'da hata ayıklama gibi web uygulamasını yerel olarak çalıştırdığınızda kullanılan sunucudur. Ancak, bir web barındırma sitesine dağıtığınızda, Django bunun yerine ana bilgisayarWeb sunucusunu kullanır. Django projesindeki *wsgi.py* modülü, üretim sunucularına bağlanmayı hallediyor.
 
-### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Soru: Hata ayıklama menü komutları ve sunucu komutlarını projenin Python alt menüsünde'nın kullanımı arasındaki fark nedir?
+### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Soru: Hata Ayıklama menüsü komutlarını kullanmakla projenin Python alt menüsündeki sunucu komutlarını kullanmak arasındaki fark nedir?
 
-Yanıt: Ek olarak **hata ayıklama** menü komutları ve araç çubuğu düğmeleri kullanarak da başlatabilirsiniz **Python** > **Server'i** veya  **Python** > **Run hata ayıklama sunucusu** projenin bağlam menüsü komutları. Her iki komutu çalıştıran sunucunun yerel URL'sini (localhost:port) görebileceğiniz bir konsol penceresi açın. Ancak, bu URL ile bir tarayıcı el ile açmalısınız ve hata ayıklama sunucuda otomatik olarak Visual Studio hata ayıklayıcı başlatılamıyor. Kullanmak isterseniz, bir hata ayıklayıcı için çalışan işlemi daha sonra ekleyebilirsiniz **hata ayıklama** > **iliştirme** komutu.
+Cevap: **Hata Ayıklama** menü komutları ve araç çubuğu düğmelerine ek olarak, projenin bağlam menüsündeki **Python** > **Run sunucusu** veya **Python** > **Run hata ayıklama sunucu** komutlarını kullanarak sunucuyu başlatabilirsiniz. Her iki komut da çalışan sunucunun yerel URL'sini (localhost:port) gördüğünüz bir konsol penceresi açar. Ancak, bu URL'ye sahip bir tarayıcıyı el ile açmanız gerekir ve hata ayıklama sunucusunu çalıştırmak Visual Studio hata ayıklamasını otomatik olarak başlatmaz. **Hata** Ayıklama Komutunu kullanarak, isterseniz, daha sonra çalışan işleme **hata** > ayıklama ekleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu noktada, temel Django projesi herhangi bir uygulama içermiyor. Sonraki adımda bir uygulama oluşturduğunuzda. Genellikle daha fazla Django projesi Django uygulamaları ile çalışmak için şu anda çok fazla ortak dosyaları hakkında bilmeniz gerekmez.
+Bu noktada, temel Django projesi herhangi bir uygulama içermez. Bir sonraki adımda bir uygulama oluşturursunuz. Genellikle Django uygulamalarıyla Django projesinden daha fazla çalıştığınız için, şu anda ortak dosyalar hakkında daha fazla bilgi sahibi olmanız gerekmez.
 
 > [!div class="nextstepaction"]
-> [Görünümleri ve şablonların ile bir Django uygulaması oluşturma](learn-django-in-visual-studio-step-02-create-an-app.md)
+> [Görünümler ve sayfa şablonları içeren bir Django uygulaması oluşturma](learn-django-in-visual-studio-step-02-create-an-app.md)
 
-## <a name="go-deeper"></a>Daha ayrıntılı şekilde inceleyin
+## <a name="go-deeper"></a>Daha derine inin
 
-- Django projesi kodu: [Django uygulamanız yazma, bölüm 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (docs.djangoproject.com)
-- Yönetim yardımcı programı: [django yönetim ve manage.py](https://docs.djangoproject.com/en/2.0/ref/django-admin/) (docs.djangoproject.com)
-- Öğretici kaynak kodu github'da: [Microsoft/python-örnek-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- Django proje kodu: [İlk Django uygulaması, bölüm 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (docs.djangoproject.com) yazma
+- İdari yardımcı program: [django-admin ve manage.py](https://docs.djangoproject.com/en/2.0/ref/django-admin/) (docs.djangoproject.com)
+- GitHub'da Öğretici kaynak kodu: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

@@ -18,42 +18,42 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb4cd0a46e5ab4cc9c3a9e00773818d536b84891
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68461442"
 ---
 # <a name="build-events-dialog-box-visual-basic"></a>Derleme Olayları İletişim Kutusu (Visual Basic)
 
-Derleme yapılandırma yönergelerini belirtmek için **derleme olayları** iletişim kutusunu kullanın. Ayrıca, herhangi bir oluşturma öncesi veya oluşturma sonrası olayının çalıştırıldığı koşulları belirtebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Derleme olaylarını belirtin (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
+Yapı yapılandırma yönergelerini belirtmek için **Yapı Olayları** iletişim kutusunu kullanın. Ayrıca, herhangi bir ön yapı veya yapım sonrası olayın çalıştırıldığı koşulları da belirtebilirsiniz. Daha fazla bilgi için [bkz: Yapı Olayları (Visual Basic) belirtin.](../../ide/how-to-specify-build-events-visual-basic.md)
 
-**Oluşturma öncesi olay komut satırı**
+**Önceden oluşturma olay komut satırı**
 
-Yapı başlamadan önce yürütülecek komutları belirtir. Uzun komutları yazmak için, oluşturma öncesi [olay/oluşturma sonrası olay komut satırı Iletişim kutusunu](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)göstermek Için **derleme ön yapısını Düzenle** ' ye tıklayın.
+Yapı başlamadan önce yürütülecek komutları belirtir. Uzun komutlar yazmak için, [Önceden Yapılan Olay/Post-build Olay Komut Satırı İletişim Kutusu'nu](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)görüntülemek için **Ön Yapıyı** Düzenle'yi tıklatın.
 
 > [!NOTE]
-> Proje güncel değilse ve derleme tetikleniyorsa, ön derleme olayları çalışmaz.
+> Proje güncelse ve hiçbir yapı tetiklenmiyorsa, önceden yapı olayları çalışmaz.
 
 **Oluşturma sonrası olay komut satırı**
 
-Yapı bittikten sonra yürütülecek komutları belirtir. Uzun komutları yazmak için derleme sonrası **olay/oluşturma sonrası olay komut satırı** iletişim kutusunu göstermek üzere **derlemeyi Düzenle** ' ye tıklayın.
+Yapı sona erdikten sonra yürütülecek komutları belirtir. Uzun komutlar yazmak için, **Önceden Yapılan olay/Post-build Event Komut Satırı** iletişim kutusunu görüntülemek için **Post-build'i** düzenle'yi tıklatın.
 
 > [!NOTE]
-> . Bat `call` dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin, `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat`.
+> .bat `call` dosyalarını çalıştıran tüm yapı sonrası komutlardan önce bir deyim ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
 
-**Oluşturma sonrası olayını Çalıştır**
+**Oluşturma sonrası etkinliği çalıştırma**
 
-Aşağıdaki tabloda gösterildiği gibi, oluşturma sonrası olayının çalıştırılacağı koşulları belirtir.
+Aşağıdaki tabloda gösterildiği gibi, yapı sonrası olayın çalışması için koşulları belirtir.
 
 |Seçenek|Sonuç|
 |------------|------------|
-|**Her zaman**|Oluşturma sonrası olay, yapılandırmanın başarılı olup olmamasına bakılmaksızın çalışacaktır.|
-|**Başarılı derleme üzerinde**|Oluşturma sonrası olay, derleme başarılı olursa çalışır. Bu olay, derleme başarılı olduğu sürece güncel olan bir proje için de çalışır. Varsayılan ayar budur.|
-|**Derleme proje çıkışını güncelleştirdiğinde**|Oluşturma sonrası olay, yalnızca derleyicinin çıkış dosyası (. exe veya. dll) önceki derleyici çıkış dosyasından farklı olduğunda çalışır. Bir proje güncel ise, oluşturma sonrası bir olay çalıştırılmaz.|
+|**Her zaman**|Yapının başarılı olup olmadığına bakılmaksızın, oluşturma sonrası olay çalışacaktır.|
+|**Başarılı yapıda**|Yapı başarılı olursa, yapı sonrası olay çalışacaktır. Etkinlik, yapı başarılı olduğu sürece güncel bir proje için bile çalışacaktır. Bu varsayılan ayardır.|
+|**Yapı proje çıktısını güncellediğinde**|Yapı sonrası olay yalnızca derleyicinin çıktı dosyası (.exe veya .dll) önceki derleyici çıktı dosyasından farklı olduğunda çalışır. Bir proje güncelse, yapı sonrası olay çalıştırılmez.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)
-- [Nasıl yapılır: Derleme Olayları Belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
-- [Derleme Öncesi Olay/Derleme Sonrası Olay Komut Satırı İletişim Kutusu](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
+- [Nasıl Yapılır: Yapı Olaylarını Belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [Önceden Yapı Olay/Post-build Olay Komut Satırı İletişim Kutusu](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)

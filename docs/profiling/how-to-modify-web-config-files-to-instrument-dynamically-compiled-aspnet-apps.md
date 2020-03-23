@@ -1,5 +1,5 @@
 ---
-title: 'Web. config dosyası: Gereç & profili dinamik derlenmiş ASP.NET Web uygulaması'
+title: 'Web.Config dosyası: Web uygulaması ASP.NET derlenen enstrüman & profil dinamiği'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a92e5692-2183-4ae3-9431-b067c6a7aab4
@@ -10,70 +10,70 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 6fb67a5b0da186bd87b9e5c39204e3acccc0529f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74775418"
 ---
-# <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Nasıl yapılır: dinamik olarak derlenen ASP.NET Web uygulamalarını işaretlemek ve profil haline getirmek için Web. config dosyalarını değiştirme
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları izleme yöntemini kullanarak, dinamik olarak derlenen [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamalarından ayrıntılı zamanlama verileri, .NET bellek ayırma verileri ve .NET nesne yaşam süresi verileri toplayabilirsiniz.
+# <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Nasıl yapılır: web.config dosyalarını enstrüman ve profil dinamik olarak derlenmiş ASP.NET web uygulamalarıyla değiştirin
+Ayrıntılı zamanlama [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] verileri, .NET bellek ayırma verileri ve dinamik olarak derlenmiş [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamalarından .NET nesne yaşam boyu verilerini toplamak için Profil Oluşturma Araçları enstrümantasyon yöntemini kullanabilirsiniz.
 
- Bu konu, Web *. config* yapılandırma dosyasının [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamalarının izleme ve profil oluşturmayı etkinleştirmek için nasıl değiştirileceğini açıklamaktadır.
+ Bu konu, Web uygulamalarının enstrümantasyonunu ve profilini etkinleştirmek [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] için *web.config* yapılandırma dosyasının nasıl değiştirilebildiğini açıklar.
 
 > [!NOTE]
-> Örnekleme profil oluşturma yöntemini kullanırken veya önceden derlenmiş bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] modülünü işaretlemek istediğinizde, *Web. config* dosyasını değiştirmeniz gerekli değildir.
+> Örnekleme profil oluşturma yöntemini kullandığınızda veya önceden derlenmiş [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] bir modül elet etmek istediğinizde *web.config* dosyasını değiştirmeniz gerekmez.
 
- Bir *Web. config* dosyasının kökü **yapılandırma** öğesidir. Dinamik olarak derlenen bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını işaretlemek ve profil haline getirmek için aşağıdaki öğeleri eklemeniz veya değiştirmeniz gerekir:
+ Bir *web.config* dosyasının kökü **yapılandırma** öğesidir. Dinamik olarak derlenmiş [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] bir web uygulamasını enstrüman ve profilleeklemek için aşağıdaki öğeleri eklemeniz veya değiştirmeniz gerekir:
 
-- Profil oluşturmayı denetleyen Microsoft. VisualStudio. Enterprise. ASPNetHelper derlemesini tanımlayan bir **yapılandırma/çalışma zamanı/assemblyBinding/dependentAssembly** öğesi. **DependentAssembly** öğesi iki alt öğe Içeriyor: **assemblyIdentity** ve **kod temeli**.
+- Profil oluşturmayı denetleyen Microsoft.VisualStudio.Enterprise.ASPNetHelper derlemesini tanımlayan bir **yapılandırma/çalışma zamanı/derlemeBağlayıcı/bağımlıDerleme** öğesi. **BağımlıAssembly** öğesi iki alt öğe içerir: **assemblyIdentity** ve **codeBase**.
 
-- Hedef derleme için profil oluşturucu işlem sonrası derleme adımını tanımlayan bir **Configuration/System. Web/Compilation** öğesi.
+- Hedef derleme için profil oluşturucu işlem sonrası derleme adımını tanımlayan bir **configuration/system.web/derleme** öğesi.
 
-- Profil Oluşturma Araçları araçlarının konumunu tanımlayan iki **ekleme** öğesi **Configuration/appSettings** bölümüne eklenir.
+- **Yapılandırma/uygulama Ayarları** bölümüne Profil Oluşturma Araçları araçlarının konumunu tanımlayan iki **ekleme** öğesi eklenir.
 
-  Uygulamanın yapılandırmasını geri yüklemek için kullanabileceğiniz özgün *Web. config* dosyasının bir kopyasını oluşturmanızı öneririz.
+  Uygulamayapılandırmasını geri yüklemek için kullanabileceğiniz orijinal *web.config* dosyasının bir kopyasını oluşturmanızı öneririz.
 
-### <a name="to-add-the-aspnethelper-assembly-as-a-configurationruntimeassemblybindingdependentassembly-element"></a>ASPNetHelper derlemesini bir Configuration/runtime/assemblyBinding/dependentAssembly öğesi olarak eklemek için
+### <a name="to-add-the-aspnethelper-assembly-as-a-configurationruntimeassemblybindingdependentassembly-element"></a>ASPNetHelper derlemesini yapılandırma/çalışma süresi/derlemeBağlama/bağımlıAssembly öğesi olarak eklemek için
 
-1. Gerekirse, **çalışma zamanı** öğesini **yapılandırma** öğesinin bir alt öğesi olarak ekleyin; Aksi halde, bir sonraki adıma gidin.
+1. Gerekirse, çalışma **zamanı** öğesini **yapılandırma** öğesinin alt öğesi olarak ekleyin; aksi takdirde, bir sonraki adıma geçin.
 
-    **Çalışma zamanı** öğesinin öznitelikleri yok. **Yapılandırma** öğesinde yalnızca bir **çalışma zamanı** alt öğesi olabilir.
+    **Çalışma zamanı** öğesi hiçbir öznitelikleri vardır. **Yapılandırma** öğesi yalnızca bir **çalışma zamanı** alt öğesi olabilir.
 
-2. Gerekirse, **assemblyBinding** öğesini **Runtime** öğesinin bir alt öğesi olarak ekleyin; Aksi halde, bir sonraki adıma gidin.
+2. Gerekirse, **çalışma zamanı** öğesinin alt öğesi olarak **derlemeBağlama** öğesi ekleyin; aksi takdirde, bir sonraki adıma geçin.
 
-    **Çalışma zamanı** öğesi yalnızca bir **assemblyBinding** öğesine sahip olabilir.
+    **Çalışma zamanı** öğesi yalnızca bir **derlemeBağlama** öğesi olabilir.
 
-3. **AssemblyBinding** öğesine aşağıdaki öznitelik adını ve değerini ekleyin:
+3. **DerlemeBağlayıcı** öğeye aşağıdaki öznitelik adı ve değeri ekleyin:
 
-   | Öznitelik adı | Öznitelik değeri |
+   | Öznitelik Adı | Öznitelik Değeri |
    |----------------|--------------------------------------|
-   | **Özniteliði** | **urn: schemas-microsoft-com: asm. v1** |
+   | **Xmlns** | **vazo:şema-microsoft-com:asm.v1** |
 
-4. **AssemblyBinding** öğesinin alt öğesi olarak bir **dependentAssembly** öğesi ekleyin.
+4. **Bağlama** Bağlama öğesinin alt öğesi olarak **bağımlı BirDerleme** öğesi ekleyin.
 
-    **DependentAssembly** öğesinin hiç özniteliği yok.
+    **BağımlıAssembly** öğesi hiçbir öznitelikleri vardır.
 
-5. **DependentAssembly** öğesinin alt öğesi olarak bir **assemblyIdentity** öğesi ekleyin.
+5. **Bağlı Assembly** öğesinin alt öğesi olarak bir **assemblyIdentity** öğesi ekleyin.
 
-6. Aşağıdaki öznitelik adlarını ve değerlerini **assemblyIdentity** öğesine ekleyin:
+6. **AssemblyIdentity** öğesine aşağıdaki öznitelik adlarını ve değerlerini ekleyin:
 
-   | Öznitelik adı | Öznitelik değeri |
+   | Öznitelik Adı | Öznitelik Değeri |
    |--------------------| - |
-   | **ada** | **Microsoft. VisualStudio. Enterprise. ASPNetHelper** |
-   | **PublicKeyToken** | **b03f5f7f11d50a3a** |
-   | **ayarı** | **Kültür** |
+   | **Adı** | **Microsoft.VisualStudio.Enterprise.ASPNetHelper** |
+   | **Publickeytoken** | **b03f5f7f11d50a3a** |
+   | **kültür** | **Nötr** |
 
-7. **DependentAssembly** öğesinin alt öğesi olarak bir **CODEBASE** öğesi ekleyin.
+7. **BağımlıAssembly** öğesinin alt öğesi olarak bir **codeBase** öğesi ekleyin.
 
-8. Aşağıdaki öznitelik adlarını ve değerlerini **CODEBASE** öğesine ekleyin:
+8. **CodeBase** öğesine aşağıdaki öznitelik adlarını ve değerlerini ekleyin:
 
-   |Öznitelik adı|Öznitelik değeri|
+   |Öznitelik Adı|Öznitelik Değeri|
    |--------------------|---------------------|
-   |**version**|**10.0.0.0**|
-   |**değerini**|`PathToASPNetHelperDll`|
+   |**Sürüm**|**10.0.0.0**|
+   |**Href**|`PathToASPNetHelperDll`|
 
-    `PathToASPNetHelperDll`, Microsoft. VisualStudio. Enterprise. ASPNetHelper. dll dosyasının URL 'sidir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan konumda yüklüyse, **href** değeri `C:/Program%20Files/Microsoft%20Visual%20Studio%202010.0/Common7/IDE/PrivateAssemblies/Microsoft.VisualStudio.Enterprise.ASPNetHelper.DLL` olmalıdır
+    `PathToASPNetHelperDll`Microsoft.VisualStudio.Enterprise.ASPNetHelper.dll dosyasının URL'sidir. Varsayılan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] konuma yüklenmişse, **href** değeri`C:/Program%20Files/Microsoft%20Visual%20Studio%202010.0/Common7/IDE/PrivateAssemblies/Microsoft.VisualStudio.Enterprise.ASPNetHelper.DLL`
 
 ```xml
     <configuration>
@@ -95,21 +95,21 @@ ms.locfileid: "74775418"
         </runtime>
 ```
 
-### <a name="to-add-the-profiler-post-process-step-to-the-configurationsystemwebcompilation-element"></a>Profil Oluşturucu işlem sonrası adımını Configuration/System. Web/Compilation öğesine eklemek için
+### <a name="to-add-the-profiler-post-process-step-to-the-configurationsystemwebcompilation-element"></a>Configuration/system.web/compilation öğesine profil oluşturucu işlem sonrası adımeklemek için
 
-1. Gerekirse, **System. Web** öğesini **yapılandırma** öğesinin bir alt öğesi olarak ekleyin; Aksi halde, bir sonraki adıma gidin.
+1. Gerekirse, **configuration** öğesinin alt öğesi olarak **system.web** öğesini ekleyin; aksi takdirde, bir sonraki adıma geçin.
 
-     **System. Web** öğesinin hiç özniteliği yok. **Yapılandırma** öğesinde yalnızca bir **System. Web** alt öğesi olabilir.
+     **System.web** öğesinin öznitelikleri yoktur. **Yapılandırma** öğesi yalnızca bir **system.web** alt öğesi olabilir.
 
-2. Gerekirse, **derleme** öğesini **System. Web** öğesinin bir alt öğesi olarak ekleyin; Aksi halde, bir sonraki adıma gidin.
+2. Gerekirse, **system.web** öğesinin bir alt öğesi olarak **derleme** öğesi ekleyin; aksi takdirde, bir sonraki adıma geçin.
 
-     **System. Web** öğesinde yalnızca bir **derleme** alt öğesi olabilir.
+     **System.web** öğesi yalnızca bir **derleme** alt öğesi olabilir.
 
-3. Tüm mevcut öznitelikleri **derleme** öğesinden kaldırın ve aşağıdaki öznitelik adını ve değerini ekleyin:
+3. Derleme **öğesinden** varolan öznitelikleri kaldırın ve aşağıdaki öznitelik adı ve değeri ekleyin:
 
-    |Öznitelik adı|Öznitelik değeri|
+    |Öznitelik Adı|Öznitelik Değeri|
     |--------------------|---------------------|
-    |**assemblyPostProcessorType**|**Microsoft. VisualStudio. Enterprise. Common. Aspperformanceınstrumenter, Microsoft. VisualStudio. Enterprise. ASPNetHelper, Version = 10.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a**|
+    |**assemblyPostProcessorType**|**Microsoft.VisualStudio.Enterprise.Common.AspPerformanceInstrumenter, Microsoft.VisualStudio.Enterprise.ASPNetHelper, Sürüm=10.0.0.0, Kültür=nötr, PublicKeyToken=b03f5f7f11d50a3a**|
 
 ```xml
     <configuration>
@@ -127,31 +127,31 @@ ms.locfileid: "74775418"
     <configuration>
 ```
 
-### <a name="to-add-profiler-location-settings-to-the-configurationappsettings-element"></a>Profil Oluşturucu konum ayarlarını yapılandırma/appSettings öğesine eklemek için
+### <a name="to-add-profiler-location-settings-to-the-configurationappsettings-element"></a>Yapılandırma/uygulamaAyarlar öğesine profil oluşturucu konum ayarları eklemek için
 
-1. Gerekirse, **appSettings** öğesini **yapılandırma** öğesinin bir alt öğesi olarak ekleyin; Aksi halde, bir sonraki adıma gidin.
+1. Gerekirse, **yapılandırma** öğesinin alt öğesi olarak **appAyarlar** öğesini ekleyin; aksi takdirde, bir sonraki adıma geçin.
 
-    **AppSettings** öğesinin hiç özniteliği yok. **Yapılandırma** öğesinde yalnızca bir **appSettings** alt öğesi olabilir.
+    **appSettings** öğesinin öznitelikleri yoktur. **Yapılandırma** öğesi yalnızca bir **uygulamaAyarlar** alt öğesi olabilir.
 
-2. Bir **Add** öğesini **appSettings** öğesinin alt öğesi olarak ekleyin.
+2. **appAyarlar** öğesinin alt öğesi olarak bir **ekleme** öğesi ekleyin.
 
-3. **Add** öğesine aşağıdaki öznitelik adlarını ve değerleri ekleyin:
+3. Ekle öğesine aşağıdaki öznitelik adlarını ve değerlerini **ekleyin:**
 
-   | Öznitelik adı | Öznitelik değeri |
+   | Öznitelik Adı | Öznitelik Değeri |
    |----------------| - |
-   | **anahtar** | **Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrLocation** |
-   | **value** | `PerformanceToolsFolder` **\Vsınstr.exe** |
+   | **anahtar** | **Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation** |
+   | **Değer** | `PerformanceToolsFolder`**\VSInstr.Exe** |
 
-4. **AppSettings** öğesinin alt öğesi olarak başka bir **Add** öğesi ekleyin.
+4. **appAyarlar** öğesinin alt öğesi olarak başka bir **ekle** öğesi ekleyin.
 
-5. Aşağıdaki öznitelik adlarını ve değerlerini bu **ekleme** öğesine ekleyin:
+5. Bu ekle öğesine aşağıdaki öznitelik adlarını ve değerlerini **ekleyin:**
 
-   |Öznitelik adı|Öznitelik değeri|
+   |Öznitelik Adı|Öznitelik Değeri|
    |--------------------|---------------------|
-   |**anahtar**|**Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrTools**|
-   |**value**|`PerformanceToolsFolder`|
+   |**anahtar**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|
+   |**Değer**|`PerformanceToolsFolder`|
 
-    `PerformanceToolsFolder` profil oluşturucu yürütülebilir dosyalarının yoludur. Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
+    `PerformanceToolsFolder`profilci yürütülebilir dosyaların yoludur. Profil oluşturma araçlarına giden yolu almak [için](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)bkz.
 
 ```xml
     <configuration>
@@ -175,7 +175,7 @@ ms.locfileid: "74775418"
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıda, dinamik olarak derlenen [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamalarının izleme ve profil oluşturma işlemini sağlayan bir *Web. config* dosyası verilmiştir. Bu örnek, değişiklik yapmadan önce dosyada başka bir ayar olmadığını varsayar.
+ Aşağıda, dinamik olarak derlenmiş Web uygulamalarının enstrümantasyonunu ve profilini [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] oluşturmayı sağlayan eksiksiz bir *web.config* dosyası ve bu dosya yer alıyor. Bu örnek, değişiklikten önce dosyada başka ayar olmadığını varsayar.
 
 ```xml
 <?xml version="1.0"?>
@@ -221,5 +221,5 @@ ms.locfileid: "74775418"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: dinamik olarak derlenen bir ASP.NET uygulamasını Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
-- [Nasıl yapılır: dinamik olarak derlenen bir ASP.NET uygulamasını Işaretleme ve bellek verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)
+- [Nasıl yapılır: Dinamik olarak derlenmiş bir ASP.NET uygulama ve ayrıntılı zamanlama verileri toplamak enstrüman](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
+- [Nasıl yapılır: Dinamik olarak derlenmiş bir ASP.NET uygulama ve bellek verileri toplamak enstrüman](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)

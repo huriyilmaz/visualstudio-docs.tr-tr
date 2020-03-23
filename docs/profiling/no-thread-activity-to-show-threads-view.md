@@ -1,5 +1,5 @@
 ---
-title: İş parçacığı etkinliği yok (iş parçacıkları görünümü) | Microsoft Docs
+title: Gösterilen İş Parçacığı Etkinliği Yok (İş Parçacığı Görünümü) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91cc840a69135edf59603ba62d15985eb541df0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62794474"
 ---
-# <a name="no-thread-activity-to-show-threads-view"></a>İş parçacığı etkinliği yok (iş parçacıkları görünümü) göstermek için
-Bu alan mevcut görülebilir zaman aralığında görünür iş parçacıkları hakkında veriler gösterir.
+# <a name="no-thread-activity-to-show-threads-view"></a>Gösterilen iş parçacığı etkinliği yok (İş Parçacıkları Görünümü)
+Bu alan, şu anda görünür zaman aralığında gizli olmayan iş parçacıkları hakkında veri gösterir.
 
- Hiçbir bilgi görünür durumdaysa, aşağıdaki ayarları denetleyin:
+ Hiçbir bilgi görünmüyorsa, aşağıdaki ayarları kontrol edin:
 
-- Yakınlaştırma düzeyi yüksek mi? Yakınlaştırmayı deneyin out ya da daha fazla iş parçacığı etkinliği aralığında getirmek için kaydırma.
+- Zum seviyesi yüksek mi? Kapsama alanında daha fazla iş parçacığı etkinliği getirmek için uzaklaştırmayı veya kaydırmayı deneyin.
 
-- Çok fazla iş parçacığı gizlidir? Bu durumda, tüm iş parçacıklarının gösteren deneyin
+- Çok fazla iş parçacığı gizli mi? Eğer öyleyse, tüm iş parçacığı göstermeyi deneyin
 
-- Varsa **yalnızca kendi kodum** olduğu belirlenirse, yalnızca veri kodunuz hakkında görüntüleyebilirsiniz. Herhangi bir sistem iş parçacığı etkinliği olup olmadığını belirlemek için bu ayarı temizleyerek deneyin.
+- **Yalnızca Kodum** seçilirse, yalnızca kodunuzla ilgili verileri görüntüleyebilirsiniz. Herhangi bir sistem iş parçacığı etkinliği olup olmadığını belirlemek için ayarı temizlemeyi deneyin.
 
-- Gürültü azaltma bir düşük eşik ayarlandığından emin olun.
+- Gürültü Azaltma'nın düşük bir eşiğe ayarlandıklarına emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)
