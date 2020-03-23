@@ -1,5 +1,5 @@
 ---
-title: ZipDirectory görevi | Microsoft Docs
+title: ZipDirectory Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -22,37 +22,37 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9a51fe097eb110e44b3f4bd932a26f4efb6ea6
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 5ceb23d34fab92fe0056f9bd82b9d9c63967dc4c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77630645"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094568"
 ---
-# <a name="zipdirectory-task"></a>ZipDirectory görevi
+# <a name="zipdirectory-task"></a>ZipDirectory görev
 
-Bir dizinin içeriğinden bir *. zip* arşivi oluşturur.
+Bir dizinin içeriğinden *bir .zip* arşivi oluşturur.
 
 >[!NOTE]
->`ZipDirectory` görevi yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
+>Görev `ZipDirectory` yalnızca MSBuild 15.8 ve üzeri kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda `ZipDirectory` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `ZipDirectory` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DestinationFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi<br /><br /> Oluşturulacak *. zip* dosyasının tam yolu.|
-|`Overwrite`|İsteğe bağlı `Boolean` parametresi.<br /><br /> `true`, varsa, hedef dosyanın atlandığını atlar. `false` değerini varsayılan olarak alır.|
-|`SourceDirectory`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> İçinden bir *. zip* Arşivi oluşturulacak dizini belirtir.|
+|`DestinationFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre<br /><br /> Oluşturmak için *.zip* dosyasına tam yol.|
+|`Overwrite`|İsteğe bağlı `Boolean` parametre.<br /><br /> Atlarsa, `true`hedef dosya varsa üzerine yazılır. Varsayılan `false`değer.|
+|`SourceDirectory`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Bir *.zip* arşivi oluşturmak için dizin belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, bir proje derlemeden sonra çıkış dizininden bir *. zip* arşivi oluşturur.
+ Aşağıdaki örnek (içe *aktarılırsa .hedef dosyası* olarak kullanılırsa), proje oluşturduktan sonra çıktı dizininden *bir .zip* arşivi oluşturur. Özellik `$(OutputPath)` normalde bir MSBuild proje dosyasında tanımlanır, bu nedenle aşağıdaki dosyayı içeri `output.zip`aktaran bir proje dosyası zip arşivi oluşturur:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

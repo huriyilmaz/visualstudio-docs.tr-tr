@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b8c97659cc6036433c5bcf2547a9f88aee56f451
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72747721"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser Komutu
 
-Bir Web tarayıcı penceresinde belirttiğiniz URL 'YI tümleşik geliştirme ortamı (IDE) veya IDE 'nin dışında görüntüler.
+Bir web tarayıcısı penceresinde belirttiğiniz URL'yi tümleşik geliştirme ortamında (IDE) veya IDE'nin dışında görüntüler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,25 +30,25 @@ Bir Web tarayıcı penceresinde belirttiğiniz URL 'YI tümleşik geliştirme or
 View.ShowWebBrowser URL [/new][/ext]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 `URL`
 
-Gerekli. Web sitesi için URL (Tekdüzen Kaynak Konum Belirleyicisi).
+Gereklidir. Web sitesinin URL'si (Tek Tip Kaynak Bulucu).
 
 ## <a name="switches"></a>Anahtarlar
-/Yeni
+/yeni
 
-İsteğe bağlı. Sayfanın, Web tarayıcısının yeni bir örneğinde göründüğünü belirtir.
+İsteğe bağlı. Sayfanın web tarayıcısının yeni bir örneğinde göründüğünü belirtir.
 
 /ext
 
-İsteğe bağlı. Sayfanın IDE dışında varsayılan Web tarayıcısında göründüğünü belirtir.
+İsteğe bağlı. Sayfanın Varsayılan Web Tarayıcısı'nda IDE dışında göründüğünü belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-**ShowWebBrowser** komutunun diğer adı **Git** veya **Gezinti**' dir.
+**ShowWebBrowser** komutu için takma arama **gezinmek** veya **gezinmek**.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, Microsoft Docs giriş sayfasını IDE dışında bir Web tarayıcısında görüntüler. Web tarayıcısının bir örneği zaten açıksa, kullanılır; Aksi halde yeni bir örnek başlatılır.
+Aşağıdaki örnekte, Microsoft Dokümanlar ana sayfası IDE dışındaki bir web tarayıcısında görüntülenir. Web tarayıcısının bir örneği zaten açıksa, kullanılır; aksi takdirde yeni bir örnek başlatılır.
 
 ```cmd
 >View.ShowWebBrowser https://docs.microsoft.com /ext
@@ -56,7 +56,7 @@ Aşağıdaki örnek, Microsoft Docs giriş sayfasını IDE dışında bir Web ta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
+- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

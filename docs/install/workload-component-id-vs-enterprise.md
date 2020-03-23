@@ -1,12 +1,12 @@
 ---
-title: Visual Studio Enterprise iş yükü ve bileşen kimlikleri
+title: Visual Studio Enterprise iş yükü ve bileşen tisi'leri
 titleSuffix: ''
-description: İş yükü ve Bileşen kimlikleri komut satırını kullanarak Visual Studio'yu yükleyin veya bağımlılık VSIX bildirimi olarak belirtmek için kullanın.
+description: Komut satırını kullanarak Visual Studio'yu yüklemek veya VSIX bildiriminde bağımlılık olarak belirtmek için iş yükünü ve bileşen bilgisayarlarını kullanın
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 03/16/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be73e3af-d87b-4d14-bd08-2e4bda074fb3
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: af71243b1820b1aea244b13c7980a3df603f9eda
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: a122ce7ab95ff529d231d34e3cdd4852a0b49b81
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114026"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437657"
 ---
 # <a name="visual-studio-enterprise-component-directory"></a>Visual Studio Enterprise bileşen dizini
 
@@ -47,7 +47,7 @@ ms.locfileid: "76114026"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-* [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
-* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
+* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
   * [Komut satırı parametresi örnekleri](command-line-parameter-examples.md)
-* [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio'nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)

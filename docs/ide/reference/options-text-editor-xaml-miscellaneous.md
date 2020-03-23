@@ -1,5 +1,5 @@
 ---
-title: Seçenekler, metin düzenleyici, XAML, çeşitli
+title: Seçenekler, Metin Düzenleyicisi, XAML, Çeşitli
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -29,30 +29,30 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: cec66cdb2de3f89358cd0ee90867154cc374a7fd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568210"
 ---
-# <a name="options-text-editor-xaml-miscellaneous"></a>Seçenekler, metin düzenleyici, XAML, çeşitli
+# <a name="options-text-editor-xaml-miscellaneous"></a>Seçenekler, Metin Düzenleyicisi, XAML, Çeşitli
 
-Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **çeşitli** Özellikler sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsüne ve ardından **Seçenekler**' e tıklayın. **Çeşitli** Özellik sayfasına erişmek Için, **xaml** > **çeşitli** düğümleri > **metin düzenleyici** ' yi genişletin.
+XAML belgelerinizde öğelerin ve özniteliklerin nasıl biçimlendirilip biçimlendirilebildiğini belirtmek için **Çeşitli** özellik sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsünü tıklatın ve ardından **Seçenekler'i**tıklatın. Çeşitli özellik **sayfasına** erişmek için **Metin Düzenleyicisi** > **XAML** > **Çeşitli** düğümgenişletin.
 
-## <a name="auto-insert"></a>Otomatik Ekle
+## <a name="auto-insert"></a>Otomatik Ekleme
 
-Etiketlerin ve tekliflerin otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın.
+Etiketlerin ve tekliflerin otomatik olarak oluşturulduğunu denetlemek için bu ayarı kullanın.
 
 |||
 |-|-|
-|**Kapatma etiketleri**|Açılış etiketini (>) karakterden daha uzun bir öğe kapatma etiketinin otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
-|**Öznitelik teklifleri**|Ekstre tamamlama açılan listesinden bir öznitelik değeri seçildiğinde kapsayan tekliflerin oluşturulup oluşturulmayacağını belirtir.|
-|**MarkupExtensions için kapatma ayraçları**|Açma küme ayracı ( **{** ) yazdığınızda bir işaretleme uzantısının kapanış ayracı ( **}** ) otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
-|**MarkupExtension parametrelerini ayırmak için virgüller**|Bir biçimlendirme uzantısına birden fazla parametre yazdığınızda virgüllerin oluşturulup oluşturulmayacağını belirtir.|
+|**Etiketleri kapatma**|Açılış etiketini karakterden büyük (>) ile kapattığınızda bir öğenin kapanış etiketinin otomatik olarak oluşturulup oluşturulmadığını belirtir.|
+|**Öznitelik tırnak**|Ekstre tamamlama açılır listesinden öznitelik değeri seçildiğinde ek tırnak işaretlerinin oluşturulup oluşturulmadığını belirtir.|
+|**Biçimlendirme Uzantıları için kapanış ayraçları**|Açılış ayracı karakterini (**{ )** yazdığınızda biçimlendirme uzantısı kapatma ayracının **(}**) otomatik olarak oluşturulup oluşturulmadığını belirtir.|
+|**BiçimlendirmeUzanma parametrelerini ayırmak için virgüller**|Biçimlendirme uzantısında birden fazla parametre yazdığınızda virgül üretilip oluşturulmadığını belirtir.|
 
 ## <a name="errors-and-warnings"></a>Hatalar ve Uyarılar
 
-Hataların ve uyarıların otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın. Daha fazla bilgi için bkz. [XAML hataları ve uyarıları](../../xaml-tools/xaml-errors-warnings.md).
+Hataların ve uyarıların otomatik olarak oluşturulduğunu denetlemek için bu ayarı kullanın. Daha fazla bilgi için [XAML hataları ve uyarılarına](../../xaml-tools/xaml-errors-warnings.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

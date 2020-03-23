@@ -1,5 +1,5 @@
 ---
-title: MarkProfile | Microsoft Docs
+title: İşaretProfili | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f53b51f9e78e2cb5d327abd3a79ebf2faa3a9204
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778576"
 ---
 # <a name="markprofile"></a>MarkProfile
-`MarkProfile` yöntemi içine bir profil işareti ekler. *VSP* dosyası. Eklenecek işaret için `MarkProfile` işlevi içeren iş parçacığının profil oluşturma açık olmalıdır.
+Yöntem, `MarkProfile` ''ye bir profil işareti ekler. *vsp* dosyası. `MarkProfile` İşaretin takılması için işlevi içeren iş parçacığının profil oluşturma özelliği ON olmalıdır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,41 +30,41 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 #### <a name="parameters"></a>Parametreler
  `lMarker`
 
- Eklenecek işaretleyici. İşaretleyici 0 ' dan büyük veya buna eşit (sıfır) olmalıdır.
+ Eklenecek işaretçi. İşaretçi 0'dan (sıfır) büyük veya eşit olmalıdır.
 
-## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
- İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
+## <a name="property-valuereturn-value"></a>Özellik değeri/iade değeri
+ İşlev, **numaralandırma PROFILE_COMMAND_STATUS** kullanarak başarı veya başarısızlığı gösterir. İade değeri aşağıdakilerden biri olabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|MARK_ERROR_MARKER_RESERVED|Parametre 0 ' dan küçük veya buna eşit. Bu değerler ayrılmıştır. İşaret ve açıklama kaydedilmez.|
-|MARK_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır. İşaret ve açıklama kaydedilmez.|
-|MARK_ERROR_MODE_OFF|İşlev çağrıldığında profil oluşturma modu OFF olarak ayarlanmıştır. İşaret ve açıklama kaydedilmez.|
+|MARK_ERROR_MARKER_RESERVED|Parametre 0'dan küçük veya eşittir. Bu değerler ayrılmıştır. İşaret ve açıklama kaydedilmez.|
+|MARK_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında NEVER olarak ayarlandı. İşaret ve açıklama kaydedilmez.|
+|MARK_ERROR_MODE_OFF|Profil oluşturma modu, işlev çağrıldığında KAPALI olarak ayarlandı. İşaret ve açıklama kaydedilmez.|
 |MARK_ERROR_NO_SUPPORT|Bu bağlamda işaret desteği yok. İşaret ve açıklama kaydedilmez.|
-|MARK_ERROR_OUTOFMEMORY|Olayı kaydetmek için bellek yoktu. İşaret ve açıklama kaydedilmez.|
-|MARK_TEXTTOOLONG|Dize en fazla 256 karakter sınırını aşıyor. Açıklama dizesi kesilir ve işaret ve açıklama kaydedilir.|
-|MARK_OK|Başarıyı göstermek için MARK_OK döndürülür.|
+|MARK_ERROR_OUTOFMEMORY|Olayı kaydetmek için bellek kullanılamadı. İşaret ve açıklama kaydedilmez.|
+|MARK_TEXTTOOLONG|Dize en fazla 256 karakteri aşıyor. Açıklama dizesi kesilir ve işaret ve açıklama kaydedilir.|
+|MARK_OK|MARK_OK başarıyı göstermek için döndürülür.|
 
 ## <a name="remarks"></a>Açıklamalar
- İşaret değeri öğesine eklenir. MarkProfile işlevini içeren iş parçacığı profili oluşturulurken kod her çalıştığında *VSP* dosyası. MarkProfile ' i birden çok kez çağırabilirsiniz.
+ İşaret değeri. *MarkProfile* işlevini içeren iş parçacığı profilleniyorsa, kod her çalıştığında vsp dosyası. MarkProfile'ı birden çok kez arayabilirsiniz.
 
- Profil işaretleri kapsamda geneldir. Örneğin, bir iş parçacığında yerleştirilen bir profil işareti, içindeki herhangi bir iş parçacığında bir veri segmentinin başlangıcını veya sonunu işaretlemek için kullanılabilir. *VSP* dosyası.
+ Profil işaretleri kapsamda geneldir. Örneğin, bir iş parçacığına eklenen bir profil işareti, veri kesiminin başlangıcını veya sonunu işaretlemek için kullanılabilir. *vsp* dosyası.
 
- Mark komutuyla veya API işlevleriyle (CommentMarkAtProfile, CommentMarkProfile veya MarkProfile) eklenen işaretler ve açıklamalar olduğunda, işaret profili işlevini içeren iş parçacığının profil oluşturma durumu açık olmalıdır.
+ İşaret profili işlevini içeren iş parçacığının profil oluşturma durumu, İşaretle komutuyla veya API işlevlerine (CommentMarkAtProfile, CommentMarkProfile veya MarkProfile) eklenen işaretler ve yorumlar da üzerinde olmalıdır.
 
 > [!IMPORTANT]
-> MarkProfile yöntemi yalnızca izleme profili oluşturma ile birlikte kullanılmalıdır.
+> MarkProfile yöntemi yalnızca enstrümantasyon profilleme ile kullanılmalıdır.
 
-## <a name="net-framework-equivalent"></a>.NET Framework eşdeğeri
- *Microsoft. VisualStudio. Profiler. dll*
+## <a name="net-framework-equivalent"></a>.NET Çerçeve eşdeğeri
+ *Microsoft.VisualStudio.Profiler.dll*
 
-## <a name="function-information"></a>İşlev bilgileri
- Üst bilgi: *VSPerf. h* içinde bildiriliyor
+## <a name="function-information"></a>Fonksiyon bilgileri
+ Üstbilgi: *VSPerf.h'de* beyan edile
 
- İçeri aktarma kitaplığı: *VSPerf. lib*
+ İthalat kitaplığı: *VSPerf.lib*
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod MarkProfile işlevini gösterir.
+ Aşağıdaki kod MarkProfile işlevini göstermektedir.
 
 ```cpp
 void ExerciseMarkProfile()
@@ -99,4 +99,4 @@ void ExerciseMarkProfile()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profilci API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)

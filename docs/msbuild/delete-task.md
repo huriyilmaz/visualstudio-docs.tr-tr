@@ -1,5 +1,5 @@
 ---
-title: Görevi Sil | Microsoft Docs
+title: Görevi Sil | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c9effb00c613c5a61a5a8d4d89cbbe5b785601d8
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634285"
 ---
 # <a name="delete-task"></a>Silme görevi
@@ -31,24 +31,24 @@ Belirtilen dosyaları siler.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda `Delete` görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda görevparametreleri `Delete` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DeletedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
-|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Silinecek dosyaları belirtir.|
-|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametresi<br /><br /> `true`, hatalar uyarı olarak günlüğe kaydedilir. Varsayılan değer: `false`.|
+|`DeletedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
+|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dosyaları silmek için belirtir.|
+|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametre<br /><br /> Hatalar `true`uyarı olarak günlüğe kaydedilirse. Varsayılan değer: `false`.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 > [!WARNING]
-> `Delete` göreviyle joker karakter kullanırken dikkatli olun. `$(SomeProperty)\**\*.*` veya `$(SomeProperty)/**/*.*`gibi ifadelerle yanlış dosyaları kolayca silebilirsiniz, özellikle özellik boş bir dize olarak değerlendirilir, bu durumda `Files` parametresi sürücünüzün köküne değerlendirilemiyor ve silmek isteenden çok daha fazlasını silebilirsiniz.
+> `Delete` Görev ile joker kullanırken dikkatli olun. Gibi ifadeler ile yanlış dosyaları kolayca `$(SomeProperty)\**\*.*` `$(SomeProperty)/**/*.*`silebilirsiniz veya , özellikle özellik boş bir dize değerlendirir, bu durumda `Files` parametre sürücünüzün köküne değerlendirmek ve silmek istediğinizden çok daha fazla silmek.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, *MyApp. pdb*dosyasını siler.
+Aşağıdaki örnek *MyApp.pdb*dosyasını siler.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

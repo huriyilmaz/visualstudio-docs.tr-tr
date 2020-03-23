@@ -1,5 +1,5 @@
 ---
-title: Bir arabirimi yeniden düzenleme ayıklayın
+title: Arabirim refactoring ayıklama
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -13,74 +13,74 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5055f50d07cf9362c9be1bdc8135e31240a7cc66
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595676"
 ---
-# <a name="extract-an-interface-refactoring"></a>Bir arabirimi yeniden düzenleme ayıklayın
+# <a name="extract-an-interface-refactoring"></a>Arabirim refactoring ayıklama
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Bir sınıf, yapı veya arabirimden var olan üyeleri kullanarak bir arabirim oluşturmanıza olanak sağlar.
+**Ne:** Bir sınıftan, yapıdan veya arabirimden varolan üyeleri kullanarak bir arabirim oluşturmanıza olanak tanır.
 
-**Ne zaman:** Başka sınıflar, yapılar veya arabirimler tarafından devralınabilir bir sınıf, yapı veya arabirimdeki üyelere sahipsiniz.
+**Ne zaman:** Diğer sınıflar, structs veya arabirimler tarafından devralınabilir bir sınıf, yapı veya arabirim üyeleri var.
 
-**Neden:** harika yapılar için nesne yönelimli tasarım arabirimdir. Sınıflar için tüm Eat, içecek, uyku gibi yaygın yöntemleri olabilir çeşitli hayvanlar (Dog, Kedi, Bird) sahip olduğunuzu düşünelim. IAnimal gibi bir arabirim kullanarak köpek Cat ve Bird ortak bir "SIGNATURE" Bu yöntemlere ait olmasını çalıştırmasına olanak tanır.
+**Neden:** Arayüzler nesne yönelimli tasarımlar için harika yapılardır. Eat, Drink, Sleep gibi ortak yöntemleri olan çeşitli hayvanlar (Köpek, Kedi, Kuş) için sınıflara sahip olduğunuzu düşünün. IAnimal gibi bir arayüz kullanarak Köpek, Kedi ve Kuş bu yöntemler için ortak bir "imza" olması için izin verir.
 
-## <a name="extract-an-interface-refactoring"></a>Bir arabirimi yeniden düzenleme ayıklayın
+## <a name="extract-an-interface-refactoring"></a>Arabirim refactoring ayıklama
 
 1. İmlecinizi sınıf adına yerleştirin.
 
    - C#:
 
-       ![Vurgulanan kodu:C#](media/extractinterface-highlight-cs.png)
+       ![Vurgulanan kod - C #](media/extractinterface-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu - Visual Basic](media/extractinterface-highlight-vb.png)
+       ![Vurgulanan kod - Visual Basic](media/extractinterface-highlight-vb.png)
 
-2. Sonra, aşağıdaki eylemlerden birini yapın:
+2. Ardından, aşağıdaki eylemlerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl + R**, ardından **Ctrl + ı**. (Klavye kısayolunuz, seçtiğiniz profile bağlı olarak farklı olabilir.)
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **Arabirimi Ayıkla** gelen önizleme penceresi açılır.
+      - **Ctrl+R**tuşuna basın, sonra **Ctrl+I**tuşuna basın. (Klavyekısayol'unuzun kısaltması seçtiğiniz profile bağlı olarak farklı olabilir.)
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek ve Önizleme penceresinden **Arabirimi Ayıkla'yı** seçin.
    - **Fare**
-      - Seçin **Düzenle > yeniden düzenleyin > Arabirimi Ayıkla**.
-      - Select sınıf adına sağ tıklayın **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **Arabirimi Ayıkla** gelen önizleme penceresi açılır.
+      - Refactor **> Ayıkla arayüzünü düzenleme'> yi**seçin.
+      - Sınıfın adını sağ tıklatın, Hızlı **Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **Arabirimi Ayıkla'yı** seçin.
 
-3. İçinde **Arabirimi Ayıkla** , açılan iletişim kutusunda sorulan bilgileri girin:
+3. Açılan **Extract Arabirimi** iletişim kutusuna sorulan bilgileri girin:
 
    ![Ayıklama Arabirimi](media/extractinterface-dialog-same-file.png)
 
    | Alan | Açıklama |
    | - | - |
-   | **Yeni arabirimin adı** | Oluşturulacak arabirimin adı. Ad varsayılan olarak I*ClassName*olarak, burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. |
-   | **Yeni dosya adı** | Arabirimi içerecek oluşturulan dosyanın adı. Arabirim adında olduğu gibi, bu ad varsayılan olarak I*ClassName*olur; burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. Ayrıca **geçerli dosyaya ekleme**seçeneğini de belirleyebilirsiniz. |
-   | **Form arabirimi için genel üyeleri seçin** | Ayıklama arabirimi öğelerdir. İstediğiniz kadar çok seçebilirsiniz. |
+   | **Yeni arayüz adı** | Oluşturulacak arabirimin adı. Ad, *ClassName'nin* yukarıda seçtiğiniz sınıfın adı olduğu I*ClassName'de*varsayılan olarak yer alır. |
+   | **Yeni dosya adı** | Arabirimi içerecek şekilde oluşturulan dosyanın adı. Arabirim adında olduğu gibi, bu ad varsayılan olarak, *ClassName'nin* yukarıda seçtiğiniz sınıfın adı olduğu I*ClassName'ye*göre varsayılan olarak verilir. **Geçerli dosyaya ekle**seçeneğini de seçebilirsiniz. |
+   | **Arayüz oluşturmak için ortak üyeleri seçin** | Arabiriminiçine çıkarılacak öğeler. İstediğiniz kadar seçebilirsiniz. |
 
-4. **Tamam**’ı seçin.
+4. **Tamam'ı**seçin.
 
-   Belirtilen adı dosyasında arabirimi oluşturulur. Buna ek olarak, seçtiğiniz sınıfı bu arabirimi uygular.
+   Arabirim belirtilen adın dosyasında oluşturulur. Ayrıca, seçtiğiniz sınıf bu arabirimi uygular.
 
    - C#:
 
-      ![Elde edilen sınıf-C#](media/extractinterface-class-cs.png)
+      ![Elde Eden Sınıf - C #](media/extractinterface-class-cs.png)
 
-      ![Sonuç arabirimi-C#](media/extractinterface-interface-cs.png)
+      ![Ortaya Çıkan Arayüz - C #](media/extractinterface-interface-cs.png)
 
    - Visual Basic:
 
-      ![Elde edilen sınıf-Visual Basic](media/extractinterface-class-vb.png)
+      ![Elde Eden Sınıf - Visual Basic](media/extractinterface-class-vb.png)
 
-      ![Sonuç arabirimi-Visual Basic](media/extractinterface-interface-vb.png)
+      ![Ortaya Çıkan Arayüz - Visual Basic](media/extractinterface-interface-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET Geliştiricileri için İpuçları](../csharp-developer-productivity.md)
+- [.NET Geliştiricileri için ipuçları](../csharp-developer-productivity.md)

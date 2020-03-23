@@ -15,33 +15,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f33dd9b19297811597be406337d70392904e6e44
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596396"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu
-Visual Basic proje seçenekleri için varsayılan ayarları belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri kod düzenleyicisinde proje başlığına eklenecektir. Seçenekler tüm Visual Basic projelerine uygulanır.
+Visual Basic proje seçenekleri için varsayılan ayarları belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri Kod Düzenleyicisi'ndeki proje üstbilgisine eklenir. Seçenekler tüm Visual Basic projeleri için geçerlidir.
 
-Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın, **Projeler ve çözümler** klasörünü genişletin ve ardından **vb Varsayılanları**' na tıklayın.
+Bu iletişim kutusuna erişmek için **Araçlar** menüsünde **Seçenekler'i**tıklatın, **Projeler ve Çözümler** klasörünü genişletin ve ardından VB **Varsayılanları'nı**tıklatın.
 
- **Seçenek açık**
+ **Seçenek Açık**
 
-Doğrudan değişken bildirimlerinin gerekli olduğu şekilde derleyici varsayılanını ayarlar. Varsayılan olarak, **explicit seçeneği** **Açık olarak ayarlanır.** Daha fazla bilgi için bkz. [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
+Değişkenlerin açık bildirimleri gerekli olacak şekilde derleyici varsayılan ayarlar. Varsayılan olarak, **Seçenek Açık** **Açık Açık**olarak ayarlanır. Daha fazla bilgi için bkz. [/optionexplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
 
- **Option Strict**
+ **Seçenek Sıkı**
 
-Açık daraltma dönüştürmelerini zorunlu ve geç bağlamaya izin verilmediğinden, derleyici varsayılanını varsayılan olarak ayarlar. Varsayılan olarak, **Strict seçeneği** **off**olarak ayarlanır. Daha fazla bilgi için bkz. [/OptionStrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict).
+Derleyicivarsayılan varsayılanını, açık daraltma dönüşümleri gerektirmesi ve geç bağlamaya izin verilmemesi için ayarlar. Varsayılan olarak, **Seçenek Sıkı** **kapalı**olarak ayarlanır. Daha fazla bilgi için bkz: [/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict).
 
- **Option Compare**
+ **Seçenek Karşılaştırma**
 
-Dize karşılaştırmaları için derleyici varsayılanını ayarlar: ikili (büyük/küçük harfe duyarlı) veya metin (büyük/küçük harfe duyarsız.) Varsayılan olarak, **Option Compare** **binary**olarak ayarlanır. Daha fazla bilgi için bkz. [/OptionCompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare).
+Dize karşılaştırmaları için derleyici varsayılanını ayarlar: ikili (büyük/küçük harf duyarlı) veya metin (büyük/küçük harf duyarsız.) Varsayılan olarak, **Seçenek Karşılaştırma** **İkili**olarak ayarlanır. Daha fazla bilgi için bkz. [/optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare).
 
- **Seçenek çıkarımı**
+ **Seçenek ÇıkarTisi**
 
-Yerel tür çıkarımı için varsayılan derleyicisini ayarlar. Varsayılan olarak, **seçenek çıkarımı** yeni oluşturulan projeler için **Açık** olarak ayarlanır ve Visual Basic önceki sürümlerinde oluşturulan geçirilmiş projeler için **devre dışı bırakır** . Daha fazla bilgi için bkz. [/optionfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
+Yerel tür çıkarımı için derleyici varsayılanını ayarlar. Varsayılan olarak, **Seçenek Çıkartı,** Visual Basic'in önceki sürümlerinde oluşturulan geçirilen taşınır projeler için yeni oluşturulan projeler için **A'ya** ve **Kapalı** olarak ayarlanır. Daha fazla bilgi için bkz: [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümler ve Projeler](../../ide/solutions-and-projects-in-visual-studio.md)
+- [Projeler ve Çözümler](../../ide/solutions-and-projects-in-visual-studio.md)

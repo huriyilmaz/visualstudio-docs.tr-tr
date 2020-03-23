@@ -16,34 +16,34 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 706b54e3ee925b1833f860da2f84c8d28af9617e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565675"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>Hızlı Başlatma, Ortam, Seçenekler İletişim Kutusu
 
-Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıca aramak ve yürütmek üzere **Hızlı Başlat** ' ı kullanabilirsiniz. Kodu ve sembolleri aramak için **Hızlı başlatma** kullanamazsınız. **Hızlı Başlat** arama kutusu, menü çubuğunun sağ üst köşesinde bulunur ve **CTRL**+**Q**tuşlarına basılarak erişilebilir. Arama dizenizi kutuya yazın. İçeren dizeleri aramak için @, Kullan ”@@”.
+Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlı bir şekilde aramak ve yürütmek için **Hızlı Başlatma'yı** kullanabilirsiniz. Kod ve sembolleri aramak için **Hızlı Başlatma'yı** kullanamazsınız. **Hızlı Başlat** arama kutusu menü çubuğunun sağ üst köşesinde yer alır ve **Ctrl**+**Q**tuşuna basarak erişilebilir. Arama dizenizi kutuya yazın. @içeren dizeleri aramak için '@@' kullanın.
 
-**Hızlı başlatma** , Visual Studio 'yu yüklediğinizde varsayılan olarak etkindir. Menü çubuğunda **araçlar** > **Seçenekler**' i seçerek **hızlı başlatmayı** gösterebilir veya gizleyebilirsiniz. **Ortamlar** düğümünü genişletin ve **Hızlı Başlat**' ı seçin. **Hızlı başlatmayı etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca, bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı bırakabilirsiniz.
+**Visual Studio'yı** yüklediğinizde hızlı başlatma varsayılan olarak etkinleştirilir. Menü **çubuğunda, Araç** > **Seçenekleri'ni**seçerek **Hızlı Başlatma'yı** gösterebilir veya gizleyebilirsiniz. **Ortam** düğümlerini genişletin ve ardından **Hızlı Başlat'ı**seçin. **Hızlı Başlat'ı Etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı kullanabilirsiniz.
 
-## <a name="category-list"></a>Kategori listesi
+## <a name="category-list"></a>Kategori Listesi
 
-Hızlı başlatma arama sonuçları dört kategoride görünür: **en son kullanılanlar**, **menüler**, **Seçenekler**ve **Açık belgeler**, kategori içindeki öğe sayısı ile birlikte. Arama sonuçları arasında kategoriye göre gezinmek için, sonraki kategorinin tüm sonuçlarını göstermek üzere **Ctrl**+**Q** tuşlarını seçin. Son kategori görüntülendikten sonra, **Ctrl**+**Q** her kategoriden birkaç sonuç gösterir. Kategoriler arasında ters sırada gezinmek için **Ctrl**+**SHIFT**+**Q** tuşlarına basın. Bir kategori altındaki tüm arama sonuçlarını görüntülemek için kategori adını seçin.
+Hızlı Başlatma arama sonuçları dört kategoride görünür: **Options**En Son **Kullanılanlar, Menüler,** Seçenekler ve **Belgeleri Aç**, kategorideki öğe sayısıyla birlikte. **Most Recently Used** Arama sonuçlarında kategoriye göre geçiş yapmak için, bir sonraki kategorideki tüm sonuçları göstermek için **Ctrl**+**Q** tuşlarını seçin. Son kategori görüntüledikten sonra **Ctrl**+**Q** size her kategoriden birkaç sonuç gösterir. Kategorilerde ters sırada gezinmek için **Ctrl**+**Shift**+**Q** tuşuna basın. Bir kategori altındaki tüm arama sonuçlarını görüntülemek için kategori adını seçin.
 
-Aramanızı belirli kategorilere sınırlamak için aşağıdaki kısayolları kullanabilirsiniz.
+Aramanızı belirli kategorilerle sınırlamak için aşağıdaki kısayolları kullanabilirsiniz.
 
-|Kategori|Kısayol|Kısayol açıklaması|
+|Kategori|Kısayol|Kısayol Açıklaması|
 |--------------|--------------| - |
-|En son kullanılan|@mru<br /><br /> Örneğin, `@mru font`|**En son kullandığınız**öğelerin en fazla beş sayısını görüntüler.|
-|Menüler|@menu<br /><br /> Örneğin, `@menu project`|Aramayı menü öğeleriyle sınırlandırır.|
-|Seçenekler|@opt<br /><br /> Örneğin, `@opt font`|**Seçenekler** iletişim kutusundaki arama ayarlarını sınırlandırır.|
-|Belgeler|@doc<br /><br /> Örneğin, `@doc program.cs`|Arama kriterlerine yönelik açık belgelerin dosya adlarıyla ve yollarına yönelik aramayı kısıtlar, ancak dosyaların içinde metinde arama yapmaz.|
+|En son kullanılan|@mru<br /><br /> Örneğin, `@mru font`|**En Son Kullandığınız**öğelerden en fazla beşini görüntüler.|
+|Menüler|@menu<br /><br /> Örneğin, `@menu project`|Aramayı menü öğeleriyle sınırlar.|
+|Seçenekler|@opt<br /><br /> Örneğin, `@opt font`|Aramayı **Seçenekler** iletişim kutusundaki ayarlarla sınırlar.|
+|Belgeler|@doc<br /><br /> Örneğin, `@doc program.cs`|Aramayı, arama ölçütleri için açık belgelerin adlarını ve yollarını dosyalamak üzere sınırlar, ancak dosyaların içindeki metni kendileri aramaz.|
 
 > [!NOTE]
-> **Seçenekler** Iletişim kutusundaki **genel** > **klavye** sayfasında kısayol tuşlarını değiştirebilirsiniz.
+> **Seçenekler** iletişim kutusundaki **Genel** > **Klavye** sayfasındaki kısayol tuşlarını değiştirebilirsiniz.
 
-## <a name="show-previous-results"></a>Önceki sonuçları göster
+## <a name="show-previous-results"></a>Önceki Sonuçları Göster
 
-Varsayılan olarak, girdiğiniz arama terimi arama oturumları arasında kalıcı olmaz. Arama dizesi bir terim arıyorsanız, imleci **Hızlı başlatma** alanının dışına taşıyın ve ardından geri dönün. Arama sonuçlarını sürdürmek için **Seçenekler** iletişim kutusuna gidin, **Hızlı Başlat**' ı seçin ve ardından **Hızlı başlatma etkinleştirildiğinde önceki aramadan arama sonuçlarını göster** ' i seçin. seçin. Bir sonraki sefer bir arama yaptığınızda hızlı başlatma alanını bırakın ve geri dönüp, hızlı başlatma en son kullanılan arama terimini korur ve ayrıca arama sonuçlarını gösterir.
+Varsayılan olarak, girdiğiniz arama terimi arama oturumları arasında kalıcı değildir. Bir terim ararsanız, imleci **Hızlı Başlatma** alanının dışına taşırsanız ve sonra geri dönerseniz arama dizesi temizlenir. Arama sonuçlarını korumak için **Seçenekler** iletişim kutusuna gidin, **Hızlı Başlat'ı**seçin ve Hızlı **Başlatma etkinleştirildiğinde önceki aramadan arama sonuçlarını göster'i seçin.** onay kutusunu işaretleyin. Bir sonraki arama yaptığınızda, Hızlı Başlatma alanından çıktığınızda ve geri döndüğünüzde, Hızlı Başlatma en son kullanılan arama terimini korur ve ayrıca arama sonuçlarını gösterir.

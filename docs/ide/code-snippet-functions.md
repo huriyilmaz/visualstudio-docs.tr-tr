@@ -13,29 +13,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7df85c429794d61028d5304108d289dfe9bf496
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594246"
 ---
 # <a name="code-snippet-functions"></a>Kod parçacığı işlevleri
 
-Kod parçacıkları ile C# kullanabileceğiniz üç işlev mevcuttur. İşlevler, kod parçacığının [Function](../ide/code-snippets-schema-reference.md#function-element) öğesinde belirtilir. Kod parçacıkları oluşturma hakkında daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
+C# kod parçacıkları ile kullanılabilecek üç işlev vardır. İşlevler kod snippet'in [İşlev](../ide/code-snippets-schema-reference.md#function-element) öğesinde belirtilir. Kod parçacıkları oluşturma hakkında daha fazla bilgi için [Kod parçacıklarına](../ide/code-snippets.md)bakın.
 
 ## <a name="functions"></a>İşlevler
 
-Aşağıdaki tabloda, kod parçacıkları içinde `Function` öğesiyle birlikte kullanılabilecek işlevler açıklanmaktadır.
+Aşağıdaki tabloda kod parçacıkları öğesi `Function` ile kullanılmak üzere kullanılabilir işlevleri açıklanır.
 
 |İşlev|Açıklama|Dil|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(EnumerationLiteral)`|`EnumerationLiteral` parametresi tarafından belirtilen numaralandırma üyeleri için bir switch deyimi ve Case deyimleri kümesi oluşturur. `EnumerationLiteral` parametresi bir sabit listesi sabit değeri ya da bir numaralandırma türü için başvuru olmalıdır.|C#|
-|`ClassName()`|Eklenen kod parçacığını içeren sınıfın adını döndürür.|C#|
-|`SimpleTypeName(TypeName)`|*TypeName* parametresini, kod parçacığının çağrıldığı bağlamdaki en basit biçimine düşürür.|C#|
+|`GenerateSwitchCases(EnumerationLiteral)`|`EnumerationLiteral` Parametre tarafından belirtilen numaralandırma üyeleri için bir anahtar deyimi ve örnek ifadeler kümesi oluşturur. Parametre, `EnumerationLiteral` numaralandırma edebi veya numaralandırma türüne bir başvuru olmalıdır.|C#|
+|`ClassName()`|Eklenen parçacık içeren sınıfın adını döndürür.|C#|
+|`SimpleTypeName(TypeName)`|*TypeName* parametresini, parçacığın çağrıldığı bağlamda en basit biçimine indirir.|C#|
 
 ## <a name="generateswitchcases-example"></a>GenerateSwitchCases örneği
 
-Aşağıdaki örnek, `GenerateSwitchCases` işlevinin nasıl kullanılacağını göstermektedir. Bu kod parçacığı eklendiğinde ve `$switch_on$` değişmez değerine bir numaralandırma girildiğinde, `$cases$` değişmez değeri, Numaralandırmadaki her değer için bir `case` açıklaması oluşturur.
+Aşağıdaki örnek, işlevin `GenerateSwitchCases` nasıl kullanılacağını gösterir. Bu parçacık eklendiğinde ve bir numaralandırma `$switch_on$` gerçek içine girildiğinde, `$cases$` gerçek numaralandırmadaki her `case` değer için bir ifade oluşturur.
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -77,7 +77,7 @@ Aşağıdaki örnek, `GenerateSwitchCases` işlevinin nasıl kullanılacağını
 
 ## <a name="classname-example"></a>ClassName örneği
 
-Aşağıdaki örnek, `ClassName` işlevinin nasıl kullanılacağını göstermektedir. Bu kod parçacığı eklendiğinde `$classname$` değişmez değeri, kod dosyasındaki bu konumdaki kapsayan sınıfın adı ile değiştirilmiştir.
+Aşağıdaki örnek, işlevin `ClassName` nasıl kullanılacağını gösterir. Bu parçacık eklendiğinde, `$classname$` literal kod dosyasındaki o konumdaki ençevreleyen sınıfın adı ile değiştirilir.
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -124,7 +124,7 @@ Aşağıdaki örnek, `ClassName` işlevinin nasıl kullanılacağını gösterme
 
 ## <a name="simpletypename-example"></a>SimpleTypeName örneği
 
-Bu örnek, `SimpleTypeName` işlevinin nasıl kullanılacağını gösterir. Bu kod parçacığı bir kod dosyasına eklendiğinde `$SystemConsole$` değişmez değeri, parçacığın çağrıldığı bağlamdaki <xref:System.Console> türünün en basit biçimiyle yerine geçer.
+Bu örnek, işlevin `SimpleTypeName` nasıl kullanılacağını gösterir. Bu parçacık bir kod dosyasına eklendiğinde, `$SystemConsole$` snippet çağrıldı bağlamında <xref:System.Console> tür en basit formu ile literal değiştirilir.
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -157,5 +157,5 @@ Bu örnek, `SimpleTypeName` işlevinin nasıl kullanılacağını gösterir. Bu 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Function öğesi](../ide/code-snippets-schema-reference.md#function-element)
+- [Fonksiyon öğesi](../ide/code-snippets-schema-reference.md#function-element)
 - [Kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md)

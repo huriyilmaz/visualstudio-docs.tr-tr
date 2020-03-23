@@ -18,37 +18,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e53c3701e31733c54869c71820956d674ed4fb8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593700"
 ---
 # <a name="manage-application-resources-net"></a>Uygulama kaynaklarını yönetme (.NET)
 
-Kaynak dosyaları, bir uygulamanın parçası olan ancak derlenmediği, örneğin simge dosyaları veya ses dosyaları gibi dosyalardır. Bu dosyalar derleme sürecinin bir parçası olmadığından, ikili dosyalarınızı yeniden derlemek zorunda kalmadan bunları değiştirebilirsiniz. Uygulamanızı yerelleştirmek istiyorsanız, uygulamanızı yerelleştirmeniz durumunda değiştirilmesi gereken tüm dizelerin ve diğer kaynakların kaynak dosyalarını kullanmanız gerekir.
+Kaynak dosyaları, uygulamanın bir parçası olan ancak simge dosyaları veya ses dosyaları gibi derlenmemiş dosyalardır. Bu dosyalar derleme işleminin bir parçası olmadığından, ikili dosyalarınızı yeniden derlemek zorunda kalmadan bunları değiştirebilirsiniz. Uygulamanızı yerelleştirmeyi planlıyorsanız, uygulamanızı yerelleştirdiğinizde değiştirilmesi gereken tüm dizeleri ve diğer kaynaklar için kaynak dosyalarını kullanmanız gerekir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources).
+> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için uygulama [kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources)adresine bakın.
 
-.NET masaüstü uygulamalarındaki kaynaklar hakkında daha fazla bilgi için bkz. [masaüstü uygulamalarında kaynaklar](/dotnet/framework/resources/index).
+.NET masaüstü uygulamalarındaki kaynaklar hakkında daha fazla bilgi için [masaüstü uygulamalarındaki Kaynaklar'a](/dotnet/framework/resources/index)bakın.
 
 ## <a name="work-with-resources"></a>Kaynaklarla çalışma
 
-Yönetilen bir kod projesinde proje özellikleri penceresini açın. Özellikler penceresini şu şekilde açabilirsiniz:
+Yönetilen kod projesinde, proje özellikleri penceresini açın. Özellikler penceresini aşağıdakilerden biri ile açabilirsiniz:
 
-- **Çözüm Gezgini** ' de proje düğümüne sağ tıklayıp **Özellikler** ' i seçin
-- **Ctrl**+**Q** arama kutusuna **Proje özellikleri** yazma
-- **Alt**+Çözüm Gezgini **giriş** seçme
+- **Çözüm Gezgini'nde** proje düğümüne sağ tıklayıp **Özellikleri** seçme
+- **Ctrl**+**Q** arama kutusuna **proje özelliklerini** yazma
+- **Çözüm Gezgininde** **Alt**+**Girin'i** Seçme
 
-**Kaynaklar** sekmesini seçin. Projenizde bir tane yoksa bir *. resx* dosyası ekleyebilirsiniz, farklı türlerde kaynaklar ekleyip silebilir ve mevcut kaynakları değiştirebilirsiniz.
+**Kaynaklar** sekmesini seçin. Projenizde zaten bir dosya yoksa bir *.resx* dosyası ekleyebilirsiniz, farklı türde kaynak ekleyebilir ve silebilirsiniz ve varolan kaynakları değiştirebilirsiniz.
 
 ## <a name="resources-in-other-project-types"></a>Diğer proje türlerindeki kaynaklar
 
-Kaynaklar, .NET projelerinde diğer proje türlerinden farklı şekilde yönetilir. İçindeki kaynaklar hakkında daha fazla bilgi için:
+Kaynaklar .NET projelerinde diğer proje türlerine göre farklı yönetilir. Kaynaklar hakkında daha fazla bilgi için:
 
-- Evrensel Windows Platformu (UWP) uygulamaları, bkz. [uygulama kaynakları ve kaynak yönetimi sistemi](/windows/uwp/app-resources/)
-- C++projeler, bkz. [çalışma kaynak dosyaları](/cpp/windows/working-with-resource-files) ve [nasıl yapılır: kaynak oluşturma](/cpp/windows/how-to-create-a-resource)
+- Evrensel Windows Platformu (UWP) uygulamaları, Bkz. [Uygulama kaynakları ve Kaynak Yönetim Sistemi](/windows/uwp/app-resources/)
+- C++ projeleri, bkz. [kaynak dosyalarıyla çalışma](/cpp/windows/working-with-resource-files) ve [nasıl kullanılır: Kaynak oluşturma](/cpp/windows/how-to-create-a-resource)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

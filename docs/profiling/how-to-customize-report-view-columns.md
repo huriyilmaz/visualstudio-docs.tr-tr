@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: rapor görünümü sütunlarını özelleştirme | Microsoft Docs'
+title: 'Nasıl Kullanılır: Rapor Görünümü Sütunlarını Özelleştir | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,18 +15,18 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778979"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: rapor görünümü sütunlarını özelleştirme
-Visual Studio Team System Development Edition 'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için tümleşik geliştirme ortamı (IDE) ile tamamen tümleşiktir. Aşağıdaki liste sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümlerin temsilcisidir:
+# <a name="how-to-customize-report-view-columns"></a>Nasıl kullanılır: Rapor Görünümü sütunlarını özelleştir
+Visual Studio Team System Development Edition'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için entegre geliştirme ortamına (IDE) tam olarak entegre edilmiştir. Aşağıdaki liste, sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümleri temsil eder:
 
 - [Modüller Görünümü](../profiling/modules-view.md)
 
-- [İşlevler Görünümü](../profiling/functions-view.md)
+- [Fonksiyonlar Görünümü](../profiling/functions-view.md)
 
 - [Satırlar Görünümü](../profiling/lines-view.md)
 
@@ -44,16 +44,16 @@ Visual Studio Team System Development Edition 'daki performans araçları, sorun
 
 - [İşlem Görünümü](../profiling/process-view.md)
 
-### <a name="to-customize-a-report-view"></a>Bir rapor görünümünü özelleştirmek için
+### <a name="to-customize-a-report-view"></a>Rapor görünümünü özelleştirmek için
 
 1. Rapor görünümünü açın.
 
-2. Rapor görünümü yüzeyine sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.
+2. Rapor görünümü yüzeyine sağ tıklayın ve **ardından Sütun Ekle/Kaldır'ı**tıklatın.
 
-     **Sütunları Ekle/Kaldır** iletişim kutusu görüntülenir.
+     **Sütun ekle/Kaldır** iletişim kutusu görüntülenir.
 
 3. Eklemek istediğiniz sütunları seçin.
 
-4. Sütunları yeniden sıralamak için ok düğmesine tıklayın.
+4. Sütunları yeniden sıralamak için ok düğmesini tıklatın.
 
 5. **Tamam**'a tıklayın.

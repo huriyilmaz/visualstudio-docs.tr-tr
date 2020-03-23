@@ -34,65 +34,65 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ebe526bbac859777edb4c2c78c65a1cdbd27fc85
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568418"
 ---
-# <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: metin Düzenleyicisi \> genel
+# <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: \> Metin Düzenleyici Genel
 
-Bu iletişim kutusu, Visual Studio kodu ve metin Düzenleyicisi için genel ayarları değiştirmenize olanak sağlar. Bu iletişim kutusunu göstermek için, **Araçlar** menüsünde **Seçenekler** ' i seçin, **metin düzenleyici** klasörünü genişletin ve ardından **genel**' i seçin.
+Bu iletişim kutusu, Visual Studio kodu ve metin düzenleyicisi için genel ayarları değiştirmenizi sağlar. Bu iletişim kutusunu görüntülemek için **Araçlar** menüsünde **Seçenekler'i** seçin, **Metin Düzenleyicisi** klasörünü genişletin ve ardından **Genel'i**seçin.
 
 ## <a name="settings"></a>Ayarlar
 
-### <a name="drag-and-drop-text-editing"></a>Sürükle ve bırak metin düzenlemesi
+### <a name="drag-and-drop-text-editing"></a>Metin düzenlemeyi sürükleyip bırak
 
-Seçildiğinde, metni seçip fareyle geçerli belge veya başka bir açık belge içindeki başka bir konuma sürükleyerek metni taşımanızı sağlar.
+Seçildiğinde, metni seçerek ve fareyle birlikte geçerli belge veya başka bir açık belge içinde başka bir konuma sürükleyerek metni taşımanızı sağlar.
 
-### <a name="automatic-delimiter-highlighting"></a>Otomatik sınırlayıcı vurgulama
+### <a name="automatic-delimiter-highlighting"></a>Otomatik delimiter vurgulama
 
-Seçildiğinde, parametreleri veya öğe-değer çiftlerini ve eşleşen küme ayraçlarını ayıran sınırlayıcı karakterler vurgulanır.
+Seçildiğinde, parametreleri veya madde değeri çiftlerini ayıran ve eşleşen ayraçları ayıran sınır dışı layıcı karakterler vurgulanır.
 
 ### <a name="track-changes"></a>Değişiklikleri izleme
 
-Kod Düzenleyicisi seçildiğinde, dosyanın en son kaydedduğundan bu yana değiştirilen kodu işaretlemek için seçim kenar boşluğunda dikey sarı bir çizgi görünür. Değişiklikleri kaydettiğinizde dikey satırlar yeşil olur.
+Kod düzenleyicisi seçildiğinde, dosya en son kaydedildikten sonra değiştirilen kodu işaretlemek için seçim kenar boşluğunda dikey sarı bir çizgi görüntülenir. Değişiklikleri kaydettiğinizde, dikey çizgiler yeşil olur.
 
-### <a name="auto-detect-utf-8-encoding-without-signature"></a>İmza olmadan UTF-8 kodlamasını otomatik algıla
+### <a name="auto-detect-utf-8-encoding-without-signature"></a>UtF-8 kodlamayı imza olmadan otomatik olarak algıla
 
-Varsayılan olarak düzenleyici, bayt sırası işaretlerini veya karakter kümesi etiketlerini arayarak kodlamayı algılar. Geçerli belgede hiçbiri bulunmazsa, kod Düzenleyicisi, bayt dizilerini tarayarak UTF-8 kodlamasını otomatik algıla girişiminde bulunur. Kodlamanın tekrar algılanmasını devre dışı bırakmak için bu seçeneği temizleyin.
+Varsayılan olarak, düzenleyici bayt sipariş işaretleri veya charset etiketleri arayarak kodlama algılar. Geçerli belgede ikisi de bulunmazsa, kod düzenleyicisi bayt dizilerini tarayarak UTF-8 kodlamasını otomatik algılamaya çalışır. Kodlamanın otomatik algılamasını devre dışı kaltın için bu seçeneği temizleyin.
 
 ### <a name="follow-project-coding-conventions"></a>Proje kodlama kurallarını izleyin
 
-Seçildiğinde, projenin belirtilen kodlama kuralları kişisel projelerinizde kullandığınız tüm kodlama kurallarını geçersiz kılar.
+Seçildiğinde, projenin belirtilen kodlama kuralları kişisel projelerinizde kullandığınız kodlama kurallarını geçersiz kılar.
 
-### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Tanıma Git işlemini gerçekleştirmek için fare tıklamasını etkinleştir
+### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Tanıma Git'i gerçekleştirmek için fare tıklatmasını etkinleştirme
 
-Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür. **Değiştirici tuşu kullan** açılır listesinden alt veya **CTRL** + **alt** **tuşlarını da seçebilirsiniz** .
+Seçildiğinde **Ctrl** tuşuna basabilir ve fareyi tıklatırken bir öğenin üzerine gezinebilirsiniz. Bunu yapmak sizi seçili öğenin tanımına götürür. Ayrıca, Alt **veya** **Ctrl** + **Alt'ı** **Kullan değiştirici anahtarı** açılır bırak'ından da seçebilirsiniz.
 
-Öğenin tanımını, kod düzenleyicisinde geçerli konumunuzla uzaklaşmadan bir pencerede görüntülemek için, **görünümü göz atma ' da aç** onay kutusunu seçin.
+Kodun düzenleyicisinde geçerli konumunuzdan uzaklaşmadan öğenin tanımını bir pencerede görüntülemek için peek görünüm onay kutusunda **Açık tanımını** seçin.
 
 ## <a name="display"></a>Ekran
 
 ### <a name="selection-margin"></a>Seçim kenar boşluğu
 
-Seçildiğinde, düzenleyicinin metin alanının sol kenarı üzerinde dikey bir kenar boşluğu görüntüler. Metnin tamamını seçmek için bu kenar boşluğuna tıklayabilir veya ardışık metin satırları seçmek için tıklayıp sürükleyebilirsiniz.
+Seçildiğinde, düzenleyicinin metin alanının sol kenarı boyunca dikey bir kenar boşluğu görüntüler. Bir metin satırının tamamını seçmek için bu kenar boşluğu tıklatabilir veya ardışık metin satırlarını seçmek için tıklatıp sürükleyebilirsiniz.
 
-|Seçim kenar boşluğu|Seçim kenar boşluğu kapalı|
+|Seçim Kenar Boşluğu üzerinde|Seçim Kenar Boşluğu kapalı|
 | - | - |
 |![HTMLpageSelectionMarginOn ekran görüntüsü](../../ide/reference/media/vxselmaron.gif)|![HTMLpageSelectionMarginOff ekran görüntüsü](../../ide/reference/media/vxselmaroff.gif)|
 
-### <a name="indicator-margin"></a>Gösterge kenar boşluğu
+### <a name="indicator-margin"></a>Gösterge marjı
 
-Seçildiğinde, düzenleyicinin metin alanının sol kenarının dışında dikey bir kenar boşluğu görüntüler. Bu kenar boşluğuna tıkladığınızda metinle ilgili bir simge ve araç Ipucu görünür. Örneğin, kesme noktası veya görev listesi kısayolları gösterge kenar boşluğunda görüntülenir. Gösterge kenar boşluğu bilgileri yazdırılmaz.
+Seçildiğinde, düzenleyicinin metin alanının sol kenarının dışında dikey bir kenar boşluğu görüntüler. Bu kenar boşluğu tıklattığınızda, metinle ilgili bir simge ve Araç İpucu görüntülenir. Örneğin, kesme noktası veya görev listesi kısayolları gösterge kenar boşluğunda görünür. Gösterge Marjı bilgileri yazdırılmaz.
 
-### <a name="highlight-current-line"></a>Geçerli satırı Vurgula
+### <a name="highlight-current-line"></a>Geçerli satırı vurgulama
 
 Seçildiğinde, imlecin bulunduğu kod satırının etrafında gri bir kutu görüntüler.
 
-### <a name="show-structure-guide-lines"></a>Yapı Kılavuzu çizgilerini göster
+### <a name="show-structure-guide-lines"></a>Yapı kılavuz çizgilerini göster
 
-Seçildiğinde, düzenleyicide tek tek kod bloklarını kolayca tanımlamanızı sağlayan, yapılandırılmış kod bloklarıyla bir dikey çizgi görüntülenir.
+Seçildiğinde, yapılandırılmış kod bloklarıyla hizalanan düzenleyicide dikey çizgiler görünür ve bu da kod bloklarını tek tek belirlemenize olanak tanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

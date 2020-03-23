@@ -1,5 +1,5 @@
 ---
-title: Yük testi günlük oluşturma ayarlarını
+title: Test Günlük Ayarlarını Yükleyin
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,24 +9,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0c0a9967f1248c6dc23c5d70be35788ad9e05eb2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75566312"
 ---
-# <a name="modify-load-test-logging-settings"></a>Yük testi günlüğü ayarlarını değiştirme
+# <a name="modify-load-test-logging-settings"></a>Yük testi günlüğe kaydetme ayarlarını değiştirme
 
-Tamamlanan yük testi için yük testi sonucu performans sayaç örneklerini ve bir oturum açma, test altındaki bilgisayarlardan düzenli aralıklarla toplanan hata bilgilerini içerir. Çok sayıda performans sayacı örneği yük testi boyunca toplanabilir. Toplanan performans veri miktarı, çalıştırma, örnekleme aralığı, test edilen bilgisayar sayısına ve toplamak için sayaçları sayısı uzunluğuna bağlıdır. Bir büyük yük testi için toplanan performans veri miktarı kolaylıkla birkaç gigabayt olabilir; Bu nedenle, ne sıklıkta değiştirmeyi düşünebilirsiniz verileri günlüğe kaydedilir. Bkz: [Test denetleyicileri ve test aracılarını](configure-test-agents-and-controllers-for-load-tests.md).
+Tamamlanan yük testi nin yük testi sonucu, performans sayacı örneklerini ve test altındaki bilgisayarlardan düzenli olarak bir günlükte toplanan hata bilgilerini içerir. Bir yük testi çalışması boyunca çok sayıda performans sayacı örneği toplanabilir. Toplanan performans verilerinin miktarı, çalıştırmanın uzunluğuna, örnekleme aralığına, sınanan bilgisayar sayısına ve toplanacak sayaç sayısına bağlıdır. Büyük bir yük testi için, toplanan performans verilerinin miktarı kolayca birkaç gigabayt olabilir; bu nedenle, verilerin günlüğe ne sıklıkta kaydedilebildiğini değiştirmeyi düşünebilirsiniz. Bkz. [Test denetleyicileri ve test aracıları.](configure-test-agents-and-controllers-for-load-tests.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-*Test denetleyicisi* test çalışırken tüm toplanan yük testi örnek verileri bir veritabanına günlük biriktirir. Test tamamlandığında, zamanlama ayrıntılarını ve hata ayrıntılarının gibi ek veriler veritabanına yüklenir.
+*Test denetleyicisi,* toplanan tüm yük testi örnek verilerini test çalışırken bir veritabanı günlüğüne toplar. Zamanlama ayrıntıları ve hata ayrıntıları gibi ek veriler, test tamamlandığında veritabanına yüklenir.
 
 |Görev|İlişkili konular|
 |-|-----------------------|
-|**Bir yük testi başarısız olursa, günlükleri kaydedin:** bir yük testi başarısız olduğunda test günlüğü kaydetmek isteyip istemediğinizi belirtebilirsiniz.|-   [Nasıl yapılır: test başarısızlıklarının test günlüklerini kaydedilip kaydedilmediği belirleme](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
-|**Günlük dosyası için maksimum dosya boyutunu ayarlayın:** maksimum dosya boyutu için günlük dosyasına kullanmak istediğinizi belirtmek için test denetleyicisi hizmeti ile ilişkili XML yapılandırma dosyasını düzenleyebilirsiniz.|*QTCcontroller. exe. config* XML yapılandırma dosyasında `<add key="LogSizeLimitInMegs" value="20"/>` değiştirin.|
+|**Yük testi başarısız olursa günlükleri kaydet:** Bir yük testi başarısız olduğunda test günlüğünü kaydetmek isteyip istemediğinizi belirtebilirsiniz.|-   [Nasıl yapılır: Test günlükleri için test hataları kaydedilir seve belirtin](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
+|**Günlük dosyası için maksimum dosya boyutunu ayarlayın:** Günlük dosyası için kullanmak istediğiniz maksimum dosya boyutunu belirtmek için test denetleyicisi hizmetiyle ilişkili XML yapılandırma dosyasını düzenleme yapabilirsiniz.|`<add key="LogSizeLimitInMegs" value="20"/>` *QTCcontroller.exe.config* XML yapılandırma dosyasında değiştirin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

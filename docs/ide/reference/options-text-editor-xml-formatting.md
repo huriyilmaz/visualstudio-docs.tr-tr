@@ -1,5 +1,5 @@
 ---
-title: Seçenekler, metin düzenleyici, XML, biçimlendirme
+title: Seçenekler, Metin Düzenleyicisi, XML, Biçimlendirme
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -9,28 +9,28 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: b5dabfbc4f705d7de9fa881f373994714e43d26a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568145"
 ---
-# <a name="options-text-editor-xml-formatting"></a>Seçenekler, metin düzenleyici, XML, biçimlendirme
+# <a name="options-text-editor-xml-formatting"></a>Seçenekler, Metin Düzenleyicisi, XML, Biçimlendirme
 
-Öğelerin ve özniteliklerin XML belgelerinizde nasıl biçimlendirileceğini belirtmek için **biçimlendirme** seçenekleri sayfasını kullanın. XML biçimlendirme seçeneklerine erişmek için **araçlar** > **Seçenekler** > **metin Düzenleyicisi** > **XML**' i seçin ve ardından **biçimlendirme**' yi seçin.
+Öğelerin ve özniteliklerin XML belgelerinizde nasıl biçimlendirilir belirtmek için **Biçimlendirme** seçenekleri sayfasını kullanın. XML biçimlendirme seçeneklerine erişmek için **Araçlar** > **Seçenekleri** > **Metin Düzenleyicisi** > **XML'i**seçin ve ardından **Biçimlendirme'yi**seçin.
 
-## <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+## <a name="attributes"></a>Öznitelikler
 
-**El ile öznitelik biçimlendirmesini koru**
+**El ile öznitelik biçimlendirmeyi koruma**
 
-Öznitelikleri yeniden biçimlendirmeyin. Bu, varsayılan ayardır.
+Nitelikleri yeniden biçimletmeyin. Bu varsayılan ayardır.
 
 > [!NOTE]
-> Öznitelikler birden çok satırda varsa, düzenleyici her bir öznitelik satırını üst öğenin girintilemesi ile eşleşecek şekilde girintiler.
+> Öznitelikler birden çok satırdaysa, düzenleyici ana öğenin girintisi ile eşleşecek her öznitelik satırı girintisi.
 
-**Öznitelikleri her biri ayrı bir satıra hizalayın**
+**Öznitelikleri ayrı bir satırda hizalama**
 
-İkinci ve sonraki öznitelikleri ilk özniteliğin girintilemesi ile eşleşecek şekilde dikey olarak hizalayın. Aşağıdaki XML metni özniteliklerin nasıl hizalandığı hakkında bir örnektir:
+İlk öznitelik girintisi maç için dikey olarak ikinci ve sonraki öznitelikleri hizala. Aşağıdaki XML metni özniteliklerin nasıl hizalanacağının bir örneğidir:
 
 ```xml
 <item id = "123-A"
@@ -39,23 +39,23 @@ ms.locfileid: "75568145"
 </item>
 ```
 
-## <a name="auto-reformat"></a>Otomatik yeniden Biçimlendir
+## <a name="auto-reformat"></a>Oto Reformat
 
-**Panodan yapıştırılırken**
+**Panodan yapıştır'da**
 
-Panodan yapıştırılan XML metnini yeniden biçimlendirin.
+Reformat XML metni panodan yapıştırıldı.
 
-**Bitiş etiketi tamamlandığında**
+**Bitiş etiketinin tamamlanmasıüzerine**
 
-Bitiş etiketi tamamlandığında öğeyi yeniden biçimlendirin.
+Bitiş etiketi tamamlandığında öğeyi yeniden biçime der.
 
-## <a name="mixed-content"></a>Karışık Içerik
+## <a name="mixed-content"></a>Karışık İçerik
 
-**Karma içeriği varsayılan olarak biçimlendirin.**
+**Karışık içeriği varsayılan olarak biçimlendirin.**
 
-İçeriğin bir `xml:space="preserve"` kapsamında bulunması dışında, karışık içeriği yeniden biçimlendirme girişimi. Bu, varsayılan ayardır.
+İçerik bir `xml:space="preserve"` kapsamda bulunduğu durumlar dışında, karışık içeriği yeniden biçimleme girişiminde bulunun. Bu varsayılan ayardır.
 
-Bir öğe metin ve biçimlendirme karışımı içeriyorsa, içerik karışık içerik olarak kabul edilir. Aşağıda, karışık içerikli bir öğe örneği verilmiştir.
+Bir öğe metin ve biçimlendirme nin bir karışımını içeriyorsa, içeriği karışık içerik olarak kabul edilir. Aşağıda karışık içeriğe sahip bir öğe örneği verilmiştir.
 
 ```xml
 <dir>c:\data\AlphaProject\
@@ -66,5 +66,5 @@ Bir öğe metin ve biçimlendirme karışımı içeriyorsa, içerik karışık i
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML seçenekleri-çeşitli](options-text-editor-xml-miscellaneous.md)
-- [Visual Studio 'da XML araçları](../../xml-tools/xml-tools-in-visual-studio.md)
+- [XML seçenekleri - çeşitli](options-text-editor-xml-miscellaneous.md)
+- [Visual Studio'da XML araçları](../../xml-tools/xml-tools-in-visual-studio.md)

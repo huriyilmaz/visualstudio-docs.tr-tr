@@ -10,57 +10,31 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8f6bd03b9d652909022adab169682160ae541677
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: d0e04a011612cdebebd244fc061981b713b858a7
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76124510"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79431494"
 ---
 # <a name="options-text-editor-c-advanced"></a>Seçenekler, Metin Düzenleyici, C#, Gelişmiş
 
-İçin C#düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yorumlarının ayarlarını değiştirmek için **Gelişmiş** Seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için **araçlar** > **Seçenekler**' i seçin ve **Gelişmiş** >  >  **C#** metin düzenleyici ' yi seçin.
+Düzenleyici biçimlendirme, kod yeniden düzenleme ve C#için XML dokümantasyon yorumlarını değiştirmek için **Gelişmiş** seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar** > **Seçenekleri'ni**seçin ve ardından **Metin Düzenleyicisi** > **C#** > **Advanced'i**seçin.
 
 > [!NOTE]
-> Tüm seçenekler burada listelenmeyebilir.
+> Tüm seçenekler burada listelenmemiş olabilir.
 
-## <a name="analysis"></a>Çözümleme
+## <a name="analysis"></a>Analiz
 
-- Tam çözüm analizini etkinleştirme
+- Canlı kod analizi veya Arka Plan analizi kapsamı
 
-   Yalnızca açık kod dosyalarını değil, Çözümdeki tüm dosyalarda kod analizini mümkün bir şekilde sunar. Daha fazla bilgi için bkz. [tam çözüm Analizi](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
+   Yönetilen kod için arka plan çözümleme kapsamını yapılandırın. Daha fazla bilgi için [bkz: Yönetilen kod için canlı kod çözümlemesi kapsamını yapılandırma.](../../code-quality/configure-live-code-analysis-scope-managed-code.md)
 
-## <a name="using-directives"></a>Using yönergeleri
+## <a name="using-directives"></a>Direktifleri Kullanma
 
-- Using deyimlerini sıralarken ' System ' yönergelerini ilk olarak Yerleştir
+- Kullanır sıralama yaparken önce 'Sistem' yönergelerini yerleştirin
 
-   Seçildiğinde, sağ tıklama menüsündeki kullanımları **Kaldır ve Sırala** komutu `using` yönergelerini sıralar ve ' System ' ad alanlarını listenin en üstüne koyar.
-
-   Sıralamadan önce:
-
-   ```csharp
-   using AutoMapper;
-   using FluentValidation;
-   using System.Collections.Generic;
-   using System.Linq;
-   using Newtonsoft.Json;
-   using System;
-   ```
-
-   Sıralama sonrasında:
-
-   ```csharp
-   using System;
-   using System.Collections.Generic;
-   using System.Linq;
-   using AutoMapper;
-   using FluentValidation;
-   using Newtonsoft.Json;
-   ```
-
-- Yönerge gruplarını kullanarak ayır
-
-   Seçildiğinde, sağ tıklama menüsündeki kullanımları **Kaldır ve Sırala** komutu, aynı kök ad alanına sahip yönergelerin grupları arasına boş bir satır ekleyerek `using` yönergeleri ayırır.
+   Seçildiğinde, Sağ tıklatma menüsündeki **Kullanımları Kaldır ve Sırala** komutu `using` yönergeleri sıralar ve 'Sistem' ad alanlarını listenin en üstüne yerleştirir.
 
    Sıralamadan önce:
 
@@ -73,7 +47,33 @@ ms.locfileid: "76124510"
    using System;
    ```
 
-   Sıralama sonrasında:
+   Sıralamadan sonra:
+
+   ```csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using AutoMapper;
+   using FluentValidation;
+   using Newtonsoft.Json;
+   ```
+
+- Yönerge gruplarını ayrı kullanma
+
+   Seçildiğinde, sağ tıklatma menüsündeki **Kullan-Kaldır komutu,** aynı kök ad alanına sahip yönerge grupları arasına boş bir satır ekleyerek `using` yönergeleri ayırır.
+
+   Sıralamadan önce:
+
+   ```csharp
+   using AutoMapper;
+   using FluentValidation;
+   using System.Collections.Generic;
+   using System.Linq;
+   using Newtonsoft.Json;
+   using System;
+   ```
+
+   Sıralamadan sonra:
 
    ```csharp
    using AutoMapper;
@@ -87,49 +87,49 @@ ms.locfileid: "76124510"
    using System.Linq;
    ```
 
-- .NET Framework derlemelerindeki türler için kullanımlar önerin
-- NuGet paketlerindeki türler için kullanımlar önerin
+- .NET Framework derlemelerinde türleri için kullanır önerin
+- NuGet paketlerindeki türler için kullanma önerin
 
-   Bu seçenekler belirlendiğinde, bir NuGet paketini yüklemek ve başvurulmayan türler için bir `using` yönergesi eklemek üzere [hızlı bir eylem](../quick-actions.md) kullanılabilir.
+   Bu seçenekler seçildiğinde, [Quick Action](../quick-actions.md) Bir NuGet paketi yüklemek ve başvurulmamış türler için bir `using` yönerge eklemek için hızlı eylem kullanılabilir.
 
-   ![Visual Studio 'da NuGet paketini yüklemeye yönelik hızlı eylem](media/nuget-lightbulb.png)
+   ![Visual Studio'da NuGet paketini yüklemek için hızlı aksiyon](media/nuget-lightbulb.png)
 
 ## <a name="highlighting"></a>Vurgulama
 
-- İmlecin altındaki simgenin başvurularını Vurgula
+- İmleç altında sembole yapılan başvuruları vurgulama
 
-   İmleç bir simgenin içine konumlandırıldığında veya bir sembole tıkladığınızda, kod dosyasındaki söz konusu sembolün tüm örnekleri vurgulanır.
+   İmleç bir sembolün içine yerleştirildiğinde veya bir sembolü tıklattığınızda, kod dosyasındaki bu sembolün tüm örnekleri vurgulanır.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
-- Dosyalar açıkken anahat oluşturma moduna gir
+- Dosyalar açıldığında anahat modunu girin
 
-   Seçildiğinde, daraltılabilir kod blokları oluşturan kod dosyası otomatik olarak özetlenmektedir. Bir dosya ilk kez açıldığında, #regions blokları ve etkin olmayan kod blokları daraltılır.
+   Seçildiğinde, otomatik olarak kod dosyası, hangi kod katlanabilir blokları oluşturur özetliyor. Bir dosya ilk açıldığında, #regions blokları ve etkin olmayan kod blokları daraltılır.
 
-- Yordam satırı ayırıcılarını göster
+- Yordam çizgisi ayırıcılarını göster
 
-   Metin Düzenleyicisi, yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda projenizin *. cs* kaynak dosyalarında bir çizgi çizilir:
+   Metin düzenleyicisi yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda projenizin *.cs* kaynak dosyalarında bir çizgi çizilir:
 
-   |. Cs kaynak dosyasındaki konum|Satır konumu örneği|
+   |.cs Kaynak Dosyasındaki Konum|Hat Konumu Örneği|
    |---------------------------------|------------------------------|
-   |Bir blok bildirimi yapısının kapandıktan sonra|-Bir sınıf, yapı, modül, arabirim veya sabit listesinin sonunda<br />-Bir özellik, işlev veya Sub öğesinden sonra<br />-Bir özellikte get ve set yan tümceleri arasında değil|
-   |Tek satırlık bir yapı kümesinden sonra|-İçe aktarma deyimlerinden sonra, bir sınıf dosyasındaki tür tanımından önce<br />-Öğesinden sonra, herhangi bir yordamdan önce, bir sınıfta belirtilen değişkenlerden|
-   |Tek satır bildirimleri sonrasında (blok düzeyi olmayan bildirimler)|-Aşağıdaki import deyimleri, Inherits deyimlerini, değişken bildirimlerini, olay bildirimlerini, temsilci bildirimlerini ve DLL bildirme deyimlerini|
+   |Bir blok bildirimi oluşturma kapatıldıktan sonra|- Bir sınıfın sonunda, yapı, modül, arayüz veya enum<br />- Bir özellik, işlev veya alt<br />- Bir özellikteki al ve ayar yan tümceleri arasında değil|
+   |Tek satır yapılarından sonra|- Alma ekstresinden sonra, sınıf dosyasındaki tür tanımından önce<br />- Bir sınıfta bildirilen değişkenlerden sonra, herhangi bir yordamdan önce|
+   |Tek satır lı bildirimlerden sonra (blok düzeyinde olmayan düzey bildirimleri)|- İthalat beyannamelerini takiben, beyannameleri, değişken beyannameleri, olay beyanları, temsilci beyanları ve DLL beyan beyan beyanları|
 
-## <a name="block-structure-guides"></a>Yapı kılavuzlarını engelle
+## <a name="block-structure-guides"></a>Blok Yapı Kılavuzları
 
-Kodunuzda süslü ayraçlar ( **{}** ) arasında noktalı dikey çizgiler göstermek için bu onay kutularını seçin. Daha sonra, bildirim düzeyinize ve kod düzeyi yapılarına yönelik ayrı kod bloklarını kolayca görebilirsiniz.
+Kodunuzdaki kıvırcık köşeli ayraçlar arasında**{}** noktalı dikey çizgiler görüntülemek için bu onay kutularını seçin. Daha sonra, bildirim düzeyiniz ve kod düzeyi yapınız için tek tek kod bloklarını kolayca görebilirsiniz.
 
-## <a name="editor-help"></a>Düzenleyici yardımı
+## <a name="editor-help"></a>Editör Yardımı
 
-- ///İçin XML belgesi açıklamaları oluştur
+- Için XML dokümantasyon açıklamaları oluşturma
 
-   Seçildiğinde, açıklama giriş `///` yazarak XML belge açıklamaları için XML öğelerini ekler. XML belgeleri hakkında daha fazla bilgi için bkz. [XML belge açıklamalarıC# (Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
+   Seçildiğinde, yorum girişini yazdıktan sonra XML dokümantasyon `///` açıklamaları için XML öğelerieklenir. XML belgeleri hakkında daha fazla bilgi için [Bkz. XML Dokümantasyon Yorumları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: belge oluşturmak için XML açıklamaları ekleme](../../ide/reference/generate-xml-documentation-comments.md)
-- [XML belge açıklamaları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
-- [Kodunuzu XML açıklamalarıyla belgeleme (C# kılavuz)](/dotnet/csharp/codedoc)
-- [Dile özgü düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md)
+- [Nasıl yapılsın: Belge oluşturma için XML açıklamaları ekleme](../../ide/reference/generate-xml-documentation-comments.md)
+- [XML Belgeleri Yorumları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [Kodunuzu XML yorumlarıyla belgele (C# Kılavuzu)](/dotnet/csharp/codedoc)
+- [Dile özel düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md)
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

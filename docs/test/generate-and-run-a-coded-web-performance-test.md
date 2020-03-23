@@ -15,39 +15,39 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4297f60c74e32b904d7c36912a8377d33f23ebdf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589584"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>Kodlanmış web performans testi oluşturma
 
-Web performans testleri, web uygulamanızla göz atarak kaydedilir. Testler, birden çok kullanıcının baskısı altındaki web uygulamanızın performansını ölçmek için yük testlerinde dahil edilir. Web performans testini düzenleme ve özelleştirme gibi başka bir kaynak kodu bir kod tabanlı betiğe dönüştürülebilir. Örneğin, döngü ve dal oluşturma yapıları ekleyebilirsiniz.
+Web performans testleri, web uygulamanızda göz atarak kaydedilir. Testler, web uygulamanızın performansını birden çok kullanıcının stresi altında ölçmek için yük testlerine dahil edilir. Web performans testi, diğer kaynak kodlar gibi değiştirebileceğiniz ve özelleştirebileceğiniz kod tabanlı bir komut dosyasına dönüştürülebilir. Örneğin, döngü ve dallanma yapıları ekleyebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="generate-a-coded-web-performance-test"></a>Kodlanmış web performans testi üret
+## <a name="generate-a-coded-web-performance-test"></a>Kodlanmış bir web performans testi oluşturma
 
-1. Web performans testi oluşturmadıysanız bkz [web performans testi](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project).
+1. Bir web performans testi oluşturmadıysanız, [bkz.](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project)
 
-2. Kodlanmış test üretin.
+2. Kodlanmış testi oluşturun.
 
-     ![Kodlanmış web performans testi üret](../test/media/web_test_coded_generate.png)
+     ![Kodlanmış bir web performans testi oluşturma](../test/media/web_test_coded_generate.png)
 
 3. Testi adlandırın.
 
      ![Kodlanmış web performans testi için bir ad girin](../test/media/web_test_coded_generate_nametest.png)
 
-     Yeni kodlanmış test kod düzenleyicisinde açılır.
+     Kod düzenleyicisinde yeni kodlu test açılır.
 
-     Hangi web performansı ve yük testi proje şablonunu, çözümünüze eklediğiniz bağlı olarak, kod Visual Basic, veya Visual C# içinde oluşturulur.
+     Çözümünüze eklediğiniz web performansı ve yük testi proje şablonuna bağlı olarak, kod Visual Basic veya Visual C#'da oluşturulur.
 
-     ![Yeni kodlanmış test kod düzenleyicisinde açılır.](../test/media/web_test_coded_generate_opencodeeditor.png)
+     ![Kod düzenleyicisinde yeni kodlu test açılır](../test/media/web_test_coded_generate_opencodeeditor.png)
 
-     Kodda, GetRequestEnumerator() yönteminde C# veya Visual Basic uygulamasındaki Run() yönteminde yönteminde olduğu her doğrulama kuralının ve web isteğinin bulunduğunu görebilirsiniz.
+     Kodda, C#'daki GetRequestEnumerator() yönteminin veya Visual Basic'teki Çalıştır() yönteminin yeniden kodlanmış testte bulunan her doğrulama kuralını ve web isteğini içerdiğini görebilirsiniz.
 
-4. Bazı basit kod eklemenin nasıl yapılacağını göstermek için yöntemin ve son web isteğine ilişkin koddan sonra aşağı kaydırın ve aşağıdaki kodu ekleyin:
+4. Bazı basit kod eklemeyi göstermek için, yöntemin sonuna ve son web isteği için koddan sonra aşağı kaydırın ve aşağıdaki kodu ekleyin:
 
     ```c#
     if (DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
@@ -72,29 +72,29 @@ Web performans testleri, web uygulamanızla göz atarak kaydedilir. Testler, bir
     End If
     ```
 
-5. Özel kodunuzun derlendiğinden emin doğrulamak için çözümü oluşturun.
+5. Özel kodunuzu derlediğini doğrulamak için çözüm oluşturun.
 
 6. Testi çalıştırın.
 
      ![Kodlanmış web performans testini çalıştırma](../test/media/web_test_coded_generate_run.png)
 
-     Ve bunun çalıştırıldığı gün Çarşamba olduğundan...
+     Ve bu gün bu bir Çarşamba oldu çalıştırmak çünkü ...
 
-     ![Kodlanmış web performans test sonuçları](../test/media/web_test_coded_generate_results.png)
+     ![Kodlanmış web performans testi sonuçları](../test/media/web_test_coded_generate_results.png)
 
-## <a name="qa"></a>SORU- CEVAP
+## <a name="qa"></a>Soru-Cevap
 
-### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>Aynı anda birden fazla test çalıştırabilir miyim?
-Y **:** Evet, **Çözüm Gezgini**' de sağ tıklama (bağlam) menüsünü kullanın.
+### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>S: Aynı anda birden fazla test çalıştırabilir miyim?
+**A:** Evet, **Solution Explorer'da**sağ tıklatma (bağlam) menüsünü kullanın.
 
-### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>S: veri kaynağı miyim kodlanmış test üretmeden önce veya sonra Ekle?
-**Y:** eklemek daha kolay bir [veri kaynağı](../test/add-a-data-source-to-a-web-performance-test.md) kodu otomatik olarak sizin için oluşturulacağından Kodlanmış testi oluşturmadan önce.
+### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>S: Kodlanmış bir test oluşturmadan önce veya sonra bir veri kaynağı eklemeli miyim?
+**A:** Kod sizin için otomatik olarak oluşturulacağı için, kodlanmış testi oluşturmadan önce bir [veri kaynağı](../test/add-a-data-source-to-a-web-performance-test.md) eklemek daha kolaydır.
 
-Bir veri kaynağı ile kodlanmış bir test çalıştırdığınızda, aşağıdaki hata iletisini görebilirsiniz:
+Bir veri kaynağı ile kodlanmış bir test çalıştırdığınızda, aşağıdaki hata iletisi görebilirsiniz:
 
-**Test çalıştırılamadı \<Test adı > aracıdaki \<bilgisayar adı >: nesne başvurusu bir nesnenin örneğine ayarlanmadı.**
+**Aracı \<Bilgisayar \<Adı>> test adı> çalıştırılamadım: Nesne başvurusu bir nesnenin bir örneğine ayarlanmaz.**
 
-Bu, karşılık gelen bir DataBindingAttribute olmadan test sınıfı için tanımlanan DataSourceAttribute öğesine sahip olduğundan ortaya çıkabilir. Bu hatayı gidermek için uygun bir DataBindingAttribute ekleyin, silin veya açıklama olarak kodun dışına.
+Bu, test sınıfı için tanımlanan bir DataSourceAttribute'unuzun karşılık gelen databindingattribute olmadan olması nedeniyle oluşabilir. Bu hatayı gidermek için uygun bir DataBindingAttribute ekleyin, silin veya kod dışında yorum.
 
-### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>Q: doğrulama ve ayıklama kuralları miyim kodlanmış test üretmeden önce veya sonra ekleme?
-**Y:** Kodlanmış testi oluşturmadan önce doğrulama kuralları ve ayıklama kuralları eklemek kolaydır; ancak, kullanmanızı öneririz [kodlanmış UI testleri](../test/use-ui-automation-to-test-your-code.md) doğrulama amacıyla.
+### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>S: Kodlanmış bir test oluşturmadan önce veya sonra doğrulama ve çıkarma kuralları eklemeli miyim?
+**A:** Kodlanmış testi oluşturmadan önce doğrulama kuralları ve çıkarma kuralları eklemek daha kolaydır; ancak, doğrulama amacıyla [kodlanmış UI testlerini](../test/use-ui-automation-to-test-your-code.md) kullanmanızı öneririz.

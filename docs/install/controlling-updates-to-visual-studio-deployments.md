@@ -1,6 +1,6 @@
 ---
-title: Dağıtımları yönelik güncelleştirmeleri denetleme
-description: Burada bir ağdan yüklediğinizde Visual Studio güncelleştirmesi görünümünü değiştirme konusunda bilgi edinin.
+title: Dağıtımlar için denetim güncelleştirmeleri
+description: Bir ağdan yüklediğinizde Visual Studio'nun güncelleştirmeyi nerede aradığınızı nasıl değiştireceğinizi öğrenin.
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -16,89 +16,89 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 8743f042c7c33da34895f93e5df3990f6e0b2ed2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115317"
 ---
-# <a name="control-updates-to-network-based-visual-studio-deployments"></a>Ağ tabanlı Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetleme
+# <a name="control-updates-to-network-based-visual-studio-deployments"></a>Ağ tabanlı Visual Studio dağıtımlarında denetim güncelleştirmeleri
 
-Kurumsal yöneticiler genellikle bir düzen oluşturmak ve kendi son kullanıcılara dağıtmak için bir ağ dosya paylaşımında bir ana bilgisayar.
+Kurumsal yöneticiler genellikle bir düzen oluşturur ve son kullanıcılarına dağıtmak için bir ağ dosyası paylaşımında barındırAbilir.
 
-## <a name="controlling-where-visual-studio-looks-for-updates"></a>Visual Studio güncelleştirmeleri nerede arar denetleme
+## <a name="controlling-where-visual-studio-looks-for-updates"></a>Visual Studio'nun güncellemeleri nerede aradığına bakma
 
-Varsayılan olarak, Visual Studio yükleme bir ağ paylaşımından olsa bile güncelleştirmeleri çevrimiçi ara devam eder. Bir güncelleştirme varsa, kullanıcı bunu yükleyebilirsiniz. Web'den çevrimdışı düzeninde bulunamadı güncelleştirilmiş içerik indirildi.
+Varsayılan olarak, Visual Studio yükleme bir ağ paylaşımından dağıtılmış olsa bile güncelleştirmeleri çevrimiçi aramaya devam eder. Bir güncelleştirme varsa, kullanıcı bunu yükleyebilir. Çevrimdışı düzende bulunmayan güncelleştirilmiş içerikler web'den indirilir.
 
-Visual Studio güncelleştirmeleri nerede arar üzerinde doğrudan denetim istiyorsanız, nerede göründüğüne konumu değiştirebilirsiniz. Kullanıcılarınız için güncelleştirilmiş sürümü de denetleyebilirsiniz. Bunu yapmak için aşağıdaki adımları izleyin:
+Visual Studio'nun güncelleştirmeleri nerede aradığı üzerinde doğrudan denetim istiyorsanız, konumu göründüğü yerde değiştirebilirsiniz. Kullanıcılarınızın güncelleştirilebildiği sürümü de denetleyebilirsiniz. Bunu yapmak için şu adımları uygulayın:
 
-1. Çevrimdışı bir düzen oluşturma:
+1. Çevrimdışı düzen oluşturun:
 
    ```cmd
    vs_enterprise.exe --layout C:\vsoffline --lang en-US
    ```
 
-2. Sitemi barındırmak istediğiniz dosya paylaşımına kopyalayın:
+2. Barındırmak istediğiniz dosya paylaşımına kopyalayın:
 
    ```cmd
    xcopy /e C:\vsoffline \\server\share\VS
    ```
 
-3. Düzeni ve değişiklik response.json dosyasında değişiklik `channelUri` yönetim denetimleri channelManifest.json bir kopyasına işaret edecek şekilde değeri.
+3. Düzendeki yanıt.json dosyasını değiştirin `channelUri` ve değeri yöneticinin denetledığı channelManifest.json'Un bir kopyasına işaret edecek şekilde değiştirin.
 
-   Aşağıdaki örnekte olduğu gibi değeri ters eğik çizgi kaçış emin olun:
+   Aşağıdaki örnekte olduğu gibi, değerdeki ters eğik çizgilerden kurtulduğundan emin olun:
 
    ```json
    "channelUri":"\\\\server\\share\\VS\\ChannelManifest.json"
    ```
 
-   Artık son kullanıcılara bu paylaşımdan Visual Studio'yu yüklemek için kurulumu çalıştırabilirsiniz.
+   Artık son kullanıcılar Visual Studio'yı yüklemek için bu paylaşımdan kurulum çalıştırabilir.
 
    ```cmd
    \\server\share\VS\vs_enterprise.exe
    ```
 
-Kuruluş Yöneticisi Visual Studio'nun daha yeni bir sürüme güncelleştirmek kullanıcıları için zaman olduğunu belirlediğinde, yapabilirler [düzen konumunu güncelleştirme](update-a-network-installation-of-visual-studio.md) güncelleştirilmiş dosyaları gibi birleştirmek için.
+Bir kuruluş yöneticisi, kullanıcılarının Visual Studio'nun daha yeni bir sürümüne güncelleştirme zamanının geldiğini belirlediğinde, güncelleştirilen dosyaları aşağıdaki gibi birleştirmek için [düzen konumunu güncelleştirebilir.](update-a-network-installation-of-visual-studio.md)
 
-1. Aşağıdaki komutu benzeyen bir komut kullanın:
+1. Aşağıdaki komuta benzer bir komut kullanın:
 
    ```cmd
    vs_enterprise.exe --layout \\server\share\VS --lang en-US
    ```
 
-2. Güncelleştirilmiş düzenini response.json dosyasında yine de özellikle Channelurı değişiklik, özelleştirmelerinizi gibi içerdiğinden emin olun:
+2. Güncelleştirilmiş düzendeki yanıt.json dosyasının, özellikle channelUri modifikasyonu olmak üzere özelleştirmelerinizi aşağıdaki gibi içerdiğinden emin olun:
 
    ```json
    "channelUri":"\\\\server\\share\\VS\\ChannelManifest.json"
    ```
 
-   Varolan bir Visual Studio yükler güncelleştirmeleri bu düzen arayın gelen `\\server\share\VS\ChannelManifest.json`. Visual Studio channelManifest.json kullanıcı yüklü olduğu daha yeniyse, bir güncelleştirme kullanılabilir kullanıcıya bildirir.
+   Varolan Visual Studio bu düzenden `\\server\share\VS\ChannelManifest.json`yükler güncellemeleri için bakmak. ChannelManifest.json kullanıcının yüklediği yüklenmeden daha yeniyse, Visual Studio kullanıcıya bir güncelleştirmenin kullanılabilir olduğunu belirtir.
 
-   Yeni yüklemeler, düzenden doğrudan Visual Studio'nun güncelleştirilmiş sürümü otomatik olarak yükler.
+   Yeni yüklemeler Visual Studio'nun güncelleştirilmiş sürümünü doğrudan düzenden otomatik olarak yükler.
 
-## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Visual Studio IDE'de bildirimleri denetleme
+## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Visual Studio IDE'deki bildirimleri denetleme
 
 ::: moniker range="vs-2017"
 
-Daha önce açıklandığı gibi Visual Studio içinden, bir ağ paylaşımına veya herhangi bir güncelleştirme kullanılabilir olup olmadığını görmek için Internet gibi yüklenmiş olduğu konum denetler. Bir güncelleştirme kullanılabilir olduğunda, Visual Studio pencerenin sağ üst köşesinde bir bildirim bayrağı ile kullanıcıyı uyarır.
+Daha önce açıklandığı gibi, Visual Studio herhangi bir güncelleştirme olup olmadığını görmek için ağ paylaşımı veya internet gibi yüklendiği konumu denetler. Bir güncelleştirme kullanılabilir olduğunda, Visual Studio pencerenin sağ üst köşesinde bir bildirim bayrağı ile kullanıcıbildirir.
 
-   ![Güncelleştirmeleri için bildirim bayrağı](media/notification-flag.png)
+   ![Güncelleştirmeler için bildirim bayrağı](media/notification-flag.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Daha önce açıklandığı gibi Visual Studio içinden, bir ağ paylaşımına veya herhangi bir güncelleştirme kullanılabilir olup olmadığını görmek için Internet gibi yüklenmiş olduğu konum denetler. Bir güncelleştirme kullanılabilir olduğunda, Visual Studio kullanıcıya pencerenin sağ alt köşesinde bir bildirim simgesiyle bilgilendirir.
+Daha önce açıklandığı gibi, Visual Studio herhangi bir güncelleştirme olup olmadığını görmek için ağ paylaşımı veya internet gibi yüklendiği konumu denetler. Bir güncelleştirme kullanılabilir olduğunda, Visual Studio pencerenin sağ alt köşesinde bir bildirim simgesi ile kullanıcıbildirir.
 
-   ![Visual Studio IDE 'deki bildirim simgesi](media/vs-2019/notification-bar.png "Visual Studio IDE 'deki bildirim simgesi")
+   ![Visual Studio IDE'deki bildirim simgesi](media/vs-2019/notification-bar.png "Visual Studio IDE'deki bildirim simgesi")
 
 ::: moniker-end
 
-Son kullanıcılar, güncelleştirmeleri almak istemiyorsanız bildirimleri devre dışı bırakabilirsiniz. (Örneğin, güncelleştirmeleri bir yazılım merkezi dağıtım mekanizması teslim ediyorsanız bildirimleri devre dışı bırakmak isteyebilirsiniz.)
+Son kullanıcıların güncelleştirmelerden haberdar olmasını istemiyorsanız bildirimleri devre dışı kullanabilirsiniz. (Örneğin, güncelleştirmeleri merkezi bir yazılım dağıtım mekanizması aracılığıyla teslim ederseniz bildirimleri devre dışı kılabilir.)
 
 ::: moniker range="vs-2017"
 
-Çünkü Visual Studio 2017 [kayıt defteri girdileri özel bir kayıt defterinde depolar](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), normal şekilde kayıt defterini doğrudan düzenleyemezsiniz. Ancak, Visual Studio içeren bir `vsregedit.exe` Visual Studio ayarlarını değiştirmek için kullanabileceğiniz yardımcı programı. Aşağıdaki komutla bildirimleri kapatabilirsiniz:
+Visual Studio 2017 [kayıt defteri girişlerini özel bir kayıt defterine depoladığı](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance)için, kayıt defterini tipik bir şekilde doğrudan olarak kaldıramazsınız. Ancak, Visual Studio `vsregedit.exe` Visual Studio ayarlarını değiştirmek için kullanabileceğiniz bir yardımcı program içerir. Bildirimleri aşağıdaki komutla kapatabilirsiniz:
 
 ```cmd
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
@@ -108,7 +108,7 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterpris
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019, [kayıt defteri girdilerini özel bir kayıt defterine depoladığından](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), kayıt defterini normal şekilde doğrudan düzenleyemezsiniz. Ancak, Visual Studio içeren bir `vsregedit.exe` Visual Studio ayarlarını değiştirmek için kullanabileceğiniz yardımcı programı. Aşağıdaki komutla bildirimleri kapatabilirsiniz:
+Visual Studio 2019 [kayıt defteri girişlerini özel bir kayıt defterine depoladığı](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance)için, kayıt defterini tipik bir şekilde doğrudan olarak kaldıramazsınız. Ancak, Visual Studio `vsregedit.exe` Visual Studio ayarlarını değiştirmek için kullanabileceğiniz bir yardımcı program içerir. Bildirimleri aşağıdaki komutla kapatabilirsiniz:
 
 ```cmd
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
@@ -116,17 +116,17 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterpris
 
 ::: moniker-end
 
-(Dizin düzenlemek istediğiniz yüklü örnekle eşleşecek şekilde değiştirdiğinizden emin olun.)
+(Yüklemek istediğiniz yüklü örneği eşleştirmek için dizini değiştirdiğinden emin olun.)
 
 > [!TIP]
-> Kullanım [vswhere.exe](tools-for-managing-visual-studio-instances.md#detecting-existing-visual-studio-instances) istemci iş istasyonunda Visual Studio'nun belirli bir örneği bulunamadı.
+> Bir istemci iş istasyonunda Visual Studio'nun belirli bir örneğini bulmak için [vswhere.exe'yi](tools-for-managing-visual-studio-instances.md#detecting-existing-visual-studio-instances) kullanın.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio'yu yükleyin](install-visual-studio.md)
-* [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
-* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
-* [Visual Studio örneklerini yönetmek için Araçlar](tools-for-managing-visual-studio-instances.md)
-* [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
+* [Visual Studio yükleme](install-visual-studio.md)
+* [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
+* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio örneklerini yönetme araçları](tools-for-managing-visual-studio-instances.md)
+* [Visual Studio ürün yaşam döngüsü ve servis](/visualstudio/releases/2019/servicing/)

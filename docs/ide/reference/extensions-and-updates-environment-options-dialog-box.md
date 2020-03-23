@@ -1,5 +1,5 @@
 ---
-title: Uzantılar, ortam, Seçenekler Iletişim kutusu
+title: Uzantılar, Ortam, Seçenekler İletişim Kutusu
 ms.date: 03/28/2019
 ms.topic: reference
 f1_keywords:
@@ -11,28 +11,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e7b0e1ca6d73e27f216f80054f87a35cf5389179
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114237"
 ---
-# <a name="options-dialog-box-environment--extensions"></a>Seçenekler iletişim kutusu: ortam \> uzantıları
+# <a name="options-dialog-box-environment--extensions"></a>Seçenekler iletişim kutusu: \> Ortam Uzantıları
 
-Visual Studio 'Nun güncelleştirmeleri nasıl gerçekleştireceğini ve uzantıların nasıl güncelleştirileceğini ve bulunacağını belirleme seçeneklerini ayarlamak için bu sayfayı kullanın.
+Visual Studio'nun güncelleştirmeleri nasıl gerçekleştirdiği ve uzantıların nasıl güncelleştirilip keşfedildiği yle ilgili seçenekleri ayarlamak için bu sayfayı kullanın.
 
-## <a name="automatically-check-for-updates"></a>Güncelleştirmeleri otomatik olarak denetle
+## <a name="automatically-check-for-updates"></a>Güncelleştirmeleri otomatik olarak denetleyin
 
-İşaretlendiğinde, Visual Studio güncelleştirmelerin kendisi için düzenli aralıklarla, yüklenmiş SDK ve araçlar ve uzantılar için düzenli olarak kontrol eder ve güncelleştirmeler kullanılabilir olduğunda menü çubuğunda bildirimleri görüntüler. Daha fazla bilgi için bkz. [Visual Studio 'Yu güncelleştirme](../../install/update-visual-studio.md).
+Kontrol edildiğinde, Visual Studio kendisine yapılan güncelleştirmeleri, yüklü SDK'ları ve araçları ve uzantıları periyodik olarak denetler ve güncelleştirmeler kullanılabilir olduğunda menü çubuğunda bildirimleri görüntüler. Daha fazla bilgi için Visual [Studio'yı Güncelleştir'e](../../install/update-visual-studio.md)bakın.
 
-## <a name="automatically-update-extensions"></a>Uzantıları otomatik olarak güncelleştir
+## <a name="automatically-update-extensions"></a>Uzantıları otomatik olarak güncelleştirin
 
-İşaretlendiğinde, uzantılara yönelik güncelleştirmeler sorulmadan yapılır. Daha fazla bilgi için [bulma ve Visual Studio uzantılarını kullanarak](../../ide/finding-and-using-visual-studio-extensions.md).
+İşaretlendiğinde, uzantılar için güncelleştirmeler istenmeden yapılır. Daha fazla bilgi için Visual [Studio Uzantılarını Bulma ve Kullanma bilgisine](../../ide/finding-and-using-visual-studio-extensions.md)bakın.
 
-## <a name="load-per-user-extensions-when-running-as-administrator"></a>Yönetici olarak çalışırken Kullanıcı Uzantıları başına yükleme
+## <a name="load-per-user-extensions-when-running-as-administrator"></a>Yönetici olarak çalışırken kullanıcı uzantıları başına yük
 
-Daha fazla bilgi için [bulma ve Visual Studio uzantılarını kullanarak](../../ide/finding-and-using-visual-studio-extensions.md).
+Daha fazla bilgi için Visual [Studio Uzantılarını Bulma ve Kullanma bilgisine](../../ide/finding-and-using-visual-studio-extensions.md)bakın.
 
-## <a name="additional-extension-galleries"></a>Ek uzantı galerileri
+## <a name="additional-extension-galleries"></a>Ek Uzatma Galerileri
 
-Özel uzantılar galerilerini desteklemeye izin veren bir kurumsal özellik. Daha fazla bilgi için bkz. [özel galeriler](../../extensibility/private-galleries.md).
+Özel uzantıların galerileri için destek sağlayan bir Enterprise özelliği. Daha fazla bilgi için [bkz.](../../extensibility/private-galleries.md)

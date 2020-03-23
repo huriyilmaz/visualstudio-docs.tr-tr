@@ -1,5 +1,5 @@
 ---
-title: CvReleaseMarkerSeries işlevi | Microsoft Docs
+title: CvReleaseMarkerSeries Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d100b7ff37ea5a3cd224fd420f14e4cb23061903
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62974154"
 ---
-# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries işlevi
-İşaret serisi serbest bırakır. Aksi takdirde uygulama serbest çökebilir sonra işaret serisi nesnesi kullanmayın. İşaret serisi yayımlamayı hatası bellek sızıntısına neden olur.
+# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries fonksiyonu
+İşaretleyici serisini yayımlar. Uygulama çökebilir aksi takdirde yayımladıktan sonra işaretserisi nesne kullanmayın. İşaretleyici serisinin serbest bırakılmaması bellek sızıntısına neden olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,13 +31,13 @@ HRESULT CvReleaseMarkerSeries(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pMarkerSeries` Nesne değişkeni sağlayıcı adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.
+ `pMarkerSeries`Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- S_OK işaret serisi başarıyla serbest bırakıldı veya hata kodu var. durumda tüm hatalar. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.
+ S_OK işaretleyici serisi başarıyla serbest bırakıldığında veya herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkers.h*
+ **Üstbilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

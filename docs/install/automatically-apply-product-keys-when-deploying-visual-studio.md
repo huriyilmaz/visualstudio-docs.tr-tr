@@ -1,6 +1,6 @@
 ---
-title: Ürün anahtarlarını otomatik olarak uygulama
-description: Visual Studio'yu dağıtırken ürün anahtarlarını program aracılığıyla uygulama hakkında bilgi edinin.
+title: Ürün anahtarlarını otomatik olarak uygulayın
+description: Visual Studio'yı dağıtırken ürün anahtarlarını programlı olarak nasıl uygulayacağınızı öğrenin.
 ms.date: 09/24/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,34 +13,34 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: e7f331536de264186bc2977cc4acaaab02147e13
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115223"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Visual Studio’yu dağıtırken ürün anahtarlarını otomatik olarak uygulama
 
-Ürün anahtarınızı program aracılığıyla Visual Studio'nun dağıtımı otomatik hale getirmek için kullanılan bir betiği bir parçası olarak uygulayabilirsiniz. Bir ürün anahtarı bir cihazda program aracılığıyla Visual Studio'nun veya bir yükleme tamamlandıktan sonra yükleme sırasında ya da ayarlayabilirsiniz.
+Ürün anahtarınızı Visual Studio'nun dağıtımını otomatikleştirmek için kullanılan bir komut dosyasının parçası olarak programlı olarak uygulayabilirsiniz. Visual Studio yüklemesi sırasında veya yükleme tamamlandıktan sonra bir aygıtüzerinde programlı olarak bir ürün anahtarı ayarlayabilirsiniz.
 
-## <a name="apply-the-license-after-installation"></a>Yüklemeden sonra lisans Uygula
+## <a name="apply-the-license-after-installation"></a>Yüklemeden sonra lisansı uygulayın
 
 ::: moniker range="vs-2017"
 
-Visual Studio yüklü bir sürümü ile bir ürün anahtarı kullanarak etkinleştirebilirsiniz `StorePID.exe` yardımcı programı hedef makinelerde sessiz modda. `StorePID.exe` Visual Studio 2017 aşağıdaki varsayılan konuma yükler bir hizmet programıdır: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE`
+Visual Studio'nun yüklü bir sürümünü, hedef makinelerdeki `StorePID.exe` yardımcı programı sessiz modda kullanarak ürün anahtarıyla etkinleştirebilirsiniz. `StorePID.exe`Visual Studio 2017 ile aşağıdaki varsayılan konuma yüklenen bir yardımcı programdır: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE`
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio yüklü bir sürümü ile bir ürün anahtarı kullanarak etkinleştirebilirsiniz `StorePID.exe` yardımcı programı hedef makinelerde sessiz modda. `StorePID.exe`, aşağıdaki varsayılan konumda Visual Studio 2019 ile yüklenen bir yardımcı programdır: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE`
+Visual Studio'nun yüklü bir sürümünü, hedef makinelerdeki `StorePID.exe` yardımcı programı sessiz modda kullanarak ürün anahtarıyla etkinleştirebilirsiniz. `StorePID.exe`Visual Studio 2019 ile aşağıdaki varsayılan konumda yüklenen bir yardımcı programdır: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE`
 
 ::: moniker-end
 
- Çalıştırma `StorePID.exe` yükseltilmiş ayrıcalıklarla kullanarak ya da System Center aracı ya da yükseltilmiş bir komut istemi. Bu ürün anahtarını ve Microsoft ürün kodu (MPC) ile izleyin.
+ Bir `StorePID.exe` System Center aracısı veya yükseltilmiş komut istemi kullanarak yüksek ayrıcalıklarla çalıştırın. Ürün anahtarı ve Microsoft Ürün Kodu (MPC) ile izleyin.
 
 >[!IMPORTANT]
-> Ürün anahtarı tireler dahil ettiğinizden emin olun.
+> Tireleri ürün anahtarına eklediğinden emin olun.
 
  ```cmd
  StorePID.exe [product key including the dashes] [MPC]
@@ -48,7 +48,7 @@ Visual Studio yüklü bir sürümü ile bir ürün anahtarı kullanarak etkinle�
 
 ::: moniker range="vs-2017"
 
-Aşağıdaki örnek, Visual Studio 2017 bir MPC 08860 biri olan bir kuruluş için lisans uygulamak için bir komut satırı gösterir. bir ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`, varsayılan yükleme konumu varsayar:
+Aşağıdaki örnekte, 08860 mpc'si olan ve varsayılan yükleme konumunu varsayan Visual Studio 2017 Enterprise lisansıiçin `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`bir komut satırı gösterilmektedir:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
@@ -58,7 +58,7 @@ Aşağıdaki örnek, Visual Studio 2017 bir MPC 08860 biri olan bir kuruluş iç
 
 ::: moniker range="vs-2019"
 
-Aşağıdaki örnek, MPC/09260, `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`ürün anahtarı ve varsayılan yükleme konumunu varsayan Visual Studio 2019 Enterprise lisansını uygulamak için bir komut satırı gösterir:
+Aşağıdaki örnek, 09260 mpc'si olan ve varsayılan yükleme konumunu varsayan Visual Studio 2019 Enterprise lisansı için `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`bir komut satırı gösterir:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 09260
@@ -68,9 +68,9 @@ Aşağıdaki örnek, MPC/09260, `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`ürün anahtar�
 
 ::: moniker range="vs-2017"
 
- Aşağıdaki tablo, Visual Studio'nun her sürümü için MPC kodları listeler:
+ Aşağıdaki tablo, Visual Studio'nun her sürümü için MPC kodlarını listeler:
 
-| Visual Studio sürümü                | MPC   |
+| Görsel Stüdyo Sürümü                | Mpc   |
 |--------------------------------------|-------|
 | Visual Studio Enterprise 2017        | 08860 |
 | Visual Studio Professional 2017      | 08862 |
@@ -80,19 +80,19 @@ Aşağıdaki örnek, MPC/09260, `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`ürün anahtar�
 
 ::: moniker range="vs-2019"
 
-| Visual Studio sürümü                | MPC   |
+| Görsel Stüdyo Sürümü                | Mpc   |
 |--------------------------------------|-------|
 | Visual Studio Enterprise 2019        | 09260 |
 | Visual Studio Professional 2019      | 09262 |
 
 ::: moniker-end
 
-Varsa `StorePID.exe` başarıyla döndürür ürün anahtarı geçerli bir `%ERRORLEVEL%` 0. Hatalarla karşılaştığında, hata durumu bağlı olarak aşağıdaki kodlarından birini döndürür:
+Ürün `StorePID.exe` anahtarı başarıyla uygulanırsa, `%ERRORLEVEL%` 0'ın bir kısmını döndürür. Hatalarla karşılaşırsa, hata durumuna bağlı olarak aşağıdaki kodlardan birini döndürür:
 
 | Hata                     | Kod |
 |---------------------------|------|
 | `PID_ACTION_SUCCESS`      | 0    |
-| `PID_ACTION_NOTINSTALLED` | 1\.    |
+| `PID_ACTION_NOTINSTALLED` | 1    |
 | `PID_ACTION_INVALID`      | 2    |
 | `PID_ACTION_EXPIRED`      | 3    |
 | `PID_ACTION_INUSE`        | 4    |
@@ -100,11 +100,11 @@ Varsa `StorePID.exe` başarıyla döndürür ürün anahtarı geçerli bir `%ERR
 | `PID_ACTION_NOUPGRADE`    | 6    |
 
 > [!NOTE]
-> Visual Studio 'nun bir sanal örneğini çalıştırdığınızda, Yerel AppData klasörünü ve kayıt defterini de sanallaştırdığınızdan emin olun. Sanal örneklerle ilgili sorunları gidermek için `C:\Program Files (x86)\Microsoft Visual Studio\<version>\Common7\IDE\DDConfigCA.exe`çalıştırın.  
+> Visual Studio'nun sanal bir örneğini çalıştırdığınızda, yerel AppData klasörünü ve kayıt defterini de sanallaştırdığınızdan emin olun. Sanal örnekleri gidermek için `C:\Program Files (x86)\Microsoft Visual Studio\<version>\Common7\IDE\DDConfigCA.exe`çalıştırın.  
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio'yu yükleyin](../install/install-visual-studio.md)
-* [Visual Studio’nun çevrimdışı yüklemesini oluşturma](../install/create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio yükleme](../install/install-visual-studio.md)
+* [Visual Studio'nun çevrimdışı yüklemesini oluşturma](../install/create-an-offline-installation-of-visual-studio.md)

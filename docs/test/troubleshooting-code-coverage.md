@@ -8,124 +8,124 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: bd70394262a2dd19ebf32f57549b9d2b3e8ee92a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565981"
 ---
 # <a name="troubleshoot-code-coverage"></a>Kod kapsamı sorunlarını giderme
 
-Visual Studio'da kod kapsamı analiz aracı yerel ve Yönetilen derlemeler için verileri toplar ( *.dll* veya *.exe* dosyaları). Ancak, bazı durumlarda, **kod kapsamı sonuçları** penceresi "boş sonuçlar oluşturuldu:...." şuna benzer bir hata görüntüler. Boş sonuçları elde etmenize neden olan çeşitli nedenler vardır. Bu makale, bu sorunların giderilmesine yardımcı olur.
+Visual Studio'daki kod kapsamı çözümleme aracı, yerel ve yönetilen derlemeler *(.dll* veya *.exe* dosyaları) için veri toplar. Ancak, bazı durumlarda, **Kod Kapsamı Sonuçları** penceresi "Oluşturulan Boş sonuçlar: ..." benzer bir hata görüntüler. Boş sonuçlar alabildiğinizin çeşitli nedenleri vardır. Bu makale, bu sorunları çözmenize yardımcı olur.
 
 ## <a name="what-you-should-see"></a>Görmeniz gereken
 
-Seçerseniz bir **kod kapsamı analizi** komutunu **Test** menüsünde, yapı ve testler sonra bir listesini görmelisiniz sonuçlanıyor **kod kapsamı** pencere. Ayrıntıları görmek için öğeleri genişletmeniz gerekebilir.
+**Test** menüsünde bir **Çözüm kodu kapsamı** komutu seçerseniz ve yapı ve testler başarılı bir şekilde çalışırsa, Kod **Kapsamı** penceresinde bir sonuç listesini görmeniz gerekir. Ayrıntıları görmek için öğeleri genişletmeniz gerekebilir.
 
-![Renklendirme ile kod kapsamı sonuçları](../test/media/codecoverage1.png)
+![Boyama ile kod kapsamı sonuçları](../test/media/codecoverage1.png)
 
-Daha fazla bilgi için [ne kadar kodun test edildiğini belirlemek için kod kapsamı kullanın](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Daha fazla bilgi için [bkz.](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 
 ## <a name="possible-reasons-for-seeing-no-results-or-old-results"></a>Sonuçları ya da eski sonuçları görmek için olası nedenler
 
 ### <a name="do-you-have-the-right-edition-of-visual-studio"></a>Visual Studio'nun doğru sürümüne sahip misiniz?
 
-Visual Studio Enterprise ihtiyacınız vardır.
+Visual Studio Atılgan'a ihtiyacın var.
 
 ### <a name="no-tests-were-executed"></a>Hiçbir sınama yürütülemedi
 
-Analiz&mdash;çıktı penceresini onaylayın. İçinde **çıktıyı Göster** aşağı açılan listesinde **testleri**. Herhangi bir uyarı veya hatanın günlüğe kaydedilip kaydedilmediğine bakın.
+Analiz&mdash;Çıkış pencerenizi kontrol edin. Açılan **listeden Çıktıyı Göster'de** **Testleri**seçin. Herhangi bir uyarı veya hatanın günlüğe kaydedilip kaydedilmediğine bakın.
 
-Açıklama&mdash;Testler çalışırken kod kapsamı analizi yapılır. Testler çalıştırıldığında sadece belleğe yüklenen derlemeleri içerir. Testlerin hiçbiri yürütülür için kod kapsamı raporunda hiçbir şey yoktur.
+Açıklama&mdash;Kodu kapsama çözümlemesi testler çalışırken yapılır. Testler çalıştırıldığında sadece belleğe yüklenen derlemeleri içerir. Testlerin hiçbiri yürütülmezse, kod kapsamının rapor ediletilen bir şey yok.
 
-Çözüm&mdash;Test Gezgini'nde seçin **tümünü Çalıştır** testlerin başarıyla sonuçlandığını doğrulamak için. Kullanmadan önce tüm hataları düzeltin **kod kapsamı analizi**.
+Test&mdash;Gezgini'nde Çözüm, testlerin başarılı bir şekilde çalıştırDığını doğrulamak için **Tümünü Çalıştır'ı** seçin. **Analyze Code Coverage'ı**kullanmadan önce hataları düzeltin.
 
-### <a name="youre-looking-at-a-previous-result"></a>Bir önceki sonucu arıyorsunuz
+### <a name="youre-looking-at-a-previous-result"></a>Önceki sonuca bakıyorsunuz
 
-Değiştirme ve testlerinizi yeniden çalıştırın, bir önceki kod kapsamı sonucu eski çalıştırmadan renklendirme kodu ile birlikte görünür olabilir.
+Testlerinizi değiştirip yeniden çalıştırdığınızda, önceki kod kapsamı sonucu, bu eski çalıştırmadaki kod boyama da dahil olmak üzere görünmeye devam edebilir.
 
-1. **Kod kapsamını analiz et**' i çalıştırın.
+1. **Kod Kapsamını Çözümle'yi**Çalıştır.
 
-2. En son sonuç kümesini seçtiğinizden emin olun **kod kapsamı sonuçlarını** penceresi.
+2. **Kod Kapsamı Sonuçları** penceresinde belirlenen en son sonucu seçtiğinizden emin olun.
 
 ### <a name="pdb-symbol-files-are-unavailable"></a>.pdb (simge) dosyaları kullanılamaz
 
-Analiz&mdash;derleme hedef klasörü açın (genellikle *bin\debug*) ve her derleme için doğrulayın bir *.pdb* aynı dizinde dosya *.dll*veya *.exe* dosya.
+Çözümleme&mdash;Hedef klasörünü derle (genellikle *bin\debug)* açın ve her derleme için *.dll* veya *.exe* dosyasıyla aynı dizinde bir *.pdb* dosyası olduğunu doğrulayın.
 
-Açıklama&mdash;kod kapsamı motorunun her derleme, ilişkili olmasını gerektirir *.pdb* testi çalıştırması sırasında erişilebilir dosya. Yoksa hiçbir *.pdb* belirli bir derleme, derleme için dosya analiz edilmiyor.
+Açıklama&mdash;Kod kapsama altyapısı, her derlemenin test çalışması sırasında erişilebilir ilişkili *.pdb* dosyasına sahip olduğunu gerektirir. Belirli bir derleme için *.pdb* dosyası yoksa, derleme çözümlenmez.
 
-*.Pdb* dosyası oluşturuldu, birlikte aynı derleme *.dll* veya *.exe* dosyaları.
+*.pdb* dosyası *.dll* veya *.exe* dosyalarıyla aynı yapıdan oluşturulmalıdır.
 
-Çözüm&mdash;yapı ayarlarınızı oluşturduğundan emin olun *.pdb* dosya. Varsa *.pdb* proje oluşturulduğunda, dosyaları güncel değil, daha sonra proje özelliklerini açın, seçin **derleme** sayfasında **Gelişmiş**ve incelemek**Hata ayıklama bilgisi**.
+Çözünürlük&mdash;Yapı ayarlarınızın *.pdb* dosyasını oluşturduğundan emin olun. Proje oluşturulurken *.pdb* dosyaları güncelleştirilmezse, proje özelliklerini açın, **Yapı** sayfasını seçin, **Gelişmiş'i**seçin ve **Hata Ayıklama Bilgilerini**inceleyin.
 
-Projeler C++ için, oluşturulan. pdb dosyalarının tam hata ayıklama bilgilerine sahip olduğundan emin olun. Proje özelliklerini açın ve hata **ayıklama > hata ayıklama** **bilgisi oluştur** ** > ,** **Paylaşım ve yayımlama için iyileştirilmiş hata ayıklama bilgileri oluşturmak üzere ayarlandığını doğrulayın (/Debug: Full)** .
+C++ projeleri için, oluşturulan .pdb dosyalarının tam hata ayıklama bilgilerine sahip olduğundan emin olun. Proje özelliklerini açın ve **Bağlantı** > **Hata Ayıklama**Oluşturma Hata > **Ayıklama Bilgisini** **paylaşma ve yayımlamak için en iyi duruma getirilmiş Hata Ayıklama Bilgileri (/DEBUG:FULL) olarak**ayarladığını doğrulayın.
 
-Varsa *.pdb* ve *.dll* veya *.exe* dosyalar farklı yerlerde kopyalama *.pdb* aynı dizine dosya. Kod kapsamı motorunun aramak için yapılandırmak da mümkündür *.pdb* dosyalarını başka bir konumda. Daha fazla bilgi için [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
+*.pdb* ve *.dll* veya *.exe* dosyaları farklı yerlerdeyse, *.pdb* dosyasını aynı dizine kopyalayın. Kod kapsama altyapısının başka bir konumda *.pdb* dosyalarını aramak için yapılandırılabilir. Daha fazla bilgi için [kod kapsamı çözümlemesi özelleştir'e](../test/customizing-code-coverage-analysis.md)bakın.
 
-### <a name="use-an-instrumented-or-optimized-binary"></a>Bir izleme eklenmiş ya da optimize edilmiş ikili kullanma
+### <a name="use-an-instrumented-or-optimized-binary"></a>Enstrümantmalı veya optimize edilmiş ikili
 
-Analiz&mdash;ikili iyileştirme profil destekli iyileştirme gibi gelişmiş herhangi bir biçimde gerçekleştirdi, veya bir profil aracıyla araç gibi izleme eklenmiş belirlemek *vsinstr.exe* veya  *VSPerfMon.exe*.
+Analiz&mdash;İkili profil güdümlü optimizasyon gibi gelişmiş optimizasyon herhangi bir biçimde uğramıştır, ya da *vsinstr.exe* veya *vsperfmon.exe*gibi bir profil oluşturma aracı tarafından enstrümante olup olmadığını belirleyin.
 
-Açıklama&mdash;bir derleme zaten izleme eklenmiş veya başka bir profil aracıyla araç, derleme kod kapsamı analizinden atlanmıştır. Kod kapsamı analizi bu tür derlemeler üzerinde gerçekleştirilemez.
+Açıklama&mdash;Bir derleme zaten başka bir profil oluşturma aracı tarafından enstrümante veya en iyi duruma getirilmişse, derleme kod kapsamı çözümlemesi atlanır. Bu tür derlemelerde kod kapsamı çözümlemesi yapılamaz.
 
-Çözüm&mdash;en iyi duruma getirme ve yeni yapı kullan kapatabilirsiniz.
+Çözünürlük&mdash;Optimizasyonu kapatın ve yeni bir yapı kullanın.
 
 ### <a name="code-is-not-managed-net-or-native-c-code"></a>Kod yönetilen (.NET) veya yerel (C++) kodu değilse
 
-Analiz&mdash;bazı testlerin çalıştığından üzerinde doğrulama yönetilen veya C++ kodu.
+Çözümleme&mdash;Yönetilen veya C++ kodu üzerinde bazı testler çalıştırdığınızı doğrulayın.
 
-Açıklama&mdash;Visual Studio'daki kod kapsamı analizi yalnızca yönetilen ve yerel (C++) kodlar kullanılabilir. Üçüncü taraf araçları ile çalışıyorsanız, bazılarını veya tümünü kodu farklı bir platformda çalışabilir.
+Visual&mdash;Studio'da Açıklama Kodu kapsama analizi yalnızca yönetilen ve yerel (C++) kodda kullanılabilir. Üçüncü taraf araçlarıyla çalışıyorsanız, kodun bir kısmı veya tümü farklı bir platformda yürütülebilir.
 
-Çözüm&mdash;hiçbiri kullanılamaz.
+Çözünürlük&mdash;Yok kullanılabilir.
 
 ### <a name="assembly-has-been-installed-by-ngen"></a>NGen tarafından yüklenen derleme
 
-Analiz&mdash;derlemeyi yerel görüntü önbelleğinden yüklenmedi doğrulayın.
+Çözümleme&mdash;Derlemenin yerel görüntü önbelleğinden yüklenmediğini doğrulayın.
 
-Açıklama&mdash;Performans nedeniyle değil yerel görüntü derlemeleri analiz. Daha fazla bilgi için [Ngen.exe (yerel Görüntü Oluşturucu)](/dotnet/framework/tools/ngen-exe-native-image-generator).
+Açıklama&mdash;Performans nedenleriyle, yerel görüntü derlemeleri çözümlenmez. Daha fazla bilgi için [Bkz. Ngen.exe (Native Image Generator)](/dotnet/framework/tools/ngen-exe-native-image-generator).
 
-Çözüm&mdash;derlemenin MSIL sürümünü kullanın. Bu, NGen ile işlem yok.
+Çözünürlük&mdash;Derlemenin MSIL sürümünü kullanın. NGen'le işlemeyin.
 
 ### <a name="custom-runsettings-file-with-bad-syntax"></a>Hatalı sözdizimi ile özelleştirilmiş .runsettings dosyası
 
-Analiz&mdash;özel kullanıyorsanız *.runsettings* dosyası sözdizimi hatası içerebilir. Kod kapsamı çalışmıyor ve kod kapsamı penceresi test çalıştırması veya sonunda eski sonuçları açmaz.
+Çözümleme&mdash;Özel bir *.runsettings* dosyası kullanıyorsanız, sözdizimi hatası içerebilir. Kod kapsamı çalıştırılmaz ve test çalışmasının sonunda kod kapsamı penceresi açılmaz veya eski sonuçları gösterir.
 
-Açıklama&mdash;özel bir birim testlerinizin çalıştırabileceğiniz *.runsettings* kod kapsam seçeneklerini yapılandırmak için bir dosya. Bu seçenek size dosyaları eklemeyi veya çıkarmayı sağlar. Daha fazla bilgi için [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
+Açıklama&mdash;Kod kapsama seçeneklerini yapılandırmak için birim testlerinizi özel bir *.runsettings* dosyasıyla çalıştırabilirsiniz. Bu seçenek size dosyaları eklemeyi veya çıkarmayı sağlar. Daha fazla bilgi için [kod kapsamı çözümlemesi özelleştir'e](../test/customizing-code-coverage-analysis.md)bakın.
 
-Çözüm&mdash;hatalarının olası iki tür vardır:
+Çözünürlük&mdash;İki olası hata türü vardır:
 
 - **XML hatası**
 
-     Açık *.runsettings* dosyasını Visual Studio XML düzenleyicisinde. Hata göstergelerine bakın.
+     Visual Studio XML düzenleyicisinde *.runsettings* dosyasını açın. Hata göstergelerine bakın.
 
 - **Normal ifade hatası**
 
-  Dosyadaki her dize bir düzenli ifadedir. Her biri için belirli bir görünüm ve hatalar için gözden geçirin:
+  Dosyadaki her dize bir düzenli ifadedir. Hatalar için her birini gözden geçirin ve özellikle şu nabakını yapın:
 
-  - Eşleşmeyen parantezler (...) ya da atlatılamayan parantezler \\(...) \\). Arama dizisinde parantezleri eşleştirmek istiyorsanız, atlatmak gerekir. Örneğin, bir işlevi kullanımı eşleştirmek için şunu yazın: `.*MyFunction\(double\)`
+  - Uyumsuz parantez (...) veya kaçamayan parantezler \\(... \\). Arama dizisinde parantezleri eşleştirmek istiyorsanız, atlatmak gerekir. Örneğin, bir işlev kullanımı maç için:`.*MyFunction\(double\)`
 
-  - İfadenin başına yıldız veya artı koyun. Herhangi bir dizenin karakterlerini eşleştirmek için noktadan sonra yıldız kullanın: `.*`
+  - İfadenin başına yıldız veya artı koyun. Herhangi bir karakter dizesini eşleştirmek için, bir nokta ve ardından yıldız işareti kullanın:`.*`
 
 ### <a name="custom-runsettings-file-with-incorrect-exclusions"></a>Yanlış istisnalarla özelleştirilmiş .runsettings dosyası
 
-Analiz&mdash;özel kullanıyorsanız *.runsettings* dosya, derlemenizi içerdiğinden emin olun.
+Analiz&mdash;Özel bir *.runsettings* dosyası kullanıyorsanız, derlemenizi içerdiğinden emin olun.
 
-Açıklama&mdash;özel bir birim testlerinizin çalıştırabileceğiniz *.runsettings* kod kapsam seçeneklerini yapılandırmak için bir dosya. Bu seçenek size dosyaları eklemeyi veya çıkarmayı sağlar. Daha fazla bilgi için [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
+Açıklama&mdash;Kod kapsama seçeneklerini yapılandırmak için birim testlerinizi özel bir *.runsettings* dosyasıyla çalıştırabilirsiniz. Bu seçenek size dosyaları eklemeyi veya çıkarmayı sağlar. Daha fazla bilgi için [kod kapsamı çözümlemesi özelleştir'e](../test/customizing-code-coverage-analysis.md)bakın.
 
-Çözüm&mdash;Tümünü Kaldır `Include` düğümlerden *.runsettings* dosya ve Tümünü Kaldır `Exclude` düğümleri. Bu problemi çözdüyse, bunları aşamalar halinde yerleştirin.
+Çözünürlük&mdash; *.runsettings* dosyasındaki tüm `Exclude` `Include` düğümleri kaldırın ve ardından tüm düğümleri kaldırın. Bu problemi çözdüyse, bunları aşamalar halinde yerleştirin.
 
-DataCollectors düğümünün Kod Kapsamını belirttiğinden emin olun. Bu örnek ile karşılaştırın [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
+DataCollectors düğümünün Kod Kapsamını belirttiğinden emin olun. [Kod kapsama çözümlemesi özelleştir'deki](../test/customizing-code-coverage-analysis.md)örnekle karşılaştırın.
 
 ## <a name="some-code-is-always-shown-as-not-covered"></a>Bazı kodlar her zaman kapsandığı gibi gösterilmez
 
 ### <a name="initialization-code-in-native-dlls-is-executed-before-instrumentation"></a>İzlemeden önce yerel DLL'lerdeki kodun başlatılması
 
-Analiz&mdash;statik olarak bağlı yerel kodda, başlatma işlevinin bir parçası olarak **DllMain** ve onu çağıran kod bazen gösterilen kodu çalıştırıldı olsa bile kapsanmamış olarak.
+Çözümleme&mdash;Statik olarak bağlı yerel kodda, başlatma işlevi **DllMain'in** bir parçası ve kod yürütülmüş olsa bile bazen kapsam dışında olarak gösterilir.
 
-Açıklama&mdash;kod kapsamı aracı uygulama başlamadan hemen önce İzleme'yi bir derlemeye eklenmesiyle çalışır. Herhangi bir derleme başlatma kodu önceden yüklenen **DllMain** derleme yüklenir ve uygulama çalışmadan önce yürütür. Statik olarak yüklenen derlemeler için genellikle uygulandığı kapsanmayan için bu kodu görüntülenir.
+Açıklama&mdash;Kod kapsamı aracı, uygulama çalışmaya başlamadan hemen önce bir derlemeye enstrümantasyon ekleyerek çalışır. Önceden yüklenen herhangi bir derlemede, **DllMain'deki** başlatma kodu montaj yüklenir yüklenmez ve uygulama çalışmadan önce yürütür. Bu kod genellikle statik olarak yüklenen derlemeler için geçerli olan kapsam kapsamında değil gibi görünüyor.
 
-Çözüm&mdash;yok.
+Çözünürlük&mdash;Yok.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ne kadar kodun test edildiğini belirlemek için kod kapsamını kullanma](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+- [Kod kapsamını kullanarak ne kadar kodun test edildiğini belirleme](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)

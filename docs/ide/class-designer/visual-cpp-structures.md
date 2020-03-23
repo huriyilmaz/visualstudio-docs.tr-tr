@@ -1,5 +1,5 @@
 ---
-title: C++Sınıf Tasarımcısı yapılar
+title: Sınıf Tasarımcıc++ Yapıları
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2aa8014835df2b5b2bd3dc68e2aaf0b079e001e8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590690"
 ---
-# <a name="c-structures-in-class-designer"></a>C++Sınıf Tasarımcısı yapılar
+# <a name="c-structures-in-class-designer"></a>Sınıf Tasarımcıc++ yapıları
 
-**Sınıf Tasarımcısı** , C++ anahtar sözcüğü `struct`ile belirtilen yapıları destekler. Aşağıda bir örnek verilmiştir:
+**Sınıf Tasarımcısı,** anahtar kelimeyle `struct`birlikte bildirilen C++ yapılarını destekler. Aşağıda bir örnek verilmiştir:
 
 ```cpp
 struct MyStructure
@@ -30,16 +30,16 @@ struct MyStructure
 };
 ```
 
-`struct` türünü kullanma hakkında daha fazla bilgi için bkz. [struct](/cpp/cpp/struct-cpp).
+`struct` Türü kullanma hakkında daha fazla bilgi için [bkz.](/cpp/cpp/struct-cpp)
 
-Sınıf C++ diyagramı içindeki bir yapı şekli, etiketin **Yapı** okuduğu ve yuvarlak köşeler yerine kare köşelere sahip olduğu durumlar dışında, bir sınıf şekli gibi görünür ve çalışacaktır.
+Sınıf diyagramındaki C++ yapı şekli, etiketin **Struct'u** okuması ve yuvarlatılmış köşeler yerine kare köşeleri olması dışında sınıf şekli gibi görünür ve çalışır.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`struct StructureName {};`|**StructureName**<br /><br /> Yapı|
+|`struct StructureName {};`|**Yapı Adı**<br /><br /> Yapı|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C++ Kodla çalışma](working-with-visual-cpp-code.md)
-- [Sınıflar ve Yapılar](/cpp/cpp/classes-and-structs-cpp)
-- [struct](/cpp/cpp/struct-cpp)
+- [C++ Kodu ile Çalışma](working-with-visual-cpp-code.md)
+- [Sınıflar ve Structs](/cpp/cpp/classes-and-structs-cpp)
+- [Yapı](/cpp/cpp/struct-cpp)

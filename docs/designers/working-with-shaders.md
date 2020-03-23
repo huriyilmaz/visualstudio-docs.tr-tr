@@ -9,34 +9,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b7ccb4f838c702cb1843d5c0f44dd7f54219f27a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589779"
 ---
 # <a name="work-with-shaders"></a>Gölgelendiricilerle çalışma
 
-Özel gölgelendirici efektlerini tasarlamak için, Visual Studio 'da grafik tabanlı gölgelendirici tasarımcısını kullanabilirsiniz. Bu gölgelendiriciler, DirectX tabanlı oyununuzda veya uygulamanızda kullanabilirsiniz.
+Özel gölgeefektleri tasarlamak için Visual Studio'daki grafik tabanlı Shader Designer'ı kullanabilirsiniz. Bu gölgelileri DirectX tabanlı oyununuzda veya uygulamanızda kullanabilirsiniz.
 
 ## <a name="shaders"></a>Gölgelendiriciler
 
-*Gölgelendirici* , grafik hesaplamaları gerçekleştiren bir bilgisayar programıdır — Örneğin, köşe dönüştürmeleri veya piksel renklendirme — ve genellikle CPU yerine bir grafik işleme BIRIMI (GPU) üzerinde çalışır. Geleneksel, sabit işlevli grafik işlem hattının çoğu aşamaları gölgelendirici programları tarafından gerçekleştirildiğinden, uygulamanızın ihtiyaçlarına özgü bir işlem hattı oluşturmak için bunları kullanabilirsiniz.
+*Gölgelendirme,* grafik hesaplamaları gerçekleştiren (örneğin, tepe noktası dönüşümleri veya piksel boyama) gerçekleştiren ve genellikle CPU yerine grafik işleme birimi (GPU) üzerinde çalışan bir bilgisayar programıdır. Geleneksel, sabit işlevli grafik ardışık ardışık yapının çoğu aşaması artık gölgeli programlar tarafından gerçekleştirildiği için, bunları uygulamanızın gereksinimlerine özel bir ardışık yol hattı oluşturmak için kullanabilirsiniz.
 
-En yaygın tür gölgelendiriciler, köşe *gölgelendiricilerin*kullanıldığı ve sabit işlevli bir dönüştürme ve aydınlatma devresi ile programlanabilir olmayan grafik donanımlarını değiştirme ve bir pikselin rengini belirleyen ve sabit işlevli renk-birleştirici devresi *' i programlanabilir*grafik donanımında değiştirme. Modern grafik*donanımı, grafik*hesaplamaları için çok sayıda gölgelendiriciler, *etki alanı gölgelendiriciler*ve grafik hesaplamaları için *geometri gölgelendiriciler* ve grafik olmayan hesaplamalar için bilgi *işlem gölgelendiricileri* daha da yaptı. Bu aşamaların hiçbiri programlanabilir olmayan grafik donanımında bile kullanılabilir değildir. Gölgelendiriciler, veri-paralel (SıMD) ve grafik merkezli (nokta ürün) yönergelerini sağlayan bütünleştirilmiş kod benzeri bir dil kullanılarak oluşturulmuştur. Artık gölgelendiriciler, genellikle HLSL (yüksek düzey gölgelendirici dili) gibi yüksek düzey, C benzeri diller kullanılarak oluşturulur.
+Gölgeli lerin en yaygın türleri, vertex başına hesaplamalar gerçekleştiren ve programlanamayan grafik donanımındaki sabit işlevli dönüşüm ve aydınlatma devrelerinin yerini alan *vertex gölgeleyicilerdir*ve piksel başına bir pikselin rengini belirleyen ve programlanamayan grafik donanımındaki sabit işlevli renk birleştirici devresini değiştiren piksel başına hesaplamalar yapan *piksel gölgeleyicilerdir.* Modern grafik*donanımı, gövde gölgeleyicileri,* etki alanı *gölgeleyicileri*ve grafik hesaplamaları için *geometri shaders* ve grafik dışı hesaplamalar için *işlem gölgeleyiciler* gibi daha da fazla gölgeli türü mümkün kılmıştır. Bu aşamaların hiçbiri programlanabilir olmayan grafik donanımı bile mevcut değildir. Gölgelendirler başlangıçta veri paraleli (SIMD) ve grafik merkezli (nokta ürünü) yönergeleri sağlayan montaj benzeri bir dil kullanılarak oluşturulmuştur. Şimdi, gölgeli genellikle HLSL (High Level Shader Language) gibi üst düzey, C benzeri diller kullanılarak oluşturulur.
 
-Gölgelendirici tasarımcısını, kod girip derlemek yerine etkileşimli olarak Piksel gölgelendiricileri oluşturmak için kullanabilirsiniz. Gölgelendirici tasarımcısında bir gölgelendirici, verileri ve işlemleri temsil eden bir dizi düğüm ve veri değerleri akışını temsil eden düğümler ve gölgelendirici üzerinden ara sonuçlar arasındaki bağlantıları tarafından tanımlanır. Gölgelendirici tasarımcısında bu yaklaşımı ve gerçek zamanlı önizlemeyi kullanarak, gölgelendirici yürütülmesini daha kolay bir şekilde görselleştirin ve deneme aracılığıyla ilginç gölgelendirici varyasyonlarını keşfedebilirsiniz.
+Kod girerek ve derleyerek yerine etkileşimli olarak piksel gölgeleyicileri oluşturmak için Shader Designer'ı kullanabilirsiniz. Gölgeli Tasarımcısı'nda, gölgeli veri ve işlemleri temsil eden bir dizi düğüm ve gölgeleyici aracılığıyla veri değerlerinin akışını temsil eden düğümler ile ara sonuçlar arasındaki bağlantılarla tanımlanır. Bu yaklaşımı ve Shader Designer'daki gerçek zamanlı önizlemeyi kullanarak, gölgeleyicinin yürütülmesini daha kolay görselleştirebilir ve deneme yoluyla ilginç gölgeli varyasyonları "keşfedebilirsiniz".
 
 ## <a name="dgsl-documents"></a>DGSL belgeleri
 
-Gölgelendirici Tasarımcısı, gölgelendirilmemiş grafik biçimlendirme dili (DGML) tabanlı bir XML biçimi olan yönlendirilmiş Graf gölgelendirici dili (DGSL) biçiminde gölgelendiriciler kaydeder. DGSL gölgelendiricileri doğrudan model düzenleyicisinde 3B modellere uygulayabilirsiniz. Bununla birlikte, uygulamanızda bir DGSL gölgelendiricisi kullanabilmeniz için, bunu DirectX 'in anladığı bir biçime dışarı aktarmanız gerekir — örneğin, HLSL.
+Shader Designer, Yönlendirilmiş Grafik İşaretleyici Dili 'ni (DGML) temel alan bir XML biçimi olan Yönlendirilmiş Grafik Shader Dili (DGSL) biçiminde gölgeli leri kaydeder. MODEL Düzenleyicisi'ndeki 3D modellere doğrudan DGSL shaders uygulayabilirsiniz. Ancak, uygulamanızda bir DGSL shader kullanabilmeniz için, uygulamayı DirectX'in anladığı bir biçime (örneğin HLSL) dışa aktarmanız gerekir.
 
-DGSL, DGML ile uyumlu olduğundan, bir DGML belgelerini analiz etmek için tasarlanan araçları kullanarak DGSL Gölgelendiricinizi analiz edebilirsiniz. DGML hakkında daha fazla bilgi için bkz. [yönlendirilmiş grafik biçimlendirme dilini (DGML) anlama](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+DGSL DGML ile uyumlu olduğundan, DGSL gölgeleme analiz etmek için DGML belgeleri analiz etmek için tasarlanmış araçlar kullanabilirsiniz. DGML hakkında bilgi için [bkz.](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Gölgelendirici Tasarımcısı](../designers/shader-designer.md)|Gölgelendiricilerle çalışmak için Visual Studio gölgelendirici Tasarımcısı 'nın nasıl kullanılacağını açıklar.|
-|[Gölgelendirici Tasarımcısı düğümleri](../designers/shader-designer-nodes.md)|Grafik efektlerini başarmak için kullanabileceğiniz Gölgelendirici Tasarımcısı düğümlerinin türlerini açıklar.|
-|[Gölgelendirici Tasarımcısı örnekleri](../designers/how-to-create-a-basic-color-shader.md)|Yaygın grafik efektlerini başarmak için Gölgelendirici Tasarımcısının nasıl kullanılacağını gösteren konuların bağlantılarını sağlar.|
+|[Shader Tasarımcısı](../designers/shader-designer.md)|Gölgelilerle çalışmak için Visual Studio Shader Designer'ın nasıl kullanılacağını açıklar.|
+|[Gölgeli Tasarımcı düğümleri](../designers/shader-designer-nodes.md)|Grafik efektleri elde etmek için kullanabileceğiniz Shader Designer düğümlerinin türlerini tartışır.|
+|[Shader Designer örnekleri](../designers/how-to-create-a-basic-color-shader.md)|Ortak grafik efektleri elde etmek için Shader Designer'ın nasıl kullanılacağını gösteren konulara bağlantılar sağlar.|

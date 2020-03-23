@@ -17,21 +17,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2599238e18415fb494d3d72fdf24305d7ba1b0b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75589909"
 ---
 # <a name="the-visual-studio-image-library"></a>Visual Studio görüntü kitaplığı
 
-Visual Studio görüntü kitaplığı, Microsoft Visual Studio, Microsoft Windows, Office sistemi ve diğer Microsoft yazılımlarında görünen uygulama görüntülerini içerir. Bu 1000'den fazla görüntü kümesi Microsoft yazılımıyla görsel olarak tutarlı olan uygulamalar oluşturmak için kullanılabilir.
+Visual Studio Image Library, Microsoft Visual Studio, Microsoft Windows, Office sistemi ve diğer Microsoft yazılımlarında görünen uygulama görüntüleri içerir. 1.000'den fazla görüntüden oluşan bu küme, Microsoft yazılımıyla görsel olarak tutarlı görünen uygulamalar oluşturmak için kullanılabilir.
 
-[Visual Studio görüntü kitaplığı'nı indirin](https://www.microsoft.com/download/details.aspx?id=35825)
+[Visual Studio resim kitaplığını indirin](https://www.microsoft.com/download/details.aspx?id=35825)
 
-Görüntü kitaplığı beş kategoriye ayrılır: ortak öğeler, Eylemler, ek açıklamalar, simgeler ve nesneler. Benioku dosyaları ortak öğeler ve simge türleri için PDF biçiminde dahil edilir. Bunlar, bu görüntüler, uygun şekilde uygulamalarınızda kullanma hakkında bilgi içerir.
+Görüntü kitaplığı beş kategoriye ayrılır: Ortak Öğeler, Eylemler, Ek Açıklamalar, Simgeler ve Nesneler. Readme dosyaları Ortak Öğeler ve Simge türleri için PDF biçiminde bulunur. Bu görüntülerin uygulamalarınızda uygun şekilde nasıl kullanılacağı hakkında bilgiler içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'yu yükleyin](../install/install-visual-studio.md)
-- [Görüntüler, bit eşlemler ve meta dosyaları](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)
+- [Visual Studio yükleme](../install/install-visual-studio.md)
+- [Resimler, bit eşlemler ve meta dosyalar](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)

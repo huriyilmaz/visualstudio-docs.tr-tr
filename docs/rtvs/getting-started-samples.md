@@ -1,6 +1,6 @@
 ---
 title: Örnek R projeleri
-description: R ve Visual Studio ile çalışmaya başlamak için örnek koleksiyonunun bir dizini.
+description: R ve Visual Studio ile başlamak için bir örnek koleksiyonunun dizini.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,80 +9,80 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: ef3316d929b00203815918a656568f75571e954e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75843817"
 ---
-# <a name="r-tools-for-visual-studio-sample-projects"></a>Visual Studio için R Araçları örnek projeleri
+# <a name="r-tools-for-visual-studio-sample-projects"></a>Visual Studio örnek projeler için R Araçları
 
-Bu örnek koleksiyonu, R, Visual Studio için R Araçları (RTVS) ve Microsoft Machine Learning Server ile çalışmaya başlamanızı ister:
+Bu örnek koleksiyonu R, R Tools for Visual Studio (RTVS) ve Microsoft Machine Learning Server'da başlar:
 
-1. [Örnek ZIP dosyasını](https://github.com/Microsoft/RTVS-docs/archive/master.zip) indirin ve seçtiğiniz bir klasöre ayıklayın.
-1. Projedeki iki klasörü görmek için `examples/Examples.sln` açın:
+1. Örnekleri [zip dosyasını](https://github.com/Microsoft/RTVS-docs/archive/master.zip) indirin ve seçtiğiniz bir klasöre ayıklayın.
+1. Projede iki klasörü görmek için açın: `examples/Examples.sln`
 
-    - *R 'ye Ilk bakış* , Newcomers için r 'ye bir Gentle giriş sağlar.
-    - *Mrs ve Machine Learning* , Machine Learning için R ve Microsoft Machine Learning Server 'in nasıl kullanılacağına ilişkin örnekler sağlar.
+    - *A First Look at R,* R'ye yeni başlayanlar için nazik bir giriş sunar.
+    - *MRS ve Machine Learning,* makine öğrenimi için R ve Microsoft Machine Learning Server'ın nasıl kullanılacağına örnek verir.
 
-## <a name="a-first-look-at-r"></a>R 'ye Ilk bakış
+## <a name="a-first-look-at-r"></a>R'ye İlk Bakış
 
-Bu örnek, iki kaynak dosyada kapsamlı açıklamalarla R 'ye ayrıntılı bir giriş sağlar. En iyi deneyim için imleci dosyanın en üstüne yerleştirin ve kod satırını **R etkileşim** penceresine göndermek için CTRL + ENTER tuşlarına basın. (Paketlerin yüklenmesi için bir dakika veya iki işlem gerekebilir.)
+Bu örnek, iki kaynak dosyadaki kapsamlı yorumlar aracılığıyla R'ye derinlemesine bir giriş sağlar. En iyi deneyim için imleci dosyanın en üstüne yerleştirin ve kodu satır satır yat pencereye **R Interactive** göndermek için Ctrl+Enter tuşuna basın. (Paketleri yükleyen satırların tamamlanması bir veya iki dakika sürebilir.)
 
-- `1-Getting Started with R.R`, paketleri kullanma, verileri yükleme ve çözümleme ve çizme gibi birçok R temel bilgileri içerir.
+- `1-Getting Started with R.R`paketleri kullanma, veri yükleme ve analiz etme ve çizim dahil olmak üzere birçok R temelini kapsar.
 
-    ![1-R.R örneği ile çalışmaya başlama örnek çıkışı](media/samples-getting-started-output.png)
+    ![1-R.R örneğinden örnek çıktı](media/samples-getting-started-output.png)
 
-- `2-Introduction to ggplot2.R`, görsel açıdan çekici çizimler ve basit sözdizimi için bilinen ggplot2 grafik paketini tanıtır. Bu örnek, deprem verilerini Fiji 'dan görselleştirir.
+- `2-Introduction to ggplot2.R`görsel olarak çekici çizimleri ve basit sözdizimi ile bilinen ggplot2 grafik paketini sunar. Bu örnek, Fiji'den gelen deprem verilerini görselleştirir.
 
-    ![2-ggplot2 'e giriş çıkışı örneği. R örneği](media/samples-ggplot-output.png)
+    ![2-Giriş ten ggplot2'ye örnek çıktı. R örneği](media/samples-ggplot-output.png)
 
 ## <a name="microsoft-machine-learning-server-and-machine-learning"></a>Microsoft Machine Learning Server ve Machine Learning
 
-Bu örnek koleksiyonu, Machine Learning modelleri oluşturmak ve [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)avantajlarından yararlanmak için R 'yi nasıl kullanacağınızı gösterir.
+Bu örnek koleksiyonu, makine öğrenme modelleri oluşturmak ve Microsoft [Machine Learning Server'dan](/machine-learning-server/what-is-machine-learning-server)yararlanmak için R'nin nasıl kullanılacağını göstermektedir.
 
-Tüm örneklerde olduğu gibi, dosyasını açın, imleci üst kısımdaki yere yerleştirin ve ardından CTRL+**ENTER** **tuşlarına** basarak kod satırı satırına ilerleyin. Her klasördeki markaşağı dosyaları da ek ayrıntılar içerir.
+Tüm örneklerde olduğu gibi, dosyayı açın, imleci en üste yerleştirin ve ardından **Ctrl**+**Enter**ile kod satırına satır adım atın. Her klasördeki işaretleme dosyaları da ek ayrıntılar içerir.
 
-- `Benchmarks`, Microsoft R Open ve Intel Math çekirdek kitaplığı (MKL) kullanımı aracılığıyla olası performans kazançlarını göstermek için çok sayıda yoğun, paralel doğrusal algek hesaplamaları çalıştırır. Benzetimli verilerle, kıyaslamalar, bir iş parçacığında matris hesaplamalarını özellikle karşılaştırın.
+- `Benchmarks`Microsoft R Open ve Intel Math Kernel Library (MKL) kullanımı yla mümkün olan performans kazanımlarını göstermek için bir dizi yoğun, paralel doğrusal cebir hesaplaması çalıştırır. Benzetimli verilerle, kıyaslamalar özellikle bir iş parçacığı üzerindeki matris hesaplamalarını ikiye karşı karşı laştırır.
 
-    ![Örnek kıyaslama çizimi](media/samples-mro-benchmark-plot.png)
+    ![Örnek kıyaslama konusu](media/samples-mro-benchmark-plot.png)
 
-- `Bike_Rental_Estimation_with_MRS`, Microsoft ML Server kullanarak bir geçmiş veri kümesine göre bisiklet için isteğe bağlı bir tahmin modeli oluşturur.
+- `Bike_Rental_Estimation_with_MRS`Microsoft ML Server'ı kullanarak geçmiş bir veri kümesini temel alan bisiklet kiralamaları için bir talep tahmin modeli oluşturur.
 
-- `Data_Exploration` üç komut dosyası içerir:
+- `Data_Exploration`üç komut dosyası içerir:
 
-  - `Import Data from URL.R`, URL tarafından tanımlanan bir veri dosyasının R 'ye nasıl yükleneceğini gösterir.
-  - `Import Data from URL to xdf.R`, URL tanımlı bir veri dosyasının bir XDF olarak Microsoft ML Server 'a nasıl yükleneceğini gösterir.
-  - `Using ggplot2.R`, `A First Look at R/2-Introduction to ggplot2.R` örneğinin bir uzantısıdır ve Etkileşimli 3B çizim dahil olmak üzere ggplot2's işlevselliğinin daha kapsamlı bir turuna sahiptir.
+  - `Import Data from URL.R`URL'de tanımlanan bir veri dosyasının R'ye nasıl yüklenirolduğunu gösterir.
+  - `Import Data from URL to xdf.R`URL'de tanımlanan bir veri dosyasının microsoft ML Server'a xdf olarak nasıl yüklenirken yüklenirken gösterir.
+  - `Using ggplot2.R``A First Look at R/2-Introduction to ggplot2.R` etkileşimli 3B çizim de dahil olmak üzere ggplot2 işlevselliği daha kapsamlı bir tur vererek, örnek bir uzantısıdır.
 
-      ![Ggplot2 kullanarak çıkış. R örneği](media/samples-3d-interactive.png)
+      ![Ggplot2 kullanma çıktısı. R örneği](media/samples-3d-interactive.png)
 
-- `Datasets` diğer örnekler tarafından kullanılan üç *. csv* dosyası içerir
-- `Flight_Delays_Prediction_with_R` ve `Flight_Delays_Prediction_with_MRS`, R, Machine Learning ve geçmiş performans ve hava durumu verilerini kullanarak uçuş gecikmelerinin nasıl tahmin edilmesi gerektiğini gösterir.
-- `Machine learning`, uçuş gecikmelerini tahmin etmek, fiyatları ve bisiklet süreleri için öğrenerek üç örnek içerir. Bu örnekler birlikte, gerçek dünyada sorunlara R ve Microsoft ML Server uygulamasını gösterir. Ayrıca, çeşitli popüler makine öğrenimi modellerini nasıl kullanacağınızı ve bir [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/) çalışma alanı kullanarak bunları bir Azure Web hizmeti olarak dağıtmayı da gösterir.
+- `Datasets`diğer örnekler tarafından kullanılan üç *.csv* dosyaları içerir
+- `Flight_Delays_Prediction_with_R`r, `Flight_Delays_Prediction_with_MRS` makine öğrenimi ve tarihsel zamanında performans ve hava durumu verilerini kullanarak uçuş gecikmelerinin nasıl tahmin edilebildiğini gösterir.
+- `Machine learning`uçuş gecikmeleri, konut fiyatları ve bisiklet kiralama tahmin öğrenmek için üç örnek içerir. Bu örnekler birlikte R ve Microsoft ML Server'ın gerçek dünyadaki sorunlara uygulanmasını göstermektedir. Ayrıca, azure machine learning çalışma alanını kullanarak birkaç popüler makine öğrenimi modelini nasıl kullanacağınızı ve bunları Azure [Web](https://azure.microsoft.com/services/machine-learning/) Hizmeti olarak nasıl dağıtabileceğinizi de gösterirler.
 
-- `R_MRO_MRS_Comparison`, komut, sözdizimi, yapılar ve performans ile R, Microsoft R Open ve Microsoft ML Server 'in benzerlikleri ve farklarını gösteren altı bölümden oluşan bir karşılaştırdır.
+- `R_MRO_MRS_Comparison`Komutları, sözdizimi, yapılar ve performans ile R, Microsoft R Open ve Microsoft ML Server benzerliklerve farklılıklarını gösteren altı bölümlü bir karşılaştırmadır.
 
-## <a name="whats-special-about-microsoft-r-open-and-microsoft-ml-server"></a>Microsoft R Open ve Microsoft ML Server hakkında ne özeldir?
+## <a name="whats-special-about-microsoft-r-open-and-microsoft-ml-server"></a>Microsoft R Open ve Microsoft ML Server'ın özelliği nedir?
 
-Microsoft r [Open](https://mran.revolutionanalytics.com/download/), Microsoft 'un r 'nin dağıtımı, [Cran R](https://cran.r-project.org/) 'den iki önemli şekilde farklıdır:
+[Microsoft R Open](https://mran.revolutionanalytics.com/download/), R Microsoft'un dağılımı, iki önemli şekilde [CRAN R](https://cran.r-project.org/) farklıdır:
 
-1. [Intel Math çekirdek kitaplıklarıyla](https://software.intel.com/intel-mkl)kullanıldığında [daha iyi hesaplama performansı](https://mran.revolutionanalytics.com/rro/#intelmkl1) . Kitaplıklar Microsoft R Open ile kullanılmak üzere Microsoft 'tan ücretsiz bir indirme olarak kullanılabilir.
+1. [Intel Math Kernel Kitaplıkları](https://software.intel.com/intel-mkl)ile kullanıldığında [daha iyi hesaplama performansı.](https://mran.revolutionanalytics.com/rro/#intelmkl1) Kitaplıklar, Microsoft R Open ile birlikte kullanılmak üzere Microsoft'tan ücretsiz olarak indirilebilir.
 
-1. [Tekrarlanabilir r Toolkit](https://mran.revolutionanalytics.com/rro/#reproducibility) , r programınızı oluşturmak için kullandığınız kitaplıkların, işinizi yeniden oluşturmak isteyen diğerleri tarafından her zaman kullanılabilir olmasını sağlar.
+1. [Tekrarlanabilir R Toolkit,](https://mran.revolutionanalytics.com/rro/#reproducibility) R programınızı oluşturmak için kullandığınız kitaplıkların çalışmanızı yeniden oluşturmak isteyen diğer kişiler tarafından her zaman kullanılabilir olmasını sağlar.
 
-[Microsoft ml Server (MLS)](/machine-learning-server/what-is-machine-learning-server) , daha fazla veri idare etmenize ve daha hızlı işleyebilmeniz Için bir R uzantısıdır. R iki güçlü özellik sunar:
+[Microsoft ML Server (MLS),](/machine-learning-server/what-is-machine-learning-server) daha fazla veriyi işlemenizi ve daha hızlı işlemenizi sağlayan R'nin bir uzantısıdır. R'ye iki güçlü yetenek verir:
 
-1. RAM sınırlamaları olmayan daha büyük veri kümeleri. ML Server, Hadoop kümeleri, veritabanları ve veri ambarları gibi çeşitli kaynaklardan bellek dışı verileri işleyebilir.
+1. RAM sınırlaması olmadan daha büyük veri kümeleri. ML Server, Hadoop kümeleri, veritabanları ve veri ambarları gibi çeşitli kaynaklardan gelen bellek dışı verileri işleyebilir.
 
-1. Paralel, çok çekirdekli işleme. MLS, kullanılabilir olan tüm hesaplama kaynaklarında hesaplamayı verimli bir şekilde dağıtabilir. Kişisel iş istasyonunuzda veya uzak kümenizde, MLS yanıtı daha hızlı bir şekilde alır.
+1. Paralel, çok çekirdekli işleme. MLS, kullanılabilir olduğu tüm hesaplama kaynaklarına hesaplamayı verimli bir şekilde dağıtabilir. Kişisel iş istasyonunuzda veya uzak bir kümede MLS daha hızlı bir yanıt alır.
 
-Aşağıdaki karşılaştırma, MKL ile birlikte MLS ve MRO 'ın, MKL olmadan R ve MRO 'dan belirli matris hesaplamasıyla ilgili önemli ölçüde daha iyi hesaplama performansına sahip olduğunu gösterir. Bu hesaplamada sanal veriler kullanılır:
+Aşağıdaki karşılaştırma MLS ve MRO MKL ile bazı matris hesaplama ile ilgili önemli ölçüde daha iyi hesaplama performansı Olduğunu göstermektedir R ve MRO MKL olmadan. Bu hesaplamada simüle edilmiş veriler kullanılır:
 
-![MLS ve MRO ile mkl ile R ve MRO karşılaştırması, MKL olmadan karşılaştırılıyor](media/samples-speed-comparison.png)
+![MLS ve MRO ile MKL'nin MKL'siz R ve MRO ile karşılaştırılması](media/samples-speed-comparison.png)
 
-MRO ve MLS ile R 'nin teknik karşılaştırması için, konusunda [ayrıntılı tartışmayı](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html) inceleyin.
+MRO ve MLS ile R teknik bir karşılaştırma için, konu yla ilgili [Lixun Zhang ayrıntılı tartışma](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html) göz atın.
 
-Aşağıdaki şekil, 15 dakikadan daha büyük uçuş gecikmelerini tahmin etmek üzere lojistik regresyon modellerini oluştururken kullanılan geçen süreyi saniye cinsinden karşılaştırır.  CRAN R 'de kullanılan geçen süre çok az sayıda satırı artırırken önemli ölçüde artar, ancak MLS yalnızca yaklaşık iki kez artar. Bu kıyaslama hakkında ayrıntılı bilgi edinmek için *kıyaslamalar/rxGlm_benchmark inceleyin. R* örneği.
+Aşağıdaki şekil daha sonra 15 dakikadan daha büyük uçuş gecikmeleri tahmin etmek için Lojistik Regresyon modelleri binada kullanılan saniye içinde geçen süreyi karşılaştırır.  CRAN R'de kullanılan geçen süre, az sayıda satır artarken, MLS yalnızca yaklaşık iki kat artar. Bu kıyaslama hakkında ayrıntılı bilgi için *Benchmarks/rxGlm_benchmark'ye göz atın. R* örneği.
 
-![rxGlm kıyaslaması](media/samples-rxGLM-benchmark.png)
+![rxGlm kıyaslama](media/samples-rxGLM-benchmark.png)

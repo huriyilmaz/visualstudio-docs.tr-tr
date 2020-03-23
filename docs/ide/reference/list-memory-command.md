@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c500b1b516c2b1ab1bc66b7970fccc4ec7a85baa
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568717"
 ---
 # <a name="list-memory-command"></a>Belleği Listele Komutu
-Belirtilen bellek aralığının içeriklerini görüntüler.
+Belirtilen bellek aralığının içeriğini görüntüler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,53 +31,53 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 [/Hex|Signed|Unsigned] [expression]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 `expression`
 
-İsteğe bağlı. Belleği görüntülemeye başlamak için gereken bellek adresi.
+İsteğe bağlı. Belleğin görüntülenmesine başlanacak bellek adresi.
 
-## <a name="switches"></a>Geçişler
+## <a name="switches"></a>Anahtarlar
 /ANSI&#124;Unicode
 
-İsteğe bağlı. Belleği, ANSI veya Unicode bellek baytlarına karşılık gelen karakterler olarak görüntüler.
+İsteğe bağlı. Belleğin baytlarına karşılık gelen karakterler olarak görüntüleyin, ANSI veya Unicode.
 
-/Count:`number`
+/Sayım:`number`
 
-İsteğe bağlı. `expression`başlayarak, kaç baytlık bellek gösterileceğini belirler.
+İsteğe bağlı. 'den `expression`başlayarak, görüntülenecek bellek kaç bayt ını belirler.
 
 /Format:`formattype`
 
-İsteğe bağlı. **Bellek penceresinde bellek** bilgilerini görüntülemek için biçim türü; OneByte, TwoBytes, on bayt, sekizinci TBytes, float (32-bit) veya Double (64-bit) olabilir. OneByte kullanılıyorsa `/Unicode` kullanılamaz.
+İsteğe bağlı. **Bellek** penceresinde bellek bilgilerini görüntülemek için biçim yazısını biçimlendirin; OneByte, TwoBytes, FourBytes, EightBytes, Float (32-bit) veya Double (64-bit) olabilir. OneByte kullanılırsa, `/Unicode` kullanılamaz.
 
-/Hex&#124;imzalı&#124;işaretsiz
+/Hex&#124;İmzasız&#124;İmzasız
 
-İsteğe bağlı. Sayıları görüntüleme biçimini belirtir: imzalı, işaretsiz veya onaltılı olarak.
+İsteğe bağlı. Numaraları görüntüleme biçimini belirtir: imzalı, imzasız veya hexadecimal olarak.
 
 ## <a name="remarks"></a>Açıklamalar
-Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yerine, belirtilen değerlere bazı anahtarlar önceden ayarlanmış şekilde, önceden tanımlanmış diğer adlar kullanılarak komutu çağırabilirsiniz. Örneğin, şunu girmek yerine:
+Tüm anahtarlarla tam bir **Debug.ListMemory** komutu yazmak yerine, belirli anahtarlarla önceden belirlenmiş belirli değerlere önceden ayarlanmış takma adları kullanarak komutu çağırabilirsiniz. Örneğin, girmek yerine:
 
 ```cmd
 >Debug.ListMemory /Format:float /Count:30 /Unicode
 ```
 
-Şunu yazabilirsiniz:
+yazabilirsiniz:
 
 ```cmd
 >df /Count:30 /Unicode
 ```
 
-**Debug. ListMemory** komutu için kullanılabilir diğer adların listesi aşağıdadır:
+**Burada Debug.ListMemory** komutu için kullanılabilir diğer adların bir listesi:
 
-|Alias|Komut ve anahtarlar|
+|Diğer ad|Komut ve Anahtarlar|
 |-----------| - |
-|**d**|Debug.ListMemory|
-|**kapattığımda**|Debug.ListMemory /Ansi|
-|**veritabanı**|Debug.ListMemory /Format:OneByte|
-|**'ye**|Debug.ListMemory /Format:FourBytes /Ansi|
-|**dd**|Debug.ListMemory /Format:FourBytes|
-|**df**|Debug. ListMemory/Format: float|
-|**DQ**|Debug.ListMemory /Format:EightBytes|
-|**du**|Debug.ListMemory / Unicode|
+|**D**|Debug.ListMemory|
+|**Savcı**|Debug.ListBellek /Ansi|
+|**Db**|Debug.ListBellek /Biçim:OneByte|
+|**Dc**|Debug.ListMemory /Format:FourBytes /Ansi|
+|**Dd**|Debug.ListBellek /Biçim:FourBytes|
+|**Df**|Debug.ListMemory /Format:Float|
+|**Dq**|Debug.ListBellek /Biçim:EightBytes|
+|**Du**|Hata Ayıklama.ListBellek /Unicode|
 
 ## <a name="example"></a>Örnek
 
@@ -87,9 +87,9 @@ Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yeri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çağrı Yığınını Listele Komutu](../../ide/reference/list-call-stack-command.md)
-- [İş Parçacıklarını Listele Komutu](../../ide/reference/list-threads-command.md)
-- [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
+- [Liste Çağrı Yığını Komutu](../../ide/reference/list-call-stack-command.md)
+- [Liste Konuları Komutu](../../ide/reference/list-threads-command.md)
+- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

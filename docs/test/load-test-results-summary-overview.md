@@ -15,128 +15,128 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7df3324c2182c376cb9547a4192fca3e601b3dd5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584497"
 ---
 # <a name="load-test-results-summary-overview"></a>Yük testi sonuçları özetine genel bakış
 
-Bir yük testi çalıştırdıktan sonra sonuçları hızlı bir şekilde anlamak için yükleme testi özetini görüntüleyebilirsiniz. Yükleme testi özetini anahtar sonuçları bir compact ve kolay okunur biçimde sağlar. Ayrıca, yük testinin yazdırabilirsiniz. Bu, proje katılımcılarına sonuçları iletişim kurarken güvenli kılar. Bir yük testi sonucu daha önce çalışan yük testinden açtığınızda, yükleme testi özetini de varsayılan görünümü şu şekildedir. Daha fazla bilgi için [nasıl yapılır: erişim yük testi sonuçlarını analiz](../test/how-to-access-load-test-results-for-analysis.md).
+Bir yük testi çalıştırdıktan sonra, sonuçları hızlı bir şekilde anlamak için yük testi özetini görüntüleyebilirsiniz. Yük testi özeti, kompakt ve okunması kolay bir biçimde anahtar sonuçları sağlar. Yük testi özetini de yazdırabilirsiniz. Bu, sonuçları hissedarlara iletdiğinizde kullanımı kolaylaştırır. Yük testi özeti, daha önce çalıştırıladığınız bir yük testi sonucunu açtığınızda varsayılan görünümdür. Daha fazla bilgi için [bkz: Çözümleme için yük testi sonuçlarına erişin.](../test/how-to-access-load-test-results-for-analysis.md)
 
 ![Özet görünümü](../test/media/ltest_summaryview.png)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="the-load-test-summary"></a>Yük Testi Özeti
+## <a name="the-load-test-summary"></a>Yük testi özeti
 
-Yükleme testi özetini bölümlere ayrılmıştır. İlk bölüm Özet üst kısmında görünür ve her zaman görünürdür. Yük Testi Özeti görüntülediğinizde, aşağıdaki öğeleri ilk şunlardır:
+Yük testi özeti bölümlere ayrılmıştır. İlk bölümler özetin en üstünde görünür ve her zaman görünür. Yük testi özetini görüntülediğinizde, önce aşağıdaki öğeler vardır:
 
-- Test çalışma bilgisi
+- Test Çalıştır Bilgileri
 
-- Genel sonuçları
+- Genel Sonuçlar
 
-- Anahtar istatistiği: en yavaş 5 sayfa
+- Anahtar İstatistik: En Yavaş 5 Sayfa
 
-- Anahtar istatistiği: en yavaş 5 test
+- Anahtar İstatistik: En Yavaş 5 Test
 
-- Anahtar istatistiği: en yavaş 5 SQL işlemi
+- Anahtar İstatistik: En Yavaş 5 SQL İşlemleri
 
     > [!NOTE]
-    > Yalnızca yük testinde SQL izlemeyi etkinse SQL İşlemleri bölmesi görüntülenir.
+    > SQL İşlemleri bölümü yalnızca yükleme testinde SQL izleme etkinse görüntülenir.
 
-Kapanış bölümleri Özet sonunda görünür ve yer kazanmak için daraltılmış. Aşağıdaki öğeler, yük testinin sonunda görünür:
+Kapanış bölümleri özetin sonunda görünür ve yer kazanmak için daraltılabilir. Aşağıdaki öğeler yük testi özetinin sonunda görünür:
 
 - Test Sonuçları
 
-- Sonuçlar sayfası
+- Sayfa Sonuçları
 
-- İşlem sonuçları
+- İşlem Sonuçları
 
-- Test kaynakları altındaki sistem
+- Test Kaynakları Altında Sistem
 
-- Denetleyici ve aracı kaynakları
+- Denetleyici ve Aracı Kaynakları
 
 - Hatalar
 
-## <a name="test-run-information"></a>Test çalıştırması bilgileri
+## <a name="test-run-information"></a>Test çalıştırma bilgileri
 
-Test çalıştırması bilgileri bölümü, test, başlangıç ve bitiş zamanlarını ve çalıştırdığınız test denetleyicisinin adını da dahil olmak üzere çalışma hakkında genel bilgiler içerir. Bu bölümde Ayrıca, yük testi çalıştırdığınızda eklediğiniz çalıştırma isteğe bağlı bir açıklama içerir.
+Test çalıştırma bilgileri bölümü, testin adı, başlangıç ve bitiş saatleri ve testi çalıştıran denetleyici de dahil olmak üzere çalışma hakkında genel bilgiler içerir. Bu bölümde, yük testini çalıştırdığınızda eklediğiniz çalıştırmanın isteğe bağlı açıklamasını da içerir.
 
-## <a name="overall-results"></a>Genel sonuçları
+## <a name="overall-results"></a>Genel sonuçlar
 
-Genel sonuçlar bölümü Özet saniye, başarısız isteklerin toplam sayısı, ortalama yanıt süresi ve ortalama sayfa süresi başına istek sayısı dahil olmak üzere test sonuçlarını içerir.
+Genel sonuçlar bölümü, saniyedeki istek sayısı, başarısız isteklerin toplam sayısı, ortalama yanıt süresi ve ortalama sayfa süresi dahil olmak üzere testin özet sonuçlarını içerir.
 
-## <a name="key-statistic-top-5-slowest-pages"></a>Anahtar istatistiği: en yavaş 5 sayfa
+## <a name="key-statistic-top-5-slowest-pages"></a>Anahtar istatistik: En yavaş 5 sayfa
 
-En yavaş sayfalar bölümü yük testinde ilk 5 en yavaş sayfalar içerir. URL ve ortalama sayfa yükleme süresi her sayfada görüntülenir. Sayfalar, azalan sırada listelenir. Açmak için sayfanın URL'sini seçebileceğiniz **sayfaları** tablo ve daha fazla ayrıntı için bu sayfayı inceleyin. Daha fazla bilgi için [nasıl yapılır: web sayfası yanıtını görüntüleme](../test/how-to-view-web-page-response-time-in-a-load-test.md).
+En yavaş sayfalar bölümü, yükleme testindeki en yavaş 5 sayfayı içerir. URL ve ortalama sayfa yükleme süresi her sayfa için görüntülenir. Sayfalar azalan sırada listelenir. **Sayfalar** tablosunu açmak ve bu sayfayla ilgili daha fazla ayrıntıyı incelemek için sayfanın URL'sini seçebilirsiniz. Daha fazla bilgi için [bkz: Web sayfası yanıtını görüntüle.](../test/how-to-view-web-page-response-time-in-a-load-test.md)
 
-Yüzdelik dilim değeri **%95 sayfa süresi (sn)** rapor %95 sayfa bu süresini saniye cinsinden en geç tamamlandı.
+**%95 Sayfa Saati (sn)** için yüzdelik değer, sayfaların %95'inin saniyeler içinde bu saatten daha kısa sürede tamamlandığını bildirir.
 
-## <a name="key-statistic-top-5-slowest-tests"></a>Anahtar istatistiği: en yavaş 5 test
+## <a name="key-statistic-top-5-slowest-tests"></a>Anahtar istatistik: En yavaş 5 test
 
-En yavaş 5 test yük testi içinde en yavaş testler bölümü içerir. Her test için test ve ortalama test süresi adı görüntülenir. Testler, azalan sırada listelenir. Açmak için bir test adı seçebileceğiniz **testleri** tablo ve daha fazla ayrıntı için test inceleyin. Daha fazla bilgi için [yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümlemek](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+En yavaş testler bölümü, yük testindeki en yavaş 5 testi içerir. Testin adı ve ortalama test süresi her test için görüntülenir. Testler azalan sırada listelenir. **Testler** tablosunu açmak ve bu test için daha fazla ayrıntı incelemek için bir testin adını seçebilirsiniz. Daha fazla bilgi için bkz: [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)et.
 
-Yüzdelik dilim değeri **%95 Test Süresi (sn)** rapor %95 test bu süresini saniye cinsinden en geç tamamlandı.
+**%95 Test Süresi (sn)** için yüzdelik değer, testlerin %95'inin saniyeler içinde bu saatten daha kısa sürede tamamlandığını bildirir.
 
-## <a name="key-statistic-top-5-slowest-sql-operations"></a>Anahtar istatistiği: en yavaş 5 SQL işlemi
+## <a name="key-statistic-top-5-slowest-sql-operations"></a>Anahtar istatistik: En yavaş 5 SQL işlemleri
 
-Yük testinde SQL izlemeyi etkinleştirilirse, en yavaş sorgular ilk 5 en yavaş yük testinde içerir. Her test için işlem ve süreyi adı görüntülenir. Süre (SQL Server 2005) mikrosaniye veya milisaniye (SQL Server 2000 ve öncesi) görüntülenir. Testler süreye göre azalan sırada listelenir. Açmak için bir işlem adını seçebileceğiniz **SQL İzleme** tablo ve daha fazla ayrıntı için bu işlemi denetleyin. Daha fazla bilgi için [SQL izleme verileri tablo](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table).
+Yükleme testinde SQL izleme etkinleştirilmişse, en yavaş sorgular bölümü yük testinde en yavaş 5 sorguyu içerir. Her test için işlemin adı ve süresi görüntülenir. Süre mikrosaniye (SQL Server 2005) veya milisaniye (SQL Server 2000 ve daha önce) olarak görüntülenir. Testler, süreye göre azalan sırada listelenir. **SQL Trace** tablosunu açmak ve bu işlem için daha fazla ayrıntı incelemek için bir işlemin adını seçebilirsiniz. Daha fazla bilgi için [SQL İzleme veri tablosuna](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)bakın.
 
 ## <a name="test-results"></a>Test sonuçları
 
-Test sonuçları bölümü, tüm testleri ve yük testi senaryolarında listesini içerir. Testin adını senaryoyu, kaç kez başarısız oldu, çalıştırılma sayısı ve ortalama test süresi görüntülenir. Açmak için bir test adı seçebileceğiniz **testleri** tablo ve daha fazla ayrıntı için test inceleyin. Daha fazla bilgi için [yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümlemek](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Test sonuçları bölümü, yük testindeki tüm testlerin ve senaryoların bir listesini içerir. Testin adı, senaryo, kaç kez çalıştırılamadığı, kaç kez başarısız olduğu ve ortalama test süresi görüntülenir. **Testler** tablosunu açmak ve bu test için daha fazla ayrıntı incelemek için bir testin adını seçebilirsiniz. Daha fazla bilgi için bkz: [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)et.
 
 > [!NOTE]
-> Daralt ve bölüm başlığının yanındaki oku seçerek bu bölümü genişletin.
+> Bölüm başlığının solundaki oku seçerek bu bölümü daraltabilir ve genişletebilirsiniz.
 
-## <a name="page-results"></a>Sonuçlar sayfası
+## <a name="page-results"></a>Sayfa sonuçları
 
-Sayfa sonuçları bölümü, yük testinde web sayfalarının bir listesini içerir. URL, senaryo, sayı, ortalama sayfa süresi ve testin adı görüntülenir. Açmak için sayfanın URL'sini seçebileceğiniz **sayfaları** tablo ve daha fazla ayrıntı için bu sayfayı inceleyin. Daha fazla bilgi için [nasıl yapılır: web sayfası yanıtını görüntüleme](../test/how-to-view-web-page-response-time-in-a-load-test.md).
+Sayfa sonuçları bölümü, yükleme testindeki tüm web sayfalarının listesini içerir. URL, senaryo, testin adı, ortalama sayfa süresi ve sayım görüntülenir. **Sayfalar** tablosunu açmak ve bu sayfayla ilgili daha fazla ayrıntıyı incelemek için sayfanın URL'sini seçebilirsiniz. Daha fazla bilgi için [bkz: Web sayfası yanıtını görüntüle.](../test/how-to-view-web-page-response-time-in-a-load-test.md)
 
 > [!NOTE]
-> Daralt ve bölüm başlığının yanındaki oku seçerek bu bölümü genişletin.
+> Bölüm başlığının solundaki oku seçerek bu bölümü daraltabilir ve genişletebilirsiniz.
 
 ## <a name="transaction-results"></a>İşlem sonuçları
 
-İşlem sonuçları bölümü, yük testi içindeki tüm işlemlerin bir listesini içerir. İşlem, senaryo, test, yanıt süresi, geçen süreyi ve sayı adı görüntülenir. Açmak için bir işlem adını seçebileceğiniz **işlemleri** tablo ve daha fazla ayrıntı için bu işlem inceleyin. Daha fazla bilgi için [yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümlemek](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Hareket sonuçları bölümü, yük testindeki tüm hareketlerin listesini içerir. Hareketin adı, senaryo, test, yanıt süresi, geçen süre ve sayım görüntülenir. **Hareketler** tablosunu açmak ve bu hareket le ilgili daha fazla ayrıntıyı incelemek için bir hareketin adını seçebilirsiniz. Daha fazla bilgi için bkz: [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)et.
 
 > [!NOTE]
-> Daralt ve bölüm başlığının yanındaki oku seçerek bu bölümü genişletin.
+> Bölüm başlığının solundaki oku seçerek bu bölümü daraltabilir ve genişletebilirsiniz.
 
-Yüzdelik değerler, aşağıdaki işlem bilgilerini bildirmek:
+Yüzdelik değerler aşağıdaki işlem bilgilerini bildirir:
 
-- %90 toplamda işlemlerin tamamlandı küçüktür \<zaman > saniye.
+- Toplam işlemlerin %90'ı> \<saniyeden kısa sürede tamamlandı.
 
-- %95 toplamda işlemlerin tamamlandı küçüktür \<zaman > saniye.
+- Toplam işlemlerin %95'i> \<saniyeden kısa sürede tamamlandı.
 
-## <a name="system-under-test-resources"></a>Test kaynakları altındaki sistem
+## <a name="system-under-test-resources"></a>Test kaynakları altında sistem
 
-Test kaynakları bölümü altında sistem yükü oluşturulduğu hedef bilgisayarlar kümesi olan bilgisayarların listesini içerir. Bu sayaç kümeleri aracı veya denetleyici dışında topladığınız herhangi bir bilgisayarda içerir. Bilgisayar adı, % işlemci zamanı ve kullanılabilir bellek görüntülenir. Açmak için bir bilgisayar adı seçebileceğiniz **Test altındaki sistem** grafik ve zaman içinde kaynak kullanımını görün. Daha fazla bilgi için [Çözümle yük testi sonuçlarını grafik görünümünde](../test/analyze-load-test-results-in-the-graphs-view.md).
+Test kaynakları bölümünün altındaki sistem, yük oluşturulmakta olan hedef bilgisayarlar kümesi olan bilgisayarların listesini içerir. Bu, Aracı veya Denetleyici dışında sayaç kümeleri topladığınız tüm bilgisayarları içerir. Bilgisayar adı, % işlemci süresi ve kullanılabilir bellek görüntülenir. Test grafiği **altında Sistemi** açmak ve zaman içinde kaynak kullanımını görmek için bir bilgisayar adı seçebilirsiniz. Daha fazla bilgi için bkz: [Grafikler görünümünde yük testi sonuçlarını analiz](../test/analyze-load-test-results-in-the-graphs-view.md)et.
 
 > [!NOTE]
-> Daralt ve bölüm başlığının yanındaki oku seçerek bu bölümü genişletin.
+> Bölüm başlığının solundaki oku seçerek bu bölümü daraltabilir ve genişletebilirsiniz.
 
 ## <a name="controller-and-agent-resources"></a>Denetleyici ve aracı kaynakları
 
-Denetleyici ve aracı kaynakları bölümü testi çalıştırmak için kullanılan bilgisayarların listesini içerir. Bilgisayar adı, % işlemci zamanı ve kullanılabilir bellek görüntülenir. Açmak için bir bilgisayar adı seçebileceğiniz **denetleyicisi ve aracıları** grafik ve zaman içinde kaynak kullanımını görün. Daha fazla bilgi için [Çözümle yük testi sonuçlarını grafik görünümünde](../test/analyze-load-test-results-in-the-graphs-view.md).
+Denetleyici ve aracı kaynakları bölümü, testi çalıştırmak için kullanılan bilgisayarların listesini içerir. Bilgisayar adı, % işlemci süresi ve kullanılabilir bellek görüntülenir. **Denetleyici ve Aracılar** grafiğini açmak ve zaman içinde kaynak kullanımını görmek için bir bilgisayar adı seçebilirsiniz. Daha fazla bilgi için bkz: [Grafikler görünümünde yük testi sonuçlarını analiz](../test/analyze-load-test-results-in-the-graphs-view.md)et.
 
 > [!NOTE]
-> Daralt ve bölüm başlığının yanındaki oku seçerek bu bölümü genişletin.
+> Bölüm başlığının solundaki oku seçerek bu bölümü daraltabilir ve genişletebilirsiniz.
 
 ## <a name="errors"></a>Hatalar
 
-Hatalar bölümüne yük testi sırasında gerçekleşen tüm hataların listesini içerir. Türünü ve alt hata sayısı ve son ileti görüntülenir. Hata seçebilirsiniz **hataları** tablo ve daha fazla hata ayrıntılarını inceleyin. Daha fazla bilgi için [yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümlemek](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Hatalar bölümü, yük testi sırasında oluşan tüm hataların bir listesini içerir. Hatanın türü ve alt türü, sayısı ve son ileti görüntülenir. **Hatalar** tablosunu açmak için bir hata seçebilir ve bu hata yla ilgili daha fazla ayrıntıyı inceleyebilirsiniz. Daha fazla bilgi için bkz: [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)et.
 
 > [!NOTE]
-> Daralt ve bölüm başlığının yanındaki oku seçerek bu bölümü genişletin.
+> Bölüm başlığının solundaki oku seçerek bu bölümü daraltabilir ve genişletebilirsiniz.
 
-## <a name="print-a-summary"></a>Bir Özet yazdırma
+## <a name="print-a-summary"></a>Özet yazdırma
 
-Yükleme testi özetini seçerek yazdırabilir **yazdırma** özeti kısayol menüsünde. Yazdırma ilk seçerek önizleyebilirsiniz **Baskı Önizleme** özeti kısayol menüsünde. Ayrıca, doğrudan önizleme ekranından yazdırabilirsiniz.
+Özetteki kısayol menüsünde **Yazdır'ı** seçerek yük testi özetini yazdırabilirsiniz. Özetteki kısayol menüsünde **Yazdır Önizleme'yi** seçerek önce baskıyı önizleyebilirsiniz. Doğrudan önizleme ekranından da yazdırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eşik kuralı ihlallerini çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Eşik kuralı ihlallerini analiz edin](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

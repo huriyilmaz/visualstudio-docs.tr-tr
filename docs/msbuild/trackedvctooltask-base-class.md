@@ -1,5 +1,5 @@
 ---
-title: TrackedVCToolTask sınıfı | Microsoft Docs
+title: PaletliVCToolTask Sınıf | Microsoft Dokümanlar
 ms.date: 03/10/2019
 ms.topic: reference
 dev_langs:
@@ -12,40 +12,40 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a4272f7800e0532c0674fe7117e839cb16557d5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594935"
 ---
-# <a name="trackedvctooltask-base-class"></a>TrackedVCToolTask temel sınıfı
+# <a name="trackedvctooltask-base-class"></a>Paletli VCToolTask taban sınıfı
 
-Çoğu görev <xref:Microsoft.Build.Utilities.Task> sınıfından ve [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) sınıfından devralınır. Bu sınıf, [Vctooltask](../msbuild/vctooltask-base-class.md)'dan türetilen görevlere birkaç parametre ekler. Bu parametreler bu belgede listelenmiştir.
+Birçok görev sonuçta sınıf <xref:Microsoft.Build.Utilities.Task> ve [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) sınıfından devralınır. Bu sınıf [VCToolTask](../msbuild/vctooltask-base-class.md)türetilen görevlere çeşitli parametreler ekler. Bu parametreler bu belgede listelenmiştir.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda, **Trackedvctooltask** temel sınıfının parametreleri açıklanmaktadır.
+Aşağıdaki tabloda **TrackedVCToolTask** taban sınıfının parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**Deleteoutputonexyürütüldüğünde**|İsteğe bağlı **bool** parametresi.|
+|**DeleteOutputOnExecute**|İsteğe bağlı **bool** parametresi.|
 |**EnableExecuteTool**|İsteğe bağlı **bool** parametresi.|
-|**Excludeınputpaths**|İsteğe bağlı **ıtaskitem []** parametresi.|
+|**DışlanmışInputPaths**|İsteğe bağlı **ITaskItem[]** parametresi.|
 |**MinimalRebuildFromTracking**|İsteğe bağlı **bool** parametresi.|
 |**PathOverride**|İsteğe bağlı **dize** parametresi.|
-|**PostBuildTrackingCleanup**|İsteğe bağlı **bool** parametresi.|
+|**PostBuildTrackingTemizlik**|İsteğe bağlı **bool** parametresi.|
 |**RootSource**|İsteğe bağlı **dize** parametresi.|
-|**SkippedExecution**|İsteğe bağlı **bool** çıkış parametresi.|
-|**Sourcesderlenen**|İsteğe bağlı **ıtaskitem []** çıkış parametresi.|
-|**TLogCommandFile**|İsteğe bağlı **ıtaskitem** parametresi.|
-|**TLogReadFiles**|İsteğe bağlı **ıtaskitem []** parametresi.|
-|**TLogWriteFiles**|İsteğe bağlı **ıtaskitem []** parametresi.|
-|**ToolArchitecture**|İsteğe bağlı **dize** parametresi.|
+|**Atlanan Yürütme**|İsteğe bağlı **bool** çıkış parametresi.|
+|**KaynaklarDerlenmiş**|İsteğe bağlı **ITaskItem[]** çıktı parametresi.|
+|**TlogCommandFile**|İsteğe bağlı **ITaskItem** parametresi.|
+|**TLogreadFiles**|İsteğe bağlı **ITaskItem[]** parametresi.|
+|**TLogWriteFiles**|İsteğe bağlı **ITaskItem[]** parametresi.|
+|**Araç Mimarisi**|İsteğe bağlı **dize** parametresi.|
 |**TrackCommandLines**|İsteğe bağlı **bool** parametresi.|
 |**TrackFileAccess**|İsteğe bağlı **bool** parametresi.|
-|**Trackedınputfilestoıgnore**|İsteğe bağlı **ıtaskitem []** parametresi.|
-|**TrackedOutputFilesToIgnore**|İsteğe bağlı **ıtaskitem []** parametresi.|
-|**Trackerframeworkyolu**|İsteğe bağlı **dize** parametresi.|
+|**TrackedInputFilesToIgnore**|İsteğe bağlı **ITaskItem[]** parametresi.|
+|**İzlenenOutputFilesToIgnore**|İsteğe bağlı **ITaskItem[]** parametresi.|
+|**İzleyiciÇerçeve Yolu**|İsteğe bağlı **dize** parametresi.|
 |**TrackerSdkPath**|İsteğe bağlı **dize** parametresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,5 +1,5 @@
 ---
-title: Keşif sınırları | Microsoft IntelliTest geliştirici test aracı
+title: Keşif sınırları | Microsoft IntelliTest Geliştirici Test Aracı
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,98 +10,98 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 2a57d79fb64675f90edf50e6a0d7d50b8a3c6fd7
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410161"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302639"
 ---
 # <a name="exploration-bounds"></a>Keşif sınırları
 
-**PexSettingsAttributeBase** , ayarlar sınırları için soyut temel sınıftır. IntelliTest içindeki ayarlara genel bakış için bkz. [Ayarlar şelale](settings-waterfall.md) .
+**PexSettingsAttributeBase** öznitelikleri olarak ayarlar sınırları için soyut temel sınıftır. IntelliTest'teki ayarlara genel bakış için Ayarlar Şelalesi'ne bakın. [Settings Waterfall](settings-waterfall.md)
 
-Bu ve türetilmiş özniteliklerinin adlandırılmış özelliklerini kullanarak ayarları değiştirebilirsiniz:
+Bunun adlandırılmış özelliklerini ve türetilmiş özniteliklerini kullanarak ayarları değiştirebilirsiniz:
 
 ```csharp
 [PexClass(MaxRuns = 10)]
 public partial class FooTest {...}
 ```
 
-* **Kısıtlama çözme sınırları**
-  * [MaxConstraintSolverTime](#maxconstraintsolvertime) - [kısıtlama çözücü 'nün](input-generation.md#constraint-solver) yeni ve farklı bir yürütme yolunun izlenmesine neden olacak girişleri bulması gereken saniye sayısı.
-  * [MaxConstraintSolverMemory](#maxconstraintsolvermemory) - [kısıtlama çözücü 'nün](input-generation.md#constraint-solver) girişleri keşfetmesi için kullanabileceği megabayt cinsinden boyut.
-* **Araştırma yolu sınırları**
-  * [Maxbranches](#maxbranches) -tek bir yürütme yolu üzerinde alınabilecek dal sayısı üst sınırı.
-  * [Maxçağrılarında](#maxcalls) -tek bir yürütme yolu sırasında yapılabilecek en fazla çağrı sayısı.
-  * [Maxstack](#maxstack) -tek bir yürütme yolu sırasında her zaman en fazla yığın boyutu, etkin çağrı çerçevesi sayısı olarak ölçülür.
-  * [Maxconditions](#maxconditions) -tek bir yürütme yolu sırasında denetlenecek girişler üzerinde en fazla koşul sayısı.
-* **Keşif sınırları**
-  * [Maxçalıştırmaları](#maxruns) -bir keşif sırasında denenecek en fazla çalıştırma sayısı.
-  * [Maxrunswithoutnewtests](#maxrunswithoutnewtests) -yeni bir test yayınlanmadan en fazla art arda çalıştırma sayısı.
-  * [Maxrunswithuniquepaths](#maxrunswithuniquepaths) -bir keşif sırasında denenecek benzersiz yürütme yolları olan en fazla çalıştırma sayısı.
-  * [Maxexceptions](#maxexceptions) -tüm bulunan yürütme yollarının bir birleşimi için bulunan en fazla özel durum sayısı.
-* **Test paketi kod oluşturma ayarları**
-  * [Testexcludepathboundsexceılation-](#testexcludepathboundsexceeded) true olduğunda, yol sınırlarının ([maxçağrılarının](#maxcalls), [maxbranches](#maxbranches), [maxstack](#maxstack), [maxconditions](#maxconditions)) herhangi birini aşan yürütme yolları yok sayılır.
-  * [Testemissionfilter](#testemissionfilter) -hangi koşullarda IntelliTest 'in testleri yaydığını gösterir.
-  * [Testemissionbranchhits](#testemissionbranchhits) -kaç test IntelliTest yayılacağını denetler.
+* **Sınır çözme sınırları**
+  * [MaxConstraintSolverTime](#maxconstraintsolvertime) - [Kısıtlama çözücünün](input-generation.md#constraint-solver) yeni ve farklı bir yürütme yolunun izlenmesine neden olacak girişleri keşfetmesi gereken saniye sayısı.
+  * [MaxConstraintSolverMemory](#maxconstraintsolvermemory) - Megabaytboyutu kısıtlama [çözücü](input-generation.md#constraint-solver) girişleri keşfetmek için kullanabileceğiniz.
+* **Keşif Yolu Sınırları**
+  * [MaxBranches](#maxbranches) - Tek bir yürütme yolu boyunca alınabilecek en fazla dal sayısı.
+  * [MaxCalls](#maxcalls) - Tek bir yürütme yolu sırasında yapılabilecek maksimum arama sayısı.
+  * [MaxStack](#maxstack) - etkin çağrı çerçevelerinin sayısı olarak ölçülen tek bir yürütme yolu sırasında herhangi bir zamanda yığının maksimum boyutu.
+  * [MaxConditions](#maxconditions) - Tek bir yürütme yolu sırasında denetlenen girişler üzerinde maksimum koşul sayısı.
+* **Keşif Sınırları**
+  * [MaxRuns](#maxruns) - Bir keşif sırasında denenecek maksimum çalıştırma sayısı.
+  * [MaxRunsWithoutNewTests](#maxrunswithoutnewtests) - Yeni bir test yayımlanmadan üst üste maksimum sayıda çalıştırın.
+  * [MaxRunsWithUniquePaths](#maxrunswithuniquepaths) - Bir keşif sırasında denenecek benzersiz yürütme yolları ile çalışan maksimum sayıda.
+  * [MaxExceptions](#maxexceptions) - Keşfedilen tüm yürütme yollarının bir birleşimi için bulunabilecek en fazla özel durum sayısı.
+* **Test Paketi Kod Oluşturma Ayarları**
+  * [TestExcludePathBoundsExceeded](#testexcludepathboundsexceeded) - Doğru olduğunda, yol sınırları[(MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack), [MaxConditions](#maxconditions)) herhangi bir aşan yürütme yolları yoksayılır.
+  * [TestEmissionFilter](#testemissionfilter) - IntelliTest'in hangi koşullar altında test yaramagerektiğini gösterir.
+  * [TestEmissionBranchHits](#testemissionbranchhits) - IntelliTest yayılacak kaç test kontrol eder.
 
 <a name="maxconstraintsolvertime"></a>
 ## <a name="maxconstraintsolvertime"></a>MaxConstraintSolverTime
 
-[Kısıtlama çözücü 'nün](input-generation.md#constraint-solver) , yeni ve farklı bir yürütme yolunun alınmasına neden olacak girişleri hesaplamak için gereken saniye sayısı. Bu, **PexSettingsAttributeBase** 'in ve türetilen türlerin bir seçeneğidir.
+[Kısıtlama çözücünün,](input-generation.md#constraint-solver) yeni ve farklı bir yürütme yolunun alınmasına neden olacak girişleri hesaplaması gereken saniye sayısı. Bu, **PexSettingsAttributeBase** ve türetilen türlerinin bir seçenektir.
 
-IntelliTest 'in bir programın yürütme yollarını inceleyen daha derin, IntelliTest 'in denetim akışından ve veri akışından olduğu daha karmaşık kısıtlama sistemleri olur. Zaman sınırlamaınıza bağlı olarak, bu değeri IntelliTest 'in daha fazla veya daha az zaman alacak şekilde yeni yürütme yolları keşfetmesini sağlamak için ayarlayabilirsiniz.
+IntelliTest bir programın yürütme yollarını inceler daha derin, daha karmaşık kısıtlama sistemleri IntelliTest denetim akışı ve programın veri akışı oluşturur olur. Zaman sınırlamanıza bağlı olarak, Bu değeri IntelliTest'in yeni yürütme yollarını keşfetmeye az ya da çok zaman ayırmasına izin verecek şekilde ayarlayabilirsiniz.
 
-Genellikle, bir zaman aşımı nedeni, IntelliTest 'in çözüm içermeyen bir kısıtlama sistemine yönelik çözüm bulmaya çalışıyor, ancak bu olguyu bilmez. Bu, zaman aşımı için en yaygın durum olduğundan, bağı artırmak mantıklı olmayabilir.
+Genellikle, bir zaman alabilen nedeni, IntelliTest'in çözümü olmayan bir kısıtlama sistemi için bir çözüm bulmaya çalışıyor olmasıdır, ancak bu gerçeğin farkında değildir. Bu bir zaman alabildiği için en yaygın durum olduğundan, sınırı artırmak mantıklı olmayabilir.
 
 <a name="maxconstraintsolvermemory"></a>
 ## <a name="maxconstraintsolvermemory"></a>MaxConstraintSolverMemory
 
-[Kısıtlama çözücü 'nün](input-generation.md#constraint-solver) , yeni ve farklı bir yürütme yolunun alınmasına neden olacak girişleri hesaplamak Için gereken megabayt sayısı. Bu, *PexSettingsAttributeBase** ve türetilmiş türlerinin bir seçeneğidir.
+[Kısıtlama çözücünün,](input-generation.md#constraint-solver) yeni ve farklı bir yürütme yolunun alınmasına neden olacak girişleri hesaplamak zorunda olduğu Megabayt sayısı. Bu *PexSettingsAttributeBase** ve türetilen türleri bir seçenektir.
 
-Derin IntelliTest bir programın yürütme yollarını araştırır, bu, programın denetim akışından ve veri akışından, IntelliTest tarafından derlemelerin daha karmaşık kısıtlama sistemleri olur. Bilgisayarınızın kullanılabilir belleğine bağlı olarak, bu değeri IntelliTest 'in daha karmaşık kısıtlama sistemlerini eklemesine izin verecek şekilde ayarlayabilirsiniz.
+Daha derin IntelliTest bir programın yürütme yollarını araştırıyor, daha karmaşık kısıtlama sistemleri IntelliTest denetim akışı ve programın veri akışı oluşturur. Bilgisayarınızın kullanılabilir belleğinin bağlı olarak, IntelliTest'in daha karmaşık kısıtlama sistemleriyle başa çayına sahip olmasını sağlayacak şekilde bu değeri ayarlayabilirsiniz.
 
-Genellikle, bir zaman aşımı nedeni, IntelliTest 'in çözüm içermeyen bir kısıtlama sistemine yönelik çözüm bulmaya çalışıyor, ancak bu olguyu bilmez. Bu, bellek yetersiz durumunun en yaygın nedeni olduğundan, bu, bağı artırmak mantıklı olmayabilir.
+Genellikle, bir zaman alabilen nedeni, IntelliTest'in çözümü olmayan bir kısıtlama sistemi için bir çözüm bulmaya çalışıyor olmasıdır, ancak bu gerçeğin farkında değildir. Bu, bellek dışı bir durumun en yaygın nedeni olduğundan, sınırı artırmak mantıklı olmayabilir.
 
 <a name="maxbranches"></a>
 ## <a name="maxbranches"></a>MaxBranches
 
-Tek bir yürütme yolu üzerinde alınabilecek dal sayısı üst sınırı.
+Tek bir yürütme yolu boyunca alınabilecek en fazla dal sayısı.
 
-Bu araştırmayla ilgili yolun arkasındaki mosyon, [giriş oluşturma](input-generation.md)sırasında IntelliTest tarafından araştırıp herhangi bir yürütme yolunun uzunluğunu sınırlandırmasıdır. Özellikle, program sonsuz bir döngüye geçtiğinde IntelliTest 'in yanıt vermemesine engel olur.
+Bu keşif sınırının arkasındaki motivasyon, IntelliTest'in [giriş üretimi](input-generation.md)sırasında keşfettiği herhangi bir yürütme yolunun uzunluğunu sınırlamaktır. Özellikle, program sonsuz bir döngüye girerse IntelliTest'in yanıt vermesini önler.
 
-Yürütülen ve izlenen kodun her koşullu ve koşulsuz dalı, parametreli testin girdilerine bağlı olmayan dallar da dahil olmak üzere bu sınıra doğru sayılır.
+Yürütülen ve izlenen kodun koşullu ve koşulsuz dalı, parametreli testin girişlerine bağlı olmayan dallar da dahil olmak üzere bu sınıra doğru sayılır.
 
-Örneğin, aşağıdaki kod sipariş 100 ' deki dalları kullanır:
+Örneğin, aşağıdaki kod 100 siparişdalları tüketir:
 
 ```csharp
 for (int i=0; i<100; i++) { }
 ```
 
 <a name="maxcalls"></a>
-## <a name="maxcalls"></a>Maxçağrılarında
+## <a name="maxcalls"></a>MaxCalls
 
-Tek bir yürütme yolu sırasında yapılabilecek en fazla çağrı sayısı.
+Tek bir yürütme yolu sırasında yapılabilecek en fazla arama sayısı.
 
-Bu araştırmayla ilgili yolun arkasındaki mosyon, [giriş oluşturma](input-generation.md)sırasında IntelliTest tarafından araştırıp herhangi bir yürütme yolunun uzunluğunu sınırlandırmasıdır. Özellikle, program bir yöntemi yinelemeli olarak sonsuz bir kez çağırırsa IntelliTest 'in yanıt vermemesine engel olur ve bu da IntelliTest 'in kurtarabileceği bir yığın taşmasına neden olabilir.
+Bu keşif sınırının arkasındaki motivasyon, IntelliTest'in [giriş üretimi](input-generation.md)sırasında keşfettiği herhangi bir yürütme yolunun uzunluğunu sınırlamaktır. Özellikle, program bir yöntemi özyinelemeli olarak sonsuz sayıda çağırırsa IntelliTest'in yanıt vermemesini önler ve bu da IntelliTest'in kurtaramadığı bir yığın taşmasına neden olur.
 
-Yürütülen ve izlenen kodun her çağrısı (doğrudan, dolaylı, sanal, atlamanın) bu sınıra doğru sayılır.
+Yürütülen ve izlenen kodun her çağrısı (doğrudan, dolaylı, sanal, atlama) bu sınıra doğru sayılır.
 
 <a name="maxstack"></a>
 ## <a name="maxstack"></a>MaxStack
 
-Tek bir yürütme yolu sırasında her zaman, etkin çağrı çerçevelerinin sayısıyla ölçülen en büyük yığın boyutu.
+Etkin çağrı çerçevelerinin sayısıyla ölçülen tek bir yürütme yolu sırasında yığının herhangi bir zamanda ki maksimum boyutu.
 
-Bu araştırmayla ilgili yolun arkasındaki mosyon, [giriş oluşturma](input-generation.md)sırasında IntelliTest tarafından araştırıp yürütme yolunun yığın boyutunu sınırlandırmasıdır. Özellikle, IntelliTest 'in tüm kullanılabilir yığın alanını kullanmasını engeller ve bu, IntelliTest 'in kurtarabileceği bir yığın taşmasına neden olabilir.
+Bu keşif sınırının arkasındaki motivasyon, IntelliTest'in [giriş üretimi](input-generation.md)sırasında keşfettiği herhangi bir yürütme yolunun yığınının boyutunu sınırlamaktır. Özellikle, IntelliTest'in kullanılabilir tüm yığın alanını kullanmasını engeller, bu da IntelliTest'in kurtaramayacağı bir yığın taşmasına neden olur.
 
 <a name="maxconditions"></a>
 ## <a name="maxconditions"></a>MaxConditions
 
-Tek bir yürütme yolu sırasında denetlenecek girişler üzerinde en yüksek koşul sayısı.
+Tek bir yürütme yolu sırasında denetlenen girişler üzerindeki maksimum koşul sayısı.
 
-Bu araştırmayla ilgili yolun arkasındaki mosyon, [giriş oluşturma](input-generation.md)sırasında IntelliTest tarafından araştırıp herhangi bir yürütme yolunun karmaşıklığını sınırlandırmasıdır. Parametreli test girdilerine bağlı olan her bir koşullu dal, bu sınıra doğru sayılır.
+Bu keşif sınırının arkasındaki motivasyon, IntelliTest'in [giriş üretimi](input-generation.md)sırasında keşfettiği herhangi bir yürütme yolunun karmaşıklığını sınırlamaktır. Parametreli testin girişlerine bağlı her koşullu dal bu sınıra doğru sayılır.
 
-Örneğin, aşağıdaki koddaki her bir yol n + 1 koşul kullanır:
+Örneğin, aşağıdaki koddaki her yol n+1 koşullarını tüketir:
 
 ```csharp
 [PexMethod]
@@ -117,72 +117,72 @@ void ParameterizedTest(int n)
 ```
 
 <a name="maxruns"></a>
-## <a name="maxruns"></a>Maxçalıştırmaları
+## <a name="maxruns"></a>MaxRuns
 
-IntelliTest 'in bir test araştırması sırasında deneyeen yüksek çalıştırma sayısı.
+IntelliTest'in bir testin keşfi sırasında deneyeceği maksimum sayıda çalıştırma.
 
-Bu araştırmayla ilgili olarak, döngü veya özyineleme içeren herhangi bir kodun sonsuz sayıda yürütme yolu olabilir ve bu nedenle IntelliTest 'in [giriş oluşturma](input-generation.md)sırasında sınırlı olması gerekir.
+Bu keşif bağlama arkasındaki motivasyon döngüler veya özyineleme içeren herhangi bir kod yürütme yolları sonsuz sayıda olabilir, ve böylece IntelliTest [giriş oluşturma](input-generation.md)sırasında sınırlı olması gerekir .
 
-**Maxçalıştırmaları** ve **Maxrunswithuniquepaths** iki ayarı aşağıdaki gibi ilişkilidir:
+**MaxRuns** ve **MaxRunsWithUniquePaths** iki ayar aşağıdaki gibi ilişkilidir:
 
-* IntelliTest, farklı test girişleri ile en fazla **Maxçalıştırması** olan parametreli test yöntemini çağırır.
-* Yürütülen kod belirleyici ise, IntelliTest her seferinde farklı bir yürütme yolu alır. Ancak, bazı koşullarda yürütülen kod, daha önce daha önce alınmış olan bir yürütme yolunu, farklı girişlerle izleyebilir.
-* IntelliTest, kaç benzersiz yürütme yolunun bulduğunu sayar; Bu sayı **Maxrunswithuniquepaths** seçeneğiyle sınırlıdır.
+* IntelliTest, farklı test girişleri ile **MaxRuns** saatlerine kadar parametreli bir test yöntemi çağırır.
+* Çalıştırılan kod deterministic ise, IntelliTest her seferinde farklı bir yürütme yolu alır. Ancak, bazı koşullar altında yürütme kodu, farklı girişleri ile, daha önce almış olduğu bir yürütme yolu izleyebilir.
+* IntelliTest, kaç benzersiz yürütme yolu bulduğunu sayar; Bu sayı **MaxRunsWithUniquePaths** seçeneği ile sınırlıdır.
 
 <a name="maxrunswithoutnewtests"></a>
 ## <a name="maxrunswithoutnewtests"></a>MaxRunsWithoutNewTests
 
-Yeni bir test yayınlanmadan en fazla ardışık çalıştırma sayısı.
+Yeni bir test yayımlanmadan en fazla ardışık çalıştırma sayısı.
 
-IntelliTest genellikle kısa bir süre içinde çok sayıda ilginç test girişi bulurken, daha sonra başka bir test girişi bulmayacak ve daha fazla birim testi göstermeyecektir. Bu yapılandırma seçeneği, yeni bir test yaymadan, her ardışık deneme için IntelliTest tarafından gerçekleştirilecek bir bağlı değer koyar. Ulaşıldığında, araştırmayı durduracaktır.
+IntelliTest genellikle kısa bir süre içinde birçok ilginç test girişleri bulabilirsiniz iken, bir süre sonra daha fazla yeni test girişleri bulamaz ve daha fazla birim testleri yatacak. Bu yapılandırma seçeneği, IntelliTest'in yeni bir test yaymadan gerçekleştirebileceği ardışık deneme sayısına bir sınır koyar. Ulaşıldığında, keşfi durduracak.
 
 <a name="maxrunswithuniquepaths"></a>
 ## <a name="maxrunswithuniquepaths"></a>MaxRunsWithUniquePaths
 
-IntelliTest 'in bir keşif sırasında göz önünde bulundurulması gereken en fazla benzersiz yol sayısı.
+IntelliTest'in bir keşif sırasında göz önünde bulunduracağı en fazla benzersiz yol sayısı.
 
-Bu araştırmayla ilgili olarak, döngü veya özyineleme içeren herhangi bir kodun sonsuz sayıda yürütme yolu olabilir ve bu nedenle IntelliTest [giriş oluşturma](input-generation.md)sırasında sınırlandırılmalıdır.
+Bu keşif bağlama arkasındaki motivasyon döngüler veya özyineleme içeren herhangi bir kod yürütme yolları sonsuz sayıda olabilir, ve bu nedenle IntelliTest [giriş oluşturma](input-generation.md)sırasında sınırlı olmalıdır.
 
-**Maxçalıştırmaları** ve **Maxrunswithuniquepaths** iki ayarı aşağıdaki gibi ilişkilidir:
+**MaxRuns** ve **MaxRunsWithUniquePaths** iki ayar aşağıdaki gibi ilişkilidir:
 
-* IntelliTest, farklı test girişleri ile en fazla **Maxçalıştırması** olan parametreli test yöntemini çağırır.
-* Yürütülen kod belirleyici ise, IntelliTest her seferinde farklı bir yürütme yolu alır. Ancak, bazı koşullarda yürütülen kod, daha önce daha önce alınmış olan bir yürütme yolunu, farklı girişlerle izleyebilir.
-* IntelliTest, kaç benzersiz yürütme yolunun bulduğunu sayar; Bu sayı **Maxrunswithuniquepaths** seçeneğiyle sınırlıdır.
+* IntelliTest, farklı test girişleri ile **MaxRuns** saatlerine kadar parametreli bir test yöntemi çağırır.
+* Çalıştırılan kod deterministic ise, IntelliTest her seferinde farklı bir yürütme yolu alır. Ancak, bazı koşullar altında yürütme kodu, farklı girişleri ile, daha önce almış olduğu bir yürütme yolu izleyebilir.
+* IntelliTest, kaç benzersiz yürütme yolu bulduğunu sayar; Bu sayı **MaxRunsWithUniquePaths** seçeneği ile sınırlıdır.
 
 <a name="maxexceptions"></a>
 ## <a name="maxexceptions"></a>MaxExceptions
 
-Araştırmadan önce karşılaşılabilecek en fazla özel durum sayısı.
+Keşif durdurulmadan önce karşılaşılabilen en fazla istisna sayısı.
 
-Bu araştırmanın arkasındaki mosyon, birçok hata içeren kodun araştırmasını durdurmaktır. IntelliTest kodda çok fazla hata bulursa, araştırma durdurulur.
+Bu keşif sınırının arkasındaki motivasyon, birçok hata içeren kodun keşfini durdurmaktır. IntelliTest kodda çok fazla hata bulursa, arama durdurulur.
 
 <a name="testexcludepathboundsexceeded"></a>
 ## <a name="testexcludepathboundsexceeded"></a>TestExcludePathBoundsExceeded
 
-[Maxçağrılarını](#maxcalls), [maxbranches](#maxbranches), [maxstack](#maxstack)ve [maxconditions](#maxconditions) yapılandırılmış yol sınırlarını aşan yürütme yolları yok sayılır.
+Yapılandırılan yolu aşan yürütme yolları [MaxCalls,](#maxcalls) [MaxBranches](#maxbranches), [MaxStack](#maxstack)ve [MaxConditions](#maxconditions) sınırları yoksayılır.
 
-Bu araştırmayla ilişkili mosyon, (en olası) sonlandırılamayan testler ile uğraşmak. IntelliTest, [Maxçağrılarında](#maxcalls), [maxbranches](#maxbranches), [maxstack](#maxstack)veya [maxconditions](#maxconditions)gibi bir araştırmaya eriştiğinde, testin Sonlandırılmamış bir işlem olmadığı ve daha sonra yığın taşmasına neden olmayacak olduğunu varsayar. Bu tür test çalışmaları diğer test çerçevelerine sorun oluşturabilir. Bu öznitelik, IntelliTest 'in, büyük olasılıkla Sonlandırılmamış süreçler veya yığın taşmasına neden olacak test çalışmaları için test çalışmalarını yaymasını engellemek için bir yol sağlar.
+Bu keşif bağlı arkasındaki motivasyon (büyük olasılıkla) sonlandırıcı olmayan testler ile başa çıkmaktır. IntelliTest [MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack), veya [MaxConditions](#maxconditions)gibi bir arama bağlı ulaştığında , bu test olmayan bir sonlandırıcı işlem olmayacağını varsayar ve daha sonra bir yığın taşması neden olmaz. Bu tür test örnekleri diğer test çerçeveleri için sorun yaratabilir ve bu özellik, IntelliTest'in bir yığın taşmasına neden olacak sonlandırmama işlemleri veya test çalışmaları için test çalışmaları yaymasını önlemenin bir yolunu sağlar.
 
 <a name="testemissionfilter"></a>
 ## <a name="testemissionfilter"></a>TestEmissionFilter
 
-IntelliTest 'in yayılmaları gereken testlerin türlerini gösterir. Olası değerler şunlardır:
+IntelliTest'in yakılması gereken test türlerini gösterir. Olası değerler şunlardır:
 
-* Her şey için testleri, varsayım ihlalleri dahil olmak üzere **Tüm** her şeyi yayar.
-* **Failuresandincreasedbranchhits** (varsayılan)-tüm benzersiz hatalara yönelik testleri ve bir test çalışması, [Testemissionbranchhits](#testemissionbranchhits)tarafından denetlenen şekilde kapsamı arttırır.
-* **Failuresanduniquepaths** -tüm hata IntelliTest bulduğu testleri ve ayrıca benzersiz bir yürütme yoluna neden olan her test girişi için testler yayar.
-* **Başarısızlıklar** -testleri yalnızca hatalara yönelik olarak yay.
+* **Tüm** - Varsayım ihlalleri de dahil olmak üzere her şey için testler yontun.
+* **FailuresAndIncreasedBranchHits** (varsayılan) - Tüm benzersiz hatalar için testler yamit ve ne zaman bir test çalışması [TestEmissionBranchHits](#testemissionbranchhits)tarafından kontrol olarak kapsama artar .
+* **FailuresAndUniquePaths** - IntelliTest bulduğu tüm hatalar için testleri ve benzersiz bir yürütme yolu neden olan her test girişi için de.
+* **Hatalar** - Yalnızca hatalar için testleri yaslar.
 
 <a name="testemissionbranchhits"></a>
 ## <a name="testemissionbranchhits"></a>TestEmissionBranchHits
 
-Geçerli [Testemissionfilter](#testemissionfilter) ayarına bağlı olarak, IntelliTest, daha önce kapsanmayan programdaki bir dalı kapsadıklarında yeni test çalışmalarını yayar.
+Mevcut [TestEmissionFilter](#testemissionfilter) ayarına bağlı olarak, IntelliTest, programda daha önce kapsanmayan bir dalı kapsadığında yeni test çalışmaları yayır.
 
-**Testemissionbranchhits** ayarı, IntelliTest 'in bir kez veya iki kez (**testemissionbranchhits = 2**) veya daha fazlasını ele aldığı bir dalın (**testemissionbranchhits = 1**) kapsanıp kapsamadığını düşünmeyeceğini belirler.
+**TestEmissionBranchHits** ayarı, IntelliTest'in bir dalı **(TestEmissionBranchHits=1)** kapsanıp kapsanmadığını göz önünde bulundurmalı mı, bir veya iki kez **(TestEmissionBranchHits=2)** vb. bir test le kapsanıp kapsanmadığını belirler.
 
-**Testemissionbranchhits = 1** , IntelliTest 'in ulaşabileceği tüm dalları kapsayan çok küçük bir test paketi oluşturacak. Özellikle, bu test paketi, ulaşılan tüm temel blokları ve deyimleri de kapsar.
+**TestEmissionBranchHits=1,** IntelliTest'in ulaşabileceği tüm dalları kapsayacak çok küçük bir test paketi üretecektir. Özellikle, bu test paketi de ulaştığı tüm temel blokları ve ifadeleri kapsayacak.
 
-Bu seçeneğin varsayılan ayarı **Testemissionbranchhits = 2**' dir. Bu, gelecekteki gerileme hatalarını saptamak için daha uygun olan daha açıklayıcı bir test paketi oluşturur.
+Bu seçenek için varsayılan **TestEmissionBranchHits =2**, aynı zamanda daha iyi gelecekteki regresyon hataları algılamak için uygundur daha anlamlı bir test paketi oluşturur.
 
 ## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 

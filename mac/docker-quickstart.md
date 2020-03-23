@@ -1,44 +1,44 @@
 ---
-title: Docker 'ı kullanmaya başlama
-description: Mac için Visual Studio, projelerinize Docker ekleme hakkında bilgi edinin
+title: Docker ile başlayın
+description: Mac için Visual Studio'daki projelerinize Docker'ı nasıl ekleyeceğinizi öğrenin
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 06/17/2019
 ms.openlocfilehash: 2c6bdd7d0b2c939ed9db9be962e89d9ee423e1d4
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984120"
 ---
-# <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Mac için Visual Studio Docker ile çalışmaya başlama
+# <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Mac için Visual Studio'da Docker ile başlayın
 
-Mac için Visual Studio, Kapsayıcılı ASP.NET Core uygulamaları kolayca oluşturabilir, ayıklayabilir ve çalıştırabilir ve bunları Azure 'da yayımlayabilirsiniz.
+Mac için Visual Studio ile, konteynerleştirilmiş ASP.NET Core uygulamaları oluşturabilir, hata ayıklayabilir ve çalıştırabilir ve Azure'da yayınlayabilirsiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
-* [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/vs/mac)
+* [Mac 2019 için Visual Studio](https://visualstudio.microsoft.com/vs/mac)
 
 ## <a name="installation-and-setup"></a>Yükleme ve Kurulum
 
-Docker yüklemesi için, [Mac Için Docker Desktop 'ı yükleme](https://docs.docker.com/docker-for-mac/install/)bölümündeki bilgileri gözden geçirin ve izleyin.
+Docker kurulumu [için, Mac için Docker Desktop'ı yükleyin](https://docs.docker.com/docker-for-mac/install/)ve bilgileri takip edin.
 
-## <a name="creating-an-aspnet-core-web-application-and-adding-docker-support"></a>ASP.NET Core Web uygulaması oluşturma ve Docker desteği ekleme
+## <a name="creating-an-aspnet-core-web-application-and-adding-docker-support"></a>ASP.NET Çekirdek Web Uygulaması Oluşturma ve Docker Desteği Ekleme
 
-1. **Yeni çözüm > dosyaya**giderek yeni bir çözüm oluşturun.
-1. **.NET Core > uygulama** altında **Web uygulaması** şablonunu seçin: ![yeni bir ASP.NET uygulaması oluşturun](media/docker-quickstart-1.png)
-1. Hedef çerçeveyi seçin. Bu örnekte, .NET Core 2,2: ![Target Framework 'ü kullanacak şekilde kullanacağız](media/docker-quickstart-2.png)
-1. Ad (Bu örnekteki_Dockerdemo_ ) gibi proje ayrıntılarını girin. Oluşturulan proje, bir ASP.NET Core Web sitesi derlemek ve çalıştırmak için ihtiyacınız olan tüm temel bilgileri içerir.
-1. Çözüm Bölmesi DockerDemo projesine sağ tıklayın ve **ekle > Docker desteği**Ekle ' yi seçin: ![Docker desteği ekleyin](media/docker-quickstart-3.png)
+1. **Yeni > Çözüm Dosya'ya**giderek yeni bir çözüm oluşturun.
+1. **.NET Core > Uygulaması** altında Web ![ **Uygulaması** şablonu seçin: Yeni bir ASP.NET uygulama oluşturma](media/docker-quickstart-1.png)
+1. Hedef çerçeveyi seçin. Bu örnekte .NET Core 2.2: ![Hedef çerçeve yi ayarlama](media/docker-quickstart-2.png)
+1. Ad (Bu örnekte_DockerDemo)_ gibi proje ayrıntılarını girin. Oluşturulan proje, bir ASP.NET Core web sitesi oluşturmak ve çalıştırmak için ihtiyacınız olan tüm temel bilgileri içerir.
+1. Çözüm Defteri'nde DockerDemo projesine sağ tıklayın ve Docker ![Desteği ekle > ekle seçeneğini seçin : **Docker**desteği ekle](media/docker-quickstart-3.png)
 
-Mac için Visual Studio, çözümünüze **Docker-Compose** adlı otomatik olarak yeni bir proje ekleyecek ve mevcut projenize bir **dockerfile** ekleyecek.
+Mac için Visual Studio, **docker-compose** adlı çözümünüze otomatik olarak yeni bir proje ekler ve mevcut projenize bir **Dockerfile** ekler.
 
-![Oluşturulan Docker destek dosyaları](media/docker-quickstart-4.png)
+![Oluşturulan docker destek dosyaları](media/docker-quickstart-4.png)
 
-## <a name="dockerfile-overview"></a>Dockerfile genel bakış
+## <a name="dockerfile-overview"></a>Dockerfile Genel Bakış
 
-Dockerfile, son bir Docker görüntüsü oluşturmaya yönelik tarif eden bir dosyadır. İçindeki komutları anlamak için [Dockerfile başvurusuna](https://docs.docker.com/engine/reference/builder/) bakın.
+Dockerfile son docker görüntü oluşturmak için reçetedir. İçindeki komutların anlaşılması için [Dockerfile başvurusuna](https://docs.docker.com/engine/reference/builder/) bakın.
 
 ```
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
@@ -62,30 +62,30 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "DockerDemo.dll"]
 ```
 
-Yukarıdaki *Dockerfile* , [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) görüntüsünü temel alır ve projenizi oluşturup kapsayıcıya ekleyerek temel görüntüyü değiştirmeye yönelik yönergeler içerir.
+Önceki *Dockerfile* [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) resmine dayanır ve projenizi oluşturarak ve kapsayıcıya ekleyerek temel görüntüyü değiştirmek için yönergeler içerir.
 
 > [!NOTE]
-> Mac için Visual Studio tarafından oluşturulan varsayılan Dockerfile, HTTP trafiği için 80 numaralı bağlantı noktasını kullanıma sunar. HTTPS trafiğini etkinleştirmek için Dockerfile dosyasına `Expose 443` ekleyin.
+> Visual Studio for Mac tarafından oluşturulan varsayılan Dockerfile, HTTP trafiği için Port 80'i ortaya çıkarır. HTTPS trafiğini etkinleştirmek için Dockerfile'a ekleyin. `Expose 443`
 
-## <a name="debugging"></a>Hata Ayıklama
+## <a name="debugging"></a>Hata ayıklama
 
-Başlangıç projesi olarak `docker-compose` projesi seçin ve hata ayıklamayı başlatın (**hata ayıklamayı başlatmak > çalıştırın**). Bu işlem, ASP.NET projesini bir kapsayıcıda oluşturur, dağıtır ve başlatır.
+Projeyi `docker-compose` Başlangıç Projesi olarak seçin ve hata ayıklamaya başlayın **(Hata Ayıklama başlat> başlatın).** Bu, ASP.NET projesini bir kapsayıcıda oluşturur, dağıtır ve başlatacaktır.
 
 > [!TIP]
-> Docker Desktop 'ı yükledikten sonra ilk çalıştırmada, hata ayıklamaya çalışırken şu hatayı alabilirsiniz: `Cannot start service dockerdemo: Mounts denied`
+> Docker Desktop'ı yükledikten sonraki ilk çalıştırmada hata ayıklamaya çalışırken aşağıdaki hatayı alabilirsiniz:`Cannot start service dockerdemo: Mounts denied`
 >
-> Docker Desktop ' ta dosya paylaşma sekmesine `/usr/local/share/dotnet/sdk/NuGetFallbackFolder` ekleyin:
+> Docker `/usr/local/share/dotnet/sdk/NuGetFallbackFolder` Desktop'da Dosya Paylaşımı sekmesine ekleyin:
 >
-> ![Dosya paylaşımına NuGetFallbackFolder klasörü ekleniyor](media/docker-quickstart-5.png)
+> ![Dosya Paylaşımına NuGetFallbackFolder klasörünü ekleme](media/docker-quickstart-5.png)
 
-Derleme tamamlandığında uygulama Safari 'de başlatılır:
+Yapı tamamlandığında, uygulama Safari'de başlatılacaktır:
 
-![Safari 'de çalışan varsayılan Docker projesi](media/docker-quickstart-6.png)
+![Safari'de çalışan Varsayılan Docker projesi](media/docker-quickstart-6.png)
 
-Kapsayıcının bir bağlantı noktasını dinlediğini, örneğin `http://localhost:32768`, ve bu bağlantı noktasının değişebileceğini unutmayın.
+Örneğin, kapsayıcının bir bağlantı noktasında `http://localhost:32768` dinleyeceğini ve bu bağlantı noktasının farklılık gösterebileceğini unutmayın.
 
-Çalışan kapsayıcıların listesini görmek için terminalde `docker ps` komutunu kullanın.
+Çalışan kapsayıcıların listesini görmek için `docker ps` Terminal'deki komutu kullanın.
 
-Aşağıdaki ekran görüntüsünde bağlantı noktası geçişine ( **bağlantı noktaları**altında) göz önünde edin. Bu, kapsayıcının yukarıda Safari 'de gördüğdiğimiz bağlantı noktasını dinlediği ve bağlantı noktası 80 ' deki iç Web sunucusuna (Dockerfile içinde tanımlandığı gibi) istek geçirdiğini gösterir. Uygulamanın perspektifinden, 80 numaralı bağlantı noktasını dinler:
+Aşağıdaki ekran görüntüsündeki bağlantı noktası rölesini not edin **(PORTS**altında). Bu, konteynerin yukarıda Safari'de gördüğümüz bağlantı noktasını dinlediğini ve istekleri 80 no'daki bağlantı noktası (Dockerfile'da tanımlandığı şekilde) dahili web sunucusuna ilettiğini gösterir. Uygulamanın bakış açısından, port 80 dinliyor:
 
-![Docker kapsayıcı listesi](media/docker-quickstart-7.png)
+![Docker konteyner listesi](media/docker-quickstart-7.png)

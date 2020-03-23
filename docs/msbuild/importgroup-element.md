@@ -1,5 +1,5 @@
 ---
-title: ImportGroup öğesi | Microsoft Docs
+title: İthalatGrubu Elemanı | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 76dadd1a064a64884e3ff1cd1f2431bc1b94c3c4
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633739"
 ---
 # <a name="importgroup-element"></a>ImportGroup öğesi
 
   
-İsteğe bağlı bir koşul altında gruplanan `Import` öğelerinden oluşan bir koleksiyon içerir. Daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+İsteğe bağlı `Import` bir koşul altında gruplandırılmış öğeler topluluğu içerir. Daha fazla bilgi için [Alma öğesine (MSBuild)](../msbuild/import-element-msbuild.md)bakın.
 
 ```xml
 <Project>
@@ -50,13 +50,13 @@ ms.locfileid: "77633739"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[İçeri Aktarma](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.|
+|[İçeri Aktarma](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarın.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -66,7 +66,7 @@ ms.locfileid: "77633739"
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği `ImportGroup` öğesini gösterir.
+ Aşağıdaki kod örneği `ImportGroup` öğeyi gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

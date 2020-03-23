@@ -1,5 +1,5 @@
 ---
-title: Projeler veya çözümler olmadan kod geliştirme
+title: Proje veya çözüm olmadan kod geliştirme
 ms.date: 02/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,112 +12,112 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d7a9459868d569a7466dccf92e4b548c0500bf80
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596300"
 ---
-# <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Kodu Visual Studio'da projeler veya çözümler olmadan geliştirme
+# <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Visual Studio’da projeler veya çözümler olmadan kod geliştirme
 
-Bir çözüm veya proje dosyası gerekmeden, neredeyse her bir dizin tabanlı proje türünden kodu Visual Studio 'ya açabilirsiniz. Bu,, örneğin, github'da bir depoyu kopyaladığınızda, doğrudan Visual Studio'da oturum açın ve bir çözüm veya projeyi oluşturmak zorunda kalmadan geliştirmeye başlamak anlamına gelir. Gerekirse, özel derleme görevleri belirtin ve basit JSON dosyalarıyla parametreleri başlatın.
+Bir çözüm veya proje dosyasına gerek kalmadan, hemen hemen her tür dizin tabanlı projeden Visual Studio'ya kod açabilirsiniz. Bu, örneğin, GitHub'da bir repo klonlayabileceğiniz, doğrudan Visual Studio'ya açabileceğiniz ve bir çözüm veya proje oluşturmak zorunda kalmadan geliştirmeye başlayabileceğiniz anlamına gelir. Gerekirse, basit JSON dosyaları aracılığıyla özel yapı görevlerini belirtebilir ve parametreleri başlatabilirsiniz.
 
-Visual Studio'da kod dosyalarınızı açtıktan sonra **Çözüm Gezgini** klasöründe tüm dosyaları görüntüler. Düzenlemeye başlamak için herhangi bir dosyaya tıklayabilirsiniz. Arka planda, dosyaları, IntelliSense, gezinti ve yeniden düzenleme özellikleri etkinleştirmek için Visual Studio başlatılır. Düzenleme, oluşturma, taşıma veya dosyaları silmek gibi Visual Studio değişiklikleri otomatik olarak izler ve IntelliSense dizinini sürekli olarak güncelleştirir. Kod söz dizimi renklendirme ve çoğu durumda, görünür temel IntelliSense deyim tamamlamada içerir.
+Visual Studio'da kod dosyalarınızı açtıktan sonra **Solution Explorer** klasördeki tüm dosyaları görüntüler. Düzenlemeye başlamak için herhangi bir dosyayı tıklatabilirsiniz. Arka planda Visual Studio, IntelliSense, gezinme ve yeniden düzenleme özelliklerini etkinleştirmek için dosyaları dizine eklemeye başlar. Dosyaları düzenlediğinizde, oluşturdukça, taşırken veya silerken, Visual Studio değişiklikleri otomatik olarak izler ve IntelliSense dizinini sürekli olarak günceller. Kod sözdizimi renklendirme ile görünür ve birçok durumda, temel IntelliSense deyimi tamamlama içerir.
 
-## <a name="open-any-code"></a>Herhangi bir kod açın
+## <a name="open-any-code"></a>Herhangi bir kodu açma
 
-Kod aşağıdaki yollardan biriyle bir Visual Studio'da oturum açabilirsiniz:
+Kodu Visual Studio'ya aşağıdaki yollardan herhangi birinde açabilirsiniz:
 
-- Visual Studio menü çubuğunda **dosya** > **açık** > **klasör**ve ardından kodu konumuna göz atın.
+- Visual Studio menü çubuğunda **Dosya** > **Aç** > **Klasörünü**seçin ve ardından kod konumuna göz atın.
 
-- Kodu içeren bir klasör (sağ tıklama) bağlam menüsünden **Visual Studio'da Aç** komutu.
+- Kod içeren bir klasörün bağlam (sağ tıklatma) **menüsünde Visual Studio'da Aç** komutunu seçin.
 
 ::: moniker range="vs-2017"
-- Seçin **Klasör Aç** bağlantı Visual Studio **başlangıç sayfası**.
+- Visual Studio **Başlangıç Sayfasındaki** **Klasörü Aç** bağlantısını seçin.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-- Başlangıç penceresinde **klasörü aç** bağlantısını seçin.
+- Başlangıç penceresindeki **Klasörü Aç** bağlantısını seçin.
 ::: moniker-end
 
-- Klavye kullanıcısıysanız basın **Ctrl**+**Shift**+**Alt**+**O** görselde Studio.
+- Klavye kullanıcısıysanız Visual Studio'da **Ctrl**+**Shift**+**Alt**+**O** tuşuna basın.
 
-- Kod, klonlanan bir GitHub deposundan açın.
+- Klonlanmış GitHub repo'sundan kodu açın.
 
-### <a name="to-open-code-from-a-cloned-github-repo"></a>Kopyalanan bir GitHub deposundan kodunu açmak için
+### <a name="to-open-code-from-a-cloned-github-repo"></a>Klonlanmış GitHub repo'sundan kodu açmak için
 
-Aşağıdaki örnek, bir GitHub deposunu kopyalayın ve ardından, kodu Visual Studio'da açmak gösterilmektedir. Bu yordamı izlemek için bir GitHub hesabınız var ve Git için Windows sisteminizde yüklü. Bkz: [yeni bir GitHub hesabı için kaydolmadan](https://help.github.com/articles/signing-up-for-a-new-github-account/) ve [Git için Windows](https://git-for-windows.github.io/) daha fazla bilgi için.
+Aşağıdaki örnek, Bir GitHub repo'sunu nasıl klonlayıp visual studio'da kodunu niçin açacağımı gösterir. Bu yordamı izlemek için sisteminizde bir GitHub hesabınız ve Windows için Git yüklü olmalıdır. Daha fazla bilgi [için yeni bir GitHub hesabı için kaydolma](https://help.github.com/articles/signing-up-for-a-new-github-account/) ve [Windows için Git'e](https://git-for-windows.github.io/) bakın.
 
-1. Github'da kopyalamak istediğiniz depoya gidin.
+1. GitHub'da klonlamak istediğiniz repoya gidin.
 
-1. Seçin **Kopyala veya indir** düğmesine ve ardından **Panoya Kopyala** güvenli URL'nin için GitHub deposunu kopyalamak için açılır menüdeki düğmesi.
+1. **Clone veya Download** düğmesini seçin ve ardından GitHub repo'su için güvenli URL'yi kopyalamak için açılır menüdeki **Panoya Kopyala** düğmesini seçin.
 
-   ![GitHub Kopyala düğmesini](./media/VSIDE_Code_Clone.png)
+   ![GitHub klon düğmesi](./media/VSIDE_Code_Clone.png)
 
-1. Visual Studio'da **Takım Gezgini** açmak için sekmesinde **Takım Gezgini**. Sekmeyi görmüyorsanız açın **görünümü** > **Takım Gezgini**.
+1. Visual Studio'da, **Team Explorer'ı**açmak için **Takım Gezgini** sekmesini seçin. Sekmeyi görmüyorsanız, > **Görünüm Ekibi Gezgini'nden** **View**açın.
 
-1. Takım Gezgini altında **yerel Git depoları** bölümünde, seçin **kopya** komut ve GitHub sayfasının URL'si metin kutusuna yapıştırın.
+1. Team Explorer'da, **Yerel Git Depoları** bölümünün altında, **Klon** komutunu seçin ve ardından GitHub sayfasının URL'sini metin kutusuna yapıştırın.
 
-   ![Projesini kopyalama](./media/VSIDE_Code_Clone2.png)
+   ![Projeyi klonlama](./media/VSIDE_Code_Clone2.png)
 
-1. Seçin **kopya** projenin dosyalarını yerel bir Git deposuna kopyalamak için düğme. Depo boyutuna bağlı olarak, bu işlem birkaç dakika sürebilir.
+1. Projenin dosyalarını yerel bir Git deposunda klonlamak için **Klon** düğmesini seçin. Repo'nun boyutuna bağlı olarak, bu işlem birkaç dakika sürebilir.
 
-1. Depo içinde sisteminize kopyalanmış olan sonra **Takım Gezgini**, seçin **açık** yeni kopyalanan deponun (sağ tıklama) bağlam menüsünde komutu.
+1. Repo sisteminize klonlandıktan sonra, **Team Explorer'da,** yeni klonlanan repo'nun bağlamındaki (sağ tıklatma) menüsündeki **Aç** komutunu seçin.
 
-   ![Kopyalanan deponun](./media/VSIDE_Code_Clone3.png)
+   ![Klonlanmış repo](./media/VSIDE_Code_Clone3.png)
 
-1. Seçin **klasör görünümünü göster** dosyaları görüntülemek için komut **Çözüm Gezgini**.
+1. **Solution Explorer'daki**dosyaları görüntülemek için **Klasör Görünümü'nu Göster** komutunu seçin.
 
    ![Klasör görünümünü göster](./media/VSIDE_Code_Clone3_show.png)
 
-   Artık dosya ve klasörleri kopyalanan deponun içinde göz atın ve da görüntüleyebilir ve kod söz dizimi renklendirme ile tam Visual Studio Kod Düzenleyicisi ve diğer özelliklere arayın.
+   Artık klonlanmış repo'daki klasörlere ve dosyalara göz atabilir ve sözdizimi renklendirme ve diğer özelliklerle birlikte Visual Studio kod düzenleyicisinde kodu görüntüleyebilir ve arayabilirsiniz.
 
-## <a name="run-and-debug-your-code"></a>Kodunuzdaki hataları ayıklamanıza ve çalıştırma
+## <a name="run-and-debug-your-code"></a>Kodunuzu çalıştırın ve hata ayıklama
 
-Kodunuzu Visual Studio'da bir proje veya çözüm olmadan hata ayıklaması yapabilirsiniz! Bazı diller hata ayıklamak için geçerli bir belirtmeniz gerekebilir *başlangıç dosyası* komut dosyası, yürütülebilir dosya veya proje gibi kod tabanındaki. Yanındaki aşağı açılan liste kutusunda **Başlat** araç çubuğunda tüm öğeleri özellikle belirlediğiniz yanı sıra algılar, Visual Studio başlangıç öğelerini listeler. Kod hata ayıklaması yaparken, visual Studio bu kod önce çalışır.
+Visual Studio'da kodunuzu bir proje veya çözüm olmadan hata ayıklayabilirsiniz! Bazı dillerin hata ayıklanması için kod tabanında komut dosyası, çalıştırılabilir veya proje gibi geçerli bir *başlangıç dosyası* belirtmeniz gerekebilir. Araç çubuğundaki **Başlat** düğmesinin yanındaki açılır liste kutusu, Visual Studio'nun algıladığının tüm başlangıç öğelerinin yanı sıra özel olarak belirlediğiniz öğeleri listeler. Visual Studio, kodunuzu hata ayıklama yaptığınızda bu kodu ilk olarak çalıştırın.
 
-Kodunuzu Visual Studio içinde çalıştırmak için yapılandırma olduğu ne tür bir kod ve derleme araçları nelerdir bağlı olarak farklılık gösterir.
+Kodunuzu Visual Studio'da çalışacak şekilde yapılandırmak, kodun ne tür bir kod olduğuna ve yapı araçlarının ne olduğuna bağlı olarak değişir.
 
-### <a name="codebases-that-use-msbuild"></a>MSBuild kullanan kod tabanlarında
+### <a name="codebases-that-use-msbuild"></a>MSBuild kullanan codebases
 
-MSBuild tabanlı kod tabanlarında görünen birden çok oluşturma yapılandırmasında olabilir **Başlat** düğmenin aşağı açılan listesi. Başlangıç öğesi olarak kullanın ve ardından istediğiniz dosyayı seçin **Başlat** hata ayıklamayı başlatmak için düğme.
+MSBuild tabanlı codebases **Başlat** düğmesinin açılır listesinde görünen birden çok yapı yapılandırmaları olabilir. Başlangıç öğesi olarak kullanmak istediğiniz dosyayı seçin ve sonra hata ayıklamaya başlamak için **Başlat** düğmesini seçin.
 
 > [!NOTE]
-> İçin C# ve Visual Basic kod tabanlarında, olmalıdır **.NET masaüstü geliştirme** iş yükü yüklenmiş. C++ kod tabanlarında için olmalıdır **C++ ile masaüstü geliştirme** iş yükü yüklenmiş.
+> C# ve Visual Basic kod tabanları için **.NET masaüstü geliştirme** iş yükünün yüklü olması gerekir. C++ kod tabanları için C++ iş yükü **yüklü Masaüstü geliştirmeniz** gerekir.
 
-### <a name="codebases-that-use-custom-build-tools"></a>Kod tabanlarında özel derleme araçlarını kullanın
+### <a name="codebases-that-use-custom-build-tools"></a>Özel yapı araçları kullanan codebases
 
-Derleme araçları, özel bir kod temelinde kullanılan sonra Visual Studio kullanarak kod oluşturma söylemelisiniz *derleme görevleri* içinde tanımlanan bir *.json* dosya. Daha fazla bilgi için [yapı özelleştirme ve hata ayıklama görevleri](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
+Kod tabanınız özel yapı araçları kullanıyorsa, Visual Studio'ya *.json* dosyasında tanımlanan *yapı görevlerini* kullanarak kodunuzu nasıl oluştureceğinizi söylemeniz gerekir. Daha fazla bilgi için [yapıyı özelleştir ve görevleri ayıklama bölümüne](../ide/customize-build-and-debug-tasks-in-visual-studio.md)bakın.
 
-### <a name="codebases-that-contain-python-or-javascript-code"></a>Bu kod tabanlarında Python veya JavaScript kodu içerir
+### <a name="codebases-that-contain-python-or-javascript-code"></a>Python veya JavaScript kodu içeren codebases
 
-Kod temelinizde Python veya JavaScript kodu içeriyorsa, tüm yapılandırmanız gerekmez *.json* dosyaları, ancak karşılık gelen iş yükünü yüklemek sahip. Başlangıç betiği de yapılandırmanız gerekir:
+Kod tabanınız Python veya JavaScript kodu içeriyorsa, *.json* dosyalarını yapılandırmanız gerekir, ancak ilgili iş yükünü yüklemeniz gerekir. Ayrıca başlangıç komut dosyasını yapılandırmanız gerekir:
 
-1. Yükleme [Node.js geliştirme](https://visualstudio.microsoft.com/vs/node-js/) veya [Python geliştirme](https://visualstudio.microsoft.com/vs/python/) seçerek iş yükü **Araçları** > **araçları ve özellikleriAl**, veya Visual Studio kapatıldıktan ve Visual Studio Yükleyicisi'ni çalıştırarak.
+1. **Araçlar** > **Al Araçları ve Özellikleri**seçerek veya Visual Studio'yu kapatıp Visual Studio Yükleyicisini çalıştırarak [Düğüm.js geliştirme](https://visualstudio.microsoft.com/vs/node-js/) veya Python [geliştirme](https://visualstudio.microsoft.com/vs/python/) iş yükünü yükleyin.
 
-   ![Node.js ve Python geliştirme iş yükleri](media/python_nodejs_workloads.png)
+   ![Düğüm.js ve Python geliştirme iş yükleri](media/python_nodejs_workloads.png)
 
-1. İçinde **Çözüm Gezgini**, JavaScript veya Python dosyasını sağ tıklayın veya bağlam menüsünde **başlangıç öğesi olarak ayarla** komutu.
+1. **Solution**Explorer'da, JavaScript veya Python dosyasının sağ tıklama veya bağlam menüsünde Başlangıç Öğesi komutu **olarak Ayarla'yı** seçin.
 
-1. Seçin **Başlat** hata ayıklamayı başlatmak için düğme.
+1. Hata ayıklamaya başlamak için **Başlat** düğmesini seçin.
 
-### <a name="codebases-that-contain-c-code"></a>Bu kod tabanlarında C++ kodu içerir
+### <a name="codebases-that-contain-c-code"></a>C++ kodu içeren kod tabanları
 
-Visual Studio'da C++ kodu çözümlerin veya projelerin olmadan açma hakkında daha fazla bilgi için bkz: [C++ açık klasörü projelerde](/cpp/build/open-folder-projects-cpp).
+Visual Studio'da çözümsüz veya proje olmadan C++ kodunu açma hakkında bilgi için [C++ için Açık Klasör projelerine](/cpp/build/open-folder-projects-cpp)bakın.
 
-### <a name="codebases-that-contain-a-visual-studio-project"></a>Kod tabanlarında içeren bir Visual Studio projesi
+### <a name="codebases-that-contain-a-visual-studio-project"></a>Visual Studio projesi içeren codebases
 
-Kod klasörünüz Visual Studio projesi içeriyorsa, projeyi başlangıç öğesi olarak belirleyebilirsiniz.
+Kod klasörünüz bir Visual Studio projesi içeriyorsa, projeyi başlangıç öğesi olarak atayabilirsiniz.
 
-![Başlangıç öğesi olarak ayarla proje](media/customize-set-project-as-startup-item.png)
+![Projeyi başlangıç öğesi olarak ayarlama](media/customize-set-project-as-startup-item.png)
 
-**Başlat** proje başlangıç öğesi olduğunu yansıtmak için düğmenin metin değişiklikleri.
+**Başlat** düğmesinin metni, projenin başlangıç öğesi olduğunu yansıtacak şekilde değişir.
 
-![Başlat düğmesine proje](media/customize-start-button-project.png)
+![Başlat düğmesinde Proje](media/customize-start-button-project.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapı özelleştirme ve hata ayıklama görevleri](../ide/customize-build-and-debug-tasks-in-visual-studio.md)
 - [C++ için Klasör projelerini açma](/cpp/build/open-folder-projects-cpp)
 - [C++'da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)
-- [Kod ve metin düzenleyicide kod yazma](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod ve metin düzenleyicisinde kod yazma](../ide/writing-code-in-the-code-and-text-editor.md)

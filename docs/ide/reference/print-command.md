@@ -1,5 +1,5 @@
 ---
-title: Debug.Print
+title: Print
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3056570e52893f1c21eaf10c7856b21fbbc02c61
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567846"
 ---
 # <a name="print-command"></a>Yazdır komutu
@@ -31,27 +31,27 @@ Bir ifadeyi değerlendirir veya belirtilen metni görüntüler.
 >Debug.Print text
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `text`
 
-Gerekli. Değerlendirilecek ifade veya görüntülenecek metin.
+Gereklidir. Değerlendirilecek ifade veya görüntülenecek metin.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu komut için bir diğer ad olarak soru işareti (?) kullanabilirsiniz. Bu nedenle, örneğin, komut
+Bu komut için diğer ad olarak soru işaretini (?) kullanabilirsiniz. Yani, örneğin, komut
 
 ```cmd
 >Debug.Print expA
 ```
 
-Ayrıca, şöyle yazılabilir
+olarak da yazılabilir
 
 ```cmd
 ? expA
 ```
 
-Bu komutun her iki sürümü de `expA`ifadenin geçerli değerini döndürür.
+Bu komutun her iki sürümü de `expA`ifadenin geçerli değerini döndürün.
 
 ## <a name="example"></a>Örnek
 
@@ -62,7 +62,7 @@ Bu komutun her iki sürümü de `expA`ifadenin geçerli değerini döndürür.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Deyimi Değerlendir Komutu](../../ide/reference/evaluate-statement-command.md)
-- [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
+- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

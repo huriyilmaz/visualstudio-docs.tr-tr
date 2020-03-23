@@ -1,5 +1,5 @@
 ---
-title: Atama ProjectConfiguration görevi | Microsoft Docs
+title: AtamaProjectConfiguration Görev | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,37 +14,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b5159b73058c73c925cae644c2e3ddd2bc84ac41
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634558"
 ---
-# <a name="assignprojectconfiguration-task"></a>Atama ProjectConfiguration görevi
+# <a name="assignprojectconfiguration-task"></a>AtamaProjectConfiguration görev
 
-Bu görev bir liste yapılandırma dizelerini kabul eder ve bunları belirtilen projelere atar.
+Bu görev, bir liste yapılandırma dizeleri kabul eder ve bunları belirtilen projelere atar.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda `AssignProjectConfiguration` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `AssignProjectConfiguration` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`SolutionConfigurationContents`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Her proje için bir proje yapılandırması içeren bir XML dizesi içerir. Yapılandırma, adlandırılmış projelere atanır.|
-|`DefaultToVcxPlatformMapping`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> *. Vcxproj* dosyaları tarafından kullanılan çoğu tür tarafından kullanılan platform adlarından gelen, noktalı virgülle ayrılmış bir eşleşme listesi içerir.<br /><br /> Örnek:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
-|`VcxToDefaultPlatformMapping`|İsteğe bağlı<br /><br /> `string` çıktı parametresi.<br /><br /> *. Vcxproj* platform adlarından, çoğu tür tarafından kullanılan platform adlarına yapılan eşlemelerin noktalı virgülle ayrılmış bir listesini içerir.<br /><br /> Örnek:<br /><br /> `"Win32=AnyCPU;X64=X64"`|
-|`CurrentProjectConfiguration`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Geçerli projenin yapılandırmasını içerir.|
-|`CurrentProjectPlatform`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Geçerli projenin platformunu içerir.|
-|`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|İsteğe bağlı `bool` çıkış parametresi.<br /><br /> Başvuruların proje yapılandırmasında devre dışı bırakılmış olsa bile oluşturulması gerektiğini belirten bir bayrak içerir.|
-|`ShouldUnsetParentConfigurationAndPlatform`|İsteğe bağlı `bool` çıkış parametresi.<br /><br /> Üst yapılandırmanın ve platformun atlanacağını belirten bir bayrak içerir.|
-|`OutputType`|İsteğe bağlı `string` çıkış parametresi.<br /><br /> Projenin çıkış türünü içerir.|
-|`ResolveConfigurationPlatformUsingMappings`|İsteğe bağlı `bool` çıkış parametresi.<br /><br /> Derleme, geçirilen proje başvurularının yapılandırma ve platformunu çözümlemek için varsayılan eşlemeleri kullanması gerekip gerekmediğini belirten bir bayrak içerir.|
-|`AssignedProjects`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Çözümlenen başvuru yollarının listesini içerir.|
-|`UnassignedProjects`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Önceden çözümlenmiş çıkış listesi kullanılarak çözülemeyen proje başvuru öğelerinin listesini içerir.|
+|`SolutionConfigurationContents`|İsteğe bağlı `string` çıktı parametresi.<br /><br /> Her proje için proje yapılandırması içeren bir XML dizesi içerir. Yapılandırmalar adlandırılmış projelere atanır.|
+|`DefaultToVcxPlatformMapping`|İsteğe bağlı `string` çıktı parametresi.<br /><br /> *.vcxproj* dosyaları tarafından kullanılançoğu türtarafından kullanılan platform adlarından yarı sütunlu sınırlı eşlemeler listesi içerir.<br /><br /> Örnek:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
+|`VcxToDefaultPlatformMapping`|İsteğe bağlı<br /><br /> `string`çıkış parametresi.<br /><br /> *.vcxproj* platform adlarından çoğu türde kullanılan platform adlarına kadar eşlemelerin yarı sütunlu sınırlı bir listesini içerir.<br /><br /> Örnek:<br /><br /> `"Win32=AnyCPU;X64=X64"`|
+|`CurrentProjectConfiguration`|İsteğe bağlı `string` çıktı parametresi.<br /><br /> Geçerli proje yapılandırmasını içerir.|
+|`CurrentProjectPlatform`|İsteğe bağlı `string` çıktı parametresi.<br /><br /> Geçerli proje için platformu içerir.|
+|`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|İsteğe bağlı `bool` çıktı parametresi.<br /><br /> Proje yapılandırmasında devre dışı bırakılmış olsalar bile başvuruların oluşturulması gerektiğini belirten bir bayrak içerir.|
+|`ShouldUnsetParentConfigurationAndPlatform`|İsteğe bağlı `bool` çıktı parametresi.<br /><br /> Üst yapılandırma ve platformun ayarsız bırakılmaması gerektiğini belirten bir bayrak içerir.|
+|`OutputType`|İsteğe bağlı `string` çıktı parametresi.<br /><br /> Projenin çıktı türünü içerir.|
+|`ResolveConfigurationPlatformUsingMappings`|İsteğe bağlı `bool` çıktı parametresi.<br /><br /> Yapının proje başvurularında geçirilen yapılandırmayı ve platformu çözmek için varsayılan eşlemeleri kullanıp kullanmaması gerektiğini belirten bir bayrak içerir.|
+|`AssignedProjects`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Çözülen başvuru yollarının listesini içerir.|
+|`UnassignedProjects`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Önceden çözülmüş çıktılar listesini kullanarak çözülmeyen proje başvuru öğelerinin listesini içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

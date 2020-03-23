@@ -1,5 +1,5 @@
 ---
-title: VSTO eklentisinin performansını iyileştirme
+title: VSTO Eklentisinin performansını artırmak
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -10,56 +10,56 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dd7b8f7b88040c7b80dcc6c40dc168a51890d8d2
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
+ms.openlocfilehash: dccff7206aa9ef71596816d34a863695a10aff6b
+ms.sourcegitcommit: b32fbbcbc43910b0ed7ce79aa9a22f2ed36ab57e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661833"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416555"
 ---
-# <a name="improve-the-performance-of-a-vsto-add-in"></a>VSTO eklentisinin performansını iyileştirme
-  Office uygulamaları için oluşturduğunuz VSTO Eklentilerini en iyi duruma getirerek daha iyi bir deneyim verebilirsiniz. bu sayede, öğeleri hızlı bir şekilde başlatabilir, kapatabilir, açık öğeler açabilir ve diğer görevleri gerçekleştirebilirsiniz. VSTO eklentisi Outlook için ise, VSTO eklentisinin kötü performans nedeniyle devre dışı bırakılabilme olasılığını da azaltabilirsiniz. Aşağıdaki stratejileri uygulayarak VSTO eklentisinin performansını artırabilirsiniz:
+# <a name="improve-the-performance-of-a-vsto-add-in"></a>VSTO eklentisinin performansını artırmak
+  Office uygulamaları için oluşturduğunuz VSTO Eklentilerini hızlı bir şekilde başlatmaları, kapatmaları, öğeleri açmaları ve diğer görevleri gerçekleştirmeleri için kullanıcılarınıza daha iyi bir deneyim sunabilirsiniz. VSTO Eklentiniz Outlook içinse, düşük performans nedeniyle VSTO Eklentinizin devre dışı bırakılma olasılığını da azaltabilirsiniz. Aşağıdaki stratejileri uygulayarak VSTO Eklentinizin performansını artırabilirsiniz:
 
-- [İsteğe bağlı VSTO Eklentilerini yükleyin](#Load).
+- [VsTO Eklentilerini isteğe bağlı yükleyin.](#Load)
 
-- [Windows Installer kullanarak Office çözümlerini yayımlayın](#Publish).
+- [Windows Installer kullanarak Office çözümlerini yayımlayın.](#Publish)
 
-- [Şerit yansımasını atlayın](#Bypass).
+- [Bypass Şerit yansıması](#Bypass).
 
-- [Ayrı bir yürütme iş parçacığında pahalı Işlemler gerçekleştirin](#Perform).
+- [Ayrı bir yürütme iş parçacığı nda pahalı işlemleri gerçekleştirin.](#Perform)
 
-  Outlook VSTO eklentisinin nasıl iyileştirileceği hakkında daha fazla bilgi için bkz. [VSTO Eklentilerini etkin tutmak Için performans ölçütleri](/previous-versions/office/jj228679(v=office.15)#performance-criteria-for-keeping-add-ins-enabled).
+  Outlook VSTO Eklentisi'ni en iyi duruma getirme hakkında daha fazla bilgi [için, VSTO Eklentilerini etkin tutmak için Performans ölçütlerine](/previous-versions/office/jj228679(v=office.15)#performance-criteria-for-keeping-add-ins-enabled)bakın.
 
-## <a name="Load"></a>VSTO Eklentilerini isteğe bağlı olarak yükle
- Bir VSTO eklentisini yalnızca aşağıdaki koşullarda yüklenecek şekilde yapılandırabilirsiniz:
+## <a name="load-vsto-add-ins-on-demand"></a><a name="Load"></a>VSTO Eklentilerini isteğe bağlı yükleyin
+ VSTO Eklentisini yalnızca aşağıdaki koşullar altında yükleyecek şekilde yapılandırabilirsiniz:
 
-- VSTO eklentisi yüklendikten sonra Kullanıcı uygulamayı ilk kez başlattığında.
+- VSTO Eklentisi yüklendikten sonra kullanıcı uygulamayı ilk kez başlatın.
 
-- Uygulamanın, sonraki bir zamanda uygulama başladıktan sonra VSTO eklentisi ile ilk kez etkileşime geçtiğinde.
+- Kullanıcı, uygulamayı sonraki bir zamanda başladıktan sonra VSTO Eklentisi ile ilk etkileşimde bulunun.
 
-  Örneğin, Kullanıcı verilerimi **Al**etiketli özel bir düğme seçtiğinde VSTO eklentisi bir çalışma sayfasını verilerle doldurabilir. Uygulamanın, **veri al** düğmesinin şeritte GÖRÜNEBILMESI Için VSTO eklentisini en az bir kez yüklemesi gerekir. Ancak, Kullanıcı uygulamayı bir sonraki sefer başlattığında VSTO eklentisi yeniden yüklenmez. VSTO eklentisi yalnızca Kullanıcı verilerimi **Al** düğmesini seçtiğinde yüklenir.
+  Örneğin, kullanıcı **Verilerimi Al**etiketli özel bir düğme seçtiğinde VSTO Eklentiniz bir çalışma sayfasını verilerle doldurabilir. Uygulama, **Verilerimi Al** düğmesinin Şerit'te görünebilmeleri için VSTO Eklentinizi en az bir kez yüklemelidir. Ancak, kullanıcı uygulamayı bir sonraki sefere başlattığında VSTO Eklentisi yeniden yüklenmez. VSTO Eklentisi yalnızca kullanıcı **Verilerimi Al** düğmesini seçtiğinde yüklenir.
 
-### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir ClickOnce çözümü yapılandırmak için
+### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>VsTO Eklentilerini isteğe bağlı yüklemek için ClickOnce çözümlerini yapılandırmak için
 
-1. **Çözüm Gezgini**, proje düğümünü seçin.
+1. **Çözüm Gezgini'nde**proje düğümlerini seçin.
 
-2. Menü çubuğunda **görünüm**  > **Özellik sayfaları**' nı seçin.
+2. Menü çubuğunda**Özellik Sayfalarını** **Görüntüle'yi** > seçin.
 
 3. **Yayımla** sekmesinde **Seçenekler** düğmesini seçin.
 
-4. **Yayımla Seçenekleri** Iletişim kutusunda **Office ayarları** liste öğesini seçin, **isteğe bağlı yükle** seçeneğini belirleyin ve **Tamam** düğmesini seçin.
+4. Seçenekleri **Yayımla** iletişim kutusunda, **Office Ayarları** liste öğesini seçin, **İsteğe Yükle** seçeneğini seçin ve ardından **Tamam** düğmesini seçin.
 
-### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir Windows Installer çözümü yapılandırmak için
+### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>VsTO Eklentilerini isteğe bağlı yüklemek için bir Windows Installer çözümlerini yapılandırmak için
 
-1. Kayıt defterinde **_kök_\Software\microsoft\office\\_ApplicationName_\ addıns\\_eklenti kimliği_** anahtarının `LoadBehavior` girdisini **0x10**' a ayarlayın.
+1. Kayıt defterinde, ** _Root_\Software\Microsoft\Office\\_ApplicationName_\Addins\\Add-in ID** anahtarının `LoadBehavior` girişini **0x10'a**ayarlayın.
 
-     Daha fazla bilgi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
+     Daha fazla bilgi için [VSTO Eklentileri için Kayıt Defteri girişlerine](../vsto/registry-entries-for-vsto-add-ins.md)bakın.
 
-### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Çözümde hata ayıklarken VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir çözüm yapılandırmak için
+### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Çözümü hata ayıklarken VSTO Eklentilerini isteğe bağlı yüklemek için bir çözüm yapılandırmak için
 
-1. **_Kök_\Software\microsoft\office\\_ApplicationName_\ addıns\\_eklentisinin kimlik_** anahtarının `LoadBehavior` girdisini **0x10**' a ayarlayan bir betik oluşturun.
+1. `LoadBehavior` **0x10** ** _için Root_\Software\Microsoft\Office\\_ApplicationName_\Addins\\Add-in ID** anahtarının girişini ayarlayan bir komut dosyası oluşturun.
 
-     Aşağıdaki kod bu betiğin bir örneğini gösterir.
+     Aşağıdaki kod bu komut dosyasının bir örneğini gösterir.
 
     ```cmd/sh
     [HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\MyAddIn]
@@ -70,51 +70,51 @@ ms.locfileid: "73661833"
 
     ```
 
-2. Betiği kullanarak kayıt defterini güncelleştiren oluşturma sonrası bir olay oluşturun.
+2. Komut dosyasını kullanarak kayıt defterini güncelleyen bir yapı sonrası olay oluşturun.
 
-     Aşağıdaki kod, bir derleme sonrası olayına ekleyebileceğiniz komut dizesinin bir örneğini gösterir.
+     Aşağıdaki kod, yapı sonrası olaya ekleyebileceğiniz bir komut dizeörneği gösterir.
 
     ```cmd/sh
     regedit /s "$(SolutionDir)$(SolutionName).reg"
 
     ```
 
-     Bir C# projede oluşturma sonrası olay oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: derleme &#40;olaylarını belirtme C&#35;](../ide/how-to-specify-build-events-csharp.md).
+     C# projesinde yapı sonrası olayın nasıl oluşturulabildiğini öğrenmek için bkz [&#35;&#41;&#40;. ](../ide/how-to-specify-build-events-csharp.md)
 
-     Visual Basic projesinde oluşturma sonrası bir olay oluşturma hakkında bilgi için bkz. [nasıl yapılır: derleme &#40;olaylarını belirtme Visual Basic&#41;](../ide/how-to-specify-build-events-visual-basic.md).
+     Visual Basic projesinde yapı sonrası olayın nasıl oluşturulabildiğini öğrenmek için bkz [&#41;&#40;. ](../ide/how-to-specify-build-events-visual-basic.md)
 
-## <a name="Publish"></a>Windows Installer kullanarak Office çözümlerini yayımlama
- Çözümünüzü Windows Installer kullanarak yayımlarsanız, Office çalışma zamanı için Visual Studio 2010 araçları, VSTO eklentisi yüklenirken aşağıdaki adımları atlar.
+## <a name="publish-office-solutions-by-using-windows-installer"></a><a name="Publish"></a>Windows Installer kullanarak Office çözümlerini yayımlama
+ Çözümünüzü Windows Installer'ı kullanarak yayımlarsanız, Visual Studio 2010 Office çalışma zamanı araçları, VSTO Eklentisi yüklendiğinde aşağıdaki adımları atlar.
 
-- Bildirim şeması doğrulanıyor.
+- Apaçık şema doğruluyor.
 
-- Güncelleştirmeler otomatik olarak denetleniyor.
+- Güncelleştirmeleri otomatik olarak denetler.
 
-- Dağıtım bildirimlerinin dijital imzaları doğrulanıyor.
+- Dağıtım bildirimlerinin dijital imzalarının doğrulanması.
 
   > [!NOTE]
-  > Bu yaklaşım, VSTO eklentisini kullanıcıların bilgisayarlarındaki güvenli bir konuma dağıtırsanız gerekli değildir.
+  > VSTO Eklentinizi kullanıcıların bilgisayarlarında güvenli bir konuma dağıtırsanız bu yaklaşım gerekli değildir.
 
-  Daha fazla bilgi için bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
+  Daha fazla bilgi için bkz. Windows [Installer'ı kullanarak Bir Office çözümlerini dağıtın.](../vsto/deploying-a-vsto-solution-by-using-windows-installer.md)
 
-## <a name="Bypass"></a>Şerit yansımasını atla
- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]kullanarak bir çözüm oluşturursanız, çözümünüzü dağıtırken kullanıcılarınızın Office çalışma zamanı için Visual Studio 2010 araçları 'nın en son sürümünü yüklediğinizden emin olun. VSTO çalışma zamanının daha eski sürümleri, şerit özelleştirmelerini bulmak için çözüm derlemelerine yansıtılır. Bu işlem, VSTO eklentisinin daha yavaş yüklenmesine neden olabilir.
+## <a name="bypass-ribbon-reflection"></a><a name="Bypass"></a>Bypass Şerit yansıması
+ Kullanarak bir çözüm [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]oluşturursanız, çözüm dağıtTığınızda kullanıcılarınızın Visual Studio 2010 Tools for Office çalışma zamanının en son sürümünü yüklediğinden emin olun. VSTO çalışma zamanının eski sürümleri, Şerit özelleştirmelerini bulmak için çözüm derlemelerine yansıtılır. Bu işlem VSTO Eklentisinin daha yavaş yüklenmesine neden olabilir.
 
- Alternatif olarak, Office çalışma zamanı için Visual Studio 2010 araçlarının herhangi bir sürümünün, şerit özelleştirmelerini belirlemek için yansıma kullanmasını engelleyebilirsiniz. Bu stratejiyi izlemek için `CreateRibbonExtensibility` yöntemini geçersiz kılın ve doğrudan şerit nesnelerini döndürün. VSTO eklentileriniz hiçbir Şerit özelleştirmesi içermiyorsa, yönteminin içinde `null` döndürün.
+ Alternatif olarak, Visual Studio 2010 Office çalışma zamanı için araçlar sürümünün Şerit özelleştirmelerini tanımlamak için yansımayı kullanmasını engelleyebilirsiniz. Bu stratejiyi `CreateRibbonExtensibility` izlemek için yöntemi geçersiz kılın ve Şerit nesnelerini açıkça döndürün. VSTO Eklentiniz şerit özelleştirmesi içermiyorsa, `null` yöntemin içine dönün.
 
- Aşağıdaki örnek, bir alanın değerine göre bir şerit nesnesi döndürür.
+ Aşağıdaki örnek, bir alanın değerini temel alan bir Şerit nesnesi döndürür.
 
  [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb#1)]
  [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs#1)]
 
-## <a name="Perform"></a>Ayrı bir yürütme iş parçacığında pahalı işlemler gerçekleştirme
- Ayrı bir iş parçacığında zaman alan görevler (uzun süre çalışan görevler, veritabanı bağlantıları veya diğer ağ çağrısı sayısı gibi) gerçekleştirmeyi göz önünde bulundurun. Daha fazla bilgi için bkz. [Office 'Te Iş parçacığı desteği](../vsto/threading-support-in-office.md).
+## <a name="perform-expensive-operations-in-a-separate-execution-thread"></a><a name="Perform"></a>Ayrı bir yürütme iş parçacığında pahalı işlemler gerçekleştirme
+ Ayrı bir iş parçacığında zaman alan görevleri (uzun çalışan görevler, veritabanı bağlantıları veya diğer ağ çağrıları gibi) gerçekleştirmeyi düşünün. Daha fazla bilgi için [Office'te İş Parçacığı desteğine](../vsto/threading-support-in-office.md)bakın.
 
 > [!NOTE]
-> Office nesne modeline çağıran tüm kodun ana iş parçacığında yürütülmesi gerekir.
+> Office nesnesi modeline çağıran tüm kodlar ana iş parçacığında yürütülmesi gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [VSTO eklentileri talep yükleme](https://blogs.msdn.microsoft.com/andreww/2008/07/14/demand-loading-vsto-add-ins/)
-- [Office eklentilerinde CLR Yükleme gecikmesi](https://blogs.msdn.microsoft.com/andreww/2008/04/19/delay-loading-the-clr-in-office-add-ins/)
-- [Visual Studio kullanarak Office için VSTO eklentileri oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md)
+- [Talep yükleme VSTO Eklentileri](https://blogs.msdn.microsoft.com/andreww/2008/07/14/demand-loading-vsto-add-ins/)
+- [Office Eklentilerinde CLR'yi geciktirme](https://blogs.msdn.microsoft.com/andreww/2008/04/19/delay-loading-the-clr-in-office-add-ins/)
+- [Visual Studio kullanarak Office için VSTO Eklentileri oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md)

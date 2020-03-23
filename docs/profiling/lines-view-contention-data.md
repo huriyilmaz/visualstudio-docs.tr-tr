@@ -1,5 +1,5 @@
 ---
-title: Satırlar Görünümü-çekişme verileri | Microsoft Docs
+title: Satır Görünümü - Çekişme Verileri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,59 +12,59 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1dfcdf67c897c0c1565e536a69cc940b9df83390
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778602"
 ---
-# <a name="lines-view---contention-data"></a>Satırlar Görünümü-çekişme verileri
-Çekişme verilerinin satırlar görünümü, profil oluşturma çalıştırmasında örnek toplandığında yürütülen deyimler için performans verilerini listeler. Bir kaynak dosyasında, bir ifade kaynak dosyada birden fazla satıra yayılabilir ve tek bir satır birden fazla ifade içerebilir.
+# <a name="lines-view---contention-data"></a>Satırlar Görünümü - çekişme verileri
+Çekişme verilerinin Satırlar görünümü, örnekler profil oluşturma çalışmasında toplandığında çalıştırılan ifadelere ait performans verilerini listeler. Kaynak dosyada, bir deyim kaynak dosyada birden fazla satıra yayılabilir ve tek bir satır birden fazla deyim içerebilir.
 
- Aşağıdaki verilerle bir ifade tanımlanmıştır:
+ Bir deyim aşağıdaki verilerle tanımlanır:
 
-- Function ifadesini içeren kaynak dosya.
+- İşlev deyimini içeren kaynak dosya.
 
-- İfadesini içeren işlev.
+- İfadeyi içeren işlev.
 
-- Deyimin başladığı kaynak satır.
+- İfadenin başladığı kaynak satırı.
 
-- Deyimin başladığı kaynak satırdaki karakter.
+- İfadenin başladığı kaynak satırdaki karakter.
 
-- Deyimin bittiği kaynak satır.
+- İfadenin sona erdiği kaynak satırı.
 
-- Deyimin bittiği kaynak satırdaki karakter.
+- İfadenin sona erdiği kaynak satırdaki karakter.
 
-  Satır adı sütunu, tanımlayıcı verilerinin sıralanabilir bir birleştirmesini sağlar.
+  Satır Adı sütunu tanımlayıcı verilerinin tasnif edilebilir bir bir bir araya aksamasağlar.
 
-  Aşağıdaki tabloda, satırlar görünümü raporunun sütunları açıklanmaktadır.
+  Aşağıdaki tabloda Satır Görünümü raporunun sütunları açıklanmaktadır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı engellenme süresi**|Bu deyimin bir çekişme olayı nedeniyle deyimindeki kodu yürütmelerinin engellendiği zaman miktarı. Çağrılan deyimlerdeki engellenen süre dahil değildir.|
-|**Dışlamalı engellenme süresi yüzdesi**|İşlemdeki, deyimin dışlamalı engellenme süresi olan tüm engellenen sürenin yüzdesi.|
-|**Dışlamalı çekişmeler**|Bu deyimin bir çekişme olayı nedeniyle deyimindeki kodu yürütmelerinin engellendiği sayı. Çağrılan deyimlerdeki çekişme olayları dahil değildir.|
-|**Dışlamalı çekişmeler yüzdesi**|İşlemdeki tüm çekişme olaylarının, bu bildirimin özel çekişmelerinin yüzdesi.|
-|**İşlev adresi**|Bu ifadeyi içeren işlevin adresi.|
-|**İşlev adı**|Bu ifadeyi içeren işlevin tam adı.|
-|**Kapsamlı engellenme süresi**|Bu bildirimde ve ifadesinde çağrılan işlevlerde engellenen süre.|
-|**Kapsamlı engellenme süresi%**|İşlemdeki engellenme süresi dahil olmak üzere işlemdeki tüm engellenen sürenin yüzdesi.|
-|**Kapsamlı çekişmeler**|Deyimde çağrılan bu deyimin ve işlevlerin kaç kez yürütülenmediği.|
-|**Kapsamlı çekişmeler yüzdesi**|İşlemdeki, bu bildirimin kapsamlı çekişmeleri olan tüm çekişme olaylarının yüzdesi.|
-|**Satır adı**|Satır için profil oluşturucu tarafından oluşturulan bir tanımlayıcı. Tanımlayıcı şu sözdizimini kullanır:`SourceFile` **; [** `LineNumberStart` **,** `CharacterStart` **]->; [** `LineNumberEnd` **,** `CharacterEnd` **]**|
-|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül adı**|Deyimin bulunduğu modülün adı.|
-|**Modül yolu**|Deyimin bulunduğu modülün yolu.|
-|**İşlem KIMLIĞI**|Profili oluşturulan işlemin işlem KIMLIĞI (PID).|
-|**İşlem adı**|İşlemin adı.|
-|**Kaynak karakter başlangıcı**|Bu deyimin başladığı kaynak dosya satırındaki başlangıç karakterinin boşluğu.|
-|**Kaynak karakter sonu**|Bu deyimin bittiği kaynak dosya satırındaki başlangıç karakterinin boşluğu.|
-|**Kaynak dosya**|İşlev ifadesini içeren kaynak dosyanın adı.|
-|**Kaynak satırı başlangıç**|Deyimin başladığı kaynak dosyadaki satır numarası.|
-|**Kaynak satır sonu**|Deyimin bittiği kaynak dosyadaki satır numarası.|
+|**Özel Engellenen Süre**|Bu bildirimin bir çekişme olayı nedeniyle bildirimde kod yürütmesinin engellendiği süre. Çağrılan deyimin dahil olmadığı işlevlerde engellenen süre.|
+|**Özel Engellenen Süre %**|İfadenin münhasıran engellenen zamanı olan işlemdeki tüm engellenen zamanın yüzdesi.|
+|**Özel Çekişmeler**|Bu bildirimin bir çekişme olayı nedeniyle bildirimde kod yürütmesinin engellenme sayısı. İfade olarak adlandırılan işlevlerde çekişme olayları dahil edilmez.|
+|**Özel Çekişmeler %**|Bu bildirimin münhasır çekişmeleri olan süreçteki tüm çekişme olaylarının yüzdesi.|
+|**Fonksiyon Adresi**|Bu ifadeyi içeren işlevin adresi.|
+|**Fonksiyon Adı**|Bu ifadeyi içeren işlevin tam nitelikli adı.|
+|**Kapsayıcı Engellenen Süre**|Bu ifadede engellenen süre ve işlevler deyiminde çağrılır.|
+|**Kapsayıcı Engellenen Süre %**|İfadenin kapsayıcı olarak engellenen zamanı olan işlemdeki tüm engellenen zamanın yüzdesi.|
+|**Kapsayıcı Çekişmeler**|Bu deyimin ve deyimde çağrılan işlevlerin kaç kez yürütülmesi engellendi.|
+|**Kapsayıcı Çekişmeler %**|Bu bildirimin kapsayıcı çekişmeleri olan süreçteki tüm çekişme olaylarının yüzdesi.|
+|**Satır Adı**|Çizginin profil oluşturucu tarafından oluşturulan tanımlayıcısı. Tanımlayıcı aşağıdaki sözdizimini kullanır:`SourceFile`**;[** `LineNumberStart` **,**,`CharacterStart`**]->; [**`LineNumberEnd`**,**`CharacterEnd`**]**|
+|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
+|**Modül Adı**|İfadeyi içeren modülün adı.|
+|**Modül Yolu**|İfadeyi içeren modülün yolu.|
+|**İşlem Kimliği**|Profilli işlemin işlem kimliği (PID).|
+|**İşlem Adı**|Sürecin adı.|
+|**Kaynak Karakter Başlangıç**|Bu bildirimin başladığı kaynak dosya satırındaki başlangıç karakterinin mahsup noktası.|
+|**Kaynak Karakter Sonu**|Bu bildirimin sona erdiği kaynak dosya satırındaki başlangıç karakterinin mahsup uyrucu.|
+|**Kaynak Dosya**|İşlev deyimini içeren kaynak dosyanın adı.|
+|**Kaynak Satırı Başlangıç**|İfadenin başladığı kaynak dosyadaki satır numarası.|
+|**Kaynak Satır Sonu**|İfadenin sona erdiği kaynak dosyadaki satır numarası.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Nasıl kullanılır: Rapor Görünümü sütunlarını özelleştir](../profiling/how-to-customize-report-view-columns.md)
 - [Satırlar Görünümü](../profiling/lines-view.md)
-- [Satırlar Görünümü-Örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
+- [Satır Görünümü - örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
 - [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)

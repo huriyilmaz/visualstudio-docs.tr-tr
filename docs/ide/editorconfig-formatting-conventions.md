@@ -1,5 +1,5 @@
 ---
-title: EditorConfig için .NET biçimlendirme kuralları
+title: .NET EditorConfig için biçimlendirme kuralları
 ms.date: 07/17/2019
 ms.topic: reference
 dev_langs:
@@ -14,41 +14,41 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589233"
 ---
 # <a name="formatting-conventions"></a>Biçimlendirme kuralları
 
-Visual Studio için EditorConfig 'in biçimlendirme kuralları şu kategorilere ayrılır:
+Visual Studio için EditorConfig için biçimlendirme kuralları şu kategorilere girer:
 
 - [.NET biçimlendirme ayarları](#net-formatting-settings)
 
-- [C#biçimlendirme ayarları](#c-formatting-settings)
+- [C# biçimlendirme ayarları](#c-formatting-settings)
 
 ## <a name="rule-format"></a>Kural biçimi
 
-Biçimlendirme kuralları için kurallar aşağıdaki biçimdedir:
+Kuralları biçimlendirme kuralları aşağıdaki biçime sahiptir:
 
 `rule_name = value`
 
-Birçok kural için, `value`için `true` (Bu stili tercih et) ya da `false` (Bu stili tercih et) belirtirsiniz. Diğer kurallar için, kuralın ne zaman ve nereye uygulanacağını betimleyen `flush_left` veya `before_and_after` gibi bir değer belirtirsiniz. Önem derecesi belirtmezsiniz.
+Birçok kural için, `true` 'yi belirtiniz `false` (bu stili tercih edin) veya (bu stili tercih etmeyin) için. `value` Diğer kurallar için, kuralın `flush_left` ne `before_and_after` zaman ve nerede uygulanacağınız gibi bir değer belirtirsiniz. Bir önem belirtmedin.
 
 ## <a name="net-formatting-settings"></a>.NET biçimlendirme ayarları
 
-Bu bölümdeki biçimlendirme kuralları için C# geçerlidir ve kodu Visual Basic.
+Bu bölümdeki biçimlendirme kuralları C# ve Visual Basic koduna uygulanır.
 
-- [Using deyimlerini Düzenle](#organize-using-directives)
+- [Kullanımı düzenleme](#organize-using-directives)
   - dotnet_sort_system_directives_first
   - dotnet_separate_import_directive_groups
 
 ### <a name="organize-using-directives"></a>Yönergeleri kullanarak düzenleme
 
-Bu biçimlendirme kuralları `using` yönergelerinin ve `Imports` deyimlerinin sıralanmasını ve görüntülenmesini sorun.
+Bu biçimlendirme kuralları yönergelerin ve `using` deyimlerin `Imports` sıralanması ve görüntülenmesiyle ilgilidir.
 
-Örnek *. editorconfig* dosyası:
+Örnek *.editorconfig* dosyası:
 
 ```ini
 # .NET formatting settings
@@ -57,15 +57,15 @@ dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = true
 ```
 
-#### <a name="dotnet_sort_system_directives_first"></a>DotNet\_\_sistemi\_sıralama directives_first
+#### <a name="dotnet_sort_system_directives_first"></a>dotnet\_\_sıralama\_sistemi directives_first
 
 |||
 |-|-|
 | **Kural adı** | dotnet_sort_system_directives_first |
-| **Uygun diller** | C# ve Visual Basic |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-System. * `using` yönergelerini alfabetik olarak sıralayın ve diğer using yönergelerinden önce yerleştirin.<br /><br />`false`-diğer `using` yönergelerinden önce System. * `using` yönergeleri yerleştirmeyin. |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# ve Visual Basic |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Sistem.* `using` yönergelerini alfabetik olarak sıralayın ve bunları diğer yönergelerden önce yerleştirin.<br /><br />`false`- Sistem.* `using` direktiflerini diğer `using` direktiflerden önce yerleştirmeyin. |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -81,15 +81,15 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-#### <a name="dotnet_separate_import_directive_groups"></a>DotNet\_ayrı\_içeri aktarma\_yönerge\_grupları
+#### <a name="dotnet_separate_import_directive_groups"></a>dotnet\_\_ayrı\_\_ithalat direktifi grupları
 
 |||
 |-|-|
 | **Kural adı** | dotnet_separate_import_directive_groups |
-| **Uygun diller** | C# ve Visual Basic |
+| **Geçerli diller** | C# ve Visual Basic |
 | **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.5 |
-| **Değerler** | `true` `using` yönerge grupları arasına boş bir satır koyun.<br /><br />`false`-`using` yönerge grupları arasına boş bir satır yerleştirmeyin. |
-| **Visual Studio varsayılanı** | `false` |
+| **Değer** | `true`- Yönerge grupları `using` arasına boş bir satır yerleştirin.<br /><br />`false`- Yönerge grupları arasına `using` boş bir satır yerleştirmeyin. |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -106,11 +106,11 @@ using System.Threading.Tasks;
 using Octokit;
 ```
 
-## <a name="c-formatting-settings"></a>C#biçimlendirme ayarları
+## <a name="c-formatting-settings"></a>C# biçimlendirme ayarları
 
-Bu bölümdeki biçimlendirme kuralları yalnızca kod için C# geçerlidir.
+Bu bölümdeki biçimlendirme kuralları yalnızca C# koduna uygulanır.
 
-- [Yeni satır seçenekleri](#new-line-options)
+- [Yeni hat seçenekleri](#new-line-options)
   - csharp_new_line_before_open_brace
   - csharp_new_line_before_else
   - csharp_new_line_before_catch
@@ -118,7 +118,7 @@ Bu bölümdeki biçimlendirme kuralları yalnızca kod için C# geçerlidir.
   - csharp_new_line_before_members_in_object_initializers
   - csharp_new_line_before_members_in_anonymous_types
   - csharp_new_line_between_query_expression_clauses
-- [Girintileme seçenekleri](#indentation-options)
+- [Girintisi seçenekleri](#indentation-options)
   - csharp_indent_case_contents
   - csharp_indent_switch_labels
   - csharp_indent_labels
@@ -148,15 +148,15 @@ Bu bölümdeki biçimlendirme kuralları yalnızca kod için C# geçerlidir.
   - csharp_space_before_open_square_brackets
   - csharp_space_between_empty_square_brackets
   - csharp_space_between_square_brackets
-- [Sarlama seçenekleri](#wrap-options)
+- [Kaydırma seçenekleri](#wrap-options)
   - csharp_preserve_single_line_statements
   - csharp_preserve_single_line_blocks
 
-### <a name="new-line-options"></a>Yeni satır seçenekleri
+### <a name="new-line-options"></a>Yeni hat seçenekleri
 
-Bu biçimlendirme kuralları kodu biçimlendirmek için yeni satırların kullanılmasını sağlar.
+Bu biçimlendirme kuralları, kodu biçimlendirmek için yeni satırların kullanılmasıyla ilgilidir.
 
-Örnek *. editorconfig* dosyası:
+Örnek *.editorconfig* dosyası:
 
 ```ini
 # CSharp formatting settings:
@@ -170,17 +170,17 @@ csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 ```
 
-#### <a name="csharp_new_line_before_open_brace"></a>CSharp\_yeni\_satır\_\_önce open_brace
+#### <a name="csharp_new_line_before_open_brace"></a>csharp\_\_yeni\_\_satır önce open_brace
 
-Bu kural, bir açık ayraç `{` önceki kodla aynı satıra veya yeni bir satıra yerleştirilmelidir. Bu kural için, bu kuralın ne zaman uygulanacağını tanımlamak üzere **Yöntemler** veya **Özellikler**gibi **All**, **none**veya bir ya da daha fazla kod öğesi belirtirsiniz. Birden çok kod öğesi belirtmek için bunları virgülle (,) ayırın.
+Bu kural, açık `{` bir ayraç önceki kodla aynı satıra mı yoksa yeni bir satıra mı yerleştirilmesi gerektiğiyle ilgilidir. Bu kural için, bu kuralın ne zaman uygulanması gerektiğini tanımlamak için **tüm**, **yok**veya **yöntemler** veya **özellikler**gibi bir veya daha fazla kod öğesi belirtirsiniz. Birden çok kod öğesi belirtmek için, bunları virgülle (,) ayırın.
 
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_before_open_brace |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `all`-küme ayracın tüm ifadeler için yeni bir satırda olması gerekir ("Allman" stili).<br /><br />`none`-ayraç, tüm ifadeler için aynı satırda olması gerekir ("K & R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers`, `properties`, `types`-küme ayraçlarının belirtilen kod öğesi ("Allman" Style) için yeni bir satırda olması gerekir. |
-| **Visual Studio varsayılanı** | `all` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `all`- Tüm ifadeler ("Allman" stili) için parantezin yeni bir satırda olmasını gerektirir.<br /><br />`none`- Tüm ifadeler için ayraçların aynı satırda olmasını gerektirir ("K&R").<br /><br />`accessors`, `anonymous_methods` `anonymous_types`, `control_blocks` `events`, `indexers` `local_functions` `methods` `object_collection_array_initializers` `properties`, , , `types` , , , , , , , - Parantezin belirtilen kod öğesi ("Allman" stili) için yeni bir satırda olmasını `lambdas`gerektirir. |
+| **Visual Studio varsayılan** | `all` |
 
 Kod örnekleri:
 
@@ -202,15 +202,15 @@ void MyMethod() {
 }
 ```
 
-#### <a name="csharp_new_line_before_else"></a>CSharp\_yeni\_satır\_before_else
+#### <a name="csharp_new_line_before_else"></a>csharp\_\_yeni\_hat before_else
 
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_before_else |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true` `else` deyimlerini yeni bir satıra yerleştirin.<br /><br />`false` `else` deyimlerini aynı satıra yerleştirin. |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- `else` İfadeleri yeni bir satıra yerleştirin.<br /><br />`false`- `else` İfadeleri aynı satıra yerleştirin. |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -231,15 +231,15 @@ if (...) {
 }
 ```
 
-#### <a name="csharp_new_line_before_catch"></a>CSharp\_yeni\_satır\_before_catch
+#### <a name="csharp_new_line_before_catch"></a>csharp\_\_yeni\_hat before_catch
 
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_before_catch |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true` `catch` deyimlerini yeni bir satıra yerleştirin.<br /><br />`false` `catch` deyimlerini aynı satıra yerleştirin. |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- `catch` İfadeleri yeni bir satıra yerleştirin.<br /><br />`false`- `catch` İfadeleri aynı satıra yerleştirin. |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -260,15 +260,15 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_finally"></a>CSharp\_yeni\_satır\_before_finally
+#### <a name="csharp_new_line_before_finally"></a>csharp\_\_yeni\_hat before_finally
 
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_before_finally |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-`finally` deyimlerinin, kapanış ayracından sonra yeni bir satırda olmasını gerektir.<br /><br />`false`-`finally` deyimlerinin kapanış ayracı ile aynı satırda olmasını gerektir. |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- `finally` Kapanış ayracından sonra ifadelerin yeni bir satırda olmasını zorunlu kınlayın.<br /><br />`false`- `finally` İfadelerin kapanış ayracıyla aynı çizgide olmasını gerektirir. |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -294,15 +294,15 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_object_initializers"></a>CSharp\_yeni\_satır\_\_\_\_üye object_initializers
+#### <a name="csharp_new_line_before_members_in_object_initializers"></a>\_\_\_\_csharp yeni satır\_object_initializers üyeleri önce\_
 
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_before_members_in_object_initializers |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-nesne başlatıcılarının üyelerinin ayrı satırlarda olmasını gerektir<br /><br />`false`-nesne başlatıcılarının üyelerinin aynı satırda olması gerekir |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Nesne başharflerinin üyelerinin ayrı satırlarda olmasını zorunlu<br /><br />`false`- Nesne başharflerinin üyelerinin aynı hatta olmasını zorunlu |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -321,15 +321,15 @@ var z = new B()
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>CSharp\_yeni\_satır\_\_\_\_üye anonymous_types
+#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>\_\_\_\_csharp yeni hat\_anonymous_types üyeleri önce\_
 
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_before_members_in_anonymous_types |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-anonim türlerin üyelerinin ayrı satırlarda olmasını gerektir<br /><br />`false`-anonim türlerin üyelerinin aynı satırda olmasını gerektir |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Anonim türlerin üyelerinin ayrı hatlarda olmasını zorunlu<br /><br />`false`- Anonim türlerin üyelerinin aynı hatta olmasını zorunlu |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -353,10 +353,10 @@ var z = new
 |||
 |-|-|
 | **Kural adı** | csharp_new_line_between_query_expression_clauses |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-sorgu ifadesi yan tümcelerinin öğelerinin ayrı satırlarda olmasını gerektir<br /><br />`false`-sorgu ifadesi yan tümcelerinin öğelerin aynı satırda olmasını gerektir |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Sorgu ifade yan tümcelerinin öğelerinin ayrı satırlarda olmasını gerektirme<br /><br />`false`- Sorgu ifade yan tümcelerinin öğelerinin aynı satırda olmasını gerektirir |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -371,11 +371,11 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-### <a name="indentation-options"></a>Girintileme seçenekleri
+### <a name="indentation-options"></a>Girintisi seçenekleri
 
-Bu biçimlendirme kuralları kodu biçimlendirmek için girintileme kullanımını sağlar.
+Bu biçimlendirme kuralları, girintinin kodu biçimlendirmek için kullanılmasıyla ilgilidir.
 
-Örnek *. editorconfig* dosyası:
+Örnek *.editorconfig* dosyası:
 
 ```ini
 # CSharp formatting settings:
@@ -388,18 +388,18 @@ csharp_indent_braces = false
 csharp_indent_case_contents_when_block = true
 ```
 
-#### <a name="csharp_indent_case_contents"></a>CSharp\_girinti\_case_contents
+#### <a name="csharp_indent_case_contents"></a>csharp\_girinti\_case_contents
 
 |||
 |-|-|
 | **Kural adı** | csharp_indent_case_contents |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-`switch` Case içeriğini Girintile<br /><br />`false`-`switch` Case içeriğini girintileme |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Girintisi `switch` servis talebi içeriği<br /><br />`false`- `switch` Kasa içeriğini girintisi yapmayın |
+| **Visual Studio varsayılan** | `true` |
 
-- Bu kural **true**olarak ayarlandığında, ı.
-- Bu kural **false**, d olarak ayarlandığında.
+- Bu kural **doğru**ayarlandığında , i.
+- Bu kural **yanlış**olarak ayarlandığında , d.
 
 Kod örnekleri:
 
@@ -431,15 +431,15 @@ switch(c) {
 }
 ```
 
-#### <a name="csharp_indent_switch_labels"></a>CSharp\_girinti\_switch_labels
+#### <a name="csharp_indent_switch_labels"></a>csharp\_girinti\_switch_labels
 
 |||
 |-|-|
 | **Kural adı** | csharp_indent_switch_labels |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-`switch` etiketleri Girintile<br /><br />`false`-`switch` etiketleri girintileme |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Girintinetiketler `switch`<br /><br />`false`- Etiketleri girintisi yapmayın `switch` |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -471,15 +471,15 @@ default:
 }
 ```
 
-#### <a name="csharp_indent_labels"></a>CSharp\_indent_labels
+#### <a name="csharp_indent_labels"></a>csharp\_indent_labels
 
 |||
 |-|-|
 | **Kural adı** | csharp_indent_labels |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `flush_left` Etiketler en soldaki sütuna yerleştirilir<br /><br />`one_less_than_current` Etiketler geçerli bağlama göre daha az bir girintide yerleştirilir<br /><br />`no_change` Etiketler, geçerli bağlamla aynı girintide yer alır |
-| **Visual Studio varsayılanı** | `no_change` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `flush_left`- Etiketler en soldaki sütuna yerleştirilir<br /><br />`one_less_than_current`- Etiketler, geçerli içeriğe göre bir girintin daha az<br /><br />`no_change`- Etiketler geçerli bağlamla aynı girintilere yerleştirilir |
+| **Visual Studio varsayılan** | `no_change` |
 
 Kod örnekleri:
 
@@ -529,9 +529,9 @@ class C
 |||
 |-|-|
 | **Kural adı** | csharp_indent_block_contents |
-| **Uygun diller** | C# |
-| **Değerler** | `true` - <br /><br />`false` -  |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Değer** | `true` - <br /><br />`false` -  |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -554,9 +554,9 @@ Console.WriteLine("Hello");
 |||
 |-|-|
 | **Kural adı** | csharp_indent_braces |
-| **Uygun diller** | C# |
-| **Değerler** | `true` - <br /><br />`false` -  |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true` - <br /><br />`false` -  |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -579,9 +579,9 @@ static void Hello()
 |||
 |-|-|
 | **Kural adı** | csharp_indent_case_contents_when_block |
-| **Uygun diller** | C# |
-| **Değerler** | `true` - <br /><br />`false` -  |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Değer** | `true` - <br /><br />`false` -  |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -603,9 +603,9 @@ case 0:
 
 ### <a name="spacing-options"></a>Aralık seçenekleri
 
-Bu biçimlendirme kuralları kodu biçimlendirmek için boşluk karakterlerinin kullanılmasını sağlar.
+Bu biçimlendirme kuralları, kodu biçimlendirmek için alan karakterlerinin kullanımıyla ilgilidir.
 
-Örnek *. editorconfig* dosyası:
+Örnek *.editorconfig* dosyası:
 
 ```ini
 # CSharp formatting settings:
@@ -634,15 +634,15 @@ csharp_space_between_empty_square_brackets = false
 csharp_space_between_square_brackets = false
 ```
 
-#### <a name="csharp_space_after_cast"></a>CSharp\_alanı\_after_cast
+#### <a name="csharp_space_after_cast"></a>csharp\_\_uzay after_cast
 
 |||
 |-|-|
 | **Kural adı** | csharp_space_after_cast |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`, bir atama ve değer arasında bir boşluk karakteri yerleştir<br /><br />`false`-atama ve değer arasındaki boşluğu kaldırma |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Bir boşluk karakterini döküm ve değer arasına yerleştirin<br /><br />`false`- Döküm ve değer arasındaki boşluğu kaldırın |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -659,10 +659,10 @@ int y = (int)x;
 |||
 |-|-|
 | **Kural adı** | csharp_space_after_keywords_in_control_flow_statements |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true` bir denetim akışı deyimindeki anahtar sözcükten sonra `for` döngüsü gibi bir boşluk karakteri yerleştirme<br /><br />`false`-`for` döngüsü gibi bir denetim akışı deyimindeki anahtar sözcükten sonra boşluk kaldır |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Döngü gibi `for` bir denetim akışı deyiminde bir anahtar kelimeden sonra boşluk karakterini yerleştirin<br /><br />`false`- `for` Döngü gibi bir kontrol akışı deyimindeki bir anahtar kelimeden sonra alanı kaldırma |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -679,12 +679,12 @@ for(int i;i<x;i++) { ... }
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_parentheses |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `control_flow_statements`-denetim akışı deyimlerinin ayraçları arasına boşluk yerleştir<br /><br />`expressions` ifadelerin parantezleri arasına boşluk yerleştir<br /><br />`type_casts`-tür yayınlarına parantez arasına boşluk yerleştir |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `control_flow_statements`- Kontrol akış tablolarının parantezleri arasında boşluk<br /><br />`expressions`- İfadelerin parantezleri arasına boşluk yerleştirme<br /><br />`type_casts`- Tip dökümlerinde parantezler arasında boşluk yerleştirin |
+| **Visual Studio varsayılan** | `false` |
 
-Bu kuralı atlarsanız veya `control_flow_statements`, `expressions`veya `type_casts`dışında bir değer kullanırsanız, ayar uygulanmaz.
+Bu kuralı atlar veya `control_flow_statements`", " `expressions`veya `type_casts`, , , ayarı dışında bir değer kullanırsanız uygulanmaz.
 
 Kod örnekleri:
 
@@ -699,15 +699,15 @@ var z = ( x * y ) - ( ( y - x ) * 3 );
 int y = ( int )x;
 ```
 
-#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>CSharp\_alanı\_\_iki nokta üst üste\_önce\_inheritance_clause
+#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>inheritance_clause\_kolon\_\_\_\_önce csharp uzay
 
 |||
 |-|-|
 | **Kural adı** | csharp_space_before_colon_in_inheritance_clause |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,7 |
-| **Değerler** | `true` bir tür bildirimindeki tabanların veya arabirimlerin üst üsteden önce bir boşluk karakteri yerleştir<br /><br />`false`-bir tür bildiriminde temeller veya arabirimler için iki noktadan önce boşluğu kaldır |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.7 Sürüm Notları |
+| **Değer** | `true`- Bir tür bildiriminde üsler veya arabirimler için üst üste bir boşluk karakteri yerleştirin<br /><br />`false`- Bir tür bildiriminde bazlar veya arabirimler için üst üste önce boşluk kaldırma |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -735,15 +735,15 @@ class C: I
 }
 ```
 
-#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>CSharp\_alanı\_\_iki nokta üst üste\_sonra\_inheritance_clause
+#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>inheritance_clause\_kolon\_\_\_\_sonra csharp boşluk
 
 |||
 |-|-|
 | **Kural adı** | csharp_space_after_colon_in_inheritance_clause |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,7 |
-| **Değerler** | `true` bir tür bildirimindeki tabanların veya arabirimlerin iki noktadan sonra bir boşluk karakteri yerleştir<br /><br />`false`-bir tür bildirimindeki tabanların veya arabirimlerin iki noktadan sonra boşluğu kaldır |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.7 Sürüm Notları |
+| **Değer** | `true`- Bir tür bildiriminde bazlar veya arabirimler için üst üste sonra bir boşluk karakteri yerleştirin<br /><br />`false`- Bir tür bildiriminde bazlar veya arabirimler için iki nokta üst üste alan kaldırma |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -771,17 +771,17 @@ class C :I
 }
 ```
 
-#### <a name="csharp_space_around_binary_operators"></a>CSharp\_alanı\_etrafında\_binary_operators
+#### <a name="csharp_space_around_binary_operators"></a>binary_operators\_etrafında\_\_csharp boşluk
 
 |||
 |-|-|
 | **Kural adı** | csharp_space_around_binary_operators |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,7 |
-| **Değerler** | `before_and_after`-ikili işleçten önce ve sonra boşluk Ekle<br /><br />`none`-ikili işleçten önce ve sonra boşlukları kaldır<br /><br />`ignore`-ikili operatörlerin çevresindeki boşlukları yoksay |
-| **Visual Studio varsayılanı** | `before_and_after` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.7 Sürüm Notları |
+| **Değer** | `before_and_after`- İkili işleçten önce ve sonra boşluk yerleştirin<br /><br />`none`- İkili işleçten önceki ve sonraki boşlukları kaldırın<br /><br />`ignore`- İkili işleçler etrafında boşluk yoksay |
+| **Visual Studio varsayılan** | `before_and_after` |
 
-Bu kuralı atlarsanız veya `before_and_after`, `none`veya `ignore`dışında bir değer kullanırsanız, ayar uygulanmaz.
+Bu kuralı atlarsanız veya `before_and_after`, veya `none` `ignore`, , , dışında bir değer kullanırsanız, ayar uygulanmaz.
 
 Kod örnekleri:
 
@@ -801,10 +801,10 @@ return x  *  (x-y);
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_method_declaration_parameter_list_parentheses |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-açma parantezinden sonra ve bir yöntem bildirimi parametre listesinin kapatma parantezinden önce bir boşluk karakteri yerleştirin<br /><br />`false`-boşluk karakterlerini açma parantezinden sonra ve bir yöntem bildirimi parametre listesinin kapatma parantezinden önce kaldırın |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Bir boşluk karakterini açılış parantezinden sonra ve yöntem bildirimi parametre listesinin kapanış parantezinden önce yerleştirin<br /><br />`false`- Açılış parantezinden sonra ve yöntem bildirimi parametre listesinin kapanış parantezinden önce boşluk karakterlerini kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -821,10 +821,10 @@ void Bark(int x) { ... }
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_method_declaration_empty_parameter_list_parentheses |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,7 |
-| **Değerler** | `true`-yöntem bildirimi için boş parametre listesi ayraçları içine boşluk Ekle<br /><br />`false`-bir yöntem bildirimi için boş parametre listesi ayraçları içindeki alanı kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.7 Sürüm Notları |
+| **Değer** | `true`- Bir yöntem bildirimi için boş parametre listesi paranteziçinde boşluk ekleme<br /><br />`false`- Bir yöntem bildirimi için boş parametre listesi paranteziçinde boşluk kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -857,9 +857,9 @@ void Goo(int x)
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_method_declaration_name_and_open_parenthesis |
-| **Uygun diller** | C# |
-| **Değerler** | `true` yöntem bildiriminde Yöntem adı ve açma ayracı arasına bir boşluk karakteri yerleştirin<br /><br />`false`-yöntem bildiriminde Yöntem adı ve açma ayracı arasındaki boşluk karakterlerini kaldırın |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Yöntem bildiriminde yöntem adı ile açılış parantezi arasına bir boşluk karakteri yerleştirin<br /><br />`false`- Yöntem bildiriminde yöntem adı ve açılış parantezi arasındaki boşluk karakterlerini kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -876,10 +876,10 @@ void M() { }
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_method_call_parameter_list_parentheses |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-açma parantezinden sonra ve bir yöntem çağrısının kapatma parantezinden önce bir boşluk karakteri yerleştirin<br /><br />`false`-boşluk karakterlerini açma parantezinden sonra ve bir yöntem çağrısının kapatma parantezinden önce kaldırın |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Açılış parantezinden sonra ve bir yöntem çağrısının kapanış parantezinden önce bir boşluk karakteri yerleştirin<br /><br />`false`- Açılış parantezinden sonra ve bir yöntemin kapanış parantezinden önce boşluk karakterlerini çıkarın |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -896,10 +896,10 @@ MyMethod(argument);
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_method_call_empty_parameter_list_parentheses |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,7 |
-| **Değerler** | `true`-boş bağımsız değişken listesi ayraçları içine boşluk Ekle<br /><br />`false`-boş bağımsız değişken listesi ayraçları içindeki alanı kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.7 Sürüm Notları |
+| **Değer** | `true`- Boş bağımsız değişken listesi paranteziçinde boşluk ekleme<br /><br />`false`- Boş bağımsız değişken listesi paranteziçinde boşluk kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -932,10 +932,10 @@ void Goo(int x)
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_method_call_name_and_opening_parenthesis |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,7 |
-| **Değerler** | `true`-Yöntem çağrısı adı ve açma ayracı arasına boşluk Ekle<br /><br />`false`-Yöntem çağrısı adı ve açma ayracı arasındaki boşluğu kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.7 Sürüm Notları |
+| **Değer** | `true`- Yöntem çağrı adı ile açılış parantezi arasında boşluk ekleme<br /><br />`false`- Yöntem çağrı adı ve açılış parantezi arasındaki boşluğu kaldırın |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -968,9 +968,9 @@ void Goo(int x)
 |||
 |-|-|
 | **Kural adı** | csharp_space_after_comma |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-virgülden sonra boşluk Ekle<br /><br />`false`-virgülden sonra boşluk kaldır |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Virgülden sonra boşluk ekleme<br /><br />`false`- Virgülden sonra alanı kaldırma |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -987,9 +987,9 @@ int[] x = new int[] { 1,2,3,4,5 }
 |||
 |-|-|
 | **Kural adı** | csharp_space_before_comma |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-virgülden önce boşluk Ekle<br /><br />`false`-bir virgülden önce boşluğu kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Virgülden önce boşluk ekleme<br /><br />`false`- Virgülden önce alanı kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1006,9 +1006,9 @@ int[] x = new int[] { 1, 2, 3, 4, 5 };
 |||
 |-|-|
 | **Kural adı** | csharp_space_after_dot |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-noktadan sonra boşluk Ekle<br /><br />`false`-noktadan sonra boşluk kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Nokta dan sonra boşluk ekleme<br /><br />`false`- Bir nokta sonra boşluk kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1025,9 +1025,9 @@ this.Goo();
 |||
 |-|-|
 | **Kural adı** | csharp_space_before_dot |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-noktadan önce boşluk Ekle <br /><br />`false`-noktadan önce boşluğu kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Noktadan önce boşluk ekleme <br /><br />`false`- Noktadan önce alanı kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1044,9 +1044,9 @@ this.Goo();
 |||
 |-|-|
 | **Kural adı** | csharp_space_after_semicolon_in_for_statement |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-`for` deyiminde her noktalı virgülden sonra boşluk Ekle<br /><br />`false`-`for` deyiminde her noktalı virgülden sonra boşluk kaldır |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Bir `for` deyimde her yarım kolon dan sonra boşluk yerleştirin<br /><br />`false`- Bir `for` deyimde her yarım kolon sonra boşluk kaldırın |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -1063,9 +1063,9 @@ for (int i = 0;i < x.Length;i++)
 |||
 |-|-|
 | **Kural adı** | csharp_space_before_semicolon_in_for_statement |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-`for` deyiminde her noktalı virgülden önce boşluk Ekle <br /><br />`false`-`for` deyiminde her noktalı virgülden önce boşluk kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Bir `for` deyimde her yarım kolon önce boşluk eklemek <br /><br />`false`- Bir `for` deyimde her yarım kolon önce boşluk kaldırın |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1082,9 +1082,9 @@ for (int i = 0; i < x.Length; i++)
 |||
 |-|-|
 | **Kural adı** | csharp_space_around_declaration_statements |
-| **Uygun diller** | C# |
-| **Değerler** | `ignore`-bildirim deyimlerine fazladan boşluk karakterleri kaldırmayın<br /><br />`false`-bildirim deyimlerine ek boşluk karakterlerini kaldır |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `ignore`- Bildirim beyanlarında fazladan boşluk karakterlerini kaldırma<br /><br />`false`- Bildirim beyanlarında fazladan boşluk karakterlerini kaldırma |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1101,9 +1101,9 @@ int x = 0;
 |||
 |-|-|
 | **Kural adı** | csharp_space_before_open_square_brackets |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-köşeli parantezleri açmadan önce boşluk Ekle `[` <br /><br />`false`-köşeli ayraçları açmadan önce alanı kaldırın `[` |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Kare ayraçları açmadan önce boşluk ekle`[` <br /><br />`false`- Kare ayraçları açmadan önce alanı kaldırın`[` |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1120,9 +1120,9 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_empty_square_brackets |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-boş köşeli ayraçlar arasında boşluk Ekle `[ ]` <br /><br />`false`-boş köşeli ayraçlar arasındaki boşluğu kaldır `[]` |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Boş kare köşeli ayraçlar arasına boşluk ekleme`[ ]` <br /><br />`false`- Boş kare köşeli ayraçlar arasındaki boşluğu kaldırın`[]` |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1139,9 +1139,9 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 |||
 |-|-|
 | **Kural adı** | csharp_space_between_square_brackets |
-| **Uygun diller** | C# |
-| **Değerler** | `true`-boş olmayan köşeli ayraçlar içine boşluk karakterleri ekleyin `[ 0 ]` <br /><br />`false`-boş olmayan köşeli ayraçdaki boşluk karakterlerini kaldırın `[0]` |
-| **Visual Studio varsayılanı** | `false` |
+| **Geçerli diller** | C# |
+| **Değer** | `true`- Boş olmayan kare ayraçlara boşluk karakterleri ekleme`[ 0 ]` <br /><br />`false`- Boş olmayan kare ayraçlarda boşluk karakterlerini kaldırma`[0]` |
+| **Visual Studio varsayılan** | `false` |
 
 Kod örnekleri:
 
@@ -1153,11 +1153,11 @@ int index = numbers[ 0 ];
 int index = numbers[0];
 ```
 
-### <a name="wrap-options"></a>Sarlama seçenekleri
+### <a name="wrap-options"></a>Kaydırma seçenekleri
 
-Bu biçimlendirme kuralları, deyimler ve kod blokları için ayrı satırlara karşı tek satırların kullanımını önemli olarak kullanır.
+Bu biçimlendirme kuralları, deyimler ve kod blokları için ayrı satırlara karşılık tek satırkullanımıyla ilgilidir.
 
-Örnek *. editorconfig* dosyası:
+Örnek *.editorconfig* dosyası:
 
 ```ini
 # CSharp formatting settings:
@@ -1171,10 +1171,10 @@ csharp_preserve_single_line_blocks = true
 |||
 |-|-|
 | **Kural adı** | csharp_preserve_single_line_statements |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-deyimleri ve üye bildirimlerini aynı satırda bırak<br /><br />`false`-deyimleri ve üye bildirimlerini farklı satırlarda bırak |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Beyannameleri ve üye beyannamelerini aynı satırda bırakın<br /><br />`false`- Beyannameleri ve üye beyannamelerini farklı satırlarda bırakın |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -1192,10 +1192,10 @@ string name = "John";
 |||
 |-|-|
 | **Kural adı** | csharp_preserve_single_line_blocks |
-| **Uygun diller** | C# |
-| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15,3 |
-| **Değerler** | `true`-kod bloğunu tek satırda bırak<br /><br />`false`-kod bloğunu ayrı satırlarda bırak |
-| **Visual Studio varsayılanı** | `true` |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** | Visual Studio 2017 sürüm 15.3 |
+| **Değer** | `true`- Kod bloğunu tek satırda bırakın<br /><br />`false`- Ayrı satırlarda kod bloğu bırakın |
+| **Visual Studio varsayılan** | `true` |
 
 Kod örnekleri:
 
@@ -1214,4 +1214,4 @@ public int MyProperty
 
 - [Dil kuralları](editorconfig-language-conventions.md)
 - [Adlandırma kuralları](editorconfig-naming-conventions.md)
-- [Kodlama kuralı ayarlarına EditorConfig için .NET](editorconfig-code-style-settings-reference.md)
+- [EditorConfig için .NET kodlama kuralı ayarları](editorconfig-code-style-settings-reference.md)

@@ -1,6 +1,6 @@
 ---
-title: Yükleme için komut satırı parametresi örnekleri
-description: Bu örnekleri kendi Visual Studio komut satırı yüklemesi oluşturmak için özelleştirin.
+title: Yükleme için komut satırı parametre örnekleri
+description: Visual Studio'nun kendi komut satırı yüklemenizi oluşturmak için bu örnekleri özelleştirin.
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,29 +13,29 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 8fc43cef8526b2ca79bb0b88a1d56ef4f4a2a65a
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77275260"
 ---
-# <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Visual Studio yüklemesi için komut satırı parametresi örnekleri
+# <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Visual Studio kurulumu için komut satırı parametre örnekleri
 
-[Visual Studio 'yu yüklemek için komut satırı parametrelerinin nasıl kullanılacağını](use-command-line-parameters-to-install-visual-studio.md)göstermek için, gereksinimlerinize uyacak şekilde özelleştirebileceğiniz birkaç örnek aşağıda verilmiştir.
+[Visual Studio'u yüklemek için komut satırı parametrelerinin](use-command-line-parameters-to-install-visual-studio.md)nasıl kullanılacağını göstermek için, gereksinimlerinize uyacak şekilde özelleştirebileceğiniz birkaç örnek aşağıda verilmiştir.
 
-Her örnekte `vs_enterprise.exe`, `vs_professional.exe` ve `vs_community.exe`, indirme işlemini başlatan küçük (yaklaşık 1 MB) bir dosya olan Visual Studio önyükleyici 'nin ilgili sürümünü temsil eder. Farklı bir sürümü kullanıyorsanız, uygun önyükleyici adıyla değiştirin.
+Her `vs_enterprise.exe`örnekte, `vs_professional.exe` `vs_community.exe` ve indirme işlemini başlatan küçük (yaklaşık 1MB) dosya olan Visual Studio bootstrapper, ilgili sürümünü temsil eder. Farklı bir sürüm kullanıyorsanız, uygun bootstrapper adını değiştirin.
 
 > [!NOTE]
-> Tüm komutlar, yönetimsel ayrıcalık ve işlemin yükseltilmiş isteminden başlamamışsa istemi görüntülenecek olan bir kullanıcı hesabı denetimi gerektirir.
+> Tüm komutlar yönetim yüksekliği gerektirir ve işlem yükseltilmiş bir istemden başlatılmazsa Kullanıcı Hesabı Denetimi istemi görüntülenir.
 >
 > [!NOTE]
-> Birden çok satırı tek bir komutta birleştirmek için komut satırının sonundaki `^` karakterini kullanabilirsiniz. Alternatif olarak, yalnızca bu satırlara birlikte tek bir satır yerleştirebilirsiniz. PowerShell 'de, eş değer (`` ` ``) karakteridir.
+> Birden çok `^` satırı tek bir komuta dönüştürmek için komut satırının sonundaki karakteri kullanabilirsiniz. Alternatif olarak, bu satırları tek bir satırüzerine bir araya getirebilirsiniz. PowerShell'de eşdeğeri backtick`` ` ``( ) karakteridir.
 
-Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
+Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenlerinin listeleri için [Visual Studio iş yükü ve bileşen işleri sayfasına](workload-and-component-ids.md) bakın.
 
-## <a name="using---installpath"></a>--İnstallPath kullanma
+## <a name="using---installpath"></a>Kullanma --installPath
 
-* Visual Studio, en az bir örneğini hiçbir etkileşimli istemleri ancak görüntülenen ilerleme durumu ile yükleyin:
+* Etkileşimli istemler ancak görüntülenen ilerleme ile Visual Studio'nun en az bir örneğini yükleyin:
 
   ```cmd
    vs_enterprise.exe --installPath C:\minVS ^
@@ -43,7 +43,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    --passive --norestart
   ```
 
-* Hiçbir etkileşimli istemleri ancak görüntülenen ilerleme durumu ile komut satırını kullanarak bir Visual Studio örneği güncelleştirin:
+* Etkileşimli istemler olmadan, görüntülenerek komut satırını kullanarak Visual Studio örneğini güncelleştirin:
 
    ```cmd
    vs_enterprise.exe --update --quiet --wait
@@ -51,9 +51,9 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    ```
 
   > [!NOTE]
-  > Her iki komut de önerilir. İlk komut, Visual Studio yükleyicisi güncelleştirir. İkinci komut, Visual Studio örneğini güncelleştirir. Bir kullanıcı hesabı denetimi iletişim önlemek için komut istemini yönetici olarak çalıştırın.
+  > Her iki komut da tavsiye edilir. İlk komut Visual Studio Yükleyici'yi güncelleştirir. İkinci komut Visual Studio örneğini güncelleştirir. Kullanıcı Hesabı Denetimi iletişim kutusunu önlemek için komut istemini Yönetici olarak çalıştırın.
 
-* Bir masaüstü Visual Studio örneğini sessiz bir şekilde, yalnızca ürün yüklendiğinde döndüren Fransızca Dil paketi yükleyin.
+* Visual Studio'nun bir masaüstü örneğini sessizce, Fransızca dil paketiyle yükleyin ve yalnızca ürün yüklendiğinde geri dönün.
 
   ```cmd
    vs_enterprise.exe --installPath C:\desktopVS ^
@@ -62,9 +62,9 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    --includeRecommended --quiet --wait
   ```
 
-## <a name="using---wait"></a>--Wait kullanma
+## <a name="using---wait"></a>Kullanma --bekletme
 
-* Sonraki komut yürütülmeden önce Visual Studio yükleyicisi 'nin tamamlanmasını beklemek için Batch dosyalarında veya betiklerinizde kullanın. Toplu iş dosyaları için, bir `%ERRORLEVEL%` ortam değişkeni, [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfasına belgelendiği gibi komutun dönüş değerini içerir. Bazı komut yardımcı programları, tamamlama için beklemek ve yükleyicinin dönüş değerini almak için ek parametreler gerektirir. Aşağıda, ' Start-Process ' PowerShell betiği komutuyla kullanılan ek parametrelerin bir örneği verilmiştir:
+* Bir sonraki komut yürütülmeden önce Visual Studio yükleyicisinin tamamlanmasını beklemek için toplu dosyalarda veya komut dosyalarında kullanın. Toplu iş dosyaları `%ERRORLEVEL%` için bir ortam değişkeni, Visual Studio sayfasını yüklemek için Komut Satırı Kullan parametrelerinde belirtildiği gibi [komutun](use-command-line-parameters-to-install-visual-studio.md) geri dönüş değerini içerir. Bazı komut yardımcı programları tamamlanmayı beklemek ve yükleyicinin geri dönüş değerini almak için ek parametreler gerektirir. PowerShell komut komutu 'Start-Process' ile kullanılan ek parametrelere bir örnek aşağıda verilmiştir:
 
    ```cmd
    start /wait vs_professional.exe --installPath "C:\VS" --passive --wait > nul
@@ -87,11 +87,11 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
     $process.WaitForExit()
    ```
 
-* İlk '--Wait ' Visual Studio Yükleyicisi tarafından kullanılır ve ikinci '-Wait ' ' Start-Process ' tarafından tamamlanmasını beklemek için kullanılır. '-Passby ' parametresi, dönüş değeri için yükleyicinin çıkış kodunu kullanmak üzere ' Start-Process ' tarafından kullanılır.
+* İlk '--bekle' Visual Studio Installer tarafından kullanılır ve ikinci '-Bekle' tamamlanmayı beklemek için 'Başlat-İşlemi' tarafından kullanılır. '-PassThru' parametresi, 'Başlat-İşlemi' tarafından, yükleyicinin çıkış kodunu iade değeri için kullanmak için kullanılır.
 
-## <a name="using---layout"></a>Kullanarak--düzeni
+## <a name="using---layout"></a>Kullanma --düzeni
 
-* Visual Studio çekirdek Düzenleyicisi'ni (en az Visual Studio yapılandırması) indirin. Yalnızca İngilizce dil paketi içerir:
+* Visual Studio çekirdek düzenleyicisini (en az Visual Studio yapılandırması) indirin. Yalnızca İngilizce dil paketini ekleyin:
 
   ```cmd
    vs_community.exe --layout C:\VS ^
@@ -99,7 +99,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    --add Microsoft.VisualStudio.Workload.CoreEditor
   ```
 
-* .NET Masaüstü ve .NET web iş yüklerinin yanı sıra tüm önerilen bileşenleri ve GitHub uzantısı'nı indirin. Yalnızca İngilizce dil paketi içerir:
+* Önerilen tüm bileşenler ve GitHub uzantısı ile birlikte .NET masaüstü ve .NET web iş yüklerini indirin. Yalnızca İngilizce dil paketini ekleyin:
 
   ```cmd
    vs_community.exe --layout C:\VS ^
@@ -110,28 +110,28 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
    --includeRecommended
   ```
 
-## <a name="using---all"></a>Kullanarak--tümü
+## <a name="using---all"></a>Kullanma --tüm
 
-* Visual Studio Enterprise sürümünde bulunan tüm iş yüklerinin ve bileşenlerin etkileşimli bir yüklemesini başlatın:
+* Visual Studio Enterprise sürümünde bulunan tüm iş yüklerinin ve bileşenlerinin etkileşimli bir yüklemesini başlatın:
 
    ```cmd
    vs_enterprise.exe --all
    ```
 
-## <a name="using---includerecommended"></a>--İncludeRecommended kullanma
+## <a name="using---includerecommended"></a>Kullanma --includeRecommended
 
-* Node. js geliştirme desteğiyle, Visual Studio Community Edition 'ın zaten yüklü olduğu bir makineye ikinci, adlandırılmış bir Visual Studio Professional örneğini yükleyin:
+* İkinci bir yükleyin, Visual Studio Community sürümü zaten yüklü bir makinede Visual Studio Professional adlı örnek, Node.js geliştirme desteği ile:
 
    ```cmd
    vs_professional.exe --installPath C:\VSforNode ^
    --add Microsoft.VisualStudio.Workload.Node --includeRecommended --nickname VSforNode
   ```
 
-## <a name="using---remove"></a>Kullanarak--Kaldır
+## <a name="using---remove"></a>Kullanma --kaldırma
 
 ::: moniker range="vs-2017"
 
-* Profil oluşturma araçları bileşeni yüklü varsayılan Visual Studio örneği kaldırın:
+* Profil Oluşturma Araçları bileşenini varsayılan yüklü Visual Studio örneğinden kaldırın:
 
   ```cmd
    vs_enterprise.exe modify ^
@@ -144,7 +144,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 ::: moniker range="vs-2019"
 
-* Profil oluşturma araçları bileşeni yüklü varsayılan Visual Studio örneği kaldırın:
+* Profil Oluşturma Araçları bileşenini varsayılan yüklü Visual Studio örneğinden kaldırın:
 
   ```cmd
    vs_enterprise.exe modify ^
@@ -155,65 +155,65 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 ::: moniker-end
 
-## <a name="using---path"></a>Kullanarak--yolu
+## <a name="using---path"></a>Kullanma -yol
 
 ::: moniker range="vs-2017"
 
-Bu komut satırı parametreleri **15,7 ' de yenidir**. Bunlarla ilgili daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfası.
+Bu komut satırı parametreleri **15.7'de yenidir.** Bunlar hakkında daha fazla bilgi için Visual Studio sayfasını yüklemek için komut satırı parametrelerini [kullan'a](use-command-line-parameters-to-install-visual-studio.md) bakın.
 
 ::: moniker-end
 
-* Yükleme, önbellek ve paylaşılan yollarını kullanarak:
+* Yükleme, önbellek ve paylaşılan yolları kullanma:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS" --path cache="C:\VS\cache" --path shared="C:\VS\shared"`
 
-* Yalnızca yükleme ve önbellek yollarını kullanarak:
+* Yalnızca yükleme ve önbellek yollarını kullanma:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS" --path cache="C:\VS\cache"`
 
-* Yalnızca yükleme ve paylaşılan yolları kullanarak:
+* Yalnızca yükleme ve paylaşılan yolları kullanma:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS" --path shared="C:\VS\shared"`
 
-* Yükleme yolu kullanarak:
+* Yalnızca yükleme yolunu kullanma:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS"`
 
-## <a name="using-export"></a>Dışarı aktarma hizmetini kullanarak
+## <a name="using-export"></a>Dışa aktarmayı kullanma
 
 ::: moniker range="vs-2017"
 
-Bu komut satırı komutu **15,9 sürümünde yenidir**. BT hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfası.
+Bu komut satırı komutu **15.9'da yenidir.** Bu konuda daha fazla bilgi için Visual Studio sayfasını yüklemek için komut satırı parametrelerini [kullan'a](use-command-line-parameters-to-install-visual-studio.md) bakın.
 
 ::: moniker-end
 
-* Bir yükleme seçimini kaydetmek için dışarı aktarma kullanarak:
+* Seçimi yüklemeden kaydetmek için dışa aktarmayı kullanma:
 
   ```cmd
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --installPath "C:\VS" --config "C:\.vsconfig"
   ```
 
-* Sıfırdan özel seçimini kaydetmek için dışarı aktarma kullanarak:
+* Özel seçimi sıfırdan kaydetmek için dışa aktarmayı kullanma:
 
   ```cmd
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --config "C:\.vsconfig"
   ```
 
-## <a name="using---config"></a>--Config'ı kullanma
+## <a name="using---config"></a>Kullanma --config
 
 ::: moniker range="vs-2017"
 
-Bu komut satırı parametresi **15,9 ' de yenidir**. BT hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfası.
+Bu komut satırı parametresi **15.9'da yenidir.** Bu konuda daha fazla bilgi için Visual Studio sayfasını yüklemek için komut satırı parametrelerini [kullan'a](use-command-line-parameters-to-install-visual-studio.md) bakın.
 
 ::: moniker-end
 
-* Önceden kaydedilen yükleme yapılandırma dosyasından iş yüklerini ve bileşenlerini yüklemek için--config'ı kullanma:
+* Daha önce kaydedilmiş bir yükleme yapılandırma dosyasındaki iş yüklerini ve bileşenleri yüklemek için --config kullanma:
 
   ```cmd
   vs_enterprise.exe --config "C:\.vsconfig" --installPath "C:\VS"
   ```
 
-* Mevcut bir yüklemeye iş yüklerinin ve bileşenlerin eklemek için--config'ı kullanma:
+* Varolan bir yüklemeye iş yükleri ve bileşenler eklemek için --config kullanma:
 
   ```cmd
   vs_enterprise.exe modify --installPath "C:\VS" --config "C:\.vsconfig"
@@ -224,6 +224,6 @@ Bu komut satırı parametresi **15,9 ' de yenidir**. BT hakkında daha fazla bil
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
-* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
-* [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio'nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)

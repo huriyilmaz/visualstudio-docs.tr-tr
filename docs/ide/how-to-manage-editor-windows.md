@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: düzenleyici pencerelerini yönetme'
+title: 'Nasıl Yapılsın: Düzenleyici pencerelerini yönetme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,47 +14,47 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4af752c99c87bf470922db03bf5d4746151fa8f2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591027"
 ---
-# <a name="how-to-manage-editor-windows"></a>Nasıl yapılır: düzenleyici pencerelerini yönetme
+# <a name="how-to-manage-editor-windows"></a>Nasıl Yapılsın: Düzenleyici pencerelerini yönetme
 
-Tek seferde çeşitli konumlarda kod üzerinde çalışabilirsiniz. Bunu bir düzenleyici penceresini bölerek veya birkaç Düzenleyici penceresi örneğini açarak yapın.
+Kod üzerinde aynı anda çeşitli konumlarda çalışabilirsiniz. Bunu, düzenleyici penceresini bölerek veya düzenleyici pencerelerinin birkaç örneğini açarak yapın.
 
 > [!NOTE]
-> Tüm Düzenleyici pencereleri birden çok örneği desteklemez.
+> Tüm düzenleyici pencereleri birden çok örneği desteklemez.
 
-## <a name="split-an-editor-window"></a>Bir düzenleyici penceresini bölme
+## <a name="split-an-editor-window"></a>Düzenleyici pencereyi bölme
 
-Bir düzenleyici penceresinin bir örneği, daha kolay düzenleme için iki ayrı görünüme ayrılabilir.
+Düzenleyici penceresinin bir örneği, daha kolay düzenleme için iki ayrı görünüme ayrılabilir.
 
-### <a name="to-split-a-pane"></a>Bölmeyi bölme
+### <a name="to-split-a-pane"></a>Bölmeyi bölmek için
 
-1. Bu bileşene odaklanmak için düzenleyici penceresinin içine tıklayın.
+1. Odaklanmak için düzenleyici penceresi içinde tıklatın.
 
-2. **Pencere** menüsünde **Böl**' ü seçin.
+2. **Pencere** menüsünden **Böl'i**seçin.
 
-     Düzenle alanı, bir bölücü çubukla ayrılmış iki bölmeye ayırır. Etkin belgenin farklı parçalarını aynı anda görüntülemek ve düzenlemek için bu bölmeleri bağımsız olarak kaydırabilirsiniz. Bir bölmede yapılan tüm değişiklikler diğeri de yansıtılır.
+     Düzenleme alanı, bir ayırıcı çubuğuyla ayrılmış iki bölmeye ayrılır. Etkin belgenin farklı bölümlerini aynı anda görüntülemek ve bunları aynı anda görüntülemek ve bunları düzenliyor için bu bölmeleri bağımsız olarak kaydırabilirsiniz. Bir bölmede yapılan değişiklikler diğerine yansıtılır.
 
     > [!TIP]
-    > Bir bölmeyi diğerine daha büyük yapmak için, bölücü çubuğunu yukarı veya aşağı sürükleyin.
+    > Bir bölmeyi diğerinden daha büyük yapmak için, ayırıcı çubuğu yukarı veya aşağı sürükleyin.
 
-### <a name="to-return-to-single-pane-view"></a>Tek bölmeli görünüme geri dönmek için
+### <a name="to-return-to-single-pane-view"></a>Tek bölme görünümüne dönmek için
 
-- **Pencere** menüsünden **bölmeyi kaldır**' ı seçin.
+- **Pencere** menüsünden **Split'i kaldır'ı**seçin.
 
-## <a name="create-new-windows"></a>Yeni pencereler oluştur
+## <a name="create-new-windows"></a>Yeni pencereler oluşturma
 
-Ayrıca, bir düzenleyici penceresinin birden çok örneğini de oluşturabilirsiniz. Bu özellik, farklı bölümleri aynı anda ayrı, tam boyutlu bir düzenleyici penceresinde görüntüleyebilmeniz ve düzenleyebilmeniz için bir düzenleyicinin birden fazla örneğinde uzun bir belge açmanıza olanak tanır.
+Ayrıca, düzenleyici penceresinin birden çok örneğini de oluşturabilirsiniz. Bu özellik, farklı bölümleri ayrı, tam boyutlu düzenleyici pencerelerinde aynı anda görüntüleyebilmeniz ve bunları yapabilmeniz için uzun bir belgeyi düzenleyicinin birden fazla örneğinde açmanızı sağlar.
 
-- **Pencere** menüsünde **yeni pencere**' ye tıklayın.
+- **Pencere** menüsünde **Yeni Pencere'yi**tıklatın.
 
-   Düzenleyicinin yeni bir sekmeli örneği eklendi.
+   Düzenleyicinin yeni bir sekmeli örneği eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md)

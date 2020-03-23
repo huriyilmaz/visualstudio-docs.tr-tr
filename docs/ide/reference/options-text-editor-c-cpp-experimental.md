@@ -12,59 +12,59 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7e239ad3d2091f334f18ec00a367fc47d5c21db3
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77278703"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Seçenekler, Metin Düzenleyici, C/C++, Deneysel
 
-Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gözatma veritabanı ile ilgili davranışı değiştirebilirsiniz. Bu özellikler gerçekten deneysel bir sürümündedir ve daha sonraki bir sürümde Visual Studio 'dan değiştirilebilir veya kaldırılabilir.
+Bu seçenekleri değiştirerek, C veya C++'da programlama yaparken IntelliSense ve tarama veritabanıyla ilgili davranışı değiştirebilirsiniz. Bu özellikler gerçekten deneyseldir ve ileride yayınlanacak bir sürümde Visual Studio'dan değiştirilebilir veya kaldırılabilir.
 
 ::: moniker range="vs-2017"
 
-Bu makalede, Visual Studio 2017 seçenekleri açıklanmaktadır. Visual Studio 2015 için içindekiler tablosunun üzerindeki seçicide **2015** ' i seçin.
+Bu makalede Visual Studio 2017'deki seçenekler açıklanmaktadır. Visual Studio 2015 için, içindekiler tablosunun üstündeki seçicide **2015'i** seçin.
 
 ::: moniker-end
 
-Bu özellik sayfasına erişmek için **Ctrl**+**Q** tuşlarına basarak arama kutusunu etkinleştirin ve **deneysel**yazın. Arama, ilk birkaç harften sonra sayfayı bulur. Ayrıca, **Araçlar** > **Seçenekler** ' i ve **metin düzenleyicisini**genişleterek, ardından **C/C++** ve sonra **deneysel**' u seçerek bu işe da ulaşabilirsiniz.
+Bu özellik sayfasına erişmek için, arama kutusunu etkinleştirmek için **Ctrl**+**Q** tuşuna basın ve ardından **deneysel**yazın. Arama, ilk birkaç harften sonra sayfayı bulur. Ayrıca **Araçlar** > **Seçenekleri** seçerek ve **Metin Düzenleyicisi**, sonra C / C **++** genişleterek ve daha sonra **Deneysel**seçerek alabilirsiniz.
 
-Bu özellikler, Visual Studio yüklemesinde mevcuttur.
+Bu özellikler Visual Studio yüklemesinde mevcuttur.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. [Bkz. Visual Studio IDE'yi Kişiselleştirin.](../../ide/personalizing-the-visual-studio-ide.md)
 
-## <a name="enable-predictive-intellisense"></a>Tahmine dayalı IntelliSense 'i etkinleştir
+## <a name="enable-predictive-intellisense"></a>Predictive IntelliSense etkinleştirin
 
-Tahmine dayalı IntelliSense, yalnızca bağlamla ilgili sonuçları görmeniz için IntelliSense açılan listesinde görüntülenen sonuçların sayısını sınırlar. Örneğin, `int x =` yazıp IntelliSense açılan listesini çağırdığınızda yalnızca tamsayılar döndüren tamsayılar veya işlevler görürsünüz. Tahmine dayalı IntelliSense varsayılan olarak kapalıdır.
+Predictive IntelliSense, IntelliSense açılır listedeki görüntülenmiş sonuç sayısını sınırlar, böylece yalnızca bağlamda alakalı sonuçlar görürsünüz. Örneğin, IntelliSense açılır düşüşünü yazıp `int x =` çağırırsanız, yalnızca tamsayı döndüren tamsayılar veya işlevler görürsünüz. Predictive IntelliSense varsayılan olarak kapatılır.
 
 ::: moniker range="vs-2017"
 
-## <a name="enable-faster-project-load"></a>Daha hızlı proje yüklemeyi etkinleştir
+## <a name="enable-faster-project-load"></a>Daha hızlı proje yüklemesini etkinleştirme
 
-Visual Studio 2017 sürüm 15,3 itibariyle, bu özellik **Proje önbelleğe almayı etkinleştir** olarak adlandırılır ve [VC + + proje ayarları](vcpp-project-settings-projects-and-solutions-options-dialog-box.md) Özellik sayfasına taşınır.
+Visual Studio 2017 sürüm 15.3 itibariyle bu özellik **Proje Önbelleğe Alma Özelliği** olarak adlandırılır ve [VC++ Proje Ayarları](vcpp-project-settings-projects-and-solutions-options-dialog-box.md) özellik sayfasına taşınmıştır.
 
-Bu seçenek, Visual Studio 'Nun proje verilerini önbelleğe almasını sağlar, böylece projeyi bir sonraki açışınızda proje dosyalarından yeniden bilgi işlem yerine önbelleğe alınmış verileri yükleyebilir. Önbelleğe alınmış verilerin kullanılması, proje yükleme süresini önemli ölçüde hızlandırabilir.
+Bu seçenek, Visual Studio'nun proje verilerini önbelleğe almalarını sağlar, böylece projeyi bir dahaki sefere açtığınızda önbelleğe alınmış verileri proje dosyalarından yeniden hesaplamak yerine yükleyebilir. Önbelleğe alınan verilerin kullanılması, proje yükleme süresini önemli ölçüde hızlandırabilir.
 
 ::: moniker-end
 
-## <a name="additional-features-in-the-visual-studio-marketplace"></a>Visual Studio Market ek özellikler
+## <a name="additional-features-in-the-visual-studio-marketplace"></a>Visual Studio Marketplace'teki ek özellikler
 
-[Visual Studio Market](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Downloads)ek metin Düzenleyicisi özelliklerine gidebilirsiniz. Bir örnek, aşağıdakileri destekleyen [ C++ hızlı düzeltmelerde](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.CQuickFixes2017)verilmiştir:
+[Visual Studio Marketplace'teki](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Downloads)ek metin düzenleyici özelliklerine göz atabilirsiniz. Aşağıdakileri destekleyen [C++ Hızlı Düzeltmeler'e](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.CQuickFixes2017)örnek olarak şunlar verilmiştir:
 
-- **Eksik #include Ekle** -kodunuzda bilinmeyen semboller için ilgili #include önerilir
+- **Eksik #include ekleme** - Kodunuzda bilinmeyen semboller için ilgili #include önerir
 
-- Önceki öğe gibi **ad alanı/tam niteleme simgesini kullanarak ekleme** , ancak ad alanları için
+- **Ad alanı/Tam eleme simgesini kullanarak ekleme** - Önceki öğeyi beğenin, ancak ad alanları için
 
-- **Eksik noktalı virgül Ekle**
+- **Eksik semicolon ekle**
 
-- **Çevrimiçi yardım** -hata iletileriniz için çevrimiçi Yardım ara
+- **Çevrimiçi yardım** - Hata iletileriniz için çevrimiçi yardım arama
 
-- ve daha fazlası...
+- Ve daha fazlası...
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dile Özgü Düzenleyici Seçeneklerini Ayarlama](../../ide/reference/setting-language-specific-editor-options.md)
-- [İçinde C++ yeniden düzenleme (VC blogu)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/
+- [C++ içinde Yeniden Düzenleme (VC Blog)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/
 )

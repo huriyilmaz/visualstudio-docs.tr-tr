@@ -1,54 +1,54 @@
 ---
 title: Derleme ve Oluşturma
-description: Bu makalede Mac için Visual Studio ' de projelerin ve çözümlerin nasıl derlenmesi ve oluşturulacağı açıklanmaktadır
+description: Bu makalede, Mac için Visual Studio'da nasıl derleyip proje ve çözümler üretilir
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
 ms.openlocfilehash: 0165594b4c2d77005c2a9ef921cce457f6f2d0f6
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74983610"
 ---
-# <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac için Visual Studio derleme ve oluşturma
+# <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac için Visual Studio'da derleme ve oluşturma
 
-Mac için Visual Studio, projenizin geliştirilmesi sırasında uygulama derlemek ve derlemeler oluşturmak için kullanılabilir. Tür uyuşmazlıklarını ve diğer derleme zamanı hatalarını belirleyebilmeniz için kodunuzun erken ve sık derlenmesi ve oluşturulması önemlidir.
+Mac için Visual Studio, projenizin geliştirilmesi sırasında uygulamalar oluşturmak ve derlemeler oluşturmak için kullanılabilir. Türü uyuşmazlıklarını ve diğer derleme zamanı hatalarını tanımlayabilmeniz için kodunuzu erken ve sık sık derlemeniz ve oluşturmanız önemlidir.
 
-## <a name="building-from-the-ide"></a>IDE içinden derleme
+## <a name="building-from-the-ide"></a>IDE'den bina
 
-Mac için Visual Studio kullanmak, derleme işlevselliği üzerinde size denetim sağlarken yapıları anında oluşturup çalıştırmanıza olanak sağlar. Mac için Visual Studio, temel yapı sistemi olarak MSBuild 'i kullanır.
+Visual Studio for Mac'i kullanmak, yapı oluşturmanızı ve çalıştırmanızı anında sağlarken, yapı işlevselliği üzerinde denetim sağlar. Mac için Visual Studio, altta yatan yapı sistemi olarak MSBuild'i kullanır.
 
-IDE 'de oluşturulan tüm projeler ve çözümler, derlemelerin bağlamını tanımlayan bir varsayılan derleme yapılandırmasına sahip olacaktır. Bu konfigürasyonlar düzenlenebilir veya kendi kendinize de oluşturabilirsiniz. Bu yapılandırmaların oluşturulması veya değiştirilmesi proje dosyasını otomatik olarak güncelleştirir ve bu, daha sonra projenizi derlemek için MSBuild tarafından kullanılır.
+IDE'de oluşturulan tüm Projeler ve Çözümler, yapılar bağlamını tanımlayan varsayılan bir yapı yapılandırmasına sahip olacaktır. Bu yapılandırmalar düzenlenebilir veya kendi yapılandırmanızı oluşturabilirsiniz. Bu yapılandırmaları oluşturmak veya değiştirmek, projenizi oluşturmak için MSBuild tarafından kullanılan proje dosyasını otomatik olarak günceller.
 
-IDE 'de projeler ve çözümler oluşturma hakkında daha fazla bilgi için, [projeleri ve çözümleri oluşturma ve Temizleme](building-and-cleaning-projects-and-solutions.md) Kılavuzu ' na bakın.
+IDE'de proje ve çözümlerin nasıl inşa edileöğretilenhakkında daha fazla bilgi [için, Proje ve Çözümler Oluşturma ve Temizleme](building-and-cleaning-projects-and-solutions.md) kılavuzuna bakın.
 
-Mac için Visual Studio, aşağıdakileri yapmak için de kullanılabilir:
+Mac için Visual Studio da aşağıdakileri yapmak için kullanılabilir:
 
-* Çıkış yolunu değiştirin. Bu, projenizin seçeneklerinde düzenlenmiştir:
+* Çıktı yolunu değiştirin. Bu, Projenizin seçeneklerinde düzenlenir:
 
-    ![Çıkış yolunu değiştir](media/compiling-and-building-image4.png)
+    ![Çıktı yolunu değiştirme](media/compiling-and-building-image4.png)
 
-* Yapı çıkışının ayrıntı düzeyini değiştirin:
+* Yapı çıktısının ayrıntılılığını değiştirin:
 
-    ![Yapı ayrıntı düzeyini Değiştir](media/compiling-and-building-image5.png)
+    ![Yapı ayrıntılılığını değiştirme](media/compiling-and-building-image5.png)
 
-* Oluşturmadan veya temizlemeden önce, sırasında veya sonrasında özel komutlar ekleyin:
+* Bina veya Temizleme den önce, sırasında veya sonrasında Özel Komutlar ekleyin:
 
     ![özel komutlar ekleme](media/compiling-and-building-image6.png)
 
-## <a name="building-from-command-line"></a>Komut satırından oluşturma
+## <a name="building-from-command-line"></a>Komut satırından bina
 
-MSBuild derleme altyapısını komut satırı aracılığıyla uygulamalar oluşturmak için kullanabilirsiniz.
+Komut satırı üzerinden uygulama oluşturmak için MSBuild Build Engine'i kullanabilirsiniz.
 
-MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [MSBuild](/visualstudio/msbuild/msbuild) içeriği.
+MSBuild'i kullanma hakkında daha fazla bilgi için [MSBuild](/visualstudio/msbuild/msbuild) içeriğine bakın.
 
-## <a name="building-from-azure-pipelines"></a>Azure Pipelines oluşturma
+## <a name="building-from-azure-pipelines"></a>Azure Boru Kaynaklarından Bina
 
-* [Xamarin uygulamanızı derleme](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
-* [Xamarin ile sürekli tümleştirme](https://developer.xamarin.com/guides/cross-platform/ci/)
+* [Xamarin Uygulamanızı Oluşturun](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
+* [Xamarin ile Sürekli Entegrasyon](https://developer.xamarin.com/guides/cross-platform/ci/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derle ve derle (Windows üzerinde Visual Studio)](/visualstudio/ide/compiling-and-building-in-visual-studio)
+- [Derleme ve oluşturma (Windows'ta Visual Studio)](/visualstudio/ide/compiling-and-building-in-visual-studio)

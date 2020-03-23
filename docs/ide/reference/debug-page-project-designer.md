@@ -15,77 +15,77 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595728"
 ---
 # <a name="debug-page-project-designer"></a>Hata Ayıklama Sayfası, Proje Tasarımcısı
 
-Visual Basic veya C# projede hata ayıklama davranışının özelliklerini ayarlamak Için **Proje Tasarımcısı** 'nın **hata ayıklama** sayfasını kullanın.
+Visual Basic veya C# projesinde hata ayıklama davranışı için özellikleri ayarlamak için **Proje Tasarımcısı'nın** **Hata Ayıklama** sayfasını kullanın.
 
-**Hata ayıklama** sayfasına erişmek için **Çözüm Gezgini**bir proje düğümü seçin. **Proje** menüsünde **\<ProjectName > Özellikler**' i seçin. **Proje Tasarımcısı** göründüğünde, **Hata Ayıkla** sekmesine tıklayın.
+**Hata Ayıklama** sayfasına erişmek için **Çözüm Gezgini'nde**bir proje düğümü seçin. **Proje** menüsünde ** \<ProjectName> Properties'i**seçin. Proje **Tasarımcısı** göründüğünde **Hata Ayıklama** sekmesini tıklatın.
 
 > [!NOTE]
-> Bu konu, UWP uygulamaları için geçerli değil. UWP uygulamaları için [hata ayıklama oturumu başlatma ( C#vb C++ , ve XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) bölümüne bakın.
+> Bu konu UWP uygulamaları için geçerli değildir. UWP uygulamaları için [hata ayıklama oturumu (VB, C#, C++ ve XAML) başlat'a](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) bakın.
 
-## <a name="configuration-and-platform"></a>Yapılandırma ve platform
+## <a name="configuration-and-platform"></a>Yapılandırma ve Platform
 
-Aşağıdaki seçenekler, görüntülenecek veya değiştirilecek olan yapılandırmayı ve platformu seçmenizi sağlar.
+Aşağıdaki seçenekler, görüntülemek veya değiştirmek için yapılandırmayı ve platformu seçmenize olanak sağlar.
 
 **Yapılandırma**
 
-Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**veya **Tüm yapılandırmalarda**olabilir.
+Hangi yapılandırma ayarlarının görüntülenecin veya değiştirilen leri belirtir. Ayarlar Hata **Ayıklama** (varsayılan), **Sürüm**veya **Tüm Yapılandırmalar**olabilir.
 
 **Platform**
 
-Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Seçenekler **herhangi BIR CPU** (varsayılan), **x64**ve **x86**içerebilir.
+Hangi platform ayarlarının görüntüleneceğin veya değiştirilen leri belirtir. Seçenekler herhangi **bir CPU** (varsayılan), **x64**ve **x86**içerebilir.
 
-## <a name="start-action"></a>Başlatma eylemi
+## <a name="start-action"></a>Eylemi başlatma
 
-**Başlangıç eylemi** , uygulamanın hatası ayıklandığında başlatılacak öğeyi gösterir: proje, özel program, URL veya Nothing. Varsayılan olarak, bu seçenek **Project 'ı başlatacak**şekilde ayarlanır. **Hata ayıklama** sayfasındaki **başlangıç eylemi** ayarı `StartAction` özelliğinin değerini belirler.
+**Başlangıç eylemi,** uygulama hata ayıklandığında başlayacak öğeyi gösterir: proje, özel bir program, bir URL veya hiçbir şey. Varsayılan olarak, bu seçenek **projeyi başlatacak**şekilde ayarlanır. **Hata Ayıklama** sayfasındaki **Eylem Başlat** ayarı `StartAction` özelliğin değerini belirler.
 
-**Projeyi Başlat**
+**Projeyi başlat**
 
-Uygulamanın hatası ayıklandığında yürütülebilir dosyanın (Windows uygulama ve konsol uygulaması projeleri için) başlatılıp başlatılabileceğini belirtmek için bu seçeneği belirleyin. Bu seçenek varsayılan olarak seçilidir.
+Uygulama debugged olduğunda yürütülebilir (Windows Application ve Console Application projeleri için) başlatılması gerektiğini belirtmek için bu seçeneği belirleyin. Bu seçenek varsayılan olarak seçilidir.
 
-**Dış programı Başlat**
+**Harici programı başlatın**
 
-Uygulamanın hatası ayıklandığında belirli bir programın başlatılmasını belirtmek için bu seçeneği belirleyin.
+Uygulama debugged olduğunda belirli bir programın başlatılması gerektiğini belirtmek için bu seçeneği belirleyin.
 
-**Tarayıcıyı URL ile Başlat**
+**URL ile tarayıcıyı başlatın**
 
-Uygulamanın hatası ayıklandığında belirli bir URL 'ye erişilmesi gerektiğini belirtmek için bu seçeneği belirleyin.
+Uygulama debugged olduğunda belirli bir URL erişilebilir olması gerektiğini belirtmek için bu seçeneği belirleyin.
 
-## <a name="start-options"></a>Başlatma seçenekleri
+## <a name="start-options"></a>Başlangıç seçenekleri
 
 **Komut satırı bağımsız değişkenleri**
 
-Bu metin kutusuna hata ayıklama için kullanılacak komut satırı bağımsız değişkenlerini girin.
+Bu metin kutusuna, hata ayıklama için kullanılacak komut satırı bağımsız değişkenlerini girin.
 
 **Çalışma dizini**
 
-Bu metin kutusuna projenin başlatılacağı dizini girin. Veya bir dizin seçmek için ( **...** ) düğmesine tıklayın.
+Bu metin kutusuna, projenin başlatılan dizini girin. Veya bir dizin seçmek için Gözat düğmesine (**...**) tıklayın.
 
-**Uzak makineyi kullan**
+**Uzak makineyi kullanma**
 
-Uygulamanın uzak bir bilgisayardan hata ayıklaması yapmak için, bu onay kutusunu işaretleyin ve metin kutusuna uzak bilgisayarın yolunu girin.
+Uygulamayı uzak bir bilgisayardan hata ayıklamak için bu onay kutusunu seçin ve metin kutusundaki uzak bilgisayara giden yolu girin.
 
-## <a name="debugger-engines"></a>Hata ayıklayıcı motorları
+## <a name="debugger-engines"></a>Hata ayıklama motorları
 
-**Yerel kod hata ayıklamasını etkinleştir**
+**Yerel kod hata ayıklama etkinleştirme**
 
-Bu seçenek, yerel kod hata ayıklamanın desteklenip desteklenmediğini belirtir. COM nesnelerine çağrılar yapıyorsanız veya projenizi çağıran yerel kodda yazılmış özel bir program başlatırsanız ve yerel kodda hata ayıklaması yapmanız gerekiyorsa bu onay kutusunu işaretleyin. Yönetilmeyen kodun hata ayıklamasını devre dışı bırakmak için bu onay kutusunu temizleyin. Bu onay kutusu varsayılan olarak temizlenir.
+Bu seçenek, yerel kodun hata ayıklamanın desteklenip desteklenmediğini belirtir. COM nesnelerine arama yapıyorsanız veya projenizi çağıran yerel kodla yazılmış özel bir program başlatıyorsanız ve yerel kodu ayıklamanız gerekiyorsa, bu onay kutusunu seçin. Yönetilmeyen kodun hata ayıklamadevre dışı devre dışı kalmak için bu onay kutusunu temizleyin. Bu onay kutusu varsayılan olarak temizlenir.
 
-**SQL Server hata ayıklamayı etkinleştir**
+**SQL Server hata ayıklama etkinleştirme**
 
-Visual Basic uygulamanızdan SQL yordamlarının hata ayıklamasını etkinleştirmek veya devre dışı bırakmak için bu onay kutusunu işaretleyin veya temizleyin. Bu onay kutusu varsayılan olarak temizlenir.
+Visual Basic uygulamanızdan SQL yordamlarının hata ayıklanmasını etkinleştirmek veya devre dışı kakmak için bu onay kutusunu seçin veya temizleyin. Bu onay kutusu varsayılan olarak temizlenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklayıcıya ilk bakış](../../debugger/debugger-feature-tour.md)
-- [C# Hata Ayıklama Yapılandırması Proje Ayarları](../../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [C# Hata Ayıklama Yapılandırmaları için Proje Ayarları](../../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Görsel Temel Hata Ayıklama Yapılandırması için Proje Ayarları](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Nasıl yapılır: Sınırlı İzinler ile ClickOnce Uygulamasında Hata Ayıklama](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
 - [Nasıl Yapılır: Yapılandırmaları Oluşturma ve Düzenleme](../../ide/how-to-create-and-edit-configurations.md)

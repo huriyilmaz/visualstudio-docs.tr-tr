@@ -1,5 +1,5 @@
 ---
-title: Bir yük testi çalışma ayarı için Zamanlama Ayrıntıları Depolama özelliği
+title: Yük Testi Çalıştırma Ayarı Için Zamanlama Ayrıntıları Depolama Özelliği
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,56 +10,56 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fbd3b2a7d7e56870a994af288f5887f1d86256af
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591651"
 ---
-# <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>Nasıl yapılır: yük testi çalışma ayarı için zamanlama ayrıntıları depolama özelliğini belirtme
+# <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>Nasıl yapilir: Yük testi ayarı için zamanlama ayrıntıları depolama özelliğini belirtin
 
-İle yükleme testinizi oluşturduktan sonra **Yeni Yük Testi Sihirbazı**, kullanabileceğiniz **Yük Testi Düzenleyicisi** test ihtiyaçlarınızı ve hedeflerinizi karşılamak için ayarları değiştirmek için.
+**Yeni Yük Testi Sihirbazı**ile yük testinizi oluşturduktan sonra, test ihtiyaçlarınızı ve hedeflerinizi karşılamak için ayarları değiştirmek için Yük Testi Düzenleyicisi'ni kullanabilirsiniz. **Load Test Editor**
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Bir çalışma ayarının düzenleyebileceğiniz **Zamanlama Ayrıntıları Deposu** özellik değerine **özellikleri** penceresi. **Zamanlama Ayrıntıları Deposu** özelliği aşağıdaki seçeneklerden birine ayarlanabilir:
+Çalışma ayarının Zamanlama Ayrıntıları **Depolama** özelliğinin değerini **Özellikler** penceresinde ayarlayabilirsiniz. **Zamanlama Ayrıntıları Depolama** özelliği aşağıdaki seçeneklerden herhangi biri olarak ayarlanabilir:
 
-- **Tüm Bireysel Ayrıntılar:** toplar ve her test, hareket ve test sırasında verilen sayfa için bireysel zamanlama verilerini depolar.
+- **Tüm Bireysel Ayrıntılar:** Test sırasında verilen her test, işlem ve sayfa için ayrı zamanlama verilerini toplar ve depolar.
 
   > [!NOTE]
-  > **Tüm Bireysel Ayrıntılar** seçeneği, yük testi sonuçlarınızda Sanal kullanıcı veri bilgisini etkinleştirmek için seçilmelidir. Daha fazla bilgi için [Ayrıntılar görünümünde sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
+  > **Tüm Bireysel Ayrıntılar** seçeneği, yük testi sonuçlarınızda sanal kullanıcı veri bilgilerini etkinleştirmek için seçilmelidir. Daha fazla bilgi için ayrıntılar [görünümünde sanal kullanıcı etkinliğini analiz et'](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)e bakın.
 
-- **Hiçbiri:** herhangi bir zamanlama ayrıntısı toplamaz. Ancak, ortalama değerler hala kullanılabilirdir.
+- **Yok:** Herhangi bir bireysel zamanlama ayrıntıları toplamaz. Ancak, ortalama değerler hala kullanılabilir.
 
-- **Yalnızca İstatistikler:** bağımsız zamanlama verisini sadece yüzdelik veri depolar. Bu, yer kaynaklarından tasarruf sağlar.
+- **Yalnızca İstatistikler:** Tek tek zamanlama verilerini, ancak yalnızca yüzdelik veri olarak depolar. Bu, alan kaynaklarını kaydeder.
 
-  **Zamanlama Ayrıntıları Depolama özelliğini dikkate alınacak noktalar**
+  **Zamanlama Ayrıntıları Depolama Özelliği için Dikkat Edilecek Noktalar**
 
-  Varsa **Zamanlama Ayrıntıları Deposu** özelliği etkinse, sonra Yük testi sırasında her bir bireysel test, hareket ve sayfa yürütülme zamanı yükleme testi sonuçları deposunda depolanır. Bu 90'ıncı ve 95 yüzdelik veri gösterilmesini sağlar **Yük Testi Çözümleyicisi** içinde **testleri**, **işlemleri**, ve **sayfaları** tablolar.
+  Zamanlama **Ayrıntıları Depolama** özelliği etkinleştirilirse, yükleme testi sırasında her bir testi, hareketi ve sayfayı yürütme süresi yük testi sonuçları deposunda depolanır. Bu, **Testler,** **İşlemler**ve **Sayfalar** tablolarında Yük **Testi Çözümleyicisi'nde** 90 ve 95 yüzdelik verilerin gösterilmesini sağlar.
 
-  Varsa **Zamanlama Ayrıntıları Deposu** özelliği etkinleştirilmişse, değerini ayarlayarak ya da **StatisticsOnly** veya **AllIndividualDetails**, tüm bireysel testler, sayfalar ve hareketler zamanlanır ve bireysel zamanlama verisinden yüzdelik veri hesaplanır. Fark **StatisticsOnly** seçeneği ile yüzdelik veri hesaplandıktan sonra bireysel zamanlama verileri depodan silinir. Bu zamanlama detayları kullanıldığında deposunda gereken alan miktarını azaltır. Ancak, bu durumda, SQL araçları kullanarak zamanlama ayrıntı verilerini farklı yollarla işlemek isteyebilirsiniz **AllIndividualDetails** seçeneği kullanılmalıdır, böylece zamanlama ayrıntı verileri bu işlem için kullanılabilir. Ayrıca, özelliği ayarlamanız **AllIndividualDetails**, kullanan sanal kullanıcı etkinliğini çözümleyebilirsiniz **sanal kullanıcı aktivite grafiği** içinde **Yük Testi Çözümleyicisi** yük testi çalışmayı tamamladıktan sonra. Daha fazla bilgi için [Ayrıntılar görünümünde sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
+  Zamanlama **Ayrıntıları Depolama** özelliği etkinleştirilirse, değerini **StatisticsOnly** veya **AllIndividualDetails**olarak ayarlayarak, tüm tek tek testler, sayfalar ve hareketler zamanlanır ve yüzdelik veriler tek tek zamanlama verilerinden hesaplanır. Aradaki fark, **StatisticsOnly** seçeneğiyle, yüzdelik veriler hesaplandıktan sonra, tek tek zamanlama verilerinin depodan silinmiş olmasıdır. Bu, zamanlama ayrıntıları kullanıldığında depoda gereken alan miktarını azaltır. Ancak, zamanlama ayrıntısı verilerini SQL araçlarını kullanarak başka şekillerde işlemek isteyebilirsiniz, bu durumda **AllIndividualDetails** seçeneği bu işlem için zamanlama ayrıntısı verilerinin kullanılabilmesi için kullanılmalıdır. Ayrıca, özelliği **AllIndividualDetails**olarak ayarlarsanız, yük testi çalışma tamamlandıktan sonra **Yük Testi Çözümleyicisi'ndeki** Sanal Kullanıcı Etkinlik **Grafiği'ni** kullanarak sanal kullanıcı etkinliğini çözümleyebilirsiniz. Daha fazla bilgi için ayrıntılar [görünümünde sanal kullanıcı etkinliğini analiz et'](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)e bakın.
 
-  Zamanlama ayarları verisini saklamak için yük testi sonuçları deposunda gereken alan miktarı, özellikle daha uzun yük testleri için çok büyük olabilir. Aynı zamanda verileri depoda depolanan bu veriler yük testi yürütmesini, bitirene kadar yükleme testi aracısında depolanır sonunda, yük testi sonuçları deposu uzun olduğundan yük testi bu verileri depolamak için de süre. **Zamanlama Ayrıntıları Deposu** özelliği varsayılan olarak etkindir. Bu test ortamınızın sorunu ise, ayarlamak isteyebilirsiniz **Zamanlama Ayrıntıları Deposu** için **hiçbiri**.
+  Zamanlama ayrıntıları verilerini depolamak için yük testi sonuçları deposunda gereken alan miktarı, özellikle daha uzun çalışan yük testleri için çok büyük olabilir. Ayrıca, bu verileri yük testinin sonundaki yük testi sonuçları deposunda depolama süresi daha uzundur, çünkü bu veriler yük testi yürütme tamamlanana kadar yük testi aracılarında depolanır ve bu süre içinde veriler depoya saklanır. **Zamanlama Ayrıntıları Depolama** özelliği varsayılan olarak etkinleştirilir. Bu, test ortamınız için bir sorunsa, **Zamanlama Ayrıntıları Depolamasını** **Yok**olarak ayarlamak isteyebilirsiniz.
 
-  Verilerin depolandığı zamanlama ayrıntıları *LoadTestItemResults.dat* dosya çalıştırma sırasında ve yükleme testi tamamlandıktan sonra denetleyiciye geri gönderilir. Uzun süre çalışan bir yük testi için dosya boyutu büyüktür. Aracı makinede yeterli disk alanı yoksa, bu bir sorun olacaktır.
+  Zamanlama ayrıntıları verileri çalışma sırasında *LoadTestItemResults.dat* dosyasında saklanır ve yük testi tamamlandıktan sonra denetleyiciye geri gönderilir. Uzun süre çalışan bir yük testi için dosyanın boyutu büyüktür. Aracı makinesinde yeterli disk alanı yoksa, bu bir sorun olacaktır.
 
-  Bir projeyi Visual Studio Yük testinin önceki bir sürümden yükseltiyorsanız, tam ayrıntılı toplamayı etkinleştirmek için aşağıdaki yordamı kullanın.
+  Bir projeyi Visual Studio yükleme testinin önceki sürümünden yükseltiyorsanız, tam ayrıntı toplamayı etkinleştirmek için aşağıdaki yordamı kullanın.
 
-## <a name="to-configure-the-timing-details-storage-property-in-a-load-test"></a>Bir yük testi içinde zamanlama ayrıntıları depolama özelliğini yapılandırmak için
+## <a name="to-configure-the-timing-details-storage-property-in-a-load-test"></a>Yükleme testinde zamanlama ayrıntıları depolama özelliğini yapılandırmak için
 
-1. Bir yük testi, Yük Testi Düzenleyicisi'nde açın.
+1. Yük testi düzenleyicisinde bir yük testi açın.
 
-2. Genişletin **çalıştırma ayarları** düğüm yük testinde.
+2. Yük testinde **Ayarlar** düğümlerini genişletin.
 
-3. Örneğin, yapılandırmak istediğiniz çalıştırma ayarlarını seçin **çalıştırma Ayarları1 [etkin]** .
+3. Yapılandırmak istediğiniz çalıştır ayarlarını seçin (örneğin **Ayarlar1'ı Çalıştır[Etkin]**.
 
-4. Açık **özellikleri** penceresi. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
+4. **Özellikler** Penceresini açın. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
 
-5. Altında **sonuçları** kategorisi seçin **Zamanlama Ayrıntıları Deposu** özelliğini tıklatın ve **Tüm Bireysel Ayrıntılar**.
+5. **Sonuçlar** kategorisi altında, **Zamanlama Ayrıntıları Depolama** özelliğini seçin ve Tüm **Bireysel Ayrıntılar'ı**seçin.
 
-     Yapılandırmasını tamamladıktan sonra **Tüm Bireysel Ayrıntılar** ayarını **Zamanlama Ayrıntıları Deposu** özelliğini yükleme çalıştırabilirsiniz görüntülemek ve test **sanal kullanıcı aktivite grafiği**. Daha fazla bilgi için [nasıl yapılır: yük testi sırasında sanal kullanıcıların ne yaptıklarını çözümleme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md).
+     **Zamanlama Ayrıntıları Depolama** özelliği için Tüm Bireysel **Ayrıntılar** ayarını yapılandırdıktan sonra, yük testinizi çalıştırabilir ve Sanal Kullanıcı **Etkinlik Grafiği'ni**görüntüleyebilirsiniz. Daha fazla bilgi için [bkz: Nasıl yapılır: Sanal kullanıcıların yükleme testi sırasında ne yaptığını analiz](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayrıntılar görünümünde sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
-- [İzlenecek yol: sorunları yalıtmak için sanal kullanıcı aktivite Grafiği'ni kullanma](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)
+- [Ayrıntılar görünümünde sanal kullanıcı etkinliğini analiz edin](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
+- [Walkthrough: Sorunları yalıtmak için Sanal Kullanıcı Etkinlik Grafiği'ni kullanma](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)

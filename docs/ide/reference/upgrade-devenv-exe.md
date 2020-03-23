@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5bb2b296d8728587c9aa3c22b7a670d89612eff1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596430"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 
-Çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını, bu dosyalar için geçerli Visual Studio biçimlerine güncelleştirir.
+Çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını bu dosyalar için geçerli Visual Studio biçimleriyle güncelleştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,31 +29,31 @@ ms.locfileid: "75596430"
 devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 - *SolutionFile*
 
-  Bir çözümün tamamını ve projelerini yükseltiyorsanız gereklidir. Çözüm dosyasının yolu ve adı. Yalnızca çözüm dosyasının adını veya çözüm dosyasının tam yolunu ve adını girebilirsiniz. Adlı klasör veya dosya henüz yoksa, oluşturulur.
+  Tüm çözümü ve projelerini yükseltiyorsanız gereklidir. Çözüm dosyasının yolu ve adı. Çözüm dosyasının adını veya tam bir yolu ve çözüm dosyasının adını girebilirsiniz. Adlandırılmış klasör veya dosya henüz yoksa oluşturulur.
 
-- *ProjectFile*
+- *Proje Dosyası*
 
-  Tek bir projeyi yükseltiyorsanız gereklidir. Çözüm içindeki bir proje dosyasının yolu ve adı. Yalnızca proje dosyasının adını veya proje dosyasının tam yolunu ve adını girebilirsiniz. Adlı klasör veya dosya henüz yoksa, oluşturulur.
+  Tek bir projeyi yükseltiyorsanız gereklidir. Çözüm içindeki proje dosyasının yolu ve adı. Proje dosyasının adını veya tam bir yolu ve proje dosyasının adını girebilirsiniz. Adlandırılmış klasör veya dosya henüz yoksa oluşturulur.
 
-- `/Out` *outputFilename*
+- `/Out`*OutputFilename*
 
-  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
+  İsteğe bağlı. Aracın çıktısını göndermek istediğiniz bir dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yedeklemeler otomatik olarak oluşturulur ve geçerli dizinde oluşturulan yedekleme adlı bir dizine kopyalanır.
+Yedeklemeler otomatik olarak oluşturulur ve geçerli dizinde oluşturulan Yedekleme adlı bir dizine kopyalanır.
 
-Kaynak denetimli çözümlerin veya projelerin yükseltibilmeleri için önce kullanıma alınması gerekir.
+Kaynak kontrollü çözümler veya projeler yükseltilmeden önce kullanıma alınmalıdır.
 
-`/Upgrade` anahtarının kullanılması Visual Studio 'Yu açmaz. Yükseltmenin sonuçları, çözüm veya projenin geliştirme dili için yükseltme raporunda görülebilir. Hata veya kullanım bilgisi döndürülmedi. Visual Studio 'da projeleri yükseltme hakkında daha fazla bilgi için bkz. [bağlantı noktası, geçirme ve Visual Studio projelerini yükseltme](../../porting/port-migrate-and-upgrade-visual-studio-projects.md).
+`/Upgrade` Anahtarı kullanmak Visual Studio'yu açmaz. Yükseltmenin sonuçları, çözümün veya projenin geliştirme dili için Yükseltme Raporu'nda görülebilir. Hiçbir hata veya kullanım bilgisi döndürülür. Visual Studio'daki projeleri yükseltme hakkında daha fazla bilgi için [Bkz.](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, "MyProject. sln" adlı bir çözüm dosyasını yükseltir.
+Bu örnek, "MyProject.sln" adlı bir çözüm dosyanı yükseltir.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MyProject\MyProject.sln" /upgrade

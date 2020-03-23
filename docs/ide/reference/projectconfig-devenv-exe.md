@@ -21,15 +21,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e8bb4b2860d40828a96e25ec6e6c73d947dd60c0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567664"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv.exe)
 
-`/Project` bağımsız değişkeninde adlı projeyi derlediğinizde, temizledikten, yeniden oluşturduğunuzda veya dağıttığınızda uygulanacak bir proje derleme yapılandırması belirtir.
+Bağımsız değişkende adı geçen projeyi oluştururken, temizlediğinizde, yeniden inşa `/Project` ettiğinizde veya dağıtırken uygulanacak bir proje yapılandırması belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,43 +37,43 @@ ms.locfileid: "75567664"
 devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 - *SolutionName*
 
-  Gerekli. Çözüm dosyasının tam yolu ve adı.
+  Gereklidir. Çözüm dosyasının tam yolu ve adı.
 
 - {`/Build`|`/Clean`|`/Deploy`|`/Rebuild`}
 
-  Gerekli. Projeyi [oluşturur](build-devenv-exe.md), [temizler](clean-devenv-exe.md), [dağıtır](deploy-devenv-exe.md)veya yeniden [oluşturur](rebuild-devenv-exe.md) .
+  Gereklidir. [Projeyi oluşturur,](build-devenv-exe.md) [temizler,](clean-devenv-exe.md) [dağıtır](deploy-devenv-exe.md)veya [yeniden oluşturur.](rebuild-devenv-exe.md)
 
 - *SolnConfigName*
 
-  İsteğe bağlı. *SolutionName*içinde adlı çözüme uygulanacak Çözüm yapılandırmasının adı (örneğin, `Debug` veya `Release`). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32`). Bu bağımsız değişken belirtilmemişse veya boş bir dize (`""`) ise, araç çözümün etkin yapılandırmasını kullanır.
+  İsteğe bağlı. *SolutionName'de*adı geçen `Debug` çözüme uygulanacak çözüm yapılandırmasının adı (örneğin veya) `Release` Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir `Debug|Win32`(örneğin, ). Bu bağımsız değişken belirtilmemişse`""`veya boş bir dize ise ( ), araç çözümün etkin yapılandırmasını kullanır.
 
-- `/Project` *ProjName*
+- `/Project`*ProjName*
 
-  İsteğe bağlı. Çözüm içindeki bir proje dosyasının yolu ve adı. Projenin görünen adını veya *SolutionName* klasöründen proje dosyasına göreli bir yol girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
+  İsteğe bağlı. Çözüm içindeki proje dosyasının yolu ve adı. Projenin görüntü adını veya *ÇözümAdı* klasöründen proje dosyasına göreli bir yol girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
 
-- `/ProjectConfig` *Projconfigname*
+- `/ProjectConfig`*ProjConfigName*
 
-  İsteğe bağlı. Adlı `/Project` uygulanacak projenin derleme yapılandırma adı (`Debug` veya `Release`gibi). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32`).
+  İsteğe bağlı. Projenin yapı yapılandırma adı (gibi `Debug` `Release`veya) `/Project` adlandırılmış uygulanacak. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir `Debug|Win32`(örneğin, ).
 
-- `/Out` *outputFilename*
+- `/Out`*OutputFilename*
 
-  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
+  İsteğe bağlı. Aracın çıktısını göndermek istediğiniz bir dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`/ProjectConfig` anahtarı, `/Build`,/`Clean`, `/Deploy`veya `/Rebuild` komutunun bir parçası olarak `/Project` anahtarla kullanılmalıdır.
+`/ProjectConfig` Anahtar, `/Project` anahtarla birlikte , / `/Build``Clean`, `/Deploy`veya `/Rebuild` komutun bir parçası olarak kullanılmalıdır.
 
-Boşluk içeren dizeleri çift tırnak içine alın.
+Çift tırnak içinde boşluklar içeren dizeleri içine.
 
-Hatalar da dahil olmak üzere derlemeler için Özet bilgiler, komut penceresinde veya `/Out` anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
+Hatalar da dahil olmak üzere yapılariçin özet bilgiler komut penceresinde veya `/Out` anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki komut, `MySolution`içinde `Debug` proje derleme yapılandırması kullanarak proje `CSharpWinApp`oluşturur:
+Aşağıdaki komut, proje `CSharpWinApp`yapı yapılandırmasını `Debug` kullanarak `MySolution`projeyi oluşturur:
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
@@ -82,9 +82,9 @@ devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /proj
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [/Project (devenv. exe)](../../ide/reference/project-devenv-exe.md)
-- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
-- [/Clean (devenv. exe)](../../ide/reference/clean-devenv-exe.md)
-- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/Deploy (devenv. exe)](../../ide/reference/deploy-devenv-exe.md)
-- [/Out (devenv. exe)](../../ide/reference/out-devenv-exe.md)
+- [/Proje (devenv.exe)](../../ide/reference/project-devenv-exe.md)
+- [/Yapı (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Temiz (devenv.exe)](../../ide/reference/clean-devenv-exe.md)
+- [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)
+- [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

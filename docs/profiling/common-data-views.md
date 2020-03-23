@@ -1,5 +1,5 @@
 ---
-title: Ortak veri görünümleri | Microsoft Docs
+title: Ortak Veri Görünümleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,47 +13,47 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 39af1975dc3bcb0f5df729579ca1af38fa60160f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777835"
 ---
 # <a name="common-data-views"></a>Ortak veri görünümleri
-Bu bölüm, tüm profil oluşturma yöntemleri için ortak olan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri içerir.
+Bu bölümde, profil oluşturma yöntemlerinde ortak olan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri bulunur.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Özet görünümü](../profiling/summary-view.md)
+- [Özet görünüm](../profiling/summary-view.md)
 
- Özet görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ Özet görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
-- [Arayan/çağrılan görünümü](../profiling/caller-callee-view.md)
+- [Arayan/callee görünümü](../profiling/caller-callee-view.md)
 
- Çağrı ağacı görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ Çağrı Ağacı görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
 - [Çağrı ağacı görünümü](../profiling/call-tree-view.md)
 
- Çağrı ağacı görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ Çağrı Ağacı görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
-- [Modüller görünümü](../profiling/modules-view.md)
+- [Modülgörünümü](../profiling/modules-view.md)
 
- Modüller görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ Modüller görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
-- [İşlevler görünümü](../profiling/functions-view.md)
+- [Fonksiyonlar görünümü](../profiling/functions-view.md)
 
- Işlevlerin görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ İşlevler görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
-- [Satırlar Görünümü](../profiling/lines-view.md)
+- [Satır görünümü](../profiling/lines-view.md)
 
- Satır görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ Satırlar görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
-- [Yönerge işaretçileri (IP) görünümü](../profiling/instruction-pointers-ips-view.md)
+- [Yönerge işaretçileri (IP' ler) görünümü](../profiling/instruction-pointers-ips-view.md)
 
- Yönerge Işaretçisi (IP) görünümünü ve raporunu açıklar. Veri sütunları, profil oluşturma yöntemine bağlıdır.
+ Yönerge İşaretçisi (IP) görünümünü ve raporunu açıklar. Veri sütunları profil oluşturma yöntemine bağlıdır.
 
 - [İşlem görünümü](../profiling/process-view.md)
 
- İşlem ve iş parçacığı başlangıç ve bitiş zamanlarını listeler.
+ İşlem ve iş parçacığı başlangıç ve bitiş saatlerini listeler.
 
 - [İşaretler görünümü](../profiling/marks-view.md)
 
@@ -64,10 +64,10 @@ Bu bölüm, tüm profil oluşturma yöntemleri için ortak olan profil oluşturu
 
  Örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri.
 
-- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
+- [Enstrümantasyon yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
 
- İzleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri.
+ Enstrümantasyon yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri.
 
-- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)
+- [.NET bellek veri görünümleri](../profiling/dotnet-memory-data-views.md)
 
- .NET bellek toplama kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri.
+ .NET bellek koleksiyonu kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri.

@@ -16,32 +16,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c864a10af9ad15d47e2342bb148af464b8f2a0d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591508"
 ---
 # <a name="options-dialog-box-visual-studio"></a>Seçenekler iletişim kutusu (Visual Studio)
 
-**Seçenekleri** iletişim kutusu ihtiyaçlarınıza tümleşik geliştirme ortamı (IDE) yapılandırmanıza olanak sağlar. Örneğin, projeleriniz için bir varsayılan kaydetme konumu kurmak, varsayılan görünümünü ve davranışını Windows alter ve sık kullanılan komutlar için kısayollar oluşturmanıza. Ayrıca seçenekleri geliştirme diliniz ve platformunuz için özgü vardır. Erişebildiğiniz **seçenekleri** gelen **Araçları** menüsü.
+**Seçenekler** iletişim kutusu, tümleşik geliştirme ortamını (IDE) gereksinimlerinize göre yapılandırmanızı sağlar. Örneğin, projeleriniz için varsayılan bir kaydet konumu oluşturabilir, pencerelerin varsayılan görünümünü ve davranışını değiştirebilir ve sık kullanılan komutlar için kısayollar oluşturabilirsiniz. Geliştirme dilinize ve platformunuza özel seçenekler de vardır. **Araçlar** menüsünden **Seçenekler'e** erişebilirsiniz.
 
-## <a name="layout-of-the-options-dialog-box"></a>Seçenekler iletişim kutusu düzeni
+## <a name="layout-of-the-options-dialog-box"></a>Seçenekler iletişim kutusunun düzeni
 
-**Seçenekleri** iletişim kutusu, iki bölüme ayrılmıştır: sol ve sağ taraftaki görüntüleme alanı bir gezinti bölmesi. Ağaç denetimi Gezinti bölmesinde, ortam, metin düzenleyici, kaynak denetimi, projeler ve çözümler gibi klasör düğümleri içerir. İçerdiği seçenekler sayfalarını listelemek için herhangi bir klasör düğümünü genişletin. Belirli bir sayfa için düğümü seçin, seçeneklerini görünüm alanında görünür.
+**Seçenekler** iletişim kutusu iki bölüme ayrılmıştır: solda bir gezinti bölmesi ve sağda bir görüntü alanı. Gezinti bölmesindeki ağaç denetimi, Çevre, Metin Düzenleyicisi, Projeler ve Çözümler ve Kaynak Denetimi gibi klasör düğümlerini içerir. İçindebulunduğu seçeneklerin sayfalarını listelemek için herhangi bir klasör düğümünü genişletin. Belirli bir sayfanın düğümünü seçtiğinizde, seçenekleri görüntü alanında görünür.
 
-Özellik belleğe yüklenene kadar bir IDE özelliği için seçenekleri Gezinti bölmesinde görünmez. Bu nedenle, son tamamlandı olarak görüntülenen yeni bir oturum başlatmak gibi aynı seçeneklere görüntülenmeyebilir. Bir proje oluşturun veya belirli bir uygulamayı kullanan bir komut çalıştırdığınızda, uygun seçenekleri için düğümleri için Seçenekler iletişim kutusu eklenir. Bunlar, IDE özelliği bellekte kaldığı sürece seçenekleri ardından kullanılabilecektir eklendi.
+Özellik belleğe yüklenene kadar bir IDE özelliği seçenekleri gezinti bölmesinde görünmez. Bu nedenle, en son sona ererken görüntülenen yeni bir oturuma başlarken aynı seçenekler görüntülenmeyebilir. Bir proje oluşturduğunuzda veya belirli bir uygulamayı kullanan bir komut çalıştırdığınızda, ilgili seçenekler için düğümler Seçenekler iletişim kutusuna eklenir. Bu eklenen seçenekler, IDE özelliği bellekte kaldığı sürece kullanılabilir durumda kalır.
 
 > [!NOTE]
-> Bazı ayar koleksiyonlarından, Seçenekler iletişim kutusu Gezinti bölmesinde görünen sayfaların sayısını kapsam. Olası tüm sayfaları görüntülemek için seçtiğiniz **tüm ayarları göster**.
+> Bazı ayarlar koleksiyonları, Seçenekler iletişim kutusunun gezinti bölmesinde görünen sayfa sayısını gösterir. **Tüm ayarları göster'i**seçerek tüm olası sayfaları görüntülemeyi seçebilirsiniz.
 
-## <a name="how-options-are-applied"></a>Seçenekler nasıl uygulanır
+## <a name="how-options-are-applied"></a>Seçenekler nasıl uygulanır?
 
-Tamam'ı tıklatarak **seçenekleri** iletişim kutusu üzerindeki bütün sayfaların tüm ayarlar kaydeder. Herhangi bir sayfa üzerinde İptal'i tıklatarak, yaptığınız diğer dahil tüm değişiklik isteklerini iptal **seçenekleri** sayfaları. Seçenek ayarlarına yapılan olanlar gibi bazı değişiklikler [yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusu](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)yalnızca sonra close etkili ve Visual Studio'yu yeniden açın.
+**Seçenekler** iletişim kutusunda Tamam'ı tıklattığınızda tüm sayfalardaki tüm ayarları kaydeder. Herhangi bir sayfada İptal'i tıklattığınızda, diğer **Seçenekler** sayfalarında yapılanlar da dahil olmak üzere tüm değişiklik istekleri iptal edilir. [Yazı Tipleri ve Renkler, Çevre, Seçenekler İletişim Kutusu'nda](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)yapılanlar gibi seçenek ayarlarında yapılan bazı değişiklikler, visual studio'yu kapatıp yeniden açtıktan sonra etkili olur.
 
 ### <a name="show-all-settings"></a>Tüm ayarları göster
 
-Seçme veya seçimini **tüm ayarları göster** içinde yaptığınız tüm değişiklikler uygulanır **seçenekleri** iletişim kutusu, değil henüz tıkladıysanız olsa bile **Tamam**.
+Seçişimdi veya seçimi yapmak Henüz **Tamam'ı**tıklatmamış olsanız **bile, Seçenekler** iletişim kutusunda yaptığınız tüm değişiklikleri **göster'** i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

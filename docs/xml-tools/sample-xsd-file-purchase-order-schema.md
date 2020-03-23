@@ -1,5 +1,5 @@
 ---
-title: 'Örnek XSD dosyası: satınalma siparişi şeması'
+title: 'Örnek XSD Dosyası: Satın Alma Siparişi Şeması'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d841b75b58dc977b5141dce0b8c7275e4a3ced8a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75592574"
 ---
-# <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: satınalma siparişi şeması
+# <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: Satınalma sipariş şeması
 
-Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya bir satın alma Siparişi şemadır.
+Aşağıdaki XSD dosyası, XSD Şema Tasarımcısı belgelerinde çeşitli örneklerde kullanılır. Bu dosya bir satınalma sipariş şemasıdır.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -88,4 +88,4 @@ Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli ör
 ```
 
 > [!NOTE]
-> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yerler veya etkinliklerle hiçbir ilişki amaçlanmamıştır veya oluşturulmamalıdır.
+> Örnek şirketler, kuruluşlar, ürünler, alan adları, e-posta adresleri, logolar, kişiler, yerler ve burada gösterilen olaylar hayalidir. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olaylarla hiçbir ilişki amaçlanmamıştır veya çıkarılmalıdır.

@@ -1,5 +1,5 @@
 ---
-title: Yük testi sonuçlarındaki grafiklerde sayaç ekleme ve silme
+title: Yük Testi Sonuçlarında Grafiklere Sayaç Ekleme ve Silme
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,77 +12,77 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: acb08edf74d3ca35a2449f588976681d679caeb4
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115184"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>Nasıl yapılır: Yük Testi Sonuçlarındaki Grafiklerde Sayaç Ekleme ve Silme
 
-Kullanabileceğiniz **sayaçları** paneli performans sayaçları grafiğe eklenecek.
+Bir grafiğe performans sayaçları eklemek için **Sayaçlar** panelini kullanabilirsiniz.
 
-![Grafiğe eklenen sayacı](../test/media/ltest_selectcounter.png)
+![Grafiğe sayaç eklendi](../test/media/ltest_selectcounter.png)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Performans sayacı örnekleme aralığı hakkında önemli noktalar**
+**Performans Sayacı Örnekleme Aralığı Hususları**
 
-İçin bir değer seçin **örnek hızı** özelliği yük testinde çalışma ayarları yük testinizin uzunluğuna göre. Varsayılan değer olarak beş saniye gibi küçük bir örnekleme hızı yükleme testi sonuçları veritabanı daha fazla alan gerektirir. Daha uzun yük testleri için örnek hızı artırmak topladığınız veri miktarını azaltır. Daha fazla bilgi için [nasıl yapılır: örnek hızı belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
+Yük testinizin uzunluğuna bağlı olarak yük testi çalıştırma ayarlarında **Örnek Oran** özelliği için bir değer seçin. Beş saniyenin varsayılan değeri gibi daha küçük bir örneklem hızı, yük testi sonuçları veritabanında daha fazla alan gerektirir. Daha uzun yük testleri için, örnek lem oranını artırmak topladığınız veri miktarını azaltır. Daha fazla bilgi için [bkz: Örnek oranını belirtin.](../test/how-to-specify-the-sample-rate-for-a-load-test.md)
 
-Örnek hızlara ait bazı Kılavuzlar şunlardır:
+Örnek oranlar için bazı yönergeler aşağıda verilmiştir:
 
-|Yük testi süresi|Önerilen örnek hız|
+|Yük Testi Süresi|Önerilen Örnek Oran|
 |-|-----------------------------|
-|\< 1 saat|5 saniye|
-|1 - 8 saat|15 saniye|
-|8 - 24 saat|30 saniye|
-|> 24 saat|60 saniye|
+|\<1 Saat|5 saniye|
+|1 - 8 Saat arası|15 saniye|
+|8 - 24 Saat|30 saniye|
+|> 24 Saat|60 saniye|
 
-**Yüzdelik veri toplamak için zamanlama ayrıntılarını da dahil olmak üzere dikkat edilmesi gereken noktalar**
+**Yüzdelik Veri Toplamak için Zamanlama Ayrıntılarını Nİçldirecek Hususlar**
 
-Yük testi adlı Düzenleyicisi'nde çalışma ayarlarında bir özelliği yoktur **Zamanlama Ayrıntıları Deposu**. Varsa **Zamanlama Ayrıntıları Deposu** özelliği etkinse, sonra Yük testi sırasında her bir bireysel test, hareket ve sayfa yürütülme zamanı yükleme testi sonuçları deposunda depolanır. Bu, 90'ıncı ve 95 yüzdelik veri gösterilmesini sağlar **Yük Testi Çözümleyicisi** testler, hareketler ve sayfalar tablolarında.
+**Zamanlama Ayrıntıları Depolama**adlı Yük Testi Düzenleyicisi'nde çalışma ayarlarında bir özellik vardır. Zamanlama **Ayrıntıları Depolama** özelliği etkinleştirilirse, yükleme testi sırasında her bir testi, hareketi ve sayfayı yürütme süresi yük testi sonuçları deposunda depolanır. Bu, Testler, İşlemler ve Sayfalar tablolarında Yük **Testi Çözümleyicisi'nde** 90 ve 95 yüzdelik verilerin gösterilmesini sağlar.
 
-Etkinleştirmek için iki seçeneğiniz vardır **Zamanlama Ayrıntıları Deposu** adlı çalıştırma ayarları özellikleri özelliğinde **StatisticsOnly** ve **AllIndividualDetails**. Her iki seçenek tüm bireysel testler, sayfalar ve hareketler zamanlanır ve bireysel zamanlama verisinden yüzdelik veri hesaplanır. Fark **StatisticsOnly** seçeneğini yüzdelik veri hesaplanır hemen sonra bireysel zamanlama verileri depodan silinir. Bu, zamanlama ayrıntılarını kullandığınızda depodaki gerekli alanı miktarını azaltır. Ancak, İleri düzey kullanıcılar SQL araçları kullanarak zamanlama ayrıntı verilerini farklı yollarla işlemek isteyebilirsiniz. Bu durum söz konusuysa **AllIndividualDetails** seçeneği kullanılmalıdır, böylece zamanlama ayrıntı verileri bu işlem için kullanılabilir. Ayrıca, özelliği ayarlamanız **AllIndividualDetails**, kullanan sanal kullanıcı etkinliğini çözümleyebilirsiniz **sanal kullanıcı etkinliği** içinde grafik **Yük Testi Çözümleyicisi** yük testi çalışmayı tamamladıktan sonra. Daha fazla bilgi için [Ayrıntılar görünümünde sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
+**StatisticsOnly** ve **AllIndividualDetails**adlı çalışma ayarları özelliklerinde **Zamanlama Ayrıntıları Depolama** özelliğini etkinleştirmek için iki seçenek vardır. Her iki seçenekle de, tüm tek tek testler, sayfalar ve hareketler zamanlanır ve yüzdelik veriler tek tek zamanlama verilerinden hesaplanır. Aradaki fark, **StatisticsOnly** seçeneğiyle, yüzdelik veriler hesaplanır hesaplanmaz, tek tek zamanlama verilerinin depodan silinir. Bu, zamanlama ayrıntılarını kullandığınızda depoda gereken alan miktarını azaltır. Ancak, gelişmiş kullanıcılar zamanlama ayrıntı verilerini SQL araçlarını kullanarak başka şekillerde işlemek isteyebilir. Bu durumda, zamanlama ayrıntısı verilerinin bu işlem için kullanılabilmesi için **AllIndividualDetails** seçeneği kullanılmalıdır. Ayrıca, özelliği **AllIndividualDetails**olarak ayarlarsanız, yük testi çalışma tamamlandıktan sonra **Yük Testi Çözümleyicisi'ndeki** Sanal Kullanıcı **Etkinliği** grafiğini kullanarak sanal kullanıcı etkinliğini çözümleyebilirsiniz. Daha fazla bilgi için ayrıntılar [görünümünde sanal kullanıcı etkinliğini analiz et'](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)e bakın.
 
-Zamanlama ayarları verisini özellikle daha uzun yük testleri için çok büyük olabilir saklamak için yük testi sonuçları deposunda gereken alan miktarı. Bu veriler yük testi yürütmesini bitirene kadar yükleme testi aracısında depolanır çünkü Ayrıca, yük testi sonuçları deposu yük testinin sonunda bu verileri depolamak için uzun zamandır. Yük testi çalışmayı tamamladıktan sonra verilerin depoya saklandığı. Varsayılan olarak, **Zamanlama Ayrıntıları Deposu** özelliği etkin hale getirilir. Bu test ortamınızın sorunu ise, ayarlamak isteyebilirsiniz **Zamanlama Ayrıntıları Deposu** için **hiçbiri**.
+Zamanlama ayrıntıları verilerini depolamak için yük testi sonuçları deposunda gereken alan miktarı, özellikle daha uzun çalışan yük testleri için çok büyük olabilir. Ayrıca, bu verileri yük testinin sonundaki yük testi sonuçları deposunda depolama süresi daha uzundur, çünkü bu veriler yük testi yürütme tamamlanana kadar yük testi aracılarında depolanır. Yük testi bittiğinde, veriler depoya depolanır. Varsayılan olarak, **Zamanlama Ayrıntıları Depolama** özelliği etkinleştirilir. Bu, sınama ortamınız için bir sorunsa, **Zamanlama Ayrıntıları Depolamasını** **Yok**olarak ayarlamak isteyebilirsiniz.
 
-Daha fazla bilgi için [nasıl yapılır: zamanlama ayrıntıları depolama özelliğini belirtme](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).
+Daha fazla bilgi için [bkz: Zamanlama ayrıntıları depolama özelliğini belirtin.](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)
 
-## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>Bir yük testi grafiğinde belirli bir performans sayacına görüntülemek için
+## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>Yük testi grafiğinde belirli bir performans sayacı nı görüntülemek için
 
-1. Bir yük testi tamamlandıktan sonra veya Yük Testi Çözümleyicisi'nin araç çubuğunda, bir test sonucunu seçin **grafikleri**.
+1. Yük testi bittikten sonra veya bir test sonucunu yükledikten sonra, Yük Testi Çözümleyicisinin araç çubuğunda **Grafikler'i**seçin.
 
-     **Sayaçları** paneli, grafik görünümünde görüntülenir.
+     **Sayaçlar** paneli Grafikler görünümünde görüntülenir.
 
     > [!NOTE]
-    > Varsa **sayaçları** paneli görünür değilse, seçin **Sayaçlar panelini Göster** araç.
+    > **Sayaçlar** paneli görünmüyorsa, araç çubuğunda **Sayaçları Göster Panelini** seçin.
 
-2. İçinde **sayaçları** panelinden, düğümleri hiyerarşideki grafik şeklinde görüntülenmesini görmek istediğiniz performans sayacı bulana kadar genişletin.
+2. **Sayaçlar** panelinde, grafik olarak görüntülenmesini istediğiniz performans sayacını bulana kadar hiyerarşideki düğümleri genişletin.
 
-     Örneğin, testleri çalıştığı bir bilgisayarda kullanılabilir bellek görüntülemek için genişletin **bilgisayarlar**bilgisayar düğümünü genişletin ve ardından **bellek**. Göreceğiniz **Kullanılabilir MBayt** sayacı.
+     Örneğin, kullanılabilir belleği testlerin çalıştığı bir bilgisayarda görüntülemek için, **Bilgisayar'ı**genişletin, bilgisayar düğümlerini genişletin ve ardından **Bellek'i genişletin.** **Kullanılabilir MBytes** sayacını göreceksiniz.
 
-3. Performans sayacı görüntülemek istediğiniz graph'ı seçin.
+3. Performans sayacını görüntülemek istediğiniz grafiği seçin.
 
-4. Performans sayacı seçiminde sağ **sayaçları** seçin ve panel **grafik üzerinde sayaç Göster**.
+4. **Sayaçlar** panelindeki performans sayacına sağ tıklayın ve **Grafikte Sayacı Göster'i**seçin.
 
     > [!TIP]
-    > Performans sayacının verileri bir grafikte görüntüleme geçici olarak durdurmak için göstergede performans sayacı için onay kutusunu temizleyin. Bu grafikte eğilim çizgisi görüntülemeden hala çözümlenecek min, Maks ve ortalama istatistikler sağlar. Bu grafik, çakışan birçok performans sayacı çizimleri içeriyorsa sorunları çözümlerken yararlı olabilir. Daha fazla bilgi için [yük testlerini çözümlemek için grafik görünümü göstergesini kullanma](../test/use-the-graphs-view-legend-to-analyze-load-tests.md).
+    > Performans sayacının verilerini grafikte görüntülemeyi geçici olarak durdurmak için Gösterge'deki performans sayacının onay kutusunu temizleyin. Bu, min, max ve ortalama istatistiklerin grafikteki eğilim çizgisini görüntülemeden hala analiz edilmesine olanak tanır. Bu, siz sorunları çözümlürken grafik birkaç çakışan performans sayacı çizimleri içeriyorsa yararlı olabilir. Daha fazla bilgi için bkz. [Yük testlerini analiz etmek için Grafikler görünüm göstergesini kullanın.](../test/use-the-graphs-view-legend-to-analyze-load-tests.md)
 
-5. Graftan performans sayacı verilerini kaldırmak için performans sayacı seçiminde sağ **sayacı** seçin ve gösterge sütunu **Sil**.
+5. Performans sayacı verilerini grafikten kaldırmak için göstergenin **Sayaç** sütunundaki performans sayacına sağ tıklayın ve **Sil'i**seçin.
 
-     \- veya -
+     \-veya -
 
-     Grafiği seçip veri satırına sağ **Sil**.
+     Grafikteki veri çizgisine sağ tıklayın ve **Sil'i**seçin.
 
-     \- veya -
+     \-veya -
 
-     Performans sayacını seçin **sayacı** gösterge sütunu verileri çizgi grafikte ve tuşuna **Sil** anahtarı.
+     Göstergenin **Sayaç** sütunundaki performans sayacını veya grafikteki veri satırını seçin ve sonra **Sil** tuşuna basın.
 
     > [!NOTE]
-    > Kullanarak bir performans sayacı gösterge ancak grafikte yerleştirmek seçebilirsiniz **gösterge üzerinde Sayaç Ekle** komutu.
+    > Ayrıca Gösterge'de **Sayaç Ekle** komutunu kullanarak göstergeye bir performans sayacı yerleştirmeyi de seçebilirsiniz, ancak grafiğe eklemeyi de seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Grafik görünümünde yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Nasıl yapılır: özel grafikler oluşturma](../test/how-to-create-custom-graphs-in-load-test-results.md)
+- [Grafikler görünümünde yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-in-the-graphs-view.md)
+- [Nasıl yapılsın: Özel grafikler oluşturma](../test/how-to-create-custom-graphs-in-load-test-results.md)

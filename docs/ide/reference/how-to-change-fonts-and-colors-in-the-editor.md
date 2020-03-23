@@ -15,38 +15,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7347ba6bf599e34d9555f6acaeb03cf396a5855
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595572"
 ---
-# <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da düzenleyici için yazı tiplerini ve renkleri değiştirme
+# <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Nasıl yapIlir: Visual Studio'daki editör için yazı tiplerini ve renklerini değiştirme
 
-Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayabilir ve kod düzenleyicisinde çeşitli metin **görüntüleme öğeleri** için ön plan ve arka plan renklerini değiştirebilirsiniz. Yazı tipi ayarlarını değiştirirken aşağıdaki bilgileri aklınızda bulundurun:
+Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayabilir ve kod düzenleyicisindeki çeşitli metin **Görüntü öğelerinin** ön planını ve arka plan renklerini değiştirebilirsiniz. Yazı tipi ayarlarını değiştirdiğinizde, aşağıdaki bilgileri aklınızda bulundurun:
 
-- **Yazı tipi** ve **Boyut** ayarları, tüm Visual Studio düzenleyicilerinde tüm metin öğeleri için geneldir.
+- **Yazı Tipi** ve **Boyut** ayarları, tüm Visual Studio editörleri için geneldir.
 
-- Sabit genişlikli yazı tiplerinin adları kalın olarak listelenmiştir.
+- Sabit genişlikteki yazı tiplerinin adları kalın olarak listelenir.
 
-- **Öğe ön**planı, **öğe arka planı**ve **kalın** seçenekleri her metin öğesi türü için ayarlanabilir. Örneğin, renkleri değiştirir ve **Açıklama** ve **yer işaretleri**için **kalın** seçeneğini belirlerseniz, diğer metin öğesi türleri bundan etkilenmez.
+- **Öğe ön planda,** **Öğe arka planı**ve **Kalın** seçenekleri metin öğesi nin her türü için ayarlanabilir. Örneğin, renkleri değiştirir ve **Yorum** ve **Yer İşaretleri**için **Kalın'ı** seçerseniz, diğer metin öğeleri türleri etkilenmez.
 
-## <a name="change-the-default-font-face-size-and-colors"></a>Varsayılan yazı tipini, boyutunu ve renklerini değiştirme
+## <a name="change-the-default-font-face-size-and-colors"></a>Varsayılan yazı tipi yüzünü, boyutunu ve renklerini değiştirme
 
-1. Seçin **seçenekleri** gelen **Araçları** menüsü. **Ortam**altında [yazı tipi ve renkler](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)' i seçin.
+1. **Araçlar** menüsünden **Seçenekler'i** seçin. **Çevre** [altında, Yazı Tipleri ve Renkler'i](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)seçin.
 
-2. **Ayarları göster**bölümünde **metin düzenleyici**' yi seçin.
+2. **Için Göster ayarlarında** **Metin Düzenleyici'yi**seçin.
 
-3. **Yazı tipi ve** **Boyut** seçeneklerini değiştirerek tüm düzenleyicilerde tüm metin öğelerinin yazı tipi yüzünüzü ve boyutunu değiştirin.
+3. Tüm editörler deki tüm metin öğeleri için yazı tipi yüzünü ve boyutunu değiştirmek için **Yazı Tipi** ve **Boyut** seçeneklerini değiştirin.
 
-4. **Görüntüleme öğelerinde**uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+4. **Görüntü**öğelerinde uygun öğeyi seçin ve ardından **Öğe ön planını** ve Öğe arka **plan** seçeneklerini değiştirin.
 
     > [!TIP]
-    > Varsayılan ayarları sıfırlamak için **Varsayılanları Kullan** ' a tıklayın.
+    > Varsayılan ayarları sıfırlamak için **Varsayılanları Kullan'ı** tıklatın.
 
-5. **Tamam**'ı tıklatın.
+5. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
-- [Nasıl yapılır: Visual Studio 'da yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Nasıl yapılır: Visual Studio'da yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

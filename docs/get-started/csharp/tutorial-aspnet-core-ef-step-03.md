@@ -1,6 +1,6 @@
 ---
-title: '3\. Adım: ASP.NET Core uygulamanızdaki verilerle çalışma'
-description: Bu video öğreticisiyle ASP.NET Core Web uygulamanızda Entity Framework Core kullanarak verilerle çalışmaya başlayın ve adım adım yönergeleri uygulayın.
+title: '3. Adım: ASP.NET Çekirdek Uygulamanızdaki Verilerle Çalışma'
+description: Bu video eğitimi ve adım adım talimatlarla ASP.NET Core Web Uygulamanızda Entity Framework Core'u kullanarak verilerle çalışmaya başlayın.
 ms.custom: get-started
 ms.date: 03/31/2019
 ms.technology: vs-ide-general
@@ -17,27 +17,27 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: cef0db7e5615d08fb5b22c38604a24124c853ebd
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77580071"
 ---
-# <a name="step-3-work-with-data-using-entity-framework"></a>3\. Adım: Entity Framework kullanarak verilerle çalışma
+# <a name="step-3-work-with-data-using-entity-framework"></a>Adım 3: Varlık Çerçevesi'ni kullanarak verilerle çalışma
 
-ASP.NET Core Web uygulamanızda Entity Framework Core kullanarak verilerle çalışmaya başlamak için aşağıdaki adımları izleyin.
+ASP.NET Core Web Uygulamanızda Entity Framework Core'u kullanarak verilerle çalışmaya başlamak için aşağıdaki adımları izleyin.
 
-_İlk ASP.NET Core uygulamanıza veri eklemek için bu videoyu izleyin ve takip edin._
+_Bu videoyu izleyin ve ilk ASP.NET Core uygulamanıza veri eklemek için takip edin._
 
 > [!VIDEO https://www.youtube.com/embed/dulJCwNrqhM]
 
 ## <a name="open-your-project"></a>Projenizi açın
 
-Bu videolarla birlikte takip ediyorsanız, önceki bölümde oluşturduğunuz Web uygulaması projesini açın. Buradan başladıysanız, yeni bir proje oluşturmanız ve **ASP.NET Web uygulaması** ' nı ve ardından **Web uygulaması**' nı seçmeniz gerekir. Diğer seçenekleri varsayılan olarak bırakın.
+Bu videoları takip ediyorsanız, önceki bölümde oluşturduğunuz Web Uygulaması projesini açın. Burada başlıyorsanız, yeni bir proje oluşturmanız ve **web uygulaması ve** ardından Web **Uygulaması**ASP.NET seçmeniz gerekir. Geri kalan seçenekleri varsayılan olarak bırakın.
 
 ## <a name="add-your-model"></a>Modelinizi ekleyin
 
-ASP.NET Core uygulamanızdaki verilerle çalışmak için yapmanız gereken ilk şey, verilerin nasıl göründüğünü açıklıyor. Çözmeye çalıştığımız sorun ile ilgili işlerin bir *modelini* oluşturan çağrımız. Gerçek dünyada uygulamalarda, bu modellere özel iş mantığı ekleyecek ve bu modellerle ilgili belirli yollarla davranmaları ve görevleri otomatikleştirebiliriz. Bu örnekte, izleme panosu oyunları için basit bir sistem oluşturacağız. Bir oyunu temsil eden bir sınıfa ihtiyacımız var ve bu oyun hakkında, kaç oyuncu destekleyebileceği gibi, bu oyunla ilgili kaydetmek isteyebileceğiniz bazı özellikler de içeriyor. Bu sınıf, *modeller*olarak adlandırılan Web projesinin kökünde oluşturacağınız yeni bir klasöre gidecektir.
+ASP.NET Core uygulamanızdaki verilerle çalışmak için yapmanız gereken ilk şey, verilerin nasıl görünmesi gerektiğini açıklamaktır. Biz buna çözmeye çalıştığımız problemle ilgili şeylerin bir *modelini* yaratmak diyoruz. Gerçek dünya uygulamalarında, bu modellere belirli şekillerde birlikte gibi durabilmeleri ve bizim için görevleri otomatikleştirebilmeleri için özel iş mantığı ekleyeceğiz. Bu örnek için, masa oyunlarını izlemek için basit bir sistem oluşturacağız. Bir oyunu temsil eden bir sınıfa ihtiyacımız var ve bu oyun hakkında kaydetmek isteyebileceğimiz bazı özellikler içeriyor, örneğin kaç oyuncuyu destekleyebileceği gibi. Bu sınıf, web projesinin kökünde oluşturduğumuz *Modeller*adlı yeni bir klasöre gidecek.
 
 ```csharp
 public class Game
@@ -50,36 +50,36 @@ public class Game
 }
 ```
 
-## <a name="create-the-pages-to-manage-your-game-library"></a>Oyun kitaplığınızı yönetmek için sayfalar oluşturma
+## <a name="create-the-pages-to-manage-your-game-library"></a>Oyun kitaplığınızı yönetmek için sayfaları oluşturun
 
-Şimdi, oyun kitaplığınızı yönetmek için kullanacağımız sayfaları oluşturmaya hazırız. Bu, ancak gerçekten başaramayabiliriz kolay bir işlemdir. İlk olarak uygulamamızda bu işlevsellikten nerede canlı olduğuna karar vermemiz gerekiyor. Web projesindeki sayfalar klasörünü açın ve yeni bir klasör ekleyin. BT *oyunları*'nı çağırın.
+Artık oyun kitaplığımızı yönetmek için kullanacağımız sayfaları oluşturmaya hazırız. Bu korkutucu gelebilir ama aslında inanılmaz derecede kolay. Öncelikle uygulamamızda bu işlevselliğin nerede yaşaması gerektiğine karar vermeliyiz. Web projesindeki Sayfalar klasörünü açın ve oraya yeni bir klasör ekleyin. Buna *Oyunlar*deyin.
 
-Şimdi oyunlara sağ tıklayıp > **yeni yapı Iskelesi** **Ekle** öğesini seçin. **Entity Framework (CRUD)** seçeneğini kullanarak Razor Pages seçin. CRUD "oluşturma, okuma, güncelleştirme, silme" anlamına gelir ve bu şablon, bu işlemlerin her biri için ("Tümünü Listele" sayfası ve "bir öğenin ayrıntılarını görüntüleme" sayfası dahil) sayfalar oluşturur.
+Şimdi Oyunlar'a tıklayın ve**Yeni İskele Öğe** **ekle'yi** > seçin. **Varlık Çerçevesi (CRUD)** seçeneğini kullanarak Jilet Sayfaları'nı seçin. CRUD "Oluştur, Oku, Güncelle, Sil" anlamına gelir ve bu şablon bu işlemlerin her biri için sayfalar oluşturur (bir "tümünü listele" sayfası ve "bir öğenin ayrıntılarını görüntüle" sayfası dahil).
 
-![Visual Studio 2019 ASP.NET Core yapı Iskelesi sayfaları ekleme](media/vs-2019/vs2019-add-scaffold.png)
+![Visual Studio 2019 ASP.NET Çekirdek İskele Sayfaları Ekle](media/vs-2019/vs2019-add-scaffold.png)
 
-Oyun modeli sınıfınızı seçin ve yeni bir veri bağlamı sınıfı eklemek için ' + ' simgesini kullanın. Bunu, `AppDbContext` olarak adlandırın. Rest 'i varsayılan olarak bırakın ve **Ekle**' ye tıklayın.
+Oyun modeli sınıfınızı seçin ve yeni bir Veri bağlamı sınıfı eklemek için '+' simgesini kullanın. Bunu, `AppDbContext` olarak adlandırın. Geri sini varsayılan olarak bırakın ve **Ekle'yi**tıklatın.
 
-Oyunlar klasörünüze aşağıdaki Razor Pages eklendiğini göreceksiniz:
+Oyunlar klasörünüze aşağıdaki Razor Sayfaları neklendi:
 
-- . Cshtml oluştur
-- Delete. cshtml
-- Details. cshtml
-- Edit. cshtml
+- Oluştur.cshtml
+- Delete.cshtml
+- Ayrıntılar.cshtml
+- Edit.cshtml
 - Index.cshtml
 
-![Visual Studio 2019 ASP.NET Core Scafkatlanmış sayfalar](media/vs-2019/vs2019-scaffolded-pages.png)
+![Visual Studio 2019 ASP.NET Çekirdek İskele Sayfaları](media/vs-2019/vs2019-scaffolded-pages.png)
 
-*Oyun* klasörüne sayfa eklemenin yanı sıra, scafkatlama işlemi *Startup.cs* sınıfma kod ekledi. Bu sınıftaki `ConfigureServices` yöntemine bakarak bu kodun eklendiğini görürsünüz:
+*Oyunlar* klasörüne sayfa eklemenin yanı sıra, iskele işlemi *Startup.cs* sınıfıma kod ekledi. Bu sınıfta `ConfigureServices` yönteme baktığınızda bu kodun eklendiğini göreceksiniz:
 
 ```csharp
 services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 ```
 
-Ayrıca, `AppDbContext` bağlantı dizesinin projenin *appSettings. JSON* dosyasına eklendiğini de bulabilirsiniz.
+Ayrıca, bağlantı dizesinin `AppDbContext` projenin *appsettings.json* dosyasına eklendiğini de göreceksiniz.
 
-Uygulamayı şimdi çalıştırırsanız, henüz veritabanı oluşturulmadığından başarısız olabilir. [Program.cs 'e kod ekleyerek](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main)uygulamayı otomatik olarak veritabanını oluşturacak şekilde yapılandırabilirsiniz:
+Uygulamayı şimdi çalıştırıyorsanız, henüz veritabanı oluşturulmadı diye başarısız olabilir. Uygulamayı, Program.cs bazı [kodlar ekleyerek](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main)gerekirse veritabanını otomatik olarak oluşturacak şekilde yapılandırabilirsiniz:
 
 ```csharp
 public static void Main(string[] args)
@@ -106,7 +106,7 @@ public static void Main(string[] args)
 }
 ```
 
-Yukarıdaki kodda typeNames 'yi çözümlemek için, using deyimleri var olan bloğunun sonundaki *program.cs* için aşağıdaki using deyimlerini ekleyin:
+Önceki koddaki tür adlarını çözümlemek için, varolan ifadeleri kullanma bloğunun sonunda *Program.cs* için aşağıdaki ifadeleri ekleyin:
 
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
@@ -115,25 +115,25 @@ using WebApplication1.Models;
 
 Kodunuzda WebApplication1 yerine proje adınızı kullandığınızdan emin olun.
 
-Kodun çoğu yalnızca hata işleme içindir ve uygulama çalıştırılmadan önce EF Core `AppDbContext` erişim sağlar. Önemli bir satır, zaten mevcut değilse veritabanını oluşturacak olan `context.Database.EnsureCreated()`. Artık uygulama çalıştırılmaya hazır.
+Kodun çoğu sadece hata işleme ve uygulama çalışmaya `AppDbContext` başlamadan önce EF Core'a erişim sağlamak içindir. Önemli `context.Database.EnsureCreated()`satır, zaten yoksa veritabanını oluşturacak olan Artık uygulama çalışmaya hazır.
 
-## <a name="test-it-out"></a>Test et
+## <a name="test-it-out"></a>Test etme
 
-Uygulamayı çalıştırın ve adres çubuğunda `/Games` ' a gidin. Boş bir liste sayfası görürsünüz. Koleksiyona yeni bir `Game` eklemek için **Yeni oluştur** ' a tıklayın. Formu doldurup **Oluştur**' a tıklayın. Liste görünümünde görmeniz gerekir. Tek bir kaydın ayrıntılarını görmek için **Ayrıntılar** ' a tıklayın.
+Uygulamayı çalıştırın ve `/Games` adres çubuğuna gidin. Boş bir liste sayfası görürsünüz. Koleksiyona yeni bir `Game` yeni eklemek için **Yeni Oluştur'u** tıklatın. Formu doldurun ve **Oluştur'u**tıklatın. Liste görünümünde görmelisiniz. Tek bir kaydın ayrıntılarını görmek için **Ayrıntılar'ı** tıklatın.
 
-Başka bir kayıt ekleyin. Bir kaydın ayrıntılarını değiştirmek için *Düzenle* ' ye tıklayabilir veya onu kaldırmak için **silebilirsiniz** ; bu, kaydı gerçekten silmeden önce onaylamanız istenir.
+Başka bir kayıt ekleyin. Bir kaydın ayrıntılarını değiştirmek için *Düzenle'yi* veya onu kaldırmak için **Sil'i** tıklatabilirsiniz, bu da kaydı gerçekten silmeden önce onaylamanızı ister.
 
-![Visual Studio 2019 ASP.NET Core tarayıcıda yapı Iskelesi olan sayfalar](media/vs-2019/vs2019-game-list.png)
+![Visual Studio 2019 ASP.NET Tarayıcıda Çekirdek İskele Sayfaları](media/vs-2019/vs2019-game-list.png)
 
-Bu, EF Core ve Visual Studio 2019 kullanarak bir ASP.NET Core uygulamasındaki verilerle çalışmaya başlamak için geçen bir uygulamadır.
+EF Core ve Visual Studio 2019'u kullanarak ASP.NET Core uygulamasındaki verilerle çalışmaya başlamak için gereken tek şey buydu.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir sonraki videoda, uygulamanıza Web API desteğinin nasıl ekleneceğini öğreneceksiniz.
+Bir sonraki videoda, uygulamanıza web API desteği eklemeyi öğreneceksiniz.
 
-[4. Adım: ASP.NET Core uygulamanızdan bir Web API 'SI gösterme](tutorial-aspnet-core-ef-step-04.md)
+[Adım 4: ASP.NET Core App bir web API açığa](tutorial-aspnet-core-ef-step-04.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET Core Entity Framework Core ile Razor Pages](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
-- [EF Core ile Razor Pages ASP.NET Core](/aspnet/core/data/?view=aspnetcore-2.1)
+- [ASP.NET Core'da Varlık Çerçeve Çekirdeği ne kadar sayfa ASP.NET](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
+- [EF Core ile ASP.NET Çekirdek Li Jilet Sayfaları](/aspnet/core/data/?view=aspnetcore-2.1)

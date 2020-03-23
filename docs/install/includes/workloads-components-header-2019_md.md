@@ -2,17 +2,17 @@
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 07/23/2019
+ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 4b5d1d77681f00846a01661c9c1bfebe2298ebdc
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: e92399e6efafba7c250fdf82882d44e2e0051412
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76158963"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437501"
 ---
-VSIX bildiriminizi bağımlılıkları oluşturduğunuzda, Bileşen kimlikleri yalnızca belirtmeniz gerekir. En düşük bileşen bağımlılıklarını öğrenmek için bu sayfadaki tabloları kullanın. Bazı senaryolarda, bir iş yükü yalnızca bir bileşenden belirttiğiniz gelebilir. Diğer senaryolarda, tek bir iş yükünü birden fazla bileşenlerini veya birden çok iş yükü birden çok bileşenlerini belirttiğiniz gelebilir. Daha fazla bilgi için bkz. [nasıl yapılır: genişletilebilirlik projelerini Visual Studio 'Ya geçirme](../../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sayfası.
+VSIX bildiriminizde bağımlılıkları ayarladığınızda, yalnızca Bileşen kimliklerini belirtmeniz gerekir. Minimum bileşen bağımlılıklarını belirlemek için bu sayfadaki tabloları kullanın. Bazı senaryolarda, bu iş yükünden yalnızca bir bileşen belirttiğiniz anlamına gelebilir. Diğer senaryolarda, tek bir iş yükünden birden çok bileşen veya birden çok iş yükünden birden çok bileşen belirtmeniz anlamına gelebilir. Daha fazla bilgi için [bkz: Genişletilebilirlik projelerini Visual Studio sayfasına geçirin.](../../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
 
-Bu kimlikleri kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](../use-command-line-parameters-to-install-visual-studio.md) sayfası. Ayrıca, diğer ürünlerin iş yükü ve bileşen kimliklerinin bir listesi için bkz. [Visual Studio iş yükü ve bileşen kimlikleri](../workload-and-component-ids.md) sayfası.
+Bu tbm'lerin nasıl kullanılacağı hakkında daha fazla bilgi için Visual Studio sayfasını [yüklemek için komut satırı parametrelerini kullan'a](../use-command-line-parameters-to-install-visual-studio.md) bakın. Ayrıca, diğer ürünler için iş yükü ve bileşen işleri listesi için [Visual Studio işyükü ve bileşen iÅ](../workload-and-component-ids.md) leri sayfasına bakın.

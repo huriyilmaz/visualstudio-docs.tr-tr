@@ -1,5 +1,5 @@
 ---
-title: TaskExtension temel sınıfı | Microsoft Docs
+title: Görev Uzantısı Taban Sınıfı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,15 +17,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c3dc771f16c7077549ba06d5cdda422319554d40
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631711"
 ---
-# <a name="taskextension-base-class"></a>TaskExtension temel sınıfı
+# <a name="taskextension-base-class"></a>Görev Uzantısı taban sınıfı
 
-Birçok görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından devralınır. Bu devralma zinciri, bunlardan türetilen görevlere birkaç parametre ekler. Bu parametreler bu belgede listelenmiştir.
+Birçok görev, <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan sınıftan <xref:Microsoft.Build.Utilities.Task> devralır. Bu devralma zinciri, bunlardan türeyen görevlere çeşitli parametreler ekler. Bu parametreler bu belgede listelenmiştir.
 
 ## <a name="parameters"></a>Parametreler
 
@@ -33,11 +33,11 @@ Birçok görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından de
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|<xref:Microsoft.Build.Utilities.Task.BuildEngine%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.IBuildEngine> parametresi.<br /><br /> Görevler için kullanılabilen derleme altyapısı arabirimini belirtir. Yapı altyapısı bu parametreyi otomatik olarak ayarlar ve görevlere geri çağrı yapmasına izin verir.|
-|<xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.IBuildEngine2> parametresi.<br /><br /> Görevler için kullanılabilen derleme altyapısı arabirimini belirtir. Yapı altyapısı bu parametreyi otomatik olarak ayarlar ve görevlere geri çağrı yapmasına izin verir.<br /><br /> Bu bir kullanışlı özelliktir. bu sınıftan devralan görev yazarlarının `IBuildEngine` değeri `IBuildEngine2`olarak dönüştürmek zorunda değildir.|
-|<xref:Microsoft.Build.Utilities.Task.BuildEngine3%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.IBuildEngine3> parametresi.<br /><br /> Konak tarafından belirtilen derleme altyapısı arabirimini belirtir.|
-|<xref:Microsoft.Build.Utilities.Task.HostObject%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskHost> parametresi.<br /><br /> Ana bilgisayar nesne örneğini belirtir (null olabilir). Konak IDE, bu görevle bir ana bilgisayar nesnesi ilişkilendirirse, derleme altyapısı bu özelliği ayarlar.|
-|<xref:Microsoft.Build.Tasks.TaskExtension.Log%2A>|İsteğe bağlı <xref:Microsoft.Build.Utilities.TaskLoggingHelper> salt okunurdur parametresi.<br /><br /> Görev günlüğü yöntemlerini içeren bir `TaskLoggingHelperExtension` nesnesi alır.|
+|<xref:Microsoft.Build.Utilities.Task.BuildEngine%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.IBuildEngine> parametre.<br /><br /> Görevlerin kullanabileceği yapı altyapısı arabirimini belirtir. Yapı motoru, görevlerin geri çağrılmasını sağlamak için bu parametreyi otomatik olarak ayarlar.|
+|<xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.IBuildEngine2> parametre.<br /><br /> Görevlerin kullanabileceği yapı altyapısı arabirimini belirtir. Yapı motoru, görevlerin geri çağrılmasını sağlamak için bu parametreyi otomatik olarak ayarlar.<br /><br /> Bu, bu sınıftan devralan görev yazarlarının değeri 'den ' `IBuildEngine` `IBuildEngine2`e ' ye dökmek zorunda kalmaması için bir kolaylık özelliğidir.|
+|<xref:Microsoft.Build.Utilities.Task.BuildEngine3%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.IBuildEngine3> parametre.<br /><br /> Ana bilgisayar tarafından sağlanan yapı motoru arabirimini belirtir.|
+|<xref:Microsoft.Build.Utilities.Task.HostObject%2A>|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskHost> parametre.<br /><br /> Ana bilgisayar nesnesi örneğini belirtir (null olabilir). Ana bilgisayar IDE bu özel görevle bir ana bilgisayar nesnesi ilişkilendirmişse yapı altyapısı bu özelliği ayarlar.|
+|<xref:Microsoft.Build.Tasks.TaskExtension.Log%2A>|İsteğe bağlı <xref:Microsoft.Build.Utilities.TaskLoggingHelper> salt okunur parametresi.<br /><br /> Görev `TaskLoggingHelperExtension` günlüğe kaydetme yöntemlerini içeren bir nesne alır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

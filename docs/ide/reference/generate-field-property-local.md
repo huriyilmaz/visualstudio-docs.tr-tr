@@ -1,5 +1,5 @@
 ---
-title: Alan, özellik, yerel değişken oluştur
+title: Alan, özellik, yerel değişken oluşturma
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: b554aa5586150942c0fc7d7aeada9356a67029ca
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595611"
 ---
-# <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Visual Studio'da bir alan, özelliği veya yerel değişken oluştur
+# <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Visual Studio'da bir alan, özellik veya yerel değişken oluşturma
 
 Bu kod oluşturma için geçerlidir:
 
@@ -22,49 +22,49 @@ Bu kod oluşturma için geçerlidir:
 
 - Visual Basic
 
-**Ne:** hemen önce bildirilmemiş alan, özelliği veya yerel kodu oluşturmanıza olanak tanır.
+**Ne:** Daha önce bildirilmemiş bir alan, özellik veya yerel için kodu hemen oluşturmanıza olanak tanır.
 
-**Ne zaman:** yazarken, yeni bir alan, özelliği veya yerel tanıtır ve düzgün bir şekilde, otomatik olarak bildirmek istiyor.
+**Ne zaman:** Yazarken yeni bir alan, özellik veya yerel tanıtın ve otomatik olarak düzgün bir şekilde bildirmek istiyorsunuz.
 
-**Neden:** ancak bu özellik bildirimi oluşturmak ve otomatik olarak yazın, kullanmadan önce alan, özelliği veya yerel bildirebilirsiniz.
+**Neden:** Kullanmadan önce alanı, özelliği veya yerel alanı bildirebilirsiniz, ancak bu özellik bildirimi oluşturur ve otomatik olarak yazar.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi satıra Yerleştir kırmızı dalgalı olduğu. Kırmızı dalgalı çizgi, alan, yerel veya henüz mevcut olmayan özellik gösterir.
+1. İmlecinizi kırmızı bir dalganın olduğu çizgiye yerleştirin. Kırmızı dalgalı henüz var olmayan bir alanı, yerel veya özelliği gösterir.
 
    - C#:
 
-       ![Vurgulanmış kodu C#](media/field-highlight-cs.png)
+       ![Vurgulanan kod C #](media/field-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu VB](media/field-highlight-vb.png)
+       ![Vurgulanan kod VB](media/field-highlight-vb.png)
 
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
    - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - Kırmızı dalgalı çizgi gelin ve tıklayın ![ampul hatası](media/error-bulb.png) Bu simge görünür.
-      - &nbsp; ![ampul hatası](media/error-bulb.png) kırmızı dalgalı çizgi içeren satırda metin imleci ise sol kenar boşluğunda görünür simge.
+      - Hızlı Eylemler ve **Yeniden Faktörler** menüsünü sağ tıklatın ve seçin.
+      - Kırmızı dalgalı üzerinde hover ve tıklayın ![hata ampul](media/error-bulb.png) görünen simge.
+      - &nbsp; ![hata ampul](media/error-bulb.png) metin imleci kırmızı dalgalı çizgide yse sol kenar boşluğunda görünen simge.
 
-      ![Alan/özellik/yerel Önizleme oluşturma](media/field-preview-cs.png)
+      ![Alan/özellik/yerel önizleme oluşturma](media/field-preview-cs.png)
 
-3. Bir oluşturma seçenekleri, aşağı açılan menüden seçin.
+3. Açılan menüden nesil seçeneklerinden birini seçin.
 
    > [!TIP]
-   > Kullanım **değişiklik önizlemesi** Önizleme pencerenin alt kısmındaki bağlantı [tüm değişiklikleri görmek için](../../ide/preview-changes.md) , oluşturulacak, seçim yapmadan önce.
+   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) önizleme penceresinin altındaki Önizleme **değişiklikleri** bağlantısını kullanın.
 
-   Alan, özelliği veya yerel, kullanımdan çıkarılan türü ile oluşturulur.
+   Alan, özellik veya yerel, kullanımından çıkarılan türle oluşturulur.
 
    - C#:
 
-       ![Yöntem sonuç C# oluştur](media/field-result-cs.png)
+       ![Yöntem sonucu c oluşturma #](media/field-result-cs.png)
 
    - Visual Basic:
 
-       ![Yöntem sonuç VB oluştur](media/field-result-vb.png)
+       ![Yöntem sonucu vb oluşturma](media/field-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

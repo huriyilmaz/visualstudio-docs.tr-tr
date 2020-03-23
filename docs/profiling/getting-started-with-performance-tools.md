@@ -1,5 +1,5 @@
 ---
-title: Performans araçlarıyla çalışmaya başlama | Microsoft Docs
+title: Performans araçları yla başlarken | Microsoft Dokümanlar
 ms.date: 11/04/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,27 +13,27 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: faba7a6d2e698e919c0f0adca6fa574838b8b3c4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779213"
 ---
-# <a name="getting-started-with-performance-tools"></a>Performans araçları 'nı kullanmaya başlama
+# <a name="getting-started-with-performance-tools"></a>Performans araçlarıyla başlarken
 
-Visual Studio, kod performans verilerini toplamak, görüntülemek ve analiz etmek için çeşitli yollar sunar. Çoğu durumda, performans araçlarına başlamak için en iyi yol, **Performans Sihirbazı**'nın varsayılan ayarlarını kullanmaktır. Sihirbaz, kodunuzda performans sorunlarına işaret eden uygulama istatistiklerini toplar.
+Visual Studio, kod performansı verilerini toplamak, görüntülemek ve çözümlemek için çeşitli yollar sunar. Çoğu durumda, performans araçları ile başlamak için en iyi yolu **Performans Sihirbazı**varsayılan ayarlarını kullanmaktır. Sihirbaz, kodunuzdaki performans sorunlarına işaret eden uygulama istatistikleri toplar.
 
-- Yaygın kodlama sorunları hakkında sizi uyaran performans uyarıları, Visual Studio **hata listesi** penceresinde görüntülenir. Uyarılardan kaynak kodunuza gidebilir ve daha verimli kod yazmanıza yardımcı olan ayrıntılı yardım konularına gidebilirsiniz.
+- Sık karşılaşılan kodlama sorunlarını bildiren performans uyarıları Visual Studio **Hata Listesi** penceresinde görünür. Uyarılardan kaynak kodunuza ve daha verimli kod yazmanıza yardımcı olacak ayrıntılı yardım konularına gidebilirsiniz.
 
-- Performans raporları, uygulama yapınız, kaynak kodu satırları ve süreçlerinizin farklı düzeylerinde görünümler sağlar. Performans raporları, belirli bir işlevin çağırma ve çağrılan işlevlerinin uygulamanın tamamındaki çağrı ağacına kadar uygulama yürütme verilerini gösterir.
+- Performans raporları, uygulama yapınızın farklı düzeyleri, kaynak kodu satırları ve işlemleri hakkında görünümsağlar. Performans raporları, belirli bir işlevin arama ve çağrı işlevlerinden tüm uygulamanın çağrı ağacına kadar uygulama yürütme verilerini gösterir.
 
-Bir proje, uygulama veya ASP.NET Web sitesini hızlıca profili eklemek için > **performans profil oluşturucu** **Hata Ayıkla** ' yı seçin ve **Performans Sihirbazı**' nı seçin. Ayrıntılı yönergeler için, bkz. performans profili oluşturma ve [nasıl yapılır: bir Web sitesi için performans verilerini toplama](../profiling/how-to-collect-performance-data-for-a-web-site.md) [için yeni başlayanlar kılavuzu](../profiling/beginners-guide-to-cpu-sampling.md) .
+Bir proje, uygulama veya ASP.NET web sitesinin profilini hızlı bir şekilde çıkarmak için **Hata Ayıklama** > **Performans Profiloluşturcu'nü**seçin ve **Performans Sihirbazı'nı**seçin. Ayrıntılı talimatlar için, performans profilleme ve nasıl sonuçlandığı [için Yeni Başlayanlar kılavuzuna](../profiling/beginners-guide-to-cpu-sampling.md) [bakın: Bir web sitesi için performans verilerini toplayın.](../profiling/how-to-collect-performance-data-for-a-web-site.md)
 
-Bir performans profili oluşturma oturumunu el ile belirtmek ve yapılandırmak için > **Profiler** > **Performans Gezgini** **Hata Ayıkla** ' yı seçin. Oturumları yapılandırmak için **Performans Gezgini** **hedefler** klasörünü ve **Özellikler** sayfalarını kullanın. Yönergeler için bkz. [nasıl yapılır: el ile performans oturumları oluşturma](../profiling/how-to-manually-create-performance-sessions.md).
+Performans profil oluşturma oturumunu el ile belirtmek ve yapılandırmak için **Hata Ayıklama** > **Profil Oluşturucusu** > **Performans Gezgini'ni**seçin. Oturumları yapılandırmak için **Performans Gezgini'ndeki** **Hedefler** klasörünü ve **Özellikler** sayfalarını kullanın. Talimatlar için [bkz: Performans oturumlarını el ile oluşturun.](../profiling/how-to-manually-create-performance-sessions.md)
 
-**Ayrıca bkz:**
+**Ayrıca bakınız:**
 
-- [Performans araçlarına genel bakış](../profiling/overviews-performance-tools.md)
-- [Performans araçları verilerini çözümleme](../profiling/analyzing-performance-tools-data.md)
-- [Verileri çözümlemek için performans kurallarını kullanma](../profiling/using-performance-rules-to-analyze-data.md)
+- [Performans araçları genel bakışları](../profiling/overviews-performance-tools.md)
+- [Performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)
+- [Verileri analiz etmek için performans kurallarını kullanma](../profiling/using-performance-rules-to-analyze-data.md)
 - [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)

@@ -1,5 +1,5 @@
 ---
-title: Bir özellik için bir alanı yeniden düzenleyin
+title: Alanı bir özelliğe yeniden düzenleme
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -13,64 +13,64 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: db0bd17cd0bead3807f857b2198b8d4ea4c72ffb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569718"
 ---
-# <a name="encapsulate-a-field-refactoring"></a>Yeniden düzenleme alanı kapsülle
+# <a name="encapsulate-a-field-refactoring"></a>Bir alan refactoring kapsülleme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** alana bir özellikte açın ve yeni oluşturulan özelliği kullanmak için bu alanın tüm kullanımları güncelleştirme olanak tanır.
+**Ne:** Bir alanı bir özelliğe dönüştürmenizi ve yeni oluşturulan özelliği kullanmak için bu alanın tüm kullanımlarını güncelleştirmenizi sağlar.
 
-**Ne zaman:** bir özellikte alandan ve bu alanın tüm başvurularını güncelleştirmek istediğiniz.
+**Ne zaman:** Bir alanı bir özelliğe taşımak ve bu alana yapılan tüm başvuruları güncelleştirmek istiyorsunuz.
 
-**Neden:** bir alan diğer sınıflar erişim vermek istediğiniz, ancak söz konusu sınıfın doğrudan erişimine sahip olmasını istemiyorsanız.  Bir özellik alanı sarmalama tarafından örneğin atanan değerin doğrulamak için kod yazabilirsiniz.
+**Neden:** Diğer sınıflara bir alana erişim vermek istiyorsunuz, ancak bu sınıfların doğrudan erişimi olmasını istemiyorsun.  Alanı bir özelliğe sararak, atanan değeri doğrulamak için kod yazabilirsiniz, örneğin.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. Vurgulama veya yalıtılacak alanın adını metin imleci yerleştirin:
+1. Metin imlecini alanın adının içine vurgulayın veya yerleştirin:
 
    - C#:
 
-       ![Vurgulanan kodu:C#](media/encapsulate-highlight-cs.png)
+       ![Vurgulanan kod - C #](media/encapsulate-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu - Visual Basic](media/encapsulate-highlight-vb.png)
+       ![Vurgulanan kod - Visual Basic](media/encapsulate-highlight-vb.png)
 
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl + R**, ardından **Ctrl + E**.  (Bağlı olarak hangi profilinde seçtiğiniz klavye kısayolu farklı olabileceğini unutmayın.)
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü ya da seçin **kapsülleme alanı** girişi önizleme penceresi açılır.
+      - **Ctrl+R**tuşuna basın, sonra **Ctrl+E tuşuna**basın.  (Klavye kısayol'unuzun seçtiğiniz profile bağlı olarak farklı olabileceğini unutmayın.)
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek ve Önizleme penceresinden **encapsulate alan** girişini seçin.
    - **Fare**
-      - Seçin **Düzenle > yeniden düzenleyin > alanı Yalıt**.
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menüsü ya da seçin **kapsülleme alanı** girişi önizleme penceresi açılır.
+      - Refactor **> Encapsulate Alanını**> Edit'i seçin.
+      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresi açılır penceresinden alan girişini **encapsulate'i** seçin.
 
    Seçim | Açıklama
    --------- | -----------
-   **Alanı kapsülle (ve özellik kullan)** | Alan özelliğine sahip kapsüller ve oluşturulan özellik kullanılacak alanın tüm kullanımları güncelleştirir
-   **Alanı kapsülle (ancak yine de alan kullan)** | Alan özelliğine sahip saklar, ancak alanın tüm kullanımları dokunulmadan kalır
+   **Alanı kapsülle (ve kullanım özelliği)** | Alanı bir özellik ile kapsüller ve oluşturulan özelliği kullanmak için alanın tüm kullanımlarını güncelleştirir
+   **Alanı kapsülle (ancak yine de alanı kullanın)** | Alanı bir özellik ile kapsüller, ancak alanın tüm kullanımları el değmemiş bırakır
 
-   Özelliği oluşturulur ve seçtiyseniz alanına yapılan başvurular güncelleştirilir.
+   Özellik oluşturulur ve seçilirse alana yapılan başvurular güncelleştirilir.
 
    > [!TIP]
-   > Kullanım **değişiklik önizlemesi** bağlantıyı açılan pencerede [sonucu görmek için](../../ide/preview-changes.md) kendisine gerçekleştirmeden önce.
+   > Sonuç işlemeden önce [sonucun ne olacağını görmek için](../../ide/preview-changes.md) açılır penceredeki Önizleme **değişiklikleri** bağlantısını kullanın.
 
    - C#:
 
-      ![Özellik sonucu kapsülleyen-C#](media/encapsulate-result-cs.png)
+      ![Encapsulate Özellik sonucu - C #](media/encapsulate-result-cs.png)
 
    - Visual Basic:
 
-      ![Özellik sonucu - Visual Basic yalıtma](media/encapsulate-result-vb.png)
+      ![Encapsulate Özellik sonucu - Visual Basic](media/encapsulate-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

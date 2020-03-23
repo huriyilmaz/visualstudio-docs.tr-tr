@@ -1,41 +1,41 @@
 ---
-title: Yönetim portalında süper yönetici ve yönetici rolleri
+title: Yönetim Portalında Süper Yönetici ve Yönetici Rolleri
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/02/2020
 ms.topic: conceptual
-description: Süper yönetici ve yönetici rolleri ve yöneticiler atama hakkında bilgi edinin.
+description: Süper yönetici ve yönetici rolleri ve yönetici atama hakkında bilgi edinin.
 ms.openlocfilehash: ef0ba479c099bf1e34fe871386984297b130ffd6
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78234845"
 ---
-# <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik anlaşmaları için süper Yöneticiler ve Yöneticiler
+# <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik sözleşmeleri için süper yöneticiler ve yöneticiler
 
-Toplu lisanslama müşterileri için yeni Visual Studio abonelikleri yönetim portalında iki farklı rol vardır. Bu roller birincil/bildirim Iletişim rolü ve VLSC 'de var olan abonelik Yöneticisi rolü gibidir.
+Toplu Lisanslama müşterileri için yeni Visual Studio Abonelikleri Yönetim Portalı'nda iki farklı rol vardır. Bu roller, Birincil/Bildirimler İlgili Kişi rolü ve VLSC'de bulunan Abonelik yöneticisi rolü gibidir.
 
-**Süper Yöneticiler:** Bir kuruluş ilk kez ayarlandığında, birincil veya bildirimler Ilgili kişisi varsayılan olarak bir süper yönetici haline gelir. Birincil veya bildirimler Ilgili kişisi, ek süper Yöneticiler veya Yöneticiler atamayı seçebilir. Süper yönetici, diğer yöneticileri ve aboneler ekleyebilir ve kaldırabilir. Sistemde ikiden fazla süper yönetici varsa, bir süper yönetici, güvenlikle ilgili olarak, son iki ' i de silebilir.
+**Süper yöneticiler:** Bir kuruluş başlangıçta ayarlandığında, Birincil veya Bildirimler İlgili Kişi varsayılan olarak süper bir yönetici haline gelir. Birincil veya Bildirimler İlgili Kişi ek süper yöneticiler veya yöneticiler atamayı seçebilir. Süper yönetici, abonelerin yanı sıra diğer yöneticileri de ekleyebilir ve kaldırabilir. Sistemde ikiden fazla süper yönetici varsa, bir süper yönetici güvenlik için son iki yönetici hariç tümünü silebilir.
 
-**Yöneticiler:** Yönetici yalnızca bir süper yönetici tarafından atanabilir. Bir yönetici yalnızca süper yönetici tarafından bu anlaşmalara atayan abonelikleri yönetebilir.
+**Yöneticiler:** Bir yönetici yalnızca bir süper yönetici tarafından atanabilir. Yönetici, aboneleri yalnızca süper yöneticinin kendilerine verdiği anlaşmalarda yönetebilir.
 
-## <a name="assigning-administrators"></a>Yöneticiler atama
-Yeni Yöneticiler (Yöneticiler) atamak için:
-1. Aboneliklerin satın alındığı anlaşmada süper yönetici olarak atanmış bir e-posta adresi kullanarak https://manage.visualstudio.com oturum açın.
-2. **Yöneticileri Yönet**etiketli sekmeye tıklayın.
-3. **Ekle**'ye tıklayın.
+## <a name="assigning-administrators"></a>Yönetici atama
+Yeni yöneticiler (yöneticiler) atamak için:
+1. Aboneliklerin https://manage.visualstudio.com satın alındığı anlaşmada süper yönetici olarak atanan bir e-posta adresini kullanmak için oturum açın.
+2. **Yöneticileri Yönet**etiketiyle yapılan sekmesine tıklayın.
+3. **Ekle**’ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![yönetici ekleme](_img/admin-roles/add-admins.png)
-4. Formu yeni yönetici bilgileriyle doldurun.  
+   > ![Yönetici ekleme](_img/admin-roles/add-admins.png)
+4. Yeni yöneticinin bilgileriyle formu doldurun.  
    > [!div class="mx-imgBorder"]
-   > ![yönetici formu ekleme](_img/admin-roles/add-form.png)
+   > ![Yönetici formu ekle](_img/admin-roles/add-form.png)
 
    > [!NOTE]
-   > Bu yöneticinin ek yöneticiler atayabilmesini istiyorsanız, **süper yönetici** kutusunu kontrol etmeyi unutmayın.
+   > Bu yöneticinin ek yönetici atayabilmesi için **Süper Yönetici** kutusunu denetlemeyi unutmayın.
 
-5. Yeni yönetici atamak için **Ekle** ' ye tıkladıktan sonra, portalda oturum açmak üzere bu kişilere davet eden bir e-posta gönderilir.  
+5. Yeni yöneticiyi atamak için **Ekle'yi** tıklattıktan sonra, onları portalda oturum açmaya davet eden bir e-posta alırlar.  
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
@@ -48,8 +48,8 @@ Yeni Yöneticiler (Yöneticiler) atamak için:
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [Aboneliklerin nasıl atanacağını](assign-license.md) öğrenin
-- [Abonelik avantajlarının](https://visualstudio.microsoft.com/vs/benefits/) tam aralığı hakkında daha fazla bilgi edinin
+- Abonelikleri nasıl [ataysüreceğinizi](assign-license.md) öğrenin
+- Tüm [abonelik avantajları](https://visualstudio.microsoft.com/vs/benefits/) hakkında daha fazla bilgi edinin
 - [Anlaşma tercihlerini belirleme](admin-prefs.md) 
 
 

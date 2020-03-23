@@ -1,7 +1,7 @@
 ---
-title: Azure Batch AI modeli eğitme işi gönder
-description: Model bulutu eğitme
-keywords: AI, Visual Studio, eğitme modeli, bulut
+title: Azure Toplu İşlem AI'de model eğitmek için iş gönderme
+description: tren modeli bulut
+keywords: ai, visual studio, tren modeli, bulut
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -10,50 +10,50 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: dec70c9e9aeb9c916b511241a74b550354aff175
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75915768"
 ---
-# <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI AI modellerini eğitme
+# <a name="train-ai-models-in-azure-batch-ai"></a>Azure Toplu AI'de AI modellerini eğitin
 
-Batch AI, veri bilimcilerinin ve AI araştırmacılarının, GPU desteğine sahip VM’ler dahil olmak üzere Azure sanal makine kümeleri üzerinde AI ve diğer makine öğrenimi modelleri ile eğitimler vermesine olanak tanıyan, yönetilen bir hizmettir. Siz işinizin gereksinimlerini, girdilerin nerede bulunacağını ve çıktıların nerede depolanacağını açıklarsınız, gerisini Batch AI yapar. [Azure Batch AI hakkında daha fazla bilgi edinin](/azure/batch-ai/overview)
+Batch AI, veri bilimcilerinin ve yapay zeka araştırmacılarının, GPU desteğine sahip sanal makineler dahil, Azure sanal makine kümelerindeki yapay zeka ve diğer makine öğrenmesi modellerini eğitmesini sağlayan bir yönetilen hizmettir. Siz işinizin gereksinimlerini, girdilerin nerede bulunacağını ve çıktıların nerede depolanacağını açıklarsınız, gerisini Batch AI yapar. [Azure Toplu İş AI hakkında daha fazla bilgi edinin](/azure/batch-ai/overview)
 
-Azure 'da eğitim modellerini dinamik olarak ölçeklendirebilmeniz için Visual Studio Tools for AI tümleşiktir.  [Visual Studio Tools for AI](installation.md)yükledikten sonra, Azure Machine Learning örnek galerisinde önceden hazırlanmış yemek tariflerini kullanarak yeni bir Python projesi oluşturmak kolaydır.
+Azure'daki eğitim modellerini dinamik olarak ölçeklendirebilmeniz için AI için Visual Studio Tools ile entegre edilmiştir.  Yapay bilgi [için Visual Studio Tools'u yükledikten](installation.md)sonra, Azure Machine Learning Örnek Galerisi'nde önceden yapılmış tarifleri kullanarak yeni bir Python projesi oluşturmak kolaydır.
 
-1. Visual Studio'yu başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
+1. Visual Studio’yu başlatın. **AI Tools** menüsünü açarak ve Select **Cluster'ı** seçerek Sunucu **Gezgini'ni** açın
 
-    ![Küme Seçicisi](media/train-model/select-cluster.png)
+    ![Küme seçici](media/train-model/select-cluster.png)
 
-2. **AI araçları**' nı genişletin. Sahip olduğunuz tüm Batch AI kaynakları otomatik olarak algılanır ve Sunucu Gezgini görünür.
+2. **AI araçlarını**genişletin. Sahip olduğunuz Toplu AI kaynakları otomatik olarak algılanır ve Sunucu Gezgini'nde görünür.
 
-    ![Örnek galerisi](media/train-model/batchai.png)
+    ![Örnek galeri](media/train-model/batchai.png)
 
-3. GitHub veya Azure DevOps 'a bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için **Görünüm > Takım Gezgini..** . öğesini seçin.
+3. GitHub veya Azure DevOps'> bağlanabileceğiniz **ekip gezgini** penceresini açmak veya bir depo yumülemek için Team **Explorer'ı görüntüle'yi** seçin.
 
-    ![Azure DevOps, GitHub ve bir depoyu klonlama gösteren Takım Gezgini penceresi](media/train-model/team-explorer-devops.png)
+    ![Azure DevOps, GitHub ve bir depoyu klonlama gösteren takım gezgini penceresi](media/train-model/team-explorer-devops.png)
 
-4. **Yerel Git depoları**altındaki URL alanında `https://github.com/Microsoft/samples-for-ai`girin, kopyalanmış dosyalar için bir klasör girin ve **Kopyala**' yı seçin.
+4. **Yerel Git Depoları**altında URL alanında `https://github.com/Microsoft/samples-for-ai`, girin , klonlanmış dosyalar için bir klasör girin ve **Klon**seçin.
 
     > [!Tip]
-    > Takım Gezgini içinde belirttiğiniz klasör klonlanan dosyaları almak için özel klasördür. `git clone` komutundan farklı olarak, Takım Gezgini bir kopyanın oluşturulması, otomatik olarak deponun adı ile bir alt klasör oluşturmaz.
+    > Team Explorer'da belirttiğiniz klasör, klonlanan dosyaları almak için belirli klasördür. Komutun `git clone` aksine, Team Explorer'da bir klon oluşturmak otomatik olarak deponun adını içeren bir alt klasör oluşturmaz.
 
-5. Kopyalama tamamlandığında **dosya > çözüm > proje/çözüm aç** ' a tıklayın
+5. Klonlama **tamamlandığında, Dosya > Çözüm > Projesi / Solution'ı** tıklatın
 
-    ![Örnek galerisi](media/train-model/open-solution.png)
+    ![Örnek galeri](media/train-model/open-solution.png)
 
-6. Depoyu Klonladığınız dizinde **Samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln** açın
+6. Depoyu klonladığınız dizinde **örnekleri aç-for-ai\TensorFlowExamples\TensorFlowExamples.sln**
 
-    ![Örnek galerisi](media/train-model/tensorflowexamples.png)
+    ![Örnek galeri](media/train-model/tensorflowexamples.png)
 
-7. MNIST projesini **Başlangıç projesi** olarak ayarla
+7. MNIST projesini **Başlangıç Projesi** olarak ayarlama
 
-    ![Örnek galerisi](media/train-model/mnist-startup.png)
+    ![Örnek galeri](media/train-model/mnist-startup.png)
 
-8. <strong>**Mnist projesi** ' ne sağ tıklayın, **işi gönder**</strong>
+8. <strong>Sağ tıklayın **MNIST projesi,** **İş Gönder**</strong>
 
-    ![Örnek galerisi](media/train-model/submit-job.png)
-9. **Azure Batch AI** kümenizi seçip **içeri aktar**' a tıklayın. Hangi Docker görüntüsünün kullanılacağı gibi bazı varsayılan değerleri hızlıca doldurmak için `AzureBatchAI_TF_MNIST.json` dosyasını seçin. Sonra **Gönder** ' e tıklayın.
+    ![Örnek galeri](media/train-model/submit-job.png)
+9. Azure **Toplu Toplu AI** kümenizi seçin ve sonra **İçe Aktar'ı**tıklatın. Hangi `AzureBatchAI_TF_MNIST.json` Docker Image'ın kullanılacağı gibi bazı varsayılan değerleri hızla doldurmak için dosyayı seçin. Ardından **Gönder'i** tıklatın
 
-    ![Örnek galerisi](media/train-model/submit-batch.png)
+    ![Örnek galeri](media/train-model/submit-batch.png)

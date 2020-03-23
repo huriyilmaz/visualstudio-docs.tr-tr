@@ -1,5 +1,5 @@
 ---
-title: Boş zaman çizelgesi segmenti | Microsoft Docs
+title: Boş Zaman Çizelgesi Segmenti | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a96cdc7ae4edc7ea7193d5b95dfc73fa1747c1fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970115"
 ---
-# <a name="empty-timeline-segment"></a>Boş zaman çizelgesi segmenti
-Zaman çizelgesinin bir bölümü boş nedeni eşzamanlılık görselleştiricisi içinde (beyaz arka plan sahiptir) kanal türüne bağlıdır.
+# <a name="empty-timeline-segment"></a>Boş zaman çizelgesi kesimi
+Eşzamanlılık Görselleştiricisinde, zaman çizelgesinin bir bölümünün boş olmasının (beyaz bir arka plana sahip olmasının) nedeni kanalın türüne bağlıdır.
 
-- Bir CPU iş parçacığı kanal için iş parçacığı zaman çizelgesi bu kısmı sırasında bulunmuyor anlamına gelir. İş parçacığında ilgileniyorsanız, yakınlaştırma denetimini kullanarak veya yatay kaydırma, yürütme bölümünde bulabilirsiniz.
+- CPU iş parçacığı kanalı için, iş parçacığı zaman çizelgesinin bu bölümünde var olmadığı anlamına gelir. İş parçacığıyla ilgileniyorsanız, yakınlaştırma denetimini kullanarak veya yatay kaydırma yaparak yürütme bölümünü bulabilirsiniz.
 
-- Bir g/ç kanalı için hiçbir disk erişimi hedef işlem adına zamandaki o noktada ortaya çıktığını anlamına gelir.
+- Bir G/Ç kanalı için, o anda hedef işlem adına disk erişimi nin gerçekleşmemiş olduğu anlamına gelir.
 
-- Bir DirectX kanalı için hiçbir GPU işi zaman çizelgesi bu kısmı sırasında hedef işlem adına gerçekleştirildiğini anlamına gelir.
+- DirectX kanalı için, zaman çizelgesinin bu bölümünde hedef işlem adına GPU çalışması yapılmadığı anlamına gelir.
 
-- Bir işaretleyici kanal için bir işaretleyici yok oluşturulan anlamına gelir.
+- Bir işaretleyici kanalı için, hiçbir işaretçi oluşturulduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)
-- [Yakınlaştırma Denetimi (iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)
+- [Yakınlaştırma denetimi (İş Parçacığı Görünümü)](../profiling/zoom-control-threads-view.md)

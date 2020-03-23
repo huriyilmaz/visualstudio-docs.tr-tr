@@ -1,87 +1,92 @@
 ---
-title: Wrap, Girintile ve yeniden düzenlemeler Hizala
-description: Yöntem çağrılarının zincirlerini kaydırmayı ve hizalamayı öğrenin.
-ms.date: 02/19/2020
+title: Yeniden düzenlemeleri sarmalama, girintileme ve hizalama
+description: Yöntem çağrıları zincirlerini nasıl sarıp hizalayarak saracak ve hizalayacaknızı öğrenin.
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 349f2eeccfea4fea03967929b01114c0de1af155
-ms.sourcegitcommit: 3c105990656cd509062ce60e52e776c794f6305d
+ms.openlocfilehash: d801f052cb02e6a5b53189eeae342b9015d30f9b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77527670"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093884"
 ---
-# <a name="wrap-indent-and-align-refactorings"></a>Wrap, Girintile ve yeniden düzenlemeler Hizala
+# <a name="wrap-indent-and-align-refactorings"></a>Yeniden düzenlemeleri sarmalama, girintileme ve hizalama
 
 ## <a name="wrap-and-align-call-chains"></a>Çağrı zincirlerini sarmalama ve hizalama
 
-Bu yeniden düzenleme için geçerlidir:
-
-- C#
-
-**Ne:** Yöntem çağrılarının zincirlerini kaydırabilmenizi ve hizalamanızı sağlar.
-
-**Ne zaman:** Tek bir bildirimde birkaç yöntem çağrısının bulunduğu uzun bir zinciriniz var.
-
-**Neden:** Uzun bir listeyi okumak, kullanıcı tercihine göre sarmalandıklarında veya girintilendiklerinde daha kolay olur.
-
-### <a name="how-to"></a>Nasıl yapılır
-
-1. İmlecinizi çağrı zincirlerinden herhangi birine yerleştirin.
-2. **Ctrl**+tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
-3. Yeniden düzenlemeyi kabul etmek için **çağrı zincirini sarın** veya **Sarla ve hizalamayı** seçin.
-
-   ![Çağrı zincirlerini kaydırın ve hizalayın](media/wrap-call-chain.png)
-
-## <a name="wrap-indent-and-align-parameters-or-arguments"></a>Parametreleri veya bağımsız değişkenleri sarın, Girintile ve Hizala
-
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Parametreleri veya bağımsız değişkenleri kaydırabilmenizi, girintilemenizi ve hizalamanızı sağlar.
+**Ne:** Yöntem çağrıları zincirlerini sarmanızı ve hizalamanızı sağlar.
 
-**Ne zaman:** Birden çok parametresi veya bağımsız değişkeni olan bir yöntem bildirimi veya çağrın olması gerekir.
+**Ne zaman:** Bir deyimde çeşitli yöntem çağrılarından oluşan uzun bir zinciriniz vardır.
 
-**Neden:** Bir parametre veya bağımsız değişkenlerin uzun bir listesini okumak, kullanıcı tercihine göre sarmalandıklarında veya girintilendiklerinde daha kolay olur.
+**Neden:** Uzun bir listeyi okumak, kullanıcı tercihine göre paketlendiğinde veya girintisi olduğunda daha kolaydır.
 
 ### <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi bir parametre listesine yerleştirin.
-2. **Ctrl**+tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+1. İmlecinizi çağrı zincirlerinden herhangi biri yerine yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+3. Yeniden düzenlemeyi kabul etmek için **çağrı zincirini sar** veya **Sar ve hizala'yı** seçin.
 
-   ![Parametreleri sarın, Girintile ve Hizala](media/wrap-parameters.png)
+   ![Çağrı Zincirlerini Sarma ve Hizala](media/wrap-call-chain.png)
 
-3. Yeniden düzenlemeyi kabul etmek için **her parametreyi Wrap** ' ı seçin.
+## <a name="wrap-indent-and-align-parameters-or-arguments"></a>Parametreleri veya bağımsız değişkenleri sarın, girintisi ve hizalama
 
-## <a name="wrap-binary-expressions"></a>İkili ifadeleri sarmalama
-
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** İkili ifadeleri kaydırabilmenizi sağlar.
+- Visual Basic
 
-**Ne zaman:** İkili ifadeniz vardır.
+**Ne:** Parametreleri veya bağımsız değişkenleri sarmanızı, girintinlemenizi ve hizalamanızı sağlar.
 
-**Neden:** Bir ikili ifadenin okunması, kullanıcı tercihine kaydırılmasından daha kolay olur.
+**Ne zaman:** Birden çok parametre veya bağımsız değişkeni olan bir yöntem bildiriminiz veya çağrınız vardır.
+
+**Neden:** Uzun bir parametre veya bağımsız değişken listesini okumak, kullanıcı tercihine göre paketlendiğinde veya girintisi olduğunda daha kolaydır.
 
 ### <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi ikili ifadeye koyun.
-2. **Ctrl**+tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
-3. Yeniden düzenlemeyi kabul etmek için **Wrap ifadesi** ' ni seçin.
+1. İmlecinizi parametre listesine yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
 
-   ![Çağrı zincirlerini kaydırın ve hizalayın](media/wrap-binary-expression.png)
+   ![Kaydırma, Girintme ve Hizalama parametreleri](media/wrap-parameters.png)
+
+3. Yeniden düzenlemeyi kabul etmek için **her parametreyi kaydır'ı** seçin.
+
+## <a name="wrap-binary-expressions"></a>İkili ifadeleri sarmalama
+
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+
+- C#
+
+- Visual Basic
+
+**Ne:** İkili ifadeleri sarmanızı sağlar.
+
+**Ne zaman:** İkili bir ifaden var.
+
+**Neden:** İkili ifadeyi okumak, kullanıcı tercihine sarıldığında daha kolaydır.
+
+### <a name="how-to"></a>Nasıl yapılır
+
+1. İmlecinizi ikili ifadeye yerleştirin.
+2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+3. Yeniden düzenlemeyi kabul etmek için **Sargı ifadesini** seçin.
+
+   ![Çağrı Zincirlerini Sarma ve Hizala](media/wrap-binary-expression.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

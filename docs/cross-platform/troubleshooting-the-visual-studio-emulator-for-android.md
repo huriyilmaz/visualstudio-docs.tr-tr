@@ -1,5 +1,5 @@
 ---
-title: Android için Visual Studio öykünücüsü sorunlarını giderme | Microsoft Docs
+title: Android için Visual Studio Emülatör Sorun Giderme | Microsoft Dokümanlar
 ms.custom: ''
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
@@ -13,306 +13,306 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 85a7748f25e284a7c746d5779b3d177a15e1d37b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77272078"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü’nde Sorun Giderme
-Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşılaşabileceğiniz sorunları çözmenize yardımcı olacak bilgiler içerir.
+Bu konu, Android için Visual Studio Emülatörü kullanırken karşılaşabileceğiniz sorunları çözmenize yardımcı olacak bilgiler içerir.
 
 > [!WARNING]
-> Öykünücü yüklendikten sonra Kurulum programı yazılımı çalıştıran önkoşulları denetler. Önkoşulları mevcut değildir, ancak bunları yükleme için gerekli olmadığı uyarıları görüntüler.
+> Emülatör yüklendiğinde, kurulum programı yazılımı çalıştırmak için ön koşulları denetler. Ön koşullar yoksa uyarıları görüntüler, ancak yükleme için gerekli değildir.
 
- Bu konuda aşağıdaki bölümleri içerir.
+ Bu konuda aşağıdaki bölümler yer almaktadır.
 
 - [Başlamadan önce](#BeforeYouStart)
 
-- [Öykünücü yüklenemiyor](#NoInstall)
+- [Emülatör yüklemek için başarısız](#NoInstall)
 
-- [Bir etki alanı veya şirket ağındaki ağ hedeflerine bağlanılamıyor](#DomainNetwork)
+- [Etki alanı veya şirket ağındaki ağ hedeflerine bağlanamıyor](#DomainNetwork)
 
-- [Ağ ayarları el ile yapılandırma gerektirirken ağ hedeflerine bağlanılamıyor](#ManualNetworkConfig)
+- [Ağ ayarları el ile yapılandırma gerektirdiğinde ağ hedeflerine bağlanamıyor](#ManualNetworkConfig)
 
-- [Öykünücü yavaş başlıyor, zaman aşımı nedeniyle başlatılamaz veya uygulama dağıtımı başarısız olur](#SlowStart)
+- [Emülatör yavaş başlar, zaman acısı nedeniyle başlayamazsa veya uygulama dağıtımı başarısız olur](#SlowStart)
 
-- [Öykünücü başlatılamadı](#NoStart2)
+- [Emülatör başlatılmaz](#NoStart2)
 
-- [Öykünücü başlatılamadı (ilk kullanım)](#NoStart)
+- [Emülatör başlatılmaz (ilk kullanım)](#NoStart)
 
-- [Öykünücü yüklendikten sonra bilgisayar önyükleme yapamıyor](#NoBoot)
+- [Bilgisayar Emülatör yükledikten sonra önyükleme başarısız](#NoBoot)
 
-- [Visual Studio, uygulamayı öykünücüye dağıtmaya çalışırken takılıyor veya öykünücü diğer Ides 'te hata ayıklama hedefi olarak görünmüyor](#ADB)
+- [Visual Studio uygulamayı emülatöre dağıtmaya çalışırken takılıp kalır veya emülatör diğer IDA'larda hata ayıklama hedefi olarak görünmez](#ADB)
 
-- [Öykünücü, UDP bağlantı noktasını ayarlayamadığından askıda kalıyor](#XamarinPlayer)
+- [UDP bağlantı noktasını kuramadığı için emülatör asılı](#XamarinPlayer)
 
-- [Hata ayıklayıcı bir Xamarin projesine iliştirilemiyor](#Skylake)
+- [Xamarin projesine hata ayıklayıcı ekleyemez](#Skylake)
 
-- [Öykünücü Google Play Hizmetleri kullanan uygulamayı çalıştıramıyor](#GooglePlay)
+- [Emülatör, Google Play Hizmetleri kullanan uygulamayı çalıştıramıyor](#GooglePlay)
 
-- [Dosya, APK veya bıraktığınızda ZIP dosyası için sürükle ve bırak çalışmıyor](#DragAndDrop)
+- [Bir dosyanın sürükle ve bırak, APK veya yanıp sönebilir zip dosyası çalışmıyor](#DragAndDrop)
 
-- [Ekran görüntüsünün çözümlenmesi yanlış](#Resolution)
+- [Ekran görüntüsünün çözünürlüğü yanlış](#Resolution)
 
-- [Öykünücü OpenGL içeriğini işlemesini başaramazsa](#OpenGL)
+- [Emülatör OpenGL içeriğini işletemedi](#OpenGL)
 
-- [Öykünücü çok dokunmalı hareketlere yanıt vermiyor](#Multitouch)
+- [Emülatör çoklu dokunma hareketlerine yanıt vermez](#Multitouch)
 
 - [Destek kaynakları](#Support)
 
-## <a name="BeforeYouStart"></a>Başlamadan önce
- Sorun gidermeye başlamadan önce aşağıdaki konuları gözden geçirmeniz faydalı olabilir:
+## <a name="before-you-start"></a><a name="BeforeYouStart"></a>Başlamadan önce
+ Sorun gidermeye başlamadan önce aşağıdaki konuları gözden geçirmek yararlı olabilir:
 
-- [Android için Visual Studio öykünücüsü sistem gereksinimleri](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
+- [Android için Visual Studio Emülatörü için sistem gereksinimleri](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
 
-## <a name="NoInstall"></a>Öykünücü yüklenemiyor
- Hyper-V yüklü yoksa öykünücü yüklemeye çalıştığınızda şu iletiyi görürsünüz. HyperV destekleyen bir makine olmalıdır ve etkinleştirilmesi gerekir.
+## <a name="emulator-fails-to-install"></a><a name="NoInstall"></a>Emülatör yüklemek için başarısız
+ Hyper-V yüklü yoksa, emülatör yüklemeyi çalıştığınızda aşağıdaki iletiyi görürsünüz. HyperV'yi destekleyen bir makineniz olmalı ve bu makine etkinleştirilmelidir.
 
- ![Android&#95;EMU&#95;yüklemesi&#95;sorunu](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
+ ![Android&#95;Emu&#95;&#95;Sorunu Yükleyin](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
-> Bu ileti, hem Visual Studio öykünücüsü Android ve Windows Phone öykünücüsü için geçerlidir. Öykünücü, Windows 8.1 ve Windows 10'u destekler.
+> Bu ileti hem Android için Visual Studio Emülatörü hem de Windows Phone Emülatörü için geçerlidir. Windows 8.1 ve Windows 10 emülatör desteği.
 
- Bu iletiyi görürseniz, öykünücüyü çalıştırıp çalıştıramayacağını öğrenmek için [Android Için Visual Studio öykünücüsü sistem gereksinimlerini](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) denetleyin.
+ Bu iletiyi görürseniz, emülatörçalıştırıp çalıştıramayacağınızı görmek [için Android için Visual Studio Emülatörü'nün Sistem gereksinimlerini](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) kontrol edin.
 
-## <a name="DomainNetwork"></a>Bir etki alanı veya şirket ağındaki ağ hedeflerine bağlanılamıyor
- Android için Visual Studio öykünücüsü ağ üzerinde kendi IP adresine sahip ayrı bir cihaz olarak görünür. Bir Windows etki alanına katılmamışsa ve ana bilgisayar ile etki alanı veya çalışma grubu kimlik bilgileri paylaşmaz.
+## <a name="cannot-connect-to-network-destinations-on-a-domain-or-corporate-network"></a><a name="DomainNetwork"></a>Etki alanı veya şirket ağındaki ağ hedeflerine bağlanamıyor
+ Android için Visual Studio Emülatörü ağda kendi IP adresine sahip ayrı bir aygıt olarak görünür. Bir Windows etki alanına katılmaz ve etki alanı veya çalışma grubu kimlik bilgilerini ana bilgisayarla paylaşmaz.
 
- Ağınızın temel ağ ve Internet bağlantısı için etki alanı veya çalışma grubu yetkilendirme gerektiriyorsa, özel durum için BT yöneticinize başvurun. Bu özel durumun geliştirme bilgisayarınıza bir sınır makine olarak görev yapacak ve öykünücü gibi ağ etki alanı ile birleşik olmayan cihazlardan gelen bağlantıları kabul etmek üzere sağlar.
+ Ağınız temel ağ ve Internet bağlantısı için etki alanı veya çalışma grubu yetkilendirmesi gerektiriyorsa, bir özel durum için BT yöneticinize başvurun. Bu özel durum, geliştirme bilgisayarınızın bir sınır makinesi olarak hizmet etmesine ve emülatör gibi etki alanına katılmayan ağ aygıtlarından gelen bağlantıları kabul etmesine olanak tanır.
 
- Android için Visual Studio öykünücüsü, ayrıca kendi MAC adresleri kümesini kullanır. Öykünücüden ağ veya Internet kaynaklarına erişemiyorsanız, öykünücü MAC adreslerinin ağınızda yetkilendirilmiş olduğundan emin olmak için BT yöneticinize başvurun.
+ Android için Visual Studio Emülatörü de MAC adresleri kendi kümesini kullanır. Emülatörden ağ veya Internet kaynaklarına erişemiyorsanız, emülatörün MAC adreslerinin ağınızda yetkilendirilip yetkilendirildiğinden emin olmak için BT yöneticinize danışın.
 
-#### <a name="to-view-the-emulators-mac-addresses"></a>Öykünücüsünün MAC adreslerini görüntülemek için
+#### <a name="to-view-the-emulators-mac-addresses"></a>Emülatörün MAC adreslerini görüntülemek için
 
-1. Öykünücüyü başlatın.
+1. Emülatöre ateşle.
 
-2. Öykünücü araç çubuğunda köşeli çift ayraç düğmesini (>>) ek araçları penceresini açın.
+2. Emülatör araç çubuğunda, Ek Araçlar penceresini açmak için köşeli ayraç düğmesini (>>) tıklatın.
 
-3. Ek araçlar penceresine, ağ sekmesini tıklatın.
+3. Ek Araçlar penceresinde Ağ sekmesini tıklatın.
 
-4. Ağ sayfasında, fiziksel adres girdilerini bulun.
+4. Ağ sayfasında Fiziksel adres girişlerini bulun.
 
-## <a name="ManualNetworkConfig"></a>Ağ ayarları el ile yapılandırma gerektirirken ağ hedeflerine bağlanılamıyor
- Öykünücüsünden ağ hedeflerine bağlamak için ağınıza aşağıdaki gereksinimleri karşılaması gerekir:
+## <a name="cannot-connect-to-network-destinations-when-network-settings-require-manual-configuration"></a><a name="ManualNetworkConfig"></a>Ağ ayarları el ile yapılandırma gerektirdiğinde ağ hedeflerine bağlanamıyor
+ Emülatörden ağ hedeflerine bağlanmak için ağınızın aşağıdaki gereksinimleri karşılaması gerekir:
 
-- DHCP. Kendi IP adresini ağ üzerinde ayrı bir cihaz olarak kendisini yapılandırır için öykünücü DHCP gerektirir.
+- Dhcp. Emülatör, kendisini ağüzerinde kendi IP adresine sahip ayrı bir aygıt olarak yapılandırdığı için DHCP gerektirir.
 
-- Otomatik olarak yapılandırılan DNS ve ağ geçidi ayarları. Öykünücü için DNS ve ağ geçidi ayarlarını el ile yapılandırmak mümkün değildir.
+- Otomatik olarak yapılandırılan DNS ve ağ geçidi ayarları. DNS ve ağ geçidi ayarlarını emülatör için el ile yapılandırmak mümkün değildir.
 
-  Ağınız el ile yapılandırılan ayarların gerektiriyorsa ve öykünücüsü için ağ bağlantısını nasıl olanak sağlayabileceğiniz belirlemek için BT yöneticinize danışın.
+  Ağınız el ile yapılandırılmış ayarlar gerektiriyorsa, emülatör için ağ bağlantısını nasıl etkinleştirebileceğinizi belirlemek için BT yöneticinize danışın.
 
-## <a name="SlowStart"></a>Öykünücü yavaş başlıyor, zaman aşımı nedeniyle başlatılamaz veya uygulama dağıtımı başarısız olur
- Belirli koşullar altında öykünücü başlatmak için birkaç dakika sürer veya bir zaman aşımı nedeniyle başlatılamıyor. Öykünücü başlayamazsa şu iletiyi görürsünüz: `App deployment failed. Please try again`. Aşağıdaki koşullar Bu hataya neden.
+## <a name="emulator-starts-slowly-fails-to-start-due-to-a-timeout-or-app-deployment-fails"></a><a name="SlowStart"></a>Emülatör yavaş başlar, zaman acısı nedeniyle başlayamazsa veya uygulama dağıtımı başarısız olur
+ Belirli koşullar altında, emülatörbaşlatmak için birkaç dakika sürer veya bir zaman acısı nedeniyle başlatmak için başarısız olur. Emülatör başlatıldığında aşağıdaki iletiyi görürsünüz: `App deployment failed. Please try again`. Aşağıdaki koşullar bu hataya neden olabilir.
 
-- Visual Studio öykünücüsü Android için önyüklenebilir bir VHD'den çalıştırılıyor. Bu yapılandırma desteklenmez.
+- Önyüklemeli bir VHD'den Android için Visual Studio Emülatörü çalıştırın. Bu yapılandırma desteklenmez.
 
-- Hatalı sabit sürücü. Chkdsk programı çalıştırmayı göz önünde bulundurun.
+- Hatalı bir sabit disk. CHKDSK programını çalıştırmayı düşünün.
 
-- Bir sabit sürücü birleştirilmesi gerekir. Sürücü birleştirmeyi göz önünde bulundurun.
+- Parçalanması gereken bir sabit disk. Sürücünün parçalanmasını düşünün.
 
-- Bir sabit sürücü dolmak üzere. Sürücüde kullanılabilir alan kontrol edin.
+- Neredeyse dolu bir sabit disk. Sürücüde bulunan alanı kontrol edin.
 
-- Yetersiz bellek nedeniyle çalışan diğer uygulamaları kullanılabilir. Bellek miktarını artırın veya bellek kullanan uygulamaların sayısını azaltın.
+- Çalışan diğer uygulamalar nedeniyle yeterli bellek kullanılamaz. Bellek tüketen uygulama sayısını azaltın veya bellek miktarını artırın.
 
-- Genellikle, sistemdeki zayıf performansa katkıda bulunan tüm faktörü. En düşük alt Denetim Masası'nın performans bilgi ve araçları sayfasında bulabilirsiniz Windows Deneyimi Dizini olan bileşeni ile sorun giderme başlar.
+- Genellikle, sistemde kötü performans katkıda bulunan herhangi bir faktör. Denetim Masası'nın Performans Bilgileri ve Araçları sayfasında bulabileceğiniz Windows Deneyim Dizini'ndeki en düşük alt puana sahip bileşenle sorun gidermeye başlayın.
 
-## <a name="NoStart2"></a>Öykünücü başlatılamadı
- Öykünücü daha önce çalışıyor olsa da artık çalışmaz, aşağıdaki görevleri gidin. Emulator 'u ilk kez kullanıyorsanız, bu adımları denemeden önce [öykünücü başlatılamadı (ilk kullanım)](#NoStart) .
+## <a name="emulator-fails-to-start"></a><a name="NoStart2"></a>Emülatör başlatılmaz
+ Emülatör daha önce çalışıyorsa, ancak şimdi çalışmıyorsa, aşağıdaki görevleri gözden geçirin. Emülatör'ü ilk kez kullanıyorsanız, bu adımları denemeden önce [Emülatör'ün başlatılamamasına (ilk kullanım)](#NoStart) bakın.
 
-- Öykünücü diğer Hyper-V örneklerini kaldırın.
+- Emülatörün diğer Hyper-V örneklerini kaldırın.
 
     1. Visual Studio’yu kapatın.
 
-    2. Hyper-V Yöneticisi'ni açın ve herhangi bir Hyper-V örneği zaten çalışıyor öykünücüsü (sanal makineler) ve muhtemelen bozuk bir durumda durdurun.
+    2. Hyper-V Manager'ı açın ve emülatörün (Sanal Makineler) zaten çalışan ve muhtemelen bozuk durumda olan Hyper-V örneklerini durdurun.
 
-    3. Hyper-V Yöneticisi'nde, diğer bir öykünücü tüm sanal makineleri silin.
+    3. Hyper-V Manager'da diğer emülatör VM'leri silin.
 
     4. Makinenizi yeniden başlatın.
 
-- En az 4 GB sistem belleği ve bunu diğer yoğun kaynak programlar ve işlemler (örneğin, tüm tarayıcı pencerelerini kapatmayı deneyin) tarafından Tüketilmekte olan değil, sahip olduğunuzdan emin olun.
+- En az 4 GB sistem belleğine sahip olduğundan ve kaynak yoğun diğer programlar ve işlemler tarafından tüketilmediğinden emin olun (örneğin, tarayıcı pencerelerini kapatmayı deneyin).
 
-- Sanal Anahtar Yöneticisi ve denetim, iki ağ anahtarları olduğunu görmek için Hyper-V Yöneticisi'nde açın; ilk iç anahtar ve ikinci dış olduğundan emin olun.
+- Hyper-V Manager'da Sanal Anahtar Yöneticisi'ni açın ve iki ağ anahtarınız olup olmadığını kontrol edin; ilkinin iç anahtar, ikincisinin harici olduğunu doğrulayın.
 
-     ![Android&#95;EMU&#95;V&#95;anahtar&#95;Man](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
+     ![Android&#95;Emu&#95;V&#95;Anahtarı&#95;Adam](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
 
-     Kurulum yanlışsa ve Windows 10 kullanıyorsanız, [netcfg-d komutunu (Bölüm 6) kullanarak ağ aygıtlarını yeniden yüklemeyi](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) deneyebilirsiniz.
+     Kurulum yanlışsa ve Windows 10 kullanıyorsanız, [netcfg -d komutunu kullanarak ağ aygıtlarını yeniden yüklemeyi](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) deneyebilirsiniz (bölüm 6).
 
-- Bu adımlar sorunu çözmezse, öykünücüyü etkileyebilecek üçüncü taraf yazılımlar hakkında bilgi için bkz. [öykünücü başlatılamadı (ilk kullanım)](#NoStart) .
+- Bu adımlar sorunu çözmezse, [bkz.](#NoStart)
 
-## <a name="NoStart"></a>Öykünücü başlatılamadı (ilk kullanım)
- Öykünücü başlatılmazsa belirlemek ve sorunu gidermek için aşağıdaki görevleri gidin.
+## <a name="emulator-fails-to-start-first-use"></a><a name="NoStart"></a>Emülatör başlatılmaz (ilk kullanım)
+ Emülatör başlamazsa, sorunu tanımlamak ve düzeltmek için aşağıdaki görevleri gözden geçirin.
 
-- En düşük donanım gereksinimleri karşılandıktan ve BIOS ayarları doğru olduğundan emin olun.
+- Minimum donanım gereksinimlerinin karşılanıp BIOS ayarlarının doğru olduğundan emin olun.
 
-   Öykünücü ve Windows 8 Hyper-V, ikinci düzey adres çevirisi (SLAT) ile 64-bit işlemci gerektirir. Intel, temelde çekirdek ı3 i5 veya i7 işlemci (ya da birçok Xeon birini) gerekir. AMD yongaları listesine [buradan](https://www.amd.com/en/support)ulaşabilirsiniz.
+   Emülatör ve Windows 8 Hyper-V, İkinci Düzey Adres Çevirisi (SLAT) içeren 64 bit işlemci gerektirir. Intel için, aslında bir Core i3, i5 veya i7 işlemci (veya birçok Xeons biri) gerekir. AMD yongalarının bir listesini [burada](https://www.amd.com/en/support)bulabilirsiniz.
 
   1. Bilgisayarınızın [sistem gereksinimlerini](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)karşıladığından emin olun.
 
-  2. [SLAT aracının](https://slatstatuscheck.codeplex.com/) bilgisayarınızın SLAT özellikli olduğunu raporluyor olduğunu doğrulayın.
+  2. [SLAT aracının](https://slatstatuscheck.codeplex.com/) bilgisayarınızın SLAT yeteneğine sahip olduğunu bildirdiğini doğrulayın.
 
-  3. Bilgisayarınızın BIOS ayarları içinde tüm sanallaştırma teknolojisini etkin olduğundan emin olun. Tam BIOS açıklamaları için her bir donanım üreticisinin farklılık gösterebilir. Genel olarak, ilgili özellikleri sağlar:
+  3. Bilgisayarınızın BIOS ayarları nda, tüm sanallaştırma teknolojisinin etkin olduğundan emin olun. Tam BIOS açıklamaları her donanım üreticisi için değişebilir. Genel olarak, ilgili özellikleri etkinleştirin:
 
-     - SLAT (ikinci düzey adres çevirisi)
+     - SLAT (İkinci Düzey Adres Çevirisi)
 
-     - (Genişletilmiş sayfa tabloları) kabul et (Intel)
+     - EPT (Genişletilmiş Sayfa Tabloları) (Intel)
 
-     - NPT (iç içe sayfa tabloları) (AMD)
+     - NPT (İç içe Sayfa Tabloları) (AMD)
 
-     - (Hızlı sanallaştırma dizini) RVI (AMD)
+     - RVI (Hızlı Sanallaştırma Dizinoluşturma) (AMD)
 
-     - VMX (bir Intel harflendirme belirten donanım Yardımlı sanallaştırma desteği)
+     - VMX (donanım destekli sanallaştırma desteğini gösteren bir Intel kısaltması)
 
-     - SVM (donanım Yardımlı sanallaştırma desteği belirten bir AMD kısaltması)
+     - SVM (donanım destekli sanallaştırma desteğini gösteren bir AMD kısaltması)
 
-     - XD (yürütmeyi devre dışı bırak) (Intel); Bu etkinleştirilmelidir
+     - XD (Execute Devre Dışı) (Intel); bu etkin olmalıdır
 
-     - NX (Execute)(AMD) yok; Bu etkinleştirilmesi gerekir.
+     - NX (Yürütme Yok)(AMD); bu etkin olmalıdır.
 
-  4. Aşağıdaki seçenekler BIOS'ta varsa, bunları devre dışı bırakın.
+  4. BIOS'ta aşağıdaki seçenekler varsa, bunları devre dışı bırakın.
 
-     - Intel VT-d devre dışı bırak
+     - Intel VT-d'yi devre dışı
 
-     - Güvenilir yürütme devre dışı bırak
+     - Güvenilir Yürütmeyi Devre Dışı
 
-       Bu makalede daha fazla bilgi için bkz: Technet: Hyper-V: nasıl düzeltme BIOS hataları etkinleştirme Hyper-V'ye
+       Daha fazla bilgi için şu makaleye bakın: Technet: Hyper-V: Hyper-V'yi Etkinleştiren BIOS Hataları Nasıl Düzeltilir?
 
-  5. En az 4 GB sistem belleği ve bunu diğer yoğun kaynak programlar ve süreçler tarafından Tüketilmekte olan değil, sahip olduğunuzdan emin olun.
+  5. En az 4 GB sistem belleğine sahip olduğundan ve kaynak yoğun diğer programlar ve işlemler tarafından tüketilmediğinden emin olun.
 
-  6. Daha iyi veya Windows 8 Professional çalıştırdığınızdan emin olun (Windows Server 2008 desteklenmez). Windows Server 2012 desteklenir, ancak masaüstü deneyimi etkinleştirmeniz gerekir.
+  6. Windows 8 Professional veya daha iyi çalıştırdığınızdan emin olun (Windows Server 2008 desteklenmez). Windows Server 2012 desteklenir, ancak Masaüstü Deneyimi'ni etkinleştirmeniz gerekir.
 
-     Hiper yönetici hataları olup olmadığını görmek için Olay Görüntüleyicisi'ni inceleyebilirsiniz. Bunu yapmak için Olay Görüntüleyicisi açın (**key**+**R**' yi başlatın, sonra da `eventvwr`) ve ardından **Windows günlükleri**, **sistem**' i seçin. Ardından, günlüğü olay kaynağına göre filtreleyin, kaynağı **Hyper-V-hiper yönetici**olarak ayarlar. Kök nedeni belirlemenize yardımcı olması hata olup olmadığını denetleyin.
+     Hypervisor hataları olup olmadığını görmek için Olay Görüntüleyicisi'ni inceleyebilirsiniz. Bunu yapmak için Olay Görüntüleyicisi'ni `eventvwr`açın ( Başlat**tuşu**+**R**, sonra yazın ) ve ardından Windows **Günlükleri,** **Sistem'i**seçin. Ardından, kaynağı **Hyper-V-Hypervisor**olarak ayarlayarak günlük leri olay kaynağına göre filtreleyin. Kök nedeni belirlemeye yardımcı olmak için hataları denetleyin.
 
-     En düşük gereksinimler ancak hiper yönetici hala başarısız, işlemci karşıladığını gerçekleştiriliyorsa, bulma olmadığını öğrenmek için bilgisayarınızın BIOS yükseltme yok. Varsa, yükseltme, üreticinin tüm önlemler (örneğin, BIOS üretici yazılımı yükseltme BIOS kalıcı olarak bozabilir ve güç kaybı tarafından engellenmez sağlamaktan) BIOS yükseltirken gözlemlemek mutlaka seçin.
+     İşlemciniz minimum gereksinimleri karşılıyorsa ancak hipervizör hala arızadurumundaysa, bilgisayarınız için kullanılabilir bir BIOS yükseltmesi olup olmadığını öğrenin. Varsa ve yükseltmeyi seçerseniz, BIOS'u yükseltirken üreticiden gelen tüm önlemleri gözlemlediğinizden emin olun (örneğin, BIOS firmware yükseltmesinin BIOS'u kalıcı olarak bozabilecek bir güç kaybıyla kesintiye uğramamasını sağlamak gibi).
 
-- En az 4 GB sistem belleği ve bunu diğer yoğun kaynak programlar ve süreçler tarafından Tüketilmekte olan değil, sahip olduğunuzdan emin olun.
+- En az 4 GB sistem belleğine sahip olduğundan ve kaynak yoğun diğer programlar ve işlemler tarafından tüketilmediğinden emin olun.
 
-- Kaldır/devre dışı bırak üçüncü taraf sürücüler veya yazılımlar ile sanal ağ iletişimi engelliyor olabilir.
+- Sanal ağa müdahale eden üçüncü taraf sürücüleri veya yazılımı kaldırın/devre dışı kaldırın.
 
-   Ağ sürücüleri/Hyper-V ağ yığınını ile tam olarak uyumlu olmayan protokolleri gibi Windows 8'altında yüklü 3 bazı taraf ürünler ile ilgili bazı bilinen sorunlar vardır.
+   Windows 8'in altında yüklü olan bazı 3.
 
-   Genel olarak, geliştiricilerin bu ürün Windows 8 ve Hyper-V ile uyumlu olacak şekilde, yazılım güncelleştirme kadar olacaktır.
+   Genel olarak, windows 8 ve Hyper-V ile uyumlu olacak şekilde yazılımlarını güncellemek bu ürünlerin geliştiricileri kadar olacaktır.
 
-   Aşağıdaki ürünler için Windows 8 Uyumluluk yükseltme gerektirebilir: VirtualBox, sanal bilgisayar 7, VMWare, bazı VPN istemcileri yazılım güvenlik duvarları, Cisco VPN istemcileri ve diğer sanallaştırma sistemlerinin bazı sürümlerinde. Windows 8 ve Hyper-V ile uyumlu hale getirmek için yazılım yükseltmelerini teşvik etmek için sorgulanabilir sanallaştırma yazılımı geliştiricisi çalışın.
+   Aşağıdaki ürünler Windows 8 uyumluluğu için yükseltme gerektirebilir: VirtualBox, Virtual PC 7, VMWare, bazı VPN istemcileri, yazılım güvenlik duvarları, Cisco VPN istemcilerinin bazı sürümleri ve diğer sanallaştırma sistemleri. Windows 8 ve Hyper-V ile uyumlu hale getirmek için yazılımı yükseltmeleri için onları teşvik etmek için şüpheli sanallaştırma yazılımının geliştiricisi ile çalışın.
 
-   Geçici bir *çözüm*olarak, öykünücü tarafından Visual Studio ile iletişim kurmak için kullanılan sanal ağla kesintiye uğraabilecek tüm üçüncü taraf sürücüleri ve uygulamaları devre dışı bırakabilirsiniz. Bu uygulamalar şunları içerebilir:
+   Geçici *çözüm*olarak, Visual Studio ile iletişim kurmak için Emülatör tarafından kullanılan sanal ağa müdahale eden tüm üçüncü taraf sürücüleri ve uygulamaları devre dışı kullanabilirsiniz. Bu uygulamalar şunları içerebilir:
 
-  - (Ağ yığınına kanca) virüsten koruma uygulamaları
+  - Virüsten koruma uygulamaları (ağ yığınına kanca)
 
   - Ağ izleme araçları
 
-  - Ağ günlük araçları
+  - Ağ günlüğü araçları
 
   - Diğer sistem izleme yazılımı
 
-    Heyecan verici ürünlerle ilgilenmeleri kaldırma kısıtlıysa, başka bir olası çözüm soru (ve güncelleştirilmiş bir sürümünü yayımlamayı ürün Geliştirici isteyen), aşağıdaki adımları sağlamaktır.
+    Söz konusu ürünü (ler) kaldırmanın (ve ürün geliştiricisinin güncelleştirilmiş bir sürümü serbest bırakmasından istenmesi) kısa olan başka bir olası geçici çözüm, aşağıdaki adımları atmaktır.
 
-  1. Ağ bağlantıları Yöneticisini başlatın (Başlangıç ekranından `View Network Connections` yazın ve ağ bağlantılarını görüntülemek için bu seçeneği belirleyin.)
+  1. Ağ Bağlantıları yöneticisini başlatın (Başlangıç `View Network Connections` ekranından ağ bağlantılarını görüntülemek için bu seçeneği yazın ve seçin.)
 
-  2. VEthernet (Iç Ethernet bağlantı noktası Windows Phone öykünücü Iç anahtar) bağdaştırıcısı için bağlam menüsünden **Özellikler** ' i seçin.
+  2. vEthernet (Internal Ethernet PortU Windows Phone Emulator Internal Switch) bağdaştırıcısı için bağlam menüsünden **Özellikler'i** seçin.
 
-      ![Hyper&#45;V tarafından kullanılan sanal bağdaştırıcı](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")
+      ![Hyper&#45;V tarafından kullanılan Sanal Adaptör](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")
 
-      Bağdaştırıcı özellikleri burada gösterilir.
+      Bağdaştırıcı özellikleri burada gösterilmiştir.
 
-      ![Sanal bağdaştırıcı özellikleri](../cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")
+      ![Sanal Bağdaştırıcı Özellikleri](../cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")
 
-  3. Bu bağdaştırıcı için, bu bağlantı altında seçilmesi gereken tek öğeler aşağıdaki **öğeleri kullanır** :
+  3. Bu bağdaştırıcı **için, Bu bağlantı** altında seçilmesi gereken tek öğe aşağıdaki öğeleri kullanmalıdır:
 
-     - Microsoft Ağları için istemci
+     - Microsoft Ağları için İstemci
 
      - QoS Paket Zamanlayıcısı
 
-     - Dosya ve yazıcı paylaşımı Microsoft Ağları için
+     - Microsoft Ağları için Dosya ve Yazıcı Paylaşımı
 
-     - Microsoft LLDP protokol sürücüsüne
+     - Microsoft LLDP Protokol Sürücüsü
 
-     - Bağlantı-katman Topoloji Bulma Eşleyicisi g/ç sürücüsü
+     - Bağlantı Katmanı Topoloji Si bulma Mapper I/O Sürücüsü
 
-     - Bağlantı-katman Topoloji Bulma Yanıtlayıcı
+     - Bağlantı Katmanı Topoloji Discovery Responder
 
-     - Internet Protokolü sürüm 6 (TCP/IPv6)
+     - Internet Protokolü Sürüm 6 (TCP/IPv6)
 
-     - Internet Protokolü sürüm 4 (TCP/IPv4)
+     - Internet Protokolü Sürüm 4 (TCP/IPv4)
 
-  4. Diğer öğeleri kaldırın.
+  4. Diğer öğelerin select'ini seçin.
 
-     İçin bu teknik kullanılarak dezavantajı, dilediğiniz zaman yeni bir 3. taraf ürün desteklenmeyen sürücüleri yükler veya öykünücü yüklendikten, dilediğiniz zaman bu adımları yinelenmesi gerekir ' dir.
+     Bu tekniği kullanmanın dezavantajı, yeni bir üçüncü taraf ürün desteklenmeyen sürücüleri yüklediğinizde veya emülatör yüklendiğinde bu adımların yinelenmesi gerekeceğidir.
 
-     Üçüncü taraf ürünleri kaldırıldıktan sonra Windows Phone öykünücüsü iç anahtar geri yüklemek gerekebilir. Bunu yapmak için:
+     Üçüncü taraf ürünleri yükledikten sonra Windows Phone Emülatör Dahili Anahtarı'nı geri yüklemeniz gerekebilir. Bunu gerçekleştirmek için:
 
-  - Hyper V açın ve sanal Anahtar Yöneticisi'ne gidin. "Windows Phone öykünücü Iç anahtarı" adlı bir sanal anahtar oluşturun ve bağlantı türünü **iç ağ**olarak ayarlayın.
+  - Hyper V'yi açın ve Sanal Anahtar Yöneticisi'ne gidin. "Windows Phone Emülatör Dahili Anahtar" adlı sanal bir anahtar oluşturun ve bağlantı türünü **Dahili ağa**ayarlayın.
 
      ![Sanal Anahtar Yöneticisi](../cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")
 
-    Artık öykünücüyü başlatın. Çalışmalıdır.
+    Şimdi emülatör başlatın. İşe yaramalı.
 
-## <a name="NoBoot"></a>Öykünücü yüklendikten sonra bilgisayar önyükleme yapamıyor
+## <a name="computer-fails-to-boot-after-installing-the-emulator"></a><a name="NoBoot"></a>Bilgisayar Emülatör yükledikten sonra önyükleme başarısız
  Aşağıdaki koşullar doğru olduğunda bu sorun oluşabilir:
 
-- Bilgisayarınızda bir gigabayt anakart vardır.
+- Bilgisayarınızda Gigabyte anakartı var.
 
-- USB3 anakart üzerinde etkindir.
+- USB3 anakartta etkindir.
 
-  Bu sorunu çözmek için USB3 anakart BIOS ayarları devre dışı bırakın ve bilgisayarı yeniden başlatın. Ardından, gigabayttan kartın BIOS 'U için bir güncelleştirme yayımlamışsa emin olun.
+  Bu sorunu çözmek için, anakartın BIOS ayarlarında USB3'ü devre dışı bırakıp bilgisayarı yeniden başlatın. Sonra Gigabyte anakart BIOS için bir güncelleştirme yayımladı olup olmadığını kontrol edin.
 
-  Daha fazla bilgi için aşağıdaki Bilgi Bankası makalesine bakın: [gigabayt sistemlerine Hyper-V rolü yüklendikten sonra önyükleme hatası](https://support.microsoft.com/en-us/kb/2693144).
+  Daha fazla bilgi için aşağıdaki Bilgi Bankası makalesine bakın: [Gigabyte sistemlerinde Hyper-V rolünün yüklenmesinden sonra önyükleme hatası.](https://support.microsoft.com/en-us/kb/2693144)
 
-## <a name="ADB"></a>Visual Studio, uygulamayı öykünücüye dağıtmaya çalışırken takılıyor veya öykünücü diğer Ides 'te hata ayıklama hedefi olarak görünmüyor
- Öykünücünün çalıştığından, ancak ADB (Android hata ayıklama köprüsü) bağlanması görünmez ya da (örneğin, Android Studio veya Eclipse) ADB kullanan Android araçları görünmüyor öykünücü için ADB nerede arar ayarlamak gerekebilir. Öykünücü, Android SDK'nızı temel konumunu tanımlamak için bir kayıt defteri anahtarını kullanır ve bu dizin altında \platform-tools\adb.exe dosyasını arar. Öykünücüsü tarafından kullanılan Android SDK yolu değiştirmek için:
+## <a name="visual-studio-gets-stuck-trying-to-deploy-the-app-to-the-emulator-or-the-emulator-does-not-appear-as-a-debug-target-in-other-ides"></a><a name="ADB"></a>Visual Studio uygulamayı emülatöre dağıtmaya çalışırken takılıp kalır veya emülatör diğer IDA'larda hata ayıklama hedefi olarak görünmez
+ Emülatör çalışıyorsa, ancak ADB'ye (Android Hata Ayıklama Köprüsü) bağlı görünmüyorsa veya ADB'den (örneğin, Android Studio veya Eclipse) kullanan Android araçlarında görünmüyorsa, emülatörün ADB'yi aradığı yeri ayarlamanız gerekebilir. Emülatör, Android SDK'nızın temel konumunu belirlemek için bir kayıt defteri anahtarı kullanır ve bu dizinin altındaki \platform-tools\adb.exe dosyasını arar. Emülatör tarafından kullanılan Android SDK yolunu değiştirmek için:
 
-- Başlat düğmeleri bağlam menüsünden **Çalıştır** ' ı seçerek Kayıt Defteri Düzenleyicisi 'ni açın, iletişim kutusuna `regedit` yazın ve **Tamam**' ı seçin.
+- Başlat düğmeleri bağlam menüsünden **Çalıştır'ı** seçerek, `regedit` iletişim kutusuna yazarak ve **Tamam'ı**seçerek Kayıt Defteri Düzenleyicisi'ni açın.
 
-- Soldaki klasör ağacında *\SOFTWARE\Wow6432Node\Android SDK Tools HKEY_LOCAL_MACHINE* gidin.
+- Soldaki klasör ağacında *HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK Araçları'na* gidin.
 
-- **Yol** kayıt defteri değişkenini Android SDK yolu ile eşleşecek şekilde değiştirin.
+- **Yol** kayıt defteri değişkenini Android SDK'nuzun izle eşleşecek şekilde değiştirin.
 
-  Öykünücü yeniden başlatın ve artık öykünücü ADB bağlı ve Android araçları ilişkili görüyor olmanız gerekir.
+  Emülatöryeniden başlatın ve şimdi ADB ve ilişkili Android araçlarına bağlı emülatör görmek gerekir.
 
-## <a name="XamarinPlayer"></a>Öykünücü, UDP bağlantı noktasını ayarlayamadığından askıda kalıyor
- Xamarin Player ile uyumsuzluğu nedeniyle bu sorunla karşılaşabilirsiniz. Öykünücü askıda görünüyorsa veya bu hata iletisini görürseniz, "öykünücü cihaz işletim sistemine bağlanamıyor: UDP bağlantı noktası ayarlanamadı.  Bazı işlevler devre dışı bırakılabilir", bu sorunu yaşıyor olabilirsiniz. Aşağıdaki adımları uygulayın.
+## <a name="emulator-hangs-because-it-couldnt-set-up-the-udp-port"></a><a name="XamarinPlayer"></a>UDP bağlantı noktasını kuramadığı için emülatör asılı
+ Xamarin Player ile uyumsuzluk nedeniyle bu sorunu yaşayabilirsiniz. Emülatör askıda görünüyorsa veya bu hata iletisini görüyorsanız, "Emülatör aygıt işletim sistemine bağlanamıyor: UDP bağlantı noktasını ayarlayamıyor.  Bazı işlevler devre dışı bırakılmış olabilir", bu sorunla karşılaşabilirsiniz. Aşağıdaki adımları atın.
 
-1. Xamarin Player kaldırın.
+1. Xamarin Player'ı kaldırın.
 
-2. Kaldırılan (Xamarin Player çalıştırması sanal kutusunun üstünde) olan sanal kutunun doğrulayın.
+2. Sanal kutunun kaldırıldığını doğrulayın (Xamarin Player sanal kutunun üstünde çalışır).
 
-3. Cihaz Yöneticisi'ne gidin, gizli aygıtları göster seçeneğini belirleyin ve ardından fiziksel ağ kartları dışında her şeyi silin.
+3. Aygıt yöneticisine gidin, gizli aygıtları gösterme seçeneğini seçin ve ardından fiziksel ağ kartları dışındaki her şeyi silin.
 
-4. Kaldırma/Hyper-V olmayan fiziksel ağ bağdaştırıcısı kaldırdıktan sonra yeniden yüklemeyi deneyebilirsiniz.
+4. Fiziksel olmayan ağ bağdaştırıcılarını kaldırdıktan sonra Hyper-V'yi kaldırmayı/yeniden yüklemeyi deneyebilirsiniz.
 
-## <a name="Skylake"></a>Hata ayıklayıcı bir Xamarin projesine iliştirilemiyor
- Intel Skylake işlemcilere sahip Windows 10 çalıştırıyorsanız, Xamarin uygulamaları öykünücüde çalıştırma başarısız olabilir veya Visual Studio için hata ayıklayıcının değil. Hyper-V ve Skylake işlemciler ile ilgili bir sorun nedeniyle budur. Geçici bir çözüm olarak aşağıdaki adımları uygulayın.
+## <a name="cannot-attach-debugger-to-a-xamarin-project"></a><a name="Skylake"></a>Xamarin projesine hata ayıklayıcı ekleyemez
+ Windows 10'u Intel Skylake işlemcilerle çalıştırıyorsanız, Xamarin uygulamaları emülatörde çalışmayabilir veya Visual Studio hata ayıklayıcısı bunlara bağlanmayabilir. Bu Hyper-V ve Skylake işlemciler ile ilgili bir sorun kaynaklanmaktadır. Geçici çözüm olarak aşağıdaki adımları izleyin.
 
-1. Hyper-V Yöneticisi'ni açın ve öykünücü profil için VM'yi seçin olduğunuz kullanarak.
+1. Hyper-V Manager'ı açın ve kullandığınız emülatör profili için VM'yi seçin.
 
-2. **Kaydedilmiş durumu Sil** (sağ alt) seçeneğini belirleyin.
+2. **Kayıtlı Durumu Sil'i** seçin (sağ altta).
 
-3. **Ayarları Seç...**
+3. **Ayarlar'ı seçin...**
 
-4. İşlemci düğümünü genişletin ve **Uyumluluk**' i seçin.
+4. İşlemci düğümini genişletin ve **Uyumluluk'u**seçin.
 
-5. **Farklı bir işlemci sürümü olan fiziksel bir bilgisayara geçişi**etkinleştirin.
+5. **Farklı işlemci sürümüne sahip fiziksel bir bilgisayara Geçir'i**etkinleştirin.
 
-6. Hizmeti yeniden başlatın ( **Eylemler**altında) ve yeniden deneyin.
+6. Hizmeti yeniden başlatın **(Eylemler**altında) ve yeniden deneyin.
 
-## <a name="GooglePlay"></a>Öykünücü Google Play Hizmetleri kullanan uygulamayı çalıştıramıyor
- Öykünücü, Google Play Hizmetleri'ni kitaplıklarıyla gelmez. Ancak öykünücü sürükle ve bırak açılıp dosyaların yüklenmesini destekler.
+## <a name="emulator-fails-to-run-app-that-uses-google-play-services"></a><a name="GooglePlay"></a>Emülatör, Google Play Hizmetleri kullanan uygulamayı çalıştıramıyor
+ Emülatör, Google Play Hizmetleri için kitaplıklarla birlikte göndermeyapmaz. Ancak, emülatör yanıp sönen zip dosyalarının sürükle ve bırak yüklemesini destekler.
 
-## <a name="DragAndDrop"></a>Dosya, APK veya bıraktığınızda ZIP dosyası için sürükle ve bırak çalışmıyor
- Öykünücü ADB.exe ekrana bir dosya sürükleyip zaman dosya aktarımı kolaylaştırmak için kullanır. Bir dosya sürükleyip denediğinizde bir hatayla karşılaşırsanız, bu büyük olasılıkla öykünücü ADB.exe için bağlı olmadığını gösterir. Sorunu gidermek için, [Visual Studio 'da uygulamayı öykünücüye dağıtmaya çalışmak için takılmış veya öykünücü diğer Ides 'te hata ayıklama hedefi olarak görünmüyor](#ADB).
+## <a name="drag-and-drop-of-a-file-apk-or-flashable-zip-file-does-not-work"></a><a name="DragAndDrop"></a>Bir dosyanın sürükle ve bırak, APK veya yanıp sönebilir zip dosyası çalışmıyor
+ Emülatör, bir dosyayı sürükleyip ekrana bıraktığınızda dosya aktarımını kolaylaştırmak için ADB.exe kullanır. Bir dosyayı sürüklemeye ve düşürmeye çalıştığınızda bir hatayla karşılaşırsanız, bu büyük olasılıkla emülatörün ADB.exe'ye bağlı olmadığını gösterir. Çözmek için, Visual Studio'daki adımları izleyin uygulamayı [emülatöre dağıtmaya çalışırken takılıp kalır veya emülatör diğer IDA'larda hata ayıklama hedefi olarak görünmez.](#ADB)
 
-## <a name="Resolution"></a>Ekran görüntüsünün çözümlenmesi yanlış
- **Ek araçlar** penceresinde ekran görüntüsü sekmesini kullanarak bir ekran görüntüsü alırsanız ve sonuçta elde edilen görüntü beklenmeyen bir Boyutladır, **yakalama**'yı seçmeden önce ekranın yakınlaştırma düzeyini ayarlamanız gerekebilir. Öykünücü ekran görüntüleri, ana bilgisayar İzleyicisi ekranın çözünürlükte alır.
+## <a name="resolution-of-screenshot-is-incorrect"></a><a name="Resolution"></a>Ekran görüntüsünün çözünürlüğü yanlış
+ **Ek Araçlar** penceresinde ekran görüntüsü sekmesini kullanarak bir ekran görüntüsü alırsanız ve ortaya çıkan görüntü beklenmeyen boyuttaysa, **Yakalama'yı**seçmeden önce ekranın yakınlaştırma düzeyini ayarlamanız gerekebilir. Emülatör, ana bilgisayar monitörünüzdeki ekranın çözünürlüğünde ekran görüntüleri alır.
 
-## <a name="OpenGL"></a>Öykünücü OpenGL içeriğini işlemesini başaramazsa
- Öykünücü, ana bilgisayar makinenizin GPU 'SU kullanılarak OpenGL içeriği işler ve bu çağrıları DirectX 'e ve DirectX 'e dönüştürmek için AÇıLı projeyi kullanır. Bir cihazda, ancak yanlış öykünücü uygulamanızın doğru şekilde işlediğinden, cihaz yanlış bir OpenGL çağrı (örneğin, eşleşmeyen gölgelendirici değişkenleri kullanarak) için Azaltıcı olasıdır.
+## <a name="emulator-fails-to-render-opengl-content"></a><a name="OpenGL"></a>Emülatör OpenGL içeriğini işletemedi
+ Emülatör, opengl içeriğini ana makinenizin GPU'unu kullanarak işler ve bu aramaları DirectX'e dönüştürmek için ANGLE projesini kullanır. Uygulamanız bir aygıtta doğru işlerken ancak emülatörde yanlış bir şekilde işlerse, aygıtın yanlış bir OpenGL çağrısını azaltması olasıdır (örneğin, eşleşmeyen gölgeli değişkenler kullanır).
 
-## <a name="Multitouch"></a>Öykünücü çok dokunmalı hareketlere yanıt vermiyor
- Bazı durumlarda, öykünücüyü başlatın ve çok noktalı dokunma için ya da ile doğrudan etkileşim-dokunmatik ekran veya öykünücü araç çubuğunda çok noktalı dokunma aracını kullanarak yanıt değil. Bu durumda, öykünücü araç çubuğunda **Döndür** düğmesini seçin ve çoklu Touch 'ı kullanmayı deneyin. Sorun devam ederse, [Emulator 'un OpenGL içerik sorununu oluşturabileceği başarısız](#OpenGL) olup olmadığını okuyun.
+## <a name="emulator-does-not-respond-to-multi-touch-gestures"></a><a name="Multitouch"></a>Emülatör çoklu dokunma hareketlerine yanıt vermez
+ Bazı durumlarda, emülatör, dokunmatik özellikli ekranınızdan doğrudan etkileşim yoluyla veya emülatör araç çubuğundaki Multi-Touch Aracı'nı kullanarak çoklu dokunmaya başlar ve yanıt vermez. Bu durumda, emülatör araç çubuğundaki **Döndür** düğmesini seçin ve çoklu dokunmayı yeniden kullanmayı deneyin. Sorun devam ederse, [Emülatör'ün OpenGL içerik](#OpenGL) sorununu oluşturmamasını okuyun.
 
-## <a name="Support"></a>Destek kaynakları
- Ana bilgisayarınızın sistem gereksinimlerini karşıladığından ve bu sorun giderme Kılavuzu'nda ele alınmayan bir sorunla karşılaşırsanız varsa:
+## <a name="support-resources"></a><a name="Support"></a>Destek kaynakları
+ Ana bilgisayarınız sistem gereksinimlerini karşılıyorsa ve bu sorun giderme kılavuzunda yer almayan bir sorunla karşılaşırsanız:
 
-- [Android-Emulator](https://stackoverflow.com/questions/tagged/android-emulator) ve Visual-Studio etiketlerini kullanarak StackOverflow 'de soru sorun.
+- [Android emülatörü](https://stackoverflow.com/questions/tagged/android-emulator) ve görsel stüdyo etiketlerini kullanarak StackOverflow hakkında soru sorun.
 
-- Visual Studio'da veya öykünücü Yöneticisi'nde gönderme gülümseme aracını kullanarak bir sorun bildirin.
+- Visual Studio'da veya Emülatör Yöneticisi'nde Gülümseme Gönder aracını kullanarak bir sorunu bildirin.

@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 7d420bd0d42e89476696966f7eda94a19893fc23
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595559"
 ---
-# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio'da arabirimi uygulama
+# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio'da bir arayüz uygulayın
 
 Bu kod oluşturma için geçerlidir:
 
@@ -22,55 +22,55 @@ Bu kod oluşturma için geçerlidir:
 
 - Visual Basic
 
-**Ne:** hemen bir arabirim uygulamak için gereken kodu oluşturmanıza olanak tanır.
+**Ne:** Bir arabirim uygulamak için gereken kodu hemen oluşturmanıza olanak tanır.
 
-**Ne zaman:** bir arabirimden devralma istiyorsunuz.
+**Ne zaman:** Bir arabirimden devralmak istiyorsunuz.
 
-**Neden:** bu özellik otomatik olarak tüm yöntem imzaları oluşturur ancak tüm arabirimi birer birer el ile uygulayabilirsiniz.
+**Neden:** Tüm arabirimi tek tek elle uygulayabilirsiniz, ancak bu özellik tüm yöntem imzalarını otomatik olarak oluşturur.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi satırdaki bir arabirim başvurulan, ancak gerekli tüm üyeleri uygulanmadı belirten bir kırmızı dalgalı olduğu.
+1. İmlecinizi, bir arabirime başvuruyaptığınızı, ancak gerekli tüm üyeleri uygulamadığınızı gösteren kırmızı bir dalgalı çizginin bulunduğu satıra yerleştirin.
 
    - C#:
 
-       ![Vurgulanmış kodu C#](media/interface-highlight-cs.png)
+       ![Vurgulanan kod C #](media/interface-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu VB](media/interface-highlight-vb.png)
+       ![Vurgulanan kod VB](media/interface-highlight-vb.png)
 
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
    - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - Kırmızı dalgalı çizgi gelin ve tıklayın ![ampul hatası](media/error-bulb.png) Bu simge görünür.
-      - &nbsp; ![ampul hatası](media/error-bulb.png) kırmızı dalgalı çizgi içeren satırda metin imleci ise sol kenar boşluğunda görünür simge.
+      - Hızlı Eylemler ve **Yeniden Faktörler** menüsünü sağ tıklatın ve seçin.
+      - Kırmızı dalgalı üzerinde hover ve tıklayın ![hata ampul](media/error-bulb.png) görünen simge.
+      - &nbsp; ![hata ampul](media/error-bulb.png) metin imleci kırmızı dalgalı çizgide yse sol kenar boşluğunda görünen simge.
 
-3. Seçin **arabirim uygulama** aşağı açılan menüden.
+3. Açılan menüden **Arabirimi Uygula'yı** seçin.
 
-   ![Uygulama arabirimi Önizleme](media/interface-preview-cs.png)
+   ![Arayüz önizlemesini uygulayın](media/interface-preview-cs.png)
 
    > [!TIP]
-   > - Kullanım **değişiklik önizlemesi** Önizleme pencerenin alt kısmındaki bağlantı [tüm değişiklikleri görmek için](../../ide/preview-changes.md) , oluşturulacak, seçim yapmadan önce.
-   > - Kullanım **belge**, **proje**, ve **çözüm** uygulayan birden fazla sınıflar arasında uygun bir yöntem imzaları oluşturmak için Önizleme pencerenin alt kısmındaki bağlantıları arabirim.
+   > - Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) önizleme penceresinin altındaki Önizleme **değişiklikleri** bağlantısını kullanın.
+   > - Arabirimi uygulayan birden çok sınıf arasında uygun yöntem imzaları oluşturmak için önizleme penceresinin altındaki **Belge,** **Proje**ve **Çözüm** bağlantılarını kullanın.
 
-   Arabirimin yöntem imzaları oluşturulur ve uygulanması hazırdır.
+   Arabirimin yöntem imzaları oluşturulur ve uygulanmaya hazırdır.
 
    - C#:
 
-       ![C# arabirimi sonucu uygulayın](media/interface-result-cs.png)
+       ![Arabirim sonucunu C uygulayın #](media/interface-result-cs.png)
 
    - Visual Basic:
 
-       ![Uygulama arabirimi sonucu VB](media/interface-result-vb.png)
+       ![Arayüz sonucunu vb uygulayın](media/interface-result-vb.png)
 
    > [!TIP]
-   > (C# yalnızca) Kullanım **arayüzleri açıkça gerçekleştir** seçeneği her yazdığınızdan oluşturulan yöntemi ile ad çakışmalarını önlemek için arabirim adı.
+   > (Yalnızca C# ) Ad çakışmalarını önlemek için oluşturulan her yöntemi arabirim adı ile önsöze getirmek için **Açık Arabirimi Uygula** seçeneğini kullanın.
    >
-   > ![Arabirim uygulama açıkça neden](media/interface-explicitresult-cs.png);
+   > ![Arayüzü açıkça uygulama sonucu](media/interface-explicitresult-cs.png);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

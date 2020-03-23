@@ -1,5 +1,5 @@
 ---
-title: Süreölçer | Microsoft Docs
+title: Zamanlayıcı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1971868e-89fa-4452-8ee7-76e4daf31b66
@@ -10,20 +10,20 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e1bed2715421948385a5b7eb1ddbbac064f3288b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778121"
 ---
 # <a name="timer"></a>Zamanlayıcı
-*VSPerfCmd. exe* **Zamanlayıcı** seçeneği, işlemci saati döngüleri olarak örneklenen profil oluşturma olayını ayarlar ve isteğe bağlı olarak, bir örnekleme aralığındaki döngü sayısını varsayılan 10.000.000 ' dan değiştirir. 1GH (bir gigahertz) işlemcisinde 10.000.000 saat döngüsü yaklaşık 100 örnek/saniye. Belirtime için en az döngü sayısı 50.000 ' dir.
+*VSPerfCmd.exe* **Timer** seçeneği, saat döngülerini işlemciye örnekleyen profil oluşturma olayını ayarlar ve isteğe bağlı olarak bir örnekleme aralığındaki döngü sayısını 10.000.000 varsayılanından değiştirir. 1GH (bir gigahertz) işlemcide, 10.000.000 saat döngüsü saniyede yaklaşık 100 örnektir. Belirtilebilen en az döngü sayısı 50.000'dir.
 
- **Süreölçer** yalnızca örnekleme profil oluşturma yöntemini kullandığınızda kullanılabilir ve yalnızca **başlatma** veya **iliştirme** seçeneğini de içeren bir komut satırında kullanılabilir.
+ **Zamanlayıcı** yalnızca örnekleme profil oluşturma yöntemini kullandığınızda kullanılabilir ve yalnızca **Başlat** veya **Ekle** seçeneğini de içeren bir komut satırında kullanılabilir.
 
- Varsayılan olarak, profil oluşturucu örnekleme olayı, işlemci saati döngüleri olarak ayarlanır ve örnekleme aralığı 10.000.000 olarak ayarlanır. **Zamanlayıcı**, **PF**, **sys**ve **sayaç** seçenekleri, örnekleme olayını ve örnekleme aralığını ayarlamanıza olanak sağlar. **GC** seçeneği, her bir ayırma ve çöp toplama olayında .net bellek verilerini toplar. Komut satırında bu seçeneklerden yalnızca biri belirtilebilir.
+ Varsayılan olarak, profiloluşturucu örnekleme olayı işlemci saat döngüleri olarak ayarlanır ve örnekleme aralığı 10.000.000 olarak ayarlanır. **Zamanlayıcı**, **PF**, **Sys**ve **Sayaç** seçenekleri örnekleme olayını ve örnekleme aralığını ayarlamanızı sağlar. **GC** seçeneği, her ayırma ve çöp toplama olayında .NET bellek verilerini toplar. Bu seçeneklerden yalnızca biri komut satırında belirtilebilir.
 
- Örnekleme olayı ve örnekleme aralığı yalnızca bir **başlatma** veya **iliştirme** seçeneği içeren ilk komut satırında ayarlanabilir.
+ Örnekleme olayı ve örnekleme aralığı yalnızca **Başlat** veya **Ekle** seçeneği içeren ilk komut satırında ayarlanabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,28 +32,28 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /Timer[:Cycles] [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- Örnekleme aralığındaki işlemci saati döngüsü sayısını belirten bir tamsayı değeri `Cycles`. `Cycles` belirtilmemişse, Aralık 10.000.000 olarak ayarlanır. Değeri virgül olmadan belirtin.
+ `Cycles`Örnekleme aralığındaişlemci saat döngülerinin sayısını belirten bir tamsayı değeri. `Cycles` Belirtilmemişse, aralık 10.000.000 olarak ayarlanır. Virgülsüz değeri belirtin.
 
 ## <a name="required-options"></a>Gerekli seçenekler
- **Süreölçer** , yalnızca aşağıdaki seçeneklerden birini içeren bir komut satırında belirtilebilir.
+ **Zamanlayıcı** yalnızca aşağıdaki seçeneklerden birini içeren bir komut satırında belirtilebilir.
 
- **Başlat:** `AppName` profil oluşturucuyu ve `AppName`tarafından belirtilen uygulamayı başlatır.
+ **Başlatma:** `AppName` Profilleyiciyi ve tarafından `AppName`belirtilen uygulamayı başlatır.
 
- **Ekle:** `PID` profil OLUŞTURUCUYU işlem kimliği (`PID`) tarafından belirtilen işleme iliştirir.
+ **Ekle:** `PID` Profiloluşturciyi işlem kimliğinde belirtilen işleme`PID`bağlar ( ).
 
 ## <a name="invalid-options"></a>Geçersiz seçenekler
- Aşağıdaki seçenekler **Zamanlayıcı**ile aynı komut satırında belirtilemez.
+ Aşağıdaki seçenekler **Timer**ile aynı komut satırında belirtilemez.
 
- **PF**[ **:** `Events`] örnekleme olayını sayfa hatalarına ayarlar ve isteğe bağlı olarak örnekleme aralığını `Events`olarak ayarlar. Varsayılan PF aralığı 10 ' dur.
+ **PF**[**:**`Events`] Örnekleme olayını sayfa hatalarına ayarlar ve `Events`isteğe bağlı olarak örnekleme aralığını .'a ayarlar Varsayılan PF aralığı 10'dur.
 
- **Sys**[ **:** `Events`] örnekleme olayını işletim sistemi çağrılarına ayarlar ve isteğe bağlı olarak örnekleme aralığını `Events`olarak ayarlar. Varsayılan sys aralığı 10 ' dur.
+ **Sys**[**:**`Events`] Örnekleme olayını işletim sistemi çağrılarına ayarlar `Events`ve isteğe bağlı olarak örnekleme aralığını . Varsayılan Sys aralığı 10'dur.
 
- [ **:** `Name,Reload,FriendlyName`] **sayacı**, örnekleme olayını `Name` tarafından belirtilen CPU performans sayacına ayarlar ve örnekleme aralığını `Reload`olarak ayarlar.
+ **Sayaç**[**:**`Name,Reload,FriendlyName`] Örnekleme olayını CPU `Name` performans sayacına ayarlar `Reload`ve örnekleme aralığını .
 
- **GC**[ **:** {**Allocation**&#124;**Lifetime**}] .net bellek verilerini toplar. Varsayılan olarak,veriler her bellek ayırma olayında toplanır. **Ömür** parametresi belirtildiğinde her çöp toplama olayında de veriler toplanır.
+ **GC**[**:**{**Ayırma**&#124;**Ömür Boyu**}} .NET bellek verilerini toplar. Varsayılan olarak **(Ayırma),** veriler her bellek ayırma olayında toplanır. Ömür **boyu** parametresi belirtildiğinde, her çöp toplama olayında veriler de toplanır.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, profil oluşturucu örnekleme aralığının 1.000.000 işlemci döngüleri olarak nasıl ayarlanacağı gösterilmektedir.
+ Bu örnek, profiloluşturucu örnekleme aralığının 1.000.000 işlemci döngüsüne nasıl ayarlanın gerektiğini göstermektedir.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -62,6 +62,6 @@ VSPerfCmd.exe /Launch:TestApp.exe /Timer:1000000
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profil tek başına uygulamalar](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [Web uygulamaları ASP.NET profil](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

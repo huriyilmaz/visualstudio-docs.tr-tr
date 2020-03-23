@@ -1,5 +1,5 @@
 ---
-title: Otomatikleştirilmiş test için Azure Pipelines kullanma
+title: Otomatik sınama için Azure Ardışık Hatlar'ı kullanma
 ms.date: 10/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,67 +10,67 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: bd6e9b2d9ea408e451b7032a00c3c96fb0ef2b58
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75566832"
 ---
-# <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Otomatikleştirilmiş test için Laboratuvar Yönetimi yerine Azure Test Plans kullanın
+# <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Otomatik sınama için Laboratuvar Yönetimi yerine Azure Test Planlarını kullanma
 
-Otomatik test veya yapı-dağıtma-test otomasyonu için Microsoft Test Yöneticisi ve Laboratuvar Yönetimi kullanırsanız, bu konuda Azure Pipelines ve Team Foundation Server (TFS) içindeki [derleme ve sürüm](/azure/devops/pipelines/index?view=vsts) özelliklerini kullanarak aynı hedeflere nasıl ulaştabileceğiniz açıklanmaktadır.
+Otomatik sınama veya yapı-dağıtma-test otomasyonu için Microsoft Test Yöneticisi ve Laboratuvar Yönetimi'ni kullanıyorsanız, bu konu Azure Ardışık Hatları ve Team Foundation Server (TFS) geliştirme [ve sürüm](/azure/devops/pipelines/index?view=vsts) özelliklerini kullanarak aynı hedeflere nasıl ulaşabileceğinizi açıklar.
 
-## <a name="build-deploy-test-automation"></a>Yapı-dağıtma-test Otomasyonu
+## <a name="build-deploy-test-automation"></a>Yap-dağıt-test otomasyonu
 
-Microsoft Test Yöneticisi ve Laboratuvar Yönetimi, uygulamalarınızın derleme, dağıtım ve sınamasını otomatik hale getirmek için bir XAML derleme tanımına bağımlıdır. XAML derlemesi, laboratuvar ortamı, test paketleri ve test ayarları gibi Microsoft Test Yöneticisi oluşturulan çeşitli yapılara ve yapı denetleyicisi, yapı aracıları, test denetleyicisi ve test aracıları gibi çeşitli altyapı bileşenlerinde kullanır Bu hedefe ulaşın. Azure Pipelines veya TFS kullanarak daha az adımla aynısını gerçekleştirebilirsiniz.
+Microsoft Test Yöneticisi ve Laboratuvar Yönetimi, uygulamalarınızın oluşturulmasını, dağıtımını ve testini otomatikleştirmek için xaml yapı tanımına güvenir. XAML yapısı, Microsoft Test Yöneticisi'nde oluşturulan laboratuvar ortamı, test paketleri ve test ayarları gibi çeşitli yapılara ve Yapı denetleyicisi, Yapı aracıları, Test denetleyicisi ve Test aracıları gibi çeşitli altyapı bileşenlerine dayanır. bu hedefe ulaşmak. Azure Ardışık Hatları veya TFS'yi kullanarak aynı adımı daha az adımla gerçekleştirebilirsiniz.
 
-| Adımlar | XAML derlemesi ile | Bir derlemede veya yayında |
+| Adımlar | XAML yapısı ile | Bir yapı da veya sürümde |
 |-------|----------------------|-----------------|
-| Derlemeyi dağıtmak ve testleri çalıştırmak için makineleri belirler. | Bu makinelerle Microsoft Test Yöneticisi bir standart laboratuar ortamı oluşturun. | yok |
-| Çalıştırılacak Testleri belirler. | Microsoft Test Yöneticisi bir test paketi oluşturun, test çalışmaları oluşturun ve Otomasyonu her test çalışmasıyla ilişkilendirin. Laboratuvar ortamında testlerin çalıştırılması gereken makinelerin rolünü tanımlayan Microsoft Test Yöneticisi test ayarları oluşturun. | Testinizi test planlarına göre yönetmeyi planlıyorsanız, otomatik test paketini Microsoft Test Yöneticisi aynı şekilde oluşturun. Alternatif olarak, testlerinizi doğrudan Derlemelerinizde üretilen test ikilileriyle çalıştırmak istiyorsanız bunu atlayabilirsiniz. Her iki durumda da test ayarları oluşturmaya gerek yoktur. |
-| Dağıtımı ve sınamayı otomatikleştirin. | LabDefaultTemplate. *. XAML kullanarak bir XAML derleme tanımı oluşturun. Yapı tanımında yapı, test paketleri ve laboratuvar ortamını belirtin. | Tek bir ortamla [derleme veya yayın işlem hattı](/azure/devops/pipelines/index?view=vsts) oluşturun. Komut satırı görevini kullanarak aynı dağıtım betiğini (XAML derleme tanımından) çalıştırın ve test aracısı dağıtımını kullanarak otomatikleştirilmiş testleri çalıştırın ve Işlevsel testler görevlerini çalıştırın. Makinelerin listesini ve kimlik bilgilerini bu görevlere giriş olarak belirtin. |
+| Yapıyı dağıtmak ve testleri çalıştırmak için makineleri tanımlayın. | Bu makinelerle Microsoft Test Yöneticisi'nde standart bir laboratuvar ortamı oluşturun. | yok |
+| Çalıştırılacak testleri tanımlayın. | Microsoft Test Yöneticisi'nde bir test paketi oluşturun, test örnekleri oluşturun ve otomasyonu her test çalışmasıyla ilişkilendirin. Microsoft Test Yöneticisi'nde, testlerin çalıştırılması gereken laboratuvar ortamındaki makinelerin rolünü tanımlayan test ayarları oluşturun. | Test planlarınızı yönetmeyi planlıyorsanız, Microsoft Test Yöneticisi'nde de aynı şekilde otomatik test paketi oluşturun. Alternatif olarak, testleri doğrudan yapılarınızın ürettiği test ikililerinden çalıştırmak istiyorsanız bunu atlayabilirsiniz. Her iki durumda da test ayarları oluşturmanıza gerek yoktur. |
+| Dağıtımı ve testi otomatikleştirin. | LabDefaultTemplate.*.xaml kullanarak bir XAML yapı tanımı oluşturun. Yapı tanımında yapı, test paketleri ve laboratuar ortamını belirtin. | Tek bir ortamla [bir yapı veya sürüm ardışık hattı](/azure/devops/pipelines/index?view=vsts) oluşturun. Komut satırı görevini kullanarak aynı dağıtım komut dosyasını (XAML yapı tanımından) çalıştırın ve Test Aracısı Dağıtımı ve İşlevsel Testler görevlerini çalıştırarak otomatik testler çalıştırın. Bu görevlere giriş olarak makinelerin listesini ve kimlik bilgilerini belirtin. |
 
-Bu senaryo için Azure Pipelines veya TFS kullanmanın avantajlarından bazıları şunlardır:
+Bu senaryo için Azure Ardışık Hatlar veya TFS kullanmanın avantajlarından bazıları şunlardır:
 
-* Bir yapı denetleyicisi veya Test denetleyicisi gerekmez.
-* Test aracısı üzerinden bir görevi derleme veya sürüm bir parçası olarak yüklenir.
-* Dağıtım adımlarını özelleştirmek kolay bir işlemdir. Artık tek bir betik kullanmak için kısıtlanır. Ayrıca Visual Studio Market olduğu gibi ürün içinde kullanılabilir olan birçok görev yararlanabilirsiniz.
-* Test paketlerini sürdürmek zorunda değilsiniz. Test ikili dosyalarını doğrudan çalıştırabilirsiniz.
-* Her derleme veya yayın içinde çalıştırılan testler için daha zengin bir satır içi raporlama deneyimi alırsınız.
-* Hangi varlıkları izleyebilirsiniz (sürüm, derleme, iş öğelerini, işlemeleri) şu anda dağıtıldığı ve her ortamda test.
-* Özelleştirme ve birden çok test ortamlarını ve üretim için bile kolayca dağıtmak için Otomasyon genişletin.
-* Bir iade veya işleme olduğunda veya belirli bir zamanda her gün gerçekleşecek Otomasyon zamanlayabilirsiniz.
+* Yapı denetleyicisi veya Test denetleyicisi gerekmez.
+* Test aracısı, yapı veya sürüm parçası olarak bir görev aracılığıyla yüklenir.
+* Dağıtım adımlarını özelleştirmek kolaydır. Artık tek bir komut dosyası kullanmak için sınırlı değildir. Ayrıca, visual studio marketplace'in yanı sıra üründe de bulunan birçok görevden yararlanabilirsiniz.
+* Test süitlerini korumak zorunda değilsin. İkili testleri doğrudan çalıştırabilirsiniz.
+* Her yapı veya sürüm de çalıştırılabilen testler için daha zengin bir satır içi raporlama deneyimi elde elabilirsiniz.
+* Hangi varlıkların (sürüm, oluşturma, iş öğeleri, taahhütler) şu anda dağıtılmış ve her ortamda sınanmış olarak izleyebilirsiniz.
+* Otomasyonu, birden çok test ortamına ve hatta üretime kolayca dağıtacak şekilde özelleştirebilir ve genişletebilirsiniz.
+* Otomasyonu, check-in veya taahhüt olduğunda veya her gün belirli bir saatte gerçekleşmesi için zamanlayabilirsiniz.
 
-## <a name="self-service-management-of-scvmm-environments"></a>SCVMM ortamlarının Self Servis Yönetimi
+## <a name="self-service-management-of-scvmm-environments"></a>SCVMM ortamlarının self servis yönetimi
 
-[Microsoft Test Yöneticisi 'Daki test merkezi](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts) , bir dizi ortam şablonu yönetme ve bir [SCVMM sunucusu](/system-center/vmm/overview?view=sc-vmm-1801)kullanarak isteğe bağlı ortamlar sağlama yeteneğini destekler.
+[Microsoft Test Yöneticisi'ndeki Test Merkezi,](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts) bir [SCVMM sunucusu](/system-center/vmm/overview?view=sc-vmm-1801)kullanarak talep üzerine gelen ortam şablonları kitaplığını ve sağlama ortamlarını yönetme yeteneğini destekler.
 
-Laboratuvar Merkezi 'nin Self Servis sağlama özellikleri iki farklı hedefle sahiptir:
+Lab Center'ın self servis sağlama özelliklerinin iki farklı hedefi vardır:
 
-* Altyapıyı yönetmenin daha basit bir yolunu sağlayın. VM 'leri ve ortam şablonlarını yönetme ve ortamların klonlarını yalıtmak için özel ağları otomatik olarak oluşturma altyapı yönetimi örnekleri.
+* Altyapıyı yönetmek için daha basit bir yol sağlayın. VM ve çevre şablonlarını yönetmek ve ortam klonlarını birbirinden izole etmek için otomatik olarak özel ağlar oluşturmak altyapı yönetimine örnekti.
 
-* Takımların test ve dağıtım etkinliklerinde sanal makineleri tüketmesi için daha basit bir yol sağlayın. Laboratuvar ortamlarının aynı proje güvenlik modeliyle erişilebilir hale getirilmesi ve test senaryolarında bu sanal makinelerin tümleşik kullanımı, kolay tüketim örneğidir.
+* Ekiplerin test ve dağıtım etkinliklerinde sanal makineleri kullanmaları için daha basit bir yol sağlayın. Aynı proje güvenlik modeli aracılığıyla laboratuvar ortamlarını erişilebilir hale getirmek ve bu sanal makinelerin test senaryolarında tümleşik kullanımı kolay tüketime örnekti.
 
-Ancak, [Microsoft Azure](https://azure.microsoft.com/) ve [Microsoft Azure Stack](https://azure.microsoft.com/overview/azure-stack/)gibi daha zengin ortak ve özel bulut yönetim sistemlerinin EVRIMI verildiğinde, TFS 2017 ve dışındaki altyapı yönetimi özelliklerinin bir gelişimi yoktur. Bunun yerine, bu tür bulut altyapıları aracılığıyla yönetilen kaynakların kolay tüketimine odaklanmaya devam edilir.
+Ancak, [Microsoft Azure](https://azure.microsoft.com/) ve Microsoft [Azure Yığını](https://azure.microsoft.com/overview/azure-stack/)gibi daha zengin genel ve özel bulut yönetim sistemlerinin evrimi göz önüne alındığında, TFS 2017 ve ötesinde altyapı yönetimi özelliklerinin evrimi yoktur. Bunun yerine, bu tür bulut altyapıları aracılığıyla yönetilen kaynakların kolay tüketimine odaklanmadevam etmektedir.
 
-Aşağıdaki tabloda, Laboratuvar Merkezi 'nde gerçekleştirdiğiniz tipik etkinlikler ve bunları SCVMM veya Azure (altyapı yönetimi etkinlikleriniz) aracılığıyla veya TFS ile Azure DevOps Services (test veya dağıtım olmaları durumunda) nasıl gerçekleştirebileceğiniz özetlenmektedir. Etkinlikler):
+Aşağıdaki tablo, Lab Center'da gerçekleştirdiğiniz tipik etkinlikleri ve bunları SCVMM veya Azure (altyapı yönetimi etkinlikleriyse) veya TFS ve Azure DevOps Hizmetleri (test veya dağıtım varsa) aracılığıyla nasıl gerçekleştirebileceğinizi özetler. faaliyetleri):
 
-| Adımlar | Laboratuvar Merkezi ile | Bir derlemede veya yayında |
+| Adımlar | Laboratuvar Merkezi ile | Bir yapı da veya sürümde |
 |-------|-----------------|-----------------------|
-| Ortam şablonlarının bir kitaplığını yönetin. | Laboratuvar ortamı oluşturun. Gerekli yazılımları sanal makinelere yükler. Sysprep ve ortamı kitaplıkta şablon olarak depolayın. | Sanal makine şablonlarını veya hizmet şablonlarını oluşturmak ve yönetmek için doğrudan SCVMM Yönetim konsolunu kullanın. Azure 'u kullanırken [Azure hızlı başlangıç şablonlarından](https://azure.microsoft.com/resources/templates/)birini seçin. |
-| Laboratuvar ortamı oluşturun. | Kitaplıkta bir ortam şablonu seçin ve dağıtın. Sanal makine yapılandırmasını özelleştirmek için gerekli parametreleri sağlayın. | Şablonlardan VM 'Ler veya hizmet örnekleri oluşturmak için doğrudan SCVMM Yönetim konsolunu kullanın. Kaynakları oluşturmak için doğrudan Azure portal kullanın. Ya da, bir ortamla birlikte bir yayın tanımı oluşturun. Yeni sanal makineler oluşturmak için [SCVMM Tümleştirme Uzantısı](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp) ' ndan Azure görevlerini veya görevlerini kullanın. Bu tanımın yeni bir sürümünü oluşturmak, Laboratuvar Merkezi 'nde yeni bir ortam oluşturmaya eşdeğerdir. |
-| Makinelere bağlanın. | Ortam Görüntüleyicisinde laboratuvar ortamını açın. | Sanal makinelere bağlanmak için doğrudan SCVMM Yönetim konsolunu kullanın. Alternatif olarak, uzak masaüstü oturumlarını açmak için sanal makinelerin IP adresini veya DNS adlarını kullanın. |
-| Bir ortamın denetim noktasını alın veya bir ortamı temiz bir kontrol noktasına geri yükleyin. | Ortam Görüntüleyicisinde laboratuvar ortamını açın. Bir denetim noktası alma veya önceki bir kontrol noktasına geri yükleme seçeneğini belirleyin. | Bu işlemleri sanal makinelerde gerçekleştirmek için doğrudan SCVMM Yönetim konsolunu kullanın. Ya da bu adımları daha büyük bir Otomasyon kapsamında gerçekleştirmek için, bir yayın tanımındaki ortamın bir parçası olarak, [SCVMM tümleştirme uzantısından](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp) denetim noktası görevlerini dahil edin. |
+| Ortam şablonları kitaplığı yönetin. | Bir laboratuvar ortamı oluşturun. Sanal makinelere gerekli yazılımları yükleyin. Sysprep ve kitaplıkta bir şablon olarak çevre saklayın. | Sanal makine şablonları veya hizmet şablonları oluşturmak ve yönetmek için doğrudan SCVMM yönetim konsolu'nun kullanın. Azure'u kullanırken Azure [hızlı başlatma şablonlarından](https://azure.microsoft.com/resources/templates/)birini seçin. |
+| Bir laboratuvar ortamı oluşturun. | Kitaplıkta bir ortam şablonu seçin ve dağıtın. Sanal makine yapılandırmalarını özelleştirmek için gerekli parametreleri sağlayın. | Şablonlardan VM'ler veya hizmet örnekleri oluşturmak için doğrudan SCVMM yönetim konsolu'nun kullanın. Kaynak oluşturmak için doğrudan Azure portalLarını kullanın. Veya, bir ortamla bir sürüm tanımı oluşturun. Yeni sanal makineler oluşturmak için [SCVMM Tümleştirme uzantısındaki](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp) Azure görevlerini veya görevlerini kullanın. Bu tanımın yeni bir sürümü oluşturmak, Lab Center'da yeni bir ortam oluşturmaya eşdeğerdir. |
+| Makinelere bağlanın. | Ortam görüntüleyicide laboratuvar ortamını açın. | Sanal makinelere bağlanmak için doğrudan SCVMM yönetim konsolu kullanın. Alternatif olarak, uzak masaüstü oturumlarını açmak için sanal makinelerin IP adresini veya DNS adlarını kullanın. |
+| Bir ortamın denetim noktasını alın veya ortamı temiz bir denetim noktasına geri yükleyin. | Ortam görüntüleyicide laboratuvar ortamını açın. Bir denetim noktası almak veya önceki bir denetim noktasına geri yüklemek için seçeneğini belirleyin. | Sanal makinelerde bu işlemleri gerçekleştirmek için doğrudan SCVMM yönetim konsolu kullanın. Veya, daha büyük bir otomasyonun parçası olarak bu adımları gerçekleştirmek için, bir sürüm tanımında ortamın bir parçası olarak [SCVMM Tümleştirme uzantısı](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp) gelen denetim noktası görevleri içerir. |
 
-## <a name="create-network-isolated-environments"></a>Ağ yalıtımlı ortamlar oluşturma
+## <a name="create-network-isolated-environments"></a>Ağdan yalıtılmış ortamlar oluşturma
 
-Ağ yalıtımlı laboratuvar ortamı, ağ çakışmalarına neden olmadan güvenli bir şekilde kopyalanabilen bir SCVMM sanal makine grubudur. Bu, özel bir ağdaki sanal makineleri yapılandırmak için bir dizi ağ arabirim kartı ve bir ortak ağdaki sanal makineleri yapılandırmak için başka bir ağ arabirimi kartı kullanan bir dizi yönerge kullanılarak MTM 'de yapılır.
+Ağ yalıtılmış laboratuvar ortamı, ağ çakışmalarına neden olmadan güvenli bir şekilde klonlanabilen bir grup SCVMM sanal makinesidir. Bu, MTM'de, özel bir ağdaki sanal makineleri yapılandırmak için bir dizi ağ arabirimi kartı ve ortak ağdaki sanal makineleri yapılandırmak için başka bir ağ arabirimi kartı kümesi kullanılarak yapıldı.
 
-Ancak, SCVMM derleme ve dağıtma göreviyle birlikte Azure Pipelines ve TFS, SCVMM ortamlarını yönetmek, yalıtılmış sanal ağlar sağlamak ve yapı dağıtma test senaryolarını uygulamak için kullanılabilir. Örneğin, görevi şu şekilde kullanabilirsiniz:
+Ancak, Azure Ardışık Hatları ve TFS, SCVMM oluşturma ve dağıtma göreviyle birlikte, SCVMM ortamlarını yönetmek, yalıtılmış sanal ağlar sağlamak ve yapı dağıtma-sınama senaryolarını uygulamak için kullanılabilir. Örneğin, görevi aşağıdakileri için kullanabilirsiniz:
 
 * Denetim noktaları oluşturma, geri yükleme ve silme
-* Şablon kullanarak yeni sanal makineler oluşturma
+* Şablon kullanarak yeni sanal makineler oluşturun
 * Sanal makineleri başlatma ve durdurma
-* SCVMM için özel PowerShell betikleri çalıştırma
+* SCVMM için özel PowerShell komut dosyaları çalıştırın
 
-Daha fazla bilgi için bkz. [yapı-dağıtma-test senaryoları için sanal ağ yalıtılmış ortam oluşturma](/azure/devops/pipelines/targets/create-virtual-network?view=vsts).
+Daha fazla bilgi için [bkz.](/azure/devops/pipelines/targets/create-virtual-network?view=vsts)

@@ -1,6 +1,6 @@
 ---
 title: Deneme sürümü uzatma veya bir lisansı güncelleştirme
-description: Visual Studio 'nun ücretsiz deneme sürümünü genişletmeyi, çevrimiçi bir abonelik veya ürün anahtarını kullanarak Visual Studio 'Yu nasıl kilitleyeceğinizi ve eski veya süresi dolmuş bir lisansı güncelleştirmeyi öğrenin.
+description: Visual Studio'nun ücretsiz deneme sürümünü nasıl genişleteceklerini, Visual Studio'nun kilidini açmak için çevrimiçi abonelik veya ürün anahtarını nasıl kullanacağınızı ve eski veya süresi dolmuş bir lisansı nasıl güncelleştirini öğrenin.
 ms.date: 12/18/2019
 ms.topic: conceptual
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
@@ -12,68 +12,68 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.openlocfilehash: 8e11d77a94c7c1d3d7b038ecea1a6c61646e371f
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77027573"
 ---
 # <a name="extend-a-trial-version-or-update-a-license"></a>Deneme sürümü uzatma veya bir lisansı güncelleştirme
 
-[Visual Studio Professional veya Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) ücretsiz deneme sürümünü 30 gün boyunca değerlendirebilirsiniz. Oturum açarsanız deneme süresini 90 güne genişletebilirsiniz. (Visual Studio Community, deneme süresi olmadan ücretsizdir. Ancak, [lisansınızı güncel](#update-a-stale-license)tutmak için düzenli aralıklarla [oturum açmanız](signing-in-to-visual-studio.md) gerekir.)
+[Visual Studio Professional veya Visual Studio Enterprise'ın](https://visualstudio.microsoft.com/vs/compare/) ücretsiz deneme sürümünü 30 gün boyunca değerlendirebilirsiniz. Oturum açsanız deneme süresini 90 güne uzatabilirsiniz. (Visual Studio Community deneme süresi olmadan ücretsizdir. Ancak, lisansınızı güncel tutmak için düzenli olarak [oturum açmanız](signing-in-to-visual-studio.md) [gerekmektedir](#update-a-stale-license).)
 
-Deneme süresi bittikten sonra Visual Studio 'Yu kullanmaya devam etmek için, [çevrimiçi bir abonelik](#use-an-online-subscription) veya [ürün anahtarı](#enter-a-product-key)ile bu dosyanın kilidini açın.
+Deneme süresi sona erdikten sonra Visual Studio'u kullanmaya devam etmek için, [çevrimiçi abonelik](#use-an-online-subscription) veya [ürün anahtarıyla](#enter-a-product-key)kilidini açın.
 
-## <a name="use-an-online-subscription"></a>Çevrimiçi abonelik kullan
+## <a name="use-an-online-subscription"></a>Çevrimiçi abonelik kullanma
 
-1. IDE 'nin sağ üst köşesindeki **oturum aç** düğmesini seçin (veya **Hesap ayarları** Iletişim kutusunu açmak Için **Dosya** > **Hesap ayarları** ' na gidin ve **oturum aç** düğmesini seçin).
+1. IDE'nin sağ üst köşesindeki **Oturum Aç** düğmesini seçin (veya **Hesap Ayarları** iletişim kutusunu açmak için **Dosya** > **Hesap Ayarları'na** gidin ve ardından **Oturum Aç** düğmesini seçin).
 
-1. Bir Microsoft hesabı ya da bir iş veya Okul hesabı için kimlik bilgilerini girin. Visual Studio, bir Visual Studio aboneliği veya hesabınızla ilişkili bir Azure DevOps organizasyonu bulur.
+1. Microsoft hesabı veya iş veya okul hesabının kimlik bilgilerini girin. Visual Studio, hesabınızla ilişkili bir Visual Studio aboneliği veya Azure DevOps kuruluşu bulur.
 
 > [!IMPORTANT]
-> **Takım Gezgini** araç penceresinden bir Azure DevOps kuruluşuna bağlandığınızda, Visual Studio ilişkili çevrimiçi abonelikleri otomatik olarak arar. Bir Azure DevOps kuruluşuna bağlandığınızda, hem Microsoft hem de iş veya okul hesaplarını kullanarak oturum açabilirsiniz. Bu kullanıcı hesabı için çevrimiçi bir abonelikle varsa Visual Studio IDE sizin için kilidini otomatik.
+> Visual Studio, **Team Explorer** araç penceresinden bir Azure DevOps kuruluşuna bağlandığınızda ilişkili çevrimiçi abonelikleri otomatik olarak arar. Bir Azure DevOps kuruluşuna bağlandığınızda, hem Microsoft'u hem de iş veya okul hesaplarını kullanarak oturum açabilirsiniz. Bu kullanıcı hesabı için çevrimiçi bir abonelik varsa, Visual Studio sizin için Otomatik olarak IDE kilidini açar.
 
-Visual Studio abonelikleri ve nasıl çalıştıkları hakkında daha fazla bilgi için, [abonelik DESTEĞI SSS](https://visualstudio.microsoft.com/subscriptions/support/) sayfasına bakın.
+Visual Studio abonelikleri ve nasıl çalıştıkları hakkında daha fazla bilgi için [Abonelikleri Destek SSS](https://visualstudio.microsoft.com/subscriptions/support/) sayfasına bakın.
 
-## <a name="enter-a-product-key"></a>Ürün anahtarı girin
+## <a name="enter-a-product-key"></a>Bir ürün anahtarı girin
 
-1. **Hesap ayarları** iletişim kutusunu açmak için **Dosya** > **Hesap ayarları** ' nı seçin ve ardından **bir ürün anahtarı bağlantısı olan lisansı** seçin.
+1. **Hesap Ayarları** iletişim kutusunu açmak için **Dosya** > **Hesabı Ayarları'nı** seçin ve ardından Ürün **Anahtarı bağlantısıyla Lisansı** seçin.
 
-1. Ürün anahtarı, sağlanan alana girin.
+1. Sağlanan alana ürün anahtarını girin.
 
 > [!TIP]
-> Visual Studio 'nun yayın öncesi sürümlerinde ürün anahtarları yoktur. Yayın öncesi sürümleri kullanmak için IDE 'de oturum açmanız gerekir.
+> Visual Studio'nun ön sürüm sürümlerinde ürün anahtarları yoktur. Ön sürüm sürümlerini kullanmak için IDE'de oturum açmanız gerekir.
 
-Visual Studio için Visual Studio ürün anahtarları ve bunların nasıl alınacağı hakkında daha fazla bilgi için bkz. [Visual Studio abonelikleri 'nde ürün anahtarlarını kullanma](/visualstudio/subscriptions/product-keys) sayfası.
+Visual Studio için Visual Studio ürün anahtarları ve bunları nasıl alacağınız hakkında daha fazla bilgi için Visual Studio abonelikleri sayfasında [ürün anahtarlarını kullanma](/visualstudio/subscriptions/product-keys) sayfasına bakın.
 
-## <a name="update-a-stale-license"></a>Eski lisansı güncelleştirme
+## <a name="update-a-stale-license"></a>Eski bir lisansı güncelleştirme
 
-Visual Studio 'da "lisansınızın eski ve güncelleştirilmiş olması gerektiğini belirten bir ileti görebilirsiniz.
+Visual Studio'da "Lisansınız bayatladı ve güncellenmesi gerekiyor" yazan bir ileti görebilirsiniz.
 
-![Visual Studio eski lisans iletisi](../ide/media/vs2017_stale-license.png)
+![Visual Studio bayat lisans mesajı](../ide/media/vs2017_stale-license.png)
 
-Bu ileti, aboneliğiniz hala geçerli olabileceğinden, Visual Studio 'Nun aboneliğinizi güncel tutmak için kullandığı lisans belirtecinin yenilenmediği anlamına gelir. Visual Studio, aşağıdaki nedenlerden biri nedeniyle lisansın eski olduğunu bildiriyor:
+Bu ileti, aboneliğiniz hala geçerli olsa da Visual Studio'nun aboneliğinizi güncel tutmak için kullandığı lisans belirteci nin yenilenmediğini belirtir. Visual Studio, aşağıdaki nedenlerden biri nedeniyle lisansın bayat olduğunu bildirir:
 
-* Visual Studio 'Yu kullanmadınız veya internet 'e uzun bir süre boyunca bağlanmadınız.
-* Visual Studio dışında oturumunuz.
+* Visual Studio'yu kullanmadınız veya uzun bir süre internete bağlanmadın.
+* Visual Studio'dan çıkış imzaladın.
 
-Lisans belirteci eski olmadan önce, Visual Studio önce kimlik bilgilerinizi yeniden girmeniz isteyen bir uyarı iletisi gösterir.
+Lisans belirteci eskimeden önce Visual Studio, kimlik bilgilerinizi yeniden girmenizi isteyen bir uyarı iletisi gösterir.
 
-Kimlik bilgilerinizi yeniden girmeyin, belirteç eskgeç çalışmaya başlar ve **Hesap ayarları** iletişim kutusu, belirtecinizin süresi dolmadan kaç gün kaldığını gösterir. Belirtecin süresi dolduktan sonra, Visual Studio 'Yu kullanmaya devam edebilmeniz için önce hesap kimlik bilgilerinizi yeniden girmeniz gerekir.
+Kimlik bilgilerinizi yeniden girmezseniz, belirteç eskimeye başlar ve **Hesap Ayarları** iletişim kutusu, belirteç süresinin dolmasına kaç gün kaldığını bildirir. Jetonuzun süresi dolduktan sonra, Visual Studio'yu kullanmaya devam etmeden önce hesap için kimlik bilgilerinizi yeniden girmeniz gerekir.
 
 > [!Important]
-> Sınırlı veya internet erişimi olmayan ortamlarda genişletilmiş dönemler için Visual Studio kullanıyorsanız, kesintiye uğramamak için Visual Studio 'Nun kilidini açmak üzere bir ürün anahtarı kullanmanız gerekir.
+> Visual Studio'yı sınırlı veya internet erişimi olmayan ortamlarda uzun süre kullanıyorsanız, kesintiye uğramamak için Visual Studio'nun kilidini açmak için bir ürün anahtarı kullanmalısınız.
 
-## <a name="update-an-expired-license"></a>Süre dolma lisansı güncelleştirme
+## <a name="update-an-expired-license"></a>Süresi dolan bir lisansı güncelleştirme
 
-Aboneliğinizin süresi dolmuşsa ve Visual Studio için artık erişim haklarınız yoksa, aboneliğinizi yenilemeniz veya aboneliğine sahip başka bir hesap eklemeniz gerekir. Kullanmakta olduğunuz lisans hakkında daha fazla bilgi görmek için **dosya** > **Hesap ayarları** ' na gidin ve iletişim kutusunun sağ tarafındaki lisans bilgilerine bakın. Farklı bir hesapla ilişkili başka bir aboneliğiniz varsa, **Hesap Ekle** bağlantısı ' nı seçerek bu hesabı iletişim kutusunun sol tarafındaki **tüm hesaplar** listesine ekleyin.
+Aboneliğinizin süresi dolduysa ve Artık Visual Studio'ya erişim haklarınız yoksa, aboneliğinizi yenilemeniz veya aboneliği olan başka bir hesap eklemeniz gerekir. Kullandığınız lisans hakkında daha fazla bilgi görmek için **Dosya** > **Hesabı Ayarları'na** gidin ve iletişim kutusunun sağ tarafındaki lisans bilgilerine bakın. Farklı bir hesapla ilişkili başka bir aboneliğiniz varsa, **hesap ekle** bağlantısını seçerek bu hesabı iletişim kutusunun sol tarafındaki **Tüm Hesaplar** listesine ekleyin.
 
 ## <a name="get-support"></a>Destek alın
 
-Bazen, şeyler yanlış gider. Bir sorunla karşılaşırsanız, bazı destek seçenekleri aşağıda verilmiştir:
+Bazen işler ters gider. Bir sorunla karşılaşırsanız, bazı destek seçenekleri şunlardır:
 
-* [Sorun bildir](how-to-report-a-problem-with-visual-studio.md) aracını kullanarak ürün sorunlarını bildirin.
-* Abonelikler, hesaplar ve faturalandırma hakkında soruların yanıtlarını, [abonelikler destek SSS](https://visualstudio.microsoft.com/subscriptions/support/)' de bulabilirsiniz.
+* Sorun Bildir aracını kullanarak ürün sorunlarını [bildirin.](how-to-report-a-problem-with-visual-studio.md)
+* [Abonelikleri Destek SSS'sinde](https://visualstudio.microsoft.com/subscriptions/support/)abonelikler, hesaplar ve faturalandırma yla ilgili soruların yanıtlarını bulun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

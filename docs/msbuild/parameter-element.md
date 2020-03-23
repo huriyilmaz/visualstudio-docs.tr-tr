@@ -1,5 +1,5 @@
 ---
-title: Parameter öğesi | Microsoft Docs
+title: Parametre Elemanı | Microsoft Dokümanlar
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dbf0c25967d84e930ee97a84709c808d3541e733
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263116"
 ---
-# <a name="parameter-element"></a>Parameter öğesi
+# <a name="parameter-element"></a>Parametre elemanı
 
-Bir `UsingTask` `TaskFactory`tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içerir.  Öğesinin adı parametrenin adıdır.  Daha fazla bilgi için bkz. [UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Bir `UsingTask` `TaskFactory`. tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içerir.  Öğenin adı parametrenin adıdır.  Daha fazla bilgi için [Bkz. UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<Proje > \<UsingTask > \<ParameterGroup > \<parametresi >
+ \<Proje \<> UsingTask> \< \<ParametreGroup> Parametre>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,9 +46,9 @@ Bir `UsingTask` `TaskFactory`tarafından oluşturulan bir görev için belirli b
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`ParameterType`|İsteğe bağlı öznitelik.<br /><br /> Parametrenin .NET türü, örneğin, `System.String`.|
-|`Output`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`, bu parametre görev için bir çıkış parametresidir. Varsayılan değer `false` şeklindedir.|
-|`Required`|İsteğe bağlı Boolean özniteliği.<br /><br /> `true`, bu parametre görev için gerekli bir parametredir. Varsayılan değer `false` şeklindedir.|
+|`ParameterType`|İsteğe bağlı öznitelik.<br /><br /> Örneğin parametrenin .NET `System.String`türü.|
+|`Output`|İsteğe bağlı Boolean özniteliği.<br /><br /> Eğer `true`, bu parametre görev için bir çıkış parametresi. Varsayılan değer `false` şeklindedir.|
+|`Required`|İsteğe bağlı Boolean özniteliği.<br /><br /> Eğer `true`, bu parametre görev için gerekli bir parametre. Varsayılan değer `false` şeklindedir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -58,11 +58,11 @@ Bir `UsingTask` `TaskFactory`tarafından oluşturulan bir görev için belirli b
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Bir `UsingTask` `TaskFactory`tarafından oluşturulan görevde mevcut olacak parametrelerin isteğe bağlı bir listesini içerir.|
+|[ParametreGrubu](../msbuild/parametergroup-element.md)|Bir `UsingTask` `TaskFactory`. tarafından oluşturulan görevde bulunacak parametrelerin isteğe bağlı bir listesini içerir.|
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `Parameter` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki örnek, öğenin `Parameter` nasıl kullanılacağını gösterir.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">

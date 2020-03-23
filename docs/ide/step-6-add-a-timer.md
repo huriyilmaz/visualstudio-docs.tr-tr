@@ -1,5 +1,5 @@
 ---
-title: '6\. Adım: Zamanlayıcı ekleme'
+title: 'Adım 6: Zamanlayıcı ekleme'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 23d050df688d4d1efec75245e6f48d748464170c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579317"
 ---
-# <a name="step-6-add-a-timer"></a>6\. Adım: Zamanlayıcı ekleme
-Ardından, eşleşen oyuna bir <xref:System.Windows.Forms.Timer> denetimi eklersiniz. Bir Zamanlayıcı belirtilen sayıda milisaniye bekler ve sonra *değer*olarak adlandırılan bir olayı tetikler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
+# <a name="step-6-add-a-timer"></a>Adım 6: Zamanlayıcı ekleme
+Sonra, eşleşen <xref:System.Windows.Forms.Timer> oyuna bir denetim ekleyin. Zamanlayıcı belirli sayıda milisaniye bekler ve ardından *işaretçi*olarak adlandırılan bir olayı ateşler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
 
 ## <a name="to-add-a-timer"></a>Zamanlayıcı eklemek için
 
-1. **Windows Form Tasarımcısı**içindeki Araç kutusundan **Zamanlayıcı** ' yı seçin ( **Bileşenler** kategorisinde) ve ardından **ENTER** tuşunu seçin veya bir zamanlayıcı denetimi eklemek için zamanlayıcıyı çift tıklayın. Aşağıdaki görüntüde gösterildiği gibi, **Süreölçer1**adlı zamanlayıcının simgesinin, formun altındaki bir alanda görünmesi gerekir.
+1. **Windows Forms Designer'daki**araç kutusundan **Zamanlayıcı'yı** **(Bileşenler** kategorisinde) seçin ve ardından **Enter** tuşunu seçin veya forma zamanlayıcı denetimi eklemek için zamanlayıcıyı çift tıklatın. **Zamanlayıcının Timer1**adı verilen simgesi, aşağıdaki resimde gösterildiği gibi formun altındaki bir boşlukta görünmelidir.
 
      ![Zamanlayıcı](../ide/media/express_timer.png)<br/>
 ***Zamanlayıcı***
@@ -33,29 +33,29 @@ Ardından, eşleşen oyuna bir <xref:System.Windows.Forms.Timer> denetimi eklers
     > [!NOTE]
     > Araç kutusu boş ise, araç kutusunu açmadan önce formun arkasındaki kodu değil de, form tasarımcısını seçtiğinizden emin olun.
 
-2. Zamanlayıcıyı seçmek için **Süreölçer1** simgesini seçin. **Özellikler** penceresinde olayları görüntüleme, özellikleri görüntüleme ' ye geçin. Sonra, zamanlayıcının **Interval** özelliğini **750**olarak ayarlayın, ancak **Enabled** özelliğini **false**olarak ayarlayın. **Interval** özelliği, zamanlayıcının, zaman *işaretleri*arasında ne kadar bekleyeceğini veya <xref:System.Windows.Forms.Timer.Tick> olayını tetikleyeceğini söyler. 750 değeri zamanlayıcıya, Tick olayını tetiklemeden önce saniyenin dörtte üçü kadar (750 milisaniye) beklemesini bildirir. Zamanlayıcıyı yalnızca Player ikinci etiketi seçtikten sonra başlatmak için <xref:System.Windows.Forms.Timer.Start> yöntemini çağıracaksınız.
+2. Zamanlayıcıyı seçmek için **Timer1** simgesini seçin. **Özellikler** penceresinde, olayları görüntülemekten görüntüleme özelliklerine geçin. Daha sonra, zamanlayıcının **Interval** özelliğini **750**olarak ayarlayın, ancak **Etkin** özelliğini **False**olarak ayarlayın. **Interval** özelliği zamanlayıcıya *keneler*arasında ne kadar beklemesi <xref:System.Windows.Forms.Timer.Tick> gerektiğini veya olayını ne zaman tetiklediğini söyler. 750 değeri zamanlayıcıya, Tick olayını tetiklemeden önce saniyenin dörtte üçü kadar (750 milisaniye) beklemesini bildirir. Zamanlayıcıyı <xref:System.Windows.Forms.Timer.Start> başlatmak için yöntemi ancak oyuncu ikinci etiketi seçtikten sonra ararsınız.
 
-3. **Windows Form Tasarımcısı** 'de süreölçer denetimi simgesini seçin ve ardından **ENTER** tuşuna basın veya boş bir Tick olayı işleyicisi eklemek için zamanlayıcıyı çift tıklayın. Kodu aşağıdaki kodla değiştirin ya da aşağıdaki kodu olay işleyicisine el ile girin.
+3. **Windows Forms Designer'daki** zamanlayıcı denetim simgesini seçin ve ardından boş bir Tick olay işleyicisi eklemek için **Enter** tuşunu seçin veya zamanlayıcıyı çift tıklatın. Kodu aşağıdaki kodla değiştirin ya da aşağıdaki kodu olay işleyicisine el ile girin.
 
      [!code-csharp[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]
      [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]
 
       > [!IMPORTANT]
-      > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>Docs.Microsoft.com](../ide/media/docs-programming-language-control.png) için programlama dili denetimi ![
+      > C# kodu snippet'ini veya Visual Basic kod snippet'ini görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dil kontrolü](../ide/media/docs-programming-language-control.png)
 
-     Tick olay işleyicisi üç şeyi yapar: Ilk olarak, <xref:System.Windows.Forms.Timer.Stop> yöntemini çağırarak zamanlayıcının çalışmadığından emin olur. Daha sonra, Player 'ın görünmez bir şekilde seçtiği iki etiketin simgelerini açmak için `firstClicked` ve `secondClicked`iki başvuru değişkeni kullanır. Son olarak, `firstClicked` ve `secondClicked` başvuru değişkenlerini Visual Basic içinde `null` C# ve `Nothing` sıfırlar. Programın kendini sıfırlama şekli olması nedeniyle bu adım önemlidir. Artık <xref:System.Windows.Forms.Label> denetimleri izlemediğinden, Player bir etiketi yeniden seçebilmesi için hazırdır.
+     Tick olay işleyicisi üç şey yapar: İlk olarak, <xref:System.Windows.Forms.Timer.Stop> yöntem çağırarak zamanlayıcı çalışmadığından emin olun. Daha sonra iki referans `firstClicked` değişkeni kullanır ve `secondClicked`, oyuncunun tekrar görünmez seçtiği iki etiketin simgelerini yapmak için. `firstClicked` Son olarak, c# `secondClicked` ve `Nothing` Visual `null` Basic'teki ve referans değişkenlerini sıfırlar. Programın kendini sıfırlama şekli olması nedeniyle bu adım önemlidir. Şimdi herhangi bir <xref:System.Windows.Forms.Label> kontrolleri takip etmiyor ve oyuncunun yeniden bir etiket seçmesi ne kadar hazır.
 
     > [!NOTE]
-    > Zamanlayıcı nesnesi, süreölçeri Başlatan bir `Start()` yöntemi ve bunu durduran bir `Stop()` yöntemi içerir. Zamanlayıcı 'nın **etkin** özelliğini **Özellikler** penceresinde **doğru** olarak ayarladığınızda, program başladıktan hemen sonra başlatılır. Ancak **false**olarak ayarladıktan sonra, `Start()` yöntemi çağrılana kadar başlatılmaz. Normal olarak, bir Zamanlayıcı Tick olayını tekrar tekrar tekrar tetiklerler ve zaman işaretleri arasında kaç milisaniye bekleneceğini anlamak için **Interval** özelliğini kullanmaktır. Zamanlayıcının `Stop()` yönteminin Tick olayının içinde nasıl çağrıldığını fark etmiş olabilirsiniz. Bu, süreölçeri *tek bir görüntü moduna*geçirir, yani `Start()` yöntemi çağrıldığında, belirtilen aralığı bekler, tek bir Tick olayını tetikler ve sonra duraklar.
+    > Zamanlayıcı nesnesinin `Start()` zamanlayıcıyı başlatan bir yöntemi `Stop()` ve onu durduran bir yöntemi vardır. **Özellikler** penceresinde zamanlayıcının **Etkin** özelliğini **True** olarak ayarladığınızda, program başlar başlamaz işlemeye başlar. Ancak, **false**olarak ayarlanmış bıraktığınızda, yöntemi çağrılana `Start()` kadar işlemeye başlamaz. Normalde, bir zamanlayıcı, keneler arasında kaç milisaniye beklemeniz gerektiğini belirlemek için **Interval** özelliğini kullanarak Tick olayını tekrar tekrar işaretler. Zamanlayıcının `Stop()` yönteminin Tick olayının içinde nasıl çağrıldığını fark etmiş olabilirsiniz. Bu, zamanlayıcıyı *tek bir çekim moduna* `Start()` koyar, yani yöntem çağrıldığında, belirtilen aralığı bekler, tek bir Tick olayını tetikler ve sonra durur.
 
-4. Yeni zamanlayıcıyı eylemde görmek için, kod düzenleyicisine gidin ve `label_Click()` olay işleyicisi yönteminin üst ve alt kısmına aşağıdaki kodu ekleyin. (En üste bir `if` deyimi ve en alta üç deyim ekliyoruz; yöntemin geri kalanı aynı kalır.)
+4. Yeni zamanlayıcının iş başında olduğunu görmek için kod düzenleyicisine gidin ve `label_Click()` olay işleyicisi yönteminin üst ve alt bölümüne aşağıdaki kodu ekleyin. (En üste bir `if` ifade ve alta üç ifade ekliyorsunuz; yöntemin geri kalanı aynı kalır.)
 
      [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
      [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]
 
-     Yöntemin en üstündeki kod, **etkin** özelliğin değerini denetleyerek zamanlayıcının başlatılıp başlatılmayacağını denetler. Bu şekilde, oyuncu birinci ve ikinci etiket denetimlerini seçerse ve Zamanlayıcı başlarsa, üçüncü bir etiket seçilmesi hiçbir şey yapmaz.
+     Yöntemin üst kısmındaki kod, **Etkinleştirilen** özelliğin değerini denetleyerek zamanlayıcının başlatılıp başlatılmadığını denetler. Bu şekilde, oyuncu birinci ve ikinci Etiket denetimlerini seçerse ve zamanlayıcı başlarsa, üçüncü bir etiket seçmek hiçbir işe yaramaz.
 
-     Yönteminin altındaki kod, Player 'ın seçtiği ikinci etiket denetimini izlemek için `secondClicked` başvuru değişkenini ayarlar ve ardından bu etiketin simge rengini siyah olarak ayarlayarak görünür hale getirir. Daha sonra, 750 milisaniye bekler ve tek bir Tick olayı tetiklemesi için zamanlayıcıyı tek sefer modunda başlatır. Zamanlayıcının Tick olayı işleyicisi iki simgeyi gizler ve `firstClicked` ve `secondClicked` başvuru değişkenlerini sıfırlar ve böylece form Player 'ın başka bir simge çifti seçmesini sağlamak için kullanılır.
+     Yöntemin altındaki kod, oyuncunun `secondClicked` seçtiği ikinci Etiket denetimini izlemek için başvuru değişkenini ayarlar ve daha sonra görünür olması için etiketin simge rengini siyaha ayarlar. Daha sonra, 750 milisaniye bekler ve tek bir Tick olayı tetiklemesi için zamanlayıcıyı tek sefer modunda başlatır. Zamanlayıcının Tick olay işleyicisi iki simgeyi gizler ve formun başka bir simge çiftini seçmesi için formun hazır olması için `firstClicked` ve `secondClicked` referans değişkenlerini sıfırlar.
 
 5. Programınızı kaydedin ve çalıştırın. Bir simge seçin; bu simge görünür duruma gelir.
 
@@ -63,6 +63,6 @@ Ardından, eşleşen oyuna bir <xref:System.Windows.Forms.Timer> denetimi eklers
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına geçmek için, bkz. **[7. Adım: çiftleri görünür tut](../ide/step-7-keep-pairs-visible.md)** .
+- Bir sonraki öğretici adıma gitmek için **[bkz: Adım 7: Çiftleri görünür tutun.](../ide/step-7-keep-pairs-visible.md)**
 
-- Önceki öğretici adımına dönmek için bkz. [5. Adım: etiket başvuruları ekleme](../ide/step-5-add-label-references.md).
+- Önceki öğretici adıma dönmek için [bkz.](../ide/step-5-add-label-references.md)

@@ -1,55 +1,55 @@
 ---
-title: Visual Studio aboneleri için Azure DevOps avantajları | Microsoft Docs
+title: Visual Studio aboneleri için Azure DevOps avantajları | Microsoft Dokümanlar
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
-description: Azure DevOps 'u bir Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
+description: Azure DevOps'leri Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
 ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408869"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79303311"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
-Etkin bir Visual Studio abonesi olarak, Azure DevOps 'da, aboneliğinize bir avantaj olarak dahil olan bir dizi özelliği kullanabilirsiniz. Bu aynı özellikleri, bir üye olduğunuz her bir Azure DevOps kuruluşunda, organizasyonu oluşturduğunuz veya başka bir kişi tarafından eklenmeksizin kullanabilirsiniz.
+Etkin bir Visual Studio abonesi olarak, Azure DevOps'lerde aboneliğinize dahil olan bir dizi özelliği avantaj olarak kullanabilirsiniz. Bu aynı özellikleri, üye olduğunuz her Azure DevOps kuruluşunda, ister kuruluşu oluştursanız ister başka biri tarafından eklenmiştir.
 
 ## <a name="sign-in"></a>Oturum aç
-Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs-alternate-identity.md)etkinleştirmek için kullandığınız kimliği kullanarak oturum açtığınızda, bunu otomatik olarak tanıyacağız.  Bu şekilde, hem kişisel hesabınızı hem de iş ya da okul hesabınızı kullanarak Azure DevOps 'a erişmenize olanak tanıyan bir iş veya okul hesabı (Visual Studio, Office 365 veya şirket veya okul ağınız için oturum açarken kullandığınız) da ekleyebilirsiniz.
+Visual Studio aboneliğinizi etkinleştirmek için kullandığınız kimliği veya [alternatif kimliğinizi](vs-alternate-identity.md)kullanarak Azure DevOps'te oturum açtığınızda, bunu otomatik olarak algılarız.  Bu şekilde, hem kişisel hesabınızı hem de iş veya okul hesabınızı kullanarak Azure DevOps'lere erişmenize olanak tanıyan bir iş veya okul hesabı (Visual Studio, Office 365 veya şirket veya okul ağınızda oturum açarken kullandığınız) ekleyebilirsiniz.
 
 [Ücretsiz bir Azure DevOps organizasyonu için kaydolun](https://visualstudio.microsoft.com/team-services/)
 
-## <a name="eligibility"></a>Önceliği
-| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
+## <a name="eligibility"></a>Uygunluk
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Yes          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel)                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel)                                                            |  Yes          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Yes          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Yes          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, Perakende, seçili NFR<sup>1</sup>  | Azure Panoları & Repos (Temel), Azure Test Planları, Azure Ardışık Hatları (kendi kendine barındırılan)       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise   | Vl| Azure Panoları & Repos (Temel), Azure Test Planları, Azure Ardışık Hatları (kendi kendine barındırılan)       |  Evet          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, Perakende                                        | Azure Panoları & Repos (Temel)                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Professional | Vl| Azure Panoları & Repos (Temel)                                                            |  Evet          |
+| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Azure Panoları & Repos (Temel), Azure Test Planları                                              |  Evet          |
+| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Azure Panoları & Repos (Temel), Azure Test Planları                                              |  Evet          |
 ||
 
-<sup>1</sup>  *şunları Içerir: for SATıM (NFR), en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (Enterprise), BIZSPARK, mct Software & Services Geliştirici, FTE. Dışlar: MCT yazılım & Hizmetleri, Imagine.*
+<sup>1</sup>  *Içerir: Satış için değil (NFR), En Değerli Profesyonel (MVP), Bölge Direktörü (RD), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (Enterprise), BizSpark, MCT Yazılım & Hizmetleri Geliştiricisi, FTE. Hariç: MCT Yazılım & Hizmetleri, Imagine.*
 
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, Visual Studio 'Yu satın almaya yönelik farklı seçenekleri araştırmak için [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) gitmesi önerilir.
+> Microsoft artık Cloud Subscriptions'da Visual Studio Professional Annual abonelikleri ve Visual Studio Enterprise Annual abonelikleri sunamaz. Mevcut müşterilerin aboneliklerini yenileme, artırma, azaltma veya iptal etme deneyimi ve yeteneğinde herhangi bir değişiklik olmayacaktır. Yeni müşteriler Visual Studio [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) satın almak için farklı seçenekleri keşfetmek için gitmek için teşvik edilir.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  Size atanan tüm abonelikleri görmek için [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) bağlanın.
-Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullandığınızdan emin değil misiniz?  Size [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) atanan tüm abonelikleri görmek için bağlanın.
+Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla nız olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
-- Visual Studio IDE, Azure DevOps veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+- Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Subscriptions desteğine](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
+- Visual Studio IDE, Azure DevOps veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio desteğini](https://visualstudio.microsoft.com/support/)ziyaret edin.
 - [Azure DevOps belgeleri](/azure/devops/).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Azure DevOps özellikleri hakkında daha fazla bilgi edinin:
-- [Azure Boards & depoları (temel)](https://azure.microsoft.com/services/devops/compare-features/)
+- [Azure Panoları & Repos (Temel)](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
-- [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
+- [Azure Eserleri](https://marketplace.visualstudio.com/items?itemName=ms.feed)
 
-[Azure DevTest bireysel kredinizi](vs-azure.md)nasıl etkinleştireceğinizi öğrenin.
+[Azure DevTest bireysel kredinizi](vs-azure.md)nasıl etkinleştireceklerinizi öğrenin.

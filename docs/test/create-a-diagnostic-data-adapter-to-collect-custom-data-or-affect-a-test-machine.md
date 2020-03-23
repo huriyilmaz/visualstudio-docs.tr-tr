@@ -1,5 +1,5 @@
 ---
-title: Test etmek için tanılama veri bağdaştırıcısı oluşturma
+title: Test için Tanılama Veri Bağdaştırıcısı Oluşturma
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,31 +10,31 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 91e5f9b3cee9cdfc2ca85c39c701b87028ad949a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585212"
 ---
-# <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>Özel veri toplayan veya test makinesini etkileyen tanılama veri bağdaştırıcısı oluşturma
+# <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>Özel veri toplamak veya bir test makinesini etkilemek için tanılama veri bağdaştırıcısı oluşturun
 
-Test çalıştırma ya da testinizi bir parçası olarak test makinesini etkilemek isteyebileceğiniz verileri toplamak için kendi tanılama veri bağdaştırıcısı oluşturmak isteyebilirsiniz. Örneğin, test altındaki uygulamanız tarafından oluşturulan ve bunları test sonuçlarınızı ekleme, günlük dosyaları toplamak isteyebilirsiniz veya bilgisayarınızda sol sınırlı disk alanı olduğunda, testlerinizi çalıştırmak isteyebilirsiniz. Visual Studio Enterprise içinde sağlanan API'leri kullanarak, test çalıştırmanızda belirli noktalarda görevler gerçekleştirmek için kod yazabilirsiniz. Örneğin, bir testi başlamadan önce ve sonra her bir testi çalıştırdığınızda ve test çalıştırması bittiğinde görevleri gerçekleştirebilirsiniz.
+Bir test çalıştırdığınızda veri toplamak için kendi tanılama veri bağdaştırıcınızı oluşturmak veya testinizin bir parçası olarak test makinesini etkilemek isteyebilirsiniz. Örneğin, uygulamanız tarafından oluşturulan günlük dosyalarını test altında toplamak ve bunları test sonuçlarınıza eklemek veya bilgisayarınızda sınırlı disk alanı kaldığında testlerinizi çalıştırmak isteyebilirsiniz. Visual Studio Enterprise'da sağlanan API'leri kullanarak, test çalışmanızdaki belirli noktalarda görevleri gerçekleştirmek için kod yazabilirsiniz. Örneğin, bir test çalışması başladığında, her test çalıştırıldığından önce ve sonra ve test çalışması bittiğinde görevleri gerçekleştirebilirsiniz.
 
-Özel tanılama veri bağdaştırıcınızı yapılandırma ayarları dosyasının kullanarak varsayılan giriş sağlayabilirsiniz. Örneğin, dosyanın konumu hakkında bilgi toplamak ve test sonuçlarına istediğiniz sağlayabilir veya ne kadar disk alanı sistemde bırakılması istediğiniz. Bu veriler, oluşturduğunuz her test ayarları için yapılandırılabilir. Görüntülenen ve bir düzenleyici olarak kullanmak için kendi kullanıcı denetiminizi düzenlenen Microsoft Test Yöneticisi'ni veya, sağlanan varsayılan Düzenleyicisi'ni kullanarak oluşturabilirsiniz. Düzenleyici bağdaştırıcısı yapılandırmasında yapılan değişiklikleri ile test ayarlarınızın depolanır.
+Yapılandırma ayarları dosyasını kullanarak özel tanılama veri bağdaştırıcınıza varsayılan giriş sağlayabilirsiniz. Örneğin, toplamak ve test sonuçlarınıza eklemek istediğiniz dosyanın konumu veya sistemde ne kadar disk alanı kalmak istediğiniz hakkında bilgi sağlayabilirsiniz. Bu veriler oluşturduğunuz her test ayarları için yapılandırılabilir. Microsoft Test Manager ile sağlanan varsayılan düzenleyici kullanılarak görüntülenebilir ve düzenlenebilir veya düzenleyici olarak kullanmak üzere kendi kullanıcı denetiminizi oluşturabilirsiniz. Düzenleyicinizdeki bağdaştırıcı yapılandırmasında yapılan tüm değişiklikler test ayarlarınızla birlikte depolanır.
 
-Testlerinizi Visual Studio'dan çalıştırıyorsanız, bunları ayarlamalısınız etkin olması için test ayarları. Test ayarları hakkında daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgi toplayan](../test/collect-diagnostic-information-using-test-settings.md).
+Testlerinizi Visual Studio'dan çalıştırıyorsanız, bu test ayarlarını etkin olacak şekilde ayarlamanız gerekir. Test ayarları hakkında daha fazla bilgi için [bkz.](../test/collect-diagnostic-information-using-test-settings.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="tasks"></a>Görevler
 
-Tanılama veri bağdaştırıcıları oluşturmanıza yardımcı olması için aşağıdaki konulara bakın:
+Tanılama Veri Bağdaştırıcıları oluşturmanıza yardımcı olmak için aşağıdaki konuları kullanın:
 
 |Görevler|İlişkili Konular|
 |-|-----------------------|
-|**Tanılama veri bağdaştırıcısı oluşturma:** bir sınıf kitaplığı oluşturarak tanılama veri bağdaştırıcısı oluşturmak ve ardından istediğiniz veya testlerinizi çalıştırmak için kullandığınız bir test sistemini etkilemek bilgilerini toplamak için tanılama veri bağdaştırıcısı API'leri kullanın.|-   [Nasıl yapılır: tanılama veri bağdaştırıcısı oluşturma](../test/how-to-create-a-diagnostic-data-adapter.md)|
-|**Özel tanılama veri bağdaştırıcısı kullanan testler için seçme çalıştırılır:** bağdaştırıcı, testlerinizi çalıştırdığınızda kullanılır, böylece hangi tanılama veri bağdaştırıcısı test ayarlarınız için kullanmayı seçebilirsiniz.|-   [(Azure Test planları) test sırasında tanılama verilerini toplayın](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [El ile testlerde (Azure Test planları) tanılama verilerini toplayın](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
+|**Tanılama Veri Bağdaştırıcısı Oluşturma:** Bir sınıf kitaplığı oluşturarak bir tanılama veri bağdaştırıcısı oluşturursunuz ve ardından testlerinizi çalıştırmak için kullandığınız bir test sistemini istediğiniz bilgileri toplamak veya etkilemek için tanılama veri bağdaştırıcısı API'lerini kullanırsınız.|-   [Nasıl kullanılır: Tanılama veri bağdaştırıcısı oluşturma](../test/how-to-create-a-diagnostic-data-adapter.md)|
+|**Testler Çalıştırıldığında Kullanılacak Özel Tanılama Veri Bağdaştırıcısı Seçme:** Test ayarlarınız için hangi tanılama veri bağdaştırıcısını kullanacağınızı seçebilirsiniz, böylece testlerinizi çalıştırdığınızda bağdaştırıcı kullanılır.|-   [Test ederken tanılama verileri toplama (Azure Test Planları)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [El ile yapılan testlerde tanılama verileri toplama (Azure Test Planları)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Test ayarlarını kullanarak tanılama bilgileri Topla](../test/collect-diagnostic-information-using-test-settings.md)
+- [Test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md)

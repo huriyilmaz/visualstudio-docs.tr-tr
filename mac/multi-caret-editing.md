@@ -1,46 +1,46 @@
 ---
 title: Çoklu giriş işareti düzenleme
-description: Mac için Visual Studio kod düzenlenirken birden fazla konuma metin ekleyin.
+description: Mac için Visual Studio'da kod düzenlerken metni birden çok konuma ekleyin.
 author: cobey
 ms.author: cobey
 ms.date: 08/19/2019
 ms.openlocfilehash: a21bebda057a772017fa1481e18f9801d1fbcbdf
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75451449"
 ---
 # <a name="multi-caret-editing"></a>Çoklu giriş işareti düzenleme
 
-Çoklu giriş işareti düzenlemesi, tek seferde _n_ sayıda ekleme noktası eklemenize olanak tanır. Çoklu giriş işareti modundayken, belgenize fare tıklamaları veya klavye komutları aracılığıyla ek Evcil hayvan ekleyebilirsiniz. Birincil giriş işareti kırmızı bir imleç ile gösterilir ve ikincil sepetler açık mavi renkte bulunur. Çoklu giriş işareti düzenleme modu `ESC` anahtarı aracılığıyla devre dışı bırakılabilir.
+Çok noktalı düzenleme, tek seferde _n_ sayısı ekleme noktaları eklemenize olanak tanır. Çok yönlü modda, belgenize fare tıklamaları veya klavye komutları aracılığıyla ek bakımlar ekleyebilirsiniz. Birincil caret kırmızı imleç ile gösterilir, ikincil carets açık mavi renkte mevcut iken. Çok bakımlı bir şekilde yapılan dama modu `ESC` tuşu ile devre dışı edilebilir.
 
-## <a name="enabling-multi-caret-editing"></a>Çoklu klavyeyle düzenleme etkinleştiriliyor
+## <a name="enabling-multi-caret-editing"></a>Çok bakımlı düzenlemeyi etkinleştirme
 
 ### <a name="keyboard"></a>Klavye
 
-Klavye aracılığıyla çok şapka modunu birkaç şekilde etkinleştirebilirsiniz. Aşağıdaki tabloda, çok giriş işareti düzenlemesini belirli modlar için kullanılabilecek klavye kısayolları verilmiştir:
+Klavye üzerinden çok yönlü modu çeşitli şekillerde etkinleştirebilirsiniz. Aşağıdaki tablo, çok yönlü düzenlemebelirli modları girmek için kullanılabilir klavye kısayolları sağlar:
 
-| Kısayol tuşu  | Eylem                        | 
+| Hotkey  | Eylem                        | 
 |---------| ------------------------------|
-|  ⌥⇧.   | Sonraki eşleşen giriş işaretini Ekle    | 
-|  ⌥⇧;   | Her eşleşen giriş Ekle | 
-|  ⌥⇧,   | Son giriş işaretini kaldır             | 
-|  ⌥⇧/   | Son giriş işaretini aşağı taşı          | 
+|  ⌥⇧.   | Sonraki eşleşen caret ekleme    | 
+|  ⌥⇧;   | Eşleşen tüm tüm bakımları takın | 
+|  ⌥⇧,   | Son bakımı kaldırın             | 
+|  ⌥⇧/   | Son bakımı aşağı taşıyın          | 
 
-Bu davranışların her biri, komutu çağırdığınızda giriş işaretinin geçerli konumuna bağlanır. Örneğin, giriş işareti "ad" sözcüğünün başlısın ve "tüm eşleştirmeyle" maetleri Ekle "seçeneğini çağırırsanız (⌥ ⇧;) geçerli belgenizdeki "Name" sözcüğünün her bir örneği, sözcüğün başlangıcına eklenecek bir giriş işaretine sahip olacaktır. Benzer şekilde, "sonraki eşleşen giriş işaretini Ekle" (⌥ ⇧.) komutunu çağırırsanız, "Name" sözcüğünün bir sonraki örneğine bir giriş işareti konur. Bu komut birden çok kez çağrılabilir.
+Bu davranışların her biri, komutu çağırdığınızda caret'in geçerli konumuna sabitlenir. Örneğin, bakıcı "ad" sözcüğünün başındaysa ve "Tüm eşleşen carets insert" (;) geçerli belgenizdeki "ad" sözcüğünün her örneği, sözcüğün başında bir özeneklenecektir. Aynı şekilde, "Sonraki eşleşen özeni ekle" (13.) komutunu çağırırsanız, "ad" sözcüğünün bir sonraki örneğine bir basamak yerleştirilir. Bu komut birden çok kez çağrılabilir.
 
-![Çoklu giriş işareti klavyesi](media/multi-caret-keyboard.gif)
+![çok yönlü klavye](media/multi-caret-keyboard.gif)
 
-## <a name="mousetouchpad"></a>Fare/Dokunmatik yüzey
+## <a name="mousetouchpad"></a>Fare/dokunmatik yüzey
 
-İmlecinizi kullanarak, birden çok Evcil hayvan için belirli ekleme noktalarını seçebilirsiniz. Klavye kısayolları eşleşen dizelere bağlıyken, imlecin bulunduğu belgede herhangi bir yere bir giriş işaretini el ile ekleyebilirsiniz. Sepetlerin ayarlandıktan sonra her biri, klavyenizde yazdığınız önemli girdileri yankıdan alır.
+İmlecinizi kullanarak, birden fazla okşadığınız için belirli ekleme noktalarını serbestçe seçebilirsiniz. Klavye kısayolları eşleşen dizeleri bağlı olsa da, imleç ile belgenin herhangi bir yerine el ile bir caret ekleyebilirsiniz. Basamaklar ayarlandıktan sonra, her biri klavyenizde yazdığınız tuş girişlerini yansıtacaktır.
 
-Fareyi kullanarak birden çok Evcil hayvan eklemek için, ⌘ ⌥ tuşlarına basılı tutmanız ve sepetlerin girilmesini istediğiniz yere tıklamalısınız. ⌘ ⌥ Anahtarları tutulduğu sürece ekleme modunda olursunuz. Yanlış bir konuma bir giriş işareti eklerseniz, ⌘ ⌥ 'yi basılı tutmaya ve aynı alanı yeniden tıklatmaya devam ederek giriş işaretini kaldırabilirsiniz. İstediğiniz yerde yer alan tüm Evcil hayvan varsa, ⌘ ⌥ tuşlarına basmayı durdurun ve yazmaya başlayın. Aşağıdaki GIF, hem bir ekleme noktası kümesi seçip hem de hatalı ayarlanmış noktaları kaldırarak gösterir.
+Birden fazla okşamak için fareyi kullanmak için, tuşuna basmanız ve basılı tutmanız ve atanın girilmesi istediğiniz yere tıklamanız gerekir. Anahtarlar tutulduğu sürece ekleme modunda olabilirsiniz. Yanlış bir konuma bir basamak eklerseniz, aynı alanı tekrar tıklatarak tutup tıklatarak caret'i kaldırabilirsiniz. Tüm carets onları istediğiniz yerde bulunan bir kez, tuşlarına basarak durdurmak ve yazmaya başlayın. Aşağıdaki GIF, hem bir ekleme noktası kümesini seçerek hem de hatalı olarak ayarlanmış noktaları kaldırarak gösterir.
 
-![Çoklu giriş işareti faresi](media/multi-caret-mouse.gif)
+![çok bakımlı fare](media/multi-caret-mouse.gif)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı eylemler (Windows üzerinde Visual Studio)](/visualstudio/ide/quick-actions)
-- [Kodu yeniden düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)
+- [Hızlı Eylemler (Windows'ta Visual Studio)](/visualstudio/ide/quick-actions)
+- [Refactor kodu (Windows'ta Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)

@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aeae28288936b6723b53e826142a4888ad0bc8b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570147"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
-Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
+Debugged olmak üzere belirtilen yürütülebilir dosyayı açar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,19 +30,19 @@ Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
 devenv /DebugExe ExecutableFile
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 - *ExecutableFile*
 
-  Gerekli. `.exe` bir dosyanın yolu ve dosya adı. `.exe` dosyası bulunamazsa veya yoksa, uyarı veya hata gösterilmez ve Visual Studio normal olarak başlatılır.
+  Gereklidir. Bir `.exe` dosyanın yolu ve dosya adı. `.exe` Dosya bulunmazsa veya yoksa, hiçbir uyarı veya hata görüntülenmez ve Visual Studio normal olarak başlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-*ExecutableFile* parametresini izleyen dizeler, bu dosyaya bağımsız değişken olarak geçirilir.
+*ExecutableFile* parametresini izleyen tüm dizeleri bağımsız değişken olarak bu dosyaya geçirilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, hata ayıklama için `MyApplication.exe` dosyasını açar.
+Aşağıdaki örnek, hata `MyApplication.exe` ayıklama için dosyayı açar.
 
 ```shell
 devenv /debugexe MyApplication.exe

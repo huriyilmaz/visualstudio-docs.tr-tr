@@ -10,69 +10,69 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e71029a185d1b3fea1812b2a4b1cf7bf20effff8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565168"
 ---
-# <a name="best-practices-for-coded-ui-tests"></a>Kodlanmış UI testleri için en iyi uygulamalar
+# <a name="best-practices-for-coded-ui-tests"></a>Kodlanmış Ara Birimi testleri için en iyi uygulamalar
 
-Bu konuda, kodlanmış UI testleri geliştirmeye yönelik bazı öneriler açıklanmaktadır.
+Bu konu, kodlanmış UI testleri geliştirmek için bazı önerileri açıklar.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-## <a name="best-practices"></a>Önerilen uygulamalar
+## <a name="best-practices"></a>En iyi uygulamalar
 
 Esnek kodlanmış bir UI testi oluşturmak için aşağıdaki yönergeleri kullanın.
 
-- Mümkün olduğunda **KODLANMıŞ UI test oluşturucusunu** kullanın.
+- **Kodlanmış UI Test Oluşturucu'yu** mümkün olduğunca kullanın.
 
-- *UIMap.Designer.cs* dosyasını doğrudan değiştirmeyin. Dosyayı değiştirirseniz, dosyadaki değişikliklerin üzerine yazılır.
+- *UIMap.designer.cs* dosyasını doğrudan değiştirmeyin. Dosyayı değiştirirseniz, dosyadaki değişiklikler üzerine yazılır.
 
-- Testinizi kayıtlı yöntemlerin bir dizisi olarak oluşturun. Bir yöntemi kaydetme hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md).
+- Kaydedilmiş yöntemler dizisi olarak testinizi oluşturun. Yöntemin nasıl kaydedilen hakkında daha fazla bilgi için [kodlanmış Kullanıcı Arabirimi testleri oluşturma bilgisine](../test/use-ui-automation-to-test-your-code.md)bakın.
 
-- Her kaydedilen yöntemin tek bir sayfa, form veya iletişim kutusu üzerinde işlem yapması gerekir. Her yeni sayfa, form veya iletişim kutusu için yeni bir test yöntemi oluşturun.
+- Kaydedilen her yöntem tek bir sayfa, form veya iletişim kutusunda hareket etmelidir. Her yeni sayfa, form veya iletişim kutusu için yeni bir test yöntemi oluşturun.
 
-- Bir yöntem oluşturduğunuzda, varsayılan ad yerine anlamlı bir yöntem adı kullanın. Anlamlı bir ad yöntemin amacını belirlemenize yardımcı olur.
+- Bir yöntem oluşturduğunuzda, varsayılan ad yerine anlamlı bir yöntem adı kullanın. Anlamlı bir ad yöntemin amacını belirlemeye yardımcı olur.
 
-- Mümkün olduğunda, her bir kaydedilen yöntemi 10 ' dan az eylemden sınırlayın. Bu modüler yaklaşım, UI değişirse bir yöntemin değiştirilmesini kolaylaştırır.
+- Mümkün olduğunda, kaydedilen her yöntemi 10'dan az eylemle sınırlayın. Bu modüler yaklaşım, ui değişirse bir yöntemin değiştirilmesini kolaylaştırır.
 
-- *UIMap.Designer.cs* dosyasına otomatik olarak bir onaylama yöntemi ekleyen **kodlanmış UI test oluşturucusunu**kullanarak her bir onaylama işlemi oluşturun.
+- UIMap.Designer.cs *dosyasına* otomatik olarak bir seves yöntemi ekleyen **Kodlanmış UI Test Oluşturucusu'nu**kullanarak her bir seveği oluşturun.
 
-- Kullanıcı arabirimi (UI) değişirse, test yöntemlerini veya onaylama yöntemlerini yeniden kaydedin veya var olan bir test yönteminin etkilenen bölümlerini yeniden kaydedin.
+- Kullanıcı arabirimi (UI) değişirse, test yöntemlerini veya sevecyöntemlerini yeniden kaydedin veya varolan bir test yönteminin etkilenen bölümlerini yeniden kaydedin.
 
-- Test edilen uygulamanızdaki her bir modül için ayrı bir [UIMap](/previous-versions/dd580454(v=vs.140)) dosyası oluşturun. Daha fazla bilgi için bkz. [birden çok UI haritası ile büyük bir uygulamayı test etme](../test/testing-a-large-application-with-multiple-ui-maps.md).
+- Test altında uygulamanızdaki her modül için ayrı bir [UIMap](/previous-versions/dd580454(v=vs.140)) dosyası oluşturun. Daha fazla bilgi için bkz: [Birden çok Kullanıcı Arabirimi eşlemi içeren büyük bir uygulamayı sınama.](../test/testing-a-large-application-with-multiple-ui-maps.md)
 
-- Test edilen uygulamada, UI denetimlerini oluştururken anlamlı adlar kullanın. Anlamlı adların kullanılması, otomatik olarak oluşturulan denetim adlarına daha fazla açıklık ve kullanılabilirlik sağlar.
+- Test altındaki uygulamada, Kullanıcı Bira denetimleri oluştururken anlamlı adlar kullanın. Anlamlı adlar kullanmak, otomatik olarak oluşturulan denetim adlarına daha fazla netlik ve kullanılabilirlik sağlar.
 
-- API ile kodlamaya göre onay oluşturuyorsanız, *UIMap.cs* dosyasındaki [UIMap](/previous-versions/dd580454(v=vs.140)) sınıfının bölümünde her onaylama için bir yöntem oluşturun. Onaylama işlemi yürütmek için, test yönteinizden bu yöntemi çağırın.
+- API ile kodlayarak iddialar oluşturuyorsanız, [uimap](/previous-versions/dd580454(v=vs.140)) sınıfının *UIMap.cs* dosyasındaki bölümündeki her bir iddia için bir yöntem oluşturun. İddiayı yürütmek için, bu yöntemi test yönteminizden arayın.
 
-- Doğrudan API ile kodladıysanız, kodunuzda *UIMap.Designer.cs* dosyasında oluşturulan sınıflarda özellikleri ve yöntemleri kullanabilirsiniz. Bu sınıflar işinizi daha kolay, daha güvenilir hale getirir ve daha üretken olmanıza yardımcı olur.
+- API ile doğrudan kodlarsanız, kodunuzda *UIMap.Designer.cs* dosyasında oluşturulan sınıflardaki özellikleri ve yöntemleri olabildiğince kullanın. Bu sınıflar işinizi daha kolay, daha güvenilir hale getirecek ve daha üretken olmanıza yardımcı olacaktır.
 
-Kodlanmış UI testleri Kullanıcı arabirimindeki birçok değişikliğe otomatik olarak uyum sağlar. Örneğin, bir kullanıcı arabirimi öğesi konum veya renge değiştiyse, çoğu zaman kodlanmış UI testi doğru öğeyi bulmaya devam eder.
+Kodlanmış Kullanıcı Arabirimi testleri, kullanıcı arabirimindeki birçok değişikme otomatik olarak uyum sağlar. Örneğin, bir UI öğesi konumunu veya rengini değiştirmişse, çoğu zaman kodlanmış UI testi doğru öğeyi bulmaya devam edecektir.
 
-Bir test çalıştırması sırasında, Kullanıcı arabirimi denetimleri, bir arama özellikleri kümesi kullanılarak test çerçevesi tarafından bulunur. Arama özellikleri, *UIMap.Designer.cs* dosyasında **kodlanmış UI Test Oluşturucusu** tarafından oluşturulan tanımlarda her bir denetim sınıfına uygulanır. Arama özellikleri, denetimin <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A>ve <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> özellikleri gibi, denetimi tanımlamak için kullanılabilen özellik adlarının ad-değer çiftlerini ve özellik değerlerini içerir. Arama özellikleri değişmezse, kodlanmış UI testi Kullanıcı arabirimindeki denetimi başarıyla bulur. Arama özellikleri değiştirilirse, kodlanmış UI testlerinde Kullanıcı arabirimindeki denetimleri ve pencereleri bulmak için buluşsal yöntemler uygulayan bir akıllı eşleşme algoritması vardır. Kullanıcı arabirimi değiştirildiğinde, daha önce tanımlanan öğelerin arama özelliklerini değiştirerek bunların bulundıklarından emin olun.
+Bir test çalışması sırasında, UI denetimleri bir dizi arama özellikleri kullanılarak test çerçevesi tarafından konumlanır. Arama özellikleri, UIMap.Designer.cs dosyasındaki **Kodlanmış UI Test Oluşturucusu** tarafından oluşturulan tanımlardaki her denetim *sınıfına* uygulanır. Arama özellikleri, denetim , ve denetim özellikleri gibi <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A> <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A>denetimi tanımlamak için kullanılabilecek özellik adları ve <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> özellik değerlerinin ad değeri çiftleri içerir. Arama özellikleri değişmezse, kodlanmış UI testi ui denetimi başarıyla bulur. Arama özellikleri değiştirilirse, kodlanmış Kullanıcı Arabirimi testleri, Kullanıcı Arabirimi'ndeki denetimleri ve pencereleri bulmak için sezgisel olarak uygulayan akıllı eşleştirme algoritmasına sahiptir. UI değiştiğinde, daha önce tanımlanmış öğelerin arama özelliklerini değiştirerek bunların bulunduğundan emin olabilirsiniz.
 
 ## <a name="if-your-user-interface-changes"></a>Kullanıcı arabiriminiz değişirse
 
-Kullanıcı arabirimleri genellikle geliştirme sırasında değişir. Bu değişikliklerin etkilerini azaltmak için bazı yollar şunlardır:
+Kullanıcı arabirimleri geliştirme sırasında sık sık değişir. Bu değişikliklerin etkisini azaltmanın bazı yolları şunlardır:
 
-- Bu denetime başvuran kayıtlı yöntemi bulun ve bu yöntemin eylemlerini yeniden kaydetmek için **KODLANMıŞ UI test oluşturucusunu** kullanın. Mevcut eylemlerin üzerine yazmak için yöntemi için aynı adı kullanabilirsiniz.
+- Bu denetime başvuran kayıtlı yöntemi bulun ve bu yönteme yönelik eylemleri yeniden kaydetmek için **Kodlanmış UI Test Oluşturucusu'nu** kullanın. Varolan eylemlerin üzerine yazmak için yöntem için aynı adı kullanabilirsiniz.
 
-- Bir denetimde artık geçerli olmayan bir onaylama işlemi varsa:
+- Denetimde artık geçerli olmayan bir iddia varsa:
 
-  - Onaylama içeren yöntemi silin.
+  - İddiayı içeren yöntemi silin.
 
-  - Bu yöntemin çağrısını test yönteminden kaldırın.
+  - Bu yönteme yapılan çağrıyı test yönteminden kaldırın.
 
-  - İnce artı düğmesini UI denetimine sürükleyerek yeni bir onaylama ekleyin, UI haritasını açın ve yeni onay ekleyin.
+  - Çapraz saç düğmesini UI denetimine sürükleyerek yeni bir iddia ekleyin, UI eşlemasını açın ve yeni iddiayı ekleyin.
 
-Kodlanmış UI testlerini kaydetme hakkında daha fazla bilgi için bkz. [kodunuzu test etmek IÇIN UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md).
+Kodlanmış Kullanıcı Arabirimi testlerini kaydetme hakkında daha fazla bilgi için [kodunuzu test etmek için Kullanıcı Arabirimi otomasyonunu kullanın'a](../test/use-ui-automation-to-test-your-code.md)bakın.
 
-## <a name="if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>Teste devam etmeden önce bir arka plan işleminin tamamlanmasını gerekiyorsa
+## <a name="if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>Test devam etmeden önce bir arka plan işleminin tamamlanması gerekiyorsa
 
-Sonraki UI eylemine devam edebilmeniz için bir işlem bitene kadar beklemeniz gerekebilir. Bunu yapmak için, aşağıdaki örnekte olduğu gibi, testi devam etmeden önce beklemek için <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> kullanabilirsiniz:
+Bir sonraki UI eylemine devam etmeden önce bir işlemin tamamlanmasını beklemeniz gerekebilir. Bunu yapmak için <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> aşağıdaki örnekte olduğu gibi, test devam etmeden önce beklemek için kullanabilirsiniz:
 
 ```csharp
 // Set the playback to wait for all threads to finish
@@ -87,9 +87,9 @@ Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UIMap](/previous-versions/dd580454(v=vs.140))
+- [Uımap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting>
-- [UI otomasyonunu kullanarak kodunuzu test etme](../test/use-ui-automation-to-test-your-code.md)
-- [Kodlanmış UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md)
-- [Birden çok UI haritası ile büyük bir uygulamayı test etme](../test/testing-a-large-application-with-multiple-ui-maps.md)
+- [Kodunuzu test etmek için UI otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)
+- [Kodlu UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md)
+- [Birden çok Kullanıcı Altı Bilgi Har(R)'li büyük bir uygulamayı test etme](../test/testing-a-large-application-with-multiple-ui-maps.md)
 - [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

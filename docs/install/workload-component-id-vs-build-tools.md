@@ -1,12 +1,12 @@
 ---
-title: Visual Studio Derleme Araçları iş yükü ve bileşen kimlikleri
+title: Visual Studio Build Tools iş yükü ve bileşen ilikleri
 titleSuffix: ''
-description: Klasik Windows tabanlı uygulamalar oluşturmak için Visual Studio iş yükü ve Bileşen kimlikleri kullanın
+description: Klasik Windows tabanlı uygulamalar oluşturmak için Visual Studio iş yükünü ve bileşen itlemini kullanma
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 03/16/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 26de8e2ad329d37de043431f5d655b4be8722755
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 304e8bf8a3caba5154e06e1b44b6e05dd664f9ad
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114090"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437697"
 ---
-# <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Derleme Araçları bileşen dizini
+# <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Build Tools bileşen dizini
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "76114090"
 
 [!INCLUDE[workloads-components-header-2017_md](includes/workloads-components-header-2017_md.md)]
 
-El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçları](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)'nı indirip çalıştırın.
+Bu bileşenleri manuel yükleyiciyi kullanarak yüklemek [için Visual Studio için Yapı Araçları'nı](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)indirin ve çalıştırın.
 
 [!INCLUDE[Visual Studio Build Tools 2017](includes/vs-2017/workload-component-id-vs-build-tools.md)]
 
@@ -40,7 +40,7 @@ El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio I�
 
 [!INCLUDE[workloads-components-header-2019_md](includes/workloads-components-header-2019_md.md)]
 
-El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçları](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)' nı indirip çalıştırın.
+Bu bileşenleri manuel yükleyiciyi kullanarak yüklemek [için Visual Studio için Yapı Araçlarını](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)indirin ve çalıştırın.
 
 [!INCLUDE[Visual Studio Build Tools 2019](includes/vs-2019/workload-component-id-vs-build-tools.md)]
 
@@ -51,7 +51,7 @@ El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio I�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-* [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
-* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
+* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
   * [Komut satırı parametresi örnekleri](command-line-parameter-examples.md)
-* [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio'nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)

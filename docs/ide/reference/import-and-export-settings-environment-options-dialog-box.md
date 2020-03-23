@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 805ca35d5ff9907bd9ff8907f706ade346b3010e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595546"
 ---
-# <a name="options-dialog-box-environment--import-and-export-settings"></a>Seçenekler iletişim kutusu: ortam \> Içeri ve dışarı aktarma ayarları
+# <a name="options-dialog-box-environment--import-and-export-settings"></a>Seçenekler iletişim kutusu: \> Ortam İçe Alma ve Dışa Aktarma Ayarları
 
-Kullanıcı ayarları dosyanızın kaydedileceği yeri belirtmek için bu sayfayı kullanın. Ayarlar hakkında daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md).
+Kullanıcı ayarları dosyanızın nerede kaydedilen leri belirtmek için bu sayfayı kullanın. Ayarlar hakkında daha fazla bilgi için [Visual Studio IDE'yi Kişiselleştir'e](../../ide/personalizing-the-visual-studio-ide.md)bakın.

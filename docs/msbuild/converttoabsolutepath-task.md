@@ -1,5 +1,5 @@
 ---
-title: ConvertToAbsolutePath görevi | Microsoft Docs
+title: ConverttoAbsolutepath Görevi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,28 +19,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 32ce6fcad3897443f178c45d84e16f4cff44ab03
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634389"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath görevi
 
-Göreli yolu veya başvuruyu mutlak bir yola dönüştürür.
+Göreceli bir yolu veya başvuruyciyi mutlak bir yola dönüştürür.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda `ConvertToAbsolutePath` görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda görevparametreleri `ConvertToAbsolutePath` açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Mutlak yollara dönüştürülecek göreli yolların listesi.|
-|`AbsolutePaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem>`[]` çıkış parametresi.<br /><br /> Geçirilen öğeler için mutlak yolların listesi.|
+|`AbsolutePaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Geçirilen öğeler için mutlak yolların listesi.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisini <xref:Microsoft.Build.Utilities.Task> sınıfından devralan <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

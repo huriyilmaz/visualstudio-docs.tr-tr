@@ -1,5 +1,5 @@
 ---
-title: Kod yer işaretlerini Ayarla
+title: Kod yer imlerini ayarlama
 ms.date: 02/23/2018
 ms.topic: conceptual
 f1_keywords:
@@ -11,35 +11,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2c62ded0b94db9d39a197dde55fbc77434c5325d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595442"
 ---
 # <a name="set-bookmarks-in-code"></a>Kodda yer işaretleri ayarlama
 
-Hızlı bir şekilde, belirli bir konuma döndürür veya konumlar arasında ileri ve Geri atlama satırları, kodunuzda işaretlemek için yer işaretlerini kullanabilirsiniz. Yerimi komutları ve simgeler iki yerde kullanılabilir: **yer işareti penceresi** (**görünümü** > **yer işareti penceresi**) ve Metin Düzenleyicisi araç çubuğu.
+Belirli bir konuma hızla dönebilmek veya konumlar arasında ileri geri atlamak için kodunuzdaki satırları işaretlemek için yer imlerini kullanabilirsiniz. Yer imi komutları ve simgeleri iki yerde kullanılabilir: **Yer Imi Penceresi** (**Bookmark Penceresi****görüntüle** > ) ve metin düzenleyiciaraç çubuğu.
 
-![Araç çubuğunda yer işareti](media/bookmark-toolbar.png)
+![Yer imi araç çubuğu](media/bookmark-toolbar.png)
 
-![Yer işareti penceresi](media/bookmark-window.png)
+![Yer Imi Penceresi](media/bookmark-window.png)
 
-## <a name="manage-bookmarks"></a>Yer işaretlerini yönetme
+## <a name="manage-bookmarks"></a>Yer imlerini yönetme
 
-Bir yer işareti eklemek için imleci yer işareti koymak istediğiniz satıra yerleştirin. Seçin **bir yer işareti Değiştir** düğmesini veya tuşuna **Ctrl**+**K**, **Ctrl**+**K** . Bu yer işaretini ekler. Seçerseniz **bir yer işareti Değiştir** düğme (veya basın **Ctrl**+**K**, **Ctrl** +  **K**) yeniden, Yerimi kaldırılır.
+Yer imi eklemek için imleci yer imi istediğiniz satıra yerleştirin. Yer **imi toggle** düğmesini seçin veya **Ctrl**+K , **Ctrl**+**K****K**tuşuna basın. Bu yer imi ekler. Yer **imi düğmesini toggle'ı** seçerseniz (veya **Ctrl**+**K**, **Ctrl**+**K)** tekrar basarsanız, yer imi kaldırılır.
 
-Bir bakışta bilmesi içinde yeniden adlandırmak için belirli bir yer işaretidir **yer işareti penceresi** sağ tıklayın veya bağlam menüsünde. Yer işaretlerini seçerek silebilirsiniz **Sil** yer işareti penceresindeki düğmesi.
+Belirli bir yer işaretinin ne için olduğunu bir bakışta bilmek için, sağ tıklatma veya bağlam menüsünden **Yer İşareti Penceresinde** yeniden adlandırabilirsiniz. Yer imi **penceresindesil** düğmesini seçerek yer imlerini silebilirsiniz.
 
 > [!IMPORTANT]
-> Yer işareti, kodun satır numarası ayarlanır. Kodu değiştirirseniz, yer işareti satır numarasında korunur ve kod ile taşınmaz.
+> Yer imi koda değil, satır numarasına ayarlanır. Kodu değiştirirseniz, yer imi satır numarasında tutulur ve kodla birlikte hareket etmez.
 
-Kullanarak yer işaretleri arasında gezinebilirsiniz **sonraki yer işareti** ve **önceki yer işareti** yer işareti penceresindeki düğmeleri.
+Yer imi penceresinde Sonraki **yer imi** ve **Önceki yer imi** düğmelerini kullanarak yer imleri arasında gezinebilirsiniz.
 
-Yer işaretlerini seçerek sanal klasörler halinde düzenleyebilirsiniz **yeni klasör** Yerimi penceresi ve ardından işaretlerini yeni klasöre sürükleyerek.
+Yer imleri penceresinde **Yeni Klasör'ü** seçip seçili yer işaretlerini yeni klasöre sürükleyerek yer imlerini sanal klasörlere ayarlayabilirsiniz.
 
-Yer işaretlerini (kaldırmadan) seçerek etkinleştirebilirsiniz **tüm yer işaretlerini devre dışı** yer işareti penceresindeki düğmesi. Bunları aynı düğmeyi yeniden etkinleştirebilirsiniz (artık adlandırılan **tüm yer imlerini etkinleştir**).
+Yer imleri penceresindeki **Tüm Yer İşaretlerini Devre Dışı** Bırak düğmesini seçerek yer imlerini (kaldırmadan) kapatabilirsiniz. Aynı düğmeyi (şimdi **Tüm Yer İşaretlerini Etkinleştir'** olarak adlandırılır) seçerek bunları yeniden etkinleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)

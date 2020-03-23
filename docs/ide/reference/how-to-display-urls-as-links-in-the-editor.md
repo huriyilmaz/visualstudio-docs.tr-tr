@@ -13,36 +13,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aefabb480830f7fc649bc73d47a3b47594100616
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569094"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>Nasıl Yapılır: Düzenleyicide URL'leri Bağlantılar Olarak Görüntüleme
 
-Kod düzenleyicisinin kodunuzda Tekdüzen Kaynak Konum belirleyicilerinin (URL 'Ler) etkin bağlantılar olarak kabul edilebilir olmasını seçebilirsiniz. Bu özelliği kullandığınızda, URL 'Ler:
+Kod Düzenleyicisi'nin kodunuzda Tek düzen Kaynak Konum belirleyicilerini (URL'leri) etkin bağlantılar olarak ele alamasını seçebilirsiniz. Bu özelliği kullandığınızda, URL'ler:
 
-- Altı çizili olarak görünür.
+- Altı çizili görün.
 
-- Üzerine geldiğinizde bir **araç ipucu** görüntüleyin.
+- Üzerlerinde gezinirken bir **Araç İpucu** görüntüleyin.
 
-- **Ctrl** **+bağlantıyı tıklattığınızda belirtilen** Web sitesini açmayı deneyin. Varsayılan olarak, Web sitesi iç Web tarayıcısında görüntülenir.
+- Linke **ctrl**+**tıkladığınızda** belirtilen web sitesini açmaya çalış. Varsayılan olarak, web sitesi dahili web tarayıcısında görüntülenir.
 
 ## <a name="display-urls-as-links"></a>URL’leri bağlantı olarak görüntüleme
 
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. **Metin düzenleyici**' ye tıklayın.
+2. **Metin Düzenleyici'yi**tıklatın.
 
-3. Yalnızca bir dilin seçeneğini değiştirmek için bu dilin klasörünü genişletin ve **genel**' i seçin.
+3. Yalnızca bir dil seçeneğini değiştirmek için, söz sözleilgili klasörü genişletin ve **Genel'i**seçin.
 
      —veya—
 
-     Tüm dillerin seçeneğini değiştirmek için **tüm diller** klasörünü genişletin ve **genel**' i seçin.
+     Tüm diller için seçeneği değiştirmek için **Tüm Diller** klasörünü genişletin ve **Genel'i**seçin.
 
-4. **Görüntü**altında, **tek tıklamayla URL gezintisini etkinleştir ' i**seçin.
+4. **Ekran**altında , **tek tıklamayla URL gezinmesini etkinleştir'i**seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)

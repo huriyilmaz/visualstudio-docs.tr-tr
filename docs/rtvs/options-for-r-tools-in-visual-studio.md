@@ -1,6 +1,6 @@
 ---
 title: R araçları seçenekleri
-description: R dili ve ilişkili özellikler için Visual Studio seçeneklerine yönelik başvuru.
+description: R dili ve ilişkili özellikler için Visual Studio'daki seçenekler için başvuru.
 ms.date: 12/04/2017
 ms.topic: reference
 f1_keywords:
@@ -14,117 +14,117 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: c7c2cb57dc96d7bb0df09248eb7a877820e50521
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409675"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302709"
 ---
-# <a name="r-tools-for-visual-studio-options"></a>Visual Studio için R Araçları seçenekleri
+# <a name="r-tools-for-visual-studio-options"></a>Visual Studio seçenekleri için R Araçları
 
-Ayarlar **r araçları** > **seçenekleri** menüsüyle veya **Araçlar** > **Seçenekler** aracılığıyla veya **R araçları**' na kaydırılırken erişilir:
+Ayarlara **R Araçları** > **Seçenekleri** menüsünden veya **Araçlar** > **Seçenekleri'nden** ve **R Tools'a**kaydırma yoluyla erişilir:
 
-  ![R araçları için Seçenekler iletişim kutusu](media/options-dialog.png)
+  ![R Araçları için seçenekler iletişim kutusu](media/options-dialog.png)
 
-R 'ye özgü seçeneklere ve ayarlara aşağıdaki yöntemler kullanılarak erişilir. Bu bölümlerin tümünün görünmesi için **Seçenekler** iletişim kutusunun altındaki **tüm ayarları göster** kutusunu seçmeniz gerekir.
+R'ye özgü seçeneklere ve ayarlara aşağıdaki yöntemler kullanılarak erişilir. Tüm bu bölümlerin görünmesi için **Seçenekler** iletişim kutusunun altındaki **tüm ayarları göster** kutusunu seçmeniz gerekir.
 
-- Kod biçimlendirme seçenekleri (bkz. [Düzenleyici seçenekleri](editing-r-code-in-visual-studio.md#editor-options): **Araçlar** > **Seçenekler** menüsü, sonra **metin düzenleyici** > **R** > **biçimlendirme**
-- [Linter seçenekleri (bkz.](linting-r-code.md)): **Araçlar** > **Seçenekler** menüsü, sonra **metin düzenleyici** > **R** > **Lint**
-- Gelişmiş Düzenleyici seçenekleri ([Bu makalede açıklanan](#text-editor--r--advanced-options)): **Araçlar** > **Seçenekler** menüsü, sonra **metin düzenleyici** > **R** > **Gelişmiş**
-- Davranış seçenekleri ([Bu makalede açıklanan](#r-tools--advanced-options)): **r araçları** > **seçenekleri** menüsü veya **Araçlar** > **Seçenekler**ve ardından **R araçları**' na kaydırın.
+- Kod biçimlendirme seçenekleri (bkz. [Editör seçenekleri](editing-r-code-in-visual-studio.md#editor-options): **Araçlar** > **Seçenekleri** menüsü, ardından Metin**Düzenleyicisi** >  **Text Editor** > R**Biçimlendirme'yi** seçin
+- Linter seçenekleri [(bkz. Linting):](linting-r-code.md) **Araçlar** > **Seçenekleri** menüsü, ardından **Metin Düzenleyicisi** > **R** > **Lint'i** seçin
+- Gelişmiş düzenleyici seçenekleri ([bu makalede açıklanan](#text-editor--r--advanced-options)): **Araçlar** > **Seçenekleri** menüsü, sonra **Metin Düzenleyicisi** > **R** > **Advanced** seçin
+- Davranışsal seçenekler[(bu makalede açıklanan):](#r-tools--advanced-options) **R Araçları** > **Seçenekleri** menüsü veya **Araçlar** > **Seçenekleri,** sonra **R Tools'a**kaydırın.
 
-**R araçları** > **veri bilimi ayarları** komutu aynı zamanda Visual Studio 'daki birçok farklı ayarı da etkiler. Bu komut, sonraki bölümde açıklanmaktadır.
+**R Tools** > **Veri Bilimi Ayarları** komutu, Visual Studio'daki genel olarak birçok farklı ayarı da etkiler. Bu komut sonraki bölümde açıklanmıştır.
 
 <a name="data-scientist-layout"></a>
 
-## <a name="r-tools--data-science-settings"></a>R araçları > Veri Bilimi Ayarları
+## <a name="r-tools--data-science-settings"></a>Veri Bilimi Ayarları> R Araçları
 
-**R araçları > veri bilimi ayarları** menü öğesi, VISUAL Studio IDE 'yi veri bilimcilerinin ihtiyaçları için en iyi duruma getirilmiş bir düzen ile yapılandırır. Özellikle, bu seçenek [etkileşimli](interactive-repl-for-r-in-visual-studio.md), [değişken Gezgini](variable-explorer.md)ve [çalışma alanları](r-workspaces-in-visual-studio.md) pencerelerini açar:
+**R Tools > Veri Bilimi Ayarları** menü öğesi Visual Studio IDE'yi veri bilimcilerin ihtiyaçlarına göre optimize edilmiş bir düzenle yapılandırır. Özellikle, bu seçenek [Etkileşimli,](interactive-repl-for-r-in-visual-studio.md) [Değişken Gezgin](variable-explorer.md)ve Çalışma [Alanları](r-workspaces-in-visual-studio.md) pencerelerini açar:
 
-![Visual Studio 'da veri bilimcisi pencere düzeni](media/installation-data-scientist-layout-result.png)
+![Visual Studio'da veri bilimci pencere düzeni](media/installation-data-scientist-layout-result.png)
 
-Daha sonra diğer Visual Studio ayarlarına dönmek için, önce **ayarları Içeri aktar ve dışarı aktar** **komutunu > ,** **Seçili ortam ayarlarını dışarı aktar**' ı seçin ve bir dosya adı belirtin. Bu ayarları geri yüklemek için aynı komutu kullanın ve **Seçili ortam ayarlarını Içeri aktar**' ı seçin. Ayrıca, veri bilimconu mizanpajını değiştirirseniz ve daha sonra **veri bilimi ayarları** komutunu kullanmak yerine daha sonra üzerine dönmek isterseniz aynı komutları kullanabilirsiniz.
+Daha sonra diğer Visual Studio ayarlarına dönmek için önce **Araçlar** > **İçe Ve Dışa Aktar Ayarlarını** komutunu kullanın, **seçili ortam ayarlarını dışa**aktar'ı seçin ve bir dosya adı belirtin. Bu ayarları geri yüklemek için aynı komutu kullanın ve **seçili ortam ayarlarını içe aktar'ı**seçin. Veri bilimcisi düzenini değiştirmek ve doğrudan **Veri Bilimi Ayarları** komutunu kullanmak yerine daha sonra dönmek istiyorsanız, aynı komutları da kullanabilirsiniz.
 
-## <a name="text-editor--r--advanced-options"></a>> R > Gelişmiş seçenekleri için metin Düzenleyicisi
+## <a name="text-editor--r--advanced-options"></a>Metin Editörü > R > Gelişmiş seçenekler
 
-Bu seçenekler, R için biçimlendirme, IntelliSense, ana hat, girintileme ve söz dizimi denetimi davranışlarını denetler.
+Bu seçenekler biçimlendirme, IntelliSense, anahat oluşturma, girintisi ve R için sözdizimi denetimi davranışını denetler.
 
-![R metin Düzenleyicisi gelişmiş seçenekleri için Seçenekler iletişim kutusu](media/options-dialog-advanced-text-editor.png)
+![R metin düzenleyicisi gelişmiş seçenekleri için seçenekler iletişim kutusu](media/options-dialog-advanced-text-editor.png)
 
-Her seçenek, söz konusu davranışı denetlemek için açık veya kapalı olarak ayarlanır. Her bir seçeneğin etkilediği Ayrıntılar için iletişim kutusunun altındaki yardım bölmesine bakın. Bölmeyi daha büyük hale getirmek için Yardım bölmesinin en üstünü sürükleyebileceğinizi unutmayın.
+Her seçenek, söz konusu davranışı denetlemek için aç Veya kapalı olarak ayarlanır. Her seçeneğin neleri etkilediğine ilişkin ayrıntılar için iletişim kutusunun altındaki yardım bölmesine bakın. Bölmeyi büyütmek için bu yardım bölmesinin üst kısmını sürükleyebileceğinizi unutmayın.
 
-![R metin Düzenleyicisi Gelişmiş Seçenekler iletişim kutusunda Genişletilmiş Yardım Bölmesi](media/options-dialog-advanced-text-editor2.png)
+![R metin düzenleyicisi gelişmiş seçenekler iletişim kutusunda genişletilmiş yardım bölmesi](media/options-dialog-advanced-text-editor2.png)
 
-## <a name="r-tools--advanced-options"></a>R araçları > Gelişmiş Seçenekler
+## <a name="r-tools--advanced-options"></a>Gelişmiş seçenekler > R Araçları
 
-**R araçları** > **seçenekleri** menü komutu, r seçenekleri için **Seçenekler** iletişim kutusunu açar:
+**R Araçları** > **Seçenekleri** menüsü komutu **Seçenekler** iletişim kutusunu R seçeneklerine açar:
 
-  ![R araçları için Seçenekler iletişim kutusu](media/options-dialog.png)
+  ![R Araçları için seçenekler iletişim kutusu](media/options-dialog.png)
 
-Aşağıdaki bölümlerde bu sayfada kullanılabilen farklı seçenekler açıklanır.
+Aşağıdaki bölümlerde bu sayfada bulunan farklı seçenekler açıklayınız.
 
 ### <a name="debugging"></a>Hata ayıklama
 
-Bu seçenekler, [değişken Gezgini](variable-explorer.md) ve Izleme ve Yereller gibi hata ayıklayıcı pencerelerinde değerlerin nasıl işlendiğini denetler (bkz. [Debug R Code](debugging-r-in-visual-studio.md)).
+Bu [seçenekler, Değişken Gezgini'nde](variable-explorer.md) ve Watch ve Locals gibi hata ayıklayıcı pencerelerinde değerlerin nasıl işleneceğini denetler (bkz. [Hata Ayıklama R kodu).](debugging-r-in-visual-studio.md)
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Etkin bağlamaları değerlendir | `True` | `True`, değişkenlerin ve özelliklerin incelenirken en güncel değeri her zaman görmenizi sağlar. Riskin nasıl uygulandığına bağlı olarak, ifadeleri değerlendirmek yan etkilere neden olabilir. |
-| Nokta ön ekli değişkenleri göster | `False` | `.` ön eki eklenmiş değişkenlerin gösterilip gösterilmeyeceğini belirtir. |
+| Etkin bağlamaları değerlendirme | `True` | Değişkenleri `True`ve özellikleri incelerken her zaman en güncel değeri görmenizi sağlar. Risk, ifadelerin değerlendirilmesinin nasıl uygulandığına bağlı olarak yan etkilere yol açabileceğidir. |
+| Nokta önceden belirlenmiş değişkenleri göster | `False` | Önceden belirlenmiş değişkenlerin gösterip `.` gösterilmediğini belirtir. |
 
 ### <a name="grid-view"></a>Izgara görünümü
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Dinamik değerlendirme | `False` | Varsayılan olarak `View(<expression>)` işlevi, verilerin bir anlık görüntüsünü veri çerçevesi olarak alır ve bu da büyük veri kümeleriyle önemli miktarda bellek tüketebilir. Bu seçeneğin `True` ayarlanması, kılavuz yalnızca görüntülenen verileri getirmek üzere yenilendiğinde ifadenin değerlendirileceği anlamına gelir. Ancak, ifade verileri değiştirirse, dplyr PIP ifadelerine uygun olmayan değişiklikler de değişir. |
+| Dinamik değerlendirme | `False` | Varsayılan olarak, `View(<expression>)` işlev büyük veri kümeleri ile önemli bellek tüketebilir bir veri çerçevesi olarak veri anlık alır. Bu seçeneğin `True` ayarlanması, Kılavuz yalnızca görüntülenen verileri almak için yenilendiğinde ifadenin değerlendirildiği anlamına gelir. Ancak, ifade değişirse, dplyr pip ifadeleri için uygun olmayan veriler de değişir. |
 
 ### <a name="help"></a>Yardım
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| F1 web tarayıcısı | `Internal` | **Ctrl**+**F1**kullanarak bir terimi ararken yardım 'ın nasıl görüntüleneceğini denetler. `Internal`olarak ayarlandığında, yardım, Visual Studio 'daki bir araç penceresi içinde işlenir. `External`olarak ayarlandığında, yardım varsayılan Web tarayıcınızda görüntülenir. |
-| F1 Web Araması dizesi | `R site:stackoverflow.com` | Düzenleyicideki bir terim üzerinde **Ctrl**+**F1** tuşlarına bastığınızda arama koşullarının arama altyapısına nasıl geçtiğini denetler. Varsayılan olarak dize, arama teriminizi `R` ekler `R site:stackoverflow.com`. `site:stackoverflow.com`, arama motoruna, aramanın `stackoverflow.com` etki alanındaki sayfalara kapsamını nasıl göndereceğini söyleyen bir yönergedir. |
-| R Yardım tarayıcısı | `Automatic` | R belgelerini **F1**, **?** , veya **??** kullanarak ararken yardım 'ın nasıl görüntüleneceğini denetler. `Automatic`olarak ayarlandığında, ilgili pencerede yardım işler. Örneğin, HTML Yardımı bir Visual Studio araç penceresi içinde görünür, ancak PDF 'Ler varsayılan PDF programınızda görüntülenir. `External`olarak ayarlandığında, yardım varsayılan Web tarayıcınızda işlenir. |
+| F1 Web tarayıcısı | `Internal` | **Ctrl**+**F1**kullanarak bir terim ararken yardımın nasıl görüntüleneceğini denetler. `Internal`Ayarlandığınızda, yardım Visual Studio'daki bir araç penceresi içinde işlenir. Varsayılan web `External`tarayıcınızda yardım olarak ayarlandığında görünür. |
+| F1 Web Arama Dizesi | `R site:stackoverflow.com` | Editördeki bir terimde **Ctrl**+**F1** tuşuna bastığınızda arama terimlerinin arama motorunuza nasıl geçirildiğini denetler. Varsayılan olarak dize, arama `R` teriminize ekleyen dizedir. `R site:stackoverflow.com` Arama `site:stackoverflow.com` motoruna, aramayı `stackoverflow.com` etki alanındaki sayfalara kapsamını söyleyen bir yönergedir. |
+| R Yardım Tarayıcısı | `Automatic` | **F1**, **? ,** veya **??** kullanarak R belgelerinde arama yaparken yardımın nasıl görüntüleneceğini denetler. `Automatic`Ayarlandığında, uygun pencerede işler yardım. Örneğin, HTML yardımı Visual Studio araç penceresinde görünürken, PDF'ler varsayılan PDF programınızda görünür. `External`Ayarlandığında, yardım varsayılan web tarayıcınızda işlenir. |
 
 ### <a name="history"></a>Geçmiş
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Geçmişi her zaman Kaydet | `True` | RTVS 'nin komut geçmişinizi bir öğesine yazıp yazmadığını denetler *.* Çalışma dizininizde her ne zaman bir proje kapatıldığında RHistory dosyası. Sihirbazdan çıkmadan önce projenizi kaydetmeseniz bile geçmiş kaydedilir. |
-| Arama filtresini Sıfırla | `True` | Geçmiş penceresinin komut geçmişinizi yalnızca R Geçmiş iletişim kutusunda filtre terimiyle alt dize ile eşleşen komutları gösterecek şekilde filtreleyemeyeceğini belirler. Bu ayar, yeni bir komut çalıştırdığınız veya yeni bir projeye geçiş yaptığınızda geçmiş arama filtreinizin sıfırlanıp sıfırlanmayacağını belirler. Bu, farklı yükü tetikler *. RHistory* dosyası. Filtre kümesi ile bir komut çalıştırdığınızda `True` varsayılan ayarı aniden en aza indirir ve az önce çalıştırdığınız komutun geçmişte gösterilmediğini merak ettiniz. |
-| Çok satırlı seçim kullan | `True` | Tek bir tıklama geçmişi içinde çok satırlı bir deyimin seçip seçmeyeceğinizi belirtir. Ayrıca, satırlarda değil, etkileşimli pencerelerin deyimlerini izleyerek yukarı/aşağı ok gezintisini de mümkün. |
+| Her zaman geçmişi kaydet | `True` | RTVS'nin komut geçmişinizi bir 'e yazıp yazmadığını *denetler. *Proje kapatıldığında çalışma dizininizdeki RHistory dosyası. Projenizi çıkmadan önce kaydetmeseniz bile geçmişi kaydetmek gerçekleşir. |
+| Arama filtresini sıfırla | `True` | Geçmiş penceresinin yalnızca R Geçmişi iletişim kutusundaki filtre terimiyle eşleşen alt dize komutlarını göstermek için komut geçmişinize filtre uygulayıp filtrelemeyeceğini belirler. Bu ayar, yeni bir komut çalıştırdığınızda geçmiş arama filtrenizi sıfırlayıp sıfırlamayacağınızı veya farklı bir projenin yükünü tetikleyen yeni bir projeye geçiş yapıp yapmayı belirler. * RHistory* dosyası. Varsayılan ayar, `True` filtre kümesi olan bir komutu çalıştırdığınızda sürprizi en aza indirir ve çalıştırdığınız komutun Neden Tarih'te görünmediğini merak edeyim. |
+| Çok satırlı seçimi kullanma | `True` | Tek bir tıklamayla Tarihçe'de çok satırlı bir deyim seçip seçemeyeceğiniz belirtilir. Ayrıca, Etkileşimli Windows'da satıryerine ifadelere göre yukarı/aşağı ok gezintisi sağlar. |
 
 ### <a name="html"></a>HTML
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| HTML sayfaları tarayıcısı | `External` | `ggvis` çizimi gibi içeriğin veya `shiny` uygulamasının nerede işleneceğini belirler. `Internal`, HTML çıkışını Visual Studio 'daki bir araç penceresi içinde gösterir; `External` HTML çıkışını varsayılan tarayıcınızda görüntüler. |
+| HTML Sayfaları tarayıcısı | `External` | `ggvis` Çizim veya `shiny` uygulama gibi içeriğin nerede işlenmeli olduğunu belirler. `Internal`Visual Studio'da bir araç penceresi içinde HTML çıktısını gösterir; `External` varsayılan tarayıcınızda HTML çıktısını görüntüler. |
 
 ### <a name="logging"></a>Günlüğe kaydetme
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Olayları günlüğe kaydet | `Normal` | RTVS tanılaması için kullanılan günlüğün ayrıntı düzeyini denetler. `Normal` varsayılan ayarı `TEMP` dizininizde bir günlük dosyası oluşturur. `Traffic`olarak ayarlandığında, RTVS, tüm komutları ve oturumlarınızda yanıtları günlüğe kaydeder. Bu günlük dosyaları hiçbir şekilde makinenizi bırakmaz, ancak RTVS 'de sorunları tanılamak için faydalı olabilir. |
+| Günlük olayları | `Normal` | RTVS tanılama için kullanılan günlük ayrıntılılığını denetler. Varsayılan ayar, `Normal` dizininizde `TEMP` bir günlük dosyası oluşturur. `Traffic`Ayarlandığında, RTVS oturumunuzdaki tüm komutları ve yanıtları kaydeder. Bu günlük dosyaları makinenizden asla ayrılmaz, ancak RTVS'deki sorunları tanılamanız için yararlı olabilir. |
 
 ### <a name="markdown"></a>Markdown
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Markaşağı Önizleme tarayıcısı | `External` | Rmarkin HTML çıktısının görüntülendiğini belirler. `Internal`, Rmarkaşağı HTML belgesini Visual Studio 'daki bir araç penceresi içinde gösterir; `External` varsayılan tarayıcınızı kullanarak Rmarkaşağı HTML 'yi görüntüler. |
+| Markdown önizleme tarayıcısı | `External` | RMarkdown HTML çıktının nerede görüntüleneceğini belirler. `Internal`Visual Studio'daki bir araç penceresinde RMarkdown HTML belgesini gösterir; `External` varsayılan tarayıcınızı kullanarak RMarkdown HTML görüntüler. |
 
-### <a name="r-engine"></a>R altyapısı
+### <a name="r-engine"></a>R Motoru
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Kod sayfası | `(OS Default)` | R için kod sayfasını (yerel ayar) ayarlar. Varsayılan olarak, işletim sisteminin temel alınan yerel ayarını kullanır. |
-| CRAN yansıtması | `(Use .Rprofile)` | Paket yüklemeleri için varsayılan CRAN yansıtmasını ayarlar. `Use .Rprofile` varsayılan ayarı, içindeki CRAN yansıtma ayarlarını duyar *. RProfile* dosyası. |
+| Kod sayfası | `(OS Default)` | R için kod sayfasını (yerel ayar) ayarlar. Varsayılan olarak, işletim sisteminin temel yerel sini kullanır. |
+| CRAN Ayna | `(Use .Rprofile)` | Paket yüklemeleri için varsayılan CRAN aynasını ayarlar. Varsayılan ayar, `Use .Rprofile` cran ayna ayarlarına saygı *gösterir. RProfile* dosyası. |
 
 ### <a name="workspace"></a>Çalışma alanı
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Proje açıldığında çalışma alanını yükle | `No` | `Yes` ayarı, oturum verilerinin içinden yüklenmesini sağlar *. Proje açıldığında RData* dosyası genel ortama. |
-| Sıfırlama sırasında çalışma alanını kaydetmek için sor | `Yes` | `No` ayarı, etkileşimli penceredeki Sıfırla düğmesine tıkladığınızda çalışma alanınızın kaydedilmesini istemeden devre dışı bırakır. |
-| Proje kapandığında çalışma alanını Kaydet | `No` | `Yes` ayarı, genel ortamın öğesine kaydedilmesini sağlar *. Proje kapatıldığında RData* dosyası. |
-| Çalışma alanlarını değiştirmeden önce onay iletişim kutusunu göster | `Yes` | `No` ayarı, farklı çalışma alanları arasında geçiş yaparken kullanıcıya onay sorulmasını devre dışı bırakır. Bkz. [çalışma alanları arasında geçiş](r-workspaces-in-visual-studio.md#switch-between-workspaces) |
-| Makine yük göstergesini göster | `False` | Durum çubuğundaki CPU/bellek/ağ yükü göstergesinin görünürlüğünü denetler. Gösterge ağ trafiği oluşturduğundan bu `False` uzak ölçümlü senaryolarda tutmanız yararlı olur. Bu seçeneğin değiştirilmesi, Visual Studio 'Yu yeniden başlatmanızı gerektirir. |
+| Proje açıldığında çalışma alanını yükleme | `No` | Oturum `Yes` verilerinin 'den yüklenmesine olanak sağlayacak *ayar. Proje* açıldığında Küresel ortama RData dosyası. |
+| Sıfırlamada çalışma alanını kaydetmek için komut istemi | `Yes` | Etkileşimli `No` Pencere'deki Sıfırla düğmesini tıklattığınızda çalışma alanınızı kaydetmenizi isteyen devre dışı bırakışlar ayarlayın. |
+| Proje kapandığında çalışma alanından tasarruf edin | `No` | Küresel `Yes` ortamın ' a kaydedilmesini sağlayacak *ayarı. *Proje kapatıldığında RData dosyası. |
+| Çalışma alanlarını değiştirmeden önce onay iletişim kutusunu göster | `Yes` | Farklı `No` çalışma alanları arasında geçiş yaparken kullanıcıdan onay istenmesini isteyen devre dışı kalım ayarlaması. Bkz. [Çalışma Alanları Arasında Geçiş](r-workspaces-in-visual-studio.md#switch-between-workspaces) |
+| Makine yük göstergesini göster | `False` | Durum çubuğundaki CPU/Bellek/Ağ yük göstergesinin görünürlüğünü denetler. Gösterge ağ trafiğine maruz kaldığından, bunu `False` uzak ölçülü senaryolarda tutmak yararlıdır. Bu seçeneği değiştirmek için Visual Studio'yı yeniden başlatmanız gerekmektedir. |

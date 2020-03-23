@@ -1,5 +1,5 @@
 ---
-title: ASP.NET Web uygulaması eşzamanlılık verilerini almak için profil oluşturucu komut satırı
+title: ASP.NET web uygulaması eşzamanlılık verilerini almak için profiler komut satırı
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,20 +13,20 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 4941e9fde651e9274eeafeffc4aefa27483f3730
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779668"
 ---
-# <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak bir ASP.NET Web uygulaması için eşzamanlılık verileri toplama
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları eşzamanlılık yöntemi, kaynak çekişme verilerini toplamanıza olanak sağlar.
+# <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak ASP.NET bir web uygulaması için eşzamanlılık verileri toplama
+Profil Oluşturma Araçları [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] eşzamanlılık yöntemi, kaynak çekişme verileri toplamanızı sağlar.
 
-## <a name="common-tasks"></a>Ortak görevler
+## <a name="common-tasks"></a>Genel görevler
 
-|Görev|İlgili Içerik|
+|Görev|İlgili İçerik|
 |----------|---------------------|
-|Profil oluşturucuyu çalışan bir ASP.NET uygulamasına iliştirme|-   [nasıl yapılır: eşzamanlılık verileri toplamak için profil oluşturucuyu bir ASP.NET uygulamasına iliştirme](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
+|Profiloluşturucuyu çalışan bir ASP.NET uygulamasına takın|-   [Nasıl kullanılır: Eşzamanlı veri toplamak için profil oluşturucuyu ASP.NET bir uygulamaya ekleme](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
 
 ## <a name="reference"></a>Başvuru
 - [Komut satırı profil oluşturma araçları başvurusu](../profiling/command-line-profiling-tools-reference.md)
@@ -35,21 +35,21 @@ ms.locfileid: "74779668"
 
 ### <a name="profile-aspnet-applications"></a>Profil ASP.NET uygulamaları
 
-|Görev|İlgili Içerik|
+|Görev|İlgili İçerik|
 |----------|---------------------|
-|**Örnekleme yöntemi kullanılarak profil**|[örnekleme kullanarak uygulama Istatistiklerini toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md) -   |
-|**İzleme yöntemini kullanarak profil**|[izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md) -   |
-|**Profil bellek ayırma ve çöp toplama**|[bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md) -   |
+|**Örnekleme yöntemini kullanarak profil**|-   [Örneklemeyi kullanarak uygulama istatistiklerini toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
+|**Enstrümantasyon yöntemini kullanarak profil**|-   [Enstrümantasyon kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
+|**Profil bellek ayırma ve çöp toplama**|-   [Bellek verilerini toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
 
 ### <a name="profile-concurrency-issues"></a>Profil eşzamanlılık sorunları
 
-|Görev|İlgili Içerik|
+|Görev|İlgili İçerik|
 |----------|---------------------|
-|**Tek başına (istemci) uygulamalar profili**|-   [eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
-|**Profil hizmetleri**|-   [eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|
+|**Profil tek başına (istemci) uygulamaları**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
+|**Profil hizmetleri**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|
 
-### <a name="analyze-concurrency-data-views-and-reports"></a>Eşzamanlılık veri görünümlerini ve raporlarını çözümleme
-- [Kaynak çakışması veri görünümleri](../profiling/resource-contention-data-views.md)
+### <a name="analyze-concurrency-data-views-and-reports"></a>Eşzamanlılık veri görünümlerini ve raporlarını analiz edin
+- [Kaynak çekişme veri görünümleri](../profiling/resource-contention-data-views.md)
 
 - [Eşzamanlılık görselleştiricisi](../profiling/concurrency-visualizer.md)
 

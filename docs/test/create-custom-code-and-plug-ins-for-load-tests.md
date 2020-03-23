@@ -12,15 +12,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3519a593182c199cc9f7a92cfb77e9c79bd1a9ee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590104"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>Yük testleri için özel kod ve eklentiler oluşturma
 
-Özel bir eklenti yazma ve yük testi ya da bir web performans testi ekleme kodu kullanır. Yerleşik işlevselliği genişletmek testler için özel eklentiler oluşturma için yük testi API'si ve web performans testi API'ı kullanabilirsiniz. Yük testinize birden fazla eklenti ekleyebilirsiniz.
+Özel eklenti, yazdığınız ve bir yük testine veya web performans testine eklediğiniz kodu kullanır. Yerleşik işlevsellik genişletmek için testler için özel eklentiler oluşturmak için yük testi API'sını ve web performans testi API'sini kullanabilirsiniz. Yükleme testinize birden çok eklenti ekleyebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -28,10 +28,10 @@ ms.locfileid: "75590104"
 
 |Görevler|İlişkili konular|
 |-|-----------------------|
-|**Özel bir yük testi eklentisi oluşturma**: yük testi API, özel bir Yük testiniz için daha fazla işlevsellik eklemek için eklenti oluşturmak için kullanabilirsiniz.|-   [Nasıl yapılır: yük testi API'si kullanma](../test/how-to-use-the-load-test-api.md)<br />-   [Nasıl yapılır: bir yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)|
-|**Özel bir Web başarım testi eklentisi oluşturma:** özel bir web performans testi isteği düzeyinde de dahil olmak üzere, daha fazla test işlevselliği eklemek için eklenti oluşturmak için web performans testi API'ı kullanabilirsiniz. Ayrıca, bir web hizmetini test oluşturabilirsiniz.<br /><br /> Ayrıca, bir web performans testi kaydedildikten sonra ancak Web Performans Testi Sonuç Görüntüleyicisi'nde göründüğü önce değiştirebileceğiniz bir web kaydedici eklentisi oluşturabilirsiniz.|-   [Nasıl yapılır: web başarım testi API'si kullanma](../test/how-to-use-the-web-performance-test-api.md)<br />-   [Nasıl yapılır: web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [Nasıl yapılır: istek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md)<br />-   [Nasıl yapılır: web hizmeti testi oluşturma](../test/how-to-create-a-web-service-test.md)<br />-   [Nasıl yapılır: kaydedici eklentisi oluşturma](../test/how-to-create-a-recorder-plug-in.md)|
-|**Web Performans Test Sonuçları Görüntüleyicisi için kullanıcı Arabirimi özellikleri ekleyin:** Visual Studio eklentisini kullanarak Web Performans Test Sonuçları Görüntüleyicisi için daha fazla kullanıcı Arabirimi özelliklerini ekleyebilirsiniz.|-   [Nasıl yapılır: Visual Studio eklentisi Web performans test sonuçları oluşturma Görüntüleyicisi](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
-|**Özel HTTP Gövde Düzenleyicisi oluşturma:** bir web hizmetinden http XML yanıtlarını ikili veya dizesini düzenlemek için özel bir düzenleyici oluşturabilirsiniz.|-   [Nasıl yapılır: bir özel HTTP Gövde Düzenleyicisi için web performans testi Düzenleyicisi oluşturma](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
+|**Yük testiniz için özel bir eklenti oluşturun**: Yük testinize daha fazla test işlevi eklemek için özel bir eklenti oluşturmak için yükleme testi API'sini kullanabilirsiniz.|-   [Nasıl kullanılır: Yük testi API'sini kullanın](../test/how-to-use-the-load-test-api.md)<br />-   [Nasıl yapılsın: Yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)|
+|**Web Performans testiniz için özel bir eklenti oluşturun:** İstek düzeyinde de dahil olmak üzere web performans testinize daha fazla test işlevi eklemek için özel bir eklenti oluşturmak için web performans testi API'sını kullanabilirsiniz. Ayrıca bir web hizmeti testi oluşturabilirsiniz.<br /><br /> Ayrıca, bir web performans testini kaydedildikten sonra, ancak Web Performans Testi Sonuç Görüntüleyici'de görünmeden önce değiştirebilen bir web kaydedici eklentisi oluşturabilirsiniz.|-   [Nasıl kullanılır: Web performans testi API'sini kullanın](../test/how-to-use-the-web-performance-test-api.md)<br />-   [Nasıl yapilir: Web performans testi eklentisi oluşturma](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [Nasıl yapilir: İstek düzeyi eklentisi oluşturma](../test/how-to-create-a-request-level-plug-in.md)<br />-   [Nasıl?](../test/how-to-create-a-web-service-test.md)<br />-   [Nasıl yapilir: Kaydedici eklentisi oluşturma](../test/how-to-create-a-recorder-plug-in.md)|
+|**Web Performans Test Sonuçları Görüntüleyici'ye UI özelliklerini ekleyin:** Visual Studio eklentisini kullanarak Web Performans Test Sonuçları Görüntüleyicisi'ne daha fazla Web Sürümü özelliği ekleyebilirsiniz.|-   [Nasıl yapIlir: Web performans testi sonuçları görüntüleyicisi için Visual Studio eklentisi oluşturma](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
+|**Özel bir HTTP gövde düzenleyicisi oluşturun:** Bir web hizmetinden ikili veya dize http XML yanıtlarını yeniden oluşturmak için özel bir düzenleyici oluşturabilirsiniz.|-   [Nasıl: Web performans testi düzenleyicisi için özel bir HTTP vücut düzenleyicisi oluşturun](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
 
 ## <a name="reference"></a>Başvuru
 
@@ -47,5 +47,5 @@ ms.locfileid: "75590104"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Oluşturma ve bir kodlanmış web performans testini çalıştırma](../test/generate-and-run-a-coded-web-performance-test.md)
+- [Yük testi sonuçlarını analiz edin](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Kodlanmış web performans testi oluşturma](../test/generate-and-run-a-coded-web-performance-test.md)
