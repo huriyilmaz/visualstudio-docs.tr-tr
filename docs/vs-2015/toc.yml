@@ -2,7 +2,7 @@
   items:
     - name: Visual Studio 2015’e Hoş Geldiniz
       href: welcome-to-visual-studio-2015.md
-    - name: Visual Studio 2015’teki Yenilikler
+    - name: Visual Studio 2015'teki Yenilikler
       href: what-s-new-in-visual-studio-2015.md
     - name: Visual Studio 2015'i Yükleme
       href: install/install-visual-studio-2015.md

@@ -36,11 +36,11 @@
               href: walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md
             - name: 'İzlenecek yol: İlişkilendirme ve Başlatma Formları ile İş Akışı Oluşturma'
               href: walkthrough-creating-a-workflow-with-association-and-initiation-forms.md
-            - name: 'İzlenecek yol: Uygulama Sayfasını İş Akışına Ekleme'
+            - name: 'İzlenecek yol: Bir Uygulama Sayfasını Bir İş Akışına Ekleme'
               href: walkthrough-add-an-application-page-to-a-workflow.md
-            - name: 'İzlenecek yol: Özel Site İş Akışı Etkinliği Oluşturma'
+            - name: 'İzlenecek yol: Özel Site İş Akışı Faaliyeti Oluşturma'
               href: walkthrough-create-a-custom-site-workflow-activity.md
-            - name: 'İzlenecek yol: SharePoint Tasarımcısı Yeniden Kullanılabilir İş Akışını Visual Studio''ya İçeri Aktarma'
+            - name: 'İzlenecek yol: Bir SharePoint Tasarımcısı Yeniden Kullanılabilir İş Akışını Visual Studio''ya İçeri Aktarma'
               href: walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md
         - name: SharePoint için Sayfa Oluşturma
           items:
@@ -50,7 +50,7 @@
               href: creating-application-pages-for-sharepoint.md
             - name: Uygulama Sayfası Oluşturma
               href: how-to-create-an-application-page.md
-            - name: 'İzlenecek yol: SharePoint Uygulama Sayfası Oluşturma'
+            - name: 'İzlenecek Yol: SharePoint Uygulama Sayfası Oluşturma'
               href: walkthrough-creating-a-sharepoint-application-page.md
         - name: SharePoint için Web Bölümleri Oluşturma
           items:
@@ -60,11 +60,11 @@
               href: how-to-create-a-sharepoint-web-part.md
             - name: Tasarımcı Kullanarak SharePoint Web Bölümü Oluşturma
               href: how-to-create-a-sharepoint-web-part-by-using-a-designer.md
-            - name: 'İzlenecek yol: SharePoint için Web Bölümü Oluşturma'
+            - name: 'İzlenecek yol: SharePoint için bir Web Bölümü Oluşturma'
               href: walkthrough-creating-a-web-part-for-sharepoint.md
-            - name: 'İzlenecek yol: Tasarımcı Kullanarak SharePoint için Web Bölümü Oluşturma'
+            - name: 'İzlenecek Yol: Tasarımcı Kullanarak SharePoint için bir Web Bölümü Oluşturma'
               href: walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md
-            - name: 'İzlenecek yol: SharePoint için OData Görüntüleyen Silverlight Web Bölümü Oluşturma'
+            - name: 'İzlenecek yol: SharePoint için OData Görüntüleyen bir Silverlight Web Parçası Oluşturma'
               href: walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md
         - name: Web Bölümleri veya Uygulama Sayfaları için Yeniden Kullanılabilir Denetimler Oluşturma
           items:
@@ -126,19 +126,19 @@
           items:
             - name: SharePoint için Site Tanımları Oluşturma
               href: creating-site-definitions-for-sharepoint.md
-            - name: 'İzlenecek yol: Temel Site Tanımı Projesi Oluşturma'
+            - name: 'İzlenecek yol: Temel bir Site Tanımı Projesi Oluşturma'
               href: walkthrough-create-a-basic-site-definition-project.md
         - name: Mevcut bir SharePoint Sitesinden Öğeleri İçeri Aktarma
           items:
             - name: Mevcut bir SharePoint Sitesinden Öğeleri İçeri Aktarma
               href: importing-items-from-an-existing-sharepoint-site.md
-            - name: 'İzlenecek yol: Mevcut SharePoint Sitesinden Öğeleri İçeri Aktarma'
+            - name: 'İzlenecek yol: Mevcut bir SharePoint Sitesinden Öğeleri İçeri Aktarma'
               href: walkthrough-import-items-from-an-existing-sharepoint-site.md
             - name: Yeniden Kullanılabilir İş Akışlarını İçeri Aktarma Yönergeleri
               href: guidelines-for-importing-reusable-workflows.md
             - name: Bir Ana Sayfa veya Temayı İçeri Aktarma
               href: how-to-import-a-master-page-or-theme.md
-            - name: 'İzlenecek yol: Görüntü İçeren Özel Ana Sayfa ve Site Sayfasını İçeri Aktarma'
+            - name: 'İzlenecek yol: Bir Görüntü İçeren Özel bir Ana Sayfa ve Site Sayfasını İçeri Aktarma'
               href: walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md
         - name: Çözüme Dosyaları Dahil Etmek için Modül Kullanma
           items:
@@ -198,7 +198,7 @@
           items:
             - name: SharePoint Uygulamaları için Performans Profili Oluşturma
               href: profiling-the-performance-of-sharepoint-applications.md
-            - name: 'İzlenecek yol: SharePoint Uygulaması Profili Oluşturma'
+            - name: 'İzlenecek Yol: SharePoint Uygulaması için Profil Oluşturma'
               href: walkthrough-profiling-a-sharepoint-application.md
         - name: Korumalı Çözümler ve Grup Çözümleri Arasındaki Farklılıklar
           href: differences-between-sandboxed-and-farm-solutions.md
@@ -252,7 +252,7 @@
               href: how-to-set-sharepoint-deployment-commands.md
             - name: SharePoint Dağıtım Yapılandırmasını Düzenleme
               href: how-to-edit-a-sharepoint-deployment-configuration.md
-            - name: 'İzlenecek yol: Proje Görev Listesi Tanımı Dağıtma'
+            - name: 'İzlenecek yol: Proje Görev Listesi Tanımını Dağıtma'
               href: walkthrough-deploying-a-project-task-list-definition.md
         - name: Değiştirilebilir Parametreler
           href: replaceable-parameters.md
@@ -290,13 +290,13 @@
                   href: how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md
                 - name: SharePoint Proje Öğeleri için Öğe Şablonları ve Proje Şablonları Oluşturma
                   href: creating-item-templates-and-project-templates-for-sharepoint-project-items.md
-                - name: 'İzlenecek yol: Öğe Şablonu, Bölüm 1 ile Özel Eylem Proje Öğesi Oluşturma'
+                - name: 'İzlenecek yol: Öğe Şablonu, Bölüm 1 ile Özel bir Eylem Proje Öğesi Oluşturma'
                   href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md
-                - name: 'İzlenecek yol: Öğe Şablonu, Bölüm 2 ile Özel Eylem Proje Öğesi Oluşturma'
+                - name: 'İzlenecek yol: Öğe Şablonu, Bölüm 2 ile Özel bir Eylem Proje Öğesi Oluşturma'
                   href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md
-                - name: 'İzlenecek yol: Proje Şablonu, Bölüm 1 ile Site Sütunu Proje Öğesi Oluşturma'
+                - name: 'İzlenecek yol: Proje Şablonu, Bölüm 1 ile bir Site Sütunu Proje Öğesi Oluşturma'
                   href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md
-                - name: 'İzlenecek yol: Proje Şablonu, Bölüm 2 ile Site Sütunu Proje Öğesi Oluşturma'
+                - name: 'İzlenecek yol: Proje Şablonu, Bölüm 2 ile bir Site Sütunu Proje Öğesi Oluşturma'
                   href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md
             - name: SharePoint Proje Öğelerini Genişletme
               items:
@@ -308,7 +308,7 @@
                   href: how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md
                 - name: Özel bir SharePoint Proje Öğe Uzantısına Özellik Ekleme
                   href: how-to-add-a-property-to-a-sharepoint-project-item-extension.md
-                - name: 'İzlenecek yol: SharePoint Proje Öğesi Türü Genişletme'
+                - name: 'İzlenecek yol: Bir SharePoint Proje Öğesi Türünü Genişletme'
                   href: walkthrough-extending-a-sharepoint-project-item-type.md
             - name: SharePoint Projelerini Genişletme
               items:
@@ -320,7 +320,7 @@
                   href: how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md
                 - name: SharePoint Projelerine Özellik Ekleme
                   href: how-to-add-a-property-to-sharepoint-projects.md
-                - name: 'İzlenecek yol: SharePoint Proje Uzantısı Oluşturma'
+                - name: 'İzlenecek Yol: SharePoint Proje Uzantısı Oluşturma'
                   href: walkthrough-creating-a-sharepoint-project-extension.md
             - name: SharePoint Paketleme ve Dağıtımını Genişletme
               items:
@@ -332,7 +332,7 @@
                   href: how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md
                 - name: Dağıtım Çakışmalarını İşleme
                   href: how-to-handle-deployment-conflicts.md
-                - name: 'İzlenecek yol: SharePoint Projeleri için Özel Dağıtım Adımı Oluşturma'
+                - name: 'İzlenecek Yol: SharePoint Projeleri için Özel bir Dağıtım Adımı Oluşturma'
                   href: walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md
                 - name: SharePoint Çözümleri için Özel Özellik ve Paket Doğrulama Kuralları Oluşturma
                   href: how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md
@@ -350,7 +350,7 @@
               href: how-to-add-a-custom-sharepoint-node-to-server-explorer.md
             - name: Sunucu Gezgininde Yerleşik bir SharePoint Düğümü için Veri Alma
               href: how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md
-            - name: 'İzlenecek yol: Web Bölümlerini Görüntülemek Üzere Sunucu Gezginini Genişletme'
+            - name: 'İzlenecek yol: Sunucu Gezginini Web Bölümlerini Görüntülemek Üzere Genişletme'
               href: walkthrough-extending-server-explorer-to-display-web-parts.md
         - name: SharePoint Araç Uzantıları için Programlama Kavramları ve Özellikler
           items:
@@ -364,7 +364,7 @@
                   href: how-to-create-a-sharepoint-command.md
                 - name: Bir SharePoint Komutu Yürütme
                   href: how-to-execute-a-sharepoint-command.md
-                - name: 'İzlenecek yol: Sunucu Gezgini Uzantısında SharePoint İstemcisi Nesne Modelini Çağırma'
+                - name: 'İzlenecek yol: Bir Sunucu Gezgini Uzantısında SharePoint İstemcisi Nesne Modelini Çağırma'
                   href: walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md
             - name: SharePoint Proje Hizmetini Kullanma
               items:

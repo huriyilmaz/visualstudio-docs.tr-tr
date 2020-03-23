@@ -1,6 +1,6 @@
 - name: Visual Studio’da Python
   href: index.yml
-- name: Genel Bakış
+- name: Genel bakış
   items:
     - name: Python desteğine genel bakış
       href: overview-of-python-tools-for-visual-studio.md

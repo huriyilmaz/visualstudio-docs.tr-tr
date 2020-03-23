@@ -78,7 +78,7 @@
           href: expression-evaluation-in-break-mode.md
         - name: Özel Durum İşleme (Visual Studio SDK)
           href: exception-handling-visual-studio-sdk.md
-    - name: 'Nasıl yapılır: Özel Hata Ayıklama Altyapısında Hata Ayıklama'
+    - name: 'Nasıl Yapılır: Özel Hata Ayıklama Altyapısında Hata Ayıklama'
       href: how-to-debug-a-custom-debug-engine.md
 - name: Hata Ayıklayıcı Genişletilebilirliği ile Çalışmaya Başlama
   items:

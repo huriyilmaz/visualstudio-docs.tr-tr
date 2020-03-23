@@ -36,7 +36,7 @@
       href: create-models-for-your-app.md
     - name: 'Bağımlılık Diyagramları: Başvuru'
       href: layer-diagrams-reference.md
-    - name: 'Bağımlılık Diyagramları: Kuralları'
+    - name: 'Bağımlılık Diyagramları: Yönergeler'
       href: layer-diagrams-guidelines.md
     - name: Modelleri paylaşma
       items:
@@ -81,7 +81,7 @@
       href: add-custom-properties-to-layer-diagrams.md
 - name: Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller
   items:
-    - name: Genel Bakış
+    - name: Genel bakış
       displayName: Modeling SDK for Visual Studio
       href: modeling-sdk-for-visual-studio-domain-specific-languages.md
     - name: Alana Özgü Dilleri Kullanmaya Başlama
@@ -214,16 +214,16 @@
           href: updating-shapes-and-connectors-to-reflect-the-model.md
     - name: Alana Özgü Dilden Kod Oluşturma
       items:
-        - name: Genel Bakış
+        - name: Genel bakış
           displayName: Generate Code from a Domain-Specific Language
           href: generating-code-from-a-domain-specific-language.md
         - name: Metin Şablonlarından Modellere Erişme
           href: accessing-models-from-text-templates.md
         - name: Metin Şablonunda Visual Studio ModelBus kullanma
           href: using-visual-studio-modelbus-in-a-text-template.md
-        - name: 'İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama'
+        - name: 'İzlenecek yol: Modele Erişen bir Metin Şablonunda Hata Ayıklama'
           href: walkthrough-debugging-a-text-template-that-accesses-a-model.md
-        - name: 'İzlenecek yol: Bir Konağı Üretilen Yönerge İşlemcisine Bağlama'
+        - name: 'İzlenecek yol: Konağı Oluşturulan bir Yönerge İşlemcisine Bağlama'
           href: walkthrough-connecting-a-host-to-a-generated-directive-processor.md
         - name: DslTextTransform Komutu
           href: the-dsltexttransform-command.md
@@ -270,14 +270,14 @@
       href: api-reference-for-modeling-sdk-for-visual-studio.md
 - name: Kod Oluşturma ve T4 Metin Şablonları
   items:
-    - name: Genel Bakış
+    - name: Genel bakış
       displayName: Code Generation and T4 Text Templates
       href: code-generation-and-t4-text-templates.md
     - name: T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
       items:
         - name: Genel bakış ve nasıl yapılır
           href: design-time-code-generation-by-using-t4-text-templates.md
-        - name: 'İzlenecek yol: Metin Şablonları Kullanarak Kod Oluşturma'
+        - name: Metin Şablonları kullanarak Kod Oluşturma
           href: walkthrough-generating-code-by-using-text-templates.md
         - name: Derleme Sürecinde Kod Oluşturma
           href: code-generation-in-a-build-process.md
@@ -289,7 +289,7 @@
       href: run-time-text-generation-with-t4-text-templates.md
     - name: T4 Metin Şablonu Yazma
       items:
-        - name: Genel Bakış
+        - name: Genel bakış
           displayName: Write a T4 Text Template
           href: writing-a-t4-text-template.md
         - name: T4 Metin Şablonu Yönergeleri

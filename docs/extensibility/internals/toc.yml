@@ -112,7 +112,7 @@
               href: important-commands-for-language-service-filters.md
         - name: Eski Dil Hizmeti Kaydetme2
           href: registering-a-legacy-language-service2.md
-        - name: 'Yapılacaklar listesi: Eski Dil Hizmeti oluşturma'
+        - name: 'Denetim Listesi: Eski Dil Hizmeti Oluşturma'
           href: checklist-creating-a-legacy-language-service.md
         - name: Eski Dil Hizmeti Özellikleri2
           items:
@@ -158,9 +158,9 @@
           href: registering-a-legacy-language-service1.md
         - name: Eski Dil Hizmeti Ayrıştırıcısı ve Tarayıcısı
           href: legacy-language-service-parser-and-scanner.md
-        - name: 'İzlenecek yol: Eski Dil Hizmeti oluşturma'
+        - name: 'İzlenecek Yol: Eski Dil Hizmeti Oluşturma'
           href: walkthrough-creating-a-legacy-language-service.md
-        - name: 'İzlenecek yol: Yüklü Kod Parçacıklarının Listesini Alma (Eski Uygulama)'
+        - name: 'İzlenecek Yol: Yüklü Kod Parçacıklarının Listesini Alma (Eski Uygulama)'
           href: walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md
         - name: Eski Dil Hizmeti Özellikleri1
           items:
@@ -208,9 +208,9 @@
   items:
     - name: Projeler
       href: projects.md
-    - name: 'Yeni Proje Oluşturma: Arka Plan, 1. Bölüm'
+    - name: 'Yeni Proje Oluşturma: Altyapı Öğeleri, Bölüm Bir'
       href: new-project-generation-under-the-hood-part-one.md
-    - name: 'Yeni Proje Oluşturma: Arka Plan, 2. Bölüm'
+    - name: 'Yeni Proje Oluşturma: Altyapı Öğeleri, Bölüm İki'
       href: new-project-generation-under-the-hood-part-two.md
     - name: Proje Türleri
       items:
@@ -224,7 +224,7 @@
               href: creating-project-types.md
             - name: Proje Türü Tasarım Kararları
               href: project-type-design-decisions.md
-            - name: 'Yapılacaklar listesi: Yeni Proje Türleri Oluşturma'
+            - name: 'Denetim Listesi: Yeni Proje Türleri Oluşturma'
               href: checklist-creating-new-project-types.md
             - name: Proje Üreteçlerini Kullanarak Proje Örnekleri Oluşturma
               href: creating-project-instances-by-using-project-factories.md
@@ -486,19 +486,19 @@
           items:
             - name: Kaynak Denetimi Eklentileri için Test Kılavuzu
               href: test-guide-for-source-control-plug-ins.md
-            - name: 'Test Alanı 1: Kaynak Denetimine Ekleme/Kaynak Denetiminden Açma'
+            - name: 'Test Alanı 1: Kaynak Denetimine Ekleme-Kaynak Denetiminden Açma'
               href: test-area-1-add-to-open-from-source-control.md
             - name: 'Test Alanı 2: Kaynak Denetiminden Alma'
               href: test-area-2-get-from-source-control.md
-            - name: 'Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma'
+            - name: 'Test Alanı 3: Kullanıma Alma-Kullanıma Almayı Geri Alma'
               href: test-area-3-check-out-undo-checkout.md
             - name: 'Test Alanı 4: İade Etme'
               href: test-area-4-check-in.md
             - name: 'Test Alanı 5: Kaynak Denetimini Değiştirme'
               href: test-area-5-change-source-control.md
-            - name: 'Test Alanı 6: Sil'
+            - name: 'Test Alanı 6: Silme'
               href: test-area-6-delete.md
-            - name: 'Test Alanı 7: Paylaş'
+            - name: 'Test Alanı 7: Paylaşma'
               href: test-area-7-share.md
             - name: 'Test Alanı 8: Eklenti Değiştirme'
               href: test-area-8-plug-in-switching.md

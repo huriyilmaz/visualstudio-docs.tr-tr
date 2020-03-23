@@ -2,7 +2,7 @@
   items:
     - name: AI için Visual Studio Araçları
       href: index.yml
-    - name: Genel Bakış
+    - name: Genel bakış
       href: about-ai-tools.md
     - name: Yükleme
       href: installation.md

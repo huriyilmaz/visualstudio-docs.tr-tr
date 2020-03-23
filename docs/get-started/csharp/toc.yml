@@ -1,6 +1,6 @@
 - name: 'C# öğreticiler'
   href: index.yml
-- name: Genel Bakış
+- name: Genel bakış
   items:
     - name: Visual Studio Hakkında
       href: visual-studio-ide.md
@@ -10,7 +10,7 @@
       href: ../tutorial-projects-solutions.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: Diğer Visual Studio özellikleri
       href: ../../ide/advanced-feature-overview.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
-- name: Uygulama oluşturun
+- name: Uygulama oluşturma
   expanded: true
   items:
     - name: 'İlk C# uygulamanızı oluşturma'

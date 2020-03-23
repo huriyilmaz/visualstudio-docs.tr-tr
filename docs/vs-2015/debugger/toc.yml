@@ -562,7 +562,7 @@
       items:
         - name: Grafik Tanılama (DirectX Grafiklerinde Hata Ayıklama)
           href: visual-studio-graphics-diagnostics.md
-        - name: Genel Bakış
+        - name: Genel bakış
           href: overview-of-visual-studio-graphics-diagnostics.md
         - name: Başlarken
           href: getting-started-with-visual-studio-graphics-diagnostics.md

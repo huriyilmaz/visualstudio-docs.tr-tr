@@ -32,7 +32,7 @@
 ### [Kesme Modunda Adımlama](stepping-in-break-mode.md)
 ### [Kesme Modunda İfade Değerlendirme](expression-evaluation-in-break-mode.md)
 ### [Özel Durum İşleme](exception-handling-visual-studio-sdk.md)
-## [Nasıl yapılır: Özel Hata Ayıklama Altyapısında Hata Ayıklama](how-to-debug-a-custom-debug-engine.md)
+## [Nasıl Yapılır: Özel Hata Ayıklama Altyapısında Hata Ayıklama](how-to-debug-a-custom-debug-engine.md)
 # [Başlarken](getting-started-with-debugger-extensibility.md)
 ## [Hata Ayıklayıcıyı Genişletmek için Yol Haritası](roadmap-for-extending-the-debugger.md)
 ## [Hata Ayıklayıcı Bileşenleri](debugger-components.md)

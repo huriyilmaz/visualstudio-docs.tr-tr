@@ -162,7 +162,7 @@
       items:
         - name: MSBuild'de Günlük Kaydı
           href: logging-in-msbuild.md
-        - name: Derleme Günlüklerini Alma
+        - name: Yapı Günlükleri Alma
           href: obtaining-build-logs-with-msbuild.md
         - name: Günlükçüleri Derleme
           href: build-loggers.md
@@ -394,7 +394,7 @@
           href: common-msbuild-project-items.md
         - name: Komut Satırı Başvurusu
           href: msbuild-command-line-reference.md
-        - name: Targets Dosyaları
+        - name: .Targets Dosyaları
           href: msbuild-dot-targets-files.md
         - name: Tanınmış Öğe Meta Verisi
           href: msbuild-well-known-item-metadata.md
@@ -406,7 +406,7 @@
           items:
             - name: WPF MSBuild Başvurusu
               href: wpf-msbuild-reference.md
-            - name: Targets Dosyaları
+            - name: .Targets Dosyaları
               href: wpf-dot-targets-files.md
             - name: Görev Başvurusu
               items:

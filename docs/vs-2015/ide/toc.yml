@@ -192,7 +192,7 @@
           items:
             - name: Üretkenlik ipuçları
               href: productivity-tips-for-visual-studio.md
-            - name: İpuçları ve Püf Noktalar
+            - name: İp Uçları ve Püf Noktaları
               href: tips-and-tricks-for-visual-studio.md
             - name: Klavye Kısayollarını Tanımlama ve Özelleştirme
               items:
@@ -510,7 +510,7 @@
           href: how-to-customize-menus-and-toolbars-in-visual-studio.md
         - name: Pencere düzenlerini özelleştirme
           href: customizing-window-layouts-in-visual-studio.md
-        - name: Başlangıç Sayfasını özelleştirme
+        - name: Başlangıç Sayfasını Özelleştirme
           href: customizing-the-start-page-for-visual-studio.md
         - name: Dış Araçları Yönetme
           href: managing-external-tools.md
@@ -956,7 +956,7 @@
           href: reference/visual-studio-for-applications-reference.md
         - name: MSBuild
           href: ../msbuild/msbuild.md
-        - name: IDE hataları için Sorun Giderme kaynakları
+        - name: IDE Hatalarında Sorun Giderme Kaynakları
           href: reference/resources-for-troubleshooting-integrated-development-environment-errors.md
         - name: Engelliler için Erişilebilirlik
           items:

@@ -1,8 +1,8 @@
-## YamlMime:Landing
+### YamlMime:Landing
 title: Visual Studio’da Kapsayıcı Araçları
 metadata:
   title: Docker kapsayıcısı geliştirme araçlarına ilişkin belgeler
-  description: 'Kapsayıcı temelli uygulama ve hizmet oluşturup yönetmeyi öğrenin. Belgeler, kod örneği, öğreticiler ve daha fazlasını edinin.'
+  description: Kapsayıcı temelli uygulama ve hizmet oluşturup yönetmeyi öğrenin. Belgeler, kod örneği, öğreticiler ve daha fazlasını edinin.
   author: ghogen
   manager: jillfra
   ms.prod: visual-studio-windows
@@ -10,62 +10,68 @@ metadata:
   ms.topic: landing-page
   ms.date: 11/25/2019
   ms.author: ghogen
+  ms.openlocfilehash: 611e723edbf1abf46d6b4466e3f8f163058ada47
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "75400724"
 landingContent:
-  - title: Kapsayıcı Araçları
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Visual Studio’da kapsayıcı araçları
-            url: overview.md
-  - title: Kullanmaya başlayın
-    linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Visual Studio’da Docker
-            url: container-tools.md
-          - text: Kapsayıcıda derleme araçlarını çalıştırma
-            url: /visualstudio/install/build-tools-container
-          - text: Kubernetes için Visual Studio Araçları
-            url: tutorial-kubernetes-tools.md
-  - title: Kapsayıcılı uygulamalar geliştirme
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Docker Compose ile çok kapsayıcılı uygulama
-            url: tutorial-multicontainer.md
-          - text: Kapsayıcı içinde React.js uygulaması
-            url: container-tools-react.md
-          - text: Docker uygulamalarında hata ayıklama
-            url: edit-and-refresh.md
-  - title: Docker kapsayıcılarını dağıtma
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Azure Container Registry’ye dağıtma
-            url: hosting-web-apps-in-docker.md
-          - text: Azure App Service'e dağıtma
-            url: deploy-app-service.md
-          - text: Docker Hub’a dağıtma
-            url: deploy-docker-hub.md
-  - title: Kapsayıcı geliştirme görevleri
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: 'Nasıl yapılır: Derleme ve hata ayıklama ortamını yapılandırma'
-            url: container-build.md
-          - text: 'Nasıl yapılır: Kapsayıcıları görüntüleme ve tanılama'
-            url: view-and-diagnose-containers.md
-          - text: 'Nasıl yapılır: Kapsayıcı geliştirme araçlarında sorun giderme'
-            url: troubleshooting-docker-errors.md
-  - title: Kapsayıcı araçları ayarları
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Kapsayıcı başlatma ayarları
-            url: container-launch-settings.md
-          - text: Kapsayıcı MSBuild özellikleri
-            url: container-msbuild-properties.md
-          - text: Docker Compose MSBuild özellikleri
-            url: docker-compose-properties.md
-          - text: Kapsayıcı araçlarını yapılandırma
-            url: container-tools-configure.md
+- title: Kapsayıcı Araçları
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio’da kapsayıcı araçları
+      url: overview.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Visual Studio’da Docker
+      url: container-tools.md
+    - text: Kapsayıcıda derleme araçlarını çalıştırma
+      url: /visualstudio/install/build-tools-container
+    - text: Kubernetes için Visual Studio Araçları
+      url: tutorial-kubernetes-tools.md
+- title: Kapsayıcılı uygulamalar geliştirme
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Docker Compose ile çok kapsayıcılı uygulama
+      url: tutorial-multicontainer.md
+    - text: Kapsayıcı içinde React.js uygulaması
+      url: container-tools-react.md
+    - text: Docker uygulamalarında hata ayıklama
+      url: edit-and-refresh.md
+- title: Docker kapsayıcılarını dağıtma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Container Registry’ye dağıtma
+      url: hosting-web-apps-in-docker.md
+    - text: Azure App Service'e dağıtma
+      url: deploy-app-service.md
+    - text: Docker Hub’a dağıtma
+      url: deploy-docker-hub.md
+- title: Kapsayıcı geliştirme görevleri
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 'Nasıl yapılır: Derleme ve hata ayıklama ortamını yapılandırma'
+      url: container-build.md
+    - text: 'Nasıl yapılır: Kapsayıcıları görüntüleme ve tanılama'
+      url: view-and-diagnose-containers.md
+    - text: 'Nasıl yapılır: Kapsayıcı geliştirme araçlarında sorun giderme'
+      url: troubleshooting-docker-errors.md
+- title: Kapsayıcı araçları ayarları
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Kapsayıcı başlatma ayarları
+      url: container-launch-settings.md
+    - text: Kapsayıcı MSBuild özellikleri
+      url: container-msbuild-properties.md
+    - text: Docker Compose MSBuild özellikleri
+      url: docker-compose-properties.md
+    - text: Kapsayıcı araçlarını yapılandırma
+      url: container-tools-configure.md

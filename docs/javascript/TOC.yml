@@ -1,6 +1,6 @@
 - name: JavaScript ve TypeScript
   href: index.yml
-- name: Genel Bakış
+- name: Genel bakış
   items:
     - name: Visual Studio 2019’de JavaScript
       href: javascript-in-vs-2019.md

@@ -176,11 +176,11 @@
                       items:
                         - name: .NET Framework Kullanımı Performans Kuralları
                           href: dotnet-framework-usage-performance-rules.md
-                        - name: 'DA0001: Birleştirmeler için StringBuilder kullanma'
+                        - name: 'DA0001: Birleştirmeler için StringBuilder kullanın'
                           href: da0001-use-stringbuilder-for-concatenations.md
                         - name: 'DA0005: Sık kullanılan GC2 koleksiyonları'
                           href: da0005-frequent-gc2-collections.md
-                        - name: 'DA0006: Değer türleri için Equals() üzerine yazın'
+                        - name: 'DA0006: Değer türleri için Eşittir()''lerin üzerine yaz'
                           href: da0006-override-equals-parens-for-value-types.md
                         - name: 'DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının'
                           href: da0007-avoid-using-exceptions-for-control-flow.md
@@ -192,27 +192,27 @@
                           href: da0012-significant-amount-of-reflection.md
                         - name: 'DA0013: Yüksek oranda String.Split veya String.Substring kullanımı'
                           href: da0013-high-usage-of-string-split-or-string-substring.md
-                        - name: 'DA0018: Yönetilen bellek limitlerinde çalışan 32 bit Uygulama'
+                        - name: 'DA0018: 32 bitlik Uygulama işlem tarafından yönetilen bellek sınırlarında çalışıyor'
                           href: da0018-32-bit-application-running-at-process-managed-memory-limits.md
-                        - name: 'DA0021: Yüksek oranda 1. nesil atık toplama'
+                        - name: 'DA0021: Yüksek oranda Gen 1 çöp koleksiyonları'
                           href: da0021-high-rate-of-gen-1-garbage-collections.md
-                        - name: 'DA0022: Yüksek oranda 2. nesil atık toplama'
+                        - name: 'DA0022: Yüksek oranda Gen 2 çöp koleksiyonları'
                           href: da0022-high-rate-of-gen-2-garbage-collections.md
                         - name: 'DA0023: Yüksek GC CPU süresi'
                           href: da0023-high-gc-cpu-time.md
                         - name: 'DA0024: Aşırı GC CPU Süresi'
                           href: da0024-excessive-gc-cpu-time.md
-                        - name: 'DA0038: Yüksek Oranda Kilit çakışması'
+                        - name: 'DA0038: Yüksek Oranda Kilit çakışmaları'
                           href: da0038-high-rate-of-lock-contentions.md
-                        - name: 'DA0039: Çok Yüksek Oranda Kilit çakışması'
+                        - name: 'DA0039: Çok Yüksek Oranda Kilit çakışmaları'
                           href: da0039-very-high-rate-of-lock-contentions.md
                     - name: Bellek ve Disk Belleği Performans Kuralları
                       items:
                         - name: Bellek ve Disk Belleği Performans Kuralları
                           href: memory-and-paging-performance-rules.md
-                        - name: 'DA0014: Çok yüksek oranda diske etkin bellek sayfalaması'
+                        - name: 'DA0014: Aşırı yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor.'
                           href: da0014-extremely-high-rates-of-paging-active-memory-to-disk.md
-                        - name: 'DA0017: Yüksek oranda diske etkin bellek sayfalaması'
+                        - name: 'DA0017: Yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor.'
                           href: da0017-high-rates-of-paging-active-memory-to-disk.md
                     - name: Profil Araçları Kullanım Kuralları
                       items:
@@ -224,29 +224,29 @@
                           href: da0003-many-kernel-samples.md
                         - name: 'DA0004: Yüksek işlemci kullanımı'
                           href: da0004-high-processor-usage.md
-                        - name: 'DA0008: Az sayıda örnek toplandı'
+                        - name: 'DA0008: Toplanan örnek az'
                           href: da0008-few-samples-collected.md
-                        - name: 'DA0026: Aşırı çekirdek CPU süresi işlemesi'
+                        - name: 'DA0026: Aşırı çekirdek CPU süresi işleme'
                           href: da0026-excessive-kernel-cpu-time-processing.md
                         - name: 'DA0029: Desteklenmeyen CLR Sürümü'
                           href: da0029-unsupported-clr-version.md
-                        - name: 'DA0030: Veritabanı projeleri için Katman Etkileşimi ölçüleri toplayın'
+                        - name: 'DA0030: Veritabanı projeleri için Katman Etkileşim ölçümlerini topla'
                           href: da0030-gather-tier-interaction-measurements-for-database-projects.md
                     - name: Kaynak İzleme Performans Kuralları
                       items:
                         - name: Kaynak İzleme Performans Kuralları
                           href: resource-monitoring-performance-rules.md
-                        - name: 'DA0501: Profili oluşturulan İşlemin Ortalama CPU kullanımı.'
+                        - name: 'DA0501: İşlemin ortalama CPU kullanımının profili oluşturuluyor.'
                           href: da0501-average-cpu-consumption-by-the-process-being-profiled.md
-                        - name: 'DA0502: Profili oluşturulan İşlemin En Yüksek CPU kullanımı'
+                        - name: 'DA0502: İşlemin maksimum CPU kullanımının profili oluşturuluyor'
                           href: da0502-maximum-cpu-consumption-by-the-process-being-profiled.md
-                        - name: 'DA0503: Profili oluşturulan İşlemin Bayt Cinsinden Ortalama Çalışma Kümesi'
+                        - name: 'DA0503: İşlem için Bayt Cinsinden Ortalama Çalışma Kümesinin profili oluşturuluyor'
                           href: da0503-average-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: 'DA0504: Profili oluşturulan İşlemin Bayt Cinsinden En Yüksek Sayıda Çalışma Kümesi'
+                        - name: 'DA0504: İşlem için izin verilen Bayt Cinsinden En Büyük Çalışma Kümesinin profili oluşturuluyor'
                           href: da0504-maximum-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: 'DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar'
+                        - name: 'DA0505: İşlem için izin verilen Ortalama Özel Bayt Sayısının profili oluşturuluyor'
                           href: da0505-average-private-bytes-allocated-for-the-process-being-profiled.md
-                        - name: 'DA0506: Profili oluşturulan İşlem için ayırılmış En Yüksek Sayıda Özel Bayt'
+                        - name: 'DA0506: İşlem için izin verilen Maksimum Özel Bayt Sayısının profili oluşturuluyor'
                           href: da0506-maximum-private-bytes-allocated-for-the-process-being-profiled.md
             - name: Performans Raporu Görünümleri
               items:
@@ -324,21 +324,21 @@
                       href: object-lifetime-view.md
                     - name: Çağrı Ağacı Görünümü - Örnekleme
                       href: call-tree-view-dotnet-memory-sampling-data.md
-                    - name: Modüller Görünümü - Örnekleme
+                    - name: Modüller Görünümü- Örnekleme
                       href: modules-view-dotnet-memory-sampling-data.md
-                    - name: Arayan/Aranan Görünümü - Örnekleme
+                    - name: Arayan / Aranan Görünümü - Örnekleme
                       href: caller-callee-view-dotnet-memory-sampling-data.md
-                    - name: İşlevler Görünümü - Örnekleme
+                    - name: İşlevler Görünümü- Örnekleme
                       href: functions-view-dotnet-memory-sampling-data.md
-                    - name: Satırlar Görünümü - Örnekleme
+                    - name: Satırlar Görünümü- Örnekleme
                       href: lines-view-dotnet-memory-sampling-data.md
-                    - name: Yönerge İşaretçileri (IP) Görünümü - Örnekleme
+                    - name: Yönerge İşaretçileri (IP) Görünümü- Örnekleme
                       href: instruction-pointers-ips-view-dotnet-memory-sampling-data.md
                     - name: Çağrı Ağacı Görünümü - İzleme
                       href: call-tree-view-dotnet-memory-instrumentation-data.md
-                    - name: Modüller Görünümü - İzleme
+                    - name: Modüller Görünümü - Araçlar
                       href: modules-view-dotnet-memory-instrumentation-data.md
-                    - name: Arayan/Aranan Görünümü - İzleme
+                    - name: Arayan / Aranan Görünümü - İzleme
                       href: caller-callee-view-net-memory-instrumentation-data.md
                     - name: İşlevler Görünümü - İzleme
                       href: functions-view-dotnet-memory-instrumentation-data.md
@@ -486,9 +486,9 @@
                       href: collecting-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line.md
                     - name: Eşzamanlılık Verileri Toplamak için ASP.NET Uygulamasına Profil Oluşturucu Ekleme
                       href: how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md
-                - name: Bellek Verilerini Toplama
+                - name: Bellek Verileri Toplama
                   items:
-                    - name: Bellek Verilerini Toplama
+                    - name: Bellek Verileri Toplama
                       href: collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line.md
                     - name: Bellek Verileri Toplamak için ASP.NET Web Uygulamasına Profil Oluşturucu Ekleme
                       href: how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md
@@ -526,9 +526,9 @@
                       href: how-to-attach-the-profiler-to-a-dotnet-service-to-collect-concurrency-data-by-using-the-command-line.md
                     - name: Eşzamanlılık Verileri Toplamak için Yerel Hizmete Profil Oluşturucu Ekleme
                       href: how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md
-                - name: .NET Bellek Verilerini Toplama
+                - name: .NET Bellek Verileri Toplama
                   items:
-                    - name: .NET Bellek Verilerini Toplama
+                    - name: .NET Bellek Verileri Toplama
                       href: collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md
                     - name: Bellek Verileri Toplamak için Bir .NET Hizmetine Profil Oluşturucu Ekleme
                       href: how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md
@@ -708,7 +708,7 @@
               href: execution-profile-report.md
             - name: Yürütme Zamanı (İş Parçacıkları Görünümü)
               href: execution-time-threads-view.md
-            - name: Dışarı Aktarma Düğmesi
+            - name: Dışa Aktarma Düğmesi
               href: export-button-concurrency-visualizer.md
             - name: G/Ç Zamanı (İş Parçacıkları Görünümü)
               href: i-o-time-threads-view.md

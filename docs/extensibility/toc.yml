@@ -138,43 +138,43 @@
           href: editor-imports.md
         - name: EditorConfig’i destekleme
           href: supporting-editorconfig.md
-        - name: 'İzlenecek yol: İçerik Türünü Dosya Adı Uzantısına Bağlama'
+        - name: 'İzlenecek Yol: Bir İçerik Türünü Dosya Adı Uzantısına Bağlama'
           href: walkthrough-linking-a-content-type-to-a-file-name-extension.md
-        - name: 'İzlenecek yol: Dış Boşluk Karakteri Oluşturma'
+        - name: 'İzlenecek Yol: Dış Boşluk Karakteri Oluşturma'
           href: walkthrough-creating-a-margin-glyph.md
-        - name: 'İzlenecek yol: Metin Görünümünü Özelleştirme'
+        - name: 'İzlenecek Yol: Metin Görünümünü Özelleştirme'
           href: walkthrough-customizing-the-text-view.md
-        - name: 'İzlenecek yol: Görünüm Kenarlığı, Komutlar ve Ayarlar (Sütun Kılavuzları) Oluşturma'
+        - name: 'İzlenecek Yol: Görünüm Kenarlığı, Komutlar ve Ayarlar (Sütun Kılavuzları) Oluşturma'
           href: walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md
-        - name: 'İzlenecek yol: Metni Vurgulama'
+        - name: 'İzlenecek Yol: Metni Vurgulama'
           href: walkthrough-highlighting-text.md
-        - name: 'İzlenecek yol: Anahat Oluşturma'
+        - name: 'İzlenecek Yol: Ana Hat Oluşturma'
           href: walkthrough-outlining.md
-        - name: 'İzlenecek yol: Eşleşen Küme Ayraçlarını Görüntüleme'
+        - name: 'İzlenecek Yol: Eşleşen Küme Ayraçlarını Görüntüleme'
           href: walkthrough-displaying-matching-braces.md
-        - name: 'İzlenecek yol: HızlıBilgi Araç İpuçlarını Görüntüleme'
+        - name: 'İzlenecek Yol: HızlıBilgi Araç İpuçlarını Görüntüleme'
           href: walkthrough-displaying-quickinfo-tooltips.md
-        - name: 'İzlenecek yol: İmza Yardımını Görüntüleme'
+        - name: 'İzlenecek Yol: İmza Yardımını Görüntüleme'
           href: walkthrough-displaying-signature-help.md
-        - name: 'İzlenecek yol: Deyim Tamamlamayı Görüntüleme'
+        - name: 'İzlenecek Yol: Deyim Tamamlamayı Görüntüleme'
           href: walkthrough-displaying-statement-completion.md
-        - name: 'İzlenecek yol: Kod Parçacıklarını Uygulama'
+        - name: 'İzlenecek Yol: Kod Parçacıkları Uygulama'
           href: walkthrough-implementing-code-snippets.md
-        - name: 'İzlenecek yol: Ampul Önerilerini Görüntüleme'
+        - name: 'İzlenecek Yol: Ampul Önerilerini Görüntüleme'
           href: walkthrough-displaying-light-bulb-suggestions.md
-        - name: 'İzlenecek yol: Düzenleyici Uzantısı ile Kabuk Komutu Kullanma'
+        - name: 'İzlenecek Yol: Düzenleyici Uzantısı ile Kabuk Komutu Kullanma'
           href: walkthrough-using-a-shell-command-with-an-editor-extension.md
-        - name: 'İzlenecek yol: Düzenleyici Uzantısı ile Kısayol Tuşu Kullanma'
+        - name: 'İzlenecek Yol: Düzenleyici Uzantısı ile Kısayol Tuşu Kullanma'
           href: walkthrough-using-a-shortcut-key-with-an-editor-extension.md
-        - name: 'İzlenecek yol: Düzenleyici Uzantısından DTE Nesnesine Erişme'
+        - name: 'İzlenecek Yol: Düzenleyici Uzantısından DTE Nesnesine Erişme'
           href: walkthrough-accessing-the-dte-object-from-an-editor-extension.md
     - name: Özel Düzenleyiciler ve Tasarımcılar Oluşturma
       items:
         - name: Özel Düzenleyiciler ve Tasarımcılar Oluşturma
           href: creating-custom-editors-and-designers.md
-        - name: 'İzlenecek yol: Özel Düzenleyici Oluşturma'
+        - name: 'İzlenecek Yol: Özel Düzenleyici Oluşturma'
           href: walkthrough-creating-a-custom-editor.md
-        - name: 'İzlenecek yol: Özel Düzenleyiciye Özellik Ekleme'
+        - name: 'İzlenecek Yol: Bir Özel Düzenleyiciye Özellik Ekleme'
           href: walkthrough-adding-features-to-a-custom-editor.md
         - name: Tasarımcıyı Başlatma ve Meta Verileri Yapılandırma
           href: designer-initialization-and-metadata-configuration.md
@@ -388,13 +388,13 @@
       items:
         - name: Özel Başlangıç Sayfası Oluşturma
           href: creating-a-custom-start-page.md
-        - name: 'İzlenecek yol: Başlangıç Sayfasına Özel XAML Ekleme'
+        - name: 'İzlenecek Yol: Başlangıç Sayfasına Özel XAML Ekleme'
           href: walkthrough-adding-custom-xaml-to-the-start-page.md
         - name: Başlangıç Sayfasına Kullanıcı Denetimi Ekleme
           href: adding-user-control-to-the-start-page.md
         - name: Başlangıç Sayfasına Visual Studio Komutları Ekleme
           href: adding-visual-studio-commands-to-a-start-page.md
-        - name: 'İzlenecek yol: Kullanıcı Ayarlarını Başlangıç Sayfasına Kaydetme'
+        - name: 'İzlenecek Yol: Kullanıcı Ayarlarını Başlangıç Sayfasına Kaydetme'
           href: walkthrough-saving-user-settings-on-a-start-page.md
         - name: Özel Başlangıç Sayfaları Dağıtma
           href: deploying-custom-start-pages.md
@@ -494,7 +494,7 @@
       href: vsix-project-template.md
     - name: VSIX Proje Şablonunu Kullanmaya Başlama
       href: getting-started-with-the-vsix-project-template.md
-    - name: 'İzlenecek yol: Visual Studio Uzantısı Yayımlama'
+    - name: 'İzlenecek Yol: Visual Studio Uzantısı Yayımlama'
       href: walkthrough-publishing-a-visual-studio-extension.md
     - name: 'İzlenecek yol: Komut satırı aracılığıyla Visual Studio Uzantısı yayımlama'
       href: walkthrough-publishing-a-visual-studio-extension-via-command-line.md
@@ -828,11 +828,11 @@
       href: creating-a-software-development-kit.md
     - name: SDK ile NuGet paketi karşılaştırması
       href: nuget-versus-sdk-references.md
-    - name: 'İzlenecek yol: C# veya Visual Basic Kullanarak SDK Oluşturma'
+    - name: 'İzlenecek Yol: C# veya Visual Basic Kullanarak SDK Oluşturma'
       href: walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md
-    - name: 'İzlenecek yol: C++ Kullanarak SDK Oluşturma'
+    - name: 'İzlenecek Yol: C++ Kullanarak SDK Oluşturma'
       href: walkthrough-creating-an-sdk-using-cpp.md
-    - name: 'İzlenecek yol: JavaScript Kullanarak SDK Oluşturma'
+    - name: 'İzlenecek Yol: JavaScript Kullanarak SDK Oluşturma'
       href: walkthrough-creating-an-sdk-using-javascript.md
 - name: .NET Derleyici Platformu ("Roslyn") Genişletilebilirliği
   items:

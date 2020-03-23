@@ -10,10 +10,10 @@ metadata:
   manager: jillfra
   ms.date: 09/20/2019
   ms.openlocfilehash: 7bb755fc13215b7087a0023a8e2a19442415092b
-  ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/25/2020
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "77579269"
 landingContent:
 - title: Hata ayıklama hakkında
@@ -26,7 +26,7 @@ landingContent:
       url: debugger-feature-tour.md
     - text: Hata ayıklama görevinizi bulma
       url: find-your-debugging-task.md
-- title: Kullanmaya başlayın
+- title: Başlangıç
   linkLists:
   - linkListType: tutorial
     links:
