@@ -14,10 +14,12 @@
           href: install-roslyn-analyzers.md
         - name: Kaynak kodu çözümleyicilerini yapılandırma
           href: use-roslyn-analyzers.md
+        - name: Canlı kod analizi kapsamı
+          href: configure-live-code-analysis-scope-managed-code.md
+        - name: Kod analizini el ile çalıştırma
+          href: how-to-run-code-analysis-manually-for-managed-code.md
         - name: Kod analizini devre dışı bırakma
           href: disable-code-analysis.md
-        - name: Tam çözüm analizini etkinleştirme
-          href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
         - name: SSS
           href: analyzers-faq.md
         - name: FxCop çözümleyicileri
@@ -50,7 +52,7 @@
         - name: FxCop çözümleyicilerine geçiş yapma
           href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
         - name: Eski analizi el ile çalıştırma
-          href: how-to-run-code-analysis-manually-for-managed-code.md
+          href: how-to-run-legacy-code-analysis-manually-for-managed-code.md
         - name: Yapılandırma
           items:
             - name: Eski analizi yapılandırma

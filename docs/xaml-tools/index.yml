@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: XAML araçları belgeleri
-summary: Visual Studio, XAML tabanlı uygulamalar oluşturmanıza yardımcı olmak için birden çok araç sağlar. Bunlara XAML Düzenleyicisi ve tasarımcı ve hata ayıklama özellikleri de dahildir.
+summary: Visual Studio, XAML tabanlı uygulamalar oluşturmanıza yardımcı olacak birçok araç sağlar. Bunlar arasında XAML düzenleyicisi ve tasarımcısı ile hata ayıklama özellikleri yer alır.
 metadata:
   title: XAML araçları belgeleri
-  description: Visual Studio 'da XAML araçlarını nasıl kullanacağınızı öğrenmenize yardımcı olan farklı sayfalara gidin.
+  description: Visual Studio’da XAML araçlarının nasıl kullanılacağını öğrenmenize yardımcı olacak farklı sayfalara gidin.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-designers
   ms.topic: landing-page
@@ -11,10 +11,10 @@ metadata:
   ms.author: jillfra
   ms.date: 10/10/2019
   ms.openlocfilehash: 45f9459ff4778b58ae3d553a03b2e5c1773614b6
-  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/22/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74316409"
 landingContent:
 - title: XAML hakkında bilgi edinin
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: XAML'ye genel bakış
       url: xaml-overview.md
-- title: XAML Tasarımcısı kullan
+- title: XAML Tasarımcısı kullanma
   linkLists:
   - linkListType: overview
     links:
@@ -37,7 +37,7 @@ landingContent:
     links:
     - text: XAML kodu çalıştırarak yazma ve hata ayıklama
       url: xaml-hot-reload.md
-    - text: XAML özelliklerini incele
+    - text: XAML özelliklerini inceleme
       url: inspect-xaml-properties-while-debugging.md
     - text: WPF uygulamalarında hata ayıklama
       url: ../debugger/debugging-wpf.md
@@ -53,15 +53,15 @@ landingContent:
       url: ../designers/introduction-to-wpf.md
   - linkListType: get-started
     links:
-    - text: Visual Studio 'da WPF ile çalışmaya başlama
+    - text: Visual Studio’da WPF’yi Kullanmaya Başlama
       url: ../designers/getting-started-with-wpf.md
 - title: UWP uygulamaları geliştirme
   linkLists:
   - linkListType: overview
     links:
-    - text: UWP genel bakış
+    - text: UWP’ye genel bakış
       url: /windows/uwp/get-started/
   - linkListType: get-started
     links:
-    - text: Visual Studio 'da UWP ile çalışmaya başlama
+    - text: Visual Studio’da UWP’yi kullanmaya başlama
       url: /windows/uwp/get-started/get-set-up

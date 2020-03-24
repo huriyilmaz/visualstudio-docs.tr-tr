@@ -1,7 +1,7 @@
 ---
 layout: LandingPage
-title: Visual Studio'da JavaScript uygulamaları oluşturma | Microsoft Docs
-description: Bilgi nasıl uygulamalar oluşturmak için Visual Studio 2017'yi kullanın.
+title: Visual Studio’da JavaScript uygulamaları oluşturma | Microsoft Docs
+description: Uygulamalar oluşturmak için Visual Studio 2017’yi kullanma hakkında bilgi edinin.
 ms.topic: landing-page
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-nodejs
@@ -9,19 +9,19 @@ ms.author: mikejo
 author: mikejo5000
 manager: jillfra
 ms.openlocfilehash: baf650ba27d20424669bbdf47fffdac575f542b4
-ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
-ms.translationtype: MT
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "65225645"
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio’da JavaScript
 
-Visual Studio, JavaScript veya TypeScript kullanarak uygulamaları oluşturmanıza yardımcı olmaya yönelik çeşitli araçlar sağlar.
+Visual Studio, JavaScript veya TypeScript kullanarak uygulamalar oluşturmanıza yardımcı olacak birçok farklı araç sağlar.
 
 <!-- markdownlint-disable MD033 -->
 
-<h2>5 dakikalık hızlı başlangıçlar Visual Studio'da JavaScript kullanmayı öğrenin</h2>
+<h2>5 dakikalık Hızlı Başlangıçlar ile Visual Studio’da JavaScript’i kullanma hakkında bilgi edinin</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -71,7 +71,7 @@ Visual Studio, JavaScript veya TypeScript kullanarak uygulamaları oluşturmanı
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Bir evrensel Windows uygulaması (UWP) oluşturma</h3>
+                        <h3>Evrensel Windows Uygulaması (UWP) oluşturma</h3>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ Visual Studio, JavaScript veya TypeScript kullanarak uygulamaları oluşturmanı
     </li>
 </ul>
 
-<h2>Öğreticileri ile daha ayrıntılı bilgiler edinin</h2>
+<h2>Öğreticilerle daha ayrıntılı bilgi edinme</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -94,7 +94,7 @@ Visual Studio, JavaScript veya TypeScript kullanarak uygulamaları oluşturmanı
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>AngularJS ve ASP.NET ile uygulama oluşturma</h3>
+                        <h3>ASP.NET ve AngularJS ile uygulama oluşturma</h3>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@ Visual Studio, JavaScript veya TypeScript kullanarak uygulamaları oluşturmanı
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Windows betik arabirimleri (arşiv)</h3>
+                        <h3>Windows Komut Dosyası Arabirimleri (Arşiv)</h3>
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@ Visual Studio, JavaScript veya TypeScript kullanarak uygulamaları oluşturmanı
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>JScript ve VBScript (arşiv)</h3>
+                        <h3>JScript ve VBScript (Arşiv)</h3>
                     </div>
                 </div>
             </div>

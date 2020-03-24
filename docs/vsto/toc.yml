@@ -794,6 +794,8 @@
               href: deploying-an-office-solution-by-using-clickonce.md
             - name: Windows Installer Kullanarak Office Çözümü Dağıtma
               href: deploying-an-office-solution-by-using-windows-installer.md
+            - name: Visual Studio Kurulum Projelerini Kullanarak bir Office Çözümünü Dağıtma
+              href: deploying-a-vsto-solution-by-using-windows-installer.md
             - name: Office Çözümü Dağıtımında Sorunu Giderme
               items:
                 - name: Office Çözümü Dağıtımında Sorunu Giderme

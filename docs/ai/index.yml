@@ -12,12 +12,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 10-25-2017
 abstract:
-  description: 'AI için Visual Studio Araçları, derleme, test etme ve derin öğrenme çözümlerini dağıtmak için bir tümleşik geliştirme ortamıdır. Bizim hızlı başlangıç kılavuzlarımız, öğreticilerimiz ve örneklerimizle, yapay ZEKA araçları kullanmayı öğrenin.'
+  description: 'AI için Visual Studio Araçları, derin öğrenme çözümlerinin derlenmesini, test edilmesini ve dağıtılmasını sağlayan tümleşik bir geliştirme ortamıdır. Hızlı başlangıç kılavuzlarımız, öğreticilerimiz ve örneklerimizle Yapay Zeka Araçlarını kullanmayı öğrenin.'
 sections:
-  - title: 5 dakikalık hızlı Başlangıçlar
+  - title: 5 Dakikalık Hızlı Başlangıçlar
     items:
       - type: paragraph
-        text: 'Derin öğrenme çözümüyle çalıştırmayı öğrenin:'
+        text: 'Aşağıdakilerle derin öğrenme çözümünü nasıl çalıştıracağınızı öğrenin:'
       - type: list
         style: icon48
         items:
@@ -25,19 +25,19 @@ sections:
               src: media/Tensorflow_logo.png
             text: TensorFlow ve Python
             href: tensorflow-local.md
-  - title: Adım adım öğreticiler
+  - title: Adım Adım Öğreticiler
     items:
       - type: paragraph
-        text: 'Bir derin öğrenme çözüm oluşturmayı öğrenin:'
+        text: 'Derin öğrenme çözümü oluşturmayı öğrenin:'
       - type: list
         style: ordered
         items:
-          - html: <a href="/visualstudio/ai/tensorflow-vm">Bulutta bir TensorFlow modeli eğitme</a>
+          - html: <a href="/visualstudio/ai/tensorflow-vm">Bulutta TensorFlow modelini eğitme</a>
   - title: Örnekler
     items:
       - type: list
         style: unordered
         className: spaced noBullet
         items:
-          - html: '<a href="https://github.com/Microsoft/samples-for-ai">Örnekleri deposu</a>'
-          - html: '<a href="https://gallery.cortanaintelligence.com/projects">Machine Learning Galerisi</a>'
+          - html: '<a href="https://github.com/Microsoft/samples-for-ai">Örnekler Deposu</a>'
+          - html: '<a href="https://gallery.cortanaintelligence.com/projects">Makine Öğrenimi Galerisi</a>'

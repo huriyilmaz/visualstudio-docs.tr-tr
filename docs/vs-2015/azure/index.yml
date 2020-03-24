@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Visual Studio ile Azure Geliştirme
 metadata:
-  title: Visual Studio ile Azure geliştirme | Microsoft Docs
+  title: Visual Studio ile Azure Geliştirme | Microsoft Docs
   meta.description: Tutorials and conceptual articles about connecting apps and services to Azure and developing Azure services.
   author: ghogen
   manager: jillfra
@@ -15,7 +15,7 @@ sections:
   - title: Azure'a Yayımlama
     items:
       - type: paragraph
-        text: Uygulamanızı Visual Studio ile hazırlık veya üretim ortamları için Azure'a dağıtın.
+        text: Visual Studio ile uygulamanızı Azure’da hazırlama veya üretim ortamlarına dağıtın.
       - type: list
         style: cards
         className: cardsM
@@ -25,16 +25,16 @@ sections:
             html: <p></p>
             image:
               src: 'https://docs.microsoft.com/azure/cloud-services/media/index/cloud-services.svg'
-            title: Bir bulut hizmeti projesini yayımlayın
+            title: Bulut hizmeti projesi yayımlama
           - href: /azure/virtual-machines/windows/publish-web-app-from-visual-studio
             html: <p></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_vmm-cloud.svg'
             title: Azure VM'ye ASP.NET Web Uygulaması yayımlama
-  - title: Hata ayıklama ve performans izleme
+  - title: Hata Ayıklama ve Performansı İzleme
     items:
       - type: paragraph
-        text: ' Azure uygulamanızda hata ayıklama ve performans izleme hakkında bilgi edinin.'
+        text: ' Azure’da uygulamanızın hatasını ayıklama ve performansı izleme hakkında bilgi edinin.'
       - type: list
         style: cards
         className: cardsM
@@ -44,21 +44,21 @@ sections:
             html: <p></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Azure bulut hizmetinde hata ayıklama
+            title: Azure’daki bulut hizmetinde hata ayıklama
           - href: vs-azure-tools-debug-cloud-services-virtual-machines.md
             html: <p></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_vmm-cloud.svg'
-            title: Bir sanal makine üzerinde çalışan bir uygulamanın hatalarını ayıklama
+            title: Sanal makinede çalışan uygulamada hata ayıklama
           - href: vs-azure-tools-performance-profiling-cloud-services.md
             html: <p></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
-            title: Azure'da cloud services için ölçü performansı
-  - title: Uygulamalarınızı Visual ile azure'a bağlayın Studio bağlı hizmetler
+            title: Azure’daki bulut hizmetlerine yönelik performansı ölçme
+  - title: Visual Studio Bağlı Hizmetleri ile uygulamalarınızı Azure’a bağlama
     items:
       - type: paragraph
-        text: Hızlı bir şekilde uygulamanızı veya hizmetinizi projenizi çeşitli Azure Hizmetleri için bağlantı kod ve yapılandırmasını otomatik olarak eklemek için Visual Studio bağlı Hizmetler'i kullanarak bağlanın.
+        text: Otomatik olarak bağlantı kodu ve yapılandırma eklemek için Visual Studio Bağlı Hizmetleri’ni kullanarak çeşitli Azure hizmetlerinize uygulama veya hizmet projenizi hızlı şekilde bağlayın.
       - type: list
         style: icon48
         items:
@@ -70,69 +70,69 @@ sections:
               src: 'https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg'
             text: Azure Active Directory
             href: /azure/active-directory/develop/vs-active-directory-add-connected-service
-  - title: Azure bulut Hizmetleri
+  - title: Azure Cloud Services
     items:
       - type: paragraph
-        text: 'Azure bulut Hizmetleri, Azure depolama ve diğer Azure kaynakları için erişim ile genel Azure hizmetleri oluşturmak için genel amaçlı bir teknolojidir.'
+        text: 'Azure Cloud Services, Azure depolamaya ve diğer Azure kaynaklarına erişim ile genel Azure hizmetleri oluşturmaya yönelik genel amaçlı bir teknolojidir.'
       - type: list
         style: cards
         className: cardsM
         columns: 3
         items:
           - href: vs-azure-tools-azure-project-create.md
-            html: <p>Azure bulut hizmeti projesi oluşturma ve yapılandırma</p>
+            html: <p>Azure bulut hizmeti projeleri oluşturma ve yapılandırma</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
             title: Projeler
           - href: vs-azure-tools-debugging-cloud-services-overview.md
-            html: <p>Yerel olarak ve Azure bulut hizmetlerinde hata ayıklama</p>
+            html: <p>Bulut hizmetlerinde yerel olarak ve Azure’da hata ayıklama</p>
             image:
               src: 'https://docs.microsoft.com//media/common/i_debug.svg'
             title: Hata ayıklama
           - href: vs-azure-tools-performance-profiling-cloud-services.md
-            html: <p>Visual Studio profil oluşturucu kullanın</p>
+            html: <p>Visual Studio profil oluşturucuyu kullanma</p>
             image:
               src: 'https://docs.microsoft.com//media/common/i_code-performance.svg'
-            title: Performansını çözümleme
+            title: Performansı analiz etme
           - href: vs-azure-tools-publishing-a-cloud-service.md
             html: <p>Azure'a bulut hizmeti yayımlama</p>
             image:
               src: 'https://docs.microsoft.com//media/common/i_deploy.svg'
             title: Yayımlama
           - href: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
-            html: <p>Bulut Hizmetleri ve Azure'da çalışan sanal makineler izleyip tanılamanıza</p>
+            html: <p>Azure’da çalışan bulut hizmetlerini ve sanal makineleri izleme ve tanılama</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_load-testing.svg'
             title: Tanılamalar
-  - title: Visual Studio'da Azure kaynakları ile çalışma
+  - title: Visual Studio’daki Azure kaynaklarıyla çalışma
     items:
       - type: paragraph
-        text: Visual Studio'daki bulut Gezgini'nde depolama hesapları ve sanal makineler gibi Azure kaynaklarına erişmek için kullanışlı bir yol sağlar.
+        text: 'Visual Studio’daki Bulut Gezgini, depolama hesapları ve sanal makineler gibi Azure kaynaklarına erişmenin kolay bir yolunu sağlar.'
       - type: list
         style: cards
         className: cardsM
         columns: 3
         items:
           - href: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
-            html: <p>Visual Studio'da erişim Azure depolama hesapları</p>
+            html: <p>Visual Studio’da Azure depolama hesaplarına erişme</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
             title: Depolama
           - href: vs-azure-tools-virtual-machines-access-from-server-explorer.md
-            html: <p>Visual Studio'dan sanal makinelere erişme</p>
+            html: <p>Sanal Makinelere Visual Studio’dan erişme</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_vmm-cloud.svg'
             title: Sanal Makineler
-  - title: Diğer Azure geliştirme kaynakları
+  - title: Diğer Azure Geliştirme Kaynakları
     items:
       - type: paragraph
-        text: 'Azure geliştirme iş yükü yüklenmiş, Visual Studio bu sayesinde çeşitli projeleri için proje şablonları sağlar, belirli Azure hizmetlerinin kullanarak geliştirin.'
+        text: 'Azure geliştirme iş yükü yüklüyken Visual Studio, belirli Azure hizmetlerini kullanarak geliştirmeyi kullanmanıza imkan tanıyan çeşitli projeler için proje şablonları sağlar.'
       - type: list
         style: icon48
         items:
           - image:
               src: 'https://docs.microsoft.com/azure/azure-resource-manager/media/index/azure-resource-manager.svg'
-            text: Azure kaynak grubu
+            text: Azure Kaynak Grubu
             href: 'https://docs.microsoft.com/azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/Azure-Data-Lake-Analytics-COLOR.svg'

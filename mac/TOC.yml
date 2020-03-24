@@ -1,0 +1,238 @@
+- name: Mac için Visual Studio
+  href: index.yml
+- name: Başlarken
+  items:
+    - name: IDE Turu
+      href: ide-tour.md
+    - name: Windows Kullanıcılarına yönelik Mac için Visual Studio
+      href: vsmac-for-windows-users.md
+- name: Yükleme
+  items:
+    - name: Mac için Visual Studio 2019’u Yükleme
+      href: installation.md
+    - name: Bir güvenlik duvarı veya ara sunucunun arkasına yükleme ve burada kullanma
+      href: install-behind-a-firewall-or-proxy-server.md
+    - name: Bir önizleme sürümünü yükleme
+      href: install-preview.md
+    - name: Güncelleştirme
+      href: update.md
+    - name: Kaldır
+      href: uninstall.md
+- name: Kullanıcı Hesapları
+  items:
+    - name: Genel Bakış
+      href: user-accounts.md
+    - name: Oturum Açma
+      href: signing-in.md
+    - name: Aboneliği Etkinleştirme
+      href: enable-subscription.md
+- name: IDE’yi Özelleştirme
+  items:
+    - name: IDE görünümünü ve deneyimini özelleştirme
+      href: customizing-the-ide.md
+    - name: Mac için Visual Studio’yu Genişletme
+      href: extending-visual-studio-mac.md
+- name: Projeler ve Çözümler
+  items:
+    - name: Genel Bakış
+      href: projects-and-solutions.md
+    - name: Yeni Projeler oluşturma
+      href: create-new-projects.md
+    - name: Proje öğeleri ekleme ve kaldırma
+      href: add-and-remove-project-items.md
+    - name: Çözümleri ve Proje özelliklerini yönetme
+      href: managing-solutions-and-project-properties.md
+    - name: Çoklu Sürüm Desteği
+      href: project-multitargeting.md
+    - name: Bir projedeki başvuruları yönetme
+      items:
+        - name: Genel Bakış
+          href: managing-references-in-a-project.md
+        - name: İzlenecek yol - Projenize NuGet paketi ekleme
+          href: nuget-walkthrough.md
+    - name: Uygulama Kaynaklarını Yönetme
+      href: managing-app-resources.md
+    - name: 'Nasıl yapılır: Birden çok çözüm veya örneği açma'
+      href: open-multiple-solutions.md
+- name: Kaynak Düzenleyicisi
+  items:
+    - name: Düzenleyici Özellikleri
+      href: source-editor.md
+    - name: Yeniden Düzenle
+      href: refactoring.md
+    - name: IntelliSense
+      href: intellisense.md
+    - name: İçeri Aktarma Öğelerini Gösterme
+      href: show-imports.md
+    - name: Çoklu Giriş İşareti Düzenleme
+      href: multi-caret-editing.md
+    - name: Açıklamalar
+      href: comments.md
+    - name: Düzenleyici Davranışı
+      href: editor-behavior.md
+    - name: Görev Açıklamaları
+      href: task-comments.md
+    - name: Kod Parçacıkları
+      href: snippets.md
+    - name: Blok Seçimi
+      href: block-selection.md
+    - name: Düzenleyici Temaları
+      href: editor-themes.md
+    - name: EditorConfig
+      href: editorconfig.md
+    - name: Varsayılan Klavye Kısayolları
+      href: keyboard-shortcuts.md
+- name: Hata Ayıklama
+  items:
+    - name: Genel Bakış
+      href: debugging.md
+    - name: Veri Görselleştirmeleri
+      href: data-visualizations.md
+    - name: Kaynak Bağlantısı ile NuGet paketlerinde hata ayıklama
+      href: source-link.md
+- name: Derleme ve Oluşturma
+  items:
+    - name: Genel Bakış
+      href: compiling-and-building.md
+    - name: Projeleri ve Çözümleri Oluşturma ve Temizleme
+      href: building-and-cleaning-projects-and-solutions.md
+    - name: Derleme Eylemleri
+      href: build-actions.md
+    - name: 'Nasıl yapılır: Çoklu başlangıç projeleri ayarlama'
+      href: set-startup-projects.md
+    - name: Derleme Sistemini Özelleştirme
+      href: customizing-build-system.md
+    - name: Yapılandırmalar
+      items:
+        - name: Yapı yapılandırmalarını anlama
+          href: configurations.md
+        - name: Yapılandırmaları Oluşturma ve Düzenleme
+          href: create-and-edit-configurations.md
+- name: Sürüm Denetimi
+  items:
+    - name: Genel Bakış
+      href: version-control.md
+    - name: Git Deposu Ayarlama
+      href: set-up-git-repository.md
+    - name: Git ile çalışma
+      href: working-with-git.md
+    - name: Subversion Deposu Ayarlama
+      href: set-up-subversion-repository.md
+    - name: Subversion ile çalışma
+      href: working-with-subversion.md
+- name: Web Uygulaması Dağıtımı
+  items:
+    - name: Genel Bakış
+      href: web-app-deployment.md
+    - name: Azure App Service’e yayımlama
+      href: publish-app-svc.md
+    - name: Klasöre Yayımlama
+      href: publish-folder.md
+- name: İş yükleri
+  items:
+    - name: Kullanılabilir İş Yükleri
+      href: workloads.md
+    - name: ASP.NET Core
+      items:
+        - name: .NET Core Desteği
+          href: net-core-support.md
+        - name: ASP.NET Core Kullanmaya Başlama
+          href: asp-net-core.md
+        - name: Mac için Visual Studio’da ASP.NET Core uygulamaları oluşturma
+          href: building-asp-net-core.md
+        - name: Razor
+          href: razor.md
+        - name: Blazor
+          href: blazor.md
+        - name: JavaScript ve TypeScript
+          href: javascript.md
+        - name: launchSettings.json
+          href: launch-settings.md
+    - name: Azure
+      items:
+        - name: Genel Bakış
+          href: azure-workload.md
+        - name: Azure İşlevleri’ne Giriş
+          href: azure-functions.md
+        - name: 'Öğretici: Azure İşlevleri'
+          href: azure-functions-lab.md
+        - name: Bağlı Hizmetler
+          href: connected-services.md
+    - name: Docker
+      items:
+        - name: Docker’ı Kullanmaya Başlama
+          href: docker-quickstart.md
+        - name: Docker Compose ile Çok Kapsayıcılı Uygulama Oluşturma
+          href: docker-multi-container.md
+    - name: Unity Oyun Geliştirme
+      items:
+        - name: Unity Oyun Geliştirme
+          href: unity-tools.md
+        - name: Kurulum
+          href: setup-vsmac-tools-unity.md
+        - name: Unity Kullanmaya Başlama
+          href: unity-walkthrough.md
+        - name: Unity Araçlarını Kullanma
+          href: using-vsmac-tools-unity.md
+        - name: Unity’de .NET 4.x kullanma
+          href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
+        - name: Değişiklik Günlüğü
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
+    - name: Xamarin ile mobil uygulamalar
+      href: /visualstudio/mac/xamarin
+- name: Erişilebilirlik
+  items:
+    - name: Genel Bakış
+      href: accessibility.md
+    - name: IDE erişilebilirlik seçeneklerini ayarlama
+      href: accessibility-ide-options.md
+    - name: macOS Erişilebilirlik Araçları ve Özellikleri
+      items:
+        - name: macOS Erişilebilirlik Araçlarını Kullanma
+          href: accessibility-macos.md
+        - name: Klavye ile Gezinmeyi Kullanma
+          href: accessibility-keyboard.md
+        - name: VoiceOver kullanma
+          href: accessibility-voiceover.md
+- name: Video öğreticiler
+  items:
+    - name: Mac için Visual Studio’da ASP.NET Core kullanmaya başlama
+      href: tutorial-aspnet-core-vsmac-getting-started.md
+    - name: Mevcut bir ASP.NET Core web uygulamasını genişletme
+      href: tutorial-aspnet-core-vsmac-extending.md
+- name: Windows Kullanıcılarına yönelik Mac için Visual Studio
+  href: vsmac-for-windows-users.md
+- name: Sorun giderme
+  items:
+    - name: Günlükler ve Özel Durumlar
+      href: troubleshooting.md
+    - name: Visual Studio Müşteri Deneyimini Geliştirme Programı
+      href: visual-studio-experience-improvement-program.md
+    - name: Sorun Bildirme
+      href: report-a-problem.md
+    - name: 'Sorun Giderme: Mac için Visual Studio, Team Foundation Sürüm Denetimi’ni destekler mi?'
+      href: tf-version-control.md
+    - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
+      href: troubleshooting-no-templates.md
+    - name: 'Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor'
+      href: updater-troubleshooting.md
+- name: Sürüm Notları
+  href: /visualstudio/releasenotes/vs2019-mac-relnotes
+- name: Önizleme Sürüm Notları
+  href: /visualstudio/releasenotes/vs2019-mac-preview-relnotes
+- name: Örnekler
+  items:
+    - name: Öne Çıkan Örnekler
+      href: samples/index.yml
+    - name: Tüm ASP.NET Core Örnekleri
+      href: /samples/browse/?products=aspnet-core
+    - name: Tüm .NET Core Örnekleri
+      href: /samples/browse/?products=dotnet-core
+    - name: Tüm Xamarin.Forms Örnekleri
+      href: /xamarin/xamarin-forms/samples/
+    - name: Tüm Xamarin.iOS Örnekleri
+      href: /xamarin/ios/samples/
+    - name: Tüm Xamarin.Android Örnekleri
+      href: /xamarin/android/samples/
+    - name: Tüm Xamarin.Mac Örnekleri
+      href: /xamarin/mac/samples/

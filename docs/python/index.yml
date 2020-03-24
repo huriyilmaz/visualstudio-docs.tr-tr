@@ -2,7 +2,7 @@
 title: Visual Studio | Python belgeleri
 summary: Visual Studio ile Python uygulamaları geliştirmeye ilişkin öğreticiler ve kavramsal makaleler.
 metadata:
-  title: Visual Studio ile Python geliştirme
+  title: Visual Studio ile Python Geliştirme
   description: Visual Studio ile Python uygulamaları geliştirmeye ilişkin öğreticiler ve kavramsal makaleler.
   ms.prod: visual-studio-windows
   ms.technology: vs-python
@@ -12,13 +12,13 @@ metadata:
   ms.author: joshuapa
   ms.date: 09/23/2019
   ms.openlocfilehash: e85bdedfc91c949213528718d147a7f1890964ce
-  ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
-  ms.translationtype: MT
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/27/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "71322486"
 landingContent:
-- title: Visual Studio 'da Python desteği hakkında
+- title: Visual Studio’da Python desteği hakkında
   linkLists:
   - linkListType: overview
     links:
@@ -26,33 +26,33 @@ landingContent:
       url: overview-of-python-tools-for-visual-studio.md
     - text: Visual Studio IDE'de gezinme
       url: visual-studio-ide.md
-- title: Python ile çalışmaya başlama
+- title: Python kullanmaya başlama
   linkLists:
   - linkListType: get-started
     links:
-    - text: Visual Studio'da Python desteğini yükleme
+    - text: Visual Studio’da Python desteğini yükleme
       url: installing-python-support-in-visual-studio.md
     - text: Kodu yazma ve düzenleme
       url: editing-python-code-in-visual-studio.md
     - text: Kodunuzda hata ayıklama
       url: debugging-python-in-visual-studio.md
-    - text: Yazma ve testleri çalıştırma
+    - text: Testleri yazma ve çalıştırma
       url: unit-testing-python-in-visual-studio.md
     - text: Etkileşimli REPL kullanma
       url: python-interactive-repl-in-visual-studio.md
     - text: Python ortamlarını yönetme
       url: managing-python-environments-in-visual-studio.md
-    - text: Python için CC++ /Extensions yazma
+    - text: Phyton için C/C++ uzantıları yazma
       url: working-with-c-cpp-python-in-visual-studio.md
   - linkListType: tutorial
     links:
-    - text: Visual Studio 'da Python ile çalışma
+    - text: Visual Studio’da Python ile çalışma
       url: tutorial-working-with-python-in-visual-studio-step-00-installation.md
-- title: Web geliştirme ile çalışmaya başlama
+- title: Web geliştirmesine başlama
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Docgo çerçevesiyle bir Web uygulaması oluşturma
+    - text: Django çerçevesiyle web uygulaması oluşturma
       url: learn-django-in-visual-studio-step-01-project-and-solution.md
-    - text: Flask çerçevesi ile bir Web uygulaması oluşturma
+    - text: Flask çerçevesi ile web uygulaması oluşturma
       url: learn-flask-visual-studio-step-01-project-solution.md

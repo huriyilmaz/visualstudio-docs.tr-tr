@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Visual Studio ürün ailesi belgeleri
-summary: Visual Studio ürün ailesi için belgeleri inceleyin.
+summary: Visual Studio ürün ailesi için belgeleri keşfedin.
 brand: visual-studio
 metadata:
   title: Visual Studio ürün ailesi belgeleri
-  description: Visual Studio ürün ailesi için belgeleri inceleyin.
+  description: Visual Studio ürün ailesi için belgeleri keşfedin.
   ms.topic: hub-page
   ms.date: 11/13/2019
   searchScope: []
@@ -15,10 +15,10 @@ metadata:
   monikerRange: '>=vs-2017'
   hide_bc: true
   ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
-  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
-  ms.translationtype: MT
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/15/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74118958"
 productDirectory:
   items:
@@ -68,7 +68,7 @@ productDirectory:
     - url: https://docs.microsoft.com/visualstudio/subscriptions
       text: Belgeler
     - url: https://visualstudio.microsoft.com/subscriptions
-      text: Visualstudio.com hakkında bilgi
+      text: Visualstudio.com hakkında bilgiler
     - url: https://my.visualstudio.com
       text: Portal
     - url: https://manage.visualstudio.com

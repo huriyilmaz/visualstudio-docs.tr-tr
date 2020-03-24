@@ -1,19 +1,19 @@
 ### YamlMime:Landing
-title: Visual Studio dağıtım belgeleri
-summary: Visual Studio kullanarak uygulamaları, hizmetleri ve bileşenleri dağıtmayı öğrenin
+title: Visual Studio dağıtımı belgeleri
+summary: Visual Studio kullanarak uygulamaları, hizmetleri ve bileşenleri dağıtma hakkında bilgi edinin
 metadata:
-  title: Visual Studio'daki dağıtımı
-  description: Visual Studio kullanarak uygulamaları, hizmetleri ve bileşenleri dağıtmayı öğrenin.
+  title: Visual Studio’da dağıtım
+  description: Uygulamaları, hizmetleri ve bileşenleri dağıtmak için Visual Studio’yu kullanma hakkında bilgi edinin.
   ms.topic: landing-page
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/17/2019
   ms.openlocfilehash: a2fc975c390283104fc4aa2c79244dba7e4e669e
-  ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
-  ms.translationtype: MT
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/24/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "71238086"
 landingContent:
 - title: Dağıtım hakkında
@@ -30,11 +30,11 @@ landingContent:
     links:
     - text: Azure App Service’e yayımlama
       url: quickstart-deploy-to-azure.md
-    - text: Linux için App Service yayımlayın
+    - text: Linux için App Service’e Yayımlama
       url: quickstart-deploy-to-linux.md
-    - text: Web sitesinde yayımlama
+    - text: Web sitesine yayımlama
       url: quickstart-deploy-to-a-web-site.md
-    - text: Yerel bir klasöre yayımlama
+    - text: Yerel klasöre yayımlama
       url: quickstart-deploy-to-local-folder.md
 - title: .NET uygulamaları dağıtma
   linkLists:
@@ -48,33 +48,33 @@ landingContent:
       url: building-clickonce-applications-from-the-command-line.md
   - linkListType: how-to-guide
     links:
-    - text: Windows Mağazası için bir masaüstü uygulaması paketleme
+    - text: Windows Store için bir masaüstü uygulamasını paketleme
       url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-- title: NuGet.org 'e .NET paketleri dağıtma
+- title: NuGet.org’a .NET paketleri dağıtma
   linkLists:
   - linkListType: tutorial
     links:
-    - text: NuGet.org 'de Yayımla (.NET Standard)
+    - text: NuGet.org’a yayımlama (.NET Standard)
       url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
-    - text: NuGet.org 'de Yayımla (.NET Framework)
+    - text: NuGet.org’a yayımlama (.NET Framework)
       url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework
-- title: ASP.NET uygulamalarını dağıtma
+- title: ASP.NET uygulamaları dağıtma
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Azure 'da ASP.NET Core yayımlayın
+    - text: ASP.NET Core’u Azure’a yayımlama
       url: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
     - text: Yayımlama ayarlarını içeri aktarma ve IIS’ye dağıtma
       url: tutorial-import-publish-settings-iis.md
     - text: Git ile yayımlama
       url: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment
-- title: Uygulamaları C++ dağıtma
+- title: C++ uygulamaları dağıtma
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Kurulum projesi (C/C++) kullanarak dağıtma
+    - text: Kurulum projesi kullanarak dağıtma (C/C++)
       url: /cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project
-    - text: Windows Mağazası için bir masaüstü uygulaması paketleme
+    - text: Windows Store için bir masaüstü uygulamasını paketleme
       url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
 - title: Python uygulamalarını dağıtma
   linkLists:
@@ -82,7 +82,7 @@ landingContent:
     links:
     - text: Linux App Service’e yayımlama
       url: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
-- title: Node. js uygulamalarını dağıtma
+- title: Node.js uygulamaları dağıtma
   linkLists:
   - linkListType: tutorial
     links:

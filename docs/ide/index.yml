@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Visual Studio IDE belgeleri
-summary: Tümleşik geliştirme ortamı (IDE), yazılım geliştirmenin birçok yönü için kullanılabilen özellik açısından zengin bir uygulamadır. Visual Studio IDE, uygulamanızı düzenlemenizi, hatalarını ayıklamayı, derlemeyi ve yayımlamayı kolaylaştırır.
+summary: Tümleşik geliştirme ortamı (IDE), yazılım geliştirmenin birçok yönü için kullanılabilen, özellik yönünden zengin bir uygulamadır. Visual Studio IDE, uygulamanızı düzenlemenizi, hatalarını ayıklamanızı, derlemenizi ve yayımlamanızı kolaylaştırır.
 metadata:
   title: Visual Studio IDE belgeleri
   titleSuffix: ''
@@ -12,13 +12,13 @@ metadata:
   ms.author: jillfra
   ms.date: 09/24/2019
   ms.openlocfilehash: 0db1718cbb1a43a2ebacafbdaac0ba0667b28dda
-  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/22/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74316431"
 landingContent:
-- title: başlarken
+- title: Kullanmaya başlayın
   linkLists:
   - linkListType: download
     links:
@@ -26,23 +26,23 @@ landingContent:
       url: https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=navigation+cta&utm_content=download+vs2019
   - linkListType: get-started
     links:
-    - text: Visual Studio Yükle
+    - text: Visual Studio'yu yükleme
       url: ../install/install-visual-studio.md
   - linkListType: overview
     links:
-    - text: Visual Studio 'ya genel bakış
+    - text: Visual Studio’ya genel bakış
       url: ../get-started/visual-studio-ide.md
-- title: Visual Studio 'Yu kullanma
+- title: Visual Studio kullanma
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Kod Düzenleyicisi'ni kullanın
+    - text: Kod düzenleyicisini kullanma
       url: ../get-started/tutorial-editor.md
     - text: Derleme ve oluşturma
       url: ../ide/compiling-and-building-in-visual-studio.md
-    - text: Kodda hata ayıklama
+    - text: Kod hatalarını ayıklama
       url: ../debugger/debugger-feature-tour.md
-    - text: Testleri yaz
+    - text: Test yazma
       url: ../test/getting-started-with-unit-testing.md
     - text: Kod kalitesini analiz etme
       url: ../code-quality/roslyn-analyzers-overview.md
@@ -50,11 +50,11 @@ landingContent:
       url: ../deployment/quickstart-deploy-to-a-web-site.md
     - text: Verilere erişme
       url: ../data-tools/create-a-simple-data-application-by-using-adonet.md
-    - text: IDE 'yi kişiselleştirme
+    - text: IDE’yi kişiselleştirme
       url: ../ide/quickstart-personalize-the-ide.md
     - text: Üretkenlik özellikleri
       url: ../ide/productivity-features.md
-- title: Dilinizdeki geliştirme
+- title: Kendi dilinizde geliştirme
   linkLists:
   - linkListType: tutorial
     links:
@@ -70,7 +70,7 @@ landingContent:
       url: /visualstudio/javascript/tutorial-nodejs
     - text: F#
       url: /dotnet/fsharp/get-started/get-started-visual-studio
-- title: Yenilikleri bulma
+- title: Yenilikleri keşfetme
   linkLists:
   - linkListType: whats-new
     links:
