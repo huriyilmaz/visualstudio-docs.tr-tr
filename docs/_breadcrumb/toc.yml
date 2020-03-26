@@ -47,7 +47,7 @@
                   topicHref: /visualstudio/profiling/index
                 - name: Sınama
                   tocHref: /visualstudio/test/
-                  topicHref: /visualstudio/test/improve-code-quality
+                  topicHref: /visualstudio/test/index
                 - name: İş Akışı Tasarımcısı
                   tocHref: /visualstudio/workflow-designer/
                   topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
