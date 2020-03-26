@@ -5,52 +5,36 @@ ms.custom: ''
 ms.date: 08/26/2019
 ms.topic: conceptual
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.openlocfilehash: b78126d44922fefebbb86bad24788ba6a28e8e04
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
+ms.openlocfilehash: 87ac019b27561941c0d7038b6b65d692a5125652
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "70060397"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301826"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yeni&#39;
 
 Sizin için daha kullanışlı hale getirmek için Abonelik avantajları paketini sık sık güncelleriz. Ayrıca, size mümkün olan en iyi deneyimi sunmak için abone ve abonelik yönetimi portallarımızda geliştirmeler de yapacağız.  Üç ayda bir sıralanmış en son özellikler ve güncelleştirmeler hakkında bilgi edinmek için okumaya devam edin.
 
-## <a name="2019-q3-june-august"></a>2019 Q3 (Haziran-Ağustos)
+## <a name="2020-q1-january-march"></a>2020 Ç1 (Ocak-Mart)
 
-### <a name="contact-my-admin-available-for-subscribers---august-2019"></a>Aboneler için "Yöneticime Başvurun" - Ağustos 2019
-Birçok Visual Studio abonesi aboneliklerini iş lerinden veya okulları aracılığıyla alır ve bu abonelikler yöneticiler tarafından atanır ve yönetilir.  Büyük veya karmaşık kuruluşlarda, bir yöneticinin yardımına ihtiyaç duyan bir abonenin kiminle iletişim kuracağını bilmesi zor olabilir.  Abonelere yardımcı olmak için, abone portalına yeni bir "Yöneticimle İletişim" özelliği https://my.visualstudio.com/subscriptionsekledik. Daha fazla bilgi için [Yöneticinizle İlgili Kişi](contact-my-admin.md) makalesine göz atın. 
+2020 yılının ilk çeyreğinde yeni bir görünüm ve Visual Studio Abonelikleri https://manage.visualstudio.comYönetim Portalı için bazı yeni özellikler gördüm . Portaldaki değişiklikler yeni bir renk düzeni ve bazı araçların yeniden düzenlenmesini içeriyordu.  Abonelik tahsislerinize genel bakış, anlaşma ayrıntıları ve maksimum kullanım artık sol üstteki düğmelerle denetlenir.  Bu, abonelik atama ve düzenleme gibi en sık yaptığınız yönetim görevleri için kullanılabilir ekran alanını en üst düzeye çıkarmanıza yardımcı olur.  
 
-### <a name="agreement-preferences-available-for-super-admins---august-2019"></a>Süper Yöneticiler için anlaşma tercihleri mevcuttur - Ağustos 2019
-Abonelikler Yönetim Portalı'ndaki yeni bir özellik, Süper Yöneticilerin anlaşmaları için küresel tercihler belirlemesine olanak sağlıyor.  Bu, abonelik atarken yöneticilerin ihtiyaç duyduğu iş miktarını azaltacak ve yöneticinin kuruluş dışındaki kullanıcılar için abonelik oluşturup oluşturamayacağı gibi özellikler üzerinde gelişmiş denetim sağlayacak tercihlerin ayarlanmasına olanak tanır.  Daha fazla bilgi [için, Set anlaşması tercihleri](admin-prefs.md) makalemize göz atın. 
+Ayrıca invididual aboneler eklemek ve bir açılan **+ Ekle** menüsünde toplu eklemeler gerçekleştirmek için seçenekleri birleştirdik. 
 
-## <a name="2019-q2-april-june"></a>2019 Ç2 (Nisan-Haziran)
+   > [!div class="mx-imgBorder"]
+   > ![Abonelikler İdaresi portalı için yeni UI](_img/whats-new/new-admin-ui.png)
 
-### <a name="visual-studio-with-github-enterprise-subscriptions"></a>GitHub Enterprise abonelikleri ile Visual Studio
-Mayıs ayında ki //build konferansında Microsoft, Enterprise Agreement müşterilerinin artık GitHub Enterprise'ı da içeren Visual Studio abonelikleri satın alabileceğini duyurdu.  Hem Visual Studio aboneliklerini hem de GitHub Enterprise'ı tek bir düşük fiyata edinmenin kolay bir yoludur.  
+### <a name="connect-emails"></a>E-postaları Bağla
+Microsoft Hesapları (MSA) kullanan aboneleri Azure Etkin Dizininize (Azure AD) bağlamayı kolaylaştırdık, böylece iki kimliği hızlı bir şekilde bağlayabilirsiniz.  Azure AD kimliklerinin kullanılması, daha fazla güvenlik ve daha kolay abonelik yönetimi sağlar.  Daha fazla bilgi için [kişisel oturum açma makalemize](personal-email-sign-ins.md) göz atın. 
 
-GitHub Enterprise, Visual Studio Enterprise ve Visual Studio Professional abonelikleri ile Kurumsal Anlaşmalar aracılığıyla edinilebilir. Ayrıca, Kurumsal sözleşmeniz yenilenmemiş olsa bile GitHub Enterprise'ı eklemenize olanak tanıyan bir "adım adım" teklifi de vardır.
-
-Avantajlar, seçenekler ve fiyatlandırma hakkında daha https://visualstudio.microsoft.com/subscriptions/visual-studio-githubfazla bilgi edinmek için lütfen ziyaret edin. 
-
-Kuruluşunuzun Zaten GitHub Enterprise abonelikleri ile Visual Studio varsa, belgelerimizde GitHub Enterprise abonelikleri [ile Visual Studio'yu yönetmeyi](assign-github.md) daha fazla öğrenebilirsiniz.  
-
-## <a name="2019-q1-january-march"></a>2019 Ç1 (Ocak-Mart)
-
-### <a name="maximum-usage-added-to-subscriptions-administration-portal"></a>[Abonelikler İdaresi portalına](https://manage.visualstudio.com) eklenen Maksimum Kullanım
-Visual Studio abonelikleri yönetim portalındaki yeni bir özellik, kaç abonelik satın aldığınızı ve atadığınızı izlemenize yardımcı olur ve hem son bir yıl içinde hem de şirket genelinde, atadığınız her düzeyin en yüksek abonelik sayısını tanımlar sözleşmenizin süresi(ler). Bu, geçerli abonelik kullanımınızı anlamanıza ve gelecekteki satın almaişlemleri için plan larınızı anlamanıza yardımcı olabilir. 
-
-  > [!div class="mx-imgBorder"]
-  > ![Maksimum Kullanım Menüsü](_img/maximum-usage/maximum-usage-menu.png)
-
-Satın alma işlemleriniz ve atamalarınız da dahil olmak üzere atamalarınızın çalışan geçmişini de görebilirsiniz.   
-
-Daha fazla bilgi için lütfen maksimum kullanım makalemizi [hazırlayın.](maximum-usage.md) 
-
-
-
-
+### <a name="add-subscribers-using-azure-active-directory-groups"></a>Azure Etkin Dizin gruplarını kullanarak abone ekleme
+Kuruluşunuz Azure Etkin Dizin (Azure AD) kullanıyorsa, artık abonelikleri Azure REKLAM gruplarını kullanarak yönetebilirsiniz.  Gruplara abonelik atamak, aynı türdeki abonelikleri birden çok kullanıcıya çok hızlı bir şekilde sağlama olanağı sağlar.  Azure AD grubuna yeni kullanıcılar eklendiğinde, otomatik olarak bir abonelik atanır.  Bir kullanıcı Azure REKLAM grubundan kaldırılırsa, aboneliği de kaldırılır.  Bu, kuruluşunuzun abonelik yönetiminizi otomatikleştirmesi ve yöneticilerin zaman ve çabadan tasarruf edinmesine yardımcı olur.  Ayrıntılar için belgelerimizdeki [birden çok kullanıcı ekle](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) makalesine göz atın. 
 
 Şimdilik bu kadar!
+
+## <a name="next-steps"></a>Sonraki adımlar
+Yeni özellikleriyle yeni Abonelik Yönetimi portalı Kullanıcı Arabirimi'ne göz atın ve Visual Studio aboneliklerinde yeniliklerhakkında en son bilgileri öğrenmek için buraya tekrar göz atın!

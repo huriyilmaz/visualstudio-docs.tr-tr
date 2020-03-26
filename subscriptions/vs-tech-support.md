@@ -1,17 +1,18 @@
 ---
 title: Teknik Destek Ödeneği
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinizde yer alan teknik destek avantajını nasıl etkinleştireceklerinizi öğrenin.
-ms.openlocfilehash: f7c1353e9f9759b91a7d83d8296a036bb5b80dd7
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 7fd2bd8b3e2f192f82dd2cccf89798b9b2413e62
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74706989"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301948"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Teknik Destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde Teknik Destek avantajı, [hala destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)ana destek aşamasında olan ürünler için **üretim dışı ortamlardaki** kesme giderme sorunlarını çözmek içindir. Visual Studio Enterprise standardı ve yıllık bulut abonelikleri dört olay alırken, Visual Studio Professional standardı ve yıllık bulut abonelikleri, avantaj etkinleştirmesinden 1 yıla kadar iki olay alır. Abonelik geçerliyken avantaj etkinleştirme gerçekleşmelidir.
@@ -125,6 +126,12 @@ Azure ile ilgili sorunlar için Visual Studio abonelik teknik destek avantajın�
 <sup>2</sup> *içerir: Imagine Standard.*
 
 Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) atanan tüm abonelikleri görmek için bağlanın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla nız olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinden emin olun:
