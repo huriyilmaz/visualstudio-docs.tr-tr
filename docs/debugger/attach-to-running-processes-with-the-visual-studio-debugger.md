@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklayıcısı ile çalıştırma işlemleri iliştirme | Microsoft Docs
+title: Hata ayıklama ile çalışan işlemlere ekleme | Microsoft Dokümanlar
 ms.custom: seodec18
 ms.date: 04/08/2019
 ms.topic: conceptual
@@ -28,252 +28,287 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2f00cde0c2ea3fad79c0f5ef75f3c33ad7afc22
-ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
+ms.openlocfilehash: b5305be7615e426d7792d8dd3fefb2579e2ab6be
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78257195"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233019"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
-Visual Studio hata ayıklayıcı bir yerel veya uzak bilgisayarda çalışan bir işleme ekleyebilirsiniz. İşlem çalıştıktan sonra, **işleme** eklemek > **Hata Ayıkla** ' yı seçin ya da Visual Studio 'da **CTRL**+**alt**+**P** tuşlarına basın ve hata ayıklayıcıyı işleme eklemek için **İşleme İliştir** iletişim kutusunu kullanın.
+Visual Studio hata ayıklayıcısını yerel veya uzak bir bilgisayarda çalışan bir işleme ekleyebilirsiniz. İşlem çalışmaya devam ettikten **sonra,** > İşleme Hata**Ayıklama'yı** seçin veya Visual Studio'da **Ctrl**+**Alt**+**P** tuşuna basın ve hata ayıklayıcıyı işleme eklemek için **İşleme Ekle** iletişim kutusunu kullanın.
 
-Yerel veya uzak bilgisayarlarda çalışan uygulamalarda hata ayıklamak, aynı anda birden çok işlemi hata ayıklamak, Visual Studio 'da oluşturulmamış uygulamalarda hata ayıklamak veya Visual Studio 'da hata ayıklayıcı ekli olan herhangi bir uygulamada hata ayıklamak için **İliştir** ' i kullanabilirsiniz. Örneğin, hata ayıklayıcı olmadan bir uygulama çalıştırıyorsanız ve özel durumu ise, sonra uygulama çalışan işlemi için hata ayıklayıcının ve hata ayıklama başlayın.
+Yerel veya uzak bilgisayarlarda çalışan uygulamaları hata ayıklamak, aynı anda birden çok işlemi hata ayıklamak, Visual Studio'da oluşturulmamış uygulamaları hata ayıklamak veya Visual Studio'dan başlatmadığınız herhangi bir uygulamayı hata ayıklamak için **İşleme** Ekle'yi kullanabilirsiniz. Örneğin, hata ayıklama olmadan bir uygulama çalıştırıyorsanız ve bir özel durum isabet ediyorsanız, hata ayıklama işlemine uygulamayı çalıştıran ekleyebilir ve hata ayıklama başlar.
 
 > [!TIP]
-> Hata ayıklama senaryonuz için **iliştirme** 'yi kullanıp kullanmayacağınızı bilmiyorsanız emin değil misiniz? Bkz. [yaygın hata ayıklama senaryoları](#BKMK_Scenarios).
+> Hata ayıklama senaryonuz için **İşleme Ekle'yi** kullanıp kullanmayacağınızkonusunda emin değil misiniz? [Bkz. Ortak hata ayıklama senaryoları.](#BKMK_Scenarios)
 
-## <a name="BKMK_Attach_to_a_running_process"></a>Yerel makinenizde çalışan bir işleme iliştirme
+## <a name="attach-to-a-running-process-on-your-local-machine"></a><a name="BKMK_Attach_to_a_running_process"></a>Yerel makinenizde çalışan bir işleme ekleme
 
-Daha önce eklediğiniz bir işleme hızlıca yeniden iliştirmek için bkz. [bir işleme yeniden bağlama](#BKMK_reattach).
+Daha önce iliştirdiğiniz bir işleme hızla yeniden eklemek [için](#BKMK_reattach)bkz.
 
-Uzak bilgisayardaki bir işlemde hata ayıklamak için bkz. [uzak bilgisayarda bir Işleme iliştirme](#BKMK_Attach_to_a_process_on_a_remote_computer).
+Uzak bir bilgisayardaki bir işlemi hata ayıklamak [için, uzak bir bilgisayardaki bir işleme ekle'ye](#BKMK_Attach_to_a_process_on_a_remote_computer)bakın.
 
 ::: moniker range=">= vs-2019"
-Bir Linux Docker kapsayıcısında .NET Core işleminde hata ayıklamak için bkz. [bir Linux Docker kapsayıcısına iliştirme](#BKMK_Docker_Attach).
+Bir Linux Docker kapsayıcısı üzerinde bir .NET Core işlemini hata ayıklamak [için](#BKMK_Linux_Docker_Attach)bkz.
 ::: moniker-end
 
 **Yerel bilgisayarınızdaki bir işleme eklemek için:**
 
-1. Visual Studio **'da işleme ekle > ** **Hata Ayıkla** ' yı seçin (veya **CTRL**+**alt**+**P**) tuşlarına basarak **İşleme İliştir** iletişim kutusunu açın.
+1. Visual Studio'da, **İşleme Ekle** iletişim kutusunu açmak için **İşleme Hata** > **Ayıklama'yı** (veya **Ctrl**+**Alt**+**P**tuşuna basın) seçin.
 
-   **Bağlantı türü** **varsayılan**olarak ayarlanmalıdır. **Bağlantı hedefi** yerel makinenizin adı olmalıdır.
+   **Bağlantı türü** **Varsayılan**olarak ayarlanmalıdır. **Bağlantı hedefi** yerel makine adınız olmalıdır.
 
    ![DBG_Basics_Attach_To_Process](../debugger/media/DBG_Basics_Attach_To_Process.png "DBG_Basics_Attach_To_Process")
 
-2. **Kullanılabilir işlemler** listesinde, eklemek istediğiniz işlem veya işlemleri bulun ve seçin.
+2. Kullanılabilir **süreçler** listesinde, eklemek istediğiniz işlemi veya işlemleri bulun ve seçin.
 
-   - Bir işlemi hızlıca seçmek için, **filtre işlemleri** kutusuna adını veya ilk harfini yazın.
+   - Bir işlemi hızlı bir şekilde seçmek için Filtre **işlemleri** kutusuna adını veya ilk harfini yazın.
 
-   - İşlem adını bilmiyorsanız, listeye göz atın veya bazı yaygın işlem adları için [sık karşılaşılan hata ayıklama senaryolarına](#BKMK_Scenarios) bakın.
+   - İşlem adını bilmiyorsanız, listeye göz atın veya bazı yaygın işlem adları için [sık kullanılan hata ayıklama senaryolarına](#BKMK_Scenarios) bakın.
 
    >[!TIP]
-   >İşlemler, **Işleme İliştir** iletişim kutusu açıkken arka planda başlayabilir ve durabilir, böylece çalışan işlemlerin listesi her zaman güncel olmayabilir. Geçerli listeyi görmek için istediğiniz zaman **Yenile** seçeneğini belirleyebilirsiniz.
+   >**İşleme Ekle** iletişim kutusu açıkken işlemler arka planda başlayıp durabilir, bu nedenle çalışan işlemler listesi her zaman geçerli olmayabilir. Geçerli listeyi görmek için istediğiniz zaman **Yenile'yi** seçebilirsiniz.
 
-3. **Ekle** alanına, hata ayıklamayı planladığınız kodun türünün listelendiğinden emin olun. Varsayılan **Otomatik** ayar, çoğu uygulama türü için geçerlidir.
+3. Alana **Ekle'de** hata ayıklamayı planladığınız kod türünün listelenmiş olduğundan emin olun. Varsayılan **Otomatik** ayar çoğu uygulama türü için çalışır.
 
-   Kod türleri el ile seçmek için:
-   1. **Seç**'e tıklayın.
-   1. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinde hata ayıkla**' yı seçin.
+   Kod türlerini el ile seçmek için:
+   1. **Seç'i**tıklatın.
+   1. Kod **Türü Seç** iletişim kutusunda, **hata ayıklama bu kod türlerini**seçin.
    1. Hata ayıklamak istediğiniz kod türlerini seçin.
-   1. **Tamam**’ı seçin.
+   1. **Tamam'ı**seçin.
 
-4. **Ekle**' yi seçin.
+4. **Ekle'yi**seçin.
 
 >[!NOTE]
->Hata ayıklama için birden fazla uygulama için bağlı, ancak bir kerede yalnızca bir uygulama hata ayıklayıcıda etkin olur. Etkin uygulamayı Visual Studio **hata ayıklama konumu** araç çubuğunda veya **süreçler** penceresinde ayarlayabilirsiniz.
+>Hata ayıklama için birden çok uygulamaya eklenebilir, ancak hata ayıklayıcıda aynı anda yalnızca bir uygulama etkindir. Etkin uygulamayı Visual Studio Hata **Ayıklama Konumu** araç çubuğunda veya **İşlemler** penceresinde ayarlayabilirsiniz.
 
-## <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a>Uzak bilgisayardaki bir işleme iliştirme
+## <a name="attach-to-a-process-on-a-remote-computer"></a><a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a>Uzak bir bilgisayardaki bir işleme ekleme
 
-Ayrıca, **Işleme İliştir** iletişim kutusunda bir uzak bilgisayar seçebilir, bu bilgisayarda çalışan kullanılabilir işlemlerin listesini görüntüleyebilir ve hata ayıklama için bir veya daha fazla işleme ekleyebilirsiniz. Uzak bilgisayarda uzaktan hata ayıklayıcı (*Msvsmon. exe*) çalışıyor olmalıdır. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+Ayrıca, **İşleme Ekle** iletişim kutusunda uzak bir bilgisayar seçebilir, o bilgisayarda çalışan kullanılabilir işlemlerin listesini görüntüleyebilir ve hata ayıklama işlemlerinden birine veya birkaçına ekleyebilirsiniz. Uzaktan hata ayıklama (*msvsmon.exe*) uzak bilgisayarda çalışıyor olmalıdır. Daha fazla bilgi için [Uzaktan hata ayıklama](../debugger/remote-debugging.md)bölümüne bakın.
 
-IIS 'ye dağıtılan ASP.NET uygulamalarında hata ayıklama hakkında daha fazla yönerge için bkz. uzak [IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md).
+IIS'ye dağıtılan ASP.NET uygulamaları nın hata ayıklanmasına ilişkin daha eksiksiz talimatlar [için, uzak bir IIS bilgisayarında uzaktan hata ayıklama ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)bakın.
 
 **Uzak bir bilgisayarda çalışan bir işleme eklemek için:**
 
-1. Visual Studio **'da işleme ekle > ** **Hata Ayıkla** ' yı seçin (veya **CTRL**+**alt**+**P**) tuşlarına basarak **İşleme İliştir** iletişim kutusunu açın.
+1. Visual Studio'da, **İşleme Ekle** iletişim kutusunu açmak için **İşleme Hata** > **Ayıklama'yı** (veya **Ctrl**+**Alt**+**P**tuşuna basın) seçin.
 
-2. Çoğu durumda **bağlantı türü** **varsayılan** olmalıdır. **Bağlantı hedefi** kutusunda, aşağıdaki yöntemlerden birini kullanarak uzak bilgisayarı seçin:
+2. **Bağlantı türü** çoğu durumda **Varsayılan** olmalıdır. Bağlantı **hedef** kutusunda, aşağıdaki yöntemlerden birini kullanarak uzak bilgisayarı seçin:
 
-   - **Bağlantı hedefi**' nin yanındaki açılan oku seçin ve açılan listeden bilgisayar adını seçin.
-   - Bilgisayar adını **bağlantı hedefi** kutusuna yazın ve **ENTER**tuşuna basın.
+   - **Bağlantı hedefinin**yanındaki açılır ok'u seçin ve açılan listeden bilgisayar adını seçin.
+   - **Bağlantı hedef** kutusuna bilgisayar adını yazın ve **Enter**tuşuna basın.
 
-     Visual Studio 'Nun gerekli bağlantı noktasını, şu biçimde görünen bilgisayar adına eklediğinden emin olun: **\<uzak bilgisayar adı >:p ort**
+     Visual Studio'nun bilgisayar adına gerekli bağlantı noktasını eklediğine ve biçimde görünen: ** \<uzak bilgisayar adı>:port**
 
      ::: moniker range=">= vs-2019"
 
      > [!NOTE]
-     > Uzak bilgisayar adını kullanarak bağlanamıyorsanız, IP ve bağlantı noktası adresini (örneğin, `123.45.678.9:4022`) kullanmayı deneyin. 4024, Visual Studio 2019 x64 uzaktan hata ayıklayıcı için varsayılan bağlantı noktasıdır. Diğer uzaktan hata ayıklayıcı bağlantı noktası atamaları için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](remote-debugger-port-assignments.md).
+     > Uzak bilgisayar adını kullanarak bağlanamıyorsanız, IP ve bağlantı noktası adresini `123.45.678.9:4022`kullanmayı deneyin (örneğin, ). 4024 Visual Studio 2019 x64 uzaktan hata ayıklayıcı için varsayılan bağlantı noktasıdır. Diğer uzak hata ayıklama bağlantı noktası atamaları [için, Uzaktan hata ayıklama bağlantı noktası atamalarına](remote-debugger-port-assignments.md)bakın.
 
      ::: moniker-end
      ::: moniker range="vs-2017"
 
      > [!NOTE]
-     > Uzak bilgisayar adını kullanarak bağlanamıyorsanız, IP ve bağlantı noktası adresini (örneğin, `123.45.678.9:4022`) kullanmayı deneyin. 4022 x64 Visual Studio 2017 uzaktan hata ayıklayıcı için varsayılan bağlantı noktasıdır. Diğer uzaktan hata ayıklayıcı bağlantı noktası atamaları için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](remote-debugger-port-assignments.md).
+     > Uzak bilgisayar adını kullanarak bağlanamıyorsanız, IP ve bağlantı noktası adresini `123.45.678.9:4022`kullanmayı deneyin (örneğin, ). 4022 Visual Studio 2017 x64 uzaktan hata ayıklayıcı için varsayılan bağlantı noktasıdır. Diğer uzak hata ayıklama bağlantı noktası atamaları [için, Uzaktan hata ayıklama bağlantı noktası atamalarına](remote-debugger-port-assignments.md)bakın.
 
      ::: moniker-end
 
-   - **Uzaktan bağlantılar** iletişim kutusunu açmak için **bağlantı hedefi** kutusunun yanındaki **bul** düğmesini seçin. **Uzak bağlantılar** iletişim kutusu, yerel alt ağınızdaki veya doğrudan bilgisayarınıza bağlı olan tüm cihazları listeler. Uzak cihazları bulmaya yönelik sunucuda [UDP bağlantı noktası 3702](../debugger/remote-debugger-port-assignments.md) ' i açmanız gerekebilir. İstediğiniz bilgisayarı veya cihazı seçin ve ardından **Seç**' e tıklayın.
+   - **Uzak Bağlantılar** iletişim kutusunu açmak için **Bağlantı hedef** kutusunun yanındaki **Bul** düğmesini seçin. **Uzak Bağlantılar** iletişim kutusu, yerel alt ağınızdaki veya doğrudan bilgisayarınıza bağlı olan tüm aygıtları listeler. Uzak aygıtları keşfetmek için sunucuda [UDP bağlantı noktası 3702'yi açmanız](../debugger/remote-debugger-port-assignments.md) gerekebilir. İstediğiniz bilgisayarı veya aygıtı seçin ve sonra **Seç'i**tıklatın.
 
    > [!NOTE]
-   > **Bağlantı türü** ayarı hata ayıklama oturumları arasında devam ettirir. **Bağlantı hedefi** ayarı, yalnızca bu hedefle başarılı bir hata ayıklama bağlantısı oluştuysa hata ayıklama oturumları arasında devam ettirir.
+   > **Bağlantı türü** ayarı hata ayıklama oturumları arasında devam eder. **Bağlantı hedef** ayarı, hata ayıklama oturumları arasında yalnızca bu hedefle başarılı bir hata ayıklama bağlantısı oluştuysa devam eder.
 
-3. **Kullanılabilir süreçler** listesini doldurmak için **Yenile** ' ye tıklayın.
+3. **Kullanılabilir süreçler** listesini doldurmak için **Yenile'yi** tıklatın.
 
     >[!TIP]
-    >İşlemler, **Işleme İliştir** iletişim kutusu açıkken arka planda başlayabilir ve durabilir, böylece çalışan işlemlerin listesi her zaman güncel olmayabilir. Geçerli listeyi görmek için istediğiniz zaman **Yenile** seçeneğini belirleyebilirsiniz.
+    >**İşleme Ekle** iletişim kutusu açıkken işlemler arka planda başlayıp durabilir, bu nedenle çalışan işlemler listesi her zaman geçerli olmayabilir. Geçerli listeyi görmek için istediğiniz zaman **Yenile'yi** seçebilirsiniz.
 
-4. **Kullanılabilir işlemler** listesinde, eklemek istediğiniz işlem veya işlemleri bulun ve seçin.
+4. Kullanılabilir **süreçler** listesinde, eklemek istediğiniz işlemi veya işlemleri bulun ve seçin.
 
-   - Bir işlemi hızlıca seçmek için, **filtre işlemleri** kutusuna adını veya ilk harfini yazın.
+   - Bir işlemi hızlı bir şekilde seçmek için Filtre **işlemleri** kutusuna adını veya ilk harfini yazın.
 
-   - İşlem adını bilmiyorsanız, listeye göz atın veya bazı yaygın işlem adları için [sık karşılaşılan hata ayıklama senaryolarına](#BKMK_Scenarios) bakın.
+   - İşlem adını bilmiyorsanız, listeye göz atın veya bazı yaygın işlem adları için [sık kullanılan hata ayıklama senaryolarına](#BKMK_Scenarios) bakın.
 
-   - Tüm Kullanıcı hesapları altında çalışan süreçler bulmak için **tüm kullanıcılardan Işlem göster** onay kutusunu seçin.
+   - Tüm kullanıcı hesapları altında çalışan işlemleri bulmak için, tüm kullanıcı onay **kutusundan İşlemleri Göster'i** seçin.
 
      >[!NOTE]
-     >Güvenilmeyen bir kullanıcı tarafından sahip olunan bir işlem eklemeye çalışırsanız, bir güvenlik uyarısı iletişim kutusu onayı görünecektir. Daha fazla bilgi için bkz [. güvenlik uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir Işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)eklemeyin.
+     >Güvenilmeyen bir kullanıcı hesabına ait bir işleme iliştirmeye çalışırsanız, bir güvenlik uyarı iletişim kutusu onayı görüntülenir. Daha fazla bilgi için güvenlik [uyarısı: Güvenilmeyen bir kullanıcıya ait bir işleme bağlanmak tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme eklemeyin.](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
 
-5. **Ekle** alanına, hata ayıklamayı planladığınız kodun türünün listelendiğinden emin olun. Varsayılan **Otomatik** ayar, çoğu uygulama türü için geçerlidir.
+5. Alana **Ekle'de** hata ayıklamayı planladığınız kod türünün listelenmiş olduğundan emin olun. Varsayılan **Otomatik** ayar çoğu uygulama türü için çalışır.
 
-   Kod türleri el ile seçmek için:
-   1. **Seç**'e tıklayın.
-   1. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinde hata ayıkla**' yı seçin.
+   Kod türlerini el ile seçmek için:
+   1. **Seç'i**tıklatın.
+   1. Kod **Türü Seç** iletişim kutusunda, **hata ayıklama bu kod türlerini**seçin.
    1. Hata ayıklamak istediğiniz kod türlerini seçin.
-   1. **Tamam**’ı seçin.
+   1. **Tamam'ı**seçin.
 
-6. **Ekle**' yi seçin.
+6. **Ekle'yi**seçin.
 
 >[!NOTE]
->Hata ayıklama için birden fazla uygulama için bağlı, ancak bir kerede yalnızca bir uygulama hata ayıklayıcıda etkin olur. Etkin uygulamayı Visual Studio **hata ayıklama konumu** araç çubuğunda veya **süreçler** penceresinde ayarlayabilirsiniz.
+>Hata ayıklama için birden çok uygulamaya eklenebilir, ancak hata ayıklayıcıda aynı anda yalnızca bir uygulama etkindir. Etkin uygulamayı Visual Studio Hata **Ayıklama Konumu** araç çubuğunda veya **İşlemler** penceresinde ayarlayabilirsiniz.
 
-Bazı durumlarda, Uzak Masaüstü (Terminal Hizmetleri) oturumunda hata ayıkladığınızda, **kullanılabilir süreçler** listesinde tüm kullanılabilir süreçler görüntülenmez. Visual Studio 'Yu sınırlı bir kullanıcı hesabına sahip olan bir kullanıcı olarak çalıştırıyorsanız, **kullanılabilir süreçler** listesinde, oturum 0 ' da çalışan süreçler gösterilmez. Oturum 0, *W3wp. exe*dahil olmak üzere Hizmetler ve diğer sunucu işlemlerinde kullanılır. Bir yönetici hesabı altında [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çalıştırarak veya bir Terminal Hizmetleri oturumu yerine sunucu konsolundan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çalıştırarak sorunu çözebilirsiniz.
+Bazı durumlarda, Uzak Masaüstü (Terminal Hizmetleri) oturumunda hata ayıklama yaptığınızda, **Kullanılabilir işlemler** listesi kullanılabilir tüm işlemleri görüntülemez. Visual Studio'yu sınırlı bir kullanıcı hesabı olan bir kullanıcı olarak çalıştırıyorsanız, **Kullanılabilir süreçler** listesi Oturum 0'da çalışan işlemleri göstermez. Oturum 0 hizmetler ve *w3wp.exe*dahil olmak üzere diğer sunucu işlemleri için kullanılır. Sorunu bir yönetici hesabı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] altında çalıştırarak veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Terminal Hizmetleri oturumu yerine sunucu konsolundan çalıştırarak çözebilirsiniz.
 
-Bu geçici çözümlerin hiçbiri mümkün değilse, üçüncü bir seçenek, Windows komut satırından `vsjitdebugger.exe -p <ProcessId>` çalıştırarak işleme iliştirmeye yönelik bir seçenektir. *Tlist. exe*' yi kullanarak işlem kimliğini belirleyebilirsiniz. *Tlist. exe*' yi edinmek Için, Windows Için hata ayıklama araçları 'nı indirip yükleyin [ve ardından, WDK ve WinDbg indirmelerinde](/windows-hardware/drivers/download-the-wdk)kullanılabilir.
+Bu geçici çözümlerden hiçbiri mümkün değilse, üçüncü bir seçenek Windows `vsjitdebugger.exe -p <ProcessId>` komut satırından çalıştırarak işleme eklemektir. İşlem kimliğini *tlist.exe'yi*kullanarak belirleyebilirsiniz. *tlist.exe*almak için, [wdk ve WinDbg indirme](/windows-hardware/drivers/download-the-wdk)mevcuttur Windows için Hata Ayıklama Araçları indirin ve yükleyin.
 
 ::: moniker range=">= vs-2019"
 
-## <a name="attach-to-a-net-core-process-running-on-linux-using-ssh"></a>SSH kullanarak Linux üzerinde çalışan bir .NET Core işlemine iliştirme
 
-Daha fazla bilgi için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md).
+## <a name="attach-to-a-net-core-process-running-on-linux-using-ssh"></a>SSH kullanarak Linux üzerinde çalışan bir .NET Core işlemine ekleme
 
-## <a name="BKMK_Docker_Attach"></a>Linux Docker kapsayıcısında çalışan bir işleme iliştirme
+Daha fazla bilgi için Bkz. [SSH kullanarak Linux'ta çalışan Uzaktan hata ayıklama .NET Core.](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)
 
-Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kullanarak yerel veya uzak makinenizde Linux .NET Core Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
+## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a>Linux Docker kapsayıcısı üzerinde çalışan bir işleme ekleme
+
+Visual Studio hata ayıklayıcısını, **İşleme Ekle** iletişim kutusunu kullanarak yerel veya uzak makinenizde linux .NET Core Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
 
 > [!IMPORTANT]
-> Bu özelliği kullanmak için .NET Core platformlar arası geliştirme iş yükünü yüklemeli ve kaynak koda yerel erişim sahibi olmanız gerekir.
+> Bu özelliği kullanmak için .NET Çekirdek Çapraz Platform Geliştirme iş yükünü yüklemeniz ve kaynak koduna yerel erişime sahip olmalısınız.
 
-**Linux Docker kapsayıcısında çalışan bir işleme iliştirmek için:**
+**Linux Docker kapsayıcısında çalışan bir işleme eklemek için:**
 
-1. Visual Studio 'da, işleme **Ekle** iletişim kutusunu açmak Için **Hata Ayıkla > Işleme Ekle (Ctrl + Alt + P)** öğesini seçin.
+1. Visual Studio'da, **İşleme Ekle** iletişim kutusunu açmak **için Hata Ayıklama > İşleme Ekle (CTRL+ALT+P)** seçeneğini belirleyin.
 
-![Işleme Ekle menüsü](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
+![İşlem Menüsüne Ekle](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
 
-2. **Bağlantı türünü** **Docker (Linux kapsayıcısı)** olarak ayarlayın.
-3. **Docker kapsayıcısını Seç** iletişim kutusunu kullanarak **bağlantı hedefini** ayarlamak için **bul...** seçeneğini belirleyin.
+2. Bağlantı **türünü** **Docker (Linux Container)** olarak ayarlayın.
+3. **Bağlantı hedefini,** **Docker Konteyneri Seç** iletişim kutusu aracılığıyla ayarlamak için **Bul...** seçeneğini belirleyin.
 
-    Bir Docker kapsayıcı işleminde yerel olarak veya uzaktan hata ayıklaması yapabilirsiniz.
+    Docker kapsayıcı işlemini yerel veya uzaktan hata ayıklayabilirsiniz.
     
-    **Bir Docker kapsayıcı işleminde yerel olarak hata ayıklamak için:**
-    1. **Docker CLI ana bilgisayarını** **yerel makineye**ayarlayın.
-    1. Listeden eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a**basın.
+    **Docker kapsayıcı işlemini yerel olarak hata ayıklamak için:**
+    1. **Docker CLI ana bilgisayarı** **Yerel Makine'ye**ayarlayın.
+    1. Listeden eklemek için çalışan bir kapsayıcı seçin ve **Tamam'a**vurun.
     
-    ![Docker kapsayıcı menüsünü seçin](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
+    ![Docker Konteyner Menüsü'nü seçin](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
  
-    **B. bir Docker kapsayıcı işleminde uzaktan hata ayıklamak Için:**
+    **B. Docker konteyner işlemini uzaktan hata ayıklamak için:**
     
     > [!NOTE] 
-    > Bir Docker kapsayıcısında çalışan bir işleme uzaktan bağlanmak için iki seçenek vardır. SSH 'yi kullanmak için ilk seçenek, yerel makinenizde Docker Araçları yüklü değilse idealdir.  Yerel olarak Docker Araçları yüklüyse ve uzak istekleri kabul edecek şekilde yapılandırılmış bir Docker Daemon varsa, bir Docker Daemon kullanarak ikinci seçeneği deneyin.
+    > Docker kapsayıcısında çalışan bir işleme uzaktan bağlanmak için iki seçenek vardır. SSH'yi kullanmak için ilk seçenek, yerel makinenizde Docker araçları yüklü değilse idealdir.  Docker araçları yerel olarak yüklüyse ve uzaktan istekleri kabul etmek üzere yapılandırılan bir Docker daemon'una sahipseniz, docker daemon kullanarak ikinci seçeneği deneyin.
 
-    1. ***SSH aracılığıyla uzak makineye bağlanmak için:***
-        1. Uzak bir sisteme bağlanmak için **Ekle...** öğesini seçin.<br/>
-        ![Uzak bir sisteme bağlanma](../debugger/media/connect-remote-system.png "Uzak bir sisteme bağlanma")
-        1. SSH veya Daemon 'e başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a**basın.
+    1. ***SSH üzerinden uzak bir makineye bağlanmak için:***
+        1. Uzak bir sisteme bağlanmak için **Ekle...** seçeneğini belirleyin.<br/>
+        ![Uzaktan Sisteme Bağlanma](../debugger/media/connect-remote-system.png "Uzaktan Sisteme Bağlanma")
+        1. SSH veya daemon'a başarıyla bağlandıktan sonra takmak için çalışan bir kapsayıcı seçin ve **Tamam tuşuna**basın.
 
     
-    1. ***Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için***
-        1. **Docker Konağı (Isteğe bağlı)** altında, Daemon ADRESINI (TCP, IP vb.) belirtin ve Yenile bağlantısına tıklayın.
-        1. Daemon 'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a**basın.
+    1. ***Hedefi [Docker daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) üzerinden işlem yürüten uzak bir kapsayıcıya ayarlamak için***
+        1. **Docker ana bilgisayarı (İsteğe bağlı)** altındaki daemon adresini (örneğin TCP, IP, vb. yoluyla) belirtin ve yenileme bağlantısını tıklayın.
+        1. Daemon'a başarıyla bağlandıktan sonra takacak çalışan bir kapsayıcı seçin ve **Tamam'a**çarptı.
 
-4. **Kullanılabilir işlemler** listesinden karşılık gelen kapsayıcı işlemini seçin ve Visual Studio 'da C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin!
+4. **Kullanılabilir süreçler** listesinden ilgili kapsayıcı işlemini seçin ve Visual Studio'da C# konteyner işleminizin hata ayıklamaya başlamak için **Ekle'yi** seçin!
 
-    ![Docker Iliştirme menüsü tamamlandı](../debugger/media/docker-attach-complete.png "Docker Iliştirme menüsü tamamlandı")
+    ![Tamamlanmış Docker Ekle Menüsü](../debugger/media/docker-attach-complete.png "Tamamlanmış Linux Docker Ekle Menüsü")
+    
+
+## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a>Windows Docker kapsayıcısı üzerinde çalışan bir işleme ekleme
+
+**İşleme Ekle** iletişim kutusunu kullanarak Visual Studio hata ayıklama işlemini yerel makinenizdeki Windows Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
+
+> [!IMPORTANT]
+> Bu özelliği .NET Core işlemiyle kullanmak için .NET Çekirdek Çapraz Platform Geliştirme iş yükünü yüklemeniz ve kaynak koduna yerel erişime sahip olmalısınız.
+
+**Windows Docker kapsayıcısında çalışan bir işleme eklemek için:**
+
+1. Visual Studio'da, İşleme Ekle iletişim kutusunu açmak **için Hata Ayıklama > İşleme (veya** **CTRL+ALT+P)** **ekle'yi** seçin.
+
+   ![İşlem Menüsüne Ekle](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
+
+2. Bağlantı **türünü** **Docker (Windows Kapsayıcısı)** olarak ayarlayın.
+3. **Docker Konteyneri Seç** iletişim kutusunu kullanarak **Bağlantı hedefini** ayarlamak için **Bul...** seçeneğini belirleyin.
+
+    > [!IMPORTANT]
+    > Hedef işlem, üzerinde çalıştığı Docker Windows kapsayıcısı ile aynı işlemci mimarisine sahip olmalıdır.
+    
+   Hedefi SSH üzerinden uzak bir kapsayıcıya ayarlamak şu anda kullanılamıyor ve yalnızca Docker daemon kullanılarak yapılabilir.
+    
+    ***Hedefi [Docker daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) üzerinden işlem yürüten uzak bir kapsayıcıya ayarlamak için***
+    1. **Docker ana bilgisayarı (İsteğe bağlı)** altındaki daemon adresini (örneğin TCP, IP, vb. yoluyla) belirtin ve yenileme bağlantısını tıklayın. 
+
+    1. Daemon'a başarıyla bağlandıktan sonra takmak için çalışan bir kapsayıcı seçin ve Tamam'ı seçin.
+    
+4. **Kullanılabilir işlemler** listesinden ilgili kapsayıcı işlemini seçin ve C# konteyner işleminizin hata ayıklamaya başlamak için **Ekle'yi** seçin.
+
+    ![Tamamlanmış Docker Ekle Menüsü](../debugger/media/docker-attach-complete-windows.png "Tamamlanmış Windows Docker Ekle Menüsü")
+    
+
+5.  Kullanılabilir işlemler listesinden ilgili kapsayıcı işlemini seçin ve C# konteyner işleminizin hata ayıklamaya başlamak için **Ekle'yi** seçin.
 
 
 ::: moniker-end
 
-## <a name="BKMK_reattach"></a>Bir işleme yeniden iliştir
+## <a name="reattach-to-a-process"></a><a name="BKMK_reattach"></a>İşleme yeniden iliştirme
 
-**Hata ayıkla** > **işleme yeniden iliştir** ' i seçerek (**SHIFT**+**alt**+**P**), daha önce eklediğiniz işlemlere hızlıca yeniden iliştirebilirsiniz. Bu komutu seçtiğinizde, son ilk önceki işlem kimliğini deneyerek bağlı işlemler iliştirmek hata ayıklayıcı hemen deneyecek ve bu, önceki eşleştirerek başarısız olursa adı işleyin. Eşleşme bulunmazsa veya birkaç işlem aynı ada sahip ise, doğru işlemi seçebilmeniz **Için Işleme İliştir** iletişim kutusu açılır.
+**Hata Ayıklama** > **Reattach to Process** **(Shift**+**Alt**+**P)** seçeneğini seçerek daha önce bağlı olduğunuz işlemlere hızla yeniden ekleyebilirsiniz. Bu komutu seçtiğinizde, hata ayıklama işlemi, önceki işlem kimliğini eşleştirmeye çalışırken ve bu başarısız olursa, önceki işlem adı ile eşleştirerek bağlı olduğunuz son işlemlere hemen eklemeyi dener. Eşler bulunmazsa veya birden çok işlem aynı ada sahipse, doğru işlemi seçebilmeniz **için İşleme Ekle** iletişim kutusu açılır.
 
 > [!NOTE]
-> **İşleme yeniden iliştir** komutu, Visual Studio 2017 ' den başlayarak kullanılabilir.
+> **Reattach to Process** komutu Visual Studio 2017'den itibaren kullanılabilir.
 
-## <a name="BKMK_Scenarios"></a>Ortak hata ayıklama senaryoları
+## <a name="common-debugging-scenarios"></a><a name="BKMK_Scenarios"></a>Sık kullanılan hata ayıklama senaryoları
 
-**Işleme eklemeyi** ve hangi işlemin iliştirileyeceğini belirlemenize yardımcı olmak için, aşağıdaki tabloda, mevcut yerlerde daha fazla yönergelerin bağlantılarıyla birlikte birkaç ortak hata ayıklama senaryosu gösterilmektedir. (Bu liste kapsamlı değildir.)
+**İşleme Ekle'yi** kullanıp kullanmayacağını ve hangi işleme eklenmeyeceğini belirlemenize yardımcı olmak için, aşağıdaki tabloda kullanılabilir durumda daha fazla yönergeye bağlantılar içeren birkaç yaygın hata ayıklama senaryosu gösterilmektedir. (Liste ayrıntılı değildir.)
 
-Evrensel Windows uygulaması (UWP) uygulamaları gibi bazı uygulama türlerinde doğrudan bir işlem adına iliştiremezsiniz, ancak Visual Studio 'da **yüklü uygulama paketini hata ayıkla** menü seçeneğini kullanın (bkz. tablo).
+Evrensel Windows Uygulaması (UWP) uygulamaları gibi bazı uygulama türleri için doğrudan bir işlem adına iliştirmezsiniz, ancak Bunun yerine Visual Studio'da **Hata Ayıklama Yüklü Uygulama Paketi** menüsü seçeneğini kullanabilirsiniz (tabloya bakın).
 
-Hata ayıklayıcının ' de C++yazılan koda eklemesi için, kodun `DebuggableAttribute`yayması gerekir. [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) bağlayıcı seçeneğiyle bağlantı kurarak bunu kodunuza otomatik olarak ekleyebilirsiniz.
+Hata ayıklayıcının C++'da yazılmış koda eklemesi için `DebuggableAttribute`kodun . [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) bağlantı seçeneğine bağlanarak bunu kodunuza otomatik olarak ekleyebilirsiniz.
 
-İstemci tarafı betik hata ayıklama için betik hata ayıklamasını tarayıcıda etkinleştirilmelidir. Chrome üzerinde istemci tarafı betiklerinde hata ayıklamak için, kod türü olarak **Web seti** ' ni seçin ve uygulama türüne bağlı olarak, tüm Chrome örneklerini kapatmanız ve tarayıcıyı hata ayıklama modunda başlatmanız gerekebilir (bir komut satırından `chrome.exe --remote-debugging-port=9222` yazın).
+İstemci tarafı komut dosyası hata ayıklama için tarayıcıda komut dosyası hata ayıklama etkinolmalıdır. Chrome'da istemci tarafındaki komut dosyasının hata ayıklama için kod türü olarak **Web kitini** seçin ve uygulama türünüze bağlı olarak, tüm Chrome `chrome.exe --remote-debugging-port=9222` örneklerini kapatmanız ve tarayıcıyı hata ayıklama modunda başlatmanız gerekebilir (komut satırından yazın).
 
-Eklemek üzere bir çalışan işlemi hızlı bir şekilde seçmek için, Visual Studio 'da **Ctrl**+**alt**+**P**yazın ve ardından işlem adının ilk harfini yazın.
+Visual Studio'da eklenecek bir çalıştırma işlemini hızlı bir şekilde seçmek için **Ctrl**+**Alt**+**P**yazın ve ardından işlem adının ilk harfini yazın.
 
 |Senaryo|Hata ayıklama yöntemi|İşlem adı|Notlar ve bağlantılar|
 |-|-|-|-|
-|Uzaktan hata ayıklama ASP.NET 4 veya 4.5 üzerinde bir IIS sunucusu|Uzak araçları kullanma ve **Işleme iliştirme**|*W3wp.exe*|Bkz. uzak [IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|Uzaktan hata ayıklamayı ASP.NET Core IIS sunucusu|Uzak araçları kullanma ve **Işleme iliştirme**|*DotNet. exe* veya *appname. exe*|Uygulama dağıtımı için bkz. [IIS 'de yayımlama](https://docs.asp.net/en/latest/publishing/iis.html). Hata ayıklama için bkz. uzak [IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
-|Desteklenen uygulama türleri için yerel bir IIS sunucusunda istemci tarafı betikte hata ayıklama |**İşlemek Için İliştir** kullanın|*Chrome. exe*, *microsoftedgecp. exe*veya *iexplore. exe*|Komut dosyası hata ayıklaması etkinleştirilmelidir. Chrome için Ayrıca, hata ayıklama modunda Chrome ' ı çalıştırmanız ve **iliştirme** alanında **WebKit Code** ' u seçmeniz gerekir.|
-|Yerel makinede bir C#, Visual Basic veya C++ uygulamasında hata ayıklama|Standart hata ayıklama (**F5**) veya **İşleme İliştir**|*\<AppName >. exe*|Çoğu senaryoda standart hata ayıklama kullanın ve **Işleme iliştirilemiyor**.|
-|Uzaktan hata ayıklama bir Windows masaüstü uygulaması|Uzak Araçlar|Yok| Bkz. [Uzaktan hata C# ayıklama a veya Visual Basic uygulaması](../debugger/remote-debugging-csharp.md) veya [bir C++ uygulamada uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
-|Linux 'ta .NET Core hatalarını ayıklama|**İşlemek Için İliştir** kullanın|*DotNet. exe*|SSH kullanmak için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). |
-|Hata Ayıklayıcı olmadan uygulamayı başlattıktan sonra yerel makine üzerinde bir ASP.NET uygulamasında hata ayıklama|**İşlemek Için İliştir** kullanın|*ııexpress. exe*|Bu yük uygulamanızı hale getirmek yardımcı olabilecek daha hızlı gibi (örneğin) profili oluşturulurken. |
-|Başka bir sunucu işlemi desteklenen uygulama türlerinde hata ayıklama|Sunucu uzakta ise uzak Araçlar 'ı kullanın ve **Işleme ekleyin**|*Chrome. exe*, *iexplore. exe*veya diğer süreçler|Gerekirse, Kaynak İzleyicisi işlemi belirlemenize yardımcı olması için kullanın. Bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).|
-|Uzaktan hata ayıklama, bir evrensel Windows uygulamasında (UWP), OneCore, HoloLens ve IOT uygulaması|Yüklenen uygulama paketinin hatalarını ayıklama|Yok|Bkz. **Işleme İliştir** kullanmak yerine [yüklü uygulama paketinin hatalarını ayıkla](debug-installed-app-package.md)|
-|Visual Studio'dan başlatmamış bir evrensel Windows uygulamasında (UWP), OneCore, HoloLens ve IOT uygulamasında hata ayıklama|Yüklenen uygulama paketinin hatalarını ayıklama|Yok|Bkz. **Işleme İliştir** kullanmak yerine [yüklü uygulama paketinin hatalarını ayıkla](debug-installed-app-package.md)|
+|IIS sunucusunda 4 veya 4,5 ASP.NET uzaktan hata ayıklama|Uzak araçları kullanın ve **İşleme Ekle**|*w3wp.exe*|[Uzak bir IIS bilgisayarında uzaktan hata ayıklama ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) bakın|
+|IIS sunucusunda Core ASP.NET uzaktan hata ayıklama|Uzak araçları kullanın ve **İşleme Ekle**|*dotnet.exe* veya *appname.exe*|Uygulama dağıtımı için [bkz.](https://docs.asp.net/en/latest/publishing/iis.html) Hata ayıklama için, [uzak bir IIS bilgisayarında Uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) bölümüne bakın|
+|Desteklenen uygulama türleri için yerel bir IIS sunucusunda istemci tarafındaki komut dosyası hata ayıklama |**İşleme Ekle'yi** Kullan|*chrome.exe*, *MicrosoftEdgeCP.exe*, veya *iexplore.exe*|Komut dosyası hata ayıklama etkin olmalıdır. Chrome için, Chrome'u hata ayıklama modunda çalıştırmanız ve alana **Ekle'de** **Webkit kodunu** seçmeniz gerekir.|
+|Yerel makinede C#, Visual Basic veya C++ uygulamasını hata ayıklama|Standart hata ayıklama **(F5**) veya **İşleme Ekleme'yi** kullanın|*\<appname>.exe*|Çoğu senaryoda, standart hata ayıklama kullanın ve **İşleme Eklemeyin.**|
+|Windows masaüstü uygulamasını uzaktan hata ayıklama|Uzak araçlar|Yok| [C# veya Visual Basic uygulamasını uzaktan hata ayıklama veya](../debugger/remote-debugging-csharp.md) [C++ uygulamasını uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
+|Linux'ta Hata Ayıklama .NET Core|**İşleme Ekle'yi** Kullan|*dotnet.exe*|SSH'yi kullanmak için, [SSH kullanarak Linux üzerinde çalışan Uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)bölümüne bakın. |
+|Hata ayıklama olmadan uygulamayı başlattıktan sonra yerel makinede ASP.NET bir uygulama hata ayıklama|**İşleme Ekle'yi** Kullan|*iiexpress.exe*|Bu, (örneğin) profil oluşturma gibi uygulamanızın daha hızlı yüklenmesini sağlamak için yararlı olabilir. |
+|Sunucu işleminde desteklenen diğer uygulama türlerini hata ayıklama|Sunucu uzaksa, uzak araçları kullanın ve **İşleme Ekle**|*chrome.exe*, *iexplore.exe*, veya diğer işlemler|Gerekirse, işlemi belirlemeye yardımcı olmak için Kaynak İzleyici'yi kullanın. Bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).|
+|Evrensel Windows Uygulaması (UWP), OneCore, HoloLens veya IoT uygulamasını uzaktan hata ayıklama|Hata ayıklama yüklü uygulama paketi|Yok|İşleme Ekle'yi kullanmak yerine [yüklü bir uygulama paketini hata](debug-installed-app-package.md) **ayıklama**|
+|Visual Studio'dan başlamadığınız Evrensel Windows Uygulaması (UWP), OneCore, HoloLens veya IoT uygulamasını hata ayıklama|Hata ayıklama yüklü uygulama paketi|Yok|İşleme Ekle'yi kullanmak yerine [yüklü bir uygulama paketini hata](debug-installed-app-package.md) **ayıklama**|
 
-## <a name="use-debugger-features"></a>Debugger özelliklerini kullanma
+## <a name="use-debugger-features"></a>Hata ayıklama özelliklerini kullanma
 
-Visual Studio hata ayıklayıcı (kesme noktalarının isabet etmesi gibi) tam özelliklerini kullanmak için bir işleme iliştirirken uygulama tam olarak yerel kaynak ve simgeleri eşleşmelidir. Diğer bir deyişle, hata ayıklayıcı doğru [sembol (. pdb) dosyalarını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)yükleyebilmelidir. Varsayılan olarak, bu hata ayıklama derlemesi gerektirir.
+Visual Studio hata ayıklamanın (kesme noktalarına vurmak gibi) tüm özelliklerini bir işleme eklerken kullanmak için uygulamanın yerel kaynağınızla ve sembollerinizle tam olarak eşleşmesi gerekir. Diğer bir diğer olarak, hata ayıklama doğru [simge (.pdb) dosyalarını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)yükleyebilmeli. Varsayılan olarak, bu bir hata ayıklama oluşturma gerektirir.
 
-Uzaktan hata ayıklama senaryoları için Visual Studio'da açık kaynak kodu (veya kaynak kodu bir kopyasını) sahip olmalıdır. Derlenmiş uygulama ikili dosyalarını uzak makinede gibi yerel makinede aynı derlemeden gelmelidir.
+Uzaktan hata ayıklama senaryoları için, kaynak kodu (veya kaynak kodun bir kopyası) Zaten Visual Studio açık olması gerekir. Uzak makinede derlenmiş uygulama ikilileri yerel makinedekiyle aynı yapıdan gelmelidir.
 
-Uygulamayı doğru sembol dosyaları varsa bazı yerel hata ayıklama senaryolarında, Visual Studio'da kaynağına erişimi olmayan hata ayıklaması yapabilirsiniz. Varsayılan olarak, bu hata ayıklama derlemesi gerektirir. Daha fazla bilgi için bkz. [sembol ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+Bazı yerel hata ayıklama senaryolarında, uygulamayla birlikte doğru sembol dosyaları varsa, kaynağa erişmeden Visual Studio'da hata ayıklama yapabilirsiniz. Varsayılan olarak, bu bir hata ayıklama oluşturma gerektirir. Daha fazla bilgi için [bkz.](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 
-## <a name="BKMK_Troubleshoot_attach_errors"></a>İliştirme hatalarını giderme
- Çalışan bir işleme hata ayıklayıcı ekler, işlemi bir veya daha fazla kod türlerini içerebilir. Hata ayıklayıcının iliştirebilecek kod türleri **kod türü seç** iletişim kutusunda görüntülenir ve seçilir.
+## <a name="troubleshoot-attach-errors"></a><a name="BKMK_Troubleshoot_attach_errors"></a>Sorun giderme ekleme hataları
+ Hata ayıklayıcı çalışan bir işleme eklendiğinde, işlem bir veya daha fazla kod türü içerebilir. Hata ayıklayıcının ekebileceği kod türleri görüntülenir ve **Kod Türünü Seç** iletişim kutusunda seçilir.
 
- Bazen, hata ayıklayıcı başarıyla bir kod türüne, ancak başka bir kod türüne ekleyebilirsiniz. Uzak bir bilgisayarda çalışan bir işlem eklemeye çalışıyorsanız, bu durum oluşabilir. Uzak bilgisayarda uzaktan hata ayıklama bileşenleri belirli kod türleri için kullanılabilir ancak diğerleri yüklü olabilir. Doğrudan veritabanı hata ayıklamaya iki veya daha fazla işlem eklemeye çalışırsanız da meydana gelebilir. SQL hata ayıklama için yalnızca tek bir işlem eklemeyi destekler.
+ Bazen hata ayıklayıcı bir kod türüne başarıyla bağlanabilir, ancak başka bir kod türüne ekleyebilir. Uzak bir bilgisayarda çalışan bir işleme eklemeye çalışıyorsanız bu oluşabilir. Uzak bilgisayarda bazı kod türleri için yüklü, ancak diğerleri için yüklü olmayan uzaktan hata ayıklama bileşenleri olabilir. Doğrudan veritabanı hata ayıklama için iki veya daha fazla işlem eklemeye çalışırsanız da oluşabilir. SQL hata ayıklama yalnızca tek bir işleme eklemeyi destekler.
 
- Hata ayıklayıcı, ancak bazı değil tüm kod türlerine eklenebiliyorsa, hangi türlerin eklenemediğini tanımlayan bir ileti görürsünüz.
+ Hata ayıklayıcı, tüm kod türlerine değil, bazılarına eklenebilirse, hangi türlerin eklenmediğini tanımlayan bir ileti görürsünüz.
 
- Hata ayıklayıcı en az bir kod türüne başarıyla ekleniyorsa işlemin hatalarını ayıklamaya devam edebilirsiniz. Sadece başarıyla eklenen kod türlerinde hata ayıklama mümkün olacaktır. İşlem eklenmemiş kodu hala çalışır, ancak kesme noktaları ayarlayın, veri görüntüleyemez veya kod hata ayıklama diğer işlemleri mümkün olmayacaktır.
+ Hata ayıklayıcı en az bir kod türüne başarıyla bağlanırsa, işlemi hata ayıklama işlemine devam edebilirsiniz. Yalnızca başarıyla iliştirilen kod türlerini hata ayıklama nız mümkün olacaktır. İşlemdeki eklenmemiş kod yine de çalışır, ancak kesme noktaları ayarlayamazsınız, verileri görüntüleyemezsiniz veya bu koddaki diğer hata ayıklama işlemlerini gerçekleştiremezsiniz.
 
- Hata ayıklayıcının bir kod türünü başarısız olma nedenine ilişkin daha ayrıntılı bilgi isterseniz, yalnızca bu kod türüne yeniden deneyin.
+ Hata ayıklayıcının neden bir kod türüne eklenmediği hakkında daha ayrıntılı bilgi istiyorsanız, yalnızca bu kod türüne yeniden eklemeyi deneyin.
 
- **Bir kod türünün neden eklenemediğini öğrenmek için:**
+ **Kod türünün neden eklenmediği hakkında belirli bilgiler edinmek için:**
 
-1. İşlemden ayırın. **Hata Ayıkla** menüsünde **Tümünü Ayır**' ı seçin.
+1. İşlemden ayırın. Hata **Ayıklama** menüsünde **Tümünü Ayır'ı**seçin.
 
-1. Eklenemeye kod türü seçerek işleme yeniden bağlayın.
+1. Yalnızca eklenemeyen kod türünü seçerek işleme yeniden ekin.
 
-    1. **Işleme İliştir** iletişim kutusunda, **kullanılabilir işlemler** listesinde işlemi seçin.
+    1. **İşleme Ekle** iletişim kutusunda, **Kullanılabilir İşlemler** listesindeki işlemi seçin.
 
-    2. **Seç**' i seçin.
+    2. **Seç**’i seçin.
 
-    3. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinin** ve Iliştirilemedi kod türünün hatalarını ayıkla ' yı seçin. Diğer kod türleri seçimini kaldırın.
+    3. Kod **Türü Seç** iletişim kutusunda, **hata ayıklama bu kod türleri** ve eklemek için başarısız kod türü seçin. Diğer kod türlerinin select'ini seçin.
 
-    4. **Tamam**’ı seçin.
+    4. **Tamam'ı**seçin.
 
-    5. **Işleme İliştir** Iletişim kutusunda **Ekle**' yi seçin.
+    5. **İşleme Ekle** iletişim kutusunda **Ekle'yi**seçin.
 
-    Bu kez, iliştirme tümüyle başarısız olur ve belirli bir hata iletisi alırsınız.
+    Bu kez, eklemek tamamen başarısız olur ve belirli bir hata iletisi alırsınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Birden çok işlemde hata ayıklama](../debugger/debug-multiple-processes.md)
-- [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)
+- [Just-In-Time hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

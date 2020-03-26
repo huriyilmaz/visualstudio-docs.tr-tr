@@ -1,17 +1,18 @@
 ---
 title: Toplu Lisans müşterileri için Yönetim Portalına Erişim | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Toplu Lisans sözleşmelerindeki yöneticilerin Visual Studio abonelikleri Yönetim Portalı'na nasıl erişebileceğini öğrenin
-ms.openlocfilehash: f0907d7fb6d2bf3e740efdae32c77754217f6afb
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 2fd2ab46100cc8c7f968b35e6ae0103092e4e684
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78408907"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233137"
 ---
 # <a name="accessing-the-administration-portal-as-an-admin-on-a-volume-license-agreement"></a>Toplu Lisans sözleşmesinde Yönetici Olarak İdare Portalına Erişim
 

@@ -1,17 +1,18 @@
 ---
 title: Visual Studio Aboneliğinde Azure Topluluk Desteği avantajı | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Belirli Visual Studio aboneliklerinde yer alan Azure Topluluk Desteği avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 32a1c962e238bfc5ab8083ff643a99a77b699925
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: ab5c6c7a1243843bd522ed33dab6a37c57a8f2fe
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "73983760"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232093"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Topluluk Desteği forumu
 Azure Topluluğu üzerinden belirli destek forumlarında doğrudan Azure ekibinden yardım alın.  Azure Topluluğu avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmenizi sağlar.
@@ -69,6 +70,12 @@ Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [
 - [Azure belgeleri](/azure/).
 - Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalandırma konusunda yardıma mı ihtiyacınız var?  İletişim Görsel Studio [Abonelikleri Destek](https://visualstudio.microsoft.com/subscriptions/support/).
 - Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Birçok Visual Studio aboneliğinin Azure DevTest bireysel kredisi ile birlikte geldiğini biliyor muydunuz?  Sizinkini nasıl [etkinleştireceklerini](vs-azure.md) öğrenin.

@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 16ba88a11acd488ba70096e0b394a734e65011f5
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cad3a644935e14a605dbef02bddc1f9337c1f5e9
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549904"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233090"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings* dosyasi kullanarak birim testlerini yapılandır
 
@@ -259,6 +259,7 @@ Aşağıdaki XML, tipik bir *.runsettings* dosyasının içeriğini gösterir. V
 |**TestAdaptersYollar**||TestAdapters'ın bulunduğu dizine giden bir veya daha fazla yol|
 |**MaxCpuCount**|1|Bu ayar, makinedeki kullanılabilir çekirdekleri kullanarak birim testlerini çalıştırırken paralel test yürütme derecesini denetler. Test yürütme motoru, kullanılabilir her çekirdekte ayrı bir işlem olarak başlar ve her çeki, çalışması gereken testleri olan bir kapsayıcı verir. Kapsayıcı bir derleme, DLL veya ilgili artifakı olabilir. Test kapsayıcısı zamanlama birimidir. Her kapsayıcıda, testler test çerçevesine göre çalıştırılır. Çok sayıda kapsayıcı varsa, işlemler testleri bir kapsayıcıda yürütmeyi tamamladıkça, bir sonraki kullanılabilir kapsayıcı verilir.<br /><br />MaxCpuCount olabilir:<br /><br />n, 1 <= n <= çekirdek sayısı: n'ye kadar prosesler başlatılır<br /><br />n, nerede n = başka bir değer: başlatılan işlem sayısı kullanılabilir çekirdek sayısına kadar olabilir. Örneğin, n=0'ı, platformun ortama göre başlatılması gereken en uygun işlem sayısına otomatik olarak karar vermesi için ayarlayın.|
 |**TestSessionTimeout**||Kullanıcıların belirli bir zaman aşımını aştığında bir test oturumunu sonlandırmasına olanak tanır. Zaman aşımını ayarlamak, kaynakların iyi tüketilmesini ve test oturumlarının belirli bir süreyle sınırlandırIlmesini sağlar. Ayar **Visual Studio mevcuttur 2017 sürüm 15.5** ve sonrası.|
+|**DotnetHostPath**||Test host'u çalıştırmak için kullanılan dotnet ana bilgisayara özel bir yol belirtin. Bu, kendi dotnetinizi yaparken( örneğin dotnet/runtime deposunu yaparken) kullanışlıdır. Bu seçeneği belirtmek testhost.exe'yi aramayı atlar ve her zaman testhost.dll'yi kullanır. 
 
 ### <a name="diagnostic-data-adapters-data-collectors"></a>Tanısal veri bağdaştırıcıları (veri toplayıcıları)
 

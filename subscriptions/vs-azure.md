@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 03/18/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinizde yer alan Azure DevTest bireysel kredi avantajını nasıl etkinleştireceklerinizi öğrenin.
-ms.openlocfilehash: 8c7f8d2d79655c9bdd33827dc3ae2e48dc51b853
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 8cf79c9f4ce9230195e2fdbf551320c3532ad42d
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508972"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232031"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure'u kullanma
 Visual Studio abonesi olarak, Microsoft Azure'u ek ücret ödemeden kullanabilirsiniz.  Aylık [Azure DevTest bireysel kredinizle](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)Azure, geliştirme/test için kişisel kum havuzunuzdur.  Sanal makineler, bulut hizmetleri ve diğer Azure kaynakları sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre değişir.
@@ -112,6 +112,12 @@ Bu e-postayı yanlışlıkla aldığınızı düşünüyorsanız, lütfen [Azure
   - [Azure İpuçları & Püf Noktaları](https://microsoft.github.io/AzureTipsAndTricks/ "Azure İpuçları & Püf Noktaları") 
 - Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
 - Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Microsoft araçları ve hizmetleri hakkında daha fazla bilgi için aşağıdaki belgelere göz atın:

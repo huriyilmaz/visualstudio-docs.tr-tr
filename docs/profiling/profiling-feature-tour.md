@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 688a446fbbaf1c2c56b9304576224a70f71064d8
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a2d23620a1861396971c79551088b898c9b77c86
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79550108"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233105"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Hızlı başlangıç: Profil oluşturma araçlarına ilk bakış
 
@@ -25,7 +25,7 @@ Visual Studio, uygulama türüne bağlı olarak farklı performans sorunlarını
 
 Hata ayıklama oturumu sırasında erişebileceğiniz profil oluşturma araçları Tanılama Araçları penceresinde kullanılabilir. Tanılama Araçları penceresi, siz kapatmadığınız sürece otomatik olarak görüntülenir. Pencereyi açmak için **Hata Ayıklama / Windows / Tanılama Araçlarını Göster'i**tıklatın. Pencere açıkken, veri toplamak istediğiniz araçları seçebilirsiniz.
 
-![Tanıaraçları penceresi](../profiling/media/prof-tour-diagnostic-tools.png "Tanılama Araçları")
+![Tanıaraçları penceresi](../profiling/media/prof-tour-diagnostic-tools.png "Tanı Araçları")
 
 Hata ayıklama yaparken, CPU ve bellek kullanımını çözümlemek için **Tanılama Araçları** penceresini kullanabilir ve performansla ilgili bilgileri gösteren olayları görüntüleyebilirsiniz.
 
@@ -74,9 +74,9 @@ PerfTips, Tanılama Araçlarının **Olaylar** görünümünde de görünen ayn�
 
 ## <a name="analyze-memory-usage"></a>Bellek kullanımını analiz etme
 
-**Tanılama Araçları** penceresi, uygulamanızdaki bellek kullanımını değerlendirmenize de olanak tanır. Örneğin, yığındaki nesnelerin sayısına ve boyutuna bakabilirsiniz. Belleği çözümlemek için daha ayrıntılı yönergeler için [bkz.](../profiling/memory-usage.md)
+**Tanılama Araçları** penceresi, **Bellek Kullanımı** aracını kullanarak uygulamanızdaki bellek kullanımını değerlendirmenize de olanak tanır. Örneğin, yığındaki nesnelerin sayısına ve boyutuna bakabilirsiniz. Belleği çözümlemek için daha ayrıntılı yönergeler için [bkz.](../profiling/memory-usage.md) Başka bir bellek çözümleme aracı, [.NET Nesne Ayırma aracı,](../profiling/dotnet-alloc-tool.md).NET kodunuzdaki ayırma desenlerini ve anormallikleri belirlemenize yardımcı olur.
 
-Hata ayıklama sırasında bellek kullanımını çözümlemek için en az bir bellek anlık görüntüsü almanız gerekir. Çoğu zaman, belleği çözümlemenin en iyi yolu iki anlık görüntü almaktır; şüpheli bir bellek sorunundan hemen önce ilk ve şüpheli bir bellek sorunu oluştuktan hemen sonra ikinci anlık görüntü. Ardından, iki anlık görüntünün bir kısmını görüntüleyebilir ve tam olarak neyin değiştiğini görebilirsiniz.
+Hata ayıklama tümleşik Bellek Kullanımı ile de bellek kullanımını analiz etmek için en az bir bellek anlık görüntüsü almanız gerekir. Çoğu zaman, belleği çözümlemenin en iyi yolu iki anlık görüntü almaktır; şüpheli bir bellek sorunundan hemen önce ilk ve şüpheli bir bellek sorunu oluştuktan hemen sonra ikinci anlık görüntü. Ardından, iki anlık görüntünün bir kısmını görüntüleyebilir ve tam olarak neyin değiştiğini görebilirsiniz.
 
 ![Tanılama Araçlarında anlık görüntü alma](../profiling/media/prof-tour-take-snapshots.gif "Tanılama Araçları Anlık Görüntü Alır")
 

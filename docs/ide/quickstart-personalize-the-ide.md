@@ -1,18 +1,18 @@
 ---
 title: Renk teonu ve yazı tiplerini ayarlama
-ms.date: 11/20/2017
+ms.date: 03/23/2020
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11cd73574f42fffb7bcfcda5ab47496fe92565c7
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 2c0b7b4e439f33e4e2eed8609d7e85e098068aea
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75596950"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233145"
 ---
 # <a name="personalize-the-visual-studio-ide-and-editor"></a>Visual Studio IDE ve Editörü Kişiselleştirin
 
@@ -52,8 +52,19 @@ Visual Studio kullanıcı arabirimi için varsayılan renk teması **Mavi**denir
 
    ::: moniker-end
 
+::: moniker range="vs-2017"
+
 > [!TIP]
 > Visual **Studio Color Theme Editor'u** [Visual Studio Marketplace'ten](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)yükleyerek önceden tanımlanmış ek temalar yükleyebilirsiniz. Bu aracı yükledikten sonra, Renk **teması** açılır listesinde ek renk temaları görünür.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+> [!TIP]
+> Visual **Studio Marketplace'ten Visual Studio Color Tema Tasarımcısı'nı** yükleyerek kendi temalarınızı oluşturabilirsiniz. [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner)
+
+::: moniker-end
 
 ## <a name="change-text-color"></a>Metin rengini değiştirme
 

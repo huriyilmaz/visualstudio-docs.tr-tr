@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b05787802b72eb4d14e1b2b56765bb246b9ada51
+ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77578346"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256250"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklama olmadan bellek kullanımını analiz edin
 
@@ -89,13 +89,13 @@ Anlık görüntü raporunda, Alt girişleri görüntülemek için **Nesne Türü
 
 Nesne **Türü** maviyse, kaynak koddaki nesneye gitmek için ayrı bir pencerede onu seçebilirsiniz.
 
-Tanımlayamadığınız veya kodunuzda olan etkileşimini anlamadığınız türler büyük olasılıkla .NET Framework, işletim sistemi veya derleyici nesneleridir. **Bellek Kullanımı** aracı, nesnelerinizin sahiplik zincirlerine dahil olmaları durumunda bu nesneleri görüntüler.
+Tanımlayamadığınız veya kodunuzda olan ilişkisi büyük olasılıkla .NET, işletim sistemi veya derleyici nesneleridir. **Bellek Kullanımı** aracı, nesnelerinizin sahiplik zincirlerine dahil olmaları durumunda bu nesneleri görüntüler.
 
 Anlık görüntü raporunda:
 
 - **Yönetilen Yığın** ağacı, rapordaki türleri ve örnekleri gösterir. Bir tür veya örnek seçildiğinde, seçili öğe **için Kök** ve **Başvurulan Nesnelere** Giden Yollar görüntülenir.
 
-- **Köke Giden Yollar** ağacı, bir türe veya örne başvuran nesneler zincirini gösterir. .NET Framework çöp toplayıcısı, bir nesnenin belleği yalnızca tüm başvurular yayımlandığında temizler.
+- **Köke Giden Yollar** ağacı, bir türe veya örne başvuran nesneler zincirini gösterir. .NET çöp toplayıcısı, bir nesnenin belleği yalnızca tüm başvurular yayımlandığında temizler.
 
 - **Başvurulan Türler** veya **Başvurulan Nesneler** ağacı, seçili tür veya örnek başvurulan nesneleri gösterir.
 
@@ -135,7 +135,7 @@ Anlık görüntü ayrıntıları raporunda yönetilen **yığın** ağacı aşa�
 |**Modül**|Nesneyi içeren modül.|
 
 ### <a name="paths-to-root-tree-snapshot-details-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a>Kök ağacına giden yollar (Anlık görüntü ayrıntıları raporları)
-**Köke Giden Yollar ağacı,** bir türe veya örne başvuran nesneler zincirini gösterir. .NET Framework çöp toplayıcısı, bir nesnenin belleği yalnızca tüm başvurular yayımlandığında temizler.
+**Köke Giden Yollar ağacı,** bir türe veya örne başvuran nesneler zincirini gösterir. .NET çöp toplayıcısı, bir nesnenin belleği yalnızca tüm başvurular yayımlandığında temizler.
 
 **Köke Giden Yollar** ağacındaki bir tür için, bu türe başvuru tutan nesne sayısı **Başvuru Sayısı** sütununda görüntülenir.
 
@@ -185,7 +185,7 @@ Anlık görüntü diff raporunda **Yönetilen Yığın** ağacı aşağıdaki s�
 
 ### <a name="paths-to-root-tree-snapshot-diff-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a>Kök ağacına giden yollar (Anlık görüntü diff raporları)
 
-**Köke Giden Yollar ağacı,** bir türe veya örne başvuran nesneler zincirini gösterir. .NET Framework çöp toplayıcısı, bir nesnenin belleği yalnızca tüm başvurular yayımlandığında temizler.
+**Köke Giden Yollar ağacı,** bir türe veya örne başvuran nesneler zincirini gösterir. .NET çöp toplayıcısı, bir nesnenin belleği yalnızca tüm başvurular yayımlandığında temizler.
 
 **Köke Giden Yollar** ağacındaki bir tür için, bu türe başvuru tutan nesne sayısı **Başvuru Sayısı** sütununda görüntülenir. Önceki anlık görüntüden sayım farkı **Başvuru Diff** sütunundadır.
 

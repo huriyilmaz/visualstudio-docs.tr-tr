@@ -1,7 +1,7 @@
 ---
 title: Sorun giderme yükleme veya yükseltme sorunları
 description: Bazen işler ters gidebilir. Visual Studio yüklemeniz veya yükseltmeniz başarısız olursa, bu sayfa yardımcı olabilir.
-ms.date: 09/13/2019
+ms.date: 03/23/2020
 ms.custom: seodec18
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -15,17 +15,17 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9dfdf504378dafd7d71288cae1927dd8d6bb9e56
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 97cc0dd72b54795342d8c4f66a90bbd1ae4a7272
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115003"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233108"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Sorun Giderme Visual Studio yükleme ve yükseltme sorunları
 
 > [!IMPORTANT]
-> Yükleme sorunu yaşıyor musunuz? Yardım edebiliriz. [**Canlı sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği sunuyoruz.
+> Yükleme sorunu yaşıyor musunuz? Yardım edebiliriz. Yükleme [**sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği sunuyoruz.
 
 Bu sorun giderme kılavuzu, çoğu yükleme sorunlarını çözmesi gereken adım adım yönergeleri içerir.
 

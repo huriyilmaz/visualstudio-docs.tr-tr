@@ -10,16 +10,84 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: fe317d446ddc9196df02dfafcf0397f8815574c3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5599153f79b273249e93c48aaa197214d92f5fe7
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74771549"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232913"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)
 
 Unity için Visual Studio Tools değişiklik günlüğü.
+
+## <a name="2520"></a>2.5.2.0
+
+Yayınlanma Mart 23, 2020
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Hata ayıklayıcı:**
+
+  - Ekteki iş parçacıklarının sabit kaydı.
+
+## <a name="2510"></a>2.5.1.0
+
+Yayınlanma Mart 3, 2020
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Entegrasyon:**
+
+  - Için [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md)bir bastırıcı eklendi. Invoke, InvokeRepeating, StartCoroutine veya StopCoroutine ile kullanılan özel yöntemler kullanılmamış olarak işaretlenmemeli.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Sabit OnDrawGizmos/OnDrawGizmosSeçme belgeler
+
+- **Değerlendirme:**
+
+  - Lambda argüman denetimi düzeltildi.
+
+## <a name="2501"></a>2.5.0.1
+
+Yayınlanma Şubat 19, 2020
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Yanlış [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) ileti imzası için tanılama denetimi düzeltildi. Birden çok devralma düzeyine sahip türleri denetlerken, bu `warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`tanılama aşağıdaki iletiyle başarısız olabilir: .
+
+## <a name="2500"></a>2.5.0.0
+
+Yayınlanma Ocak 22, 2020
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Entegrasyon:**
+
+  - HLSL dosyaları için destek eklendi.
+  
+  - Yeni bir klasör iletişim arabirimi ara birimine geçti.
+  
+  - Ayarlar için yeni erişilebilir özellik ızgarasına geçti.
+
+  - Için [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md)bir bastırıcı eklendi. Öznitelik içeren `SerializeField` özel alanlar kullanılmamış olarak işaretlenmemeli.
+
+  - Için [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md)bir bastırıcı eklendi. Öznitelik `SerializeField` içeren alanlar atanmamış olarak işaretlenmemeli.  
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Sabit proje`GenerateTargetFrameworkMonikerAttribute` oluşturma (hedef her zaman doğru bulunamadı)
+
+- **Değerlendirme:**
+
+  - Sabit dize değerlendirmesi (ToString() çağrıları kullanılmaz)
 
 ## <a name="2420"></a>2.4.2.0
 

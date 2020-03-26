@@ -1,17 +1,18 @@
 ---
 title: Seçilen Visual Studio aboneliklerinde DataCamp avantajı ile bugün veri bilimi becerilerinizi geliştirin. | Microsoft Belgeleri
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/13/2019
+ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Belirli Visual Studio abonelikleriyle birlikte verilen DataCamp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 4ddfe064539a2ff572a7c89b89d618dff84f63a0
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 0b5aa20667728847afc83c77401f8651cbad106d
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74706876"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273991"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitim avantajı
 Uygun Visual Studio abonelikleri DataCamp abonelikleri içerir.  DataCamp ile ihtiyacınız olan tüm veri bilimi becerilerini tarayıcınızın konforunda öğrenebilirsiniz. Ne zaman ve ne öğreneceğini sen seçeceksin. Yüklemek için hiçbir yazılım ve hiçbir özel donanım gereksinimleri ile, veri bilimi öğrenme her zamankinden daha kolaydır.
@@ -82,10 +83,15 @@ Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [
 - Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
 - Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizde daha fazla profesyonel gelişim fırsatına göz atın:
 - [Pluralsight](vs-pluralsight.md)
 - [LinkedIn Learning](vs-linkedin-learning.md)
-
 
 Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını zaten [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) etkinleştirmediyseniz, Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredinizi kullanmak için Araçlar kategorisindeki Azure döşemesini ziyaret edin ve tıklayın.

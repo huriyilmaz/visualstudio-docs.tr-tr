@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5a1c449a77e3000205ee81f5414949743b6035c4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 17bdd86829da199e01a527aa382b8ed3bdfade17
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77272267"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232942"
 ---
 # <a name="devops-with-unity-apps"></a>Unity uygulamaları ile DevOps
 
@@ -93,7 +93,7 @@ Referans bağlantısı: ** [Azure Ardışık Hatları](/azure/devops/pipelines/i
 |Manuel test|Evet||
 |Test Yöneticisi (kayıt ve oynatma testleri)|Yalnızca Windows aygıtları ve Android emülatörleri||
 |Kod kapsamı|yok|Birim testi Visual Studio içinde değil, Unity içinde gerçekleştiği için geçerli değildir, aşağıya bakın.|
-|[Birim kodunuzu test edin](../test/unit-test-your-code.md)|Birlik içinde, ama Visual Studio değil|Unity, [Unity test araçlarının](https://www.assetstore.unity3d.com/en/#!/content/13802) (Unity Asset Store) bir parçası olarak kendi birim test çerçevesini sağlar. Ünite test sonuçları Birlik içinde raporlanır ve Visual Studio içinde su yüzüne çıkmayacaktır.|
+|[Birim kodunuzu test edin](../test/unit-test-your-code.md)|Birlik içinde, ama Visual Studio değil|Unity, [Unity test araçlarının](https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802) (Unity Asset Store) bir parçası olarak kendi birim test çerçevesini sağlar. Ünite test sonuçları Birlik içinde raporlanır ve Visual Studio içinde su yüzüne çıkmayacaktır.|
 |[Kodunuzu test etmek için UI otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)|Hayır|Kodlanmış UI testleri, uygulamanın UI'sindeki okunabilir denetimlere dayanır; Birlik uygulamaları grafiksel dir ve bu nedenle içerik Kodlu Kullanıcı Aracı test araçları tarafından okunamaz.|
 
 ## <a name="improve-code-quality"></a>Kod kalitesini artırma
@@ -124,4 +124,4 @@ Referans linki: ** [HockeyApp ile monitör](https://www.hockeyapp.net/features/)
 
 |Özellik|Birlik ile desteklenen|Ek Yorumlar|
 |-------------|--------------------------|-------------------------|
-|Çarpışma analitiği, telemetri ve beta dağılımı|Evet|HockeyApp öncelikle beta dağıtım işleme ve çökme raporları elde etmek için yararlıdır.<br /><br /> C# komut dosyasından telemetri için, Unity tarafından kullanılan .NET sürümünde çalışması koşuluyla herhangi bir analiz çerçevesi kullanmak mümkündür. Ancak bu, Unity motorunun içinde değil, yalnızca oyun komut dosyaları içinde analiz yapılmasına olanak tanır. Şu anda Application Insights için eklenti yoktur, ancak eklentiler [Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) ve [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)gibi diğer analiz çözümleri için kullanılabilir. Birlik projesinin doğasını anlayan Unity Analytics gibi hizmetler elbette genel çerçevelerden çok daha anlamlı analizler sağlayacaktır.|
+|Çarpışma analitiği, telemetri ve beta dağılımı|Evet|HockeyApp öncelikle beta dağıtım işleme ve çökme raporları elde etmek için yararlıdır.<br /><br /> C# komut dosyasından telemetri için, Unity tarafından kullanılan .NET sürümünde çalışması koşuluyla herhangi bir analiz çerçevesi kullanmak mümkündür. Ancak bu, Unity motorunun içinde değil, yalnızca oyun komut dosyaları içinde analiz yapılmasına olanak tanır. Şu anda Application Insights için eklenti yoktur, ancak eklentiler [Unity Analytics](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120) ve [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)gibi diğer analiz çözümleri için kullanılabilir. Birlik projesinin doğasını anlayan Unity Analytics gibi hizmetler elbette genel çerçevelerden çok daha anlamlı analizler sağlayacaktır.|

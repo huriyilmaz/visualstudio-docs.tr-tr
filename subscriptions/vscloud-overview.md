@@ -1,17 +1,18 @@
 ---
 title: Visual Studio bulut abonelikleri nasıl satın alılır?
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Uzun süreli sözleşme olmadan, bir ay-ay veya yıllık bazda Kiralık Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: c31a6cb89d34456678c82ce683535005f581376d
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: babf05c991bd323f2ebe2385085a1d9fc3b1acf8
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "71962944"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273952"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 Visual [Studio Professional ve Visual Studio Enterprise aboneliklerini](https://visualstudio.microsoft.com/subscriptions/) Visual Studio [Marketplace'ten](https://marketplace.visualstudio.com)satın alabilirsiniz. Bunlara **"bulut abonelikleri"** denir.
@@ -118,6 +119,12 @@ C: Başka bir Cloud Annual aboneliği satın alamayacak olsalar da, Visual Studi
 - [Visual Studio abonelik desteği](https://visualstudio.microsoft.com/vs/support/)
 - [Visual Studio bulut abonelik faturalandırma SSS](vscloud-billing-faq.md)
 - [CSP'ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Bulut abonelikleri satın alın

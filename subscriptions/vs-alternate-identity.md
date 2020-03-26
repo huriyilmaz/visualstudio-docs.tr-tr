@@ -1,17 +1,18 @@
 ---
 title: Visual Studio aboneleri için kimlikler
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğiniz için azure devops ve Azure için kullanmak üzere alternatif bir kimlik ekleme
-ms.openlocfilehash: e19774f2314280b2e5a995a7d83336f1403682a4
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: ff5166da3cb782c0750b0ce61fdafec375811ff4
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "72816551"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232006"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio aboneleri için kimlikler
 Visual Studio aboneliğinizi etkinleştirdiğinizde, etkinleştirme sırasında kullandığınız kimliği (veya girişi) Visual Studio aboneliğiyle birbirine bayıltır. Bu şekilde, sizi Visual [Studio abone portalında,](https://my.visualstudio.com?wt.mc_id=o~msft~docs)Azure DevOps'lerde ve Azure'da tanıyabiliriz.
@@ -57,3 +58,15 @@ C: Azure DevOps, birincil veya alternatif kimliğinizi kullanarak oturum açtı�
 * Azure DevOps'te oturum açmadan önce en az bir kez [Visual Studio abone portalını](https://my.visualstudio.com?wt.mc_id=o~msft~docs) ziyaret edin.
 
 Azure DevOps aboneliğinizi hala tanımıyorsa, [Azure DevOps desteğine](https://azure.microsoft.com/support/devops/)başvurun.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Sonraki adımlar 
+Azure, Azure DevOps veya Visual Studio IDE kullanma hakkında daha fazla bilgi için şu kaynaklara göz atın:
+- [Azure](vs-azure.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Visual Studio](vs-ide-benefit.md)

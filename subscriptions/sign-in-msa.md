@@ -3,15 +3,16 @@ title: Microsoft Hesabınızla Visual Studio Abonelikleri oturum açma (MSA) | M
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 19038bb0-2858-49df-9624-cbf8bfbb5d39
 ms.date: 03/11/2020
 ms.topic: conceptual
 description: Microsoft Hesabınızla (MSA) Visual Studio Aboneliğinizde Oturum Açma
-ms.openlocfilehash: 49a20e5c34d81e7b5437ff48e749e322c6c57828
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 6bc71eac42ac582b7d714706567be69e78dfa383
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508738"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233212"
 ---
 # <a name="signing-in-to-your-visual-studio-subscriptions-with-your-microsoft-account-msa"></a>Visual Studio aboneliğinizde Microsoft Hesabınızla (MSA) oturum açma
 

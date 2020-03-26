@@ -8,22 +8,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ddb082bf2451759be239d5c16404e82bcd84733
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 43126f4bba8afc50fc5c1e4cf6a3b9a67c6f340c
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77578167"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233057"
 ---
 # <a name="analyze-memory-usage"></a>Bellek kullanımını analiz etme
 
-bellek sızıntılarını ve verimsiz bellek kullanımını bulmak için, hata ayıklama tümleşik Bellek Kullanımı tanılama aracı veya .NET Nesne Ayırma aracı ve post-mortem Memory Usage aracı gibi Performans Profilleyicisi'ndeki araçlar gibi araçları kullanabilirsiniz. Bellek Kullanımı aracı, yönetilen ve yerel bellek yığınının bir veya daha fazla *anlık görüntüsünü* almanızı sağlar. .NET, ASP.NET, yerel veya karma mod (.NET ve yerel) uygulamalarının anlık görüntülerini toplayabilirsiniz. 
+bellek sızıntılarını ve verimsiz bellek kullanımını bulmak için, hata ayıklama tümleşik Bellek Kullanımı tanılama aracı veya .NET Nesne Ayırma aracı ve post-mortem Memory Usage aracı gibi Performans Profilleyicisi'ndeki araçlar gibi araçları kullanabilirsiniz.
 
-**Bellek Kullanımı** aracı açık bir Visual Studio projesinde, yüklü bir Microsoft Mağazası uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalıştırılabilir. Aracı yerel veya uzak makinelerde veya bir simülatör veya emülatörde çalıştırabilirsiniz. Daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+Bellek Kullanımı aracı, yönetilen ve yerel bellek yığınının bir veya daha fazla *anlık görüntüsünü* almanızı sağlar. .NET, ASP.NET, yerel veya karma mod (.NET ve yerel) uygulamalarının anlık görüntülerini toplayabilirsiniz. **Bellek Kullanımı** aracı açık bir Visual Studio projesinde, yüklü bir Microsoft Mağazası uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalıştırılabilir. Aracı yerel veya uzak makinelerde veya bir simülatör veya emülatörde çalıştırabilirsiniz. Hata ayıklama ile veya olmadan **Bellek Kullanımı** aracını çalıştırabilirsiniz. Daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md) Hata ayıklamada, bellek profil oluşturmayı açıp kapatabilir ve bellek kullanımının nesne başına dökümünü görebilirsiniz. Yürütme duraklatıldığında bellek kullanım sonuçlarını (örneğin bir kesme noktasında) görüntüleyebilirsiniz.
 
-Hata ayıklama ile veya olmadan **Bellek Kullanımı** aracını çalıştırabilirsiniz. Hata ayıklamada, bellek profil oluşturmayı açıp kapatabilir ve bellek kullanımının nesne başına dökümünü görebilirsiniz. Yürütme duraklatıldığında bellek kullanım sonuçlarını (örneğin bir kesme noktasında) görüntüleyebilirsiniz.
-
-**.NET Nesne Ayırma** aracı yalnızca bir post-mortem aracı olarak çalışır.
+**.NET Nesne Ayırma** aracı, .NET kodunuzdaki ayırma desenlerini ve anormallikleri belirlemenize yardımcı olur. Bu alet sadece bir post-mortem aracı olarak çalışır.
 
 Bellek çözümleme araçlarının nasıl kullanılacağını açıklayan ayrıntılı talimatlar için, [bellek kullanım](../profiling/memory-usage.md) kılavuzunu ve [.NET Nesne Ayırma aracına](../profiling/dotnet-alloc-tool.md)bakın.
 

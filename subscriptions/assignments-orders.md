@@ -3,15 +3,16 @@ title: Kullanıcı atamalarını ve işlem emirlerini izleme | Görsel Stüdyo P
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 83a9162a-b9e7-43a4-b07f-6c1fd8580f78
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için yöneticilerin görev lerinden bilgi edinin.
-ms.openlocfilehash: c7dc2b55b3e9d1d1aea6b2712dbeb96316f48e7a
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 200a6d5f83e762bb91451a0d8d7a1871afab4304
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78235231"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232695"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamave işlem emirlerini izleme
 Visual Studio abonelik yöneticilerinin, Toplu Lisanslama sözleşmelerinde veya Microsoft Ürün ve Hizmet Sözleşmesi'nde belirtilen zamanlamadaki kullanım artışları için Visual Studio kullanımını ve işlem emirlerini izlemeleri beklenir. Yeni Visual Studio Abonelikleri Yönetimi portalı, mevcut ve kullanılmış lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale getirmiştir.

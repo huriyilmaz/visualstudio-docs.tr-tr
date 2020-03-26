@@ -1,17 +1,18 @@
 ---
 title: Visual Studio Aboneliklerine CloudPilot Avantajı | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/13/2019
+ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Belirli Visual Studio aboneliklerinde kullanılabilen CloudPilot avantajı hakkında bilgi edinin
-ms.openlocfilehash: 253a1b1c3b6996a200a236661d621c43975cb1ed
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: bebffb505f5c2b0fff7167ed2cccf629be1e7543
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74099624"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274043"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde CloudPilot avantajı
 Uygulamalarınızı birkaç kolay adımda Microsoft Azure'a taşıyın. Birkaç dakika içinde, başarılı geçiş için kod satırına kadar gerekli tüm kod değişikliklerini tanımlayın: Kapsayıcılar, VM'ler, Uygulama Hizmetleri, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure'a taşıyın.
@@ -83,6 +84,11 @@ Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [
 - Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
 - Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
-## <a name="next-steps"></a>Sonraki adımlar
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
+## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını zaten [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) etkinleştirmediyseniz, Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredinizi kullanmak için Araçlar kategorisindeki Azure döşemesini ziyaret edin ve tıklayın.

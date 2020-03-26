@@ -3,15 +3,16 @@ title: Abone Portalı içinden abonelik yöneticinize başvurun
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
 ms.topic: conceptual
 description: Soru veya sorunlarla ilgili yardım için abonelik yöneticinize nasıl başvurarak iletişim kurabilirsiniz öğrenin.
-ms.openlocfilehash: 20122b94d59b7b2c3fbe437531cd439341e6b2dd
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: b203feee61bf44af99ea802992e1fdc3c416c037
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78937536"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232627"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Abonelik yöneticinizden yardım alın
 Visual Studio aboneliğiniz size iş veya okul tarafından sağlanıyorsa, size bir abonelik yöneticisi veya "yönetici" tarafından atanmış olma olasılığı yüksektir.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirme olanağınızın olup olmadığını belirleyebilir ve aboneliğinizle ilgili diğer işlevleri gerçekleştirebilir.

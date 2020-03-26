@@ -3,15 +3,16 @@ title: Abonelik bilgilerini dışa aktarma | Microsoft Dokümanlar
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 14e4cffb-a695-436c-b269-7820f7411f4e
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Abonelerin listesini ve abonelik atamalarının ayrıntılarını nasıl dışa aktarın.
-ms.openlocfilehash: a7e6f6040daca541a689f1e4ad6297e17014dbed
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: dd24e9deb6225b3a8b88a461904fefb42ba4a912
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78263232"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232506"
 ---
 # <a name="export-subscription-information"></a>Abonelik bilgilerini dışarı aktarma
 Visual Studio Abonelikleri [Yönetim Portalı'nda,](https://manage.visualstudio.com)abonelerinizin bir listesini ve atamaları yla ilgili ayrıntıları dışa aktarabilirsiniz. Bu bilgiler, adlarını, e-posta adreslerini, alternatif e-posta adresini, abonelik düzeyini, atanan tarihi, aktivasyon durumunu, son kullanma tarihini, referans alanını, indirmelerin etkin olup olmadığını, ülke, dil, abonelik durumunu ve aboneliği içerir Guıd.  Liste, grafiklerin, pivotların ve diğer yapıların oluşturulması için Microsoft Excel'de kolayca açılabilen bir CSV dosyası olarak dışa aktarılır.

@@ -1,17 +1,18 @@
 ---
 title: Abonelikler Yönetim Portalı ile başlayın | Görsel Stüdyo Pazarı
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Abonelikler Yönetim Portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlayacaksınız öğrenin.
-ms.openlocfilehash: cc8a815317f46e01260f38e3ba974f89d928e49a
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 295bcd62efde8c24689c40e39ecef895e6a082c7
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78408918"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233160"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio Abonelikleri Yönetici Portalına Genel Bakış
 

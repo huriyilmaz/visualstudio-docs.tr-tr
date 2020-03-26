@@ -1,17 +1,18 @@
 ---
 title: Visual Studio Aboneliğinde Visual Studio IDE Avantajı | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/14/2019
+ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil olan Visual Studio IDE'yi nasıl indirip yükleyebilirsiniz öğrenin.
-ms.openlocfilehash: fd140dfe1853e6799a960fd8e251a566954bf143
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 154e5449603a8a92d2c2a52887fc4631b8dd0ab9
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74491595"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273978"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 parası
 
@@ -80,6 +81,12 @@ Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [
   - Teknik Destek:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Belgeler](/visualstudio/)
 - Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio'ya yüklendikten sonra, diğer önemli avantajları etkinleştirmeyi unutmayın:

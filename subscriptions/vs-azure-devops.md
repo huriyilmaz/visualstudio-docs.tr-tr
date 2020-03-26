@@ -1,17 +1,18 @@
 ---
 title: Visual Studio aboneleri için Azure DevOps avantajları | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/30/2019
+ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Azure DevOps'leri Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 73c6ae54ed39375e695fd1d68b972edb1ec9b46c
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79303311"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232050"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps'lerde aboneliğinize dahil olan bir dizi özelliği avantaj olarak kullanabilirsiniz. Bu aynı özellikleri, üye olduğunuz her Azure DevOps kuruluşunda, ister kuruluşu oluştursanız ister başka biri tarafından eklenmiştir.
@@ -45,6 +46,12 @@ Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış b
 - Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Subscriptions desteğine](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
 - Visual Studio IDE, Azure DevOps veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio desteğini](https://visualstudio.microsoft.com/support/)ziyaret edin.
 - [Azure DevOps belgeleri](/azure/devops/).
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Azure DevOps özellikleri hakkında daha fazla bilgi edinin:

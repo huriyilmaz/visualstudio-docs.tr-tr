@@ -1,17 +1,18 @@
 ---
 title: Visual Studio Aboneliğinde Konsiyerj Sohbet avantajı | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/13/2019
+ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde yer alan Concierge Chat avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 83fdb9a21528e00db1ef8652846c6b852c5c6067
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 6b6ed0635f86abb94fd3693d14b53a9ff1f7c936
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74099588"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274004"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Konsiyerj Sohbeti
 Concierge Chat hizmeti, ürün bilgilerini ve teknik belgeleri bulmanın yanı sıra Visual Studio abonelik avantajlarınızı kullanmaya yardımcı olur.
@@ -59,6 +60,12 @@ Hangi aboneliği kullandığınızdan emin değil misiniz?  E-posta adresinize [
 ## <a name="support-resources"></a>Destek kaynakları
 - Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
 - Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Microsoft araçları ve hizmetleri hakkında daha fazla bilgi için aşağıdaki belgelere göz atın:

@@ -1,7 +1,7 @@
 ---
 title: Günlüğü Değiştir (Unity için Visual Studio Araçları, Windows) | Microsoft Dokümanlar
 ms.custom: ''
-ms.date: 12/02/2019
+ms.date: 3/23/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,66 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 0e1810f452f48c95e0c4e8117820be3598b0f139
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0b1d735cd05f79eaabd00a575a6c050b37ce2d16
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74706779"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232830"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Günlüğü değiştir (Unity için Visual Studio Tools, Windows)
 
 Unity için Visual Studio Tools değişiklik günlüğü.
+
+## <a name="4510"></a>4.5.1.0
+
+Yayınlanma Mart 16, 2020
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Entegrasyon:**
+
+  - Için [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md)bir bastırıcı eklendi. Invoke, InvokeRepeating, StartCoroutine veya StopCoroutine ile kullanılan özel yöntemler kullanılmamış olarak işaretlenmemeli.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Sabit OnDrawGizmos/OnDrawGizmosSeçme belgeler
+
+- **Değerlendirme:**
+
+  - Lambda argüman denetimi düzeltildi.
+
+## <a name="4501"></a>4.5.0.1
+
+Yayınlanma Şubat 19, 2020
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Yanlış [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) ileti imzası için tanılama denetimi düzeltildi. Birden çok devralma düzeyine sahip türleri denetlerken, bu `warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`tanılama aşağıdaki iletiyle başarısız olabilir: .
+
+## <a name="4500"></a>4.5.0.0
+
+Yayınlanma Ocak 22, 2020
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Entegrasyon:**
+
+  - HLSL dosyaları için destek eklendi.
+  
+  - Için [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md)bir bastırıcı eklendi. Öznitelik içeren `SerializeField` özel alanlar kullanılmamış olarak işaretlenmemeli.
+  
+  - Için [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md)bir bastırıcı eklendi. Öznitelik `SerializeField` içeren alanlar atanmamış olarak işaretlenmemeli.  
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Sabit proje`GenerateTargetFrameworkMonikerAttribute` oluşturma (hedef her zaman doğru bulunamadı)
 
 ## <a name="4420"></a>4.4.2.0
 
@@ -49,7 +99,7 @@ Yayınlanma Kasım 6, 2019
 
 - **Entegrasyon:**
 
-  - Gelişmiş ikili ve `UNT0002` çağırma ifadeleri ile etiket karşılaştırma çözümleyicisi düzeltildi.
+  - Gelişmiş ikili ve [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md) çağırma ifadeleri ile etiket karşılaştırma çözümleyicisi düzeltildi.
 
 ### <a name="deprecated-features"></a>Amortismana Küçümsülen Özellikler
 
@@ -65,7 +115,7 @@ Yayınlanma Tarihi: 15 Ekim 2019
 
 - **Entegrasyon:**
 
-  - Tüm Unity iletileri için (kullanılmayan parametre) için `IDE0060` bir bastırıcı eklendi.
+  - Tüm Unity iletileri için (kullanılmayan parametre) için [`IDE0060`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0005.md) bir bastırıcı eklendi.
   
   - `TooltipAttribute`' ile etiketlenen alanlar için hızlı bir araç ipucu eklendi (Bu da bu alanı kullanarak basit bir erişimci almak için çalışacaktır).
 
@@ -88,21 +138,21 @@ Yayınlanma Eylül 16, 2019
 - **Entegrasyon:**
 
   - Visual Studio'nun Birlik projelerine özel yeni tanılamalar ekleyerek Birlik projeleri için sahip olduğu anlayışı derinleştirdik. Unity projeleri için geçerli olmayan genel C# tanılamalarını gizleyerek IDE’yi daha akıllı hale getirdik. Örneğin, IDE, Unity Editor'daki değişkeni değiştirmenizi engelleyecek `readonly` bir denetçi değişkenini değiştirmek için hızlı düzeltme göstermez.
-    - `UNT0001`: Birlik iletileri boş olsalar bile çalışma zamanına göre çağrılır, Unity çalışma süresine göre kesintisiz işlemeden kaçınmak için bunları bildirmeyin.
-    - `UNT0002`: Dize eşitliği ni kullanarak etiket karşılaştırması yerleşik CompareTag yönteminden daha yavaştır.
-    - `UNT0003`: GetComponent'in genel formunun kullanımı tip güvenliği için tercih edilir.
-    - `UNT0004`: İletiyi güncelleştirme klitime bağlıdır ve Time.fixedDeltaTime yerine Time.deltaTime'ı kullanmalıdır.
-    - `UNT0005`: FixedUpdate iletisi çerçeve hızından bağımsızdır ve Time.deltaTime yerine Time.fixedDeltaTime kullanmalıdır.
-    - `UNT0006`: Bu Birlik iletisi için yanlış yöntem imzası algılandı.
-    - `UNT0007`: Unity, null coalescing ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecigeçersiz.
-    - `UNT0008`: Unity, null yayma ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecigeçersiz kılar.
-    - `UNT0009`: InitializeOnLoad özniteliğini bir sınıfa uygularken statik bir oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
-    - `UNT0010`: MonoBehaviours yalnızca AddComponent() kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
-    - `UNT0011`: ScriptableObject yalnızca CreateInstance() kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
-    - `USP0001`için `IDE0029`: Birlik nesneleri null coalescing kullanmamalıdır.
-    - `USP0002`for `IDE0031`: Unity nesneleri null yayılımı kullanmamalıdır.
-    - `USP0003`for `IDE0051`: Birlik iletileri Birlik çalışma zamanı tarafından çağrılır.
-    - `USP0004`for `IDE0044`: SerializeField özniteliği olan alanlar yalnızca okunmamalıdır.
+    - [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0001.md): Birlik iletileri boş olsalar bile çalışma zamanına göre çağrılır, Unity çalışma süresine göre kesintisiz işlemeden kaçınmak için bunları bildirmeyin.
+    - [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md): Dize eşitliği ni kullanarak etiket karşılaştırması yerleşik CompareTag yönteminden daha yavaştır.
+    - [`UNT0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0003.md): GetComponent'in genel formunun kullanımı tip güvenliği için tercih edilir.
+    - [`UNT0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0004.md): İletiyi güncelleştirme klitime bağlıdır ve Time.fixedDeltaTime yerine Time.deltaTime'ı kullanmalıdır.
+    - [`UNT0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0005.md): FixedUpdate iletisi çerçeve hızından bağımsızdır ve Time.deltaTime yerine Time.fixedDeltaTime kullanmalıdır.
+    - [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md): Bu Birlik iletisi için yanlış yöntem imzası algılandı.
+    - [`UNT0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0007.md): Unity, null coalescing ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecigeçersiz.
+    - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0008.md): Unity, null yayma ile uyumsuz olan Unity nesneleri için null karşılaştırma işlecigeçersiz kılar.
+    - [`UNT0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0009.md): InitializeOnLoad özniteliğini bir sınıfa uygularken statik bir oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
+    - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0010.md): MonoBehaviours yalnızca AddComponent() kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
+    - [`UNT0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0011.md): ScriptableObject yalnızca CreateInstance() kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
+    - [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0001.md)için `IDE0029`: Birlik nesneleri null coalescing kullanmamalıdır.
+    - [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0002.md)for `IDE0031`: Unity nesneleri null yayılımı kullanmamalıdır.
+    - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0003.md)for `IDE0051`: Birlik iletileri Birlik çalışma zamanı tarafından çağrılır.
+    - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0004.md)for `IDE0044`: SerializeField özniteliği olan alanlar yalnızca okunmamalıdır.
 
 ## <a name="4310"></a>4.3.1.0
 

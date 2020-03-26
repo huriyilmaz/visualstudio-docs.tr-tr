@@ -2,7 +2,7 @@
 title: Visual Studio Build Tools'u konteynere yükleyin
 titleSuffix: ''
 description: Sürekli tümleştirme ve sürekli teslim (CI/CD) iş akışlarını desteklemek için Visual Studio Build Tools'u windows kapsayıcısına nasıl yükleyini öğrenin.
-ms.date: 07/03/2019
+ms.date: 03/25/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: d5c038e2-e70d-411e-950c-8a54917b578a
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 53049d37f23a72adb337cdad629f4c689c83707e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 61ec972bd5e361c4417e49092de5976000a6da5f
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114613"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273900"
 ---
 # <a name="install-build-tools-into-a-container"></a>Yapı Araçları'nı bir kapsayıcıya yükleme
 
@@ -71,22 +71,24 @@ Aşağıdaki örnek Dockerfile'ı diskinizdeki yeni bir dosyaya kaydedin. Dosya 
    # Download the Build Tools bootstrapper.
    ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Install Build Tools excluding workloads and components with known issues.
+   # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
    RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
        --installPath C:\BuildTools `
-       --all `
+       --add Microsoft.VisualStudio.Workload.AzureBuildTools `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
        --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
-   # Start developer command prompt with any other commands specified.
-   ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
-
-   # Default to PowerShell if no other command specified.
-   CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+   # Define the entry point for the Docker container.
+   # This entry point starts the developer command prompt and launches the PowerShell shell.
+   ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!TIP]
+   > İş yükleri ve bileşenlerlistesi için [Visual Studio Build Tools bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
+   >
 
    > [!WARNING]
    > Resminizi doğrudan microsoft/windowsservercore veya mcr.microsoft.com/windows/servercore temel lerseniz (bkz. [Microsoft syndicates konteyner kataloğu),](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/).NET Framework düzgün yüklenmeyebilir ve yükleme hatası belirtilmeyebilir. Yönetilen kod yükleme tamamlandıktan sonra çalışmayabilir. Bunun yerine, resminizi [microsoft/dotnet-framework:4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) veya sonraki temeller. Ayrıca, sürüm 4.7.2 veya daha sonra etiketlenen görüntülerin `SHELL`PowerShell'i `RUN` varsayılan `ENTRYPOINT` olarak kullanabileceğini ve bu görüntülerin ve yönergelerin başarısız lığa neden olacağını unutmayın.
@@ -94,7 +96,7 @@ Aşağıdaki örnek Dockerfile'ı diskinizdeki yeni bir dosyaya kaydedin. Dosya 
    > Visual Studio 2017 sürüm 15.8 veya daha önceki (herhangi bir ürün) mcr.microsoft.com/windows/servercore:1809 veya daha sonra düzgün bir şekilde yüklenmez. Hata görüntülenmez.
    >
    > Hangi kapsayıcı işletim sistemi sürümlerinin hangi işletim sistemi sürümlerinde destekleneceğini görmek için [Windows kapsayıcı sürümü uyumluluğu](/virtualization/windowscontainers/deploy-containers/version-compatibility) ve bilinen sorunlar için [kapsayıcılar için bilinen sorunları](build-tools-container-issues.md) görün.
-
+   
    ::: moniker-end
 
    ::: moniker range="vs-2019"
@@ -111,22 +113,24 @@ Aşağıdaki örnek Dockerfile'ı diskinizdeki yeni bir dosyaya kaydedin. Dosya 
    # Download the Build Tools bootstrapper.
    ADD https://aka.ms/vs/16/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Install Build Tools excluding workloads and components with known issues.
+   # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
    RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
        --installPath C:\BuildTools `
-       --all `
+       --add Microsoft.VisualStudio.Workload.AzureBuildTools `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
        --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
-   # Start developer command prompt with any other commands specified.
-   ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
-
-   # Default to PowerShell if no other command specified.
-   CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+   # Define the entry point for the docker container.
+   # This entry point starts the developer command prompt and launches the PowerShell shell.
+   ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!TIP]
+   > İş yükleri ve bileşenlerlistesi için [Visual Studio Build Tools bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
+   >
 
    > [!WARNING]
    > Resminizi doğrudan microsoft/windowsservercore'a temel alarsanız, .NET Framework düzgün yüklenmeyebilir ve yükleme hatası belirtilmeyebilir. Yönetilen kod yükleme tamamlandıktan sonra çalışmayabilir. Bunun yerine, resminizi [microsoft/dotnet-framework:4.8](https://hub.docker.com/r/microsoft/dotnet-framework) veya sonraki temeller. Ayrıca, sürüm 4.8 veya daha sonra etiketlenen görüntülerin `SHELL`PowerShell'i `RUN` varsayılan `ENTRYPOINT` olarak kullanabileceğini ve bu nedenle yönergelerin başarısız lığa neden olacağını unutmayın.
@@ -189,6 +193,15 @@ Artık bir görüntü oluşturduğunuza göre, hem etkileşimli hem de otomatik 
    ::: moniker-end
 
 Bu resmi CI/CD iş akışınız için kullanmak için, sunucuların yalnızca çekmesi gerektiğinden, bu resmi kendi [Azure Kapsayıcı Kayıt Defterinizde](https://azure.microsoft.com/services/container-registry) veya diğer dahili [Docker registry'nizde](https://docs.docker.com/registry/deploying) yayımlayabilirsiniz.
+
+   > [!NOTE]
+   > Docker konteyneri başlamazsa, büyük olasılıkla Visual Studio yükleme sorunu vardır. Visual Studio toplu komutunu çağıran adımı kaldırmak için Dockerfile'yi güncelleştirebilirsiniz. Bu, Docker kapsayıcısını başlatmanızı ve yükleme hatası günlüklerini okumanızı sağlar.
+   >
+   > Dockerfile dosyanızda, komutu `&&` ve `ENTRYPOINT` parametreleri `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` kaldırın. Komut şimdi olmalıdır `ENTRYPOINT ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]`. Ardından, Dockerfile'ı yeniden `run` oluşturun ve kapsayıcı dosyalarına erişmek için komutu çalıştırın. Yükleme hatası günlüklerini bulmak için `$env:TEMP` dizine gidin `dd_setup_<timestamp>_errors.log` ve dosyayı bulun.
+   >
+   > Yükleme sorununu tanımlayıp düzelttinden `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` sonra, `&&` `ENTRYPOINT` komuta ve parametrelere geri ekleyebilir ve Dockerfile'ınızı yeniden oluşturabilirsiniz.
+   >
+   > Daha fazla bilgi [için, kapsayıcılar için bilinen sorunlara](build-tools-container-issues.md)bakın.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

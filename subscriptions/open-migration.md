@@ -3,15 +3,16 @@ title: Müşteriler için Visual Studio aboneliklerini yöneten iş ortakları |
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: İş ortaklarının müşterileri için Visual Studio aboneliklerini nasıl yönettiğini öğrenin.
-ms.openlocfilehash: 53f19b76d79bb7f2e6246c9f5b2866bbf9262dfe
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: bf1fe706a0e1ee0b027e465c0bfaa8c0d326ee99
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78947072"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232292"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteriler adına abonelikleri yöneten iş ortakları
 Visual Studio [Abonelikleri Yönetim Portalı'ndaki abonelikleri](https://manage.visualstudio.com)yönetmek için izlemeleri gereken birkaç adım vardır. Süreç şöyle olacaktır:
@@ -50,7 +51,7 @@ Bu senaryo, yeni Açık Lisans siparişleri vermiş, ancak [VLSC'ye](https://www
 > Müşteri, Açık Lisans'a bir İş Ortağının eklendiğini bildiren bir bildirim e-postası alır. İş Ortağı'nın erişimini kaldırmayı seçebilirler.
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio Lisanslama Teknik İncelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
+- [Visual Studio Lisanslama Teknik İncelemesi](https://aka.ms/vslicensing)
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Toplu Lisans Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

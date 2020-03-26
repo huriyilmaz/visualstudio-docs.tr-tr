@@ -1,18 +1,19 @@
 ---
 title: Bağlı Microsoft hesabı ve Azure Active Directory kimlikleri nasıl kullanılır | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 50ce0445-ef1a-4e92-b9d0-aebb2155a111
 ms.date: 03/11/2020
 ms.topic: conceptual
 robots: noindex, nofollow
 description: Bağlı Microsoft hesapları ve Azure Etkin Dizin kimlikleri ile nasıl çalışacağınızı öğrenin
-ms.openlocfilehash: 3dcb41a26f27e5135962edf7ff933de40ccefe5e
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: b88c978f330520af62f51e372db93475b71caa36
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508985"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233183"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde bağlı kimlikler nasıl kullanılır?
 İşinizden veya okulunuzun aracılığıyla bir Visual Studio aboneliği alırsanız ve oturum açmak için Microsoft hesabınızı (MSA) kullanırsanız, abonelik yöneticiniz MSA'nızı kuruluşunuzun Azure Etkin Dizini'nde (Azure AD) kimliğinize bağlayabilir.  Bu, aboneliğinizde yer alan bazı avantajlara nasıl erişeceğiniz değişir. 

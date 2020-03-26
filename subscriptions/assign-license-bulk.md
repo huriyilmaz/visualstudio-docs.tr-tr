@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Toplu ekleme özelliğini veya Microsoft Azure Etkin Dizin gruplarını kullanarak yöneticilerin birden çok aboneye nasıl lisans atayabileceğini öğrenin
-ms.openlocfilehash: 3a4a6c400a17d52cdd67391a45ba088cdbb7af01
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5a1327e497a48b6173afd4a7ad095dfcabacd098
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79988484"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274069"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikyönetimi Portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Tek tek kullanıcıları eklemek için [bkz.](assign-license.md)
@@ -104,6 +104,10 @@ Bu özelliği kullanmak, abonelik atamalarınızı en üstte kaltın. Abonelikle
 7. Eklenen grubu görmek için kullanıcı listenizin en altına gidin.  
 
 8. Grup üyelerini görüntülemek için **aboneleri** Görüntüle'yi seçin. Gruptaki abonelerle ilgili ayrıntıları görüntüleyebilirsiniz, ancak abonelere veya atandıkları aboneliklerde herhangi bir değiştirme yapamazsınız.    
+
+> [!NOTE]
+> Abonelikleri daha sonra bir Azure REKLAM grubunun parçası olarak eklenen kullanıcılara ayrı ayrı atadıysanız, bunlar grubun bir parçası olarak eklenir ve artık tek tek listelenmez. Ancak, tek tek abonelik farklı bir abonelik düzeyi içinse, iki abonelik leri olacaktır.  Örnek: Bir kullanıcının tek bir Visual Studio Professional aboneliği varsa ve visual studio enterprise aboneliklerini atadığınız bir grubun üyesiyse, her ikisine de sahip olurlar.  
+
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
 

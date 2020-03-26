@@ -1,17 +1,18 @@
 ---
 title: Abone Portalını Kullanma https://my.visualstudio.com - | Microsoft Dokümanlar
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Visual Studio abonelikleri portalında kullanabileceğiniz tüm avantajlar hakkında bilgi edinin
-ms.openlocfilehash: 13266e018f122ae2b890e8c92bff71ce3016de75
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5403880dc5a2ac62cd23800cea5acacd2766bc6f
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75546232"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232195"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Abone portalını kullanma - my.visualstudio.com
 
@@ -51,6 +52,12 @@ Destek sayfası, Avantajlar sayfasında Destek kategorisinde bulunan bireysel av
 ## <a name="marketplace"></a>[Mağaza](https://marketplace.visualstudio.com/)
 
 Visual Studio bulut aboneliğini yenilemek mi gerekiyor?  Visual Studio ürün ailesi için en son uzantıları indirmek ister misiniz?  Market, kullanıcıların Azure DevOps, Azure DevOps Server ve Visual Studio Code'u daha da iyi hale getiren uzantıları, araçları ve hizmetleri bulmasına yardımcı olur. Hatta yayıncı olabilir ve Market'te kendi uzantılarınızı yayınlayabilirsiniz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Portalda oturum açın [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) ve avantajlarınızı kontrol edin.  Microsoft [Hesabınız](sign-in-msa.md) (MSA), iş veya [okul hesabınız ve](sign-in-work.md)hatta [GitHub hesabınızla](sign-in-github.md)portalda oturum açma hakkında daha fazla bilgi edinebilirsiniz. 

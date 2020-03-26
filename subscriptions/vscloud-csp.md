@@ -1,17 +1,18 @@
 ---
 title: CSP'ler için Visual Studio bulut aboneliği satın alma
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Bulut Çözüm Sağlayıcıları için müşterileriniz için Visual Studio bulut aboneliklerini satın alma ve yönetme hakkında bilgiler.
-ms.openlocfilehash: 7cc5a04a26a3120d88a931dde47c3b249c082791
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 76c56759fdc07104290c45d1c4fc345bf0bad8b7
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75851396"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273874"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Müşterileriniz için Visual Studio bulut abonelikleri satın alın ve yönetin
 [Bulut Çözüm Sağlayıcısı (CSP)](https://partner.microsoft.com/cloud-solution-provider) programındaki iş ortakları, müşterileri için Visual Studio Enterprise ve Visual Studio Professional bulut abonelikleri satın alabilir.
@@ -21,7 +22,7 @@ ms.locfileid: "75851396"
 > [!NOTE]
 > Microsoft artık Cloud Subscriptions'da Visual Studio Professional Annual abonelikleri ve Visual Studio Enterprise Annual abonelikleri sunamaz. Mevcut müşterilerin aboneliklerini yenileme, artırma, azaltma veya iptal etme deneyimi ve yeteneğinde herhangi bir değişiklik olmayacaktır. Yeni müşteriler Visual Studio [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) satın almak için farklı seçenekleri keşfetmek için gitmek için teşvik edilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 Öncelikle müşteri kiracınızı İş Ortağı Merkezi'nde ayarlamanız ve bu kiracı için bir Azure aboneliği oluşturmanız gerekir.
 
 [Daha fazlasını öğrenin](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -105,3 +106,11 @@ C: Hayır, Visual Studio abonelikleri için fiyatlar düz. Aynı fiyat yeni abon
 ### <a name="q-are-there-azure-devtest-pricing-options-for-csps"></a>S: CSP'ler için Azure geliştirme/test fiyatlandırma seçenekleri var mı?
 C: Şu anda değil. Müşterileriniz [Azure geliştirme/test fiyatlandırması](https://azure.microsoft.com/pricing/dev-test/)avantajlarından yararlanabilir, ancak csp'ler için özel olarak hiçbir şeyimiz yoktur.
 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps belgeleri](https://docs.microsoft.com/azure/devops/)
+- [Azure belgeleri](https://docs.microsoft.com/azure/)
+- [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Sonraki adımlar
+Sık kullanılan faturalandırma sorularının yanıtları için [bulut faturalandırma SSS](vscloud-billing-faq.md) bölümüne bakın.  
