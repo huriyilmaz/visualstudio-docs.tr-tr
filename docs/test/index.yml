@@ -1,0 +1,64 @@
+### YamlMime:Landing
+title: Visual Studio'daki test etme araçları
+summary: Visual Studio test araçları, sizin ve takımınızın kod mükemmelliğinde yüksek standartlar geliştirmenize ve bu standartları sürdürmenize yardımcı olabilir.
+metadata:
+  title: Visual Studio'daki test etme araçları
+  description: Kodunuzu test etmek için Visual Studio’yu kullanmayı öğrenin.
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 03/23/2020
+  ms.openlocfilehash: cb29c5219cb3ad73cf8a3efeecaf344c7af81968
+  ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 03/25/2020
+  ms.locfileid: "80261575"
+landingContent:
+- title: Test araçları hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Test araçlarına ilk bakış
+      url: improve-code-quality.md
+    - text: Birim testi araçlarına genel bakış
+      url: unit-test-your-code.md
+    - text: Dinamik birim testine genel bakış
+      url: live-unit-testing-intro.md
+- title: Birim testi
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Birim testini kullanmaya başlama
+      url: getting-started-with-unit-testing.md
+    - text: Yönetilen kod için birim testleri oluşturma ve çalıştırma
+      url: walkthrough-creating-and-running-unit-tests-for-managed-code.md
+    - text: Test Gezgini ile birim testleri çalıştırma
+      url: run-unit-tests-with-test-explorer.md
+    - text: Live Unit Testing kullanmaya başlama
+      url: live-unit-testing-start.md
+    - text: Birim testleri oluşturma (IntelliTest)
+      url: generate-unit-tests-for-your-code-with-intellitest.md
+- title: Diğer test araçları
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kod kapsamı - Ne kadar kodun test edildiğini belirleme
+      url: using-code-coverage-to-determine-how-much-code-is-being-tested.md
+    - text: Microsoft Fakes - Test edilen kodu yalıtma
+      url: isolating-code-under-test-with-microsoft-fakes.md
+    - text: Kodlanmış kullanıcı arabirimi (kullanım dışı)
+      url: use-ui-automation-to-test-your-code.md
+    - text: Yük test etme (kullanım dışı)
+      url: quickstart-create-a-load-test-project.md
+- title: İlgili araçlar (Azure DevOps)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Keşif testi ve el ile test (Azure Test Plans)
+      url: /azure/devops/test/overview?view=azure-devops
+    - text: Yük test etme (Azure Test Plans)
+      url: /azure/devops/test/load-test/getting-started-with-performance-testing?view=azure-devops
+    - text: Sürekli test (Azure Pipelines)
+      url: /azure/devops/pipelines/?view=azure-devops

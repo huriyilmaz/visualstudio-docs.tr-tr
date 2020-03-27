@@ -1,5 +1,9 @@
 - name: Visual Studio'daki test etme araçları
-  href: improve-code-quality.md
+  href: index.yml
+- name: Genel Bakış
+  items:
+    - name: Test araçlarına ilk bakış
+      href: improve-code-quality.md
 - name: Birim testi
   items:
     - name: Birim testi araçlarına genel bakış
@@ -14,14 +18,10 @@
       href: create-unit-tests-menu.md
     - name: IntelliTest
       items:
+        - name: Genel Bakış
+          href: intellitest-manual/index.md
         - name: 'Nasıl yapılır: IntelliTest ile birim testleri oluşturma'
           href: generate-unit-tests-for-your-code-with-intellitest.md
-        - name: Genel Bakış
-          href: intellitest-manual/introduction.md
-        - name: Başlarken
-          href: intellitest-manual/getting-started.md
-        - name: Bölümlerin dizini
-          href: intellitest-manual/index.md
         - name: Test oluşturma
           href: intellitest-manual/test-generation.md
         - name: Dinamik sembolik yürütme
