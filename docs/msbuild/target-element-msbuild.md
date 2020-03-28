@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79686132adce043b4864d545f0912564709cfe2c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 472d4c9c4c44176048a1bfd8c0791a1a406b95bd
+ms.sourcegitcommit: 8ff6c6975148ce43bdac21c8995fbab910c312fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631984"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375559"
 ---
 # <a name="target-element-msbuild"></a>Hedef eleman (MSBuild)
 
@@ -59,7 +59,7 @@ MSBuild'in sırayla yürütmesi için bir dizi görev içerir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gerekli öznitelik.<br /><br /> Hedefin adı.|
+|`Name`|Gerekli öznitelik.<br /><br /> Hedefin adı. Hedef ad, ' dışında `$@()%*?.`herhangi bir karakter içerebilir.|
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek durum. Koşul `false`değerlendirirse, hedef hedefin gövdesini veya öznitelikte `DependsOnTargets` ayarlanan herhangi bir hedefi yürütmez. Koşullar hakkında daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
 |`Inputs`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefe giriş oluşturan dosyalar. Birden çok dosya yarım iki nokta ile ayrılır. Dosyaların zaman damgaları, dosyaların güncel olup olmadığını `Outputs` `Target` belirlemek için dosyaların zaman damgalarıyla karşılaştırılır. Daha fazla bilgi için [bkz: Artımlı yapılar](../msbuild/incremental-builds.md), [Nasıl yapılı: Artımlı olarak oluşturun](../msbuild/how-to-build-incrementally.md)ve [Dönüşümler](../msbuild/msbuild-transforms.md).|
 |`Outputs`|İsteğe bağlı öznitelik.<br /><br /> Bu hedefe çıktı oluşturan dosyalar. Birden çok dosya yarım iki nokta ile ayrılır. Dosyaların zaman damgaları, dosyaların güncel olup olmadığını `Inputs` `Target` belirlemek için dosyaların zaman damgalarıyla karşılaştırılır. Daha fazla bilgi için [bkz: Artımlı yapılar](../msbuild/incremental-builds.md), [Nasıl yapılı: Artımlı olarak oluşturun](../msbuild/how-to-build-incrementally.md)ve [Dönüşümler](../msbuild/msbuild-transforms.md).|
