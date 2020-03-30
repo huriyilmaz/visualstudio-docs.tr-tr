@@ -1,5 +1,5 @@
 ---
-title: Test etmek için ClickOnce uygulamaları dağıtma ve üretim sunucularına teslim etmeden | Microsoft Docs
+title: ClickOnce Uygulamalarını İstifa Etmeden Test ve Üretim Sunucuları Için Dağıtma | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,50 +20,50 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2a65f2e39eac5889b287b082b4cad6842f44aa2e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a8e41e67d5e2800acc41e1220fe632001420a274
+ms.sourcegitcommit: d6828e7422c8d74ec1e99146fedf0a05f757245f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675543"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80395379"
 ---
 # <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>Sınama ve Üretim Sunucuları için Teslim Etmeden ClickOnce Uygulamaları Dağıtma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda ele alınmıştır ClickOnce bildirimlerini yeniden imzalama veya ClickOnce değiştirmeden birden çok ağ konumundan ClickOnce uygulamalarının dağıtımını sağlayan sürüm 3.5 .NET Framework tanıtılan yeni bir özelliğidir.  
+Bu konu, .NET Framework sürüm 3.5'te tanıtılan ve ClickOnce uygulamalarını clickonce bildirimlerini yeniden imzalamadan veya değiştirmeden birden çok ağ noktasından dağıtımını sağlayan ClickOnce'nin yeni bir özelliğini tartışır.  
   
 > [!NOTE]
-> Bildirimin hala uygulamaların yeni sürümlerini dağıtmak için tercih edilen yöntemdir. Mümkün olduğunda resigning yöntemini kullanın. Daha fazla bilgi için [Mage.exe (bildirim üretme ve düzenleme aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1).  
+> İstifa, uygulamaların yeni sürümlerini dağıtmak için hala tercih edilen yöntemdir. Mümkün olduğunda, istifa yöntemini kullanın. Daha fazla bilgi için [Mage.exe (Manifest Generation and Düzenleme Aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)bakın.  
   
- Üçüncü taraf geliştiriciler ve ISV'ler için bu özellik, kendi uygulamalarınızı güncelleştirmeye gerek müşterileri kolaylaştırmaya katılımı. Aşağıdaki durumlarda bu özellik kullanılabilir:  
+ Üçüncü taraf geliştiriciler ve ISV'ler bu özelliği kabul ederek müşterilerinin uygulamalarını güncelleştirmelerini kolaylaştırır. Bu özellik aşağıdaki durumlarda kullanılabilir:  
   
-- İlk yükleme haricinde bir uygulamanın bir uygulama güncelleştirilirken.  
+- Bir uygulamayı güncellerken, uygulamanın ilk yüklemesini değil.  
   
-- Uygulamanın bir bilgisayarda yalnızca bir yapılandırma olduğunda. Örneğin, bir uygulama iki farklı veritabanına işaret edecek şekilde yapılandırıldıysa, bu özellik kullanamazsınız.  
+- Bir bilgisayarda uygulamanın yalnızca bir yapılandırması olduğunda. Örneğin, bir uygulama iki farklı veritabanını işaret etmek üzere yapılandırılırsa, bu özelliği kullanamazsınız.  
   
-## <a name="excluding-deploymentprovider-from-deployment-manifests"></a>Dağıtım Bildirimleri'nden deploymentProvider hariç tutma  
- .NET Framework 2.0 ve .NET Framework 3.0, çevrimdışı kullanım için sisteme yüklenen herhangi bir ClickOnce uygulaması belirtmelisiniz bir `deploymentProvider` , dağıtım bildiriminde. `deploymentProvider` Güncelleştirme konumu olarak; genellikle adlandırılır, ClickOnce uygulama güncelleştirmelerini denetleyecek konumdur. Uygulama yayımcıları dağıtımlarını imzalamak gerekli ile birlikte bu gereksinim, bir satıcıdan veya diğer üçüncü taraf bir ClickOnce uygulamasını güncelleştirmek bir şirket için zorlaştırıyordu. Ayrıca, aynı uygulama aynı ağ üzerinde birden fazla konumdan dağıtmak daha zor kılar.  
+## <a name="excluding-deploymentprovider-from-deployment-manifests"></a>DağıtımSağlayıcı'yı Dağıtım Bildirimlerinden Hariç  
+ .NET Framework 2.0 ve .NET Framework 3.0'da, çevrimdışı kullanılabilirlik için sisteme yüklenen `deploymentProvider` herhangi bir ClickOnce uygulaması, dağıtım bildiriminde bir belirtmelidir. Genellikle `deploymentProvider` güncelleştirme konumu olarak adlandırılır; ClickOnce'nin uygulama güncelleştirmelerini denetleyeceği yerdir. Bu gereksinim, uygulama yayımcılarının dağıtımlarını imzalama gereksinimiyle birleştiğinde, bir şirketin clickonce uygulamasını bir satıcıdan veya diğer üçüncü taraflardan güncelleştirmesini zorlaştırdı. Ayrıca, aynı ağüzerinde birden çok konumdan aynı uygulamayı dağıtmak daha zor hale getirir.  
   
- .NET Framework 3. 5'te yapılan değişiklikler ile ardından kendi ağ üzerinde uygulamasını dağıtabilirsiniz başka bir kuruluştaki bir ClickOnce uygulamasını sağlamak bir üçüncü taraf mümkündür.  
+ .NET Framework 3.5'te ClickOnce'de yapılan değişikliklerle, üçüncü bir tarafın başka bir kuruluşa ClickOnce uygulaması sağlaması mümkündür ve bu uygulama daha sonra uygulamayı kendi ağında dağıtabilir.  
   
- Bu özelliğin avantajlarından yararlanmak için ClickOnce uygulaması geliştiricileri içermemelidir `deploymentProvider` dağıtım bildirimlerinden. Bu hariç anlamına gelir `-providerUrl` dağıtım oluşturduğunuzda, bağımsız değişken bildirimlerini Mage.exe veya emin **başlatma konumu** metin kutusunu **uygulama bildirimi** sekmesinde boş bırakılır varsa, dağıtım bildirimleri MageUI.exe ile oluşturduğunuzdan.  
+ Bu özellikten yararlanabilmek için ClickOnce uygulamalarının `deploymentProvider` geliştiricilerinin dağıtım bildirimlerini hariç tutmaları gerekir. Bu, Mage.exe ile dağıtım bildirimleri oluştururken `-providerUrl` bağımsız değişkeni dışlamak veya MageUI.exe ile dağıtım bildirimleri oluşturuyorsanız Uygulama **Bildirimi** sekmesindeki Başlat **Konumu** metin kutusunun boş bırakıldığından emin olmak anlamına gelir.  
   
-## <a name="deploymentprovider-and-application-updates"></a>deploymentProvider ve uygulama güncelleştirmeleri  
- .NET Framework 3.5 ile başlayarak, artık belirtmek zorunda bir `deploymentProvider` hem çevrimiçi hem de çevrimdışı kullanım için bir ClickOnce uygulamasını dağıtmak için dağıtım bildiriminde. Bu paket ve kendi başınıza imzalaması, ancak kendi ağları üzerinde uygulamayı dağıtmak için diğer kurumlarla izin gerek duyduğunuz senaryolara senaryosunu destekler.  
+## <a name="deploymentprovider-and-application-updates"></a>dağıtımSağlayıcı ve Uygulama Güncellemeleri  
+ .NET Framework 3.5'ten başlayarak, hem `deploymentProvider` çevrimiçi hem de çevrimdışı kullanım için clickonce uygulamasını dağıtmak için artık dağıtım bildiriminizde bir uygulama belirtmeniz gerekmeyecektir. Bu, dağıtımı kendiniz paketlemeniz ve imzalamanız gereken, ancak diğer şirketlerin uygulamayı ağları üzerinden dağıtmasına izin verme niz gereken senaryoyu destekler.  
   
- Anımsanması gereken önemli nokta olan hariç tutan uygulamalar bir `deploymentProvider` yükleme konumlarını içeren bir güncelleştirme bunların Sevk edene kadar güncelleştirmeler sırasında değiştiremezsiniz `deploymentProvider` yeniden etiketleyin.  
+ Unutulmaması gereken önemli nokta, etiketi `deploymentProvider` yeniden içeren `deploymentProvider` bir güncelleştirme sevk edene kadar, a'yı dışlayan uygulamaların güncelleştirmeler sırasında yükleme konumlarını değiştiremeyeceğidir.  
   
- Aşağıda, bu noktayı açıklığa kavuşturmak için iki örnek verilmiştir. İlk örnekte, ilgili olmayan ClickOnce uygulaması yayımlama `deploymentProvider` etiketi ve ondan kullanıcılar sorun http://www.adatum.com/MyApplication/. Uygulamayı bir sonraki güncelleştirmesine yayımlamak istediğiniz kullanmaya karar verirseniz http://subdomain.adatum.com/MyApplication/, bu dağıtım bildiriminde bulunan gösteren, bir yolu olmaz http://www.adatum.com/MyApplication/. İkisinden birini yapabilirsiniz:  
+ Bu noktayı açıklığa kavuşturmak için iki örnek verilmiştir. İlk örnekte, etiketi olmayan `deploymentProvider` bir ClickOnce uygulaması yayımlarsınız ve kullanıcılardan bunu ' dan yüklemelerini `http://www.adatum.com/MyApplication/`istersiniz. Uygulamanın bir sonraki güncelleştirmesini yayımlamaya karar `http://subdomain.adatum.com/MyApplication/`verirseniz, bunu içinde bulunan dağıtım bildiriminde belirtmenizin bir yolu `http://www.adatum.com/MyApplication/`yoktur. İki şeyden birini yapabilirsiniz:  
   
-- Önceki sürümü kaldırmalısınız girmelerini söyleyin ve yeni bir konumdan yeni sürümünü yükleyin.  
+- Kullanıcılarınıza önceki sürümü kaldırmalarını ve yeni sürümü yeni konumdan yüklemelerini söyleyin.  
   
-- Bir güncelleştirme içerir http://www.adatum.com/MyApplication/ içeren bir `deploymentProvider` işaret http://www.adatum.com/MyApplication/. Ardından, daha sonra başka bir güncelleştirme sürüm `deploymentProvider` işaret http://subdomain.adatum.com/MyApplication/.  
+- Bir `http://www.adatum.com/MyApplication/` `deploymentProvider` işaret içeren bir güncelleştirme `http://www.adatum.com/MyApplication/`ekleyin. Daha sonra işaret ederek `deploymentProvider` başka `http://subdomain.adatum.com/MyApplication/`bir güncelleştirme yayımlayın.  
   
-  İkinci örnekte belirten ClickOnce uygulaması yayımlama `deploymentProvider`, ve ardından bunu kaldırmaya karar verirsiniz. Bir kez yeni sürümü olmadan `deploymentProvider` indirildi, istemcilere, uygulamanızın sahip bir sürümün kadar güncelleştirmeler için kullanılan bir yola yönlendirmek mümkün olmayacaktır `deploymentProvider` geri. İlk örnek olarak, `deploymentProvider` başlangıçta, yeni konum geçerli güncelleştirme konumuna işaret etmelidir. Bu durumda, eklemeyi denerseniz bir `deploymentProvider` , başvurduğu http://subdomain.adatum.com/MyApplication/, sonraki güncelleştirme işlemi başarısız olur.  
+  İkinci örnekte, belirten `deploymentProvider`bir ClickOnce uygulaması yayımlarsınız ve ardından kaldırmaya karar verirsiniz. İstemlere indirilmeyen `deploymentProvider` yeni sürüm indirildikten sonra, uygulamanızın geri yüklenmiş `deploymentProvider` bir sürümünü yayımlayana kadar güncelleştirmeler için kullanılan yolu yeniden yönlendiremeyeceksiniz. İlk örnekte olduğu `deploymentProvider` gibi, başlangıçta geçerli güncelleştirme konumunuzu değil, yeni konumunuzu işaret etmelidir. Bu durumda, bir `deploymentProvider` `http://subdomain.adatum.com/MyApplication/`"bu" anlamına gelen bir eklemeye çalışırsanız, bir sonraki güncelleştirme başarısız olur.  
   
-## <a name="creating-a-deployment"></a>Bir dağıtımı oluşturma  
- Farklı ağ konumlarını dağıtılabilir dağıtımları oluşturma adım adım yönergeler için bkz. [izlenecek yol: Yeniden imzalama gerektirmeyen ve marka bilgisini koruyan bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required?view=vs-2015).  
+## <a name="creating-a-deployment"></a>Dağıtım Oluşturma  
+ Farklı ağ konumlarından dağıtılabilen dağıtımlar oluşturma konusunda adım adım kılavuz [için, Walkthrough: Yeniden İmzalama Gerektirmeyen ve Marka Oluşturma Bilgilerini Koruyan Bir ClickOnce Uygulamasını El Ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required?view=vs-2015)' ya bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Mage.exe (bildirim üretme ve düzenleme aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)
+ [Mage.exe (Manifesto Oluşturma ve Düzenleme Aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
+ [MageUI.exe (Manifesto Oluşturma ve Düzenleme Aracı, Grafik İstemci)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)
