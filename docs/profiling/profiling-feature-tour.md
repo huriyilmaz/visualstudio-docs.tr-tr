@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2d23620a1861396971c79551088b898c9b77c86
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: b1ee476a518444bfff7a97a12c9fd814e9509239
+ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233105"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80412031"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Hızlı başlangıç: Profil oluşturma araçlarına ilk bakış
 
@@ -36,6 +36,21 @@ Hata ayıklama yaparken, CPU ve bellek kullanımını çözümlemek için **Tan�
 > [!NOTE]
 > Windows 7 ve sonraki lerle post-mortem araçlarını kullanabilirsiniz. Windows 8 ve daha sonra hata ayıklama **(Tanılama Araçları** penceresi) ile profil oluşturma araçları çalıştırmak için gereklidir.
 
+## <a name="examine-performance-using-perftips"></a>PerfTips'i kullanarak performansı inceleyin
+
+Genellikle, performans bilgilerini görüntülemek için en kolay yolu [PerfTips](../profiling/perftips.md)kullanmaktır. PerfTips'i kullanarak, kodunuzla etkileşimde bulunduktan sonra performans bilgilerini görüntüleyebilirsiniz. Olayın süresi (hata ayıklayıcının en son duraklatıldığından veya uygulamanın ne zaman başlatıldığa göre ölçülür) gibi bilgileri kontrol edebilirsiniz. Örneğin, kod (F10, F11) ile adım atarsanız, PerfTips size bir önceki adım işleminden geçerli adıma kadar uygulama çalışma süresini gösterir.
+
+![Profil Oluşturma Turu PerfTips](../profiling/media/prof-tour-perf-tips.png "Profil Oluşturma Turu PerfTips")
+
+Bir kod bloğunun yürütülmesinin ne kadar sürdüğünü veya tek bir işlevin tamamlanmasının ne kadar sürdüğünü incelemek için PerfTips'i kullanabilirsiniz.
+
+PerfTips, Tanılama Araçlarının **Olaylar** görünümünde de görünen aynı olayları gösterir. **Olaylar** görünümünde, ara verme noktası nın ayarlanması veya kod adımlama işlemi gibi hata ayıklama sırasında meydana gelen farklı olayları görüntüleyebilirsiniz.
+
+![Tanılama Araçları Etkinlikler görünümü](../profiling/media/prof-tour-events.png "Tanılama Araçları Olayları Görüntüleme")
+
+ > [!NOTE]
+ > Visual Studio Enterprise'ınız varsa, bu sekmede [IntelliTrace olaylarını](../debugger/intellitrace.md) da görebilirsiniz.
+
 ## <a name="analyze-cpu-usage"></a>CPU Kullanımını Analiz Etme
 
 CPU Kullanımı aracı, uygulamanızın performansını analiz etmeye başlamak için iyi bir yerdir. Uygulamanızın tüketen CPU kaynakları hakkında daha fazla şey söyleyecektir. CPU Kullanım aracının daha ayrıntılı bir gözden geçirme için [bkz.](../profiling/beginners-guide-to-performance-profiling.md)
@@ -53,24 +68,6 @@ Aracı en etkili şekilde kullanmak için, kodunuzda biri başlangıçta, diğer
 İlgilendiğiniz bir işleve çift tıklayın ve pencerenin ortasında seçili işlev, solda arama işlevi ve sağda çağrılan işlevler ile daha ayrıntılı bir üç bölmeli "kelebek" görünümü görürsünüz. **İşlev Gövdesi** bölümü, çağrı ve çağrılan işlevler dışında işlev gövdesinde harcanan toplam süreyi (ve zaman yüzdesini) gösterir. Bu veriler, işlevin kendisinin bir performans darboğaz olup olmadığını değerlendirmenize yardımcı olabilir.
 
 ![Tanılama Araçları arayan callee "kelebek" görünümü](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Tanılama Araçları Arayan Callee Görünümü")
-
-> [!TIP]
-> Performansı çözümlemede yardımcı olmak için, [perftips'i](#examine-performance-events-using-perftips) kodüzerinden adım atmak ve belirli işlevlerin veya kod bloklarının tamamlanmasının ne kadar sürdüğünü belirlemek için de kullanabilirsiniz.
-
-## <a name="examine-performance-events-using-perftips"></a>PerfTips kullanarak performans olaylarını inceleyin
-
-Genellikle, performans bilgilerini görüntülemek için en kolay yolu [PerfTips](../profiling/perftips.md)kullanmaktır. PerfTips'i kullanarak, kodunuzla etkileşimde bulunduktan sonra performans bilgilerini görüntüleyebilirsiniz. Olayın süresi (hata ayıklayıcının en son duraklatıldığından veya uygulamanın ne zaman başlatıldığa göre ölçülür) gibi bilgileri kontrol edebilirsiniz. Örneğin, kod (F10, F11) ile adım atarsanız, PerfTips size bir önceki adım işleminden geçerli adıma kadar uygulama çalışma süresini gösterir.
-
-![Profil Oluşturma Turu PerfTips](../profiling/media/prof-tour-perf-tips.png "Profil Oluşturma Turu PerfTips")
-
-Bir kod bloğunun yürütülmesinin ne kadar sürdüğünü veya tek bir işlevin tamamlanmasının ne kadar sürdüğünü incelemek için PerfTips'i kullanabilirsiniz.
-
-PerfTips, Tanılama Araçlarının **Olaylar** görünümünde de görünen aynı olayları gösterir. **Olaylar** görünümünde, ara verme noktası nın ayarlanması veya kod adımlama işlemi gibi hata ayıklama sırasında meydana gelen farklı olayları görüntüleyebilirsiniz.
-
-![Tanılama Araçları Etkinlikler görünümü](../profiling/media/prof-tour-events.png "Tanılama Araçları Olayları Görüntüleme")
-
- > [!NOTE]
- > Visual Studio Enterprise'ınız varsa, bu sekmede [IntelliTrace olaylarını](../debugger/intellitrace.md) da görebilirsiniz.
 
 ## <a name="analyze-memory-usage"></a>Bellek kullanımını analiz etme
 

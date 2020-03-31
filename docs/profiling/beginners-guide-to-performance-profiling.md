@@ -17,16 +17,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d106b15a94e00915f8cd0fd2e69c2918f9fbead9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1ac7d23c1d4cb245366ecf03c1a8a0e67b11cb55
+ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549842"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80412019"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını analiz ederek uygulama performansını ölçme
 
-Uygulamanızdaki performans sorunlarını çözümlemek için Visual Studio profil oluşturma araçlarını kullanabilirsiniz. Bu makalede, uygulamanız için performans verileri elde etmek için Tanılama Araçları'nın **CPU Kullanımı** sekmesinin nasıl kullanılacağı nı gösterir ve Ayrıca PerfTips'in kullanımı hakkında bilgi sağlar.
+Uygulamanızdaki performans sorunlarını çözümlemek için Visual Studio profil oluşturma araçlarını kullanabilirsiniz. Bu makalede, uygulamanız için performans verileri elde etmek için Tanılama Araçları'nın **CPU Kullanımı** sekmesinin nasıl kullanılacağı gösterilmektedir.
 
 Hata ayıklama duraklatıldığında, **CPU Kullanım** aracı uygulamanızda çalıştırılabilen işlevler hakkında bilgi toplar. Araç, işi gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli kesimlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
 
@@ -35,7 +35,7 @@ Tanılama hub'ı, tanılama oturumunuzu çalıştırmak ve yönetmek için size 
 > [!Important]
 > Tanılama Araçları, Visual Studio'da ASP.NET ve yerel/C++ geliştirme dahil .NET geliştirme için desteklenir.
 
-Bu makalede, normal hata ayıklama iş akışınızda CPU kullanımını çözümlemeyi tartışacağız. Cpu kullanımını ekli bir hata ayıklayıcı olmadan veya çalışan bir uygulamayı hedefleyerek de analiz edebilirsiniz - [Run profiling tools with or without the debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)
+Bu makalede, normal hata ayıklama iş akışınızda CPU kullanımını çözümlemeyi tartışacağız. Cpu kullanımını ekli bir hata ayıklayıcı olmadan veya çalışan bir uygulamayı hedefleyerek de analiz edebilirsiniz - [Run profiling tools with or without the debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) Ayrıca başka bir profil oluşturma aracı kullanabilirsiniz, [PerfTips](../profiling/perftips.md), kod üzerinden adım ve tamamlamak için belirli işlevleri veya kod blokları ne kadar sürdüğünü belirlemek için.
 
 Profil oluşturma araçlarını Windows 7 ve sonraki hata ayıklama olmadan kullanabilirsiniz. Windows 8 ve daha sonra hata ayıklama **(Tanılama Araçları** penceresi) ile profil oluşturma araçları çalıştırmak için gereklidir.
 
@@ -77,15 +77,9 @@ Bu öğreticide şunları yapacaksınız:
 
      **Cpu Profili Kaydet'i**seçtiğinizde, Visual Studio işlevlerinizi kaydetmeye başlar ve bunların yürütülmesi ne kadar sürer. Toplanan bu verileri yalnızca uygulamanız bir kesme noktasında durdurulduğunda görüntüleyebilirsiniz.
 
-     > [!TIP]
-     > Performansı çözümlemede yardımcı olmak için, [perftips'i](../profiling/perftips.md) kodüzerinden adım atmak ve belirli işlevlerin veya kod bloklarının tamamlanmasının ne kadar sürdüğünü belirlemek için de kullanabilirsiniz.
-
 8. Uygulamayı ikinci kesme noktanıza çalıştırmak için F5 tuşuna basın.
 
      Şimdi, uygulamanız için özellikle iki kesme noktası arasında çalışan kod bölgesi için performans verilerine sahipsiniz.
-
-     >[!TIP]
-     > Bir kesme noktasında veya kod adımatma işleminde duraklatıldığında, [PerfTips](#analyze-performance-using-perftips)kullanarak performansı da analiz edebilirsiniz.
 
      Profil oluşturucu iş parçacığı verilerini hazırlamaya başlar. Bitmesini bekle.
 
@@ -163,12 +157,6 @@ CPU Kullanımı kapsamındaki işlevlerin listesini inceleyerek, en çok iş yap
 
     > [!NOTE]
     > Çağrı ağacında "bozuk" kod veya "çözülemeyen yığın" olarak işaretlenmiş kod görürseniz, bu, Windows için Olay İzleme (ETW) olaylarının büyük olasılıkla bırakıldığını gösterir. Sorunu gidermek için aynı izlemeyi ikinci kez toplamayı deneyin.
-
-## <a name="analyze-performance-using-perftips"></a>PerfTips kullanarak performansı analiz edin
-
-Hata ayıklayıcıda kod çalıştırırken, derinlemesine performans çözümlemesi için [PerfTips'i](../profiling/perftips.md) de kullanabilirsiniz. PerfTips'i kullanarak, kodunuzla etkileşimde bulunduktan sonra performans bilgilerini görüntüleyebilirsiniz. Olayın süresi (hata ayıklayıcının en son duraklatıldığından veya uygulamanın ne zaman başlatıldığa göre ölçülür) gibi bilgileri kontrol edebilirsiniz. Örneğin, kod (F10, F11) ile adım atarsanız, PerfTips size bir önceki adım işleminden geçerli adıma kadar uygulama çalışma süresini gösterir.
-
-![PerfTips ile analiz edin](../profiling/media/diag-tools-perftips.png "AnalyzeWithPerfTips")
 
 ## <a name="view-external-code"></a>Dış kodu görüntüleme
 
