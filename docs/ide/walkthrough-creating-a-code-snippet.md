@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek Yol: Kod parçacığı oluşturma'
+title: 'İzlenecek yol: Kod parçacığı oluşturma'
 ms.date: 06/10/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: adb0415e926bba9a1809c77f0f35b43d78263f43
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2554729be8f3b9697d1407befd68cbb21fac10dd
+ms.sourcegitcommit: 992dd075e65b5f3adefc1ff758975298c47381e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597301"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80435046"
 ---
-# <a name="walkthrough-create-a-code-snippet"></a>İzlenecek Yol: Kod parçacığı oluşturma
+# <a name="walkthrough-create-a-code-snippet"></a>İzlenecek yol: Kod parçacığı oluşturma
 
 Yalnızca birkaç adımda bir kod parçacığı oluşturabilirsiniz. Tek yapmanız gereken bir XML dosyası oluşturmak, uygun öğeleri doldurmak ve kodunuzu eklemektir. İsteğe bağlı olarak değiştirme parametrelerini ve proje başvurularını kullanabilirsiniz. **Kod Parçacıkları Yöneticisi** **(Tools** > **Code Snippets Manager)** adresindeki **Alma** düğmesini kullanarak snippet'i Visual Studio kurulumunuza aktarın.
 
@@ -54,7 +54,7 @@ Aşağıdaki XML temel parçacık şablonudur:
 
 2. **Başlık** öğesindeki parçacık başlığını doldurun. **Kare Kök**başlığını kullanın.
 
-3. **Kod** öğesinin **Dil** özniteliğindeki parçacık dilini doldurun. C# için **CSharp**ve Visual Basic için **VB**kullanın.
+3. **Kod** öğesinin **Dil** özniteliğindeki parçacık dilini doldurun. C# için Visual Basic için **CSharp,** **VB**ve C++, **CPP**kullanın.
 
    > [!TIP]
    > Kullanılabilir tüm dil değerlerini görmek için, Kod parçacıkları [şeması başvuru](code-snippets-schema-reference.md) sayfasındaki Kod öğesi [öznitelikleri bölümüne](code-snippets-schema-reference.md#attributes) göz atın.
