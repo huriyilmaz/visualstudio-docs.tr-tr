@@ -1,18 +1,18 @@
 ---
 title: Kod Kapsamı Sorunlarını Giderme
-ms.date: 11/04/2016
+ms.date: 03/31/2020
 ms.topic: troubleshooting
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bd70394262a2dd19ebf32f57549b9d2b3e8ee92a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 39d5d54021e7b8286bd653941d233a73bcf8cfb4
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565981"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80528005"
 ---
 # <a name="troubleshoot-code-coverage"></a>Kod kapsamı sorunlarını giderme
 
@@ -22,7 +22,12 @@ Visual Studio'daki kod kapsamı çözümleme aracı, yerel ve yönetilen derleme
 
 **Test** menüsünde bir **Çözüm kodu kapsamı** komutu seçerseniz ve yapı ve testler başarılı bir şekilde çalışırsa, Kod **Kapsamı** penceresinde bir sonuç listesini görmeniz gerekir. Ayrıntıları görmek için öğeleri genişletmeniz gerekebilir.
 
+::: moniker range=">=vs-2019"
+![Boyama ile kod kapsamı sonuçları](../test/media/vs-2019/codecoverage1.png)
+::: moniker-end
+::: moniker range="vs-2017"
 ![Boyama ile kod kapsamı sonuçları](../test/media/codecoverage1.png)
+::: moniker-end
 
 Daha fazla bilgi için [bkz.](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 

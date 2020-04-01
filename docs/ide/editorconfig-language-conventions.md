@@ -1,24 +1,24 @@
 ---
 title: EditorConfig için .NET dil kuralları
-ms.date: 09/23/2019
+ms.date: 03/31/2020
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - language code style rules [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0c06d6c16082a8300092e36b9bbed126c66f8af4
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301897"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80528026"
 ---
 # <a name="language-conventions"></a>Dil kuralları
 
@@ -94,7 +94,6 @@ Bu bölümdeki stil kuralları hem C# hem de Visual Basic için geçerlidir.
   - member_access için\_\_\_dotnet stili önceden tanımlanmış\_tip\_
 - [Değiştirici tercihleri](#normalize-modifiers)
   - dotnet\_\_tarzı\_accessibility_modifiers gerektirir
-  - csharp\_\_tercih edilen modifier_order
   - görsel\_\_temel\_tercih modifier_order
   - dotnet\_\_tarzı\_readonly alan
 - [Tercihleri parantez e-ş](#parentheses-preferences)
@@ -116,6 +115,7 @@ Bu bölümdeki stil kuralları hem C# hem de Visual Basic için geçerlidir.
 - ["Null" kontrol tercihleri](#null-checking-preferences)
   - dotnet\_\_tarzı coalesce_expression
   - dotnet\_\_tarzı null_propagation
+  - dotnet\_\_tarzı\_\_tercih\_\_referans\_\_eşitlik\_yöntemi üzerinde null kontrol
 
 ### <a name="this-and-me-qualifiers"></a><a name="this-and-me"></a>"Bu." ve "Ben." Elemeleri
 
@@ -407,6 +407,43 @@ Kod örnekleri:
 Public Class MyClass
     Private Shared ReadOnly daysInYear As Int = 365
 End Class
+```
+
+#### <a name="visual_basic_style_unused_value_expression_statement_preference"></a>visual_basic_style_unused_value_expression_statement_preference
+
+|||
+|-|-|
+| **Kural adı** | visual_basic_style_unused_value_expression_statement_preference |
+| **Kural Kimliği** | IDE0058 |
+| **Geçerli diller** | Visual Basic |
+| **Değer** | `unused_local_variable:silent` |
+| **Visual Studio varsayılan** | `unused_local_variable:silent` |
+
+Kod örnekleri:
+
+```vb
+' visual_basic_style_unused_value_expression_statement_preference = unused_local_variable:silent
+
+Dim unused = Computation()
+```
+
+#### <a name="visual_basic_style_unused_value_assignment_preference"></a>visual_basic_style_unused_value_assignment_preference
+
+|||
+|-|-|
+| **Kural adı** | visual_basic_style_unused_value_assignment_preference |
+| **Kural Kimliği** | IDE0059 |
+| **Geçerli diller** | Visual Basic |
+| **Değer** | `unused_local_variable:silent` |
+| **Visual Studio varsayılan** | `unused_local_variable:silent` |
+
+Kod örnekleri:
+
+```vb
+' visual_basic_style_unused_value_assignment_preference = unused_local_variable:suggestion
+
+Dim unused = Computation()
+Dim x = 1;
 ```
 
 #### <a name="dotnet_style_readonly_field"></a>dotnet_style_readonly_field
@@ -941,6 +978,7 @@ Bu kurallar bir *.editorconfig* dosyasında aşağıdaki gibi görünebilir:
 [*.{cs,vb}]
 dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:silent
 ```
 
 #### <a name="dotnet_style_coalesce_expression"></a>dotnet\_\_tarzı coalesce_expression
@@ -1002,6 +1040,16 @@ Dim v = o?.ToString()
 Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 ```
+
+### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>dotnet\_\_tarzı\_\_tercih\_\_referans\_\_eşitlik\_yöntemi üzerinde null kontrol
+
+|||
+|-|-|
+| **Kural adı** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
+| **Kural Kimliği** | IDE0041 |
+| **Geçerli diller** | C# 6.0+ ve Visual Basic 14+ |
+| **Değer** | `true`- Tercih referans eşitlik yöntemi üzerinde null kontrol<br /><br />`false`- Tercih referans eşitlik yöntemi üzerinde null kontrol |
+| **Visual Studio varsayılan** | `true:silent` |
 
 ## <a name="net-code-quality-settings"></a>.NET kod kalite ayarları
 
@@ -1081,6 +1129,7 @@ Bu bölümdeki stil kuralları yalnızca C# için geçerlidir.
 - ["Null" kontrol tercihleri](#c-null-checking-preferences)
   - csharp\_\_tarzı throw_expression
   - csharp\_\_tarzı\_koşullu delegate_call
+- [Değiştirici tercihleri](#normalize-modifiers) -csharp\_tercih modifier_order\_
 - [Kod bloğu tercihleri](#code-block-preferences)
   - csharp\_prefer_braces
 - [Kullanılmayan değer tercihleri](#unused-value-preferences)

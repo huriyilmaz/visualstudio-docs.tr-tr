@@ -1,24 +1,24 @@
 ---
 title: .NET EditorConfig için biçimlendirme kuralları
-ms.date: 07/17/2019
+ms.date: 03/31/2020
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - formatting conventions [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f10d4c710c0686b22e29883cabc21550ffd32f8c
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589233"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80527963"
 ---
 # <a name="formatting-conventions"></a>Biçimlendirme kuralları
 
@@ -151,6 +151,8 @@ Bu bölümdeki biçimlendirme kuralları yalnızca C# koduna uygulanır.
 - [Kaydırma seçenekleri](#wrap-options)
   - csharp_preserve_single_line_statements
   - csharp_preserve_single_line_blocks
+- [Yönerge seçeneklerini kullanma](#using-directive-options) 
+  - csharp_using_directive_placement
 
 ### <a name="new-line-options"></a>Yeni hat seçenekleri
 
@@ -1207,6 +1209,50 @@ public int Foo { get; set; }
 public int MyProperty
 {
     get; set;
+}
+```
+
+- [Yönerge seçeneklerini kullanma](#using-directive-options) 
+  - csharp_using_directive_placement
+  
+### <a name="using-directive-options"></a>Yönerge seçeneklerini kullanma
+
+Bu biçimlendirme kuralı, bir ad alanı dışında karşı içine yerleştirilen yönergeleri kullanarak kullanımı ile ilgilidir.
+
+Örnek *.editorconfig* dosyası:
+
+```ini
+# 'using' directive preferences
+[*.cs]
+csharp_using_directive_placement = outside_namespace
+csharp_using_directive_placement = inside_namespace
+```
+
+#### <a name="csharp_using_directive_placement"></a>csharp_using_directive_placement
+
+|||
+|-|-|
+| **Kural adı** | csharp_using_directive_placement |
+| **Geçerli diller** | C# |
+| **Tanıtılan sürüm** |  Visual Studio 2019 sürüm 16.1 |
+| **Değer** | `outside_namespace`- Ad alanı dışındaki yönergeleri kullanarak bırakın<br /><br />`inside_namespace`- Ad alanı içinde yönergeleri kullanarak bırakın |
+| **Visual Studio varsayılan** | `outside_namespace` |
+
+Kod örnekleri:
+
+```csharp
+// csharp_using_directive_placement = outside_namespace
+using System;
+
+namespace Conventions
+{
+
+}
+
+// csharp_using_directive_placement = inside_namespace
+namespace Conventions
+{
+    using System;
 }
 ```
 

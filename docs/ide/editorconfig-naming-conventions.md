@@ -1,21 +1,21 @@
 ---
 title: .NET Adlandırma Kuralları EditorConfig dosyaları için
-ms.date: 08/07/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5c4115f4d63456e105fb4a6770fd1650938770d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ccf62c5ffc3f526eada85478f37480fcf5d75cba
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588609"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80528011"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>.NET, EditorConfig için adlandırma kuralları
 
@@ -56,6 +56,8 @@ Aşağıdaki liste izin verilebilen değerleri gösterir ve bunları virgülle a
 - type_parameter
 - yerel
 - local_function
+
+[!NOTE] Tuple üyeleri şu anda desteklenmiyor.
 
 ### <a name="accessibility-levels-of-symbols"></a>Sembollerin erişilebilirlik düzeyleri
 
