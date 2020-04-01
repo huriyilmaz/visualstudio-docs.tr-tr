@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 1c9786c29573da3b0149a9ec6578f2ce58c4de9f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 63cf881fdedf9608d5cb773bbcb6b969a0f51624
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76542600"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472652"
 ---
 # <a name="container-tools-launch-settings"></a>Konteyner Araçları başlatma ayarları
 
@@ -61,7 +61,7 @@ CommandName ayarı, bu bölümün Kapsayıcı Araçlar için geçerli olduğunu 
 
 | Ayar adı         | Örnek                                               | Açıklama                                                                                                             |
 | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| commandLineArgs      | "commandLineArgs": "--mysetting myvalue"              | Bu komut satırı bağımsız değişkenleri, projenizi kapsayıcıda başlatırken kullanılır.                                     |
+| commandLineArgs      | "commandLineArgs": "--mysetting myvalue"              | Uygulamanızı başlatmak için kullanılan bu komut satırı bağımsız değişkenleri, projenizi kapsayıcıda başlatırken kullanılır.                                     |
 | çevreDeğişkenler | "çevreDeğişkenler": {                             | Bu ortam değişken değerleri, kapsayıcıda başlatıldığında işleme aktarılır.                       |
 |                      | "ASPNETCORE_URLS":https://+:443" ; http://+:80",       |                                                                                                                         |
 |                      | "ASPNETCORE_HTTPS_PORT": "44381"                      |                                                                                                                         |

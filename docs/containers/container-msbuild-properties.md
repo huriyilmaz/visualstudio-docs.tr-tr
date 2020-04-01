@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 987d358abcccadf36d15593722ff55ba4b879d03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3caa8a76f461515c0d2265590383861b6e10d0a1
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71950692"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472671"
 ---
 # <a name="container-tools-build-properties"></a>Konteyner Araçları özellikleri oluşturmak
 
-MSBuild'in projenizi oluşturmak için kullandığı özellikleri ayarlayarak Visual Studio'nun konteyner projelerinizi nasıl oluşturduğunu özelleştirebilirsiniz. Örneğin, Dockerfile'ın adını değiştirebilir, resimleriniz için etiket ve etiketler belirtebilir, Docker komutlarına geçirilen ek bağımsız değişkenler sağlayabilir ve Visual Studio'nun bina dışında bina gibi belirli performans optimizasyonları yapıp etmediğini kontrol edebilirsiniz. konteyner ortamı. Ayrıca, başlatılabilen yürütülebilir adı ve sağlamak için komut satırı bağımsız değişkenleri gibi hata ayıklama özellikleri ayarlayabilirsiniz.
+MSBuild'in projenizi oluşturmak için kullandığı özellikleri ayarlayarak Visual Studio'nun konteyner projelerinizi nasıl oluşturduğunu özelleştirebilirsiniz. Örneğin, Dockerfile'ın adını değiştirebilir, resimleriniz için etiket ve etiket belirtebilir, Docker komutlarına geçirilen ek bağımsız değişkenler sağlayabilir ve Visual Studio'nun kapsayıcı ortamının dışında bina oluşturma gibi belirli performans optimizasyonları yapıp etmediğini kontrol edebilirsiniz. Ayrıca, başlatılabilen yürütülebilir adı ve sağlamak için komut satırı bağımsız değişkenleri gibi hata ayıklama özellikleri ayarlayabilirsiniz.
 
 Bir özelliğin değerini ayarlamak için proje dosyasını edin. Örneğin, Dockerfile'ınızın adının *MyDockerfile*olduğunu varsayalım. Proje dosyasındaki `DockerfileFile` özelliği aşağıdaki gibi ayarlayabilirsiniz.
 
@@ -41,7 +41,7 @@ Aşağıdaki tablo, kapsayıcı projeleri için kullanılabilir MSBuild özellik
 | DockerImageEtiketler | Docker görüntüsüne uygulanan varsayılan etiket kümesi. | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 veya daha yeni|
 | DockerFastModeProjectMountDirectory|**Hızlı**Mod'da, bu özellik, proje çıktı dizininin çalışan kapsayıcıya hacim olarak monte edildiği denetimi denetler.|C:\app (Windows) veya /app (Linux)|1.9.2 veya daha yeni|
 | DockerfileBuildArguments | Docker yapı komutuna ek bağımsız değişkenler geçti. | Geçerli değildir. |1.0.1872750 veya daha yeni|
-| DockerfileContext | Docker görüntüsünü oluştururken kullanılan varsayılan bağlam. | Visual Studio tarafından ayarlanır. |1.0.1872750 veya daha yeni|
+| DockerfileContext | Docker görüntüsünü oluştururken kullanılan varsayılan bağlam, Dockerdosyasına göre bir yol olarak kullanılır. | Visual Studio tarafından ayarlanır. |1.0.1872750 veya daha yeni|
 | DockerfileFastModeStage | Görüntü hata ayıklama modunda oluştururken kullanılacak Dockerfile aşaması (yani hedef). | Dockerfile'da bulunan ilk aşama (taban) |
 | DockerfileDosya | Proje için kapsayıcıyı oluşturmak/çalıştırmak için kullanılacak varsayılan Dockerdosyasını açıklar. Bu da bir yol olabilir. | Dockerdosyası |1.0.1872750 veya daha yeni|
 | DockerfileRunArguments | Docker çalıştır komutuna ek bağımsız değişkenler geçti. | Geçerli değildir. |1.0.1872750 veya daha yeni|

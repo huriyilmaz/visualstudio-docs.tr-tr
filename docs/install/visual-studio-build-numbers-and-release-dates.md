@@ -5,18 +5,18 @@ description: Visual Studio için yayımlanan sürümlerin ve yapı numaraların�
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/26/2020
+ms.date: 03/31/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 05808737a735160c995aafb7d2e9b12ccbb13e1b
-ms.sourcegitcommit: 0d08e2c1d9940a6ac2c7f647e9454b42011ebc63
+ms.openlocfilehash: 6eb4a72b4ce430e59c8760a5281fdab5fc7f3766
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80329535"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472712"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -28,6 +28,7 @@ Aşağıdaki tabloda Visual Studio 2019'un yapı numaraları ve çıkış tarihl
 
 | **Sürüm**| **Kanal** | **Çıkış tarihi** | **Sürüm oluşturma** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.5.2 | Yayınla | 31 Mart 2020 | 16.5.29926.136 |
 | 16.6.0 | Önizleme 2 | 26 Mart 2020 | 16.6.29924.181 |
 | 16.5.1 | Yayınla | 24 Mart 2020 | 16.5.29920.165 |
 | 16.6.0 | Önizleme 1 | 16 Mart 2020 | 16.6.29911.98 |
@@ -308,5 +309,5 @@ Aşağıdaki tabloda Visual Studio 2017'nin yapı numaraları ve çıkış tarih
 
 * [Visual Studio yayın ritmi](/visualstudio/productinfo/release-rhythm/)
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
-* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
+* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Adım 3: Her etikete rastgele bir simge atama'
-ms.date: 11/04/2016
+title: '3. Adım: Her etikete rastgele bir simge atama'
+ms.date: 03/21/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -13,14 +13,14 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 366f6d7a07d2f30b5b8110fb7dae7a2311fcce23
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 627b798827cd0b966d1f34336c7e1119841f9d4a
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579401"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472632"
 ---
-# <a name="step-3-assign-a-random-icon-to-each-label"></a>Adım 3: Her etikete rastgele bir simge atama
+# <a name="step-3-assign-a-random-icon-to-each-label"></a>3. Adım: Her etikete rastgele bir simge atama
 
 Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bunu önlemek için, bir `AssignIconsToSquares()` yöntem kullanarak simgeleri formunuzdaki Etiket denetimlerine rasgele atayın.
 
@@ -44,7 +44,7 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
     > [!NOTE]
     > "iconLabel" (simge etiketi) ve "control" (denetim) kullanılmasının nedeni bu adların açıklayıcı olmasıdır. Bu adların yerine istediğiniz adları kullanabilirsiniz; ilgili adı döngüdeki her bir deyimde de değiştirdiğiniz sürece kod tamamen aynı şekilde çalışacaktır.
 
-     Yöntem, `AssignIconsToSquares()` TableLayoutPanel'deki her etiket denetiminde yineler ve her biri için aynı deyimleri yürütür. Bu ifadeler Adım 2'ye eklediğiniz listeden rasgele bir simge [çeker: Rastgele nesne ve simgelerin bir listesini ekleyin.](../ide/step-2-add-a-random-object-and-a-list-of-icons.md) (Bu nedenle, listedeki her simgeden iki sini dahil etmişsinizdir, bu nedenle rasgele Etiket denetimlerine atanmış bir dizi simge olacaktır.)
+     Yöntem, `AssignIconsToSquares()` TableLayoutPanel'deki her etiket denetiminde yineler ve her biri için aynı deyimleri yürütür. Bu ifadeler Adım 2'ye eklediğiniz listeden rasgele bir simge [çeker: Rastgele nesne ve simgelerin bir listesini ekleyin.](../ide/step-2-add-a-random-object-and-a-list-of-icons.md) Bir hatırlatma olarak, bu simgelerin her biri Webdings yazı tipinde bir harftir, bu nedenle bu yöntemde metin olarak ifade edilir. Rasgele Etiket denetimlerine atanmış bir dizi simge olması için listeye her simgeden iki tane eklediniz.
 
      `foreach` Veya `For Each` döngü içinde çalışan koda daha yakından bakın. Bu kod burada tekrar üretilmektedir.
 
@@ -55,7 +55,7 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
 
      Kodun belirli bir bölümünün ne işe yaradığından emin olamadığınızda, fare işaretçisini kod öğesinin üzerine getirip ortaya çıkan araç ipucunu gözden geçirebileceğinizi unutmayın. Ayrıca, Visual Studio hata ayıklayıcısını kullanarak, program çalışırken kodun her satırını adım adım geçebilirsiniz. Bkz. [Nasıl Yapabilirim: Visual Studio'da hata ayıklayıcıyla adım atın](https://msdn.microsoft.com/vstudio/ee672313.aspx) veya daha fazla bilgi için hata [ayıklayıcıyla kod da gezinme.](../debugger/navigating-through-code-with-the-debugger.md)
 
-3. Oyun tahtasını simgelerle doldurmak için, program `AssignIconsToSquares()` başlar başlamaz yöntemi aramanız gerekir. C# kullanıyorsanız, `InitializeComponent()` **Form1**_oluşturucusundaki_yönteme çağrının hemen altına bir ifade ekleyin, böylece formunuz gösterilmeden önce kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için Visual Basic'te [Oluşturucular (C# programlama kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya [kurucuları ve yıkıcıları kullanın.](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\))
+3. Oyun tahtasını simgelerle doldurmak için, program `AssignIconsToSquares()` başlar başlamaz yöntemi aramanız gerekir. C# kullanıyorsanız, `InitializeComponent()` **Form1** _oluşturucusundaki_yönteme çağrının hemen altına bir ifade ekleyin, böylece formunuz gösterilmeden önce kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için Visual Basic'te [Oluşturucular (C# programlama kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya [kurucuları ve yıkıcıları kullanın.](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\))
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#13](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_4.cs)]
 
@@ -67,17 +67,14 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
     End Sub
     ```
 
-4. Programınızı kaydedip çalıştırın. Her etikete rasgele simgelerin atandığı bir form gösterilmesi gerekir.
+4. Programınızı kaydedip çalıştırın. Her etikete rasgele simgelerin atandığı bir form gösterilmesi gerekir. 
 
-5. Programınızı kapatın ve yeniden çalıştırın. Aşağıdaki resimde gösterildiği gibi, her etikete farklı simgeler atandığına dikkat edin.
+5. Programınızı kapatın ve yeniden çalıştırın. Aşağıdaki resimde gösterildiği gibi, her etikete farklı simgeler atandığına dikkat edin. 
 
      ![Rasgele simgeleri içeren eşleştirme oyunu](../ide/media/express_tut4step3.png)<br/>
 *Rasgele simgeleri içeren eşleştirme oyunu*
 
      Henüz gizlemediğiniz için simgeler şimdilik görünmektedir. Bunları oyuncudan gizlemek için, her etiketin **ForeColor** özelliğini **BackColor** özelliğiyle aynı renge ayarlayabilirsiniz.
-
-    > [!TIP]
-    > Denetimleri etiketler gibi gizlemenin başka bir yolu da **Görünür** özelliğini **False**olarak ayarlamaktır.
 
 6. Simgeleri gizlemek için programı durdurun ve `For Each` döngü içindeki yorum kodu satırının yorum işaretlerini kaldırın.
 

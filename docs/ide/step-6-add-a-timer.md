@@ -1,6 +1,6 @@
 ---
-title: 'Adım 6: Zamanlayıcı ekleme'
-ms.date: 11/04/2016
+title: '6. Adım: Süreölçer ekleme'
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -13,14 +13,14 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23d050df688d4d1efec75245e6f48d748464170c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 0473ab07155e0f132e8e6207361e409b804257f2
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579317"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472773"
 ---
-# <a name="step-6-add-a-timer"></a>Adım 6: Zamanlayıcı ekleme
+# <a name="step-6-add-a-timer"></a>6. Adım: Süreölçer ekleme
 Sonra, eşleşen <xref:System.Windows.Forms.Timer> oyuna bir denetim ekleyin. Zamanlayıcı belirli sayıda milisaniye bekler ve ardından *işaretçi*olarak adlandırılan bir olayı ateşler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
 
 ## <a name="to-add-a-timer"></a>Zamanlayıcı eklemek için
@@ -48,12 +48,12 @@ Sonra, eşleşen <xref:System.Windows.Forms.Timer> oyuna bir denetim ekleyin. Za
     > [!NOTE]
     > Zamanlayıcı nesnesinin `Start()` zamanlayıcıyı başlatan bir yöntemi `Stop()` ve onu durduran bir yöntemi vardır. **Özellikler** penceresinde zamanlayıcının **Etkin** özelliğini **True** olarak ayarladığınızda, program başlar başlamaz işlemeye başlar. Ancak, **false**olarak ayarlanmış bıraktığınızda, yöntemi çağrılana `Start()` kadar işlemeye başlamaz. Normalde, bir zamanlayıcı, keneler arasında kaç milisaniye beklemeniz gerektiğini belirlemek için **Interval** özelliğini kullanarak Tick olayını tekrar tekrar işaretler. Zamanlayıcının `Stop()` yönteminin Tick olayının içinde nasıl çağrıldığını fark etmiş olabilirsiniz. Bu, zamanlayıcıyı *tek bir çekim moduna* `Start()` koyar, yani yöntem çağrıldığında, belirtilen aralığı bekler, tek bir Tick olayını tetikler ve sonra durur.
 
-4. Yeni zamanlayıcının iş başında olduğunu görmek için kod düzenleyicisine gidin ve `label_Click()` olay işleyicisi yönteminin üst ve alt bölümüne aşağıdaki kodu ekleyin. (En üste bir `if` ifade ve alta üç ifade ekliyorsunuz; yöntemin geri kalanı aynı kalır.)
+4. Yeni zamanlayıcının iş başında olduğunu görmek için kod düzenleyicisine gidin ve `label_Click()` olay işleyicisi yönteminin üst ve alt bölümüne aşağıdaki kodu ekleyin. (En üste iki, `if` alta üç ifade ekliyorsunuz; yöntemin geri kalanı aynı kalır.)
 
      [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
      [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]
 
-     Yöntemin üst kısmındaki kod, **Etkinleştirilen** özelliğin değerini denetleyerek zamanlayıcının başlatılıp başlatılmadığını denetler. Bu şekilde, oyuncu birinci ve ikinci Etiket denetimlerini seçerse ve zamanlayıcı başlarsa, üçüncü bir etiket seçmek hiçbir işe yaramaz.
+     Yöntemin üst kısmındaki kod, **Etkinleştirilen** özelliğin değerini denetleyerek zamanlayıcının başlatılıp başlatılmadığını denetler. Bu şekilde, oyuncu birinci ve ikinci Etiket denetimlerini seçerse ve zamanlayıcı başlarsa, üçüncü bir etiket seçmek hiçbir işe yaramaz. Ayrıca oyun başka bir ilk tıklama için hazır olmadan önce hızlı bir şekilde üçüncü kez tıklayarak oyuncu engeller. 
 
      Yöntemin altındaki kod, oyuncunun `secondClicked` seçtiği ikinci Etiket denetimini izlemek için başvuru değişkenini ayarlar ve daha sonra görünür olması için etiketin simge rengini siyaha ayarlar. Daha sonra, 750 milisaniye bekler ve tek bir Tick olayı tetiklemesi için zamanlayıcıyı tek sefer modunda başlatır. Zamanlayıcının Tick olay işleyicisi iki simgeyi gizler ve formun başka bir simge çiftini seçmesi için formun hazır olması için `firstClicked` ve `secondClicked` referans değişkenlerini sıfırlar.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Adım 4: CheckTheAnswer() yöntemini ekleyin'
+title: '4. Adım: CheckTheAnswer() yöntemi ekleme'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,14 +13,14 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: def01817fbd42a0da1a0392e00ba9ccff6876470
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 199cee66013392a253139abf8ef1b88b502abac2
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579852"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472617"
 ---
-# <a name="step-4-add-the-checktheanswer-method"></a>Adım 4: CheckTheAnswer() yöntemini ekleyin
+# <a name="step-4-add-the-checktheanswer-method"></a>4. Adım: CheckTheAnswer() yöntemi ekleme
 
 Bu öğreticinin dördüncü bölümünde, matematik sorunlarının `CheckTheAnswer()`yanıtlarının doğru olup olmadığını belirleyen bir yöntem yazacaksınız. Bu konu temel kodlama kavramları hakkında bir öğretici serisinin bir parçasıdır. [Öğreticiye](../ide/tutorial-2-create-a-timed-math-quiz.md)genel bir bakış için bkz.
 
@@ -32,7 +32,7 @@ Bu öğreticinin dördüncü bölümünde, matematik sorunlarının `CheckTheAns
 > [!NOTE]
 > Visual Basic'te birlikte takip ediyorsanız, bu `Function` yöntem bir değer `Sub` döndürdüğünden, her zamanki anahtar kelime yerine anahtar kelimeyi kullanırsınız. Gerçekten bu kadar basit: bir alt bir değer döndürmez, ama bir işlev yapar.
 
-1. `CheckTheAnswer()` Yöntemi ekleyin.
+1. `CheckTheAnswer()` Yöntemi ekleyin. Bu yöntem, yaptığınız diğer yöntemlerle aynı doğrultuda `StartTheQuiz()`olmalıdır.
 
      Bu yöntem çağrıldığında, addend1 ve addend2 değerlerini ekler ve sonucu toplam <xref:System.Windows.Forms.NumericUpDown> denetimindeki değerle karşılaştırır. Değerler eşitse, `true`yöntem . Aksi takdirde, yöntem `false`bir değer döndürür. Kodunuz aşağıdaki gibi görünmelidir.
 
@@ -43,7 +43,7 @@ Bu öğreticinin dördüncü bölümünde, matematik sorunlarının `CheckTheAns
 
      Ardından, zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinin yeni `CheckTheAnswer()` yöntemi çağırması için yöntemdeki kodu güncelleştirerek yanıtı denetlersiniz.
 
-2. `if else` İfadeye aşağıdaki kodu ekleyin.
+2. `Timer1_Tick()` Yöntemdeki `if else` ifadeye aşağıdaki kodu ekleyin, böylece kullanıcı yanıtı doğru aldığında zamanlayıcı durur.
 
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
      [!code-csharp[VbExpressTutorial3Step4#10](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_2.cs)]

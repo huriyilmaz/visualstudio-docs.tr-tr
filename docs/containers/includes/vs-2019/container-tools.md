@@ -7,16 +7,16 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 3869cf025b4ed0e744a7fea929aac38acb7dd816
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bd9ac1bda9cb5f5d9cc5d84248200434426307c8
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76922975"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80502365"
 ---
 Visual Studio ile konteynerleştirilmiş .NET, ASP.NET ve ASP.NET Core uygulamalarını kolayca oluşturabilir, hata ayıklayabilir ve çalıştırabilir ve bunları Azure Konteyner Kayıt Defteri (ACR), Docker Hub, Azure Uygulama Hizmeti veya kendi konteyner kayıt defterinizde yayınlayabilirsiniz. Bu makalede, ACR için bir ASP.NET Core uygulaması yayınlayacağız.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) Web **Geliştirme,** **Azure Araçları** iş yükü ve/veya **.NET Core çapraz platform geliştirme** iş yükü yüklü
@@ -74,6 +74,9 @@ Yeni proje iletişim kutusunun HTTPS için **Yapılandırma** onay kutusu işare
 Araç çubuğundaki hata ayıklama açılır tarihinden **Docker'ı** seçin ve uygulamayı hata ayıklamaya başlayın. Bir sertifikaya güvenme yle ilgili bir istem içeren bir ileti görebilirsiniz; devam edecek sertifikaya güvenmeyi seçin.
 
 **Çıktı** penceresindeki **Kapsayıcı Araçları** seçeneği, hangi eylemlerin gerçekleştiğini gösterir. İlk seferinde, temel görüntüyü indirmek biraz zaman alabilir, ancak sonraki çalıştırmalarda çok daha hızlıdır.
+
+>[!NOTE]
+> Hata ayıklama için bağlantı noktalarını değiştirmeniz gerekiyorsa, bunu *launchSettings.json* dosyasında yapabilirsiniz. [Bkz. Konteyner Başlatma Ayarları](../../container-launch-settings.md).
 
 ## <a name="containers-window"></a>Kapsayıcılar penceresi
 

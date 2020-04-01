@@ -9,28 +9,28 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3996ef0db25a6552a1a32cd121dbf2f750d460c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 84efda930066c4236fa4397fbadf287c6774fdb0
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114471"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472785"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl yapılsın: Yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
 
-Visual Studio IDE'de bir proje yaptıktan sonra, **Çıktı** penceresinde bu yapıyla ilgili bilgileri görüntüleyebilirsiniz. Bu bilgileri kullanarak, örneğin, bir yapı hatagiderme olabilir. 
+Visual Studio IDE'de bir proje yaptıktan sonra, **Çıktı** penceresinde bu yapıyla ilgili bilgileri görüntüleyebilirsiniz. Bu bilgileri kullanarak, örneğin, bir yapı hatagiderme olabilir.
 
-- C++ projeleri için, aynı bilgileri otomatik olarak oluşturulan ve kaydedilen *bir .txt* dosyasında da görüntüleyebilirsiniz. 
+- C++ projeleri için, proje oluştururken oluşturulan ve kaydedilen bir günlük dosyasında da aynı bilgileri görüntüleyebilirsiniz. 
 
-- Yönetilen kod projeleri için yapı çıktısı penceresinden tıklayıp **Ctrl**+**S**tuşuna basabilirsiniz. Visual Studio, **çıktı** penceresinden *.txt* dosyasına bilgileri kaydetmek için bir konum ister. 
+- Yönetilen kod projeleri için yapı çıktısı penceresinden tıklayıp **Ctrl**+**S**tuşuna basabilirsiniz. Visual Studio, **çıktı** penceresinden bilgileri bir günlük dosyasına kaydetmek için bir konum ister.
 
 IDE'yi, her yapı hakkında görüntülemek istediğiniz bilgileri belirtmek için de kullanabilirsiniz.
 
-MSBuild'i kullanarak herhangi bir proje oluşturursanız, yapı yla ilgili bilgileri kaydetmek için bir *.txt* dosyası oluşturabilirsiniz. Daha fazla bilgi için [bkz.](../msbuild/obtaining-build-logs-with-msbuild.md)
+MSBuild'i kullanarak herhangi bir proje oluşturursanız, yapı yla ilgili bilgileri kaydetmek için bir günlük dosyası oluşturabilirsiniz. Daha fazla bilgi için [bkz.](../msbuild/obtaining-build-logs-with-msbuild.md)
 
 ## <a name="to-view-the-build-log-file-for-a-c-project"></a>C++ projesinin yapı günlüğü dosyasını görüntülemek için
 
-1. Windows Explorer veya **File Explorer'da,** aşağıdaki dosyayı **Windows Explorer** açın: * \\...\Visual Studio \<Version\\ \>\>\\ \Projects\> \\<ProjectName<ProjectName\>\Debug<ProjectName .txt*
+1. **Windows Gezgini** veya Dosya **Gezgini'nde,** aşağıdaki dosyayı açın (proje kök klasörüne göre): *Bırakın.*\\<ProjectName>\> Log* veya *Hata Ayıklama\\<\>ProjectName .log*
 
 ## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Yönetilen kod projesi için yapı günlüğü dosyası oluşturmak için
 

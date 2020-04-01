@@ -33,12 +33,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe526bbac859777edb4c2c78c65a1cdbd27fc85
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ed55d65555425b04749696b5510cfe799d2a1194
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568418"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472825"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: \> Metin Düzenleyici Genel
 
@@ -93,6 +93,10 @@ Seçildiğinde, imlecin bulunduğu kod satırının etrafında gri bir kutu gör
 ### <a name="show-structure-guide-lines"></a>Yapı kılavuz çizgilerini göster
 
 Seçildiğinde, yapılandırılmış kod bloklarıyla hizalanan düzenleyicide dikey çizgiler görünür ve bu da kod bloklarını tek tek belirlemenize olanak tanır.
+
+### <a name="show-file-health-indicator"></a>Dosya sistem durumu göstergesini göster
+
+Seçildiğinde, kod temizleme seçenekleri içeren bir dosya durumu göstergesi durumu (hatalar, uyarılar) çubuğu düzenleyicinin sol alt köşesinde görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

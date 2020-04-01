@@ -1,6 +1,6 @@
 ---
 title: Hedeflenen .NET çerçeveleri
-ms.date: 02/06/2018
+ms.date: 03/31/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
@@ -11,20 +11,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec81b38ab68c327f25c9f94b6329a700e2662383
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 48d770f5d88e19c749c1a1e657c369089d4c7afb
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79303423"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472726"
 ---
 # <a name="framework-targeting-overview"></a>Çerçeve hedeflemegenel bakış
 
 Visual Studio'da,.NET'in projenizin hedeflemesini istediğiniz sürümünü belirtebilirsiniz. Çerçeve hedefleme, uygulamanın yalnızca belirtilen çerçeve sürümünde kullanılabilen işlevselliği kullandığını garanti eder. .NET Framework uygulamalarının başka bir bilgisayarda çalıştırAbilmesi için, uygulama nın hedeflenen çerçeve sürümünün bilgisayarda yüklenen çerçeve sürümüyle uyumlu olması gerekir.
 
-Visual Studio çözümü,.NET'in farklı sürümlerini hedefleyen projeler içerebilir.
-
-Hedef çerçeveler hakkında daha fazla bilgi için [Hedef çerçevelerine](/dotnet/standard/frameworks)bakın.
+Visual Studio çözümü,.NET'in farklı sürümlerini hedefleyen projeler içerebilir.  Ancak, .NET'in yalnızca tek bir sürümüne karşı tek bir yapı için başvuru koşullu larını kullanarak veya her sürüm için özyinelemeli olarak farklı ikililer oluşturabileceğinizi unutmayın.  Hedef çerçeveler hakkında daha fazla bilgi için [Hedef çerçevelerine](/dotnet/standard/frameworks)bakın.
 
 > [!TIP]
 > Ayrıca farklı platformlar için uygulamaları hedefleyebilirsiniz. Daha fazla bilgi için [Multitargeting'e](../msbuild/msbuild-multitargeting-overview.md)bakın.

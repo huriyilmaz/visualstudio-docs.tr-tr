@@ -1,6 +1,6 @@
 ---
 title: Kod parçacıkları şema başvurusu
-ms.date: 02/25/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - schema reference [Visual Studio]
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22f84fbe5188e74acbf24256444ad11dd9c64347
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 867aac31f1515136e3aa9f0a6f171ec425d90cf7
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301841"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472800"
 ---
 # <a name="code-snippets-schema-reference"></a>Kod parçacıkları şema başvurusu
 
@@ -62,7 +62,7 @@ Bir metin değeri gereklidir. Bu metin kod parçacığının yazarını belirtir
 
 Kısa kod blokları için bir kapsayıcı sağlar.
 
-### <a name="keywords"></a>Anahtar sözcükler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 `Code` Öğenin metninde kullanılmak üzere iki ayrılmış `$end$` sözcük kullanılabilir: ve `$selected$`. `$end$`kod parçacığı takıldıktan sonra imleci yerleştirmek için konumu işaretler. `$selected$`çağrıldığı zaman snippet'e eklenecek belgede seçilen metni temsil eder. Örneğin, içeren bir parçacık verilir:
 
@@ -235,7 +235,7 @@ Bir metin değeri gereklidir. Bu metin kod parçacığını tanımlar.
 Değişmez değer veya nesne Visual Studio'da odağa geldiğinde yürütülecek bir işlevi belirtir.
 
 > [!NOTE]
-> Öğe `Function` yalnızca C# kod parçacıklarında desteklenir.
+> Tüm diller `function` öğeleri desteklemez. Hangi işlevlerin kullanılabilene ilişkin dile özel belgelere bakın.
 
 ```xml
 <Function>
@@ -660,4 +660,4 @@ Bir metin değeri gereklidir. Bu metin, başvurulan derleme hakkında daha fazla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod parçacıkları](../ide/code-snippets.md)
-- [İzlenecek Yol: Kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
+- [İzlenecek yol: Kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
