@@ -52,9 +52,9 @@
 ## [Subversion Deposu Ayarlama](/visualstudio/mac/set-up-subversion-repository)
 ## [Subversion ile çalışma](/visualstudio/mac/working-with-subversion)
 
-# [Web Uygulaması Dağıtımı](/visualstudio/mac/web-app-deployment.md)
-## [Azure App Service’e yayımlama](/visualstudio/mac/publish-app-svc.md)
-## [Klasöre Yayımlama](/visualstudio/mac/publish-folder.md)
+# [Web Uygulaması Dağıtımı](/visualstudio/mac/web-app-deployment)
+## [Azure App Service’e yayımlama](/visualstudio/mac/publish-app-svc)
+## [Klasöre Yayımlama](/visualstudio/mac/publish-folder)
 
 # [İş yükleri](/visualstudio/mac/workloads)
 ## [ASP.NET Core](/visualstudio/mac/asp-net-core)
