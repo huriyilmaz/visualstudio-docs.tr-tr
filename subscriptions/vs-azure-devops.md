@@ -7,17 +7,17 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: Azure DevOps'leri Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: 73c6ae54ed39375e695fd1d68b972edb1ec9b46c
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 11bd1262e72042b01c2514edc3bc3158325b9417
+ms.sourcegitcommit: 67dd2aedfe9752afaec9625ed3056fa03bd2699e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232050"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607175"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps'lerde aboneliğinize dahil olan bir dizi özelliği avantaj olarak kullanabilirsiniz. Bu aynı özellikleri, üye olduğunuz her Azure DevOps kuruluşunda, ister kuruluşu oluştursanız ister başka biri tarafından eklenmiştir.
 
-## <a name="sign-in"></a>Oturum aç
+## <a name="sign-in"></a>Oturum açma
 Visual Studio aboneliğinizi etkinleştirmek için kullandığınız kimliği veya [alternatif kimliğinizi](vs-alternate-identity.md)kullanarak Azure DevOps'te oturum açtığınızda, bunu otomatik olarak algılarız.  Bu şekilde, hem kişisel hesabınızı hem de iş veya okul hesabınızı kullanarak Azure DevOps'lere erişmenize olanak tanıyan bir iş veya okul hesabı (Visual Studio, Office 365 veya şirket veya okul ağınızda oturum açarken kullandığınız) ekleyebilirsiniz.
 
 [Ücretsiz bir Azure DevOps organizasyonu için kaydolun](https://visualstudio.microsoft.com/team-services/)
@@ -55,8 +55,8 @@ Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış b
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Azure DevOps özellikleri hakkında daha fazla bilgi edinin:
-- [Azure Panoları & Repos (Temel)](https://azure.microsoft.com/services/devops/compare-features/)
+- [Azure Panoları & Repos (Temel Plan)](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
-- [Azure Eserleri](https://marketplace.visualstudio.com/items?itemName=ms.feed)
+- [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
 
 [Azure DevTest bireysel kredinizi](vs-azure.md)nasıl etkinleştireceklerinizi öğrenin.
