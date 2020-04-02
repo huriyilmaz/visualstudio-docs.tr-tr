@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: d0e00929de11ff3fd820670be2bb6361cfb5fa6c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cfe7e7f852530c32efbbaec2fbc92060fadeb40e
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75404998"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543894"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core Kullanmaya Başlama
 
@@ -236,7 +236,7 @@ Denetleyici eklemek için aşağıdakileri yapın:
 
 Bu kılavuz ASP.NET Core bir giriş verdi. Ne olduğunu, ne zaman kullanılacağını açıklar ve Mac için Visual Studio'da kullanma hakkında bilgi verirken.
 Sonraki adımlar hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
-- [ASP.NET Çekirdek](/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc) dokümanları.
+- [ASP.NET Çekirdek](/aspnet/core/?view=aspnetcore-2.1) dokümanları.
 - Bir Xamarin.Forms uygulaması için ASP.NET Core kullanarak bir REST hizmeti oluşturmak için nasıl gösterir [Yerli Mobil Uygulamalar için Backend Hizmetleri oluşturma.](/aspnet/core/mobile/native-mobile-backend)
 - [ASP.NET Core uygulamalı laboratuarı.](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)
 

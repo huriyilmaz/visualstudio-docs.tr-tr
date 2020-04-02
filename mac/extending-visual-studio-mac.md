@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 12/20/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 30826f68be1ef2f29940c8f9c95b2b79435e0a2a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: dd4db2502c65e9330bde5f475fc97b2e86a49e4a
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75852033"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544022"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Mac için Visual Studio’yu Genişletme
 
@@ -161,7 +161,7 @@ Geliştirme için kullanılabilen alanların kapsamı hakkında bilgi için [Uza
 
 ## <a name="extending-the-new-editor"></a>Yeni Editörü genişletme
 
-Mac için Visual Studio Windows Visual Studio aynı editör katmanları üstüne inşa [yeni bir yerli Kakao metin editörü UI tanıttı.](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes#RTW)
+Mac için Visual Studio Windows Visual Studio aynı editör katmanları üstüne inşa [yeni bir yerli Kakao metin editörü UI tanıttı.](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)
 
 Visual Studio ve Visual Studio for Mac arasında editör paylaşımıbirçok faydalarından biri, Visual Studio editörü hedefleyen kod Mac için Visual Studio çalıştırmak için uyarlanabilir olmasıdır.
 

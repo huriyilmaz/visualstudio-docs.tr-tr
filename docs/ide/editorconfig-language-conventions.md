@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c06d6c16082a8300092e36b9bbed126c66f8af4
-ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
+ms.openlocfilehash: a3f80eb555ef11a1e0a462e93d4508e778bd987d
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80528026"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544008"
 ---
 # <a name="language-conventions"></a>Dil kuralları
 
@@ -108,7 +108,6 @@ Bu bölümdeki stil kuralları hem C# hem de Visual Basic için geçerlidir.
   - dotnet\_\_tarzı\_ertelenmiş\_tuple_names tercih
   - dotnet\_\_tarzı\_member_names\_inferred anonim\_türü\_tercih
   - dotnet\_\_stili\_\_otomatik özellikleri tercih
-  - dotnet\_\_tarzı\_\_tercih\_\_referans\_\_eşitlik\_yöntemi üzerinde null kontrol
   - noktanet\_stili\_\_atama\_yerine\_\_koşullu ifadeyi tercih
   - dotnet\_\_stili\_dönüş\_\_yerine\_koşullu ifadeyi tercih
   - dotnet\_\_stili\_\_bileşik atama tercih
@@ -1129,7 +1128,8 @@ Bu bölümdeki stil kuralları yalnızca C# için geçerlidir.
 - ["Null" kontrol tercihleri](#c-null-checking-preferences)
   - csharp\_\_tarzı throw_expression
   - csharp\_\_tarzı\_koşullu delegate_call
-- [Değiştirici tercihleri](#normalize-modifiers) -csharp\_tercih modifier_order\_
+- [Değiştirici tercihleri](#normalize-modifiers)
+  - csharp\_\_tercih edilen modifier_order
 - [Kod bloğu tercihleri](#code-block-preferences)
   - csharp\_prefer_braces
 - [Kullanılmayan değer tercihleri](#unused-value-preferences)

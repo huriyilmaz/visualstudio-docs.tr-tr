@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be56581374aefbef41a5173836d1189cceff290
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cb559bc21b70b66d64bc44fb4269c97304dd81c3
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77580005"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543935"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Öğretici: XAML ve C&#35; ile Visual Studio'da ilk Evrensel Windows Platform uygulamanızı oluşturun
 
@@ -42,6 +42,9 @@ Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](htt
 1. Üst menü çubuğundan **Yeni** > **New** > **Dosya Yı**seçin.
 
 1. **Yeni Proje** iletişim kutusunun sol bölmesinde **Visual C#** seçeneğini genişletin ve ardından **Windows Universal'ı**seçin. Orta bölmede Boş **Uygulama 'yı (Evrensel Windows)** seçin. Daha sonra, proje *HelloWorld* adını ve **Tamam**seçin.
+
+   > [!NOTE]
+   > Kaynak projenin konumunun İşletim Sistemi (OS) sürücünüz gibi **Yeni Teknoloji Dosya Sistemi (NTFS)** biçimlendirilmiş bir sürücüde olduğundan emin olun. Aksi takdirde, projenizi oluşturma ve çalıştırma da sorun olabilir. 
 
    ![Visual Studio IDE'deki Yeni Proje iletişim kutusunda Windows Universal proje şablonu](media/new-project-csharp-uwp-helloworld.png)
 

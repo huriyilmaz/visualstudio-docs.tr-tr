@@ -12,19 +12,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e008e3181cd7c633179f35e7639265a2495fafe2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c679b2a43ec799035f9bafb6a03a546808498342
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633804"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543981"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>Nasıl yapılır: İlk hangi hedefi oluşturacaklarını belirtin
 
 Proje dosyası, projenin nasıl `Target` oluşturulabileceğini tanımlayan bir veya daha fazla öğe içerebilir. Microsoft Build Engine (MSBuild) altyapısı, proje dosyası bir `DefaultTargets` öznitelik, öznitelik `InitialTargets` veya hedef **-hedef** anahtarı nı kullanarak komut satırında belirtilmediği sürece bulduğu ilk projeyi ve herhangi bir bağımlılık oluşturur.
 ## <a name="use-the-initialtargets-attribute"></a>InitialTargets özniteliğini kullanma
 
- Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTargets` belirtilmiş olsa bile, öğenin özniteliği ilk çalışacak bir hedef belirtir.
 Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTargets` belirtilmiş olsa bile, öğenin özniteliği ilk çalışacak bir hedef belirtir.
 
 #### <a name="to-specify-one-initial-target"></a>Bir ilk hedef belirtmek için
@@ -77,6 +76,6 @@ Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTarg
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Msbuild](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Hedef](../msbuild/msbuild-targets.md)
 - [Nasıl yapılsın: Yapıyı temizleme](../msbuild/how-to-clean-a-build.md)

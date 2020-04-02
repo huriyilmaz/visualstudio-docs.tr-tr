@@ -1,5 +1,5 @@
 ---
-title: Python ile çalışmaya başlama | Microsoft Docs
+title: Python ile Başlarken | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -9,91 +9,91 @@ caps.latest.revision: 13
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 960511fcfb83dfc6ac3c58a806d8a23f1ff61597
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 97d60fe31f838c4cc497701f4560dc426ebc1cc9
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918772"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543970"
 ---
 # <a name="getting-started-with-python"></a>Python’ı Kullanmaya Başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio için Python Araçları (PTV), güçlü bir Python geliştirme deneyimi sunan, Visual Studio için ücretsiz, [Açık kaynaklı](https://github.com/Microsoft/ptvs) bir eklentisidir.  
+Python Tools for Visual Studio (PTVS), Visual Studio için güçlü bir Python geliştirme deneyimi olan ücretsiz, [açık kaynak](https://github.com/Microsoft/ptvs) eklentisidir.  
   
-## <a name="python-the-language"></a>Dili Python
+## <a name="python-the-language"></a>Python Dil
   
-Python pek çok üniversitenin, bilimcilerin, uygulama betiklerine, rastgele geliştiricilere ve profesyonel geliştiricilerle, uygulamalar, Web siteleri ve bulut hizmetlerinde çalışan popüler bir programlama dilidir.
+Python, uygulamalar, web siteleri ve bulut hizmetleri üzerinde çalışan birçok üniversite, bilim adamı, uygulama komut dosyası, gündelik geliştiriciler ve profesyonel geliştiriciler tarafından kullanılan popüler bir programlama dilidir.
 
-Programlama dili olarak Python:
+Bir programlama dili olarak Python:
   
 - Güvenilir.
-- Hızlı programlar, uygulama betiği, masaüstü uygulamaları, Web sunucuları, Web Hizmetleri ve bilimsel bilgi işlem için genellikle yararlı olur.
-- Kolayca öğrenilmesi ve iyi kodlamayı teşvik etmek için iyi bir tasarıma sahiptir (birçok üniversiteler bunu Tanıtım programlama kursları için kullanır).
-- Esnek, işlevsel ve nesne odaklı programlama stillerinin desteklenmesi.
-- Ücretsiz ve açık kaynak.
-- Tüm önemli işletim sistemlerinde iyi çalışır.  
-- Birçok ücretsiz, yararlı ve iyi tasarlanmış kitaplık tarafından desteklenir.  
+- Genellikle hızlı programlar, uygulama komut dosyası oluşturma, masaüstü uygulamaları, web sunucuları, web hizmetleri ve bilimsel bilgi işlem için yararlıdır.
+- Öğrenmesi kolay ve iyi kodlamayı teşvik etmek için iyi bir tasarıma sahiptir (birçok üniversite bunu giriş programlama kursları için kullanır).
+- Esnek, destekleyici zorunlu, işlevsel ve nesne yönelimli programlama stilleri.
+- Özgür ve açık kaynak.
+- Tüm büyük işletim sistemlerinde iyi çalışır.  
+- Birçok ücretsiz, kullanışlı ve iyi tasarlanmış kütüphaneler tarafından desteklenir.  
 - Birçok belge, örnek ve güçlü bir geliştirici topluluğu tarafından desteklenir.  
 
-Dil hakkında daha fazla bilgi edinmek için python.org adresindeki [Yeni başlayanlar Için Python](https://www.python.org/about/gettingstarted/) ile başlayın.
+Dil hakkında daha fazla bilgi edinmek için, python.org'da [Yeni Başlayanlar için Python](https://www.python.org/about/gettingstarted/) ile başlayın.
 
-Python 'u yüklemek için [https://www.python.org/download/](https://www.python.org/download/)ziyaret edin.
+Python'u yüklemek [https://www.python.org/download/](https://www.python.org/download/)için .
 
-## <a name="python-tools-for-visual-studio"></a>{1&gt;{2&gt;Visual Studio için Python Araçları&lt;2}&lt;1}
+## <a name="python-tools-for-visual-studio"></a>Visual Studio için Python Araçları
   
-[VisualStudio.com](https://www.visualstudio.com/explore/python-vs)adresinden yükleyebileceğiniz Visual Studio için Python araçları, aşağıdaki özellikleri sağlar:  
+[visualstudio.com](https://www.visualstudio.com/explore/python-vs)yükleyebileceğiniz Visual Studio için Python Araçları aşağıdaki özellikleri sağlar:  
   
-- Birden çok yorumlayıcılar için destek: çeşitli CPython, IronPython ve IPython sürümleri  
-- Python kodunun bir klasör yapısını örtük olarak alan ve ayrıca uygulama kodu, test kodu, Web sayfaları, JavaScript, derleme betikleri ve benzerlerini belirleyebilmeniz için açık denetime izin veren bir proje sistemi.  
-- Konsol, Web, Azure, veri bilimi ve diğer proje türleri için proje şablonları.    
+- Birden fazla yorumlayıcı için destek: CPython, IronPython ve IPython'un çeşitli sürümleri  
+- Python kodunun bir klasör yapısını zımni olarak alan ve uygulama kodunu, test kodunu, web sayfalarını, JavaScript'i, yapı komut dosyalarını ve benzerlerini tanımlayabilmeniz için açık denetime olanak tanıyan bir proje sistemi.  
+- Konsol, web, Azure, veri bilimi ve diğer proje türleri için proje şablonları.    
 - Python için Azure SDK (aşağıya bakın)    
-- Sözdizimi renklendirme, tüm kod ve kitaplıklarınızda otomatik olarak tamamlanma, imza yardımı, sınıf görünümü, tanıma git, tüm başvuruları bul, yeniden düzenleme ve daha fazlasını içeren zengin düzenleme ve kod kavrama özellikleri.    
-- Etkileşimli (REPL) bir pencere
+- Sözdizimi boyama, tüm kod ve kitaplıklar arasında otomatik olarak tam olarak tamamlanması, imza yardımı, sınıf görünümü, Tanıma Git, Tüm Başvuruları Bul, yeniden düzenleme ve daha fazlasını içeren zengin düzenleme ve kod anlama özellikleri.    
+- Etkileşimli (REPL) Penceresi
 - Veri görselleştirmeleri ile IPython.
 - IronPython ve .NET/WPF desteği.    
-- Visual Studio projesi olmadan zengin hata ayıklama, var olan bir yürütülebilir dosya, karışık modda hata ayıklama, Windows/Linux/Mac 'e uzaktan hata ayıklama ve etkileşimli pencere içinde hata ayıklama özelliği.   
+- Visual Studio projesi olmadan zengin hata ayıklama, mevcut bir çalıştırılabilir, karma mod hata ayıklama, Windows/Linux/Mac'e uzaktan hata ayıklama ve Etkileşimli Pencere içinde hata ayıklama yeteneği.   
 - Profil oluşturma araçları.  
 - Test araçları.  
   
 Aşağıdaki kaynaklar başlamanıza yardımcı olur:
 
 - [Yükleme kılavuzu](https://github.com/Microsoft/PTVS/wiki/PTVS-Installation)    
-- [Başlarken ve derin videoları öğrenin](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
-- Yükleme ve özellikleri Tanıtımı (27 dk.)]( https://www.youtube.com/watch?v=JNNAOypc6Ek)  
+- [Başlarken ve derin dalış kısa videolar](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
+- Kurulum ve özellikleri demo (27 dk)](https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [Belgeler](https://github.com/Microsoft/PTVS/wiki)  
 
-Visual Studio 'Nun mevcut olmadığı, Python kullanarak tek başına yürütülebilir bir dosya oluşturma, aslında katıştırılmış Python yorumlayıcı içeren bir program anlamına gelir. Ancak, [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)' de açıklandığı gibi, Python topluluğu 'nda bunu yapmak için çeşitli araçlar vardır. Cpyıthon Ayrıca, [cpıthon 'un eklenebilir ZIP dosyası kullanılarak](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)blog gönderisine göre yerel bir uygulama içine katıştırılmakta da desteklenir.
+Visual Studio'nun şu anda Python kullanarak tek başına yürütülebilir bir uygulama oluşturma nın mümkün olmadığını unutmayın, bu da aslında gömülü Python yorumlayıcısı olan bir program anlamına gelir. Ancak, [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)açıklandığı gibi bunu yapmak için Python topluluk içinde çeşitli araçlar vardır. CPython da yerel bir uygulama içinde gömülü olmayı destekler, blog yazısı açıklandığı gibi, [CPython's Embeddable Zip Dosyasını kullanarak](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/).
   
-## <a name="building-ui-with-python"></a>Python ile Kullanıcı arabirimi oluşturma  
+## <a name="building-ui-with-python"></a>Python ile UI Oluşturma  
 
-Python ile bir kullanıcı arabirimi oluşturmaya yönelik ana teklif, bir Python [projesi](https://www.qt.io/qt-for-application-development/)olan ( [resmi bağlama)](https://wiki.qt.io/PySide) (Ayrıca bkz. [Pysıde İndirmeleri](https://download.qt.io/official_releases/pyside/.)) ve [PyQt](https://wiki.python.org/moin/PyQt). Şu anda, herhangi belirli kullanıcı Arabirimi geliştirme araçları Visual Studio'da Python desteği içermez.
+Python ile bir UI oluşturmak için ana teklif [Qt Projesi](https://www.qt.io/qt-for-application-development/), [Python pyside (resmi bağlama)](https://wiki.qt.io/PySide) olarak bilinen ciltler (ayrıca [PySide indirme](https://download.qt.io/official_releases/pyside/.)bakınız ) ve [PyQt](https://wiki.python.org/moin/PyQt). Şu anda Visual Studio'daki Python desteği, UI geliştirme için belirli araçlar içermez.
 
 ## <a name="azure-sdk-for-python"></a>Python için Azure SDK
   
-Windows, Mac ve Linux destekleyen Python için Azure SDK, Microsoft Azure hizmetlerini kolayca kullanmanıza ve yönetmenize olanak sağlar. Ayrıntılar için aşağıdaki kaynaklara bakın: 
+Windows, Mac ve Linux'u destekleyen Python için Azure SDK, Microsoft Azure Hizmetlerini tüketmeyi ve yönetmeyi kolaylaştırır. Ayrıntılar için aşağıdaki kaynaklara bakın: 
 
-- SDK 'yı yüklemek için [Python paket dizinini](https://pypi.python.org/pypi/azure) kullanın veya Azure belgelerine [Python ve SDK 'yı yüklemeyi](/azure/python/python-sdk-azure-install) izleyin. 
-- [Python Için Azure SDK Geliştirici Merkezi](https://azure.microsoft.com/develop/python/) , eğitimlerle belgelere yüklemeden çok fazla yardım içerir.  Bazı önemli noktalar şunlardır:  
+- SDK'yı yüklemek için [Python Paket Dizini'ni](https://pypi.python.org/pypi/azure) kullanın veya Azure belgelerinde [Python ve SDK'yı yükleyin'i](/azure/developer/python/azure-sdk-install) izleyin. 
+- [Python Geliştirici Merkezi için Azure SDK,](https://azure.microsoft.com/develop/python/) yüklemeden belgelere kadar öğreticilerle çok sayıda yardıma sahiptir.  Bazı önemli noktalar şunlardır:  
 - Nasıl Yapılır Kılavuzları:
   - [Depolama Blobu](https://azure.microsoft.com/develop/python/how-to-guides/blob-service/)  
-  - [Depolama kuyruğu](https://azure.microsoft.com/develop/python/how-to-guides/queue-service/)  
-  - [Depolama tablosu](https://azure.microsoft.com/develop/python/how-to-guides/table-service/)  
-  - [Service Bus Kuyrukları](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-queues/)
-  - [Service Bus konuları/abonelikleri](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-topics/) 
-  - [Hizmet yönetimi](https://azure.microsoft.com/develop/python/how-to-guides/service-management/)  
+  - [Depolama Kuyruğu](https://azure.microsoft.com/develop/python/how-to-guides/queue-service/)  
+  - [Depolama Tablosu](https://azure.microsoft.com/develop/python/how-to-guides/table-service/)  
+  - [Servis Veri Otobüsü Kuyrukları](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-queues/)
+  - [Servis Otobüsü Konuları/Abonelikleri](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-topics/) 
+  - [Hizmet Yönetimi](https://azure.microsoft.com/develop/python/how-to-guides/service-management/)  
 
-## <a name="scientific-computing"></a>Bilimsel bilgi Işlem
+## <a name="scientific-computing"></a>Bilimsel Bilgi İşlem
 
-Visual Studio için Python Araçları, tüm Python veri bilimcst kitaplıklarına ek olarak, Azure 'da barındırılabilecek IPython ve IPython not defterlerini da destekler.
+Tüm Python veri bilimci kitaplıklarına ek olarak, Visual Studio için Python Araçları, Azure'da barındırılabilen IPython ve IPython Not Defterlerini destekler.
 
-[University of California, Irvine](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy-stack)'Dan IPython ve bilimsel bilgi işlem kitaplıklarını (Matplotlib, SciPy, sayısal tuş takımı, vb.) edinmeyi öneririz.  
+Biz IPython ve bilimsel bilgisayar kütüphaneleri (matplotlib, scipy, numpy, vb) [University of California, Irvine](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy-stack)edinmenizi öneririz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
 
-[PTV 'leri kullanmaya başlama: Visual Studio 'Yu ayarlama](../python/getting-started-with-ptvs-setting-up-visual-studio.md)
-[PTV](../python/getting-started-with-ptvs-start-coding-projects.md) 'leri kullanmaya başlama: ptv 'leri kullanmaya başlama
-[: kodu Düzenle](../python/getting-started-with-ptvs-editing-code.md)
-PTV 'leri kullanmaya başlama: [hata ayıklama](../python/getting-started-with-ptvs-debugging.md)
-PTV 'Leri kullanmaya başlama: [etkileşimli
-Python](../python/getting-started-with-ptvs-interactive-python.md) : [Azure 'da Web sitesi oluşturma](../python/getting-started-with-ptvs-building-a-website-in-azure.md)
+[PTVS ile Başlarken: PTVS](../python/getting-started-with-ptvs-setting-up-visual-studio.md)
+ile Visual Studio Başlarken Başlarken Görsel Studio Kurma:[PTVS ile Başlarken](../python/getting-started-with-ptvs-editing-code.md)
+[Kodlama (Projeler)](../python/getting-started-with-ptvs-start-coding-projects.md)
+Başlarken: Düzenleme Kodu[PTVS ile Başlarken:](../python/getting-started-with-ptvs-debugging.md)
+Hata Ayıklama[PTVS ile Başlarken: İnteraktif Python](../python/getting-started-with-ptvs-interactive-python.md)
+[PTVS ile Başlarken: Azure'da Bir Web Sitesi Oluşturma](../python/getting-started-with-ptvs-building-a-website-in-azure.md)

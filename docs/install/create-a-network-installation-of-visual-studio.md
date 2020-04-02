@@ -1,7 +1,7 @@
 ---
 title: Ağ tabanlı yükleme oluşturma
 description: Visual Studio'yı kuruluş içinde dağıtmak için ağ yükleme noktası oluşturmayı öğrenin.
-ms.date: 10/29/2019
+ms.date: 03/27/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bc31b6c5286e5d02d5fd6d4da441a001f190de90
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ea7efd82aa25844e8eb33745aa53d44be1ed14f6
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79303409"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544070"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio'nun ağ yüklemesini oluşturma
 
@@ -237,8 +237,11 @@ Yöneticiler, yükleme komut dosyasının bir parçası olarak Visual Studio'yu 
 
 Bir düzenden yüklediğinizde, yüklenen içerik düzenden elde edilir. Ancak, düzende olmayan bir bileşen seçerseniz, bu bileşen internetten edinici olur.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmesini engellemek istiyorsanız, `--noWeb` seçeneği kullanın. `--noWeb` Kullanılıyorsa ve düzen de yüklenecek şekilde seçilen herhangi bir içerik eksikse, kurulum başarısız olur.
 
+> [!TIP]
+> Internet'e bağlı olmayan bir bilgisayara çevrimdışı bir kaynaktan yüklemek `--noWeb` `--noUpdateInstaller` istiyorsanız, hem seçenekleri hem de seçenekleri belirtin. Eski güncelleştirilmiş iş yükleri, bileşenleri ve benzeri indirme engeller. İkincisi, yükleyicinin web'den kendi kendini güncellemesini engeller.
+
 > [!IMPORTANT]
-> Bu `--noWeb` seçenek Visual Studio kurulumunun güncelleştirmeleri denetlemesini engellemez. Daha fazla bilgi için [ağ tabanlı Visual Studio dağıtımları](controlling-updates-to-visual-studio-deployments.md) sayfasında denetim güncelleştirmelerine bakın.
+> Bu `--noWeb` seçenek, Internet'e bağlı bir bilgisayardaki Visual Studio kurulumunun güncelleştirmeleri denetlemesini engellemez. Daha fazla bilgi için [ağ tabanlı Visual Studio dağıtımları](controlling-updates-to-visual-studio-deployments.md) sayfasında denetim güncelleştirmelerine bakın.
 
 ### <a name="error-codes"></a>Hata kodları
 
@@ -280,7 +283,7 @@ Visual Studio'nun eski bir sürümü için bir düzen [https://my.visualstudio.c
 
 Çevrimdışı yüklemenizde bir sorun la karşılaşırsanız, bu konuda bir sorun yaşamak isteriz. Bize bildirmenin en iyi yolu [Sorun Bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanmaktır. Bu aracı kullandığınızda, sorunu tanılamamıza ve düzeltmemize yardımcı olmak için ihtiyacımız olan telemetri ve günlükleri bize gönderebilirsiniz.
 
-Ayrıca, yüklemeyle ilgili sorunlar için [**canlı sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği de sunuyoruz.
+Ayrıca, yüklemeyle ilgili sorunlar için [**yükleme sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği de sunuyoruz.
 
 Başka destek seçeneklerimiz de mevcuttur. Bir liste için [Geri Bildirim](../ide/feedback-options.md) sayfamıza bakın.
 
@@ -292,5 +295,6 @@ Başka destek seçeneklerimiz de mevcuttur. Bir liste için [Geri Bildirim](../i
 - [Ağ tabanlı Visual Studio dağıtımlarında denetim güncelleştirmeleri](controlling-updates-to-visual-studio-deployments.md)
 - [Visual Studio ürün yaşam döngüsü ve servis](/visualstudio/releases/2019/servicing/)
 - [Bakım temeli sırasında Visual Studio’yu güncelleştirme](update-servicing-baseline.md)
-- [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
+- [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
+- [Visual Studio çevrimdışı yüklemesi için gerekli sertifikaları yükleme](/install-certificates-for-visual-studio-offline.md)
