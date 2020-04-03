@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ac7d23c1d4cb245366ecf03c1a8a0e67b11cb55
-ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
+ms.openlocfilehash: 5134e17c26ffd7b34c0277c571173ba03d758bee
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80412019"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638780"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını analiz ederek uygulama performansını ölçme
 
@@ -35,7 +35,7 @@ Tanılama hub'ı, tanılama oturumunuzu çalıştırmak ve yönetmek için size 
 > [!Important]
 > Tanılama Araçları, Visual Studio'da ASP.NET ve yerel/C++ geliştirme dahil .NET geliştirme için desteklenir.
 
-Bu makalede, normal hata ayıklama iş akışınızda CPU kullanımını çözümlemeyi tartışacağız. Cpu kullanımını ekli bir hata ayıklayıcı olmadan veya çalışan bir uygulamayı hedefleyerek de analiz edebilirsiniz - [Run profiling tools with or without the debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) Ayrıca başka bir profil oluşturma aracı kullanabilirsiniz, [PerfTips](../profiling/perftips.md), kod üzerinden adım ve tamamlamak için belirli işlevleri veya kod blokları ne kadar sürdüğünü belirlemek için.
+Bu makalede, normal hata ayıklama iş akışınızda CPU kullanımını çözümlemeyi tartışacağız. Cpu kullanımını, hata ayıklayıcı eklenmeden veya çalışan bir uygulamayı hedefleyerek de analiz edebilirsiniz. Daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md) Ayrıca başka bir profil oluşturma aracı kullanabilirsiniz, [PerfTips](../profiling/perftips.md), kod üzerinden adım ve tamamlamak için belirli işlevleri veya kod blokları ne kadar sürdüğünü belirlemek için.
 
 Profil oluşturma araçlarını Windows 7 ve sonraki hata ayıklama olmadan kullanabilirsiniz. Windows 8 ve daha sonra hata ayıklama **(Tanılama Araçları** penceresi) ile profil oluşturma araçları çalıştırmak için gereklidir.
 

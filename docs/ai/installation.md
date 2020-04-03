@@ -2,19 +2,20 @@
 title: AI Araçlarını Yükleme
 description: Visual Studio için AI Tools nasıl yüklenir açıklar
 keywords: ai, görsel stüdyo
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: c1160c68c79dd595e82ecf761c6e441ecc906f62
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a83deb968811159cfaeddaf537624e21b37e98c7
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75915809"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638573"
 ---
 # <a name="installation"></a>Yükleme
 
@@ -37,7 +38,7 @@ Araçları [Visual Studio Marketplace'ten](https://marketplace.visualstudio.com/
 
 ## <a name="prepare-your-local-machine"></a>Yerel makinenizi hazırlayın
 
-Yerel bilgisayarınızda derin öğrenme modellerini eğitmeden önce, geçerli ön koşulların yüklü olduğundan emin olun. Buna, NVIDIA GPU'nuz için en son sürücülere ve kitaplıklardan emin olmak da dahildir (varsa). Ayrıca, NumPy, SciPy gibi Python ve Python kitaplıklarını ve Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch ve Chainer gibi uygun derin öğrenme çerçevelerini de yüklediğinizden emin olun Proje.
+Yerel bilgisayarınızda derin öğrenme modellerini eğitmeden önce, geçerli ön koşulların yüklü olduğundan emin olun. Buna, NVIDIA GPU'nuz için en son sürücülere ve kitaplıklardan emin olmak da dahildir (varsa). Ayrıca, Projenizde kullanmayı planladığınız NumPy, SciPy gibi Python ve Python kitaplıklarını ve Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch ve Chainer gibi uygun derin öğrenme çerçevelerini yüklediğinizden emin olun.
 
 > [!NOTE]
 > Aşağıdaki alt bölümlerdeki yazılım girişi ana sayfalarından alınmıştır.

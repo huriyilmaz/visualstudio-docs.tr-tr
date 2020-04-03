@@ -2,20 +2,21 @@
 title: Bir tensorflow modelini yerel olarak eğitin
 description: Visual Studio için AI Tools'ta yerel olarak bir tensorflow modeli çalıştırın
 keywords: ai, visual studio, tensorflow, yerel
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: quickstart
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ce126baeb96efcaab3c40bac912274ee1cd8c7
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: eca02b74154eab5468adeabdb84efdf2839fc92e
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "72777438"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638752"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>TensorFlow modelini yerel olarak eğitin
 
@@ -23,7 +24,7 @@ Bu hızlı başlangıçta, AI için Visual Studio Tools'ta yerel olarak [MNIST](
 
 MNIST veritabanında 60.000 örnekten oluşan bir eğitim kümesi ve 10.000 el yazısı basamak örneği bir test kümesi vardır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Başlamadan önce aşağıdakileri yüklediğinizden emin olun:
 

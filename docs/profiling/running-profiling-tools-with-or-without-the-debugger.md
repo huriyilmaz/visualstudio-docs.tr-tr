@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklayıcılı veya hata ayıklayıcıolmadan profil oluşturma araçlarını çalıştırın | Microsoft Dokümanlar
-ms.date: 11/04/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 273dc6770f2928ed65d6a473b7f1986bc353687e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cf544b3bec9b492f1d1669549ba5501a52f7d5f2
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62999407"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638795"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
@@ -33,23 +33,21 @@ Hangi araçların ve sonuçların kullanılacağına karar vermenize yardımcı 
 - Hata ayıklama, özel durum ve modül yük olaylarını engelleme gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
 - **Performans Profiler** araçlarında sürüm oluşturma performans numaraları en kesin ve doğrudur. Hata ayıklama ile tümleşik araç sonuçları, hata ayıklamayla ilgili diğer ölçümlerle karşılaştırmak için en yararlıdır.
 
+CPU Kullanımı için, komut satırı araçlarını kullanarak aracı uzak bir makinede çalıştırabilirsiniz.
+
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Hata ayıklama sırasında profil oluşturma verilerini toplama
 
 **Hata** > Ayıklama**Başlat Hata Ayıklama'yı** seçerek veya **F5**tuşuna basarak Visual Studio'da hata ayıklamaya başladığınızda, **Tanılama Araçları** penceresi varsayılan olarak görüntülenir. El ile açmak için **Hata Ayıklama** > **Windows** > **Show TanıLama Araçları'nı**seçin. **Tanılama Araçları** penceresi olaylar, işlem belleği ve CPU kullanımı hakkındaki bilgileri gösterir.
 
-![Tanılama Araçları](../profiling/media/diagnostictools-update1.png "Tanılama Araçları")
+![Tanı Araçları](../profiling/media/diagnostictools-update1.png "Tanı Araçları")
 
-- **Bellek Kullanımı,** UI Analizi ve **CPU Kullanımı'nı**görüntüleyip görüntüleymeyeceğini seçmek için araç çubuğundaki **Ayarlar** **simgesini**kullanın.
+- **Bellek Kullanımı** veya CPU **Kullanımı**görüntülemek için olup olmadığını seçmek için araç çubuğunda **Ayarlar** simgesini kullanın.
 
 - **Tanılama Araçları Özellik Sayfalarını** daha fazla seçenekle açmak için **Ayarlar** açılır **bölümündeayarlar'ı** seçin.
 
 - Visual Studio Enterprise'ı çalıştırıyorsanız, Visual Studio **Tools** > **Options** > **IntelliTrace**altında IntelliTrace'i etkinleştirebilir veya devre dışı kullanabilirsiniz.
 
 Hata ayıklamayı durdurduğunuzda tanılama oturumu sona erer.
-
-Uzaktan hata ayıklama hedefleri için **Tanılama Araçlarını** da görüntüleyebilirsiniz. Uzaktan hata ayıklama ve profil oluşturma için Visual Studio uzaktan hata ayıklama cihazıyüklü ve uzak hedef üzerinde çalışan olmalıdır.
-- Uzaktan hata ayıklama ve masaüstü uygulama projelerinin profilini çıkarmak için [Uzaktan hata ayıklama](../debugger/remote-debugging.md)bölümüne bakın.
-- UWP uygulamalarını uzaktan hata ayıklama ve profil oluşturma için [uzak makinelerde Hata Ayıklama UWP uygulamalarına](../debugger/run-windows-store-apps-on-a-remote-machine.md)bakın.
 
 ### <a name="the-events-tab"></a>Etkinlikler sekmesi
 
@@ -69,7 +67,9 @@ Daha fazla bilgi için [Tanılama Araçları penceresinin Olaylar sekmesini aram
 
 Hata ayıklama olmadan performans verileri toplamak için **Performans Profilleyici** araçlarını çalıştırabilirsiniz. Profil oluşturma araçlarından bazılarıçalıştırmak için yönetici ayrıcalıkları gerektirir. Visual Studio'yu yönetici olarak açabilir veya tanılama oturumunu başlattığınızda araçları yönetici olarak çalıştırabilirsiniz.
 
-1. Visual Studio'da açık bir projeyle **Hata Ayıklama** > **Performans Profiloluştur'u**seçin veya **Alt**+**F2 tuşuna**basın.
+1. Visual Studio'da açık olan bir projeyle, çözüm yapılandırmasını **Release** olarak ayarlayın ve dağıtım hedefi olarak **Yerel Windows Hata Ayıklayıcı'yı** (veya **Yerel Makineyi)** seçin.
+
+1. **Hata Ayıklama** > **Performans Profilleyicisi'ni**seçin veya **Alt**+**F2 tuşuna**basın.
 
 1. Tanılama başlatma sayfasında, çalıştırmak için bir veya daha fazla araç seçin. Yalnızca proje türü, işletim sistemi ve programlama dili için geçerli olan araçlar görüntülenir. Bu tanılama oturumu için devre dışı bırakılan araçları da görmek için **tüm araçları göster'i** seçin. Seçenekleriniz bir C# UWP uygulaması için şu şekilde görünebilir:
 
@@ -103,13 +103,20 @@ Raporları kaydedebilir ve tanılama araçları başlatma **sayfasındaki Son A�
 
 ## <a name="run-diagnostic-sessions-on-installed-or-running-apps"></a>Yüklü veya çalıştırılan uygulamalarda tanılama oturumları çalıştırma
 
- Uygulamanızı Visual Studio projesinden başlatmanın yanı sıra, alternatif hedefler üzerinde tanılama oturumları da çalıştırabilirsiniz. Örneğin, Windows App Mağazası'ndan yüklenen bir uygulamadaki performans sorunlarını tanılamak isteyebilirsiniz.
+Uygulamanızı Visual Studio projesinden başlatmanın yanı sıra, alternatif hedefler üzerinde tanılama oturumları da çalıştırabilirsiniz. Örneğin, Windows App Mağazası'ndan yüklenen bir uygulamadaki performans sorunlarını tanılamak isteyebilirsiniz. Performans Profilcisi'nde, **Hedef Değiştir'in**altındaki açılır listeden seçin.
 
- ![Tanılama araçları analiz hedefini seçin](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
+![Tanılama araçları analiz hedefini seçin](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
 
- Zaten yüklü olan uygulamaları başlatabilir veya tanılama araçlarını zaten çalışmakta olan uygulamalara ve işlemlere ekleyebilirsiniz. **Running App** veya **Installed App'i**seçtiğinizde, uygulamayı belirtilen dağıtım hedefinde uygulamaları bulan bir listeden seçersiniz. Bu hedef yerel veya uzak bir makine olabilir.
+Zaten yüklü olan uygulamaları başlatabilir veya tanılama araçlarını zaten çalışmakta olan uygulamalara ve işlemlere ekleyebilirsiniz.
 
- ![Tanı için çalışan veya yüklü bir uygulama seçin](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+Çözümleme hedefiniz olarak **Yürütülebilir'i** seçerseniz, yerel veya uzak bir makinede *bir .exe'ye* giden yolu girebilirsiniz. Her iki durumda *da,.exe* yerel olarak çalışır. Ancak Visual Studio'da çözümü açarak uygulamanızın profilini oluşturmanızı öneririz.
+
+Bir UWP uygulaması **için, Çalışan Uygulama** veya **Yüklü Uygulama'yı**seçtiğinizde, uygulamayı belirtilen dağıtım hedefindeki uygulamaları bulan bir listeden seçersiniz. Bu hedef yerel veya uzak bir makine olabilir. Uzak bir makinede bir UWP uygulamasının profilini çıkarmak için **Uzak Bağlantılar** iletişim kutusunda **Evrensel (Şifrelenmemiş Protokol)** seçeneğini seçmeniz gerekir.
+
+![Tanı için çalışan veya yüklü bir uygulama seçin](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+
+> [!NOTE]
+> Profil oluşturma araçlarının uzaktan kullanılmasını gerektiren diğer senaryolar için [bkz.](../profiling/profile-apps-from-command-line.md) CPU Kullanımı ve .NET Nesne Ayırma aracı ile komut satırı araçlarını kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

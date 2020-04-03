@@ -2,19 +2,20 @@
 title: Azure Toplu İşlem AI'de model eğitmek için iş gönderme
 description: tren modeli bulut
 keywords: ai, visual studio, tren modeli, bulut
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: dec70c9e9aeb9c916b511241a74b550354aff175
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 083b2cb191d627ced936ead6a90b363970a9e7e0
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75915768"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638769"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Toplu AI'de AI modellerini eğitin
 

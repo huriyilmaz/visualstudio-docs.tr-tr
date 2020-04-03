@@ -2,20 +2,21 @@
 title: Bulutta tensorFlow modeli çalıştırma
 description: azure derin öğrenme vm bir tensorflow modeli çalıştırın
 keywords: ai, visual studio, derin öğrenme sanal makine
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: tutorial
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cb06220c99abb86c24808f6831cf98280133f2e
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 6cd833a687591ba4f49e785746381f9a5d738f5e
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75915835"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638761"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>Bulutta bir TensorFlow modelini eğitin
 
@@ -23,7 +24,7 @@ Bu eğitimde, Azure [Derin Öğrenme](/azure/machine-learning/data-science-virtu
 
 MNIST veritabanında 60.000 örnekten oluşan bir eğitim kümesi ve 10.000 el yazısı basamak örneği bir test kümesi vardır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 Başlamadan önce, aşağıdakileri yüklediğinizden ve yapılandırdığınızdan emin olun:
 
 ### <a name="setup-azure-deep-learning-virtual-machine"></a>Kurulum Azure Derin Öğrenme Sanal Makine

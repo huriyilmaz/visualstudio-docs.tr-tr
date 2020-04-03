@@ -1,7 +1,7 @@
 ---
 title: Hata ayıklama olmadan bellek kullanımını analiz etme | Microsoft Dokümanlar
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -13,28 +13,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b05787802b72eb4d14e1b2b56765bb246b9ada51
-ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+ms.openlocfilehash: 5af369669245bca9c5de74566dd8594164acf8bb
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256250"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638822"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklama olmadan bellek kullanımını analiz edin
 
 **Bellek Kullanımı** aracı uygulamanızın bellek kullanımını izler. Aracı Visual Studio'da aktif olarak geliştirdiğiniz senaryoların gerçek zamanlı bellek etkilerini incelemek için kullanabilirsiniz. Uygulamanın bellek durumlarının ayrıntılı anlık görüntülerini alabilir ve bellek sorunlarının temel nedenlerini bulmak için anlık görüntüleri karşılaştırabilirsiniz.
 
-**Bellek Kullanımı** aracı hata ayıklayıcı ile veya olmadan çalıştırabilirsiniz. Aşağıdaki yönergeler Visual Studio **Performans Profilleyicisinde**hata ayıklayıcısı olmadan **Bellek Kullanımı** aracının nasıl kullanılacağını gösterir.
+**Bellek Kullanımı** aracı [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırabilirsiniz. Bu makalede, Visual Studio **Performance Profiler'da**hata ayıklayıcısı olmadan **Bellek Kullanımı** aracının nasıl kullanılacağını gösteriyoruz.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Bellek Kullanımı tanılama oturumları
 
 **Bellek Kullanımı tanılama oturumunu başlatmak için:**
 
-1. Visual Studio'da bir C# Universal Windows (UWP) projesi açın.
+1. Visual Studio'da bir proje açın.
+
+   Bellek Kullanımı aracı .NET, ASP.NET, yerel veya karma modlu (.NET ve yerel) uygulamaları destekler.
+
+1. Hata Ayıklama menüsünde, çözüm yapılandırmasını **Release** olarak ayarlayın ve dağıtım hedefi olarak **Yerel Windows Hata Ayıklayıcı'yı** (veya Yerel **Makineyi)** seçin.
 
 1. Menü çubuğunda **Hata Ayıklama** > **Performans Profilcisi'ni**seçin.
 
-1. **Bellek Kullanımı'nı**seçin ve ardından **Başlat'ı**seçin.
+1. **Kullanılabilir Araçlar**altında, **Bellek Kullanımı'nı**seçin ve ardından **Başlat'ı**seçin.
 
    ![Bellek Kullanımı tanılama oturumunu başlatın](../profiling/media/memuse_start_diagnosticssession.png "Bellek Kullanımı tanılama oturumunu başlatın")
 

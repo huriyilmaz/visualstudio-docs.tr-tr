@@ -1,18 +1,19 @@
 ---
 title: GPU kullanımını izleme
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: f455a1cbfbad58ebe724c879837e161954cf4be2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8cc9491edb2e38ef96aa8ad6d554a53d43e5957f
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62560954"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638719"
 ---
 # <a name="monitoring-gpu-utilization"></a>GPU Kullanımının İzlenmesi
 

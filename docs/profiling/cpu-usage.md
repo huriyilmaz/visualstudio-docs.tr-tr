@@ -1,7 +1,7 @@
 ---
 title: CPU kullanımını analiz et | Microsoft Dokümanlar
 ms.custom: seodec18
-ms.date: 11/04/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 351247f50560896d53267fcf8d7f4a66a81b9461
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 88272af1733dbbaf7f46743388a8ecb6522e9f1a
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62553633"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638832"
 ---
 # <a name="analyze-cpu-usage"></a>CPU kullanımını analiz etme
 
 Uygulamanızdaki performans sorunlarını araştırmaya başlamanın iyi bir yolu, uygulamanın CPU kullanımını anlamaktır. **CPU Kullanımı** performans aracı, C++, C#/Visual Basic ve JavaScript uygulamalarında kod yürütme için harcanan CPU süresini ve yüzdesini gösterir.
 
-**CPU Kullanımı** aracı açık bir Visual Studio projesinde, yüklü bir Microsoft Mağazası uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalıştırılabilir. Aracı yerel veya uzak makinelerde veya bir simülatör veya emülatörde çalıştırabilirsiniz. Daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+**CPU Kullanımı** aracı açık bir Visual Studio projesinde, yüklü bir Microsoft Mağazası uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalıştırılabilir. Daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
 
 **Cpu Kullanım** aracını hata ayıklama ile veya hata ayıklama olmadan çalıştırabilirsiniz. Hata ayıklamada, CPU profil oluşturmayı açıp kapatabilir ve CPU kullanımının işlev başına dökümünü görebilirsiniz. Yürütme duraklatıldığında, örneğin bir kesme noktasında CPU kullanım sonuçlarını görüntüleyebilirsiniz.
 
@@ -33,7 +33,7 @@ Genellikle, yerel makine en iyi yüklü uygulama yürütme çoğaltıyor. Window
 
 ## <a name="collect-cpu-usage-data"></a>CPU kullanım verilerini toplama
 
-1. Visual Studio projesinde, çözüm yapılandırmasını **Release'e** ayarlayın ve dağıtım hedefi olarak **Yerel Makine'yi** seçin.
+1. Visual Studio projesinde, çözüm yapılandırmasını **Release** olarak ayarlayın ve dağıtım hedefi olarak **Yerel Windows Hata Ayıklayıcı'yı** (veya **Yerel Makineyi)** seçin.
 
     ![Serbest Bırakma ve Yerel Makine'yi seçin](../profiling/media/cpuuse_selectreleaselocalmachine.png "Serbest Bırakma ve Yerel Makine'yi seçin")
 
