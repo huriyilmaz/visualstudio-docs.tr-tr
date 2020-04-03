@@ -40,6 +40,7 @@
 #### [Visual Studio IDE](vs-ide-benefit.md)
 #### [WhiteSource Bolt](vs-whitesource.md)
 #### [Windows Geliştirici Hesabı](vs-windows-dev.md)
+#### [Windows Sanal Masaüstü](vs-windows-virtual-desktop.md)
 ### Profesyonel geliştirme
 #### [CODE Magazine](vs-code-magazine.md)
 #### [DataCamp](vs-datacamp.md)
