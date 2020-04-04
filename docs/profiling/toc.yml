@@ -1,6 +1,6 @@
 - name: Profil oluşturma belgeleri
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   href: profiling-overview.md
 - name: Hızlı Başlangıçlar
   items:
@@ -24,20 +24,20 @@
       href: running-profiling-tools-with-or-without-the-debugger.md
 - name: Nasıl yapılır kılavuzları
   items:
-    - name: CPU kullanımı
-      href: cpu-usage.md
     - name: PerfTips kullanma
       href: perftips.md
+    - name: CPU kullanımı
+      href: cpu-usage.md
     - name: Bellek kullanımı
       items:
         - name: Bellek kullanımını analiz etme
           href: analyze-memory-usage.md
         - name: .NET nesneleri için bellek kullanımını analiz etme
           href: dotnet-alloc-tool.md
-        - name: Özel yerel ETW yığın olayları
-          href: custom-native-etw-heap-events.md
         - name: Hata ayıklayıcı olmadan bellek kullanımı
           href: memory-usage-without-debugging2.md
+        - name: Özel yerel ETW yığın olayları
+          href: custom-native-etw-heap-events.md
     - name: Komut satırından performans ölçme
       href: profile-apps-from-command-line.md
     - name: GPU kullanımını analiz etme
@@ -80,7 +80,7 @@
               href: performance-session-properties.md
             - name: Profil oluşturma ve Windows Vista güvenliği
               href: profiling-and-windows-vista-security.md
-        - name: Başlangıç
+        - name: Kullanmaya başlayın
           items:
             - name: Performans araçları ile çalışmaya başlama
               href: getting-started-with-performance-tools.md
@@ -186,11 +186,11 @@
                       items:
                         - name: .NET Framework kullanımı performans kurallarına genel bakış
                           href: dotnet-framework-usage-performance-rules.md
-                        - name: 'DA0001: Birleştirmeler için StringBuilder kullanın'
+                        - name: 'DA0001: Birleştirmeler için StringBuilder kullanma'
                           href: da0001-use-stringbuilder-for-concatenations.md
                         - name: 'DA0005: Sık kullanılan GC2 koleksiyonları'
                           href: da0005-frequent-gc2-collections.md
-                        - name: 'DA0006: Değer türleri için Eşittir()''lerin üzerine yaz'
+                        - name: 'DA0006: Değer türleri için Equals() üzerine yazın'
                           href: da0006-override-equals-parens-for-value-types.md
                         - name: 'DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının'
                           href: da0007-avoid-using-exceptions-for-control-flow.md
@@ -202,27 +202,27 @@
                           href: da0012-significant-amount-of-reflection.md
                         - name: 'DA0013: Yüksek oranda String.Split veya String.Substring kullanımı'
                           href: da0013-high-usage-of-string-split-or-string-substring.md
-                        - name: 'DA0018: 32 bitlik Uygulama işlem tarafından yönetilen bellek sınırlarında çalışıyor'
+                        - name: 'DA0018: Yönetilen bellek limitlerinde çalışan 32 bit Uygulama'
                           href: da0018-32-bit-application-running-at-process-managed-memory-limits.md
-                        - name: 'DA0021: Yüksek oranda Gen 1 çöp koleksiyonları'
+                        - name: 'DA0021: Yüksek oranda 1. nesil atık toplama'
                           href: da0021-high-rate-of-gen-1-garbage-collections.md
-                        - name: 'DA0022: Yüksek oranda Gen 2 çöp koleksiyonları'
+                        - name: 'DA0022: Yüksek oranda 2. nesil atık toplama'
                           href: da0022-high-rate-of-gen-2-garbage-collections.md
                         - name: 'DA0023: Yüksek GC CPU süresi'
                           href: da0023-high-gc-cpu-time.md
                         - name: 'DA0024: Aşırı GC CPU Süresi'
                           href: da0024-excessive-gc-cpu-time.md
-                        - name: 'DA0038: Yüksek Oranda Kilit çakışmaları'
+                        - name: 'DA0038: Yüksek Oranda Kilit çakışması'
                           href: da0038-high-rate-of-lock-contentions.md
-                        - name: 'DA0039: Çok Yüksek Oranda Kilit çakışmaları'
+                        - name: 'DA0039: Çok Yüksek Oranda Kilit çakışması'
                           href: da0039-very-high-rate-of-lock-contentions.md
                     - name: Bellek ve Disk Belleği performans kuralları
                       items:
                         - name: Bellek ve Disk Belleği performans kurallarına genel bakış
                           href: memory-and-paging-performance-rules.md
-                        - name: 'DA0014: Aşırı yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor.'
+                        - name: 'DA0014: Çok yüksek oranda diske etkin bellek sayfalaması'
                           href: da0014-extremely-high-rates-of-paging-active-memory-to-disk.md
-                        - name: 'DA0017: Yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor.'
+                        - name: 'DA0017: Yüksek oranda diske etkin bellek sayfalaması'
                           href: da0017-high-rates-of-paging-active-memory-to-disk.md
                     - name: Profil Oluşturma Araçları kullanım kuralları
                       items:
@@ -234,29 +234,29 @@
                           href: da0003-many-kernel-samples.md
                         - name: 'DA0004: Yüksek işlemci kullanımı'
                           href: da0004-high-processor-usage.md
-                        - name: 'DA0008: Toplanan örnek az'
+                        - name: 'DA0008: Az sayıda örnek toplandı'
                           href: da0008-few-samples-collected.md
-                        - name: 'DA0026: Aşırı çekirdek CPU süresi işleme'
+                        - name: 'DA0026: Aşırı çekirdek CPU süresi işlemesi'
                           href: da0026-excessive-kernel-cpu-time-processing.md
                         - name: 'DA0029: Desteklenmeyen CLR Sürümü'
                           href: da0029-unsupported-clr-version.md
-                        - name: 'DA0030: Veritabanı projeleri için Katman Etkileşim ölçümlerini topla'
+                        - name: 'DA0030: Veritabanı projeleri için Katman Etkileşimi ölçüleri toplayın'
                           href: da0030-gather-tier-interaction-measurements-for-database-projects.md
                     - name: Kaynak İzleme performans kuralları
                       items:
                         - name: Kaynak İzleme performans kurallarına genel bakış
                           href: resource-monitoring-performance-rules.md
-                        - name: 'DA0501: İşlemin ortalama CPU kullanımının profili oluşturuluyor'
+                        - name: 'DA0501: Profili oluşturulan İşlemin Ortalama CPU kullanımı'
                           href: da0501-average-cpu-consumption-by-the-process-being-profiled.md
-                        - name: 'DA0502: İşlemin maksimum CPU kullanımının profili oluşturuluyor'
+                        - name: 'DA0502: Profili oluşturulan İşlemin En Yüksek CPU kullanımı'
                           href: da0502-maximum-cpu-consumption-by-the-process-being-profiled.md
-                        - name: 'DA0503: İşlem için Bayt Cinsinden Ortalama Çalışma Kümesinin profili oluşturuluyor'
+                        - name: 'DA0503: Profili oluşturulan İşlemin Bayt Cinsinden Ortalama Çalışma Kümesi'
                           href: da0503-average-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: 'DA0504: İşlem için izin verilen Bayt Cinsinden En Büyük Çalışma Kümesinin profili oluşturuluyor'
+                        - name: 'DA0504: Profili oluşturulan İşlemin Bayt Cinsinden En Yüksek Sayıda Çalışma Kümesi'
                           href: da0504-maximum-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: 'DA0505: İşlem için izin verilen Ortalama Özel Bayt Sayısının profili oluşturuluyor'
+                        - name: 'DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar'
                           href: da0505-average-private-bytes-allocated-for-the-process-being-profiled.md
-                        - name: 'DA0506: İşlem için izin verilen Maksimum Özel Bayt Sayısının profili oluşturuluyor'
+                        - name: 'DA0506: Profili oluşturulan İşlem için ayırılmış En Yüksek Sayıda Özel Bayt'
                           href: da0506-maximum-private-bytes-allocated-for-the-process-being-profiled.md
             - name: Performans Raporu Görünümleri
               items:
@@ -662,7 +662,7 @@
                   href: suspendprofile.md
                 - name: PROFILE_CURRENTID
                   href: profile-currentid.md
-            - name: 'İzlenecek yol: Profil oluşturucu API''ler Kullanma'
+            - name: 'İzlenecek yol: Profil Oluşturucu API’lerini kullanma'
               href: walkthrough-using-profiler-apis.md
         - name: ASP.NET yük testlerinin profilini oluşturma
           href: profiling-aspnet-load-tests.md
