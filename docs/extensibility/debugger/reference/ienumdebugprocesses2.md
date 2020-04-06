@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugProcesses2 | Microsoft Docs
+title: IEnumDebugProcesses2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugProcesses2
 ms.assetid: 06a1368f-10f0-44eb-af61-e388c2327111
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b32d2469c42931fa3dead4c5078e7d5b44b5d60
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8b9fe0e96ade081e8da11b5e1c06c5b45279b10b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334931"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715755"
 ---
 # <a name="ienumdebugprocesses2"></a>IEnumDebugProcesses2
-Bu arabirim, hata ayıklama bağlantı noktasında çalışan işlemleri numaralandırır.
+Bu arabirim, hata ayıklama bağlantı noktasında çalışan işlemleri ayıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,32 @@ Bu arabirim, hata ayıklama bağlantı noktasında çalışan işlemleri numaral
 IEnumDebugProcesses : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Özel bağlantı noktası sağlayıcısı bir bağlantı noktasında çalışan işlemlerin bir listesini sağlamak üzere bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Özel bir bağlantı noktası tedarikçisi, bağlantı noktasında çalışan işlemlerin listesini sağlamak için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Visual Studio çağrıları [EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md) bu arabirimi elde edilir.
+ Visual Studio bu arabirimi elde etmek için [EnumProcesses'i](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md) arar.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IEnumDebugProcesses2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IEnumDebugProcesses2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)|Bir numaralandırma sıralı işlemlerde belirtilen sayıda alır.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugprocesses2-skip.md)|Bir numaralandırma sıralı işlemlerde belirtilen sayıda atlar.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugprocesses2-reset.md)|Bir numaralandırma sıralı başlangıç durumuna sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugprocesses2-clone.md)|Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugprocesses2-getcount.md)|İşlem sayısı bir numaralandırıcı alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)|Numaralandırma sırasında belirli sayıda işlem alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumdebugprocesses2-skip.md)|Numaralandırma sırasında belirli sayıda işlemi atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugprocesses2-reset.md)|Numaralandırma sırasını başa sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugprocesses2-clone.md)|Geçerli numaralandırma durumuyla aynı numaralandırma durumunu içeren bir numaralandırma oluşturucu oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugprocesses2-getcount.md)|Bir numaralandırmadaki işlem sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio doldurmak için bu arabirimi kullanan **işlemleri** penceresi.
+ Visual **Studio, Süreçler** penceresini doldurmak için bu arabirimi kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

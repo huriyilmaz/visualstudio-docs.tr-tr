@@ -1,25 +1,25 @@
 ---
-title: Menu öğesi | Microsoft Docs
+title: Menü Elemanı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
 ms.assetid: ce0560f3-b4c9-4ab2-a99c-d4e10f37b9e0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c789eae4b7435ae6d1ed648804d78ab9b478aef9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8dc4731f95e31781f6b10704d7cb14dc83e96d7a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311833"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702592"
 ---
 # <a name="menu-element"></a>Menü öğesi
-Bir menü öğesini tanımlar. Menüler altı türleri şunlardır: Bağlam menüsü, MenuController, MenuControllerLatched, araç ve ToolWindowToolbar.
+Bir menü öğesini tanımlar. Bunlar altı tür menü: Bağlam, Menü, MenuController, MenuControllerLatched, Araç Çubuğu ve ToolWindowToolbar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,27 +38,27 @@ Bir menü öğesini tanımlar. Menüler altı türleri şunlardır: Bağlam men�
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|GUID|Gerekli. GUID/ID komut tanımlayıcısı GUİD'si.|
-|kimlik|Gerekli. Kimliği bir GUID/ID komut tanımlayıcısı.|
-|öncelik|İsteğe bağlı. Menü grubunda bir menü göreli konumunu belirten bir sayısal değer.|
-|ToolbarPriorityInBand|İsteğe bağlı. Pencerede Yuvalandığında bir bant araç göreli konumunu belirleyen bir sayısal değer.|
-|türü|İsteğe bağlı. Öğe türünü belirten bir numaralandırılmış değeri.<br /><br /> Yoksa, varsayılan menü türüdür.<br /><br /> Bağlam<br /> Bir kullanıcı bir pencere tıklattığında gösterilen bir kısayol menüsü. Kısayol menüsünde, aşağıdaki özelliklere sahiptir:<br /><br /> -Kullanmaz **üst** ve **öncelik** alanları menüsünde bir kısayol menüsü olarak görüntülenecek olduğunda.<br />-Alt menü ve ayrıca bir kısayol menüsü olarak kullanılan. Bu durumda, her ikisi de **Grup Kimliği** ve **öncelik** alanlar dikkate.<br />-Olduğundan her zaman kullanılabilir.<br /><br /> Yalnızca aşağıdaki koşullar geçerli olduğunda, bir kısayol menüsü görüntülenir:<br /><br /> -Barındırdığı penceresi görüntülenir.<br />-VSPackage'ı bir fare işleyicisinde, bir pencerenin sağ algılar ve ardından komutu işleyen bir yöntemi çağırır.<br />-Kısayol menüsünü çağrılarak görüntülenen <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager.ShowContextMenu%2A> yöntemi (önerilen yaklaşım) veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> yöntemi.<br /><br /> Menü<br /> Bir açılan menü sağlar. Bir açılan menü aşağıdaki özelliklere sahiptir:<br /><br /> -Üst tanımında dikkate alır.<br />-Bir üst grubu veya bir gruba bir CommandPlacement sahip olmalıdır.<br />-Bir alt menü diğer tür içinde olması.<br />-Her onun üst menü görüntülendiğinde otomatik olarak görüntülenen.<br />-Görüntülenmesini sağlamak için herhangi bir VSPackage kod yürütmesinin gerektirmez.<br /><br /> MenuController<br /> Araç çubuklarında kullanılan genellikle bir Bölünmüş düğme açılan menü sağlar. MenuController menü aşağıdaki özelliklere sahiptir:<br /><br /> -Üst veya CommandPlacement aracılığıyla başka bir menüde bulunan gerekir.<br />-Üst tanımında dikkate alır.<br />-Herhangi bir türden menü, kendi üst öğesi olarak sahip olabilir.<br />-Her onun üst menü görüntülendiğinde otomatik olarak kullanıma sunulmaktadır.<br />-Görüntülenen menüyü yapmak için programlama desteği gerektirmez.<br /><br /> Bölünmüş düğme menüsünden bir komut menüsünde düğmesinde görüntülenir. Görüntülenen komut aşağıdaki özelliklere sahiptir:<br /><br /> -Bu komutu yine de görüntülenir ve etkinse, kullanılan son bir komuttur.<br />-Bu ilk görüntülenen komutudur.<br /><br /> MenuControllerLatched<br /> Kendisi için bir komut varsayılan seçim komut kilitli olarak işaretlemek için belirtilebilir Bölünmüş düğme açılan menü sağlar.<br /><br /> Mandallanmış komut menüsünde olarak seçili, genellikle bir onay işareti görüntüleyerek işaretlenmiş bir komuttur. Bir komut OLECMDF_LATCHED varsa kilitli olarak işaretlenebilir bayrak uygulaması üzerindeki kümesinde `QueryStatus` yöntemi <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. MenuControllerLatched menü aşağıdaki özelliklere sahiptir:<br /><br /> -Bir üst grubu veya CommandPlacement üzerinden başka bir menüde bulunan gerekir.<br />-Üst tanımında dikkate alır.<br />-Herhangi bir türden menü, kendi üst öğesi olarak sahip olabilir.<br />-Her onun üst menü görüntülendiğinde, kullanılabilir hale getirileceğini.<br />-Görüntülenen menüyü yapmak için programlama desteği gerektirmez.<br /><br /> Bölünmüş düğme menüsünden bir komut menüsünde düğmesinde görüntülenir. Görüntülenen komut aşağıdaki özelliklere sahiptir:<br /><br /> -Kilitli ilk görüntülenen komut olduğu.<br />-Bu ilk görüntülenen komutudur.<br /><br /> Araç Çubuğu<br /> Bir araç çubuğu sağlar. Araç, aşağıdaki özelliklere sahiptir:<br /><br /> -Üst tanımında yok sayar.<br />-Herhangi bir grubu bir alt bile CommandPlacement kullanılarak yapılan olamaz.<br />-Her zaman tıklayarak görüntülenebilen **araç çubukları** üzerinde **görünümü** menüsü.<br />-Kullanarak görüntülenebilen bir [Visibilityıtem](../extensibility/visibilityitem-element.md).<br />-Oluşturmak için herhangi bir kod gerektirmez. Araç çubuğu oluşturma hakkında bir örnek için bkz. [araç ekleme](../extensibility/adding-a-toolbar.md).<br /><br /> ToolWindowToolbar<br /> Yalnızca bir araç çubuğu geliştirme ortamına bağlı olarak belirli bir araç penceresine, bağlı bir araç sağlar.<br /><br /> -Üst tanımında yok sayar.<br />-Herhangi bir grubu bir alt bile CommandPlacement kullanılarak yapılan olamaz.<br />-Yalnızca bir araç çubuğu barındıran araç penceresi görüntülenir ve VSPackage açıkça araç penceresine araç çubuğu ekler görüntülenir. Araç penceresi araç çubuğu konak özelliğine elde ederek oluşturulduğunda bu genellikle gerçekleştirilir (tarafından temsil edilen <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost> arabirimi) aracını pencere çerçevesi ve ardından arama <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost.AddToolbar%2A> yöntemi.|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Guıd|Gereklidir. GUID/ID komut tanımlayıcısının GUID'i.|
+|id|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
+|Öncelik|İsteğe bağlı. Bir menü grubunda bir menünün göreli konumunu belirten sayısal bir değer.|
+|Araç ÇubuğuÖncelikli Bant|İsteğe bağlı. Pencere kenetlendiğinde bir banttaki araç çubuğunun göreli konumunu belirten sayısal bir değer.|
+|type|İsteğe bağlı. Öğetürünü belirten numaralandırılmış bir değer.<br /><br /> Yoksa, varsayılan tür Menü'dür.<br /><br /> Bağlam<br /> Bir kullanıcı pencereyi sağ tıklattığında gösterilen kısayol menüsü. Kısayol menüsü aşağıdaki özelliklere sahiptir:<br /><br /> - Menü kısayol menüsü olarak görüntülenecekken **Veli** ve **Öncelik** alanlarını kullanmaz.<br />- Alt menü ve kısayol menüsü olarak da kullanılabilir. Bu durumda, hem **Grup Kimliği** hem de **Öncelik** alanlarına saygı duyulur.<br />- Her zaman mevcut değildir.<br /><br /> Kısayol menüsü yalnızca aşağıdaki koşullar doğru olduğunda görüntülenir:<br /><br /> - Ana bilgisayar penceresi görüntülenir.<br />- VSPackage'daki bir fare işleyicisi pencereye sağ tıklama algılar ve ardından komutu işleyen bir yöntem çağırır.<br />- Kısayol <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager.ShowContextMenu%2A> menüsü, yöntem (önerilen yaklaşım) veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> yöntem çağırılarak görüntülenir.<br /><br /> Menü<br /> Açılır menü sağlar. Açılır menü aşağıdaki özelliklere sahiptir:<br /><br /> - Tanımında Veliye Saygı Duyar.<br />- Bir Üst grup veya bir gruba bir Komut Yerleştirme olmalıdır.<br />- Menü başka bir tür bir alt menü olabilir.<br />- Üst menüsü görüntülendiğinde otomatik olarak görüntülenir.<br />- Görüntülenmesi için herhangi bir VSPackage kodunun uygulanmasını gerektirmez.<br /><br /> MenüDenetleyici<br /> Genellikle araç çubuklarında kullanılan bölünmüş düğme açılır menü sağlar. MenuController menüsü aşağıdaki özelliklere sahiptir:<br /><br /> - Veli veya CommandPlacement aracılığıyla başka bir menüde yer almalıdır.<br />- Tanımında Veliye Saygı Duyar.<br />- Ebeveyni olarak her türlü menüye sahip olabilir.<br />- Üst menüsü görüntülendiğinde otomatik olarak kullanılabilir hale getirilir.<br />- Menüyü görüntülemek için programlı destek gerektirmez.<br /><br /> Menü düğmesinde bölme düğmesinden bir komut görüntülenir. Görüntülenen komut aşağıdaki özelliklerden birine sahiptir:<br /><br /> - Komut hala görüntüleniyor ve etkinse kullanılan son komutdur.<br />- Görüntülenen ilk komutdur.<br /><br /> MenüDenetleyiciLatched<br /> Komutu mandallı olarak işaretleyerek varsayılan seçim olarak bir komutun belirtilebileceği bölünmüş düğme açılır menü sağlar.<br /><br /> Mandallı komut, genellikle bir onay işareti görüntüleyerek menüde seçili olarak işaretlenmiş bir komutdur. Bir komut, `QueryStatus` <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimin yönteminin uygulanmasında üzerinde OLECMDF_LATCHED bayrağı ayarlanmışsa mandallı olarak işaretlenebilir. MenuControllerLatched menüsü aşağıdaki özelliklere sahiptir:<br /><br /> - Bir Veli grubu veya CommandPlacement aracılığıyla başka bir menüde yer almalıdır.<br />- Tanımında Veliye Saygı Duyar.<br />- Ebeveyni olarak her türlü menüye sahip olabilir.<br />- Üst menüsü görüntülendiğinde kullanılabilir hale getirilir.<br />- Menüyü görüntülemek için programlı destek gerektirmez.<br /><br /> Menü düğmesinde bölme düğmesinden bir komut görüntülenir. Görüntülenen komut aşağıdaki özelliklerden birine sahiptir:<br /><br /> - Bu mandallı ilk görüntülenen komutudur.<br />- Görüntülenen ilk komutdur.<br /><br /> Araç Çubuğu<br /> Araç çubuğu sağlar. Araç çubuğu aşağıdaki özelliklere sahiptir:<br /><br /> - Üst öğeyi tanımında yok sayar.<br />- CommandPlacement kullanılarak bile hiçbir grubun alt menüsü yapılamaz.<br />- **Görünüm** menüsündeki **Araç Çubukları'na** tıklayarak her zaman görüntülenebilir.<br />- [Görünürlük Öğesi](../extensibility/visibilityitem-element.md)kullanılarak görüntülenebilir.<br />- Oluşturmak için herhangi bir kod gerektirmez. Araç çubuğu oluşturma hakkında bir örnek [için](../extensibility/adding-a-toolbar.md)bkz.<br /><br /> ToolWindowToolToolbar<br /> Geliştirme ortamına bir araç çubuğu bağlı olduğu gibi, belirli bir araç penceresine bağlı bir araç çubuğu sağlar.<br /><br /> - Üst öğeyi tanımında yok sayar.<br />- CommandPlacement kullanılarak bile hiçbir grubun alt menüsü yapılamaz.<br />- Yalnızca araç çubuğunu barındıran araç penceresi görüntülendiğinde ve VSPackage araç çubuğunu araç penceresine açıkça eklediğinde görüntülenir. Bu genellikle araç penceresi araç penceresi özelliği <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost> (arabirim tarafından temsil edildiği gibi) elde edilerek ve sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost.AddToolbar%2A> yöntem çağırarak araç penceresi oluşturulduğunda yapılır.|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Üst öğe|İsteğe bağlı. Menü öğesinin üst öğesi.|
-|CommandFlag|Gerekli. Bkz: [Command flag öğesi](../extensibility/command-flag-element.md). Bir menü için geçerli CommandFlag değerler aşağıdaki gibidir:<br /><br /> -   **AlwaysCreate**<br />-   **DefaultDocked**<br />-   **DefaultInvisible** -Bu bayrak, araç çubukları görünümünü etkilemez.<br />-   **DontCache**<br />-   **DynamicVisibility** -Bu bayrak, araç çubukları görünümünü etkilemez.<br />-   **IconAndText**<br />-   **NoCustomize**<br />-   **NotInTBList**<br />-   **NoToolbarClose**<br />-   **TextChanges**<br />-   **TextIsAnchorCommand**|
-|Dizeler|Gerekli. Bkz: [Strings öğesi](../extensibility/strings-element.md). Alt `ButtonText` öğesi tanımlanmalıdır.|
-|Ek Açıklama|İsteğe bağlı bir açıklama.|
+|Üst|İsteğe bağlı. Menü öğesinin üst öğesi.|
+|Komut Bayrağı|Gereklidir. Bkz. [Komut bayrak öğesi.](../extensibility/command-flag-element.md) Menü için geçerli CommandFlag değerleri aşağıdaki gibidir:<br /><br /> -   **Her Zaman Oluştur**<br />-   **Varsayılan Docked**<br />-   **DefaultInvisible** - Bu bayrak araç çubuklarının görüntülenmesini etkilemez.<br />-   **DontÖnbellek**<br />-   **DynamicGörünürlik** - Bu bayrak araç çubuklarının ekranını etkilemez.<br />-   **Simgeve Metin**<br />-   **NoCustomizE**<br />-   **Notintblist**<br />-   **NoToolbarClose**<br />-   **Metin Değişiklikleri**<br />-   **TextisAnchorCommand**|
+|Dizeler|Gereklidir. Bkz. [Dizeleri öğesi.](../extensibility/strings-element.md) Alt `ButtonText` öğe tanımlanmalıdır.|
+|Ek Açıklama|İsteğe bağlı yorum.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Menus öğesi](../extensibility/menus-element.md)|VSPackage'ı uygulayan tüm menüleri tanımlar.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uyguladığı tüm menüleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
@@ -75,4 +75,4 @@ Bir menü öğesini tanımlar. Menüler altı türleri şunlardır: Bağlam men�
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (.vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

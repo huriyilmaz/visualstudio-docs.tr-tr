@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FIELDS | Microsoft Docs
+title: MACHINE_INFO_FIELDS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MACHINE_INFO_FIELDS enumeration
 ms.assetid: 2d61d206-7d40-4df1-8c88-1b3c9c78821e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 79bd733d987511a624235c06b5dbe83206e0c5bd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 89a2552bb6a8bea88f54a897b829ab89b30ff413
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339352"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714518"
 ---
-# <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
-Hangi tür bilgiler almak için belirli bir makine için belirtir.
+# <a name="machine_info_fields"></a>MACHINE_INFO_FIELDS
+Belirli bir makine için ne tür bilgiler alıncaya kadar bilgi alınmasını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,29 +46,29 @@ public enum enum_MACHINE_INFO_FIELDS { 
 
 ## <a name="fields"></a>Alanlar
  `MCIF_NAME`\
- Başlat/kullanım `bstrName` yapısında alan.
+ Yapıdaki `bstrName` alanı başlatma/kullanma.
 
  `MCIF_FLAGS`\
- Başlat/kullanım `Flags` yapısında alan.
+ Yapıdaki `Flags` alanı başlatma/kullanma.
 
  `MIF_ALL`\
- Tüm alanları yapısında başlatma/kullanın.
+ Yapıdaki tüm alanların başlatılması/kullanılması.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerler geçirilecek [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) hangi üyelerinin belirtmek üzere yöntem [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapısı olan başlatılacak.
+ Bu değerler, [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapının hangi üyelerinin baş harfe alınmasını göstermek için [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) yöntemine aktarılır.
 
- Ayrıca kullanılan `Fields` üyesi `MACHINE_INFO` yapısı hangi alanların kullanılan ve geçerli olduğunu belirtmek için.
+ Ayrıca `MACHINE_INFO` yapının `Fields` üyesi hangi alanların kullanıldığını ve geçerli olduğunu belirtmek için kullanılır.
 
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.
+ Bu bayraklar biraz ile `OR`birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)
 - [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)

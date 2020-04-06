@@ -1,98 +1,98 @@
 ---
-title: VSIX proje şablonunu kullanmaya başlama | Microsoft Docs
+title: VSIX Proje Şablonu ile Başlarken | Microsoft Dokümanlar
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio SDK, VSIX project template
 ms.assetid: 89fac33e-9380-4723-9b45-048a6e16f0ed
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8bb85e507e62bf7dd13288cbd08d7bf9d06973e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 773e9e6891599cd9672888d0521e94891e0d9f41
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342457"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711239"
 ---
-# <a name="get-started-with-the-vsix-project-template"></a>VSIX proje şablonu ile çalışmaya başlama
+# <a name="get-started-with-the-vsix-project-template"></a>VSIX Project şablonu yla başlayın
 
-VSIX proje şablonu, bir uzantı oluşturmak veya mevcut bir uzantı için dağıtım paketini için kullanabilirsiniz. VSIX proje şablonu Visual Basic ve Visual C# sürümü vardır ve Visual Studio SDK'ın bir parçası olarak yüklenir.
+Bir uzantı oluşturmak veya dağıtım için varolan bir uzantıyı paketlemek için VSIX Project şablonunu kullanabilirsiniz. VSIX Project şablonu hem Visual Basic hem de Visual C# sürümlerine sahiptir ve Visual Studio SDK'nın bir parçası olarak yüklenir.
 
- VSIX proje şablonu yalnızca oluşan bir *source.extension.vsixmanifest* uzantı ve varlıklar hakkında bilgi, birlikte gelen içeren dosya.
+ VSIX Project şablonu yalnızca uzantı ve aktardığı varlıklar hakkında bilgi içeren bir *source.extension.vsixmanifest* dosyasından oluşur.
 
- VSIX proje şablonunu bulmak için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+ VSIX proje şablonu bulmak için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK'ya](../extensibility/visual-studio-sdk.md)bakın.
 
-## <a name="deploy-a-custom-project-template-using-the-vsix-project-template"></a>VSIX proje şablonunu kullanarak özel bir proje şablonu dağıtma
+## <a name="deploy-a-custom-project-template-using-the-vsix-project-template"></a>VSIX Project şablonunu kullanarak Özel Proje Şablonu dağıtma
 
- Aşağıdaki adımlar diğer geliştiriciler ile paylaşabilir veya Visual Studio Galeri'ye yükleyin, bir proje şablonu paketlemek için VSIX projesi kullanma işlemini gösterir.
+ Aşağıdaki adımlar, diğer geliştiricilerle paylaşabileceğiniz veya Visual Studio Galerisi'ne yükleyebileceğiniz bir proje şablonu paketlemek için VSIX projesinin nasıl kullanılacağını gösterir.
 
-1. Bir proje şablonu oluşturun.
+1. Proje şablonu oluşturun.
 
-    1. Bir şablon oluşturmak, projeyi açın. Bu proje bir proje türünde olabilir.
+    1. Şablon oluşturmak için projeyi açın. Bu proje herhangi bir proje türünde olabilir.
 
-    2. Üzerinde **proje** menüsünü tıklatın **şablonu dışarı aktar**. Sihirbazın adımlarını tamamlayın.
+    2. **Proje** menüsünde, **Dışa Aktarma Şablonu'nu**tıklatın. Sihirbazın adımlarını tamamlayın.
 
-         A *.zip* dosyasının oluşturulduğunu *%USERPROFILE%\My Documents\Visual Studio {version} \My dışarı aktarılan şablonları\\* .
+         *%USERPROFILE%\My Documents\Visual Studio {version}\Benim Dışa Aktarılan\\Şablonlarım'da bir* *.zip* dosyası oluşturulur.
 
 2. Boş bir VSIX projesi oluşturun.
 
-     **Dosya** > **Yeni** > **Proje**’yi seçin. Arama kutusuna "VSIX" yazıp ya da seçin **C#** veya **Visual Basic** sürümünü **VSIX projesi**.
+     **Dosya** > **Yeni** > **Proje'yi**seçin. Arama kutusuna "vsix" yazın ve **VSIX Project'in** **C#** veya **Visual Basic** sürümünü seçin.
 
-3. Ekleme *.zip* projeye dosya. Ayarlama, **çıkış dizinine Kopyala** özelliğini `Copy Always`.
+3. .zip *.zip* dosyasını projeye ekleyin. Kopyasını **Çıktı Dizini özelliğine** `Copy Always`ayarla.
 
-4. İçinde **Çözüm Gezgini**, çift *source.extension.vsixmanifest* içinde açmak için dosyaya **VSIX bildirim Tasarımcısı**ve ardından aşağıdaki değişiklikleri yapın:
+4. **Solution**Explorer'da, **VSIX Manifest Designer'da**açmak için *source.extension.vsixmanifest* dosyasını çift tıklatın ve ardından aşağıdaki değişiklikleri yapın:
 
-    - Ayarlama **ürün adı** alanı **My proje şablonu**.
+    - Ürün **Adı** alanını **Proje Şablonum**olarak ayarlayın.
 
-    - Ayarlama **ürün kimliği** alanı **MyProjectTemplate - 1**.
+    - Ürün **Kimliği** alanını **MyProjectTemplate**olarak ayarlayın - 1 .
 
-    - Ayarlama **Yazar** alanı **Fabrikam**.
+    - **Yazar** alanını **Fabrikam'a**ayarlayın.
 
-    - Ayarlama **açıklama** alanı **proje şablonumu**.
+    - **Açıklama** alanını **proje şablonuma**ayarlayın.
 
-    - İçinde **varlıklar** bölümünde, eklemek bir **Microsoft.VisualStudio.ProjectTemplate** yazın ve kendi adına ayarlayın *.zip* dosya.
+    - **Varlıklar** bölümünde, bir **Microsoft.VisualStudio.ProjectTemplate** türü ekleyin ve *.zip* dosyasının adına yolunu ayarlayın.
 
-5. Kaydet ve Kapat *source.extension.vsixmanifest* dosya.
+5. *Source.extension.vsixmanifest* dosyasını kaydedin ve kapatın.
 
-6. Projeyi oluşturun.
+6. Projeyi derleyin.
 
-7. Çıktı dizininde çift *.vsix* dosya.
+7. Çıktı dizininde *.vsix* dosyasını çift tıklatın.
 
-8. A **VSIX yükleyicisi** ileti kutusu görünür. Uzantıyı yüklemek için yönergeleri izleyin.
+8. Bir **VSIX Yükleyici** ileti kutusu görüntülenir. Uzantıyı yüklemek için yönergeleri izleyin.
 
-9. Visual Studio'yu kapatın ve yeniden açın.
+9. Visual Studio'yı kapatın ve yeniden açın.
 
 ::: moniker range="vs-2017"
 
-10. Seçin **Uzantılar ve güncelleştirmeler** (üzerinde **Araçları** menüsü) seçip **şablonları** kategorisi. Kullanılabilir uzantılar biri olmalıdır **My proje şablonu**.
+10. **Uzantılar ve Güncelleştirmeler** **(Araçlar** menüsünde) ve **Şablonlar** kategorisini seçin. Kullanılabilir uzantılardan biri **Proje Şablonum**olmalıdır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-10. Seçin **uzantıları yönetme** (üzerinde **uzantıları** menüsü) seçip **şablonları** kategorisi. Kullanılabilir uzantılar biri olmalıdır **My proje şablonu**.
+10. **Uzantıları Yönet'i** **(Uzantılar** menüsünde) seçin ve **Şablonlar** kategorisini seçin. Kullanılabilir uzantılardan biri **Proje Şablonum**olmalıdır.
 
 ::: moniker-end
 
-11. Yeni Proje şablonu görünür **yeni proje** özgün proje şablonu olarak aynı yerde iletişim. Adlı bir şablon oluşturduysanız, örneğin, **VB konsol** bir Visual Basic konsol uygulamasından **VB konsol** Visual Basic ile aynı bölmede görünür **konsol uygulaması**şablonu.
+11. Yeni proje şablonu, **Özgün proje** şablonuyla aynı yerde yeni proje iletişim kutusunda görünür. Örneğin, Visual Basic konsol uygulamasından **VB Konsol** adında bir şablon oluşturduysanız, **VB Konsolu** Visual Basic **Console Application** şablonuyla aynı bölmede görünür.
 
-### <a name="to-specify-the-location-of-the-template-in-the-new-project-dialog-box"></a>Yeni Proje iletişim kutusunda şablon konumunu belirtmek için
+### <a name="to-specify-the-location-of-the-template-in-the-new-project-dialog-box"></a>Yeni Proje İletişim kutusunda şablonun konumunu belirtmek için
 
-1. Şablon klasörlere yerleştirilir *{Visual Studio yükleme yolu} \Common7\IDE\ProjectTemplates* ve *{Visual Studio yükleme yolu} \Common7\IDE\ItemTemplates* dizinleri. Üst düzey bölümlerin adlarını **yeni proje** iletişim şablonu klasörlerin adlarını tam olarak eşleşmesi. Bunların değişiklik gösterdiği durumlarda, şablon klasörün adını kullanın.
+1. Şablon klasörleri *{Visual Studio Installation Path}\Common7\IDE\ProjectTemplates* ve *{Visual Studio Installation Path}\Common7\IDE\ItemTemplates* dizinde bulunur. **Yeni Proje** iletişim kutusundaki üst düzey bölümlerin adları şablon klasörlerinin adlarıyla tam olarak eşleşmiyor. Farklı oldukları durumlarda, şablon klasörünün adını kullanın.
 
-    Değişiklik *.vsix* dosya uzantısı için *.zip*ve ardından dosyasını açın.
+    *.vsix* dosya uzantısını *.zip*olarak değiştirin ve sonra dosyayı açın.
 
-2. Bölümünü aynı ada sahip yeni bir klasör oluşturun **yeni proje** iletişim şablonu görüntülenmedir.
+2. **Şablonun** görünmesi gereken Yeni Proje iletişim kutusunun bölümüyle aynı ada sahip yeni bir klasör oluşturun.
 
-3. Şablonun bir alt bölümünde görüntülenecek ise, aynı ada sahip bir alt klasör oluşturun.
+3. Şablon bir alt bölümde görünecekse, aynı adı taşıyan bir alt klasör oluşturun.
 
-4. Şablon taşıma *.zip* yeni klasöre dosya.
+4. Şablon *.zip* dosyasını yeni klasöre taşıyın.
 
-5. Değişiklik *.zip* uzantısı *.vsix*.
+5. *.zip* uzantısını *.vsix olarak değiştirin.*
 
-6. VSIX bildirimi açın.
+6. VSIX manifestosunun açın.
 
-7. VSIX bildiriminin güncelleştirme **varlık** olan şablon dosyasını içeren dizin ağacında kök dizinine işaret için şablonun yolu. Örneğin, şablon ise *\CSharp\Windows*, başvurunun işaret etmelidir *\CSharp*.
+7. VSIX bildiriminde, şablonun **Varlık** yolunu şablon dosyasını içeren dizin ağacının köküne işaret etmek için güncelleştirin. Örneğin, şablon *\CSharp\Windows'daise,* başvuru *\CSharp'ı*işaret etmelidir.

@@ -1,34 +1,34 @@
 ---
-title: Eski dil hizmetinde ana hat oluşturma ve gizli metin | Microsoft Docs
+title: Eski Dil Hizmetinde Anahat ve Gizli Metin | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - outlining, supporting in native code
 ms.assetid: 252c5221-2e64-461c-8dcf-b622e400e0be
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: abe608036e8531415aab11300eb9583ffaca9021
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314862"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706821"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Ana Hat Oluşturma ve Gizli Metin
-Anahat oluşturma, tek bir satıra bir dizi metin satırlarını Daralt mümkün kılar. Örneğin, c++'ta, yöntem imzasını gösteren tek bir satır için tüm yöntemleri daraltılabilirler. Gizli metin gösterilen veya gizli metin satırlarını dizisidir.
+Anahat oluşturma, metin satırları nın bir dizisini tek bir satıra daraltmayı mümkün kılar. Örneğin, C++'da tüm yöntemler yalnızca yöntem imzasını göstererek tek bir satıra daraltılabilir. Gizli metin, gösterilebilen veya gizlenebilen metin satırlarıdizisidir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Nasıl yapılır: Eski Dil Hizmetinde Ana Hat Oluşturmayı Destekleme](../../extensibility/internals/how-to-support-outlining-in-a-legacy-language-service.md)
 
- Nasıl uygulanacağı açıklanır
+ Nasıl uygulanacağını açıklar
 
 - [Nasıl yapılır: Eski Dil Hizmetinde Gizli Metin Desteği Sağlama](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
 
- Gizli metin alanının amacını ve gizli metin bölge ekleme hakkında yönergeler sağlar.
+ Gizli metin bölgesinin amacını açıklar ve gizli metin bölgesinin nasıl uygulanacağı yla ilgili yönergeler sağlar.
 
 - [Nasıl yapılır: Eski Dil Hizmetinde Genişletilmiş Ana Hat Oluşturma Desteği Sağlama](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Ana hat oluşturma desteği destekleyen ötesinde dil genişleten iki seçenek açıklanır *tanımlara Daralt* komutu.
+ Dillerinizin anahat *desteğini, Tanımlara Daralt* komutunu desteklemenin ötesine genişleten iki seçeneği açıklar.

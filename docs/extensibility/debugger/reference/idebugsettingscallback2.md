@@ -1,24 +1,24 @@
 ---
-title: IDebugSettingsCallback2 | Microsoft Docs
+title: IDebugSettingsCallback2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2 interface
 ms.assetid: 7e525d0b-7d7a-4d1c-8b78-e1398fa922f2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 859522ebdbe231146c73b25c5e4c92fba9809727
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2c85b54f92970dca5d712b827019300f850b03cc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321949"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719945"
 ---
 # <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
-Hata ayıklama altyapıları Ölçüm ayarlarını okumak üzere etkinleştirir uzaktan.
+Hata ayıklama motorlarının metrik ayarları uzaktan okumasını sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,33 +26,33 @@ Hata ayıklama altyapıları Ölçüm ayarlarını okumak üzere etkinleştirir 
 IDebugSettingsCallback2D : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
-Bu arabirim oturum hata ayıklama Yöneticisi olay geri çağırma tarafından uygulanan ve hata ayıklama motoru tarafından kullanılan. Bu da yerel olarak Dbgmetric [d] .lib yerine kullanılabilir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+Bu arabirim, oturum hata ayıklama yöneticisinin olay geri çağırması tarafından uygulanır ve hata ayıklama motorları tarafından tüketilir. Ayrıca Dbgmetric[d].lib yerine yerel olarak kullanılabilir.
 
 ## <a name="methods"></a>Yöntemler
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugSettingsCallback2`.
+Aşağıdaki tabloda `IDebugSettingsCallback2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|Dil ve satıcı tanımlayıcıları verilen kullanılabilir ifade değerlendiricilerini numaralandırır.|
-|[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|Ölçüm verilen bir ifade değerlendirici yerel bir nesne alır.|
-|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|İfade değerlendirici belirtilen ölçüm için karşılık gelen bir değer alır.|
-|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|Ad veya ölçüm verilen ifade değerlendirici ölçüm dosya alır.|
-|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|Bir ifade değerlendirici ölçüm adı verilen benzersiz tanımlayıcısını alır.|
-|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|Bir ifade değerlendirici ölçüm adı verilen değer dizesi alır.|
-|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|Adı verilen bir ölçüm değerini alır.|
-|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|Bir ölçüm adı verilen benzersiz tanımlayıcısını alır.|
-|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|Ölçüm adı verilen değer dizesi alır.|
+|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|Dil ve satıcı tanımlayıcıları verilen kullanılabilir ifade değerlendiricilerini oyalar.|
+|[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|Metrik verilen bir ifade değerlendirici yerel nesne alır.|
+|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|İfade değerlendiricinin belirtilen metnine karşılık gelen bir değer alır.|
+|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|Ad veya metrik verilen ifade değerlendirici metrik dosyasını alır.|
+|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|Adı verilen bir ifade değerlendirici ölçümü için benzersiz tanımlayıcıyı alır.|
+|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|Adından gelen bir ifade değerlendirici ölçümünün değer dizesini alır.|
+|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|Adı verilen bir metnin değerini alır.|
+|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|Adı verilen bir metnin benzersiz tanımlayıcısını alır.|
+|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|Adı verilen ölçümün değer dizesini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: Msdbg.h
+Üstbilgi: Msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, alan bir işlev gösterir. bir **IDebugSettingsCallback2** bir parametre olarak nesne.
+Aşağıdaki örnekte, parametre olarak **iDebugSettingsCallback2** nesnesini alan bir işlev gösterilmektedir.
 
 ```cpp
 HRESULT GetDebugSettingsCallback (IDebugSettingsCallback2 **ppCallback)

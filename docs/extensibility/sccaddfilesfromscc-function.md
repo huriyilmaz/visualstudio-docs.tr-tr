@@ -1,5 +1,5 @@
 ---
-title: SccAddFilesFromSCC işlevi | Microsoft Docs
+title: SccAddFilesFromSCC Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfe58c3eef4b09fccb5cd21b714e5987ae1e08aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d22527644edbf1697112f5cf8b73b8a3f72b774
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333976"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701283"
 ---
-# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC işlevi
-Bu işlev, kaynak denetiminden dosyaların listesini açık projeye ekler.
+# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC fonksiyonu
+Bu işlev, kaynak denetiminden şu anda açılan projeye dosyaların bir listesini ekler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,52 +39,52 @@ SCCRTN SccAddFilesFromSCC(
 ```
 
 ### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-[in] Kaynak Denetimi Eklentisi bağlam işaretçisi.
+[içinde] Kaynak denetimi eklentibağlam işaretçisi.
 
- hWnd
+ Hwnd
 
-[in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.
+[içinde] Kaynak denetim eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
 
  lpUser
 
-[out içinde] Kullanıcı adı (en fazla SCC_USER_SIZE, null sonlandırıcıyı da dahil olmak üzere).
+[içinde, dışarı] Kullanıcı adı (null terminator dahil SCC_USER_SIZE kadar).
 
  lpAuxProjPath
 
-[out içinde] Proje tanımlayan yardımcı dize (en fazla `SCC_PRJPATH_`BOYUTU, null sonlandırıcıyı da dahil olmak üzere).
+[içinde, dışarı] Projeyi tanımlayan yardımcı dize `SCC_PRJPATH_`(null terminator dahil olmak üzere SIZE'a kadar).
 
- cFiles
+ cDosyalar
 
-[in] Tarafından verilen dosya sayısı `lpFilePaths`.
+[içinde] Tarafından `lpFilePaths`verilen dosya sayısı.
 
  lpFilePaths
 
-[out içinde] Geçerli projeye eklemek için dosya adları dizisi.
+[içinde, dışarı] Geçerli projeye eklenecek dosya adları dizisi.
 
  lpDestination
 
-[in] Yazılacak dosyalar nerede hedef yolu.
+[içinde] Dosyaların yazılabilmek için hedef yolu.
 
- lpComment
+ lpYorum yap
 
-[in] Eklenmekte olan dosyalar her öğesine uygulanması için açıklama.
+[içinde] Eklenen dosyaların her birine uygulanacak açıklama.
 
- pbResults
+ pbSonuçlar
 
-[out içinde] Başarılı (sıfır olmayan veya TRUE) olduğunu belirtmek için set ya da hata bayrakları dizisi (sıfır ya da FALSE) her dosya için (dizinin boyutu en az olmalıdır `cFiles` uzun).
+[içinde, dışarı] Her dosya için başarı (sıfır olmayan veya DOĞRU olmayan) veya hata (sıfır veya FALSE) gösterecek `cFiles` şekilde ayarlanmış bayraklar dizisi (dizinin boyutu en az uzun olmalıdır).
 
-## <a name="return-value"></a>Dönüş değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+## <a name="return-value"></a>Döndürülen değer
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_E_PROJNOTOPEN|Proje açık değil.|
-|SCC_E_OPNOTPERFORMED|Bağlantı tarafından belirtildiği gibi aynı projeye değil `lpAuxProjPath.`|
-|SCC_E_NOTAUTHORIZED|Veritabanını güncellemek için kullanıcı yetkili değil.|
+|SCC_E_OPNOTPERFORMED|Bağlantı tarafından belirtilen aynı proje değil`lpAuxProjPath.`|
+|SCC_E_NOTAUTHORIZED|Kullanıcının veritabanını güncelleştirme yetkisi yoktur.|
 |SCC_E_NONSPECIFICERROR|Bilinmeyen hata.|
-|SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|
+|SCC_I_RELOADFILE|Bir dosyanın veya projenin yeniden yüklenmesi gerekir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)

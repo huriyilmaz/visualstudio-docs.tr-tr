@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - services, essentials
 ms.assetid: fbe84ad9-efe1-48b1-aba3-b50b90424d47
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8817ca48ff0a3f44a973986a173e647ce89c662c
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 0e2947cb4cd6a347d8e010340f8689eb1907a28a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303241"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705495"
 ---
 # <a name="service-essentials"></a>Hizmet Temel Bileşenleri
 Hizmet, iki VSPackages arasındaki bir sözleşmedir. Bir VSPackage, başka bir VSPackage'ın tüketilmesi için belirli bir arayüz kümesi sağlar. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]kendisi diğer VSPackages hizmetleri sağlayan VSPackages bir koleksiyondur.
@@ -96,5 +96,5 @@ Neyse <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> ki, çoğu
 
 - [Kullanılabilir Hizmetlerin Listesi](../../extensibility/internals/list-of-available-services.md)
 - [Hizmetleri Kullanma ve Sağlama](../../extensibility/using-and-providing-services.md)
-- [Tür Değiştirme ve Tür Dönüştürmeler](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)
+- [Atama ve Tür Dönüşümleri](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)
 - [Atama](/cpp/cpp/casting)

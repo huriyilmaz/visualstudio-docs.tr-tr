@@ -1,60 +1,60 @@
 ---
-title: Düzenleyiciyi ve dil hizmetlerini genişletme | Microsoft Docs
+title: Editör ve Dil Hizmetlerinin Genişletilmesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new -
 ms.assetid: 8d04f8db-eda7-4b3e-b6eb-c06df104502a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af1fa0222be9630a495a43204d7a973341190131
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 239c638ec32cc0dc2b2e275a5dbe0c4213a3423e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186673"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711707"
 ---
-# <a name="extend-the-editor-and-language-services"></a>Düzenleyiciyi ve dil hizmetlerini genişletme
-Dil hizmeti özelliklerini (IntelliSense gibi) kendi düzenleyicinize ekleyebilirsiniz ve Visual Studio Code Editor özelliklerinin çoğunu genişletebilirsiniz.  Neyi genişletebileceğinize ilişkin tam bir liste için bkz. [dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md).
+# <a name="extend-the-editor-and-language-services"></a>Editör ve dil hizmetlerini genişletme
+Kendi düzenleyicinize dil hizmeti özellikleri (IntelliSense gibi) ekleyebilir ve Visual Studio kod düzenleyicisinin çoğu özelliğini genişletebilirsiniz.  Genişletebileceğiniz lerin tam listesi için [Dil hizmeti ve düzenleyici uzantı noktalarına](../extensibility/language-service-and-editor-extension-points.md)bakın.
 
- Managed Extensibility Framework (MEF) kullanarak çoğu düzenleyici özelliğini genişletebilirsiniz. Örneğin, genişletmek istediğiniz Düzenleyici özelliği söz dizimi renklendirmesi ise, farklı renklendirmesini istediğiniz sınıflandırmaları ve bunların nasıl işlenmesini istediğinizi tanımlayan bir MEF *bileşen bölümü* yazabilirsiniz. Düzenleyici aynı özelliğin birden fazla uzantısını da destekler.
+ Yönetilen Genişletilebilirlik Çerçevesi'ni (MEF) kullanarak çoğu düzenleyici özelliğini genişletirsiniz. Örneğin, uzatmak istediğiniz düzenleyici özelliği sözdizimi boyama ise, farklı boyama istediğiniz sınıflandırmaları ve bunların nasıl ele alınmasını istediğinizi tanımlayan bir MEF *bileşeni bölümü* yazabilirsiniz. Düzenleyici de aynı özelliğin birden çok uzantıları destekler.
 
- Düzenleyici sunum katmanı, Windows Presentation Framework (WPF) tabanlıdır. WPF, esnek metin biçimlendirme için bir grafik kitaplığı sağlar ve ayrıca grafik ve animasyon gibi görselleştirmeler sağlar.
+ Düzenleyici sunu katmanı Windows Sunu Çerçevesi 'ni (WPF) temel alıntır. WPF esnek metin biçimlendirme için bir grafik kitaplığı sağlar ve grafik ve animasyonlar gibi görselleştirmeler de sağlar.
 
- Visual Studio SDK, daha önceki sürümler için yazılmış VSPackages 'leri desteklemek üzere *dolgular* olarak bilinen bağdaştırıcılar sağlar. Bununla birlikte, mevcut bir VSPackage varsa, daha iyi performans ve güvenilirlik elde etmek için bunu yeni teknolojiyle güncelleştirmeniz önerilir.
+ Visual Studio SDK, önceki *sürümler* için yazılmış VSPackages'ı desteklemek için şim olarak bilinen bağdaştırıcılar sağlar. Bununla birlikte, mevcut bir VSPackage'ıniz varsa, daha iyi performans ve güvenilirlik elde etmek için yeni teknolojiye güncellemenizi öneririz.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Dil hizmeti ve Düzenleyici uzantıları ile çalışmaya başlama](../extensibility/getting-started-with-language-service-and-editor-extensions.md)|Düzenleyicide bir uzantının nasıl oluşturulduğunu açıklar.|
-|[Düzenleyicinin içinde](../extensibility/inside-the-editor.md)|Düzenleyicinin genel yapısını açıklar ve bazı özelliklerini listeler.|
-|[Düzenleyicide Managed Extensibility Framework](../extensibility/managed-extensibility-framework-in-the-editor.md)|Düzenleyiciyle Managed Extensibility Framework (MEF) kullanımını açıklar.|
-|[Dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)|Düzenleyicinin uzantı noktalarını listeler. Uzantı noktaları, genişletilebilen düzenleyici özelliklerini temsil eder.|
-|[İzlenecek yol: Görünüm kenarlığı, komutlar ve ayarlar oluşturma (sütun Kılavuzu)](../extensibility/walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md)|İzlenecek yol gösterir ve kodu belirli bir görüntüleme genişliğine sahip olmanıza yardımcı olmak üzere sütun kılavuzu çizgileri çizen bir görünüm kenarlığı oluşturmayı açıklar.  Ayrıca, okuma ve yazma ayarlarının yanı sıra komut penceresinden çağırabileceğiniz komutları bildirmek ve uygulamak da gösterilmektedir.|
-|[Düzenleyici içeri aktarmaları](../extensibility/editor-imports.md)|Bir uzantının içeri aktarabileceğiniz hizmetleri listeler.|
-|[Eski kodu düzenleyiciye uyarlayabilirsiniz](/visualstudio/extensibility/adapting-legacy-code-to-the-editor?view=vs-2015)|Düzenleyiciyi genişletmek için eski kodu (Visual Studio 2010 öncesi) uyarlamak için farklı yollar açıklanmaktadır.|
-|[Eski dil hizmetini geçirme](../extensibility/internals/migrating-a-legacy-language-service.md)|VSPackage tabanlı dil hizmetinin nasıl geçirileceği açıklanmaktadır.|
-|[İzlenecek yol: bir içerik türünü bir dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)|Bir içerik türünün bir dosya adı uzantısına nasıl bağlanacağını gösterir.|
-|[İzlenecek yol: kenar boşluğu karakteri oluşturma](../extensibility/walkthrough-creating-a-margin-glyph.md)|Kenar boşluğuna bir simgenin nasıl ekleneceğini gösterir.|
-|[İzlenecek yol: metni vurgula](../extensibility/walkthrough-highlighting-text.md)|Metnin vurgulanmasını sağlamak için *etiketlerin* nasıl kullanılacağını gösterir.|
-|[İzlenecek yol: Ana hat ekleme](../extensibility/walkthrough-outlining.md)|Belirli küme ayraçları için nasıl anahat ekleneceğini gösterir.|
-|[İzlenecek yol: eşleşen ayraçları görüntüle](../extensibility/walkthrough-displaying-matching-braces.md)|Eşleşen ayraçların nasıl vurgulanmasını gösterir.|
-|[İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)|Özellikler, Yöntemler ve olaylar gibi kod öğelerini tanımlayan hızlı bilgi açılarının nasıl görüntüleneceğini gösterir.|
-|[İzlenecek yol: imza yardımını görüntüle](../extensibility/walkthrough-displaying-signature-help.md)|Bir İmzadaki parametrelerin sayısı ve türleri hakkında bilgi veren açılanları görüntülemeyi gösterir.|
-|[İzlenecek yol: görüntüleme ifadesinin tamamlanması](../extensibility/walkthrough-displaying-statement-completion.md)|Deyimin tamamlanmasına nasıl uygulanacağını gösterir.|
-|[İzlenecek yol: kod parçacıklarını uygulama](../extensibility/walkthrough-implementing-code-snippets.md)|Kod parçacığı genişletmesinin nasıl uygulanacağını gösterir.|
-|[İzlenecek yol: ampul önerilerini görüntüleme](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)|Kod önerileri için hafif bulbs görüntülemeyi gösterir.|
-|[İzlenecek yol: Düzenleyici uzantısı ile bir Shell komutu kullanma](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)|Bir VSPackage içindeki bir menü komutunun bir MEF bileşeniyle nasıl ilişkilendirileceğini gösterir.|
-|[İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)|Bir VSPackage içindeki bir menü kısayolunun MEF bileşeniyle nasıl ilişkilendirileceğini gösterir.|
-|[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|Managed Extensibility Framework (MEF) hakkında bilgi sağlar.|
-|[Windows Presentation Foundation](/dotnet/framework/wpf/index)|Windows Presentation Foundation (WPF) hakkında bilgi sağlar.|
+|[Dil hizmeti ve editör uzantıları ile başlayın](../extensibility/getting-started-with-language-service-and-editor-extensions.md)|Editöre uzantı oluşturmanın nasıl yapılacağını açıklar.|
+|[Editörün içinde](../extensibility/inside-the-editor.md)|Editörün genel yapısını açıklar ve bazı özelliklerini listeler.|
+|[Editörde Yönetilen Genişletilebilirlik Çerçevesi](../extensibility/managed-extensibility-framework-in-the-editor.md)|Yönetilen Genişletilebilirlik Çerçevesi'nin (MEF) editörle nasıl kullanılacağını açıklar.|
+|[Dil hizmeti ve editör uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)|Editörün uzantı noktalarını listeler. Uzantı noktaları genişletilebilen düzenleyici özelliklerini temsil emzir.|
+|[İzlenme: Görünüm süslemesi, komutlar ve ayarlar (sütun kılavuzları) oluşturma](../extensibility/walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md)|Yürür ve belirli bir ekran genişliğine kod tutmanıza yardımcı olmak için sütun kılavuz satırları çizer bir görünüm süsleme bina açıklar.  Ayrıca okuma ve yazma ayarlarını ve Komut Penceresinden çağırabileceğiniz komutları bildirmeyi ve uygular.|
+|[Düzenleyici alma](../extensibility/editor-imports.md)|Uzantın içe aktarabileceği hizmetleri listeler.|
+|[Eski kodu düzenleyiciye uyarlama](/visualstudio/extensibility/adapting-legacy-code-to-the-editor?view=vs-2015)|Eski kodu (Visual Studio 2010 öncesi) düzenleyiciyi genişletmek için uyarlamanın farklı yollarını açıklar.|
+|[Eski bir dil hizmetini geçirme](../extensibility/internals/migrating-a-legacy-language-service.md)|VSPackage tabanlı bir dil hizmetinin nasıl geçirilen nasıl açıkladığını açıklar.|
+|[Walkthrough: İçerik türünü dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)|İçerik türünü dosya adı uzantısına nasıl bağlayacaklarını gösterir.|
+|[Walkthrough: Bir kenar boşluğu gph oluşturma](../extensibility/walkthrough-creating-a-margin-glyph.md)|Kenar boşluğuna simge nin nasıl ekleyeceğini gösterir.|
+|[Walkthrough: Metni vurgulama](../extensibility/walkthrough-highlighting-text.md)|Metni vurgulamak için *etiketlerin* nasıl kullanılacağını gösterir.|
+|[Walkthrough: Anahat ekleme](../extensibility/walkthrough-outlining.md)|Belirli türdeki ayraçlar için anahat eklemeyi gösterir.|
+|[Walkthrough: Eşleşen ayraçları görüntüleme](../extensibility/walkthrough-displaying-matching-braces.md)|Eşleşen ayraçları nasıl vurgulayın gösterir.|
+|[Walkthrough: QuickInfo araç ipuçlarını görüntüleyin](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)|Özellikler, yöntemler ve olaylar gibi kod öğelerini açıklayan QuickInfo açılır pencerelerinin nasıl görüntülenebildiğini gösterir.|
+|[Walkthrough: İmza yardımlarını görüntüleme](../extensibility/walkthrough-displaying-signature-help.md)|İmzadaki parametre sayısı ve türleri hakkında bilgi veren açılır pencerelerin nasıl görüntülenebildiğini gösterir.|
+|[Walkthrough: Görüntü deyimi tamamlama](../extensibility/walkthrough-displaying-statement-completion.md)|İfade tamamlamanın nasıl uygulanacağını gösterir.|
+|[Walkthrough: Kod parçacıkları uygulama](../extensibility/walkthrough-implementing-code-snippets.md)|Kod-parçacık genişletmenin nasıl uygulanacağını gösterir.|
+|[Walkthrough: Ekran ampul önerileri](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)|Kod önerileri için ampullerin nasıl görüntülenebildiğini gösterir.|
+|[Walkthrough: Düzenleyici uzantılı bir kabuk komutu kullanma](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)|VSPackage'daki menü komutunu MEF bileşeniyle nasıl ilişkilendirineni gösterir.|
+|[Walkthrough: Düzenleyici uzantısı ile kısayol tuşu kullanma](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)|VSPackage'daki menü kısayolu ile MEF bileşeninin nasıl ilişkilendirilir olduğunu gösterir.|
+|[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|Yönetilen Genişletilebilirlik Çerçevesi (MEF) hakkında bilgi sağlar.|
+|[Windows Presentation Foundation](/dotnet/framework/wpf/index)|Windows Sunu Temeli (WPF) hakkında bilgi sağlar.|
 
 ## <a name="reference"></a>Başvuru
- Visual Studio Düzenleyicisi aşağıdaki ad alanlarını içerir.
+ Visual Studio editörü aşağıdaki ad boşluklarını içerir.
 
  <xref:Microsoft.VisualStudio.Language.Intellisense>
 

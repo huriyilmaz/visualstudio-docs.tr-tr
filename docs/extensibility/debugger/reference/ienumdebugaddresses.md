@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugAddresses | Microsoft Docs
+title: IEnumDebugAdresleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugAddresses interface
 ms.assetid: 5f6f6751-e6d8-4c5a-8e81-414b6e5d8cc5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f7871a223695632b5c2118377c9cfeb24d297e4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 14b42ec37babe72b47b0e832397d33029c4fc3d1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329917"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717588"
 ---
 # <a name="ienumdebugaddresses"></a>IEnumDebugAddresses
-Bu arabirimi uygulayan nesnelerin bir koleksiyonunu temsil eder [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi.
+Bu [arabirim, IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimini uygulayan nesnelerin bir koleksiyonunu temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,32 @@ Bu arabirimi uygulayan nesnelerin bir koleksiyonunu temsil eder [IDebugAddress](
 IEnumDebugAdresses : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Bu arabirimi uygulayan nesne kümeleri sağlamak için Sembol sağlayıcısı tarafından uygulanan [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi. Bu varlığı nedeniyle standart bir COM numaralandırma olmadığını unutmayın [GetCount](../../../extensibility/debugger/reference/ienumdebugaddresses-getcount.md) yöntemi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim, [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimini uygulayan nesne kümeleri sağlamak için sembol sağlayıcı tarafından uygulanır. GetCount yönteminin varlığı nedeniyle bunun standart bir COM [GetCount](../../../extensibility/debugger/reference/ienumdebugaddresses-getcount.md) numaralandırması olmadığını unutmayın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim tarafından döndürülen [GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md) ve [GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md).
+ Bu arabirim [GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md) ve [GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)tarafından döndürülür.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Bu arabirim, aşağıdaki yöntemleri uygular.
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Bu arabirim aşağıdaki yöntemleri uygular.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)|Sonraki alır [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnelerden sabit listesi.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugaddresses-skip.md)|Belirtilen bir girdi sayısı atlar.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugaddresses-reset.md)|Numaralandırma ilk girişe sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugaddresses-clone.md)|Geçerli sabit bir kopyasını alır.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugaddresses-getcount.md)|Sabit listesi içerisindeki giriş sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)|Bir sonraki [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnelerini numaralandırmadan alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumdebugaddresses-skip.md)|Belirli sayıda girişi atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugaddresses-reset.md)|Numaralandırmayı ilk girişe sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugaddresses-clone.md)|Geçerli numaralandırmanın bir kopyasını alır.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugaddresses-getcount.md)|Numaralandırmadaki giriş sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, genellikle için ifade değerlendirici vermek için uygun adresi belirlemeye yardımcı olması için hata ayıklama altyapısı tarafından kullanılır.
+ Bu arabirim genellikle ifade değerlendiricisivermek için uygun adresi belirlemeye yardımcı olmak için hata ayıklama altyapısı tarafından kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: sh.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

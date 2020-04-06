@@ -1,5 +1,5 @@
 ---
-title: TemplateContent öğesi (Visual Studio şablonları) | Microsoft Docs
+title: TemplateContent Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,21 +8,21 @@ f1_keywords:
 helpviewer_keywords:
 - TemplateContent element [Visual Studio project templates]
 ms.assetid: 90ae401c-b294-49ac-98da-e0d274f5bebb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a4ddbdeeaecdb832b2601992272de9d76f4bdcb
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: 577ce71d3900947cde1de9a1e913124ab778a1ee
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160006"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699227"
 ---
 # <a name="templatecontent-element-visual-studio-templates"></a>TemplateContent Öğesi (Visual Studio Şablonları)
 
-Şablonu içeriğini belirtir.
+Şablonun içeriğini belirtir.
 
 Öğe hiyerarşisi:
 
@@ -46,29 +46,29 @@ ms.locfileid: "67160006"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|Bir proje şablondan oluşturulduğunda çözümü derlemek belirtir.|
+|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|Şablondan bir proje oluşturulduğunda çözümün oluşturulup oluşturulmayacağını belirtir.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Birden fazla projeli şablonların içeriğini ve düzenini belirtir.|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Dosyaları veya dizinleri projeye eklemek için belirtir.|
-|[Başvurular](../extensibility/references-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Öğe şablonu için gerekli derleme başvurularını belirtir.|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablonda yer alan bir dosyayı belirtir.|
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablondan bir proje veya öğe oluşturulduğunda kullanılacak olan herhangi bir özel parametre belirtir.|
+|[Project](../extensibility/project-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Projeye eklenecek dosyaları veya dizinleri belirtir.|
+|[Başvurular](../extensibility/references-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Madde şablonu için gereken derleme başvurularını belirtir.|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablonda bulunan bir dosyayı belirtir.|
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel parametreleri belirtir.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç Seti için meta veriler içerir.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç kiti için tüm meta verileri içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
- `TemplateContent` gerekli bir öğedir.
+ `TemplateContent`gerekli bir unsurdur.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir proje şablonu için meta verileri gösterir. bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama.
+ Aşağıdaki örnek, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama için proje şablonu için meta verileri gösterir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"

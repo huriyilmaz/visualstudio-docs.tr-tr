@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı ayarlarını ve seçeneklerini genişletme | Microsoft Docs
+title: Kullanıcı Ayarlarını ve Seçeneklerini Genişletme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - Options dialog box, controlling with the Visual Studio SDK
 - VSPackages, user preferences
 ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f7b8e1205f98aa701f816f42d7115a5d5ded959
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 854928c5461d60bb39b75d2895d8d1c8d0a0e8c5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342814"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711549"
 ---
 # <a name="extend-user-settings-and-options"></a>Kullanıcı ayarlarını ve seçeneklerini genişletme
-Visual Studio'da kullanıcı tercihlerini korumak başlıca iki yolu vardır. **Araçları** > **seçenekleri** sayfalarına izin ayarları, genel ve dile özgü birçok farklı türde için kendi değerlerini ayarlamak kullanıcılar. Kullanıcı ayarları genel Visual Studio yapılandırması özelliklerini belirtmek kullanıcılardan izin verir. Seçenekler sayfaları hakkında daha fazla bilgi için bkz: [seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md). Kullanıcı ayarları hakkında daha fazla bilgi için bkz. [kullanıcı ayarları desteği](../extensibility/internals/support-for-user-settings.md).
+Visual Studio'da kullanıcı tercihlerini korumanın iki ana yolu vardır. **Araç** > **Seçenekleri** sayfaları, kullanıcıların hem genel hem de dile özgü birçok farklı türde ayar için kendi değerlerini ayarlamalarına olanak tanır. Kullanıcı ayarları, kullanıcıların genel Visual Studio yapılandırma özelliklerini belirtmesine olanak tanır. Seçenekler sayfaları hakkında daha fazla bilgi için [Seçenekler ve Seçenekler sayfalarına](../extensibility/internals/options-and-options-pages.md)bakın. Kullanıcı ayarları hakkında daha fazla bilgi [için, kullanıcı ayarları için Destek'e](../extensibility/internals/support-for-user-settings.md)bakın.
 
-- [Seçenekler sayfası oluşturma](../extensibility/creating-an-options-page.md) bir seçenekler sayfası oluşturma açıklanır.
+- [Seçenekler sayfası oluşturma](../extensibility/creating-an-options-page.md) Seçenekler sayfasının nasıl oluşturulacağını açıklar.
 
-- [Ayarları kategorisi oluşturma](../extensibility/creating-a-settings-category.md) ayarları kategorisi oluşturma açıklanır.
+- [Ayarlar kategorisi oluşturma](../extensibility/creating-a-settings-category.md) Ayarlar kategorisinin nasıl oluşturulurmasını açıklar.
 
-- [Ayarlar deposu kullanma](../extensibility/using-the-settings-store.md) ayarlar deposu nasıl kullanıldığını açıklar.
+- [Ayarlar mağazasını kullanma](../extensibility/using-the-settings-store.md) Ayarlar deposunun nasıl kullanılacağını açıklar.
 
-- [Ayarlar Deposu'ndan hizmet bilgilerini alma](../extensibility/getting-service-information-from-the-settings-store.md) ayarlar Deposu'ndan kullanılabilir hizmetleri alın açıklanmaktadır.
+- [Ayarlar mağazasından servis bilgilerini alma](../extensibility/getting-service-information-from-the-settings-store.md) Ayarlar deposundan kullanılabilir hizmetleri nasıl alacağınızı açıklar.
 
-- [Kullanıcı ayarları deposuna yazma](../extensibility/writing-to-the-user-settings-store.md) kullanıcı ayarları deposuna nasıl kullanılacağını açıklar.
+- [Kullanıcı ayarları deposuna yazma](../extensibility/writing-to-the-user-settings-store.md) Kullanıcı ayarları deposuna nasıl yazılsüreceğini açıklar.

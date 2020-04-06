@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetLogicalThread | Microsoft Docs
+title: IDebugThread2::GetLogicalThread | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::GetLogicalThread
 ms.assetid: bce6230e-41d4-49b7-a050-2dde5efb6805
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1e8c1543383b3d0df0166b50359caf0f80a8b3ef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e148fb0b9b043fc1717effca00d698ee14beb2f1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320233"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718844"
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
-Hata ayıklama altyapısı, bu yöntemi uygulaması değil.
+Hata ayıklama motorları bu yöntemi uygulamaz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetLogicalThread( 
 
 ## <a name="parameters"></a>Parametreler
 `pStackFrame`\
-[in] Bir [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) yığın çerçevesini temsil eden nesne.
+[içinde] Yığın çerçevesini temsil eden bir [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) nesnesi.
 
 `ppLogicalThread`\
-[out] Döndürür bir `IDebugLogicalThread2` ilişkili mantıksal iş parçacığını temsil eden arabirim. Hata ayıklama altyapısı uygulama bu null bir değere ayarlamanız gerekir.
+[çıkış] İlişkili `IDebugLogicalThread2` mantıksal iş parçacığı temsil eden bir arabirim döndürür. Hata ayıklama altyapısı uygulaması bunu null bir değere ayarlamalıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Hata ayıklama altyapısı uygulamaları her zaman dönüş `E_NOTIMPL`.
+ Hata ayıklama motoru `E_NOTIMPL`uygulamaları her zaman geri döner.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

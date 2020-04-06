@@ -1,5 +1,5 @@
 ---
-title: Hangi Düzenleyicisi, bir projede bir dosya açar belirleme | Microsoft Docs
+title: Projede Hangi Düzenleyicinin Dosya Açtığını Belirleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - project types, determining which editor opens a file
 - persistence, determining which editor opens a file
 ms.assetid: acbcf4d8-a53a-4727-9043-696a47369479
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e54a922cfa36aad8c8c7e68e87012926a8ab715
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: af7037a3b4bfbae1801e802256af240d017d2789
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351603"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708655"
 ---
-# <a name="determine-which-editor-opens-a-file-in-a-project"></a>Hangi Düzenleyicisi, bir projede bir dosya açar belirleme
-Bir kullanıcı bir projede bir dosya açıldığında, ortam sonunda açma uygun Düzenleyici veya tasarımcı bu dosya için bir yoklama işlemine geçer. Ortamı tarafından kullanılan ilk yordam, hem standart hem de özel düzenleyiciler için aynıdır. Bir dosyayı açmak için kullanılacak düzenleyicileri yoklanırken ölçütleri çeşitli ortam kullanır ve VSPackage ortamıyla bu işlem sırasında koordine etmek gerekir.
+# <a name="determine-which-editor-opens-a-file-in-a-project"></a>Projede dosyayı hangi düzenleyicinin açtığını belirleme
+Bir kullanıcı projede bir dosya açtığında, ortam bir yoklama işleminden geçerek bu dosya için uygun düzenleyiciyi veya tasarımcıyı açar. Ortam tarafından kullanılan ilk yordam hem standart hem de özel editörler için aynıdır. Ortam, bir dosyayı açmak için hangi düzenleyicinin kullanılacağını yoklarken çeşitli ölçütler kullanır ve VSPackage bu işlem sırasında ortamla koordine edilmelidir.
 
- Örneğin, bir kullanıcı seçtiğinde **açık** komutunu **dosya** menüsü, ardından seçerse *filename.rtf* (veya başka bir dosya ile bir *.rtf*uzantısı), ortam çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> Çözümdeki tüm proje örneklerini sonunda dolaşma her proje için uygulama. Projeleri Talep belgesinde önceliğe göre tanımlayan bayrakları kümesini döndürür. En yüksek öncelikli kullanarak, ortam uygun çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> yöntemi. Yoklama işlemi hakkında daha fazla bilgi için bkz. [proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md).
+ Örneğin, bir kullanıcı **Dosya** menüsünden **Aç** komutunu seçip *sonra filename.rtf'yi* (veya *.rtf* uzantılı <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> başka bir dosyayı) seçtiğinde, ortam her proje için uygulamayı çağırır ve sonunda çözümdeki tüm proje örnekleri arasında geçiş yapabilir. Projeler, belgedeki talepleri önceliğe göre tanımlayan bir bayrak kümesi döndürür. En yüksek önceliği kullanarak, ortam <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> uygun yöntemi çağırır. Yoklama işlemi hakkında daha fazla bilgi için [bkz.](../../extensibility/internals/adding-project-and-project-item-templates.md)
 
- Çeşitli dosyalar projeleri, diğer projeleri tarafından talep edilmeyen tüm dosyaları talepleri. Bu şekilde, standart düzenleyicileri açmadan önce özel düzenleyicilerde belge açabilirsiniz. Çeşitli dosyalar projeleri talep bir dosya, ortam çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> standart düzenleyiciyle dosyayı açmak için yöntemi. Ortam denetimleri, iç işleyen bir kayıtlı düzenleyicileri listesi *.rtf* dosyaları. Bu liste, şu anahtarı kayıt defterinde bulunur:
+ Çeşitli Dosyalar projesi, diğer projeler tarafından talep edilmeyen tüm dosyaları talep ediyor. Bu şekilde, özel düzenleyiciler belgeleri standart düzenleyiciler açmadan önce açabilir. Çeşitli Dosyalar projesi bir dosya talep ederse, ortam dosyayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> standart bir düzenleyiciyle açma yöntemini çağırır. Ortam, *.rtf* dosyalarını işleyen bir tane için kayıtlı düzenleyicilerin dahili listesini denetler. Bu liste aşağıdaki anahtarda kayıt defterinde yer alır:
 
- **Hkey_local_machıne\software\microsoft\visualstudio\\\<sürüm > \Editors\\\<Düzenleyici fabrikası GUID > \Extensions**
+ **HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\\<sürümü>\Editörler\\\<düzenleyici fabrika guid>\Extensions**
 
- Ortam ayrıca sınıf tanımlayıcıları iade **HKEY_CLASSES_ROOT\CLSID** bir alt olan tüm nesneleri için anahtar **DocObject**. Dosya uzantısı var. bulunursa, uygulama Microsoft Word gibi katıştırılmış bir sürümünü yerinde Visual Studio'da oluşturulur. Bu belge nesneleri uygulayan bileşik dosyalar olmalıdır <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> arabirimi veya nesne uygulanmalı <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> arabirimi.
+ Ortam ayrıca **HKEY_CLASSES_ROOT\CLSID** anahtarındaki sınıf tanımlayıcılarını da denetler. **DocObject** Dosya uzantısı burada bulunursa, Uygulamanın Microsoft Word gibi katıştırılmış bir sürümü Visual Studio'da yerinde oluşturulur. Bu belge nesneleri <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> arabirimi uygulayan bileşik dosyalar olmalıdır veya <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> nesne arabirimi uygulamalıdır.
 
- Hiçbir Düzenleyici fabrikası için ise *.rtf* ortamı arar sonra kayıt defterinde dosyaları **HKEY_CLASSES_ROOT\\.rtf** anahtar ve var. belirtilen Düzenleyicisi açılır. Dosya uzantısı, bulunamazsa **HKEY_CLASSES_ROOT**, bir metin dosyası ise ortam dosyasını açmak için Visual Studio temel metin düzenleyicisini kullanır.
+ Kayıt defterinde *.rtf* dosyaları için editör fabrikası yoksa, ortam **HKEY_CLASSES_ROOT\\.rtf** anahtarına bakar ve burada belirtilen düzenleyiciyi açar. Dosya uzantısı **HKEY_CLASSES_ROOT'da**bulunmazsa, ortam bir metin dosyasıysa dosyayı açmak için Visual Studio çekirdek metin düzenleyicisini kullanır.
 
- Temel metin düzenleyici başarısız olursa, dosyayı bir metin dosyası değil, ortam dosyası ikili düzenleyicisinin ardından kullanır gerçekleşir.
+ Çekirdek metin düzenleyicisi başarısız olursa, dosya bir metin dosyası değilse oluşur, ortam dosya için ikili düzenleyicisini kullanır.
 
- Ortam için bir düzenleyici bulamazsa *.rtf* uzantısı, kayıt defterindeki bu Düzenleyici fabrikası uygulayan VSPackage'ı yükler. Ortam çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> yeni VSPackage yöntemi. VSPackage çağrıları `QueryService` için `SID_SVsRegistorEditor`kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> Düzenleyici fabrikası ortamı ile kaydetmek için yöntemi.
+ Ortam kayıt defterinde *.rtf* uzantısı için bir düzenleyici bulursa, bu düzenleyici fabrikasını uygulayan VSPackage'ı yükler. Ortam, yeni <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> VSPackage'daki yöntemi çağırır. VSPackage, `QueryService` düzenleyici `SID_SVsRegistorEditor`fabrikayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> çevreye kaydettirmek için yöntemi kullanarak çağrıda bulunur.
 
- Ortam, iç listesini bulmak için yeni kaydettiğiniz Düzenleyicisi Fabrika için kayıtlı düzenleyicileri şimdi yeniden denetler *.rtf* dosyaları. Uygulamanız ortam çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> yöntemi oluşturmak için dosya adını ve görünümü türünü geçirerek.
+ Ortam şimdi *.rtf* dosyaları için yeni kayıtlı düzenleyici fabrikasını bulmak için kayıtlı editörlerin dahili listesini yeniden denetler. Ortam, oluşturmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> dosya adı ve görünüm türünü geçerek yöntemin uygulanmasını çağırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>

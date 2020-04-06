@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Suspend | Microsoft Docs
+title: IDebugThread2::Askıya | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::Suspend
 ms.assetid: 1e20be85-aa12-48de-bb83-0bf0976e99ae
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dc3abcc00d99e82a4af2e3886310772e47127274
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 74a7dd5dc69effbd46986eff963de3e740d9aa8e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320006"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718644"
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
-Bir iş parçacığını askıya alır.
+İş parçacığı askıya alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ HRESULT Suspend ( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwSuspendCount`\
-[out] Askıya alma işleminden sonra askıya alma sayımı döndürür.
+[çıkış] Askıya alma işleminden sonra askıya alma sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem her çağrı, askıya alma sayımı 0 yukarıda artırır. Bu askıya alma sayımı görüntülenir **iş parçacıkları** hata ayıklama penceresine.
+ Bu yönteme yapılan her çağrı, askıya alma sayısını 0'ın üzerine yükselir. Bu askıya alma **sayısı, İş Parçacıkları** hata ayıklama penceresinde görüntülenir.
 
- Bu yöntem her çağrı için olmalıdır bir sonraki çağrı [sürdürme](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemi.
+ Bu yönteme yapılan her çağrı [için, Özgeçmiş](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemine daha sonra bir çağrı olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
-- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+- [Sürdür](../../../extensibility/debugger/reference/idebugthread2-resume.md)

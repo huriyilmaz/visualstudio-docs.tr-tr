@@ -1,91 +1,91 @@
 ---
-title: Yan yana dosya ilişkilendirmelerini yönetme | Microsoft Docs
+title: Yan Yana Dosya Çağrışımlarını Yönetme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - verbs, setting default
 ms.assetid: 9b6df3bc-d15c-4a5d-9015-948a806193b7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5d389ea97c9a77fe859a4029e4447adf76624e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6c284fe7ef4c2d07051a8524860583cb634e13bf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340665"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702757"
 ---
 # <a name="manage-side-by-side-file-associations"></a>Yan yana dosya ilişkilendirmelerini yönetme
 
-Dosya ilişkilendirmeleri, VSPackage sağlıyorsa, yan yana yüklemeleri, işlemeye nasıl karar vermeniz gerekir belirli bir sürümü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir dosyayı açmak için çağrılmalıdır. Uyumsuz dosya biçimlerine sorunu bileşik.
+VSPackage dosya ilişkilendirmeleri sağlıyorsa, bir dosyayı açmak için belirli bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sürümün çağrılması gereken yan yana yüklemeleri nasıl işleyeceğinize karar vermeniz gerekir. Uyumsuz dosya biçimleri sorunu bileşik.
 
-Kullanıcılar, veri kaybı olmadan yeni bir sürümde var olan dosyaları yüklenebilir, böylece önceki sürümleriyle uyumlu olacak şekilde bir ürünün yeni bir sürümü bekler. İdeal olarak, VSPackage hem yükleyin ve önceki sürümleri dosya biçimlerinin kaydedin. Bu doğru değilse, dosya biçimi, VSPackage'ı yeni sürüme yükseltmek sunmalıdır. Bu yaklaşımın bir dezavantajı, yükseltilen dosyayı önceki sürümde açılamaz ' dir.
+Kullanıcılar, varolan dosyaların veri kaybetmeden yeni bir sürüme yüklenebileceği için ürünün yeni bir sürümünün önceki sürümlerle uyumlu olmasını bekler. İdeal olarak, VSPackage'ınız önceki sürümlerin dosya biçimlerini yükleyebilir ve kaydedebilir. Bu doğru değilse, dosya biçimini VSPackage'ınızın yeni sürümüne yükseltmeyi önermelisiniz. Bu yaklaşımın dezavantajı, yükseltilen dosyanın önceki sürümde açılamamasıdır.
 
-Bu sorunu önlemek için uzantıları dosya biçimleri uyumsuz olduğunda değiştirebilirsiniz. Örneğin, 1. sürümünü, VSPackage uzantısı kullanabilirsiniz *.mypkg10*ve sürüm 2, uzantıyı kullanmak *.mypkg20*. Bu fark, belirli bir dosya açılır VSPackage'ı tanımlar. Eski uzantısıyla ilişkili olan programların listesi için daha yeni VSPackages eklerseniz, kullanıcıların dosyaya sağ tıklayın ve daha yeni bir VSPackage içinde açmak seçin. Bu noktada, dosyanın yeni biçime yükseltmek veya dosyayı açıp VSPackage'nın önceki sürümleriyle uyumluluğu korumak, VSPackage sunabilir.
+Bu sorunu önlemek için, dosya biçimleri uyumsuz olduğunda uzantıları değiştirebilirsiniz. Örneğin, VSPackage sürüm 1 uzantısı kullanabilirsiniz, *.mypkg10*, ve sürüm 2 uzantısı kullanabilirsiniz, *.mypkg20*. Bu fark, belirli bir dosyayı açan VSPackage'ı tanımlar. Eski bir uzantıyla ilişkili programlar listesine daha yeni VSPackages eklerseniz, kullanıcılar dosyayı sağ tıklayabilir ve dosyayı daha yeni bir VSPackage'da açmayı seçebilir. Bu noktada, VSPackage'ınız dosyayı yeni biçime yükseltmeyi veya dosyayı açmayı ve VSPackage'ın önceki sürümleriyle uyumluluğu korumayı sunabilir.
 
 > [!NOTE]
-> Bu yaklaşımları birleştirebilirsiniz. Örneğin, daha eski bir dosya yükleyerek geriye dönük uyumluluk sağlar ve kullanıcının kaydettiğinde dosya biçimi yükseltme olanağı sunar.
+> Bu yaklaşımları birleştirebilirsiniz. Örneğin, eski bir dosyayükleyerek geriye dönük uyumluluk sunabilir ve kullanıcı kaydettiğinde dosya biçimini yükseltmeyi teklif edebilirsiniz.
 
-## <a name="face-the-problem"></a>Yüz tanıma sorunu
+## <a name="face-the-problem"></a>Sorunla Yüzleşin
 
-Birden çok yan yana VSPackages aynı uzantı kullanmak istiyorsanız, sürümü seçmelisiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uzantısıyla ilişkili. İki seçenekleri şunlardır:
+Aynı uzantıyı kullanmak için birden çok yan yana VSPackages istiyorsanız, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bunun uzantısı ile ilişkili sürümünü seçmeniz gerekir. İşte iki alternatif:
 
-- Dosyanın en son sürümünde açın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir kullanıcının bilgisayarında yüklü.
+- Dosyayı, kullanıcının [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bilgisayarında yüklenen en son sürümde açın.
 
-   Bu yaklaşımda, yükleyici en son sürümünü belirlemek için sorumlu olduğu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , dosya ilişkilendirme için yazılmış kayıt defteri girişi dahil. Bir Windows yükleyici paketinde, en son sürümünü belirten bir özelliği ayarlamak için özel eylemler dahil edebileceğiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+   Bu yaklaşımda, yükleyiciniz dosya ilişkilendirmesi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] için yazılmış kayıt defteri girişinin en son sürümünü belirlemekten sorumludur. Windows Installer paketinde, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]'nin en son sürümünü gösteren bir özellik ayarlamak için özel eylemler ekleyebilirsiniz
 
   > [!NOTE]
-  > Bu bağlamda "desteklenen son sürümü." "son" anlamına gelir Bu yükleyici girişleri sonraki bir sürümünü otomatik olarak algılamaz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Girdiler [sistem gereksinimlerini algılama](../extensibility/internals/detecting-system-requirements.md) ve [komutları, gerekir olması çalıştırma sonra yükleme](../extensibility/internals/commands-that-must-be-run-after-installation.md) burada belirtilen ayarlara benzerdir ve diğer sürümleri desteklemek için gerekli olan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+  > Bu bağlamda, "en son" "en son desteklenen sürüm" anlamına gelir. Bu yükleyici girişleri otomatik olarak bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]sonraki sürümü algılamaz. Sistem [Gereksinimlerini Algılama](../extensibility/internals/detecting-system-requirements.md) girişleri ve [Kurulumdan Sonra Çalıştırılması Gereken Komutlar,](../extensibility/internals/commands-that-must-be-run-after-installation.md) burada sunulanlara benzer [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ve ek sürümlerini desteklemek için gereklidir.
 
-   Özel tablosundaki aşağıdaki satırları DEVENV_EXE_LATEST özelliği bir özellik tarafından AppSearch kümesi olacak şekilde ayarlayın ve RegLocator tabloları ele alınan [yükleme sonrasında çalıştırılması gereken komutları](../extensibility/internals/commands-that-must-be-run-after-installation.md). Özel eylemleri yürütme sırası erken InstallExecuteSequence tablosundaki satırları zamanlayın. Koşul sütunu yap mantıksal iş değerleri:
+   CustomAction tablosundaki aşağıdaki satırlar, DEVENV_EXE_LATEST [özelliğini, yüklemeden sonra çalıştırılması gereken Komutlarda](../extensibility/internals/commands-that-must-be-run-after-installation.md)tartışılan AppSearch ve RegLocator tabloları tarafından ayarlanan bir özellik olarak ayarlar. InstallExecuteSequence tablosundaki satırlar, özel eylemleri yürütme sırasının başlarında zamanlar. Koşul sütunundaki değerler mantığın çalışmasını sağlar:
 
-  - Yalnızca mevcut sürüm ise, visual Studio .NET 2002 en son sürümüdür.
+  - Visual Studio .NET 2002 mevcut tek sürüm ise en son sürümüdür.
 
-  - Visual Studio .NET 2003 varsa, yalnızca en son sürümü olan ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] mevcut değil.
+  - Visual Studio .NET 2003 sadece mevcut ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] mevcut değilse en son sürümüdür.
 
-  - [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Yalnızca mevcut sürümüyse, en son sürümüdür.
+  - [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]tek mevcut sürümü ise en son sürümüdür.
 
-    Sonucunda DEVENV_EXE_LATEST devenv.exe en son sürümünü yolunu içermesidir.
+    Net sonuç DEVENV_EXE_LATEST devenv.exe en son sürümünün yolunu içerir olmasıdır.
 
-  **Visual Studio'nun en son sürümü belirlemek özel tablo satırları**
+  **Visual Studio'nun en son sürümünü belirleyen CustomAction tablo satırları**
 
-  |Eylem|Tür|Source|Hedef|
+  |Eylem|Tür|Kaynak|Hedef|
   |------------|----------|------------|------------|
   |CA_SetDevenvLatest_2002|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2002]|
   |CA_SetDevenvLatest_2003|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2003]|
   |CA_SetDevenvLatest_2005|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2005]|
 
-  **Visual Studio'nun en son sürümü belirlemek InstallExecuteSequence tablo satırları**
+  **Visual Studio'nun en son sürümünü belirleyen InstallExecuteSequence tablo satırları**
 
   |Eylem|Koşul|Sequence|
   |------------|---------------|--------------|
-  |CA_SetDevenvLatest_2002|DEVENV_EXE_2002 DEĞİL (DEVENV_EXE_2003 VEYA DEVENV_EXE_2005)|410|
-  |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 VE DEVENV_EXE_2005 DEĞİL|420|
+  |CA_SetDevenvLatest_2002|DEVENV_EXE_2002 VE Değİl (DEVENV_EXE_2003 VEYA DEVENV_EXE_2005)|410|
+  |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 VE DEVENV_EXE_2005 Değİl|420|
   |CA_SetDevenvLatest_2005|DEVENV_EXE_2005|430|
 
-   Yazmak için Windows Installer paketi kayıt defteri tabloda DEVENV_EXE_LATEST özelliği kullanabilirsiniz **HKEY_CLASSES_ROOT*ProgID*ShellOpenCommand** anahtarının varsayılan değeri, [DEVENV_EXE_LATEST] "%1"
+   Windows Installer paketinin Kayıt Defteri tablosundaki DEVENV_EXE_LATEST özelliğini kullanarak ***ProgId*ShellOpenCommand** tuşu'nun varsayılan değerini HKEY_CLASSES_ROOT yazabilirsiniz, [DEVENV_EXE_LATEST] "%1"
 
-- Kullanılabilir VSPackage sürümleri en iyi seçim yapabileceğiniz bir paylaşılan Başlatıcısı programını çalıştırın.
+- Mevcut VSPackage sürümlerinden en iyi seçimi yapabilecek paylaşılan bir başlatıcı programı çalıştırın.
 
-   Geliştiriciler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] birçok sürümlerinden neden projeler ve çözümler, birden çok biçimde karmaşık gereksinimleri işlemek için bu yaklaşım seçilmiştir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Bu yaklaşımda, bir Başlatıcısı program uzantı işleyici olarak kaydedin. Başlatıcı dosyayı inceler ve hangi sürümünün karar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve bu dosyada, VSPackage işleyebilir. Bir kullanıcı, VSPackage'ı belirli bir sürümü tarafından son kaydedildiği bir dosyasını açarsa, örneğin, başlatıcı bu VSPackage'nın eşleşen sürümünün başlayabilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Ayrıca, bir kullanıcı her zaman en son sürümünü başlatmak için Başlatıcı yapılandırabilirsiniz. Bir başlatıcı ayrıca dosyasının biçimi yükseltme açmasına isteyebilir. Dosya biçimi sürüm numarası içeriyorsa, bir veya daha fazla yüklenmiş VSPackages sonraki bir sürümün dosya biçiminin olup olmadığını başlatıcısı bir kullanıcıyı bilgilendirmeniz.
+   Geliştiriciler, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] birçok sürümünden kaynaklanan çözümler in birden çok çözüm ve proje biçiminin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]karmaşık gereksinimlerini işlemek için bu yaklaşımı seçti. Bu yaklaşımda, uzantı işleyicisi olarak bir başlatıcı programı kaydedin. Başlatıcı dosyayı inceler ve VSPackage'ınızın hangi sürümünün ve sizin bu dosyayı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] işleyebileceğine karar verir. Örneğin, bir kullanıcı VSPackage'ınızın belirli bir sürümü tarafından en son kaydedilen bir dosyayı açarsa, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]başlatıcı bu VSPackage'ı eşleşen sürümünde başlatabilir. Buna ek olarak, bir kullanıcı her zaman en son sürümü başlatmak için başlatıcısı yapılandırabilir. Başlatıcı, kullanıcıyı dosyanın biçimini yükseltmeye de itebilir. Dosyanın biçimi bir sürüm numarası içeriyorsa, dosya biçimi yüklenen VSPackages'lerden bir veya daha fazla olan bir sürümden geliyorsa başlatıcı kullanıcıyı bilgilendirebilir.
 
-   Başlatıcısı, VSPackage'ı tüm sürümleri ile paylaşılan bir Windows Installer bileşeni olması gerekir. Bu işlem, en son sürümü her zaman yüklenir ve tüm sürümlerini, VSPackage kaldırılana kadar kaldırılmaz emin olur. VSPackage'ı bir sürümü kaldırılır olsa bile bu şekilde, dosya ilişkilendirmeleri ve diğer kayıt defteri girdilerini Başlatıcısı bileşenin korunur.
+   Başlatıcı, VSPackage'ınızın tüm sürümleriyle paylaşılan bir Windows Installer bileşeninde olmalıdır. Bu işlem, en son sürümün her zaman yüklendiğinden ve VSPackage'ınızın tüm sürümleri kaldırılana kadar kaldırılmamasını sağlar. Bu şekilde, VSPackage'ın bir sürümü kaldırılsa bile, başlatıcı bileşeninin dosya ilişkilendirmeleri ve diğer kayıt defteri girişleri korunur.
 
-## <a name="uninstall-and-file-associations"></a>Kaldırın ve dosya ilişkilendirmeleri
+## <a name="uninstall-and-file-associations"></a>Kaldırma ve dosya çağrışımları
 
-Dosya ilişkilendirmeleri için kayıt defteri girdileri yazan VSPackage kaldırma dosya ilişkilendirmeleri kaldırılır. Bu nedenle, ilişkili bir program yok uzantılıdır. Windows Installer "Vspackage'i yüklediğinizde, eklenen kayıt defteri girdilerini kurtarılmıyor". Bir kullanıcının dosya ilişkilendirmeleri düzeltmek için bazı yollar şunlardır:
+Dosya ilişkilendirmeleri için kayıt defteri girişleri yazan bir VSPackage kaldırma dosya ilişkilendirmeleri kaldırır. Bu nedenle, uzantı ilişkili programları vardır. Windows Installer, VSPackage yüklendiğinde eklenen kayıt defteri girişlerini "kurtarmaz". Bir kullanıcının dosya ilişkilendirmelerini düzeltmenin bazı yolları şunlardır:
 
-- Daha önce açıklandığı gibi bir paylaşılan Başlatıcısı bileşeni'ni kullanın.
+- Daha önce açıklandığı gibi paylaşılan bir başlatıcı bileşeni kullanın.
 
-- Kullanıcının dosya ilişkilendirmesi kendi istediği VSPackage'ı sürümünün bir onarım gerçekleştirin kullanıcıya bildirin.
+- Kullanıcıya, kullanıcının dosya ilişkilendirmesine sahip olmak istediği VSPackage sürümünün onarımını çalıştırmasını talimat edin.
 
-- Uygun kayıt defteri girdileri yeniden yazar ayrı bir yürütülebilir program belirtin.
+- Uygun kayıt defteri girişlerini yeniden yazan ayrı bir yürütülebilir program sağlayın.
 
-- Kullanıcıların dosya ilişkilendirmeleri seçin ve kayıp ilişkilendirmeleri geri kazan olanak tanıyan bir yapılandırma seçenekleri sayfası veya iletişim kutusu sağlar. Kullanıcıların kaldırılmasından sonra çalıştırmasına izin vermelerini isteyin.
+- Kullanıcıların dosya ilişkilendirmelerini seçmesini ve kayıp ilişkileri geri almalarını sağlayan bir yapılandırma seçenekleri sayfası veya iletişim kutusu sağlayın. Kullanıcılara yüklemeyi kaldırmadan sonra çalıştırmalarını talimat edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yan yana dağıtımlar için dosya adı uzantılarını kaydetme](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)
-- [Dosya adı uzantıları için fiil kaydetme](../extensibility/registering-verbs-for-file-name-extensions.md)
+- [Dosya adı uzantıları için fiilleri kaydetme](../extensibility/registering-verbs-for-file-name-extensions.md)

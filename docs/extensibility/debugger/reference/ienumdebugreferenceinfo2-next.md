@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2::Next | Microsoft Docs
+title: IEnumDebugReferenceInfo2::Sonraki | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2::Next
 ms.assetid: 70b31a57-1701-4757-9e7e-63ec60a71b3c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0860210a2ed80374346268012ae98cf5704b4c7a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4bb10504b2dbe02856364baa0670a7c825ef80cd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322641"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715319"
 ---
 # <a name="ienumdebugreferenceinfo2next"></a>IEnumDebugReferenceInfo2::Next
-Sabit listesinden alınmış sonraki öğe kümesini döndürür.
+Numaralandırmadan sonraki eleman kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınacak öğelerin sayısı. Ayrıca en büyük boyutunu belirtir `rgelt` dizisi.
+[içinde] Alınacak öğe sayısı. Ayrıca `rgelt` dizinin en büyük boyutunu belirtir.
 
 `rgelt`\
-[out içinde] Dizi [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) doldurulacak öğeleri.
+[içinde, dışarı] Doldurulacak [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) öğeleri dizisi.
 
 `pceltFetched`\
-[out] Gerçekte döndürülen öğe sayısını döndürür `rgelt`.
+[çıkış] Gerçekte döndürülen öğe sayısını `rgelt`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` istenen öğelerin sayısından daha az döndürülebilen; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döndürür. İstenen öğe sayısından daha az ise döndürür; `S_FALSE` aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

@@ -1,39 +1,39 @@
 ---
-title: Yapılandırma ve SelectedItem nesneleri için Otomasyon | Microsoft Docs
+title: Yapılandırma ve SelectedItem Nesneleri için Otomasyon | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio SDK], SelectedItem object
 - automation [Visual Studio SDK], builds
 ms.assetid: 120377f1-51aa-4445-b2f7-06ab7fc2b47f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6c9dc8012433f9ec73f15b9249f6b7ac08bdad7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0341cdf56b32b8b1ac77104b3f3e813ae0610767
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347968"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709966"
 ---
-# <a name="automation-for-configuration-and-selecteditem-objects"></a>Yapılandırma ve SelectedItem nesneleri için Otomasyon
+# <a name="automation-for-configuration-and-selecteditem-objects"></a>Yapılandırma ve SelectedItem nesneleri için otomasyon
 
-Yapı ve Visual Studio seçili öğe işlemleri otomatik hale getirebilirsiniz.
+Visual Studio'da yapı ve seçili öğe işlemlerini otomatikleştirebilirsiniz.
 
-## <a name="automation-for-builds"></a>Yapılar için Otomasyon
+## <a name="automation-for-builds"></a>Yapılar için otomasyon
 
-Derleme veya yapılandırma, uyguladığınızda sağlanan bir otomasyon modeli olan <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider>. Daha fazla bilgi için [anlayın derleme yapılandırmaları](../../ide/understanding-build-configurations.md).
+Yapı veya yapılandırma, uyguladığınız <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider>zaman sağlanan bir otomasyon modeline sahiptir. Daha fazla bilgi için yapı [yapılandırmalarını anlayın.](../../ide/understanding-build-configurations.md)
 
-VSPackage'ı oluşturma ve yapılandırma seçeneklerini denetlemek isterseniz, otomasyon modeli kullanmanız gerekir.
+Bir VSPackage oluşturursanız ve yapılandırma seçeneklerini denetlemek istiyorsanız, otomasyon modelini kullanmanız gerekir.
 
 ## <a name="automation-for-selecteditem"></a>SelectedItem için Otomasyon
 
-Bir uygulama için sağlaması gerekmez `SelectedItem` Visual Studio standart uygulaması içerdiğinden nesne. Ancak, uygulayabileceğiniz `SelectedItem` tercih ederseniz nesne. İçeren bir nesne uygulamalıdır `SelectedItem` arabirim ve çağrısı için bir yanıt döndüreceğini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemiyle `VSITEMID` kümesine [__VSHPROPID. VSHPROPID_ExtSelectedItem](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_ExtSelectedItem>).
+Visual Studio standart bir uygulama `SelectedItem` içerdiğinden nesne için bir uygulama sağlamanız gerekmez. Ancak, isterseniz nesneyi `SelectedItem` uygulayabilirsiniz. `SelectedItem` Arabirimi içeren bir nesne uygulamanız ve __VSHPROPID `VSITEMID` ayarlı <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yönteme bir çağrıyanıtı döndürmeniz [gerekir. VSHPROPID_ExtSelectedItem](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_ExtSelectedItem>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>
-- [Otomasyon modeline katkıda bulunma](../../extensibility/internals/contributing-to-the-automation-model.md)
+- [Otomasyon modeline katkıda bulunmak](../../extensibility/internals/contributing-to-the-automation-model.md)
 - [Derleme yapılandırmalarını anlama](../../ide/understanding-build-configurations.md)

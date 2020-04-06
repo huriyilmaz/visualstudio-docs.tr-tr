@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadId | Microsoft Docs
+title: IDebugThread2::GetThreadId | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::GetThreadId
 ms.assetid: db8b1c07-6b86-47f9-b292-bac19c276d36
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 66ad2151f6455d758d57c51a387184a9fcce8ec7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a7788cc09d92ff4c784fbcb7004393fe0d3074c8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320172"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718710"
 ---
 # <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
 Sistem iş parçacığı tanımlayıcısını alır.
@@ -41,16 +41,16 @@ int GetThreadId (
 
 ## <a name="parameters"></a>Parametreler
 `pdwThreadId`\
-[out] Sistem iş parçacığı tanıtıcısını döndürür.
+[çıkış] Sistem iş parçacığı tanımlayıcısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bir iş parçacığı kimliği bir iş parçacığı bir işlemdeki diğer iş parçacıkları arasında tanımlamak için kullanılır.
+İş parçacığı kimliği, bir işlemdeki diğer tüm iş parçacıkları arasında bir iş parçacığı tanımlamak için kullanılır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` uygulayan nesne [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimi.
+Aşağıdaki örnek, `CProgram` [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {

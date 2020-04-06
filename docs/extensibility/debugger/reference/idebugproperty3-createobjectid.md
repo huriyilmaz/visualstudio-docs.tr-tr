@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::CreateObjectID | Microsoft Docs
+title: IDebugÖzellik3::CreateObjectID | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::CreateObjectID
 ms.assetid: f2fa81e7-822f-456e-8729-a96a18eea771
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee1d2a66a5ed655c132526c5d73b6673a680c971
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d3993d674f029260dbe32d16c576cb239ff8d6d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339853"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721182"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
-Diğer özellikler arasında benzersiz olduğundan emin olmak için bu özellik için benzersiz bir kimliği oluşturur.
+Diğer tüm özellikler arasında benzersiz olduğundan emin olmak için bu özellik için benzersiz bir kimlik oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,15 +38,15 @@ int CreateObjectID();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik, diğer özellikler arasında benzersiz olarak tanımlanıyorsa emin olmak oturum hata ayıklama Yöneticisi istediğinde, bu yöntem çağrılır. Özellikleri ile ilgilenir zaten benzersiz şekilde tanımlanır sürece bu yöntemi hata ayıklama altyapısı (DE) destekler. DE bu metodu desteklemiyor varsa, döndürür `E_NOTIMPL`.
+ Bu yöntem, oturum hata ayıklama yöneticisi bu özelliğin diğer tüm özellikleri arasında benzersiz olarak tanımlandığınızdan emin olmak istediğinde çağrılır. Hata ayıklama altyapısı (DE), ilgilendiği özellikler zaten benzersiz olarak tanımlanmamışsa bu yöntemi destekler. DE bu yöntemi desteklemiyorsa, `E_NOTIMPL`döndürür.
 
- Herhangi bir benzersiz kimliği ile oluşturulan `CreateObjectID` zaman yok [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) yöntemi çağrılır; bu da bu özellik benzersiz olarak tanımlamak için gereken sonuna işaret eder.
+ [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) yöntemi `CreateObjectID` çağrıldığında oluşturulan benzersiz kimlik yok edilir; bu aynı zamanda bu özelliği benzersiz bir şekilde tanımlama ihtiyacının da sona erdirilme sinyali vetir.
 
 > [!NOTE]
-> Her benzersiz kimliklerini istediği DE yapabilirsiniz, bu benzersiz kimliği almak için bir yöntem zaman `CreateObjectID` yöntemi çağrılır.
+> Bu benzersiz kimliği almak için bir yöntem yoktur, bu nedenle DE `CreateObjectID` yöntem çağrıldığında benzersiz kimlikler için ne isterse yapabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

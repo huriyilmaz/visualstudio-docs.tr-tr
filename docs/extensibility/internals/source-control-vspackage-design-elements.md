@@ -1,39 +1,39 @@
 ---
-title: Kaynak denetimi VSPackage'ı tasarım öğeleri | Microsoft Docs
+title: Kaynak Kontrol VSPackage Tasarım Elemanları | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, design elements
 ms.assetid: edd3f2ff-ca32-4465-8ace-4330493b67bb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e9b22ea32698d6e996bfee618b0b5ca4da5943d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b5e94829f781c058d9b0ea56cdec6c03c71ffe0c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322479"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705005"
 ---
 # <a name="source-control-vspackage-design-elements"></a>Kaynak Denetimi VSPackage’ı Tasarım Öğeleri
-Bu bölümdeki konular ana hat yapısı kaynak denetimi VSPackage'ı için derin tümleştirme uygulamalıdır. Ayrıca arabirimler listeler ve kaynak VSPackage Denetim Hizmetleri uygulayabilirsiniz ve arabirimleri ve Hizmetleri kaynak denetimi VSPackage'ı diğer kullanabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynağına destekleyen bileşenler, model ve işlevi denetler.
+Bu bölümdeki konular, kaynak denetimi VSPackage'ın derin tümleştirme için uygulaması gereken yapıyı ana hatlar. Ayrıca, kaynak denetimi VSPackage'ın uygulayabileceği arabirimleri ve hizmetleri ve kaynak denetimi VSPackage'ın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak kontrol modelini ve işlevselliğini desteklemek için diğer bileşenlerden kullanabileceği arabirimleri ve hizmetleri listeler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [VSPackage Yapısı](../../extensibility/internals/vspackage-structure-source-control-vspackage.md)
 
- Kaynak denetimi VSPackage'ı yapısını tanımlar.
+ Kaynak denetimi VSPackage yapısını tanımlar.
 
 - [İlgili Hizmetler ve Arabirimler](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)
 
- Kaynak Denetim paketi ile ilgili arabirimler ve hizmetler listelenmektedir.
+ Kaynak denetimi paketiyle ilgili arabirimleri ve hizmetleri listeler.
 
 - [Sağlanan Hizmetler](../../extensibility/internals/services-provided-source-control-vspackage.md)
 
- Kaynak denetimi VSPackage'ı tarafından sağlanan kaynak denetimi hizmetini açıklar.
+ KAYNAK denetimi VSPackage tarafından sağlanan kaynak denetim hizmetini açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Kaynak Denetimi VSPackage’ı Oluşturma](../../extensibility/internals/creating-a-source-control-vspackage.md)
 
- Kaynak denetimi, yalnızca kaynak denetimi işlevlerini sağlar ancak özelleştirmek için kullanılan VSPackage'ı oluşturma anlatılmaktadır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak UI denetimi.
+ Yalnızca kaynak denetimi işlevselliği sağlamakla kalmamış, aynı zamanda kaynak denetimi ui'sini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özelleştirmek için kullanılabilen bir kaynak denetimi VSPackage nasıl oluşturulabileceğini tartışır.

@@ -1,27 +1,27 @@
 ---
-title: Katkıda bulunan yeni öğe Ekle iletişim kutusu | Microsoft Docs
+title: Yeni Öğe Ekle İletişim Kutusu'na Katkıda Bulunmak | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, contributing to
 ms.assetid: b2e53175-9372-4d17-8c2b-9264c9e51e9c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 443f52edda5f3bedb2e3f8c8dbbe748254fd7be7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 83444d9be6ba23392b792a0187bf46dc9920c465
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335567"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709283"
 ---
-# <a name="contribute-to-the-add-new-item-dialog-box"></a>Yeni Öğe Ekle iletişim kutusuna katkıda bulunma
-Proje alt öğeleri için yeni bir tam dizin sağlayabilir **Yeni Öğe Ekle** kaydederek iletişim kutusu **Öğe Ekle** şablonlar altında **projeleri** kayıt defteri alt anahtarı.
+# <a name="contribute-to-the-add-new-item-dialog-box"></a>Yeni Öğe Ekle iletişim kutusuna katkıda bulunun
+Proje alt türü, **Projeler** kayıt defteri alt anahtarının altına **Öğe Ekle** şablonlarını kaydederek Yeni **Öğe Ekle** iletişim kutusu için öğelerin tam yeni bir dizinini sağlayabilir.
 
-## <a name="register-add-new-item-templates"></a>Yeni Öğe Ekle şablonları kaydetme
- Bu bölümde altında bulunan **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects** kayıt defteri. Kayıt defteri girdilerini varsayar bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje kuramsal proje alt türü tarafından toplanır. Girişleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje aşağıda listelenmiştir.
+## <a name="register-add-new-item-templates"></a>Kaydol Yeni Öğe Şablonları Ekle
+ Bu bölüm kayıt defterinde **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects** altında yer almaktadır. Aşağıdaki kayıt defteri girişleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] varsayımsal bir proje alt türü tarafından toplanan bir proje varsayar. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje girişleri aşağıda listelenmiştir.
 
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects\{F184B08F-C81C-45F6-A57F-5ABD9991F28F}]
@@ -35,12 +35,12 @@ Proje alt öğeleri için yeni bir tam dizin sağlayabilir **Yeni Öğe Ekle** k
 "TemplatesDir"="projectSubTypeTemplatesDir\\VBProjectItems"
 ```
 
- **AddItemTemplates\TemplateDirs** alt anahtar içerir, burada öğeler yapılan bulunan dizine olan yolu ile kayıt defteri girdilerini **Yeni Öğe Ekle** iletişim kutusu yerleştirilir.
+ **AddItemTemplates\TemplateDirs** alt tuşu, **Yeni Öğe Ekle** iletişim kutusunda kullanıma sunulan öğelerin yerleştirildiği dizin yolu olan kayıt defteri girişleri içerir.
 
- Tüm ortam otomatik olarak yükleyen **AddItemTemplates** verileri altında **projeleri** kayıt defteri alt anahtarı. Bu veriler, temel proje uygulamaları için verilerin yanı sıra belirli proje alt türleri için verileri içerebilir. Her proje alt proje türü tarafından tanımlanan **GUID**. Proje alt alternatif kümesi olduğunu belirtebilirsiniz **Öğe Ekle** şablonları kullanılmalıdır belirli flavored proje örneği için destekleyerek `VSHPROPID_ AddItemTemplatesGuid` sabit listesinden alınmış <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> içinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> Proje alt GUID değerini döndürmek için uygulaması. Varsa `VSHPROPID_AddItemTemplatesGuid` özelliği belirtilmedi, temel proje GUID kullanılır.
+ Ortam, **Projeler** kayıt defteri alt anahtarının altındaki **Tüm AddItemTemplates** verilerini otomatik olarak yükler. Bu veriler, temel proje uygulamaları için verilerin yanı sıra belirli proje alt türü türleri için verileri de içerebilir. Her proje alt türü bir proje türü **GUID**ile tanımlanır. Proje alt türü, proje alt türünün GUID değerini döndürmek için <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> uygulamada numaralandırmayı destekleyerek `VSHPROPID_ AddItemTemplatesGuid` belirli bir aromalı proje örneği için alternatif bir Öğe **Ekle** şablonları kümesinin kullanılması gerektiğini belirtebilir. Özellik `VSHPROPID_AddItemTemplatesGuid` belirtilmemişse, temel proje GUID kullanılır.
 
- Öğeleri filtreleyebilirsiniz **Yeni Öğe Ekle** uygulayarak iletişim kutusu <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> proje alt toplayıcısı nesne üzerinde arabirimi. Örneğin, bir veritabanı projesi toplayarak uygulayan bir proje alt bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje, filtreleyebilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özel öğeleri gelen **Yeni Öğe Ekle** filtreleme uygulayarak ve iletişim kutusunu açın, ekleyebilirsiniz Veritabanı projeye özgü öğeleri destekleyerek `VSHPROPID_ AddItemTemplatesGuid` içinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>. Filtreleme ve öğeler ekleme hakkında daha fazla bilgi için **Yeni Öğe Ekle** iletişim kutusu, bkz: [Yeni Öğe Ekle iletişim kutusuna öğeleri ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md).
+ **Proje** alt türü toplayıcı nesnesine <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> arabirimi uygulayarak Yeni Öğe Ekle iletişim kutusundaki öğeleri filtreleyebilirsiniz. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Örneğin, bir projeyi toplayarak bir veritabanı projesi uygulayan bir proje alt [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] türü, filtreleme uygulayarak Yeni **Öğe Ekle** iletişim kutusundan belirli öğeleri filtreleyebilir ve `VSHPROPID_ AddItemTemplatesGuid` buna <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>karşılık, 'de destekleyerek veritabanı projesine özgü öğeler ekleyebilirsiniz. **Yeni Öğe Ekle** iletişim kutusuna filtreleme ve öğe ekleme hakkında daha fazla bilgi için bkz. [Add items to the Add New Item dialog box](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>
-- [Projeleri için genellikle kullanılan nesnelerin Catıdlerini](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
+- [Genellikle projeleri genişletmek için kullanılan nesnelerin CATID'leri](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)

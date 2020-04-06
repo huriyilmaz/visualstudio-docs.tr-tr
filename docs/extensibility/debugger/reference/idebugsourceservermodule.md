@@ -1,24 +1,24 @@
 ---
-title: IDebugSourceServerModule | Microsoft Docs
+title: IDebugSourceServerModule | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSourceServerModule interface
 ms.assetid: 38213060-451d-46e6-8b4a-efc123e01a2c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bb686ff492ca836d35b21d54298876314ecb8d5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a2c362bc4a103c707238acfa3b3148f00c0e25be
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321920"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719918"
 ---
 # <a name="idebugsourceservermodule"></a>IDebugSourceServerModule
-PDB dosyasında yer alan kaynak sunucu bilgileri temsil eder.
+PDB dosyasında bulunan kaynak sunucu bilgilerini temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,19 +26,19 @@ PDB dosyasında yer alan kaynak sunucu bilgileri temsil eder.
 IDebugSourceServerModule : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Bu arabirim hata ayıklayıcı motoru tarafından uygulanan ve kullanıcı Arabirimi hata ayıklayıcı tarafından tüketilen.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim hata ayıklama motorları tarafından uygulanır ve hata ayıklama aracı tarafından tüketilir.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugSourceServerModule`.
+ Aşağıdaki tabloda `IDebugSourceServerModule`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetSourceServerData](../../../extensibility/debugger/reference/idebugsourceservermodule-getsourceserverdata.md)|Kaynak sunucu bilgileri alır.|
+|[GetSourceServerData](../../../extensibility/debugger/reference/idebugsourceservermodule-getsourceserverdata.md)|Bir dizi kaynak sunucu bilgisini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Msdbg.h
+ Üstbilgi: Msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll

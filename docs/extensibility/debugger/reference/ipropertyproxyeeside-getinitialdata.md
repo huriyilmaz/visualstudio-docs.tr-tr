@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::GetInitialData | Microsoft Docs
+title: ipropertyproxyeeside::getinitialdata | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide::GetInitialData
 ms.assetid: 36cceb19-2604-4ef9-b42b-5dd30cbe24b1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ada42317b1ddf40882b2ba0820ea4daa97c89ecc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 650e4bc5cb88800ffd7c61693118c3c2081877c9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353429"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714981"
 ---
 # <a name="ipropertyproxyeesidegetinitialdata"></a>IPropertyProxyEESide::GetInitialData
-Bu nesne için ilk veri döndürür.
+Bu nesnenin ilk verilerini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int GetInitialData(
 
 ## <a name="parameters"></a>Parametreler
 `dataOut`\
-[out] Döndürür bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) bu nesnenin ilk veri içeren nesne.
+[çıkış] Bu nesnenin ilk verilerini içeren bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

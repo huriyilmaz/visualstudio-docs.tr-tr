@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::GetInfo | Microsoft Docs
+title: IDebugModule2::GetInfo | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GetInfo method
 - IDebugModule2::GetInfo method
 ms.assetid: de337e66-294f-4ac9-b21e-71fac7418e36
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1fe5060f66c56a033fb0bdcc8ae7dee368d2824e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c68c583702d7def5a7bff3ee40a9b8b2c537bb31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323979"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726955"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 Bu modül hakkında bilgi alır.
@@ -44,16 +44,16 @@ int GetInfo( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[in] Bayraklarının bir birleşimi [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) hangi alanları belirten numaralandırma `pInfo` doldurulması için.
+[içinde] [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) numaralandırmadan hangi alanların dolduruleceğini belirten bayrakların `pInfo` birleşimi.
 
 `pInfo`\
-[out içinde] A [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) modül açıklaması ile doldurulmuş yapısı.
+[içinde, dışarı] Modülün açıklamasıyla doldurulmuş [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) bir yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı görüntülenen modülünün adı içeren **modülleri** penceresi.
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı **Modüller** penceresinde görüntülenen modülün adını içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)

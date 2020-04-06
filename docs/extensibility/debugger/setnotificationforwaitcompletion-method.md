@@ -1,28 +1,28 @@
 ---
-title: SetNotificationForWaitCompletion metodu | Microsoft Docs
+title: SetNotificationForWaitCompletion Yöntemi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - SetNotificationForWaitCompletion method, Task class [.NET Framework debug engines]
 ms.assetid: da149c9a-20f4-4543-a29e-429c8c1d2e19
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5d9bee2579cc3a93f657291551955f0c9b7565b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 226ac41c8e3b7427ac3b9aba7bea08dbb7329d16
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348577"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712867"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion Metodu
-Ayarlar veya TASK_STATE_WAIT_COMPLETION_NOTIFICATION durumu bit temizler.
+TASK_STATE_WAIT_COMPLETION_NOTIFICATION durum bitini ayarlar veya temizler.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (içinde *mscorlib.dll*)
+ **Montaj:** mscorlib *(mscorlib.dll*olarak)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ internal void SetNotificationForWaitCompletion(bool enabled)
 ### <a name="parameters"></a>Parametreler
  `enabled`
 
- `true` bit ayarlamak için; `false` çok unset bit.
+ `true`bit ayarlamak için; `false` biti ayarlamak için.
 
-## <a name="exceptions"></a>Özel Durumlar
+## <a name="exceptions"></a>Özel durumlar
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklayıcı adım bir zaman uyumsuz yöntem gövdesinin dışında yardımcı olmak için bu bit ayarlar. Varsa `enabled` olduğu `true`, yalnızca henüz tamamlanmamış bir görev üzerinde bu yöntem çağrılmalıdır. Zaman `enabled` olduğu `false`, tamamlanan görevler üzerinde bu yöntem çağrılabilir. Ya da bir olay, yalnızca promise stili görevler için kullanılmalıdır.
+ Hata ayıklama, bu biti bir async yöntem gövdesinden dışarı adım yardımcı olmak için ayarlar. `enabled` Ise, `true`bu yöntem yalnızca henüz tamamlanmamış bir görevde çağrılmalıdır. Ne `enabled` `false`zaman, bu yöntem tamamlanan görevlere çağrılabilir. Her iki durumda da, yalnızca söz tarzı görevler için kullanılmalıdır.
 
 ## <a name="requirements"></a>Gereksinimler
 

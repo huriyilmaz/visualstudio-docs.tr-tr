@@ -1,77 +1,77 @@
 ---
-title: MSSCCPRJ. SCC dosya | Microsoft Docs
+title: MSSCCPRJ. SCC Dosyası | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, MSSCCPRJ.SCC file
 - MSSCCPRJ.SCC file
 ms.assetid: 6f2e39d6-b79d-407e-976f-b62a3cedd378
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 983c6aa0a418ec87d521852bd4b0d781c5c90cfa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 89511b7c8b69c5793eceef7d58153dde253a4f47
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344015"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702462"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ. SCC dosyası
-Bir Visual Studio çözüm veya projeyi IDE'yi kullanarak kaynak denetimi altında koyun, IDE iki temel bilgi parçasını alır. Kaynak Denetimi Eklentisi dizeleri biçiminde bilgi gelir. "AuxPath" ve "ProjName" Bu dizeler IDE donuk, ancak bunlar eklenti tarafından sürüm denetimine çözüm veya projeyi bulmak için kullanılırlar. IDE genellikle bu dizeler ilk kez çağırarak alır [SccGetProjPath](../extensibility/sccgetprojpath-function.md), ve ardından bunları gelecekteki çağrılar için çözüm veya proje dosyasında kaydeder [SccOpenProject](../extensibility/sccopenproject-function.md). Bir kullanıcı, çatallar, dallar veya sürüm denetimindeki çözüm ve proje dosyalarını kopyalar çözüm ve proje dosyalarında eklendiğinde, "AuxPath" ve "ProjName" dizeleri otomatik olarak güncelleştirilmez. Çözüm ve proje dosyaları sürüm denetiminde kendi doğru konuma işaret ettiğinden emin olmak için kullanıcıların el ile dizeler güncelleştirmeniz gerekir. Dizeleri donuk yöneliktir olduğundan, bu her zaman nasıl güncelleştirileceğini açık olmayabilir.
+IDE'yi kullanarak bir Visual Studio çözümveya projesini kaynak denetimi altına yerleştirdiğinizde, IDE iki önemli bilgi alır. Bilgiler, dizeleri şeklindeki kaynak denetim eklentisinden gelir. "AuxPath" ve "ProjName" adlarını taşıyan bu dizeleri, IDE'ye opaktır, ancak sürüm denetiminde çözümü veya projeyi bulmak için eklenti tarafından kullanılırlar. IDE genellikle [SccGetProjPath](../extensibility/sccgetprojpath-function.md)çağırarak ilk kez bu dizeleri alır , ve daha sonra [SccOpenProject](../extensibility/sccopenproject-function.md)gelecekteki aramalar için çözüm veya proje dosyasında kaydeder. Çözüm ve proje dosyalarına katıştırıldığında, "AuxPath" ve "ProjName" dizeleri, kullanıcı sürüm denetiminde olan çözümü ve proje dosyalarını dalladığında otomatik olarak güncelleştirilmez. Çözüm ve proje dosyalarının sürüm denetiminde doğru konuma işaret ettiğinden emin olmak için, kullanıcıların dizeleri el ile güncelleştirmeleri gerekir. Dizeleri opak olması gerekiyordu olduğundan, nasıl güncellenmesi gerektiğini her zaman açık olmayabilir.
 
- Kaynak Denetimi Eklentisi "AuxPath" ve "ProjName" dizeleri adlı özel bir dosyaya depolayarak bu sorunu önleyebilirsiniz *MSSCCPRJ.SCC* dosya. Bu sahibi olduğu ve eklenti tarafından tutulan yerel, istemci tarafı bir dosyadır. Bu dosya kaynak denetimi altında hiçbir zaman yerleştirilir ancak kaynak-denetimli dosyaları içeren her dizin eklentisi tarafından oluşturulur. Visual Studio çözüm ve proje dosyaları hangi dosyaların belirlemek için kaynak denetimi eklentisi bir standart veya kullanıcı tarafından sağlanan listesine karşı dosya uzantılarını karşılaştırabilirsiniz. IDE, algıladıktan sonra eklenti destekler *MSSCCPRJ.SCC* dosyası, çözüm ve proje dosyalarına "AuxPath" ve "ProjName" dizelerini katıştırma olmaktan çıkar ve bu dizelerden okuma *MSSCCPRJ.SCC*bunun yerine dosya.
+ Kaynak denetimi eklentisi, "AuxPath" ve "ProjName" dizelerini *MSSCCPR.SCC* dosyası adı verilen özel bir dosyada depolayarak bu sorunu önleyebilir. Eklenti tarafından sahip olunan ve tutulan yerel, istemci tarafı dosyasıdır. Bu dosya hiçbir zaman kaynak denetimi altına yerleştirilmese de, kaynak denetimli dosyalar içeren her dizin için eklenti tarafından oluşturulur. Hangi dosyaların Visual Studio çözümü ve proje dosyaları olduğunu belirlemek için, kaynak denetimi eklentisi dosya uzantılarını standart veya kullanıcı tarafından sağlanan bir listeyle karşılaştırabilir. IDE, bir eklentinin *MSSCCPRJ.SCC* dosyasını desteklediğini algıladıktan sonra, "AuxPath" ve "ProjName" dizelerini çözüm ve proje dosyalarına yerleştirmeyi durdurur ve bunun yerine *MSSCCPRJ.SCC* dosyasından bu dizeleri okur.
 
- Destekleyen bir kaynak denetimi eklentisi *MSSCCPRJ.SCC* dosya, aşağıdaki yönergelere uyması gerekir:
+ *MSSCCPRJ.SCC* dosyasını destekleyen bir kaynak denetim eklentisi aşağıdaki yönergelere uymalıdır:
 
-- Yalnızca bir olabilir *MSSCCPRJ.SCC* her dizin dosyası.
+- Dizin başına yalnızca bir *MSSCCPRJ.SCC* dosyası olabilir.
 
-- Bir *MSSCCPRJ.SCC* dosya içerebilir "AuxPath" ve "ProjName" belirli bir dizinin içindeki kaynak denetimi altında olan birden çok dosya için.
+- Bir *MSSCCPRJ.SCC* dosyası, belirli bir dizini içinde kaynak denetimi altında olan birden çok dosya için "AuxPath" ve "ProjName" içerebilir.
 
-- "AuxPath" dizesini tırnak işaretleri içine olmaması gerekir. Tırnak içine sınırlayıcı olarak sağlamak için kullanılabilir (örneğin, bir çift tırnak boş bir dize belirtmek için kullanılabilir). IDE alanından okurken "AuxPath" dizesi gelen tüm teklifler çıkartır *MSSCCPRJ.SCC* dosya.
+- "AuxPath" dizesi içinde tırnak içermemelidir. Etrafında delimiters olarak tırnak izin verilir (örneğin, çift tırnak bir çift boş bir dize belirtmek için kullanılabilir). IDE, *MSSCCPRJ.SCC* dosyasından okunduğunda "AuxPath" dizesinden tüm tırnakları söker.
 
-- "ProjName" dizesi *MSSCCPRJ. SCC dosya* döndürülen dizenin tam olarak eşleşmelidir `SccGetProjPath` işlevi. İşlev tarafından döndürülen dize tırnak içine dizesinde varsa *MSSCCPRJ.SCC* dosya, tırnak işareti olmalıdır çevresinde ve bunun tersi de geçerlidir.
+- MSSCCPRJ'deki "ProjName" *dizesi. SCC* `SccGetProjPath` dosyası, işlevden döndürülen dizeyle tam olarak eşleşmelidir. İşlev tarafından döndürülen dize etrafında tırnak işaretleri varsa, *MSSCCPRJ.SCC* dosyasındaki dize etrafında tırnak işaretleri olmalıdır ve bunun tersi de vardır.
 
-- Bir *MSSCCPRJ.SCC* dosya oluşturulduğunda veya bir dosya, kaynak denetimi altında yerleştirilmiş her güncelleştirildiğinde.
+- Bir *MSSCCPRJ.SCC* dosyası, bir dosya kaynak denetimi ne zaman yerleştirildiğinde oluşturulur veya güncelleştirilir.
 
-- Varsa bir *MSSCCPRJ.SCC* dosyası silindi, sağlayıcı bu dizine ilgili kaynak denetimi işlemi gerçekleştirir, sonraki açışınızda yeniden oluşturmalıdır.
+- Bir *MSSCCPRJ.SCC* dosyası silinirse, bir sağlayıcı bu dizini ile ilgili bir kaynak denetim işlemi gerçekleştirir sonraki kez yeniden gerekir.
 
-- Bir *MSSCCPRJ.SCC* dosya kesin olarak tanımlanan biçime uymalıdır.
+- Bir *MSSCCPRJ.SCC* dosyası kesinlikle tanımlanan biçimi takip etmelidir.
 
-## <a name="an-illustration-of-the-mssccprjscc-file-format"></a>MSSCCPRJ gösterimi. SCC dosya biçimi
- Bir örnek aşağıdadır *MSSCCPRJ.SCC* (satır numaralarını yalnızca bir kılavuz olarak sağlanır ve dosya gövdesinde dahil edilmemesi gereken) dosya biçimi:
+## <a name="an-illustration-of-the-mssccprjscc-file-format"></a>MSSCCPRJ bir örnek. SCC dosya biçimi
+ Aşağıda *MSSCCPRJ.SCC* dosya biçiminin bir örneği (satır numaraları yalnızca kılavuz olarak sağlanır ve dosya gövdesine dahil edilmemelidir):
 
-- [Satır 1] `SCC = This is a Source Code Control file`
+- [Satır 1]`SCC = This is a Source Code Control file`
 
 - [Satır 2]
 
-- [Satır 3] `[TestApp.sln]`
+- [Satır 3]`[TestApp.sln]`
 
-- [Satır 4] `SCC_Aux_Path = "\\server\vss\"`
+- [Satır 4]`SCC_Aux_Path = "\\server\vss\"`
 
-- [Satır 5] `SCC_Project_Name = "$/TestApp"`
+- [Satır 5]`SCC_Project_Name = "$/TestApp"`
 
 - [Satır 6]
 
-- [Satır 7] `[TestApp.csproj]`
+- [Satır 7]`[TestApp.csproj]`
 
-- [Satır 8] `SCC_Aux_Path = "\\server\vss\"`
+- [Satır 8]`SCC_Aux_Path = "\\server\vss\"`
 
-- [Satır 9] `SCC_Project_Name = "$/TestApp"`
+- [Satır 9]`SCC_Project_Name = "$/TestApp"`
 
- İlk satır, dosyanın amacı bildiren ve bu türdeki tüm dosyalar için imza görevi görür. Bu satır, tam olarak bu tüm gibi görünmelidir *MSSCCPRJ.SCC* dosyaları:
+ İlk satır, dosyanın amacını belirtir ve bu türdeki tüm dosyalar için imza görevi görehizmet eder. Bu satır tam olarak tüm *MSSCCPRJ.SCC* dosyalarında bu şekilde görünmelidir:
 
  `SCC = This is a Source Code Control file`
 
- Aşağıdaki bölümde, dosya adı köşeli ayraç tarafından işaretlenen her bir dosya için ayarları ayrıntıları. Bu bölümde, izlenen her dosya için tekrarlanır. Bu satırı bir dosya adı, yani örneğidir `[TestApp.csproj]`. IDE, aşağıdaki iki satırı bekliyor. Ancak, tanımlanan değerlerden birisini stilini tanımlayın. Değişkenler `SCC_Aux_Path` ve `SCC_Project_Name`.
+ Aşağıdaki bölüm, kare ayraçlarda dosya adı ile işaretlenmiş her dosya için ayarları ayrıntıları. İzlenen her dosya için bu bölüm yinelenir. Bu satır, bir dosya adının bir `[TestApp.csproj]`örneğidir, yani. IDE aşağıdaki iki satırı bekler. Ancak, tanımlanan değerlerin stilini tanımlamaz. Değişkenler ve `SCC_Aux_Path` `SCC_Project_Name`.
 
  `SCC_Aux_Path = "\\server\vss\"`
 
  `SCC_Project_Name = "$/TestApp"`
 
- Bu bölüm için hiçbir bitiş sınırlayıcısı yoktur. Dosyasında bulunan tüm sabit değerleri yanı sıra dosya adını scc.h üstbilgi dosyasında tanımlanmıştır. Daha fazla bilgi için [kaynak denetimi eklentisi bulmak için anahtar olarak kullanılan dizeler](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md).
+ Bu bölümün sonu delimiter yoktur. Dosyanın adı ve dosyada görünen tüm literals, scc.h üstbilgi dosyasında tanımlanır. Daha fazla bilgi için kaynak [denetimi eklentisi bulmak için anahtar olarak kullanılan Dizeleri'ne](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)
-- [Kaynak denetimi eklentisi bulmak için anahtar olarak kullanılan dizeler](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md)
+- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak kontrol eklentisi bulmak için anahtar olarak kullanılan dizeleri](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md)

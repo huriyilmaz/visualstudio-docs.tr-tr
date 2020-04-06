@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FIELDS | Microsoft Docs
+title: MODULE_INFO_FIELDS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_INFO_FIELDS enumeration
 ms.assetid: 8bed85f4-235f-4192-b58f-5fad7a4d7a78
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba419d0b10174e375cd15313fbc0770bf9d8cc0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fa64147738a916d44b6924f193860f74bd10a855
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311383"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714325"
 ---
-# <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
-Hata ayıklama modülü bilgi bayrakları belirtir.
+# <a name="module_info_fields"></a>MODULE_INFO_FIELDS
+Hata ayıklama modülü bilgileri için bayrakları belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -66,59 +66,59 @@ public enum enum_MODULE_INFO_FIELDS { 
 
 ## <a name="fields"></a>Alanlar
  `MIF_NONE`\
- Alanların yapısında başlatma/kullanın.
+ Yapıdaki alanların hiçbirini başlatma/kullanma.
 
  `MIF_NAME`\
- Başlat/kullanım `m_bstrName` alanındaki [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı.
+ `m_bstrName` [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısındaki alanı başlatma/kullanma.
 
  `MIF_URL`\
- Başlat/kullanım `m_bstrUrl` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_bstrUrl` alanı başlatma/kullanma.
 
  `MIF_VERSION`\
- Başlat/kullanım `m_bstrVersion` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_bstrVersion` alanı başlatma/kullanma.
 
  `MIF_DEBUGMESSAGE`\
- Başlat/kullanım `m_bstrDebugMessage` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_bstrDebugMessage` alanı başlatma/kullanma.
 
  `MIF_LOADADDRESS`\
- Başlat/kullanım `m_addrLoadAddress` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_addrLoadAddress` alanı başlatma/kullanma.
 
  `MIF_PREFFEREDADDRESS`\
- Başlat/kullanım `m_addrPreferredLoadAddress` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_addrPreferredLoadAddress` alanı başlatma/kullanma.
 
  `MIF_SIZE`\
- Başlat/kullanım `m_dwSize` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_dwSize` alanı başlatma/kullanma.
 
  `MIF_LOADORDER`\
- Başlat/kullanım `m_dwLoadOrder` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_dwLoadOrder` alanı başlatma/kullanma.
 
  `MIF_TIMESTAMP`\
- Başlat/kullanım `m_TimeStamp` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_TimeStamp` alanı başlatma/kullanma.
 
  `MIF_URLSYMBOLLOCATION`\
- Başlat/kullanım `m_bstrUrlSymbolLocation` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_bstrUrlSymbolLocation` alanı başlatma/kullanma.
 
  `MIF_FLAGS`\
- Başlat/kullanım `m_dwModuleFlags` alanındaki `MODULE_INFO` yapısı.
+ `MODULE_INFO` Yapıdaki `m_dwModuleFlags` alanı başlatma/kullanma.
 
  `MIF_ALLFIELDS`\
- Tüm alanlarda başlatma/kullanım `MODULE_INFO` yapısı.
+ Yapıdaki tüm alanların başlatılması/kullanılması. `MODULE_INFO`
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerleri bir bağımsız değişken olarak geçirilen [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) hangi alanları göstermek için yöntemi [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı olan başlatılacak.
+ Bu değerler, [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısının hangi alanlarının başharfe başlatılanolacağını belirtmek için [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) yöntemine bir bağımsız değişken olarak aktarılır.
 
- Bu değerleri de kullanılan `MODULE_INFO` yapısı hangi alanların kullanılan ve geçerli olduğunu belirtmek için.
+ Bu değerler `MODULE_INFO` yapıda hangi alanların kullanıldığını ve geçerli olduğunu belirtmek için de kullanılır.
 
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.
+ Bu bayraklar biraz ile `OR`birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)
 - [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

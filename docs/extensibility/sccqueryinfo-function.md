@@ -1,5 +1,5 @@
 ---
-title: SccQueryInfo Işlevi | Microsoft Docs
+title: SccQueryInfo Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccQueryInfo function
 ms.assetid: 3973d336-a9b7-41a2-a4e6-bb8184a96aaf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5807eb6b695e140350696436a8bba351687f4a24
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1efae18f15588f4dacf3409ea95e30af05397c6e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720826"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700476"
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo İşlevi
-Bu işlev, kaynak denetimi altında bir dizi seçili dosya için durum bilgilerini edinir.
+Bu işlev, kaynak denetimi altında seçili dosya kümesi için durum bilgilerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,44 +36,44 @@ SCCRTN SccQueryInfo(
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-'ndaki Kaynak denetimi eklentisi bağlam yapısı.
+[içinde] Kaynak denetimi eklentisi bağlam yapısı.
 
- Nkarşıya
+ nDosyalar
 
-'ndaki @No__t_0 dizisinde belirtilen dosya sayısı ve `lpStatus` dizisinin uzunluğu.
+[içinde] `lpFileNames` Dizide belirtilen dosya sayısı ve `lpStatus` dizinin uzunluğu.
 
- lpDosyaAdı
+ lpFileNames
 
-'ndaki Sorgulanacak dosyaların bir dizi adı.
+[içinde] Sorgulanacak bir dizi dosya adı.
 
- lpStatus
+ lpDurum
 
-[in, out] Kaynak denetimi eklentisinin her dosya için durum bayraklarını döndürdüğü bir dizi. Daha fazla bilgi için bkz. [dosya durum kodu](../extensibility/file-status-code-enumerator.md).
+[içinde, dışarı] Kaynak denetimi eklentisinin her dosya için durum bayraklarını döndürdettiği bir dizi. Daha fazla bilgi için [Dosya Durum Kodu'na](../extensibility/file-status-code-enumerator.md)bakın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Sorgu başarılı oldu.|
-|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından kaynaklanan kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
-|SCC_E_PROJNOTOPEN|Proje, kaynak denetimi altında açık değil.|
-|SCC_E_NONSPECIFICERROR|Özel olmayan hata.|
+|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişimde büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
+|SCC_E_PROJNOTOPEN|Proje kaynak denetimi altında açık değil.|
+|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 boş bir dize ise, şu anda güncelleştirilecek durum bilgisi yoktur. Aksi takdirde, durum bilgisinin değiştiği dosyanın tam yolu adıdır.
+ Boş `lpFileName` bir dize ise, şu anda güncelleştirilen durum bilgisi yok. Aksi takdirde, durum bilgilerinin değişebileceği dosyanın tam yol adıdır.
 
- Dönüş dizisi `SCC_STATUS_xxxx` bitlerin bir bit maskesi olabilir. Daha fazla bilgi için bkz. [dosya durum kodu](../extensibility/file-status-code-enumerator.md). Kaynak denetim sistemi, tüm bit türlerini desteklemeyebilir. Örneğin, `SCC_STATUS_OUTOFDATE` sunulmadığı takdirde, bit yalnızca ayarlı değildir.
+ İade dizisi `SCC_STATUS_xxxx` bit maskesi olabilir. Daha fazla bilgi için [Dosya Durum Kodu'na](../extensibility/file-status-code-enumerator.md)bakın. Kaynak denetim sistemi tüm bit türlerini desteklemeyebilir. Örneğin, teklif `SCC_STATUS_OUTOFDATE` edilmezse, bit ayarlanmaz.
 
- Dosyaları kullanıma almak için bu işlevi kullanırken aşağıdaki `MSSCCI` durum gereksinimlerine göz atın:
+ Dosyaları kullanıma almak için bu işlevi `MSSCCI` kullanırken aşağıdaki durum gereksinimlerine dikkat edin:
 
-- `SCC_STATUS_OUTBYUSER`, geçerli kullanıcı dosyayı kullanıma almışsa ayarlanır.
+- `SCC_STATUS_OUTBYUSER`geçerli kullanıcı dosyayı kullanıma aldığında ayarlanır.
 
-- `SCC_STATUS_OUTBYUSER` ayarlanmadığı müddetçe `SCC_STATUS_CHECKEDOUT` ayarlanamaz.
+- `SCC_STATUS_CHECKEDOUT`ayarlmadığı `SCC_STATUS_OUTBYUSER` sürece ayarlanamaz.
 
-- `SCC_STATUS_CHECKEDOUT` yalnızca dosya belirtilen çalışma dizinine teslim edildiğinde ayarlanır.
+- `SCC_STATUS_CHECKEDOUT`yalnızca dosya belirlenen çalışma dizinine kullanıma alındığunda ayarlanır.
 
-- Dosya geçerli kullanıcı tarafından, çalışma dizininden farklı bir dizine teslim edildiğinde `SCC_STATUS_OUTBYUSER` ayarlanır ancak `SCC_STATUS_CHECKEDOUT` değildir.
+- Dosya, geçerli kullanıcı tarafından çalışma dizininin dışındaki bir dizine ayrılmışsa, `SCC_STATUS_OUTBYUSER` `SCC_STATUS_CHECKEDOUT` ayarlanır, ancak kullanıma alınmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

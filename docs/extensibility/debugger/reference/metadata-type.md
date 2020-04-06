@@ -1,5 +1,5 @@
 ---
-title: METADATA_TYPE | Microsoft Docs
+title: METADATA_TYPE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_TYPE structure
 ms.assetid: 2d8b78f6-0aef-4d79-809a-cff9b2c24659
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3d608e4e9bf9987eb1dd430a9e22660c1da6a90a
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: afe5ea128775c7be0e48035ab4c7e7d370c9d233
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746692"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714297"
 ---
-# <a name="metadatatype"></a>METADATA_TYPE
-Bu yapı meta verilerinden harcanan alan türü hakkında bilgileri belirtir.
+# <a name="metadata_type"></a>METADATA_TYPE
+Bu yapı, meta verilerden alınan bir alan türü hakkında bilgi belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,27 +45,27 @@ public struct METADATA_TYPE {
 
 ## <a name="parameters"></a>Parametreler
  `ulAppDomainID`\
- Simgenin içinden gelen uygulama kimliği. Bu, uygulamanın bir örneğini benzersiz şekilde tanımlamak için kullanılır.
+ Sembolün geldiği uygulamanın kimliği. Bu, uygulamanın bir örneğini benzersiz olarak tanımlamak için kullanılır.
 
  `guidModule`\
- Bu alan içeren modül GUID.
+ Bu alanı içeren modülün GUID'i.
 
  `tokClass`\
- Bu tür meta veri belirteci kimliği.
+ Bu tür meta veri belirteç kimliği.
 
- [C++] `_mdToken` olduğu bir `typedef` 32-bit `int`.
+ [C++] `_mdToken` 32-bit `typedef` `int`için bir .
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı birleşimde bir parçası olarak görünür [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) ne zaman yapısı `dwKind` alanını `TYPE_INFO` yapısı ayarlandığında `TYPE_KIND_METADATA` (arasında bir değer [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) sabit listesi).
+ Bu yapı, `dwKind` `TYPE_INFO` yapıalanı ayarlandığında `TYPE_KIND_METADATA` [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) yapısında birliğin bir parçası olarak görünür [(dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmadan bir değer).
 
- `tokClass` Türü benzersiz olarak tanımlayan bir meta veri belirteci değerdir. Meta veri belirteci kimliği üst bitlerini yorumlama hakkında daha fazla bilgi için bkz: `CorTokenType` .NET Framework SDK corhdr.h dosyasında sabit listesi.
+ Değer, `tokClass` bir türü benzersiz olarak tanımlayan bir meta veri belirtecidir. Meta veri belirteç kimliğinin üst bitlerinin nasıl yorumlanacağı `CorTokenType` na ilişkin ayrıntılar için ,.NET Framework SDK'daki corhdr.h dosyasındaki numaralandırmaya bakın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: sh.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

@@ -1,30 +1,30 @@
 ---
-title: Sonlandırma ve ayırma | Microsoft Docs
+title: Fesih ve Ayırma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - programs, termination events
 - debug engines, detaching from programs
 ms.assetid: 268c1e51-6363-45d1-964c-1ab99bdfa4f9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8aafb94e0a07462d93cc77a34f7199f61f944d0f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0b88255d618ce42fa55d878f192d31523ba3f83b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333721"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712492"
 ---
-# <a name="termination-and-detaching"></a>Sonlandırma ve ayırma
-Aşağıdaki bölümde, normal sonlandırması açıklanmaktadır.
+# <a name="termination-and-detaching"></a>Fesih ve ayırma
+Aşağıdaki bölümde normal sonlandırma açıklanmaktadır.
 
 ## <a name="discussion"></a>Tartışma
- Sonra [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) veya [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) arabirimi devam eder, hiçbir kesme noktaları, özel durumlar, çalışma zamanı hataları veya uygulamada hata ayıklaması için sonsuz döngüler varsa hata ayıklanan programa tamamlanana kadar çalışacaktır. Normal sonlandırması işlemidir.
+ [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) veya [IDebugEntryPoint2](../../extensibility/debugger/reference/idebugentrypointevent2.md) arabirimi devam ettikten sonra, uygulamada kesme noktaları, özel durumlar, çalışma zamanı hataları veya sonsuz döngüler yoksa, debugged olan program tamamlanmak üzere çalışır. Bu işlem normal sonlandırmadır.
 
- Göndermeniz gerekir bir [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) normal sonlandırması uygulamak için. Normal sonlandırması gerektiren çalışan [IDebugProgramDestroyEvent2::GetExitCode](../../extensibility/debugger/reference/idebugprogramdestroyevent2-getexitcode.md) yöntemi.
+ Normal sonlandırma uygulamak için bir [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) göndermeniz gerekir. Normal sonlandırma [iDebugProgramDestroyEvent2 çalıştırılması nı gerektirir::GetExitCode](../../extensibility/debugger/reference/idebugprogramdestroyevent2-getexitcode.md) yöntemi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bir özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md)
+- [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md)

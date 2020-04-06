@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetName | Microsoft Docs
+title: IDebugProcess2::GetName | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess2::GetName
 ms.assetid: a2f66ab5-53e5-4cdc-a1b5-3b8afa8ee646
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d869f041bee3d187e4cd980328819505e667114e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 68026ed56aabd08f93588277c8d2b44e13604974
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339029"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723972"
 ---
 # <a name="idebugprocess2getname"></a>IDebugProcess2::GetName
-Başlık, kolay ad veya işlemin dosya adını alır.
+İşlemin başlığını, dostu adını veya dosya adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetName( 
 
 ## <a name="parameters"></a>Parametreler
 `gnType`\
-[in] Bir değer [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) adı döndürülecek türünü belirten sabit listesi.
+[içinde] [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) numaralandırmadan döndürülecek ad türünü belirten bir değer.
 
 `pbstrName`\
-[out] İşlemin adını döndürür.
+[çıkış] İşlemin adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

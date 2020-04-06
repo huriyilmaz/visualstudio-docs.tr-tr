@@ -1,5 +1,5 @@
 ---
-title: IEnumCodePaths2 | Microsoft Docs
+title: IEnumCodePaths2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumCodePaths2 interface
 ms.assetid: 17ec9f9e-dc06-4532-b5db-da52efcc8630
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5ad1f7a3f954116350e8accbdc9db02d0ac920d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 89c8cac9a7c2baa020002fe852330639d7081982
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319603"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717723"
 ---
 # <a name="ienumcodepaths2"></a>IEnumCodePaths2
-Bu arabirim, kod yolları bir listesini temsil eder.
+Bu arabirim kod yollarının listesini temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,32 @@ Bu arabirim, kod yolları bir listesini temsil eder.
 IEnumCodePaths2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE) kod yolları bir listesini göstermek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) kod yollarının listesini temsil etmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çağrı [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) bu arabirimi elde edilir.
+ Bu arabirimi elde etmek için [EnumCodePaths'i](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IEnumCodePaths2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IEnumCodePaths2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumcodepaths2-next.md)|Belirtilen bir kod yolları bir numaralandırma sıralı sayısını alır.|
-|[Skip](../../../extensibility/debugger/reference/ienumcodepaths2-skip.md)|Belirtilen sayıda kod yolları bir numaralandırma sıralı atlar.|
-|[Reset](../../../extensibility/debugger/reference/ienumcodepaths2-reset.md)|Bir numaralandırma sıralı başlangıç durumuna sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumcodepaths2-getcount.md)|Kod yolu sayısını bir numaralandırıcı alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumcodepaths2-next.md)|Numaralandırma sırasında belirli sayıda kod yolu alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumcodepaths2-skip.md)|Numaralandırma sırasında belirli sayıda kod yolunu atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumcodepaths2-reset.md)|Numaralandırma sırasını başa sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Geçerli numaralandırma durumuyla aynı numaralandırma durumunu içeren bir numaralandırma oluşturucu oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumcodepaths2-getcount.md)|Bir numaralandırmada kod yollarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir kod yolu bir programda bir dal noktası veya işlev çağrısını temsil eder. Kod yolları bir listesi üzerinden, kod yürütme alınan yolu temsil eder.
+ Kod yolu, programdaki bir dal noktasını veya işlev çağrısını temsil eder. Kod yollarının listesi, kod yürütmenin geçtiği yolu temsil eder.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

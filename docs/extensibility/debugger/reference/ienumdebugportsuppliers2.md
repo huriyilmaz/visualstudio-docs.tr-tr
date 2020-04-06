@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPortSuppliers2 | Microsoft Docs
+title: IEnumDebugPortSuppliers2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugPortSuppliers2
 ms.assetid: cd0a73dc-dd25-46fd-8c4f-5b011501afeb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39d9d9462fe1951f01927b9180fa8a99aee535be
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: de0bfc5b387df9b347e4a58d97601a5e1e70f1a4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326386"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715942"
 ---
 # <a name="ienumdebugportsuppliers2"></a>IEnumDebugPortSuppliers2
-Bu arabirim, bağlantı noktası sağlayıcıları numaralandırır.
+Bu arayüz liman tedarikçilerini taklit eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,32 @@ Bu arabirim, bağlantı noktası sağlayıcıları numaralandırır.
 IEnumDebugPortSuppliers2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Visual Studio, bağlantı noktası sağlayıcıları listesini temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Visual Studio, liman tedarikçileri listesini temsil etmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çağrı [EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) bağlantı noktası sağlayıcıları listesi elde etmek için.
+ Liman tedarikçilerinin listesini almak için [EnumPortSuppliers'i](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IEnumDebugPortSuppliers2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IEnumDebugPortSuppliers2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-next.md)|Belirtilen bir bağlantı noktası sağlayıcıları bir numaralandırma sıralı sayısını alır.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-skip.md)|Bağlantı noktası sağlayıcıları bir numaralandırma dizisinde belirtilen sayıda atlar.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-reset.md)|Bir numaralandırma sıralı başlangıç durumuna sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-clone.md)|Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-getcount.md)|Bağlantı noktası sağlayıcıları sayısını bir numaralandırıcı alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-next.md)|Numaralandırma sırasında belirli sayıda bağlantı noktası tedarikçisi alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-skip.md)|Numaralandırma sırasında belirli sayıda bağlantı noktası tedarikçisiatlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-reset.md)|Numaralandırma sırasını başa sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-clone.md)|Geçerli numaralandırma durumuyla aynı numaralandırma durumunu içeren bir numaralandırma oluşturucu oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-getcount.md)|Bir numaralandırma da liman tedarikçilerinin sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklama altyapısı, bu arabirimi almak genellikle gerekmez.
+ Hata ayıklama altyapısının genellikle bu arabirimi elde etmesi gerekmez.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

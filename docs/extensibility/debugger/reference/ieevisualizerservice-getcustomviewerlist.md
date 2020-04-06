@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetCustomViewerList | Microsoft Docs
+title: IEEVisualizerService::GetCustomViewerList | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerService::GetCustomViewerList method
 ms.assetid: 249d26ca-914f-43af-a400-8162477223f4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4fa71a731843f1deed1cfe9a464cc4ab716a8a43
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f3808ad6fb511270ee3825601c476f10a8b77124
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350162"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718022"
 ---
 # <a name="ieevisualizerservicegetcustomviewerlist"></a>IEEVisualizerService::GetCustomViewerList
-Bu yöntem, bu hizmet bildiği tür görselleştiricileri listesini döndürür.
+Bu yöntem, bu hizmetin bildiği tür görüntüleyicilerin listesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,24 +47,24 @@ int GetCustomViewerList(
 
 ## <a name="parameters"></a>Parametreler
 `celtSkip`\
-[in] Görselleştiriciler atlamayı için sayısı.
+[içinde] Atlayacak görüntüleyici sayısı.
 
 `celRequested`\
-[in] Alınacak görselleştiriciler sayısı (Ayrıca boyutunu belirtir `rgViewers` dizisi).
+[içinde] Alınacak görüntüleyici sayısı `rgViewers` (dizinin boyutunu da belirtir).
 
 `rgViewers`\
-[out içinde] Dizi [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları doldurulmalıdır.
+[içinde, dışarı] Doldurulacak [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları dizisi.
 
 `pceltFetched`\
-[out] Gerçekte alınan görselleştiriciler sayısı.
+[çıkış] Görüntüleyicilerin sayısı aslında geri alındı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) istek için bu yöntem için tür görselleştiricileri desteğini bir parçası olarak geçirir. İfade değerlendirici de aynı türü için özel görüntüleyiciler sağlarsa, uygun şekilde doldurulmuş genişletme ekleyebilir [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları için bu özel görüntüleyiciler listesi. Emin olun [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) bu ek görüntüleyiciler yansıtır.
+- [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) türü görselleştiriciler için destek bir parçası olarak bu yönteme istek geçer. İfade değerlendiricisi de aynı tür için özel görüntüleyenler sağlıyorsa, listeye bu özel görüntüleyenler için uygun şekilde doldurulmuş [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları ekleyebilir. [GetCustomViewerCount'ın](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) bu ek görüntüleyiciler yansıttığından emin olun.
 
- Bkz: [tür görselleştiricisi ve özel Görüntüleyici](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) görselleştiriciler ve görüntüleyiciler arasındaki farklılıklarla ilgili ayrıntılar için.
+ Görselleştiriciler ve görüntüleyenler arasındaki farklar hakkında ayrıntılar için [Görselleştirici Yazın ve Özel Görüntüleyici'ye](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::WatchForProviderEvents | Microsoft Docs
+title: IDebugProgramProvider2::WatchForProviderEvents | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramProvider2::WatchForProviderEvents
 ms.assetid: 2eb93653-b5fb-45b6-b136-56008c5d25ef
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: eb0968f96300ab62e4b4ee4b34b3e7f574f4b0fc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a48e082556cf96a35ed83afd5008d3240e600b1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343440"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721754"
 ---
 # <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
-Bağlantı noktası olaylarını almak işlem sağlar.
+İşlemin bağlantı noktası olaylarıhakkında bilgilendirilmesini sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,38 +51,38 @@ int WatchForProviderEvents(
 
 ## <a name="parameters"></a>Parametreler
 `Flags`\
-[in] Bayraklarının bir birleşimi [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) sabit listesi. Bu çağrı için tipik aşağıdaki bayraklar:
+[içinde] [numaralandırma PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) gelen bayrakların bir kombinasyonu. Aşağıdaki bayraklar bu çağrı için tipiktir:
 
-|Bayrağı|Açıklama|
+|Bayrak|Açıklama|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|Çağıran uzak makinede çalışıyor.|
-|`PFLAG_DEBUGGEE`|Arayan şu anda hata ayıklaması (her düğüm için taşıma hakkında ek bilgi döndürülür).|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Arayan bağlı, ancak hata ayıklayıcı tarafından başlatılan değil.|
-|`PFLAG_REASON_WATCH`|Arayan için olayları izlemek istiyor. Bu bayrak ayarlanmazsa. Daha sonra geri çağırma olay kaldırılır ve arayanın artık bildirimleri alır.|
+|`PFLAG_REMOTE_PORT`|Arayan uzak makinede çalışıyor.|
+|`PFLAG_DEBUGGEE`|Arayan şu anda debugged ediliyor (marshalling hakkında ek bilgiler her düğüm için döndürülür).|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Arayan, hata ayıklama tarafından başlatıldığı ancak başlatılmamasA da iliştirilmiş.|
+|`PFLAG_REASON_WATCH`|Arayan olayları izlemek istiyor. Bu bayrak ayarlanmadıysa. sonra geri arama olayı kaldırılır ve arayan artık bildirimleri almaz.|
 
 `pPort`\
-[in] Çağırma işlemi bağlantı noktası çalışıyor.
+[içinde] Arama işleminin devam eden bağlantı noktası.
 
 `processId`\
-[in] Bir [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) programını içeren işlemin Kimliğini söz konusu tutan yapı.
+[içinde] Söz konusu programı içeren işlemin kimliğini tutan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) bir yapı.
 
 `EngineFilter`\
-[in] Hata ayıklama altyapısı işlemle ilişkili GUID'leri dizisi.
+[içinde] İşlemle ilişkili hata ayıklama motorlarının bir dizi GUID'si.
 
 `guidLaunchingEngine`\
-[in] Bu işlemi (varsa) her hata ayıklama altyapısı GUİD'si.
+[içinde] Bu işlemi başlatan hata ayıklama motorunun GUID'i (varsa).
 
 `pEventCallback`\
-[in] Bir [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) olay bildirimleri alan bir nesne.
+[içinde] Olay bildirimlerini alan bir [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin önceki bir çağrı ile oluşturulmuş bir olay işleyicisi kaldırmak bir çağıranın istediği zaman, devre dışı bırakır ancak ilk kez yaptığınız gibi çağıran aynı parametrelerini geçirir `PFLAG_REASON_WATCH` bayrağı.
+ Bir arayan, bu yönteme önceki bir çağrıyla kurulmuş bir olay işleyicisini kaldırmak istediğinde, arayan ilk kez `PFLAG_REASON_WATCH` yaptığı gibi aynı parametreleri geçirir ancak bayrağı bırakır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugEngine** gösteren nesne [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimi.
+ Aşağıdaki örnek, [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimini ortaya çıkaran bir **CDebugEngine** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CDebugEngine::WatchForProviderEvents(

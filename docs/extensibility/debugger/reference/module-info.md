@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO | Microsoft Docs
+title: MODULE_INFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_INFO structure
 ms.assetid: f2e06180-1ab3-4eb5-a428-7994cceb61b6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: db67710fd7ee71cddf1e7dbee030cb208a1de86c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59ab4d0bb2a7aaa4b08f616ea0a99be85b521bb0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339117"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714307"
 ---
-# <a name="moduleinfo"></a>MODULE_INFO
-Belirli bir modülün (DLL, EXE veya derleme) açıklar.
+# <a name="module_info"></a>MODULE_INFO
+Belirli bir modülü (DLL, EXE veya montaj) açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -63,7 +63,7 @@ public struct MODULE_INFO { 
 
 ## <a name="members"></a>Üyeler
  `dwValidFields`\
- Bayraklarının bir birleşimi [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) hangi alanların doldurulmuş belirten sabit listesi.
+ Hangi alanların [doldurulduğuna](../../../extensibility/debugger/reference/module-info-fields.md) MODULE_INFO_FIELDS numaralandırmadan gelen bayrakların birleşimi.
 
  `m_bstrName`\
  Modül adı.
@@ -72,43 +72,43 @@ public struct MODULE_INFO { 
  Modül URL'si.
 
  `m_bstrVersion`\
- Modül sürümü.
+ Modül versiyonu.
 
  `m_bstrDebugMessage`\
- İsteğe bağlı bir ileti modülü hakkında Örneğin, "sembolleri yüklenemiyor."
+ Modül hakkında isteğe bağlı bir ileti, örneğin, "Semboller yüklenemez."
 
  `m_addrLoadAddress`\
- Modül yükleme adresi.
+ Modül yük adresi.
 
  `m_addrPreferredLoadAddress`\
- Modül tercih edilen yükleme adresi.
+ Modülün tercih edilen yük adresi.
 
  `m_dwSize`\
  Modül boyutu.
 
  `m_dwLoadOrder`\
- Modül yükleme sırası.
+ Modül yük sırası.
 
  `m_TimeStamp`\
- Sembol dosyası en son değiştirildiği zamanı.
+ Sembol dosyasının en son değiştirilme zamanı.
 
  `m_bstrUrlSymbolLocation`\
- Sembol dosyası konumu (örneğin, ".\\") modülü belirtilmiş. Bir modül için semboller bulmak için bir başlangıç konumu olarak kullanılır.
+ Sembol dosyasının konumu (örneğin, ".\\") modülde belirtilir. Bir modül için sembolleri bulmak için başlangıç konumu olarak kullanılır.
 
  `m_dwModuleFlags`\
- Bayraklarının bir birleşimi [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) modülü açıklayan sabit listesi.
+ Modülü açıklayan [numaralandırma MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) gelen bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı geçirilir [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) yöntemi burada da doldurulur.
+ Bu yapı doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) yöntemine aktarılır.
 
- Bu yapı, listelenen her bir modülü karşılık gelen **modülleri** penceresi.
+ Bu **yapı, Modüller** penceresinde listelenen her modüle karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

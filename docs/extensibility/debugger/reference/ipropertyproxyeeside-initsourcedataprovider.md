@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::InitSourceDataProvider | Microsoft Docs
+title: IPropertyProxyEESide::InitSourceDataProvider | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide::InitSourceDataProvider
 ms.assetid: 5156f593-5052-4e3a-9d02-081916fb342d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 725ac07c85dd31edaf97200a7a8668ff3efd9ab9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f14f24836beb1d69a15149a56a2817ebf14eff55
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329519"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714905"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
-Bu nesne için kaynak verilerini başlatır ve ilk veri içeren bir nesne döndürür.
+Bu nesnenin kaynak verilerini başolarak karşılar ve ilk verileri içeren bir nesneyi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int InitSourceDataProvider(
 
 ## <a name="parameters"></a>Parametreler
 `dataOut`\
-[out] Döndürür bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi
+[çıkış] Bir [IEEDataStorage nesnesi](../../../extensibility/debugger/reference/ieedatastorage.md) döndürür
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem ne olursa olsun, dönebilmeniz nesneyi başlatmak gerekli olan mu bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnenin veri çubuğunda arabirimi. Bu nesnenin veri görüntülenebilir ve izin verilirse, bir tür görselleştiricisi tarafından değiştirilen sağlar.
+ Bu yöntem, nesnenin verilerinde bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) arabirimi döndürebilmek için bir nesneyi başlatmaiçin ne gerekiyorsa yapar. Bu, nesnenin verilerinin görüntülenmesini ve izin verildiği takdirde bir tür görselleştiricisi tarafından değiştirilmesini sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

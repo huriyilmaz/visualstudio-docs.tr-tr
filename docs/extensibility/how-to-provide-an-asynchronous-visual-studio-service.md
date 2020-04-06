@@ -1,32 +1,32 @@
 ---
-title: 'Nasıl yapılır: zaman uyumsuz Visual Studio hizmeti sağlama | Microsoft Docs'
+title: 'Nasıl: Bir Asynchronous Visual Studio Service | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d486aac8e990fef6b139bca989a51d74146ecb67
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 65362e465beec5465903083beca069104a48166b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826412"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710763"
 ---
-# <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>Nasıl yapılır: zaman uyumsuz bir Visual Studio hizmeti sağlama
-UI iş parçacığını engellemeden bir hizmet elde etmek istiyorsanız, zaman uyumsuz bir hizmet oluşturma ve arka plan iş parçacığında paketi gerekir. Bu amaçla, bir <xref:Microsoft.VisualStudio.Shell.Package>yerine bir <xref:Microsoft.VisualStudio.Shell.AsyncPackage> kullanabilir ve hizmeti zaman uyumsuz paketin özel zaman uyumsuz yöntemleriyle birlikte ekleyebilirsiniz.
+# <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>Nasıl: Bir eşzamanlı Visual Studio hizmeti sağlayın
+Kullanıcı Giçin iş parçacığı engellemeden bir hizmet almak istiyorsanız, bir eşzamanlı hizmet oluşturmalı ve paketi bir arka plan iş parçacığına yüklemelisiniz. Bu amaçla bir <xref:Microsoft.VisualStudio.Shell.AsyncPackage> <xref:Microsoft.VisualStudio.Shell.Package>yerine kullanabilirsiniz , ve asynchronous paketinözel asynchronous yöntemleri ile hizmet ekleyebilirsiniz.
 
- Zaman uyumlu Visual Studio hizmetleri sağlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: hizmet sağlama](../extensibility/how-to-provide-a-service.md).
+ Eşzamanlı Visual Studio hizmetleri sağlama hakkında daha fazla bilgi için [bkz.](../extensibility/how-to-provide-a-service.md)
 
-## <a name="implement-an-asynchronous-service"></a>Zaman uyumsuz hizmet uygulama
+## <a name="implement-an-asynchronous-service"></a>Eşzamanlı bir hizmet uygulama
 
-1. **Visual C#**  > **Extensiblity** > **VSIX projesi**) bir VSIX projesi oluşturun (**Dosya** > **Yeni** > **projesi** > . Projeyi adlandırın **TestAsync**.
+1. Bir VSIX projesi oluşturun (**Dosya** > **Yeni** > **Proje** > **Görsel C#** > **Genişletilebilirlik** > **VSIX Projesi**). Proje **TestAsync**adı .
 
-2. Bir VSPackage'ı projeye ekleyin. **Çözüm Gezgini** proje düğümünü seçin ve > **yeni öğe** **Ekle** >  **C# görsel öğeler** > **genişletilebilirlik** > **Visual Studio paketi**' ne tıklayın. Bu dosya adı *TestAsyncPackage.cs*.
+2. Projeye bir VSPackage ekleyin. **Çözüm Gezgini'ndeki** proje düğümünü seçin ve**Yeni öğe** > **Görsel C# Öğeleri** > **Genişletilebilirlik** > **Görsel Stüdyo Paketi'ni** **tıklatın.** >  Bu dosyayı *TestAsyncPackage.cs.*
 
-3. *TestAsyncPackage.cs*' de, paketi `Package`yerine `AsyncPackage` devralacak şekilde değiştirin:
+3. *TestAsyncPackage.cs*olarak, yerine devralma `AsyncPackage` paketi `Package`değiştirin:
 
     ```csharp
     public sealed class TestAsyncPackage : AsyncPackage
@@ -34,15 +34,15 @@ UI iş parçacığını engellemeden bir hizmet elde etmek istiyorsanız, zaman 
 
 4. Bir hizmeti uygulamak için üç tür oluşturmanız gerekir:
 
-    - Hizmeti tanımlayan arabirim. Bu arabirimlerin birçoğu boştur, diğer bir deyişle, yalnızca hizmeti sorgulamak için kullanılan hiçbir yöntemi yoktur.
+    - Hizmeti tanımlayan bir arabirim. Bu arabirimlerin çoğu boştur, diğer bir süre önce yalnızca hizmeti sorgulamak için kullanıldıkları için yöntemleri yoktur.
 
-    - Hizmet arabirimi açıklayan bir arabirim. Bu arabirim, uygulanacak yöntemleri içerir.
+    - Hizmet arabirimini açıklayan bir arabirim. Bu arabirim, uygulanacak yöntemleri içerir.
 
-    - Hem hizmet hem de hizmet arabirimi uygulayan bir sınıf.
+    - Hem hizmet hem de hizmet arabirimini uygulayan bir sınıf.
 
-5. Aşağıdaki örnek, üç tür çok basit bir uygulamasını gösterir. Hizmet sınıfının oluşturucusu, hizmet sağlayıcısı ayarlamanız gerekir. Bu örnekte, hizmeti yalnızca paket kodu dosyasına ekleyeceğiz.
+5. Aşağıdaki örnek, üç tür çok temel bir uygulama gösterir. Hizmet sınıfının oluşturucusu servis sağlayıcıyı ayarlamalıdır. Bu örnekte, hizmeti paket kodu dosyasına eklememiz daha caizdir.
 
-6. Aşağıdaki using yönergelerini paket dosyasına ekleyin:
+6. Paket dosyasına yönergeleri kullanarak aşağıdakileri ekleyin:
 
     ```csharp
     using System.Threading;
@@ -54,7 +54,7 @@ UI iş parçacığını engellemeden bir hizmet elde etmek istiyorsanız, zaman 
     using Task = System.Threading.Tasks.Task;
     ```
 
-7. Zaman uyumsuz hizmet uygulamasını burada bulabilirsiniz. Zaman uyumlu bir hizmet sağlayıcısı yerine zaman uyumsuz bir hizmet sağlayıcısı oluşturucuda ayarlanacak gerektiğini unutmayın:
+7. İşte asynchronous hizmet uygulaması. Oluşturucudaki senkron servis sağlayıcısı yerine eşzamanlı servis sağlayıcısını ayarlamanız gerektiğini unutmayın:
 
     ```csharp
     public class TextWriterService : STextWriterService, ITextWriterService
@@ -100,14 +100,14 @@ UI iş parçacığını engellemeden bir hizmet elde etmek istiyorsanız, zaman 
     }
     ```
 
-## <a name="register-a-service"></a>Hizmet kaydetme
- Bir hizmeti kaydetmek için ekleme <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> hizmeti sağlayan paket. Zaman uyumlu bir hizmeti kaydetmeye farklı olarak, hem paket hem de hizmetin zaman uyumsuz yüklemeyi desteklediğinden emin olmanız gerekir:
+## <a name="register-a-service"></a>Bir hizmeti kaydetme
+ Bir hizmeti kaydetmek için, hizmeti sağlayan pakete ekleyin. <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> Senkron bir hizmeti kaydetmekiçin farklı olarak, hem paket hem de hizmetin async yüklemeyi desteklediğinden emin olmanız gerekir:
 
-- PackageRegistrationAttribute hakkında daha fazla bilgi Için, paketin zaman uyumsuz olarak başlatılabilmesi için <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> **Allowsbackgroundyüklenmekte = true** alanını eklemeniz gerekir, bkz. [VSPackages kaydetme ve kaydını kaldırma](../extensibility/registering-and-unregistering-vspackages.md).
+- Paketin eşsenkronize olarak başlatılmasını sağlamak <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> için **AllowsBackgroundLoading = true** field eklemeniz gerekir PackageRegistrationAttribute hakkında daha fazla bilgi için, [Bkz. Kayıt ve kayıt dışı VSPackages](../extensibility/registering-and-unregistering-vspackages.md).
 
-- Hizmet örneğinin zaman uyumsuz olarak başlatılabilmesi için, <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> **ısasyncqueryable = true** alanını eklemeniz gerekir.
+- Hizmet örneğinin eşzamanlı olarak başlatılmasını sağlamak <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> için **IsAsyncQueryable = true** field eklemeniz gerekir.
 
-  Zaman uyumsuz hizmet kaydıyla bir `AsyncPackage` örneği aşağıda verilmiştir:
+  Burada bir eşzamanlı `AsyncPackage` hizmet kaydı ile bir örnektir:
 
 ```csharp
 [ProvideService((typeof(STextWriterService)), IsAsyncQueryable = true)]
@@ -118,9 +118,9 @@ public sealed class TestAsyncPackage : AsyncPackage
 {. . . }
 ```
 
-## <a name="add-a-service"></a>Hizmet Ekle
+## <a name="add-a-service"></a>Hizmet ekleme
 
-1. *TestAsyncPackage.cs*içinde `Initialize()` yöntemini kaldırın ve `InitializeAsync()` yöntemini geçersiz kılın. Hizmet Ekle ve hizmetleri oluşturmak için bir geri çağırma yöntemi ekleyin. Bir hizmeti eklemek, zaman uyumsuz Başlatıcı bir örneği aşağıda verilmiştir:
+1. *TestAsyncPackage.cs,* `Initialize()` yöntemi kaldırın ve `InitializeAsync()` yöntemi geçersiz kılın. Hizmeti ekleyin ve hizmetleri oluşturmak için bir geri arama yöntemi ekleyin. Aşağıda, bir hizmet ekleyerek asynchronous başharfbir örnektir:
 
     ```csharp
     protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
@@ -130,11 +130,11 @@ public sealed class TestAsyncPackage : AsyncPackage
     }
 
     ```
-    Bu hizmeti bu paketin dışında görünür yapmak için, yükseltme bayrağı değerini son parametre olarak *true* olarak ayarlayın: `this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
+    Bu hizmeti bu paketin dışında görünür hale getirmek için, son parametre olarak tanıtım bayrağı değerini *doğru* olarak ayarlayın:`this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
 
-2. *Microsoft. VisualStudio. Shell. Interop. 14.0. DesignTime. dll*için bir başvuru ekleyin.
+2. *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll*adresine başvuru ekleyin.
 
-3. Geri arama yöntemi oluşturur ve hizmet döndüren zaman uyumsuz bir yöntem uygulayın.
+3. Geri arama yöntemini, hizmeti oluşturan ve döndüren eşzamanlı bir yöntem olarak uygulayın.
 
     ```csharp
     public async Task<object> CreateTextWriterService(IAsyncServiceContainer container, CancellationToken cancellationToken, Type serviceType)
@@ -147,9 +147,9 @@ public sealed class TestAsyncPackage : AsyncPackage
     ```
 
 ## <a name="use-a-service"></a>Hizmet kullanma
- Artık hizmet alma ve onun yöntemlerini kullanın.
+ Şimdi hizmeti alabilir ve yöntemlerini kullanabilirsiniz.
 
-1. Bunu başlatıcıda göstereceğiz, ancak hizmeti, hizmeti kullanmak istediğiniz her yerde edinebilirsiniz.
+1. Bunu baş harflerinde göstereceğiz, ancak hizmeti kullanmak istediğiniz her yerde alabilirsiniz.
 
     ```csharp
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
@@ -164,22 +164,22 @@ public sealed class TestAsyncPackage : AsyncPackage
 
     ```
 
-     `userpath`, makinenizde anlamlı bir dosya adı ve yol olarak değiştirmeyi unutmayın!
+     Makinenizde anlamlı bir `userpath` dosya adı ve yol değiştirmeyi unutmayın!
 
-2. Kodunu derleme ve çalıştırma. Visual Studio'nun deneysel örneğinde göründüğünde, bir çözüm açın. Bu, `AsyncPackage` oto yüklemesine neden olur. Başlatıcı çalıştırıldığında, belirtilen konumda bir dosya bulmanız gerekir.
+2. Kodu oluşturun ve çalıştırın. Visual Studio'nun deneysel örneği göründüğünde, bir çözüm açın. Bu otomatik `AsyncPackage` yüklenmesine neden olur. Baş harfi çalıştırıldığında, belirttiğiniz konumda bir dosya bulmanız gerekir.
 
-## <a name="use-an-asynchronous-service-in-a-command-handler"></a>Bir komut işleyicisinde zaman uyumsuz bir hizmet kullanma
- Bir menü komutunda zaman uyumsuz bir hizmetin nasıl kullanılacağına ilişkin bir örnek aşağıda verilmiştir. Hizmetini zaman uyumsuz olmayan diğer yöntemleri kullanmayı burada gösterilen yordam kullanabilirsiniz.
+## <a name="use-an-asynchronous-service-in-a-command-handler"></a>Komut işleyicisinde eşzamanlı hizmet kullanma
+ Menü komutunda asynchronous hizmetinin nasıl kullanılacağına dair bir örnek aşağıda verilmiştir. Hizmeti diğer eşzamanlı olmayan yöntemlerde kullanmak için burada gösterilen yordamı kullanabilirsiniz.
 
-1. Bir menü komutu projenize ekleyin. ( **Çözüm Gezgini**, proje düğümünü seçin, sağ tıklayın ve > **yeni öğe** **Ekle** > **genişletilebilirlik** > **özel komut**öğesini seçin.) Komut dosyasını *TestAsyncCommand.cs*olarak adlandırın.
+1. Projenize bir menü komutu ekleyin. (Çözüm **Gezgini'nde**proje düğümünü, sağ tıklatma öğesini seçin ve**Yeni Öğe** > **Genişletilebilirlik** > **Özel Komutu** **Ekle'yi** > seçin.) Komut dosyasını *TestAsyncCommand.cs.*
 
-2. Özel komut şablonu, komutu başlatmak için `Initialize()` yöntemini *TestAsyncPackage.cs* dosyasına yeniden ekler. `Initialize()` yönteminde, komutu Başlatan çizgiyi kopyalayın. Şu şekilde görünmelidir:
+2. Özel komut şablonu, `Initialize()` komutu başlatmayı kolaylaştırmak için yöntemi *TestAsyncPackage.cs* dosyasına yeniden ekler. `Initialize()` Yöntemde, komutu başharfleyen satırı kopyalayın. Şu şekilde görünmelidir:
 
     ```csharp
     TestAsyncCommand.Initialize(this);
     ```
 
-     Bu satırı *AsyncPackageForService.cs* dosyasındaki `InitializeAsync()` yöntemine taşıyın. Bu zaman uyumsuz bir başlatma olduğundan, komutu kullanarak başlatılmadan önce ana iş parçacığından geçmelidir <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>. Bunu artık şöyle görünmelidir:
+     Bu satırı `InitializeAsync()` *AsyncPackageForService.cs* dosyasındaki yönteme taşıyın. Bu bir eşzamanlı başlatma olduğundan, komutu kullanarak <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>başlatmadan önce ana iş parçacığına geçmeniz gerekir. Şimdi bu gibi görünmelidir:
 
     ```csharp
 
@@ -200,17 +200,17 @@ public sealed class TestAsyncPackage : AsyncPackage
 
     ```
 
-3. Silme `Initialize()` yöntemi.
+3. `Initialize()` Yöntemi silin.
 
-4. *TestAsyncCommand.cs* dosyasında `MenuItemCallback()` yöntemini bulun. Yöntemin gövdesi silin.
+4. *TestAsyncCommand.cs* dosyasında `MenuItemCallback()` yöntemi bulun. Yöntemin gövdesini silin.
 
-5. Using yönergesini ekleyin:
+5. Kullanma yönergesi ekleyin:
 
     ```csharp
     using System.IO;
     ```
 
-6. Adlı bir zaman uyumsuz bir yöntem ekleyin `UseTextWriterAsync()`, hizmet alır ve kendi yöntemlerini kullanır:
+6. Hizmeti alan ve yöntemlerini `UseTextWriterAsync()`kullanan asynchronous yöntemini ekleyin:
 
     ```csharp
     private async System.Threading.Tasks.Task UseTextWriterAsync()
@@ -226,7 +226,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
     ```
 
-7. Bu yöntemi çağırın `MenuItemCallback()` yöntemi:
+7. Bu yöntemi yöntemden çağırın: `MenuItemCallback()`
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -236,7 +236,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
     ```
 
-8. Çözümü derleyin ve hata ayıklamaya başlayın. Visual Studio'nun deneysel örneğinde göründüğünde, Git **Araçları** menü ve Ara **çağırma TestAsyncCommand** menü öğesi. Düğmeyi tıklattığınızda TextWriterService, belirtilen dosyaya yazar. (Bir çözümü açmanız gerekmez, çünkü komutu çağırmak da paketin yüklenmesine neden olur.)
+8. Çözümü oluşturun ve hata ayıklamaya başlayın. Visual Studio'nun deneysel örneği **göründüğünde, Araçlar** menüsüne gidin ve **Invoke TestAsyncCommand** menü öğesini arayın. Tıklattığınızda, TextWriterService belirttiğiniz dosyaya yazar. (Bir çözüm açmanız gerekmez, çünkü komutu çağırmak paketin yüklenmesine de neden olur.)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hizmetleri kullanma ve sağlama](../extensibility/using-and-providing-services.md)
+- [Kullanım ve hizmet sağlama](../extensibility/using-and-providing-services.md)

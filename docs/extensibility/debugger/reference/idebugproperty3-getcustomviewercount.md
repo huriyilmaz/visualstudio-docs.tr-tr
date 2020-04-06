@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerCount | Microsoft Docs
+title: IDebugProperty3::GetCustomViewerCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::GetCustomViewerCount
 ms.assetid: dc5bb3e4-dc85-46e4-98fa-c6be8583b985
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 99abfc65027bb43cafcd96c39da39ad40c5607ab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 16cb623f58668362e5e308e1d66dfd6ca7c0fb8c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348884"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721191"
 ---
 # <a name="idebugproperty3getcustomviewercount"></a>IDebugProperty3::GetCustomViewerCount
-Bu özellik için kullanılabilir özel görüntüleyiciler sayısını alır.
+Bu özellik için kullanılabilen özel görüntüleyenlerin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,18 +41,18 @@ int GetCustomViewerCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-[out] Bu özellik için kullanılabilir özel görüntüleyiciler sayısı.
+[çıkış] Bu özellik için kullanılabilen özel görüntüleyenlerin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Tür görselleştiricileri desteklemek için bu yöntem çağrısı iletir [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) yöntemi. İfade değerlendirici, ayrıca özel görüntüleyiciler için bu özelliğin türünü destekliyorsa, bu yöntem döndürülen değeri özel görüntüleyiciler sayısı ekler.
+Tür görselleştiricilerini desteklemek için, bu yöntem aramayı [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) yöntemine ileter. İfade değerlendiricisi, bu özelliğin türü için özel görüntüleyenleri de destekliyorsa, bu yöntem döndürülen değere özel görüntüleyen sayısını ekler.
 
-Tür görselleştiricileri ve özel görüntüleyiciler arasındaki farklar hakkında ayrıntılı bilgi için bkz. [tür görselleştiricisi ve özel Görüntüleyici](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md).
+Tür görüntüleyiciler ve özel görüntüleyenler arasındaki farklar hakkında ayrıntılı bilgi için Type [Visualizer ve Custom Viewer'a](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)bakın.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CProperty** gösteren nesne [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimi.
+Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini ortaya çıkaran bir **CProperty** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CProperty::GetCustomViewerCount(ULONG* pcelt)

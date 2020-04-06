@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Attach | Microsoft Docs
+title: IDebugProgram2::Ekle | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::Attach
 ms.assetid: de069fbf-a565-4905-b102-f5658c55aacd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ca0d696067cecc042a0fa6eb071a92f18ac229fc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7d0b182ba7a873816e3a7aa32d39beb2c63cc5ce
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311405"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723141"
 ---
 # <a name="idebugprogram2attach"></a>IDebugProgram2::Attach
-Programa ekler.
+Programa bağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,22 +41,22 @@ int Attach( 
 
 ## <a name="parameters"></a>Parametreler
 `pCallback`\
-[in] Bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) hata ayıklama olayı bildirim için kullanılacak nesne.
+[içinde] Hata ayıklama olay bildirimi için kullanılacak bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda bazı olası hata kodları gösterilir.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bazı olası hata kodları gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|Belirtilen program için hata ayıklayıcı zaten iliştirilmiş.|
+|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|Belirtilen program hata ayıklama zaten bağlı.|
 |`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Ekleme işlemi sırasında bir güvenlik ihlali oluştu.|
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Bir masaüstü programına için hata ayıklayıcı eklenemiyor.|
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Bir masaüstü programı hata ayıklama eklenemez.|
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklama altyapısı (DE), hiçbir zaman bir programa eklemek için bu yöntemi çağırır. Programın adres alanında DE çalıştırıyorsa [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemi çağrılır. Oturum hata ayıklama manager'ın içinde DE çalışır (SDM) adres alanı, [iliştirme](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi çağrılır.
+ Hata ayıklama altyapısı (DE) hiçbir zaman bu yöntemi bir programa eklemek için aramaz. Programın adres alanında DE çalışıyorsa, [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemi çağrılır. De oturum hata ayıklama yöneticisinin (SDM) adres alanında çalışıyorsa, [Ekle](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)
 - [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)
-- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+- [İliştir](../../../extensibility/debugger/reference/idebugengine2-attach.md)

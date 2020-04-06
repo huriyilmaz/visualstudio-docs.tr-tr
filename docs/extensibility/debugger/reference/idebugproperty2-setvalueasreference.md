@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsReference | Microsoft Docs
+title: IDebugProperty2::SetValueAsReference | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::SetValueAsReference method
 ms.assetid: 341b1b89-4ab8-4e1c-abe2-fb955df5c6b0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f9e98465f16f58f734ef6fd58b66494b4aaf0b65
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 73d00ccedc6985061448170735e9ebcaac42f530
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314617"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721257"
 ---
 # <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
-Bu özelliğin değeri, belirtilen başvurunun değerini ayarlar.
+Bu özelliğin değerini verilen başvurunun değerine ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,26 +47,26 @@ int SetValueAsReference(
 
 ## <a name="parameters"></a>Parametreler
 `rgpArgs`\
-[in] Yönetilen kod özellik ayarlayıcı geçirilecek bağımsız değişkenler dizisi. Özellik ayarlayıcısını bağımsız değişken almaz veya bu [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesne, böyle bir özellik ayarlayıcı, başvurmuyor `rgpArgs` null bir değer olmalıdır. Bu parametre, genellikle bir null değer olur.
+[içinde] Yönetilen kod özelliği ayarlayıcısına geçirilen bir dizi bağımsız değişken. Özellik ayarlayıcısı bağımsız değişkenleri almazsa veya bu [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi böyle `rgpArgs` bir özellik ayarlayıcısına atıfta bulunmuyorsa, null değeri olmalıdır. Bu parametre genellikle null değeridir.
 
 `dwArgCount`\
-[in] Bağımsız değişken sayısı `rgpArgs` dizisi.
+[içinde] Dizideki `rgpArgs` bağımsız değişken sayısı.
 
 `pValue`\
-[in] Biçiminde bir başvuru bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesine bu özelliği ayarlamak için kullanılacak değer.
+[içinde] [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi biçiminde, bu özelliği ayarlamak için kullanılacak değere yapılan başvuru.
 
 `dwTimeout`\
-[in] Değeri, milisaniye cinsinden ayarlamak için yapmanız ne kadar. Tipik bir değer `INFINITE`. Bu, olası tüm değerlendirmesi sürebilir süreyi etkiler.
+[içinde] Milisaniye cinsinden değeri ayarlamak için ne kadar sürer. Tipik bir `INFINITE`değer. Bu, olası bir değerlendirmenin alacağı süreyi etkiler.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu, genellikle aşağıdakilerden biri:
+ Başarılı olursa, `S_OK`döner; aksi takdirde, genellikle aşağıdakilerden biri olan bir hata kodu döndürür:
 
 |Hata|Açıklama|
 |-----------|-----------------|
-|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Başvuru değeri ayarı desteklenmiyor.|
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Bu özelliği bir yönteme başvuran değeri ayarlanamaz.|
+|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Başvurudaki değeri ayarlama desteklenmez.|
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Bu özellik bir yönteme atıfta bulunduğundan, değer ayarlanamaz.|
 |`E_SETVALUE_VALUE_IS_READONLY`|Değer salt okunur ve ayarlanamaz.|
-|`E_NOTIMPL`|Yöntem uygulanmadı.|
+|`E_NOTIMPL`|Yöntem uygulanmaz.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

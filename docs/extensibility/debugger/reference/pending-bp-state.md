@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE | Microsoft Docs
+title: PENDING_BP_STATE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PENDING_BP_STATE enumeration
 ms.assetid: ac04ad72-fa92-4a15-ade2-0d0bbbadfc7f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6707c09e409e2a04d7afec0322b575a70cea33cf
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 69c8dbe1022ee0b1b2ff034d2b83b947c8fb3df6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349866"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714003"
 ---
-# <a name="pendingbpstate"></a>PENDING_BP_STATE
-Bekleyen kesme noktasının (henüz bağlı bir kesme noktası) durumunu belirtir.
+# <a name="pending_bp_state"></a>PENDING_BP_STATE
+Bekleyen bir kesme noktasının durumunu (henüz bağlanmamış bir kesme noktası) belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,27 +48,27 @@ public enum enum_PENDING_BP_STATE { 
 
 ## <a name="fields"></a>Alanlar
  `PBPS_NONE`\
- Sıfır için yer tutucu. Bu değeri hiçbir zaman döndürülür.
+ Yer tutucu sıfır. Bu değer hiçbir zaman döndürülür.
 
  `PBPS_DELETED`\
  Bekleyen kesme noktasının silindiğini gösterir.
 
  `PBPS_DISABLED`\
- Bekleyen kesme noktasını devre dışı olduğunu gösterir.
+ Bekleyen kesme noktasının devre dışı bırakıldığını gösterir.
 
  `PBPS_ENABLED`\
  Bekleyen kesme noktasının etkin olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- Olarak `state` üyesi [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapısı.
+ `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapının üyesi olarak kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)
