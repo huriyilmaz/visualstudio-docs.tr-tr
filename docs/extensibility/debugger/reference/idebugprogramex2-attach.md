@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::Attach | Microsoft Docs
+title: IDebugProgramEx2::Ekle | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramEx2::Attach
 ms.assetid: 33b22b2f-431e-4205-9441-d28a9c928c97
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: db27f29b37480081d29e452d74a6da0c5cea59a6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fcb52a96074b783043af1e908cf454466df74c30
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325178"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722382"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
-Oturum, bir programa ekleyin.
+Bir programa oturum ekle.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,22 +45,22 @@ int Attach( 
 
 ## <a name="parameters"></a>Parametreler
 `pCallback`\
-[in] Bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ekli hata ayıklama altyapısı için olaylar gönderir geri çağırma işlevini temsil eden nesne.
+[içinde] Ekli hata ayıklama altyapısının olayları gönderdiği geri arama işlevini temsil eden [bir IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
 
 `dwReason`\
-[in] Bir değer [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) iliştirme işlemi nedenini açıklayan sabit listesi.
+[içinde] Ekleme işleminin nedenini açıklayan [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) numaralandırma değeri.
 
 `pSession`\
-[in] Programa ekleme oturum benzersiz olarak tanımlayan bir değer.
+[içinde] Programa eklenen oturumu benzersiz olarak tanımlayan bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Bu yöntem döndürmelidir `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` program zaten bağlıysa.
+ Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. Program zaten `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` bağlıysa, bu yöntem döndürülmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Programı içeren bağlantı noktası değeri kullanabilirsiniz `pSession` oturum programa ekleme girişiminde belirlemek için. Örneğin, bir bağlantı noktası aynı anda bir işleme iliştirmek yalnızca bir hata ayıklama oturumu izin veriyorsa, bağlantı noktası işlemdeki diğer programlar için aynı oturum zaten eklenmiş olursa belirleyebilirsiniz.
+ Programı içeren bağlantı noktası, `pSession` programa hangi oturumun bağlanmaya çalıştığını belirlemek için değeri kullanabilir. Örneğin, bir bağlantı noktası bir anda bir işleme yalnızca bir hata ayıklama oturumu eklemek için izin veriyorsa, bağlantı noktası aynı oturumun işlemdeki diğer programlara zaten bağlı olup olmadığını belirleyebilir.
 
 > [!NOTE]
-> Arabirim geçirilen `pSession` yalnızca bir tanımlama bilgisi, bu programa; ekleme oturum hata ayıklama Yöneticisi benzersiz olarak tanımlayan bir değer olarak değerlendirilmesi için sağlanan arabirim yöntemleri hiçbiri işlevsel değildir.
+> Geçirilen `pSession` arabirim, yalnızca bir çerez olarak ele alınacaktır, bu programa bağlanan oturum hata ayıklama yöneticisini benzersiz olarak tanımlayan bir değer; sağlanan arabirimdeki yöntemlerin hiçbiri işlevsel değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

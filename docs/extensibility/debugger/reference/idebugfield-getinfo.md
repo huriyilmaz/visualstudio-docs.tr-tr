@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo | Microsoft Docs
+title: IDebugField::GetInfo | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugField::GetInfo method
 ms.assetid: 7d508200-89ce-400f-a8ea-f28e7610cb2b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 53c0de1b956202f95b4995855ec5bdda0ebe59d3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1b3251db3426f87901ca0768800feaa36fef5373
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352621"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728850"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
-Bu yöntem, alanın görüntülenebilir bilgilerini alır.
+Bu yöntem, alan hakkında görüntülenebilir bilgiler alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[in] Bir birleşimi [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) görüntülenecek bilgi seçer sabitler. Alanın bir sembol temsil ediyorsa, genellikle sembol adı ve türü budur.
+[içinde] Görüntülenecek bilgileri seçen [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) sabitlerinin birleşimi. Alan bir sembolü temsil ediyorsa, bu genellikle sembol adı ve türüdür.
 
 `pFieldInfo`\
-[out] Bilgi sağlanan içinde döndürür [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısı.
+[çıkış] Verilen [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısındaki bilgileri verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

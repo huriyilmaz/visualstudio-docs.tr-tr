@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON | Microsoft Docs
+title: DEBUG_REASON | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_REASON enumeration
 ms.assetid: ad2ee898-8648-4671-9078-d32873862346
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0502ab10398d37bcafee5316ba7e7566dbab4e01
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59954ea7e89390a5e35dbe0bfb0412da1aabc80f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346161"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737428"
 ---
-# <a name="debugreason"></a>DEBUG_REASON
-Hata ayıklama için işlem neden başlatıldı belirtir.
+# <a name="debug_reason"></a>DEBUG_REASON
+İşlemin hata ayıklama için neden başlatıldığını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,30 +50,30 @@ public enum enum_DEBUG_REASON {
 
 ## <a name="fields"></a>Alanlar
 `DEBUG_REASON_ERROR`\
-Belirli olmayan bir hata oluştu (yok, diğer uygun neden olduğunda bu bir varsayılan koşul olarak kullanılır).
+Belirli olmayan bir hata oluştu (diğer nedenlerden hiçbiri uymadığında bu varsayılan koşul olarak kullanılır).
 
 `DEBUG_REASON_USER_LAUNCHED`\
-İşlem, kullanıcının isteğiyle başlatıldı.
+İşlem, kullanıcının isteği üzerine başlatıldı.
 
 `DEBUG_REASON_USER_ATTACHED`\
-Zaten çalışan işlemi kullanıcı tarafından eklendi.
+Zaten çalışan işlem kullanıcı tarafından iliştirildi.
 
 `DEBUG_REASON_AUTO_ATTACHED`\
-Başlatıldığında işlemi otomatik olarak depolamaya bağlanmıştır.
+İşlem başlatıldığında otomatik olarak bağlandı.
 
 `DEBUG_REASON_CAUSALITY`\
-İşlem şu nedenle başlatıldı bir *Just-ın-Time* (JIT) hata ayıklama olay.
+İşlem, *Just-In-Time* (JIT) hata ayıklama olayı nedeniyle başlatıldı.
 
 ## <a name="remarks"></a>Açıklamalar
-Öğesinden döndürülen [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) yöntemi.
+[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) yönteminden döndü.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)

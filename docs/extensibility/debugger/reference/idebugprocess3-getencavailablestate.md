@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetENCAvailableState | Microsoft Docs
+title: IDebugProcess3::GetENCAvailableState | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess3::GetENCAvailableState
 ms.assetid: 98a5d527-8a72-476c-8e92-0bff3d97c195
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 99ec4ff53fe9baad2c3a36f252c652f37822ba83
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 77345cfc3aa1dd95482052893e7c09591ad7cd4e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313949"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723647"
 ---
 # <a name="idebugprocess3getencavailablestate"></a>IDebugProcess3::GetENCAvailableState
-Bu yöntem geçerli Düzenle ve devam et işleminin durumunu alır. Özel bağlantı noktası sağlayıcısı her zaman döndürmelidir `E_NOTIMPL`.
+Bu yöntem, geçerli Edit ve Devam işleminin durumunu alır. Özel bir bağlantı noktası `E_NOTIMPL`tedarikçisi her zaman dönmelidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ int GetENCAvailableState(
 
 ## <a name="parameters"></a>Parametreler
 `pReason`\
-[out] Bir değer [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) sabit listesi.
+[çıkış] [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) numaralandırmabir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
 
 > [!NOTE]
-> Özel bağlantı noktası sağlayıcısı her zaman döndürmelidir `E_NOTIMPL`.
+> Özel bir bağlantı noktası `E_NOTIMPL`tedarikçisi her zaman dönmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu durum etkilenebilir [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).
+ Bu durum [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)tarafından etkilenebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

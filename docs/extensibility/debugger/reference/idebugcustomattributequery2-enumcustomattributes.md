@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Docs
+title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttributeQuery2::EnumCustomAttributes
 ms.assetid: 94bfce74-aa3d-45f0-8e04-5715faf85217
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc9cc9158939ac0cbd7cac482961e2078b8249ad
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b00ead2236a36c2fa12e1ad154b9f853aa2224d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322227"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732592"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
-Bu alana ekli tüm özel öznitelikleri için bir numaralandırıcı alır.
+Bu alana bağlı tüm özel öznitelikler için bir sayısallaştırıcı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int EnumCustomAttributes(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] Döndürür bir [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) özel öznitelik listesini temsil eden nesne; Aksi takdirde, özel öznitelik yoksa null değeri döndürür.
+[çıkış] Özel öznitelikler listesini temsil eden bir [IEnumDebugCustomÖzler](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) nesnesi döndürür; aksi takdirde, özel öznitelikleri yoksa null bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu alan özel öznitelik yoksa başarılıysa S_OK veya S_FALSE döndürür. Aksi takdirde bir hata kodu döndürür;
+ Başarılı olursa, bu alanda özel öznitelikleri yoksa S_OK veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür;
 
 ## <a name="remarks"></a>Açıklamalar
- Bir alan birden çok özel özniteliklere sahip olabilir.
+ Bir alanın birden çok özel özniteliği olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

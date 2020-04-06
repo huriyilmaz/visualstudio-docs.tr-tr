@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateSync | Microsoft Docs
+title: IDebugExpression2::EvaluateSync | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpression2::EvaluateSync
 ms.assetid: 88964915-dce3-4005-b4f3-9f37415e41e4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 77fb52dd140ee58eeb202e88026fb57764d549c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 306ed6af2a0a0b8fdb4525a112e680e289e6e6df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325947"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729682"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
-Bu yöntem, zaman uyumlu olarak ifadeyi değerlendirir.
+Bu yöntem, ifadeyi eşzamanlı olarak değerlendirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,30 +47,30 @@ int EvaluateSync(
 
 ## <a name="parameters"></a>Parametreler
 `dwFlags`\
-[in] Bayraklarının bir birleşimi [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) ifade değerlendirme denetleyen sabit listesi.
+[içinde] İfade değerlendirmesini kontrol eden [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından gelen bayrakların birleşimi.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süre. Kullanım `INFINITE` süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
 
 `pExprCallback`\
-[in] Bu parametre, her zaman null değeri olur.
+[içinde] Bu parametre her zaman null bir değerdir.
 
 `ppResult`\
-[out] Döndürür [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) ifade değerlendirme sonucu içeren nesne.
+[çıkış] İfade değerlendirme sonucunu içeren [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Bazı tipik hata kodları şunlardır:
+Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. Bazı tipik hata kodları şunlardır:
 
 |Hata|Açıklama|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|Başka bir ifade şu anda değerlendirilen ve eşzamanlı ifade değerlendirme desteklenmiyor.|
-|E_EVALUATE_TIMEOUT|Değerlendirme zaman aşımına uğradı.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|Başka bir ifade şu anda değerlendirilmektedir ve eşzamanlı ifade değerlendirmesi desteklenmemektedir.|
+|E_EVALUATE_TIMEOUT|Değerlendirme zaman doldu.|
 
 ## <a name="remarks"></a>Açıklamalar
-Eşzamanlı değerlendirme için yeniden değerlendirme tamamlandıktan sonra Visual Studio için bir olay göndermek gerekli değildir.
+Senkron değerlendirme için, değerlendirme tamamlandıktan sonra bir olayı Visual Studio'ya geri göndermeye gerek yoktur.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CExpression` uygulayan nesne [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimi.
+Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CExpression::EvaluateSync(EVALFLAGS dwFlags,

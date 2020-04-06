@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::DetachDebugger_V7 | Microsoft Docs
+title: IDebugProgramNode2::DetachDebugger_V7 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::DetachDebugger
 - IDebugProgramNode2::DetachDebugger_V7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 241db5db55897932120b3253ff5185cb852ea77b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 925f1b07662ece35d21f9b647681bc898428c4c7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351214"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722113"
 ---
-# <a name="idebugprogramnode2detachdebuggerv7"></a>IDebugProgramNode2::DetachDebugger_V7
+# <a name="idebugprogramnode2detachdebugger_v7"></a>IDebugProgramNode2::DetachDebugger_V7
 
 > [!Note]
-> KULLANIM DIŞI. KULLANMAYIN.
+> Kaldırıl -mış. KULLANMAYıN.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,14 +41,14 @@ int DetachDebugger_V7 ();
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Bir uygulama her zaman döndürmelidir `E_NOTIMPL`.
+Bir uygulama her `E_NOTIMPL`zaman dönmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> Visual Studio 2005 ' ten itibaren bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL`.
+> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmaz ve her zaman geri dönmelidir. `E_NOTIMPL`
 
-Hata ayıklayıcı beklenmedik şekilde sona erdiğinde, bu yöntem çağrılır. Bu yöntem çağrıldığında, kullanıcı CİHAZDAN ayrılmış gibi sorgulamanıza DE programın devam edecektir. Daha fazla hata ayıklama olay gönderilmelidir. Programın başka bir hata ayıklayıcı örneğinden iliştirilebilir olduğu bir durumda olması gerekir.
+Hata ayıklama beklenmedik bir şekilde ayrıldığında bu yöntem çağrılır. Bu yöntem çağrıldığında, DE programı kullanıcı ondan ayrılmış gibi devam etmelidir. Başka hata ayıklama olayı gönderilmemelidir. Program hata ayıklama başka bir örnekten takılabilir bir durumda olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

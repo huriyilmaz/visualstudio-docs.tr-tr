@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetContainer | Microsoft Docs
+title: IDebugField::GetContainer | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugField::GetContainer method
 ms.assetid: 6d6c8213-6181-4adf-9584-3e4cac163dd8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e335a9461917077439fc7dfe49e8c061891a9cd9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f1217a6f3a62f331fa09d9ed276640ef62cca8d2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352673"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728912"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
-Bu yöntem, bir alan kapsayıcısını alır.
+Bu yöntem bir alanın kapsayıcı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetContainer(
 
 ## <a name="parameters"></a>Parametreler
 `ppContainerField`\
-[out] Kapsayıcı tarafından temsil edilen döndürür [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimi.
+[çıkış] [Kapsayıcıyı IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimi tarafından temsil edildiği şekilde döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu alan döndürülen bir kapsayıcı yoksa `ppContainerField` bir null değer olacaktır.
+ Bu alanın bir kapsayıcısı yoksa, `ppContainerField` döndürülen geçersiz bir değer olacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

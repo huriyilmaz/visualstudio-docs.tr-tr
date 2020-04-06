@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2 | Microsoft Docs
+title: IDebugCodeContext2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCodeContext2 interface
 ms.assetid: 3670439e-2171-405d-9d77-dedb0f1cba93
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59573736ca3cd0768d3383e5621d96dffdea9746
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 778602cc29049d855c418fd8fa416feb1ad8e9fe
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338891"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734215"
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
-Bu arabirim, bir kod yönergesi başlangıç konumunu temsil eder. Çoğu çalışma zamanı mimarileri için bugün, bir kod bağlamı, program yürütme stream'de adresi olarak düşünülebilir.
+Bu arabirim, kod yönergesinin başlangıç konumunu temsil eder. Günümüzde çoğu çalışma zamanı mimarisi için, kod bağlamı bir programın yürütme akışında bir adres olarak düşünülebilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,29 +28,29 @@ Bu arabirim, bir kod yönergesi başlangıç konumunu temsil eder. Çoğu çalı
 IDebugCodeContext2 : IDebugMemoryContext2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı, bir kod yönergesi belge konumuna konumunu ilişkilendirmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı, kod yönergesinin konumunu belge konumuyla ilişkilendirmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Birçok arabirimlerindeki yöntemler bu arabirimi en yaygın dönüş [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md). Ayrıca kapsamlı olarak kullanıldığında [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) kesme noktası çözümleme bilgileri olduğu gibi de arabirimi.
+ Birçok arabirimdeki yöntemler, en tipik olarak [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)bu arabirimi döndürebilir. Ayrıca [iDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) arabirimi yanı sıra kesme noktası çözünürlük bilgileri ile yoğun olarak kullanılır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Yöntemlere ek olarak [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi bu arabirim, aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)|Etkin kod kapsamına karşılık gelen belge bağlamını alır.|
+|[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)|Etkin kod bağlamına karşılık gelen belge bağlamını alır.|
 |[GetLanguageInfo](../../../extensibility/debugger/reference/idebugcodecontext2-getlanguageinfo.md)|Bu kod bağlamı için dil bilgilerini alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Arasındaki temel fark bir `IDebugCodeContext2` arabirimi ve [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi olan bir `IDebugCodeContext2` her zaman yönerge hizalanır. Diğer bir deyişle bir `IDebugCodeContext2` ise bir yönerge başlangıcına işaret her zaman bir `IDebugMemoryContext2` herhangi bayt bellek çalışma zamanı mimarisinde işaret edebilir. `IDebugCodeContext2` yönergeler yerine temel depolama alanı boyutu (bayt genellikle) göre artırılır.
+ Arabirim `IDebugCodeContext2` ile [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi arasındaki temel `IDebugCodeContext2` fark, bir arabirimin her zaman talimatla hizalanmış olmasıdır. Bu, bir `IDebugCodeContext2` talimatın başlangıcını her zaman işaret `IDebugMemoryContext2` ederken, çalışma zamanı mimarisindeki herhangi bir bellek baytına işaret edebilir anlamına gelir. `IDebugCodeContext2`temel depolama boyutu (genellikle bayt) yerine talimatlarla artarak elde edilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)
@@ -58,5 +58,5 @@ IDebugCodeContext2 : IDebugMemoryContext2
 - [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md)
 - [GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)
 - [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)
-- [Next](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)
+- [Sonraki](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

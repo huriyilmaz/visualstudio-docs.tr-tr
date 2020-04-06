@@ -1,5 +1,5 @@
 ---
-title: IDebugField | Microsoft Docs
+title: IDebugField | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugField interface
 ms.assetid: adecdd1c-b1b9-4027-92da-74cbe910636f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80def3f9c3d270ebd6f2217f6ce39f07ef27b119
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8c7a25246f42d288020481330fe60e312849862d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337516"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728759"
 ---
 # <a name="idebugfield"></a>IDebugField
-Bu arabirim, bir alan, diğer bir deyişle, bir simge veya türü bir açıklamasını temsil eder.
+Bu arabirim, bir alanı, yani bir sembolün veya türün açıklamasını temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,31 +28,31 @@ Bu arabirim, bir alan, diğer bir deyişle, bir simge veya türü bir açıklama
 IDebugField : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Sembol sağlayıcısı, tüm alanlar için temel sınıf olarak bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bir sembol sağlayıcı tüm alanlar için taban sınıf olarak bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim, tüm alanlar için temel sınıftır. Dönüş değerini temel alarak [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md), bu arabirim daha özel arabirimler kullanarak döndürebilir [QueryInterface](/cpp/atl/queryinterface). Ayrıca, pek çok arabirimi dönüş `IDebugField` çeşitli yöntemler nesneleri.
+ Bu arabirim tüm alanlar için taban sınıftır. [GetKind'in](../../../extensibility/debugger/reference/idebugfield-getkind.md)iade değerine bağlı olarak, bu arabirim [QueryInterface'i](/cpp/atl/queryinterface)kullanarak daha özel arabirimler döndürebilir. Buna ek olarak, `IDebugField` birçok arabirim nesneleri çeşitli yöntemlerden döndürer.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugField`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugField`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Simge veya türü görüntülenebilir bilgilerini alır.|
-|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Alan türünü alır.|
+|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Sembol veya tür hakkında görüntülenebilir bilgiler alır.|
+|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Bir tür alan alır.|
 |[GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)|Alan türünü alır.|
-|[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|Alan kapsayıcısını alır.|
-|[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|Adres alanının alır.|
-|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Bir alanın bayt cinsinden boyutunu alır.|
-|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Genişletilmiş bir alanla ilgili bilgiler.|
-|[Equal](../../../extensibility/debugger/reference/idebugfield-equal.md)|İki alan karşılaştırır.|
-|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Tür bağımsız türü ve sembol bilgilerini alır.|
+|[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|Alanın konteynerini alır.|
+|[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|Alanın adresini alır.|
+|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Baytlar halinde bir alan büyüklüğünde olur.|
+|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Bir alan hakkında genişletilmiş bilgi alır.|
+|[Equal](../../../extensibility/debugger/reference/idebugfield-equal.md)|İki alanı karşılaştırır.|
+|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Sembol veya tür hakkında türbağımsız bilgi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir tür için bir C dili eşdeğerdir `typedef`.
+ Bir tür C diline `typedef`eşdeğerdir.
 
- Aşağıdaki örnekte C++ dili, `weather` bir sınıf türüdür ve `sunny` ve `stormy` simgeler şunlardır:
+ Aşağıdaki C++ dil örneğinde, `weather` bir sınıf `sunny` `stormy` türü ve semboller vardır:
 
 ```cpp
 class weather;
@@ -60,14 +60,14 @@ weather sunny;
 weather stormy;
 ```
 
- Bir alan temsil eden bir simge ya da türü çağırarak belirlenebilir [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) inceleyerek [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) sonucu. Varsa `FIELD_KIND_TYPE` bitinin ayarlanmasıdır, alanın bir tür olduğunda ve `FIELD_KIND_SYMBOL` bit ayarlandığında, bir semboldür.
+ Bir alanın bir sembolü veya türü temsil edip etmediği [GetKind'i](../../../extensibility/debugger/reference/idebugfield-getkind.md) arayarak ve [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) sonucu inceleyerek belirlenebilir. Bit `FIELD_KIND_TYPE` ayarlanırsa, alan bir türdür ve `FIELD_KIND_SYMBOL` bit ayarlanırsa, bu bir semboldür.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: sh.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
