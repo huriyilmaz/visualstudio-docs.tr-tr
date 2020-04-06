@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetReason | Microsoft Docs
+title: IDebugBreakpointUnboundEvent2::GetReason | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointUnboundEvent2::GetReason
 ms.assetid: 0f8a4fec-d3eb-417d-8516-4f7b51904033
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5b3c15b25ec6f4f2d7ddc56efc163ec2eb6b81c0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9830309f0a40aee37982554e8920a95d289eb74c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352830"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734727"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
-Kesme noktası ilişkisiz nedenini alır.
+Kopuş noktasının bağlanmamasının nedenini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ int GetReason(
 
 ## <a name="parameters"></a>Parametreler
 `pdwUnboundReason`\
-[out] Bir değer döndürür [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) kesme noktası ilişkisiz nedenini belirten sabit listesi.
+[çıkış] Kesme noktasının bağlanmamasının nedenini belirten [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) numaralandırmadan bir değer verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Farklı bir konuma bir Düzenle ve devam et işlemi ya da bir kesme noktası hatası bağlanan bir belirleme DataSet'e bir kesme noktası nedenleri.
+Bunun nedenleri arasında bir kesme noktasının bir düzenlenen ve devam etme işleminden sonra farklı bir konuma geri tepme sayılması veya kesme noktasının hataya bağlı olduğu belirlenmesi yer almaktadır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CBreakpointUnboundDebugEventBase** gösteren nesne [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) arabirimi.
+Aşağıdaki örnek, [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) arabirimini ortaya çıkaran bir **CBreakpointUnboundDebugEventBase** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(

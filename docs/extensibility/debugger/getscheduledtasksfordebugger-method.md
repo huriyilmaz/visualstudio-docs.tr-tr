@@ -1,30 +1,30 @@
 ---
-title: GetScheduledTasksForDebugger metodu | Microsoft Docs
+title: GetScheduledTasksForDebugger Yöntemi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - GetScheduledTasksForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 7c9b4cde-6e4a-4cef-929f-7d02b1da5762
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49a63462eece9bef09579c7284f72790a3914bc2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fca6c8e92cd0b4755bd79b8e142a7e1d283f868d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353725"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738656"
 ---
 # <a name="getscheduledtasksfordebugger-method"></a>GetScheduledTasksForDebugger Metodu
-Tüm zamanlanmış görevlerin dizisini alır.
+Zamanlanmış tüm görevlerin bir dizisini alır.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (içinde *mscorlib.dll*)
+ **Montaj:** mscorlib *(mscorlib.dll*olarak)
 
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ Tüm zamanlanmış görevlerin dizisini alır.
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Tüm zamanlanmış görevlerin dizisi. Her görev, yürütülmekte olan veya yürütülmesi tamamlandı.
+ Tüm zamanlanmış görevler dizisi. Her görev yürütülen veya yürütmeyi tamamladı.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem iş parçacığı güvenli değildir ve diğer örnekleri aynı anda kullanmamalısınız <xref:System.Threading.Tasks.TaskScheduler>. Bu yöntem bir hata ayıklayıcı'dan aramanızı yalnızca hata ayıklayıcı, diğer tüm iş parçacıkları askıya aldı.
+ Bu yöntem iş parçacığı güvenli değildir ve diğer örnekleri ile <xref:System.Threading.Tasks.TaskScheduler>aynı anda kullanmamalısınız. Hata ayıklama diğer tüm iş parçacığı askıya aldığında bu yöntemi bir hata ayıklama dan çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md)

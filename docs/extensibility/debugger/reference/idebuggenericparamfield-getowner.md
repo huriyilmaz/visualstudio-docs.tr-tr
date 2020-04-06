@@ -1,27 +1,27 @@
 ---
-title: IDebugGenericParamField::GetOwner | Microsoft Docs
+title: IDebugGenericParamField::GetOwner | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugGenericParamField::GetOwner
 ms.assetid: c7f6d166-a69e-40c4-bd0b-1a1fdf9aaacf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9752dfa90250bd427cb7a3d18e6e73775f25efb9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 040b8cf21cda1a0634c1c423516109b1ef214f01
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330294"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727866"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
-Bu genel parametre türü veya yönteminde sahibi alır.
+Bu genel parametrenin türünü veya yöntem sahibini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,13 +39,13 @@ int GetOwner(
 
 ## <a name="parameters"></a>Parametreler
 `ppOwner`\
-[out] Döndürür [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) bu genel parametre sahip bir nesne.
+[çıkış] Bu genel parametrenin sahibi olan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugGenericParamFieldType** gösteren nesne [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimi.
+Aşağıdaki örnek, [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini ortaya çıkaran bir **CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)

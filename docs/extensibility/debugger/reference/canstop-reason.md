@@ -1,5 +1,5 @@
 ---
-title: CANSTOP_REASON | Microsoft Docs
+title: CANSTOP_REASON | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - CANSTOP_REASON enumeration
 ms.assetid: 6da944eb-36cd-4a8c-8d71-544c775cfcc1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18861d7aa19281528e9a100f57399451194598a9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d7be361d4468584c109db52f487b3de3c1fdff0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327246"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737687"
 ---
-# <a name="canstopreason"></a>CANSTOP_REASON
-Bir program yürütme belirli bir noktaya ulaştıktan sonra yürütmeyi durdurmak, belirlemek için kullanılır.
+# <a name="canstop_reason"></a>CANSTOP_REASON
+Bir programın yürütmede belirli bir noktaya ulaştıktan sonra yürütmeyi durdurup durduramayacağına karar vermek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,21 +44,21 @@ public enum enum_CANSTOP_REASON {
 
 ## <a name="fields"></a>Alanlar
 `CANSTOP_ENTRYPOINT`\
-Belirli bir programın giriş noktasını belirtir.
+Verilen programın giriş noktasını belirtir.
 
 `CANSTOP_STEPIN`\
-Bir işlevin Adımlama belirtir.
+Bir işleve adım atma belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bağımsız değişken olarak geçirilen [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) oturum hata ayıklama Yöneticisi (SDM) ile programın giriş noktası ulaştıktan sonra veya bir işlev veya metot Adımlama durdurmak uygun olup olmadığını onaylamak için yöntemi.
+Programın giriş noktasına ulaştıktan sonra veya bir işlev veya yönteme adım attıktan sonra durdurmak için tamam ise Oturum Hata Ayıklama Yöneticisi (SDM) ile onaylamak için [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) yöntemine bir argüman olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

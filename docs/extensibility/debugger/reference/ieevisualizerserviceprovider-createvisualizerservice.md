@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerServiceProvider::CreateVisualizerService | Microsoft Docs
+title: IEEVisualizerServiceProvider::CreateVisualizerService | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerServiceProvider::CreateVisualizerService method
 ms.assetid: f366f7c9-358d-46c8-993f-32ff86539833
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20a8180283e596eeb9dd4ee1391e6e8fe6666829
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e05677122b7d4e4eb025a9382ede1509374de894
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310168"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717913"
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
-Bu yöntem Görselleştirici hizmeti oluşturur.
+Bu yöntem bir görselleştirici hizmeti oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,25 +49,25 @@ int CreateVisualizerService(
 
 ## <a name="parameters"></a>Parametreler
 `binder`\
-[in] [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) geçirilen nesne [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md).
+[içinde] [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) nesnesi [EvaluateSync'e](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)geçti.
 
 `pSymProv`\
-[in] [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) geçirilen nesne `IDebugParsedExpression::EvaluateSync`.
+[içinde] [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) nesnesi `IDebugParsedExpression::EvaluateSync`' ye geçti.
 
 `pAddress`\
-[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) geçirilen nesne `IDebugParsedExression::EvaluateSync`.
+[içinde] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi `IDebugParsedExression::EvaluateSync`' ye geçti.
 
 `dataProvider`\
-[in] Bir nesneyi uygulama [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) arabirimi (ifade değerlendiricisi tarafından sağlanan).
+[içinde] [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) arabirimini uygulayan bir nesne (ifade değerlendiricisi tarafından sağlanır).
 
 `ppService`\
-[out] Oluşturulan hizmet.
+[çıkış] Oluşturulan hizmet.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `binder`, `pSymProv`, Ve `pAddress` parametreler tüm gönderildi `IDebugParsedExpression::EvaluateSync` yöntemi. `CreateVisualizerService` yalnızca öğesinden çağrılması için `IDebugParsedExpression::EvaluateSync` tür görselleştiricileri desteği ifade değerlendiricisi'nın bir parçası olarak.
+ , `binder` `pSymProv`, `pAddress` ve parametrelerin tümü `IDebugParsedExpression::EvaluateSync` yönteme geçirildi. `CreateVisualizerService`yalnızca bir ifade `IDebugParsedExpression::EvaluateSync` değerlendiricinin tip görselleştiricileri için desteğinin bir parçası olarak çağrılması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)

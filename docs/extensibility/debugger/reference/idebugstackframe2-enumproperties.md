@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::EnumProperties | Microsoft Docs
+title: IDebugStackFrame2::EnumProperties | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::EnumProperties
 ms.assetid: 334bb95e-c7e0-4008-9f06-8c3999e47ee8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba4cf74c41d321cc03684ec6717a9eea74e9a622
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f822f20cf4fb7a6fd5aa71b9cc1ec26bcd90e234
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321853"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719905"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
-Yığın çerçevesinde yerel değişkenler gibi ilişkili özellikleri için bir numaralandırıcı oluşturur.
+Yerel değişkenler gibi yığın çerçevesiyle ilişkili özellikler için bir sayısallaştırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,28 +51,28 @@ int EnumProperties ( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[in] Bayraklarının bir birleşimi [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) hangi alanların numaralandırılmış belirten numaralandırma [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardır doldurulmalıdır.
+[içinde] [Numaralandırılmış](../../../extensibility/debugger/reference/debugprop-info-flags.md) [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardaki hangi alanların dolduruleceğini belirten DEBUGPROP_INFO_FLAGS numaralandırmadaki bayrakların birleşimi.
 
 `nRadix`\
-[in] Sayısal yedeklenmesine biçimlendirmede kullanılacak sayı tabanı.
+[içinde] Herhangi bir sayısal bilgi biçimlendirmede kullanılacak radix.
 
 `refiid`\
-[in] Bir GUID, seçmek için kullanılan bir filtre [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardır, gibi sıralanması `guidFilterLocals`.
+[içinde] Hangi [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapıların numaralandırılmak üzere kullanılacağını seçmek için `guidFilterLocals`kullanılan bir filtrenin GUID'i.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süre. Kullanım `INFINITE` süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
 
 `pcelt`\
-[out] Numaralandırılan özellikleri sayısını döndürür. Arama ile aynıdır [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) yöntemi.
+[çıkış] Numaralandırılmış özellik sayısını verir. Bu, [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) yöntemini aramakla aynıdır.
 
 `ppEnum`\
-[out] Döndürür bir [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) istenen özellikler listesini içeren nesne.
+[çıkış] İstenilen özelliklerin listesini içeren bir [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, seçili tüm özellikleri ile tek bir çağrı alınacak izin verdiğinden, sıralı olarak çağrı daha hızlı [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) ve [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemleri.
+ Bu yöntem, seçili tüm özelliklerin tek bir çağrıyla alınmasını sağladığından, [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) ve [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemlerini sırayla aramaktan daha hızlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Add | Microsoft Docs
+title: IDebugMemoryContext2::Ekle | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryContext2::Add method
 - Add method
 ms.assetid: 3c47e646-ce9e-4dd3-8f1a-6dbd3827d407
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c1cafbf22e51f867948491e2925c085bd387ea84
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a21fa2ec6d48bb1d6bf17bbc0d2ebf0d90a25a9f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347084"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727476"
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-Belirtilen değer için geçerli bağlam ekler ve yeni bir bağlam döndürür.
+Geçerli içeriğe belirtilen değeri ekler ve yeni bir bağlam döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,18 +44,18 @@ int Add(
 
 ## <a name="parameters"></a>Parametreler
 `dwCount`\
-[in] Geçerli bağlama eklemek için değer.
+[içinde] Geçerli içeriğe eklenecek değer.
 
 `ppMemCxt`\
-[out] Yeni bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesne.
+[çıkış] Yeni bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir bellek bağlamı bir adresi olduğundan bir adrese bir değeri ekleyerek yeni bir bağlam arabirimi gerektiren yeni bir adres üretir.
+ Bellek bağlamı bir adrestir, bu nedenle adrese değer eklemek yeni bir bağlam arabirimi gerektiren yeni bir adres üretir.
 
- Bu bağlamla ilişkilendirilen bellek alanını elde edilen adresi dışında olsa bile, bu yöntem her zaman yeni bir bağlam üretmesi gerekir. Yeni bağlam için ayrılan bellek yok ise veya tek özel durumu olan `ppMemCxt` (Bu bir hatadır) null bir değerdir.
+ Bu yöntem, ortaya çıkan adres bu bağlamla ilişkili bellek alanının dışında olsa bile, her zaman yeni bir bağlam oluşturmalıdır. Bunun tek istisnası, yeni bağlam için bellek ayrılamazsa `ppMemCxt` veya null bir değerse (bir hatadır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

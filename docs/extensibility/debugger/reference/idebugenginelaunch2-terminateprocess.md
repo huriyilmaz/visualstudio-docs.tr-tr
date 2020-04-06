@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2::TerminateProcess | Microsoft Docs
+title: IDebugEngineLaunch2::TerminateProcess | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineLaunch2::TerminateProcess
 ms.assetid: f7039e7f-5f57-4222-9ad2-11a66b2da6e0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 88536211083650fa1a6fe606c78bd7ecf9037c98
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 971259edc89d1ad8be01b6e6e4db46f760534349
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337194"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730504"
 ---
 # <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
 Bir işlemi sonlandırır.
@@ -41,13 +41,13 @@ int TerminateProcess ( 
 
 ## <a name="parameters"></a>Parametreler
 `pProcess`\
-[in] Bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) sonlandırılacak işlemi temsil eden nesne.
+[içinde] Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çağrı [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) yöntemi bu yöntemi çağırmadan önce.
+ Bu yöntemi aramadan önce [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

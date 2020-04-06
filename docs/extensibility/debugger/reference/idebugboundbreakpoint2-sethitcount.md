@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetHitCount | Microsoft Docs
+title: IDebugBoundBreakpoint2::SetHitCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - SetHitCount method
 - IDebugBoundBreakpoint2::SetHitCount method
 ms.assetid: 8145d875-26b1-4049-a2a2-e7d3d7f4735f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b8e59fadb019124cca111f23e99220b77df2a88d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e82f12b12c9afbc24f9416ec2639a4b9768d8fd0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314469"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735410"
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
-Bağlı kesme noktası isabet sayısını ayarlar.
+Bağlı kesme noktası için isabet sayısını ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,15 +42,15 @@ int SetHitCount( 
 
 ## <a name="parameters"></a>Parametreler
 `dwHitCount`\
-[in] Ayarlanacak isabet sayısı.
+[içinde] Vuruş sayısı ayarlı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` bağlı Kesme noktasının nesnenin durumu ayarlanırsa `BPS_DELETED` (parçası [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesi).
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Bağlı `E_BP_DELETED` kesme noktası nesnesinin durumu `BPS_DELETED` ayarlanmışsa [(BP_STATE](../../../extensibility/debugger/reference/bp-state.md) numaralandırmanın bir parçası) döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İsabet sayısı bu Kesme noktasının harekete geçirilen oturumun geçerli çalıştırma sırasında sayısıdır.
+ Isabet sayısı, bu kesme noktasının oturumun geçerli çalışması sırasında kaç kez ateşettiğidir.
 
- Bu yöntem, genellikle geçerli isabet sayısı bu kesme noktasında güncelleştirmek için hata ayıklama altyapısı tarafından çağrılır.
+ Bu yöntem genellikle hata ayıklama altyapısı tarafından bu kesme noktasında geçerli isabet sayısını güncelleştirmek için çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

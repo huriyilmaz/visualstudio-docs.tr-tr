@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::AddImplicitProgramNodes | Microsoft Docs
+title: IDebugProcessEx2::AddImplicitProgramNodes | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcessEx2::AddImplicitProgramNodes method
 ms.assetid: 8b491b00-f9e7-45b3-9115-fe58c3464289
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b75ef50107b44de8de6f65c5c4c9c6827e13426e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 113c81e95e7384be04b7e02a5c58cd2cad7c9c6b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309494"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723401"
 ---
 # <a name="idebugprocessex2addimplicitprogramnodes"></a>IDebugProcessEx2::AddImplicitProgramNodes
-Bu yöntem, belirtilen her hata ayıklama altyapısı (DE) için bir program düğüm ekler.
+Bu yöntem, belirtilen her hata ayıklama altyapısı (DE) için bir program düğümü ekler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +45,19 @@ int AddImplicitProgramNodes(
 
 ## <a name="parameters"></a>Parametreler
 `guidLaunchingEngine`\
-[in] `GUID` , Program başlatmak için kullanılacak olan (ve kendi program düğümleri eklemek için kabul edilir) bir DE.
+[içinde] `GUID` Programları başlatmak için kullanılacak bir DE (ve kendi program düğümleri eklemek için kabul edilir).
 
 `rgguidSpecificEngines`\
-[in] Dizi `GUID`DEs hangi programın düğümleri eklenir, s.
+[içinde] `GUID`Program düğümlerinin ekleneceği DEs dizileri.
 
 `celtSpecificEngines`\
-[in] Sayısını `GUID`s'te `rgguidSpecificEngines` dizisi.
+[içinde] Dizideki `rgguidSpecificEngines` `GUID`s sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- [Program düğümleri](../../../extensibility/debugger/program-nodes.md) her DE listelenen için eklenecek `rgguidSpecificEngines`— başlatma altyapısı hariç (belirtildiği `guidLaunchingEngine`), bir program başlattığında kendi program düğümü eklemek için kabul.
+- [Program Düğümleri](../../../extensibility/debugger/program-nodes.md) listelenen her DE için `rgguidSpecificEngines`eklenecektir (fırlatma motoru hariç `guidLaunchingEngine`(verildiği gibi), hangi bir program başlattı zaman kendi program düğümü eklemek için kabul edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

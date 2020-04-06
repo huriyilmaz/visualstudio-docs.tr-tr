@@ -1,28 +1,28 @@
 ---
-title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs
+title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetTypeFromTypeDef
 - IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
 ms.assetid: 7f6cd3d3-f4da-4893-be91-8dd104be8010
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1d8c869447f13774f975cbebcba35792cf05b8cb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8e212f53467c25ca6084eaa5a91b37031baedf4a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320913"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731238"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
-Kendi belirteci verilen bir türü alır.
+Belirteci verilen bir türü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +46,19 @@ int GetTypeFromTypeDef(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[in] Uygulama etki alanı tanımlayıcısı.
+[içinde] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[in] Modülün benzersiz tanımlayıcısı.
+[içinde] Modülün benzersiz tanımlayıcısı.
 
 `tokClass`\
-[in] Belirteci temsil eden tür.
+[içinde] Türü temsil eden belirteç.
 
 `ppType`\
-[out] Döndürür bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) türü içeren nesne.
+[çıkış] Türü içeren bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

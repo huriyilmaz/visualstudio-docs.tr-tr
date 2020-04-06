@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2 | Microsoft Docs
+title: IDebugPendingBreakpoint2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPendingBreakpoint2 interface
 ms.assetid: d416b095-917e-475e-b796-ec0a03ffb8da
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1581620d2a26b8717a1c84399e43463b9312a96d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4e6f2c1df37e953a5d8c66bad9d0a3574a463fad
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308791"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725642"
 ---
 # <a name="idebugpendingbreakpoint2"></a>IDebugPendingBreakpoint2
-Bu arabirim, bir kod konuma bağlamak hazır bir kesme noktası temsil eder.
+Bu arabirim, kod konumuna bağlanmaya hazır bir kesme noktasını temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,40 +28,40 @@ Bu arabirim, bir kod konuma bağlamak hazır bir kesme noktası temsil eder.
 IDebugPendingBreakpoint2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE), kesme noktaları desteğini bir parçası olarak bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) kesme noktaları için verdiği desteğin bir parçası olarak bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir çağrı [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) bir bekleyen kesme noktasından oluşturur bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimi. Bir çağrı [bağlama](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) oluşturur bir `IDebugBreakpoint2` programı ilişkili bir kesme noktası temsil eden arabirim.
+ [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) için yapılan bir arama, [iDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabiriminden bekleyen bir kesme noktası oluşturur. [Bind'e](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) yapılan arama, programdaki bağlı bir kesme noktasını temsil eden bir `IDebugBreakpoint2` arabirim oluşturur.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugPendingBreakpoint2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugPendingBreakpoint2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Bu bekleyen kesme noktasının bir kod konumuna bağlayabilirsiniz olup olmadığını belirler.|
-|[Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Bu bekleyen kesme noktasının bir veya daha fazla kod konumlara bağlar.|
-|[GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Bekleyen kesme noktası bu durumu alır.|
-|[GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Bu bekleyen kesme noktası oluşturmak için kullanılan bir kesme noktası istek alır.|
-|[Virtualize](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize.md)|Bu sanallaştırılmış bekleyen kesme noktasının durumunu değiştirir.|
-|[Enable](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Bu etkin bekleyen kesme noktasının durumunu değiştirir.|
-|[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)|Bu kesme noktası ilişkilendirilmiş olan koşul değiştirir veya ayarlar.|
-|[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|Bu kesme noktası ilişkili parola sayısı değiştirir veya ayarlar.|
-|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Bu bekleyen kesme noktasından bağlı tüm kesme noktalarını numaralandırır.|
-|[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Bu bekleyen kesme noktasından sonuçlanan tüm hata kesme noktalarını numaralandırır.|
-|[Delete](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Bu bekleyen kesme noktasının ve ondan bağlı tüm kesme noktalarını siler.|
+|[CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Bekleyen bu kesme noktasının kod konumuna bağlanıp bağlanamayacağını belirler.|
+|[Bağla](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Bekleyen bu kesme noktasını bir veya daha fazla kod konumuna bağlar.|
+|[GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Bekleyen bu kesme noktasının durumunu alır.|
+|[GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini alır.|
+|[Virtualize](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize.md)|Bekleyen bu kesme noktasının sanallaştırılmış durumunu geçiştir.|
+|[Etkinleştir](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Bekleyen bu kesme noktasının etkin durumunu geçişe yönlendirin.|
+|[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)|Bekleyen bu kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.|
+|[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|Bekleyen kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.|
+|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Bekleyen kesme noktasından bağlı tüm kesme noktalarını osayılar.|
+|[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Bu bekleyen kesme noktasından kaynaklanan tüm hata kesme noktalarını oyalar.|
+|[Sil](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Bekleyen bu kesme noktasını ve ondan bağlanan tüm kesme noktalarını siler.|
 
 ## <a name="remarks"></a>Açıklamalar
- `IDebugPendingBreakpoint2` bir kesme noktası için bir veya daha çok programlar uygulanabilir kodu bağlamak için gereken tüm gerekli bilgileri sağlayıcısı olarak düşünülebilir.
+ `IDebugPendingBreakpoint2`bir veya birden çok programa uygulanabilecek bir kesme noktasını koda bağlamak için gereken tüm gerekli bilgilerin sağlayıcısı olarak düşünülebilir.
 
- Bir bekleyen kesme noktasının potansiyel olarak birden fazla bağlı Kesme noktasının üretebilir. Örneğin, bir kesme noktası C++ stili şablonunda, şablon benzersiz her örneği için ilişkili bir kesme noktası üretebilir.
+ Bekleyen bir kesme noktası, birden fazla bağlama kesme noktası üretebilir. Örneğin, C++stili şablonundaki bir kesme noktası, bu şablonun her benzersiz örneği için bağlı bir kesme noktası oluşturabilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)

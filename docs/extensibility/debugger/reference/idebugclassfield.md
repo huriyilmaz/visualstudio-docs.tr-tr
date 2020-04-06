@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField | Microsoft Docs
+title: IDebugClassField | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugClassField interface
 ms.assetid: 49358cbc-8973-4862-9dcc-79b1248e6712
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05d01ee3867481b8ab9bb100f2623c1197492666
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 11b0e4cd7c851e65edf299f45ec97273804c25d8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329460"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734294"
 ---
 # <a name="idebugclassfield"></a>IDebugClassField
-Bu arabirim türünde bir sınıfı temsil eder.
+Bu arabirim bir sınıfı tür olarak temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,32 @@ Bu arabirim türünde bir sınıfı temsil eder.
 IDebugClassField : IDebugContainerField
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Sembol sağlayıcısı bu arabirimi uygulayan aynı nesne üzerinde uygulayan [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimi. Bu sınıf türünü temsil eden bir özelleştirmesi arabirimidir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bir sembol sağlayıcısı bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimini uygulayan nesne üzerinde uygular. Bu arabirim, sınıf türünü temsil eden bir uzmanlık alanıdır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir sayıda arabirimine sahip dahil bu arabirimi döndüren yöntemler [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md), ve [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md). Ayrıca kullanabileceğiniz [QueryInterface](/cpp/atl/queryinterface) bu arabirimden edinme [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) , arabirim [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemi bayrağı döndürür `FIELD_TYPE_CLASS`.
+ Arabirimler bir dizi [IDebugSymbolProvider,](../../../extensibility/debugger/reference/idebugsymbolprovider.md) [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)ve [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)dahil bu arabirimi döndürebilir yöntemleri vardır. Ayrıca, [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemi bayrağı `FIELD_TYPE_CLASS`döndürürse, Bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabiriminden elde etmek için [QueryInterface'i](/cpp/atl/queryinterface) kullanabilirsiniz.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Yöntemlere ek olarak [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) aşağıdaki arabirimleri, bu arabirimi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ [IDebugField ve IDebugContainerField](../../../extensibility/debugger/reference/idebugfield.md) arabirimlerindeki yöntemlere ek olarak, bu arabirim aşağıdakileri uygular: [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnumBaseClasses](../../../extensibility/debugger/reference/idebugclassfield-enumbaseclasses.md)|Bu sınıfın temel sınıfları için bir numaralandırıcı oluşturur.|
-|[DoesInterfaceExist](../../../extensibility/debugger/reference/idebugclassfield-doesinterfaceexist.md)|Belirli bir arabirim sınıfta tanımlı olup olmadığını belirler.|
-|[EnumNestedClasses](../../../extensibility/debugger/reference/idebugclassfield-enumnestedclasses.md)|Bu sınıfın iç içe geçmiş sınıflar için bir numaralandırıcı oluşturur.|
-|[GetEnclosingClass](../../../extensibility/debugger/reference/idebugclassfield-getenclosingclass.md)|Bu sınıfın kapsayan sınıf alır.|
-|[EnumInterfacesImplemented](../../../extensibility/debugger/reference/idebugclassfield-enuminterfacesimplemented.md)|Bu sınıf tarafından uygulanan arabirimler için bir numaralandırıcı oluşturur.|
-|[EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md)|Bu sınıfın oluşturucuları için bir numaralandırıcı oluşturur.|
-|[GetDefaultIndexer](../../../extensibility/debugger/reference/idebugclassfield-getdefaultindexer.md)|Varsayılan oluşturucunun adını alır.|
-|[EnumNestedEnums](../../../extensibility/debugger/reference/idebugclassfield-enumnestedenums.md)|Bu sınıfın iç içe geçmiş numaralandırıcılar için bir numaralandırıcı oluşturur.|
+|[EnumBaseClasses](../../../extensibility/debugger/reference/idebugclassfield-enumbaseclasses.md)|Bu sınıfın temel sınıfları için bir sayısallaştırıcı oluşturur.|
+|[DoesInterfaceExist](../../../extensibility/debugger/reference/idebugclassfield-doesinterfaceexist.md)|Sınıfta belirli bir arabirim tanımlı olup olmadığını belirler.|
+|[EnumNestedClasses](../../../extensibility/debugger/reference/idebugclassfield-enumnestedclasses.md)|Bu sınıfın iç içe geçen sınıfları için bir sayısallaştırıcı oluşturur.|
+|[GetEnclosingClass](../../../extensibility/debugger/reference/idebugclassfield-getenclosingclass.md)|Bu sınıfı içine alan sınıfı alır.|
+|[EnumInterfacesImplemented](../../../extensibility/debugger/reference/idebugclassfield-enuminterfacesimplemented.md)|Bu sınıf tarafından uygulanan arabirimler için bir sayısallaştırıcı oluşturur.|
+|[EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md)|Bu sınıfın oluşturucuları için bir sayısallaştırıcı oluşturur.|
+|[GetDefaultIndexer](../../../extensibility/debugger/reference/idebugclassfield-getdefaultindexer.md)|Varsayılan dizinleyicinin adını alır.|
+|[EnumNestedEnums](../../../extensibility/debugger/reference/idebugclassfield-enumnestedenums.md)|Bu sınıfın iç içe geçen sayısalatörleri için bir sayısallaştırıcı oluşturur.|
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: sh.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

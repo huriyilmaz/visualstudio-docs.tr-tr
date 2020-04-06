@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::GetObject | Microsoft Docs
+title: IDebugAlias::GetObject | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugAlias::GetObject method
 ms.assetid: 97bc3af6-6e55-4940-8a6d-692c61257806
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 92d2265a6b3a17b632716729be12d92c96b65f03
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4c7e73a7c1ccb5840927f4292fe057cbb6670a89
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338145"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736442"
 ---
 # <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
-Bu diğer adı için nesnesini alır.
+Bu takma adın olduğu nesneyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int GetObject(
 
 ## <a name="parameters"></a>Parametreler
 `ppObject`\
-[out] [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) bu diğer adı temsil eder.
+[çıkış] Bu diğer adı temsil eden [IDebugObject2.](../../../extensibility/debugger/reference/idebugobject2.md)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach | Microsoft Docs
+title: IDebugCoreServer3::EnableAutoAttach | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer3::EnableAutoAttach
 ms.assetid: 06aa633b-263b-4e08-8844-9a52d5120b94
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9eb8beed7f32e9c6fb64212f73a41a35544259bb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d529bb80f79a3f2972e9349a2679bb528cc10463
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326979"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732916"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-Belirtilen hata ayıklama altyapılarını otomatik iliştirme sağlar.
+Belirtilen hata ayıklama motorları için otomatik ekleme sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +47,22 @@ int EnableAutoAttach(
 
 ## <a name="parameters"></a>Parametreler
 `rgguidSpecificEngines`\
-[in] Her hata ayıklama altyapısı otomatik iliştirme olarak işaretlemek için GUID'lere dizisi.
+[içinde] Otomatik bağlama olarak işaretlemek için her hata ayıklama altyapısı için GUID dizisi.
 
 `celtSpecificEngines`\
-[in] Belirtilen alt yapılarının sayısını `rgguidSpecificEngines`.
+[içinde] 'de `rgguidSpecificEngines`belirtilen motor sayısı.
 
 `pszStartPageUrl`\
-[in] Otomatik-eklerken kullanılacak başlangıç URL'si.
+[içinde] Otomatik takma yaparken kullanılacak başlangıç URL'si.
 
 `pbstrSessionID`\
-[out] Otomatik eklenen oturum kimliği.
+[çıkış] Otomatik olarak iliştirilen oturumun kimliği.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür. Bir hata kodu `E_AUTO_ATTACH_NOT_REGISTERED`, auto-attach sınıf üreteci kaydedilmemiş gösterir.
+ Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür. Bir hata `E_AUTO_ATTACH_NOT_REGISTERED`kodu, otomatik ekleme sınıfı fabrika kayıtlı olmadığını gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirtilen URL ile ilişkili bir program başladığında, belirtilen hata ayıklama motorlarını otomatik olarak başlatıldığını bağlı ve.
+ Belirtilen URL ile ilişkili bir program başlatıldığında, belirtilen hata ayıklama motorları otomatik olarak başlatılır ve eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

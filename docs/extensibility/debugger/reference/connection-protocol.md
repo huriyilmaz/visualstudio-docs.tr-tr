@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Microsoft Docs
+title: CONNECTION_PROTOCOL | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - CONNECTION_PROTOCOL enumeration
 ms.assetid: 99df5865-8b36-486d-9f4c-d10ae2bc688a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3f52ef7e723b583d593f6f0d4fc18f5f6909b131
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 29ac287462149a20f52a1affdeab7fa6b8333711
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346534"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737640"
 ---
-# <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
-Hata ayıklama paketi (DE) ve hata ayıklama sunucusu arasında iletişim kurmak için kullanılan protokolü belirtir.
+# <a name="connection_protocol"></a>CONNECTION_PROTOCOL
+Hata ayıklama sunucusu ile hata ayıklama paketi (DE) arasında iletişim kurmak için kullanılan protokolü gösterir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,36 +53,36 @@ public enum CONNECTION_PROTOCOL {
 
 ## <a name="fields"></a>Alanlar
 `CONNECTION_NONE`\
-Bir sunucuya bağlantı yapıldı.
+Sunucuya bağlantı yapılmadı.
 
 `CONNECTION_UNKNOWN`\
-Bir bağlantı yapıldı, ancak bilinmeyen bir türüdür.
+Bir bağlantı yapıldı, ancak bilinmeyen bir tür.
 
 `CONNECTION_LOCAL`\
-Yerel bir sunucuya bağlantısıdır.
+Bağlantı yerel bir sunucuya.
 
 `CONNECTION_PIPE`\
-Bir adlandırılmış kanal bağlantıdır.
+Bağlantı adlı bir boru aracılığıyla yapılır.
 
 `CONNECTION_TCPIP`\
-Bağlantı, TCP/IP'yi kullanır.
+Bağlantı TCP/IP kullanır.
 
 `CONNECTION_HTTP`\
 Bağlantı HTTP (bir Web sunucusu üzerinden) kullanır.
 
 `CONNECTION_OTHER`\
-Başka türde bir bağlantı kuruldu (Bu değer şu anda kullanılmamaktadır).
+Başka bir bağlantı türü oluşturuldu (bu değer şu anda kullanılmadı).
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerleri döndürülen [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) yöntemi.
+Bu değerler [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) yönteminden döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

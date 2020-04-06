@@ -1,5 +1,5 @@
 ---
-title: Menü öğelerine klavye kısayollarını bağlama | Microsoft Docs
+title: Klavye Kısayollarını Menü Öğelerine Bağlama | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,59 +9,59 @@ helpviewer_keywords:
 - keyboard shortcuts
 - menu items
 ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98c0b6f5b26e7f423f2a89f680395ceaba7286bc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 94feafbc614be61aaa4eef9e26669c0fbe901ed5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982266"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740029"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Klavye kısayollarını menü öğelerine bağlama
-Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *. vsct* dosyasına bir giriş eklemeniz yeterlidir. Bu konu başlığı altında, klavye kısayolunun özel düğme, menü öğesi veya araç çubuğu komutuna nasıl değiştirileceği ve varsayılan düzenleyicide klavye eşlemesinin nasıl uygulanacağı veya özel bir düzenleyici ile nasıl sınırlandırılacağını açıklanmaktadır.
+Klavye kısayolu özel bir menü komutuna bağlamak için paket için *.vsct* dosyasına bir giriş eklemeniz yeterlidir. Bu konu, klavye kısayolu özel bir düğme, menü öğesi veya araç çubuğu komutuyla nasıl eşlenir ve varsayılan düzenleyicide klavye eşleciliğini nasıl uygulayacağıveya özel bir düzenleyiciyle nasıl sınırlandırılabildiğini açıklar.
 
- Mevcut Visual Studio menü öğelerine klavye kısayolları atamak için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+ Varolan Visual Studio menü öğelerine klavye kısayolları atamak için [bkz.](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 
-## <a name="choose-a-key-combination"></a>Bir anahtar birleşimi seçin
- Birçok klavye kısayolu, Visual Studio 'da zaten kullanılıyor. Yinelenen bağlamalar algılanabileceğinden ve ayrıca öngörülemeyen sonuçlara neden olabileceğinden, aynı kısayolu birden fazla komuta atamamalısınız. Bu nedenle, bir kısayolu atamadan önce kullanılabilirliğini doğrulamak iyi bir fikirdir.
+## <a name="choose-a-key-combination"></a>Anahtar kombinasyonu nu seçin
+ Visual Studio'da birçok klavye kısayolları zaten kullanılmaktadır. Yinelenen bağlamaların algıya aşması zor olduğundan ve öngörülemeyen sonuçlara da neden olabileceğinden, aynı kısayolu birden fazla komuta atamamalısınız. Bu nedenle, atamadan önce bir kısayol kullanılabilirliğini doğrulamak için iyi bir fikirdir.
 
-### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Klavye kısayolunun kullanılabilirliğini doğrulamak için
+### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Klavye kısayolu kullanılabilirliğini doğrulamak için
 
-1. **Araçlar** > **Seçenekler** > **ortam** penceresinde **klavye**' yi seçin.
+1. **Araçlar** > **Seçenekleri** > **Ortamı** penceresinde **Klavye'yi**seçin.
 
-2. **' De yeni kısayol kullan ' ın** **Global**olarak ayarlandığından emin olun.
+2. **Yeni kısayolu kullan'ın** **Global**olarak ayarlandıklarına emin olun.
 
-3. **Kısayol tuşlarını bas** kutusunda, kullanmak istediğiniz klavye kısayolunu yazın.
+3. Basın **kısayolu tuşları** kutusuna, kullanmak istediğiniz klavye kısayolu yazın.
 
-    Kısayol zaten Visual Studio 'da kullanılıyorsa, Box **tarafından şu anda kullanılan kısayol** , kısayolun Şu anda çağırdığı komutu gösterir.
+    Kısayol Visual Studio'da zaten **kullanılıyorsa, şu anda kutu tarafından kullanılan Kısayol,** kısayol'un şu anda aradığı komutu gösterir.
 
-4. Eşlenmemiş bir tane bulana kadar anahtarların farklı birleşimlerini deneyin.
+4. Eşlenen olmayan bir anahtar bulana kadar farklı tuş kombinasyonlarını deneyin.
 
    > [!NOTE]
-   > **Alt** kullanan klavye kısayolları, bir menü açabilir ve doğrudan bir komut yürütmez. Bu nedenle, **alt**içeren bir kısayol yazdığınızda, **Şu anda Box tarafından kullanılan kısayol** boş olabilir. Kısayolun, **Seçenekler** iletişim kutusunu kapatarak ve ardından tuşlara basarak bir menü açmadığından emin olabilirsiniz.
+   > **Alt** kullanan klavye kısayolları bir menü açabilir ve doğrudan bir komut uyguluyor olmayabilir. Bu nedenle, **Alt**içeren bir kısayol yazdığınızda şu anda kutu **tarafından kullanılan Kısayol** boş olabilir. **Seçenekler** iletişim kutusunu kapatıp tuşlara basarak kısayol'un menüyü açmadığını doğrulayabilirsiniz.
 
-   Aşağıdaki yordamda, bir menü komutuyla mevcut bir VSPackage olduğunu varsaymaktadır. Bu işlemi gerçekleştirmek için yardıma ihtiyacınız varsa, bir [menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)konusuna göz atın.
+   Aşağıdaki yordam, menü komutu ile varolan bir VSPackage olduğunu varsayar. Bunu yaparken yardıma ihtiyacınız varsa, [menü komutu ile uzantı oluştur'a](../extensibility/creating-an-extension-with-a-menu-command.md)bir göz atın.
 
 ### <a name="to-assign-a-keyboard-shortcut-to-a-command"></a>Bir komuta klavye kısayolu atamak için
 
-1. Paketiniz için *. vsct* dosyasını açın.
+1. Paketiniz için *.vsct* dosyasını açın.
 
-2. Zaten mevcut değilse, `<Commands>` sonra boş bir `<KeyBindings>` bölümü oluşturun.
+2. If'in `<KeyBindings>` zaten mevcut olmadığını söyledikten sonra boş bir bölüm oluşturun. `<Commands>`
 
    > [!WARNING]
-   > Anahtar bağlamaları hakkında daha fazla bilgi için bkz. [KeyBinding](../extensibility/keybinding-element.md).
+   > Anahtar bağlamalar hakkında daha fazla bilgi için [Keybinding'e](../extensibility/keybinding-element.md)bakın.
 
-    `<KeyBindings>` bölümünde, bir `<KeyBinding>` girişi oluşturun.
+    `<KeyBindings>` Bölümde, bir `<KeyBinding>` giriş oluşturun.
 
-    `guid` ve `id` özniteliklerini çağırmak istediğiniz komuta ait olanlarla ayarlayın.
+    Çağırmak `guid` istediğiniz `id` komutun ve özniteliklerini ayarlayın.
 
-    `mod1` özniteliğini **Control**, **alt**veya **SHIFT**olarak ayarlayın.
+    Özniteliği **Denetim,** Alt veya **Shift**olarak ayarlayın. **Alt** `mod1`
 
-    KeyBindings bölümü şuna benzemelidir:
+    KeyBindings bölümü aşağıdaki gibi görünmelidir:
 
    ```xml
    <KeyBindings>
@@ -71,18 +71,18 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
    ```
 
-   Klavye kısayolunuz ikiden fazla anahtar gerektiriyorsa, `mod2` ve `key2` özniteliklerini ayarlayın.
+   Klavye kısayolu ikiden fazla tuş gerektiriyorsa, ve `mod2` `key2` öznitelikleri ayarlayın.
 
-   Çoğu durumda, **kaydırma** ikinci bir değiştirici olmadan kullanılmamalıdır çünkü bu, en fazla alfasayısal anahtarın büyük harf veya simge yazmasına neden olur.
+   Çoğu durumda, **Shift** ikinci bir değiştirici olmadan kullanılmamalıdır, çünkü basmak zaten çoğu alfasayısal tuşa büyük harf veya sembol yazmaya neden olur.
 
-   Sanal anahtar kodları, işlev anahtarları ve **geri al** tuşu gibi kendileriyle ilişkili bir karakter olmayan özel anahtarlara erişmenizi sağlar. Daha fazla bilgi için bkz. [sanal anahtar kodları](/windows/desktop/inputdev/virtual-key-codes).
+   Sanal anahtar kodları, işlev tuşları ve **Arka Boşluk** tuşu gibi, onlarla ilişkili bir karaktere sahip olmayan özel tuşlara erişmenizi sağlar. Daha fazla bilgi için [Sanal anahtar kodlarına](/windows/desktop/inputdev/virtual-key-codes)bakın.
 
-   Komutu Visual Studio Düzenleyicisi 'nde kullanılabilir hale getirmek için `editor` özniteliğini `guidVSStd97`olarak ayarlayın.
+   Komutu Visual Studio düzenleyicisinde kullanılabilir hale `editor` getirmek `guidVSStd97`için özniteliği .
 
-   Komutu yalnızca özel bir düzenleyicide kullanılabilir hale getirmek için, `editor` özniteliğini, özel düzenleyiciyi içeren VSPackage oluşturduğunuzda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] paket şablonu tarafından oluşturulan özel düzenleyicinin adına ayarlayın. Ad değerini bulmak için, `name` özniteliği "`editorfactory`" olan bir `<GuidSymbol>` düğümü için `<Symbols>` bölümüne bakın. Bu, özel düzenleyicinin adıdır.
+   Komutu yalnızca özel bir düzenleyicide kullanılabilir `editor` hale getirmek için, özel düzenleyiciyi içeren [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage'ı oluşturduğunuzda Paket Şablonu tarafından oluşturulan özel düzenleyicinin adına özniteliği ayarlayın. Ad değerini bulmak için, `<Symbols>` özniteliği `<GuidSymbol>` " ile `name` `editorfactory`biten bir düğüm için bölüme bakın. Bu özel editörün adıdır.
 
 ## <a name="example"></a>Örnek
- Bu örnek, **Ctrl**+**alt**+**C** klavye kısayolunu `MyPackage`adlı bir pakette `cmdidMyCommand` adlı bir komuta bağlar.
+ Bu örnek, klavye kısayolu **Ctrl**+**Alt**+**C'yi** . adlı `cmdidMyCommand` `MyPackage`bir pakette adlı bir komuta bağlar.
 
 ```
 <CommandTable>
@@ -99,7 +99,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 ```
 
 ## <a name="example"></a>Örnek
- Bu örnek, **Ctrl**+**B** klavye kısayolunu `TestEditor`adlı bir projede `cmdidBold` adında bir komuta bağlar. Komut, diğer düzenleyicilerde değil yalnızca özel düzenleyicide kullanılabilir.
+ Bu örnek, klavye kısayolu **Ctrl**+**B'yi** . adlı `TestEditor`bir projede adlı `cmdidBold` bir komuta bağlar. Komut, diğer editörlerde değil, yalnızca özel düzenleyicide kullanılabilir.
 
 ```xml
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />

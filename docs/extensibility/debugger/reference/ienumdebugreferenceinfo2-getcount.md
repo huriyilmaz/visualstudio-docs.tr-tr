@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2::GetCount | Microsoft Docs
+title: IEnumDebugReferenceInfo2::GetCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2::GetCount
 ms.assetid: e62706e0-d2cd-48fb-8fdf-444463c651ab
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81ab9e0aba59238175a61b8cebe361500a58973e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e1d2105344ba937e419260b8367ecc084c8825c6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322684"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715339"
 ---
 # <a name="ienumdebugreferenceinfo2getcount"></a>IEnumDebugReferenceInfo2::GetCount
-Numaralandırmada öğelerin sayısını döndürür.
+Numaralandırmadaki eleman sayısını verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-[out] Numaralandırmada öğelerin sayısını döndürür.
+[çıkış] Numaralandırmadaki eleman sayısını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem yalnızca belirten geleneksel COM numaralandırma arabiriminin bir parçası değil `Next`, `Clone`, `Skip`, ve `Reset` yöntemleri uygulanması gerekir.
+ Bu yöntem, `Next`yalnızca , , `Clone`, `Skip`ve `Reset` yöntemlerin uygulanması gerektiğini belirten alışılmış COM numaralandırma arabiriminin bir parçası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

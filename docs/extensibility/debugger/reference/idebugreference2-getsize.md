@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetSize | Microsoft Docs
+title: IDebugReference2::GetSize | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::GetSize
 ms.assetid: a404ddd9-d940-4513-97cd-f52b8ab6a560
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5512a9d07c859dc548f91611bfc8d0c05621c0ff
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d7ea57467c6bcc716226ac7075976a0fb9daf5f8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329787"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720371"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
-Başvuru değeri bayt cinsinden boyutunu alır. Daha sonraki kullanımlar için ayrılmıştır.
+Başvurunun değerinin boyutunu, baytlar halinde alır. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int GetSize ( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwSize`\
-[out] Başvuru değeri bayt cinsinden boyutunu döndürür.
+[çıkış] Başvurunun değerinin boyutunu bayt olarak verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Her zaman döndürür `E_NOTIMPL`.
+ Her zaman `E_NOTIMPL` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::RemoveAllSetExceptions | Microsoft Docs
+title: IDebugEngine2::RemoveAllSetExceptions | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::RemoveAllSetExceptions
 ms.assetid: 165fbe89-802d-4d99-85ca-c10fd6cccc09
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 17063a2c503535bc20b61ba8d9914fc54005cccc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ae5ac703f1d0bd374131a4f5de397f39cf0ba209
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352612"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731035"
 ---
 # <a name="idebugengine2removeallsetexceptions"></a>IDebugEngine2::RemoveAllSetExceptions
-IDE'nin belirli çalışma zamanı mimarisi veya dil için ayarlanmış özel durumlar listesindeki kaldırır.
+IDE'nin belirli bir çalışma zamanı mimarisi veya dili için belirlediği özel durumlar listesini kaldırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,15 +41,15 @@ int RemoveAllSetExceptions( 
 
 ## <a name="parameters"></a>Parametreler
 `guidType`\
-[in] Dil GUID veya bir çalışma zamanı mimariye özgü hata ayıklama altyapısı için GUID.
+[içinde] Dil için GUID veya çalışma zamanı mimarisine özgü hata ayıklama altyapısı için GUID.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından kaldırılan özel durumlar için önceki çağrılar tarafından ayarlanan [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) yöntemi.
+ Bu yöntem tarafından kaldırılan özel durumlar [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) yöntemine önceki çağrılar tarafından ayarlandı.
 
- Belirli bir özel durum kaldırmak için çağrı [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) yöntemi.
+ Belirli bir özel durumu kaldırmak için [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

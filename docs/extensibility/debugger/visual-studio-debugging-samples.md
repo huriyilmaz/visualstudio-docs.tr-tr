@@ -1,5 +1,5 @@
 ---
-title: Visual Studio hata ayıklama örnekleri | Microsoft Docs
+title: Görsel Stüdyo Hata Ayıklama Örnekleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - debugging [Debugging SDK], samples
 - Debugging SDK, samples
 ms.assetid: fbcc42a7-7851-487f-b981-8c4ae7ec7347
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea408640b47b04041e99b9a4bff2605b6231a92f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 2c3ac20f541f83103e0ded8c11881317e8d1aca4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981227"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712413"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio hata ayıklama örnekleri
-İki örnek [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]kullanarak Visual Studio hata ayıklayıcıyı genişletmeyi gösterir.
+İki örnek, Visual Studio hata ayıklamasını kullanarak [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]nasıl genişletilir gösteriş gösterir.
 
-- Yönetilen diller için hata ayıklayıcı Ifade değerlendirici örneği [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]eklenmiştir. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] penceresinde, **örnekler** sekmesine tıklayın, diller listesinde **Tümü** **C#** ' ne tıklayın ve ardından **hata ayıklayıcı ' ya**tıklayın.
+- Yönetilen diller için Hata Ayıklayıcı İfade Değerlendirici Örneği, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Pencerede **Örnekler** sekmesini tıklatın, diller listesinde **Tümü** veya **C#** seçeneğini tıklatın ve ardından **Hata Ayıklayıcı'yı**tıklatın.
 
-- Yerel diller için Visual Studio hata ayıklama altyapısı örneği, MSDN Kod Galerisi 'nde kullanılabilir. Daha fazla bilgi için bkz. Microsoft Web sitesindeki [Visual Studio hata ayıklama altyapısı örneği](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) .
+- Görsel Stüdyo Hata Ayıklama Motoru Örneği, yerel diller için, MSDN Code Gallery'de mevcuttur. Daha fazla bilgi için Microsoft Web [sitesindeki Visual Studio hata ayıklama altyapısı örneğine](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) bakın.

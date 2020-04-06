@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostMachineName | Microsoft Docs
+title: IDebugProgramHost2::GetHostMachineName | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramHost2::GetHostMachineName
 ms.assetid: 4677ffe4-aa9b-4450-a63b-74cd3984d956
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6843856605505e23fc6c76834e83d54a998c90c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a3e134a4e766583c8996c01cb02789202b819bd1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325148"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722306"
 ---
 # <a name="idebugprogramhost2gethostmachinename"></a>IDebugProgramHost2::GetHostMachineName
-Bu programı barındıran işlem üzerinde çalıştığı makinenin adını alır.
+Bu programı barındıran işlemin üzerinde çalıştığının makinesinin adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int GetHostMachineName( 
 
 ## <a name="parameters"></a>Parametreler
 `pbstrHostMachineName`\
-[out] Makinenin adını döndürür.
+[çıkış] Makinenin adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)

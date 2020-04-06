@@ -1,27 +1,27 @@
 ---
-title: DisplayKind | Microsoft Docs
+title: DisplayKind | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - DisplayKind enumeration
 ms.assetid: 940968c5-6065-4bda-8ee6-c31597db4d71
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8c15726a3725b756e646e73804643f6b1ab36374
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7634ae3ee03b7e577f0621ffc263e4d45bfe194
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318272"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737256"
 ---
 # <a name="displaykind"></a>DisplayKind
-Düzenleyicinin bilgilerin türlerini temsil eden geçerli değerleri numaralandırır bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne ve kullanıcıya görüntüler.
+[Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden alınıp kullanıcıya görüntülenecek bilgi türlerini temsil eden geçerli değerleri ayıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -55,12 +55,12 @@ Alanın adı.
 Alan türü.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: Ee.h
+Başlık: Ee.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetValueDisplayStringCount](../../../extensibility/debugger/reference/ieevisualizerservice-getvaluedisplaystringcount.md)

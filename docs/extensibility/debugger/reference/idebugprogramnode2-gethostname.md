@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostName | Microsoft Docs
+title: IDebugProgramNode2::GetHostName | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetHostName
 ms.assetid: 16aad1ff-ad34-4394-a2e4-5621374a7729
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 61e38cbb41cc6503ee39072c99ffcbee9f08a4a3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 028ee16e7b9c5a30effc683494f68b2bd4eb604f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351126"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722058"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
-Program barındıran işlem adını alır.
+Programı barındırma işleminin adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetHostName (
 
 ## <a name="parameters"></a>Parametreler
 `dwHostNameType`\
-[in] Bir değer [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) adı döndürülecek türünü belirten sabit listesi.
+[içinde] GETHOSTNAME_TYPE numaralandırmadan döndürülecek ad türünü belirten bir değer. [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)
 
 `pbstrHostName`\
-[out] Barındırma işlemi adını döndürür.
+[çıkış] Barındırma işleminin adını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` gösteren nesne [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi. Bu örnekte yoksayar `dwHostNameType` parametresi ve modülün dosya yolunun temel adından alınan yalnızca programın adını döndürür.
+Aşağıdaki örnek, `CProgram` [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir. Bu örnek parametreyi `dwHostNameType` yoksa yılardı ve modülün dosya yolunun temel adından alınan yalnızca programın adını döndürür.
 
 ```cpp
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {

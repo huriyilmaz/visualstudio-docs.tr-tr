@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetEnclosingClass | Microsoft Docs
+title: IDebugClassField::GetEnclosingClass | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugClassField::GetEnclosingClass method
 ms.assetid: a0c12e3c-9ea0-4dfb-9e45-8cea18725022
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6927a63241e2f2794fb5c70945962e00a1676431
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e5a68e32da370d6881eb2b74cbca157f7b899329
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329492"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734398"
 ---
 # <a name="idebugclassfieldgetenclosingclass"></a>IDebugClassField::GetEnclosingClass
-Bu sınıfın kapsayan sınıf alır.
+Bu sınıfı içine alan sınıfı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetEnclosingClass(
 
 ## <a name="parameters"></a>Parametreler
 `ppClassField`\
-[out] Döndürür bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) sınıfı kapsayan temsil eden nesne. Kapsayan sınıfı yok ise, bir null değer döndürür.
+[çıkış] Çevreleyen sınıfı temsil eden bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesi döndürür. Çevreleyen sınıf yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu sınıfın temsil, [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnedir, iç içe geçmiş bir sınıf sonra `ppClassField` parametresi döndürür bir `IDebugClassField` sınıfı kapsayan temsil eden nesne. Örneğin, bu sınıf tanımını ele alalım:
+Bu [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesi tarafından temsil edilen sınıf iç `ppClassField` içe bir `IDebugClassField` sınıfsa, parametre çevreleyen sınıfı temsil eden bir nesne döndürür. Örneğin, bu sınıf tanımı göz önüne alındığında:
 
 ```
 class RootClass {
@@ -55,7 +55,7 @@ class RootClass {
 };
 ```
 
-Çağırma `GetEnclosingClass` metodunda `IDebugClassField` nesnesini temsil eden `NestedClass` sınıfı döndürür bir `IDebugClassField` sınıfı temsil eden nesne `RootClass`.
+`NestedClass` Sınıfı `GetEnclosingClass` temsil eden `IDebugClassField` nesneüzerinde yöntem çağrı `IDebugClassField` sınıfı temsil `RootClass`eden bir nesne döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

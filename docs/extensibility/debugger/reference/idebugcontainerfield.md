@@ -1,5 +1,5 @@
 ---
-title: IDebugContainerField | Microsoft Docs
+title: IDebugContainerField | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugContainerField interface
 ms.assetid: a8bbe061-c382-4fe9-a193-3f7d12216041
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d633b7e42f8c7f64a818539694837b954ea31e72
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a72296517a64c6dcfcb8e347fb00588504aa75a4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332510"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733210"
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
-Bu arabirim, simge veya diğer semboller veya türler için bir kapsayıcı türü temsil eder.
+Bu arabirim, diğer semboller veya türler için bir kapsayıcı olan bir sembolü veya türü temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,28 +28,28 @@ Bu arabirim, simge veya diğer semboller veya türler için bir kapsayıcı tür
 IDebugContainerField : IDebugField
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Sembol sağlayıcısı bu arabirimi uygulayan aynı nesne üzerinde uygulayan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi. Bu ayrıca kapsayıcı temsil eden tüm arabirimler için temel sınıf arabirimidir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bir sembol sağlayıcısı bu arabirimi [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini uygulayan nesne üzerinde uygular. Bu arabirim aynı zamanda kapsayıcıları temsil eden tüm arabirimler için taban sınıftır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Birçok yöntemlerde pek çok arabirimi bu arabirim döndürür. Bu, tüm kapsayıcılar için bir temel sınıfı olduğu için daha özel arabirimleri elde edilen bu arabirimden kullanarak [QueryInterface](/cpp/atl/queryinterface). Bu tür arabirimleri dahil [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md), [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md), ve [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md).
+ Birçok arabirimdeki birçok yöntem bu arabirimi döndürer. Bu tüm kapsayıcılar için bir taban sınıf olduğundan, [queryInterface](/cpp/atl/queryinterface)kullanarak bu arabirimden daha özel arabirimler elde edebilirsiniz. Bu tür arabirimler [IDebugArrayField,](../../../extensibility/debugger/reference/idebugarrayfield.md) [IDebugClassField,](../../../extensibility/debugger/reference/idebugclassfield.md) [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)ve [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)içerir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Yöntemlere ek olarak [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi bu arabirim, aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|Kapsayıcının alanlar için bir numaralandırıcı oluşturur.|
+|[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|Kapsayıcının alanları için bir sayısallaştırıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
- Diziler (kapsayıcılar değişkenleri için), sınıflar (kapsayıcılar yöntemler ve değişkenler için) ve yöntemler (parametreler ve yerel değişkenler için kapsayıcılar) kapsayıcıları için tüm örnekleridir.
+ Diziler (değişkenler için kapsayıcılar), sınıflar (yöntem ve değişkenler için kapsayıcılar) ve yöntemler (parametreler ve yerel değişkenler için kapsayıcılar) kapsayıcıların tüm örnekleridir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: sh.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

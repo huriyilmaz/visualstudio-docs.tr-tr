@@ -1,40 +1,40 @@
 ---
-title: Gerekli olayları gönderme | Microsoft Docs
+title: Gerekli Olayları Gönderme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], required events
 ms.assetid: 08319157-43fb-44a9-9a63-50b919fe1377
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 44ef1bb6c436faaefb309ab62db02ee43a0486ab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cc83b47e53607fe1111ececbbf892c96f7bbb639
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345588"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713003"
 ---
 # <a name="send-the-required-events"></a>Gerekli olayları gönderme
 Gerekli olayları göndermek için bu yordamı kullanın.
 
 ## <a name="process-for-sending-required-events"></a>Gerekli olayları gönderme işlemi
- Aşağıdaki olaylar, bu sıralamayı oluşturmak bir hata ayıklama altyapısı, (DE) ve programa ekleme gereklidir:
+ Hata ayıklama altyapısı (DE) oluştururken ve bir programa iliştirilirken, bu sırada aşağıdaki olaylar gereklidir:
 
-1. Gönderme bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) oturum hata ayıklama Yöneticisi (SDM) DE bir işlem bir veya daha fazla programlarında hata ayıklama başlatıldığında olay nesnesiyle.
+1. Bir işlemde bir veya daha fazla programın hata ayıklanması için DE para açığa çıktığında oturum hata ayıklama yöneticisine (SDM) bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) olay nesnesi gönderin.
 
-2. Ayıklanacak programın bağlı olduğu zaman Gönder bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) SDM olay nesnesiyle. Bu olay altyapısı tasarımınızın bağlı olarak bir durdurma olay olabilir.
+2. Debugged edilecek program eklendiğinde, SDM'ye bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olay nesnesi gönderin. Bu olay, motor tasarımınıza bağlı olarak bir durdurma olayı olabilir.
 
-3. Program ekli ise işlem başlatıldığında Gönder bir [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) SDM yeni iş parçacığının IDE bildirmek üzere Olay nesnesiyle. Bu olay altyapısı tasarımınızın bağlı olarak bir durdurma olay olabilir.
+3. Program başlatıldığında bağlıysa, IDE'ye yeni iş parçacığı bildirmek için SDM'ye bir [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) olay nesnesi gönderin. Bu olay, motor tasarımınıza bağlı olarak bir durdurma olayı olabilir.
 
-4. Gönderme bir [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) ayıklanan programa tamamlanan yükleme veya programa ekleme tamamlandığında olduğunda SDM olay nesnesiyle. Bu olay bir durdurma olay olmalıdır.
+4. Hata ayıklanan program yükleme tamamlandığında veya programa iliştirme tamamlandığında SDM'ye bir [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) olay nesnesi gönderin. Bu olay bir durdurma olayı olmalıdır.
 
-5. Ayıklanacak uygulama başlatılmışsa, gönderme bir [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) çalıştırılmak üzere çalışma zamanı mimarisi kod ilk yönerge olduğunda SDM olay nesnesiyle. Bu olay her zaman bir durdurma olayıdır. Hata ayıklama oturumu Adımlama, IDE üzerinde bu olaya durdurur.
+5. Hata ayıklanacak uygulama başlatılırsa, çalışma zamanı mimarisindeki kodun ilk yönergesi yürütülmek üzereyken SDM'ye bir [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) olay nesnesi gönderin. Bu olay her zaman bir durdurma olayıdır. Hata ayıklama oturumuna adım atlarken, IDE bu olayı durdurur.
 
 > [!NOTE]
-> Birçok dil kodlarını başında genel başlatıcıların veya harici, önceden derlenmiş işlevleri (CRT kitaplığı veya _ana) kullanın. Programın hata ayıklamasını yaptığınız dilinin ilk giriş noktasından önce öğelerin bu türlerinden birini içeriyorsa, bu kodu çalıştırmak ve giriş noktası olayı gönderilir, kullanıcı giriş noktanız, gibi **ana** veya `WinMain`, olan ulaşıldı.
+> Birçok dil, kodlarının başında genel başlatma veya harici, önceden derlenmiş işlevler (CRT kitaplığı veya _Main) kullanır. Hata ayıklama programının dili ilk giriş noktasından önce bu tür öğelerden birini içeriyorsa, bu kod çalıştırılır ve **ana** veya `WinMain`, ana gibi kullanıcı giriş noktasına ulaşıldığında giriş noktası olayı gönderilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bir program görüntüde hata ayıklamayı etkinleştirme](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+- [Bir programın debutlanmasına olanak sağlama](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

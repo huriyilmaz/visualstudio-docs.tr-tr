@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2::CanTerminateProcess | Microsoft Docs
+title: IDebugEngineLaunch2::CanTerminateProcess | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineLaunch2::CanTerminateProcess
 ms.assetid: 7973454d-c957-4123-a0ee-80ebcdbbd2d1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2d8f401ae49edb2f77d35104de68280be322a63d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 91c68e0a0e314015c1f2e6df2a96243c6ce854e7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337217"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730566"
 ---
 # <a name="idebugenginelaunch2canterminateprocess"></a>IDebugEngineLaunch2::CanTerminateProcess
-Bir işlemin sona erdirilecek belirler.
+Bir işlemin sonlandırılap sonlandırılamayacağını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int CanTerminateProcess ( 
 
 ## <a name="parameters"></a>Parametreler
 `pProcess`\
-[in] Bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) sonlandırılacak işlemi temsil eden nesne.
+[içinde] Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `S_FALSE` erişim reddedildiğinden altyapısı işlem, örneğin, sonlandırılamadı durumunda.
+ Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. Erişim `S_FALSE` reddedildiği için, örneğin, altyapı işlemi sonlandıramıyorsa döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem döndürürse `S_OK`, ardından bunu [TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md) yöntemi, aslında işlemi sonlandırmak için çağrılabilir.
+ Bu yöntem `S_OK`dönerse, bu işlemi gerçekten sonlandırmak için [Sonlandırma İşlemi](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md) yöntemi çağrılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

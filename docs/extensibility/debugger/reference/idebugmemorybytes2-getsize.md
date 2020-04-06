@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::GetSize | Microsoft Docs
+title: IDebugMemoryBytes2::GetSize | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryBytes2::GetSize method
 - GetSize method
 ms.assetid: dae64c5f-5b54-40c3-b32f-ec3b16c093f7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0c89e6c5c9ee2b60caef10c5f8378e699b4bc49d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6de4eccb395059112dde40af36ce75798db9064b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324558"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727551"
 ---
 # <a name="idebugmemorybytes2getsize"></a>IDebugMemoryBytes2::GetSize
-Bu tarafından temsil edilen belleğin bayt cinsinden boyutunu alır [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesne.
+Bu [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi tarafından temsil edilen belleğin boyutunu, baytlarda alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +42,10 @@ int GetSize(
 
 ## <a name="parameters"></a>Parametreler
 `pqwSize`\
-[out] Boyutu bayt cinsinden bellek alanını döndürür.
+[çıkış] Bellek alanının baytlarında boyutu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

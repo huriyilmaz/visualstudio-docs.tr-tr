@@ -1,45 +1,45 @@
 ---
-title: Doğrudan programa ekleme | Microsoft Docs
+title: Doğrudan Bir Programa Bağlanma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: ad2b7db8-821c-440c-ba07-c55c6a395e0f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4bf703544bbe1932608db17addba672bfd91a70
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a9a5699ee81b8c8ae36bcf492e93467615a9e89
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350891"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739255"
 ---
-# <a name="attach-directly-to-a-program"></a>Doğrudan programa ekleme
-Program zaten genellikle çalışan bir işlemde hata ayıklamak istediğiniz kullanıcılar bu süreci izleyin:
+# <a name="attach-directly-to-a-program"></a>Doğrudan bir programa ekleme
+Zaten çalışan bir işlemde programları hata ayıklamak isteyen kullanıcılar genellikle bu işlemi izler:
 
-1. IDE'de seçin **hata ayıklama işlemleri** komutunu **Araçları** menüsü.
+1. IDE'de, **Araçlar** menüsünden **Hata Ayıklama İşlemleri** komutunu seçin.
 
-    **İşlemleri** iletişim kutusu görüntülenir.
+    **İşlemler** iletişim kutusu görüntülenir.
 
-2. Bir işlem seçin ve tıklayın **iliştirme** düğmesi.
+2. Bir işlem seçin ve **Ekle** düğmesini tıklatın.
 
-    **İliştirme** iletişim kutusu görüntülenirse, makinede yüklü tüm hata ayıklama altyapısı (DEs) listesi.
+    **İşleme Ekle** iletişim kutusu, makineye yüklenen tüm hata ayıklama motorlarını (DEs) listeleyen görüntülenir.
 
-3. Seçilen işlem hata ayıklama ve ardından kullanmak için DEs belirtin **Tamam**.
+3. Seçili işlemi hata ayıklamak için kullanılacak DEs'leri belirtin ve ardından **Tamam'ı**tıklatın.
 
-   Hata ayıklama paketi bir hata ayıklama oturumu başlatır ve DEs listesini geçirir. Hata ayıklama oturumu, seçilen işlem için bir geri çağırma işlevini yanı sıra bu liste sırayla geçirir ve sonra çalışan programları listeleme işlemi sorar.
+   Hata ayıklama paketi hata ayıklama oturumu başlatır ve DEs listesini ona geçirir. Sırayla hata ayıklama oturumu, bir geri arama işleviyle birlikte bu listeyi seçili işleme geçirir ve ardından işlemden çalışan programlarını sıralamasını ister.
 
-   Programlı olarak kullanıcı isteğine yanıt olarak, hata ayıklama paketi oturum hata ayıklama Yöneticisi (SDM) oluşturur ve bu seçilen DEs listesini geçirir. Listenin yanı sıra hata ayıklama paketi SDM geçirir. bir [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) arabirimi. Hata ayıklama paketi DEs listesini çağırarak seçili işleme geçirir [IDebugProcess2::Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md). SDM sonra çağıran [IDebugProcess2::EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) işlemde çalışan programlar numaralandırmak için bağlantı noktası.
+   Programlı olarak, kullanıcı isteğine yanıt olarak, hata ayıklama paketi oturum hata ayıklama yöneticisini (SDM) anında alar ve seçili DEs listesini ona geçirir. Listeyle birlikte hata ayıklama paketi SDM bir [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) arabiriminden geçer. Hata ayıklama [paketi, IDebugProcess2::Attach'ı](../../extensibility/debugger/reference/idebugprocess2-attach.md)arayarak DEs listesini seçili işleme geçer. SDM daha sonra [iDebugProcess2::EnumPrograms'ı](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) işlemde çalışan programları sayısallandırmak için bağlantı noktasında çağırır.
 
-   Bu noktadan itibaren her hata ayıklama altyapısı tam olarak, ayrıntılı bir program iliştirildiği [başlatmadan sonra ekleme](../../extensibility/debugger/attaching-after-a-launch.md), iki özel durumu.
+   Bu noktadan itibaren, her hata ayıklama motoru, iki istisna dışında, [bir başlatmadan sonra Ekleme'de](../../extensibility/debugger/attaching-after-a-launch.md)ayrıntılı olarak ayrıntılı bir programa eklenir.
 
-   Verimlilik için bir adres alanı ile SDM paylaşmak için uygulanan DEs gruplanır her DE bir dizi program, bağlanacağı sahip olacak şekilde. Bu durumda, [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) çağrıları [IDebugEngine2::Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) ve bir dizi eklemek için programlar geçirir.
+   Verimlilik için, bir adres alanını SDM ile paylaşmak için uygulanan DE'ler, her DE'nin ekleyeceği bir dizi programa sahip olacak şekilde gruplandırılır. Bu durumda, [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) [iDebugEngine2 çağırır::Ekle](../../extensibility/debugger/reference/idebugengine2-attach.md) ve eklemek için programlar bir dizi geçer.
 
-   Zaten çalışan bir programa ekleme bir DE gönderdiği başlangıç olayları genellikle giriş noktası olayı içermez ikinci istisnadır.
+   İkinci özel durum, bir DE tarafından gönderilen başlangıç olaylarının zaten çalışan bir programa iliştirilmesi genellikle giriş noktası olayını içermemesidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Başlatmadan sonra Başlangıç olaylarını gönderme](../../extensibility/debugger/sending-startup-events-after-a-launch.md)
-- [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)
+- [Başlatmadan sonra başlangıç etkinliklerigönderme](../../extensibility/debugger/sending-startup-events-after-a-launch.md)
+- [Görevleri hata ayıklama](../../extensibility/debugger/debugging-tasks.md)

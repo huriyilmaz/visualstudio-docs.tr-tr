@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2 | Microsoft Docs
+title: IDebugExpressionContext2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionContext2 interface
 ms.assetid: 577fdaae-4b2d-4112-9839-ab899535fa6f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ad9c3d6bb1b0a5baccbcf5bf47eb02a8bb5efa5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 344ae287b3784ceca87fbbab09ad2b2e0a304205
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325861"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729633"
 ---
 # <a name="idebugexpressioncontext2"></a>IDebugExpressionContext2
-İfade değerlendirme bağlamının bu arabirimi temsil eder
+Bu arabirim ifade değerlendirmesi için bir bağlam temsil eder
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,31 +28,31 @@ ms.locfileid: "66325861"
 IDebugExpressionContext2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE), bir ifade değerlendirilebilen bir bağlamı temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), bir ifadenin değerlendirilebileceği bir bağlamı temsil etmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir çağrı [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) bu döndürür arabirimi. Bu arabirim, yalnızca hata ayıklanan programa duraklatıldı ve bir yığın çerçevesini kullanılabilir olduğunda erişilebilir.
+ [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) için bir çağrı bu arabirimi döndürür. Bu arabirime yalnızca debugged olan program duraklatılmış ve bir yığın çerçeve kullanılabilir olduğunda erişilebilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugExpressionContext2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugExpressionContext2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetName](../../../extensibility/debugger/reference/idebugexpressioncontext2-getname.md)|Değerlendirme bağlamı adını alır.|
-|[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)|Metin tabanlı bir ifade değerlendirme ayrıştırır.|
+|[GetName](../../../extensibility/debugger/reference/idebugexpressioncontext2-getname.md)|Değerlendirme bağlamının adını alır.|
+|[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)|Değerlendirme için metin tabanlı bir ifadeyi parslar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Değerlendirme bağlamı, ifade değerlendirmesi gerçekleştirmek için kapsam olarak düşünülebilir.
+ Bir değerlendirme bağlamı ifade değerlendirmesi gerçekleştirmek için bir kapsam olarak düşünülebilir.
 
- Bir program durdu, oturum hata ayıklama Yöneticisi (SDM) bir yığın çerçevesi bir çağrı ile DE elde [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md). SDM sonra çağıran [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) almak için `IDebugExpressionContext2` arabirimi. Bu çağrı takip [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) oluşturmak için bir [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) değerlendirilecek hazır ayrıştırılmış ifadeyi temsil eden arabirim.
+ Bir program durdurulduğunda, oturum hata ayıklama yöneticisi (SDM) [EnumFrameInfo'ya](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)bir çağrı yla DE'den bir yığın çerçevesi alır. SDM daha sonra arabirimi almak `IDebugExpressionContext2` için [GetExpressionContext'ı](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) arar. Bunu, ayrıştırılmış ifadeyi temsil eden bir [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimi oluşturmak için [ParseText'e](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yapılan çağrı takip eder.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

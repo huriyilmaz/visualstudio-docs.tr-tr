@@ -1,106 +1,106 @@
 ---
-title: Özel düzenleyiciler ve tasarımcılar oluşturma | Microsoft Docs
+title: Özel Editörler ve Tasarımcılar Oluşturma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK]
 - editors [Visual Studio SDK], custom
 ms.assetid: b6a5e8b2-0ae1-4fc3-812d-09d40051b435
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a6cb0d70566eaabb2ba37cb209041e03684c958
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: b9f56b82225e1e40782b6753bea03d3c1780f596
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568872"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739481"
 ---
-# <a name="create-custom-editors-and-designers"></a>Özel düzenleyiciler ve tasarımcılar oluşturma
+# <a name="create-custom-editors-and-designers"></a>Özel editörler ve tasarımcılar oluşturun
 
-Visual Studio tümleşik geliştirme ortamı (IDE) farklı düzenleyici türlerini barındırabilir:
+Visual Studio entegre geliştirme ortamı (IDE) farklı editör türlerini barındırabilir:
 
-- Visual Studio temel Düzenleyicisi
+- Visual Studio çekirdek editörü
 
-- Özel düzenleyiciler
+- Özel editörler
 
-- Dış düzenleyiciler
+- Dış Editörler
 
 - Tasarımcılar
 
-Aşağıdaki bilgiler, ihtiyacınız olan düzenleyicinin türünü seçmenize yardımcı olur.
+Aşağıdaki bilgiler, gereksinim duyduğunuz düzenleyici türünü seçmenize yardımcı olur.
 
-## <a name="types-of-editor"></a>Düzenleyici türleri
+## <a name="types-of-editor"></a>Editör türleri
 
-Visual Studio çekirdek Düzenleyicisi hakkında daha fazla bilgi için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md).
+Visual Studio çekirdek editörü hakkında daha fazla bilgi için [editör ve dil hizmetlerini genişlet'e](../extensibility/extending-the-editor-and-language-services.md)bakın.
 
-### <a name="custom-editors"></a>Özel düzenleyiciler
- Özel bir düzenleyici, özelleştirilmiş koşullarda çalışmak üzere tasarlanan bir düzenleyicidir. Örneğin, işlevi, Microsoft Exchange Server gibi belirli bir depoya veri okuma ve yazma işlemi olan bir düzenleyici oluşturabilirsiniz. Yalnızca birkaç özel komuta sahip bir düzenleyici istiyorsanız, yalnızca proje türüyle çalışacak bir düzenleyici istiyorsanız özel bir düzenleyici seçin. Ancak, kullanıcıların standart [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projelerini düzenlemek için özel bir düzenleyici kullanabilebileceğine unutmayın.
+### <a name="custom-editors"></a>Özel editörler
+ Özel bir editör özel durumlarda çalışmak üzere tasarlanmış biridir. Örneğin, işlevi Microsoft Exchange sunucusu gibi belirli bir depoya veri okuyup yazmak olan bir düzenleyici oluşturabilirsiniz. Yalnızca proje türünüzle çalışan bir düzenleyici veya yalnızca birkaç özel komutu olan bir düzenleyici istiyorsanız özel bir düzenleyici seçin. Ancak, kullanıcıların standart [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projeleri yeniden dizinetmek için özel bir düzenleyici kullanamayacağını unutmayın.
 
- Özel bir düzenleyici bir düzenleyici fabrikası kullanabilir ve kayıt defterine Düzenleyici hakkında bilgi ekleyebilir. Ancak, özel düzenleyiciyle ilişkilendirilen proje türü özel düzenleyiciyi başka yollarla oluşturabilir.
+ Özel bir düzenleyici, bir düzenleyici fabrikasını kullanabilir ve kayıt defterine editör hakkında bilgi ekleyebilir. Ancak, özel düzenleyiciile ilişkili proje türü, özel düzenleyiciyi başka şekillerde anında atabilir.
 
- Özel bir düzenleyici, bir görünümü uygulamak için yerinde etkinleştirme ya da Basitleştirilmiş ekleme kullanabilir.
+ Özel bir düzenleyici, görünümü uygulamak için yerinde etkinleştirme veya basitleştirilmiş katıştırma kullanabilir.
 
-### <a name="external-editors"></a>Dış düzenleyiciler
- Dış düzenleyiciler, Visual Studio ile tümleştirilen, Microsoft Word, Notepad veya Microsoft FrontPage gibi düzenleyicilerlerdir. Örneğin, VSPackage 'ınızdan metin aktarıyorsanız bu tür bir düzenleyiciyi çağırabilirsiniz. Dış düzenleyiciler kendilerini kaydeder ve Visual Studio 'Nun dışında kullanılabilir. Harici bir düzenleyiciyi çağırdığınızda ve bir konak penceresine katıştırılabildiğinden, IDE 'deki bir pencerede görüntülenir. Aksi takdirde, IDE bunun için ayrı bir pencere oluşturur.
+### <a name="external-editors"></a>Dış editörler
+ Dış editörler, Visual Studio'ya Microsoft Word, Not Defteri veya Microsoft FrontPage gibi tümleşik olmayan düzenleyicilerdir. Örneğin, VSPackage'ınızdan metin geçiriyorsanız, böyle bir düzenleyici yi çağırabilirsiniz. Dış editörler kendilerini kaydeder ve Visual Studio dışında kullanılabilir. Harici bir düzenleyiciyi çağırdığınızda ve ana bilgisayar penceresine katıştırılmış olabilir, sonra IDE'deki bir pencerede görünür. Değilse, IDE bunun için ayrı bir pencere oluşturur.
 
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> yöntemi, <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> sabit listesini kullanarak belge önceliğini ayarlar. `DP_External` değeri belirtilmişse, dosya harici bir düzenleyici tarafından açılabilir.
+ Yöntem, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> numaralandırmayı kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> belge önceliğini ayarlar. Değer `DP_External` belirtilirse, dosya harici bir düzenleyici tarafından açılabilir.
 
-## <a name="editor-design-decisions"></a>Düzenleyici tasarım kararları
- Aşağıdaki tasarım soruları, uygulamanıza en uygun düzenleyici türünü seçmenize yardımcı olur:
+## <a name="editor-design-decisions"></a>Editör tasarım kararları
+ Aşağıdaki tasarım soruları, uygulamanız için en uygun düzenleyici türünü seçmenize yardımcı olacaktır:
 
-- Uygulamanız verileri dosyalara kaydetmek mi, yoksa mı? Verileri dosyalara kaydedecektir, özel veya standart biçimde olacaktır mi?
+- Uygulamanız verilerini dosyalara kaydedecek mi, kaydetmez mi? Verilerini dosyalara kaydedecekse, özel veya standart biçimde mi olacak?
 
-   Standart bir dosya biçimi kullanırsanız, projenize ek olarak diğer proje türleri de açabilir ve verileri okuyabilir/yazabilir. Ancak, özel bir dosya biçimi kullanırsanız, yalnızca proje türü verileri açabilir ve bunlara okuyabilir/yazabilir.
+   Standart bir dosya biçimi kullanıyorsanız, projenize ek olarak diğer proje türleri onlara veri açıp okuyabilecek/yazabilecektir. Ancak, özel bir dosya biçimi kullanıyorsanız, yalnızca proje türünüz onlara veri açıp okuyabilir/yazabilir.
 
-   Projeniz dosyaları kullanıyorsa, standart düzenleyiciyi özelleştirmeniz gerekir. Projeniz dosyaları kullanmıyorsa, ancak bir veritabanı veya başka bir depodaki öğeleri kullanıyorsa, özel bir düzenleyici oluşturmanız gerekir.
+   Projeniz dosyaları kullanıyorsa, standart düzenleyiciyi özelleştirmeniz gerekir. Projeniz dosyaları kullanmıyorsa, ancak daha çok bir veritabanıveya başka bir depodaki öğeleri kullanıyorsa, özel bir düzenleyici oluşturmanız gerekir.
 
-- Düzenleyicinizde ActiveX denetimleri barındırmı gerekiyor?
+- Düzenleyicinizin ActiveX denetimlerini barındırması gerekiyor mu?
 
-   Düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](/visualstudio/misc/in-place-activation?view=vs-2015)' de açıklandığı gibi bir yerinde etkinleştirme Düzenleyicisi uygulayın. ActiveX denetimlerini barındırmadığından, Basitleştirilmiş bir katıştırma düzenleyicisi kullanın veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
+   Düzenleyiciniz ActiveX denetimlerini barındırıyorsa, [yerinde etkinleştirmede](/visualstudio/misc/in-place-activation?view=vs-2015)belirtildiği gibi yerinde etkinleştirme düzenleyicisi uygulayın. ActiveX denetimlerini barındırmıyorsa, basitleştirilmiş bir katıştırma düzenleyicisi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanın veya varsayılan düzenleyiciyi özelleştirin.
 
-- Düzenleyiciniz birden fazla görünümü destekliyor mu? Düzenleyicinizdeki görünümlerin varsayılan düzenleyiciyle aynı anda görünür olmasını istiyorsanız birden çok görünümü desteklemeniz gerekir.
+- Editörünüz birden fazla görünümü destekleyecek mi? Düzenleyicinizin görünümlerinin varsayılan düzenleyiciyle aynı anda görünür olmasını istiyorsanız, birden çok görünümü desteklemeniz gerekir.
 
-   Düzenleyicinin birden çok görünümü desteklemesi gerekiyorsa, düzenleyicinin belge verileri ve belge görünümü nesneleri ayrı nesneler olmalıdır. Daha fazla bilgi için bkz. [birden çok belge görünümünü destekleme](../extensibility/supporting-multiple-document-views.md).
+   Düzenleyicinizin birden çok görünümü desteklemesi gerekiyorsa, düzenleyicinin belge verileri ve belge görünümü nesneleri ayrı nesneler olmalıdır. Daha fazla bilgi için [bkz.](../extensibility/supporting-multiple-document-views.md)
 
-   Düzenleyiciniz birden çok görünümü destekliyorsa, belge verileri nesneniz için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çekirdek Düzenleyicisi 'nin metin arabellek uygulamasını (<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesnesi) kullanmayı planlıyorsunuz musunuz? Diğer bir deyişle, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çekirdek Düzenleyicisi ile düzenleyici görünümünüzü yan yana desteklemek istiyor musunuz? Bunu yapma özelliği, form tasarımcısının temelini oluşturur.
+   Düzenleyiciniz birden çok görünümü destekliyorsa, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] belge veri nesneniz için<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> temel düzenleyicinin metin arabelleği uygulamasını (nesnesi) kullanmayı planlıyor musunuz? Diğer bir şey, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] editör görünümünüzü çekirdek editörle yan yana desteklemek istiyor musunuz? Bunu yapmak için yeteneği formlar tasarımcının temelidir ...
 
-- Harici bir düzenleyiciyi barındırmanıza ihtiyacınız varsa, düzenleyici [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]içine katıştırılabilir mi?
+- Harici bir editör barındırmanız gerekiyorsa, editör içine [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]gömülü olabilir mi?
 
-   Katıştırılabiliyorsanız, dış düzenleyici için bir konak penceresi oluşturmanız ve ardından <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> yöntemini çağırmanız ve <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> numaralandırma değerini `DP_External`olarak ayarlamanız gerekir. Düzenleyici katıştırılamayacağını içeriyorsa, IDE otomatik olarak ayrı bir pencere oluşturur.
+   Katıştırılmış sayılsa, dış düzenleyici için bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> ana bilgisayar <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> penceresi oluşturmalı ve `DP_External`ardından yöntemi aramalı ve numaralandırma değerini . Düzenleyici katıştırılamazsa, IDE otomatik olarak bunun için ayrı bir pencere oluşturur.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Izlenecek yol: özel bir düzenleyici\ oluşturma](../extensibility/walkthrough-creating-a-custom-editor.md)
-Özel bir düzenleyicinin nasıl oluşturulacağını açıklar.
+[Walkthrough: Özel bir düzenleyici oluşturma](../extensibility/walkthrough-creating-a-custom-editor.md)\
+Özel bir düzenleyicinin nasıl oluşturulurmasını açıklar.
 
-[Izlenecek yol: özel bir düzenleyiciye özellikler ekleme](../extensibility/walkthrough-adding-features-to-a-custom-editor.md)\
-Özel bir düzenleyiciye özelliklerin nasıl ekleneceğini açıklar.
+[İzole: Özel bir düzenleyiciye özellikler ekleme](../extensibility/walkthrough-adding-features-to-a-custom-editor.md)\
+Özel bir düzenleyiciye nasıl özellik ekleyeceğini açıklar.
 
-[Tasarımcı başlatma ve meta veri yapılandırma](../extensibility/designer-initialization-and-metadata-configuration.md)\
-Bir tasarımcının nasıl başlatılacağını açıklar.
+[Tasarımcı başlatma ve meta veri yapılandırması](../extensibility/designer-initialization-and-metadata-configuration.md)\
+Bir tasarımcının nasıl başharfe atılanıntırılıyor.
 
-[Tasarımcılara geri alma desteği sağlayın](../extensibility/supplying-undo-support-to-designers.md)\
-Tasarımcılar için geri alma desteğinin nasıl sağlanacağını açıklar.
+[Tasarımcılara geri alım desteği](../extensibility/supplying-undo-support-to-designers.md)\
+Tasarımcılar için geri geri verme desteğinin nasıl sağlayabileceğini açıklar.
 
-[Özel düzenleyicilerde söz dizimi renklendirmesi](../extensibility/syntax-coloring-in-custom-editors.md)\
-Çekirdek düzenleyicide ve özel düzenleyicilerde sözdizimi renklendirme arasındaki farkı açıklar.
+[Özel editörlerde sözdizimi boyama](../extensibility/syntax-coloring-in-custom-editors.md)\
+Çekirdek düzenleyicide ve özel editörlerde sözdizimi boyama arasındaki farkı açıklar.
 
-[Özel düzenleyicilerde belge verilerini ve belge görünümünü](../extensibility/document-data-and-document-view-in-custom-editors.md)\
-Belge verilerinin ve belge görünümlerinin özel düzenleyicilerde nasıl uygulanacağını açıklar.
+[Özel düzenleyicilerde belge verileri ve belge görünümü](../extensibility/document-data-and-document-view-in-custom-editors.md)\
+Özel düzenleyicilerde belge verilerinin ve belge görünümlerinin nasıl uygulanacağını açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Düzenleyicideki eski arabirimler](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)\
-Çekirdek düzenleyiciye, eski API 'nin yoluyla nasıl erişebileceğinizi açıklar.
+[Editörde eski arayüzler](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)\
+Eski API ile çekirdek düzenleyiciye nasıl erişilenleri açıklar.
 
-[Eski dil hizmeti\ geliştirme](../extensibility/internals/developing-a-legacy-language-service.md)
-Bir dil hizmetinin nasıl uygulanacağını açıklar.
+[Eski bir dil hizmeti geliştirme](../extensibility/internals/developing-a-legacy-language-service.md)\
+Dil hizmetinin nasıl uygulanacağını açıklar.
 
-[Visual Studio 'nun diğer kısımlarını genişletme](../extensibility/extending-other-parts-of-visual-studio.md)\
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]geri kalanı ile eşleşen kullanıcı arabirimi öğelerinin nasıl oluşturulacağını açıklar.
+[Visual Studio'nun diğer bölümlerini genişletin](../extensibility/extending-other-parts-of-visual-studio.md)\
+Geri kalanıyla eşleşen ui öğelerinin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]nasıl oluşturulacak larını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

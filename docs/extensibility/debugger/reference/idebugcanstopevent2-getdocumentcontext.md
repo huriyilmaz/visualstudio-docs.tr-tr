@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetDocumentContext | Microsoft Docs
+title: IDebugCanStopEvent2::GetDocumentContext | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCanStopEvent2::GetDocumentContext
 ms.assetid: 936a6c4e-30c5-4c7e-9ad5-910cc605a4b5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1c3d409b0fa4438331d1a798e5fd6e21b2c10ca9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e3dc5e4bd7144db7fa94425371488bfd8c0e57ed
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349540"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734548"
 ---
 # <a name="idebugcanstopevent2getdocumentcontext"></a>IDebugCanStopEvent2::GetDocumentContext
-Bu olay konumunu tanımlayan belge bağlamını alır.
+Bu olayın konumunu açıklayan belge bağlamını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,15 +41,15 @@ int GetDocumentContext ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppDocCxt`\
-[out] Döndürür [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) geçerli kod konumuna karşılık gelen bir kaynak dosyası belgedeki bir konumu temsil eden arabirim.
+[çıkış] Geçerli kod konumuna karşılık gelen kaynak dosya belgesindeki bir konumu temsil eden [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Genellikle, belge bağlamı, kaynak dosyada bir konum olarak düşünülebilir.
+ Genellikle, belge bağlamı kaynak dosyadaki bir konum olarak düşünülebilir.
 
- Kod yönergeler yönlendirilmiş olan kod bağlamı alma çağrısı [GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md) yöntemi.
+ Kod yönergelerine yönelik kod bağlamını almak için [GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetSize | Microsoft Docs
+title: IDebugDisassemblyStream2::GetSize | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::GetSize
 ms.assetid: 8f512704-12d0-46d2-959a-4f8dffe117b5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cb13ac24aaa542d3111ff3480ac340615226a0a7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 75fa12b1e9e70601626667dd3707f1e230f5de0c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310414"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732108"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
-Bu çözümü akış yönergelerinde boyutunu alır.
+Bu sökme akışının yönergelerindeki boyutu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,15 +41,15 @@ int GetSize( 
 
 ## <a name="parameters"></a>Parametreler
 `pnSize`\
-[out] Yönergeleri boyutunu döndürür.
+[çıkış] Yönergeleri boyutu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemi tarafından döndürülen değer, bir dizi ayırmak için kullanılabilir [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) geçirilerek yapılar [okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemi.
+ Bu yöntemden döndürülen değer, daha sonra [Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemine geçirilen bir dizi [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısını ayırmak için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)
-- [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+- [Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)

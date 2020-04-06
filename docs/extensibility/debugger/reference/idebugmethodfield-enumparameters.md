@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumParameters | Microsoft Docs
+title: IDebugMethodField::EnumParametreler | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMethodField::EnumParameters method
 ms.assetid: d77b1197-deb6-4144-8d1b-8b09949ccfac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4d455d380f66689cd2245070a7ef0bf9290a2455
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 13df02cf5870e630c4aecb34e9295d218ba7a0eb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324214"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727190"
 ---
 # <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
-Yöntem parametreleri için bir numaralandırıcı oluşturur.
+Yöntemin parametreleri için bir sayısallaştırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,17 +41,17 @@ int EnumParameters(
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-[out] Döndürür bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) yöntem için parametrelerin listesini temsil eden nesne; hiç parametre varsa, aksi durumda null değeri döndürür.
+[çıkış] Parametre listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesini yönteme döndürür; aksi takdirde, parametre yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür veya parametresiz varsa S_FALSE döndürür. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, parametre yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Her öğe bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) farklı parametre türleri temsil eden nesne. Çağrı [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) tam olarak hangi tür parametresi bir nesneyi temsil belirlemek için her bir nesne üzerindeki yöntemi.
+ Her öğe, farklı parametre türlerini temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Nesnenin tam olarak ne tür bir parametreyi temsil etmesini belirlemek için her nesnedeki [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemini arayın.
 
- Bir parametre hem değişken adını ve türünü içerir. İlk parametre olarak sınıf yöntemi genellikle "Bu" işaretçisidir.
+ Bir parametre hem değişken adını hem de türünü içerir. Bir sınıf yönteminin ilk parametresi genellikle "bu" işaretçisidir.
 
- Yalnızca bir parametre türleri gereklidir, çağrı [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) yöntemi.
+ Yalnızca parametre türleri gerekiyorsa, [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

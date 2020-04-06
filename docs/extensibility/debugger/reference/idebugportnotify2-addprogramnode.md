@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2::AddProgramNode | Microsoft Docs
+title: IDebugPortNotify2::AddProgramNode | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortNotify2::AddProgramNode
 ms.assetid: 34c0e949-1eb9-4108-9cb8-a3eb87fcf190
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f0afd0b2ae50555e29a75159edb8f52635730a56
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9090c39d85519435d17c940ad21fd55d26904765
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319472"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724980"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
-Hata ayıklaması yapılabilir bir program çalıştığı bağlantı noktası ile kaydeder.
+Üzerinde çalışan bağlantı noktası ile debugged olabilir bir program kaydeder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int AddProgramNode( 
 
 ## <a name="parameters"></a>Parametreler
 `pProgramNode`\
-[in] Bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) kaydedilecek program temsil eden nesne.
+[içinde] Kaydedilecek programı temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir program düğüm bağlantı noktasından çağırarak kaldırmanın [RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemi.
+ Bir program düğümü [RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemini arayarak bağlantı noktasından kayıt dışı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)

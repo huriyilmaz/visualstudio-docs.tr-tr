@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointBoundEvent2::EnumBoundBreakpoints | Microsoft Docs
+title: IDebugBreakpointBoundEvent2::EnumBoundBreakpoints | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointBoundEvent2::EnumBoundBreakpoints
 ms.assetid: 1f588feb-522e-488d-be92-7bc19b9e3688
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2584e49209dd95c3d43673eadf72e138ac828f57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2f208c52bd45953aaad9efab9b6b65b15b3b759c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314396"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735363"
 ---
 # <a name="idebugbreakpointboundevent2enumboundbreakpoints"></a>IDebugBreakpointBoundEvent2::EnumBoundBreakpoints
-Bir numaralandırıcı üzerinde bu olaya bağlı olan kesme noktaları oluşturur.
+Bu olaya bağlı olan kesme noktalarının bir sayıyı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ int EnumBoundBreakpoints( 
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] Döndürür bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) tüm kesme noktalarını numaralandırır nesne, bu olaydan bağlı.
+[çıkış] Bu olaydan bağlı tüm kesme noktalarını ayıklayan bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` vardır ilişkili hiçbir kesme noktası; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döndürür. Bağlı `S_FALSE` kesme noktaları yoksa döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bağlı kesme noktaları listesini, bu olay için bu sınır için ve bir bekleyen kesme noktasından bağlı kesme noktaları listesini olmayabilir. Tüm kesme noktalarını bir bekleyen kesme noktasına bağlı bir listesini almak için arama [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) ilişkili almak için yöntemi [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi ve ardından arama [ EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) almak için yöntemi bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) tüm bağlı kesme noktaları için bekleyen kesme noktasının içeren nesne.
+Bağlı kesme noktaları listesi bu olaya bağlı olanlar içindir ve bekleyen bir kesme noktasından bağlı kesme noktalarının tüm listesi olmayabilir. Bekleyen bir kesme noktasına bağlı tüm kesme noktalarının listesini almak için, ilişkili [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini almak için [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) yöntemini arayın ve ardından bekleyen kesme noktası için tüm bağlamalı kesme noktalarını içeren bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) nesnesini almak için [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) yöntemini arayın.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CBreakpointSetDebugEventBase** gösteren nesne [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) arabirimi.
+Aşağıdaki örnek, [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) arabirimini ortaya çıkaran bir **CBreakpointSetDebugEventBase** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CBreakpointSetDebugEventBase::EnumBoundBreakpoints(

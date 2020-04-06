@@ -1,32 +1,32 @@
 ---
-title: Modüller | Microsoft Docs
+title: Modüller | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - modules
 - debugging [Debugging SDK], modules
 ms.assetid: c4cf2809-dbdb-4e75-9273-b3d3d77b67d0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b231ee1eb84f41115a0892cda42a8b7e781e5e53
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: abdf76c7f5f031d2ef7f3bcac2bae8a2c508b783
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350673"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738354"
 ---
 # <a name="modules"></a>Modüller
-Hata ayıklayıcı mimarisi bakımından bir *Modülü*:
+Hata ayıklama mimarisi açısından, bir *modül:*
 
-- Kod, bir yürütülebilir dosya veya bir DLL gibi fiziksel bir kapsayıcıdır.
+- Yürütülebilir dosya veya DLL gibi fiziksel bir kod kapsayıcısıdır.
 
-- Onun semboller yeniden yükleyin ve kendisini açıklar. Modül tanımları, IDE'nin modülleri penceresinde görüntülenir.
+- Sembollerini yeniden yükleyebilir ve kendini tarif edebilir. Modül açıklamaları IDE'nin Modüller penceresinde görüntülenir.
 
-- Tarafından temsil edilen bir [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimi, modül tanımlamak için hata ayıklama altyapısı tarafından oluşturuldu.
+- Modülü tanımlamak için hata ayıklama altyapısı tarafından oluşturulan bir [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimi tarafından temsil edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklama kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)

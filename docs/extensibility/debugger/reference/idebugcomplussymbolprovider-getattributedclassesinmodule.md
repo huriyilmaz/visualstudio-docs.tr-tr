@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider::GetAttributedClassesinModule
 - GetAttributedClassesinModule
 ms.assetid: d8b087f3-1d32-4570-9eb0-7e0f7b051bc8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7aaff6ee7b770ce55a2ad08ff3d8f4f392375576
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 408aa2f373ab296394a0181014c16b1697fdf9ae
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336930"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733924"
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesinmodule"></a>IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-Belirtilen modüldeki belirtilen özniteliğine sahip sınıf alır.
+Belirli bir modülde belirtilen özniteliğe sahip sınıfları alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,22 +46,22 @@ int GetAttributedClassesinModule (
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[in] Uygulama etki alanı tanımlayıcısı.
+[içinde] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[in] Modülün benzersiz tanımlayıcısı.
+[içinde] Modülün benzersiz tanımlayıcısı.
 
 `pstrAttribute`\
-[in] Öznitelik dize.
+[içinde] Öznitelik dizesi.
 
 `ppEnum`\
-[out] Öznitelikli sınıfları numaralandırmasını döndürür.
+[çıkış] Atfedilen sınıfların numaralandırmasını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugSymbolProvider** gösteren nesne [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimi.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAttributedClassesinModule(

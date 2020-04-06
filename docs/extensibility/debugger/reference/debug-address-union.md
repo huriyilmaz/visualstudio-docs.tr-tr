@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS_UNION | Microsoft Docs
+title: DEBUG_ADDRESS_UNION | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_ADDRESS_UNION union
 ms.assetid: e3d11aab-de0d-4109-b5dc-11e07e64382d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3dbd114fb06bfd688c720744dbbad69bd0dae6aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ad531ee10914e404459632c98aae4a9bbda8e437
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346279"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737530"
 ---
-# <a name="debugaddressunion"></a>DEBUG_ADDRESS_UNION
-Adresleri farklı türleri açıklanmaktadır.
+# <a name="debug_address_union"></a>DEBUG_ADDRESS_UNION
+Farklı türde adresleri açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,50 +54,50 @@ public struct DEBUG_ADDRESS_UNION {
 
 ## <a name="members"></a>Üyeler
 `dwKind`\
-Bir değer [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) sabit listesi, UNION yorumlama belirtme.
+ADDRESS_KIND numaralandırmadan birliğin nasıl yorumlanacağına göre bir değer. [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)
 
 `addr.addrNative`\
-[C++ yalnızca] İçeren [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) , yapı `dwKind` ADDRESS_KIND_NATIVE =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_NATIVE [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) yapısını içerir.
 
 `addr.addrThisRel`\
-[C++ yalnızca] İçeren[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) , yapı `dwKind` ADDRESS_KIND_UNMANAGED_THIS_RELATIVE =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_UNMANAGED_THIS_RELATIVE[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) yapısını içerir.
 
 `addr.addUPhysical`\
-[C++ yalnızca] İçeren[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) , yapı `dwKind` ADDRESS_KIND_UNMANAGED_PHYSICAL =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_UNMANAGED_PHYSICAL[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) yapısını içerir.
 
 `addr.addrMethod`\
-[C++ yalnızca] İçeren[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) , yapı `dwKind` ADDRESS_KIND_METHOD =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_METHOD[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) yapısını içerir.
 
 `addr.addrField`\
-[C++ yalnızca] İçeren[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) , yapı `dwKind` ADDRESS_KIND_FIELD =.
+[Yalnızca C++ ] eğer `dwKind` = ADDRESS_KIND_FIELD[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) yapısını içerir.
 
 `addr.addrLocal`\
-[C++ yalnızca] İçeren[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) , yapı `dwKind` ADDRESS_KIND_LOCAL =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_LOCAL[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) yapısını içerir.
 
 `addr.addrParam`\
-[C++ yalnızca] İçeren[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) , yapı `dwKind` ADDRESS_KIND_PARAM =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_PARAM[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) yapısını içerir.
 
 `addr.addrArrayElem`\
-[C++ yalnızca] İçeren[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) , yapı `dwKind` ADDRESS_KIND_ARRAYELEM =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_ARRAYELEM[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) yapısını içerir.
 
 `addr.addrRetVal`\
-[C++ yalnızca] İçeren[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) , yapı `dwKind` ADDRESS_KIND_RETVAL =.
+[Yalnızca C++ ] if `dwKind` = ADDRESS_KIND_RETVAL[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) yapısını içerir.
 
 `addr.unused`\
-[C++ yalnızca] doldurma.
+[Yalnızca C++ dolgu.
 
 `addr`\
-[C++ yalnızca] Union adıdır.
+[Yalnızca C++ ] Sendikanın adı.
 
 `unionmember`\
-[C# yalnızca] Bu değer, uygun yapı türüne göre sıralanması gerekiyor `dwKind`. Arasındaki ilişki için açıklamalara bakın `dwKind` ve birleşimin yorumu.
+[Yalnızca C# ] Bu değerin `dwKind`uygun yapı türüne göre marshaled gerekir. Bkz. Birliğin `dwKind` ilişkisi ve yorumu için açıklamalar.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı parçasıdır [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısı ve birkaç farklı türde adresleri birini temsil eder ( `DEBUG_ADDRESS` yapı doldurulur yapılan bir çağrıyla [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) yöntemi).
+Bu yapı [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısının bir parçasıdır ve farklı türde adreslerden `DEBUG_ADDRESS` birini temsil eder (yapı [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) yöntemine yapılan bir çağrı yla doldurulur).
 
- [C# yalnızca] Aşağıdaki tablo nasıl yorumlanacağını gösterir `unionmember` üyesi için her türde bir adres. Bu örnek, bir türde bir adres için nasıl yapıldığını gösterir.
+ [Yalnızca C# ] Aşağıdaki tablo, üyenin `unionmember` her bir adres türü için nasıl yorumlanacağı gösterilmektedir. Örnek, bunun bir tür adres için nasıl yapıldığını gösterir.
 
-|`dwKind`|`unionmember` yorumlanan|
+|`dwKind`|`unionmember`olarak yorumlanır|
 |--------------|----------------------------------|
 |`ADDRESS_KIND_NATIVE`|[NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md)|
 |`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`|[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)|
@@ -110,7 +110,7 @@ Bu yapı parçasıdır [DEBUG_ADDRESS](../../../extensibility/debugger/reference
 |`ADDRESS_KIND_RETVAL`|[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|
 
 ## <a name="example"></a>Örnek
-Bu örnek, bir türde bir adres yorumlama gösterir (`METADATA_ADDRESS_ARRAYELEM`), `DEBUG_ADDRESS_UNION` C# yapısı. Kalan öğelerin tam olarak aynı şekilde yorumlanabilir.
+Bu örnek, C#'daki yapının bir tür adresinin ()`METADATA_ADDRESS_ARRAYELEM`nasıl yorumlanacağıgöster. `DEBUG_ADDRESS_UNION` Kalan öğeler tam olarak aynı şekilde yorumlanabilir.
 
 ```csharp
 using System;
@@ -139,7 +139,7 @@ namespace MyPackage
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

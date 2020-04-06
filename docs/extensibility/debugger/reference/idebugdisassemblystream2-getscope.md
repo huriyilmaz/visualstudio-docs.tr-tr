@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetScope | Microsoft Docs
+title: IDebugDisassemblyStream2::GetScope | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::GetScope
 ms.assetid: 71c6e632-642a-42d8-a995-77e4ac190a5b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e5454880c1513f20755dd0527465f4b2f49e58e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 222a3b2c6110f1998a4848f382694b6b999cd632
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310447"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732142"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
-Ayrıştırılmış kod akışın kapsamını alır.
+Sökme akışının kapsamını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetScope( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwScope`\
-[out] Bir değer döndürür [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) bu ayrıştırılmış kodu akışın kapsamını tanımlayan sabit listesi.
+[çıkış] Bu sökme akışının kapsamını açıklayan [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) numaralandırmadan bir değer verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir ayrıştırma kapsamını bir işlev veya tüm modül, örneğin olabilir.
+ Bir sökme kapsamı bir işlev veya tüm modül, örneğin olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

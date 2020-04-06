@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer | Microsoft Docs
+title: IDebugCustomViewer | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomViewer interface
 ms.assetid: 7aca27d3-c7b8-470f-b42c-d1e9d9115edd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46561bbab71b12d924edec96650736c8b1576894
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c44d2289180ece35725b9258e9d20abeb3a4cac3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328026"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732424"
 ---
 # <a name="idebugcustomviewer"></a>IDebugCustomViewer
-Bu arabirim, ifade değerlendiricisi her biçimi gerekli bir özelliğin değerini görüntülemek için (EE) sağlar.
+Bu arabirim, bir ifade değerlendiricisinin (EE) bir özelliğin değerini ne biçim gerekirse görüntülemesini sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,37 +28,37 @@ Bu arabirim, ifade değerlendiricisi her biçimi gerekli bir özelliğin değeri
 IDebugCustomViewer : IUknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
-Bir EE özel bir biçimde bir özelliğin değerini görüntülemek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+EE, bir özelliğin değerini özel bir biçimde görüntülemek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-COM'ın bir çağrı `CoCreateInstance` işlevi bu arabirimin örneğini oluşturur. `CLSID` Geçirilen `CoCreateInstance` kayıt defterinden alınır. Bir çağrı [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) kayıt defteri konumu alır. Açıklamalar örnek yanı sıra ayrıntılar için bkz.
+COM `CoCreateInstance` işlevine yapılan bir çağrı bu arabirimi anında yönlendirir. `CLSID` Geçirilen kayıt `CoCreateInstance` defterinden elde edilir. [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) için bir çağrı kayıt defterinde yer alır. Ayrıntılar ve Örnek için Açıklamalar'a bakın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Bu arabirim, aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+Bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|İnovasyonunuz ne olursa olsun, belirli bir değeri görüntülemek için gerekli yapar.|
+|[DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|Belirli bir değeri görüntülemek için ne gerekiyorsa yapar.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bir özelliğin değerini normal yollarla görüntülendiğinde bu arabirimi kullanılır — Örneğin, bir veri tablosu veya başka bir karmaşık özellik türü ile. Tarafından temsil edildikleri haliyle bir özel Görüntüleyici `IDebugCustomViewer` arabirim, EE ne olursa olsun, belirli bir türdeki verileri görüntülemek için bir dış program bir tür görselleştiricisi farklıdır. EE, EE için belirli bir özel Görüntüleyici uygular. Bir kullanıcı kullanmak için bir tür görselleştiricisi veya özel bir Görüntüleyici olması görselleştiricisi türünü seçer. Bkz: [Visualizing ve verileri görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) bu işlemle ilgili ayrıntılar için.
+Bu arabirim, bir özelliğin değeri normal yollarla görüntülenemediğinde (örneğin, bir veri tablosu veya başka bir karmaşık özellik türüyle) kullanılır. `IDebugCustomViewer` Arayüz tarafından temsil edildiği üzere özel bir görüntüleyici, EE'den bağımsız olarak belirli bir türdeki verileri görüntülemek için harici bir program olan tür görselleştiricisinden farklıdır. EE, bu EE'ye özgü özel bir görüntüleyici uygular. Kullanıcı, tür görselleştiricisi veya özel görüntüleyici olmak üzere hangi tür de görselleştirici kullanılacağını seçer. Bu işlemle ilgili ayrıntılar için [Verileri Görselleştirme ve Görüntüleme'ye](../../../extensibility/debugger/visualizing-and-viewing-data.md) bakın.
 
-Özel bir Görüntüleyici bir EE aynı şekilde kaydedilir ve bu nedenle, bir dil GUID ve satıcı GUID gerektirir. Ölçümün (veya kayıt defteri girdisi adı) için yalnızca EE bilinir. Bu ölçüm döndürülür [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) sırayla bir çağrı tarafından döndürülen yapısı [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md). Ölçümde depolanan değer `CLSID` COM ait geçirilen `CoCreateInstance` işlev (örneğe bakın).
+Özel bir görüntüleyici, EE ile aynı şekilde kaydedilir ve bu nedenle bir dil GUID ve satıcı GUID gerektirir. Tam metrik (veya kayıt defteri giriş adı) yalnızca EE tarafından bilinir. Bu metrik, [getCustomViewerList'e](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)yapılan bir çağrıyla döndürülen [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapısında döndürülür. Metrikte depolanan değer, `CLSID` COM `CoCreateInstance` işlevine geçirilen değerdir (Örnek'e bakın).
 
-[Hata ayıklama için SDK Yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) işlevi `SetEEMetric`, özel bir Görüntüleyici kaydetmek için kullanılabilir. "İfade Değerlendiricilerini" kayıt defteri bölümüne bakın `Debugging SDK Helpers` özel Görüntüleyici, belirli kayıt defteri anahtarları için gerekiyor. İfade değerlendiricisi önceden tanımlanmış çeşitli ölçümleri gerektirirken özel Görüntüleyici (hangi EE'ın uygulayan tarafından tanımlanır) yalnızca bir ölçüm gerektiğini unutmayın.
+Hata Ayıklama işlevi [için SDK Yardımcıları,](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetEEMetric`özel bir görüntüleyici kaydetmek için kullanılabilir. Özel bir görüntüleyenin ihtiyaç duyduğu `Debugging SDK Helpers` belirli kayıt defteri anahtarları için "İfade Değerlendiriciler" kayıt defteri bölümüne bakın. Özel bir görüntüleyicinin yalnızca bir metriğe (EE'nin uygulayıcısı tarafından tanımlanan) ihtiyaç duyduğuna, ifade değerlendiricinin ise önceden tanımlanmış birkaç ölçüm gerektirdiğini unutmayın.
 
-Normalde, bir özel Görüntüleyici beri veri salt okunur bir görünümünü sağlar [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimi sağlanan için [DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) yöntemi dışında özelliğin değerini bir dize olarak değiştirmek için yok. EE rastgele veri bloklarını değiştirilmesini desteklemesi için uygulayan aynı nesne üzerinde özel bir arabirimi uygulayan `IDebugProperty3` arabirimi. Bu özel arabirim ardından rastgele bir veri bloğu değiştirmek için gereken yöntemleri sağlar.
+Normalde, [DisplayValue'a](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) sağlanan [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimi dize dışında özelliğin değerini değiştirmek için hiçbir yöntem olmadığından, özel bir görüntüleyici verilerin salt okunur görünümünü sağlar. Değişen rasgele veri bloklarını desteklemek için, EE `IDebugProperty3` arabirimi uygulayan nesne üzerinde özel bir arabirim uygular. Bu özel arabirim daha sonra rasgele bir veri bloğunu değiştirmek için gereken yöntemleri sağlar.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Örnek
-Bu örnekte, bu özellik, herhangi bir özel görüntüleyiciler varsa bir özellikten ilk özel Görüntüleyici alma gösterilmektedir.
+Bu örnek, bu özelliğin özel görüntüleyicisi varsa, ilk özel görüntüleyenin bir özellikten nasıl alınabildiğini gösterir.
 
 ```cpp
 IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)

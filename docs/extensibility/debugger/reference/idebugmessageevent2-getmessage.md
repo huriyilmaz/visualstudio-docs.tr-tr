@@ -1,5 +1,5 @@
 ---
-title: IDebugMessageEvent2::GetMessage | Microsoft Docs
+title: IDebugMessageEvent2::GetMessage | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GetMessage method
 - IDebugMessageEvent2::GetMessage method
 ms.assetid: 9fca7285-f7f1-422d-8565-92bf0e0db60a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 758b3b860167ed8c2db8bb20c0d76ab289e39a0f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 819b796a656f0ef8775fbb1c9e800e3019b81729
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346886"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727402"
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
-Görüntülenecek iletiyi alır.
+İletinin görüntülenmesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,22 +50,22 @@ int GetMessage( 
 
 ## <a name="parameters"></a>Parametreler
 `pMessageType`\
-[out] Bir değer döndürür [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) ileti türünü açıklayan sabit listesi.
+[çıkış] İleti türünü açıklayan [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) numaralandırmasından bir değer döndürür.
 
 `pbstrMessage`\
-[out] Bir ileti döndürür.
+[çıkış] İletiyi döndürür.
 
 `pdwType`\
-[out] Win32 kuralları kullanılarak iletisinin türü döndürür `MessageBox` işlevi. Bkz: [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) Ayrıntılar için işlevi.
+[çıkış] Win32 `MessageBox` işlevinin kurallarını kullanarak iletitürünü döndürür. Ayrıntılar için [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) işlevine bakın.
 
 `pbstrHelpFileName`\
-[out içinde] Yardım dosyası adı döndürür. Yardım dosyası yoksa (C++) null veya boş (C#) değeri olabilir.
+[içinde, dışarı] Yardım dosyası adını döndürür. Yardım dosyası yoksa null (C++) veya boş (C#) değeri olabilir.
 
 `pdwHelpId`\
-[out içinde] Yardım tanımlayıcısını döndürür. Yardım yoksa 0, bu iletiyle ilişkili.
+[içinde, dışarı] Yardım tanımlayıcısını döndürür. Bu iletiyle ilişkili bir yardım yoksa 0 olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)

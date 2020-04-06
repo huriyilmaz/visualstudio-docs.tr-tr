@@ -1,56 +1,56 @@
 ---
-title: Hata ayıklayıcıyı başlatma | Microsoft Docs
+title: Hata Ayıklama başlatılması | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], launching the debugger
 - debugger [Debugging SDK], launching
 ms.assetid: f24da1a1-f923-48b4-989f-18a22b581d1b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99b8dcd9647cf9a55bd5cc29d082c8d79e57f302
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ceb2f484449d1b3f8474a6586d298b057875b342
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353842"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738452"
 ---
-# <a name="launch-the-debugger"></a>Hata ayıklayıcıyı başlatma
-Hata ayıklayıcıyı başlatma, yöntemlerini ve olaylarını uygun öznitelikleriyle birlikte doğru sırasını gönderilmesi gerekir.
+# <a name="launch-the-debugger"></a>Hata ayıklamayı başlatın
+Hata ayıklayıcıyı başlatmak, doğru öznitelikleriyle doğru yöntem ve olay sırasını göndermeyi gerektirir.
 
-## <a name="sequences-of-methods-and-events"></a>Dizileri yöntemler ve olaylar
+## <a name="sequences-of-methods-and-events"></a>Yöntem ve olay dizileri
 
-1. Oturum hata ayıklama Yöneticisi (SDM) seçerek çağrılır **hata ayıklama** menüsüne ve ardından **Başlat**. Daha fazla bilgi için [bir program Başlat](../../extensibility/debugger/launching-a-program.md).
+1. Hata Ayıklama yöneticisi (SDM), **Hata Ayıklama** menüsünü seçip sonra **Başlat'ı**seçerek çağrılır. Daha fazla bilgi için [bkz.](../../extensibility/debugger/launching-a-program.md)
 
-2. SDM çağrıları [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemi.
+2. SDM [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemini çağırır.
 
-3. Hata ayıklama altyapısı (DE) işlem modelini temel alan `IDebugProgramNodeAttach2::OnAttach` yöntemi ne olacağını belirler aşağıdaki yöntemlerden birini döndürür.
+3. Hata ayıklama motoru (DE) işlem `IDebugProgramNodeAttach2::OnAttach` modeline göre, yöntem aşağıdaki yöntemlerden birini döndürür ve bu yöntem daha sonra ne olacağını belirler.
 
-     Varsa `S_FALSE` hata ayıklama altyapısı (DE), sanal makine aşamasındayız yüklenecek döndürülür.
+     Dönerse, `S_FALSE` hata ayıklama motoru (DE) sanal makine nin işleminde yüklenir.
 
      -veya-
 
-     Varsa `S_OK` DE, yüklenecek döndürülür işlemdeki SDM biri. SDM sonra aşağıdaki görevleri gerçekleştirir:
+     İade `S_OK` edilirse, DE SDM'nin işlem de yüklenmesi gerekir. SDM daha sonra aşağıdaki görevleri gerçekleştirir:
 
-    1. Çağrıları [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) altyapısı DE almak için.
+    1. De motor bilgilerini almak için [GetEngineInfo'yu](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) arar.
 
-    2. Birlikte DE oluşturur.
+    2. DE'yi birlikte oluşturur.
 
-    3. Çağrıları [ekleme](../../extensibility/debugger/reference/idebugengine2-attach.md).
+    3. Aramalar [Ekle](../../extensibility/debugger/reference/idebugengine2-attach.md).
 
-4. DE gönderen bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) ile SDM için bir `EVENT_SYNC` özniteliği.
+4. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) gönderir.
 
-5. DE gönderen bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) ile SDM için bir `EVENT_SYNC` özniteliği.
+5. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) gönderir.
 
-6. DE gönderen bir [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) ile SDM için bir `EVENT_SYNC` özniteliği.
+6. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) gönderir.
 
-7. DE gönderen bir [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) ile SDM için bir `EVENT_SYNC` özniteliği.
+7. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) gönderir.
 
-8. DE gönderen bir [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) ile SDM için bir `EVENT_SYNC` özniteliği.
+8. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) gönderir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcısı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)
+- [Hata ayıklama olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)
 - [Program başlatma](../../extensibility/debugger/launching-a-program.md)

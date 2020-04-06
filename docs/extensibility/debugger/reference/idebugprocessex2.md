@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2 | Microsoft Docs
+title: IDebugProcessEx2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcessEx2 interface
 ms.assetid: 44e309ba-1d6f-499b-aa7e-9b34858a6d57
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c27a03a09a6073ebab8d7a2dd5f60218066d474
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 743dd1aa72d9b8db6b848618c8a2ad6c8c8ecaaf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311598"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723335"
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
-Bu arabirim, hata ayıklama Yöneticisi (SDM) bildirmek için ekleme veya işlemden ayırmak Process işlem oturum sağlar.
+Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) bağlı olduğu veya işlemden ayırdığı bir işlemi bildirmesine olanak tanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,37 +28,37 @@ Bu arabirim, hata ayıklama Yöneticisi (SDM) bildirmek için ekleme veya işlem
 IDebugProcessEx2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Özel bağlantı noktası sağlayıcısı aynı nesne üzerinde bu arabirimi uygulayan [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) için arabirim:
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Özel bir bağlantı noktası tedarikçisi bu arabirimi Aşağıdakiler için [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) arabirimiyle aynı nesne üzerinde uygular:
 
-- Oturumlarının bir işleme bağlı destek izleme
+- Bir işleme bağlı oturumların destek takibi
 
-- Destek otomatik iliştirme arasında birden çok hata ayıklama altyapısı
+- Birden çok hata ayıklama motoru arasında otomatik eklemeyi destekleyin
 
-  Seçerse bu özel bağlantı noktası sağlayıcısı bu arabirim uygulayabilir.
+  Özel bağlantı noktası tedarikçisi isterse bu arabirimi uygulayabilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
 
-- SDM çağrıları [QueryInterface](/cpp/atl/queryinterface) üzerinde bir `IDebugProcess2` arabirimi bu arabirim elde edilir.
+- SDM, bu arabirimi `IDebugProcess2` elde etmek için [QueryInterface'i](/cpp/atl/queryinterface) bir arabirimde çağırır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugProcessEx2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugProcessEx2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|İşlem, bir oturum işlemi artık hata ayıklıyor bildirir.|
-|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|İşlem, bir oturum işlemi artık hata ayıklıyor bildirir.|
-|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Program düğümleri için hata ayıklama altyapısının bir listesini ekler.|
+|[İliştir](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|İşlemi, bir oturumun artık işlemi hata ayıklama olarak bildirdiğini bildirir.|
+|[Ayır](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|İşlemi, bir oturumun artık işlemi hata ayıklamadığını bildirir.|
+|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Hata ayıklama motorlarının listesi için program düğümleri ekler.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, işlem SDM arasında özeldir.
+ Bu arabirim SDM ve işlem arasında özeldir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Portpriv.h
+ Üstbilgi: Portpriv.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

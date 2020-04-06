@@ -1,25 +1,25 @@
 ---
-title: ButtonText öğesi | Microsoft Docs
+title: ButtonText Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - ButtonText element (VSCT XML schema)
 - VSCT XML schema elements, ButtonText
 ms.assetid: 56aba884-0356-4894-ae4e-32d3938f6865
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe2440258e95ad0d61998b24dae54b731a998c47
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59308feea2002a18662a7c04b95a92a920f934c4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321222"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739914"
 ---
 # <a name="buttontext-element"></a>ButtonText öğesi
-Bu alan çeşitli menülerde görüntülenen metin belirtmenize olanak sağlar. Varsayılan olarak, `ButtonText` öğesi menüsü denetleyicileri görünür. `ButtonText` Öğesi diğer metin alanları boş ise varsayılan ayrıca olur. `ButtonText` Bile diğer metin alanları öğesi boş olamaz.
+Bu alan, çeşitli menülerde görünen metni belirtmenizi sağlar. Varsayılan olarak, `ButtonText` öğe menü denetleyicilerinde görünür. Diğer `ButtonText` metin alanları boşsa öğe de varsayılan olur. Diğer `ButtonText` metin alanları belirtilse bile öğe boş olamaz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,10 +40,10 @@ Bu alan çeşitli menülerde görüntülenen metin belirtmenize olanak sağlar. 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Strings Öğesi](../extensibility/strings-element.md)|Metin öğeleri gibi gruplar `ButtonText` ve `CommandName`.|
+|[Dizeleri Öğe](../extensibility/strings-element.md)|Metin öğelerini grupla, örneğin. `ButtonText` `CommandName`|
 
 ## <a name="text-value"></a>Metin değeri
- Metin değeri `ButtonText` öğesi menü öğeleri, combos ve görünen metin sahip diğer kullanıcı arabirimi (UI) öğeleri için görüntülenen metni sağlar.
+ Öğenin `ButtonText` metin değeri, görünür metin ekiolan menü öğeleri, kombinasyonlar ve diğer kullanıcı arabirimi (UI) öğeleri için görüntülenen metni sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

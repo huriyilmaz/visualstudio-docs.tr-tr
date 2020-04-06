@@ -1,25 +1,25 @@
 ---
-title: IDebugSymbolProviderDirect::GetMetaDataImport | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetMetaDataImport | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetMetaDataImport
 - IDebugSymbolProviderDirect::GetMetaDataImport
 ms.assetid: b51a492c-af00-4b08-93fb-6c19ee4916aa
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4a2cd79581487e7e407cc409c4b8496abc53bfa7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 475ffab931445718d27ae6e1fe1242f6a5a76512
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347300"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718967"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
 Meta veri alma bilgilerini alır.
@@ -44,16 +44,16 @@ int GetMetaDataImport (
 
 ## <a name="parameters"></a>Parametreler
 `guid`\
-[in] Modül için benzersiz tanımlayıcı.
+[içinde] Modül için benzersiz tanımlayıcı.
 
 `appID`\
-[in] Uygulama etki alanı için tanımlayıcı.
+[içinde] Uygulama etki alanı için tanımlayıcı.
 
 `ppImport`\
-[out] Bir meta veriler içeren bir nesne döndürür, bilgi alın.
+[çıkış] Meta veri alma bilgilerini içeren bir nesne döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

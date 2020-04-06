@@ -1,28 +1,28 @@
 ---
-title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs
+title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - PORT_SUPPLIER_DESCRIPTION_FLAGS enumeration
 ms.assetid: 5acee0ee-3a20-41c9-a7dc-0dadae6a5ba5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 01cf70b473d2c430741df2021d27b3047e782b79
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 26022098eb4233186a1442bde38fe4325accfdd1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309479"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713990"
 ---
-# <a name="portsupplierdescriptionflags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
+# <a name="port_supplier_description_flags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
 
-Bağlantı noktası sağlayıcısı hakkında alınabilir meta verileri tanımlar.
+Bağlantı noktası tedarikçisi hakkında alınabilecek meta verileri tanımlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,21 +44,21 @@ public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS
 ## <a name="fields"></a>Alanlar
 
 `PSDFLAG_SHOW_WARNING_ICON`\
-Seçili değilse kullanıcı Arabiriminde uyarı simgesi görüntülenir.
+Seçilirse, uyarı simgesi UI'de görüntülenir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu sabit listesi tarafından döndürülen [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) yöntemi.
+Bu numaralandırma [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) yöntemi ile döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üst bilgi: Msdbg.h
+Üstbilgi: Msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)

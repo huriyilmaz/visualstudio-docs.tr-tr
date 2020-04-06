@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::Evaluate | Microsoft Docs
+title: IDebugFunctionObject::Değerlendir | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugFunctionObject::Evaluate method
 ms.assetid: 29349ea3-d5c1-4135-aa76-ced073ab9683
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3d9ddafe744c2815e3730cd835fb1afe63ffc23
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 529a5f67c808efa258bc0cb9899f546dbb90d431
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313504"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728504"
 ---
 # <a name="idebugfunctionobjectevaluate"></a>IDebugFunctionObject::Evaluate
-İşlevini çağırır ve bir nesne olarak elde edilen değeri döndürür.
+İşlevi çağırır ve ortaya çıkan değeri nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +47,22 @@ int Evaluate(
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-[in] Bir dizi [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) giriş parametrelerini temsil eden nesneleri. Bu parametre her biri ile oluşturulmuş `Create` yöntemleri [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimi.
+[içinde] Giriş parametrelerini temsil eden [Bir IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne dizisi. Bu parametrelerin her biri `Create` [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimindeki yöntemlerden biriyle oluşturulmuştur.
 
 `dwParams`\
-[in] Parametre sayısı `ppParams` dizisi.
+[içinde] Dizideki `ppParams` parametrelerin sayısı.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süreyi belirtir. Kullanım `INFINITE` süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden en büyük süreyi belirtir. Süresiz beklemek için kullanın. `INFINITE`
 
 `ppResult`\
-[out] Döndürür bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) değeri işlevin bir nesne olarak temsil eden.
+[çıkış] İşlevin nesne olarak değerini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, ayarlar ve bir çağrı tarafından temsil edilen işlevi çalıştırır [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesne.
+ Bu yöntem, [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesi tarafından temsil edilen işleve çağrı yıkıyor ve yürütür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

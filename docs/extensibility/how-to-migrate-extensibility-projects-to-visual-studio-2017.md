@@ -1,69 +1,69 @@
 ---
-title: "Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme | Microsoft Docs"
+title: "Nasıl Yapılır: Extensibility Projects'i Visual Studio 2017'ye Geçirin | Microsoft Dokümanlar"
 ms.date: 11/09/2016
 ms.topic: conceptual
 ms.assetid: 8ca07b00-a3ff-40ab-b647-c0a93b55e86a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 01c0c8613ec2e4fe72613867d623d510d9734e45
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: b0cae0261b185ee08400e5f3d25735634663f54a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917649"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710986"
 ---
-# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme
+# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Nasıl Yapılır: Genişletilebilirlik projelerini Visual Studio 2017'ye geçirin
 
-Bu belgede, genişletilebilirlik projelerinin Visual Studio 2017 ' ye nasıl yükseltileceği açıklanmaktadır. Proje dosyalarının nasıl güncelleştirileceğini açıklayan ek olarak, aynı zamanda uzantı bildirimi sürüm 2 ' den (VSıX v2) yeni sürüm 3 VSıX bildirim biçimine (VSıX v3) nasıl yükseltileceğini açıklar.
+Bu belge, genişletilebilirlik projelerinin Visual Studio 2017'ye nasıl yükseltilen olduğunu açıklar. Proje dosyalarının nasıl güncelleştirilenin yanı sıra, uzantı bildirimi sürüm 2'den (VSIX v2) yeni sürüm 3 VSIX manifesto formatına (VSIX v3) nasıl yükseltilir.
 
-## <a name="install-visual-studio-2017-with-required-workloads"></a>Gerekli iş yükleriyle Visual Studio 2017 'yi yükler
+## <a name="install-visual-studio-2017-with-required-workloads"></a>Gerekli iş yükleri ile Visual Studio 2017'yi yükleyin
 
 Yüklemenizin aşağıdaki iş yüklerini içerdiğinden emin olun:
 
 * .NET masaüstü geliştirme
 * Visual Studio uzantısı geliştirme
 
-## <a name="open-vsix-solution-in-visual-studio-2017"></a>Visual Studio 2017 'de VSıX çözümünü aç
+## <a name="open-vsix-solution-in-visual-studio-2017"></a>Visual Studio 2017'de VSIX Çözümlerini Açın
 
-Tüm VSıX projeleri, Visual Studio 2017 ' e tek yönlü bir sürüm yükseltmesi gerektirir.
+Tüm VSIX projeleri Visual Studio 2017 için önemli bir sürüm tek yönlü yükseltme gerektirir.
 
-Proje dosyası (örneğin, * *. csproj*) güncelleştirilecektir:
+Proje dosyası (örneğin **.csproj)* güncellenecektir:
 
-* MinimumVisualStudioVersion-şimdi 15,0 olarak ayarlandı
-* Oldaraçları sürümü (daha önce varsa)-Şimdi 14,0 olarak ayarlanır
+* MinimumVisualStudioVersion - şimdi 15,0 olarak ayarlanır
+* OldToolsVersion (daha önce varsa) - şimdi 14,0 olarak ayarlanır
 
-## <a name="update-the-microsoftvssdkbuildtools-nuget-package"></a>Microsoft. VSSDK. BuildTools NuGet paketini güncelleştirme
+## <a name="update-the-microsoftvssdkbuildtools-nuget-package"></a>Microsoft.VSSDK.BuildTools NuGet paketini güncelleştirin
 
 > [!Note]
-> Çözümünüz Microsoft. VSSDK. BuildTools NuGet paketine başvurmadığından, bu adımı atlayabilirsiniz.
+> Çözümünüz Microsoft.VSSDK.BuildTools NuGet paketine başvurulmuyorsa, bu adımı atlayabilirsiniz.
 
-Uzantınızı yeni VSıX v3 (sürüm 3) biçiminde derlemek için, çözümünüzün yeni VSSDK derleme araçlarıyla oluşturulması gerekir. Bu, Visual Studio 2017 ile yüklenir, ancak VSıX v2 uzantınız NuGet aracılığıyla eski bir sürüme başvuru tutuyor olabilir. Bu durumda, çözümünüz için Microsoft. VSSDK. BuildTools NuGet paketinin bir güncelleştirmesini el ile yüklemeniz gerekir.
+Uzantınızı yeni VSIX v3 (sürüm 3) formatında oluşturmak için, çözümünüzün yeni VSSDK Build Tools ile oluşturulması gerekir. Bu, Visual Studio 2017 ile yüklenecektir, ancak VSIX v2 uzantınız NuGet aracılığıyla eski bir sürüme başvuruda bulunuyor olabilir. Bu nedenle, çözümünüz için Microsoft.VSSDK.BuildTools NuGet paketinin bir güncelleştirmesini el ile yüklemeniz gerekir.
 
-NuGet başvurularını Microsoft. VSSDK. BuildTools ile güncelleştirmek için:
+NuGet başvurularını Microsoft.VSSDK.BuildTools'a güncellemek için:
 
-* Çözüme sağ tıklayın ve **çözüm Için NuGet Paketlerini Yönet**' i seçin.
+* Çözüme sağ tıklayın ve **Çözüm için NuGet Paketlerini Yönet'i**seçin.
 * **Güncelleştirmeler** sekmesine gidin.
-* **Microsoft. VSSDK. BuildTools (en son sürüm)** seçeneğini belirleyin.
-* **Güncelleştir**'e basın.
+* **Microsoft.VSSDK.BuildTools (en son sürüm) seçeneğini**belirleyin.
+* **Basın Güncelleme**.
 
-![VSSDK derleme araçları](media/vssdk-build-tools.png)
+![VSSDK oluşturma araçları](media/vssdk-build-tools.png)
 
-## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSıX uzantı bildiriminde değişiklik yapma
+## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX uzantı bildiriminde değişiklik yapma
 
-Kullanıcının Visual Studio yüklemesinin uzantısı çalıştırmak için gereken tüm derlemelere sahip olduğundan emin olmak için, uzantı bildirim dosyasındaki tüm önkoşul bileşenlerini veya paketleri belirtin. Kullanıcı uzantıyı yüklemeyi denediğinde, Valtıyükleyicisi tüm önkoşulların yüklenip yüklenmediğini kontrol eder. Bazıları eksikse, kullanıcıdan Uzantı yükleme işleminin bir parçası olarak eksik bileşenleri yüklemesi istenir.
+Kullanıcının Visual Studio yüklemesinin uzantıyı çalıştırmak için gereken tüm derlemelere sahip olduğundan emin olmak için, uzantı bildirimi dosyasındaki tüm ön koşul bileşenlerini veya paketlerini belirtin. Bir kullanıcı uzantıyı yüklemeye çalıştığında, VSIXInstaller tüm ön koşulların yüklü olup olmadığını denetler. Bazıları eksikse, kullanıcıdan eksik bileşenleri uzantı yükleme işleminin bir parçası olarak yüklemesi istenir.
 
 > [!Note]
-> En azından, tüm uzantıların bir önkoşul olarak Visual Studio çekirdek Düzenleyicisi bileşenini belirtmesi gerekir.
+> En azından, tüm uzantıları bir ön koşul olarak Visual Studio çekirdek düzenleyici bileşeni belirtmelidir.
 
-* Uzantı bildirim dosyasını düzenleyin (genellikle *kaynak. uzantı. valtmanifest*olarak adlandırılır).
-* `InstallationTarget`, 15,0 içerdiğinden emin olun.
-* Gerekli yükleme önkoşullarını ekleyin (aşağıdaki örnekte gösterildiği gibi).
-  * Yükleme önkoşulları için yalnızca bileşen kimliklerini belirtmenizi öneririz.
-  * [Bileşen kimliklerini tanımlamaya ilişkin yönergeler](#find-component-ids)için bu belgenin sonundaki bölümüne bakın.
+* Uzantı bildirimi dosyasını (genellikle *source.extension.vsixmanifest*olarak adlandırılır) edin.
+* 15.0 içerir. `InstallationTarget`
+* Gerekli yükleme ön koşulları ekleyin (aşağıdaki örnekte gösterildiği gibi).
+  * Yükleme ön koşulları için yalnızca Bileşen taşırım'ları belirtmenizi öneririz.
+  * Bileşen kimliklerini tanımlama yönergeleri için bu belgenin sonundaki [bölüme](#find-component-ids)bakın.
 
 Örnek:
 
@@ -79,126 +79,126 @@ Kullanıcının Visual Studio yüklemesinin uzantısı çalıştırmak için ger
 </PackageManifest>
 ```
 
-### <a name="option-use-the-designer-to-make-changes-to-the-vsix-extension-manifest"></a>Seçenek: VSıX uzantı bildiriminde değişiklik yapmak için tasarımcıyı kullanın
+### <a name="option-use-the-designer-to-make-changes-to-the-vsix-extension-manifest"></a>Seçenek: VSIX uzantı bildiriminde değişiklik yapmak için tasarımcıyı kullanın
 
-Bildirim XML 'sini doğrudan düzenlemeniz yerine, önkoşulları seçmek için bildirim tasarımcısında yeni **Önkoşullar** sekmesini KULLANABILIRSINIZ ve XML sizin için güncelleştirilir.
+Manifest XML'i doğrudan düzenlemek yerine, ön koşulları seçmek için Manifesto Tasarımcısı'ndaki yeni **Önkoşullar** sekmesini kullanabilirsiniz ve XML sizin için güncellenecektir.
 
 > [!Note]
-> Bildirim Tasarımcısı, yalnızca geçerli Visual Studio örneğinde yüklü olan bileşenleri (Iş yüklerini veya paketleri değil) seçmenizi sağlayacak. Şu anda yüklü olmayan bir iş yükü, paket veya bileşen için bir önkoşul eklemeniz gerekiyorsa, bildirim XML 'sini doğrudan düzenleyin.
+> Manifest Designer yalnızca geçerli Visual Studio örneğinde yüklü olan Bileşenleri (İş Yükleri veya Paketler değil) seçmenize izin verir. Şu anda yüklü olmayan bir iş yükü, paket veya bileşen için ön koşul eklemeniz gerekiyorsa, bildirim XML'i doğrudan edin.
 
-* Açık *kaynak. Extension. valtmanifest [Tasarım]* dosyası.
+* *Kaynak.extension.vsixmanifest [Tasarım]* dosyasını açın.
 * **Önkoşullar** sekmesini seçin ve **Yeni** düğmesine basın.
 
-   ![VSıX bildirim Tasarımcısı](media/vsix-manifest-designer.png)
+   ![VSIX manifesto tasarımcısı](media/vsix-manifest-designer.png)
 
-* **Yeni önkoşul Ekle** penceresi açılır.
+* **Yeni Önkoşul ekle** penceresi açılır.
 
-   ![VSIX önkoşulu Ekle](media/add-vsix-prerequisite.png)
+   ![vsix önkoşul ekle](media/add-vsix-prerequisite.png)
 
-* **Ad** için aşağı açılan listeye tıklayın ve istenen önkoşulu seçin.
+* **Ad** için açılır sayfaya tıklayın ve istenen ön koşulu seçin.
 * Gerekirse sürümü güncelleştirin.
 
    > [!Note]
-   > Sürüm alanı, bileşen 'nin bir sonraki ana sürümünü kapsayan (dahil değil) bir aralığa yayılmış, şu anda yüklü olan bileşenin sürümü ile önceden doldurulur.
+   > Sürüm alanı, bileşenin bir sonraki ana sürümüne kadar uzanan (ancak dahil olmayan) bir aralıkla, şu anda yüklü olan bileşenin sürümüyle önceden doldurulacaktır.
 
-   ![Roslyn önkoşulu ekleme](media/add-roslyn-prerequisite.png)
+   ![roslyn ön koşul eklemek](media/add-roslyn-prerequisite.png)
 
-* Tuşuna **Tamam**.
+* **Tamam**'a basın.
 
-## <a name="update-debug-settings-for-the-project"></a>Proje için hata ayıklama ayarlarını Güncelleştir
+## <a name="update-debug-settings-for-the-project"></a>Proje için Hata Ayıklama ayarlarını güncelleştirme
 
-Visual Studio 'nun deneysel örneğinde uzantınızın hatalarını ayıklamak istiyorsanız, **hata ayıklama** > **Başlangıç eylemi** için proje ayarları ' nın Visual Studio 2017 yüklemenizin *devenv. exe* dosyasına ayarlandığından emin olun.
+Visual Studio'nun deneysel bir örneğinde uzantınızı hata ayıklamak istiyorsanız, **Hata** > **Ayıklama Başlatma eylemi** için proje ayarlarının Başlangıç dış programına sahip olduğundan emin **olun:** Visual Studio 2017 kurulumunuzun *devenv.exe* dosyasına ayarlanmış değer.
 
-Şöyle görünebilir: *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
+Şu şekilde görünebilir: *C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
-![dış programı Başlat](media/start-external-program.png)
-
-> [!Note]
-> Hata ayıklama başlatma eylemi genellikle *. csproj. User* dosyasında depolanır. Bu dosya genellikle *. gitignore* dosyasına dahil edilmiştir ve bu nedenle kaynak denetimine işlendiği sırada normalde diğer proje dosyalarıyla kaydedilmez. Bu nedenle, çözümünüzü kaynak denetiminden yeni aldıysanız, projenin başlangıç eylemi için ayarlanmış bir değeri olmayacaktır. Visual Studio 2017 ile oluşturulan yeni VSıX projelerinin, geçerli Visual Studio Install dizinine işaret eden varsayılanlar kullanılarak oluşturulan *. csproj. User* dosyası olacaktır. Ancak VSıX v2 uzantısını geçiriyorsanız, *. csproj. User* dosyası, önceki Visual Studio sürümünün install dizinine başvurular içeriyor olabilir. **Hata ayıklama** > **Başlangıç eyleminin** değerini ayarlamak, uzantınızın hatalarını ayıklamaya çalıştığınızda doğru Visual Studio deneysel örneğinin başlatılmasını sağlar.
-
-## <a name="check-that-the-extension-builds-correctly-as-a-vsix-v3"></a>Uzantının doğru şekilde (VSıX v3 olarak) oluşturulup oluşturulmadığını denetleyin
-
-* VSıX projesi oluşturun.
-* Oluşturulan VSıX 'i sıkıştırmayı açın.
-  * Varsayılan olarak, VSıX dosyası *bin/hata ayıklama* veya *bin/yayın* Içinde *[yourcustomexger]. VSIX*olarak bulunur.
-  * İçeriği kolayca görüntülemek için *. vsix* *. zip* olarak yeniden adlandırın.
-* Üç dosya olup olmadığını denetleyin:
-  * *Extension. valtmanifest*
-  * *manifest. JSON*
-  * *Catalog. JSON*
-
-## <a name="check-when-all-required-prerequisites-are-installed"></a>Gerekli tüm önkoşulların yüklü olup olmadığını denetle
-
-VSıX 'in tüm gerekli önkoşulları yüklenmiş bir makineye başarıyla yüklendiğini test edin.
+![harici programı başlatma](media/start-external-program.png)
 
 > [!Note]
-> Herhangi bir uzantıyı yüklemeden önce lütfen Visual Studio 'nun tüm örneklerini kapatın.
+> Hata Ayıklama Başlangıç Eylemi genellikle *.csproj.user* dosyasında depolanır. Bu dosya genellikle *.gitignore* dosyasına dahil edilir ve bu nedenle, kaynak denetimine taahhüt edildiğinde normalde diğer proje dosyalarıyla birlikte kaydedilmez. Bu nedenle, çözümünüzü kaynak denetiminden yeni çıkardıysanız, büyük olasılıkla projenin Start Action için ayarlanmış değerleri olmayacaktır. Visual Studio 2017 ile oluşturulan yeni VSIX projelerinde varsayılan olarak geçerli Visual Studio yükleme dizinini işaret eden bir *.csproj.user* dosyası oluşturulacaktır. Ancak bir VSIX v2 uzantısı geçiş iseniz, *.csproj.user* dosyası önceki Visual Studio sürümü yükleme dizinine başvurular içerecektir muhtemeldir. **Hata Ayıklama** > **Başlatma eyleminin** değerini ayarlamak, uzantınızı hata ayıklamaya çalıştığınızda doğru Visual Studio deneme örneğinin başlatılmasını sağlar.
 
-Uzantıyı yüklemeyi deneyin:
+## <a name="check-that-the-extension-builds-correctly-as-a-vsix-v3"></a>Uzantıncanın doğru bir şekilde inşa edilsin (VSIX v3 olarak)
 
-* Visual Studio 2017
+* VSIX projesini oluşturun.
+* Oluşturulan VSIX'nin zip'ini aç.
+  * Varsayılan olarak, VSIX dosyası *bin/Debug* veya *bin/Release* as *[YourCustomExtension].vsix*içinde yaşar.
+  * İçeriği kolayca görüntülemek için *.vsix'i* *.zip'e* yeniden adlandırın.
+* Üç dosyanın varlığını denetleyin:
+  * *Vsixmanifest*
+  * *manifest.json*
+  * *catalog.json*
 
-![Visual Studio 2017 üzerinde VSıX yükleyicisi](media/vsixinstaller-vs-2017.png)
+## <a name="check-when-all-required-prerequisites-are-installed"></a>Gerekli tüm ön koşulların ne zaman yüklendiğinde kontrol edin
 
-* İsteğe bağlı: önceki Visual Studio sürümlerini denetleyin.
-  * Doğru uyumluluk olduğunu kanıtlar.
+VSIX'nin gerekli tüm ön koşullar yüklü bir makineye başarıyla yüklenmesini test edin.
+
+> [!Note]
+> Herhangi bir uzantı yüklemeden önce, lütfen Visual Studio'nun tüm örneklerini kapatın.
+
+Uzantıyı yüklemeye çalış:
+
+* Visual Studio 2017 Hakkında
+
+![Visual Studio 2017'de VSIX yükleyici](media/vsixinstaller-vs-2017.png)
+
+* İsteğe bağlı: Visual Studio'nun önceki sürümlerini kontrol edin.
+  * Geriye dönük uyumluluğu kanıtlıyor.
   * Visual Studio 2012, Visual Studio 2013, Visual Studio 2015 için çalışmalıdır.
-* İsteğe bağlı: VSıX yükleyicisi sürüm denetleyicisinin bir sürüm seçimi sunduğunu denetleyin.
-  * , Visual Studio 'nun önceki sürümlerini içerir (yüklüyse).
-  * Visual Studio 2017 içerir.
+* İsteğe bağlı: VSIX Installer Version Checker'ın çeşitli sürümler sunduğunu kontrol edin.
+  * Visual Studio'nun önceki sürümlerini içerir (yüklüyse).
+  * Visual Studio 2017'yi içerir.
 
-Visual Studio yakın zamanda açılırsa şöyle bir iletişim kutusu görebilirsiniz:
+Visual Studio yakın zamanda açıldıysa, şu gibi bir iletişim kutusu görebilirsiniz:
 
-![vs çalışan süreçler](media/vs-running-processes.png)
+![vs çalışma süreçleri](media/vs-running-processes.png)
 
-İşlemlerin kapatılmasını bekleyin veya görevleri el ile sonlandırın. Bu işlemi listelenen ada veya parantez içinde listelenen PID ile bulabilirsiniz.
+İşlemlerin kapanmasını veya görevleri el ile sonlamasını bekleyin. İşlemleri listelenen ada göre veya parantez içinde listelenen PID ile bulabilirsiniz.
 
 > [!Note]
-> Bu süreçler, Visual Studio 'nun bir örneği çalışırken otomatik olarak kapanmaz. Makinedeki Visual Studio 'nun tüm örneklerini, diğer kullanıcılardan olanlar da dahil olmak üzere kapattığınızdan emin olun, sonra yeniden denemeye devam edin.
+> Visual Studio'nun bir örneği çalışırken bu işlemler otomatik olarak kapanmaz. Diğer kullanıcılar da dahil olmak üzere makinedeki Visual Studio'nun tüm örneklerini kapattığınızdan emin olun, ardından yeniden denemeye devam edin.
 
-## <a name="check-when-missing-the-required-prerequisites"></a>Gerekli önkoşulların eksik olup olmadığını denetleyin
+## <a name="check-when-missing-the-required-prerequisites"></a>Gerekli ön koşulları kaçırırken kontrol edin
 
-* Uzantıyı, önkoşullara (yukarıda) tanımlanan tüm bileşenleri IÇERMEYEN Visual Studio 2017 ile bir makineye yüklemeyi deneyin.
-* Yüklemenin eksik bileşen/sn 'leri tanımladığından ve bunları Valtınstaller 'ta bir önkoşul olarak listelediğinden emin olun.
-* Note: uzantıya sahip herhangi bir önkoşul yüklenmesi gerekiyorsa yükseltme gerekecektir.
+* Önkoşullarda tanımlanan tüm bileşenleri içermeyen Visual Studio 2017'li bir makineye uzantıyı yüklemeye çalış (yukarıda).
+* Yüklemenin eksik bileşeni/s'leri tanımladığını ve VSIXInstaller'da ön koşul olarak listeleyip listelemediğini denetleyin.
+* Not: Herhangi bir ön koşul uzantısı ile yüklü olması gerekiyorsa yükseklik gereklidir.
 
-![valtınstaller için önkoşul eksik](media/vsixinstaller-missing-prerequisite.png)
+![vsixinstaller eksik ön koşul](media/vsixinstaller-missing-prerequisite.png)
 
-## <a name="decide-on-components"></a>Bileşenlere karar verme
+## <a name="decide-on-components"></a>Bileşenlere karar verin
 
-Bağımlılıklarınız aranırken, bir bağımlılığın birden çok bileşene eşlenmesine ilişkin olduğunu fark edersiniz. Ön koşul olarak hangi bağımlılıkları belirtmeniz gerektiğini belirlemek için, uzantınıza benzer bir işlevselliğe sahip olan bir bileşen seçmenizi ve ayrıca kullanıcılarınızı ve en büyük olasılıkla ne tür bileşenlerden hangilerinin yüklü olduğunu düşünmenizi öneririz. yükleme göz önüne alın. Ayrıca, genişletmenizi gerekli önkoşulların yalnızca uzantınızın çalışmasına izin verecek olan en düşük değeri karşıladığı ve ek özellikler için belirli bileşenlerin algılanmadığı durumlarda devre dışı olduğu bir şekilde oluşturmayı öneririz.
+Bağımlılıklarınızı ararken, bir bağımlılığın birden çok bileşenle eşlenebildiğini göreceksiniz. Ön koşul olarak hangi bağımlılıkları belirtmeniz gerektiğini belirlemek için, uzantınıza benzer bir işlevsellik olan bir bileşen seçmenizi ve ayrıca kullanıcılarınızı ve ne tür bileşenlerin yüklü olduğunu veya yüklemeyi sorun etmeyeceğini de göz önünde bulundurmanızı öneririz. Ayrıca, uzantılarınızı, gerekli ön koşulların yalnızca uzantınızın çalışmasına izin verecek minimum minimum tutarı karşılayacak şekilde oluşturmanızı ve belirli bileşenler algılanmadığı takdirde ek özelliklerin uykuda olmasını öneririz.
 
-Daha fazla rehberlik sağlamak için, birkaç ortak uzantı türü ve önerilen önkoşulları belirledik:
+Daha fazla rehberlik sağlamak için, birkaç yaygın uzatma türü ve önerilen ön koşulları belirledik:
 
-Uzantı türü | Görünen Ad | Kimlik
+Uzantı Türü | Görünen Ad | Kimlik
 --- | --- | ---
-Düzenleyici | Visual Studio temel Düzenleyicisi | Microsoft.VisualStudio.Component.CoreEditor
+Düzenleyici | Visual Studio çekirdek editörü | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# ve Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
-WPF | Yönetilen masaüstü iş yükü Çekirdeği | Microsoft.VisualStudio.Component.ManagedDesktop.Core
-Hata Ayıklayıcısı | Just-In-Time hata ayıklayıcı | Microsoft.VisualStudio.Component.Debugger.JustInTime
+WPF | Yönetilen Masaüstü İş Yükü Çekirdeği | Microsoft.VisualStudio.Component.ManagedDesktop.Core
+Hata Ayıklayıcısı | Tam Zamanında hata ayıklama | Microsoft.VisualStudio.Component.Debugger.JustInTime
 
-## <a name="find-component-ids"></a>Bileşen kimliklerini bul
+## <a name="find-component-ids"></a>Bileşen işlerini bulma
 
-Visual Studio ürününe göre sıralanan bileşenlerin listesi, [Visual studio 2017 iş yükü ve bileşen kimlikleridir](/visualstudio/install/workload-and-component-ids?view=vs-2019). Bildiriminizde önkoşul kimlikleriniz için bu bileşen kimliklerini kullanın.
+Visual Studio ürününe göre sıralanmış bileşenlerin listesi [Visual Studio 2017 iş yükü ve bileşen ii'lerindedir.](/visualstudio/install/workload-and-component-ids?view=vs-2019) Bu bileşen tünelerini, bildiriminizdeki ön koşul tüneleriniz için kullanın.
 
-Hangi bileşenin belirli bir ikiliye sahip olduğundan emin değilseniz, [bileşen-> ikili eşleme elektronik tablosunu](https://aka.ms/vs2017componentid-binaries)indirin.
+Hangi bileşenin belirli bir ikili içerdiğinden emin değilseniz, [Bileşen -> İkili eşleme tablosunu](https://aka.ms/vs2017componentid-binaries)indirin.
 
-### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping. xlsx
+### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping.xlsx
 
-Excel sayfasında dört sütun vardır: **bileşen adı**, **ComponentID**, **Sürüm**ve **ikili dosya adları**.  Filtreleri kullanarak belirli bileşenleri ve ikili dosyaları arayabilir ve bulabilirsiniz.
+Excel sayfasında dört sütun vardır: **Bileşen Adı**, **ComponentId**, **Sürüm**ve İkili / **Dosya Adları**.  Belirli bileşenleri ve ikilileri aramak ve bulmak için filtreleri kullanabilirsiniz.
 
-Tüm başvurularınız için, ilk olarak temel Düzenleyici (Microsoft. VisualStudio. Component. CoreEditor) bileşeninde hangilerinin olduğunu saptayın.  En azından, çekirdek Düzenleyici bileşeninin tüm uzantılar için bir önkoşul olarak belirtilmesini gerektiririz. Sol ana düzenleyicide bulunmayan başvurularda, bu başvuruların alt kümelerine sahip bileşenleri bulmak için **Ikili dosyaları/dosya adları** bölümüne filtre ekleyin.
+Tüm başvurularınız için öncelikle hangilerinin çekirdek düzenleyici (Microsoft.VisualStudio.Component.CoreEditor) bileşeninde olduğunu belirleyin.  En azından, çekirdek düzenleyici bileşeninin tüm uzantılar için bir ön koşul olarak belirtilmesi gerekir. Çekirdek düzenleyicide olmayan başvurular arasında, bu başvuruların alt kümelerinden herhangi biri olan bileşenleri bulmak için **İkili / Dosya Adları** bölümüne filtreler ekleyin.
 
 Örnekler:
 
-* Bir hata ayıklayıcı uzantınız varsa ve projenizin *Vsdebugger Geng. dll* ve *vsdebug. dll*' ye bir başvurusu olduğunu biliyorsanız, **ikili dosyalar/dosya adları** üstbilgisindeki filtre düğmesine tıklayın.  "Vshata ayıklama Geng. dll" ifadesini arayın ve *Tamam*' ı seçin.  Sonra, **Ikili dosyalar/dosya adları** üstbilgisindeki filtre düğmesine tıklayın ve "vsdebug. dll" ifadesini arayın.  **Filtre uygulanacak geçerli seçimi Ekle** onay kutusunu seçin ve **Tamam**' ı seçin.  Uzantı yazdığınıza en çok ilişkili bir bileşeni bulmak için **bileşen adına** bakın. Bu örnekte, Just-In-Time hata ayıklayıcıyı seçtiniz ve bunu valtmanifest ' e eklersiniz.
-* Projenizin hata ayıklayıcı öğeleriyle ilgili olduğunu biliyorsanız, hangi bileşenlerin adında hata ayıklayıcı içerdiğini görmek için filtre arama kutusundaki "hata ayıklayıcı" üzerinde arama yapabilirsiniz.
+* Hata ayıklayıcı uzantınız varsa ve projenizin *VSDebugEng.dll* ve *VSDebug.dll*adresine bir referansı olduğunu **biliyorsanız, İkili / Dosya Adları** üstbilgisindeki filtre düğmesini tıklatın.  "VSDebugEng.dll" için arama yapın ve *Tamam'ı*seçin.  Sonraki **tıklayarak İkili / Dosya Adları** başlığındaki filtre düğmesine tekrar tıklayın ve "VSDebug.dll" aramasını yapın.  Onay kutusunu seçin **Filtrelemek için geçerli seçimi ekle** ve **Tamam'ı**seçin.  Şimdi, uzantı türünüzle en çok ilişkili olan bir bileşeni bulmak için **Bileşen Adı'na** bakın. Bu örnekte, Just-In-Time hata ayıklama seçti ve vsixmanifest ekleyin.
+* Projenizin hata ayıklama öğeleriyle ilgili olduğunu biliyorsanız, filtre arama kutusundaki "hata ayıklama" üzerinde arama yapabilir ve hangi bileşenlerin adına hata ayıklama içerdiğini görebilirsiniz.
 
 ## <a name="specify-a-visual-studio-2017-release"></a>Visual Studio 2017 sürümü belirtin
 
-Uzantınız Visual Studio 2017 ' nin belirli bir sürümünü gerektiriyorsa, örneğin, 15,3 ' de yayınlanan bir özelliğe bağlı ise, VSıX **ınstalyüklemehedefinde**derleme numarasını belirtmeniz gerekir. Örneğin, Release 15,3 ' 15.0.26730.3 ' derleme numarasına sahiptir. Sürüm numaralarını [burada](../install/visual-studio-build-numbers-and-release-dates.md)oluşturmak için bu sürümlerin eşlemesini görebilirsiniz. ' 15,3 ' yayın numarasını kullanmak düzgün çalışmayacak.
+Uzantınız Visual Studio 2017'nin belirli bir sürümünü gerektiriyorsa, örneğin, 15.3'te yayımlanan bir özelliğe bağlıysa, VSIX **InstallationTarget'ınızdaki**yapı numarasını belirtmeniz gerekir. Örneğin, sürüm 15.3 '15.0.26730.3' bir yapı numarası vardır. [Burada](../install/visual-studio-build-numbers-and-release-dates.md)sayılar oluşturmak için bültenlerin eşleme görebilirsiniz. '15.3' sürüm numarasını kullanmak doğru çalışmaz.
 
-Uzantınız 15,3 veya daha yüksek bir sürüm gerektiriyorsa, **ınstalyüklemehedef sürümünü** [15.0.26730.3, 16,0) olarak bildirebilirsiniz:
+Uzantınız 15.3 veya üzeri gerektiriyorsa, **InstallationTarget Sürümünü** [15.0.26730.3, 16.0) olarak bildirirsiniz:
 
 ```xml
 <Installation>

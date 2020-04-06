@@ -1,37 +1,37 @@
 ---
-title: Bağlantı noktası alma | Microsoft Docs
+title: Liman Alma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - ports, getting
 - debugging [Debugging SDK], ports
 ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4a57fc69f2ff5b49f1ad4e5449daddda5ff764d8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7bf4948e7cb2590136774eab76fbafec91dbfa40
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353779"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738637"
 ---
-# <a name="get-a-port"></a>Bir bağlantı noktası alma
-Bir bağlantı noktası işlemleri çalıştırdığınız bir makine bağlantısını temsil eder. Bu makineyi, yerel veya uzak bir makinede olabilir (büyük olasılıkla çalışan Windows tabanlı olmayan bir işletim sistemi; bkz [bağlantı noktaları](../../extensibility/debugger/ports.md) daha fazla bilgi için).
+# <a name="get-a-port"></a>Bir bağlantı noktası alın
+Bağlantı noktası, işlemlerin çalıştırıldığı bir makineye olan bağlantıyı temsil eder. Bu makine yerel makine veya uzak bir makine olabilir (windows tabanlı olmayan bir işletim sistemi çalışıyor olabilir; daha fazla bilgi için [Bağlantı Noktaları'na](../../extensibility/debugger/ports.md) bakın).
 
-Bir bağlantı noktası tarafından temsil edilen [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi. Bağlantı noktasına bağlı bir makinede çalışan işlemler hakkında bilgi almak için kullanılır.
+Bağlantı noktası [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilir. Bağlantı noktasının bağlı olduğu makinede çalışan işlemler hakkında bilgi edinmek için kullanılır.
 
-Hata ayıklama altyapısı, program düğümleri bağlantı noktası ile kaydetmek için ve bilgi işlem isteklerini karşılamak için bir bağlantı noktasına erişmesi gerekir. Örneğin, hata ayıklama altyapısı uyguluyorsa [IDebugProgramProvider2](../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirim uygulamasını [GetProviderProcessData](../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) yöntemi için gereken işlem bağlantı noktası isteyin döndürülecek bilgileri.
+Hata ayıklama altyapısının, program düğümlerini bağlantı noktasına kaydetmek ve işlem bilgileri isteklerini karşılamak için bir bağlantı noktasına erişmesi gerekir. Örneğin, hata ayıklama altyapısı [IDebugProgramProvider2](../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimini uygularsa, [GetProviderProcessData](../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) yönteminin uygulanması bağlantı noktasından gerekli işlem bilgilerinin döndürülülmesini isteyebilir.
 
-Visual Studio hata ayıklama altyapısı için gereken bağlantı noktasını sağlar ve bu bağlantı noktasına bağlantı noktası sağlayıcısı alır. Bir program için bağlıysa ('nden ya da hata ayıklayıcısı içinde veya bir özel durum nedeniyle oluşturuldu, Just-in-Time [JIT] iletişim kutusunda, tetikler), kullanıcının Aktarım (bağlantı noktası sağlayıcısı için başka bir ad), tercih ettiğiniz verilir. Aksi takdirde, kullanıcı hata ayıklayıcı programın başlarsa, proje sistemi kullanılacak bağlantı noktası sağlayıcısı belirtir. Visual Studio tarafından temsil edilen bağlantı noktası sağlayıcısı ya da bir olay başlatır bir [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimi ve yeni bir bağlantı noktasını çağırarak ister [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) ile bir [ IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) arabirimi. Bu bağlantı noktasını daha sonra bir form içinde hata ayıklama altyapısı veya başka bir aktarılır.
+Visual Studio hata ayıklama motoruna gerekli bağlantı noktasını sağlar ve bu bağlantı noktasını bir bağlantı noktası tedarikçisinden alır. Bir program ekli (hata ayıklayıcı nın içinden veya bir özel durum nedeniyle atılırsa, bu da Just-in-Time [JIT] iletişim kutusunu tetikler), kullanıcıya taşıma seçeneği (bağlantı noktası tedarikçisi için başka bir ad) verilir. Aksi takdirde, kullanıcı programı hata ayıklama nın içinden başlatıyorsa, proje sistemi kullanılacak bağlantı noktası tedarikçisini belirtir. Her iki durumda da Visual Studio, [iDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimi yle temsil edilen bağlantı noktası tedarikçisini anında yönlendirir ve [AddPort'u](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) [iDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) arabirimiyle arayarak yeni bir bağlantı noktası ister. Bu bağlantı noktası daha sonra hata ayıklama motoruna şu veya bu şekilde aktarılır.
 
 ## <a name="example"></a>Örnek
-Bu kod parçasını sağlanan bağlantı noktası kullanma işlemini gösterir [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) program düğümünde kaydedilecek [ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md). Bu kavramı için doğrudan ilgili parametreleri açıklık için atlandı.
+Bu kod [parçası, ResumeProcess'de](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)bir program düğümü kaydetmek için [LaunchSuspended'e](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) verilen bağlantı noktasının nasıl kullanılacağını gösterir. Bu kavramla doğrudan ilişkili olmayan parametreler açıklık için atlanmıştır.
 
 > [!NOTE]
-> Bu örneği başlatın ve işlemi sürdürmek için bağlantı noktası kullanır ve varsayar [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md) arabirimi, bağlantı noktası üzerinde uygulanır. Olmadığı göre Hayır bu görevleri gerçekleştirmek için tek yol budur ve bağlantı noktası bile dışında programın için ilişkili olabilir değil, mümkündür [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) verilen.
+> Bu örnek, işlemi başlatmak ve devam ettirmek için bağlantı noktasını kullanır ve bağlantı noktasında [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md) arabiriminin uygulandığını varsayar. Bu hiçbir şekilde bu görevleri gerçekleştirmek için tek yoldur ve bağlantı noktası bile programın [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) verilen dışında dahil olmayabilir mümkündür.
 
 ```cpp
 // This is an IDebugEngineLaunch2 method.
@@ -97,7 +97,7 @@ HRESULT CDebugEngine::ResumeProcess(IDebugProcess2 *pDebugProcess)
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Program kaydetme](../../extensibility/debugger/registering-the-program.md)
-- [Bir program görüntüde hata ayıklamayı etkinleştirme](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
-- [Bağlantı noktası sağlayıcıları](../../extensibility/debugger/port-suppliers.md)
+- [Programı kaydetme](../../extensibility/debugger/registering-the-program.md)
+- [Bir programın debutlanmasına olanak sağlama](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+- [Liman tedarikçileri](../../extensibility/debugger/port-suppliers.md)
 - [Bağlantı Noktaları](../../extensibility/debugger/ports.md)

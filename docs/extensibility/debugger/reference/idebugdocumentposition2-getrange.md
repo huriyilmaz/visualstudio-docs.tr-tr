@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::GetRange | Microsoft Docs
+title: IDebugDocumentPosition2::GetRange | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentPosition2::GetRange
 ms.assetid: 91a06ee7-253a-4215-be22-04bf57305aa8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c67828e2d9e1cb0c75d272b57e7c6b610a84fdd5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a923691afdfe145931ab31d0e9bbc6142e7c8d1c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326465"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731669"
 ---
 # <a name="idebugdocumentposition2getrange"></a>IDebugDocumentPosition2::GetRange
-Aralık, bu belgenin konumunu alır.
+Bu belge konumu için aralığı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,23 +43,23 @@ int GetRange( 
 
 ## <a name="parameters"></a>Parametreler
 `pBegPosition`\
-[out içinde] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) başlangıç konumu ile doldurulmuş yapısı. Bu bilgiler gerekli değildir, bu bağımsız değişken null bir değere ayarlayın.
+[içinde, dışarı] Başlangıç pozisyonuyla doldurulmuş [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) bir yapı. Bu bilgiler gerekli değilse, bu bağımsız değişkeni null değere ayarlayın.
 
 `pEndPosition`\
-[out içinde] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) oturum bitiş konumu girilir yapısının. Bu bilgiler gerekli değildir, bu bağımsız değişken null bir değere ayarlayın.
+[içinde, dışarı] Bitiş pozisyonuyla doldurulmuş [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) bir yapı. Bu bilgiler gerekli değilse, bu bağımsız değişkeni null değere ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir konum kesme noktası için bir belge konumda belirtilen aralık gerçekten kod katkıda bulunan bir deyim için önceden aramak için hata ayıklama altyapısı (DE) kullanılır. Örneğin, aşağıdaki kodu düşünün:
+ Bir konum kesme noktası için belge konumunda belirtilen aralık, hata ayıklama altyapısı (DE) tarafından koda gerçekten katkıda bulunan bir ifadeyi önceden aramak için kullanılır. Örneğin, aşağıdaki kodu göz önünde bulundurun:
 
 ```
 Line 5: // comment
 Line 6: x = 1;
 ```
 
- Satır 5 kod hata ayıklaması yapılan programa katkıda bulunur. 5. satırda bir kesme noktası ayarlar hata ayıklayıcı belirli bir miktar kod katkıda bulunan ilk satır için ileriye doğru arama için DE isterse, hata ayıklayıcı bir kesme noktası düzgün burada yerleştirilebileceği ek aday satırları içeren bir aralık belirtmeniz gerekir. Bir kesme noktası kabul edebilecek bir satırı bulunan kadar DE ardından İleri bu satırlar arama.
+ Satır 5, debugged olan programa hiçbir kod katkıda bulunmaz. Satır 5'teki kesme noktasını ayarlayan hata ayıklayıcı, DE'nin koda katkıda bulunan ilk satır için belirli bir miktarı ileri aramasını istiyorsa, hata ayıklayıcı kesme noktasının düzgün yerleştirilebileceği ek aday satırları içeren bir aralık belirtir. DE daha sonra bir kesme noktası kabul edebilecek bir satır bulana kadar bu satırları ileriye doğru arama olacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

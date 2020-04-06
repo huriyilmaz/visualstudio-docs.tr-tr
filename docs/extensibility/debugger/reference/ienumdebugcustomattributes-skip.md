@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::Skip | Microsoft Docs
+title: IEnumDebugCustomAttributes::Atla | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugCustomAttributes::Skip
 ms.assetid: 54c72e23-cd4c-4746-935c-abea8057dd1b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 67ea4d7b92a657b93a8445ae0e2538bdc6a2a175
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 25086724f1fde63737275aa7995f532f119bbf82
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332980"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717150"
 ---
 # <a name="ienumdebugcustomattributesskip"></a>IEnumDebugCustomAttributes::Skip
-Özel öznitelikler bir numaralandırma dizisinde belirtilen sayıda atlar.
+Numaralandırma dizisinde belirli sayıda özel öznitelikleri atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Geçilecek öğelerin sayısı.
+[içinde] Atlasılayacak öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa `celt` kalan öğeleri sayısından büyüktür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döndürür. Kalan `S_FALSE` `celt` öğelerin sayısından büyükse döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Varsa `celt` numarasından daha büyük bir değer belirtir, kalan öğeleri numaralandırma sonuna ayarlanır ve `S_FALSE` döndürülür.
+ Kalan `celt` öğelerin sayısından daha büyük bir değer belirtirse, numaralandırma sonuna `S_FALSE` ayarlanır ve döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

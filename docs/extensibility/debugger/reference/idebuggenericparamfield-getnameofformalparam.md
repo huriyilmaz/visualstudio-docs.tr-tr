@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericParamField::GetNameOfFormalParam | Microsoft Docs
+title: IDebugGenericParamField::GetNameOfFormalParam | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugGenericParamField::GetNameOfFormalParam
 - GetNameOfFormalParam
 ms.assetid: 05032a83-49ce-4007-b5d6-7b56945b956c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 180af2ef9f8c9e086091b80d3c0e80b0476d950c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 03fb76b96804df900e21b0f91b9c5ba599449cf5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330405"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727964"
 ---
 # <a name="idebuggenericparamfieldgetnameofformalparam"></a>IDebugGenericParamField::GetNameOfFormalParam
-Bu genel parametre adını alır.
+Bu genel parametrenin adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,13 +40,13 @@ int GetNameOfFormalParam (
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-[out] Bu genel parametre adı.
+[çıkış] Bu genel parametrenin adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugGenericParamFieldType** gösteren nesne [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimi.
+Aşağıdaki örnek, [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini ortaya çıkaran bir **CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetNameOfFormalParam(BSTR *pbstrName)

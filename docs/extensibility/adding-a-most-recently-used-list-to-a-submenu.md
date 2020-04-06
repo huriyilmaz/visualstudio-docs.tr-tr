@@ -1,5 +1,5 @@
 ---
-title: Bir en son kullanılan bir alt listeye ekleme | Microsoft Docs
+title: Alt Menüye En Son Kullanılan Liste Ekleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - menus, creating MRU list
 - most recently used
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6eb32f81947f7359f5912e8a558e8df5002a0b80
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf389c0da7ec0aafb6e47dae8f09ffdc3b1d1e4d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352403"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740295"
 ---
-# <a name="add-a-most-recently-used-list-to-a-submenu"></a>Bir en son kullanılan bir alt menüye listesi Ekle
-Bu izlenecek yol tanıtımlar geliştirir [menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md)ve dinamik bir listesi için bir alt menü ekleme işlemi gösterilmektedir. Dinamik listesi en son kullanılanlar (MRU) listesini oluşturmak için temelini oluşturur.
+# <a name="add-a-most-recently-used-list-to-a-submenu"></a>Alt menüye en son kullanılan liste ekleme
+Bu gözden geçirme, bir [menüye alt menü ekle'deki](../extensibility/adding-a-submenu-to-a-menu.md)gösterilere göre oluşturur ve bir alt menüye dinamik bir liste nin nasıl ekleyeceğini gösterir. Dinamik liste, en son kullanılan (MRU) listesini oluşturmak için temel oluşturur.
 
-Dinamik menü listesi menüsünde yer tutucu ile başlar. Menü gösterilen her zaman Visual Studio tümleşik geliştirme ortamı (IDE) yer tutucuyu gösterilen tüm komutlar için VSPackage ister. Dinamik bir listesi, herhangi bir yere menüde ortaya çıkabilir. Ancak, dinamik listeler genellikle tutulur ve başlarına alt menüler ya da menü altlarındaki görüntülenir. Bu tasarım desenleri kullanarak dinamik genişletin ve diğer komutlar menüsünde konumunu etkilemeden sözleşme komutların listesini sağlar. Bu izlenecek yolda, alt geri kalanından satırla ayrılan, var olan bir alt kısmındaki dinamik MRU listesi görüntülenir.
+Dinamik menü listesi menüdeki yer tutucuyla başlar. Menü her gösterildiğinde, Visual Studio entegre geliştirme ortamı (IDE) yer tutucuda gösterilmesi gereken tüm komutları VSPackage'dan ister. Menüde herhangi bir yerde dinamik bir liste oluşabilir. Ancak, dinamik listeler genellikle alt menülerde veya menülerin altlarında kendileri tarafından depolanır ve görüntülenir. Bu tasarım desenlerini kullanarak, menüdeki diğer komutların konumunu etkilemeden dinamik komut listesinin genişlemesini ve daraltılmasını sağlarsınız. Bu gözden geçirme de, dinamik MRU listesi varolan bir alt menünün alt menüsünün alt kısmında görüntülenir ve alt menünün geri kalanından bir satırla ayrılır.
 
-Teknik olarak, dinamik bir listesi için bir araç çubuğu uygulanabilir. Ancak, kullanıcı değiştirmek için belirli adımlar sürece bir araç çubuğu değişmeden kalmalıdır, çünkü Biz bu kullanım önerilmemektedir.
+Teknik olarak, dinamik bir liste araç çubuğuna da uygulanabilir. Ancak, kullanıcı değiştirmek için belirli adımlar atmadığı sürece bir araç çubuğu değişmeden kalması gerektiğinden, bu kullanımı öneriz.
 
-Bu izlenecek yol, bir tanesi seçili her zaman sırayı değiştirmek dört öğelerin bir MRU listesi oluşturur (Seçili öğe listesinin üstüne taşınır).
+Bu izne, her biri seçildiğinde siparişlerini değiştiren dört öğeden oluşan bir MRU listesi oluşturur (seçili öğe listenin en üstüne taşınır).
 
-Menüler hakkında daha fazla bilgi ve *.vsct* dosyaları görmek [komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
+Menüler ve *.vsct* dosyaları hakkında daha fazla bilgi için [Komutlar, menüler ve araç çubuklarına](../extensibility/internals/commands-menus-and-toolbars.md)bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
-Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+## <a name="prerequisites"></a>Ön koşullar
+Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK'ya](../extensibility/visual-studio-sdk.md)bakın.
 
-## <a name="create-an-extension"></a>Bir uzantı oluşturma
+## <a name="create-an-extension"></a>Uzantı oluşturma
 
-- Konusundaki yordamları izleyin [menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md) değiştirilen alt aşağıdaki yordamlarda oluşturmak için.
+- Aşağıdaki yordamlarda değiştirilen alt menüyü oluşturmak [için bir alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md) yordamlarını izleyin.
 
-  Bu kılavuzdaki yordamları VSPackage'ı adı olduğunu varsayın `TopLevelMenu`, kullanılan adı [Visual Studio menü çubuğuna menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md).
+  Bu gözden geçirme işlemindeki yordamlar, VSPackage'ın adının [Visual Studio menü çubuğuna menü ekle'de](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)kullanılan ad olduğunu `TopLevelMenu`varsayar.
 
-## <a name="create-a-dynamic-item-list-command"></a>Bir dinamik öğe listesi komutu oluştur
+## <a name="create-a-dynamic-item-list-command"></a>Dinamik madde listesi komutu oluşturma
 
-1. Açık *TestCommandPackage.vsct*.
+1. *Açık TestCommandPackage.vsct*.
 
-2. İçinde `Symbols` bölümünde `GuidSymbol` guidTestCommandPackageCmdSet, adlı düğüm eklemek için Sembol `MRUListGroup` grubu ve `cmdidMRUList` gibi komutu.
+2. `Symbols` GuidTestCommandPackageCmdSet adlı `GuidSymbol` düğümdeki bölümde, `MRUListGroup` grup ve `cmdidMRUList` komut için aşağıdaki gibi sembolü ekleyin.
 
     ```csharp
     <IDSymbol name="MRUListGroup" value="0x1200"/>
     <IDSymbol name="cmdidMRUList" value="0x0200"/>
     ```
 
-3. İçinde `Groups` bölümünde, mevcut grup girdilerini sonra bildirilen gruba ekleyin.
+3. Bölüme, `Groups` varolan grup girdisi sonra bildirilen grup ekleyin.
 
     ```cpp
     <Group guid="guidTestCommandPackageCmdSet" id="MRUListGroup"
@@ -60,7 +60,7 @@ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. 
 
     ```
 
-4. İçinde `Buttons` bölümünde, mevcut düğmesi girişleri sonra yeni bildirilen komutu temsil etmek için bir düğüm ekleyin.
+4. `Buttons` Bölümde, varolan düğme girişlerden sonra yeni bildirilen komutu temsil edecek bir düğüm ekleyin.
 
     ```csharp
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidMRUList"
@@ -74,34 +74,34 @@ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. 
     </Button>
     ```
 
-    `DynamicItemStart` Bayrağı dinamik olarak oluşturulması için komutu sağlar.
+    Bayrak, `DynamicItemStart` komutun dinamik olarak oluşturulmasını sağlar.
 
-5. Projeyi oluşturmak ve yeni komutu test etmek için hata ayıklama başlatılamıyor.
+5. Projeyi oluşturun ve yeni komutun ekranını sınamak için hata ayıklamaya başlayın.
 
-    Üzerinde **TestMenu** menü, yeni alt tıklayın **alt menü**, yeni komut görüntülenecek **MRU yer tutucu**. Sonraki yordamda komutları dinamik MRU Listesi uygulandıktan sonra bu komut etiketi alt açıldığında her zaman bu listeyi değiştirilecek.
+    **TestMenu** menüsünde, yeni alt menü, **Alt Menü**, yeni komut, **MRU Placeholder**görüntülemek için tıklayın. Bir sonraki yordamda dinamik bir MRU komut listesi uygulandıktan sonra, bu komut etiketi alt menü her açıldığında bu listeyle değiştirilir.
 
-## <a name="filling-the-mru-list"></a>MRU Listesi doldurma
+## <a name="filling-the-mru-list"></a>MRU Listesini Doldurma
 
-1. İçinde *TestCommandPackageGuids.cs*, mevcut komut kimlikleri sonra aşağıdaki satırları ekleyin `TestCommandPackageGuids` sınıf tanımını.
+1. *TestCommandPackageGuids.cs,* `TestCommandPackageGuids` sınıf tanımında varolan komut işlemisonra si
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
     public const uint cmdidMRUList = 0x200;
     ```
 
-2. İçinde *TestCommand.cs* aşağıdaki using deyimi.
+2. *TestCommand.cs* aşağıdaki kullanarak deyimi ekleyin.
 
     ```csharp
     using System.Collections;
     ```
 
-3. Aşağıdaki kodu TestCommand oluşturucuda son AddCommand çağrısından sonra ekleyin. `InitMRUMenu` Daha sonra tanımlanır
+3. Son AddCommand çağrısından sonra TestKomutu oluşturucuya aşağıdaki kodu ekleyin. Daha `InitMRUMenu` sonra tanımlanacak
 
     ```csharp
     this.InitMRUMenu(commandService);
     ```
 
-4. TestCommand sınıfında aşağıdaki kodu ekleyin. Bu kod MRU listesinde gösterilecek öğeler temsil eden dizeleri listesini başlatır.
+4. TestKomutu sınıfına aşağıdaki kodu ekleyin. Bu kod, MRU listesinde gösterilecek öğeleri temsil eden dizeleri listesini başlatılmasını.
 
     ```csharp
     private int numMRUItems = 4;
@@ -125,7 +125,7 @@ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. 
     }
     ```
 
-5. Sonra `InitializeMRUList` yöntemi ekleme `InitMRUMenu` yöntemi. Bu, MRU Listesi menü komutları başlatır.
+5. Yöntemden `InitializeMRUList` sonra, `InitMRUMenu` yöntemi ekleyin. Bu, MRU liste menü komutlarını başharfe getirir.
 
     ```csharp
     private void InitMRUMenu(OleMenuCommandService mcs)
@@ -143,9 +143,9 @@ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. 
     }
     ```
 
-    MRU listesindeki olası her öğe için bir menü komutu nesnesi oluşturmanız gerekir. IDE çağrıları `OnMRUQueryStatus` kalmayana kadar daha fazla öğe MRU listesindeki her bir öğe için yöntemi. Yönetilen kodda, daha fazla öğe olduğunu bilmek IDE için tek yolu tüm olası öğeleri ilk oluşturmaktır. İsterseniz, ek öğeleri görünür olarak ilk kullanarak işaretleyebilirsiniz `mc.Visible = false;` menü komutunu oluşturulduktan sonra. Bu öğeleri ardından daha sonra kullanarak görünür hale getirilebilir `mc.Visible = true;` içinde `OnMRUQueryStatus` yöntemi.
+    MRU listesindeki her olası öğe için bir menü komut nesnesi oluşturmanız gerekir. IDE, mru listesindeki her öğe için `OnMRUQueryStatus` yöntemi, başka öğe olmayana kadar çağırır. Yönetilen kodda, IDE'nin başka öğe olmadığını bilmesinin tek yolu önce tüm olası öğeleri oluşturmaktır. İsterseniz, menü komutu oluşturulduktan sonra kullanarak `mc.Visible = false;` ilk başta görünmeyen ek öğeleri işaretleyebilirsiniz. Bu öğeler daha sonra `mc.Visible = true;` `OnMRUQueryStatus` yöntem kullanılarak görünür hale getirilebilir.
 
-6. Sonra `InitMRUMenu` yöntemi, aşağıdaki `OnMRUQueryStatus` yöntemi. Metnin her MRU öğe için ayarlar işleyicisidir.
+6. Yöntemden `InitMRUMenu` sonra, aşağıdaki `OnMRUQueryStatus` yöntemi ekleyin. Bu, her MRU öğesi için metni ayarlayan işleyicidir.
 
     ```csharp
     private void OnMRUQueryStatus(object sender, EventArgs e)
@@ -162,7 +162,7 @@ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. 
     }
     ```
 
-7. Sonra `OnMRUQueryStatus` yöntemi, aşağıdaki `OnMRUExec` yöntemi. MRU öğe seçmek için işleyici budur. Bu yöntem, seçili öğe listesinin en üstüne taşır ve ardından seçilen öğe bir ileti kutusunda görüntüler.
+7. Yöntemden `OnMRUQueryStatus` sonra, aşağıdaki `OnMRUExec` yöntemi ekleyin. Bu, bir MRU öğesi seçmek için işleyicisi. Bu yöntem, seçili öğeyi listenin en üstüne taşır ve sonra seçili öğeyi bir ileti kutusunda görüntüler.
 
     ```csharp
     private void OnMRUExec(object sender, EventArgs e)
@@ -188,18 +188,18 @@ Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. 
 
     ```
 
-## <a name="testing-the-mru-list"></a>MRU Listesi test etme
+## <a name="testing-the-mru-list"></a>MRU listesini test etme
 
-1. Projeyi oluşturmak ve hata ayıklamaya başlayın.
+1. Projeyi oluşturun ve hata ayıklamaya başlayın.
 
-2. Üzerinde **TestMenu** menüsünde tıklatın **çağırma TestCommand**. Bunun yapılması, komut seçilmiş olduğunu belirten bir ileti kutusu görüntüler.
+2. **TestMenu** menüsünde, **TestKomutunu Çağır'ı**tıklatın. Bunu yaparken, komutun seçildiğini gösteren bir ileti kutusu görüntülenir.
 
     > [!NOTE]
-    > VSPackage'ı yüklemek ve doğru şekilde MRU listesi görüntülemek için zorlamak için bu adım gereklidir. Bu adımı atlarsanız MRU listesi görüntülenmez.
+    > Bu adım, VSPackage'ı MRU listesini yüklemeye ve doğru şekilde görüntülemeye zorlamak için gereklidir. Bu adımı atlarsanız, MRU listesi görüntülenmez.
 
-3. Üzerinde **Test menüsü** menüsünde tıklatın **alt menü**. Dört öğe listesini bir ayırıcı aşağıdaki alt sonunda görüntülenir. Tıkladığınızda **madde 3**, bir ileti kutusu görünür ve metnini **seçili öğe 3**. (Dört öğe listesini görüntülenmiyorsa, önceki adımda'ndaki yönergeleri izlediğinizden emin olun.)
+3. Test **Menüsü** menüsünde **Alt Menü'ye**tıklayın. Alt menünün sonunda, bir ayırıcının altında dört öğeden oluşan bir liste görüntülenir. **Öğe 3'e**tıkladığınızda, bir ileti kutusu görünmeli ve metni görüntülemeli, **Seçili Öğe 3**. (Dört öğenin listesi görüntülenmiyorsa, önceki adımdaki yönergeleri izlediğinizi emin olun.)
 
-4. Alt yeniden açın. Dikkat **madde 3** listenin en üstünde sunulmuştur ve diğer öğeler bir konum aşağı gönderildi. Tıklayın **madde 3** yeniden ve hala ileti kutusunda görüntüler bildirimi **seçili öğe 3**, metin komut etiketi ile birlikte yeni bir konuma doğru bir şekilde taşındığını gösterir.
+4. Alt menüyü yeniden açın. Madde **3'ün** artık listenin en üstünde olduğunu ve diğer öğelerin bir konumdan aşağı itildiğini unutmayın. **Madde 3'e** yeniden tıklayın ve ileti kutusunun hala **Seçili Öğe 3'ün**görüntülendiğini ve bu da metnin komut etiketiyle birlikte yeni konuma doğru şekilde taşındığını gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Dinamik olarak menü öğeleri ekleme](../extensibility/dynamically-adding-menu-items.md)
+- [Dinamik menü öğeleri ekleme](../extensibility/dynamically-adding-menu-items.md)

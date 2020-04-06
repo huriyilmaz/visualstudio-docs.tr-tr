@@ -1,27 +1,27 @@
 ---
-title: Olay kaynakları (Visual Studio SDK) | Microsoft Docs
+title: Etkinlik Kaynakları (Visual Studio SDK) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], event sources
 ms.assetid: b9ba0908-ae4c-4a64-aab1-bee453dd7a22
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96ab4fc69cab50bc5554d626d9c2ac86d49283f4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 13842ab7b231d04bdbcafdf32534edc4eb2a9af6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315304"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738776"
 ---
-# <a name="event-sources-visual-studio-sdk"></a>Olay kaynakları (Visual Studio SDK)
-Olayların iki kaynağı vardır: hata ayıklama altyapısı (DE) ve oturum hata ayıklama Yöneticisi (SDM). SDM gönderilen olaylar NULL altyapısı bir DE gönderilen olayların bir NULL olmayan altyapısı bulunur.
+# <a name="event-sources-visual-studio-sdk"></a>Etkinlik kaynakları (Visual Studio SDK)
+İki olay kaynağı vardır: hata ayıklama altyapısı (DE) ve Oturum Hata Ayıklama Yöneticisi (SDM). De'den gönderilen olaylar NULL olmayan bir motora sahipken, SDM'den gönderilen olaylar null motoruna sahiptir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek nasıl gönderileceğini gösterir **IDebugProgramCreateEvent2** DE SDM olarak öğesinden.
+Aşağıdaki örnek, **IDebugProgramCreateEvent2'nin** DE'den SDM'ye nasıl gönderilebildiğini gösterir.
 
 ```csharp
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();
@@ -73,4 +73,4 @@ HRESULT CEvent::SendAsynchronousEvent(IDebugEventCallback2 *pCallback, IDebugEng
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Olayları gönderme](../../extensibility/debugger/sending-events.md)
+- [Etkinlik gönderme](../../extensibility/debugger/sending-events.md)

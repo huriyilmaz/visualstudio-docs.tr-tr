@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::Attach_V7 | Microsoft Docs
+title: IDebugProgramNode2::Attach_V7 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::Attach_V7
 - IDebugProgramNode2::Attach
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a90b162476872700ee0ec69a3bb9e6e575e7862a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bdee5b224ae38c3474009aeaf26e783ebc5dd139
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351178"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722131"
 ---
-# <a name="idebugprogramnode2attachv7"></a>IDebugProgramNode2::Attach_V7
+# <a name="idebugprogramnode2attach_v7"></a>IDebugProgramNode2::Attach_V7
 
 > [!Note]
-> KULLANIM DIŞI. KULLANMAYIN.
+> Kaldırıl -mış. KULLANMAYıN.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,36 +48,36 @@ int Attach_V7 (
 ## <a name="parameters"></a>Parametreler
 
 `pMDMProgram`\
-[in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) eklemek için program temsil eden arabirim.
+[içinde] Eklenecek programı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimi.
 
 `pCallback`\
-[in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) SDM için hata ayıklama olayları göndermek için kullanılan arabirim.
+[içinde] Hata ayıklama olaylarını SDM'ye göndermek için kullanılacak [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) arabirimi.
 
 `dwReason`\
-[in] Bir değer [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) ekleme nedenini belirten sabit listesi.
+[içinde] [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) numaralandırmanın bir değeri, ekleme nedenini belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Bir uygulama her zaman döndürmelidir `E_NOTIMPL`.
+Bir uygulama her `E_NOTIMPL`zaman dönmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> Visual Studio 2005 ' ten itibaren bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL`. Bkz: [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) program düğümü, iliştirilemez için göstermek gerekiyorsa veya program düğümü yalnızca program ayarlıyorsanız alternatif bir yaklaşım için arabirim `GUID`. Aksi takdirde uygulama [iliştirme](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi.
+> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmaz ve her zaman geri dönmelidir. `E_NOTIMPL` Program düğümüne bağlanamayacağını belirtmek için gerekirse veya program düğümü yalnızca programı `GUID`ayarlıyorsa, alternatif bir yaklaşım için [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) arabirimine bakın. Aksi takdirde, [Ekle](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemini uygulayın.
 
-## <a name="prior-to-visual-studio-2005"></a>Visual Studio 2005'ten önce
+## <a name="prior-to-visual-studio-2005"></a>Visual Studio 2005'e kadar
 
-Bu yöntem yalnızca DE ayıklanan programa Adres alanında çalıştırıyorsa uygulanması gerekiyor. Aksi takdirde, bu yöntem döndürmelidir `S_FALSE`.
+Bu yöntemin yalnızca DE, debugged olan programın adres alanında çalışıyorsa uygulanması gerekir. Aksi takdirde, bu `S_FALSE`yöntem in verilmelidir.
 
-Bu yöntem çağrıldığında DE göndermelisiniz [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) olay nesne, zaten bu örneği için gönderilmedi, [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabirimi yanı sıra [ IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) ve [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) olay nesneleri. [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) olay nesnesi, ardından gönderilen `dwReason` parametresi `ATTACH_REASON_LAUNCH`.
+Bu yöntem çağrıldığında, DE [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) olay nesnesini göndermeli, [iDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabiriminin bu örneğinin yanı sıra [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) ve [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) olay nesneleri için gönderilmemişse. `dwReason` `ATTACH_REASON_LAUNCH` [Parametre](../../../extensibility/debugger/reference/idebugentrypointevent2.md) .
 
-DE çağırmalı [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) metodunda [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) tarafından sağlanan nesne [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olay nesne ve bu programın GUID depolamanız gerekir Örnek verileri `IDebugProgram2` DE tarafından uygulanan bir nesne.
+DE, `IDebugProgram2` [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogram2.md) olay nesnesi tarafından sağlanan [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) nesnesi üzerinde [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) yöntemini aramalı ve bu programın GUID'ini DE tarafından uygulanan nesnenin örnek verilerinde depolamalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)
-- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+- [İliştir](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)
 - [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md)

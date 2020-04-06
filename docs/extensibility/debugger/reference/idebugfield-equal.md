@@ -1,5 +1,5 @@
 ---
-title: IDebugField::Equal | Microsoft Docs
+title: IDebugField::Eşit | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugField::Equal method
 ms.assetid: 75369fe6-ddd3-497d-80d1-2488e6100e9f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8af316c9669b00ae8316888c6a7072d4737dd23d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a45a31c02376f95c3cd6b0c4a4adf0434fabe92
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352658"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729018"
 ---
 # <a name="idebugfieldequal"></a>IDebugField::Equal
-Bu yöntem, bu alan için eşitlik belirtilen alan ile karşılaştırır.
+Bu yöntem, bu alanı eşitlik için belirtilen alanla karşılaştırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int Equal(
 
 ## <a name="parameters"></a>Parametreler
 `pField`\
-[in] Buna karşılaştırmak için alan.
+[içinde] Bununla karşılaştırılacak alan.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Alanları aynıysa döndürür `S_OK`. Alanları farklı ise döndürür `S_FALSE.` Aksi takdirde bir hata kodu döndürür.
+ Alanlar aynıysa, döndürür. `S_OK` Alanlar farklıysa, Aksi `S_FALSE.` takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

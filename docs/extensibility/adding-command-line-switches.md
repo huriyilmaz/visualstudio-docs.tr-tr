@@ -1,5 +1,5 @@
 ---
-title: Komut satırı anahtarları ekleme | Microsoft Docs
+title: Komut Satırı Anahtarları Ekleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - IVsAppCommandLine::GetOption method
 - command line, switches
 ms.assetid: 8bbbd87e-76fe-4fb5-8ef9-65f5e31967cf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c44864285f3e5701604379a110292c29d3f9b78
-ms.sourcegitcommit: 90c3187d804ad7544367829d07ed4b47d3f8a72d
+ms.openlocfilehash: 3f2df3a704c34d97c9d5acfa72249fe492b7f812
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821525"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740172"
 ---
-# <a name="add-command-line-switches"></a>Komut satırı anahtarları Ekle
-*Devenv. exe* yürütüldüğünde VSPackage 'a uygulanan komut satırı anahtarlarını ekleyebilirsiniz. Anahtarın <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> adını ve özelliklerini bildirmek için kullanın. Bu örnekte, bir bağımsız değişken içermeyen ve VSPackage otomatik olarak yüklenen VSPackage adlı VSPackage alt sınıfı Için mySwitch anahtarı eklenir.
+# <a name="add-command-line-switches"></a>Komut satırı anahtarları ekleme
+*Devenv.exe* yürütüldüğünde VSPackage'ınıza uygulanan komut satırı anahtarlarını ekleyebilirsiniz. Anahtarın adını ve özelliklerini bildirmek için kullanın. <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> Bu örnekte, MySwitch anahtarı, bağımsız değişken olmadan ve VSPackage otomatik olarak yüklenmiş olan **AddCommandSwitchPackage** adlı VSPackage alt sınıfı için eklenir.
 
 ```csharp
 [ProvideAppCommandLine("MySwitch", typeof(AddCommandSwitchPackage), Arguments = "0", DemandLoad = 1)]
@@ -32,30 +32,30 @@ ms.locfileid: "68821525"
 ||||
 |-|-|-|-|
 | Parametre | Açıklama|
-| Arguments | Anahtar için bağımsız değişkenlerin sayısı. "*" Veya bağımsız değişken listesi olabilir. |
-| Isteğsiz yük | Bu 1 olarak ayarlanırsa VSPackage 'ı otomatik olarak yükleyin, aksi takdirde 0 olarak ayarlayın. |
-| HelpString | **Devenv/?** ile görüntülenecek dizenin Yardım dizesi veya kaynak kimliği. |
-| Ad | Anahtar. |
-| PackageGuid | Paketin GUID 'SI. |
+| Bağımsız Değişkenler | Geçiş için bağımsız değişken sayısı. "*" veya bağımsız değişkenlistesi olabilir. |
+| DemandLoad | VsPackage'ı 1 olarak ayarlanmışsa, aksi takdirde 0 olarak ayarlanırsa otomatik olarak yükleyin. |
+| Helpstring | **Devenv**ile görüntülenecek dize yardım dizesi veya kaynak kimliği /? . |
+| Adı | Anahtar. |
+| PaketGuid | Paketin GUID'i. |
 
- Bağımsız değişkenlerin ilk değeri genellikle 0 veya 1 ' dir. Komut satırının tüm geri kalanın bağımsız değişken olduğunu göstermek için ' * ' özel değeri kullanılabilir. Bu, kullanıcının bir hata ayıklayıcı komut dizesinde geçmesi gereken hata ayıklama senaryolarında yararlı olabilir.
+ Bağımsız değişkenlerin ilk değeri genellikle 0 veya 1'dir. Komut satırının geri kalanının bağımsız değişken olduğunu belirtmek için '*' özel bir değeri kullanılabilir. Bu, kullanıcının hata ayıklama komut dizesinde geçmesi gereken senaryoları hata ayıklamak için yararlı olabilir.
 
- Kullanılan yük değeri (1) `true` ya `false` da (0) VSPackage 'ın otomatik olarak yüklenmesi gerektiğini gösterir.
+ DemandLoad değeri `true` (1) veya `false` (0) VSPackage'ın otomatik olarak yüklenmesi gerektiğini gösterir.
 
- HelpString değeri, **devenv/?** içinde görüntülenen DIZENIN kaynak kimliğidir. Yardım görüntüleme. Bu değer, nnn ' in bir tamsayı olduğu "#nnn" biçiminde olmalıdır. Kaynak dosyasındaki dize değeri yeni bir satır karakteriyle bitmelidir.
+ HelpString değeri **devenv /?** Görüntülenmesine yardımcı olun. Bu değer, nnn bir tamsayı olduğu "#nnn" şeklinde olmalıdır. Kaynak dosyasındaki dize değeri yeni bir satır karakteriyle sona ermelidir.
 
- Ad değeri, anahtarın adıdır.
+ Ad değeri anahtarın adıdır.
 
- PackageGuid değeri, bu anahtarı uygulayan paketin GUID 'sidir. IDE, komut satırı anahtarının uygulandığı kayıt defterindeki VSPackage 'ı bulmak için bu GUID 'yi kullanır.
+ PackageGuid değeri, bu anahtarı uygulayan paketin GUID değeridir. IDE, komut satırı anahtarının uygulandığı kayıt defterinde VSPackage'ı bulmak için bu GUID'i kullanır.
 
-## <a name="retrieve-command-line-switches"></a>Komut satırı anahtarlarını alma
+## <a name="retrieve-command-line-switches"></a>Komut satırı anahtarlarını al
  Paketiniz yüklendiğinde, aşağıdaki adımları tamamlayarak komut satırı anahtarlarını alabilirsiniz.
 
-1. VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> uygulamanızda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> arabirimini almak <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> için öğesini `QueryService` çağırın.
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> VSPackage'ınızın uygulamasında arayüz `QueryService` almak <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> için <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> çağrıda bulunuyorum.
 
-2. Kullanıcının <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A> girdiği komut satırı anahtarlarını almak için çağırın.
+2. Kullanıcının girdiği komut satırı anahtarlarını almak için arayın. <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>
 
-   Aşağıdaki kod, MySwitch komut satırı anahtarının Kullanıcı tarafından girilip girilmediğini nasıl bulacağınızı göstermektedir:
+   Aşağıdaki kod, MySwitch komut satırı anahtarının kullanıcı tarafından girilip girmediğini nasıl öğrenilir:
 
 ```csharp
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));
@@ -66,7 +66,7 @@ string optionValue = "";
 cmdline.GetOption("MySwitch", out isPresent, out optionValue);
 ```
 
- Paketinizin her yüklenilişinde komut satırı anahtarlarınızın denetlenmesi sizin sorumluluğunuzdadır.
+ Paketiniz her yüklendiğinde komut satırı anahtarlarınızı kontrol etmek sizin sorumluluğunuzdadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>

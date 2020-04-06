@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Microsoft Docs
+title: AD_PROCESS_ID | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - AD_PROCESS_ID union
 ms.assetid: 4cb40d12-2e92-4f09-83f4-689928bd65b3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1893b78063e045f341af246fc0ef2c0f2ad1538e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 96a834725f1cf5b14f12a4c1554e67477768ef23
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351421"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738172"
 ---
-# <a name="adprocessid"></a>AD_PROCESS_ID
-Sistem kimliği veya bir GUID olabilir işlem Kimliğini belirtir.
+# <a name="ad_process_id"></a>AD_PROCESS_ID
+Sistem kimliği veya GUID olabilecek işlem kimliğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,18 +49,18 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>Üyeler
 `ProcessIdType`\
-Bir değer [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) yorumlama belirten sabit listesi `ProcessId` birleşim (ya da yönetilen kod için erişmek için üye yapısı).
+[AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) numaralandırmadan, `ProcessId` birliğin nasıl yorumlanacağı (veya yönetilen kod için yapının hangi üyesinin erişilen) belirtilmesine neden olan değer.
 
 `dwProcessId`\
-Sistem arasında bir değer olarak işlem kimliği.
+Sistemden bir değer olarak işlem kimliği.
 
 `guidProcessId`\
-İşlem kimliği bir GUID olarak.
+GUID olarak işlem kimliği.
 
-dwUnused doldurma.
+dwUnused Dolgu.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı için aşağıdaki yöntemlerden geçirilir:
+Bu yapı aşağıdaki yöntemlere aktarılır:
 
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)
 
@@ -70,7 +70,7 @@ Bu yapı için aşağıdaki yöntemlerden geçirilir:
 
 - [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 
-Ve aşağıdaki yöntemlerden döndürülen:
+Ve aşağıdaki yöntemlerden döndürülür:
 
 - [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)
 
@@ -81,7 +81,7 @@ Ve aşağıdaki yöntemlerden döndürülen:
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

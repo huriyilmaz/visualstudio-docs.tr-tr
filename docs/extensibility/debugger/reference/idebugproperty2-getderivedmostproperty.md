@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetDerivedMostProperty | Microsoft Docs
+title: IDebugProperty2::GetDerivedMostProperty | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetDerivedMostProperty
 ms.assetid: cc86b461-62d1-4340-8209-c65037fd8b02
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6b08ca2ad569935a117b8b1255bc740bf395c2ed
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2086aded4361049d722ec36ba1d470ed8f7ac6e5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343158"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721495"
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
-Bir özelliğin türetilmiş çoğu özelliği alır.
+Bir özelliğin türetilmiş en özelliğini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetDerivedMostProperty ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppDerivedMost`\
-[out] Döndürür bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) türetilmiş çoğu özelliği temsil eden nesne.
+[çıkış] Türetilmiş en özelliği temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür. Döndürür `S_GETDERIVEDMOST_NO_DERIVED_MOST` almak için türetilmiş çoğu özelliği yok ise.
+ Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür. Alınacak `S_GETDERIVEDMOST_NO_DERIVED_MOST` en çok türemiş özellik yoksa döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, bu özelliği uygulayan bir nesne tanımlar `ClassRoot` ancak aslında örneklemesi olduğu `ClassDerived` sınıfından türetilen `ClassRoot`, sonra da bu yöntemi döndürür bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi açıklayan `ClassDerived` nesne.
+ Örneğin, `ClassRoot` bu özellik uygulayan ancak aslında türetilen bir ani `ClassDerived` olan bir `ClassRoot`nesneyi tanımlıyorsa, bu yöntem nesneyi `ClassDerived` açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

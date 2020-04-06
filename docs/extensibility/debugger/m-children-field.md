@@ -1,30 +1,30 @@
 ---
-title: m_children alanı | Microsoft Docs
+title: m_children Alanı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_children field, ContingentProperties class [.NET Framework debug engines]
 ms.assetid: 0a3b5653-7bc0-4a7a-8963-9020bc52b9cb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab6446b18350fe1f11e0b164d9eb4bff39035ddb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07933fd4c9f359e72714600abdf8b4ee29268f84
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330885"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738431"
 ---
-# <a name="mchildren-field"></a>m_children field
-Bu göreve kaydedilmiş alt görevlerin listesi.
+# <a name="m_children-field"></a>m_children alanı
+Bu göreve kayıtlı alt görevlerin listesi.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (içinde *mscorlib.dll*)
+ **Montaj:** mscorlib *(mscorlib.dll*olarak)
 
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,9 +33,9 @@ Bu göreve kaydedilmiş alt görevlerin listesi.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Görev yürütülürken, görevi yürüten iş parçacığı bu dizinin erişmelidir.
+ Görev çalışırken, yalnızca görevi yürüten iş parçacığı bu diziye erişmelidir.
 
- Görev tamamlandıysa, diğer iş parçacıkları yoksa hiçbir şey eklemenize veya herhangi bir şey kaldırın sürece bu alan erişebilirsiniz.
+ Görev tamamlanırsa, diğer iş parçacıkları bu alana bir şey eklemedikleri veya ondan bir şey kaldırmadıkları sürece erişebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ContingentProperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md)

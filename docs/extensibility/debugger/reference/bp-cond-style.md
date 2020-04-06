@@ -1,5 +1,5 @@
 ---
-title: BP_COND_STYLE | Microsoft Docs
+title: BP_COND_STYLE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_COND_STYLE enumeration
 ms.assetid: a93b1412-f447-48a1-af9d-38f3dbb3092f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ded3d31f9be2d0a02a238ead4bc989cc21b4922a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ca704ca186308ea9e44c4fa7edc6617cbac806eb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351820"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738118"
 ---
-# <a name="bpcondstyle"></a>BP_COND_STYLE
-Bekleyen kesme noktası koşulu stili için belirtir ve bağlı kesme noktaları.
+# <a name="bp_cond_style"></a>BP_COND_STYLE
+Bekleyen ve bağlı kesme noktaları için kesme noktası koşul stilini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,24 +46,24 @@ public enum enum_BP_COND_STYLE {
 
 ## <a name="fields"></a>Alanlar
 `BP_COND_NONE`\
-Kesme noktasına, Kesme noktasının konuma ulaşıldığında tetikler. Belirtilen hiçbir kesme noktası koşulu.
+Kesme noktasının konumuna ulaşıldığında kesme noktasını yakalır. Kesme noktası koşulu belirtilmedi.
 
 `BP_COND_WHEN_TRUE`\
-Veren, koşullu ifade kesme noktasıyla ilişkili yalnızca bir kesme noktası harekete `true`.
+Kesme noktası, yalnızca kesme noktasıyla ilişkili koşullu ifade `true`yi değerlendirdiğinde kesme noktasını yaslar.
 
 `BP_COND_WHEN_CHANGED`\
-Yalnızca koşullu ifadenin değerini kesme noktası ile ilişkili olduğunda kesme noktası, önceki değerlendirmesinden gelen değişti ateşlenir.
+Kesme noktasını yalnızca kesme noktasıyla ilişkili koşullu ifadenin değeri önceki değerlendirmesinden değiştirdiğinde yatir.
 
 ## <a name="remarks"></a>Açıklamalar
-İçin kullanılan `styleCondition` üyesi [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısı.
+`styleCondition` [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapının üyesi için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

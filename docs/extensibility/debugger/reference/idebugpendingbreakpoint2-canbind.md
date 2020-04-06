@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::CanBind | Microsoft Docs
+title: IDebugPendingBreakpoint2::CanBind | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugPendingBreakpoint2::CanBind method
 - CanBind method
 ms.assetid: 84a2b189-ccf1-467e-8fab-0c0da68f0b91
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c9325d8a0c8ee39aec6f8ceccb5bbb894eef2163
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07625f7249092e2de3d3dccaaef31a2869755e36
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311729"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725968"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
-Bu bekleyen kesme noktasının bir kod konumuna bağlayabilirsiniz olup olmadığını belirler.
+Bekleyen bu kesme noktasının kod konumuna bağlanıp bağlanamayacağını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,16 +42,16 @@ int CanBind ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppErrorEnum`\
-[out] Döndürür bir [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) listesini içeren nesne [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) nesneleri, hatalar olabilir.
+[çıkış] Hatalar olabilirse [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) nesnelerinin listesini içeren bir [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK.` döndürür `S_FALSE` kesme noktası bağlanamıyor, bu durumda hataları tarafından döndürülür `ppErrorEnum` parametresi. Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.
+ Başarılı olursa, `S_OK.` `S_FALSE` kesme noktası bağlanamıyorsa, hatalar `ppErrorEnum` parametre tarafından döndürülür. Aksi takdirde, bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem ne olacağını belirlemek için çağrılır bağlıysa, bu kesme noktası beklemede. Çağrı [bağlama](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) aslında bekleyen kesme noktasının bağlamak için yöntemi.
+ Bu bekleyen kesme noktası bağlı olsaydı ne olacağını belirlemek için bu yöntem çağrılır. Bekleyen kesme noktasını bağlamak için [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) yöntemini arayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CPendingBreakpoint` gösteren nesne [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi.
+ Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
@@ -142,4 +142,4 @@ HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)
-- [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+- [Bağla](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

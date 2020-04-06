@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Microsoft Docs
+title: BP_UNBOUND_REASON | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_UNBOUND_REASON enumeration
 ms.assetid: 939b6f9c-113b-471d-9f30-b03871af6285
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9de6812f3a61feca8ca8e7153fb281369c3312bd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b0ee695e1108bf9f1c6069084a0826ee23bf37d4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350562"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737776"
 ---
-# <a name="bpunboundreason"></a>BP_UNBOUND_REASON
-Bir kesme noktası ilişkisiz nedeni sağlar.
+# <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
+Bir kırılma noktasının bağlanmamasının nedenini verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,27 +48,27 @@ public enum enum_BP_UNBOUND_REASON {
 
 ## <a name="fields"></a>Alanlar
 `BPUR_UNKNOWN`\
-Bunun nedeni bilinmiyor.
+Nedeni bilinmiyor.
 
 `BPUR_CODE_UNLOADED`\
 Kesme noktasını içeren kod kaldırıldı.
 
 `BPUR_BREAKPOINT_REBIND`\
-Farklı bir konuma kesme noktası yansıdı. Bu düzenlemeden sonra gerçekleşir ve kesme noktası hareket ettiğinde veya artık geçerli olmayan bir yola sahip bir dosya kesme noktasına bağlandığında işlemler devam edebilirsiniz.
+Kırılma noktası farklı bir konuma geri tepme oldu. Bu, kesme noktası hareket ettiğinde veya kesme noktası artık geçerli olmayan bir yola sahip bir dosyaya bağlandığında, İşlemleri Edit ve Devam'tan sonra gerçekleşebilir.
 
 `BPUR_ BREAKPOINT_ERROR`\
-Kesme noktasına bağlı sonra hata olarak değerlendirilir. Bu, koşullar artık geçerli olmayan yönetilen kesme noktaları için gerçekleşir.
+Kesme noktası bağlandıktan sonra hata olarak belirlenir. Bu, koşulları artık geçerli olmayan yönetilen kesme noktalarına olur.
 
 ## <a name="remarks"></a>Açıklamalar
-Tarafından döndürülen [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) yöntemi.
+[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) yöntemiyle döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

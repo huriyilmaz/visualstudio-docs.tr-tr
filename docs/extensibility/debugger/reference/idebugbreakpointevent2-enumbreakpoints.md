@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointEvent2::EnumBreakpoints | Microsoft Docs
+title: IDebugBreakpointEvent2::EnumBreakpoints | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointEvent2:::EnumBreakpoints
 ms.assetid: 606a9625-ee43-4e84-9a47-af9a50d2d005
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3a74e726951297802b2e47c3501c083ac83ffa2a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8744ec272fa121630e67f516ef1839c70b1a2d41
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352906"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735038"
 ---
 # <a name="idebugbreakpointevent2enumbreakpoints"></a>IDebugBreakpointEvent2::EnumBreakpoints
-Geçerli kod konumda harekete kesme noktaları için bir numaralandırıcı oluşturur.
+Geçerli kod konumunda çalışan tüm kesme noktaları için bir sayı işaretleri oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int EnumBreakpoints(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] Döndürür bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) nesnesini geçerli kod konumu ile ilişkili tüm kesme noktalarını numaralandırır.
+[çıkış] Geçerli kod konumuyla ilişkili tüm kesme noktalarını ayıklayan bir [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirli bir zamanda belirli bir konumdaki tüm kesme noktalarını yangın (Bu koşulu karşılanıncaya kadar Örneğin, bir kesme noktası koşulu ile tetiklenmez).
+ Belirli bir konumdaki tüm kesme noktaları belirli bir anda ateş olmayabilir (örneğin, bu koşul yerine gelene kadar bir koşula sahip bir kesme noktası ateş etmez).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)

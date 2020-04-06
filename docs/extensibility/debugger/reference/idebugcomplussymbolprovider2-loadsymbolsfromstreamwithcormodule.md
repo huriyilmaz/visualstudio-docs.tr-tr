@@ -6,23 +6,23 @@ helpviewer_keywords:
 - IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 - LoadSymbolsFromStreamWithCorModule
 ms.assetid: f79b894f-52c4-43c2-9a68-c71536451f6c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 682786df1d676391cc1ec838e739cb03983ebb66
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fa1d03b2f91cea03403f4893e61ec15bf5b82952
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334663"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733390"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-Verilen veri akışından hata ayıklama sembolleri **Icordebugmodule** nesne.
+**ICorDebugModule** nesnesi verilen bir veri akışından hata ayıklama simgelerini yükleyin.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,28 +50,28 @@ int LoadSymbolsFromStreamWithCorModule(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[in] Uygulama etki alanı tanımlayıcısı.
+[içinde] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[in] Modülün benzersiz tanımlayıcısı.
+[içinde] Modülün benzersiz tanımlayıcısı.
 
 `baseAddress`\
-[in] Temel bir bellek adresi.
+[içinde] Temel bellek adresi.
 
 `pUnkMetadataImport`\
-[in] Sembol meta veriler içeren nesne.
+[içinde] Sembol meta verilerini içeren nesne.
 
 `pUnkCorDebugModule`\
-[in] Uygulayan nesne [Icordebugmodule arabirimi](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).
+[içinde] [ICorDebugModule Arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
 
 `pStream`\
-[in] Yüklemek için hata ayıklama sembollerini içeren veri akışı.
+[içinde] Yüklenmesi gereken hata ayıklama sembollerini içeren veri akışı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugSymbolProvider** gösteren nesne [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimi.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini ortaya çıkaran bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(

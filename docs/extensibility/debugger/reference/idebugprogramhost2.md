@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2 | Microsoft Docs
+title: IDebugProgramHost2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramHost2 interface
 ms.assetid: 2c37b3aa-97a9-4665-8709-edd917f18cb1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc7a3222b2fab85657eea1eb0203f8c8da7dd5dc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 64db456e0c438f8665f122c3cd1b079c2ad1cea1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351226"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722215"
 ---
 # <a name="idebugprogramhost2"></a>IDebugProgramHost2
-Bu arabirim bir programla ilgili konak (işlem) bilgi sağlar.
+Bu arabirim, bir program hakkında ana bilgisayar (işlem) bilgileri sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,27 +28,27 @@ Bu arabirim bir programla ilgili konak (işlem) bilgi sağlar.
 IDebugProgramHost2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı aynı nesne üzerinde bu arabirimi uygulayan [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) barındırma işlemi hakkında bilgi sağlamak için arabirim. Bu isteğe bağlı bir arabirimdir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı, barındırma işlemi hakkında bilgi sağlamak için bu arabirimi [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimiyle aynı nesne üzerinde uygular. Bu isteğe bağlı bir arayüzdür.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çağrı [QueryInterface](/cpp/atl/queryinterface) üzerinde bir `IDebugProgram2` arabirimi bu arabirim elde edilir.
+ Bu arabirimi `IDebugProgram2` elde etmek için [queryinterface'i](/cpp/atl/queryinterface) bir arabirimden arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugProgramHost2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugProgramHost2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetHostName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostname.md)|Başlık, kolay ad veya bu programın barındırma işlemi dosya adını alır.|
-|[GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)|Bu programın barındırma işlemin işlem tanımlayıcısını alır.|
-|[GetHostMachineName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostmachinename.md)|Barındırma işlemi bu programın üzerinde çalıştığı makinenin adını alır.|
+|[GetHostName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostname.md)|Bu programın barındırma işleminin başlığını, dostu adını veya dosya adını alır.|
+|[GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)|Bu programın barındırma işleminin işlem tanımlayıcısını alır.|
+|[GetHostMachineName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostmachinename.md)|Bu programın barındırma işlemi üzerinde çalışıyor makinenin adını alır.|
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

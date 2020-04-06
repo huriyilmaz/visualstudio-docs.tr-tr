@@ -1,5 +1,5 @@
 ---
-title: Yığın çerçevesi | Microsoft Docs
+title: Yığın Çerçeveleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - debugging [Debugging SDK], stack frames
 - stack frames
 ms.assetid: b5e439d4-1e9d-4e13-9cad-bb8b136d4ca8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: de3a0267d366f926fa5705c7455b237cafe4820a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1ea79ad199e20afeb5d2bf1ca6a3cf881c6d51c3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348502"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712837"
 ---
 # <a name="stack-frames"></a>Yığın çerçeveleri
-Hata ayıklayıcı mimarisinde bir *yığın çerçevesi*:
+Hata ayıklama mimarisinde, *yığın çerçevesi:*
 
-- Bir iş parçacığı yürütme bağlamı sağlayan bir yığının bir soyutlamadır. Bir iş parçacığı her zaman içinde bir işlevi yürütür. Bir yığın çerçevesi için işlevi ve bağımsız değişkenler, yerel değişkenleri tutar. Visual Studio ile hata ayıklamak için dil veya ortam ayıklanan yığın çerçeveleri desteklemesi gerekir.
+- Bir iş parçacığının yürütme bağlamını sağlayan bir yığının soyutlamamı. Bir iş parçacığı her zaman bir işlev içinde yürütür. Yığın çerçevesi, işlevin yerel değişkenlerini ve bağımsız değişkenlerini tutar. Visual Studio ile hata ayıklamak için, hata ayıklanan dil veya ortam yığın çerçevelerini desteklemelidir.
 
-- İçin her ikisi de tanımlamak ve kendisini açıklar ve ilişkili iş parçacığı döndürebilir. Bir yığın çerçevesi, dosyadaki geçerli yönerge işaretçisini ve ilgili belgeleri gösteren kod bağlamı ve ifade değerlendirme bağlamı da döndürebilir.
+- Hem kendini tanımlayabilir hem de açıklayabilir ve ilişkili iş parçacığı döndürebilir. Yığın çerçevesi, geçerli yönerge işaretçisini ve ilişkili belge ve ifade değerlendirme bağlamlarını temsil eden kod bağlamını da döndürebilir.
 
-- Adı, türü ve değeri yerel değişkenleri ve bağımsız değişkenleri açıklar ve çeşitli IDE hata ayıklama pencerelerinde göründüğü özellikleri vardır.
+- Yerel değişkenlerin ve bağımsız değişkenlerin adını, türünü ve değerini açıklayan ve çeşitli IDE hata ayıklama pencerelerinde görünen özelliklere sahiptir.
 
-- Tarafından temsil edilen bir [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabirimi, genellikle bir hata ayıklama altyapısı (DE) veya bir iş parçacığının söz konusu kümelerdeki sanal makine tarafından oluşturuldu.
+- Genellikle bir hata ayıklama motoru (DE) veya sanal makine tarafından bir iş parçacığı yürütme sonucu oluşturulan bir [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabirimi tarafından temsil edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
-- [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)
+- [Hata ayıklama bağlamları](../../extensibility/debugger/debugger-contexts.md)
+- [Hata ayıklama kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklama motoru](../../extensibility/debugger/debug-engine.md)
 - [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md)

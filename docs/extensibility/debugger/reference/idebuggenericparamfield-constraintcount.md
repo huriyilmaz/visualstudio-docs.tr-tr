@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericParamField::ConstraintCount | Microsoft Docs
+title: IDebugGenericParamField::ConstraintCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - ConstraintCount
 - IDebugGenericParamField::ConstraintCount
 ms.assetid: 76bef0cb-8a3c-4ce5-87cc-1809de229f33
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: de00e38fa02447217b30e4a6801001e2663798e5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5a8f9809df0fa45021aab640bf3ff547efaa1576
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330451"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728084"
 ---
 # <a name="idebuggenericparamfieldconstraintcount"></a>IDebugGenericParamField::ConstraintCount
-Bu genel parametre ile ilişkili olan kısıtlamaları sayısını döndürür.
+Bu genel parametreyle ilişkili kısıtlamaların sayısını verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,13 +40,13 @@ int ConstraintCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcConst`\
-[out içinde] Bu alanla ilişkilendirilmiş kısıtlamaları sayısı.
+[içinde, dışarı] Bu alanla ilişkili kısıtlama sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugGenericParamFieldType** gösteren nesne [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimi.
+Aşağıdaki örnek, [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini ortaya çıkaran bir **CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::ConstraintCount(ULONG32* pcConst)

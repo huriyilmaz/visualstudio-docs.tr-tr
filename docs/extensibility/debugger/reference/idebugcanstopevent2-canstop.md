@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::CanStop | Microsoft Docs
+title: IDebugCanStopEvent2::CanStop | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCanStopEvent2::CanStop
 ms.assetid: 7d61adbe-6b3d-41f3-86a1-45d9cc01a7f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ab59cf5d077c4e397373c4c86b864ed17749fc19
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2915938c966bac7f842d0745c973c7d0b7033e2b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351266"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734597"
 ---
 # <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
-Hata ayıklama altyapısı (DE) geçerli kod konumda durdurma veya yalnızca yürütme devam gerekip gerekmediğini size bildirir.
+Hata ayıklama altyapısına (DE) geçerli kod konumunda durup durmayacağını veya yürütmeye devam edip etmeyeceğini bildirin.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,15 +41,15 @@ int CanStop ( 
 
 ## <a name="parameters"></a>Parametreler
 `fCanStop`\
-[in] Sıfır olmayan (`TRUE`) DE geçerli kod konumda; durdurmanız gerekir, aksi takdirde, sıfır (`FALSE`).
+[içinde] Sıfır sız`TRUE`( ) DE geçerli kod konumunda durmalıdır; aksi takdirde,`FALSE`sıfır ( ).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu olay alıcısı genellikle çağrıları [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) yöntemi DE istediği durdurmak için nedenini belirlemek için ve çağrıları `IDebugCanStopEvent2::CanStop` uygun yanıtı ile yöntemi.
+ Bu olayın alıcısı genellikle DE'nin durdurmak isteme nedenini belirlemek için [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) `IDebugCanStopEvent2::CanStop` yöntemini çağırır ve ardından yöntemi uygun yanıtla çağırır.
 
- DE durursa, durdurma nedenini açıklayan bir olay gönderir. Tarafından temsil edilen bir kullanıcı veya sinyal sonu gönderilir iki olay vardır [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) arabirimi ve tarafından temsil edilen bir kesme noktası olayının [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) arabirimi.
+ DE durursa, durdurma nedenini açıklayan bir olay gönderir. Gönderilen genellikle iki olay vardır, [iDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) arabirimi tarafından temsil edilen bir kullanıcı veya sinyal sonu ve [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) arabirimi tarafından temsil edilen bir kesme noktası olayı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

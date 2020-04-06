@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCRESOLUTION | Microsoft Docs
+title: ASSEMBLYLOCRESOLUTION | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - ASSEMBLYLOCRESOLUTION enumeration
 ms.assetid: 0bcfe85c-5f37-4a9d-bf2b-141acd96ad67
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0a229fc7f0a59f8b5ca5d2d71a6d8bf0a01f76b4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cbd015408cbefd1861f6e795447a5302efabb0dc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327373"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738146"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
-Bir derlemeyi nerede olduğunu belirtir.
+Bir derlemenin nerede olduğunu belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,30 +48,30 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
 
 ## <a name="fields"></a>Alanlar
 `ALR_NAME`\
-Derleme geçerli bir ad alanında bulunur.
+Derleme geçerli ad alanında yer alır.
 
 `ALR_USERDIR`\
-Derleme kullanıcı dizininde bulunur.
+Derleme bir kullanıcı dizininde yer alır.
 
 `ALR_SHAREDDIR`\
-Derleme, paylaşılan dizininde bulunur.
+Derleme ortak dizinde yer alır.
 
 `ALR_REMOTEDIR`\
-Derleme, uzak bir dizinde bulunur.
+Derleme uzak bir dizinde yer alır.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler tarafından döndürülen [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) ve [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) yöntemleri.
+Bu değerler [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) ve [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) yöntemleri tarafından döndürülür.
 
-Bu değerler ile birleştirilmiş `OR` işlemi.
+Bu değerler `OR` işlemle birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)
 - [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)

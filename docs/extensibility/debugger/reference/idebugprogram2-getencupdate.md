@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetENCUpdate | Microsoft Docs
+title: IDebugProgram2::GetENCUpdate | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::GetENCUpdate
 ms.assetid: 9832aac8-6320-4fd8-91dd-2a0852febb00
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: eb92e7076c308663ddf9ec760d1f2276affd0c87
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e90ff9f8a7a80913aec72b9fe2bb6fe470013d51
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320845"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722843"
 ---
 # <a name="idebugprogram2getencupdate"></a>IDebugProgram2::GetENCUpdate
-Bu yöntem, bu program için Düzenle ve devam et (ENC) güncelleştirme alır. Her zaman bir özel hata ayıklama altyapısı döndürür `E_NOTIMPL`.
+Bu yöntem, bu program için Edit ve Continue (ENC) güncelleştirmesini alır. Özel hata ayıklama `E_NOTIMPL`altyapısı her zaman döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetENCUpdate(
 
 ## <a name="parameters"></a>Parametreler
 `ppUpdate`\
-[out] Bu program güncelleştirmek için kullanılan bir iç arabiriminde döndürür.
+[çıkış] Bu programı güncelleştirmek için kullanılabilecek bir iç arabirim döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
-> Bir özel hata ayıklama altyapısı her zaman döndürmelidir `E_NOTIMPL`.
+> Özel hata ayıklama altyapısı `E_NOTIMPL`her zaman dönmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

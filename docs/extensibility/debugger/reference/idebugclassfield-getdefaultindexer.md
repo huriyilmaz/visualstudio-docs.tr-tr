@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
+title: IDebugClassField::GetDefaultIndexer | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugClassField::GetDefaultIndexer method
 ms.assetid: 47ce4f45-3816-4b40-909c-5032d0692d75
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 95387f65382c970ec2e9847e95ff49e139cf69b8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 57e00107374485043af370967794bdade1c213d1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350747"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734427"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Varsayılan oluşturucunun adını alır.
+Varsayılan dizinleyicinin adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,13 +40,13 @@ int GetDefaultIndexer(
 ```
 
 ## <a name="parameters"></a>Parametreler
-`pbstrIndexer` [out] Varsayılan oluşturucunun adını içeren bir dize döndürür.
+`pbstrIndexer`[çıkış] Varsayılan dizinleyicinin adını içeren bir dize döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür veya varsayılan dizin oluşturucu yok ise S_FALSE döndürür. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, varsayılan dizinleyici yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir sınıfın varsayılan oluşturucusu olarak işaretlenmiş özelliktir `Default` özelliği için dizi erişir. Bu özel [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. İşte bir örnek olarak bildirilen bir varsayılan dizin oluşturucu [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] ve nasıl kullanılır.
+ Bir sınıfın varsayılan dizinleyicisi, dizi `Default` erişimleri için özellik olarak işaretlenen özelliktir. Bu [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]özeldir. Burada, bildirilen varsayılan [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] dizinleyicive nasıl kullanıldığına bir örnek verilmiştir.
 
 ```vb
 Imports System.Collections;

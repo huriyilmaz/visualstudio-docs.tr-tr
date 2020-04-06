@@ -1,24 +1,24 @@
 ---
-title: IDebugDocumentChecksum2 | Microsoft Docs
+title: IDebugDocumentChecksum2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDocumentChecksum2 interface
 ms.assetid: 6d22fa94-21aa-46cb-b5b5-32a6399ebb20
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b4bfc51595e6414a3760d4e57ab6f9791259f83
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 03cfb29cc54a2f0ab18bce3ec0761cfab62e20df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341295"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731901"
 ---
 # <a name="idebugdocumentchecksum2"></a>IDebugDocumentChecksum2
-Hata ayıklama belge için bir sağlama toplamı temsil eder ve bileşenleri arasında sağlama toplamı geçirme sağlar.
+Hata ayıklama belgesi için bir denetim ummasını temsil eder ve denetimleri bileşenler arasında geçirmeyi sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,19 +26,19 @@ Hata ayıklama belge için bir sağlama toplamı temsil eder ve bileşenleri ara
 IDebugDocumentChecksum2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Bu arabirimi kullanıma sunan herhangi bir bileşeni tarafından uygulanabilir [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi. Ancak, katıştırılmış bir sembol dosyası (*.pdb) sağlama toplamı IDE geçirilen ve bir kaynağı bulma işleminde kullanılan hata ayıklama motoru tarafından temelde uygulandığı.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu [arabirim, IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimini ortaya çıkaran herhangi bir bileşen tarafından uygulanabilir. Ancak, bir sembol dosyasına (*.pdb) katıştırılmış checksum'un IDE'ye geri aktarılabilmeleri ve kaynak bulurken kullanılabilmelerini sağlamak için hata ayıklama motorları tarafından esas olarak uygulanır.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugDocumentChecksum2`.
+ Aşağıdaki tabloda `IDebugDocumentChecksum2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetChecksumAndAlgorithmId](../../../extensibility/debugger/reference/idebugdocumentchecksum2-getchecksumandalgorithmid.md)|Kullanılacak bayt sayısı belirtilen belge sağlama toplamı ve algoritma tanımlayıcısını alır.|
+|[GetChecksumAndAlgorithmId](../../../extensibility/debugger/reference/idebugdocumentchecksum2-getchecksumandalgorithmid.md)|Kullanılacak maksimum bayt sayısı verilen belge denetimini ve algoritma tanımlayıcısını alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Msdbg.h
+ Üstbilgi: Msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll

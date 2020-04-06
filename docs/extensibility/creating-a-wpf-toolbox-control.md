@@ -1,5 +1,5 @@
 ---
-title: WPF araç kutusu denetimi oluşturma | Microsoft Docs
+title: WPF Araç Kutusu Denetimi Oluşturma | Microsoft Dokümanlar
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc124c767ac9a84e62c17fb868e1dc114642f884
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c1400efb0095760bf1cee302dd33dcf6ebb90152
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349039"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739575"
 ---
-# <a name="create-a-wpf-toolbox-control"></a>WPF araç kutusu denetimi oluşturma
+# <a name="create-a-wpf-toolbox-control"></a>WPF Araç Kutusu Denetimi Oluşturma
 
-(Windows Presentation Framework) WPF araç kutusu denetimi şablon otomatik olarak eklenen WPF denetimleri oluşturmanıza olanak tanır. **araç kutusu** uzantısı yüklü olduğunda. Bu izlenecek yol şablonu oluşturmak için nasıl kullanılacağını gösterir. bir **araç kutusu** denetimi, diğer kullanıcılara dağıtabilirsiniz.
+WPF (Windows Presentation Framework) Araç Kutusu Denetimi şablonu, uzantı yüklendiğinde **Araç Kutusu'na** otomatik olarak eklenen WPF denetimleri oluşturmanıza olanak tanır. Bu izlik, şablonun diğer kullanıcılara dağıtabileceğiniz bir **Araç Kutusu** denetimi oluşturmak için nasıl kullanılacağını gösterir.
 
-Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="create-the-toolbox-control"></a>Araç kutusu denetimi oluşturma
+## <a name="create-the-toolbox-control"></a>Araç Kutusu Denetimini Oluşturma
 
-### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>WPF araç kutusu denetimi ile bir uzantı oluşturma
+### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>WPF Araç Kutusu Denetimi ile uzantı oluşturma
 
-1. Adlı bir VSIX projesi oluşturun `MyToolboxControl`. VSIX proje şablonunda bulabilirsiniz **yeni proje** iletişim "VSIX" için arama yapın.
+1. Adlı `MyToolboxControl`bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.
 
-2. Projeyi açtığında, ekleme bir **WPF araç kutusu denetimi** adlı öğe şablonu `MyToolboxControl`. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayıp **Ekle** > **yeni öğe**. İçinde **Yeni Öğe Ekle** iletişim kutusunda, Git **Visual C#**  > **genişletilebilirlik** seçip **WPF araç kutusu denetimi**. İçinde **adı** alan penceresinin en altında komut dosyası adı için değiştirme *MyToolboxControl.cs*.
+2. Proje açıldığında, **wpf araç kutusu denetim** öğesi `MyToolboxControl`şablonu ekleyin. Çözüm **Gezgini'nde**proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin. Yeni **Öğe Ekle** iletişim kutusunda Visual **C#** > **Genişletilebilirlik'e** gidin ve **WPF Araç Kutusu Denetimi'ni**seçin. Pencerenin altındaki **Ad** alanında komut dosyası adını *MyToolboxControl.cs*olarak değiştirin.
 
-    Çözüm, artık bir kullanıcı denetimini içeren bir `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimine ekler **araç kutusu**ve **Microsoft.VisualStudio.ToolboxControl** varlık girişi için VSIX bildirimi  Dağıtım.
+    Çözüm artık `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> bir kullanıcı denetimi, bir araç **kutusuna**denetim ekleyen bir ve dağıtım için VSIX bildiriminde bir **Microsoft.VisualStudio.ToolboxControl** Asset girişi içerir.
 
-#### <a name="to-create-the-control-ui"></a>UI denetimi oluşturmak için
+#### <a name="to-create-the-control-ui"></a>Denetim UI'sini oluşturmak için
 
-1. Açık *MyToolboxControl.xaml* Tasarımcısı'nda.
+1. Açık *MyToolboxControl.xaml* tasarımcı.
 
-    Tasarımcı gösterir bir <xref:System.Windows.Controls.Grid> içeren denetimi bir <xref:System.Windows.Controls.Button> denetimi.
+    Tasarımcı, denetim <xref:System.Windows.Controls.Grid> içeren bir <xref:System.Windows.Controls.Button> denetim gösterir.
 
-2. Kılavuz düzeni düzenleyin. Seçtiğinizde, <xref:System.Windows.Controls.Grid> denetimi üst ve sol kenarlarının kılavuzunun üzerinde mavi denetim çubukları görünür. Çubukları tıklayarak kılavuza satırlar ve sütunlar ekleyebilirsiniz.
+2. Izgara düzenini düzenleyin. <xref:System.Windows.Controls.Grid> Denetimi seçtiğinizde, ızgaranın üst ve sol kenarlarında mavi denetim çubukları görünür. Çubukları tıklatarak ızgaraya satır lar ve sütunlar ekleyebilirsiniz.
 
-3. Alt denetimler kılavuza ekleyin. Buradan sürükleyerek bir alt denetimin konumlandırabilirsiniz **araç kutusu** kılavuzunun veya ayarlayarak bir bölüme, `Grid.Row` ve `Grid.Column` XAML öznitelikleri. Aşağıdaki örnek iki etiket üst satırdaki kılavuz ve ikinci satırdaki bir düğme ekler.
+3. Kılavuza alt denetimler ekleyin. Bir alt denetimi **Araç Kutusu'ndan** ızgaranın bir bölümüne sürükleyerek veya `Grid.Row` XAML'de kendi ve `Grid.Column` özniteliklerini ayarlayarak konumlandırabilirsiniz. Aşağıdaki örnek, ızgaranın üst satırına iki etiket ve ikinci satıra bir düğme ekler.
 
     ```xaml
     <Grid>
@@ -55,15 +55,15 @@ Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden
 
 ## <a name="renaming-the-control"></a>Denetimi yeniden adlandırma
 
- Varsayılan olarak, denetiminizin içinde görünür **araç kutusu** olarak **MyToolboxControl** adlı bir grup içindeki **MyToolboxControl.MyToolboxControl**. Bu adları değiştirebilirsiniz *MyToolboxControl.xaml.cs* dosya.
+ Varsayılan olarak, denetiminiz **MyToolboxControl.MyToolboxControl**adlı bir grupta **MyToolboxControl** olarak **Toolbox** olarak görünür. Bu adları *MyToolboxControl.xaml.cs* dosyasında değiştirebilirsiniz.
 
-1. Açık *MyToolboxControl.xaml.cs* kod görünümünde.
+1. Kod görünümünde *MyToolboxControl.xaml.cs* açın.
 
-2. Bulma `MyToolboxControl` sınıfı ve TestControl için yeniden adlandırın. (Bunu yapmanın en hızlı yolu, sınıfı yeniden adlandırmak için olan seçip **Yeniden Adlandır** bağlam menüsünden ve adımları tamamlayın. (Hakkında daha fazla bilgi için **Yeniden Adlandır** komutu, bkz: [yeniden düzenleme (C#) Yeniden Adlandır](../ide/reference/rename.md).)
+2. `MyToolboxControl` Sınıfı bulun ve TestDenetimi olarak yeniden adlandırın. (Bunu yapmanın en hızlı yolu sınıfı yeniden adlandırmak, ardından bağlam menüsünden **Yeniden Adlandır'ı** seçmek ve adımları tamamlamaktır. (Yeniden **adlandırma** komutu hakkında daha fazla bilgi için yeniden [adlandırma (C#)](../ide/reference/rename.md)başlığına bakın.)
 
-3. Git `ProvideToolboxControl` ilk parametre olarak değiştirin ve öznitelik **Test**. Denetimi içeren grubun adıdır **araç kutusu**.
+3. Özniteliğe `ProvideToolboxControl` gidin ve ilk parametrenin değerini **Test**olarak değiştirin. Bu, **Araç Kutusu'ndaki**denetimi içerecek grubun adıdır.
 
-    Sonuçta elde edilen kod gibi görünmelidir:
+    Ortaya çıkan kod aşağıdaki gibi görünmelidir:
 
     ```csharp
     [ProvideToolboxControl("Test", true)]
@@ -76,28 +76,28 @@ Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden
     }
     ```
 
-## <a name="build-test-and-deployment"></a>Derleme, test ve dağıtım
+## <a name="build-test-and-deployment"></a>Oluşturma, test ve dağıtım
 
- Projede hata ayıklaması yaparken, yüklü denetim bulmalısınız **araç kutusu** Visual Studio'nun Deneysel örneğinin.
+ Projeyi hata ayıklama durumunda, denetimi Visual Studio'nun deneysel örneğinin **Araç Kutusu'nda** yüklü bulmalısınız.
 
-### <a name="to-build-and-test-the-control"></a>Yapı ve denetim test etmek için
+### <a name="to-build-and-test-the-control"></a>Denetimi oluşturmak ve test etmek için
 
-1. Projeyi yeniden derleyin ve hata ayıklamaya başlayın.
+1. Projeyi yeniden oluştur ve hata ayıklamaya başlayın.
 
-2. Yeni Visual Studio örneğinde, bir WPF uygulaması projesi oluşturun. XAML Tasarımcısı'nı açık olduğundan emin olun.
+2. Visual Studio'nun yeni örneğinde bir WPF Uygulama projesi oluşturun. XAML Tasarımcısı'nın açık olduğundan emin olun.
 
-3. Denetiminizi Bul **araç kutusu** ve tasarım yüzeyine sürükleyin.
+3. Denetiminizi Araç **Kutusu'nda** bulun ve tasarım yüzeyine sürükleyin.
 
-4. WPF uygulama hatalarını ayıklamaya başlayın.
+4. WPF uygulamasını hata ayıklamaya başlayın.
 
-5. Denetiminiz göründüğünü doğrulayın.
+5. Denetiminizin görüntülenin.
 
-### <a name="to-deploy-the-control"></a>Denetim dağıtmak için
+### <a name="to-deploy-the-control"></a>Denetimi dağıtmak için
 
-1. Test edilen projenin derledikten sonra bulabilirsiniz *.vsix* dosyası * \bin\debug\* proje klasörü.
+1. Sınanan projeyi yaptıktan sonra *.vsix* dosyasını projenin *\bin\debug\* klasöründe bulabilirsiniz.
 
-2. Çift tıklayarak onu yerel bir bilgisayara yükleyebilirsiniz *.vsix* dosya ve aşağıdaki yükleme yordamı. Denetim kaldırmak için Git **Araçları** > **Uzantılar ve güncelleştirmeler** ve kontrol uzantısı için bakın, sonra da tıklayın **kaldırma**.
+2. *.vsix* dosyasını çift tıklayarak ve yükleme yordamını izleyerek yerel bir bilgisayara yükleyebilirsiniz. Denetimi kaldırmak için **Araçlar** > **Uzantıları ve Güncelleştirmeleri'ne** gidin ve denetim uzantısını arayın, ardından **Kaldır'ı**tıklatın.
 
-3. Karşıya yükleme *.vsix* bir ağ veya bir Web sitesi için dosya.
+3. *.vsix* dosyasını bir ağa veya bir Web sitesine yükleyin.
 
-    Dosyayı karşıya yükleme durumunda [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesinin diğer kullanıcıların kullanabileceği **Araçları** > **Uzantılar ve güncelleştirmeler** bulmak için Visual Studio çevrimiçi denetleyin ve yükleyin.
+    Dosyayı Visual Studio [Marketplace](https://marketplace.visualstudio.com/) Web sitesine yüklerseniz, diğer kullanıcılar denetimi çevrimiçi olarak bulmak ve yüklemek için Visual Studio'daki **Araç** > **Uzantıları nı ve Güncellemelerini** kullanabilir.

@@ -1,50 +1,50 @@
 ---
-title: Yerel bir değerinin değiştirilmesi | Microsoft Docs
+title: Yerel Bir Değer Değiştirme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, changing values programmatically
 ms.assetid: 8407d3df-d38a-4328-82d1-98084bef43ec
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 998200420cf2ec5e0b021a415cdb9d287b1362db
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 98e40e4b6ea10bb6ff1242f23f1b6dd83ce0c0cd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349750"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739140"
 ---
-# <a name="change-the-value-of-a-local"></a>Yerel bir değiştirin
+# <a name="change-the-value-of-a-local"></a>Yerel bir değer değiştirme
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR ifade değerlendiricilerve](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Yönetilen ifade değerlendirici örneğine](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
 
- Ne zaman yeni bir değer yazıldığında değer alanına **Yereller** penceresinde, hata ayıklama paketi geçirir, dize, ifade değerlendiricisi (EE) yazılı olarak. EE basit değer veya ifade içerebilir ve ilişkili yerel sonuç değerini depolar Bu dize değerlendirir.
+ **Yereller** penceresinin değer alanına yeni bir değer yazıldığında, hata ayıklama paketi dizeyi, yazıldığında ifade değerlendiricisine (EE) geçirir. EE, basit bir değer veya ifade içerebilen bu dizeyi değerlendirir ve elde edilen değeri ilişkili yerel depolar.
 
- Bu yerel değerini değiştirme işlemine bir genel bakış.
+ Bu, yerel bir yerelin değerini değiştirme işlemine genel bir bakıştır:
 
-1. Kullanıcı yeni bir değer girdikten sonra Visual Studio çağırır [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) üzerinde [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) yerel ile ilişkili nesne.
+1. Kullanıcı yeni değeri girdikten sonra Visual Studio, yerel le ilişkili [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesi üzerinde [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) çağırır.
 
-2. `IDebugProperty2::SetValueAsString` Aşağıdaki görevleri gerçekleştirir:
+2. `IDebugProperty2::SetValueAsString` aşağıdaki görevleri gerçekleştirir:
 
-   1. Dize değeri üretmek için değerlendirir.
+   1. Bir değer üretmek için dize değerlendirir.
 
-   2. İlişkili bağlar [IDebugField](../../extensibility/debugger/reference/idebugfield.md) nesne elde etmek için bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesne.
+   2. Bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesnesi elde etmek için ilişkili [IDebugField](../../extensibility/debugger/reference/idebugfield.md) nesnesini bağlar.
 
-   3. Değer bir dizi bayt dönüştürür.
+   3. Değeri bir bayt serisine dönüştürür.
 
-   4. Çağrıları [SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md) ayıklanan programa erişebilmesi için bu değerin bayt belleğe yerleştirmek için.
+   4. Değerin baytlarını belleğe koymak için [SetValue'i](../../extensibility/debugger/reference/idebugobject-setvalue.md) çağırır, böylece debugged olan program bunlara erişebilir.
 
-3. Visual Studio yeniler **Yereller** görüntüleme (bkz [görüntüleme Yereller](../../extensibility/debugger/displaying-locals.md) Ayrıntılar için).
+3. Visual Studio **Yerel ekranını** yeniler (ayrıntılar için [yerel halkları görüntülemeye](../../extensibility/debugger/displaying-locals.md) bakın).
 
-   Bu yordam içinde bir değişken değerini değiştirmek için de kullanılır **Watch** bunun dışında penceresinde `IDebugProperty2` yerine kullanılan yerel değeriyle ilişkili nesne `IDebugProperty2` yerel ile ilişkili nesne kendisi.
+   Bu yordam, yerel kendisi ile ilişkili `IDebugProperty2` nesne yerine kullanılan yerel `IDebugProperty2` değeri ile ilişkili nesne dışında, **Watch** penceresinde bir değişkenin değerini değiştirmek için de kullanılır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Değer değiştirme örnek uygulaması](../../extensibility/debugger/sample-implementation-of-changing-values.md) değerlerini değiştirme işleminde size adım adım MyCEE örnek kullanır.
+ [Değişen değerlerin örnek uygulaması](../../extensibility/debugger/sample-implementation-of-changing-values.md) Değerleri değiştirme işleminde adım atmak için MyCEE örneğini kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
-- [Yerel öğeleri görüntüleme](../../extensibility/debugger/displaying-locals.md)
+- [CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+- [Yerel halkların görüntülenmesi](../../extensibility/debugger/displaying-locals.md)

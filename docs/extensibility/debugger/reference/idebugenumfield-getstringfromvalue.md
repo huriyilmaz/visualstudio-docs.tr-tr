@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue | Microsoft Docs
+title: IDebugEnumField::GetStringFromValue | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField::GetStringFromValue method
 ms.assetid: 5f95fd0c-fdce-497f-9f54-2ad8749494e9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cd7466e5390cff747532dca0343680cf359db46a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5de59c573f7e233ea2aacb0dfa38826051c59373
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345080"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730291"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-Bu yöntem, değeri verilen numaralandırma sabiti adını alır.
+Bu yöntem değeri göz önüne alındığında numaralandırma sabitinin adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>Parametreler
 `value`\
-[in] Alınacağı adı numaralandırma sabit değeri.
+[içinde] Numaralandırma sabitinin adını almak için gereken değer.
 
 `pbstrValue`\
-[out] Sabit listesi sabitinin adı döndürür.
+[çıkış] Numaralandırma sabitinin adını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` değeri ilişkili adı yok ya da bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, `S_FALSE` değerilişkili bir adı yoksa veya bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İlk numaralandırmada tanımlanan adla aynı değeri ile ilişkili birden fazla adı varsa, döndürülür.
+ Aynı değerle ilişkili birden fazla ad varsa, numaralandırmada tanımlanan ilk ad döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

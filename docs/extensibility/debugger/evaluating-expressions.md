@@ -1,5 +1,5 @@
 ---
-title: İfadeleri değerlendirme | Microsoft Docs
+title: İfadeleri Değerlendirme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,29 +7,29 @@ helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation
 ms.assetid: 5ccfcc80-dea5-48a1-8bae-6a26f8d3bc56
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39b2af1cdf299b3e3f2c714fa569fa295a4e1d4e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 18e342704cbb4abd7de9667576ce331ef8fbf60a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315423"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738833"
 ---
 # <a name="evaluate-expressions"></a>İfadeleri değerlendirme
-İfadeler, geçirilen dizelerden oluşturulur **Otolar**, **Watch**, **QuickWatch**, veya **hemen** windows. Bir ifade değerlendirildiğinde değişken veya bağımsız değişken ve değeri türünü ve adını içeren bir yazdırılabilir bir dize oluşturur. Bu dize karşılık gelen bir IDE penceresinde görüntülenir.
+**İfadeler, Otomatik Olarak**, **İzle,** **QuickWatch**veya **Hemen** pencerelerinden geçirilen dizeleri oluşturulur. Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize ilgili IDE penceresinde görüntülenir.
 
 ## <a name="implementation"></a>Uygulama
- Bir kesme noktasında bir program durduğunda ifadeler değerlendirilir. İfade tarafından temsil edilen bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) bağlama ve değerlendirme verilen ifade değerlendirme bağlamı içinde hazır ayrıştırılmış bir ifadeyi temsil eden arabirim. Yığın çerçevesinin uygulayarak hata ayıklama altyapısı (DE) sağladığı ifade değerlendirme bağlamının belirler [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimi.
+ Bir program bir kesme noktasında durdurulduğunda ifadeler değerlendirilir. İfadenin kendisi, verilen ifade değerlendirme bağlamında bağlama ve değerlendirmeye hazır ayrıştırılmış bir ifadeyi temsil eden bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi yle temsil edilir. Yığın çerçevesi, Hata Ayıklama altyapısının (DE) [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimini uygulayarak sağladığı ifade değerlendirme bağlamını belirler.
 
- Kullanıcı dizesi verilmiş ve [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimi hata ayıklama altyapısı (DE) elde edebilirsiniz bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) için kullanıcı dizesi geçirerek arabirimi [ IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemi. Döndürülen IDebugExpression2 arabirimi ayrıştırılmış ifade değerlendirmesi için hazır içeriyor.
+ Bir kullanıcı dizesi ve [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimi göz önüne alındığında, hata ayıklama altyapısı (DE) kullanıcı dizesini [IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemine geçirerek bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi elde edebilir. Döndürülen IDebugExpression2 arabirimi, değerlendirmeye hazır ayrışmış ifadeyi içerir.
 
- İle `IDebugExpression2` arabirimini DE üzerinden zaman uyumlu veya zaman uyumsuz bir ifade değerlendirme, bir ifadenin değerini alabilir kullanarak [IDebugExpression2::EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [IDebugExpression2:: EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md). Bu değer, birlikte değişken veya bağımsız değişken türü ve ad IDE görüntülenmek üzere gönderilir. Değer, adı ve türü tarafından temsil edilir bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi.
+ `IDebugExpression2` Arabirim ile DE, [IDebugExpression2::EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [IDebugExpression2::EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)kullanarak senkron veya eşzamanlı ifade değerlendirmesi yoluyla ifadenin değerini alabilir. Bu değer, değişken in adı ve türü yle birlikte görüntülenmek üzere IDE'ye gönderilir. Değer, ad ve tür bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi yle temsil edilir.
 
- İfade değerlendirme etkinleştirmek için bir DE uygulamalıdır [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) ve [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimleri. Zaman uyumlu ve zaman uyumsuz değerlendirme uygulanması gerekir [IDebugProperty2::GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemi.
+ İfade değerlendirmesini etkinleştirmek için, bir [DE'nin IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) ve [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimlerini uygulaması gerekir. Hem senkron hem de eşzamanlı [değerlendirme, IDebugProperty2::GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yönteminin uygulanmasını gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yığın çerçeveleri](../../extensibility/debugger/stack-frames.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugStepCompleteEvent2 | Microsoft Docs
+title: IDebugStepCompleteEvent2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStepCompleteEvent2 interface
 ms.assetid: eba2b76e-f90d-486b-ae5c-c47f1b8ba2e5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 068f07fa9610ef3aea7e59002370cffb93264b6a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 289609c93cf0e58eb44500bff135282d01212bbc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352025"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719453"
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
-Hata ayıklanan programa içine Adımlama, üzerinden adımla veya kaynak kodu veya deyiminin veya yönerge bir satır dışı bir adım tamamlandıktan sonra bu arabirimi hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) gönderilir.
+Bu arabirim, hata ayıklama altyapısı (DE) tarafından, hata ayıklama yöneticisine (SDM) program bir adım, bir adım üzerinde veya kaynak kodu veya deyimi veya yönerge satırından bir adım atıldığında tamamlandığında gönderilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,21 +28,21 @@ Hata ayıklanan programa içine Adımlama, üzerinden adımla veya kaynak kodu v
 IDebugStepCompleteEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- DE rapor adım işlemin tamamlanması için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde. SDM kullanan [QueryInterface](/cpp/atl/queryinterface) erişimi `IDebugEvent2` arabirimi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bir adım işleminin tamamını bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır. SDM `IDebugEvent2` [arabirime](/cpp/atl/queryinterface) erişmek için QueryInterface kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE oluşturur ve bu olay bir adım işlemin tamamlanması rapor nesnesine gönderir. Olay kullanılarak gönderilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi.
+ DE oluşturur ve bir adım işleminin tamamlanmasını bildirmek için bu olay nesnesi gönderir. Olay, debugged olan programa iliştirildiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevi kullanılarak gönderilir.
 
 ## <a name="remarks"></a>Açıklamalar
- Adım tamamlandıktan sonra hataları ayıklanan programa bir kez daha duraklatıldı ve tüm pencereleri IDE güncelleştirir.
+ Adım tamamlandıktan sonra, debugged olan program bir kez daha duraklatıldı ve IDE tüm pencerelerini güncelleştirir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

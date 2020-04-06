@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetSize | Microsoft Docs
+title: IDebugDocumentText2::GetSize | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentText2::GetSize
 ms.assetid: bf515a8f-dcee-4004-8f81-543d547ceaae
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7f382b1d27a83e4493431ac8e6cca3d6aef9dd72
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: edc4a209537ca4bd54d3f6d9343d1496ab7c0e90
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337370"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731586"
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
-Belgedeki bu konumda metin boyutunu alır.
+Belgedeki bu konumdaki metnin boyutunu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,19 +43,19 @@ int GetSize( 
 
 ## <a name="parameters"></a>Parametreler
 `pcNumLines`\
-[out] Metin satırlarını döndürür.
+[çıkış] Metin satırlarının sayısını döndürür.
 
 `pcNumChars`\
-[out] Metin karakter sayısını döndürür.
+[çıkış] Metnin karakter sayısını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
 
- [C++ yalnızca] Belirli bir değeri istenildiği gibi değilse, parametre için NULL geçirin.
+ [Yalnızca C++ ] Belirli bir değer istenmiyorsa, parametre için bir NULL geçirin.
 
- [C# yalnızca] Her iki parametre belirtilmelidir.
+ [Yalnızca C# ] Her iki parametre belirtilmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

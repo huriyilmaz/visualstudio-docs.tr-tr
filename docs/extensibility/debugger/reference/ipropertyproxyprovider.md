@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyProvider | Microsoft Docs
+title: IPropertyProxySağlayıcı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyProvider interface
 ms.assetid: 52e9f7fc-6fe0-4d23-890b-5673dca8c3cb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbda02c26018adc4e5f1f3677b75bc2dce25a2e5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f71d993c7f99cade5b866e67298132a325986e3a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339284"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714790"
 ---
 # <a name="ipropertyproxyprovider"></a>IPropertyProxyProvider
-Bu arabirim, görüntülemek ve nesnenin verileri değiştirmek için bir proxy arabirimi sağlar.
+Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir proxy arabirimi sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,28 +28,28 @@ Bu arabirim, görüntülemek ve nesnenin verileri değiştirmek için bir proxy 
 IPropertyProxyProvider : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- İfade değerlendirici (EE) bu arabirimi uygulayan aynı nesne üzerinde uygulayan [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) tür görselleştiricileri desteğinin EE'ın bir parçası olarak arabirimi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ İfade değerlendiricisi (EE), bu arabirimi, EE'nin tür görselleştiricileri desteğinin bir parçası olarak [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini uygulayan nesne üzerinde uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çağrı [QueryInterface](/cpp/atl/queryinterface) üzerinde bir `IDebugProperty3` arabirimi bu arabirim elde edilir.
+ Bu arabirimi `IDebugProperty3` elde etmek için [queryinterface'i](/cpp/atl/queryinterface) bir arabirimden arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- `IPropertyProxyProvider` Arabirimi uygulayan aşağıdaki yöntemi:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Arabirim `IPropertyProxyProvider` aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)|Bir nesne üzerinde verileri görüntülemek için bir özellik proxy arabirimi alır.|
+|[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)|Bir nesnedeki verileri görüntülemek için bir özellik proxy arabirimi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- EE uygulanması bu arabirimi uygulayan rağmen [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) genellikle tarafından işlenen [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md). Bkz: [Visualizing ve verileri görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) IEEVisualizerService arabirimi edinme hakkında ayrıntılar için.
+ EE bu arabirimi uygulasa da, [GetPropertyProxy'nin](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) uygulanması genellikle [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md)tarafından işlenir. IEEVisualizerService arabirimini edinme yle ilgili ayrıntılar için [Görselleştirme ve Görüntüleme Verileri'ne](../../../extensibility/debugger/visualizing-and-viewing-data.md) bakın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

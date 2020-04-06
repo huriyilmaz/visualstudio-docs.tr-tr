@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::GetName | Microsoft Docs
+title: IDebugMemoryContext2::GetName | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryContext2::GetName method
 - GetName method
 ms.assetid: 8c212556-7d9e-4d68-b2a9-8212f50d0287
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee8dd65a3bcaef7fd5a23da6c2a5f9c21a4838af
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b8a13c078340eafcff9440e41afd468ba95f9849
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346993"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727458"
 ---
 # <a name="idebugmemorycontext2getname"></a>IDebugMemoryContext2::GetName
-Bu bağlam için görüntülenebilir kullanıcı adını alır.
+Bu bağlam için kullanıcı tarafından görüntülenebilir adı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +42,13 @@ int GetName(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-[out] Bellek bağlam adını döndürür.
+[çıkış] Bellek bağlamının adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir bellek bağlam adı normal olarak kullanılmaz.
+ Bellek bağlamının adı normalde kullanılmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

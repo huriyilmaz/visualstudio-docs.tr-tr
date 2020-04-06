@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetDocumentContext | Microsoft Docs
+title: IDebugCodeContext2::GetDocumentContext | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCodeContext2::GetDocumentContext
 ms.assetid: d552cc92-963f-43c1-949f-ae6b63a427b8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a12838db0687fd7ebe20a5c576db0e06ece49107
-ms.sourcegitcommit: 34807a6b6105ae7839adde8ff994c85182ad3aff
+ms.openlocfilehash: 46510ce794ea30fdd365a77007b962a1eafd5d31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67342409"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734348"
 ---
 # <a name="idebugcodecontext2getdocumentcontext"></a>IDebugCodeContext2::GetDocumentContext
-Bu kod bağlamı için karşılık gelen belge bağlamını alır. Belge bağlamı bir konumda bu yönerge oluşturulan kaynak koduna karşılık gelen kaynak dosyasını temsil eder.
+Bu kod bağlamına karşılık gelen belge bağlamını alır. Belge bağlamı, kaynak dosyadaki bu talimatı oluşturan kaynak koduna karşılık gelen bir konumu temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetDocumentContext( 
 
 ## <a name="parameters"></a>Parametreler
 `ppSrcCxt`\
-[out] Döndürür [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) kod bağlamı için karşılık gelen nesne. Varsa `S_OK` döndürülür gündeki olmalıdır olmayan`null`.
+[çıkış] Kod bağlamına karşılık gelen [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnesini döndürür. Döndürülürse, `S_OK` ths olmayan`null`olmalıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Hata ayıklama altyapısı gibi bir hata kodunu döndürmelidir `E_FAIL` olduğunda `out` parametresi `null` kod bağlamı hiçbir ilişkili kaynak konumu olduğunda gibi.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Hata ayıklama altyapısı, parametrenin `E_FAIL` `out` `null` kod bağlamında ilişkili kaynak konumu olmadığı gibi bir hata kodu döndürmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Kod bağlamı konumda bir yürütme akışı kod yönerge olsa da genel olarak, belge bağlamı, kaynak dosyada bir konum olarak düşünülebilir.
+ Kod bağlamı yürütme akışındaki bir kod yönergesinin konumu iken, genellikle belge bağlamı kaynak dosyadaki bir konum olarak düşünülebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

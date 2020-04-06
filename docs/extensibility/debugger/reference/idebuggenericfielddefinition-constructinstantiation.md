@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Docs
+title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - ConstructInstantiation
 - IDebugGenericFieldDefinition::ConstructInstantiation
 ms.assetid: ef8ae261-a98b-4dc2-93b3-7c5191818ba2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89f7ecfc79cc2a4279a8ca0fccfc527ef63e603b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 352018e50b955ed414af974bc21b62775fd55f53
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313208"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728256"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-Tür bağımsız değişkenleri dizisini verilen bir alanda örneği oluşturur.
+Bir dizi tür bağımsız değişkeni verilen bir alan örneği oluşturuyor.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,19 +44,19 @@ int ConstructInstantiation(
 
 ## <a name="parameters"></a>Parametreler
 `cArgs`\
-[in] Bağımsız değişken sayısı `ppArgs` dizisi.
+[içinde] `ppArgs` Dizideki bağımsız değişken sayısı.
 
 `ppArgs`\
-[in] Tür bağımsız değişkenleri içeren bir dizi. Tür bağımsız değişkenlerini kapalı türler (genel olmayan veya tümüyle izlenen genel türler) olmalıdır.
+[içinde] Tür bağımsız değişkenlerini içeren dizi. Tür bağımsız değişkenleri kapalı türleri (genel olmayan veya tamamen anında genel leştirilmiş genel).
 
 `ppConstructedField`\
-[out] Döndürür [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) yeni alanını temsil eden arabirim.
+[çıkış] Yeni alanı temsil eden [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kısıtlamaları denetlenmez.
+ Kısıtlamalar denetlenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

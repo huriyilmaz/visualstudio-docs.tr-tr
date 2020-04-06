@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Microsoft Docs
+title: IDebugDocumentText2::GetText | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentText2::GetText
 ms.assetid: f8c15a58-da77-473e-a721-7a094e306c63
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2906c4421c570542579d0326167cd6ecbafb395
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2429bdf3f09eff168210a7b835a9e506d74d63ea
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330658"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731582"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
-Belge belirtilen konumda metin alır.
+Belgedeki belirtilen konumdan metni alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +47,22 @@ int GetText(
 
 ## <a name="parameters"></a>Parametreler
 `pos`\
-[in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) alınacak metnin konumunu belirten yapısı.
+[içinde] Alınacak metnin konumunu gösteren [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) bir yapı.
 
 `cMaxChars`\
-[in] Alınacak metnin karakter sayısı.
+[içinde] Alınacak metnin en fazla karakter sayısı.
 
 `pText`\
-[out içinde] İstenen metin ile doldurulacak olan arabellek için işaretçi. Bu arabelleğin en az içermesi `cMaxChars` geniş karakterlerin sayısı.
+[içinde, dışarı] İstenilen metinle doldurulacak bir arabellek için bir işaretçi. Bu arabellek en az `cMaxChars` sayıda geniş karakter içerebilmelidir.
 
 `pcNumChars`\
-[out] Gerçekte alınan karakter sayısını döndürür.
+[çıkış] Gerçekte alınan karakter sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek nasıl bu yöntem C# ' tan çağrılabilir gösterir.
+Bu örnek, bu yöntemin C#'dan nasıl çağrılabileceğini gösterir.
 
 ```csharp
 using System.Runtime.Interop.Services;

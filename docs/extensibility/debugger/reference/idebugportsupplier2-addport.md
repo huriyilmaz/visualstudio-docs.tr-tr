@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::AddPort | Microsoft Docs
+title: IDebugPortSupplier2::AddPort | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortSupplier2::AddPort
 ms.assetid: df491161-6bf3-4fcc-b478-b9ec88ec995f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 245c14e2aaa6867f964a2beec7bcbc232b5800be
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 00954ceaa0ddd750a3d08e372d1edaa1905f01c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340273"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724743"
 ---
 # <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
 Bir bağlantı noktası ekler.
@@ -43,16 +43,16 @@ int AddPort( 
 
 ## <a name="parameters"></a>Parametreler
 `pRequest`\
-[in] Bir [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) eklenecek bağlantı noktasını tanımlayan nesne.
+[içinde] Eklenecek bağlantı noktasını açıklayan bir [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) nesnesi.
 
 `ppPort`\
-[out] Döndürür bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) bağlantı noktasını temsil eden nesne.
+[çıkış] Bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, istenen bağlantı noktası hem de bağlantı noktası tedarikçi iç etkin bağlantı noktalarının listesine ekleyerek gerçekten oluşturur. [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) yöntemi çağrıldığında önce olası zaman gecikmeleri önlemek için.
+ Bu yöntem aslında istenen bağlantı noktasını oluşturur ve bağlantı noktası tedarikçisinin dahili etkin bağlantı noktaları listesine ekler. [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) yöntemi, olası zaman alıcı gecikmeleri önlemek için ilk olarak çağrılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

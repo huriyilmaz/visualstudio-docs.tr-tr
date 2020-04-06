@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEvents2::Event | Microsoft Docs
+title: IDebugPortEvents2::Olay | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortEvents2::Event
 ms.assetid: 5cc813f7-04a1-4462-9ea7-fbddcf0e0143
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6ede9055f97a796e4e007914f68e370d4ff81420
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 931be468f6321250481aec79688f7f326abcfcac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326754"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725240"
 ---
 # <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
-Bu yöntem, oluşturma ve yok etme süreçleri ve bağlantı noktası programlar geldiğiniz olayları gönderir.
+Bu yöntem, bir bağlantı noktasında ki işlemlerin ve programların oluşturulması nı ve yok edilmesini ifade eden olaylar gönderir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,19 +51,19 @@ int Event(
 
 ## <a name="parameters"></a>Parametreler
 `pMachine`\
-[in] Bir [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) hata ayıklama sunucusu temsil eden nesne (bir, her örneği için [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]) olayın gerçekleştiği içinde.
+[içinde] Hata ayıklama sunucusunu temsil eden bir [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) nesnesi (olayın meydana geldiği her örneği için bir tane [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]vardır).
 
 `pPort`\
-[in] Bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) olayın gerçekleştiği bağlantı noktasını temsil eden nesne.
+[içinde] Olayın oluştuğu bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi.
 
 `pProcess`\
-[in] Bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) olayın gerçekleştiği işlemini temsil eden nesne.
+[içinde] Olayın oluştuğu işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 `pProgram`\
-[in] Bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) olayın gerçekleştiği program temsil eden nesne.
+[içinde] Olayın oluştuğu programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
 
 `pEvent`\
-[in] Bir [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) olay tanımlayan nesne. Olası olayları aşağıdaki gibidir:
+[içinde] Olayı tanımlayan bir [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) nesnesi. Olası olaylar aşağıdaki gibidir:
 
 - [IDebugProcessCreateEvent2](../../../extensibility/debugger/reference/idebugprocesscreateevent2.md)
 
@@ -74,10 +74,10 @@ int Event(
 - [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)
 
 `riidEvent`\
-[in] Olayın GUID. Olay türüne dönüştürülür çünkü [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) bu yöntemi çağırmadan önce bu tanımlayıcı, hangi olay gönderilen belirlemek kolaylaştırır.
+[içinde] Olayın GUID. Olay bu yöntemi aramadan önce [IDebugEvent2'ye](../../../extensibility/debugger/reference/idebugevent2.md) ait olduğundan, bu tanımlayıcı hangi olayın gönderildiğini belirlemeyi kolaylaştırır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)

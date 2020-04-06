@@ -1,5 +1,5 @@
 ---
-title: Assembly öğesi (Visual Studio şablonları) | Microsoft Docs
+title: Montaj Elemanı (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Assembly element [Visual Studio templates]
 - <Assembly> element [Visual Studio templates]
 ms.assetid: 9242f76a-1273-4b8a-8f26-6606f91829ef
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13c52b7f913e35ace3e0fd41227e27b6c00e90e2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352190"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740039"
 ---
-# <a name="assembly-element-visual-studio-templates"></a>Assembly öğesi (Visual Studio şablonları)
-Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle ilgili bilgileri belirtir.
+# <a name="assembly-element-visual-studio-templates"></a>Montaj öğesi (Visual Studio şablonları)
+Şablonun bu derlemenin bir başvuruyu projelere eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.
 
- \<VSTemplate > \<TemplateContent > \<başvuruları > \<başvuru > \<derleme >
+ \<VSTemplate \<> Şablonİçerik \< \<> \<Referanslar> Başvuru> Montaj>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,14 +45,14 @@ Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe bir projeye eklendiğinde eklemek için derleme başvurusu belirtir.|
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde eklemek için derleme başvuru belirtir.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye Eklenecek derlemeyi belirtir. Bu derleme adı aşağıdaki yollardan birinde belirtilmelidir:
+ Bu metin, öğe şablonu anında olduğunda projeye eklemek için derlemeyi belirtir. Bu derleme adı aşağıdaki yollardan biriyle belirtilmelidir:
 
-- Tam derleme adı. Örneğin:
+- Tam montaj adı olarak. Örnek:
 
     ```
     <Assembly>
@@ -60,19 +60,19 @@ Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle 
     </Assembly>
     ```
 
-- Basit metin başvuru olarak. Örneğin:
+- Basit metin referansı olarak. Örnek:
 
     ```
     <Assembly> System </Assembly>
     ```
 
 ## <a name="remarks"></a>Açıklamalar
- `Assembly` gerekli alt öğesi olan `Reference`.
+ `Assembly`gerekli bir alt `Reference`öğedir.
 
- `Reference`, `References,` Ve `Assembly` öğeleri yalnızca kullanılabilir *.vstemplate* sahip dosyalar bir `Type` öznitelik değerini `Item`.
+ `Reference`, `References,` ve `Assembly` öğeler yalnızca *.vstemplate* dosyalarında `Type` `Item`kullanılabilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte gösterilmiştir `TemplateContent` öğe şablonu öğesidir. Bu XML başvuruları ekler *System.dll* ve *System.Data.dll* derlemeler.
+ Aşağıdaki örnekte, `TemplateContent` bir öğe şablonunun öğesi gösterin. Bu XML *System.dll* ve *System.Data.dll* derlemelerine göndermeler ekler.
 
 ```
 <TemplateContent>
@@ -93,5 +93,5 @@ Projelere derlemeye bir başvuru eklemek için şablonu kullanan bir derlemeyle 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

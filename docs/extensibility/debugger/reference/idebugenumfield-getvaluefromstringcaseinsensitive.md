@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetValueFromStringCaseInsensitive | Microsoft Docs
+title: IDebugEnumField::GetValueFromStringCaseDuyarsız | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField::GetValueFromStringCaseInsensitive method
 ms.assetid: ef95b38e-d9b2-4fb5-a166-7c2e14641dc7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72e6f79616c8c8099b938a29bc1d1809adb152a3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 551945ded9d1ba3e973f18c21463a896cbd478c8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350061"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730244"
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
-Bu yöntem, numaralandırma sabiti adla ilişkilendirilmiş değeri döndürmek için büyük küçük harf duyarsız arama kullanır.
+Bu yöntem, numaralandırma sabiti adı ile ilişkili değeri döndürmek için büyük/küçük bir durum duyarsız arama kullanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetValueFromStringCaseInsensitive(
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-[in] Değerin alınacağı adını belirten dize. C++ için geniş karakter dizesi bu olduğunu unutmayın.
+[içinde] Değeri almak için adı belirten bir dize. C++'da bunun geniş bir karakter dizesi olduğunu unutmayın.
 
 `pValue`\
-[out] İlişkili sayısal değeri döndürür.
+[çıkış] İlişkili sayısal değeri verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE`, ad sabit listesi veya bir hata kodu bir parçası değil.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, ad numaralandırmanın veya bir hata kodunun parçası değilse, döndürür. `S_FALSE`
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, büyük/küçük harf duyarlıdır. Büyük küçük harfe duyarlı bir arama (örneğin, bir dilde burada adları büyük/küçük harfe C++ gibi) gerekiyorsa kullanın [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).
+ Bu yöntem büyük/küçük harf duyarsız. Büyük/küçük harf duyarlı bir arama gerekiyorsa (örneğin, adların büyük/küçük harf duyarlı olduğu C++ gibi bir dilde), [GetValueFromString'i](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

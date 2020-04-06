@@ -1,24 +1,24 @@
 ---
-title: IDebugPortSupplierEx2 | Microsoft Docs
+title: IDebugPortSupplierEx2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugPortSupplierEx2 interface
 ms.assetid: dae0050a-a50a-4f35-bfbd-e538f537b20f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bebf232e17df54d4dae2392a40f2ccbc3fc711c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 26387618b320ed56ce754e64698fbb1c4223f2f6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353313"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724316"
 ---
 # <a name="idebugportsupplierex2"></a>IDebugPortSupplierEx2
-Seçin ve bir çekirdek sunucusu ile etkileşim kurmak bağlantı noktası sağlayıcısı için destek sağlar.
+Bir bağlantı noktası tedarikçisinin bir çekirdek sunucu seçmek ve onlarla etkileşimde bulunur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,22 +26,22 @@ Seçin ve bir çekirdek sunucusu ile etkileşim kurmak bağlantı noktası sağl
 IDebugPortSupplierEx2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Çekirdek sunucusunu kullanacak şekilde seçebilmeniz için özel bağlantı noktası sağlayıcısı bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Özel bir bağlantı noktası tedarikçisi, kullanılacak çekirdek sunucuyu seçebilmek için bu arabirimi uygular.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda yöntemlerini gösterilmektedir **IDebugPortSupplierEx2**.
+ Aşağıdaki tabloda **IDebugPortSupplierEx2**yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[SetServer](../../../extensibility/debugger/reference/idebugportsupplierex2-setserver.md)|Çekirdek sunucusu için bağlantı noktası sağlayıcısı ayarlar.|
+|[SetServer](../../../extensibility/debugger/reference/idebugportsupplierex2-setserver.md)|Bağlantı noktası tedarikçisi için çekirdek sunucuyu ayarlar.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Portpriv.h
+ Üstbilgi: Portpriv.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

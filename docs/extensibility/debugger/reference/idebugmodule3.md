@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3 | Microsoft Docs
+title: İDebugModülü3 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModule3 interface
 ms.assetid: 44f8e96e-9c59-4ffc-9a08-9c908a0e4de7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 582c6fa887062986ccd1b66c7f3466b89407bcca
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 84db1b672a9460ef3809162a2a1433f269796046
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323749"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726734"
 ---
 # <a name="idebugmodule3"></a>IDebugModule3
-Bu arabirim, simgeler ve JustMyCode durumları alternatif konumlar destekleyen bir modülü temsil eder.
+Bu arabirim, sembollerin ve JustMyCode durumlarının alternatif konumlarını destekleyen bir modülü temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,31 +28,31 @@ Bu arabirim, simgeler ve JustMyCode durumları alternatif konumlar destekleyen b
 IDebugModule3 : IDebugModule2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE) simgeleri alternatif konumlar desteklemek ve JustMyCode durumları ile çalışmak için bu arabirimi uygular (bkz [Visual Studio hata ayıklayıcısı sözlüğü](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md) "JustMyCode" açıklaması için).
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) bu arabirimi, sembollerin alternatif konumlarını desteklemek ve JustMyCode durumlarıyla çalışmak için uygular ("JustMyCode" tanımı için [Visual Studio Hata Ayıklama Sözlüğü'ne](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md) bakın).
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir çağrı [Getsymbolsearchınfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) bu arabirimi döndürür. DE gönderir [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) arabirimini kullanarak oturum hata ayıklama Yöneticisi için (SDM) [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) yöntemi. Ayrıca, bir çağrı [QueryInterface](/cpp/atl/queryinterface) üzerinde bir [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) arabirimi bu arabirim döndürür.
+ [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) için bir çağrı bu arabirimi döndürür. DE, [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) yöntemini kullanarak oturum hata ayıklama yöneticisine (SDM) [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) arabirimini gönderir. Ayrıca, [Bir IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) için bir çağrı bu arabirimi döndürür.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Yöntemlere ek olarak [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) arabirimi bu arabirim, aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)|Simgeleri ve her yolu arama sonuçları için arama yolları listesi döndürür.|
-|[LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)|Yükler ve geçerli bir modüle ilişkin simgeleri başlatır.|
-|[IsUserCode](../../../extensibility/debugger/reference/idebugmodule3-isusercode.md)|Modül kullanıcı kodu temsil edip etmediğini belirten döndürür bayrak.|
-|[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugmodule3-setjustmycodestate.md)|Modül kullanıcı kodu veya değerlendirilip değerlendirilmeyeceğini belirtir.|
+|[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)|Semboller için aranan yolların listesini ve her yolu aramanın sonuçlarını döndürür.|
+|[LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)|Geçerli modül için semboller yükler ve başharfler.|
+|[IsUserCode](../../../extensibility/debugger/reference/idebugmodule3-isusercode.md)|Modülün kullanıcı kodunu temsil edip etmediğini belirten bayrak döndürür.|
+|[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugmodule3-setjustmycodestate.md)|Modülün kullanıcı kodu olarak kabul edilip edilmemesi gerektiğini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, bu arabirimin tipik tüketicisidir.
+ Visual Studio bu arabirimin tipik tüketicisidir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

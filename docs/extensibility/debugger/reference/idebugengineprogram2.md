@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2 | Microsoft Docs
+title: IDebugEngineProgram2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineProgram2 interface
 ms.assetid: 151003a9-2e4d-4acf-9f4d-365dfa6b9596
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 221ab8fd00bc7d98745fdd5cc03dd72b9919b4b2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8e5ccf2327e660a983bcb3032363a92ac8a6f71d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345131"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730306"
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
-Bu arabirim, çok iş parçacıklı hata ayıklama desteği sağlar.
+Bu arabirim, çok iş parçacığı hata ayıklama desteği sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,30 +28,30 @@ Bu arabirim, çok iş parçacıklı hata ayıklama desteği sağlar.
 IDebugEngineProgram2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısını aynı anda birden çok iş parçacığı hata ayıklamayı desteklemek için bu arabirimi uygular. Bu arabirimi uygulayan aynı nesne üzerinde uygulanan [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı, birden çok iş parçacığının eşzamanlı hata ayıklamasını desteklemek için bu arabirimi uygular. Bu arabirim, [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimini uygulayan aynı nesne üzerinde uygulanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Kullanım [QueryInterface](/cpp/atl/queryinterface) bu arabirimden almak için bir `IDebugProgram2` arabirimi.
+ Bu arabirimi bir `IDebugProgram2` arabirimden elde etmek için [QueryInterface'i](/cpp/atl/queryinterface) kullanın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugEngineProgram2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugEngineProgram2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Stop](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)|Bu programa tüm iş parçacıkları durdurur.|
-|[WatchForThreadStep](../../../extensibility/debugger/reference/idebugengineprogram2-watchforthreadstep.md)|İzleyen yürütme (veya yürütme için İzlemeyi Durdur) için verilen iş parçacığı üzerinde gerçekleşmesi için.|
-|[WatchForExpressionEvaluationOnThread](../../../extensibility/debugger/reference/idebugengineprogram2-watchforexpressionevaluationonthread.md)|İfade değerlendirme programı durdurulmuş olsa bile verilen iş parçacığı üzerinde gerçekleşmesi için izin verir (veya izin vermiyor).|
+|[Durdur](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)|Bu programda çalışan tüm iş parçacıklarını durdurur.|
+|[WatchForThreadStep](../../../extensibility/debugger/reference/idebugengineprogram2-watchforthreadstep.md)|Verilen iş parçacığı üzerinde gerçekleşmesi için yürütme (veya yürütme için izlemeyi durdurmak) için saatler.|
+|[WatchForExpressionEvaluationOnThread](../../../extensibility/debugger/reference/idebugengineprogram2-watchforexpressionevaluationonthread.md)|Program durdurulsa bile, verilen iş parçacığı üzerinde ifade değerlendirmesinin gerçekleşmesine izin verir (veya izin vermese).|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio yanıt olarak bu arabirimi çağıran bir [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olay ve programın "İş parçacığı adım İzle" ve "İzleme için ifade değerlendirme üzerinde iş parçacığı" durumlarını ayarlama. [Durdur](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) zaman çağrılır program durdurulacak; bu yöntem program tüm iş parçacıklarını sonlandırma olanağı verir.
+ Visual Studio bu arabirimi bir [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) etkinliğine yanıt olarak çağırır ve programın "Thread Step'i izleyin" ve "İplikte İfade Değerlendirmesi Için İzle" durumlarını ayarlamak için çağırır. Program durdurulacak olduğunda [durdurma](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) denir; bu yöntem, programa tüm iş parçacıklarını sonlandırma şansı verir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

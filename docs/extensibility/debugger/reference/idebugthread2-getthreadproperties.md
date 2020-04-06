@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadProperties | Microsoft Docs
+title: IDebugThread2::GetThreadProperties | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::GetThreadProperties
 ms.assetid: 304403fd-f4f8-4096-ac2c-bd3b59663aad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a325e8798f54d8ec78ad0ec5318e9162b16774b1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7f81f4b60dfda21ce59ad73076785a37b767873
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320109"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718696"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
-Bu iş parçacığı tanımlayan özellikleri alır.
+Bu iş parçacığı açıklayan özellikleri alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,19 +43,19 @@ int GetThreadProperties (
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[in] Bayraklarının bir birleşimi [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) hangi alanlarının belirleyen sabit listesi `ptp` doldurulacak olan.
+[içinde] Hangi alanların doldurulmasını belirleyen [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) numaralandırmadan gelen `ptp` bayrakların birleşimi.
 
 `ptp`\
-[out içinde] A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) iş parçacığı özelliklerini oturum girilir yapısının.
+[içinde, dışarı] İş parçacığının özellikleriyle doldurulmuş bir [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntemle döndürülen bilgileri genellikle gösterilen **iş parçacıkları** hata ayıklama penceresine.
+Bu yöntemden döndürülen bilgiler genellikle **İş Parçacıkları** hata ayıklama penceresinde gösterilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` uygulayan nesne [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimi.
+Aşağıdaki örnek, `CProgram` [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,

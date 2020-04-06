@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Delete | Microsoft Docs
+title: IDebugPendingBreakpoint2::Delete | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugPendingBreakpoint2::Delete method
 - Delete method
 ms.assetid: 4cb5ed81-6f0c-41ce-a770-5adb6b4bf5d9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 850f073e76bb48e734ff1cccac100b10ceaa2066
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fd6e2d61eb7a7ce927a966281bba2f0cbf470dc6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320468"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725908"
 ---
 # <a name="idebugpendingbreakpoint2delete"></a>IDebugPendingBreakpoint2::Delete
-Bu bekleyen kesme noktasının ve ondan bağlı tüm kesme noktalarını siler.
+Bekleyen bu kesme noktasını ve ondan bağlanan tüm kesme noktalarını siler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,10 +39,10 @@ int Delete();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CPendingBreakpoint` uygulayan nesne [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi.
+Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CPendingBreakpoint::Delete(void)

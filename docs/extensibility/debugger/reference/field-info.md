@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO | Microsoft Docs
+title: FIELD_INFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_INFO structure
 ms.assetid: bfafef6d-0c83-43d7-a779-1f0d24b166a1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 352e4bdf6c79dc67f0bf396cb1164e96e80fbf5f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6e2089746adecc583d04176afca18ad19826ea53
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337698"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736886"
 ---
-# <a name="fieldinfo"></a>FIELD_INFO
-Bu yapı, yerel bir değişken, parametre veya diğer alanlar açıklanır.
+# <a name="field_info"></a>FIELD_INFO
+Bu yapı yerel bir değişkeni, parametreyi veya başka bir alanı açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,29 +49,29 @@ public struct FIELD_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Bayraklarının bir birleşimi [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) hangi üyelerin doldurulur belirten sabit listesi.
+Hangi üyelerin [doldurulduğuna](../../../extensibility/debugger/reference/field-info-fields.md) FIELD_INFO_FIELDS numaralandırmadan gelen bayrakların birleşimi.
 
 `bstrFullName`\
-Alanının tam adı.
+Alanın tam adı.
 
 `bstrName`\
-Kısa ad alanı.
+Alanın kısa adı.
 
 `bstrType`\
-Alan türü.
+Alanın türü.
 
 `dwModifiers`\
-Bayraklarının bir birleşimi [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) alanı açıklayan sabit listesi.
+Alanı açıklayan [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) numaralandırmadan gelen bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı geçirilir [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemi burada da doldurulur.
+Bu yapı doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemine aktarılır.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: sh.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

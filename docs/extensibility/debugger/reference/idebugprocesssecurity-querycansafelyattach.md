@@ -1,27 +1,27 @@
 ---
-title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
+title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessSecurity::QueryCanSafelyAttach
 ms.assetid: 63ec1ae8-27da-4574-aa15-1c986fe9fe58
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1e718efddc90c45ced7e497a9c66c9ab3889c090
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e03ccbb7761802401239768c54f4ea5b36ab86bf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311433"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723203"
 ---
 # <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-Bu yöntem, kullanıcının güvenli olmayan bir işleme iliştirir önce bir uyarı görüntülenecek bağlantı noktası sağlayıcısı sağlar.
+Bu yöntem, bağlantı noktası tedarikçisinin kullanıcı güvenli olmayan bir işleme bağlanmadan önce bir uyarı görüntülemesine olanak tanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +34,13 @@ int QueryCanSafelyAttach();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Dönüş değerleri aşağıdaki gibidir:
+ İade değerleri aşağıdaki gibidir:
 
-- `S_OK`: İşlemine iliştirme güvenlidir ve uyarı iletişim kutusu gösterilir.
+- `S_OK`: İşleme takmak güvenlidir ve hiçbir uyarı iletişim kutusu gösterilmez.
 
-- `S_FALSE`: İliştirme bir güvenlik sorunu olabilir ve bir uyarı ile bir iletişim kutusu gösterilir.
+- `S_FALSE`: Takmak bir güvenlik sorunu olabilir ve uyarı içeren bir iletişim kutusu gösterilir.
 
-- `FAILURE`: İşlemine iliştirme başarısız.
+- `FAILURE`: İşleme bağlanmak başarısız olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

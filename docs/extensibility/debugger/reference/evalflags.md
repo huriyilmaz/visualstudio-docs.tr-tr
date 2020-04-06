@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS | Microsoft Docs
+title: EVALFLAGS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - EVALFLAGS enumeration
 ms.assetid: 7b2cb14a-511a-4fef-9e4f-308139719fba
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2a56f7d5fe4741fa887814691eddcf8df93030cd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4136726e5c8b798121dbd38975d8f2bb935ed04a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337888"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737115"
 ---
 # <a name="evalflags"></a>EVALFLAGS
-İfade değerlendirme denetim bayrakları belirtir.
+İfade değerlendirmesini denetleyen bayraklar belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,39 +54,39 @@ public enum enum_EVALFLAGS {
 
 ## <a name="fields"></a>Alanlar
 `EVAL_RETURNVALUE`\
-Dönüş değeri varsa, değerlendirilecek belirtir.
+Varsa iade değerinin değerlendirilmesi gerektiğini belirtir.
 
 `EVAL_NOSIDEEFFECTS`\
-Yan etkileri izin verilmeyeceğini belirtir.
+Yan etkilere izin verilmemesini belirtir.
 
 `EVAL_ALLOWBPS`\
-Durdurma kesme noktalarında belirtir.
+Kesme noktalarında durmayı belirtir.
 
 `EVAL_ALLOWERRORREPORT`\
-Hata izin verilmesi için konağa raporlama belirtir. Internet Explorer'da komut ifade değerlendirmesi için kullanılır.
+İzin verilmesi için ana bilgisayara hata bildirimi ni belirtir. Öncelikle Internet Explorer'da komut dosyasında ifade değerlendirmesi için kullanılır.
 
 `EVAL_FUNCTION_AS_ADDRESS`\
-İşlev çağırma yerine adresleri olarak değerlendirilecek işlevleri zorlar.
+İşlev çağırmak yerine işlevleri adres olarak değerlendirilmeye zorlar.
 
 `EVAL_NOFUNCEVAL`\
-İşlevi, değerlendirilen öğesinden engeller. Örneğin, düşünün `int` ifade belirteci `myExpression(int) + 10`. Bu işlev bir adres, ancak bir değer olarak değil doğru değerlendirilebilir.
+Fonksiyonun değerlendirilmesini engeller. Örneğin, ifadedeki `int` `myExpression(int) + 10`belirteci göz önünde bulundurun. Bu işlev doğru bir adres olarak değerlendirilebilir, ancak bir değer olarak değil.
 
 `EVAL_NOEVENTS`\
-İfade değerlendirme sırasında meydana gelen olayları oturum hata ayıklama Yöneticisi (SDM) veya IDE gönderilmemelidir belirten bayrak.
+İfade değerlendirmesi sırasında meydana gelen olayların oturum hata ayıklama yöneticisine (SDM) veya IDE'ye gönderilmemesi gerektiğini belirtmek için işaretle.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu bayraklar bağımsız değişken olarak geçirilen [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) ve [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) yöntemleri.
+Bu [bayraklar, EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) ve [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) yöntemlerine bağımsız değişken olarak geçirilir.
 
-Bu bayraklar bir bit düzeyinde OR ile birleştirilebilir.
+Bu bayraklar biraz veya biraz veya birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)
 - [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest3::GetRequestInfo2 | Microsoft Docs
+title: IDebugBreakpointRequest3::GetRequestInfo2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointRequest3::GetRequestInfo2
 ms.assetid: 33942e4a-0a0a-49e8-a693-004954f6d38a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 86e687a02e434c12c6386df57462cdb578250cdd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f5febf664da9cd69dbd88b70056d9eac953bf581
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324202"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734843"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
-Bu yöntem, bu kesme noktası istek tanımlayan kesme noktası isteği bilgilerini alır.
+Bu yöntem, bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetRequestInfo2(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[in] Bayraklarının bir birleşimi [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) hangi alanları belirlemek numaralandırma `pBPRequestInfo` doldurulacak olan.
+[içinde] Hangi alanların doldurulmasını belirleyen [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) numaralandırmadan gelen `pBPRequestInfo` bayrakların birleşimi.
 
 `bBPRequestInfo`\
-[out] [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapısına doldurulmasını.
+[çıkış] Doldurulacak [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu isteği öğesinden döndürülen çok daha fazla bilgi bulunmaktadır [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) yöntemi.
+ Bu istekte [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) yönteminden döndürülenden daha fazla bilgi vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointRequest3](../../../extensibility/debugger/reference/idebugbreakpointrequest3.md)

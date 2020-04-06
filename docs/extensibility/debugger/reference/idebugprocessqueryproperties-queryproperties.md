@@ -1,27 +1,27 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperties | Microsoft Docs
+title: IDebugProcessQueryProperties::QueryProperties | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessQueryProperties::QueryProperties
 ms.assetid: 976a9962-b689-45bb-afb6-16b2c5dbc3b8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a26cbb1781561b6fb4d54da3cfaea9a9fbae7699
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4daac369485febe38e3366d413985bda90b30f05
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311590"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723320"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
-Hata ayıklama işlemi belirtilen özelliğin değerini için bu yöntemi sorgular.
+Bu yöntem, hata ayıklama işleminin belirli bir özellik değerlerini sorgular.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int QueryProperties(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Özellik tanımları ve özellik değerlerini içeren bir dizi boyutu.
+[içinde] Özellik tanımlarını ve özellik değerlerini içeren dizilerin boyutu.
 
 `dwPropType`\
-[in] Sorgulanan özelliklerini tanımlarını içeren bir dizi. Olası değerler şunlardır:
+[içinde] Sorgulanmış özelliklerin tanımlarını içeren bir dizi. Olası değerler şunlardır:
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -53,10 +53,10 @@ int QueryProperties(
 - PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3
 
 `pvarPropValue`\
-[out] Özellik değerlerini içeren bir dizi.
+[çıkış] Özellik değerlerini içeren bir dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Bu yöntem nadiren kullanılır.

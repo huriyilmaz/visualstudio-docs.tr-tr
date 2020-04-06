@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Docs
+title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugBoundBreakpoint2::GetPendingBreakpoint method
 - GetPendingBreakpoint method
 ms.assetid: 22f94f81-f8d9-46de-96e9-fae6f3c24903
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 862c0e4fe1783793c98d50b771200effdbfd02d6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4037cff1e080b4af97dbc56de4802f6f73504649
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320515"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735482"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
-Belirtilen bağlı Kesme noktasının oluşturulduğu bekleyen kesme noktasının alır.
+Belirtilen bağlama kesme noktasının oluşturulduğu bekleyen kesme noktasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,16 +42,16 @@ int GetPendingBreakpoint( 
 
 ## <a name="parameters"></a>Parametreler
 `ppPendingBreakpoint`\
-[out] Döndürür [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) bağlı kesme noktası oluşturmak için kullanılan bekleyen kesme noktasının temsil eden nesne.
+[çıkış] Bu bağlama kesme noktasını oluşturmak için kullanılan bekleyen kesme noktasını temsil eden [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bekleyen kesme noktası, bir kesme noktası için bir veya daha çok programlar uygulanabilir kodu bağlamak için gereken tüm gerekli bilgileri koleksiyonu olarak düşünülebilir.
+Bekleyen bir kesme noktası, bir veya birden çok programa uygulanabilecek bir kesme noktasını koda bağlamak için gereken tüm bilgilerin bir koleksiyonu olarak düşünülebilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CBoundBreakpoint` gösteren nesne [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimi.
+Aşağıdaki örnek, `CBoundBreakpoint` [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(

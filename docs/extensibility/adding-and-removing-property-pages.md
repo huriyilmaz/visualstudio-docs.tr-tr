@@ -1,5 +1,5 @@
 ---
-title: Ekleme ve kaldırma özellik sayfaları | Microsoft Docs
+title: Özellik Sayfaları Ekleme ve Kaldırma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,32 +7,32 @@ helpviewer_keywords:
 - property pages, project subtypes
 - property pages, removing
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03974bba0ca93242cf044a58bbb60ca772a369ce
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4c3df3104e48ca0ee972e1a27f2c32fd0661088b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352311"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740207"
 ---
-# <a name="add-and-remove-property-pages"></a>Özellik sayfaları eklemenizi ve kaldırmanızı
+# <a name="add-and-remove-property-pages"></a>Özellik sayfaları ekleme ve kaldırma
 
-Proje Tasarımcısı proje özelliklerini, ayarlarını ve kaynakları yönetmek için merkezi bir konum sağlayan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Tek bir pencerede olarak göründüğü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı (IDE) ve sekmeleri soldaki aracılığıyla erişilen bölmeleri sağdaki sayısını içerir. (Genellikle özellik sayfaları adlandırılır) bölmeleri Proje Tasarımcısı'nda proje türü ve dili değişiklik gösterir. Proje Tasarımcısı ile erişilebilir **özellikleri** komutunu **proje** menüsü.
+Proje Tasarımcısı, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]proje özelliklerini, ayarlarını ve kaynaklarını yönetmek için merkezi bir konum sağlar. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamında (IDE) tek bir pencere olarak görünür ve soldaki sekmelerden erişilen sağdaki birkaç bölme içerir. Proje Tasarımcısı'ndaki bölmeler (genellikle özellik sayfaları olarak adlandırılır) proje türüne ve dile göre değişir. Proje Tasarımcısı'na **Proje** menüsündeki **Özellikler** komutu ile erişilebilir.
 
-Proje Tasarımcısı'nda ek özellik sayfaları görüntülemek bir proje alt sık gerekir. Benzer şekilde, bazı proje alt türleri yerleşik özellik sayfaları kaldırılacak gerektirebilir. Ya da yapmak için proje alt uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirim ve geçersiz kılma <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> yöntemi. Bu yöntemi geçersiz kılma ve kullanarak `propId` parametre değerlerini birini içeren <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> sabit listesi, filtre, ekleyebilir veya proje özellikleri kaldırın. Örneğin, bir sayfa yapılandırması bağımlı özellik sayfalarına eklemeniz gerekebilir. Bunu yapmak için yapılandırma bağımlı özellik sayfaları filtrelemek ve ardından yeni bir sayfa var olan listeye eklemek gerekir.
+Proje alt türünün Sık sık Proje Tasarımcısı'nda ek özellik sayfaları görüntülemesi gerekir. Benzer şekilde, bazı proje alt türleri yerleşik özellik sayfalarının kaldırılmasını gerektirebilir. Her ikisini de yapmak için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> proje alt yazınızın arabirimi uygulaması ve yöntemi geçersiz kılması <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> gerekir. Bu yöntemi geçersiz kılarak ve numaralandırma `propId` değerlerinden <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> birini içeren parametre kullanarak proje özelliklerini filtreleyebilir, ekleyebilir veya kaldırabilirsiniz. Örneğin, yapılandırmaya bağımlı özellik sayfalarına bir sayfa eklemeniz gerekebilir. Bunu yapmak için yapılandırmaya bağımlı özellik sayfalarını filtrelemeniz ve ardından varolan listeye yeni bir sayfa eklemeniz gerekir.
 
-## <a name="add-and-remove-property-pages-in-project-designer"></a>Ekleme ve özellik sayfaları, Proje Tasarımcısı'nda kaldırma
+## <a name="add-and-remove-property-pages-in-project-designer"></a>Project Designer'da özellik sayfaları ekleme ve kaldırma
 
-### <a name="remove-a-property-page"></a>Bir özellik sayfasını Kaldır
+### <a name="remove-a-property-page"></a>Özellik sayfasını kaldırma
 
-1. Geçersiz kılma `GetProperty(uint itemId, int propId, out object property)` yöntemi özellik sayfaları filtrelemek ve almak için bir `clsids` listesi.
+1. Özellik sayfalarını filtrelemek ve `GetProperty(uint itemId, int propId, out object property)` bir `clsids` liste elde etmek için yöntemi geçersiz kılın.
 
     ```vb
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)
@@ -77,7 +77,7 @@ Proje Tasarımcısı'nda ek özellik sayfaları görüntülemek bir proje alt s�
     }
     ```
 
-2. Kaldırma **Build Events** sayfasından alınan `clsids` listesi.
+2. Etkinlikler **Oluştur** sayfasını elde `clsids` edilen listeden kaldırın.
 
     ```vb
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"
@@ -111,7 +111,7 @@ Proje Tasarımcısı'nda ek özellik sayfaları görüntülemek bir proje alt s�
     property = propertyPagesList;
     ```
 
-### <a name="add-a-property-page"></a>Bir özellik sayfası Ekle
+### <a name="add-a-property-page"></a>Özellik sayfası ekleme
 
 1. Eklemek istediğiniz bir özellik sayfası oluşturun.
 
@@ -158,7 +158,7 @@ Proje Tasarımcısı'nda ek özellik sayfaları görüntülemek bir proje alt s�
     }
     ```
 
-2. Yeni özellik sayfanız kaydedin.
+2. Yeni özellik sayfanızı kaydedin.
 
     ```vb
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>
@@ -168,7 +168,7 @@ Proje Tasarımcısı'nda ek özellik sayfaları görüntülemek bir proje alt s�
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]
     ```
 
-3. Geçersiz kılma `GetProperty(uint itemId, int propId, out object property)` elde yöntemi özellik sayfaları filtre bir `clsids` listelemek ve yeni bir özellik sayfası ekleyin.
+3. Özellik sayfalarını filtrelemek, bir `GetProperty(uint itemId, int propId, out object property)` `clsids` liste elde etmek ve yeni bir özellik sayfası eklemek için yöntemi geçersiz kılın.
 
     ```vb
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer

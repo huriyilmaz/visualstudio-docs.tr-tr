@@ -1,23 +1,23 @@
 ---
-title: BuildProjectOnload öğesi (Visual Studio şablonları) | Microsoft Docs
+title: BuildProjectOnload Element (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.assetid: b07d3074-0fc9-45e1-baf5-da6bd4f3f1c0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9a9d4536c9ae7205a98ef0c79906ccbb002b5f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 72d1981aab67762b3ee4aa8d62e0643f4c2a8963
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321239"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739957"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload öğesi (Visual Studio şablonları)
-Yalnızca yeni projeler oluşturmak ve bunları bir çözüme eklemek gibi oluşturur. Tüm çözüm hazırladılar değil.
+Yalnızca oluşturduğunuz yeni projeler oluşturur ve bunları bir çözüme ekler. Tüm çözüm oluşturulmadı.
 
 Öğe hiyerarşisi:
 
@@ -46,18 +46,18 @@ Yalnızca yeni projeler oluşturmak ve bunları bir çözüme eklemek gibi oluş
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`TemplateData`|Şablonu kategorilere ayırır ve her ikisinde de görüntülenme şeklini tanımlayan **yeni proje** ve **Yeni Öğe Ekle** iletişim kutuları.|
+|`TemplateData`|Şablonu kategorilere ayırAr ve hem **Yeni Proje'de** hem de **Yeni Öğe Ekle** iletişim kutularında nasıl görününcürün denli tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin olmalıdır `true` veya `false` şablondan oluşturulduğunda, yalnızca yeni projeyi derlemek gösteren.
+ Metin, şablondan `true` `false` oluşturulduğunda yalnızca yeni proje oluşturulup oluşturulmayacağını belirtmek için olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `BuildProjectOnLoad` İsteğe bağlı bir öğedir. Varsayılan değer `false` şeklindedir.
+ `BuildProjectOnLoad`isteğe bağlı bir unsurdur. Varsayılan değer: `false`.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir Visual C# şablonu meta verileri gösterir.
+ Aşağıdaki örnek, Visual C# şablonu için meta verileri göstermektedir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -87,5 +87,5 @@ Yalnızca yeni projeler oluşturmak ve bunları bir çözüme eklemek gibi oluş
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [BuildOnLoad özniteliği ve öğesi](buildonload-visual-studio-templates.md)
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)

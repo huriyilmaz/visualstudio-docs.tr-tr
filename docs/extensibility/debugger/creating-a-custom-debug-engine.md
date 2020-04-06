@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama motoru özel oluşturma | Microsoft Docs
+title: Özel Hata Ayıklama Motoru Oluşturma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,52 +7,52 @@ helpviewer_keywords:
 - debug engines, custom
 - debugging [Debugging SDK], custom debug engines
 ms.assetid: 52794238-6fae-451c-bf1c-99f344c6f173
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3756eb105ec562d902d4631318e7a5fc698601a2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a350d640fffcc6e09cf8f981c797b97071a0cacf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345313"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739033"
 ---
-# <a name="create-a-custom-debug-engine"></a>Bir özel hata ayıklama altyapısı oluşturma
-Hata ayıklama altyapısı (DE), belirli çalışma zamanı mimarileri hata ayıklamasını sağlayan bir bileşendir. Genellikle çalışma zamanı ortam başına yalnızca bir DE uygulama yok.
+# <a name="create-a-custom-debug-engine"></a>Özel hata ayıklama altyapısı oluşturma
+Hata ayıklama altyapısı (DE), belirli çalışma zamanı mimarilerinin hata ayıklanmasına izin veren bir bileşendir. Çalışma zamanı ortamı başına genellikle yalnızca bir DE uygulaması vardır.
 
 > [!NOTE]
-> Transact-SQL ve JScript için ayrı DE uygulamaları olsa da, tek bir DE VBScript ve JScript paylaşın.
+> Transact-SQL ve JScript için ayrı DE uygulamaları olsa da, VBScript ve JScript tek bir DE paylaşır.
 
- Yürütme denetimi, kesme noktaları ve ifade değerlendirme gibi hata ayıklama hizmetleri sağlamak için yorumlayıcı veya işlemi sistemi bir DE çalışır. Bu hizmetler DE arabirimleri aracılığıyla uygulanır ve farklı çalışma modları arasında geçiş için hata ayıklayıcı neden olabilir. Daha fazla bilgi için [çalışma modları](../../extensibility/debugger/operational-modes.md).
+ De, yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetlerini sağlamak için yorumlayıcı veya işlem sistemiyle birlikte çalışır. Bu hizmetler DE arabirimleri aracılığıyla uygulanır ve hata ayıklamanın farklı çalışma modları arasında geçişine neden olabilir. Daha fazla bilgi için [Bkz. Operasyonel modlar.](../../extensibility/debugger/operational-modes.md)
 
- Bir DE oluşturma, aşağıdaki adımlardan oluşur:
+ DE oluşturma aşağıdaki adımlardan oluşur:
 
-1. Bir DE Visual Studio ile kaydetme
+1. Visual Studio ile BIR DE kaydolun
 
-2. Bir program görüntüde hata ayıklamayı etkinleştir
+2. Bir programın debutlanmasını etkinleştirme
 
-3. Yürütme denetimi ve durum değerlendirme uygulayın
+3. Yürütme denetimi ve durum değerlendirmesi uygulayın
 
 4. Olayları gönderme
 
 5. Sonlandırma ve ayırma ayarlama
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Bir özel hata ayıklama altyapısını kaydetme](../../extensibility/debugger/registering-a-custom-debug-engine.md) kullanılabilmesi için Visual Studio ile hata ayıklama altyapısı kaydetmek için gereken adımları açıklar.
+ [Özel hata ayıklama altyapısı kaydetme](../../extensibility/debugger/registering-a-custom-debug-engine.md) Kullanılabilir, böylece bir hata ayıklama altyapısının Visual Studio'ya kaydedilmesi için gereken adımları açıklar.
 
- [Ayıklanacak bir programı etkinleştirmek](../../extensibility/debugger/enabling-a-program-to-be-debugged.md) sizin DE bir program hata ayıklama yapılabilmesi gerekir ilk DE başlatın veya varolan bir program eklemek olduğunu açıklar.
+ [Bir programın debutlanmasını etkinleştirme](../../extensibility/debugger/enabling-a-program-to-be-debugged.md) DE'niz bir programı hata ayıklamadan önce önce DE'yi başlatmanız veya varolan bir programa iliştirmeniz gerektiğini açıklar.
 
- [Uygulama yürütme denetimi ve durum değerlendirme](../../extensibility/debugger/execution-control-and-state-evaluation.md) Discusses neden bir uygulamada hata ayıklama gerektirir yürütme denetimi özelliklerini uygulama.
+ [Yürütme denetimi ve durum değerlendirmesi uygulayın](../../extensibility/debugger/execution-control-and-state-evaluation.md) Bir uygulama hata ayıklama yürütme denetimi özellikleri uygulanmasını gerektirir neden tartışır.
 
- [Olayları gönderme](../../extensibility/debugger/sending-events.md) Describes iletişimine hata ayıklayıcı ve DE bir olay modeli olarak DCOM bağlı.
+ [Etkinlik gönderme](../../extensibility/debugger/sending-events.md) Hata ayıklama ve DE arasındaki iletişimi DCOM'a dayalı bir olay modeli olarak açıklar.
 
- [Sonlandırma ve ayırma ayarlama](../../extensibility/debugger/termination-and-detaching.md) hiçbir kesme noktaları, özel durumlar, çalışma zamanı hataları veya uygulamada hata ayıklaması için sonsuz döngüler olduğu anlamına gelir normal sonlandırması elde edileceğini açıklar.
+ [Sonlandırma ve ayırma ayarlama](../../extensibility/debugger/termination-and-detaching.md) Normal sonlandırmanın nasıl elde edilebildiğini açıklar, bu da uygulamada hata ayıklanacak kesme noktaları, özel durumlar, çalışma zamanı hataları veya sonsuz döngüler olmadığı anlamına gelir.
 
- [Hata ayıklayıcı olayları çağırma](../../extensibility/debugger/calling-debugger-events.md) hata ayıklama oturumunda gerçekleşen olayların arama sırası belgeleri.
+ [Hata ayıklama olaylarını arama](../../extensibility/debugger/calling-debugger-events.md) Hata ayıklama oturumunda meydana gelen olayların çağrı sırasını belgeler.
 
- [Nasıl yapılır: Özel hata ayıklama altyapısında hata ayıklama](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md) özel DE hata ayıklamak açıklanmaktadır.
+ [Nasıl Yapılsın: Özel hata ayıklama altyapısı hata ayıklama](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md) Özel bir DE hata ayıklama açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio hata ayıklayıcı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+- [Visual Studio hata ayıklama genişletilebilirlik](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

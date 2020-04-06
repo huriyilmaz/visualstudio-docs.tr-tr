@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetDocument | Microsoft Docs
+title: IDebugDisassemblyStream2::GetDocument | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::GetDocument
 ms.assetid: 3d039a44-ebaa-4413-ac18-7cfd92c408bd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a043d5462ad206395cb7d70d28152c19a7df6460
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf5d1a73e15ad38bf14d954718ce97c088b2e525
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310426"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732191"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
-Bu giriş akışı ile ilişkilendirilen kaynak belge alır.
+Bu giriş akışıyla ilişkili kaynak belgeyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetDocument( 
 
 ## <a name="parameters"></a>Parametreler
 `bstrDocumentUrl`\
-[in] Belge URL'si.
+[içinde] Belge URL'si.
 
 `ppDocument`\
-[out] Döndürür bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) belgeyi temsil eden nesne.
+[çıkış] Belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, gerçek bir dosyasında saklanmaz metin belgeleriniz hata ayıklama altyapısı tarafından uygulanır.
+ Bu yöntem, gerçek bir dosyada depolanmayan metin belgeleri olan hata ayıklama motorları tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

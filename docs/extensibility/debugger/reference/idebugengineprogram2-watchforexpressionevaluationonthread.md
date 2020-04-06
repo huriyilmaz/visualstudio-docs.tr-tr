@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread | Microsoft Docs
+title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
 ms.assetid: 01d05e77-8cac-4d1b-b19f-25756767ed27
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e72292f403b28c66cddbcee623f27ddfcbe5c3aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e988e1d64af38a55f5d946f704e1edb4df29b1d5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345174"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730367"
 ---
 # <a name="idebugengineprogram2watchforexpressionevaluationonthread"></a>IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
-İfade değerlendirme programı durdurulmuş olsa bile verilen iş parçacığı üzerinde gerçekleşmesi için izin verir (veya izin vermiyor).
+Program durmuş olsa bile, verilen iş parçacığı üzerinde ifade değerlendirmesinin gerçekleşmesine izin verir (veya izin vermese).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,27 +49,27 @@ int WatchForExpressionEvaluationOnThread( 
 
 ## <a name="parameters"></a>Parametreler
 `pOriginatingProgram`\
-[in] Bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) bir ifade değerlendirme programı temsil eden nesne.
+[içinde] Bir ifadeyi değerlendiren programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
 
 `dwTid`\
-[in] İş parçacığı tanımlayıcısını belirtir.
+[içinde] İş parçacığının tanımlayıcısını belirtir.
 
 `dwEvalFlags`\
-[in] Bayraklarının bir birleşimi [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) nasıl gerçekleştirilecek bir değerlendirme olduğunu belirten sabit listesi.
+[içinde] [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından değerlendirmenin nasıl yapılacağını belirten bayrakların birleşimi.
 
 `pExprCallback`\
-[in] Bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ifadesi değerlendirmesi sırasında oluşan hata ayıklama olayları göndermek için kullanılacak nesne.
+[içinde] İfade değerlendirmesi sırasında meydana gelen hata ayıklama olaylarını göndermek için kullanılacak bir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
 
 `fWatch`\
-[in] Sıfır olmayan (`TRUE`), ifade değerlendirmesi tarafından tanımlanan iş parçacığında sağlayan `dwTid`; Aksi takdirde, sıfır (`FALSE`) ifade değerlendirme, iş parçacığı üzerinde izin vermiyor.
+[içinde] Sıfır olmayan ise`TRUE`( ), tarafından `dwTid`tanımlanan iş parçacığı üzerinde ifade değerlendirmesine izin verir; aksi takdirde,`FALSE`sıfır ( ) bu iş parçacığı üzerinde ifade değerlendirmesi disallows.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Oturum hata ayıklama Yöneticisi (SDM) tarafından tanımlanan, bir program sorduğunda `pOriginatingProgram` parametresi, bir ifadeyi değerlendirmek için bu yöntemi çağırarak diğer tüm eklenmiş programlardan bildirir.
+ Oturum hata ayıklama yöneticisi (SDM) `pOriginatingProgram` bir ifadeyi değerlendirmek için parametre tarafından tanımlanan bir program istediğinde, bu yöntemi çağırarak diğer tüm ekli programları bildirir.
 
- İfade değerlendirme bir programda başka birinde işlev değerlendirmesi veya tüm değerlendirmesi nedeniyle çalıştırmak için kod neden `IDispatch` özellikleri. Bu nedenle, ifade değerlendirme çalıştırmak ve iş parçacığı bu programa durdurulabilir olsa bile tamamlamak bu yöntem sağlar.
+ Bir programdaki ifade değerlendirmesi, işlev değerlendirmesi veya herhangi bir `IDispatch` özelliğin değerlendirilmesi nedeniyle kodun başka bir programda çalışmasına neden olabilir. Bu nedenle, bu yöntem, iş parçacığı bu programda durdurulabilir olsa bile ifade değerlendirme çalışmasına ve tamamlanmasına olanak sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)

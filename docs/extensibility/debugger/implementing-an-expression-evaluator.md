@@ -1,36 +1,36 @@
 ---
-title: İfade değerlendiricisi uygulama | Microsoft Docs
+title: İfade Değerlendirici Nin Uygulanması | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluators
 - debugging [Debugging SDK], expression evaluators
 ms.assetid: e9ada7be-845e-4baa-bf8f-e4890e7ba490
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66a1a0cb78036982923d20e39a3a4c32b288e459
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a8c7c9a1130794dd4c28f212afd6cb3c030f5a1b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326208"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738543"
 ---
 # <a name="implement-an-expression-evaluator"></a>İfade değerlendiricisi uygulama
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için bkz: [CLR ifade değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi [için, bkz.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Managed expression evaluator sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- Bir ifadenin değerlendirilmesi, hata ayıklama altyapısı (DE), sembol sağlayıcısı (SP), bağlayıcı nesnesi ve ifade değerlendiricisi (EE) arasında karmaşık bir etkileşim özelliği olur. Şu dört bileşen bir başkası tarafından kullanılan ve bir bileşen tarafından uygulanan arabirimler bağlı.
+ Bir ifadeyi değerlendirmek hata ayıklama altyapısı (DE), sembol sağlayıcısı (SP), bağlayıcı nesnesi ve ifade değerlendiricisi (EE) arasında karmaşık bir etkileşimdir. Bu dört bileşen, bir bileşen tarafından uygulanan ve başka bir bileşen tarafından tüketilen arabirimler tarafından bağlanır.
 
- EE ifade bir dize biçiminde DE tamamlanması ayrıştırır veya onu değerlendirir. EE DE tarafından kullanılan aşağıdaki arabirimlerinden çalıştırır:
+ EE bir dize şeklinde DE bir ifade alır ve parses veya değerlendirir. EE, DE tarafından tüketilen aşağıdaki arabirimleri çalıştırmaktadır:
 
 - [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)
 
 - [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)
 
-  Simgeler ve nesneler değerini almak için DE tarafından sağlanan bağlayıcı nesnesi, EE çağırır. EE DE tarafından uygulanan arabirimler kullanır:
+  EE, sembollerin ve nesnelerin değerini almak için DE tarafından sağlanan bağlayıcı nesnesini çağırır. EE, DE tarafından uygulanan aşağıdaki arabirimleri tüketir:
 
 - [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)
 
@@ -46,9 +46,9 @@ ms.locfileid: "66326208"
 
 - [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)
 
-  EE çalıştıran [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md). `IDebugProperty2` yerel bir değişken, basit bir tür ya da sonra ilgili bilgileri görüntüler. Visual Studio, bir nesne gibi bir ifade değerlendirme sonucu tanımlamak için bir mekanizma sağlar **Yereller**, **izleyin** , veya **hemen** penceresi.
+  EE [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)çalışır. `IDebugProperty2`yerel bir değişken, ilkel veya Visual Studio'ya bir nesne gibi bir ifade değerlendirmesinin sonucunu açıklayan mekanizmayı sağlar ve bu da yerel olarak uygun bilgileri **Yerel Olarak**, **İzle veya** **Hemen** penceresinde görüntüler.
 
-  Bilgi için sorduğunda SP EE için DE tarafından verilir. SP adresleri ve aşağıdaki arabirimlerinden ve bunların türevleri gibi alanlar açıklayan arabirimleri çalıştırır:
+  SP, bilgi istediğinde DE tarafından EE'ye verilir. SP, adresleri ve alanları açıklayan aşağıdaki arabirimler ve türevleri gibi arabirimler çalıştırMaktadır:
 
 - [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)
 
@@ -56,10 +56,10 @@ ms.locfileid: "66326208"
 
 - [IDebugField](../../extensibility/debugger/reference/idebugfield.md)
 
-  EE tüm bu arabirimleri kullanır.
+  EE tüm bu arabirimleri tüketir.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [İfade değerlendiricisi uygulama stratejisi](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) tanımlayan ifade değerlendiricisi (EE) uygulama stratejisi için üç adımlık bir işlemdir.
+ [İfade değerlendirici uygulama stratejisi](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) İfade değerlendiricisi (EE) uygulama stratejisi için üç aşamalı bir işlem tanımlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+- [CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

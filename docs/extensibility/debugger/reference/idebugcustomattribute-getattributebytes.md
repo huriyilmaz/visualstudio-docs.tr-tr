@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs
+title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute::GetAttributeBytes
 ms.assetid: cf34583b-6530-4dcc-89f8-eb27e4e8d594
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 551261414db9fab97f3e8c2a8fdbe518143d79c5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 621ebf3949a273e06053ced67209aa052c25bce0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315190"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732800"
 ---
 # <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
-Bir blobu bayt olarak öznitelik bilgileri alır.
+Öznitelik bilgilerini bayt damlası olarak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,18 +43,18 @@ int GetAttributeBytes(
 
 ## <a name="parameters"></a>Parametreler
 `ppBlob`\
-[out içinde] Öznitelik bayt ile doldurulmuş bir dizi.
+[içinde, dışarı] Öznitelik baytlarıyla doldurulmuş bir dizi.
 
 `pdwLen`\
-[out içinde] Bayt olarak döndürülecek en fazla sayısını belirtir `ppBlob` dizisi ve diziye gerçekte yazılan bayt sayısını döndürür.
+[içinde, dışarı] `ppBlob` Dizide döndürülecek maksimum bayt sayısını belirtir ve diziye gerçekten yazılmış bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Ayarlama `ppBlob` kullanılabilir bayt sayısını döndürmek için bir null değer parametresi öznitelikleri. Ardından bir dizi ayırmak ve geçirmek için bu dizide `ppBlob` parametresi.
+ Kullanılabilir `ppBlob` öznitelik bayt sayısını döndürmek için parametreyi null değerine ayarlayın. Ardından bir dizi ayırın ve bu `ppBlob` diziyi parametre için geçirin.
 
- Öznitelik bayt özel özniteliğinin ham verileri temsil eder.
+ Öznitelik baytlar, özel özniteliğin ham verilerini temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

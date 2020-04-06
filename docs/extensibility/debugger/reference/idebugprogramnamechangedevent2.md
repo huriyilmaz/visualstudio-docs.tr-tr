@@ -1,24 +1,24 @@
 ---
-title: IDebugProgramNameChangedEvent2 | Microsoft Docs
+title: IDebugProgramNameChangedEvent2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProgramNameChangedEvent2 interface
 ms.assetid: be1f1cd5-0b2f-435c-a052-dca28a7c978d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b0b1ff52523a91bfa15192de56dfdc6f0f58354
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ae58728601c3adbe6e37a00fd0694a5d71eef0b5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351195"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722155"
 ---
 # <a name="idebugprogramnamechangedevent2"></a>IDebugProgramNameChangedEvent2
-Hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) gönderilen bir programın adını değiştirir.
+Bir programın adı değiştiğinde hata ayıklama altyapısından (DE) oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,15 +26,15 @@ Hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) gönderi
 IDebugProgramNameChangedEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- DE, programın adı değişmişse rapor için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde. SDM kullanan [QueryInterface](/cpp/atl/queryinterface) erişimi **IDebugEvent2** arabirimi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, programın adının değiştiğini bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır. SDM, **IDebugEvent2** arabirimine erişmek için [QueryInterface'i](/cpp/atl/queryinterface) kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE oluşturur ve bu olay bir program adı değişikliği rapor nesnesine gönderir. Kullanarak DE bu olay gönderen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi. Özel bağlantı noktası sağlayıcısı t arabirimini kullanarak bu olay gönderir.
+ DE, program adı değişikliğini bildirmek için bu olay nesnesini oluşturur ve gönderir. DE bu olayı, sdm tarafından verilen [iDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevini kullanarak gönderir. Özel bağlantı noktası tedarikçisi bu olayı I arabirimini kullanarak gönderir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Msdbg.h
+ Üstbilgi: Msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll

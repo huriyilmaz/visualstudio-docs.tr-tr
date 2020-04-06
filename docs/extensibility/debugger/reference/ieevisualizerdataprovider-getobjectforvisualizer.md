@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::GetObjectForVisualizer | Microsoft Docs
+title: IEEVisualizerDataProvider::GetObjectForVisualizer | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerDataProvider::GetObjectForVisualizer method
 ms.assetid: bd5376fc-13b4-40b7-9a5d-7ba8289f1b24
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a10630ee8c74af333958e7115c660872ac26f78f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c2aa1e20dd8639ce089ebe851116a15bf61e35ce
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350216"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718123"
 ---
 # <a name="ieevisualizerdataprovidergetobjectforvisualizer"></a>IEEVisualizerDataProvider::GetObjectForVisualizer
-Bu yöntem, bu Görselleştirici temsil eden nesneyi alır.
+Bu yöntem, bu görselleştiricinin temsil ettiği nesneyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetObjectForVisualizer(
 
 ## <a name="parameters"></a>Parametreler
 `ppObject`\
-[out] Bu Görselleştirici tarafından temsil edilen nesne
+[çıkış] Bu görselleştirici tarafından temsil edilen nesne
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `GetObjectForVisualizer` Nesne önbelleğe alınmış bir sürümü iade etmesine izin verilir. Çağıranın güncel bir nesnedir ve ardından bunu çağıracak emin olmak istiyorsa [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md).
+ `GetObjectForVisualizer`nesnenin önbelleğe alınmış bir sürümünü döndürmesine izin verilir. Arayan nesnenin güncel olduğundan emin olmak istiyorsa, [getNewObjectForVisualizer'ı](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)arayacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

@@ -1,27 +1,27 @@
 ---
-title: IDebugFunctionObject2::Evaluate | Microsoft Docs
+title: IDebugFunctionObject2::Değerlendirme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugFunctionObject2::Evaluate
 ms.assetid: bc54c652-904b-4297-a6db-faa329684881
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a830dadd9d24f5ecb815db5a89342c5acd281a9c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d87d7d3531d198a1478b4aaa55b354c3ac101302
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313401"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728440"
 ---
 # <a name="idebugfunctionobject2evaluate"></a>IDebugFunctionObject2::Evaluate
-İşlevini çağırır ve bir nesne olarak elde edilen değeri döndürür.
+İşlevi çağırır ve ortaya çıkan değeri nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +47,22 @@ int Evaluate (
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-[in] Bir dizi [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) giriş parametrelerini temsil eden nesneleri. Bu parametrelerin her biri, bu arabirimde Oluştur yöntemlerden birini kullanarak oluşturuldu.
+[içinde] Giriş parametrelerini temsil eden [Bir IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne dizisi. Bu parametrelerin her biri, bu arabirimdeki Oluşturma yöntemlerinden biri kullanılarak oluşturulmuştur.
 
 `dwParams`\
-[in] Parametre sayısı `ppParams` dizisi.
+[içinde] Dizideki `ppParams` parametrelerin sayısı.
 
 `dwEvalFlags`\
-[in] Bayraklarının bir birleşimi [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) nasıl gerçekleştirilecek bir değerlendirme olduğunu belirten sabit listesi.
+[içinde] [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından değerlendirmenin nasıl yapılacağını belirten bayrakların birleşimi.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süreyi belirtir. Kullanım **SONSUZ** süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden en büyük süreyi belirtir. Sonsuza kadar beklemek için **SONSUZ** kullanın.
 
 `ppResult`\
-[out] Döndürür bir **IDebugObject** temsil eden bir nesne olarak işlevin değeri.
+[çıkış] İşlevin nesne olarak değerini temsil eden bir **IDebugObject** döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)
