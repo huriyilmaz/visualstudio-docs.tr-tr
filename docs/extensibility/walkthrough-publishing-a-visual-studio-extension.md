@@ -1,161 +1,161 @@
 ---
-title: 'İzlenecek yol: Visual Studio uzantısı yayımlama | Microsoft Docs'
+title: 'Walkthrough: Görsel Stüdyo Uzantısı Yayınlama | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing web controls
 - web controls, publishing
 ms.assetid: a7816161-0490-4043-86f5-0f7331ed83b3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86ed2455b19a3f7e56c92a37a9402b7d65bf70a3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a34260124baedeba297dbd64e8a2c1856b55ec5a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337917"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697137"
 ---
-# <a name="walkthrough-publish-a-visual-studio-extension"></a>İzlenecek yol: Visual Studio uzantısı yayımlama
+# <a name="walkthrough-publish-a-visual-studio-extension"></a>Walkthrough: Visual Studio uzantısı yayımlama
 
-Bu izlenecek yol, Visual Studio Market'te Visual Studio uzantısı yayımlama gösterilmektedir. Market'te uzantınızı eklediğinizde, geliştiriciler kullanabilir **Uzantılar ve güncelleştirmeler** için yeni ve güncelleştirilmiş uzantıları gidin.
+Bu izlik, Visual Studio Marketplace'te Visual Studio uzantısını nasıl yayınlayacağınızı gösterir. Uzantınızı Market'e eklediğinizde, geliştiriciler yeni ve güncelleştirilmiş uzantılara göz atmak için **Uzantıları ve Güncelleştirmeleri** kullanabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+ Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="create-a-visual-studio-extension"></a>Visual Studio uzantısı oluşturun
+## <a name="create-a-visual-studio-extension"></a>Visual Studio uzantısı oluşturma
 
-Bu makalede bir varsayılan VSPackage uzantısı kullanır, ancak adımları her uzantı türü için geçerlidir.
+Bu makalede varsayılan VSPackage uzantısı kullanır, ancak adımlar her tür uzantı için geçerlidir.
 
-1. C# ' adlı bir VSPackage'ı oluşturma `TestPublish` olan bir menü komutu. Daha fazla bilgi için [ilk uzantınızı oluşturun: Merhaba Dünya](../extensibility/extensibility-hello-world.md).
+1. C# adlı `TestPublish` bir VSPackage oluşturarak menü komutu oluşturun. Daha fazla bilgi için ilk [uzantınızı oluşturun: Hello World](../extensibility/extensibility-hello-world.md)' e bakın.
 
-## <a name="package-your-extension"></a>Uzantınızı paketi
+## <a name="package-your-extension"></a>Uzantınızı paketle
 
-1. Uzantıyı Güncelleştir *.vsixmanifest* ürün adı, yazar ve sürüm hakkında doğru bilgileri.
+1. Ürün adı, yazar ve sürüm hakkında doğru bilgilerle *.vsixmanifest* uzantısını güncelleştirin.
 
-   ![Uzantı vsixmanifest güncelleştir](media/update-extension-vsixmanifest.png)
+   ![uzantısı vsixmanifest güncelleme](media/update-extension-vsixmanifest.png)
 
-2. Uzantınızı yapı içinde **yayın** modu. Artık uzantınızı bir VSIX \bin\Release klasör olarak paketlenir.
+2. Uzantınızı **Sürüm** modunda oluşturun. Şimdi uzantınız \bin\Release klasöründe VSIX olarak paketlenir.
 
-3. Yüklemeyi doğrulamak için VSIX dosyasına çift tıklayabilirsiniz.
+3. Yüklemeyi doğrulamak için VSIX'yi çift tıklatabilirsiniz.
 
-## <a name="test-the-extension"></a>Uzantıyı test etmek
+## <a name="test-the-extension"></a>Uzantıyı test edin
 
- Uzantı dağıtmadan önce yapı ve Visual Studio'nun deneysel örneğinde doğru şekilde yüklendiğinden emin olmak için test edin.
+ Uzantıyı dağıtmadan önce, Visual Studio'nun deneysel örneğine doğru şekilde yüklendiğinden emin olmak için uzantını oluşturun ve test edin.
 
-1. Visual Studio'da açın, Visual Studio'nun deneysel örneği için hata ayıklamayı başlatın.
+1. Visual Studio'da, Visual Studio'nun deneysel bir örneğini açmak için hata ayıklamaya başlayın.
 
-2. Deneysel örneğinde Git **Araçları** menüsüne ve ardından **Uzantılar ve güncelleştirmeler**. TestPublish uzantısı, Orta bölmede görünür olmalıdır ve etkinleştirilmesi.
+2. Deneysel durumda, **Araçlar** menüsüne gidin ve **Uzantılar ve Güncelleştirmeler'i**tıklatın. TestPublish uzantısı orta bölmede görünmeli ve etkinleştirilmelidir.
 
-3. Üzerinde **Araçları** menüsünde, test komut gördüğünüzden emin olun.
+3. **Araçlar** menüsünde test komutunu gördüğünüzden emin olun.
 
-## <a name="publish-the-extension-to-the-visual-studio-marketplace"></a>Uzantı Visual Studio Market'te yayımlama
+## <a name="publish-the-extension-to-the-visual-studio-marketplace"></a>Visual Studio Marketplace uzantısı nı yayınlayın
 
-1. Uzantınızı sürümü oluşturulan ve güncel olduğundan emin olun.
+1. Uzantınızın Sürüm sürümünü oluşturduğundan ve güncel olduğundan emin olun.
 
-2. Bir web tarayıcısında açın [Visual Studio Market](https://marketplace.visualstudio.com/vs) Web sitesi.
+2. Bir web tarayıcısında [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) web sitesini açın.
 
-3. Sağ üst köşede **oturum**.
+3. Sağ üst köşede Oturum **Aç'ı**tıklatın.
 
-4. Oturum açmak için Microsoft hesabınızı kullanın. Bir Microsoft hesabınız yoksa bir bu noktada oluşturabilirsiniz.
+4. Oturum açabilmek için Microsoft hesabınızı kullanın. Microsoft hesabınız yoksa, bu noktada bir hesap oluşturabilirsiniz.
 
-5. Tıklayın **uzantıları Yayımla**.  Bu seçenek, tüm uzantıları Yönet sayfasına götürür. Bir yayımcı hesabı yoksa, şu anda oluşturmanız istenir.
+5. **Uzantıları Yayımla'yı**tıklatın.  Bu seçenek, tüm uzantılarınız için sizi yönet sayfasına yönlendirer. Yayımcı hesabınız yoksa, şu anda bir yayımcı hesabınız olması istenir.
 
-   ![Market'te karşıya yükleme](media/upload-to-marketplace.png)
+   ![PazarA Yükle](media/upload-to-marketplace.png)
 
-6. Uzantınızı karşıya yüklemek için kullanmak istediğiniz publisher'ı seçin. Yayımcılar, sol tarafta listelenen yayımcı adlarını tıklatarak değiştirebilirsiniz. Tıklayarak **yeni uzantı** seçip **Visual Studio**.
+6. Uzantınızı yüklemek için kullanmak istediğiniz yayımcıyı seçin. Solda listelenen yayımcı adlarını tıklatarak yayımcıdeğiştirebilirsiniz. Yeni **uzantısı** tıklayın ve **Visual Studio**seçin.
 
-7. İçinde **1: Karşıya uzantı Yükle**, doğrudan Visual Studio Market VSIX dosyasını karşıya yükleyin veya sadece kendi Web sitesine bir bağlantı eklemek seçebilirsiniz. Bu örnekte, uzantı *TestPublish.vsix* yüklenir. Sürükleyip bırakın uzantınızı veya kullanın **tıklayın** dosyasına gözatmak için bağlantı. Uzantınızı projenin \bin\Release klasöründe bulun.  **Devam**'a tıklayın.
+7. 1: **Yükleme uzantısı**, Visual Studio Marketplace doğrudan bir VSIX dosyası yüklemek veya sadece kendi web sitesine bir bağlantı eklemek seçebilirsiniz. Bu örnekte, uzantısı, *TestPublish.vsix* yüklenir. Uzantınızı sürükleyip bırakın veya dosyaya göz atmak için **tıklama** bağlantısını kullanın. Uzantınızı projenin \bin\Release klasöründe bulun.  **Devam**’a tıklayın.
 
-8. İçinde **2: Uzantı ayrıntılarını sağlayın**, otomatik olarak doldurulan gelen bazı alanlar *source.extension.vsixmanifest* uzantınızı dosyasından. Her hakkında daha fazla ayrıntı bulabilirsiniz:
+8. **2: Uzantı ayrıntıları sağlayın,** bazı alanlar uzantınızdan *source.extension.vsixmanifest* dosyasından otomatik olarak doldurulur. Her biri hakkında daha fazla ayrıntıyı aşağıda bulabilirsiniz:
 
-    * **İç ad** uzantı ayrıntı sayfasında URL'de kullanılır. Örneğin, "myname" Yayımcı adı altında bir uzantısı yayımlama ve iç adı "uzantım" olacak şekilde belirterek bir URL'de sonuçları "marketplace.visualstudio\.com/items?itemName=myname.myextension", uzantının ayrıntılı bilgi için Sayfa.
+    * **İç Ad,** uzantının ayrıntı sayfasının URL'sinde kullanılır. Örneğin, yayımcı adı "myname" altında bir uzantı yayımlamak ve dahili adı "uzanım" olarak\.belirtmek, uzantınızın ayrıntı sayfası için "marketplace.visualstudio com/items?itemName=myname.myextension" URL'si ile sonuçlanır.
 
-    * **Görünen ad** uzantınızın. Bu ad alanından otomatik olarak doldurulmuş *source.extension.vsixmanifest* dosya.
+    * Uzantınızın **Adını görüntüleyin.** Bu ad *source.extension.vsixmanifest* dosyasından otomatik olarak doldurulur.
 
-    * **Sürüm** karşıya yüklediğiniz uzantı sayısı. Bu sürümü otomatik olarak doldurulan gelen *source.extension.vsixmanifest* dosya.
+    * Yüklediğiniz uzantının **sürüm** numarası. Bu sürüm *source.extension.vsixmanifest* dosyasından otomatik olarak doldurulur.
 
-    * **VSIX kimliği** Uzantınız için Visual Studio kullanan benzersiz tanımlayıcı. Bu tanımlayıcı, otomatik olarak yükseltilerek uzantınızı olmasını istiyorsanız gereklidir. Bu tanımlayıcı gelen otomatik olarak doldurulmuş *source.extension.vsixmanifest* dosya.
+    * **VSIX ID,** Visual Studio'nun uzantınız için kullandığı benzersiz tanımlayıcıdır. Uzantınızın otomatik olarak güncelleştirilmiş olmasını istiyorsanız, bu tanımlayıcı gereklidir. Bu tanımlayıcı *source.extension.vsixmanifest* dosyasından otomatik olarak doldurulur.
 
-    * **Logo** Uzantınız için kullanılır. Bu logo gelen otomatik olarak doldurulmuş *source.extension.vsixmanifest* sağlanırsa, dosya.
+    * Uzantınız için kullanılan **logo.** Bu logo, sağlanırsa *source.extension.vsixmanifest* dosyasından otomatik olarak doldurulur.
 
-    * **Kısa açıklama** uzantınızın ne yaptığını. Bu açıklama, gelen otomatik olarak doldurulmuş *source.extension.vsixmanifest* dosya.
+    * Uzantınızın ne işe yaradığı hakkında **kısa bir açıklama.** Bu açıklama *source.extension.vsixmanifest* dosyasından otomatik olarak doldurulur.
 
-    * **Genel Bakış** ekran görüntüleri ve uzantınızın ne yaptığını hakkında ayrıntılı bilgi dahil etmek için iyi bir yerdir.
+    * **Genel bakış,** uzantınızın ne yaptığı hakkında ekran görüntüleri ve ayrıntılı bilgiler eklemek için iyi bir yerdir.
 
-    * **Desteklenen Visual Studio sürümleri** seçtiğiniz uzantınızı çalışır, Visual Studio'nun hangi sürümlerinin sağlar. Uzantınızı yalnızca sürümler yüklenir.
+    * **Desteklenen Visual Studio sürümleri,** uzantınızın Visual Studio'nun hangi sürümlerinde çalışacağını seçmenize olanak tanır. Uzantınız yalnızca bu sürümlere yüklenir.
 
-    * ** Desteklenen Visual Studio sürümü uzantınızı üzerinde çalışacağı Visual Studio'nun hangi sürümlerinin seçmenize olanak sağlar. Uzantınızı yalnızca bu sürümü için yüklenir.
+    * **Desteklenen Visual Studio sürümü, uzantınızın hangi sürümlerinde çalışacağını seçmenizi sağlar. Uzantınız yalnızca bu sürümlere yüklenir.
 
-    * **Tür**. En yaygın türü uzantıları **Araçları**.
+    * **Yazın.** Uzantıların en yaygın türü **Araçlardır.**
 
-    * **Kategorileri**. En çok üç Uzantınız için bir en uygun olan seçin.
+    * **Kategoriler**. Uzatmanız için en uygun olan üç e kadar topayın.
 
-    * **Etiketleri** uzantınızı olduğunu kullanıcıları Yardım anahtar sözcükleri. Etiketler, uzantılarınızı Market'te, aramanın ilgi düzeyini artırmaya yardımcı olabilir.
+    * **Etiketler,** kullanıcıların uzantınızı bulmasına yardımcı olan anahtar kelimelerdir. Etiketler, Market'teki uzantılarınızın arama alaka düzeyini artırmaya yardımcı olabilir.
 
-    * **Fiyatlandırma kategorisi** uzantınızı maliyetidir.
+    * **Fiyatlandırma Kategorisi,** uzantınızın maliyetidir.
 
-    * **Kaynak kodu deposu** toplulukla bağlantı kaynak kodunuzu paylaşmanıza olanak tanır.
+    * **Kaynak kodu deposu,** kaynak kodunuzdaki bağlantıyı toplulukla paylaşmanıza olanak tanır.
 
-    * **Uzantınız için soru- cevap izin** uzantısı giriş sayfanızda sorular bırakın olanak sağlar.
+    * **Uzantınız için Q&A'ya izin verin,** kullanıcıların uzantı giriş sayfanızda soru bırakmasına izin verin.
 
-9. Tıklayın **Kaydet ve karşıya yükle**. Sayfa yayımcınıza için yedekleme bu seçeneği alır yönetin. Uzantınızı henüz yayımlanmamış. Uzantınızı yayımlamak için uzantı sağ tıklatın ve **genel yap**. Nasıl uzantınızı Market'te seçerek görüneceğini görüntüleyebileceğiniz **uzantıyı görüntüle**. Alım sayıları için tıklayarak **raporları**. Uzantınız için değişiklik yapmak için tıklatın **Düzenle**.
+9. **Yükle& Kaydet'i**tıklatın. Bu seçenek sizi yayıncı yönetimi sayfanıza geri götürür. Uzantınız henüz yayınlanmadı. Uzantınızı yayımlamak için uzantınızın üzerine sağ tıklayın ve **Herkese Açık Ol'u**seçin. **Genişletmeyi**Görüntüle'yi seçerek uzantınızın Marketplace'te nasıl görüneceğini görüntüleyebilirsiniz. Edinme numaraları için **Raporlar'a**tıklayın. Uzantınızda değişiklik yapmak **için, Edit'e**tıklayın.
 
-   ![Uzantı girişi menüsü](media/extension-entry-menu.png)
+   ![Uzantı Giriş Menüsü](media/extension-entry-menu.png)
 
-10. ' I tıklattıktan sonra **genel yap**, uzantınızın genel sunulmuştur. Uzantınız için Visual Studio Market'te arayın.
+10. **Ortak Yap'ı**tıklattıktan sonra uzantınız artık herkese açık. Uzantınız için Visual Studio Marketplace'te arama yapın.
 
-## <a name="add-additional-users-to-manage-your-publisher-account"></a>Yayımcı hesabınızı yönetmek için ek kullanıcı ekleme
+## <a name="add-additional-users-to-manage-your-publisher-account"></a>Yayıncı hesabınızı yönetmek için ek kullanıcılar ekleyin
 
-Market erişmek ve bir yayımcı hesabı yönetmek için ek kullanıcılara izin verme destekler.
+Market, bir yayımcı hesabına erişmek ve yönetmek için ek kullanıcılara izin verilmesini destekler.
 
-1. Ek kullanıcılar için eklemek istediğiniz yayımcı hesabı gidin.
+1. Ek kullanıcılar eklemek istediğiniz yayımcı hesabına gidin.
 
-2. Seçin **üyeleri** tıklayın **Ekle**.
+2. **Üyeler'i** seçin ve **Ekle'ye**tıklayın.
 
-   ![Ek kullanıcı ekleme](media/add-users.png)
+   ![Ek Kullanıcı Ekle](media/add-users.png)
 
-3. Ardından, eklemek ve doğru altında erişim düzeyini vermek istediğiniz kullanıcının e-posta adresi belirtebilirsiniz **bir rol seçin**.  Aşağıdaki seçeneklerden birini seçebilirsiniz:
+3. Daha sonra eklemek istediğiniz kullanıcının e-posta adresini belirtebilir ve **bir rolü seç**altında doğru erişim düzeyini verebilirsiniz.  Aşağıdaki seçeneklerden birini belirtebilirsiniz:
 
-   * **Oluşturucu**: Kullanıcı Uzantıları yayımlayabilir ancak olamaz görüntüleyebilir veya diğer kullanıcıların yayımladığı uzantıları yönetebilirsiniz.
+   * **Oluşturan**: Kullanıcı uzantıları yayımlayabilir, ancak diğer kullanıcılar tarafından yayınlanan uzantıları görüntüleyemez veya yönetemez.
 
-   * **Okuyucu**: Kullanıcı Uzantıları görüntüleyebilir ancak olamaz yayımlama veya uzantıları yönetin.
+   * **Okuyucu**: Kullanıcı uzantıları görüntüleyebilir, ancak uzantıları yayımlayamaz veya yönetemez.
 
-   * **Katkıda bulunan**: Kullanıcı yayımlama ve uzantıları yönetebilen, ancak Yayımcı ayarlarını düzenleyebilir veya erişimi yönetin.
+   * **Katkıda Bulunan**: Kullanıcı uzantıları yayımlayabilir ve yönetebilir, ancak yayımcı ayarlarını ayarlayamaz veya erişimi yönetemez.
 
-   * **Sahibi**: Kullanıcı yayımlama ve uzantıları yönetin, yayımcı ayarlarını düzenleyebilir ve erişimi yönetin.
+   * **Sahibi**: Kullanıcı uzantıları yayımlayabilir ve yönetebilir, yayımcı ayarlarını dedebilir ve erişimi yönetebilir.
 
-## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Market'ten uzantı yükleme
+## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace'ten uzantıyı yükleyin
 
-Uzantı yayımlandıktan sonra Visual Studio'da yükleyin ve test etmek.
+Şimdi uzantısı yayımlanır, Visual Studio yükleyin ve orada test edin.
 
-1. Visual Studio'da üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+1. Visual Studio'da, **Araçlar** menüsünde **Uzantılar ve Güncellemeler'i**tıklatın.
 
-2. Tıklayın **çevrimiçi** bulun **TestPublish**.
+2. **Online'ı** tıklatın ve ardından **TestPublish'i**arayın.
 
-3. **İndir**'e tıklayın. Uzantıyı daha sonra yüklenmek üzere zamanlandı.
+3. **İndir'i**tıklatın. Uzantı daha sonra yüklemek için zamanlanır.
 
 4. Yüklemeyi tamamlamak için Visual Studio'nun tüm örneklerini kapatın.
 
-## <a name="remove-the-extension"></a>Uzantıyı kaldırın
+## <a name="remove-the-extension"></a>Uzantıyı kaldırma
 
-Uzantı, Visual Studio Market'ten ve bilgisayarınızdan kaldırabilirsiniz.
+Uzantıyı Visual Studio Marketplace'ten ve bilgisayarınızdan kaldırabilirsiniz.
 
-### <a name="to-remove-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Market'ten uzantıyı kaldırmak için
+### <a name="to-remove-the-extension-from-the-visual-studio-marketplace"></a>Uzantıyı Visual Studio Marketplace'ten kaldırmak için
 
-1. Açık [Visual Studio Market](https://marketplace.visualstudio.com/vs) Web sitesi.
+1. Visual [Studio Marketplace](https://marketplace.visualstudio.com/vs) web sitesini açın.
 
-2. Sağ üst köşede tıklayın **Yayımla** uzantıları. Yayımlamak için kullanılan yayımcı çekme **TestPublish**. Listesi **TestPublish** görünür.
+2. Sağ üst köşede, uzantıları **yayımla'yı** tıklatın. **TestPublish'i**yayımlamak için kullandığınız yayımcıyı seçin. **TestPublish** listesi görüntülenir.
 
-3. Uzantı girdiye sağ tıklatıp **Kaldır**. Uzantıyı kaldırmak isteyip istemediğinizi onaylamanız istenir. **Tamam**'ı tıklatın.
+3. Uzantı girişine sağ tıklayın ve **Kaldır'ı**tıklatın. Uzantıyı kaldırmak isteyip istemediğiniz istenir. **Tamam**'a tıklayın.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Uzantıyı bilgisayarınızdan kaldırmak için
 
-1. Visual Studio'da üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+1. Visual Studio'da, **Araçlar** menüsünde **Uzantılar ve Güncellemeler'i**tıklatın.
 
-2. Seçin **TestPublish** ve ardından **kaldırma**. Uzantı ardından kaldırılmak üzere zamanlandı.
+2. **TestYayım'ı** seçin ve ardından **Kaldır'ı**tıklatın. Uzantı daha sonra kaldırmak için zamanlanır.
 
-3. Kaldırma işlemini tamamlamak için Visual Studio'nun tüm örneklerini kapatın.
+3. Yüklemeyi tamamlamak için Visual Studio'nun tüm örneklerini kapatın.

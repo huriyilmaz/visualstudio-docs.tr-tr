@@ -1,5 +1,5 @@
 ---
-title: RequiredFrameworkVersion öğesi (Visual Studio şablonları) | Microsoft Docs
+title: GerekliFrameworkVersion Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - <RequiredFrameworkVersion> (Visual Studio Templates)
 - RequiredFrameworkVersion (Visual Studio Templates)
 ms.assetid: 08a4f609-51a5-4723-b89f-99277fb18871
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0550fc1d286c04c61a1c0b2503326a002fde729e
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 060ebc0633de67d93257e24c2dff24d2aa0970da
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744752"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701508"
 ---
-# <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion öğesi (Visual Studio şablonları)
+# <a name="requiredframeworkversion-element-visual-studio-templates"></a>GerekliFrameworkVersion öğesi (Visual Studio şablonları)
 
-Şablon tarafından gerekli .NET Framework'ün en düşük sürümünü belirtir. Neden **hedef Framework sürümü** görüntülenecek açılan **yeni proje** iletişim. `RequiredFrameworkVersion` Öğesi, açılan listede kullanılabilir olan en düşük değer de belirler.
+Şablon tarafından gerekli olan .NET Framework'ün minimum sürümünü belirtir. **Hedef Çerçeve Sürümü** açılır listesinin Yeni **Proje** iletişim kutusunda görüntülenmesine neden olur. Öğe, `RequiredFrameworkVersion` açılır bırakmada bulunan en düşük değeri de belirler.
 
 > [!IMPORTANT]
-> Visual Studio 2017 sürüm 15.6, başlangıç **hedef Framework sürümü** açılan bir filtre görüntülenen şablonları için artık değil **şablonları** bölümünü **YeniProje** iletişim. Bunun yerine, seçilen şablonu için bir çerçeve Seçici açılan görür.
+> Visual Studio 2017 sürüm 15.6'dan başlayarak, **Hedef Çerçeve Sürümü** açılır listesi artık Yeni **Proje** iletişim kutusunun **Şablonlar** bölümünde görüntülenen şablonlar için bir filtre değildir. Bunun yerine, açılır bırakma, seçili şablon için bir çerçeve seçici olarak işlev görür.
 
- \<VSTemplate > \<TemplateData > \<RequiredFrameworkVersion >
+ \<VSTemplate \<> ŞablonVeri> \<GerekliFrameworkVersion>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,20 +47,20 @@ ms.locfileid: "66744752"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve ya da nasıl görüntüleneceğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin şablon için gerekli olan .NET Framework'ün en düşük sürüm numarası olmalıdır.
+ Metin, şablon için gerekli olan .NET Framework'ün minimum sürüm numarası olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`RequiredFrameworkVersion` İsteğe bağlı bir öğedir. Şablonu yalnızca belirli bir en düşük sürümü (ve sonraki sürümleri varsa) destekliyorsa, bu öğeyi kullanın .NET Framework'ün. Belirtirseniz `RequiredFrameworkVersion` öğesi ve şablonunuzun belirli bir en düşük sürümü .NET Framework'ün desteklemiyor **hedef Framework sürümü** açılan uygun olmadığı durumlarda görüntülenir.
+`RequiredFrameworkVersion`isteğe bağlı bir unsurdur. Bu öğeyi yalnızca şablon .NET Framework'ün belirli bir minimum sürümünü (ve varsa sonraki sürümleri) destekliyorsa kullanın. Öğeyi `RequiredFrameworkVersion` belirtirseniz ve şablonunuzun .NET Framework'ün belirli bir minimum sürümünü desteklemezseniz, **hedef Çerçeve Sürümü** açılır açılır resmi geçerli olmadığında görüntülenir.
 
 ## <a name="example"></a>Örnek
 
-Standart için meta veriler aşağıdaki örnekte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıf şablonu.
+Aşağıdaki örnekte, standart [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıf şablonu için meta veriler gösterilmektedir.
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -80,10 +80,10 @@ Standart için meta veriler aşağıdaki örnekte [!INCLUDE[csprcs](../data-tool
 </VSTemplate>
 ```
 
-Bu örnekte, şablon tarafından gerekli .NET Framework'ün en düşük sürüm temsil ettiği `RequiredFrameworkVersion`, 3. 0. Bu şablon kullanılarak oluşturulan bir proje .NET Framework sürüm 3.0 başlayarak hedefleyebilirsiniz.
+Bu örnekte, .NET Framework'ün şablon tarafından gerekli olan ve `RequiredFrameworkVersion`temsil ettiği minimum sürümü 3.0'dır. Bu şablonla oluşturulan bir proje 3.0'dan itibaren .NET Framework sürümlerini hedefleyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Framework hedefleme genel bakış](../ide/visual-studio-multi-targeting-overview.md)
+- [Çerçeve hedeflemegenel bakış](../ide/visual-studio-multi-targeting-overview.md)

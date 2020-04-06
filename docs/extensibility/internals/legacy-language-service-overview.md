@@ -1,33 +1,33 @@
 ---
-title: Eski dil hizmetine genel bakış | Microsoft Docs
+title: Eski Dil Hizmetine Genel Bakış | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dfec9cc8b57dfb12b3977cc04e2e62ecc0dea96
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aed653ec200063e72434fc758c7920e6caabafe1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72726858"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707355"
 ---
 # <a name="legacy-language-service-overview"></a>Eski Dil Hizmetine Genel Bakış
-Dil hizmeti, bazı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özellikleri uygulamanıza olanak sağlayan düzenleyici desteği sağlar. Yönetilen paket çerçevesi (MPF) dil hizmeti sınıfları, sık kullanılan özellikler ve diğer özellikler için kısmi destek için tam destek sağlar.
+Dil hizmeti, belirli [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özellikleri uygulamanıza olanak tanıyan düzenleyici desteği sağlar. Yönetilen Paket Çerçevesi (MPF) dil hizmeti sınıfları, sık kullanılan özellikler için tam destek ve diğer özellikler için kısmi destek sağlar.
 
-## <a name="fully-supported-features-in-the-mpf"></a>MPF 'de tam olarak desteklenen özellikler
+## <a name="fully-supported-features-in-the-mpf"></a>MPF'de Tam Desteklenen Özellikler
  MPF dil hizmeti sınıfları aşağıdaki özellikleri destekler:
 
-- söz dizimi vurgulama
+- Sözdizimi vurgulama
 
 - Anahat Oluşturma
 
-- Kod blokları açıklama oluşturma
+- Açıklama kod blokları
 
 - Ayraç eşleştirme
 
@@ -37,25 +37,25 @@ Dil hizmeti, bazı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 
 
 - IntelliSense parametre bilgileri
 
-- IntelliSense hızlı bilgi
+- IntelliSense Hızlı Bilgi
 
-- IntelliSense üye Tamamlama
+- IntelliSense üye tamamlama
 
-- IntelliSense sözcük tamamlama
+- IntelliSense kelime tamamlama
 
-## <a name="partially-supported-features-in-the-mpf"></a>MPF 'de kısmen desteklenen özellikler
- MPF aşağıdaki özellikler için yalnızca kısmi destek sağlar. Bu, MPF tarafından çağrılan yöntemleri uygulamanız gerektiği anlamına gelir.
+## <a name="partially-supported-features-in-the-mpf"></a>MPF'de Kısmen Desteklenen Özellikler
+ MPF, aşağıdaki özellikler için yalnızca kısmi destek sağlar. Bu, MPF tarafından çağrılan yöntemleri uygulamanız gerektiği anlamına gelir.
 
-- Kodu yeniden biçimlendirme. Yeniden biçimlendirmeyi uygulayan kodu sağlarsınız.
+- Kodu yeniden biçimlendirme. Yeniden biçimlendirmeyi uygulayan kodu siz sağlıyorsunuz.
 
-- Geçerli kod yayılmalarını tanımlayarak kesme noktaları doğrulanıyor. Kod yayılma alanlarını tanımlayan kodu sağlarsınız.
+- Geçerli kod açıklıklarını tanımlayarak kesme noktalarını doğrulayın. Kod yayılmalarını tanımlayan kodu siz sağlıyorsunuz.
 
-- Değişkenleri görüntülemek için hata ayıklayıcı **oto** penceresini destekleme. Pencerede neyin gösterileceğini belirleyen kodu sağlarsınız.
+- Değişkenleri görüntülemek için hata ayıklama **Autos** penceresini destekleme. Pencerede ne gösterilenleri belirleyen kodu siz sağlıyorsunuz.
 
-- Türler ve Üyeler arasında hızlı gezinme için **Gezinti çubuğunu** destekleme. **Gezinti çubuğu** Birleşik giriş kutularındaki listeleri dolduran bir yardımcı sınıfı uygular ve döndürür.
+- Türleri ve üyeleri arasında hızlı gezinme için **Gezinti çubuğunu** destekleme. **Gezinti çubuğu** açılan kutularındaki listeleri dolduran bir yardımcı sınıf uygular ve döndürün.
 
 ## <a name="implementation"></a>Uygulama
- Dil hizmetinin kendisini ve diliniz için desteklemek istediğiniz dil hizmeti özelliklerini uygulamak için birkaç adımı tamamlamalısınız. Bu adımlar aşağıdaki konularda ele alınmıştır:
+ Dil hizmetinin kendisini ve diliniz için desteklemek istediğiniz dil hizmeti özelliklerini uygulamak için birkaç adımı tamamlamanız gerekir. Bu adımlar aşağıdaki konularda ele alınmıştır:
 
 - [Eski Dil Hizmeti Uygulama](../../extensibility/internals/implementing-a-legacy-language-service2.md)
 

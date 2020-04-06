@@ -1,46 +1,46 @@
 ---
-title: Proje kalıcılığı | Microsoft Docs
+title: Proje Kalıcılığı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - persistence, projects
 - projects [Visual Studio SDK], persistance
 ms.assetid: 42907bcf-4e27-46bd-a8cb-01c2ccd2bde5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a95c919de9b87ed1782cbdcb029efbf191958f5a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 10a9cde91c0181fbfefbaa353c7c3702f4b36819
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72725459"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706455"
 ---
 # <a name="project-persistence"></a>Proje Kalıcılığı
-Kalıcılık, projeniz için önemli bir tasarım konusudur. Çoğu proje, dosyaları temsil eden proje öğelerini kullanır;  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], verileri dosya tabanlı olmayan projeleri de destekler. Projenin ve proje dosyasının sahip olduğu dosyaların kalıcı olması gerekir. IDE, projeye kendisini veya bir proje öğesini kaydetmesini söyler.
+Kalıcılık, projeniz için önemli bir tasarım göz önünde bulundurulması gereken önemdir. Çoğu proje, dosyaları temsil eden proje öğelerini kullanır; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] verileri dosya tabanlı olmayan projeleri de destekler. Hem projeye ait dosyalar hem de proje dosyası kalıcı olmalıdır. IDE, projeyi kendisini veya bir proje öğesini kaydetmesini bildirir.
 
- Projeler için şablonlar proje fabrikasına geçirilir. Şablonlar, belirli proje türünün gereksinimlerine göre tüm proje öğelerinin başlatılmasını desteklemelidir. Bu şablonlar daha sonra proje dosyaları olarak kaydedebilir ve çözüm aracılığıyla IDE tarafından yönetilebilir. Daha fazla bilgi için bkz. [Proje fabrikalarını ve çözümlerini kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md) . [](../../extensibility/internals/solutions-overview.md)
+ Projeler için şablonlar proje fabrikasına geçirilir. Şablonlar, belirli proje türünün gereksinimlerine göre tüm proje öğelerinin başlatılmasını desteklemelidir. Bu şablonlar daha sonra proje dosyaları olarak kaydedilebilir ve çözüm aracılığıyla IDE tarafından yönetilebilir. Daha fazla bilgi için bkz: Proje Fabrikalarını ve [Çözümlerini](../../extensibility/internals/solutions-overview.md) [Kullanarak Proje Örnekleri Oluşturma.](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
 
- Proje öğeleri dosya tabanlı veya dosya tabanlı olabilir:
+ Proje öğeleri dosya tabanlı veya dosya tabanlı olmayan olabilir:
 
-- Dosya tabanlı öğeler yerel veya uzak olabilir. İçindeki C#web projelerinde, örneğin uzak sistemdeki dosyalara bağlantılar yerel olarak kalır, ancak dosyalar uzak sistemde kalır.
+- Dosya tabanlı öğeler yerel veya uzak olabilir. Örneğin, C#'daki Web projelerinde, uzak bir sistemdeki dosyalara bağlantılar yerel olarak devam ederken, dosyaların kendisi uzak sistemde devam eder.
 
-- Dosya tabanlı olmayan öğeler, öğeleri bir veritabanına veya depoya kaydedebilir.
+- Dosya tabanlı olmayan öğeler öğeleri bir veritabanına veya depoya kaydedebilir.
 
-## <a name="commit-models"></a>Model Yürüt
- Proje öğelerinin nerede bulunduğuna karar verdikten sonra uygun tamamlama modelini seçmeniz gerekir. Örneğin, yerel dosyaları olan dosya tabanlı modelde, her proje olarak çalışabilen kaydedilebilir. Bir depo modelinde, birkaç öğeyi tek bir işlemde kaydedebilirsiniz. Daha fazla bilgi için bkz. [Proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).
+## <a name="commit-models"></a>Modelleri Commit
+ Proje öğelerinin nerede bulunduğuna karar veredikten sonra, uygun işleme modelini seçmeniz gerekir. Örneğin, yerel dosyaların bulunduğu dosya tabanlı bir modelde, her proje bağımsız olarak kaydedilebilir. Depo modelinde, tek bir işlemde birkaç öğe kaydedebilirsiniz. Daha fazla bilgi için [Proje Türü Tasarım Kararları'na](../../extensibility/internals/project-type-design-decisions.md)bakın.
 
- Dosya adı uzantılarını öğrenmek için <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> projeler, **farklı kaydet** iletişim kutusu uygulamak için bir nesnenin istemcisinin (yani **, farklı Kaydet) açılan listesini** doldurmasını sağlayan ve ilk dosya adı uzantısı.
+ Dosya adı uzantılarını belirlemek için <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> projeler, bir nesnenin istemcisinin Kaydet iletişim kutusunu(diğer bir deyişle, **Kaydet** **Türü** açılır listesini doldurun ve ilk dosya adı uzantısını yönetmek) uygulamasını sağlayan arabirimi uygular.
 
- IDE, projenin proje öğelerini uygun şekilde kalıcı hale getiremeyeceğini belirtmek için projede `IPersistFileFormat` arabirimini çağırır. Bu nedenle, nesne dosyanın ve biçiminin tüm yönlerine sahiptir. Bu, nesnenin biçiminin adını içerir.
+ IDE, projenin `IPersistFileFormat` proje öğelerini uygun şekilde devam etmesi gerektiğini belirtmek için projedeki arabirimi çağırır. Bu nedenle, nesne kendi dosya ve biçimtüm yönlerine sahip. Bu nesnenin biçiminin adını içerir.
 
- Öğelerin dosya olmadığı durumlarda `IPersistFileFormat` dosya tabanlı olmayan öğelerin kalıcı olarak nasıl devam ettiğinden. @No__t_0 projeleri için. vbp dosyaları ya da [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projelerine yönelik. vcproj dosyaları gibi proje dosyaları da kalıcı olmalıdır.
+ Öğelerin dosya olmadığı durumlarda, `IPersistFileFormat` dosya tabanlı olmayan öğelerin nasıl kalıcı olduğu hala geçerlidir. Projeler için .vbp dosyaları [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] veya projeler için [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] .vcproj dosyaları gibi proje dosyaları da kalıcı olmalıdır.
 
- Kaydet eylemleri için IDE, çalışan belge tablosunu (RDT) inceler ve hiyerarşi, komutları <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> arabirimlerine geçirir. @No__t_0 yöntemi, öğenin değiştirilip değiştirilmediğini belirlemede uygulanır. Öğe varsa, değiştirilen öğeyi kaydetmek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.SaveItem%2A> yöntemi uygulanır.
+ Eylemleri kaydetme için IDE çalışan belge tablosunu (RDT) inceler ve hiyerarşi <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> komutları <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> ve arabirimleri geçer. Yöntem, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.IsItemDirty%2A> öğenin değiştirilip değiştirilmediğini belirlemek için uygulanır. Öğe varsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.SaveItem%2A> yöntem değiştirilen öğeyi kaydetmek için uygulanır.
 
- @No__t_0 arabirimindeki Yöntemler, bir öğenin yeniden yüklenip yüklenmeyeceğini ve öğenin yeniden yüklenmesini sağlamak için kullanılır. Ayrıca, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A> yöntemi, değiştirilen öğelerin kaydedilmeden atılmasına neden olacak şekilde uygulanabilir.
+ Arabirimdeki `IVsPersistHierarchyItem2` yöntemler, bir öğenin yeniden yüklenip yeniden yüklenemeyeceğini belirlemek ve öğe nin yeniden yüklenip yüklenemeyeceğini belirlemek için kullanılır. Ayrıca, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A> yöntem, değiştirilen öğelerin kaydedilmeden atılmasına neden olmak için uygulanabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Denetim Listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)

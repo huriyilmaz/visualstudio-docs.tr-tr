@@ -1,38 +1,38 @@
 ---
-title: Birlikte çalışma bütünleştirilmiş kodları kullanarak komut durumunu belirleme | Microsoft Docs
+title: Interop Montajları Kullanarak Komut Durumunu Belirleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - interop assemblies, determining command status
 - command handling with interop assemblies, status
 ms.assetid: 2f5104d1-7b4c-4ca0-a626-50530a8f7f5c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33efc0bf393746a80b0881dacae01eaafe65bb8e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 52bea32997b083cd13349a37201411e357f94a90
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351620"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708708"
 ---
-# <a name="determine-command-status-by-using-interop-assemblies"></a>Birlikte çalışma bütünleştirilmiş kodları kullanarak komut durumunu belirleme
-VSPackage işleyebileceği komutları durumunu izlemek gerekir. Ortam içinde VSPackage işlenen komut ne zaman etkin veya devre dışı hale belirlenemiyor. Ortam komut durumları hakkında bilgilendirmek için VSPackage sorumluluğu olduğu, örneğin, genel durumu gibi komutlar **Kes**, **kopyalama**, ve **Yapıştır**.
+# <a name="determine-command-status-by-using-interop-assemblies"></a>Interop derlemelerini kullanarak komut durumunu belirleme
+BIR VSPackage işleyebilir komutların durumunu izlemek gerekir. Ortam, VSPackage'ınıziçinde işlenen bir komutun ne zaman etkinleştirilen veya devre dışı bırakıldığını belirleyemez. Örneğin, **Kesme,** **Kopyala**ve **Yapıştır**gibi genel komutların durumu gibi komut durumları hakkında ortamı bilgilendirmek VSPackage'ınızın sorumluluğundadır.
 
 ## <a name="status-notification-sources"></a>Durum bildirim kaynakları
- Ortam VSPackage komutları hakkında bilgi alır <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> VSPackage'nın uygulamanın parçası olan yöntemini, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. Ortam çağrıları <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> iki koşul altında bir VSPackage yöntemi:
+ Ortam, VSPackage'ın <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabiriminin uygulanmasının bir parçası olan VSPackage yöntemi aracılığıyla komutlar hakkında bilgi alır. Ortam, VSPackage yöntemini <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> iki koşulaltında çağırır:
 
-- Bir kullanıcı bir ana menü veya bir bağlam menüsü (sağ tıklayarak) oturum açtığında, ortam yürütür <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> tüm bunların durumunu belirlemek için menü komutlarını yöntemi.
+- Bir kullanıcı bir ana menü veya bağlam menüsü (sağ tıklatarak) <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> açtığında, ortam durumlarını belirlemek için bu menüdeki tüm komutlarda yöntemi yürütür.
 
-- VSPackage'ı ortamı geçerli kullanıcı arabirimi (UI) güncelleştirme isteğinde bulunduğunda. Bu güncelleştirme gibi kullanıcıya görünen komutlar gerçekleşir **Kes**, **kopyalama**, ve **Yapıştır** standart araç çubuğundaki gruplandırma, hale etkin ve devre dışı bağlam ve kullanıcı eylemlerini yanıt olarak.
+- VSPackage ortam geçerli kullanıcı arabirimini (UI) güncelleştirmesini istediğinde. Bu güncelleştirme, standart araç çubuğunda **Kesme,** **Kopyalama**ve **Yapıştır** gruplandırma gibi kullanıcı tarafından şu anda görülebilen komutların bağlam ve kullanıcı eylemlerine yanıt olarak etkinleştirilip devre dışı bırakıldığı şeklinde gerçekleşir.
 
-  Birden çok VSPackages Kabuk barındıran olduğundan, komut durumunu belirlemek için her VSPackage'ı yoklamak için gerekli kabuğun performansı edilemeyecek kadar düşebilir. Bunun yerine, kullanıcı arabirimini değişiklik zamanında değiştiğinde, VSPackage'ı etkin bir şekilde ortam bildirmesi gerekir. Güncelleştirme bildirimi hakkında daha fazla bilgi için bkz. [kullanıcı arabirimini güncelleştirmek](../../extensibility/updating-the-user-interface.md).
+  Kabuk birden çok VSPackages barındırdığından, komut durumunu belirlemek için her VSPackage'ı yoklaması gerekirse kabuğun performansı kabul edilemez şekilde düşer. Bunun yerine, VSPackage'ınız değişiklik sırasında UI değiştiğinde ortamı etkin bir şekilde bildirmelidir. Güncelleştirme bildirimi hakkında daha fazla bilgi için [bkz.](../../extensibility/updating-the-user-interface.md)
 
-## <a name="status-notification-failure"></a>Durum bildirim hatası
- Bir komut durum değişikliği ortamının bildirmek için VSPackage hata UI tutarsız bir durumda yerleştirebilirsiniz. Herhangi bir menü veya bağlam menü komutlarınızı bir araç çubuğu üzerinde kullanıcı tarafından yerleştirilebilir olduğunu unutmayın. Bu nedenle, yalnızca bir menü veya bağlam menüsü açıldığında Başlamayabileceğini bildirir.UI yeterli değildir.
+## <a name="status-notification-failure"></a>Durum bildirimi hatası
+ VSPackage'ınızın bir komut durumu değişikliğinin ortamını bildirmemesi UI'yi tutarsız bir duruma yerleyebilir. Menü veya bağlam menüsü komutları herhangi kullanıcı tarafından bir araç çubuğuna yerleştirilebilir unutmayın. Bu nedenle, ui'yi yalnızca bir menü veya bağlam menüsü açıldığında güncelleştirmek yeterli değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Uygulama](../../extensibility/internals/command-implementation.md)

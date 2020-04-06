@@ -1,37 +1,37 @@
 ---
-title: Projeler ve düzenleyiciler için ek kaynak denetimi yönergeleri | Microsoft Docs
+title: Projeler ve Editörler için Ek Kaynak Kontrol Yönergeleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], guidelines for projects and editors
 ms.assetid: 2483cce5-321c-4d3c-9c5c-ee8385263f74
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a9c04623ed276bf10784ccdf895c5abb1c6e9903
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 181f6c10ff7ce95cd3a37151f117353d1bb47d41
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315862"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710118"
 ---
-# <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Projeler ve düzenleyiciler için ek kaynak denetimi yönergeleri
-Projeler ve düzenleyiciler için kaynak denetimi desteklemek için uyması kuralları vardır.
+# <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Projeler ve editörler için ek kaynak denetimi yönergeleri
+Kaynak denetimini desteklemek için projelerin ve editörlerin uyması gereken bir dizi yönerge vardır.
 
-## <a name="guidelines"></a>Kuralları
- Proje veya Düzenleyicisi de kaynak denetimi desteklemek için aşağıdakileri yapmalıdır:
+## <a name="guidelines"></a>Yönergeler
+ Projeniz veya düzenleyiciniz kaynak denetimini desteklemek için aşağıdakileri de yapmalıdır:
 
 |Alan|Project|Düzenleyici|Ayrıntılar|
 |----------|-------------|------------|-------------|
-|Özel dosyaların kopyalarını|X||Ortam, özel dosyaların kopyalarını destekler. Diğer bir deyişle, projede kayıtlı her kişi projedeki dosyaları onun kendi özel kopyasına sahip olur.|
-|ANSI/Unicode kalıcılığı|X|X|Kalıcılık kod yazma, çoğu kaynak denetimi program Unicode şu anda desteklemediğinden dosyaları ANSI biçiminde kalıcı hale getirin.|
-|Dosyaları numaralandırma|X||Project kullanarak dosyaları listesini numaralandırır kaldırılmasının belirli içerdiği tüm dosyaların listesini içermelidir ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> (VSH_PROPID_First_Child/Next_Sibling). Proje öğesi adları ile aynı zamanda açığa kendi <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetMkDocument%2A> (özel dosyaları dahil) uygulama ve Destek ad araması aracılığıyla kendi <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A> uygulaması.|
-|Metin biçimi|X|X|Mümkün olduğunda, dosyaları birleştirme farklı sürümlerini desteklemek üzere metin biçiminde olmalıdır. Metin biçiminde olmayan dosyalar daha sonra dosyayı diğer sürümleri ile birleştirilemez. Tercih edilen metin XML biçimindedir.|
-|Tabanlı başvurusu|X||Başvuru tabanlı projeler kaynak denetimine kolayca desteklenir. Ancak, projeyi olup bu dosyalar disk üzerinde mevcut bağımsız olarak, isteğe bağlı olarak, dosyaların listesini oluşturabilir sürece dizin tabanlı projeler kaynak denetimi tarafından da desteklenir. Kaynak denetiminden bir proje açıldığında, proje dosyasının ilk önce dosyalarından birini aşağı getirilir.|
-|Nesnelerle ve özelliklerle öngörülebilir sırayla Sürdür|X|X|Birleştirme kolaylaştırmak için alfabetik sırayla gibi tahmin edilebilir bir sırada dosyalarınızı kalıcı hale getirin.|
-|Yeniden yükle|X|X|Bir dosya değiştirildiğinde diskte düzenleyiciniz yeniden mümkün olması gerekir. Kaynak denetiminde katıldığınızda, ortam verileri sizin için çağırarak yeniden yükleyecektir, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> uygulaması. Kullanıma alma IVsQueryEditQuerySave çağrıldığında gerçekleşir en zor yeniden durumdur::<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> ve bilgileri işleniyor. Ancak yeniden kodunuzu bu durumda çalıştırılabilmesi gerekir.<br /><br /> Ortam, proje dosyaları otomatik olarak yeniden yükler. Ancak, bir proje uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> iç içe toplamalar, hiyerarşiler yeniden yüklemeyi desteklemek için proje dosyaları iç içe geçmiş.|
+|Dosyaların özel kopyaları|X||Ortam, dosyaların özel kopyalarını destekler. Diğer bir deyişle, projeye kaydolan her kişinin, projedeki dosyaların kendi özel kopyası vardır.|
+|ANSI/Unicode kalıcılığı|X|X|Kalıcılık kodunu yazarsanız, çoğu kaynak denetim programı şu anda Unicode'u desteklemediği için dosyaları ANSI formunda devam edin.|
+|Dosyaları sayısallandırma|X||Proje, içindeki tüm dosyaların belirli bir listesini içermelidir ve (VSH_PROPID_First_Child/Next_Sibling) kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> dosyaların listesini sayısala değnebilmelidir. Proje <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetMkDocument%2A> ayrıca, uygulama yoluyla madde adlarını ortaya çıkarmalı ve uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A> yoluyla ad aramasını (özel dosyalar dahil) desteklemelidir.|
+|Metin biçimi|X|X|Mümkün olduğunda, dosyaların farklı sürümlerin birleştirilmesini desteklemek için metin biçiminde olması gerekir. Metin biçiminde olmayan dosyalar daha sonra dosyanın diğer sürümleriyle birleştirilemez. Tercih edilen metin biçimi XML'dir.|
+|Referans tabanlı|X||Referans tabanlı projeler kaynak denetiminde kolayca desteklenir. Ancak, dizin tabanlı projeler, bu dosyaların diskte bulunup bulunmadığına bakılmaksızın, proje talep üzerine dosyalarının bir listesini oluşturabildiği sürece kaynak denetimi tarafından da desteklenir. Bir projeyi kaynak denetiminden açarken, proje dosyası önce dosyalarından önce aşağı indirilir.|
+|Nesneleri ve özellikleri öngörülebilir sırada kalıcı hale|X|X|Birleştirmeyi kolaylaştırmak için dosyalarınızı alfabetik sıra gibi öngörülebilir bir sırada devam edin.|
+|Yeniden yükle|X|X|Bir dosya diskte değiştiğinde, düzenleyiciniz dosyayı yeniden yükleyebilmeli. Kaynak denetimine katıldığınızda, ortam uygulamanızı <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> arayarak verileri sizin için yeniden yükler. En zor yeniden yükleme durumu, IVsQueryEditQuerySave::<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> ve bilgileri işleyen bir ödeme oluşur. Ancak, yeniden yükleme kodunuz bu durumda çalıştırılabilmelidir.<br /><br /> Ortam proje dosyalarını otomatik olarak yeniden yükler. Ancak, iç içe <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> olan proje dosyalarını yeniden yüklemek için bir proje iç içe hiyerarşileri varsa uygulaması gerekir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak denetimi desteği](../../extensibility/internals/supporting-source-control.md)
+- [Destek kaynak denetimi](../../extensibility/internals/supporting-source-control.md)

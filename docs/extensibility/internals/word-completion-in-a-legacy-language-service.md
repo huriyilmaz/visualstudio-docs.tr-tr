@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetinde Sözcük tamamlama | Microsoft Docs
+title: Eski Dil Hizmetinde Kelime Tamamlama | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,46 +7,46 @@ helpviewer_keywords:
 - IntelliSense, Complete Word
 - Complete Word
 ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26495f909d815b32ff8a75c2529ba30eabf3b5c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 948751cde5b6b710d911a30ca26a61e5411bba4d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309718"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703169"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Sözcük Tamamlama
-Kısmen belirlenmiş bir Word eksik karakter Sözcük tamamlama doldurur. Yalnızca bir olası tamamlanma varsa, sözcük tamamlama karakter girildiğinde tamamlandı. Kısmi sözcüğün birden fazla olasılığını eşleşiyorsa tamamlanabilir listesi görüntülenir. Bir tamamlama karakter tanımlayıcıları için kullanılmayan herhangi bir karakter olabilir.
+Sözcük tamamlama, kısmen yazılan bir sözcükteki eksik karakterleri doldurur. Yalnızca bir olası tamamlanma varsa, tamamlama karakteri girildiğinde sözcük tamamlanır. Kısmi sözcük birden fazla olasılıkla eşleşiyorsa, olası tamamlamaların listesi görüntülenir. Tamamlama karakteri tanımlayıcılar için kullanılmayan herhangi bir karakter olabilir.
 
- Eski dil Hizmetleri bir VSPackage'ı bir parçası olarak uygulanır, ancak dil hizmeti özellikleri uygulamak için daha yeni MEF uzantıları kullanmaktır. Daha fazla bilgi için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../../extensibility/extending-the-editor-and-language-services.md).
+ Eski dil hizmetleri BIR VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın en yeni yolu MEF uzantılarını kullanmaktır. Daha fazla bilgi için [Editör ve Dil Hizmetlerini Genişletme'ye](../../extensibility/extending-the-editor-and-language-services.md)bakın.
 
 > [!NOTE]
-> Yeni bir düzenleyici API hemen kullanmaya başlamak öneririz. Bu dil hizmetinizin performansını ve yeni düzenleyici özellikleri yararlanmanıza olanak tanır.
+> Yeni düzenleyici API'yi mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
-## <a name="implementation-steps"></a>Uygulama adımları
+## <a name="implementation-steps"></a>Uygulama Adımları
 
-1. Kullanıcı seçtiğinde **tam sözcük** gelen **IntelliSense** menüsünde <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> komut dil hizmetine gönderilir.
+1. Kullanıcı **IntelliSense** menüsünden **Tam Word'u** <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> seçtiğinde, komut dil hizmetine gönderilir.
 
-2. <xref:Microsoft.VisualStudio.Package.ViewFilter> Sınıfı komut ve çağrılarını yakalar <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> yöntemi ayrıştırma nedeni ile <xref:Microsoft.VisualStudio.Package.ParseReason>.
+2. Sınıf <xref:Microsoft.VisualStudio.Package.ViewFilter> komutu yakalar ve <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> ayrışdırış nedeni <xref:Microsoft.VisualStudio.Package.ParseReason>ile yöntemi çağırır.
 
-3. <xref:Microsoft.VisualStudio.Package.Source> Sınıfı ardından çağrıları <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> olası sözcük tamamlamaları ve araç ipucu sözcükler listesi kullanarak sonra görüntüler listesini almak için yöntemi <xref:Microsoft.VisualStudio.Package.CompletionSet> sınıfı.
+3. Sınıf <xref:Microsoft.VisualStudio.Package.Source> daha sonra <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> olası sözcük tamamlama listesini almak için yöntemi çağırır ve sonra <xref:Microsoft.VisualStudio.Package.CompletionSet> sınıfı kullanarak bir araç ipucu listesinde sözcükleri görüntüler.
 
-    Eşleşen tek bir sözcük ise <xref:Microsoft.VisualStudio.Package.Source> sınıfı word tamamlar.
+    Yalnızca eşleşen bir sözcük <xref:Microsoft.VisualStudio.Package.Source> varsa, sınıf sözcüğü tamamlar.
 
-   Alternatif olarak, tarayıcı tetikleme değerini döndürürse <xref:Microsoft.VisualStudio.Package.TokenTriggers> bir tanımlayıcının ilk karakteri yazıldığında <xref:Microsoft.VisualStudio.Package.Source> sınıfı, bunu algılar ve çağıran <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> yöntemi ayrıştırma nedeni ile <xref:Microsoft.VisualStudio.Package.ParseReason>. Bu durumda ayrıştırıcı bir üye seçimi karakterin varolup olmadığını algılamak ve bu üye listesini sağlamanız gerekir.
+   Alternatif olarak, bir tanımlayıcının <xref:Microsoft.VisualStudio.Package.TokenTriggers> ilk karakteri yazıldığında tarayıcı tetikleyici değerini döndürürse, <xref:Microsoft.VisualStudio.Package.Source> sınıf bunu <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> algılar ve yöntemi ayrıştırma nedeni ile <xref:Microsoft.VisualStudio.Package.ParseReason>çağırır. Bu durumda, araüye üye bir seçim karakterinin varlığını algılamalı ve üye listesini sağlamalıdır.
 
-## <a name="enabling-support-for-the-complete-word"></a>Tam sözcük desteğini etkinleştirme
- Sözcük tamamlama kümesi desteğini etkinleştirmek için `CodeSense` geçirilen parametre adlı <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> dil paket ile ilişkili kullanıcı özniteliği. Bu ayarlar <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> özelliği <xref:Microsoft.VisualStudio.Package.LanguagePreferences> sınıfı.
+## <a name="enabling-support-for-the-complete-word"></a>Tam Word için Desteği Etkinleştirme
+ Sözcük tamamlama desteği sağlamak `CodeSense` için, dil <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> paketiyle ilişkili kullanıcı özniteliğine geçirilen adlandırılmış parametreyi ayarlayın. Bu, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> sınıfın özelliğini <xref:Microsoft.VisualStudio.Package.LanguagePreferences> ayarlar.
 
- Ayrıştırma neden değeri için yanıt bildirimleri listesi, ayrıştırıcı döndürmelidir <xref:Microsoft.VisualStudio.Package.ParseReason>, sözcük tamamlama çalışılacak.
+ Ayrıştırıcınızın, sözcük tamamlamanın çalışması için ayrıştırıcı neden değerine <xref:Microsoft.VisualStudio.Package.ParseReason>yanıt olarak bir bildirim listesi döndürmesi gerekir.
 
-## <a name="implementing-complete-word-in-the-parsesource-method"></a>Tam sözcük ParseSource yöntemi uygulama
- Sözcük tamamlama <xref:Microsoft.VisualStudio.Package.Source> sınıf çağrıları <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> metodunda <xref:Microsoft.VisualStudio.Package.AuthoringScope> olası sözcük eşleşme listesini almak için sınıf. Türetilen bir sınıfta listenin uygulamalıdır <xref:Microsoft.VisualStudio.Package.Declarations> sınıfı. Bkz: <xref:Microsoft.VisualStudio.Package.Declarations> uygulanmalı yöntemleri hakkında ayrıntılar için sınıf.
+## <a name="implementing-complete-word-in-the-parsesource-method"></a>ParseSource Yönteminde Tam Word'ün Uygulanması
+ Sözcük tamamlama <xref:Microsoft.VisualStudio.Package.Source> için sınıf, olası <xref:Microsoft.VisualStudio.Package.AuthoringScope> sözcük eşleşmelerinin listesini almak için sınıftaki <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> yöntemi çağırır. Listeyi <xref:Microsoft.VisualStudio.Package.Declarations> sınıftan türetilen bir sınıfta uygulamanız gerekir. Uygulamanız <xref:Microsoft.VisualStudio.Package.Declarations> gereken yöntemlerle ilgili ayrıntılar için sınıfa bakın.
 
- Listede yalnızca tek bir sözcük, varsa sonra <xref:Microsoft.VisualStudio.Package.Source> sınıfı kısmi sözcük yerine bu sözcüğü otomatik olarak ekler. Listede birden fazla sözcük varsa <xref:Microsoft.VisualStudio.Package.Source> sınıfı sunan bir araç ipucu listesi, kullanıcının uygun seçeneği seçebilirsiniz.
+ Liste yalnızca tek bir sözcük <xref:Microsoft.VisualStudio.Package.Source> içeriyorsa, sınıf bu sözcüğü kısmi sözcüğün yerine otomatik olarak ekler. Liste birden fazla sözcük içeriyorsa, <xref:Microsoft.VisualStudio.Package.Source> sınıf, kullanıcının uygun seçimi seçebileceği bir araç ipucu listesi sunar.
 
- Aynı zamanda örneğe bakmaktır bir <xref:Microsoft.VisualStudio.Package.Declarations> sınıfı uygulamasında [eski dil hizmetinde üye tamamlama](../../extensibility/internals/member-completion-in-a-legacy-language-service.md).
+ Ayrıca, Eski Dil <xref:Microsoft.VisualStudio.Package.Declarations> [Hizmetinde Üye Tamamlama'da](../../extensibility/internals/member-completion-in-a-legacy-language-service.md)sınıf uygulaması örneğine de bakın.

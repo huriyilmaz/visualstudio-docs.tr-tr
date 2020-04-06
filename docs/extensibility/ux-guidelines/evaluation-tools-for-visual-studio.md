@@ -1,173 +1,173 @@
 ---
-title: Visual Studio için değerlendirme araçları | Microsoft Docs
+title: Visual Studio için Değerlendirme Araçları | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00668fdebdbc8fc6a26c30a8762aa6f03d6e2769
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6ae5ae2d3be49a797ff1d594aab4517efab53330
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824559"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698425"
 ---
-# <a name="evaluation-tools-for-visual-studio"></a>Visual Studio için değerlendirme araçları
-## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio için craftsmanship denetim listesi
- Görsel ve etkileşim Ayrıntılar için kullanıcı deneyimi kalitesini değerlendirmek için bu denetim listesini kullanın.
+# <a name="evaluation-tools-for-visual-studio"></a>Visual Studio İçin Değerlendirme Araçları
+## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio için işçilik kontrol listesi
+ Görsel ve etkileşim ayrıntıları için kullanıcı deneyimi kalitesini değerlendirmek için bu denetim listesini kullanın.
 
 ### <a name="overview"></a>Genel Bakış
 
-- Tüm komutlar kullanıcılar kendi komutları gerçekleştirildikten olduğunu bildiren bir geri bildirim neden olduğunu doğrulayın.
+- Tüm komutların, kullanıcılara komutlarının gerçekleştirildiğini söyleyen geri bildirimle sonuçlandığını doğrulayın.
 
-- Tüm kullanıcı Arabirimi öğeleri ve denetimleri tüm temalar ve yüksek karşıtlık modunda görünür olduğundan emin olun.
+- Tüm UI öğelerinin ve denetimlerinin tüm temalarda ve Yüksek Karşıtlık modunda görünür olduğunu doğrulayın.
 
-- Bu etkin olmayan doğrulayın ve etkin seçimin her zaman Ayrıştırılan, standart ve yüksek karşıtlık modunu kullanmak.
+- Etkin olmayan ve etkin seçimin hem standart hem de Yüksek Karşıtlık modunda her zaman farklılaştığını doğrulayın.
 
-- Odağı her zaman görünür ve görünür olduğundan emin olun.
+- Odak noktasının her zaman görünür ve görünür olduğunu doğrulayın.
 
 ### <a name="performance"></a>Performans
 
-- Bir komutu tamamlamak için birden fazla bir saniye sürüyorsa, bazı tür "meşgul" göstergesi göründüğünü doğrulayın.
+- Bir komutun tamamlanması bir saniyeden fazla sürerse, bir tür "meşgul" göstergesinin gösterildiğini doğrulayın.
 
-- Bir komut 10, bir açık bir ilerleme çubuğu ya da tamamlamak için saniyeden uzun sürerse doğrulayın kararlı (tercih edilen) veya belirsiz, görüntülenir.
+- Bir komutun tamamlanması 10 saniyeden uzun sürerse, belirsiz (tercih edilen) veya belirsiz açık bir ilerleme çubuğunun görüntülendiğini doğrulayın.
 
-### <a name="ui-text"></a>UI metni
+### <a name="ui-text"></a>Kullanıcı Bira sımetin
 
-- Tüm etiketler cümle veya başlık durumda olduğunu ve hiçbir metin tamamen küçük harf olduğunu doğrulayın.
+- Tüm etiketlerin cümle veya başlık-case olduğunu ve hiçbir metnin tamamen küçük olmadığını doğrulayın.
 
-    ||Düzeltin|Yanlış|
+    ||Doğru|Yanlış|
     |-|-------------|---------------|
-    |**Komut metni (Tümü)**|Cümle:<br /><br /> **Dizin adı:**|Dizin adı:|
-    |**Düğme metni (istemci)**|İlk harfler büyük:<br /><br /> **[Varsayılan olarak ayarla]**|KÜMESİ AS VARSAYILAN|
-    |**Düğme metni (çevrimiçi)**|Cümle:<br /><br /> **[Varsayılan olarak ayarla]**||
+    |**Komut metni (tümü)**|Cümle durumu:<br /><br /> **Dizin adı:**|Dizin Adı:|
+    |**Düğme metni (istemci)**|Başlık örneği:<br /><br /> **[ Varsayılan Olarak Ayarlayın ]**|VARSAYıLAN OLARAK AYARLAYıN|
+    |**Düğme metni (çevrimiçi)**|Cümle durumu:<br /><br /> **[ Varsayılan olarak ayarlayın ]**||
 
-- Grup başlıklarının ve düğmeler, hariç tüm etiketleri iki nokta ile bitemez ve bunlar ile eşleştirilmiş durumda denetim adından önce doğrulayın.
+- Grup üstleri ve düğmeleri dışındaki tüm etiketlerin bir üst nokta üst üste ile sona erdiğini ve eşleştikleri denetimden önce geldiğini doğrulayın.
 
-- Düğmeler, komutları ve kullanıcı girişi yakalamak için kullanıcı arabirimini Başlat komutu bağlantıları üç nokta son doğrulayın **[...]** .
+- Bir elips kullanıcı girişi sonunda yakalamak için Kullanıcı B) başlatmak düğmeleri, komutları ve komut bağlantıları doğrulamak **[...]**.
 
   Örnekler:
 
-  - Bir **[Gelişmiş...]**  düğmesine bir iletişim kutusu.
+  - İletişim kutusunda **[Gelişmiş...]** düğmesi.
 
-  - Araçlar menüsü altına komut seçenekleri (**Araçlar > Seçenekler**) iletişim başlatma komut hedefi olduğu için üç nokta simgesine almalısınız değil.
+  - Araçlar menüsünün altındaki komut seçenekleri **(Araçlar > Seçenekleri)** elips almamalıdır, çünkü iletişim kutusunu başlatmak komutun amacıdır.
 
-- Kullanıcı arabirimini endüstri standardı koşulları hariç hiçbir kısaltmalar içerdiğini doğrulayın. Örneğin, HTML ne TCP/IP'yi gerekir, yazılması karşılaştığınız OOM (yetersiz bellek) ve PII (kişisel bilgiler) gerekir ancak.
+- Kişisel Bir UI'nin endüstri standardı terimler dışında hiçbir kısaltma içermediğini doğrulayın. Örneğin, OOM (bellek dışı) ve kişisel bilgi (kişisel olarak tanımlanabilir bilgiler) olmamalıdır, ancak ne HTML ne de TCP / IP hecelenmiş olması gerekir.
 
 ### <a name="keyboard-access"></a>Klavye erişimi
 
-- Klavye ile her bir görevi gerçekleştirmek için bir yol olduğundan emin olun. Genellikle bu her denetimin klavye erişim aracılığıyla gerçekleştirilir, ancak kod görünümüne giderek gibi geçici bir çözüm yüksek ölçüde görsel bazı alanlar için kabul edilebilir.
+- Klavyeyle her görevi gerçekleştirmenin bir yolu olduğunu doğrulayın. Genellikle bu, her denetim için klavye erişimi yoluyla gerçekleştirilir, ancak bazı yüksek görsel alanlar için kod görünümüne gitme gibi bir geçici çözüm kabul edilebilir.
 
-- Bir mantıksal sırasına (soldan sağa ve yukarıdan aşağıya) denetimleri aracılığıyla sekme tuşuyla doğrulayın. Tüm denetimleri, bu çoğu denetimleri için en iyi yöntem olsa da, bu yaklaşım gerektirir. Örneğin, bu radyo düğmesi grubundaki tek sekme durağı ile denetimlerdir doğrulayın.
+- Denetimleri mantıksal bir sırada (soldan sağa ve yukarıdan aşağıya) sektede bildiğinizi doğrulayın. Bu çoğu denetim için en iyi uygulama olsa da, tüm denetimler bu yaklaşımı gerektirmez. Örneğin, radyo düğmesi denetimlerinin tek bir sekme durağı olan bir grupta olduğunu doğrulayın.
 
-- Tüm denetimleri etiketlere sahip ve her etiket bir anımsatıcı olduğunu doğrulayın (özel durumlar, etiketlenmiş bir sekme denetiminde uygulayabilir bazı olmayan etiketli denetimler içerir).
+- Tüm denetimlerin etiketleri olduğunu ve her etikette bir mnemonik olduğunu doğrulayın (özel durumlar, sekmede etiketli bir denetimi izleyebilecek bazı etiketsiz denetimleri içerir).
 
-- Anımsatıcı çakışma olduğundan emin olun.
+- Mnemonik çakışma olmadığını doğrulayın.
 
 ### <a name="fonts"></a>Yazı Tipleri
 
-- Tüm yazı tipleri (yüz tanıma, boyutunu, rengini) tutarlı bir şekilde kullanılır ve hiyerarşi Bakımı olduğunu doğrulayın.
+- Tüm yazı tiplerinin (yüz, boyut, renk) tutarlı bir şekilde kullanıldığını doğrulayın ve hiyerarşiyi koruyun.
 
-- Tüm kullanıcı Arabirimi öğeleri ortam yazı tipi Hizmet kullandığından emin olun. (Bkz [yazı tipleri ve biçimlendirme için Visual Studio](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md))
+- Tüm UI öğelerinin ortam yazı tipi hizmetini kullandığını doğrulayın. [(Bkz. Görsel Stüdyo için Yazı Tipleri ve Biçimlendirme](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md))
 
-     Hizmet kullanılıp kullanılmadığını kontrol etmek için Git **Araçlar > Seçenekler > yazı tipleri ve renkler**. Ayarları açılır listesinde, ortam yazı tipi seçin ve stylistically (Harp veya Comic SAN'ları gibi) farklı bir şey yazı tipini değiştirmek ve 12 punto Georgia boyutunu ayarlayın. Ardından Tamam'a tıklayın. IDE yeniden başlatmanız gerekebilir, ancak çoğu UI hemen değişir. Yazı tipi değişiklik bile yeniden'kurmak seçmeyin alanları ortam yazı tipi kullanmıyorsunuz demektir.
+     Hizmetin kullanılıp kullanılıp kullanılıp kullanılıp kullanılıp kullanılıp kullanılıp kullanmadğ **> >±Ä**ını kontrol Ayarlar açılır düşüşünde, Çevre Yazı Tipi'ni seçin ve yazı tipi yüzünü stilistik olarak farklı bir şeyle (Harrington veya Comic Sans gibi) değiştirin ve boyutu 12 pt olarak ayarlayın. Daha sonra Tamam'a tıklayın. IDE'yi yeniden başlatmanız gerekebilir, ancak çoğu UI hemen değişecektir. Yeniden başlatmada bile yazı tipi değişikliğini alamayan alanlar ortam yazı tipini kullanmıyor.
 
-- Hizmet (örneğin, kalın veya genişletilmiş metin) türevi olan yazı tipi, boyutu ve ortam yazı tipi boyutu değiştirildiğinde ile ilgili "normal" metin biçimlendiriliyor korumak doğrulayın.
+- Hizmetin türevi olan yazı tiplerinin (örneğin, kalın veya büyütülmüş metin) ortam yazı tipi boyutu değiştirildiğinde "normal" metinle ilişkili olarak boyutlarını ve biçimlendirmelerini koruduğunu doğrulayın.
 
-- Büyütülmüş yazı tipleri nedeniyle hiçbir kırpma hata olmadığını doğrulayın. Kırpılmış yazı tipleri büyük olasılıkla sabit yükseklik denetimleri veya sabit yükseklik kapsayıcıları sonucudur.
+- Genişletilmiş yazı tipleri nedeniyle kırpma hataları olmadığını doğrulayın. Kırpılabilen yazı tipleri büyük olasılıkla sabit yükseklik denetimlerinin veya sabit yükseklik kaplarının sonucuolur.
 
 ### <a name="dialogs"></a>İletişim Kutuları
 
-- İletişim kutusu başlığı onu başlatan komut ile aynı olduğunu doğrulayın.
+- İletişim başlığının onu başlatan komutla aynı olduğunu doğrulayın.
 
-- Tüm standart denetimler işletim sistemi ile tutarlı olduğundan emin olun: arka plan rengi, standart ve hiçbir denetim standart denetimlerden farklı görünmesini yaptığına özel bir yeniden şablonlu stil olması gerekir.
+- Tüm standart denetimlerin işletim sistemiyle tutarlı olduğunu doğrulayın: arka plan rengi standarttır ve hiçbir denetimin standart denetimlerden farklı görünmesini sağlayan özel bir yeniden şablonlu stile sahip olmaması gerekir.
 
-- Kenar boşluklarının içine formun 12 piksel olmalıdır ve Tekdüzen ve tutarlı görünmelidir olduğunu doğrulayın.
+- Form içindeki kenar boşluklarının 12 piksel olması ve düzgün ve tutarlı görünmesi gerektiğini doğrulayın.
 
-- İletişim kutuları IDE kabuğu veya bunları kökenli penceresi içinde ortalanmış göründüğünü doğrulayın.
+- İletişim kutularının IDE kabuğu nun veya bunların oluşturduğu pencerenin içinde ortalanmış olarak göründüğünü doğrulayın.
 
-- İletişim kutuları, kullanışlı, yeniden boyutlandırılabilir olmalıdır. Yeniden boyutlandırılabilir, iletişim kutuları için iletişim diğer bölümlerini sabit kalırken yeniden boyutlandırma sırasında uygun denetimleri yeniden boyutlandırmanız gerekir olduğunu doğrulayın.
+- Yararlı olduğunda, iletişim kutuları yeniden boyutlandırılabilir olmalıdır. Yeniden boyutlandırılabilen iletişim kutularında, iletişim kutusunun diğer bölümleri sabit kalırken, yeniden boyutlandırma sırasında uygun denetimlerin yeniden boyutlandırılması gerektiğini doğrulayın.
 
-- Yeniden boyutlandırılabilir iletişim kutuları (boyut, konum, genişletme iletişim kutusu denetimleri ve benzeri) kullanıcı ayarlanmış boyutu kalıcı olduğunu doğrulayın.
+- Yeniden boyutlandırılabilir iletişim kutularının kullanıcı tarafından ayarlanan boyutu (boyut, konum, iletişim denetimlerinin genişletilmesi vb.) devam ettiğini doğrulayın.
 
-- Başlık çubuğunda herhangi bir simge olduğundan emin olun.
+- Başlık çubuğunda simge olmadığını doğrulayın.
 
-- Başlık çubuğunda hiçbir simge durumuna küçült ve Ekranı Kapla düğmeleri olduğunu doğrulayın.
+- Başlık çubuğunda Simge Durumuna Küçült ve Üst Düzeye Getir düğmesi olmadığını doğrulayın.
 
-#### <a name="dialog-operation-buttons-vs-client-only"></a>İletişim işlemi düğmeler (yalnızca VS istemci)
+#### <a name="dialog-operation-buttons-vs-client-only"></a>İletişim işlemi düğmeleri (yalnızca VS İstemci)
 
-- İşlem düğmeler bu sırada olduğundan emin olun: **Tamam**, **iptal**, **uygulamak**.
+- İşlem düğmelerinin bu sırada olduğunu doğrulayın: **Tamam**, **İptal**et , **Uygula**.
 
-- Doğrulayın **Tamam** ve **iptal** düğmelerdir standart boyutu: 75 x 23 piksel.
+- **Tamam** ve **İptal** düğmelerinin standart boyut olduğunu doğrulayın: 75x23 piksel.
 
-- Doğrulayın **Tamam** ve **iptal** dize uzunluğu bağımsız olarak aynı boyutta düğme vardır.
+- **Dize** uzunluğuna bakılmaksızın Tamam ve **İptal** düğmelerinin eşit boyutta olduğunu doğrulayın.
 
-- Etiket işlemi düğmesindeki standart geniş olmasını gerektiriyorsa, doğrulayın karşılık gelen **iptal** aynı boyutta düğmesidir.
+- İşlem düğmesindeki etiket düğmenin standarttan daha geniş olmasını gerektiriyorsa, ilgili **İptal** düğmesinin eşit boyutta olduğunu doğrulayın.
 
-- Bir düğme ve ilişkili denetimler arasında 6-piksel doldurma olduğundan emin olun.
+- Düğmeler ve ilişkili denetimler arasında 6 piksel dolgu olduğunu doğrulayın.
 
-- Doğrulayın **Tamam** ve **iptal** düğmeleri anımsatıcıları (erişim tuşları bir altı çizili harfi ile tanımlanır) sahip değil.
+- **Tamam** ve **İptal** düğmelerinde mnemonics (altı çizili harfle tanımlanan erişim anahtarları) olmadığını doğrulayın.
 
-- Bir düğmenin doğrulayın (genellikle **Tamam**) varsayılan olarak odağa sahip.
+- Varsayılan olarak tek bir düğmenin (genellikle **Tamam)** odak noktası olduğunu doğrulayın.
 
-- Doğrulayın **Esc** iletişim kutusunu iptal eder
+- **Esc'nin** iletişim kutusunu iptal ettiğini doğrulayın
 
-- Doğrulayın **Enter** varsayılan düğme odak Enter işleyen bir denetimde değilse yürütür.
+- Odak Enter'u işleyen bir denetimde değilse **Enter'ın** varsayılan düğmeyi yürüttüğünden doğrulayın.
 
-- Doğrulayın **Tamam** ve **iptal** düğmeler iletişim kutusunun sağ alt köşede konumlandırılmıştır. Nadir durumlar için sağ üst köşede dikey yığın için kabul edilebilir.
+- **Tamam** ve **İptal** düğmelerinin iletişim kutusunun sağ alt köşesinde konumlandırılmış olduğunu doğrulayın. Nadir durumlarda, bunların sağ üst üste dikey olarak istiflenmesi kabul edilebilir.
 
-- Yalnızca bir yatay hizalama iletişim kutusu içinde diğer düğmeleri, dikey yapılandırma kullanıldığını doğrulayın.
+- Dikey yapılandırmanın yalnızca diğer düğmeler iletişim kutusu içinde yatay bir hizadaysa kullanıldığını doğrulayın.
 
-### <a name="control-standards"></a>Denetimi standartları
+### <a name="control-standards"></a>Kontrol standartları
 
 #### <a name="general"></a>Genel
 
-- Mümkün olduğunda, kullanıcı etkileşimi ve kullanıcıların güvenli veya ortak bir sonucu doğru hızlandırmak için iyi bir varsayılan değerleri doğrulayın.
+- Mümkün olduğunda, kullanıcı etkileşimini hızlandırmak ve kullanıcıları güvenli veya yaygın bir sonuca yönlendirmek için iyi varsayılan değerler olduğunu doğrulayın.
 
-- Standart denetimler kullanıcılara göre daha eski deneyimi ne olacağını öğrenmek için aynı şekilde davrandığından emin olun.
+- Kullanıcıların önceki deneyimlere göre ne olacağını bilmeleri için standart denetimlerin aynı şekilde gerçekleştiğini doğrulayın.
 
 #### <a name="label-controls"></a>Etiket denetimleri
 
-- Her denetim bir etiketi vardır ve her bir etiket denetimi (genellikle bir aralıkta 4-6 piksel) ile görsel olarak eşleştirilir ve onun ilgili denetimin diğer denetimlere yakın doğrulayın.
+- Her denetimin bir etiketi olduğunu ve her etiketin kendi denetimiyle (genellikle 4-6 piksel aralığında) görsel olarak eşlendiğini ve karşılık gelen denetimine diğer denetimlerden daha yakın olduğunu doğrulayın.
 
-- Etiket temizleme konumlandırılır doğrulayın denetimi ile sol üstündeki konumlandırılmışsa sol kenarının ve böylece temel etiketin solunda konumlandırılmışsa giriş metni taban çizgisi ile hizalanır Yatay Orta.
+- Etiketlerin, yukarıda konumlandırılmış ve yatay olarak ortalanmışsa, sol kenarı sola doğru konumlandırılmış olduğunu doğrulayın, böylece etiketin taban çizgisi sola konumlandırılmışsa giriş metninin taban çizgisiyle hizalanır.
 
-- Birkaç Yığılmış etiket ve giriş denetimlerinin bir denetimin sola konumlandırılır etiketleri temizleme bırakılır ve iletişim kenarı arasındaki uzaklık eşit hiçbir zaman temizleme sağ ve denetimler arasındaki uzaklık eşit olduğunu doğrulayın. Ek boşluk gruplandırma belirtmek için ihtiyaç duydukları sürece çiftleri eşit olarak dağıtılmış.
+- Bir denetimin soluna birden fazla yığılmış etiket ve giriş denetimi yerleştirilmişse, etiketlerin sola ve iletişim kutusunun kenarından eşit bir mesafeye yerleştirilip yerleştirilemeyeceğini, asla sağa ve denetimlerden eşit bir mesafe yitirmeyeceğini doğrulayın. Çiftler, gruplandırmayı göstermek için ek aralık gerekmedikçe eşit olarak dağıtılmalıdır.
 
-#### <a name="input-controls-text-boxes-and-combo-boxes"></a>Giriş denetimlerini (metin kutuları ve birleşik giriş kutuları)
+#### <a name="input-controls-text-boxes-and-combo-boxes"></a>Giriş denetimleri (metin kutuları ve açılan kutular)
 
-- Varsayılan ortam yazı tipi kullanırken, metin kutuları, birleşik giriş kutuları ve düğmeler görüntü yüksekliğini tüm 23 piksel doğrulayın.
+- Varsayılan ortam yazı tipini kullanırken metin kutuları, açılan kutular ve düğmelerin ekran yüksekliğinin hepsinin 23 piksel olduğunu doğrulayın.
 
-- İpucu metni kullanılır, renk değerine ayarlandığını doğrulayın `Environment.ControlEditHintText` renk hizmetini kullanarak.
+- İpucu metni kullanılıyorsa, rengin renk `Environment.ControlEditHintText` hizmetini kullanarak ayarlı olduğunu doğrulayın.
 
-- Alan şekilde tanımlanması gerekir gerekli bir alan ise doğrulayın:
+- Alan bu şekilde tanımlanması gereken gerekli bir alansa, aşağıdakileri doğrulayın:
 
-  - arka plan ayarlanan `Environment.ControlEditRequiredBackground` ve ön ayarlanır `Environment.ControlEditRequiredHintText`
+  - arka planın ayarlı `Environment.ControlEditRequiredBackground` olduğunu ve ön planın`Environment.ControlEditRequiredHintText`
 
-  - görünen denetimindeki İpucu metni olduğunu **"\<gerekli >"**
+  - denetim içinde **\<"Gerekli>"** olarak görünen ipucu metni olduğunu
 
 #### <a name="button-controls"></a>Düğme denetimleri
 
-- Düğmeler 75 x 23 piksel cinsinden boyutu için alt uzun metin destekleme sürece doğrulayın.
+- Düğmelerin en az 75x23 piksel boyutunda olduğunu doğrulayın, daha uzun metin barındırıyorum olmadıkça.
 
-- Düğmeler kaldı ve 3-5 piksel yanı sıra içerik için doldurma, kenar boşlukları sağ doğrulayın.
+- Düğmelerin 3-5 piksellik sol ve sağ kenar boşluklarının yanı sıra içerik için dolgu olduğunu doğrulayın.
 
-- Küçük bir kare düğme yalnızca üç nokta ile kullanmak için kabul edilebilir **[...]**  yerine bunu üzerinde bir **[Gözat...]**  düğme (veya benzer bir işlevsellik). Kullandıysanız, düğmenin boyutu 23 x 23 olduğunu doğrulayın.
+- Üzerinde **[Browse...]** düğmesi (veya benzer **[...]** işlevsellik) yerine üzerinde sadece bir elips [...] olan küçük bir kare düğme kullanmak kabul edilebilir. Kullanılırsa, düğmenin 23x23 boyutunda olduğunu doğrulayın.
 
-- Varsa birden fazla **[Gözat...]**  düğme bir iletişim kutusunda, ardından doğrulayın kısaltılmış sürümü (yalnızca üç nokta **[...]** ) tüm için kullanılır.
+- Bir iletişim kutusunda birden fazla **[Gözat...]** düğmesi varsa, kısaltılmış sürümün (yalnızca elipsler **[...]**) herkes için kullanıldığını doğrulayın.
 
-- Bu üç nokta doğrulayın **[...]**  düğmeleri bir anımsatıcı sahip değil. Bir sekme odağı yanında giriş denetiminin açık olduğunda, odağı üç nokta düğmesini taşımanız gerekir.
+- Bu elips **[...]** düğmeleri bir mnemonic yok doğrulayın. Odak, yanındaki giriş denetimine odaklanDığında, bir sekme odağı elips düğmesine taşımalıdır.
 
-- Düğmeler, komutları ve daha fazla kullanıcı girişi yakalayan İkincil kullanıcı arabirimini Başlat komutu bağlantıları üç nokta bitmelidir doğrulayın **[...]** .
+- Daha fazla kullanıcı girişi yakalar ikincil UI başlatmak düğmeleri, komutları ve komut bağlantıları bir elips sona ermesi gerektiğini doğrulayın **[...]**.
 
-#### <a name="hyperlinks"></a>Köprüleri
+#### <a name="hyperlinks"></a>Köprüler
 
-- Bir hyperlink denetimi hiç etkin olduğunda kırmızı yanıp doğrulayın. Bu renk hizmeti kullanım düzenlenmiyor göstergesidir
+- Bir köprü denetiminin etkin olduğunda asla kırmızı yanıp sönmediğini doğrulayın. Bu, renk hizmetinin kullanılmadığının bir göstergesidir
 
-- VS kullanılan renkleri olduğundan emin olun:
+- Kullanılan VS Renkleri'nin aşağıdakiler olduğunu doğrulayın:
 
   - `Environment.ControlLinkText`
 
@@ -175,48 +175,48 @@ ms.locfileid: "67824559"
 
   - `Environment.ControlLinkTextPressed`
 
-- Köprüler bir paragraf içinde gömülü sürece hiçbir alt çizgi ile mavi göründüğünü doğrulayın.
+- Bir paragrafta gömülü olmadıkça köprülerin altı çizili olmayan mavi göründüğünü doğrulayın.
 
 #### <a name="check-boxes"></a>Onay kutuları
 
-- Çok satırlı metin onay kutusu varsa kutunun tüm satırlar ortalanmış değil dikey metnin ilk satırı ile hizalar doğrulayın.
+- Onay kutusunda çok satırlı metin varsa, kutunun tüm satırlarda dikey olarak ortalanmış değil, ilk metin satırıyla hizalandığından doğrulayın.
 
-- Onay kutularını her zaman ikili bir seçenek belirtmek ve değil kullanıcı gidin veya yeni bir windows veya sayfaları doğrulayın.
+- Onay kutularının her zaman ikili bir seçim gösterdiğini ve kullanıcıda gezinmeyin veya yeni pencereler veya sayfalar açmayın.
 
-- Bir onay kutusu için bir giriş denetimini ilgili bir seçenek sunar, temizleme sola ve çok yakın ilişkisi belirtmek için bu denetim altında konumlandırılmış olduğunu doğrulayın.
+- Onay kutusu giriş denetimiyle ilgili bir seçenek sunuyorsa, ilişkisini belirtmek için sola ve bu denetimin çok yakınına konumlandırılmış olduğunu doğrulayın.
 
-- Bir onay kutusu olduğundan emin olun **hiçbir zaman** bir iletişim kutusu veya sayfanın tüm içeriğini etkinleştirmek için bir yol kullanılır.
+- Bir onay kutusunun bir iletişim kutusunun veya sayfanın tüm içeriğini etkinleştirmek için **hiçbir zaman** araç olarak kullanılmadığını doğrulayın.
 
 #### <a name="group-boxes"></a>Grup kutuları
 
-- Bir iletişim kutusu iletişim tüm içeriğini içeren bir tek Grup kutusu içindeki içermediğinden emin olun.
+- Bir iletişim kutusunun içinde iletişim kutusunun tüm içeriğini içeren tek bir grup kutusu içermediğini doğrulayın.
 
-- Her grup kutusu içinde en az iki denetimi olduğunu doğrulayın.
+- Her grup kutusu içinde en az iki denetim olduğundan doğrulayın.
 
-- Nadiren var. bir iletişim kutusundaki ikiden fazla Grup kutuları olmalıdır.
+- Nadiren bir iletişim kutusunda ikiden fazla grup kutusu olmalıdır.
 
-- Hiçbir iç içe grup kutuları olduğunu doğrulayın.
+- İç içe grup kutusu olmadığını doğrulayın.
 
 ### <a name="icons"></a>Simgeler
 
-- Simgeler, koyu tema doğru ters göründüğünü doğrulayın.
+- Karanlık temada simgelerin doğru şekilde ters çevrilmiş olarak göründüğünü doğrulayın.
 
-- Tüm simgeleri çekirdek kavrama dayalıdır doğrulayın.
+- Tüm simgelerin temel kavramlara dayandığını doğrulayın.
 
-- Her simge ayrı, kolay tanımaya ve ikiden fazla kavramları (olmadan durumu değiştiricisi/dil) içermiyor olduğunu doğrulayın.
+- Her simgenin farklı, tanınması kolay ve ikiden fazla kavram içermediğini (durum değiştirici/dil olmadan) doğrulayın.
 
-- Temel simgesi alanı içinde ortalanmış göründüğünü doğrulayın.
+- Temel simgenin boşluk içinde ortalanmış olarak göründüğünü doğrulayın.
 
-- Tüm simgeleri yüksek karşıtlık modunda okunaklı göründüğünü doğrulayın.
+- Yüksek Karşıtlık modunda tüm simgelerin okunaklı göründüğünü doğrulayın.
 
-- Kullanılan herhangi bir rengi renk kullanımı standartlarıyla uyuştuğundan emin olun.
+- Kullanılan herhangi bir rengin renk kullanım standartlarıyla uyumlu olduğunu doğrulayın.
 
-- Hiçbir haleler (kenarlıklar) olmadığını simgeleri doğrulayın. (Varsa, halo bitişik kullanıcı arabiriminin arka plan rengi eşleşmelidir).
+- Simgelerin etrafında hale (kenarlıklar) olmadığını doğrulayın. (Varsa, hale bitişik UI'nin arka plan rengiyle eşleşmelidir).
 
-### <a name="touch-enabled-ui"></a>Dokunmatik özellikli kullanıcı Arabirimi
+### <a name="touch-enabled-ui"></a>Dokunmatik özellikli ui
 
-- Etkileşimli denetimleri kolayca touchable - en az olacak şekilde büyük olduğundan emin olun **23 x 23 piksel** boyutu
+- Etkileşimli denetimlerin kolayca dokunabilen kadar büyük olduğunu doğrulayın - en az **23x23 piksel** boyutunda
 
-- En sık kullanılan denetimler en az olduğundan emin olun **40 x 40 piksel** boyutu.
+- En sık kullanılan denetimlerin en az **40x40 piksel** boyutunda olduğunu doğrulayın.
 
-- Etkileşimli denetimleri en az sahip olduğunuzu doğrulayın **aralığı 5 piksel** aralarında
+- Etkileşimli **denetimlerin** aralarında en az 5 piksel aralık olduğunu doğrulayın

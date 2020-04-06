@@ -1,42 +1,42 @@
 ---
-title: Proje özelliklerini alma | Microsoft Docs
+title: Proje Özelliklerini Alma | Microsoft Dokümanlar
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - project properties, displaying in tool window
 - tool windows, displaying project properties
 ms.assetid: 96ba07ca-0811-4013-8602-12550ac4ba79
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cac5c55dd8fdeb1ba231d144d94c8be9b680cc6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9ddfd48827bc762c9189f9b7600cfe9200e5c866
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633163"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711406"
 ---
-# <a name="get-project-properties"></a>Proje özelliklerini al
+# <a name="get-project-properties"></a>Proje özelliklerini alma
 
-Bu izlenecek yol, bir araç penceresinde proje özelliklerinin nasıl görüntüleneceğini gösterir.
+Bu gözden geçirme, proje özelliklerini bir araç penceresinde nasıl görüntülenebildiğini gösterir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
 
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>Bir VSıX projesi oluşturmak ve araç penceresi eklemek için
+### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>VSIX Projesi oluşturmak ve bir araç penceresi eklemek için
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. @No__t_1 adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSıX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. Adlı `ProjectPropertiesExtension` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.
 
-2. @No__t_0 adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve  > **Yeni öğe** **Ekle** ' yi seçin. **Yeni öğe Ekle iletişim kutusunda** **görsel C# öğeler**  > **genişletilebilirlik** ' e gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını `ProjectPropertiesToolWindow.cs` değiştirin. Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Özel Araç Penceresi öğesi şablonu ekleyerek `ProjectPropertiesToolWindow`bir araç penceresi ekleyin. Çözüm **Gezgini'nde**proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin. Yeni **Öğe Ekle iletişim kutusunda,** **Visual C# Items** > **Extensibility'e** gidin ve **Özel Araç Penceresi'ni**seçin. İletişim kutusunun altındaki **Ad** alanında, dosya adını ' `ProjectPropertiesToolWindow.cs`da ' olarak değiştirin Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-tool-window.md)
 
-3. Çözümü oluşturun ve hata olmadan derlendiğini doğrulayın.
+3. Çözümü oluşturun ve hatasız derlediğini doğrulayın.
 
-### <a name="to-display-project-properties-in-a-tool-window"></a>Proje özelliklerini bir araç penceresinde görüntüleme
+### <a name="to-display-project-properties-in-a-tool-window"></a>Proje özelliklerini bir araç penceresinde görüntülemek için
 
-1. ProjectPropertiesToolWindowCommand.cs dosyasında, aşağıdaki using yönergelerini ekleyin.
+1. ProjectPropertiesToolWindowCommand.cs dosyasına, yönergeleri kullanarak aşağıdaki yönergeleri ekleyin.
 
     ```csharp
     using EnvDTE;
@@ -44,9 +44,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     ```
 
-2. *ProjectPropertiesToolWindowControl. xaml*dosyasında, var olan düğmeyi kaldırın ve araç kutusundan bir TreeView ekleyin. Ayrıca, Click olay işleyicisini *ProjectPropertiesToolWindowControl.xaml.cs* dosyasından kaldırabilirsiniz.
+2. *ProjectPropertiesToolWindowControl.xaml'da*varolan düğmeyi kaldırın ve Araç Kutusundan bir TreeView ekleyin. Ayrıca ProjectPropertiesToolWindowControl.xaml.cs *dosyasından* tıklama olay işleyicisi kaldırabilirsiniz.
 
-3. *ProjectPropertiesToolWindowCommand.cs*' de, projeyi açmak ve özelliklerini okumak için `ShowToolWindow()` yöntemini kullanın, sonra özellikleri TreeView öğesine ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
+3. *ProjectPropertiesToolWindowCommand.cs,* projeyi `ShowToolWindow()` açmak ve özelliklerini okumak için yöntemi kullanın, ardından özellikleri TreeView'a ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)
@@ -93,10 +93,10 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir.
+4. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnek görünmelidir.
 
-5. Deneysel örnekte bir proje açın.
+5. Deneysel örnekte, bir proje açın.
 
-6. **Görünüm**  > **diğer pencereler** **ProjectPropertiesToolWindow**' e tıklayın.
+6. **Görünüm** > **Diğer Windows'da** **ProjectPropertiesToolWindow'u**tıklatın.
 
-  Araç penceresinde ağaç denetimini, ilk projenin adı ve tüm proje özellikleri ile birlikte görmeniz gerekir.
+  Takım penceresindeki ağaç denetimini ilk projenin adı ve tüm proje özellikleriyle birlikte görmeniz gerekir.

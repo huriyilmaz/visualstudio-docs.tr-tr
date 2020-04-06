@@ -1,5 +1,5 @@
 ---
-title: OPTNAMECHANGEPFN | Microsoft Docs
+title: OPTNAMECHANGEPFN | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - OPTNAMECHANGEPFN callback function
 ms.assetid: 147303f3-c7f1-438a-81b7-db891ea3d076
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6107f48f4680cef9cbb825f4d760f3f0bac1ec1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 603bd08c1ec3832bf732e0b33101076738d009e3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336234"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702246"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
-Bu, bir geri çağırma işlevi çağrısında belirtilen [SccSetOption](../extensibility/sccsetoption-function.md) (seçeneği kullanılarak `SCC_OPT_NAMECHANGEPFN`) ve IDE eklenti kaynak denetimi tarafından yapılan ad değişiklikleri iletişim kurmak için kullanılır.
+Bu, [SccSetOption'a](../extensibility/sccsetoption-function.md) yapılan bir çağrıda belirtilen bir `SCC_OPT_NAMECHANGEPFN`geri arama işlevidir (seçeneği kullanarak) ve kaynak denetimi eklentisi tarafından yapılan ad değişikliklerini IDE'ye geri iletmek için kullanılır.
 
 ## <a name="signature"></a>İmza
 
@@ -35,24 +35,24 @@ typedef void (*OPTNAMECHANGEPFN)(
 ## <a name="parameters"></a>Parametreler
  pvCallerData
 
-[in] Önceki çağrıda belirtilen kullanıcı değeri [SccSetOption](../extensibility/sccsetoption-function.md) (seçeneği kullanılarak `SCC_OPT_USERDATA`).
+[içinde] [SccSetOption'a](../extensibility/sccsetoption-function.md) yapılan önceki bir çağrıda belirtilen `SCC_OPT_USERDATA`kullanıcı değeri (seçeneği kullanarak).
 
  pszOldName
 
-[in] Özgün dosya adı.
+[içinde] Dosyanın orijinal adı.
 
  pszNewName
 
-[in] Dosya adı olarak değiştirildi.
+[içinde] Dosyanın adı değiştirildi.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
  Yok.
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak Denetimi Eklentisi, bir dosya kaynak denetimi işlemi sırasında yeniden adlandırılırsa, IDE bu geri çağırma aracılığıyla ad değişikliği hakkında bildirimde bulunabilir.
+ Bir dosya nın kaynak denetim işlemi sırasında yeniden adlandırılması durumunda, kaynak denetim eklentisi bu geri arama yoluyla ad değişikliği hakkında IDE'ye bildirebilir.
 
- IDE bu geri çağırma desteklemiyorsa değil çağırır [SccSetOption](../extensibility/sccsetoption-function.md) belirlemek için. Eklenti bu geri çağırma desteklemiyor ise, onu döndürür `SCC_E_OPNOTSUPPORTED` gelen `SccSetOption` işlev IDE geri çağırmayı ayarlama girişiminde bulunduğunda.
+ IDE bu geri aramayı desteklemiyorsa, belirtmek için [SccSetOption'ı](../extensibility/sccsetoption-function.md) aramaz. Eklenti bu geri aramayı desteklemiyorsa, IDE `SccSetOption` geri aramayı ayarlamaya çalıştığında işlevden geri döner. `SCC_E_OPNOTSUPPORTED`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)
+- [IDE tarafından uygulanan geri arama işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccSetOption](../extensibility/sccsetoption-function.md)

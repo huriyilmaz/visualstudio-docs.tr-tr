@@ -1,5 +1,5 @@
 ---
-title: Ad öğesi (Visual Studio şablonları) | Microsoft Docs
+title: Ad Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - Name element [Visual Studio project templates]
 ms.assetid: 48788dbf-7da0-4443-8061-aab966fc22c8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b0365740f5ea8ab20ed79d077134afd32356bcc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b2a02dc377bac5f93f8e0365f6f3d9ccb81737a8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344716"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702453"
 ---
-# <a name="name-element-visual-studio-templates"></a>Name öğesi (Visual Studio şablonları)
-İçinde göründüğü gibi şablonunun adını belirtir. **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.
+# <a name="name-element-visual-studio-templates"></a>Ad öğesi (Visual Studio şablonları)
+**Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda görünen şablonun adını belirtir.
 
- \<VSTemplate > \<TemplateData > \<adı >
+ \<VSTemplate \<> ŞablonVeri> \<Adı>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,7 +42,7 @@ ms.locfileid: "66344716"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Package`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio Paketi belirten bir GUID kimliği|
+|`Package`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio paket kimliğini belirten bir GUID.|
 |`ID`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio kaynak kimliğini belirtir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -52,18 +52,18 @@ ms.locfileid: "66344716"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
- Bir metin değeri sürece gereklidir `Package` ve `ID` öznitelikleri kullanılır.
+ Öznitelikleri `Package` ve `ID` öznitelikleri kullanılmadığı sürece bir metin değeri gereklidir.
 
- Metin şablonunun adını sağlar.
+ Metin şablonun adını sağlar.
 
 ## <a name="remarks"></a>Açıklamalar
- `Name` gerekli alt öğesi olan `TemplateData`.
+ `Name`gerekli bir alt `TemplateData`öğedir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir proje şablonu için meta verileri gösterir. bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama.
+ Aşağıdaki örnek, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama için proje şablonu için meta verileri gösterir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,5 +90,5 @@ ms.locfileid: "66344716"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)

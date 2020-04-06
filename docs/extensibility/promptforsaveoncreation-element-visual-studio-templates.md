@@ -1,5 +1,5 @@
 ---
-title: PromptForSaveOnCreation Element (Visual Studio Templates) | Microsoft Docs
+title: PromptForSaveOnCreation Element (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - PromptForSaveOnCreation element [Visual Studio project templates]
 ms.assetid: 75174674-0c3c-4b57-b2fd-6ea8e817b67d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 802bcd357fe82434f7cf5aaf835b2841e6dc8dc5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2e6bbd62120da59da1fb26e671c1aa02f33949f4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335982"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701774"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation öğesi (Visual Studio şablonları)
 
-İçin bir proje kaydetme konumunun kullanıcıya sorulup sorulmayacağını belirtir **yeni proje** bir proje oluştururken iletişim kutusu. Bu öğe ayarlanırsa `true`, kullanıcı bir kayıt istenir konumu. Varsa `false`, bunlar istenmez (diğer bir deyişle, geçici bir Proje oluşturulur).
+Proje oluşturulurken Yeni **Proje** iletişim kutusu üzerinden bir proje kaydet konumu için kullanıcıdan istenip istenmediğini belirtir. Bu öğe , `true`kullanıcı bir kaydet konumu için istenir ayarlanır. İstenmezse `false`(diğer bir süre geçici bir proje oluşturulur).
 
 ```xml
 \<VSTemplate>
@@ -50,20 +50,20 @@ ms.locfileid: "66335982"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin olmalıdır `true` veya `false`, `true` kullanıcı bir kayıt istenir gösteren yeni bir proje oluştururken bir konum.
+ Metin ya `true` da, `false` `true` kullanıcı yeni bir proje oluştururken bir kaydet konumu için isteneceğini belirten olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `PromptForSaveOnCreation` İsteğe bağlı bir öğedir. Varsayılan değer `false` şeklindedir.
+ `PromptForSaveOnCreation`isteğe bağlı bir unsurdur. Varsayılan değer: `false`.
 
- Geçici projeler oluşturmak ve değiştirmek, proje içeriğini diske kaydetmeden projelerdir.
+ Geçici projeler, bu projenin içeriğini diske kaydetmeden oluşturabileceğiniz ve değiştirebileceğiniz projelerdir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte ayarlar `PromptForSaveOnCreation` eşit `false`, projenin geçici bir proje olarak oluşturulmasına izin vermek için belirtir.
+ Aşağıdaki örnek, projenin `PromptForSaveOnCreation` geçici `false`bir proje olarak oluşturulmasına izin vermek için belirten ,'ye eşit değeri ayarlar.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -92,5 +92,5 @@ ms.locfileid: "66335982"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

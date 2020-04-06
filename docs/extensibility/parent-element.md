@@ -1,25 +1,25 @@
 ---
-title: Üst öğe | Microsoft Docs
+title: Üst Öğe | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Parent
 - Parent element (VSCT XML schema)
 ms.assetid: e4624ac8-1b9a-4940-910a-528a661cefad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f64c99f030fa436eb250531ddd5c2f11bcd2bac
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8c018505ba06762bf8426f266b24ee1835313c29
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316933"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702227"
 ---
 # <a name="parent-element"></a>Üst öğe
-Bir düğme veya birleşik giriş kutusunun üst yalnızca bir grup olabilir. Bir menü veya grubun üst herhangi bir menü veya grup olabilir. İçinde bir [CommandPlacement öğesi](../extensibility/commandplacement-element.md), bu öğe gereklidir; diğer tüm durumlarda isteğe bağlıdır. Bu öğe atlanırsa, üst `Group_Undefined:0` kapsanan.
+Bir düğmenin veya açılan kutunun üst öğesi yalnızca bir grup olabilir. Bir menünün veya grubun üst öğesi başka bir menü veya grup olabilir. Bir [Komut Yerleştirme öğesinde,](../extensibility/commandplacement-element.md)bu öğe gereklidir; diğer tüm durumlarda isteğe bağlıdır. Bu öğe atlanırsa, üst ima `Group_Undefined:0` edilecektir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +34,20 @@ Bir düğme veya birleşik giriş kutusunun üst yalnızca bir grup olabilir. Bi
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|GUID|Gerekli. GUID GUID/kimliği komut tanımlayıcısı.|
-|kimlik|Gerekli. Kimliği GUID/kimliği komut tanımlayıcısı.|
+|Guıd|Gereklidir. GUID/ID komut tanımlayıcısının GUID'i.|
+|id|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
 
 ### <a name="child-elements"></a>Alt öğeleri
- Yok.
+ None
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage sağlayan komutlar tümleşik geliştirme ortamı (IDE) temsil eden tüm öğeleri tanımlar. Örneğin, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları.|
-|[Buttons öğesi](../extensibility/buttons-element.md)|Grupları [Button öğesi](../extensibility/button-element.md) öğeleri.|
-|[Menus öğesi](../extensibility/menus-element.md)|VSPackage'ı uygulayan tüm menüleri tanımlar.|
-|[Groups öğesi](../extensibility/groups-element.md)|VSPackage komut gruplarını tanımlar girişleri içerir.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın tümleşik geliştirme ortamına (IDE) sağladığı komutları temsil eden tüm öğeleri tanımlar. Örneğin, menü öğeleri, menüler, araç çubukları ve açılan kutular.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|Grupları [Düğme öğesi](../extensibility/button-element.md) öğeleri.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uyguladığı tüm menüleri tanımlar.|
+|[Gruplar öğesi](../extensibility/groups-element.md)|VSPackage komut gruplarını tanımlayan girişler içerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

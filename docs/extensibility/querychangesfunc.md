@@ -1,5 +1,5 @@
 ---
-title: QUERYCHANGESFUNC | Microsoft Docs
+title: QUERYCHANGESFUNC | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - QUERYCHANGESFUNC callback function
 - QUERYCHANGESDATA structure
 ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ac0003d26296a25659debbab3352e4e37cbf2ec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 30864cae95672f4026084a94c5474d165b124cba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334403"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701642"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
-Bu, bir geri çağırma işlevi tarafından kullanılan [SccQueryChanges](../extensibility/sccquerychanges-function.md) dosya adları topluluğu numaralandırır ve her bir dosyanın durumunu belirlemek için işlem.
+Bu, dosya adlarının bir koleksiyonunu sayısallandırmak ve her dosyanın durumunu belirlemek için [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlemi tarafından kullanılan bir geri arama işlevidir.
 
- `SccQueryChanges` İşlevi işaretçisi ve dosyaların listesini verilen `QUERYCHANGESFUNC` geri çağırma. Kaynak Denetimi Eklentisi, belirli bir liste üzerinde numaralandırır ve listedeki her dosya için durum (Bu geri çağırma) aracılığıyla sağlar.
+ İşlev, `SccQueryChanges` dosyaların bir listesini ve `QUERYCHANGESFUNC` geri arama için bir işaretçi verilir. Kaynak denetimi eklentisi verilen liste üzerinde sayısallar ve listedeki her dosya için durum (bu geri arama yoluyla) sağlar.
 
 ## <a name="signature"></a>İmza
 
@@ -37,23 +37,23 @@ typedef BOOL (*QUERYCHANGESFUNC)(
 ## <a name="parameters"></a>Parametreler
  pvCallerData
 
-[in] `pvCallerData` Parametresi için (IDE) çağıran tarafından geçirilen [SccQueryChanges](../extensibility/sccquerychanges-function.md). Kaynak Denetimi Eklentisi bu değerinin içeriği hakkında hiçbir varsayım olmanız gerekir.
+[içinde] Arayan `pvCallerData` (IDE) tarafından [SccQueryChanges'a](../extensibility/sccquerychanges-function.md)geçirilen parametre. Kaynak denetimi eklentisi bu değerin içeriği hakkında hiçbir varsayımda bulunmamalıdır.
 
  pChangesData
 
-[in] İşaretçi bir [QUERYCHANGESDATA yapısı](#LinkQUERYCHANGESDATA) yapısını açıklayan bir dosyada yapılan değişiklikler.
+[içinde] Bir dosyadaki değişiklikleri açıklayan bir [QUERYCHANGESDATA Yapısı](#LinkQUERYCHANGESDATA) için işaretçi.
 
-## <a name="return-value"></a>Dönüş değeri
- IDE uygun hata kodu döndürür:
+## <a name="return-value"></a>Döndürülen değer
+ IDE uygun bir hata kodu döndürür:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|İşleme devam edin.|
-|SCC_I_OPERATIONCANCELED|İşlemeyi durdur.|
-|SCC_E_xxx|Herhangi bir uygun SCC hata işleme durdurmanız gerekir.|
+|SCC_I_OPERATIONCANCELED|İşlemi durdurun.|
+|SCC_E_xxx|Uygun herhangi bir SCC hatası işlemeyi durdurmalıdır.|
 
-## <a name="LinkQUERYCHANGESDATA"></a> QUERYCHANGESDATA yapısı
- Her dosya için geçirilen yapısı aşağıdaki gibi görünür:
+## <a name="querychangesdata-structure"></a><a name="LinkQUERYCHANGESDATA"></a>QUERYCHANGESDATA Yapısı
+ Her dosya için geçirilen yapı aşağıdaki gibi görünür:
 
 ```cpp
 struct QUERYCHANGESDATA_A
@@ -75,28 +75,28 @@ struct QUERYCHANGESDATA_W
 };
 ```
 
- Boyut (bayt cinsinden) bu yapının dwSize.
+ dwSize Bu yapının boyutu (bayt olarak).
 
- lpDosyaAdı bu öğenin özgün dosya adı.
+ lpFileName Bu öğenin özgün dosya adı.
 
- dwChangeType dosyanın belirten bir durum kodu:
+ dosyanın durumunu belirten dwChangeType Kodu:
 
 |Kod|Açıklama|
 |----------|-----------------|
-|`SCC_CHANGE_UNKNOWN`|Nelerin değiştiğini bildiremez.|
+|`SCC_CHANGE_UNKNOWN`|Neyin değiştiğini söyleyemem.|
 |`SCC_CHANGE_UNCHANGED`|Bu dosya için ad değişikliği yok.|
-|`SCC_CHANGE_DIFFERENT`|Dosya farklı bir kimlik ile ancak veritabanında aynı adı yok.|
-|`SCC_CHANGE_NONEXISTENT`|Dosya veritabanında veya yerel olarak mevcut değil.|
-|`SCC_CHANGE_DATABASE_DELETED`|Dosya, veritabanında silindi.|
-|`SCC_CHANGE_LOCAL_DELETED`|Dosya yerel olarak silindi ancak dosyayı veritabanında devam eder. Bu belirlenemiyorsa dönüş `SCC_CHANGE_DATABASE_ADDED`.|
-|`SCC_CHANGE_DATABASE_ADDED`|Dosya veritabanına eklenen ancak yerel olarak mevcut değil.|
-|`SCC_CHANGE_LOCAL_ADDED`|Dosya, veritabanında mevcut değil ve yeni bir yerel dosya.|
-|`SCC_CHANGE_RENAMED_TO`|Dosya yeniden adlandırılmış veya taşınmış veritabanında `lpLatestName`.|
-|`SCC_CHANGE_RENAMED_FROM`|Dosya yeniden adlandırılmış veya taşınmış veritabanı `lpLatestName`; izlemek, çok pahalı ise dönüş farklı bir bayrak gibi `SCC_CHANGE_DATABASE_ADDED`.|
+|`SCC_CHANGE_DIFFERENT`|Dosya farklı bir kimliğe sahip, ancak aynı ad veritabanında var.|
+|`SCC_CHANGE_NONEXISTENT`|Dosya veritabanında veya yerel olarak yok.|
+|`SCC_CHANGE_DATABASE_DELETED`|Dosya veritabanında silindi.|
+|`SCC_CHANGE_LOCAL_DELETED`|Dosya yerel olarak silindi, ancak dosya veritabanında hala var. Bu belirlenemiyorsa, `SCC_CHANGE_DATABASE_ADDED`geri dönün.|
+|`SCC_CHANGE_DATABASE_ADDED`|Dosya veritabanına eklendi, ancak yerel olarak yok.|
+|`SCC_CHANGE_LOCAL_ADDED`|Dosya veritabanında yok ve yeni bir yerel dosyadır.|
+|`SCC_CHANGE_RENAMED_TO`|Dosya nın adı yeniden adlandırıldı `lpLatestName`veya veritabanında ' olarak taşındı.|
+|`SCC_CHANGE_RENAMED_FROM`|Dosya yeniden adlandırıldı veya veritabanında `lpLatestName`taşındı; bu izlemek için çok pahalı ise, farklı `SCC_CHANGE_DATABASE_ADDED`bir bayrak döndürün, gibi.|
 
- lpLatestName bu öğe için geçerli dosya adı.
+ lpLatestName Bu öğenin geçerli dosya adı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)
+- [IDE tarafından uygulanan geri arama işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccQueryChanges](../extensibility/sccquerychanges-function.md)
 - [Hata kodları](../extensibility/error-codes.md)

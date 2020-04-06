@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolSearchEvent2 | Microsoft Docs
+title: IDebugSymbolSearchEvent2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugSymbolSearchEvent2
 ms.assetid: 9b946d55-ff85-44eb-b40a-efbf8282eafd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed7108c9e1349b01115bed8a6b2a77a3eaa71f45
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cbe99422e506fb86b0a7e1d9d3242783f3258e6a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320385"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718793"
 ---
 # <a name="idebugsymbolsearchevent2"></a>IDebugSymbolSearchEvent2
-Bu arabirim, hata ayıklama gerçekleştirilen modül için hata ayıklama sembolleri yüklendiğini göstermek için hata ayıklama altyapısı (DE) tarafından gönderilir.
+Bu arabirim hata ayıklama motoru (DE) tarafından, hata ayıklanan bir modülün hata ayıklama sembollerinin yüklendiğini belirtmek üzere gönderilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,30 +28,30 @@ Bu arabirim, hata ayıklama gerçekleştirilen modül için hata ayıklama sembo
 IDebugSymbolSearchEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- DE bir modülün sembolleri yüklenmiş olan bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde. SDM kullanan [QueryInterface](/cpp/atl/queryinterface) erişimi `IDebugEvent2` arabirimi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bir modülün sembollerinin yüklendiğini bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır. SDM `IDebugEvent2` [arabirime](/cpp/atl/queryinterface) erişmek için QueryInterface kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- KODU oluşturur ve bu olay bir modülün sembolleri yüklenmiş olan rapor nesnesine gönderir. Olay kullanılarak gönderilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi.
+ DE, bir modülün sembollerinin yüklendiğini bildirmek için bu olay nesnesini oluşturur ve gönderir. Olay, sdm tarafından verilen [iDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- `IDebugSymbolSearchEvent2` Arabirimi aşağıdaki yöntemi kullanıma sunar.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Arabirim `IDebugSymbolSearchEvent2` aşağıdaki yöntemi ortaya çıkarır.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)|Sembol Arama sonuçlarıyla ilgili bilgileri alır.|
+|[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)|Sembol aramasonuçları hakkında bilgi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Semboller yüklenemedi olsa bile, bu olay gönderilir. Çağırma `IDebugSymbolSearchEvent2::GetSymbolSearchInfo` modülü gerçekten simgeleri olup olmadığını belirlemek için bu olay işleyicisi sağlar.
+ Bu olay, semboller yüklenmese bile gönderilir. Arama, `IDebugSymbolSearchEvent2::GetSymbolSearchInfo` bu olayın işleyicisinin modülün gerçekten herhangi bir sembole sahip olup olmadığını belirlemesine olanak tanır.
 
- Visual Studio genellikle kullanır bu olay semboller yüklendi durumunu güncelleştirmek için **modülleri** penceresi.
+ Visual Studio genellikle **modüller** penceresinde yüklenen sembollerin durumunu güncelleştirmek için bu olayı kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

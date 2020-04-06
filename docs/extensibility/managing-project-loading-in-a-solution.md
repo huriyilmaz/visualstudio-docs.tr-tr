@@ -1,34 +1,34 @@
 ---
-title: Bir çözümde proje yüklemeyi yönetme | Microsoft Docs
+title: Çözümde Proje Yüklemeyi Yönetme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions, managing project loading
 ms.assetid: 097c89d0-f76a-4aaf-ada9-9a778bd179a0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a80430c4a5dcf5526445275b89fa2da7f02f5529
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 21cd5e7e557e795db49aea7a14e8e4cc7caa0422
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340595"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702726"
 ---
 # <a name="manage-project-loading-in-a-solution"></a>Bir çözümde proje yüklemeyi yönetme
-Visual Studio çözümleri, çok sayıda proje içerebilir. Varsayılan Visual Studio çözüm açıldığında bir çözümdeki tüm projeleri yüklemek ve bunların tümünü yükleme işlemini tamamlayana kadar projelerinden herhangi birinin erişmek kullanıcı izin vermeyecek şekilde davranışıdır. Proje yükleme işlemi iki dakikadan fazla en son, yüklenen projelerin sayısını ve projeleri toplam sayısını gösteren bir ilerleme çubuğu görüntülenir. Bir çözümde birden çok proje ile çalışırken, kullanıcı projeleri kaldırma, ancak bu yordamı bazı dezavantajları vardır: bir çözümü yeniden derle komutunu bir parçası olarak yüklenmemiş projeler oluşturulmadı ve IntelliSense açıklamaları türleri ve üyeleri kapalı projeleri görüntülenmez.
+Visual Studio çözümleri çok sayıda proje içerebilir. Varsayılan Visual Studio davranışı, çözüm açıldığında tüm projeleri bir çözüme yüklemek ve tüm yüklemeyi bitirene kadar kullanıcının projelerden herhangi birini erişmesine izin vermemektir. Proje yükleme işlemi iki dakikadan fazla sürecekse, yüklenen proje sayısını ve toplam proje sayısını gösteren bir ilerleme çubuğu görüntülenir. Kullanıcı birden çok projeyle bir çözümde çalışırken projeleri boşaltabilir, ancak bu yordamın bazı dezavantajları vardır: boşaltılan projeler Yeniden Oluşturma Çözümü komutunun bir parçası olarak oluşturulmaz ve kapalı projelerin türlerinin ve üyelerinin IntelliSense açıklamaları görüntülenmez.
 
- Geliştiriciler, çözüm yükleme sürelerinizi azaltabilir ve Proje Yöneticisi bir çözüm yük oluşturarak yükleme davranışını yönetin. Çözüm yükleme yöneticisi projeleri arka plan yapı başlatmadan önce yüklendiğinden emin olun, diğer arka plan görevleri tamamlanana kadar arka planda yükleniyor gecikme ve diğer proje yükü yönetim görevlerini gerçekleştirebilirsiniz.
+ Geliştiriciler, bir çözüm yük yöneticisi oluşturarak çözüm yükleme sürelerini azaltabilir ve proje yükleme davranışını yönetebilir. Çözüm yük yöneticisi, arka plan oluşturmayı başlatmadan önce projelerin yüklendiğinden emin olabilir, diğer arka plan görevleri tamamlanana kadar arka plan yüklemesini geciktirebilir ve diğer proje yük yönetimi görevlerini gerçekleştirebilir.
 
-## <a name="create-a-solution-load-manager"></a>Çözüm yükü Yöneticisi oluşturma
- Geliştiriciler oluşturabileceğiniz bir çözüm yükü Yöneticisi uygulayarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager> ve Visual Studio çözüm yükleme yöneticisi etkin olduğunu bildiren.
+## <a name="create-a-solution-load-manager"></a>Çözüm yük yöneticisi oluşturma
+ Geliştiriciler Visual Studio'ya çözüm <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager> yük yöneticisinin etkin olduğunu uygulayarak ve tavsiye ederek bir çözüm yük yöneticisi oluşturabilirler.
 
-### <a name="activate-a-solution-load-manager"></a>Bir çözüm Yükleme Yöneticisi'ni etkinleştir
- Çözüm yükleme etkinleştirmek istediğiniz zaman Visual Studio bildirmek için visual Studio Yöneticisi belirli bir anda yalnızca bir çözüm yükleme yöneticisi sağlar. İkinci bir çözüm yükleme yöneticisi daha sonra etkinleştirilmişse, çözüm yükleme yöneticinize kesilir.
+### <a name="activate-a-solution-load-manager"></a>Çözüm yük yöneticisini etkinleştirme
+ Visual Studio belirli bir zamanda yalnızca bir çözüm yük yöneticisine izin verir, bu nedenle çözüm yük yöneticinizi etkinleştirmek istediğinizde Visual Studio'ya tavsiyede bulunmalısınız. Daha sonra ikinci bir çözüm yük yöneticisi etkinleştirilirse, çözüm yük yöneticinizin bağlantısı kesilir.
 
- Edinmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> ayarlayın ve hizmet [__VSPROPID4. VSPROPID_ActiveSolutionLoadManager](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_ActiveSolutionLoadManager>) özelliği:
+ <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> Hizmeti almalı ve [__VSPROPID4 ayarlamalısınız. VSPROPID_ActiveSolutionLoadManager](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_ActiveSolutionLoadManager>) özelliği:
 
 ```csharp
 IVsSolution pSolution = GetService(typeof(SVsSolution)) as IVsSolution;
@@ -36,58 +36,58 @@ object objLoadMgr = this;   //the class that implements IVsSolutionManager
 pSolution.SetProperty((int)__VSPROPID4.VSPROPID_ActiveSolutionLoadManager, objLoadMgr);
 ```
 
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnDisconnect%2A> Visual Studio kapatılıyor olduğunda veya farklı bir paket etkin çözüm yükü Yöneticisi çağırarak edildiğinde yöntemi çağrıldığında <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.SetProperty%2A> ile [__VSPROPID4. VSPROPID_ActiveSolutionLoadManager](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_ActiveSolutionLoadManager>) özelliği.
+ Bu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnDisconnect%2A> yöntem, Visual Studio kapatıldığında veya __VSPROPID4 arayarak etkin çözüm yük yöneticisi olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.SetProperty%2A> farklı bir paket devraldığında çağrılır. [ VSPROPID_ActiveSolutionLoadManager](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_ActiveSolutionLoadManager>) özelliği.
 
-#### <a name="strategies-for-different-kinds-of-solution-load-manager"></a>Çözüm yükleme yöneticisi çeşitli stratejileri
- Çözüm yükü yöneticileri yönetmek için gereken çözümlerinin türlerine bağlı olarak, farklı şekillerde uygulayabilir.
+#### <a name="strategies-for-different-kinds-of-solution-load-manager"></a>Farklı türde çözüm yük yöneticisi için stratejiler
+ Çözüm yük yöneticilerini, yönetmeleri gereken çözüm türlerine bağlı olarak farklı şekillerde uygulayabilirsiniz.
 
- Genel yükleme çözümü yönetmek için çözüm yükleme yöneticisi geliyorsa, VSPackage bir parçası olarak uygulanabilir. Paket ekleyerek otomatik yükleme için ayarlanmalıdır <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> değeriyle VSPackage'ı üzerinde <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionOpening_guid>. Çözüm yükü Yöneticisi'ni, sonra etkinleştirilebilir <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yöntemi.
+ Çözüm yük yöneticisi genel olarak çözüm yüklemesini yönetmek için yapılmışsa, bir VSPackage'ın parçası olarak uygulanabilir. Paket, VSPackage'a değeri olan <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> paket eklenerek otomatik <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionOpening_guid>olarak yüklenmeye ayarlanmalıdır. Çözüm yük yöneticisi daha sonra <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yöntemde etkinleştirilebilir.
 
 > [!NOTE]
-> Autoloading paketler hakkında daha fazla bilgi için bkz. [VSPackage yükleme](../extensibility/loading-vspackages.md).
+> Otomatik yükleme paketleri hakkında daha fazla bilgi için [Yükleme VSPackages'e](../extensibility/loading-vspackages.md)bakın.
 
- Visual Studio etkinleştirilmesi için yalnızca son çözüm yükleme yöneticisi algılar olduğundan, genel çözüm yük yöneticileri olup var olan bir yükleme yöneticisi kendilerini etkinleştirmeden önce her zaman algılanmalıdır. Çağırma varsa `GetProperty()` çözüm Service'i [__VSPROPID4. VSPROPID_ActiveSolutionLoadManager](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_ActiveSolutionLoadManager>) döndürür `null`, hiçbir etkin çözüm yükü Yöneticisi yoktur. Null döndürmezse, nesnenin, çözüm yükleme yöneticisi ile aynı olup olmadığını denetleyin.
+ Visual Studio etkinleştirilecek yalnızca son çözüm yük yöneticisini tanıdığından, genel çözüm yük yöneticileri kendilerini etkinleştirmeden önce her zaman varolan bir yük yöneticisi olup olmadığını tespit etmelidir. Çözüm `GetProperty()` hizmetini __VSPROPID4 için [çağırıyorsanız. VSPROPID_ActiveSolutionLoadManager](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_ActiveSolutionLoadManager>) `null`döndürür, etkin çözüm yük yöneticisi yoktur. Null döndürmezse, nesnenin çözüm yük yöneticinizle aynı olup olmadığını kontrol edin.
 
- VSPackage'ı yalnızca birkaç çözüm türlerini yönetmek için çözüm yükleme yöneticisi geliyorsa, çözüm yükleme olaylarının abone olabilir (çağırarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A>) ve olay işleyicisi <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A> çözüm yük Yöneticisi'ni etkinleştirmek için.
+ Çözüm yük yöneticisi yalnızca birkaç tür çözümü yönetmek için yapılmışsa, VSPackage çözüm <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A>yükleme olaylarına abone olabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A> (arayarak), ve çözüm yük yöneticisini etkinleştirmek için olay işleyicisini kullanabilir.
 
- Yalnızca özel çözümler yönetmek için çözüm yükleme yöneticisi geliyorsa, etkinleştirme bilgilerini çözüm dosyasının bir parçası olarak çağırarak kalıcı yapılabilecek <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> öncesi çözüm bölümü için.
+ Çözüm yük yöneticisi yalnızca belirli çözümleri yönetmek için direnilirse, etkinleştirme bilgileri <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> çözüm öncesi bölümü arayarak çözüm dosyasının bir parçası olarak kalıcı hale alınabilir.
 
- Belirli bir çözüm yük yöneticileri devre dışı kendileri de <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents.OnAfterCloseSolution%2A> diğer çözüm yük yöneticileri ile çakışmaması sırayla olay işleyicisi.
+ Belirli çözüm yük yöneticileri, diğer <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents.OnAfterCloseSolution%2A> çözüm yük yöneticileriyle çakışmamak için olay işleyicisinde kendilerini devre dışı bırakmalıdır.
 
- Genel proje yükü özellikleri (örneğin, bir seçenekler sayfası üzerinde ayarlanan özellikleri) kalıcı hale getirmek için çözüm Yükleme Yöneticisi'nde etkinleştirebilirsiniz. yalnızca bir çözüm yükleme yöneticisi gerekiyorsa <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> olay işleyicisi, çözüm özellikleri ayarı daha sonra kalıcı olması Çözüm yükleme yöneticisi devre dışı bırakın.
+ Yalnızca genel proje yük özelliklerini (örneğin, Seçenekler sayfasında ayarlanan özellikler) sürdürmek için bir çözüm yük <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> yöneticisine ihtiyacınız varsa, olay işleyicisindeki çözüm yük yöneticisini etkinleştirebilir, çözüm özelliklerindeki ayarı devam ettirebilirsiniz ve çözüm yük yöneticisini devre dışı bırakabilirsiniz.
 
-## <a name="handle-solution-load-events"></a>Çözüm yükleme olaylarını işleme
- Çözüm yükü olaylarına abone olmak için çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A> çözüm Yükleme Yöneticisi'ni etkinleştirdiğinizde. Uygularsanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents>, özellikleri yükleniyor farklı projesiyle ilgili olaylara yanıt verebilir.
+## <a name="handle-solution-load-events"></a>Çözüm yük olaylarını işleme
+ Çözüm yükleme olaylarına abone <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A> olmak için, çözüm yük yöneticinizi etkinleştirdiğinizde arayın. Uygularsanız, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents>farklı proje yükleme özellikleriyle ilgili olaylara yanıt verebilirsiniz.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A>: Bir çözüm açılmadan önce bu olay harekete geçirilir.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A>: Bu olay, çözüm açılmadan önce ateşlenir.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeBackgroundSolutionLoadBegins%2A>: Çözüm tamamen yüklendikten, ancak önce arka plan proje yüklenirken yeniden başladıktan sonra bu olay harekete geçirilir.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeBackgroundSolutionLoadBegins%2A>: Bu olay, çözüm tamamen yüklendikten sonra çalıştırılır, ancak arka plan proje yüklemesi yeniden başlamadan önce.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: Bir çözüm tam olarak başlangıçta yüklendikten sonra var olup olmadığını bir çözüm yükleme yöneticisi bu olay harekete geçirilir. Ayrıca arka plan yük ya da isteğe bağlı yükledikten sonra çözüm tam yüklü durumuna geldiğinde tetiklenir. Aynı anda <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> yeniden etkinleştirilir.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: Bu olay, bir çözüm yük yöneticisi olup olmadığı başlangıçta tam olarak yüklendikten sonra ateşlenir. Ayrıca, çözelti tamamen yüklendiğinde arka plan yükü veya talep yükünden sonra da çalıştırılır. Aynı zamanda, <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> yeniden etkinleştirilir.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: Bir proje (veya projeleri) yüklenmesini önce bu olay harekete geçirilir. Projeleri yüklenmeden önce diğer arka plan işlemleri tamamlandığından emin olmak için ayarlanmış `pfShouldDelayLoadToNextIdle` için **true**.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: Bu olay, bir projenin (veya projenin) yüklenmesinden önce ateşlenir. Diğer arka plan işlemlerinin projeler yüklenmeden önce `pfShouldDelayLoadToNextIdle` tamamlandığından emin olmak **için, doğru**olarak ayarlayın.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: Projelerin bir toplu iş yaklaşık olarak yüklenmesi için olduğunda, bu olay harekete geçirilir. Varsa `fIsBackgroundIdleBatch` projeler varsa arka planda; yüklenecek true ise `fIsBackgroundIdleBatch` projeleri, örneğin kullanıcı, beklemedeki bir proje Çözüm Gezgini'nde genişletir, zaman uyumlu olarak bir kullanıcı isteği sonucunda yüklenecek false olur. Aksi takdirde yapılması gereken pahalı işlerini gerçekleştirmek için bu olay işleyebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: Bu olay, bir dizi proje yüklenmek üzereyken ateşlenir. Doğruysa, `fIsBackgroundIdleBatch` projeler arka planda yüklenecektir; `fIsBackgroundIdleBatch` yanlışsa, örneğin kullanıcı Çözüm Gezgini'nde bekleyen bir projeyi genişletiyorsa, projeler kullanıcı isteği nin bir sonucu olarak eşzamanlı olarak yüklenir. Aksi takdirde yapılması gereken pahalı işler yapmak için bu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>olayı işleyebilir.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterLoadProjectBatch%2A>: Projeleri toplu yüklendikten sonra bu olay harekete geçirilir.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterLoadProjectBatch%2A>: Bu olay, bir dizi proje yüklendikten sonra ateşlenir.
 
-## <a name="detect-and-manage-solution-and-project-loading"></a>Algılama ve çözüm ve proje yüklemeyi yönetme
- Projeler ve çözümler yükleme durumunu saptamak amacıyla çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A> aşağıdaki değerlerle:
+## <a name="detect-and-manage-solution-and-project-loading"></a>Çözümü ve proje yüklemeyi algılama ve yönetme
+ Projelerin ve çözümlerin yük durumunu saptamak için aşağıdaki değerlerle arayın: <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A>
 
-- [__VSPROPID4. VSPROPID_IsSolutionFullyLoaded](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_IsSolutionFullyLoaded>): `var` döndürür `true` çözüm ve tüm projeleri, aksi takdirde yüklü olduğunda `false`.
+- [__VSPROPID4. VSPROPID_IsSolutionFullyLoaded](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_IsSolutionFullyLoaded>) `var` : `true` çözüm ve tüm projeleri yüklenirse, aksi takdirde `false`geri döner.
 
-- [__VSPROPID4. VSPROPID_IsInBackgroundIdleLoadProjectBatch](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_IsInBackgroundIdleLoadProjectBatch>): `var` döndürür `true` projelerin bir batch şu anda arka planda, aksi takdirde yüklenirken, `false`.
+- [__VSPROPID4. VSPROPID_IsInBackgroundIdleLoadProjectBatch](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_IsInBackgroundIdleLoadProjectBatch>) `var` : `true` bir dizi proje şu anda arka `false`planda yükleniyorsa, aksi takdirde döndürür.
 
-- [__VSPROPID4. VSPROPID_IsInSyncDemandLoadProjectBatch](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_IsInSyncDemandLoadProjectBatch>): `var` döndürür `true` projelerin bir batch şu anda zaman uyumlu olarak kullanıcı komutu ya da diğer açık yük sonucunda Aksi takdirde yüklenirken, `false`.
+- [__VSPROPID4. VSPROPID_IsInSyncDemandLoadProjectBatch](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4.VSPROPID_IsInSyncDemandLoadProjectBatch>) `var` : `true` Bir dizi proje şu anda bir kullanıcı komutu veya diğer açık `false`yük, aksi takdirde eşzamanlı olarak yükleniyorsa döndürür.
 
-- [__VSPROPID2. VSPROPID_IsSolutionClosing](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2.VSPROPID_IsSolutionClosing>): `var` döndürür `true` çözümü şu anda, aksi takdirde kapatılıyorsa `false`.
+- [__VSPROPID2. VSPROPID_IsSolutionClosing](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2.VSPROPID_IsSolutionClosing>) `var` : `true` çözüm şu anda kapalıysa döndürür, aksi takdirde. `false`
 
-- [__VSPROPID. VSPROPID_IsSolutionOpening](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID.VSPROPID_IsSolutionOpening>): `var` döndürür `true` çözüm şu anda, aksi takdirde açıldığında `false`.
+- [__VSPROPID. VSPROPID_IsSolutionOpening](<xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID.VSPROPID_IsSolutionOpening>) `var` : `true` bir çözüm şu anda `false`açılıyorsa döndürür, aksi takdirde.
 
-Ayrıca projeler ve çözümler aşağıdaki yöntemlerden birini çağırarak yüklendiğinden emin olun:
+Ayrıca, aşağıdaki yöntemlerden birini arayarak projelerin ve çözümlerin yüklendiğinden emin olabilirsiniz:
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: Bu yöntemin çağrılması yöntemi döndürmeden önce yüklemek için bir çözüm içindeki projeleri zorlar.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: bu yöntem çağrı letme dönmeden önce yüklemek için bir çözüm projeleri zorlar.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: Bu yöntemi çağırmadan zorlayan projelerde `guidProject` yöntemi döndürmeden önce yüklenecek.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: bu yöntem çağrılması, metot dönmeden önce projeleri `guidProject` yüklemeye zorlar.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: Bu yöntemi çağırmadan, projede zorlar `guidProjectID` yöntemi döndürmeden önce yüklenecek.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: bu yöntem in `guidProjectID` anarak yöntem dönmeden önce projeyi yüklemeye zorlar.

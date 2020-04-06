@@ -1,60 +1,60 @@
 ---
-title: VSCT XML Şeması Başvurusu | Microsoft Docs
+title: VSCT XML Şema Referans | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio command table configuration files (VSCT), XML schema
 - VSCT XML schema elements
 ms.assetid: 49e7efae-e713-4762-a824-96fdaf92cdc9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94197efeadf8cd7148cbc41f3f71df625718bba7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 923a0c4b64fcae3a409a2298d6d481f6e1bb14db
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350726"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697915"
 ---
-# <a name="vsct-xml-schema-reference"></a>VSCT XML Şeması Başvurusu
-Komut tablosu derleyici şema öğelerinin bir tablo ile izin verilen alt öğeler ve öznitelikler için her sağlar.
+# <a name="vsct-xml-schema-reference"></a>VSCT XML şema referansı
+Komut Tablosu Derleyicisi şema öğeleri tablosunu sağlar, her biri için izin verilen alt öğeler ve öznitelikler.
 
- Bir XML tabanlı komut tablosu (.vsct) yapılandırma dosyası tümleşik geliştirme ortamı (IDE) bir VSPackage sağlayan komut öğeleri tanımlar. Menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları bu öğeleri içerir.
+ XML tabanlı komut tablosu yapılandırması (.vsct) dosyası, vspackage'ın tümleşik geliştirme ortamına (IDE) sağladığı komut öğelerini tanımlar. Bu öğeler menü öğeleri, menüler, araç çubukları ve açılan kutuları içerir.
 
 > [!NOTE]
-> VSCT derleyici bir önişlemci .vsct dosyası üzerinde çalıştırabilirsiniz. Bu genellikle olduğundan C++ önişlemcisi tanımlayabileceğiniz içerir ve makroları, C++ dosyalarında kullanılan aynı söz dizimine sahip. Bu örnekler .vsct sağlanan dosya **yeni proje** sihirbaz VSPackage projesi oluşturur.
+> VSCT derleyicisi .vsct dosyasında bir önişlemci çalıştırabilir. Bu genellikle C++ önişlemcisi olduğundan, C++ dosyalarında kullanılan sözdizimiyle aynı olan içerir ve makroları tanımlayabilirsiniz. Bunun örnekleri, **Yeni Proje** sihirbazının VSPackage projesi için oluşturduğu .vsct dosyasında verilmiştir.
 
 ## <a name="optional-elements"></a>İsteğe bağlı öğeler
- Bazı VSCT öğeler isteğe bağlıdır. Varsa bir `Parent` bağımsız değişken belirtilmezse, Group_Undefined:0 Kapsanan. Varsa bir `Icon` bağımsız değişkeni belirtilmezse, guidOfficeIcon:msotcidNoIcon kapsanan. Bir kısayol tuşu tanımlandığında, genellikle kullanılmaz, öykünme isteğe bağlıdır.
+ Bazı VSCT öğeleri isteğe bağlıdır. Bir `Parent` bağımsız değişken belirtilmemişse, Group_Undefined:0 ima edilecektir. Bir `Icon` bağımsız değişken belirtilmemişse, guidOfficeIcon:msotcidNoIcon ima edilecektir. Bir kısayol tuşu tanımlandığında, genellikle kullanılmayan öykünme isteğe bağlıdır.
 
- Bit eşlem öğeleri katıştırılmış derleme zamanında bit eşlem şeridinde konumunu belirterek `href` bağımsız değişken. Bit eşlem Şerit birleştirme sırasında kopyalanan yerine DLL kaynaklarından ayıklanan. Olduğunda bir `href` bağımsız değişkeni sağlanmışsa `usedList` bağımsız değişken isteğe bağlı olur ve tüm yuvalarda bit eşlem Şerit kullanılan olarak kabul edilir.
+ Bitmap `href` öğeleri, bağımsız değişkendeki biteş şeridinin konumunu belirterek derleme zamanında katıştırılabilir. Bitmap şeridi, DLL'nin kaynaklarından ayıklamak yerine birleştirme sırasında kopyalanır. Bağımsız `href` değişken sağlandığında, `usedList` bağımsız değişken isteğe bağlıdır ve biteş şeritteki tüm yuvalar kullanılmış olarak kabul edilir.
 
- Simgesel adlar kullanarak tüm GUID ve ID değerleri tanımlanması gerekir. Bu adlar üstbilgi dosyalarında veya VSCT tanımlanabilir \<sembolleri > bölümler. Simgesel adlar aracılığıyla dahil yerel olmalıdır \<Ekle > öğelerini, veya başvurulan \<Extern > öğeleri. Bir simgesel ad içinde belirtilen bir üstbilgi dosyasından içeri aktarılan bir \<Extern > basit desenini izliyorsa öğesi #define SEMBOL değeri. Bu sembol önceden tanımlanmış olduğu sürece değeri başka bir sembol olabilir. GUID tanımları OLE ya da C++ biçimi izlemelidir. Kimliği değerleri aşağıdaki satırlarda gösterilen ondalık basamak veya 0 x tarafından öncelenen onaltılık basamak olabilir:
+ Tüm GUID ve kimlik değerleri sembolik adlar kullanılarak tanımlanmalıdır. Bu adlar üstbilgi dosyalarında veya \<VSCT Sembolleri> bölümlerinde tanımlanabilir. Sembolik adlar yerel olmalı, \<> öğeleri ni içerme \<yoluyla dahil edilmeli veya Extern> öğeleri tarafından başvurulmalıdır. Sembolik bir \<ad, #define SEMBOL DEĞER'in basit desenini takip ediyorsa, Extern> öğesinde belirtilen bir üstbilgi dosyasından alınır. Bu sembol daha önce tanımlandığı sürece değer başka bir sembol olabilir. GUID tanımları OLE veya C++ biçimini izlemelidir. Kimlik değerleri, aşağıdaki satırlarda gösterildiği gibi, 0x'ten önce gelen ondalık basamaklar veya hexadecimal basamaklar olabilir:
 
 - {6D484634-E53D-4a2c-ADCB-55145C9362C8}
 
 - { 0x6d484634, 0xe53d, 0x4a2c, { 0xad, 0xcb, 0x55, 0x14, 0x5c, 0x93, 0x62, 0xc8 } }
 
-  XML açıklamaları kullanılabilir, ancak bunları atmak gidiş dönüş grafik kullanıcı arabirimi (GUI) araçları. İçeriğini \<ek açıklama > öğeleri biçim bağımsız olarak korunmasını garanti edilir.
+  XML yorumları kullanılabilir, ancak gidiş-dönüş grafik kullanıcı arabirimi (GUI) araçları bunları atabilir. Ek açıklama \<> öğelerinin içeriği, biçime bakılmaksızın korunmalıdır.
 
 ## <a name="schema-hierarchy"></a>Şema hiyerarşisi
- .Vsct dosyası şu temel öğelere sahiptir.
+ Bir .vsct dosyasıaşağıdaki ana öğeleri içerir.
 
 - [CommandTable öğesi](../extensibility/commandtable-element.md)
 
-- [Extern öğesi](../extensibility/extern-element.md)
+- [Extern elemanı](../extensibility/extern-element.md)
 
-- [Öğe Ekle](../extensibility/include-element.md)
+- [Öğe ekle](../extensibility/include-element.md)
 
-- [Define öğesi](../extensibility/define-element.md)
+- [Öğeyi tanımla](../extensibility/define-element.md)
 
-- [Commands öğesi](../extensibility/commands-element.md)
+- [Komutlar öğesi](../extensibility/commands-element.md)
 
-- [CommandPlacements öğesi](../extensibility/commandplacements-element.md)
+- [Komut Yerleşimleri öğesi](../extensibility/commandplacements-element.md)
 
-- [VisibilityConstraints öğesi](../extensibility/visibilityconstraints-element.md)
+- [GörünürlükKısıtlamalar öğesi](../extensibility/visibilityconstraints-element.md)
 
 - [KeyBindings öğesi](../extensibility/keybindings-element.md)
 
@@ -62,16 +62,16 @@ Komut tablosu derleyici şema öğelerinin bir tablo ile izin verilen alt öğel
 
 - [Üst öğe](../extensibility/parent-element.md)
 
-- [Icon öğesi](../extensibility/icon-element.md)
+- [Simge öğesi](../extensibility/icon-element.md)
 
-- [Strings öğesi](../extensibility/strings-element.md)
+- [Dizeleri öğesi](../extensibility/strings-element.md)
 
-- [Command Flag öğesi](../extensibility/command-flag-element.md)
+- [Komut Bayrağı öğesi](../extensibility/command-flag-element.md)
 
-- [Symbols öğesi](../extensibility/symbols-element.md)
+- [Semboller öğesi](../extensibility/symbols-element.md)
 
-- [Koşullu öznitelikleri](../extensibility/vsct-xml-schema-conditional-attributes.md)
+- [Koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Vspackage'larda komut yönlendirme](../extensibility/internals/command-routing-in-vspackages.md)
+- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages komut yönlendirme](../extensibility/internals/command-routing-in-vspackages.md)

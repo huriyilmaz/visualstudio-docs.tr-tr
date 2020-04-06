@@ -1,5 +1,5 @@
 ---
-title: ProvideDefaultName öğesi (Visual Studio şablonları) | Microsoft Docs
+title: ProvideDefaultName Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - ProvideDefaultName element [Visual Studio project templates]
 ms.assetid: 7b0e7b20-fd6b-42e2-81d0-e5100cea0528
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2a19d6a93b709128e8750b6cea82d067b77db98
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 192716198f605a5f6b4f62730e84dcf83b4229cc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335814"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701711"
 ---
-# <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName öğesi (Visual Studio şablonları)
-Belirtir olup olmadığını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje sistemi, şablon için bir varsayılan ad oluşturacağını **Yeni Öğe Ekle** veya **yeni proje** iletişim kutusu.
+# <a name="providedefaultname-element-visual-studio-templates"></a>DefaultName öğesi sağlama (Visual Studio şablonları)
+Proje sisteminin **Yeni Öğe Ekle** veya Yeni Proje iletişim kutusunda şablon için varsayılan bir ad oluşturup oluşturmayacağını belirtir. **New Project** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]
 
- \<VSTemplate > \<TemplateData > \<ProvideDefaultName >
+ \<VSTemplate \<> ŞablonVeri> \<VarsayılanAd>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,22 +44,22 @@ Belirtir olup olmadığını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_m
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin olmalıdır `true` veya `false`, şablon için varsayılan bir ad oluşturmak gerekip gerekmediğini belirten **Yeni Öğe Ekle** veya **yeni proje** iletişim kutusu.
+ Yeni Öğe Veya `true` `false` **Yeni Proje** **Ekle** iletişim kutusunda şablon için varsayılan bir ad oluşturup oluşturmayacağını belirten metin veya metin olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `ProvideDefaultName` İsteğe bağlı bir öğedir. Varsayılan değer `true` şeklindedir.
+ `ProvideDefaultName`isteğe bağlı bir unsurdur. Varsayılan değer: `true`.
 
- Varsa `ProvideDefaultName` öğesi `false`, **adı** kutularını **Yeni Öğe Ekle** ve **yeni proje** iletişim kutuları, bir değer içermemelidir `<Enter_name>`.
+ `ProvideDefaultName` Öğe `false`ise, **Yeni Öğe Ekle** ve **Yeni Proje** iletişim kutularının `<Enter_name>` **Ad** kutuları değeri içerir.
 
- Kullanım [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) projenin varsayılan adı belirtin veya öğesi için öğe **Yeni Öğe Ekle** ve **yeni proje** iletişim kutuları. Zaman değerini `ProvideDefaultName` öğesi `true`, Java'daki `DefaultName` öğesi projeleri için iletişim kutusu şablonun adı, diğer bir deyişle, değerini doldurur [adı](../extensibility/name-element-visual-studio-templates.md) öğesi.
+ **Yeni Öğe Ekle** ve **Yeni Proje** iletişim kutularında projenin veya öğenin varsayılan adını belirtmek için Varsayılan [Ad](../extensibility/defaultname-element-visual-studio-templates.md) öğesini kullanın. `ProvideDefaultName` Öğenin değeri `true`olduğunda, projeler için `DefaultName` öğenin ihmal şablonun adı ile iletişim kutusu nu doldurur, yani [Ad](../extensibility/name-element-visual-studio-templates.md) öğesinden değer.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek kod `ProvideDefaultName` öğesine `false`.
+ Aşağıdaki kod örneği `ProvideDefaultName` öğeyi `false`.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -78,5 +78,5 @@ Belirtir olup olmadığını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_m
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

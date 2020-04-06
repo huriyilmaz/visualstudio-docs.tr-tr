@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo | Microsoft Docs
+title: IDebugStackFrame2::GetInfo | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetInfo
 ms.assetid: 19c6870b-b94e-453c-bf19-82ce95b79d26
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad560386991a0545510e1b74a140d17cc35fcbe3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 09768fc58640d79a3b5628bafc16b2267f1f8a4c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352121"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719714"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 Yığın çerçevesinin açıklamasını alır.
@@ -45,16 +45,16 @@ int GetInfo ( 
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[in] Bayraklarının bir birleşimi [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) hangi alanları belirten numaralandırma `pFrameInfo` parametresi olan doldurulmalıdır.
+[içinde] Parametrenin hangi alanlarının dolduruleceğini belirten FRAMEINFO_FLAGS numaralandırmadan gelen bayrakların birleşimi. [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) `pFrameInfo`
 
 `nRadix`\
-[in] Sayısal yedeklenmesine biçimlendirmede kullanılacak sayı tabanı.
+[içinde] Herhangi bir sayısal bilgi biçimlendirmede kullanılacak radix.
 
 `pFrameInfo`\
-[out] A [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yığın çerçevesini açıklamasını oturum girilir yapısının.
+[çıkış] Yığın çerçevesinin açıklamasıyla doldurulan bir [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

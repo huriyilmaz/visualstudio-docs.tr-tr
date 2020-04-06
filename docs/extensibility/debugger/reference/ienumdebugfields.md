@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields | Microsoft Docs
+title: IEnumDebugFields | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugFields interface
 ms.assetid: 403c2a51-3ba5-431f-a1dd-2f3b2046c00c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50d80242ca516c5fa7f3ad297250e25c782664d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d577ff2f5848f2cb348bcaccf57875507018634b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350375"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716786"
 ---
 # <a name="ienumdebugfields"></a>IEnumDebugFields
-Bu arabirimi uygulayan nesnelerin bir koleksiyonunu temsil eder [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi.
+Bu [arabirim, IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini uygulayan nesnelerin bir koleksiyonunu temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,22 +28,22 @@ Bu arabirimi uygulayan nesnelerin bir koleksiyonunu temsil eder [IDebugField](..
 IEnumDebugFields : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Bu arabirimi uygulayan nesne kümeleri sağlamak için Sembol sağlayıcısı tarafından uygulanan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi. Bu varlığı nedeniyle standart bir COM numaralandırma olmadığını unutmayın [GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md) yöntemi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim, [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini uygulayan nesne kümeleri sağlamak için sembol sağlayıcı tarafından uygulanır. GetCount yönteminin varlığı nedeniyle bunun standart bir COM [GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md) numaralandırması olmadığını unutmayın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim tarafından döndürülen [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md) ve [GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md).
+ Bu arayüz [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md) ve [GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)tarafından döndürülür.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Bu arabirim, aşağıdaki yöntemleri uygular.
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Bu arabirim aşağıdaki yöntemleri uygular.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|Sonraki alır [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnelerden sabit listesi.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugfields-skip.md)|Belirtilen bir girdi sayısı atlar.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|Numaralandırma ilk girişe sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|Geçerli sabit bir kopyasını alır.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)|Sabit listesi içerisindeki giriş sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|Bir sonraki [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne kümesini numaralandırmadan alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumdebugfields-skip.md)|Belirli sayıda girişi atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|Numaralandırmayı ilk girişe sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|Geçerli numaralandırmanın bir kopyasını alır.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)|Numaralandırmadaki giriş sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -52,7 +52,7 @@ IEnumDebugFields : IUnknown
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

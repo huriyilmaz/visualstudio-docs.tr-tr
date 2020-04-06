@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::SetNextStatement | Microsoft Docs
+title: IDebugThread2::SetNextStatement | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::SetNextStatement
 ms.assetid: 9e2834dd-4ecf-45af-8e6c-f9318ebdac06
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 87a5ba19eed0c0ee4d78feeb755b50db428d77d9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4b390e5c021fa069ae3fb09eef1978caaf9cc8ed
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320081"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718656"
 ---
 # <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
-Verilen kod bağlamı için geçerli yönerge işaretçisini ayarlar.
+Geçerli yönerge işaretçisini verilen kod bağlamına ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,22 +43,22 @@ int SetNextStatement ( 
 
 ## <a name="parameters"></a>Parametreler
 `pStackFrame`\
-Gelecekte kullanılmak üzere ayrılmış; null bir değere ayarlayın.
+İleride kullanım için ayrılmış; null değerine ayarlanır.
 
 `pCodeContext`\
-[in] Bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) çalıştırılmak üzere kod konumu açıklayan nesne ve onun bağlamı.
+[içinde] Yürütülmek üzere olan kod konumunu ve içeriğini açıklayan bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Diğer olası değerler aşağıdaki tabloda gösterilmektedir.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Aşağıdaki tablo diğer olası değerleri gösterir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|Sonraki deyimi çerçevenin yığın üzerinde daha derin bir yığın çerçevesinde olamaz.|
-|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|Sonraki deyimi herhangi yığındaki çerçeveye ile ilişkili değil.|
-|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|Bazı hata ayıklama motoru özel durumdan sonra sonraki deyimi ayarlayamazsınız.|
+|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|Sonraki deyim, çerçeve yığınının üzerinde daha derin bir yığın çerçevesi olamaz.|
+|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|Sonraki deyim yığındaki herhangi bir çerçeveyle ilişkili değildir.|
+|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|Bazı hata ayıklama motorları bir özel durum sonra bir sonraki deyimi ayarlayamaz.|
 
 ## <a name="remarks"></a>Açıklamalar
- Yönerge işaretçisi, yürütülecek sonraki yönerge veya deyimi gösterir. Bu yöntem, bir kaynak kod satırı yeniden deneyin veya başka bir işlevde harcanan, örneğin devam etmek için yürütme zorlamak için kullanılır.
+ Yönerge işaretçisi, yürütülecek bir sonraki yönergeyi veya deyimi gösterir. Bu yöntem, kaynak kodu satırını yeniden denemek veya yürütmeyi başka bir işlevde devam etmeye zorlamak için kullanılır, örneğin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

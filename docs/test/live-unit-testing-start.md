@@ -1,6 +1,6 @@
 ---
 title: Canlı Ünite Testi ile kodunuzu nasıl test edebilirsiniz öğrenin
-ms.date: 08/31/2017
+ms.date: 04/03/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 748dfc592fbf7a3b9737e9f418362067b92bb8ff
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2abc8eaaca923435620148d7313c6cc422bd1870
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594298"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697311"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
@@ -24,7 +24,7 @@ Canlı Birim Testi, .NET Framework veya .NET Core'u hedefleyen çözümleri test
 
 C# çözümlerinin tamamı GitHub'daki [MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) repo'dan indirilebilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu öğretici, **.NET Core çapraz platform geliştirme** iş yüküyle Visual Studio Enterprise sürümünü yüklemiş olduğunuzu gerektirir.
 
@@ -36,7 +36,7 @@ Tek bir .NET Standart sınıf kitaplık projesi olan StringLibrary'den oluşan U
 
 1. Üst düzey Visual Studio menüsünden > **Yeni** > **Dosya'yı** seçin. **File**
 
-1. **Çözümü** şablon arama kutusuna yazın ve ardından **Boş Çözüm** şablonunu seçin.
+1. **Çözümü** şablon arama kutusuna yazın ve ardından **Boş Çözüm** şablonunu seçin. Proje **utilitylibraries**adı.
 
    ::: moniker range="vs-2017"
 
@@ -57,7 +57,7 @@ Tek bir .NET Standart sınıf kitaplık projesi olan StringLibrary'den oluşan U
    > [!NOTE]
    > Kitaplığımız belirli bir .NET uygulaması yerine .NET Standard'ı hedeflediği için, .NET Standard'ın bu sürümünü destekleyen herhangi bir .NET uygulamasından çağrılabilir. Daha fazla bilgi için [.NET Standard](/dotnet/standard/net-standard)' a bakın.
 
-3. Sağ bölmedeki **Sınıf Kitaplığı (.NET Standart)** şablonunu seçin ve aşağıdaki resimde görüldüğü gibi **Ad** metin kutusuna **StringLibrary** girin:
+3. Sağ bölmedeki **Sınıf Kitaplığı (.NET Standart)** şablonunu seçin ve aşağıdaki resimde gösterildiği gibi **StringLibrary'yi Ad** metin kutusuna girin: **StringLibrary**
 
    ![**Yeni Proje Ekle** iletişim kutusu](./media/lut-start/add-project-cs.png)
 
@@ -67,7 +67,7 @@ Tek bir .NET Standart sınıf kitaplık projesi olan StringLibrary'den oluşan U
 
 ::: moniker range=">=vs-2019"
 
-2. **Sınıf kitaplığını** şablon arama kutusuna yazın ve **Sınıf Kitaplığı (.NET Standart)** şablonunu seçin. **İleri**'ye tıklayın.
+2. **Sınıf kitaplığını** şablon arama kutusuna yazın ve **Sınıf Kitaplığı (.NET Standart)** şablonunu seçin. **İleri**’ye tıklayın.
 
    > [!NOTE]
    > Kitaplığımız belirli bir .NET uygulaması yerine .NET Standard'ı hedeflediği için, .NET Standard'ın bu sürümünü destekleyen herhangi bir .NET uygulamasından çağrılabilir. Daha fazla bilgi için [.NET Standard](/dotnet/standard/net-standard)' a bakın.
@@ -78,7 +78,7 @@ Tek bir .NET Standart sınıf kitaplık projesi olan StringLibrary'den oluşan U
 
 ::: moniker-end
 
-5. Kod penceresindeki varolan kodun tümünün değiştirin:
+5. Kod düzenleyicisindeki varolan kodun tümünün yerine aşağıdaki kodu girin:
 
    [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
 
@@ -105,7 +105,7 @@ Bir sonraki adım, StringLibrary kitaplığını sınamak için birim test proje
    > [!NOTE]
    > Ünite testlerinizi sınıf kitaplığınız ile aynı dilde yazmak zorunda değildir.
 
-3. Sağ bölmedeki **Birim Test Projesi (.NET Core)** şablonunu seçin ve aşağıdaki resimde görüldüğü gibi **StringLibraryTests'i Ad** metin kutusuna girin: **StringLibraryTests**
+3. Sağ bölmedeki **Birim Test Projesi (.NET Core)** şablonunu seçin ve aşağıdaki çizimde gösterildiği gibi **StringLibraryTests'i Ad** metin kutusuna girin: **StringLibraryTests**
 
    ![Birim test projesi için **Yeni Proje Ekle** iletişim kutusu](./media/lut-start/add-unit-test-cs.png)
 
@@ -115,7 +115,7 @@ Bir sonraki adım, StringLibrary kitaplığını sınamak için birim test proje
 
 ::: moniker range=">=vs-2019"
 
-2. **Birim testini** şablon arama kutusuna yazın ve Birim Test **Projesi (.NET Core)** şablonunu seçin. **İleri**'ye tıklayın.
+2. Şablon arama kutusuna **birim testi** yazın ve **MSTest Test Project (.NET Core)** şablonunu seçin. **İleri**’ye tıklayın.
 
 3. Proje **StringLibraryTests**adını.
 
@@ -136,11 +136,13 @@ Bir sonraki adım, StringLibrary kitaplığını sınamak için birim test proje
 
 7. Araç çubuğundaki **Kaydet** simgesini seçerek projenizi kaydedin.
 
-8. Birim test kodu bazı ASCII olmayan karakterler içerdiğinden, Visual Studio dosyayı varsayılan ASCII biçiminde kaydederseniz bazı karakterlerin kaybolacağı konusunda uyarmak için aşağıdaki iletişim kutusunu görüntüler. Diğer **Kodlama yla Kaydet** düğmesini seçin.
+   Birim test kodu bazı ASCII olmayan karakterler içerdiğinden, dosyayı varsayılan ASCII biçiminde kaydederseniz bazı karakterlerin kaybolacağı konusunda uyarmak için aşağıdaki iletişim kutusunu görürsünüz.
+
+8. Diğer **Kodlama yla Kaydet** düğmesini seçin.
 
    ![Dosya kodlaması seçin](media/lut-start/ascii-encoding.png)
 
-9. **Gelişmiş Kaydet Seçenekleri** iletişim kutusunun **Kodlama** açılır listesinde, Aşağıdaki resimde görüldüğü gibi **Unicode (imzasız UTF-8) - Codepage 65001'** i seçin:
+9. **Gelişmiş Kaydet Seçenekleri** iletişim kutusunun **Kodlama** açılır listesinde, Aşağıdaki çizimde gösterildiği gibi **Unicode (imzasız UTF-8) - Codepage 65001'i**seçin:
 
    ![UTF-8 kodlamaseçimi](media/lut-start/utf8-encoding.png)
 
@@ -152,19 +154,26 @@ Bunun için bazı birim testlerinin yanı sıra bir sınıf kitaplığı da olu�
 
 Şimdiye kadar, StringLibrary sınıf kitaplığı için testleri yazmış olsanız da, bunları yürütemediniz. Canlı Birim Testi, etkinleştirdikten sonra bunları otomatik olarak yürütür. Bunu yapmak için aşağıdakileri yapın:
 
-1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod penceresini seçin. Bu, bir C# projesi için *Class1.cs* veya Visual Basic projesi için *Class1.vb'dir.* (Bu adım, Canlı Birim Testi'ni etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınızın kapsamını görsel olarak incelemenize olanak tanır.)
+1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyicisi penceresini seçin. Bu, bir C# projesi için *Class1.cs* veya Visual Basic projesi için *Class1.vb'dir.* (Bu adım, Canlı Birim Testi'ni etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınızın kapsamını görsel olarak incelemenize olanak tanır.)
 
 1.  > En üst düzey Visual Studio menüsünden**Canlı Birim Test** > **Başlat'ı** seçin. **Test**
 
 1. Visual Studio, tüm testlerinizi otomatik olarak çalıştıran Canlı Birim Testi'ni başlatır.
 
-Test **Gezgini,** testlerinizi çalıştırmayı bitirdiğinde, hem genel sonuçları hem de tek tek testlerin sonuçlarını görüntüler. Buna ek olarak, kod penceresi hem test kodu kapsamınızı hem de testlerinizin sonucunu grafik olarak görüntüler. Aşağıdaki resimde de görüldüğü gibi, üç test de başarıyla yürütülmüştür. Ayrıca, testlerimizin `StartsWithUpper` yöntemdeki tüm kod yollarını kapsadığını ve bu testlerin hepsinin başarıyla yürütüldettiğini de gösterir (yeşil onay işareti "✓" ile gösterilir). Son olarak, StringLibrary'deki diğer yöntemlerin hiçbirinde kod kapsamı olmadığını gösterir (mavi bir satırla gösterilir, "➖").
+::: moniker range="vs-2017"
+Test **Gezgini,** testlerinizi çalıştırmayı bitirdiğinde, hem genel sonuçları hem de tek tek testlerin sonuçlarını görüntüler. Buna ek olarak, kod düzenleyicisi penceresi hem test kodu kapsamınızı hem de testlerinizin sonucunu grafik olarak görüntüler. Aşağıdaki resimde de görüldüğü gibi, üç test de başarıyla yürütülmüştür. Ayrıca, testlerimizin `StartsWithUpper` yöntemdeki tüm kod yollarını kapsadığını ve bu testlerin hepsinin başarıyla yürütüldettiğini de gösterir (yeşil onay işareti "✓" ile gösterilir). Son olarak, StringLibrary'deki diğer yöntemlerin hiçbirinde kod kapsamı olmadığını gösterir (mavi bir satırla gösterilir, "➖").
 
-![Canlı Birim testini başladıktan sonra Test Gezgini ve kod penceresi](media/lut-start/lut-results-cs.png)
+![Canlı Birim testini başladıktan sonra Test Gezgini ve kod düzenleyicisi penceresi](media/lut-start/lut-results-cs.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+Testlerinizi çalıştırmayı bitirdiğinde, **Canlı Birim Testi** hem genel sonuçları hem de tek tek testlerin sonuçlarını görüntüler. Buna ek olarak, kod düzenleyicisi penceresi hem test kodu kapsamınızı hem de testlerinizin sonucunu grafik olarak görüntüler. Aşağıdaki resimde de görüldüğü gibi, üç test de başarıyla yürütülmüştür. Ayrıca, testlerimizin `StartsWithUpper` yöntemdeki tüm kod yollarını kapsadığını ve bu testlerin hepsinin başarıyla yürütüldettiğini de gösterir (yeşil onay işareti "✓" ile gösterilir). Son olarak, StringLibrary'deki diğer yöntemlerin hiçbirinde kod kapsamı olmadığını gösterir (mavi bir satırla gösterilir, "➖").
 
-Ayrıca, kod penceresinde belirli bir kod kapsamı simgesini seçerek test kapsamı ve test sonuçları hakkında daha ayrıntılı bilgi edinebilirsiniz. Bu ayrıntıyı incelemek için aşağıdakileri yapın:
+![Canlı Birim testini başladıktan sonra Canlı Test Gezgini ve kod düzenleyicisi penceresi](media/lut-start/vs-2019/lut-results-cs.png)
+::: moniker-end
 
-1. Yöntemde okuyan `if (String.IsNullOrWhiteSpace(s))` satırdaki yeşil onay işaretini `StartsWithUpper` tıklatın. Aşağıdaki resimde de görüldüğü gibi, Canlı Birim Testi üç testin bu kod satırını kapsadığını ve hepsinin başarıyla yürütüldettiğini gösterir.
+Ayrıca, kod düzenleyicisi penceresinde belirli bir kod kapsamı simgesini seçerek test kapsamı ve test sonuçları hakkında daha ayrıntılı bilgi edinebilirsiniz. Bu ayrıntıyı incelemek için aşağıdakileri yapın:
+
+1. Yöntemde okuyan `if (String.IsNullOrWhiteSpace(s))` satırdaki yeşil onay işaretini `StartsWithUpper` tıklatın. Aşağıdaki resimde de görüldüğü gibi, Canlı Birim Testi üç testin bu kod çizgisini kapsadığını ve hepsinin başarıyla yürütüldettiğini gösterir.
 
    !['if' koşullu deyimi için kod kapsamı](media/lut-start/code-coverage-cs1.png)
 
@@ -188,9 +197,14 @@ Kod kapsamını `StartsWithLower` yönteme genişletmek için aşağıdakileri y
 
     [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
 
-1. Canlı Birim Testi, kaynak kodunuzu değiştirdiğinizde yeni ve değiştirilmiş testleri otomatik olarak yürütür. **Test Gezgini'nin** aşağıdaki resminin gösterdiği gibi, eklediğiniz ve değiştirdiğiniz iki test de dahil olmak üzere tüm testler başarılı oldu.
+1. Canlı Birim Testi, kaynak kodunuzu değiştirdiğinizde yeni ve değiştirilmiş testleri otomatik olarak yürütür. Aşağıdaki resimde de görüldüğü gibi, eklediğiniz ve değiştirdiğiniz iki test de dahil olmak üzere tüm testler başarılı oldu.
 
+   ::: moniker range="vs-2017"
    ![Test kapsamını genişlettikten sonra Test Gezgini](media/lut-start/test-dynamic.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Test kapsamını genişlettikten sonra Canlı Test Gezgini](media/lut-start/vs-2019/test-dynamic.png)
+   ::: moniker-end
 
 1. StringLibrary sınıfının kaynak kodunu içeren pencereye geçin. Canlı Birim Testi artık kod kapsamımızın `StartsWithLower` yönteme genişletilmesini gösteriyor.
 
@@ -208,29 +222,39 @@ Bu bölümde, test hatalarını tanımlamak, sorun gidermek ve adreslemek için 
 
     [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/unittest2.cs#3)]
 
-1. Test yürütüldüğünde, Canlı Birim Testi `TestHasEmbeddedSpaces` aşağıdaki resimde görüldüğü gibi yöntemin başarısız olduğunu gösterir:
+1. Test yürütüldüğünde, Canlı Birim Testi, aşağıdaki resimde gösterildiği gibi yöntemin `TestHasEmbeddedSpaces` başarısız olduğunu gösterir:
 
+   ::: moniker range="vs-2017"
    ![Test Gezgini başarısız bir testi bildiriyor](media/lut-start/test-failure.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Başarısız bir testi bildiren Canlı Test Gezgini](media/lut-start/vs-2019/test-failure.png)
+   ::: moniker-end
 
 1. Kitaplık kodunu görüntüleyen pencereyi seçin. Canlı Birim Testi, kod `HasEmbeddedSpaces` kapsamını yönteme genişletti. Ayrıca, başarısız testler in kapsadığı🞩satırlara kırmızı " " " ekleyerek test başarısızlığını bildirir.
 
-1. Yöntem imzası ile çizginin `HasEmbeddedSpaces` üzerine geçin. Canlı Birim Testi, yöntemin bir test tarafından kapsandığını bildiren bir araç ipucu görüntüler:
+1. Yöntem imzası ile çizginin `HasEmbeddedSpaces` üzerine geçin. Canlı Birim Testi, yöntemin tek bir test tarafından kapsandığını bildiren bir araç ipucu görüntüler:
 
    ![Başarısız bir testte Canlı Birim Test bilgileri](media/lut-start/test-failure-info-cs.png)
 
-1. Başarısız **TestHasEmbeddedSpaces** testini seçin. Canlı Birim Testi, aşağıdaki resimde görüldüğü gibi, tüm testleri çalıştırma, seçili testleri hata ayıklama ve seçili testleri hata ayıklama gibi bir dizi seçenek sunar:
+1. Başarısız **TestHasEmbeddedSpaces** testini seçin. Canlı Birim Testi, aşağıdaki resimde gösterildiği gibi, tüm testleri çalıştırma ve tüm testleri hata ayıklama gibi birkaç seçenek sunar:
 
+   ::: moniker range="vs-2017"
    ![Başarısız bir test için Canlı Birim Test seçenekleri](media/lut-start/test-failure-options.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Başarısız bir test için Canlı Birim Test seçenekleri](media/lut-start/vs-2019/test-failure-options.png)
+   ::: moniker-end
 
-1. Başarısız testi hata ayıklamak için **Seçili Hata** Ayıklama'yı seçin.
+1. Başarısız testi hata ayıklamak için **Tümünü Hata** ayıklama'yı seçin.
 
 1. Visual Studio testi hata ayıklama modunda yürütür.
 
-   Test, dizideki her dizeyi adlı `phrase` bir değişkene `HasEmbeddedSpaces` atar ve yönteme geçirir. Program yürütme duraklar ve assert ifadesi ilk kez hata `false`ayıklama çağırır. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) Yöntem çağrısında beklenmeyen değerden kaynaklanan özel durum iletişim kutusu aşağıdaki resimde gösterilir.
+   Test, dizideki her dizeyi adlı `phrase` bir değişkene `HasEmbeddedSpaces` atar ve yönteme geçirir. Program yürütme duraklar ve assert ifadesi ilk kez hata `false`ayıklama çağırır. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) Yöntem çağrısında beklenmeyen değerden kaynaklanan özel durum iletişim kutusu aşağıdaki resimde gösterilmiştir.
 
    ![Canlı Birim Testi özel durum iletişim kutusu](media/lut-start/exception-dialog-cs.png)
 
-   Buna ek olarak, Visual Studio'nun sağladığı hata ayıklama araçlarının tümü, aşağıdaki resimde görüldüğü gibi, başarısız testimizin sorunsuz giderilmesine yardımcı olmak için kullanılabilir:
+   Buna ek olarak, Visual Studio'nun sağladığı hata ayıklama araçlarının tümü, aşağıdaki resimde de görüldüğü gibi, başarısız testimizin sorunsuz giderilmesine yardımcı olmak için kullanılabilir:
 
    ![Visual Studio hata ayıklama araçları](media/lut-start/debugging-tools-cs.png)
 
@@ -245,9 +269,9 @@ Bu, hatanın ön incelemesi için yeterli bilgi sağlar. Ya `TestHasEmbeddedSpac
 
     [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/program2.cs#1)]
 
-1. Canlı Birim Testi başarısız test yöntemini otomatik olarak yeniden çalıştırAr ve aşağıdaki resimde görüldüğü gibi kod penceresinde ve **Test Gezgini'nde**sonuçları güncelleştirir:
+1. Canlı Birim Testi başarısız test yöntemini otomatik olarak yeniden çalıştırAr.
 
-    ![Başarılı HasEmbeddedSpaces testi](media/lut-start/test-success-cs.png)
+   Canlı Birim Testi, kod düzenleyicisi penceresinde de görünen güncelleştirilmiş sonuçların göründüğünü gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

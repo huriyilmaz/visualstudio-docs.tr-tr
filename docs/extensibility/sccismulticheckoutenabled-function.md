@@ -1,5 +1,5 @@
 ---
-title: Sccımulticheckoutenabled Işlevi | Microsoft Docs
+title: SccIsMultiCheckoutEtkin Fonksiyon | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccIsMultiCheckoutEnabled function
 ms.assetid: 6721639d-e475-4766-81b5-ee40a280fc70
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd8fb5439ac68200ba1a3bbf3af665595528173e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8e91eb566a820f4fe11ceb629643e1815dcb87a8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72721076"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700579"
 ---
 # <a name="sccismulticheckoutenabled-function"></a>SccIsMultiCheckoutEnabled İşlevi
-Bu işlev, kaynak denetimi eklentisinin bir dosyada birden çok kullanıma almayı izin verip içermediğini denetler.
+Bu işlev, kaynak denetimi eklentisinin bir dosyada birden çok kullanıma izin verip vermediğini denetler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,24 +32,24 @@ SCCRTN SccIsMultiCheckoutEnabled(
 ```
 
 #### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-'ndaki Kaynak denetimi eklentisi bağlam yapısı.
+[içinde] Kaynak denetimi eklentisi bağlam yapısı.
 
  pbMultiCheckout
 
-dışı Bu proje için çoklu kullanıma alma işlemleri yapılıp yapılmayacağını belirtir (sıfır dışında çoklu kullanıma alma işlemleri desteklenir).
+[çıkış] Bu proje için birden çok ödemenin etkin olup olmadığını belirtir (sıfır olmayan, birden çok ödemenin desteklenmediği anlamına gelir).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Denetim başarılı oldu.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Özel olmayan hata.|
+|SCC_OK|Çek başarılı oldu.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspesifik bir hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- IDE, dosyaların birden fazla kullanıcı tarafından aynı anda kullanıma alınmış olup olmadığını belirlemede iki denetim yapar. İlk olarak, kaynak denetim sisteminin birden çok kullanıma almayı desteklemesi gerekir. Kaynak denetimi eklentisi, `SCC_CAP_MULTICHECKOUT` belirterek başlatma sırasında bu özelliği belirtebilir. Daha sonra ikinci bir denetim olarak, IDE, geçerli projenin birden çok kullanıma almayı destekleyip desteklemediğini öğrenmek için bu işlevi çağırır. Seçili proje için çoklu kullanıma alma işlemleri destekleniyorsa, eklenti bir başarı kodu döndürür ve `pbMultiCheckout` sıfır olmayan (`TRUE`) veya `FALSE` olarak ayarlar.
+ IDE, dosyaların birden fazla kullanıcı tarafından aynı anda kullanıma alınıp alınamayacağına karar vermek için iki denetim yapar. İlk olarak, kaynak denetim sistemi birden çok ödeme desteği gerekir. Kaynak denetim eklentisi, `SCC_CAP_MULTICHECKOUT`'yi belirterek, başlatma sırasında bu özelliği belirtebilir. Bundan sonra, ikinci bir denetim olarak, IDE geçerli projenin birden çok ödemeyi destekleyip desteklemediğini belirlemek için bu işlevi çağırır. Seçili proje için birden çok ödeme desteklenirse, eklenti bir `pbMultiCheckout` başarı kodu`TRUE`döndürür ve sıfırsız ( ) veya `FALSE`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

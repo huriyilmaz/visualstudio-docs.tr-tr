@@ -1,56 +1,56 @@
 ---
-title: Özel başlangıç sayfaları dağıtma | Microsoft Docs
+title: Özel Başlangıç Sayfalarını Dağıtma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - package start page
 - deploy start page
 ms.assetid: 4a7eb360-de83-41d5-be53-3cfb160d19f9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 5a84ba2ff92463ebea177fc5c3b04810de7ae817
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 210b4589c0e2165af537c3fa9129affb06197e9b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348216"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712237"
 ---
-# <a name="deploy-custom-start-pages"></a>Özel başlangıç sayfaları dağıtma
+# <a name="deploy-custom-start-pages"></a>Özel Başlangıç Sayfalarını Dağıtma
 
-Özel başlangıç sayfaları VSIX dağıtımı kullanarak veya dosyaları hedef bilgisayarda doğru konumlara kopyalayarak dağıtabilirsiniz.
+VSIX dağıtımını kullanarak veya dosyaları hedef bilgisayardaki doğru konumlara kopyalayarak özel Başlangıç Sayfaları dağıtabilirsiniz.
 
-## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>Başlangıç sayfası proje şablonunu kullanarak VSIX dağıtımı
+## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>Başlangıç Sayfası proje şablonu kullanılarak VSIX dağıtımı
 
-Başlangıç sayfası proje şablonunu kullanarak bir başlangıç sayfası oluşturmak ve ardından projeyi oluşturun, Visual Studio oluşturur bir *.vsix* dağıtabileceğiniz dosya. Bir başlangıç sayfası paketleme bir *.vsix* dosyasını, hedef kitle bağlı olarak dağıtım için aşağıdaki seçenekleri sağlar:
+Başlangıç Sayfası proje şablonu kullanarak bir Başlangıç Sayfası oluşturduğunuzda ve projeyi oluşturduğunuzda, Visual Studio dağıtabileceğiniz bir *.vsix* dosyası oluşturur. Bir *.vsix* dosyasında Bir Başlangıç Sayfasını paketlemek, hedef kitlenize bağlı olarak dağıtım için aşağıdaki seçenekleri sunar:
 
-- Koyabilirsiniz *.vsix* dosyası bir ağ paylaşımına veya genel bir Web sitesi. Birisi bir dosyayı açtığında, başlangıç sayfası otomatik olarak yüklenir.
+- *.vsix* dosyasını bir ağ paylaşımına veya genel bir Web sitesine koyabilirsiniz. Birisi dosyayı açtığında, Başlangıç Sayfası otomatik olarak yüklenir.
 
-- Karşıya yüklediğiniz *.vsix* dosyasını [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesi kullanıcılar kullanarak yükleyebilir **Uzantı Yöneticisi**.
+- *.vsix* dosyasını [Visual Studio Marketplace](https://marketplace.visualstudio.com/) Web sitesine yükleyebilirsiniz, böylece kullanıcılar Uzantısı **Yöneticisi'ni**kullanarak dosyayı yükleyebilirsiniz.
 
-Böylece değiştirebilir ve orijinal korumak başlangıç sayfası proje şablonu Visual Studio Başlangıç sayfası varsayılan bir kopyasını oluşturur.
+Başlangıç Sayfası proje şablonu, kopyayı değiştirebilmeniz ve orijinalini koruyabilmeniz için varsayılan Visual Studio Başlangıç Sayfasının bir kopyasını oluşturur.
 
-Başlangıç sayfası proje şablonu kullanarak edinebilirsiniz **Uzantı Yöneticisi** veya Web sitesinden indirerek.
+Başlat Sayfası proje **şablonu'nu Uzantı Yöneticisi'ni** kullanarak veya Web sitesinden indirerek elde edebilirsiniz.
 
-## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>Başlangıç sayfası proje şablonunu kullanarak olmadan VSIX dağıtımı
- Başarılı bir VSIX dağıtımı bir uzantının VSIX kayıt işlemine ve tarafından tanınan klasörlerinde yüklenmesini gerektirir **Uzantı Yöneticisi**. Başlangıç sayfası proje şablonu doğru klasörleri belirttiğinden, VSIX dağıtımı için bir uzantı paketini istediğinizde bunu kullanmanızı öneririz. Ancak, şablon kullanamazsınız bir durum varsa, bunu kullanmadan bir VSIX dağıtımı oluşturabilirsiniz.
+## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>Başlangıç Sayfası proje şablonu kullanmadan VSIX dağıtımı
+ Başarılı bir VSIX dağıtımı, VSIX kayıt işlemi ve **Uzantı Yöneticisi**tarafından tanınan klasörlere bir uzantı kurulmasını gerektirir. Başlangıç Sayfası proje şablonu zaten doğru klasörleri belirttiğinden, VSIX dağıtımı için bir uzantı paketi istediğinizde kullanmanızı öneririz. Ancak, şablonu kullanamayacağınız bir servis talebiniz varsa, kullanmadan bir VSIX dağıtımı oluşturabilirsiniz.
 
- Başlangıç sayfası proje şablonunu kullanarak olmadan bir VSIX dağıtımı oluşturmak için öncelikle oluşturma bir *.vsix* bu iki yöntemden biriyle başlangıç sayfası dosyası:
+ Başlangıç Sayfası proje şablonu kullanmadan bir VSIX dağıtımı oluşturmak için, önce Başlangıç Sayfası için aşağıdaki iki şekilde bir *.vsix* dosyası oluşturun:
 
-- Özel başlangıç sayfası dosyalarınızı boş bir VSIX projesine ekleniyor. Daha fazla bilgi için [VSIX proje şablonu](../extensibility/vsix-project-template.md).
+- Boş bir VSIX Projesine özel Başlangıç Sayfası dosyalarınızı ekleyerek. Daha fazla bilgi için [VSIX proje şablonuna](../extensibility/vsix-project-template.md)bakın.
 
-- El ile oluşturarak bir *.vsix* dosya. Oluşturmak için bir *.vsix* el ile dosya:
+- *Bir .vsix* dosyası el ile oluşturarak. *.vsix* dosyası nın el ile oluşturulması için:
 
-   1. Oluşturma *extension.vsixmanifest* dosya ve *[Content_Types] .xml* dosyasında yeni bir klasör. Daha fazla bilgi için [bir VSIX paketinin anatomisi](../extensibility/anatomy-of-a-vsix-package.md).
+   1. Yeni bir klasörde *extension.vsixmanifest* dosyasını ve *[Content_Types].xml* dosyasını oluşturun. Daha fazla bilgi için [vsix paketinin Anatomisi](../extensibility/anatomy-of-a-vsix-package.md)bölümüne bakın.
 
-   2. İki XML dosyalarını içeren klasörü Windows Gezgini'nde sağ tıklayın, **göndermek için**ve ardından sıkıştırılmış klasöre tıklayın. Sonuç Yeniden Adlandır *.zip* dosyasını *Filename.vsix*burada Filename paketinizi yükleyen yeniden dağıtılabilir dosya adıdır.
+   2. Windows Gezgini'nde, iki XML dosyasını içeren klasörü sağ tıklatın, **Gönder'i**tıklatın ve ardından Sıkıştırılmış (sıkıştırılmış) Klasörünü tıklatın. Dosya adı paketinizi yükler yeniden dağıtılabilir dosyanın adı olduğu *Filename.vsix*, ortaya çıkan *.zip* dosyası yeniden adlandırın.
 
-Bir başlangıç sayfası tanımak Visual Studio için `Content Element` VSIX bildirim içermelidir bir `CustomExtension Element` olan `Type` özniteliğini `"StartPage"`. VSIX dağıtımı kullanarak yüklü olan bir başlangıç sayfası uzantısı görünür **başlangıç sayfasını Özelleştir** listesini **başlangıç** seçenekleri sayfasında olarak **[yüklü uzantı]** *Uzantı adı*.
+Visual Studio'nun bir Başlangıç `Content Element` Sayfasını tanıması için, `"StartPage"` `CustomExtension Element` VSIX `Type` Bildirimi'nin bir özniteliği 'ne göre ayarlanmış bir özellik içermesi gerekir. VSIX dağıtımı kullanılarak yüklenen Bir Başlangıç Sayfası uzantısı **Başlangıç** seçenekleri sayfasında Ki **Başlangıç Sayfasını Özelleştir** listesinde **[Yüklü Uzantı]** *Uzantısı Adı*olarak görünür.
 
-Başlangıç sayfası paketinizi derlemeleri içerir, böylece Visual Studio başladığında kullanılabilir bağlama yolu kayıt eklemeniz gerekir. Bunu yapmak için paketinizi içerdiğinden emin olun bir *.pkgdef* aşağıdaki bilgileri içeren dosya.
+Başlangıç Sayfası paketinizde derlemeler varsa, Visual Studio başladığında kullanılabilmesi için bağlayıcı yol kaydı eklemeniz gerekir. Bunu yapmak için, paketinizin aşağıdaki bilgilere sahip bir *.pkgdef* dosyası içerdiğinden emin olun.
 
 ```
 [$RootKey$\BindingPaths\{Insert a new GUID here}]
@@ -58,44 +58,44 @@ Başlangıç sayfası paketinizi derlemeleri içerir, böylece Visual Studio ba�
 ```
 
 ### <a name="vsix-deployment-for-all-users"></a>Tüm kullanıcılar için VSIX dağıtımı
- Varsayılan olarak, VSIX paketinde dağıtılan uzantıları yalnızca geçerli kullanıcı için yükleyin. Tüm kullanıcıların dağıtım oluşturarak, hedef makinenin tüm kullanıcıları için bir başlangıç sayfası yükleme yapabilirsiniz.
+ Varsayılan olarak, VSIX paketlerinde dağıtılan uzantılar yalnızca geçerli kullanıcı için yüklenir. Tüm Kullanıcılar dağıtımını oluşturarak hedef makinenin tüm kullanıcıları için Bir Başlangıç Sayfası yüklemesi yapabilirsiniz.
 
-### <a name="to-create-an-all-users-deployment"></a>Tüm kullanıcılar dağıtımı oluşturmak için
+### <a name="to-create-an-all-users-deployment"></a>Tüm Kullanıcılar dağıtımı oluşturmak için
 
-1. Açık *extension.vsixmanifest* dosyasında kod görünümü.
+1. *uzantı.vsixmanifest* dosyasını kod görünümünde açın.
 
-2. İçinde `Identifier` VSIX bildirimi öğesi < ekleme bir `AllUsers` değerine sahip öğe `true`.
+2. vsix `Identifier` bildiriminin öğesine, değeri `AllUsers` 'ne `true`sahip bir öğe ekleyin
 
     ```
     <AllUsers>true</AllUsers>
     ```
 
-     Bu VSIX Yükleyicisi için yönetici izinleri ister ve ardından dosyaları yüklemek neden *\Common7\IDE\Extensions*.
+     Bu, vsix yükleyicisinin yönetici izinleri için istem deyip sonra dosyaları *\Common7\IDE\Extensions'a*yüklemesine neden olur.
 
-3. Açık *.pkgdef* dosya.
+3. *.pkgdef* dosyasını açın.
 
-4. Değiştirme *.pkgdef* aşağıdakileri ekleyerek HKLM altında varsayılan başlangıç sayfasını ayarlama burada *MyStartPage.xaml* adıdır *.xaml* başlatma içeren dosya Sayfa.
+4. *MyStartPage.xaml* Başlangıç Sayfanızı içeren *.xaml* dosyasının adı olduğu aşağıdakileri ekleyerek HKLM altında varsayılan başlangıç sayfasını ayarlamak için *.pkgdef'i* değiştirin.
 
-     [$RootKey$\StartPage\Default]
+     [$RootKey$\Başlangıç Sayfası\Varsayılan]
 
-     "URI"="$PackageFolder$\\*MyStartPage.xaml*"
+     "Uri"="$PackageFolder$\\*MyStartPage.xaml*"
 
-     Bu yeni başlangıç sayfası konumu aramak için Visual Studio bildirir.
+     Bu, Visual Studio'ya yeni Başlangıç Sayfası konumuna bakmasını söyler.
 
-## <a name="file-copy-deployment"></a>Dosya kopyası dağıtımını
- Oluşturmak zorunda değilsiniz bir *.vsix* özel bir başlangıç sayfası dağıtmak için dosya. Bunun yerine, biçimlendirme ve destek dosyaları doğrudan kullanıcının kopyalayabilirsiniz <em>\StartPages\* klasör. **Başlangıç sayfasını Özelleştir</em>*  listesini **başlangıç** seçenekleri sayfasında listeleri her *.xaml* dosya yolu ile birlikte bu klasördeki — Örneğin, *%USERPROFILE%\My Documents\Visual Studio {version} \StartPages\\{dosya adı} .xaml*. Başlangıç sayfası özel derlemeler için başvurular içeriyorsa, bunları kopyalayın ve bunları yapıştırın gerekir * \PrivateAssemblies\* klasör.
+## <a name="file-copy-deployment"></a>Dosya kopyalama dağıtımı
+ Özel bir Başlangıç Sayfası dağıtmak için *bir .vsix* dosyası oluşturmanız gerekmez. Bunun yerine, biçimlendirme ve destek dosyalarını doğrudan kullanıcının <em>\StartPages\* klasörüne kopyalayabilirsiniz. * Başlangıç seçenekleri sayfasındaki*Başlangıç Sayfasını Özelleştir,</em> * o klasördeki her *.xaml* dosyasını, yol ile birlikte listeler—örneğin, *%USERPROFILE%\My Documents\Visual Studio {version}\StartPages\\{File Name}.xaml*. **Startup** Başlangıç Sayfanızda özel derlemelere başvurular varsa, bunları kopyalamanız ve *\PrivateAssemblies\* klasörüne yapıştırmalısınız.
 
- Bir başlangıç paketleme olmadan oluşturulan sayfası dağıtmak için bir *.vsix* dosyası öneririz temel dosya kopyalama strateji, örneğin, bir toplu betik kullanın veya dosyaları sayesinde herhangi bir dağıtım teknolojisi koyun gerekli dizinler.
+ Oluşturduğunuz Bir Başlangıç Sayfasını *.vsix* dosyasında paketlemeden dağıtmak için, dosyaları gerekli dizinlere koymanızı sağlayan bir toplu iş komut dosyası veya başka bir dağıtım teknolojisi gibi temel bir dosya kopyalama stratejisi kullanmanızı öneririz.
 
-### <a name="to-manually-install-a-custom-start-page"></a>El ile özel bir başlangıç sayfası yüklemek için
+### <a name="to-manually-install-a-custom-start-page"></a>Özel bir Başlangıç Sayfasını el ile yüklemek için
 
-1. Kopyalama *.xaml* derlemeler dışındaki destek dosyalarıyla birlikte Başlangıç sayfası biçimlendirmesini içeren ve kullanıcının yapıştırın dosya * \StartPages\* klasör.
+1. Başlangıç Sayfası biçimlendirmesini içeren *.xaml* dosyasını derlemeler dışındaki destek dosyalarıyla birlikte kopyalayın ve kullanıcının *\StartPages\* klasörüne yapıştırın.
 
-2. Başlangıç sayfası derlemeleri gerektiriyorsa, bunları kopyalayıp bunları *... \\{Visual Studio yükleme klasörü} \Common7\IDE\PrivateAssemblies\\* .
+2. Başlangıç Sayfası derlemeler gerektiriyorsa, bunları kopyalayın ve *...... {Visual Studio yükleme klasörü}\Common7\IDE\PrivateAssemblies\\. \\*
 
-3. İçinde **başlangıç sayfasını Özelleştir** listesini **başlangıç** seçenekleri sayfasında, yeni başlangıç sayfası seçin. Daha fazla bilgi için [başlangıç sayfasını özelleştirme](../ide/customizing-the-start-page-for-visual-studio.md).
+3. **Başlangıç** seçenekleri sayfasındaki **Başlangıç Sayfasını Özelleştir** listesinde yeni Başlangıç Sayfasını seçin. Daha fazla bilgi için [Başlangıç Sayfasını Özelleştir'e](../ide/customizing-the-start-page-for-visual-studio.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlangıç Sayfasını özelleştirme](../ide/customizing-the-start-page-for-visual-studio.md)
-- [Başlangıç sayfasına kullanıcı denetimi Ekle](../extensibility/adding-user-control-to-the-start-page.md)
+- [Başlangıç Sayfasını Özelleştir](../ide/customizing-the-start-page-for-visual-studio.md)
+- [Başlangıç Sayfasına kullanıcı denetimi ekleme](../extensibility/adding-user-control-to-the-start-page.md)

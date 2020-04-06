@@ -1,128 +1,128 @@
 ---
-title: Visual Studio için animasyonları | Microsoft Docs
+title: Visual Studio için Animasyonlar | Microsoft Dokümanlar
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f113bf8d9a77e8569126a6f0c7d96f1fe4f0eea
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: dc11eb7bab69728be5ceaa55143f56e93cd1fca4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825236"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698603"
 ---
-# <a name="animations-for-visual-studio"></a>Visual Studio için animasyonları
-## <a name="animation-fundamentals"></a>Animasyonu ile ilgili temel bilgiler
+# <a name="animations-for-visual-studio"></a>Visual Studio İçin Animasyonlar
+## <a name="animation-fundamentals"></a>Animasyon temelleri
 
-### <a name="animation-best-practices-in-visual-studio"></a>Visual Studio'da animasyon en iyi uygulamalar
-Visual Studio IDE arasında tutarlı ve kullanımı kolay animasyon stilleri emin olmak için bu kuralları izleyin.
+### <a name="animation-best-practices-in-visual-studio"></a>Visual Studio'da animasyon en iyi uygulamaları
+Visual Studio IDE'de tutarlı ve kullanıcı dostu animasyon stilleri sağlamak için bu kurallara uyun.
 
-- **Seçici olun.** Belirli bir amaca hizmet eder bu animasyonları sınırlayın.
+- **Seçici ol.** Animasyonları belirli amaçlara hizmet edenlerle sınırlandırın.
 
-- **Zamanlama ve hızını önemli** geçişleri hızlı ve doğal düşünüyorsanız emin olmak için:
+- **Geçişlerin** hızlı ve doğal hissetmesini sağlamak için zamanlama ve hız önemlidir:
 
-  - Animasyonlu geçişler yarım saniye (500 milisaniye cinsinden) içinde tamamlayın.
+  - Animasyonlu geçişleri bir yarım saniye (500 milisaniye) içinde tamamlayın.
 
-  - Sık oluşacak animasyonları kullanıcının iş akışı kesintiye yoksa yeterince hızlı olması gerekir. Döngü içinde animasyon izleyin ve doğru hissettirir kadar zamanlamasını ayarlayın.
+  - Sık sık oluşacak animasyonların, kullanıcının iş akışını kesintiye uğratacak kadar hızlı olması gerekir. Animasyonu bir döngü içinde izleyin ve doğru hissedene kadar zamanlamayı ayarlayın.
 
-  - Animasyonları, bu nedenle hızlı veya jarring anlaşılması zor ancak değil çok yavaş bir geçişi tamamlamak için sabırsız kolaylaştırır, olduğunu olmamalıdır.
+  - Animasyonlar anlaşılması zor olacak kadar hızlı veya sarsıcı olmamalıdır, ancak geçişin tamamlanması için sabırsızbir şey olacak kadar yavaş olmamalıdır.
 
-  - Değişken zamanlama önem vurgulamak için kullanın. Örneğin, bir sınıf diyagramında öğelerinin bir dizisini aracılığıyla gittiğinizde, öğeleri arasında geçişler hızlandırmak sonra önemli öğeye odaklanmayı yavaşlayabilir.
+  - Önemi vurgulamak için değişken zamanlama kullanın. Örneğin, sınıf diyagramındaki bir öğe dizisinde gezinirken, öğeler arasındaki geçişlerde hız verirken önemli öğelere odaklanmak için yavaşlayın.
 
-- **Aşamalı doğrusal olmayan hızlandırma kullanın** diğerine bir durumdan diğerine taşıma sakin ve doğal bir fikir verir.
+- Sakin ve doğal bir hareket hissi vererek, bir durumdan diğerine **kademeli doğrusal olmayan kolaylaştırma kullanın.**
 
-- Mümkün olduğunda, **üzerine gelindiğinde zarif bir animasyon kullanın** fare altında etkileşimli öğeleri göstermek için.
+- Mümkün olduğunda, farenin altındaki etkileşimli öğeleri belirtmek için **havada ince bir animasyon kullanın.**
 
-- Yoğun animasyonları özelliklerinizi, ardından kullanan, **kapatmak için bir yol sağlar** yerel olarak (için tüm özelliklerinizi) bir seçenek olarak **Araçlar > Seçenekler** iletişim.
+- Özelliklerinizdeki animasyonlara büyük ölçüde güveniyorsanız, **Araçlar > Seçenekleri** iletişim kutusunda seçenek olarak bunları yerel olarak (tüm özellikleriniz için) kapatmak için bir araç **sağlayın.**
 
-- **Yalnızca bir animasyon teker teker gerçekleşmesi** ve iletmek yalnızca bir bilgi parçasıdır. Taşıma veya birden çok şey aktarmaya çalışırken birden fazla nesne kafa karıştırıcı olabilir.
+- **Aynı anda yalnızca bir animasyon oluşmalı** ve yalnızca bir bilgi parçası aktarılmalıdır. Birden fazla nesne nin taşınması veya birden çok şeyi iletmeye çalışması kafa karıştırıcı olabilir.
 
-- **Subtlety büyük/küçük harf önemlidir.** Çoğu durumda, animasyon için isteğe bağlı kullanıcı dikkat amacına hizmet yok. Zamanlama, sıralama ve davranışı hafif değişiklikler perception önemli ölçüde etkileyebilir ve maliyetli ve verimsiz bir animasyon arasındaki fark yaratabilir.
+- **Kurnazlık önemlidir.** Çoğu durumda, animasyon amacına hizmet etmek için kullanıcı nın dikkatini talep etmek zorunda değildir. Zamanlama, sıralama ve davranıştaki ince değişiklikler algıyı önemli ölçüde etkileyebilir ve etkili ve etkisiz animasyon arasındaki farkı yaratabilir.
 
-- Animasyon bir şey, dikkat çekmek için kullanırken **kullanıcı kesintiye değer olduğundan emin olun**'s düşünce eğitin.
+- Bir şeye dikkat çekmek için animasyonu kullanırken, kullanıcının düşünce trenini **kesintiye uğratmaya değdiğinden emin olun.**
 
-- **İlerleme veya durum gösterilirken** animasyon aracılığıyla:
+- Animasyon aracılığıyla **ilerleme veya durum gösterirken:**
 
-  - Temel işlemin ne zaman ilerledikten değil ilerleme taşıma gösteren durdurun.
+  - Altta yatan süreç ilerleme olmadığında ilerleme hareketini göstermeyi durdurun.
 
-  - Belirsiz işlemleri kararlı işlemlerden ayırmak.
+  - Belirsiz süreçleri belirli işlemlerden ayırt edin.
 
-  - Bir animasyon tanımlanabilen tamamlama ve hata durumları olduğundan emin olun.
+  - Animasyonun tanımlanabilir tamamlama ve hata durumları olduğundan emin olun.
 
-  - Durumu göster ve gerçek kullanımı için ek bilgi sağlayarak gerçek değeri olduğundan emin olun etkisi animasyonları kullanımını en aza indirin. Örnekler arasında geçici durum değişikliklerini ve acil durumlar bulunur
+  - Durumu gösteren efekt animasyonlarının kullanımını en aza indirin ve gerçek kullanımhakkında ek bilgiler sağlayarak gerçek değere sahip olduğundan emin olun. Örnekler geçici durum değişiklikleri ve acil durumlar içerir
 
-#### <a name="animation-donts"></a>Animasyon yapılmaması gerekenler:
+#### <a name="animation-donts"></a>Animasyon un yapmasi:
 
-- Küçük hareketleri (küçük ayak izine hareket) kullanmayın. Yavaşça tercih nesneleri taşınmadan değiştirir.
+- Küçük hareketler (küçük bir ayak izi hareketi) kullanmayın. Hareketli nesnelere göre soluklukları ve değişiklikleri tercih edin.
 
-- Büyük bir alanı ekran gerçek boyutunuzu gerçekleşmesi animasyonları kullanmayın. Boyutundan bağımsız olarak, bu stil animasyonun dikkat kullanıcıya dağıtıyor.
+- Ekran gayrimenkul geniş bir alanda yer alan animasyonlar kullanmayın. Boyutu ne olursa olsun, bu animasyon stili kullanıcının dikkatini dağıtıyor.
 
-- Kullanıcı şu anda odaklanmıştır nesnesine ilgisi olmayan veya etkileşim animasyonları kullanmayın.
+- Kullanıcının şu anda odaklandığı veya etkileşimde bulunduğu nesneyle ilgisi olmayan animasyonlar kullanmayın.
 
-- Yanıp Durdur sağlamak için bir yanıp sönen bildirime yanıt vermek için kullanıcı zorlama gibi durumunu sıfırlamak için kullanıcı etkileşimi gerektiren animasyonları kullanmayın. Herhangi bir yolla normalde bunları kapatmak yeterli olmalıdır.
+- Kullanıcının durumu sıfırlamasını gerektiren animasyonlar kullanmayın, örneğin kullanıcıyı yanıp sönen bildirimi durdurmak için yanıt vermeye zorlamak gibi. Onlarla herhangi bir şekilde etkileşim onları reddetmek için yeterli olmalıdır.
 
-Bu en iyi uygulamalar hakkında daha fazla bilgi için bkz. [animasyon desenleri](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns).
+Bu en iyi uygulamalar için uygulamalar hakkında daha fazla bilgi için [Animasyon desenleri](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns)bakın.
 
 ### <a name="animation-metrics"></a>Animasyon ölçümleri
 
-- Sistem görünüşte 10 milisaniyeden kısa kullanıcı hareketleri tepki.
+- Sistem, kullanıcı hareketlerine 10 milisaniyeden daha kısa bir sürede gözle görülür bir şekilde tepki vermelidir.
 
-- Animasyonlu Geçişi tamamlamak için 500 milisaniyeden uzun sürmez.
+- Animasyonlu geçişlerin tamamlanması 500 milisaniyeden uzun sürmemelidir.
 
-- Daha uzun süreleri gerektiren geçişleri için telafi yollarından biri, iki bölüme ayırın sağlamaktır. Örneğin, bir animasyon ilk bölümü tarafından içerik Soluklaşan kapsayıcıya (en fazla 500 milisaniye cinsinden) ardından boş içerik kapsayıcı (en fazla 500 milisaniye) olabilir.
+- Daha uzun süre gerektiren geçişleri telafi etmenin bir yolu, geçişi iki parçaya ayırmaktır. Örneğin, bir animasyonun ilk bölümü boş içerik kapsayıcısı (500 milisaniyeye kadar) ve ardından içeriğin kapsayıcıya solması (500 milisaniyeye kadar) olabilir.
 
-- Hesaplanabilir yükleme süreleri için determinant İlerleme göstergesi (ilerleme yüzdesi bitti göstergesi) tercih edilir.
+- Hesaplanabilen yükleme süreleri için bir belirleyici ilerleme göstergesi (yüzde-yapılan ilerleme göstergesi) tercih edilir.
 
-- İmleç veya katıştırılmış dönen animasyon (yükleme veya çalışma göstergesi) gibi bir meşgul göstergesi hesaplanamaz yükleme süreleri için uygundur.
+- Hesaplanamaz yükleme süreleri için imleç veya gömülü eğirme animasyonu (yükleme veya çalışma göstergesi) gibi meşgul bir gösterge uygundur.
 
-### <a name="animation-as-communicator"></a>Animasyon communicator olarak
-Visual STUDİO'da animasyon yalnızca bir iletişim aracı çalışır.  Kullanıcı arabiriminde (örneğin, bir menü açar veya kapatır) yapısal değişiklikler gibi bilgileri çeşitli iletişim kurmak için kullanılır. Animasyon, karmaşık sistemleri, yükleme ilerleme durumunu görselleştirme gibi zamana bağımlı davranışını görselleştirmenize yardımcı olabilir. Animasyonları, uyarılar ve bildirimler ile dikkat çekmek için de kullanılabilir.
+### <a name="animation-as-communicator"></a>İletişimci olarak animasyon
+Visual Studio UI'de animasyon yalnızca bir iletişim aracı olarak işlev görür.  Kullanıcı Arabirimi'ndeki yapısal değişiklikler gibi çeşitli bilgileri iletmek için kullanılır (örneğin, bir menü açıldığında veya kapandığında). Animasyon, yükleme ilerleme görselleştirmesi gibi karmaşık sistemlerin zamana bağlı davranışını görselleştirmeye yardımcı olabilir. Animasyonlar uyarılar ve bildirimler ile dikkat çekmek için de kullanılabilir.
 
- UI animasyonları, genellikle dört şekilde işlev: görselleştirin, dikkat çekmek, benzetimi, ve yanıt sürelerini/ilerleme göstergeleri.
+ Kullanıcı Arabirimi animasyonları genellikle dört şekilde çalışır: görselleştirme, dikkat çekme, simüle etme ve yanıt süreleri/ilerleme göstergeleri.
 
-#### <a name="visualize"></a>Görselleştirin
-Animasyon, üç boyutlu nesneler yapısını vurgulamak ve kullanıcıların, uzamsal yapılarını görselleştirmek kolaylaştırır. Bunu başarmak için animasyon dolu bir daire nesneyi döndürme için yavaş geri ve İleri etkinleştirmek veya nesne yakın getirin ve biraz geçişi veya odağı vurgulamak için boyutunu artırın.
+#### <a name="visualize"></a>Görselleştirme
+Animasyon, nesnelerin üç boyutlu doğasını vurgulayabilir ve kullanıcıların uzamsal yapılarını görselleştirmelerini kolaylaştırabilir. Bunu başarmak için animasyonun nesneyi tam bir daire içinde döndürmesi, yavaşça ileri geri çevirmesi veya nesneyi yakınlaştırması ve rollover veya odaklamayı vurgulamak için boyutunu biraz artırması gerekebilir.
 
-Üç boyutlu nesneler kullanıcı denetimi ile Tasarımcı önceden (program aracılığıyla veya el ile) belirlemelisiniz taşınmış olabilir ancak nasıl en iyi nesneyi en iyi bir anlayış sağlayan bir taşıma animasyon ekleme. Bu, animasyon can programlanmış sonra kullanıcı, nesneyi işlemek nasıl anlamak kullanıcı tarafından denetlenen hareketleri gerektirdiğinde kullanıcı tarafından nesnenin üzerine imleci yerleştirerek etkinleştirilmesi. Tek bir eksen ya da aynı anda yönünü taşıma sınırı; ya da ölçeklendirin, döndürme, veya Çevir, ancak aynı anda birden fazla desteklemez.
+Üç boyutlu nesneler kullanıcı denetimi ile taşınmış olsa da, tasarımcı nesnenin en iyi anlaşılmasını sağlayan bir hareketi en iyi şekilde nasıl canlandırabileceğini önceden (programlı veya el ile) belirlemelidir. Bu programlanmış animasyon daha sonra imleci nesnenin üzerine yerleştirerek kullanıcı tarafından etkinleştirilebilir, oysa kullanıcı tarafından denetitilen hareketler kullanıcının nesneyi nasıl manipüle edeceğini anlamasını gerektirir. Hareketi bir defada tek bir eksen veya yönlendirmeyle sınırlandırın; ölçeklendirin, döndürün veya çevirin, ancak aynı anda birden fazla yapmayın.
 
-Veri ilişkileri, durumu, yönlerini Görselleştir kategorisi içerir yapısı, dizisi ve saat.
+Görselleştir kategorisi veri, ilişkiler, durum, yapı, diziliş ve zaman yönlerini içerir.
 
-##### <a name="data"></a>Veri
-Karmaşık ve değişken bilgilerini göstermektedir:
+##### <a name="data"></a>Veriler
+Karmaşık ve değişken bilgileri göster:
 
-- Grafikler gibi görselleştirmelerin bilgi üstünden geçme
+- Grafikler ve grafikler gibi bilgi görselleştirmeleri arasında gezinme
 
-- Bir dizi Adımlama, Kılavuzlu Tur ve disk belleği
+- Bir sıra, rehberli tur ve sayfalama ile step
 
-- Ayrıntılarını çağırma işaret eden ve belirli bilgileri vurgulama
+- Ayrıntıları çağırma, işaret etme ve belirli bilgileri vurgulama
 
-- Ayrıntılar ve ek bilgiler üzerine odaklanan öğeyi planlamanızda
+- Odaklanmış bir öğenin üstüne bilgi ve ek bilgi üst üste koyma
 
-- Bir yapısal ya da kuruluş gösterimden diğerine morfingu prvku.
+- Bir yapısal veya örgütsel temsilden diğerine dönüşme
 
-- Zaman zaman kaydırıcıları koşu shuttle tekerlekleri ve Aktarım denetimleri (Yürüt, durdurma ve duraklatma) temsil eden değişiklikler
+- Zaman kaydırıcıları, koşu ve mekik tekerlekleri ve taşıma kontrolleri (oynatma, durdurma ve duraklatma) kullanarak zaman içinde değişiklikleri temsil etme
 
 ##### <a name="relationships"></a>İlişkiler
 
-- Öğeleri birbirleriyle nasıl ilişki kuracağını veya belirli bir öğe için hangi öğeleri arasında ilişki gösterilmektedir.
+- Öğelerin birbiriyle nasıl ilişkili olduğunu veya hangi öğelerin belirli bir öğeyle ilişkisini göster
 
-- Hiyerarşileri ve üst-alt veya eşdüzey ilişkilerini Göster
+- Hiyerarşileri ve üst-alt veya kardeş ilişkilerini göster
 
-- Başka bir öğe olarak çoğaltılır
+- Bir element başka bir elementi yumurtlar
 
-- Bir öğe başka bir öğeye en aza indirir.
+- Bir öğe başka bir öğeye en aza indirir
 
-- Bir öğe diğerine tethered tamamen
+- Bir eleman diğerine bağlı
 
 ##### <a name="state"></a>Durum
 
-- İçerik güncelleştirmeleri
+- İçerik güncellemeleri
 
-- Kullanıcı odak ve seçimi
+- Kullanıcı odaklılık ve seçim
 
 - İlerleme durumu
 
@@ -130,279 +130,279 @@ Karmaşık ve değişken bilgilerini göstermektedir:
 
 ##### <a name="structure"></a>Yapı
 
-- Bir düğümde yapısı özetleme
+- Yapıyı tek bir düğüm üzerinde döndürme
 
-- Reorienting
+- Yeniden Yönlendirme
 
-- En aza indirmek ve en üst düzeye çıkarmak, veya genişletme ve daraltma
+- En aza indirin ve en üst düzeye çıkarın veya genişletin ve daraltın
 
-##### <a name="sequence"></a>Dizisi
+##### <a name="sequence"></a>Sequence
 
-- Slayt gösterisi dizisi
+- Slayt gösterisi sırası
 
-- Resimleri çevirme
+- Resimler arasında gezinme
 
 ##### <a name="time"></a>Zaman
 
-- Zaman zaman lapse ve yayını değişimini Göster
+- Zaman içinde değişimi, zaman atlamasını ve ekran yayınlarını göster
 
-- Çöp, Geri Al ve Yinele Taşı
+- Çöp kutusuna taşıyın, geri alamayın ve yeniden yapın
 
-- Geçmiş durumuna
+- Geçmiş durumu geri yükleme
 
-#### <a name="attract-attention"></a>Dikkatini
-Hedef birkaç dışında tek bir öğe için kullanıcının dikkat çekmek veya güncelleştirilmiş bilgileri için kullanıcıyı uyarmak için ise, bir animasyon uygun olabilir. Örneğin, uygulama başlangıç sayfanızı Başlarken Sayfa yüklendikten sonra yere slaytları bir düğme kullanmak istemiyorsunuz.
+#### <a name="attract-attention"></a>Dikkat çekin
+Amaç, kullanıcının dikkatini birden çok öğeden tek bir öğeye çekmek veya kullanıcıyı güncelleştirilmiş bilgiler konusunda uyarmaksa, animasyon uygun olabilir. Örneğin, uygulama başlangıç sayfanız, sayfa yüklendikten sonra yerine kayan bir Başlangıç düğmesi kullanarak başlayabilir.
 
-Bir kural olarak, son taşınan öğeyi ekranda kullanıcının dikkatini çektiğini.  Animasyonlu öğelerin sıralı, kullanıcının dikkatini son hareket eden nesnenin izler.
+Kural olarak, ekrandaki son hareketli öğe kullanıcının dikkatini çeker.  Animasyonlu öğeler serisinde, kullanıcının dikkati son hareket eden nesneyi takip eder.
 
 ##### <a name="alert"></a>Uyarı
 
-- Kullanıcıyı uyarmak, dikkatini, ilerleme durumunu gösterir
+- Kullanıcıyı uyar, dikkat çek, ilerlemeyi göster
 
-- Bir şey doğru veya yanlış yapıldığını gösterir veya ilerleme durumunu veya ilerlemesini değişiklikleri göster
+- Bir şeyin doğru veya yanlış yapıldığını gösterme veya ilerleme veya ilerleme değişiklikleri gösterme
 
-- Çevrimiçi daha fazla bilgi bulmak veya geçerli görevle ilgili öğrenme gibi bir görev sırasında kullanıcılara sor
+- Çevrimiçi daha fazla bilgi bulma veya geçerli görev hakkında bilgi edinme gibi bir görev sırasında kullanıcıları harekete edinme
 
 ##### <a name="notifications"></a>Bildirimler
 
-- Kullanıcı bir hata durumu hakkında uyar
+- Kullanıcıyı bir hata durumu hakkında uyar
 
-- Bunlar başka bir şeye katılmayı isteyip istemediğinizi görmek için kullanıcının kesme
+- Başka bir şeyle ilgilenmek ister misin görmek için kullanıcıyı bölme
 
-- Yavaşça bir işlemin tamamlandığını kullanıcıyı bilgilendirmeniz veya indirme işlemi tamamlandıktan sonra değiştirildi, ister.
+- Kullanıcıya, indirme işleminin tamamlandığı gibi bir işlemin tamamlandığını veya değiştiğini yavaşça bildirin.
 
-#### <a name="simulate"></a>Benzetimi
-Bu kategori, physicality ve işlenemez kapsar.
+#### <a name="simulate"></a>Benzet -imini
+Bu kategori fiziksellik ve boyutsallık kapsar.
 
-- Nesnelerin nereden geldiğini veya bunlar için nereye gösterilmektedir.
+- Nesnelerin nereden geldiğini veya nereye gittiklerini göster
 
-- Genişlet ve Daralt veya açın ve Kapat
+- Genişletin ve daraltın veya açıp kapa
 
-- Yatay kaydırma ve sayfası açar
+- Kaydırma, kaydırma ve sayfa dönüşleri
 
-- Yığın ve z-sıralamasıyla
+- İstifleme ve z-sıralama
 
-- Döngüsü ve accordion
+- Atlıkarınca ve akordeon
 
-- Çevirme ve döndürme kullanıcı Arabirimi
+- Çevirme ve dönen UI
 
 #### <a name="response-and-progress-indicators"></a>Yanıt ve ilerleme göstergeleri
-İlerleme göstergesi, birkaç önemli avantajları vardır:
+İlerleme göstergelerinin birkaç önemli avantajı vardır:
 
-- Her iki kararlı ve belirsiz ilerleme göstergeleri sistem değil kilitlendi ve bu sorun üzerinde çalıştığı kullanıcı reassure.
+- Hem belirsiz hem de belirsiz ilerleme göstergeleri, kullanıcıya sistemin çökmediğini ve sorun üzerinde çalıştığı konusunda güvence sağlar.
 
-- Kararlı göstergeleri bir güvenliymiş bitiş tarihine yakın almanın yanı sıra bir fikir ne kadar eylem boyunca İlerliyor kullanıcıya sağlayın.
+- Belirli göstergeler, kullanıcıya eylemin ne kadar ilerlediğini ve bitişe daha da yaklaştığını hissettirir.
 
-## <a name="BKMK_AnimationPatterns"></a> Animasyon desenleri
+## <a name="animation-patterns"></a><a name="BKMK_AnimationPatterns"></a>Animasyon desenleri
 
 ### <a name="overview"></a>Genel Bakış
-Visual Studio içinde animasyon, belirli bir işlevi kullanıcı üretkenliğini hindering olmadan yapacak yöneliktir. Genellikle, Visual Studio içinde animasyon olması gerekir:
+Visual Studio'daki animasyonlar, kullanıcı üretkenliğini engellemeden belirli bir işleve hizmet etmek içindir. Genellikle Visual Studio'daki animasyonlar şöyle olmalıdır:
 
-- Küçük ve örtük
+- Küçük ve göze batmaz
 
 - Doğal ve gerçekçi
 
-- İnce ve subdued
+- İnce ve bastırılmış
 
 - Hızlı ve verimli
 
-- Esnek, hurried değil
+- Rahat, acele değil
 
-Bu çizim, Visual Studio için öneririz animasyon stilleri gösterir. Hiçbir animasyon veya belirerek / Kıs gibi ince animasyonları en sık kullanılır. Sınırlı bir uygulama gibi genişletin ve sözleşme taşıma animasyon, değişiklik ve Döndürme X ve Y konumu.
+Bu resimde Visual Studio için önerdiğimiz animasyon stilleri gösterilmektedir. En sık kullanılan animasyon veya solukla/soluksa gibi ince animasyonlar kullanılmaz. Genişletme ve sözleşme, X ve Y konum değişikliği ve döndürme gibi hareket animasyonlarının sınırlı uygulaması vardır.
 
-![Visual Studio için önerilen animasyon stiller](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202 a_VSAnimStyles")<br />Visual Studio için önerilen animasyon stilleri
+![Visual Studio için önerilen animasyon stilleri](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202-a_VSAnimStyles")<br />Visual Studio için önerilen animasyon stilleri
 
-#### <a name="appear-and-disappear"></a>Görünür ve kaybolur
-Bu desen ile bir öğe görülemediğinden görünüme giden ve geri geçiş animasyon olmadan geçer.
+#### <a name="appear-and-disappear"></a>Görün ve kaybolur
+Bu desenle, bir öğe görünürden görünüm dışına ve geçiş animasyonu olmadan geri geçer.
 
-![Görünür ve animasyon kaybolur](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202 b_AppearAndDisappear")<br />Görünür ve animasyon kaybolur
+![Animasyonu görün ve yok edin](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202-b_AppearAndDisappear")<br />Animasyonu görün ve yok edin
 
-##### <a name="correct-usage"></a>Doğru kullanımı
-Yeni kullanıcı Arabirimi öğeleri, böylece kullanıcı dikkatinizin obstructed ne kaybolur veya anında görünür gerekir. Ayrıca, yavaş değişen animasyonları görünmesi ve görünmez olur stiliyle gerçekleşmeyeceğini bir performans Sürükle olarak algılanan.
+##### <a name="correct-usage"></a>Doğru kullanım
+Kullanıcının dikkatinin dağılamayacağı veya engellenmeyeceği için anında görünmesi veya kaybolması gereken yeni Kullanıcı Arabirimi öğeleri. Buna ek olarak, yavaş hareket eden animasyonlar, görünüm ve kaybolma stiliyle oluşmayan bir performans sürüklemesi olarak algılanabilir.
 
-##### <a name="incorrect-usage"></a>Yanlış kullanımı
-Çalışmalarını ne kadar aniden hiçbir fikriniz kullanıcının kullanıcı Arabirimi görüntülenir ve bir animasyon ekleme ile bağlamsal anlamak yardımcı olur.
+##### <a name="incorrect-usage"></a>Yanlış kullanım
+Kullanıcı Kullanıcının ne olduğu hakkında hiçbir fikri olmadığı ve animasyon eklemenin bağlamsal anlayışa yardımcı olacağı durumlarda uyrular.
 
 ##### <a name="animation-properties"></a>Animasyon özellikleri
-Gecikme süresi genellikle sıfır saniyedir.
+Zaman gecikmesi genellikle sıfır saniyedir.
 
 ##### <a name="examples"></a>Örnekler
-- Araç pencereleri otomatik gizleme
+- Araç pencerelerini otomatik gizleme
 
-- Klavye etkinleştirilmiş Düzenleyicisi IntelliSense ve parametre Yardımı gibi kullanıcı Arabirimi
+- IntelliSense ve Parametre Yardım gibi klavye ile etkinleştirilen editör UI
 
-- Genişletme ve daraltma kod bölgeleri
+- Kodu genişletme ve daraltma bölgeleri
 
-#### <a name="fade-in-and-fade-out"></a>Belirme ve fade-out
-Bu desen ile UI öğesi görünür değil (opaklığı % 0) geçişleri görünür (% 100 opaklık) ya da tam tersi.
+#### <a name="fade-in-and-fade-out"></a>Solma ve solma
+Bu desenle, bir UI öğesi görünür değil (0% opaklık) görünür (100% opaklık) veya tam tersi geçişler.
 
-![Belirme ve fade-out animasyon](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202 c_FadeInFadeOut")<br />Belirme ve fade-out animasyon
+![Solukve solma animasyonu](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202-c_FadeInFadeOut")<br />Solukve solma animasyonu
 
-##### <a name="correct-usage"></a>Doğru kullanımı
-Bu, en sık UI animasyon önerilir. İlgi akışını kesintiye uğratmadan ekler zarif bir etkisidir. Bazı durumlarda, kullanıcı bile bir animasyon olduğunu sorunsuz bir perceiving ve kullanıcı Arabirimi sistemi akan fark etmiş olabileceğiniz değil.
-
-##### <a name="animation-properties"></a>Animasyon özellikleri
-
-- Opaklık başlatılıyor: % Belirme, fade-out %100 0
-
-- Opaklık bitiş: Belirme, %0 fade-out için %100
-
-- Süresi: 200 milisaniye cinsinden tek başına bir birleşimi animasyon dizisinin bir parçası kullanıldığında 100 milisaniye
-
-- Kolaylaştırıcı stili: Inout Sinüs
-
-##### <a name="examples"></a>Örnekler
-
-- Araç pencereleri otomatik gizleme
-
-- Menü Aç ve Kapat
-
-- Arka plan ve ön plan sekmesine geçiş
-
-#### <a name="color-blend-from-a-to-b"></a>Renk blend'e a B
-Bu desen ile rengi bir kullanıcı Arabirimi öğesi, b rengine değiştirir.
-
-![Renk blend animasyon](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202 d_ColorBlend")<br />Renk blend animasyon
-
-##### <a name="correct-usage"></a>Doğru kullanımı
-Bir kullanıcı Arabirimi öğesi rengi bir içerik veya durumu diğerine değiştiğinde bir animasyonlu geçişi.
+##### <a name="correct-usage"></a>Doğru kullanım
+Bu, en sık önerilen UI animasyonudur. Akışı kesintiye uğratmadan faiz katan ince bir etkidir. Bazı durumlarda, kullanıcı düzgün ve akıcı bir kullanıcı arabirimi sistemi algılayan bir animasyon olduğunu bile fark etmeyebilir.
 
 ##### <a name="animation-properties"></a>Animasyon özellikleri
 
-- Başlangıç rengi: Özel kullanıcı Arabirimi
+- Başlangıç opaklığı: solma için %0, solma için %100
 
-- Bitiş rengi: Özel kullanıcı Arabirimi
+- Bitiş opaklığı: solma için %100, solma için %0
 
-- Süresi: 200 milisaniye cinsinden tek başına bir birleşimi animasyon dizisinin bir parçası kullanıldığında 100 milisaniye
+- Süre: 200 milisaniye tek başına, 100 milisaniye bir kombinasyon animasyon dizisinin bir parçası olarak kullanıldığında
 
-- Kolaylaştırıcı stili: Inout Sinüs
+- Kolaylaştırma stili: Sine InOut
 
 ##### <a name="examples"></a>Örnekler
 
-- Belge penceresi durumu geçişleri (etkin ve etkin ve etkin olmayan en son)
+- Araç pencerelerini otomatik gizleme
 
-- Araç penceresi durumu geçişleri (odaklı ve plana odaklanmadan)
+- Menü açılıp kapan
 
-#### <a name="expand-and-contract"></a>Genişlet ve Daralt
-Bu desen ile X, Y veya her iki yönde de UI öğesini genişletir.
+- Arka plan ve ön plan sekmesi geçişleri
 
-![Genişletin ve sözleşme animasyon](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202 e_ExpandContract")<br />Genişletin ve animasyon sözleşme
+#### <a name="color-blend-from-a-to-b"></a>A'dan B'ye renk karışımı
+Bu desenle, bir UI öğesi A renginden B rengine değişir.
 
-##### <a name="correct-usage"></a>Doğru kullanımı
-Bir kullanıcı Arabirimi öğesi boyutu bir bağlamdan diğerine değiştiğinde bir animasyonlu geçişi.
+![Renk karışımı animasyon](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202-d_ColorBlend")<br />Renk karışımı animasyon
+
+##### <a name="correct-usage"></a>Doğru kullanım
+Bir UI öğesi bir bağlam veya durum diğerine renk değiştirdiğinde animasyonlu geçiş olarak.
 
 ##### <a name="animation-properties"></a>Animasyon özellikleri
 
-- Ölçek x: % veya belirli boyutu (piksel cinsinden)
+- Başlangıç rengi: UI'ye özgü
 
-- Y Ölçek: % veya belirli boyutu (piksel cinsinden)
+- Bitiş rengi: UI'ye özgü
 
-- Bağlantı konumu: genellikle (sağdan sola diller için) sol veya sağ üst köşede (için sağdan sola diller)
+- Süre: 200 milisaniye tek başına, 100 milisaniye bir kombinasyon animasyon dizisinin bir parçası olarak kullanıldığında
 
-- Süresi: 200 milisaniye cinsinden tek başına bir birleşimi animasyon dizisinin bir parçası kullanıldığında 100 milisaniye
+- Kolaylaştırma stili: Sine InOut
 
 ##### <a name="examples"></a>Örnekler
 
-- Mimari Gezgini paneli genişletme ve daraltma
+- Belge penceresi durumu geçişleri (etkin, son etkin ve etkin olmayan)
 
-- Visual Studio 2017 başlangıç sayfası öğesi genişletme ve daraltma
+- Araç penceresi durumu geçişleri (odaklanmış ve odaklanmamış)
 
-#### <a name="x-y-position-change"></a>X-Y Konum Değiştir
-Bu düzende, X veya Y konumunu veya her ikisini de UI öğesi değiştirir.
+#### <a name="expand-and-contract"></a>Genişletme ve sözleşme
+Bu desenle, bir UI öğesi X, Y veya her iki yönde genişler.
 
-![X-Y konumunu değiştir animasyon](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202 f_XYPositionChange")<br />X-Y konumu değişiklik animasyon
+![Animasyonu genişletme ve sözleşme](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202-e_ExpandContract")<br />Animasyonu genişletme ve sözleşme
 
-##### <a name="correct-usage"></a>Doğru kullanımı
-Bir kullanıcı Arabirimi öğesi konumu bir bağlamdan diğerine değiştiğinde bir animasyonlu geçişi olarak.
+##### <a name="correct-usage"></a>Doğru kullanım
+Bir UI öğesi boyutu bir bağlamdan diğerine değiştirdiğinde animasyonlu geçiş olarak.
 
 ##### <a name="animation-properties"></a>Animasyon özellikleri
 
-- Başlangıç X ve Y konumu: Özel kullanıcı Arabirimi
+- X ölçeği: % veya belirli boyut (piksel olarak)
 
-- Bitiş X ve Y konumu: Özel kullanıcı Arabirimi
+- Y ölçeği: % veya belirli boyut (piksel olarak)
+
+- Çapa pozisyonu: genellikle sol üstte (soldan sağa diller için) veya sağ üst (sağdan sola diller için)
+
+- Süre: 200 milisaniye tek başına, 100 milisaniye bir kombinasyon animasyon dizisinin bir parçası olarak kullanıldığında
+
+##### <a name="examples"></a>Örnekler
+
+- Mimari Explorer paneli genişletin ve daraltın
+
+- Visual Studio 2017 Başlangıç Sayfası öğesi genişletin ve daraltın
+
+#### <a name="x-y-position-change"></a>X-Y pozisyon değişikliği
+Bu desenle, bir UI öğesi X veya Y konumunu veya her ikisini de değiştirir.
+
+![X-Y pozisyon değişikliği animasyonu](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X-Y pozisyon değişikliği animasyonu
+
+##### <a name="correct-usage"></a>Doğru kullanım
+Bir UI öğesi konumunu bir bağlamdan diğerine değiştirdiğinde animasyonlu geçiş olarak.
+
+##### <a name="animation-properties"></a>Animasyon özellikleri
+
+- Başlangıç X ve Y konumu: UI'ye özgü
+
+- Bitiş X ve Y konumu: UI'ye özgü
 
 - Hareket yolu: yok
 
-- Süresi: 200 milisaniye cinsinden tek başına bir birleşimi animasyon dizisinin bir parçası kullanıldığında 100 milisaniye
+- Süre: 200 milisaniye tek başına, 100 milisaniye bir kombinasyon animasyon dizisinin bir parçası olarak kullanıldığında
 
-- Kolaylaştırıcı stili: Inout Sinüs
+- Kolaylaştırma stili: Sine InOut
 
 ##### <a name="example"></a>Örnek
 Sekme yeniden sıralama
 
 #### <a name="rotate"></a>Döndür
-Bu düzende, kullanıcı Arabirimi öğesi döndürür.
+Bu desenle, UI öğesi döndürür.
 
-![Kullanıcı Arabirimi öğesi döndürme animasyon](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202 g_Rotate")<br />Kullanıcı Arabirimi öğesi döndürme animasyon
+![UI öğesi döndürme animasyonu](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI öğesi döndürme animasyonu
 
-##### <a name="correct-usage"></a>Doğru kullanımı
-Yalnızca belirsiz dönen İlerleme göstergesi için.
+##### <a name="correct-usage"></a>Doğru kullanım
+Sadece belirsiz dönen ilerleme göstergesi için.
 
 ##### <a name="animation-properties"></a>Animasyon özellikleri
 
-- Dönüş derecesini: 360
+- Dönüş derecesi: 360
 
-- Dönüş Merkezi: nesnenin orta
+- Döndürme merkezi: nesnenin ortası
 
 - Süre: sürekli
 
 ##### <a name="example"></a>Örnek
-Belirsiz İlerleme göstergesi (dönen)
+Belirsiz ilerleme göstergesi (iplik)
 
-### <a name="common-shell-ui-actions-and-recommended-animations"></a>Ortak Kabuk UI eylemlerini ve önerilen animasyonları
+### <a name="common-shell-ui-actions-and-recommended-animations"></a>Ortak kabuk UI eylemleri ve önerilen animasyonlar
 
-#### <a name="tab-open"></a>Açık sekmesi
-![Sekme açık animasyon](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202 h_TabOpen")<br />Sekme açık animasyon
+#### <a name="tab-open"></a>Sekme açık
+![Sekme açık animasyon](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202-h_TabOpen")<br />Sekme açık animasyon
 
-- Stil: görüntülenir
+- Stil: görünür
 
 - Süre: sıfır saniye
 
-#### <a name="tab-close"></a>Sekmesini kapatın
-![Sekme Kapat animasyon](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202 i_TabClose")<br />Sekme Kapat animasyon
+#### <a name="tab-close"></a>Sekme kapat
+![Sekme kapatma animasyonu](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202-i_TabClose")<br />Sekme kapatma animasyonu
 
-- Stili: X konumu değiştirin
+- Stil: X pozisyon değişikliği
 
-- Süresi: 200 milisaniye
+- Süre: 200 milisaniye
 
-#### <a name="tab-reorder"></a>Sekme yeniden sıralama
-![Visual Studio'da yeniden düzenleme animasyon sekmesinde](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202 j_TabReorder")<br />Sekme yeniden sıralama animasyon
+#### <a name="tab-reorder"></a>Sekme yeniden sipariş
+![Visual Studio'da sekme yeniden sipariş animasyonu](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202-j_TabReorder")<br />Sekme yeniden sipariş animasyonu
 
-- Stili: X konumu değiştirin
+- Stil: X pozisyon değişikliği
 
-- Süresi: 200 milisaniye
+- Süre: 200 milisaniye
 
-#### <a name="close-floating-document"></a>Kayan belgeyi Kapat
-![Belge animasyon kayan Kapat](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202 k_CloseFloatingDocument")<br />Kapat kayan belge animasyon
+#### <a name="close-floating-document"></a>Kayan belgeyi kapatma
+![Kayan belge animasyonuna kapatma](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202-k_CloseFloatingDocument")<br />Kayan belge animasyonuna kapatma
 
-- Stil: görüntülenir
+- Stil: görünür
 
-- Süresi: 200 milisaniye
+- Süre: 200 milisaniye
 
-#### <a name="window-state-transition"></a>Pencere durum geçişi
-![Pencere durum geçişi animasyon](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202 l_WindowStateTransition")<br />Pencere durum geçişi animasyon
+#### <a name="window-state-transition"></a>Pencere durumu geçişi
+![Pencere durumu geçiş animasyonu](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202-l_WindowStateTransition")<br />Pencere durumu geçiş animasyonu
 
-- Stil: diğer windows ile tutarlı olması için belgeyi Kapat animasyon tanımlayın geçerli işletim sistemi sağlar.
+- Stil: Diğer pencerelerle tutarlı olması için, geçerli işletim sisteminin belgeyi kapatma animasyonu tanımlamasına izin verin.
 
-- Süresi: 200 milisaniye
+- Süre: 200 milisaniye
 
-#### <a name="menu-open"></a>Menü Aç
-![Menü Aç animasyon](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202 m_MenuOpen")<br />Menü Aç animasyon
+#### <a name="menu-open"></a>Menü açık
+![Menü açık animasyon](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202-m_MenuOpen")<br />Menü açık animasyon
 
-- Stil: belirme
+- Stil: solma-in
 
-- Süresi: 200 milisaniye
+- Süre: 200 milisaniye
 
-#### <a name="menu-close"></a>Menüsünü Kapat
-![Menüsünü Kapat animasyon](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202 n_MenuClose")<br />Menüsünü Kapat animasyon
+#### <a name="menu-close"></a>Menü kapat
+![Menü kapatma animasyonu](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202-n_MenuClose")<br />Menü kapatma animasyonu
 
-- Stil: fade-out
+- Stil: solma-out
 
-- Süresi: 200 milisaniye
+- Süre: 200 milisaniye
 
-#### <a name="auto-hide-tool-window-reveal"></a>Otomatik gizleme araç penceresini göster
-![Otomatik gizleme araç penceresini gösterme animasyon](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202 o_AutoHideToolWindowReveal")<br />Araç penceresini gösterme animasyon otomatik gizleme
+#### <a name="auto-hide-tool-window-reveal"></a>Otomatik gizleme aracı penceresi ortaya
+![Otomatik gizleme aracı penceresi animasyonu ortaya çıkarır](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202-o_AutoHideToolWindowReveal")<br />Otomatik gizleme aracı penceresi animasyonu ortaya çıkarır
 
-- Stil: görüntülenir
+- Stil: görünür
 
 - Süre: sıfır saniye

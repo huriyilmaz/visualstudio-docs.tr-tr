@@ -1,49 +1,49 @@
 ---
-title: Dil hizmetini, EditorConfig 'i destekleyecek şekilde Genişlet
+title: EditorConfig'i desteklemek için dil hizmetini genişletin
 ms.date: 11/22/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - editorconfig [extensibility]
 - editorconfig, supporting in a language service
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 663a87ba15121896edcb4c049e7adc6b5c38492a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: ddfe0e30904d000b4fd70c85371d29a2ee486932
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983102"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699579"
 ---
-# <a name="supporting-editorconfig-for-your-language-service"></a>Dil hizmetiniz için EditorConfig 'i destekleme
+# <a name="supporting-editorconfig-for-your-language-service"></a>Dil hizmetiniz için EditorConfig'i destekleme
 
-[Editorconfig](https://editorconfig.org/) dosyaları, girinti boyutu gibi ortak metin düzenleyicisi seçeneklerini proje başına temelinde açıklamanıza olanak sağlar. Visual Studio 'nun EditorConfig dosyaları desteği hakkında daha fazla bilgi edinmek için bkz. [editorconfig kullanarak taşınabilir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md).
+[EditorConfig](https://editorconfig.org/) dosyaları, girinti boyut gibi ortak metin düzenleyicisi seçeneklerini proje başına olarak açıklamanızı sağlar. Visual Studio'nun EditorConfig dosyaları desteği hakkında daha fazla bilgi edinmek için [EditorConfig'i kullanarak taşınabilir düzenleyici ayarlarını oluştur'a](../ide/create-portable-custom-editor-options.md)bakın.
 
-Çoğu durumda, Visual Studio Language hizmetini uyguladığınızda, EditorConfig Universal özelliklerini desteklemek için ek bir iş gerekmez. Çekirdek Düzenleyici, kullanıcılar dosyaları açtıklarında. editorconfig dosyasını otomatik olarak bulur ve okur ve uygun metin arabelleğini ve görüntüleme seçeneklerini ayarlar. Ancak, sekmeler ve boşluklar gibi düzenlemeler için, bazı dil Hizmetleri Genel ayarları kullanmak yerine uygun bağlamsal metin görünümü seçeneğini kullanmayı tercih edebilir. Bu durumlarda, dil hizmetinin EditorConfig dosyalarını desteklemesi için güncelleştirilmeleri gerekir.
+Çoğu durumda Visual Studio dil hizmeti uyguladığınızda, EditorConfig evrensel özelliklerini desteklemek için ek bir çalışma gerekmez. Çekirdek düzenleyici, kullanıcılar dosyaları açtığında .editorconfig dosyasını otomatik olarak keşfeder ve okur ve uygun metin arabelleği ve görünüm seçeneklerini ayarlar. Ancak, sekmeler ve boşluklar gibi yapılan lar için, bazı dil hizmetleri genel ayarları kullanmak yerine uygun bağlamsal metin görünümü seçeneğini kullanmayı tercih eder. Bu gibi durumlarda, dil hizmeti EditorConfig dosyalarını desteklemek için güncelleştirilmelidir.
 
-Aşağıda, genel _dile özgü_ bir seçeneği _bağlamsal_ seçenekle değiştirerek, editorconfig dosyalarını desteklemek üzere bir dil hizmetini güncelleştirmek için gereken değişiklikler aşağıda verilmiştir:
+Genel dile _özgü_ bir seçeneği _bağlamsal_ bir seçenekle değiştirerek, EditorConfig dosyalarını desteklemek için bir dil hizmetini güncelleştirmek için gereken değişiklikler şunlardır:
 
-## <a name="indent-style"></a>Girinti stili
+## <a name="indent-style"></a>Girintisi stili
 
-Dile özgü seçenekler | Bağlamsal seçenekler
+Dile özel seçenekler | Bağlamsal seçenekler
 -------|--------
-Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. fInsertTabs<br/>Microsoft. VisualStudio. Package. LanguagePreferences. ınsertsekmeleri|! textBufferOptions. GetOptionValue (DefaultOptions. Converttabstospacesoptionıd)<br/>! textView. Options. GetOptionValue (DefaultOptions. Converttabstospacesoptionıd)
+Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.fInsertTabs<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs|!textBufferOptions.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)<br/>!textView.Options.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)
 
-## <a name="indent-size"></a>Boyut Girintile
+## <a name="indent-size"></a>Girintisi boyutu
 
-Dile özgü seçenekler | Bağlamsal seçenekler
+Dile özel seçenekler | Bağlamsal seçenekler
 -------|--------
-Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. Ugirintileme tsize<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTab. girintileme tsize|textBufferOptions. GetOptionValue (DefaultOptions. ınttrsizeoptionıd)<br/>textView. Options. GetOptionValue (DefaultOptions. ınttrsizeoptionıd)
+Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uIndentSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.IndentSize|textBufferOptions.GetOptionValue(DefaultOptions.IndentSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.IndentSizeOptionId)
 
 ## <a name="tab-size"></a>Sekme boyutu
 
-Dile özgü seçenekler | Bağlamsal seçenekler
+Dile özel seçenekler | Bağlamsal seçenekler
 -------|--------
-Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. Uıtabsize<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTab. TabSize|textBufferOptions. GetOptionValue (DefaultOptions. Tabsizeoptionıd)<br/>textView. Options. GetOptionValue (DefaultOptions. Tabsizeoptionıd)
+Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.TabSize|textBufferOptions.GetOptionValue(DefaultOptions.TabSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.TabSizeOptionId)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EditorConfig kullanarak taşınabilir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md)
-- [Düzenleyici ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md)
+- [EditorConfig'i kullanarak taşınabilir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md)
+- [Editör ve dil hizmetlerinin genişletilmesi](../extensibility/extending-the-editor-and-language-services.md)

@@ -1,5 +1,5 @@
 ---
-title: SccGetExtendedCapabilities işlevi | Microsoft Docs
+title: SccGetExtendedYetenekleri Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccGetExtendedCapabilities function
 ms.assetid: 588c6a92-2147-4d8b-a357-96ca7da0a092
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa6a067a0b9e8358f503228dbc53e20586b84468
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5247f2de7ffc63db7235f915c72b3274b8fee5f5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353660"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700732"
 ---
-# <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities işlevi
-Bu işlev, kaynak denetimi eklentisi tarafından desteklenen ek özellikleri döndürür.
+# <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities fonksiyonu
+Bu işlev, kaynak denetim eklentisi tarafından desteklenen ek özellikler sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,30 +33,30 @@ SCCRTN SccGetExtendedCapabilities(
 ```
 
 ### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-[in] Kaynak Denetimi Eklentisi bağlam işaretçisi.
+[içinde] Kaynak denetimi eklentibağlam işaretçisi.
 
  lSccExCaps
 
-[in] Test etmek istediğiniz genişletilmiş bir özellik belirten bir bayrak (genişletilmiş özelliği kodu tablosuna bakın [özellik bayrakları](../extensibility/capability-flags.md) olası bayrakları için).
+[içinde] Sınamak için genişletilmiş bir kapasite belirten bir bayrak (olası bayraklar için [Yetenek bayraklarında](../extensibility/capability-flags.md) Genişletilmiş Yetenek Kodu tablosuna bakın).
 
- pbSupported
+ pbDesteklenen
 
-[out] Sıfır olmayan döndürür (`TRUE`) belirtilen yeteneği desteklenir; Aksi takdirde, sıfır döndürür (`FALSE`).
+[çıkış] Belirtilen yetenek desteklenirse sıfır olmayan (`TRUE`) döndürür; aksi takdirde,`FALSE`sıfır () döndürür.
 
-## <a name="return-value"></a>Dönüş değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+## <a name="return-value"></a>Döndürülen değer
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Alma özelliği işlemi başarıyla tamamlandı.|
-|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|Bilinmeyen veya belirtilmeyen bir hata oluştu.|
+|SCC_OK|Alabilme yeteneği işlemi başarıyla tamamlandı.|
+|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|Bilinmeyen veya belirtilmeyen hata oluştu.|
 
 ## <a name="remarks"></a>Açıklamalar
- İsteğe bağlı olarak bu yöntem çağrılır; Test edilecek bir yetenek gerektiğinde, diğer bir deyişle, bu yöntem belirlemek için özellik desteklenen çağrılır. Aynı anda yalnızca bir bayrağı belirtilmiş.
+ Bu yöntem isteğe bağlı olarak çağrılır; diğer bir özellik sınanması gerektiğinde, bu yeteneğin desteklenip desteklenmediğini belirlemek için bu yöntem çağrılır. Aynı anda yalnızca bir bayrak belirtilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
 - [Hata kodları](../extensibility/error-codes.md)
-- [Özellik bayrakları](../extensibility/capability-flags.md)
+- [Yetenek bayrakları](../extensibility/capability-flags.md)

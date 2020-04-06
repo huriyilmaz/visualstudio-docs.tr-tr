@@ -1,5 +1,5 @@
 ---
-title: LocationField öğesi (Visual Studio Proje şablonları) | Microsoft Docs
+title: LocationField Element (Visual Studio Proje Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - LocationField element [Visual Studio project templates]
 ms.assetid: 6aaaa155-6ce0-4f7f-aa50-8d63d7a7c992
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b440595207cee6a146e6d85ee5e9f7c492ee3eee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d993e84bec41486ef4dce6ad98c61f23ab2a46bd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309165"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702880"
 ---
-# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField öğesi (Visual Studio Proje şablonları)
-Belirtir olup olmadığını **konumu** metin kutusu **yeni proje** iletişim kutusu etkin, devre dışı veya gizli proje şablonu.
+# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField öğesi (Visual Studio proje şablonları)
+**Yeni Proje** iletişim kutusundaki **Konum** metin kutusunun proje şablonu için etkin, devre dışı veya gizli olup olmadığını belirtir.
 
- \<VSTemplate > \<TemplateData > \<LocationField >
+ \<VSTemplate \<> ŞablonVeri> \<LocationAlan>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,28 +44,28 @@ Belirtir olup olmadığını **konumu** metin kutusu **yeni proje** iletişim ku
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje**.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırıyor ve Yeni **Proje'de**nasıl görüntülenebildiğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Geçerli bir metin değerleri şunlardır:
+ Geçerli metin değerleri şunlardır:
 
-- `Enabled`, hangi belirtir **konumu** kutusunun **yeni proje** iletişim kutusu etkin.
+- `Enabled`, **Yeni Proje** iletişim kutusunun **Konum** kutusunun etkin olduğunu belirtir.
 
-- `Disabled`, hangi belirtir **konumu** kutusunun **yeni proje** iletişim kutusu devre dışı bırakıldı.
+- `Disabled`, **Yeni Proje** iletişim kutusunun **Konum** kutusunun devre dışı bırakıldığını belirtir.
 
-- `Hidden`, hangi belirtir **konumu** kutusunun **yeni proje** iletişim kutusu gizlenir.
+- `Hidden`, **Yeni Proje** iletişim kutusunun **Konum** kutusunun gizli olduğunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- Varsayılan değer `Enabled` şeklindedir.
+ Varsayılan değer: `Enabled`.
 
- **Konumu** metin kutusu **yeni proje** iletişim kutusu yeni projeler kaydedilir varsayılan dizinini değiştirme olanağı sağlar.
+ **Yeni Proje** iletişim kutusundaki **Konum** metin kutusu, kullanıcıların yeni projelerin kaydedildiği varsayılan dizini değiştirmesini sağlar.
 
- İçinde belirtilen değerle `Location` temel proje sistemi destekliyorsa öğesi iletişim kutusu tarafından yalnızca kabul.
+ `Location` Öğede belirtilen değer yalnızca temel proje sistemi destekliyorsa iletişim kutusu tarafından onurlanır.
 
 ## <a name="example"></a>Örnek
- Meta veriler için aşağıdaki örnekte bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] şablonu.
+ Aşağıdaki örnekte, şablonun [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] meta verileri gösteriş verilmiştir.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -93,5 +93,5 @@ Belirtir olup olmadığını **konumu** metin kutusu **yeni proje** iletişim ku
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)

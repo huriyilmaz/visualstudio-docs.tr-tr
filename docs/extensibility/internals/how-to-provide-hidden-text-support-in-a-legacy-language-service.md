@@ -7,41 +7,41 @@ helpviewer_keywords:
 - editors [Visual Studio SDK], hidden text
 - language services, implementing hidden text regions
 ms.assetid: 1c1dce9f-bbe2-4fc3-a736-5f78a237f4cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3d1088399256a4d5b16fa269ce022800ed645b1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a9d5fe85932f87eb68b6b5a0f5868ebbf8f2b5f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351023"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707924"
 ---
-# <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Nasıl yapılır: Eski dil hizmetinde gizli metin desteği
-Anahat bölgelerin yanı sıra gizli metin bölgeler oluşturabilirsiniz. İstemci tarafından denetlenen veya Düzenleyicisi tarafından denetlenen gizli metin bölgeleri olabilir ve metnin bir bölge tamamen gizlemek için kullanılır. Düzenleyici gizli bölge yatay çizgiler olarak görüntüler. Bunun bir örneği **yalnızca betik** HTML düzenleyicisinde görüntüle.
+# <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Nasıl yapilir: Eski bir dil hizmetinde gizli metin desteği sağlayın
+Anahat bölgelerine ek olarak gizli metin bölgeleri oluşturabilirsiniz. Gizli metin bölgeleri istemci veya düzenleyici denetiminde olabilir ve metin bölgesini tamamen gizlemek için kullanılır. Düzenleyici, gizli bir bölgeyi yatay çizgiler olarak görüntüler. Bunun bir örneği, HTML düzenleyicisindeki **Yalnızca Komut Dosyası** görünümüdür.
 
-## <a name="to-implement-a-hidden-text-region"></a>Bir gizli metin bölgeye uygulamak için
+## <a name="to-implement-a-hidden-text-region"></a>Gizli metin bölgesi uygulamak için
 
-1. Çağrı `QueryService` için <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>.
+1. Çağrı `QueryService` <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>için .
 
-     Bu bir işaretçi döndürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>.
+     Bu bir işaretçi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>döndürür.
 
-2. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>, verilen metin arabelleği için bir işaretçi olarak geçen. Bu, gizli metin oturumu zaten için arabellek var olup olmadığını belirler.
+2. Belirli <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>bir metin arabelleği için işaretçiyi çağırın. Bu, arabellek için gizli bir metin oturumunun zaten var olup olmadığını belirler.
 
-3. Zaten bir tane sonra biri ve var olan bir işaretçi oluşturun gerekmez <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> nesne döndürülür. Bu işaretçinin, listeleme ve gizli metin bölgeler oluşturmak için kullanın. Aksi takdirde, çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> arabellek için gizli metin oturum oluşturmak için.
+3. Biri zaten varsa, o zaman bir oluşturmanız gerekmez ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> varolan nesneye bir işaretçi döndürülür. Gizli metin bölgelerini sayısallandırmak ve oluşturmak için bu işaretçiyi kullanın. Aksi takdirde, arabellek için gizli bir metin oturumu oluşturmak için arayın. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>
 
-     Bir işaretçi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> nesne döndürülür.
+     Nesneye <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> bir işaretçi döndürülür.
 
     > [!NOTE]
-    > Çağırdığınızda `CreateHiddenTextSession`, gizli metin istemci belirtebilirsiniz (diğer bir deyişle, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>). Gizli metin istemci gizli metni veya anahat oluşturma genişletilmiş veya daraltılmış kullanıcı tarafından size bildirir.
+    > `CreateHiddenTextSession`Aradiğinizde, gizli bir metin istemcisi belirtebilirsiniz (yani. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>). Gizli metin istemcisi, gizli metin veya anahat kullanıcı tarafından genişletildiğinde veya daraltıldığında sizi size iletir.
 
-4. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A> ekleyin ya da daha yeni aşağıdakileri belirten bölgeleri teker teker anahat `reHidReg` (<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>) parametre:
+4. Bir seferde bir veya daha fazla yeni anahat bölgesi eklemek için<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>çağrı, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A> ( ) parametreaşağıdaki bilgileri belirterek: `reHidReg`
 
-    1. Bir değer belirleyebilirsiniz `hrtConcealed` içinde `iType` üyesi <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> yapısı bir anahat bölgesi yerine gizli bir bölge oluşturduğunuzu belirtmek için.
+    1. Anahat bölgesi `hrtConcealed` yerine `iType` gizli <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> bir bölge oluşturduğunuzu belirtmek için yapının üyesinin değerini belirtin.
 
         > [!NOTE]
-        > Bölgeleri altına gizlenmiş gizlendiğinde Düzenleyicisi satırları kendi varlığını göstermek için gizli bölgeler etrafında otomatik olarak görüntüler.
+        > Gizli bölgeler gizlendiğinde, düzenleyici varlıklarını göstermek için gizli bölgelerin etrafındaki satırları otomatik olarak görüntüler.
 
-    2. Bölge istemci tarafından denetlenen veya Düzenleyicisi tarafından denetlenen içinde olup olmadığını belirtin `dwBehavior` üyeleri <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> yapısı. Akıllı ana hat oluşturma uygulamanız Düzenleyicisi ve istemci denetlenen anahat ve gizli metin bölgeleri bir karışımını içerebilir.
+    2. Yapının üyeleri için bölgenin istemci tarafından mı `dwBehavior` yoksa düzenleyici denetiminde mi olduğunu belirtin. <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> Akıllı anahat uygulamanız, düzenleyici ve istemci kontrollü anahat ve gizli metin bölgelerinin bir karışımını içerebilir.

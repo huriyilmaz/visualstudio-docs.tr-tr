@@ -1,5 +1,5 @@
 ---
-title: Sccdirqueryınfo işlevi | Microsoft Docs
+title: SccDirQueryInfo Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccDirQueryInfo function
 ms.assetid: 459e2d99-573d-47c4-b834-6d82c5e14162
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e19b65ea4b3c4cd87b1f9d6a3db9e6f8ae64d16d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 222b5d15a1e2bcd9bd3f27a5cd0e9904642d9786
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332236"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700947"
 ---
-# <a name="sccdirqueryinfo-function"></a>Sccdirqueryınfo işlevi
-Bu işlev, bunların geçerli durum için tam dizinler listesini inceler.
+# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo fonksiyonu
+Bu işlev, geçerli durumları için tam nitelikli dizinlerin listesini inceler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,40 +34,40 @@ LPLONG  lpStatus
 ```
 
 ### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-[in] Kaynak Denetimi Eklentisi bağlam yapısı.
+[içinde] Kaynak denetimi eklentisi bağlam yapısı.
 
  nDirs
 
-[in] Sorgulanacak seçili dizinleri sayısı.
+[içinde] Sorgulanacak dizin sayısı.
 
  lpDirNames
 
-[in] Sorgulanacak dizinlerin tam yollarının dizisi.
+[içinde] Sorgulanacak dizinlerin tam nitelikli yolları dizisi.
 
- lpStatus
+ lpDurum
 
-[out içinde] Kaynak denetimi durumu bayrakları döndürülecek eklentisi için bir dizi yapısı (bkz [dizin durumu kod](../extensibility/directory-status-code-enumerator.md) Ayrıntılar için).
+[içinde, dışarı] Durum bayraklarını döndürmek için kaynak denetim eklentisi için bir dizi yapısı (ayrıntılar için [Dizin durum koduna](../extensibility/directory-status-code-enumerator.md) bakın).
 
-## <a name="return-value"></a>Dönüş değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+## <a name="return-value"></a>Döndürülen değer
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Sorgu başarılı oldu.|
-|SCC_E_OPNOTSUPPORTED|Kaynak kodu denetim sistemi bu işlemi desteklemiyor.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu. Bir yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Belirli olmayan hata oluştu.|
+|SCC_E_OPNOTSUPPORTED|Kaynak kodu denetim sistemi bu işlemi desteklemez.|
+|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspesifik bir hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- İşlev dönüş dizi bitten'ın bir bit maskesi ile doldurur `SCC_DIRSTATUS` ailesi (bkz [dizin durumu kod](../extensibility/directory-status-code-enumerator.md)), verilen her dizin için bir giriş. Durum dizi arayan tarafından ayrılmış.
+ İşlev, geri dönüş dizisini `SCC_DIRSTATUS` aileden gelen bit maskesiyle doldurur (bkz. [Dizin durum kodu),](../extensibility/directory-status-code-enumerator.md)verilen her dizin için bir giriş. Durum dizisi arayan tarafından ayrılır.
 
- Bir dizine karşılık gelen bir proje sahip olup olmadığını sorgulayarak dizini kaynak denetimi altında olup olmadığını denetlemek için yeniden adlandırmadan önce IDE bu işlevi kullanır. Dizin, kaynak denetimi altında değilse, IDE kullanıcıya uygun uyarı sağlayabilir.
+ Dizin, ilgili bir projeye sahip olup olmadığını sorgulayarak dizinin kaynak denetimi altında olup olmadığını denetlemek için dizin yeniden adlandırılmadan önce Bu işlevi kullanır. Dizin kaynak denetimi altında değilse, IDE kullanıcıya uygun uyarı sağlayabilir.
 
 > [!NOTE]
-> Kaynak Denetimi Eklentisi, bir veya daha fazla durum değerleri uygulamak seçerse uygulanmayan BITS sıfır olarak ayarlanması gerekir.
+> Kaynak denetim eklentisi durum değerlerinden birini veya birkaçını uygulamamayı seçerse, uygulanmamış bitler sıfıra ayarlanmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
 - [Dizin durum kodu](../extensibility/directory-status-code-enumerator.md)

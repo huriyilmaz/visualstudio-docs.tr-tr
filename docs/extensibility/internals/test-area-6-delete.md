@@ -1,56 +1,56 @@
 ---
-title: 'Test alanı 6: silme | Microsoft Docs'
+title: 'Test Alanı 6: Sil | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], deleting items
 - source control plug-ins, deleting items
 ms.assetid: 6f2e872c-5ba2-4303-9f50-a90cef9a6225
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d75721a09615026cd10a42e4b6d8d8520b41239
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9902ab9d1cb9c28ddf67b83590a4cccd5f6562f2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72722438"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704503"
 ---
 # <a name="test-area-6-delete"></a>Test Alanı 6: Silme
-Bu kaynak denetimi eklentisi test alanı silme eylemlerini içerir.
+Bu kaynak denetimi eklentisi test alanı silme eylemlerini kapsar.
 
- Kaynak denetimi **Çözüm Gezgini**eylemleri silme işlemlerine yanıt verir.
+ Kaynak **denetimi, Solution Explorer'daki**silme eylemlerine yanıt verir.
 
- Silinebilecek öğelerin listesi aşağıda verilmiştir:
+ Silinebilecek öğelerin listesi aşağıda veda edilebilen öğelerin listesi verebilirsiniz:
 
 - Dosyalar
 
-- Klasörlerden
+- Klasörler
 
 - Project
 
-  Proje türüne bağlı olarak, projeyi kaldırma (dosyaları diskte bırakır) veya projeyi **silme** (diskteki dosyaları **kaldırma** ) seçeneğiniz olabilir. Her iki eylem de **Çözüm Gezgini**proje veya öğeyi kaldırır.
+  Proje türüne bağlı olarak, projeyi **kaldırma** (dosyaları diskte bırakır) veya projeyi **silme** (diskteki dosyaları kaldırır) seçeneğiniz olabilir. Eylem, projeyi veya öğeyi **Çözüm Gezgini'nden**kaldırır.
 
-## <a name="expected-behavior"></a>Beklenen davranış
- Silme testi alanındaki test çalışmaları için beklenen davranış:
+## <a name="expected-behavior"></a>Beklenen Davranış
+ Silme test alanındaki test çalışmaları için beklenen davranış:
 
-- Silinen öğe artık **Çözüm Gezgini**içinde görünür değil.
+- Silinen öğe artık **Çözüm Gezgini**içinde görünür.
 
-- Silinen projenin veya öğenin üst öğesi gerektiğinde kullanıma alındı (muhtemelen bir istem ile.)
+- Silinen projenin veya öğenin üst öğesi gerektiğinde kullanıma gönderilir (büyük olasılıkla bir istemle.)
 
-- Kullanıma alınmış veya eklenen bir öğeyi sildikten sonra, **bekleyen checkins** penceresinde görüntülenmez.
+- Kullanıma alındıktan veya öğe ekledikten sonra **Bekleyen Denetimler** penceresinde GÖRÜNMEZ.
 
-- Öğe, silme işleminden sonra bile kaynak denetim deposu içinde hala var ve el ile temizlenmelidir.
+- Öğe, silinmeden sonra bile kaynak denetim deposunda hala bulunur ve el ile temizlenmesi gerekir.
 
-|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|
+|Eylem|Test Adımları|Doğrulaması Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|İstemci projesini silme|1. bir istemci projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. tüm projeyi çözümden kaldır|Ortak beklenen davranış.|
-|Boş bir dosyayı Sil|1. bir istemci projesi oluşturun.<br />2. projeye sıfır baytlık bir dosya ekleyin.<br />3. çözümü kaynak denetimine ekleyin.<br />4. dosyayı seçin, silin.|Ortak beklenen davranış.|
-|Tek dosya içeren bir klasörü silme|1. tek proje çözümü oluşturun.<br />2. bir klasör ekleyin.<br />3. klasöre bir dosya ekleyin.<br />4. çözümü kaynak denetimine ekleyin.<br />5. istemden kaçınmak için projeye göz atın.<br />6. klasörü silin.|Ortak beklenen davranış.|
-|Dosya sistemi Web projesini silme|1. bir dosya sistemi Web projesi oluşturun (bir UNC yolu belirtmek için Gözatılacak düğmeyi kullanın).<br />2. çözümü kaynak denetimine ekleyin.<br />3. tüm projeyi çözümden kaldırın.<br />4. yerel Web projesi için 1 ile 3 arasındaki adımları yineleyin (kod üzerinden farklı yollar alıştırmaları, ancak aynı dış arabirime ve davranışa sahiptir).|Ortak beklenen davranış.|
-|Dosya sistemi Web projesinden dosya silme|1. bir dosya sistemi Web projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. bir dosyayı projeden silin.<br />4. yerel Web projesi için 1 ile 3 arasındaki adımları yineleyin (kod üzerinden farklı yollar alıştırmaları, ancak aynı dış arabirime ve davranışa sahiptir).|Ortak beklenen davranış.|
+|İstemci projesini silme|1. Bir istemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projenin tamamını çözümden kaldırma|Ortak Beklenen Davranış.|
+|Boş bir dosyayı silme|1. Bir istemci projesi oluşturun.<br />2. Projeye sıfır bayt dosyası ekleyin.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Dosyayı seçin, silin.|Ortak Beklenen Davranış.|
+|Bir dosyayla klasörü silme|1. Tek bir proje çözümü oluşturun.<br />2. Bir klasör ekleyin.<br />3. Klasöre bir dosya ekleyin.<br />4. Çözümü kaynak denetimine ekleyin.<br />5. İstemlerden kaçınmak için projeye göz atın.<br />6. Klasörü silin.|Ortak Beklenen Davranış.|
+|Dosya Sistemi Web projesini silme|1. Dosya Sistemi Web projesi oluşturun (UNC yolunu belirtmek için Gözat düğmesini kullanın).<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projenin tamamını çözümden çıkarın.<br />4. Yerel bir Web projesi için 1'den 3'e kadar olan adımları yineleyin (kod boyunca farklı yollar çizer, ancak aynı dış arabirime ve davranışa sahiptir).|Ortak Beklenen Davranış.|
+|Dosya Sistemi Web projesinden dosya silme|1. Bir Dosya Sistemi Web projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projeden bir dosya silin.<br />4. Yerel bir Web projesi için 1'den 3'e kadar olan adımları yineleyin (kod boyunca farklı yollar çizer, ancak aynı dış arabirime ve davranışa sahiptir).|Ortak Beklenen Davranış.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri için Test Kılavuzu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

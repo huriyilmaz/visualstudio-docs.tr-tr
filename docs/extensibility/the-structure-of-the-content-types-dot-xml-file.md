@@ -8,17 +8,17 @@ helpviewer_keywords:
 - opc
 - vsix
 ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 957958cd930620734d09c592ea07bfb0919d0145
-ms.sourcegitcommit: d6828e7422c8d74ec1e99146fedf0a05f757245f
+ms.openlocfilehash: 2761e012d32516265e61c8001491e3c605372ff5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80395313"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699020"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml Dosyasının Yapısı
 VSIX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio paketi yüklemek için [Content_Types].xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.

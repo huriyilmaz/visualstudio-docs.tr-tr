@@ -1,59 +1,59 @@
 ---
-title: Çözüm yapılandırması | Microsoft Docs
+title: Çözüm Yapılandırması | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - solution configurations
 ms.assetid: f22cfc75-3e31-4e0d-88a9-3ca99539203b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d0a4243d0d64fbd9a436b49f42c99c275e9714b
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: 7c96b73747ef8b136a74a7256cde7fef8d1c42de
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76269117"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705384"
 ---
 # <a name="solution-configuration"></a>Çözüm Yapılandırması
-Çözüm yapılandırması, çözüm düzeyi özellikleri depolar. **Başlat** (F5) anahtar ve **derleme** komutlarının davranışını yönlendirir. Varsayılan olarak, bu komutlar hata ayıklama yapılandırmasını oluşturur ve başlatır. Her iki komut de bir çözüm yapılandırması bağlamında yürütülür. Bu, kullanıcının F5 ' i başlatıp etkin çözümün ayarlar aracılığıyla yapılandırıldığı her şeyi oluşturmasını beklebileceği anlamına gelir. Ortam, oluşturmak ve çalıştırmak için olduğu zaman projeler yerine çözümleri iyileştirmek üzere tasarlanmıştır.
+Çözüm yapılandırmaları çözüm düzeyinde özellikleri depolar. **Başlat** (F5) tuşu ve **Build** komutlarının davranışını yönlendirirler. Varsayılan olarak, bu komutlar hata ayıklama yapılandırmasını oluşturur ve başlatın. Her iki komut da çözüm yapılandırması bağlamında yürütülür. Bu, kullanıcının F5'in etkin çözüm ayarları aracılığıyla yapılandırıldığında niçin başlatılmasını ve oluşturulmasını bekleyebileceği anlamına gelir. Çevre, bina ve işletme söz konusu olduğunda projelerden çok çözümler için optimize etmek üzere tasarlanmıştır.
 
- Standart Visual Studio araç çubuğu, Başlat düğmesinin sağ tarafında bir Başlat düğmesi ve bir çözüm yapılandırması açılır. Bu liste, kullanıcıların F5 tuşuna basıldığında başlatılacak yapılandırmayı seçmesini, kendi çözüm yapılandırmalarını oluşturmayı veya var olan bir yapılandırmayı düzenlemenizi sağlar.
+ Standart Visual Studio araç çubuğu, Başlat düğmesinin sağında bir Başlat düğmesi ve bir çözüm yapılandırması açılır içerir. Bu liste, kullanıcıların F5 tuşuna basıldığında başlatma yapılandırmasını seçmelerine, kendi çözüm yapılandırmalarını oluşturmalarına veya varolan bir yapılandırmayı düzenlemelerine olanak tanır.
 
 > [!NOTE]
-> Çözüm yapılandırması oluşturmaya veya düzenlemeye yönelik bir genişletilebilirlik arabirimi yoktur. `DTE.SolutionBuild`kullanmanız gerekir. Ancak, çözüm derlemesini yönetmek için genişletilebilirlik API 'Leri vardır. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>.
+> Çözüm yapılandırmaları oluşturmak veya düzenlemek için genişletilebilirlik arabirimleri yoktur. `DTE.SolutionBuild`Kullanmalısın. Ancak, çözüm oluşturma yönetmek için genişletilebilirlik API'leri vardır. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>.
 
- İşte, proje türü tarafından desteklenen çözüm yapılandırmalarının nasıl uygulayabileceğinizi aşağıda bulabilirsiniz:
+ Proje türünüz tarafından desteklenen çözüm yapılandırmalarını şu şekilde uygulayabilirsiniz:
 
-- {1&gt;Proje (Project)&lt;1}
+- Project
 
    Geçerli çözümde bulunan projelerin adlarını görüntüler.
 
 - Yapılandırma
 
-   Proje türü tarafından desteklenen ve özellik sayfalarında görüntülenecek yapılandırmaların listesini sağlamak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>uygulayın.
+   Proje türünüz tarafından desteklenen ve özellik sayfalarında görüntülenen yapılandırmaların listesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>sağlamak için uygulayın.
 
-   Yapılandırma sütunu, bu çözüm yapılandırmasında oluşturulacak proje yapılandırmasının adını görüntüler ve ok düğmesine tıkladığınızda tüm proje yapılandırmalarını listeler. Ortam, bu listeyi dolduracak <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A> yöntemini çağırır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> yöntemi projenin yapılandırma düzenlemesini desteklediğini gösteriyorsa, yapılandırma başlığı altında yeni veya düzenleme seçimleri de görüntülenir. Bu seçimlerin her biri, projenin yapılandırmasını düzenlemek için `IVsCfgProvider2` arabiriminin yöntemlerini çağıran iletişim kutularını başlatır.
+   Yapılandırma sütunu, bu çözüm yapılandırmasında oluşturmak üzere proje yapılandırmasının adını görüntüler ve ok düğmesini tıklattığınızda tüm proje yapılandırmalarını listeler. Ortam, bu <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A> listeyi doldurmak için yöntemi çağırır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> Yöntem, projenin yapılandırma düzenlemesini desteklediğini gösteriyorsa, Yapılandırma başlığı altında Yeni veya Düzenle seçimleri de görüntülenir. Bu seçimlerin her biri, projenin yapılandırmalarını `IVsCfgProvider2` düzenlemek için arabirimin yöntemlerini arayan iletişim kutularını başlatır.
 
-   Bir proje yapılandırmaları desteklemiyorsa, yapılandırma sütunu hiçbiri ' ni görüntüler ve devre dışı bırakılır.
+   Proje yapılandırmaları desteklemiyorsa, Yapılandırma sütunu Yok'u görüntüler ve devre dışı bırakılır.
 
 - Platform
 
-   Seçilen proje yapılandırması için platformu görüntüler ve ok düğmesine tıkladığınızda projenin tüm kullanılabilir platformlarını listeler. Ortam, bu listeyi dolduracak <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A> yöntemini çağırır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> yöntemi, projenin platform düzenlemesini desteklediğini gösteriyorsa, yeni veya düzenleme seçimleri de platform başlığı altında görüntülenir. Bu seçimlerin her biri, projenin kullanılabilir platformlarını düzenlemek için `IVsCfgProvider2` Yöntemler çağıran iletişim kutularını başlatır.
+   Seçili proje yapılandırmasının oluşturduğu platformu görüntüler ve ok düğmesini tıklattığınızda proje için kullanılabilir tüm platformları listeler. Ortam, bu <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A> listeyi doldurmak için yöntemi çağırır. Yöntem, <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> projenin platform düzenlemeyi desteklediğini gösteriyorsa, Platform başlığı altında Yeni veya Düzenle seçimleri de görüntülenir. Bu seçimlerin her biri, projenin `IVsCfgProvider2` kullanılabilir platformlarını düzenlemek için yöntemleri arayan iletişim kutularını başlatır.
 
-   Bir proje platformları desteklemiyorsa, söz konusu projenin platform sütunu hiçbiri ' ni görüntüler ve devre dışı bırakılır.
+   Proje platformları desteklemiyorsa, bu projenin platform sütunu Yok'u görüntüler ve devre dışı bırakılır.
 
-- {1&gt;Yapı (Build)&lt;1}
+- Yapı
 
-   Projenin geçerli çözüm yapılandırması tarafından oluşturulup oluşturulmayacağını belirtir. Hiçbir proje bağımlılığı olsa da çözüm düzeyinde derleme komutları çağrıldığında seçilmemiş projeler derlenmez. Derlenmeye seçili olmayan projeler, çözümün hata ayıklaması, çalıştırılması, paketlenmesi ve dağıtılması ile hala dahil edilmiştir.
+   Projenin geçerli çözüm yapılandırması tarafından oluşturulup oluşturulmadığını belirtir. Çözüm düzeyindeki yapı komutları içerdikleri proje bağımlılıklarına rağmen çağrıldıklarında seçili olmayan projeler oluşturulmaz. Oluşturulacak şekilde seçilmemiş projeler hala hata ayıklama, çalıştırma, paketleme ve çözümün dağıtımına dahildir.
 
-- dağıtımı
+- Dağıtma
 
-   Başlat veya Dağıt komutları seçili çözüm derleme yapılandırmasıyla kullanıldığında projenin dağıtılıp dağıtılmayacağını belirtir. Bu alanın onay kutusu, proje dağıtımı destekliyorsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> nesnesinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> arabirimini uygulamayı destekliyorsa kullanılabilir.
+   Seçili çözüm yapı yapılandırmasıyla Başlat veya Dağıt komutları kullanıldığında projenin dağıtılıp dağıtılmayacağını belirtir. Proje, <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> nesnesi üzerinde arabirimi uygulayarak dağıtımı destekliyorsa, bu alanın onay kutusu kullanılabilir.
 
-  Yeni bir çözüm yapılandırması eklendikten sonra, Kullanıcı bu yapılandırmayı oluşturmak ve/veya başlatmak için Standart araç çubuğunda çözüm yapılandırması açılan liste kutusundan seçebilir.
+  Yeni bir çözüm yapılandırması eklendikten sonra, kullanıcı bu yapılandırmayı oluşturmak ve/veya başlatmak için standart araç çubuğundaki Çözüm Yapılandırma açılır liste kutusundan seçebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)

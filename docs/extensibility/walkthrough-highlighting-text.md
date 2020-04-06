@@ -1,60 +1,60 @@
 ---
-title: 'İzlenecek yol: metni vurgulama | Microsoft Docs'
+title: 'Walkthrough: Metin Vurgulama | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - highlight text
 ms.assetid: 64b772ad-4392-42e9-a237-5137f0384bf0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd19077424aa5f67cd1d3a8d7f9c6be0e822e351
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: c35b1a032993a6c183191aafff77d8adeba4a3ef
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75403591"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697397"
 ---
-# <a name="walkthrough-highlight-text"></a>İzlenecek yol: metni vurgula
-Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenleyiciye farklı görsel etkiler ekleyebilirsiniz. Bu izlenecek yol, bir metin dosyasında geçerli sözcüğün her geçtiği yeri vurgulamanın nasıl yapılacağını gösterir. Bir kelime bir metin dosyasında birden çok kez oluşursa ve giriş işaretini tek bir tekrara konumlandırdıysanız, her oluşum vurgulanır.
+# <a name="walkthrough-highlight-text"></a>Walkthrough: Metni vurgulama
+Yönetilen Genişletilebilirlik Çerçevesi (MEF) bileşen parçaları oluşturarak düzenleyiciye farklı görsel efektler ekleyebilirsiniz. Bu gözden geçirme, bir metin dosyasındaki geçerli sözcüğün her oluşumunu nasıl vurgulayabilirsiniz gösterir. Bir sözcük metin dosyasında birden fazla kez oluşursa ve caret'i tek bir oluşumda konumlandırSanız, her olay vurgulanır.
 
-## <a name="prerequisites"></a>Prerequisites
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="prerequisites"></a>Ön koşullar
+ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma
 
-1. C# VSIX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **görsel C# /genişletilebilirlik**, sonra **VSIX projesi**' ni seçin.) `HighlightWordTest`çözümü adlandırın.
+1. Bir C# VSIX projesi oluşturun. (Yeni **Proje** iletişim kutusunda Visual **C# / Genişletilebilirlik,** ardından **VSIX Project'i**seçin.) Çözümü `HighlightWordTest`adlandırın.
 
-2. Projeye bir düzenleyici sınıflandırıcı öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Projeye Bir Düzenleyici Sınıflandırıcı öğesi şablonu ekleyin. Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
 3. Varolan sınıf dosyalarını silin.
 
-## <a name="define-a-textmarkertag"></a>TextMarkerTag tanımlayın
- Metni vurgulamanın ilk adımı <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> alt sınıfa ve görünümünü tanımlamalıdır.
+## <a name="define-a-textmarkertag"></a>TextMarkerTag tanımlama
+ Metni vurgulamanın ilk adımı alt <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> sınıfve görünümünü tanımlamaktır.
 
-### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>Bir TextMarkerTag ve bir MarkerFormatDefinition tanımlamak için
+### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>TextMarkerTag ve MarkerFormatDefinition tanımlamak için
 
-1. Bir sınıf dosyası ekleyin ve bunu **Highlightwordtag**olarak adlandırın.
+1. Bir sınıf dosyası ekleyin ve **highlightWordTag**adını.
 
-2. Aşağıdaki başvuruları ekleyin:
+2. Aşağıdaki referansları ekleyin:
 
     1. Microsoft.VisualStudio.CoreUtility
 
-    2. Microsoft. VisualStudio. Text. Data
+    2. Microsoft.VisualStudio.Text.Data
 
-    3. Microsoft. VisualStudio. Text. Logic
+    3. Microsoft.VisualStudio.Text.Logic
 
-    4. Microsoft. VisualStudio. Text. UI
+    4. Microsoft.VisualStudio.Text.UI
 
-    5. Microsoft. VisualStudio. Text. UI. WPF
+    5. Microsoft.VisualStudio.Text.UI.Wpf
 
     6. System.ComponentModel.Composition
 
-    7. Presentation. Core
+    7. Presentation.Core
 
-    8. Presentation. Framework
+    8. Presentation.Framework
 
 3. Aşağıdaki ad alanlarını içeri aktarın.
 
@@ -73,7 +73,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     using System.Windows.Media;
     ```
 
-4. <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> devralan bir sınıf oluşturun ve `HighlightWordTag`adlandırın.
+4. Devralan <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> bir sınıf oluşturun ve `HighlightWordTag`adını.
 
     ```csharp
     internal class HighlightWordTag : TextMarkerTag
@@ -82,11 +82,11 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-5. <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>devralan ikinci bir sınıf oluşturun ve `HighlightWordFormatDefinition`olarak adlandırın. Etiketinize yönelik bu biçim tanımını kullanmak için aşağıdaki özniteliklerle dışarı aktarmanız gerekir:
+5. Devralan <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>ikinci bir sınıf oluşturun ve `HighlightWordFormatDefinition`adını. Etiketiniz için bu biçim tanımını kullanmak için aşağıdaki özniteliklerle dışa aktarmanız gerekir:
 
-    - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: Etiketler bu biçime başvurmak için bunu kullanır
+    - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: etiketler bu biçime başvurmak için bunu kullanır
 
-    - <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: Bu, biçimin kullanıcı arabiriminde görünmesine neden olur
+    - <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: bu, biçimin UI'de görünmesine neden olur
 
     ```csharp
 
@@ -99,7 +99,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-6. HighlightWordFormatDefinition oluşturucusunda, görünen adını ve görünümünü tanımlayın. Background özelliği, Fill rengini tanımlar, ön plan özelliği de kenarlık rengini tanımlar.
+6. HighlightWordFormatDefinition için oluşturucu olarak, ekran adını ve görünümünü tanımlayın. Arka Plan özelliği dolgu rengini, Foreground özelliği ise kenarlık rengini tanımlar.
 
     ```csharp
     public HighlightWordFormatDefinition()
@@ -111,18 +111,18 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-7. HighlightWordTag kurucusunda, oluşturduğunuz biçim tanımının adını geçirin.
+7. HighlightWordTag'ın oluşturucusunda, oluşturduğunuz biçim tanımının adına geçirin.
 
     ```
     public HighlightWordTag() : base("MarkerFormatDefinition/HighlightWordFormatDefinition") { }
     ```
 
-## <a name="implement-an-itagger"></a>Bir uygulamayı uygulama
- Sonraki adım <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> arabirimini uygulamaktır. Bu arabirim, belirli bir metin arabelleğine, metin vurgulama ve diğer görsel etkileri sağlayan etiketlere atar.
+## <a name="implement-an-itagger"></a>Bir ITagger uygulayın
+ Bir sonraki adım <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> arabirimi uygulamaktır. Bu arabirim, belirli bir metin arabelleği, metin vurgulama ve diğer görsel efektler sağlayan etiketleratar.
 
-### <a name="to-implement-a-tagger"></a>Bir Tagger uygulamak için
+### <a name="to-implement-a-tagger"></a>Bir etiketer uygulamak için
 
-1. `HighlightWordTag`türünde <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> uygulayan bir sınıf oluşturun ve `HighlightWordTagger`adlandırın.
+1. Türü <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> `HighlightWordTag`uygulayan bir sınıf oluşturun ve `HighlightWordTagger`adlandırın.
 
     ```csharp
     internal class HighlightWordTagger : ITagger<HighlightWordTag>
@@ -131,21 +131,21 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-2. Sınıfına aşağıdaki özel alanları ve özellikleri ekleyin:
+2. Sınıfa aşağıdaki özel alanları ve özellikleri ekleyin:
 
-    - Geçerli metin görünümüne karşılık gelen bir <xref:Microsoft.VisualStudio.Text.Editor.ITextView>.
+    - Geçerli <xref:Microsoft.VisualStudio.Text.Editor.ITextView>metin görünümüne karşılık gelen bir ,
 
-    - Metin görünümünün altındaki metin arabelleğine karşılık gelen bir <xref:Microsoft.VisualStudio.Text.ITextBuffer>.
+    - Metin <xref:Microsoft.VisualStudio.Text.ITextBuffer>görünümünün altında yatan metin arabelleğine karşılık gelen bir ,
 
-    - Metin bulmak için kullanılan bir <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>.
+    - Metni <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>bulmak için kullanılan bir, bir.
 
-    - Metin yayılmaları içinde gezinmek için yöntemler içeren bir <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>.
+    - Metin <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>açıklıkları içinde gezinme yöntemleri olan bir, bir.
 
-    - Vurgulanacak sözcük kümesini içeren <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>.
+    - A <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>, vurgulamak için kelime kümesini içeren.
 
-    - Geçerli sözcüğe karşılık gelen bir <xref:Microsoft.VisualStudio.Text.SnapshotSpan>.
+    - A <xref:Microsoft.VisualStudio.Text.SnapshotSpan>, geçerli sözcüğüne karşılık gelir.
 
-    - Giriş işaretinin geçerli konumuna karşılık gelen <xref:Microsoft.VisualStudio.Text.SnapshotPoint>.
+    - A <xref:Microsoft.VisualStudio.Text.SnapshotPoint>, hangi caret geçerli konumuna karşılık gelir.
 
     - Kilit nesnesi.
 
@@ -161,7 +161,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
 
     ```
 
-3. Daha önce listelenen özellikleri Başlatan bir Oluşturucu ekleyin ve <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> ve <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> olay işleyicilerini ekler.
+3. Daha önce listelenen özellikleri başharfve ekler <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> ve <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> olay işleyicileri bir oluşturucu ekleyin.
 
     ```csharp
     public HighlightWordTagger(ITextView view, ITextBuffer sourceBuffer, ITextSearchService textSearchService,
@@ -179,7 +179,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
 
     ```
 
-4. Olay işleyicileri her ikisi de `UpdateAtCaretPosition` yöntemini çağırır.
+4. Olay işleyicileri her `UpdateAtCaretPosition` ikisi de yöntemi çağırır.
 
     ```csharp
     void ViewLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
@@ -197,12 +197,12 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-5. Ayrıca Update yöntemi tarafından çağrılan bir `TagsChanged` olayı da eklemeniz gerekir.
+5. Ayrıca, güncelleştirme `TagsChanged` yöntemi tarafından çağrılan bir olay eklemeniz gerekir.
 
      [!code-csharp[VSSDKHighlightWordTest#10](../extensibility/codesnippet/CSharp/walkthrough-highlighting-text_1.cs)]
      [!code-vb[VSSDKHighlightWordTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-highlighting-text_1.vb)]
 
-6. `UpdateAtCaretPosition()` yöntemi, metin arabelleğindeki, imlecin bulunduğu sözcüğe benzer ve sözcüğün oluşumlarına karşılık gelen <xref:Microsoft.VisualStudio.Text.SnapshotSpan> nesnelerinin bir listesini oluşturan her kelimeyi bulur. Ardından, `TagsChanged` olayını oluşturan `SynchronousUpdate`çağırır.
+6. Yöntem, `UpdateAtCaretPosition()` metin arabelleğindeki imlecin konumlandırıldığı sözcükle aynı olan her sözcüğü <xref:Microsoft.VisualStudio.Text.SnapshotSpan> bulur ve sözcüğün oluşumlarına karşılık gelen nesnelerin listesini kurar. Daha sonra `SynchronousUpdate`, `TagsChanged` bu olay yükseltir çağırır.
 
     ```csharp
     void UpdateAtCaretPosition(CaretPosition caretPosition)
@@ -284,7 +284,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
 
     ```
 
-7. `SynchronousUpdate`, `WordSpans` ve `CurrentWord` Özellikler üzerinde zaman uyumlu bir güncelleştirme gerçekleştirir ve `TagsChanged` olayını yükseltir.
+7. Bu, `SynchronousUpdate` özellikler `WordSpans` ve özellikler `CurrentWord` üzerinde eşzamanlı bir `TagsChanged` güncelleştirme gerçekleştirir ve olayı yükseltir.
 
     ```csharp
     void SynchronousUpdate(SnapshotPoint currentRequest, NormalizedSnapshotSpanCollection newSpans, SnapshotSpan? newCurrentWord)
@@ -304,11 +304,11 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-8. <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> yöntemini uygulamanız gerekir. Bu yöntem <xref:Microsoft.VisualStudio.Text.SnapshotSpan> nesnelerinin bir koleksiyonunu alır ve etiket yayılmaları bir listesini döndürür.
+8. <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> Yöntemi uygulamanız gerekir. Bu yöntem nesnelerin <xref:Microsoft.VisualStudio.Text.SnapshotSpan> bir koleksiyon alır ve etiket yayılmaları bir numaralandırma döndürür.
 
-     İçinde C#, bu yöntemi, Etiketler için yavaş değerlendirmeyi (yani, yalnızca tek tek öğelere erişildiğinde küme değerlendirmesi) sağlayan bir yield Yineleyici olarak uygulayın. Visual Basic, etiketleri bir listeye ekleyin ve listeyi geri döndürün.
+     C#'da, etiketlerin tembel değerlendirmesini (diğer bir deyişle, kümenin yalnızca tek tek öğelere erişildiğinde değerlendirilmesi) sağlayan bir verim yineleyicisi olarak bu yöntemi uygulayın. Visual Basic'te etiketleri bir listeye ekleyin ve listeyi döndürün.
 
-     Bu yöntem, mavi bir arka plan sağlayan bir "mavi" <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>olan <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> nesnesini döndürür.
+     Burada yöntem mavi <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> bir arka plan <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>sağlayan bir "mavi" olan bir nesne döndürür.
 
     ```csharp
     public IEnumerable<ITagSpan<HighlightWordTag>> GetTags(NormalizedSnapshotSpanCollection spans)
@@ -348,14 +348,14 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     ```
 
 ## <a name="create-a-tagger-provider"></a>Tagger sağlayıcısı oluşturma
- Tagger oluşturmak için bir <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>uygulamanız gerekir. Bu sınıf bir MEF bileşeni bölümüdür, bu nedenle bu uzantının tanınması için doğru öznitelikleri ayarlamanız gerekir.
+ Etiketcünüzü oluşturmak için bir <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>. Bu sınıf bir MEF bileşeni parçasıdır, bu nedenle bu uzantı nın tanınması için doğru öznitelikleri ayarlamanız gerekir.
 
 > [!NOTE]
-> MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+> MEF hakkında daha fazla bilgi için [Yönetilen Genişletilebilirlik Çerçevesi 'ne (MEF)](/dotnet/framework/mef/index)bakın.
 
-### <a name="to-create-a-tagger-provider"></a>Bir Tagger sağlayıcısı oluşturmak için
+### <a name="to-create-a-tagger-provider"></a>Etiket sağlayıcı oluşturmak için
 
-1. <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>uygulayan `HighlightWordTaggerProvider` adlı bir sınıf oluşturun ve bunu "metin" <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> ve <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag><xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> dışarı aktarın.
+1. `HighlightWordTaggerProvider` Uygulayan <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>adlı bir <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> sınıf oluşturun ve "metin" ve bir <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>' ile dışa aktarın.
 
     ```csharp
     [Export(typeof(IViewTaggerProvider))]
@@ -365,7 +365,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     { }
     ```
 
-2. Tagger 'u başlatmak için <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> ve <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>iki düzenleyici hizmetini içeri aktarmanız gerekir.
+2. Tagger'ı anında atabilmek için iki düzenleyici hizmeti, <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> ve , <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>içe aktarmanız gerekir.
 
     ```csharp
     [Import]
@@ -376,7 +376,7 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
 
     ```
 
-3. `HighlightWordTagger`örneğini döndürmek için <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A> yöntemini uygulayın.
+3. Bir <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A> örneğini döndürmek için `HighlightWordTagger`yöntemi uygulayın.
 
     ```csharp
     public ITagger<T> CreateTagger<T>(ITextView textView, ITextBuffer buffer) where T : ITag
@@ -392,18 +392,18 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
     }
     ```
 
-## <a name="build-and-test-the-code"></a>Kodu derleyin ve test edin
- Bu kodu test etmek için HighlightWordTest çözümünü derleyin ve deneysel örnekte çalıştırın.
+## <a name="build-and-test-the-code"></a>Kodu oluşturma ve test edin
+ Bu kodu sınamak için HighlightWordTest çözümlerini oluşturun ve deneme örneğinde çalıştırın.
 
-### <a name="to-build-and-test-the-highlightwordtest-solution"></a>HighlightWordTest çözümünü derlemek ve test etmek için
+### <a name="to-build-and-test-the-highlightwordtest-solution"></a>HighlightWordTest çözümlerini oluşturmak ve test etmek için
 
-1. Çözümü oluşturun.
+1. Çözümü derleyin.
 
-2. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
+2. Bu projeyi hata ayıklamada çalıştırdığınızda, Visual Studio'nun ikinci bir örneği başlatılır.
 
-3. Bir metin dosyası oluşturun ve sözcüklerin tekrarlandığı bir metin yazın, örneğin "Merhaba Merhaba Merhaba".
+3. Bir metin dosyası oluşturun ve sözcüklerin yinelendiği bazı metinler yazın, örneğin , "merhaba merhaba".
 
-4. İmleci "Hello" oluşumlarından birine konumlandırır. Her oluşum mavi renkle vurgulanmıştır.
+4. İmleci "merhaba" olaylarından birine yerleştirin. Her olay mavi ile vurgulanmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: bir içerik türünü bir dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+- [Walkthrough: İçerik türünü dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

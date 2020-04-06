@@ -1,25 +1,25 @@
 ---
-title: Araç penceresi kaydetme | Microsoft Docs
+title: Araç Penceresi Kaydetme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tool windows, registering managed
 - tool windows, registering
 ms.assetid: 8c8c4a24-3da4-497b-9db2-0ddd7cfbfdd2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34fddd6513aad612398c700b935c6d1d3ee72b59
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 2e7971de5ae5301d99147bbfc374dda6b039662a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186268"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701594"
 ---
-# <a name="register-a-tool-window"></a>Araç penceresi kaydetme
-<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> ve <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>kullanarak araç pencerelerini kaydedebilirsiniz.
+# <a name="register-a-tool-window"></a>Araç pencereni kaydetme
+Araç pencerelerinizi kullanarak <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> kaydedebilirsiniz ve. <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>
 
 ## <a name="example"></a>Örnek
 
@@ -35,4 +35,4 @@ public class PackageToolWindow : Package
 {
 ```
 
- Yukarıdaki kodda <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>, Visual Studio ile `PersistedWindowPane` ve `DynamicWindowPane` araç pencerelerini kaydeder. Kalıcı araç penceresi **Çözüm Gezgini**ve sekmeli bir şekilde yerleşiktir ve dinamik pencereye varsayılan başlangıç konumu ve boyutu verilir. Dinamik pencere, başlangıçta oluşturulmadığını belirten geçici hale getirilir. Bu, sistem kayıt defterindeki `ToolWindows` anahtarına bir `DontForceCreate` değeri yazar. Daha fazla bilgi için bkz. [araç penceresi görüntü yapılandırması](/visualstudio/extensibility/tool-window-display-configuration?view=vs-2015).
+ Yukarıdaki kodda, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> Visual Studio `PersistedWindowPane` `DynamicWindowPane` ile ve araç pencereleri kaydeder. Kalıcı araç penceresi sabitlenir ve **Solution Explorer**ile sekmeli ve dinamik pencere varsayılan bir başlangıç konumu ve boyutu verilir. Dinamik pencere geçici olarak yapılır, bu da başlangıç üzerinde oluşturulmadığını gösterir. Bu, `DontForceCreate` sistem kayıt `ToolWindows` defterindeki anahtara bir değer yazar. Daha fazla bilgi için [Bkz. Araç penceresi görüntüleme yapılandırması.](/visualstudio/extensibility/tool-window-display-configuration?view=vs-2015)

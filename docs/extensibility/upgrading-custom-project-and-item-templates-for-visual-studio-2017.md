@@ -1,71 +1,71 @@
 ---
-title: Visual Studio 2017 için özel Proje ve öğe şablonlarını yükseltme
+title: Visual Studio 2017 için özel proje ve öğe şablonlarını yükseltme
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: d375dfc4a53015f57546f7cbfcc8b940fa81bd0b
-ms.sourcegitcommit: 74c5360186731de07828764eb32ea1033a8c2275
+ms.openlocfilehash: 5f807e142b376d05e5a44600e8f6b24ddb3593be
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559754"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698855"
 ---
-# <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>Özel proje ve öğe şablonları Visual Studio 2017 için yükseltin
+# <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>Visual Studio 2017 Için Özel Proje ve Öğe Şablonlarını Yükselt
 
-Visual Studio, Visual Studio 2017'den itibaren Visual Studio'nun önceki sürümleri için farklı bir şekilde bir .vsix veya bir. msi'nin tarafından yüklenmiş proje ve öğe şablonlarını bulur. Özel proje veya öğe şablonları kullanan uzantıları sahipseniz, uzantılarınız güncelleştirmeniz gerekiyor. Ne yapmanız gerekir, bu makalede açıklanır.
+Visual Studio 2017'den itibaren Visual Studio,.vsix veya .msi tarafından yüklenen proje ve öğe şablonlarını Visual Studio'nun önceki sürümlerine göre farklı bir şekilde keşfeder. Özel proje veya öğe şablonları kullanan uzantılarınız varsa, uzantılarınızı güncelleştirmeniz gerekir. Bu makalede, ne yapmanız gerektiğini açıklar.
 
-Bu değişiklik, yalnızca Visual Studio 2017 etkiler. Visual Studio'nun önceki sürümlerini etkilemez.
+Bu değişiklik sadece Visual Studio 2017'yi etkiler. Visual Studio'nun önceki sürümlerini etkilemez.
 
-Bir VSIX uzantısının bir parçası olarak bir proje veya öğe şablonu oluşturmak istiyorsanız, bkz. [oluşturma özel Proje ve öğe şablonlarını](../extensibility/creating-custom-project-and-item-templates.md).
+VSIX uzantısı kapsamında bir proje veya öğe şablonu oluşturmak istiyorsanız, [bkz.](../extensibility/creating-custom-project-and-item-templates.md)
 
-## <a name="template-scanning"></a>Tarama şablonu
+## <a name="template-scanning"></a>Şablon Tarama
 
-Visual Studio'nun önceki sürümlerinde **devenv/Setup** veya **devenv /installvstemplates** proje ve öğe şablonlarını bulmak için yerel disk taranır. Visual Studio 2017'den itibaren tarama için kullanıcı düzeyi konum gerçekleştirilir. Varsayılan kullanıcı düzeyi konum **%USERPROFILE%\Documents\\< Visual Studio sürümü\>\Templates\\** . Bu konum için tarafından oluşturulan şablonlarını kullanılır **proje** > **şablonları dışarı aktar...**  , komut **otomatik olarak şablonu Visual Studio'ya içeri aktarma** seçeneği Sihirbazı'nda.
+Visual Studio'nun önceki sürümlerinde, **devenv /setup** veya **devenv /installvstemplates** proje ve öğe şablonlarını bulmak için yerel diski taradı. Visual Studio 2017'den itibaren tarama yalnızca kullanıcı düzeyindeki konum için gerçekleştirilir. Varsayılan kullanıcı düzeyindeki konum **%USERPROFILE%\Documents\\<\>Visual\\Studio sürümü \Templates'tir.** Bu konum, **şablonu Otomatik olarak Visual Studio'ya aktar** ın sihirbazı seçilirse, **Project** > **Export Templates...** komutu tarafından oluşturulan şablonlar için kullanılır.
 
-Diğer (kullanıcı olmayan) konumları için konumu ve diğer özellikleri de şablon belirten bir manifest(.vstman) dosyası eklemeniz gerekir. .Vstman dosya şablonları için kullanılan .vstemplate dosyasıyla birlikte oluşturulur. Uzantınızı bir .vsix kullanarak yüklerseniz, bu uzantı Visual Studio 2017'de derleyerek gerçekleştirebilirsiniz. Ancak bir. msi'nin kullanırsanız, değişiklikler el ile yapmanız gerekir. Bu değişiklikleri yapmak için yapmanız gerekenler bir listesi için bkz **yükseltme ile yüklenen uzantıları için bir. MSI** daha sonra bu sayfayı.
+Diğer (kullanıcı olmayan) konumlar için, şablonun konumunu ve diğer özelliklerini belirten bir bildirim (.vstman) dosyası eklemeniz gerekir. .vstman dosyası şablonlar için kullanılan .vstemplate dosyasıyla birlikte oluşturulur. Uzantınızı .vsix kullanarak yüklerseniz, uzantıyı Visual Studio 2017'de yeniden derleyerek bunu başarabilirsiniz. Ancak .msi kullanıyorsanız, değişiklikleri el ile yapmanız gerekir. Bu değişiklikleri yapmak için yapmanız gerekenlerin listesi **için, bir . MSI** daha sonra bu sayfada.
 
-## <a name="how-to-update-a-vsix-extension-with-project-or-item-templates"></a>Bir VSIX uzantısı, proje veya öğe şablonları ile güncelleştirme
+## <a name="how-to-update-a-vsix-extension-with-project-or-item-templates"></a>Proje veya Öğe Şablonları ile VSIX Uzantısı Nasıl Güncellenir?
 
-1. Çözümü Visual Studio 2017'de açın. Yükseltme kodu istenir. **Tamam**'ı tıklatın.
+1. Visual Studio 2017'de çözümü açın. Kodu yükseltmeniz istenir. **Tamam**'a tıklayın.
 
-2. Yükseltme tamamlandıktan sonra yükleme hedef sürümünü değiştirmeniz gerekebilir. VSIX projesinde source.extension.vsixmanifest dosyasını açın ve seçin **hedefleri Yükle** sekmesi. Varsa **sürüm aralığı** alandır **[14.0]** , tıklayın **Düzenle** ve Visual Studio 2017 içerecek şekilde değiştirin. Örneğin, ayarlayabilirsiniz **[14.0,15.0]** Visual Studio 2015 veya Visual Studio 2017 veya için uzantıyı yüklemek için **[15.0]** yalnızca Visual Studio 2017'ye yüklemek için.
+2. Yükseltme tamamlandıktan sonra yükleme hedefinin sürümünü değiştirmeniz gerekebilir. VSIX projesinde source.extension.vsixmanifest dosyasını açın ve **Hedefleri Yükle** sekmesini seçin. Sürüm **Aralığı** alanı **[14.0]** ise, **Edit'i** tıklatın ve Visual Studio 2017'yi içerecek şekilde değiştirin. Örneğin, uzantıyı Visual Studio 2015 veya Visual Studio 2017'ye yüklemek için **[14.0,15.0]** veya sadece Visual Studio 2017'ye yüklemek için **[15.0]** olarak ayarlayabilirsiniz.
 
-3. Kodu yeniden derleyin.
+3. Kodu yeniden derle.
 
 4. Visual Studio’yu kapatın.
 
-5. VSIX yükleyin.
+5. VSIX'yi yükleyin.
 
-6. Güncelleştirme, aşağıdakileri yaparak test edebilirsiniz:
+6. Güncelleştirmeyi aşağıdakileri yaparak test edebilirsiniz:
 
-    1. Dosya değişikliği tarama, aşağıdaki kayıt defteri anahtarı tarafından etkinleştirilir:
+    1. Dosya tarama değişikliği aşağıdaki kayıt defteri anahtarı tarafından etkinleştirilir:
 
-         **reg hklm\software\microsoft\visualstudio\15.0\VSTemplate /v DisableTemplateScanning /t REG_DWORD /d 1 /reg:32 Ekle**
+         **reg ekle hklm\software\microsoft\visualstudio\15.0\VSTemplate /v DisableTemplateScanning /t REG_DWORD /d 1 /reg:32**
 
-    2. Anahtarı ekledikten sonra Çalıştır **devenv /installvstemplates**.
+    2. Anahtarı ekledikten sonra **devenv /installvstemplates çalıştırın.**
 
-    3. Visual Studio'yu yeniden açın. Beklenen konumda şablonunuzu bulmanız gerekir.
+    3. Visual Studio'yı yeniden açın. Şablonunuzu beklenen konumda bulmanız gerekir.
 
     > [!NOTE]
-    > Visual Studio genişletilebilirlik proje şablonları kayıt defteri anahtarı mevcut olduğunda kullanılabilir değil. Kayıt defteri anahtarı silmelisiniz (ve yeniden **devenv /installvstemplates**) bunları kullanmak için.
+    > Kayıt defteri anahtarı bulunduğunda Visual Studio Genişletilebilirlik proje şablonları kullanılamaz. Bunları kullanmak için kayıt defteri anahtarını silmeniz (ve **devenv /installvstemplates'i**yeniden çalıştırmanız gerekir).
 
-## <a name="other-recommendations-for-deploying-project-and-item-templates"></a>Proje ve öğe şablonlarını dağıtmak için diğer öneriler
+## <a name="other-recommendations-for-deploying-project-and-item-templates"></a>Proje ve Madde Şablonlarını Dağıtmak için Diğer Öneriler
 
-- Sıkıştırılmış şablon dosyaları kullanmaktan kaçının. Şablon kaynakları ve içerik almak için açılması gereken dosya daraltılmış, bu nedenle bunlar kullanılacak costlier olur. Bunun yerine, şablon başlatma ' hızlandırmak için kendi dizin altında tek tek dosya olarak proje ve öğe şablonlarını dağıtmanız gerekir. VSIX uzantıları için SDK derleme görevleri otomatik olarak herhangi bir daraltılmış şablon VSIX dosyasını oluştururken sıkıştırmasını.
+- Sıkıştırılmış şablon dosyalarını kullanmaktan kaçının. Kaynak ve içerik almak için sıkıştırılmış şablon dosyalarının sıkıştırılmamış olması gerekir, bu nedenle kullanımı daha maliyetli olacaktır. Bunun yerine, şablon başlatmayı hızlandırmak için proje ve öğe şablonlarını kendi dizinleri altında tek tek dosyalar olarak dağıtmanız gerekir. VSIX uzantıları için, SDK yapı görevleri, VSIX dosyasını oluştururken herhangi bir sıkıştırılmış şablonun zip'ini otomatik olarak açar.
 
-- Paket/kaynak kimliği girdileri, şablon adı, açıklaması, simge için kullanmaktan kaçının veya şablon keşfi sırasında gereksiz kaynak derleme yüklerini önlemek için Önizleme. Bunun yerine, yerelleştirilmiş bildirimler yerelleştirilmiş adlar veya özellikleri kullanan her yerel ayar için bir şablon girişi oluşturmak için kullanabilirsiniz.
+- Şablon bulma sırasında gereksiz kaynak derleme yüklerinden kaçınmak için şablon adı, açıklama, simge veya önizleme için paket/kaynak kimliği girişlerini kullanmaktan kaçının. Bunun yerine, yerelleştirilmiş adlar veya özellikler kullanan her yerel bölge için bir şablon girişi oluşturmak için yerelleştirilmiş bildirimleri kullanabilirsiniz.
 
-- Şablon olarak dosya öğeleri dahil olmak üzere, bildirim oluşturma, beklenen sonuçları sağlamayabilir. Bu durumda, VSIX projesine el ile oluşturulmuş bir bildirim eklemeniz gerekir.
+- Şablonları dosya öğesi olarak dahil ediyorsanız, bildirim oluşturma size beklenen sonuçları vermeyebilir. Bu durumda, VSIX projesine el ile oluşturulmuş bir bildirim eklemeniz gerekir.
 
-## <a name="file-changes-in-project-and-item-templates"></a>Proje ve öğe şablonlarını dosya değişiklikleri
-Böylece yeni dosyaları doğru bir şekilde oluşturabilir Visual Studio 2015 ve Visual Studio 2017 sürümleri şablon dosyaları arasındaki fark noktalarını göstereceğiz.
+## <a name="file-changes-in-project-and-item-templates"></a>Proje ve Madde Şablonlarında Dosya Değişiklikleri
+Yeni dosyaları doğru bir şekilde oluşturabilmeniz için şablon dosyalarının Visual Studio 2015 ve Visual Studio 2017 sürümleri arasındaki fark noktalarını gösteriyoruz.
 
  Visual Studio 2015 tarafından oluşturulan varsayılan proje .vstemplate dosyası aşağıda verilmiştir:
 
@@ -94,7 +94,7 @@ Böylece yeni dosyaları doğru bir şekilde oluşturabilir Visual Studio 2015 v
 
 ```
 
- VSIX projesi yeniden gelen sonuçlandı .vstman dosyayı (Bu bildirim VSIX proje dizininde bulabilirsiniz) şu şekildedir:
+ VSIX projesinin yeniden oluşturulmasından kaynaklanan .vstman dosyası (VSIX projesinin manifesto dizininde bulabilirsiniz) :
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
@@ -120,7 +120,7 @@ Böylece yeni dosyaları doğru bir şekilde oluşturabilir Visual Studio 2015 v
 
 ```
 
- Tarafından sağlanan bilgileri [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) öğesi aynı kalır. **\<VSTemplateContainer>** öğesi ilişkili şablonu için .vstemplate dosyasını işaret eder.
+ [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) öğesi tarafından sağlanan bilgiler aynı kalır. VSTemplateContainer>öğesi, ilişkili şablon için .vstemplate dosyasını gösterir. ** \<**
 
  Visual Studio 2015 tarafından oluşturulan varsayılan öğe .vstemplate dosyası aşağıda verilmiştir:
 
@@ -149,7 +149,7 @@ Böylece yeni dosyaları doğru bir şekilde oluşturabilir Visual Studio 2015 v
 
 ```
 
- VSIX projesi yeniden gelen sonuçlandı .vstman dosyayı (Bu bildirim VSIX proje dizininde bulabilirsiniz) şu şekildedir:
+ VSIX projesinin yeniden oluşturulmasından kaynaklanan .vstman dosyası (VSIX projesinin manifesto dizininde bulabilirsiniz) :
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
@@ -172,23 +172,23 @@ Böylece yeni dosyaları doğru bir şekilde oluşturabilir Visual Studio 2015 v
 </VSTemplateManifest>
 ```
 
- Tarafından sağlanan bilgileri  **\<TemplateData >** öğesi aynı kalır. **\<VSTemplateContainer>** öğesi işaret ilişkili şablonu için .vstemplate dosyasının
+ TemplateData>öğesi tarafından sağlanan bilgiler aynı kalır. ** \<** VSTemplateContainer>öğesi ilişkili şablon için .vstemplate dosyasını işaret ediyor ** \<**
 
- .Vstman dosyanın farklı öğeler hakkında daha fazla bilgi için bkz. [Visual Studio şablon bildirim şeması başvurusu](../extensibility/visual-studio-template-manifest-schema-reference.md).
+ .vstman dosyasının farklı öğeleri hakkında daha fazla bilgi için [Visual Studio Template Manifest Schema Reference](../extensibility/visual-studio-template-manifest-schema-reference.md)bölümüne bakın.
 
-## <a name="upgrades-for-extensions-installed-with-an-msi"></a>Uzantıları yükseltme ile yüklenen bir. MSI
+## <a name="upgrades-for-extensions-installed-with-an-msi"></a>Bir ile yüklenen Uzantılar için yükseltmeleri . Msı
 
-Bazı MSI tabanlı uzantılar şablonları yaygın şablon konumları aşağıdaki dizinlerin gibi dağıtın:
+Bazı MSI tabanlı uzantılar şablonları aşağıdaki dizinler gibi yaygın şablon konumlarına dağıtır:
 
-- **\<Visual Studio yükleme dizini > \Common7\IDE\\< ProjectTemplates/öğe şablonları\>**
+- **\<Visual Studio yükleme dizini>\Common7\IDE\\<ProjectTemplates/ItemTemplates\>**
 
-- **\<Visual Studio yükleme dizini > \Common7\IDE\Extensions\\< ExtensionName\>\\< proje/öğe şablonları\>**
+- **\<Visual Studio kurulum dizini>\Common7\IDE\Extensions\\<ExtensionName\> \\<Project/ItemTemplates\>**
 
-Uzantınızı MSI tabanlı bir dağıtım gerçekleştiriyorsa, şablon bildirimi el ile oluşturun ve uzantı kurulumunda yer aldığından emin olun gerekir. Yukarıda listelenen .vstman örnekler karşılaştırın ve [Visual Studio şablon bildirim şeması başvurusu](../extensibility/visual-studio-template-manifest-schema-reference.md).
+Uzantınız MSI tabanlı bir dağıtım gerçekleştiriyorsa, şablon bildirimini el ile oluşturmanız ve uzantı kurulumuna dahil edilmesini sağlamanız gerekir. Yukarıda listelenen .vstman örneklerini ve [Visual Studio Template Manifest Schema Reference'ı](../extensibility/visual-studio-template-manifest-schema-reference.md)karşılaştırın.
 
-Proje ve öğe şablonları için ayrı bildirimler oluşturmak ve kök şablon dizini için belirtilen yukarıdaki işaret etmelidir. Uzantı ve yerel ayar başına bir bildirim oluşturun.
+Proje ve madde şablonları için ayrı bildirimler oluşturun ve bunlar yukarıda belirtildiği gibi kök şablon dizinine işaret etmelidir. Uzantı ve yerel olarak bir bildirim oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şablon bulma sorunlarını giderme](troubleshooting-template-discovery.md)
+- [Sorun giderme şablonu bulma](troubleshooting-template-discovery.md)
 - [Özel proje ve öğe şablonları oluşturma](creating-custom-project-and-item-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: LocationFieldMRUPrefix öğesi (Visual Studio şablonları) | Microsoft Docs
+title: LocationFieldMRUPrefix Element (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <LocationFieldMRUPrefix> element [Visual Studio Templates]
 - LocationFieldMRUPrefix element [Visual Studio Templates]
 ms.assetid: 03443691-9eb5-46f4-9169-cc2552a04bcb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d817f688ffeebecf1655fe10aa58efa664135c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ce86eecbab8c31f16ece4628eff28dc40416a0a9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309073"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702819"
 ---
-# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix öğesi (Visual Studio şablonları)
-En son kullanılan (MRU) yollarında belirtir **yeni proje** ve **Yeni Öğe Ekle** iletişim kutusu.
+# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUÖnefix öğesi (Visual Studio Şablonları)
+**Yeni Proje'de** en son kullanılan (MRU) yolları belirtir ve **Yeni Öğe Ekle** iletişim kutusunu belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,11 +43,11 @@ En son kullanılan (MRU) yollarında belirtir **yeni proje** ve **Yeni Öğe Ekl
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu öğe yalnızca aracılığıyla oluşturulan şablonlarını için kullanılması gereken [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)].
+ Bu öğe yalnızca [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)].
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)

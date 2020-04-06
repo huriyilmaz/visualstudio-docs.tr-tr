@@ -1,51 +1,51 @@
 ---
-title: 'İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma | Microsoft Docs'
+title: 'Walkthrough: Bir Kısayol Anahtarı bir Editör Uzantısı ile kullanma | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link keystrokes to commands
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d95d41024bd839c8c556ac94501b20d1a81b7a97
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 651598c0dbe746a9a26a6d60ce72b02853f98d47
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647894"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697145"
 ---
-# <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma
-Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlenecek yol, bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı nasıl ekleneceğini gösterir. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır ve + karakterini kullanarak kenarlığı eklemenize olanak tanır.
+# <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>Walkthrough: Düzenleyici uzantısı ile kısayol tuşu kullanma
+Editör uzantınızdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlik, kısayol tuşu kullanarak metin görünümüne görünüm süslemesinin nasıl ekleyeceğini gösterir. Bu izlenme, viewport süsleme düzenleyicisi şablonuna dayanır ve + karakterini kullanarak süslemeyi eklemenize olanak tanır.
 
-## <a name="prerequisites"></a>Prerequisites
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="prerequisites"></a>Ön koşullar
+ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>Yönetilen Genişletilebilirlik Çerçevesi (MEF) Projesi Oluşturma
 
-1. C# VSIX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **görsel C# /genişletilebilirlik**, sonra **VSIX projesi**' ni seçin.) @No__t_4 çözümü adlandırın.
+1. Bir C# VSIX projesi oluşturun. (Yeni **Proje** iletişim kutusunda Visual **C# / Genişletilebilirlik,** ardından **VSIX Project'i**seçin.) Çözümü `KeyBindingTest`adlandırın.
 
-2. Projeye bir düzenleyici metni kenarlığı öğe şablonu ekleyin ve `KeyBindingTest` adlandırın. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Projeye bir Düzenleyici Metin Süsleme öğesi şablonu `KeyBindingTest`ekleyin ve adını adlandırın. Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
-3. Aşağıdaki başvuruları ekleyin ve **CopyLocal** öğesini `false` olarak ayarlayın:
+3. Aşağıdaki referansları ekleyin ve `false` **CopyLocal'ı** şu şekilde ayarlayın:
 
-    Microsoft. VisualStudio. Editor
+    Microsoft.VisualStudio.Editor
 
-    Microsoft. VisualStudio. OLE. Interop
+    Microsoft.visualstudio.ole
 
-    Microsoft. VisualStudio. Shell. 14.0
+    Microsoft.VisualStudio.Shell.14.0
 
-    Microsoft. VisualStudio. TextManager. Interop
+    Microsoft.VisualStudio.TextManager.Interop
 
-   KeyBindingTest sınıfı dosyasında, sınıf adını Purpleköşeli kutusu olarak değiştirin. Diğer uygun değişiklikleri yapmak için sol kenar boşluğunda görünen ampul ' i kullanın. Oluşturucunun içinde, kenarlığı katmanının adını **KeyBindingTest** öğesinden **purpleucu kutusuna**değiştirin:
+   KeyBindingTest sınıf dosyasında sınıf adını PurpleCornerBox olarak değiştirin. Diğer uygun değişiklikleri yapmak için sol kenar boşluğunda görünen ampulü kullanın. Oluşturucunun içinde, Adornment katmanının adını **KeyBindingTest'ten** **PurpleCornerBox'a**değiştirin:
 
 ```csharp
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");
 ```
 
-KeyBindingTestTextViewCreationListener.cs sınıf dosyasında, **KeyBindingTest** ' den Purnmentlayer ' ın adını **Espleköşeli kutusuna**değiştirin:
+KeyBindingTestTextViewCreationListener.cs sınıf dosyasında, AdornmentLayer'ın adını **KeyBindingTest'ten** **PurpleCornerBox'a**değiştirin:
 
 ```csharp
 [Export(typeof(AdornmentLayerDefinition))]
@@ -54,16 +54,16 @@ KeyBindingTestTextViewCreationListener.cs sınıf dosyasında, **KeyBindingTest*
 public AdornmentLayerDefinition editorAdornmentLayer;
 ```
 
-## <a name="handle-typechar-command"></a>Tanıtıcı TYPECHAR komutu
-Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komutları işlemenin tek yolu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> tabanlı bir komut filtresi uygulamamıştı. Visual Studio 2017 sürüm 15,6, düzenleyici komut işleyicilerine dayalı modern basitleştirilmiş bir yaklaşım getirmiştir. Sonraki iki bölümde hem eski hem de modern yaklaşımı kullanarak bir komutun nasıl işleneceği gösterilmektedir.
+## <a name="handle-typechar-command"></a>TYPECHAR komutunu işleme
+Visual Studio 2017 sürüm 15.6'dan önce bir düzenleyici uzantısındaki komutları işlemenin tek yolu tabanlı komut <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> filtresi uygulamaktı. Visual Studio 2017 sürüm 15.6, editör komut işleyicilerine dayalı modern basitleştirilmiş bir yaklaşım sundu. Sonraki iki bölüm, hem eski hem de modern yaklaşımı kullanarak bir komutun nasıl işleyeceğini gösterir.
 
-## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Komut filtresini tanımlama (Visual Studio 2017 sürüm 15,6 ' den önce)
+## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Komut filtresini tanımlayın (Visual Studio 2017 sürümü 15.6'dan önce)
 
- Komut filtresi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> uygulamasıdır.
+ Komut filtresi, süslemeyi <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>anında oluşturarak komutu işleyen bir uygulamadır.
 
-1. Bir sınıf dosyası ekleyin ve `KeyBindingCommandFilter` adlandırın.
+1. Bir sınıf dosyası ekleyin `KeyBindingCommandFilter`ve adlandırın.
 
-2. Aşağıdaki using yönergelerini ekleyin.
+2. Yönergeleri kullanarak aşağıdakileri ekleyin.
 
     ```csharp
     using System;
@@ -74,13 +74,13 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
 
     ```
 
-3. KeyBindingCommandFilter adlı sınıf <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 'ten devralması gerekir.
+3. KeyBindingCommandFilter adlı sınıf <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.
 
     ```csharp
     internal class KeyBindingCommandFilter : IOleCommandTarget
     ```
 
-4. Metin görünümü için özel alanlar, komut zincirindeki bir sonraki komut ve komut filtresinin zaten eklenip eklenmeyeceğini temsil eden bir bayrak ekleyin.
+4. Metin görünümü için özel alanlar, komut zincirindeki bir sonraki komut ve komut filtresinin zaten eklenip eklenmediğini temsil edecek bir bayrak ekleyin.
 
     ```csharp
     private IWpfTextView m_textView;
@@ -89,7 +89,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     internal bool m_adorned;
     ```
 
-5. Metin görünümünü ayarlayan bir Oluşturucu ekleyin.
+5. Metin görünümünü ayarlayan bir oluşturucu ekleyin.
 
     ```csharp
     public KeyBindingCommandFilter(IWpfTextView textView)
@@ -99,7 +99,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     }
     ```
 
-6. @No__t_0 yöntemini aşağıdaki şekilde uygulayın.
+6. Yöntemi `QueryStatus()` aşağıdaki gibi uygulayın.
 
     ```csharp
     int IOleCommandTarget.QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
@@ -108,7 +108,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     }
     ```
 
-7. Bir artı işareti ( **+** ) karakteri yazılmışsa görünüme mor bir kutu eklemek için `Exec()` yöntemini uygulayın.
+7. Bir `Exec()` artı işareti (**+**) karakteri yazılırsa görünüme mor bir kutu ekecek şekilde yöntemi uygulayın.
 
     ```csharp
     int IOleCommandTarget.Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)
@@ -132,10 +132,10 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
 
     ```
 
-## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Komut filtresini ekleme (Visual Studio 2017 sürüm 15,6 ' den önce)
- Kenarlığı sağlayıcının metin görünümüne bir komut filtresi eklemesi gerekir. Bu örnekte sağlayıcı, metin görünümü oluşturma olaylarını dinlemek için <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> uygular. Bu kenarlığı sağlayıcısı ayrıca kenarlığı 'in Z düzenini tanımlayan kenarlığı katmanını dışarı aktarır.
+## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Komut filtresini ekleyin (Visual Studio 2017 sürümü 15.6'dan önce)
+ Süsleme sağlayıcısının metin görünümüne bir komut filtresi eklemesi gerekir. Bu örnekte, sağlayıcı <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> metin görünümü oluşturma olaylarını dinlemek için uygular. Bu süs sağlayıcı aynı zamanda süslemezzz'in Z sırasını tanımlayan süs tabakasını da ihraç eder.
 
-1. KeyBindingTestTextViewCreationListener dosyasında, aşağıdaki using yönergelerini ekleyin:
+1. KeyBindingTestTextViewCreationListener dosyasında, aşağıdaki yönergeleri kullanarak ekleyin:
 
     ```csharp
     using System;
@@ -150,7 +150,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
 
     ```
 
-2. Metin görünümü bağdaştırıcısını almak için <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> içeri aktarmanız gerekir.
+2. Metin görünümü bağdaştırıcısını almak <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>için .
 
     ```csharp
     [Import(typeof(IVsEditorAdaptersFactoryService))]
@@ -158,7 +158,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
 
     ```
 
-3. @No__t_0 yöntemini `KeyBindingCommandFilter` eklemesi için değiştirin.
+3. Yöntemi <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> değiştirin, böylece `KeyBindingCommandFilter`.
 
     ```csharp
     public void TextViewCreated(IWpfTextView textView)
@@ -167,7 +167,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     }
     ```
 
-4. @No__t_0 işleyicisi metin görünümü bağdaştırıcısını alır ve komut filtresini ekler.
+4. İşleyici `AddCommandFilter` metin görünümü bağdaştırıcısını alır ve komut filtresini ekler.
 
     ```csharp
     void AddCommandFilter(IWpfTextView textView, KeyBindingCommandFilter commandFilter)
@@ -191,19 +191,19 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     }
     ```
 
-## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>Bir komut işleyici uygulama (Visual Studio 2017 sürüm 15,6 ' den başlayarak)
+## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>Bir komut işleyicisi uygulayın (Visual Studio 2017 sürüm 15.6'dan itibaren)
 
-İlk olarak, en son Düzenleyici API 'sine başvurmak için projenin NuGet başvurularını güncelleştirin:
+İlk olarak, projenin Nuget başvurularını en son düzenleyici API'ye başvurmak için güncelleştirin:
 
-1. Projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
+1. Projeye sağ tıklayın ve **Nuget Paketlerini Yönet'i**seçin.
 
-2. **NuGet Paket Yöneticisi**' nde **güncelleştirmeler** sekmesini seçin, **tüm paketleri Seç** onay kutusunu seçin ve ardından **Güncelleştir**' i seçin.
+2. **Nuget Paket**Yöneticisi'nde, **Güncellemeler** sekmesini seçin, **tüm paketleri seç** onay kutusunu seçin ve ardından **Güncelleştir'i**seçin.
 
-Komut işleyicisi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> uygulamasıdır.
+Komut <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601>işleyicisi, süslemeyi anında oluşturarak komutu işleyen bir uygulamadır.
 
-1. Bir sınıf dosyası ekleyin ve `KeyBindingCommandHandler` adlandırın.
+1. Bir sınıf dosyası ekleyin `KeyBindingCommandHandler`ve adlandırın.
 
-2. Aşağıdaki using yönergelerini ekleyin.
+2. Yönergeleri kullanarak aşağıdakileri ekleyin.
 
    ```csharp
    using Microsoft.VisualStudio.Commanding;
@@ -213,7 +213,7 @@ Komut işleyicisi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Mi
    using System.ComponentModel.Composition;
    ```
 
-3. KeyBindingCommandHandler adlı sınıf `ICommandHandler<TypeCharCommandArgs>` 'ten devralması ve <xref:Microsoft.VisualStudio.Commanding.ICommandHandler> olarak dışarı aktarmanız gerekir:
+3. KeyBindingCommandHandler adlı sınıf devralmalı `ICommandHandler<TypeCharCommandArgs>`ve şu <xref:Microsoft.VisualStudio.Commanding.ICommandHandler>şekilde dışa aktarmalıdır:
 
    ```csharp
    [Export(typeof(ICommandHandler))]
@@ -222,13 +222,13 @@ Komut işleyicisi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Mi
    internal class KeyBindingCommandHandler : ICommandHandler<TypeCharCommandArgs>
    ```
 
-4. Komut işleyicisinin görünen adını ekleyin:
+4. Komut işleyicisinin ekran adı ekleyin:
 
    ```csharp
    public string DisplayName => "KeyBindingTest";
    ```
 
-5. @No__t_0 yöntemini aşağıdaki şekilde uygulayın. Bu komut işleyici, çekirdek Düzenleyicisi TYPECHAR komutunu işletiğinden, komutu çekirdek düzenleyicide etkinleştirmek için temsilci seçebilirsiniz.
+5. Yöntemi `GetCommandState()` aşağıdaki gibi uygulayın. Bu komut işleyicisi çekirdek düzenleyici TYPECHAR komutunu işlediği için, komutu etkinle'yi çekirdek düzenleyiciye devredebilir.
 
    ```csharp
    public CommandState GetCommandState(TypeCharCommandArgs args)
@@ -237,7 +237,7 @@ Komut işleyicisi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Mi
    }
    ```
 
-6. Bir artı işareti ( **+** ) karakteri yazılmışsa görünüme mor bir kutu eklemek için `ExecuteCommand()` yöntemini uygulayın.
+6. Bir `ExecuteCommand()` artı işareti (**+**) karakteri yazılırsa görünüme mor bir kutu ekecek şekilde yöntemi uygulayın.
 
    ```csharp
    public bool ExecuteCommand(TypeCharCommandArgs args, CommandExecutionContext executionContext)
@@ -257,7 +257,7 @@ Komut işleyicisi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Mi
    }
    ```
 
-   7. *KeyBindingTestTextViewCreationListener.cs* dosyasındaki kenarlığı katman tanımını *KeyBindingCommandHandler.cs* olarak kopyalayın ve *KeyBindingTestTextViewCreationListener.cs* dosyasını silin:
+   7. KeyBindingTestTextViewCreationListener.cs *dosyadan* *KeyBindingCommandHandler.cs'a* süsleme katmanı tanımını kopyalayın ve *ardından KeyBindingTestTextViewCreationListener.cs* dosyayı silin:
 
    ```csharp
    /// <summary>
@@ -270,11 +270,11 @@ Komut işleyicisi, kenarlığı örneğini oluşturarak komutu işleyen <xref:Mi
    private AdornmentLayerDefinition editorAdornmentLayer;
    ```
 
-## <a name="make-the-adornment-appear-on-every-line"></a>Kenarlığı her satırda görünmesini sağlama
+## <a name="make-the-adornment-appear-on-every-line"></a>Süslemenin her satırda görünmesini sağla
 
-Özgün kenarlığı, metin dosyasındaki her ' a ' karakteriyle görüldü. **@No__t_1** karaktere yanıt olarak kenarlığı eklemek için kodu değiştirdiğimiz için, yalnızca **+** karakterin yazıldığı satıra kenarlığı ekler. Kenarlığı kodunu, her ' a ' üzerinde daha fazla kenarlığı bir kez daha görünecek şekilde değiştirebiliriz.
+Orijinal süsleme bir metin dosyasında her karakter 'a' çıktı. Şimdi biz **+** karaktere yanıt olarak süsleme eklemek için kodu değiştirdik, sadece **+** karakter yazılır satırına süsleme ekler. Süs kodunu değiştirebiliriz, böylece süs her 'a'da bir kez daha görünür.
 
-*KeyBindingTest.cs* dosyasında, ' a ' karakterini süslemek için görünümdeki tüm satırlarda yinelemek üzere `CreateVisuals()` yöntemini değiştirin.
+*KeyBindingTest.cs* dosyasında, 'a' karakterini süslemek için `CreateVisuals()` yöntemdeki tüm satırları yinelemek için değiştirin.
 
 ```csharp
 private void CreateVisuals(ITextViewLine line)
@@ -318,10 +318,10 @@ private void CreateVisuals(ITextViewLine line)
 }
 ```
 
-## <a name="build-and-test-the-code"></a>Kodu derleyin ve test edin
+## <a name="build-and-test-the-code"></a>Kodu oluşturma ve test edin
 
-1. KeyBindingTest çözümünü derleyin ve deneysel örnekte çalıştırın.
+1. KeyBindingTest çözümlerini oluşturun ve deneysel örnekte çalıştırın.
 
-2. Bir metin dosyası oluşturun veya açın. ' A ' karakterini içeren bazı sözcükler yazın ve sonra metin görünümünde **+** yazın.
+2. Metin dosyası oluşturun veya açın. 'a' karakterini içeren bazı sözcükler yazın **+** ve ardından metin görünümünde herhangi bir yere yazın.
 
-     Dosyadaki her ' a ' karakteriyle mor bir kare görünmelidir.
+     Dosyadaki her 'a' karakterinde mor bir kare görünmelidir.

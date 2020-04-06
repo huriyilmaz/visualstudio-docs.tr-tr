@@ -1,5 +1,5 @@
 ---
-title: SccCloseProject işlevi | Microsoft Docs
+title: SccCloseProject Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccCloseProject function
 ms.assetid: 259c2069-d349-4814-810f-1c3151b7fb84
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5a5fe721a3b51f4d3f210e7f2d5450e4f4bc6f41
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 71df385bc0cf42c2437abfd117c2f84bda5b5432
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333926"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701055"
 ---
-# <a name="scccloseproject-function"></a>SccCloseProject işlevi
-Bu işlev, belirli bir oturum sonunu işaretlemek için bir proje, kapatır.
+# <a name="scccloseproject-function"></a>SccCloseProject fonksiyonu
+Bu işlev, belirli bir oturumun sonunu işaretleyerek projeyi kapatır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,22 +31,22 @@ SCCRTN SccCloseProject (
 ```
 
 ### <a name="parameters"></a>Parametreler
- Kaynak Denetimi Eklentisi context yapısını pvContext.
+ pvContext Kaynak denetimi eklentisi bağlam yapısı.
 
-## <a name="return-value"></a>Dönüş değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+## <a name="return-value"></a>Döndürülen değer
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Proje başarıyla kapatıldı.|
-|SCC_E_PROJNOTOPEN|Proje şu anda açıktır.|
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi gerçekleştirmek için izin verilmiyor.|
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata oluştu.|
+|SCC_E_PROJNOTOPEN|Şu anda açık proje yok.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
+|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- [SccOpenProject](../extensibility/sccopenproject-function.md) her zaman önce bu işlev çağrılır. Bu işlev çağrısı öğelerine yönelik çağrıdan sonra takip `SccOpenProject` işlevi veya [SccUninitialize](../extensibility/sccuninitialize-function.md), sona erdiği kaynak denetim sistemi bağlantısı tamamen.
+ [SccOpenProject](../extensibility/sccopenproject-function.md) her zaman bu işlevden önce çağrılır. Bu işleve yapılan bir çağrı, daha `SccOpenProject` sonra kaynak denetim sistemine olan bağlantıyı tamamen sona erdirebilen işlev veya [SccUninitialize'ye](../extensibility/sccuninitialize-function.md)yapılan bir çağrı yla takip edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)
 - [SccInitialize](../extensibility/sccinitialize-function.md)

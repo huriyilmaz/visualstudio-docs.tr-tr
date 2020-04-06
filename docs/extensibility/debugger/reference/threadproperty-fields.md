@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTY_FIELDS | Microsoft Docs
+title: THREADPROPERTY_FIELDS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - THREADPROPERTY_FIELDS enumeration
 ms.assetid: 5b88acb9-03ea-4c29-a788-f0087dccbe23
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9da7b995826b905af7faf6cac3fa0fc3d5ceba5e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b31c43187d1136f7a194c42749c430de6cd064a0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316199"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713405"
 ---
-# <a name="threadpropertyfields"></a>THREADPROPERTY_FIELDS
-Alınacak bir iş parçacığı hakkında bilgiler olduğunu belirtir.
+# <a name="threadproperty_fields"></a>THREADPROPERTY_FIELDS
+Bir iş parçacığı hakkında hangi bilgilerin alınıp alıneceğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,41 +54,41 @@ public enum enum_THREADPROPERTY_FIELDS { 
 
 ## <a name="fields"></a>Alanlar
  `TPF_ID`\
- Başlat/kullanım `dwThreadId` alanını [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısı.
+ [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısının `dwThreadId` alanını başlatma/kullanma.
 
  `TPF_SUSPENDCOUNT`\
- Başlat/kullanım `dwSuspendCount` alanını `THREADPROPERTIE`S yapısı.
+ `THREADPROPERTIE`S yapısının `dwSuspendCount` alanını başlatma/kullanma.
 
  `TPF_STATE`\
- Başlat/kullanım `dwThreadState` alanını `THREADPROPERTIE`S yapısı.
+ `THREADPROPERTIE`S yapısının `dwThreadState` alanını başlatma/kullanma.
 
  `TPF_PRIORITY`\
- Başlat/kullanım `bstrPriority` alanını `THREADPROPERTIE`S yapısı.
+ `THREADPROPERTIE`S yapısının `bstrPriority` alanını başlatma/kullanma.
 
  `TPF_NAME`\
- Başlat/kullanım `bstrName` alanını `THREADPROPERTIE`S yapısı.
+ `THREADPROPERTIE`S yapısının `bstrName` alanını başlatma/kullanma.
 
  `TPF_LOCATION`\
- Başlat/kullanım `bstrLocation` alanını `THREADPROPERTIE`S yapısı.
+ `THREADPROPERTIE`S yapısının `bstrLocation` alanını başlatma/kullanma.
 
  `TPF_ALLFIELDS`\
  Tüm alanları belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerleri bir bağımsız değişken olarak geçirilen [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) hangi alanları göstermek için yöntemi [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısı olan başlatılacak.
+ Bu değerler, [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısının hangi alanlarının başharfe başlatılanolacağını belirtmek için [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine bir bağımsız değişken olarak geçirilir.
 
- Bu değerleri de kullanılan `dwFields` üyesi `THREADPROPERTIES` yapısı hangi alanların kullanılan ve geçerli olduğunu belirtmek için.
+ Bu değerler, yapının `dwFields` `THREADPROPERTIES` üyesi nde hangi alanların kullanıldığını ve geçerli olduğunu belirtmek için de kullanılır.
 
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.
+ Bu bayraklar biraz ile `OR`birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)
 - [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)

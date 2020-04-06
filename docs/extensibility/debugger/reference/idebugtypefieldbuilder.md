@@ -1,24 +1,24 @@
 ---
-title: IDebugTypeFieldBuilder | Microsoft Docs
+title: IDebugTypeFieldBuilder | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugTypeFieldBuilder interface
 ms.assetid: 2dfed0be-6972-4bec-baec-f0b78df9ef97
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 165bbf6326bee67718c4c2ae44933d1b21b8252c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 81532e2616eefb9cb584eae1a70371fd2f963be1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319790"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718390"
 ---
 # <a name="idebugtypefieldbuilder"></a>IDebugTypeFieldBuilder
-Türünü temsil eden bir alan oluşturma özelliği temsil eder.
+Bir türü temsil eden bir alan oluşturma yeteneğini temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,19 +27,19 @@ IDebugTypeFieldBuilder : IUnknown
 ```
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim, sembol Sağlayıcısı'ndan elde edilir.
+ Bu arabirim sembol sağlayıcıdan elde edilir.
 
 ## <a name="methods"></a>Yöntemler
- Bu arabirim, aşağıdaki yöntemleri uygular:
+ Bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[CreatePrimitive](../../../extensibility/debugger/reference/idebugtypefieldbuilder-createprimitive.md)|Temel türünü temsil eden bir nesne oluşturur.|
-|[CreatePointerToType](../../../extensibility/debugger/reference/idebugtypefieldbuilder-createpointertotype.md)|Belirtilen tür işaretçisi oluşturur.|
+|[CreatePrimitive](../../../extensibility/debugger/reference/idebugtypefieldbuilder-createprimitive.md)|İlkel bir türü temsil eden bir nesne oluşturur.|
+|[CreatePointerToType](../../../extensibility/debugger/reference/idebugtypefieldbuilder-createpointertotype.md)|Belirtilen türe işaretçi oluşturur.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Sh.h
+ Üstbilgi: Ş.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll

@@ -1,168 +1,168 @@
 ---
-title: Visual Studio için UX temel bileşenleri | Microsoft Docs
+title: Görsel Stüdyo için UX Essentials | Microsoft Dokümanlar
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45e4f1389317c67665d1b03e936a33380cb7ecf2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c6c329eda477d77ab73be2ad913ac18d67ff3c08
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310805"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698337"
 ---
-# <a name="ux-essentials-for-visual-studio"></a>Visual Studio için UX temel bileşenleri
+# <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
-## <a name="best-practices"></a>Önerilen uygulamalar
+## <a name="best-practices"></a>En iyi uygulamalar
 
-### <a name="1-be-consistent-within-the-visual-studio-environment"></a>1. Visual Studio ortamında tutarlı olmalıdır.
+### <a name="1-be-consistent-within-the-visual-studio-environment"></a>1. Visual Studio ortamında tutarlı olun.
 
-- Varolan izleyin [etkileşim desenleri](interaction-patterns-for-visual-studio.md) kabuktan.
+- Kabuk içindeki mevcut [etkileşim modellerini](interaction-patterns-for-visual-studio.md) izleyin.
 
-- Özellikleri kabuğun visual dili ile tutarlı olacak şekilde tasarlayın ve [craftsmanship gereksinimleri](evaluation-tools-for-visual-studio.md).
+- Tasarım özellikleri kabuk görsel dil ve [işçilik gereksinimleri](evaluation-tools-for-visual-studio.md)ile tutarlı olması.
 
-- Bunlar mevcut paylaşılan komutlara ve denetimlere kullanın.
+- Paylaşılan komutları ve denetimleri var olduklarında kullanın.
 
-- Visual Studio hiyerarşi ve nasıl bağlam oluşturur ve kullanıcı arabirimini yönlendirir anlayın.
+- Visual Studio hiyerarşisini ve bağlamı nasıl oluşturduğunu ve UI'yi nasıl yönlendirdiğini anlayın.
 
-### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2. Yazı tipleri ve renkler ortam hizmeti kullanın.
+### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2. Yazı tipleri ve renkler için ortam hizmetini kullanın.
 
-- Geçerli kullanıcı Arabirimi dikkate [ortam yazı tipi](fonts-and-formatting-for-visual-studio.md) özelleştirme seçenekleri iletişim kutusu yazı tipleri ve renkler sayfasında sunulan sürece ayarlama.
+- Kullanıcı Arabirimi, Seçenekler iletişim kutusundaki Yazı Tipleri ve Renkler sayfasında özelleştirme için açıkta olmadığı sürece geçerli [ortam yazı tipi](fonts-and-formatting-for-visual-studio.md) ayarına saygı göstermelidir.
 
-- Kullanıcı Arabirimi öğeleri kullanmalıdır [VSColor hizmet](colors-and-styling-for-visual-studio.md), kullanılarak paylaşılan ortam belirteçleri veya özelliğe özgü belirteçleri.
+- Kullanıcı Bira Birimi öğeleri, paylaşılan ortam belirteçlerini veya özel belirteçleri kullanarak [VSColor Hizmetini](colors-and-styling-for-visual-studio.md)kullanmalıdır.
 
-### <a name="3-make-all-imagery-consistent-with-the-new-vs-style"></a>3. Tüm görüntüleri yeni VS stil ile tutarlı olun.
+### <a name="3-make-all-imagery-consistent-with-the-new-vs-style"></a>3. Tüm görüntüleri yeni VS stiliyle tutarlı hale getirin.
 
-- Simgeler, karakterleri ve diğer grafikleri için Visual Studio tasarım ilkelerini izleyin.
+- Simgeler, glifler ve diğer grafikler için Visual Studio tasarım ilkelerini izleyin.
 
-- Metin, grafik öğeleri yerleştirmeyin.
+- Metni grafik öğelerine yerleştirmeyin.
 
-### <a name="4-design-from-a-user-centric-perspective"></a>4. Kullanıcı merkezli bir açısından tasarlayın.
+### <a name="4-design-from-a-user-centric-perspective"></a>4. Kullanıcı merkezli bir bakış açısıyla tasarım.
 
-- İçindeki tek tek özellikler önce Görev akışı oluşturun.
+- Görev akışını, içindeki tek tek özelliklerden önce oluşturun.
 
-- Kullanıcılarınızla bilgi sahibi olmanız ve bu bilgi, teknik özellikler, açık olun.
+- Kullanıcılarınızı tanımak ve bu bilgileri spec açık olun.
 
-- Kullanıcı arabirimini gözden geçirirken, ayrıntıları yanı sıra eksiksiz deneyimi değerlendirin.
+- UI'yi gözden geçirirken, tüm deneyimi ve ayrıntıları değerlendirin.
 
-- Kullanıcı Arabirimi yerel ayar veya dil bağımsız olarak çekici ve işlevsel kalır şekilde tasarlayın.
+- UI'nizi, yerel veya dilden bağımsız olarak işlevsel ve çekici kalacak şekilde tasarla.
 
 ## <a name="screen-resolution"></a>Ekran çözünürlüğü
 
 ### <a name="minimum-resolution"></a>En düşük çözünürlük
 
-- Visual Studio 2015 için en düşük çözünürlük **1280 x 720**. Bu, anlamına gelir *olası* bir en iyi kullanıcı deneyimini olmayabilir rağmen bu çözünürlükte, Visual Studio'yu kullanma. Tüm yönleriyle 1280 x 720 ' daha düşük çözünürlüklerde kullanılabilir olacağını garanti yoktur.
+- Visual Studio 2015 için minimum çözünürlük **1280x720'dir.** Bu, en iyi kullanıcı deneyimi olmasa da Visual Studio'nun bu çözünürlükte kullanılmasının *mümkün* olduğu anlamına gelir. 1280x720'den daha düşük çözünürlüklerde tüm yönleriyle kullanılabilir olacağının garantisi yoktur.
 
-- Visual Studio için hedef çözüm **1366 x 768**. Başlangıçtan etmeyeceğiz düşük çözüm budur bir *iyi* kullanıcı deneyimi.
+- Visual Studio için hedef çözünürlük **1366x768.** Bu, *iyi* bir kullanıcı deneyimi vaat ettiğimiz en düşük çözünürlük.
 
-- İlk iletişim yükseklik olmalıdır **700 pikselden küçük**, içinde IDE çerçevesinin 96 DPI, minimum çözünürlük sığmasını sağlayın.
+- İlk iletişim yüksekliği **700 pikselden daha küçük**olmalıdır, bu nedenle 96 dpi'deki IDE çerçevesinin minimum çözünürlüğüne sığar.
 
-### <a name="high-density-displays"></a>Yüksek yoğunluklu görüntüler
- Visual Studio kullanıcı Arabiriminde, kullanıma hazır Windows destekleyen de tüm DPI ölçeklendirme faktörlerindeki çalışması gerekir: % 150, %200 ve % 250.
+### <a name="high-density-displays"></a>Yüksek yoğunluklu ekranlar
+ Visual Studio'daki UI, Windows'un kutunun dışında desteklediği tüm DPI ölçekleme faktörlerinde iyi çalışmalıdır: %150, %200 ve %250.
 
-## <a name="anti-patterns"></a>Ters desenler
- Visual Studio UI kılavuz İlkelerimizi ve en iyi uygulamaları izleyin birçok örnekleri içerir. Geliştirilmiştir tutarlı olması için ürün UI tasarım desenleri ne, oluşturmakta olduğumuz için benzer geliştiriciler genellikle alın. Kullanıcı etkileşimi ve görsel tasarım tutarlılık sürücü bize yardımcı olur, biz bazen koşullarımıza Zamanlama kısıtlamaları nedeniyle karşılamaz veya hata önceliklendirme birkaç ayrıntıları sunmaya başlayamıyorsunuz, iyi bir yaklaşım budur ancak. Bunlar Visual Studio ortamının içinde hatalı veya tutarsız UI yayılmaya çünkü bu gibi durumlarda, takımlar bu "ters desenler" birini kopyalayıp istiyoruz değil.
+## <a name="anti-patterns"></a>Anti-desenler
+ Visual Studio, yönergelerimize ve en iyi uygulamaları takip eden birçok ui örneği içerir. Tutarlı olmak amacıyla, geliştiriciler genellikle kendi inşa ettiklerine benzer ürün ui tasarım desenlerinden ödünç alın. Bu, kullanıcı etkileşimi ve görsel tasarımda tutarlılığı teşvik etmemize yardımcı olan iyi bir yaklaşım olsa da, zaman zaman zamanlama kısıtlamaları veya hata önceliklendirmesi nedeniyle yönergelerimize uymayan birkaç ayrıntı içeren gemi özellikleri yaparız. Bu gibi durumlarda, ekiplerin visual studio ortamında kötü veya tutarsız uI'yi çoğalttığı için bu "anti-desenlerden" birini kopyalamalarını istemeyiz.
 
-### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>Hata durumunda varsayılan olarak gösterilen gerekli alanlar/ayarları
+### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>Varsayılan olarak hata durumunda gösterilen gerekli alanlar/ayarlar
 
-#### <a name="feature-team-goals"></a>Takım hedeflerine özelliği
+#### <a name="feature-team-goals"></a>Özellik takım hedefleri
 
-- Yapılandırılması gereken bir öğe eklediğiniz kullanıcıları uyarın.
+- Kullanıcıları, yapılandırılması gereken bir öğe ekledikleri konusunda uyarın.
 
-- Kullanıcının dikkatini fikirlerinize ihtiyacımız alanlarına çizin.
+- Kullanıcının dikkatini giriş gereken alanlara çekin.
 
-#### <a name="anti-pattern-solution"></a>Koruma düzeni çözümü
- Hemen kullanıcı tarafından başlatılan bir eylem olarak ve görev tamamlanmadan önce durdurma kritik simgeleri yapılandırma gerektiren alanlar yanındaki yerleştirin.
+#### <a name="anti-pattern-solution"></a>Anti-desen çözeltisi
+ Kullanıcı bir eylem başlattıktan sonra ve görevi tamamlamadan önce, yapılandırma gereken alanların yanına hemen kritik durdurma simgeleri yerleştirin.
 
-#### <a name="example-manifest-designer-declarations"></a>Örnek: Bildirim Tasarımcısı bildirimleri
- Bir bildirimi hemen listeye eklemeyi kullanıcı gerekli özellikleri ayarlar kadar kalıcı bir hata durumunda yerleştirir.
+#### <a name="example-manifest-designer-declarations"></a>Örnek: Manifest Designer bildirimleri
+ Listeye bir bildirim eklemek, kullanıcı gerekli özellikleri ayarlayana kadar devam eden bir hata durumuna hemen yerleştirir.
 
- Bu durumda, yoktur ek bir sorun için uyarı kullanılan simge içerdiğinden bir "&times;" simgesi, bu nedenle ortak Kaldır simgesi yanında kullanılamaz. Sonuç olarak, kullanıcı Arabirimi daha clunky denetimi bir Kaldır düğmesini kullanır.
+ Bu durumda, uyarı için kullanılan simge " " simgesi&times;içerdiğinden, ortak kaldırma simgesi yanında kullanılamadığından, ek bir sorun vardır. Sonuç olarak, UI, daha aksak bir denetim olan Kaldır düğmesini kullanır.
 
- ![UI hata durumunda, varsayılan yerleştirme bir Visual Studio koruma desendir. ](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti düzeni")<br />UI hata durumunda, varsayılan yerleştirme bir Visual Studio koruma desendir.
+ ![UI'yi varsayılan olarak bir hata durumuna yerleştirmek Visual Studio anti-desenidir.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-desen")<br />UI'yi varsayılan olarak bir hata durumuna yerleştirmek Visual Studio anti-desenidir.
 
-#### <a name="alternatives"></a>Alternatifleri
+#### <a name="alternatives"></a>Alternatifler
 
-Bu sorunu daha iyi bir çözüme olmaktır:
+Bu soruna daha iyi bir çözüm:
 
-- Bir uyarı bildiriminde eklemek kullanıcının ve öğede özelliklerini ayarlamak hemen taşıyın.
+- Kullanıcının uyarı yapmadan bir bildirim eklemesine izin verin ve ardından öğedeki özellikleri ayarlamak için hemen hareket edin.
 
-- Uyarı simgesi (gold üçgen) ekleme zaman odak taşır öğesinden gibi başka bir bildirimi listeye ekleyin veya tasarımcı sekmelerde değiştirme girişimi.
+- Odak öğeden hareket ettiğinde (listeye başka bir bildirim eklemek veya tasarımcı içindeki sekmeleri değiştirmeye çalışmak gibi) uyarı simgesini (altın üçgen) ekleyin.
 
-- Kullanıcının sekme özellikleri tüm bildirimlerinde ayarlamadan önce çalışırsa, uygulaması olmayan oluşturacaksınız açıklayan bir iletişim kutusu açılır (veya hangi etkilerini) uyarıları çözülene kadar. Yine de kullanıcı iletişim kutusunu kapatır ve sekmeleri değiştirirse (kritik veya uyarı, uygun şekilde) simge için bildirimler sekmesine eklenir.
+- Kullanıcı herhangi bir bildirimde özellikleri ayarlamadan önce sekmeleri değiştirmeye çalışırsa, uyarılar çözülene kadar uygulamanın oluşturmeyeceğini (veya etkileri ne olursa olsun) açıklayan bir iletişim kutusu oluşturun. Kullanıcı iletişim kutusunu reddederse ve sekmeleri yine de değiştirirse, Bildirimler sekmesine bir simge (uygun olduğu şekilde kritik veya uyarı) eklenir.
 
-### <a name="multiple-clicks-to-dismiss-ui"></a>UI kapatmak için birden çok tıklama
+### <a name="multiple-clicks-to-dismiss-ui"></a>UI'yi reddetmek için birden çok tıklama
 
-#### <a name="feature-team-goals"></a>Takım hedeflerine özelliği
- Kullanıcı, kullanıcı Arabirimi açıklama metni görmeden kapatmak izin verme.
+#### <a name="feature-team-goals"></a>Özellik takım hedefleri
+ Kullanıcının açıklama metnini görmeden Kullanıcı Arabirimi'ni reddetmesine izin vermeyin.
 
-#### <a name="anti-pattern"></a>Koruma düzeni
- Video bağlantıları VS UI içinde çeşitli yerlerde içine ekleyerek takım sık karşılaşılan desenini karşı karar "&times;" Kapat düğmesi ve araç ipucu açıklaması olarak UX tarafından belirtilen, bunun yerine bir açılan uygulanan ve "bir daha gösterme" bağlayabilirsiniz.
+#### <a name="anti-pattern"></a>Anti-desen
+ Video bağlantılarını VS UI içindeki çeşitli yerlere yerleştiren ekip, UX&times;tarafından belirtildiği gibi " yakın düğme ve araç ucu açıklamasının ortak desenine karşı karar verdi ve bunun yerine bir açılır bırakma ve "Tekrar gösterme" bağlantısını uyguladı.
 
-#### <a name="example-video-links-in-team-explorer"></a>Örnek: Takım Gezgini'nde video bağlantıları
-Kullanıcı UI kapatılıyor önce açıklayıcı metin okumak için zorlama, Visual Studio içinden koruma bir desendir. Doğru şekilde tasarlanmış, video bağlantılarını üzerine gelin ve tıklayarak ek bilgileri içeren bir araç ipucu görüntülemesi gereken "&times;" daha fazla etkileşim için gerek kalmadan iletisini kapat.
+#### <a name="example-video-links-in-team-explorer"></a>Örnek: Team Explorer'daki video bağlantıları
+Kullanıcıyı Kullanıcı Arabirimi'ni reddetmeden önce açıklayıcı metni okumaya zorlamak Visual Studio'da bir anti-desendir. Doğru tasarlanmış, video bağlantıları hover ek bilgi ile bir araç ucu&times;görüntülemeli ve " " düğmesini tıklatarak daha fazla etkileşim için gerek kalmadan iletiyi kapatmalıdır.
 
- ![Kötü amaçlı yazılımdan koruma açıklayıcı metin&#45;deseni &#45; yanlış](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />Video bağlantısı yanlış deseni
+ ![Açıklayıcı metin anti&#45;desen &#45; yanlış](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Multipleclicks'in yanlış kullanımı")<br />Yanlış video bağlantısı deseni
 
-Bir basit Kapat düğmesi (tek bir tıklamayla) kullanıcı kullanıcı Arabiriminde görünen video bağlantıları her yerde verilecek iki tıklamada kullanmak için zorlanır.
+Basit bir yakın düğme (tek tıklama) yerine, kullanıcı yalnızca video bağlantılarının göründüğü her yerde Kullanıcı Arabirimi'ni kapatmak için iki tıklama kullanmak zorunda kalır.
 
-Bu durum için doğru tasarım, Internet Explorer, Office ve Visual Studio için ortak desen takip etmektir: üzerine gelindiğinde, kullanıcı tooltip açıklamasını görebilir ve tek bir tıklamayla kullanıcı arabirimini gizler.
+Bu durum için doğru tasarım Internet Explorer, Office ve Visual Studio ortak desen takip etmektir: hover üzerinde, kullanıcı araç ipucu açıklamasını görebilir ve bir tıklama Kullanıcı Arabirimi gizler.
 
- ![Kötü amaçlı yazılımdan koruma açıklayıcı metin&#45;deseni &#45; doğru](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti desenini düzeltin")<br />Doğru video bağlantısı düzeni
+ ![Açıklayıcı metin anti&#45;desen &#45; doğru](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Açıklayıcı textanti-desen-doğru")<br />Video bağlantısı deseni düzelt
 
-### <a name="using-command-bars-for-settings"></a>Komut çubuğu ayarları için kullanma
+### <a name="using-command-bars-for-settings"></a>Ayarlar için komut çubuklarını kullanma
 
-**Şekil A** Bu koruma düzeni temsil eder: ayarı daha fazlasını komutu geçerli bir komut düğmesi altındaki yerleştirme. Bu taslağı hata ayıklamayı Başlat yanı sıra komutları vardır — ister tarayıcı, hata ayıklama olmadan başlat ve içine adımla görünümünde — seçili olan ayar dikkate.
+**Şekil A** bu anti-deseni temsil eder: komut düğmesinin altına yalnızca komuttan daha fazlasına uygulanan bir ayar koymak. Bu çizimde, Hata Ayıklama başlat'ın yanı sıra seçilen ayara saygı gösterebilecek Tarayıcıda Görüntüle, Hata Ayıklama olmadan Başlat ve Adım Adım gibi komutlar vardır.
 
-![Şekil y: Komut çubuğu koruma düzeni](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti deseni FigureA")<br />Şekil y: Komut çubuğu koruma düzeni
+![Şekil A: Komut çubuğu anti-desen](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-desen-FigureA")<br />Şekil A: Komut çubuğu anti-desen
 
-Biraz daha iyi, ancak hala istenmeyen sokarak ayarlar bu türün araç çubuklarını, gösterildiği gibi **şekil B**. Bölünmüş düğme daha az yer kaplar ve bu nedenle bir geliştirme açılan listeler, ancak her iki tasarımın bir araç çubuğu gerçekten bir komut değil bir şey yükseltmek için yine de kullanmaktadır.
+Biraz daha iyi, ama yine de istenmeyen, **şekil B'de**gösterildiği gibi, araç çubuklarında bu tür ayarları koyarak . Bölünmüş düğmeler daha az yer kaplar ve bu nedenle açılır düşmeler üzerinde bir gelişme olsa da, her iki tasarım da hala gerçekten bir komut olmayan bir şeyi tanıtmak için bir araç çubuğu kullanıyor.
 
-![Şekil B: Daha iyi, ancak yine de bir komut çubuğu koruma düzeni](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti deseni FigureB")<br />Şekil B: Daha iyi, ancak yine de bir komut çubuğu koruma düzeni
+![Şekil B: Daha iyi, ama yine de bir komut çubuğu anti-desen](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-desen-FigureB")<br />Şekil B: Daha iyi, ama yine de bir komut çubuğu anti-desen
 
-Gösterilen doğru yaklaşımda **şekil C**, ayar, bir dizi komut bağlıdır. Ayarlanan genel ayar yoktur ve biz yalnızca dört komuttan arasında geçiş yapıyorsanız. Bu, araç çubuğundaki komutları kabul edilebilir tek durumdur.
+**Şekil C'de**gösterilen doğru yaklaşımda ayar bir dizi komuta bağlıdır. Ayarlanmış bir küresel ayar yok ve biz sadece dört komut arasında geçiş yapıyoruz. Araç çubuğundaki komutların kabul edilebilir olduğu tek durum budur.
 
-![Şekil C: Visual Studio komut çubuğu düzeni kullanımını düzeltmek](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti deseni FigureC")<br />Şekil C: Visual Studio komut çubuğu deseni doğru kullanımı
+![Şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-desen-FigureC")<br />Şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı
 
-### <a name="control-anti-patterns"></a>Denetim ters desenler
- İçin bazı ters desenler, yalnızca yanlış kullanımı veya bir denetim veya denetimlerin Grup sunumu olabilir.
+### <a name="control-anti-patterns"></a>Anti-desenleri kontrol edin
+ Bazı anti-desenler sadece yanlış kullanımı veya bir denetim veya denetim grubu sunumu vardır.
 
-#### <a name="underlining-used-as-a-group-label-not-a-hyperlink"></a>Bir köprü bir Grup etiketi kullanılan alt çizgi
+#### <a name="underlining-used-as-a-group-label-not-a-hyperlink"></a>Köprü olarak değil, grup etiketi olarak kullanılan alt çizgi
  Altı çizili metin yalnızca köprüler için kullanılmalıdır.
 
- **Hatalı:** \
- ![Köprü değil altı çizili metni bir Visual Studio koruma desendir. ](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102 g_GroupLabelIncorrect")<br />Köprü değil altı çizili metni bir Visual Studio koruma desendir.
+ **Kötü:**\
+ ![Köprü olmayan altı çizili metin Visual Studio anti-desenidir.](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />Köprü olmayan altı çizili metin Visual Studio anti-desenidir.
 
- **İyi:** \
- ![Doğru biçimlendirilmiş, olmayan köprü metin ortam yazı tipini eksiz görünür. ](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102 h_GroupLabelCorrect")<br />Doğru biçimlendirilmiş, olmayan köprü metin ortam yazı tipini eksiz görünür.
+ **Iyi:**\
+ ![Doğru şekilde stile, köprü olmayan metin ortam yazı tipinde süslenmemiş olarak görünür.](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />Doğru şekilde stile, köprü olmayan metin ortam yazı tipinde süslenmemiş olarak görünür.
 
-#### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>Bir açılır iletişim kutusu bir onay kutusu sonuçları tıklayarak
- "Windows Azure uygulaması Yayımla" sihirbazında "Tüm roller için Uzak masaüstünü etkinleştir" onay kutusunu hemen tıklayarak, bir Visual Studio koruma desen gibi açılır bir iletişim kutusunu açar. Ayrıca, onay kutusu alanı içeren bir onay kutusu seçildikten sonra dolmaması başka bir etkileşim koruma modeli.
+#### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>Onay kutusunu tıklatma, açılır iletişim kutusunda sonuçlanır
+ "Windows Azure Uygulamasını Yayımla" sihirbazındaki "Tüm roller için Uzak Masaüstü'nü Etkinleştir" onay kutusunu tıklattığınızda hemen bir açılır iletişim kutusu, bir Visual Studio anti-deseni açılır. Buna ek olarak, onay kutusu alanı seçildikten sonra bir onay kutusu ile doldurmaz, başka bir etkileşim anti-desen.
 
- ![Bir iletişim kutusu bir onay kutusunu tıklatarak bir Visual Studio koruma desendir sonra getirme. ](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102 i_CheckboxPopup")<br />Bir iletişim kutusu bir onay kutusunu tıklatarak bir Visual Studio koruma desendir sonra getirme.
+ ![Onay kutusunu tıklattıktan sonra bir iletişim kurma visual studio anti-desen.](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Onay kutusunu tıklattıktan sonra bir iletişim kurma visual studio anti-desen.
 
-### <a name="hyperlink-anti-patterns"></a>Köprü ters desenler
- Aşağıdaki örnek, iki ters desenler içerir:
+### <a name="hyperlink-anti-patterns"></a>Köprü anti-desenleri
+ Aşağıdaki örnekte iki anti-desen içerir:
 
-1. Üzerine gelindiğinde kırmızı kapatma ön doğru paylaşılan rengi yazı tipi hizmetinde kullanılmadığı anlamına gelir.
+1. Havada kırmızıya dönüşmek, yazı tipi hizmetinden doğru paylaşılan rengin kullanılmadığı anlamına gelir.
 
-2. "Daha fazla bilgi edinin" değil bir kavramsal konuya bağlantısını için uygun metni. Kullanıcının hedef daha kendi seçtikleri etkilerini öğrenmektir değil öğrenmektir.
+2. "Daha fazla bilgi edinin" kavramsal bir konuya bağlantı için uygun metin değildir. Kullanıcının amacı daha fazla bilgi edinmek değil, kendi seçtikleri sonuçları anlamaktır.
 
-   ![Renk hizmet yoksayılıyor ve "daha fazla bilgi edinmek için köprüler" kullanarak Visual Studio ters desenler var. ](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")<br />Renk hizmet yoksayılıyor ve "daha fazla bilgi edinmek için köprüler" kullanarak Visual Studio ters desenler var.
+   ![Renk hizmetini göz ardı etmek ve köprüler için "Daha fazla bilgi edinin" kullanmak Visual Studio anti-desenleridir.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmetini göz ardı etmek ve köprüler için "Daha fazla bilgi edinin" kullanmak Visual Studio anti-desenleridir.
 
-**Daha iyi çözüm için:** Kullanıcının bağlantıya tıklayarak isteyen soru yol açar. Örneğin:
+**Daha iyi çözüm:** Bağlantıyı tıklayarak kullanıcının soracağı soruyu sor. Örnek:
 
 - Windows Azure hizmetleri nasıl çalışır?
 
-- Bir Windows Azure Mobile Services projesi ne gerekir?
+- Windows Azure Mobil Hizmetler projesine ne zaman ihtiyacım var?
 
-#### <a name="using-click-here-for-links"></a>"Bağlantıları için buraya tıklayın" kullanma
- Köprüler, kendini açıklayıcı olmalıdır. Bu, "buraya tıklayın" kullanmak için koruma desen veya benzer bir değişim olur.
+#### <a name="using-click-here-for-links"></a>Bağlantılar için "Buraya tıklayın" seçeneğini kullanma
+ Köprüler kendini açıklayıcı olmalıdır. "Buraya tıklayın" veya benzer bir varyasyon kullanmak için bir anti-desen.
 
- **Hatalı:** "Buraya yeni bir proje oluşturma hakkında yönergeler için tıklayın."
+ **Kötü:** "Yeni bir projenin nasıl oluşturulacağına ilişkin talimatlar için burayı tıklatın."
 
- **İyi:** "Yeni bir proje nasıl oluştururum?"
+ **İyi:** "Yeni bir projeyi nasıl oluştururum?"

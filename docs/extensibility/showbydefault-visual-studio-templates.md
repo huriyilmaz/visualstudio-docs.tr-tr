@@ -1,5 +1,5 @@
 ---
-title: ShowByDefault öğesi (Visual Studio şablonları)
+title: ShowByDefault öğesi (Visual Studio Şablonları)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - <ShowByDefault> element [Visual Studio Templates]
 - ShowByDefault element [Visual Studio Templates]
 ms.assetid: 7be783f6-0ef6-42bc-924a-df9a2eba7781
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2405e46a7f1ed8d2e4ae33b1b58ec44e06aa7d3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 711cff06637957b796525543a02bfdd376e04284
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720096"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700104"
 ---
-# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault öğesi (Visual Studio şablonları)
-@No__t_0, şablonun yalnızca belirtilen [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)altında görüntülendiğini belirtir.
+# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault öğesi (Visual Studio Şablonları)
+Eğer, `false`şablonun yalnızca belirtilen [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)altında görüntüleneceğini belirtirse.
 
- \<VSTemplate > \<TemplateData > \<ShowByDefault >
+ \<VSTemplate \<> ŞablonVeri> \<ShowByDefault>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,18 +45,18 @@ ms.locfileid: "72720096"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
- Metin, `true` ya da `false` olmalıdır. True ise, şablonun tüm proje türleri için görüntülendiğini belirtir. False ise, şablon yalnızca belirtilen `TemplateGroupID` altında görüntülenir.
+ Metin ya da `true` `false`olmalıdır . Doğruysa, şablonun tüm proje türleri için görüntüleneceğini belirtir. Yanlışsa, şablon yalnızca belirtilen `TemplateGroupID`.
 
 ## <a name="remarks"></a>Açıklamalar
- `ShowByDefault`, isteğe bağlı bir öğedir. Varsayılan değer `true` şeklindedir.
+ `ShowByDefault`isteğe bağlı bir unsurdur. Varsayılan değer: `true`.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] şablonu için meta verileri gösterir.
+ Aşağıdaki örnekte, şablonun [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] meta verileri gösteriş verilmiştir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"

@@ -1,35 +1,35 @@
 ---
-title: Evrensel Windows projelerini yönetme | Microsoft Docs
+title: Evrensel Windows Projelerini Yönetme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e542d1cc53fbdfb287d004c15b2a9055d3a0cba1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fbbf9b6aaf983bb36291611a7b9b50f7886915b7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647957"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702695"
 ---
 # <a name="manage-universal-windows-projects"></a>Evrensel Windows projelerini yönetme
 
-Evrensel Windows uygulamaları, geliştiricilerin her iki platformda de kod ve diğer varlıkları kullanmasına izin veren Windows 8.1 ve Windows Phone 8,1 ' i hedefleyen uygulamalardır. Paylaşılan kod ve kaynaklar paylaşılan bir projede tutulur, ancak platforma özgü kod ve kaynaklar bir diğeri Windows ve diğeri de Windows Phone ayrı projelerde tutulur. Evrensel Windows uygulamaları hakkında daha fazla bilgi için bkz. [Evrensel Windows uygulamaları](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx). Projeleri yöneten Visual Studio uzantıları, Evrensel Windows uygulama projelerinin tek platformlu uygulamalardan farklı bir yapıya sahip olduğunu bilmelidir. Bu izlenecek yol, paylaşılan projenin nasıl gezindiğini ve paylaşılan öğelerin nasıl yönetileceğini gösterir.
+Evrensel Windows uygulamaları, geliştiricilerin her iki platformda da kod ve diğer varlıkları kullanmasına olanak tanıyan, hem Windows 8.1 hem de Windows Phone 8.1'i hedefleyen uygulamalardır. Paylaşılan kod ve kaynaklar paylaşılan bir projede tutulurken, platforma özgü kod ve kaynaklar biri Windows, diğeri Windows Phone için olmak üzere ayrı projelerde tutulur. Evrensel Windows uygulamaları hakkında daha fazla bilgi için [Evrensel Windows uygulamalarına](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx)bakın. Projeleri yöneten Visual Studio uzantıları, evrensel Windows uygulama projelerinin tek platformlu uygulamalardan farklı bir yapıya sahip olduğunu bilmelidir. Bu izlik, paylaşılan projede nasıl gezindiğinizi ve paylaşılan öğeleri nasıl yönetebildiğinizi gösterir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
 
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-### <a name="navigate-the-shared-project"></a>Paylaşılan projede gezin
+### <a name="navigate-the-shared-project"></a>Paylaşılan projede gezinme
 
-1. C# **Testüniversalproject**adlı bir VSIX projesi oluşturun. (**Dosya**  > **Yeni**  > **projesi** ve **C#**  > **genişletilebilirlik**  > **Visual Studio paketi**). Özel bir **komut** projesi öğe şablonu ekleyin ( **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve  > **Yeni öğe** **Ekle** ' yi seçin ve ardından **genişletilebilirlik**' e gidin). **Testüniversalproject**dosyasını adlandırın.
+1. **TestUniversalProject**adında bir C# VSIX projesi oluşturun. (**Dosya** > **Yeni** > **Proje** ve sonra **C#** > **Genişletilebilirlik** > Görsel Stüdyo**Paketi**). Özel **Komut** proje öğesi şablonu ekleyin **(Çözüm Gezgini'nde,** proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin, ardından **Genişletilebilirlik'e**gidin). Dosyayı **TestUniversalProject**olarak adlandırın.
 
-2. *Microsoft. VisualStudio. Shell. Interop. 12,1. DesignTime. dll* ve *Microsoft. VisualStudio. Shell. Interop. 14.0. DesignTime. dll* ( **Uzantılar** bölümünde) için bir başvuru ekleyin.
+2. *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* ve *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* adresine **(Uzantılar** bölümünde) bir başvuru ekleyin.
 
-3. *TestUniversalProject.cs* açın ve aşağıdaki `using` yönergeleri ekleyin:
+3. *TestUniversalProject.cs* açın ve `using` aşağıdaki yönergeleri ekleyin:
 
     ```csharp
     using EnvDTE;
@@ -42,7 +42,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     using System.Windows.Forms;
     ```
 
-4. @No__t_0 sınıfında, **Çıkış** penceresine işaret eden bir özel alan ekleyin.
+4. `TestUniversalProject` Sınıfta **Çıkış** penceresine işaret eden özel bir alan ekleyin.
 
     ```csharp
     public sealed class TestUniversalProject
@@ -52,7 +52,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-5. Testüniversalproject oluşturucusunun içindeki çıkış bölmesine yönelik başvuruyu ayarlayın:
+5. TestUniversalProject oluşturucu içindeki çıkış bölmesine başvuruyu ayarlayın:
 
     ```csharp
     private TestUniversalProject(Package package)
@@ -77,7 +77,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-6. @No__t_0 yönteminden mevcut kodu kaldırın:
+6. Varolan kodu `ShowMessageBox` yöntemden kaldırın:
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -85,7 +85,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-7. Bu kılavuzda birkaç farklı amaçla kullanacağınız DTE nesnesini Al. Ayrıca, menü düğmesine tıklandığında bir çözümün yüklendiğinden emin olun.
+7. Bu izlenecek yolda birkaç farklı amaç için kullanacağımız DTE nesnesini alın. Ayrıca, menü düğmesine tıklandığında bir çözümün yüklendiğinden emin olun.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -103,7 +103,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-8. Paylaşılan projeyi bulun. Paylaşılan proje, saf bir kapsayıcıdır; çıkış oluşturmaz veya üretmez. Aşağıdaki yöntem, paylaşılan proje özelliğine sahip <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> nesnesini arayarak çözümdeki ilk paylaşılan projeyi bulur.
+8. Paylaşılan projeyi bulun. Paylaşılan proje saf bir kapsayıcıdır; çıktı lar oluşturmaz veya üretmez. Aşağıdaki yöntem, paylaşılan proje yeteneğine sahip <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> nesneyi arayarak çözümdeki ilk paylaşılan projeyi bulur.
 
     ```csharp
     private IVsHierarchy FindSharedProject()
@@ -125,7 +125,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-9. @No__t_0 yönteminde, paylaşılan projenin yazı başlığını ( **Çözüm Gezgini**görüntülenen proje adı) çıkış.
+9. `ShowMessageBox` Yöntemde, paylaşılan projenin alt yazısını **(Çözüm Gezgini'nde**görünen proje adı) çıktın.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -155,7 +155,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-10. Etkin platform projesini alın. Platform projeleri, platforma özgü kod ve kaynakları içeren projelerdir. Aşağıdaki yöntem, etkin platform projesini almak için <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy> yeni alanını kullanır.
+10. Etkin platform projesini alın. Platform projeleri, platforma özgü kod ve kaynaklar içeren projelerdir. Aşağıdaki yöntem, etkin <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy> platform projesini almak için yeni alanı kullanır.
 
     ```csharp
     private IVsHierarchy GetActiveProjectContext(IVsHierarchy hierarchy)
@@ -173,7 +173,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-11. @No__t_0 yönteminde, etkin platform projesinin resim yazısını çıkış.
+11. `ShowMessageBox` Yöntemde, etkin platform projesinin alt yazısını çıktı.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -216,7 +216,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-12. Platform projeleri aracılığıyla yineleyin. Aşağıdaki yöntem, paylaşılan projeden tüm içeri aktarma (Platform) projelerini alır.
+12. Platform projeleri aracılığıyla yineleyin. Aşağıdaki yöntem paylaşılan projeden tüm alma (platform) projeleri alır.
 
     ```csharp
     private IEnumerable<IVsHierarchy> EnumImportingProjects(IVsHierarchy hierarchy)
@@ -235,7 +235,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     ```
 
     > [!IMPORTANT]
-    > Kullanıcı deneysel örnekte bir C++ Evrensel Windows uygulaması projesi açarsa, yukarıdaki kod bir özel durum oluşturur. Bu bilinen bir sorundur. Özel durumdan kaçınmak için yukarıdaki `foreach` bloğunu aşağıdaki kodla değiştirin:
+    > Kullanıcı deneysel örnekte bir C++ evrensel Windows uygulaması projesi açtıysa, yukarıdaki kod bir özel durum oluşturur. Bu bilinen bir sorundur. Özel durum lardan kaçınmak `foreach` için yukarıdaki bloğu aşağıdakilerle değiştirin:
 
     ```csharp
     var importingProjects = sharedAssetsProject.EnumImportingProjects();
@@ -245,7 +245,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-13. @No__t_0 yönteminde, her platform projesinin resim yazısını çıkış. Etkin platform projesinin açıklamalı alt yazısının çıkışını çıkaran satırdan sonra aşağıdaki kodu ekleyin. Yalnızca yüklenen platform projeleri bu listede görüntülenir.
+13. `ShowMessageBox` Yöntemde, her platform projesinin alt yazısını çıktı. Etkin platform projesinin alt yazısını oluşturan satırdan sonra aşağıdaki kodu ekleyin. Bu listede yalnızca yüklenen platform projeleri görünür.
 
     ```csharp
     output.OutputStringThreadSafe("Platform projects:\n");
@@ -261,7 +261,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-14. Etkin platform projesini değiştirin. Aşağıdaki yöntem <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A> kullanarak etkin projeyi ayarlar.
+14. Etkin platform projesini değiştirin. Aşağıdaki yöntem kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A>etkin proje ayarlar.
 
     ```csharp
     private int SetActiveProjectContext(IVsHierarchy hierarchy, IVsHierarchy activeProjectContext)
@@ -270,7 +270,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-15. @No__t_0 yönteminde, etkin platform projesini değiştirin. Bu kodu `foreach` bloğunun içine ekleyin.
+15. `ShowMessageBox` Yöntemde, etkin platform projesini değiştirin. Bu kodu `foreach` bloğun içine ekleyin.
 
     ```csharp
     bool isActiveProjectSet = false;
@@ -293,7 +293,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     output.OutputStringThreadSafe("set active project: " + platformCaption +'\n');
     ```
 
-16. Şimdi deneyin. Deneysel örneği başlatmak için F5 tuşuna basın. Deneysel örnekte C# bir evrensel Hub uygulaması projesi oluşturun ( **Yeni proje** iletişim kutusunda, **Visual C#**   > **Windows**  > **Windows 8**  > **Universal** 0**hub app**). Çözüm yüklendikten sonra, **Araçlar** menüsüne gidin ve **Testüniversalproject komutunu çağır**' a tıklayın ve ardından **Çıkış** bölmesinde metni kontrol edin. Aşağıdakine benzer bir şey görmeniz gerekir:
+16. Şimdi dene. Deneysel örneği başlatmak için F5 tuşuna basın. Deneysel örnekte bir C# evrensel hub uygulaması projesi oluşturun **(Yeni Proje** iletişim kutusu, **Visual C#** > **Windows** > **Windows 8** > **Universal** > **Hub Uygulaması).** Çözüm yüklendikten sonra **Araçlar** menüsüne gidin ve **TestUniversalProject'i Çağır'ı**tıklatın ve çıktı bölmesindeki metni denetleyin. **Output** Aşağıdakine benzer bir şey görmeniz gerekir:
 
     ```
     Found shared project: HubApp.Shared
@@ -304,9 +304,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     set active project: HubApp.WindowsPhone
     ```
 
-### <a name="manage-the-shared-items-in-the-platform-project"></a>Platform projesindeki paylaşılan öğeleri yönetme
+### <a name="manage-the-shared-items-in-the-platform-project"></a>Platform projesinde paylaşılan öğeleri yönetme
 
-1. Platform projesinde paylaşılan öğeleri bulun. Paylaşılan projedeki öğeler, platform projesinde paylaşılan öğeler olarak görüntülenir. Bunları **Çözüm Gezgini**göremez, ancak proje hiyerarşisine onları bulmak için bu adımları izleyebilirsiniz. Aşağıdaki yöntem hiyerarşiyi açıklar ve tüm paylaşılan öğeleri toplar. Bu, isteğe bağlı olarak her öğenin başlığını verir. Paylaşılan öğeler yeni özellik <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> tarafından tanımlanır.
+1. Platform projesinde paylaşılan öğeleri bulun. Paylaşılan projedeki öğeler platform projesinde paylaşılan öğeler olarak görünür. **Çözüm Gezgini'nde**göremezsiniz, ancak bunları bulmak için proje hiyerarşisinde yürüyebilirsiniz. Aşağıdaki yöntem hiyerarşiyi yürütır ve paylaşılan tüm öğeleri toplar. İsteğe bağlı olarak her öğenin alt yazısını çıkarır. Paylaşılan öğeler yeni özellik <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem>tarafından tanımlanır.
 
     ```csharp
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)
@@ -338,7 +338,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-2. @No__t_0 yönteminde, Platform proje hiyerarşisi öğelerine yol göstermek için aşağıdaki kodu ekleyin. @No__t_0 bloğunun içine ekleyin.
+2. `ShowMessageBox` Yöntemde, platform proje hiyerarşisi öğelerini yürümek için aşağıdaki kodu ekleyin. `foreach` Bloğun içine takın.
 
     ```csharp
     output.OutputStringThreadSafe("Walk the active platform project:\n");
@@ -346,7 +346,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);
     ```
 
-3. Paylaşılan öğeleri okuyun. Paylaşılan öğeler, platform projesinde gizli bağlantılı dosyalar olarak görünür ve tüm özellikleri sıradan bağlantılı dosyalar olarak okuyabilirsiniz. Aşağıdaki kod, ilk paylaşılan öğenin tam yolunu okur.
+3. Paylaşılan öğeleri okuyun. Paylaşılan öğeler platform projesinde gizli bağlantılı dosyalar olarak görünür ve tüm özellikleri sıradan bağlantılı dosyalar olarak okuyabilirsiniz. Aşağıdaki kod, ilk paylaşılan öğenin tam yolunu okur.
 
     ```csharp
     var sharedItemId = sharedItemIds[0];
@@ -355,7 +355,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));
     ```
 
-4. Şimdi deneyin. Deneysel örneği başlatmak için **F5** tuşuna basın. Deneysel örnekte C# bir evrensel Hub uygulaması projesi oluşturun ( **Yeni proje** iletişim kutusunda, **Visual C#**   > **Windows**  > **Windows 8**  > **Universal** 0**Hub uygulaması**) **Araçlar** menüsüne gidin ve **Testüniversalproject komutunu çağır**' a tıklayın ve ardından **Çıkış** bölmesinde metni kontrol edin. Aşağıdakine benzer bir şey görmeniz gerekir:
+4. Şimdi dene. Deneysel örneği başlatmak için **F5** tuşuna basın. Deneysel örnekte **(Yeni Proje** iletişim kutusunda, **Visual C#** > **Windows Windows** > **8** > **Universal** > **Hub App)** bir C# evrensel hub uygulaması projesi oluşturun Araçlar menüsüne gidin ve **TestUniversalProject'i çağır'ı**tıklatın ve **ardından Çıktı** bölmesindeki metni denetleyin. **Tools** Aşağıdakine benzer bir şey görmeniz gerekir:
 
     ```
     Found shared project: HubApp.Shared
@@ -409,25 +409,25 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
                 SectionPage.xaml.cs
     ```
 
-### <a name="detect-changes-in-platform-projects-and-shared-projects"></a>Platform projelerindeki ve paylaşılan projelerdeki değişiklikleri Algıla
+### <a name="detect-changes-in-platform-projects-and-shared-projects"></a>Platform projelerindeki ve paylaşılan projelerdeki değişiklikleri algılama
 
-1. Platform projeleri için olduğu gibi, paylaşılan projelerdeki değişiklikleri algılamak için hiyerarşi ve proje olaylarını kullanabilirsiniz. Ancak, Paylaşılan projedeki proje öğeleri görünür değildir, bu da paylaşılan proje öğeleri değiştirildiğinde belirli olayların tetiklememesinin anlamına gelir.
+1. Hiyerarşi ve proje olaylarını, platform projelerinde olduğu gibi paylaşılan projelerdeki değişiklikleri algılamak için kullanabilirsiniz. Ancak, paylaşılan projedeki proje öğeleri görünmez, bu da paylaşılan proje öğeleri değiştirildiğinde belirli olayların yanmadığını anlamına gelir.
 
-    Projedeki bir dosya yeniden adlandırıldığında olay sırasını göz önünde bulundurun:
+    Projedeki bir dosyanın adı yeniden adlandırıldığında, olayların sırasını göz önünde bulundurun:
 
    1. Dosya adı diskte değiştirilir.
 
    2. Proje dosyası, dosyanın yeni adını içerecek şekilde güncelleştirilir.
 
-      Hiyerarşi olayları (örneğin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) genellikle kullanıcı arabiriminde gösterilecek değişiklikleri **Çözüm Gezgini**gibi izler. Hiyerarşi olayları, dosya silmeyi ve sonra dosya eklemeyi bir dosya yeniden adlandırma işlemini ele alalım. Ancak, görünmeyen öğeler değiştirildiğinde, hiyerarşi olay sistemi bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> olayı tetikler, ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> bir olay vermez. Bu nedenle, bir platform projesindeki bir dosyayı yeniden adlandırırsanız, hem <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> hem de <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> alırsınız, ancak paylaşılan bir projede bir dosyayı yeniden adlandırırsanız yalnızca <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> alırsınız.
+      Hiyerarşi olayları (örneğin,) <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>genellikle Çözüm **Gezgini'nde**olduğu gibi UI'de görüntülenen değişiklikleri izler. Hiyerarşi olayları, dosya silme ve ardından bir dosya ekinden oluşan bir dosya yeniden adlandırma işlemini dikkate alır. Ancak, görünmez öğeler değiştirildiğinde, hiyerarşi olay <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> sistemi bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay değil, bir olay yangınları. Bu nedenle, bir platform projesinde bir dosyayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>yeniden adnız, her ikisini de alırsınız ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>, paylaşılan bir projede bir dosyayı yeniden adlarsanız, yalnızca .
 
-      Proje öğelerindeki değişiklikleri izlemek için, DTE proje öğesi olaylarını (<xref:EnvDTE.ProjectItemsEventsClass> bulunan) işleyebilirsiniz. Ancak, çok sayıda olayı işliyorsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> olayları daha iyi bir şekilde işlemeyi sağlayabilirsiniz. Bu kılavuzda yalnızca hiyerarşi olayları ve DTE olayları gösterilmektedir. Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Ardından, paylaşılan bir projedeki bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için tetiklenen olayları görebilirsiniz.
+      Proje öğelerindeki değişiklikleri izlemek için DTE proje öğesi olaylarını <xref:EnvDTE.ProjectItemsEventsClass>(bulunanlar) işleyebilirsiniz. Ancak, çok sayıda olayı ele alıyorsanız, 'deki <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>olayları daha iyi işleyebilirsiniz. Bu izne yalnızca hiyerarşi olayları ve DTE olayları gösteririz. Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Daha sonra, paylaşılan bir projede bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için başlatılan olayları görebilirsiniz.
 
-      Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Ardından, paylaşılan bir projedeki bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için tetiklenen olayları görebilirsiniz.
+      Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Daha sonra, paylaşılan bir projede bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için başlatılan olayları görebilirsiniz.
 
-2. Olay dinleyicisi ekleyin. Projeye yeni bir sınıf dosyası ekleyin ve *HierarchyEventListener.cs*çağırın.
+2. Olay dinleyicisi ekleyin. Projeye yeni bir sınıf dosyası ekleyin ve *HierarchyEventListener.cs.*
 
-3. *HierarchyEventListener.cs* dosyasını açın ve aşağıdaki using yönergelerini ekleyin:
+3. *HierarchyEventListener.cs* dosyasını açın ve yönergeleri kullanarak aşağıdaki leri ekleyin:
 
    ```csharp
    using Microsoft.VisualStudio.Shell.Interop;
@@ -435,14 +435,14 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
    using System.IO;
    ```
 
-4. @No__t_0 sınıfı <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> uygular:
+4. `HierarchyEventListener` Sınıf uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>var:
 
    ```csharp
    class HierarchyEventListener : IVsHierarchyEvents
    { }
    ```
 
-5. @No__t_0 üyelerini aşağıdaki kodda olduğu gibi uygulayın.
+5. Aşağıdaki kodda <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>olduğu gibi, üyeleri uygulayın.
 
    ```csharp
    class HierarchyEventListener : IVsHierarchyEvents
@@ -485,7 +485,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
    }
    ```
 
-6. Aynı sınıfta, bir proje öğesi yeniden adlandırıldığında gerçekleşen DTE Event <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> için başka bir olay işleyicisi ekleyin.
+6. Aynı sınıfta, proje öğesi yeniden adlandırıldığında <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>oluşan DTE olayı için başka bir olay işleyicisi ekleyin.
 
    ```csharp
    public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)
@@ -495,7 +495,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
    }
    ```
 
-7. Hiyerarşi olayları için kaydolun. İzlemekte olduğunuz her proje için ayrı ayrı kaydolmanız gerekir. Aşağıdaki kodu, biri paylaşılan proje için ve diğeri de platform projelerinden biri için `ShowMessageBox` ekleyin.
+7. Hiyerarşi etkinlikleri için kaydolun. Takip ettiğiniz her proje için ayrı ayrı kaydolmanız gerekir. Biri paylaşılan proje `ShowMessageBox`için, diğeri de platform projelerinden biri için aşağıdaki kodu ekleyin.
 
    ```csharp
    // hook up the event listener for hierarchy events on the shared project
@@ -510,7 +510,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
    activePlatformHier.AdviseHierarchyEvents(listener2, out cookie2);
    ```
 
-8. DTE proje öğesi olay <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> için kaydolun. İkinci dinleyiciyi geçirdikten sonra aşağıdaki kodu ekleyin.
+8. DTE proje öğesi etkinliği <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>için kaydolun. İkinci dinleyiciyi bağladıktan sonra aşağıdaki kodu ekleyin.
 
    ```csharp
    // hook up DTE events for project items
@@ -518,12 +518,12 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
    dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;
    ```
 
-9. Paylaşılan öğeyi değiştirin. Bir platform projesindeki paylaşılan öğeleri değiştiremezsiniz; Bunun yerine, bunları, bu öğelerin gerçek sahibi olan paylaşılan projede değiştirmeniz gerekir. @No__t_0 Paylaşılan projedeki karşılık gelen öğe KIMLIĞINI, paylaşılan öğenin tam yolunu vererek alabilirsiniz. Ardından paylaşılan öğeyi değiştirebilirsiniz. Değişiklik platform projelerine dağıtılır.
+9. Paylaşılan öğeyi değiştirin. Bir platform projesinde paylaşılan öğeleri değiştiremezsiniz; bunun yerine, bunları bu öğelerin gerçek sahibi olan paylaşılan projede değiştirmeniz gerekir. Paylaşılan projede <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>ilgili madde kimliğini, paylaşılan öğenin tam yolunu vererek alabilirsiniz. Ardından paylaşılan öğeyi değiştirebilirsiniz. Değişiklik platform projelerine yayılır.
 
     > [!IMPORTANT]
-    > Projeyi değiştirmeden önce bir proje öğesinin paylaşılan öğe olup olmadığını fark etmelisiniz.
+    > Proje öğesini değiştirmeden önce paylaşılan bir öğe olup olmadığını öğrenmelisiniz.
 
-     Aşağıdaki yöntem bir proje öğesi dosyasının adını değiştirir.
+     Aşağıdaki yöntem, proje öğesi dosyasının adını değiştirir.
 
     ```csharp
     private void ModifyFileNameInProject(IVsHierarchy project, string path)
@@ -541,7 +541,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-10. Dosya adını Paylaşılan projedeki öğe olarak değiştirmek için `ShowMessageBox` tüm diğer koddan sonra bu yöntemi çağırın. Paylaşılan projedeki öğenin tam yolunu alan koddan sonra bunu ekleyin.
+10. Paylaşılan projedeki öğeyi dosya `ShowMessageBox` adını değiştirmek için diğer tüm koddan sonra bu yöntemi çağırın. Paylaşılan projede maddenin tam yolunu alan koddan sonra bunu ekleyin.
 
     ```csharp
     // change the file name of an item in a shared project
@@ -551,9 +551,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Projeyi derleyin ve çalıştırın. Deneysel örnekte C# bir evrensel Hub uygulaması oluşturun, **Araçlar** menüsüne gidin ve **Testuniversal salproject komutunu çağır**' a tıklayın ve genel çıkış bölmesindeki metni denetleyin. Paylaşılan projedeki ilk öğenin adı ( *app. xaml* dosyası olması beklenir) değiştirilmelidir ve <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> olayının tetiklendiğini görmeniz gerekir. Bu durumda, *app. xaml* 'in yeniden adlandırılması, *app.xaml.cs* 'in de yeniden adlandırılmasına neden olduğundan, dört olay görmeniz gerekir (her platform projesi için iki adet). (DTE olayları Paylaşılan projedeki öğeleri izlemez.) İki <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> olayı (Platform projelerinin her biri için bir tane) görmeniz gerekir, ancak hiçbir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay görmezsiniz.
+11. Projeyi oluşturun ve çalıştırın. Deneysel örnekte bir C# evrensel hub uygulaması oluşturun, **Araçlar** menüsüne gidin ve **TestUniversalProject'i Çağır'ı**tıklatın ve genel çıktı bölmesindeki metni denetleyin. Paylaşılan projedeki ilk öğenin adı *(App.xaml* dosyası olmasını bekliyoruz) değiştirilmeli ve <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> olayın ateşlediğini görmelisiniz. Bu durumda, *App.xaml'ı* yeniden *adlandırmak App.xaml.cs* de yeniden adlandırılmasına neden olduğundan, dört olay (her platform projesi için iki) görmeniz gerekir. (DTE olayları paylaşılan projedeki öğeleri izlemez.) İki <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> olay (platform projelerinin her biri için <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> bir tane) görmeniz gerekir, ancak olay görmezsiniz.
 
-12. Şimdi bir platform projesindeki bir dosyayı yeniden adlandırmayı deneyin ve tetiklenen olaylardaki farkı görebilirsiniz. @No__t_1 çağrısından sonra `ShowMessageBox` aşağıdaki kodu ekleyin.
+12. Şimdi bir platform projesinde bir dosyayı yeniden adlandırmayı deneyin ve ateşlenen olaylardaki farkı görebilirsiniz. Aramadan `ShowMessageBox` sonra aşağıdaki kodu `ModifyFileName`ekleyin.
 
     ```csharp
     // change the file name of an item in a platform project
@@ -568,4 +568,4 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     this.ModifyFileNameInProject(activePlatformHier, unsharedPath);
     ```
 
-13. Projeyi derleyin ve çalıştırın. Deneysel örnekte C# bir evrensel proje oluşturun, **Araçlar** menüsüne gidin ve **Testuniversal salproject komutunu çağır**' a tıklayın ve genel çıkış bölmesindeki metni denetleyin. Platform projesindeki dosya yeniden adlandırıldıktan sonra, hem <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> hem de <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> bir olay görmeniz gerekir. Dosyanın değiştirilmesi başka hiçbir dosyanın değiştirilmesine neden olduğundan ve bir platform projesindeki öğelerde yapılan değişiklikler her yerde yayılmadığı için, bu olayların yalnızca bir tane vardır.
+13. Projeyi oluşturun ve çalıştırın. Deneysel örnekte bir C# Evrensel Projesi oluşturun, **Araçlar** menüsüne gidin ve **TestUniversalProject'i Çağır'ı**tıklatın ve genel çıktı bölmesindeki metni denetleyin. Platform projesindeki dosya yeniden adlandırıldıktan sonra, hem <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> olayı hem de bir olayı görmeniz gerekir. Dosyayı değiştirmek başka dosyanın değiştirilmesine neden olmadığından ve bir platform projesindeki öğelerde yapılan değişiklikler hiçbir yerde yayılmadığından, bu olayların yalnızca biri vardır.

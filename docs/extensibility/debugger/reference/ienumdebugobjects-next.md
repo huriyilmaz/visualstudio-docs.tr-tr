@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugObjects::Next | Microsoft Docs
+title: IEnumDebugObjects::Sonraki | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugObjects::Next method
 ms.assetid: e54c3055-6030-4dc9-9f7a-5e3ce75f252f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4b0f96246b6442cf852a01d0080f54565939b8e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 99b2bc35b63a4e97f888365f1d11231ae620b69c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339540"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716339"
 ---
 # <a name="ienumdebugobjectsnext"></a>IEnumDebugObjects::Next
-Bu yöntem, sabit listesinden alınmış sonraki öğe kümesini döndürür.
+Bu yöntem, numaralandırmadan sonraki eleman kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınacak öğelerin sayısı. Ayrıca en büyük boyutunu belirtir `rgelt` dizisi.
+[içinde] Alınacak öğe sayısı. Ayrıca `rgelt` dizinin en büyük boyutunu belirtir.
 
 `rgelt`\
-[out içinde] Dizi [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) doldurulacak öğeleri.
+[içinde, dışarı] Doldurulacak [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) öğeleri dizisi.
 
 `pceltFetched`\
-[out] Gerçekte döndürülen öğe sayısını döndürür `rgelt`.
+[çıkış] Gerçekte döndürülen öğe sayısını `rgelt`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` istenen öğelerin sayısından daha az döndürülebilen; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döndürür. İstenen öğe sayısından daha az ise döndürür; `S_FALSE` aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

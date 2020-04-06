@@ -1,42 +1,42 @@
 ---
-title: VSCT XML Şeması koşullu öznitelikleri | Microsoft Docs
+title: VSCT XML Şema Koşullu Öznitelikler | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, conditional attributes
 - conditional attributes (VSCT XML schema)
 ms.assetid: 754d4f32-319b-44c9-915f-f7c60e53222e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11807129c34fa613ef06b3534adc7c7ebb9865e0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f2b1fb3ee1b2cd396f25ec5591a585f8d87648d0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322948"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697940"
 ---
-# <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML Şeması koşullu öznitelikleri
-Tüm listeleri ve öğeleri koşullu öznitelikleri uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeler true veya false olarak değerlendirin. TRUE ise sonuçta elde edilen çıktıda ilişkili liste veya öğe dahildir.
+# <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML şema koşullu öznitelikleri
+Koşullu öznitelikleri tüm listelere ve öğelere uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeleri doğru veya yanlış olarak değerlendirilir. Doğruysa, ilişkili liste veya öğe elde edilen çıktıya dahil edilir.
 
- Belirteç genişletmeleri diğer belirteç genişletmeleri veya sabitler karşı test edebilirsiniz. İşlev `Defined()` değere sahip olsa bile belirli bir adı tanımlı olup olmadığını sınar.
+ Belirteç genişletmelerini diğer belirteç genişletmelerine veya sabitlere karşı test edebilirsiniz. İşlev, `Defined()` değeri olmasa bile belirli bir adın tanımlanıp tanımlanmadığını sınar.
 
- Koşul özniteliği bir listesine uygulandığında, koşul listesindeki her alt öğenin uygulanır. Bir alt öğesi bir koşul özniteliğine içeriyorsa, onun koşulu bir AND işlemi tarafından üst ifade ile birleştirilir.
+ Bir Koşul özniteliği bir listeye uygulandığında, koşul listedeki her alt öğeye uygulanır. Bir alt öğenin kendisi bir Durum özniteliği içeriyorsa, durumu bir AND işlemi ile üst ifade ile birleştirilir.
 
- Değerler 1, '1' ve 'true' true ' değerlendirilir ve 0, '0' ve 'false' false ' değerlendirilir.
+ 1, '1' ve 'true' değerleri doğru, 0, '0' ve 'yanlış' değerleri yanlış olarak değerlendirilir.
 
 ## <a name="operators"></a>İşleçler
- Koşullu ifadeler değerlendirmek için aşağıdaki işleçleri kullanın.
+ Koşullu ifadeleri değerlendirmek için aşağıdaki işleçleri kullanın.
 
 |İşleç|Tanım|
 |--------------|----------------|
 |(,)|Gruplandırma|
 |!|Mantıksal değil|
-|\<, >, \<=, >=, ==, !=|İlişkisel ve eşitlik|
-|and|Boole değeri|
-|veya|Boole değeri|
+|\<, >, \<=, >=, ==, !=|İlişkisel ve Eşitlik|
+|ve|Boole|
+|or|Boole|
 
 ## <a name="examples"></a>Örnekler
 

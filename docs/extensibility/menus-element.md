@@ -1,25 +1,25 @@
 ---
-title: Menus öğesi | Microsoft Docs
+title: Menüler Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
 ms.assetid: d825a99b-e05c-4dd9-8933-a180216d667a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef5124bc59a4eb0671ba5493f79ea301aa48fc71
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a6382abed36aba66087066bf5664ae55682e39e2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346635"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702585"
 ---
-# <a name="menus-element"></a>Menus öğesi
-Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.
+# <a name="menus-element"></a>Menüler öğesi
+VSPackage'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,20 +37,20 @@ Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Menus öğesi](../extensibility/menus-element.md)|Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.|
-|[Menü öğesi](../extensibility/menu-element.md)|Tek bir menü veya araç çubuğunu temsil eder.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar.|
+|[Menü öğesi](../extensibility/menu-element.md)|Tek bir menüyü veya araç çubuğunun temsilini temsil eder.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage'ı komutlarında koleksiyonunu temsil eder.|
+|[Komutlar öğesi](../extensibility/commands-element.md)|VSPackage'daki komutların toplanmasını temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -78,5 +78,5 @@ Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

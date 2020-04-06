@@ -1,41 +1,41 @@
 ---
-title: Komut satırını kullanarak uzantısı yayımlama
+title: Komut satırLarını kullanarak uzantıyayım
 ms.date: 07/12/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing extensions
 - extension, publishing
 ms.assetid: 6ff9efc4-919d-4071-a80d-6dbdd2ceb2f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a6b5531bc5dc138f2f90a0a67da39f9583bc4b0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 40be0252218f39b4ff98b58caedd7f9f20ce6d5d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320643"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697122"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>İzlenecek yol: Komut satırı aracılığıyla bir Visual Studio uzantısı yayımlama
+# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Walkthrough: Komut satırı üzerinden Visual Studio uzantısı yayımlama
 
-Bu kılavuzda komut satırını kullanarak Visual Studio Market'te Visual Studio uzantısı yayımlama gösterir. Market'te uzantınızı eklediğinizde, geliştiriciler kullanabilir [ **Uzantılar ve güncelleştirmeler** ](../ide/finding-and-using-visual-studio-extensions.md) iletişim için yeni ve güncelleştirilmiş uzantıları var gidin.
+Bu izlik, komut satırını kullanarak Visual Studio Marketplace'te Visual Studio uzantısını nasıl yayınlayacağınızı gösterir. Uzantınızı Market'e eklediğinizde, geliştiriciler [**uzantılar ve güncelleştirmeler**](../ide/finding-and-using-visual-studio-extensions.md) iletişim kutusunu kullanarak yeni ve güncelleştirilmiş uzantılara göz atabilir.
 
-VsixPublisher.exe Market'te yayımlama Visual Studio uzantıları için komut satırı aracıdır. Erişilebileceğini ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe. Bu araç kullanılabilir komutlar: **yayımlama**, **createPublisher**, **deletePublisher**, **deleteExtension**,  **oturum açma**, **oturum kapatma**.
+VsixPublisher.exe, Visual Studio uzantılarını Pazar'a yayınlamak için komut satırı aracıdır. ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe adresinden erişilebilir. Bu araçta bulunan komutlar şunlardır: **yayımlamak**, **createPublisher**, **deletePublisher**, **deleteExtension**, **login**, **logout**.
 
 ## <a name="commands"></a>Komutlar
 
-### <a name="publish"></a>Yayımlama
+### <a name="publish"></a>publish
 
-Bir uzantıyı Market'te yayımlar. Uzantı, bir VSIX, bir exe/MSI dosyası veya bir bağlantı olabilir. Uzantı ile aynı sürümü varsa, uzantı üzerine yazar. Uzantı zaten mevcut değilse yeni bir uzantı oluşturacaksınız.
+Market'in uzantısıyayımdır. Uzantı bir vsix, exe/msi dosyası veya bir bağlantı olabilir. Uzantı zaten aynı sürümle varsa, uzantının üzerine yazar. Uzantı zaten yoksa, yeni bir uzantı oluşturur.
 
-|Komut seçenekleri |Açıklama |
+|Komut Seçenekleri |Açıklama |
 |---------|---------|
-|Yük (gerekli) | Ya da bir yolu veya yayımlamak için yükünü "Daha fazla bilgi URL" kullanmak için bir bağlantı. |
-|publishManifest (gerekli) | Bildirim kullanılacak dosya yolu yayımlanır. |
-|ignoreWarnings | Bir uzantı yayımlarken yok saymak için uyarıları listesi. Bu uyarı, bir uzantı yayımlarken komut satırı ileti olarak gösterilmez. (örneğin, "VSIXValidatorWarning01, VSIXValidatorWarning02")
-|personalAccessToken | Kişisel erişim belirteci (yayımcı kimliğini doğrulamak için kullanılan PAT). Sağlanmazsa, oturum açmış olan kullanıcılar PAT alınır. |
+|yük (gerekli) | Yayımlanmak için yüke giden bir yol veya "daha fazla bilgi URL'si" olarak kullanılacak bir bağlantı. |
+|publishManifest (gerekli) | Yayımlanacak bildirim dosyasına giden yol. |
+|yoksayUyarılar | Uzantı yayımlarken göz ardı edilen uyarıların listesi. Bu uyarılar, uzantı yayımlarken komut satırı iletileri olarak gösterilir. (örneğin, "VSIXValidatorWarning01, VSIXValidatorWarning02")
+|personalAccessToken | Yayımcının kimliğini doğrulamak için kullanılan Kişisel Erişim Belirteci (PAT). Sağlanmazsa, PAT oturum açmış kullanıcılardan edinilir. |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
@@ -43,15 +43,15 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 ### <a name="createpublisher"></a>createPublisher
 
-Yayımcının Market'te oluşturur. Ayrıca yayımcı makinede gelecekteki Eylemler (örneğin bir uzantı siliniyor/yayımlama) günlüğe yazar.
+Market'te bir yayımcı oluşturur. Ayrıca yayımcıyı gelecekteki eylemler için makineye kaydeder (örneğin, bir uzantıyı silme/yayımlama).
 
-|Komut seçenekleri |Açıklama |
+|Komut Seçenekleri |Açıklama |
 |---------|---------|
-|displayName (gerekli) | Yayımcı görünen adı. |
-|publisherName (gerekli) | Yayımcı (örneğin, tanımlayıcı) adı. |
-|personalAccessToken (gerekli) | Kişisel erişim yayımcı kimliğini doğrulamak için kullanılan belirteç. |
-|shortDescription | Yayımcı (dosyası değil), kısa bir açıklaması. |
-|longDescription | Yayımcı (dosyası değil) uzun açıklaması. |
+|displayName (gerekli) | Yayımcının görüntü adı. |
+|publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
+|personalAccessToken (gerekli) | Yayımcının kimliğini doğrulamak için kullanılan Kişisel Erişim Belirteci. |
+|shortDescription | Yayımcının kısa bir açıklaması (dosya değil). |
+|longDescription | Yayımcının uzun bir açıklaması (dosya değil). |
 
 ```
 VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
@@ -59,53 +59,53 @@ VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName
 
 ### <a name="deletepublisher"></a>deletePublisher
 
-Yayımcının Market'te siler.
+Market'teki bir yayımcıyı siler.
 
-|Komut seçenekleri |Açıklama |
+|Komut Seçenekleri |Açıklama |
 |---------|---------|
-|publisherName (gerekli) | Yayımcı (örneğin, tanımlayıcı) adı. |
-|personalAccessToken (gerekli) | Kişisel erişim yayımcı kimliğini doğrulamak için kullanılan belirteç. |
+|publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
+|personalAccessToken (gerekli) | Yayımcının kimliğini doğrulamak için kullanılan Kişisel Erişim Belirteci. |
 
 ```
 VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAccessToken "{Personal Access Token}"
 ```
 
-### <a name="deleteextension"></a>deleteExtension
+### <a name="deleteextension"></a>silmeUzatma
 
-Market'ten bir uzantı siler.
+Market'ten bir uzantıyı siler.
 
-|Komut seçenekleri |Açıklama |
+|Komut Seçenekleri |Açıklama |
 |---------|---------|
-|extensionName (gerekli) | Silmek için uzantı adı. |
-|publisherName (gerekli) | Yayımcı (örneğin, tanımlayıcı) adı. |
-|personalAccessToken | Kişisel erişim yayımcı kimliğini doğrulamak için kullanılan belirteç. Sağlanmazsa, oturum açmış olan kullanıcılar pat alınır. |
+|extensionName (gerekli) | Silinecek uzantının adı. |
+|publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
+|personalAccessToken | Yayımcının kimliğini doğrulamak için kullanılan Kişisel Erişim Belirteci. Sağlanmazsa, pat oturum açmış kullanıcılardan edinilir. |
 
 ```
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
 ```
 
-### <a name="login"></a>Oturum açma
+### <a name="login"></a>oturum aç
 
-Bir yayımcı makinesine kaydeder.
+Bir yayımcıyı makineye kaydeder.
 
-|Komut seçenekleri |Açıklama |
+|Komut Seçenekleri |Açıklama |
 |---------|---------|
-|(gerekli personalAccessToken | Kişisel erişim yayımcı kimliğini doğrulamak için kullanılan belirteç. |
-|publisherName (gerekli) | Yayımcı (örneğin, tanımlayıcı) adı. |
-|Üzerine yaz | Yeni bir kişisel erişim belirteci ile var olan bir yayımcı üzerine yazılması gerektiğini belirtir. |
+|personalAccessToken (gerekli | Yayımcının kimliğini doğrulamak için kullanılan Kişisel Erişim Belirteci. |
+|publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
+|Üzerine | Varolan herhangi bir yayımcının yeni kişisel erişim belirteciyle birlikte üzerine yazılması gerektiğini belirtir. |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
 ```
 
-### <a name="logout"></a>oturum kapatma
+### <a name="logout"></a>logout
 
-Makine dışında bir yayımcı günlüğe kaydeder.
+Bir yayımcıyı makineden çıkarır.
 
-|Komut seçenekleri |Açıklama |
+|Komut Seçenekleri |Açıklama |
 |---------|---------|
-|publisherName (gerekli) | Yayımcı (örneğin, tanımlayıcı) adı. |
-|ignoreMissingPublisher | Belirtilen yayımcı yok zaten oturum açmış durumdaysa aracı hata gerektiğini belirtir. |
+|publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
+|yoksayEksikYayıncı | Belirtilen yayımcı zaten oturum açmış değilse aracın hata olmaması gerektiğini belirtir. |
 
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
@@ -113,9 +113,9 @@ VsixPublisher.exe logout -publisherName "{Publisher Name}"
 
 ## <a name="publishmanifest-file"></a>publishManifest dosyası
 
-PublishManifest dosya tarafından kullanılan **yayımlama** komutu. Bu Market bilmesi gerekir. uzantıyı hakkındaki meta verileri temsil eder. Karşıya yüklenen uzantı bir VSIX uzantı ise, "kimlik" özelliği yalnızca "ayarlamak InternalName" olmalıdır. "Kimlik" özelliklerin geri kalanı vsixmanifest dosyasından oluşturulabilir olmasıdır. Uzantı bir MSI/exe veya bir bağlantı uzantısı ise, kullanıcı "kimlik" özelliği gerekli alanları sağlamanız gerekir. Market'te özgü bilgileri bildiriminin geri kalanını içerir (örneğin, kategoriler olup soru- cevap etkin, vb..).
+PublishManifest dosyası **yayımlama** komutu tarafından kullanılır. Marketin bilmesi gereken uzantıyla ilgili tüm meta verileri temsil eder. Yüklenen uzantı bir VSIX uzantısından geliyorsa, "kimlik" özelliği yalnızca "internalName" kümesine sahip olmalıdır. Bunun nedeni, "kimlik" özelliklerinin geri kalanının vsixmanifest dosyasından oluşturulabiliyor olmasıdır. Uzantı bir msi/exe veya bağlantı uzantısı ise, kullanıcı "kimlik" özelliğinde gerekli alanları sağlamalıdır. Bildirimin geri kalanı Pazar Alanına özgü bilgiler içerir (örneğin, kategoriler, Q&A etkin olup olmadığı, vb.
 
-VSIX uzantısı publishManifest dosyası örneği:
+VSIX uzantısı yayımlamaManifest dosya örneği:
 
 ```json
 {
@@ -134,7 +134,7 @@ VSIX uzantısı publishManifest dosyası örneği:
 }
 ```
 
-MSI/EXE veya bağlantı publishManifest dosyası örneği:
+MSI/EXE veya LINK yayımlamaManifest dosya örneği:
 
 ```json
 {
@@ -167,7 +167,7 @@ MSI/EXE veya bağlantı publishManifest dosyası örneği:
 
 ## <a name="asset-files"></a>Varlık dosyaları
 
-Varlık dosyaları readme dosyasında görüntüleri gibi şeyler eklemek için sağlanabilir. Örneğin, aşağıdaki "genel bakış" Markdown belgenin bir uzantısı varsa:
+Varlık dosyaları, okuma dosyasına görüntüler gibi şeyleri katıştırma için sağlanabilir. Örneğin, bir uzantıda aşağıdaki "genel bakış" Markdown belgesi varsa:
 
 ```markdown
 TestExtension
@@ -176,7 +176,7 @@ This is test extension.
 ![Test logo](images/testlogo.png "Test logo")
 ```
 
-Önceki örnekteki "images/testlogo.png" çözmek için bir kullanıcı "assetFiles" sağlayabilir, yayımlama aşağıdaki gibi bildirim:
+Önceki örnekteki "images/testlogo.png"i çözmek için, bir kullanıcı yayımlama bildiriminde aşağıdaki gibi "assetFiles" sağlayabilir:
 
 ```json
 {
@@ -190,59 +190,59 @@ This is test extension.
 }
 ```
 
-## <a name="publishing-walkthrough"></a>Yayımlama Kılavuzu
+## <a name="publishing-walkthrough"></a>İznini yayımlama
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
-Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için Visual [Studio SDK'yı yükleme ye](../extensibility/installing-the-visual-studio-sdk.md)bakın.
 
-### <a name="create-a-visual-studio-extension"></a>Visual Studio uzantısı oluşturun
+### <a name="create-a-visual-studio-extension"></a>Visual Studio uzantısı oluşturma
 
-Bu durumda, varsayılan bir VSPackage uzantı kullanacağız, ancak aynı adımları her uzantı türü için geçerlidir.
+Bu durumda, varsayılan VSPackage uzantısı kullanacağız, ancak aynı adımlar her tür uzantı için geçerlidir.
 
-1. C# ' "bir menü komutu içeren TestPublish" adlı bir VSPackage'ı oluşturun. Daha fazla bilgi için [ilk uzantınızı oluşturmaya: Merhaba Dünya](../extensibility/extensibility-hello-world.md).
+1. C#'da menü komutu olan "TestPublish" adlı bir VSPackage oluşturun. Daha fazla bilgi için [Bkz. İlk Uzantıoluşturma: Hello World](../extensibility/extensibility-hello-world.md).
 
-### <a name="package-your-extension"></a>Uzantınızı paketi
+### <a name="package-your-extension"></a>Uzantınızı paketle
 
-1. Uzantı vsixmanifest ürün adı, yazar ve sürüm doğru bilgilerle güncelleştirin.
+1. Ürün adı, yazar ve sürüm hakkında doğru bilgilerle uzantısı vsixmanifest'i güncelleştirin.
 
-   ![Uzantı vsixmanifest güncelleştir](media/update-extension-vsixmanifest.png)
+   ![uzantısı vsixmanifest güncelleme](media/update-extension-vsixmanifest.png)
 
-2. Uzantınızı yapı içinde **yayın** modu. Artık uzantınızı bir VSIX \bin\Release klasör olarak paketlenmiş.
+2. Uzantınızı **Sürüm** modunda oluşturun. Şimdi uzantınız \bin\Release klasöründe VSIX olarak paketlenecektir.
 
-3. Yüklemeyi doğrulamak için VSIX dosyasına çift tıklayabilirsiniz.
+3. Yüklemeyi doğrulamak için VSIX'yi çift tıklatabilirsiniz.
 
-### <a name="test-the-extension"></a>Uzantıyı test etmek
+### <a name="test-the-extension"></a>Uzantıyı test edin
 
- Uzantı dağıtmadan önce yapı ve Visual Studio'nun deneysel örneğinde doğru şekilde yüklendiğinden emin olmak için test.
+ Uzantıyı dağıtmadan önce, Visual Studio'nun deneysel örneğine doğru şekilde yüklendiğinden emin olmak için uzantıyı oluşturun ve test edin.
 
-1. Visual Studio'da hata ayıklama başlatılamıyor. Visual Studio deneysel örneği açılacak.
+1. Visual Studio'da hata ayıklamaya başlayın. Visual Studio deneysel bir örnek açmak için.
 
-2. Deneysel örneğinde Git **Araçları** menüsüne ve ardından **Uzantılar ve güncelleştirmeler...** . TestPublish uzantısı, Orta bölmede görünür olmalıdır ve etkinleştirilmesi.
+2. Deneysel durumda, **Araçlar** menüsüne gidin ve **Uzantılar ve Güncellemeler'i tıklatın...**. TestPublish uzantısı orta bölmede görünmeli ve etkinleştirilmelidir.
 
-3. Üzerinde **Araçları** menüsünde, test komut gördüğünüzden emin olun.
+3. **Araçlar** menüsünde test komutunu gördüğünüzden emin olun.
 
-### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Uzantı Marketi komut satırı aracılığıyla yayımlama
+### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Uzantıyı komut satırı üzerinden Market'e yayımlama
 
-1. Uzantınızı sürümü oluşturulan ve güncel olduğundan emin olun.
+1. Uzantınızın Sürüm sürümünü oluşturduğundan ve güncel olduğundan emin olun.
 
-2. Publishmanifest.json ve overview.md dosyaları oluşturduğunuz emin olun.
+2. Publishmanifest.json ve overview.md dosyaları oluşturduğunuzdan emin olun.
 
-3. Komut satırı açın ve ${VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\ dizine gidin.
+3. Komut satırLarını açın ve ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\ dizinine gidin.
 
-4. Yeni yayımcı oluşturmak için aşağıdaki komutu kullanın:
+4. Yeni bir yayımcı oluşturmak için aşağıdaki komutu kullanın:
 
    ```
    VsixPublisher.exe createPublisher -publisherName "TestVSIXPublisher" -displayName "Test VSIX Publisher" -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
    ```
 
-5. Oluşturma başarılı publisher'ın, aşağıdaki komut satırı iletisini görürsünüz:
+5. Yayımcının başarılı bir şekilde oluşturulmasında aşağıdaki komut satırı iletisini görürsünüz:
 
    ```
    Added 'Test VSIX Publisher' as a publisher on the Marketplace.
    ```
 
-6. Oluşturduğunuz giderek yeni yayımcı doğrulayabilirsiniz [Visual Studio Market](https://marketplace.visualstudio.com/manage/publishers)
+6. [Visual Studio Marketplace'e](https://marketplace.visualstudio.com/manage/publishers) göz atarak oluşturduğunuz yeni yayımcıyı doğrulayabilirsiniz
 
 7. Yeni bir uzantı yayımlamak için aşağıdaki komutu kullanın:
 
@@ -250,31 +250,31 @@ Bu durumda, varsayılan bir VSPackage uzantı kullanacağız, ancak aynı adıml
    VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"
    ```
 
-8. Oluşturma başarılı publisher'ın, aşağıdaki komut satırı iletisini görürsünüz:
+8. Yayımcının başarılı bir şekilde oluşturulmasında aşağıdaki komut satırı iletisini görürsünüz:
 
    ```
    Uploaded 'MyVsixExtension' to the Marketplace.
    ```
 
-9. Yayımlanan giderek yeni uzantı doğrulayabilirsiniz [Visual Studio Market](https://marketplace.visualstudio.com/)
+9. [Visual Studio Marketplace'e](https://marketplace.visualstudio.com/) yönlendirerek yayınladığınız yeni uzantıyı doğrulayabilirsiniz
 
-### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Market'ten uzantı yükleme
+### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace'ten uzantıyı yükleyin
 
-Uzantı yayımlandıktan sonra Visual Studio'da yükleyin ve test etmek.
+Şimdi uzantısı yayımlanır, Visual Studio yükleyin ve orada test edin.
 
-1. Visual Studio'da üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler...** .
+1. Visual Studio'da, **Araçlar** menüsünde **Uzantılar ve Güncellemeler'i tıklatın...**.
 
-2. Tıklayın **çevrimiçi** ve sonra TestPublish için arama yapın.
+2. **Çevrimiçi'yi** tıklatın ve ardından TestPublish'i arayın.
 
-3. **İndir**'e tıklayın. Uzantı ardından yükleme için zamanlanır.
+3. **İndir'i**tıklatın. Uzantı daha sonra yüklemek için zamanlanır.
 
 4. Yüklemeyi tamamlamak için Visual Studio'nun tüm örneklerini kapatın.
 
-## <a name="remove-the-extension"></a>Uzantıyı kaldırın
+## <a name="remove-the-extension"></a>Uzantıyı kaldırma
 
-Uzantı, Visual Studio Market'ten ve bilgisayarınızdan kaldırabilirsiniz.
+Uzantıyı Visual Studio Marketplace'ten ve bilgisayarınızdan kaldırabilirsiniz.
 
-### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Komut satırı aracılığıyla marketten uzantıyı kaldırmak için
+### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Komut satırı üzerinden uzantıyı Market'ten kaldırmak için
 
 1. Bir uzantıyı kaldırmak istiyorsanız, aşağıdaki komutu kullanın:
 
@@ -282,7 +282,7 @@ Uzantı, Visual Studio Market'ten ve bilgisayarınızdan kaldırabilirsiniz.
    VsixPublisher.exe deleteExtension -publisherName "TestVSIXPublisher" -extensionName "MyVsixExtension"
    ```
 
-2. Uzantı başarıyla silinmesini üzerinde aşağıdaki komut satırı iletiyi görürsünüz:
+2. Uzantının başarılı bir şekilde silinmesi üzerine aşağıdaki komut satırı iletisini görürsünüz:
 
    ```
    Removed 'MyVsixExtension' from the Marketplace.
@@ -290,8 +290,8 @@ Uzantı, Visual Studio Market'ten ve bilgisayarınızdan kaldırabilirsiniz.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Uzantıyı bilgisayarınızdan kaldırmak için
 
-1. Visual Studio'da üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+1. Visual Studio'da, **Araçlar** menüsünde **Uzantılar ve Güncellemeler'i**tıklatın.
 
-2. "MyVsixExtension" seçin ve ardından **kaldırma**. Uzantı ardından kaldırma işlemi için zamanlanacak.
+2. "MyVsixExtension" seçeneğini belirleyin ve **ardından Kaldır'ı**tıklatın. Uzantı daha sonra kaldırmak için zamanlanır.
 
-3. Kaldırma işlemini tamamlamak için Visual Studio'nun tüm örneklerini kapatın.
+3. Yüklemeyi tamamlamak için Visual Studio'nun tüm örneklerini kapatın.

@@ -1,5 +1,5 @@
 ---
-title: Menüler ve komutlar genişletme | Microsoft Docs
+title: Menüleri ve Komutları Genişletme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - VSPackages, menu tasks
 - .vsct files, common menu tasks
 ms.assetid: 7b2be4b9-e3fe-4412-874f-ae72ebc84c4b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0810e1fde5b58416b94607dccf2004fe7edb67b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dfcedd3f1b4cb48631541f1726556dab766402ab
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341132"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711807"
 ---
-# <a name="extend-menus-and-commands"></a>Menüler ve komutlar genişletme
-Komutları için Visual Studio eylem ve işlemleri ekleme yoludur. Çoğu durumda, menü veya araç çubukları komutları görüntülenir. VSPackage proje şablonu, çok basit bir komut uygulamak gösterilmektedir. Görmek için biraz daha uzun ancak yine de temel bir uygulama, [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+# <a name="extend-menus-and-commands"></a>Menüleri ve komutları genişletme
+Komutlar, Visual Studio'ya eylem ve işlem ekleme şeklinizdir. Çoğu durumda komutlar menülerde veya araç çubuklarında görüntülenir. VSPackage proje şablonu çok temel bir komutun nasıl uygulanacağını gösterir. Biraz daha uzun ama yine de temel bir uygulama için, [bkz.](../extensibility/creating-an-extension-with-a-menu-command.md)
 
- Visual Studio komutlar, menüler ve araç çubukları hakkında daha fazla bilgi için bkz: [komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
+ Visual Studio komutları, menüler ve araç çubukları hakkında daha fazla bilgi için [Komutlar, menüler ve araç çubuklarına](../extensibility/internals/commands-menus-and-toolbars.md)bakın.
 
- Komutlar, menüler ve araç çubukları içinde tanımlanmıştır *.vsct* dosya VSPackage projelerin bir parçası. Visual Studio IDE hakkında bilgi bulabilirsiniz ve *.vsct* dosyası [nasıl VSPackages kullanıcı arabirimi öğeleri ekleyebilir](../extensibility/internals/how-vspackages-add-user-interface-elements.md).
+ Komutlar, menüler ve araç çubukları VSPackage projelerinin bir parçası olan *.vsct* dosyasında tanımlanır. Visual Studio IDE ve *.vsct* dosyası hakkında bilgileri [VSPackages'ın kullanıcı arabirimi öğelerini nasıl ekleyeceğini zedelebilirsiniz.](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 
- Aşağıdaki konular, farklı türde komutlar, menüler ve araç çubuklarını ekleme işlemleri açıklanmaktadır.
+ Aşağıdaki konular, farklı komut türlerinin, menülerin ve araç çubuklarının nasıl ekleyeceğini açıklayınız.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Visual Studio menü çubuğuna menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) üst Visual Studio menü çubuğuna menü ekleme işlemi açıklanmaktadır.
+- [Visual Studio menü çubuğuna menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) En üst teki Visual Studio menü çubuğuna menü nasıl ekleyeceğiniaçıklar.
 
-- [Menü öğelerine klavye kısayolları bağlama](../extensibility/binding-keyboard-shortcuts-to-menu-items.md) menü öğesi için bir kısayol tuşu (örneğin, CTRL + 3) ekleme açıklanmaktadır.
+- [Klavye kısayollarını menü öğelerine bağlama](../extensibility/binding-keyboard-shortcuts-to-menu-items.md) Menü öğesine klavye kısayolu (CTRL + 3 gibi) nasıl ekleyeceğiniaçıklar.
 
-- [Bir menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md) üst menüye alt menü ekleme işlemi açıklanmaktadır.
+- [Menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md) Üst menüye alt menünün nasıl ekleyeceğini açıklar.
 
-- [Menüye Son Kullanılanlar listesi ekleme](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md) en son kullanılan liste ekleme işlemi açıklanmaktadır.
+- [Alt menüye en son kullanılan liste ekleme](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md) En Son Kullanılanlar listesinin nasıl ekleyeceğini açıklar.
 
-- [Yeniden kullanılabilir düğme grupları oluşturma](../extensibility/creating-reusable-groups-of-buttons.md) birden çok menülerde eklenebilir böylece komut öğeleri gruplandırmak açıklar.
+- [Yeniden kullanılabilir düğme grupları oluşturma](../extensibility/creating-reusable-groups-of-buttons.md) Komut öğelerinin birden çok menüye eklenebilecek şekilde nasıl gruplandırılabildiğini açıklar.
 
-- [Menü komutlarına simge ekleme](../extensibility/adding-icons-to-menu-commands.md) hem araç hem de bir menü komutu için bir simge eklemeyi açıklar.
+- [Menü komutlarına simge ekleme](../extensibility/adding-icons-to-menu-commands.md) Hem araç çubuğunda hem de menüde komuta simge nin nasıl ekleyeceğini açıklar.
 
-- [Menü komutunun metnini değiştirme](../extensibility/changing-the-text-of-a-menu-command.md) kullanımını açıklar `TextChanges` dinamik olarak değiştirilmesi bir menü öğesini etkinleştirmek için bayrak.
+- [Menü komutunun metnini değiştirme](../extensibility/changing-the-text-of-a-menu-command.md) Bir menü öğesinin `TextChanges` dinamik olarak değiştirilmesini sağlamak için bayrağın kullanımını açıklar.
 
-- [Bir komutun görünümünü değiştirme](../extensibility/changing-the-appearance-of-a-command.md) dinamik olarak etkinleştirme veya devre dışı bir komut açıklar.
+- [Komutun görünümünü değiştirme](../extensibility/changing-the-appearance-of-a-command.md) Bir komutu dinamik olarak nasıl etkinleştirin veya devre dışı kılabilir açıklar.
 
-- [Kullanıcı arabirimini güncelleştirmek](../extensibility/updating-the-user-interface.md) son değişiklikleri yansıtmak için kullanıcı arabiriminin bir güncelleştirmeyi zorlamak açıklar.
+- [Kullanıcı arabirimini güncelleştirme](../extensibility/updating-the-user-interface.md) Kullanıcı arabiriminin güncelleştirmesini son değişiklikleri yansıtacak şekilde nasıl zorlayacağını açıklar.
 
-- [Menü komutlarını yerelleştirme](../extensibility/localizing-menu-commands.md) menü komutlarını yerelleştirme açıklanmaktadır.
+- [Menü komutlarını yerelleştir](../extensibility/localizing-menu-commands.md) Menü komutlarının nasıl yerelleştirilebildiğini açıklar.

@@ -1,30 +1,30 @@
 ---
-title: TASK_STATE_FAULTED alanı | Microsoft Docs
+title: TASK_STATE_FAULTED Alanı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_FAULTED field, Task class [.NET Framework debug engines]
 ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8ae3c654518ec051d3f4d1fd0eeb43b4ef5e710
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1c9bd5b9ec57e652dd7a57ee3434a2525eeeedbe
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348356"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712684"
 ---
-# <a name="taskstatefaulted-field"></a>TASK_STATE_FAULTED alanı
-Görev, işlenmeyen bir özel durum nedeniyle tamamlandı.
+# <a name="task_state_faulted-field"></a>TASK_STATE_FAULTED alanı
+Ele alınamayan bir özel durum nedeniyle tamamlanan görev.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (içinde *mscorlib.dll*)
+ **Montaj:** mscorlib *(mscorlib.dll*olarak)
 
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu iç üyeye .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,7 +33,7 @@ Görev, işlenmeyen bir özel durum nedeniyle tamamlandı.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Varsa [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan içerir, bu değer <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>.
+ [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alanı bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özellik döndürür. <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

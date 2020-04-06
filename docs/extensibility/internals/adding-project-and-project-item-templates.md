@@ -1,76 +1,76 @@
 ---
-title: Proje ekleme ve proje öğesi şablonları | Microsoft Docs
+title: Proje ve Proje Öğesi Şablonları Ekleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding
 - project items [Visual Studio], adding
 ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38ab7a0a14c5a4e832aec330852546b64a41fd0c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 14eb1a9e2e63fa6e63d3ba2efa4426421e6b5593
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315854"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710201"
 ---
 # <a name="add-project-and-project-item-templates"></a>Proje ve proje öğesi şablonları ekleme
-Kendi proje türleri oluşturduğunuzda, yeni projeleri ve proje öğeleri standardını kullanarak eklemek için destek sağlamalısınız [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı (IDE) iletişim kutuları. Aşağıdaki konular, projeleri ve proje öğeleri eklemek için farklı teknik tartışın.
+Kendi proje türlerinizi oluşturduğunuzda, standart [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı (IDE) iletişim kutularını kullanarak yeni projeler ve proje öğeleri eklemek için destek sağlamanız gerekir. Aşağıdaki konular, proje ve proje öğeleri eklemek için farklı teknikler tartışır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Proje bağlamı](../../extensibility/internals/project-context.md)
 
- Proje çoğu ortamda transpires ne için bağlam bilgisi sağlar açıklar.
+ Projenin, çevrede neler indiğinin bağlam bilgilerinin çoğunu sağladığını açıklar.
 
 - [Proje önceliği](../../extensibility/internals/project-priority.md)
 
- Bir proje öğesi genellikle hangi proje öğesini açmak için kullanılan belirsizlik önlemeye yardımcı olmak için bir proje üyesi olduğu açıklanmaktadır.
+ Bir proje öğesinin, öğeyi açmak için hangi projenin kullanıldığı yla ilgili belirsizliği önlemeye yardımcı olmak için genellikle bir projenin üyesi olduğunu açıklar.
 
-- [Çeşitli dosyalar projesi](../../extensibility/internals/miscellaneous-files-project.md)
+- [Çeşitli Dosyalar projesi](../../extensibility/internals/miscellaneous-files-project.md)
 
- Bir proje ve rol dosyaları açmak için kullanılan düzenleyicileri iki tür hakkında bilgi projenin bir proje öğesi açıldığında kullanmak için hangi Düzenleyicisi saptanırken çalar sağlar.
+ Projedeki dosyaları açmak için kullanılabilecek iki düzenleyici türü ve proje öğesi açıldığında hangi düzenleyicinin kullanılacağını belirlemede projenin oynadığı rol hakkında bilgi sağlar.
 
-- [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
+- [Proje ve madde şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
 
- Neler olduğunu açıklar, bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje oluşturulur.
+ Proje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] oluşturulduğunda ne olduğunu açıklar.
 
-- [Yeni Öğe Ekle iletişim kutusu öğeleri Ekle](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [Yeni Öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 
- Öğeler ekleme işlemi açıklanır **Yeni Öğe Ekle** iletişim kutusu.
+ **Yeni Öğe Ekle** iletişim kutusuna öğe ekleme işlemini açıklar.
 
-- [Yeni Proje iletişim kutusu için dizinleri Ekle](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)
+- [Yeni Proje iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)
 
- VSPackage'ı tarafından sunulan özel şablonlar içeren yeni bir dizin kaydetme bir örnek sağlar.
+ VSPackage tarafından sunulan özel şablonlar içeren yeni bir dizin kaydetme örneği sağlar.
 
 - [Yeni Öğe Ekle iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)
 
- Dizinler için yeni bir dizi kaydetme bir örnek sağlar **Yeni Öğe Ekle** iletişim kutusu.
+ **Yeni Öğe Ekle** iletişim kutusu için yeni bir dizin kümesi kaydetme örneği sağlar.
 
-- [Proje sistemlerini genişletmeye yönelik IDE tanımlı komutlar](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [Proje sistemlerini genişletmek için IDE tanımlı komutlar](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
 
- Proje sistemlerini genişletmeye için kullanılan komut öğeleri farklı türlerini listeler.
+ Proje sistemlerini genişletmek için kullanılan farklı komut öğeleri türlerini listeler.
 
-- [Projeleri için genellikle kullanılan nesnelerin Catıdlerini](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
+- [Genellikle projeleri genişletmek için kullanılan nesnelerin CATID'leri](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
 
- Genişletmek için kullanılan nesneleri için Catıdlerini listeler [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], ve [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] proje sistemleri.
+ Genişletme ve [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] proje sistemlerini genişletmek için kullanılan nesneler için CATID'leri listeler.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Nasıl yapılır: Projeye özgü düzenleyicileri açma](../../extensibility/how-to-open-project-specific-editors.md)
+- [Nasıl açılır: Projeye özel düzenleyicileri açın](../../extensibility/how-to-open-project-specific-editors.md)
 
- Doğası gereği bir proje için belirli bir düzenleyici bağlı bir öğeyi açmak için adım adım yönergeler sağlar.
+ Bir proje için belirli bir düzenleyiciye bağlı bir öğeyi açmak için adım adım yönergeler sağlar.
 
-- [Nasıl yapılır: Açık standart düzenleyicileri](../../extensibility/how-to-open-standard-editors.md)
+- [Nasıl yapılsın: Standart düzenleyicileri açın](../../extensibility/how-to-open-standard-editors.md)
 
- Standart Düzenleyici açmak için adım adım yönergeler sağlar.
+ Standart bir düzenleyici açmak için adım adım yönergeler sağlar.
 
 - [Proje alt türleri](../../extensibility/internals/project-subtypes.md)
 
- Proje alt kavramsal konular için bağlantılar sağlar. Proje alt türleri genişleten varolan [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] ve [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projeleri.
+ Proje alt türü kavramsal konulara bağlantılar sağlar. Proje alt türleri [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] varolan ve projeleri genişletir.
 
 - [Proje türleri](../../extensibility/internals/project-types.md)
 
- Yeni proje türleri tasarımı hakkında bilgi sağlayan ek konulara bağlantılar sağlar.
+ Yeni proje türlerinin nasıl tasarlanış edilebildiğini anlatan ek konulara bağlantılar sağlar.

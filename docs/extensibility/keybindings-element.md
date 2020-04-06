@@ -1,5 +1,5 @@
 ---
-title: KeyBindings öğesi | Microsoft Docs
+title: KeyBindings Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - VSCT XML schema elements, KeyBindings
 - KeyBindings element (VSCT XML schema)
 ms.assetid: 26a15d5c-ddea-4977-af7f-d795ff09c7ad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d970497dd8f80d66bdbdac8809103582104a2636
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df1720286007d8f6acf073c21f5b2dcc8486782c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352586"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703137"
 ---
 # <a name="keybindings-element"></a>KeyBindings öğesi
-KeyBindings öğesi grupları tuş öğeleri ve diğer KeyBindings gruplandırmaları.
+KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplandırmalarını gruplandırmayı gruplar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,14 +39,14 @@ KeyBindings öğesi grupları tuş öğeleri ve diğer KeyBindings gruplandırma
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[KeyBinding öğesi](../extensibility/keybinding-element.md)|Komut için klavye kısayolları belirtir.|
-|[Tuş bağlama](../extensibility/keybindings-element.md)|Tuş öğeleri gruplandırır ve diğer KeyBindings gruplandırmaları.|
+|[AnahtarBağlama öğesi](../extensibility/keybinding-element.md)|Komutlar için klavye kısayollarını belirtir.|
+|[Anahtar Bağlamalar](../extensibility/keybindings-element.md)|Anahtar Bağlama öğelerini ve diğer KeyBindings gruplandırmalarını gruplandırmayı grupla.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -66,5 +66,5 @@ KeyBindings öğesi grupları tuş öğeleri ve diğer KeyBindings gruplandırma
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [KeyBinding öğesi](../extensibility/keybinding-element.md)
+- [AnahtarBağlama öğesi](../extensibility/keybinding-element.md)
 - [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

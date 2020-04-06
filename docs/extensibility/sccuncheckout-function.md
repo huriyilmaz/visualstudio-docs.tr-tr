@@ -1,5 +1,5 @@
 ---
-title: SccUncheckout Işlevi | Microsoft Docs
+title: SccUncheckout Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccUncheckout function
 ms.assetid: 6d498b70-29c7-44b7-ae1c-7e99e488bb09
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e35d7287d8fc12100da9ba3b8383d8e92cee73d4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4317133b2f215e0f9af447e5c042785561231f63
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720527"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700243"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout İşlevi
-Bu işlev önceki bir kullanıma alma işlemini geri alır ve böylece seçilen dosya veya dosyaların içeriğini kullanıma almadan önceki duruma geri yükler. Kullanıma alma işleminden bu yana dosyada yapılan tüm değişiklikler kayboldu.
+Bu işlev, önceki bir ödeme işlemini geri alarak, seçili dosya veya dosyaların içeriğini ödemeden önce duruma geri getirir. Ödeme kaybolduğundan beri dosyada yapılan tüm değişiklikler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,44 +38,44 @@ SCCRTN SccUncheckout (
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-'ndaki Kaynak denetimi eklentisi bağlam yapısı.
+[içinde] Kaynak denetimi eklentisi bağlam yapısı.
 
- lendiği
+ Hwnd
 
-'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
+[içinde] Kaynak denetim eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
 
- Nkarşıya
+ nDosyalar
 
-'ndaki @No__t_0 dizisinde belirtilen dosya sayısı.
+[içinde] `lpFileNames` Dizide belirtilen dosya sayısı.
 
- lpDosyaAdı
+ lpFileNames
 
-'ndaki Bir kullanıma alma işlemini geri almak için gereken dosyaların tam nitelikli yerel yol adları dizisi.
+[içinde] Ödemeyi geri almak için dosyaların tam nitelikli yerel yol adlarını dizilimi.
 
- fOptions
+ fSeçenekler
 
-'ndaki Komut bayrakları (kullanılmıyor).
+[içinde] Komut bayrakları (kullanılmaz).
 
  pvOptions
 
-'ndaki Kaynak denetimi eklentisi özel seçenekleri.
+[içinde] Kaynak denetimi eklentisi özel seçenekleri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Kullanıma alma başarıyla geri alındı.|
-|SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değil.|
-|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR|Özel olmayan hata. Kullanıma alma başarıyla geri alınamıyor.|
-|SCC_E_NOTCHECKEDOUT|Kullanıcının dosyası kullanıma alınmamış.|
-|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
-|SCC_E_PROJNOTOPEN|Proje, kaynak denetiminden açılmamış.|
-|SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
+|SCC_OK|Geri ödeme başarılı oldu.|
+|SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değildir.|
+|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata. Geri ödeme başarılı olmadı.|
+|SCC_E_NOTCHECKEDOUT|Kullanıcı dosyayı kullanıma almaz.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
+|SCC_E_PROJNOTOPEN|Proje kaynak denetiminden açılmadı.|
+|SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan iptal edildi.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlemden sonra, `SCC_STATUS_CHECKEDOUT` ve `SCC_STATUS_MODIFIED` bayrakları, geri alma işleminin gerçekleştirildiği dosyalar için temizlenir.
+ Bu işlemden `SCC_STATUS_CHECKEDOUT` sonra, geri ödemenin gerçekleştirildiği dosyalar için bayraklar ve `SCC_STATUS_MODIFIED` bayraklar temizlenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide | Microsoft Docs
+title: IPropertyProxyEESide | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide interface
 ms.assetid: cf227cf8-39d9-4758-8f7e-a697aebb1926
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6528b146ad3128dd880e594b25ebb5df88bb8f2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c89cecbf22091a45e31c307c5b523ac8aa4c924e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353447"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714852"
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
-Bu arabirim, ilişkili nesne verilerini görüntülemek için yöntemler sağlar. Bu arabirim tür görselleştiricileri desteğinin bir parçasıdır.
+Bu arabirim, ilişkili nesnedeki verileri görüntülemek için yöntemler sağlar. Bu arabirim, tür görüntüleyiciler için desteğin bir parçasıdır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,33 +28,33 @@ Bu arabirim, ilişkili nesne verilerini görüntülemek için yöntemler sağlar
 IPropertyProxyEESide : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- İfade değerlendiricisi tür görselleştiricileri desteklemek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bir ifade değerlendiricisi, tür görselleştiricilerini desteklemek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çağrı [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) bu arabirimi elde edilir. Çağrı [QueryInterface](/cpp/atl/queryinterface) üzerinde bir [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) almak için arabirimi [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimi.
+ Bu arabirimi elde etmek için [GetPropertyProxy'yi](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) arayın. [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimini elde etmek için [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabiriminde [QueryInterface'i](/cpp/atl/queryinterface) arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki yöntemleri bu arabirim tarafından uygulanır:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Aşağıdaki yöntemler bu arabirim tarafından uygulanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[InitSourceDataProvider](../../../extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider.md)|Böylece nesnenin verilere erişilebilir bir veri kaynağı sağlayıcı başlatır.|
-|[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)|Nesnenin derleme hakkındaki bilgileri alır.|
-|[GetInitialData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getinitialdata.md)|Nesne için ilk veri alır.|
-|[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|Mevcut bir veri deposunun kopyasını oluşturur.|
-|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|Mevcut bir veri depolama için bir başvuru oluşturur.|
-|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|Bu nesneyi içeren derlemenin bağlam içinde belirli bir derleme hakkındaki bilgileri alır.|
+|[InitSourceDataProvider](../../../extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider.md)|Nesnenin verilerine erişilebilmek için bir veri kaynağı sağlayıcısını başolarak ele alar.|
+|[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)|Nesnenin derlemesi hakkındaki bilgileri alır.|
+|[GetInitialData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getinitialdata.md)|Nesnenin ilk verilerini alır.|
+|[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|Varolan bir veri depolamasının kopyasını oluşturur.|
+|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|Varolan bir veri depolamasına başvuru oluşturur.|
+|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|Bu nesneyi içeren derleme bağlamında belirli bir derleme hakkındaki bilgileri alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Tür görselleştiricisi bu arabirimi bu arabirim, bir parçasıdır nesneyle ilişkili değerlere erişmek için kullanır. Üzerinden erişilen verileri [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) veri salt okunur bir görünümünü sunan arabirimi.
+ Bir tür görselleştiricisi, bu arabirimin parçası olduğu nesneyle ilişkili değerlere erişmek için bu arabirimi kullanır. Verilere, verilerin salt okunur görünümünü sağlayan [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) arabirimi üzerinden erişilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

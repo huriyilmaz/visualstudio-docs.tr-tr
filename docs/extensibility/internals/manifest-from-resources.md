@@ -1,45 +1,45 @@
 ---
-title: Kaynaklardan bildirme | Microsoft Docs
+title: Kaynaklardan Bildirim | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 917397003d0e14bc9b5ff707926adf5f04f73baa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cb853963cc5ca6fbe6080249daa8fcf9c08bf943
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328628"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707272"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
-Bildirim kaynakları aracından görüntü kaynakları (.png veya .xaml dosyaları) bir listesini alır ve Visual Studio Görüntü hizmeti ile kullanılmak üzere bu görüntüleri izin veren bir .imagemanifest dosyası oluşturur bir konsol uygulamasıdır. Ayrıca, bu aracı için mevcut bir .imagemanifest görüntüleri eklemek için kullanılabilir. Bu araç, Visual Studio uzantısı görüntülere yüksek DPI ve Tema oluşturma desteği eklemek için yararlıdır. Oluşturulan .imagemanifest dosya dahil ve Visual Studio Uzantısı (.vsix) bir parçası olarak dağıtılabilir.
+Kaynaklardan Bildirim aracı, görüntü kaynaklarının (.png veya .xaml dosyaları) listesini alan ve bu görüntülerin Visual Studio Image Service ile kullanılmasını sağlayan bir .imagemanifest dosyası oluşturan bir konsol uygulamasıdır. Ayrıca, bu araç varolan bir .imagemanifest'e resim eklemek için kullanılabilir. Bu araç, Visual Studio uzantısına yüksek DPI ve görüntüler için temalı destek eklemek için yararlıdır. Oluşturulan .imagemanifest dosyası visual studio uzantısı (.vsix) bir parçası olarak dahil edilmeli ve dağıtılmalıdır.
 
-## <a name="how-to-use-the-tool"></a>Aracı'nı kullanma
- **Söz dizimi**
+## <a name="how-to-use-the-tool"></a>Aracı nasıl kullanılır?
+ **Sözdizimi**
 
- ManifestFromResources /resources:\<dizin1 >;\< Img1 >/Assembly:\<AssemblyName > \<isteğe bağlı bağımsız değişken >
+ ManifestFromResources /resources:\<Dir1>; \<Img1> /assembly:\< \<AssemblyName> İsteğe Bağlı Args>
 
  **Bağımsız Değişkenler**
 
 ||||
 |-|-|-|
-|**Anahtar adı**|**Notlar**|**Gerekli veya isteğe bağlı**|
-|/Resources|Görüntüleri veya dizinlerin noktalı virgülle ayrılmış listesi. Bu liste her zaman bildirimde olacak görüntü tam listesini içermelidir. Yalnızca kısmi bir liste verilirse, dahil edilmeyen girişleri kaybolur.<br /><br /> Belirtilen kaynak dosyasının bir görüntü şeridi ise, araç, ayrı görüntülere her subimage bildirime eklemeden önce bölecektir.<br /><br /> Resim .png dosyası ise, böylece aracı görüntünün doğru özniteliklerini doldurabilirsiniz ad şunun gibi biçimlendirme önerilir: \<Adı >. \<Genişliği >. \<Yükseklik > .png.|Gerekli|
-|/ Assembly|Yönetilen bütünleştirilmiş kod (uzantısı dahil değil) veya çalışma zamanı yolunu (göreli bildirim çalışma zamanının konumu) kaynakları barındıran yerel bütünleştirilmiş kodun adı.|Gerekli|
-|bildirim /|Oluşturulan .imagemanifest dosyaya vermek için adı. Ayrıca, farklı bir konumda dosya oluşturmak için mutlak veya göreli bir yol da içerebilir. Varsayılan adını derleme adı eşleşir.<br /><br /> Varsayılan: \<Geçerli dizin >\\< derleme\>.imagemanifest|İsteğe Bağlı|
-|/guidName|Tüm görüntüleri oluşturulan bildirim için GUID sembol vermek için adı.<br /><br /> Varsayılan: AssetsGuid|İsteğe Bağlı|
-|/rootPath|Yönetilen Kaynak URI'leri oluşturmadan önce çıkarılır gereken kök yolu. (Bu bayrağı araç göreli URI yolu yanlış kaynakları yüklemek başarısız olmasına neden alır burada çalışmalarıyla yardımcı olmaya yöneliktir.)<br /><br /> Varsayılan: \<Geçerli dizin >|İsteğe Bağlı|
-|/ Recursive|Bu bayrak ayarlandığında, yinelemeli olarak araç söyler /resources bağımsız değişkendeki herhangi bir dizin arayın. Bu bayrak atlama dizinleri top-düzey yalnızca Search'te neden olur.|İsteğe Bağlı|
-|/isNative|Derleme bağımsız değişken yerel bir derleme için bir yol olduğunda bu bayrağı ayarlayın. Derleme bağımsız değişken yönetilen derlemenin adını olduğunda bu bayrağı yoksayın. (Bu bayrağı hakkında ek bilgi için Notlar bölümüne bakın.)|İsteğe Bağlı|
-|/newGuids|Bu bayrak ayarlandığında, varolan bir bildirimi adresinden birleştirme yerine görüntüleri GUID sembol için yeni bir değer oluşturmak için aracı söyler.|İsteğe Bağlı|
-|/newIds|Bu bayrak ayarlandığında, varolan bir bildirimi değerlerinden birleştirme yerine her resim için yeni kod sembol değerleri oluşturmak için aracı söyler.|İsteğe Bağlı|
-|/ nologo|Bu bayrak ayarlandığında, ürün ve telif hakkı bilgileri yazdırmasının durdurur.|İsteğe Bağlı|
-|/?|Yardım bilgi yazdırır.|İsteğe Bağlı|
-|/help|Yardım bilgi yazdırır.|İsteğe Bağlı|
+|**Anahtar adı**|**Notlar**|**Gerekli veya İsteğe Bağlı**|
+|/kaynaklar|Görüntülerin veya dizinlerin yarı sütunlu sınırlı listesi. Bu liste her zaman bildirimde yer alacak görüntülerin tam listesini içermelidir. Yalnızca kısmi bir liste verilirse, dahil olmayan girişler kaybolur.<br /><br /> Belirli bir kaynak dosyası bir görüntü şeridiyse, araç her alt resmi bildirime eklemeden önce onu ayrı görüntülere böler.<br /><br /> Resim bir .png dosyasıysa, aracın görüntü için doğru öznitelikleri doldurabilmesi için adı bu \<şekilde biçimlendirmenizi tavsiye ederiz: Ad>. \<Genişlik>. \<Yükseklik>.png.|Gerekli|
+|/montaj|Yönetilen derlemenin adı (uzantı dahil değil) veya kaynakları barındıran yerel derlemenin çalışma zamanı yolu (bildirimin çalışma zamanı konumuna göre).|Gerekli|
+|/manifesto|Oluşturulan .imagemanifest dosyasına verilen ad. Bu, dosyayı farklı bir konumda oluşturmak için mutlak veya göreceli bir yol da içerebilir. Varsayılan ad derleme adıyla eşleşir.<br /><br /> Varsayılan: \<Geçerli Dizin \\ \>><Derleme .imagemanifest|İsteğe bağlı|
+|/guidName|Oluşturulan bildirimdeki tüm görüntüler için GUID simgesine verilen ad.<br /><br /> Varsayılan: AssetsGuid|İsteğe bağlı|
+|/rootPath|Yönetilen kaynak URI'leri oluşturmadan önce sökülmesi gereken kök yol. (Bu bayrak, aracın göreli URI yolunu yanlış aldığı ve kaynakların yüklenmemesine neden olan durumlarda yardımcı olmak içindir.)<br /><br /> Varsayılan: \<Geçerli Dizin>|İsteğe bağlı|
+|/özyinelemeli|Bu bayrağı ayarlamak, aracı /kaynaklar bağımsız değişkenindeki dizinleri özyinelemeli olarak aramasını söyler. Bu bayrağın atlanması, yalnızca en üst düzey dizinlerde arama yla sonuçlanır.|İsteğe bağlı|
+|/isNative|Derleme bağımsız değişkeni yerel derleme için bir yol olduğunda bu bayrağı ayarlayın. Derleme bağımsız değişkeni yönetilen bir derlemenin adı olduğunda bu bayrağı atla. (Bu bayrak hakkında ek bilgi için Notlar bölümüne bakın.)|İsteğe bağlı|
+|/newGuids|Bu bayrağı ayarlamak, aracı varolan bildirimden birleştirmek yerine görüntülerin GUID simgesi için yeni bir değer oluşturmasını söyler.|İsteğe bağlı|
+|/newIds|Bu bayrağı ayarlamak, aracı varolan bildirimden değerleri birleştirmek yerine her görüntü için yeni kimlik simgesi değerleri oluşturmasını söyler.|İsteğe bağlı|
+|/noLogo|Bu bayrağı ayarlamak, ürün ve telif hakkı bilgilerinin yazdırılmalarını durdurur.|İsteğe bağlı|
+|/?|Yardım bilgilerini yazdırın.|İsteğe bağlı|
+|/help|Yardım bilgilerini yazdırın.|İsteğe bağlı|
 
  **Örnekler**
 
@@ -51,17 +51,17 @@ Bildirim kaynakları aracından görüntü kaynakları (.png veya .xaml dosyalar
 
 ## <a name="notes"></a>Notlar
 
-- Araç yalnızca .png ve .xaml dosyalarını destekler. Diğer resim veya dosya türleri göz ardı edilir. Tüm desteklenmeyen türler kaynakları ayrıştırılırken bir uyarı oluşturulur. Desteklenen Hayır ise görüntüleri aracı tamamlandığında bulunan kaynakları ayrıştırma, bir hata oluşturulur
+- Araç yalnızca .png ve .xaml dosyalarını destekler. Diğer görüntü veya dosya türleri yoksayılır. Kaynakları ayrıştırırken karşılaşılan tüm desteklenmeyen türler için bir uyarı oluşturulur. Araç kaynakları ayrıştırma tamamlandığında desteklenen görüntü bulunmazsa, bir hata oluşturulur
 
-- Görüntünün gerçek boyutundan farklı olsa bile .png görüntüleri için önerdiğimiz biçimi takip ederek, aracı .png boyutu/boyut değeri biçimi belirtilen boyutuna ayarlanır.
+- .png görüntüleri için önerilen biçimi izleyerek, araç .png'nin boyut/boyut değerini görüntünün gerçek boyutundan farklı olsa bile biçim belirtilen boyuta ayarlar.
 
-- Genişliği/yüksekliğinin biçimi için .png görüntü atlanmış olabilir, ancak aracın görüntünün gerçek genişliği/yüksekliğinin okuyun ve bu görüntünün boyutu/boyut değeri için kullanın.
+- Genişlik/yükseklik biçimi .png görüntüler için atlanabilir, ancak araç görüntünün gerçek genişliğini/yüksekliğini okur ve görüntünün boyut/boyut değeri için bunları kullanır.
 
-- Görüntü şeridi tek başına görüntülere bölmek ve bu varolan bir bildirimi eklemek aracın çalıştığı aynı görüntü şeridi birden çok kez aynı .imagemanifest için bu aracı üzerinde çalışan yinelenen bildirimi girişlerinde neden olur.
+- Araç görüntü şeridini bağımsız görüntülere bölmeye ve bunları varolan bildirime eklemeye çalıştığından, bu aracı aynı görüntü şeridinde aynı .imagemanifest için birden çok kez çalıştırmak yinelenen bildirim girişlerine neden olur.
 
-- (/NewGuids veya /newIds atlama) Birleştirme aracı tarafından oluşturulan bildirimleri yalnızca yapılmalıdır. Özelleştirilmiş veya başka yollarla oluşturulan bildirimleri doğru şekilde birleştirilebilir değil.
+- Birleştirme (atlayan /newGuids veya /newIds) yalnızca araç oluşturulan bildirimler için yapılmalıdır. Özelleştirilen veya başka yollarla oluşturulan bildirimler doğru şekilde birleştirilemeyebilir.
 
-- Yerel derlemeler için oluşturulan bildirimleri kaynak kimliklerini yerel derlemenin .rc dosyasından eşleşen kimliği semboller yapmak için nesil sonra elle düzenlenerek olması gerekebilir.
+- Yerel derlemeler için oluşturulan bildirimlerin, kimlik sembollerinin yerel derlemenin .rc dosyasındaki kaynak kimlikleriyle eşleşmesini sağlamak için nesilden sonra elle düzenlenmesi gerekebilir.
 
 ## <a name="sample-output"></a>Örnek Çıktı
  **Basit görüntü bildirimi**
@@ -92,7 +92,7 @@ Bildirim kaynakları aracından görüntü kaynakları (.png veya .xaml dosyalar
 
  **Görüntü şeridi için görüntü bildirimi**
 
- Görüntü şeridi için bir görüntü bildirimi bu .xml dosyasına benzer olacaktır:
+ Görüntü şeridi için bir görüntü manifestosu bu .xml dosyasına benzer olacaktır:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -127,9 +127,9 @@ Bildirim kaynakları aracından görüntü kaynakları (.png veya .xaml dosyalar
 </ImageManifest>
 ```
 
- **Yerel derleme resim kaynakları için görüntü bildirimi**
+ **Yerel montaj görüntü kaynakları için görüntü bildirimi**
 
- Yerel görüntüler için bir görüntü bildirimi bu .xml dosyasına benzer olacaktır:
+ Yerel görüntüler için bir görüntü manifestosu bu .xml dosyasına benzer olacaktır:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

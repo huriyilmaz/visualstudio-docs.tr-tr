@@ -1,127 +1,127 @@
 ---
-title: 'İzlenecek yol: Anahat oluşturma | Microsoft Docs'
+title: 'Walkthrough: Anahat | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - outlining
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df269c3018d850ed2d5ae7435b82eb4f3aee4e1a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 97b9dcbb2a24f1a3ed336a4a6bb7de4a15e907b4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320616"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697220"
 ---
-# <a name="walkthrough-outlining"></a>İzlenecek yol: Anahat Oluşturma
-Dil tabanlı özellikleri genişletmek veya daraltmak için istediğiniz metin bölgeleri türleri tanımlayarak anahat oluşturma gibi ayarlayın. Bir dil hizmeti bağlamında bölgeleri tanımlamak veya kendi dosya adı uzantısı ve içerik türünü tanımlayın ve bölge tanımı yalnızca bu türü için geçerli veya bölge tanımları var olan bir içerik türüyle (örneğin, "metin") uygulamak. Bu izlenecek yol, tanımlamak ve ana hat oluşturma bölgeleri görüntülemek gösterilmektedir.
+# <a name="walkthrough-outlining"></a>İzlenecek Yol: Ana Hat Oluşturma
+Genişletmek veya daraltmak istediğiniz metin bölgelerinin türlerini tanımlayarak anahat oluşturma gibi dil tabanlı özellikler ayarlayın. Bölgeleri bir dil hizmeti bağlamında tanımlayabilir veya kendi dosya adı uzantınızı ve içerik yazınızı tanımlayabilir ve bölge tanımını yalnızca bu türe uygulayabilir veya bölge tanımlarını varolan bir içerik türüne ("metin" gibi) uygulayabilirsiniz. Bu gözden geçirme, anahat bölgelerinin nasıl tanımlandığını ve görüntülenebildiğini gösterir.
 
-## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015'ten başlayarak, Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik eklemiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="prerequisites"></a>Ön koşullar
+ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>Yönetilen Genişletilebilirlik Çerçevesi (MEF) proje oluşturma
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>Yönetilen Genişletilebilirlik Çerçevesi (MEF) projesi oluşturma
 
-### <a name="to-create-a-mef-project"></a>MEF projesi oluşturmak için
+### <a name="to-create-a-mef-project"></a>Bir MEF projesi oluşturmak için
 
-1. Bir VSIX projesi oluşturun. Çözüm adı `OutlineRegionTest`.
+1. Bir VSIX projesi oluşturun. Çözümü `OutlineRegionTest`adlandırın.
 
-2. Bir düzenleyici sınıflandırıcı öğe şablonu, projeye ekleyin. Daha fazla bilgi için [bir düzenleyici öğesi şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Projeye Bir Düzenleyici Sınıflandırıcı öğesi şablonu ekleyin. Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
-3. Varolan sınıf dosyaları silin.
+3. Varolan sınıf dosyalarını silin.
 
-## <a name="implement-an-outlining-tagger"></a>Bir anahat oluşturma etiketlerde uygulayın
- Anahat oluşturma bölgeleri etiketi bir tür tarafından işaretlenir (<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>). Bu etiket davranışı anahat oluşturma standart sağlar. Anahatları belirlenmiş bölge genişletilebilir veya daraltılabilir. Anahatları belirlenmiş bölge bir artı işareti işaretlenir ( **+** ) daraltılmışsa veya eksi işareti ( **-** ), genişletilmiş ve genişletilmiş bölge, dikey bir çizgiyle güncelleştireceğinizi.
+## <a name="implement-an-outlining-tagger"></a>Anahat etiketi uygulama
+ Anahat bölgeleri bir tür etiketle<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>işaretlenir ( ). Bu etiket standart anahat davranışı sağlar. Özetlenen bölge genişletilebilir veya daraltılabilir. Özetlenen bölge, daraltılmışsa veya Eksi işareti (**+****-**) genişletilirse ve genişletilmiş bölge dikey bir çizgiyle çizilmişse, Artı işaretiyle işaretlenir.
 
- Aşağıdaki adımlarda, köşeli parantez ayrılmış tüm bölgeler için anahat oluşturma bölgeleri oluşturan bir etiketlerde tanımlanacağı gösterilmektedir ( **[** , **]** ).
+ Aşağıdaki adımlar, parantezlerle sınırlandırılmış tüm bölgeler için anahat bölgeleri oluşturan bir etiketcinin nasıl tanımlandığını gösterir (**[**,**]**).
 
-### <a name="to-implement-an-outlining-tagger"></a>Bir anahat oluşturma etiketlerde uygulamak için
+### <a name="to-implement-an-outlining-tagger"></a>Anahat etiketi uygulamak için
 
-1. Bir sınıf dosyası ekleyin ve adlandırın `OutliningTagger`.
+1. Bir sınıf dosyası ekleyin `OutliningTagger`ve adlandırın.
 
 2. Aşağıdaki ad alanlarını içeri aktarın.
 
      [!code-csharp[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/CSharp/walkthrough-outlining_1.cs)]
      [!code-vb[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_1.vb)]
 
-3. Adlı bir sınıf oluşturun `OutliningTagger`, ve uygulama <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:
+3. Adlı `OutliningTagger`bir sınıf oluşturun ve <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>uygulanmasını var:
 
      [!code-csharp[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/CSharp/walkthrough-outlining_2.cs)]
      [!code-vb[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_2.vb)]
 
-4. Anlık görüntü ve metin arabelleğini izlemek için ve bölgeler anahat oluşturma olarak etiketlenmesi satır kümesi ulaşıncaya kadar bazı alanlar ekleyin. Bu kod, anahat oluşturma bölgeleri temsil eden (daha sonra tanımlanacak) bölge nesneleri listesini içerir.
+4. Metin arabelleği ve anlık görüntü izlemek ve bölgeleri anahat olarak etiketlenmiş olması gereken satır kümelerini toplamak için bazı alanlar ekleyin. Bu kod, anahat bölgelerini temsil eden Bölge nesnelerinin (daha sonra tanımlanacak) bir listesini içerir.
 
      [!code-csharp[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/CSharp/walkthrough-outlining_3.cs)]
      [!code-vb[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_3.vb)]
 
-5. Alanları başlatan bir etiketlerde oluşturucu ekleyin arabellek ayrıştırır ve bir olay işleyici ekler <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> olay.
+5. Alanları başharfe alan, arabelleği ayrıştıran ve olaya bir olay işleyicisi <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> ekleyen bir etiketleyici oluşturucu ekleyin.
 
      [!code-csharp[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/CSharp/walkthrough-outlining_4.cs)]
      [!code-vb[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_4.vb)]
 
-6. Uygulama <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> etiket başlatır yöntemi yayılan. Bu örnek olduğunu varsayar, yayılma <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> yönteme geçirilen durumu her zaman olmayabilir rağmen bitişiktir. Bu yöntem her bir ana hat oluşturma bölgeleri için yeni bir etiket aralık başlatır.
+6. Etiket <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> açıklıklarını anında belirleyen yöntemi uygulayın. Bu örnek, yönteme <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> geçen yayılma açıklıklarının bitişik olduğunu varsayar, ancak her zaman böyle olmayabilir. Bu yöntem, anahat bölgelerinin her biri için yeni bir etiket aralığı nı anında alır.
 
      [!code-csharp[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/CSharp/walkthrough-outlining_5.cs)]
      [!code-vb[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_5.vb)]
 
-7. Bildirme bir `TagsChanged` olay işleyicisi.
+7. Olay `TagsChanged` işleyicisi bildirin.
 
      [!code-csharp[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/CSharp/walkthrough-outlining_6.cs)]
      [!code-vb[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_6.vb)]
 
-8. Ekleme bir `BufferChanged` yanıt veren bir olay işleyicisi <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> metin arabelleğini ayrıştırma tarafından olayları.
+8. Metin `BufferChanged` arabelleği ayrıştırarak olaylara <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> yanıt veren bir olay işleyicisi ekleyin.
 
      [!code-csharp[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/CSharp/walkthrough-outlining_7.cs)]
      [!code-vb[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_7.vb)]
 
-9. Arabellek ayrıştıran bir yöntem ekleyin. Burada verilen örnek yalnızca gösterim amaçlıdır. İç içe geçmiş ana hat oluşturma bölgelere arabellek zaman uyumlu olarak ayrıştırır.
+9. Arabelleği ayrıştıran bir yöntem ekleyin. Burada verilen örnek yalnızca illüstrasyon içindir. Arabelleği iç içe giden anahat bölgelerine eşitleyerek ayırır.
 
      [!code-csharp[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/CSharp/walkthrough-outlining_8.cs)]
      [!code-vb[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_8.vb)]
 
-10. Aşağıdaki yardımcı yöntemini sol ayraç eşleştirme 1., anahat düzeyini temsil eden bir tamsayı olarak alır.
+10. Aşağıdaki yardımcı yöntem, anahat düzeyini temsil eden bir tamsayı alır, örneğin 1 sol en ayraç çifti.
 
      [!code-csharp[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/CSharp/walkthrough-outlining_9.cs)]
      [!code-vb[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_9.vb)]
 
-11. Aşağıdaki yardımcı yöntemini (Bu makalenin sonraki bölümlerinde tanımlı) bir bölge içinde bir SnapshotSpan çevirir.
+11. Aşağıdaki yardımcı yöntemi, bir Bölgeyi (bu makalede daha sonra tanımlanan) SnapshotSpan'a çevirir.
 
      [!code-csharp[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/CSharp/walkthrough-outlining_10.cs)]
      [!code-vb[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_10.vb)]
 
-12. Aşağıdaki kod, yalnızca gösterim amaçlıdır. Bu, anahat oluşturma bir bölge ve üst bölgesi (varsa) başvuru başlangıç uzaklığı ve satır numarası içeren bir PartialRegion sınıfı tanımlar. Bu kod, bölgeler anahat oluşturma iç içe geçmiş ayarlamak ayrıştırıcı sağlar. Bölge türetilen bir anahat oluşturma bölgesi sonuna satır sayısı bir başvuru içeriyor.
+12. Aşağıdaki kod yalnızca illüstrasyon içindir. Bir anahat bölgesinin başlangıcının satır numarasını ve mahsuplarını ve ana bölgeye (varsa) başvuruyu içeren bir PartialRegion sınıfını tanımlar. Bu kod, ayrıştırıcının iç içe geçen anahat bölgelerini ayarlamasını sağlar. Türetilmiş Bölge sınıfı, anahat lı bölgenin sonunun satır numarasına bir başvuru içerir.
 
      [!code-csharp[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/CSharp/walkthrough-outlining_11.cs)]
      [!code-vb[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_11.vb)]
 
-## <a name="implement-a-tagger-provider"></a>Etiketlerde sağlayıcıyı uygulama
- Etiketlerde sağlayıcısı, etiketlerde için dışarı aktarın. Etiketlerde sağlayıcısı oluşturur bir `OutliningTagger` "metin" içerik türü veya başka döndürür bir arabelleği için bir `OutliningTagger` arabellek zaten varsa.
+## <a name="implement-a-tagger-provider"></a>Bir etiket sağlayıcı uygulama
+ Etiketciniz için bir etiket sağlayıcı dışa aktarın. Tagger sağlayıcı "metin" içerik türü bir arabellek için bir `OutliningTagger` oluşturur `OutliningTagger` veya başka bir arabellek zaten varsa bir döndürür.
 
-### <a name="to-implement-a-tagger-provider"></a>Etiketlerde sağlayıcısını uygulamak için
+### <a name="to-implement-a-tagger-provider"></a>Tagger sağlayıcısı uygulamak için
 
-1. Adlı bir sınıf oluşturun `OutliningTaggerProvider` uygulayan <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>ve ContentType ve TagType özniteliklerle dışarı aktarın.
+1. ContentType ve `OutliningTaggerProvider` TagType <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>özniteliklerini uygulayan adlandırılmış bir sınıf oluşturun ve dışa aktarın.
 
      [!code-csharp[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/CSharp/walkthrough-outlining_12.cs)]
      [!code-vb[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_12.vb)]
 
-2. Uygulama <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> ekleyerek yöntemi bir `OutliningTagger` özelliklerine arabellek.
+2. Arabellek <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> özelliklerine bir `OutliningTagger` ekleyerek yöntemi uygulayın.
 
      [!code-csharp[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/CSharp/walkthrough-outlining_13.cs)]
      [!code-vb[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_13.vb)]
 
-## <a name="build-and-test-the-code"></a>Kod oluşturup test
- Bu kodu test etmek için OutlineRegionTest Çözümü derleyin ve deneysel örneğinde çalıştırın.
+## <a name="build-and-test-the-code"></a>Kodu oluşturma ve test edin
+ Bu kodu sınamak için, AnahatRegionTest çözümlerini oluşturun ve deneme örneğinde çalıştırın.
 
-### <a name="to-build-and-test-the-outlineregiontest-solution"></a>Derleme ve OutlineRegionTest çözümü test etmek için
+### <a name="to-build-and-test-the-outlineregiontest-solution"></a>OutlineRegionTest çözümlerini oluşturmak ve test etmek için
 
-1. Çözümü oluşturun.
+1. Çözümü derleyin.
 
-2. Bu projede hata ayıklayıcıda çalıştırdığınızda, Visual Studio'nun ikinci bir örneğini başlatılır.
+2. Bu projeyi hata ayıklamada çalıştırdığınızda, Visual Studio'nun ikinci bir örneği başlatılır.
 
-3. Bir metin dosyası oluşturun. Açma köşeli ayraçlar hem sağ köşeli içeren bir metin yazın.
+3. Bir metin dosyası oluşturun. Hem açılış parantezini hem de kapanış köşeli ayraçlarını içeren bazı metinler yazın.
 
     ```
     [
@@ -129,7 +129,7 @@ Dil tabanlı özellikleri genişletmek veya daraltmak için istediğiniz metin b
     ]
     ```
 
-4. İki ayraç içeren bir anahat oluşturma bölgesi olmalıdır. Anahat oluşturma bölge daraltmak için eksi işaretini sol tarafındaki açık ayraç olması gerekir. Ne zaman bölgesi daraltıldığında, üç nokta simgesine ( *...* ) daraltılmış bölgeye ve metni içeren bir açılır pencere solunda görünmesi gereken **gelin metin** üç nokta üzerinde işaretçiyi getirdiğinizde görünmelidir.
+4. Her iki parantezi de içeren bir anahat bölgesi olmalıdır. Anahat bölgesini daraltmak için açık köşenin solundaki Eksi İşareti'ni tıklatabilirsiniz. Bölge daraltıldığında, elips sembolü (*...*) daraltılmış bölgenin solunda görünmeli ve işaretçiyi elipslerin üzerine taşıdığınızda metin **gezinme metnini** içeren bir açılır pencere görünmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Bağlantı bir dosya adı uzantısı için bir içerik türü](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+- [Walkthrough: İçerik türünü dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

@@ -1,5 +1,5 @@
 ---
-title: VisibilityConstraints öğesi | Microsoft Docs
+title: GörünürlükKısıtlamalar Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - VSCT XML schema elements, VisibilityConstraints
 - VisibilityConstraints element (VSCT XML schema)
 ms.assetid: d6dcd314-6fe4-4693-a189-91fa026c7b34
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee64b4b8ccebe6e63b5c558df68e0a5625b37884
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b1aaa9573b883910ac6fa5d921a9bc79ce1c1cf3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310661"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698186"
 ---
-# <a name="visibilityconstraints-element"></a>VisibilityConstraints öğesi
-VisibilityConstraints öğesi gruplarını komutları ve araç çubukları statik görünürlüğünü belirler. Görünürlük varsayılan tarafından denetlenir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage yükleme olmadan tümleşik geliştirme ortamı (IDE).
+# <a name="visibilityconstraints-element"></a>GörünürlükKısıtlamalar öğesi
+Görünürlük Kısıtlamaları öğesi komut gruplarının ve araç çubuklarının statik görünürlüğünü belirler. Görüş mesafesi ilk olarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage yüklemeden entegre geliştirme ortamı (IDE) tarafından kontrol edilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,20 +39,20 @@ VisibilityConstraints öğesi gruplarını komutları ve araç çubukları stati
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Visibilityıtem öğesi](../extensibility/visibilityitem-element.md)|Komutlar ve araç çubukları statik görünürlüğünü belirler.|
-|[VisibilityConstraints](../extensibility/visibilityconstraints-element.md)|Komutlar ve araç çubukları grupları statik görünürlüğünü belirler.|
+|[GörünürlükÖğe öğesi](../extensibility/visibilityitem-element.md)|Komutların ve araç çubuklarının statik görünürlüğünü belirler.|
+|[GörünürlükKısıtlamalar](../extensibility/visibilityconstraints-element.md)|Komut gruplarının ve araç çubuklarının statik görünürlüğünü belirler.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage sunar IDE'nin komutlarını (örneğin, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın IDE'ye sağladığı komutları (örneğin, menü öğeleri, menüler, araç çubukları ve açılan kutular) temsil eden tüm öğeleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
@@ -64,5 +64,5 @@ VisibilityConstraints öğesi gruplarını komutları ve araç çubukları stati
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visibilityıtem öğesi](../extensibility/visibilityitem-element.md)
+- [GörünürlükÖğe öğesi](../extensibility/visibilityitem-element.md)
 - [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -1,197 +1,197 @@
 ---
-title: VSıX uzantı Şeması 2,0 başvurusu | Microsoft Docs
+title: VSIX Uzatma Şeması 2.0 Referans | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - vsix
 - extension schema
 ms.assetid: 0da81b98-f5e3-40d3-ba9a-94551378d0b4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c288764cf9182bc34233d312546f7915eed5975
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 78e260c62d67afc10fea25d52169c48b64c82f72
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252175"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697924"
 ---
-# <a name="vsix-extension-schema-20-reference"></a>VSıX uzantı Şeması 2,0 başvurusu
-VSıX dağıtımı bildirim dosyası bir VSıX paketinin içeriğini açıklar. Dosya biçimi bir şemaya tabidir. Bu şemanın sürüm 2,0, özel türlerin ve özniteliklerin eklenmesini destekler.  Bildirimin şeması genişletilebilir. Bildirim yükleyicisi, anladığı XML öğelerini ve özniteliklerini yoksayar.
+# <a name="vsix-extension-schema-20-reference"></a>VSIX uzantı şeması 2.0 referans
+VSIX dağıtım bildirimi dosyası, bir VSIX paketinin içeriğini açıklar. Dosya biçimi bir şema tarafından yönetilir. Bu şema Sürüm 2.0 özel türleri ve öznitelikleri ekleme destekler.  Manifestonun şeması genişletilebilir. Manifest yükleyici XML öğelerini ve anlamadığı öznitelikleri yok sayar.
 
 > [!IMPORTANT]
-> Visual Studio 2015, Visual Studio 2010, Visual Studio 2012 veya Visual Studio 2013 biçimlerinde VSıX dosyaları yükleyebilir.
+> Visual Studio 2015, Visual Studio 2010, Visual Studio 2012 veya Visual Studio 2013 formatlarında VSIX dosyalarını yükleyebilir.
 
-## <a name="package-manifest-schema"></a>Paket bildirim şeması
- Bildirim XML dosyasının `<PackageManifest>`kök öğesi. Bildirim biçiminin sürümü olan tek `Version`bir özniteliğe sahiptir. Biçimde büyük değişiklikler yapılırsa, sürüm biçimi değiştirilir. Bu makalede, `Version` özniteliği Version = "2.0" değerine ayarlanarak bildirimde belirtilen bildirim biçimi sürüm 2,0 açıklanmaktadır.
+## <a name="package-manifest-schema"></a>Paket manifesto şeması
+ Manifeste XML dosyasının kök `<PackageManifest>`öğesi. Bu manifesto biçiminin `Version`sürümü olan tek bir özniteliği vardır. Biçimde büyük değişiklikler yapılırsa, sürüm biçimi değiştirilir. Bu makalede, Sürüm="2.0" değerine özniteliği `Version` ayarlayarak bildirimde belirtilen manifesto biçimi sürüm 2.0 açıklanmaktadır.
 
 ### <a name="packagemanifest-element"></a>PackageManifest öğesi
- `<PackageManifest>` Kök öğesi içinde, aşağıdaki öğeleri kullanabilirsiniz:
+ `<PackageManifest>` Kök öğesi içinde aşağıdaki öğeleri kullanabilirsiniz:
 
-- `<Metadata>`-Paketin kendisi hakkındaki meta veriler ve reklam bilgileri. Bildirimde yalnızca `Metadata` bir öğeye izin veriliyor.
+- `<Metadata>`- Meta veri ve paketin kendisi hakkında reklam bilgileri. Bildirimde `Metadata` yalnızca bir öğeye izin verilir.
 
-- `<Installation>`-Bu bölümde, bu uzantı paketinin yüklenebileceğine yönelik uygulama SKU 'Ları dahil olmak üzere nasıl yüklenebileceğine ilişkin tanımlar. Bildirimde yalnızca tek `Installation` bir öğeye izin veriliyor. Bildirimin bir öğesi olmalıdır veya `Installation` Bu paket herhangi bir SKU 'ya yüklenmez.
+- `<Installation>`- Bu bölümde, bu uzantı paketinin yüklenebildiği uygulama SUS'ları da dahil olmak üzere nasıl yüklenebileceği tanımlanır. Bildirimde `Installation` yalnızca tek bir öğeye izin verilir. Bir bildirimin `Installation` bir öğesi olmalıdır veya bu paket herhangi bir SKU'ya yüklenmez.
 
-- `<Dependencies>`-Bu paket için isteğe bağlı bağımlılıkların listesi burada tanımlanmıştır.
+- `<Dependencies>`- Bu paket için isteğe bağlı bağımlılıklistesi burada tanımlanır.
 
-- `<Assets>`-Bu bölüm, bu pakette bulunan tüm varlıkları içerir. Bu bölüm olmadan, bu paket herhangi bir içerik yüzeyine sahip değildir.
+- `<Assets>`- Bu bölümde, bu pakette yer alan tüm varlıklar yer almaktadır. Bu bölüm olmadan, bu paket herhangi bir içerik yüzey olmaz.
 
-- `<AnyElement>*`-Bildirim şeması, diğer öğelere izin vermek için yeterince esnektir. Bildirim yükleyicisi tarafından tanınmayan tüm alt öğeler, ek XmlElement nesneleri olarak Uzantı Yöneticisi API 'sinde kullanıma sunulur. VSıX uzantıları, bu alt öğeleri kullanarak, Visual Studio 'da çalışan kodun çalışma zamanında erişebileceği bildirim dosyasında ek veriler tanımlayabilir. Bkz. [Microsoft. VisualStudio. ExtensionManager. IExtension. Adtionalelements](/previous-versions/visualstudio/visual-studio-2013/hh265266(v=vs.120)).
+- `<AnyElement>*`- Manifesto şeması diğer unsurlara izin verecek kadar esnektir. Bildirim yükleyici tarafından tanınmayan alt öğeler, Uzantı Yöneticisi API'sinde ekstra XmlElement nesneleri olarak ortaya çıkar. Bu alt öğeleri kullanarak, VSIX uzantıları Visual Studio'da çalışan kodun çalışma zamanında erişebileceği bildirim dosyasında ek veriler tanımlayabilir. Bkz. [Microsoft.visualstudio.extensionManager.iextension.additionalElements](/previous-versions/visualstudio/visual-studio-2013/hh265266(v=vs.120)).
 
-### <a name="metadata-element"></a>Metadata öğesi
- Bu bölüm, paket, kimlik ve reklam bilgileri hakkındaki meta verilerdir. `<Metadata>`Aşağıdaki öğeleri içerir:
+### <a name="metadata-element"></a>Meta veri öğesi
+ Bu bölüm, paket, kimliği ve reklam bilgileri yle ilgili meta verilerdir. `<Metadata>`aşağıdaki öğeleri içerir:
 
-- `<Identity>`-Bu paket için tanımlama bilgilerini tanımlar ve aşağıdaki öznitelikleri içerir:
+- `<Identity>`- Bu paketin kimlik bilgilerini tanımlar ve aşağıdaki öznitelikleri içerir:
 
-  - `Id`-Bu öznitelik, yazarı tarafından seçilen paket için benzersiz bir KIMLIK olmalıdır. Ad, CLR türleriyle gösterilemez aynı şekilde nitelenmelidir: Company.Product.Feature.Name. `Id` Öznitelik 100 karakterle sınırlıdır.
+  - `Id`- Bu öznitelik, yazarı tarafından seçilen paket için benzersiz bir kimlik olmalıdır. Ad, CLR türlerinin ad alanı olarak nitelenmiş olması gerekir: Company.Product.Feature.Name. Öznitelik `Id` 100 karakterle sınırlıdır.
 
-  - `Version`-Bu paketin ve içeriğinin sürümünü tanımlar. Bu öznitelik, CLR derleme sürümü oluşturma biçimini izler: Ana. Ikincil. derleme. Düzeltme (1.2.40308.00). Daha yüksek sürüm numarasına sahip bir paket, paket için güncelleştirmeler olarak değerlendirilir ve var olan yüklü sürümü üzerine yüklenebilir.
+  - `Version`- Bu paketin sürümünü ve içeriğini tanımlar. Bu öznitelik CLR derleme sürüm biçimini izler: Major.Minor.Build.Revision (1.2.40308.00). Daha yüksek sürüm numarasına sahip bir paket, paketin güncelleştirmeleri olarak kabul edilir ve varolan yüklenen sürümün üzerine yüklenebilir.
 
-  - `Language`-Bu öznitelik, paket için varsayılan dildir ve bu bildirimdeki metin verilerine karşılık gelir. Bu öznitelik, kaynak derlemeleri için CLR yerel ayar kod kuralına uyar, örneğin: en-US, en, fr-fr. Visual Studio 'nun `neutral` herhangi bir sürümünde çalışacak dilden bağımsız bir uzantı bildirmek için öğesini belirtebilirsiniz. Varsayılan değer `neutral` şeklindedir.
+  - `Language`- Bu öznitelik paketin varsayılan dilidir ve bu bildirimdeki metin verilerine karşılık gelir. Bu öznitelik, kaynak derlemeleri için CLR yerel kod kuralını izler, örneğin: en-us, en, fr-fr. Visual Studio'nun herhangi bir sürümünde çalışacak dilden bağımsız bir uzantı bildirmek için belirtebilirsiniz. `neutral` Varsayılan değer: `neutral`.
 
-  - `Publisher`-Bu öznitelik, bu paketin yayımcısını bir şirket veya tek bir ad olarak tanımlar. `Publisher` Öznitelik 100 karakterle sınırlıdır.
+  - `Publisher`- Bu öznitelik, bu paketin yayımcısını, bir şirket veya tek tek adı tanımlar. Öznitelik `Publisher` 100 karakterle sınırlıdır.
 
-- `<DisplayName>`-Bu öğe, Uzantı Yöneticisi Kullanıcı arabiriminde görüntülenen kullanıcı dostu paket adını belirtir. `DisplayName` İçerik 50 karakterle sınırlıdır.
+- `<DisplayName>`- Bu öğe, Uzantı Yöneticisi Kullanıcı Arabirimi'nde görüntülenen kullanıcı dostu paket adını belirtir. İçerik `DisplayName` 50 karakterle sınırlıdır.
 
-- `<Description>`-Bu isteğe bağlı öğe, paketin ve Uzantı Yöneticisi Kullanıcı arabiriminde görüntülenen içeriğinin kısa bir açıklamasıdır. `Description` İçerik istediğiniz herhangi bir metin içerebilir, ancak 1000 karakterle sınırlıdır.
+- `<Description>`- Bu isteğe bağlı öğe, uzantı yöneticisi ui'de görüntülenen paketin ve içeriğinin kısa bir açıklamasıdır. İçerik `Description` istediğiniz herhangi bir metni içerebilir, ancak 1000 karakterle sınırlıdır.
 
-- `<MoreInfo>`-Bu isteğe bağlı öğe, çevrimiçi bir sayfanın bir URL 'sidir ve bu paketin tam açıklamasını içerir. Protokol http olarak belirtilmelidir.
+- `<MoreInfo>`- Bu isteğe bağlı öğe, bu paketin tam açıklamasını içeren çevrimiçi bir sayfanın URL'sidir. Protokol http olarak belirtilmelidir.
 
-- `<License>`-Bu isteğe bağlı öğe, pakette bulunan bir lisans dosyasının (. txt,. rtf) göreli yoludur.
+- `<License>`- Bu isteğe bağlı öğe, pakette bulunan bir lisans dosyasına (.txt, .rtf) göreli bir yoldur.
 
-- `<ReleaseNotes>`-Bu isteğe bağlı öğe, pakette (. txt,. rtf) bulunan bir sürüm notları dosyasının göreli yoludur veya sürüm notlarını görüntüleyen bir Web sitesinin URL 'sidir.
+- `<ReleaseNotes>`- Bu isteğe bağlı öğe, pakette bulunan bir sürüm notları dosyasına göreli bir yoldur (.txt, .rtf) veya sürüm notlarını görüntüleyen bir web sitesinin URL'sidir.
 
-- `<Icon>`-Bu isteğe bağlı öğe, pakette bulunan bir görüntü dosyası (PNG, BMP, JPEG, ico) için göreli bir yoldur. Simge görüntüsü 32x32 piksel olmalıdır (veya bu boyuta küçültülecektir) ve ListView Kullanıcı arabiriminde görünür. Hiçbir `Icon` öğe belirtilmemişse, Kullanıcı arabirimi varsayılan kullanır.
+- `<Icon>`- Bu isteğe bağlı öğe, pakette bulunan bir görüntü dosyasına (png, bmp, jpeg, ico) göreli bir yoldur. Simge görüntüsü 32x32 piksel olmalıdır (veya bu boyuta küçültülecek) ve listview UI görünür. Hiçbir `Icon` öğe belirtilmemişse, UI varsayılan kullanır.
 
-- `<PreviewImage>`-Bu isteğe bağlı öğe, pakette bulunan bir görüntü dosyasının (PNG, BMP, JPEG) göreli yoludur. Önizleme resmi 200x200 piksel olmalıdır ve Ayrıntılar Kullanıcı arabiriminde görüntülenir. Hiçbir `PreviewImage` öğe belirtilmemişse, Kullanıcı arabirimi varsayılan kullanır.
+- `<PreviewImage>`- Bu isteğe bağlı öğe, pakette bulunan bir görüntü dosyasına (png, bmp, jpeg) göreli bir yoldur. Önizleme görüntüsü 200x200 piksel olmalı ve ayrıntılarda UI görüntülenmelidir. Hiçbir `PreviewImage` öğe belirtilmemişse, UI varsayılan kullanır.
 
-- `<Tags>`-Bu isteğe bağlı öğe, arama ipuçları için kullanılan ek noktalı virgülle ayrılmış metin etiketlerini listeler. `Tags` Öğesi 100 karakterle sınırlıdır.
+- `<Tags>`- Bu isteğe bağlı öğe, arama ipuçları için kullanılan ek yarı sütunlu sınırlı metin etiketlerini listeler. Öğe `Tags` 100 karakterle sınırlıdır.
 
-- `<GettingStartedGuide>`-Bu isteğe bağlı öğe, bir HTML dosyasına yönelik göreli bir yoldur veya uzantının veya içeriğin Bu pakette nasıl kullanılacağı hakkında bilgi içeren bir Web sitesinin URL 'sidir. Bu kılavuz, bir yüklemenin parçası olarak başlatılır.
+- `<GettingStartedGuide>`- Bu isteğe bağlı öğe, bir HTML dosyasına göreli bir yoldur veya bu paketteki uzantı veya içeriğin nasıl kullanılacağı hakkında bilgi içeren bir web sitesinin URL'sidir. Bu kılavuz yüklemenin bir parçası olarak başlatılır.
 
-- `<AnyElement>*`-Bildirim şeması, diğer öğelere izin vermek için yeterince esnektir. Bildirim yükleyicisi tarafından tanınmayan tüm alt öğeler, XmlElement nesnelerinin bir listesi olarak gösterilir. VSıX uzantıları bu alt öğeleri kullanarak, bildirim dosyasında ek veriler tanımlayabilir ve bunları çalışma zamanında numaralandırabilirler.
+- `<AnyElement>*`- Manifesto şeması diğer unsurlara izin verecek kadar esnektir. Bildirim yükleyici tarafından tanınmayan tüm alt öğeler XmlElement nesnelerinin listesi olarak ortaya çıkar. Bu alt öğeleri kullanarak, VSIX uzantıları bildirim dosyasında ek verileri tanımlayabilir ve çalışma zamanında numaralandırmak.
 
-### <a name="installation-element"></a>Yükleme öğesi
- Bu bölüm, bu paketin yüklenebileceğine ve yüklenebileceğine yönelik uygulama SKU 'Larının yolunu tanımlar. Bu bölüm aşağıdaki öznitelikleri içerir:
+### <a name="installation-element"></a>Kurulum elemanı
+ Bu bölümde, bu paketin nasıl yüklenebileceği ve yükleyebileceği uygulama SUS'ları tanımlanır. Bu bölümde aşağıdaki öznitelikleri içerir:
 
-- `Experimental`-Tüm kullanıcılar için o anda yüklü olan bir uzantıya sahipseniz, ancak aynı bilgisayarda güncelleştirilmiş bir sürüm geliştirdiğinizi bu özniteliği true olarak ayarlayın. Örneğin, tüm kullanıcılar için MyExtension 1,0 ' i yüklediyseniz, ancak aynı bilgisayarda MyExtension 2,0 ' de hata ayıklamak istiyorsanız, deneysel = "true" olarak ayarlayın. Bu öznitelik, Visual Studio 2015 güncelleştirme 1 ve sonraki sürümlerinde kullanılabilir.
+- `Experimental`- Şu anda tüm kullanıcılar için yüklü bir uzantınız varsa, ancak aynı bilgisayarda güncelleştirilmiş bir sürüm geliştiriyorsanız, bu özniteliği doğru olarak ayarlayın. Örneğin, tüm kullanıcılar için MyExtension 1.0 yüklediyseniz, ancak MyExtension 2.0'ı aynı bilgisayarda hata ayıklamak istiyorsanız, Experimental="true"u ayarlayın. Bu özellik Visual Studio 2015 Update 1 ve sonraki yerlerde kullanılabilir.
 
-- `Scope`-Bu öznitelik "Global" veya "ProductExtension" değerini alabilir:
+- `Scope`- Bu öznitelik "Global" veya "ProductExtension" değerini alabilir:
 
-  - "Genel", yüklemenin belirli bir SKU 'ya kapsam dışı olduğunu belirtir. Örneğin, bu değer bir uzantı SDK 'Sı yüklendiğinde kullanılır.
+  - "Global", yüklemenin belirli bir SKU kapsamına dahil olmadığını belirtir. Örneğin, bir Uzantı SDK yüklendiğinde bu değer kullanılır.
 
-  - "ProductExtension" geleneksel bir VSıX uzantısının (sürüm 1,0) tek tek Visual Studio SKU 'Larının yüklü olduğunu belirtir. Varsayılan değer budur.
+  - "ProductExtension", bireysel Visual Studio SKU'ları içeren geleneksel bir VSIX Uzantısının (sürüm 1.0) yüklü olduğunu belirtir. Varsayılan değer budur.
 
-- `AllUsers`-Bu isteğe bağlı öznitelik, bu paketin tüm kullanıcılar için yüklenip yüklenmeyeceğini belirtir. Varsayılan olarak, bu öznitelik false şeklindedir ve paketin Kullanıcı başına olduğunu belirtir. (Bu değeri true olarak belirlediğinizde, yükleme Kullanıcı, sonuçta elde edilen VSıX 'i yüklemek için yönetici ayrıcalık düzeyine yükseltilmelidir.
+- `AllUsers`- Bu isteğe bağlı öznitelik, bu paketin tüm kullanıcılar için yüklenip yüklenmeyeceğini belirtir. Varsayılan olarak, bu öznitelik, paketin kullanıcı başına olduğunu belirten yanlıştır. (Bu değeri doğru ayarladığınızda, yükleme kullanıcısının elde edilen VSIX'yi yüklemek için yönetim ayrıcalık düzeyine yükseltmesi gerekir.
 
-- `InstalledByMsi`-Bu isteğe bağlı öznitelik, bu paketin bir MSI tarafından yüklenip yüklenmediğini belirtir. MSI tarafından yüklenen paketler, Visual Studio Uzantı Yöneticisi tarafından değil, MSI (Programlar ve Özellikler) tarafından yüklenir ve yönetilir.  Varsayılan olarak, bu öznitelik, paketin bir MSI tarafından yüklenmediğini belirten false değeridir.
+- `InstalledByMsi`- Bu isteğe bağlı öznitelik, bu paketin bir MSI tarafından yüklenip yüklenmediğini belirtir. MSI tarafından yüklenen paketler Visual Studio Extension Manager tarafından değil, MSI (Programlar ve Özellikler) tarafından yüklenir ve yönetilir.  Varsayılan olarak, bu öznitelik, paketin bir MSI tarafından yüklenmediğini belirten yanlıştır.
 
-- `SystemComponent`-Bu isteğe bağlı öznitelik, bu paketin bir sistem bileşeni olarak kabul edilip edilmeyeceğini belirtir. Sistem bileşenleri Uzantı Yöneticisi Kullanıcı arabiriminde gösterilmez ve güncelleştirilemez. Varsayılan olarak, bu öznitelik, paketin bir sistem bileşeni olmadığını belirten false değeridir.
+- `SystemComponent`- Bu isteğe bağlı öznitelik, bu paketin bir sistem bileşeni olarak kabul edilip edilmemesi gerektiğini belirtir. Sistem bileşenleri Uzantı Yöneticisi UI'de gösterilmez ve güncelleştirilemez. Varsayılan olarak, bu öznitelik, paketin bir sistem bileşeni olmadığını belirten yanlıştır.
 
-- `AnyAttribute*`-Öğesi `Installation` , çalışma zamanında ad-değer çifti sözlüğü olarak sunulacak bir açık uçlu Öznitelikler kümesini kabul eder.
+- `AnyAttribute*`- `Installation` Öğe, çalışma zamanında açık uçlu öznitelikler kümesini ad değeri çifti sözlüğü olarak kabul eder.
 
-- `<InstallationTarget>`-Bu öğe, VSıX yükleyicisinin paketi yüklediği konumu denetler. Eğer `Scope` özniteliğin değeri "ProductExtension" ise paketin, kendi içeriğinin bir parçası olarak bir bildirim dosyası yükleyen bir SKU 'yu hedeflemesi gerekir. Özniteliği açık veya varsayılan "ProductExtension" değerine sahip `<InstallationTarget>` olduğunda öğesi aşağıdaki `Scope` özniteliklere sahiptir:
+- `<InstallationTarget>`-Bu eleman, VSIX yükleyicisinin paketi yüklendiği yeri kontrol eder. Özniteliğin `Scope` değeri "ProductExtension" ise, paketin uzantılarına kullanılabilirliğini bildirmek için içeriğinin bir parçası olarak bir manifesto dosyası yüklemiş olan bir SKU'yu hedeflemesi gerekir. Öznitelik `<InstallationTarget>` açık veya varsayılan `Scope` değeri "ProductExtension" olduğunda öğe aşağıdaki özniteliklere sahiptir:
 
-  - `Id`-Bu öznitelik, paketini tanımlar.  Özniteliği ad alanı kuralına uyar: Company.Product.Feature.Name. `Id` Öznitelik yalnızca alfasayısal karakterler içerebilir ve 100 karakterle sınırlıdır. Beklenen değerler:
+  - `Id`- Bu öznitelik paketi tanımlar.  Öznitelik ad alanı kuralını izler: Company.Product.Feature.Name. Öznitelik `Id` yalnızca alfasayısal karakterler içerebilir ve 100 karakterle sınırlıdır. Beklenen değerler:
 
-    - Microsoft. VisualStudio. ıntegratedshell
+    - Microsoft.VisualStudio.IntegratedShell
 
     - Microsoft.VisualStudio.Pro
 
-    - Microsoft. VisualStudio. Premium
+    - Microsoft.VisualStudio.Premium
 
-    - Microsoft. VisualStudio. Ultimate
+    - Microsoft.VisualStudio.Ultimate
 
-    - Microsoft. VisualStudio. Ödexpress
+    - Microsoft.VisualStudio.VWDExpress
 
-    - Microsoft. VisualStudio. VPDExpress
+    - Microsoft.VisualStudio.VPDExpress
 
     - Microsoft.VisualStudio.VSWinExpress
 
-    - Microsoft. VisualStudio. VSLS
+    - Microsoft.VisualStudio.VSLS
 
-    - My. Shell. app
+    - My.Shell.App
 
-  - `Version`-Bu öznitelik, bu SKU 'nun en düşük ve en yüksek desteklenen sürümlerini içeren bir sürüm aralığı belirtir. Bir paket, desteklediği SKU 'ların sürümlerini ayrıntılandırır. Sürüm aralığı gösterimi [10,0-11,0], burada
+  - `Version`- Bu özellik, bu SKU'nun en az ve maksimum desteklenen sürümlerine sahip bir sürüm aralığı belirtir. Paket, desteklediği SNU'ların sürümlerini ayrıntılarıyla anlatabilir. Sürüm aralığı gösterimi [10.0 - 11.0], nerede
 
-    - [-en düşük sürüm dahil.
+    - [ - minimum sürüm dahil.
 
-    - ]-en yüksek sürüm dahil.
+    - ] - maksimum sürüm dahil.
 
-    - (-en düşük sürüm dışlamalı.
+    - ( - minimum sürüm özel.
 
-    - )-en yüksek sürüm dışlamalı.
+    - ) - maksimum sürüm özel.
 
-    - Tek sürüm #-yalnızca belirtilen sürüm.
+    - Tek sürüm # - sadece belirtilen sürümü.
 
     > [!IMPORTANT]
-    > VSıX şemasının sürüm 2,0 sürümü Visual Studio 2012 ' de tanıtılmıştı. Bu şemayı kullanmak için makinede Visual Studio 2012 veya sonraki bir sürümünün yüklü olması ve söz konusu ürünün parçası olan Valtınstaller. exe ' yi kullanmanız gerekir. Visual Studio 'nun önceki sürümlerini Visual Studio 2012 veya sonraki bir Valtıyükleyicisi ile, ancak yalnızca yükleyicinin sonraki sürümlerini kullanarak hedefleyebilirsiniz.
+    > VSIX Schema sürümü 2.0 Visual Studio tanıtıldı 2012. Bu şemayı kullanmak için Visual Studio 2012 veya daha sonra makineye yüklenmiş olmalı ve bu ürünün bir parçası olan VSIXInstaller.exe'yi kullanmalısınız. Visual Studio'nun önceki sürümlerini Visual Studio 2012 veya daha sonra VSIXInstaller ile, ancak yükleyicinin sonraki sürümlerini kullanarak hedefleyebilirsiniz.
 
-    Visual Studio 2017 sürüm numaraları, [Visual Studio derleme numaralarında ve sürüm tarihlerinde](../install/visual-studio-build-numbers-and-release-dates.md)bulunabilir.
+    Visual Studio 2017 sürüm numaraları [Visual Studio yapı numaraları ve çıkış tarihlerinde](../install/visual-studio-build-numbers-and-release-dates.md)bulunabilir.
 
-    Visual Studio 2017 sürümleri için sürüm ifade edildiğinde, ikincil sürüm her zaman **0**olmalıdır. Örneğin, Visual Studio 2017 sürüm 15.3.26730.0, [15.0.26730.0, 16.0) olarak ifade edilmelidir. Bu yalnızca Visual Studio 2017 ve üzeri sürüm numaraları için gereklidir.
+    Visual Studio 2017 sürümleri için sürümü ifade ederken, küçük sürümü her zaman **0**olmalıdır . Örneğin, Visual Studio 2017 sürüm 15.3.26730.0 [15.0.26730.0,16.0) olarak ifade edilmelidir. Bu sadece Visual Studio 2017 ve sonraki sürüm numaraları için gereklidir.
 
-  - `AnyAttribute*`-Öğesi `<InstallationTarget>` , çalışma zamanında bir ad-değer çifti sözlüğü olarak ortaya çıkarılan bir açık uçlu öznitelikler kümesine izin verir.
+  - `AnyAttribute*`- `<InstallationTarget>` Öğe, çalışma zamanında ad değeri çifti sözlüğü olarak açık uçlu özniteliklerkümesine izin verir.
 
-### <a name="dependencies-element"></a>Dependencies öğesi
- Bu öğe, bu paketin bildirdiği bağımlılıkların bir listesini içerir. Herhangi bir bağımlılık belirtilmişse, bu paketlerin (kendileri `Id`tarafından tanımlanan) daha önce yüklenmiş olması gerekir.
+### <a name="dependencies-element"></a>Bağımlılıklar öğesi
+ Bu öğe, bu paketin bildirdiği bağımlılıkların listesini içerir. Herhangi bir bağımlılık belirtilmişse, bu `Id`paketler (kendi tarafından tanımlanan) daha önce yüklenmiş olmalıdır.
 
-- `<Dependency>`öğe-bu alt öğe aşağıdaki özniteliklere sahiptir:
+- `<Dependency>`eleman - Bu alt öğe aşağıdaki özniteliklere sahiptir:
 
-  - `Id`-Bu özniteliğin bağımlı paket için benzersiz bir KIMLIK olması gerekir. Bu kimlik değeri, `<Metadata><Identity>Id` bu paketin bağımlı olduğu bir paketin özniteliğiyle eşleşmelidir. `Id` Özniteliği ad alanı kuralına uyar: Company.Product.Feature.Name. Öznitelik yalnızca alfasayısal karakterler içerebilir ve 100 karakterle sınırlıdır.
+  - `Id`- Bu öznitelik bağımlı paket için benzersiz bir kimlik olmalıdır. Bu kimlik değeri, `<Metadata><Identity>Id` bu paketin bağımlı olduğu bir paketin özniteliğiyle eşleşmelidir. Öznitelik `Id` ad alanı kuralını izler: Company.Product.Feature.Name. Öznitelik yalnızca alfasayısal karakterler içerebilir ve 100 karakterle sınırlıdır.
 
-  - `Version`-Bu öznitelik, bu SKU 'nun en düşük ve en yüksek desteklenen sürümlerini içeren bir sürüm aralığı belirtir. Bir paket, desteklediği SKU 'ların sürümlerini ayrıntılandırır. Sürüm aralığı gösterimi [12,0, 13,0], burada:
+  - `Version`- Bu özellik, bu SKU'nun en az ve maksimum desteklenen sürümlerine sahip bir sürüm aralığı belirtir. Paket, desteklediği SNU'ların sürümlerini ayrıntılarıyla anlatabilir. Sürüm aralığı gösterimi [12.0, 13.0], nerede:
 
-    - [-en düşük sürüm dahil.
+    - [ - minimum sürüm dahil.
 
-    - ]-en yüksek sürüm dahil.
+    - ] - maksimum sürüm dahil.
 
-    - (-en düşük sürüm dışlamalı.
+    - ( - minimum sürüm özel.
 
-    - )-en yüksek sürüm dışlamalı.
+    - ) - maksimum sürüm özel.
 
-    - Tek sürüm #-yalnızca belirtilen sürüm.
+    - Tek sürüm # - sadece belirtilen sürümü.
 
-  - `DisplayName`-Bu öznitelik, iletişim kutuları ve hata iletileri gibi kullanıcı arabirimi öğelerinde kullanılan bağımlı paketin görünen adıdır. Bağımlı paket MSI tarafından yüklenmediği takdirde öznitelik isteğe bağlıdır.
+  - `DisplayName`- Bu öznitelik, iletişim kutuları ve hata iletileri gibi Kullanıcı Arabirimi öğelerinde kullanılan bağımlı paketin görüntü adıdır. Bağımlı paket MSI tarafından yüklenmediği sürece öznitelik isteğe bağlıdır.
 
-  - `Location`-Bu isteğe bağlı öznitelik, bu VSıX içindeki göreli yolu, iç içe geçmiş bir VSıX paketine ya da bağımlılık için indirme konumunun URL 'sini belirtir. Bu öznitelik, kullanıcının önkoşul paketini bulmasını sağlamak için kullanılır.
+  - `Location`- Bu isteğe bağlı öznitelik, bu VSIX içindeki göreli yolu iç içe geçen bir VSIX paketine veya bağımlılık için indirme konumuna bir URL olarak belirtir. Bu öznitelik, kullanıcının ön koşul paketini bulmasına yardımcı olmak için kullanılır.
 
-  - `AnyAttribute*`-Öğesi `Dependency` , çalışma zamanında ad-değer çifti sözlüğü olarak sunulacak bir açık uçlu Öznitelikler kümesini kabul eder.
+  - `AnyAttribute*`- `Dependency` Öğe, çalışma zamanında açık uçlu öznitelikler kümesini ad değeri çifti sözlüğü olarak kabul eder.
 
 ### <a name="assets-element"></a>Varlıklar öğesi
- Bu öğe, `<Asset>` bu paketin karşılaştığı her bir uzantı veya içerik öğesi için etiket listesi içerir.
+ Bu öğe, bu `<Asset>` paket tarafından su yüzüne çıkan her uzantı veya içerik öğesi için etiketlerin listesini içerir.
 
-- `<Asset>`-Bu öğe aşağıdaki öznitelikleri ve öğeleri içerir:
+- `<Asset>`- Bu öğe aşağıdaki öznitelikleri ve öğeleri içerir:
 
-  - `Type`-Bu öğe tarafından temsil edilen uzantı veya içerik türü. Her `<Asset>` öğenin tek `Type`bir olması gerekir, ancak birden `<Asset>` çok öğe aynı `Type`olabilir. Bu öznitelik, ad alanı kurallarına göre tam nitelikli bir ad olarak temsil edilmelidir. Bilinen türler şunlardır:
+  - `Type`- Bu öğe tarafından temsil edilen uzantı veya içerik türü. Her `<Asset>` öğenin tek `Type`bir `<Asset>` öğesi olmalıdır, `Type`ancak birden çok öğe aynı olabilir. Bu öznitelik, ad alanı kurallarına göre tam nitelikli bir ad olarak temsil edilmelidir. Bilinen türleri şunlardır:
 
     1. Microsoft.VisualStudio.VsPackage
 
-    2. Microsoft. VisualStudio. MefComponent
+    2. Microsoft.VisualStudio.MefComponent
 
-    3. Microsoft. VisualStudio. ToolboxControl
+    3. Microsoft.VisualStudio.ToolboxControl
 
-    4. Microsoft. VisualStudio. Samples
+    4. Microsoft.VisualStudio.Samples
 
-    5. Microsoft. VisualStudio. ProjectTemplate
+    5. Microsoft.VisualStudio.ProjectTemplate
 
-    6. Microsoft. VisualStudio. ItemTemplate
+    6. Microsoft.VisualStudio.ItemTemplate
 
-    7. Microsoft. VisualStudio. Assembly
+    7. Microsoft.VisualStudio.Assembly
 
-       Kendi türlerinizi oluşturabilir ve bunlara benzersiz adlar verebilirsiniz. Visual Studio içindeki çalışma zamanında, kodunuz Uzantı Yöneticisi API 'SI aracılığıyla bu özel türleri listeleyemez ve bunlara erişebilir.
+       Kendi türlerinizi oluşturabilir ve onlara benzersiz adlar verebilirsiniz. Visual Studio içinde çalışma zamanında, kodunuz uzantı yöneticisi API üzerinden numaralandırma ve bu özel türleri erişebilirsiniz.
 
-  - `Path`-varlığı içeren paket içindeki dosyanın veya klasörün göreli yolu.
+  - `Path`- kıymeti içeren paket içindeki dosya veya klasöre göreli yol.
 
-  - `TargetVersion`-Belirtilen varlığın geçerli olduğu sürüm aralığı. Varlıkların birden çok sürümünü Visual Studio 'nun farklı sürümlerine teslim etmek için kullanılır. Geçerli olması için Visual Studio 2017,3 veya üstünü gerektirir.
+  - `TargetVersion`- verilen varlığın uygulandığı sürüm aralığı. Varlıkların birden çok versiyonunu Visual Studio'nun farklı sürümlerine nakletmek için kullanılır. Visual Studio 2017.3 veya daha yeni etkisi olmasını gerektirir.
 
-  - `AnyAttribute*`-Çalışma zamanında bir ad-değer çifti sözlüğü olarak ortaya çıkarılan bir açık uçlu öznitelik kümesi.
+  - `AnyAttribute*`- Ad değeri çifti sözlüğü olarak çalışma zamanında ortaya çıkarılan açık uçlu öznitelikler kümesi.
 
-    `<AnyElement>*`- `<Asset>` Başlangıç ve bitiş etiketi arasında yapılandırılmış içeriğe izin verilir. Tüm öğeler XmlElement nesnelerinin bir listesi olarak gösterilir. VSıX uzantıları, bildirim dosyasında yapılandırılmış türe özgü meta verileri tanımlayabilir ve bunları çalışma zamanında numaralandırır.
+    `<AnyElement>*`- Herhangi bir yapılandırılmış `<Asset>` içerik bir başlangıç ve bitiş etiketi arasında izin verilir. Tüm öğeler XmlElement nesnelerin in bir listesi olarak maruz kalır. VSIX uzantıları, bildirim dosyasında yapılı türe özgü meta verileri tanımlayabilir ve bunları çalışma zamanında numaralandırmak için kullanılabilir.
 
-### <a name="sample-manifest"></a>Örnek bildirim
+### <a name="sample-manifest"></a>Örnek manifesto
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -221,4 +221,4 @@ VSıX dağıtımı bildirim dosyası bir VSıX paketinin içeriğini açıklar. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio uzantılarını gönder](../extensibility/shipping-visual-studio-extensions.md)
+- [Gemi Görsel Stüdyo uzantıları](../extensibility/shipping-visual-studio-extensions.md)

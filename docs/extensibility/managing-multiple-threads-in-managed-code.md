@@ -1,31 +1,31 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kodda birden çok iş parçacığını yönetme | Microsoft Docs'
+title: 'Nasıl Yapilir: Yönetilen Kodda Birden Çok İş Parçacığı Yönetme | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 307ee61380b137cc7426c641a85844934ff0377a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ceaa0af4f57fe374cf9cf4b2dd8b4f40af74a852
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340588"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702776"
 ---
-# <a name="how-to-manage-multiple-threads-in-managed-code"></a>Nasıl yapılır: Yönetilen kodda birden çok iş parçacığı yönetme
-Visual Studio UI iş parçacığı dışında iş parçacığı üzerinde yürütülen işlemler zaman uyumsuz yöntemleri çağırır veya yönetilen bir VSPackage uzantısı varsa, aşağıda verilen yönergeleri izlemelidir. Bunu tamamlamak için başka bir iş parçacığı üzerinde iş için beklemesi gerekmez çünkü UI iş parçacığı hızlı yanıt veren tutabilirsiniz. Yığın yer kaplar ek iş parçacıkları sahip olmadığınızdan, kodunuzu daha verimli hale getirebilir ve daha güvenilir ve daha kolay Kilitlenmeler ve kilitlenmelerini önlemek için hata ayıklama yapabilirsiniz.
+# <a name="how-to-manage-multiple-threads-in-managed-code"></a>Nasıl yapılsın: Yönetilen kodda birden çok iş parçacığı yönetme
+Eşzamanlı yöntemler çağıran yönetilen bir VSPackage uzantınız varsa veya Visual Studio UI iş parçacığı dışındaki iş parçacıklarında işlem yürüten işlemleri varsa, aşağıda verilen yönergeleri izlemeniz gerekir. Başka bir iş parçacığı üzerinde çalışmanın tamamlanmasını beklemesi gerekmedığından, UI iş parçacığının yanıt vermesini sağlayabilirsiniz. Yığın alanı kaplayan ekstra iş parçacığınız olmadığından ve kilitlenmeleri ve askıları önlemek için hata ayıklama daha güvenilir ve daha kolay hale getirebilirsiniz, çünkü kodunuzu daha verimli hale getirebilirsiniz.
 
- Genel olarak, farklı bir iş parçacığı UI iş parçacığından geçebilir veya bunun tersi de geçerlidir. Yöntem döndürüldüğünde, geçerli iş parçacığı içinden verilmiş olan başlangıçtaki parçacığıdır.
+ Genel olarak, UI iş parçacığından farklı bir iş parçacığına veya tam tersi bir konuya geçebilirsiniz. Yöntem döndüğünde, geçerli iş parçacığı ilk çağrıldığı iş parçacığıdır.
 
 > [!IMPORTANT]
-> API'leri aşağıdaki kılavuzları kullanın <xref:Microsoft.VisualStudio.Threading> ad alanı, özellikle de <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> sınıfı. Bu ad alanındaki API'leri yeni [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]. Örneği alabileceğiniz bir <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> gelen <xref:Microsoft.VisualStudio.Shell.ThreadHelper> özelliği `ThreadHelper.JoinableTaskFactory`.
+> Aşağıdaki yönergeler, <xref:Microsoft.VisualStudio.Threading> ad alanında, özellikle de <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> sınıfta KI API'leri kullanır. Bu ad alanındaki API'ler [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]''de yenidir. Özellikten <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> <xref:Microsoft.VisualStudio.Shell.ThreadHelper> bir örnek `ThreadHelper.JoinableTaskFactory`alabilirsiniz.
 
-## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>UI iş parçacığından bir arka plan iş parçacığına geçiş
+## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>UI iş parçacığından arka plan iş parçacığına geçiş
 
-1. UI iş parçacığı üzerinde olan ve zaman uyumsuz işler, bir arka plan iş parçacığı kullanımı yapmak istediğiniz `Task.Run()`:
+1. Kullanıcı Giçin iş parçacığı üzerindeyseniz ve arka plan iş parçacığı üzerinde `Task.Run()`eşzamanlı çalışma yapmak istiyorsanız, şunları kullanın:
 
     ```csharp
     await Task.Run(async delegate{
@@ -35,7 +35,7 @@ Visual Studio UI iş parçacığı dışında iş parçacığı üzerinde yürü
 
     ```
 
-2. UI iş parçacığı üzerinde olan ve bir arka plan iş parçacığında kullanımı iş gerçekleştirirken zaman uyumlu olarak engellemek istiyorsanız <xref:System.Threading.Tasks.TaskScheduler> özelliği `TaskScheduler.Default` içinde <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>:
+2. Kullanıcı Birkullanıcı Bilgi Birimi iş parçacığı üzerindeyseniz ve arka plan iş parçacığı üzerinde <xref:System.Threading.Tasks.TaskScheduler> iş `TaskScheduler.Default` <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>yaparken eşzamanlı olarak engellemek istiyorsanız, içindeki özelliği kullanın:
 
     ```csharp
     // using Microsoft.VisualStudio.Threading;
@@ -49,16 +49,16 @@ Visual Studio UI iş parçacığı dışında iş parçacığı üzerinde yürü
 
 ## <a name="switch-from-a-background-thread-to-the-ui-thread"></a>Arka plan iş parçacığından UI iş parçacığına geçiş
 
-1. Arka plan iş parçacığında işiniz ve kullanıcı Arabirimi iş parçacığı kullanımı hakkında bir şey istiyorsanız <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>:
+1. Bir arka plan iş parçacığı üzerinde iseniz ve UI iş <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>parçacığı üzerinde bir şey yapmak istiyorsanız, kullanın:
 
     ```csharp
     // Switch to main thread
     await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
     ```
 
-     Kullanabileceğiniz <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> UI iş parçacığına geçiş yapmak için yöntemi. Bu yöntem, devamlılığın geçerli zaman uyumsuz metot ile UI iş parçacığına bir ileti gönderir ve ayrıca doğru önceliğini ayarlamak ve kilitlenmeleri önlemek için iş parçacığı çerçevesi geri kalanı ile iletişim kurar.
+     UI iş <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> parçacığına geçmek için yöntemi kullanabilirsiniz. Bu yöntem, geçerli asynchronous yönteminin devamı ile Kullanıcı Bira iş parçacığına bir ileti gönderir ve doğru önceliği ayarlamak ve kilitlenmeleri önlemek için iş parçacığı çerçevesinin geri kalanıyla da iletişim kurar.
 
-     Arka plan iş parçacığı yönteminizi zaman uyumsuz değildir ve zaman uyumsuz yapamazsınız, kullanmaya devam edebilirsiniz `await` iş sarmalama tarafından UI iş parçacığına geçiş yapmak için söz dizimi <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>, bu örnekte olduğu gibi:
+     Arka plan iş parçacığı yönteminiz eşzamanlı değilse ve eşzamanlı hale getiremiyorsanız, çalışmanızı `await` <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>şu örnekte olduğu gibi saran kullanıcı arası iş parçacığına geçmek için sözdizimini kullanmaya devam edebilirsiniz:
 
     ```csharp
     ThreadHelper.JoinableTaskFactory.Run(async delegate {

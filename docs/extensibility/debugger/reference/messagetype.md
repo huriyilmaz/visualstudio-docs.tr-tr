@@ -1,5 +1,5 @@
 ---
-title: MESSAGETYPE | Microsoft Docs
+title: MESAJ TÜRÜ | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MESSAGETYPE enumeration
 ms.assetid: 800cc77d-3c27-4763-a9df-552a9384bd49
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8c17860bb47f493031e6db1134aec498611b07f1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b4d0fd12495a59427500c16ef6f37d9f8b6e61f5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339200"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714494"
 ---
 # <a name="messagetype"></a>MESSAGETYPE
-Neden ve ileti türünü belirtir.
+İleti türünü ve nedenini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -52,36 +52,36 @@ public enum enum_MESSAGETYPE { 
 
 ## <a name="fields"></a>Alanlar
  `MT_OUTPUTSTRING`\
- İleti için çıkış penceresine gönderilen olduğunu gösterir. Bu gelen birbirini dışlayan `MT_MESSAGEBOX`.
+ İletinin çıkış penceresine gönderilmesi gerektiğini gösterir. Bu birbirini dışlayan `MT_MESSAGEBOX`bir şey.
 
  `MT_MESSAGEBOX`\
- İleti bir ileti kutusunda gösterilecek gösterir. Bu gelen birbirini dışlayan `MT_OUTPUTSTRING`.
+ İletinin ileti kutusunda gösterilmesi gerektiğini gösterir. Bu birbirini dışlayan `MT_OUTPUTSTRING`bir şey.
 
  `MT_TYPE_MASK`\
- İleti için hedef yalıtmak için bir maske değeri.
+ İletinin hedefini yalıtmak için bir maske değeri.
 
  `MT_REASON_EXCEPTION`\
- Bir özel durum sonucu olarak bir ileti kutusu gösterilmekte olduğunu gösterir. Bu gelen birbirini dışlayan `MT_REASON_TRACEPOINT`.
+ Bir özel durum sonucunda ileti kutusunun gösterildiğini gösterir. Bu birbirini dışlayan `MT_REASON_TRACEPOINT`bir şey.
 
  `MT_REASON_TRACEPOINT`\
- Bir ileti kutusu sonucunda bir izleme noktasına ulaşma gösterilmekte olduğunu gösterir. Bu birbirini dışlayan olan `MT_REASON_EXCEPTION`.
+ İzleme noktasına çarpması sonucu ileti kutusunun gösterildiğini gösterir. Bu birbirini dışlayan `MT_REASON_EXCEPTION`bir şey.
 
  `MT_REASON_MASK`\
- Gösterilen iletiyi nedeni yalıtmak için bir maske değeri.
+ İletinin gösterilme nedenini yalıtmak için bir maske değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerleri döndürülen [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) ve [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) yöntemleri.
+ Bu değerler GetMessage ve [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) yöntemlerinden döndürülür. [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)
 
- Neden değerlerinden birleştirilebilir bit düzeyinde kullanarak çıkış hedef değerlerden biriyle `OR`.
+ Neden değerlerinden biri bitwise `OR`kullanılarak çıktı hedef değerlerinden biri ile kombine edilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)
 - [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Step | Microsoft Docs
+title: IDebugProgram2::Adım | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::Step
 ms.assetid: e4c2ffce-9810-4088-8162-eac9ef04f2a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8030bd45850a2b81e3cfb03a83497bba77c4515c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 194e72eba5a3f137e4650752a090d91ad7c402fa
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325292"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722765"
 ---
 # <a name="idebugprogram2step"></a>IDebugProgram2::Step
-Bir adımı gerçekleştirir.
+Bir adım gerçekleştirir.
 
 > [!NOTE]
-> Bu metot kullanımdan kaldırılmıştır. Kullanım [adım](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemi yerine.
+> Bu yöntem amortismana hazırdır. Bunun yerine [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemini kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,24 +48,24 @@ int Step( 
 
 ## <a name="parameters"></a>Parametreler
 `pThread`\
-[in] Bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) basamaklı iş parçacığını temsil eden nesne.
+[içinde] Adımlanan iş parçacığı temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `sk`\
-[in] Bir değer [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) adım türünü belirten sabit listesi.
+[içinde] Adım türünü belirten [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) numaralandırmasından bir değer.
 
 `step`\
-[in] Bir değer [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) adım birimini (örneğin, ifade veya yönerge) belirten sabit listesi.
+[içinde] [Stepbirimi](../../../extensibility/debugger/reference/stepunit.md) numaralandırmasından bir değer (örneğin, deyim veya yönergeile) adım birimini belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirli bir iş parçacığının adımlanırken durumunda herhangi bir iş parçacığı eşitleme veya iş parçacıkları arasındaki iletişim, programdaki diğer iş parçacıklarını çalıştırmanız gerekir.
+ İş parçacıkları arasında iş parçacığı eşitleme veya iletişim olması durumunda, belirli bir iş parçacığı adımlanırken programdaki diğer iş parçacıkları çalıştırılmalıdır.
 
 > [!WARNING]
-> Durdurma olay veya hemen (zaman uyumlu) olaya göndermeyin [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) işlenirken bu çağrı; Aksi takdirde hata ayıklayıcı kilitlenebilir.
+> Bu aramayı işlerken Bir durdurma olayını veya [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) anına anında (eşzamanlı) bir olay göndermeyin; aksi takdirde hata ayıklama asılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
-- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+- [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

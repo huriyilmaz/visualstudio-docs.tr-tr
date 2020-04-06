@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugBoundBreakpoints2::Next | Microsoft Docs
+title: IEnumDebugBoundBreakpoints2::Sonraki | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugBoundBreakpoints2::Next
 ms.assetid: cb3a249f-2282-4bdc-b6d8-a4ee4bfb8365
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 92de3edb5e0720654714555f6073c19561450c3c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 76b79e1bd49f24044a967bd72a52c91735f468ef
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314171"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717529"
 ---
 # <a name="ienumdebugboundbreakpoints2next"></a>IEnumDebugBoundBreakpoints2::Next
-Sabit listesinden alınmış sonraki öğe kümesini döndürür.
+Numaralandırmadan sonraki eleman kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınacak öğelerin sayısı. Ayrıca en büyük boyutunu belirtir `rgelt` dizisi.
+[içinde] Alınacak öğe sayısı. Ayrıca `rgelt` dizinin en büyük boyutunu belirtir.
 
 `rgelt`\
-[out içinde] Dizi [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) doldurulacak öğeleri.
+[içinde, dışarı] Doldurulacak [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) öğeleri dizisi.
 
 `pceltFetched`\
-[out] Gerçekte döndürülen öğe sayısını döndürür `rgelt`.
+[çıkış] Gerçekte döndürülen öğe sayısını `rgelt`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` istenen öğelerin sayısından daha az döndürülebilen; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döndürür. İstenen öğe sayısından daha az ise döndürür; `S_FALSE` aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)

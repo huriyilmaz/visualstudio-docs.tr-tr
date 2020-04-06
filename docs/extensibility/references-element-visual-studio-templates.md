@@ -1,5 +1,5 @@
 ---
-title: Öğesi (Visual Studio şablonları) başvuruda | Microsoft Docs
+title: Referanslar Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - <References> element [Visual Studio Templates]
 - References element [Visual Studio Templates]
 ms.assetid: 1969146d-46bf-422d-8d46-0e9493925003
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2ab5c3decc201958bd939a0a9d66dd65a5ef1c6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ef31c5e7550ec7c6e4570d156d364afcf4ad6819
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334415"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701610"
 ---
-# <a name="references-element-visual-studio-templates"></a>References öğesi (Visual Studio şablonları)
-Gruplar için proje şablonu ekleyen derleme başvuruları.
+# <a name="references-element-visual-studio-templates"></a>Referanslar öğesi (Visual Studio şablonları)
+Şablonun projelere eklediği derleme başvurularını gruplandırın.
 
- \<VSTemplate > \<TemplateContent > \<başvuruları >
+ \<VSTemplate \<> Şablonİçerik> \<Referanslar>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,21 +46,21 @@ Gruplar için proje şablonu ekleyen derleme başvuruları.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Öğe bir projeye eklendiğinde eklemek için derleme başvurusu belirtir. Bir veya daha fazla olmalıdır `Reference` öğelerinde bir `References` öğesi.|
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Öğe projeye eklendiğinde eklemek için derleme başvuru belirtir. Bir `References` öğede bir `Reference` veya daha fazla öğe olmalıdır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Şablonu içeriğini belirtir.|
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Şablonun içeriğini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
- `References` bir isteğe bağlı bir alt öğesidir `TemplateContent`.
+ `References`isteğe bağlı bir `TemplateContent`alt öğedir.
 
- `Reference` Ve `References` öğeleri yalnızca kullanılabilir *.vstemplate* sahip dosyalar bir `Type` öznitelik değerini `Item`.
+ Ve `Reference` `References` öğeleri yalnızca öznitelik değeri olan `Type` *.vstemplate* dosyalarında `Item`kullanılabilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte gösterilmiştir `TemplateContent` öğe şablonu öğesidir. Bu XML başvuruları ekler *System.dll* ve *System.Data.dll* derlemeler.
+ Aşağıdaki örnekte, `TemplateContent` bir öğe şablonunun öğesi gösterin. Bu XML *System.dll* ve *System.Data.dll* derlemelerine göndermeler ekler.
 
 ```xml
 <TemplateContent>
@@ -81,5 +81,5 @@ Gruplar için proje şablonu ekleyen derleme başvuruları.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)

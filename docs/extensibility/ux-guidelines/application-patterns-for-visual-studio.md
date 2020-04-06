@@ -3,17 +3,17 @@ title: Visual Studio için Uygulama Kalıpları | Microsoft Dokümanlar
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55044df3898b452e87ec877f9ae10dd12a2b1110
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 036c95951fe3dc9e65a0f3338f75ae9867d721c3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303192"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698592"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Visual Studio İçin Uygulama Desenleri
 ## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a>Pencere etkileşimleri
@@ -151,7 +151,7 @@ Gezilebilir liste araç pencerelerinin örnekleri Çözüm Gezgini ve Sonuçlar�
 | --- | --- |
 | Otomobil ||
 | Hemen ||
-| Çıktı | Çıktı penceresi, bildirilecek metinsel olaylar veya durum olduğunda kullanılabilir. |
+| Çıkış | Çıktı penceresi, bildirilecek metinsel olaylar veya durum olduğunda kullanılabilir. |
 | Bellek ||
 | Kesme Noktaları ||
 | Çalışıyor ||
@@ -255,7 +255,7 @@ Belgeyi iyi kullanan birkaç düzenleyici olmayan türü de vardır. Belgeleri k
 
 - Kullanıcı, paylaşılan Yazı Tipleri ve Renkler sayfası veya düzenleyiciye özgü bir Araçlar **> Seçenekleri** sayfasını kullanarak yazı tiplerinin/renklerin görünümünü özelleştirebilmelidir.
 
-#### <a name="reports"></a>Reports
+#### <a name="reports"></a>Raporlar
 
 - Raporlar genellikle yalnızca bilgi dir ve Kaydet modeline katılmaz. Ancak, diğer ilgili bilgilere bağlantılar veya genişleyen ve daraltılmış bölümler gibi etkileşimiçerebilirler.
 
@@ -475,7 +475,7 @@ Projeler ayrıca, şular için tutarlı etkileşim modellerini de korumalıdır:
 - Sürükle ve bırak işlemleri
 
 ### <a name="drag-and-drop-interaction-model"></a>Sürükle ve bırak etkileşim modeli
-Projeler genellikle kendilerini referans tabanlı (yalnızca depolamadaki proje öğelerine yapılan başvuruları devam ettirebilen), dizin tabanlı (yalnızca proje hiyerarşisi içinde fiziksel olarak depolanan proje öğelerini devam ettirebilen) veya karışık (başvuruları devam ettirebilen) olarak sınıflandırın veya fiziksel öğeler). IDE, **Çözüm Gezgini**içinde aynı anda üç proje türünü de barındırır.
+Projeler genellikle kendilerini başvuru tabanlı (yalnızca depolamadaki proje öğelerine yapılan başvuruları devam ettirebilen), dizin tabanlı (yalnızca proje hiyerarşisinde fiziksel olarak depolanan proje öğelerini devam ettirebilen) veya karışık (başvuruları veya fiziksel öğeleri kalıcı olarak süreye bilen) olarak sınıflandırAbilir. IDE, **Çözüm Gezgini**içinde aynı anda üç proje türünü de barındırır.
 
 Sürükle ve bırak perspektifinden, **Çözüm Gezgini'ndeki**her proje türü için aşağıdaki özellikler uygulanmalıdır:
 

@@ -1,28 +1,28 @@
 ---
-title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSymbolProviderDirect::GetMethodFromAddress
 - GetMethodFromAddress
 ms.assetid: 33ffd197-1221-41bc-a9f6-f133ebdcb783
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89a110886837c793d45842db6ed80690626dd9d6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a062056f4a61521966417e9923a17f6d85b991a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335162"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718950"
 ---
 # <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-Belirtilen hata ayıklama adresindeki yöntem hakkında bilgi alır.
+Belirtilen hata ayıklama adresindeyöntem le ilgili bilgileri alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -52,28 +52,28 @@ int GetMethodFromAddress(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in] Tarafından temsil edilen adresi hata ayıklama [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi.
+[içinde] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata giderme adresi.
 
 `pGuid`\
-[out] Modülün benzersiz tanımlayıcısı.
+[çıkış] Modülün benzersiz tanımlayıcısı.
 
 `pAppID`\
-[out] Uygulama etki alanı tanımlayıcısı.
+[çıkış] Uygulama etki alanının tanımlayıcısı.
 
 `pTokenClass`\
-[out] Belirteç, içeren sınıfı temsil eder.
+[çıkış] İçeren sınıfı temsil eden belirteç.
 
 `pTokenMethod`\
-[out] Modülü temsil eden belirteç.
+[çıkış] Modülü temsil eden belirteç.
 
 `pdwOffset`\
-[out] Başından itibaren bayt uzaklığını `pAddress` parametresi.
+[çıkış] `pAddress` Parametrenin başlangıcından itibaren baytlarda bir ofset.
 
 `pdwVersion`\
-[out] Yöntem sürüm numarası.
+[çıkış] Yöntemin sürüm numarası.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)
