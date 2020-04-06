@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO_FIELDS | Microsoft Docs
+title: PROCESS_INFO_FIELDS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PROCESS_INFO_FIELDS enumeration
 ms.assetid: 0d9cc345-3d3a-44d8-ae15-a67acb97a828
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fe9a1854fe5583d001e1dc156bfad5833fd1c08f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f81709e7146bbdef13daa3564bb784fd9c08d58e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309453"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714008"
 ---
-# <a name="processinfofields"></a>PROCESS_INFO_FIELDS
-Hangi tür bilgiler almak için bir işlem için belirtilen.
+# <a name="process_info_fields"></a>PROCESS_INFO_FIELDS
+İşlem için ne tür bilgilerin alınıp alınabilmek için belirtilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -58,46 +58,46 @@ public enum enum_PROCESS_INFO_FIELDS { 
 
 ## <a name="fields"></a>Alanlar
  `PIF_FILE_NAME`\
- Başlat/kullanım `bstrFileName` alanını [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısı.
+ `bstrFileName` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapının alanını başlatma/kullanma.
 
  `PIF_BASE_NAME`\
- Başlat/kullanım `bstrBaseName` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `bstrBaseName` alanını başlatma/kullanma.
 
  `PIF_TITLE`\
- Başlat/kullanım `bstrTitle` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `bstrTitle` alanını başlatma/kullanma.
 
  `PIF_PROCESS_ID`\
- Başlat/kullanım `ProcessId` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `ProcessId` alanını başlatma/kullanma.
 
  `PIF_SESSION_ID`\
- Başlat/kullanım `dwSessionId` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `dwSessionId` alanını başlatma/kullanma.
 
  `PIF_ATTACHED_SESSION_NAME`\
- Başlat/kullanım `bstrAttachedSessionName` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `bstrAttachedSessionName` alanını başlatma/kullanma.
 
  `PIF_CREATION_TIME`\
- Başlat/kullanım `CreationTime` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `CreationTime` alanını başlatma/kullanma.
 
  `PIF_FLAGS`\
- Başlat/kullanım `Flags` alanını `PROCESS_INFO` yapısı.
+ `PROCESS_INFO` Yapının `Flags` alanını başlatma/kullanma.
 
  `PIF_ALL`\
  Tüm alanları doldurur.
 
 ## <a name="remarks"></a>Açıklamalar
- Geçirilen [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) hangi alanları göstermek için yöntemi [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısı olan başlatılacak.
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısının hangi alanlarının başharfe atılolacağını belirtmek için [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine geçirildi.
 
- Ayrıca kullanılan `Fields` alanını `PROCESS_INFO` yapısı hangi alanların kullanılan ve geçerli olduğunu belirtmek için.
+ Ayrıca `PROCESS_INFO` hangi `Fields` alanların kullanıldığını ve geçerli olduğunu belirtmek için yapı alanında da kullanılır.
 
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.
+ Bu bayraklar biraz ile `OR`birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

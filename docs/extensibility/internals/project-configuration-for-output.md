@@ -1,47 +1,47 @@
 ---
-title: Çıkış için proje yapılandırması | Microsoft Docs
+title: Çıktı için Proje Yapılandırması | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b6337d82e51cf728d69f7aabb46e9d4444ec564
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 78b95457af4c5d806fdfcc20f49ac4e82df36488
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72725890"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706665"
 ---
 # <a name="project-configuration-for-output"></a>Çıkış için Proje Yapılandırması
-Her yapılandırma, çalıştırılabilir veya kaynak dosyaları gibi çıkış öğeleri üreten bir yapı işlemi kümesini destekleyebilir. Bu çıkış öğeleri kullanıcıya özeldir ve yürütülebilir dosyalar (. exe,. dll,. lib) ve kaynak dosyaları (. IDL,. h dosyaları) gibi ilgili çıkış türlerini bağlayan gruplara yerleştirilebilir.
+Her yapılandırma, yürütülebilir veya kaynak dosyaları gibi çıktı öğeleri üreten bir yapı işlemleri kümesini destekleyebilir. Bu çıktı öğeleri kullanıcıya özeldir ve yürütülebilir dosyalar (.exe, .dll, .lib) ve kaynak dosyaları (.idl, .h dosyaları) gibi ilgili çıktı türlerini birbirine bağlayan gruplara yerleştirilebilir.
 
- Çıkış öğelerine <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> yöntemler aracılığıyla ulaşılabilir ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> yöntemleriyle Numaralandırılabilir. Çıkış öğelerini gruplandırmak istediğinizde, projeniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> arabirimini de uygulamalıdır.
+ Çıkış maddeleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> metotlarla kullanılabilir hale getirilebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> ve metotlarla numaralandırılabilir. Çıktı öğelerini gruplandırmak istediğinizde, projeniz in arabirimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> de uygulamalıdır.
 
- @No__t_0 uygulayarak geliştirilen yapı, projelerin kullanıma göre çıkışları gruplandırmasının olanaklı olmasına olanak sağlar. Örneğin, bir DLL program veritabanı (PDB) ile gruplanmış olabilir.
+ Uygulanarak `IVsOutputGroup` geliştirilen yapı, projelerin çıktıları kullanıma göre gruplandırmasına olanak sağlar. Örneğin, bir DLL program veritabanı (PDB) ile gruplandırılabilir.
 
 > [!NOTE]
-> PDB dosyası hata ayıklama bilgilerini içerir ve. dll veya. exe derlerken ' hata ayıklama bilgisi oluştur ' seçeneği belirtildiğinde oluşturulur. . Pdb dosyası genellikle yalnızca hata ayıklama proje yapılandırmasında oluşturulur.
+> PDB dosyası hata ayıklama bilgilerini içerir ve .dll veya .exe'yi oluştururken 'Hata Ayıklama Bilgisi Oluştur' seçeneği belirtildiğinde oluşturulur. .pdb dosyası genellikle yalnızca Hata Ayıklama proje yapılandırması için oluşturulur.
 
- Projenin desteklediği her yapılandırma için aynı sayıda grubu döndürmesi gerekir, ancak bir grup içinde yer alan çıkışların sayısı yapılandırmadan yapılandırmaya farklılık gösterebilir. Örneğin, proje Matt DLL 'SI hata ayıklama yapılandırmasında mattd. dll ve mattd. pdb içerebilir, ancak perakende yapılandırmasına yalnızca Matt. dll dahil edebilir.
+ Bir grup içinde bulunan çıktı sayısı yapılandırmadan yapılandırmaya değişse de, proje desteklediği her yapılandırma için aynı sayıda grup döndürmelidir. Örneğin, Matt'in DLL projesi Hata Ayıklama yapılandırmasında mattd.dll ve mattd.pdb'yi içerebilir, ancak yalnızca Perakende yapılandırmasında matt.dll'yi içerebilir.
 
- Gruplar, yapılandırmadan bir proje içinde yapılandırmaya kadar kurallı ad, görünen ad ve grup bilgileri gibi aynı tanımlayıcı bilgilerine de sahiptir. Bu tutarlılık, yapılandırma değişse bile dağıtımın ve paketlemeye devam etmesine olanak tanır.
+ Gruplar ayrıca, bir proje içinde yapılandırmadan yapılandırmaya kadar kanonik ad, görüntü adı ve grup bilgileri gibi aynı tanımlayıcı bilgilerine de sahiptir. Bu tutarlılık, yapılandırmalar değişse bile dağıtım ve paketlemenin çalışmaya devam etmesini sağlar.
 
- Gruplar, paketleme kısayollarının anlamlı bir şeyi işaret etmesine izin veren bir anahtar çıkışına da sahip olabilir. Herhangi bir grup belirli bir yapılandırmada boş olabilir, bu nedenle bir grubun boyutuyla ilgili hiçbir varsayımda yapılmalıdır. Herhangi bir yapılandırmadaki her bir grubun boyutu (çıkış sayısı), aynı yapılandırmadaki başka bir grubun boyutundan farklı olabilir. Aynı zamanda başka bir yapılandırmadaki aynı grubun boyutundan farklı olabilir.
+ Gruplar, ambalaj kısayollarının anlamlı bir şeye işaret etmesini sağlayan önemli bir çıktıya da sahip olabilir. Herhangi bir grup belirli bir yapılandırmada boş olabilir, bu nedenle bir grubun boyutu hakkında hiçbir varsayımda bulunulmaması gerekir. Herhangi bir yapılandırmadaki her grubun boyutu (çıktı sayısı) aynı yapılandırmadaki başka bir grubun boyutundan farklı olabilir. Ayrıca, başka bir yapılandırmada aynı grubun boyutundan farklı olabilir.
 
- ![Çıkış Grupları grafiği](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups") Çıkış grupları
+ ![Çıktı Grupları grafiği](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups") Çıktı grupları
 
- @No__t_0 arabiriminin birincil kullanımı, yönetim nesneleri oluşturma, dağıtma ve hata ayıklama ve projelere çıkışları gruplama özgürlüğü sağlamak için erişim sağlamaktır. Bu arabirimin kullanımı hakkında daha fazla bilgi için bkz. [Proje yapılandırma nesnesi](../../extensibility/internals/project-configuration-object.md).
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> Arabirimin birincil kullanımı, yönetim nesnelerini oluşturmaya, dağıtmaya ve hata ayıklamalarına erişim sağlamak ve projelere çıktıları gruplandırma özgürlüğü sağlamaktır. Bu arabirimin kullanımı hakkında daha fazla bilgi için [Project Configuration Object](../../extensibility/internals/project-configuration-object.md)bölümüne bakın.
 
- Önceki diyagramda, oluşturulan grup, yapılandırmalar arasında (bD. exe veya b. exe) bir anahtar çıkışına sahiptir, böylece Kullanıcı, oluşturulan yapılandırmanın ne olursa olsun kısayol 'un çalıştığını bilmek için bir kısayol oluşturabilir. Grup kaynağında anahtar çıkışı yok, bu nedenle Kullanıcı buna bir kısayol oluşturamaz. Oluşturulan hata ayıklama grubunda anahtar çıkışı varsa, ancak oluşturulan perakende grubu, yanlış bir uygulama olabilir. Daha sonra, herhangi bir yapılandırmanın çıkış içermeyen bir grubu varsa ve sonuç olarak anahtar dosyası yoksa, çıkışları içeren bu gruba sahip diğer yapılandırmaların anahtar dosyaları olamaz. Yükleyici düzenleyiciler kurallı adların ve grupların görünen adlarının yanı sıra bir anahtar dosyasının varlığını kabul eder ve yapılandırmalara bağlı olarak değiştirmeyin.
+ Önceki diyagramda, Grup Yapısı yapılandırmaları arasında önemli bir çıktıya sahiptir (bD.exe veya b.exe) böylece kullanıcı Yerleşik'e bir kısayol oluşturabilir ve kısayol'un dağıtılan yapılandırmadan bağımsız olarak çalışacağını bilebilir. Grup Kaynağı'nın anahtar çıktısı yoktur, bu nedenle kullanıcı bir kısayol oluşturamaz. Yapılan Hata Ayıklama Grubu önemli bir çıktıya sahipse, ancak Yapılamayan Perakende Grubu yoksa, bu yanlış bir uygulama olur. Daha sonra, herhangi bir yapılandırmada çıktı içermeyen bir grup varsa ve sonuç olarak anahtar dosyası yoksa, çıktıları içeren bu grupla diğer yapılandırmaların anahtar dosyaları olamaz. Yükleyici düzenleyiciler, kanonik adlar ve grup adları, artı anahtar bir dosyanın varlığını, yapılandırmaları dayalı değişmez varsayalım.
 
- Bir projede paketlemek veya dağıtmak istemediğiniz bir `IVsOutputGroup` varsa, bu çıktıyı bir gruba yerleştirmemeye yeterli olduğunu unutmayın. Bu çıktı, gruplandırmadan bağımsız olarak tüm yapılandırma çıkışlarını döndüren <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> yöntemi uygulayarak normal olarak yine de listelenebilir.
+ Bir projenin paketlemek `IVsOutputGroup` veya dağıtmak istemediği bir proje varsa, bu çıktıyı bir gruba koymamanın yeterli olduğunu unutmayın. Gruplandırmadan bağımsız olarak, yapılandırmanın <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> tüm çıktılarını döndüren yöntem uygulanarak çıktı yine de normal olarak numaralandırılabilir.
 
- Daha fazla bilgi için, [Projeler Için MPF](https://github.com/tunnelvisionlabs/MPFProj10)konumundaki özel proje örneğindeki `IVsOutputGroup` uygulamasına bakın.
+ Daha fazla bilgi için, `IVsOutputGroup` [Projeler için MPF'de](https://github.com/tunnelvisionlabs/MPFProj10)Özel Proje örneğinde uygulanmasına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)

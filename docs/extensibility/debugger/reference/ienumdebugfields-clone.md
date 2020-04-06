@@ -1,5 +1,5 @@
 ---
-title: 'IEnumDebugFields:: Clone | Microsoft Docs'
+title: IEnumDebugFields::Klon | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugFields::Clone method
 ms.assetid: 7ec265a8-696f-45ce-a2a2-0a83e96fee1b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b5657e5db99bd062fa16aae9f9d8516bdbabc99f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1120e62d5dbed45f11b43ea0e131ee3173c1751c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727692"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716905"
 ---
 # <a name="ienumdebugfieldsclone"></a>IEnumDebugFields::Clone
-Bu yöntem, geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
+Bu yöntem, geçerli numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
+[çıkış] Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralandırmanın kopyası, bu yöntemin çağrıldığı anda orijinalle aynı duruma sahiptir. Ancak, kopyanın ve orijinalin durumları ayrıdır ve ayrı ayrı değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

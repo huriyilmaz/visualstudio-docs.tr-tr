@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetException | Microsoft Docs
+title: IDebugExceptionEvent2::GetException | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExceptionEvent2::GetException
 ms.assetid: 7c98f41d-322b-4e72-a514-cbd4823eb70d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 691df8f5a212f1d854d87076a215402c7ce0053c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 332cbb28bd175aa5c3b4187ae735a479ba9de6b0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310502"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729855"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
-Bu olay harekete geçirilen özel durum ayrıntılı bir açıklamasını alır.
+Bu olayı ateşleyen özel durum ayrıntılı bir açıklamasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,14 +41,14 @@ int GetException( 
 
 ## <a name="parameters"></a>Parametreler
 `pExceptionInfo`\
-[out içinde] Bir [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) özel durumun açıklama oturum girilir yapısının.
+[içinde, dışarı] Özel durum açıklamasıyla doldurulmuş [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) bir yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
 
- [C++ yalnızca] Tüm dizeler boşaltma için çağıran sorumludur [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı serbest yanı sıra [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) yapısında nesne.
+ [Yalnızca C++ ] Arayan, [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısındaki dizeleri serbest bırakmanın yanı sıra yapıdaki [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesini serbest bırakmakla da sorumludur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

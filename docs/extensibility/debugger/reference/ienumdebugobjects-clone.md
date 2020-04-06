@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugObjects::Clone | Microsoft Docs
+title: IEnumDebugObjects::Klon | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugObjects::Clone method
 ms.assetid: cb7df109-d29a-4218-b900-6809091459dd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 11724f9d384993acde411aa650fa42df38166a5b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9784314791968a7db49c2163b94ac3bc4d0d8eb3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339629"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716433"
 ---
 # <a name="ienumdebugobjectsclone"></a>IEnumDebugObjects::Clone
-Bu yöntem bir kopyasını ayrı bir nesne olarak geçerli bir sabit listesi döndürür.
+Bu yöntem, geçerli numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] Bu numaralandırma ayrı bir nesne gibi bir kopyasını döndürür.
+[çıkış] Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırma kopyasını bu yöntemin çağrıldığı zaman orijinal ile aynı duruma sahiptir. Ancak, kopyanın ve orijinalin durumları ayrıdır ve ayrı ayrı değiştirilebilir.
+ Numaralandırmanın kopyası, bu yöntemin çağrıldığı anda orijinalle aynı duruma sahiptir. Ancak, kopyanın ve orijinalin durumları ayrıdır ve ayrı ayrı değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

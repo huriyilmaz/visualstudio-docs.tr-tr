@@ -1,31 +1,31 @@
 ---
-title: Görev sınıfı - dahili üyeler | Microsoft Docs
+title: Görev Sınıfı - Dahili Üyeler | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, Task class [.NET Framework]
 - Task class [.NET Framework debug engines]
 ms.assetid: 28e47c3b-9323-424a-80ac-6cc3bf19e09b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bfa171655afd808de4bd86fe0fbdb99531d2ab2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dcf278c0248b344cea4be7cf161ecc91581f5f2e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348425"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712744"
 ---
 # <a name="task-class---internal-members"></a>Görev sınıfı - dahili üyeler
-Bu makalede iç üyelerine <xref:System.Threading.Tasks.Task?displayProperty=fullName> yardımcı sınıf, bir özel hata ayıklayıcı uygulama. Bu sınıf hakkında genel bilgi için bkz: <xref:System.Threading.Tasks.Task> başvurusu makalesinde.
+Bu makalede, özel bir <xref:System.Threading.Tasks.Task?displayProperty=fullName> hata ayıklama uygulamanıza yardımcı sınıfın iç üyeleri açıklanır. Bu sınıf hakkında genel bilgi <xref:System.Threading.Tasks.Task> için başvuru makalesine bakın.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (içinde *mscorlib.dll*)
+ **Montaj:** mscorlib *(mscorlib.dll*olarak)
 
- Bu iç üyeleri .NET Framework'ten erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu dahili üyelere .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,30 +42,30 @@ Bu makalede iç üyelerine <xref:System.Threading.Tasks.Task?displayProperty=ful
 
 ### <a name="methods"></a>Yöntemler
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |----------|-----------------|
-|[SetNotificationForWaitCompletion Metodu](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|Ayarlar veya TASK_STATE_WAIT_COMPLETION_NOTIFICATION durumu bit temizler.|
-|[NotifyDebuggerOfWaitCompletion Metodu](../../extensibility/debugger/notifydebuggerofwaitcompletion-method.md)|Hata ayıklayıcı tarafından bir kesme noktası hedefi olarak kullanılan yer tutucu yöntemi.|
+|[SetNotificationForWaitCompletion Metodu](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|TASK_STATE_WAIT_COMPLETION_NOTIFICATION durum bitini ayarlar veya temizler.|
+|[NotifyDebuggerOfWaitCompletion Metodu](../../extensibility/debugger/notifydebuggerofwaitcompletion-method.md)|Yer tutucu yöntemi hata ayıklama tarafından kesme noktası hedefi olarak kullanılır.|
 
 ### <a name="fields"></a>Alanlar
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |----------|-----------------|
-|[m_action](../../extensibility/debugger/m-action-field.md)|İçindeki yürütülecek kodu temsil eden temsilcinin <xref:System.Threading.Tasks.Task> nesne.|
-|[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|Ek özellikleri depolar <xref:System.Threading.Tasks.Task> nesne.|
-|[m_parent](../../extensibility/debugger/m-parent-field.md)|Destek alanı <xref:System.Threading.Tasks.Task?displayProperty=fullName> üst özellik.|
-|[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)|Geçerli durumuyla ilgili bilgileri depolayan <xref:System.Threading.Tasks.Task> nesne.|
-|[m_stateObject](../../extensibility/debugger/m-stateobject-field.md)|Eylem tarafından kullanılan verileri temsil eden nesne.|
-|[m_taskId](../../extensibility/debugger/m-taskid-field.md)|Destek alanı <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> özelliği.|
-|[s_taskIdCounter](../../extensibility/debugger/s-taskidcounter-field.md)|Sonraki kullanılabilir tanımlayıcısı bir <xref:System.Threading.Tasks.Task> nesne.|
-|[TASK_STATE_CANCELED](../../extensibility/debugger/task-state-canceled-field.md)|Çalışma durumuna ulaştı önce görev iptal veya görev, iptal Onaylandı ve özel durum tamamlandı gösterir.|
-|[TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)|Görevin çalıştığı gösterir.|
-|[TASK_STATE_FAULTED](../../extensibility/debugger/task-state-faulted-field.md)|Görev işlenmeyen bir özel durum nedeniyle tamamlandığını gösterir.|
-|[TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)|Görev Yürütme başarıyla tamamlandığını gösterir.|
-|[TASK_STATE_WAITING_ON_CHILDREN](../../extensibility/debugger/task-state-waiting-on-children-field.md)|Görev tamamlandı, temsilciyi çalıştırıyor ve örtük olarak eklenen alt görevlerin tamamlanmasını bekliyor gösterir.|
+|[m_action](../../extensibility/debugger/m-action-field.md)|<xref:System.Threading.Tasks.Task> Nesnede yürütülecek kodu temsil eden temsilci.|
+|[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|Nesnenin <xref:System.Threading.Tasks.Task> ek özelliklerini depolar.|
+|[m_parent](../../extensibility/debugger/m-parent-field.md)|<xref:System.Threading.Tasks.Task?displayProperty=fullName> Ana mülkün destek alanı.|
+|[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)|<xref:System.Threading.Tasks.Task> Nesnenin geçerli durumu yla ilgili bilgileri depolar.|
+|[m_stateObject](../../extensibility/debugger/m-stateobject-field.md)|Eylem tarafından kullanılacak verileri temsil eden bir nesne.|
+|[m_taskId](../../extensibility/debugger/m-taskid-field.md)|<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> Mülkün destek alanı.|
+|[s_taskIdCounter](../../extensibility/debugger/s-taskidcounter-field.md)|Bir <xref:System.Threading.Tasks.Task> nesne için kullanılabilir bir sonraki tanımlayıcı.|
+|[TASK_STATE_CANCELED](../../extensibility/debugger/task-state-canceled-field.md)|Görevin çalışan duruma ulaşmadan önce iptal edildiğini veya görevin iptalini onayladığını ve istisnasız tamamlandığını gösterir.|
+|[TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)|Görevin çalıştığını gösterir.|
+|[TASK_STATE_FAULTED](../../extensibility/debugger/task-state-faulted-field.md)|Ele alınamayan bir özel durum nedeniyle görevin tamamlandığını gösterir.|
+|[TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)|Görevin yürütmeyi başarıyla tamamladığını gösterir.|
+|[TASK_STATE_WAITING_ON_CHILDREN](../../extensibility/debugger/task-state-waiting-on-children-field.md)|Görevin temsilcisini yürütmeyi tamamladığını ve dolaylı olarak eklenmiş alt görevlerin tamamlanmasını beklediğini gösterir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bunlar girişinin işaretlemek için aşağıdaki iç yöntemler bir hata ayıklayıcısı altyapısı kullanışlıdır <xref:System.Threading.Tasks.Task> kod yürütme:
+ Kod yürütme girişini işaretlediğinden, aşağıdaki dahili yöntemler <xref:System.Threading.Tasks.Task> hata ayıklayıcı altyapısı için yararlıdır:
 
 - `Execute`
 
@@ -81,4 +81,4 @@ Bu makalede iç üyelerine <xref:System.Threading.Tasks.Task?displayProperty=ful
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Threading.Tasks.Task?displayProperty=fullName>
-- [.NET Framework için paralel uzantı dahili bileşenleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı dahili](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

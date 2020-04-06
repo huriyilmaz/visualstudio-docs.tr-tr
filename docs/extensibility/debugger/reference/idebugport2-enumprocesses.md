@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::EnumProcesses | Microsoft Docs
+title: IDebugPort2::EnumProcesses | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPort2::EnumProcesses
 ms.assetid: aafb32c5-5790-4807-a448-878a80256438
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c1b5b43007e43a5cee368622d808d20ad5b83b5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cb3b3bc07cc784300fd80626acd7f0cd6179773c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343807"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725456"
 ---
 # <a name="idebugport2enumprocesses"></a>IDebugPort2::EnumProcesses
-Bir bağlantı noktası üzerinde çalışan tüm işlemlerin listesini döndürür.
+Bağlantı noktasında çalışan tüm işlemlerin listesini verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int EnumProcesses( 
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] Döndürür bir [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md) bir bağlantı noktası üzerinde çalışan tüm işlemlerin listesini içeren nesne.
+[çıkış] Bir bağlantı noktasında çalışan tüm işlemlerin listesini içeren bir [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

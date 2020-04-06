@@ -1,28 +1,28 @@
 ---
-title: IDebugFunctionObject2::CreateObject | Microsoft Docs
+title: IDebugFunctionObject2::CreateObject | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugFunctionObject2::CreateObject
 - CreateObject
 ms.assetid: 148de615-941e-4b64-ab11-75b692aae465
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 87d1c2cd71b57136e26a2bc30004547dc4b8dee5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6de1a30a032919a90fbb3d760837d5eeca00feaf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313418"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728486"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
-Verilen değerlendirme bayrağı ayarlar ve bir zaman aşımı değeri bir oluşturucu kullanan bir nesne oluşturur.
+Değerlendirme bayrağı ayarları ve zaman sonu değeri verilen bir oluşturucu kullanan bir nesne oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,28 +50,28 @@ int CreateObject (
 
 ## <a name="parameters"></a>Parametreler
 `pConstructor`\
-[in] Bir [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) Oluşturucusu oluşturulacak nesne, temsil eden nesne.
+[içinde] Oluşturulacak nesnenin oluşturucuunu temsil eden bir [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesi.
 
 `dwArgs`\
-[in] Parametre sayısı `pArg` dizisi. Oluşturucuya geçirilen parametrelerin sayısını temsil eder.
+[içinde] Dizideki `pArg` parametrelerin sayısı. Oluşturucuya geçirilen parametrelerin sayısını gösterir.
 
 `pArgs`\
-[in] Bir dizi [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) parametreleri temsil eden nesneleri, oluşturucuya geçirilen.
+[içinde] Oluşturucuya geçirilen parametreleri temsil eden [bir iDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne dizisi.
 
 `dwEvalFlags`\
-[in] Bayraklarının bir birleşimi [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) nasıl gerçekleştirilecek bir değerlendirme olduğunu belirten sabit listesi.
+[içinde] [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından değerlendirmenin nasıl yapılacağını belirten bayrakların birleşimi.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süre. Kullanım **SONSUZ** süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Sonsuza kadar beklemek için **SONSUZ** kullanın.
 
 `ppObject`\
-[out] Döndürür bir **IDebugObject** temsil eden yeni oluşturulan nesne.
+[çıkış] Yeni oluşturulan nesneyi temsil eden bir **IDebugObject** döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir sınıf ya da bir parametresi olan bir oluşturucu gerektiren diğer karmaşık bir tür örneği temsil eden bir nesne oluşturmak için bu yöntemi çağırın.
+ Bir sınıf örneğini veya bir parametre olan bir oluşturucu gerektiren başka karmaşık türü temsil eden bir nesne oluşturmak için bu yöntemi çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::DoesInterfaceExist | Microsoft Docs
+title: IDebugClassField::DoesInterfaceExist | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugClassField::DoesInterfaceExist method
 ms.assetid: cc0c8642-1a76-4fda-a309-7018a34883c9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 57bf8d0af54773b03fd23994b83fe6d2fac1306c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ba732b698f7372772142fda73e71d9e22aa443a6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337236"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734504"
 ---
 # <a name="idebugclassfielddoesinterfaceexist"></a>IDebugClassField::DoesInterfaceExist
-Belirli bir arabirim sınıfta tanımlı olup olmadığını belirler.
+Sınıfta belirli bir arabirim tanımlı olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int DoesInterfaceExist(
 
 ## <a name="parameters"></a>Parametreler
 `pszInterfaceName`\
-[in] Arabirim adı, aranacak içeren bir dize.
+[içinde] Aramak için arabirim adını içeren bir dize.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür, S_FALSE döndürür arabirimi yoksa, Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür, arabirim yoksa S_FALSE döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, geçerli tüm arabirimleri numaralandırmasını alır ve eşleşen bir arabirim için liste arar.
+ Bu yöntem, tüm arabirimlerin numaralandırmasını alır ve eşleşen bir arabirim için listeyi arar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerField | Microsoft Docs
+title: IDebugPointerField | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPointerField interface
 ms.assetid: d51bd5b2-f18e-4e27-b4fb-e6f652fbf635
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc6939296fa2bfa59aad1824529f8b708a4cd5cb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a69797cc513b96c364f0357f22788fc9bcd65657
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308852"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725598"
 ---
 # <a name="idebugpointerfield"></a>IDebugPointerField
-Bu arabirim, bir işaretçi türü temsil eder.
+Bu arabirim bir işaretçi türünü temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,28 +28,28 @@ Bu arabirim, bir işaretçi türü temsil eder.
 IDebugPointerField : IDebugContainerField
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Sembol sağlayıcısı, bir işaretçiyi temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Sembol sağlayıcı, bir işaretçiyi temsil etmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Kullanım [QueryInterface](/cpp/atl/queryinterface) bu arabirimden edinme [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , arabirim [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) döndürür `FIELD_TYPE_POINTER`.
+ [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) dönerse `FIELD_TYPE_POINTER` [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminden bu arabirimi elde etmek için [QueryInterface'i](/cpp/atl/queryinterface) kullanın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Yöntemlere ek olarak `IDebugField` ve `IDebugContainerField` arabirimleri, bu arabirimi uygulayan aşağıdaki yöntemi:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Bu arabirim, `IDebugField` arabirimlerdeki `IDebugContainerField` yöntemlere ek olarak aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetDereferencedField](../../../extensibility/debugger/reference/idebugpointerfield-getdereferencedfield.md)|Döndürür bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) işaretçinin hedef açıklayan.|
+|[GetDereferencedField](../../../extensibility/debugger/reference/idebugpointerfield-getdereferencedfield.md)|İşaretçinin hedefini açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
- C/C++'da bir işaretçi, dizi gösterim kullanılırsa, bir kapsayıcı olabilir. Örneğin, verilen `char *pString`, `pString` işaretçi türünde `char`. `pString[3]` bir işaretçi bir kapsayıcı türü olan `char` , bu kapsayıcı, dördüncü öğesine başvuruyor.
+ C/C++'da, dizi gösterimi ile kullanılırsa işaretçi kapsayıcı olabilir. Örneğin, verilen `char *pString` `pString` , işaretçi türü `char`vardır. `pString[3]`bu kapsayıcının dördüncü öğesine `char` başvuran bir işaretçi olan bir kapsayıcı türüvardır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: sh.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

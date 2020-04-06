@@ -1,33 +1,33 @@
 ---
-title: Belge bağlamı | Microsoft Docs
+title: Belge Bağlamı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], contexts
 ms.assetid: 8e8b5702-5c16-4988-953d-69dd807d8b84
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d15e53d29adc04a82274ebd456027d15b0e41703
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 48fe651e69e5e2c97756788cc30e54454c26e51e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345707"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738925"
 ---
 # <a name="document-context"></a>Belge bağlamı
-İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, bir *belge bağlamına*:
+Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklamada, *belge bağlamında:*
 
-- Kaynak dosyada bir konumu temsil eder. Burada kaynak dosyanın mevcut olmayabilir diller için tipik olarak çalışma zamanı ortamı tarafından oluşturulan bir belge bir konumda bir belge bağlamı tanımlar. Örneğin, bir komut dosyası altyapısı bir belge betikten üretebilir. Daha fazla bilgi için [belge konumu](../../extensibility/debugger/document-position.md).
+- Kaynak dosyasındaki bir konumu temsil eder. Kaynak dosyanın bulunamayabileceği diller için belge bağlamı, çalışma zamanı ortamı tarafından oluşturulan bir belgedeki konumu tanımlar. Örneğin, komut dosyası altyapısı komut dosyasından bir belge oluşturabilir. Daha fazla bilgi için [Belge konumuna](../../extensibility/debugger/document-position.md)bakın.
 
-- Bir konuma karşılık gelen bir kod bağlamı için bir kaynak belgedeki açıklar. Sembol işleyici belgeleri bağlam, bir derleyici veya yorumlayıcısı tarafından oluşturulan bilgileri kullanarak bir kod bağlamı eşlenir.
+- Kaynak belgedeki kod bağlamına karşılık gelen bir konumu açıklar. Sembol işleyicisi, derleyici veya yorumlayıcı tarafından oluşturulan bilgileri kullanarak bir kod bağlamını belgeleme bağlamına eşler.
 
-- Tarafından uygulanan bir [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi.
+- [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kod bağlamı](../../extensibility/debugger/code-context.md)
-- [Sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md)
-- [Sembol sağlayıcısı arabirimleri](../../extensibility/debugger/reference/symbol-provider-interfaces.md)
-- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md)
+- [Sembol sağlayıcı](../../extensibility/debugger/symbol-provider.md)
+- [Sembol sağlayıcı Arayüzleri](../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+- [Hata ayıklama bağlamları](../../extensibility/debugger/debugger-contexts.md)

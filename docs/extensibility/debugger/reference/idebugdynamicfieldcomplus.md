@@ -1,24 +1,24 @@
 ---
-title: IDebugDynamicFieldCOMPlus | Microsoft Docs
+title: IDebugDynamicFieldCOMPlus | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDynamicFieldCOMPlus interface
 ms.assetid: c3a25f27-327a-4bdb-b026-27d436ddcd0c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 824498f3d7657bcc5984d31a1abaa4e97c4a9a7d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 823057303655da59494680ce9f591b252e28f792
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330196"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731220"
 ---
 # <a name="idebugdynamicfieldcomplus"></a>IDebugDynamicFieldCOMPlus
-Dinamik bir alan için temsil eden bir [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) nesne.
+[IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) nesnesi için dinamik bir alanı temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,16 +27,16 @@ IDebugDynamicFieldCOMPlus : IDebugDynamicField
 ```
 
 ## <a name="methods"></a>Yöntemler
- Yöntemlere ek olarak [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) arabirimi bu arabirim, aşağıdaki yöntemleri uygular:
+ [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|Verilen temel eleman türü bir tür alır.|
-|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|Kendi belirteci verilen bir türü alır.|
+|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|İlkel türüne verilen bir türü alır.|
+|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|Belirteci verilen bir türü alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Sh.h
+ Üstbilgi: Ş.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll

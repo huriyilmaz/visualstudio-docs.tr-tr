@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
+title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_SYMBOL_SEARCH_INFO structure
 ms.assetid: 432aff03-08a5-4c5a-b2d5-e212090fc70a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c521ebe321813013b83a951d4d2aa5f60fd1646d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f15587759c4f665d1593d1298c47459a0e64aac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346625"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714251"
 ---
-# <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
+# <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
-Arandığını sembol arama yolları hakkındaki durum bilgilerini içerir.
+Aranan simge arama yolları hakkında durum bilgileri içerir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,22 +46,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>Üyeler
 
 `dwValidFields`\
-Bayraklarının bir birleşimi [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) bu yapısı içinde açıklanan arama bilgi türünü belirten sabit listesi.
+Bu yapıda açıklanan arama bilgilerinin türünü belirten [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) numaralandırmadan gelen bayrakların birleşimi.
 
 `bstrVerboseSearchInfo`\
-Arama yolu ve tek bir dize olarak birleştirilmiş sonuçlar.
+Arama yolu ve sonuçlar tek bir dize halinde sıkıştırılır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı çağrısından döndürülen [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) yöntemi.
+Bu yapı [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) yöntemine yapılan bir çağrıdan döndürülür.
 
-Varsa `bstrVerboseSearchInfo` alanı boş değil ve ardından arama yolları ve bu arama sonuçlarının bir listesini içerir. Listenin sonuca göre ve ardından üç nokta ("..."), ardından bir yol ile biçimlendirilir. Birden fazla yol sonuç çifti varsa, her bir çifti "\r\n" (satır başı-başı/satır besleme) çifti tarafından ayrılmış. Desen şöyle görünür:
+`bstrVerboseSearchInfo` Alan boş değilse, aranan yolların bir listesini ve bu aramanın sonuçlarını içerir. Liste bir yol ile biçimlendirilir, ardından bir elips ("..."), ardından sonuç gelir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (taşıma-döndürme/linefeed) çifti ile ayrılır. Desen şuna benzer:
 
-\<yolu >... \<sonucu > \r\n\<yolu >... \<sonucu > \r\n\<yolu >... \<sonucu >
+\<yol>... \<sonuç>\r\n\<yolu>... \<sonuç>\r\n\<yolu>... \<sonuç>
 
-En son giriş \r\n dizisi yok unutmayın.
+Son girişin \r\n sırası olmadığını unutmayın.
 
-Olası bir işte `bstrVerboseSearchInfo` standart çıkış için gönderilen bir dize.
+Burada standart `bstrVerboseSearchInfo` dışarı gönderildi olası bir dize.
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -75,7 +75,7 @@ Olası bir işte `bstrVerboseSearchInfo` standart çıkış için gönderilen bi
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

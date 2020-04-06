@@ -1,27 +1,27 @@
 ---
-title: IDebugSourceServerModule::GetSourceServerData | Microsoft Docs
+title: IDebugSourceServerModule::GetSourceServerData | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSourceServerModule::GetSourceServerData
 ms.assetid: f15d86aa-1bd9-4b16-a64a-21b01c27db2e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e24fb48014d8a336e9d46ceb8471e2efe126de1f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c0388e4a1916a16f7e429fa4f32c45ed62fdb02e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321888"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719921"
 ---
 # <a name="idebugsourceservermodulegetsourceserverdata"></a>IDebugSourceServerModule::GetSourceServerData
-Kaynak sunucu bilgileri alır.
+Bir dizi kaynak sunucu bilgisini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ public int GetSourceServerData(
 
 ## <a name="parameters"></a>Parametreler
 `pDataByteCount`\
-[out] Veri dizisi bayt sayısı.
+[çıkış] Veri dizisindeki bayt sayısı.
 
 `ppData`\
-[out] Başvuru veri dizisi.
+[çıkış] Veri dizisine başvuru.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CModule** gösteren nesne [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) arabirimi.
+Aşağıdaki örnek, [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) arabirimini ortaya çıkaran bir **CModule** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CModule::GetSourceServerData(ULONG* pDataByteCount, BYTE** ppData)

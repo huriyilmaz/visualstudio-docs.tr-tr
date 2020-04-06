@@ -1,5 +1,5 @@
 ---
-title: Başvuru (Visual Studio hata ayıklama API'leri) | Microsoft Docs
+title: Referans (Visual Studio Hata Ayıklama API'leri) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - debugging [Debugging SDK], reference
 - Debugging SDK, reference
 ms.assetid: 9810fc50-43c7-4916-9916-1cf333037b51
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0badd30653dfee4ae7002fb094fc30af40de80b3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a85979c53d61d4b8d5a4f4b26d3ed3a1e19e952
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336308"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713634"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>Başvuru (Visual Studio Hata Ayıklama API’leri)
 
-Visual Studio hata ayıklama SDK başvuruları, hata ayıklayıcı ve bileşenlerinin işlevselliği ve çalışma zamanı mimarisi için temel modeli özetler. Belgeleri, bileşenleri ve arabirimler, arabirimler aracılığıyla tanımlar davranışı dışında açıklanmaktadır hakkında olabildiğince az sayıda varsayım yapmaz.
+Visual Studio Hata Ayıklama SDK başvuruları, hata ayıklama nın ve bileşenlerinin çalışma zamanı mimarisi ve işlevselliği için temel modeli ana hatlar. Belgeler, arabirimler aracılığıyla tanımladığı davranış dışında, tanımladığı bileşenler ve arabirimler hakkında mümkün olduğunca az varsayımyapar.
 
-Başvuru bölümüne amacı, bir dizi diller, çalışma zamanları ve işletim sistemleri mümkün olduğunca desteklemek için farklı olarak sağlamaktır.
+Başvuru bölümünün amacı, mümkün olduğunca çeşitli diller, çalışma süreleri ve işletim sistemleri kümesine destek sağlamaktır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
 
-Arabirimleri, numaralandırmalar ve yapılar Visual Studio hata ayıklama API belgelerine içerir.
+Visual Studio Hata Ayıklama API arabirimleri, sayısallaştırıcılar ve yapıları için belgeler içerir.
 
 [Sözlük](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)
 
-Hata ayıklama ile ilgili terimlerin ve bunların tanımlarının bir listesini sağlar.
+Hata ayıklamayla ilgili terimlerin ve bunların tanımlarının bir listesini sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

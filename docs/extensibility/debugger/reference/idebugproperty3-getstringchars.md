@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetStringChars | Microsoft Docs
+title: IDebugÖzellik3::GetStringChars | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::GetStringChars
 ms.assetid: 832c37f3-85cb-4227-8ab2-f27a80eafe90
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 16d352ae5397d786c5d77f56a513e9ae2db2d7b3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 693a29bc30ef206428713ace36275389de1b7f0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348825"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721085"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-Bu özellik ile ilişkili dizeyi alır ve bir kullanıcı tarafından sağlanan arabelleğinde depolar.
+Bu özellik ile ilişkili dize alır ve kullanıcı tarafından sağlanan arabellekte depolar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,24 +45,24 @@ int GetStringChars(
 
 ## <a name="parameters"></a>Parametreler
 `buflen`\
-[in] En fazla karakter sayısı, kullanıcı tarafından sağlanan arabellek barındırabilir.
+[içinde] Kullanıcı tarafından sağlanan arabellek tetbit edebileceği maksimum karakter sayısı.
 
 `rgString`\
-[out] Bir dize döndürür.
+[çıkış] Dizeyi döndürür.
 
- [C++ yalnızca], `rgString` Unicode karakter dizesinin alan arabellek işaretçisidir. Bu arabelleğin en az olmalıdır `buflen` boyutu (bayt değil) karakter.
+ [Yalnızca `rgString` C++, dize Tekkod karakterleri alan bir arabellek için bir işaretçidir. Bu arabellek boyutu `buflen` en az karakter (bayt değil) olmalıdır.
 
 `pceltFetched`\
-[out] Burada aslında arabellekteki depolanan karakter sayısı döndürülür. (Olabilir `NULL` c++.)
+[çıkış] Arabellekte depolanan karakter sayısının döndürüldüğü yer. (C++'da olabilir.) `NULL`
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-C++'da, arabelleğin en az olduğunu sağlamak üzere dikkatli olunması gerekir `buflen` Unicode karakter uzunluğuna sahip. Bir Unicode karakter 2 bayt uzunluğunda olduğunu unutmayın.
+C++'da arabellek en azından `buflen` Unicode karakterleri uzun olduğundan emin olmak için dikkatli olunmalıdır. Unicode karakterinin 2 bayt uzunluğunda olduğunu unutmayın.
 
 > [!NOTE]
-> C++'da, döndürülen dizeye Sonlandırıcı null karakterini içermez. Verilen `pceltFetched` dizedeki karakter sayısını belirtir.
+> C++'da döndürülen dize sonlandırıcı null karakterini içermez. Verilirse, `pceltFetched` dizedeki karakter sayısını belirtir.
 
 ## <a name="example"></a>Örnek
 

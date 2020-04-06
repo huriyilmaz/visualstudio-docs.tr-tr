@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsReference | Microsoft Docs
+title: IDebugReference2::SetValueAsReference | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::SetValueAsReference
 ms.assetid: 94a545d2-16b9-45e9-b2e7-4e49ff90aad0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 108061d4957b03d049897985da849ab86563ea47
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f4767dbe08e716d64ea03c18a1c4a6f7d6690a7b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339760"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720301"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
-Başka bir başvuru başvuru değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
+Başka bir başvurudan başvurudeğerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,19 +47,19 @@ int SetValueAsReference ( 
 
 ## <a name="parameters"></a>Parametreler
 `rgpArgs`\
-[in] Bir dizi [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nasıl başvuru değeri ayarlanacağını belirlemek için kullanılan nesne.
+[içinde] Başvuru değerinin nasıl ayarlanabildiğini belirlemek için kullanılan Bir Dizi [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
 
 `dwArgCount`\
-[in] Dizi içindeki başvuru sayısı.
+[içinde] Dizideki başvuru sayısı.
 
 `pValue`\
-[in] Bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) özellik değeri ayarlanacağı nesne.
+[içinde] Özellik değerini ayarlamak için bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süre. Kullanım `INFINITE` süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
 
 ## <a name="return-value"></a>Dönüş Değeri
- Her zaman döndürür `E_NOTIMPL`.
+ Her zaman `E_NOTIMPL` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

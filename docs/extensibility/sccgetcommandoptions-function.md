@@ -1,5 +1,5 @@
 ---
-title: SccGetCommandOptions işlevi | Microsoft Docs
+title: SccGetCommandOptions Fonksiyonu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccGetCommandOptions function
 ms.assetid: bbe4aa4e-b4b0-403e-b7a0-5dd6eb24e5a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13e8bbae6ee16eb81fdb29f526a1f41e905fa504
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: eeefa26422476ca40e782df3ff35eee9d429a149
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351878"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700829"
 ---
-# <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions işlevi
-Bu işlev, belirli bir komut için Gelişmiş Seçenekleri kullanıcıya sorar.
+# <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions fonksiyonu
+Bu işlev, kullanıcıdan belirli bir komut için gelişmiş seçenekler ister.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,49 +36,49 @@ SCCRTN SccGetCommandOptions(
 ### <a name="parameters"></a>Parametreler
  pvContext
 
-[in] Kaynak Denetimi Eklentisi bağlam yapısı.
+[içinde] Kaynak denetimi eklentisi bağlam yapısı.
 
- hWnd
+ Hwnd
 
-[in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.
+[içinde] Kaynak denetim eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
 
- ICommand'ı
+ ıcommand
 
-[in] Gelişmiş Seçenekler istenir komut (bkz [komutu kod](../extensibility/command-code-enumerator.md) olası değerler için).
+[içinde] Gelişmiş seçeneklerin istendiği komut (olası değerler için [Komut koduna](../extensibility/command-code-enumerator.md) bakın).
 
- ppvOptions
+ ppvSeçenekleri
 
-[in] Seçenek yapısı (Ayrıca `NULL`).
+[içinde] Seçenek yapısı (aynı `NULL`zamanda olabilir).
 
-## <a name="return-value"></a>Dönüş değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+## <a name="return-value"></a>Döndürülen değer
+ Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Başarılı.|
-|SCC_I_ADV_SUPPORT|Kaynak denetimi eklentisi komutu için Gelişmiş seçeneklerini destekler.|
-|SCC_I_OPERATIONCANCELED|Kaynak denetimi eklentinin kullanıcı iptal **seçenekleri** iletişim kutusu.|
-|SCC_E_OPTNOTSUPPORTED|Kaynak Denetimi Eklentisi bu işlemi desteklemiyor.|
-|SCC_E_ISCHECKEDOUT|Şu anda kullanıma alınmış bir dosya üzerinde bu işlemi gerçekleştiremezsiniz.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu. Bir yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata oluştu.|
+|SCC_I_ADV_SUPPORT|Kaynak denetim eklentisi komut için gelişmiş seçenekleri destekler.|
+|SCC_I_OPERATIONCANCELED|Kullanıcı kaynak denetimi eklentisinin **Seçenekler** iletişim kutusunu iptal etti.|
+|SCC_E_OPTNOTSUPPORTED|Kaynak denetim eklentisi bu işlemi desteklemez.|
+|SCC_E_ISCHECKEDOUT|Şu anda kullanıma kabul edilen bir dosyada bu işlemi gerçekleştiremez.|
+|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- IDE ile ilk kez bu işlevi çağıran `ppvOptions` = `NULL` kaynak denetimi eklentisi belirtilen komut için Gelişmiş Seçenekleri özelliğini destekleyip desteklemediğini belirlemek için. Eklentinin özelliği için bu komutu da destekler, kullanıcı Gelişmiş Seçenekleri istediğinde IDE bu işlevini yeniden çağırır (genellikle olarak uygulanan bir **Gelişmiş** iletişim kutusunda bir düğme) ve içinNULLolmayanbirişaretçisağlar`ppvOptions` işaret eden bir `NULL` işaretçi. Eklenti özel bir yapı kullanıcı tarafından belirtilen tüm gelişmiş seçenekleri saklar ve o yapısına bir işaretçi döndürür `ppvOptions`. Bu yapı yapılan sonraki çağrılar dahil olmak üzere, bilmeniz gereken diğer tüm kaynak denetimi eklentisi API işlevleri geçirilerek `SccGetCommandOptions` işlevi.
+ IDE, kaynak denetim eklentisinin `ppvOptions` = `NULL` belirtilen komutun gelişmiş seçenekler özelliğini destekleyip desteklemeyin belirlemek için bu işlevi ilk kez çağırır. Eklenti bu komut için özelliği destekliyorsa, kullanıcı gelişmiş seçenekler istediğinde (genellikle iletişim kutusunda **Gelişmiş** düğme olarak uygulanır) ve bu noktalar için `ppvOptions` null `NULL` olmayan bir işaretçi verdiğinde IDE bu işlevi yeniden çağırır. Eklenti, kullanıcı tarafından özel bir yapıda belirtilen gelişmiş seçenekleri depolar ve `ppvOptions`bu yapıya bir işaretçi döndürür. Bu yapı daha `SccGetCommandOptions` sonra, işlevin sonraki çağrıları da dahil olmak üzere, bu konuda bilinmesi gereken diğer tüm Kaynak Denetimi Eklentisi API işlevlerine geçirilir.
 
- Örneği bu durumda açıklamak yardımcı olabilir.
+ Bir örnek bu durumu açıklığa kavuşturmak yardımcı olabilir.
 
- Kullanıcının **alma** komut ve IDE görüntüler bir **alma** iletişim kutusu. IDE çağrıları `SccGetCommandOptions` işleviyle `iCommand` kümesine `SCC_COMMAND_GET` ve `ppvOptions` kümesine `NULL`. Bu kaynak denetimi eklentisi soru olarak yorumlanır, "Bu komut için Gelişmiş Seçenekleri gerekiyor?" Eklenti döndürürse `SCC_I_ADV_SUPPORT`, IDE görüntüler bir **Gelişmiş** düğmesine kendi **alma** iletişim kutusu.
+ Bir kullanıcı **Get** komutunu seçer ve IDE bir **Al** iletişim kutusunu görüntüler. `SccGetCommandOptions` `SCC_COMMAND_GET` `ppvOptions` `NULL`IDE, ayarlı işlevi çağırır ve buna ayarlar. `iCommand` Bu, kaynak denetim eklentisi tarafından "Bu komut için gelişmiş bir seçeneğiniz var mı?" sorusu olarak yorumlanır. Eklenti dönerse, `SCC_I_ADV_SUPPORT`IDE **Get** iletişim kutusunda **Gelişmiş** bir düğme görüntüler.
 
- Kullanıcı ilk kez **Gelişmiş** düğmesi, IDE yeniden çağırır `SccGetCommandOptions` bu sefer olmayan bir işlev`NULL``ppvOptions` işaret eden bir `NULL` işaretçi. Eklenti görüntüler kendi **alma seçenekleri** iletişim kutusu, kullanıcıdan bilgi edinmek için bu bilgiyi kendi yapısında koyar ve o yapısına bir işaretçi döndürür `ppvOptions`.
+ Kullanıcı **Gelişmiş** düğmesini ilk tıklatıldığında, IDE `SccGetCommandOptions` işlevi yeniden çağırır, bu`NULL``ppvOptions` kez bir `NULL` işaretçiye işaret etmeyen bir işlevle. Eklenti kendi **Seçenekleri Al** iletişim kutusunu görüntüler, kullanıcıdan bilgi ister, bu bilgileri kendi yapısına koyar ve `ppvOptions`'deki yapıya bir işaretçi döndürür.
 
- Kullanıcı tıklarsa **Gelişmiş** aynı iletişim kutusunda, IDE yeniden çağırır `SccGetCommandOptions` değiştirmeden yeniden işlevi `ppvOptions`, böylece yapısı geri eklenti geçirilir. Bu eklenti, iletişim kutusu, kullanıcının daha önce ayarlamış olduğunuz değerlerle yeniden başlatmak için sağlar. Eklenti yapısı yerinde, sonuç döndürülmeden önce değiştirir.
+ Kullanıcı aynı iletişim kutusunda **Gelişmiş'i** yeniden tıklatıyorsa, `SccGetCommandOptions` IDE `ppvOptions`işlevi değiştirmeden yeniden çağırır, böylece yapı eklentiye geri aktarılır. Bu, eklentinin iletişim kutusunu kullanıcının daha önce ayarladığının değerlerine yeniden başlatmasını sağlar. Eklenti, dönmeden önce yapıyı yerinde değiştirir.
 
- Son olarak, kullanıcı tıkladığında **Tamam** IDE'nin içinde **alma** iletişim kutusu, IDE çağrıları [SccGet](../extensibility/sccget-function.md), iade yapısı geçirme `ppvOptions` içeren Gelişmiş Seçenekleri.
+ Son olarak, kullanıcı IDE'nin **Get** iletişim kutusunda **Tamam'ı** tıklattığında, IDE Gelişmiş seçenekleri içeren yapıyı geçerek `ppvOptions` [SccGet'ı](../extensibility/sccget-function.md)çağırır.
 
 > [!NOTE]
-> Komut `SCC_COMMAND_OPTIONS` IDE görüntüler kullanıldığında bir **seçenekleri** kullanıcı iletişim kutusunu tümleştirmesinin nasıl çalıştığına denetleyen tercihlerini ayarlama. Kaynak Denetimi Eklentisi, kendi Tercihleri iletişim kutusu sağlamak isterse, buradan görüntüleyebilirsiniz bir **Gelişmiş** IDE'nin Tercihleri iletişim kutusu düğmesi. Eklenti alma ve bu bilgileri kalıcı hale getirmeniz için ayarlanmasından sorumludur; IDE kullanın veya üzerinde değişiklik desteklemez.
+> Komut, `SCC_COMMAND_OPTIONS` IDE, kullanıcının tümleştirmenin nasıl çalıştığını denetleyen tercihleri ayarlamasına olanak tanıyan bir **Seçenekler** iletişim kutusu görüntülediğinde kullanılır. Kaynak denetimi eklentisi kendi tercihleri iletişim kutusunu sağlamak istiyorsa, Bunu IDE'nin tercihleri iletişim kutusundagelişmiş **bir** düğmeden görüntüleyebilir. Eklenti, bu bilgilerin elde edilip kalıcı hale ilmesinden yalnızca sorumludur; IDE onu kullanmaz veya değiştirmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
 - [Komut kodu](../extensibility/command-code-enumerator.md)

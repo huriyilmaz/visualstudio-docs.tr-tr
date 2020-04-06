@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetLanguage | Microsoft Docs
+title: IDebugSymbolProvider::GetLanguage | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugSymbolProvider::GetLanguage method
 ms.assetid: e4142183-3d8b-418f-907f-4ee4c753d8ce
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dfa11a1df6460c08431d7b23fabe5d94674baad2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 876466d3617131815f6aa48b8b7dfb68b645ecb2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347611"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719232"
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
-Bu yöntem, hata ayıklama adresten Kodu derlemek için kullanılan dili alır.
+Bu yöntem, hata ayıklama adresindekodu derlemek için kullanılan dili alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +45,19 @@ int GetLanguage(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in] Bir adres nesnesini temsil ettiği bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi.
+[içinde] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen bir adres nesnesi.
 
 `pguidLanguage`\
-[out] Döndürür bir `GUID` dili belirtir.
+[çıkış] Dili `GUID` belirten bir döndürür.
 
 `pguidLanguageVendor`\
-[out] Döndürür bir `GUID` dil satıcı belirtir.
+[çıkış] Dil `GUID` satıcısını belirten bir döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklama altyapısı, doğru bir ifade değerlendiricisi seçmek gereken bilgileri elde etmek için bu yöntemi çağırır.
+ Hata ayıklama motoru, doğru ifade değerlendiricisi seçmek için gereken bilgileri elde etmek için bu yöntemi çağırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

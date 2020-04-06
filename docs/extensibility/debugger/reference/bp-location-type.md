@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_TYPE | Microsoft Docs
+title: BP_LOCATION_TYPE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_LOCATION_TYPE structure
 ms.assetid: 0248430a-3b61-4809-87a9-e9b6bb7d1130
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 930c3a51173f18ccdad236e285f374bd885c880c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 50e6bdc0dba8f6bcbdd55c45132dff02735786d6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353040"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737947"
 ---
-# <a name="bplocationtype"></a>BP_LOCATION_TYPE
-Bir kesme noktası istek için bir kesme noktası konumu türünü belirtir.
+# <a name="bp_location_type"></a>BP_LOCATION_TYPE
+Kesme noktası isteği için kesme noktasının konum türünü belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -70,65 +70,65 @@ public enum enum_BP_LOCATION_TYPE {
 
 ## <a name="fields"></a>Alanlar
 `BPLT_NONE`\
-Hiçbir kesme noktası konumu belirtir.
+Kesme noktası konumu belirtmezse.
 
 `BPLT_FILE_LINE`\
-Kesme noktası konum türü, bir dosya satırı belirtir.
+Kesme noktasının konum türünü dosya satırı olarak belirtir.
 
 `BPLT_FUNC_OFFSET`\
-Kesme noktası konum türü bir işlev uzaklığı belirtir.
+Kesme noktasının konum türünü işlev ofset olarak belirtir.
 
 `BPLT_CONTEXT`\
-Kesme noktası konum türü bağlamı olarak belirtir.
+Bir bağlam olarak kesme noktasının konum türünü belirtir.
 
 `BPLT_STRING`\
-Kesme noktası konum türü bir dize olarak belirtir.
+Kesme noktasının konum türünü dize olarak belirtir.
 
 `BPLT_ADDRESS`\
-Kesme noktası konum türü bir adresi belirtir.
+Kesme noktasının konum türünü adres olarak belirtir.
 
 `BPLT_RESOLUTION`\
-Kesme noktası konum türü bir çözüm belirtir.
+Kesme noktasının konum türünü çözüm olarak belirtir.
 
 `BPLT_CODE_FILE_LINE`\
-Kesme noktası konum türü, bir kaynak kod satırı belirtir.
+Kesme noktasının konum türünü kaynak kodu satırı olarak belirtir.
 
 `BPLT_CODE_FUNC_OFFSET`\
-Kesme noktası konum türü bir kod işlevi uzaklığı belirtir.
+Kesme noktasının konum türünü kod işlevi mahsup olarak belirtir.
 
 `BPLT_CODE_CONTEXT`\
-Kesme noktası konum türü kod bağlamı olarak belirtir.
+Kesme noktasının konum türünü kod bağlamı olarak belirtir.
 
 `BPLT_CODE_STRING`\
-Kesme noktası konum türü, bir kod dize olarak belirtir.
+Kesme noktasının konum türünü kod dizesi olarak belirtir.
 
 `BPLT_CODE_ADDRESS`\
-Kesme noktası konum türü bir kod adresiyle belirtir.
+Kesme noktasının konum türünü kod adresi olarak belirtir.
 
 `BPLT_DATA_STRING`\
-Kesme noktası konum türü verileri dize olarak belirtir.
+Kesme noktasının konum türünü veri dizesi olarak belirtir.
 
 `BPLT_TYPE_MASK`\
-Kesme noktası türü, değer dışında ayıklanabileceği bir bit maskesi belirtir.
+Kesme noktası türünün değerden çıkarılabilmeleri için biraz maske belirtir.
 
 `BPLT_LOCATION_TYPE_MASK`\
-Kesme noktası konum türü değeri dışında ayıklanabileceği bir bit maskesi belirtir.
+Kesme noktası konumu türü değerden ayıklanabilmek için bir bit maskesi belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bir parametre olarak geçirilen [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) yöntemi.
+[GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) yöntemine parametre olarak geçirilir.
 
-Bir kesme noktası konum türü, bir kesme noktası türü ve konum türü oluşur. Bu bir kesme noktası konum türü hiçbir zaman yalnızca bir kesme noktası türü olduğu anlamına gelir (örneğin, `BPT_CODE`) veya bir konum türü (örneğin, `BPLT_FILE_LINE`). Şu anda desteklenen tüm kesme noktası konumu türleri için önceden tanımlanmış sabitleri bu numaralandırmada dahil edilir (`BPLT_CODE_FILE_LINE` aracılığıyla `BPLT_DATA_STRING`).
+Kesme noktası konum türü, kesme noktası türü ve konum türünden oluşur. Bu, kesme noktası konum türünün hiçbir zaman sadece bir `BPT_CODE`kesme noktası türü (örneğin) veya bir konum türü (örneğin,) `BPLT_FILE_LINE`olmadığı anlamına gelir. Şu anda desteklenen tüm kesme noktası konum türleri için önceden tanımlanmış`BPLT_CODE_FILE_LINE` sabitler bu numaralandırmaya (aracılığıyla) `BPLT_DATA_STRING`dahildir.
 
-`BPT_CODE` ve `BPT_DATA` üyeleri [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) sabit listesi.
+`BPT_CODE`ve `BPT_DATA` [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) numaralandırma üyesidir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)
 - [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

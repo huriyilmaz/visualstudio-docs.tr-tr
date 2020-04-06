@@ -1,28 +1,28 @@
 ---
-title: IDebugExpressionEvaluator2::SetCallback | Microsoft Docs
+title: IDebugExpressionEvaluator2::SetCallback | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExpressionEvaluator2::SetCallback
 - SetCallback
 ms.assetid: 31e3a99e-e784-44a3-8b19-cc5ef31ed546
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f347b687066578d5572a89a6e057fd2cb3b79e0b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 907fdaa928b3f84f6ff37490d5c54a9d48515053
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325493"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729338"
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
-Hata ayıklayıcısı altyapısı (DE), ölçüm ayarları okumak için kullanacağı bir geri arama arabirimini belirtmek ifade değerlendirici (EE) sağlar.
+İfade değerlendiricisinin (EE) hata ayıklama altyapısının (DE) metrik ayarları okumak için kullanacağı geri arama arabirimini belirtmesini sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,16 +40,16 @@ int SetCallback (
 
 ## <a name="parameters"></a>Parametreler
 `pCallback`\
-[in] İçin ayarları geri çağırma kullanmak için arabirim.
+[içinde] Arabirim ayarları geri arama için kullanılacak.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem, bir ifade değerlendiricisi ölçüm ayarları okumak için kullanabileceğiniz oturum hata ayıklama Yöneticisi için bir arabirim sağlar. Ölçümler üzerinde okumak için uzaktan hata ayıklama içinde yararlıdır [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] bilgisayar.
+Bu yöntem, bir ifade değerlendiricimetrik ayarları okumak için kullanabileceğiniz oturum hata ayıklama yöneticisi için bir arabirim sağlar. Bilgisayardaki ölçümleri okumak için uzaktan hata ayıklamada [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] yararlıdır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnekler için bu yöntemi uygulamak nasıl gösterir bir **CEE** gösteren nesne [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) arabirimi.
+Aşağıdaki örnekler, [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) arabirimini ortaya çıkaran bir **CEE** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CEE::SetCallback(IDebugSettingsCallback2* in_pCallback)

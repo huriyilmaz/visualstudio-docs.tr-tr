@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO | Microsoft Docs
+title: PROCESS_INFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - PROCESS_INFO structure
 ms.assetid: 260c33cc-a05e-4645-84b6-536d0b3b0537
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2f8333dd697f265480c46ed7edbfbea1a48970ae
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ef73145fb0a2598dc5e4ee98e8652314e0bc1c89
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309336"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713879"
 ---
-# <a name="processinfo"></a>PROCESS_INFO
+# <a name="process_info"></a>PROCESS_INFO
 Bir işlem hakkında bilgi içerir.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -57,41 +57,41 @@ public struct PROCESS_INFO { 
 
 ## <a name="members"></a>Üyeler
  `Fields`\
- Bayraklarının bir birleşimi [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) hangi alanların doldurulmuş belirten sabit listesi.
+ Hangi alanların doldurulduğuna işaret eden [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) numaralandırmadaki bayrakların birleşimi.
 
  `bstrFileName`\
- İşlemi tam yol adı. Arama eşdeğer [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) yöntemi parametresi ile `GN_FILENAME`.
+ İşlemin tam yol adı. [Parametre](../../../extensibility/debugger/reference/idebugprocess2-getname.md) `GN_FILENAME`ile GetName yöntemini çağırmaya eşdeğerdir.
 
  `bstrBaseName`\
- Uzantı işleminin ve dosya adı. Arama eşdeğer `IDebugProcess2::Getname` yöntemi parametresi ile `GN_BASENAME`.
+ Dosya adı ve işlemin uzantısı. Parametre `GN_BASENAME`ile `IDebugProcess2::Getname` yöntemi çağırmaya eşdeğerdir.
 
  `bstrTitle`\
- Varsa işlemin başlığı. Arama eşdeğer `IDebugProcess2::Getname` yöntemi parametresi ile `GN_TITLE`.
+ Varsa, sürecin başlığı. Parametre `GN_TITLE`ile `IDebugProcess2::Getname` yöntemi çağırmaya eşdeğerdir.
 
  `ProcessId`\
- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) işlemi tanımlayan yapısı. Arama eşdeğer [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemi.
+ İşlemi tanımlayan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapı. [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemini aramaya eşdeğerdir.
 
  `dwSessionId`\
- Bu işlem çalışan hata ayıklama oturumu tanımlayıcısı.
+ Bu işlemin yürüttün hata ayıklama oturumunun tanımlayıcısı.
 
  `bstrAttachedSessionName`\
- Ekli oturumun adı. Arama eşdeğer [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemi.
+ Ekteki oturum adı. [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemini aramaya eşdeğerdir.
 
  `CreationTime`\
- İşlem oluşturulduğu zaman.
+ İşlemin oluşturulduğu saat.
 
  `Flags`\
- Bayraklarının bir birleşimi [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) işlem özelliklerini belirten sabit listesi.
+ İşlemin özelliklerini belirten [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) numaralandırmadan gelen bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı geçirilir [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemi burada da doldurulur.
+ Bu yapı doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine aktarılır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

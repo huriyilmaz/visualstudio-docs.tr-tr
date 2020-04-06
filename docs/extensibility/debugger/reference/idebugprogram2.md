@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2 | Microsoft Docs
+title: IDebugProgram2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2 interface
 ms.assetid: 8d73df73-cfff-4b8b-b426-d6051edb1939
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c79ec83adcb766bd7c6de3d31a2ae790710a838
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 150746197be4945b012717bef08e18ea57168177
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348965"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722722"
 ---
 # <a name="idebugprogram2"></a>IDebugProgram2
-Bu arabirim, bir işlemde çalışan bir program temsil eder.
+Bu arabirim, bir işlemde çalışan bir programı temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,55 +28,55 @@ Bu arabirim, bir işlemde çalışan bir program temsil eder.
 IDebugProgram2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE) ve özel bağlantı noktası sağlayıcısı bir programda bir işlemi temsil etmek için bu arabirimi uygulayın. Oturum hata ayıklama Yöneticisi (SDM) da bilgileri sağlamak için bu arabirimi uygulayan [iliştirme](../../../extensibility/debugger/reference/idebugprogram2-attach.md).
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) ve özel bir bağlantı noktası tedarikçisi, bir işlemdeki programı temsil etmek için bu arabirimi uygular. Oturum hata ayıklama yöneticisi (SDM) de [ekle'ye](../../../extensibility/debugger/reference/idebugprogram2-attach.md)bilgi sağlamak için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olay için yeni bir program bu arabirimi döndürür. Bu arabirim, birçok birden çok arabirim yöntemleri için parametre olarak da kullanılır.
+ [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) etkinliği yeni bir program için bu arabirimi döndürür. Bu arabirim aynı zamanda birden çok arabirimdeki birçok yöntem için bir parametre olarak da kullanılır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugProgram2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugProgram2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)|Bu programa çalışan iş parçacıklarının numaralandırır.|
+|[EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)|Bu programda çalışan iş parçacıklarını doğrular.|
 |[GetName](../../../extensibility/debugger/reference/idebugprogram2-getname.md)|Programın adını alır.|
-|[GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)|Bu programı çalıştırmayı işlemi alır.|
-|[Terminate](../../../extensibility/debugger/reference/idebugprogram2-terminate.md)|Bu program sona erer.|
-|[Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md)|Bu programa ekler.|
-|[CanDetach](../../../extensibility/debugger/reference/idebugprogram2-candetach.md)|Hata ayıklama altyapısı (DE) bir programdan ayırabilirsiniz belirler.|
-|[Detach](../../../extensibility/debugger/reference/idebugprogram2-detach.md)|Hata ayıklayıcı bu programdan ayrılır.|
-|[GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)|Bu program için genel olarak benzersiz bir tanımlayıcı alır.|
-|[GetDebugProperty](../../../extensibility/debugger/reference/idebugprogram2-getdebugproperty.md)|Alır özellikleri program.|
-|[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)|Bu program bir durdurulmuş çalışmaya devam eder. Herhangi bir önceki yürütme durumu temizlenir.|
-|[Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md)|Bu program bir durdurulmuş çalışmaya devam eder. Herhangi bir önceki yürütme durumu korunur.|
-|[Step](../../../extensibility/debugger/reference/idebugprogram2-step.md)|Bir adımı gerçekleştirir.|
-|[CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)|Bu program yürütme sonraki durdurma isteği, iş parçacığı kodun birini zaman.|
-|[GetEngineInfo](../../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)|Bu programı çalıştırmayı hata ayıklama altyapısı (DE) tanıtıcısı ve adını alır.|
-|[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)|Belirli bir pozisyon kaynak dosyada kod bağlamları numaralandırır.|
+|[GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)|Bu programın yürüttüğü işlemi alıyor.|
+|[Terminate](../../../extensibility/debugger/reference/idebugprogram2-terminate.md)|Bu programı sona erdirir.|
+|[İliştir](../../../extensibility/debugger/reference/idebugprogram2-attach.md)|Bu programa iliştiriler.|
+|[CanDetach](../../../extensibility/debugger/reference/idebugprogram2-candetach.md)|Hata ayıklama altyapısının (DE) programdan ayırıp çıkaramayacağına karar vetir.|
+|[Ayır](../../../extensibility/debugger/reference/idebugprogram2-detach.md)|Hata ayıklamayı bu programdan ayırır.|
+|[GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)|Bu program için benzersiz bir tanımlayıcı alır.|
+|[GetDebugProperty](../../../extensibility/debugger/reference/idebugprogram2-getdebugproperty.md)|Program özelliklerini alır.|
+|[Yürütmek](../../../extensibility/debugger/reference/idebugprogram2-execute.md)|Bu programı durmuş durumdaki bir durumdan çalıştırmaya devam ediyor. Önceki herhangi bir yürütme durumu temizlendi.|
+|[Devam](../../../extensibility/debugger/reference/idebugprogram2-continue.md)|Bu programı durmuş durumdaki bir durumdan çalıştırmaya devam ediyor. Önceki yürütme durumu korunur.|
+|[Adım](../../../extensibility/debugger/reference/idebugprogram2-step.md)|Bir adım gerçekleştirir.|
+|[CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)|Bu programın, iş parçacıklarından biri kodu çalıştırdığı bir sonraki kez yürütmeyi durdurmasını ister.|
+|[GetEngineInfo](../../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)|Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve tanımlayıcısını alır.|
+|[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)|Kaynak dosyadaki belirli bir konumun kod bağlamlarını oyalar.|
 |[GetMemoryBytes](../../../extensibility/debugger/reference/idebugprogram2-getmemorybytes.md)|Bu program için bellek bayt alır.|
-|[GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)|Bu program veya bu programın bir parçası için Ayrıştırılmış kod akışı alır.|
-|[EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md)|Bu program yüklendi ve yürütülmekte olan modülleri numaralandırır.|
-|[GetENCUpdate](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md)|Bu program için Düzenle ve devam et (ENC) güncelleştirme alır.<br /><br /> Bu yöntem bir özel hata ayıklama altyapısı uygulamaz (her zaman döndürmelidir `E_NOTIMPL`).|
-|[EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)|Bu programın kod yolları numaralandırır.|
-|[WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)|Bir döküm bir dosyaya yazar.|
+|[GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)|Bu program veya bu programın bir parçası için sökme akışını alır.|
+|[EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md)|Bu programın yüklediği ve yürütüldettiği modülleri oyalar.|
+|[GetENCUpdate](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md)|Bu program için Edit ve Continue (ENC) güncelleştirmesini alır.<br /><br /> Özel hata ayıklama altyapısı bu yöntemi uygulamaz `E_NOTIMPL`(her zaman döndürülmelidir).|
+|[EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)|Bu programın kod yollarını oyalar.|
+|[WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)|Dosyaya bir döküm yazar.|
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>Açıklamalar
- Bir program, bir işlem bir veya daha fazla programlarını oluşur ancak belirli bir çalışma zamanı mimaride çalışan iş parçacığı bir kapsayıcıdır.
+ Bir işlem bir veya daha fazla programdan oluşurken, program belirli bir çalışma zamanı mimarisinde çalışan bir iş parçacığı kapsayıcısa.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)
 - [GetProgram](../../../extensibility/debugger/reference/idebugthread2-getprogram.md)
-- [Next](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)
-- [Event](../../../extensibility/debugger/reference/idebugportevents2-event.md)
-- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+- [Sonraki](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)
+- [Olay](../../../extensibility/debugger/reference/idebugportevents2-event.md)
+- [İliştir](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 - [DestroyProgram](../../../extensibility/debugger/reference/idebugengine2-destroyprogram.md)
-- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+- [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
 - [Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)

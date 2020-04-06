@@ -1,5 +1,5 @@
 ---
-title: PARSEFLAGS | Microsoft Docs
+title: PARSEFLAGS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PARSEFLAGS enumeration
 ms.assetid: 47943f0a-54cb-4493-a62e-5dba97bd4c35
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6123c6438defff596351fff3d1ba31ea52a19f28
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0cc70fdd9fe1279e4d419a422b970eb3d3b07c65
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349931"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714114"
 ---
 # <a name="parseflags"></a>PARSEFLAGS
-Bir ifade ayrıştırmayı belirtir.
+Bir ifadenin nasıl ayrışdırılmasını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,25 +46,25 @@ public enum enum_PARSEFLAGS { 
 
 ## <a name="fields"></a>Alanlar
  `PARSE_EXPRESSION`\
- İfade bir deyim olmadığını gösterir.
+ İfadenin bir deyim olmadığını gösterir.
 
  `PARSE_FUNCTION_AS_ADDRESS`\
- İfade bir adres olarak ayrıştırılması (ve daha sonra değerlendirilmesi için) olduğunu gösterir.
+ İfadenin adres olarak ayrıştırılması (ve daha sonra değerlendirileceğini) gösterir.
 
  `PARSE_DESIGN_TIME_EXPR_EVAL`\
- Tasarım sırasında Ayrıştırılmakta olan ifade gösterir (diğer bir deyişle, bir tasarımcı açık olduğunda).
+ İfadenin tasarım süresi boyunca ayrıştırıldığını gösterir (diğer bir tasarımcı açıkken).
 
 ## <a name="remarks"></a>Açıklamalar
- Bir parametre olarak geçirilen [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) ve [ayrıştırma](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) yöntemleri.
+ [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) ve [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) yöntemlerine parametre olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)
 - [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

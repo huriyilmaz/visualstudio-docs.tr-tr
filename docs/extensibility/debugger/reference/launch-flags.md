@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS | Microsoft Docs
+title: LAUNCH_FLAGS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - LAUNCH_FLAGS enumeration
 ms.assetid: f51aab02-d257-4302-bb79-b7d8ba9ac4e5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27975f4055a433891251c675bff3aacaaa9f6bb3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f18fb850641391f451f5eedb08b7130566dd4de3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339363"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714714"
 ---
-# <a name="launchflags"></a>LAUNCH_FLAGS
-Hata ayıklama başlatma bayrakları belirtir.
+# <a name="launch_flags"></a>LAUNCH_FLAGS
+Hata ayıklama başlatBayraklarını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,29 +48,29 @@ public enum enum_LAUNCH_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `LAUNCH_DEBUG`\
-Hata ayıklama işlemi başlatır.
+Hata ayıklama işlemini başlatir.
 
 `LAUNCH_NODEBUG`\
-Hata ayıklama olmadan işlem başlatır.
+Hata ayıklamadan işlemi başlatir.
 
 `LAUNCH_ENABLE_ENC`\
-KULLANIM DIŞI, KULLANMAYIN.
+AMORTISMANA, KULLANMAYıN.
 
 `LAUNCH_MERGE_ENV`\
-Bir işlem başlatır ve ortam başlatan konakla birleştirir.
+İşlemi başlatir ve ortamı başlatan ana bilgisayarla birleştirir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerleri bir bağımsız değişken olarak geçirilen [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemi.
+Bu değerler [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine bağımsız değişken olarak aktarılır.
 
-Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.
+Bu bayraklar biraz ile `OR`birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

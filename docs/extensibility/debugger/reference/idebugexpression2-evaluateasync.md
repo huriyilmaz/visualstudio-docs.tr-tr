@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateAsync | Microsoft Docs
+title: IDebugExpression2::EvaluateAsync | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpression2::EvaluateAsync
 ms.assetid: 848fe6cb-0759-42f2-890b-d2b551c527d6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dd5c0c6c056dc72f3db49a9d666d6f2ba6295791
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2cd1eba56f8e3c5a1a779acc3330790e9ba2bc96
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326011"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729756"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
-Bu yöntem, zaman uyumsuz olarak ifadeyi değerlendirir.
+Bu yöntem ifadeyi eşsenkronize olarak değerlendirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,23 +43,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>Parametreler
 `dwFlags`\
-[in] Bayraklarının bir birleşimi [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) ifade değerlendirme denetleyen sabit listesi.
+[içinde] İfade değerlendirmesini kontrol eden [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından gelen bayrakların birleşimi.
 
 `pExprCallback`\
-[in] Bu parametre, her zaman null değeri olur.
+[içinde] Bu parametre her zaman null bir değerdir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Tipik bir kodu verilmiştir:
+Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. Tipik bir hata kodu:
 
 |Hata|Açıklama|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|Başka bir ifade şu anda değerlendirilen ve eşzamanlı ifade değerlendirme desteklenmiyor.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|Başka bir ifade şu anda değerlendirilmektedir ve eşzamanlı ifade değerlendirmesi desteklenmemektedir.|
 
 ## <a name="remarks"></a>Açıklamalar
-İfade değerlendirme başlatıldıktan hemen sonra bu yöntem döndürmelidir. İfade başarılı bir şekilde değerlendirildiğinde, bir [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) gönderilmelidir [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) aracılığıyla sağlanan olarak olay geri çağırma [Ekle ](../../../extensibility/debugger/reference/idebugprogram2-attach.md) veya [ekleme](../../../extensibility/debugger/reference/idebugengine2-attach.md).
+Bu yöntem, ifade değerlendirmesine başladıktan hemen sonra geri dönmelidir. İfade başarıyla değerlendirildiğinde, [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) Ekle veya [Ekle](../../../extensibility/debugger/reference/idebugprogram2-attach.md) aracılığıyla sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) olay geri [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)çağırmasına gönderilmelidir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CExpression` uygulayan nesne [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimi.
+Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,

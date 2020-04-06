@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Projeye özgü düzenleyicileri açma | Microsoft Docs'
+title: 'Nasıl Yapılsın: Projeye Özel Editörleri Aç | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,51 +7,51 @@ helpviewer_keywords:
 - editors [Visual Studio SDK], opening project-specific editors
 - projects [Visual Studio SDK], opening folders
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e85913f6eead81bcbc2424ef1087f64a3f2446e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3cb6e360a38d64de4976f83b0167d47dc03fbc87
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319245"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710835"
 ---
-# <a name="how-to-open-project-specific-editors"></a>Nasıl yapılır: Projeye özgü düzenleyicileri açma
-Bir proje tarafından açılmış bir öğe dosyası doğası gereği bu proje için belirli düzenleyiciye bağlıysa, proje dosyası bir projeye özgü Düzenleyicisi'ni kullanarak açmanız gerekir. Dosya bir düzenleyicide seçme IDE'nin mekanizması aşağı temsilci olarak seçilemez. Örneğin, standart bir bit eşlem Düzenleyicisi kullanmak yerine, projeniz için benzersiz olan bilgileri tanıdığı bir belirli bir bit eşlem Düzenleyicisi belirtmek için bu projeye özgü Düzenleyicisi seçeneği kullanabilirsiniz.
+# <a name="how-to-open-project-specific-editors"></a>Nasıl açılır: Projeye özel düzenleyicileri açın
+Bir proje tarafından açılan bir öğe dosyası, bu proje için belirli bir düzenleyiciye özünde bağlıysa, projenin projeye özgü bir düzenleyici kullanarak dosyayı açması gerekir. Dosya, bir düzenleyici seçmek için IDE mekanizmasına devredilemez. Örneğin, standart bir bitmap düzenleyicisi kullanmak yerine, dosyadaki projenize özgü bilgileri tanıyan belirli bir biteşyardımcı düzenleyicisi belirtmek için bu projeye özgü düzenleyici seçeneğini kullanabilirsiniz.
 
- IDE çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> yöntemi belirli bir proje tarafından bir dosyanın açılması gerektiğini belirler. Daha fazla bilgi için [Aç komutunu kullanarak dosyaları görüntüleme](../extensibility/internals/displaying-files-by-using-the-open-file-command.md). Uygulamak için aşağıdaki kılavuzları kullanın `OpenItem` projenizin bir projeye özgü Düzenleyicisi'ni kullanarak bir dosyayı açmak için yöntemi.
+ Bir dosyanın <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> belirli bir proje tarafından açılması gerektiğini belirlediğinde IDE yöntemi çağırır. Daha fazla bilgi için [Dosya aç komutunu kullanarak dosyaları görüntüle'ye](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)bakın. Projeye özel bir düzenleyici `OpenItem` kullanarak projenizin bir dosyayı açması için yöntemi uygulamak için aşağıdaki yönergeleri kullanın.
 
-## <a name="to-implement-the-openitem-method-with-a-project-specific-editor"></a>Bir projeye özgü düzenleyicisiyle OpenItem yöntemi uygulamak için
+## <a name="to-implement-the-openitem-method-with-a-project-specific-editor"></a>Projeye özel bir düzenleyiciyle OpenItem yöntemini uygulamak için
 
-1. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> yöntemi (`RDT_EditLock`) (belge veri nesnesi) dosya zaten açık olup olmadığını belirlemek için.
+1. Dosyanın <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> (belge veri nesnesi) zaten açık olup olmadığını belirlemek için metodu (`RDT_EditLock`) çağırın.
 
     > [!NOTE]
-    > Belge verileri ve belge görünümü nesneleri hakkında daha fazla bilgi için bkz. [belge verileri ve belge görünümü özel düzenleyicilerde](../extensibility/document-data-and-document-view-in-custom-editors.md).
+    > Belge verileri ve belge görünümü nesneleri hakkında daha fazla bilgi için, [özel düzenleyicilerde Belge verileri ve belge görünümüne](../extensibility/document-data-and-document-view-in-custom-editors.md)bakın.
 
-2. Dosya zaten açık değilse, dosya çağırarak resurface <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> yöntemi ve IDO_ActivateIfOpen için bir değer belirterek `grfIDO` parametresi.
+2. Dosya zaten açıksa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> yöntemi arayarak ve parametre için IDO_ActivateIfOpen değerini `grfIDO` belirterek dosyayı yeniden ortaya çıkar.
 
-     Dosya açıksa ve arama projenin dışında bir proje belge sahibi, başka bir projeden açılmasını Düzenleyicisi kullanıcı için bir uyarı görüntülenir. Dosya penceresini kullanıma sunulur.
+     Dosya açıksa ve belge arama projesi dışındaki bir projeye aitse, kullanıcıya açılan düzenleyicinin başka bir projeden geldiğine dair bir uyarı görüntülenir. Dosya penceresi daha sonra yüzeye çıkar.
 
-3. Metin arabelleği (belge veri nesnesi) zaten açık olan ve başka bir görünüme eklemek istiyorsanız, bu görünüm takma için sorumludur. Projeden bir görünüm (belge görünümü nesnesi) örnekleme için önerilen yaklaşım şu şekildedir:
+3. Metin arabelleğiniz (belge veri nesnesi) zaten açıksa ve bu görünüme başka bir görünüm eklemek istiyorsanız, bu görünümü bağlamak sizin sorumluluğunuzdadır. Projeden bir görünümü (belge görünümü nesnesi) anlık olarak almak için önerilen yaklaşım aşağıdaki gibidir:
 
-    1. Çağrı `QueryService` üzerinde <xref:Microsoft.VisualStudio.Shell.Interop.SLocalRegistry> işaretçisi almak için hizmeti <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2> arabirimi.
+    1. `QueryService` Arabirimine <xref:Microsoft.VisualStudio.Shell.Interop.SLocalRegistry> bir işaretçi almak <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2> için hizmeti çağırın.
 
-    2. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> belge görünümü sınıfının bir örneğini oluşturmak için yöntemi.
+    2. Belge <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> görünümü sınıfının bir örneğini oluşturmak için yöntemi çağırın.
 
-4. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> yöntemi, belge görünüm nesnesi belirtme.
+4. Belge <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> görünümü nesnenizi belirterek yöntemi arayın.
 
-     Bu yöntem, bir belge penceresi içinde belge view nesnesinin siteler.
+     Bu yöntem, belge görünümü nesnesini belge penceresinde siteler.
 
-5. Ya da uygun çağrıları gerçekleştirmek <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.InitNew%2A> veya <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A> yöntemleri.
+5. Yöntemlere veya yöntemlere <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.InitNew%2A> uygun <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A> çağrıları gerçekleştirin.
 
-     Bu noktada, görünüm, tam olarak başlatılmış ve açılması hazır olması gerekir.
+     Bu noktada, görünüm tamamen başharfe getirilmeli ve açılmaya hazır olmalıdır.
 
-6. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> Göster ve görünümü açmak için yöntemi.
+6. Görünümü <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> göstermek ve açmak için yöntemi arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Açın ve proje öğeleri Kaydet](../extensibility/internals/opening-and-saving-project-items.md)
-- [Nasıl yapılır: Açık standart düzenleyicileri](../extensibility/how-to-open-standard-editors.md)
-- [Nasıl yapılır: Açık belgeler için düzenleyicileri açma](../extensibility/how-to-open-editors-for-open-documents.md)
+- [Proje öğelerini açma ve kaydetme](../extensibility/internals/opening-and-saving-project-items.md)
+- [Nasıl yapılsın: Standart düzenleyicileri açın](../extensibility/how-to-open-standard-editors.md)
+- [Nasıl yapilir: Açık belgeler için editörleri açın](../extensibility/how-to-open-editors-for-open-documents.md)

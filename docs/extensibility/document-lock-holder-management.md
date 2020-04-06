@@ -1,49 +1,49 @@
 ---
-title: Belge kilit tutucusu Yönetimi | Microsoft Docs
+title: Belge Kilidi Tutucu Yönetimi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document locking
 ms.assetid: fa1ce513-eb7d-42bc-b6e8-cb2433d051d5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 122c62728840e725713c57d31616b978e43bd220
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f9dd520f8ad5cab1f0cfee890c4bcc388c204bb1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347927"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712130"
 ---
-# <a name="document-lock-holder-management"></a>Belge kilit tutucusu Yönetimi
+# <a name="document-lock-holder-management"></a>Belge kilidi tutucu yönetimi
 
-Çalıştırılan Belge tablosu (RDT) açık belgeler veya sahip oldukları herhangi bir düzenleme kilitleri sayısını tutar. Bu program aracılığıyla arka planda bir belge penceresi açık bir belgede görmeye kullanıcı olmadan düzenlendiğinde RDT belgede bir düzenleme kilidi yerleştirebilirsiniz. Bu işlev, genellikle grafik kullanıcı arabirimi aracılığıyla birden çok dosyayı değiştiren tasarımcılar tarafından kullanılır.
+Çalışan belge tablosu (RDT), açık belge sayısını ve sahip oldukları tüm edit kilitlerini korur. Kullanıcı belge penceresinde açık bir belge görmeden arka planda programlı olarak düzenlendiğinde RDT'deki bir belgeye düzenleme kilidi yerleştirebilirsiniz. Bu işlevsellik genellikle bir grafik kullanıcı arabirimi aracılığıyla birden çok dosyayı değiştirmek tasarımcılar tarafından kullanılır.
 
-## <a name="document-lock-holder-scenarios"></a>Belge kilit tutucusu senaryoları
+## <a name="document-lock-holder-scenarios"></a>Belge kilidi tutucu senaryoları
 
-### <a name="file-a-has-a-dependence-on-file-b"></a>Dosya "a" sahip "b" dosya bildirimlerinde
+### <a name="file-a-has-a-dependence-on-file-b"></a>Dosya "a" dosyası "b" bir bağımlılık vardır
 
-Dosya türü için bir standart Düzenleyici "A", uygulamadan burada bir durum düşünün "a" ve her dosya türü "a" bir başvuru (veya bağımlılığa) sahip bir dosya türü "b". Bir standart Düzenleyici "B", "b" türündeki dosyalar için bulunmaktadır. Düzenleyici "A" dosya açıldığında, "a" BT "b" karşılık gelen dosyaya başvuru alır. Dosya "b" görüntülenmez ancak "A" Düzenleyicisi değiştirebilirsiniz. Düzenleyicisi "A" alır bir başvuru dosyasının belge verileri "b" öğesinden <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> yöntemi ve ayrıca, "b" dosya çubuğunda bir düzenleme kilidi tutar. Düzenleyici "A" yapıldıktan sonra "dosya b azaltma düzenleme kilidi" değiştirme sayısı "b" dosya çağırarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> yöntemi. Adlı değilse bu adımı atlayabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> yöntemi parametresi ile `dwRDTLockType` kümesine [_VSRDTFLAGS. RDT_NoLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_NoLock>).
+Dosya türü "a" için standart bir düzenleyici "A" uyguladığınız ve "a" türündeki her dosyanın "b" türünden bir dosyaya başvuruda bulunduğu (veya bu dosyaya bağımlı olduğu) bir durum düşünün. "B" türü dosyalar için standart bir düzenleyici "B" vardır. Düzenleyici "A" dosyasını "a" açtığında ilgili dosya "b" için başvuru alır. "b" dosyası görüntülenmez, ancak "A" düzenleyicisi bunu değiştirebilir. Düzenleyici "A" <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> yöntemden "b" dosyasının belge verilerine bir başvuru alır ve "b" dosyasında bir edit kilidi tutar. Düzenleyici "A" dosya "b" değiştirerek yapıldıktan sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> yöntemi arayarak dosya "b" dosyaüzerinde düzenleme kilidi sayısı atlayabilirsiniz. _VSRDTFLAGS için parametre <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> `dwRDTLockType` ayarlanmış yöntemi arasaydıysanız bu adımı atlayabilirsiniz. [ RDT_NoLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_NoLock>).
 
-### <a name="file-b-is-opened-by-a-different-editor"></a>Dosya "b", farklı bir düzenleyici tarafından açılmış
+### <a name="file-b-is-opened-by-a-different-editor"></a>Dosya "b" farklı bir düzenleyici tarafından açılır
 
-Düzenleyici "A", açmaya çalıştığında "b" dosya "B" Düzenleyicisi tarafından zaten açıldığında, olay, işlemek için iki ayrı senaryo vardır:
+"B" dosyasının düzenleyici "A" düzenleyicisi açmaya çalıştığında "B" düzenleyicisi tarafından zaten açılması durumunda, işlenen iki ayrı senaryo vardır:
 
-- Dosya "b" uyumlu bir düzenleyicide açık olduğunda, "dosya"b"kullanarak bir belge düzenleme kilidi kaydetme Düzenleyicisi A" olmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.RegisterDocumentLockHolder%2A> yöntemi. "A" düzenleyiciniz değiştirme dosya "b" yapıldıktan sonra kaydını belge düzenleme kilidi kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnregisterDocumentLockHolder%2A> yöntemi.
+- "b" dosyası uyumlu bir düzenleyicide açıksa, "A" düzenleyicisinin <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.RegisterDocumentLockHolder%2A> "b" dosyasını kullanarak bir belge edit kilidi kaydettirmesi gerekir. Düzenleyiciniz "A" dosya "b" değiştirerek yapıldıktan sonra, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnregisterDocumentLockHolder%2A> yöntemi kullanarak belge edit kilidi ni açın.
 
-- Dosya "b" uyumsuz bir şekilde açık değilse, başarısız "A" veya "A" kısmen açın ve uygun bir hata iletisi görüntüler düzenleyici ile ilişkili görünüm verebilirsiniz Düzenleyicisi tarafından ya da dosya "b" denenen açılmasına izin verebilirsiniz. Hata iletisi kullanıcının dosya "b" uyumsuz bir düzenleyicide kapatın ve ardından "a" kullanarak dosyayı yeniden açın istemeniz gerekir Düzenleyicisi "A". Ayrıca uygulayabilirsiniz [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] yöntemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable2.QueryCloseRunningDocument%2A> uyumlu bir düzenleyicide açık olan dosya "b" kapatmak için kullanıcıdan istemek için. Kullanıcı dosya "b", dosyanın açılmasını kapanıyorsa içinde "a" Düzenleyicisi "A" normal şekilde devam eder.
+- "b" dosyası uyumsuz bir şekilde açıksa, "A" düzenleyicisi tarafından "b" dosyasının açılma denemesinin başarısız olması na izin verebilir veya "A" düzenleyicisi ile ilişkili görünümün kısmen açılıp uygun bir hata iletisi görüntülemesine izin verebilirsiniz. Hata iletisi, kullanıcıya uyumsuz düzenleyicideki "b" dosyasını kapatmasını ve ardından "A" düzenleyicisini kullanarak "a" dosyasını yeniden açması nı bildirmelidir. Kullanıcıyı uyumsuz [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] düzenleyicide açık olan "b" dosyasını kapatmaya teşvik etmek için de yöntem <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable2.QueryCloseRunningDocument%2A> uygulayabilirsiniz. Kullanıcı "b" dosyasını kapatırsa, "A" düzenleyicisindeki "a" dosyasının açılması normal olarak devam eder.
 
-## <a name="additional-document-edit-lock-considerations"></a>Ek belge düzenleme kilidi konuları
+## <a name="additional-document-edit-lock-considerations"></a>Ek belge edit kilit hususlar
 
-Düzenleyicisi "A", "b" dosya çubuğunda kilit sahip bir belge Düzenleyicisi "B" bir belge tutuyorsa yaptığınız çok "b" dosyasının kilidi Düzenle yalnızca Düzenleyicisi'ni düzenlemek, varsa, farklı bir davranış alırsınız. İçinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], **Sınıf Tasarımcısı** düzenleme kilidi ilişkili kod dosyasına bulundurmayan bir görsel tasarımcı örneğidir. Diğer bir deyişle, ilişkili kod dosyasına kullanıcının sahip olduğu bir sınıf diyagramı Tasarım Görünümü'nde açın ve aynı anda açarsanız ve kullanıcı kod dosyası değiştirir ancak değişiklikleri kaydedemez değişiklikler de için sınıf diyagramı (.cd) dosyası kaybolur. Varsa **Sınıf Tasarımcısı** sahip yalnızca belge kilit kod dosyası Düzenle, kullanıcı kod dosyası kapatılırken değişiklikleri kaydetmek için istenmez. IDE yalnızca kullanıcı kapatıldıktan sonra değişiklikleri kaydetmek için kullanıcıdan **Sınıf Tasarımcısı**. Her iki dosyada kaydedilen değişiklikler yansıtılır. Her iki **Sınıf Tasarımcısı** ve kullanıcı kod dosyası ya da formun kapatırken kaydedilecek istenir dosyası Kod Düzenleyicisi'ni kod dosya belge düzenleme kilitleri tutulur. Bu noktada kaydedilen değişiklikleri hem formun ve kod dosyasında yansıtılır. Sınıf diyagramları hakkında daha fazla bilgi için bkz. [çalışma (Sınıf Tasarımcısı) Sınıf diyagramları ile](../ide/class-designer/designing-and-viewing-classes-and-types.md).
+Düzenleyici "B" düzenleyicisi "b" dosyasında belge edit kilidi olan tek düzenleyici ise, "B" düzenleyicisi de "b" dosyasında bir belge edit kilidi barındırıyorsa, farklı davranışlar elde elabilirsiniz. Sınıf [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **Tasarımcısı,** ilişkili kod dosyasında düzenleme kilidi tutmayan görsel bir tasarımcı örneğidir. Diğer bir deyişle, kullanıcının tasarım görünümünde açık bir sınıf diyagramı varsa ve ilişkili kod dosyası aynı anda açılıyorsa ve kullanıcı kod dosyasını değiştirirancak değişiklikleri kaydetmezse, değişiklikler sınıf diyagramı (.cd) dosyasına da kaybolur. Sınıf **Tasarımcısı** kod dosyasındaki tek belge edit kilidine sahipse, kod dosyasını kapatırken kullanıcıdan değişiklikleri kaydetmesi istenmez. IDE, kullanıcıdan değişiklikleri yalnızca **Sınıf Tasarımcısı'nı**kapattıktan sonra kaydetmesini ister. Kaydedilen değişiklikler her iki dosyaya da yansıtılır. **Hem Sınıf Tasarımcısı** hem de kod dosyası düzenleyicisi kod dosyasında belge düzenle kilitleri tuttuysa, kullanıcıdan kod dosyasını veya formu kapatırken kaydetmesi istenir. Bu noktada kaydedilen değişiklikler hem formhem de kod dosyasına yansıtılır. Sınıf diyagramları hakkında daha fazla bilgi için [bkz.](../ide/class-designer/designing-and-viewing-classes-and-types.md)
 
-Bir belge Düzenleyicisi olmayan bir düzenleme kilit yerleştirmek gerekiyorsa, uygulamanız gereken Not <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> arabirimi.
+Düzenleyici olmayan biri için bir belgeye bir edit kilidi yerleştirmeniz gerekiyorsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> arabirimi uygulamanız gerektiğini unutmayın.
 
-Kod dosyaları programlı olarak değiştirir, birden çok kez bir kullanıcı Arabirimi Tasarımcısı için birden fazla dosya değişiklikleri yapar. Böyle durumlarda <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A> yöntemi yoluyla bir veya daha fazla belge kaydetme işler **aşağıdaki öğelerdeki değişiklikleri kaydetmek istiyor musunuz?** iletişim kutusu.
+Çoğu zaman kod dosyalarını programlı olarak değiştiren bir UI tasarımcısı birden fazla dosyada değişiklik yapar. Bu gibi <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A> durumlarda yöntem, **aşağıdaki öğelerdeki değişiklikleri kaydetmek istiyor musunuz?**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [çalıştırılan Belge tablosu](../extensibility/internals/running-document-table.md)
-- [Kalıcılık ve çalıştırılan Belge tablosu](../extensibility/internals/persistence-and-the-running-document-table.md)
+- [Belge tablosunu çalıştırma](../extensibility/internals/running-document-table.md)
+- [Kalıcılık ve çalışan belge tablosu](../extensibility/internals/persistence-and-the-running-document-table.md)

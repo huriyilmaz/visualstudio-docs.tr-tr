@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugThreads2 | Microsoft Docs
+title: IEnumDebugThreads2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugThreads2
 ms.assetid: 1854f078-3b49-42c2-b65b-33e3b506fd63
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6d8f869e519d9500f1ea8f3bb33a3ee098f5cfd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bbbe047c08f8e91264163d028c1b40d94cde97fc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325412"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715097"
 ---
 # <a name="ienumdebugthreads2"></a>IEnumDebugThreads2
-Bu arabirim geçerli hata ayıklama oturumunda çalışan iş parçacıkları numaralandırır.
+Bu arabirim, geçerli hata ayıklama oturumunda çalışan iş parçacıklarını ayıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,37 +28,37 @@ Bu arabirim geçerli hata ayıklama oturumunda çalışan iş parçacıkları nu
 IEnumDebugThreads2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE), bir programdaki iş parçacıklarının listesini temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) bu arabirimi bir programdaki iş parçacıkları listesini temsil etmek için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çağrı [EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md) programlar bir işlemde çalışan tüm iş parçacıklarının listesini temsil eden bu arabirimi elde edilir. Çağrı [EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) bir programda çalışan iş parçacıklarının listesini temsil eden bu arabirimi elde edilir.
+ Bir işlemde çalışan tüm programlardaki tüm iş parçacıklarının listesini temsil eden bu arabirimi elde etmek için [EnumThreads'i](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md) arayın. Bir programda çalışan iş parçacıklarının listesini temsil eden bu arabirimi elde etmek için [EnumThreads'i](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IEnumDebugThreads2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IEnumDebugThreads2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|Belirtilen bir numaralandırma sıralı iş parçacıklarının sayısını alır.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|Bir numaralandırma sıralı iş parçacıklarında belirtilen sayıda atlar.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|Bir numaralandırma sıralı başlangıç durumuna sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Geçerli planla aynı sıralaması durumu içeren bir numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|İş parçacığı sayısını bir numaralandırıcı alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|Numaralandırma dizisinde belirtilen sayıda iş parçacığı alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|Numaralandırma sırasında belirli sayıda iş parçacığı atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|Numaralandırma sırasını başa sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Geçerli numaralandırma durumuyla aynı numaralandırma durumunu içeren bir numaralandırma oluşturucu oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|Bir numaralandırmadaki iş parçacığı sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio genellikle güncelleştirmek için bu arabirimi alır **iş parçacıkları** çağırmak için ilk iş parçacığında listenin edinmeniz için de penceresi [yürütme](../../../extensibility/debugger/reference/idebugprocess3-execute.md), [devam](../../../extensibility/debugger/reference/idebugprocess3-continue.md), ve [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md).
+ Visual Studio genellikle **Threads** penceresini güncellemek için yanı sıra listenin ilk iş parçacığı elde [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)etmek için bu arayüzü elde, [çağırın,](../../../extensibility/debugger/reference/idebugprocess3-execute.md)Devam , ve [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md).
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)
 - [EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)
 - [EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)
-- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
-- [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
-- [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)
+- [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+- [Devam](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+- [Yürütmek](../../../extensibility/debugger/reference/idebugprocess3-execute.md)

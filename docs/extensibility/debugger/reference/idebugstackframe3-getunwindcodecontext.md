@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::GetUnwindCodeContext | Microsoft Docs
+title: IDebugStackFrame3::GetUnwindCodeContext | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame3::GetUnwindCodeContext method
 ms.assetid: b25f7e7d-2b24-48e4-93b3-829e61d73ebf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a63883b8c2f1f7e09070173281f5e9eeda528352
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 488f675c39bb01c87aca13a9bef8cc4a715ecf18
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352096"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719504"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
-Bir yığın geriye doğru işlem durumunda bir konumu temsil eden kod bağlamı oluştu döndürür.
+Yığın gevşeme işlemi oluştuysa, konumu temsil eden kod bağlamını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetUnwindCodeContext(
 
 ## <a name="parameters"></a>Parametreler
 `ppCodeContext`\
-[out] Döndürür bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) bir yığının geriye doğru oluştuysa kod bağlamı konumu temsil eden nesne.
+[çıkış] Yığın gevşeme oluştuysa kod bağlamı konumunu temsil eden bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir yığının geriye doğru konumu için bir kod bağlamı döndürebilir olsa da, bunu mutlaka yığının geriye doğru gerçekten geçerli yığın çerçevesi ortaya çıkabilir gelmez.
+ Bu yöntem, yığın gevşedikten sonra konum için bir kod bağlamı döndürebilir, ancak bu, yığının gevşemesinin geçerli yığın çerçevesinde gerçekten oluşabileceği anlamına gelmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)

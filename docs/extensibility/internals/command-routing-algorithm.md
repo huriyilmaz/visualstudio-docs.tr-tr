@@ -1,46 +1,46 @@
 ---
-title: Komut yönlendirme algoritması | Microsoft Docs
+title: Komut Yönlendirme Algoritması | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, routing
 - command routing
 ms.assetid: 998b616b-bd08-45cb-845f-808efb8c33bc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c98e145961f8d98c7ea939bd051a94ee68cd93f4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: af8d3e53e09214ce36a80ca18856085dfb2bb746
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342107"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709545"
 ---
 # <a name="command-routing-algorithm"></a>Komut yönlendirme algoritması
-Visual Studio'da komutlar çeşitli farklı bileşenler tarafından işlenir. Komutlar, en dıştaki (genel olarak da bilinir) bağlamına geçerli seçime göre en içteki bağlamından yönlendirilir. Daha fazla bilgi için [komutu kullanılabilirlik](../../extensibility/internals/command-availability.md).
+Visual Studio komutları farklı bileşenleri bir dizi tarafından işlenir. Komutlar, geçerli seçimi temel alan en içteki bağlamdan en dıştaki (genel olarak da bilinir) içeriğe yönlendirilir. Daha fazla bilgi için [Komut kullanılabilirliği'ne](../../extensibility/internals/command-availability.md)bakın.
 
-## <a name="order-of-command-resolution"></a>Komut çözüm sırası
- Komutları komut içeriğini aşağıdaki düzeylerde geçirilir:
+## <a name="order-of-command-resolution"></a>Komut çözümleme sırası
+ Komutlar aşağıdaki komut bağlamından geçirilir:
 
-1. Eklentiler: Ortamı, tüm mevcut eklenti komutu ilk sunar.
+1. Eklentiler: Ortam ilk olarak mevcut olan eklentilere komut uymaktadır.
 
-2. Öncelik komutlar: Bu komutlar kullanılarak kaydedilen <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterPriorityCommandTarget>. Bunlar, Visual Studio'da her komut için çağrılır ve kayıtlı olan sırayla çağrılır.
+2. Öncelik komutları: Bu komutlar <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterPriorityCommandTarget>kullanılarak kaydedilir. Visual Studio'daki her komut için çağrılır ve kayıtlı oldukları sırada çağrılır.
 
-3. Bağlam menüsü komutları: Bağlam menüsünde bulunan bir komut, tipik yönlendirme için bağlam menüsünü ve sonra sağlanan komut hedefi için ilk olarak sunulur.
+3. Bağlam menüsü komutları: Bağlam menüsünde bulunan bir komut önce bağlam menüsüne sağlanan komut hedefine, ondan sonra da tipik yönlendirmeye sunulur.
 
-4. Araç çubuğu komut hedefleri ayarlayın: Bu komut hedefleri çağırdığınızda kayıtlı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell4.SetupToolbar2%2A>. `pCmdTarget` Parametresi `null`. Değilse `null`, bu komut hedefi ayarladığınız araç çubuğunda bulunan herhangi bir komut güncelleştirmek için kullanılır. Shell araç ayarlıyor sonra pencere çerçevesi olarak geçirir `pCmdTarget` böylece komutları araç akışınız pencere çerçevesi aracılığıyla yapılan tüm güncelleştirmeler bile olmadığı odakta.
+4. Araç çubuğu komut hedeflerini ayarlar: Bu komut <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell4.SetupToolbar2%2A>hedefleri, . Parametre `pCmdTarget` olabilir `null`. `null`Değilse, bu komut hedefi, kurmakta olduğunuz araç çubuğunda bulunan komutları güncelleştirmek için kullanılır. Kabuk araç çubuğunuzu ayarlıyorsa, odakta olmasa `pCmdTarget` bile araç çubuğunuzdaki komutların tüm güncelleştirmelerinin pencere çerçevesi üzerinden akması için pencere çerçevesini geçer.
 
-5. Araç penceresi: Aracı genellikle uygulayan windows <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> arabirimi, aynı zamanda uygulamalıdır <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> araç penceresi etkin pencere olduğunda, Visual Studio komut hedefi alabilmesi arabirim. Ancak, araç penceresi, odak ise **proje** penceresini, sonra komutu yönlendirileceğini <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> seçilen öğelerin ortak üst arabirimi. Bu seçim birden çok projeleri yayılmış durumdaysa komutu yönlendirilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> hiyerarşisi. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> Arabirimi içeren <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> ilgili komutları için benzer yöntemler <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi.
+5. Araç penceresi: Genellikle <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> arabirimi uygulayan araç pencereleri, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> araç penceresi etkin pencere olduğunda Visual Studio'nun komut hedefini alabilmesi için arabirimi de uygulamalıdır. Ancak, odak noktası olan araç penceresi **Proje** penceresiise, komut seçili öğelerin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> ortak üst öğesi olan arabirime yönlendirilir. Bu seçim birden çok projeyi kapsıyorsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> komut hiyerarşiye yönlendirilir. Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimdeki ilgili komutlara benzer ve yöntemleri içerir.
 
-6. Belge penceresi: Komutun varsa `RouteToDocs` bayrağı ayarlayın, *.vsct* dosya, Visual Studio bir komut hedefi üzerinde ya da belge view nesnesinin bir örneğini arar bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> arabirimi ya da bir belge örneği (nesnesi genellikle bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> arabirimi veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> arabirimi). Belge view nesnesinin komutu desteklemiyorsa, Visual Studio komutu yönlendiren <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> döndürülen arabirimi. (İsteğe bağlı bir arabirim belge veri nesneleri için budur.)
+6. Belge penceresi: Komutun `RouteToDocs` *.vsct* dosyasında bayrak kümesi varsa, Visual Studio belge görünümü nesnesinde bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> arabirim veya belge nesnesinin örneği (genellikle <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> arabirim <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> veya arabirim) olan bir komut hedefi arar. Belge görünümü nesnesi komutu desteklemiyorsa, Visual <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> Studio komutu döndürülen arabirime yönlendirir. (Bu, belge veri nesneleri için isteğe bağlı bir arabirimdir.)
 
-7. Geçerli hiyerarşi: Etkin belge penceresini veya Seçili hiyerarşiyi sahip projenin geçerli hiyerarşi olabilir **Çözüm Gezgini**. Visual Studio arar <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> geçerli ya da etkin hiyerarşisini uygulanan arabirimi. Hiyerarşi, proje öğesinin bir belge penceresi odağa sahip olsa bile hiyerarşi etkin olduğunda, geçerli olan komutlar desteklemelidir. Ancak, yalnızca geçerli komutları **Çözüm Gezgini** sahip odak kullanarak desteklenmelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> arabirimi ve kendi <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> yöntemleri.
+7. Geçerli hiyerarşi: Geçerli hiyerarşi, etkin belge penceresinin sahibi olan proje veya **Çözüm Gezgini'nde**seçilen hiyerarşi olabilir. Visual Studio, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> geçerli veya etkin hiyerarşiüzerinde uygulanan arabirimi arar. Hiyerarşi, bir proje öğesinin belge penceresi odak olsa bile, hiyerarşi etkin olduğunda geçerli olan komutları desteklemelidir. Ancak, yalnızca **Solution Explorer'ın** odak noktası olduğunda uygulanan <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> komutlar <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> arabirimi ve onun ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> yöntemleri kullanılarak desteklenmelidir.
 
-     **Kes**, **kopyalama**, **Yapıştır**, **Sil**, **Yeniden Adlandır**, **girin**ve **DoubleClick** komutları özel işleme gerektirir. Nasıl yönetileceği hakkında bilgi için **Sil** ve **Kaldır** hiyerarşileri komutlarında bkz <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> arabirimi.
+     **Kesme,** **Kopyala,** **Yapıştır,** **Sil,** **Yeniden Adlandır,** **Girin**ve **DoubleClick** komutları özel kullanım gerektirir. Hiyerarşilerde **Sil** ve **Kaldır** komutlarının nasıl işleyeceğiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> hakkında bilgi için arabirimi görün.
 
-8. Genel: Bir komut tarafından daha önce bahsedilen bağlamları işlenen değil, uygulayan bir komut sahibi VSPackage yönlendirmek Visual Studio denemesi <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. VSPackage'ı zaten yüklü değil, Visual Studio çağırdığında yüklenmez <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi. VSPackage'ı yalnızca yüklenen <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi çağrılır.
+8. Genel: Bir komut daha önce bahsedilen bağlamlar tarafından işlenmemişse, Visual Studio bu komutu arabirimi <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> uygulayan bir komuta sahip olan VSPackage'a yönlendirmeye çalışır. VSPackage zaten yüklenmediyse, Visual Studio <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi aradığında yüklenmez. VSPackage yalnızca <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntem çağrıldığında yüklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Komut tasarımı](../../extensibility/internals/command-design.md)

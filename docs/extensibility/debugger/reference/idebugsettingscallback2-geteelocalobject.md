@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Microsoft Docs
+title: IDebugSettingsCallback2::GetEELocalObject | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::GetEELocalObject
 ms.assetid: e69a3469-a049-420c-b918-c48a1e7b9baf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 561f6727ca0273d5d59434a7bfdd0cdc00533754
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fc205392f325a014bfe07b02b64cd8b0050ce079
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322190"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720076"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-Ölçüm adı verilen bir ifade değerlendirici yerel bir nesne alır.
+Metrik ad verilen bir ifade değerlendirici yerel nesnealır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +45,19 @@ private int GetEELocalObject(
 
 ## <a name="parameters"></a>Parametreler
 `guidLang`\
-[in] Programlama diline benzersiz tanımlayıcısı.
+[içinde] Programlama dilinin benzersiz tanımlayıcısı.
 
 `guidVendor`\
-[in] Satıcı benzersiz tanımlayıcısı.
+[içinde] Satıcının benzersiz tanımlayıcısı.
 
 `pszMetric`\
-[in] Ölçüm adı.
+[içinde] Metnin adı.
 
 `ppUnk`\
-[out] Bir ifade döndürür değerlendirici yerel nesne.
+[çıkış] İfade değerlendirici yerel nesneyi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

@@ -1,5 +1,5 @@
 ---
-title: DefaultName öğesi (Visual Studio şablonları) | Microsoft Docs
+title: DefaultName Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultName element [Visual Studio project templates]
 ms.assetid: 0ff056c8-b9d2-4747-9308-92adf1811491
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1dbb720bf04c36b2d9f018be5418a25088e259f4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 92bd29824cf1d3b91a7bdaa7220479c583ad0f23
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348147"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712313"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName öğesi (Visual Studio şablonları)
-Oluşturulduğunda, Visual Studio Proje sistemi oluşturacak proje veya öğe için ad belirtir.
+Visual Studio proje sisteminin proje veya öğe için oluşturulduğunda oluşturacağı adı belirtir.
 
- \<VSTemplate > \<TemplateData > \<DefaultName >
+ \<VSTemplate \<> ŞablonVeri> \<DefaultName>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,24 +46,24 @@ Oluşturulduğunda, Visual Studio Proje sistemi oluşturacak proje veya öğe i�
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu metin proje veya öğe varsayılan adını belirtir.
+ Bu metin, projenin veya öğenin varsayılan adını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- `DefaultName` İsteğe bağlı bir öğedir.
+ `DefaultName`isteğe bağlı bir unsurdur.
 
- Projeleri için bu öğenin proje diskte depolar dizinin adını belirtir. Öğeler için kaynak dosyasının dosya adını belirtir.
+ Projeler için bu öğe, projeyi diskte depolayan dizinin adını belirtir. Öğeler için, kaynak dosyanın dosya adını belirtir.
 
- Bir proje veya öğe oluşturduğunuzda, varsayılan adını kullanarak değiştirebilirsiniz **adı** 'nden ya da mevcut olan seçenek **yeni proje** iletişim kutusu veya **Add New Item** iletişim kutusu.
+ Bir proje veya öğe oluşturduğunuzda, **Yeni Proje** iletişim kutusundan veya **Yeni Öğe Ekle** iletişim kutusundan kullanılabilen **Ad** seçeneğini kullanarak varsayılan adı değiştirebilirsiniz.
 
- Proje veya öğe için varsayılan adı oluşturmak için proje sistemi istemiyorsanız ayarlayın [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) öğesine `False`.
+ Proje sisteminin proje veya öğe için varsayılan adı oluşturmasını istemiyorsanız, [AşağıdakiLeri Varsayılan Ad](../extensibility/providedefaultname-element-visual-studio-templates.md) öğesine `False`ayarlayın.
 
 ## <a name="example"></a>Örnek
- Standart öğesi şablonu için meta veriler aşağıdaki örnekte bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıfı.
+ Aşağıdaki örnekte, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıfın standart madde şablonu için meta veriler gösterilmektedir.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -82,5 +82,5 @@ Oluşturulduğunda, Visual Studio Proje sistemi oluşturacak proje veya öğe i�
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)

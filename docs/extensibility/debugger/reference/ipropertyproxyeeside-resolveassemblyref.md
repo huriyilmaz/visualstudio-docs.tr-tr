@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::ResolveAssemblyRef | Microsoft Docs
+title: IPropertyProxyEESide::ÇözümmontajRef | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide::ResolveAssemblyRef
 ms.assetid: 662ca0a6-dad0-4c00-a718-bb3bbc5bd9da
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3d2fd21b39e171238319c857ad0384db1d7635d7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c54945b0c89fb9608fab6aa70dcc63a7c6ae42df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353454"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714883"
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
-Belirtilen yönetilen bütünleştirilmiş kod başvurusu konumunu belirler.
+Belirtilen yönetilen derleme başvurusu konumunu belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,25 +49,25 @@ int ResolveAssemblyRef(
 
 ## <a name="parameters"></a>Parametreler
 `assemName`\
-[in] Çözümlenecek derlemenin adı.
+[içinde] Çözülecek derlemenin adı.
 
 `assemBytes`\
-[out] Döndürür bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) başvuru ile ilişkili derleme baytları içeren nesne.
+[çıkış] Başvuruyla ilişkili montaj baytlarını içeren bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi döndürür.
 
 `assemPdb`\
-[out] Döndürür bir `IEEDataStorage` sembolü içeren bir nesne, bu başvuru ile ilişkili veri depolayın.
+[çıkış] Bu `IEEDataStorage` başvuruyla ilişkili sembol depolama verilerini içeren bir nesne döndürür.
 
 `assemLocation`\
-[out] Bu başvuru yolu konumunu döndürür.
+[çıkış] Bu başvurunun yol konumunu döndürür.
 
 `alr`\
-[out] Bir değer döndürür [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) bu başvurusunun derleme konumunu belirten sabit listesi.
+[çıkış] Bu başvurunun derlemesinin yerini gösteren [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) numaralandırmasından bir değer verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, genellikle bir özel ifade değerlendiricisi tarafından uygulanmadı.
+ Bu yöntem genellikle özel bir ifade değerlendiricisi tarafından uygulanmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

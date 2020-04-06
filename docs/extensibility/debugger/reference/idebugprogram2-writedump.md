@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::WriteDump | Microsoft Docs
+title: IDebugProgram2::WriteDump | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::WriteDump
 ms.assetid: 375afb8c-882d-44db-bfa7-e2c9eb555122
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 90d9d680ca83967f9f651269e186670fb90a771d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 333535a727d88f66346ba4c94cb08b4917b8acfd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343627"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722731"
 ---
 # <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
-Bir döküm bir dosyaya yazar.
+Dosyaya bir döküm yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int WriteDump( 
 
 ## <a name="parameters"></a>Parametreler
 `DumpType`\
-[in] Bir değer [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) Örneğin, kısa döküm, türünü belirten sabit listesi veya uzun süre.
+[içinde] [DumpTYPE](../../../extensibility/debugger/reference/dumptype.md) numaralandırmasından, örneğin kısa veya uzun döküm türünü belirten bir değer.
 
 `pszDumpUrl`\
-[in] Döküm için yazma URL'si. Genellikle, bu biçimindedir `file://c:\path\filename.ext`, ancak geçerli bir URL olabilir.
+[içinde] Dökümü yazmak için URL. Genellikle, bu `file://c:\path\filename.ext`şeklindedir, ancak geçerli bir URL olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir program dökümü genellikle verilebilir geçerli yığın çerçevesi yığın, program ve program sahip büyük olasılıkla herhangi bir bellek çalışan iş parçacıkları listesi.
+ Program dökümü genellikle geçerli yığın çerçevesi, yığın kendisi, programda çalışan iş parçacıklarının bir listesini ve muhtemelen programın sahip olduğu herhangi bir bellek içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::SetValue | Microsoft Docs
+title: IDebugObject::SetValue | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::SetValue method
 ms.assetid: d652e09c-cdc1-4519-8116-d7c743f5679b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9c6590c45027eb3dce28e2dbac182a967e87d59
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9e4652eb3c77a1871063dfa71b464fb1f7c43f94
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318948"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726362"
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
-Nesnenin değerini ardışık bir bayt serisinden ayarlar.
+Nesnenin değerini ardışık bayt serisinden ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int SetValue(
 
 ## <a name="parameters"></a>Parametreler
 `pValue`\
-[in] Yeni değeri temsil eden bir bayt dizisi.
+[içinde] Yeni değeri temsil eden bir dizi bayt.
 
 `nSize`\
-[in] Değerin bayt cinsinden boyutu.
+[içinde] Baytlar'daki değerin boyutu.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dizideki değerleri bu kopyalanır [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) herhangi bir mevcut değer değiştirme, nesne. Yeni değer boyutu, mevcut değerinden küçük veya çok büyük olabilir. Bu `IDebugObject` bir null başvuru olamaz.
+ Dizideki değerler, varolan herhangi bir değerin yerine bu [Hata Ayıklama Nesnesi](../../../extensibility/debugger/reference/idebugobject.md) nesnesine kopyalanır. Yeni değerin boyutu varolan değerden daha büyük veya daha küçük olabilir. Bu `IDebugObject` null bir başvuru olamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

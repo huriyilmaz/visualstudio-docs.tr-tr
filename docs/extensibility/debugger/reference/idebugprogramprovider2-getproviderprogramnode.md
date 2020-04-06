@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode | Microsoft Docs
+title: IDebugProgramProvider2::GetProviderProgramNode | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramProvider2::GetProviderProgramNode
 ms.assetid: e62e8e83-acbb-4c52-aedf-ffbd4670db29
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7629a60f3393f996a456c907ec150be202a0bb94
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fd8ca7d5120ba20695caef2e9021ee25869df72f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349813"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721798"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
-Belirli bir programı program düğümünü alır.
+Belirli bir program için program düğümlerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,31 +51,31 @@ int GetProviderProgramNode(
 
 ## <a name="parameters"></a>Parametreler
 `Flags`\
-[in] Bayraklarının bir birleşimi [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) sabit listesi. Bu çağrı için tipik aşağıdaki bayraklar:
+[içinde] [numaralandırma PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) gelen bayrakların bir kombinasyonu. Aşağıdaki bayraklar bu çağrı için tipiktir:
 
-|Bayrağı|Açıklama|
+|Bayrak|Açıklama|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|Çağıran uzak makinede çalışıyor.|
-|`PFLAG_DEBUGGEE`|Arayan şu anda hata ayıklaması (taşıma hakkında ek bilgi, her düğüm için de döndürülür).|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Arayan bağlı, ancak hata ayıklayıcı tarafından başlatılan değil.|
+|`PFLAG_REMOTE_PORT`|Arayan uzak makinede çalışıyor.|
+|`PFLAG_DEBUGGEE`|Arayan şu anda debugged ediliyor (marshalling hakkında ek bilgiler her düğüm için döndürülür).|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Arayan, hata ayıklama tarafından başlatıldığı ancak başlatılmamasA da iliştirilmiş.|
 
 `pPort`\
-[in] Çağırma işlemi bağlantı noktası çalışıyor.
+[içinde] Arama işleminin devam eden bağlantı noktası.
 
 `processId`\
-[in] Bir [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) programını içeren işlemin Kimliğini söz konusu tutan yapı.
+[içinde] Söz konusu programı içeren işlemin kimliğini tutan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) bir yapı.
 
 `guidEngine`\
-[in] GUID (varsa) programı iliştirildiği hata ayıklama altyapısı.
+[içinde] Programın bağlı olduğu hata ayıklama altyapısının GUID'i (varsa).
 
 `programId`\
-[in] Program düğüm alınacağı program kimliği.
+[içinde] Program düğümalmak için programın kimliği.
 
 `ppProgramNode`\
-[out] Bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) istenen program düğümü temsil eden nesne.
+[çıkış] İstenen program düğümlerini temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

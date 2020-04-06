@@ -1,5 +1,5 @@
 ---
-title: VSCodeWindowManager nesnesi | Microsoft Docs
+title: VSCodeWindowManager Nesnesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - VsCodeWindowManager object
 - views [Visual Studio SDK], VSCodeWindowManager object
 ms.assetid: e313add5-afdb-4d8d-abd1-764e1fc10c44
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c67fb719c6ec87e7707a406e2e7f67cd71569b39
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 17bc9462af55ec9621654bd39cd65a2091f3f73f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189041"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740409"
 ---
 # <a name="vscodewindowmanager-object"></a>VSCodeWindowManager nesnesi
 
-Dil hizmeti, kod penceresi yöneticisini uygular ve donatılabilen (örneğin, açılan çubuğun) yönetilirken sorumludur. Daha fazla bilgi için bkz. [eskı API 'Yi kullanarak kod pencerelerini özelleştirme](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
+Dil hizmeti, kod penceresi yöneticisini uygular ve süslemeleri (örneğin, açılır çubuğu) yönetmekten sorumludur. Daha fazla bilgi için, [Eski API'yi kullanarak Kod Windows'u Özelleştirme'ye](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015)bakın.
 
-Aşağıdaki tabloda `VSCodeWindowManager` nesnesindeki arabirimler gösterilmektedir.
+Aşağıdaki tabloda `VSCodeWindowManager` nesnedeki arabirimler gösterilmektedir.
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Donatılabilen (açılan çubuklar gibi) bir kod penceresine eklenmesine veya kaldırılmasına izin verir.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Süslerin (açılır çubuklar gibi) bir kod penceresine eklenmesine veya kaldırılmasına izin verir.|

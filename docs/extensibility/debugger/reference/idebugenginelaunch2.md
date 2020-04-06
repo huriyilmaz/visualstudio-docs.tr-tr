@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2 | Microsoft Docs
+title: IDebugEngineLaunch2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineLaunch2 interface
 ms.assetid: 5eaf2ad8-3fbf-446e-b48b-5327ad3f5255
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b6f59c9444b0c54f8a230f8eb4487e16b65ebf4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ee77cbd680df2c851d53aac298605023227fa6f8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345233"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730497"
 ---
 # <a name="idebugenginelaunch2"></a>IDebugEngineLaunch2
-Başlatma ve sonlandırma programlar için hata ayıklama altyapısı (DE) tarafından kullanılır.
+Programları başlatmak ve sonlandırmak için hata ayıklama altyapısı (DE) tarafından kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,28 +28,28 @@ Başlatma ve sonlandırma programlar için hata ayıklama altyapısı (DE) taraf
 IDebugEngineLaunch2 : IDebugEngine2
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Tamamen özel bir bağlantı noktası tarafından işlenen bir işlem başlatmaya özel gereksinimleriniz varsa, bu arabirim tarafından bir özel DE uygulanır. Bu genellikle DE yorumlayıcıyı parçası olduğunda ve bir betik ayıklanan işlemin durumdur: yorumlayıcı önce başlatılması gerekir ve ardından betiği yüklenen çalışmaya ve. Bir bağlantı noktası yorumlayıcı başlatabilirsiniz, ancak komut dosyası (aynı role DE sahip olduğu) bir özel işlem gerektirebilir. Yalnızca özel bir bağlantı noktası işleyemiyor bir programın tanıtımından benzersiz gereksinimleri varsa, bu arabirim uygulanır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim, özel bir bağlantı noktası tarafından tamamen işlenemeyen bir işlemi başlatmak için özel gereksinimleri varsa, özel bir DE tarafından uygulanır. Bu genellikle DE bir yorumlayıcının parçası olduğunda ve debugged işlemi bir komut dosyası dır: önce yorumlayıcı başlatılması gerekir ve sonra komut dosyası yüklenir ve başlatılır. Bir bağlantı noktası yorumlayıcıyı başlatabilir, ancak komut dosyası özel kullanım gerektirebilir (DE'nin bir rolü vardır). Bu arabirim, yalnızca özel bir bağlantı noktasının işleyemeyeceği bir programı başlatmak için benzersiz gereksinimler varsa uygulanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim SDM sağlayabilirseniz bu arabirim oturum hata ayıklama Yöneticisi (SDM) tarafından çağrılır [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) (QueryInterface kullanarak) arabirim. Bu arabirim elde edilebilir, DE özel gereksinimleri vardır ve başlatabiliyorsanız bağlantı noktası yerine programını başlatmak için bu arabirimi çağırır SDM bilir.
+ SDM bu arabirimi [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabiriminden (QueryInterface kullanarak) alabiliyorsa, bu arabirim oturum hata ayıklama yöneticisi (SDM) tarafından çağrılır. Bu arabirim elde edilebilirse, SDM DE'nin özel gereksinimleri olduğunu bilir ve bu arabirimi bağlantı noktasının başlatılması yerine programı başlatmak için çağırır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugEngineLaunch2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugEngineLaunch2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|Bir işlem DE yoluyla başlatır.|
-|[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|Sürdürür, yürütme işlemi.|
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|Bir işlemin sona erdirilecek belirler.|
+|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|DE ile bir işlem başlatir.|
+|[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|İşlem yürütmeyi devam ettirer.|
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|Bir işlemin sonlandırılap sonlandırılamayacağını belirler.|
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)|Bir işlemi sonlandırır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Msdbg.h
+ Üstbilgi: Msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

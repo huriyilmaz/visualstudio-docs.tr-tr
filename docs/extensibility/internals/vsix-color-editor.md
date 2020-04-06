@@ -1,85 +1,85 @@
 ---
-title: VSıX renk Düzenleyicisi | Microsoft Docs
+title: VSIX Renk Editörü | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28bc9381cd1fbd0cf03242683d3fcfb1ea39b8f0
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: aa3ed1f1a2a761a6602ac891eb78b5a5436abf92
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252481"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704039"
 ---
 # <a name="vsix-color-editor"></a>VSIX Renk Düzenleyicisi
-Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel renkler oluşturabilir ve düzenleyebilir. Araç ayrıca, renklerin kodda kullanılabilmesi için tema kaynak anahtarları da oluşturabilir. Bu araç, tema oluşturmayı destekleyen bir Visual Studio uzantısı için renkler oluşturmak için faydalıdır. Bu araç. pkgdef ve. xml dosyalarını açabilir. Visual Studio temaları (. vstheme dosyaları), dosya uzantısını. xml olarak değiştirerek Visual Studio uzantısı renk Düzenleyicisi ile birlikte kullanılabilir. Ayrıca,. vstheme dosyaları geçerli bir. xml dosyasına aktarılabilir.
+Visual Studio Extension Color Editor aracı Visual Studio için özel renkler oluşturabilir ve düzenleme yapabilir. Araç, renklerin kodda kullanılabileceğini bilmek için tema kaynağı anahtarları da oluşturabilir. Bu araç, temalama destekleyen bir Visual Studio uzantısı için renk yapmak için yararlıdır. Bu araç .pkgdef ve .xml dosyalarını açabilir. Visual Studio temaları (.vstheme dosyaları) dosya uzantısını .xml olarak değiştirerek Visual Studio Extension Color Editor ile kullanılabilir. Ayrıca, .vstheme dosyaları geçerli bir .xml dosyasına içe aktarılabilir.
 
- ![VSIX renk düzenleyici Hero](../../extensibility/internals/media/vsix-color-editor-hero.png "VSIX renk düzenleyici Hero")
+ ![VSIX Renk Editörü Kahraman](../../extensibility/internals/media/vsix-color-editor-hero.png "VSIX Renk Editörü Kahraman")
 
  **Paket tanımı dosyaları**
 
- Paket tanımı (. pkgdef) dosyaları, temaları tanımlayan dosyalardır. Renkler bir. pkgdef dosyasına derlenen Tema Color. xml dosyalarında depolanır. . Pkgdef dosyaları, Visual Studio aranabilir konumlarına dağıtılır, çalışma zamanında işlenir ve temaları tanımlamak için birlikte birleştirilir.
+ Paket tanımı (.pkgdef) dosyaları temaları tanımlayan dosyalardır. Renklerin kendileri bir .pkgdef dosyasında derlenen tema rengi .xml dosyalarında saklanır. .pkgdef dosyaları Visual Studio'da aranabilir konumlara dağıtılır, çalışma zamanında işlenir ve temaları tanımlamak için birleştirilir.
 
  **Renk belirteçleri**
 
  Renk belirteci dört öğeden oluşur:
 
-- **Kategori adı:** Bir renk kümesi için mantıksal gruplama. İstenen kullanıcı arabirimi öğesine veya Kullanıcı arabirimi öğeleri grubuna özgü renkler varsa, var olan bir kategori adı kullanın.
+- **Kategori adı:** Bir renk kümesi için mantıksal bir gruplama. İstenilen Kullanıcı Arabirimi öğesine veya Kullanıcı Arabirimi öğeleri grubuna özgü zaten renkler varsa varolan bir kategori adı kullanın.
 
-- **Belirteç adı:** Renk belirteci ve belirteç kümeleri için açıklayıcı bir ad. , Arka plan ve ön plan (metin) belirteç adlarını ve bunların tüm durumlarını içerir ve bunların, bu koşulların ve uygulandıkları durumların belirlenmesi kolay olacak şekilde adlandırılması gerekir.
+- **Belirteç adı:** Renk belirteci ve belirteç kümeleri için açıklayıcı bir ad. Kümeler, tüm durumlarının yanı sıra arka plan ve ön plan (metin) belirteç adlarını da içerir ve bu adlar, başvurdukları çiftleri ve durumları kolayca tanımlayabilmek için adlandırılmalıdır.
 
-- **Renk değerleri (veya kular):** Her renkli tema için gereklidir. Her zaman, çiftler halinde arka plan ve metin rengi değerleri oluşturun. Metin (ön plan) rengi her zaman çizilme arka plan rengine karşı okunabilir olacak şekilde arka plan/ön plan için renkler eşleştirilir. Bu renkler bağlantılıdır ve Kullanıcı arabiriminde birlikte kullanılacaktır. Arka planın metinle birlikte kullanılması amaçlanmıyorsa, ön plan rengi tanımlamayın.
+- **Renk değerleri (veya tonları):** Her renkli tema için gerekli. Her zaman çift olarak arka plan ve metin renk değerleri oluşturun. Renkler arka plan/ön plan için eşleştirilebilir, böylece metin (ön plan) rengi çizildiği arka plan rengiyle her zaman okunabilir. Bu renkler birbirine bağlıdır ve ui'de birlikte kullanılacaktır. Arka plan metinle kullanılmak üzere tasarlanmamışsa, ön plan rengi tanımlamayın.
 
-- **Sistem renk adı:** Yüksek karşıtlıklı ekranlarda kullanım için.
+- **Sistem renk adı:** Yüksek kontrastlı ekranlarda kullanım için.
 
-## <a name="how-to-use-the-tool"></a>Aracı kullanma
- Mümkün olduğunca ve uygun durumlarda, mevcut Visual Studio renklerinin yenilerini oluşturmak yerine yeniden kullanılması gerekir. Ancak, uygun renklerin tanımlanmadığı durumlarda uzantı temalarını uyumlu tutmak için özel renkler oluşturulmalıdır.
+## <a name="how-to-use-the-tool"></a>Aracı nasıl kullanılır?
+ Mümkün olduğunca, ve uygun olduğunda, mevcut Visual Studio renkleri yerine yenilerini yapmak yeniden kullanılmalıdır. Ancak, uygun renklerin tanımlanmamış olduğu durumlarda, uzantı temasını uyumlu tutmak için özel renkler oluşturulmalıdır.
 
  **Yeni renk belirteçleri oluşturma**
 
- Visual Studio uzantısı renk düzenleyicisini kullanarak özel renkler oluşturmak için aşağıdaki adımları izleyin:
+ Visual Studio Extension Color Editor'ı kullanarak özel renkler oluşturmak için aşağıdaki adımları izleyin:
 
-1. Yeni renk belirteçleri için kategori ve belirteç adlarını belirleme.
+1. Yeni renk belirteçleri için kategori ve belirteç adlarını belirleyin.
 
-2. Kullanıcı arabirimi öğesinin her tema için kullanacağı kuları ve Yüksek Karşıtlık için sistem rengini seçin.
+2. Yüksek Karşıtlık için her tema ve sistem rengi için UI öğesinin kullanacağı tonları seçin.
 
 3. Yeni renk belirteçleri oluşturmak için renk düzenleyicisini kullanın.
 
-4. Visual Studio uzantısı içindeki renkleri kullanın.
+4. Visual Studio uzantısındarenkleri kullanın.
 
-5. Visual Studio 'da değişiklikleri test edin.
+5. Visual Studio'daki değişiklikleri test edin.
 
-   **1. Adım: Yeni renk belirteçleri için kategori ve belirteç adlarını belirleme.**
+   **Adım 1: Yeni renk belirteçleri için kategori ve belirteç adlarını belirleyin.**
 
-   Bir Vscrengi için tercih edilen adlandırma şeması **[Category] [UI Type] [State]** . Boş olduğu için Vscrengnames içinde "Color" sözcüğünü kullanmayın.
+   VSColor için tercih edilen adlandırma düzeni **[Kategori] [UI türü] [Durum]** olur. Gereksiz olduğu için VSColor adlarında "renk" sözcüğü kullanmayın.
 
-   Kategori adları mantıksal gruplandırmaları sağlar ve mümkün olduğunca dar olarak tanımlanmalıdır. Örneğin, tek bir araç penceresinin adı bir kategori adı olabilir, ancak tüm iş birimi veya proje ekibinin adı değildir. Girişlerin kategorilere gruplandırılması, aynı ada sahip renkler arasında karışıklık oluşmasını önlemeye yardımcı olur.
+   Kategori adları mantıksal gruplandırmalar sağlar ve mümkün olduğunca dar bir şekilde tanımlanmalıdır. Örneğin, tek bir araç penceresinin adı bir kategori adı olabilir, ancak tüm bir iş biriminin veya proje ekibinin adı değil. Girişleri kategorilere gruplandırmak, aynı ada sahip renkler arasındaki karışıklığı önlemeye yardımcı olur.
 
-   Belirteç adı, öğe türünü ve durumları ya da rengin uygulanacağı "durumu" açıkça göstermelidir. Örneğin, etkin bir veri ipucunun **[UI türü]** "**datatıp**" olarak adlandırılabilir ve **[State]** adı "**etkin**" olarak adlandırılabilir ve bu da "**datatipactive**" renk adına neden olur. Veri ipuçları metin içerdiğinden, hem ön plan hem de arka plan renginin tanımlanması gerekir. Arka plan/ön plan eşleştirmesi kullanarak, renk Düzenleyicisi arka plan için "**Datatipactive**" renkleri ve ön plan Için "**Datatipactivetext**" renklerini otomatik olarak oluşturur.
+   Belirteç adı, öğe türünü ve durumları veya rengin uygulanacağı "durum"u açıkça belirtmelidir. Örneğin, etkin bir veri ipucunun **[UI türü]** "**DataTip**" olarak adlandırılabilir ve **[Durum]** "**Active**" olarak adlandırılabilir ve bu da "**DataTipActive"** renk adı ile sonuçlanabilir. Veri ipuçları metin olduğundan, hem ön plan hem de arka plan renginin tanımlanması gerekir. Renk düzenleyicisi arka plan için "**DataTipActive**" ve ön plan için "**DataTipActiveText**" renklerini otomatik olarak oluşturur.
 
-   Kullanıcı arabirimi parçasının yalnızca bir durumu varsa, adın **[State]** bölümü atlanabilir. Örneğin, bir arama kutusunun kenarlığı varsa ve kenarlığın rengini etkileyebilecek bir durum değişikliği yoksa, kenarlığın renk belirtecinin adı yalnızca "**Searchboxborder**" olarak çağrılabilir.
+   Kullanıcı Arabirimi'nin yalnızca bir durumu varsa, adın **[Durum]** bölümü atlanabilir. Örneğin, bir arama kutusunun kenarlığı varsa ve kenarlığı etkileyecek bir durum değişikliği yoksa, kenarlık renk belirteci adı basitçe **"SearchBoxBorder"** olarak adlandırılabilir.
 
    Bazı yaygın durum adları şunlardır:
 
 - Etkin
 
-- Olmadan
+- Etkin değil
 
-- Gelme olayından
+- Mouseover
 
-- MouseDown
+- Mousedown
 
 - Seçildi
 
-- Diğinize
+- Odaklı
 
   Liste öğesi denetiminin bölümleri için birkaç belirteç adı örnekleri:
 
-- Liste
+- Listıtem
 
 - ListItemBorder
 
@@ -95,51 +95,51 @@ Visual Studio uzantısı renk düzenleyici Aracı, Visual Studio için özel ren
 
 - ListItemDisabledBorder
 
-  **2. Adım: Kullanıcı arabirimi öğesinin her tema için kullanacağı kuları ve Yüksek Karşıtlık için sistem rengini seçin.**
+  **Adım 2: Yüksek Karşıtlık için her tema ve sistem rengi için UI öğesinin kullanacağı tonları seçin.**
 
-  Kullanıcı arabirimi için özel renkler ' i seçerken, benzer bir var olan UI öğesini seçin ve renklerini temel olarak kullanın. Kutu içi kullanıcı arabirimi öğelerinin renkleri, gözden geçirme ve test etme işlemleri gerçekleştirdiklerinden, bu sayede uygun ve tüm temalarda doğru şekilde davranır.
+  Kullanıcı Arabirimi için özel renkler seçerken, benzer bir varolan Kullanıcı Arabirimi öğesi seçin ve renklerini temel olarak kullanın. In-the-box UI öğeleri için renkler inceleme ve test uğramıştır, bu yüzden uygun görünecek ve tüm temalar doğru şekilde çalışacaktır.
 
-  **3. Adım: Yeni renk belirteçleri oluşturmak için renk düzenleyicisini kullanın.**
+  **Adım 3: Yeni renk belirteçleri oluşturmak için renk düzenleyicisini kullanın.**
 
-  Renk düzenleyiciyi başlatın ve yeni bir özel tema renkleri. xml dosyası açın veya oluşturun. Menüden **> yeni rengi Düzenle** ' yi seçin. Bu, kategoriyi belirtmek için bir iletişim kutusu açar ve bu kategoride bulunan renk girdileri için bir veya daha fazla ad vardır:
+  Renk düzenleyicisini başlatın ve yeni bir özel tema renkleri .xml dosyasını açın veya oluşturun. Menüden **Yeni Renk > Edit'i** seçin. Bu, kategoriyi ve bu kategorideki renk girişleri için bir veya daha fazla ad belirtmek için bir iletişim kutusu açar:
 
-  ![VSIX renk düzenleyici yeni renk](../../extensibility/internals/media/vsix-color-editor-new-color.png "VSIX renk düzenleyici yeni renk")
+  ![VSIX Renk Editörü Yeni Renk](../../extensibility/internals/media/vsix-color-editor-new-color.png "VSIX Renk Editörü Yeni Renk")
 
-  Mevcut bir kategori seçin veya **Yeni Kategori ' yi seçerek yeni** bir kategori oluşturun. Yeni bir kategori adı oluşturarak başka bir iletişim kutusu açılır:
+  Varolan bir kategori seçin veya yeni bir kategori oluşturmak için **Yeni Kategori'yi** seçin. Yeni bir kategori adı oluşturarak başka bir iletişim kutusu açılır:
 
-  ![VSIX renk düzenleyici yeni kategori](../../extensibility/internals/media/vsix-color-editor-new-category.png "VSIX renk düzenleyici yeni kategori")
+  ![VSIX Renk Editörü Yeni Kategori](../../extensibility/internals/media/vsix-color-editor-new-category.png "VSIX Renk Editörü Yeni Kategori")
 
-  Yeni kategori daha sonra **yeni renk** kategorisi açılan menüsünde kullanılabilir hale gelir. Bir kategori seçtikten sonra her yeni renk belirteci için her satır için bir ad girin ve tamamlandığında "Oluştur" u seçin:
+  Yeni kategori daha sonra **Yeni Renk** kategorisi açılır menüsünde kullanılabilir hale gelecektir. Bir kategori seçtikten sonra, her yeni renk belirteci için satır başına bir ad girin ve tamamlandığında "Oluştur"u seçin:
 
-  ![VSIX renk Düzenleyicisi yeni renk dolduruldu](../../extensibility/internals/media/vsix-color-editor-new-color-filled.png "VSIX renk Düzenleyicisi yeni renk dolduruldu")
+  ![VSIX Renk Editörü Yeni Renk Dolu](../../extensibility/internals/media/vsix-color-editor-new-color-filled.png "VSIX Renk Editörü Yeni Renk Dolu")
 
-  Renk değerleri, rengin tanımlanmadığını gösteren "none" ile arka plan/ön plan çiftleri içinde gösterilir. Not: bir rengin metin rengi/arka plan rengi çifti yoksa yalnızca arka planın tanımlanması gerekir.
+  Renk değerleri arka plan/ön plan çiftleri olarak gösterilir ve rengin tanımlanmadığını belirten "Yok" gösterilir. Not: Bir renk metin rengi/arka plan renk çifti yoksa, yalnızca arka planın tanımlanması gerekir.
 
-  ![VSIX renk düzenleyici renk değerleri](../../extensibility/internals/media/vsix-color-editor-color-values.png "VSIX renk düzenleyici renk değerleri")
+  ![VSIX Renk Düzenleyicirenk Değerleri](../../extensibility/internals/media/vsix-color-editor-color-values.png "VSIX Renk Düzenleyicirenk Değerleri")
 
-  Renk belirtecini düzenlemek için, bu belirtecin teması (sütun) için bir renk girişi seçin. Renk değerini, 8 basamaklı ARGB biçiminde bir onaltılık renk değeri yazarak, hücreye bir sistem renk adı girerek veya bir renk sürgüleri kümesi veya sistem renkleri listesi aracılığıyla istenen rengi seçmek için açılan menüyü kullanarak ekleyin.
+  Renk belirteci ni nde bir renk belirteci ni diseetmek için, bu belirteç temasını (sütunu) için bir renk girişi seçin. 8 haneli ARGB biçiminde bir hex renk değeri yazarak, hücreye bir sistem renk adı girerek veya bir renk kaydırıcıkümesi veya sistem renkleri listesi aracılığıyla istenen rengi seçmek için açılır menüyü kullanarak renk değerini ekleyin.
 
-  ![VSIX renk Düzenleyicisi düzenleme rengi](../../extensibility/internals/media/vsix-color-editor-edit-color.png "VSIX renk Düzenleyicisi düzenleme rengi")
+  ![VSIX Renk Editörü Renk Edit](../../extensibility/internals/media/vsix-color-editor-edit-color.png "VSIX Renk Editörü Renk Edit")
 
-  ![VSIX Color Düzenleyicisi arka planı](../../extensibility/internals/media/vsix-color-editor-background.png "VSIX Color Düzenleyicisi arka planı")
+  ![VSIX Renk Düzenleyici arka planı](../../extensibility/internals/media/vsix-color-editor-background.png "VSIX Renk Düzenleyici arka planı")
 
-  Metin görüntülemesi gerekmeyen bileşenlerde yalnızca bir renk değeri girin: arka plan rengi. Aksi takdirde, bir eğik çizgiyle ayrılmış şekilde hem arka plan hem de metin rengi için değerler girin.
+  Metni görüntülemesi gerekmeyen bileşenler için yalnızca bir renk değeri girin: arka plan rengi. Aksi takdirde, hem arka plan hem de metin rengi için değerleri girin, ileri eğik çizgi ile ayrılmış.
 
-  Yüksek Karşıtlık için değer girerken, geçerli Windows sistem renk adlarını girin. Sabit kodlanmış ARGB değerlerini girmeyin. "Arka plan:" i seçerek geçerli sistem renk adlarının listesini görüntüleyebilirsiniz. Sistem "veya" ön plan: Sistem "renk değeri açılır menülerinden. Metin bileşenlerine sahip öğeler oluştururken, doğru arka plan/metin sistemi renk çiftini kullanın veya metin okunamaz durumda olabilir.
+  Yüksek Karşıtlık için değerler girerken, geçerli Windows sistem renk adlarını girin. Kodlanmış ARGB değerlerini girmeyin. Renk değeri açılır menülerden "Arka Plan: Sistem" veya "Foreground: System" seçeneğini seçerek geçerli sistem renk adlarının listesini görüntüleyebilirsiniz. Metin bileşenlerine sahip öğeler oluştururken, doğru arka plan/metin sistemi renk çiftini kullanın veya metin okunamayabilir.
 
-  Renk belirteçleri oluşturmayı, ayarlamayı ve düzenlemenizi bitirdiğinizde, bunları istenen. xml veya. pkgdef biçiminde kaydedin. Arka plan veya ön plan kümesi olmayan renk belirteçleri,. xml biçiminde boş renkler olarak kaydedilir, ancak. pkgdef biçiminde atılır. Bir. pkgdef dosyasına boş renkler kaydetmeye çalışırsanız, bir iletişim kutusu olası renk kaybından sizi uyarır.
+  Renk belirteçlerini oluşturmayı, ayarlamayı ve düzenlemeyi bitirdiğinizde, bunları istenilen .xml veya .pkgdef biçimine kaydedin. Arka plan veya ön plan kümesi olmayan renk belirteçleri .xml formatında boş renk olarak kaydedilir, ancak .pkgdef biçiminde atılır. Boş renkleri .pkgdef dosyasına kaydetmeye çalışırsanız, bir iletişim kutusu sizi olası renk kaybına karşı uyarır.
 
-  **4. Adım: Visual Studio uzantısı içindeki renkleri kullanın.**
+  **Adım 4: Visual Studio uzantısındaki renkleri kullanın.**
 
-  Yeni renk belirteçlerini tanımladıktan sonra, "derleme eylemi" öğesini "Içerik" olarak ayarlanmış ve "VSıX içinde Ekle" olarak "true" olarak ayarlanmış olan proje dosyasına. pkgdef ekleyin.
+  Yeni renk belirteçleri tanımladıktan sonra, "İçerik" olarak ayarlanmış "Eylem Oluştur" ve "VSIX'ye Ekle" ile "Doğru" olarak ayarlanmış proje dosyasına .pkgdef'i ekleyin.
 
-  ![VSIX renk Düzenleyicisi pkgdef](../../extensibility/internals/media/vsix-color-editor-pkgdef.png "VSIX renk Düzenleyicisi pkgdef")
+  ![VSIX Renk Editörü pkgdef](../../extensibility/internals/media/vsix-color-editor-pkgdef.png "VSIX Renk Editörü pkgdef")
 
-  Visual Studio uzantısı renk düzenleyicisinde, WPF tabanlı kullanıcı arabirimindeki özel renklere erişmek için kullanılan kodu görüntülemek için Dosya > kaynak kodunu görüntüle ' yi seçin.
+  Visual Studio Extension Color Editor'da, WPF tabanlı kullanıcı arabirimi'ndeki özel renklere erişmek için kullanılan kodu görüntülemek için Dosya > Kaynak Kodunu Görüntüleyin'i seçin.
 
-  ![VSIX renk düzenleyici kaynak kodu Görüntüleyici](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "VSIX renk düzenleyici kaynak kodu Görüntüleyici")
+  ![VSIX Renk Düzenleyicikaynak Kodu Görüntüleyici](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "VSIX Renk Düzenleyicikaynak Kodu Görüntüleyici")
 
-  Bu kodu projedeki statik bir sınıfa ekleyin. **Microsoft. VisualStudio\< . Shell 'e yönelik bir başvuru. ThemeResourceKey türünü kullanmak için VSVersion > 0. dll dosyasının** projeye eklenmesi gerekiyor.
+  Bu kodu projeye statik bir sınıfa ekleyin. **Microsoft.VisualStudio.Shell için bir\< başvuru. VSVersion>.0.dll** **ThemeResourceKey** türünü kullanmak için projeye eklenmesi gerekir.
 
 ```csharp
 namespace MyCustomColors
@@ -163,7 +163,7 @@ namespace MyCustomColors
 }
 ```
 
- Bu, XAML kodundaki renklere erişim sağlar ve Kullanıcı arabiriminin Tema değişikliklerine yanıt vermesini sağlar.
+ Bu, XAML kodundaki renklere erişim sağlar ve Kullanıcı Birsonucu'nun tema değişikliklerine yanıt vermesine olanak tanır.
 
 ```xaml
 <UserControl x:Class="NewTestProject.TestPackageControl" Name="MyToolWindow"
@@ -179,21 +179,21 @@ namespace MyCustomColors
 </UserControl>
 ```
 
- **5. Adım: Visual Studio 'da değişiklikleri test edin.**
+ **Adım 5: Visual Studio değişiklikleri test edin.**
 
- Renk Düzenleyicisi, uzantı paketini yeniden oluşturmadan renkler üzerinde canlı değişiklikleri görüntülemek için Visual Studio 'nun çalışan örneklerine geçici olarak renk belirteçleri uygulayabilir. Bunu yapmak için, her tema sütununun üstbilgisinde bulunan "Bu temayı Visual Studio Windows 'u çalıştırmaya Uygula" düğmesine tıklayın. Bu geçici tema, VSıX renk Düzenleyicisi kapalıyken kaybolur.
+ Renk düzenleyicisi, uzantı paketini yeniden oluşturmadan renklerdeki canlı değişiklikleri görüntülemek için Visual Studio'nun çalışan örneklerine geçici olarak renk belirteçleri uygulayabilir. Bunu yapmak için, her tema sütununun üstbilgide bulunan "Bu temayı Visual Studio pencerelerini çalıştırana uygula" düğmesini tıklatın. VSIX Renk Düzenleyicisi kapatıldığında bu geçici tema ortadan kaldırAcaktır.
 
- ![VSIX renk Düzenleyicisi Uygula](../../extensibility/internals/media/vsix-color-editor-apply.png "VSIX renk Düzenleyicisi Uygula")
+ ![VSIX Renk Editörü Uygula](../../extensibility/internals/media/vsix-color-editor-apply.png "VSIX Renk Editörü Uygula")
 
- Değişiklikleri kalıcı hale getirmek için, yeni renkleri. pkgdef dosyasına ekledikten ve bu renkleri kullanacak kodu yazarak Visual Studio uzantısını yeniden derleyin ve yeniden dağıtın. Visual Studio uzantısının yeniden oluşturulması, yeni renklerin kayıt defteri değerlerini temaların geri kalanına birleştirir. Ardından Visual Studio 'yu yeniden başlatın, Kullanıcı arabirimini görüntüleyin ve yeni renklerin beklendiği gibi göründüğünü doğrulayın.
+ Değişiklikleri kalıcı hale getirmek için,.pkgdef dosyasına yeni renkler ekledikten ve bu renkleri kullanacak kodu yazdıktan sonra Visual Studio uzantısını yeniden oluşturup yeniden dağıtın. Visual Studio uzantısıyeniden temaların geri kalanı ile yeni renkler için kayıt defteri değerlerini birleştirir. Ardından Visual Studio'yu yeniden başlatın, UI'yi görüntüleyin ve yeni renklerin beklendiği gibi göründüğünü doğrulayın.
 
 ## <a name="notes"></a>Notlar
- Bu araç, önceden var olan Visual Studio temaları için özel renkler oluşturmak veya özel bir Visual Studio temasının renklerini düzenlemede kullanılmak üzere tasarlanmıştır. Tüm özel Visual Studio temaları oluşturmak için Visual Studio uzantıları Galerisi ' nden [Visual Studio Color teması Düzenleyicisi uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2015ColorThemeEditor) indirin.
+ Bu araç, önceden varolan Visual Studio temaları için özel renkler oluşturmak veya özel bir Visual Studio temasının renklerini düzenlemek için kullanılmak üzere tasarlanmıştır. Tam özel Visual Studio temaları oluşturmak için [Visual Studio Color Theme Editor uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2015ColorThemeEditor) Visual Studio Extensions Gallery'den indirin.
 
 ## <a name="sample-output"></a>Örnek Çıktı
  **XML renk çıkışı**
 
- Araç tarafından oluşturulan. xml dosyası şuna benzer olacaktır:
+ Araç tarafından oluşturulan .xml dosyası buna benzer olacaktır:
 
 ```xml
 <Themes>
@@ -222,9 +222,9 @@ namespace MyCustomColors
 
 ```
 
- **PKGDEF Color çıkışı**
+ **PKGDEF renk çıkışı**
 
- Araç tarafından oluşturulan. pkgdef dosyası şuna benzer olacaktır:
+ Araç tarafından oluşturulan .pkgdef dosyası buna benzer olacaktır:
 
 ```
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\CategoryName]
@@ -238,9 +238,9 @@ namespace MyCustomColors
 
 ```
 
- **C#kaynak anahtarları sarmalayıcısı**
+ **C# kaynak anahtarları sarıcı**
 
- Araç tarafından oluşturulan renk kaynak anahtarları şuna benzer olacaktır:
+ Araç tarafından oluşturulan renk kaynağı anahtarları buna benzer olacaktır:
 
 ```csharp
 namespace MyNamespace
@@ -267,9 +267,9 @@ namespace MyNamespace
 }
 ```
 
- **WPF kaynak sözlüğü sarmalayıcısı**
+ **WPF kaynak sözlük sarıcı**
 
- Araç tarafından oluşturulan renk **ResourceDictionary** anahtarları şuna benzer olacaktır:
+ Araç tarafından oluşturulan renk **KaynakSözlüğü** anahtarları buna benzer olacaktır:
 
 ```xaml
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

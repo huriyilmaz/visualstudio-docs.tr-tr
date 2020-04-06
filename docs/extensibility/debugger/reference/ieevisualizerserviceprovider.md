@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerServiceProvider | Microsoft Docs
+title: IEEVisualizerServiceProvider | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerServiceProvider interface
 ms.assetid: 859d1a51-1c65-4c8b-ae74-3b74b181ebcd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11f56758f6cfd8219e11dad9bd88bfa88c50dbd6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 44d8a73589a4248736ac6c4d73814166056a1f90
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310154"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717892"
 ---
 # <a name="ieevisualizerserviceprovider"></a>IEEVisualizerServiceProvider
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
 
- Bu arabirim tür görselleştiricisi görevleri için IDE işlemek için kullanılan bir görselleştiricisi hizmet oluşturabilmeniz için bir yöntem erişim sağlar.
+ Bu arabirim, IDE için tür görselleştirici görevlerini işlemek için kullanılan bir görselleştirici hizmeti oluşturabilen bir yönteme erişim sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,29 +31,29 @@ ms.locfileid: "66310154"
 IEEVisualizerServiceProvider : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Visual Studio sırayla sınıfı kimliklerini sağlamak için kullanılan bir Görselleştirici hizmeti nesnesi oluşturmak için bu arabirimi uygulayan (`CLSID`s), Visual Studio IDE tür görselleştiricileri.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Visual Studio bu arabirimi, Visual Studio IDE'ye sınıf lı görselleştiriciler`CLSID`(ler) sağlamak için kullanılan bir görselleştirici hizmet nesnesi oluşturmak için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- İfade değerlendirici (EE) çağıran [GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md) bu arabirimi elde edilir.
+ İfade değerlendiricisi (EE), [geteeservice'i](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md) bu arabirimi elde etmek için çağırır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)|Görselleştirici hizmeti oluşturur|
 
 ## <a name="remarks"></a>Açıklamalar
- `IEEVisualizerServiceProvider` Arabirim uygulamasını sırasında elde [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). Bu arabirim oluşturur Görselleştirici hizmeti işlevsellik sağlamak için kullanılan bir [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) , EE uygulamak için sorumlu olan arabirim. EE de uygulamak için sorumlu olduğu bir [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) görüntülemek ve bir özelliğin değerini değiştirmek tür görselleştiricileri arabirimi.
+ Arabirim `IEEVisualizerServiceProvider` [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)uygulaması sırasında elde edilir. Bu arabirimin oluşturduğu görselleştirici hizmeti, EE'nin uygulamaktan sorumlu olduğu bir [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimine işlevsellik sağlamak için kullanılır. EE ayrıca, tür görüntüleyicilerin bir özelliğin değerini görüntülemesine ve değiştirmesine olanak tanıyan bir [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) arabirimini uygulamaktan da sorumludur.
 
- Bkz: [Visualizing ve verileri görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) Bu arabirimler nasıl etkileşime ilişkin ayrıntılar için.
+ Bu arabirimlerin nasıl etkileşimde olduğu yla ilgili ayrıntılar için [Verileri Görselleştirme ve Görüntüleme'ye](../../../extensibility/debugger/visualizing-and-viewing-data.md) bakın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: ee.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2 | Microsoft Docs
+title: IDebugProgramPublisher2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramPublisher2 interface
 ms.assetid: b1d17f63-7146-4076-a588-034cfc6858b9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f94e7ea830a49db5b95bae3d0d6c50f73e6d3d64
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b17f5bab02e49951eb1647af95641af807c44863
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343130"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721529"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
-Bu arabirim, hata ayıklama altyapısı (DE) veya hata ayıklama için programlar kaydetmek için özel bağlantı noktası sağlayıcıları sağlar.
+Bu arabirim, hata ayıklama altyapısının (DE) veya özel bağlantı noktası tedarikçilerinin hata ayıklama için programları kaydetmesine olanak tanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,35 +28,35 @@ Bu arabirim, hata ayıklama altyapısı (DE) veya hata ayıklama için programla
 IDebugProgramPublisher2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
-Visual Studio programlar arasında birden çok işlemde hata ayıklama için görebilmesi için ayıklanan kaydetmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+Visual Studio, birden çok işlem arasında hata ayıklama için görünür hale getirmek için debugged olan programları kaydetmek için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-COM'ın arama `CoCreateInstance` işleviyle `CLSID_ProgramPublisher` almak için bu arabirimi (örneğe bakın). Bir DE veya özel bağlantı noktası sağlayıcısı bu arabirim, hataları ayıklanmakta olan programlar temsil eden program düğümleri kaydetmek için kullanır.
+Bu arabirimi `CoCreateInstance` elde `CLSID_ProgramPublisher` etmek için COM'un işlevini arayın (Örnek'e bakın). De veya özel bağlantı noktası tedarikçisi, debugged olan programları temsil eden program düğümlerini kaydetmek için bu arabirimi kullanır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Bu arabirim, aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+Bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|Bir program düğüm DEs ve oturumu için hata ayıklama Yöneticisi (SDM) kullanılabilmesini sağlar.|
-|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Böylece artık kullanılabilir bir program düğümü kaldırır.|
-|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Bir program DEs ve SDM kullanılabilmesini sağlar.|
-|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Artık kullanılabilir olması bir program kaldırır.|
-|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Bir hata ayıklayıcı mevcut olduğunu belirten bir bayrak ayarlar.|
+|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|DEs ve oturum hata ayıklama yöneticisi (SDM) için bir program düğümü kullanılabilir hale getirir.|
+|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Artık kullanılamaması için program düğümlerini kaldırır.|
+|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Bir programı DEs ve SDM için kullanılabilir hale getirir.|
+|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Artık kullanılamaması için bir programı kaldırır.|
+|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Hata ayıklayanın bulunduğunu belirten bir bayrak ayarlar.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim program ve program düğümleri kullanılabilir hale getirir (diğer bir deyişle, "bunları DEs ve oturum hata ayıklama Yöneticisi (SDM) tarafından kullanım için yayımlayan"). Yayımlanan programları ve program düğümleri erişim için [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimi. Bir program ayıklanmakta olan Visual Studio tanıyabilmesi tek yolu budur.
+Bu arabirim, programları ve program düğümlerini DEs ve oturum hata ayıklama yöneticisi (SDM) tarafından kullanılmak üzere kullanılabilir hale getirir (diğer bir şekilde bunları "yayımlar"). Yayımlanmış programlara ve program düğümlerine erişmek için [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimini kullanın. Visual Studio'nun bir programın debugged olduğunu fark edebildiği tek yol budur.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Örnek
-Bu örnekte, program yayımcı örneği oluşturmak ve bir program düğüm kaydettirmek gösterilmektedir. Bu öğreticide, alınmış [Program düğüm yayımlama](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae).
+Bu örnek, program yayımcısının anlık olarak nasıl kaydedilebildiğini ve bir program düğümünün nasıl kaydedilebildiğini gösterir. Bu Öğretici alınır, [Program Düğümü yayımlama](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae).
 
 ```cpp
 // This is how m_srpProgramPublisher is defined in the class definition:

@@ -1,5 +1,5 @@
 ---
-title: BP_RES_DATA_FLAGS | Microsoft Docs
+title: BP_RES_DATA_FLAGS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_RES_DATA_FLAGS enumeration
 ms.assetid: d97611e2-def6-45a9-ad7d-eedf2ad4c82b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7573d9bde08f69a7c7e7707d7631dc71e2d8d5e6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d0b687a54ddc1ed111b664a819dacfed6709196d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350655"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737871"
 ---
-# <a name="bpresdataflags"></a>BP_RES_DATA_FLAGS
-Veri kesme noktası olup olmadığını Öykünülen veya uygulanan donanımı belirtir.
+# <a name="bp_res_data_flags"></a>BP_RES_DATA_FLAGS
+Veri kesme noktasının donanımda taklit edilip edilmeymediğini veya uygulanıp uygulanmadığını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,18 +42,18 @@ public enum enum_BP_RES_DATA_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `BP_RES_DATA_EMULATED`\
-Veri kesme noktası benzetilip benzetilmediğini olduğunu belirtir.
+Veri kesme noktasının taklit edildiğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-İçin kullanılan `dwFlags` üyesi [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) yapısı.
+`dwFlags` [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) yapısının üyesi için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2::RemoveProgramNode | Microsoft Docs
+title: IDebugPortNotify2::RemoveProgramNode | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortNotify2::RemoveProgramNode
 ms.assetid: 3668157b-66d2-416e-a359-fc04dcd18a48
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 05565005838fb47c3ad798464ee9382ae1168905
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c59b80a2c9748dccccd7b1fa1d5217b8e9f4979f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314239"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724955"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
-Bir program çalıştığı bağlantı noktasından ayıklanabilir kaydını siler.
+Üzerinde çalışan bağlantı noktasından çıkarılabilir bir program kaydını boşaltır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int RemoveProgramNode( 
 
 ## <a name="parameters"></a>Parametreler
 `pProgramNode`\
-[in] Bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) program sona erdirilecek temsil eden objecy.
+[içinde] Kayıt dışı olacak programı temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objecy.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrısı ile eklenmiş bir program düğümü kaldırır [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) yöntemi.
+ Bu yöntem, [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) yöntemine bir çağrı ile eklenen bir program düğümkaldırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)

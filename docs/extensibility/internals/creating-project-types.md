@@ -1,72 +1,72 @@
 ---
-title: Proje türleri oluşturma | Microsoft Docs
+title: Proje Türleri Oluşturma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project types, new
 - projects [Visual Studio SDK], new project types
 ms.assetid: bdb2d22e-d622-450c-bb2d-98152a745fcf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 005765cb66a23f2efcf0c8defb323120d79bef60
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d2398b63b8cd52784252cfc764bb6c6a30e1accc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314559"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709077"
 ---
 # <a name="create-project-types"></a>Proje türleri oluşturma
-Genişletebileceğiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] oluşturarak yeni bir proje türü. Yeni bir proje türü oluşturmak için birkaç kavramları anlamanıza ve birkaç adımı tamamlamanız gerekir. Aşağıdaki konular, proje türleri oluşturma konusunda genel bir bakış sağlar.
+Yeni bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje türü oluşturarak genişletebilirsiniz. Yeni bir proje türü oluşturmak için, birkaç kavramı anlamanız ve birkaç adımı tamamlamanız gerekir. Aşağıdaki konular, proje türlerinin nasıl oluşturulaca ilgili genel bir bakış sağlar.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md)
 
- Öğesi, proje dosya kalıcılığına ve yeni bir proje türü oluşturmadan önce yapmanız taahhüt teknisyenin tasarım kararları açıklar.
+ Yeni bir proje türü oluşturmadan önce oluşturmanız gereken öğeyi, proje dosyası kalıcılığını ve taahhüt mekanik tasarım kararlarını tartışır.
 
-- [Yapılacaklar listesi: Yeni proje türleri oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [Denetim Listesi: Yeni proje türleri oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
 
- Kod düzenleme ve derleme, derleme, hata ayıklama ve projenizdeki uygulamalarını dağıtma gibi programlama görevleri destekleyen yeni bir proje türü oluşturmak için izlemeniz gereken adımlara genel bir bakış sağlar.
+ Kod düzenleme ve düzenleme, oluşturma, hata ayıklama ve projenizde uygulamaları dağıtma gibi programlama görevlerini destekleyen yeni bir proje türü oluşturmak için izlemeniz gereken adımlara genel bir bakış sağlar.
 
-- [Proje üreteçlerini kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
+- [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
 
- Sağlayın ve yeni bir proje örneklerini oluşturmak için bir proje fabrikası kullanma hakkında bilgi sağlar.
+ Yeni bir proje örnekleri oluşturmak için proje fabrikasının nasıl sağlanıp kullanılacağı hakkında bilgi sağlar.
 
-- [Bir proje türü kaydetme](../../extensibility/internals/registering-a-project-type.md)
+- [Proje türünü kaydetme](../../extensibility/internals/registering-a-project-type.md)
 
- Kayıt betiği for each deyimi girişlerinden içeren varsayılan yolları ve verileri bir tablo sağlayan deyimler kayıt defterinden kod örneği sağlanmıştır.
+ Varsayılan yollar ve veriler sağlayan kayıt defterinden gelen ifadelerin kod örneklerini ve her deyim için kayıt defteri komut dosyasından girişleri içeren bir tablo sağlar.
 
 - [Proje kalıcılığı](../../extensibility/internals/project-persistence.md)
 
- Kullanımı anlatılmaktadır `IPersistFileFormat` hem dosya hem de dosya tabanlı olmayan proje nesnelerini kalıcı hale getirmek için.
+ Hem dosya hem `IPersistFileFormat` de dosya tabanlı olmayan proje nesnelerini kalıcı olarak sürdürmek için kullanımını tartışır.
 
 - [MSBuild kullanma](../../extensibility/internals/using-msbuild.md)
 
- Proje türüne nasıl kullanabileceğinizi açıklar [!INCLUDE[vstecmsbuild](../../extensibility/internals/includes/vstecmsbuild_md.md)] yapıdan kullanıcıların altyapısının yapı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve komut satırına.
+ Proje türünün, kullanıcıların [!INCLUDE[vstecmsbuild](../../extensibility/internals/includes/vstecmsbuild_md.md)] komut satırından ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] komut satırında oluşturmalarına izin vermek için yapı altyapısını nasıl kullanabileceğini açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Sembol tarama araçlarını destekler](../../extensibility/internals/supporting-symbol-browsing-tools.md)
+- [Sembol tarama araçlarını destekleme](../../extensibility/internals/supporting-symbol-browsing-tools.md)
 
- Kod araçları gibi görüntüleme mimarisini açıklar **Nesne Tarayıcısı** ve **sınıf görünümü** penceresi. VSPackage'ı nesne tarama uygulamak için kullanılan yöntemleri ve arabirimleri açıklar.
+ **Nesne Tarayıcısı** ve **Sınıf Görünümü** penceresi gibi kod görüntüleme araçlarının mimarisini açıklar. VSPackage'da nesne taramasını uygulamak için kullanılan arabirimleri ve yöntemleri açıklar.
 
 - [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md)
 
- Bir proje öğesi açıldığında hangi Düzenleyicisi kullanılabilir saptanırken projeleri play önemi açıklanır ve proje kaynaklarını nasıl yönetilebilir.
+ Bir proje öğesi açıldığında hangi düzenleyicinin kullanıldığını ve proje kaynaklarının nasıl manipüle edilebildiğini belirlemede projelerin oynadığı önemi tartışır.
 
-- [Windows Installer ile VSPackage yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
+- [Windows Installer ile VSPackages yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
 
- Benzersiz kimliğini, VSPackage vermek ve bir Windows yükleyici paketinde, VSPackage DLL'ler ve diğer bilgileri sarmalama gösterir ( *. MSI* dosyası) dağıtım müşterileriniz için.
+ VSPackage'ınıza kendi benzersiz kimliğini nasıl vereceğinizve VSPackage DL'lerinizi ve diğer bilgilerinizi bir Windows Yükleyici paketine nasıl sarın gösterir (*. MSI* dosyası) müşterilerinize dağıtım için.
 
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)
 
- Açıklayan nasıl [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görünümleri ve adreslerini hiyerarşisi.
+ Görünümleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve adresleri hiyerarşileri açıklar.
 
 - [VSPackage’lar](../../extensibility/internals/vspackages.md)
 
- VSPackage, genişleten yüklenebilir bir COM nesnesi için genel bir bakış sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ortam ve kendi VSPackage'ı uygulamak nasıl ele alınmaktadır.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Çevreyi genişleten ve kendi VSPackage'ınızı nasıl uygulayacağınızı anlatan yüklenebilir bir COM nesnesi olan VSPackage'a genel bir bakış sağlar.
 
 - [Proje türleri](../../extensibility/internals/project-types.md)
 
- Projeleri kodu değiştirmek, derleme ve kod, derleme ve çalıştırma ve kod hatalarını ayıklamak için nasıl kullanılacağını açıklar ve proje türleri oluşturma konusunda ayrıntılı konulara bağlantılar sağlar.
+ Kodu değiştirmek, kodu derlemek ve oluşturmak için projelerin nasıl kullanılacağını tartışır, kodu çalıştırır ve hata ayıklama sağlar ve proje türlerinin nasıl oluşturulaca ilişkin ayrıntılı konulara bağlantılar sağlar.

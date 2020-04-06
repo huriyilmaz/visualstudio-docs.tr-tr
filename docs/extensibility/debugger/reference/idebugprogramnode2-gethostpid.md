@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostPid | Microsoft Docs
+title: IDebugProgramNode2:::GetHostPid | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetHostPid
 ms.assetid: e65b4b15-46d8-4ca7-9456-2b4c078f7cf9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8ad7ba35bcc95434e7857c9b4f89b10fd332366c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1257bda23bcdfaceb58d1d087ae2848be8f969b1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351166"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722029"
 ---
 # <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
-Program barındırma işlemi için sistem işlemi tanımlayıcısını alır.
+Programı barındıran işlem için sistem işlem tanımlayıcısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetHostPid ( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwHostPid`\
-[out] Barındırma işlemi için sistem işlemi tanımlayıcısını döndürür.
+[çıkış] Barındırma işlemi için sistem işlem tanımlayıcısını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` uygulayan nesne [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi.
+ Aşağıdaki örnek, `CProgram` [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CProgram::GetHostPid(AD_PROCESS_ID* pdwHostPid) {

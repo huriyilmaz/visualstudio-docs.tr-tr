@@ -1,28 +1,28 @@
 ---
-title: IDebugFunctionObject2::CreateStringObjectWithLength | Microsoft Docs
+title: IDebugFunctionObject2::CreateStringObjectWithLength | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - CreateStringObjectWithLength
 - IDebugFunctionObject2::CreateStringObjectWithLength
 ms.assetid: 1f43ec66-1615-4a4c-8b9d-e933f549f96d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ce0fdafc6835fdccc87638e17d3bbd01a1415abb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 937d325f8637a3260121def189d472dcfb3e1309
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313515"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728471"
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
-Belirtilen uzunlukta bir dize nesnesi oluşturur.
+Belirtilen uzunluğa sahip bir dize nesnesi oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +44,16 @@ int CreateStringObjectWithLength (
 
 ## <a name="parameters"></a>Parametreler
 `pcstrString`\
-[in] Dize nesnesi için dize değeri.
+[içinde] Dize nesnesinin dize değeri.
 
 `uiLength`\
-[in] Dize bayt cinsinden uzunluğu.
+[içinde] Baytlar içinde dize uzunluğu.
 
 `ppObject`\
-[out] Döndürür bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) yeni oluşturulan bir dize nesnesini temsil eden nesne.
+[çıkış] Yeni oluşturulan dize nesnesini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

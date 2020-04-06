@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2 | Microsoft Docs
+title: IEnumDebugReferenceInfo2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2
 ms.assetid: 7ed01441-686f-4032-8268-a4c750f19f85
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b664b068ac7cd30a7475ab14bfe1b064c98142c2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6132235a7e4789c7d9efe5bae9d7fd531112dab4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324400"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715277"
 ---
 # <a name="ienumdebugreferenceinfo2"></a>IEnumDebugReferenceInfo2
-Bu arabirim numaralandırır [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıları.
+Bu arabirim [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıları sayısallandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,32 @@ Bu arabirim numaralandırır [DEBUG_REFERENCE_INFO](../../../extensibility/debug
 IEnumDebugReferenceInfo2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE), bellekte nesnelere başvurular için kendi destek bir parçası olarak bu arabirimi uygular. Bu arabirim, yalnızca başvuru destekleniyorsa uygulanmalıdır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), bellekteki nesnelere yapılan başvurular için verdiği desteğin bir parçası olarak bu arabirimi uygular. Bu arabirim yalnızca başvurular desteklenirse uygulanmalıdır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Visual Studio çağrıları [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) bu arabirimi elde edilir.
+ Visual Studio bu arayüzü elde etmek için [EnumChildren'ı](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) arar.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IEnumDebugReferenceInfo2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IEnumDebugReferenceInfo2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|Belirtilen sayıda alır [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıları, bir sabit listesi sırası.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|Belirtilen sayıda atlar [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıları, sabit listesi sırası.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|Bir numaralandırma sıralı başlangıç durumuna sıfırlar.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|Sayısını alır [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapılarda bir numaralandırıcı.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|Numaralandırma sırasında belirli sayıda [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısı alır.|
+|[Atlamak](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|Numaralandırma dizisinde belirtilen sayıda [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıyı atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|Numaralandırma sırasını başa sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|Geçerli numaralandırma durumuyla aynı numaralandırma durumunu içeren bir numaralandırma oluşturucu oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|Bir numaralandırmadaki [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıların sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir özellik adı, türü ve adresi iken temel olarak bir tür ve adres başvurusudur. Bir başvuru nesnesi var. belleğinde başvurulan olduğu sürece devam ettirir. Bkz: [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) daha fazla ayrıntı için.
+ Başvuru aslında bir tür ve adrestir, özellik ise bir ad, tür ve adrestir. Başvuru, başvurulan nesne bellekte var olduğu sürece devam eder. Daha fazla bilgi için [IDebugReference2'ye](../../../extensibility/debugger/reference/idebugreference2.md) bakın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

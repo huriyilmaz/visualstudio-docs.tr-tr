@@ -1,25 +1,25 @@
 ---
-title: Görüntü hizmeti araçları | Microsoft Docs
+title: Görüntü Servis Araçları | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2ddb0342-eb22-429a-bdf3-ccc2719a7ceb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b41b280581daa9ca54370429ae75eaab5c8551b7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2f5f1ff7cd573ff2524d35afc268858855540526
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315683"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707704"
 ---
 # <a name="image-service-tools"></a>Görüntü Hizmeti Araçları
-VS SDK'sı, Visual Studio Görüntü hizmeti uzantısı oluşturucular yardımcı olacak çeşitli araçlar içerir.
+VS SDK, uzantı oluşturucularının Visual Studio görüntü hizmetini kullanmasına yardımcı olmak için çeşitli araçlar içerir.
 
-- [Bildirim kaynaklardan](../../extensibility/internals/manifest-from-resources.md) aracı görüntü kaynakları (.png veya .xaml dosyaları) bir listesini alır ve bir resim bildirim dosyası oluşturur.
+- [Kaynaklardan Bildirim](../../extensibility/internals/manifest-from-resources.md) aracı görüntü kaynaklarının (.png veya .xaml dosyaları) bir listesini alır ve bir resim bildirimi dosyası oluşturur.
 
-- [Bildirim kodu](../../extensibility/internals/manifest-to-code.md) aracı görüntü bildirim dosyasını alır ve C++, C#, VB veya .vsct dosyaları kullanmak için bir sarmalayıcı dosyası oluşturur.
+- [Manifest to Code](../../extensibility/internals/manifest-to-code.md) aracı bir görüntü bildirimi dosyası alır ve C++, C#, VB veya .vsct dosyalarında kullanılacak bir sarmalayıcı dosyası oluşturur.
 
-- [Görüntü kitaplığı Görüntüleyicisi](../../extensibility/internals/image-library-viewer.md) yüklemek, düzenlemek ve görüntü bildirimleri arayın.
+- [Görüntü Kitaplığı Görüntüleyici,](../../extensibility/internals/image-library-viewer.md) görüntü bildirimlerini yükleyebilir, edinebilir ve arayabilir.

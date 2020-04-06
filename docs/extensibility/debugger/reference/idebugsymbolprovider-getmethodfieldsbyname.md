@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs
+title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugSymbolProvider::GetMethodFieldsByName method
 ms.assetid: 1f781320-81ef-4037-b068-f1864b271258
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 02b6947b36439610e41ec0a9e33ebc3f599a6c92
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf123c1e7e83264a2ae4a8ef8c2b4b3207a62a5d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347589"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719227"
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
-Bu yöntem, alanın temsil eden bir tam yöntem adı alır.
+Bu yöntem, tam nitelikli yöntem adını temsil eden alanı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +45,19 @@ int GetMethodFieldsByName(
 
 ## <a name="parameters"></a>Parametreler
 `pszFullName`\
-[in] Yöntem adı.
+[içinde] Yöntem adı.
 
 `nameMatch`\
-[in] Türü eşleşen, örneğin, büyük/küçük harfe seçer.
+[içinde] Örneğin, büyük/küçük harf duyarlı eşleşme türünü seçer.
 
 `ppEnum`\
-[out] Döndürür bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) bu yöntem ile ilişkilendirilmiş alanlar için bir numaralandırıcı.
+[çıkış] Bu yöntemle ilişkili alanlar için bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) sayısallaştırıcı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, örneğin aşırı yüklüyse yöntemi birden çok alan ile ilişkilendirilebilir.
+ Örneğin, aşırı yüklenmişse, bir yöntem birden çok alanla ilişkilendirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

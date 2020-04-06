@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_PROCESS_DATA | Microsoft Docs
+title: PROVIDER_PROCESS_DATA | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PROVIDER_PROCESS_DATA structure
 ms.assetid: ec2362ed-4a0c-4a09-9d66-8ff04e4f41ee
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18b60d68b8c36c1d0c4fcd2a90e25732108460ee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bdaf15d09af3199d026155cf7667f063f5bbe858
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347248"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713775"
 ---
-# <a name="providerprocessdata"></a>PROVIDER_PROCESS_DATA
-Bu yapı bir makine üzerinde çalışan işlemler hakkında bilgi sağlar.
+# <a name="provider_process_data"></a>PROVIDER_PROCESS_DATA
+Bu yapı, bir makinede çalışan işlemler hakkında bilgi sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,23 +45,23 @@ public struct PROVIDER_PROCESS_DATA {
 
 ## <a name="members"></a>Üyeler
  `Fields`\
- Bayraklarının bir birleşimi [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) hangi alanların doldurulur belirten numaralandırma.
+ [numaralandırmaPROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) hangi alanların doldurulduğuna dair bayrakların birleşimi.
 
  `ProgramNodes`\
- A [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) içeren bir dizi program düğümleri yapısı.
+ Program düğümleri dizisi içeren [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) bir yapı.
 
  `fIsDebuggerPresent`\
- Sıfır olmayan (`TRUE`) varsa [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı çalışıyor, sıfır (`FALSE`), değilse.
+ Nonzero`TRUE`( ) [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklama çalışıyorsa, sıfır (`FALSE`) değilse.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı geçirilir [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) yöntemi burada da doldurulur.
+ Bu yapı, doldurulduğu [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

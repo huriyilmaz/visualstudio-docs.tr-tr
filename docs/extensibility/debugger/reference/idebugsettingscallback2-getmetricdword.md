@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::GetMetricDword | Microsoft Docs
+title: IDebugSettingsCallback2::GetMetricDword | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::GetMetricDword
 ms.assetid: 831a5a1a-c4af-4520-9fdf-3a731aeff85c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc685d043b405fbd78a446722e41df4ca584b8e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3b8890cb76d8f15ff0519db5e20d3b8e8866d4eb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322036"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720029"
 ---
 # <a name="idebugsettingscallback2getmetricdword"></a>IDebugSettingsCallback2::GetMetricDword
-Adı verilen bir ölçüm değerini alır.
+Adı verilen bir metnin değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +45,19 @@ private int GetMetricDword(
 
 ## <a name="parameters"></a>Parametreler
 `pszType`\
-[in] Ölçüm türü.
+[içinde] Metrik türü.
 
 `guidSection`\
-[in] Bölüm benzersiz tanımlayıcısı.
+[içinde] Bölümün benzersiz tanımlayıcısı.
 
 `pszMetric`\
-[in] Ölçüm adı.
+[içinde] Metnin adı.
 
 `pdwValue`\
-[out] Ölçüm değeri döndürür.
+[çıkış] Ölçümün değerini verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

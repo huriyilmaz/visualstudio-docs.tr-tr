@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Bind | Microsoft Docs
+title: IDebugPendingBreakpoint2::Bağlama | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Bind method
 - IDebugPendingBreakpoint2::Bind method
 ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba30628c426bd7031d750838491f9bcc70c14a9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 83d48e8df847620716b0f581be65ded48e2e5a13
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350746"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725982"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
-Bu bekleyen kesme noktasının bir veya daha fazla kod konumlara bağlar.
+Bekleyen bu kesme noktasını bir veya daha fazla kod konumuna bağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,12 +39,12 @@ int Bind();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldığında bu bekleyen kesme noktasının eşleşen tüm kod konumlara bağlamak hata ayıklama altyapısı (DE) denemelidir.
+ Bu yöntem çağrıldığında, hata ayıklama altyapısı (DE) bu bekleyen kesme noktasını eşleşen tüm kod konumlarına bağlamayı denemelidir.
 
- Çağıranın bu yöntemin dönüşünün ardından çağrılar bekleyen kesme noktasının bağlı veya varsayılarak önce hata olduğunu gösteren olaylar için beklemesi gereken [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) veya [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods numaralandırır tüm bağımlı veya hata kesme noktaları, sırasıyla.
+ Bu yöntem döndükten sonra, arayanın [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) veya [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods'e yapılan çağrıların sırasıyla tüm bağlı veya hata kesme noktalarını sayacağını varsaymadan önce bekleyen kesme noktasının bağlı olduğunu veya hatalı olduğunu belirten olayları beklemesi gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

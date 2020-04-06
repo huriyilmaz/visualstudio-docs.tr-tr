@@ -1,76 +1,76 @@
 ---
-title: Görüntü hizmeti ve kataloğu | Microsoft Docs
+title: Resim Servisi ve Katalog | Microsoft Dokümanlar
 ms.date: 04/01/2019
 ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a1611f8fcc1ba7f754b6d178b70180678cd06d6
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 79e1ccfad2a678656bcf09e37852532a8b28eb0e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917621"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710382"
 ---
-# <a name="image-service-and-catalog"></a>Görüntü hizmeti ve kataloğu
-Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de tanıtılan görüntü kataloğunu benimseme için rehberlik ve en iyi uygulamaları içerir.
+# <a name="image-service-and-catalog"></a>Resim hizmeti ve katalog
+Bu yemek kitabı Visual Studio 2015'te tanıtılan Visual Studio Image Service ve Image Catalog'u benimsemek için rehberlik ve en iyi uygulamaları içerir.
 
- Visual Studio 2015 ' de tanıtılan görüntü hizmeti, geliştiricilerin, görüntülendikleri bağlam için doğru tema da dahil olmak üzere, görüntüyü görüntülemesi için en iyi görüntüleri ve kullanıcının seçilen temasını almasını sağlar. Görüntü hizmetini benimseme, varlık bakımı, HDPı ölçeklendirme ve tema ile ilgili önemli sorun noktalarını ortadan kaldırmaya yardımcı olur.
+ Visual Studio 2015'te tanıtılan görüntü hizmeti, geliştiricilerin görüntünün görüntülenmesini sağlamak için cihaz için en iyi görüntüleri ve kullanıcının seçtiği temayı elde etmelerini ve görüntülendikleri bağlam için düzeltme temasını almalarını sağlar. Görüntü hizmetinin benimsenmesi, varlık bakımı, HDPI ölçekleme ve temalı ile ilgili önemli ağrı noktalarının ortadan kaldırılmasına yardımcı olacaktır.
 
 |||
 |-|-|
-|**Günümüzde sorunlar**|**Çözümler**|
-|Arka plan rengi karıştırma|Yerleşik Alfa karışımı|
-|Tema (bazı) görüntüleri|Tema meta verileri|
-|Yüksek Karşıtlık modu|Alternatif Yüksek Karşıtlık kaynaklar|
-|Farklı DPı modları için birden çok kaynak gerekiyor|Vektör tabanlı geri dönüş ile seçilebilir kaynaklar|
-|Yinelenen görüntüler|Görüntü kavramı başına bir tanımlayıcı|
+|**Sorunlar bugün**|**Çözümler**|
+|Arka plan renk karıştırma|Dahili alfa karıştırma|
+|Temalı (bazı) görüntüler|Tema meta verileri|
+|Yüksek Karşıtlık modu|Alternatif Yüksek Karşıtlık kaynakları|
+|Farklı DPI modları için birden çok kaynağa ihtiyacınız var|Vektör tabanlı geri dönüşlü seçilebilir kaynaklar|
+|Yinelenen görüntüler|Görüntü konsepti başına bir tanımlayıcı|
 
- Yansıma hizmetini neden benimseyin?
+ Neden görüntü hizmetini benimsemiştir?
 
-- Visual Studio 'dan her zaman en son "piksel kusursuz" görüntüyü alın
+- Visual Studio'dan her zaman en son "piksel mükemmeli" görüntüyü elde edin
 
-- Kendi görüntülerinizi gönderebilir ve kullanabilirsiniz
+- Kendi resimlerinizi gönderebilir ve kullanabilirsiniz
 
-- Windows 'un yeni DPı ölçeklendirme eklemesi sırasında görüntülerinizi test etme gereksinimi yoktur
+- Windows yeni DPI ölçekleme eklerken görüntülerinizi sınamaya gerek yok
 
-- Uygulamalarınızın eski mimari karşılaştığı adresini çözün
+- Uygulamalarınızdaki eski mimari engelleri ele alın
 
-  Görüntü hizmetini kullanmadan önce ve sonra Visual Studio Kabuk araç çubuğu:
+  Görüntü hizmetini kullanmadan önce ve sonra Visual Studio kabuk araç çubuğu:
 
-  ![Önce ve sonra görüntü hizmeti](../extensibility/media/image-service-before-and-after.png "Önce ve sonra görüntü hizmeti")
+  ![Öncesi ve Sonrası Görüntü Hizmeti](../extensibility/media/image-service-before-and-after.png "Öncesi ve Sonrası Görüntü Hizmeti")
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
- Görüntü hizmeti, desteklenen herhangi bir kullanıcı arabirimi çerçevesi için uygun bir bit eşlemeli görüntü sağlayabilir:
+ Görüntü hizmeti, desteklenen herhangi bir UI çerçevesi için uygun bir eşlenmiş görüntü sağlayabilir:
 
 - WPF: BitmapSource
 
-- WinForms: System. Drawing. Bitmap
+- WinForms: System.Drawing.Bitmap
 
-- Win32: HBIT eşlem
+- Win32: HBITMAP
 
   Görüntü hizmeti akış diyagramı
 
-  ![Görüntü hizmeti akış diyagramı](../extensibility/media/image-service-flow-diagram.png "Görüntü hizmeti akış diyagramı")
+  ![Görüntü Hizmeti Akış Diyagramı](../extensibility/media/image-service-flow-diagram.png "Görüntü Hizmeti Akış Diyagramı")
 
-  **Görüntü takma adları**
+  **Görüntü monikers**
 
-  Resim bilinen adı (veya Short için bilinen ad), görüntü kitaplığındaki bir görüntü varlığını veya görüntü listesi varlığını benzersiz şekilde tanımlayan bir GUID/ID çiftidir.
+  Resim takma adı (veya kısaca takma adı), görüntü kitaplığındaki bir görüntü varlığını veya resim listesi kıymetini benzersiz olarak tanımlayan bir GUID/ID çiftidir.
 
-  **Bilinen adlar**
+  **Bilinen monikers**
 
-  Visual Studio görüntü kataloğunda bulunan ve herhangi bir Visual Studio bileşeni veya uzantısı tarafından genel olarak tüketilebilir resim adları kümesi.
+  Visual Studio Resim Kataloğu'nda bulunan ve herhangi bir Visual Studio bileşeni veya uzantısı tarafından kamuya açık olarak tüketilen görüntü monikers kümesi.
 
-  **Görüntü bildirim dosyaları**
+  **Resim manifestosu dosyaları**
 
-  Görüntü bildirimi ( *. ımagemanifest*) dosyaları, bir görüntü varlıkları kümesini, bu varlıkları temsil eden bilinen adları ve her bir varlığı temsil eden gerçek görüntüyü ya da GÖRÜNTÜLERI tanımlayan xml dosyalarıdır. Görüntü bildirimleri, eski Kullanıcı arabirimi desteği için tek başına görüntüleri veya görüntü listelerini tanımlayabilir. Ayrıca, varlık üzerinde veya her bir kıymetin arkasındaki ayrı görüntülerde ayarlanabilir öznitelikler vardır ve bu varlıkların ne zaman ve nasıl görüntüleneceğini değiştirebilirsiniz.
+  Resim bildirimi (*.imagemanifest*) dosyaları, görüntü varlıkları kümesini tanımlayan XML dosyaları, bu varlıkları temsil eden moniker'ler ve her varlığı temsil eden gerçek görüntü veya görüntülerdir. Görüntü bildirimleri, eski Web-hizmetleri desteği için bağımsız görüntüler veya resim listeleri tanımlayabilir. Ayrıca, varlık üzerinde veya her varlığın arkasındaki tek tek görüntülerde bu varlıkların ne zaman ve nasıl görüntüleneceğini değiştirmek üzere ayarlanabilen öznitelikler vardır.
 
-  **Görüntü bildirim şeması**
+  **Görüntü manifesto şeması**
 
-  Tüm görüntü bildirimi şöyle görünür:
+  Tam bir görüntü manifestosu şuna benzer:
 
 ```xml
 <ImageManifest>
@@ -89,9 +89,9 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 </ImageManifest>
 ```
 
- **Symbols**
+ **Sembol**
 
- Bir okunabilirlik ve bakım Yardımcısı olarak, görüntü bildirimi öznitelik değerleri için semboller kullanabilir. Semboller şöyle tanımlanır:
+ Okunabilirlik ve bakım yardımı olarak, görüntü bildirimi öznitelik değerleri için semboller kullanabilir. Semboller şu şekilde tanımlanır:
 
 ```xml
 <Symbols>
@@ -104,13 +104,13 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
 |||
 |-|-|
-|**Subelement**|**Tanım**|
-|Al|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
-|Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|
-|Kimlik|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|
-|Dize|Sembol rastgele bir dize değerini temsil eder|
+|**Alt öğesi**|**Tanım**|
+|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini alır|
+|Guid|Sembol bir GUID'i temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|
+|Kimlik|Sembol bir kimliği temsil eder ve negatif olmayan bir tamsayı olmalıdır|
+|Dize|Sembol rasgele bir dize değerini temsil eder|
 
- Semboller büyük/küçük harfe duyarlıdır ve $ (sembol-adı) sözdizimi kullanılarak başvurulur:
+ Semboller büyük/küçük harf duyarlıdır ve $(sembol adı) sözdizimi kullanılarak başvurulur:
 
 ```xml
 <Image Guid="$(ShellCommandGuid)" ID="$(cmdidSaveAll)" >
@@ -118,24 +118,24 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 </Image>
 ```
 
- Bazı semboller tüm bildirimler için önceden tanımlanmıştır. Bunlar, \<kaynak > URI özniteliğinde veya \<> öğesini yerel makinedeki başvuru yollarına aktarmak için kullanılabilir.
+ Bazı semboller tüm manifestolar için önceden tanımlanır. Bunlar, yerel makinedeki yollara \<başvurmak için \<Kaynak> veya Alma> öğesinin Uri özniteliğinde kullanılabilir.
 
 |||
 |-|-|
-|**Sembol**|**Açıklama**|
-|CommonProgramFiles|% CommonProgramFiles% ortam değişkeninin değeri|
-|LocalAppData|% LocalAppData% ortam değişkeninin değeri|
+|**Sembolü**|**Açıklama**|
+|Ortak Program Dosyaları|%CommonProgramFiles% ortam değişkeninin değeri|
+|Localappdata|%LocalAppData% ortam değişkeninin değeri|
 |ManifestFolder|Bildirim dosyasını içeren klasör|
-|MyDocuments|Geçerli kullanıcının Belgelerim klasörünün tam yolu|
-|ProgramFiles|% ProgramFiles% ortam değişkeninin değeri|
+|Mydocuments|Geçerli kullanıcının Belgelerim klasörünün tam yolu|
+|ProgramFiles|%ProgramFiles% ortam değişkeninin değeri|
 |Sistem|*Windows\System32* klasörü|
-|Dizini|% WinDir% ortam değişkeninin değeri|
+|Windir|%WinDir% ortam değişkeninin değeri|
 
  **Görüntü**
 
- \<Image > öğesi bir bilinen ad tarafından başvurulabilen bir görüntü tanımlar. Birlikte alınan GUID ve ID, görüntü bilinen adını oluşturur. Görüntünün bilinen adı, tüm görüntü kitaplığı genelinde benzersiz olmalıdır. Birden fazla görüntüde bilinen bir ad varsa, kitaplığı oluştururken karşılaşılan ilk, korunan bir addır.
+ \<Görüntü> öğesi, bir takma alabilen bir görüntü tanımlar. Guid ve kimlik birlikte görüntü lakabını oluşturur. Görüntünün takma adı tüm görüntü kitaplığında benzersiz olmalıdır. Birden fazla görüntüde belirli bir lakap varsa, kütüphaneyi oluştururken karşılaşılan ilk görüntü korunur.
 
- En az bir kaynak içermesi gerekir. Boyut açısından nötr kaynaklar, çok çeşitli boyutlarda en iyi sonuçları verir, ancak gerekli değildir. Hizmet, \<görüntü > öğesinde tanımlanmayan ve boyut nötr kaynak olmayan bir görüntünün bir görüntüsü sorulursa, hizmet en iyi boyuta özgü kaynağı seçip istenen boyuta ölçeklendirecektir.
+ En az bir kaynak içermelidir. Boyut-nötr kaynaklar boyutları geniş bir yelpazede en iyi sonuçları verecektir, ancak gerekli değildir. Hizmetten \<Görüntü> öğesinde tanımlanmamış bir boyutun görüntüsü istenirse ve boyut-nötr kaynak yoksa, hizmet en büyük boyuta özgü kaynağı seçer ve istenen boyuta ölçeklendirilir.
 
 ```xml
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">
@@ -147,13 +147,13 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||
 |-|-|
 |**Öznitelik**|**Tanım**|
-|Guid|Istenir Görüntü adının GUID bölümü|
-|Kimlik|Istenir Görüntü adının KIMLIK kısmı|
-|Allowcolorınversion|[İsteğe bağlı, varsayılan doğru] Görüntünün, koyu bir arka planda kullanıldığında, renkleri program aracılığıyla ters çevrimeyeceğini gösterir.|
+|Guid|[Gerekli] Resim lakabının GUID bölümü|
+|Kimlik|[Gerekli] Resim lakabının kimlik bölümü|
+|ColorInversion'a İzin Ver|[İsteğe bağlı, varsayılan true] Koyu bir arka plan da kullanıldığında görüntünün renklerini programlı olarak ters çevirip kullanamayacağını gösterir.|
 
  **Kaynak**
 
- \<Source > öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.
+ \<Kaynak> öğesi tek bir görüntü kaynağı varlık (XAML ve PNG) tanımlar.
 
 ```xml
 <Source Uri="uri" Background="background">
@@ -164,20 +164,20 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||
 |-|-|
 |**Öznitelik**|**Tanım**|
-|Uri|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu|
-|Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> *Koyu:* Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
+|Urı|[Gerekli] Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> - Application:/// yetkisini kullanan bir [Paket URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />- Mutlak bileşen kaynak başvurusu<br />- Yerel kaynak içeren bir dosyaya giden yol|
+|Arka plan|[İsteğe bağlı] Kaynağın hangi arka planda kullanılacağını gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Işık:* Kaynak hafif bir arka plan üzerinde kullanılabilir.<br /><br /> *Karanlık:* Kaynak koyu bir arka plan üzerinde kullanılabilir.<br /><br /> *Yüksek Kontrast:* Kaynak Yüksek Kontrast modunda herhangi bir arka plan üzerinde kullanılabilir.<br /><br /> *HighContrastLight:* Kaynak, Yüksek Karşıtlık modunda hafif bir arka planda kullanılabilir.<br /><br /> *HighContrastDark:* Kaynak, Yüksek Karşıtlık modunda koyu bir arka planda kullanılabilir.<br /><br /> Arka Plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan *Açık,* *Koyu*, *HighContrastLight*veya *HighContrastDark*ise, kaynağın renkleri asla ters çevrilmez. Arka plan atlanırsa veya *HighContrast*olarak ayarlanmışsa, kaynağın renklerinin ters çevrilmesi görüntünün **AllowColorInversion** özniteliği tarafından denetlenir.|
 
-\<kaynak > öğesi, aşağıdaki isteğe bağlı alt öğeleri tam olarak bir tane içerebilir:
+Kaynak \<> öğesi tam olarak aşağıdaki isteğe bağlı alt öğelerden birine sahip olabilir:
 
 ||||
 |-|-|-|
 |**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
-|\<boyutu >|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
-|\<SizeRange >|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|
-|\<boyutlar >|Width, Height|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|
-|\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|
+|\<Boyut>|Değer|Kaynak, verilen boyutun (aygıt birimlerinde) görüntüleri için kullanılacaktır. Görüntü kare olacak.|
+|\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize'dan MaxSize'a (cihaz birimlerinde) kadar olan görüntüler için kapsamlı olarak kullanılacaktır. Görüntü kare olacak.|
+|\<Boyutlar>|Genişlik, Yükseklik|Kaynak, verilen genişlik ve yükseklik görüntüleri için (aygıt birimlerinde) kullanılacaktır.|
+|\<Boyut Aralığı>|MinWidth, MinHeight,<br /><br /> Maksimum Genişlik, Maksimum Yükseklik|Kaynak, en düşük genişlik/yükseklikten maksimum genişliğe/yüksekliğe (aygıt birimlerinde) kadar olan görüntüler için kullanılacaktır.|
 
- \<kaynak > öğesi, yönetilen bir derleme yerine yerel bir derlemeden yüklenen \<kaynak > tanımlayan isteğe bağlı bir \<NativeResource > alt öğesi de içerebilir.
+ Kaynak> öğesi, yönetilen \<bir derleme yerine yerel bir \<derlemeden yüklenen kaynak> tanımlayan isteğe bağlı NativeResource> alt öğesine de sahip olabilir. \<
 
 ```xml
 <NativeResource Type="type" ID="int" />
@@ -186,12 +186,12 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||
 |-|-|
 |**Öznitelik**|**Tanım**|
-|Tür|Istenir Yerel kaynağın türü, XAML veya PNG|
-|Kimlik|Istenir Yerel kaynağın tamsayı KIMLIĞI bölümü|
+|Tür|[Gerekli] XAML veya PNG yerel kaynağın türü|
+|Kimlik|[Gerekli] Yerel kaynağın tamsayı kimlik bölümü|
 
- **'I**
+ **ımagelist**
 
- \<ImageList > öğesi, tek bir şeridinde döndürülebilecek bir görüntü koleksiyonunu tanımlar. Şerit gerektiğinde isteğe bağlı olarak oluşturulur.
+ \<ImageList> öğesi, tek bir şeritte döndürülebilen bir görüntü koleksiyonunu tanımlar. Şerit gerektiği gibi, talep üzerine inşa edilmiştir.
 
 ```xml
 <ImageList>
@@ -203,99 +203,99 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |||
 |-|-|
 |**Öznitelik**|**Tanım**|
-|Guid|Istenir Görüntü adının GUID bölümü|
-|Kimlik|Istenir Görüntü adının KIMLIK kısmı|
-|Harici|[İsteğe bağlı, varsayılan yanlış] Resim adının geçerli bildirimde bir görüntüye başvuruda bulunup bulunmadığını gösterir.|
+|Guid|[Gerekli] Resim lakabının GUID bölümü|
+|Kimlik|[Gerekli] Resim lakabının kimlik bölümü|
+|Dış|[İsteğe bağlı, varsayılan yanlış] Resim lakabının geçerli bildirimde bir görüntüye başvurup başvurulmadığını gösterir.|
 
- İçerilen görüntünün bilinen adı, geçerli bildirimde tanımlanan bir görüntüye başvurmak zorunda değildir. İçerilen görüntü görüntü kitaplığında bulunamazsa, yerine boş bir yer tutucu görüntüsü kullanılır.
+ İçe sahip görüntünün takma başlığı, geçerli bildirimde tanımlanan bir görüntüye başvurmak zorunda değildir. İçerdiği görüntü görüntü kitaplığında bulunamıyorsa, yerine boş bir yer tutucu görüntüsü kullanılır.
 
 ## <a name="using-the-image-service"></a>Görüntü hizmetini kullanma
 
 ### <a name="first-steps-managed"></a>İlk adımlar (yönetilen)
- Görüntü hizmetini kullanmak için, aşağıdaki derlemelerin bazılarına veya tümüne projenize başvurular eklemeniz gerekir:
+ Resim hizmetini kullanmak için, projenize aşağıdaki derlemelerin bazılarına veya tümüne başvuru eklemeniz gerekir:
 
-- *Microsoft. VisualStudio. ımagecatalog. dll*
+- *Microsoft.VisualStudio.ImageCatalog.dll*
 
-  - Yerleşik görüntü kataloğu **Knowntakma adları**' nı kullanırsanız gereklidir.
+  - Eğer dahili görüntü kataloğu **KnownMonikers**kullanıyorsanız gerekli .
 
-- *Microsoft. VisualStudio. Imaging. dll*
+- *Microsoft.VisualStudio.Imaging.dll*
 
-  - WPF Kullanıcı arabiriminizdeki **çapraz görüntü** ve **ImageThemingUtilities** kullanıyorsanız gereklidir.
+  - WPF UI'nizde **CrispImage** ve **ImageThemingUtilities** kullanıyorsanız gereklidir.
 
-- *Microsoft. VisualStudio. Imaging. Interop. 14.0. DesignTime. dll*
+- *Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll*
 
-  - **Imagebilinen** ve **ImageAttributes** türlerini kullanıyorsanız gereklidir.
+  - **ImageMoniker** ve **ImageAttributes türlerini** kullanıyorsanız gereklidir.
 
-  - **EmbedInteropTypes** true olarak ayarlanmalıdır.
+  - **EmbedInteropTypes** doğru ayarlanmalıdır.
 
-- *Microsoft. VisualStudio. Shell. Interop. 14.0. DesignTime*
+- *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime*
 
-  - **IVsImageService2** türünü kullanırsanız gereklidir.
+  - **IVsImageService2** türünü kullanıyorsanız gereklidir.
 
-  - **EmbedInteropTypes** true olarak ayarlanmalıdır.
+  - **EmbedInteropTypes** doğru ayarlanmalıdır.
 
-- *Microsoft. VisualStudio. Utilities. dll*
+- *Microsoft.VisualStudio.Utilities.dll*
 
-  - WPF Kullanıcı arabiriminizdeki **ImageThemingUtilities. ImageBackgroundColor** Için **Brühtocolorconverter** kullanırsanız gereklidir.
+  - WPF UI'nizde **ImageThemingUtilities.ImageBackgroundColor** için **BrushToColorConverter** kullanıyorsanız gereklidir.
 
-- *Microsoft. VisualStudio. Shell.\<VSVersion >. 0*
+- *Microsoft.VisualStudio.Shell. \<VSVersion>.0*
 
-  - **IVsUIObject** türünü kullanırsanız gereklidir.
+  - **IVsUIObject** türünü kullanıyorsanız gereklidir.
 
-- *Microsoft. VisualStudio. Shell. Interop. 10.0. dll*
+- *Microsoft.VisualStudio.Shell.Interop.10.0.dll*
 
-  - WinForms ile ilgili UI yardımcıları kullanıyorsanız gereklidir.
+  - WinForms ile ilgili UI yardımcılarını kullanıyorsanız gereklidir.
 
-  - **EmbedInteropTypes** true olarak ayarlanmalıdır
+  - **EmbedInteropTypes** doğru ayarlanmalıdır
 
 ### <a name="first-steps-native"></a>İlk adımlar (yerel)
- Görüntü hizmetini kullanmak için aşağıdaki üst bilgilerin bazılarını veya tümünü projenize eklemeniz gerekir:
+ Görüntü hizmetini kullanmak için, projenize aşağıdaki üstbilgilerden bazılarını veya tümlerini eklemeniz gerekir:
 
-- **Knownımageıds. h**
+- **KnownImageIds.h**
 
-  - Yerleşik görüntü kataloğu **Knownbilinen**adını kullanırsanız, ancak **IVsHierarchy GetGuidProperty** veya **GetProperty** çağrılarından değer döndürmekte olduğu gibi **ımagetakma** türünü kullanamaz.
+  - Yerleşik görüntü kataloğu **KnownMonikers**kullanıyorsanız, ancak **IVsHiyerarşi GetGuidProperty** veya **GetProperty** aramalarından değerleri döndürürken olduğu gibi **ImageMoniker** türünü kullanamazsınız.
 
-- **Knowntakma adları. h**
+- **KnownMonikers.h**
 
-  - Yerleşik görüntü kataloğu **Knowntakma adları**' nı kullanırsanız gereklidir.
+  - Eğer dahili görüntü kataloğu **KnownMonikers**kullanıyorsanız gerekli .
 
-- **ImageParameters140. h**
+- **GörüntüParametreleri140.h**
 
-  - **Imagebilinen** ve **ImageAttributes** türlerini kullanıyorsanız gereklidir.
+  - **ImageMoniker** ve **ImageAttributes türlerini** kullanıyorsanız gereklidir.
 
-- **VSShell140. h**
+- **VSShell140.h**
 
-  - **IVsImageService2** türünü kullanırsanız gereklidir.
+  - **IVsImageService2** türünü kullanıyorsanız gereklidir.
 
-- **ImageThemingUtilities. h**
+- **ResimThemingUtilities.h**
 
-  - Görüntü hizmetinin sizin için Tema işlemesine izin vermemesi durumunda gereklidir.
+  - Görüntü hizmetinin sizin için temasını işlemesine izin veremiyorsanız gereklidir.
 
-  - Görüntü hizmeti görüntü temalarını işleyebiliyorsanız bu üstbilgiyi kullanmayın.
+  - Görüntü hizmeti görüntü temalı işleyebilir eğer bu üstbilgi kullanmayın.
 
 ::: moniker range="vs-2017"
-- **VSUIDPIHelper. h**
+- **VSUIDPIHelper.h**
 
-  - DPı yardımcıları kullanarak geçerli DPı 'yi elde ediyorsanız gereklidir.
+  - Geçerli DPI'yi almak için DPI yardımcılarını kullanıyorsanız gereklidir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-- **VsDpiAwareness. h**
+- **VsDpiAwareness.h**
 
-  - DPı tanıma yardımcıları kullanarak geçerli DPı 'yi elde ediyorsanız gereklidir.
+  - Geçerli DPI'yi almak için DPI farkındalık yardımcılarını kullanıyorsanız gereklidir.
 
 ::: moniker-end
 
-## <a name="how-do-i-write-new-wpf-ui"></a>Nasıl yaparım? yeni WPF Kullanıcı arabirimi mi yazılacak?
+## <a name="how-do-i-write-new-wpf-ui"></a>Yeni WPF UI'yi nasıl yazabilirim?
 
-1. Yukarıdaki ilk adımlar bölümünde gerekli derleme başvurularını projenize ekleyerek başlayın. Bunların tümünü eklemeniz gerekmez, bu nedenle yalnızca ihtiyacınız olan başvuruları ekleyin. (Yani, **fırçalar**yerine renkler kullanıyorsanız veya bu **renklere** erişiminiz varsa, dönüştürücüye gerek Duymayabileceğinizden, **yardımcı programlara**olan başvuruyu atlayabilirsiniz.)
+1. Yukarıdaki ilk adımlar bölümünde gerekli derleme başvurularını projenize ekleyerek başlayın. Hepsini eklemenize gerek yoktur, bu nedenle sadece ihtiyacınız olan başvuruları ekleyin. (Not: **Fırçalar**yerine **Renkler** kullanıyorsanız veya bunlara erişiminiz varsa, dönüştürücüye ihtiyacınız olmayacağından **Yardımcı Programlar'a**başvuruyu atlayabilirsiniz.)
 
-2. İstenen görüntüyü seçin ve bilinen adını alın. Bir **Knownbilinen**adı kullanın veya kendi özel görüntünüz ve takma bilgileriniz varsa kendinizinkini kullanın.
+2. İstediğingörüntüyü seçin ve lakabını alın. Bir **KnownMoniker**kullanın, ya da kendi özel görüntüler ve monikers varsa kendi kullanın.
 
-3. XAML 'nize **çapraz resimler** ekleyin. (Örneğe bakın.)
+3. XAML'ınıza **CrispImages** ekleyin. (Aşağıdaki örneğe bakın.)
 
-4. UI hiyerarşinizdeki **ImageThemingUtilities. ImageBackgroundColor** özelliğini ayarlayın. (Bu, **çapraz görüntüde**olması gerekmeyen arka plan renginin bilinen konumunda ayarlanmalıdır.) (Örneğe bakın.)
+4. UI hiyerarşinizde **ImageThemingUtilities.ImageBackgroundColor** özelliğini ayarlayın. (Bu, **CrispImage'da**değil, arka plan renginin bilindiği konumda ayarlanmalıdır.) (Aşağıdaki örneğe bakın.)
 
 ```xaml
 <Window
@@ -317,35 +317,35 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 </Window>
 ```
 
- **Nasıl yaparım? mevcut WPF Kullanıcı arabirimini güncelleştirmek mı istiyorsunuz?**
+ **Varolan WPF Kullanıcı Arabirimi'ni nasıl güncellerim?**
 
- Mevcut WPF Kullanıcı arabirimini güncelleştirmek, üç temel adımdan oluşan görece basit bir işlemdir:
+ Varolan WPF Kullanıcı Arabirimi'ni güncelleştirmek, üç temel adımdan oluşan nispeten basit bir işlemdir:
 
-1. Kullanıcı arabirimindeki \<görüntü > öğelerini \<çapraz görüntü > öğeleriyle değiştirin.
+1. UI'nizdeki tüm \<Görüntü> \<öğelerini CrispImage> elemanlarıyla değiştirin.
 
-2. Tüm kaynak özniteliklerini bilinen ad öznitelikleri olarak değiştirin.
+2. Tüm Kaynak özniteliklerini Takma Alan öznitelikleriyle değiştirin.
 
-    - Görüntü hiçbir şekilde değişmüyorsa ve **Knowntakma adlar**kullanıyorsanız, bu özelliği bir **knownbilinen**adına statik olarak bağlayın. (Yukarıdaki örneğe bakın.)
+    - Görüntü hiç değişmiyorsa ve **KnownMonikers**kullanıyorsanız, o zaman statik olarak **KnownMoniker**bu özelliği bağlamak . (Yukarıdaki örneğe bakın.)
 
-    - Görüntü hiçbir şekilde değişiklik görmüyorsa ve kendi özel görüntünüzü kullanıyorsanız, kendi bilinen adınızı statik olarak bağlayın.
+    - Görüntü hiç değişmiyorsa ve kendi özel resminizi kullanıyorsanız, statik olarak kendi takma adlarınıza bağlanın.
 
-    - Görüntü değişiyorsa, bilinen ad özniteliğini Özellik değişikliklerine bildirimde bulunan bir kod özelliğine bağlayın.
+    - Görüntü değişebilirse, Takma Alan özniteliğini özellik değişikliklerine ilişkin bir kod özelliğine bağlayın.
 
-3. Color Inversion 'ın doğru çalıştığından emin olmak için, Kullanıcı arabirimi hiyerarşisinde bir yerde **ImageThemingUtilities. ImageBackgroundColor** öğesini ayarlayın.
+3. UI hiyerarşisinde bir yerde, color ters çevrilmenin doğru çalıştığından emin olmak için **ImageThemingUtilities.ImageBackgroundColor'ı** ayarlayın.
 
-    - Bu, **Brühtocolorconverter** sınıfının kullanımını gerektirebilir. (Yukarıdaki örneğe bakın.)
+    - Bu, **BrushToColorConverter** sınıfının kullanımını gerektirebilir. (Yukarıdaki örneğe bakın.)
 
-## <a name="how-do-i-update-win32-ui"></a>Nasıl yaparım? Win32 Kullanıcı arabirimi güncelleştirilsin mi?
- Resimlerin ham yüklenmesini değiştirmek için uygun olan her yerde aşağıdaki kodu ekleyin. Gerektiğinde Hbit 'ler ve HıMAGELIST karşılaştırması için değerleri değiştirin.
+## <a name="how-do-i-update-win32-ui"></a>Win32 Kullanıcı UI'yi nasıl güncellerim?
+ Görüntülerin ham yüklenmesinin yerine uygun olan her yerde kodunuza aşağıdakileri ekleyin. Gerektiğinde HBITMAP'leri HICON'lara karşı HIMAGELIST'e karşı döndürme değerleri değiştirin.
 
- **Görüntü hizmetini al**
+ **Görüntü hizmetini alın**
 
 ```cpp
 CComPtr<IVsImageService2> spImgSvc;
 CGlobalServiceProvider::HrQueryService(SID_SVsImageService, &spImgSvc);
 ```
 
- **Görüntü isteniyor**
+ **Görüntüyü isteme**
 
 ::: moniker range="vs-2017"
 
@@ -395,16 +395,16 @@ spImgSvc->GetImage(KnownMonikers::Blank, attributes, &spImg);
 
 ::: moniker-end
 
-## <a name="how-do-i-update-winforms-ui"></a>Nasıl yaparım? WinForms Kullanıcı arabirimi güncelleştirilsin mi?
- Resimlerin ham yüklenmesini değiştirmek için uygun olan her yerde aşağıdaki kodu ekleyin. Gerektiğinde bit eşlemler ve simgelere dönme için değerleri değiştirin.
+## <a name="how-do-i-update-winforms-ui"></a>WinForms Kullanıcı Birası'nı nasıl güncellerim?
+ Görüntülerin ham yüklenmesinin yerine uygun olan her yerde kodunuza aşağıdakileri ekleyin. Biteşleri simgelere karşı gerektiğinde döndürmek için değerleri değiştirin.
 
- **Yardımcı using deyimleri**
+ **İfadeyi kullanmada yararlı**
 
 ```csharp
 using GelUtilities = Microsoft.Internal.VisualStudio.PlatformUI.Utilities;
 ```
 
- **Görüntü hizmetini al**
+ **Görüntü hizmetini alın**
 
 ```csharp
 // This or your preferred way of querying for Visual Studio services
@@ -412,7 +412,7 @@ IVsImageService2 imageService = (IVsImageService2)Package.GetGlobalService(typeo
 
 ```
 
- **Görüntü isteyin**
+ **Resmi isteme**
 
 ::: moniker range="vs-2017"
 
@@ -468,23 +468,23 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
 ::: moniker-end
 
-## <a name="how-do-i-use-image-monikers-in-a-new-tool-window"></a>Nasıl yaparım? yeni bir araç penceresinde görüntü takma adları kullanılsın mı?
- VSıX paketi proje şablonu Visual Studio 2015 için güncelleştirildi. Yeni bir araç penceresi oluşturmak için VSıX projesine sağ tıklayın ve > **Ekle** **Yeni öğe** ' yi seçin (**CTRL**+**SHIFT**+**a**). Proje dili için genişletilebilirlik düğümü altında **özel araç penceresi**' ni seçin, araç penceresine bir ad verin ve **Ekle** düğmesine basın.
+## <a name="how-do-i-use-image-monikers-in-a-new-tool-window"></a>Yeni bir araç penceresinde resim monikers nasıl kullanılır?
+ VSIX paket proje şablonu Visual Studio 2015 için güncellendi. Yeni bir araç penceresi oluşturmak için VSIX projesine sağ tıklayın ve**Yeni Öğe** **Ekle** > (Ctrl**Shift**+**A)** seçeneğini**belirleyin.**+ Proje dili için Genişletilebilirlik düğümüaltında, **Özel Araç Penceresi'ni**seçin, araç penceresine bir ad verin ve **Ekle** düğmesine basın.
 
- Bunlar bir araç penceresinde takma adlar kullanmak için önemli yer lardır. Her biri için yönergeleri izleyin:
+ Bunlar bir araç penceresinde monikers kullanmak için önemli yerlerdir. Her biri için yönergeleri izleyin:
 
-1. Sekmeler yeterince küçük olduğunda araç penceresi sekmesi (Ayrıca **Ctrl**+**sekme** penceresi değiştiricisinde de kullanılır).
+1. Sekmeler yeterince küçüldüğünde **(Ctrl**+**Tab** pencere değiştiricide de kullanılır) araç penceresi sekmesi.
 
-    Bu satırı, **ToolWindowPane** türünden türetilen sınıfın oluşturucusuna ekleyin:
+    **ToolWindowPane** türünden türeyen sınıfın oluşturucuya bu satırı ekleyin:
 
    ```csharp
    // Replace this KnownMoniker with your desired ImageMoniker
    this.BitmapImageMoniker = KnownMonikers.Blank;
    ```
 
-2. Araç penceresini açmak için komut.
+2. Araç penceresini açma komutu.
 
-    Paketin *. vsct* dosyasında araç penceresinin komut düğmesini düzenleyin:
+    Paketin *.vsct* dosyasında, araç penceresinin komut düğmesini düzenleme:
 
    ```xml
    <Button guid="guidPackageCmdSet" id="CommandId" priority="0x0100" type="Button">
@@ -499,29 +499,29 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
    </Button>
    ```
 
-   **Nasıl yaparım? varolan bir araç penceresinde görüntü takma adları kullanılsın mı?**
+   **Varolan bir araç penceresinde görüntü monikerlerini nasıl kullanırım?**
 
-   Varolan bir araç penceresinin görüntü takma adlarını kullanmak üzere güncelleştirilmesi, yeni bir araç penceresi oluşturma adımlarıyla benzerdir.
+   Görüntü monikers kullanmak için varolan bir araç penceresi güncelleştirmeyeni bir araç penceresi oluşturmak için adımlarbenzer.
 
-   Bunlar bir araç penceresinde takma adlar kullanmak için önemli yer lardır. Her biri için yönergeleri izleyin:
+   Bunlar bir araç penceresinde monikers kullanmak için önemli yerlerdir. Her biri için yönergeleri izleyin:
 
-3. Sekmeler yeterince küçük olduğunda araç penceresi sekmesi (Ayrıca **Ctrl**+**sekme** penceresi değiştiricisinde de kullanılır).
+3. Sekmeler yeterince küçüldüğünde **(Ctrl**+**Tab** pencere değiştiricide de kullanılır) araç penceresi sekmesi.
 
-   1. **Araç bölmesinde** bulunan sınıfın oluşturucusunda bu satırları (varsa) kaldırın:
+   1. **ToolWindowPane** türünden türeyen sınıfın oluşturucusundaki bu satırları (varsa) kaldırın:
 
        ```csharp
        this.BitmapResourceID = <Value>;
        this.BitmapIndex = <Value>;
        ```
 
-   2. "Nasıl yaparım? resim takma adlarını yeni araç penceresinde kullanma" #1 adıma bakın. Yukarıdaki bölüm.
+   2. "Yeni bir araç penceresinde görüntü monikerlerini nasıl kullanırım?" adım #1 bakın. yukarıdaki bölüm.
 
-4. Araç penceresini açmak için komut.
+4. Araç penceresini açma komutu.
 
-   - "Nasıl yaparım? resim takma adlarını yeni araç penceresinde kullanma" #2 adıma bakın. Yukarıdaki bölüm.
+   - "Yeni bir araç penceresinde resim monikerlerini nasıl kullanırım?" adım #2 bakın. yukarıdaki bölüm.
 
-## <a name="how-do-i-use-image-monikers-in-a-vsct-file"></a>. Vsct dosyasında resim takma adları kullanmak Nasıl yaparım??
- *. Vsct* dosyanızı aşağıdaki açıklamalı satırlarda belirtilen şekilde güncelleştirin:
+## <a name="how-do-i-use-image-monikers-in-a-vsct-file"></a>.vsct dosyasında görüntü monikerlerini nasıl kullanırım?
+ *.vsct* dosyanızı aşağıdaki yorum satırlarda belirtildiği gibi güncelleyin:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -561,9 +561,9 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 </CommandTable>
 ```
 
- **My. vsct dosyası aynı zamanda Visual Studio 'nun eski sürümleri tarafından okunmalıdır?**
+ **.vsct dosyamın Visual Studio'nun eski sürümleri tarafından da okunması gerekiyorsa ne olur?**
 
- Visual Studio 'nun eski sürümleri **Iconisbilinen ad** komut bayrağını tanımıyor. Görüntü hizmetindeki görüntüleri destekleyen Visual Studio sürümlerinde kullanabilirsiniz, ancak eski stil görüntülerini Visual Studio 'nun eski sürümlerinde kullanmaya devam edebilirsiniz. Bunu yapmak için, *. vsct* dosyasını değiştirmeden bırakır (ve bu nedenle Visual Studio 'nun eski sürümleriyle uyumludur) ve bir *. vsct* dosyasının \<bit > eşlemlerinde tanımlanan GUID/ID çiftlerinden, görüntü BILINEN adı GUID/ID ÇIFTLERIYLE eşleşen bir CSV (virgülle ayrılmış değerler) dosyası oluşturun.
+ Visual Studio'nun eski sürümleri **IconIsMoniker** komut bayrağını tanımaz. Görüntü hizmetindeki görüntüleri Visual Studio'nun destekleyen sürümlerinde kullanabilirsiniz, ancak Visual Studio'nun eski sürümlerinde eski tarz görüntüleri kullanmaya devam edebilirsiniz. Bunu yapmak için *,.vsct* dosyasını değişmeden bırakır (ve bu nedenle Visual Studio'nun eski sürümleriyle uyumludur) ve *.vsct* dosyasının \<Bitmaps> öğesinde tanımlanan GUID/ID çiftlerinden görüntü ad GUID/ID çiftlerine eşleyen bir CSV (virgülden ayrılmış değerler) dosyası oluşturursunuz.
 
  Eşleme CSV dosyasının biçimi:
 
@@ -573,49 +573,49 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,1,fda30684-682d-421c-8be4-650a2967058e,100
 b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ```
 
- CSV dosyası paketiyle dağıtılır ve konumu **ProvideMenuResource** paket özniteliğinin **ımappingfilename** özelliği tarafından belirtilir:
+ CSV dosyası paketle birlikte dağıtılır ve konumu **ProvideMenuResource** paket özniteliğinin **IconMappingFilename** özelliği tarafından belirtilir:
 
 ```csharp
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]
 ```
 
- **Imappingfilename** , $PackageFolder $ (Yukarıdaki örnekte olduğu gibi) ' de dolaylı olarak belirtilen göreli bir yoldur veya bir ortam değişkeni tarafından tanımlanan bir dizinde (örneğin, *@ "%userprofile%\dir1\dir2\mymappingfile.exe"* ) açıkça bir mutlak yol.
+ **IconMappingFilename** ya örtülü olarak $PackageFolder $ köklü göreceli bir yol (yukarıdaki örnekte olduğu gibi), ya da mutlak bir yol açıkça bir çevre değişkeni tarafından tanımlanan bir dizin köklü, gibi *@"%UserProfile%\dir1\dir2\MyMappingFile.csv"*.
 
-## <a name="how-do-i-port-a-project-system"></a>Nasıl yaparım? bir proje sistemi mi?
- **Bir proje için ımagetakma adlar sağlama**
+## <a name="how-do-i-port-a-project-system"></a>Proje sistemini nasıl taşınabilirim?
+ **Nasıl bir proje için ImageMonikers kaynağı**
 
-1. Projenin **IVsHierarchy**üzerinde **VSHPROPID_SupportsIconMonikers** uygulayın ve true döndürün.
+1. Projenin **IVs**Hiyerarşisi'nde **VSHPROPID_SupportsIconMonikers** uygulayın ve doğru döndürün.
 
-2. **VSHPROPID_IconMonikerImageList** (orijinal proje **VSHPROPID_IconImgList**kullanıyorsa) veya **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, **VSHPROPID_OpenFolderIconMonikerId** (orijinal proje **VSHPROPID_IconHandle** ve **VSHPROPID_OpenFolderIconHandle**kullanılıyorsa) uygulayın.
+2. VSHPROPID_IconMonikerImageList **(VSHPROPID_IconImgList** **kullanılan**orijinal proje ise) veya **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId** **VSHPROPID_OpenFolderIconMonikerGuid**, **VSHPROPID_OpenFolderIconMonikerId** (orijinal proje **VSHPROPID_IconHandle** ve **VSHPROPID_OpenFolderIconHandle**kullanılıyorsa) uygulayın.
 
-3. Uzantı noktaları tarafından istenirse simgelerin "eski" sürümlerini oluşturmak için simgeler için özgün Vshpropıds uygulamasını değiştirin. **IVsImageService2** bu simgeleri almak için gereken işlevselliği sağlar
+3. Uzantı noktaları talep ederse simgelerin "eski" sürümlerini oluşturmak için simgeler için orijinal VSHPROPIDs uygulamasını değiştirin. **IVsImageService2** bu simgeleri almak için gerekli işlevsellik sağlar
 
-   **VB/C# proje türleri için ek gereksinimler**
+   **VB/C# proje tatları için ekstra gereksinimler**
 
-   Yalnızca projenizin en **dıştaki Flavor**olduğunu tespit ederseniz **VSHPROPID_SupportsIconMonikers** uygulayın. Aksi takdirde, gerçek en dıştaki Flavor gerçek görüntü adlarını desteklemiyor olabilir ve temel özellik, özelleştirilmiş görüntüleri etkili bir şekilde "gizleyebilir".
+   Sadece projenizin **en dışta lezzet**olduğunu tespit ederseniz **VSHPROPID_SupportsIconMonikers** uygulayın. Aksi takdirde, gerçek dışta lezzet gerçekte görüntü monikers desteklemeyebilir ve temel lezzet etkili "gizlemek" özelleştirilmiş görüntüler olabilir.
 
-   **Nasıl yaparım? CPS 'de görüntü takma adları kullanılsın mı?**
+   **CPS'de görüntü monikerlerini nasıl kullanırım?**
 
-   CPS 'de (ortak proje sistemi) özel görüntülerin ayarlanması, el ile veya proje sistemi genişletilebilirlik SDK 'Sı ile birlikte gelen bir öğe şablonu aracılığıyla yapılabilir.
+   CPS'de (Ortak Proje Sistemi) özel görüntüler ayarlama, el ile veya Proje Sistemi Genişletilebilirliği SDK ile birlikte gelen bir madde şablonu aracılığıyla yapılabilir.
 
-   **Proje sistemi genişletilebilirlik SDK 'sını kullanma**
+   **Proje Sistemi Genişletilebilirlik SDK kullanımı**
 
-   CPS görüntülerinizi özelleştirmek için [Proje türü/öğe türü için özel simgeler sağlama](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/scenario/provide_custom_icons_for_the_project_or_item_type.md) bölümündeki yönergeleri izleyin. CPS hakkında daha fazla bilgi için [Visual Studio proje sistemi genişletilebilirlik belgelerinde](https://github.com/Microsoft/VSProjectSystem) bulunabilir
+   CPS resimlerinizi özelleştirmek [için Proje Türü/Öğe türü için özel simgeler sağlayın'daki](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/scenario/provide_custom_icons_for_the_project_or_item_type.md) yönergeleri izleyin. CPS hakkında daha fazla bilgiyi [Visual Studio Project System genişletilebilirlik belgelerinde](https://github.com/Microsoft/VSProjectSystem) bulabilirsiniz
 
-   **Imagetakma adlarını el ile kullanma**
+   **ImageMonikers'i el ile kullanın**
 
-4. Proje sisteminizde **ıprojecttreemodifier** arabirimini uygulayın ve dışarı aktarın.
+4. Proje sisteminizde **IProjectTreeModifier** arabirimini uygulayın ve dışa aktarın.
 
-5. Hangi **Knownbilinen** ad veya özel görüntü bilinen adını kullanmak istediğinizi belirleme.
+5. Hangi **KnownMoniker** veya özel resim takma ad kullanmak istediğinizi belirleyin.
 
-6. **Applydeğiştirmeler** yönteminde, aşağıdaki örneğe benzer şekilde, yeni ağacı döndürmeden önce yönteminde herhangi bir yerde şunu yapın:
+6. **Modifikasyonları Uygulama** yönteminde, aşağıdaki örneğe benzer şekilde, yeni ağacı döndürmeden önce yöntemde aşağıdakileri yapın:
 
    ```csharp
    // Replace this KnownMoniker with your desired ImageMoniker
    tree = tree.SetIcon(KnownMonikers.Blank.ToProjectSystemType());
    ```
 
-7. Yeni bir ağaç oluşturuyorsanız, aşağıdaki örneğe benzer şekilde, istenen bilinen adları NewTree yöntemine geçirerek özel resimleri ayarlayabilirsiniz:
+7. Yeni bir ağaç oluşturuyorsanız, aşağıdaki örneğe benzer şekilde, istenilen monikers'i NewTree yöntemine geçirerek özel görüntüleri ayarlayabilirsiniz:
 
    ```csharp
    // Replace this KnownMoniker with your desired ImageMoniker
@@ -629,38 +629,38 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
                                                 expandedIcon);
    ```
 
-## <a name="how-do-i-convert-from-a-real-image-strip-to-a-moniker-based-image-strip"></a>Nasıl yaparım? gerçek görüntü şeridinde bilinen ad tabanlı görüntü şeridine dönüştürmek istiyor musunuz?
- **HIMAGELISTs desteklemem gerekiyor**
+## <a name="how-do-i-convert-from-a-real-image-strip-to-a-moniker-based-image-strip"></a>Gerçek bir görüntü şeridinden takma alan görüntü şeridine nasıl dönüştürülebilirim?
+ **HIMAGELISTs'i desteklemem gerek.**
 
- Kodunuz için, görüntü hizmetini kullanmak üzere güncelleştirmek istediğiniz bir görüntü şeridi varsa, ancak görüntü listelerinin çevresine geçirilmesi gereken API 'Ler tarafından sınırlandırıyorsanız, görüntü hizmetinin avantajlarını yine de edinebilirsiniz. Bilinen ad tabanlı bir görüntü şeridi oluşturmak için, mevcut bilinen adların bir bildirimini oluşturmak için aşağıdaki adımları izleyin.
+ Kodunuz için görüntü hizmetini kullanmak için güncelleştirmek istediğiniz zaten varolan bir resim şeridi varsa, ancak görüntü listelerinde ngeçirilmesi gereken API'ler tarafından kısıtlanırsanız, yine de görüntü hizmetinin avantajlarından yararlanabilirsiniz. Takma ad tabanlı görüntü şeridi oluşturmak için, varolan monikerlerden bir bildirim oluşturmak için aşağıdaki adımları izleyin.
 
-1. **Manifestfromresources** aracını çalıştırarak resim şeridi 'ni geçirerek. Bu, şerit için bir bildirim oluşturur.
+1. **ManifestFromResources** aracını görüntü şeridinden geçirerek çalıştırın. Bu şerit için bir manifesto oluşturur.
 
-   - Önerilen: bildirime uyacak şekilde bildirim için varsayılan olmayan bir ad sağlayın.
+   - Önerilen: kullanıma uygun olarak bildirim için varsayılan olmayan bir ad sağlayın.
 
-2. Yalnızca **Knowntakma adlar**kullanıyorsanız şunları yapın:
+2. Yalnızca **KnownMonikers**kullanıyorsanız, aşağıdakileri yapın:
 
-   - Bildirimin \<görüntülerini > bölümünü \<görüntülerle/> değiştirin.
+   - Bildirimin \<Görüntüler> bölümünü \<Görüntüler/> ile değiştirin.
 
-   - Tüm alt görüntü kimliklerini (\<ımagestrip adı > _ # #) kaldırın.
+   - Tüm alt resim dislerini kaldırın \<(imagestrip adı>_##) ile ilgili herhangi bir şey.
 
-   - Önerilen: AssetsGuid sembolünü ve resim şeridi sembolünü, kullanımına uyacak şekilde yeniden adlandırın.
+   - Önerilen: AssetsGuid simgesini ve kullanım larına uyacak şekilde resim şerit simgesini yeniden adlandırın.
 
-   - Her bir **containedimage**GUID 'sini $ (ımagecatalogguid) ile değiştirin, her bir **CONTAINEDIMAGE**kimliğini $ (\<bilinen ad >) ile değiştirin ve her bir **containedimage** öğesine External = "true" özniteliğini ekleyin
+   - Her **Bir İçten Görüntü'nün**GUID'ini $(ImageCatalogGuid) ile\<değiştirin, her Bir **İçtinImage'in**kimliğini $(moniker>) ile değiştirin ve her Bir **İçTin Image'a** Harici="true" özniteliği ekleyin
 
-       - \<bilinen ad >, görüntüyle eşleşen **Knownbilinen** adıyla değiştirilmelidir, ancak "Knowntakma adları" ile değiştirilmelidir. adından kaldırılır.
+       - \<takma>, görüntüyle eşleşen **Ancak** "KnownMonikers" ile değiştirilmelidir. adından kaldırılır.
 
-   - < Import manifest = "$ (ManifestFolder)\\,\*sembolleri > bölümünün en üstüne <\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/\<için göreli install dizin yolunu ekleyin.
+   - <Alma\\ Bildirimi="$(ManifestFolder)<Göreli\>yükleme dir yolunu * \Microsoft.VisualStudio.ImageCatalog.imagemanifest" /\*> Semboller> bölümünün \<üst kısmına ekleyin.
 
-       - Göreli yol, bildirim için kurulum yazma bölümünde tanımlanan dağıtım konumuna göre belirlenir.
+       - Göreli yol, bildirim için yazan kurulumda tanımlanan dağıtım konumuna göre belirlenir.
 
-3. Mevcut kodun görüntü şeridi için görüntü hizmetini sorgulamak için kullanabileceği bir bilinen adı olması için **Manifesttocode** aracını çalıştırın.
+3. Varolan kodun görüntü şeridi için görüntü hizmetini sorgulamak için kullanabileceği bir takma takma takma alasahip olması için sarmalayıcılar oluşturmak için **ManifestToCode** aracını çalıştırın.
 
-   - Önerilen: kullanımlarına uyacak şekilde sarmalayıcılar ve ad alanları için varsayılan adı belirtin.
+   - Önerilen: sarmalayıcılar ve ad alanları için kullanımlarına uygun varsayılan olmayan adlar sağlayın.
 
-4. Tüm ekleme, kurulum yazma/dağıtım ve diğer kod değişikliklerini görüntü hizmetiyle ve yeni dosyalarla çalışacak şekilde yapın.
+4. Resim hizmeti ve yeni dosyalarla çalışmak için tüm eklemeleri, kurulum yazma/dağıtımını ve diğer kod değişikliklerini yapın.
 
-   Nasıl görüneceğine bakmak için hem iç hem de dış görüntü içeren örnek bildirim:
+   Nasıl görünmesi gerektiğini görmek için hem dahili hem de harici görüntüler içeren örnek manifesto:
 
 ```xml
 <?xml version="1.0"?>
@@ -711,352 +711,352 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 </ImageManifest>
 ```
 
- **HIMAGELISTs desteği almam gerekmiyor**
+ **HIMAGELISTs'i desteklememe gerek yok.**
 
-1. Görüntü şeridindeki görüntülerle eşleşen **Knowntakma ad** kümesini belirleyin veya görüntü şeridindeki görüntüler için kendi takma bilgilerinizi oluşturun.
+1. Görüntü şeridinizdeki görüntülerle eşleşen **KnownMonikers** kümesini belirleyin veya görüntü şeridinizdeki görüntüler için kendi monikers'ınızı oluşturun.
 
-2. Yerine takma adların kullanılması için görüntü şeridindeki gereken dizinde görüntüyü almak için kullandığınız eşlemeyi güncelleştirin.
+2. Bunun yerine monikers kullanmak için görüntü şeritte gerekli dizin de görüntü almak için kullanılan ne olursa olsun haritalama güncelleyin.
 
-3. Kodu, güncelleştirilmiş eşleme aracılığıyla takma ad istemek üzere görüntü hizmetini kullanacak şekilde güncelleştirin. (Bu, yönetilen kod için **çapraz görüntülerin** güncelleştirilmesi veya görüntü hizmetinden hbit eşlemler ya da hcons istemek ve yerel kod için bu dosyaları iletmek anlamına gelebilir.)
+3. Güncelleştirilmiş eşleme yoluyla monikers istemek için görüntü hizmetini kullanmak için kodunuzu güncelleştirin. (Bu, yönetilen kod için **CrispImages'a** güncelleştirmek veya görüntü hizmetinden HBITMAP'ler veya HICON'lar istemek ve bunları yerel kod için aktarmak anlamına gelebilir.)
 
-## <a name="testing-your-images"></a>Görüntülerinizi test etme
- Her şeyin doğru yazıldığından emin olmak için görüntü bildirimlerinizi test etmek üzere görüntü kitaplığı Görüntüleyicisi aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK 'sında](visual-studio-sdk.md)bulabilirsiniz. Bu araç için belgeler ve diğerleri [burada](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015)bulunabilir.
+## <a name="testing-your-images"></a>Resimlerinizi test etme
+ Her şeyin doğru yazDığından emin olmak için görüntü bildirimlerinizi sınamak için Resim Kitaplığı Görüntüleyici aracını kullanabilirsiniz. Aracı [Visual Studio 2015 SDK'da](visual-studio-sdk.md)bulabilirsiniz. Bu araç ve diğerleri için dokümantasyon [burada](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015)bulabilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 ### <a name="samples"></a>Örnekler
- GitHub 'daki Visual Studio örneklerinden bazıları, görüntü hizmetinin çeşitli Visual Studio genişletilebilirlik noktalarının parçası olarak nasıl kullanılacağını gösterecek şekilde güncelleştirilmiştir.
+ GitHub'daki Visual Studio örneklerinden bazıları, görüntü hizmetinin çeşitli Visual Studio genişletilebilirlik noktalarının bir parçası olarak nasıl kullanılacağını göstermek için güncellenmiştir.
 
- En son örnekler için [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) işaretleyin.
+ En [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) son örnekleri kontrol edin.
 
 ### <a name="tooling"></a>Araçlar
- Görüntü hizmeti ile birlikte çalışarak Kullanıcı arabirimi oluşturma/güncelleştirme konusunda yardımcı olmak üzere görüntü hizmeti için bir dizi destek aracı oluşturulmuştur. Her araç hakkında daha fazla bilgi için araçlarla birlikte gelen belgelere bakın. Araçlar, [Visual Studio 2015 SDK 'sının](visual-studio-sdk.md)bir parçası olarak dahil edilmiştir.
+ Görüntü Hizmeti ile çalışan kullanıcı arabirimi oluşturma/güncellemeye yardımcı olmak için Görüntü Hizmeti için bir dizi destek aracı oluşturuldu. Her araç hakkında daha fazla bilgi için, araçlarla birlikte gelen belgeleri denetleyin. Araçlar [Visual Studio 2015 SDK](visual-studio-sdk.md)bir parçası olarak dahildir.
 
  **ManifestFromResources**
 
- Manifest from Resources Aracı, görüntü kaynaklarının bir listesini alır (PNG veya XAML) ve görüntü hizmeti ile bu görüntüleri kullanmak için bir görüntü bildirim dosyası oluşturur.
+ Kaynaklardan Bildirim aracı görüntü kaynaklarının (PNG veya XAML) bir listesini alır ve bu görüntüleri görüntü hizmetiyle kullanmak için bir görüntü bildirimi dosyası oluşturur.
 
- **ManifestToCode**
+ **ManifesttoCode**
 
- Manifest to Code aracı bir görüntü bildirim dosyası alır ve kod (C++, C#, veya vb) ya da *. vsct* dosyalarındaki bildirim değerlerine başvurmak için bir sarmalayıcı dosyası oluşturur.
+ Manifest to Code aracı bir görüntü bildirimi dosyası alır ve kod (C++, C#veya VB) veya *.vsct* dosyalarında bildirim değerlerini başvurmak için bir paket dosyası oluşturur.
 
  **ImageLibraryViewer**
 
- Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bildirimleri yükleyebilir ve kullanıcının bunları Visual Studio 'Nun, bildirimin doğru şekilde yazıldığından emin olmak için aynı şekilde işlemesini sağlar. Kullanıcı arka plan, boyut, DPı ayarı, Yüksek Karşıtlık ve diğer ayarları değiştirebilir. Ayrıca, bildirimlerdeki hataları bulmak için bilgileri yükleme ve bildirimdeki her bir görüntü için kaynak bilgilerini görüntüler.
+ Resim Kitaplığı Görüntüleyici aracı görüntü bildirimlerini yükleyebilir ve kullanıcının, bildirimin doğru yazıldığından emin olmak için Visual Studio'nun yapacağı şekilde bunları işlemesine olanak tanır. Kullanıcı arka planı, boyutları, DPI ayarını, Yüksek Karşıtlığı ve diğer ayarları değiştirebilir. Ayrıca, bildirimlerdeki hataları bulmak için yükleme bilgilerini görüntüler ve bildirimdeki her görüntü için kaynak bilgileri görüntüler.
 
 ## <a name="faq"></a>SSS
 
-- \<başvurusunu yüklerken dahil etmeniz gereken bağımlılıklar var = "Microsoft. VisualStudio. *. Interop. 14.0. DesignTime "/>?
+- Başvuru Include="Microsoft.VisualStudio.*'u yüklerken \<eklemeniz gereken bağımlılıklar var mıdır.*. Interop.14.0.DesignTime" />?
 
-  - Tüm birlikte çalışma dll 'Lerinde EmbedInteropTypes = "true" olarak ayarlayın.
+  - Tüm interop DL'lerde EmbedInteropTypes="true" kümesi.
 
-- Uzantısı olan bir görüntü bildirimi Nasıl yaparım? mi?
+- Uzantımla birlikte bir görüntü bildirimini nasıl dağıtıyorum?
 
-  - Projenize *. ımagemanifest* dosyasını ekleyin.
+  - *.imagemanifest* dosyasını projenize ekleyin.
 
-  - "VSıX 'te Ekle" değerini doğru olarak ayarlayın.
+  - "VSIX'ye Ekle" ile True'ya ayarlayın.
 
-- CPS proje sistemimi güncelleştiriyorum. **ImageName** ve **StockIconService**'a ne oldu?
+- CPS Proje Sistemimi güncelliyorum. **ImageName** ve **StockIconService'e**ne oldu?
 
-  - Bunlar, CPS 'in takma adlar kullanacak şekilde güncelleştirildiği zaman kaldırılmıştır. Artık **StockIconService**çağrısı yapmanız gerekmez, Istenen **KNOWNBILINEN** adı, CPS yardımcı programlarında **toprojectsystemtype ()** genişletme yöntemini kullanarak yönteme veya özelliğe geçirmeniz yeterlidir. **ImageName** 'Den **knowntakma adlarıyla** bir eşleme bulabilirsiniz:
+  - Bunlar, CPS monikers kullanmak üzere güncelleştirildiğinde kaldırıldı. Artık **StockIconService**aramak gerekir, sadece cps yardımcı programlarında **ToProjectSystemType()** uzantı yöntemini kullanarak yöntem veya özellik için istenilen **KnownMoniker** geçmek. **Aşağıda ImageName'den** **KnownMonikers'a** bir harita bulabilirsiniz:
 
     |||
     |-|-|
-    |**Görüntü**|**Knownbilinen ad**|
-    |ImageName. OfflineWebApp|Knownımageıds. Web|
-    |GörüntüAdı. WebReferencesFolder|Knownımageıds. Web|
-    |ImageName. OpenReferenceFolder|Knownımageıds. Folderaçıldı|
-    |ImageName. ReferenceFolder|Knownımageıds. Reference|
-    |ImageName. Reference|Knownımageıds. Reference|
-    |ImageName. SdlWebReference|Knownımageıds. WebReferenceFolder|
-    |ImageName. Bulwebreference|Knownımageıds. DynamicDiscoveryDocument|
-    |ImageName. Folder|Knownımageıds. FolderClosed|
-    |ImageName. OpenFolder|Knownımageıds. Folderaçıldı|
-    |ImageName. ExcludedFolder|Knownımageıds. HiddenFolderClosed|
-    |ImageName. OpenExcludedFolder|Knownımageıds. Hiddenfolderaçıldı|
-    |ImageName. ExcludedFile|Knownımageıds. HiddenFile|
-    |ImageName. Dependentdosyası|Knownımageıds. GenerateFile|
-    |ImageName. MissingFile|Knownımageıds. DocumentWarning|
-    |GörüntüAdı. WindowsForm|Knownımageıds. WindowsForm|
-    |ImageName. WindowsUserControl|Knownımageıds. UserControl|
-    |ImageName. Windowsbileşeni|Knownımageıds. ComponentFile|
-    |GörüntüAdı. XmlSchema|Knownımageıds. XMLSchema|
-    |ImageName. XmlFile|Knownımageıds. XMLFile|
-    |GörüntüAdı. WebForm|Knownımageıds. Web|
-    |GörüntüAdı. WebService|Knownımageıds. WebService|
-    |GörüntüAdı. WebUserControl|Knownımageıds. WebUserControl|
-    |GörüntüAdı. WebCustomUserControl|Knownımageıds. WebCustomControl|
-    |ImageName. AspPage|Knownımageıds. ASPFile|
-    |GörüntüAdı. GlobalApplicationClass|Knownımageıds. SettingsFile|
-    |GörüntüAdı. WebConfig|Knownımageıds. ConfigurationFile|
-    |GörüntüAdı. HtmlPage|KnownImageIds.HTMLFile|
-    |ImageName. StyleSheet|Knownımageıds. StyleSheet|
-    |ImageName. ScriptFile|Knownımageıds. JSScript|
-    |ImageName. TextFile|Knownımageıds. Document|
-    |ImageName. SettingsFile|Knownımageıds. Settings|
-    |ImageName. resources|Knownımageıds. DocumentGroup|
-    |GörüntüAdı. bit eşlem|Knownımageıds. Image|
-    |ImageName. Icon|Knownımageıds. IconFile|
-    |ImageName. Image|Knownımageıds. Image|
-    |ImageName. ImageMap|Knownımageıds. ımagemapfile|
-    |ImageName. XWorld|Knownımageıds. XWorldFile|
-    |GörüntüAdı. ses|Knownımageıds. Sound|
-    |ImageName. video|Knownımageıds. Media|
-    |GörüntüAdı. cab|Knownımageıds. Cabprojesi|
-    |ImageName. jar|Knownımageıds. JARFile|
-    |ImageName. DataEnvironment|Knownımageıds. DataTable|
-    |ImageName. önizleme dosyası|Knownımageıds. Report|
-    |ImageName. DanglingReference|Knownımageıds. ReferenceWarning|
-    |ImageName. Xsltdosyası|Knownımageıds. XSLTransform|
-    |GörüntüAdı. Cursor|Knownımageıds. CursorFile|
-    |ImageName. AppDesignerFolder|Knownımageıds. Property|
-    |ImageName. Data|Knownımageıds. Database|
-    |ImageName. Application|Knownımageıds. Application|
-    |GörüntüAdı. veri kümesi|Knownımageıds. DatabaseGroup|
-    |GörüntüAdı. pfx|Knownımageıds. Certificate|
-    |GörüntüAdı. snk|Knownımageıds. Rule|
-    |ImageName. VisualBasicProject|Knownımageıds. VBProjectNode|
-    |ImageName. CSharpProject|Knownımageıds. CSProjectNode|
-    |ImageName. Empty|Knownımageıds. Blank|
-    |ImageName. MissingFolder|Knownımageıds. FolderOffline|
-    |GörüntüAdı. SharedImportReference|Knownımageıds. SharedProject|
-    |ImageName. SharedProjectCs|Knownımageıds. CSSharedProject|
-    |ImageName. SharedProjectVc|Knownımageıds. CPPSharedProject|
-    |ImageName. SharedProjectJs|Knownımageıds. JSSharedProject|
-    |ImageName. CSharpCodeFile|KnownImageIds.CSFileNode|
-    |ImageName. VisualBasicCodeFile|KnownImageIds.VBFileNode|
+    |**ımagename**|**Bilinen Monoiker**|
+    |ImageName.OfflineWebApp|KnownImageIds.Web|
+    |ImageName.WebReferencesFolder|KnownImageIds.Web|
+    |ImageName.OpenReferenceFolder|KnownImageIds.FolderOpened|
+    |ImageName.ReferenceFolder|KnownImageIds.Reference|
+    |ImageName.Reference|KnownImageIds.Reference|
+    |ImageName.SdlWebReference|KnownImageIds.WebReferenceFolder|
+    |ImageName.DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|
+    |ImageName.Klasör|KnownImageIds.FolderKapalı|
+    |ImageName.OpenFolder|KnownImageIds.FolderOpened|
+    |ImageName.ExcludedFolder|KnownImageIds.HiddenFolderKapalı|
+    |ImageName.OpenExcludedFolder|KnownImageIds.HiddenFolderAçıldı|
+    |ImageName.ExcludedFile|KnownImageIds.HiddenFile|
+    |ImageName.DependentFile|KnownImageIds.GenerateFile|
+    |ImageName.MissingFile|KnownImageIds.DocumentWarning|
+    |ImageName.WindowsForm|KnownImageIds.WindowsForm|
+    |ImageName.WindowsUserControl|KnownImageIds.UserControl|
+    |ImageName.WindowsComponent|KnownImageIds.ComponentFile|
+    |ImageName.XmlSchema|KnownImageIds.XMLSchema|
+    |ImageName.XmlFile|KnownImageIds.XMLFile|
+    |ImageName.WebForm|KnownImageIds.Web|
+    |ImageName.WebService|KnownImageIds.WebService|
+    |ImageName.WebUserControl|KnownImageIds.WebUserControl|
+    |ImageName.WebCustomUserControl|KnownImageIds.WebCustomControl|
+    |ImageName.AspPage|KnownImageIds.ASPFile|
+    |ImageName.GlobalApplicationClass|KnownImageIds.SettingsFile|
+    |ImageName.WebConfig|KnownImageIds.ConfigurationFile|
+    |ImageName.HtmlPage|KnownImageIds.HTMLFile|
+    |ImageName.StyleSheet|KnownImageIds.StyleSheet|
+    |ImageName.ScriptFile|KnownImageIds.JSScript|
+    |ImageName.TextFile|KnownImageIds.Document|
+    |ImageName.SettingsFile|KnownImageIds.Settings|
+    |ImageName.Resources|KnownImageIds.DocumentGroup|
+    |ImageName.Bitmap|KnownImageIds.Image|
+    |ImageName.Icon|KnownImageIds.IconFile|
+    |ImageName.Image|KnownImageIds.Image|
+    |ImageName.ImageMap|KnownImageIds.ImageMapFile|
+    |ImageName.XWorld|KnownImageIds.XWorldFile|
+    |ImageName.Audio|KnownImageIds.Sound|
+    |ImageName.Video|KnownImageIds.Media|
+    |ImageName.Cab|KnownImageIds.CABProject|
+    |ImageName.Jar|KnownImageIds.JARFile|
+    |ImageName.DataEnvironment|KnownImageIds.DataTable|
+    |ImageName.PreviewFile|KnownImageIds.Report|
+    |ImageName.DanglingReference|KnownImageIds.ReferenceWarning|
+    |ImageName.XsltFile|KnownImageIds.XSLTransform|
+    |ImageName.Cursor|KnownImageIds.CursorFile|
+    |ImageName.AppDesignerFolder|KnownImageIds.Özellik|
+    |ImageName.Data|KnownImageIds.Database|
+    |ImageName.Application|KnownImageIds.Application|
+    |ImageName.DataSet|KnownImageIds.DatabaseGroup|
+    |ImageName.Pfx|KnownImageIds.Certificate|
+    |ImageName.Snk|KnownImageIds.Kural|
+    |ImageName.VisualBasicProject|KnownImageIds.VBProjectNode|
+    |ImageName.csharpProject|KnownImageIds.CSProjectNode|
+    |ImageName.Boş|KnownImageIds.Blank|
+    |ImageName.MissingFolder|KnownImageIds.FolderOffline|
+    |ImageName.SharedImportReference|KnownImageIds.SharedProject|
+    |ImageName.SharedProjectCs|KnownImageIds.CSSharedProject|
+    |ImageName.SharedProjectVc|KnownImageIds.CPPSharedProject|
+    |ImageName.SharedProjectJs|KnownImageIds.JSSharedProject|
+    |ImageName.CsharpCodeFile|KnownImageIds.CSFileNode|
+    |ImageName.VisualBasicCodeFile|KnownImageIds.VBFileNode|
 
-  - Tamamlanma listesi sağlayıcımı güncelleştiriyorum. Eski **Standartglyphgroup** ve **standardglif** değerleriyle hangi **knowntakma adları** eşleşiyor?
+  - Tamamlanma listesi sağlayıcımı güncelliyorum. Ne **KnownMonikers** eski **StandardGlyphGroup** ve **StandardGlyph** değerleri maç?
 
     ||||
     |-|-|-|
-    |GlyphGroupClass|Glyphitempublik|Classpublik|
-    |GlyphGroupClass|GlyphItemInternal|Classınterternal|
-    |GlyphGroupClass|Glyphıtemfriend|Classınterternal|
-    |GlyphGroupClass|Glyphıtemprotected|ClassProtected|
-    |GlyphGroupClass|GlyphItemPrivate|ClassPrivate|
-    |GlyphGroupClass|Glyphıtemshortcut|ClassShortcut|
-    |GlyphGroupConstant|Glyphitempublik|ConstantPublic|
-    |GlyphGroupConstant|GlyphItemInternal|ConstantInternal|
-    |GlyphGroupConstant|Glyphıtemfriend|ConstantInternal|
-    |GlyphGroupConstant|Glyphıtemprotected|ConstantProtected|
-    |GlyphGroupConstant|GlyphItemPrivate|ConstantPrivate|
-    |GlyphGroupConstant|Glyphıtemshortcut|ConstantShortcut|
-    |GlyphGroupDelegate|Glyphitempublik|DelegatePublic|
-    |GlyphGroupDelegate|GlyphItemInternal|Temsilci Iç|
-    |GlyphGroupDelegate|Glyphıtemfriend|Temsilci Iç|
-    |GlyphGroupDelegate|Glyphıtemprotected|Temsilci korumalı|
-    |GlyphGroupDelegate|GlyphItemPrivate|Temsilci özel|
-    |GlyphGroupDelegate|Glyphıtemshortcut|Temsilci kısayolu|
-    |GlyphGroupEnum|Glyphitempublik|EnumerationPublic|
-    |GlyphGroupEnum|GlyphItemInternal|Enumerationınternal|
-    |GlyphGroupEnum|Glyphıtemfriend|Enumerationınternal|
-    |GlyphGroupEnum|Glyphıtemprotected|EnumerationProtected|
-    |GlyphGroupEnum|GlyphItemPrivate|EnumerationPrivate|
-    |GlyphGroupEnum|Glyphıtemshortcut|EnumerationShortcut|
-    |GlyphGroupEnumMember|Glyphitempublik|Enumerationitempublik|
-    |GlyphGroupEnumMember|GlyphItemInternal|EnumerationItemInternal|
-    |GlyphGroupEnumMember|Glyphıtemfriend|EnumerationItemInternal|
-    |GlyphGroupEnumMember|Glyphıtemprotected|Enumerationıtemprotected|
-    |GlyphGroupEnumMember|GlyphItemPrivate|EnumerationItemPrivate|
-    |GlyphGroupEnumMember|Glyphıtemshortcut|Enumerationıtemshortcut|
-    |GlyphGroupEvent|Glyphitempublik|EventPublic|
-    |GlyphGroupEvent|GlyphItemInternal|Eventınternal|
-    |GlyphGroupEvent|Glyphıtemfriend|Eventınternal|
-    |GlyphGroupEvent|Glyphıtemprotected|EventProtected|
-    |GlyphGroupEvent|GlyphItemPrivate|EventPrivate|
-    |GlyphGroupEvent|Glyphıtemshortcut|EventShortcut|
-    |GlyphGroupException|Glyphitempublik|ExceptionPublic|
-    |GlyphGroupException|GlyphItemInternal|Exceptionınternal|
-    |GlyphGroupException|Glyphıtemfriend|Exceptionınternal|
-    |GlyphGroupException|Glyphıtemprotected|ExceptionProtected|
-    |GlyphGroupException|GlyphItemPrivate|ExceptionPrivate|
-    |GlyphGroupException|Glyphıtemshortcut|ExceptionShortcut|
-    |GlyphGroupField|Glyphitempublik|FieldPublic|
-    |GlyphGroupField|GlyphItemInternal|Fieldınternal|
-    |GlyphGroupField|Glyphıtemfriend|Fieldınternal|
-    |GlyphGroupField|Glyphıtemprotected|FieldProtected|
-    |GlyphGroupField|GlyphItemPrivate|FieldPrivate|
-    |GlyphGroupField|Glyphıtemshortcut|FieldShortcut|
-    |Glyphgroupınterface|Glyphitempublik|Interfacepublic|
-    |Glyphgroupınterface|GlyphItemInternal|Interfaceınternal|
-    |Glyphgroupınterface|Glyphıtemfriend|Interfaceınternal|
-    |Glyphgroupınterface|Glyphıtemprotected|Interfaceprotected|
-    |Glyphgroupınterface|GlyphItemPrivate|Interfaceprivate|
-    |Glyphgroupınterface|Glyphıtemshortcut|Interfaceshortcut|
-    |GlyphGroupMacro|Glyphitempublik|Makro genel|
-    |GlyphGroupMacro|GlyphItemInternal|Makro Iç|
-    |GlyphGroupMacro|Glyphıtemfriend|Makro Iç|
-    |GlyphGroupMacro|Glyphıtemprotected|Makro korumalı|
-    |GlyphGroupMacro|GlyphItemPrivate|Makroözel|
-    |GlyphGroupMacro|Glyphıtemshortcut|Makro kısayolu|
-    |GlyphGroupMap|Glyphitempublik|MapPublic|
-    |GlyphGroupMap|GlyphItemInternal|Mapınternal|
-    |GlyphGroupMap|Glyphıtemfriend|Mapınternal|
-    |GlyphGroupMap|Glyphıtemprotected|MapProtected|
-    |GlyphGroupMap|GlyphItemPrivate|MapPrivate|
-    |GlyphGroupMap|Glyphıtemshortcut|MapShortcut|
-    |Glyphgroupmapıtem|Glyphitempublik|Mapitempublik|
-    |Glyphgroupmapıtem|GlyphItemInternal|MapItemInternal|
-    |Glyphgroupmapıtem|Glyphıtemfriend|MapItemInternal|
-    |Glyphgroupmapıtem|Glyphıtemprotected|Mapıtemprotected|
-    |Glyphgroupmapıtem|GlyphItemPrivate|MapItemPrivate|
-    |Glyphgroupmapıtem|Glyphıtemshortcut|Mapıtemshortcut|
-    |GlyphGroupMethod|Glyphitempublik|MethodPublic|
-    |GlyphGroupMethod|GlyphItemInternal|Methodınternal|
-    |GlyphGroupMethod|Glyphıtemfriend|Methodınternal|
-    |GlyphGroupMethod|Glyphıtemprotected|Yöntem korumalı|
-    |GlyphGroupMethod|GlyphItemPrivate|MethodPrivate|
-    |GlyphGroupMethod|Glyphıtemshortcut|MethodShortcut|
-    |GlyphGroupOverload|Glyphitempublik|MethodPublic|
-    |GlyphGroupOverload|GlyphItemInternal|Methodınternal|
-    |GlyphGroupOverload|Glyphıtemfriend|Methodınternal|
-    |GlyphGroupOverload|Glyphıtemprotected|Yöntem korumalı|
-    |GlyphGroupOverload|GlyphItemPrivate|MethodPrivate|
-    |GlyphGroupOverload|Glyphıtemshortcut|MethodShortcut|
-    |GlyphGroupModule|Glyphitempublik|ModulePublic|
-    |GlyphGroupModule|GlyphItemInternal|Moduleınternal|
-    |GlyphGroupModule|Glyphıtemfriend|Moduleınternal|
-    |GlyphGroupModule|Glyphıtemprotected|ModuleProtected|
-    |GlyphGroupModule|GlyphItemPrivate|ModulePrivate|
-    |GlyphGroupModule|Glyphıtemshortcut|ModuleShortcut|
-    |GlyphGroupNamespace|Glyphitempublik|NamespacePublic|
-    |GlyphGroupNamespace|GlyphItemInternal|Namespaceınternal|
-    |GlyphGroupNamespace|Glyphıtemfriend|Namespaceınternal|
-    |GlyphGroupNamespace|Glyphıtemprotected|NamespaceProtected|
-    |GlyphGroupNamespace|GlyphItemPrivate|NamespacePrivate|
-    |GlyphGroupNamespace|Glyphıtemshortcut|NamespaceShortcut|
-    |GlyphGroupOperator|Glyphitempublik|OperatorPublic|
-    |GlyphGroupOperator|GlyphItemInternal|OperatorInternal|
-    |GlyphGroupOperator|Glyphıtemfriend|OperatorInternal|
-    |GlyphGroupOperator|Glyphıtemprotected|OperatorProtected|
-    |GlyphGroupOperator|GlyphItemPrivate|OperatorPrivate|
-    |GlyphGroupOperator|Glyphıtemshortcut|OperatorShortcut|
-    |GlyphGroupProperty|Glyphitempublik|Özellik Typublik|
-    |GlyphGroupProperty|GlyphItemInternal|Propertyınternal|
-    |GlyphGroupProperty|Glyphıtemfriend|Propertyınternal|
-    |GlyphGroupProperty|Glyphıtemprotected|PropertyProtected|
-    |GlyphGroupProperty|GlyphItemPrivate|Özellik Typrivate|
-    |GlyphGroupProperty|Glyphıtemshortcut|PropertyShortcut|
-    |GlyphGroupStruct|Glyphitempublik|Structucumhuriyeti|
-    |GlyphGroupStruct|GlyphItemInternal|Structureınternal|
-    |GlyphGroupStruct|Glyphıtemfriend|Structureınternal|
-    |GlyphGroupStruct|Glyphıtemprotected|StructureProtected|
-    |GlyphGroupStruct|GlyphItemPrivate|StructurePrivate|
-    |GlyphGroupStruct|Glyphıtemshortcut|StructureShortcut|
-    |GlyphGroupTemplate|Glyphitempublik|TemplatePublic|
-    |GlyphGroupTemplate|GlyphItemInternal|Templateınternal|
-    |GlyphGroupTemplate|Glyphıtemfriend|Templateınternal|
-    |GlyphGroupTemplate|Glyphıtemprotected|TemplateProtected|
-    |GlyphGroupTemplate|GlyphItemPrivate|TemplatePrivate|
-    |GlyphGroupTemplate|Glyphıtemshortcut|TemplateShortcut|
-    |GlyphGroupTypedef|Glyphitempublik|TypeDefinitionPublic|
-    |GlyphGroupTypedef|GlyphItemInternal|Typedefinitionınternal|
-    |GlyphGroupTypedef|Glyphıtemfriend|Typedefinitionınternal|
-    |GlyphGroupTypedef|Glyphıtemprotected|Tür Definitionprotected|
-    |GlyphGroupTypedef|GlyphItemPrivate|TypeDefinitionPrivate|
-    |GlyphGroupTypedef|Glyphıtemshortcut|TypeDefinitionShortcut|
-    |GlyphGroupType|Glyphitempublik|TypePublic|
-    |GlyphGroupType|GlyphItemInternal|Tür Iç|
-    |GlyphGroupType|Glyphıtemfriend|Tür Iç|
-    |GlyphGroupType|Glyphıtemprotected|Tür korumalı|
-    |GlyphGroupType|GlyphItemPrivate|TypePrivate|
-    |GlyphGroupType|Glyphıtemshortcut|Yazı Hortkes|
-    |GlyphGroupUnion|Glyphitempublik|UnionPublic|
-    |GlyphGroupUnion|GlyphItemInternal|Unionınternal|
-    |GlyphGroupUnion|Glyphıtemfriend|Unionınternal|
-    |GlyphGroupUnion|Glyphıtemprotected|UnionProtected|
-    |GlyphGroupUnion|GlyphItemPrivate|UnionPrivate|
-    |GlyphGroupUnion|Glyphıtemshortcut|UnionShortcut|
-    |GlyphGroupVariable|Glyphitempublik|FieldPublic|
-    |GlyphGroupVariable|GlyphItemInternal|Fieldınternal|
-    |GlyphGroupVariable|Glyphıtemfriend|Fieldınternal|
-    |GlyphGroupVariable|Glyphıtemprotected|FieldProtected|
-    |GlyphGroupVariable|GlyphItemPrivate|FieldPrivate|
-    |GlyphGroupVariable|Glyphıtemshortcut|FieldShortcut|
-    |GlyphGroupValueType|Glyphitempublik|ValueTypePublic|
+    |GlyphGroupClass|GlyphItemPublic|ClassPublic|
+    |GlyphGroupClass|GlyphItemInternal|Sınıfİç|
+    |GlyphGroupClass|GlyphItemFriend|Sınıfİç|
+    |GlyphGroupClass|GlyphItemProtected|ClassProtected|
+    |GlyphGroupClass|GlyphItemÖzel|SınıfÖzel|
+    |GlyphGroupClass|GphItemShortcutcut|Sınıf Kısayol|
+    |GlyphGroupConstant|GlyphItemPublic|ConstantPublic|
+    |GlyphGroupConstant|GlyphItemInternal|Constant Internal|
+    |GlyphGroupConstant|GlyphItemFriend|Constant Internal|
+    |GlyphGroupConstant|GlyphItemProtected|Sürekli Korumalı|
+    |GlyphGroupConstant|GlyphItemÖzel|ConstantPrivate|
+    |GlyphGroupConstant|GphItemShortcutcut|ConstantShortcutcut|
+    |GlyphGroupDelege|GlyphItemPublic|Temsilci Genel|
+    |GlyphGroupDelege|GlyphItemInternal|Delege İç|
+    |GlyphGroupDelege|GlyphItemFriend|Delege İç|
+    |GlyphGroupDelege|GlyphItemProtected|Temsilci Korumalı|
+    |GlyphGroupDelege|GlyphItemÖzel|Temsilci Özel|
+    |GlyphGroupDelege|GphItemShortcutcut|Temsilci Kısayolu|
+    |GlyphGroupEnum|GlyphItemPublic|NumaralandırmaKamu|
+    |GlyphGroupEnum|GlyphItemInternal|Numaralandırmaİç|
+    |GlyphGroupEnum|GlyphItemFriend|Numaralandırmaİç|
+    |GlyphGroupEnum|GlyphItemProtected|NumaralandırmaKorumalı|
+    |GlyphGroupEnum|GlyphItemÖzel|NumaralandırmaÖzel|
+    |GlyphGroupEnum|GphItemShortcutcut|NumaralandırmaKısayol|
+    |GlyphGroupEnumÜye|GlyphItemPublic|NumaralandırmaItemKamu|
+    |GlyphGroupEnumÜye|GlyphItemInternal|NumaralandırmaItemİç|
+    |GlyphGroupEnumÜye|GlyphItemFriend|NumaralandırmaItemİç|
+    |GlyphGroupEnumÜye|GlyphItemProtected|NumaralandırmaItemKorumalı|
+    |GlyphGroupEnumÜye|GlyphItemÖzel|NumaralandırmaItemÖzel|
+    |GlyphGroupEnumÜye|GphItemShortcutcut|NumaralandırmaItemShortcutcut|
+    |GlyphGroupOlay|GlyphItemPublic|OlayGenel|
+    |GlyphGroupOlay|GlyphItemInternal|Olayİç|
+    |GlyphGroupOlay|GlyphItemFriend|Olayİç|
+    |GlyphGroupOlay|GlyphItemProtected|Olay Korumalı|
+    |GlyphGroupOlay|GlyphItemÖzel|EtkinlikÖzel|
+    |GlyphGroupOlay|GphItemShortcutcut|OlayKısa yol|
+    |GlyphGroupException|GlyphItemPublic|İstisnaGenel|
+    |GlyphGroupException|GlyphItemInternal|İstisna İç|
+    |GlyphGroupException|GlyphItemFriend|İstisna İç|
+    |GlyphGroupException|GlyphItemProtected|Özel Durum Korumalı|
+    |GlyphGroupException|GlyphItemÖzel|Özel Özel|
+    |GlyphGroupException|GphItemShortcutcut|Özel Durum Kısayol|
+    |GlyphGroupField|GlyphItemPublic|FieldPublic|
+    |GlyphGroupField|GlyphItemInternal|FieldInternal|
+    |GlyphGroupField|GlyphItemFriend|FieldInternal|
+    |GlyphGroupField|GlyphItemProtected|Alan Korumalı|
+    |GlyphGroupField|GlyphItemÖzel|FieldPrivate|
+    |GlyphGroupField|GphItemShortcutcut|Alan Kısayolu|
+    |GlyphGroupInterface|GlyphItemPublic|ArayüzGenel|
+    |GlyphGroupInterface|GlyphItemInternal|Arayüz Dahili|
+    |GlyphGroupInterface|GlyphItemFriend|Arayüz Dahili|
+    |GlyphGroupInterface|GlyphItemProtected|Arayüz Korumalı|
+    |GlyphGroupInterface|GlyphItemÖzel|ArayüzÖzel|
+    |GlyphGroupInterface|GphItemShortcutcut|ArayüzKısayol|
+    |GlyphGroupMacro|GlyphItemPublic|MakroGenel|
+    |GlyphGroupMacro|GlyphItemInternal|MakroDahil|
+    |GlyphGroupMacro|GlyphItemFriend|MakroDahil|
+    |GlyphGroupMacro|GlyphItemProtected|Makro Korumalı|
+    |GlyphGroupMacro|GlyphItemÖzel|MakroÖzel|
+    |GlyphGroupMacro|GphItemShortcutcut|MakroKısayol|
+    |GlyphGroupMap|GlyphItemPublic|MapPublic|
+    |GlyphGroupMap|GlyphItemInternal|MapInternal|
+    |GlyphGroupMap|GlyphItemFriend|MapInternal|
+    |GlyphGroupMap|GlyphItemProtected|MapProtected|
+    |GlyphGroupMap|GlyphItemÖzel|MapPrivate|
+    |GlyphGroupMap|GphItemShortcutcut|MapShortcut|
+    |GlyphGroupMapItem|GlyphItemPublic|MapItemPublic|
+    |GlyphGroupMapItem|GlyphItemInternal|MapItemInternal|
+    |GlyphGroupMapItem|GlyphItemFriend|MapItemInternal|
+    |GlyphGroupMapItem|GlyphItemProtected|MapItemProtected|
+    |GlyphGroupMapItem|GlyphItemÖzel|MapItemÖzel|
+    |GlyphGroupMapItem|GphItemShortcutcut|MapItemShortcutcut|
+    |GlyphGroupMethod|GlyphItemPublic|MethodPublic|
+    |GlyphGroupMethod|GlyphItemInternal|MethodInternal|
+    |GlyphGroupMethod|GlyphItemFriend|MethodInternal|
+    |GlyphGroupMethod|GlyphItemProtected|Metod Korumalı|
+    |GlyphGroupMethod|GlyphItemÖzel|MethodPrivate|
+    |GlyphGroupMethod|GphItemShortcutcut|YöntemKısayol|
+    |GlyphGroupOverload|GlyphItemPublic|MethodPublic|
+    |GlyphGroupOverload|GlyphItemInternal|MethodInternal|
+    |GlyphGroupOverload|GlyphItemFriend|MethodInternal|
+    |GlyphGroupOverload|GlyphItemProtected|Metod Korumalı|
+    |GlyphGroupOverload|GlyphItemÖzel|MethodPrivate|
+    |GlyphGroupOverload|GphItemShortcutcut|YöntemKısayol|
+    |GlyphGroupModülü|GlyphItemPublic|ModülKamu|
+    |GlyphGroupModülü|GlyphItemInternal|Modül İç|
+    |GlyphGroupModülü|GlyphItemFriend|Modül İç|
+    |GlyphGroupModülü|GlyphItemProtected|Modül Korumalı|
+    |GlyphGroupModülü|GlyphItemÖzel|ModülÖzel|
+    |GlyphGroupModülü|GphItemShortcutcut|ModülKısayol|
+    |GlyphGroupNamespace|GlyphItemPublic|NamespacePublic|
+    |GlyphGroupNamespace|GlyphItemInternal|NamespaceInternal|
+    |GlyphGroupNamespace|GlyphItemFriend|NamespaceInternal|
+    |GlyphGroupNamespace|GlyphItemProtected|NamespaceProtected|
+    |GlyphGroupNamespace|GlyphItemÖzel|NamespacePrivate|
+    |GlyphGroupNamespace|GphItemShortcutcut|NamespaceShortcut|
+    |GlyphGroupOperator|GlyphItemPublic|OperatörKamu|
+    |GlyphGroupOperator|GlyphItemInternal|Operatör Dahili|
+    |GlyphGroupOperator|GlyphItemFriend|Operatör Dahili|
+    |GlyphGroupOperator|GlyphItemProtected|Operatör Korumalı|
+    |GlyphGroupOperator|GlyphItemÖzel|OperatörÖzel|
+    |GlyphGroupOperator|GphItemShortcutcut|OperatörKısa yol|
+    |GlyphGroupEmlak|GlyphItemPublic|EmlakKamu|
+    |GlyphGroupEmlak|GlyphItemInternal|PropertyInternal|
+    |GlyphGroupEmlak|GlyphItemFriend|PropertyInternal|
+    |GlyphGroupEmlak|GlyphItemProtected|PropertyProtected|
+    |GlyphGroupEmlak|GlyphItemÖzel|EmlakÖzel|
+    |GlyphGroupEmlak|GphItemShortcutcut|ÖzellikKısayol|
+    |GlyphGroupStruct|GlyphItemPublic|YapıGenel|
+    |GlyphGroupStruct|GlyphItemInternal|Yapıİç|
+    |GlyphGroupStruct|GlyphItemFriend|Yapıİç|
+    |GlyphGroupStruct|GlyphItemProtected|Yapı Korumalı|
+    |GlyphGroupStruct|GlyphItemÖzel|YapıÖzel|
+    |GlyphGroupStruct|GphItemShortcutcut|YapıKısayol|
+    |GlyphGroupTemplate|GlyphItemPublic|ŞablonGenel|
+    |GlyphGroupTemplate|GlyphItemInternal|ŞablonDahil|
+    |GlyphGroupTemplate|GlyphItemFriend|ŞablonDahil|
+    |GlyphGroupTemplate|GlyphItemProtected|ŞablonKorumalı|
+    |GlyphGroupTemplate|GlyphItemÖzel|ŞablonÖzel|
+    |GlyphGroupTemplate|GphItemShortcutcut|ŞablonKısayol|
+    |GlyphGroupTypedef|GlyphItemPublic|TypeDefinitionPublic|
+    |GlyphGroupTypedef|GlyphItemInternal|TypeDefinitionInternal|
+    |GlyphGroupTypedef|GlyphItemFriend|TypeDefinitionInternal|
+    |GlyphGroupTypedef|GlyphItemProtected|TypeDefinitionProtected|
+    |GlyphGroupTypedef|GlyphItemÖzel|TypeDefinitionPrivate|
+    |GlyphGroupTypedef|GphItemShortcutcut|TypeDefinitionShortcutcut|
+    |GlyphGroupType|GlyphItemPublic|TypePublic|
+    |GlyphGroupType|GlyphItemInternal|TypeInternal|
+    |GlyphGroupType|GlyphItemFriend|TypeInternal|
+    |GlyphGroupType|GlyphItemProtected|TypeProtected|
+    |GlyphGroupType|GlyphItemÖzel|TypePrivate|
+    |GlyphGroupType|GphItemShortcutcut|TypeShortcut|
+    |GlyphGroupUnion|GlyphItemPublic|UnionPublic|
+    |GlyphGroupUnion|GlyphItemInternal|Sendikaİç|
+    |GlyphGroupUnion|GlyphItemFriend|Sendikaİç|
+    |GlyphGroupUnion|GlyphItemProtected|UnionProtected|
+    |GlyphGroupUnion|GlyphItemÖzel|UnionPrivate|
+    |GlyphGroupUnion|GphItemShortcutcut|UnionShortcut|
+    |GlyphGroupVariable|GlyphItemPublic|FieldPublic|
+    |GlyphGroupVariable|GlyphItemInternal|FieldInternal|
+    |GlyphGroupVariable|GlyphItemFriend|FieldInternal|
+    |GlyphGroupVariable|GlyphItemProtected|Alan Korumalı|
+    |GlyphGroupVariable|GlyphItemÖzel|FieldPrivate|
+    |GlyphGroupVariable|GphItemShortcutcut|Alan Kısayolu|
+    |GlyphGroupValueType|GlyphItemPublic|ValueTypePublic|
     |GlyphGroupValueType|GlyphItemInternal|ValueTypeInternal|
-    |GlyphGroupValueType|Glyphıtemfriend|ValueTypeInternal|
-    |GlyphGroupValueType|Glyphıtemprotected|ValueTypeProtected|
-    |GlyphGroupValueType|GlyphItemPrivate|ValueTypePrivate|
-    |GlyphGroupValueType|Glyphıtemshortcut|ValueTypeShortcut|
-    |Glyphgroupıntrinsic|Glyphitempublik|ObjectPublic|
-    |Glyphgroupıntrinsic|GlyphItemInternal|Objectınternal|
-    |Glyphgroupıntrinsic|Glyphıtemfriend|Objectınternal|
-    |Glyphgroupıntrinsic|Glyphıtemprotected|ObjectProtected|
-    |Glyphgroupıntrinsic|GlyphItemPrivate|ObjectPrivate|
-    |Glyphgroupıntrinsic|Glyphıtemshortcut|ObjectShortcut|
-    |Glyphgroupjkeskinmethod|Glyphitempublik|MethodPublic|
-    |Glyphgroupjkeskinmethod|GlyphItemInternal|Methodınternal|
-    |Glyphgroupjkeskinmethod|Glyphıtemfriend|Methodınternal|
-    |Glyphgroupjkeskinmethod|Glyphıtemprotected|Yöntem korumalı|
-    |Glyphgroupjkeskinmethod|GlyphItemPrivate|MethodPrivate|
-    |Glyphgroupjkeskinmethod|Glyphıtemshortcut|MethodShortcut|
-    |Glyphgroupjnetfield|Glyphitempublik|FieldPublic|
-    |Glyphgroupjnetfield|GlyphItemInternal|Fieldınternal|
-    |Glyphgroupjnetfield|Glyphıtemfriend|Fieldınternal|
-    |Glyphgroupjnetfield|Glyphıtemprotected|FieldProtected|
-    |Glyphgroupjnetfield|GlyphItemPrivate|FieldPrivate|
-    |Glyphgroupjnetfield|Glyphıtemshortcut|FieldShortcut|
-    |Glyphgroupjnetclass|Glyphitempublik|Classpublik|
-    |Glyphgroupjnetclass|GlyphItemInternal|Classınterternal|
-    |Glyphgroupjnetclass|Glyphıtemfriend|Classınterternal|
-    |Glyphgroupjnetclass|Glyphıtemprotected|ClassProtected|
-    |Glyphgroupjnetclass|GlyphItemPrivate|ClassPrivate|
-    |Glyphgroupjnetclass|Glyphıtemshortcut|ClassShortcut|
-    |Glyphgroupjnetnamespace|Glyphitempublik|NamespacePublic|
-    |Glyphgroupjnetnamespace|GlyphItemInternal|Namespaceınternal|
-    |Glyphgroupjnetnamespace|Glyphıtemfriend|Namespaceınternal|
-    |Glyphgroupjnetnamespace|Glyphıtemprotected|NamespaceProtected|
-    |Glyphgroupjnetnamespace|GlyphItemPrivate|NamespacePrivate|
-    |Glyphgroupjnetnamespace|Glyphıtemshortcut|NamespaceShortcut|
-    |Glyphgroupjkeskinınterface|Glyphitempublik|Interfacepublic|
-    |Glyphgroupjkeskinınterface|GlyphItemInternal|Interfaceınternal|
-    |Glyphgroupjkeskinınterface|Glyphıtemfriend|Interfaceınternal|
-    |Glyphgroupjkeskinınterface|Glyphıtemprotected|Interfaceprotected|
-    |Glyphgroupjkeskinınterface|GlyphItemPrivate|Interfaceprivate|
-    |Glyphgroupjkeskinınterface|Glyphıtemshortcut|Interfaceshortcut|
-    |GlyphGroupError||StatusError|
-    |GlyphBscFile||Sınıfdosyası|
+    |GlyphGroupValueType|GlyphItemFriend|ValueTypeInternal|
+    |GlyphGroupValueType|GlyphItemProtected|ValueTypeProtected|
+    |GlyphGroupValueType|GlyphItemÖzel|ValueTypePrivate|
+    |GlyphGroupValueType|GphItemShortcutcut|ValueTypeShortcut|
+    |GlyphGroupIntrinsic|GlyphItemPublic|ObjectPublic|
+    |GlyphGroupIntrinsic|GlyphItemInternal|ObjectInternal|
+    |GlyphGroupIntrinsic|GlyphItemFriend|ObjectInternal|
+    |GlyphGroupIntrinsic|GlyphItemProtected|Nesne Korumalı|
+    |GlyphGroupIntrinsic|GlyphItemÖzel|ObjectPrivate|
+    |GlyphGroupIntrinsic|GphItemShortcutcut|ObjectShortcut|
+    |GlyphGroupJSharpMethod|GlyphItemPublic|MethodPublic|
+    |GlyphGroupJSharpMethod|GlyphItemInternal|MethodInternal|
+    |GlyphGroupJSharpMethod|GlyphItemFriend|MethodInternal|
+    |GlyphGroupJSharpMethod|GlyphItemProtected|Metod Korumalı|
+    |GlyphGroupJSharpMethod|GlyphItemÖzel|MethodPrivate|
+    |GlyphGroupJSharpMethod|GphItemShortcutcut|YöntemKısayol|
+    |GlyphGroupJSharpField|GlyphItemPublic|FieldPublic|
+    |GlyphGroupJSharpField|GlyphItemInternal|FieldInternal|
+    |GlyphGroupJSharpField|GlyphItemFriend|FieldInternal|
+    |GlyphGroupJSharpField|GlyphItemProtected|Alan Korumalı|
+    |GlyphGroupJSharpField|GlyphItemÖzel|FieldPrivate|
+    |GlyphGroupJSharpField|GphItemShortcutcut|Alan Kısayolu|
+    |GlyphGroupJSharpClass|GlyphItemPublic|ClassPublic|
+    |GlyphGroupJSharpClass|GlyphItemInternal|Sınıfİç|
+    |GlyphGroupJSharpClass|GlyphItemFriend|Sınıfİç|
+    |GlyphGroupJSharpClass|GlyphItemProtected|ClassProtected|
+    |GlyphGroupJSharpClass|GlyphItemÖzel|SınıfÖzel|
+    |GlyphGroupJSharpClass|GphItemShortcutcut|Sınıf Kısayol|
+    |GlyphGroupJSharpNamespace|GlyphItemPublic|NamespacePublic|
+    |GlyphGroupJSharpNamespace|GlyphItemInternal|NamespaceInternal|
+    |GlyphGroupJSharpNamespace|GlyphItemFriend|NamespaceInternal|
+    |GlyphGroupJSharpNamespace|GlyphItemProtected|NamespaceProtected|
+    |GlyphGroupJSharpNamespace|GlyphItemÖzel|NamespacePrivate|
+    |GlyphGroupJSharpNamespace|GphItemShortcutcut|NamespaceShortcut|
+    |GlyphGroupJSharpInterface|GlyphItemPublic|ArayüzGenel|
+    |GlyphGroupJSharpInterface|GlyphItemInternal|Arayüz Dahili|
+    |GlyphGroupJSharpInterface|GlyphItemFriend|Arayüz Dahili|
+    |GlyphGroupJSharpInterface|GlyphItemProtected|Arayüz Korumalı|
+    |GlyphGroupJSharpInterface|GlyphItemÖzel|ArayüzÖzel|
+    |GlyphGroupJSharpInterface|GphItemShortcutcut|ArayüzKısayol|
+    |GlyphGroupError||Durum Hatası|
+    |GlyphBscDosya||ClassFile|
     |GlyphAssembly||Başvuru|
-    |GlyphLibrary||Kitaplığı|
-    |GlyphVBProject||VBProjectNode|
+    |GlyphLibrary||Kitaplık|
+    |GphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|
     |GlyphCppProject||CPPProjectNode|
-    |Glyphdialogıd||İletişim kutusu|
-    |GlyphOpenFolder||Klasör açıldı|
-    |GlyphClosedFolder||FolderClosed|
-    |GlyphArrow||Sonrakine sonra|
+    |GlyphDialogId||Iletişim|
+    |GlyphOpenFolder||Klasör Açıldı|
+    |GlyphKapalı Klasör||Klasör Kapalı|
+    |GlyphArrow||Gotonext|
     |GlyphCSharpFile||CSFileNode|
-    |GlyphCSharpExpansion||Kod parçacığı|
-    |Glyphanahtar sözcüğü||Intellisenseanahtar sözcüğü|
-    |Glyphınformation||StatusInformation|
+    |GlyphCSharpExpansion||Kod Parçacığı|
+    |GlyphAnahtar Kelime||IntellisenseAnahtar Kelime|
+    |GlyphBilgi||DurumBilgileri|
     |GlyphReference||ClassMethodReference|
-    |Glyphözyineleme||{1&gt;Yineleme&lt;1}|
-    |Glyphxmlıtıtem||Etiket|
-    |Glyphjkeskinproject||DocumentCollection|
-    |Glyphjnetdocument||Belge|
-    |GlyphForwardType||Sonrakine sonra|
+    |GlyphRecursion||Özyineleme|
+    |GlyphXmlItem||Etiket|
+    |GlyphJSharpProject||DocumentCollection|
+    |GlyphJSharpBelgesi||Belge|
+    |GlyphForwardType||Gotonext|
     |GlyphCallersGraph||CallTo|
     |GlyphCallGraph||CallFrom|
-    |GlyphWarning||StatusWarning|
-    |GlyphMaybeReference||QuestionMark|
+    |GlyphWarning||DurumUyarı|
+    |GlyphMaybeReference||Soru İşareti|
     |GlyphMaybeCaller||CallTo|
     |GlyphMaybeCall||CallFrom|
-    |GlyphExtensionMethod||ExtensionMethod|
-    |Glyphextensionmethodınternal||ExtensionMethod|
-    |GlyphExtensionMethodFriend||ExtensionMethod|
-    |GlyphExtensionMethodProtected||ExtensionMethod|
-    |GlyphExtensionMethodPrivate||ExtensionMethod|
-    |GlyphExtensionMethodShortcut||ExtensionMethod|
-    |GlyphXmlAttribute||XmlAttribute|
-    |GlyphXmlChild||XmlElement|
+    |GlyphExtensionMethod||Uzatma Yöntemi|
+    |GlyphExtensionMethodInternal||Uzatma Yöntemi|
+    |GlyphExtensionMethodFriend||Uzatma Yöntemi|
+    |GlyphExtensionMethodProtected||Uzatma Yöntemi|
+    |GlyphExtensionMethodPrivate||Uzatma Yöntemi|
+    |GlyphExtensionMethodShortcut||Uzatma Yöntemi|
+    |GlyphXmlAttribute||Xmlattribute|
+    |GlyphXmlÇocuk||Xmlelement|
     |GlyphXmlDescendant||XmlDescendant|
-    |GlyphXmlNamespace||XmlNamespace|
-    |Glyphxmlattributesoru||Xmlattributelowgüvenirlik|
-    |GlyphXmlAttributeCheck||Xmlattributehighgüvenirlik|
-    |Glyphxmlchildsorusu||Xmtalementlowgüvenirlik|
-    |GlyphXmlChildCheck||Xmtalementhighgüvenirlik|
-    |GlyphXmlDescendantQuestion||XmlDescendantLowConfidence|
+    |GlyphXmlNamespace||Xmlnamespace|
+    |GlyphXmlAttributeSoru||XmlAttributeLowConfidence|
+    |GlyphXmlAttributeCheck||XmlAttributeHighConfidence|
+    |GlyphXmlÇocuk Sorgusu||XmlElementLowConfidence|
+    |GlyphXmlChildCheck||XmlElementHighConfidence|
+    |GlyphXmlDescendantSoru||XmlDescendantLowConfidence|
     |GlyphXmlDescendantCheck||XmlDescendantHighConfidence|
-    |GlyphCompletionWarning||Intellisensewarning|
+    |GlyphCompletionUyarı||IntellisenseUyarı|

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetCustomViewerCount | Microsoft Docs
+title: IEEVisualizerService::GetCustomViewerCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerService::GetCustomViewerCount method
 ms.assetid: f7b095c2-e538-4352-8cad-d4c6d4f6bdbc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 82c4699c987d94f5fffad87d26f845facff3180c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 90f040c4ca0736a0312829d196d0991788357edc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350160"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718043"
 ---
 # <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
-Bu yöntem, bu hizmetten tür görselleştiricileri kullanılabilir sayısını alır.
+Bu yöntem, bu hizmetten kullanılabilir tür görüntüleyicilerinin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetCustomViewerCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-[out] Tür görselleştiricileri kullanılabilir sayısını döndürür.
+[çıkış] Kullanılabilir tür görüntüleyicilerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) isteği için tür görselleştiricileri desteğini bu yönteme geçirir.
+- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) türü görüntüleyiciler için destek bu yönteme istek geçer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

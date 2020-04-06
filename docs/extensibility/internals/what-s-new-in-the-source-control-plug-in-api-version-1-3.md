@@ -1,38 +1,38 @@
 ---
-title: "&#39;Kaynak denetımı eklentisi apı sürümü 1,3 ' deki yenilikler | Microsoft Docs"
+title: Kaynak Kontrol Eklentisi API Sürüm 1.3'te neler&#39;| Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, what's new in API v1.3
 - what's new [Visual Studio SDK], source control plug-ins
 ms.assetid: 7dfb2227-6e1d-4028-bce9-f8967456a993
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f45eeb3c57d5339b1e9fd66951dcbb60970e108
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9654f1f3ae6d4a3d73ddc3afca2977a57a98297d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72721583"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703370"
 ---
-# <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>&#39;Kaynak denetımı eklentisi apı sürümü 1,3 ' deki yenilikler
-Kaynak denetimi eklentisi API sürümü 1,3, daha gelişmiş denetim sağlamak için aşağıdaki yeni işlevleri sunmaktadır.
+# <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>Kaynak Denetimi Eklentisi API Sürüm 1.3'te Yeni&#39;
+Kaynak Denetimi Eklentisi API sürüm 1.3, daha gelişmiş denetim sağlamak için aşağıdaki yeni işlevleri sunar.
 
 ## <a name="changes"></a>Değişiklikler
- Aşağıdaki işlevler, kaynak denetimi eklentisi API sürümü 1,3 ' de yenidir:
+ Aşağıdaki işlevler Kaynak Denetimi Eklentisi API sürümü 1.3 için yenidir:
 
-|İşlev|Genel bakış|
+|İşlev|Genel Bakış|
 |--------------|--------------|
-|[SccGetExtendedCapabilities](../../extensibility/sccgetextendedcapabilities-function.md)|Ek özellik bitlerinin raporlanmasını sağlar|
-|[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|Sürüm denetimi veritabanında yeni sürümlere sahip dosyaların yerel diskten incelemesini sağlar|
-|[SccQueryChanges](../../extensibility/sccquerychanges-function.md)|Belirtilen dosyalar için ad değişikliklerinin (yeniden adlandırmalar, eklemeler ve silmeler) durumunun incelemesini sağlar|
-|[SccPopulateDirList](../../extensibility/sccpopulatedirlist-function.md)|Sürüm denetimi veritabanındaki dizinlerin ve dosyaların incelemesini sağlar|
-|[SccAddFilesFromSCC](../../extensibility/sccaddfilesfromscc-function.md)|Sürüm denetim veritabanından geçerli projeye belirtilen dosya listesini ekler|
-|[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|Belirtilen dosyaların sessiz bir "Al" işlemini gerçekleştirir (Kullanıcı arabirimi gösterilmez)|
-|[SccGetUserOption](../../extensibility/sccgetuseroption-function.md)|Kullanıcıya özgü seçeneklere erişime izin verir|
+|[SccGetExtendedCapabilities](../../extensibility/sccgetextendedcapabilities-function.md)|Ek özellik bitlerinin raporedilmesine izin verir|
+|[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|Sürüm denetim veritabanında yerel diskten daha yeni sürümler bulunan dosyaların incelenmesine izin verir|
+|[SccQueryChanges](../../extensibility/sccquerychanges-function.md)|Belirtilen dosyalar için ad değişikliklerinin (yeniden adlar, eklemeler ve silmeler) durumunun incelenmesine izin verir|
+|[SccPopulateDirList](../../extensibility/sccpopulatedirlist-function.md)|Sürüm kontrol veritabanında dizinlerin ve dosyaların incelenmesine izin verir|
+|[SccAddFilesFromSCC](../../extensibility/sccaddfilesfromscc-function.md)|Sürüm denetim veritabanından geçerli projeye belirli bir dosya listesi ekler|
+|[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|Belirtilen dosyaların sessiz bir "Get" gerçekleştirir (hiçbir kullanıcı arabirimi gösterilir)|
+|[SccGetUserOption](../../extensibility/sccgetuseroption-function.md)|Kullanıcıya özel seçeneklere erişim sağlar|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Başlarken](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

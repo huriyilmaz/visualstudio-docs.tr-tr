@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetBackingFieldForProperty | Microsoft Docs
+title: IDebugObject2::GetBackingFieldForProperty | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject2::GetBackingFieldForProperty method
 ms.assetid: e72c6338-5573-4fad-8075-f3ade3435424
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9aaf4111670ad67f6a01bde60bf5f35c3b793983
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b5b9fed9b071f34c119c8e4a5af12c1df7990f4c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317355"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726249"
 ---
 # <a name="idebugobject2getbackingfieldforproperty"></a>IDebugObject2::GetBackingFieldForProperty
-Alan veya değişken (varsa) alır, yedekleme bu nesne tarafından temsil edilen özelliği.
+Bu nesne tarafından temsil edilen özelliği destekleyen alanı veya değişkeni (varsa) alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetBackingFieldForProperty(
 
 ## <a name="parameters"></a>Parametreler
 `ppObject`\
-[out] Bir [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) yedekleme alanını tanımlayan nesne.
+[çıkış] Destek alanını açıklayan bir [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) temsil eden bir yönetilen kod sınıf özelliği, diğer bir deyişle, bir get yöntemi nesnesi ve/veya set erişimcisine. Bu özellikler genellikle özelliği tarafından yönetilen değeri içeren bir değişkeni gerektirir. Bu değişken yedekleme alanı olarak bilinir. Nesne için yedekleme alanı yok ise, ardından bir null değer döndürmek emin olun: bazı çağıranlar dönüş değerine dikkatini ödeme değil ancak bunun yerine, bir null değer döndürüldü, görmek için görüneceğini `ppObject`.
+ [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) nesnesi yönetilen bir kod sınıfı özelliğini, yani bir get ve/veya ayarlı erişime sahip bir yöntemi temsil eder. Bu tür özellikler genellikle özellik tarafından manipüle değeri içeren bir değişken gerektirir. Bu değişken destek alanı olarak bilinir. Nesne için bir destek alanı yoksa, null değeri döndürdüğünden emin olun: bazı arayanlar iade değerine dikkat etmeyebilir, ancak `ppObject`bunun yerine null bir değerin döndürülip döndürülmediğini görmek için bakacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointResolution2::GetBreakpointType | Microsoft Docs
+title: IDebugBreakpointResolution2::GetBreakpointType | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointResolution2::GetBreakpointType
 ms.assetid: 2b707fb9-f703-4c78-91bf-7434f57790a0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a8e8d7c77b9020df577e611f8a27116fa7a7b6db
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2949366eeb3e79a732e94a4a8f8e9912048c6452
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352890"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734816"
 ---
 # <a name="idebugbreakpointresolution2getbreakpointtype"></a>IDebugBreakpointResolution2::GetBreakpointType
-Bu çözüm tarafından temsil edilen kesme noktası türünü alır.
+Bu çözünürlüktarafından temsil edilen kesme noktasının türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ int GetBreakpointType( 
 
 ## <a name="parameters"></a>Parametreler
 `pBPType`\
-[out] Bir değer döndürür [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) Bu Kesme noktasının türünü belirten sabit listesi.
+[çıkış] Bu kesme noktasının türünü belirten [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) numaralandırmadan bir değer verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. E_FAIL döndürür `bpResLocation` ilişkili alan [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısı geçerli değil.
+Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. İlişkili `bpResLocation` [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısındaki alan geçerli değilse E_FAIL verir.
 
 ## <a name="remarks"></a>Açıklamalar
-Kesme noktası bir kod veya veri kesme noktası, örneğin olabilir.
+Kesme noktası bir kod veya veri kesme noktası olabilir, örneğin.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CDebugBreakpointResolution` gösteren nesne [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimi.
+Aşağıdaki örnek, `CDebugBreakpointResolution` [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```
 HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)

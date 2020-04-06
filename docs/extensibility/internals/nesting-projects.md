@@ -1,5 +1,5 @@
 ---
-title: Projeleri iç içe geçirme | Microsoft Docs
+title: İç içe geçme projeleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], child projects
 - projects [Visual Studio SDK], nesting
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f291a9c105c8207fb6721d32d4d0481e49dd4295
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 814780fa8e7e57a022a75b2e09115cfa55a1b8be
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72726420"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707026"
 ---
 # <a name="nesting-projects"></a>Projeleri İç İçe Geçirme
-VS paketinizi kullanan kurumsal uygulama geliştiricileri, *proje iç içe geçme*kullanarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] benzer proje türlerini kolayca gruplandırabilirsiniz. Örneğin, kurumsal şablon proje, projeleri kategoriler halinde gruplamak için iç içe geçmiş projeleri kullanır. İş façlade projeleri, Web UI projeleri vb. bir kategoride birlikte gruplandırılır.
+VS Paketinizi kullanan kurumsal uygulama geliştiricileri, proje iç [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] *içe geçmeyi*kullanarak benzer proje türlerini rahatlıkla gruplaştırabilir. Örneğin, Kurumsal Şablon projesi, projeleri kategorilere gruplandırmak için iç içe yönelik projeleri kullanır. İş cephesi projeleri, Web UI projeleri ve benzeri tek bir kategoride gruplandırılır.
 
- Bu senaryoda, geliştirici program aracılığıyla sınırları sağlayabilse de, geliştiricinin her bir üst projenin altına iç içe geçirebilmesine rağmen proje sayısı için bir sınır yoktur. Bu gruplandırma türü de özyinelemeli hale getirilebilir. Bu durumda, bir alt proje ile aynı türdeki projelerin alt öğesi olmak üzere alt öğesi olmak üzere alt öğe altında iç içe yerleştirilenebilir.
+ Bu senaryoda, geliştirici programlı olarak sınırlar sağlayabilse de, geliştiricinin her ana proje altında yuvalayabileceği proje sayısı için bir sınır yoktur. Bu gruplandırma türü de özyinelemeli yapılabilir, bu durumda alt proje yle aynı türdeki projeler çocuğun altına iç içe çekilebilir ve bu da ebeveynin bir alt projesidir.
 
- Proje iç içe geçme [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] iç parçası değil. İç içe geçme ve alt proje iç içe geçme özelliğini etkinleştirmek için kodu yazmanız gerekir. Üst proje, özel bir VSPackage veya proje türü oluşturup, proje iç içe geçirilmesi için gerekli kodu içeren kendi GUID 'sine sahip oluşturulup kaydedilir.
+ Proje iç içe geçme, .'ın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]içsel bir parçası değildir. Alt projeler içinde iç içe ve alt proje iç içe etkinleştirmek için kodu yazmanız gerekir. Ana proje, proje iç içe geçirme uygulamak için gereken kodu içeren kendi GUID'si ile oluşturulan ve kaydedilmiş özel bir VSPackage veya proje türüdür.
 
- [Nasıl yapılır: iç içe Projeler uygulama](../../extensibility/internals/how-to-implement-nested-projects.md)bölümünde proje iç içe geçme hakkında bir örnek bulabilirsiniz.
+ İç [içe geçirilmiş projeleri](../../extensibility/internals/how-to-implement-nested-projects.md)uygulama: Projeler nasıl iç içe geçirilir hakkında bir örnek bulabilirsiniz.
 
 ## <a name="nested-projects-example"></a>İç içe projeler örneği
- ![Iç Içe projeler çözümü](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects") İç içe projeler örneği
+ ![İç Içe Projeler Çözümü](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects") İç içe projeler örneği
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İç İçe Projeleri Kaldırma ve Yeniden Yükleme Konusunda Dikkat Edilmesi Gerekenler](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)

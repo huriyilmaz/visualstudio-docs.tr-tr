@@ -1,67 +1,67 @@
 ---
-title: Dil sunucusu Protokolü'ne genel bakış | Microsoft Docs
+title: Language Server Protocol Genel Bakış | Microsoft Dokümanlar
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 6a7d93c2-31ea-4bae-8b29-6988a567ddf2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f6f114d7165b85051092234ea33dfc7f73e1487
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c3bd5dce3cfb7022a8abb6397dc87b418144cbe1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309621"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703108"
 ---
 # <a name="language-server-protocol"></a>Dil Sunucusu Protokolü
 
-## <a name="what-is-the-language-server-protocol"></a>Dil sunucusu protokolü nedir?
+## <a name="what-is-the-language-server-protocol"></a>Dil Sunucusu Protokolü nedir?
 
-Kaynak kod otomatik tamamlama düzenleme özellikleri destekleyen zengin ister veya **Tanıma Git** geleneksel çok zor ve zaman alıcı bir düzenleyicide veya IDE bir programlama dili için. Genellikle bir etki alanı modeli (tarayıcı, bir ayrıştırıcı, bir tür denetleyicisi, bir oluşturucu ve daha fazla) düzenleyicimizi veya IDE'mizi programlama dilinde yazma gerektirir. Örneğin, Eclipse IDE Java dilinde yazılan beri C/c++ için Eclipse IDE desteği sağlar Eclipse CDT eklenti Java dilinde yazılır. Bu yaklaşımı Visual Studio Code için TypeScript, C/C++ etki alanı modeli ve ayrı etki alanı modeli içinde uygulama görünür duruma açardı C# Visual Studio için.
+Kaynak kodu otomatik tamamlama veya bir düzenleyici veya IDE bir programlama dili için **Tanımıgit** gibi zengin düzenleme özellikleri destekleyen geleneksel olarak çok zor ve zaman alıcıdır. Genellikle bir etki alanı modeli (tarayıcı, parser, bir tür denetleyicisi, bir oluşturucu ve daha fazlası) düzenleyici veya IDE programlama dilinde yazma gerektirir. Örneğin, Eclipse IDE'de C/C++ desteği sağlayan Eclipse CDT eklentisi Java'da yazılır, çünkü Eclipse IDE'nin kendisi Java'da yazılır. Bu yaklaşımı n ardından, Visual Studio Code için TypeScript'te bir C/C++ etki alanı modeli ve Visual Studio için C#'da ayrı bir etki alanı modeli uygulamak anlamına gelir.
 
-Dile özgü etki alanı modellerini oluşturma bir geliştirme aracı mevcut dile özgü kitaplıklar yeniden kullanabilir, çok daha kolay. Ancak, bu kitaplıklar, genellikle programlama dilinde kendi (modelleri C/C++'da uygulanır. Örneğin, iyi C/C++ etki alanı) uygulanır. C/C++ kitaplık içinde TypeScript yazılmış bir düzenleyicisine tümleştirme teknik olarak mümkün ama yapmak sabit değildir.
+Bir geliştirme aracı varolan dile özgü kitaplıkları yeniden kullanabiliyorsa, dile özgü etki alanı modelleri oluşturmak da çok daha kolaydır. Ancak, bu kitaplıklar genellikle programlama dilinin kendisinde uygulanır (örneğin, iyi C/C++ etki alanı modelleri C/C++'da uygulanır). C/C++ kitaplığını TypeScript'te yazılmış bir düzenleyiciye entegre etmek teknik olarak mümkündür, ancak bunu yapmak zordur.
 
 ### <a name="language-servers"></a>Dil sunucuları
 
-Başka bir kitaplık kendi işlem içinde çalıştırın ve işlemler arası iletişim için iletişim kurabilecek yaklaşımdır. Bir protokol İleri ve geri gönderilen iletileri oluşturur. Dil sunucusu Protokolü (LSP) bir geliştirme aracı ile dil sunucu işlemi arasında alınıp verilen iletileri Standartlaştırma ürünüdür. Dil sunucuları veya demons kullanarak yeni ya da yeni bir fikir değil. Vim ve Emacs anlam otomatik tamamlama desteği sağlamak bir süre bunu gibi düzenleyiciler. Bu tür tümleştirmeler basitleştirin ve çeşitli araçlar dil özellikleri açığa çıkarmak için kullanışlı bir çerçeve sunar LSP amacı oluştu.
+Başka bir yaklaşım kendi sürecinde kütüphane çalıştırmak ve onunla konuşmak için süreçler arası iletişim kullanmaktır. İleri geri gönderilen iletiler bir protokol oluşturur. Dil sunucusu protokolü (LSP), geliştirme aracı ile dil sunucusu işlemi arasında değiş tokuş edilen iletileri standartlaştırmanın ürünüdür. Dil sunucuları veya iblisler kullanarak yeni veya yeni bir fikir değildir. Vim ve Emacs gibi editörler semantik otomatik tamamlama desteği sağlamak için bir süredir bunu yapıyor. LSP'nin amacı, bu tür tümleştirmeleri basitleştirmek ve dil özelliklerini çeşitli araçlara maruz bırakmak için yararlı bir çerçeve sağlamaktı.
 
-Ortak bir protokolle dilin etki alanı modeli, mevcut bir uygulamasına yeniden kullanarak bir geliştirme aracı ile en az fuss içine dil özellikleri programlama tümleştirme sağlar. Bir dil server arka uç, PHP, Python veya Java yazılmış ve bu çeşitli araçları kolayca tümleştirilebilen LSP sağlar. Bir aracı için temel etki alanı modeli belirli farklılıklarına tam olarak anlamak gerek kalmadan zengin dil hizmetleri sağlayabilir, böylece protokolü, ortak bir soyutlama düzeyinde çalışır.
+Ortak bir protokole sahip olmak, dilin etki alanı modelinin varolan bir uygulamasını yeniden kullanarak programlama dili özelliklerinin en az yaygara yla bir geliştirme aracına tümleştirilmesine olanak tanır. Bir dil sunucusu arka ucu PHP, Python veya Java ile yazılabilir ve LSP çeşitli araçlara kolayca entegre edilebilir. Protokol, bir aracın temel etki alanı modeline özgü nüansları tam olarak anlamasına gerek kalmadan zengin dil hizmetleri sunabilmesi için ortak bir soyutlama düzeyinde çalışır.
 
-## <a name="how-work-on-the-lsp-started"></a>Nasıl kullanmaya LSP üzerinde çalışır
+## <a name="how-work-on-the-lsp-started"></a>LSP'deki çalışmalar nasıl başladı?
 
-LSP zaman içinde gelişir ve bugün sürüm 3.0 olur. Dil sunucusu kavramını OmniSharp tarafından için zengin düzenleme özellikleri sağlamak üzere çekilmiş olduğunda başlatıldığından C#. Başlangıçta OmniSharp HTTP protokolü bir JSON yükü kullanılan ve birkaç düzenleyicileri dahil olmak üzere tümleşik [Visual Studio Code](https://code.visualstudio.com).
+LSP zaman içinde gelişti ve bugün Sürüm 3.0'da. Bir dil sunucusu kavramı C # için zengin düzenleme özellikleri sağlamak için OmniSharp tarafından alındı başladı. Başlangıçta, OmniSharp bir JSON yükü ile HTTP protokolü kullanılan ve [Visual Studio Code](https://code.visualstudio.com)dahil olmak üzere çeşitli editörler entegre edilmiştir.
 
-Aynı anda geçici olarak Microsoft Emacs ve Sublime Text gibi düzenleyicilerde TypeScript destekleme hakkında fikir ile bir TypeScript dil sunucu üzerinde çalışmaya başladı. Bu uygulamada, bir düzenleyici stdin/stdout TypeScript sunucu işlemi ile üzerinden iletişim kurar ve bir JSON yükü V8 hata ayıklayıcı protokolü tarafından ilham istekleri ve yanıtları için kullanır. TypeScript sunucunun TypeScript Sublime eklentisi ve VS Code TypeScript zengin düzenleme için tümleştirilmiştir.
+Aynı dönemde Microsoft, Emacs ve Sublime Text gibi editörlerde TypeScript'i destekleme fikriyle bir TypeScript dil sunucusu üzerinde çalışmaya başladı. Bu uygulamada, bir düzenleyici TypeScript sunucu işlemi ile stdin /stdout üzerinden iletişim kurar ve istek ler ve yanıtlar için V8 hata ayıklama protokolünden esinlenen bir JSON yükü kullanır. TypeScript sunucusu, zengin TypeScript düzenlemesi için TypeScript Sublime eklentisine ve VS Koduna entegre edilmiştir.
 
-İki farklı dil sunucu tümleşik sonra, bir ortak dil sunucusu protokolü düzenleyici ve IDE'ler için keşfetmek VS Code takım başlatıldı. Ortak bir protokolle farklı IDE'ler tarafından tüketilebilecek bir tek dil sunucu oluşturmak bir dil sağlayıcısı sağlar. Dil sunucusu tüketici yalnızca istemci tarafında protokolünün bir kez uygulamak vardır. Bu dil sağlayıcısı ve dil tüketici için win win durumda olur.
+İki farklı dil sunucusunu entegre ettikten sonra, VS Code ekibi editörler ve IDA'lar için ortak bir dil sunucusu protokolü keşfetmeye başladı. Ortak bir iletişim kuralı, bir dil sağlayıcısının farklı IDA'lar tarafından tüketilebilen tek bir dil sunucusu oluşturmasına olanak tanır. Bir dil sunucusu tüketicisi protokolün istemci tarafını yalnızca bir kez uygulamak zorundadır. Bu, hem dil sağlayıcısı hem de dil tüketicisi için kazan-kazan durumu yla sonuçlanır.
 
-Dil sunucusu protokolü ile VS Code dil API'si tarafından ilham daha fazla dil özelliklerini genişleterek TypeScript sunucusu tarafından kullanılan protokol ile başlatıldı. Protokol basitliği ve mevcut kitaplıkları nedeniyle uzak çağrısı için JSON-RPC ile desteklenir.
+Dil sunucusu protokolü TypeScript sunucusu tarafından kullanılan protokol ile başladı ve VS Code dil API'sinden esinlenerek daha fazla dil özelliğiyle genişletildi. Protokol, basitliği ve mevcut kitaplıkları nedeniyle uzaktan çağrı için JSON-RPC ile birlikte desteklidir.
 
-VS team prototipli lint işlemi uygulanacak (tarama) yanıt birkaç lint dil sunucuları uygulayarak Protokolü istekleri bir dosyaya kod ve algılanan uyarılar ve hatalar bir dizi döndürür. Hedef lint işlemi uygulanacak bir düzenleyici oturumu sırasında birçok linting istekleri olacağını anlamına gelir. bir belgedeki kullanıcı düzenlemeleri olarak bir dosya oluştu. Bir sunucuyu ve yeni bir linting işlem her kullanıcı düzenleme için başlatılması gerekmeyen çalışıyor durumda tutmak için mantıklı bir seçimdi. VS Code'nın da dahil olmak üzere birçok lint sunucu uygulandığına Eslint'i ve Tslint'i uzantıları. Bu iki lint sunucu TypeScript/JavaScript uygulanan hem Node.js dosyasını çalıştırın. Bunlar, protokol, istemci ve sunucu parçası uygulayan bir kitaplık paylaşımı.
+VS Code ekibi, bir dosyayı tiftik (tarama) isteklerine yanıt veren ve algılanan uyarılar ve hatalar kümesini döndüren birkaç linter dil sunucusu uygulayarak protokolü prototiple prototiple tamamlar. Amaç, kullanıcı bir belgede editörlük sırasında çok sayıda linting isteği olacağı anlamına gelir, bir dosya yıkmak oldu. Her kullanıcı düzenlemesi için yeni bir linting işleminin başlatılmasıgerekmemesi için sunucuyu çalışır durumda tutmak mantıklıydı. VS Code'un ESLint ve TSLint uzantıları da dahil olmak üzere birçok linter sunucusu uygulandı. Bu iki linter sunucunun her ikisi de TypeScript/JavaScript'te uygulanır ve Düğüm.js'de çalıştırılır. Protokolün istemci ve sunucu bölümünü uygulayan bir kitaplığı paylaşırlar.
 
 ## <a name="how-the-lsp-works"></a>LSP nasıl çalışır?
 
-Dil sunucusu kendi işleminde çalışır ve Visual Studio veya VS Code gibi araçlar dil protokolü kullanarak JSON-RPC üzerinden sunucusu ile iletişim. Dil sunucunun adanmış bir işlem olarak çalışan başka bir avantajı, tek bir işlem modeline ilgili performans sorunlarını kaçınılması sağlamasıdır. İstemci ve sunucu Node.js'de yazılmış gerçek taşıma kanalının stdio, yuva, adlandırılmış kanallar veya düğüm IPC ya da olabilir.
+Bir dil sunucusu kendi sürecinde çalışır ve Visual Studio veya VS Code gibi araçlar JSON-RPC üzerinden dil protokolünü kullanarak sunucuyla iletişim kurar. Özel bir işlemde çalışan dil sunucusunun bir diğer avantajı da, tek bir işlem modeliyle ilgili performans sorunlarının kaçınılmasıdır. Hem istemci hem de sunucu Düğüm.js olarak yazılmışsa, gerçek aktarım kanalı stdio, soketler, adlandırılmış borular veya düğüm ipc olabilir.
 
-Aşağıdaki örnek nasıl bir yordam sırasında bir araç ve dil sunucusu iletişim kurmak için oturum düzenliyor:
+Aşağıda, bir aracın ve dil sunucusunun rutin düzenleme oturumu sırasında nasıl iletişim kurduğuna bir örnek verilmiştir:
 
-![LSP Akış Diyagramı](media/lsp-flow-diagram.png)
+![lsp akış diyagramı](media/lsp-flow-diagram.png)
 
-* **Kullanıcı Aracı'nda (bir belge olarak adlandırılır) bir dosya açılır**: Aracı dil sunucunun bir belge açık olduğunu bildirir (' textDocument/didOpen'). Şu andan itibaren gerçekte belgesinin içeriğini hakkında artık dosya sisteminde değil ancak aracı bellekte tutulur.
+* **Kullanıcı araçta bir dosya (belge olarak anılacaktır) açar**: Araç, dil sunucusuna belgenin açık olduğunu ('textDocument/didOpen') belirtir. Şu andan itibaren, belgenin içeriği hakkındaki gerçek artık dosya sisteminde değil, araç tarafından bellekte tutulur.
 
-* **Kullanıcının yaptığı düzenlemeler**: Aracı sunucu ile ilgili belge Değiştir (' textDocument/didChange') size bildirir ve anlamsal bilgilerin programın dil sunucu tarafından güncelleştirilir. Böyle gibi dil server bu bilgileri analiz eder ve algılanan hataları ve Uyarıları (' textDocument/publishDiagnostics') aracıyla bildirir.
+* **Kullanıcı düzenleme yapar**: Araç belge değişikliği ('textDocument/didChange') hakkında sunucuya bildirimde ve programın anlamsal bilgileri dil sunucusu tarafından güncelleştirilir. Bu durumda, dil sunucusu bu bilgileri analiz eder ve aracı algılanan hatalar ve uyarılarla ('textDocument/publishDiagnostics') ile bilgilendirir.
 
-* **Kullanıcı "Tanıma Git" düzenleyicisindeki bir simgeye yürütür.** : Araç, iki parametre ile bir ' textDocument/tanım' isteği gönderir: (1) belge URI ve tanımı isteği Git sunucuya başlatıldığı gelen (2 metin konumu. Sunucu yanıt verir belge URI'si ve simgenin tanımını belgesinin içindeki konumu.
+* **Kullanıcı, düzenleyicideki bir sembolüzerinde "Tanıma Git"i yürütür**: Araç iki parametreyle bir 'textDocument/definition' isteği gönderir: (1) URI belgesi ve (2) Tanıma Git isteğinin sunucuya başlatıldığı yerden metin konumu. Sunucu, URI belgesi ve sembolün tanımının belge içindeki konumuyla yanıt verir.
 
-* **Kullanıcı ' % s'belgesi (dosya) kapatır**: Belge artık bellek ve geçerli içeriğini şimdi artık dosya sisteminde güncel olan dil sunucusunun bildiren aracından ' textDocument/didClose' bildirim gönderilir.
+* **Kullanıcı belgeyi (dosyayı) kapatır**: Araçtan bir 'textDocument/didClose' bildirimi gönderilir ve dil sunucusuna belgenin artık bellekte olmadığını ve geçerli içeriğin artık dosya sisteminde güncel olduğunu bildirir.
 
-Bu örnekte, protokol düzeyinde Düzenleyici Özellikleri "Tanıma", "Tüm başvuruları Bul" gibi dil sunucusuyla nasıl iletişim kurduğu gösterilmektedir. Protokolü tarafından kullanılan veri düzenleyicimizi veya IDE'mizi 'veri türleri' şu anda açık metin belgesi ve imleç konumu gibi türleridir. Veri türleri, genellikle soyut sözdizimi ağacı ve derleyici simgeleri (örneğin, çözümlenen türleri, ad,...) sağlayacak bir programlama dili etki alanı modeli düzeyinde değildir. Bu protokol önemli ölçüde basitleştirir.
+Bu örnek, protokolün "Tanıya Git", "Tüm Başvuruları Bul" gibi düzenleyici özellikleri düzeyinde dil sunucusuyla nasıl iletişim kurduğunu göstermektedir. Protokol tarafından kullanılan veri türleri, şu anda açık olan metin belgesi ve imlecin konumu gibi düzenleyici veya IDE 'veri türleri'dir. Veri türleri genellikle soyut sözdizimi ağaçları ve derleyici sembolleri (örneğin, çözülmüş türleri, ad alanları, ...) sağlayacak bir programlama dili etki alanı modeli düzeyinde değildir. Bu, protokolü önemli ölçüde basitleştirir.
 
-Artık daha fazla ayrıntı ' textDocument/tanım' istekte göz atalım. İstemci aracında bir C++ belgede "Tanıma Git" istek için dil sunucusu arasında Git yüklerini aşağıdadır.
+Şimdi 'textDocument/definition' isteğine daha ayrıntılı olarak bakalım. Aşağıda, C++ belgesindeki "Tanıma Git" isteği için istemci aracı ile dil sunucusu arasında giden yükler ve yükler verilmiştir.
 
-Bu istek.
+Bu istek:
 
 ```json
 {
@@ -80,7 +80,7 @@ Bu istek.
 }
 ```
 
-Bu yanıt.
+Bu yanıt:
 
 ```json
 {
@@ -102,22 +102,22 @@ Bu yanıt.
 }
 ```
 
-Geriye dönüp, düzenleyicinin düzeyinde yerine programlama dili model düzeyinde veri türlerini açıklayan dil sunucusu protokolü başarısını nedenlerle biridir. Bir metin belgesi URI standart hale getirmek çok basittir ya da bir imleç konumu bir soyut sözdizimi ağacını ve derleyici sembolleri farklı programlama dilleri arasında standart ile karşılaştırıldığında.
+Geriye dönüp bakıldığında, program dili modeli düzeyinde değil, düzenleyici düzeyinde veri türleri açıklayan dil sunucusu protokolü başarı nedenlerinden biridir. Farklı programlama dilleri arasında soyut bir sözdizimi ağacı ve derleyici sembolleri standartlaştırma ile karşılaştırıldığında bir metin belgesi URI veya imleç konumunu standartlaştırmak çok daha kolaydır.
 
-VS Code, genellikle bir kullanıcı farklı dilleriyle çalışırken, her programlama dili için bir dil sunucusu başlatır. Aşağıdaki örnek bir oturum kullanıcı Java ve SASS dosyalarını nerede çalıştığını gösterir.
+Bir kullanıcı farklı dillerde çalışıyorsa, VS Code genellikle her programlama dili için bir dil sunucusu başlatır. Aşağıdaki örnekte, kullanıcının Java ve SASS dosyaları üzerinde çalıştığı bir oturum gösterilmektedir.
 
-![Java ve sass](media/lsp-java-and-sass.png)
+![java ve sass](media/lsp-java-and-sass.png)
 
 ### <a name="capabilities"></a>Özellikler
 
-Her dil sunucusu protokolü tarafından tanımlanan tüm özelliklerini destekler. Bu nedenle, istemci ve sunucu, bunların 'özellikleri' desteklenen bir özellik kümesi sunar. Örneğin, ' textDocument/tanımı' isteği işleyebilir, ancak 'çalışma alanı/symbol' isteğini yerine değil bir sunucu olduğunu bildirir. Benzer şekilde, istemciler 'yaklaşık kaydetmek için ' sağlayabilir duyurmaktan, böylece bir sunucu otomatik olarak düzenlenen belge biçimlendirmek için metin düzenlemeleri hesaplayabilirsiniz belge kaydedilmeden önce bildirimleri.
+Her dil sunucusu protokol tarafından tanımlanan tüm özellikleri destekleyebilir. Bu nedenle, istemci ve sunucu desteklenen özellik kümesini 'yetenekler' aracılığıyla duyurur. Örnek olarak, bir sunucu 'textDocument/definition' isteğini işleyebileceğini, ancak 'çalışma alanı/simgesi' isteğini işlemeyebileceğini bildirir. Benzer şekilde, istemciler bir belge kaydedilmeden önce 'kaydetmek üzere' bildirimleri sağlayabileceklerini, böylece bir sunucunun düzenlenen belgeyi otomatik olarak biçimlendirmek için metin düzenlemelerini hesaplayabildiğini bildirebilir.
 
-## <a name="integrating-a-language-server"></a>Dil sunucusu tümleştirme
+## <a name="integrating-a-language-server"></a>Dil sunucusunun tümleştirilmesi
 
-Belirli bir aracı bir dil sunucunun gerçek tümleştirme, dil sunucusu protokolü tarafından tanımlı değil ve aracı implementors için bırakılır. Bazı araçları başlatabilir ve konuşma dilini sunucusu herhangi bir türden bir uzantı sağlayarak dil sunucuları genel tümleştirin. Bir uzantı bazı özel dil özellikleri sağlamak hala böylece diğer dil sunucu başına özel uzantı VS Code gibi oluşturun.
+Bir dil sunucusunun belirli bir araca gerçek entegrasyonu, dil sunucusu protokolü tarafından tanımlanmaz ve araç uygulayıcılarına bırakılır. Bazı araçlar, her tür dil sunucusubaşlatıp konuşabilen bir uzantıya sahip olarak dil sunucularını genel olarak tümleştirir. VS Code gibi diğerleri, bir uzantın hala bazı özel dil özellikleri sağlamak mümkün böylece, dil sunucusu başına özel bir uzantısı oluşturun.
 
-Dil sunucular ve istemciler uygulamasını basitleştirmek için var. kitaplıkları veya SDK'ları için istemci ve sunucu bölümleri Bu kitaplıklar, farklı diller için sağlanır. Örneğin, bir [dil istemci npm modülünü](https://www.npmjs.com/package/vscode-languageclient) VS Code uzantısı ve başka bir dil sunucu tümleştirilmesi kolaylaştırmak için [dil sunucu npm modülünü](https://www.npmjs.com/package/vscode-languageserver) Node.js kullanarak bir dil sunucu yazma için. Bu, geçerli [listesi](https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations) destek kitaplıkları.
+Dil sunucularının ve istemcilerin uygulanmasını kolaylaştırmak için istemci ve sunucu parçaları için kitaplıklar veya SDK'lar vardır. Bu kitaplıklar farklı diller için sağlanmaktadır. Örneğin, bir dil sunucusunun VS Kodu uzantısına entegrasyonunu kolaylaştırmak için bir [dil istemcisi npm modülü](https://www.npmjs.com/package/vscode-languageclient) ve Node.js kullanarak bir dil sunucusu yazmak için başka bir dil sunucusu [npm modülü](https://www.npmjs.com/package/vscode-languageserver) vardır. Bu, destek kitaplıklarının geçerli [listesidir.](https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations)
 
-## <a name="using-the-language-server-protocol-in-visual-studio"></a>Dil sunucusu protokolü kullanarak Visual Studio'da
+## <a name="using-the-language-server-protocol-in-visual-studio"></a>Visual Studio'da Dil Sunucusu Protokolü'nü Kullanma
 
-* [Dil sunucusu Protokolü uzantısı ekleme](adding-an-lsp-extension.md) -dil sunucu Visual Studio ile tümleştirme hakkında bilgi edinin.
+* [Dil Sunucusu Protokolü uzantısı ekleme](adding-an-lsp-extension.md) - Bir dil sunucusunun Visual Studio'ya entegre edilmesi hakkında bilgi edinin.

@@ -1,5 +1,5 @@
 ---
-title: Dosya Aç komutunu kullanarak dosyaları görüntüleme | Microsoft Docs
+title: Dosya Yı Kullanarak Dosyaları Görüntüleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,52 +7,52 @@ helpviewer_keywords:
 - Open File command
 - persistence, supporting Open File command
 ms.assetid: 4fff0576-b2f3-4f17-9769-930f926f273c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 19fda87f0e2692d30b9a99777ca11edd7b3906f0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cc18442c55b6989c4d8668e1425fdd62a2d4b1b6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324333"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708592"
 ---
-# <a name="display-files-by-using-the-open-file-command"></a>Dosya Aç komutunu kullanarak dosyaları görüntüleme
-Aşağıdaki adımlar, IDE nasıl işlediğini açıklar **açık dosya** kullanılabilir olan komutunu **dosya** menüde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Adımları ayrıca nasıl projeleri bu komutu kaynaklanan çağrıları yanıt açıklar.
+# <a name="display-files-by-using-the-open-file-command"></a>Dosya aç komutunu kullanarak dosyaları görüntüleme
+Aşağıdaki adımlar, IDE'nin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Dosya** menüsünde bulunan Dosya **Yı aç** komutunu nasıl işleyeceğini açıklar. Adımlar, projelerin bu komuttan kaynaklanan çağrılara nasıl yanıt vermesi gerektiğini de açıklar.
 
- Kullanıcı tıkladığında **açık dosya** komutunu **dosya** menüsünde, bir dosyadan seçer **açık dosya** iletişim kutusunda aşağıdaki süreç gerçekleşir:
+ Bir kullanıcı **Dosya** menüsünde **Dosya Aç** komutunu tıklattığında ve **Dosya aç** iletişim kutusundan bir dosya seçtiğinde aşağıdaki işlem gerçekleşir:
 
-1. Çalıştırılan Belge tablosu kullanarak IDE dosyanın zaten projede açık olup olmadığını belirler.
+1. Çalışan belge tablosunu kullanarak, IDE dosyanın bir projede zaten açık olup olmadığını belirler.
 
-    - Dosya açık değilse, IDE penceresi resurfaces.
+    - Dosya açıksa, IDE pencereyi yeniden yüzeye çıkar.
 
-    - Dosya açık değilse, IDE çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> her proje, proje dosyasını açabilirsiniz belirlemek için sorgulanamıyor.
+    - Dosya açık değilse, Hangi projenin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> dosyayı açabileceğini belirlemek için IDE her projeyi sorgulamaya çağırır.
 
         > [!NOTE]
-        > Proje uygulamanızda <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>, projenizi, dosyayı açar düzeyini gösteren bir öncelik değeri sağlayın. Öncelik değerleri sağlanan <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> sabit listesi.
+        > Proje <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>uygulamanızda, projenizin dosyayı açtığı düzeye işaret eden bir öncelik değeri sağlayın. Öncelik değerleri numaralandırmasağlanır. <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>
 
-2. Her proje önemini gösteren bir öncelik düzeyi ile yanıt dosyasını açmak için bir proje olan üzerinde yerleştirir.
+2. Her proje, dosyayı açmak için proje olmanın önemini gösteren bir öncelik düzeyiyle yanıt verir.
 
-3. IDE, proje dosyası açılır belirlemek için aşağıdaki ölçütleri kullanır:
+3. IDE, dosyayı hangi projenin açtığını belirlemek için aşağıdaki ölçütleri kullanır:
 
-    - En yüksek öncelikli yanıt proje (`DP_Intrinsic`) dosyasını açar. Bu önceliğine sahip birden fazla proje yanıt verirse, yanıt için ilk proje dosyasını açar.
+    - En yüksek öncelikle yanıt veren`DP_Intrinsic`proje ( ) dosyayı açar. Birden fazla proje bu öncelikle yanıt verirse, yanıt verecek ilk proje dosyayı açar.
 
-    - En yüksek önceliğe hiçbir proje yanıt verirse (`DP_Intrinsic`), ancak tüm projeleri yanıt aynı, daha düşük önceliğe etkin proje dosyasını açar. Hiçbir proje etkin olursa, yanıt için ilk proje dosyasını açar.
+    - Hiçbir proje en yüksek önceliğe`DP_Intrinsic`sahip yanıt vermiyorsa ( ), ancak tüm projeler aynı, daha düşük öncelikle yanıt veriyorsa, etkin proje dosyayı açar. Proje etkin değilse, yanıt verecek ilk proje dosyayı açar.
 
-    - Proje dosyasının sahipliğini talep varsa (`DP_Unsupported`), çeşitli dosyalar projeleri dosyasını açar.
+    - Hiçbir proje dosyanın sahipliğini`DP_Unsupported`talep ederse ( ), Çeşitli Dosyalar projesi dosyayı açar.
 
-         Çeşitli dosyalar projeleri örneği oluşturduysanız, proje her zaman değeri ile yanıt `DP_CanAddAsExternal`. Bu değer, proje dosyayı açabilmesini gösterir. Bu proje, başka bir projede olmayan açık dosyaları barındırmak için kullanılır. Bu projede öğelerin listesini kalıcı değil; Bu proje görülebilir **Çözüm Gezgini** yalnızca bir dosyayı açmaya kullanıldığında.
+         Çeşitli Dosyalar projesinin bir örneği oluşturulursa, proje her zaman değerle `DP_CanAddAsExternal`yanıt verir. Bu değer, projenin dosyayı açabileceğini gösterir. Bu proje, başka bir projede olmayan açık dosyaları barındırmak için kullanılır. Bu projedeki öğelerin listesi kalıcı değildir; Bu proje, yalnızca bir dosyayı açmak için kullanıldığında **Çözüm Gezgini'nde** görünür.
 
-         Çeşitli dosyalar projeleri dosyayı açabilmesini denenemeyeceğini belirtmiyorsa, proje örneği oluşturulmamış. Bu durumda, IDE çeşitli dosyalar projeleri örneği oluşturur ve dosyayı proje söyler.
+         Çeşitli Dosyalar projesi dosyayı açabileceğini göstermiyorsa, projenin bir örneği oluşturulmadı. Bu durumda, IDE Çeşitli Dosyalar projesinin bir örneğini oluşturur ve projeye dosyayı açmasını söyler.
 
-4. Proje dosyası açılır IDE belirler hemen sonra çağrılır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> proje yöntemi.
+4. IDE dosyayı hangi projenin açtığını belirler belirlemez, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> bu projedeki yöntemi çağırır.
 
-5. Proje, projeye özgü Düzenleyici ya da bir standart düzenleyici kullanarak dosyayı açma seçeneğini ardından sahiptir. Daha fazla bilgi için [nasıl yapılır: Projeye özgü düzenleyicileri açma](../../extensibility/how-to-open-project-specific-editors.md) ve [nasıl yapılır: Standart düzenleyicileri açma](../../extensibility/how-to-open-standard-editors.md)sırasıyla.
+5. Proje daha sonra, projeye özgü bir düzenleyici veya standart bir düzenleyici kullanarak dosyayı açma seçeneğine sahiptir. Daha fazla bilgi için [bkz: Projeye özel editörleri ve](../../extensibility/how-to-open-project-specific-editors.md) [nasıl açılır: Standart düzenleyicileri](../../extensibility/how-to-open-standard-editors.md)sırasıyla açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Birlikte Aç komutunu kullanarak dosyaları görüntüleme](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)
-- [Açın ve proje öğeleri Kaydet](../../extensibility/internals/opening-and-saving-project-items.md)
-- [Nasıl yapılır: Projeye özgü düzenleyicileri açma](../../extensibility/how-to-open-project-specific-editors.md)
-- [Nasıl yapılır: Açık standart düzenleyicileri](../../extensibility/how-to-open-standard-editors.md)
+- [Ile Aç komutunu kullanarak dosyaları görüntüleme](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)
+- [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md)
+- [Nasıl açılır: Projeye özel düzenleyicileri açın](../../extensibility/how-to-open-project-specific-editors.md)
+- [Nasıl yapılsın: Standart düzenleyicileri açın](../../extensibility/how-to-open-standard-editors.md)

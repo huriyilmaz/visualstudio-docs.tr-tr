@@ -1,5 +1,5 @@
 ---
-title: Temel projenin nesne modelini genişletme | Microsoft Docs
+title: Temel Projenin Nesne Modelinin Genişletilmesi | Microsoft Dokümanlar
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,29 +7,29 @@ helpviewer_keywords:
 - project subtypes, extending automation object model
 - automation object model
 ms.assetid: 2f95cc53-dff6-476c-bacd-500fb0ff7725
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 607a63dc84db2811a4a2d158be07f158b849e1ad
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 33186cd477ade7f562f6191393dabe8e94f4f194
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329039"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708393"
 ---
 # <a name="extend-the-object-model-of-the-base-project"></a>Temel projenin nesne modelini genişletme
 
-Proje alt aşağıdaki yerlerde temel proje Otomasyon nesne modeli genişletebilir:
+Proje alt türü, temel projenin otomasyon nesnesi modelini aşağıdaki yerlerde genişletebilir:
 
-- Project.Extender("\<ProjectSubtypeName>"): Bir nesne ile özel yöntemleri sunmak bir proje alt böylece <xref:EnvDTE.Project> nesne. Proje alt Otomasyon Genişleticileri kullanıma sunmak için kullanabileceğiniz `Project` nesne. <xref:EnvDTE80.IInternalExtenderProvider> Ana proje alt Toplayıcı üzerinde uygulanan arabirimi, nesne için teklif `VSHPROPID_ExtObjectCATID` gelen <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> (karşılık gelen bir `itemid` değerini [VSITEMID. Kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) catID.
+- Project.Extender("\<ProjectSubtypeName>"): Bu, proje alt türünün <xref:EnvDTE.Project> nesneden özel yöntemlerle bir nesne sunmasına olanak tanır. Proje alt türü `Project` nesneyi ortaya çıkarmak için Otomasyon Genişleticiler'i kullanabilir. Ana <xref:EnvDTE80.IInternalExtenderProvider> proje alt tip toplayıcısı üzerinde uygulanan arabirim, `VSHPROPID_ExtObjectCATID` nesnesini <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> from `itemid` (VSITEMID değerine karşılık gelen) için [sunmalıdır. Kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) CATID.
 
-- ProjectItem.Extender("\<ProjectSubtypeName>"): Böylece, nesnenin belirli özel yöntemlerle sunmak bir proje alt <xref:EnvDTE.ProjectItem> proje içindeki nesne. Proje alt Otomasyon Genişleticileri bu nesneyi göstermek için kullanabilirsiniz. <xref:EnvDTE80.IInternalExtenderProvider> Nesne için teklif gerekiyor ana proje alt Toplayıcı üzerinde uygulanan arabirimi `VSHPROPID_ExtObjectCATID` gelen <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> (istenen bir karşılık gelen <xref:Microsoft.VisualStudio.VSConstants.VSITEMID>) catID.
+- ProjectItem.Extender("\<ProjectSubtypeName>"): Bu, proje alt türüne proje içindeki <xref:EnvDTE.ProjectItem> belirli bir nesneden özel yöntemlerle bir nesne sunmasına olanak tanır. Proje alt türü, bu nesneyi ortaya çıkarmak için otomasyon genişleticiler kullanabilir. Ana <xref:EnvDTE80.IInternalExtenderProvider> proje alt tip toplayıcısı üzerinde uygulanan arabirim `VSHPROPID_ExtObjectCATID` den <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> (istenilen <xref:Microsoft.VisualStudio.VSConstants.VSITEMID>bir) CATID karşılık gelen nesnesunmak gerekir.
 
-- Project.Properties: Bu koleksiyon bağımsız yapılandırma özelliklerini sunan `Project` nesne. Daha fazla bilgi için `Project` özellikleri görmek <xref:EnvDTE.Project.Properties%2A>. Proje alt Otomasyon Genişleticileri özelliklerini bu koleksiyona eklemek için kullanabilirsiniz. <xref:EnvDTE80.IInternalExtenderProvider> Nesne için teklif gerekiyor ana proje alt Toplayıcı üzerinde uygulanan arabirimi `VSHPROPID_BrowseObjectCATID` gelen <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> (karşılık gelen bir `itemid` değerini [VSITEMID. Kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) catID.
+- Project.Properties: Bu koleksiyon `Project` nesnenin yapılandırmabağımsız özelliklerini ortaya çıkarır. Özellikler hakkında `Project` daha fazla <xref:EnvDTE.Project.Properties%2A>bilgi için bkz. Proje alt türü, özelliklerini bu koleksiyona eklemek için Otomasyon Genişleticiler'i kullanabilir. Ana <xref:EnvDTE80.IInternalExtenderProvider> proje alt tip toplayıcıüzerinde uygulanan arabirim `VSHPROPID_BrowseObjectCATID` den <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> `itemid` [(VSITEMID bir değere karşılık gelen) için nesnesunmak gerekir. Kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) CATID.
 
-- Configuration.Properties: Bu koleksiyon (örneğin, hata ayıklama) belirli bir yapılandırma için proje yapılandırması bağımlı özelliklerini sunar. Daha fazla bilgi için bkz. <xref:EnvDTE.Configuration>. Proje alt Otomasyon Genişleticileri özelliklerini bu koleksiyona eklemek için kullanabilirsiniz. <xref:EnvDTE80.IInternalExtenderProvider> Ana proje alt Toplayıcı üzerinde uygulanan arabirimi sunar, nesne için catID `VSHPROPID_CfgBrowseObjectCATID` (karşılık gelen bir `itemid` değerini [VSITEMID. Kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)). <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject> Arabirimi, bir yapılandırma Gözat nesnesi diğerinden ayırt etmek için kullanılır.
+- Configuration.Properties: Bu koleksiyon, belirli bir yapılandırma için projenin yapılandırmaya bağımlı özelliklerini (örneğin, Hata Ayıklama) ortaya çıkarır. Daha fazla bilgi için bkz. <xref:EnvDTE.Configuration>. Proje alt türü, özelliklerini bu koleksiyona eklemek için Otomasyon Genişleticiler'i kullanabilir. Ana <xref:EnvDTE80.IInternalExtenderProvider> proje alt tip toplayıcısı üzerinde uygulanan arabirim CATID `VSHPROPID_CfgBrowseObjectCATID` `itemid` [(VSITEMID değerine karşılık gelen) için nesnesini sunar. Kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)). Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject> bir yapılandırma nesnesine göz atma nesnesini diğerinden ayırmak için kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

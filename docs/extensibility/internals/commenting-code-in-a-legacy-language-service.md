@@ -1,46 +1,46 @@
 ---
-title: Eski dil hizmetinde koda açıklama | Microsoft Docs
+title: Eski Dil Hizmetinde Yorum Kodu | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - comments, supporting in language services [managed package framework]
 - language services [managed package framework], commenting code
 ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec42d81a2d472cec5f96cbeec416801c22465834
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5450199fde29f581dafdf9b2884c88ef26ea4ce7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342039"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709433"
 ---
-# <a name="comment-code-in-a-legacy-language-service"></a>Eski dil hizmetinde kod açıklaması
-Programlama dilleri, normalde açıklama eklemek veya kod açıklaması için bir yol sağlar. Bir yorum, metin, kod hakkında ek bilgi sağlar ancak derleme veya yorumu sırasında yok sayılır bölümüdür.
+# <a name="comment-code-in-a-legacy-language-service"></a>Eski bir dil hizmetinde açıklama kodu
+Programlama dilleri genellikle koda açıklama ek etmek veya yorum yapmak için bir araç sağlar. Açıklama, metnin kod hakkında ek bilgi sağlayan, ancak derleme veya yorumlama sırasında yoksayılabilen bir bölümüdür.
 
- Yönetilen paket framework (MPF) sınıfları, yorum ve uncommenting seçili metin için destek sağlar.
+ Yönetilen paket çerçevesi (MPF) sınıfları, seçili metnin yorumlanması ve yorumlanması için destek sağlar.
 
-## <a name="comment-styles"></a>Açıklama stilleri
-Açıklama iki genel stiller şunlardır:
+## <a name="comment-styles"></a>Yorum stilleri
+Yorum iki genel stilleri vardır:
 
-1. Yorumu tek bir satırda olduğu satırlı yorumlar.
+1. Yorumun tek bir satırda olduğu satır açıklamaları.
 
-2. Bloğu açıklamaları, burada açıklama birden fazla satır içerebilir.
+2. Açıklamanın birden çok satır içerebileceği yorumları engelleyin.
 
-Satırlı yorumlar, genellikle başlangıç karakteri (ya da karakterler) bloğu açıklamaları sırasında hem başlangıç ve bitiş karakterlerini sahip sahiptir. Örneğin, C# ' ta bir satırı yorum ile başlayan `//`, ve bir blok açıklama ile başlayan `/*` ve ile sona eren `*/`.
+Satır açıklamaları genellikle bir başlangıç karakterine (veya karaktere) sahipken, blok açıklamaları nın hem başlangıç hem de bitiş karakterleri vardır. Örneğin, C#'da bir satır `//`yorumu ile başlar ve `/*` bir `*/`blok yorumu ile başlar ve .
 
-Kullanıcı komutu seçtiğinde **yorum seçimi** gelen **Düzenle** > **Gelişmiş** menüsünden komut yönlendirileceğini <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> yöntemi <xref:Microsoft.VisualStudio.Package.Source> sınıfı. Kullanıcı komutu seçtiğinde **seçimi işletilir satıra çevir**, komut yönlendirilir <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> yöntemi.
+Kullanıcı**Gelişmiş** **Gelişmiş'i Edit** > menüsünden **Yorum Seçimi** komutunu seçtiğinde, komut <xref:Microsoft.VisualStudio.Package.Source> sınıftaki <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> yönteme yönlendirilir. Kullanıcı **YorumSuz Seçim**komutunu seçtiğinde, komut <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> yönteme yönlendirilir.
 
-## <a name="support-code-comments"></a>Destek kod açıklamaları
- Dil hizmeti desteği kodu yorumlarınızı yoluyla olabilir `EnableCommenting` parametresinin adlı <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> . Bu ayarlar <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> özelliği <xref:Microsoft.VisualStudio.Package.LanguagePreferences> sınıfı. Dil hizmeti özellikleri ayarlama hakkında daha fazla bilgi için bkz. [eski dil hizmeti kayıt](../../extensibility/internals/registering-a-legacy-language-service1.md).
+## <a name="support-code-comments"></a>Destek kodu açıklamaları
+ Dil hizmeti destek kodu `EnableCommenting` yorumlarınızı, adı geçen parametre <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> ile elde edebilirsiniz. Bu sınıfın <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> özelliğini <xref:Microsoft.VisualStudio.Package.LanguagePreferences> ayarlar. Dil hizmeti özelliklerini ayarlama hakkında daha fazla bilgi için [bkz.](../../extensibility/internals/registering-a-legacy-language-service1.md)
 
- Geçersiz kılmalısınız <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> döndürülecek yöntemi bir <xref:Microsoft.VisualStudio.Package.CommentInfo> açıklama karakterler dil yapısı. C#-stili satır yorum karakterlerdir, varsayılan.
+ Ayrıca, diliniz <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> için yorum <xref:Microsoft.VisualStudio.Package.CommentInfo> karakterleri içeren bir yapıyı döndürmek için yöntemi geçersiz kılmanız gerekir. C#tarzı satır yorumu karakterleri varsayılandır.
 
 ### <a name="example"></a>Örnek
- Örnek uygulama için işte <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> yöntemi.
+ Burada yöntemin <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> bir örnek uygulamasıdır.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -63,4 +63,4 @@ namespace MyLanguagePackage
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eski dil hizmeti özellikleri](../../extensibility/internals/legacy-language-service-features1.md)
-- [Eski dil hizmeti kaydedin](../../extensibility/internals/registering-a-legacy-language-service1.md)
+- [Eski bir dil hizmeti kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md)

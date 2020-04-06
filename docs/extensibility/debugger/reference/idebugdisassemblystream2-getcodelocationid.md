@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetCodeLocationId | Microsoft Docs
+title: IDebugDisassemblyStream2::GetCodeLocationId | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::GetCodeLocationId
 ms.assetid: 567adfb8-2f54-499a-a027-e4ecb82277ef
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 58e3b12ecbc75b7d07d60ac399412dc5b0deb73b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 32be70e11776177a0e68f09689c2262497703ab1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351692"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732245"
 ---
 # <a name="idebugdisassemblystream2getcodelocationid"></a>IDebugDisassemblyStream2::GetCodeLocationId
-Belirli kod bağlamı için bir kod konum tanımlayıcısı döndürür.
+Belirli bir kod bağlamı için kod konum tanımlayıcısı döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,17 +43,17 @@ int GetCodeLocationId( 
 
 ## <a name="parameters"></a>Parametreler
 `pCodeContext`\
-[in] Bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) tanımlayıcıya dönüştürülecek nesne.
+[içinde] Bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi bir tanımlayıcıya dönüştürülecek.
 
-`puCodeLocationId` [out] Kod konumu tanımlayıcısını döndürür. Açıklamalara bakın.
+`puCodeLocationId`[çıkış] Kod konum tanımlayıcısını döndürür. Bkz. Açıklamalar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_CODE_CONTEXT_OUT_OF_SCOPE` kod bağlamı geçerli olup olmadığını ancak kapsamı dışında.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Kod `E_CODE_CONTEXT_OUT_OF_SCOPE` bağlamı geçerli yse ancak kapsam dışındaysa döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Ayrıştırılmış kodu destekleyen hata ayıklama altyapısına (DE) kod konum tanımlayıcısı özeldir. Bu konum tanımlayıcısı kod konumda izlemek için DE tarafından dahili olarak kullanılır ve genellikle bir adresi veya bir tür uzaklığı. Bir konum kod bağlamı başka bir konum kod bağlamı altındaysa ilk kod bağlamı karşılık gelen kod konum tanımlayıcısı de ikinci kod bağlamı kod konum tanımlayıcısı değerinden küçük olmalıdır tek gereksinim olmasıdır.
+ Kod konum tanımlayıcısı, sökmeyi destekleyen hata ayıklama altyapısına (DE) özgüdür. Bu konum tanımlayıcısı, koddaki pozisyonları izlemek için DE tarafından dahili olarak kullanılır ve genellikle bir tür adres veya ofsettir. Tek gereksinim, bir konumun kod bağlamı başka bir konumun kod bağlamından daha azsa, ilk kod bağlamının karşılık gelen kod konum tanımlayıcısının da ikinci kod bağlamının kod konumu tanımlayıcıdan daha az olması gerekir.
 
- Bir kod konum tanımlayıcısı kod bağlamı almak için arama [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) yöntemi.
+ Kod konum tanımlayıcısının kod bağlamını almak için [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

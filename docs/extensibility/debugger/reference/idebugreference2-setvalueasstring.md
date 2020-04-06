@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsString | Microsoft Docs
+title: IDebugReference2::SetValueAsString | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::SetValueAsString
 ms.assetid: 9a508ced-fd54-44f5-bb42-ec15c80384d7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2cb58326f36e88768ab9144f08ded8c85410e1c9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c8414ce5f53acec2a30ff681ff0bab8ddc919310
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339826"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720289"
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
-Bir başvuruyu bir dize değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
+Bir dizeden başvuru değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int SetValueAsString ( 
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-[in] Bir dize değeri.
+[içinde] Bir dize olarak değer.
 
 `dwRadix`\
-[in] Sayısal yedeklenmesine biçimlendirmede kullanılacak sayı tabanı.
+[içinde] Herhangi bir sayısal bilgi biçimlendirmede kullanılacak radix.
 
 `dwTimeout`\
-[in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süre. Kullanım `INFINITE` süresiz bekleme.
+[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
 
 ## <a name="return-value"></a>Dönüş Değeri
- Her zaman döndürür `E_NOTIMPL`.
+ Her zaman `E_NOTIMPL` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

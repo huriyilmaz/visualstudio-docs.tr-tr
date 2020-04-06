@@ -1,42 +1,42 @@
 ---
-title: Arabirimler (Visual Studio hata ayıklama) | Microsoft Docs
+title: Arayüzler (Visual Studio Hata Ayıklama) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], interfaces
 ms.assetid: 79875cbb-f946-49d4-94eb-941d0e1a40b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0359ffc4ce634a6bf22759265c92ea7c299cc30
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d31eb6900841dee9d2675e87bac573b432ff2acb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350237"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715075"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Arabirimler (Visual Studio Hata Ayıklama)
-Yöntemleri, İçindekiler ve Vtable sırayla arabirimi sayfasındaki tabloda her arabirim alfabetik olarak listelenir.
+Yöntemler, içindekiler tablosundaki her arabirimin altında ve Vtable sırasına göre arayüz sayfasında alfabetik olarak listelenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)
 
- Hata ayıklama altyapısında kullanılan arabirimler açıklanmaktadır.
+ Hata ayıklama altyapısında kullanılan arabirimleri açıklar.
 
 - [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 
- Kesme modu sırasında çağrı yığınında nevyhodnocovat arabirimler açıklanmaktadır.
+ Kesme modunda arama yığınındaki ifadeleri değerlendiren arabirimleri açıklar.
 
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 
- Sembol sağlayıcısı türlerini tanımlayıcılara ilişkilendirmek için uyguladığı arabirimlerin açıklar.
+ Bir sembol sağlayıcısının türleri tanımlayıcılarla ilişkilendirmek için uyguladığı arabirimleri açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
 
- Arabirimleri, numaralandırıcılar ve yapıları belgelerini içeren [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklama SDK'sı.
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] Hata Ayıklama SDK arabirimleri, sayısallaştırıcılar ve yapıları için belgeler içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

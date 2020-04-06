@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFrameInfo2::Next | Microsoft Docs
+title: IEnumDebugFrameInfo2::Sonraki | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugFrameInfo2::Next
 ms.assetid: 64a64eeb-5dea-4119-8a22-03771015d1e5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d95ae4b8ee5b6343b922b2b50a7b63889dee798c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a5fe15c46066fdbc94b0b7f005ef7a06e1f10cc0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350336"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716708"
 ---
 # <a name="ienumdebugframeinfo2next"></a>IEnumDebugFrameInfo2::Next
-Sabit listesinden alınmış sonraki öğe kümesini döndürür.
+Numaralandırmadan sonraki eleman kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınacak öğelerin sayısı. Ayrıca en büyük boyutunu belirtir `rgelt` dizisi.
+[içinde] Alınacak öğe sayısı. Ayrıca `rgelt` dizinin en büyük boyutunu belirtir.
 
 `rgelt`\
-[out içinde] Dizi [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) doldurulacak öğeleri.
+[içinde, dışarı] Doldurulacak [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) öğeleri dizisi.
 
 `pceltFetched`\
-[out] Gerçekte döndürülen öğe sayısını döndürür `rgelt`.
+[çıkış] Gerçekte döndürülen öğe sayısını `rgelt`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` istenen öğelerin sayısından daha az döndürülebilen; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döndürür. İstenen öğe sayısından daha az ise döndürür; `S_FALSE` aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

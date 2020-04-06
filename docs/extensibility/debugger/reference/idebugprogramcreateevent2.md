@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramCreateEvent2 | Microsoft Docs
+title: IDebugProgramCreateEvent2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramCreateEvent2 interface
 ms.assetid: b19a7934-6179-4a68-9075-bd7dcd640b05
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8081e05d18719af060ddf58045c06ec64036ae35
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 78088d6e5da61c32302c13b08143c9ed902452e2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331445"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722635"
 ---
 # <a name="idebugprogramcreateevent2"></a>IDebugProgramCreateEvent2
-Bir program bağlı olduğu bu arabirimi hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) gönderilir.
+Bu arabirim, hata ayıklama altyapısı (DE) tarafından bir program eklendiğinde oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,21 +28,21 @@ Bir program bağlı olduğu bu arabirimi hata ayıklama altyapısı (DE) oturum 
 IDebugProgramCreateEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- DE veya özel bağlantı noktası sağlayıcısı programı, genellikle programın bağlı olduğu zaman oluşturulduğunu bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde. SDM kullanan `QueryInterface` erişmeye yöntemi `IDebugEvent2` arabirimi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE veya özel bağlantı noktası tedarikçisi, genellikle programın bağlı olduğu anda bir programın oluşturulduğunu bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır. SDM `QueryInterface` `IDebugEvent2` arabirime erişmek için yöntemi kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE veya özel bağlantı noktası sağlayıcısı oluşturur ve bu olay bir program oluşturmayı rapor nesnesine gönderir. Kullanarak DE bu olay gönderen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi. Özel bağlantı noktası sağlayıcısı kullanarak bu olay gönderir [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimi.
+ DE veya özel bağlantı noktası tedarikçisi oluşturur ve bir program oluşturulmasını bildirmek için bu olay nesnesi gönderir. DE bu olayı, sdm tarafından verilen [iDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevini kullanarak gönderir. Özel bağlantı noktası tedarikçisi bu olayı [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimini kullanarak gönderir.
 
 ## <a name="remarks"></a>Açıklamalar
- Özel bağlantı noktası sağlayıcısı ve DE yeni bir yayımlar [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) çağırarak arabirim [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md).
+ DE veya özel bağlantı noktası tedarikçisi [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)çağırarak yeni bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi yayımlar.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

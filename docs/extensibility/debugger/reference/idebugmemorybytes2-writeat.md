@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
+title: IDebugMemoryBytes2::WriteAt | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryBytes2::WriteAt method
 - WriteAt method
 ms.assetid: 61cc3704-47fa-4d9b-aa62-bb4585ac8fb1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5eefaee08d64952681e91711cdf8347186123e57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ac9113424c6cd5cce230774a6e5335ffa4d4ba77
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347144"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727523"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Bayt bellek, belirtilen adres'ten itibaren belirtilen sayıda yazar.
+Belirtilen adresten başlayarak belirtilen bellek bayt sayısını yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +46,19 @@ int WriteAt(
 
 ## <a name="parameters"></a>Parametreler
 `pStartContext`\
-[in] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesini bayt yazmaya başlamak konumu belirtir.
+[içinde] Bayt yazmaya nereden başlayacağını belirten [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi.
 
 `dwCount`\
-[in] Yazılacak bayt sayısı.
+[içinde] Yazacak bayt sayısı.
 
 `rgbMemory`\
-[in] Yazılacak bayt sayısı. Bu dizi en az olduğu varsayılır `dwCount` bayt cinsinden boyutu.
+[içinde] Yazıya baytlar. Bu dizinin en `dwCount` azından bayt boyutu olduğu varsayılır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` tüm baytlar yazılabilir veya bir hata kodu döndürür (genelde `E_FAIL`).
+ Başarılı olursa, `S_OK`döner; aksi takdirde, tüm baytlar yazılabilir veya bir hata `E_FAIL`kodu döndürebilir (genellikle) döndürür. `S_FALSE`
 
 ## <a name="remarks"></a>Açıklamalar
- Başlangıç adresi bu tarafından temsil edilen bellek penceresi içinde değilse [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesne, hiçbir yazma gerçekleşir ve hata kodunu `E_FAIL` döndürülen — bile yazmak için tutar bellek alanı ile çakışıyor.
+ Başlangıç adresi bu [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi tarafından temsil edilen bellek penceresinde değilse, yazma `E_FAIL` miktarı bellek alanına çakışsa bile hiçbir yazı oluşur ve bir hata kodu döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

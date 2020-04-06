@@ -1,51 +1,51 @@
 ---
-title: Verileri Görselleştirme ve görüntüleme | Microsoft Docs
+title: Verileri Görselleştirme ve Görüntüleme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], viewing data
 - debugging [Debugging SDK], visualizing data
 ms.assetid: 699dd0f5-7569-40b3-ade6-d0fe53e832bc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b29d1135df370232324edec9d1bd4a23397b17e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2b5f984e6c6a3c1c8f3835dfa93a8679ae16680a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348348"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712370"
 ---
-# <a name="visualizing-and-viewing-data"></a>Verileri Görselleştirme ve görüntüleme
-Tür görselleştiricileri ve özel görüntüleyiciler mevcut verileri hızlı bir şekilde bir geliştirici için anlamlı bir şekilde. İfade değerlendiricisi (EE) destekleyen üçüncü taraf tür görselleştiricileri yapabilir, kendi özel görüntüleyiciler sağlayın.
+# <a name="visualizing-and-viewing-data"></a>Verileri görselleştirme ve görüntüleme
+Görselleştiriciler yazın ve özel görüntüleyenler verileri bir geliştirici için hızlı bir şekilde anlamlı bir şekilde sunar. İfade değerlendiricisi (EE), üçüncü taraf tür görselleştiricilerini desteklemenin yanı sıra kendi özel görüntüleyicileri de sağlayabilir.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaç tür görselleştiricileri ve özel görüntüleyiciler çağırarak nesnenin türüyle ilişkili olduğunu belirleyen [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) yöntemi. Visual Studio varsa en az bir tür görselleştiricisi veya özel Görüntüleyici kullanılabilir çağırır [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) yönteminin bu görselleştiriciler ve görüntüleyiciler listesini almak için (görselleştiriciler uygulayan s gerçekte bir listesi ve Görüntüleyiciler) ve bunları kullanıcıya sunar.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)][GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) yöntemini arayarak nesnenin türüyle kaç tür görselleştiricinin ve özel görüntüleyenin ilişkili olduğunu belirler. En az bir tür görselleştirici veya özel görüntüleyici varsa, Visual Studio bu görüntüleyiciler ve görüntüleyenlerin bir listesini almak için [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) yöntemini çağırır (aslında, görüntüleyiciler ve görüntüleyenler uygulayan s listesi) ve bunları kullanıcıya sunar.
 
-## <a name="supporting-type-visualizers"></a>Tür görselleştiricileri destekleme
- Tür görselleştiricileri desteklemek için EE uygulamalıdır arabirimleri vardır. Bu arabirimler, iki geniş kategoriye ayrılabilir: tür görselleştiricileri ve özellik verilere arabirimleri listelemek arabirimleri.
+## <a name="supporting-type-visualizers"></a>Destekleyici tip görselleştiriciler
+ EE'nin tür görselleştiricilerini desteklemek için uygulaması gereken bir dizi arabirim vardır. Bu arabirimler iki geniş kategoriye ayrılabilir: özellik verilerine erişen tür görselleştiricilerini ve arabirimleri listeleyen arabirimler.
 
-### <a name="listing-type-visualizers"></a>Tür görselleştiricileri listeleme
- EE destekler uygulamaya tür görselleştiricileri listeleme `IDebugProperty3::GetCustomViewerCount` ve `IDebugProperty3::GetCustomViewerList`. Bu yöntemler çağrısına karşılık gelen yöntemlere geçirmek [GetCustomViewerCount](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) ve [GetCustomViewerList](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md).
+### <a name="listing-type-visualizers"></a>Listeleme türü görselleştiricileri
+ EE, uygulanmasında tip görüntüleyicilerin listelenmesi ve `IDebugProperty3::GetCustomViewerCount` `IDebugProperty3::GetCustomViewerList`. Bu yöntemler ilgili yöntemler [GetCustomViewerCount](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) ve [GetCustomViewerList](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)için arama geçmek.
 
- [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md) çağırılarak alınır [CreateVisualizerService](../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md). Bu yöntem gerektirir [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md) öğesinden alınan arabirimi [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) arabirimi geçirilen [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). `IEEVisualizerServiceProvider::CreateVisualizerService` Ayrıca gerektirir [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md) ve [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) için geçirilmiş arabirimleri `IDebugParsedExpression::EvaluateSync`. Oluşturmak için gereken son arabirimi `IEEVisualizerService` arabirimi [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md) EE uygulayan arabirimi. Bu arabirim görselleştirilen özelliğine yapılacak değişiklikler sağlar. Tüm özellik verileri içinde saklanmış olduğu bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) ayrıca EE tarafından uygulanan arabirimi.
+ [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md) [CreateVisualizerService](../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)arayarak elde edilir. Bu yöntem, [EvaluateSync'e](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)geçirilen IDebugBinder arabiriminden elde edilen [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md) arabirimini gerektirir. [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) `IEEVisualizerServiceProvider::CreateVisualizerService`ayrıca [iDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md) ve [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) arabirimleri, hangi `IDebugParsedExpression::EvaluateSync`geçirildi gerektirir. `IEEVisualizerService` Arabirimi oluşturmak için gereken son arayüz, [EE'nin uyguladığı IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md) arabirimidir. Bu arabirim, görüntülenen özellikte değişiklikler yapılmasını sağlar. Tüm özellik verileri, EE tarafından da uygulanan bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) arabiriminde kapsüllenir.
 
-### <a name="accessing-property-data"></a>Özellik verilerine erişme
- Özellik verilerine erişme aracılığıyla gerçekleştirilir [IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi. Bu arabirim elde etmek için Visual Studio çağırır [QueryInterface](/cpp/atl/queryinterface) almak için özellik nesnesi üzerinde [IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimi (uygulayan aynı nesne üzerinde uygulanan [ IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md) arabirimi) ve ardından çağırır [GetPropertyProxy](../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) elde etmek için yöntemi `IPropertyProxyEESide` arabirimi.
+### <a name="accessing-property-data"></a>Özellik verilerine erişim
+ Özellik verilerine erişim [IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi üzerinden yapılır. Bu arabirimi elde etmek için Visual Studio, [IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimini almak için özellik nesnesi üzerinde [QueryInterface'i](/cpp/atl/queryinterface) arar [(IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md) `IPropertyProxyEESide` arabirimini uygulayan aynı nesne üzerinde uygulanır) ve ardından arabirimi elde etmek için [GetPropertyProxy](../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) yöntemini arar.
 
- Tüm veri küme içi ve dışı geçirilen `IPropertyProxyEESide` arabirimi içinde saklanmış olduğu [IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md) arabirimi. Bu arabirim, bayt dizisini temsil eder ve Visual Studio ve EE tarafından uygulanır. Bir özelliğin veriler değiştirilecek olduğunda, Visual Studio oluşturur bir `IEEDataStorage` aramalar ve yeni verileri tutan nesne [CreateReplacementObject](../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) yeni almak için bu veri nesnesi ile `IEEDataStorage` , sırasıyla nesnesini geçirilen [InPlaceUpdateObject](../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md) özelliğin verileri güncelleştirmek için. `IPropertyProxyEESide::CreateReplacementObject` uygulayan kendi sınıf örneği EE sağlayan `IEEDataStorage` arabirimi.
+ `IPropertyProxyEESide` Arayüze giren ve çıkan tüm veriler [IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md) arabiriminde saklanır. Bu arabirim bir dizi baytı temsil eder ve hem Visual Studio hem de EE tarafından uygulanır. Bir özelliğin verileri değiştirilecek olduğunda, Visual Studio `IEEDataStorage` yeni verileri tutan bir nesne oluşturur ve özelliğin verilerini `IEEDataStorage` güncelleştirmek için [InPlaceUpdateObject'e](../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md) geçirilen yeni bir nesne elde etmek için bu veri nesnesiyle [CreateReplacement Object'i](../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) çağırır. `IPropertyProxyEESide::CreateReplacementObject`EE'nin arabirimi uygulayan kendi sınıfını anlık `IEEDataStorage` olarak gerçekleştirmesini sağlar.
 
-## <a name="supporting-custom-viewers"></a>Özel görüntüleyiciler destekleme
- Bayrağı `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` ayarlanır `dwAttrib` alanını [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısı (bir çağrı tarafından döndürülen [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)) nesne ilişkilendirilmiş özel Görüntüleyici olduğunu belirtmek için kendisiyle. Bu bayrak ayarlandığında, Visual Studio alır [IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md) alanından arabirim [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi kullanılarak [QueryInterface](/cpp/atl/queryinterface).
+## <a name="supporting-custom-viewers"></a>Özel görüntüleyenleri destekleme
+ Bayrak, `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` nesnenin `dwAttrib` onunla ilişkili özel bir görüntüleyicisi olduğunu belirtmek için [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısının alanında [(GetPropertyInfo'ya](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)yapılan bir çağrıyla döndürülür) ayarlanır. Bu bayrak ayarlandığında, Visual Studio [QueryInterface](/cpp/atl/queryinterface)kullanarak [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty3.md) arabiriminden [IDebugProperty3](../../extensibility/debugger/reference/idebugproperty2.md) arabirimini alır.
 
- Kullanıcı özel Görüntüleyici seçerse, Visual Studio Görüntüleyicisi'nin kullanarak özel Görüntüleyici başlatır `CLSID` tarafından sağlanan `IDebugProperty3::GetCustomViewerList` yöntemi. Visual Studio sonra çağıran [DisplayValue](../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) değeri kullanıcıya göstermek için.
+ Kullanıcı özel bir görüntüleyici seçerse, Visual Studio `CLSID` `IDebugProperty3::GetCustomViewerList` özel görüntüleyiciyi yöntemle sağlanan görüntüleyiciyi kullanarak anında kullanır. Visual Studio daha sonra kullanıcıya değeri göstermek için [DisplayValue'ı](../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) çağırır.
 
- Normalde, `IDebugCustomViewer::DisplayValue` veri salt okunur bir görünümünü sunar. Verilerde yapılan değişiklikleri izin vermek için EE değişen veri özelliği nesnesinde destekleyen özel bir arabirim uygulamalıdır. `IDebugCustomViewer::DisplayValue` Yöntemi veri değiştirilmesini desteklemesi için bu özel arabirim kullanır. Yöntem için özel arabirim durumuna bağlı `IDebugProperty2` olarak arabirimi geçirilen `pDebugProperty` bağımsız değişken.
+ Normalde, `IDebugCustomViewer::DisplayValue` verilerin salt okunur görünümünü sunar. Verilerde değişikliklere izin vermek için, EE'nin bir özellik nesnesindeki verileri değiştirmeyi destekleyen özel bir arabirim uygulaması gerekir. Yöntem, `IDebugCustomViewer::DisplayValue` verileri değiştirmeyi desteklemek için bu özel arabirimi kullanır. Yöntem, `pDebugProperty` bağımsız değişken olarak `IDebugProperty2` geçirilen arabirimdeki özel arabirimi arar.
 
-## <a name="supporting-both-type-visualizers-and-custom-viewers"></a>Tür görselleştiricileri ve özel görüntüleyiciler hem destekleme
- Tür görselleştiricileri ve özel görüntüleyiciler içinde hem bir EE destekleyebilir [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) ve [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) yöntemleri. İlk olarak, EE bunu sağlayarak özel görüntüleyiciler sayısı tarafından döndürülen değer ekler [GetCustomViewerCount](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) yöntemi. İkinci olarak, EE ekler `CLSID`tarafından döndürülen listeye kendi özel görüntüleyiciler sn [GetCustomViewerList](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) yöntemi.
+## <a name="supporting-both-type-visualizers-and-custom-viewers"></a>Hem tür görselleştiricilerini hem de özel görüntüleyenleri destekleme
+ EE, [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) ve [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) yöntemlerinde hem tür görüntüleyicileri hem de özel görüntüleyenleri destekleyebilir. İlk olarak, [EE, GetCustomViewerCount](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) yöntemi yle döndürülen değere sağladığı özel görüntüleyenlerin sayısını ekler. İkinci olarak, EE, `CLSID` [GetCustomViewerList](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) yöntemi yle döndürülen listeye kendi özel görüntüleyenlerinin s'lerini ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)
-- [Tür görselleştiricisi ve özel Görüntüleyici](../../extensibility/debugger/type-visualizer-and-custom-viewer.md)
+- [Görevleri hata ayıklama](../../extensibility/debugger/debugging-tasks.md)
+- [Görselleştirici ve özel görüntüleyici yazın](../../extensibility/debugger/type-visualizer-and-custom-viewer.md)

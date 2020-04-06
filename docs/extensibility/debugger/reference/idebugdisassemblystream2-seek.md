@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Seek | Microsoft Docs
+title: IDebugDisassemblyStream2::Seek | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::Seek
 ms.assetid: afec3008-b1e0-4803-ad24-195dbfb6497e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e97da5b4b65b18c9d4c745dea2cb5f0915862731
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4954b3b278b3c7a6b798a4ffda3856ab8bb200c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310363"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732079"
 ---
 # <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
-Ayrıştırılmış kod akış yönergeler belirtilen konuma göre verilen sayıda okuma imleci taşır.
+Okuma işaretçisini sökme akışındaki okundu işaretçisini belirli bir konuma göre belirli sayıda yönerge taşır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +47,22 @@ int Seek( 
 
 ## <a name="parameters"></a>Parametreler
 `dwSeekStart`\
-[in] Bir değer [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) arama işlemi başlatmak için göreceli konumun belirten sabit listesi.
+[içinde] Arama işlemini başlatmak için göreli konumu belirten [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) numaralandırmadeğeri.
 
 `pCodeContext`\
-[in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) arama işlemini göreli olduğu kod bağlamı temsil eden nesne. Bu parametre yalnızca, kullanılan `dwSeekStart`  =  `SEEK_START_CODECONTEXT`; Aksi takdirde, bu parametre yoksayılır ve null değeri olabilir.
+[içinde] Arama işleminin göreli olduğu kod bağlamını temsil eden [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi. Bu parametre `dwSeekStart`  =  `SEEK_START_CODECONTEXT`yalnızca; aksi takdirde, bu parametre yoksayılır ve null bir değer olabilir.
 
 `uCodeLocationId`\
-[in] Arama işlemini göreli olduğu kod konum tanımlayıcısı. Bu parametre, kullanılan `dwSeekStart`  =  `SEEK_START_CODELOCID`; Aksi takdirde, bu parametre yoksayılır ve 0 olarak ayarlayın. İçin Açıklamalar bölümüne bakın [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) kod konum tanımlayıcısı bir açıklaması için yöntemi.
+[içinde] Arama işleminin göreli olduğu kod konumu tanımlayıcısı. Bu parametre kullanılırsa; `dwSeekStart`  =  `SEEK_START_CODELOCID` aksi takdirde, bu parametre yoksayılır ve 0 olarak ayarlanabilir. Kod konum tanımlayıcısının açıklaması için [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) yönteminin Açıklamalar bölümüne bakın.
 
 `iInstructions`\
-[in] Belirtilen konumuna göre taşımak için yönergeler sayısını `dwSeekStart`. Bu değer, geriye için negatif olabilir.
+[içinde] Belirtilen konuma göre hareket etmek için `dwSeekStart`talimat sayısı. Bu değer geriye doğru hareket etmek için negatif olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` arama konumu kullanılabilir yönergeleri listenin ötesinde bir nokta ise. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döndürür. Arama `S_FALSE` pozisyonu kullanılabilir yönergeler listesinin ötesinde bir noktaya geldiyse döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Listeye başlangıcından önce bir konumu arama ise okuma konumuna listedeki ilk yönerge ayarlanır. Bkz: listenin sonunda bir konuma ise, okuma konumuna son yönerge listesinde ayarlayın.
+ Arama, listenin başlangıcından önce bir konuma olsaydı, okuma konumu listedeki ilk yönergeye ayarlanır. See listenin sonundan sonra bir konuma olsaydı, okuma konumu listedeki son yönergeye ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

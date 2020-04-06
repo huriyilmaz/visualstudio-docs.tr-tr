@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::LoadSymbols | Microsoft Docs
+title: IDebugModule3::LoadSymbols | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModule3::LoadSymbols
 ms.assetid: 7548c8c1-cbc6-48aa-a845-19058d4a85bb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e1b23e7b1ae837087db198795ffeda6a5827f045
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4c61339305200acc9a6c572a1a96595dc4cb6f50
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323839"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726779"
 ---
 # <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
-Geçerli modül için sembolleri yükler.
+Geçerli modülün sembollerini yükler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,12 +38,12 @@ int LoadSymbols();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Yöntem başarılı olursa, döndürür `S_OK`. Başarısız olursa hata kodu döndürür.
+ Yöntem başarılı olursa, döndürür. `S_OK` Başarısız olursa, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem geçerli bir arama yolundan sembolleri yükler (hangi değiştirilebilir çağırarak [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) yöntemi).
+ Bu yöntem, geçerli arama yolundan semboller yükler [(SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) yöntemi çağırılarak değiştirilebilir).
 
- Bu yöntem üzerinden tercih edilen [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) yöntemi.
+ Bu yöntem [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) yöntemi yerine tercih edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

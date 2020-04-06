@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetRegistryRoot | Microsoft Docs
+title: IDebugExpressionEvaluator::SetRegistryRoot | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionEvaluator::SetRegistryRoot method
 ms.assetid: 790886d8-1975-4d3c-9a75-cd86c1faf4ca
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2f64272b38b6a41e8637e884f19da62d2fd1a1e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 11e7cd69ed3f1e1b23cc0f2f03f3fd2cf912d308
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325607"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729420"
 ---
 # <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
-Bu yöntem, kayıt defteri kökü ayarlar. Yan yana hata ayıklamak için kullanılır.
+Bu yöntem kayıt defteri kökünü ayarlar. Yan yana hata ayıklama için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int SetRegistryRoot(
 
 ## <a name="parameters"></a>Parametreler
 `ustrRegistryRoot`\
-[in] Yeni kayıt defteri kökü.
+[içinde] Yeni kayıt defteri kökü.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İfade değerlendirici ilk örneği işaret yüklendiğinde belirtilen kayıt defteri kökü genellikle ayarlanır ve Visual Studio'nun belirli bir sürümü için kayıt defteri anahtarı için (hkey_local_machıne\software\microsoft\visualstudio\\*X.Y* burada *X.Y* bir sürüm numarası).
+ Belirtilen kayıt defteri kökü genellikle ifade değerlendiricisi ilk anlık olarak ayarlandığında ve Visual Studio'nun belirli bir sürümü için kayıt\\defteri anahtarına işaret ettiğinde (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio*X.Y*, *X.Y'nin* bir sürüm numarası olduğu) ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

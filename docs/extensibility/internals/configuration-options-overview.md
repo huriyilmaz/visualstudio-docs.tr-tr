@@ -1,74 +1,74 @@
 ---
-title: Yapılandırma seçenekleri, genel bakış | Microsoft Docs
+title: Yapılandırma Seçeneklerine Genel Bakış | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project configurations
 - configuration options, about configuration options
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b27df2b9b93276ade06f97c9e80fd0c0483ef963
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6d5ac25fcef7b942b791402baf17982c9810e92a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309991"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709404"
 ---
 # <a name="configuration-options-overview"></a>Yapılandırma seçeneklerine genel bakış
-Projelerinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] oluşturulabilir, hatası ayıklanmış, çalıştırma ve/veya dağıtılan birden fazla yapılandırmaları destekler. Açıklanan özellikler, genellikle derleyici anahtarları ve dosya konumlarını adlandırılmış kümesi ile bir yapı türünü bir yapılandırmadır. Varsayılan olarak, yeni çözümleri iki yapılandırması içeren *hata ayıklama* ve *yayın*. Bu yapılandırmalar, kendi varsayılan ayarları kullanarak veya değiştirilmiş çözüm veya proje belirli gereksinimlerinizi karşılamak için uygulanabilir. Bazı paketler iki şekilde oluşturulabilir: yerinde bileşeni olarak veya bir ActiveX Düzenleyici. Projeleri birden çok yapılandırmada ancak destek gerekmez. Kullanılabilir tek yapılandırması varsa, bu yapılandırma tüm çözüm yapılandırmaları eşlenir.
+Projeler, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] oluşturulabilen, hata ayıklanabilen, çalıştırılabilen ve/veya dağıtılabilen birden çok yapılandırmayı destekleyebilir. Yapılandırma, adlandırılmış özellikler kümesi, genellikle derleyici anahtarları ve dosya konumları ile açıklanan bir yapı türüdür. Varsayılan olarak, yeni çözümler iki yapılandırmaları, *Hata Ayıklama* ve *Release*içerir. Bu yapılandırmalar varsayılan ayarları kullanılarak uygulanabilir veya özel çözüm ve/veya proje gereksinimlerinizi karşılayacak şekilde değiştirilebilir. Bazı paketler iki şekilde oluşturulabilir: ActiveX düzenleyicisi olarak veya yerinde bileşen olarak. Ancak, projelerin birden çok yapılandırmayı desteklemesi gerekmez. Yalnızca bir yapılandırma varsa, bu yapılandırma tüm çözüm yapılandırmalarına eşlenir.
 
- Yapılandırmaları, genellikle iki bölümden oluşur: yapılandırma adı (gibi *hata ayıklama* veya *yayın*) platform ayarları. Bir yapılandırmasının platform adı gibi bir API configuration hedefleri ayarlanan ortam veya işletim sistemi platformunu tanımlar. Kullanıcıları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir platform; oluşturulamıyor seçimlerden VSPackage sağlayan bir proje seçmelisiniz. Bir kullanıcı yüklemelerini bir VSPackage'ı paket geliştirme sırasında oluşturulan teslim platformu istenen herhangi bir platform adı ne zaman ortaya çıkabilir paket Oluşturucu tarafından ayarlanmış herhangi ölçütlere göre. Kullanıcı, ardından özellik sayfaları örnek oluşturulduğunda VSPackage'ı kullanılabilir platformlar listesinden seçebilirsiniz.
+ Yapılandırmalar genellikle iki bölümden oluşur: yapılandırma adı *(Hata Ayıklama* veya *Sürüm*gibi) ve platform ayarları. Yapılandırmanın platform adı, bir API kümesi veya işletim sistemi platformu gibi yapılandırmanın hedeflenedığı ortamı tanımlar. Kullanıcılar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir platform oluşturamaz; vspackage projesinin izin verdiği seçimlerden birini seçmelidirler. Bir kullanıcı bir VSPackage yüklediğinde, paketin geliştirilmesi sırasında oluşturulan dağıtım platformu, paket oluşturucu tarafından belirlenen ölçütlere göre istenilen platform adını ortaya çıkarabilir. Kullanıcı daha sonra, özellik sayfaları anında kullanıma sunulduğunda VSPackage aracılığıyla sunulan platformlar listesinden seçim yapabilir.
 
- Platform adlarını isteğe bağlı olduğundan tüm projeleri platformları kavramını destekler. Ne zaman bir yapılandırma eksik dize bir platform adı **yok** kullanıcı Arabiriminde görüntülenir.
+ Tüm projeler platform kavramını desteklemediğinden platform adları isteğe bağlıdır. Bir yapılandırmada bir platform adı olmadığında, **N/A** dizesi Kullanıcı Arabirimi'nde görüntülenir.
 
- Her çözüm yapılandırmaları yalnızca biri aynı anda etkin olabilir, kendi kümesine sahiptir. Bir çözüm yapılandırması, her proje birden fazla yapılandırmasından kümesidir. Bir çözüm yapılandırmasından bir proje dışlamak için seçeneği "en fazla" artını kaynaklanır. Kullanıcılar, kendi özel çözüm yapılandırmaları oluşturabilir.
+ Her çözümün kendi yapılandırmaları vardır ve bunlardan yalnızca biri aynı anda etkin olabilir. Çözüm yapılandırması, her projeden birden fazla yapılandırma kümesidir. "En fazla" şartı, bir projeyi çözüm yapılandırmasından dışlama seçeneğinden kaynaklanmaktadır. Kullanıcılar kendi özel çözüm yapılandırmalarını oluşturabilir.
 
- Aşağıdaki tabloda, bir proje için yapılandırmalardan Kurulum gösterilmektedir. Satırları yapılandırma adları ve platform adlarını sütunları ile etiketlenir.
+ Aşağıdaki tablo, bir proje için tipik yapılandırmalar kurulum gösterir. Satırlar yapılandırma adları ve platform adları içeren sütunlarla etiketlenir.
 
 |Yapılandırma adı|Platform: Win32|Platform: Win64|
 |------------------------|----------------------|----------------------|
-|*Hata ayıklama*|\<Hata ayıklama Win32 Ayarları >|\<Hata ayıklama Win64 Ayarları >|
-|*Sürüm*|\<Yayın Win32 Ayarları >|\<Yayın Win64 Ayarları >|
-|*MyConfig*|Yok|\<MyConfig Win64 Ayarları >|
+|*Hata ayıklama*|\<Hata Ayıklama Win32 ayarları>|\<Hata Win64 ayarları>|
+|*Yayınla*|\<Win32 ayarlarını> yayınlayın|\<Win64 ayarlarını> yayınlayın|
+|*MyConfig*|Yok|\<MyConfig Win64 ayarları>|
 
 > [!NOTE]
-> Oluşturamazsınız bir *MyConfig* Win32 platformu hedeflediğiniz proje sürece bırakan çözüm yapılandırma Win32 desteklemez.
+> Hedeflediğiniz proje Win32'yi desteklemediği sürece Win32 platformlarını hariç tutan bir *MyConfig* çözüm yapılandırması oluşturamazsınız.
 
- Etkin bir çözüm yapılandırmasını değiştirme bu çözümde oluşturulan, çalıştırma, hata ayıklama dağıtılan veya proje yapılandırmaları kümesini seçer. Örneğin, etkin çözüm yapılandırmasını değiştirirseniz *yayın* için *hata ayıklama*, tüm projeler, çözüm içinde belirtilen proje yapılandırması ile otomatik olarak oluşturulur çözümün hata ayıklama yapılandırması. Ayrıca proje yapılandırmaları adlı *hata ayıklama* sürece kullanıcı ortamının Yapılandırma Yöneticisi'nde el ile değişiklikler yaptı.
+ Bir çözüm için etkin yapılandırmayı değiştirmek, bu çözümde oluşturulmuş, çalıştırılan, debugged veya dağıtılan proje yapılandırmaları kümesini seçer. Örneğin, etkin çözüm yapılandırmasını *Release'den* *Hata Ayıklama'ya*değiştirirseniz, bu çözümdeki tüm projeler, çözümün hata ayıklama yapılandırmasında belirtilen projelerin yapılandırmasıyla otomatik olarak oluşturulur. Kullanıcı ortamın Configuration Manager'ında el ile değişiklik yapmadıysanız, projelerin yapılandırmaları *hata ayıklama* olarak da adlandırılır.
 
- Her proje için depolanan çözüm yapılandırma özellikleri, proje adı, proje yapılandırması adı, alınıp alınmayacağını oluşturmak veya dağıtmak için belirtmek için bayrakları ve platform adı içerir. Daha fazla bilgi için [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).
+ Her proje için depolanan çözüm yapılandırma özellikleri, proje adını, proje yapılandırma adını, yapının veya dağıtılmayacağını belirtmek için bayraklar ve platform adını içerir. Daha fazla bilgi için [Çözüm yapılandırması'na](../../extensibility/internals/solution-configuration.md)bakın.
 
- Kullanıcı görüntüleyebilir ve hiyerarşi içinde (Çözüm Gezgini) çözümü seçme ve özellik sayfaları açarak çözümü yapılandırma parametrelerini ayarlayın. Benzer şekilde, görüntüleyebilir ve Çözüm Gezgini'nde bir proje seçerek ve proje özellik sayfalarını açma proje yapılandırma parametrelerini ayarlayın.
+ Kullanıcı, hiyerarşideki çözümü (Çözüm Gezgini) seçerek ve özellik sayfalarını açarak çözüm yapılandırma parametrelerini görüntüleyebilir ve ayarlayabilir. Benzer şekilde, Solution Explorer'da bir proje seçerek ve bu projenin özellik sayfalarını açarak proje yapılandırma parametrelerini görüntüleyebilir ve ayarlayabilirsiniz.
 
- Kullanıcı ayrıca sürüm yapılandırma ayarlarını ve diğer hata ayıklama yapılandırma ayarlarıyla gerekirse kullanarak bir proje oluşturabilirsiniz. Daha fazla bilgi için [derleme için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md).
+ Kullanıcı ayrıca sürüm yapılandırma ayarlarını ve gerekirse hata ayıklama yapılandırma ayarları ile geri kalan tüm sürümü kullanarak bir proje oluşturabilirsiniz. Daha fazla bilgi [için, oluşturmak için Proje yapılandırması'na](../../extensibility/internals/project-configuration-for-building.md)bakın.
 
- Aşağıdaki diyagramda, çözüm ve proje yapılandırmaları destekler arabirimleri nasıl uygulandığı gösterilmiştir:
+ Aşağıdaki diyagram, çözüm ve proje yapılandırmalarını destekleyen arabirimlerin nasıl uygulandığını gösterir:
 
- ![Yapılandırma arabirimleri grafiği](../../extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces") yapılandırma arabirimleri
+ ![Yapılandırma arabirimleri grafik](../../extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces") Yapılandırma arabirimleri
 
- Önceki diyagramda ilgili birkaç Not:
+ Önceki diyagramla ilgili birkaç not:
 
-- `IDispatch` İsteğe bağlı yapılandırma nesnesi olarak işaretlenir. Özellikle, göz atma nesne üzerinde yapılandırma arabirime sahip isteğe bağlıdır.
+- `IDispatch`yapılandırma nesnesinde isteğe bağlı olarak işaretlenir. Özellikle, gözatma nesnesi üzerinde yapılandırma arabirimleri olması isteğe bağlıdır.
 
-- `IVsDebuggableProjectCfg` Yapılandırma nesnesi isteğe bağlı olarak işaretlenmiş, ancak hata ayıklama desteği için gereklidir.
+- `IVsDebuggableProjectCfg`yapılandırma nesnesinde isteğe bağlı olarak işaretlenir, ancak hata ayıklama desteği için gereklidir.
 
-- `IVsProjectCfg2` Yapılandırma nesnesi isteğe bağlı olarak işaretlenmiş, ancak çıkış destek gruplandırma için gereklidir.
+- `IVsProjectCfg2`yapılandırma nesnesinde isteğe bağlı olarak işaretlenir, ancak çıktı gruplandırma desteği için gereklidir.
 
-- Yapılandırma sağlayıcısı nesne isteğe bağlı bir nesne olarak işaretlenmiş ancak seçeneğini uygulamak yerdir. Proje nesne veya ayrı bir nesne üzerinde nesne uygulayabilir.
+- Config Sağlayıcı nesnesi isteğe bağlı bir nesne olarak işaretlenir, ancak seçenek nerede uygulanacağıdır. Nesneyi proje nesnesi üzerinde veya ayrı bir nesne üzerinde uygulayabilirsiniz.
 
-- `IVsCfgProvider2` platform desteği ve yapılandırmasını düzenleme için gereklidir. `IVsCfgProvider` Bu işlevselliği uygulamak, yeterli olur.
+- `IVsCfgProvider2`platform desteği ve yapılandırma düzenlemesi için gereklidir. `IVsCfgProvider`bu işlevi uygulamazsanız yeterlidir.
 
-- Aşağıdaki diyagramda ayrı nesneler aynı sınıfına pratik olduğunda birleştirilebilir olarak gösterilen bu nesnelerin bazıları belirli tasarım gereksinimlerinize göre. Bu bölümdeki diğer konulara göz ancak nesneleri ve bu nesnelerle ilişkili arabirimi Diyagramda gösterilen senaryoya göre açıklanmıştır.
+- Diyagramda ayrı nesneler olarak gösterilen bu nesnelerden bazıları, belirli tasarım gereksinimlerinize göre pratik olan aynı sınıfa birleştirilebilir. Ancak bu bölümün diğer bölümlerinde, bu nesnelerle ilişkili nesneler ve arabirimler diyagramda sunulan senaryoya göre ele alınacaktır.
 
-- Belirli nesneleri ayrı ayrı uygulanır. Örneğin, ayrı iş parçacığı ve nesne derleme olduğu yapı yapılandırmasını tanımlayan nesne ayrı olarak yönetmek için proje ve çözüm oluşturma oluşur.
+- Bazı nesneler ayrı olarak uygulanır. Örneğin, proje ve çözüm oluşturma ayrı iş parçacıkları üzerinde oluşur ve yapı yı yönetmek için nesne yapı yapılandırmasını açıklayan nesneden ayrı yaşıyor.
 
-  Önceki diyagramda yapılandırma sağlayıcısı nesnesi arabirimleri ve yapılandırma nesnesi arabirimleri hakkında daha fazla bilgi için bkz. [proje yapılandırması nesnesi](../../extensibility/internals/project-configuration-object.md). Ayrıca, [derleme için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md) nesnesi arabirimleri yapılandırma oluşturucusu ve yapı bağımlılığını daha fazla bilgi sağlar ve [dağıtımını yönetmek için proje yapılandırması](../../extensibility/internals/project-configuration-for-managing-deployment.md) Daha fazla yapılandırma dağıtıcı ve dağıtım bağımlılık nesneleri bağlı arabirimler açıklanmaktadır. Son olarak, [çıkış için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md) görüntülemek ve yapılandırmaya bağlı özellikleri ayarlamak için çıkış grubu ve çıkış nesnesi arabirimleri ve özellik sayfaları kullanımını açıklar.
+  Önceki diyagramdaki yapılandırma nesne arabirimleri ve yapılandırma sağlayıcısı nesne arabirimleri hakkında daha fazla bilgi için [Project yapılandırma nesnesi konusuna](../../extensibility/internals/project-configuration-object.md)bakın. Buna ek olarak, [yapı için Proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md) Yapılandırma oluşturucusu ve yapı bağımlılık nesnesi arabirimleri hakkında daha fazla bilgi sağlar ve [dağıtımı yönetmek için Project yapılandırması](../../extensibility/internals/project-configuration-for-managing-deployment.md) yapılandırma dağıtıcı ve dağıtım bağımlılık nesnelerine eklenen arabirimleri daha da açıklar. Son olarak, [çıktı için Project yapılandırması](../../extensibility/internals/project-configuration-for-output.md) çıktı grubu ve çıktı nesnesi arabirimlerini ve yapılandırmaya bağlı özellikleri görüntülemek ve ayarlamak için özellik sayfalarının kullanımını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>
-- [Derleme için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md)
-- [Çözüm Yapılandırması](../../extensibility/internals/solution-configuration.md)
+- [Bina için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md)
+- [Çözüm yapılandırması](../../extensibility/internals/solution-configuration.md)

@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTIES | Microsoft Docs
+title: KONU ÖZELLIKLERI | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - THREADPROPERTIES structure
 ms.assetid: 7d397207-db03-4ec0-9f79-3794056ed89f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a0e39102fa66c04a15042ffd82086ac66d3058ca
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bd0ed4e33b1f8e0e905f3c88493c9f513c177fbc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316178"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713431"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
-Bir iş parçacığı özelliklerini açıklar.
+İş parçacığının özelliklerini açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,35 +53,35 @@ public struct THREADPROPERTIES { 
 
 ## <a name="members"></a>Üyeler
  `dwFields`\
- Bayraklarının bir birleşimi [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) bu yapının hangi alanlarda geçerli olduğunu açıklayan sabit listesi,.
+ Bu yapıdaki hangi alanların geçerli olduğunu açıklayan [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) numaralandırmadan gelen bayrakların birleşimi.
 
  `dwThreadId`\
  İş parçacığı kimliği.
 
  `dwSuspendCount`\
- İş parçacığını askıya alma sayısı.
+ İş parçacığı askıya alma sayısı.
 
  `dwThreadState`\
- Bir değer [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) çalışma iş parçacığı durumunu belirten sabit listesi.
+ [ThreadSTATE](../../../extensibility/debugger/reference/threadstate.md) numaralandırmasından, çalışma iş parçacığının durumunu gösteren bir değer.
 
  `bstrPriority`\
- İş parçacığı önceliği belirten bir dize; Örneğin, "yukarıda Normal", "Normal" veya "Zaman kritik".
+ İş parçacığı önceliğini belirten bir dize; örneğin, "Normalin Üzerinde", "Normal", "Zaman Kritik".
 
  `bstName`\
  İş parçacığı adı.
 
  `bstrLocation`\
- Genellikle burada yürütme şu anda durdu yöntemin adı ifade edilen iş parçacığı konumu (en üstteki yığın çerçevesi genellikle).
+ İş parçacığı konumu (genellikle en üstteki yığın çerçevesi), genellikle yürütmenin şu anda durdurulduğu yöntemin adı olarak ifade edilir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı için bir çağrı tarafından doldurulur [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemi. Bu nedenle döndürülen bilgileri, genellikle doldurma içinde kullanılır **iş parçacıkları** penceresi.
+ Bu yapı [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine yapılan bir çağrı yla doldurulur. Döndürülen bilgiler genellikle **İş Parçacıkları** penceresinde kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

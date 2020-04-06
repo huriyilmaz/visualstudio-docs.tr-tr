@@ -1,26 +1,26 @@
 ---
-title: IDE GUID'leri | Microsoft Docs
+title: IDE REHBERLER | Microsoft Dokümanlar
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - GUIDs, integrated development environment
 - IDE, GUIDs
 ms.assetid: d31a0f97-b7be-4fb5-a942-8ba4527bc068
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: da2cdd5a292de0413845da0ce2d7e8b4678cf895
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 41f9931b8e36dcb363624ecbc67e186bd3f5f71c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311169"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710495"
 ---
 # <a name="ide-guids"></a>IDE GUID’leri
 
-<xref:Microsoft.VisualStudio.VSConstants> Sınıfı, aşağıdaki tabloda listelendiği gibi tümleşik geliştirme ortamının (IDE) bazı bölümlerinin GUID'leri yayımlar.
+Sınıf, <xref:Microsoft.VisualStudio.VSConstants> aşağıdaki tabloda listelenen tümleşik geliştirme ortamının (IDE) bazı bölümlerinin GUID'lerini yayımlar.
 
 ## <a name="core-systems"></a>Çekirdek sistemleri
 
@@ -29,13 +29,13 @@ ms.locfileid: "66311169"
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.HtmDocData_guid>|62C81794-A9EC-11D0-8198-00A0C91BBEE3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.HtmlEditorPackage_guid>|1B437D20-F8FE-11D2-A6AE-00104BCC7269|
 |<xref:Microsoft.VisualStudio.VSConstants.VsLanguageServiceGuid.HtmlLanguageService_guid>|58E975A0-F8FE-11D2-A6AE-00104BCC7269|
-|<xref:Microsoft.VisualStudio.VSConstants.CLSID.MiscellaneousFilesProject_guid>|A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3|
-|<xref:Microsoft.VisualStudio.VSConstants.CLSID.SolutionItemsProject_guid>|D1DCDB85-C5E8-11D2-BFCA-00C04F990235|
+|<xref:Microsoft.VisualStudio.VSConstants.CLSID.MiscellaneousFilesProject_guid>|A2FE74E1-B743-11d0-AE1A-00A0C90FFFC3|
+|<xref:Microsoft.VisualStudio.VSConstants.CLSID.SolutionItemsProject_guid>|D1DCDB85-C5E8-11d2-BFCA-00C04F990235|
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsEnvironmentPackage_guid>|DA9FB551-C724-11d0-AE1F-00A0C90FFFC3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.HtmlEditor_guid>|C76D83F8-A489-11D0-8195-00A0C91BBEE3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.TextEditor_guid>|8B382828-6202-11d1-8870-0000F87579D2|
 
-## <a name="broadly-visible-components"></a>Geniş çapta görünür bileşenleri
+## <a name="broadly-visible-components"></a>Genel olarak görünür bileşenler
 
 |Sabit|GUID|
 |--------------|----------|
@@ -44,7 +44,7 @@ ms.locfileid: "66311169"
 |Microsoft.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|
 |Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="files-virtual-and-physical-folders-and-subprojects"></a>Dosyaları, sanal ve fiziksel klasörleri ve projeler
+## <a name="files-virtual-and-physical-folders-and-subprojects"></a>Dosyalar, sanal ve fiziksel klasörler ve alt Projeler
 
 |Sabit|GUID|
 |--------------|----------|
@@ -80,12 +80,12 @@ ms.locfileid: "66311169"
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.StoreValidationPane_guid>|54065C74-1B11-4249-9EA7-5540D1A6D528|
 |Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="command-sets-and-properties"></a>Komutunu ayarlar ve Özellikler
+## <a name="command-sets-and-properties"></a>Komut kümeleri ve özellikleri
 
 |Sabit|GUID|
 |--------------|----------|
 |Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97|5EFC7975-14BC-11CF-9B2B-00AA00573819|
-|Microsoft.VisualStudio.VSConstants.GUID_VsUIHierarchyWindowCmds >|60481700-078b-11d1-aaf8-00a0c9055a90|
+|Microsoft.VisualStudio.VSConstants.GUID_VsUIHierarchyWindowCmds>|60481700-078b-11d1-aaf8-00a0c9055a90|
 
 ## <a name="iunknown"></a>IUnknown
 
@@ -93,7 +93,7 @@ ms.locfileid: "66311169"
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-C000-000000000046|
 
-## <a name="task-list-guids"></a>Görev listesi GUID'leri
+## <a name="task-list-guids"></a>Görev listesi GUIDs
 
 |Sabit|GUID|
 |--------------|----------|
@@ -109,7 +109,7 @@ ms.locfileid: "66311169"
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsTaskList_guid>|BC5955D5-aa0d-11d0-a8c5-00a0c921a4d2|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsTaskListPackage_guid>|4A9B7E50-aa16-11d0-a8c5-00a0c921a4d2|
 
-## <a name="component-selector-page-guids"></a>Bileşen Seçici sayfası GUID'leri
+## <a name="component-selector-page-guids"></a>Bileşen seçici sayfası GUIDs
 
 |Sabitler|GUID|
 |---------------|----------|
@@ -117,7 +117,7 @@ ms.locfileid: "66311169"
 |Microsoft.VisualStudio.VSConstants.GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|
 |Microsoft.VisualStudio.VSConstants.GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|
 
-## <a name="miscellaneous-shell-guids"></a>Çeşitli Kabuk GUID'leri
+## <a name="miscellaneous-shell-guids"></a>Çeşitli kabuk GUIDs
 
 |Sabitler|GUID|
 |---------------|----------|
@@ -127,6 +127,6 @@ ms.locfileid: "66311169"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen kodda COM sabitleri](../extensibility/com-constants-in-managed-code.md)
+- [Yönetilen koddaki COM sabitleri](../extensibility/com-constants-in-managed-code.md)
 - [IDE sabitleri](../extensibility/ide-constants.md)
-- [Proje s ystems genişletmeye yönelik IDE tanımlı komutlar](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [Proje ystemlerini genişletmek için IDE tanımlı komutlar](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

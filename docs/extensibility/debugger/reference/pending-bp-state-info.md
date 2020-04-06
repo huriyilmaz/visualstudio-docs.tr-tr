@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_INFO | Microsoft Docs
+title: PENDING_BP_STATE_INFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PENDING_BP_STATE_INFO structure
 ms.assetid: 4d73ceff-43f9-4e95-8dba-88e1fab2def3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 306f3f6ac5f12d2a26da958d50fae87c6e174355
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d66ecc63e133a75148f06b59b8f1ccf61fe2658d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349884"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714074"
 ---
-# <a name="pendingbpstateinfo"></a>PENDING_BP_STATE_INFO
-Bir kod konuma bağlamak hazır bir kesme noktası durumu hakkında bilgi içerir.
+# <a name="pending_bp_state_info"></a>PENDING_BP_STATE_INFO
+Bir kod konumuna bağlanmaya hazır bir kesme noktasının durumu hakkında bilgi içerir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,20 +43,20 @@ public struct PENDING_BP_STATE_INFO { 
 
 ## <a name="members"></a>Üyeler
  `state`\
- Bir değer [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) bekleyen kesme noktasının durumunu belirten sabit listesi.
+ Bekleyen kesme noktasının durumunu belirten [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) numaralandırmadeğeri.
 
  `flags`\
- Bayraklarının bir birleşimi [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) kesme noktası sanallaştırılmış olup olmadığını belirten sabit listesi.
+ Kesme noktasının sanallaştırılıp sanallaştırılmadığını belirten [numaralandırma PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) gelen bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı geçirilir [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) yöntemi burada da doldurulur.
+ Bu yapı doldurulduğu [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

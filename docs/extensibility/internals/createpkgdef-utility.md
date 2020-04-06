@@ -1,5 +1,5 @@
 ---
-title: CreatePkgDef yardımcı programı | Microsoft Docs
+title: CreatePkgDef Yardımcı Programı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - pkgdef
 - createpkgdef
 ms.assetid: c745cb76-47a6-49ff-9eed-16af0f748e35
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ab5866949d6ccfa9f3b1037abf7801ce40ace3d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9f437eb3586dc16bb0b4b9eb60cd303eb90db6c3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332278"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709163"
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef yardımcı programı
-Bir .dll dosyası için bir Visual Studio uzantısı bir parametre olarak alır ve oluşturur bir *.pkgdef* eşlik eden dosya *.dll* dosya. *.Pkgdef* dosya uzantısı yüklü olduğunda, sistem kayıt defterine yazılması tüm bilgileri içerir.
+Bir .dll dosyasını parametre olarak Visual Studio uzantısı için alır ve *.dll* dosyasına eşlik edecek bir *.pkgdef* dosyası oluşturur. *.pkgdef* dosyası, uzantı yüklendiğinde sistem kayıt defterine yazılması gereken tüm bilgileri içerir.
 
 > [!NOTE]
-> Çoğu Visual Studio SDK'yı otomatik olarak dahil edilen proje şablonları oluşturma *.pkgdef* dosyaları yapı işleminin bir parçası olarak. Bu belge paketleri el ile oluşturmanız veya kullanmak için mevcut paketleri dönüştürmek istediğiniz olanlar için tasarlanmıştır *.pkgdef* dağıtım.
+> Visual Studio SDK'da yer alan proje şablonlarının çoğu, yapı işleminin bir parçası olarak otomatik olarak *.pkgdef* dosyaları oluşturur. Bu belge, paketleri el ile oluşturmak veya varolan paketleri *.pkgdef* dağıtımını kullanmak üzere dönüştürmek isteyenler için tasarlanmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,55 +32,55 @@ Bir .dll dosyası için bir Visual Studio uzantısı bir parametre olarak alır 
 CreatePkgDef /out=<FileName> [/codebase] [/assembly] <AssemblyPath>
 ```
 
-## <a name="arguments"></a>Arguments
-**/ out =&lt;dosya adı&gt;** \
-Gerekli. Adını ayarlar *.pkgdef* çıktı dosyasına &lt;FileName&gt;.
+## <a name="arguments"></a>Bağımsız Değişkenler
+**/out=&lt;FileName&gt;**\
+Gereklidir. *.pkgdef* çıktı dosyasının adını &lt;FileName&gt;olarak ayarlar.
 
-**/ codebase**\
-İsteğe bağlı. Kayıt işlemine zorlar **CodeBase** yardımcı programı.
+**/codebase**\
+İsteğe bağlı. **CodeBase** yardımcı programı ile kayıt kuvvetleri.
 
-**/ Assembly**\
-Kayıt işlemine zorlar **derleme** yardımcı programı.
+**/montaj**\
+**Meclis** programı ile kayıt zorlar.
 
-**&lt;AssemblyPath&gt;** \
-Yolu *.dll* oluşturmak istediğiniz dosya *.pkgdef*.
+**&lt;Assemblypath&gt;**\
+*.pkgdef'i*oluşturmak istediğiniz *.dll* dosyasının yolu.
 
 ## <a name="remarks"></a>Açıklamalar
-Uzantı dağıtımı kullanarak *.pkgdef* dosyaları Visual Studio'nun önceki sürümleri kayıt defteri gereksinimlerini değiştirir.
+*.pkgdef* dosyalarını kullanarak genişletme dağıtımı Visual Studio'nun önceki sürümlerinin kayıt defteri gereksinimlerinin yerini alır.
 
 ::: moniker range=">=vs-2019"
 
-*.Pkgdef* dosyaları aşağıdaki konumlardan birinde yüklenmelidir:
+*.pkgdef* dosyaları aşağıdaki konumlardan birine yüklenmelidir:
 
-- *%LocalAppData%\Microsoft\Visual Studio\16.0\Extensions\\*
+- *%localappdata%\Microsoft\Visual Studio\16.0\Uzantılar\\*
 
-- *%vsinstalldir%\Common7\IDE\Extensions\\*
+- *%vsinstalldir%\Common7\IDE\Uzantılar\\*
 
-Yükleme klasörünü ise *%localappdata%\Microsoft\Visual Studio\16.0\Extensions\\* , uzantı Visual Studio tarafından kabul edilir, ancak varsayılan olarak devre dışıdır. Kullanıcı uzantıyı kullanarak etkinleştirebilirsiniz **uzantıları yönetme**.
+Yükleme klasörü *%localappdata%\Microsoft\Visual Studio\16.0\Extensions\\*ise, uzantı Visual Studio tarafından tanınır, ancak varsayılan olarak devre dışı bırakılır. Kullanıcı **Uzantıları Yönet'i**kullanarak uzantıyı etkinleştirebilir.
 
-Yükleme klasörünü ise *%vsinstalldir%\Common7\IDE\Extensions\\* , uzantı varsayılan olarak etkindir.
+Yükleme klasörü *%vsinstalldir%\Common7\IDE\Extensions\\*ise, uzantı varsayılan olarak etkinleştirilir.
 
 > [!NOTE]
-> **Uzantıları yönetme** aracı, bir VSIX paketinin bir parçası yüklü olduğu sürece bir uzantı erişmek için kullanılamaz.
+> **Uzantıları Yönet** aracı, VSIX paketinin bir parçası olarak yüklenmediği sürece uzantıya erişmek için kullanılamaz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-*.Pkgdef* dosyaları aşağıdaki konumlardan birinde yüklenmelidir:
+*.pkgdef* dosyaları aşağıdaki konumlardan birine yüklenmelidir:
 
-- *%LocalAppData%\Microsoft\Visual Studio\15.0\Extensions\\*
+- *%localappdata%\Microsoft\Visual Studio\15.0\Uzantılar\\*
 
-- *%vsinstalldir%\Common7\IDE\Extensions\\*
+- *%vsinstalldir%\Common7\IDE\Uzantılar\\*
 
-Yükleme klasörünü ise *%localappdata%\Microsoft\Visual Studio\15.0\Extensions\\* , uzantı Visual Studio tarafından kabul edilir, ancak varsayılan olarak devre dışıdır. Kullanıcı uzantıyı kullanarak etkinleştirebilirsiniz **Uzantılar ve güncelleştirmeler**.
+Yükleme klasörü *%localappdata%\Microsoft\Visual Studio\15.0\Extensions\\*ise, uzantı Visual Studio tarafından tanınır, ancak varsayılan olarak devre dışı bırakılır. Kullanıcı **Uzantıları ve Güncelleştirmeleri**kullanarak uzantısı etkinleştirebilirsiniz.
 
-Yükleme klasörünü ise *%vsinstalldir%\Common7\IDE\Extensions\\* , uzantı varsayılan olarak etkindir.
+Yükleme klasörü *%vsinstalldir%\Common7\IDE\Extensions\\*ise, uzantı varsayılan olarak etkinleştirilir.
 
 > [!NOTE]
-> **Uzantılar ve güncelleştirmeler** aracı, bir VSIX paketinin bir parçası yüklü olduğu sürece bir uzantı erişmek için kullanılamaz.
+> **Uzantılar ve Güncelleştirmeler** aracı, VSIX paketinin bir parçası olarak yüklenmediği sürece uzantıya erişmek için kullanılamaz.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Createexpınstance yardımcı programı](../../extensibility/internals/createexpinstance-utility.md)
+- [CreateExpInstance yardımcı programı](../../extensibility/internals/createexpinstance-utility.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::DestroyProgram | Microsoft Docs
+title: IDebugEngine2::DestroyProgram | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::DestroyProgram
 ms.assetid: 0c9e2698-c70f-4770-a7bb-39650e9c3a1f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c20459329eeb9e61447c707ef6c95adf01945e5d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ce139dd22361d9914693cbe8ad723656ab7d4f26
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330082"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731101"
 ---
 # <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
-Belirtilen program beklenmedik şekilde sona erdi ve DE program için tüm başvuruları temizlemek bir hata ayıklama altyapısı (DE) bildirir ve olay gönderme bir program yok.
+Bir hata ayıklama altyapısına (DE) belirtilen programın genel olarak sonlandırıldığını ve DE'nin programa yapılan tüm başvuruları temizlemesi ve bir program yok etme olayı göndermesi gerektiğini bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,15 +41,15 @@ int DestroyProgram( 
 
 ## <a name="parameters"></a>Parametreler
 `pProgram`\
-[in] Bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) beklenmedik şekilde sonlandırıldı program temsil eden nesne.
+[içinde] Atipik olarak sonlandırılan programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemi çağrıldıktan sonra DE sonradan gönderir bir [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) olay oturumu hata ayıklama Yöneticisi (SDM) geri dönün.
+ Bu yöntem çağrıldıktan sonra, DE daha sonra oturum hata ayıklama yöneticisine (SDM) bir [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) olayını geri gönderir.
 
- Bu yöntem uygulanmadı (döndürür `E_NOTIMPL`) DE aynı işlemde hata ayıklanan programa olarak çalışıyorsa. Bu yöntem, yalnızca DE aynı işlemde SDM olarak çalışıyorsa uygulanır.
+ Debugged program olarak `E_NOTIMPL`aynı işlemde çalışıyorsa, bu yöntem uygulanmaz (döndürür). Bu yöntem yalnızca DE SDM ile aynı işlemde çalıştığında uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

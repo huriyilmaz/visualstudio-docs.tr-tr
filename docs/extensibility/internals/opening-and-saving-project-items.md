@@ -1,5 +1,5 @@
 ---
-title: Açma ve proje öğelerini kaydetme | Microsoft Docs
+title: Proje Öğelerinin Açılması ve Kaydedilmesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,59 +7,59 @@ helpviewer_keywords:
 - files [Visual Studio], opening and saving
 - editors [Visual Studio SDK], file persistence
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77a3417bc15bc9c4c6149b4e77dc4fdcebe5cd6e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bbb89d99e401be6bae7d8ee9be8ee33fa7574723
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314929"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706965"
 ---
 # <a name="opening-and-saving-project-items"></a>Proje Öğelerini Açma ve Kaydetme
-Yeni bir proje türü eklediğinizde, proje dosyalarınızı kaydetme ve açma yönetmelidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı (IDE). Aşağıdaki konular, dosyaları açma ve kaydetme için farklı yaklaşımlara tartışın.
+Yeni bir proje türü eklediğinizde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamında (IDE) proje dosyalarınızın açılmasını ve kaydedilmesi durumunda yönetmeniz gerekir. Aşağıdaki konular, dosyaların açılması ve kaydedilmesi için farklı yaklaşımları tartışır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Dosya Aç Komutunu Kullanarak Dosyaları Görüntüleme](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)
 
- Sunar IDE'nin nasıl işleyeceğini bir adım adım açıklama **açık dosya** komut ve bu komuta yanıt projeleri rolü.
+ **IDE'nin Açık Dosya** komutunu nasıl işlediğine ve projelerin bu komuta yanıt vermedeki rolüne ilişkin adım adım bir açıklama sağlar.
 
 - [Birlikte Aç Komutunu Kullanarak Dosyaları Görüntüleme](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)
 
- Sunar IDE'nin nasıl işleyeceğini bir ayrıntılı, adım adım açıklama **birlikte Aç** bazı standart düzenleyicileri, tercih ettiğiniz bir dosya açma isteyen komutu.
+ IDE'nin Açık Komutu'nu nasıl işlediğine ilişkin **Open With** ayrıntılı, adım adım bir açıklama sağlayarak, bazı standart düzenleyici seçenekleri olan bir dosyanın açılmasını ister.
 
-- [Nasıl yapılır: Projeye Özgü Düzenleyiciler Açma](../../extensibility/how-to-open-project-specific-editors.md)
+- [Nasıl Yapılır: Projeye Özgü Düzenleyicileri Açma](../../extensibility/how-to-open-project-specific-editors.md)
 
- Bir projeye özgü Düzenleyicisi'ni kullanarak belirli bir tür, projenizdeki dosyaları açılması gerektiğini belirtmek için adım adım yönergeler sağlar.
+ Projenizde belirli bir türdeki dosyaların projeye özel bir düzenleyici kullanılarak açılması gerektiğini belirtmek için adım adım yönergeler sağlar.
 
-- [Nasıl yapılır: Standart Düzenleyiciler Açma](../../extensibility/how-to-open-standard-editors.md)
+- [Nasıl Yapılır: Standart Düzenleyicileri Açma](../../extensibility/how-to-open-standard-editors.md)
 
- Dosyalar için standart bir düzenleyici proje türünüzü açmak IDE etkinleştirme belirtmek için adım adım yönergeler sağlar.
+ IDE'nin proje türündeki dosyalar için standart bir düzenleyici yi nasıl açacağını belirtmek için adım adım yönergeler sağlar.
 
-- [Nasıl yapılır: Açık Belgeler için Düzenleyiciler Açma](../../extensibility/how-to-open-editors-for-open-documents.md)
+- [Nasıl Yapılır: Açık Belgeler için Düzenleyicileri Açma](../../extensibility/how-to-open-editors-for-open-documents.md)
 
- Açık bir dosya için bir projeye özgü düzenleyicisini açmak için adım adım yönergeler sağlar.
+ Açık bir dosya için projeye özgü bir düzenleyiciyi açmak için adım adım yönergeler sağlar.
 
 - [Standart Belge Kaydetme](../../extensibility/internals/saving-a-standard-document.md)
 
- IDE nasıl işlediğini ayrıntılı bir açıklama sağlar **Kaydet**, **Kaydet**, ve **Tümünü Kaydet** komutları bir belge için standart bir düzenleyicide açık.
+ IDE'nin **Kaydet,** **Farklı Kaydet**ve Standart bir düzenleyicide açılan bir belge için Tüm komutları **kaydet** işlemlerini nasıl yaptığına ilişkin ayrıntılı bir açıklama sağlar.
 
 - [Özel Belge Kaydetme](../../extensibility/internals/saving-a-custom-document.md)
 
- Bir diyagram ve IDE nasıl işlediğini konusunda ayrıntılı bilgi sağlar **Kaydet**, **Kaydet**, ve **Tümünü Kaydet** komutları belgeler için özel bir düzenleyicide açık.
+ IDE'nin **Kaydet,** **Farklı Kaydet**ve Özel bir düzenleyicide açılan belgeler için Tüm komutları **kaydet** işlemlerini nasıl yaptığına ilişkin bir diyagram ve ayrıntılı açıklama sağlar.
 
 - [Projedeki Bir Dosyayı Hangi Düzenleyicinin Açacağını Belirleme](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)
 
- Uygun Düzenleyici ya da bir dosya için tasarımcı seçmek için IDE'yi izlediği süreç ele alınmaktadır.
+ Bir dosya için uygun düzenleyiciyi veya tasarımcıyı seçmek için IDE'nin izlediği işlemi tartışır.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Özel Düzenleyiciler ve Tasarımcılar Oluşturma](../../extensibility/creating-custom-editors-and-designers.md)
 
- IDE barındırabilir ve tanımlarını her düzenleyicinin verir düzenleyicileri dört türlerini listeler.
+ IDE'nin barındırabileceği dört editör türünü listeler ve her editörün açıklamalarını verir.
 
 - [Proje Türleri](../../extensibility/internals/project-types.md)
 
- Proje öğeleri nasıl biçimlendirileceğini nasıl projeleri kod derlenmiş ve yerleşik denetlenmesine ve düzenleyicileri nasıl açıldığı gibi ele alınmaktadır.
+ Projelerin kodun derlenme ve oluşturulme biçimini, düzenleyicilerin nasıl açıldığını ve proje öğelerinin nasıl biçimlendirilip biçimlendirilebildiğini tartışır.

@@ -1,25 +1,25 @@
 ---
-title: IDebugSymbolProviderDirect::GetAppIDFromAddress | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetAppIDFromAddress | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSymbolProviderDirect::GetAppIDFromAddress
 - GetAppIDFromAddress
 ms.assetid: d76a0f36-79c4-4c58-9db3-880b00d11610
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 59078cd574c30992d332983704aba4d70f069d5c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df1dbea23cf29809c5f504359ebf02b40c14e6e2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347441"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719164"
 ---
 # <a name="idebugsymbolproviderdirectgetappidfromaddress"></a>IDebugSymbolProviderDirect::GetAppIDFromAddress
 Hata ayıklama adresi verilen uygulama etki alanı tanımlayıcısını alır.
@@ -42,13 +42,13 @@ int GetAppIDFromAddress(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in] Tarafından temsil edilen adresi hata ayıklama [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi.
+[içinde] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata giderme adresi.
 
 `pAppID`\
-[out] Uygulama etki alanı tanımlayıcısı.
+[çıkış] Uygulama etki alanının tanımlayıcısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

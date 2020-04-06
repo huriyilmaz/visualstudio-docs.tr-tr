@@ -1,5 +1,5 @@
 ---
-title: Öğe dahil | Microsoft Docs
+title: Öğe Ekle | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Include element (VSCT XML schema)
 - VSCT XML schema elements, Include
 ms.assetid: c923dfe6-084a-4105-aec1-f0a3f8399c54
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7287f4e8b611f55ea28e648aec3f95d1407bf07e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ea89185d28be2816a690d867dbb3eccbb739e04
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350105"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710356"
 ---
-# <a name="include-element"></a>Öğe Ekle
-INCLUDE öğesi bulunabilir dosyayı belirtir. sağlanan üzerinde geçerli dosyasına ekleme yolu ekleyin.  Tüm semboller ve tanımlanan türleri derlenen sonuçtaki bir parçası olur.
+# <a name="include-element"></a>Öğe ekle
+Ekle öğesi, verilen dosyada bulunabilecek bir dosyayı, geçerli dosyaya ekleme yolunu belirtir.  Tanımlanan tüm semboller ve türler derlenen sonucun bir parçası olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,8 +36,8 @@ INCLUDE öğesi bulunabilir dosyayı belirtir. sağlanan üzerinde geçerli dosy
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|href|Gerekli. Üstbilgi dosyası yolu:<br /><br /> href="stdidcmd.h"|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Href|Gereklidir. Üstbilgi dosyasına giden yol:<br /><br /> href="stdidcmd.h"|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu Öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -49,7 +49,7 @@ INCLUDE öğesi bulunabilir dosyayı belirtir. sağlanan üzerinde geçerli dosy
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|Tüm komutları temsil eden öğeler tanımlar — diğer bir deyişle, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları — IDE'ye VSPackage sağlayan.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage'In IDE'ye sağladığı komutları (yani menü öğeleri, menüler, araç çubukları ve açılan kutular) temsil eden tüm öğeleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 

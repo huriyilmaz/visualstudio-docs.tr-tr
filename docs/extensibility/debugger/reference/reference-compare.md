@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_COMPARE | Microsoft Docs
+title: REFERENCE_COMPARE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - REFERENCE_COMPARE enumeration
 ms.assetid: e31cdc78-f621-498b-9ca4-aefa790b9f6f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d166917ec9770e3f8d1f41f3774676278b894724
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2aa9e7c608c4aabdbb808629112b922a5ed3322e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322354"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713727"
 ---
-# <a name="referencecompare"></a>REFERENCE_COMPARE
+# <a name="reference_compare"></a>REFERENCE_COMPARE
 Başvurular için karşılaştırma türünü belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -46,24 +46,24 @@ public enum enum_REFERENCE_COMPARE { 
 
 ## <a name="fields"></a>Alanlar
  `REF_COMPARE_EQUAL`\
- Bir eşittir karşılaştırma belirtir.
+ Eşit karşılaştırma belirtir.
 
  `REF_COMPARE_LESS_THAN`\
- Daha az belirtir-karşılaştırması.
+ Daha az karşılaştırma belirtir.
 
  `REF_COMPARE_GREATER_THAN`\
- Büyüktür belirtir-karşılaştırması.
+ Karşılaştırmadan daha büyük bir belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bağımsız değişken olarak geçirilen [karşılaştırma](../../../extensibility/debugger/reference/idebugreference2-compare.md) yöntemi.
+ [Karşılaştır](../../../extensibility/debugger/reference/idebugreference2-compare.md) metoduna bağımsız değişken olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
-- [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Karşılaştır](../../../extensibility/debugger/reference/idebugreference2-compare.md)

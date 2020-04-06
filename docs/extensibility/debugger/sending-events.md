@@ -1,41 +1,41 @@
 ---
-title: Olayları gönderme | Microsoft Docs
+title: Etkinlikler Gönderme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], sending events
 ms.assetid: 064231e7-59b5-4437-8240-a23c0a7ec2a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a2c87b2e05e4ffe94d77333095438f43b644976
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5ec0d3aa29da562147b71b8efde49baf07d8ae0b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311334"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713038"
 ---
 # <a name="send-events"></a>Olayları gönderme
-Hata ayıklayıcı ile hata ayıklama altyapısı (DE) arasındaki iletişim için DCOM bir olay modeline mekanizmadır. Olayları COM nesneleri olarak gönderilir ve her bir olay belirtin parametreleri vardır:
+Hata ayıklama ve hata ayıklama altyapısı (DE) arasındaki iletişim mekanizması DCOM'a dayalı bir olay modelidir. Olaylar COM nesneleri olarak gönderilir ve her olayın aşağıdakileri belirten parametreleri vardır:
 
-- Olay adında DE.
+- Olayı çağıran DE.
 
-- Ne açıklaması.
+- Olanların tarifi.
 
-- İşlem, program ve iş parçacığı bilgisi, olayın gerçekleştiği bağlamı tanımlar. İşlem, bir DE gönderilen olaylar için gönderilmez.
+- Olayın oluştuğu yerin bağlamını tanımlayan işlem, program ve iş parçacığı bilgileri. İşlem, de'den gönderilen olaylar için gönderilmez.
 
-- Zaman uyumlu veya zaman uyumsuz olay olup olmadığını belirten bir olay türü.
+- Olayın senkron mu yoksa eşzamanlı mı olduğunu gösteren olay türü.
 
-  Tüm hata ayıklama olaylarını yöntemi kullanılarak gönderilen [IDebugEventCallback2::Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md).
+  Tüm hata ayıklama olayları [IDebugEventCallback2::Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md)yöntemi kullanılarak gönderilir.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Olay kaynakları](../../extensibility/debugger/event-sources-visual-studio-sdk.md) iki olay kaynağını açıklar: hata ayıklama altyapısı (DE) ve oturum Yöneticisi (SDM) hata ayıklama.
+ [Olay kaynakları](../../extensibility/debugger/event-sources-visual-studio-sdk.md) İki olay kaynağını açıklar: hata ayıklama altyapısı (DE) ve oturum hata ayıklama yöneticisi (SDM).
 
- [Desteklenen olay türleri](../../extensibility/debugger/supported-event-types.md) şu anda desteklenen olay türleri ele alınmaktadır: zaman uyumsuz ve zaman uyumlu.
+ [Desteklenen etkinlik türleri](../../extensibility/debugger/supported-event-types.md) Şu anda desteklenen olay türlerini açıklar: asynchronous ve senkron.
 
- [Olay açıklamaları](../../extensibility/debugger/event-descriptions.md) olayları ve bunların kullanılması nedeniyle tanımlar.
+ [Olay açıklamaları](../../extensibility/debugger/event-descriptions.md) Olayları ve kullanım nedenlerini tanımlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
- [Bir özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) bir DE hata ayıklama hizmetleri sağlamak için yorumlayıcı veya işletim sistemi ile nasıl çalıştığı açıklanır.
+ [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Hata ayıklama hizmetleri sağlamak için de'nin tercüman veya işletim sistemiyle nasıl çalıştığını açıklar.

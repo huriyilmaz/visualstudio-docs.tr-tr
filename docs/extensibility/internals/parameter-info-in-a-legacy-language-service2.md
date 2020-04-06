@@ -1,5 +1,5 @@
 ---
-title: Eski dil Service2 parametre bilgilerini | Microsoft Docs
+title: Eski Dil Hizmetinde Parametre Bilgisi2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - language services [managed package framework], IntelliSense Parameter Info
 - Parameter Info (IntelliSense), supporting in language services [managed package framework]
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed95be7611c4733e2d10691bb0bf5eeb798a67b4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e2c40c9ca5c038a70714545f4133db0c0dd686d5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314666"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706743"
 ---
-# <a name="parameter-info-in-a-legacy-language-service"></a>Eski dil hizmetinde parametre bilgisi
-IntelliSense parametre bilgisi, kullanıcı, parametre listesi yazdığında, yöntemin imzası görüntüleyen bir araç ipucu başlangıç karakteri (genellikle bir açık parantez) için bir yöntem parametresi listesinden ' dir. Her parametre girilmesi ve parametre ayırıcı (genellikle bir virgül) yazılı olarak araç ipucu bir sonraki parametreyi kalın olarak göstermek için güncelleştirilir.
+# <a name="parameter-info-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Parametre Bilgileri
+IntelliSense Parametre Bilgisi, kullanıcı yöntem parametre listesi listesi için parametre listesi başlangıç karakterini (genellikle açık bir parantez) yazdığında bir yöntemin imzasını görüntüleyen bir araç ipucudur. Her parametre girilir ve parametre ayırıcı (genellikle virgül) yazılır, araç ucu kalın bir sonraki parametreyi göstermek için güncelleştirilir.
 
- Yönetilen paket framework (MPF) sınıfları, parametre bilgisi araç ipucu yönetmek için destek sağlar. Ayrıştırıcının parametresi Başlat, parametre ardından, ve parametresi bitiş karakterlerini ve yöntem imzaları ve bunların ilişkili parametrelerin bir listesi sağlamalısınız algılaması gerekir.
+ Yönetilen paket çerçevesi (MPF) sınıfları, Parametre Bilgileri araç ipucunu yönetmek için destek sağlar. Arayıcı, parametre başlangıcını, parametreyi sonraki ve parametre sonu karakterlerini algılamalıdır ve yöntem imzalarının ve bunların ilişkili parametrelerinin bir listesini sağlamalıdır.
 
- Eski dil Hizmetleri bir VSPackage'ı bir parçası olarak uygulanır, ancak dil hizmeti özellikleri uygulamak için daha yeni MEF uzantıları kullanmaktır. Daha fazla bilgi için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../../extensibility/extending-the-editor-and-language-services.md).
+ Eski dil hizmetleri BIR VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın en yeni yolu MEF uzantılarını kullanmaktır. Daha fazla bilgi için [Editör ve Dil Hizmetlerini Genişletme'ye](../../extensibility/extending-the-editor-and-language-services.md)bakın.
 
 > [!NOTE]
-> Yeni bir düzenleyici API hemen kullanmaya başlamak öneririz. Bu dil hizmetinizin performansını ve yeni düzenleyici özellikleri yararlanmanıza olanak tanır.
+> Yeni düzenleyici API'yi mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
 ## <a name="implementation"></a>Uygulama
- Ayrıştırıcının tetikleyici değer ayarlamalısınız <xref:Microsoft.VisualStudio.Package.TokenTriggers> bir parametre listesi başlangıç karakteri (genellikle bir açık parantez) bulduğunda ayarlanır. Ayarlamanız gerekir bir <xref:Microsoft.VisualStudio.Package.TokenTriggers> parametre ayırıcı (genellikle bir virgül) bulduğunda tetikleyin. Bu, güncelleştirilmesi ve bir sonraki parametreyi kalın olarak göstermek bir parametre bilgisi araç ipucu neden olur. Ayrıştırıcının tetikleyici değer ayarlamalısınız <xref:Microsoft.VisualStudio.Package.TokenTriggers> olduğunda, parametre listesi son karakter (genellikle bir kapatma ayracı) bulur.
+ Bir parametre listesi başlangıç <xref:Microsoft.VisualStudio.Package.TokenTriggers> karakteri (genellikle açık bir parantez) bulduğunda tespçi tetikdeğerini ayarlamak gerekir. Bir parametre <xref:Microsoft.VisualStudio.Package.TokenTriggers> ayırıcı (genellikle virgül) bulduğunda bir tetikleyici ayarlamak gerekir. Bu, Parametre Bilgisi araç ucunun güncelleştirilmesine ve bir sonraki parametrenin kalın olarak gösterilmesine neden olur. Parser parametre listesi <xref:Microsoft.VisualStudio.Package.TokenTriggers> bitiş karakteri (genellikle yakın bir parantez) bulursa tetikleme değerini ayarlamalıdır.
 
- <xref:Microsoft.VisualStudio.Package.TokenTriggers> Tetikleyicisi değeri başlatan bir çağrı <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> sırayla çağıran yöntem <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemi ayrıştırıcı bir ayrıştırma nedeni ile <xref:Microsoft.VisualStudio.Package.ParseReason>. Ayrıştırıcının parametre listesi'ı başlatmadan önce karakter tanımlayıcı tanınan bir yöntem adı olduğunu belirlerse, yöntem imzalarının eşleştirilmesi listesini döndürür. <xref:Microsoft.VisualStudio.Package.AuthoringScope> nesne. Herhangi bir yöntem imzaları bulunmazsa, parametre bilgisi araç ipucu listedeki ilk imzayla görüntülenir. Bu araç ipucu sonra daha fazla imzası yazıldığında güncelleştirilir. Parametre listesi son karakter yazıldığında, parametre bilgisi araç ipucu görünümünden kaldırılır.
+ Tetikleyici <xref:Microsoft.VisualStudio.Package.TokenTriggers> <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> değeri, yönteme bir çağrı başlatır ve <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> bu da yöntemi ayrıştırıcı olarak <xref:Microsoft.VisualStudio.Package.ParseReason>çağırır. Parser parametre listesi başlangıç karakteri önce tanımlayıcı tanınan bir yöntem adı olduğunu belirlerse, <xref:Microsoft.VisualStudio.Package.AuthoringScope> nesnede eşleşen yöntem imzaları listesini döndürür. Herhangi bir yöntem imzası bulunursa, Parametre Bilgileri araç ipucu listedeki ilk imzayla birlikte görüntülenir. Bu araç ucu daha sonra imza daha fazla yazılır olarak güncelleştirilir. Parametre listesi bitiş karakteri yazıldığında, Parametre Bilgileri araç ipucu görünümden kaldırılır.
 
 > [!NOTE]
-> Parametre bilgisi araç ipucu düzgün biçimlendirildiğinden, özellikleri geçersiz kılmalısınız emin olmak için <xref:Microsoft.VisualStudio.Package.Methods> uygun karaktere sağlamak için sınıf. Temel <xref:Microsoft.VisualStudio.Package.Methods> sınıfı varsayar C#-style metodu imzası. Bkz: <xref:Microsoft.VisualStudio.Package.Methods> sınıfı bu nasıl yapılabilir ilişkin ayrıntılar için.
+> Parametre Bilgileri araç ucunun düzgün biçimlendirilmiş olduğundan emin olmak için, <xref:Microsoft.VisualStudio.Package.Methods> uygun karakterleri sağlamak için sınıftaki özellikleri geçersiz kılmanız gerekir. Taban <xref:Microsoft.VisualStudio.Package.Methods> sınıf C#stili yöntem imzasını varsayar. Bunun <xref:Microsoft.VisualStudio.Package.Methods> nasıl yapılabileceğini öğrenmek için sınıfa bakın.
 
-## <a name="enabling-support-for-the-parameter-info"></a>Parametre bilgisi desteğini etkinleştirme
- Parametre bilgisi araç ipuçları desteklemek için ayarlamalısınız `ShowCompletion` parametresinin adlı <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> için `true`. Dil hizmeti bu kayıt defteri girdisinden değerini okur <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> özelliği.
+## <a name="enabling-support-for-the-parameter-info"></a>Parametre Bilgileri için Destek Etkinleştirme
+ Parametre Bilgisi araç uçlarını desteklemek `ShowCompletion` <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> için, `true`'nin adı geçen parametreyi ayarlamanız gerekir. Dil hizmeti, bu kayıt defteri girişinin <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> değerini özellikten okur.
 
- Ayrıca, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> özelliği ayarlanmalıdır `true` gösterilecek parametre bilgisi araç ipucu için.
+ Buna ek <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> olarak, parametre `true` bilgisi araç ucunun gösterilebilmek için özelliğin ayarlanabilmesi gerekir.
 
 ### <a name="example"></a>Örnek
- Parametre listesi karakterleri algılamak ve uygun Tetikleyiciler ayarı basitleştirilmiş bir örnek aşağıda verilmiştir. Bu örnek yalnızca tanım amaçlıdır. Tarayıcınız bir yöntem içerdiğini varsayar `GetNextToken` tanımlar ve bir metin satırından belirteçleri döndürür. Karakter doğru tür gördüğünde her kod örneği yalnızca Tetikleyiciler ayarlar.
+ Burada parametre listesi karakterleri algılama ve uygun tetikleyicileri ayarlama basitleştirilmiş bir örnektir. Bu örnek yalnızca açıklayıcı amaçlar içindir. Tarayıcınızın bir metin satırından `GetNextToken` belirteçleri tanımlayan ve döndüren bir yöntem içerdiğini varsayar. Örnek kod, doğru karakter türünü gördüğünde tetikleyicileri ayarlar.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -91,17 +91,17 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>Parametre bilgisi araç ipucu ayrıştırıcısını destekleme
- <xref:Microsoft.VisualStudio.Package.Source> Sınıfı içeriğini ilgili bazı varsayımlarda <xref:Microsoft.VisualStudio.Package.AuthoringScope> ve <xref:Microsoft.VisualStudio.Package.AuthoringSink> parametre bilgisi araç ipucu görüntülenir ve sınıfları.
+## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>Parser'daki Parametre Bilgi Araç İpucunun Desteklenmesi
+ Parametre <xref:Microsoft.VisualStudio.Package.Source> Bilgisi araç ipucu görüntülendiğinde <xref:Microsoft.VisualStudio.Package.AuthoringScope> <xref:Microsoft.VisualStudio.Package.AuthoringSink> ve güncelleştirildiğinde sınıf ve sınıfların içeriği hakkında bazı varsayımlar yapar.
 
-- Ayrıştırıcının verilen <xref:Microsoft.VisualStudio.Package.ParseReason> parametre listesi başlangıç karakteri türü olduğunda.
+- Parametre listesi <xref:Microsoft.VisualStudio.Package.ParseReason> başlangıç karakteri yazıldığında parser verilir.
 
-- Verilen konuma <xref:Microsoft.VisualStudio.Package.ParseRequest> nesnedir parametre listesinde hemen sonra karakter. Ayrıştırıcının getirin ve bunları sürümünüz listesinde depolayan kullanılabilir tüm yöntem bildirimleri imzalarını toplamak gerekir <xref:Microsoft.VisualStudio.Package.AuthoringScope> nesne. Bu liste, yöntem adı içerir yöntemi türü (veya dönüş türü) ve olası parametrelerin bir listesi. Bu liste, daha sonra yöntem imzası veya parametre bilgisi İpucunda görüntülenecek imzaları aranır.
+- <xref:Microsoft.VisualStudio.Package.ParseRequest> Nesnede verilen konum, parametre listesi başlangıç karakterinden hemen sonradır. Ayrıştırıcı, bu konumda bulunan tüm yöntem bildirimlerinin imzalarını toplamalı ve <xref:Microsoft.VisualStudio.Package.AuthoringScope> bunları nesnenin sürümündeki bir listede depolamalıdır. Bu liste yöntem adı, yöntem türü (veya iade türü) ve olası parametrelerin listesini içerir. Bu liste daha sonra Parametre Bilgileri araç ipucunda görüntülenecek yöntem imzası veya imzaları için aranır.
 
-  Ayrıştırıcı tarafından belirtilen satırın ardından ayrıştırma gerekir <xref:Microsoft.VisualStudio.Package.ParseRequest> Girilmekte olan yöntemin yanı sıra kullanıcının ne kadar boyunca adı toplamak için nesnedir parametreleri metin. Bu yöntemin adını geçirerek gerçekleştirilir <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> metodunda <xref:Microsoft.VisualStudio.Package.AuthoringSink> nesnesi ve ardından arama <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> parametre listesi karakter başlattığınızda yöntemi ayrıştırılır, çağırma <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> yöntemi, parametre listesi sonraki karakteri, ayrıştırılmış ve son olarak çağıran <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> parametre listesi son karakter ayrıştırıldığında yöntemi. Bu yöntem çağrılarının sonuçlarını tarafından kullanılan <xref:Microsoft.VisualStudio.Package.Source> sınıfı parametre bilgisi araç ipucu uygun şekilde güncelleştirilecek.
+  Ayrıştırıcı daha sonra girilen <xref:Microsoft.VisualStudio.Package.ParseRequest> yöntemin adını yanı sıra kullanıcının parametreleri yazma da ne kadar boyunca toplamak için nesne tarafından belirtilen satırı ayrıştırmak gerekir. Bu, yöntemin <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> adını <xref:Microsoft.VisualStudio.Package.AuthoringSink> nesneüzerindeki yönteme geçirerek ve parametre <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> listesi başlangıç karakteri ayrıştırıldığında yöntemi çağırarak, parametre listesi sonraki karakter ayrıştırıldığında <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> yöntemi çağırarak ve son olarak parametre listesi bitiş karakteri ayrıştırıldığında yöntemi çağırarak gerçekleştirilir. Bu yöntem çağrılarının <xref:Microsoft.VisualStudio.Package.Source> sonuçları, Parametre Bilgileri araç ucunu uygun şekilde güncelleştirmek için sınıf tarafından kullanılır.
 
 ### <a name="example"></a>Örnek
- Kullanıcı girebilir metin satırı aşağıda verilmiştir. Çizginin altındaki sayılar, hangi adımın (ayrıştırma taşır soldan sağa varsayılarak) satırı o konumda ayrıştırıcı tarafından gerçekleştirilen gösterir. Buradaki varsayım satırından önce her şeyi zaten "testfunc" yöntem imzası dahil olmak üzere, yöntem imzaları için ayrıştırıldıktan emin olur.
+ Burada, kullanıcının girebileceği bir metin satırı verebilirsiniz. Çizginin altındaki sayılar, satırdaki o konumda ki parser tarafından hangi adımın atını gösterir (ayrıştırma soldan sağa doğru hareket eder varsayarak). Burada varsayım satır önce her şey zaten "testfunc" yöntemi imza dahil olmak üzere yöntem imzaları için ayrıştırılmış olmasıdır.
 
 ```
 testfunc("a string",3);
@@ -109,12 +109,12 @@ testfunc("a string",3);
      12          3 4
 ```
 
- Ayrıştırıcının gereken adımlar aşağıda ana hatlarıyla özetlenen:
+ Ayrıştırıcının attığı adımlar aşağıda özetlenmiştir:
 
-1. Ayrıştırıcı çağrıları <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> "testfunc" metni ile.
+1. Parser metin <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> "testfunc" ile çağırır.
 
-2. Ayrıştırıcı çağrıları <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>.
+2. Ayrıştırıcı <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>çağırır.
 
-3. Ayrıştırıcı çağrıları <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>.
+3. Ayrıştırıcı <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>çağırır.
 
-4. Ayrıştırıcı çağrıları <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>.
+4. Ayrıştırıcı <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>çağırır.

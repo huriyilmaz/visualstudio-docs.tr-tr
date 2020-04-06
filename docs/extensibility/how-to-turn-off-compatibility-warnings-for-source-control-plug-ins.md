@@ -1,45 +1,45 @@
 ---
-title: Kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma | Microsoft Docs
+title: Kaynak Kontrol Eklentileri için Uyumluluk Uyarılarını Kapat | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, turning off compatibility warnings
 - compatibility warnings, turning off
 ms.assetid: ba318e12-921b-4b7a-a8c2-12c712be1dbf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6dc8edcb6ee10be8b020424d8f8c247770a98f27
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 22dd3821426aa1dae6265c520ddac60dd93e1c5e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324802"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710722"
 ---
-# <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>Nasıl yapılır: Kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma
-Bir kullanıcı birden fazla uyumluluk uyarılarını görebilirsiniz, kaynak denetiminde yoksayılacaktır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Sunulan uyarılar, kaynak denetimi eklentisi yeteneklerine bağlıdır ve ayrıntılı buraya devre dışı bırakılabilir.
+# <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>Nasıl yapilir: Kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma
+Bir kullanıcı, 'de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]kaynak denetimi kullanırken birkaç uyumluluk uyarısı görebilir. Sunulan uyarılar kaynak kontrol eklentisinin özelliklerine bağlıdır ve burada ayrıntılı olarak belirtildiği gibi devre dışı tutulabilir.
 
-### <a name="to-disable-the-warning-to-ensure-optimal-source-control-integration-with-visual-studio"></a>Uyarıyı devre dışı bırakmak için: "Visual Studio ile en iyi kaynak denetimi tümleştirmesi sağlamak için"
+### <a name="to-disable-the-warning-to-ensure-optimal-source-control-integration-with-visual-studio"></a>Uyarıyı devre dışı kalmak için: "Visual Studio ile en iyi kaynak kontrolü tümleştirmesini sağlamak için"
 
-- (Gerekirse değeri ekleyerek) aşağıdaki kayıt defteri girdisini ayarlayın:
+- Aşağıdaki kayıt defteri girişini ayarlayın (gerekirse değer ekleme):
 
-   **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = DWORD: 00000001**
+   **HKEY_CURRENT_USER\Yazılım\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = dword:00000001**
 
-   Tüm bu uyarı görüntülenir olmayan[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] eklentiler.
+   Bu uyarı,[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] eklenti olmayan tüm ler için görüntülenir.
 
-### <a name="to-disable-the-warning-the-installed-source-control-provider-does-not-support-all-the-capabilities"></a>Uyarıyı devre dışı bırakmak için: "Kurulan kaynak denetim sağlayıcısı tüm yetenekleri desteklemiyor"
+### <a name="to-disable-the-warning-the-installed-source-control-provider-does-not-support-all-the-capabilities"></a>Uyarıyı devre dışı kaldırmak için: "Yüklü kaynak denetim sağlayıcısı tüm yetenekleri desteklemez"
 
-- (Değer gerekirse ekleme), aşağıdaki iki kayıt defteri değerlerini ayarlayın:
+- Aşağıdaki iki kayıt defteri değerini ayarlama (gerekirse değerleri ekleme):
 
-     **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = DWORD: 00000000**
+     **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = dword:00000000**
 
-    **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = DWORD: 00000001**
+    **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = dword:00000001**
 
-     (Diğer bir deyişle, yalnızca bir dosya ve proje aynı anda denetleyebilir,) kaynak denetimi eklentisi açıkça yeniden giriş için birden çok proje desteklemiyorsa bu uyarı görüntülenir.
+     Kaynak denetim eklentisi birden çok proje için yeniden canlandırmayı açıkça desteklemiyorsa (diğer bir anda yalnızca bir dosya ve projeyi iade edebilirse) bu uyarı görüntülenir.
 
-     Yeniden giriş desteklemek en iyi (`SCC_CAP_REENTRANT` yeteneği); bunu yapmak kadar bu uyarıyı kaldırmak. Ancak, bu destek mümkün değilse, bu kayıt defteri girişleri ayarlanabilir.
+     Bu reentrancy (yetenek)`SCC_CAP_REENTRANT` desteklemek için en iyisidir; bunu yapmak bu uyarıyı kaldırır. Ancak, bu destek mümkün değilse, bu kayıt defteri girişleri ayarlanabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özellik bayrakları](../extensibility/capability-flags.md)
+- [Yetenek bayrakları](../extensibility/capability-flags.md)

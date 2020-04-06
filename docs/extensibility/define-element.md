@@ -1,25 +1,25 @@
 ---
-title: Define öğesi | Microsoft Docs
+title: Elementi Tanımla | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Define
 - Define element (VSCT XML schema)
 ms.assetid: 5aee74e3-de41-4dc6-9618-93e158af56dd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d82bd5050955f69e23c71569a13ac1a5d428aef2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fc09de1d822f41b25397c7a56c7cce4449a9e551
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348142"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712268"
 ---
-# <a name="define-element"></a>Define öğesi
-Sembol ad ve değer çifti tanımlar. Bu simge, koşullu özniteliklere göre değerlendirilebilir. Daha fazla bilgi için [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md). Ayrıca bkz: [Symbols öğesi](../extensibility/symbols-element.md).
+# <a name="define-element"></a>Öğeyi tanımla
+Sembol adı ve değer çiftini tanımlar. Bu sembol koşullu özniteliklerle değerlendirilebilir. Daha fazla bilgi için [koşullu öznitelikleri](../extensibility/vsct-xml-schema-conditional-attributes.md)bakın. Ayrıca bakınız [Semboller öğesi.](../extensibility/symbols-element.md)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,9 +34,9 @@ Sembol ad ve değer çifti tanımlar. Bu simge, koşullu özniteliklere göre de
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|name|Gerekli. Sembol adı:<br /><br /> ad = "Modu"|
-|value|Gerekli. Sembol değeri:<br /><br /> değer = "Standart"|
-|Koşul|İsteğe bağlı. Daha fazla bilgi için [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|ad|Gereklidir. Sembolün adı:<br /><br /> name="Mod"|
+|value|Gereklidir. Sembolün değeri:<br /><br /> değer="Standart"|
+|Koşul|İsteğe bağlı. Daha fazla bilgi için [koşullu öznitelikleri](../extensibility/vsct-xml-schema-conditional-attributes.md)bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -45,7 +45,7 @@ Sembol ad ve değer çifti tanımlar. Bu simge, koşullu özniteliklere göre de
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage sağlayan komutlar tümleşik geliştirme ortamı (IDE) temsil eden tüm öğeleri tanımlar. Örneğin, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın tümleşik geliştirme ortamına (IDE) sağladığı komutları temsil eden tüm öğeleri tanımlar. Örneğin, menü öğeleri, menüler, araç çubukları ve açılan kutular.|
 
 ## <a name="example"></a>Örnek
 

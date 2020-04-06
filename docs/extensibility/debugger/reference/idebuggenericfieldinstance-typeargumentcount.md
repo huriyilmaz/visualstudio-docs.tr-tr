@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Docs
+title: IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - TypeArgumentCount
 - IDebugGenericFieldInstance::TypeArgumentCount
 ms.assetid: e662c5ea-a5c1-478e-a268-5980dadffcd1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89f1a92cc5e595bd2574174f0d0776c6605e42da
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0f0272e86f5c1bbbd840ee222b2048440338302d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337007"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728158"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
-Bu örnek için parametre bağımsız değişkenlerini türünün sayısını döndürür.
+Bu örnek için tür parametre bağımsız değişkenlerinin sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,13 +40,13 @@ int TypeArgumentCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcArgs`\
-[out içinde] Tür parametresi bağımsız değişkenleri için bu örneği sayısı.
+[içinde, dışarı] Bu örnek için tür parametre bağımsız değişkenlerinin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, liste\<int >, bu yöntem, 1 döndürür ve liste\<int, float2 > 2 Bu yöntemi döndürür. Bu yöntem, hiçbir tür bağımsız değişkenleri yoksa 0 döndürür.
+ Örneğin, liste\<int>, bu yöntem 1 döndürür ve, int list,float2\<bu yöntem> bu yöntem 2 döndürür. Tür bağımsız değişkenleri yoksa, bu yöntem 0 döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

@@ -1,5 +1,5 @@
 ---
-title: Extern öğesi | Microsoft Docs
+title: Extern Element | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - VSCT XML schema elements, Extern
 - Extern element (VSCT XML schema)
 ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34e38618a153aa74bdc2449895272fc9e399c82d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342793"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711496"
 ---
-# <a name="extern-element"></a>Extern öğesi
-Extern öğesi herhangi bir dış başlığını başvurur ( *.h*) ile birleştirmek için dosyaları *.vsct* dosya derleme zamanında. VSCT derleyici için verilen ya da başvurduğu yoluna birleştirilecek dosyaları olmalıdır bir [INCLUDE öğesi](../extensibility/include-element.md). Diğer dosyalar olabilir *.vsct* veya C++ üst bilgi dosyaları.
+# <a name="extern-element"></a>Extern elemanı
+Extern öğesi, derleme zamanında *.vsct* dosyasıyla birleştirmek için herhangi bir dış üstbilgi (*.h*) dosyasına başvurur. Birleştirilecek dosyalar VSCT derleyicisine verilen veya Bir [Ekle öğesi](../extensibility/include-element.md)tarafından başvurulan Ekle yolunda olmalıdır. Dosyalar diğer *.vsct* dosyaları veya C++ üstbilgi dosyaları olabilir.
 
- Üst bilgi dosyaları tanımlarında biçiminde olmalıdır "# [Value] [simge] define" önceden tanımlı değilse değer başka bir sembol olabilir. Tanımları komut öğeleri koşullu ifadelerde kullanılabilir. Gerçekten kullanılmıyorsa herhangi bir simge atılacak.
+ Üstbilgi dosyalarındaki tanımlar "#define [Sembol] [Değer]" biçiminde olmalıdır, değer daha önce tanımlanmışsa başka bir sembol olabilir. Tanımlar komut öğelerinin koşullu ifadelerinde kullanılabilir. Gerçekte kullanılmayan herhangi bir sembol atılır.
 
- CommandTable öğesi Extern öğesi
+ CommandTable Elemanı Extern Elemanı
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,9 +40,9 @@ Extern öğesi herhangi bir dış başlığını başvurur ( *.h*) ile birleşti
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|href|Gerekli. Üstbilgi dosyası yolu:<br /><br /> href="stdidcmd.h"|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
-|dil|İsteğe bağlı. Tüm varsayılan dili [ \<dizeleri >](../extensibility/strings-element.md) komut tablosu öğeleri:<br /><br /> Dil = "en-us"|
+|Href|Gereklidir. Üstbilgi dosyasına giden yol:<br /><br /> href="stdidcmd.h"|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|language|İsteğe bağlı. Komut tablosundaki tüm [ \<String'lerin>](../extensibility/strings-element.md) öğelerinin varsayılan dili:<br /><br /> dil="en-us"|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -54,7 +54,7 @@ Extern öğesi herhangi bir dış başlığını başvurur ( *.h*) ile birleşti
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|Tüm komutları temsil eden öğeler tanımlar — diğer bir deyişle, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları — IDE'ye VSPackage sağlayan.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage'In IDE'ye sağladığı komutları (yani menü öğeleri, menüler, araç çubukları ve açılan kutular) temsil eden tüm öğeleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
@@ -70,5 +70,5 @@ Extern öğesi herhangi bir dış başlığını başvurur ( *.h*) ile birleşti
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,31 +1,31 @@
 ---
-title: TaskScheduler sınıfı - dahili üyeler | Microsoft Docs
+title: TaskScheduler Class - Dahili Üyeler | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - TaskScheduler class [.NET Framework debug engines]
 - debug engines, TaskScheduler class [.NET Framework]
 ms.assetid: 87f1c969-0217-4464-8907-7609c1bf61d3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 865e12819a5e7325886c0f7f5d8425a6b3d2e393
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a53abc8b24edb06445c23c19744d00d50de8735d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331328"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712575"
 ---
-# <a name="taskscheduler-class---internal-members"></a>TaskScheduler sınıfı - dahili üyeler
-Bu makalede iç üyelerine <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> yardımcı sınıf, bir özel hata ayıklayıcı uygulama. Bu sınıf hakkında genel bilgi için bkz: <xref:System.Threading.Tasks.TaskScheduler> başvurusu makalesinde.
+# <a name="taskscheduler-class---internal-members"></a>TaskScheduler Class - Dahili üyeler
+Bu makalede, özel bir <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> hata ayıklama uygulamanıza yardımcı sınıfın iç üyeleri açıklanır. Bu sınıf hakkında genel bilgi <xref:System.Threading.Tasks.TaskScheduler> için başvuru makalesine bakın.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (içinde *mscorlib.dll*)
+ **Montaj:** mscorlib *(mscorlib.dll*olarak)
 
- Bu iç üyeleri .NET Framework'ten erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu dahili üyelere .NET Framework'den erişemediğinizden, aşağıdaki sözdizimi Ortak Ara Dil 'de (CIL) sağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,13 +38,13 @@ Bu makalede iç üyelerine <xref:System.Threading.Tasks.TaskScheduler?displayPro
 
 ### <a name="methods"></a>Yöntemler
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |----------|-----------------|
-|[GetScheduledTasksForDebugger](../../extensibility/debugger/getscheduledtasksfordebugger-method.md)|Tüm zamanlanmış görevlerin dizisini alır.|
-|[GetTaskSchedulersForDebugger](../../extensibility/debugger/gettaskschedulersfordebugger-method.md)|Tüm alır <xref:System.Threading.Tasks.TaskScheduler> şu anda etkin olan nesneler.|
+|[GetScheduledTasksForDebugger](../../extensibility/debugger/getscheduledtasksfordebugger-method.md)|Zamanlanmış tüm görevlerin bir dizisini alır.|
+|[GetTaskSchedulersForDebugger](../../extensibility/debugger/gettaskschedulersfordebugger-method.md)|Şu anda etkin <xref:System.Threading.Tasks.TaskScheduler> olan tüm nesnelerin bir dizi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>
-- [.NET Framework için paralel uzantı dahili bileşenleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı dahili](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

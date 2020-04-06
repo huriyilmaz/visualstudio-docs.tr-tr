@@ -1,45 +1,45 @@
 ---
-title: İşlemler | Microsoft Docs
+title: Süreçler | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], processes
 ms.assetid: a6a1efdc-b243-40c8-a778-6f69f6b018be
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c45fc70fe61c7221a8042d275dd44d69eb5d11e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 392c59b90bb117dded0f528bc33a617370b091a7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351492"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738241"
 ---
 # <a name="processes"></a>İşlemler
-Hata ayıklayıcı mimarisinde bir *işlem*:
+Hata ayıklama mimarisinde, bir *işlem:*
 
-- Bir dizi program için bir kapsayıcıdır. Bu iş parçacığı bir dizi için bir kapsayıcı bir Windows işlem yakından benzerdir.
+- Bir dizi program için bir kapsayıcıdır. Bir dizi iş parçacığı için bir kapsayıcı olan Bir Windows işlemine yakından benzer.
 
-- Kendisini adı, tanımlayıcı veya fiziksel tanımlayıcısı tarafından tespit edebilirsiniz.
+- Ad, tanımlayıcı veya fiziksel tanımlayıcı ile kendini tanıtabilir.
 
-- Tüm çalışan programları (ve bunların iş parçacıkları) sıralayabilirsiniz.
+- Tüm çalışan programları (ve iş parçacıklarını) sayısalatabilir.
 
-- Kendisi, içinde çalıştığı bağlantı noktası ve içerdiği makine tanımlayabilirsiniz.
+- Kendisini, içinde çalıştığını bağlantı noktasını ve onu içeren makineyi açıklayabilir.
 
-- Bir tane oluşturabilirsiniz veya daha fazla program oluşturduğu programlardan herhangi biriyle sonlandırmak veya bir programın durmasına neden.
+- Bir veya daha fazla program oluşturabilir, oluşturduğu programlardan herhangi birini sonlandırabilir veya bir programın durmasına neden olabilir.
 
-- Tarafından temsil edilen bir [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) işlemi başlatıldığında oluşturulduğu arabirimi. Bir işlem ya da oturum hata ayıklama Yöneticisi tarafından (SDM) başlatılmadı veya [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).
+- İşlem başlatıldığında oluşturulan bir [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) arabirimi ile temsil edilir. Oturum hata ayıklama yöneticisi (SDM) veya [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)tarafından başlatılan bir işlem.
 
-  Hata ayıklama paketi bir hata ayıklama altyapısı (DE) bir işleme çağırarak iliştirilebilir [iliştirme](../../extensibility/debugger/reference/idebugprocess2-attach.md), işleyebileceği işlemde çalışan tüm olası programlar için DE bağlayan anlamına gelir. Örneğin, ortak dil çalışma zamanı DE bir işleme iliştirir, yönetilen kod çalışan programlar ekler.
+  Hata ayıklama [paketi, Ekle'yi](../../extensibility/debugger/reference/idebugprocess2-attach.md)arayarak bir işleme hata ayıklama altyapısı (DE) ekleyebilir, bu da DE'nin işleyebilir işleminde çalışan tüm olası programlara iliştirildiği anlamına gelir. Örneğin, ortak dil çalışma zamanı DE bir işleme ekleniyorsa, yalnızca yönetilen kod çalıştıran programlara bağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Programlar](../../extensibility/debugger/programs.md)
 - [İş Parçacıkları](../../extensibility/debugger/threads.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
-- [Paket hatalarını ayıklama](../../extensibility/debugger/debug-package.md)
-- [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)
+- [Hata ayıklama kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklama paketi](../../extensibility/debugger/debug-package.md)
+- [Hata ayıklama motoru](../../extensibility/debugger/debug-engine.md)
 - [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)
 - [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)
-- [Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)
+- [İliştir](../../extensibility/debugger/reference/idebugprocess2-attach.md)

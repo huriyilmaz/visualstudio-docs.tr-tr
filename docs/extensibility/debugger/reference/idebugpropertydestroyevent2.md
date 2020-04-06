@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyDestroyEvent2 | Microsoft Docs
+title: IDebugPropertyDestroyEvent2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPropertyDestroyEvent2 interface
 ms.assetid: 301b7a75-ecfa-46f1-9131-66cf3e4be147
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a52e9a1a3723566dd7a2dbdfc3cfe1a4d41261ed
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ce15f389f22513e08b06c0d097cdac4aec3c35bf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322750"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720899"
 ---
 # <a name="idebugpropertydestroyevent2"></a>IDebugPropertyDestroyEvent2
-Bu arabirim, belirli bir belge ile ilişkili olan bir özellik edilmek üzereyken hata ayıklama altyapısı (DE) oturum hata ayıklama Yöneticisi (SDM) gönderilir.
+Bu arabirim, belirli bir belgeyle ilişkili bir özellik yok olmak üzereyken hata ayıklama yöneticisine (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,28 +28,28 @@ Bu arabirim, belirli bir belge ile ilişkili olan bir özellik edilmek üzereyke
 IDebugPropertyDestroyEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- DE bir özellik yok edildi bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde. SDM kullanan [QueryInterface](/cpp/atl/queryinterface) erişimi `IDebugEvent2` arabirimi. Bu arabirim, daha önce bir komut dosyasıyla ilişkili bir özelliği DE oluşturduysa uygulanır; özellik yok etme ilişkili betik IDE'den kaldırır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bir özelliğin yok edildiğini bildirmek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır. SDM `IDebugEvent2` [arabirime](/cpp/atl/queryinterface) erişmek için QueryInterface kullanır. De daha önce bir komut dosyası ile ilişkili bir özellik oluşturduysa, bu arabirim uygulanır; özelliği yok etmek, ilişkili komut dosyasını IDE'den kaldırır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE oluşturur ve bu olay nesneyi bir özelliği yok edilmiş raporu gönderir. Olay kullanılarak gönderilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi.
+ DE oluşturur ve bir özellik yok edildiğini bildirmek için bu olay nesnesi gönderir. Olay, debugged olan programa iliştirildiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Yöntemini aşağıdaki tabloda gösterilmektedir `IDebugPropertyDestroyEvent2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugPropertyDestroyEvent2`. yöntemini gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|Yok edilecek özelliği alır.|
+|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|Mülkün yok edilmesine neden olur.|
 
 ## <a name="remarks"></a>Açıklamalar
- Açıklamalar için bkz. [IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) neden hakkında ayrıntılı bilgi için bu olaylar kullanılır.
+ Bu olayların neden kullanıldığına ilişkin ayrıntılar için [IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) açıklamalarına bakın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

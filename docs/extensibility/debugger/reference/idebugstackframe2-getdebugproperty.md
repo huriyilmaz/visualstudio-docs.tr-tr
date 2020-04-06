@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetDebugProperty | Microsoft Docs
+title: IDebugStackFrame2::GetDebugProperty | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetDebugProperty
 ms.assetid: 02c2fa04-1424-4bca-9936-feaecd2afab6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4c520482d78b8630c639088ca98d66782f2e2d75
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: aa98107ada265d232647d27b4050b507d4581df7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321813"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719786"
 ---
 # <a name="idebugstackframe2getdebugproperty"></a>IDebugStackFrame2::GetDebugProperty
-Yığın çerçevesinin özellikleri açıklamasını alır.
+Yığın çerçevesinin özelliklerinin açıklamasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetDebugProperty ( 
 
 ## <a name="parameters"></a>Parametreler
 `ppDebugProp`\
-[out] Döndürür bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) Bu yığın çerçevesinin özellikleri tanımlayan nesne.
+[çıkış] Bu yığın çerçevesinin özelliklerini açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çağırma [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yerel değişkenler, yöntem parametreleri, yazmaçlar ve yığın çerçevesiyle ilgili "this" işaretçisi uygun filtreleri yöntemle alabilir.
+ [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemini uygun filtrelerle çağırmak, yığın çerçevesiyle ilişkili yerel değişkenleri, yöntem parametrelerini, kayıtları ve "bu" işaretçisini alabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

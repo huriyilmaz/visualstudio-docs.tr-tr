@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsNullReference | Microsoft Docs
+title: IDebugObject::IsNullReference | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::IsNullReference method
 ms.assetid: 6dbfcdb0-954f-4486-8fac-7ea8d003e3a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1fb6b5c0692ec43feec0cf4de48d9ce730b0032e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e4b6e5f2d28d27deb5e4e1ff8278a071ff9110fd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323524"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726524"
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
-Bu nesne bir null başvuru olup olmadığını sınar.
+Bu nesnenin null başvurusu olup olmadığını sına.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int IsNullReference(
 
 ## <a name="parameters"></a>Parametreler
 `pfIsNull`\
-[out] Sıfır olmayan döndürür (`TRUE`) varsa bu nesne bir null başvuru; Aksi takdirde, sıfır döndürür (`FALSE`).
+[çıkış] Bu nesne null`TRUE`başvurusu ise sıfır olmayan ( ) döndürür; aksi takdirde,`FALSE`sıfır () döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir null başvuru boş bir nesneye veya nesnenin için atanmadı anlamına gelir.
+ Null başvuru boş bir nesne veya atanmamış bir nesne anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

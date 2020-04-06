@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::SetBytes | Microsoft Docs
+title: IDebugPointerObject::SetBytes | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPointerObject::SetBytes method
 ms.assetid: 8c578b38-38d7-46f3-bb2e-8a730fccd334
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1e7b3fd72285f6a6c9c4abeca4e6b262d981be8f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dede3ee5291afbfbeab4d6e60dcbd56e205e4526
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331546"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725507"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
-Art arda bayt dizisinden işaret değeri ayarlar.
+Ardışık bayt lar dizisinin işaret ettiği değeri ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +47,22 @@ int SetBytes(
 
 ## <a name="parameters"></a>Parametreler
 `dwStart`\
-[in] Belirtilen nesnenin başından itibaren bayt cinsinden uzaklık.
+[içinde] Bir ofset, bayt, nesnenin başından itibaren işaret.
 
 `dwCount`\
-[in] Ayarlanacak bayt sayısı.
+[içinde] Ayarlanan bayt sayısı.
 
 `pBytes`\
-[in] Yeni değeri temsil eden bir bayt dizisi. Bu değer, belirtilen uzaklıkta başlayan belirli nesne içinde depolanır.
+[içinde] Yeni değeri temsil eden bir dizi bayt. Bu değer, verilen ofset başlayarak nesneye depolanır.
 
 `pdwBytes`\
-[out] Bayt sayısı gerçekte ayarlamak döndürür.
+[çıkış] Ayarlanan bayt sayısını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem kullanılır bu tarafından temsil edilen işaretçinin [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) işaret türü basit tür veya basit bir dizi temel türlerin (diğer bir deyişle, basit bir bayt dizisi tarafından temsil edilen bir dizi). Bu `IDebugPointerObject` nesne (onu işaret etmelidir bir bellek adresi) bir null başvuru olamaz.
+ Bu [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen işaretçi ilkel bir türe veya basit bir ilkel tür dizisine (diğer bir şekilde, basit bir bayt dizisiyle temsil edilebilen bir dizi) işaret ederse bu yöntem kullanılır. Bu `IDebugPointerObject` nesne null bir başvuru olamaz (bellekte bir adrese işaret etmelidir).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)

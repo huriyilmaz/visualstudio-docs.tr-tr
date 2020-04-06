@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CreatePendingBreakpoint | Microsoft Docs
+title: IDebugEngine2::CreatePendingBreakpoint | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::CreatePendingBreakpoint
 ms.assetid: 92e85b90-a931-48d9-89a7-a6edcb83ae5a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fdd7fde0540754df3b152eb38d729576a7b9fe26
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f88cae3610487b92fed0d8390d44c55d3f536c4b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333312"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731123"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
-Hata ayıklama altyapısı (DE) bir bekleyen kesme noktası oluşturur.
+Hata ayıklama altyapısında (DE) bekleyen bir kesme noktası oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,23 +43,23 @@ int CreatePendingBreakpoint(
 
 ## <a name="parameters"></a>Parametreler
 `pBPRequest`\
-[in] Bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) oluşturmak için bekleyen kesme noktasını tanımlayan nesne.
+[içinde] Oluşturulacak bekleyen kesme noktasını açıklayan bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) nesnesi.
 
 `ppPendingBP`\
-[out] Döndürür bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) bekleyen kesme noktasının temsil eden nesne.
+[çıkış] Bekleyen kesme noktasını temsil eden bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Genellikle döndürür `E_FAIL` varsa `pBPRequest` parametresi biri DE tarafından desteklenen herhangi bir dilde eşleşmiyor `pBPRequest` parametresi, geçersiz veya eksik.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Parametre geçersiz veya eksikse DE tarafından desteklenen herhangi bir `pBPRequest` dil eşleşmiyorsa genellikle döndürür. `E_FAIL` `pBPRequest`
 
 ## <a name="remarks"></a>Açıklamalar
-Bir bekleyen kesme noktasının aslında bir kesme noktası kodunu bağlamak için gerekli tüm bilgileri bir koleksiyonudur. Bu yöntemin döndürdüğü bekleyen kesme noktasına kadar koduna bağlı değil [bağlama](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) yöntemi çağrılır.
+Bekleyen kesme noktası, bir kesme noktasını koda bağlamak için gereken tüm bilgilerin bir koleksiyonudur. Bu yöntemden döndürülen bekleyen kesme [noktası, Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) yöntemi çağrılana kadar koda bağlı değildir.
 
-Bekleyen kesme noktası her kullanıcı kümeleri oturum hata ayıklama Yöneticisi (SDM) her ekli DE bu yöntemi çağırır. Bu kesme noktası o DE içinde çalışan programlar için geçerli olduğunu doğrulamak için DE en fazla olur.
+Bekleyen her kesme noktası için kullanıcı kümelenir, oturum hata ayıklama yöneticisi (SDM) ekli her DE bu yöntemi çağırır. Kesme noktasının o DE'de çalışan programlar için geçerli olduğunu doğrulamak DE'ye kade olur.
 
-Kullanıcı, bir kod satırında bir kesme noktası ayarlar, bu koda karşılık gelen belgedeki en yakın satır kesme noktasını bağlamak DE ücretsizdir. Bu kullanıcının çok satırlı deyiminin ilk satırında bir kesme noktası ayarlayın, ancak son satırda (burada tüm kodlar hata ayıklama bilgilerini öznitelendirilen) bağlamak mümkün kılar.
+Kullanıcı bir kod satırında bir kesme noktası ayarladığında, DE kesme noktasını belgede bu koda karşılık gelen en yakın satıra bağlamak için serbesttir. Bu, kullanıcının çok satırlı bir deyimin ilk satırında bir kesme noktası ayarlamasını, ancak son satıra bağlamasını (tüm kodun hata ayıklama bilgilerinde atfedildiği) mümkün kılar.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CProgram` nesne. DE'ın uygulaması `IDebugEngine2::CreatePendingBreakpoint` sonra bu uygulama, her programda yöntemin tüm çağrıları iletebilir.
+Aşağıdaki örnek, basit `CProgram` bir nesne için bu yöntemin nasıl uygulanacağını gösterir. De'nin uygulanması daha `IDebugEngine2::CreatePendingBreakpoint` sonra her programda yöntemin bu uygulanması için tüm çağrıları iletebilir.
 
 ```
 HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, IDebugPendingBreakpoint2** ppPendingBP)
@@ -74,6 +74,6 @@ HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
-- [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+- [Bağla](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
 - [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

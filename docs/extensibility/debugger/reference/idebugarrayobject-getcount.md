@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetCount | Microsoft Docs
+title: IDebugArrayObject::GetCount | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayObject::GetCount method
 ms.assetid: 7931f3f7-033c-4bf8-8abd-95183952ebb0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ac21ac30e1f4511efa1ec8a7fe27129bf2ddb3a1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d9d5e322b7bcd5238335c74caa21989f1f1962ce
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321657"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736203"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
-Dizideki öğe sayısını alır.
+Dizideki öğelerin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pdwElements`\
-[out] Sayımını döndürür.
+[çıkış] Sayımı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çok boyutlu dizi nesnesi olsa bile, bu yöntem, bir dizi nesnesinin tüm öğeleri tek boyutlu dizi görür. Örneğin, bir dizi verilen `myarray[3][2][6]`, bu yöntem, 36 döndürecekti `pdwElements` parametresi. Kullanım [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) aynı anda tek tek tek öğeleri almak için yöntemi.
+ Bu yöntem, dizi nesnesi çok boyutlu olsa bile, bir dizi nesnesinin tüm öğelerini tek boyutlu bir dizi olarak görür. Örneğin, dizi `myarray[3][2][6]`göz önüne alındığında, bu yöntem `pdwElements` parametre 36 döndürecek. Tek tek öğeleri tektek almak için [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) yöntemini kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

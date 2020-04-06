@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::DisableENC | Microsoft Docs
+title: IDebugProcess3::DisableENC | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess3::DisableENC
 ms.assetid: cffdbdac-4d76-4aeb-aa55-5d0410db99f1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3ee29540a11248a299d65c32cf2c8396b1fa2ef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b39bb448501bacd5ab458b7e61bb1a5044bc8a3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314055"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723739"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-Bu yöntemi açıkça devre dışı düzenleyin ve bu işlemi devam (ve tüm programlar içerir). Özel bağlantı noktası sağlayıcısı her zaman döndürmelidir `E_NOTIMPL`.
+Bu yöntem, bu işlemde (ve içerdiği tüm programları) Edit ve Continue'yi açıkça devre dışı kılabilir. Özel bir bağlantı noktası `E_NOTIMPL`tedarikçisi her zaman dönmelidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,16 +40,16 @@ HRESULT DisableENC(
 
 ## <a name="parameters"></a>Parametreler
 `reason`\
-[in] Bir değer [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) sabit listesi.
+[içinde] [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) numaralandırmabir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
 
 > [!NOTE]
-> Özel bağlantı noktası sağlayıcısı her zaman döndürmelidir `E_NOTIMPL`.
+> Özel bir bağlantı noktası `E_NOTIMPL`tedarikçisi her zaman dönmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Düzenleme ve devam et için bir işlemi devre dışı bırakıldı, bu işlem yalnızca yeniden başlatarak yeniden etkinleştirilebilir.
+ Bir işlem için Düzenleme ve Devam devre dışı bırakıldıktan sonra, yalnızca işlemi yeniden başlatarak yeniden etkinleştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)
